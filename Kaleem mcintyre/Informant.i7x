@@ -10,7 +10,6 @@ when play begins:
 	add Informant to badspots of furry;
 	add Informant to badspots of guy;
 
-
 Instead of resolving a Informant:
 	if smf is 0:
 		say "Walking through the high rise district you find yourself bumping into a black clad man wearing a hoodie. 'Sorry about that fella.' The man apologizes and then steps around you to go about his way. Not thinking anything of the accidental bump you nod to the retreating back of the other person and then go about your way.";
@@ -47,12 +46,6 @@ Homarutalk is a number that varies.
 Homarusearch is a number that varies.
 Findfirefighter is a number that varies.
 Fin is a number that varies.
-Apartment 319 is a situation.
-Apartment 319 is resolved.
-DogHouse is a situation.
-DogHouse is resolved.
-Save the Dame is a situation.
-Save the Dame is resolved.
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -108,7 +101,7 @@ instead of conversing the Homaru:
 				say "Homaru doesn't say anything else as he sits back down to look at you somewhat helplessly. You get the feeling that the information dealer is trying to be helpful, but at the same time he just seems so... You shake your head and then tell Homaru that you will think about it. At that the other man nods to you.[line break]";
 			now Homarutalk is 1;
 			now Homarusearch is 1;
-			now DogHouse is unresolved;
+			now DogHouse is active;
 			now fin is 1;
 			now Warehouse District is known;
 			increase score by 10;
@@ -225,7 +218,7 @@ to say findfirefighter2:
 	say "Moving his sandwich over out of the way you watch as the informant pulls out a manila folder and then shuffles through it. 'Let's see, the next firefighter that might still be in the city should be at the [bold type]high rise district[roman type]. I believe in the golden temple complex. Don't ask me why they named the place as such. I'm still trying to get information on that on.' You close your mouth just as you were preparing to ask. Smirking up at you Homaru reaches up above the folder to hand you a slip of paper.[line break]";
 	say "Walking over to take the item in question you find three numbers looking up at you. [bold type]319[roman type]? 'That's the apartment number. In case you manage to somehow forget it.' Homaru teases and then closes the manila folder. Putting away his little information file you watch as the brown haired man returns to eating his sandwich, his whole demeanor having changed now that he's no longer focused on business.[line break]";
 	now AptAid is 1;
-	now Apartment 319 is unresolved;
+	now Apartment 319 is active;
 	increase score by 4;
 	now Homarusearch is 3;
 
@@ -239,7 +232,7 @@ to say findfirefighter4:
 	say "Homaru merely shrugs at that and you roll your eyes in reciprocation. 'Anyway, I think that this [bold type]Dame[roman type] is haunting the high rise district as of late. More than likely looking for food and whatnot, so if you were going to look her, trying looking somewhere uptown to find her. Also, you may want to try and go [bold type]incognito[roman type] since there are a lot of chocolate Labs roaming around this part of town.' You ask Homaru what he means by [']incognito[']. 'Let's just say that I have it on good standing that you have a way of assuming different forms without losing your good common sense.' A wave of a hand stops you before you can open your mouth to bark at the other.";
 	say "Like I say, I have it on a [italic type]good hunch[roman type] that if you were to [bold type]take on a chocolate Lab form[roman type] you might be able to save this [bold type]Dame[roman type] a lot easier, provided you've got the strength to face a group of angry Labradors over her.' And with that Homaru gives you a cheeky smile before waving you off about your way. Looking at the other man you again have to wonder just how much this man knows and just why he's amassing such information in the first place. For now though, saving this female firefighter is more important. Time to hit that old dusty trail.";
 	now dam is 1;
-	now Save the Dame is unresolved;
+	now Save the Dame is active;
 	now Homarusearch is 5;
 
 to say findfirefighter5:

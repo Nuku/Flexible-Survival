@@ -53,6 +53,7 @@ Instead of resolving Ebonflame Nest:
 			say "[ebonflamegauntlet]";
 		else:
 			say "     You decide that it's not worth the trouble, stepping back and departing before you're potentially forced to contend with these creatures or whatever might have birthed them.";
+			now Resolution of Ebonflame Nest is 4; [didn't fight]
 	else:
 		say "suddenly feel off-balance as the cracked asphalt below you begins to crumble";
 		let bonus be ( dexterity of player - 10 ) / 2;
@@ -73,6 +74,7 @@ Instead of resolving Ebonflame Nest:
 				say "[ebonflamegauntlet]";
 			else:
 				say "     You decide that it's not worth the trouble, stepping back and departing before you're potentially forced to contend with these creatures or whatever might have birthed them.";
+				now Resolution of Ebonflame Nest is 4; [didn't fight]
 		else:
 			say ". Too slow to react, the pavement gives way, you following in its wake as you descend into a shallow cave, landing on the broken earth with an audible thud";
 			let dam be a random number between 1 and 8;
@@ -93,6 +95,7 @@ Instead of resolving Ebonflame Nest:
 				infect "Ebonflame Whelp";
 				infect "Ebonflame Whelp";
 				infect "Ebonflame Whelp";
+				now Resolution of Ebonflame Nest is 5; [fell into the nest]
 	now Ebonflame Nest is resolved;
 
 to say ebonflamegauntlet:
@@ -114,14 +117,17 @@ to say ebonflamegauntlet:
 			infect "Ebonflame Whelp";
 			infect "Ebonflame Whelp";
 			infect "Ebonflame Whelp";
+			now Resolution of Ebonflame Nest is 2; [fought and lost]
 			break;
 		else if fightoutcome >= 30:
 			say "     Deciding you'll have none of this, you turn tail and quickly scramble back up the hole, managing to outrun the whelps with relative ease. Thankfully, your escape isn't all that difficult, and you can return to the matters you had at hand.";
+			now Resolution of Ebonflame Nest is 3; [fought and fled]
 			break;
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Finishing yet another off, what couple stragglers remain scatter and flee from you. Eyeing some food and water left in their wake, you grab it before departing, returning to the wrecked city.";
 		increase carried of food by 1;
 		increase carried of water bottle by 1;
+		now Resolution of Ebonflame Nest is 1; [fought and won]
 
 
 Section 3 - Strange Meeting

@@ -686,7 +686,7 @@ Section 4 - Cure Events
 
 Part 1 - Greenhouse and Wolfsbane
 
-Greenhouse is a situation. The level of Greenhouse is 7. Greenhouse is resolved.
+Greenhouse is a situation. The level of Greenhouse is 7. Greenhouse is inactive.
 The sarea of Greenhouse is "Campus".
 
 grhouse is a truth state that varies. grhouse is usually false.
@@ -751,7 +751,7 @@ the scent of wolfsbane is "     The wolfsbane has a strong scent that makes you 
 
 Part 2 - Getting the Knife
 
-Getting the Knife is a situation. The level of Getting the Knife is 7. Getting the Knife is resolved.
+Getting the Knife is a situation. The level of Getting the Knife is 7. Getting the Knife is inactive.
 The sarea of Getting the Knife is "Warehouse".
 
 wrknifefight is a truth state that varies. wrknifefight is usually false.
@@ -806,7 +806,7 @@ the scent of chainmail vest is "     There is little scent to the chainmail itse
 
 Part 3 - Dinosaur Skeleton
 
-Dinosaur Skeleton is a situation. The level of Dinosaur Skeleton is 9. Dinosaur Skeleton is resolved.
+Dinosaur Skeleton is a situation. The level of Dinosaur Skeleton is 9. Dinosaur Skeleton is inactive.
 The sarea of Dinosaur Skeleton is "Museum".
 
 wrdinoskel is a truth state that varies. wrdinoskel is usually false.

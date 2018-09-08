@@ -225,7 +225,7 @@ to say KyleTalk4: [talk about his friend]
 			LineBreak;
 			say "     Some of Kyle's worry instantly fades from his face. 'Oh, thank goodness. I'm sure you'll be able to help him out. Just come back and talk to me again once you've found him, alright? I'll be waiting.'";
 			now GertyQuest is 1;
-			now Angry Snake is not resolved;
+			now Angry Snake is active;
 		else:
 			LineBreak;
 			say "     Kyle looks crestfallen. 'I understand, the city out there is dangerous, and I'm sure you're a busy person. Just... think about it, okay?'";
@@ -240,7 +240,7 @@ to say KyleTalk4: [talk about his friend]
 			LineBreak;
 			say "     Some of Kyle's worry instantly fades from his face. 'Oh, thank goodness. I'm sure you'll be able to help him out. Just come back and talk to me again once you've found him, alright? I'll be waiting.'";
 			now GertyQuest is 1;
-			now Angry Snake is not resolved;
+			now Angry Snake is active;
 		else:
 			LineBreak;
 			say "     Kyle looks crestfallen. 'I understand, the city out there is dangerous, and I'm sure you're a busy person. Just... think about it, okay?'";
@@ -424,7 +424,7 @@ Section 4 - Events
 Angry Snake is a situation.
 The level of Angry Snake is 4.
 The sarea of Angry Snake is "High".
-Angry Snake is resolved.
+Angry Snake is inactive.
 
 instead of resolving a Angry Snake:
 	if GertyQuest is 1:

@@ -302,9 +302,9 @@ instead of going to Bone-Appetit while SonnyFood is 1:
 	say "     Upon making your entrance into the baked goods store of your hybrid French friend he notices the contemplative look on your face. 'Ah, mon ami, what is with the long face?' Francois asks, looking a little bit concerned. You mention that a pal of yours, who you admit you might be feeling something a bit more, is feeling homesick and wishes for a dish their parent had cooked. The flamboyant man lets out a hum before he nods. 'I see, I see. Well, then what does this friend of yours desire?' He asks, his tone getting inquisitive. You tell him that Sonny longs for manicotti, something you don't know how to make. However, Francois's eyes light up as you say this and he vanishes into the back of the store.";
 	say "     About ten minutes later the hybrid comes out with a recipe book that he promptly places on the table. 'I would, how would you English say it, complacent, not to learn anything about the culinary arts outside of baking,' Francois says, flipping the book open and leafing through the pages. As he does this you notice several different kinds of recipes, from confectionery to cooking to almost anything one could think falls under the culinary arts. 'I just decided on baking because I so happened to like les aminaux and Mont Blancs are to die for!' Your friend says, clearly reminiscing before he finally comes to what he was looking for, instructions on how to make manicotti. 'There you go mon ami, one recipe. As for the ingredients, I believe I saw a grocery store here in the High Rise District with just what you were looking for, surprisingly enough despite the apocalyptic event. When you have everything come back and I'll let you use my kitchen and perhaps my store to feed ton petit amor.' Your friend says, teasing you with the last bit before shooing you off.";
 	now SonnyFood is 2;
-	now Manicotti Shopping is not resolved;
+	now Manicotti Shopping is active;
 
-Manicotti Shopping is a situation. The level of Manicotti Shopping is 2. Manicotti Shopping is resolved.
+Manicotti Shopping is a situation. The level of Manicotti Shopping is 2. Manicotti Shopping is inactive.
 The sarea of Manicotti Shopping is "high".
 
 instead of resolving Manicotti Shopping:

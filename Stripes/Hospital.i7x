@@ -396,7 +396,7 @@ An everyturn rule:
 			increase score by 10;
 			WaitLineBreak;
 			now hospquest is 1;
-			now Finding a Way in is unresolved;
+			now Finding a Way in is active;
 
 
 Locked stairwell is a door. "Off to one side are a pair of heavy, metal doors leading to a stairwell."
@@ -429,7 +429,7 @@ to say hospprogress:
 
 
 Finding a Way in is a situation.
-Finding a Way in is resolved.		[unable to do this until activated]
+Finding a Way in is inactive.		[unable to do this until activated]
 The sarea of Finding a Way in is "Hospital".
 
 
@@ -698,7 +698,7 @@ to say hospquestpt6:
 		say "     I have just obtained word that the museum contains a pair of prehistoric creatures. Aside from representing an unprecedented opportunity to analyze ancient life, it may be important to examine their nanites and see how they affected such changes. The reports from the hospital creatures are somewhat unspecific, but there appears to be an armored, dinosaur-like creature and several smilodons. I would have the others deal with this, but on their original foray into the museum, they must have caused a disruption and now the guardian will not let them re-enter. I need you to obtain samples from both of these.";
 		say "     'The last thing I need for you is to perform a simple pick-up while you are out. There is a jackal shopkeeper who has set herself up in the mall. She has a package for me. The rats who live there will not allow the hospital staff to approach, having been set off by the appearance of one of the jaguars when the order was first placed.";
 		now nerminepackage is 1;
-		now Dinosaur Nest is unresolved;
+		now Dinosaur Nest is active;
 		increase score by 25;
 		now hospquest is 8;
 
@@ -1416,7 +1416,7 @@ Instead of conversing the Valerie while hospquest is 8 and valhosp is 0 and valt
 
 Dinosaur Nest is a situation.
 The sarea of Dinosaur Nest is "Museum".
-Dinosaur Nest is resolved.		[unable to do this until activated]
+Dinosaur Nest is inactive.		[unable to do this until activated]
 nesteddino is a number that varies.
 dinonest is a number that varies.
 dnfightresult is a number that varies.
@@ -1509,7 +1509,7 @@ Instead of conversing the Nermine while nerminepackage is 1 and Nerminetalk > 0:
 	say "     'You are here helping the mousey doctor at the hospital? Nermine will play along with game,' the jackal woman says with a playful tone. 'I have been awaiting to hear back from the mousey customer after his kitties upset the rats. Not thinking they would come back. I have the item he wanted, but am wanting something in return.'";
 	say "     'At the museum, there is a [italic type]drekar[roman type]. Is a Viking longboat. Only one ever found. It is very big; too much to take, would not fit in store. But masthead has gemstones and these have seen much of the world in their time. Valuable to Nermine. Get them for me and I will trade them for the pelt, little helper.'";
 	now nerminepackage is 2;
-	now Viking Longboat is unresolved;
+	now Viking Longboat is active;
 
 [  -- Moved to their dialog sets
 Instead of conversing Rod Mallrat while nerminepackage > 0 and rodhosp is 0:
@@ -1524,7 +1524,7 @@ Instead of conversing the Ronda Mallrat while nerminepackage > 0 and rondahosp i
 
 Viking Longboat is a situation.
 The sarea of Viking Longboat is "Museum".
-Viking Longboat is resolved.		[unable to do this until activated]
+Viking Longboat is inactive.		[unable to do this until activated]
 lbfight is a number that varies.
 longboatfind is a number that varies.
 rondahosp is a number that varies.

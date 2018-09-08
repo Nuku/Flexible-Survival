@@ -736,7 +736,7 @@ to say christyuhoh:
 				WaitLineBreak;
 				now HP of player is 1;
 				now HP of Christy is 90;
-				now Dragon Prey is unresolved;
+				now Dragon Prey is active;
 				now Isolated Street is unknown;
 				now Back Alley is unknown;
 				if Smith Haven Mall Lot South is known:
@@ -763,7 +763,7 @@ to say christyuhoh:
 					say "     'But you're no hero. You're a cad! A rogue! A sneaky, deceitful beast!' she growls as you're knocked back and forth across the room by the rampaging dragoness. You try to regain your footing and do manage to grab your pack and gear before another blow sends you flying across the room. Battered and dizzy, you scramble out the nearby door with Christy's snapping jaws in hot pursuit. You scramble to the open manhole and dive inside before a great wave of fire rushes over it, some spilling down the hole after you. So great are the fires of her rage that the metal and pavement around the manhole melt, flowing down into the tunnel. You can hear her sobbing loudly even over the sounds of her scrapping rubble over the blasted hole, sealing it off fully.";
 					now HP of player is 1;
 				now HP of Christy is 90;
-				now Dragon Prey is unresolved;
+				now Dragon Prey is active;
 				now Isolated Street is unknown;
 				now Back Alley is unknown;
 				if Smith Haven Mall is known:
@@ -781,7 +781,7 @@ Section 9 - Found by Christy
 
 Dragon Prey is a situation.
 The sarea of Dragon Prey is "Outside".
-Dragon Prey is resolved.
+Dragon Prey is inactive.
 
 when play begins:
 	add Dragon Prey to badspots of girl;

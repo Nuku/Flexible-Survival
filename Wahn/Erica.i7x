@@ -98,10 +98,10 @@ Instead of resolving a Temple of Hera:
 	WaitLineBreak;
 	say "     Hera herself adds in, 'There you have it. Go forth and knock a few heads together - you mortals are good at that, aren't you...' With a slight flick of her wrist, you feel yourself pushed out the door, stumbling right into the museum foyer through it.";
 	now Temple of Hera is resolved;
-	now Biker Hangout is not resolved;
 	now Dexterity of Erica is 3;
 
-Biker Hangout is a situation. Biker Hangout is resolved.
+Biker Hangout is a situation.
+The Prereq1 of Biker Hangout is Temple of Hera.
 The sarea of Biker Hangout is "Junkyard".
 when play begins:
 	add Biker Hangout to badspots of guy;

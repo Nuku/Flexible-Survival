@@ -146,10 +146,10 @@ to say orthas_task2_start:
 		say "     And from the info I've gathered from some of the others scavengers who've been in through here, this route should at least get you into the area.'";
 		now Entrance to the Red Light District is known;
 	say "     Having given you the address on a slip of paper, the dragoness stomps back to her post. Well, it sounds like a trip to find [bold type]Orthas's house[roman type] is in your future.";
-	now Orthas's House is unresolved;
+	now Orthas's House is active;
 
 
-Orthas's House is a situation. The level of Orthas's House is 5. It is resolved.
+Orthas's House is a situation. The level of Orthas's House is 5. It is inactive.
 The sarea of Orthas's House is "Red".
 
 instead of resolving Orthas's House:

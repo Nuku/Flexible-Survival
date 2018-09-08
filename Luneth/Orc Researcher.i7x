@@ -35,8 +35,10 @@ Instead of resolving a Orc Researcher:
 		say "     [if scalevalue of player <= 3]You walk quickly back downstairs to the window that served as your entryway into the building and hop out, landing softly on the cement outside. [else]Having destroyed the window that you used to get inside, you will need an alternative route out. Looking around the room, you notice that a window and decide that it's better than nothing, making your way over. It's a tight squeeze, but you make it through the window, though unfortunately not before destroying it just like the one downstairs. Huffing, you drop to the street below, causing your feet to sting for a moment after landing, but there is no serious damage done. [end if]Looking back at the building for the last time, you continue on your way. Hearing a strange sound in the distance, you look towards a crumbling wall in the direction of the noise. Only to see a pair of glowing eyes watching you in a calculating way, before their owner runs of.";
 		increase carried of Orc Pill Case by 1;
 		increase score by 20;
+		now Resolution of Orc Researcher is 1; [found the pills]
 	else:
 		say "     Deciding against exploring the strange flickering light, you turn your back to the building and continue on your way. Hearing a strange sound in the distance, you look towards a crumbling wall in the direction of the noise. Only to see a pair of glowing eyes watching you with disappointment, before their owner runs of.";
+		now Resolution of Orc Researcher is 99; [didn't go in]
 	Now Orc Researcher is resolved;
 
 Section 2 - Orc Pill Case

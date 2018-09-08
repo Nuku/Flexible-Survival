@@ -63,16 +63,18 @@ Instead of Resolving a Old Record Store:
 			WaitLineBreak;
 			say "     Not knowing what's going on, but not liking this craziness anymore, you decide to split while the getting's good. Rushing out of the front door, the old boombox in hand, you make your way down the street and back to the bunker at top speeds. Behind you, the door to the music shops quietly shuts and then locks itself, but only after the figure of an old man walks by the window. Obviously, you've just been become the butt of someone's elaborate prank... right?";
 			now BoomBox is in the Bunker;
-			now battleground is "void";
 			move player to the Bunker;
+			now Resolution of Old Record Store is 1; [found boombox]
 			now Old Record Store is resolved;
 		else:
 			LineBreak;
 			say "     You get the creeps from this place and decide to go back home, or to the bunker at least. The whispers around you seem somewhat saddened by your departure and the music playing in the background slows down until it finally falls silent. You don't notice any of this as you're out the door and down the street before the local mutants can spot your dust trail. Not that you're scared of course. Behind you the door to the music shop closes with an audible click.";
+			now Resolution of Old Record Store is 2; [fled]
 			now Old Record Store is resolved;
 	else:
 		LineBreak;
 		say "     Deciding to err on the side of caution, you spin on your heel and then march straightaway from the creepy music store. And though you don't notice it during your posthaste retreat, another -click- resounds throughout the air, the building's door having shut tight once again.";
+		now Resolution of Old Record Store is 99; [desinterest]
 		now Old Record Store is resolved;
 
 

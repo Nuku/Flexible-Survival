@@ -24,8 +24,11 @@ instead of resolving a Breeding Pack:
 		say "     The human moans loudly as yet another thick dog dick forces into his already wrecked ass. You hear a meaty slap as the German shepherd goes balls deep on the first thrust, followed by a satisfied growl from the virile beast. He pulls back out before starting to fuck the man in a savage pace, quickly humping and thrusting into the human as he grips his bitch tight. The big dog pants happily as he pumps his fat dog dick into the human, wet slaps starting to form as more some of the cum already in there is frothed up and squelches out around his shaft. They fuck at the same rough pace for a while until the German shepherd's knot swells up, locking them together. The big dog wags his tail ecstatically he fills up the human with canine seed, holding him close as if he could go anywhere with the fat knot lodged in his butt. They stay in that position for a few seconds before the German shepherd shifts around until he is facing away from the human, ass to ass as the knot keeps them together.";
 		WaitLineBreak;
 		say "     With another pack-member knotted to their human bitch, it'll be quite a while before more action will happen, so you decide it is time to leave for now. Slowly backing away into the alley as you abandon your peeping spot, you continue on your travels, with the image of the man and his horny friends fresh in your mind.";
+		now Resolution of Breeding Pack is 1; [watched]
 	else:
 		LineBreak;
 		say "     Slowly backing away into the alley, you leave the group of horny canines and their human behind. You are glad the human is loving it, but it's not your kind of thing, so you let them have their privacy.";
+		now Resolution of Breeding Pack is 2; [didn't watch]
+	now Breeding Pack is resolved;
 
 Feral Events ends here.

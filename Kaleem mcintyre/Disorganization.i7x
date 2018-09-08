@@ -1,4 +1,5 @@
 Disorganization by Kaleem mcintyre begins here.
+[not Resolution tagged since it is commented out and needs review]
 
 "Adds a series of events revolving around a military recon unit to Flexible Survival."
 

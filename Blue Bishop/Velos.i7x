@@ -14,6 +14,7 @@ Instead of resolving Strange Serpent:
 		if player is not male_vacant and (insectlarva is false or (insectlarva is true and larvaegg is 2)):
 			say "     '...Ah, looking at you clearly now, it's probably be wise to ignore me for now. Come back in a couple of days day or so. You already look like you've got your hands full.' A little confused, he might be referring to your unconventional pregnancy, though how that has anything to do with anything right now is beyond you. Urging you away, you depart, back from whence you came.";
 			now HP of Velos is 1;
+			now Resolution of Strange Serpent is 1; [talked to Velos, already full]
 		else:
 			say "     'Right, great, you don't look nearly as mentally deranged as the general fare you see down and about this place--though I suppose I could be wrong...' A little ill at ease with this creature, you greet it before it continues. 'I'm really in need of help here; I'm wholly unequipped to depart from this rather unsettling environment, and I need someone to carry me off.'";
 			say "     You're not rightfully sure if you can trust the serpent, but for the sake of argument you infer that you might be up to the task, simple as it seems.";
@@ -83,10 +84,12 @@ Instead of resolving Strange Serpent:
 				now level of Velos is 1;
 				now HP of Velos is 3;
 				now mpreghijack is true;
+				now Resolution of Strange Serpent is 2; [Velos taken in]
 			else:
 				say "     You decide not to help the bizarre creature, stepping away. Thankfully, annoyed as he may appear, it doesn't seem to challenge you for the gesture.";
 				say "     'Right, very well, I'm sure you have more pressing matters to attend to; places to go, eldritch monstrosities to be buggered by, all that sort.' You turn to depart, leaving the serpent in your wake.";
 				now HP of Velos is 2;
+				now Resolution of Strange Serpent is 3; [Velos rejected]
 			now Strange Serpent is resolved;
 
 

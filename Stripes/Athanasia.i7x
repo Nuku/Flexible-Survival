@@ -32,7 +32,7 @@ Instead of resolving a Captured Bird:
 					say "     With an unearthly grace, the phoenix turns about to face you as it hovers. You are scared you'll receive the same treatment as the cat, but the bird's eyes shine with intelligence. It nods its head to you, then takes back to the air, the fire fading quickly after that outburst. You are left with a sense of awe and wonder at the majesty of the creature you helped save.";
 					increase score by 15;
 					now HP of Athanasia is 1;
-					if guy is not banned, now FireAndIce is unresolved;
+					if guy is not banned, now FireAndIce is active;
 		if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
 			say "     Keeping you pinned down, the feline enjoys having some fun with you as the others from her group return. They come with buckets of water, tossing them onto the flaming bird until her fires go out and she's left ashen and shivering in the remains of the net. The panther taurs give some celebratory yells, kisses and gropes before, as a team, dragging off their captured prey in the damaged net. The soaked bird shivers, but does not struggle as it's taken away to meet its fate.";
 		if fightoutcome >= 30:							[fled]
@@ -42,7 +42,7 @@ Instead of resolving a Captured Bird:
 	now Captured Bird is resolved;
 
 
-FireAndIce is a situation. It is resolved. The level of FireAndIce is 6.
+FireAndIce is a situation. It is inactive. The level of FireAndIce is 6.
 
 instead of resolving FireAndIce:
 	project figure of Reindeer_icon;

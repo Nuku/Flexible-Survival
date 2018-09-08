@@ -12,7 +12,7 @@ after going to Smith Haven Mall Lot East while HP of Tobias is 0 and a random ch
 	WaitLineBreak;
 	say "[TobiasTalkMenu]";
 	now hp of Tobias is 1; [initial event done]
-	now Refugee Mare is not resolved;
+	now Refugee Mare is active;
 
 to say TobiasTalkMenu:
 	LineBreak;

@@ -278,7 +278,7 @@ to say NermineTalk2:
 	else if wrcurseNermine is 1 and wrcursestatus >= 3 and wrcursestatus < 100 and wrlastNermine - turns >= 8:
 		say "     Nermine sets aside the book she was leafing through and smiles at you. 'Nermine is having good news. While this is not Nermine's normal area of expertise, she is having books on many such subjects and is finding something which may helping with your raptor problem.' She shows you the open book. The text in it appears to be hand written, but you don't recognize the language or even the alphabet. She points out a drawing of some flowers on the opposite page. 'Nermine is first needing roots of this plant. It is monkshood and the flowers are being a purple color like this,' she adds, indicating a lilac purple section of one of the hanging carpets on the wall. 'They are usually growing closer to the mountains, but there is a greenhouse at the college campus that is having many plants. Perhaps you can be finding it there?'";
 		now wrcurseNermine is 2;
-		now Greenhouse is unresolved;
+		now Greenhouse is active;
 	else if wrcurseNermine is 2 and wrcursestatus >= 3 and wrcursestatus < 100 and a random chance of 1 in 3 succeeds:
 		say "     'If you are wanting Nermine's help with your nightly problem, then you are needing to get monkshood root. Be looking for the purple flower in the greenhouse at the college campus. But if finding it is too much trouble, you could always just be deciding to [bold type]help Nermine[roman type] and we could be dealing with your problem by giving you something better,' she adds with a coy smile and wink of her eye.";
 	else if wrcurseNermine is 3 and wrcursestatus >= 3 and wrcursestatus < 100 and wolfsbane is not owned:
@@ -292,7 +292,7 @@ to say NermineTalk2:
 		now carried of wolfsbane is 0;
 		now Warehouse District is known;
 		now wrcurseNermine is 5;
-		now Getting the Knife is unresolved;
+		now Getting the Knife is active;
 	else if wrcurseNermine is 5 and wrcursestatus >= 3 and wrcursestatus < 100 and a random chance of 1 in 3 succeeds:
 		say "     'You will be needing the silver knife to be helping with your curse. Attempt to be [bold type]getting the knife[roman type] from the warehouse Nermine told you about. While you are doing this, she will be preparing the monkshood potion. But if it's proving to be too much difficult for you, perhaps you would help Nermine as her assistant. There are many things you could be assisting her with,' she says with a sexy rumble, letting her eyes roam over your body.";
 	else if wrcurseNermine is 6 and wrcursestatus >= 3 and wrcursestatus < 100 and silver knife is not owned:
@@ -307,7 +307,7 @@ to say NermineTalk2:
 		say "     She passes you the potion and freshly cleaned blade, which you take carefully. 'Now you are ready for the final step. For it, you are needing to be finding the body of the creature you are becoming. A true one, not those cursed like you,' she emphasizes with a point of her clawed finger. 'You will be needing to check the dinosaur exhibit in the museum and find the right skeleton. They are old bones, but it is an old curse, so it should still be working.";
 		say "     'The ritual is needed to be completed under the light of the moon. Nermine know this is meaning you may be transforming, but it must be done at night so it can be drawn out of you. To do this, you must be drinking the potion (a thought which makes you ill just to consider) and then be spilling your blood onto it with the knife (which sends a shiver along your spine). This is meant as sacrifice to appease the spirits and be drawing the curse out of you. Is old magic and old magic is often... crude like this. The beast within you can sense the power of the silver and of the monkshood. This is why they are affecting you so, but you are needing to be strong and do as you must to be freeing yourself.'";
 		say "     Having received the items and your instructions, all that remains is to do it. You try to remind yourself that you need to go ahead with it, but you are repulsed by the prospect. Besides, isn't monkshood poison? She certainly seemed to use a lot of it. Feeling uncertain and unsettled, you try to decide what to do next.";
-		now Dinosaur Skeleton is unresolved;
+		now Dinosaur Skeleton is active;
 		now wrcurseNermine is 8;
 	else if wrcurseNermine is 8 and wrcursestatus >= 3 and wrcursestatus < 100 and a random chance of 1 in 3 succeeds:
 		say "     'You will need to be going to the Museum and finding the proper [bold type]dinosaur skeleton[roman type] you are needing. You must be performing the ritual at night. Drink the potion, spill your own blood and the curse is being draw out of you. Hopefully.'";
@@ -333,7 +333,7 @@ to say NermineTalk3:
 		say "     She dangles an old, wrought iron key in front of you, but snatches it away as you reach for it. 'You are interested in purchasing oni for yourself, yes?' she asks. You tell her that you want the key to free him, to which she grins. 'If you are to be purchasing oni, then Nermine is needing suitable replacement. Nermine is hearing there is Japanese [bold type]noh mask[roman type] in office of teacher at city college. She is wanting you to go there and get it for Nermine. May be difficult, but you are to be getting oni sex slave in return,' she says with a naughty grin, once more flashing the key before tucking it behind the counter.";
 		say "     While your intention in coming here was just to see if there was a way to free him, it seems that she'll end up selling him off to someone else if you don't give her what she wants. A horny little corner of your mind is tempted by her offer as well. You don't want to betray his trust, but you find yourself looking forward to having some fun with the virgin oni once you've got that chastity belt off him. It looks like you'll be [if reaching the college is unresolved]searching for a means of [bold type]reaching the college[roman type] then[else]returning to the college campus[end if].";
 		now HP of Hayato is 11;
-		now Noh Mask is unresolved;
+		now Noh Mask is active;
 	else if HP of Hayato is 14:
 		say "     You take the noh mask out of your pack. You carefully unwrap it and pass it to Nermine. 'Ah, yes. Quite old, very lovely.' She runs a furry finger along it. 'And a long, sordid history. Excellent. Just as Nermine had been told.' With care, she places it on a shelf behind the counter where it can smile alluringly at customers.";
 		say "     'Now, here is key you are wanting. Oni is to be yours for your amusement,' she says with a coy playfulness. Despite her canine muzzle, she has an expression not unlike that on the porcelain mask.";

@@ -296,7 +296,6 @@ Instead of resolving a Friendship's Proof:
 		now Lizard Parlor is known;
 	else if tpfs is 8:
 		say "[bold type]You'll need to help Omio first before you can finish this quest-line! Find Omio in the dry plains if you haven't already found her.[roman type]";
-	now battleground is "void";
 
 
 Section 3 - Ouroboros
@@ -335,6 +334,7 @@ Instead of resolving a Ouroboros:
 									now carried of medallion is 1;
 									increase score by 10;
 									now Ouroboros is resolved;
+									now Resolution of Ouroboros is 1; [fought the mob and won]
 								else:
 									say "[defeatedbycerb]";
 							else:
@@ -364,11 +364,11 @@ Instead of resolving a Ouroboros:
 				now carried of medallion is 1;
 				increase score by 10;
 				now Ouroboros is resolved;
+				now Resolution of Ouroboros is 2; [followed a plan]
 			else:
 				say "Perhaps if you were a full wolverine the other guard might let you take his place? Maybe?";
 	else:
 		say "Noticing that you're approaching the section where the Ouroboros medallion was once stored, you decide to steer clear of the area.";
-	now battleground is "void";
 
 
 to say defeatedbycerb:
@@ -376,6 +376,7 @@ to say defeatedbycerb:
 	now carried of medallion is 1;
 	increase score by 10;
 	now Ouroboros is resolved;
+	now Resolution of Ouroboros is 3; [got defeated by cerberuses]
 
 
 Table of Game Objects (continued)
@@ -437,7 +438,6 @@ Instead of resolving a Special Delivery:
 		if libido of player < 0, now libido of player is 0;
 		now bch is 1;
 		now Special Delivery is resolved;
-	now battleground is "void";
 
 [
 Table of Game Objects (continued)

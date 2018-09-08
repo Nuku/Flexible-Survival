@@ -116,6 +116,7 @@ carry out TestMode:
 	increase carried of honeycomb by 5;
 	increase carried of healing booster by 5;
 	sort feats of player;
+	now Terminatorsleep is true;
 	now TestingActive is true;
 
 SubDomFlip is an action applying to nothing.

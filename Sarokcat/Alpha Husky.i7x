@@ -74,9 +74,9 @@ to say Alpha Husky attack:
 		if husky gathering is resolved and fertile pill is owned:
 			say "     You notice that one of your pills seems to be missing. A fertile pill. What would the alpha want with one of those? The mystery has no immediate answers, and you proceed back to safer grounds.";
 			delete fertile pill;
-			now husky gathering is unresolved;
+			now husky gathering is active;
 
-husky gathering is a situation. It is resolved.
+husky gathering is a situation. It is inactive.
 
 Instead of resolving husky gathering:
 	say "     A sudden chorus of barks and shouts catches your attention. Just emerging from around the bend is a group, no, pack of huskies. Most appear male, and those males catch sight of you. Approaching with a joyous war cry, they move to try and cut off your escape.";

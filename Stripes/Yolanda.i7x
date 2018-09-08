@@ -73,7 +73,7 @@ Instead of conversing the Yolanda:
 		say "     Introducing yourself to the raven, she looks you up and down with a sideways, avian stare. 'Oh sure, just come barging right in. With manners like that, you're either a looter or some sex fiend. Probably both, with my luck.' You try to explain that you're a survivor looking for others until rescue, but the bird just gives you a sharp, laughing caw! 'You'll be waiting a long time for that, honey. If they haven't gotten off of their asses yet, I doubt they're going to bother trying at this point.";
 		say "     'Now, back to the current matter... the name's Yolanda and I ain't in the mood to be raisin['] my tail to just anyone who comes wandering in here. I get hassled enough by those pesky gryphons who keep popping up around here as it is.' She pauses to look you over with an avian, sideways stare. 'That said, should you be looking to take a turn on bottom... then I think something might be arranged...' she says with a faint grin in her voice, pulling the corner of a blanket off of an assorted box of leather straps and strap-ons.";
 		now HP of Yolanda is 1;
-		now Raven Key Fob is unresolved;
+		now Raven Key Fob is active;
 	else if yolandaqytat is false and a random chance of 1 in 3 succeeds and Yolanda is in Raven Nest:
 		say "     'Those blue gryphon herms are always showing up around here. Those feather-brains have gotten some fool notion in their heads that there's something special around here. As far as I can tell, they're the only ones around here who're [']special[']... in the Olympic sense.'";
 		if findablestairs is 1:
@@ -587,7 +587,7 @@ Instead of resolving a Jewelry Box:
 		say "     After making your escape, you give up on scavenging for now and head back to safer territory to rest and recover.";
 
 
-Raven Key Fob is a scavevent. Raven Key Fob is resolved.
+Raven Key Fob is a scavevent. Raven Key Fob is inactive.
 
 Instead of resolving a Raven Key Fob:
 	say "     Hoping to find some supplies, you check through some cars in the street. From the looks of it, the drivers either abandoned their vehicles or (in the case of a few) transformed while inside them. In the latter, you find scraps of clothes and messy, musky stains, but little of use. You start to suspect some enterprising survivor or hungry mutant has already gone through these vehicles when you get lucky and find one that still has a small backpack in the passenger's seat. Opening it up, you go through it and find an assortment of stuff you don't need, but also a bottle of water. You're about to take it and go when you notice that the keys are still in the ignition. You decide to give it a shot, but find the car completely dead. The key fob does catch your eye though, being a shiny black bird about two inches long. You grab it and stuff it away in a pocket of your backpack, thinking Yolanda the raven might like it.";

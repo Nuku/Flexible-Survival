@@ -54,7 +54,7 @@ instead of resolving Mall Orgy:
 				now Mall Orgy is resolved;
 			else: [intended for a filter for neuters]
 				say "     Having nothing to get off with, you decide to leave anyways. You wouldn't want to get worked up and not be able to work off the tension."; [no cock, no cunt, no fun :()]
-			now OtterBoi Meeting is not resolved;
+			now OtterBoi Meeting is active;
 			[MallOrgy will be found again until they can successfully have fun...]
 		else:
 			say "     You decide against staring and just leave with a shrug.";
@@ -63,7 +63,7 @@ instead of resolving Mall Orgy:
 		say "     You decide against staring and just leave with a shrug.";
 		now Mall Orgy is resolved;
 
-OtterBoi Meeting is a situation. OtterBoi Meeting is resolved.
+OtterBoi Meeting is a situation. OtterBoi Meeting is inactive.
 The sarea of OtterBoi Meeting is "Smith Haven".
 
 instead of resolving OtterBoi Meeting:
@@ -74,6 +74,6 @@ instead of resolving OtterBoi Meeting:
 	WaitLineBreak;
 	say "     You chuckle, dismissing his apology and pat off his shoulders, finally managing to quell those thoughts and impulses that sprung up earlier. You watch over his shuddering form, grinning - and can't help but enjoy how easily you reduced him into a squirming mess. Alas, you fix your foggy head and wave him a goodbye, leaving him there, trembling because of your presence. Perhaps you'll bump into him again someday, perhaps not. The infection seems to take away people you see everyday, and judging by how blushy he was... He might just submit at some point.";
 	now OtterBoi Meeting is resolved;
-	[ now XXX is not resolved;   [enable follow-up events as needed]]
+	[ now XXX is active;   [enable follow-up events as needed]]
 
 Walkinmall ends here.

@@ -87,11 +87,11 @@ to say LoseToFeralDog:
 			mimpregchance;
 	increase FeralMuttDominance by 1; [one extra step towards dominance]
 	if FeralMuttDominance > 2:
-		now Mutt Pack Attack is not resolved; [active when they reach level 3 dominance]
+		now Mutt Pack Attack is active; [active when they reach level 3 dominance]
 	else:
-		now Mutt Pack Attack is resolved; [inactive when they're not dominant enough]
+		now Mutt Pack Attack is inactive; [inactive when they're not dominant enough]
 	if FeralMuttDominance > -3:
-		now Mutt Pack Submission is resolved; [inactive when they're not subby enough]
+		now Mutt Pack Submission is inactive; [inactive when they're not subby enough]
 
 
 to say BeatTheFeralMutt:
@@ -152,11 +152,11 @@ to say FeralDogSexMenu:
 					say "[FuckFeralMutt]";
 				decrease FeralMuttDominance by 1;
 				if FeralMuttDominance > -3:
-					now Mutt Pack Submission is resolved; [inactive when they are less than 3x submissive]
+					now Mutt Pack Submission is inactive; [inactive when they are less than 3x submissive]
 				else:
-					now Mutt Pack Submission is not resolved; [active when they're sufficiently subby]
+					now Mutt Pack Submission is active; [active when they're sufficiently subby]
 				if FeralMuttDominance < 3:
-					now Mutt Pack Attack is resolved; [inactive when they're not dominant enough]
+					now Mutt Pack Attack is inactive; [inactive when they're not dominant enough]
 				wait for any key;
 		else if calcnumber is 0:
 			say "Break off the conversation?";
@@ -326,7 +326,7 @@ When Play begins:
 Section 4 - Mutt Pack Events
 
 Mutt Pack Submission is a situation.
-Mutt Pack Submission is resolved.
+Mutt Pack Submission is inactive. [activated by fighting the mutt pack]
 The sarea of Mutt Pack Submission is "Junkyard".
 
 when play begins:
@@ -341,9 +341,11 @@ Instead of resolving a Mutt Pack Submission:
 	if player consents:
 		LineBreak;
 		say "[PackSubmissionScenes]";
+		now Resolution of Mutt Pack Submission is 1; [accepted their submission]
 	else:
 		LineBreak;
 		say "     You shake your head and begin backing up slowly. At first you expect them to try and take what they want, but they just whine a little while they watch you leave.";
+		now Resolution of Mutt Pack Submission is 2; [rejected their submission]
 
 to say PackSubmissionScenes:
 	if player is herm: [herms]
@@ -388,7 +390,7 @@ to say PackSubmissionScenes:
 		say "     You fuck the new dog raw, pounding him hard before pulling out and cumming on his furry back. Then you take the next, then the next, and finally you fuck the last beast surrounding you until you're surrounded by panting, cum covered canines. You yourself are staggering and drained dry from the pack of dogs. You wipe your cock clean on the ass of your final conquest and stand up slowly, stretching and giving one last look at the pack of mutts before smiling and heading off, eager to run into another pack.";
 
 Mutt Pack Attack is a situation.
-Mutt Pack Attack is resolved.
+Mutt Pack Attack is inactive.
 The sarea of Mutt Pack Attack is "Junkyard".
 
 when play begins:
@@ -413,10 +415,12 @@ Instead of resolving a Mutt Pack Attack:
 			say "     Not slowing his humping he hammers at your ass, his squirting canine pre-cum lubing you up and sending stings of pleasure through you as he goes. You moan loudly and shut your eyes only to have a shadow go over your head and a musky head brush over your ass. Opening your eyes you see the golden shepherd has walked over your head and parked himself there. His nearly foot long canine cock waiting and throbbing expectantly for service. Not wanting to disappoint you open your mouth and move your tongue down the length of his musky meat. You then lean in and take the tip of the knotted cock in your mouth.";
 		WaitLineBreak;
 		say "[PackDominanceScenes]";
+		now Resolution of Mutt Pack Attack is 1; [submitted to them]
 	else:
 		LineBreak;
 		say "     Hell no, you're not laying down like a bitch! You ready yourself for a fight.";
 		challenge "Mutt Pack";
+		now Resolution of Mutt Pack Attack is 2; [fought them]
 
 to say PackDominanceScenes:
 	setmonster "Feral Mutt";

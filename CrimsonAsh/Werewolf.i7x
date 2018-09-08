@@ -64,10 +64,12 @@ instead of resting while (player is in Urban Forest and WerewolfWatching is true
 		else:
 			say "     Now that she has taken care of her immediate need, the she-wolf checks out the rest of you, eager to have more fun. Yet as she sees with disappointment that you lack any proper equipment to go further, she simply gets off you and pads away, disappearing behind some brush.";
 			now WerewolfRelationship is 1; [submitted]
+		now Resolution of Werewolf Surprise is 1; [submitted]
 	else:
 		LineBreak;
 		say "     You attempt to halt the werewolf molesting you and push against her chest to get her off - resulting in the expected violent reaction to your resistance. With a snarl, she slams you down and moves to pin your arms to the ground. You manage to kick the wolf woman off, sending her scrambling to her feet and growling menacingly at you. She circles you for a moment allowing you to get your bearings and stand up, before charging forward with claws extended and teeth bared.";
 		challenge "Werewolf";
+		now Resolution of Werewolf Surprise is 2; [fought]
 	now Werewolf Surprise is resolved;
 
 Section 2 - Scenes

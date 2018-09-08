@@ -14,11 +14,13 @@ Instead of Resolving a Horse Sense:
 	say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 	if bonus + dice > 10:
 		say "As the scent of the rain just starting to come down catches your attention, you realize that something is amiss and you shake the swelling thoughts of galloping naked through the rain from your thoughts. You scan the area quickly for shelter and rush to the ruins of a nearby building. Getting there before the horse-scented downpour can kick into full gear, you huddle under a scrap of ceiling that remains standing and wait it out. Thankfully it is very brief. And while you're disappointed to see rain and not be able to enjoy it or gather some for drinking, you can tell even it is not to be trusted. At least you get to enjoy the beautiful lightning across the sky. After the rain passes, the water is quickly soaked up by the parched soil.";
+		now Resolution of Horse Sense is 1; [avoided the infection]
 	else:
 		say "You bask in the pleasure of the rain falling on you, washing away some of the dust and grime that has built up during this heat wave. Holding your mouth open wide, you try to catch what you can for your [if thirst of player > 30]parched [end if]throat. As the rainfall picks up, the scent of the rain coupled with the drenching wetness of your clothes matting down across your frame makes you shake your head wildly as the sudden urge to charge across the plains gets you moving before you can stop yourself.";
 		say "     Muscles becoming tense with the untamed urge to gallop freely across the plains, you let your sight and sense of smell spread out around you in a rush as the sense of oneness at embracing [italic type]life[roman type] swells inside of your chest until you feel as though you could burst. Throwing your head back and shaking the watery drops of rain off from your face, you let out an unconscious whinny just in time for a crack of thunder to snap above your head. The bolt of lightning that follows darkens the land for a moment, but despite this, you find yourself continuing to run with no particular destination in mind. There's no fear of the dancing electricity above you as you run, momentarily lost in the moment. The rain passes as quickly as it came, but the lingering changes that it brought continue.";
 		infect "Black Equinoid";
 		infect "Black Equinoid";
+		now Resolution of Horse Sense is 2; [got infected]
 		decrease humanity of player by 10;
 	increase score by 1;
 	now Horse Sense is resolved;
@@ -43,6 +45,7 @@ Instead of Resolving a Victim:
 		increase humanity of player by 10;
 		if humanity of player > 100, now humanity of player is 100;
 		increase score by 10;
+		now Resolution of Victim is 1; [punched out the pimp]
 		now Victim is resolved;
 	else:
 		challenge "Twisted Pimp";
@@ -51,11 +54,13 @@ Instead of Resolving a Victim:
 			increase humanity of player by 10;
 			if humanity of player > 100, now humanity of player is 100;
 			increase score by 5;
+			now Resolution of Victim is 2; [lost to the pimp]
 			now Victim is resolved;
 		else:
 			say "     Managing to deal with the little slime as best you can by at least keeping him occupied, you find that the tigress hooker has taken the smart route and gone on about her way as the female herm is now nowhere in sight. Shrugging, but feeling as though you did a good thing you go about your business without thinking about what may happen to the tigress come later. After all, there's only so much you can do for one person.";
 			increase humanity of player by 5;
 			if humanity of player > 100, now humanity of player is 100;
+			now Resolution of Victim is 3; [fought and won against the pimp]
 			now Victim is resolved;
 
 
@@ -76,9 +81,11 @@ Instead of Resolving a Runaway:
 		LineBreak;
 		say "     Telling the other that it can be both fun as well as somewhat uncomfortable to get hammered up the ass the way you have been as a consequence of just trying to survive in this twisted city, you watch with mounting disbelief as the freckled faced youth's hazel eyes literally light up at you as he listens to you continue to talk about your varying sexual experiences. 'Really?! You think that... well... do you think I could maybe find someone to be my boyfriend out here?' You swiftly let the other know that relationships around this place last about the length of an orgasm. A slight downcast look covers the freckled youth's face at that and soon a sigh escapes from the other's lips. 'Oh, I see. Well, it's better than being stuck at home anyway. Maybe I can talk to one of those cute shark guys and get hooked up with one of them?' The teen's question seems to be directed more towards himself than you, but you find yourself hurriedly telling the other of the dangers of being infected. 'That's alright. It's not like I've got a lot to look forward to anyway. Believe me, if you knew my situation then you'd agree that this place is heaven compared to being at home with my dipstick parents.";
 		say "     Curiosity makes you ask the other what [italic type]home[roman type] is like, but at that the freckle faced teen just clams up and shakes his head. From that point on the young man seems to completely ignore you as he goes about watching the waters of the ocean lap at the sand. Seeing as this conversation is obviously over with, you get up and then make your way elsewhere to leave the other alone with his thoughts.";
+		now Resolution of Runaway is 1; [encouraged him]
 	else:
 		LineBreak;
 		say "     Relaying to how being fucked against your will is not the best thing you've come to experience in the city, you watch as the freckle faced teen's eyes harden before the other nods at you somewhat tightly. 'I see. Thanks. That's... some serious food for thought.' The other turns his head to ignore you at that point, and not really sure what else you can say, you turn away from the hazel eyed youth to go about your business.";
+		now Resolution of Runaway is 2; [discouraged him]
 	increase score by 1;
 	now Runaway is resolved;
 
@@ -132,6 +139,7 @@ Instead of Resolving a Hurting:
 			increase humanity of player by 5;
 			if humanity of player > 100, now humanity of player is 100;
 			increase score by 5;
+			now Resolution of Hurting is 1; [called an Orderly]
 			now Hurting is resolved;
 		else:
 			LineBreak;
@@ -140,12 +148,13 @@ Instead of Resolving a Hurting:
 			LineBreak;
 			say "     Having fought the other enough to wear him down, the vixen nurse is able to get close enough to inject something into the weasel's arm which sends the wide-eyed mess of fur wrapped in a straight jacket straight into the land of unconsciousness. You watch in disbelief as the mustelid falls down onto the ground and then begins to twitch slightly from whatever is flowing through his system. Not sure if you've made the right decision on this one, you ask the nurse what's going to happen to the other and then balk slightly when you notice that she is nowhere to be found.";
 			increase score by 1;
+			now Resolution of Hurting is 2; [called a Nurse]
 			now Hurting is resolved;
 	else:
 		LineBreak;
 		say "     Deciding that caution would be the better part of valor on this one you slowly back away from the upturned desk and then out of the room while keeping your eyes on the straight jacket wearing weasel. The other lifts his head to look up at you for a moment, but then lowers his head to whimper and begin rocking once again after noticing your departure.";
 		now Hurting is resolved;
-
+		now Resolution of Hurting is 99; [desinterest]
 
 Conchien is a situation.
 The sarea of Conchien is "Outside".
@@ -223,16 +232,17 @@ Instead of Resolving a Chocolate Treat:
 			say "     As you watch them flow away, you find your old thoughts flowing away as well. Your body further loses cohesion, going from a semi-solid state into one of flowing, liquid chocolate with a dog-like shape. As your new instincts for chocolate doggy hunger and lust take over, you pad quickly after your new pack, trailing cocoa brown pawprints.";
 			wait for any key;
 			end the story saying "Your mind melted away into the chocolate dogs, leaving you one of them.";
-			now battleground is "void";
 			wait for any key;
 			follow the turnpass rule;
 			stop the action;
 		else:
 			say "     You manage to keep your mind together enough to pull yourself into a somewhat more solid and bipedal form. Still deeply infected and weakened, you manage to hold onto enough of your humanity to continue your quest for survival. You do feel a strong longing for more sex or more chocolate. Or best of all, more chocolate sex. You stumble away, trying to pull yourself into enough cohesion to walk as you rub your cream-filled tummy.";
 			say "[impregchance][impregchance]";
+			now Resolution of Chocolate Treat is 1; [went through, stayed sane]
 	else:
 		LineBreak;
 		say "     Thinking it would be better to go without, considering the gleaming look in the canine's eyes is just too devious to be something ordinary, you shake your head at the Chocolate Labrador and then walk right on by it without saying a word to the beast. This doesn't go quite as planned for you because soon the other is barking and chasing you down the street.";
+		now Resolution of Chocolate Treat is 99; [avoided the choc]
 	now Chocolate Treat is resolved;
 
 

@@ -15,7 +15,7 @@ Section 1 - Treasure Hunting
 
 Adventurer is a situation. The level of Adventurer is 5.
 The sarea of Adventurer is "Outside".
-Adventurer is resolved.
+Adventurer is inactive.
 
 when play begins:
 	add Adventurer to badspots of girl;
@@ -32,7 +32,7 @@ Instead of resolving Adventurer:
 		say "     You find yourself wondering what she would have done had the outbreak not occurred, but have no time to ask as she presses onwards. 'And that's where you come in. You seem chummy enough with her that she'll let you roam around the museum. I want you to go in and get the Onyx Crow's head for me. It's incorrectly housed in the Greek Artifacts wing, though it's actually of Scythian origin.' Seeing your lack of recognition in your eyes, she just rolls hers. 'Look, it's a carved crow's head made of black stone with some gold on it. It's about the size of baseball. Simple enough?";
 		say "     'Once you've got it, just find your way back here and I'll trade you some supplies for it.' With a swish of her hips and numerous tails, she grins. 'And maybe throw in a special reward, too.' With that, she runs off into an alley, disappearing and quickly as she came. You find yourself thinking about her offer, wondering if it's time to make a trip back to the museum.";
 		now Adventurer is resolved;
-		now Onyx Crow is unresolved;
+		now Onyx Crow is active;
 		now HP of Solstice is 1;
 	else if HP of Solstice is 2:
 		say "     Managing to find your way through the chaos of the city, you make your way back to the intersection where you first met the vulpine adventurer. True to her word, she steps out from one of the alleyways as you arrive. 'Did you get it?' she asks quickly";
@@ -90,7 +90,7 @@ Instead of resolving Adventurer:
 
 Onyx Crow is a situation. The level of Onyx Crow is 5.
 The sarea of Onyx Crow is "Museum".
-Onyx Crow is resolved.
+Onyx Crow is inactive.
 
 when play begins:
 	add Onyx Crow to badspots of girl;
@@ -121,7 +121,7 @@ Instead of resolving Onyx Crow:
 			increase score by 10;
 			now HP of Solstice is 2;
 			now Onyx Crow is resolved;
-			now Adventurer is unresolved;
+			now Adventurer is active;
 
 
 Table of Game Objects (continued)

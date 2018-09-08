@@ -86,7 +86,7 @@ Instead of resolving a Two crash into the Cuckoos Nest:
 		Now Resolution of Two Crash into the Cuckoos Nest is 2;
 	Now Two Crash into the Cuckoos Nest is resolved;
 
-Avian Tent is a situation. Avian Tent is resolved.
+Avian Tent is a situation.
 The Prereq1 of Avian Tent is Two Crash into the Cuckoos Nest.
 The Prereq1Resolution of Avian Tent is { 1, 2 }.
 The sarea of Avian Tent is "Forest";

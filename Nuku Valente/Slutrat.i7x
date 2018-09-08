@@ -403,7 +403,7 @@ Carry out ratdarts:
 			say "     'Like skeeball!' a cheery rat beside her pipes up, reaching for her neighbor's cock. 'Nah! Skeeball's lame,' the first says, stuffing the rat's muzzle over her throbbing cock to silence her. 'Maybe a pinball machine or a video game. Have to run a damn long extension cord for that though,' she muses, thrusting into the cocksucking rat's mouth.";
 			say "     'What about pool?' another offers, coming over to play with the rat's breasts. 'Yeah, pool wouldn't be bad at all. One of those big, classy tables they got in those high-class clubs would be awesome! Newbie, you get right on that,' she orders, giggling as her nipples are licked and she becomes preoccupied with her playmates.";
 			WaitLineBreak;
-			now Pool Hall is unresolved;
+			now Pool Hall is active;
 			now SlutRatDenPoolTable is 1;
 		if remainder after dividing ratdartcount by 4 is 0 and SlutRatDenPoolTable is 1:
 			say "     The same slut rat from earlier [one of]looks up from plowing another smaller rat as you approach the board again. 'Hey newbie, any luck finding us that pool table or somethin[']?' she asks, not breaking her pace. You shake your head and she grumbles, 'Bummer!' and returns to nibbling on her current lover's ear.[or]scratches in itch on her chest, making her large breasts jiggle. 'Any luck with getting us something else to do?' she bitches.[or]yawns in boredom. 'We should really have something more than darts. Go back topside and look for a classy pool table. Try the High Rise District for a fancy pool hall,' she suggests. 'Yeah, get moving!' a few of the others pipe up.[or]presses another rat's face to her dripping pussy. 'You should really head topside and find us that pool table,' she complains. 'Yeah! And look for a skeeb-' the second girl starts to say, but is cut off as the bigger rat stuffs her face back to her cunt.[in random order]";
@@ -492,7 +492,8 @@ To say slutratdomsex:
 
 Section 5 - Pool Hall
 
-Pool Hall is a situation. Pool Hall is resolved.
+Pool Hall is a situation.
+Pool Hall is inactive.
 The sarea of Pool Hall is "High".
 
 Instead of resolving a Pool Hall:

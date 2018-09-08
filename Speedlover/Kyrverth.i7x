@@ -136,7 +136,7 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 	if KyrverthQuestGiven is 0 and (KyrverthTimer - turns >= 6): [Quest give]
 		if KyrverthStage is 0:
 			say "     'Hi there, would you be willing to help me out? I have been trying to build up a hoard, but it's a bit too dangerous for me out there. Would you be willing to help get the first few [one of]pieces[or]parts[or]bits[at random] of my hoard? You should be able to find something in the [bold type]high rise district[roman type], maybe somewhere that deals in [bold type]jewels?[roman type]";
-			now Jewel Heist is not resolved;
+			now Jewel Heist is active;
 		else if KyrverthStage is 1:
 			say "     'You're willing to help me out again? Awesome! A proper dragon would defeat some knights and hoard their armor, but they won't come to me and there are some pretty [one of]scary[or]dangerous[at random] monsters between here and there so I can't go to them, could you bring me back [bold type]5 bits of chainmail?[roman type]'";
 		else if KyrverthStage is 2:
@@ -386,7 +386,7 @@ instead of going south from Overgrown Street while (KyrverthTimer - turns <= 6 a
 Jewel Heist is a situation.
 The level of Jewel Heist is 5. [minimum level to find the event]
 The sarea of Jewel Heist is "High".
-Jewel Heist is resolved.
+Jewel Heist is inactive.
 
 when play begins: [flags for blocking this event]
 	add Jewel Heist to badspots of guy;

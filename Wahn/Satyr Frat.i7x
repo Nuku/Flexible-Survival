@@ -61,7 +61,7 @@ to say Satyr Frat Party:
 				say "     Phew, that was close. Though at least you can be sure that you gave Kerr and Talov enough time to make their way into the frat house. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 			now SatyrFratPartyStage is 1;
 			now SatyrFratRichardRelationship is 99;
-			now Let's Party is not resolved;
+			now Let's Party is active;
 		if calcnumber is 2: [lying]
 			LineBreak;
 			say "     Running up to the young human man on quick hooves, you do a bit of play-acting as if you're out of breath, then pant that you saw a group of incubi climbing over the fence behind the house. The athletic young man's eyes widen in alarm and he says 'What?! Where? And who are -' Quickly interrupting him before he can really think about anything, you tell him to come quickly and run past the garage of the frat-house, turning the corner towards the backyard. And it works - the frat party guardian follows you a moment later, leaving his post to check out your imaginary incubi.";
@@ -77,12 +77,12 @@ to say Satyr Frat Party:
 				say "     After finishing off the incubus, you look around and see the frat guy standing over his own opponent. The young man claps your shoulder in camaraderie and keeps a close watch on the bruised incubi as they pick themselves up and flee. When the two of you walk back to the front of the house afterwards, he says 'Thanks for the warning and help. I'm Richard by the way.' He's too intent in getting back to his post to do more than have a short chat on the way, but you get the impression that he's a pretty friendly and nice guy. As you come to the front of the house, your satyr compatriots are nowhere in sight - seems like they made it into the building alright. Getting another bit of thanks from Richard, you say your goodbyes and walk away. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 				now SatyrFratPartyStage is 2;
 			now SatyrFratRichardRelationship is 1;
-			now Let's Party is not resolved;
+			now Let's Party is active;
 		if calcnumber is 3: [sex]
 			LineBreak;
 			say "[SatyrFratSex]";
 			now SatyrFratRichardRelationship is 2;
-			now Let's Party is not resolved;
+			now Let's Party is active;
 		if SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99:
 			change the south exit of Greek Street to Satyr Frat Dummy Room;
 			change the north exit of Satyr Frat Dummy Room to Greek Street;
@@ -172,7 +172,8 @@ to say SatyrFratSex:
 		say "     After a bit more pretty nice making out with the student, you leave to pull his pants back up, unobtrusively checking for the satyrs in the meantime. Looks like they made it into the building alright. With a smile, you playfully grope Richard's butt one last time, then bid him farewell and watch as he walks back to his post. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 		now SatyrFratPartyStage is 5;
 
-Let's Party is a situation. Let's Party is resolved.
+Let's Party is a situation.
+Let's Party is inactive.
 The sarea of Let's Party is "Campus".
 when play begins:
 	add Let's Party to badspots of guy;       [frat boys]
@@ -453,8 +454,8 @@ to say SatyrFratSex5:
 			WaitLineBreak;
 			say "     For a while, the two of you just let go of everything else, simply dancing and enjoying yourselves in the midst of all the like-minded and more or less drunk students. It is quite a bit of fun, but also a little exhausting, so you eventually make your way back to the bar. Richard takes back his shirt and pulls it on, then squeezes your shoulder and says, 'Thanks, that was great! Gotta rest for a bit now...' With a last charming smile, he walks over to the sofa on the far wall. As you watch him go, swaying a bit in his drunken state and finally plopping down on the cushions, Talov leans in to you over the bar counter. 'Man, that boy really can put away the wine - I'd have thought we had another satyr bro after the first two cups, but no...'";
 			say "     Looking over at Richard, he strokes his goatee in contemplation, then adds, 'You know what? Since our tasty wine doesn't hit the spot for Richard... I have an idea what might. To get a stud like him on the team might be worth getting into a little bit of trouble, don't you agree?' The handsome satyr looks at you, then almost immediately says, 'Sure you do. Who wouldn't, eh? Okay then, now listen closely... our boss, Pan - the big kahuna, you know... he's got the very best stuff. And if one were to take just the right path through that museum of yours... there is an entrance to one of the [bold type]divine wine-cellar[roman type]s. If you sneak in there and tap a barrel, just a little bit, that prime grape juice would surely work wonders with Richard.' Talov's renewed lusty look over at the dozing student is interrupted by someone calling for more drinks and the satyr quickly gets back to filling more cups. 'Good luck, I'm sure you can do it,' he calls to you over the noise, then starts serving a group of rowdy frat-guys.";
-			if Divine Wine-Cellar is resolved:
-				now Divine Wine-Cellar is not resolved;
+			if Divine Wine-Cellar is inactive:
+				now Divine Wine-Cellar is active;
 		else: [player got the good stuff]
 			say "     Letting your eyes wander over the crowd of partying students, you spot who you're looking for right away - Richard, the hunk you encountered when you helped your satyr friends get in here. He's standing over near one of the sofas in the room, moving to the beat of the music. With a smile on your face, you dodge between the crowd of dancing frat guys and girls in between and go for your mark, putting an arm around his shoulders before the cute guy even knows you're there. Eyes going wide and cheeks reddening as he looks over to you and remembers your last encounter, he gives a friendly smile and says, 'Hey! Er... nice to see you again. I got bored waiting for the guy to relieve me because he never came - guess guard duty isn't all that important if no one else cares, hm?'";
 			say "     You couldn't agree more and invite him to share a drink with you, guiding the readily following student back to the bar a moment later. The two satyrs behind the counter greet you with wide grins, with both Kerr and Talov's eyes undressing your friend with their eyes. Richard sits down on a bar-stool just like you do, somewhat surprised at the unabashed lusty looks he is getting from the duo, then you lean in and loudly ask for an empty cup since you got something special for your friend. 'Sure thing, coming right up,' one of the satyrs replies in a cheerful tone, setting down a red plastic cup and also filling another from the seemingly endless wine-barrel they brought along. As he sets the wine cup on the counter in front of you, you're already pouring Richard's drink from the little bottle you got from the museum.";
@@ -577,11 +578,12 @@ instead of sniffing Pan's Special Reserve:
 	say "The wine is aromatic and quite powerful. Something about it fills you with the feeling of boundless energy, like you could dance away all night and day, give yourself to endless revels and never stop enjoying yourself.";
 
 Divine Wine-Cellar is a situation.
+Divine Wine-Cellar is inactive.
 The sarea of Divine Wine-Cellar is "Museum".
+
 when play begins:
 	add Divine Wine-Cellar to badspots of guy; [male satyr]
 	add Divine Wine-Cellar to badspots of furry; [satyr involved]
-	now Divine Wine-Cellar is resolved;
 
 [ JaksEncounters                                            ]
 [  0: not met                                               ]
@@ -646,6 +648,8 @@ Instead of resolving a Divine Wine-Cellar:
 				increase carried of Pan's Special Reserve by 1;
 				if JaksEncounters < 2: [no BJ before]
 					now JaksEncounters is 2; [gave him a BJ]
+				if Resolution of Divine Wine-Cellar < 1:
+					now Resolution of Divine Wine-Cellar is 1; [got satyr-BJ]
 			else if calcnumber is 3: [fuck]
 				LineBreak;
 				say "     Standing up and looking the hunky satyr in the eye, you make the offer of giving up your [if player is female]pussy[else]ass[end if] to him, resulting in Jaks looking down over your form appreciatively. A little movement at the corner of your view draws your attention - and you realize that it's his manhood rapidly filling out to a full erection as you glance down. 'I gladly accept,' the horny satyr says in a very satisfied tone, leaning in and sliding an arm around your chest to pull you in for a kiss. His curly beard tickles pleasantly as you make out with him, tongues wrestling with one another. Coming up for air a long moment later, the satyr sets down the little wine bottle carefully, then grabs hold of you with both hands. Jaks hefts you up, allowing you to encircle his hips with both legs as he goes on to kiss you again and again, then carries you over to the table.";
@@ -663,6 +667,8 @@ Instead of resolving a Divine Wine-Cellar:
 				increase carried of Pan's Special Reserve by 1;
 				if JaksEncounters < 3: [not fucked before]
 					now JaksEncounters is 3; [fucked by Jaks]
+				if Resolution of Divine Wine-Cellar < 2:
+					now Resolution of Divine Wine-Cellar is 2; [got satyr-fucked]
 			now LastJaksEncounter is turns;
 		else: [return visit]
 			say "     Once more, you follow the path your satyr friend Talov explained to you - through the several rooms of the Egyptian exhibit, then turning around and walking back the way you came, but with other rooms taking the place of the previous ones. Passing through a Babylonian garden, then coming to a re-built ancient trading barge filling a very large room, you scale the side of the ship and walk down the steep ladder of its forward hold - only to find yourself coming down into an underground passage, half natural cave half humanly built. A few steps ahead, the tunnel opens into a larger room lit by the flickering light of open flames, and you can already see a number of wine-barrels from your position.";
@@ -707,6 +713,8 @@ Instead of resolving a Divine Wine-Cellar:
 				increase carried of Pan's Special Reserve by 1;
 				if JaksEncounters < 2: [no BJ before]
 					now JaksEncounters is 2; [gave him a BJ]
+				if Resolution of Divine Wine-Cellar < 1:
+					now Resolution of Divine Wine-Cellar is 1; [got satyr-BJ]
 			else if calcnumber is 3: [fuck]
 				LineBreak;
 				say "     Stepping up and looking the hunky satyr in the eye, you make the offer of giving up your [if player is female]pussy[else]ass[end if] to him, resulting in Jaks looking down over your form appreciatively. A little movement at the corner of your view draws your attention - and you realize that it's his manhood rapidly filling out to a full erection as you glance down. 'I gladly accept,' the horny satyr says in a very satisfied tone, leaning in and sliding an arm around your chest to pull you in for a kiss. His curly beard tickles pleasantly as you make out with him, tongues wrestling with one another. Coming up for air a long moment later, the satyr sets down the little wine bottle carefully, then grabs hold of you with both hands. Jaks hefts you up, allowing you to encircle his hips with both legs as he goes on to kiss you again and again, then carries you over to the table.";
@@ -721,6 +729,8 @@ Instead of resolving a Divine Wine-Cellar:
 				else:
 					say "[mimpregchance]";
 				say "     Pushing himself up from the table with both strong arms, Jaks looks down at you with a cheeky grin on his face, then says, 'Pleasure having you here as a visitor. I wouldn't mind if you came along more often.' He pulls his spent cock from your body slowly and gently, wiping off a bit of cum sticking to the cockhead with a finger and then slurping it off with his tongue. The satyr helps you down from the table and waits for you to put your clothes in order, then holds out a little bottle of fine wine to you in a flourish. 'Here, take this. You earned it. Now get out of here, I got duties to perform, you know...' Giving him your thanks, you pocket the sample bottle of wine, then make your way down the short tunnel and to the stairs. Not long after, you're back in the lobby of the museum.";
+				if Resolution of Divine Wine-Cellar < 2:
+					now Resolution of Divine Wine-Cellar is 2; [got satyr-fucked]
 				increase carried of Pan's Special Reserve by 1;
 				if JaksEncounters < 3: [not fucked before]
 					now JaksEncounters is 3; [fucked by Jaks]

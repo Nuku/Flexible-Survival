@@ -126,10 +126,11 @@ Instead of resolving a Rooftop Rumble:
 					say "[MeetRane]";
 					now HP of Rane is 5;
 					now Rooftop Rumble is resolved;
-					now The blue Oni is unresolved;
+					now Resolution of Rooftop Rumble is 2; [fought & lost]
 				else if fightoutcome >= 30:[fled]
 					say "     Taking your legs under your arms, you manage to slip out of the circle of gang-members and make a run for it, dashing back into the alley you came from. Making use of all the tricks you know, you manage shake your human attackers after a while, but are left gasping for air and with burning leg-muscles. You resolve not to return to that area in the future, as the whole 'blue devil' and gang situation seems a bit too hot to handle.";
 					now Rooftop Rumble is resolved;
+					now Resolution of Rooftop Rumble is 3; [fought & fled]
 					now HP of Rane is 99;
 				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 					say "     You manage to fell another the goons on your own. The rest quickly grab them and move them out of the way. The leader is grinning very wide now. 'Nice! This one may not be the devil but at least they can fight! Let me show my appreciation here... was going to use this knife, but let's try something new.' The leader walks over to one of the building walls and grabs a thick water pipe. With a grunt of exertion he rips it clean off the wall and brandishes it in both hands. 'Now we're gonna have fun!' He takes a swing in the air, and you gulp as you realize his range with the pipe and that one blow would be enough to do major damage. Before you can react, you feel something landing directly next to you. Fearing one of the other goons got the drop on you, you whirl around ready to strike...";
@@ -141,11 +142,13 @@ Instead of resolving a Rooftop Rumble:
 					say "[MeetRane]";
 					now HP of Rane is 5;
 					now Rooftop Rumble is resolved;
-					now The blue Oni is unresolved;
+					now Resolution of Rooftop Rumble is 1; [fought & won]
+					now The blue Oni is active;
 		else:
 			LineBreak;
 			say "     Quickly deciding that the danger far outweighs any other consideration, you run back the way you came as fast as possible and continue running even after exiting the alleyway maze. After a few blocks you stop and catch your breath, no longer feeling the sensation of being watched. Resolving to put this nonsense all behind you, you press on, promising yourself not to return.";
 			now Rooftop Rumble is resolved;
+			now Resolution of Rooftop Rumble is 99; [desinterest]
 			now HP of Rane is 99;
 
 to say MeetRane:
@@ -167,7 +170,10 @@ to say MeetRane:
 		say "     You watch as Rane takes off in one direction, not looking back to see if you're following as he bounds over the asphalt. Thinking about everything you saw and heard, despite having been 'saved' by him, you still don't feel quite comfortable in just going with someone you just met and don't actually know. Before long he's disappeared and you make the decision to get going yourself - not in the direction he went though.";
 		say "     Part of you feels bad for seemingly walking out like that. A thought crosses your mind as you realize that the direction Rane was heading in coincides with where the City Park would be, you wonder if maybe exploring the [bold type]park[roman type] and hunting for the [bold type]blue oni[roman type] would be an option if you had a change of heart in the future?";
 
-The blue Oni is a situation. The level of The blue Oni is 5. The blue Oni is resolved.
+The blue Oni is a situation.
+The Prereq1 of The blue Oni is Rooftop Rumble.
+The Prereq1Resolution of The blue Oni is { 1, 2 }.
+The level of The blue Oni is 5.
 The sarea of The blue Oni is "Park".
 
 Instead of resolving a The blue Oni:
@@ -179,25 +185,26 @@ Instead of resolving a The blue Oni:
 		say "then his eyes go wide as the image changes. The mirror now shows you on your hands and knees, with the hellhound you made your deal with mounting you, hips thrusting mercilessly as he knots and breeds you. The beast gives a silent howl in the reflection, then turns its head to look straight at you out of the mirror, eyes burning in an unholy fire. Then suddenly, from one blink to the next, the mirror returns to just showing the normal reflection of what's in front of it.";
 		say "     Rane looks at you with a shocked expression, then says 'You made a deal with that beast? I would never have expected something so vile from you. Stay away from me.' After a quick murmur in Japanese and a bowing towards the mirror, the blue oni then dashes off, vanishing between the bamboo poles before you can do or say anything.";
 		now HP of Rane is 99;
-		now battleground is "void";
 		move player to shrine;
 		now Rane is nowhere;
+		now Resolution of The blue Oni is 1; [rejected because of hellhound]
 	else if jackalmantf is 4: [Jackalman Transformation]
 		say "then his eyes go wide as the image changes. The mirror now shows someone standing behind you - it's the jackal-headed man you met in the museum, with one hand-paw resting on your shoulder. The image turns his head to look out of the mirror at you, then vanishes after giving you a nod with an amused expression on his face.";
 		say "     After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. He looks at you with a somewhat more respectful tone in his eyes, then says 'Anubis is watching out for you? That's a powerful patron you have there. You'll have to tell me sometime how you managed to attract his attention and favor.' Looks like he's now ready to talk... and do other things with you.";
 		move Rane to shrine;
 		now HP of Rane is 6;
-		now battleground is "void";
 		move player to shrine;
+		now Resolution of The blue Oni is 2; [comment about Jackalman]
 	else if Nightmaremastery is 1: [Player is Stablemaster]
 		say "then his eyes go wide as the image changes. The mirror now shows you sitting on a large horse made of fire and shadows. It's clearly male, with an erect horsecock dangling between its legs, dripping cum from the tip. The stallion turns his head to look out of the mirror at you with flaming eyes, then nods its head at you as if promising that together you will mount and rule over everything.";
 		say "     After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. He looks at you with a somewhat more respectful tone in his eyes, then says 'So, the Nightmare spirit infuses you. Fine by me - but don't think you'll be able to make me your bitch. This oni is made from tougher stuff.' Now knowing who and what you are, he nevertheless stays where he is, looking ready to talk... or do other things with you.";
+		now Resolution of The blue Oni is 3; [comment about Nightmare]
 	else:
 		say "then the usual open smile creeps back over his face and he nods to your reflection. After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. Looks like he's now ready to talk... and do other things with you.";
 		move Rane to shrine;
 		now HP of Rane is 6;
-		now battleground is "void";
 		move player to shrine;
+		now Resolution of The blue Oni is 4; [regular join]
 	now The blue Oni is resolved;
 
 Table of Random Critters (continued)
@@ -594,7 +601,7 @@ to say RaneFirstFuck:
 		LineBreak;
 		say "     As you make your way towards the library in the company of Rane, you silently wonder what you've just gotten yourself into. Granted, he's a great fighter, and certainly not a bad lay, if a bit - a strong bit - rough around the edges. He's obviously strong enough to do whatever he wants, but then again, he left the choice of undoing his belt to you. You wonder if he'll behave, given his demonic nature, though he's certainly proven to be very unexpected in most aspects - capable of great violence, but also relatively nice if just talked to. He certainly didn't harm you, maybe startled you a bit a few times, not counting the bruises and scratches from the rough sex and the soreness you're starting to feel. Only time will tell what comes next...";
 		move Rane to Sitting Area;
-		now Rane's Good Deed is not resolved;
+		now Rane's Good Deed is active;
 		now battleground is "void";
 		move player to Sitting Area;
 		now HP of Rane is 7;

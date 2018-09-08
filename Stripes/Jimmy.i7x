@@ -5,7 +5,7 @@ Version 1 of Jimmy by Stripes begins here.
 Section 1 - Event
 
 [Situation opened by Good Alexandra]
-Automaton Activity is a situation. The level of Automaton Activity is 6. It is resolved.
+Automaton Activity is a situation. The level of Automaton Activity is 6. It is inactive.
 The sarea of Automaton Activity is "Capitol".
 
 instead of resolving Automaton Activity:
@@ -83,7 +83,7 @@ Instead of conversing the Jimmy:
 	else if HP of Alexandra >= 63 and sgtimer - turns >= 8 and sgtimer is not 255:
 		say "     Speaking with Jimmy, he inform you that one of the survivors from the bingo hall had left a note for any of the missing scouts who might return, telling them where the rest of you had gone. 'Since they'd be left there alone without directions or help to get here, I'd like you to go back there and check it out one last time. Besides, some of those scattered by the wolves may have escaped there.' Agreeing that it's worth a shot, you promise him you'll return to check on the [bold type]survivor group[roman type]'s bingo hall one last time.";
 		now sgtimer is 255;
-		now Survivor Group is unresolved;
+		now Survivor Group is active;
 [	else if PoliceStationTwelvePopulation > 0:
 		say "***";]
 	else:

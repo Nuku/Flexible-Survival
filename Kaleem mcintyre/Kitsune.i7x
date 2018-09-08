@@ -90,8 +90,8 @@ Instead of Resolving a Strange Fox:
 		say "'I lost it somewhere near the park when I was speaking to a dragoness from my homeland. I [italic type]really[roman type] need to find that bell before anything happens to it. I've searched, and I've searched, and I've searched some more, but I haven't been able to find it.' Kitsune looks at you imploringly before stepping over to you. His hands find your shoulders and you shiver when you feel his breath crossing over your face as he touches noses with you. '[italic type]Please[roman type] if you find my bell then bring it back to me as soon as possible. I have to get that bell back before I can leave this place!' A tremble of fear actually makes you blink as you note the cool and somewhat calm demeanor of the fox-man replacing itself with a terrified look upon the other's face. You nod before you can think over the request, something you've been doing a lot when dealing with Kitsune, and swiftly the worried look on the fox-man's face is replaced with gratitude.";
 		say "'Thank you. I have a feeling you'll be able to find it before I can. If you do, or rather when you do, please bring it to me. I'll reward you with anything you desire, if it is within my power. And I do mean [italic type]anything[roman type].' A shiver runs down your backside as you think up what the silver vulpine could mean by [italic type]anything[roman type], but upon looking into the other's heated blue eyes you swallow thickly in realization. Nodding to the other you try to back away, but are unable to do so until Kitsune releases his fingers from around your shoulders. Once he does however, you turn around and then beat a hasty retreat from the silver vulpine as your mind frantically goes over the sudden strange change in the other. What could be so important about a little bell?";
 		now ktp is 6;
-		now Strange Fox is resolved;
-		now strange bell is unresolved;
+		now Strange Fox is inactive;
+		now Strange Bell is active;
 	else if ktp is 7 and star bell is owned:
 		say "The joy that radiates off of Kitsune's muzzle is almost more than you can logically come to understand as the silver vulpine charges over to you and then grapples you into a fierce hug. Holding you tightly and then rumbling happy inside of his throat you feel a strange warmth radiating throughout your body as the fox-man holds you close. 'Thank you, child of man.' Kitsune almost weeps at you as you gently hand him his bell after he opens his paw out expectantly. 'You don't know what this means to me to have my bell back safe and sound. I thought I'd be stuck here forever, or worse! Now I... I...' The other soon sniffles as he backs away from you only to begin somewhat crying afterwards. Never having seen the other like this all you can do is stare in befuddlement as you try and wonder what is up with the silver vulpine. How can a bell, a thing that can fit inside of one's pocket alongside a cell phone strand this beautiful creature in this place? 'That's because,' the other says all of a sudden, 'it, like me, is a magical construct made by beings beyond your comprehension. My star bell is a very, very mystical instrument that, again, like me, has a mind and will all its own.' Lifting the bell and showing it off to you, your eyes widen as the star bell slowly radiates an aurora of multiple colors and then quickly disappears in a flash of golden light. The only thing left in the bell's wake are small motes of starlight that twinkle slowly out of existence once they hit the ground.";
 		say "With your eyes slowly coming fully back into focus, the light from before having blinded you slightly, you shake your head to and fro before looking at Kitsune's slightly moist muzzle. 'Now then.' The fox-man flicks a hand over his cheeks as he replaces his tears with a playfully wicked smile. For some reason you feel like a mouse that the cat has decided to play with as the silver vulpine gazes at you with a somewhat unnerving smirk spreading onto his face. 'What should I do to honor my mortal companion for [if player is female]her[else]his[end if] efforts?' Kitsune hums before moving his head from side to side while putting one finger onto his chin. 'Maybe I should take you for miraculous adventure in another realm, kidnapping you from your supposed destiny here and whisking you away to someplace your mind can't comprehend.' A dark chuckle pouring free out of the other's throat as you try to back up somewhat. 'Or maybe I should strap you down to a bed with some silk rope and then have my wicked way with you, or vice versa.' A stirring in your loins make you swallow thickly as you watch Kitsune shift his hips back and forth while stalking closer to you. 'Or maybe I could give you a form like mine own and then teach you the ways of the Kitsune clan, and then afterwards we can work to reconstruct your soul name into something more fitting of one of my people. That way you can become a true Kitsune and join the rest of us in another world? Oh, the possibilities truly are endless!' Kitsune giggles almost childishly and you fluster somewhat.";
@@ -113,8 +113,9 @@ star bell is a grab object. It is part of the player. It is not temporary.
 instead of sniffing star bell:
 	say "The smell of sweet dreams fills the bell and you as well as you hold it close to your nose.";
 
-strange bell is a situation. strange bell is resolved.
-the sarea of strange bell is "Park".
+Strange Bell is a situation.
+Strange Bell is inactive.
+the sarea of Strange Bell is "Park".
 
 instead of resolving a strange bell:
 	if ktp is 6:
@@ -122,14 +123,14 @@ instead of resolving a strange bell:
 		if player consents:
 			say "You pick up the unusual bell, tucking it away in your pack.";
 			increase carried of star bell by 1;
-			now strange bell is resolved;
-			now Strange Fox is unresolved;
+			now Strange Bell is resolved;
+			now Strange Fox is active;
 			now ktp is 7;
 		else:
 			say "You sadly leave it behind.";
 	else:
 		say "You have a strange feeling as you travel along, as it there's something you're missing, but you can't quite be sure what it is.";
-		now strange bell is resolved;
+		now Strange Bell is inactive;
 
 
 Kitsune ends here.

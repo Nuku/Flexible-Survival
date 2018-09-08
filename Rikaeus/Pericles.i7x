@@ -11,13 +11,13 @@ Version 1 of Pericles by Rikaeus begins here.
 [   6: Managed to convince Bjorn to apologize, share rooms ]
 
 Daily Training Session is a situation.
-Daily Training Session is resolved.
+Daily Training Session is inactive.
 The sarea of Daily Training Session is "Campus".
 
 when play begins:
 	add Daily Training Session to badspots of guy;
 
-instead of going to Athletic Street while (Daily Training Session is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 1 and a random chance of 1 in 3 succeeds):
+instead of going to Athletic Street while (Daily Training Session is active and Daily Training Session is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 1 and a random chance of 1 in 3 succeeds):
 	move player to Athletic Street;
 	FirstPericlesEvent;
 
@@ -36,16 +36,16 @@ to FirstPericlesEvent:
 	now PericlesRelationship is 2;
 	now LastCampusWalkin is turns;
 	now Daily Training Session is resolved;
-	now History Class Lesson is not resolved;
+	now History Class Lesson is active;
 
 History Class Lesson is a situation.
-History Class Lesson is resolved.
+History Class Lesson is inactive.
 The sarea of History Class Lesson is "Campus".
 
 when play begins:
 	add History Class Lesson to badspots of guy;
 
-instead of going to Lecture Street while (History Class Lesson is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 2 and a random chance of 1 in 3 succeeds):
+instead of going to Lecture Street while (History Class Lesson is active and History Class Lesson is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 2 and a random chance of 1 in 3 succeeds):
 	move player to Lecture Street;
 	SecondPericlesEvent;
 
@@ -61,17 +61,17 @@ to SecondPericlesEvent:
 	say "     Pericles has a thankful look on his face when everyone appears to understand. After that he lets them ask a few questions before it's time for the end of class. When all the students are gone, he notices you and walks over. He tosses an arm around your shoulder and smiles at you. 'Hey! It's nice to see you again friend!' he says happily. You admit it's nice as well, and asks him about this entire thing. He chuckles before replying to give you an answer. 'I've been asked to give this informative lecture to the new history students by the Dean, as for why... I'll tell you that later,' he says winking at you. He looks at the clock and curses. 'Shit, I'm late for my Calculus class,' he swears before apologizing and running off. You shrug your shoulders before you yourself leave the lecture hall.";
 	now PericlesRelationship is 3;
 	now History Class Lesson is resolved;
-	now Masturbation In Private is not resolved;
+	now Masturbation In Private is active;
 	now LastCampusWalkin is turns;
 
 Masturbation In Private is a situation.
-Masturbation In Private is resolved.
+Masturbation In Private is inactive.
 The sarea of Masturbation In Private is "Campus".
 
 when play begins:
 	add Masturbation In Private to badspots of guy;
 
-instead of going to Tenvale College Library while (Masturbation In Private is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 3 and a random chance of 1 in 3 succeeds):
+instead of going to Tenvale College Library while (Masturbation In Private is active and Masturbation In Private is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 3 and a random chance of 1 in 3 succeeds):
 	move player to Tenvale College Library;
 	ThirdPericlesEvent;
 
@@ -84,7 +84,7 @@ to ThirdPericlesEvent:
 	if player is female:
 		say "     He frowns a bit at you before giving you a hesitant smile. 'Could... you leave me to uh.. take care of this?' he asks kindly and a bit forcefully. From the tone of his voice, it appears that your body isn't something that he likes. Most likely the fact that you have female anatomy as you did see him stare at only men really. You shrug and oblige his desires and leave him be, closing the door behind you. Deciding loitering around wouldn't do well, you decide to go on your way. Maybe you'll get to see him sometime later. Perhaps if you want to sex him, then you may want to lose what makes you female. You could always find his room too.";
 		now Masturbation In Private is resolved;
-		now History Video is not resolved;
+		now History Video is active;
 		now PericlesRelationship is 4;
 	else:
 		say "     When he sees you in the doorway he smiles and continues to masturbate, although at a slower pace now. He takes his free hand and runs it through his hair before he speaks up. 'Mmm I was actually hoping you'd show up. Do you want to help me friend? Or you could just watch,' he asks, gesturing to his cock and balls. The spartan's assets are rather amazing. His dick looks to be maybe ten inches long, not as long as some of the weirder ones you see, and about maybe five inches around. His balls are rather large as well, looking full and ready to pump out a huge load of cum. It is very clear that the infection apocalypse did good for him, though he could have looked like this before it. Nonetheless, you think about his offer.";
@@ -109,14 +109,14 @@ to ThirdPericlesEvent:
 			say "     Pericles begins to roughly fuck your throat, sounds of it entering and leaving your mouth filling the room. It is very clear that the male is enjoying using you as he's started to mutter dirty words to you, from calling you a cockslut to even a whore. 'You like this, don't you cumslut?' he grunts, slamming in deep, not letting you control the flow at all. On top of him abusing your oral cavity, his balls are slapping loudly and wetly against your chin, the lewd sound only making the situation hotter. It is also through this position that you're able to tell when your friend is getting close as the ballsack quickly begins to tighten.";
 			say "     'Take my cum you slut!' he roars as he pulls back so that his tip is resting on your tongue. Shortly after that a warm salty fluid starts coating the insides of your mouth. It appears to be a large amount as you are forced to gulp it down so as to not have any spill. Even so, some of the cum leaks out of your mouth. Less than a minute later Pericles finishes cumming. When he does, he pulls out and wipes his jizz coated tip on your lips, covering them with his seed. He then takes a good look at you before smiling. 'That's a good look on you,' he says, chuckling. He then helps you up, pulling you into a sloppy kiss afterwards. 'That was amazing, sorry about whatever I said during that. This infection... makes me rather dominating,' he says, rubbing the back of his head sheepishly. You tell him it was perfectly fine and you enjoyed it. That makes him smile at you happily. The two of you clean up before leaving the room. When you do, as he heads off he tells you to visit his room soon.";
 			now Masturbation In Private is resolved;
-			now History Video is not resolved;
+			now History Video is active;
 			now PericlesRelationship is 4;
 		else if calcnumber is 2:
 			LineBreak;
 			say "     You shake your head and instead decide to just watch. He shrugs his shoulder and then smirks at you. He raises his free hand to one of his nipples before starting to tweak it as he's masturbating, making him moan out loud. The virile male appears eager to put on a show for you. However, you feel as if the male is rather close already, possibly from you watching him. This is evidenced by the fact that he looks to be rubbing his cock even faster and pinching his nipples even harder. Minutes later he's moaning loudly and humping his hand, rather shortly after that the Spartan starts swearing up a storm, his head thrown back in pleasure.";
 			say "     Quickly after that Pericles['] hand leaves his cock as cum shoots all over his body, practically coating the male with it. Some of it even lands in his mouth to which he eagerly gulps it down. A minute later he comes down from his orgasmic high and begins cleaning up as he'd probably be yelled at by the librarians here, Spartan leader or not. Once he's done he walks up to you and smiles before leading you out of the room. 'If you could, please visit my room sometime later, I have something to show you,' the male tells you. You nod at him and watch him head off on his own before you continue to do whatever you were doing before.";
 			now Masturbation In Private is resolved;
-			now History Video is not resolved;
+			now History Video is active;
 			now PericlesRelationship is 4;
 		else:
 			LineBreak;
@@ -124,13 +124,13 @@ to ThirdPericlesEvent:
 	now LastCampusWalkin is turns;
 
 History Video is a situation.
-History Video is resolved.
+History Video is inactive.
 The sarea of History Video is "Campus".
 
 when play begins:
 	add History Video to badspots of guy;
 
-instead of going to Tenvale College Male Dorms while (History Video is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 4 and a random chance of 1 in 3 succeeds):
+instead of going to Tenvale College Male Dorms while (History Video is active and History Video is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 4 and a random chance of 1 in 3 succeeds):
 	move player to Tenvale College Male Dorms;
 	FourthPericlesEvent;
 

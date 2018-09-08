@@ -17,14 +17,15 @@ when play begins:
 
 Section 1 - Events
 
-Razorback Fury is a situation. The level of Razorback Fury is 7.
+Razorback Fury is a situation.
+The level of Razorback Fury is 7.
 The sarea of Razorback Fury is "Forest".
+
 when play begins:
 	add Razorback Fury to badspots of guy;
 	add Razorback Fury to badspots of furry;
 
 Instead of resolving a Razorback Fury:
-	now battleground is "void";
 	say "     You hear crashes, shouts and howls from somewhere nearby in the dense forest - sounds like there's quite a scuffle going on. Curiosity drives you to investigate and you walk towards the fight in a slow pace, doing your best to be stealthy. Soon, a small clearing comes into sight - and in it, three anthro wolves and an anthro boar. A very angry anthro boar, with the coarse fur on his bulky yet powerful body bristling. Looking at the thick mane that starts at his head and runs halfway down his back in a raised ridge, it is immediately obvious that this isn't a docile pig - no, you're seeing a feral razorback! He doesn't seem to believe in wearing clothing (not that he has to, with a coat of fur) and is holding one of the wolves raised by his throat, half a foot off the ground. The other two canines lie on the forest floor, one of them knocked out completely, the other whimpering and holding a broken arm.";
 	say "     The boar shakes his captive and growls at him, then says in a snarly tone, 'So how did you think this was gonna go, punk? You and your little buddies become wolves and think you're the top dogs now?' The only reply is a choked gurgle from the wolf - which might have something to do with the razorback pig holding him a bit tight by the throat. 'Bah! Wannabes - I could see it on you a mile away! You become animals and then go trampling into MY forest while still wearing designer jeans?! Humanity is gone, dip-shit!' With that, the boar slams the roughed-up wolf against the trunk of a nearby tree, then lets go of him, sending the canine to collapse at his feet. After a few coughs and groans, the wolf looks up fearfully at the guy standing over him and says, 'Look, we were just gonna...'";
 	WaitLineBreak;
@@ -34,7 +35,6 @@ Instead of resolving a Razorback Fury:
 	say "     Garth's orgasm lasts quite a long moment and you guess that his captive his getting a stomach-full of the boar's seed - the wild pig is quite a virile guy, it seems. This even goes on to get Andy into a bit of trouble... breathing that is, as the thick piece of meat in his throat blocks replenishing his air supply. Unable to pull away as his head is tightly gripped by the climaxing boar, the wolf can only push against Garth's hips weakly, then more and more insistent until finally his captor relents and lets go, allowing Andy to collapse on the ground and gasp for breath. 'Got a nice tight throat on you boy,' comes the gruff laugh from Garth as his cock continues to spurt the slowly ebbing blasts of cum - which the anthro boar aims right at the wheezing wolf, matting his fur in streaks of sticky semen.";
 	say "     'Jeez, get over it already. You're a wolf, not a pussy,' the razorback boar scoffs as Andy stays hunched over and panting for another full minute. Right until Garth turns him over with the cloven hoof at the end of his muscled, stocky leg. The wild pig laughs as he sees that Andy's skin-tight designer jeans are tented out at the front, so much so that the wolf must be feeling quite a pinch. 'So that's how it is, eh? Little wolfie got off on being the prey. Hah, how pathetic. Now take your buddies and get out of my forest. And don't you dare think you can rub one out on the way and soil the ground around here with that weak-ass cum of yours!' Shame-faced, Andy picks himself up and walks over - in a hunched-over gait that takes at least a little pressure off his crotch - to his friend with the by-now healed arm. Together, they pick up their unconscious compatriot and stumble away out of the clearing. You're quick to follow suit - in another direction though - so that the boar doesn't detect you as well.";
 	now Razorback Fury is resolved;
-	now Boar Payback is not resolved;
 	now RazorbackBoarEvents is 1;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
@@ -43,8 +43,11 @@ Instead of resolving a Razorback Fury:
 			now area entry is "Forest";
 			break;
 
-Boar Payback is a situation. The level of Boar Payback is 7.
-The sarea of Boar Payback is "Forest". Boar Payback is resolved.
+Boar Payback is a situation.
+The Prereq1 of Boar Payback is Razorback Fury.
+The level of Boar Payback is 7.
+The sarea of Boar Payback is "Forest".
+
 when play begins:
 	add Boar Payback to badspots of guy;
 	add Boar Payback to badspots of furry;
@@ -74,17 +77,21 @@ Instead of resolving a Boar Payback:
 			say "     Andy's internal muscles twitch and tremble with each new spurt of seed shooting out of his cock, which drives the burly wild pig fucking him to reach his climax just scant moments after the wolf himself. Heavy blasts of cum paint Andy's insides white, lubing his hole as Garth just continues fucking even throughout his own orgasm, relentlessly stimulating the young wolf through his back passage. There are some long moments of mutual cumming, followed by Garth just resting his member in the teenager's ass and holding him with his arms around the canine's slender chest. Eventually though, Garth pulls out of his would-be attacker, unconcerned about the cum clinging to his erection or dripping down into the grass.";
 			WaitLineBreak;
 			say "     There is a moment of silence as the young wolf eventually stands up straight again and puts his clothes in order, then shyly looks over to Garth. 'Worked, didn't it? Tell me, do you still feel the urge to gun me down?' the razorback boar asks, grinning broadly as Andy shakes his head and looks down. 'No. I - I'm sorry...' the teenager mumbles, sheepishly studying the ground, then flinching as Garth steps up and puts a hand on his shoulder. 'Listen kid, you don't actually seem to be such a bad sort - just got a lot of rubbish in that noggin that someone needs to shake out. But that's for another day I guess. Go on, scram! I'll leave it up to you if you're gonna play wannabe gangster with your buddies or maybe make something out of you.' With a thoughtful expression on his face, Andy walks out of the clearing, soon vanishing between some trees.";
+			now Resolution of Boar Payback is 1; [watched them fuck]
 		else:
 			say "     Not actually interested in the way the boar wants to break Andy in, you turn your back on what happens next, wandering out into the forest. Next for you is a relatively peaceful time between the trees, with only a few howls and shouts reaching to your ears. Sounds like they're still going at it in Garth's clearing...";
+			now Resolution of Boar Payback is 2; [didn't watch]
 	else:
 		LineBreak;
 		say "     Better safe than sorry, you tell yourself and stop in your tracks, letting Andy pull ahead on his path through the forest and vanish from sight after a few moments.";
+		now Resolution of Boar Payback is 3; [stayed away entirely]
 	now Boar Payback is resolved;
-	now Canine Indecision is not resolved;
 	now RazorbackBoarEvents is 2;
 
-Canine Indecision is a situation. The level of Canine Indecision is 7.
-The sarea of Canine Indecision is "Forest". Canine Indecision is resolved.
+Canine Indecision is a situation.
+The Prereq1 of Canine Indecision is Boar Payback.
+The level of Canine Indecision is 7.
+The sarea of Canine Indecision is "Forest".
 when play begins:
 	add Canine Indecision to badspots of guy;
 	add Canine Indecision to badspots of furry;
@@ -116,8 +123,11 @@ Instead of resolving a Canine Indecision:
 	now Canine Indecision is resolved;
 	now RazorbackBoarEvents is 3;
 
-Boar Encounter is a situation. The level of Boar Encounter is 7.
-The sarea of Boar Encounter is "Forest". Boar Encounter is resolved.
+Boar Encounter is a situation.
+Boar Encounter is inactive.
+The level of Boar Encounter is 7.
+The sarea of Boar Encounter is "Forest".
+
 when play begins:
 	add Boar Encounter to badspots of guy;
 	add Boar Encounter to badspots of furry;
@@ -330,7 +340,7 @@ to say RazorbackBoarSex2: [riding him (anal)]
 	say "     As you slump back, still out of breath from your orgasm, Garth gently pulls his erection out of you, accompanied by a little slurping sound and the feeling of his cum trickling down from your well-bred and still a little gaping hole. 'I still would have preferred pussy, but I can't say this hasn't been fun, eh? Still, I'm tempted to offer you a second round of fun in a little while, but... I gotta go. Can't fuck away the whole day, you know. Come by again sometime.' And with that, the naked razorback boar stands up and stalks off into the forest.";
 	increase FuckedByRazorbackBoar by 1;
 	if FuckedByRazorbackBoar is 2:
-		now Boar Encounter is not resolved;
+		now Boar Encounter is active;
 
 to say RazorbackBoarSex3: [riding him (vaginal)]
 	say "     Chuckling that you indeed want something from him, you step up to the boar-man and dig a hand into the bristly fur over his neck, pulling the gruff guy close for a demanding kiss. Then you put your hands on his shoulders, pressing down and pant out that he should lay down. Chuckling at your urgent tone, the burly boar-man follows suit, stretching out on the ground as you quickly get rid of your gear and clothes, then step up to stand over him in all your naked glory. As you lower your hand to brush its fingers over your nether lips, then spread them invitingly for him to see, the razorback boar comments, 'Oh yeah babe. Show me that pussy! [if player is male]Had me worried for a second with that cock of yours, but you just[else]You[end if] wanna get a good dicking, don't you?' As he says this, Garth's thick prick fills out more and more, hardening to a towering shaft of erect man-meat. The razorback boar proudly strokes his cock, waving it towards you and winks with broad grin on his face.";
@@ -350,7 +360,7 @@ to say RazorbackBoarSex3: [riding him (vaginal)]
 	say "     As you slump back, still out of breath from your orgasm, Garth gently pulls his erection out of you, accompanied by a little slurping sound and the feeling of his cum trickling down from your well-bred and still a little gaping hole. 'You're one hot lay! I'm tempted to offer you a second round of fun in a little while, but... I gotta go. Can't fuck away the whole day, you know. Come by again sometime.' And with that, the naked razorback boar stands up and stalks off into the forest.";
 	increase FuckedByRazorbackBoar by 1;
 	if FuckedByRazorbackBoar is 2:
-		now Boar Encounter is not resolved;
+		now Boar Encounter is active;
 
 to say RazorbackBoarSex4: [suck him]
 	say "     Chuckling that you indeed want something from him, you step up to the boar-man and dig a hand into the bristly fur over his neck, pulling the gruff guy close for a demanding kiss. Sliding your fingers down his hairy front, you let them wander about the hard pecks and bumps of his abs to reach the wild pig's crotch. Cupping his weighty balls, you roll them between your fingers and draw an appreciative grunt from your former opponent, followed by a straight out moan as you soon grip his hardening shaft. The razorback boar comments, 'That's more like it!' and bucks his hips a bit towards you, humping against the ring of your fingers around his erection. Filling out more and more under your ministrations, Garth's cock proves to be quite thick and meaty, proudly towering over the bush of his pubes. Looking at the man's face as you jerk him off a moment longer, you draw a lustful grunt from him with a tight squeeze of his shaft, leading over to a broad grin from the razorback boar. Despite 'losing' the fight, he's definitively enjoying the aftermath quite a bit.";
@@ -411,7 +421,7 @@ to say BoarAlphaChoice:
 					break;
 			now GarthRelationship is 1; [agreed to get fucked without fighting]
 			say "     (Note: You will not encounter him as a random enemy anymore from now on. Do look for the [bold type]boar encounter[roman type] if you wanna meet Garth again.)";
-			now Boar Encounter is not resolved;
+			now Boar Encounter is active;
 		else:
 			LineBreak;
 			say "     Garth huffs out his breath and grimaces at you. 'Bah, no respect as usual. Fine, be that way. You'll see eventually that this whole situation can be a pretty good thing and accept me as your alpha. For now, I'll count our little romp here as your fee for trespassing.'";

@@ -178,7 +178,7 @@ name	desc	weight	object
 combat knife is an armament. It is part of the player. It has a weapon "[one of]your large knife[or]your combat knife[or]the large blade[or]your combat knife with a strong thrust[or]your large blade with a quick slash[at random]". The weapon damage of combat knife is 6. The weapon type of combat knife is "Melee". It is not temporary.
 
 
-Prank Aftermath is a situation. Prank Aftermath is resolved. The level of Prank Aftermath is 7.
+Prank Aftermath is a situation. Prank Aftermath is inactive. The level of Prank Aftermath is 7.
 prankevent is a number that varies.
 when play begins:
 	add Prank Aftermath to badspots of furry;
@@ -715,7 +715,7 @@ Instead of resolving a Sweet Exchange:
 	now Sweet Exchange is resolved;
 
 
-Caught Glider is a situation. Caught Glider is resolved.
+Caught Glider is a situation. Caught Glider is inactive.
 The sarea of Caught Glider is "Midway".
 when play begins:
 	add Caught Glider to badspots of furry;

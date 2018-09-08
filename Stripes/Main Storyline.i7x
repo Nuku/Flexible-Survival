@@ -95,7 +95,7 @@ Instead of conversing the doctor matt:
 		now HP of doctor matt is 5;
 	if HP of doctor matt is 5:
 		say "'Up for another task? Good. Orthas spotted something interesting while hunting. A singular creature. You must understand, one of the standard impulses the infection seems to give on its infectees is the desire to spread the infection. To see just one is unusual. A trait I have only seen in Orthas so far. Go to the park and find this creature, bring it to me for study.'";
-		now unusual creature is unresolved;
+		now unusual creature is active;
 		now HP of doctor matt is 6;
 	else if HP of doctor matt is 6 and unusual creature is unresolved:
 		say "'Did you forget already?' asks Matt, 'Go to the park, find the unusual creature. Bring it here. Orthas said it was intersexed, if that helps.'";

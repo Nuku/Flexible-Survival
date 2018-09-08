@@ -6,7 +6,7 @@ Version 3 of Deer by Stripes begins here.
 
 Section 1 - Event
 
-Unusual Creature is a situation. It is resolved.
+Unusual Creature is a situation. It is inactive.
 The sarea of Unusual Creature is "Park".
 
 After resolving a Unusual Creature, try looking;

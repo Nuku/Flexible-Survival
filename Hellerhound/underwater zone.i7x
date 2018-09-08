@@ -12,6 +12,7 @@ Instead of resolving a Gill Fruits Tree:
 	if player consents:
 		increase carried of gill fruit by 1;
 		say "As you pick some of the fruit, the rest falls off into the water, overripe. Odd.";
+		now Resolution of Gill Fruits Tree is 1; [got a fruit]
 		now gill fruits tree is resolved;
 	else:
 		say "You leave the tree alone.";

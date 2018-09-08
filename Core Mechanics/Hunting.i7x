@@ -109,7 +109,7 @@ carry out HuntAction:
 		if object entry is inactive:
 			now Found is 37; [found, but the event was banned]
 			if debugactive is 1:
-				say "DEBUG -> Event banned.[line break]";
+				say "DEBUG -> Event banned / inactive.[line break]";
 		else if object entry is resolved:
 			now Found is 34; [found, but it is resolved]
 			if debugactive is 1:
@@ -308,7 +308,7 @@ carry out HuntAction:
 					if z is inactive:
 						now Found is 37; [found, but the event was banned]
 						if debugactive is 1:
-							say "DEBUG -> Event banned.[line break]";
+							say "DEBUG -> Event banned / inactive.[line break]";
 					else if z is not close:
 						now Found is 31; [found, wrong area]
 						if debugactive is 1:
@@ -392,7 +392,7 @@ carry out HuntAction:
 		-- 36: [event: prerequisite missing]
 			say "[bold type]Seems you're missing a prerequisite for this. Maybe look around a bit to find that first, or make different choices in your next playthrough...[roman type][line break]";
 		-- 37: [event: banned]
-			say "[bold type]Sadly, this event is inactive. It might have been banned by your settings, or turned off because of some other reason.[roman type][line break]";
+			say "[bold type]Sadly, this event is inactive right at this moment. It might have been banned by your settings, or turned off because of some other reason. There might be prerequisites for it.[roman type][line break]";
 	follow the turnpass rule;
 
 to huntingfightchance:

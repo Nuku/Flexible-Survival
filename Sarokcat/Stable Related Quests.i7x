@@ -6,7 +6,7 @@ Stable Related Quests by Sarokcat begins here.
 
 Section 1- Equineguardpost [onyx quest part 1]
 
-Equineguardpost is a situation. Equineguardpost is resolved. The level of Equineguardpost is 3.
+Equineguardpost is a situation. Equineguardpost is inactive. The level of Equineguardpost is 3.
 The sarea of Equineguardpost is "Stable".
 
 Instead of Resolving a Equineguardpost:
@@ -42,7 +42,7 @@ Instead of Resolving a Equineguardpost:
 
 Section 3 - Stablestoreroom [onyx quest part 2]
 
-Stablestoreroom is a situation. Stablestoreroom is resolved.
+Stablestoreroom is a situation. Stablestoreroom is inactive.
 The sarea of Stablestoreroom is "Stable".
 
 Instead of Resolving a Stablestoreroom:
@@ -86,7 +86,7 @@ Section 6- Hardware Fort
 
 [fancy quest part 2]
 
-Hardware Fort is a situation. Hardware Fort is resolved.
+Hardware Fort is a situation. Hardware Fort is inactive.
 Recoveredhardware is a number that varies.
 
 

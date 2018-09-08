@@ -8,9 +8,12 @@ understand "nav" as destinationcheck.
 carry out destinationcheck:
 	[ Note: The city areas and locations within are sorted alphabetically. Please put new rooms in the right spots as you add them ]
 	[ Start of primary rooms - Grey Abbey Library and Trevor Labs ]
-	say "[bold type]Primary Rooms[roman type]: [link][bracket]Grey Abbey Library[close bracket][as]nav Grey Abbey Library[end link] ";
-	if Outside Trevor Labs is known:
-		say "| [link][bracket]Trevor Labs[close bracket][as]nav Outside Trevor Labs[end link] ";
+	if Grey Abbey Library is known or Trevor Labs is known:
+		say "[bold type]Primary Rooms[roman type]: ";
+		if Grey Abbey Library is known:
+			say "[link][bracket]Grey Abbey Library[close bracket][as]nav Grey Abbey Library[end link] ";
+		if Outside Trevor Labs is known:
+			say "| [link][bracket]Trevor Labs[close bracket][as]nav Outside Trevor Labs[end link] ";
 	LineBreak;
 	[start of the capitol area]
 	if Approaching the Capitol Building is known or Disused Garage is known or Office Den is known or Orc Lair Side Entrance is known:

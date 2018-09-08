@@ -453,6 +453,7 @@ Instead of resolving a Pirate Standoff:
 				say "     'Arrr! Ye won't get away with this, ye cachinnating cockatoo!' the defeated shark says, visibly straining her repertoire of Captain Haddock curses. She makes a hasty retreat, leaving you with the pride of having done a good deed. Just as you were about to leave, you notice a crumpled piece of paper where the male rat stood. You pick it up, and read: [italic type]Thks dude. Meet up @ food pl.[roman type]. The message has been hurriedly written, but you suppose that the food place is the restaurant upstairs.";
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     'Har har! I didn['] get sea rat bounty, but t'is a good consolation prize,' the victorious shark says, standing arrogantly over your body. The fish jaywalks away, leaving you defeated, but also with the pride of having done a good deed. Just as you were about to leave, you notice a crumpled piece of paper where the male rat stood. You pick it up, and read: [italic type]Thks dude. Meet up @ food pl.[roman type]. The message has been hurriedly written, but you suppose that the food place is the restaurant upstairs.";
+		now Resolution of Pirate Standoff is 1; [helped the rats]
 	else:
 		say "     An awkward silence settles in, eventually broken as the trio of sharks laugh heartily. 'Har! What are ye goin['] about, rattie. Ain't nothing but us [']ere. And yer booties. Which we're gonna take. On board, maties!'";
 		if Hermaphrodite is banned or Hermaphrodite is warded or anallevel is 1:
@@ -472,6 +473,7 @@ Instead of resolving a Pirate Standoff:
 			say "     'I-I'm gonna kill you. I swear!'";
 			say "     'Shut yer traps,' the pirate leader says, as he plants himself between the two forced pairs. Her hands grab each sibling's head, and press them against her two genitals. 'Use [']em properly. Get to it!' Encouraged by the sharks, the two rats submit and begin to suck the shark's oddly-shaped cock and lick her moist pussy.";
 			say "     After some more impromptu coitus, and the sharks['] collective orgasm, the gang decides to [']share the booty['] at their hideout. They tie up the two knocked-out rats, then take them away to some grim, sex-slave fate. As you watch them leave, you feel like you somehow missed an opportunity to something.";
+		now Resolution of Pirate Standoff is 99; [lost to pirates]
 		now HP of Erin is 99;
 	now Pirate Standoff is resolved;
 
@@ -481,7 +483,7 @@ Part C - Meeting the Twins again
 Rat Twins Invitation is a situation.
 The sarea of Rat Twins Invitation is "Nowhere".
 
-instead of going to Restaurant while Rat Twins Invitation is not resolved and HP of Erin is 1:
+instead of going to Restaurant while (Rat Twins Invitation is active and Rat Twins Invitation is not resolved and HP of Erin is 1):
 	move player to Restaurant;
 	move Erin to Restaurant;
 	move Violet to Restaurant;
@@ -498,7 +500,7 @@ instead of going to Restaurant while Rat Twins Invitation is not resolved and HP
 	say "[bold type]Your hunger and thirst decrease thanks to the meal the siblings offered. Having a normal social interaction allows you to recover some humanity.[roman type]";
 	now HP of Erin is 2;
 	[Twins meeting events unlocked by this event are unresolved here]
-	now Tied Rat Twins is unresolved;
+	now Tied Rat Twins is active;
 	now Rat Twins Invitation is resolved;
 
 

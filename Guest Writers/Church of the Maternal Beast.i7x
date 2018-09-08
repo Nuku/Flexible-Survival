@@ -4,18 +4,6 @@ Version 4 of Church of the Maternal Beast by Guest Writers begins here.
 
 "This is a complete interaction scene, including monsters, rooms, a few scripted encounters and maybe even an item or two."
 
-[
-the Beach Area is a situation.
-
-After resolving the Beach Area, try looking;
-
-Instead of Resolving the Beach Area:
-	say "After far too many dead ends, and impassible roads, you finally manage to find your way Back to the Beach on one side of the city.";
-	now The Beach Plaza is known;
-	move player to Beach Plaza;
-	now the Beach Area is resolved;
-]
-
 Book 1 - Rooms
 
 Beach Plaza is a Room. "     As you step out of the dirty, ill-kempt street you are met surprised by the sunny scene spread out in front of you, an open and relatively clean plaza with steps leading down to a small stretch of public beach. There are various infected cavorting around in the sand and water, laughing and enjoying themselves. To the north is a church, its wide double doors open and inviting, and to the west is a set of stairs down onto the beach proper.".

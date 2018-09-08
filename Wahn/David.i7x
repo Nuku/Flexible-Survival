@@ -111,17 +111,21 @@ Instead of resolving a Captured Demon:
 			say "     Having dealt with you, the demon turns back to Private Jackson, who's tried to crawl off in the meantime. He picks the man up by his neck, choking him a bit and runs a clawed hand down his side, leaving shallow but long lines bloody in his pale flesh. 'Don't try to flee again. You're taxing my patience.' With that, he throws his captive back on the bar, bent over and his rear sticking out at the right height.";
 			say "     The demon smacks his manhood against the human's ass several times, creating slapping noises and making him grunt in pain. Looking down at the reddened cheeks and the deeper red hand-print on them, he aims his cock at Private Jackson's virgin pucker and plunges it right in. His victim whimpers in pain as the infernal cock forces his asshole to open and the thick shaft of the demon's cock sinks inside his body. You watch the otherworldly beast fuck the poor man without restraint, slamming in and out and just getting more and more aroused as the soldier begs and struggles weakly to push him off.";
 			say "     Then finally, the demon brute slams his whole shaft inside, roaring in satisfaction as the contents of his balls erupt into his human captive. He keeps pumping blast after blast of cum into the young man, pumping slowly in and out of his hole with squishy noises as cum starts to squirt out around his shaft from the overfilled ass. Pulling Private Jackson's head up by the hair, the demon licks his cheek slowly, then says 'Feel my infernal seed fill your innermost being, little man. You're mine now - now and forever!' With that, he pulls the soldier up against his chest, holding him against his body with his cock still inside the man. Then black-purple smoke starts forming around them both, obscuring them from sight. When it spreads out in the room and slowly blows away, there's nothing to be seen of the demon or his newest slave.";
+			now Resolution of Captured Demon is 2; [lost, David in hell]
 		else if fightoutcome >= 30: [fled]
 			say "     Recognizing a lost fight, you just take your legs under your arms and run as fast as you can. You can only guess what happened to the young soldier you left behind with the demon brute. Nothing good, you're sure...";
+			now Resolution of Captured Demon is 3; [fled, David in hell]
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     After the demon vanishes, you take care of Private Jackson, who's still rather groggy from being choked and manhandled like that. You help him by tying the shreds of his shirt around his wounded chest as an improvised bandage and also to get his now ragged pants back on. With all the naked skin he's showing, the realization how handsome he is prods awake your libido, but since his thoughts are anywhere but at sex right now, you wish him the best as he moves out to rejoin his unit.";
 			LineBreak;
 			say "     Something tells you this might not be the last time you'll see this young man. Maybe you should go looking for the handsome [bold type]soldier[roman type] sometime... out in the city, as you doubt he'll be back in the red light district anytime soon.";
-			Now Thankful Soldier is unresolved;
+			now Resolution of Captured Demon is 1; [won, David saved]
 			increase score by 5;
 	now Captured Demon is resolved;
 
-Thankful Soldier is a situation. Thankful Soldier is resolved. [meeting the guy from 'Captured Demon' again - if you saved him]
+Thankful Soldier is a situation. [meeting the guy from 'Captured Demon' again - if you saved him]
+The Prereq1 of Thankful Soldier is Captured Demon.
+The Prereq1Resolution of Thankful Soldier is { 1 }.
 The sarea of Thankful Soldier is "Outside".
 when play begins:
 	add Thankful Soldier to badspots of guy; [male soldier]

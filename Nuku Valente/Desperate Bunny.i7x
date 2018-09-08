@@ -29,7 +29,7 @@ when play begins:
 	add Needy Rabbit Girl to badspots of girl;
 	add Needy Rabbit Girl to badspots of furry;
 
-After resolving a needy rabbit girl, try looking;
+After resolving a Needy Rabbit Girl, try looking;
 
 Instead of Resolving a Needy Rabbit Girl:
 	if ngrp is 0:
@@ -62,7 +62,8 @@ Instead of Resolving a Needy Rabbit Girl:
 				say "     She looks clearly disappointed and crosses her arms. 'I thought you were the kind of man to help me, but I guess I was wrong. Or maybe you're shy? Look, you're nice. Here's my address, ok? Come visit any time.";
 			now Rabbit den is known;
 			increase score by 1;
-			now needy rabbit girl is resolved;
+			now Needy Rabbit Girl is resolved;
+			now Resolution of Needy Rabbit Girl is 1; [male/herm player got invite to Sandra's den]
 			stop the action;
 		else:
 			say "     You approach the bunny, whispering soft things to her, and she permits you to walk closer. Something about her expression seems disappointed, but it fades fast. She reaches for your hand. 'It's been so long since I talked to anyone, or even saw anyone that looked human,' she murmurs. 'I just feel so lonely. Can I hold you?'";
@@ -76,13 +77,16 @@ Instead of Resolving a Needy Rabbit Girl:
 					now Rabbit Den is known;
 					now rabbitsibling is 1;
 					increase the score by 1;
+					now Resolution of Needy Rabbit Girl is 2; [player sisterified]
 					now Needy Rabbit Girl is Resolved;
 				else:
 					say "     The bunny looks embarrassed, then frustrated. She bites her bottom lip and sniffles. 'Fine then, I can make it on my own!' she says before defiantly marching away.";
+					now Resolution of Needy Rabbit Girl is 3; [player refused sistership]
 					now Needy Rabbit Girl is resolved;
 					stop the action;
 			else:
 				say "     She looks embarrassed, then frustrated. She bites her bottom lip, then sniffles, 'Fine then, I can make it on my own!' and she defiantly marches away.";
+				now Resolution of Needy Rabbit Girl is 3; [player refused sistership]
 				now Needy Rabbit Girl is resolved;
 				stop the action;
 

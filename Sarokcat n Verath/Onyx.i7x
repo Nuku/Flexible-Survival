@@ -250,7 +250,7 @@ instead of conversing the Onyx:
 			now XP of Onyx is 100;
 		else:
 			increase XP of Onyx by 1;
-			now Equineguardpost is unresolved;
+			now Equineguardpost is active;
 	else if XP of Onyx is 1:	[convo while confined]
 		say "     [one of]'Hey again, made any progress so far on those keys?'[or]'I know I had a name.. and I think it began with an... O? Maybe it was Onyx? No wait, that's my current name...'[or]He whickers at you slightly, then seems embarrassed when he realizes what he did.[or]'Come to visit the prisoner again? You aren't the only one who likes to come look, plenty of the mares come by to tell me how much fun I can look forward too, and the men... well let's just not talk about what they talk about doing to me,' Onyx says, and you notice him starting to blush.[or]'You should be careful hanging around talking to me like this, some of the horses come by here pretty often to keep an eye on me. You wouldn't want to end up in a cell next to mine now would you?'[or]'Why are you hanging around here talking to me so much? If you want to know what it is like in here, just lock yourself in one of the other cells why don't you, then you can find out what it is like to be a captive while they teach you about being a proper little horse.'[or]'This is getting to me, I keep thinking about how much fun it would be to be a big dumb horse... or better yet, be fucked by one...'[or]'I wonder if there is any way to reverse the changes at this point, or if I am going to end up a horse even if I get out of here...'[at random]";
 	else if XP of Onyx is 2:

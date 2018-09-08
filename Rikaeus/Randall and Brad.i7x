@@ -18,14 +18,14 @@ RandallBradRelationship is a number that varies.
 CocoRelationship is a number that varies.
 
 Hanging out on the Green is a situation.
-Hanging out on the Green is resolved.
+Hanging out on the Green is inactive.
 The sarea of Hanging out on the Green is "Campus".
 
 when play begins:
 	add Hanging out on the Green to badspots of guy;
 	add Hanging out on the Green to badspots of furry;
 
-instead of going to College Walkway West while (Hanging out on the Green is not resolved and LastCampusWalkin - turns > 0 and StewartRelationship > 0 and RandallBradRelationship < 1 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway West while (Hanging out on the Green is active and Hanging out on the Green is not resolved and LastCampusWalkin - turns > 0 and StewartRelationship > 0 and RandallBradRelationship < 1 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
 	FirstRandallEvent;
 
@@ -41,17 +41,17 @@ to FirstRandallEvent:
 	say "     'Hey! Nice to see you here!' The harpy boy says with a smile. Randall looks at his friend with a curious look. 'Oh, yeah. Randall this is the person I told you I ran into a while back,' he says, gesturing to you. The bunny boy 'ahh's before standing up and holding out his hand. You promptly take it and give it a firm shake. [if player is male and cunts of player < 1]As this is happening he seems to give your clothed dick a lusty look before promptly focusing back on you. [end if]'Nice to meet ya, I'm Randall,' he says, shaking your hand back. You smile at him and let the guy know it's great to meet him. Stewart quickly looks towards the direction of the belltower when it begins to ring, causing him to nudge the bunny. 'Come on, we're late for class,' he says, causing the other to swear as the two run towards Lecture Street. You on the other hand get back to what you were doing.";
 	now RandallBradRelationship is 1;
 	now Hanging out on the Green is resolved;
-	now Bunny Eavesdropper is not resolved;
+	now Bunny Eavesdropper is active;
 
 Bunny Eavesdropper is a situation.
-Bunny Eavesdropper is resolved.
+Bunny Eavesdropper is inactive.
 The sarea of Bunny Eavesdropper is "Campus".
 
 when play begins:
 	add Bunny Eavesdropper to badspots of guy;
 	add Bunny Eavesdropper to badspots of furry;
 
-instead of going to College Walkway West while (Bunny Eavesdropper is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 1 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway West while (Bunny Eavesdropper is active and Bunny Eavesdropper is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 1 and a random chance of 1 in 3 succeeds):
 	move player to College Belltower;
 	SecondRandallEvent;
 
@@ -68,17 +68,17 @@ to SecondRandallEvent:
 	now RandallBradRelationship is 2;
 	now CocoRelationship is 1;
 	now Bunny Eavesdropper is resolved;
-	now Operation Horny Bunny is not resolved;
+	now Operation Horny Bunny is active;
 
 Operation Horny Bunny is a situation.
-Operation Horny Bunny is resolved.
+Operation Horny Bunny is inactive.
 The sarea of Operation Horny Bunny is "Campus".
 
 when play begins:
 	add Operation Horny Bunny to badspots of guy;
 	add Operation Horny Bunny to badspots of furry;
 
-instead of going to Lecture Street while (Operation Horny Bunny is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 2 and a random chance of 1 in 3 succeeds):
+instead of going to Lecture Street while (Operation Horny Bunny is active and Operation Horny Bunny is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 2 and a random chance of 1 in 3 succeeds):
 	move player to College Belltower;
 	ThirdRandallEvent;
 
@@ -107,17 +107,17 @@ instead of going northeast from College Walkway Northeast while RandallBradRelat
 	say "     Upon entering the library you notice a familiar pair of bunnies talking next to a bookshelf. Randall appears to have a frustrated look on his face whereas Brad looks to be having an existential crisis. 'Come on Brad, you should leave her,' the bunny boy begs. The jock, who still appears to be having no clue what to do, speaks up. 'But she's my girlfriend,' he tries countering. However, your friend immediately bites back with an argument. 'Girlfriend?! The chick who's been blue-balling you and trying to manipulate you for the past two-three weeks?!' he quietly yells. That prompts a whine of protest from the bun that Randall is trying to seduce. It's very clear that he agrees with the shorter boy's statement but still appears hesitant.";
 	say "     The bunny boy then decides to make a dirty move, as you see him slip his paw into Brad's shorts, grasping a hold of his slowly hardening cock. 'Come on, just think about it. You know I'll take care of you,' he mutters, starting to plant kisses on the jock's neck. Said male lets out a groan of appreciation before his resistance finally crumbles. 'F-fine,' the basketball player says, causing Randall to cheer before giving his new boyfriend a big sloppy kiss on the lips. After that the conversation dies down to your friend telling Brad it'd be best for him to move in with the bunny boy as he does currently live with Jen. The jock sighs and nods at that, the two of them heading off to the Dorms to start moving everything.";
 	now RandallBradRelationship is 4;
-	now New Roommates is not resolved;
+	now New Roommates is active;
 
 New Roommates is a situation.
-New Roommates is resolved.
+New Roommates is inactive.
 The sarea of New Roommates is "Campus".
 
 when play begins:
 	add New Roommates to badspots of guy;
 	add New Roommates to badspots of furry;
 
-instead of going to Dorm Street while (New Roommates is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 4 and a random chance of 1 in 3 succeeds):
+instead of going to Dorm Street while (New Roommates is active and New Roommates is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 4 and a random chance of 1 in 3 succeeds):
 	move player to Dorm Street;
 	FourthRandallEvent;
 

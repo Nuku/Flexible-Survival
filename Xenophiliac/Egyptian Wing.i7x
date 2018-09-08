@@ -43,19 +43,17 @@ instead of resolving Finding Winged Orb:
 	say "     You roll 1d20 ([dice]) + ([bonus]) versus 14 - You scored [dice plus bonus] in a dexterity check.";
 	if dice + bonus >= 14:
 		say "     Easily able to shimmy yourself up the tree, you find yourself faced with the shining emblem, still buried within the tree. Gripping the emblem with both of your hands and giving the emblem a hard pull, your strength wins out and without a sound, the sigil comes free, shining brightly in the [if daytimer is day]daytime air[else]nighttime air[end if]. Getting a much better look at the sigil, it's definitely an exact representation of the carving on Amuran's sarcophagus; a circle, most likely a representation of the sun, flanked on both sides by large feathered wings. Holding this emblem in your hands, you soon feel raw [']Power['] running through you; if this is any indication as to what power Amuran has, it must be incredible. Storing the sigil in your backpack, you quickly climb down, preparing to continue on your way.";
-		increase carried of winged sun by 1;
-		now Finding Winged Orb is resolved;
+		now Resolution of Finding Winged Orb is 1; [climbed up and grabbed it]
 	else:
 		say "     Doing your best to climb up, you find yourself having trouble scaling the massive tree. Eventually, however, you're able to drag yourself to where the emblem is, still sticking out from the trunk of the tree. Resting on the thick branch you climbed up to, you grab the emblem and pull with all your might. With a quick release, you yank out the sigil; however, the sudden movements unbalance you, and you tumble swiftly to the earth below. A loud [']THUD['] signifies you hitting the ground, a low, pained groan escaping you as you lay there, recovering yourself. You push yourself up after a few moments, your entire body sore after the fall you've just experienced. Glancing up, it seems that your fall has also attracted a local creature!";
 		fight;
 		if lost is 1:
 			say "     Exhausted, sticky, and lying on the ground after your recent defeat, you're at least content that you were able to keep the emblem hidden. Heaving yourself up, you do your best to recover and head out, reminding yourself to give the emblem to Amuran.";
-			increase carried of winged sun by 1;
-			now Finding Winged Orb is resolved;
 		else:
 			say "     Exhausted after your battle, you're still happy that you were able to find one of the sigils that Amuran needs. Hoisting yourself up, you ready yourself to continue, remembering to deliver the emblem to the divine servant.";
-			increase carried of winged sun by 1;
-			now Finding Winged Orb is resolved;
+		now Resolution of Finding Winged Orb is 2; [fell out of the tree]
+	increase carried of winged sun by 1;
+	now Finding Winged Orb is resolved;
 
 Section 2 - Areas and Rooms
 

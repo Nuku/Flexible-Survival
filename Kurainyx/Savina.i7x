@@ -13,6 +13,10 @@ Version 1 of Savina by Kurainyx begins here.
 
 Section 1 - Abandoned Camp
 
+Table of GameEventIDs (continued)
+Object	Name
+Abandoned Camp	"Abandoned Camp"
+
 Abandoned Camp is a situation.
 The sarea of Abandoned Camp is "Forest".
 

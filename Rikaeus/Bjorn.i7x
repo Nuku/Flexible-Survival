@@ -47,7 +47,7 @@ instead of going North from College Campus Entrance while BjornRelationship is 0
 		now PericlesRelationship is 1;
 		now BjornRelationship is 99;
 		move player to College Fountain;
-	now Daily Training Session is not resolved;
+	now Daily Training Session is active;
 
 An everyturn rule:
 	if BjornRelationship > 0 and BjornRelationship < 3:

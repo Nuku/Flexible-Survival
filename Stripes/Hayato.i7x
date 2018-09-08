@@ -170,7 +170,7 @@ Instead of conversing the Hayato:
 		say "     'From your description, it doesn't seem to be the one that changed me. That one was even larger and more fearsome than I am now, so you probably met one of its many victims. As I'd said, the oni I encountered that night was rampaging and raping wildly. I expect many of its victims have ended up as demon ogres like myself, though wild and out of control.' He grows silent for a while, pondering the matter. 'The fact that they're only appearing now leads me to believe that they have been in some form of [bold type]oni lair[roman type] from which they've only recently emerged. I expect the larger one, probably their leader now, will be there as well.' He voice grows both angrier and more fearful upon mentioning the monster who caused his transformation.";
 		say "     'You should keep an eye out for it and for them, if nothing more than to avoid stumbling into their home while you're exploring the city. I don't think [if level of player >= 18]even [end if]you could deal with them all on your own.' You nod in agreement, silence following as you both ponder the matter. Hayato seems despondent after your conversation, though some sex might cheer him up.";
 		now lastfuck of Hayato is turns + 8;
-		now Oni Lair is unresolved;
+		now Oni Lair is active;
 	else if HP of Hayato is 20:
 		say "     Seeing Hayato has reminded you that you'd located the oni lair and so you sit down to discuss the matter with him. You describe what you saw, including the rather grisly entrance. He gets quite disturbed by this, momentarily angry enough to smash a nearby chair with his club before reining in his anger.";
 		say "     'I am sorry about that,' he says, relinquishing his club and bowing his head in apology. 'It upsets me to think what the oni are doing - and that I could very well have been like them. But I do not know what can be done about them. You should also remember, oni are often depicted as solitary creatures, living in mountain caves or other remote lairs. If they are indeed in those ruins, then the great oni is likely there, ruling over them.' Fear creeps back into his voice, still scared of the monstrous oni that attacked him.";
@@ -367,7 +367,7 @@ to say hayatosex5:
 
 Section 4 - Events
 
-Noh Mask is a situation. Noh Mask is resolved. The level of Noh Mask is 9.
+Noh Mask is a situation. Noh Mask is inactive. The level of Noh Mask is 9.
 The sarea of Noh Mask is "Campus".
 when play begins:
 	add Noh Mask to badspots of furry;
@@ -440,7 +440,7 @@ to say nohmaskanimebabe:
 	now fightoutcome is 0;
 
 
-Oni Lair is a situation. Oni Lair is resolved. The level of Oni Lair is 9.
+Oni Lair is a situation. Oni Lair is inactive. The level of Oni Lair is 9.
 The sarea of Oni Lair is "Capitol".
 when play begins:
 	add Oni Lair to badspots of guy;

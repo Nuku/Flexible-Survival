@@ -1,4 +1,5 @@
 Reservoir by Kaleem mcintyre begins here.
+[note not Resolution flagged since it's not in the game]
 
 "Adds a new adventuring area to Flexible Survival with a special event and some searching."
 
@@ -71,21 +72,21 @@ Section 2 - Reservoir Events
 
 For Purity's Sake is a situation. The Level of For Purity's Sake is 18.
 
-Technical Assistance is a situation. Technical Assistance is resolved.
+Technical Assistance is a situation. Technical Assistance is inactive.
 
-Slightly Sidetracked is a situation. Slightly Sidetracked is resolved.
+Slightly Sidetracked is a situation. Slightly Sidetracked is inactive.
 
-Flight of stairs is a situation. Flight of stairs is resolved.
+Flight of stairs is a situation. Flight of stairs is inactive.
 
-ThreeDoors is a situation. ThreeDoors is resolved.
+ThreeDoors is a situation. ThreeDoors is inactive.
 
-The beast of the tainted waters is a situation. The beast of the tainted waters is resolved.
+The beast of the tainted waters is a situation. The beast of the tainted waters is inactive.
 
-Fight to remember is a situation. Fight to remember is resolved.
+Fight to remember is a situation. Fight to remember is inactive.
 
-PassionAfterTheBattle is a situation. PassionAfterTheBattle is resolved.
+PassionAfterTheBattle is a situation. PassionAfterTheBattle is inactive.
 
-Sanctuary is a situation. Sanctuary is resolved.
+Sanctuary is a situation. Sanctuary is inactive.
 
 
 The sarea of For Purity's Sake is "Reservoir".
@@ -97,7 +98,7 @@ Instead of resolving For Purity's Sake:
 		now resevquest is 1;
 		increase score by 2;
 		now For Purity's Sake is resolved;
-		now Technical Assistance is unresolved;
+		now Technical Assistance is active;
 
 
 Technical Assistance is a situation.
@@ -123,7 +124,7 @@ Instead of resolving a Technical Assistance:
 				now resevquest is 2;
 				increase score by 5;
 				now Technical Assistance is resolved;
-				now Slightly Sidetracked is unresolved;
+				now Slightly Sidetracked is active;
 				now bookfind is 1;
 			else:
 				say "Searching over and under you can't seem to find anything remotely useful to your needs. Grunting you begin to feel somewhat annoyed, but before you can you sigh and realize that you need to look a little harder. Maybe you should try a little harder to find the material you need?";
@@ -144,7 +145,7 @@ Instead of resolving a Technical Assistance:
 					now resevquest is 2;
 					increase score by 5;
 					now Technical Assistance is resolved;
-					now Slightly Sidetracked is unresolved;
+					now Slightly Sidetracked is active;
 					now bookfind is 1;
 
 to say resevfight1:
@@ -173,7 +174,7 @@ Instead of resolving Slightly Sidetracked:
 		now resevquest is 3;
 		increase score by 3;
 		now Slightly Sidetracked is resolved;
-		now Flight of stairs is unresolved;
+		now Flight of stairs is active;
 
 
 To say resevfight2:
@@ -200,7 +201,7 @@ Instead of resolving a Flight of stairs:
 		now resevquest is 4;
 		increase score by 10;
 		now Flight of stairs is resolved;
-		now ThreeDoors is unresolved;
+		now ThreeDoors is active;
 
 
 ThreeDoors is a situation;
@@ -282,7 +283,7 @@ This is the doorcheck rule:
 		now resevquest is 5;
 		now lastResevoirfix is turns;
 		now ThreeDoors is resolved;
-		now The beast of the tainted waters is unresolved;
+		now The beast of the tainted waters is active;
 	else if title entry is "Right Door":
 		if rdoor is 0:
 			say "Taking hold of the door's handle you are mildly astonished when the door opens without any protest. That elation doesn't last long because soon said door is taking from your hand and then you are grabbed bodily!";
@@ -326,7 +327,7 @@ Instead of Resolving a The beast of the tainted waters:
 			now resevquest is 6;
 			now lastResevoirfix is turns;
 			now The beast of the tainted waters is resolved;
-			now A Fight to remember is unresolved;
+			now A Fight to remember is active;
 
 
 Section 4 - Reservoir (Fight)
@@ -353,7 +354,7 @@ Instead of resolving a A Fight to remember:
 					say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 					now resevquest is 7;
 					now Fight to remember is resolved;
-					now PassionAfterTheBattle is unresolved;
+					now PassionAfterTheBattle is active;
 				else if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
 					now A Fight to remember is resolved;
 					now oozing is 1;
@@ -389,7 +390,7 @@ Instead of resolving a A Fight to remember:
 						say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 						now resevquest is 7;
 						now A Fight to remember is resolved;
-						now PassionAfterTheBattle is unresolved;
+						now PassionAfterTheBattle is active;
 					else if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
 						now A Fight to remember is resolved;
 						now oozing is 1;
@@ -420,7 +421,7 @@ Instead of resolving a A Fight to remember:
 						say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 						now resevquest is 7;
 						now A Fight to remember is resolved;
-						now PassionAfterTheBattle is unresolved;
+						now PassionAfterTheBattle is active;
 					else if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
 						now A Fight to remember is resolved;
 						now oozing is 1;

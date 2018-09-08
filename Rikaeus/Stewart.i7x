@@ -87,12 +87,12 @@ instead of conversing the Stewart:
 	if Stewart is in The Clouds and StewartRelationship < 1:
 		say "     When you approach what looks to be a male harpy, he turns his head towards you from his position on the ground and smiles. 'Hey there! You look new around here,' the guy says rather cheerfully. You admit that this is your first time actually visiting this place and are rather intrigued as to how everyone is standing on clouds. 'Oh, that. Well from what I know, apparently there's supposed to be a magical place around here that basically solidifies the clouds.' He chuckles. You tilt your head at that answer, not understanding exactly what he means. 'I can sympathize with your confusion, I only know of that information by secondhand. Anyways I'm Stewart, if you ever want to talk with me I'm usually here in the morning but move to the library mid day,' the guy informs you before saying that he hopes to see you again.";
 		now StewartRelationship is 1;
-		now Hanging out on the Green is not resolved;
+		now Hanging out on the Green is active;
 	else if Stewart is in Tenvale College Library and StewartRelationship < 1:
 		say "     The person you approach appears to be studying rather furiously, if the large amount of books surrounding him says something. He notices you rather quickly which prompts a question for him. 'Hey, you wouldn't happen to know how to derive a multi-variable function?' he asks rather wearily. Before you can answer, he lets out a sigh followed a verbal apology. 'I'm so sorry, it's just that I have like five different exams coming up within the next week and it's driving me crazy. If you can't tell, currently I'm trying to study for calculus.' The male groans. A thought passes by in your head that perhaps you could help him study to ease the already huge mental burden the guy has.";
 		say "     You can tell how stressed he is by two things. One, the bags under his eyes which inform you that he's sleep deprived. Lastly, the five or so coffee cups that have been drained of their caffeine filled contents. 'Anyways, I'm Stewart, a guy harpy if you can't tell by my legs. Before you ask, I can freely transform my arms back and forth,' he explains, showing you by setting down his book before doing so and then changing back. Quickly after he says this though, the male apologizes once more and tells you he needs to get back to studying.";
 		now StewartRelationship is 1;
-		now Hanging out on the Green is not resolved;
+		now Hanging out on the Green is active;
 	else if Stewart is in The Clouds:
 		say "     Stewart smiles when he sees you approach before kindly asking you what you need.";
 		wait for any key;

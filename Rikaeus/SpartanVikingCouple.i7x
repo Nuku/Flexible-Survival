@@ -76,7 +76,7 @@ The sarea of War Declaration is "Nowhere".
 when play begins:
 	add War Declaration to badspots of guy;
 
-instead of going to Pericles' Room while (War Declaration is not resolved and VikingWar - turns > 1 and PericlesRelationship is 6 and BjornRelationship is 3):
+instead of going to Pericles' Room while (War Declaration is active and War Declaration is not resolved and VikingWar - turns > 1 and PericlesRelationship is 6 and BjornRelationship is 3):
 	move player to Pericles' Room;
 	FirstVikingWarEvent;
 
@@ -99,17 +99,17 @@ to FirstVikingWarEvent:
 	now VikingSpartanWar is 1;
 	now VikingWar is turns;
 	now War Declaration is resolved;
-	now Assault On The Gym is not resolved;
+	now Assault On The Gym is active;
 
 Assault On The Gym is a situation.
-Assault On The Gym is resolved.
+Assault On The Gym is inactive.
 The sarea of Assault On The Gym is "Campus".
 
 when play begins:
 	add Assault On The Gym to badspots of guy;
 	add Assault On The Gym to badspots of girl;
 
-instead of going to Athletic Street while (Assault On The Gym is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 1):
+instead of going to Athletic Street while (Assault On The Gym is active and Assault On The Gym is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 1):
 	move player to Athletic Street;
 	SecondVikingWarEvent;
 
@@ -126,7 +126,7 @@ to SecondVikingWarEvent:
 		say "     Richard looks to be about to do something else but one of the few left shouts a retreat and all the ones not on the ground run. The Spartans grab the others while your friend walks up to you with a smile. 'So, what did you think? Did I do good?' he asks, holding his arms behind his head, looking proud of himself. You tell him he did, that you're rather grateful for the help as it did save a lot of the other students. That appears to make his grin widen even more as he replies with a request for you to visit him sometime perhaps, either at his room or the frat. When he leaves a Spartan walks up to you and says that Pericles feels that the next place to be attacked within the next hour is the fountain once more, as they have broken through the entrance. You nod and head on your way, leaving them to their work.";
 		now VikingSpartanWar is 2;
 		now Assault On The Gym is resolved;
-		now Raid On The Fountain is not resolved;
+		now Raid On The Fountain is active;
 		now VikingWar is turns;
 	else:
 		say "     Fearing an attack from the Vikings on the gym you make your way there, being concerned for the people in there, probably exercising and working out. So, once you get to the large building housing most of the equipment you make your way on in, taking into account the area you have to work with. As far as you can see there are plenty of students here which makes it a tad bit hard to defend alone. Thankfully though you can see a few Spartans placed at certain points in the gymnasium. Beyond that however, you can see dumbbells also littered about, giving you an idea.";
@@ -140,7 +140,7 @@ to SecondVikingWarEvent:
 			now VikingSpartanWar is 2;
 			now VikingWar is turns;
 			now Assault On The Gym is resolved;
-			now Raid On The Fountain is not resolved;
+			now Raid On The Fountain is active;
 		else:
 			say "     Running forward you decide to implement your plan and start to try throwing the dumbbells at the Vikings fighting at the other end of the gym. You manage to get the first couple of them off the ground but as you go on you slowly start to notice your energy diminishing. Sure, you're knocking quite a few of the Vikings to the ground, but you are quite rapidly getting more and more sluggish, losing speed and steam to the whole thing and boy are the irritated Norse warriors taking notice of this. In fact a few of them are hurriedly heading this way towards you. As they near closer to you, a series of thoughts run through your head as you wonder what you're going to do. When the first one reaches you she swings her sword downward, you sluggishly managing to dodge out of the way. However, the horizontal slash that she follows up with as well as the shove back is impossibly for you to avoid.";
 			say "     You end up getting a graze across your stomach as well as to fall to the floor. Looking up at the Vikings in a panic as they approach you menacingly, you sigh in relief when a Spartan warrior dashes forward and begins combat with the few enemies by you. He appears to be quite skilled in combat but the amount of people on him does make it hard, making him take a few cuts as he fights them all. When he bests the Vikings, he slumps the ground, panting and you can see that he's slowly changing, the nanites fixing him as it's happening. However, before you can watch it all happen, his fellow soldiers take him away and another Spartan comes up to you. The warrior tells you that Pericles believes that the enemies will attack the fountain again next within the hour and you should head there next when you can. Nodding you get up and head on out, hoping the next conflicts aren't anything like this.";
@@ -150,17 +150,17 @@ to SecondVikingWarEvent:
 				now WarLossCounter is 3;
 			now VikingWar is turns;
 			now Assault On The Gym is resolved;
-			now Raid On The Fountain is not resolved;
+			now Raid On The Fountain is active;
 
 Raid On The Fountain is a situation.
-Raid On The Fountain is resolved.
+Raid On The Fountain is inactive.
 The sarea of Raid On The Fountain is "Campus".
 
 when play begins:
 	add Raid On The Fountain to badspots of guy;
 	add Raid On The Fountain to badspots of girl;
 
-instead of going to College Fountain while (Raid On The Fountain is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 2):
+instead of going to College Fountain while (Raid On The Fountain is active and Raid On The Fountain is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 2):
 	move player to College Fountain;
 	ThirdVikingWarEvent;
 
@@ -178,7 +178,7 @@ to ThirdVikingWarEvent:
 		now VikingSpartanWar is 3;
 		now VikingWar is turns;
 		now Raid On The Fountain is resolved;
-		now Siege Of The Belltower is not resolved;
+		now Siege Of The Belltower is active;
 	else:
 		say "     Deciding that you might want to head to the fountain before the Vikings attack, you make your way there, getting to it in no time. Once at the location you hum and think that you might have some time before the Vikings attack but you're not entirely sure as to what you could do though. Looking around you see a few trees and the burned patches of grass from the arrows that had to have been launched from outside. Taking a closer peak you see that the dirt is overturned, as if you could possibly hide something there. That, combined with the trees gives you an idea, one that causes you to move forward and walk around the area.";
 		let bonus be (( intelligence of player minus 10 ) divided by 2);
@@ -191,7 +191,7 @@ to ThirdVikingWarEvent:
 			say "     You guys have just enough time to get in a defensible position on the fountain when the Vikings arrive. Prepped with basketballs that some of the students had grabbed a hold of just in case as you guys watch on in hope that the traps succeed. To all of your joy many of the Norse warriors yelp as they get caught in them, some of them being pulled up in a net, others slipping and falling on their asses. Some of the students take this opportunity to chuck their weapons at the prone enemies, dealing massive damage to them. All this chaos ends up throwing the Vikings into a panic, not having expected a trapped battlefield. As the enemies['] numbers dwindle more and more, their morale fell as well. One of the Norse warriors who had yet to run forward sounded a retreat. The others still standing followed the call and turned tail, leaving their fallen allies to your tender mercies.";
 			say "     A minute or two after they leave, the Spartans show up, one of them approaching you while the rest round up the Vikings. The Greek male looks over you guys and nods, telling you all that you did great and that they'll take it from here. He then turns to you and gives you a missive from Pericles. Opening it and reading it to yourself you see that the next conflict should be at the belltower, seeing that it's on the other end of the campus. He also lets you know that he's almost done planning the final battle and that after the next it should be time to end it all. Closing the note you nod and head off, wondering what'll come up next.";
 			now Raid On The Fountain is resolved;
-			now Siege Of The Belltower is not resolved;
+			now Siege Of The Belltower is active;
 			now VikingWar is turns;
 		else:
 			say "     After figuring out that your plan is plausible you talk to the various students around the fountain and ask them to come with you to the equipment storage room on Athletic Street. You barely manage to convince some of the students with your plan, who shrug and follow you. You lead them there and request that half of them gather as much rope and volleyball nets as they can while you head off to Creative Street to see if you cant find anything for the ground. When you do get there with the rest of the people and ask around thankfully it turns out there is something you could work with. The beginning sculpting class had been making tiny balls that would be able to act like marbles. However, there doesn't seem to be a lot there so you can only grab enough to kit out half of you present.";
@@ -204,18 +204,18 @@ to ThirdVikingWarEvent:
 			if WarLossCounter > 3:
 				now WarLossCounter is 3;
 			now Raid On The Fountain is resolved;
-			now Siege Of The Belltower is not resolved;
+			now Siege Of The Belltower is active;
 			now VikingWar is turns;
 
 Siege Of The Belltower is a situation.
-Siege Of The Belltower is resolved.
+Siege Of The Belltower is inactive.
 The sarea of Siege Of The Belltower is "Campus".
 
 when play begins:
 	add Siege Of The Belltower to badspots of guy;
 	add Siege Of The Belltower to badspots of girl;
 
-instead of going to College Belltower while (Siege Of The Belltower is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 3):
+instead of going to College Belltower while (Siege Of The Belltower is active and Siege Of The Belltower is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 3):
 	move player to College Belltower;
 	FourthVikingWarEvent;
 
@@ -233,7 +233,7 @@ to FourthVikingWarEvent:
 		now VikingSpartanWar is 4;
 		now VikingWar is turns;
 		now Siege of The Belltower is resolved;
-		now Battle For Tenvale Campus is not resolved;
+		now Battle For Tenvale Campus is active;
 	else:
 		say "     Noticing that it's been a while since the battle at the fountain you decide you should make your way to the belltower before the Vikings get there. When you do arrive at your desired location you notice that there's not many people present, so it brings up the thought as to why the Vikings would want to attack such a place. You muse to yourself for a few seconds before thinking that maybe it's because it is the tallest building on the campus which would allow them quite the overlook on any targets that come this way. Drawing your inner tidings away from that, you wonder how you're going to defend this place, as it is quite open.";
 		say "     You first think about doing what had happened before in at the fountain, but quickly toss that idea into the trash. There was nothing to hide any traps you could set up and you're pretty sure that any ammunition for said inconveniences was already used earlier. Looking around once more you bring your eyes to the belltower itself where an idea comes to your mind rather quickly. You did have a similar thought to this earlier... and it wouldn't be that hard to accomplish if you wanted to. You're also pretty sure that students do leave things up there so you won't be out of ammo.";
@@ -247,7 +247,7 @@ to FourthVikingWarEvent:
 			say "     You do this quite a few times, before it appears that the Norse warriors finally give up, turning and running tail, leaving you victorious in your practical sniping spot. Giving yourself a mental pat on the back you head on down and when you get there, you're met with multiple Spartans. Some of them are dragging away the unconscious Vikings while one steps forward, more than likely to talk to you, which he does so. 'General Pericles wished for me to let you know that the final battle is at hand and is going to be taking place at the entrance in the next hour. He hopes that you'll be there,' the warrior says giving you a nod as he turns to go help his fellow comrades. You yourself head on your own way, thinking about how the final battle will go.";
 			now VikingWar is turns;
 			now Siege of The Belltower is resolved;
-			now Battle For Tenvale Campus is not resolved;
+			now Battle For Tenvale Campus is active;
 		else:
 			say "     Making a decision on what to do, you quickly head towards the door of the belltower, opening it and heading on in. However, as you do this you hear the sound of a lot of people heading your way. You try your best to make it up the tower in time, before they can catch you. When you reach the top you spot a large amount of textbooks and basketballs probably leftover from the many students that like to hang out up here. Hurriedly grabbing one you look at one Viking and chuck it at them. However, to your horror and shock she dodges and smirks at you as they get closer and nearer to the entrance.";
 			say "     You repeatedly attempt to toss books and basketballs at them but your lack of aim and dexterity appears to hinder you, as you only hit a few of them, grazing them at best. Panicking you try the next idea which is letting a bunch of the basketballs roll down the stairs as they come up, which only really knocks down a few of them. However, relief comes to you when Spartans arrive and start attacking them. It's a tough battle for them since the Vikings do have a defensible position and they do lose some people but in the end they win. One of them trudges up the stairs and with weary breath informs you that the final battle is going to occur in about an hour, as Pericles has finished the final preparations for his plan. You nod and let him go before you too head on your way.";
@@ -257,17 +257,17 @@ to FourthVikingWarEvent:
 				now WarLossCounter is 3;
 			now VikingWar is turns;
 			now Siege of The Belltower is resolved;
-			now Battle For Tenvale Campus is not resolved;
+			now Battle For Tenvale Campus is active;
 
 Battle For Tenvale Campus is a situation.
-Battle For Tenvale Campus is resolved.
+Battle For Tenvale Campus is inactive.
 The sarea of Battle For Tenvale Campus is "Campus".
 
 when play begins:
 	add Battle For Tenvale Campus to badspots of guy;
 	add Battle For Tenvale Campus to badspots of girl;
 
-instead of going to College Campus Entrance while (Battle For Tenvale Campus is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 4):
+instead of going to College Campus Entrance while (Battle For Tenvale Campus is active and Battle For Tenvale Campus is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 4):
 	move player to College Campus Entrance;
 	FifthVikingWarEvent;
 
@@ -295,7 +295,7 @@ to FifthVikingWarEvent:
 		now VikingSpartanWar is 5;
 		now VikingWar is turns;
 		now Battle For Tenvale Campus is resolved;
-		now Peace Between Communities is not resolved;
+		now Peace Between Communities is active;
 	else:
 		say "     Deciding against it, as Pericles might complain, you just sit where you are, keeping a mental awareness just in case someone attacks. When your friend pushes Bjorn out of the way he takes a slash to the back that seems to cut through his armor, falling to the ground in pain, but not severely crippled, as the nanites do heal injuries. Bjorn however looks extremely pissed when you turn your stare on him and he launches himself at the other Viking. 'Do. Not. Attack. My. Friends!' he roars, embellishing each word with a punch, the last one sending the enemy flying practically. One of the other Norse warriors sneers at him, speaking up. 'Why should we listen to you traitor?' she asks, clearly not a fan of him. Calmly he picks up Pericles['] sword and holds it firmly in his hands.";
 		say "     You take this as a cue to move forward and help support the Spartan-Helot up, making sure his wound is healing correctly. As you do this, you watch as Bjorn dashes forward and clashes weapons with his former fellow Vikings. At first it appears that he's at a disadvantage but you then notice him take a stance that's very familiar to you, one that you've seen the Spartans and Pericles take before. Right as he slides into this form he quickly has advantage over his enemies, disarming and incapacitating them with sheer utter force. When he manages to disarm and knock down the largest of the Vikings, he glares at them all. 'Surrender, now!' he growls, his attitude reminiscent of Pericles when he's in Spartan mode.";
@@ -304,18 +304,18 @@ to FifthVikingWarEvent:
 		now VikingSpartanWar is 5;
 		now VikingWar is turns;
 		now Battle For Tenvale Campus is resolved;
-		now Peace Between Communities is not resolved;
+		now Peace Between Communities is active;
 
 
 Peace Between Communities is a situation.
-Peace Between Communities is resolved.
+Peace Between Communities is inactive.
 The sarea of Peace Between Communities is "Campus".
 
 when play begins:
 	add Peace Between Communities to badspots of guy;
 	add Peace Between Communities to badspots of girl;
 
-instead of going to Tenvale College Library while (Peace Between Communities is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 5):
+instead of going to Tenvale College Library while (Peace Between Communities is active and Peace Between Communities is not resolved and VikingWar - turns > 0 and VikingSpartanWar is 5):
 	move player to Tenvale College Library;
 	SixthVikingWarEvent;
 

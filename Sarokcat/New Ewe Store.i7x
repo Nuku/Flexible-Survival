@@ -70,7 +70,7 @@ Instead of Resolving a New Ewe Store:
 			increase diceroll by bonus;
 			if diceroll > 12:
 				say "     After a while of calling out, you are about to leave when you hear a small voice reply - a woman, by the sound of it. 'Hello can you help me? I was chased in here by some flying beasts while scavenging some goods for my family, and the entryway came down when they tried to force their way through. It's dark down here and I don't know how to find my way out. Please won't you help me?' After reassuring the voice that you will do the best you can, you look at the collapsed entry carefully and realize you would never be able to dig through that in time. Perhaps you can find another way down through the sewers?";
-				now Little Lost Lamb is unresolved;
+				now Little Lost Lamb is active;
 				increase NESProgress by 1;
 			else:
 				say "     You talk and you talk but hear nothing further. Perhaps it was only your imagination after all?";
@@ -93,7 +93,7 @@ Instead of Resolving a New Ewe Store:
 Little Lost Lamb is a situation.
 The sarea of Little Lost Lamb is "Mall".
 
-Little Lost Lamb is resolved.
+Little Lost Lamb is inactive.
 
 Instead of resolving Little Lost Lamb:
 	If NESProgress is 2:

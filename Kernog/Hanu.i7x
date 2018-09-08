@@ -6,8 +6,7 @@ acquaintedWithHanu is a number that varies. [0: not met, 1: met and trained wit
 
 This is the monkeyAcquaintancesCheck rule:
 	if acquaintedWithHanu is 1 and acquaintedWithWukong >= 3:
-		now Monkey Duel is unresolved;
-
+		now Monkey Duel is active;
 
 Section 1 - Original situation
 
@@ -31,16 +30,18 @@ Instead of resolving a Hanu:
 		Increase score by 5;
 		now acquaintedWithHanu is 1;
 		follow the monkeyAcquaintancesCheck rule;
+		now Resolution of Hanu is 1; [trained with him]
 	else:
 		LineBreak;
 		say "Waving the other off you turn and head about your way without another word spoken.";
+		now Resolution of Hanu is 2; [left him]
 	now Hanu is resolved;
 
 Section 2 - Monkey Duel
 
-Monkey Duel is a situation. The sarea of Monkey Duel is "Zoo".
-When play begins:
-	now Monkey Duel is resolved;
+Monkey Duel is a situation.
+Monkey Duel is inactive.
+The sarea of Monkey Duel is "Zoo".
 
 Instead of resolving Monkey Duel:
 	say "     'About time you showed up[if player is not defaultnamed], [name of player][end if].' a familiar voice calls you out as you pass under a large tree. Hanu, the monkey with whom you meditated with earlier, is sitting leisurely on one of the branches, his long tail waving at you. With surprising agility, Hanu jumps down from his perch and makes a perfect landing just in front of you. 'You seem to have an habit of being late for training, my pupil. But no matter, let us practice our kung fu together.'";
@@ -81,6 +82,7 @@ Instead of resolving Monkey Duel:
 				say "     On these words, Hanu leaves you, a bruised and reluctant Wukong on his shoulders. A short moment after, you also make your way to the museum's lobby.";
 				WaitLineBreak;
 				move player to Museum;
+				now Resolution of Monkey Duel is 1; [Hanu won]
 				say "[italic type]Wukong was forced to leave the Museum by Hanu. However, you feel that his threats were not empty.[roman type]";
 			else:
 				LineBreak;
@@ -98,6 +100,7 @@ Instead of resolving Monkey Duel:
 				say "[italic type]Wukong's thugs should be at the Zoo, by the time you go back.[roman type]";
 				WaitLineBreak;
 				move player to Museum;
+				now Resolution of Monkey Duel is 2; [Wukong won]
 		else:
 			LineBreak;
 			say "     'Well that was... Blunt,' Hanu reacts. 'But do not worry. I am sure that I can hold my own against our young [']friend[']. Wish me luck, my pupil.' You were about to correct him but Hanu was already on his way to the museum. Shaking your head, you finish your walk, wondering how the whole affair will conclude. A while after, the air fills with monkey noises and people shouting. What happened?";
@@ -107,11 +110,13 @@ Instead of resolving Monkey Duel:
 			say "'With his new bitch?'";
 			say "'Heh heh. Nothing better than to twist the knife in the wound, right?'";
 			say "The two monkeys snicker and walk away. [italic type]It seems that Hanu lost in your absence, and that Wukong sent some thugs at the Zoo.[roman type]";
+			now Resolution of Monkey Duel is 3; [left the monkeys to fight]
 		now the area corresponding to a name of "Monkey" in the Table of Random Critters is "Nowhere";
 		now the area corresponding to a name of "Wukong Thugs" in the Table of Random Critters is "Zoo";
 	else:
 		LineBreak;
 		say "     You blurt out the best excuse you can think of and walk away from the awkward situation as fast as you can, while Hanu sighs loudly in your general direction.";
+		now Resolution of Monkey Duel is 99; [desinterest]
 		now acquaintedWithHanu is 0; [locks Monkey Duel from further acquaintance checks]
 	now Monkey Duel is resolved;
 

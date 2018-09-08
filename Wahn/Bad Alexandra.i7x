@@ -907,7 +907,7 @@ to say badAlexandraFang2: [male player stops Fang and establishes dominance]
 	say "     You and Alexandra have earned the [']Top Dog['] feat, making her more fertile. Your [bold type]charisma[roman type] has also gone up by one.";
 	add "Top Dog" to feats of player;
 	add "Player's Bitch" to Traits of Alexandra;
-	now AlexandraPlayersBitch is not resolved;
+	now AlexandraPlayersBitch is active;
 	increase perception of player by 1;
 	decrease HP of player by 10;
 	now level of Alexandra is 1; [unshared bitch]
@@ -1020,7 +1020,7 @@ To impregAlexandraChance with (x - text):
 		if debugactive is 1:
 			say "     Impregnation successful! [AlexandraGrowingPups] pups are growing in Alexandra now!";
 		if AlexandraPregCount is 2: [third time pregnant]
-			now AlexandraBroodmTrait is not resolved; [she has become pregnant a third time -> event revealing extra nipples]
+			now AlexandraBroodmTrait is active; [she has become pregnant a third time -> event revealing extra nipples]
 		increase HP of Alexandra by 1; [advances state from not preg to preg]
 		now lust of Alexandra is 1; [starts the pregnancy timer]
 		if x is: [father of the pups]
@@ -1123,19 +1123,19 @@ Section 6 - Events
 
 to AlexandraFeatAbsorb:
 	if "Horny Bastard" is listed in feats of player and "Horny" is not listed in Traits of Alexandra:
-		now AlexandraHornyTrait is not resolved;
+		now AlexandraHornyTrait is active;
 	else if "..." is listed in feats of player and "..." is not listed in Traits of Alexandra:
 		say "...";
-		[now AlexandraGains... is not resolved;]
+		[now AlexandraGains... is active;]
 
 AlexandraHornyTrait is a situation.
-AlexandraHornyTrait is resolved.
+AlexandraHornyTrait is inactive.
 The sarea of AlexandraHornyTrait is "Nowhere".
 
-after going to Grey Abbey Library while (AlexandraHornyTrait is not resolved and a random chance of 1 in 2 succeeds):
+after going to Grey Abbey Library while (AlexandraHornyTrait is active and AlexandraHornyTrait is not resolved and a random chance of 1 in 2 succeeds):
 	AlexandraHornyTrait_Event;
 
-instead of navigating Grey Abbey Library while (AlexandraHornyTrait is not resolved and a random chance of 1 in 2 succeeds):
+instead of navigating Grey Abbey Library while (AlexandraHornyTrait is active and AlexandraHornyTrait is not resolved and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1158,13 +1158,13 @@ to AlexandraHornyTrait_Event:
 	now AlexandraHornyTrait is resolved;
 
 AlexandraBroodmTrait is a situation.
-AlexandraBroodmTrait is resolved.
+AlexandraBroodmTrait is inactive.
 The sarea of AlexandraBroodmTrait is "Nowhere".
 
-after going to Grey Abbey Library while (AlexandraBroodmTrait is not resolved and a random chance of 1 in 2 succeeds):
+after going to Grey Abbey Library while (AlexandraBroodmTrait is active and AlexandraBroodmTrait is not resolved and a random chance of 1 in 2 succeeds):
 	AlexandraBroodmTrait_Event;
 
-instead of navigating Grey Abbey Library while (AlexandraBroodmTrait is not resolved and a random chance of 1 in 2 succeeds):
+instead of navigating Grey Abbey Library while (AlexandraBroodmTrait is active and AlexandraBroodmTrait is not resolved and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -1197,13 +1197,13 @@ to AlexandraBroodmTrait_Event:
 
 
 AlexandraPlayersBitch is a situation.
-AlexandraPlayersBitch is resolved.
+AlexandraPlayersBitch is inactive.
 The sarea of AlexandraPlayersBitch is "Nowhere".
 
-after going to Grey Abbey Library while (AlexandraPlayersBitch is not resolved and a random chance of 1 in 2 succeeds):
+after going to Grey Abbey Library while (AlexandraPlayersBitch is active and AlexandraPlayersBitch is not resolved and a random chance of 1 in 2 succeeds):
 	AlexandraPlayersBitch_Scene;
 
-instead of navigating Grey Abbey Library while (AlexandraPlayersBitch is not resolved and a random chance of 1 in 2 succeeds):
+instead of navigating Grey Abbey Library while (AlexandraPlayersBitch is active and AlexandraPlayersBitch is not resolved and a random chance of 1 in 2 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

@@ -152,9 +152,11 @@ Instead of resolving Abandoned Fox:
 				add "Tamed" to Traits of little fox;
 				move Dash to Computer Lab;
 				say "(The little fox is now tamed! You can make it your active pet by typing [bold type][link]pet little fox[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+				now Resolution of Abandoned Fox is 1; [fed and adopted the fox]
 				now Abandoned Fox is resolved;
 			else:
 				say "     Hardening your heart to its plaintive cries, you move back from the abandoned fox den and leave nature to take its course.";
+				now Resolution of Abandoned Fox is 2; [abandoned the fox]
 				now Abandoned Fox is resolved;
 		else:
 			say "     You have no food to feed the fox kit, so you quietly leave before its cries draw something dangerous.";
@@ -367,9 +369,11 @@ Instead of resolving Lost skunk kit:
 					else:
 						infect "Skunk";
 					say "(The skunk kit is now tamed! You can make it your active pet by typing [bold type][link]pet skunk kit[as]pet skunk kit[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
+					now Resolution of Lost skunk kit is 1; [adopted the skunk]
 					now Lost skunk kit is resolved;
 				else:
 					say "     Deciding that the whole situation is not really your problem, even if it is a fellow skunk creature, you leave the little skunk to its hiding spot, and continue on your way.";
+					now Resolution of Lost skunk kit is 2; [abandoned the skunk]
 					now Lost skunk kit is resolved;
 			else if Skunk Goo is owned:
 				say "     Realizing you have some of that strange black goo from one of the other skunks, you think that you might be able to put the little skunk at ease if you smelled and looked more like one of the skunks, do you rub the goo on your hands?";
@@ -387,9 +391,11 @@ Instead of resolving Lost skunk kit:
 					else:
 						infect "Skunk";
 					say "[bold type](The skunk kit is now tamed! You can make it your active pet by typing pet skunk kit. You can see all the pets you have tamed with the pet command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use pet dismiss, or just dismiss)[roman type]";
+					now Resolution of Lost skunk kit is 1; [adopted the skunk]
 					now Lost skunk kit is resolved;
 				else:
 					say "     Deciding helping the little skunk isn't worth the chance of getting infected by the goo yourself, you leave the area so nature can take its course.";
+					now Resolution of Lost skunk kit is 2; [abandoned the skunk]
 					now Lost skunk kit is resolved;
 			else:
 				say "     Sighing, you realize that there is nothing in your bag that could help you out in this situation, and you can't think of anything else to do to make the little skunk trust you, so you make note of the location and hope the little creature will be here when you get back.";

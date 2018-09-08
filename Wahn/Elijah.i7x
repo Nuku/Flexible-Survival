@@ -252,8 +252,8 @@ instead of conversing the Elijah:
 	else if (HP of Elijah is 1): [wounded + unconscious in the bunker - starting the revival quest]
 		say "     He's alive but still very weak and still not ready for communicating in any great length. Hell, he's barely conscious at all. There might be some things out there in the city that could possibly help him... perhaps you could try milk and honey, that's supposed to be good for you. And if you mix in something to boost his healing ability, your resident angel should be back on his feet in no time.";
 		now HP of Elijah is 2;
-		now Sweet Surprise is unresolved;
-		if furry is not banned, now Examination Room is unresolved;
+		now Sweet Surprise is active;
+		if furry is not banned, now Examination Room is active;
 	else if (HP of Elijah is 2): [wounded + unconscious in the bunker - revival quest started already]
 		blank out the whole of table of itemselection;
 		repeat with Q running through owned milky grab objects:
@@ -342,7 +342,7 @@ to say elijah_ds_tempt:[temptation for Evil Elijah]
 		now HP of Elijah is 99;
 		now lastfuck of Elijah is turns + 8; [guarantee he's ready for action]
 		now HP of Gabriel is 1;
-		now Angel vs Demons is not resolved;
+		now Angel vs Demons is active;
 	else:
 		say "     Where did that thought come from? You shake it off, your mind returning to the remaining ingredients you need for the your angel revival milkshake.";
 
@@ -548,7 +548,7 @@ Section 3 - Gathering (and other) Events
 
 [This event exists mainly to allow players with girl banned to have a means to find a honeycomb.]
 
-Sweet Surprise is a situation. Sweet Surprise is resolved.
+Sweet Surprise is a situation. Sweet Surprise is inactive.
 The sarea of Sweet Surprise is "Park".
 
 Instead of resolving a Sweet Surprise:
@@ -559,7 +559,7 @@ Instead of resolving a Sweet Surprise:
 
 [This event exists mainly to give players another means to obtain a healing booster.]
 
-Examination Room is a situation. Examination Room is resolved. The level of Examination Room is 8.
+Examination Room is a situation. Examination Room is inactive. The level of Examination Room is 8.
 The sarea of Examination Room is "Hospital".
 
 Instead of resolving a Examination Room:
@@ -583,7 +583,7 @@ instead of going down from the Grey Abbey Library while (Elijah is in the Bunker
 	say "     When Elijah takes direction towards the library entrance doors next, it becomes obvious that he wants to go somewhere out in the city. Do you really want to follow him?"; [last chance at breaking this off]
 	if player consents: [now it's sure the player will get fucked]
 		now thirst of Elijah is 1; [setting the flag as the player gets fucked either way]
-		now Captured Soldier is unresolved;
+		now Captured Soldier is active;
 		setmonster "Spidertaur";
 		choose row monster from the Table of Random Critters;
 		LineBreak;
@@ -1332,7 +1332,7 @@ Instead of fucking the Elijah:
 				decrease humanity of player by 25;
 				now lastfuck of Elijah is turns;
 				now HP of Gabriel is 1;
-				now Angel vs Demons is not resolved;
+				now Angel vs Demons is active;
 			else if lastfuck of Elijah is not 400:
 				say "     Your moral compass cheers as you step back from the precipice of damnation, grounding your mind a bit more on the human level.";
 				now lastfuck of Elijah is 400; [using to mark resisting this impulse]

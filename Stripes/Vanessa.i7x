@@ -36,7 +36,7 @@ Version 2 of Vanessa by Stripes begins here.
 
 Section 0 - Event
 
-Paratrooper is a situation. Paratrooper is resolved.		[unlocked after 3rd stage of 'Military presence']
+Paratrooper is a situation. Paratrooper is inactive.		[unlocked after 3rd stage of 'Military presence']
 The sarea of Paratrooper is "Plains".
 when play begins:
 	add Paratrooper to badspots of girl;

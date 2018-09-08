@@ -73,7 +73,7 @@ To say Septus loses:
 		say "     [if (HP of Septus is 0 or HP of Septus is 1 or HP of Septus is 2)]'Keep this up, and you'll have a place in the team soon.' He gives your shoulder a squeeze, then walks off to find more candidates out in the city.[else if (HP of Septus is 3 or HP of Septus is 4)]'You've shown your strength and skill. Why don't you join us in our base camp? It's in a warehouse over near 11th street. Just look for the [bold type]entrance[roman type] of our wolfman [bold type]lair[roman type] - there's a large wolf's head painted on the front wall too, you can barely miss it.'[else if HP of Septus is 5]'See you later at the lair. I'm off to find some new candidates.'[end if]";
 		if HP of Septus < 4:
 			increase HP of Septus by 1;
-		if Entrance to the Lair is not resolved and HP of Septus > 3 and HP of Septus < 99:
+		if Entrance to the Lair is inactive and Entrance to the Lair is not resolved and HP of Septus > 3 and HP of Septus < 99:
 			now Entrance to the Lair is active;
 
 to say Wolfmandesc:

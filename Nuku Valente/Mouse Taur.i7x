@@ -76,21 +76,22 @@ to FindPornStore:
 				now mtrp is 2; [player knows Lisa, was in the store]
 				move player to the Porn Store;
 				now Porn Store is known;
+				now Resolution of Find Porn Store is 1; [tried to break in, won/lost]
 				now Mouse Taur Encounter is resolved;
-				now Find Porn Store is resolved;
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "     Just as you are about to be defeated by the overeager tigress, swaying on your feet from her last blow, the mouse taur reappears from the inside of the store, holding what looks like a sturdy quarterstaff and a squirt gun. She sprays the tigress with a foul-smelling liquid and chases her off with angry yells about staying away. As she turns around to face your way, you begin profusely apologizing to the mouse taur before you get the same treatment. Listening to you for a little while, the woman then lowers the bottle and shrugs. 'I guess you didn't really mean any harm, and you kept that bitch busy till I got my gear. I'm Lisa. Come in, we can talk more once we're off the street.' With that, she waves you into the store, then closes the door behind you two.";
 				say "[LisaIntroTalk]";
 				now mtrp is 2; [player knows Lisa, was in the store]
 				move player to the Porn Store;
 				now Porn Store is known;
+				now Resolution of Find Porn Store is 1; [tried to break in, won/lost]
 				now Mouse Taur Encounter is resolved;
-				now Find Porn Store is resolved;
 			else if fightoutcome is 30: [fled]
 				say "     Running off, you leave the mouse taur to deal with the tigress on her own. While this means that it isn't all that hard to get away, it also will leave a bad impression on the porn store inhabitant. You doubt she'll want to see you again after such a bad first encounter.";
 				now mtrp is 100; [player got a bad rep with Lisa now]
+				now Resolution of Find Porn Store is 2; [tried to break in, fled - bad rep with Lisa]
 				now Mouse Taur Encounter is resolved;
-				now Find Porn Store is resolved;
+			now Find Porn Store is resolved;
 		else if calcnumber is 2:
 			LineBreak;
 			say "     Deciding just to try the simple idea of knocking, you rap the door several times and wait. At first, it seems like no one is home, but then you can hear movement on the inside. After several locks click open one by one, the door is opened a crack to reveal the face of a female mouse taur looking out warily. 'Well, hello there. You don't seem to be one of the usual types that roam the streets these days. They'd be trying to break down the door by now and all that. So, come on in. We can talk, one sane survivor to another.' With that, she waves you into the store, then closes the door behind you two.";
@@ -99,6 +100,7 @@ to FindPornStore:
 			move player to the Porn Store;
 			now Porn Store is known;
 			now Mouse Taur Encounter is resolved;
+			now Resolution of Find Porn Store is 3; [knocked, met Lisa]
 			now Find Porn Store is resolved;
 		else:
 			LineBreak;
@@ -108,6 +110,7 @@ to FindPornStore:
 		move player to the Porn Store;
 		now mtrp is 2; [player knows Lisa, was in the store]
 		now Porn Store is known;
+		now Resolution of Find Porn Store is 4; [already knew Lisa, found the store]
 		now Find Porn Store is resolved;
 
 to say LisaIntroTalk:

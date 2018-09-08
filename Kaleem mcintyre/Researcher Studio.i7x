@@ -278,6 +278,7 @@ Instead of Resolving a For the Future:
 		say " After picking up a pack that you hadn't seen hiding in some of the knee tall grass behind her, you watch as the redhead goes about her way in silent grace. Taking care to watch her until this [']Omio['] becomes a small dot shrinking into the distance you find yourself wondering if you should take the redhead up on her offer for tea. She doesn't seem too bad, if just somewhat ill mannered, so maybe it might be worth the trouble after all? Also, there are some budding questions filling up your mind as you wonder how such a person has survived unchanged for so long. Maybe there is something to be learned from this woman? She said her place was a research studio... right? That shouldn't be too hard to find in the middle of the plains.";
 		now Researcher Studio is known;
 		now For the Future is resolved;
+		now Resolution of For the Future is 1; [fought, won]
 		increase score by 15;
 	else:
 		say "Having lost to the centaur stallion and been [']seeded['] by the mutated horse-like creature, you find yourself slightly annoyed as you start wipe off from the sticky centaur cum flowing down your [if player is female]slightly puffy pussy[else]chest[end if]. An out of nowhere shriek makes your head up just in time to see the woman you had tried to save coming over to you with a small opened jar in her hands. 'Don't move a muscle,' she says excitedly and for some reason you comply by going still as she starts to scoop the white cum up from off of your [if player is female]weeping cunt[else]torso[end if].";
@@ -289,11 +290,9 @@ Instead of Resolving a For the Future:
 		say "'Look, I could go into my whole spiel here, but if you just come to my studio then I'll explain everything. It's over by the northern end of the plains.' Omio hikes a thumb behind herself and then chuckles for some unknown reason. 'If you come I'll even share some tea with you and then tell you the whole story.";
 		say "Not sure what to say you tell Omio that you [italic type]might[roman type] think about it if you can find some time later on. 'That's fine, I can accept that promise.' The strawberry redhead turns away from you and then begins to off on her, however, before she can leave completely you sudden call out to her to ask what she plans to do with that centaur stallion cum you managed to [italic type]acquire[roman type] for her. Omio stops and then shakes her head before turning to regard you. 'Come to my [bold type]Research Studio[roman type] and I'll tell you.' A snicker from the woman has you shuddering slightly as Omio turns to go off about her way, leaving you with your thoughts.";
 		now Researcher Studio is known;
+		now Resolution of For the Future is 2; [fought, lost]
 		now For the Future is resolved;
 		increase score by 15;
-
-
-
 
 [
 when play ends:

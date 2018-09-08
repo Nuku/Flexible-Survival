@@ -165,7 +165,7 @@ Section 1.3 - Cute Crab Event
 Lost Crab is a situation.
 The sarea of Lost Crab is "Beach".
 
-Instead of resolving lost crab:
+Instead of resolving Lost Crab:
 	say "     While you are exploring, you happen across a crab. The crab has unusually large and expressive eyes. It clacks its great pincers at you, but you don't get much feeling of malice from it.";
 	if food is owned:
 		say "     The crab scuttles towards you and reaches out to poke lightly at where your food is stored. Do you want to give it some?";
@@ -177,9 +177,11 @@ Instead of resolving lost crab:
 			add "Tamed" to Traits of cute crab;
 			move Snips to Computer Lab;
 			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing [link]pet cute crab[as]pet cute crab[end link]. You can see all of the pets that you have tamed with the [link]pet[as]pet[end link] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [link]pet dismiss[as]pet dismiss[end link], or just [link]dismiss[as]dismiss[end link])[roman type]";
+			now Resolution of Lost Crab is 1; [fed the crab]
 		else:
 			say "     The crab scuttles away sadly.";
-		now lost crab is resolved;
+			now Resolution of Lost Crab is 2; [didn't feed the crab]
+		now Lost Crab is resolved;
 	else:
 		say "     The crab peers at you for several quiet moments before scuttling away, mildly disappointed for some reason.";
 
@@ -349,12 +351,15 @@ Instead of resolving Lost house cat:
 					add "Tamed" to Traits of house cat;
 					move Dinah to Computer Lab;
 					say "(The house cat is now tamed! You can make it your active pet by typing [bold type][link]pet house cat[end link][roman type]. You can see all of the pets that you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+					now Resolution of Lost house cat is 1; [fed and adopted the cat]
 					now Lost house cat is resolved;
 				else:
 					say "     Looking over your supplies, you decide that you'd rather not part with the collected milk in the end. Wanting to keep your hard-earned supplies, you decide that the cat will just have to fend for itself.";
+					now Resolution of Lost house cat is 2; [abandoned the cat]
 					now Lost house cat is resolved;
 			else:
 				say "     Deciding to keep hold of your hard-earned supplies instead, you leave the cat alone and resolve not to stop by here again.";
+				now Resolution of Lost house cat is 2; [abandoned the cat]
 				now Lost house cat is resolved;
 		else:
 			say "     Checking through your bag with the cat watching your every move, you don't seem to have anything that you think might tempt the cat out, and after a little bit of trying to coax it out anyways, you reluctantly give up and leave the alleyway and the cat alone. You resolve to come back after finding something the cat might like, perhaps some nice milk from one of the gryphons you have seen flying around town?";
@@ -491,9 +496,9 @@ to say ChirpyTalk1:
 
 Section 3.3 - Exotic Bird Event
 
-Scared bird is a situation.
-The sarea of Scared bird is "Zoo".
-Instead of resolving Scared bird:
+Scared Bird is a situation.
+The sarea of Scared Bird is "Zoo".
+Instead of resolving Scared Bird:
 	say "     Traveling along the Zoo paths, you hear a strange noise from up ahead. Moving carefully to investigate the area where you heard the noise, you look around the tree there but don't actually see anything. You are about to turn to leave when you hear the sound again from up in the branches. Looking up, you are surprised to see a rather scared-looking exotic bird taking shelter up in the branches, its brilliant plumage obvious at this distance as it huddles nervously above you. You realize that it must have escaped from one of the exotic bird exhibits, and you sigh when you realize that its chances of survival in this violent city without help are pretty slim. Maybe you should try convincing it to come along with you instead of just hiding here?";
 	if carried of food is 0:
 		say "     A quick glance shows that you don't have any food with which to try and coax the bird down with. You'll have to try again later once you've found some food.";
@@ -512,12 +517,14 @@ Instead of resolving Scared bird:
 				add "Tamed" to Traits of Exotic Bird;
 				move Chirpy to Computer Lab;
 				say "(The exotic bird is now tamed! You can make it your active pet by typing [bold type][link]pet exotic bird[end link][roman type]. You can see all of the pets that you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+				now Resolution of Scared Bird is 1; [adopted the bird]
 				now Scared bird is resolved;
 			else:
 				say "     Sadly, the bird seems too scared to heed your blandishments, and it stays up in the tree shaking and occasionally letting out a soft piteous cry. You obviously aren't going to convince it to trust you right now. Maybe you should try again later.";
 		else:
 			say "     Deciding that you wouldn't have the least idea of how to care for a truly exotic bird yourself, and that you are having enough trouble keeping yourself alive, you decide to leave the bird to its fate. At least it has wings, right?";
-			now Scared bird is resolved;
+			now Resolution of Scared Bird is 2; [abandoned the bird]
+			now Scared Bird is resolved;
 
 Section 3.4 - Exotic Bird Ending
 
@@ -678,11 +685,13 @@ Instead of resolving a Mournful Dog:
 					move Hobo to Computer Lab;
 					say "     (The helper dog is now tamed! You can make it your active pet by typing [bold type][link]pet helper dog[as]pet helper dog[end link][roman type]. You can see all of the pets that you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 					increase score by 10;
+					now Resolution of Mournful Dog is 1; [adopted the dog]
 					now Mournful Dog is resolved;
 				else:
 					say "     The dog accepts the food from you, but won't let you get close. Maybe you should come back and try again another time.";
 			else:
 				say "     Hardening your heart to the mournful dog's needs, you close the door and decide to move on.";
+				now Resolution of Mournful Dog is 2; [abandoned the dog]
 				now Mournful Dog is resolved;
 	else:
 		say "     Your passage through the halls finds you at the room with the dead patient and their pet dog. You pinch your nose and poke in again to check on the dog, finding it still there. It perks up a little as you arrive, but still won't approach. It seems in slightly better condition than when you were here last time, but is still quite malnourished.";
@@ -706,11 +715,13 @@ Instead of resolving a Mournful Dog:
 					say "(The helper dog is now tamed! You can make it your active pet by typing [bold type]pet helper dog[roman type]. You can see all of the pets that you have tamed with the [bold type]pet[roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])";
 					now lastfuck of helper dog is turns;
 					increase score by 10;
+					now Resolution of Mournful Dog is 1; [adopted the dog]
 					now Mournful Dog is resolved;
 				else:
 					say "     The dog accepts the food from you, but won't let you get close. Maybe you should come back and try again another time.";
 			else:
 				say "     Hardening your heart to the mournful dog's needs, you decide you can't afford to spare food for the animal and move on.";
+				now Resolution of Mournful Dog is 2; [abandoned the dog]
 				now Mournful Dog is resolved;
 
 hobo-water-gift is a truth state that varies. hobo-water-gift is usually false.

@@ -341,12 +341,12 @@ to say Apartment2bLooting:
 Army Convoy is a situation.
 The sarea of Army Convoy is "Nowhere".
 
-instead of going to Grey Abbey Library while (Army Convoy is not resolved and BrennanRelationship is 4 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
+instead of going to Grey Abbey Library while (Army Convoy is active and Army Convoy is not resolved and BrennanRelationship is 4 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
 	move player to Grey Abbey Library;
 	say "     Moving to the main floor of the library once more, you are distracted from whatever you were intent on doing by something you spot from the corner of your eye. It appears you got a visitor: Through the wood and glass doors at the entrance of the building, you see someone outside, leaning against a side-wall of the front steps. Glancing over there, you are pleased to see it is someone you know - Brennan, the human survivor you've had several encounters with by now. He raises a hand and waves as he sees that you noticed him, apparently wanting to talk. You quickly walk over and step outside.";
 	ArmyConvoyEvent;
 
-instead of navigating Grey Abbey Library while (Army Convoy is not resolved and BrennanRelationship is 4 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (Army Convoy is active and Army Convoy is not resolved and BrennanRelationship is 4 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -457,18 +457,18 @@ to say ArmyConvoyTrip:
 	else if fightoutcome is 30: [fled]
 		say "     Running away, you draw the attention of [italic type]both[roman type] hawkmen, their predatory nature pushing them to capture fast-moving prey. As such, they swoop past you and slash with their claws again and again, harassing you for a long time before you finally manage to lose them by going through an alley or three and ducking in and out of houses. Brennan is of course nowhere in sight, but you hope that he made his own getaway unscathed - you drew his enemy away too, after all.";
 	now BrennanRelationship is 6; [player got home after the convoy trip]
-	now Thanks & Cherries is not resolved;
+	now Thanks & Cherries is active;
 
 Thanks & Cherries is a situation.
-Thanks & Cherries is resolved.
+Thanks & Cherries is inactive.
 The sarea of Thanks & Cherries is "Nowhere".
 
-instead of going to Grey Abbey Library while (Thanks & Cherries is not resolved and BrennanRelationship is 6 and a random chance of 1 in 2 succeeds):
+instead of going to Grey Abbey Library while (Thanks & Cherries is active and Thanks & Cherries is not resolved and BrennanRelationship is 6 and a random chance of 1 in 2 succeeds):
 	move player to Grey Abbey Library;
 	say "     Moving to the main floor of the library, you see Brennan coming up the stairs to the front door and wander over there to greet him. ";
 	ThanksAndCherriesEvent;
 
-instead of navigating Grey Abbey Library while (Thanks & Cherries is not resolved and BrennanRelationship is 6 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (Thanks & Cherries is active and Thanks & Cherries is not resolved and BrennanRelationship is 6 or BrennanRelationship is 5 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -491,7 +491,7 @@ to ThanksAndCherriesEvent:
 	increase carried of food by 2;
 	now BrennanRelationship is 7; [player got thanks, and cherries]
 	now Thanks & Cherries is resolved;
-	now Wolf Whisperer is not resolved;
+	now Wolf Whisperer is active;
 
 [***********************************************************]
 [***********************************************************]
@@ -502,7 +502,7 @@ Section 2 - Outgoing Brennan Events
 [***********************************************************]
 
 Wolf Whisperer is a situation.
-Wolf Whisperer is resolved.
+Wolf Whisperer is inactive.
 The sarea of Wolf Whisperer is "Outside".
 
 instead of resolving Wolf Whisperer:
@@ -517,12 +517,12 @@ instead of resolving Wolf Whisperer:
 		WaitLineBreak;
 		say "     Further explanations are interrupted by the second wolf - Romulus, as Brennan calls him - making his way back to the muscular man and rubbing his side against Brennan's arm. Your friend smiles at the shameless dig for some affection and deals out petting and affectionate head-scratching to both of his companions. 'After so long alone, I relish having both of them. I always liked dogs, and these two are quite sweet - now that they've accepted me as their leader.' Congratulating Brennan on how things worked out, you give the wolves a stroke yourself after he tells them that they should treat you like family. Then you bid your farewell to the three of them, leaving them to scavenge the pileup while you wander on through the tunnel and into the section of the city beyond.";
 		now BrennanRelationship is 8; [met him and the wolves]
-		now Bunny Frat Invite is not resolved;
-		now Entrance Checks is not resolved;
-		now Trip to the Water Tower is not resolved;
-		now Fountain Discussion is not resolved;
-		now Slaver Caravan is not resolved;
-		now Slave Hunter is not resolved;
+		now Bunny Frat Invite is active;
+		now Entrance Checks is active;
+		now Trip to the Water Tower is active;
+		now Fountain Discussion is active;
+		now Slaver Caravan is active;
+		now Slave Hunter is active;
 	else if BrennanRelationship is 8: [playing wolves]
 		project the figure of Brennan_clothed_icon;
 		say "     Exploring the city, you come to a street filled with a row of little stores. Sadly, they all seem to have been looted before and yield nothing interesting when you check over the remains, or are selling some less than useful products. There just isn't much use for decorative throw-pillows or scented candles during the nanite apocalypse. Then, just as you are standing in front of yet another shattered shop window and are trying to decide if climbing through will be worth it, you see some movement from the corner of your eyes. Looking to the side, you are surprised to learn that it is a tennis ball, hitting the street after what must have been a powerful throw, which makes it bounce off, hit a wall on the other side of the street and bounce a few times, finally coming to a stop in the gutter. A wild scramble of claws on asphalt heralds the arrival of two feral wolves a second later, rushing full tilt at the ball.";
@@ -605,10 +605,10 @@ instead of resolving Wolf Whisperer:
 			now BrennanRelationship is 97; [abandoned wounded Brennan - he didn't make it]
 
 Entrance Checks is a situation.
-Entrance Checks is resolved. [blocked till BrennanRelationship reaches 8]
+Entrance Checks is inactive. [blocked till BrennanRelationship reaches 8]
 The sarea of Entrance Checks is "Nowhere".
 
-instead of going north from Smith Haven Mall Lot South while (Entrance Checks is not resolved and BrennanRelationship > 7 and BrennanRelationship < 90 and a random chance of 1 in 3 succeeds):
+instead of going north from Smith Haven Mall Lot South while (Entrance Checks is active and Entrance Checks is not resolved and BrennanRelationship > 7 and BrennanRelationship < 90 and a random chance of 1 in 3 succeeds):
 	if debugactive is 1:
 		say "     DEBUG: Brennan runs into Logan at the mall - BrennanRelationship: [BrennanRelationship] [line break]";
 	project the figure of Brennan_clothed_icon;
@@ -619,11 +619,11 @@ instead of going north from Smith Haven Mall Lot South while (Entrance Checks is
 	now Entrance Checks is resolved;
 
 Bunny Frat Invite is a situation.
-Bunny Frat Invite is resolved. [blocked till BrennanRelationship reaches 8]
+Bunny Frat Invite is inactive. [blocked till BrennanRelationship reaches 8]
 The level of Bunny Frat Invite is 0.
 The sarea of Bunny Frat Invite is "Campus".
 
-instead of going to College Walkway East while (Bunny Frat Invite is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway East while (Bunny Frat Invite is active and Bunny Frat Invite is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway East;
 	BunnyFratInviteEvent;
 
@@ -638,10 +638,10 @@ to BunnyFratInviteEvent:
 	now LastCampusWalkin is turns;
 
 Fountain Discussion is a situation.
-Fountain Discussion is resolved.
+Fountain Discussion is inactive.
 The sarea of Fountain Discussion is "Campus". [Fountain]
 
-instead of going to College Fountain while (Fountain Discussion is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Fountain while (Fountain Discussion is active and Fountain Discussion is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	FountainDiscussionEvent;
 
@@ -659,10 +659,10 @@ to FountainDiscussionEvent:
 	now LastCampusWalkin is turns;
 
 Infernal Offer is a situation.
-Infernal Offer is resolved.
+Infernal Offer is inactive.
 The sarea of Infernal Offer is "Campus". [Fountain]
 
-instead of going to College Fountain while (Infernal Offer is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Fountain while (Infernal Offer is active and Infernal Offer is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	InfernalOfferEvent;
 
@@ -677,7 +677,7 @@ to InfernalOfferEvent:
 	now LastCampusWalkin is turns;
 
 Slaver Caravan is a situation.
-Slaver Caravan is resolved.
+Slaver Caravan is inactive.
 The sarea of Slaver Caravan is "Outside".
 
 Instead of resolving Slaver Caravan:
@@ -687,7 +687,7 @@ Instead of resolving Slaver Caravan:
 	now Slaver Caravan is resolved;
 
 Slave Hunter is a situation.
-Slave Hunter is resolved.
+Slave Hunter is inactive.
 The sarea of Slave Hunter is "Outside".
 
 Instead of resolving Slave Hunter:
@@ -696,7 +696,7 @@ Instead of resolving Slave Hunter:
 	now Slave Hunter is resolved;
 
 Trip to the Water Tower is a situation.
-Trip to the Water Tower is resolved. [blocked till BrennanRelationship reaches 8]
+Trip to the Water Tower is inactive. [blocked till BrennanRelationship reaches 8]
 The level of Trip to the Water Tower is 0.
 The sarea of Trip to the Water Tower is "Outside".
 
@@ -1904,7 +1904,7 @@ The sarea of Brennan Shower Walkin is "Nowhere".
 when play begins:
 	add Brennan Shower Walkin to badspots of Transgender;
 
-after going to Brennan's Bathroom while (Brennan Shower Walkin is not resolved and (TimekeepingVar is -2 or TimekeepingVar is -3 or TimekeepingVar is -4 or TimekeepingVar is 6 or TimekeepingVar is 5 or TimekeepingVar is 4) and a random chance of 1 in 2 succeeds): [first time, Brennan awake and in the apartment, 50% chance]
+after going to Brennan's Bathroom while (Brennan Shower Walkin is active and Brennan Shower Walkin is not resolved and (TimekeepingVar is -2 or TimekeepingVar is -3 or TimekeepingVar is -4 or TimekeepingVar is 6 or TimekeepingVar is 5 or TimekeepingVar is 4) and a random chance of 1 in 2 succeeds): [first time, Brennan awake and in the apartment, 50% chance]
 	project the figure of Brennan_face_icon;
 	say "     As you enter the bathroom your gaze is instantly drawn to Brennan, standing naked in the walk-in shower area. You have a totally unimpeded view of his backside, from the broad shoulders down over a firm pair of buttocks all the way to his lean, muscular legs. Clearly, the man was just washing his upper body - as made obvious by the natural sponge in his hand, still dripping water from having been dunked in a bucket by his feet. The human survivor freezes in mid-motion as he registers movement from the corner of his eye, glancing back over his shoulder. 'Oh, fuck! Sorry. I guess I'm not used to shutting - or locking - the bathroom door. Living alone and all that.'";
 	say "     Dropping the sponge in the bucket, he makes a sideways step to snatch up a towel, wrapping it securely around his hips before turning around. His front side is nothing to sneeze at either: six-pack abs and muscular pecs crowned by a head with a friendly, masculine face and a short beard. Brennan looks at you and smiles in slight embarrassment, then says, 'Okay, I'll go get dressed now. Feel free to freshen up too. It's clean water, still warm from the microwave.' After a nod towards the bucket, the man hurries past you, making sure to close the bathroom door this time.";
@@ -1913,7 +1913,7 @@ after going to Brennan's Bathroom while (Brennan Shower Walkin is not resolved a
 Feeding Wolves is a situation.
 The sarea of Feeding Wolves is "Nowhere".
 
-after going to Survivor Refuge while (Feeding Wolves is not resolved and (TimekeepingVar is -2 or TimekeepingVar is -3 or TimekeepingVar is -4 or TimekeepingVar is 6 or TimekeepingVar is 5 or TimekeepingVar is 4) and a random chance of 1 in 2 succeeds): [first time, Brennan awake and in the apartment, 50% chance]
+after going to Survivor Refuge while (Feeding Wolves is active and Feeding Wolves is not resolved and (TimekeepingVar is -2 or TimekeepingVar is -3 or TimekeepingVar is -4 or TimekeepingVar is 6 or TimekeepingVar is 5 or TimekeepingVar is 4) and a random chance of 1 in 2 succeeds): [first time, Brennan awake and in the apartment, 50% chance]
 	project the figure of Brennan_face_icon;
 	say "     Before you enter the main room of the apartment, you hear the beeping of a microwave, followed by some barking. As it turns out, Brennan is just preparing some food, with Romulus and Remus standing by his side and being impatient for getting their share. 'Hey guys, you got to wait till it's all the way through, unless you want to grow a beak and cluck like a chicken. Or whatever else laid that thing,' the human survivor tells the two of them, all the while still watching what is cooking through the window. A short while later, the alarm sounds with a high-pitched 'Ding' and Brennan opens the microwave door. Armed with pot-holders, he pulls a glass salad bowl filled with water (and something white and oval) out of the microwave, quickly setting it down on the kitchen counter. Then he decants the water into a canister with the words 'clean water' on it before he lifts a huge egg out of the bowl.";
 	say "     The thing that Brennan is holding is as big as an ostrich's egg, with an obviously very tough shell, as he has to saw at it with a large-toothed bread-knife, then splits it open with a screwdriver and a kitchen mallet. The contents of the hard-boiled egg are split into two dog bowls, one each for Romulus and Remus - who immediately start wolfing their food down. Stepping back from his canine companions and wiping his brow from all the effort, Brennan notices you and says hello. 'I'm sure I don't have to tell you this, but one has to make use of [italic type]all[roman type] sources of food in times like this. One can find all sorts of eggs out there in the city, if one knows where to look. But don't worry - I wait at least a day after collection to make sure that they're not fertilized. Anything that could have hatched, would have hatched by then.'";

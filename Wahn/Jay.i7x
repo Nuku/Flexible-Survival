@@ -207,7 +207,7 @@ Section 4 - Events
 [***********************************************************]
 
 Harbor Swap Meet is a situation.
-Harbor Swap Meet is resolved.
+Harbor Swap Meet is inactive.
 The sarea of Harbor Swap Meet is "Warehouse".
 
 Instead of resolving a Harbor Swap Meet:

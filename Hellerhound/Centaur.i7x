@@ -1,12 +1,7 @@
 Version 2 of Centaur by Hellerhound begins here.
 [Version 2.3 - Updated to extended heat table - no MPreg heat - Stripes]
 
-[converted from FI]
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-
 "Adds a mutant centaur to Flexible Survival's Wandering Monsters table"
-
-[Description text for this Extension.]
 
 Section 1 - Dry Plains
 
@@ -38,6 +33,7 @@ Instead of resolving a Apple Tree:
 			now centaurmate is 1;
 			say "[centaur attack]";
 			increase score by 20;
+			now Resolution of Apple Tree is 1; [fought the apple tree mutant centaur]
 		else:
 			say "The centaur roars 'Fine then, be unwilling, but by the end you will want to be mine anyway!'";
 			now centaurmate is 2;
@@ -48,9 +44,11 @@ Instead of resolving a Apple Tree:
 			else:
 				say "     'If you're going to be so mule-headed about accepting my gifts, I will go find others to be my mare. There are plenty of other centaurs to fill with my tainted seed,' he laughs as he gallops off. It seems you've unleashed a new blight upon the plains.";
 				increase score by 1;
+			now Resolution of Apple Tree is 2; [submitted to the apple tree mutant centaur]
 		extend game by 8;
 	else:
 		say "     Deciding not to risk the attention of this corrupted creature, you move back quietly. As you do, the tree roots sink into his flesh and entwine with his own forming tentacles. The mutant centaur moans and whinnies in pleasure as tendrils grow and sprout from his back and torso. When he finally climaxes, it is a thick, sap-like fluid that stains the ground green. When the tree roots withdraw from him, he staggers off slowly, hooves slowly changing into roots that cling at the ground as he steps. The growing tendrils reach up and branch out, starting to grow leaves and apple blossoms. Quite certain that the tainted centaur will take root soon and become another of these strange apple trees, you resolve to stay away from any more of these trees you find.";
+		now Resolution of Apple Tree is 99; [desinterest]
 		increase score by 1;
 	Now Apple Tree is resolved;
 
@@ -296,6 +294,5 @@ when play ends:
 			say "     The military, having cordoned off the section of the plains nearest the city, try to keep the corrupted centaurs contained. The electric fence they initially erected at the edge of their lines does not hold out for long once your people make a concerted effort to cross it. Many manage to fight through the military barricade and soldiers, escaping to create herds of their own elsewhere. Eventually, the military manages to contain the rest of your people by using heavy equipment to dig a large trench and build a tall, concrete wall on the other side. Your people still have the large section of plains inside this wall and can make forays into the city to find more new members to be inducted into the herd.";
 		else:
 			say "     Your odd body attracts some attention from the military scientists when you and the others the soldiers can find are rescued. Your differences from the standard centaurs are noted and tested briefly, but you are categorized as an anomaly and given little further scrutiny, as there are more important and dangerous things to focus on than a centaur with green genitals. The other centaurs don't speak to you, always glaring at you or eying you suspiciously. With your altered body, you have little option of a regular life and take up a life as a farm hand. You do gardening and normal farm chores as well as give rides and perform pulling services. Your employer is understanding of your needs and allows you to mate with the horses there when the need arises[if player is female]. You bear a few foals over the years, centaurs like yourself with green genitals, but no sign of the tentacles or any further corruption, thankfully[end if].";
-
 
 Centaur ends here.

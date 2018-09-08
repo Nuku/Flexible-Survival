@@ -466,7 +466,7 @@ The sarea of Despairing Biologist is "Campus".
 when play begins:
 	add Despairing Biologist to badspots of furry;
 
-instead of going to College Walkway East while (Despairing Biologist is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (Despairing Biologist is active and Despairing Biologist is not resolved and Despairing Biologist is active and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	DespairingBiologistEvent;
 
@@ -674,16 +674,16 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 				say "     You shake your head, helping her was enough. You wish them well and leave them to their coupling. As you close the door, you hear a yip of pleasure.";
 	now hp of Sylvia is 4; [helped with heat]
 	now hp of Julian is 1;
-	now Charming Picnic is not resolved;
-	now Badminton One is not resolved;
-	now A Wolf's Invitation is unresolved;
+	now Charming Picnic is active;
+	now Badminton One is active;
+	now A Wolf's Invitation is active;
 
 Beach Field Research is a situation.
-Beach Field Research is resolved.
+Beach Field Research is inactive.
 The level of Beach Field Research is 0.
 The sarea of Beach Field Research is "Beach".
 
-after going to Public Beach while (Beach Field Research is not resolved and daytimer is day and hp of Julian is 3 and a random chance of 1 in 2 succeeds):
+after going to Public Beach while (Beach Field Research is active and Beach Field Research is not resolved and Beach Field Research is active and daytimer is day and hp of Julian is 3 and a random chance of 1 in 2 succeeds):
 	move player to Public Beach;
 	BeachFieldResearchEvent;
 
@@ -716,7 +716,7 @@ to BeachFieldResearchEvent: [Meet the group up close]
 	now hpM of Sylvia is 4;
 	now hpF of Sylvia is 4;
 	now Beach Field Research is resolved;
-	now Bad Breakup is not resolved;
+	now Bad Breakup is active;
 
 instead of going northeast from Tenvale College Female Dorms while (hp of Sylvia is 5 or hpM of Sylvia is 4 or hpF of Sylvia is 4):
 	SylviaJobProp;
@@ -814,7 +814,7 @@ to SylviaVirginity: [Sylvia willing to give you her maidenhead]
 	now hp of Sylvia is 7;
 
 Bad Breakup is a situation.
-Bad Breakup is resolved.
+Bad Breakup is inactive.
 The sarea of Bad Breakup is "Nowhere".
 
 instead of going north from Dorm Street while (a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
@@ -834,11 +834,11 @@ to BadBreakupEvent: [Cheating Boyfriend]
 	say "     Now that the ex-boyfriend has left, Sylvia unlocks the fox girl's door and guides her inside with you following behind. The miserable student collapses into her bed weeping, Sylvia only leaving her for a moment to re-lock the door. 'You barely know me. Why are you doing this?' the fennec asks the collie. The canine sits beside her and hugs the fox's head to her chest. 'Because I care enough and because you deserve to be loved,' is the reply. 'I would like to be your friend, but I would understand if you don't want anything to do with me at the moment. I can get Rose to come and sit with you while you recover.' Hiccuping between sobs, the fennec clings to Sylvia, managing to utter, 'No, I want you here. No one else cared about me out there.' The collie looks pained at witnessing such desperation and kisses the top of the fox's head. 'I'll stay, dear, but I'll warn you now. Ethan will face retribution for this, Nemesis as my witness.'";
 	say "     You agree with the sentiment, even if you find the oath strange, and ask whether there is anything she would like you to help with. Sylvia looks at you darkly. 'Oh no. This one's personal. I'll get the materials myself and make him feel pain equivalent to what he has inflicted on Chloe here. I might even try some new contraptions out.' The tone in which she says this makes you uncomfortable, and you almost feel some fear for the unfaithful ex-boyfriend. 'Don't kill him. Please. I'm not worth that,' Chloe pleads. 'I won't kill him, but don't think yourself so worthless. You're smart, pretty, and kind-hearted,' the collie reassures her as she strokes her hair. Glancing at you, she adds, '[if player is not defaultnamed][name of player], you[end if] can go if you want. I'll stay with Chloe for now. As you turn and leave, she mutters,' He will pay for this,' and you hope the fennec didn't hear that. Despite the heartbreak Ethan has caused her, the fox is drowning in misery too much to want revenge at the moment.";
 	now Bad Breakup is resolved;
-	now Cheat's Retribution is not resolved;
+	now Cheat's Retribution is active;
 	now LastCampusWalkin is turns;
 
 Cheat's Retribution is a situation.
-Cheat's Retribution is resolved.
+Cheat's Retribution is inactive.
 The sarea of Cheat's Retribution is "Campus".
 
 instead of going to College Walkway East while (a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 8):
@@ -878,7 +878,7 @@ to CheatsRetributionEvent: [Ethan's Punishment]
 	now Cheat's Retribution is resolved;
 
 Charming Picnic is a situation.
-Charming Picnic is resolved.
+Charming Picnic is inactive.
 The level of Charming Picnic is 0.
 The sarea of Charming Picnic is "Campus".
 
@@ -895,7 +895,7 @@ to CharmingPicnicEvent: [Picnic]
 	now LastCampusWalkin is turns;
 
 Badminton One is a situation.
-Badminton One is resolved.
+Badminton One is inactive.
 The level of Badminton One is 0.
 The sarea of Badminton One is "Campus".
 
@@ -948,9 +948,9 @@ to MalePrefUnnaturalHeatEvent: [MalePref Alternative]
 			WaitLineBreak;
 			say "     You wish them well and leave them to their coupling. As you close the door, you hear a yip of pleasure.";
 	now hpM of Sylvia is 3; [helped with heat]
-	now Charming Picnic is not resolved;
-	now Badminton One is not resolved;
-	now Bad Breakup is not resolved;
+	now Charming Picnic is active;
+	now Badminton One is active;
+	now Bad Breakup is active;
 
 instead of going northeast from Tenvale College Female Dorms while (SylviaConv is 5 and hpF of Sylvia is 2 and a random chance of 1 in 4 succeeds):
 	move player to Tenvale College Female Dorms;
@@ -987,9 +987,9 @@ to FemPrefUnnaturalHeatEvent: [Sylvia removes skirt]
 			WaitLineBreak;
 			say "     You wish them well and leave them to their coupling. As you close the door, you hear a yip of pleasure.";
 	now hpf of Sylvia is 3; [helped with heat]
-	now Charming Picnic is not resolved;
-	now Badminton One is not resolved;
-	now Bad Breakup is not resolved;
+	now Charming Picnic is active;
+	now Badminton One is active;
+	now Bad Breakup is active;
 
 Sylvia ends here.
 

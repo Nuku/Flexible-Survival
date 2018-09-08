@@ -45,7 +45,7 @@ Instead of conversing the Alex:
 		if player consents:
 			say "     'Oh, fantastic! Trust me on this, I'm definitely going to make it worth your while. My first client is named Lorenda. She lives in the red light district.' You are about to ask why she lives there, when he can see the question in your eyes before you even ask it, and sighs. 'Lorenda is a landlady there, who owns the buildings where many of the shops are set up. She prefers to live there so she can keep a close eye on her tenants. Now, would you go get her?' He seems impatient. Of course, being a high-level lawyer brings a sizable ego.";
 			now AlexProgress is 1;
-			now find lorenda is unresolved;
+			now find lorenda is active;
 		else:
 			say "     His smile falters a little, but he tries to remain positive. 'Please continue to consider my proposal. I think we'll both benefit from it.'";
 	else if AlexProgress is 3:
@@ -96,7 +96,7 @@ Instead of resolving Meet Alex:
 	if player consents:
 		say "     'Oh, fantastic! Trust me on this, I'm definitely going to make it worth your while. My first client is named Lorenda. She lives in the red light district.' You are about to ask why she lives there, when he can see the question in your eyes before you even ask it, and sighs. 'Lorenda is a landlady there, who owns the buildings where many of the shops are set up. She prefers to live there so she can keep a close eye on her tenants. Now, would you go get her?' He seems impatient. Of course, being a high-level lawyer brings a sizable ego.";
 		now AlexProgress is 1;
-		now find lorenda is unresolved;
+		now find lorenda is active;
 	else:
 		say "     'Ah. Well then, if you change your mind, here's my address.' You now have access to Alex's Condo!";
 	now Meet Alex is resolved;
@@ -104,7 +104,7 @@ Instead of resolving Meet Alex:
 
 Find Lorenda is a situation.
 The sarea of Find Lorenda is "Red".
-Find Lorenda is resolved.
+Find Lorenda is inactive.
 Lisacheat is a number that varies.
 
 Instead of conversing the Lisa while AlexProgress is 1 and lisacheat is 0:

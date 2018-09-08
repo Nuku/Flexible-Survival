@@ -225,9 +225,9 @@ instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRe
 	say "     The next words that come from Miyuki's mouth are, 'Okay, where is the local sacred grove? I - oh, wait. You do not [italic type]have one[roman type].' Ending in a groan, she puts on a frown and tells you, 'The one thing I need is the juice of a Mother's Star. It's a fruit. Yay big, with five lobes. You know, symbolizing the ways that the All-Mother created for things to be born.' Raising her hand, she counts them off finger by finger: 'Spontaneous Generation, Budding, Division, Egg-Laying and Live Birth. Come on, there must be something like that here. They're green, then turn yellow when ripe.' That last detail makes you pause for a second, remembering a tropical fruit that fits the description fairly well - a carambola, otherwise known as a starfruit. You mention it to Miyuki, who gets a quite relieved expression, and says, 'I would be very thankful if you could bring me one or more of those then please. If you want, I could even bless you too.";
 	say "     Something like a carambola tree can grow in the city, but that would be fairly hard to find in a random garden. [bold type]Maybe it'd be more worthwhile to check out a botanical garden, or the zoo actually.[roman type] You're fairly certain they have a lot of tropical plants of all sorts there...";
 	now lust of Miyuki is 1; [Carambola quest started]
-	now Carambola Tree is not resolved;
+	now Carambola Tree is active;
 
-Carambola Tree is a situation. Carambola Tree is resolved.
+Carambola Tree is a situation. Carambola Tree is inactive.
 The sarea of Carambola Tree is "Zoo".
 
 instead of resolving a Carambola Tree:
@@ -242,7 +242,7 @@ instead of resolving a Carambola Tree:
 	else if fightoutcome is 30: [fled]
 		say "     Legging it, you run off and shake the angry tigertaur off with some difficulty. Sadly, in the process of the wild chase, you lose all of the carambola you picked. Looks like all of this excitement was for nothing. You'll have to go back to the tree and pick some new ones if you want to help Miyuki out.";
 
-Arctic Enclosure is a situation. Arctic Enclosure is resolved.
+Arctic Enclosure is a situation. Arctic Enclosure is inactive.
 The sarea of Arctic Enclosure is "Zoo".
 
 instead of resolving a Arctic Enclosure:
@@ -313,9 +313,11 @@ to say ArcticEnclosureEntry:
 			LineBreak;
 			say "     Smiling as you accept, you reach out for Miyuki's hand-paw and gently guide it to your lips to kiss it. This clearly pleases the sorceress, as she sways her many tails left and right and gives your ass a grope with one hand. 'I look forward to enjoying some time with you, my love.'";
 			now HP of Miyuki is 3; [player is her mate]
+			now Resolution of Arctic Enclosure is 1; [success, mated]
 		else:
 			LineBreak;
 			say "     'What do you mean, you don't want to be my mate?!' Miyuki calls out in a huff. Crossing her arms, she grumbles and gives you a sour look, then makes a throwing-away gesture. 'Pah! Otherworldly barbarian. You don't know what you're missing.' And with that, she turns away from you, literally giving you a cold shoulder as temperatures seem to suddenly plummet around you.";
+			now Resolution of Arctic Enclosure is 2; [success, mate refused]
 			now HP of Miyuki is 99; [mateship refused]
 		change the northwest exit of Ice Fox's Den to Snow Rabbit's Warren;
 		change the southeast exit of Snow Rabbit's Warren to Ice Fox's Den;
@@ -327,8 +329,9 @@ to say ArcticEnclosureEntry:
 		end the story saying "You certainly won't be getting out from that situation!";
 	else if fightoutcome is 30: [fled]
 		say "     Managing to flee from the building, you shake the angry tigertaurs off with some difficulty. Sadly this means that they're now forewarned about you wanting to move in on their territory. They'll surely be ready for you next time, and might very well set traps. Somehow you don't think going back would be such a good idea, so you resolve not to. [bold type]You've failed this task for Miyuki.[roman type]";
-		now Arctic Enclosure is resolved;
+		now Resolution of Arctic Enclosure is 3; [fled, quest failed]
 		now HP of Miyuki is 100; [failed]
+	now Arctic Enclosure is resolved;
 
 instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRelationship < 100 and lust of Miyuki is 2):
 	if debugactive is 1:
@@ -463,7 +466,7 @@ to say MiyukiTalk5: [helper quest]
 		say "     Thinking about what Miyuki just said, you vaguely remember that the city zoo had an enclosure with arctic animals. Those seem to be the most likely candidates for whom her invitation might apply. As you tell the ice sorceress, she smiles broadly and strokes your cheek. 'I knew having a helpful local would be useful. Especially one as [if player is MProN]handsome[else]pretty[end if] as yourself.' With a wink, she shoos you to get going, then focuses her attention on the giant snow-star under the ceiling. 'Time to make a bit more room,' she murmurs under her breath, then concentrates deeply. The star grow noticeably thicker before separating into two copies of itself. One of the glistening structures floats through the room to settle against a wall and begins to cut its way into it. The razor-sharp edges shave away rock, starting to excavate an opening.";
 		LineBreak;
 		say "     Time for you to go search for Miyuki's intended guests. Looks like you should be off to find the [bold type]Arctic Enclosure[roman type] in the City Zoo.";
-		now Arctic Enclosure is not resolved;
+		now Arctic Enclosure is active;
 		now HP of Miyuki is 1; [ice fox quest started]
 	else if HP of Miyuki < 3: [quest started, nothing done yet]
 		say "     Miyuki smiles as you offer your help again and asks, 'Have you found any of those poor folk suffering from heatstroke yet? I'm sure they'd want to come here too and keep me company. You did mention a place called the [']zoo['] before. Maybe start there?'";

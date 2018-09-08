@@ -631,7 +631,7 @@ Check ProgressImport:
 	if Trixie is not visible, say "You should go to Trixie in the Grey Abbey Library if you want to do this." instead;
 
 Carry out ProgressImport:
-	say "     Trixie smiles at you and nods. 'Okay then, let's see of we have some magic files floating in the ether.' She pulls a wand and swishes it through the air, then points right at you.";
+	say "     Trixie smiles at you and nods. 'Okay then, let's see what we have in these magic files floating in the ether.' She pulls out a wand and swishes it through the air, then points right at you.";
 	say "[TrixieImport]";
 
 To say TrixieImport:

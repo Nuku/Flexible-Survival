@@ -218,11 +218,11 @@ Section 5 - Events
 [See Sylvia for start]
 
 A Wolf's Invitation is a situation.
-A Wolf's Invitation is resolved.
+A Wolf's Invitation is inactive.
 The level of A Wolf's Invitation is 0.
 The sarea of A Wolf's Invitation is "Campus".
 
-instead of going to College Walkway East while (A Wolf's Invitation is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (A Wolf's Invitation is active and A Wolf's Invitation is not resolved and A Wolf's Invitation is active and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	AWolfsInvitationEvent;
 
@@ -240,10 +240,12 @@ to AWolfsInvitationEvent: [Room invitation from Julian]
 		say "     He turns to you, nervously scratching a wrist. 'What you did to help Sylvia was really kind,' he mumbles, conversing with people he barely knows apparently not his strong point. 'She seems to trust you, and I trust her judgement, so... would you like to talk some more at some point? I'd like to get to know you more, especially if you're going to be one of Sylvia's friends.' He looks at you earnestly, his deep brown eyes meeting your own. 'I'll let you think about it more,' he says, standing up, 'Come and see me if you feel like it.' After giving you his room number, he walks away, his social anxiety overcoming his desire to continue talking to you. You stand up and return to the path, trying to decide whether, and if so when, you want to visit his room.";
 		now hp of Julian is 2; [Got room number]
 		add "Julian Quest" to OpenQuests of player;
+		now Resolution of A Wolf's Invitation is 1; [got invited]
 		change the northeast exit of Tenvale College Male Dorms to Julian's Room; [connecting the location to the travel room]
 		change the southwest exit of Julian's Room to Tenvale College Male Dorms; [connecting the location to the travel room]
 	else: [Go]
 		say "     Apologizing that you have places to be, you leave the wolf dejected on the bench and return to the path. You don't think that he'll be doing that again.";
+		now Resolution of A Wolf's Invitation is 2; [rejected him]
 		now hp of Julian is 100; [Rejected him]
 	now A Wolf's Invitation is resolved;
 
@@ -254,7 +256,7 @@ to JulianRoomEvent: [First Time to Julian's Room]
 	say "     As you walk down the corridor, the merriment of the students reverberates off the walls. You reach Julian's room and knock on his door, his voice from within telling you to enter. You close the door behind you as you step into a disorderly room, clutter on the table that the wolf is sitting at, who is seemingly copying passages from a textbook. He turns to face you, a smile breaking across his face at your decision to come and see him despite his nervous invitation. 'I'm glad that you came. Would you like a seat?' He offers the desk chair that he was just sitting in as he perches on the edge of the fur-covered bed. You do so, swiveling so that you are facing him, and wait for him to begin a conversation.";
 	say "     'Considering so far every time that you've seen me, it has been in some connection with Sylvia to put it lightly. I thought that I should probably tell you a bit more about myself. As you know, my name is Julian, and I am from Canada. I'm studying biophysics, though being part of Sylvia's research team means that I do other things too as she is more focused on biology,' the wolf explains, scratching his arm nervously. You quickly introduce yourself, shaking his hand to show that you don't mind his social ineptitude. He beams at you and continues, 'I don't have many friends, Sylvia and the twins being the only people I really socialize with, though I'm hoping that you would be willing to spend time with us too. Who knows, you might be able to help our research progress, but you'd have to talk to Sylvia about it. We're going to the beach at some point. Perhaps you could join us and meet the whole group? But unfortunately, you've caught me at a bad moment. I have an assignment due tomorrow, and I've barely started. You seem nice, so please come back again. I really do want to get to know you better,' he says suggestively, glancing at your form.";
 	now hp of Julian is 3; [Met him in his room]
-	now Beach Field Research is not resolved;
+	now Beach Field Research is active;
 
 instead of going northeast from Tenvale College Male Dorms while (hp of Julian is 4 and a random chance of 1 in 2 succeeds):
 	JulianSupplyRunEvent;
@@ -333,7 +335,7 @@ to JulianSupplyRunEvent: [Trip to Hospital for Libido Suppressants. Meet Cynthia
 		increase carried of libido suppressant by 1;
 		now hp of Julian is 5;
 		[now hp of Cynthia is 1;
-		now Den of the Pack is not resolved;]
+		now Den of the Pack is active;]
 	else: [Wait]
 		say "     You apologize, saying that now isn't a good time and that you'll probably be able to help him at another point. 'Fair enough. As I said, we have enough to manage for a bit, and we can scrounge off of others if necessary.' Relieved that he isn't upset, you sit down on the corner of his bed and try and remember what it is you came here for.";
 	move player to Julian's Room;

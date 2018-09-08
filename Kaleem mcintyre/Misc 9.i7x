@@ -5,7 +5,6 @@ Section 2 - Mysterious
 
 Clotho is a situation.
 The sarea of Clotho is "Red".
-Atropis is resolved;
 
 Instead of resolving a Clotho:
 	say "'Hold on! Don't move! Just stay right where you are!' It's the volume of the words being spoken that stops you more than the words themselves. Not knowing what's happening though you look around, after freezing in place, to see what the hoopla is on about. What you find is a very... unusual human looking woman coming over to you and then trying to pull you out of your clothes. Not really understanding you wave the woman, who is less [']human['] than you had thought as she possesses two fluffy cat ears atop her head and a silver chain with an emblem of some kind of cat insignia embroidered into the front of a pendant hanging onto the chain itself, off as best you can. 'Oh will you stop moving around so much? I'm trying to get you out of these clothes so I can take your measurements.'";
@@ -13,12 +12,13 @@ Instead of resolving a Clotho:
 	say "Asking the other woman who she is nets you a grumpy growl from the other. 'My name's not as important as the fact that I have something I need to make for you. Now hold still.' Not sure you find yourself letting the other woman do as she pleases, which ultimately nets you being stripped, measured, fondled in certain places you really don't want to be, and finally allowed to put back on your clothes after about an hour's time. 'As I thought, you are exactly what I need. [bold type]Atropis[roman type] back at our [bold type]high rise[roman type] condo is going to be so stoked about this!' The feline eared woman squeals and then rushes off like a shot leaving you thoroughly confused.";
 	Increase score by 1;
 	Now Clotho is resolved;
-	Now Atropis is unresolved;
+	Now Atropis is active;
 
 
 Section 3 - Crone
 
 Atropis is a situation.
+Atropis is inactive.
 The sarea of Atropis is "High".
 
 Instead of resolving Atropis:
@@ -58,6 +58,7 @@ Instead of resolving a The Magic Cap:
 		say "Telling the Cerberus that you were just browsing, you chuckle nervously before slowly setting the statue back into the case. Seeing that you're not here to steal, the Cerberus comes over, hefts you up by your collar, and then casually walks you out of the Museum. When the beast tosses you out onto your hea,d you get the feeling that would-be thieves are not wanted inside of the Museum. You make a mental note to yourself that you're going to avoid that particular case for now on - right after you get an ice pack for the headache growing inside of your noggin['].";
 		Decrease HP of player by 6;
 		If HP of player < 1, now HP of player is 1;
+		now Resolution of Magic Cap is 1; [put it back]
 	else:
 		LineBreak;
 		say "Not knowing why you tug the statue tight into your chest and then chuckle nervously up at the three headed guard dog before darting out the backside of the room.";
@@ -70,6 +71,7 @@ Instead of resolving a The Magic Cap:
 			say "Cursing your luck you watch as the falcon headed artifact sails through the air and then crashes onto the ground, breaking into a hundred different pieces. Sighing at the loss, even though you don't understand why, you find yourself gaping in awe as you look to see a bright red... baseball cap... lying admits the rubble of the statue. Finding your balance you cautiously step over to the cap and then reach down to pick up the headwear. If things weren't already weird enough as they are you find that the cap bears the first letter of your name.";
 			say "Not sure you understand what's going on, you shrug and then flip the headwear onto your head. Seeing that the baseball cap is a perfect fit you step over the ruined statue and then head off onto your way. You never notice how the letter on the hat sparks for a second, as you can feel nothing out of place on top of your head, before going silent.";
 			now carried of red cap is 1;
+			now Resolution of Magic Cap is 2; [ran off with it]
 			increase score by 10;
 			Move player to the Bunker;
 		else:
@@ -82,12 +84,15 @@ Instead of resolving a The Magic Cap:
 					say "Cursing you can only watch as the falcon headed artifact sails through the air and then crashes onto the ground, breaking into a hundred different pieces. Sighing at the loss, even though you don't understand why, you find yourself gaping in awe as you look to see a bright red... baseball cap... lying amidst the rubble of the statue. Finding your balance you slowly walk over to the wreckage of the statue and then reach down up to pick up the headwear before turning it over. On the front of the cap there's a single letter stitched into the material, the beginning of your name no less.";
 					say "Not sure what's going on here, you shrug and then flip the cap onto your head. Seeing that the headwear is a perfect fit you step over the ruined statue and then head off onto your way. You never notice how the letter on the hat sparks for a second, as you can feel nothing out of place on top of your head, before going silent.";
 					now carried of red cap is 1;
+					now Resolution of Magic Cap is 3; [fought + won]
 					increase score by 10;
 					Move player to the Bunker;
 				else:
 					say "Losing to the Cerberus Herms you wind up getting the statue taken from you by one of the creatures while the other kicks you out of the Museum. Whatever might have been up with the statue you're not sure, but now you have a feeling that you'll never know.";
+					now Resolution of Magic Cap is 4; [fought + lost]
 			else:
 				say "Losing to the Cerberus Herms you wind up getting the statue taken from you by one of the creatures while the other kicks you out of the Museum. Whatever might have been up with the statue you're not sure, but now you have a feeling that you'll never know.";
+				now Resolution of Magic Cap is 4; [fought + lost]
 	now The Magic Cap is resolved;
 
 
@@ -135,6 +140,7 @@ Instead of resolving a Fashion Statement:
 				now carried of muscle shirt is 1;
 				increase score by 5;
 				now fashion statement is resolved;
+				now Resolution of Fashion Statement is 1; [found a shirt]
 				now fashionfight is 1;
 			else:
 				say "A annoyed grunt leaves your throat as your endeavors leave you with little more than some frustrations.";
@@ -153,10 +159,12 @@ Instead of resolving a Fashion Statement:
 					LineBreak;
 					say "Growing too irate to be bothered with this anymore you decide to head out. There's probably more treasure to find in better spots anyway.";
 					now Fashion Statement is resolved;
+					now Resolution of Fashion Statement is 2; [gave up in annoyance]
 					now fashionfight is 1;
 	else:
 		LineBreak;
 		say "Feeling as though this would be too much trouble you shake your head before turning to go about your business.";
+		now Resolution of Fashion Statement is 99; [desinterest]
 		now Fashion Statement is resolved;
 
 

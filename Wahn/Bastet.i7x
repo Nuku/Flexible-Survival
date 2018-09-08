@@ -40,7 +40,7 @@ instead of going north from Mall West Wing while libido of Nermine is 1 and Nerm
 	if player consents:
 		LineBreak;
 		say "     Nermine smiles contently, happy to see the main actor for her plan to play along. Clearing her throat, she begins, 'Nermine told Bastet only the truth, McNally did veritably acquire the sash quite recently - before loaning it out to the city museum, to be the centerpiece of their next grand exhibition, after the dinosaur event ran its course. She doesn't doubt that Bastet will learn of this too, once she visits the penthouse and questions whoever is left there - but for now, the way is clear for Nermine's beloved to retrieve the sash. It will be in an airtight vault box in the [bold type]restaurateur's office[roman type], deep in the [bold type]museum[roman type].' Nermine kisses your cheek, then takes a little box from one of the shelf-boards, opening it to pull out a small piece of paper, covered with neatly penned numbers. 'Nermine had been hoping for an opportunity and she had traded for the combination to the vault, so retrieving the sash should be an easy task. In and out, nothing that should provide any difficulty.'";
-		now Restaurateur's Office is not resolved;
+		now Restaurateur's Office is active;
 		now libido of Nermine is 2; [stage 1 event done - the hunt for the sash has started]
 	else:
 		say "     Shaking your head and saying you're not interested, you see a slight frown cross her features, only to be quickly smoothed away as she remembers that you're her [master] after all. Still - maybe it'd be a good idea to drive that really home once again and to fuck her right away?";
@@ -84,7 +84,7 @@ to say NermineBastetQuestFail:
 	now libido of Nermine is 100; [Bastet quest failed]
 	now Restaurateur's Office is resolved;
 
-Restaurateur's Office is a situation. Restaurateur's Office is resolved.
+Restaurateur's Office is a situation. Restaurateur's Office is inactive.
 The sarea of Restaurateur's Office is "Museum".
 when play begins:
 	add Restaurateur's Office to badspots of guy;       [monkey king]

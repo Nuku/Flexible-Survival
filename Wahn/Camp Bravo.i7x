@@ -47,11 +47,11 @@ Instead of resolving a Trickster's Masterpiece:
 	increase score by 15;
 	extend game by 24;
 	now HP of Adam is 2; [intro event done]
-	Now Back at the Camp is unresolved;
+	Now Back at the Camp is active;
 	Now Trickster's Masterpiece is resolved;
 
 
-Back at the Camp is a situation. Back at the Camp is resolved. [enabled by the 'Trickster's Masterpiece' event]
+Back at the Camp is a situation. Back at the Camp is inactive. [enabled by the 'Trickster's Masterpiece' event]
 The sarea of Back at the Camp is "Outside".
 
 when play begins:

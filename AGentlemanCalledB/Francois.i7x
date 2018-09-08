@@ -37,17 +37,18 @@ Instead of Resolving a Gourmet Treats:
 		say "     'I appreciate your attempts to save me from those canine ruffians, and I'm sorry it ended the way it did,' he continues. 'I am Francois, master chef, at your service.'";
 		now Gourmet Treats is resolved;
 		now Bone-Appetit is known;
+		now Resolution of Gourmet Treats is 2; [fought, lost]
 		move player to Bone-Appetit;
-		now battleground is "void";
 	else if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having finally dealt with the [if T is 1]huskies[else if T is 2]german shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if], you chase the last stragglers out the door and block it up behind them, propping up a table and a few chairs against it to keep any others out. Satisfied with the security of the building, you approach the canines['] captive, looking him over before kneeling down to help him to a sitting position. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'Thank you, mon ami[if player is purefemale]e[end if],' the man says with a strong French accent. 'I shudder to imagine where I'd be had you not come along. I am Francois, master chef, at your service.'";
 		now Gourmet Treats is resolved;
 		now Bone-Appetit is known;
+		now Resolution of Gourmet Treats is 1; [fought, won]
 		move player to Bone-Appetit;
-		now battleground is "void";
 	else:
 		say "     Unwilling or unable to continue fighting, you grab your bag and run for the bakery door, flipping a nearby table behind you to block your pursuers['] path on the way out. You continue running for some time, getting plenty of distance between you and the bakery before stopping to catch your breath. Taking a moment to reflect on the situation, you feel a wave of guilt for leaving the captive behind to his fate with the canines.";
+		now Resolution of Gourmet Treats is 2; [fought, fled]
 		now Gourmet Treats is resolved;
 [	RETURNING AFTER FLEEING
 		say "     While traveling through the high rise district, you end up back at the pet bakery you fled from previously. You reach for the door handle. Slowly pushing the door open a crack, you peer inside the building again. Not seeing anyone inside, you push the door the rest of the way open. Stepping inside, the first thing you notice is that the air is thick with the scent of canine sex, but there are no other signs of the bakery's previous occupants, neither mutant nor their survivor prisoner.";

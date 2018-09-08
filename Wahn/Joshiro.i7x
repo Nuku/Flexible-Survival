@@ -48,12 +48,14 @@ Instead of resolving a Road Wanderer:
 		if calcnumber is 1: [talk]
 			LineBreak;
 			say "     As you approach him, the skimpily dressed man offers his hand to shake without hesitation and says, 'Hey there, I'm Joshiro. Nice to meet a friendly face for once. Not that I had any problems dealing with the others...' He boasts good-naturedly about what creatures he fought recently, and that none could stand against him. After that, Joshiro offers to flex his arms for you so you can give his bicep a squeeze, being all in all very happy to show off his body to you.";
+			now Resolution of Road Wanderer is 1; [talked]
 			say "[JoshiroTalkMenu]";
 		else if calcnumber is 2: [fight]
 			LineBreak;
 			say "     As you step towards the human with lust in your eyes, he takes that in stride, simply raising his fists as he gets ready for a fight. 'One of those are you, eh? Fine, let's get it on!' he calls out, sure of his victory.";
 			challenge "Human Martial Artist";
 			if fightoutcome < 20: [player won]
+				now Resolution of Road Wanderer is 4; [forceful sex with the player]
 				say "[JoshiroForcedSexMenu]";
 				now HP of Joshiro is 22; [fought, player won]
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
@@ -66,19 +68,27 @@ Instead of resolving a Road Wanderer:
 					WaitLineBreak;
 					say "     Riding out your mutual orgasms on top of you, Joshiro calms down a bit and simply enjoys the feeling of your load inside him, breathing deeply to replenish his reserves. Then he looks down at you and puts on a boyish grin, followed by the words, 'Nice cock on ya, stranger. Wanna tell me who just bred my ass?' The corny way he says this makes you chuckle despite yourself, and you can't really deny telling him your name. '[if player is not defaultnamed][name of player], eh? [end if]Pleasure meeting you. And being meated by you, hah!' While you're still groaning about the stupid joke, Joshiro slides himself up on your shaft, carefully sliding his hand behind his back to prevent your load from gushing out of him as he pulls off. It looks rather funny how he standing there, plugging his hole with a finger, but his rear entrance apparently tightens itself up in abnormal speed. Just a minute or two later, Joshiro doesn't run any danger of losing his creamy filling as he goes to grab his shorts and get dressed again. 'So long, you hot fucker!' he says with a smile, then saunters off.";
 					now libido of Joshiro is 4; [Joshiro got fucked]
+					now Resolution of Road Wanderer is 5; [player fought, lost, got ridden]
 				else:
 					say "     Joshiro seems a bit disappointed that you don't have a cock, shrugging to himself and standing up. 'Hm, my bad I guess. But hey, you jumped me, not the other way around.' With that said, he turns around and strolls off, just leaving you behind.";
+					now Resolution of Road Wanderer is 6; [player fought, lost, no sex]
 				now HP of Joshiro is 20; [fought, player lost]
 			else if fightoutcome is 30: [fled]
 				say "     As you run off, you can hear the martial artist shout after you, 'Can't withstand the power of Joshiro Arashi, hah! You better run!'";
+				now Resolution of Road Wanderer is 6; [player fought, ran]
 				now HP of Joshiro is 21; [fought, player ran]
 		else: [avoid]
 			LineBreak;
 			say "     Deciding that you don't want anything to do with this guy, you turn around and walk the other way, leaving him to continue his own path.";
 			now HP of Joshiro is 100; [player not interested]
+			now Resolution of Road Wanderer is 99;
 	now Road Wanderer is resolved; [for now]
 
-Sloppy Seconds is a situation. Sloppy Seconds is resolved. [player must know Tyke, Darius and Joshiro to find this]
+[
+Sloppy Seconds is a situation. Sloppy Seconds is inactive. [player must know Tyke, Darius and Joshiro to find this]
+The Prereq1 of Sloppy Seconds is Road Wanderer.
+The Prereq1Resolution of Sloppy Seconds is { 1, 2, 3, 4, 5, 6 }.
+The Prereq2 of Sloppy Seconds is Joshiro Tales 1.
 The sarea of Sloppy Seconds is "Red".
 
 Instead of resolving a Sloppy Seconds:
@@ -87,10 +97,19 @@ Instead of resolving a Sloppy Seconds:
 	WaitLineBreak;
 	say "     Just as you are about to wander to the front of the building to check on the street fight, you hear noise from behind it. Glancing over the edge of the roof, you spot two anthro canines walking through the alley down there, a muscled dalmatian and his even bigger doberman buddy. It's Darius and Tyke. 'So, what did you wanna show me so bad dude? Dragging me out here all of a sudden!' the black and white furred drug dealer asks and his companion grunts, 'You'll see,' as he uses his superior bulk to drag his friend after himself. From your raised position, you see where they're going already - on the other side of a half-broken fence cutting the alley in two, there is a mattress laid out, and on it you recognize a bare-ass naked Joshiro. The human male is stretched out on his front and dozes, with fresh cum trickling out of his ass. He must have been fucked hard not too long ago to put him in such a state.";
 	say "     As he gets pulled through the hole in the fence, Darius calls out, 'Whoa! What's this? Dragging me out here to introduce your new girlfriend, dawg? You've really fallen for this gay shit, didn't you?' Tyke grunts and makes a throwing away gesture. 'Naw man, I'm not gay! It's just this faggot here! He's something else - try him and you'll see.' Darius ruffles his muzzle and shakes his head, 'You kiddin'? No way I'm gonna stick my dick in a dude!' 'Yes way! Time for you to learn for yourself what I mean!' Tyke responds, his hand grabbing Darius by the neck and shoving him forward. 'What the fuck?' Darius shouts back, yet his buddy doesn't budge, simply cracking his knuckles and nodding towards the naked man. 'Get yo dick in there, man. You're not leaving before you do.' 'That's whacked man, I -' Darius starts to reply, but his words stop as Tyke lets out a threatening growl.";
-	WaitLineBreak;
-	say "     'Fuck!' Darius curses as he turns away from his friend, fully taking in the naked man in front of him for the first time. He mutters something you don't catch, then reaches for his belt buckle and soon slides his jeans down, pulling first his left then his right paw out of them. 'You can hold my pants if yo crazy ass is gonna make me do this!' Darius shouts at his friend and flings his jeans to Tyke, who catches them easily. 'They better not get dirty,' the dalmatian adds gruffly, to which Tyke just chuckles and hangs the article of clothing over his shoulder. Not having any other reason to delay what is demanded of him, Darius steps forward slowly and sets his paw on the mattress. The movement draws attention from the dozing human on it, who groggily rubs his face and says, 'Nngh, Tyke baby! Breeding me again so soon?' Darius barks in an indignant tone, 'Nah, I'm not your faggot boyfriend! He's forcing me to fuck ya dirty ass!'";
-	say "     Joshiro pushes himself up on his elbow and half turns around, looking in confusion to the two canines. His gaze wanders over Darius's spotted shape, his muscled chest and then down to the anthro canine's crotch, where a red-skinned cock is already pushing out of his sheath. 'Okay, I'm fine with that,' the human calls out and picks himself up from the mattress to get on all fours, presenting his ass to Darius. The dalmatian looks down at his growing erection in dismay, weakly saying to no one in particular, 'That's just because... this skanky ass's sex scent is all over the place. And the fucker presenting like a bitch that wants to be bred. Anyone would get hard from that.'";
+	say "     [bold type]Do you want to keep watching?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Sure, let's see where it goes.";
+	say "     ([link]N[as]n[end link]) - Nah, check the front of the building and see if the way is clear by now.";
+	if player consents:
+		LineBreak;
+		say "     'Fuck!' Darius curses as he turns away from his friend, fully taking in the naked man in front of him for the first time. He mutters something you don't catch, then reaches for his belt buckle and soon slides his jeans down, pulling first his left then his right paw out of them. 'You can hold my pants if yo crazy ass is gonna make me do this!' Darius shouts at his friend and flings his jeans to Tyke, who catches them easily. 'They better not get dirty,' the dalmatian adds gruffly, to which Tyke just chuckles and hangs the article of clothing over his shoulder. Not having any other reason to delay what is demanded of him, Darius steps forward slowly and sets his paw on the mattress. The movement draws attention from the dozing human on it, who groggily rubs his face and says, 'Nngh, Tyke baby! Breeding me again so soon?' Darius barks in an indignant tone, 'Nah, I'm not your faggot boyfriend! He's forcing me to fuck ya dirty ass!'";
+		say "     Joshiro pushes himself up on his elbow and half turns around, looking in confusion to the two canines. His gaze wanders over Darius's spotted shape, his muscled chest and then down to the anthro canine's crotch, where a red-skinned cock is already pushing out of his sheath. 'Okay, I'm fine with that,' the human calls out and picks himself up from the mattress to get on all fours, presenting his ass to Darius. The dalmatian looks down at his growing erection in dismay, weakly saying to no one in particular, 'That's just because... this skanky ass's sex scent is all over the place. And the fucker presenting like a bitch that wants to be bred. Anyone would get hard from that.'";
+	else:
+		LineBreak;
+		say "     <Scene for choice B>";
 ]
+
 Section 2 - Talk Menu
 
 to say JoshiroTalkMenu:
@@ -174,6 +193,7 @@ to say JoshiroTalk4: [offering sex]
 		say "     As you offer Joshiro to have a good time with him, the Asian man gives you a look up and down, then blows out his breath, rubbing the back of his neck in slight embarrassment. 'You know, a little while ago before all this, I'd have taken you up on that in a second. Now... well, it's like this: I found the most amazing feeling ever, and it comes from taking a big, juicy cock up my rear end. Not sure if I'll ever get enough of that, but until I do, I'd like to focus on trying out everything anal. You wouldn't believe the positions that come up in my mind all of their own, or the variety of dicks that people swing these days! Damn, there was this one guy I met yesterday who had [one of]a two foot horsecock[or]a huge knotted shaft[or]two dicks, side by side[or]a prehensile dick[or]this wiggling tentacle-thing[or]a shaft literally as thick as a beer can[at random]! That felt freaky - freaky good - in me!' He's lost in the memory for a second, then shakes it off and tells you, 'So. Erm. No hard feelings, but thanks, not now.";
 		say "[JoshiroTalkMenu]"; [looping back for more conversation]
 	else:
+		now Resolution of Road Wanderer is 3; [sex with the player]
 		say "[JoshiroSexMenu]"; [moving on to sex]
 
 Section 3 - Joshiro Sex Menus

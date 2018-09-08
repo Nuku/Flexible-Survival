@@ -93,6 +93,7 @@ An everyturn rule:
 		say "You remember the [bold type]challenge of the viking chieftain[roman type] against you - running out right about now, your time being up. With you not even showing up, now they'll see Sonya as doubly dishonored - losing in combat against an outlander (with most of them suspecting you of magic or some trickery), who additionally isn't even brave enough to fight her father. Hopefully, you won't run into any of them again, as this'll enrage all of them - even Sonya - a lot. She'd likely try to kill you...";
 		now VikingUltimatum is 0;
 		now Chieftain's Challenge is resolved;
+		now Resolution of Chieftain's Challenge is 99; [failed to show up]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
 			choose row y in Table of Random Critters;
 			if name entry is "Viking":
@@ -712,7 +713,7 @@ to say VikingDesc:
 			now VikingPregnancy is 0;    [reset into receptive state]
 	else if VikingRelationship is 7: [Sonya is on the ship, her cousin appears and offers an ultimatum]
 		now VikingUltimatum is 24;    [72h to appear for the challenge]
-		now Chieftain's Challenge is unresolved;
+		now Chieftain's Challenge is active;
 		if the player is not facially human or the player is not bodily human or the player is not skintone human: [they see the player as a monster]
 			say "     Walking along the beach, you suddenly find yourself confronted with two male Vikings, rushing towards you as they spot you. The young blond men in light scale mail carry round shields and brandish sharp-looking axes - and are pretty enraged. Seems like your previous encounters Sonya didn't go over too well with these two... brothers, you'd say, from their similar looks. For a moment, it looks like one of them would just keep coming and attack you, until he's stopped in his tracks by the other calling out 'Stop, Svetjalf. This... creature is not ours to slay. We've got a message to deliver.'";
 			say "     The Viking turns to you and continues with a snarl 'So you're the beast that despoiled our cousin? How did you beat her in a fight - or make her believe you did? Magic? Some other treachery? Clearly you've got her controlled somehow, or she wouldn't praise an outlander beast so highly. Bah.' He spits in the sand before your feet. 'Our chieftain Frithjof sent us to pass on a message. He calls upon you, the one who dishonored his daughter, to come to those big rocks at the end of the beach during the next three days. You'll fight - in front of the rest of the clan, to prevent any of your tricks - and he'll spill your guts on the sand. If you at least have the decency to appear and die like a man would, that'll restore some honor to Sonya...' With that said, he and his brother give you a final angry stare, then turn around and walk off to a waiting rowboat some way along the beach.";
@@ -806,7 +807,7 @@ When Play begins:
 
 Section 3 - Events
 
-Chieftain's Challenge is a situation. The level of Chieftain's Challenge is 1. Chieftain's Challenge is resolved.
+Chieftain's Challenge is a situation. The level of Chieftain's Challenge is 1. Chieftain's Challenge is inactive.
 The sarea of Chieftain's Challenge is "Beach".
 
 Instead of resolving a Chieftain's Challenge:
@@ -852,6 +853,7 @@ Instead of resolving a Chieftain's Challenge:
 	now wdam entry is 15;
 	now lootchance entry is 40;
 	now Chieftain's Challenge is resolved;
+	now Resolution of Chieftain's Challenge is 1; [fought and won (or died)]
 	now VikingUltimatum	is 0;  [finished, one way or another]
 
 to say VikingDuelDeath:

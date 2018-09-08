@@ -2073,8 +2073,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is ndmhigh;
 		-- "NerdMeetings":
 			now NumberVarValue entry is NerdMeetings;
-		-- "NereidRelationship":
-			now NumberVarValue entry is NereidRelationship;
 		-- "NermineAroused":
 			now NumberVarValue entry is NermineAroused;
 		-- "NermineBukkakeTurn":
@@ -2375,10 +2373,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is pubvisit;
 		-- "purfeat":
 			now NumberVarValue entry is purfeat;
-		-- "purpol":
-			now NumberVarValue entry is purpol;
-		-- "purpolu":
-			now NumberVarValue entry is purpolu;
 		-- "quitter":
 			now NumberVarValue entry is quitter;
 		-- "rabbitfucked":
@@ -5837,8 +5831,6 @@ to VariableNumberLoad:
 					now ndmhigh is numberVarValue entry;
 				-- "NerdMeetings":
 					now NerdMeetings is numberVarValue entry;
-				-- "NereidRelationship":
-					now NereidRelationship is numberVarValue entry;
 				-- "NermineAroused":
 					now NermineAroused is numberVarValue entry;
 				-- "NermineBukkakeTurn":
@@ -6139,10 +6131,6 @@ to VariableNumberLoad:
 					now pubvisit is numberVarValue entry;
 				-- "purfeat":
 					now purfeat is numberVarValue entry;
-				-- "purpol":
-					now purpol is numberVarValue entry;
-				-- "purpolu":
-					now purpolu is numberVarValue entry;
 				-- "quitter":
 					now quitter is numberVarValue entry;
 				-- "rabbitfucked":

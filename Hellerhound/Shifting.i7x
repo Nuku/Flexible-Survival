@@ -10,6 +10,7 @@ instead of resolving a Secure Area:
 	if guy is banned:
 		say "     There is a large sign on the fence surrounding the facility which reads: [']Please be advised: This facility is now closed due to a lack of male content.[']";
 		now secure area is resolved;
+		now Resolution of Secure Area is 100; [content banned]
 		continue the action;
 	if a random number between 5 and 20 < the perception of the player:
 		say "     Oh my god. You realize that the doors are made of diamond. What needs that much protection?";
@@ -49,6 +50,7 @@ instead of resolving a Secure Area:
 							increase the score by 500;
 							now shiftable is 1;
 							now Secure Area is resolved;
+							now Resolution of Secure Area is 1; [shifting ability gained]
 						else:
 							say "     The door refuses to budge, and you go on your way, disappointed that you couldn't get any further.";
 				else:

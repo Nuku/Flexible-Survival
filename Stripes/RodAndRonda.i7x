@@ -209,7 +209,7 @@ before conversing the Nermine while HP of Ronda is 5:
 to say rondaitems:
 	say "     Pulling out the items Nermine needed to help Ronda, you place them on the counter. She smiles happily and takes them. 'And now it is time to be talking about Nermine's payment for this. The last items Nermine is needing complete the cure are to be found in a private collection in the city. Downtown, there is high rise condo of private art collector. He is keeping veil and staff in his penthouse suite. Nermine is wanting you to be collecting them for her. Veil needed to complete cure, staff is payment. One trip for both. Easy for one working so hard to make amends.";
 	now HP of Ronda is 6;
-	now Art Collector is unresolved;
+	now Art Collector is active;
 	increase score by 10;
 	delete lizard juice;
 	delete awesomest fruit;
@@ -239,7 +239,7 @@ the scent of lizard juice is "The creamy white fluid has a thick, musky scent.".
 Chapter 2 - The Art Collector Event
 
 Art Collector is a situation. The level of Art Collector is 9.
-Art Collector is resolved.
+Art Collector is inactive.
 The sarea of Art Collector is "High".
 
 artleopardfight is a number that varies.

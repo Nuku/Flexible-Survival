@@ -28,7 +28,7 @@ Instead of conversing the Tehuantl:
 	if HP of Tehuantl is 11: [first heat started]
 		say "[TehuantlHeatIntro]";
 		now HP of Tehuantl is 12;
-		now Feline Relief is unresolved;
+		now Feline Relief is active;
 	else if HP of Tehuantl is 14: [toys found]
 		say "     As you approach Tehuantl you drop your bag and dig out the toys you've collected for her, as well as her extra surprise. When she spots you she rushes over, nearly knocking you down as she hugs you tightly, causing the rubbery sex toys to slip from your grasp and bounce across the floor. 'Oh master, you are so kind!' she rumbles as she surveys the colorful toys scattered around her before she kisses you lightly on the cheek. As Tehuantl gets on her hands and knees to gather and inspect the things you've brought her, you quickly scan the floor for the thin red collar and quickly move to pick it up before she spots it as well.";
 		say "     Quietly sneaking up behind her as she admires a particularly large pink dildo, you carefully unclasp the collar and move to place it around her neck. Tehuantl gives a curious meow as she hears the bell jingle above her head, looking back to see you holding the collar just above her. She smiles as you reach down to place it around her neck, purring happily as you fasten it snugly around her throat. She bats the bell softly several times, delighting in the cute jingle as you gently pet her for a short while before you get back to what you were doing, leaving her to get back to inspecting the toys you've brought her.";
@@ -462,7 +462,8 @@ to say TehuantlHeatIntro:
 
 Section 7 - Event
 
-Feline Relief is a situation. Feline Relief is resolved.
+Feline Relief is a situation.
+Feline Relief is a inactive.
 The sarea of Feline Relief is "Red".
 
 instead of resolving Feline Relief:

@@ -254,7 +254,7 @@ when play begins:
 	add Lonely Gryphoness to badspots of hermaphrodite;
 	add Lonely Gryphoness to badspots of furry;
 
-Gryphoness nest is a situation. Gryphoness nest is resolved.
+Gryphoness nest is a situation. Gryphoness nest is inactive.
 The sarea of Gryphoness nest is "Beach".
 when play begins:
 	add Gryphoness nest to badspots of hermaphrodite;
@@ -276,7 +276,7 @@ Instead of resolving Lonely Gryphoness:
 				infect "Hermaphrodite Gryphon";
 				now gryphoncomforted is 1;
 				now Lonely Gryphoness is resolved;
-				now Gryphoness nest is unresolved;
+				now Gryphoness nest is active;
 			else:
 				say "The strange gryphon's eyes seem to fill up with panic as she stares at you, slowly backing away towards the edge of the roof and safety, obviously worried about what you might do. Do you try to convince her you mean no harm?";
 				if player consents:
@@ -291,7 +291,7 @@ Instead of resolving Lonely Gryphoness:
 						say "     When you nod, the gryphon seems even more flustered, seeming uncomfortable with your praise, and beginning to back up towards the edge of the rooftop again. 'You seem kind of nice...' she says as she turns away from you, before looking back over her shoulder at you as she spreads her feathered wings. 'Maybe I can sing again for you sometime... I think I might like that...' the gryphon says as she launches herself out into the city, leaving you to stare after her as [bold type]she vanishes in the direction of the beach[roman type], wondering just why this gryphon is so different from all the others you have encountered so far.";
 						now gryphoncomforted is 1;
 						now Lonely Gryphoness is resolved;
-						now Gryphoness nest is unresolved;
+						now Gryphoness nest is active;
 					else:
 						LineBreak;
 						say "     Obviously not believing you, the gryphon wastes no time in waiting to hear what you have to say and launches herself into the sky to fly away.";

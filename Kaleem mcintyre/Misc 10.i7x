@@ -86,14 +86,15 @@ Instead of resolving a Magical Girl:
 		say "Where once before you had been dressed somewhat normally you now find that you have on a navy blue sailor skirt with a pink ribbon tied onto the back draped onto your waist, a tight fitting white sleeveless shirt hugging your upper body, a pair of arm length white gloves strapped onto your arms, a pair of blue boots covering your feet, and a golden tiara placed neatly onto your head. You'd scream, but you're somewhat afraid of what may come out of the shadows to have a look at what the noise is all about so instead you shakily look for your backpack, which had mysteriously slipped from your shoulders during your transformation, grab said pack when you do find it and then hurry back to the bunker so you can make sense of all of this.";
 		say "As you run off you never notice a black cat sitting on the ground watching you as you scamper away in fear. And maybe that's a good thing because at seeing the casual smirk lining the feline's facial features your fading resolve might have completely crumbled and you might have had that nervous breakdown after all.";
 		now carried of Sailor Outfit is 1;
+		now Resolution of Magical Girl is 1; [shouted the phrase]
 		now battleground is "void";
 		move player to the Bunker;
-		Now Magical Girl is resolved;
 		Increase score by 1;
 	else:
 		LineBreak;
 		say "Feeling almost foolish for thinking up something so dumb you casually toss the wand to the side and then continue off on your way.";
-		Now Magical Girl is resolved;
+		now Resolution of Magical Girl is 2; [didn't shout the phrase]
+	Now Magical Girl is resolved;
 
 
 

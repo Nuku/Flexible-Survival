@@ -922,7 +922,7 @@ to say A_Task50:	[See Jimmy.i7x for event and NPC content]
 		say "     'Much of the remaining population in the area has been turned into automatons, metal-skinned people without minds or emotions past their programmed lusts. I wasn't able to discover much more before leaving the area, but I'd like you to go check it out and see if you can look into the [bold type]automaton activity[roman type] there. They seem to be up to something, but I wasn't able to figure it out. But be careful, the creatures in that part of the city are particularly strange and dangerous.'";
 		now Approaching the Capitol Building is known;
 		now Government Assistance is resolved;
-		now Automaton Activity is unresolved;
+		now Automaton Activity is active;
 		now HP of Jimmy is 1;
 	else if HP of Jimmy is 1:
 		say "     'Have you had a chance to look into the [bold type]automaton activity[roman type] around the Capitol Building? Hopefully you'll have better luck at it than I did. I can smell that they're up to something,' adds says, tapping her muzzle.";
@@ -1189,13 +1189,13 @@ to say A_Task54:	[Group Rescue]
 		say "     'A neighborhood of the city's been overrun by woodlands that's suddenly sprung up. Lots of trees have sprung up, many growing through the pavement or buildings. And if that wasn't bad enough, some of those trees seem to be moving around. Since there was still a lot of the city to patrol in search of survivors, I didn't explore inside it. I'd like you to try checking it out though. There could still be a [bold type]survivor[roman type] hiding out in that creepy [bold type]urban forest[roman type][if Urban Forest is unknown].' Alexandra describes where she came across this forest and the rough outline of the blocks its spread across. You'll be able to make your way to its edge now easily enough[else].' You tell Alexandra that you've encountered this forest before and reassure her that you'll go check it out when you get the opportunity[end if].";
 		now Urban Forest is known;
 		now HP of Alexandra is 61;
-		now Survivor Group is unresolved;
+		now Survivor Group is active;
 	else:
 		say "     'Have you had a chance to go through that strange forest? Given the extent of it, it's possible you might find a [bold type]survivor[roman type] in there[if HP of Alexandra is 62]. Not wanting to get her hopes up too high, you let her know you're following some leads. Having been reminded, you start thinking about going back again. Perhaps you'll be able to convince at least a few of them to come with you[end if].";
 		now sextablerun is 0; [continued talking allowed]
 
 
-Survivor Group is a situation. Survivor Group is resolved.
+Survivor Group is a situation. Survivor Group is inactive.
 The sarea of Survivor Group is "Forest".
 sgtimer is a number that varies. sgtimer is usually 255.
 
@@ -1518,14 +1518,14 @@ to say A_Task57:
 		WaitLineBreak;
 		say "     It's the turn for the two of you to grin now, having gotten the overconfident cyborg to say too much. From that point on, she resumes stonewalling you both, refusing to answer or even acknowledge your attempts to question her. Eventually, you give it up for now and head back upstairs.";
 		say "     That talk about their growing numbers and expansion is troubling, but it does explain the stray automaton you saw. Thankfully, you have a new lead and Alexandra suggests you go scout out the [bold type]microchip factory[roman type]. If it pans out and the situation calls for it, she urges you to return for her and you can deal with it together. Until then, she'll stay close to guard the station.";
-		now Microchip Factory is unresolved;
+		now Microchip Factory is active;
 		now HP of Alexandra is 69;
 	else:
 		say "     'I need you to check out the [bold type]microchip factory[roman type]. It's in the area around the devastated area around the Capitol building, right about... here,' she points to an intersection on her map. 'If you can find out what those Automaton analysts are up to, we should be able to do something about it. I don't really want to leave this place undefended, but if you need back-up, just come get me. I don't want to risk losing you because you were cocky or wanted to prove yourself to me. You've more than proven yourself to me,' she adds, giving you a peck and quick lick on the cheek.";
 		now sextablerun is 0; [continued talking allowed]
 
 
-Microchip Factory is a situation. Microchip Factory is resolved.
+Microchip Factory is a situation. Microchip Factory is inactive.
 The sarea of Microchip Factory is "Capitol".
 
 instead of resolving Microchip Factory:

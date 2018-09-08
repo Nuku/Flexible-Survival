@@ -27,7 +27,8 @@ instead of conversing Zephias:
 
 Section 2 - Events
 
-Captured Soldier is a situation. Captured Soldier is resolved.
+Captured Soldier is a situation.
+Captured Soldier is inactive.
 The sarea of Captured Soldier is "Warehouse".
 
 when play begins:

@@ -14,14 +14,14 @@ Version 3 of Serenity by Kurainyx begins here.
 
 Section 1 - Serenity in Dry Plains
 
-Naga Hybrid is a situation.
-The sarea of Naga Hybrid is "Plains".
-
 Table of GameCharacterIDs (continued)
 object	name
 Serenity	"Serenity"
 
 Serenity is a woman.
+
+Naga Hybrid is a situation.
+The sarea of Naga Hybrid is "Plains".
 
 when play begins:
 	add Naga Hybrid to badspots of girl;
@@ -42,7 +42,8 @@ Instead of resolving a Naga Hybrid:
 			LineBreak;
 			say "     Shaking off your daze, you realize that this naga is trying to hypnotize you with her rattle. Given the snake's ability, trying to fight her would be unwise, so you hastily run in the opposite direction. A quick glance back reveals the reptile's surprised face; however, her shock turns into a scowl a second later when she comes after you. Fortunately, you are able to outrun her, and combined with your headstart, the naga eventually gives up her chase as you leave her far behind.";
 		now HP of Serenity is 1;
-		now Large Cave is unresolved;
+		now Large Cave is active;
+		now Resolution of Naga Hybrid is 1; [1st stage completed]
 	else if HP of Serenity is 1:			[Repeatable encounter]
 		say "     Hearing a familiar rattling, you quickly turn around to find the naga hybrid from before. 'Fancy meeting you again,' the female snake greets as she sashays toward you, her heart-shaped necklace swinging along with her body. 'Perhaps it is merely a coincidence that we cross paths again.' Her mouth twists into a devilish smirk. 'Or perhaps you are the one who is unable to resist gazing upon me again. Whatever the reason, I will be glad to have you.' You shiver as the rattle tail sounds its hypnotic rhythm again.";
 		say "     [bold type]Do you stay with the naga?[roman type][line break]";
@@ -55,6 +56,7 @@ Instead of resolving a Naga Hybrid:
 		else:			[Run away from the snake]
 			LineBreak;
 			say "     Shrugging off the snake's influence, you flee from the naga before she can bring you into her embrace.";
+		now Resolution of Naga Hybrid is 2; [repeat encounter completed]
 	else if carried of Lockbox > 0:			[Have lockbox]
 		say "     You spot the familiar naga from before, her back toward you as she wanders through the landscape. Looks like you are the one who has the element of surprise this time. With the lockbox from the cave in your possession, you have a feeling that your interactions with the snake will change once you reveal that you have something that very likely belongs to her.";
 		say "     [bold type]Should you try to talk to the snake?[roman type][line break]";
@@ -84,17 +86,20 @@ Instead of resolving a Naga Hybrid:
 					now HP of Serenity is 2;
 					move Serenity to Grey Abbey 2F;
 					move player to Grey Abbey 2F;
+					now Resolution of Naga Hybrid is 3; [player had the lockbox and gave it back, Serenity recruited]
 				else:			[Serenity leaves the Dry Plains and the game]
 					LineBreak;
 					say "     You wish Serenity good luck on her journey, and to your surprise, she leans toward you, planting a gentle kiss on your cheek, followed by a playful lick with her forked tongue. 'And good luck to you too[if player is not defaultnamed], [name of player][end if],' Serenity bids. As you part ways with your naga friend, likely for the last time, you are glad that, despite all of the chaos in the city, you still have the mindset to brighten someone's life.";
 					say "[bold type]Your good deed has increased your sanity by 20![roman type][line break]";
 					increase humanity of player by 20;
 					now HP of Serenity is 100;
+					now Resolution of Naga Hybrid is 4; [player had the lockbox and gave it back, Serenity sent along]
 			else:			[Serenity ambushes the player, steals the lockbox, and leaves the game]
 				LineBreak;
 				say "     'I see...' the naga says, looking up at you stone-faced when you reject her plea. 'I suppose that I should have expected your answer, given our previous interactions.' The snake watches you put the lockbox away, not making a single move. You start walking away, but you only make it a few steps before you are knocked to the ground from behind. Snake coils swiftly wrap around you, and you gasp in pain when they begin to squeeze your trapped body. 'I didn't want to do this, but you left me no choice,' the snake-woman coldly states as she tightens her grip even more. Just as it feels like your bones are about to be reduced to dust, you are dropped onto the ground in a pitiful heap. With you writhing in agony, your attacker takes back her lockbox and leaves without a word. Eventually, you are able to get up and hobble away to recover from your injuries. You doubt that you will be seeing the naga again.";
 				decrease HP of player by 30;
 				now HP of Serenity is 100;
+				now Resolution of Naga Hybrid is 5; [Serenity fought and grabbed the box]
 			decrease carried of Lockbox by 1;
 			now Naga Hybrid is resolved;
 		else:
@@ -142,7 +147,12 @@ to say PlainsSerenityHand:		[Handjob for player if they had food or water]
 Section 2 - Large Cave
 
 
-Large Cave is a situation. It is resolved.
+Large Cave is a situation.
+Large Cave is inactive.
+Prereq1 of Large Cave is Naga Hybrid.
+Prereq1ResolvedMandatory of Large Cave is false.
+Prereq1Resolution of Large Cave is { 1, 2 }
+
 The sarea of Large Cave is "Plains".
 
 Instead of resolving Large Cave:

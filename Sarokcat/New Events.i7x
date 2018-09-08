@@ -34,7 +34,7 @@ Instead of Resolving a Military presence:
 		say "     Traveling through the streets again, you hear a distant sound in the air for a minute. Looking up and all around, you can only barely make out a jet trail high in the sky. Wondering why someone would be traveling that high, you are about to turn away and continue about your business when you notice a small speck drifting in the sky. You pull out your newly acquired binoculars and try to focus in on the speck to see what it is. Surprisingly, as you focus in the binoculars, the speck resolves itself into several people in urban camouflage falling through the sky! As you watch breathlessly, their parachutes open and they straighten up to land, though a sudden swirl of wind from over near the capitol building scatters their neat formation, blowing several of them to entirely different parts of the city. Shaking your head as the figures fall out of sight and into the city itself, you can't help but wonder what this means for the city and your hopes of rescue.";
 		extend game by 12;
 		now mtp is 3;
-		if girl is not banned, now Paratrooper is unresolved; [- Vanessa]
+		if girl is not banned, now Paratrooper is active; [- Vanessa]
 		[also makes the 'womanfruittree' event live - Coleen]
 	else if mtp is 3:
 		say "     Traveling through the city, you come across what appears to have been a military style barricade, currently unoccupied. Investigating further, you find that several military tents had been set up past the barricade in a mostly empty store parking lot. Investigating carefully in case there are still any trigger-happy soldiers around, you find that the makeshift camp seems completely empty, though there are several signs of a struggle in some areas.";

@@ -18,7 +18,7 @@ Cheetah Cheater is a situation.
 The level of Cheetah Cheater is 0.
 The sarea of Cheetah Cheater is "Campus".
 
-instead of going to College Walkway West while (Cheetah Cheater is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway West while (Cheetah Cheater is active and Cheetah Cheater is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
 	CheetahCheaterEvent;
 
@@ -36,7 +36,7 @@ Pregnant Friend is a situation.
 The level of Pregnant Friend is 0.
 The sarea of Pregnant Friend is "Campus".
 
-instead of going to College Walkway East while (Pregnant Friend is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway East while (Pregnant Friend is active and Pregnant Friend is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway East;
 	PregnantFriendEvent;
 
@@ -57,7 +57,7 @@ CatsVSDogs is a situation.
 The level of CatsVSDogs is 0.
 The sarea of CatsVSDogs is "Campus".
 
-instead of going to Athletic Street while (CatsVSDogs is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to Athletic Street while (CatsVSDogs is active and CatsVSDogs is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to Athletic Street;
 	CatsVSDogsEvent;
 
@@ -83,7 +83,7 @@ SharkFountain is a situation.
 The level of SharkFountain is 0.
 The sarea of SharkFountain is "Campus". [Fountain]
 
-instead of going to College Fountain while (SharkFountain is not resolved and LastCampusWalkin - turns > 0 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
+instead of going to College Fountain while (SharkFountain is active and SharkFountain is not resolved and LastCampusWalkin - turns > 0 and ((SharkFountainCounter is 1 and daytimer is day) or (SharkFountainCounter is 2 and daytimer is night)) and a random chance of 1 in 3 succeeds):
 	move player to College Fountain;
 	SharkFountainEvent;
 
@@ -106,7 +106,7 @@ The sarea of Fountain Naiad is "Campus".
 when play begins:
 	add Fountain Naiad to badspots of girl;
 
-instead of going to College Fountain while (Fountain Naiad is not resolved and LastCampusWalkin - turns > 0):
+instead of going to College Fountain while (Fountain Naiad is active and Fountain Naiad is not resolved and LastCampusWalkin - turns > 0):
 	move player to College Fountain;
 	NaiadFountainEvent;
 
@@ -120,10 +120,10 @@ to NaiadFountainEvent:
 	now Fountain Naiad is resolved;
 
 Campus Racing is a situation.
-Campus Racing is resolved.
+Campus Racing is inactive.
 The sarea of Campus Racing is "Campus".
 
-instead of going to Athletic Street while (Campus Racing is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to Athletic Street while (Campus Racing is active and Campus Racing is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to Athletic Street;
 	CampusRacingEvent;
 
@@ -137,25 +137,25 @@ to CampusRacingEvent:
 	now LastCampusWalkin is turns;
 
 Frat Party Recruiter is a situation.
-Frat Party Recruiter is resolved.
+Frat Party Recruiter is inactive.
 The sarea of Frat Party Recruiter is "Campus".
 
 when play begins:
 	add Frat Party Recruiter to badspots of guy;
 
-instead of going to College Walkway West while (Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway West while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
 	FratPartyRecruiterEvent;
 
-instead of going to College Walkway East while (Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway East while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway East;
 	FratPartyRecruiterEvent;
 
-instead of going to College Walkway Northeast while (Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway Northeast while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway Northeast;
 	FratPartyRecruiterEvent;
 
-instead of going to College Walkway Northwest while (Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway Northwest while (Frat Party Recruiter is active and Frat Party Recruiter is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway Northwest;
 	FratPartyRecruiterEvent;
 
@@ -182,19 +182,19 @@ to FratPartyRecruiterEvent:
 Undie Race is a situation.
 The sarea of Undie Race is "Campus".
 
-instead of going to College Walkway West while (Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway West while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
 	UndieRaceEvent;
 
-instead of going to College Walkway East while (Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway East while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway East;
 	UndieRaceEvent;
 
-instead of going to College Walkway Northeast while (Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway Northeast while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway Northeast;
 	UndieRaceEvent;
 
-instead of going to College Walkway Northwest while (Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway Northwest while (Undie Race is active and Undie Race is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway Northwest;
 	UndieRaceEvent;
 
@@ -509,18 +509,18 @@ to RyouseiLibraryEvent:
 		say "     You walk back to the bookshelves, and, inspired by Ryousei, decide to check the Asian history section. Shortly after, the tiger is back at your sides, but looks disheveled. 'Well, this place of knowledge is so, er, admirable,' the feline replies your query, while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You follow his look to the information desk, and notice a middle-aged vulpine employee ogling at the tiger, and licking [if Girl is not banned and Girl is not warded]his[else]her[end if] chops. Ryousei makes a beeline for the exit, almost losing you again.";
 
 Campus Patrol is a situation.
-Campus Patrol is resolved.
+Campus Patrol is inactive.
 The sarea of Campus Patrol is "Campus".
 
-instead of going to College Walkway West while (Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway West while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
 	CampusPatrolEvent;
 
-instead of going to College Walkway East while (Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway East while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway East;
 	CampusPatrolEvent;
 
-instead of going to College Campus Entrance while (Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
+instead of going to College Campus Entrance while (Campus Patrol is active and Campus Patrol is not resolved and LastCampusWalkin - turns > 0 and a random chance of 1 in 3 succeeds):
 	move player to College Campus Entrance;
 	CampusPatrolEvent;
 

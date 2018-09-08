@@ -28,7 +28,7 @@ The sarea of Free Handouts is "Smith Haven".
 Instead of resolving a Free Handouts:
 	FreeHandoutsEvent;
 
-after going to Mall West Wing while (Free Handouts is not resolved):
+after going to Mall West Wing while (Free Handouts is active and Free Handouts is not resolved):
 	FreeHandoutsEvent;
 
 to FreeHandoutsEvent:

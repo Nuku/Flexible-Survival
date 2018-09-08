@@ -78,8 +78,8 @@ Instead of conversing the Leonard:
 	else if HP of Leonard is 4:
 		say "     The handsome lion moves up beside you, holding you close as he runs a paw over your [if player is female]breast[else]ass[end if], making you moan softly. 'I have a small favor I'd like to ask of you, my dear[if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist] kitty[end if]. The other girls have been so helpful in trying to help make my meager accommodations somewhat more suitable, but I have found myself needing something to occupy my time.' He nuzzles at your neck and slides a finger between your legs. 'When I'm not taking care of my lovely kitties and their needs, that is,' he amends, purring in your ear.";
 		say "     'I used to be an accomplished violinist in my old life, but had to set my practicing aside to deal with other obligations,' he says with remorse. 'But I have found myself thinking that it would be a fine hobby for a proper gentlelion such as myself.' Running his paws over your hips, he continues. 'Would you not like to hear me play, my dear?' You mewl in response to his touch and nod in agreement, longing to hear the handsome lion play something just for you. 'Unfortunately, I have no violin to play. Perhaps one could be found in the city though,' he rumbles thoughtfully. Finding yourself eager to please the handsome male, you quickly promise him that you'll find one for him, not even pausing to consider the matter. He smiles and caresses your cheek. 'Oh, you are such a kind and thoughtful [if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist]kitty[else]lover[end if] to offer doing that for me.' He runs his other paw across your thigh, giving a light squeeze. 'I would be most grateful if you were to bring me one.'";
-		now Music Store is unresolved;
-		now Concert Hall is unresolved;
+		now Music Store is active;
+		now Concert Hall is active;
 		now HP of Leonard is 5;
 	else if HP of Leonard is 5 and violin is not owned:
 		if a random chance of 2 in 5 succeeds:
@@ -175,7 +175,7 @@ Instead of conversing the Leonard:
 		say "     Leonard smiles and gives you another kiss. 'I knew I could count on you, my brave hunter. Now, go out into the park and search for these [bold type]hunting prides[roman type],' he says with confidence. 'I must prepare to deal with these feral upstarts for harassing my lovely girls.' He gets up out of the chair, and you are again reminded of how regal and impressive the handsome lion is. Driven by his words to action, you leave the lion's den, heading back out into the park.";
 		move player to Park Trail;
 		now HP of Leonard is 10;
-		now Hunting Prides is unresolved;
+		now Hunting Prides is active;
 	else if ( HP of Leonard >= 10 and HP of Leonard <= 15 ) or HP of Leonard is 100:
 		say "ERROR-Leonard-[HP of Leonard]C: You should not be able to talk to me!";
 	else if HP of Leonard >= 16:
@@ -639,7 +639,7 @@ Part 1 - Music Store		[perhaps add another instrument for a bunker NPC]
 
 Music Store is a situation. The level of Music Store is 2.
 The sarea of Music Store is "Outside".
-Music Store is resolved.
+Music Store is inactive.
 violinspritefight is a truth state that varies.
 
 Instead of resolving Music Store:
@@ -675,7 +675,7 @@ Part 2 - Concert Hall
 
 Concert Hall is a situation. The level of Concert Hall is 4.
 The sarea of Concert Hall is "High".
-Concert Hall is resolved.
+Concert Hall is inactive.
 
 Instead of resolving Concert Hall:
 	now fightstatus is 0;
@@ -789,7 +789,7 @@ instead of navigating Lion's Den while HP of Leonard >= 10 and HP of Leonard <= 
 
 Hunting Prides is a situation. The level of Hunting Prides is 8.
 The sarea of Hunting Prides is "Park".
-Hunting Prides is resolved.
+Hunting Prides is inactive.
 
 Instead of resolving Hunting Prides:
 	now fightoutcome is 100;
@@ -974,7 +974,7 @@ to say Leonardrivalfight:
 		else:
 			now HP of Leonard is 16;
 			now feline_attached is 0;
-			now PridePark is unresolved;
+			now PridePark is active;
 			now lastdenevent is turns;
 			move player to Lion's Den;
 			follow the turnpass rule;

@@ -1191,7 +1191,7 @@ Section 5 - Events
 Body Choice Dilemma is a situation.
 The sarea of Body Choice Dilemma is "Nowhere".
 
-after going to Body Shop while (Body Choice Dilemma is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
+after going to Body Shop while (Body Choice Dilemma is active and Body Choice Dilemma is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
 	BodyChoiceDilemmaEvent;
 
 to BodyChoiceDilemmaEvent:
@@ -1243,7 +1243,7 @@ to BodyChoiceDilemmaEvent:
 Horn Removal is a situation.
 The sarea of Horn Removal is "Nowhere".
 
-after going to Body Shop while (Horn Removal is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and GusTalkProgress > 0 and a random chance of 1 in 3 succeeds):
+after going to Body Shop while (Horn Removal is active and Horn Removal is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and GusTalkProgress > 0 and a random chance of 1 in 3 succeeds):
 	HornRemovalEvent;
 
 to HornRemovalEvent:
@@ -1255,7 +1255,7 @@ to HornRemovalEvent:
 Drunk Change Party is a situation.
 The sarea of Drunk Change Party is "Nowhere".
 
-after going to Body Shop while (Drunk Change Party is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
+after going to Body Shop while (Drunk Change Party is active and Drunk Change Party is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
 	DrunkAndMakingChangesEvent;
 
 to DrunkAndMakingChangesEvent:
@@ -1291,7 +1291,7 @@ to DrunkAndMakingChangesEvent:
 Body Poke Poke is a situation.
 The sarea of Body Poke Poke is "Nowhere".
 
-after going to Body Shop while (Body Poke Poke is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
+after going to Body Shop while (Body Poke Poke is active and Body Poke Poke is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
 	BodyPokePokeEvent;
 
 to BodyPokePokeEvent:
@@ -1302,7 +1302,7 @@ to BodyPokePokeEvent:
 Body Supplications is a situation.
 The sarea of Body Supplications is "Nowhere".
 
-after going to Body Shop while (Body Supplications is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
+after going to Body Shop while (Body Supplications is active and Body Supplications is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
 	BodySupplicationsEvent;
 
 to BodySupplicationsEvent:
@@ -1330,16 +1330,16 @@ to BodySupplicationsEvent:
 		say "     If looks could kill, the naga would be annihilated on the spot but eventually, Tirsa can only comply. 'Well, I guess that's the best deal I can get, isn't it? Damn, now I'm gonna have to [italic type]actually[roman type] promote this place.' The naga smiles. 'It would appear so!' Eventually, he leads the hyena to the changing rooms, and she comes out a full panther, although, as promised, Moreau did not restore her crotch to a fully female state. She walks to you and says 'I completely forgot to thank you. If it weren't for you I would have a penis AND be a hyena, and be in a lot more trouble too. I guess now all that's left to do is to promote people in the Body Shop. I should manage; you'd be surprised. I WAS pretty famous back in the day.'";
 		WaitLineBreak;
 		say "     The panther sighs, 'My husband is gonna hate this.' She then makes her leave, leaving you with the satisfied naga. 'You have my own thanks as well,' he says. 'The situation turned out better than expected for everyone. This could actually be very good for me. But now, what can I do for you?'";
-		now Body Popularity is not resolved;
+		now Body Popularity is active;
 	if calcnumber is 2:
 		say "     You wait outside. After a little while, the hyena exits the shop, visibly very upset and with tears in her eyes. When you walk in, Moreau seems upset as well. 'Oh, hello', he says after seeing you. When you ask about the hyena, he sighs. 'Well... Let's just say that there parts of being a businessman that are not so pleasant. But anyway, what can I do for you?'";
 	now lastBodyShopEvent is turns;
 	now Body Supplications is resolved;
 
-Body Popularity is a situation. Body Popularity is resolved.
+Body Popularity is a situation. Body Popularity is inactive.
 The sarea of Body Popularity is "Nowhere".
 
-after going to Body Shop while (Body Popularity is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
+after going to Body Shop while (Body Popularity is active and Body Popularity is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
 	BodyPopularityEvent;
 
 to BodyPopularityEvent:
