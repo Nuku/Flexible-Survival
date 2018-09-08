@@ -141,10 +141,10 @@ to FourthRandallEvent:
 		say "     Sounds of heavy balls slapping against bunny boy's cheeks fill the room, something that you can clearly hear from the window you're watching at. Randall is moaning like a wanton whore at the moment, showing how much he loves dick. By now he's reached his paw down to his smaller, yet still big dick and has started to masturbate. Brad on the other hand is grunting as he thrusts into his boyfriend. The two of their sounds get louder and louder, signifying that they're nearing orgasm. It isn't until the bunny jock lets out a loud groan and slams into his lover hard that they both cum. Randall shoots his load all over his body, some of it landing in his mouth whereas Brad dumps his jizz into your friend's hole.";
 		WaitLineBreak;
 		say "     Seconds later Randall catches you in the corner of his eye and smiles, waving at you from his blissed out position on the bed. That causes Brad to turn towards you and his eyes widen. With a grunt, the bunny boy gets off the bed, cum leaking out of his hole as he wanders over to the window, opening it wide. 'Hey there! Did you like the show?' he asks with a large grin. You nod at him with matching emotions. 'Good! If you want to visit us later and... maybe have some fun together then come see us in the morning. If you can't tell, my room's to the southwest of the entrance to the building,' he tells you. You let out an assent of agreement and head off on your own, hearing an eep as the window shuts.";
-		now Resolution of New Roommates Bunny is 1; [watched em fuck]
+		now Resolution of New Roommates is 1; [watched em fuck]
 	else:
 		say "     You shake your head. You're in a public place and would rather not be spotted spying on a couple having sex. Instead you turn and head back the way you came, maybe you'll visit later.";
-		now Resolution of New Roommates Bunny is 2; [didn't watch em fuck]
+		now Resolution of New Roommates is 2; [didn't watch em fuck]
 	now RandallBradRelationship is 5;
 	now New Roommates is resolved;
 
