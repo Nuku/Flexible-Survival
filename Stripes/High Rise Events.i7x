@@ -15,7 +15,7 @@ when play begins:
 Instead of resolving a Rabid Lawyers:
 	say "     While searching the city, you encounter a large pack of wolves in front of a law firm. They are partially dressed in suits, mainly the jackets and ties, though some have the torn-open remains of pants. They are growling and slavering as they snap at each other or swinging their briefcases around. Mixed among the pack are several smaller wolves in skirts or shirts, clutching reports, pouring coffee or helping the larger ones. Much of the helping seems to take the form of the interns sucking them off or getting pounded good and hard by one of the bigger males. Unwilling to face the legal teeth of a pack of rabid lawyers, you slink off as quietly and as quickly as you can.";
 	increase score by 1;
-	Now Rabid Lawyers is resolved;
+	now Rabid Lawyers is resolved;
 
 
 
@@ -61,6 +61,7 @@ Instead of resolving a Pigging Out:
 			SanLoss 10;
 			increase score by 25;
 			now restaurantpig is 1;
+			now Resolution of Pigging Out is 1; [ate with the pig]
 		else:
 			say "     You resist the urge to join her in the messy feast, but you would still like to opportunity to search the place for supplies.";
 			say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";
@@ -74,15 +75,18 @@ Instead of resolving a Pigging Out:
 					infect "Messy Pig"; [extra infection]
 					decrease score by 5;
 					now restaurantpig is 1;
+					now Resolution of Pigging Out is 3; [fought the pig for food, lost]
 				else:
 					say "     After defeating the pig and sending it on its way, you pick carefully through the ruined restaurant. The food in the main dining area and kitchen is all clearly tainted, but you do manage to find a little in the back of the walk-in cooler that is clean and undamaged by the gorging pig. You get enough for two meals packed away using some of the kitchenware to pack it up. While doing so, you also find a big kitchen knife that you decide to bring along.";
 					say "     Food x 2 and cleaver added to inventory.";
 					increase carried of food by 2;
 					increase carried of cleaver by 1;
 					increase score by 5;
+					now Resolution of Pigging Out is 2; [fought the pig for food, won]
 			else:
 				say "     Looking around the messy restaurant and the scattered food around the pig, you're not so sure they'll be anything salvageable left and decide it may not be worth the risk to try.";
 				increase score by 1;
+				now Resolution of Pigging Out is 4; [didn't fight the pig for food]
 	else:
 		say "     You look at the disgusting mess that she's already made of the place and feel your hopes of some fine dining dashed. You would still like to opportunity to search the place for supplies.";
 		say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";
@@ -96,16 +100,19 @@ Instead of resolving a Pigging Out:
 				infect "Messy Pig"; [extra infection]
 				decrease score by 5;
 				now restaurantpig is 1;
+				now Resolution of Pigging Out is 3; [fought the pig for food, lost]
 			else:
 				say "     After defeating the pig and sending it on its way, you pick carefully through the ruined restaurant. The food in the main dining area and kitchen is all clearly tainted, but you do manage to find a little in the back of the walk-in cooler that is clean and undamaged by the gorging pig. You get enough for two meals packed away using some of the kitchenware to pack it up. While doing so, you also find a big kitchen knife that you decide to bring along.";
 				say "     Food x 2 and cleaver added to inventory.";
 				increase carried of food by 2;
 				increase carried of cleaver by 1;
 				increase score by 5;
+				now Resolution of Pigging Out is 2; [fought the pig for food, won]
 		else:
 			say "     Looking around the messy restaurant and the scattered food around the pig, you're not so sure they'll be anything salvageable left and decide it may not be worth the risk to try.";
 			increase score by 1;
-	Now Pigging Out is resolved;
+			now Resolution of Pigging Out is 4; [didn't fight the pig for food]
+	now Pigging Out is resolved;
 
 to say piggycheck:	[to check if player has a pig-like head or body]
 	now tempnum is 0;
@@ -145,10 +152,12 @@ Instead of resolving a Small Park:
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		say "[dogparksearch]";
+		now Resolution of Small Park is 1; [searched the dog park]
 	else:
 		say "     You go off, deciding to find a safer place to search.";
 		increase score by 1;
-	Now Small Park is resolved;
+		now Resolution of Small Park is 99; [disinterest]
+	now Small Park is resolved;
 
 
 to say dogparksearch:
@@ -251,7 +260,7 @@ when play begins:
 Instead of resolving a Corporate Fat Cats:
 	say "     You come across a pair of hefty felines on the steps of one of the many high-rise buildings. Their business suits have mostly been removed and scattered around them. One is a male black cat with white paws and a splash of white on his wide belly. The other is a chubby Maine Coon tom with the thick, fluffy fur of the breed. They are rolling around against one another, groping each other. While stroking the black cat's cock, the other cat goes on about looking forward to some asset growth. The black cat nibbles at the portly Maine Coon's ear, telling him how he wants to set up this merger and come out on top. They continue to go on like this, bantering in corporate lingo while the black cat mounts the other while you walk off, leaving the fat cats to their [']merger['].";
 	increase score by 1;
-	Now Corporate Fat Cats is resolved;
+	now Corporate Fat Cats is resolved;
 
 
 Section 5- Veterinary Hospital
@@ -280,6 +289,7 @@ Instead of resolving a Veterinary Hospital:
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     After dealing with the panther taur, you find it quite tempting to stay and continue to have fun with the sexy feline herm. Surely she'd be able to satisfy that lustful itch of your for animal sex, some part of you suggests. It takes some effort of will, but you're able to rein yourself in and leave the place before it gets any stronger. Once outside, you breathe in the (relatively) fresher air outside to try and clear your head. Trying to recover your self-control, you leave the immediate area and ponder your next course of action. Despite the close call, finding a sexy beast to fuck you remains high on your list.";
 				now lust of medea is 2;
+				now Resolution of Veterinary Hospital is 2; [won and got medea's supplies]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     After the panther taur's had her way with you, she pushes you back inside her veterinary clinic home. Lost in a daze of animal lust, you don't resist as she secures you with a collar and leash to the wall before mounting you. You're fucked over and over again in numerous positions, fed on a diet of her cum and milk until you're nothing but another lust-crazed panther taur by the time she releases you out into the city[if player is impreg_ok] with a belly full of her cubs[end if].";
 				setmonster "Panther Taur";
@@ -301,16 +311,17 @@ Instead of resolving a Veterinary Hospital:
 				follow the sex change rule;
 				wait for any key;
 				end the story saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
-				now battleground is "void";
 				wait for any key;
 				follow the turnpass rule;
 				stop the action;
 			else:
 				say "     Not feeling it would be wise to stay and fight given the circumstances, you clutch your pack full of stolen veterinary supplies all the tighter and dodge your way past the big feline. Still running to put some distance between her in case she chooses to pursue you, you breathe in the (relatively) fresher air outside to try and clear your head. Trying to recover your self-control, you leave the immediate area and ponder your next course of action. Despite the close call, finding a sexy beast to fuck you remains high on your list.";
+				now Resolution of Veterinary Hospital is 3; [fled]
 		else:
 			say " as quickly as you can, breathing in the (relatively) fresher air outside to try and clear your head. Trying to recover your self-control, you leave the immediate area and ponder your next course of action. Finding a sexy beast to fuck you remains high on your list.";
 			now libido of player is ( 100 + libido of player + libido of player ) / 3;
 			decrease humanity of player by 5;
+			now Resolution of Veterinary Hospital is 4; [fight banned, so the player just ran out with the supplies]
 		now lust of Medea is 2;
 	else:
 		say "     You find a veterinary hospital at the ground level of one of the high rises. You don't hear any monsters within and consider entering. There could be some useful supplies within, but it is an animal hospital, so it does seem a somewhat risky venture.";
@@ -320,10 +331,12 @@ Instead of resolving a Veterinary Hospital:
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			say "[vetsearch]";
+			now Resolution of Veterinary Hospital is 1; [searched the place]
 		else:
 			say "     You go off, deciding to find a safer place to search.";
 			increase score by 1;
-	Now Veterinary Hospital is resolved;
+			now Resolution of Veterinary Hospital is 99; [disinterest]
+	now Veterinary Hospital is resolved;
 
 
 to say vetsearch:
@@ -436,7 +449,7 @@ Instead of resolving a Golf Store:
 	say "     Golf club obtained.";
 	increase carried of golf club by 1;
 	increase score by 5;
-	Now Golf Store is resolved;
+	now Golf Store is resolved;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -459,7 +472,7 @@ Instead of resolving a Electronics Store:
 	say "     As you watch, the darker one twitches and shudders for a moment while trying to swallow down a big mouthful. His eyes blink, then turn a solid blue. He smacks his chest a few times to reboot himself. Once that is settled, he opens his jacket, accesses a panel on himself and pulls out a video card, swapping it for a newer model from one of the shelves.";
 	say "     With this impromptu upgrade completed, they get back to squabbling over the various electronic phones, mp3 players and doodads, babbling marketing buzzwords all the while.";
 	increase score by 1;
-	Now Electronics Store is resolved;
+	now Electronics Store is resolved;
 
 
 Section 8 - Cameo

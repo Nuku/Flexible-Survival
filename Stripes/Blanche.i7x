@@ -34,12 +34,16 @@ Instead of resolving Wolfrape:
 			increase carried of food by 1;
 			increase score by 20;
 			now battleground is "void";
+			now Resolution of Wolfrape is 1;	[Saved Blanche]
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     After the draconic beast has suitably punished you for the interruption, she heads back to her original prize and pushes her over onto all fours. The female wolf moans weakly, but cannot prevent the drake from mounting her again. The dragon's lustful moaning starts up again, but the wolf's whimpers and moans of pain are soon silenced as the drake clamps the wolf's muzzle shut. Holding her muzzle upwards, the powerful beast kisses and licks at the wolf's face, moaning how lovely she'll look filled with her whelps. The wolf's eyes go wide at this, but she's too overwhelmed by the mix of pain and pleasure from the rough mating to do anything. The dragon creature growls loudly and lustfully as it drives hard into its prey one last time, causing the wolf to yelp then struggle, then become very still. The lizard cock glows from within the wolf's belly and soon you can tell the canine is being filled with molten sperm. The white wolf's belly expands as it is filled, and glows red as its new cargo of life shine through her skin and fur. Once the wolf is full and bloated with the drake's cum, the dark creature pulls out and starts dragging the wolf away with her. When you recover enough to get up, you get away from this spot as quickly as you can.";
+			now Resolution of Wolfrape is 2;	[Lost Blanche to Ebonflame Drake]
 		else if fightoutcome > 30:
 			say "     Unable to stand up to the powerful creature's assault, you turn and run away. The angered drake sends a wave of fire after you, burning the stray trash in the alley before pouncing back on her original prey. You can hear the sounds of lust. The cries of pain start back up again, but they are quickly silenced, probably by a large, clawed hand around the wolf's muzzle. The sounds fade away as you continue further away, though you do hear loud roar of the beast cumming into its prize.";
+			now Resolution of Wolfrape is 3;	[Ran and left Blanche to Ebonflame Drake]
 	else:
 		say "     Deciding not to intervene, you watch as the wolf moans pitifully, an expression of growing rapture on her face as the drake thrusts into her from behind. The dragon growls and slams her prick home causing the wolf to yelp then struggle, then become very still. The lizard cock glows from within the wolf's belly and soon you can tell the canine is being filled with molten sperm. The white wolf's belly expands as it is filled, and glows red as its new cargo of life shine through her skin. Once the wolf's been filled, the drake grabs her, dragging her off somewhere. As quietly as you can, you back away.";
+		now Resolution of Wolfrape is 99;	[Did not try to save Blanche]
 	now blanchefight is false;
 	now wolfrape is resolved;
 

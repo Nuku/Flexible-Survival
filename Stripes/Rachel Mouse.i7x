@@ -24,10 +24,12 @@ Instead of resolving a Quiet Apartment Building:
 			say "[mouseapts]";
 		else:
 			say "     Deciding against it and suddenly wary of this impulse to enter the building, you back away quickly. You catch sight of some small mice looking from the windows as you back away. Again, you feel that call to go inside and quickly turn and run, wanting to get some distance between you and the strange mice who tried to lure you in.";
+			Now Resolution of Quiet Apartment Building is 99; [avoided the mental mice]
 	Now Quiet Apartment Building is resolved;
 
 
 to say mouseapts:
+	Now Resolution of Quiet Apartment Building is 1; [ran into the mental mice]
 	setmonster "Mental Mouse";
 	say "     You step into the small apartment building and look around, still feeling oddly at ease. The main doors are unlocked and you enter the lobby. There is an apartment door slightly ajar at the back of the hall beside the steps up to the next floor and you head towards it. As you reach out and push it open, you are tackled from behind by someone. No, it's multiple someones. There is a mob of gray mice which slipped quietly from the other rooms to tackle out. More come out from the apartment ahead of you and you are pulled in. You struggle, but there are too many of them on top of you already, weighing you down and overpowering you. While they may only be three feet tall, they are already about a dozen grabbing you and you can sense many more in the hall behind you.";
 	say "     'We called and you have come. You will join us in mousedom. Join us in being of one mind. Accept us and be part of the mouse collective,' they say, speaking in unison. With so many of them around you, your mind throbs under the assault of thoughts that are not your own, hearing those words spoken both in your ears and in your brain. These mice, somehow all of one united mind, are trying to overpower your will. They drew you in here and now these beautiful, busty mice have you. These sexy herms pull you over to the couch, kissing and fondling you as they do. You find yourself growing increasingly aroused by their short, mouse-like bodies and faces. They have such lovely, feminine bodies, large breasts and sizeable cocks as well. Why were you even resisting them, you find yourself wondering.";

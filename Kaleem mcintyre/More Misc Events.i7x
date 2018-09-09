@@ -33,7 +33,7 @@ Instead of resolving a Unorthodox Sight:
 	else:
 		LineBreak;
 		say "     With the old saying [']Better safe than sorry['] in the forefront of your mind, you decide not to risk it and just dash the other way, quickly turning a corner. The swift escape avoids any contact at all between yourself and the unknown stranger, which is just fine in your book.";
-		now Resolution of Unorthodox Sight is 99; [desinterest]
+		now Resolution of Unorthodox Sight is 99; [disinterest]
 	now Unorthodox Sight is resolved;
 
 Section 2 - Desperation

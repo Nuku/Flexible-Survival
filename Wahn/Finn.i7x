@@ -61,11 +61,13 @@ to say FinnTracked:
 			say "     You preside over your minion's work, then are the one holding the branding iron as Finn presents his shoulder for the mark of the stables. Looks like you'll have to disappoint Anthony about returning his worker. With a grin, you leave the horsemen to further 'training' sessions with the centaurs.";
 			increase score by 10;
 			now FinnTrackingProgress is 100; [Finn joined the stables]
+			now Resolution of Missing Farm Hand is 100; [Finn joined the stables]
 		else:
 			LineBreak;
 			say "     Telling the horsemen that while you approve of their initiative, the farm is off limits, you call out for Finn to stop - but the equine male is well in the grip of his lust by now. In the end, you have to step up and wrench him off her with a firm grip on a shoulder, making the guy fall on his ass with a growl of protest. He seems ready to attack you for a second, then the gleam of impending violence leaves his eyes as Finn takes in the imposing presence you have as the stable's master. He slumps on his back and shows his open palms in a sign of slightly confused surrender. Informing the horseman that his boss has been looking for him, you command him to take care of his boner and get dressed. After a quick burst of jerking off, Anthony's missing worker puts his clothes back on and follows you directly back to the farm.";
 			increase score by 10;
 			now FinnTrackingProgress is 3; [Finn rescued, no sex]
+			now Resolution of Missing Farm Hand is 3; [Finn rescued, no sex]
 	else:
 		say "     The horseman leader looks at you and is clearly less than impressed. His equine shaft twitches a little as he arrogantly laughs out loud. Clearly looking as much for a fight as for sex, he calls out, 'I'm calling dibs on this one!' With that said, he charges at you.";
 		now horsefight is 1;
@@ -73,10 +75,12 @@ to say FinnTracked:
 		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 			say "     Having lost the fight, there's little left but to slink back to the farm in defeat. With the eager way he was pounding that centauress, Finn will no doubt shortly be indoctrinated as another one of their raiding party. Nothing left but to tell Anthony that he's not coming back.";
 			now FinnTrackingProgress is 100; [Finn joined the stables]
+			now Resolution of Missing Farm Hand is 100; [Finn joined the stables]
 			move player to McDermott Farm Entrance;
 		else if fightoutcome >= 30: [fled]
 			say "     Having run away from the fight, there's little left but to slink back to the farm in defeat. With the eager way he was pounding that centauress, Finn will no doubt shortly be indoctrinated as another one of their raiding party. Nothing left but to tell Anthony that he's not coming back.";
 			now FinnTrackingProgress is 100; [Finn joined the stables]
+			now Resolution of Missing Farm Hand is 100; [Finn joined the stables]
 			move player to McDermott Farm Entrance;
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     While you were busy overwhelming the leader of the horsemen, it seems the male centaur took advantage of the other two being distracted! He is currently fighting them with surprisingly large success despite the imbalance in numbers. In fact, with a kick of a strong leg, one of the horsemen goes down while you're still thinking about if you should come to his help. Then his shout of, 'You'll pay for violating my sister! I'll kill you all!' the centaur shouts directly at Finn, who never stopped pounding into the young woman's pussy despite the fighting going on around him.";
@@ -102,6 +106,7 @@ to say FinnTracked:
 							LineBreak;
 							say "     Hastily wrenching up your pants again and stuffing a hard [cock of player] erection into it, you finish dressing in a few moments, then get an arm around the horseman to lead him off, half bracing and dragging him. A glance back shows you that the centaurs are still in the midst of mating, leaving you free to make your getaway. Guiding the rescued horseman through the open plain, you're sure to keep an eye open for possible encounters or followers, but thankfully everything is quiet and you eventually arrive back at the farm. Handing off the still somewhat bruised and dizzy Finn to his farmhand buddies, there's little left but tell Anthony that you've got his worker back safe and sound.";
 							now FinnTrackingProgress is 3; [Finn rescued, no sex]
+							now Resolution of Missing Farm Hand is 3; [Finn rescued, no sex]
 							move player to McDermott Farm Entrance;
 						else: [sex!]
 							LineBreak;
@@ -117,6 +122,7 @@ to say FinnTracked:
 							say "     While the further spurts of cum from both your cocks slowly ebb off, you just stay in position, half-bent over Finn and holding on to him. Breathing heavily after the exertion of sex, the two of you are happy to keep in a companionable silence for a while, re-building your energy before you eventually push yourself up from Finn's back. As you pull out your softening cock, only a little trickle of cum escapes with it, then his pucker contracts tightly, trapping your load inside the muscular male. Turning around and gingerly sitting on the trampled grass, the horseman looks at you and gives an amused smirk. 'Hey there and... thanks for the rescue. Can't believe I'm saying this, but that last bit has actually been quite a bit of fun,' he says, then gets up and proceeds to gather his clothes, same as you are.";
 							say "     Soon, the two of you are on the way back to the farm, leaving behind the three horsemen with their arms tightly tied behind their backs. Legs free, they should be able to make their way back to the streets of the city - or not, maybe falling prey to one creature or another. No matter which - they're not your problem anymore. On the way back to the farm, you chat a bit with Finn and he explains how the raiders came from a place called the 'stables' in the city and wanted to recruit him. Seems like he didn't want to become another servant of their master, so they decided to 'convince' him another way. Eventually, you arrive back at the farm and with a thanks to you, he leaves to go join his buddies in the barracks. The only thing that's left to do now is telling Anthony what happened.";
 							now FinnTrackingProgress is 4; [Finn rescued, player fucked him]
+							now Resolution of Missing Farm Hand is 4; [Finn rescued, player fucked him]
 							move player to McDermott Farm Entrance;
 					else: [care for the centauress]
 						LineBreak;
@@ -131,15 +137,18 @@ to say FinnTracked:
 				if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 					say "     Having lost the fight, there's little left but to get the hell away from the homicidal centaur and slink back to the farm in defeat. You don't think the sounds of repeated heavy hoof impacts on a defenseless body will leave you anytime soon. Nothing left but to tell Anthony that he's not coming back... ever.";
 					now FinnTrackingProgress is 99; [Finn is dead]
+					now Resolution of Missing Farm Hand is 99; [Finn is dead]
 					move player to McDermott Farm Entrance;
 				else if fightoutcome >= 30: [fled]
 					say "     Having run away from the fight, leaving Finn to the mercy of a homicidal centaur, there's little left but to slink back to the farm in defeat. You don't think the sounds of repeated heavy hoof impacts on a defenseless body will leave you anytime soon. Nothing left but to tell Anthony that he's not coming back... ever.";
 					now FinnTrackingProgress is 99; [Finn is dead]
+					now Resolution of Missing Farm Hand is 99; [Finn is dead]
 					move player to McDermott Farm Entrance;
 				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 					say "     Beating back the centaur in his homicidal rage, you use a moment in which he has to catch his breath to get an arm around Finn, then hastily half-drag half-guide the horseman away. A clatter of hooves indicates that the centaur stallion starts to follow, then gets distracted by the groan of another horseman of the raiding party. Despite being out of sight of the grisly action that follows, you don't think the sounds of repeated heavy hoof impacts on a defenseless body will leave you anytime soon.";
 					say "     Guiding the rescued horseman through the open plain, you're sure to check over your shoulder if anyone follows more than a few times before arriving back at the farm. Handing off the still somewhat bruised and dizzy Finn to his farmhand buddies, there's little left but tell Anthony that you've got his worker back safe and sound.";
 					now FinnTrackingProgress is 3; [Finn rescued, no sex]
+					now Resolution of Missing Farm Hand is 3; [Finn rescued, no sex]
 					move player to McDermott Farm Entrance;
 		now horsefight is 0;
 		increase score by 1;
@@ -172,6 +181,7 @@ to say FinnCentauressCaring:
 	WaitLineBreak;
 	say "     With the centaurs gone, you hurry to get to the horseman campsite and find Finn lying on the ground and groaning. His rear end, tail and lower back is quite a sticky mess, centaur cum drying in his fur and making it clump together. He groans as you help him get up and say you came from the farm to find him. Gingerly rubbing his ass, Finn snorts, 'Nnnggh. Thanks for the rescue, but... couldn't you have found a better way than letting that stallion pound my ass? I don't think I'll be able to sit down anytime soon. Man, he really did a number on me.' With that, he proceeds to gather his clothes, wincing with each move to bend over. Soon after, you're on the way back to the farm, leaving behind the three other horsemen with their arms tightly tied behind their backs. Legs free, they should be able to make their way back to the streets of the city - or not, maybe falling prey to one creature or another. No matter which - they're not your problem anymore. On the way back to the farm, you chat a bit with Finn and he explains how the raiders came from a place called the 'stables' in the city and wanted to recruit him. Seems like he didn't want to become another servant of their master, so they decided to 'convince' him another way. Eventually, you arrive back at the farm and with a thanks to you, he leaves to go join his buddies in the barracks. The only thing that's left to do now is telling Anthony what happened.";
 	now FinnTrackingProgress is 5; [Finn rescued, centaur fucked]
+	now Resolution of Missing Farm Hand is 5; [Finn rescued, centaur fucked]
 
 to say FinnCentauressStroking:
 	say "     Leaning forward, you bring your tongue to her pussy and lick over it, drawing a gasp from the young centauress. You bring your hand to her pussy and start to massage it, switching up licking and suckling on her folds with gentle strokes before soon moving on to penetrating her. Slipping Three, then four fingers, then your whole hand into the centauress's body, you stroke her inner passage, wet with Finn's pre and her own female juices. Feeling around a bit, you find a spot that seems especially sensitive judging from the joyful gasps any touch makes her do. Concentrating on that, it doesn't take much longer until the centaur orgasms, femcum gushing out of her opening and dripping off your arm. As if he had waited for your signal, the shouted climax of this beautiful filly's brother rings out from the camp you left behind. Uh-oh, he'll no doubt be here in moments! With haste, you pull your hand out of her depths and do your best to wipe off its wetness on her coat, then rush to the front of the female centaur. Quickly sliding her hand into yours, you give her a firm gaze and tell her that the two of you just talked, nothing more. She looks a bit puzzled at that statement, then nods slowly, clearly still not thinking clearly from the hormones and sensations bubbling around in her.";

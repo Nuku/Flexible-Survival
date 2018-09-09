@@ -51,13 +51,15 @@ Instead of resolving a Aussie Pub:
 			now lastpubvisit is turns;
 			now Down Under Pub is known;
 			LineBreak;
-			Now Aussie Pub is resolved;
+			now Resolution of Aussie Pub is 1; [Entered Pub]
+			now Aussie Pub is resolved;
 		else:
 			say "     You resist the temptation and head off with a little more resolve.";
 			increase score by 1;
 			increase humanity of player by 5;
 			LineBreak;
-			Now Aussie Pub is resolved;
+			now Resolution of Aussie Pub is 2; [Did not enter Pub]
+			now Aussie Pub is resolved;
 	else:
 		say "     You decide it'd probably be best to head for sneak away before you're noticed. Only another kangaroo could safely approach this location.";
 

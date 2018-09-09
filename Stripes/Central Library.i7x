@@ -177,16 +177,19 @@ to say libguard1:						[Bluff]
 			say "     You manage to convince James that you're here as special relief. 'But only for a few hours,' you emphasize again. Glancing at your watch, you add that it's almost time for you to start. 'Thanks, pal,' he says, getting up and heading to the doors. 'I think I'll head off to the staff lounge and catch forty-winks on the couch in there. I don't want to leave the library entirely if you're just going to swap out for a while, but I could really use the nap. If you've got to patrol inside, be sure to keep it quiet. The librarians don't like to be disturbed and they're not quite right now. Probably spent too much time in the mythology section or something.' With that cryptic comment, he passes you the keys and slips inside, watching you lock up before heading further in. You give him a little bit to make sure he's bedded down and then unlock the door and slip inside[if humanity of player < 30]. There is a slight twinge from your wolverine instincts for leaving your post, but you manage to fight it down[end if].";
 			now centrallib is 4;
 			WaitLineBreak;
+			now Resolution of Central Library is 1; [Successful Bluff]
 			say "[libraryexplore]";
 		else:
 			say "     He just doesn't seem convinced that you're his replacement, as you're not the regular guy. 'I would really need to get confirmation from HQ about something like this and I haven't been able to reach them since I went on duty. I could really use a break, but we gotta follow procedure, especially during a situation. Especially you, you could get fired easily since you just started.' Well, that plan went bust. You'll have to consider other options.";
 			now centrallib is 3;
 			WaitLineBreak;
+			now Resolution of Central Library is 2; [Wolverine, Failed Bluff]
 			say "[libraryentrance]"; [Back to menu]
 	else:
 		say "     You offer to take over for him for a while, saying you're here to give him a break. His infection-confused mind mulls over the offer, trying to deal with the conflicts of his new instincts and his old memories. 'Well, I don't really know if I can trust you. Everyone from the company's supposed to come on duty in uniform. I should probably just stay on duty,' he says, shaking his head.";
 		now centrallib is 2;
 		WaitLineBreak;
+		now Resolution of Central Library is 3; [Not Wolverine, No Bluff allowed]
 		say "[libraryentrance]"; [Back to menu]
 
 
@@ -256,6 +259,7 @@ to say libweaponoffer:
 				else if weaponpick is 6:
 					decrease carried of mallet by 1;
 				WaitLineBreak;
+				now Resolution of Central Library is 4; [Gave weapon]
 				say "[libraryexplore]";
 			else:
 				say "     You tell him that you don't want to part with the weapon. James nods and says, 'I can certainly understand that. You want to be able to protect yourself. It's dangerous out there.' It does take a few polite requests to get the big wolverine to hand the [if weaponpick is 1]nightstick[else if weaponpick is 2]crowbar[else if weaponpick is 3]tire iron[else if weaponpick is 4]flotsam club[else if weaponpick is 5]medium sledge[else if weaponpick is 6]mallet[end if] back to you. You try to offer him something else or another weapon, but he's decided that one's the best for him. Needing to get back on duty, he shuffles you on your way. He does add that he hopes you'll come back if you decide to part with the weapon[if weaponpick > 1] or find an even better one for him[end if] in the future.";
@@ -270,16 +274,19 @@ to say libguard3:
 		say "     James, beaten by your sudden attack, collapses onto the stairs in a heap. Passed out after the fight, it looks like you've finally made him take his much-needed rest. Quickly grabbing his keys, you unlock the library door and slip inside.";
 		now libfight is 3;
 		WaitLineBreak;
+		now Resolution of Central Library is 5; [Fought James, Won]
 		say "[libraryexplore]";
 	else if wolvfightresult is 2:
 		say "     The wolverine growls and tosses you roughly into the street. As you're getting up, James brushes open his jacket and rests his large paw firmly on a holster hidden there. 'You need to move along and not come back,' he says with a firm growl. Even with the increased healing from the infection, you're not sure how you'd fare against a gun and are quite certain it wouldn't be pleasant even if you survived. You'll have to give up on getting in here and look elsewhere.";
 		now libfight is 2;
 		now Central Library is resolved;
+		now Resolution of Central Library is 6; [Fought James, Lost]
 		WaitLineBreak;
 	else:
 		say "     Making a run for it from the crazed wolverine, you can hear him yelling at you from the steps. 'And don't you come back, or I'll give you some of this,' James yells, waving a gun in the air. Even with the increased healing from the infection, you're not sure how you'd fare against a gun and are quite certain it wouldn't be pleasant even if you survived. You'll have to give up on getting in here and look elsewhere.";
 		now libfight is 2;
 		now Central Library is resolved;
+		now Resolution of Central Library is 7; [Fought James, Fled]
 		WaitLineBreak;
 	now wolvfightresult is 0;
 
@@ -288,10 +295,12 @@ to say libguard4:
 	if player is not female:
 		say "     James seems a little flustered by your offer. 'Uh... well, not that I'm not flattered, but despite this big, young body, I'm an old-fashioned man with old-fashioned values. Ain't nothing wrong with it, mind you. It's just not for me.' He wrings his big paws and looks around a little, then seems to realize he should be on duty and snaps back to attention. 'Umm... you should maybe be moving along. You can stop by again. Having someone to chat with helps me keep my head on straight - Ah! Didn't mean nothing by that! - I mean, against this crazy animal thing.' It seems you've startled the poor wolverine back into guard mode and you'd best be moving along for now. Perhaps the fairer sex would have more luck with him.";
 		now jamessex is 1;
+		now Resolution of Central Library is 8; [Male, Tried to seduce.]
 		WaitLineBreak;
 	else if bodyname of player is not "Wolverine Guard" or facename of player is not "Wolverine Guard":
 		say "     James clearly seems tempted by the offer, but manages to resist. 'I... I should really stay on duty,' he rumbles. Clearly there's some lust buried there. Perhaps if you were a little more appealing to him. Since he hasn't sent you off, you can always try another approach as well.";
 		WaitLineBreak;
+		now Resolution of Central Library is 9; [Female, Not Wolverine]
 		say "[libraryentrance]"; [Back to menu]
 		now jamessex is 2;
 	else:
@@ -329,6 +338,7 @@ to say libguard4:
 			now libido of player is libido of player / 5;
 			now jamessex is 3;
 			WaitLineBreak;
+			now Resolution of Central Library is 10; [Female, Seduced James]
 			say "[libraryexplore]";
 
 
@@ -336,6 +346,7 @@ to say libguard5:
 	say "     You chat with him a little long, looking over the front of the building for any other possible entry points. Finding none there, you say farewell to the wolverine security guard, wishing him well. Remaining nonchalant, you walk away and turn a corner, then double-back around the library. Sneaking around, you start casing the joint from behind. Eventually, you are rewarded, finding an open window on the second floor close to a dumpster. You push it a meter over, climb up and leap up to grab the window ledge. Soon enough, you are inside - easy peasy.";
 	now libstealth is 1;
 	WaitLineBreak;
+	now Resolution of Central Library is 11; [Snuck Inside]
 	say "[libraryexplore]";
 
 

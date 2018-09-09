@@ -195,8 +195,8 @@ carry out bargainhunting:
 						increase carried of dog milk by 1;
 					say "[bold type]You gain 1 honeycomb![roman type][line break]";
 					increase carried of honeycomb by 1;
-					say "[bold type]You gain 1 fish![roman type][line break]";
-					increase carried of fish by 1;
+					say "[bold type]You gain 1 tasty fish![roman type][line break]";
+					increase carried of Tasty Fish by 1;
 		else if Z is 15: [Dr Matt samples]
 			if girl is banned and ( hermaphrodite is banned or furry is banned ):
 				say "     Searching through the bargain bin, you find a [bold type]small travel pouch[roman type] tucked away in the corner. Curious about what may be inside, you pull the container out and open its zipper. Sadly, when you flip the flap at the top open, all you find is a wad of used bubblegum and a bottle of water. Ugh! Oh well, can't win them all and at least you got some water back...";
@@ -318,7 +318,7 @@ carry out bargainhunting:
 					increase carried of food by 2;
 					say "[bold type]You gain 2 water bottles![roman type][line break]";
 					increase carried of water bottle by 2;
-					Now RomanceBooksFound is 1; [books found and returned]
+					now RomanceBooksFound is 1; [books found and returned]
 				else:
 					LineBreak;
 					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescences your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
@@ -340,7 +340,7 @@ carry out bargainhunting:
 					increase carried of food by 2;
 					say "[bold type]You gain 2 water bottles![roman type][line break]";
 					increase carried of water bottle by 2;
-					Now RomanceBooksFound is 1; [books found and returned]
+					now RomanceBooksFound is 1; [books found and returned]
 				else:
 					LineBreak;
 					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescences your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";

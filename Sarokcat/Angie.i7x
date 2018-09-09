@@ -70,7 +70,7 @@ Instead of Resolving a AngieTrapped:
 		increase carried of catnip by 1;
 		now AngieHappy is 2;
 		now Resolution of AngieTrapped is 3; [found catnip]
-		Now AngieTrapped is resolved;
+		now AngieTrapped is resolved;
 
 catnip is a grab object. It is not temporary.
 

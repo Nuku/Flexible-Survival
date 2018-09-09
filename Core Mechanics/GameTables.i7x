@@ -6,7 +6,7 @@ Name(text)	ListOfText (list of text)
 with 1000 blank rows
 
 Table of GameEvents
-Name(text)	ResolveState (text)	ActiveState(text)	Resolution(number)
+Name(text)	ResolveState (text)	ActiveState(text)	Resolution(number)	SituationArea(text)
 with 1000 blank rows
 
 Table of GameRooms
@@ -18,7 +18,7 @@ RoomName(text)	ItemName(text)
 with 1000 blank rows
 
 Table of GamePossessions
-Name(text)	CarriedNumber(number)	StoredNumber(number)	EquippedStatus(truth state)
+Name(text)	CarriedNumber(number)	StoredNumber(number)	EquippedStatus(truth state)	CurseStatus(truth state)
 with 1000 blank rows
 
 Table of GameCharacters
@@ -306,7 +306,7 @@ Free Catch	"Free Catch"
 Free Drink	"Free Drink"
 Free Handouts	"Free Handouts"
 Free Milk	"Free Milk"
-FreshFish	"FreshFish"
+Fresh Fish	"Fresh Fish"
 Friendship's Proof	"Friendship's Proof"
 Full Litter	"Full Litter"
 Game crazy	"Game crazy"
@@ -1279,7 +1279,6 @@ Name(text)	Type(text)
 "CocoRelationship"	"number"
 "ColeenAlpha"	"number"
 "ColeenCollared"	"number"
-"ColeenDeclined"	"number"
 "ColeenFound"	"number"
 "ColeenSarahInteraction"	"number"
 "ColeenSlut"	"number"
@@ -1864,7 +1863,6 @@ Name(text)	Type(text)
 "losttoalphahusky"	"number"
 "LostToZebra"	"number"
 "loversbench"	"number"
-"LURM"	"number"
 "lustadjust"	"number"
 "lustatt"	"number"
 "lwcounter"	"number"

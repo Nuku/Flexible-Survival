@@ -58,6 +58,7 @@ Instead of resolving a HypnoGeeks:
 					say "[bold type]You gain 1 water bottle![roman type][line break]";
 					increase carried of food by 1;
 					increase carried of water bottle by 1;
+					now Resolution of HypnoGeeks is 1; [saved the dog, saved the world]
 					now HypnoGeeks is resolved; [saved the dog, saved the world]
 				else if fightoutcome > 19 and fightoutcome < 30: [lost]
 					say "     With one last blow, you crumple backwards next to the very retriever you meant to save. You look up and see his quivering erection, never having shrunk an inch since you interrupted the nerds['] fun. Refusing to become their next plaything, you struggle to push yourself up, but pause when you come face to face with the hunk's quivering erection. You're surprised to find that it hasn't shrunk an inch while you were fighting for his honor. Taking advantage of your distraction, a small foot plants into your battered side and, without any energy to resist, you collapse on your side, staring up at your betters. 'Look at this little twerp!' Their banter isn't that great, you muse, 'Guess we're superior to him in mind [italic type]and[roman type] in body!'";
@@ -68,6 +69,7 @@ Instead of resolving a HypnoGeeks:
 					WaitLineBreak;
 					say "     ...Your eyes flutter open. That...was odd. You aren't sure what happened, but you're lying, groggily, on some grassy field, a thick string of drool connecting the corner of your mouth to the ground below. Wiping it off on your sleeve, you stand up and that's when you notice the wetness coming out of your rear. Looking around and seeing no immediate witnesses, you reach back and feel around, getting a glob on your finger. Bringing it up, you plan on taking a small whiff, but as soon as the rich, musky smell of dominance hits your nostrils, you can't help but pop it into your mouth, savoring the mousey taste. Then you freeze. What the hell are you doing? Thinking right now is like swimming through a murky jello. Remembering how exposed you are, you grab your pack and do your best to scurry back to safety.";
 					now HG_Flashback_Turns is a random number between 5 and 15;
+					now Resolution of HypnoGeeks is 2; [player got zonked, yo]
 					now HG_Stage is 2; [player got zonked, yo]
 				else if fightoutcome is 30: [fled]
 					say "     You just cannot deal with this right now, you decide, and after feinting to the side, you make your break from the two mice and escape back down the road where you came from, without looking back. You left the golden retriever jock to his fate with those two mice, but who knows? Maybe the next time you come across a dude in distress, you'll be able to actually help. For now, however, you keep your sanity to fight another day.";
@@ -83,6 +85,7 @@ Instead of resolving a HypnoGeeks:
 				WaitLineBreak;
 				say "     Eventually, the two mice are ready to move on, and as you follow them out of the alley and toward their destination, you listen to the verbal jabs they throw at each other. They practically sound like a married couple, so they've either been with each other for a while or just really hit it off. Either way, once you arrive behind what you think is the building for the male dorms, you're forced to hang back as they push the hunk through the back door. You spend some time thinking of how, exactly, you're going to find out which room they went to, when fortune strikes, and you see none other than Arthur himself opening the curtains of one of the windows on the first floor. Quickly counting along the back of the building, you think you've figured out which dorm's theirs, or at the very least, which one they're keeping the retriever in. Resolving to come back once you've prepared yourself, you head back out into the campus proper. Those mice won't know what hit them.";
 				now HG_Stage is 1; [player followed them]
+				now Resolution of HypnoGeeks is 3; [player followed them and knows where they live]
 				now HypnoGeeks is resolved; [Temporary end]
 		else: [LEAVE]
 			LineBreak;

@@ -1,5 +1,6 @@
 Version 2 of Leonard Events by Stripes begins here.
 [version 2.9 - Another one-shot den event]
+[Note: not Resolution flagged yet - use existing variables for now]
 
 "Adds a batch of random events and encounters with Leonard's Pride to Flexible Survival scattered around the city."
 [Note: These will only be accessible after completing Leonard's Quest.]

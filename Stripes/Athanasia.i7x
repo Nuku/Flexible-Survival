@@ -33,12 +33,16 @@ Instead of resolving a Captured Bird:
 					increase score by 15;
 					now HP of Athanasia is 1;
 					if guy is not banned, now FireAndIce is active;
+					now Resolution of Captured Bird is 1;	[Saved phoenix]
 		if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
 			say "     Keeping you pinned down, the feline enjoys having some fun with you as the others from her group return. They come with buckets of water, tossing them onto the flaming bird until her fires go out and she's left ashen and shivering in the remains of the net. The panther taurs give some celebratory yells, kisses and gropes before, as a team, dragging off their captured prey in the damaged net. The soaked bird shivers, but does not struggle as it's taken away to meet its fate.";
+			now Resolution of Captured Bird is 2;	[Did not save phoenix]
 		if fightoutcome >= 30:							[fled]
 			say "     You manage to make your escape from the felines, leaving them to their original prize. Hearing some of the others returning, you don't stick around to see what's happening and just try and get more distance between you and the lustful predators.";
+			now Resolution of Captured Bird is 3;	[Ran from trying to save phoenix]
 	else:
 		say "     Figuring that it's not your problem, you slip back the way you came, leaving the cats to their grisly barbecue.";
+		now Resolution of Captured Bird is 99;	[Did not try to save phoenix]
 	now Captured Bird is resolved;
 
 

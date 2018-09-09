@@ -132,6 +132,7 @@ to EventSave:
 		else:
 			now ActiveState entry is "Inactive";
 		now Resolution entry is Resolution of x;
+		now SituationArea entry is sarea of x;
 	write File of EventSave from the Table of GameEvents; [freshly made table gets saved to file]
 	if debugactive is 1:
 		say "DEBUG -> File of EventSave written.[line break]";
@@ -154,6 +155,7 @@ to EventRestore:
 				else:
 					now EventObject is inactive;
 				now Resolution of EventObject is Resolution entry;
+				now sarea of EventObject is SituationArea entry;
 				if debugactive is 1:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";
 			else:
@@ -244,6 +246,7 @@ to PossessionSave:
 		let PossessionCarriedNumber be 0;
 		let PossessionStoredNumber be 0;
 		let PossessionEquipped be false;
+		let PossesssionCursed be false;
 		if object entry is owned:
 			now PossessionCarriedNumber is carried of object entry;
 		if object entry is stored:
@@ -251,12 +254,15 @@ to PossessionSave:
 		if object entry is Equipment:
 			if object entry is equipped:
 				now PossessionEquipped is true;
+			if object entry is cursed:
+				now PossesssionCursed is true;
 		if PossessionCarriedNumber > 0 or PossessionStoredNumber > 0: [if the object is indeed in the players possession, it gets written down]
 			choose a blank row in the table of GamePossessions;
 			now name entry is PossessionName;
 			now CarriedNumber entry is PossessionCarriedNumber;
 			now StoredNumber entry is PossessionStoredNumber;
 			now EquippedStatus entry is PossessionEquipped;
+			now CurseStatus entry is PossesssionCursed;
 	write File of PossessionSave from the Table of GamePossessions; [freshly made table gets saved to file]
 	if debugactive is 1:
 		say "DEBUG -> File of PossessionSave written.[line break]";
@@ -277,6 +283,10 @@ to PossessionRestore:
 						now PossessionObject is equipped;
 					else:
 						now PossessionObject is not equipped;
+					if CurseStatus entry is true:
+						now PossessionObject is cursed;
+					else:
+						now PossessionObject is not cursed;
 				if debugactive is 1:
 					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] found and set to: [carried of PossessionObject] carried and [stashed of PossessionObject] stored.";
 			else:
@@ -631,8 +641,18 @@ Check ProgressImport:
 	if Trixie is not visible, say "You should go to Trixie in the Grey Abbey Library if you want to do this." instead;
 
 Carry out ProgressImport:
-	say "     Trixie smiles at you and nods. 'Okay then, let's see what we have in these magic files floating in the ether.' She pulls out a wand and swishes it through the air, then points right at you.";
-	say "[TrixieImport]";
+	say "     Trixie gives a sage nod and looks at you, then says, 'Sure, I can do that. But you need to be prepared for a lot of changes in your whole reality all around us. And such things to take some time to take hold properly.'";
+	say "     [bold type]Do you really want to start the import process?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Sure, I'll wait a minute (or ten) to reclaim my progress!";
+	say "     ([link]N[as]n[end link]) - Erh, not right now.";
+	if player consents:
+		LineBreak;
+		say "     Trixie smiles at you and nods. 'Okay then, let's see what we have in these magic files floating in the ether.' She pulls out a wand and swishes it through the air, then points right at you.";
+		say "[TrixieImport]";
+	else:
+		LineBreak;
+		say "     Trixie pats your hand and nods in understanding. 'Okay, another time then.'";
 
 To say TrixieImport:
 	RestoreEverything;

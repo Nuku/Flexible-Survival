@@ -22,6 +22,7 @@ Instead of resolving a Shipping Container:
 	if player consents:
 		if guy is banned and girl is banned:
 			say "     You pull and pry at the handles to the steel container, but you can't get it to open. Frustrated, you bang the clipboard against the door a few times. You then notice a note written on next page of the shipping manifest stating: [']Contents locked by simultaneous use of both guy and girl flags.['] You're not quite sure what that means, but it seems the container's locked. Maybe some other time.";
+			now Resolution of Shipping Container is 98; [banned]
 		else:
 			now latexhuskymode is true;
 			say "     It takes a bit of effort to push open the latches locking the overturned container, but eventually manage to do so by banging noisily to force the last one. When you do so, the doors flap open and several cardboard boxes tumble out onto you. Thankfully the boxes aren't that heavy, but the contents spill out. Hundreds of little, rubber, dog figurines pour out, inundating you in little latex huskies in various poses. Realizing too late what the contents are and that the manifest meant 160 boxes of them, you grumble in frustration, trying to pull yourself free of the shifting mass of two inch figurines and half-empty boxes. It is a struggle to find footing when every move you make seems to send another box of them over you.";
@@ -97,7 +98,10 @@ Instead of resolving a Shipping Container:
 					follow the sex change rule;
 			say "     But that is not all that has changed. Rolling onto your side, your latex tongue hangs from your muzzle as you look between your hind legs, examining your altered groin[if cocks of player > 1]. Your cocks are delicious looking rods of canine meat formed from latex-like flesh. It makes your mouth water just to look at them as thick pre dribbles from them[else if cocks of player is 1]. Your cock is a delicious looking rod of canine meat formed from latex-like flesh. It makes your mouth water just to look at it as pre dribbles from it[end if][if cunts of player > 1]. Your pussies are puffy, rubbery mounds made for fucking, leaking an arousing lubricant that tempts you to dive your canine tongue in them[else if cunts of player is 1]. Your pussy is a puffy, rubbery mound made for fucking, leaking an arousing lubricant that tempts you to dive your canine tongue into it[end if]. You can feel that the latex has bonded to you deep inside, ensuring you'll stay a sexy latex husky trotting around on all fours if you are any kind of husky at all. Deeply aroused by the changes and the new instincts trying to take hold, you can't but be pleased by this new development.";
 			add { "Female Husky", "Alpha Husky" } to infections of Latexlist;
-	Now Shipping Container is resolved;
+			now Resolution of Shipping Container is 1; [latex huskies freed]
+	else:
+		now Resolution of Shipping Container is 99; [disinterest]
+	now Shipping Container is resolved;
 
 
 

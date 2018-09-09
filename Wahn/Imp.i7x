@@ -271,7 +271,7 @@ An everyturn rule: [hellhound bad end progress every turn]
 			say "     The three of them pounce upon you like wild beasts, leaving you not a chance to recover or even fight back. Pushing you down and growling in savage amusement, they rip your clothes and gear to shreds... mostly without giving you more than just a few nips with their teeth. Finally, the lead hellhound steps over your body and grabs your neck between his powerful jaws to hold you tight and lines himself up with your body. With a savage thrust, the beast fills you with its knotted cock, then fucks you mercilessly until breeding your hole with a heavy load of demon cum. One after another, they all take turns using you, going again and again until you're nothing but a cummy mess. Only after that are you dragged over the back of the lead hound by one of his pack-mates, then carried to the portal they entered your world through.";
 			say "     A succubus and incubus pair of demons welcome you to your new home - their demon prince's lair, which is decorated in a lewd medieval style. After a thorough scrubbing you're brought before Skarnoth, a handsome horned demon around whom a noticeable aura of power ripples in the air. The demon lord makes sure to show you his... displeasure, at being cheated out of an angelic slave, and after a hard fucking you're added to the pool of his mortal pets - to be played with, abused and used.";
 			now tailname of player is "Demon Slave";
-			Now facename of player is "Demon Slave";
+			now facename of player is "Demon Slave";
 			now skinname of player is "Demon Slave";
 			now bodyname of player is "Demon Slave";
 			now cockname of player is "Demon Slave";

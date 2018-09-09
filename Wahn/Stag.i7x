@@ -14,7 +14,7 @@ when play begins:
 	add Dog Walking to badspots of furry;
 
 Instead of resolving a Dog Walking:
-	now battleground is "void";
+	project the Figure of Mike_face_icon;
 	if HP of Mike is 0: [first meeting]
 		say "     Around a building corner in front of you comes a young naked human woman on all fours. As she trots a bit closer and barks at you, you see she's obviously pregnant and has a collar around her neck. Before you can decide if and what to do now, a bipedal stag walks after her around the corner. He's clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail starting at his navel leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful.";
 		say "     As the guy sees you, he turns to the woman and commands 'Heel, Lea' which she immediately obeys, trotting over to stand beside him on all fours.";
@@ -30,21 +30,25 @@ Instead of resolving a Dog Walking:
 			LineBreak;
 			say "     You chat a bit more before Mike excuses himself, saying that Lea needs to get her exercise and that he should go on walking.";
 			now HP of Mike is 1;
+			now Resolution of Dog Walking is 1; [talked to Mike]
 		else: [fighting]
 			LineBreak;
 			challenge "Stag";
-			Now Dog Walking is resolved;
+			now Resolution of Dog Walking is 2; [fought Mike]
+			now Dog Walking is resolved;
 		increase score by 5;
 	else if HP of Mike is 1: [second meeting]
 		say "     You run into Mike and his 'dog' Lea, out on the street for a walk. The young woman scampers to you quickly and joyfully licks your hands at seeing you again. Mike smiles at her playful behavior as he walks after her over to you.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
 		increase humanity of player by 5;
 		now HP of Mike is 2;
+		now Resolution of Dog Walking is 3; [met Mike again]
 	else if HP of Mike is 98: [first friendly meeting after player attack]
 		say "     You run into Mike and his 'dog' Lea, out on the street for a walk. The young woman looks at you suspiciously and growls silently until Mike steps up and strokes her head. 'It's okay Lea, we just had a misunderstanding last time.' Hearing soothing words from her master, she trots over to you and sniffs at you before licking your hands.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
 		increase humanity of player by 5;
 		now HP of Mike is 2;
+		now Resolution of Dog Walking is 3; [met Mike again]
 	else if HP of Mike is 2: [third meeting - they're under attack by a gang]
 		say "     Moving through the streets, you hear shouting and barking from somewhere ahead. Recognizing the voices of Mike and his 'dog' Lea, you rush forward to find out what's going on.";
 		say "     You find the stag and his female companion being attacked by a gang of several leopardmen. The felines have already split them apart from each other, with three circling Mike and another two having cornered Lea against a closed loading dock.";
@@ -57,21 +61,24 @@ Instead of resolving a Dog Walking:
 			challenge "Leopardman";
 			if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 				say "     After one last slash with the leopardman's claws, you collapse on the ground, bleeding. Luckily though, your intervention distracted them enough that Mike and Lea fought off three of the attackers in the meantime. Now faced with new odds, the leopardman standing over you abandons the fight, dashing away before the stag and his 'dog' can get to him...";
+				now Resolution of Dog Walking is 5; [lost, but distracted the gang enough]
 			else if fightoutcome >= 30: [fled]
 				say "     You running off led to two of the leopardmen giving chase, tailing you for some time until you manage to lose them. As you make your way back to where you last saw Mike and Lea, you see that they fought off the remaining gang members in the meantime.";
+				now Resolution of Dog Walking is 6; [fled, but distracted the gang enough]
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 				say "     Having given the leopardman quite a beating, you grin at the fearful look on his face as he flees, running away as fast as he can. Your intervention distracted the other members of the small gang too, which allowed Mike and Lea to fight off three of their attackers in the meantime. The remaining unhurt one throws the fight as he sees himself confronted with the three of you and flees...";
+				now Resolution of Dog Walking is 4; [helped Mike fight off the gang]
 				increase score by 5;
 			now HP of Mike is 3;
 			say "     Nodding over at you, Mike says 'Thanks a lot for the help' as he kneels next to Lea to check on her. The transformed dog has a long claw-slash on her side and starts to whimper loudly now that the adrenaline of the fight wears off. 'This doesn't look good - might get infected too. I have to get her home.' He picks Lea up in his arms, and you walk down the street together, with you acting as a lookout for more trouble. Soon you arrive at Mike's house, where he leads you to the large dog kennel in the back and sets Lea down on a bed.";
-			now battleground is "void";
 			move player to Mike's Office;
 			now Mike's Home is known;
 		else:
 			LineBreak;
 			say "     You quickly turn around and flee before you get drawn into the fight too and don't stop running until you're well away. With odds of five against two, you don't think you'll see either Mike or Lea again. Who knows what the leopardmen will do with them...";
 			now HP of Mike is 100;
-			Now Dog Walking is resolved;
+			now Resolution of Dog Walking is 7; [left Mike to the gang]
+			now Dog Walking is resolved;
 	else if HP of Mike > 2 and HP of Mike < 98: [further repeat meetings]
 		say "     You run into Mike and his 'dog' Lea again, out on the street for a walk. The young woman scampers to you quickly and joyfully licks your hands at seeing you again. Mike smiles at her playful behavior as he walks after her over to you.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
@@ -271,6 +278,7 @@ The conversation of Mike is { "Oh, hello." }.
 The icon of Mike is Figure of Mike_icon.
 
 to say MikeDesc:
+	project the Figure of Mike_face_icon;
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Mike] <- DEBUG[line break]";
 	say "     Mike is a bipedal stag, clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful.";
@@ -290,6 +298,7 @@ instead of sniffing Mike:
 	say "     Mike has a nice smell, strong and masculine.";
 
 Instead of fucking Mike:
+	project the Figure of Mike_face_icon;
 	[puts Stag as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;

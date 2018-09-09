@@ -206,7 +206,7 @@ Instead of resolving a Noteinbottle:
 				else:
 					say "     Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination shows it appears to be an old style glass bottle, with yes, as you half expected a roll of paper inside! More than a bit curious at this point you quickly open the bottle up and fish the message out. Spreading it out on the sand beside you, you puzzle over the hastily scrawled message. It is very difficult to read, but something about 'rats' and 'missing the food court' can be made out. There also seems to be some kind of warning about some kind of pirate sharks in the deeper water? The marks on the back almost seem to be some kind of map, though without some kind of reference and a boat, it is totally useless to you right now. Still if there are pirates, there might be treasure, right? Just to be on the safe side, you brush some short, gray hairs from the map, roll it up and stick it in your pocket anyway. Perhaps you should do some more investigating.";
 					now tmapfound is 1;
-					Now Noteinbottle is resolved;
+					now Noteinbottle is resolved;
 		if fightoutcome >= 20:
 			say "     Driven back by the sea creatures, you are forced back to the beach. You've lost sight of the bottle for now.";
 	else:
@@ -238,7 +238,7 @@ Instead of resolving Findingboat:
 				challenge "Pirate Shark";
 				if lost is 0:
 					say "     Victorious over the pirates who seem intent on stopping you from reaching the island, you continue along your way, and soon the small island is in sight, the island doesn't seem much different from many other small islands in these waters, but you are sure it is the right one, and even better yet, you can see a much easier path back to the shore from here and a cove to store your boat. It should be much easier to visit and leave the island now that you have been here once!";
-					Now Pirate Island is known;
+					now Pirate Island is known;
 					Move player to Pirate Island;
 					now Findingboat is resolved;
 					now tmapfound is 3;

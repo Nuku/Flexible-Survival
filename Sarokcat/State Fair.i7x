@@ -101,7 +101,7 @@ to say borisquestforcock:
 					say "[christy_ending]";
 				else:
 					say "     'That's too bad,' Boris says with a sigh as he lowers the costume back into the box and carefully packs it away. 'I was really looking forward to putting the new cock you got for me to good use,' he says as he pats his new large sheath teasingly.";
-					Now christyquest is 3;
+					now christyquest is 3;
 			else if christyquest is 3:
 				say "     'Trying again and still with a cock? Am I just that irresistible?' Boris says with a smug smile. 'Well, if you need me so badly, you know what to do,' he says as he reaches back and lifts up the other costume once again. Do you put it on?";
 				if player consents:

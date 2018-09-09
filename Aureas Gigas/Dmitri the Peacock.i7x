@@ -146,7 +146,7 @@ Instead of resolving a Captivating Plumage:
 		now battleground is "void";
 		now peacocked is 8;
 		now Resolution of Captivating Plumage is 8;
-		Now Captivating Plumage is resolved;
+		now Captivating Plumage is resolved;
 
 Argos Antiques is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Argos Antiques is "[argosantdesc]".

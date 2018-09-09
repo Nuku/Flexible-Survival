@@ -1,10 +1,10 @@
-Version 1 of Candy Shop by Stripes begins here.
+Version 1 of CandyShop by Stripes begins here.
 [Version 1.1 - Sugar Glider welcome]
 [6.5]
 
-"Adds a Sweet Tooth (Candy Shop) location populated by a pack of friendly, energetic ferrets."
+"Adds a Sweet Tooth (CandyShop) location populated by a pack of friendly, energetic ferrets."
 
-Section 1 - Candy Shop event
+Section 1 - CandyShop event
 
 CandyShop is a situation. The level of CandyShop is 9.
 The sarea of CandyShop is "Midway".
@@ -17,7 +17,7 @@ when play begins:
 
 Instead of resolving a CandyShop:
 	say "     You are in one of the more permanent sections of the state fair where small shops and booths have been built. Things are a little more peaceful here, giving you a moment to relax and look around. The wild lights and sounds of the fair are more subdued here and you don't spot any crazy creatures running around. In fact, there doesn't seem to be much activity at all.";
-	say "     You carefully start looking around, finding that the buildings have already been broken into and ransacked. The displays are destroyed, the drink fountains drained and sticky messes all over the place. You are about to give up when you hear some jovial laughter coming from a candy shop. Peeking inside, you see it overrun by a pack of small, ferret people. Their fur comes in a variety of soft, pastel colors. Their cute, tubular bodies bounce around playfully as they share the candy they've clearly hoarded from the neighboring shops. When one of them spots you, he smiles and waves in a friendly manner, holding up a pack of red licorice.";
+	say "     You carefully start looking around, finding that the buildings have already been broken into and ransacked. The displays are destroyed, the drink fountains drained and sticky messes all over the place. You are about to give up when you hear some jovial laughter coming from a CandyShop. Peeking inside, you see it overrun by a pack of small, ferret people. Their fur comes in a variety of soft, pastel colors. Their cute, tubular bodies bounce around playfully as they share the candy they've clearly hoarded from the neighboring shops. When one of them spots you, he smiles and waves in a friendly manner, holding up a pack of red licorice.";
 	say "     [bold type]Shall you step inside?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
@@ -41,7 +41,7 @@ Instead of resolving a CandyShop:
 		now sugarferretfight is 3;
 		challenge "Sugar Ferret";
 		if sugarferretfight is 3:
-			say "     Managing to weave between a pair of the ferrets, you dive out the door and make a run from the candy shop. The manic ferrets pursue you briefly, but veer off to raid another of the nearby shops.";
+			say "     Managing to weave between a pair of the ferrets, you dive out the door and make a run from the CandyShop. The manic ferrets pursue you briefly, but veer off to raid another of the nearby shops.";
 		else if sugarferretfight is 1:
 			say "     Aside from those you've dazed, the other colorful ferrets are lustfully fucking all around you. Feeling you only have a moment before those finishing up take notice of you, you grab your pack and stuff a few handfuls of candy into it before rushing out the door.";
 			say "     Snacks (chips) x 2 added to inventory.";
@@ -65,9 +65,13 @@ Instead of resolving a CandyShop:
 				now tail of player is tail entry;
 			now libido of player is ( libido of player + 50 ) / 2;
 			decrease humanity of player by 5;
-		say "     You can now find your way back to the Sweet Tooth candy store, though you'd best wait until the ferrets come off their caffeine buzz before doing so.";
+		say "     You can now find your way back to the Sweet Tooth CandyShop, though you'd best wait until the ferrets come off their caffeine buzz before doing so.";
 		now Sweet Tooth is known;
 		increase ferretvisit by 1;
+		now Resolution of CandyShop is 1; [Went in]
+	else: [Did not go in]
+		say "     You turn your back to the CandyShop, making a mental note never to return.";
+		now Resolution of CandyShop is 2; [Did not go in]
 	now CandyShop is resolved;
 
 
@@ -82,9 +86,9 @@ ferretvisit is a number that varies.
 to say Sweet Tooth scene:
 	if lastcaffeine of Sweet Tooth - turns < 8:
 		if caffeinehigh of player > 0:
-			say "     Swinging by the shops on the fairgrounds, you take a peek in the candy shop. You can see the ferrets inside are still manic with excess energy. The thought that they won't have any cola there for you to get another fix pops into your head. Regardless of any plans you may have had, you turn and go looking for some soda elsewhere to satisfy your cravings.";
+			say "     Swinging by the shops on the fairgrounds, you take a peek in the CandyShop. You can see the ferrets inside are still manic with excess energy. The thought that they won't have any cola there for you to get another fix pops into your head. Regardless of any plans you may have had, you turn and go looking for some soda elsewhere to satisfy your cravings.";
 		else:
-			say "     Swinging by the shops on the fairgrounds, you take a peek in the candy shop. You can see the ferrets inside are still manic with excess energy. You decide it'd be best to not enter right now.";
+			say "     Swinging by the shops on the fairgrounds, you take a peek in the CandyShop. You can see the ferrets inside are still manic with excess energy. You decide it'd be best to not enter right now.";
 	else if ferretvisit is 1:
 		[puts Sugar Ferret as lead monster for impregnation]
 		repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -103,11 +107,11 @@ to say Sweet Tooth scene:
 		now resbypass entry is true;
 		now sugarferretfight is 0;
 		if bodyname of player is "Sugar Glider" or facename of player is "Sugar Glider":
-			say "     Returning to the candy shop, you look inside to find that the ferrets have settled down. Back to their previous, cute selves, they bounce around happily as they share candy with one another. One of them, the yellow fellow from before, spots you looking in and quickly dashes outside. Poinging atop you, he runs his paws over your marsupial form. 'And now you come back to us as one of those candy assed thieves. Did you at least bring us some pop this time?' Before you can respond, you're pulled inside by him and a few of his brethren. 'Come on, let's have a little fun and do a little trading, you sugary scoundrel.'";
+			say "     Returning to the CandyShop, you look inside to find that the ferrets have settled down. Back to their previous, cute selves, they bounce around happily as they share candy with one another. One of them, the yellow fellow from before, spots you looking in and quickly dashes outside. Poinging atop you, he runs his paws over your marsupial form. 'And now you come back to us as one of those candy assed thieves. Did you at least bring us some pop this time?' Before you can respond, you're pulled inside by him and a few of his brethren. 'Come on, let's have a little fun and do a little trading, you sugary scoundrel.'";
 			say "     As they pull you inside in some strange mix of welcoming you and capturing you, the yellow one continues talking. 'We should have done some proper trading to go along with the sweet fun we had, but we got a little over-excited. I just wanted a quick drink, but things got out of hand. Cola just so good that we get a little crazy.'";
 			say "     Once inside, you are kept away from the candy by the ferrets, who run their paws over your body and lick at you playfully. The yellow ferret and a few others snuggle up to you. They chirr happily and teasingly call you names even as they cuddle up to you. 'How about we give this candy thief a proper welcome,' one of the hobs says, which is followed by a chorus of yeah's from the others. When a paw slips between your legs to fondle you, you open your mouth to say something, but a pink jill pushes her muzzle to your lips, kissing you. The sweet taste of her kiss makes you moan and momentarily forget what you were going to say. The soft paws roaming your body help you slip your clothes off. As you're fondled, several of the pastel ferrets take turns kissing you while the others nuzzle and kiss you all over.";
 		else:
-			say "     Returning to the candy shop, you look inside to find that the ferrets have settled down. Back to their previous, cute selves, they bounce around happily as they share candy with one another. One of them, the yellow fellow from before spots you looking in and quickly dashes outside. Taking your hand in his little paws, he starts pulling you towards the shop. 'Oh, we're really sorry about what happened the other day. I just wanted a quick drink, but things got out of hand. Cola just so good that we get a little crazy. But it's okay now.'";
+			say "     Returning to the CandyShop, you look inside to find that the ferrets have settled down. Back to their previous, cute selves, they bounce around happily as they share candy with one another. One of them, the yellow fellow from before spots you looking in and quickly dashes outside. Taking your hand in his little paws, he starts pulling you towards the shop. 'Oh, we're really sorry about what happened the other day. I just wanted a quick drink, but things got out of hand. Cola just so good that we get a little crazy. But it's okay now.'";
 			say "     Following him inside, you are greeted merrily by the rest of the business who give you some happy snuggles and also apologize, promising to be good. Many of them even give you some choice candies as apology gifts. Finding them just so cute, you can't help but accept their apologies and sit down to join them for a bit. 'Yay!' they cheer, poinging around the room in celebration, making you chuckle.";
 			decrease hunger of player by 6;
 			if hunger of player < 0, now hunger of player is 0;
@@ -155,9 +159,9 @@ to say Sweet Tooth scene:
 		else:
 			now sex entry is "Male";
 		if bodyname of player is "Sugar Glider" or facename of player is "Sugar Glider":
-			say "     Back at the Sweet Tooth candy shop, you find that the ferrets have settled down and are back to their cute, playful selves. Seeing a candy-thieving sugar glider come in, several of them pounce atop you, pinning you down. You are held down and tickled by the cute, playful hobs and jills, tossing sugary insults at one another as you squirm and laugh. As their touches turn more erotic, you find a [one of]baby blue[or]pale yellow[or]soft pink[or]light green[or]pale orange[at random] [one of]hob[or]jill[at random] pawing at your groin, and you happily start playing in a more intimate manner with the cute ferrets as nuzzles turn to kisses and ticklings turn to gropings.";
+			say "     Back at the Sweet Tooth CandyShop, you find that the ferrets have settled down and are back to their cute, playful selves. Seeing a candy-thieving sugar glider come in, several of them pounce atop you, pinning you down. You are held down and tickled by the cute, playful hobs and jills, tossing sugary insults at one another as you squirm and laugh. As their touches turn more erotic, you find a [one of]baby blue[or]pale yellow[or]soft pink[or]light green[or]pale orange[at random] [one of]hob[or]jill[at random] pawing at your groin, and you happily start playing in a more intimate manner with the cute ferrets as nuzzles turn to kisses and ticklings turn to gropings.";
 		else:
-			say "     Back at the Sweet Tooth candy shop, you find that the ferrets have settled down and are back to their cute, playful selves. They smile and wave to you as you come in, snuggling up to you in welcome. You sit and enjoy their playful antics, happy to take a break from the stress of the infected world outside. They share some candy with you and you snuggle and scritch several of them. When their touches start to turn more erotic and you find a [one of]baby blue[or]pale yellow[or]soft pink[or]light green[or]pale orange[at random] [one of]hob[or]jill[at random] pawing at your groin, you happily start playing in a more intimate manner with the cute ferrets as nuzzles turn to kisses and pettings turn to gropings.";
+			say "     Back at the Sweet Tooth CandyShop, you find that the ferrets have settled down and are back to their cute, playful selves. They smile and wave to you as you come in, snuggling up to you in welcome. You sit and enjoy their playful antics, happy to take a break from the stress of the infected world outside. They share some candy with you and you snuggle and scritch several of them. When their touches start to turn more erotic and you find a [one of]baby blue[or]pale yellow[or]soft pink[or]light green[or]pale orange[at random] [one of]hob[or]jill[at random] pawing at your groin, you happily start playing in a more intimate manner with the cute ferrets as nuzzles turn to kisses and pettings turn to gropings.";
 		follow the cock descr rule;
 		follow the cunt descr rule;
 		now randomferret is { 1, 2, 3 };
@@ -167,19 +171,19 @@ to say Sweet Tooth scene:
 		if player is female, add 7 to randomferret; [69 w/male]
 		sort randomferret in random order;
 		if entry 1 of randomferret is 1:
-			say "[candyshopsex1]";
+			say "[CandyShopsex1]";
 		else if entry 1 of randomferret is 2:
-			say "[candyshopsex2]";
+			say "[CandyShopsex2]";
 		else if entry 1 of randomferret is 3:
-			say "[candyshopsex3]";
+			say "[CandyShopsex3]";
 		else if entry 1 of randomferret is 4:
-			say "[candyshopsex4]";
+			say "[CandyShopsex4]";
 		else if entry 1 of randomferret is 5:
-			say "[candyshopsex5]";
+			say "[CandyShopsex5]";
 		else if entry 1 of randomferret is 6:
-			say "[candyshopsex6]";
+			say "[CandyShopsex6]";
 		else if entry 1 of randomferret is 7:
-			say "[candyshopsex7]";
+			say "[CandyShopsex7]";
 		if bodyname of player is not "Sugar Ferret":
 			say "     Losing yourself in the lustful fun with the ferrets, you can feel your body changing, becoming more ferret-like once again. You become a short, five foot tall ferret with short limbs, cute paws and a flexible, tube-like body. As you're changing, several of the ferrets around you snuggle and kiss you, clearly pleased to see you looking more like them again. Like you should look, a part of you feels.";
 			now bodyname of player is "Sugar Ferret";
@@ -217,19 +221,19 @@ to say Sweet Tooth scene:
 		remove tempnum from randomferret, if present;
 		sort randomferret in random order;
 		if entry 1 of randomferret is 1:
-			say "[candyshopsex1]";
+			say "[CandyShopsex1]";
 		else if entry 1 of randomferret is 2:
-			say "[candyshopsex2]";
+			say "[CandyShopsex2]";
 		else if entry 1 of randomferret is 3:
-			say "[candyshopsex3]";
+			say "[CandyShopsex3]";
 		else if entry 1 of randomferret is 4:
-			say "[candyshopsex4]";
+			say "[CandyShopsex4]";
 		else if entry 1 of randomferret is 5:
-			say "[candyshopsex5]";
+			say "[CandyShopsex5]";
 		else if entry 1 of randomferret is 6:
-			say "[candyshopsex6]";
+			say "[CandyShopsex6]";
 		else if entry 1 of randomferret is 7:
-			say "[candyshopsex7]";
+			say "[CandyShopsex7]";
 		say "     The wild orgy of ferrety sex goes on like this for some time. Lost in your manic, over-caffeinated state, most of it is hazy, but filled with arousing imagery. The sex is finally broken up as most of the group heads off in search of more cola, moving out in packs to rampage across the fairgrounds in search of more carbonated happiness. With what little clarity of thought you have left, you take this opportunity to leave the ferrets behind. Partially, you want to get your head back on straight, though part of you says to go searching for more soda so you can have it all to yourself.";
 		infect "Sugar Ferret";
 		decrease hunger of player by 6;
@@ -239,7 +243,7 @@ to say Sweet Tooth scene:
 			now thirst of player is 0;
 		LineBreak;
 		increase ferretvisit by 1;
-	say "     With your visit to the Sweet Tooth candy shop over, you head back to the entrance area to the State Fair to decide you next course of action.";
+	say "     With your visit to the Sweet Tooth CandyShop over, you head back to the entrance area to the State Fair to decide you next course of action.";
 	wait for any key;
 
 
@@ -249,35 +253,35 @@ after navigating Sweet Tooth:
 
 Section 3 - Various sex scenes
 
-to say candyshopsex1:
+to say CandyShopsex1:
 	if caffeinehigh of player is 0:
 		say "     As you're playfully tickling down one ferret's belly to get to [one of]his cock[or]her pussy[at random], a well-hung, [one of]sky blue[or]light yellow[or]pastel green[or]lavender[or]salmon[at random] hob moves in behind you, grinding his stiff member against your backside. You moan softly and are momentarily distracted, letting the other ferret get away to pounce on another and start making out with them. You are feeling quite aroused and playful and so decide to let the cute fellow have his fun. You moan softly as he sinks his stiff rod into you, sliding it gently into your [if player is female]wet pussy[else]tight pucker[end if]. The eager hob runs his paws over your body, chirring happily as he pounds away at you before finally sending a nice, hot load deep inside you[if player is not neuter], bringing you to orgasm as well[end if][if player is male]. You blast a thick spray of semen onto the floor as you enjoy the warmth of his seed flowing into your belly[end if].[impregchance]";
 	else:
 		say "     As you're making a grab for a squirming ferret who's trying to reach more soda while you're trying to be more amorous, a well-hung, [one of]sapphire blue[or]golden yellow[or]forest green[or]indigo[or]cardinal red[at random] hob moves in behind you, grinding his stiff member against your backside firmly. You moan and chirr and are momentarily distracted, letting the other ferret get away to grab another drink before making out with the jill they swiped the bottle from. You are quite lustful by this point and so decide to let the cute fellow have his way with you. You moan in pleasure as he sinks his stiff rod into you, sliding it eagerly into your [if player is female]sopping pussy[else]wanton hole[end if]. The eager hob runs his clawed paws over your body, chirring loudly as he pounds away at you before finally sending a thick, heavy load deep inside you[if player is not neuter], bringing you to orgasm as well[end if][if player is male]. You blast a thick spray of semen onto the floor as you enjoy the warmth of his seed flowing into your belly[end if].[impregchance]";
 	now tempnum is 1;
 
-to say candyshopsex2:
+to say CandyShopsex2:
 	if caffeinehigh of player is 0:
 		say "     Playfully tickling down one ferret's belly, your hand drifts down to their sheath and balls, rubbing over them as his swelling cock begins to emerge. The [one of]coral[or]periwinkle[or]jasmine[or]light green[or]pale purple[at random] hob chirrs and smiles, moving closer as you lower your head between his legs to start licking his leaking shaft. Soon enough, he's fully hard and you've got his cock stuffed in your mouth, sucking him to a moaning climax that feeds you a sweet treat of sugar ferret cum.";
 	else:
 		say "     Managing to grab one of the ferrets as he tries to reach more soda, you roll him onto his back and take hold of the [one of]violet[or]pumpkin[or]carmine[or]chartreuse[or]amber[or]azure[at random] hob's stiff cock. You rub his shaft and balls as you roll him over onto his back and bury your face between his legs to start licking his leaking shaft. Soon enough, he's fully hard and you've got his cock stuffed in your mouth, sucking him to a moaning climax that feeds you a sweet load of sugar ferret cum.";
 	now tempnum is 2;
 
-to say candyshopsex3:
+to say CandyShopsex3:
 	if caffeinehigh of player is 0:
 		say "     Playfully tickling down one ferret's belly, your hand drifts down to her pussy, rubbing over her soft folds as she grows wet and excited. The [one of]cornflower[or]apricot[or]pale green[or]carnation pink[or]soft purple[at random] jill moans in pleasure and rolls onto her back with her legs spread, offering her wet pussy to your approaching tongue. She is wet and sweet, a delicious treat to lick. You eagerly lap up her flower's nectar as she chirrs with delight, eventually driving her to a climax that sends a spray of sugary female cum across your face as she cries out in orgasm.";
 	else:
 		say "     Managing to grab one of the ferrets as she tries to reach more soda, you roll her onto her back and hold her legs raised and spread, putting her swollen and dripping cunt on display for you. You lick your lips at the sight of the [one of]hot pink[or]violet[or]grass green[or]tangerine[or]neon yellow[at random] jill's sopping puss and bury your face into her groin, diving your tongue into it. Her juices are sweet and delicious, a wonderful treat for a sugar junkie ferret like you're becoming. You lustfully pump your tongue into her cunt and tease her clit as she chirrs with delight and claws at the floor. You eventually drive her to a climax that sends a large spray of sugary, female cum across your face and dripping back down onto her brightly colored fur as she cries out in orgasm.";
 	now tempnum is 3;
 
-to say candyshopsex4:
+to say CandyShopsex4:
 	if caffeinehigh of player is 0:
 		say "     Playfully tickling down one ferret's belly, your hand drifts down to her pussy, rubbing over her soft folds as she grows wet and excited. The [one of]cornflower[or]apricot[or]pale green[or]carnation pink[or]soft purple[at random] jill moans in pleasure and rolls onto all fours and raises her tail, presenting her wet pussy for your approaching cock. She soft and stretchy, snugly gripping your [cock size desc of player] [cock of player] shaft wonderfully. With one hand on her back and the other holding her long tail against your chest, you eagerly fuck her sweet, juicy pussy. She moans and chirrs in delight, moaning loudly when you finally thrust deep inside her and unleash your load.";
 	else:
 		say "     Managing to grab one of the ferrets as she tries to reach more soda, you roll her onto all fours and hold her tail raised, putting her swollen and dripping cunt on display for you. You lick your lips at the sight of the [one of]hot pink[or]violet[or]grass green[or]tangerine[or]neon yellow[at random] jill's sopping puss and pull her hips to yours, driving your throbbing meat into it. You lustfully pound your [cock size desc of player] [cock of player] shaft into her as her vagina stretches and squeezes around it wonderfully. With one hand on her back and the other holding her long tail against your chest, you eagerly pound her dripping, quivering pussy. You push her to several orgasms before chirring loudly when you finally thrust deep inside her and unleash your load.";
 	now tempnum is 4;
 
-to say candyshopsex5:
+to say CandyShopsex5:
 	if caffeinehigh of player is 0:
 		say "     Playfully tickling down one ferret's belly, your hand drifts down to their sheath and balls, rubbing over them as his swelling cock begins to emerge. Spotting your hard erection, he moves his paws to it eagerly and starts stroking you in return. Having found yourself a cute [one of]lavender pink[or]powder blue[or]pastel yellow[or]honeydew green[or]lilac[at random] hob to play with and your own shaft quite hard, would you rather mount him (Y) or get a blow job (N)?";
 		if player consents:
@@ -292,14 +296,14 @@ to say candyshopsex5:
 			say "     Taking the over-excited hob's head in your paws, you press your cock to his lips and chirr as his muzzle slides down over it. His tongue works you eagerly, slathering over you lustfully for your sweet seed. His sharp teeth graze across your sensitive flesh in a clearly practiced manner, as their touch is enough to excite you, but not hurt you. You rub his ears and keep his head pressed to your groin, pounding into his muzzle, much to his obvious delight. You slip a paw down between his legs to fondle his throbbing shaft, finding it dribbling sweet-smelling precum down over his sheath and balls. As his muzzle works your cock to climax and you send your hot seed down his throat, his meat pulses in your hand and blasts his sugary sweet load, which you then eagerly lick from your fingers.";
 	now tempnum is 5;
 
-to say candyshopsex6:
+to say CandyShopsex6:
 	if caffeinehigh of player is 0:
 		say "     As you're looking for someone to play with, you find yourself tackled by a pair of cute hobs. The first has [one of]light red[or]pastel blue[or]pale yellow[or]pear colored[cycling] fur and the other is a [one of]pale green[or]light orange[or]powder purple[or]light rose[cycling] coloration. You can't help but laugh as the playful pair nuzzle and kiss you as they move you onto all fours. They then start taking turns, each making a few thrusts into your pussy before letting the other have a turn. You moan in pleasure at this, quickly growing excited as the two friends share you. You get a wonderfully fulfilling fucking from the pair of complementary hobs and eventually have your cunt stuffed with one sweet load that is soon followed by another, making you feel delightfully hot and creamy inside.[impregchance][impregchance]";
 	else:
 		say "     Moaning lustfully, you finger your wet slit and raise your tail, clearly seeking a male to fill you. A pair of horny hobs advance upon you together, pushing you to the ground and running their paws over your body. You moan lustfully and let them move you into position. You end up with the [one of]electric lime[or]bright yellow[or]navy blue[or]flame red[or]cerise[or]royal purple[or]orange[or]neon green[cycling] one beneath you and the [one of]cerise[or]royal purple[or]orange[or]neon green[or]electric lime[or]bright yellow[or]navy blue[or]candy apple red[cycling] one moving overtop of you. As your hips are pushed down, you find your pussy stretched open to take the complementary pair at once. Their two cocks stuff you nicely as they buck their hips in unison, giving you a much more thorough fucking than even the most endowed male here could give you. You are reduced to moaning and chirring as your cunt is pounded into until you receive the dual blast of their hot and heavy loads to stuff your wanton womb.[impregchance][impregchance]";
 	now tempnum is 6;
 
-to say candyshopsex7:
+to say CandyShopsex7:
 	if caffeinehigh of player is 0:
 		say "     As you're looking for someone to play with, you feel a pair of soft paws behind you, soon followed by a sniffing muzzle that moves in on your wet snatch. Looking back, you spot a [one of]celadon[or]light blue[or]peach[or]cream[or]thistle[at random] colored young hob starting to lick at your folds. You moan in pleasure and reach back, scritching his ears and coaxing him to move back for a moment so you can get onto your back. Once you're comfortable, he moves atop you into a 69 position and dives back in, his eager tongue lapping at your sensitive pussy and diving in to drink your feminine juices. You knead his backside and guide his leaking cock to your muzzle. You lick, kiss and suck one another to a wonderful climax that leaves you both wet and sticky with sweet cum.";
 	else:
@@ -397,4 +401,4 @@ Definition: a person is sugartailed:
 
 
 
-Candy Shop ends here.
+CandyShop ends here.

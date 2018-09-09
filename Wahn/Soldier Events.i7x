@@ -27,7 +27,7 @@ Instead of resolving a Soldier Squad:
 		say "     Over the next hour or so, Davies the husky is fucked and bred at least twice by all of them, until the squad of soldiers comes to rest in a rather sticky and exhausted pile on their cast-off clothing. The guy who took her newly transformed virginity remarks 'When it's time to go back and report in, let me speak to the captain. If I can get him out alone and he gets a turn on Davies, he'll surely allow us to keep her as the unit's mascot...";
 		increase score by 10;
 		now SquadEncounters is 1;
-		now battleground is "void";
+		now Resolution of Soldier Squad is 1; [saw the first event]
 	else if SquadEncounters is 1:
 		say "     While exploring out in the city, you come to a lower class housing area at the edge of the warehouse district. Seems rather abandoned and many of the windows are broken, but there might be someth- a sudden noise makes you whirl around and listen. Footsteps on shards of glass. Seems someone or something is coming closer just around the corner. Knowing it's not likely to be something good, you hide in the entrance of the building behind you. A moment later, two soldiers come into sight, passing you by without noticing you.";
 		WaitLineBreak;
@@ -41,7 +41,7 @@ Instead of resolving a Soldier Squad:
 		say "     You spend quite some time outside that window, watching the three men take turns banging the female husky inside[if player is not neuter]. Your own fondling brings you to a climax more than once[else]. You accidentally make a little noise while shifting to get a better view when the other two move in to share her muzzle[end if], the inevitable moans thankfully overshadowed by the pants and whimpers of Davies the husky, so the men don't notice you. At some point, you reluctantly snap yourself out of the thrill of watching them and get back to survival in the city[if player is male], leaving behind your splatters of cum on the wall under the window[else if player is female], leaving behind the small puddle of femcum you dripped onto the ground before the window[end if].";
 		increase score by 10;
 		now SquadEncounters is 2;
-		now battleground is "void";
+		now Resolution of Soldier Squad is 2; [saw the second event]
 	else if SquadEncounters is 2:
 		say "     Passing through the neighborhood where you last saw several members of that soldier squad from before and their husky bitch Davies, you decide to check the building out again. Hopefully they'll still be there...";
 		WaitLineBreak;
@@ -68,10 +68,12 @@ Instead of resolving a Soldier Squad:
 				say "     After finishing with you, the German Shepherd turns to your husky companion. Having followed everything that happened, she's pretty excited, standing there on all fours and squirming a bit as female juices drip from her pussy. Virgin as she is, she hasn't yet realized that she can stroke herself with her paw-hands. The male dog-morph gets behind the husky, leaning over her and reaching around to fondle her four breasts. Grinning, he says to you 'A fine bitch you have here - no, had. She's mine now!'";
 				say "     With that, he thrusts forward, burying his erection in her body with one swift move. Feeling the virgin's hymen break and hearing her pained yip at losing her cherry, the shepherd laughs. 'And a virgin too - this is just too great. Let's knock you up, girlie... make your first time memorable with a litter of my pups.' You can only helplessly watch the dog fuck her like a wild animal until he knots in her and starts filling her with his seed. A look of pure bliss comes over the young husky and she moans as his sperm impregnates her for the very first time. Accompanied by the mocking laughter of the German Shepherd still tied to his new bitch, you slink away in defeat.";
 				now HP of Amy is 100;   [removed from game]
+				now Resolution of Soldier Squad is 3; [tried to take Amy, lost her]
 				remove Amy from play;
 			else if fightoutcome >= 30: [fled]
 				say "     Fleeing from combat with the German Shepherd, you run off without looking back. The dog-morph shouts after you 'You better run, coward. Not even man enough to lose properly. Guess I'll have to make do with your girlie...' Sliding to a halt around the next corner, you realize the husky didn't come with you when you fled. Oh damn - the thought of going back goes through your mind, then gets interrupted by a dog's yip from the way you came, signifying that your former opponent just took the girl's virginity. Too late now to do anything, you start walking away again...";
 				now HP of Amy is 100;   [removed from game]
+				now Resolution of Soldier Squad is 3; [tried to take Amy, lost her]
 				remove Amy from play;
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 				say "     Having defeated the German Shepherd, you turn to your husky and start telling her she has to be more careful with strangers and that - unlike you - most of them are not nice people. Then a large shadow falls over you two - seems your little fight attracted the attention of a wyvern!";
@@ -79,10 +81,12 @@ Instead of resolving a Soldier Squad:
 				if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 					say "     After 'hatching' from the wyvern goop egg, you look around, but there's no sign of your husky companion. Looks like her egg was laid somewhere else or is still inside the wyvern...";
 					now HP of Amy is 100;   [removed from game]
+					now Resolution of Soldier Squad is 3; [tried to take Amy, lost her]
 					remove Amy from play;
 				else if fightoutcome >= 30: [fled]
 					say "     Fleeing from combat with the wyvern, you run off without looking back. Looks like you got away clean and... sliding to a halt around the next corner, you suddenly realize the husky didn't come with you when you fled. Oh damn - you look back around the corner of the building and see the husky being covered in wyvern goop, which hardens to a hard shell around her. Then the wyvern stuffs the 'egg' into her massive vagina and flies off. You're pretty sure you won't be seeing that young woman again - at least not in any shape you'd recognize...";
 					now HP of Amy is 100;   [removed from game]
+					now Resolution of Soldier Squad is 3; [tried to take Amy, lost her]
 					remove Amy from play;
 				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 					say "     Having gotten away from the wyvern, you keep a closer eye on your husky companion and bring her to the Grey Abbey Library safely. She's still pretty wound up from all the excitement and the new things all around her, and soon knocks over a smaller bookshelf in the entrance area as she's trying to climb up and sniff the books on the top board. Luckily, she can jump off before it crashes down, but she's still rather frightened at almost having a piece of furniture fall on her. You put an arm around the female husky and stroke her hair. 'Calm down, girl - you have to be a bit more careful, ok?' She nods, saying 'I will, I promise.', then rubs the side of her head against your chest.";
@@ -92,9 +96,11 @@ Instead of resolving a Soldier Squad:
 					now HP of Amy is 1;  [in the library, child-like]
 					now AmyMaturityCounter is 24;
 					now lastAmySpotted is turns + 3;
+					now Resolution of Soldier Squad is 4; [took Amy]
 					now lastfuck of Amy is turns;
 		else if calcnumber is 2:[talk]
 			say "     'Hello there.' *She licks over your face and sniffs you.* 'Can you talk?' To that, she turns her head a bit, thinking, then replies '...talk? I haven't before, but I guess I can. You smell nice.' *Her tail wags and she smiles at you.* 'Listen, you should get back in the room there and stay with your mother, ok? And don't tell anyone you saw me, ok?' Unquestioningly accepting your orders, the young canine woman nods, then lets herself be helped back through the window. The last you see of her is her bushy tail, wagging happily at doing what you want. Time to get out of here for now...";
+			now Resolution of Soldier Squad is 5; [talked to Amy, put her back]
 			now HP of Amy is 90;  [she's back in the room]
 		else if calcnumber is 3:[fuck her]
 			say "     'Hello there.' *She licks over your face and sniffs you.* 'Can you talk?' To that, she turns her head a bit, thinking, then replies '...talk? I haven't before, but I guess I can. You smell nice.' *Her tail wags and she smiles at you.* Petting her head with one hand, you stroke over her fur with the other, feeling her feminine curves. 'You're a good dog, aren't you? A beautiful little bitch who does what she's told.' Finding you looking into her face expectantly, she hesitantly replies '...yes?' A grin on your face, you move your hands to her four breasts. 'Wonderful. You know, dogs are meant to follow their master's orders.' Her breathing deepens and a sigh escapes her lips as you start fondling her nipples, rubbing your fingers slowly around them. Then you move a hand down to her crotch and start stroking over her sensitive pussy lips, making her gasp at the feelings suddenly coursing through her body. Pushing two fingers inside her until they bump against her hymen and rubbing her clit is enough to soon give her her first climax.";
@@ -103,9 +109,11 @@ Instead of resolving a Soldier Squad:
 				say "     As the husky rides out her orgasm, you quickly take off your clothes and use the femcum dripping from her pussy to lube up your already hard [cock of player] shaft. 'I got something even better for you now...' you tell the husky, then turn her around and make her raise her arms to hold on to the windowsill. Stepping up behind her, you rub your erect manhood up and down over her crotch, then put it between her pussy lips and press forward. The tip of your shaft poking against her fleshy barrier, you lean forward and fondle her breasts, then put a hand over her mouth, saying 'You're almost a woman now... this'll hurt just a moment.' Then you pull back a bit and thrust into her, hard, taking her virginity. She does a pained yip, muffled through your hand, then soon starts moaning as you fuck into her. Such a nice feeling to be the first to explore this juicy cunt. Eager to fill her up with your seed, you fuck her fast and hard and soon feel a familiar urge rise in your balls. Burying your [cock of player] shaft inside her pussy[if cock length of player > 10] until it pushes against her cervix[end if], you give a satisfied moan and shoot string after string of cum deep into her body. ";
 				LineBreak;
 			say "     Satisfied, you tell the canine woman 'Listen, you should get back in the room there and stay with your mother. And don't tell anyone you saw me, ok?' Unquestioningly accepting your orders, the young husky nods, then lets herself be helped back through the window. The last you see of her is her bushy tail, wagging happily at doing what you want. Time to get out of here for now...";
+			now Resolution of Soldier Squad is 6; [fucked Amy, put her back]
 			now HP of Amy is 91;  [she's back in the room, no longer virgin]
 		else if calcnumber is 4:[run away]
 			say "     Just wanting to get out of the situation, you take your legs under your arms and run. Though with dog's inborn urges being what they are, the husky follows after you, taking you up on a playful hunt. It's several blocks before you can shake her - not so much because you're faster, but rather a gargoyle suddenly lunging out of the alley you just passed and pulling the dog-morph inside. Judging from the yips, grunts and moans coming from the alley soon, you don't think you'll see the husky again - at least not in a shape you recognize.";
+			now Resolution of Soldier Squad is 7; [ran from Amy]
 			now HP of Amy is 100;   [removed from game]
 			remove Amy from play;
 		increase score by 10;
@@ -153,7 +161,7 @@ Instead of resolving a Soldier Squad:
 			say "     The two of them now lying down together on the mattresses, exhausted, the thrilling show is over - for now. Time to get back to survival in the city, you tell yourself, making your way back to one of the larger streets and leaving the soldier and his breeding bitch behind.";
 			increase score by 10;
 			now SquadEncounters is 4;
-		now battleground is "void";
+		now Resolution of Soldier Squad is 8; [saw post-Amy aftermath]
 	else if SquadEncounters is 4:
 		say "     Passing through the neighborhood where you last saw Allen, the leader of that soldier squad from before and his husky bitch Davies, you decide to check the building out again. Hopefully someone will still be there...";
 		WaitLineBreak;
@@ -186,7 +194,7 @@ Instead of resolving a Soldier Squad:
 			LineBreak;
 			say "     With all of them now lying down together on the mattresses, exhausted, the thrilling show is over - for now. Time to get back to survival in the city, you tell yourself, making your way back to one of the larger streets and leaving Allen the alpha husky and his new pack behind.";
 		now SquadEncounters is 5;
-		now battleground is "void";
+		now Resolution of Soldier Squad is 9; [saw Carl be turned]
 	else if SquadEncounters is 5:
 		say "     Passing through the neighborhood where you last saw Allen, the newly minted alpha husky and his bitch Davies, you decide to check the building out again. Hopefully someone will still be there...";
 		WaitLineBreak;
@@ -209,10 +217,12 @@ Instead of resolving a Soldier Squad:
 				now CarlLibraryEntry is turns;
 				move Carl to Grey Abbey 2F;
 				move player to Grey Abbey 2F;
+				now Resolution of Soldier Squad is 9; [helped Carl, recruited]
 			else:
 				LineBreak;
 				say "     Shaking your head, you tell Carl that it'd be best if he went his own way. His wagging tail freezes and then dips as he takes in your rejection. After a sad and disappointed nod, he hurries off, jogging along the street before vanishing down a side alley.";
 				now HP of Carl is 50;  [sent away on his own]
+				now Resolution of Soldier Squad is 10; [helped Carl, sent away]
 		else:
 			say "     Do you want to watch what happens to him instead? ";
 			if player consents:
@@ -222,12 +232,14 @@ Instead of resolving a Soldier Squad:
 				WaitLineBreak;
 				say "     Allen gives a laugh as he looks down on his former comrade, then pushes his upper body down while holding his hips with the other hand. 'Does it feel good to have all my cum inside you, with my knot sealing it in? You horny bitches love that, don't you?' he asks, with Carl panting 'Yes, alpha.' in response. You wait a few minutes but there's just more of the alpha husky debasing his newly submissive beta and waiting for his knot to go down so they can separate.";
 				say "     Seems like the show is over, so you leave the street with the two male huskies behind, making your way out of the hiding spot without being seen.";
+				now Resolution of Soldier Squad is 11; [abandoned Carl, watched]
 			else:
 				say "     As the transformed soldier doesn't concern you too much, you just walk deeper into the space between the two buildings. After a moment, there are some barks and grunts audible from far behind you as you, but you just keep going, soon coming out in a small street on the other side. With a shrug, you vanish back into the city streets, leaving Carl the husky behind to his unknown fate.";
+				now Resolution of Soldier Squad is 12; [abandoned Carl, not watched]
 			now HP of Carl is 90;  [taken by Allen]
 		now SquadEncounters is 6;
 		now battleground is "void";
-		Now Soldier Squad is resolved;  [for now]
+		now Soldier Squad is resolved;  [for now]
 
 Human Urges is a situation.
 The sarea of Human Urges is "Red".
@@ -273,8 +285,10 @@ Instead of resolving a Soldiers & Snowmeows:
 			challenge "Snow Leopard";
 			if fightoutcome >= 20 and fightoutcome <= 29:[lost]
 				say "     As you fall to your knees in surrender, the big feline forces you to suck on his rock-hard cock, making you taste and swallow his precum before returning to the dazed and transforming soldier. Forgetting about you for the moment as he plays with his new sex toy, you manage to slip away as the soon fully transformed female snow leopard is mounted and bred.";
+				now Resolution of Soldiers & Snowmeows is 5; [player lost]
 			else if fightoutcome >= 30:[fled]
 				say "     Sprinting away seems prudent at this point, and the sudden decision to flee startles the snowcat. Rather than chase you as prey, he returns to the easy sexual conquest of the changing soldier, letting you slink back way into the shadows of a nearby alleyway.";
+				now Resolution of Soldiers & Snowmeows is 4; [player fled]
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 				say "     Dropping the bruised snow leopard with a last swing, you then turn to his victim. As you look at the soldier's feline face, you realize that it's much too late to save his humanity. His body is now fully gray furred with the typical spotted pattern of a snow leopard, and the eyes have already turned a shade of purple and seem lost in infectious lust. As you watch, two mounds push out against the fabric of his khaki shirt, topped by two hard, dark nipples that show clearly through the thin material. Between his spread thighs, a long jet of semen covers the pavement, tapering into a growing pool of clear vaginal juice that now drips from the soldier's new female opening. You watch as his buzz-cut blond hair lengthens, growing long and white-gray down his back, until no sign of the male form remains.";
 				if bodyname of player is "Snow Leopard" and player is pure and player is male:
@@ -289,22 +303,27 @@ Instead of resolving a Soldiers & Snowmeows:
 						say "     Lying on the ground for a while in post-coital contentment, you listen to the female's breathing slow down and become more regular as she winds down from her own state of arousal. Then suddenly, she gasps and sits up, looking down on you in panic. Wide-eyed and sputtering 'I... you did... we -', she realizes in shock that she acted just like an animal in heat. That she could be so strongly ruled by desires and instincts frightens her and she panics, snatching up her uniform parts from the ground and running away with them clutched to her chest.";
 						decrease humanity of player by 5;
 						now SnowmeowSoldierStatus is 2;
+						now Resolution of Soldiers & Snowmeows is 1; [snow leopard player fucked her]
 					else:
 						LineBreak;
 						say "     Shaking your head to clear your mind, you force yourself to let go of the female snow leopard and step back from her, determined not to let animal instincts dominate your behavior. The former soldier looks at you with a surprised expression, a bit lost now that you've derailed what her body was telling her would happen next. She pants in her undiminished arousal, then turns and runs, dashing off to find a male who will give her what she so urgently needs.";
 						increase humanity of player by 5;
 						if humanity of player > 100, now humanity of player is 100;
+						now Resolution of Soldiers & Snowmeows is 2; [snow leopard player didn't fuck]
 				else:
 					say "     Glancing up at you, the newly female snow feline panics and dashes off, quickly losing you in the winding alleys of the city. With a sigh, you let her go.";
+					now Resolution of Soldiers & Snowmeows is 3; [she ran off]
 		else:
 			say "     Do you want to watch instead ([link]Y[as]y[end link]), or just leave ([link]N[as]n[end link])?";
 			if player consents:
 				LineBreak;
 				say "     You just stand back, observing as the snow leopard pounds his captive's ass with rapid thrusts. Leaning forward, he wraps his arms around the soldier's chest and feels him up, purring loudly as twin mounts of breasts form under his paw-hands. With a lust-filled growl, the male feline then pulls out and turns the newly female soldier over, then plunges his hard shaft into her pussy, unconcerned about the pained mewl as he takes her virginity. What follows is a totally uncontrolled animalistic mating, both of them panting and moaning loudly as they grind their hips against each other. Eventually, the snow leopard gives a satisfied grunt and starts purring, his whole body shivering slightly with spurt after spurt of feline seed he's depositing in the female's womb.";
 				say "     With the show over, you silently walk away, not wanting to get noticed by the leopard as a possible second round.";
+				now Resolution of Soldiers & Snowmeows is 6; [just watched]
 			else:
 				LineBreak;
 				say "     Leaving the two to their mating, you manage to sneak away without being seen.";
+				now Resolution of Soldiers & Snowmeows is 7; [left them]
 	else if SnowmeowSoldierStatus is 1 or SnowmeowSoldierStatus is 2:
 		say "     You're a bit surprised when you spot a lone soldier making his way through the streets. Don't they teach basic safety in military schools anymore? Safety in numbers! Curious as to what he's doing out here alone, you trail the guy as he nears a storefront, one of the few that still has most of the windows intact. Following him inside, you realize you've stepped into a small clothing store. Clothes racks and a few (thankfully) unmoving mannequins decorate the floor, while mirrors and shelves filled with perfumes and small trinkets define the walls, making the store feel much larger inside.";
 		say "     The soldier calls out as he moves cautiously towards the back of the store. 'Bob? Is that you?' 'Hi Lee', answers a soft, very feminine voice. Quietly sneaking around the racks, you spot the snowmeow soldier you encountered [if SnowmeowSoldierStatus is 2]and fucked [end if]earlier. Seems like she's retained at least some of her humanity. Standing upright, she's bound her long white-gray hair up into a ponytail atop her head and has picked out a matching set of bra and panties to wear, yellow satin and lace, with a matching pair of nylons that she's somehow managed to slide up her legs.";
@@ -323,11 +342,12 @@ Instead of resolving a Soldiers & Snowmeows:
 			WaitLineBreak;
 			say "     Not having much choice otherwise, as fighting off all those horny felines doesn't seem to be a good idea right now, you duck out of the rack of coats and sneak towards the door, crouched down so that no one will notice you. Thankfully, even those gathering up the clothes have most of their attention on the women, heads turned to watch them in anticipation, and you manage to make it outside without any problem. As the store door closes behind you and the sounds of feline sex are cut off, you relax your guard and start moving away - only to run into another of the big cats coming late for the fun.";
 			challenge "Snow Leopard";
+			now Resolution of Soldiers & Snowmeows is 8; [watched the reunion]
 		else:
 			say "     Silently stepping out of the store, you leave the two of them to do what they will.";
+			now Resolution of Soldiers & Snowmeows is 9; [left reunion]
 		now SnowmeowSoldierStatus is 3;
 		now Soldiers & Snowmeows is resolved;  [for now]
-	now battleground is "void";
 
 Dangerous Load is a situation.
 The sarea of Dangerous Load is "Outside".
@@ -367,9 +387,11 @@ Instead of resolving a Dangerous Load:
 			say "     You have little doubt that he'll keep fucking him, all the way until they are both minotaurs and beyond. Left behind after the conclusion of their coupling, you check over the scene of broken gear and ripped clothing. Salvaging what you can, you carry off two MREs and an army helmet that might just be useful for protecting you.";
 			increase carried of food by 2;
 			increase carried of combat helmet by 1;
+			now Resolution of Dangerous Load is 1; [kicked the booster away, watched them fuck]
 		else: [nope]
 			LineBreak;
 			say "     Not in the mood to watch the results of your choice earlier, you snatch a dropped MRE, then get going, quickly ducking out of sight around the corner. Behind you, lusty bellows and shocked gasps echo through the streets until you're a block or two distant.";
+			now Resolution of Dangerous Load is 2; [kicked the booster away, didn't watch them fuck]
 	else: [stop the transformation]
 		LineBreak;
 		say "     Proving cool under pressure, you grab the little cylinder from the ground and give it a skillful throw - sending it sailing through the air in what seems like slow motion, to be successfully caught by corporal Shaw. He literally rips the protective cap off its end and rams the injector into a still growing pec on his fellow soldier - whose transformation slows down rapidly, then stops fully. As soon as his muscles aren't under high tension anymore, private Kerry collapses with a groan. For a moment, nothing can be heard but the breathless panting of everyone involved as your bodies come down from all the excitement again.";
@@ -382,7 +404,7 @@ Instead of resolving a Dangerous Load:
 		say "     The two soldiers gather their stuff, faces red with embarrassment, then talk with one another in quiet murmurs for a moment. Finally, private Kerry approaches you a bit shyly. 'Um, I gotta thank you for what you did. Helping me stop - you know... transforming. So. Here, take this - I can't wear it anyways now.' With that, he hands you his army helmet, as well as two MREs. The soldiers then march off, clearly not wanting to talk about what happened here.";
 		increase carried of food by 2;
 		increase carried of combat helmet by 1;
-	now battleground is "void";
+		now Resolution of Dangerous Load is 3; [stopped the transformation]
 	now Dangerous Load is resolved;
 
 Lone Soldier is a situation.
@@ -423,6 +445,7 @@ Instead of resolving a Lone Soldier:
 			say "     Monty holds out a MRE and water bottle for you, nodding in a friendly way as you accept the items from him. Then he pats your shoulder again and says, 'Okay then, I think it's time to get going - make use of that quiet area you mentioned to get as far as I can. You watch out for yourself, alright? Maybe what I'm... er, 'carrying' will help with a cure and all. That's what the furry dude in the lab-coat said at least.' With that, he marches off in the direction you came from, quickly turning around the nearby corner and moving out of sight.";
 			increase carried of food by 1;
 			increase carried of water bottle by 1;
+			now Resolution of Lone Soldier is 4; [told Monty the truth]
 		else: [watch him strip]
 			LineBreak;
 			if graphics is true:
@@ -438,6 +461,7 @@ Instead of resolving a Lone Soldier:
 				say "     'Thanks for... checking up on me. Even if you got a bit grope-happy in between.' The bald-shaven man looks at you and then gives a little snort, pulling the backpack from over his shoulder. 'Guess I should give you a proper thanks, not just a wet handshake, eh? Here, take this.' Monty holds out a MRE and water bottle for you, nodding in a friendly way as you accept the items from him. Then he pats your shoulder again and says, 'Okay then, I think it's time to get going - make use of that quiet area you mentioned to get as far as I can. You watch out for yourself, alright? Maybe what I'm... er, 'carrying' will help with a cure and all. That's what the furry dude in the lab-coat said at least.' With that, he marches off in the direction you came from, quickly turning around the nearby corner and moving out of sight.";
 				increase carried of food by 1;
 				increase carried of water bottle by 1;
+				now Resolution of Lone Soldier is 3; [touched Monty's plug]
 			else: [pull it out]
 				LineBreak;
 				say "     Sliding your fingers between the smooth-skinned buttocks of this handsome soldier, you take hold of the plug's rim, then start pulling - first softly, then with a bit more force. Monty must be pretty tight to have this thing wedged in so strongly. The black man gasps at having someone suddenly tug at his insides, then lets out a deep moan before he can catch himself and start saying, 'Hey! What are -' The rest of his sentence is swallowed by a groan as his pucker finally relents, allowing the sex toy through with a slurping noise. What you now hold in your hand is a beginner's level butt plug, the gem at the end being connected to the egg-shaped main body of the toy by an inch-long smooth metal shaft. With it, a gush of creamy white cum squirts out of the soldier's asshole, dripping down in lines and gobs.";
@@ -453,6 +477,7 @@ Instead of resolving a Lone Soldier:
 					WaitLineBreak;
 					say "     Monty lets out a deep breath, then shrugs and feels over his upper buttocks and the small of his back with a hand still wet with cum. 'I take it that fur I felt was just a false alarm, huh? Listen, I'm not even mad... guess that's what I get for trusting even a relatively friendly person exposed to these damned nanites!' The two of you stand next to each other silently for a few seconds, then you clear your throat and ask what creature came so much in him anyways. Monty swallows visibly and you're sure he would be blushing bright red if not for his dark skin color. 'It's... a minotaur, okay? Ten feet tall and built like a tank. My turn came up and... you know, I did my duty. Carried the stuff all the way here, still warm inside me.'";
 					say "     The black soldier grimaces as he glances down at the big puddle once more, then turns his attention back to you, his expression wavering a little between friendly and annoyed. 'But now, thanks to a certain someone's grabby hands - I gotta go back. So... thanks for the help with those two anyway.' With that, the human gives your shoulder a friendly bump with his fist, then says his goodbyes and walks back the way he came from, soon vanishing from sight around a corner.";
+					now Resolution of Lone Soldier is 2; [unplugged Monty, watched him leak]
 				else: [eat him out]
 					LineBreak;
 					say "     Bending your legs, you take hold of Monty's well-rounded buttocks, spreading them apart some more. As he reacts and grabs for your hands, you bury your face between his cheeks, licking and sucking at the soldier's cream-filled hole. He stiffens at the sensation of being licked in such an unfamiliar spot, his strong fingers still halfway closed around yours to push you away - but somehow, he never does so. Instead, you draw a deep moan from the muscular man, followed by the groan, 'Oh fuck - that feels great. Eat my ass! YEAH!' A moment later, he lets go of your hands, instead bringing his own to his crotch. While you slurp the creamy cum out of his asshole, Monty proceeds to jerk off his respectably big shaft, with the other hand cupping and fondling his balls.";
@@ -462,11 +487,12 @@ Instead of resolving a Lone Soldier:
 					say "     The black soldier grimaces as he glances down at the big puddle once more, then turns his attention back to you, his expression wavering a little between friendly and annoyed. 'But now, thanks to a certain someone's grabby hands - I gotta go back. So... thanks for the help with those two anyway.' With that, the human gives your shoulder a friendly bump with his fist, then gets dressed. Soon he's off back the way he came from, vanishing from sight around a corner.";
 					PlayerEat 5;
 					PlayerDrink 5;
+					now Resolution of Lone Soldier is 1; [ate Monty out]
 	else: [don't warn him]
 		LineBreak;
 		say "     The hyena pounces on the black soldier from behind, clawed hands leaving bloody grooves in his skin as she digs her fingers into his shoulders and wraps her legs around his waist. But contrary to what she seems to have expected, he isn't forced against the wall - instead, the man braces against the impact by tensing his muscular arms, stopping that part of the attack cold. Still, he's got an aggressive hyena hanging on his back now, clawing and trying to bite... so the guy does another unexpected thing - he grabs hold of her and keeps the hyena from letting go, then throws himself against the wall backwards. The impact drives the air out of his attacker's lungs, as does the next, and the next - and while the soldier does get clawed up a bit more, soon the hyena passes out and falls off his back, landing in a heap on her unconscious companion.";
 		say "     Gasping for breath and bruised, the soldier stumbles away from the beaten hyenas, then braces himself against a dumpster to compose himself. After a short moment, he looks back to his attackers, nodding to himself that they're no longer a threat. Then the man suddenly turns his head and looks right in your direction! He must have caught a glimpse of movement from you in the corner of his eye. 'Fuck, another savage!' he swears loudly and clenches his fist - but only for a second before he winces and looks down at his bruised knuckles. Fist-fights against anthro animals sure are hard on a guy and even with the ever-present nanites, it'll take some moments before he heals... so the soldier chooses retreat over an uncertain fight. Without another word, he starts to run for the other end of the alley, leaving you far behind in mere moments. Then he's gone around the far corner, out of sight.";
-	now battleground is "void";
+		now Resolution of Lone Soldier is 5; [didn't warn Monty]
 	now Lone Soldier is resolved;
 
 Containment Barrier is a situation.

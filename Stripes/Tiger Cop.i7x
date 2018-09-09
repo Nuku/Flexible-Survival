@@ -4,8 +4,6 @@ Version 4 of Tiger Cop by Stripes begins here.
 
 Section 1 - Key Hunt Quest
 
-Policeman is a situation.
-The sarea of Policeman is "High".
 keycollection is a number that varies.
 mqstatus is a number that varies.
 mqcountdown is a number that varies. mqcountdown is usually 99.
@@ -39,6 +37,9 @@ when play begins:
 [	4 third client done		]
 [	5 complete				]
 [	99 refused				]
+
+Policeman is a situation.
+The sarea of Policeman is "High".
 
 Instead of resolving a Policeman:
 	project the icon of Sgt Marks;
@@ -97,7 +98,8 @@ Instead of resolving a Policeman:
 			else:
 				challenge "Tiger Cop";
 			now mqstatus is 99; [set to refused quest]
-			Now Policeman is resolved;
+			now Resolution of Policeman is 99; [refused the quest]
+			now Policeman is resolved;
 	else:
 		let T be a random number between one and four;
 		if T is 1:
@@ -124,6 +126,7 @@ to say motelkeycheck:
 			say "     You shake your head and tell him you don't have the motel keys for him yet. He growls softly and points off towards the seedier part of town with his nightstick. 'Just you do your work and get them for me. Hop to it.'";
 	else:
 		say "     You shake your head and tell him you don't have the motel keys for him yet. He growls softly and points off towards the seedier part of town with his nightstick. 'Just you do your work and get them for me. Hop to it.'";
+		now Resolution of Policeman is 1; [quest started]
 
 
 to say givekeys:
@@ -140,12 +143,13 @@ to say givekeys:
 	now Police Car is known;
 	now the player is in Police Car;
 	now mqcountdown is 0;
-	Now Policeman is resolved;
+	now Policeman is resolved;
 	increase score by 40;
 	increase XP of player by 10;
 	say "     The feline policeman opens the car and digs around in what appears to be the torn remains of a cop's uniform in the passenger's seat. 'Here, take this. You're gonna need it,' he says meaningfully as he passes you a nightstick. 'If you've got any last minute stuff to take care of or an equipment stash wherever you're holed up, you go get your gear and be back here pronto. I want you to come along on this, but I'm only willin['] to wait 24 hours before I move out. And if somethin['] holds you up, there'll be a key in the lip of the bumper. I should be able to leave somethin['] for ya in the trunk and I'll get in touch after the heat dies down.'";
 	say "     Nightstick obtained.";
 	increase carried of nightstick by 1;
+	now Resolution of Policeman is 2; [Gave Sgt Marks the keys]
 
 
 Section 2 - Tiger Cop character and Police Car location
@@ -480,7 +484,7 @@ to say BTchangeover:
 			now breast size of player is 0;
 	if player is female:
 		now tailname of player is "Big Tigress";
-		Now facename of player is "Big Tigress";
+		now facename of player is "Big Tigress";
 		now skinname of player is "Big Tigress";
 		now bodyname of player is "Big Tigress";
 		now cockname of player is "Big Tigress";
@@ -495,7 +499,7 @@ to say BTchangeover:
 		now cock of player is "ebon feline";
 	else:
 		now tailname of player is "Big Tiger";
-		Now facename of player is "Big Tiger";
+		now facename of player is "Big Tiger";
 		now skinname of player is "Big Tiger";
 		now bodyname of player is "Big Tiger";
 		now cockname of player is "Big Tiger";

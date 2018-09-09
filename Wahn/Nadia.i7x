@@ -581,11 +581,13 @@ Instead of resolving a Bird Troubles:
 		now NadiaChar-M is "0";
 		[Testing Fertile Pills]
 		[increase carried of fertile pill by 50;]
+		now Resolution of Bird Troubles is 1; [recruited Nadia]
 	else:
 		LineBreak;
 		say "     Tears begin to well up in Nadia's eyes. 'I'm sorry,' she says. 'I shouldn't have asked - of course you don't have anywhere to go, let alone let me stay. They're everywhere now, aren't they? I suspected as much, after all these days alone. There's nothing left to hope for. Thank you for saving my life, but goodbye.' With that, she speeds away from you. You shout and give chase, but she's gone by the time you round the corner to the now-opened door, with not even a feather left in sight.";
 		now HP of Nadia is 99;  [refused her]
 		now Nadia is nowhere;
+		now Resolution of Bird Troubles is 99; [refused Nadia]
 	now Bird Troubles is resolved;
 
 Lost Chick is a situation. The level of Lost Chick is 5. Lost Chick is inactive.
@@ -635,9 +637,11 @@ to say LostChickFight:
 				say "     This looks like it's going to go on for a while, but Nadia shoots a pleading look at you, clearly asking you to stay. It's a little while before the lecture's over, though, and the broody bird finishes the little stretch of mother-daughter time with a stern '...and you may think you're smart, dear, but what you're lacking in is wisdom. There's a reason I ask you to do things in certain ways. Now, you may not agree with the reason, but there's one nonetheless. Now, I have a few things to discuss with your father, so leave us be for the moment.'";
 				say "     After Vera's left, Nadia urges you to sit down beside her and explain your side of the story, rubbing her feathery body against yours as you recount driving off the feline gymnasts. Her scent changes as you tell your tale, gaining an edge of arousal, and she lets out a sound that's halfway between a chirp and a chuckle. 'Oh, I knew those three. Tryhards, always thinking that if they made the team they'd be popular just like that. Can't say I cared much for them...but I can say I care a lot more for you.' She runs her talons across your body, her fingers trembling as she does so. 'A quality father, a quality mate...' she giggles. '...And quality seed. Since you're so good with children, why don't you go rest a little, and then we can make some more? Don't keep me waiting too long, okay?' With that, she rubs up against you one last time, humming pleasantly in the back of her throat, then turns to other matters.";
 				now Lost Chick is resolved;
+				now Resolution of Lost Chick is 1; [rescuted her]
 				now HP of Nadia is 4;
 
 to say LostChickLose:
+	now Resolution of Lost Chick is 2; [lost]
 	say "     Having being driven off by the trio of felines, you look up once more to find the situation having reverted to being as much as it was when you'd arrived - what some might call an impasse. You'll probably need to take a little time to catch your breath and regroup before trying again.";
 
 instead of trading the fertile pill when the current action involves the Nadia: [giving her fertility pills]

@@ -15,7 +15,7 @@ The sarea of Marching Band is "Campus".
 Instead of resolving a Marching Band:
 	say "     While exploring the campus, you are suddenly surprised to hear the sound of music starting up. A welcome change from the normal sounds of sex-crazed creatures and horny mutants, you cautiously head over to investigate. You find a variety of infected creatures stuffed into ill-fitting uniforms and carrying instruments as they try to coalesce into a marching band. They start up and stop several times, distracted by one or more of them deciding to hump another, give a blow job or otherwise give in to their sexual desires. But eventually they do get going as their border collie band leader nips them back into position once everyone's gotten off one last time before they can march off the national anthem as they proceed towards one of the fields.";
 	increase score by 1;
-	Now Marching Band is resolved;
+	now Marching Band is resolved;
 
 Section 2 - Art Department
 
@@ -42,7 +42,7 @@ The sarea of Languages Department is "Campus".
 
 Instead of resolving a Languages Department:
 	say "     Passing behind one building, you almost bump into a small group of creatures arguing loudly and incomprehensibly. Among the group are a French frog, a Chinese dragon, an Indian elephant, a Russian bear and several other walking stereotypes who can no longer understand each other. You suspect they've all somehow become altered by the infection into forms to suit the language course they taught or studied. You decide to give what is probably the Languages Department a wide berth before you start speaking another language as well to further compound your problems in this city gone mad.";
-	Now Languages Department is resolved;
+	now Languages Department is resolved;
 
 
 Section 5 - Wandering the Campus
@@ -142,11 +142,14 @@ Instead of resolving a Anime Club:
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     With the tentacle mutant defeated, you drive the two of them from the room and shut off the video. The captured girl looks up at you, blinking her wide eyes. She seems a little disappointed that the anime has stopped showing, but is also starting to regain some focus. With her already well on her way to being transformed, she's become quite confused by you're able to coax her to her feet and flee the strange room together.";
 				say "     She's very grateful to you for having rescued her and gives you a big hug and a kiss before she realizes what she's doing. After making out together in an empty classroom, she thanks you again for your help while handing you some food and water. After some more playful groping, she heads off in search of a new hiding place. You'd offered to house her in the bunker, but she's still holding out hope of finding some of her friends.";
+				LineBreak;
+				say "[bold type]You gain 1 food![roman type][line break]";
 				increase carried of food by 1;
+				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
 				increase score by 10;
-				increase humanity of player by 5;
-				if humanity of player > 100, now humanity of player is 100;
+				SanBoost 5;
+				now Resolution of Anime Club is 1; [rescued her]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     The hentai boy pushes you to sit down beside the captured girl, groping and fondling you while you watch the video. A part of you knows you shouldn't, but you're too weary and aroused from fighting to resist any longer. As you watch, you can almost feel the tentacles on the screen grabbing and touching you just like in the animation. It takes you a few moments to realize that the tentacled mutant behind you is imitating the events on screen, adding to your immersion. The fallen anime babe, recovered from her fight, moves over to snuggle with you, showing there's no hard feelings now that you've settled down to watch some hentai with them. You moan in pleasure, your excitement building.";
 				say "[animeclublost]";
@@ -159,6 +162,7 @@ Instead of resolving a Anime Club:
 			say "     Deciding to cut your losses, you dodge your way back to the door and run out of the room. There's a brief pursuit, but it goes no further than the stairs as there's already one new prize to be enjoyed.";
 	else:
 		say "     Deciding it's none of your concern, you creep away before anything else is drawn by the noise or another of those Anime Babes spots you.";
+		now Resolution of Anime Club is 99; [disinterest]
 	now animeclubfight is false;
 	now Anime Club is resolved;
 
@@ -209,5 +213,6 @@ to say animeclublost:
 		stop the action;
 	else:
 		say ". With your mind muddled by the content of the videos you've been watching, you almost succumb entirely, but somehow manage to hold on to part of yourself. When you're released out onto the campus to search for others to share your new fandom and lust for tentacles with others, your mind gradually pulls itself together enough to shake yourself out of the infection-addled fugue enough to get yourself back on track.";
+	now Resolution of Anime Club is 2; [lost]
 
 Campus Events ends here.

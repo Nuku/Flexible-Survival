@@ -460,7 +460,24 @@ carry out DebugCritterRow:
 	say "Text Given: [topic understood]; Number understood: [NumericalValue][line break]";
 	if NumericalValue < the number of rows in the Table of Random Critters:
 		choose row NumericalValue in the Table of Random Critters;
-		say "Creature Entry: [name entry]";
+		say "Creature Entry: [name entry][line break]";
+		say "Enemy Title: [enemy title entry][line break]";
+		say "Enemy Name: [enemy name entry][line break]";
+		say "Enemy Type: [enemy type entry][line break]";
+	else:
+		say "Row Number outside of the table!";
+
+DebugPrintCritterRow is an action applying to one topic.
+
+understand "DebugPrintCritterRow [text]" as DebugPrintCritterRow.
+
+carry out DebugPrintCritterRow:
+	let NumericalValue be 0;
+	now NumericalValue is numerical value of topic understood;
+	say "Text Given: [topic understood]; Number understood: [NumericalValue][line break]";
+	if NumericalValue < the number of rows in the Table of Random Critters:
+		choose row NumericalValue in the Table of Random Critters;
+		say "[current table row]";
 	else:
 		say "Row Number outside of the table!";
 

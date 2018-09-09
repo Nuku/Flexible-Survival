@@ -433,9 +433,9 @@ to say paymentcheck:
 	else if dog milk is owned:
 		say "     Finding a container of dog milk, shi smiles happily. 'Ooo! Cream for the kitty.' Shi opens it and sniffs. 'Ugh, it smells of dog. Well, it's still milk, so I'll take it! Maybe we can boil that dog smell out of it,' shi muses. Keeping hir find as payment, shi sets your backpack aside.";
 		delete dog milk;
-	else if Fish is owned:
+	else if Tasty Fish is owned:
 		say "     Finding the fish you've wrapped in old newspaper, shi smiles happily. 'Ooo! Tasty feesh! We'll be eating well back at the motel tonight,' shi rumbles happily. Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
-		delete Fish;
+		delete Tasty Fish;
 	else if soda is owned:
 		say "     Finding a can of soda, shi smiles happily. 'Hey! This is my favorite flavor. I haven't been able to find one for days.' Keeping hir find as payment, shi sets your backpack aside.";
 		delete soda;

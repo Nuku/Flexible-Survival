@@ -16,7 +16,7 @@ Instead of resolving a Fallen Kunoichi:
 	say "     Bo staff obtained.";
 	increase carried of bo staff by 1;
 	increase score by 5;
-	Now Fallen Kunoichi is resolved;
+	now Fallen Kunoichi is resolved;
 
 
 Table of Game Objects (continued)
@@ -50,8 +50,9 @@ Instead of resolving a Suddenly Ninjas:
 				say "[lostninjahorde]";
 			else:
 				say "     When that feline withdraws after his defeat, you dive through an employee access door and rush down the passage, coming out in an Early American exhibit. Uncaring about the value or frailty of the items, you grab several period pieces of furniture and toss them helter-skelter in front of the doorway to block the approaching ninja horde. Knowing that your impromptu barricade will only hold them off for a short time before they push through or go around, you quickly run back to the relative safety of the museum lobby.";
+				now Resolution of Suddenly Ninjas is 1;		[Beat the ninjas]
 				increase score by 15;
-	Now Suddenly Ninjas is resolved;
+	now Suddenly Ninjas is resolved;
 
 to say lostninjahorde:
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -63,6 +64,7 @@ to say lostninjahorde:
 	increase libido of player by 25;
 	if libido of player > 100, now libido of player is 100;
 	decrease humanity of player by 18;
+	now Resolution of Suddenly Ninjas is 2;		[Lost to ninjas]
 	infect "Ninja Cat";
 	infect "Ninja Cat";
 
@@ -82,15 +84,18 @@ Instead of resolving a Losing It:
 		say "     Pepperspray obtained.";
 		increase carried of pepperspray by 1;
 		increase score by 5;
+		now Resolution of Losing It is 1;		[Won against Snow Leopard]
 	else if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     After having been beaten by the beautiful feline, you stagger off in a bit of a lustful haze. Something about the whole experience leaves you aroused and eager for more.";
 		increase libido of player by a random number from 3 to 8;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 2;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 2;
 		if libido of player > 100, now libido of player is 100;
+		now Resolution of Losing It is 2;		[Lost against Snow Leopard]
 	else:
 		say "     Escaping the crazed feline, you dash off into the city, deciding to search somewhere away from the newly transformed and lustful feline. Perhaps once it has sated its lusts from its transformation it will wander off and you can return to searching.";
-	Now Losing It is resolved;
+		now Resolution of Losing It is 3;		[Ran from Snow Leopard]
+	now Losing It is resolved;
 
 
 [CatsandDogs moved to Consolidated Outside Events]
@@ -153,20 +158,24 @@ instead of resolving a Trickster:
 					increase carried of water bottle by 1;
 					increase carried of combat knife by 1;
 					increase score by 20;
+					now Resolution of Trickster is 1;		[Won against wolves]
 		if wolffight is 3:
 			say "     Deciding to give up on fighting entirely, you push your way free of the wild fight. You hop over one wolf who's mounted one poor soldier and are almost knocked down as your pursuer runs into a soldier getting up. Finding an [']eager volunteer['] for his cock, the wolf drives it into the soldier's mouth and starts pounding away. The wolves get the last of the soldiers as you're turning into an alleyway. You can hear the laughter of what is probably the coyote trickster, amused by the results of [if diegochanged is 0]his[else]her[end if] prank[if Park Entrance is unknown]. You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
 			infect "Feral Wolf";
+			now Resolution of Trickster is 2;		[Ran from wolves]
 		if wolffight is 2:
 			if player is female:
 				say "     Before you can get back up, you are mounted by one of the other wolves, moaning loudly as he drives his thick cock into you. He fucks you hard and fast, eager to fill you with cum and pups before moving on to another victim. His wild, feral rutting is a mix of pain and pleasure as that thick cock pumps in and out of your wet hole. 'Mmm... my bitch...' he rumbles softly, and you are surprised to hear one of the feral wolves speak. You respond to his words by pressing your ass back, moaning louder as he pounds into your abused pussy. Your excitement builds, finally peaking when he unleashes his hot, lupine seed into you with a howl[if player is male]. Your cock throbs and sprays its load onto the pavement as you're stuffed full of creamy wolf cum[end if]. Withdrawing, he licks your cheek and growls softly before pouncing on a soldier, tearing away some partially shredded clothes to uncover a fresh pussy for him to fuck.[impregchance]";
 			else:
 				say "     Before you can get back up, you are pushed down by one of the other wolves. He pushes your clothes aside with his paws, scratching at your back with his claws, then growls and mounts you. You can feel his wet, sticky cock slide against your ass before finding your tight pucker and pushing it open. You moan loudly as he drives his thick cock into you. He fucks you hard and fast, eager to fill you with cum before moving on to another victim. His wild, feral rutting is a mix of pain and pleasure as that thick cock pumps in and out of your tight hole. 'Mmm... my bitch...' he rumbles softly, and you are surprised to hear one of the feral wolves speak. You respond to his words by pressing your ass back, moaning louder as he pounds into your abused asshole, pressing that lupine shaft against your prostate. Your excitement builds, finally peaking when he unleashes his hot, lupine seed into you with a howl. Your cock throbs and sprays its load onto the pavement as you're stuffed full of creamy wolf cum. Withdrawing, he licks your cheek and growls softly before pouncing on a soldier, tearing away some partially shredded clothes to uncover a fresh pussy for him to fuck.[impregchance]";
 			say "     Just as your head is starting to clear, another wolf moves up to you, sticky cock hanging under him. Seizing what may be your only opportunity to escape, you grab a fallen, half-transformed soldier beside you and press his growing muzzle onto the wolf's cock. He latches onto it hungrily and starts licking and sucking. Distracted, the wolf turns his attention on the changing soldier and thrusts into his muzzle. Crawling carefully past a few more distracted wolves, you make it to the edge of the orgy and dash into a nearby building. You rush out the back, having to leave the soldiers to their fate as bitches for a wolf pack - a fate you almost shared. As you run off, over the sounds of mating wolves, you catch the faint laughter of someone, probably the coyote trickster, enjoying the results of [if diegochanged is 0]his[else]her[end if] prank[if Park Entrance is unknown]. You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
+			now Resolution of Trickster is 3;		[Lost to wolves]
 			infect "Feral Wolf";
 	else:
 		say "     Turning tail before the coyote's trick is set off, you dash into a burned out shop and watch from there. The howls get louder and a pack of wolves come rushing around the corner, right into the soldiers. Several of the soldiers are bowled over as the wolves weren't expecting obstacles. At the head of the pack is a large wolf with large, poorly shaved patches his pelt, showing the pink skin beneath. The bag, sent flying by the collision, flips in the air and opens, spilling out what must be the shaved wolf's fur. Deciding that the soldiers must ultimately be responsible for his shaving, he and the other wolves attack.";
 		say "     The soldiers, unprepared for such an assault, are soon borne down by the powerful wolves and wild rutting ensues. You watch as soldiers are forced to suck wolfcock or are buggered by the angry pack. The humans begin to transform, gaining fur, ears or tails as the lupine infection starts to spread. As some start to gain pussies, these new holes are stuffed full of wolfcock to breed pups in them. When the soldiers succumb enough to stop resisting, they are dragged off by the wolves, probably to their den to finish mating with them until they're fully members of the pack. The remaining wolves start sniffing around the area, spreading out. Worried they'll pick up the trail of your scent you think it best to make your escape. You slip out the back of the store and make a break for it, sure that you could hear some laughing in the distance[if Park Entrance is unknown]. You may be able to track down the coyote if you can find a way to the Park Entrance[end if].";
 		increase score by 5;
+		now Resolution of Trickster is 4;		[Did not engage wolves]
 	now wolffight is 0;
 	now Trickster is resolved;
 
@@ -232,6 +241,7 @@ Instead of resolving a Lovers Bench:
 		say "     You quietly walk away, ashamed of your peeping and quite certain they have succumbed too far to be safe to approach. Even if currently sated, they are both equally infectious. But at least they are a couple.";
 		increase score by 1;
 		increase loversbench by 1;
+		now Resolution of Lovers Bench is 1;	[Watched first scene]
 	else if loversbench is 1:		[second visit]
 		say "     Your meandering through the park brings you back to the lovers['] bench and find them gone, though their scattered clothes remain. This helps confirm your earlier guess that they'd succumbed. The bench has quite a few scratches and claw marks on it, clearly having been used by many others since the outbreak, as well as older, carved graffiti hearts. You suspect this bench has been a make-out spot for quite some time, being in a more secluded area in the park. Certainly there is a strong scent of sex hanging around it, even in the open air of the park. Remembering the lovemaking you witnessed here, you start to get turned on.";
 		if scenario is "Bunker" or scenario is "Caught Outside":
@@ -246,6 +256,7 @@ Instead of resolving a Lovers Bench:
 			increase carried of pepperspray by 1;
 			increase score by 10;
 		increase loversbench by 1;
+		now Resolution of Lovers Bench is 2;	[Watched second scene]
 	else if loversbench is 2:		[third+ visit]
 		say "     Returning to the area around the lovers['] bench, you decide to search around it again. Thinking others may have lost or forgotten items in their rush of excitement, you check among the scraps of clothes for any other lost or discarded items. Sadly, you are unable to locate anything new or of any use.";
 	if loversbench is 2 and printed name of companion of player is not listed in lbcomplist and player is not neuter:
@@ -268,6 +279,7 @@ Instead of resolving a Lovers Bench:
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase XP of pink raccoon by ( level of pink raccoon + 1 ) * 3;
 			increase score by 20;
+			now Resolution of Lovers Bench is 3;	[Did Lovers Bench with Candy]
 		else if companion of player is Gryphoness:
 			WaitLineBreak;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -290,6 +302,7 @@ Instead of resolving a Lovers Bench:
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase XP of Gryphoness by ( level of Gryphoness + 1 ) * 3;
 			increase score by 20;
+			now Resolution of Lovers Bench is 4;	[Did Lovers Bench with Denise]
 		else if companion of player is Felinoid companion:
 			WaitLineBreak;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -313,6 +326,7 @@ Instead of resolving a Lovers Bench:
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase XP of Felinoid companion by ( level of Felinoid companion + 1 ) * 3;
 			increase score by 20;
+			now Resolution of Lovers Bench is 5;	[Did Lovers Bench with Felinoid]
 		else if companion of player is bee girl:
 			WaitLineBreak;
 			say "     As you're finishing up your scavenging, Honey buzzes on over and takes your hand in her. She smiles up at you and grins playfully. She gives your arm a gentle tug with her four hands. 'I want to try out the bench, now that I have someone special to share it with,' she buzzes softly. 'I used to see couples here when I was...' She pauses, remembering her lost sisters. 'But I have you now[if HP of bee girl >= 5], a strong and caring queen bee[end if],' she says, smiling up at your with a mix of lust and adoration as you walk with her to the bench to take her up on her offer. Her nipples, normally hidden, are quite hard, and her honeyed juices run down her legs. The scents here, which have been getting you more aroused, seem all the stronger and you decide to take your small companion up on her offer.";
@@ -330,6 +344,7 @@ Instead of resolving a Lovers Bench:
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase XP of bee girl by ( level of bee girl + 1 ) * 3;
 			increase score by 20;
+			now Resolution of Lovers Bench is 6;	[Did Lovers Bench with Honey]
 		else if companion of player is mouse girl:
 			WaitLineBreak;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -358,6 +373,7 @@ Instead of resolving a Lovers Bench:
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 5;
 			increase XP of mouse girl by ( level of mouse girl + 1 ) * 3;
 			increase score by 20;
+			now Resolution of Lovers Bench is 7;	[Did Lovers Bench with Rachel]
 		else if companion of player is equinoid warrior:
 			say "     As you're finishing up your scavenging, Liliana strides up beside you to run her hoofed hands over your [bodytype of player] body. She smiles at you with a lustful hunger in her eyes. '[if player is blequinoidbodied]Come, join me over here and I will remind you of the warm embrace of the herd[else]We may be away from the herd, but we can still keep one another fulfilled[end if],' she says, guiding you towards the bench. Having gotten quite aroused by the scents of bestial lusts in the air, the sight of the aroused equinoid with her perky nipples, equine erection and dripping pussy entice you to take her up on her offer.";
 			if ( player is purefemale ) or ( player is female and player is submissive ):
@@ -384,6 +400,7 @@ Instead of resolving a Lovers Bench:
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase XP of equinoid warrior by ( level of equinoid warrior + 1 ) * 3;
 			increase score by 20;
+			now Resolution of Lovers Bench is 8;	[Did Lovers Bench with Liliana]
 		else if companion of player is demon brute and DBCaptureQuestVar > 5:
 			WaitLineBreak;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
@@ -421,6 +438,7 @@ Instead of resolving a Lovers Bench:
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase XP of demon brute by ( level of demon brute + 1 ) * 3;
 			increase score by 20;
+			now Resolution of Lovers Bench is 9;	[Did Lovers Bench with Brutus]
 		else:
 			increase libido of player by ( 100 - libido of player ) / 4;
 			say "     Aroused by the lingering scent of sex around the area, your eyes are drawn to the bench. You find yourself thinking that it might be more fun if you were to bring some [if lbcomplist is not empty]new [end if]companionship here next time.";
@@ -515,11 +533,13 @@ Instead of resolving a PeachTree:
 				say "     Disentangling yourself from the tendrils in the tree and freeing yourself of the vine inside you, you make a quick grab for some of the fruit. You snag a couple of them and then make a run for it as more vines rustle in the canopy. As you move further from the tree, Joanna's seed settles down again. You stroke your belly as if petting it, thankful for the warning it tried to give before its instincts took over.";
 				increase carried of tasty peach by 3;
 				increase score by 10;
+				now Resolution of PeachTree is 1;	[Won against plant with Joanna's seed]
 			else:
 				infect "Parasitic Plant";
 				say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you. The plant's semen has a distinct peach flavor to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices. Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home. Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released. Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
 				now libido of player is libido of player / 2;
 				decrease humanity of player by 10;
+				now Resolution of PeachTree is 2;	[Lost to plant with Joanna's seed]
 		else:
 			say "     Deciding not to risk it, you cover your nose and head back the way you came.";
 	else:
@@ -536,11 +556,13 @@ Instead of resolving a PeachTree:
 			say "     Disentangling yourself from the tendrils in the tree and freed yourself of the vine inside you, you make a quick grab for some of the fruit. You snag a couple of them and then make a run for it as more vines rustle in the canopy.";
 			increase carried of tasty peach by 3;
 			increase score by 10;
+			now Resolution of PeachTree is 3;	[Won against plant]
 		else:
 			infect "Parasitic Plant";
 			say "     Unable to hold out against the vine's actions, you are held by their steely grip as the vines inside you squirm, swell and thrust until its sticky cum is pumped into you. The plant's semen has a distinct peach flavor to it that arouses you greatly, keeping you excited and compliant as the plant fucks and milks you long and hard for your juices. Given the skill the vines display in pleasing you as it gathers your sexual fluids, this plant has had numerous victims drawn in by its peach tree home. Your body is made to give all it can by those tendrils assaulting you in such a strangely arousing manner until finally you collapse to the ground and are released. Weak, you manage to crawl away slowly, your mind a haze of instinctual, sexual thoughts that take some time to clear.";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 10;
+			now Resolution of PeachTree is 4;	[Lost to plant]
 	now peachtreefight is 0;
 	now PeachTree is resolved;
 
@@ -596,10 +618,12 @@ Instead of resolving a Concession Stand:
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 2 and 5;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 1 and 4;
 			increase foodvendor by 1;
+			now Resolution of Concession Stand is 1;	[Accepted salesman's first offer]
 		else:
 			say "     Shaking your head and looking away from him, you try to refocus your mind. Wary of the strangely hypnotic figure, you move away, taking care not to look at him. You resolve not to return, lest your mind be ensnared again.";
 			increase score by 1;
 			now Concession Stand is resolved;
+			now Resolution of Concession Stand is 99;	[Refused salesman's offer]
 	else:
 		say "     Your path meandering path through the fair ends up taking you back to those concession stands and you can see the green suited fellow still at his stand. He waves you over with a broad grin.";
 		say "     [bold type]Shall you return to his stand?[roman type][line break]";
@@ -617,6 +641,7 @@ Instead of resolving a Concession Stand:
 				if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 3 and 6;
 				if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 2 and 5;
 				increase foodvendor by 1;
+				now Resolution of Concession Stand is 2;	[Accepted salesman's second offer]
 			else if foodvendor is 2:
 				say "     Knowing what is coming, you help the gentleman open his bright green pants when he moves over the counter. Pulling out his cock, you stuff it into your mouth with a soft moan, taking delight at having it in your mouth again. You love how it keeps changing for you, giving you a myriad of delightful tastes and sensations. He rubs your head and moans softly as you bob over it, running your tongue over it. You plunge it down your throat as it becomes thick and donkey-like, then suck firmly at it becomes small and lapine. Its draconic knobs and ridges stimulate your throat as he switches to thrusting into your mouth. 'Oh, you're so good at this,' he moans. 'You should come back again. Since you're my favorite customer, I'll give you something really special.'";
 				say "     Rubbing his balls and sucking his cock, you lavish attention upon him, becoming more and more eager to please him. When he finally cums, his thick seed comes blasts from a large, leonine cock and you gulp it all down, rubbing your belly as his semen fills it. You get up and lick your lips, barely remembering to take the food items. You were so focused on getting the cum, you barely remembered the purchase at all this time.";
@@ -628,6 +653,7 @@ Instead of resolving a Concession Stand:
 				if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 4 and 8;
 				if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 3 and 6;
 				increase foodvendor by 1;
+				now Resolution of Concession Stand is 3;	[Accepted salesman's third offer]
 			else if foodvendor is 3:
 				say "     Your friend the vendor smiles very happily as you come over again. He doesn't bother to put out any food this time and hops fully over the counter. Putting his shifting hands (paws?) on you, he leans you over the counter and unzip his fly. Feeling him move to grope your ass, you moan softly and get your clothes and gear off. He runs his fingers (talons?) down your back and rubs his throbbing shaft against your rear, making you moan again.";
 				WaitLineBreak;
@@ -659,6 +685,7 @@ Instead of resolving a Concession Stand:
 				stop the action;
 		else:
 			say "     Remembering how the man's appearance has affected you in the past, you turn away and resolve not to return here, lest he affect your mind again and you accept another of his deals.";
+			now Resolution of Concession Stand is 99;	[Refused salesman's offer]
 			now Concession Stand is resolved;
 
 when play ends:
@@ -700,18 +727,21 @@ Instead of resolving a Sweet Exchange:
 	say "     From up ahead, you hear a bunch of excited voices and decide to cautiously check it out. What you discover is a mob of pastel colored ferrets poinging up and down in front of a stall. Atop the stall are some sugar gliders covered in cotton candy fur. Both groups are yelling at one another, calling each other names though neither of them seems particularly upset.";
 	say "     'Fork it over, you cotton-brained thief!' one ferret yells. 'Yeah!' 'Sugar snatchers!' 'Give it.' 'PopPopPopPopPop!' the others babble excitedly, many of them making grabby paws in the air towards the bottles and cans of pop the pink marsupials are dangling tantalizingly out of reach.";
 	say "     'Pay up then, you soda jerks,' one sugar glider responds. 'We got this fair and square,' she adds, sticking out her tongue and looking insulted, while several of her friends giggle at that. 'Give us that sweet, sweet candy you've been hoarding, you carbonated tube rats,' another yells of the sugar gliders.";
-	say "     'Candy ass! The Sweet Tooth is our place. We found the candy shop first, so the candy's ours too. Find your own!' a pastel green ferret yells up. 'Yeah!' 'We want pop!' 'Hey, I'll fuck you for a can.' 'Sugar snatchers!' the business of colorful ferrets calls up, several of them making rude gestures all the while grinning happily.";
+	say "     'Candy ass! The Sweet Tooth is our place. We found the CandyShop first, so the candy's ours too. Find your own!' a pastel green ferret yells up. 'Yeah!' 'We want pop!' 'Hey, I'll fuck you for a can.' 'Sugar snatchers!' the business of colorful ferrets calls up, several of them making rude gestures all the while grinning happily.";
 	say "     These strange negotiations go on for a while like this, trading insults, offers of sex and rude gestures as they negotiate their trade of candy for cola. One of the sugar gliders even tantalizes the ferrets with a display of her fingering her two juicy cunts to get them to up their price by a few more bags of jelly beans. As you watch them, you can't help but feel that this rivalry's all in good fun for both sides, more some kind of contest or game they play rather than an actual feud.";
 	if bodyname of player is "Sugar Ferret" and player is pure:
 		say "     As the deal is coming to a close, the ferrets start passing up bags of candy to the sugar gliders as they dole out the pop in exchange. Seeing as you look like the other ferrets, you slip amongst the crowd and try to push your way to the front. With all the other greedy, excited ferrets mobbing to grab some of that delicious soda, it takes some effort to get to the front of the pack, but eventually you manage to snag some. A rush of giggling excitement runs through you at having gotten some more pop and it takes some effort not to drink it down right away. You instead slip away before any of the other ferrets succumb to their thirst or notice you among them.";
 		increase carried of soda by 1;
+		now Resolution of Sweet Exchange is 1;	[Got soda as a Sugar Ferret]
 	else if bodyname of player is "Sugar Glider" and player is pure:
 		say "     As the deal is coming to a close, the sugar gliders start passing down the cans and bottles of pop in exchange for bags of candy. Seeing as you look like the others, you climb onto a nearby stand and make your way over to the roof of the booth with the rest of the sweet marsupials. The giggling girls pass around the collected bags of candy, stuffing them into their pouches. Unnoticed among them, you manage to get passed some of the candy as well, which you stuff into your [if player is female]pouch[else]backpack[end if] before making your escape before they catch on.";
 		increase carried of chips by 1;
+		now Resolution of Sweet Exchange is 2;	[Got chips as a Sugar Glider]
 	else:
 		say "     As the deal is coming to a close, the two sides start the actual exchange, insults and greedy demands for more next time flying between them even as they do. Seeing as things are wrapping up, you decide it best to withdraw before the swap is complete and the two mobs disperse. With that many sugar-crazed mutants around, you're not sure if you'd be able to remained unnoticed without putting some distance between you and them while you can.";
+		now Resolution of Sweet Exchange is 3;	[Watch the deal come to a close]
 	if CandyShop is not resolved:
-		say "     As you go, you ponder the strange negotiations between the two groups and wonder if you might try looking for that [bold type]candyshop[roman type] the excitable ferrets mentioned.";
+		say "     As you go, you ponder the strange negotiations between the two groups and wonder if you might try looking for that [bold type]CandyShop[roman type] the excitable ferrets mentioned.";
 	now Sweet Exchange is resolved;
 
 
@@ -765,6 +795,7 @@ Instead of resolving a Beach Party:
 					say "     With the green dolphin sent back into the water, the girls start playing around with it. Some start fingering themselves and each other, rather worked after their amusement with you. With them distracted, you decide to avail yourself of the remaining contents of their cooler, taking the last two cans before heading on your way, the sounds of their playing fading behind you as you go past a pile of rocks.";
 					increase carried of soda by 2;
 					increase score by 10;
+					now Resolution of Beach Party is 1;	[Beat Bottlenose Toys and got soda]
 	if dolphinflatablefight is 2:
 		say "     Even as the dolphin who just finished playing with you heads back to the water, several of the others are all on you at once. One has the last of the sodas. But rather than give you a drink, she sprays both cans all over you, wasting their contents while the girls giggle merrily. The dolphins all huddle around you and start licking all over your body to clean the sweet soda from you. Their rubber tongue glide across your skin and seek to tease you all over. Two set to work on your nipples[if breast size of player > 0], squeezing your breasts[end if]. Others kiss and lick at your face and nibble at your ears. Another, the soda girl, nuzzles her snout down between your legs, licking and kissing at your groin. Her tongue plays over your [if cocks of player > 1]sticky, throbbing [cockname of player] cocks[else if cocks of player is 1]sticky, throbbing [cockname of player] cock[else if cunts of player > 1]sticky, juicy pussies[else if cunts of player is 1]sticky, juicy pussy[else]sticky thighs and barren crotch[end if]. Another enterprising girl, after sucking your fingers clean one by one, guides your hand to her groin, getting you to finger her dripping pussy until you feel her slick juices soak your hand as she cums with delighted trills. All this attention makes you laugh and giggle like a girl, sounding a lot like the inflatable females surrounding you[if player is neuter]. Once you're finally all cleaned up,[else]. When you finally cum,[end if] the pink dolphins release you, heading back to frolic in the water again.";
 		say "     Having the air-headed dolphin girls lavish so much attention onto you, you can't help but feel yourself fading away some, as if you're becoming more empty-headed and giggly like them. You rise to your feet easily, feeling as if buoyed by your own happy feelings and look over your body, fully that of an inflatable dolphin like those pretty girls";
@@ -802,8 +833,10 @@ Instead of resolving a Beach Party:
 			stop the action;
 		else:
 			say ". You manage to keep your mind together enough to leave the dolphin girls and with their large dolphin toy to continue their partying. As you walk back along the beach, you can hear a few cries of disappointment, but the giggling and playing starts up again moments afterwards. You're quite sure they won't pursue you, but you decide to head back and wait for them to finish their beach party before passing this way again.";
+			now Resolution of Beach Party is 2;	[Lost to Bottlenose Toys]
 	if dolphinflatablefight is 3 or dolphinflatablefight is 4:
 		say "     You manage to make a break for it, running away from the waterfront. You can hear a few cries of disappointment, but the giggling and playing starts up moments afterwards. You're sure they won't pursue you, but you decide to head back and wait for them to finish their beach party before passing this way again.";
+		now Resolution of Beach Party is 3;	[Ran from Bottlenose Toys]
 
 
 Section 7 - Mall Events
@@ -814,7 +847,7 @@ The sarea of B&R is "Mall".
 Instead of resolving a B&R:
 	say "     While roaming around through the sewers, you hear the sound of arguing voices coming towards you. Being cautious, you duck into the shadows and watch the pair approach. They are an odd pair of big, muscled brutes carrying large weapons. The first is a warthog wearing shoulder pads and a torn, red vest, with several hand grenades within easy reach on it. His sharp, white tusks, hoop snoot-ring and bone necklace give him a menacing appearance despite the purple mohawk and sunglasses. The other is a rhino in a yellow wife-beater and cargo pants with a bandoleer of bullets across his chest, as well as a grenade of his own. While he clearly has a bit of a gut on him, his arms are even more muscled than his companion's.";
 	say "     It's hard to follow what exactly they're arguing about as they pause near your hiding place. Most of the time, it sounds like they're searching for turtles, intent on violence, but the rest of the time they're trying to remember an old cartoon they watched as kids. Eventually, they make a decision on which way to go next and continue on. Rather than interrupt the well-armed, volatile and clearly crazy duo, you quietly let them pass before moving on.";
-	Now B&R is resolved;
+	now B&R is resolved;
 
 
 Section 8 - Zoo Events
@@ -843,12 +876,15 @@ Instead of resolving a My Own Zoo Playset:
 	if T < 9:
 		say "     Knocking over several trees in his search, the giant spots you trying to hide. Forgetting about the zebra, he turns his attention on you.";
 		challenge "Human Giant";
+		now Resolution of My Own Zoo Playset is 1;	[Fought Human Giant]
 	else if T < 17:
 		say "     Knocking over several trees in his search, the giant catches sight of the zebra trying to hide and grabs him roughly with both hands. The zebra struggles briefly, but is clearly too weak to put up much of a struggle and soon gives up with a weak sigh. The giant shakes him around roughly, telling him he's a bad zebra for trying to run away from playtime. Sitting back down, he buries the striped equine under his enormous manhood and reaches into the enclosure to grab a fresh pair of hapless victims. He sticks them in a car which has had its roof torn clean off and starts to make the car do doughnuts on the grass as the terrified pair scream and scramble to buckle up while being knocked around.";
 		say "     Having seen plenty and afraid of being caught by the giant while he's in the mood to [']play['] with the animals, you back out of the trees and try to get some distance between the two of you.";
+		now Resolution of My Own Zoo Playset is 2;	[Hid from Human Giant]
 	else:
 		say "     As the giant starts shoving over trees as he searches through the thicket of trees, you spot the zebra running towards you. Grabbing his wrist as he moves past, you pull him in under the branches of a couple of the fallen trees while the giant's looking at the other end of the copse. Keeping your hand over his muzzle you shush his surprised cry and wait with him until the giant finally either gets distracted by something else or just plain gives up. Hearing him thump back towards his other collected [']toys['], you get the zebra to move quietly with you to the other side of the (now mostly uprooted) trees and go as quickly as he can move to get some further distance from the giant. The zebra thanks you for your help, giving you a bottle of water he'd stashed before the two of you head your separate ways.";
 		increase carried of water bottle by 1;
+		now Resolution of My Own Zoo Playset is 3;	[Saved zebra from Human Giant and given a water bottle]
 	now My Own Zoo Playset is resolved;
 
 

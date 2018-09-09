@@ -59,9 +59,11 @@ instead of resolving Public Hitching Post:
 				say "[Blue Gryphon Event]";
 			-- 4:
 				say "[Hyena Gang Event]";
+		now Resolution of Public Hitching Post is 1; [player took a turn in there]
 	else:
 		LineBreak;
 		say "     You decide to leave the stocks and continue your journey. Let some other submissive breeder lock themselves in.";
+		now Resolution of Public Hitching Post is 2; [player didn't try it out]
 	say "     Leaving the picnic area, you make your way through the underbrush in a direction that seems promising - surprisingly, you stumble upon the main park trail within barely a minute or three. So you've been this close to the park entrance all along? Good to know, if you want to return to the picnic area sometime. You make a note of the fact that it lies [bold type]Northeast[roman type] of the park trail, just a short distance through the overgrown wood.";
 	change the northeast exit of Park Trail to Picnic Area; [connecting the location to the other room]
 	change the southwest exit of Picnic Area to Park Trail;

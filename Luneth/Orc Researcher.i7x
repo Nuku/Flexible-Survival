@@ -39,7 +39,7 @@ Instead of resolving a Orc Researcher:
 	else:
 		say "     Deciding against exploring the strange flickering light, you turn your back to the building and continue on your way. Hearing a strange sound in the distance, you look towards a crumbling wall in the direction of the noise. Only to see a pair of glowing eyes watching you with disappointment, before their owner runs of.";
 		now Resolution of Orc Researcher is 99; [didn't go in]
-	Now Orc Researcher is resolved;
+	now Orc Researcher is resolved;
 
 Section 2 - Orc Pill Case
 

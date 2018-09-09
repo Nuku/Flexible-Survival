@@ -19,7 +19,7 @@ Instead of resolving a Leather Wolves:
 	increase score by 10;
 [	say "     With this pack established here, there's clearly no safe way to search the immediate area further and you quietly backtrack.";
 	increase score by 1;]
-	Now Leather Wolves is resolved;
+	now Leather Wolves is resolved;
 
 
 Section 1 - Leather Store

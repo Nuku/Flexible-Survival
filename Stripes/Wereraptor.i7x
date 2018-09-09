@@ -1,6 +1,7 @@
 Version 4 of Wereraptor by Stripes begins here.
 [Version 4.3 - Tweak to loss scene probabilities - Stripes]
 [Version 4.4 - removal of banning content - Luneth]
+[Note: not Resolution flagged yet - use existing variables for now]
 "Adds a special wereraptor creature/curse to Flexible Survival's Wandering Monsters table"
 
 [ wrcursestatus                                                                ]

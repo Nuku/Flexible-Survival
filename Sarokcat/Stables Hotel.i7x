@@ -32,15 +32,18 @@ Instead of Resolving Stabled Situation:
 				delete soda;
 				Move player to The Stables Hotel;
 				now battleground is "void";
-				Now The Stables Hotel is known;
+				now The Stables Hotel is known;
+				now Resolution of Stabled Situation is 1; [bribed your way in]
 				now Stabled Situation is resolved;
 			else:
 				LineBreak;
 				say "     Sighing as you search through your pack, the two guards look on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don't have anything the guards would like right now, and that if you want to get into this strange-looking place, you will need to come back later. Maybe with some chips and soda or something. Everyone likes snack food, right?";
 				now Stablesearchstatus is 2;
+				now Resolution of Stabled Situation is 3; [no bribe in the player's inventory]
 		else:
 			say "     Deciding that it might be best just to leave while you can, you make note of the imposing building's location and head back to the Library for now.";
 			now Stablesearchstatus is 2;
+			now Resolution of Stabled Situation is 2; [didn't approach]
 	else if Stablesearchstatus is 2:
 		say "     Wandering through the city, you find your mind increasingly drawn to those strange horsemen that you encountered earlier, and on impulse, decide to take another look at the strange building where they were taking their captives. Returning to the large fortress-like hotel building, you wonder just how bad things were in this district that the owner would take such obvious security measures when they were building a 'pleasure hotel' in this area, though the easy access to all of the pleasures and perils of the red light district nearby probably is more than enough of an answer.";
 		say "     You note that the building and grounds still seem to be guarded by a couple of those powerful horsemen as you look things over again to see if you missed anything the last time you were here. Sighing as you investigate the area, you realize that the only way in appears to be the one the horses are guarding, and that from the numbers you saw heading into here earlier are any indication, fighting the guards will only get you overwhelmed by more of the horsemen, even if not at first, then on subsequent visits. Looking at the large building speculatively, you realize that if you want to get in, you will have to find some way to bribe the guards into looking the other way each time you visit.";
@@ -56,14 +59,16 @@ Instead of Resolving Stabled Situation:
 				delete soda;
 				Move player to The Stables Hotel;
 				now battleground is "void";
-				Now The Stables Hotel is known;
+				now The Stables Hotel is known;
+				now Resolution of Stabled Situation is 1; [bribed your way in]
 				now Stabled Situation is resolved;
 			else:
 				LineBreak;
 				say "     You begin searching through your pack as you approach the doors, the two horsemen eyeing you curiously and with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don't have anything the guards would like right now, and that if you want to get into this strange-looking place, you will need to come back later. Maybe with some chips and soda or something. Everyone likes snack food, right?";
+				now Resolution of Stabled Situation is 3; [no bribe in the player's inventory]
 		else:
 			say "     Deciding that maybe it would be best to just ignore this place and whatever secrets lie inside for now, you shoulder your pack and continue on your way.";
-
+			now Resolution of Stabled Situation is 2; [didn't approach]
 
 Section 2 - The Stables Hotel
 

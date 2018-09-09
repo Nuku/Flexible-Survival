@@ -148,7 +148,7 @@ Instead of resolving a Rooftop Rumble:
 			LineBreak;
 			say "     Quickly deciding that the danger far outweighs any other consideration, you run back the way you came as fast as possible and continue running even after exiting the alleyway maze. After a few blocks you stop and catch your breath, no longer feeling the sensation of being watched. Resolving to put this nonsense all behind you, you press on, promising yourself not to return.";
 			now Rooftop Rumble is resolved;
-			now Resolution of Rooftop Rumble is 99; [desinterest]
+			now Resolution of Rooftop Rumble is 99; [disinterest]
 			now HP of Rane is 99;
 
 to say MeetRane:

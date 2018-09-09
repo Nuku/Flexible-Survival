@@ -589,7 +589,7 @@ instead of resolving Prowling Macho:
 	else:
 		LineBreak;
 		say "     With a shrug at the antics of some mall inhabitants, you just turn your back on the two of them, walking on in your tour to find anything that actually interests you.";
-		now Resolution of Prowling Macho is 99; [desinterested in Grace]
+		now Resolution of Prowling Macho is 99; [disinterested in Grace]
 	now Prowling Macho is resolved;
 
 SailboatPainting is a situation.

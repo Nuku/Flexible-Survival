@@ -47,6 +47,7 @@ to say haleventtalk:
 			now HP of Hayato is 6;
 			say "     You continue being friendly, trying to reassure him that you only want to talk (despite whatever other motives you may have). Though unwilling to talk at first, you soon get him to relent. 'Fine. If it'll make you go away. It'd be for your own good; I don't want to hurt you,' he adds, sounding more cautionary than threatening.";
 			say "[halhistory]";
+			now Resolution of Garage Demon is 1; [Player successfully talked to Hayato first try]
 			now Garage Demon is resolved;
 		else:
 			say "     The muscled creature slams his metal-clad club against the ground, cracking the pavement. 'Shut up and leave. Go away before I hurt you. RArrr!' he growls at the end for good measure, shaking his arms menacingly in the air. Something in his reaction makes you hope that it might all be for show, but he's certainly too worked up right now to talk to. Perhaps you might try at another time.";
@@ -55,6 +56,7 @@ to say haleventtalk:
 		now HP of Hayato is 6;
 		say "     The horned man sighs as you approach again. 'Damn, you're persistent. Very well, we may as well talk for a bit. Just be careful around me; I don't want to hurt you,' he adds, sounding more cautionary than threatening.";
 		say "[halhistory]";
+		now Resolution of Garage Demon is 2; [Player successfully talked to Hayato second try]
 		now Garage Demon is resolved;
 
 
@@ -67,6 +69,7 @@ to say haleventfight:
 	increase carried of chips by 1;
 	now HP of Hayato is 99;
 	unleashredoni;
+	now Resolution of Garage Demon is 3; [Tried to fight Hayato]
 	now Garage Demon is resolved;
 
 
@@ -383,8 +386,10 @@ instead of resolving Noh Mask:
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			now HP of Hayato is 12;
 			say "[nohmaskninja]";
+		else:
+			say "     You decide to postpone getting the mask, at least for now. Hayato will have to wait a little longer.";
+		now HP of Hayato is 12;
 	else if HP of Hayato is 12:
 		say "     Returning in search of the Japanese noh mask, you find them still going at it with the anime babe. She's pinned down onto the desk by one of them as he pounds into her. The others are [one of]groping her large boobs[or]taking turns getting blow jobs[or]recovering after fucking her[at random].";
 		say "     It looks like they'll be here for a while, so you'll have to deal with them if you want to get the mask.";
@@ -428,11 +433,13 @@ to say nohmaskanimebabe:
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Having beaten and dealt with the anime babe, you head over to the wall behind the desk and pluck the noh mask off the wall. It is a porcelain mask depicting the stylized face of a geisha girl. The expression is one of faint amusement or coy playfulness. Grabbing some paper from the waste bin, you bundle some padding around it and pack it away safely. Hopefully Nermine will be satisfied with this and you'll be able to get the key. From thinking of the key, your mind drifts to Hayato and his muscly figure, looking forward to enjoying some fun with him once you can get him out of the restraint.";
 		now HP of Hayato is 14;
+		now Resolution of Noh Mask is 1; [Defeated Anime Babe, Got Mask]
 		now Noh Mask is resolved;
 	else if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     After the anime babe's had her fun with you, she splays out across the desk and gives a satisfied moan. 'Oh, that was a wonderful scene. Certainly a fine replacement for the ninja one. Now, was that all you came here looking for?' Still recovering from the raw, lustful sex, you point up to the mask, saying that you need it. She smiles says that you can take it as payment for such a good adult-action episode.";
 		say "     Under the effects of your recent contact with her, that makes more sense to you than perhaps it ought to. But regardless, you get up and take the noh mask from the wall. It is a porcelain mask depicting the stylized face of a geisha girl. The expression is one of faint amusement or coy playfulness. Grabbing some paper from the waste bin, you bundle some padding around it and pack it away safely. Hopefully Nermine will be satisfied with this and you'll be able to get the key. From thinking of the key, your mind drifts to Hayato and his muscly figure, looking forward to enjoying some fun with him once you can get him out of the restraint.";
 		now HP of Hayato is 14;
+		now Resolution of Noh Mask is 2; [Lost to Anime Babe, Got Mask]
 		now Noh Mask is resolved;
 	else:
 		say "     Fleeing from the buxom woman, you dash back down the hall. As you run, you can hear the pouting. 'Oh, who am I going to have my big finale scene with now?' If you're to get the noh mask you wanted, you'll have to try again later.";

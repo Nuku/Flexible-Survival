@@ -45,12 +45,14 @@ instead of resolving Mall Orgy:
 				say "     It seems to you that the dominant species in this impromptu orgy are the hyena and wyvern - while the ram has been pushed to the floor, the hyena's cock pulsing inside of him and marking the former soldier as a bottom-boy now. Across from them lie the gryphon and wyvern - their grunts and humping indicating that the gryphon is having a great time being fucked. Of course you stay to watch even more and start getting some ideas about that damn otter - showing off to you with his slim, femmy body that matches his partly-mustelid features so very well. However, you resist the temptation - standing up right now would be a bit difficult without flashing your cock to all those who pass the side corridor, for now oblivious to the things going on in there. Nah, you'll restrain yourself to just wanking off on the down-low right now...";
 				WaitLineBreak;
 				say "     In time, your stroking speeds up - the five horny guys you are watching still going at it, endlessly giving into their pleasure. Soon, your cock throbs hard in your grasp before spurting it's stickiness into your hands and over the floor. When your orgasm eventually ebbs off, you don't bother to clean up, instead just quietly shoving your dick back into your pants and zipping up. Standing up and walking away a little way, you chuckle to yourself as you spot the now fully-changed guys emerge from their service corridor a few minutes later. The nanites did change their bodies even more, and now there are two anthro wyverns, two hyenas, and a nearly fully changed otter hiding in their group. The otter smiles at you for a second or two, then follows his friends as they wander off towards the food court.";
+				now Resolution of Mall Orgy is 1; [Stayed, Male]
 				now Mall Orgy is resolved;
 			else if player is female: [intended to only allow /pure/ females through]
 				say "     You just sit there, watching over them, your pussy wet with arousal - your digits rubbing over its flesh to the act of public perversion before you. It turns you on - a lot - your nanite-filled head enjoying the thought of showing off in public - enjoying the thought of watching others - enjoying the scent of sex that lies over the city - and the mall. Your head awash with feelings of arousal as you stroke, you see the young men in front of you changing more with every moment - each one of them is taking on some aspect of his partner, as they swap body fluids... and nanites.";
 				say "     It seems to you that the dominant species in this impromptu orgy are the hyena and wyvern - while the ram has been pushed to the floor, the hyena's cock pulsing inside of him and marking the former soldier as a bottom-boy now. Across from them lie the gryphon and wyvern - their grunts and humping indicating that the gryphon is having a great time being fucked. Of course you stay to watch even more, and start getting some ideas about that damn otter - showing off to you with his femmy, slim body matching his partly-mustelid features so very well. However, you resist temptation and decide to just have some fun with yourself. ";
 				WaitLineBreak;
 				say "     In time, your teasing speeds up - following the five horny guys still going at it, endlessly giving into their pleasure. Soon, a breathtaking orgasm makes you tremble and pant, wetness dripping from your nether lips. You don't bother to clean up, instead just covering your crotch again. Standing up and walking away a little way, you chuckle to yourself as you spot the now fully-changed guys emerge from their service corridor a few minutes later. The nanites did change their bodies even more, and now there are two anthro wyverns, two hyenas, and a nearly fully changed otter hiding in their group. The otter smiles at you for a second or two, then follows his friends as they wander off towards the food court.";
+				now Resolution of Mall Orgy is 2; [Stayed, Female]
 				now Mall Orgy is resolved;
 			else: [intended for a filter for neuters]
 				say "     Having nothing to get off with, you decide to leave anyways. You wouldn't want to get worked up and not be able to work off the tension."; [no cock, no cunt, no fun :()]
@@ -61,6 +63,7 @@ instead of resolving Mall Orgy:
 	else:
 		LineBreak;
 		say "     You decide against staring and just leave with a shrug.";
+		now Resolution of Mall Orgy is 99; [Player not interested]
 		now Mall Orgy is resolved;
 
 OtterBoi Meeting is a situation. OtterBoi Meeting is inactive.

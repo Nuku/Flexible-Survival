@@ -51,10 +51,12 @@ Instead of resolving a Poor Kitty:
 			say "     She looks up at you and slowly reaches out to take the cup into her muzzle. Her smooth, rubbery mouth doesn't so much bite into it as absorb the portion her lips touch. Her tongue slides the melting red and white plastic around in her mouth before swallowing it down[if skinname of player is listed in infections of Latexlist]. Seeing her do this is a little disconcerting, given your current nature, but she is careful to only take the cup into her mouth when she goes for the second bite[else]. She takes rest of the cup into her mouth and it soon follows the first bite[end if].";
 			say "     After swallowing the last of it down, she nuzzles against your leg and purrs softly, giving a cute, cat-like mew. You reach down and cautiously pet her head, rubbing the rubber tigress's ears for a bit. After petting her head for a while, you move to back off while she watches you go.";
 			increase score by 5;
+			now Resolution of Poor Kitty is 1;		[Fed rubber kitty once]
 			now HP of rubber tigress is 1;
 		else:
 			say "     You throw the cup several yards away and the tigress bounds over to it. She gives it several playful bats with her paw, sending it skittering across the ground. She hunkers down, hips and tail all atwitch as she creeps closer and then pounces. She bites into the cup, her lips melting through the plastic. As she's doing all this, you're backing away slowly and dash off around the corner. You hear a soft, plaintive mewl in the distance, but that is all.";
 			now HP of rubber tigress is 2;
+			now Resolution of Poor Kitty is 99;		[Refused rubber kitty]
 			now Poor Kitty is resolved;
 	else if HP of rubber tigress is 1:
 		say "     While walking the midway you get this odd feeling that you're being watched. You catch a bit of orange out of the corner of your eye and close to the ground, but it is gone by the time you look. Noticing that you've been in this area before, you suspect you know what's up. You continue nonchalantly while knowing that strange, neuter tigress is following you.";
@@ -72,12 +74,14 @@ Instead of resolving a Poor Kitty:
 			add "Tamed" to Traits of rubber tigress;
 			move Artemis to Courtyard;
 			now HP of rubber tigress is 3;
+			now Resolution of Poor Kitty is 2;		[Artemis recruited]
 			now libido of rubber tigress is 30;
 			say "     (The rubber tigress is now tamed! You can make her your active pet by typing [bold type][link]pet rubber tigress[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			now Poor Kitty is resolved;
 		else:
 			say "     Continuing to walk along, you turn around the next corner and, once out of sight, run around the stand. You move quietly as you sneak back onto the main thoroughfare, finding the strange tigress poking her head around the corner[if weapon object of player is not journal]. You pull out your weapon and charge at her[else]. You raise your fists and charge at her[end if]. She gives a shrill shriek of surprise and scrambles away. You don't expect that thing will be bothering you again.";
 			now HP of rubber tigress is 2;
+			now Resolution of Poor Kitty is 99;		[Refused rubber kitty]
 			now Poor Kitty is resolved;
 	else:
 		say "ERROR-Artemis-[HP of rubber tigress]PK: HP outside of range for the event!";

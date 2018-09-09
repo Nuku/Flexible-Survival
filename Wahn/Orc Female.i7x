@@ -53,10 +53,12 @@ Instead of resolving a Noteworthy Ruin:
 			challenge "Orc Female";
 			change the north exit of Dry Plains to Inconspicuous Trail; [connecting the location to the travel room]
 			change the south exit of Inconspicuous Trail to Dry Plains; [connecting the location to the travel room]
+			now Resolution of Noteworthy Ruin is 1; [met Katya]
 			now Noteworthy Ruin is resolved;
 		else:
 			LineBreak;
 			say "     Deciding against exploring the camp, you do turn away from it and keep going. You do make a note of where it was though, in case you want to return to the [bold type]noteworthy ruin[roman type] sometime in the future.";
+			now Resolution of Noteworthy Ruin is 2; [didn't meet Katya]
 			now HP of Katya is 1; [declined to investigate]
 	else if HP of Katya is 1: [didn't investigate before]
 		say "     Roaming through the plains, you come upon the section of ruins again where you made your observation about someone possibly living inside. There are basically just a few sections of roofless wall still standing, as well as a field of scattered stones and high mounds of rubble. This time there is nothing obvious to draw your attention to it, but you remember it from the last time...";
@@ -75,10 +77,12 @@ Instead of resolving a Noteworthy Ruin:
 			challenge "Orc Female";
 			change the north exit of Dry Plains to Inconspicuous Trail; [connecting the location to the travel room]
 			change the south exit of Inconspicuous Trail to Dry Plains; [connecting the location to the travel room]
+			now Resolution of Noteworthy Ruin is 1; [met Katya]
 			now Noteworthy Ruin is resolved;
 		else:
 			LineBreak;
 			say "     Deciding against exploring the camp, you do turn away from it and keep going. You do make a note of where it was though, in case you want to return to the [bold type]noteworthy ruin[roman type] sometime in the future.";
+			now Resolution of Noteworthy Ruin is 2; [didn't meet Katya]
 			now HP of Katya is 1; [declined to investigate]
 
 Section 2 - Monster Responses

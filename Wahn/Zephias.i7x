@@ -48,9 +48,11 @@ Instead of resolving a Captured Soldier:
 		if player consents: [random selection if Zephias or the soldier fucks the player]
 			LineBreak;
 			say "     [ZephiasJulioRandomSelection]";
+			now Resolution of Captured Soldier is 1; [stepped in to take his place]
 		else:[let Zephias carry the guy off]
 			LineBreak;
 			say "     You stay silent as the bound man gets hefted back on Zephias['] shoulder and the spidertaur says 'No worries about my little soldier boy - I won't let anything happen to him. At worst he'll have trouble sitting down for a day or two after I let him go later.' Zephias says and gives his captive's ass another quick squeeze, then scuttles off down the alleyway.";
+			now Resolution of Captured Soldier is 2; [let Zephias carry him off]
 		now lust of Zephias is 1;
 	else: [repeat scene]
 		say "     As you make your way through the chaos of abandoned, sometimes smashed vehicles on the streets, you duck into an alley at one point to get around the wreck of a truck blocking the road ahead. Walking in the shadowy alley, you're halfway through when suddenly someone else enters from the other end, a large shape carrying a white bundle. It's Zephias, a cocooned body over his shoulder. Peeking out from under the silk strands binding the man, a military uniform can be seen, as well as his somewhat longer than regulation black hair. Could that be... the same soldier he had with him when you met last time in this area?";
@@ -72,10 +74,11 @@ Instead of resolving a Captured Soldier:
 					say "     [ZephiasAlleyWallFuck]"; [fuck against the wall]
 			else: [random selection if Zephias or the soldier fucks the player]
 				say "     [ZephiasJulioRandomSelection]";
+			now Resolution of Captured Soldier is 1; [stepped in to take his place]
 		else:[let Zephias carry the guy off]
 			LineBreak;
 			say "     You stay silent as the bound man gets hefted back on Zephias['] shoulder and the spidertaur says 'No worries about my little soldier boy - I won't let anything happen to him. At worst he'll have trouble sitting down for a day or two after I let him go later.' Zephias says and gives his captive's ass another quick squeeze, then scuttles off down the alleyway.";
-
+			now Resolution of Captured Soldier is 2; [let Zephias carry him off]
 
 to say ZephiasJulioRandomSelection:
 	if a random chance of 1 in 2 succeeds:[Zephias fucks the player]

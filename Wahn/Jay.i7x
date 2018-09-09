@@ -230,9 +230,11 @@ Instead of resolving a Harbor Swap Meet:
 			say "[SilkDelivery]";
 			decrease carried of chocolate milk by 5;
 			now Harbor Swap Meet is resolved;
+			now Resolution of Harbor Swap Meet is 2; [player paid for the silk]
 	else if thirst of Jay is 4: [player who is friends with Aelias can pick up the silk easily]
 		say "     Returning to the swap meet, you ring the little bell again and Aelias comes down from his nest. Under his arm, he holds a bulging spindle of silk thread. 'Hello my lovely little fly,' he tells you, leaning forward to plant a kiss on your lips, then hands over the load of silk with a smile. 'I hope that this is exactly what you needed. I can tell you, it was a pain in the ass to keep spinning for hour after hour to make it, but what don't I do for my favorite prey. Have fun with it, and I hope to see you for some more action between us soon.' With a little grope of your ass, the spidertaur then starts to pull himself up the strand he slid down on, effortlessly reaching his home away from home above and vanishing inside.";
 		say "[SilkDelivery]";
+		now Resolution of Harbor Swap Meet is 1; [player who is friends with A got the silk easily]
 		now Harbor Swap Meet is resolved;
 
 to say SilkDelivery:

@@ -370,12 +370,14 @@ Instead of resolving a Strange Sighting:
 		say "     As he arrives he hands you a soda, saying, 'Sorry about that. I'm not exactly the biggest dragon, and I heard some of those savages talking about eating me...'";
 		say "     [bold type]You head back to the library, maybe you should visit the dragon again in the High Rise District - later, when he's calmed down a bit.[roman type][line break]";
 		increase carried of soda by 1;
+		now Resolution of Strange Sighting is 1; [Met Kyrverth]
 		WaitLineBreak;
 		change the South exit of Overgrown Street to Dragons Den;
 		change the North exit of Dragons Den to Overgrown Street;
 	else:
 		LineBreak;
 		say "     You decide to take caution in what could possibly be a trap and continue on your way.";
+		now Resolution of Strange Sighting is 99; [Player not interested]
 	now KyrverthTimer is turns;
 	now battleground is "void";
 	now Strange Sighting is resolved;  [it won't happen again]
@@ -439,7 +441,8 @@ to say JewelHeistSneak:
 			say "Almost immediately an alarm goes off, blaring loudly into the night. The wolverine comes around the corner, and he does NOT look happy.";
 			say "[JewelHeistFight]";
 		else:
-			say "You walk into the shop, but it's not what you were expecting. The guard went to all that effort to guard the place and someone has already looted it. Display cases around the room are smashed and the jewelry missing. You look through the drawers behind the desk and find a silver token, round with a hole in the middle. A tag says it is pure silver, maybe this would do for Kyrverth?";
+			say "You walk into the shop, but it's not what you were expecting. The guard went to all that effort to guard the place and someone has already looted it. Display cases around the room are smashed and the jewelry missing. You look through the drawers behind the desk and find a silver token, round with a hole in the middle. A tag says that it is pure silver, maybe this would do for Kyrverth?";
+			now Resolution of Jewel Heist is 1; [Snuck inside]
 			now Jewel Heist is resolved;
 			now SilverToken is 1;
 	else:
@@ -472,6 +475,7 @@ to say JewelHeistFight:
 	else if fightoutcome < 20: [player won]
 		say "     With a last blow, the wolverine topples to the ground. You step over him and enter the shop";
 		say "     You walk into the shop, but it's not what you were expecting. The guard went to all that effort to guard the place and someone has already looted it. Display cases around the room are smashed and the jewelry missing. You look through the drawers behind the desk and find a silver token, round with a hole in the middle. A tag says it is pure silver, maybe this would do for Kyrverth?";
+		now Resolution of Jewel Heist is 2; [Fought your way inside]
 		now Jewel Heist is resolved;
 		now SilverToken is 1;
 	now inasituation is false;

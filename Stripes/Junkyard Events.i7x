@@ -70,16 +70,21 @@ Instead of resolving a Raiding Party:
 						say "     Your romp with the feline over, shi gives you one last kiss before telling you shi needs to get back to work. Shi points off towards the seedier part of town and tells you of a route leading you there, should you want to find hir and hir sisters for more fun.";
 						now Entrance to the Red Light District is known;
 						increase score by 10;
+						now Resolution of Raiding Party is 1; [won, fucked Tigress Hooker]
 					else:
 						say "     The tigress hooker hisses and pushes you away. 'You don't know a good thing when you see it,' shi growls and turns away, heading back the way the goblins came.";
 						increase score by 1;
+						now Resolution of Raiding Party is 2; [won, refused Tigress Hooker]
 		else if goblinfight is 2:
-			say "     Beaten by the goblins, they close in you around and smack you a few times. They then send you on your way with more cackling before continuing one with their prize. You should perhaps consider yourself lucky that they already have one prize and can't take you with them as well.";
+			say "     Beaten by the goblins, they close in you around and smack you a few times. They then send you on your way with more cackling before continuing on with their prize. You should perhaps consider yourself lucky that they already have one prize and can't take you with them as well.";
+			now Resolution of Raiding Party is 3; [lost, goblins ran off with their captive]
 		else:
 			say "     Deciding that it is, in the end, not your problem, you hightail it out of there.";
+			now Resolution of Raiding Party is 99; [disinterest]
 	else:
 		LineBreak;
 		say "     Deciding that whatever is going on is not your problem, you hightail it out of there.";
+		now Resolution of Raiding Party is 99; [disinterest]
 	now Raiding Party is resolved;
 
 
@@ -149,18 +154,24 @@ Instead of resolving a Stray Cat:
 				say "     You have both dirty water and fresh water. Which will you give him? (Y=dirty, N=fresh)";
 				if player consents:
 					say "[dirtysnow]";
+					now Resolution of Stray Cat is 1; [created snow bat]
 				else:
 					say "[bottlesnow]";
+					now Resolution of Stray Cat is 2; [gave snow leopard clean water]
 			else if dirty water is owned:
 				say "[dirtysnow]";
+				now Resolution of Stray Cat is 1; [created snow bat]
 			else:
 				say "[bottlesnow]";
+				now Resolution of Stray Cat is 2; [gave snow leopard clean water]
 		else:
 			LineBreak;
 			say "     Deciding to save your supplies for yourself, you ready yourself to face the thirsty feline.";
 			challenge "Snow Leopard";
+			now Resolution of Stray Cat is 3; [refused snow leopard, fought]
 	else:
 		say "     You have but a short moment before the feline is upon you and attacking.";
+		now Resolution of Stray Cat is 4; [fought snow leopard]
 	now Stray Cat is resolved;
 
 to say dirtysnow:

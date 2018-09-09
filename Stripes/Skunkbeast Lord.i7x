@@ -27,6 +27,7 @@ Instead of resolving a Skunkbeast Battle:
 		challenge "Skunkbeast Lord";
 		if skunkbeaststatus is 3:		[run away]
 			say "     Unable to keep going against the fearsome might of the giant skunk, you fake it out with a final feint towards the gun and then make a break for the loose cordon of skunk creatures which gathered to watch their lord's battle. As you weave between the skunk girls and beast, they cheer to the sounds of those giant paws crushing the gun into rubble. You are disappointed that you weren't able to gain the strange weapon, but are glad to make it out of there alive and intact after facing such a foe.";
+			now Resolution of Skunkbeast Battle is 2; [ran away]
 		else if skunkbeaststatus is 2:	[defeated]
 			say "     You are knocked down by the skunkbeast lord. Pinning you down with one of his massive paws, he slams the other down onto the gun repeatedly, shattering and grinding the hated thing into the ground. With you trapped and defeated, several of the female skunks rush up, laving attention upon the victory, nuzzling and caressing him all over. Special attention is paid to his large, throbbing cock, which they stroke and rub with lustful moans and playful grins at you. That's when you realize that they're keeping the dripping, pulsing meat pointed straight at you and you are awash in a torrent of skunk semen as the giant growls loudly and proudly in triumphant climax.";
 			now humanity of player is 0;
@@ -58,7 +59,7 @@ Instead of resolving a Skunkbeast Battle:
 				say "     You briefly take notice of Peppy running around. He is soon taken into the arms of several of the skunk girls, who nurse him and lavish attention on him. When you look over again later, he has grown considerably, well on his way to becoming a skunkbeast as he fucks one of the buxom skunks. After you're bred several times by your new lord, he pushes you over to the new skunkbeast, allowing you to suck its cock for a tasty load of skunk cum while your lord mounts another of the new girls.";
 			wait for any key;
 			end the story saying "Having become a fucktoy for the Skunkbeast Lord, you lose yourself to the infection.";
-			now battleground is "void";
+			now Resolution of Skunkbeast Battle is 3; [lost]
 			wait for any key;
 			follow the turnpass rule;
 			stop the action;
@@ -138,6 +139,7 @@ Instead of resolving a Skunkbeast Battle:
 			else:
 				say "     Several of the skunk girls move in to lavish attention upon you, grooming your fur, stroking your face, licking your dripping pussy and teasing your clit[if skrp is 1]. The skunk head at your waist shares sexy kisses with the skunk girls as well and even has one of them press her pussy to her muzzle to be eaten out[end if]. Several of the busty girls take turns suckling from your breasts, drawing out your milk. Once they get you well and truly aching for it, you raise your tail and give it an enticing swish towards the waiting skunkbeasts. They start to growl and scuffle playfully, vying for the right to mount you. Eventually a winner is chosen and you moan loudly as his cock is pressed into your heated folds. The others aren't left unsatisfied, with many other girls around eager to get their share of skunkbeast cock. They mate loudly and wildly all around you, providing a lovely show that fills you with pride.";
 				say "     You get fucked good and hard by him, and several others, over the course of the wild orgy of skunk sex that's broken out to celebrate their victory over the mercenaries and the coronation of their new skunkbeast lady. Eventually, the lustful fucking comes to an end and the skunks, satisfied (and in the case of all the girls, stuffed to overflowing with cum) disperse back into the woods.[impregchance]";
+			now Resolution of Skunkbeast Battle is 1; [won]
 			if humanity of player < 10:
 				wait for any key;
 				end the story saying "Having become the new Skunkbeast Lord, you lose yourself to the infection.";
@@ -148,6 +150,7 @@ Instead of resolving a Skunkbeast Battle:
 	else:
 		LineBreak;
 		say "     You slink further into the bushes, catching a glimpse of the skunkbeast lord slamming his two large forepaws down onto the advanced rifle, reducing it to advanced rubble. It vehemently strikes it several more times, grinding the pieces into the ground before turning around and approaching his collection of new busty skunk girls who, having given into their infection, start lavishing attention upon him and vying for his cock to fill them. You watch him fuck one of them while the others settle for the few remaining skunkbeasts, all lustfully screaming as they're fucked and bred by their bestial lovers.";
+		now Resolution of Skunkbeast Battle is 99; [disinterest]
 	now Skunkbeast Battle is resolved;
 
 

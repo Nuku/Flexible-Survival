@@ -46,7 +46,7 @@ Instead of resolving Anal Probing:
 	else:
 		LineBreak;
 		say "     Shaking your head about the weird situation you stumbled into, you gain some distance and continue your walk along the beach.";
-		now Resolution of Anal Probing is 99; [desinterest]
+		now Resolution of Anal Probing is 99; [disinterest]
 	now Anal Probing is resolved;
 
 to say AnalProbingSexMenu:

@@ -800,7 +800,7 @@ Instead of resolving Dragon Prey:
 		let playernum be 10 + charisma of player;
 		if "Haggler" is listed in feats of player, increase playernum by 3;
 		let playernum be a random number between 1 and playernum;
-		say "     [special-style-1][playernum][roman type] vs [special-style-2]15[roman type]: ";
+		say "     [special-style-1][playernum][roman type] vs [special-style-2]15[roman type]: (Charisma Check)";
 		if playernum >= 15:
 			say "     You quickly start to apologize to Christy with as much sincerity as you can muster under the rather frightening circumstances. You tell her that you're sorry that you upset her and that you didn't mean for her to be hurt. You go on to add that you realized what you were doing was wrong, which is why you went looking for a way to free her. You confess that you've really started to care for her and that you didn't want to hurt her feeling by telling her that it has been you before. You add that she's such a kind and loving soul that you didn't want to hurt her any more than you already had.";
 			say "     She seems moved by your confession and eventually releases you, nuzzling against you as tears run down her scaly cheeks as you stand back up. 'I'm glad you... *sniff*... decided to apologize... *sob*... I don't really want to think about what I might have done otherwise. You... you were my hero,' she says with a growl at the end, knocking you back several feet onto the ground. 'I don't want to ever see you again,' she says, choking back another sob before turning and flying off.";
@@ -810,6 +810,7 @@ Instead of resolving Dragon Prey:
 			else:
 				decrease morale of player by 10;
 			now HP of Christy is 100;
+			now Resolution of Dragon Prey is 1; [begged for life and succeeded]
 		else:
 			say "You quickly start trying to apologize to Christy, but have difficulty sounding sincere under the rather frightening circumstances. You try to tell her that you're sorry that you upset her and that you didn't mean for her to be hurt, but she doesn't buy it. 'No, you're only sorry that you got caught, you wretched liar,' she growls.";
 			now finale is 1;

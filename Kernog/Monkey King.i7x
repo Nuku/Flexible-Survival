@@ -311,7 +311,7 @@ instead of resolving Crashing the Satyr Party:
 	else:
 		LineBreak;
 		say "     You decide to not get involved into neighbor disputes, specifically when they involve mythological creatures and talking animals. You throw the pouch away, and settle on peeping on the orgy from afar.";
-		now Resolution of Crashing the Satyr Party is 99; [desinterest]
+		now Resolution of Crashing the Satyr Party is 99; [disinterest]
 	now Crashing the Satyr Party is resolved;
 
 [Event 3a - good path]
@@ -447,7 +447,7 @@ instead of resolving Take My Royal Word For Granite:
 	else:
 		LineBreak;
 		say "Valerie is understandably disappointed by your decision. 'Very well. I guess that I cannot force our problems on you. I will find a way, eventually...'";
-		now Resolution of Take My Royal Word For Granite is 99; [desinterest]
+		now Resolution of Take My Royal Word For Granite is 99; [disinterest]
 	now Take My Royal Word For Granite is resolved;
 
 

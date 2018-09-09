@@ -110,6 +110,7 @@ Instead of resolving a Conflict within the Plains:
 					LineBreak;
 					say "     While he is hot, and awfully tempting to bend over for, or even use, you decide it's not worth the risks of dealing with someone so...unstable. At least, that is, for now.";
 					now HP of Seraphis is 50;
+					now Resolution of Conflict within the Plains is 50;
 					now Conflict within the Plains is resolved;
 			else if calcnumber is 2:
 				LineBreak;
@@ -149,6 +150,7 @@ Instead of resolving a Conflict within the Plains:
 					say "     'There we go. Now, for introductions,' he mentions as he turns to you. 'I'm Seraphis, and I must thank you for distracting those three before they could do anything to me that was too severe.' You acknowledge his thanks and give your own name. 'Well, thank you for trusting me with your name, [if player is not defaultnamed][name of player][end if]. Beyond that, I have to go deal with someone immediately. I do hope we meet again though. Goodbye,' he gracefully declares as his arm crosses his waist and his human half bows. He then moves away, getting into a gallop seconds later.";
 					now SeraphisContent is 1;
 					now HP of Seraphis is 61;
+					now Resolution of Conflict within the Plains is 61;
 					now Conflict within the Plains is resolved;
 				else if calcnumber is 3:
 					LineBreak;
@@ -157,11 +159,13 @@ Instead of resolving a Conflict within the Plains:
 				LineBreak;
 				say "     You decide that whatever is going on here is too strange and dangerous for you, drawing you to get up and move away quickly and quietly.";
 				now HP of Seraphis is 50;
+				now Resolution of Conflict within the Plains is 50;
 				now Conflict within the Plains is resolved;
 		else:
 			LineBreak;
 			say "     You move away as hastily as you can manage without making much noise. Soon you're far, far away from anything immediately dangerous, relatively, at least.";
 			now HP of Seraphis is 50;
+			now Resolution of Conflict within the Plains is 50;
 			now Conflict within the Plains is resolved;
 
 Section 3 - Seraphis Location and Details
@@ -212,6 +216,7 @@ to say DominantSeraphisFirst:
 		say "     'I really needed the help there.' He gives a light chuckle before backing up, your body too drained to do more than stay upright, swiftly failing when his flare starts pulling at your anus. 'You'd be fun to train, but I need to go deal with someone first. And the name's Seraphis, by the way. However, you'll most likely not use that name much, if at all.' Seraphis then turns to you, walking over your form with his cock angled at your face. 'Lick me clean. None of my seed should go to waste.' You use what little energy you have left to do as your told, the musk minimizing your desire to go against anything he says. The salty fluids soon rush over your tongue as you lap up the cum, making sure to pay special attention to his medial ring and behind his flare. After a short period of this, he backs off. 'Good. Now I'll leave you to deal with yourself for now. I'm sure we'll meet again soon.' He gives a wry smile before turning away and moving into a gallop.";
 		now MarkedSeraphisCum is 1;
 		now Conflict within the Plains is resolved;
+		now Resolution of Conflict within the Plains is 1;
 		now HP of Seraphis is 1;
 		now SeraphisContent is 1;
 
@@ -242,6 +247,7 @@ to say SubmissiveSeraphisFirst:
 		say "     You watch as he rises up to his full height, eyes glazed and body sluggish. When he seems to fully recover, he clears his throat and announces his intent, 'I must take care of that insolent fool.' However, he still looks to you, eyes questioning. You give him a single nod and he gallops away. With but dust remaining of his previous presence, you redress and tidy yourself up before leaving the area.";
 		now Conflict within the Plains is resolved;
 		now HP of Seraphis is 15;
+		now Resolution of Conflict within the Plains is 15;
 		now SeraphisContent is 1;
 
 Seraphis ends here.

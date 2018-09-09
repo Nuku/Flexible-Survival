@@ -82,7 +82,7 @@ to ThunderboltEncounter2:
 	else:
 		LineBreak;
 		say "     Slightly wide-eyed you back away and quickly take your leave of the area and the feral thoughts that plague your head.";
-		now Resolution of Campus Thunder is 99; [desinterest in horse sex]
+		now Resolution of Campus Thunder is 99; [disinterest in horse sex]
 		now ThunderTrackingVariable is 50; [horse sex refused]
 	now Campus Thunder is resolved; [the end, for now]
 

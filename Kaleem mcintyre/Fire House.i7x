@@ -274,7 +274,7 @@ To say aidKenaz3:
 	say "     After that, well things go from bad to all out clusterfuck. From what your mind can process there's a lot of motion and commotion between everyone present as they try to help you help get Pertho off of Kenaz while at the same time trying to do their best to calm the yowling man down as he tries to shake the dog loose. Eventually you regain enough sense of self to dart over and then grab Pertho's muzzle to literally pry the feral mutant's fangs from off of Kenaz's now bleeding leg. Drawing the feral canine back so that Othala and the newcomer can deal with Kenaz you struggle to hold Pertho, the other fighting and growling at you in that canine way the promises a lot of pain on your part when you do. In return you growl at him to shut up and calm down, your voice taking on a low bass rumble that instantly makes the Dalmatian comply in response to your command.";
 	say "     After that, well... Maybe you should try to [italic type]assist[roman type] Kenaz some more since he's probably not in the talking mood at the moment.";
 	now Kenaztalk is 5;
-	Now HelpKenazOut is 4;
+	now HelpKenazOut is 4;
 
 
 
@@ -326,11 +326,11 @@ To say aidKenaz4:
 	else:
 		LineBreak;
 		say "     In the next hour or so you place Pertho into the back room, watch as Kenaz transforms into a sexy Dalmatian, talk to Mannaz and listen to his story about how he got back into the city, via aiding the short staffed military, and then charm Kenaz into being a willing bed partner for you!";
-	Now kto is 1;
-	Now Kenaztalk is 2;
+	now kto is 1;
+	now Kenaztalk is 2;
 	now Kenazaroused is 1;
 	Move OtherDals to the FireHouse;
-	Now HelpKenazOut is 5;
+	now HelpKenazOut is 5;
 	follow the turnpass rule;
 
 
@@ -339,8 +339,8 @@ To say aidKenaz5:
 	say "     '[italic type]Wuff![roman type] Oh sorry about that. That's been happening a lot as of late.' Kenaz rubs the back of his head before smirking at you. From what you can see the other is taking to his new form quite well. 'Anyway, I don't think I have much for you to do for today...oh wait a minute!' Kenaz makes a mad dash over to where the coat racks are and then pulls off a single firefighter coat and then brings it back over to you. 'Here, this may not be much, but please. I want you to have it for all of the trouble you've gone through for me and everyone else.'";
 	say "     Not seeing a reason why you shouldn't you take the offered gift you take the firefighter's coat and then place it into your backpack. 'I'm sorry that I don't have much to offer you, but...' You shush the other before he can start. Letting the Kenaz know that his souvenir will be cherished regardless of its worth gets a smile from the Dalmatian. 'You're a good friend, you know that?' You can only smirk at the other at that point.";
 	now carried of firefighter coat is 1;
-	Now HelpKenazout is 6;
-	Now Kenazdes is turns;
+	now HelpKenazout is 6;
+	now Kenazdes is turns;
 
 
 

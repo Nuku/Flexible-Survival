@@ -152,6 +152,7 @@ Instead of resolving a Thankful Soldier:
 				say "     Food x3, Water x1 obtained.";
 				increase carried of food by 3;
 				increase carried of water bottle by 1;
+				now Resolution of Thankful Soldier is 2; [talked to David]
 			else: [fuck the soldier]
 				LineBreak;
 				say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss before he can react. The initial look of alarm in his eyes quickly fades as you make out with him, exploring his mouth with your tongue as you run a hand through his hair and goose his bubble butt with the other one.";
@@ -177,6 +178,7 @@ Instead of resolving a Thankful Soldier:
 				LineBreak;
 				say "     For now, you leave your handsome soldier boy to gather up his clothes and continue with his patrol. Hopefully you can catch him here again on his next patrol...";
 				now thirst of David is 1;
+				now Resolution of Thankful Soldier is 3; [sexed David]
 			WaitLineBreak;
 			increase score by 5;
 			now LastTSEvent is turns;
@@ -186,6 +188,7 @@ Instead of resolving a Thankful Soldier:
 			say "     As he recognizes you, he gives you a little wave and walks up to talk. He says [if thirst of David < 2]'Hello and goodbye I guess. I got new order to report to one of the larger beachhead camps in the city for some special duties, so I'm afraid we won't be seeing each other again for now.' You ask him if he knows what he's supposed to do there and he shrugs, saying that he just got ordered to report there.[else]with a bit of a sad expression 'I got ordered to report to one of the larger beachhead camps in the city for some other duties. So I guess that's it for our little meetings in that alley... I'll miss you.' After pulling you in for a goodbye-kiss, he walks away, looking back after a while and waving, then continuing on his way.[end if]";
 			now HP of David is 1;
 			move David to Parade Ground;
+			now Resolution of Thankful Soldier is 1; [David went to Camp Bravo]
 			now Thankful Soldier is resolved;
 		else: [meeting him in the alley to chat or fuck]
 			say "     Moving through the city, you run into a lone soldier patrolling an alley near a small military encampment. It's Private Jackson, the young soldier you saved from that demon brute in the red light district. He's got a slender but still muscular build and a nice-looking face with a boyish charm.";
@@ -198,6 +201,7 @@ Instead of resolving a Thankful Soldier:
 				LineBreak;
 				say "     You chat a bit with David about life before the nanite plague and now and what's going on in the city. Speaking to a regular human about these things calms your mind and strengthens your human self-image a bit. After a while, you say your goodbyes and he goes on walking his patrol. Maybe you'll see him again the next time he comes through here...";
 				SanBoost 10;
+				now Resolution of Thankful Soldier is 2; [talked to David]
 			else: [sex]
 				LineBreak;
 				if thirst of David is 0:
@@ -226,6 +230,7 @@ Instead of resolving a Thankful Soldier:
 				LineBreak;
 				say "     For now, you leave your handsome soldier boy to gather up his clothes and continue with his patrol. Hopefully you can catch him here again in a little while...";
 				WaitLineBreak;
+				now Resolution of Thankful Soldier is 3; [sexed David]
 				if thirst of David < 5:
 					increase thirst of David by 1;
 			now LastTSEvent is turns;

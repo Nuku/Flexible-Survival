@@ -18,7 +18,7 @@ Instead of resolving a Fetish Store:
 	say "     Riding crop obtained. Giddy-up!";
 	increase carried of riding crop by 1;
 	increase score by 5;
-	Now Fetish Store is resolved;
+	now Fetish Store is resolved;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -59,10 +59,12 @@ Instead of resolving a Raided Corner Store:
 			challenge "Herm Hyena";
 			challenge "Herm Hyena";
 			say "     After the hyenas are gone, you try the door again, taking greater care to avoid noise, but are unable to force it open. Disappointed, you head back into the city.";
+		now Resolution of Raided Corner Store is 1; [tried to get into the back]
 	else:
 		say "     You opt to leave it alone and head back to search elsewhere. The grapes were probably sour anyhow.";
+		now Resolution of Raided Corner Store is 99; [disinterest]
 		increase score by 1;
-	Now Raided Corner Store is resolved;
+	now Raided Corner Store is resolved;
 
 
 Section 4 - Aussie Pub
@@ -90,7 +92,7 @@ Instead of resolving a Flooded Street:
 	else:
 		say "     You quietly make your escape.";
 		increase score by 1;
-	Now Flooded Street is resolved;
+	now Flooded Street is resolved;
 
 
 
@@ -126,8 +128,9 @@ Instead of resolving a Strip Bar:
 			say "[stripbarsearch]";
 		else:
 			say "     You go off, deciding to find a safer place to search.";
+			now Resolution of Strip Bar is 99; [disinterest]
 			increase score by 1;
-		Now Strip Bar is resolved;
+		now Strip Bar is resolved;
 	else:
 		say "     Passing through the infected city, you keep a watch for aggressive creatures or possible things of use while you await rescue. During your searching, you come across a relatively intact strip bar. While the lights and neon are off and it seems unoccupied, the place seems to be in better shape than many of the others you've come across. Perhaps there may still be something useful in there. Though given the nature of the business, you do worry about the risks.";
 		say "     [bold type]Do you enter?[roman type][line break]";
@@ -177,7 +180,7 @@ to say stripbarsearch:
 	if T > 7:
 		say "Searching through the strip bar, you have to avoid cum puddles. You head over to check the bar, but find that it was destroyed during the outbreak. Clearly someone became something large and aggressive. The booze rack has been knocked completely over and the bottles are shattered. There are large patches of cum all around that area, so you have no inclination to search it more closely for any goods which may have survived. Well, better luck next time.";
 		increase score by 1;
-
+	now Resolution of Strip Bar is 1; [searched through the strip bar]
 
 
 Section 7 - Evangelist
@@ -211,7 +214,7 @@ Instead of resolving a Evangelist:
 		if libido of player > 74:
 			say "[orgyoutcome]";
 			increase score by 50;
-			Now Evangelist is resolved;
+			now Evangelist is resolved;
 			stop the action;
 		say "     [bold type]You are tempted to join them - to simply give into the lustful mass and join the orgy.[roman type][line break]";
 		LineBreak;
@@ -220,13 +223,13 @@ Instead of resolving a Evangelist:
 		if player consents:
 			say "[orgyoutcome]";
 			increase score by 50;
-			Now Evangelist is resolved;
+			now Evangelist is resolved;
 			stop the action;
 	say "     You resist the urge to give in and join the orgy that has formed after the battle and scan around the sea of fur and flesh surrounding you. You notice the leather wolves are still at it with the cock cannon and one of them points towards you, trying to get the attention of his lustful brethren. You need to get out of here soon. Finding a path between several mating pairs, you try to dash to safety before things cascade further. You run, making it most of the way out of the crowd before being blocked by another monster.[line break]";
 	fight;
 	say "     Pushing your way free, you move to the relative safety of a nearby alcove, panting to catch your breath and to recover you energy. You look back at the top of the car, seeing that the leopard has prevailed against the other prospective lovers and is now plowing into the newly corrupted leopardess beneath him. They both yowl in feline ecstasy as he pumps his heavy load into her womb, seeking to breed his new mate.";
 	increase score by 50;
-	Now Evangelist is resolved;
+	now Evangelist is resolved;
 
 to say orgyoutcome:
 	say "     Giving in to the temptation of so many sexy creatures around you, you pounce at a nearby herm unicorn and wrap your lips around hir cock-like clit. You lick and suck over it, moaning in pleasure as the lust fills you. Shi is covered in soft, white hair which you run your hands over as you cup hir ass. Shi has no visible balls for you to play with, so you stuff a few fingers into hir dripping puss. Shi's already been seeded during the orgy and the cum leaks down over your hand.";
@@ -293,7 +296,7 @@ Instead of resolving a Business as Usual:
 	say "     The tigress is much taller than him and wearing a skimpy outfit that shows off her shapely body. She has a pink half-shirt that barely holds in her large bosom. She has a fishnet undershirt that covers her tight belly and has a cheap, leather skirt around her waist. Her red hair is tied into a ponytail by a small bow. She has another similar bow at the end of her tail.";
 	say "     The mouse stands there nervously for a while, shifting from one foot to another, while she is at ease, almost as if bored by the discussion. Finally, she grows weary of a conversation she's probably had many times before and waves for him to give her the bag's contents. He smiles and pulls out a two-liter carton of milk and the tigress's eyes almost light up. She takes it and rushes him into the alley, paws roaming over his body. It seems that even in these strange times, the world's oldest profession lives on.";
 	increase score by 1;
-	Now Business as Usual is resolved;
+	now Business as Usual is resolved;
 
 
 

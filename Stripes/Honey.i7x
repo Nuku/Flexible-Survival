@@ -42,12 +42,14 @@ Instead of resolving a Smashed Hive:
 				else:
 					say ".";
 				say "[beegirlsaved]";
+				now Resolution of Smashed Hive is 1; [saved honey]
 			else:
 				say "     Not wanting to risk getting too close to the enraged bee girl, you grab some chunks of honeycomb and make a run for it.";
 				say "     Honeycomb x 5 obtained.";
 				increase carried of honeycomb by 5;
 				increase score by 10;
 				now HP of bee girl is 100;
+				now Resolution of Smashed Hive is 99; [left honey]
 				now Smashed Hive is resolved;
 		else if healing booster is owned:
 			say "     [bold type]Do you try to help the poor bee girl with a healing booster or do you grab some honey while you can and make a run for it?[roman type][line break]";
@@ -57,6 +59,7 @@ Instead of resolving a Smashed Hive:
 			if player consents:
 				say "     Taking care not to appear threatening and trying to reassure her that you only want to help, you move slowly over to the bee girl. She buzzes angrily at you, but stumbles and cannot remain upright. Moving to her side, you inject her with the healing booster, feeling sorry for this lone survivor and hoping it was worth using a booster to save her.";
 				delete healing booster;
+				now Resolution of Smashed Hive is 1; [saved honey]
 				say "[beegirlsaved]";
 			else:
 				say "     Not wanting to risk getting too close to the enraged bee girl, you grab some chunks of honeycomb and make a run for it.";
@@ -64,6 +67,7 @@ Instead of resolving a Smashed Hive:
 				increase carried of honeycomb by 5;
 				increase score by 10;
 				now HP of bee girl is 100;
+				now Resolution of Smashed Hive is 99; [left honey]
 				now Smashed Hive is resolved;
 		else:
 			say "     Feeling there is nothing that you can do for her, and not wanting to risk staying around an enraged bee girl, you grab some chunks of honeycomb and make a break for it.";
@@ -71,6 +75,7 @@ Instead of resolving a Smashed Hive:
 			increase carried of honeycomb by 5;
 			increase score by 10;
 			now HP of bee girl is 100;
+			now Resolution of Smashed Hive is 99; [left honey]
 	else if HP of bee girl is 1:
 		if companion of player is bee girl:
 			say "     Your meandering through the park takes you back to the ruins of the shattered bee hive. The sticky rubble has been picked through since you were last here, the last of the honey having been taken. Even the bodies of the fallen drones are gone - something you don't want to think about too much. Looking down at Honey, who is clutching your side tightly, she could have shared their grisly fate had you not helped her[if scalevalue of player is 1]. As you hug her[else]. As you kneel down to hug her[end if], you notice some bear tracks and dried dribbles of honey heading off into the woods. You might be able to track down one of the bears responsible for this, if you want to.";
@@ -131,15 +136,19 @@ Instead of resolving a Smashed Hive:
 					else if fightoutcome >= 20 and fightoutcome <= 29:
 						say "     Having lost and been used by the large bruin, you stagger back into the woods. Honey rejoins you, taking your hand and helping you back to the old hive. 'I'm glad you were willing to stand up to the bear for me, but I'm just happy you're back safe and sound.' You nod and take her hand, leaving the ruins of the old hive behind for good.";
 						now HP of bee girl is 4;
+						now Resolution of Smashed Hive is 2; [lost the fight]
 					else:
 						say "     Unwilling or unable to keep fighting, you and Honey make a break for it, running back into the woods. The pudgy bear only gives pursuit briefly before she's tried and panting for breath. She gives an angry roar of warning not to return and heads back to her campsite. You and the bee girl make your way back to the old hive. 'I'm glad you tried standing up to the bear for me. They're really scary, aren't they?' You nod and take her hand, leaving the ruins of the old hive behind for good.";
 						now HP of bee girl is 4;
+						now Resolution of Smashed Hive is 3; [fled the fight]
 					now Smashed Hive is resolved;
 				else:
 					say "Despite your search, you fail to find that bear. It has to be around here somewhere, but you follow the path in search of traces of where she went, but eventually end up circling back towards the park's main path and give up the search for now.";
+					now Resolution of Smashed Hive is 4; [bear not found]
 			else:
 				say "     Deciding it'd not be worth the bother to try and track down the bear, you gently guide poor Honey away from the site of her loss. Given how the place has been stripped clean, you resolve not to come back here again to spare her the pain.";
 				now HP of bee girl is 2;
+				now Resolution of Smashed Hive is 5; [bear not searched]
 				now Smashed Hive is resolved;
 		else:
 			say "     Your meandering through the park takes you back to the ruins of the shattered bee hive. The sticky rubble has been picked through since you were first here, the last of the honey having been taken. Even the bodies of the fallen drones are gone - something you don't want to think about too much. Without Honey here with you, there's little point in lingering any longer and you head back into the park.";

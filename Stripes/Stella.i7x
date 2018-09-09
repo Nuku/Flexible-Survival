@@ -36,6 +36,7 @@ Instead of resolving a Eager Dal:
 			say "[convincestella]";
 		else:
 			say "     You decide against it and stay mum. After a few more minutes of chatting, the dalmatian herm gives a chipper farewell and goes off in search of fun elsewhere.";
+			now Resolution of Eager Dal is 99; [disinterest]
 			now Eager Dal is resolved;
 	else:
 		say "     You end up crossing paths with Stella the dalmatian herm again. She strikes up a friendly, if meandering, conversation with you for a while. During your chat, you try to convince her to come with you.";
@@ -72,6 +73,7 @@ to say convincestella:
 		increase score by 20;
 		now HP of Stella is 2;
 		now laststellamove is turns;
+		now Resolution of Eager Dal is 1; [Stella brought in]
 		now Eager Dal is resolved;
 	else:
 		say "You tell Stella that you have just the place in mind, but she's not sure about going with you. 'I mean, what if you lose the plot again? I'm more of a lover than a fighter, you know,' she giggles. 'Anyway, thanks for the offer, but I think I'll keep looking around for now.' And with that, she waves and heads off.";

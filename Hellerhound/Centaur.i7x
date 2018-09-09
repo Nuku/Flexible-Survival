@@ -48,9 +48,9 @@ Instead of resolving a Apple Tree:
 		extend game by 8;
 	else:
 		say "     Deciding not to risk the attention of this corrupted creature, you move back quietly. As you do, the tree roots sink into his flesh and entwine with his own forming tentacles. The mutant centaur moans and whinnies in pleasure as tendrils grow and sprout from his back and torso. When he finally climaxes, it is a thick, sap-like fluid that stains the ground green. When the tree roots withdraw from him, he staggers off slowly, hooves slowly changing into roots that cling at the ground as he steps. The growing tendrils reach up and branch out, starting to grow leaves and apple blossoms. Quite certain that the tainted centaur will take root soon and become another of these strange apple trees, you resolve to stay away from any more of these trees you find.";
-		now Resolution of Apple Tree is 99; [desinterest]
+		now Resolution of Apple Tree is 99; [disinterest]
 		increase score by 1;
-	Now Apple Tree is resolved;
+	now Apple Tree is resolved;
 
 
 Section 3 - Fresh Apple

@@ -52,6 +52,7 @@ Instead of resolving findingkara:
 				increase carried of food by 1;
 				move player to Tattoo parlor;
 				now tattoohunter is 4;
+				now Resolution of findingkara is 1; [won and helped Kara]
 				now findingkara is resolved;
 			else:
 				say "     As you lie there, trying to recover from your powerful experience with the sexy leopards, you notice a soft jingling as the hyena creeps up to make sure you are ok. 'Sorry about that,' she says sadly as she helps you up. 'I have had a hell of a time so far in the city, and well, I just don't think I could take much more before giving in to the urges, so I hid,' she says with an embarrassed shrug, seemingly ashamed at having abandoned you to the tender mercies of the hunting cats. 'I have a shop nearby where we can rest though. C'mon...' she says, then leads you down the streets of the red light district to a surprisingly familiar tattoo parlor.";
@@ -59,9 +60,11 @@ Instead of resolving findingkara:
 				now Kara is in Tattoo parlor;
 				move player to Tattoo parlor;
 				now tattoohunter is 4;
+				now Resolution of findingkara is 2; [lost while trying to help Kara]
 				now findingkara is resolved;
 		else:
 			say "     You decide to leave well enough alone, and continue on your way, after all, what is one more hyena more or less in the city anyways?";
+			now Resolution of findingkara is 99; [abandoned Kara]
 			now findingkara is resolved;
 	else:
 		say "     Wandering through the red light district, you spot evidence that a group of hyenas were here recently from the gang signs drawn around the area and from the tire tracks and the smell of sex in the air. It seems like not only were they riding their bikes, but they found someone to have some fun with in the district, too. Shrugging slightly since it [italic type]is[roman type] the red light district, you find yourself wondering where a group of hyenas even found bikes that still work in this crazy city, though the thought of hyenas in biker leathers seems strangely arousing as you continue along your way.";

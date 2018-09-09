@@ -176,7 +176,7 @@ Instead of resolving a Dr Feel Good:
 				say "Shoving the coat and pants into your [bodyname of player] hands the youth gives you a shaky smile and then hurries around side of you to run out of the room at top speeds. Turning to watch the other go you wonder how many more people in this city are [']missing['] like that fennec's girlfriend.";
 				now carried of doctor's uniform is 1;
 				Increase score by 10;
-				Now Dr Feel Good is resolved;
+				now Dr Feel Good is resolved;
 				now Resolution of Dr Feel Good is 1; [fought & won]
 		if fightoutcome >= 20:		[lose/run]
 			say "Getting your tail beaten by the two vixens you find yourself getting stuck with the syringe and then the world going on [italic type]SPIN[roman type] as everything starts to whirl around you over and over and over...until finally...you pass out. You are uncertain how much time passes while you're unconscious.";
@@ -207,8 +207,8 @@ Instead of resolving a Dr Feel Good:
 	else:
 		LineBreak;
 		say "Figuring that the vixens wouldn't do something to actually kill the other you pull back to head off on your way. A yelp two seconds later makes you flip your head back around, but when you don't hear anything afterwards you simply assume that it was the fennec getting his shot.";
-		Now Dr Feel Good is resolved;
-		now Resolution of Dr Feel Good is 99; [desinterest]
+		now Dr Feel Good is resolved;
+		now Resolution of Dr Feel Good is 99; [disinterest]
 
 ]	[***temporarily turned off]
 

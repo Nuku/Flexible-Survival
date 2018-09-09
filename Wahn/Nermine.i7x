@@ -254,7 +254,7 @@ to say NermineTalk1:
 			now JackalBoyTF is 5; [transformation rejected and disabled]
 		else:
 			say "     'Nermine knew her visitor would love to stay the same!' the happy jackal says with a smile, even as she reaches across the counter to give you a soft lick on the cheek. 'She is looking forward to being very helpful to her little helper in the future...' she says as she grins at you, making you flush.";
-			Now NermineTalk is 1;
+			now NermineTalk is 1;
 	else if NermineTalk is 3:
 		say "     'Nermine can see that you are certainly looking even more handsome than ever, probably as a result of all the hard work you have been doing to help her,' the jackaless says with a smile as she looks you over. 'Now if you want Nermine could help return you to your boring old form, and then you would susceptible to other changes again... but it would seem like such a shame to do so,' Nermine says with a soft smile on her face. Do you ask her to undo the changes from the strange ankhs?";
 		if player consents:
@@ -263,7 +263,7 @@ to say NermineTalk1:
 			now JackalManTF is 5;
 		else:
 			say "     'Nermine knew you would love your new look as much as she does!' the happy jackal says with a smile, even as she leans across the counter to give you a soft lick on the cheek. 'Nermine is looking forward to seeing much more of her handsome associate in the future,' she says as she grins at you, making your body flush eagerly.";
-			Now NermineTalk is 1;
+			now NermineTalk is 1;
 	else if NermineTalk is 4:
 		say "     'Ah, Nermine is happy to be addressed by her handsome master,' the naked jackal-woman says as she saunters over eagerly. 'What can Nermine help her master with?' she says as she poses slightly for your pleasure, stroking one of her clawed hands down her furred side teasingly. 'Sadly Nermine cannot merely give her master items from the shop, everything must be bought or traded for as part of old agreement,' the jackal-woman says with a soft sigh, before perking up slightly. 'Still! Nermine can give her amazingly handsome jackal master herself, whenever or wherever they decide they want to use her,' Nermine says with a happy grin as she licks her lips at the very arousing thought, obviously hoping you will decide to 'use' her often.";
 
@@ -642,7 +642,7 @@ to NermineRequestHelp:
 			increase carried of jackal totem by 1;
 			say "[bold type]You gain 30 Xp![roman type][line break]";
 			increase XP of player by 20;
-			Now Nerminehelpstatus is 4;
+			now Nerminehelpstatus is 4;
 			stop the action;
 		else:
 			say "     'Does Nermine's helper need help in remembering what she asked of [ObjectPro of player]?' Nermine says with an amused look in her eyes. 'It is nice to see someone so eager to help a jackal out, but [SubjectPro of player] should really try to remember better what Nermine needs.' Shaking her canine head from side to side, she makes a soft tsking noise. For some reason you feel vaguely disappointed in yourself at failing your mistress in even so minor a manner. 'Nermine asked to fetch wine from the satyrs in the museum. From a cask or other fresh source - not a cup. It has been found, Nermine's helper should return here to get a reward, making [ObjectPro of player] even more... attractive.' That said, she runs her long tongue over her lips in anticipation, the sight making you shudder with desire.";
@@ -673,8 +673,8 @@ to NermineRequestHelp:
 	else if JackalBoyTF is 1:
 		say "     'Ah yes!' Nermine exclaims with a smile as she spots your new jackal tail. 'This is a great start already! Does the visitor see how helpful Nermine is being? Now her new customer will not have to worry about strange or ugly changes to their rear, [SubjectPro of player] will always have a nice and handsome tail instead!' Seeing your hesitation, the jackal-woman grins and continues, 'Besides, a nice tail like that is sure to be attractive to the right kind of person...' the shopkeeper says with a lusty wink at you, before finishing. 'And there is nothing like a nice fine tail to help one to balance better! The dear visitor must admit, Nermine is a very helpful shopkeeper, but of course there is more help Nermine could give, to make [ObjectPro of player] even better and faster...'";
 		say "     She trails off for a moment with a grin as she sees that she has your full attention. 'But Nermine would need some help in return first, to pay the shop for her help of course.' You can't help but nod at the sense of this and she smiles back at you in response. 'Nermine needs some samples of the goo from one of those flying drakes, wyverns she thinks they are called, in order to make a charm for another customer. If brought three samples would be very appreciative...' The jackal-woman lets her last word hang in the air for a minute, leaving the choice of what to do now up to you.";
-		Now Nerminehelpstatus is 2;
-		Now NermineTalk is 2;
+		now Nerminehelpstatus is 2;
+		now NermineTalk is 2;
 		stop the action;
 	else if Nerminehelpstatus is 1:
 		say "     'Nermine already gave her visitor help! She hopes [SubjectPro of player] did not lose the precious totem?! It should be used soon to avoid that possibility,' Nermine says with exasperation.";
@@ -695,7 +695,7 @@ to NermineRequestHelp:
 				LineBreak;
 				say "[bold type]You gain a jackal totem![roman type][line break]";
 				increase carried of jackal totem by 1;
-				Now Nerminehelpstatus is 1;
+				now Nerminehelpstatus is 1;
 		else:
 			LineBreak;
 			say "     'This is too bad,' the jackal shopkeeper says with a sigh. 'Nermine does so enjoy helping people find themselves, and she had such very high hopes for her guest. If [SubjectPro of player] would change [PosAdj of player] mind though, just come see Nermine again,' Nermine says with a soft wink as she goes back to watching the store.";
@@ -1192,7 +1192,7 @@ An everyturn rule:
 		if JackalBoyTF >= 3:
 			if facename of player is not "Jackalboy":
 				say "     Something seems wrong to you for a minute, a frustration with your current head and face, making you snap and snarl like a beast as you try to work out the problem. You can feel the pressure inside your head building, until finally something seems to snap, and you let out a loud low moan of pleasure as your face begins to reshape itself. Your moaning cry soon transforms as well until the cry of a triumphant jackal echoes throughout the city, as you happily greet the return of the properly handsome face your mistress gave you.";
-				Now facename of player is "Jackalboy";
+				now facename of player is "Jackalboy";
 				now face of player is "narrow canine head, with a long sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's";
 		if JackalBoyTF >= 4:
 			if bodyname of player is not "Jackalboy":

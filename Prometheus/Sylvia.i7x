@@ -519,7 +519,7 @@ to DespairingBiologistEvent: [Meet Sylvia]
 		else:
 			LineBreak;
 			say "     Feeling slightly embarrassed at the willingness of the pair to let you watch, you mutter something about needing to be somewhere before walking hurriedly back the way you came, the collie giggling behind you.";
-			now Resolution of Despairing Biologist is 99; [desinterest]
+			now Resolution of Despairing Biologist is 99; [disinterest]
 			now hp of Sylvia is 100; [event refused, no further contact with her]
 	now Despairing Biologist is resolved; [It won't happen again]
 	now LastCampusWalkin is turns;

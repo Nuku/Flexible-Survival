@@ -79,13 +79,14 @@ Instead of resolving a Paratrooper:
 			add "water bottle" to invent of Back Of The Library;
 			add "food" to invent of Back Of The Library;
 		increase score by 20;
-		now battleground is "void";
+		now Resolution of Paratrooper is 1; [Vanessa brought in]
 		now HP of Vanessa is 1;
 	else:
 		say "     'Well, thanks anyhow then,' she says, turning around and heading back towards the infected city.";
+		now Resolution of Paratrooper is 99; [disinterest]
 		now HP of Vanessa is 50;
 		increase score by 1;
-	Now Paratrooper is resolved;
+	now Paratrooper is resolved;
 
 
 Section 1 - Vanessa the Centaur

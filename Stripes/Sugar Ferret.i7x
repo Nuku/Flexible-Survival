@@ -187,7 +187,7 @@ this is the sugferret rule:		[continuous temptation]
 when play ends:
 	if bodyname of player is "Sugar Ferret":
 		if humanity of player < 10:
-			say "     As your humanity fades, you are overcome by an increasing longing for sugary treats. You roam around for a while, scavenging what candy you can find and guzzling down any soda you gather immediately, thirsty or not. After a few days of this, you remember another spot with lots of sweet treats and make your way back to the Sweet Tooth candy store where you are met by the other sugar ferrets. They happily greet you and welcome you to their group with another orgy of carbonated, over-caffeinated lust.";
+			say "     As your humanity fades, you are overcome by an increasing longing for sugary treats. You roam around for a while, scavenging what candy you can find and guzzling down any soda you gather immediately, thirsty or not. After a few days of this, you remember another spot with lots of sweet treats and make your way back to the Sweet Tooth CandyShop where you are met by the other sugar ferrets. They happily greet you and welcome you to their group with another orgy of carbonated, over-caffeinated lust.";
 		else:
 			say "     You manage to survive your time in the city and are brought out to the military's holding facility. There you impatiently await your release, always tempted by the soda you see around the camp. You resist, knowing that your transformation into a wild, over-caffeinated creature of unbridled lustful energy would not improve your chances of getting out of there. It is very hard on you, but you manage to hold back your cravings.";
 			if alexbrunch >= 4:

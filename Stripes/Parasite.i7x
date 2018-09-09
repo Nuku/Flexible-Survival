@@ -46,10 +46,12 @@ Instead of resolving a Insect Hive:
 			if name entry is "Black Wasp":
 				now area entry is "High";
 				now non-infectious entry is false; [Wasps unlocked]
+		now Resolution of Insect Hive is 1; [wasps unlocked]
 	else:
 		LineBreak;
 		say "     Deciding discretion is the better part of valor, you exit the alley. Making note of this area, you decide to keep some distance between you and it in the future.";
-	Now Insect Hive is resolved;
+		now Resolution of Insect Hive is 99; [disinterest]
+	now Insect Hive is resolved;
 
 
 Section 2 - Parasite

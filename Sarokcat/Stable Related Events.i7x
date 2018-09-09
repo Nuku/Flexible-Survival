@@ -24,9 +24,11 @@ Instead of Resolving a Kitchenkegger:
 		say "     You chuckle with some amusement, and one of the beasts reaches out to involve you in their impromptu orgy, only to be foiled when another one of them grabs them from behind and shoves their rod into their fellow cook. Feeling rather tipsy and much less inhibited now after a few drinks, you nonetheless decide that you should probably stay out of the orgy for now, unless you want to stay here permanently. You set your mug down and give the distracted chefs a happy wave as you stagger back out into the halls once again...";
 		SanLoss 10;
 		PlayerDrink 20;
+		now Resolution of Kitchenkegger is 1; [took a drink]
 	else:
 		LineBreak;
 		say "     Deciding not to drink, you calmly set the mug down and try to look around some more, only to be surprised by the sheer variety of sharp pointy implements the strange horselike chefs are immediately wielding. Looking around you as they move forward, your eyes become locked on one of them wielding a cleaver almost as long as your arm. You quickly decide that discretion is the better choice here, as you run out the doors in a panic, their laughter and renewed singing chasing you down the halls, almost all the way to the entryway. Finally relaxing before continuing on your way, you ponder how many sharp pointy dangerous objects are always readily at hand in a large kitchen, and resolve to stay away from such a dangerous place in the future.";
+		now Resolution of Kitchenkegger is 2; [didn't drink]
 	now Kitchenkegger is resolved;
 
 
@@ -48,7 +50,7 @@ Instead of Resolving a Tack room:
 	else:
 		say "     Thinking about those creatures and what they might use this gear for as you look around the room, you decide that it might be best to leave while you still can. After all, this is obviously an area some of them visit often, and being found in a place with so many ways to restrain a person could be problematical you think as you slip out the door, even though for some reason, the idea of being restrained seems increasingly sexy to you as you can't help but imagine yourself in one of those nice sexy harnesses...";
 		increase score by 1;
-	Now Tack room is resolved;
+	now Tack room is resolved;
 
 
 Section 3 - Onyxroom
@@ -59,7 +61,7 @@ The sarea of Onyxroom is "Stable".
 Instead of Resolving a Onyxroom:
 	say "     Exploring deeper into the maze of halls and rooms of the converted hotel, you find yourself in another hallway much like the others. Checking to make sure that you are alone, you venture down the hallway, noticing that next to each of the doors is a neatly engraved name plate, obviously the name of the room's occupant. Halfway down the hall, you see a name plate that reads [']Onyx[']. Taking a deep breath, you open the door to the room and go inside. On the walls is an assortment of horse tack done in black leather. Bridles and halters of every description hang neatly from the walls alongside reigns and bits. A large, old-fashioned horse collar hangs on another wall, and on a stand sits an English saddle. Exploring further, you find that the closet is filled with fetish clothes and other outfits while the dresser drawers are filled with more clothes and an even larger assortment of sex toys. Quickly backing out of the room, you don't know if you should feel sorry for [if XP of Onyx > 0]the young man you met in the holding pens[else]its eventual occupant[end if] or a little bit envious.";
 	increase score by 1;
-	Now Onyxroom is resolved;
+	now Onyxroom is resolved;
 
 
 Section 4 - Unlucky elevator
@@ -70,7 +72,7 @@ The sarea of Unlucky elevator is "Stable".
 Instead of Resolving a Unlucky elevator:
 	say "     Wandering through the halls of the old hotel, you come across an elevator that appears to be open and ready for passengers, and while you don't actually expect the elevator to work without power to this area of the city, you decide to investigate it anyways. Looking around inside, you see that it seems to be a rather normal old style elevator. Without much use to be found in it, however, you get a bit of a surprise when you look at the floor buttons. It seems that aside from the ground floor, all of the floor buttons are labeled 13, despite the fact that there are certainly more than 13 floors in the building. You feel a little unsettled as you stare at the similarly labeled buttons, and decide as you step out of the elevator quickly, that you might not want to ride in that rather unlucky seeming elevator even if the power was running, as you quickly continue on your way.";
 	increase score by 1;
-	Now Unlucky elevator is resolved;
+	now Unlucky elevator is resolved;
 
 
 Section 5 - Lupine visit
@@ -81,7 +83,7 @@ The sarea of Lupine visit is "Stable".
 Instead of Resolving a Lupine visit:
 	say "     Traveling around the large building, you come across a pair of large horsemen escorting what appears to be a rather well-dressed wolfman carrying a briefcase through the halls. Quickly ducking into a dark corner, you hide as they pass by, the unusual sight of the horsemen escort, as well as the fact that the odd wolfman actually was bothering to wear clothes, makes you wonder just what was going on there. Shrugging, you chalk it up as just another strange happening in the city as you continue on your way with a bit more caution, just in case any more of those horsemen are nearby.";
 	increase score by 1;
-	Now Lupine visit is resolved;
+	now Lupine visit is resolved;
 
 
 Section 6 - Soldierstabling
@@ -124,7 +126,7 @@ Instead of Resolving a Soldierstabling:
 		if libido of player > 100, now libido of player is 100;
 		infect "Mareslut";
 		decrease humanity of player by 10;
-		Now Soldierstabling is resolved;
+		now Soldierstabling is resolved;
 		increase score by 5;
 
 
@@ -139,7 +141,7 @@ Instead of Resolving a Satisfied customer:
 	say "     Wandering around the strange sex-scented halls of the large hotel, you find the strange sight of someone sprawled half out of one of the rooms ahead. Approaching cautiously, you see that their features are a strange blend of equine and canine, and they appear to be only half conscious as they sprawl there with a smile on their muzzle. Looking them over carefully, you see signs that the person was quite likely one of those german shepherds wandering the city, as they have the traditional shepherd patterning and a build something like one of the aggressive canines.";
 	say "     The strong scent of sex wafts up from the obviously well-fucked beast, leaving you no doubt as to what they have been doing to end up this way. The creature seems to notice you after a minute, and focuses their eyes on you for a second, before smiling again and saying, 'That was the best night ever...' before they pass out at your feet. You shake your head at the obviously satisfied customer, as you cautiously step around their unconscious form, and carefully continue along your way, wondering idly how much longer the part canine is going to be a customer of the whorehouse, instead of an employee... Either way, they certainly seem happy about it.";
 	increase score by 1;
-	Now Satisfied customer is resolved;
+	now Satisfied customer is resolved;
 
 
 Section 8 - Hyenahorsemeet
@@ -154,7 +156,7 @@ Instead of Resolving a Hyenahorsemeet:
 	now hyenastabledeal is 1;
 	enable the Stables;
 	increase score by 1;
-	Now Hyenahorsemeet is resolved;
+	now Hyenahorsemeet is resolved;
 
 
 Section 9 - Waitingcustomer
@@ -210,7 +212,7 @@ Instead of Resolving a Horsegarden:
 	say "     Poking around on the ground floor of the hotel, you find a path leading out to a rather large enclosed inner garden, with a number of small tasty looking plants carefully maintained in neat little rows and a small scenic looking pond positioned in the center of the picturesque grassy garden. You are about to wander out into the rather pleasant-looking garden, when you note a small group of horses wandering over to the pond for a drink. You watch the horses carefully for a minute, the rather large beasts appearing to be almost completely normal animals, and you are about to relax when you catch the eye of one of the beasts and see a gleam of intelligence spark in those equine eyes. The horse gives a soft whicker, and soon, the whole small herd are watching you with what you can only assume is anticipation as you stand there in the doorway.";
 	say "     Looking at the obviously lusty beasts as they slowly draw closer, you find yourself thinking they are trying almost a little too hard to appear friendly and helpful as they approach. Realizing that several of the stallions are already obviously excited, you step back carefully and reach for the door, only to realize that one of the beasts was slowly creeping up along the wall while the others drew your attention and is almost upon you. The horse leaps forward to try to snag you with his teeth, but you were far enough back to easily evade the beast, and you slam the door leading out to the garden in his face before quickly hurrying off. As you make your way back towards the entryway, you resolve to avoid the gardens in this place in the future, regardless of how tempting they may seem.";
 	increase score by 1;
-	Now Horsegarden is resolved;
+	now Horsegarden is resolved;
 
 
 Section 12 - Transformationledger

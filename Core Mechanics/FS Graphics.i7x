@@ -160,6 +160,7 @@ Figure of Christy_pregnant_icon is the file "ChristyPregnant.jpg".
 Figure of Danny_naked_icon is the file "Danny_naked.jpg".
 Figure of Danny_clothed_icon is the file "Danny_clothed.jpg".
 Figure of Danny_face_icon is the file "Danny_face.jpg".
+Figure of Darius_face_icon is the file "Darius_face.jpg".
 Figure of David_naked_icon is the file "David_naked.jpg".
 Figure of David_clothed_icon is the file "David_clothed.jpg".
 Figure of David_hurt_icon is the file "David_hurt.jpg".
@@ -193,6 +194,7 @@ Figure of Eric_sofa_icon is the file "Eric1.jpg".
 Figure of Erin_face_icon is the file "Erin_face.jpg".
 Figure of Fiona_icon is the file "Fiona.jpg".
 Figure of Fancy_icon is the file "FSTF_Fancy_ig.jpg".
+Figure of Fang_face_icon is the file "Fang_face.jpg".
 Figure of Felix_icon is the file "Felix.jpg".
 Figure of Felix_face_icon is the file "Felix_face.jpg".
 Figure of Francois_icon is the file "Francois_ig.jpg".
@@ -242,6 +244,7 @@ Figure of MarcOrwell_icon is the file "MarcOrwell.jpg".
 Figure of Marc_face_icon is the file "Marc_face.jpg".
 Figure of Marc_fucked_icon is the file "Marc_fucked.jpg".
 Figure of Mason_icon is the file "Mason.jpg".
+Figure of Mike_face_icon is the file "Mike_face.jpg".
 Figure of Mike_icon is the file "Mike.jpg".
 Figure of Monty_ass_icon is the file "Monty_ass.jpg".
 Figure of Monty_combat_icon is the file "Monty_combat.jpg".
@@ -298,6 +301,7 @@ Figure of Sonny_shaved_jeans_icon is the file "Sonny_shaved_jeans.jpg".
 Figure of Sonny_shaved_nude_icon is the file "Sonny_shaved_nude.jpg".
 Figure of Sonny_face_icon is the file "Sonny_face.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
+Figure of Susan_face_icon is the file "Susan_face.jpg".
 Figure of Timothy_icon is the file "Timothy.jpg".
 Figure of TinyTim_icon is the file "Tiny_Solo.jpg".
 Figure of TinyTim_In_Action_icon is the file "Tiny_In_Action.jpg".
@@ -567,6 +571,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Danny_naked"	Figure of Danny_naked_icon	"Laylo"	g-white	"normal"
 "Danny_clothed"	Figure of Danny_clothed_icon	"Dragonpunk"	g-white	"normal"
 "Danny_face_icon"	Figure of Danny_face_icon	"Dragonpunk"	g-white	"normal"
+"Darius_face"	Figure of Darius_face_icon	"Sinealas"	g-black	"normal"
 "David_naked"	Figure of David_naked_icon	"Keitaro87"	g-white	"normal"
 "David_clothed"	Figure of David_clothed_icon	"Keitaro87"	g-white	"normal"
 "David_hurt"	Figure of David_hurt_icon	"Keitaro87"	g-white	"normal"
@@ -608,6 +613,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Erin_face"	Figure of Erin_face_icon	"Sinealas"	g-black	"normal"
 "Ewe"	Figure of Ewe_icon	"Anymouse1968"	g-white	"normal"
 "Fancy"	Figure of Fancy_icon	"Anymouse1968"	g-white	"normal"
+"Fang_face"	Figure of Fang_face_icon	"Sinealas"	g-black	"normal"
 "Feline_F1"	Figure of Feline_F1_icon	"Anymouse1968"	g-white	"normal"	[shows one of these two for female Feline]
 "Feline_F2"	Figure of Feline_F2_icon	"Anymouse1968"	g-white	"normal"	[shows one of these two for female Feline]
 "Felix_face"	Figure of Felix_face_icon	"Geir"	g-black	"normal"
@@ -706,6 +712,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Mental Mouse"	Figure of MentalMice_icon	""	g-white	"normal"
 "Messy Pig"	Figure of MessyPig_icon	"Anymouse1968"	g-white	"normal"
 "Micaela"	Figure of Micaela_icon	"Kattzie"	g-white	"normal"
+"Mike_face"	Figure of Mike_face_icon	"Sinealas"	g-black	"normal"
 "Mike"	Figure of Mike_icon	"Darian821"	g-black	"normal"
 "Monty_ass"	Figure of Monty_ass_icon	"Obieblu"	g-white	"normal"
 "Monty_combat"	Figure of Monty_combat_icon	"Obieblu"	g-white	"normal"
@@ -785,6 +792,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Skarnoth_undies"	Figure of Skarnoth_undies_icon	"Kien-Biu"	g-black	"normal"
 "Skarnoth_naked"	Figure of Skarnoth_naked_icon	"Kien-Biu"	g-black	"normal"
 "Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"	g-white	"normal"
+"Susan_face"	Figure of Susan_face_icon	"Sinealas"	g-black	"normal"
 "Talov_Kerr_Barrel"	Figure of Talov_Kerr_Barrel_icon	"Kupo Klein"	g-black	"normal"
 "Talov_Kerr_Party"	Figure of Talov_Kerr_Party_icon	"Kupo Klein"	g-black	"normal"
 "Thomas_erect"	Figure of Thomas_erect_icon	"Inkydemon"	g-black	"normal"

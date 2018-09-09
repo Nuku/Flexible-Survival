@@ -11,8 +11,8 @@ Instead of resolving a Clotho:
 	WaitLineBreak;
 	say "Asking the other woman who she is nets you a grumpy growl from the other. 'My name's not as important as the fact that I have something I need to make for you. Now hold still.' Not sure you find yourself letting the other woman do as she pleases, which ultimately nets you being stripped, measured, fondled in certain places you really don't want to be, and finally allowed to put back on your clothes after about an hour's time. 'As I thought, you are exactly what I need. [bold type]Atropis[roman type] back at our [bold type]high rise[roman type] condo is going to be so stoked about this!' The feline eared woman squeals and then rushes off like a shot leaving you thoroughly confused.";
 	Increase score by 1;
-	Now Clotho is resolved;
-	Now Atropis is active;
+	now Clotho is resolved;
+	now Atropis is active;
 
 
 Section 3 - Crone
@@ -33,7 +33,7 @@ Instead of resolving Atropis:
 	say "But why in hell's bells would someone...??? Not sure you don't bother to think on it long as you simply slam the top back over the box and then head on your way. Meanwhile, somewhere faraway, three sisters are cracking up off a joke they're sharing right about now.";
 	now carried of silver dress is 1;
 	Increase score by 5;
-	Now Atropis is resolved;
+	now Atropis is resolved;
 
 
 Section 4 - The Magic Cap
@@ -164,7 +164,7 @@ Instead of resolving a Fashion Statement:
 	else:
 		LineBreak;
 		say "Feeling as though this would be too much trouble you shake your head before turning to go about your business.";
-		now Resolution of Fashion Statement is 99; [desinterest]
+		now Resolution of Fashion Statement is 99; [disinterest]
 		now Fashion Statement is resolved;
 
 

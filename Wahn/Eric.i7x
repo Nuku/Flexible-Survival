@@ -150,17 +150,21 @@ Instead of resolving a Barricaded Lockerroom:
 			if bodyname of player is "Furling":
 				say "     After some quick talking, you almost had him convinced, but then he opens the door a bit more and peeks outside. After a short gasp from behind the door, it gets slammed shut again, with noises of something heavy pushed against it for good measure. 'Ah, you're one of them - go away, creature!'";
 				say "     Hm, sounds like he really doesn't like your current looks. Maybe you should try this again in a different shape...";
+				now Resolution of Barricaded Lockerroom is 2; [frightened Eric as a furling]
 			else:
 				say "     After some quick talking, you manage to convince the person inside the lockerroom that you're another survivor and not just a feral infectee. You hear some scraping noises from the other side of the door, then it opens and a young man hurriedly waves you inside. He pushes one of the heavy 3-locker units in front of the door to make sure you're not followed.";
 				say "     'Hi, I'm Eric,' the man says, shaking your hand. 'Nice to see not everyone has gone totally bonkers in this city. I couldn't believe the stuff going on out there at first... saw my roommate transform into a big furry thing right in front of my eyes. There wasn't anything human left in him - he even bit me!' He shows you his bandaged arm.";
 				move player to Sports Arena Lockerroom;
 				change southeast exit of Athletic Street to Sports Arena Lockerroom;
 				change northwest exit of Sports Arena Lockerroom to Athletic Street;
-				Now Barricaded Lockerroom is resolved;
+				now Barricaded Lockerroom is resolved;
+				now Resolution of Barricaded Lockerroom is 1; [befriended Eric]
 		else:
 			say "     As you're trying to explain, the person behind the door shouts 'I don't believe you. You're just one of those strange creatures who wants to trick me!' Then the door is pushed closed from the other side.";
+			now Resolution of Barricaded Lockerroom is 3; [failed to convince Eric]
 	else:
 		say "     Deciding not to bother with the crazed fellow further, you head off before anything else notices you poking around.";
+		now Resolution of Barricaded Lockerroom is 99; [disinterest]
 		now Barricaded Lockerroom is resolved;
 
 Sports Arena Lockerroom is a room. It is fasttravel. It is private.

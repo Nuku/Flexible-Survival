@@ -63,7 +63,7 @@ Instead of conversing the Alex:
 		say "     'Please continue looking for Lorenda. She's in the red light district. Given what's happening in the city, I think she needs your help first,' he says meaningfully. You nod in understanding, as that part of town would be particularly vulnerable to this outbreak.";
 	else if AlexProgress is 2 and a random chance of 3 in 5 succeeds:
 		say "     'I need you to track down Darrell,' the weaselly lawyer says. 'Being a pro sports star, his case could be worth a lot to me. He should be at the Smith Haven Mall.' He points out his window, indicating the large shopping center in the distance and the main route leading to it.";
-		Now Smith Haven Mall Lot is known;
+		now Smith Haven Mall Lot is known;
 	else if AlexProgress is 4 and a random chance of 3 in 5 succeeds:
 		say "     The mustelid fiddles with a shiny ball as he looks over his papers. 'Have you found Lee? He should be at the park or the beach.'";
 	else:

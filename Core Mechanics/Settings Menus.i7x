@@ -77,9 +77,9 @@ carry out Trixiecheating:
 				say "You have gained the 'Open World' cheat, but are penalized 400 points.";
 				repeat with Q running through fasttravel not private rooms:
 					now Q is known;
-				Now Approaching the Capitol Building is known;
-				Now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
-				Now Plant Overview is known;
+				now Approaching the Capitol Building is known;
+				now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
+				now Plant Overview is known;
 				now Ravaged Power Plant is resolved; [removes the random event for discovering the power plant]
 				now College Campus is known;
 				now Reaching the College is resolved; [removes the random event for discovering the College Campus]

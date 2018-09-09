@@ -494,12 +494,15 @@ instead of resolving Feline Relief:
 			say "     With the three latex women dispatched, you quickly gather up the toys you had set aside, and a couple of the new additions the rubber girls brought back with them before quickly departing the store.";
 			now HP of Tehuantl is 14;
 			now Feline Relief is resolved;
+			now Resolution of Feline Relief is 1; [player won]
 		else: [player fled]
 			say "     Unable to fend off the latex covered women, you decide it best to make a break for it, leaving the bag of toys behind as you duck and weave around the store, drawing your assailants away from the door before you make a break for it, escaping back into the city streets.";
 			say "     It looks like you'll have to return another time to get those toys, hopefully without being disturbed next time.";
 			now HP of Tehuantl is 13;
+			now Resolution of Feline Relief is 2; [player fled]
 	else if HP of Tehuantl is 13:
 		say "     As you wander through the red light district, you once again find yourself outside the BDSM shop you were chased out of by those latex clad dominatrixes. Taking a deep breath, you once again pull the door open a crack and peer inside. Seeing the coast is clear once again you quickly step inside and make a b-line for the back counter. Finding the bag of toys and collar right where you left them, you quickly stuff them into your backpack before you rush back outside, making your escape before the latex mistresses return again.";
+		now Resolution of Feline Relief is 3; [grabbed the stuff stealthily]
 		now HP of Tehuantl is 14;
 		now Feline Relief is resolved;
 

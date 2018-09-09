@@ -19,9 +19,11 @@ Instead of Resolving a Poppy field:
 		say "     Exhausted now that the fight is over, you consider resting in the nice field again, as you start picking bits of plant off yourself. Only to realize some of those bits of plants seem to have started to take root in you! Realizing that the whole field is some kind of plant based trap, you still feel the allure of collapsing and resting here, but manage to drag yourself away. Once away from the field you quickly recover and feel much more alert, you still look a bit green around the edges though. Still it seems you have to thank that beast that attacked you, if it hadn't woken you up who knows what might have happened.";
 		infect "Parasitic Plant";
 		infect "Parasitic Plant";
+		now Resolution of Poppy Field is 1; [fight]
 		now Poppy field is resolved;
 	else:
 		say "     You shake yourself and stagger onwards, your head feeling much clearer once you get out of the fields.";
+		now Resolution of Poppy Field is 1; [avoid]
 		now Poppy field is resolved;
 
 
@@ -76,8 +78,10 @@ Instead of Resolving a Felinoid lair:
 			increase lairconsent by 1;
 			infect "Felinoid";
 			infect "Felinoid";
+			now Resolution of Felinoid Lair is 1; [went inside]
 		else:
 			say "     You decide not to venture inside the cave this time, though you make a note of its location just in case you decide to return later.";
+			now Resolution of Felinoid Lair is 2; [did no go in]
 	else if lairconsent is 1:
 		say "     Traveling along the park trail, you find your feet have brought you back once more to the strange hollow in the hill you visited before, looking around you see that once more the area seems unoccupied for now. You remember both the stash of food and water you recovered here before, as well as that wonderfully musky scent that even now makes you want more. But do you dare venturing inside again?";
 		if player consents:
@@ -88,8 +92,10 @@ Instead of Resolving a Felinoid lair:
 			infect "Felinoid";
 			infect "Felinoid";
 			infect "Felinoid";
+			now Resolution of Felinoid Lair is 3; [went in again]
 		else:
 			say "     With some effort, you manage to draw yourself away from the welcoming cave entrance and stagger on your way through the park, though for some reason you find yourself hoping you run across the place again soon.";
+			now Resolution of Felinoid Lair is 4; [stopped yourself]
 	else if lairconsent is 2:
 		say "     As you travel through the walking trails, you look up to find your wandering feet have taken you back once again to that familiar hollow in the side of the hill. Looking around again you still see no signs of the occupant anywhere around, though it is obvious that it still returns here fairly often. You try to decide whether or not to venture inside again, only to have your body decide for you, as before you know it, you are on all fours again and crawling into the hollow cave. Looking around the now familiar interior, you think you spot something in the back corner, and quickly crawl over to that area. The strong musk in the cave seems to be making you even hornier than before now, but you manage to hold yourself together until you reach the small object you saw which seems to be a soda can stuffed in the corner. As you tug at it, it comes away in your hand, causing you to realize it was empty, but even as you realize that, a stronger wave of musk from the corner washes over you, making you realize with your already fuzzy head that the occupant must have marked this area extensively with its strong masculine scent for when you came back.";
 		if humanity of player < 40:
@@ -103,11 +109,13 @@ Instead of Resolving a Felinoid lair:
 			challenge "Felinoid";
 			say "     Sighing, you crawl out of the lair, exhausted from the ordeal, and feeling even less like yourself and more like a beast than ever before, you slowly pad away from the feline creatures lair, though with the temptation to return this strong, you feel like you might not be able to stay gone for long...";
 			decrease humanity of player by 10;
+			now Resolution of Felinoid Lair is 5; [major infection]
 		else:
 			say "     You realize that you can't stay here any longer, even as you can feel your body changing from the musk, changing you to be a better mate for the strong masculine beast whose lair this is, you find yourself moaning at that thought before you manage to snap yourself out of it. You crawl outside desperately gasping for some air not scented by his powerful and dominating scent, that makes you want to moan and lift your body up for his strong touch. Groaning you realize your mind was once more back on being nothing more than the fucktoy of the lair's owner, submitting to him again and again in a wonderfully pleasurable night of bestial sex. Yowling out with need, you manage to drag yourself further away, until you can start to think somewhat clearly again, you know you need to get out of here quickly before the caves owner returns. Even as you leave you find your mind returning to the thought of waiting helplessly for the caves owner having him take you again and again, and know that you can't afford to come back here again, not unless you want to be reduced to just another animal. Still you realize that deep down the experience has changed you already, made you less human and more bestial on some level, and you really aren't sure if you regret the change either.";
 			decrease humanity of player by 20;
 			infect "Felinoid";
 			infect "Felinoid";
+			now Resolution of Felinoid Lair is 6; [escaped]
 			now Felinoid lair is resolved;
 
 

@@ -97,13 +97,13 @@ When Play begins:
 	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 4; [ Amount of Damage monster Does when attacking.]
 	now area entry is "High"; [ Current options are 'Outside' and 'Mall' Case sensitive]
-	now cocks entry is 5; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 4; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 3; [ Size of balls apparently ;) sneaky Nuku]
 	now breasts entry is 10; [ Number of Breasts infection will give you. ]
 	now breast size entry is 3; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 5; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 4; [ Length of female sex infection will attempt to give you. ]
 	now cunt width entry is 3; [ Width of female sex infection will try and give you ]
 	now libido entry is 10; [ Amount player Libido will go up if defeated ]
@@ -310,6 +310,6 @@ to say JockRabbitSex2:
 	WaitLineBreak;
 	say "     This method of sex continues for quite a bit, both bunnies practically fucking you into each other. With the one in front of you roughly slamming his cock into your mouth and the other into your hole you're pretty occupied for the time being. But you can tell that both of them are getting close, particularly the one that you're sucking as his dick is spilling copious amounts of precum into you, which you're having to swallow. With the other one you can tell vaguely by the tightening of his balls each time they slap against your ass, which is usually a sign someone is close to orgasm.";
 	say "     Sure enough, seconds later you hear both rabbits yell as they slam into you one last time, both balls deep into you, ass and mouth. The amount of cum the one in front of you spills is so much that you have to continuously swallow so as to not choke on it, whereas you're sure that you are probably leaking seed out of your ass profusely. It takes them a bit to come down from their climaxes but when they do, they pull out of you and quickly help you clean up. It's something you didn't expect but are thankful for, nonetheless. Once you're dressed you thank the rabbits for their time and head on your way, a last glance noting that the other bunnies appear to be asking the two who fucked you many questions about how the sex was.";
-	infect "Anthro Rabbit"
+	infect "Anthro Rabbit";
 
 Anthro Rabbit ends here.

@@ -47,9 +47,9 @@ after going to Border Wall while BrianRelationship is 0:
 	say "     You see an exceptionally large and sculpted rhino man, entirely consumed by one of the more unique infections running around. He's currently standing over by the massive wall next to the zoo, right in front of a large cluster of cracks arcing over the structure. The cracks shoot out over a good ten-foot radius, and you wouldn't be surprised if he was the cause of all that damage, him looking like an eight foot linebacker and all. However, he still has more muscle than a normal human could ever manage, linebacker or no. Then you remember that 'normal' is all relative now, and that's made even more obvious the longer your eyes sweep over the male.";
 	say "     His giant body, in addition to defying many standards you had for amount of muscle possible, has skin you'd never expect a person to have: gray, rough looking leathery stuff. Even more parts of him surprise you though, like his shoulders and hips, which carry what looks to be armor, but organic, almost like chitin. One thing that isn't so unexpected, however, is how unsteady he is, possibly because of the fact that he is trying to balance such a large form on just two hooved feet. Above his hooves and past his muscle packed legs, a long, thick cock hangs over his baseball-sized testicles, knocking against his upper thighs with an almost audible slap of flesh on flesh. His face is like that of a rhino, stretching out into a muzzle that carries the same rough, almost armored look of the other parts of his body. Of course, he wouldn't be much of a rhino if he didn't have a bony horn protruding from right between his wide nostrils.";
 	LineBreak;
-	Now BrianRelationship is 1;
+	now BrianRelationship is 1;
 	say "     As you get closer, you can see said nostrils expanding and contracting rapidly, for a reason you can't discern yet, not until you see his left hoof scrape across the ground over and over again, his muscles tensing, his head lowering, and then his body charging forward and slamming into the wall, causing rocks and debris to clatter off the slightly slanted structure.";
-	Now BrianRelationship is 1;
+	now BrianRelationship is 1;
 
 after going to Border Wall while BrianRelationship is 1:
 	say "You see the rhino panting yet again as you watch him continue to pound the wall.";
@@ -78,7 +78,7 @@ Instead of conversing the Brian:
 			say "curiosity, ";
 		say "' he begins as he gestures at his large, rhino-like form, 'has seen things like this, and it's a big change no matter who you are. I mean, I wasn't a small guy before all of this, but now. I mean damn, right?' Brian chuckles out with a bit of tainted amusement. 'Some parts of it can be a bit distractin['], if ya know what I mean... but hey, at least I'm ripped,' he says while flexing.";
 		say "     'I should be able to get us out of here right quick with this much muscle!' The excited rhino man shouts, 'I mean, ya know the military is watchin['] all the regular ways out of the city, but way I figures it, they won't be watchin['] this concrete bit. So once I crush this concrete bit into smaller bits, it'll be clear sailing from there!' Brian yells excitedly, pumping himself up to charge. He then turns back to the wall, lowers his head, and rams it again. The impact sends him reeling back from the wall, but beyond that the impact does little more than make him shake his head. You give one more glance to the wall, and can almost swear the cracks are thicker now, but that seems unlikely.";
-		Now BrianRelationship is 2; [The player has talked to him at least once]
+		now BrianRelationship is 2; [The player has talked to him at least once]
 	[else if BrianRelationship is 2:
 		say "     ";]
 	else if BrianRelationship > 1:

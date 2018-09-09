@@ -297,10 +297,10 @@ Instead of resolving Goblin Thief:
 		say "     'Deal!'";
 		say "     And thus with your bargain struck, the two of you go your separate ways for now. Hmmm... where'll you even find a leather jacket small enough to fit a goblin?";
 		increase HP of Hadiya by 1;
-		now Goblin Thief is resolved;
+		now Goblin Thief is inactive;
 	else if HP of Hadiya is 9 or HP of Hadiya is 59:
 		say "ERROR-Hadiya-[HP of Hadiya]E: You should not be able to get this result. Event should be closed at this time.";
-		now Goblin Thief is resolved;
+		now Goblin Thief is inactive;
 	else if girl's jacket is not owned:
 		say "     As you approach the spot where you'd met Gobby, you're about to go there to meet with him when you remember that you dropped that leather jacket he wants somewhere. You'd best go back and get it if you want to make the deal with him.";
 	else if (HP of Hadiya is 10 or HP of Hadiya is 60):

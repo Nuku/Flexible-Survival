@@ -64,6 +64,7 @@ Instead of resolving Adventurer:
 				WaitLineBreak;
 				say "     After some pleasant snuggling, you both get off the bedroll and carefully pack up the separate pieces of the statuary in bundles of cloth. While Solstice doesn't have plans to put it back together, you both certainly agree that you can't just leave it lying around for someone else to find and reassemble. Before you head out, she gives you another kiss and a pat on the behind, saying she'll see you again soon. It's not until you're well on your way that you remember that you never got those supplies from her. Though you can't say that you were displeased with the reward you ended up receiving instead even as you feel her infection starting to spread into you.";
 				vulpogryphinfect;
+				now Resolution of Adventurer is 1; [had sex with Solstice]
 				now Adventurer is resolved;
 				now HP of Solstice is 4;
 				now lastfuck of Solstice is turns;
@@ -78,6 +79,7 @@ Instead of resolving Adventurer:
 				WaitLineBreak;
 				say "     Before you head out, she gives you a big hug, folding her feathery wings around you. She runs her paws along your back, scritching under your backpack while kissing you. As she lets you go, she gives you a little nip with her beak on your neck. Solstice adds a pat on your behind, saying that she'll see you again soon. Walking off, you go a short distance before you feel a tingle start to spread through you. Feeling the encroaching change, you run your hands over your face and neck, looking for some fluid or break where the nanites might be affecting you, but can't find one. It's not until after the change has run its course that you find it, one of the vulpogryph's feathers having gotten stuck under your backpack.";
 				vulpogryphinfect;
+				now Resolution of Adventurer is 2; [refused sex with Solstice]
 				now Adventurer is resolved;
 				now HP of Solstice is 3;
 				now lastfuck of Solstice is turns;
@@ -110,8 +112,10 @@ Instead of resolving Onyx Crow:
 		challenge "Cerberus";
 		if cerbfight is 3:
 			say "     Fleeing the three-headed dog, you run from the wing and try to make your way back to the lobby. You'll have to recover and try coming back later. Maybe the dog will be gone by then, but you don't think you'll be that lucky.";
+			now Resolution of Onyx Crow is 3; [fled the cerberus]
 		else if cerbfight is 2:
 			say "     Having passed out after the lustful creature has had its way with you, you awake to find yourself ejected from the room. You are wet and sticky with canine slobber and the herm's juices, which you try your best to wipe off to remove the evidence of your fight with the guard before returning to the lobby. You'll have to recover and try returning there later. Perhaps you'll fare better next time, though part of you certainly enjoyed losing. You find yourself thinking it might just be more fun to keep losing to the creature.";
+			now Resolution of Onyx Crow is 2; [lost to cerberus]
 		else if cerbfight is 1:
 			say "     Having beaten the guard, you are now free to advance upon the case. Looking it over, you can see that it does indeed hold the Onyx Crow. It is a crow's head carved from a glossy, black stone. The detail is a little rough, but there is an ornate band of gold around its base as well as golden eyes. There are also thin traces of gold that run down the back of its had, forming a stylized pattern. It looks expensive enough, but there must be much more valuable pieces than this one.";
 			WaitLineBreak;
@@ -120,6 +124,7 @@ Instead of resolving Onyx Crow:
 			increase carried of Crow Artifact by 1;
 			increase score by 10;
 			now HP of Solstice is 2;
+			now Resolution of Onyx Crow is 1; [won vs cerberus]
 			now Onyx Crow is resolved;
 			now Adventurer is active;
 

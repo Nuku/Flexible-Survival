@@ -39,7 +39,7 @@ The sarea of Hung Like A is "Hospital".
 Instead of resolving a Hung Like A:
 	say "     You come across an examination room that has several patient charts tossed on a rumpled bed. You glance over them quickly, finding them all mention cases of 'strange growths' and 'physiological anomalies' found in patients. Those timestamped as the later ones even start commenting on the strange frequency of such occurrences the preliminary examiner's found that evening. The last one talks about a patient with growing hair spreading over his body along with the stiffening of his fingers and nails. It ends with the doctor's rough scrawls about the patient being hung like a horse, that it's so good and how she's letting him take her like his mare so she can properly test it.";
 	increase score by 1;
-	Now Hung Like A is resolved;
+	now Hung Like A is resolved;
 
 
 Pharmaceutical Storage is a situation.
@@ -111,8 +111,10 @@ Instead of resolving a Ambulance Dock:
 			say "     You are successfully able to retrieve a medical kit from the mess. Having been covered by the shock blanket before the fluids started flying, it is undamaged and still usable. What luck! Your search did unfortunately get quite a bit of that cum on you though.";
 		weakrandominfect; [random infection, followed by same infection]
 		infect;
+		now Resolution of Ambulance Dock is 1; [scavenged]
 	else:
 		say "     You opt to play it safe and continue your search elsewhere.";
+		now Resolution of Ambulance Dock is 99; [disinterest]
 	increase hospnav by 1;
 	say "[hospprogress]";
 	increase score by 1;
@@ -1556,8 +1558,10 @@ Instead of resolving a Viking Longboat:
 			say "     Spear added to inventory. Stabby-stabby!";
 			increase carried of spear by 1;
 			increase score by 20;
+			now Resolution of Viking Longboat is 1; [stole the spear]
 		else:
 			say "     You try to make it back to the ladder, but part of the floor gives out beneath you. You fall through the deck, crashing through the bottom of the ship and falling to the ground. Terrified of getting buried under the rain of ancient lumber that continues, you scramble away as fast as you can manage. You fall panting in a heap, entangled by the velvet ropes as the last of it comes crashing down with a cloud of dust. You get up unsteadily and pull out the green gems, hoping they're worth the many aches and bruises you now have. (20 Dmg taken)";
+			now Resolution of Viking Longboat is 2; [crashed the ship]
 			decrease HP of player by 20;
 			increase score by 10;
 		now nerminepackage is 3;

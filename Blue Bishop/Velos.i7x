@@ -162,7 +162,7 @@ Section 3 - Dragging him Around + Effects
 
 Every turn while HP of Velos > 2:
 	if Velos is not in the location of the player:		[traveling w/player]
-		Now Velos is in the location of the player;
+		now Velos is in the location of the player;
 		say "[one of][link]Velos[as]look Velos[end link] shifts around inside you slightly.[or]You arrive here with [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link], roused by you moving about, shifts his position.[or]Your travels elicit some shifting from [link]Velos[as]look Velos[end link].[or][link]Velos[as]look Velos[end link] twitches in response to your travels.[or]You're forced to contend with [link]Velos[as]look Velos[end link][']s subtle protests in lieu of your movement.[cycling]";
 
 

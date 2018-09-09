@@ -33,15 +33,18 @@ Instead of resolving Finding Mack:
 		if fightoutcome >= 10 and fightoutcome <= 29:		[stuck around either way]
 			if fightoutcome >= 10 and fightoutcome <= 19:	[won]
 				say "     After dispatching the elven hunter, you spot the gray creature watching from the atop a tree. 'Hey, good job there. Sorry for making you have to deal with my problem. I just wanted to ditch him, but I ran into you on the way. Luckily, it seems like you can take care of yourself.' He leaps gracefully from tree to tree before landing on the open path beside you. Your new acquaintance is a male squirrel and about five-and-a-half feet in height. He has fluffy gray fur that's a little lighter at the chest and groin. He has a big, bushy tail behind him as well. It is roughly as long as he is tall. Nude save for his fur and a small belt with several pouches, you've got a clear view of this small fellow's sheath and his impressive set of nuts.";
+				now Resolution of Finding Mack is 1; [won]
 			else if fightoutcome >= 20 and fightoutcome <= 29:	[lost]
 				say "     After dispatching the elven hunter, you spot the gray creature watching from the atop a tree. 'Hey, I'm sorry about that. You shouldn't have had to deal with my problem. I just wanted to ditch him, but I ran into you on the way. Luckily, he seems to be gone now that he's had his fun. Better you than me, eh?' he says cheerfully. He leaps gracefully from tree to tree before landing on the open path beside you. Your new acquaintance is a male squirrel and about five-and-a-half feet in height. He has fluffy gray fur that's a little lighter at the chest and groin. He has a big, bushy tail behind him as well. It is roughly as long as he is tall. Nude save for his fur and a small belt with several pouches, you've got a clear view of this small fellow's sheath and his impressive set of nuts.";
 			say "     He scurries around you, looking you over with a friendly grin. 'Now that that guy's gone, I can get back to... Say! How would you like to give me a hand again?' he says with a twitch of his whiskers and a flick of his tail. 'You see, things are getting pretty busy here in the forest. Lots of critters running around and a bunch o['] them are big predators compared to little ole me. Now, the nuts here are nice, but I've picked quite a few spots clean already.' He speaks very quickly and shifting around like the twitchy rodent he is.";
 			say "     'Now, I've got an angle, you see - and this is where you come in, buddy. Oh, I'm Mack, by the way. Short for Macadamia, cuz those are the best like me, you know. Well, I know where there's a peanut roasting factory in the city. And I figure they've got to have a good stash in there. More than enough for me to get through the winter. Maybe even a couple,' he adds, pulling a walnut out of one pouch and gnawing at its shell. 'Now, the thing is, a sweet nut stash like that's probably already been found by someone, so they'll have to be muscled out. And you, my friend,' he says, zipping up beside you and kneading your shoulder, 'are gonna be my muscle. Now don't make that face, I'll be helpin['] too. I'll be doing most of the work, actually. I just expect I'll need a little backup and I'll pay you for your help in nuts.'";
 			say "     'If you're interested, head to the warehouse district and look for me there,' he says. He gives his tail a quick flick and leaps into the trees, going quickly from one to the next and out of sight.";
 			now HP of Macadamia is 1;
+			now Resolution of Finding Mack is 2; [lost]
 			now sarea of Finding Mack is "Warehouse";
 		else:
 			say "     Making a break for it when you get the opportunity, you flee the scene. You'll let the elf and that gray thing sort it out between themselves.";
+			now Resolution of Finding Mack is 3; [fled, left him to the elf]
 			now Finding Mack is resolved;
 	else if HP of Macadamia is 1:
 		say "     Roaming around between the streets running through this warehouse district, you come across Mack again. He hops down from a rooftop, landing gracefully and scurries over to you. 'Sweet! You're here. I've been scoping out the place and there's a couple of leopardmen living in there. I don't think they've got much interest in the nuts, but are holed up in there to catch lots of guys like me who come around. From the chatter I've been overhearing, it's not been going as well as they'd expected, so I don't think they'll be coming back to bother us once we drive them off.' The squirrel guy speaks very quickly and scurries up to the rooftops to keep a lookout while directing you towards the factory.";
@@ -70,6 +73,7 @@ Instead of resolving Finding Mack:
 		else:
 			say "     When you tell him that you're again not interested in the job, he sighs and shakes his head. 'I guess I misjudged you. I'll have to find someone else to help with the job. Maybe that dog I saw. I don't think she'd be afraid of a couple of pussies,' he chitters at you before hopping back onto the roof. He chucks an acorn at your head, chitters angrily and scurries off.";
 			now HP of Macadamia is 0;
+			now Resolution of Finding Mack is 98; [refused to help him]
 			now Finding Mack is resolved;
 
 
@@ -103,14 +107,17 @@ to attackingnutsofactory:
 			increase carried of food by 2;
 			now HP of Macadamia is 10;
 			infect "Gray Squirrel";
+			now Resolution of Finding Mack is 4; [won and celebrated with him]
 			now Nutso Factory is known;
 		else:
 			say "     You give the squirrel a hug and step back. He seems a little disappointed, but gets over it quickly as he surveys the remaining nuts on the ground. 'Thanks for all your help. Look, I'm going to want to take inventory,' the squirrel chitters. 'But I'll give you some more after that. Just come by later and I should have some more for you. But for now,' he says, gently pushing you towards the door. 'I think I want to be alone with my nuts for a while.' And with that, the squirrel sends you on your way, your pack somewhat heavier with your haul from the factory.";
 			increase carried of food by 2;
 			now HP of Macadamia is 3;
+			now Resolution of Finding Mack is 5; [won and didn't celebrate with him]
 			now Nutso Factory is known;
 	else:
 		say "     Unwilling or unable to keep fighting the powerful felines, you make a break for it out the door you came in. You'll have to hope Mack can take care of himself.";
+		now Resolution of Finding Mack is 6; [fled and left Mack behind]
 		now HP of Macadamia is 0;
 
 

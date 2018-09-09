@@ -81,7 +81,7 @@ to say DemonBruteVictoryFuck:
 		if DBCaptureQuestVar is 4:
 			say "     The brute stands up, holding you against his broad chest with one massive hand, your pussy still speared on his thick member. As you feel the demon's cum start running out of you, the creature licks you with his long forked tongue. 'I'll just keep fucking you till you're only a whimpering little bitch - and then throw you to the others so they can fill your sloppy holes too! But let's get to more comfortable surroundings first...' With that, your surroundings shimmer and disappear and you find yourself somewhere else. From the fires, screams and horrible scenes you can see all around you, it must be the demon's home in hell - and now yours too. Forever.";
 			now tailname of player is "DBrute Slave";
-			Now facename of player is "DBrute Slave";
+			now facename of player is "DBrute Slave";
 			now skinname of player is "DBrute Slave";
 			now bodyname of player is "DBrute Slave";
 			now cockname of player is "DBrute Slave";
@@ -153,7 +153,7 @@ to say DemonBruteVictoryFuck:
 		if DBCaptureQuestVar is 4:
 			say "     The brute stands up, holding you against his broad chest with one massive hand and your asshole still speared on his thick member. As you feel the demon's cum start running out of you, the creature licks you with his long forked tongue. 'I'll just keep fucking you till you're only a whimpering little bitch - and then throw you to the others so they can fill your sloppy holes too! But let's get to more comfortable surroundings first...' With that, your surroundings shimmer and disappear and you find yourself somewhere else. From the fires, screams and horrible scenes you can see all around you, it must be the demon's home in hell - and now yours too. Forever.";
 			now tailname of player is "DBrute Slave";
-			Now facename of player is "DBrute Slave";
+			now facename of player is "DBrute Slave";
 			now skinname of player is "DBrute Slave";
 			now bodyname of player is "DBrute Slave";
 			now cockname of player is "DBrute Slave";

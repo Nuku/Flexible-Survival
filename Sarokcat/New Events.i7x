@@ -83,9 +83,11 @@ HYG is a number that varies.
 Instead of Resolving a Hyena Gang:
 	if hyg is 0:
 		say "     Traveling along the empty streets of the city, a large patch of graffiti catches your eye. Pausing for a minute to decipher the large markings, you realize that it appears to advertise that you are coming up on some hyena pack's territory, and they appear to be looking for more people to join...";
+		now Resolution of Hyena Gang is 1; [saw once]
 		now hyg is 1;
 	else if hyg is 1:
 		say "     Searching the mostly empty streets of the city, you come across several familiar graffiti markings in the area. It seems like the territory claimed by that group of hyenas is spreading rapidly. All of a sudden, you feel like someone is watching you intently. Glancing around, you don't see anyone nearby, but the uneasy feeling of being watched won't leave you alone. Deciding not to continue going in this direction, you turn and head back the way you came, trying not to break into a run as you leave.";
+		now Resolution of Hyena Gang is 1; [saw twice]
 		now hyg is 2;
 	else if hyg is 2:
 		say "     As you are out searching the city, you once more encounter the same hyena graffiti that you found in several other locations in the area. Turning to leave before you run into trouble, you are surprised to see a hyena come sauntering out into the street behind you and quickly prepare for a fight, only to realize it doesn't show any signs of attacking as it approaches, its hands held out to the side in a nonthreatening manner.";
@@ -94,19 +96,23 @@ Instead of Resolving a Hyena Gang:
 			say "Besides, it looks like you would fit right in around here already,' the hyena says as she eyes your hyena-like frame. 'What do you say to giving us a try?'";
 			if player consents:
 				say "     'Great! I'll just go and let the others know to keep an eye out for you! You should come back in a little bit,' she says with a toothy smile. 'But first,' she says, right before she pulls you into her arms for a crushing hug, causing you to open your mouth to protest, only to find yourself being sloppily kissed as her rough tongue darts into your mouth, her sharp teeth brushing up against your face. Before you can react, she puts you back down and gives you a big grin, before heading back towards the hyena territory. Glancing over her shoulder, she calls back, 'Just a little something to remember me by!' before vanishing around the corner";
+				now Resolution of Hyena Gang is 3; [herm hyena player talked to gina and agreed]
 				hyenaify;
 				now hyg is 3;
 			else:
 				say "     'That's too bad,' she says as crosses her arms under her exposed breasts, pushing them upwards for a second. 'It ain't no life for a hyena out there all alone,' she continues as she runs her paw-like hand down her soft fur, posing for you, before fondling her large crotch for a second and winking. 'If you ever change your mind, you know where to find us, hun. Just follow your instincts.'";
+				now Resolution of Hyena Gang is 4; [herm hyena player talked to gina and said no]
 		else:
 			say "Membership comes with some benefits, though you'll end up with a few changes as well,' the hyena says as she looks you up and down. 'Though trust me hun, the changes really are all for the better, and you should probably join while you can, since we might not be asking people nicely for long.'";
 			if player consents:
 				say "     'Great! I'll just go and let the others know to keep an eye out for you! You should come back in a little bit,' she says with a toothy smile, looking you over again. 'But first, I think you will need to fit in a bit more,' shi says, right before she pulls your startled body into her arms for a crushing hug, causing you to open your mouth to protest, only to find yourself being sloppily kissed as her rough tongue darts into your mouth, her sharp teeth brushing up against your face. Before you can react, she puts you back down and gives you a big grin, before heading back towards the hyena territory. Glancing over her shoulder, she calls back, 'Just a little something to remember me by! I look forward to seeing how the changes look on you!' before she vanishes around the corner, your body shuddering as it begins to change.";
+				now Resolution of Hyena Gang is 5; [player talked to gina and agreed]
 				hyenaify;
 				hyenaify;
 				now hyg is 3;
 			else:
 				say "     'That's too bad,' she says as crosses her arms under her exposed breasts, pushing them upwards for a second. 'You have no idea what you're missing out on,' she continues as she runs her paw-like hand down her soft fur, posing for you, before fondling her large crotch for a second and winking. 'If you ever change your mind, you know where to find us, hun.'";
+				now Resolution of Hyena Gang is 5; [player talked to gina and said no]
 	else if hyg is 3:
 		say "     Wandering the city again, you come across one of the areas claimed by that strange gang of hyenas, causing you to recall your last encounter with the strange hyena recruiter. As if summoned by your thoughts of her, you see a familiar-looking hyena coming towards you from down a side street, a large grin on her muzzle. Before you can decide what to do about it, you are quickly enveloped once more in a large and enthusiastic hug.";
 		say "     'I thought I scented you!' the large hyena herm exclaims, still hugging you tightly, 'I knew you'd come back to join us. You said you would, after all,' she says as she releases you, causing you to stagger for a minute, before she grabs your hand and starts dragging you down the street, heading deeper into what the graffiti tags proclaim to be hyena territory. 'You must be pretty special to have survived out here this long on your own, but you don't have to worry about that anymore,' the hyena says as you are led through a bewildering maze of side streets and partially wrecked buildings to one of the warehouse districts. 'You have a whole gang on your side now, or pack, whatever you want to call it. You got our back, we got yours. Speaking of which,' she says as she stops in the middle of the street, facing a row of shipment warehouses. 'The name's Gina, and I guess I'm your sponsor for now, so let me know if anyone bothers ya or if you need anything,' the newly introduced Gina says with a grin.";
@@ -117,6 +123,7 @@ Instead of Resolving a Hyena Gang:
 		LibidoBoost 30;
 		move player to Hyena hideout;
 		now Hyena hideout is known;
+		now Resolution of Hyena Gang is 6; [hyena hideout known]
 		now hyena gang is resolved;
 		now battleground is "void";
 
@@ -125,19 +132,19 @@ Section 6 - Locked utility room
 
 Locked utility room is a situation.
 The sarea of Locked utility room is "Mall".
-LURM is a number that varies.
 when play begins:
 	add Locked utility room to badspots of guy;
 	add Locked utility room to badspots of hellspawn;
 
 Instead of Resolving a Locked utility room:
-	if lurm is 0:
+	if Resolution of Locked Utility Room is 0: [first encounter]
 		say "     While exploring underneath the mall, you come across a locked utility room. Hoping for the best, you search for some means of prying the door open, only to notice the sticky white stuff leaking out from underneath the door. Deciding discretion is the better part of survival, you move quickly on your way.";
-		now lurm is 1;
-	else if lurm is 1:
+		now Resolution of Locked Utility Room is 1; [first encounter done]
+	else if Resolution of Locked Utility Room is 1: [second encounter]
 		say "     Exploring the sewers further, you stumble across a large trail of dried cum. Feeling a sense of perverse curiosity, you begin to backtrack to see where the large trail came from. To your surprise, the trail seems to lead you right back to the utility room you came across earlier, only this time the door appears to be open. Carefully peeking around the side of the door, you see that this area hasn't been used as a simple utility room for quite some time. The tool racks are filled with strange and mildly disturbing looking skulls and other items, and the machinery is covered in strange symbols and writing that hurts your eyes to look at it.";
 		say "     In the center of the room is a large black pentagram, surrounded by occult symbols. Part of the pentagram is obscured by what appears to be a large pool of cum. Lying in their own smaller pools of seed are five empty black robes, probably worn by whoever was in here at the time. The intense, musky odor trapped in the room is starting to make your eyes water and your body heat up in response. Deciding it would be a good idea to leave before you end up doing something you might regret, you quickly grab a couple items lying around and duck back outside.";
 		increase carried of demon seed by 2;
+		now Resolution of Locked Utility Room is 2; [locked utility room done]
 		now Locked utility room is resolved;
 
 
@@ -248,18 +255,22 @@ libvis is a number that varies.
 Instead of Resolving a library visitor:
 	if libvis is 0:
 		say "     Returning from a rather boring time searching the city, you find the library doors scratched and dented, as if some large creature had attempted to enter, perhaps scenting your recent presence. Fortunately enough, it doesn't seem to have found a way in, although its attempt is still worrisome. You should probably keep an eye out in case it comes back.";
+		now Resolution of Library Visitor is 1; [first encounter]
 		now libvis is 1;
 	else if libvis is 1:
 		say "     Returning to the library in a better mood than normal, your foraging having gone well today, you find that some creature has paid the library a visit in your absence again. The creature seems to have actually tried searching the area around the building this time for other entry points, apparently not able to get in the doors you fortuitously locked behind you. You wonder if this is the same visitor as last time, as it is showing much more reasoning capability now.. Still, it didn't get in, and you came back from the city with some extra food. That's definitely a good sign, isn't it?";
+		now Resolution of Library Visitor is 2; [second encounter]
 		now libvis is 2;
 		increase carried of food by 1;
 	else if libvis is 2:
 		say "     Returning from your hours of searching the city, you are relieved to see the library up ahead of you and the chance to rest and relax a little from your scavenging. However, as soon as you let your guard down to unlock the door and let yourself in, one of the creatures prowling the city springs out of concealment and attacks!'";
 		fight;
 		say "     Finally driving away the creature, you quickly duck inside the library to rest and relax, your heart hammering from the shock of the unexpected ambush and the fight itself. The beast was obviously lying in wait for your return, making you wonder if it was the creature that has been trying to get into the library these past several times. Hopefully its defeat at your hands means it won't be back this way again anytime soon. Then again, if it does come back, you suppose you will just have to be ready for it.";
+		now Resolution of Library Visitor is 3; [third encounter]
 		now libvis is 3;
 	else if libvis is 3:
 		say "     Returning to the library, you open the door and are shocked when you find that you had a visitor again, only this time they somehow made their way inside. You look around near the library entrance and the books knocked over and the obvious signs of someone or something searching the place, probably for you. Checking carefully, you determine that whatever it was and however it got in here, at least now it seems to be long gone. Following what you can of its trail, you sigh in relief as it doesn't seem to have found the entry to the bunker in its searching. Of course, you still haven't figured out how it found its way in to begin with...";
+		now Resolution of Library Visitor is 4; [fourth encounter]
 		now libvis is 4;
 	else if libvis is 4:
 		say "     After another long day searching the abandoned city, you are happy to return to the library for some hard earned rest. As you go to unlock the door, you remember your unwanted visitor from before and are thus careful when you open it, just in case. Your caution seems warranted, as the moment you begin to swing the door open, something inside barrels out and attacks you directly! From a glimpse of more movement from inside heading this way, apparently it isn't alone this time!";
@@ -273,6 +284,7 @@ Instead of Resolving a library visitor:
 		increase carried of food by 2;
 		increase carried of water bottle by 2;
 		increase score by 10;
+		now Resolution of Library Visitor is 5; [fifth encounter]
 		now library visitor is resolved;
 
 
@@ -289,9 +301,11 @@ Instead of resolving a ruined supplies:
 		piggyify;
 		HungerReset;
 		ThirstReset;
+		now Resolution of ruined supplies is 1; [become a pig]
 		now ruined supplies is resolved;
 	else:
 		say "     Deciding it's perhaps best not to get involved in such a total mess on the off chance you might find something useful left in the remains, you continue along your way, doing your best to forget the horrible carnage you are leaving behind.";
+		now Resolution of ruined supplies is 1; [avoided becoming a piglet]
 		now ruined supplies is resolved;
 
 

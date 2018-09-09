@@ -116,7 +116,7 @@ Instead of resolving Monkey Duel:
 	else:
 		LineBreak;
 		say "     You blurt out the best excuse you can think of and walk away from the awkward situation as fast as you can, while Hanu sighs loudly in your general direction.";
-		now Resolution of Monkey Duel is 99; [desinterest]
+		now Resolution of Monkey Duel is 99; [disinterest]
 		now acquaintedWithHanu is 0; [locks Monkey Duel from further acquaintance checks]
 	now Monkey Duel is resolved;
 

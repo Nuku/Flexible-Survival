@@ -38,9 +38,11 @@ Instead of resolving Injured Felinoid:
 					if player consents:
 						say "     Sighing, you are unable to turn away from a patient in need, especially seeing as the patient was injured while you benefited from his help. Pulling out your personal medical supplies, you quickly get to work tending to the felinoid, after almost an hour of hard work, you sit back with a sigh, content that the large cat is no longer in any immediate danger, and relatively sure that almost all of his wounds will heal in time. The beast even seems to feel better as he hauls himself up onto his paws, seeming to stare at you curiously for a minute as if wondering why you helped him, before turning and limping off into the park. Picking up your equipment, you turn and head off into the park as well, wondering if you will be seeing your felinoid patient again soon, his musk still filling your head teasingly even as you leave the glade behind.";
 						infect "Felinoid";
+						now Resolution of Injured Felinoid is 1; [Helped him]
 						now felinoidrescued is 3;
 					else:
 						say "     Sighing you stand up, and turn your back on the injured cat, and begin to walk away. Hardening your heart as you hear the feline beast whimpering softly in agony behind you, knowing that it won't last long in the state it's in as you put the glade with the dying felinoid behind you and head back out into the park itself.";
+						now Resolution of Injured Felinoid is 99;
 						now Injured Felinoid is resolved;
 				else if medkit is owned:
 					say "     Looking down at the injured beast and feeling even guiltier now that you recognize it, you blink as you realize you have something in your pack that might actually help. Pulling out a medkit, you look down at the beast as it shudders and whimpers in pain, and realize that its wounds are so serious it would likely use up an entire kits worth of supplies to even begin to treat the large cat. Staring at the valuable medkit in your hand, you wonder if it is really worth using it on the felinoid bleeding on the ground in front of you, sure the beast helped you before, but if you heal it you or someone else will likely only end up fighting it again in the future... still you do feel rather bad about fighting it when it was already so grievously injured... Do you help the felinoid anyways?";
@@ -48,9 +50,11 @@ Instead of resolving Injured Felinoid:
 						say "     Sighing, you find you are unable to turn away from injured felinoid in need, especially seeing as you benefited from or were responsible for most of his injuries... Opening the medkit up, you quickly get to work tending to the felinoid, and after almost an hour of hard work, you sit back with a sigh, content that the large cat is no longer in any immediate danger, and relatively sure that almost all of his wounds will heal in time. The beast even seems to feel better as he hauls himself up onto his paws, seeming to stare at you curiously for a minute as if wondering why you helped him, before turning and limping off into the park. Picking up the remains of your medkit, you turn and head off into the park as well, wondering if you will be seeing your felinoid patient again soon, his musk still filling your head teasingly even as you leave the glade behind.";
 						infect "Felinoid";
 						delete medkit;
+						now Resolution of Injured Felinoid is 1; [Helped him]
 						now felinoidrescued is 3;
 					else:
 						say "     Sighing you stand up, and tuck the medkit back into your pack as you turn your back on the injured cat, and begin to walk away. Hardening your heart as you hear the feline beast whimpering softly in agony behind you, knowing that at least its pain won't last long in as bad a state as the beast is in. You put the glade with the dying felinoid behind you as you head back out into the park proper.";
+						now Resolution of Injured Felinoid is 99;
 						now Injured Felinoid is resolved;
 				else:
 					say "     Sighing as you look down at the injured felinoid, you realize that even if you wanted to help the beast, you have no way of actually doing so. You take the time to reach out and pet the injured felinoid's soft, bloodied fur for a second, and you bring it over some water from the spring before heading back out into the park, hoping that it will manage to survive its most recent fight and wishing you had some way of helping it.";
@@ -72,14 +76,18 @@ Instead of resolving Injured Felinoid:
 					move Klauz to Back Of The Library;
 					infect "Felinoid";
 					say "(The Felinoid companion is now tamed! You can make it your active pet by typing [bold type][link]pet Felinoid companion[end link][roman type]and initiate sex with him while active by typing [bold type][link]fuck Felinoid companion[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+					now Resolution of Injured Felinoid is 2; [Fought, won, and recruited]
 					now Injured Felinoid is resolved;
 				else:
 					say "     Deciding that having one of the large felines follow you around would be far too dangerous, in spite of any help it might be in surviving in the city, you pet the golden furred felines head for a minute, before leaving it behind, the felinoid trying to stagger after you as you leave, but its injuries leaving it unable to actually catch up. You idly find yourself wondering if you will encounter that particular felinoid again, as it certainly seems to have fixated on you somehow.";
+					now Resolution of Injured Felinoid is 3; [Fought, won, and did not recruit]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     The large beast sniffs haughtily at your defeated form, obviously feeling somewhat satisfied at having proved itself to still be a dominant predator even with its injuries. It turns to stalk off, only to turn back and nuzzle you almost affectionately for a minute, as if thanking you for your earlier help, before vanishing into the park, though somehow you still have the feeling you will be seeing the beast again soon.";
+				now Resolution of Injured Felinoid is 4; [Fought and lost]
 				infect "Felinoid";
 			else:
 				say "     The large beast sniffs haughtily at your fleeing form, obviously feeling somewhat satisfied at having proved itself to still be a dominant predator even with its injuries. It turns to stalk off, only to turn back and mrowl at you almost affectionately for a minute, as if thanking you for your earlier help, before vanishing into the park, though somehow you still have the feeling you will be seeing the beast again soon.";
+				now Resolution of Injured Felinoid is 5; [Fought, fled]
 				infect "Felinoid";
 		else:
 			say "     Declining to fight the large felinoid, you carefully back off, your posture deliberately nonthreatening as the large predator stalks you teasingly. The beast rumbles in confusion as you refuse to fight it, butting you with its large feline head and rubbing its body against you as it tries to work out what to do about the strange situation, seeming unwilling to actually attack someone who helped it earlier. Finally the beast seems to be satisfied that it has proved its dominance over you, and panting sprawls out next to you companionably, now that you can get a closer look, it seems the beast's wounds are still hindering it more than you suspected, the injured felinoid obviously having a hard time surviving out here all alone with its injuries. Sighing you reach down and stroke his soft fur for a while, his soft rumbling purr and spicy musk filling your head as you pet the felinoid for a while, before standing up to continue on your way.";
@@ -91,6 +99,7 @@ Instead of resolving Injured Felinoid:
 			add "Tamed" to Traits of Felinoid Companion;
 			infect "Felinoid";
 			say "(The Felinoid companion is now tamed! You can make it your active pet by typing [bold type][link]pet Felinoid companion[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+			now Resolution of Injured Felinoid is 6; [Felinoids bitch]
 			now Injured Felinoid is resolved;
 	else:
 		say "     Traveling through the twisting trails of the park, you notice the soft sound of water trickling over rocks from nearby, and leave the path to investigate. Pushing through the undergrowth, you blink as you come across a small spring in a rather nice-looking glade, moving into the small glade, you notice that it looks like an excellent secluded place to rest, and begin to set your pack down. As you begin to set your pack down, you notice the numerous tracks in the soft earth at your feet, and blink as you look around and realize the glade is full of other similar tracks. Kneeling down you look closer you see that most of the tracks are those of the large felinoids wandering the park, and some of them even have soft spots of blood resting next to them. Sighing you realize the large feline creatures found this nice pristine glade first, and are likely using it as a place to rest and lick their wounds. Not wanting to be here in case one of the feline beasts shows up, you pick your pack up and head back out into the park, feeling a little sad at not being able to rest near the nice spring.";

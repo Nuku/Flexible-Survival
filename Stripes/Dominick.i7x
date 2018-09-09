@@ -39,6 +39,7 @@ Instead of resolving Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! 
 		now Happy Puppy Kennel is known;
 		move player to Happy Puppy Kennel;
 		now battleground is "void";
+		now Resolution of Corrupt Kennel is 1; [Entered as Friend]
 	else if calcnumber is 2:
 		WaitLineBreak;
 		say "     You follow Dominick inside, eager to show him who's boss.";
@@ -52,6 +53,7 @@ Instead of resolving Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! 
 			now Happy Puppy Kennel is known;
 			move player to Happy Puppy Kennel;
 			now battleground is "void";
+			now Resolution of Corrupt Kennel is 2; [Entered Kennel as Foe]
 		else:
 			say "     As the door closes behind you, Dominick turns around to face you; just in time to block your fist with his arm. His eyes narrow and he growls, 'Wrong move, asshole.' He knees you in the groin, and as you double over in pain, he pushes you hard. You topple to the ground, knocking the wind out of your lungs, but you barely have time to register this new misery before Dominick begins kicking you viciously. Unable even to cry out, you tighten into a ball and try to endure. Your battered body now feeling like a giant bruise, you hear Dominick from somewhere above you, 'I warned you once and you ignored it. Now you'll get what [if player is female]bitches[else]fuckers[end if] like you deserve.";
 			say "[ForcedSubmissionToDom]";
@@ -61,6 +63,7 @@ Instead of resolving Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! 
 		now HP of Dominick is 1;
 		now Happy Puppy Kennel is known;
 		now battleground is "void";
+		now Resolution of Corrupt Kennel is 3; [Found Kennel, Did not go in]
 	now Corrupt Kennel is resolved;
 
 Section 2 - Happy Puppy Kennel
@@ -1209,7 +1212,7 @@ An everyturn rule:
 		if ForcedBreederslutTF >= 1:
 			if facename of player is not "Breederslut":
 				say "     Something seems wrong to you for a minute, making you whine and whimper as you try to work out the problem. You can feel the pressure inside your head building, until finally something seems to snap, and you let out a loud low moan of pleasure as your face begins to reshape itself. Your moaning cry soon transforms into a howl, as you happily greet the return of the cute face your master gave you.";
-				Now facename of player is "Breederslut";
+				now facename of player is "Breederslut";
 				now face of player is "that of a cute doggy with a mid-length muzzle, pointed ears and a happy if vapid expression";
 			if cunts of player < 1:
 				now cunts of player is 1;
@@ -1244,7 +1247,7 @@ An everyturn rule:
 		if ForcedBreederslutBoyTF >= 1:
 			if facename of player is not "Breederslut":
 				say "     Something seems wrong to you for a minute, making you whine and whimper as you try to work out the problem. You can feel the pressure inside your head building, until finally something seems to snap, and you let out a loud low moan of pleasure as your face begins to reshape itself. Your moaning cry soon transforms into a howl, as you happily greet the return of the cute face your master gave you.";
-				Now facename of player is "Breederslut";
+				now facename of player is "Breederslut";
 				now face of player is "that of a cute doggy with a mid-length muzzle, pointed ears and a happy if vapid expression";
 			if player is female:
 				now cunts of player is 0;

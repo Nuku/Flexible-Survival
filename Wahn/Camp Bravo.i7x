@@ -18,7 +18,7 @@ Instead of resolving a Red Light Requisition:
 	else:
 		say "     What's going on here? Why are soldiers looting the red light district and gathering up whole sacks of dildos and who knows what? Maybe you'll find out one of these days...";
 	increase score by 5;
-	Now Red Light Requisition is resolved;
+	now Red Light Requisition is resolved;
 
 Trickster's Masterpiece is a situation.
 The sarea of Trickster's Masterpiece is "Outside".
@@ -47,8 +47,8 @@ Instead of resolving a Trickster's Masterpiece:
 	increase score by 15;
 	extend game by 24;
 	now HP of Adam is 2; [intro event done]
-	Now Back at the Camp is active;
-	Now Trickster's Masterpiece is resolved;
+	now Back at the Camp is active;
+	now Trickster's Masterpiece is resolved;
 
 
 Back at the Camp is a situation. Back at the Camp is inactive. [enabled by the 'Trickster's Masterpiece' event]
@@ -136,20 +136,23 @@ to say GuardLie: [lie to get into the camp]
 		now HP of Adam is 3; [player got access to the camp]
 		now Camp Bravo Entrance is known;
 		now Back at the Camp is resolved;
-		now battleground is "void";
+		now Resolution of Back at the Camp is 1; [lied your way in]
 	else:
 		say "     'Yeah, right - listen buddy, your story doesn't ring even remotely true in my ears. Get lost,' one of the soldiers scoffs at you. Can't be helped, you won't be getting any further here right now. Although there might be some hope of getting someone else on guard duty next time you come along here...";
+		now Resolution of Back at the Camp is 2; [failed to convince]
 
 to say GuardBeg: [mooch some food from a guard]
 	if (lastGuardBeg - turns < 12):
 		say "     The soldier lowers a hand to his pocket, then stops. 'Wait a minute - I gave you something not too long ago! I can't hand out stuff constantly. That'll attract too much attention and all kinds of critters will show up asking for food.'";
+		now Resolution of Back at the Camp is 3; [mooched food]
 	else:
 		say "     The first guard just scoffs at you, but the other guy pulls out a ration bar and throws it to you. 'Here. Now please go away and don't tell anyone about this. We can't have a mob of people begging for food right in front of the camp.'";
 		increase carried of food by 1;
 		now lastGuardBeg is turns;
 
-to say GuardLeave: [lie to get into the camp]
+to say GuardLeave:
 	say "     You follow the soldier's order and walk away. Too bad, getting into the camp would surely have been interesting. Maybe you should return later and try to convince them to let you in.";
+	now Resolution of Back at the Camp is 4; [left]
 
 
 Camp Bravo Entrance is a room. It is a fasttravel. It is private.

@@ -119,7 +119,8 @@ Instead of resolving a Angel vs Demons:
 		now ElijahChar-L is "0";
 		now ElijahChar-M is "0";
 		increase score by 15;
-		Now Angel vs Demons is resolved;
+		now Resolution of Angel vs Demons is 1; [Elijah rescued]
+		now Angel vs Demons is resolved;
 	else if HP of Gabriel is 1:
 		say "     Once again, as you make your way into this seedy part of town, you find a battlefield in the streets. Steaming patches of hellhound drool and blood mar the ground, followed by pieces of multiple of those dangerous creatures. An unconscious demon brute leans against a nearby building's wall, his left arm nothing but a whirl of purple smoke as the nearby cut-off extremity slowly dissolves and wafts back to him. The sound of an impact and shattering glass draws your attention to the next street corner, and as you make your way over there to see what's going on, you hear an imperious voice call out, 'Where is he? Tell me what you have done with him, hellspawn!'";
 		say "     Peeking around the corner, your yes fall upon the imposing figure of an angel, standing tall in white robes and gleaming armor. In one hand, he holds a flaming sword, while the other just reaches out to pick up an incubus by the neck, peeling him out of the dent he made in a car after being thrown against it. 'Elijah! Where is he? Speak!' the divine warrior shouts, shaking the sex demon impatiently. The incubus gives a weak groan, then focuses his red eyes on his captor and spits at him - which the angel easily avoids. Then the demon gives a somewhat choked chuckle and says, 'We don't have him, you overgrown chicken! One of your precious humans stole him from us... not that most of them look human anymore these days. And the kicker is - somehow the do-gooder got turned afterwards. Your boy has been making rounds all over the city, fucking everyone and everything he could get his hands on. Lots of bitches will be popping out nephilim soon...'";
@@ -133,6 +134,7 @@ Instead of resolving a Angel vs Demons:
 				now monster is y;
 				now area entry is "Red";
 				break;
+		now Resolution of Angel vs Demons is 2; [Gabriel met]
 		now Angel vs Demons is resolved;
 
 Section 2 - Elijah the Seraphim
@@ -342,7 +344,7 @@ to say elijah_ds_tempt:[temptation for Evil Elijah]
 		now HP of Elijah is 99;
 		now lastfuck of Elijah is turns + 8; [guarantee he's ready for action]
 		now HP of Gabriel is 1;
-		now Angel vs Demons is active;
+		now Angel vs Demons is unresolved;
 	else:
 		say "     Where did that thought come from? You shake it off, your mind returning to the remaining ingredients you need for the your angel revival milkshake.";
 
@@ -1300,6 +1302,10 @@ Instead of fucking the Elijah:
 						say "     You sink down exhaustedly, your cock still inside the angel, and rest your head on his sticky chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demon seed takes root. Gone is the short brown hair, its color instantly replaced by glossy blackness that extends further and further until the hair hangs down over his shoulders. His wings react in much the same way, turning black right before your eyes...";
 						say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 						now HP of Elijah is 99;
+						decrease humanity of player by 25;
+						now lastfuck of Elijah is turns;
+						now HP of Gabriel is 1;
+						now Angel vs Demons is unresolved;
 					else:
 						say "     After eagerly slipping off your clothing, you position the angel on his back with his wings hanging down to both sides of the bunk. You proceed to stroke him, your hands gliding over his smooth skin and tracing the outlines of well-defines muscles. As you reach the angel's crotch, you give his balls a playful squeeze, then grab his cock and start pumping your hand up and down its shaft. It quickly fills out and hardens, growing enough that you can put a second hand on it.";
 						say "     When his manhood is good and ready, standing proudly erect like a flagpole, you climb up on the bunk yourself. At first you rub the head of his perfect shaft slowly over the lips of your cunt, but then your need to get him inside the dripping and ready cave quickly overwhelms your restraint. Guiding his cock with one hand, you lower yourself down onto it, panting and moaning as it slides into your body. As you sink in deeper and deeper, the angel starts groaning silently in his sleep, gasping when you take him all the way and your hips touch his balls.";
@@ -1309,6 +1315,10 @@ Instead of fucking the Elijah:
 						say "     You sink down exhaustedly, his cock still deep inside your body slowly pulsing with its last spurts, and rest your head on his sweaty chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demonic juices seep into his cock from all sides and take root. Gone is the short brown hair, its color instantly replaced by glossy blackness that extends further and further until the hair hangs down over his shoulders. His wings react in much the same way, turning black right before your eyes...";
 						say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 						now HP of Elijah is 99;
+						decrease humanity of player by 25;
+						now lastfuck of Elijah is turns;
+						now HP of Gabriel is 1;
+						now Angel vs Demons is unresolved;
 				else if player is male: [male]
 					say "     After eagerly slipping off your clothing, you position the angel on his back with his wings hanging down to both sides of the bunk. Then you climb up on the cot yourself, spreading his legs and holding them up as you move your hips forward. Soon, the head of your [cock of player] cock is rubbing against the silky smooth cheeks of his ass, making you groan in anticipation.";
 					say "     Aiming your hard rod at the angel's pucker with one hand, you push forward, slowly increasing your pressure until the cockhead pops into virgin territory. Sliding into him gives you a truly heavenly feeling, the walls of his warm passage tightly gripping your cock. As you sink in deeper and deeper, he starts moaning silently in his sleep, gasping when you drive in the last few inches and your balls touch his buns.";
@@ -1318,6 +1328,10 @@ Instead of fucking the Elijah:
 					say "     You sink down exhaustedly, your cock still inside the angel, and rest your head on his sticky chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demon seed takes root. Gone is the short brown hair, its color instantly replaced by glossy blackness that extends further and further until the hair hangs down over his shoulders. His wings react in much the same way, turning black right before your eyes...";
 					say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 					now HP of Elijah is 99;
+					decrease humanity of player by 25;
+					now lastfuck of Elijah is turns;
+					now HP of Gabriel is 1;
+					now Angel vs Demons is unresolved;
 				else if player is female: [female]
 					say "     After eagerly slipping off your clothing, you position the angel on his back with his wings hanging down to both sides of the bunk. You proceed to stroke him, your hands gliding over his smooth skin and tracing the outlines of well-defines muscles. As you reach the angel's crotch, you give his balls a playful squeeze, then grab his cock and start pumping your hand up and down its shaft. It quickly fills out and hardens, growing enough that you can put a second hand on it.";
 					say "     When his manhood is good and ready, standing proudly erect like a flagpole, you climb up on the bunk yourself. At first you rub the head of his perfect shaft slowly over the lips of your cunt, but then your need to get him inside the dripping and ready cave quickly overwhelms your restraint. Guiding his cock with one hand, you lower yourself down onto it, panting and moaning as it slides into your body. As you sink in deeper and deeper, the angel starts groaning silently in his sleep, gasping when you take him all the way and your hips touch his balls.";
@@ -1327,12 +1341,12 @@ Instead of fucking the Elijah:
 					say "     You sink down exhaustedly, his cock still deep inside your body slowly pulsing with its last spurts, and rest your head on his sweaty chest. Then, only a short while later, his body starts shivering, heating up noticeably under your touch. You sit up, and looking down on him you see the rapid changes happen as your demonic juices seep into his cock from all sides and take root. Gone is the short brown hair, its color instantly replaced by glossy blackness that extends further and further until the hair hangs down over his shoulders. His wings react in much the same way, turning black right before your eyes...";
 					say "     And his eyes, which suddenly open and focus on you now glow in a shade of red that reminds you of fresh blood. 'Hell yeah, just what I needed.' this changed version of the angel growls. 'I'm Elijah, by the way - any you can bone me anytime from now on.'";
 					now HP of Elijah is 99;
+					decrease humanity of player by 25;
+					now lastfuck of Elijah is turns;
+					now HP of Gabriel is 1;
+					now Angel vs Demons is unresolved;
 				else: [neuter]
 					say "     While you might be morally ready to do this, your distinct lack of demonic genitalia prevents you from acting out your impulses. Grow a cock or a pussy and try it again.";
-				decrease humanity of player by 25;
-				now lastfuck of Elijah is turns;
-				now HP of Gabriel is 1;
-				now Angel vs Demons is active;
 			else if lastfuck of Elijah is not 400:
 				say "     Your moral compass cheers as you step back from the precipice of damnation, grounding your mind a bit more on the human level.";
 				now lastfuck of Elijah is 400; [using to mark resisting this impulse]

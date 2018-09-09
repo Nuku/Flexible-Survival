@@ -96,6 +96,7 @@ instead of conversing the Doctor Medea:
 				say "     She pauses and ponders for a moment. 'There is another possibility as well. With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation. I had just started to look into those possibilities. Perhaps you might be interested in becoming my test subject for this. To accomplish this, I would first need you to obtain some medical supplies I would need. The delivery truck was supposed to arrive the day of the outbreak, so you may be able to locate it. Here is a list of what I need. I would need those supplies regardless if you choose to undergo this procedure or if you find a means to become female.' She provides you with the list and describes the truck used by the delivery company, asking that you keep an eye out for it.";
 				now medeaget is 1;
 				now Abandoned Truck is active;
+				now Abandoned Truck is not resolved;
 				now HP of doctor medea is 2;
 			else if medeaget is 1:
 				say "     'I cannot help you. I specialize in childbirth and minor illnesses. As the latter are not occurring with the nanite plague. Maybe I could help if you were a female?'";
@@ -374,6 +375,7 @@ to say medeaadjustments:
 						say "     As she's speaking, she jots down some notes on a pad of paper. 'If you were to find a [bold type]veterinary hospital[roman type] and bring me some supplies from there, I might be able to do something. I recall there being a particularly large one in the High Rise District of the city. Go there and bring me these items and drugs and we'll see what I can do.'";
 						now lust of Doctor Medea is 1;
 						now Veterinary Hospital is active;
+						now Veterinary Hospital is unresolved;
 					else if lust of Doctor Medea is 1:
 						say "     'As I explained before, I cannot do anything to affect your heat unless you get me those items from a [bold type]veterinary hospital[roman type] like the one in the High Rise District. This clinic was for human patients, not animal ones. Well, at least until the people started to become animals, that is,' she adds with a grin.";
 					else:
@@ -559,6 +561,7 @@ to say medeaassistance_plot:
 				say "     As she's speaking, she jots down some notes on a pad of paper. 'If you were to find a [bold type]veterinary hospital[roman type] and bring me some supplies from there, I might be able to do something. I recall there being a particularly large one in the High Rise District of the city. Go there and bring me these items and drugs and we'll see what I can do.'";
 				now lust of Doctor Medea is 1;
 				now Veterinary Hospital is active;
+				now Veterinary Hospital is unresolved;
 			else if lust of Doctor Medea is 1:
 				say "     'As I explained before, I cannot perform procedures or study anything in regards to affecting one's heat unless you get me those items from a [bold type]veterinary hospital[roman type] like the one in the High Rise District. This clinic was for human patients, not animal ones. Well, at least until the people started to become animals, that is,' she adds with a grin.";
 			else if lust of Doctor Medea is 2:
@@ -642,14 +645,15 @@ to say medeapandafight:
 
 Section 4 - Events
 
-Abandoned truck is a situation.
-the sarea of abandoned truck is "Outside".
+Abandoned Truck is a situation.
+the sarea of Abandoned Truck is "Outside".
 
-instead of resolving an abandoned truck:
+instead of resolving an Abandoned Truck:
 	say "     You come across an abandoned truck, filled with medical supplies. The drivers cab is filled with some sort of goo that covers all the entrances. Maybe some of the supplies can be of use?";
 	if medeaget is 1:
 		say "     This must be the truck Medea sent you after! Ruffling through it, you gather up the things that she requested.";
 		now medeaget is 2;
+		now Resolution of Abandoned Truck is 2; [found Medea's gear]
 		now Abandoned Truck is resolved;
 	else:
 		say "     [bold type]Maybe you could find a medkit. Do you wish to try?[roman type][line break]";
@@ -659,14 +663,16 @@ instead of resolving an abandoned truck:
 		if player consents:
 			LineBreak;
 			say "You ruffle through the boxes, searching for a medkit and leaving mess in your wake.";
-			if a random chance of one in 8 succeeds:
+			if a random chance of 3 in 8 succeeds:
 				say "You found a medkit!";
 				increase carried of medkit by 1;
 			else:
 				say "You find nothing of interest.";
+			now Resolution of Abandoned Truck is 1; [searched the truck]
 		else:
 			LineBreak;
 			say "You leave the abandoned truck behind and walk on.";
+			now Resolution of Abandoned Truck is 99; [disinterest]
 		now Abandoned Truck is resolved;
 
 
@@ -681,6 +687,7 @@ instead of resolving Obstetrics Department:
 		if furry is banned:
 			say "You manage to block out the smell, at least for the moment, and start searching through the Obstetrics Department for the items that Dr. Medea described. You gather up the specialized equipment that she's requested and leave as quickly as you can before your activity can draw the attention of one of the hospital's denizens.";
 			now HP of doctor medea is 4;
+			now Resolution of Obstetrics Department is 1; [got Medea's stuff (all monsters banned)]
 			now Obstetrics Department is resolved;
 		else:
 			say "You manage to block out the smell, at least for the moment, and start searching through the Obstetrics Department for the items that Dr. Medea described. As you start to gather up the specialized equipment she needs, you hear some activity outside moments before a creature comes bursting in, perhaps drawn by the noise. You will have to deal with them if you want to leave here with the supplies.";
@@ -695,6 +702,7 @@ instead of resolving Obstetrics Department:
 				increase libido of player by 15;
 				if "Horny Bastard" is listed in feats of player, increase libido of player by 3;
 				if "Cold Fish" is listed in feats of player, decrease libido of player by 3;
+				now Resolution of Obstetrics Department is 2; [won, got Medea's stuff]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Beaten by the creature, you are forced to leave the room once the creature's satisfied itself. You are forced to leave the equipment you were searching for and will have to try returning at some other point. As it stands, you can still hear the creature inside, growing increasingly loud and lustful as its arousal skyrockets. You rush back to the entrance, trying to get as far from the noisy creature before it draws others for an orgy that will only add their musky juices to the scents pervading the area. As it is, having been in there for so long has left you increasingly aroused and longing to breed.";
 				decrease humanity of player by 12;
@@ -703,8 +711,10 @@ instead of resolving Obstetrics Department:
 				increase libido of player by 25;
 				if "Horny Bastard" is listed in feats of player, increase libido of player by 5;
 				if "Cold Fish" is listed in feats of player, decrease libido of player by 5;
+				now Resolution of Obstetrics Department is 3; [won, not got Medea's stuff]
 			else:
 				say "     Rather than continue to face the creature in the scent-laden room, you find your opportunity and escape. You'll have to risk returning at a later point to obtain the specialized equipment Dr. Medea needs, but for the moment, you're just happy to have gotten away. As it is, you can hear the increasingly loud sounds of the creature as its arousal skyrockets. You rush back to the entrance, trying to get as far from the noisy creature before it draws others for an orgy that will only add their musky juices to the scents pervading the area. As it is, having been in there for so long has left you increasingly aroused and longing to breed.";
+				now Resolution of Obstetrics Department is 4; [fled, not got Medea's stuff]
 	else:
 		say "You attempt to search the ward, but the scents filling the place become too much. You are forced to leave before you can accomplish your goal or risk succumbing to your lusts completely. As it stands, you are left aroused and confused, with thoughts of sex and breeding filling your mind.";
 		decrease humanity of player by 12;
@@ -713,6 +723,7 @@ instead of resolving Obstetrics Department:
 		increase libido of player by 25;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 5;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 5;
+		now Resolution of Obstetrics Department is 4; [fled, not got Medea's stuff]
 
 
 Section 5 - Cunt Pill

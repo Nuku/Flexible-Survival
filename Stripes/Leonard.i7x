@@ -1,5 +1,6 @@
 Version 4 of Leonard by Stripes begins here.
 [Version 4.1.1 - description tweaks]
+[Note: not Resolution flagged yet - use existing variables for now]
 
 "Adds a Male Feline NPC named Leonard to the Flexible Survival game"
 
@@ -18,7 +19,7 @@ Instead of resolving a Feline Friend:
 	say "     Uncertain, you are about to leave when you hear the howl of those wolves, closer than before, you hesitate again. A leonine figure steps from the cave, motioning quickly for you to come inside. He does not seem aggressive and still has a suit coat on, though his lower body is unclothed. 'Quick! They'll not be able to notice your scent over mine and they don't dare come here.' Deciding to risk it, you enter the cave.";
 	now Lion's Den is known;
 	move player to Lion's Den;
-	Now Feline Friend is resolved;
+	now Feline Friend is resolved;
 	now battleground is "void";
 
 

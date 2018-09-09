@@ -74,7 +74,7 @@ Instead of Resolving a Old Record Store:
 	else:
 		LineBreak;
 		say "     Deciding to err on the side of caution, you spin on your heel and then march straightaway from the creepy music store. And though you don't notice it during your posthaste retreat, another -click- resounds throughout the air, the building's door having shut tight once again.";
-		now Resolution of Old Record Store is 99; [desinterest]
+		now Resolution of Old Record Store is 99; [disinterest]
 		now Old Record Store is resolved;
 
 

@@ -80,6 +80,7 @@ Instead of resolving a Orcish Slave Raid:
 						now ValPregCounter is 48;
 						now thirst of Val is 2;
 						now SlaveRaidEncounters is 2;
+						now Resolution of Orcish Slave Raid is 4; [orc player fucked the fox and left the orcs to move on]
 					else:
 						say "     [bold type]Do you want to beat the third orc up too instead ([link]Y[as]y[end link]), or maybe demand ownership of the slave and let him go after the other orcs are gone ([link]N[as]n[end link])?[roman type][line break]";
 						if player consents:
@@ -95,6 +96,7 @@ Instead of resolving a Orcish Slave Raid:
 							else if fightoutcome >= 30: [fled]
 								say "[RunFromOrcSlavers]";
 							else if fightoutcome >= 10 and fightoutcome <= 19: [won]
+								now Resolution of Orcish Slave Raid is 5; [beat all orcs, orcs freed]
 								say "     Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Looking around, you see the guy who got you into this whole mess just wiggling out of the last coil of rope the orc put around him, then stare at you and the beaten orcs. 'Err - thanks,' he says and immediately after runs off as fast as his feet will carry him, not trusting you - or pretty much anyone in this lawless city - enough to stand around and chat.";
 								LineBreak;
 								say "     [bold type]Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
@@ -110,6 +112,7 @@ Instead of resolving a Orcish Slave Raid:
 							say "     After moving a comfortable number of city blocks away, you step into a side alley that's nicely out of view from any roaming creatures and set the bundled-up fox down. He looks wide-eyed at you, trembling at what might come next, only relaxing a tiny bit when you say that you want to free him. Undoing several knots, you loosen the ropes around him. The fox stands still as you continue to unwrap him - then suddenly he wiggles out of the last coils and jumps out of your reach. 'Err - thanks,' he says and immediately after runs off as fast as his feet will carry him, not trusting you - or pretty much anyone in this lawless city - enough to stand around and chat.";
 							LineBreak;
 							say "     Oh well, that was a bit anticlimactic. But then, good deeds are their own reward and at least he thanked you. With a shrug, you get back to worrying about your own survival in the city.";
+							now Resolution of Orcish Slave Raid is 6; [beat 2 orcs, freed fox]
 							now SlaveRaidEncounters is 1;
 				else:
 					say "     Two down, one to go. The third orc stops tying up his captive and comes at you with balled fists.";
@@ -124,7 +127,7 @@ Instead of resolving a Orcish Slave Raid:
 					else if fightoutcome >= 30: [fled]
 						say "[RunFromOrcSlavers]";
 					else if fightoutcome >= 10 and fightoutcome <= 19: [won]
-						now battleground is "void";
+						now Resolution of Orcish Slave Raid is 5; [beat all orcs, orcs freed]
 						say "     Phew, the last orc collapses on top of the other two with the meaty thump of flesh on flesh. Looking around, you see the guy who got you into this whole mess just wiggling out of the last coil of rope the orc put around him, then stare at you and the beaten orcs. 'Err - thanks,' he says and immediately after runs off as fast as his feet will carry him, not trusting you - or pretty much anyone in this lawless city - enough to stand around and chat.";
 						LineBreak;
 						say "     [bold type]Now that you're all alone with the vanquished orcs, would you like to... have some fun with one of them ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?[roman type][line break]";
@@ -183,12 +186,14 @@ Instead of resolving a Orcish Slave Raid:
 	now inasituation is false;
 
 to say RunFromOrcSlavers:
+	now Resolution of Orcish Slave Raid is 3; [ran]
 	say "     Sometimes escape is the best - or only - option. Running as fast as you can, you flee and manage to make [']em lose sight of you after a short while. As you stand around a corner and pant heavily to catch your breath, you can hear them talk in their gruff voices. 'Bah - forget it, we lost [ObjectPro of player].' 'Fine, let's get back to the other one then - though he'll be pretty sore and stretched out by the time we're done taking turns!' Their voices get quieter as they move away from you, making the last thing you hear 'Who cares? That's what breeders are for! He'll get used to it...'";
 	move Val to Slave Cell 1;
 	now ValPregCounter is 48;
 	now thirst of Val is 1;
 
 to say SubmitToOrcSlavers:
+	now Resolution of Orcish Slave Raid is 2; [submitted]
 	if SlaveRaidEncounters is 0: [first time]
 		if anallevel > 1:
 			if "Dominant" is listed in feats of player:
@@ -259,6 +264,7 @@ to say SubmitToOrcRaidRepeat:
 	now OrcSlaverCaptureTime is turns;
 
 to say LoseToOrcSlavers:
+	now Resolution of Orcish Slave Raid is 1; [lost]
 	if SlaveRaidEncounters is 0: [first time]
 		if anallevel > 1:
 			if "Dominant" is listed in feats of player:

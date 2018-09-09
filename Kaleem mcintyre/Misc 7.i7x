@@ -154,7 +154,7 @@ Instead of Resolving a Hurting:
 		LineBreak;
 		say "     Deciding that caution would be the better part of valor on this one you slowly back away from the upturned desk and then out of the room while keeping your eyes on the straight jacket wearing weasel. The other lifts his head to look up at you for a moment, but then lowers his head to whimper and begin rocking once again after noticing your departure.";
 		now Hurting is resolved;
-		now Resolution of Hurting is 99; [desinterest]
+		now Resolution of Hurting is 99; [disinterest]
 
 Conchien is a situation.
 The sarea of Conchien is "Outside".

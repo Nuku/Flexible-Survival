@@ -171,7 +171,7 @@ instead of conversing the Fancy:
 	else if fancyquest is 1:
 		if fancyaroused > 1:
 			say "     'Hey again there sexy,' Fancy says with a teasing wink as she looks at you curiously for a minute, only to blink when you mention the ignored memos. 'It figures they would just throw them away like that,' the sexy white mare says with a sigh. 'But it's nothing you need to worry your little head about right now,' she adds with a soft teasing smile as she stretches her nearly naked form out teasingly, seemingly unworried about the problem right now with you in front of her.";
-			Now fancyquest is 0;
+			now fancyquest is 0;
 		else:
 			say "     'Hey there again, did you have some more questions about this place or did you need help with something?' Fancy asks with a soft smile on her white muzzle as she looks up at you again. She blinks in surprise as you mention the stack of memos you found, and that you were actually wondering if she needed help instead. Fancy's briefly stunned and then sighs, 'So they just tossed all my requests on a desk somewhere and forgot about them? That sounds about normal for this place, so I don't know why I am surprised.' She shakes her equine head sadly, before concentrating her attention on you again. 'And while I am sure I'm probably not supposed to get help from outside sources, if you are offering I certainly can't afford to turn down some help,' Fancy says with a rueful smile as she looks at you expectantly. Do you offer to help out?";
 			if player consents:
@@ -335,7 +335,7 @@ An everyturn rule:
 			now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
 		if facename of player is not "Nightmare":
 			say "You feel a strange yet familiar burning pressure in your head, and cry out slightly as your face pushes forward and reshapes itself again, your forehead flattening out and your eyes burning with an inner flame as your dark equine muzzle finishes reshaping itself, your dark red mane once more shimmering like fire as it trails down the back of your fully equine face once more.";
-			Now facename of player is "Nightmare";
+			now facename of player is "Nightmare";
 			now face of player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face";
 	if nightmaretf is 3:
 		if tailname of player is not "Nightmare":
@@ -344,7 +344,7 @@ An everyturn rule:
 			now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
 		if facename of player is not "Nightmare":
 			say "You feel a strange yet familiar burning pressure in your head, and cry out slightly as your face pushes forward and reshapes itself again, your forehead flattening out and your eyes burning with an inner flame as your dark equine muzzle finishes reshaping itself, your dark red mane once more shimmering like fire as it trails down the back of your fully equine face once more.";
-			Now facename of player is "Nightmare";
+			now facename of player is "Nightmare";
 			now face of player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face";
 		if skinname of player is not "Nightmare":
 			say "Your body once more burns with that strange inner fire, as it seems to crackle over and under your skin, the strange power within you sweeping over your form until once again you are completely covered in a shadowy midnight black coating of fur.";
@@ -357,7 +357,7 @@ An everyturn rule:
 			now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
 		if facename of player is not "Nightmare":
 			say "You feel a strange yet familiar burning pressure in your head, and cry out slightly as your face pushes forward and reshapes itself again, your forehead flattening out and your eyes burning with an inner flame as your dark equine muzzle finishes reshaping itself, your dark blood red mane once more shimmering like fire as it trails down the back of your fully equine face once more.";
-			Now facename of player is "Nightmare";
+			now facename of player is "Nightmare";
 			now face of player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face";
 		if skinname of player is not "Nightmare":
 			say "Your body once more burns with that strange inner fire, as it seems to crackle over and under your skin, the strange power within you sweeping over your form until once again you are completely covered in a shadowy midnight black coating of fur.";

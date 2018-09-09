@@ -717,8 +717,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is ColeenAlpha;
 		-- "ColeenCollared":
 			now NumberVarValue entry is ColeenCollared;
-		-- "ColeenDeclined":
-			now NumberVarValue entry is ColeenDeclined;
 		-- "ColeenFound":
 			now NumberVarValue entry is ColeenFound;
 		-- "ColeenSarahInteraction":
@@ -1887,8 +1885,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is LostToZebra;
 		-- "loversbench":
 			now NumberVarValue entry is loversbench;
-		-- "LURM":
-			now NumberVarValue entry is LURM;
 		-- "lustadjust":
 			now NumberVarValue entry is lustadjust;
 		-- "lustatt":
@@ -4473,8 +4469,6 @@ to VariableNumberLoad:
 					now ColeenAlpha is numberVarValue entry;
 				-- "ColeenCollared":
 					now ColeenCollared is numberVarValue entry;
-				-- "ColeenDeclined":
-					now ColeenDeclined is numberVarValue entry;
 				-- "ColeenFound":
 					now ColeenFound is numberVarValue entry;
 				-- "ColeenSarahInteraction":
@@ -5643,8 +5637,6 @@ to VariableNumberLoad:
 					now LostToZebra is numberVarValue entry;
 				-- "loversbench":
 					now loversbench is numberVarValue entry;
-				-- "LURM":
-					now LURM is numberVarValue entry;
 				-- "lustadjust":
 					now lustadjust is numberVarValue entry;
 				-- "lustatt":

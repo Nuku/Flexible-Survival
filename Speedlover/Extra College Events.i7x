@@ -331,6 +331,7 @@ to AdminIntro:
 			increase humanity of player by 10;
 			if humanity of player > 100:
 				now humanity of player is 100;
+			now Resolution of Course Advice is 1; [Waited outside office, Watched sex]
 		else:
 			LineBreak;
 			say "     With a grin on your face, you stand up and walk down the corridor, leaving the advisers offices of the Tenvale College behind for now. While the place seemed so dreadfully normal and regular before, you now know enough to interpret some low sounds that are audible in the building. That banging from somewhere above surely isn't connected to hanging a picture, and the slurp behind one of the doors you pass will likely be someone giving a blow-job.";
@@ -339,11 +340,13 @@ to AdminIntro:
 			if humanity of player > 100:
 				now humanity of player is 100;
 		move player to College Administration Building;
+		now Resolution of Course Advice is 2; [Waited outside office, Did not watch sex]
 	else:
 		LineBreak;
 		say "     With a shrug, you abandon the idea of exploring the Tenvale College administration building any further. This all seems to dreadfully normal and regular... it's the nanite apocalypse, for fuck's sake! Walking back downstairs and past the peaceful crowd there, you soon step out onto the campus grounds again. Almost the first thing you see out here is an incubus, standing not too far off. He has his leather pants pushed down below his ass and is stroking the sizable erection between his legs for everyone to see.";
 		say "     The demonic exhibitionist doesn't have to hold out his lure for too long, as a sexy little gazelle out on a jog diverts her route to stop by his side. You're too far away to make out the exact words they exchange... but you don't have to really, as the next thing they do is start fucking, right there on the green grass of the college campus. Yeah, this seems more like the regular fare you've been come to expect from this new reality.";
 		move player to College Fountain;
+		now Resolution of Course Advice is 3; [Did not wait outside office]
 	now Course Advice is resolved;
 
 [Silence in the Library - Repeatable event]
@@ -493,20 +496,20 @@ to RyouseiLibraryEvent:
 	say "     ([link]N[as]n[end link]) - He is a big boy. He will manage.";
 	if player consents:
 		LineBreak;
-		say "     '[if Girl is not banned and Girl is not warded]Sir[else]Madam[end if], please go slower. I am... Aaah...'";
-		say "     The door is locked, but you can peek through the keyhole. You see Ryousei, lying on his back, straddled by one of the library employees, a middle-aged [if Girl is not banned and Girl is not warded]fox[else]vixen[end if].";
+		say "     '[if Girl is not banned and Girl is not warded]Madam[else]Sir[end if], please go slower. I am... Aaah...'";
+		say "     The door is locked, but you can peek through the keyhole. You see Ryousei, lying on his back, straddled by one of the library employees, a middle-aged [if Girl is not banned and Girl is not warded]vixen[else]fox[end if].";
 		say "     'Tut, tut... No discussing a staff's order. Now, stay still, and be quieter. You would not want someone to catch us together, would you?'";
-		say "     The both of them go like this for some time, with the poor Ryousei trying to stifle his moans of pleasure and doing poorly at it. He does not last long, as you can hear him grunt 'Ah! [if Girl is not banned and Girl is not warded]Sir[else]Madam[end if], I am gonna... gonna....' followed by a long series of lustful grunts and mrowls.";
+		say "     The both of them go like this for some time, with the poor Ryousei trying to stifle his moans of pleasure and doing poorly at it. He does not last long, as you can hear him grunt 'Ah! [if Girl is not banned and Girl is not warded]Madam[else]Sir[end if], I am gonna... gonna....' followed by a long series of lustful grunts and mrowls.";
 		say "     The librarian caresses the tiger's soft fur, and eventually stands back up.";
 		say "     'Well, that was a good way to relieve tension. You would not believe how horny hearing all these teenagers fuck in the library is.'";
 		say "     Ryousei gets back on his feet as well: 'I, er, guess?' he comments, while he fetches his kimono. 'So, are we even?'";
 		say "     'What do you mean?'";
 		say "     'The fine? For making noise in this place?'";
 		say "     'Oh, right. Sure, sure. Just, don't do it again. Or, do it again, and let's work this out together, hm?'";
-		say "     You have barely the time to jump away from the door before Ryousei walks out from the room, his tail waving in the air behind him. It seems he has a new fan. You go back at the entrance of the library, and find him waiting for you. You ask him innocently why he looks disheveled all of a sudden. 'Well, this place of knowledge is so, er, admirable,' the feline begins while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You silently sympathize with the tiger, as you see the librarian walk back to [if Girl is not banned and Girl is not warded]his[else]her[end if] desk and blow him a kiss from her chair.";
+		say "     You have barely the time to jump away from the door before Ryousei walks out from the room, his tail waving in the air behind him. It seems he has a new fan. You go back at the entrance of the library, and find him waiting for you. You ask him innocently why he looks disheveled all of a sudden. 'Well, this place of knowledge is so, er, admirable,' the feline begins while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You silently sympathize with the tiger, as you see the librarian walk back to [if Girl is not banned and Girl is not warded]her[else]his[end if] desk and blow them a kiss from her chair.";
 		now CollegeLibraryRyouseiEncounter is 1;
 	else:
-		say "     You walk back to the bookshelves, and, inspired by Ryousei, decide to check the Asian history section. Shortly after, the tiger is back at your sides, but looks disheveled. 'Well, this place of knowledge is so, er, admirable,' the feline replies your query, while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You follow his look to the information desk, and notice a middle-aged vulpine employee ogling at the tiger, and licking [if Girl is not banned and Girl is not warded]his[else]her[end if] chops. Ryousei makes a beeline for the exit, almost losing you again.";
+		say "     You walk back to the bookshelves, and, inspired by Ryousei, decide to check the Asian history section. Shortly after, the tiger is back at your sides, but looks disheveled. 'Well, this place of knowledge is so, er, admirable,' the feline replies your query, while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You follow his look to the information desk, and notice a middle-aged vulpine employee ogling at the tiger, and licking [if Girl is not banned and Girl is not warded]her[else]his[end if] chops. Ryousei makes a beeline for the exit, almost losing you again.";
 
 Campus Patrol is a situation.
 Campus Patrol is inactive.

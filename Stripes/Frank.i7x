@@ -34,6 +34,7 @@ Instead of resolving a Mephitness:
 			move player to Comic Shop;
 			now Comic Shop is known;
 			increase score by 20;
+			now Resolution of Mephitness is 1; [Player is Skunklord, Rescued Frank]
 		else:
 			say "     Yelling for their attention, you charge the skunks. The one at the back turns to face you while the others tackle their fallen prey. He yells and screams, trying to push them back and get back up while they try to kiss and fondle him.";
 			now skunkfight is 3;
@@ -54,10 +55,13 @@ Instead of resolving a Mephitness:
 						move player to Comic Shop;
 						now Comic Shop is known;
 						increase score by 20;
+						now Resolution of Mephitness is 2; [Rescued Frank]
 			if skunkfight is 3:
 				say "     Deciding you've had enough of this, not really being your fight in the first place, you break away from the skunk girl and make a run for it. As you are not their intended prize, the skunk doesn't pursue you and instead heads back to the rapidly-changing fellow who is well on his way to becoming and other skunk girl.";
+				now Resolution of Mephitness is 3; [Tried to rescue Frank, Fled]
 			if skunkfight is 2:
 				say "     Defeated, the skunk girl grinds her body against yours, dripping goo onto your crotch and fondling you. 'Mmm... I wish we had more time to play, but we need to get this fool back to receive his just punishment. He'll make a fine skunk girl for our sexy master to breed.' She kisses your cheek and runs a paw down your chest. 'You should come see him in the forest. I'd enjoy seeing you made into another slut for him to breed, too.' With that, she gets up and starts dragging off the sex-dazed skunk. He's already started to gain a shapely, feminine figure and will likely be another skunk slut soon enough.";
+				now Resolution of Mephitness is 4; [Tried to rescue Frank, Lost]
 	else:
 		say "     More enticed by the backpack and its potential contents than the certainty of a fight with the trio of skunk girls, you slip out and grab the backpack before making your escape. You can hear the excited moans of their prey getting louder and more feminine as they transform him into another sultry skunk girl like themselves. Once you have some safe distance between you and them, you open up the pack to find a collection of snack foods and drinks, through there is a tin of ravioli as well. A side pocket has a canister of pepperspray which may be useful.";
 		say "     Food, chips, soda x2 and pepperspray obtained.";
@@ -66,8 +70,9 @@ Instead of resolving a Mephitness:
 		increase carried of chips by 1;
 		increase carried of soda by 2;
 		increase score by 15;
+		now Resolution of Mephitness is 5; [Ignored Frank, Stole bag]
 	now skunkfight is 0;
-	Now Mephitness is resolved;
+	now Mephitness is resolved;
 
 
 Comic Shop is a room. It is fasttravel. It is private.

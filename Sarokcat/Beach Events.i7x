@@ -26,7 +26,7 @@ Instead of resolving a Beach Bum:
 		else:
 			say "     The bum seems to sigh sadly, as he waves you on your way, you get the feeling you probably won't be seeing him around here much longer...";
 			now Resolution of Beach Bum is 99; [desinterest]
-			Now Beach bum is resolved;
+			now Beach bum is resolved;
 	else if Resolution of Beach Bum is 1:
 		say "     Traveling along the long beach you once again see the strange pile of junk and bits of ship wreckage that mark the location of the strange beach bum. Recalling your bargain with the strange person, you trudge over to see if you have anything he might want to trade for.";
 		if chips is owned:
@@ -74,7 +74,7 @@ The sarea of Flotsam bits is "Beach".
 Instead of resolving a Flotsam bits:
 	say "     Wandering along the beach, you spy a small pile of flotsam washed up on the beach. Approaching cautiously, everything seems safe enough, so you spend a moment searching through the detritus. The only thing of use that you turn up is a sea hardened bit of wood that could possibly serve as a giant club. It is a large log of driftwood with several branch stubs protruding from it. A couple are placed such that you could swing it like a massive club or battering ram. Despite its time in the salt water, the wood is unusually hard, reminding you of the giant tree creatures you've spotted in the city. Shrugging, you take the bit of wood with you and continue along the beach.";
 	increase carried of flotsam club by 1;
-	Now Flotsam bits is resolved;
+	now Flotsam bits is resolved;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -92,7 +92,7 @@ The sarea of Strange tide is "Beach".
 
 Instead of resolving a Strange tide:
 	say "     Walking along the beach, you notice a strange roiling of the tide. Not far out in the water, pausing to look for a minute, it seems almost as if the tide is being disturbed from below. Closer inspection reveals that you can almost see something large moving around down there, or perhaps several somethings moving together. Realizing how vigorously whatever is down there must be moving, you decide to continue on your way before it notices you.";
-	Now Strange tide is resolved;
+	now Strange tide is resolved;
 
 
 Section 4 - Strange wave
@@ -106,7 +106,7 @@ when play begins:
 Instead of resolving a Strange wave:
 	say "     Walking along the beach, you hear a strange noise all of a sudden, almost like a loud groan, causing you to look towards the water. You are shocked to note that there is a large wave of water coming towards you from the beach, and due to the sheer surprise, you almost don't get out of the way in time. Still a decent amount of the water splashes you as it slams into the beach, causing you to wonder just what happened as you clean the water off of you, some of it seeming to cling to you a bit more than you would expect.";
 	infect "Feral Sea Dragon";
-	Now Strange wave is resolved;
+	now Strange wave is resolved;
 
 
 Section 5 - Smashed boat
@@ -119,7 +119,7 @@ Instead of resolving a Smashed boat:
 	increase carried of food by 2;
 	increase carried of water bottle by 1;
 	say "You acquired quite a bit of food, but only a little water.";
-	Now Smashed boat is resolved;
+	now Smashed boat is resolved;
 
 
 Section 6 - Dragon voyeurism
@@ -138,7 +138,7 @@ Instead of resolving a Dragon voyeurism:
 	infect "Feral Sea Dragon";
 	infect "Feral Sea Dragon";
 	infect "Feral Sea Dragon";
-	Now Dragon voyeurism is resolved;
+	now Dragon voyeurism is resolved;
 
 
 Section 7 - relaxing scene

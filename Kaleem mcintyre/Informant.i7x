@@ -71,8 +71,8 @@ instead of conversing the Homaru:
 			say "Homaru goes over some of the information highlighted on his screen and then freezes all of a sudden. When the power to the building is cut the brown haired man lets out a line of swear words that might have made a nun blush. 'Unbelievable! Someone's caught onto me!' You ask the other what he means and then get a furious stare in return. 'I think that someone's realized you were trying to find the missing firefighters and have shut me down. I won't be able to find any of them for you now.'";
 			say "Homaru sighs in the darkness and then flops his head down onto his desk in disgust. The lights to the building come back on seconds afterwards, ironically.";
 			say "(This quest requires guy, girl and furry content to advance.)[line break]";
-			Now Homarusearch is 70;
-			Now Homarutalk is 1;
+			now Homarusearch is 70;
+			now Homarutalk is 1;
 		else:
 			say "Rapidly typing on his keyboard, Homaru begins to talk to you without looking up into your [facename of player] face. 'Hey, I was looking through some information that I have on hand and I think I found one of the firefighters you spoke about earlier.' Homaru's words make you stare in awe as you try and think up how the other man could have had this kind of info when you only asked him about it, like ten minutes ago. Unless the other was some kind of fortune teller or prophet that should have been impossible... right? Or maybe he was spying on you?[line break]";
 			say "Pulling out a manila folder Homaru, leafs through the information and then goes about giving you some of the highlights. 'It seems that when things started to get out of hand around this city some of the people here panicked and started moving into shelters, bunkers, barracks, or what have you. However, from the intel I have on hand here, it seems as though some small groups of like-minded mutants began popping up when the outbreak became almost impossible to contain in any one place. After that these said groups worked to grab up as many uninfected people as they can to use them for... well, let's just say no good purposes.'[line break]";

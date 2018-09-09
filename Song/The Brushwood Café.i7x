@@ -1,5 +1,5 @@
 Version 1 of The Brushwood Café by Song begins here.
-
+[not resolution tagged as it isn't in the game yet]
 "Adds The Brushwood Café to Flexible Survival, a rustic coffee shop run by a group of Shiba Inus."
 
 

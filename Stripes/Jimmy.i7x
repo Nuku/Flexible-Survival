@@ -23,15 +23,17 @@ instead of resolving Automaton Activity:
 			now HP of Jimmy is 3;
 			if HP of Alexandra < 57, now HP of Alexandra is 57;
 			now Automaton Activity is resolved;
-			now battleground is "void";
+			now Resolution of Automaton Activity is 1; [won]
 			move Jimmy to Police Lockerroom;
 			move player to Police Station Twelve;
 		else if fightoutcome >= 20 and fightoutcome <= 29:	[player lost]
 			say "     During the automaton's sexual assault, you did manage to spot the corgi guy manage to squirm free. He then dropped to all fours and ran off as quickly as his stubby little legs could carry him. His small size helped him to weave between the automatons and make his escape. After your assailant steps away, you rush off after him before another of the robotic people can grab you, but you've lost track of him for now. You hope you can find the little guy before something else does.";
 			now HP of Jimmy is 2;
+			now Resolution of Automaton Activity is 2; [lost]
 		else:
 			say "     As you make your escape from the automaton attacking you, you spot the corgi guy managing to squirm free. He drops to all fours and runs off as quickly as his stubby little legs can carry him. While his small size helps him weave between the automatons and make his escape, he heads off in a direction separate from yours. By the time you're able to circle around, you've lost track of him for now. You hope you can find the little guy before something else does.";
 			now HP of Jimmy is 2;
+			now Resolution of Automaton Activity is 3; [fled]
 	else if HP of Jimmy is 2:
 		say "     Heading back to the area where you encountered the automatons digging out the corgi survivor, you begin searching around in the hopes of locating him.";
 		let bonus be ( the perception of the player minus 10 ) divided by 2;
@@ -47,7 +49,7 @@ instead of resolving Automaton Activity:
 			now HP of Jimmy is 3;
 			if HP of Alexandra < 57, now HP of Alexandra is 57;
 			now Automaton Activity is resolved;
-			now battleground is "void";
+			now Resolution of Automaton Activity is 4; [found and rescued Jimmy]
 			move Jimmy to Police Lockerroom;
 			move player to Police Station Twelve;
 	else:

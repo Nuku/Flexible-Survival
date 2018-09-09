@@ -44,7 +44,7 @@ Instead of resolving a Canine Patrol:
 		else:
 			say "     Not wanting to get distracted or caught up in something that doesn't involve you, you slip back the way you came and find another street to take.";
 			now gshepsquad is 1;
-			now Resolution of Canine Patrol is 99; [desinterest]
+			now Resolution of Canine Patrol is 99; [disinterest]
 			now Canine Patrol is resolved;
 	else if gshepsquad is 2:
 		say "     While searching the city, you spot an Airedale terrier behaving oddly, digging at some rubble while panting heavily. Shifting some of it aside, he pulls out a hidden water bottle. The thirsty terrier is just about to open it up when a bird-winged mutant swoops in and makes a grab for it. Wrestling the bottle from his hands, the sharp-toothed humanoid bowls the exhausted dog over with a hiss and starts to run off. 'Ahh... my water... you thief!' comes the dog's raspy yell.";

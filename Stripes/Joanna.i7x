@@ -51,9 +51,11 @@ Instead of resolving a Overrun Garden:
 		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 			say "     As your struggles cease, the vines truss you up tightly. Captured, you have become a second victim for this giant plant monster.";
 			say "[losejoannafight]";
+			now Resolution of Overrun Garden is 2; [lost]
 		else if fightoutcome >= 30: [fled]
 			say "     Having had enough, you manage to pull free of the plant, breaking the vine and escaping, leaving [if HP of Joanna >= 90]Joanna[else]the girl[end if] screaming as she's pulled into the large flower. She struggles for a time, but the plant subdues her and encloses her in the rather vaginal flower. You are quite certain there'll be nothing left of her but another of these parasitic plants to set root nearby. Well, at least you tried to help.";
 			now HP of Joanna is 0;
+			now Resolution of Overrun Garden is 3; [fled]
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     Fighting off the plant's vines, you are able to break off the one buried deep inside you, allowing you to press onwards.";
 			say "     Your struggle with the plant is quite difficult, but you persist, tearing roots and smashing flowers as you struggle to get reach the main body of the plant. During your fight, [if HP of Joanna >= 90]Joanna[else]the kinkajou[end if] is able to break free because you've destroyed enough of the vines and she makes a break for it. For a moment, you think she's left you all alone, but you hear a small engine choking to start. Looking away from the large, torn bags of fertilizer at the plant's base as you make it there, you spot her coming out of a small gardening shed wielding a gas powered hedge trimmer with a wild look in her eyes. You tackle the vines, holding them taut as she slashes through them, splattering their green juices out. She slashes at the plant's base, slowly cutting through it as you keep the last of the vines off her until it's sawed clean through and you both collapse, panting for breath after your life or death fight.";
@@ -66,6 +68,7 @@ Instead of resolving a Overrun Garden:
 			say "     'And I was just getting used to being a kinkajou,' she says with a soft giggle, walking slowly around the garden, smelling the large flowers and diving her tongue into them to enjoy their nectar. 'Mmm... this looks like a lovely garden. The perfect place for a lovely flower like me, don't you think?' she asks with a grin. '[if HP of Joanna >= 90]Be sure to tell Harold and the others at the Palomino that I'm okay[else]My name is Joanna[end if]. You're welcome to visit here again whenever you like, my brave hero,' she adds, running a green finger slowly down your chest and smiling as she sensually runs her foot-long tongue across your neck.";
 			now HP of Joanna is 1;
 			now lust of Joanna is 0;
+			now Resolution of Overrun Garden is 1; [helped and won]
 	else:
 		LineBreak;
 		say "     Deciding not to risk it, you are drawn to continue watching. As she's pulled closer, you watch [if HP of Joanna >= 90]Joanna[else]her[end if] arch her back in climax as the plant creature cums inside her, pumping her full of fluids from all directions. Her belly swells up as more of the sticky white sap is sprayed onto her body while her freshly made balls drain their cum to feed the hungry flowers milking at her new cocks. As she's lowered into the flower, she only starts to realize what's happening as the large tentacles withdraw, but by then, the smaller tendrils are all around her, holding her bloated body inside the flower as it starts closing around her. She tries to hold the petals open, but her strength wanes quickly and soon she's tightly enclosed. There is a brief struggle, then the big flower is still and the tentacles, fruits and flowers move back into their positions, waiting to lure in their next victim. You are quite certain there'll be nothing left of [if HP of Joanna >= 90]Joanna[else]the girl[end if] but another of these parasitic plants to set root nearby. You move on, ";
@@ -80,6 +83,7 @@ Instead of resolving a Overrun Garden:
 			if HP of Joanna >= 90, decrease humanity of player by 10;
 		if libido of player > 100, now libido of player is 100;
 		now HP of Joanna is 0; [resets Joanna]
+		now Resolution of Overrun Garden is 99; [watched]
 	now inasituation is false;
 	now joannaharoldtalk is 1;
 	now Overrun Garden is resolved;
@@ -597,8 +601,10 @@ Instead of resolving a Dog Chase:
 		now PALOMINO is known;
 		now HP of Joanna is 90;
 		now joannadogsaved is true;
+		now Resolution of Dog Chase is 1; [saved Joanna]
 	else:
 		say "     You catch the sound of barking dogs approaching and put yourself on guard. Moving to an alleyway, you watch as one of those husky girls playfully runs from a German Shepherd male. Their chase is loud and playful, with the husky merrily leading him around, though you're quite certain she'll eventually let the horny male mount her. You wait until they pass and their barking grows distant before emerging and continuing on your way.";
+		now Resolution of Dog Chase is 2; [didn't save Joanna]
 	now Dog Chase is resolved;
 
 an everyturn rule:

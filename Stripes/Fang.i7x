@@ -40,6 +40,7 @@ FangToy is a truth state that varies. FangToy is usually false.
 the scent of the Fang is "[if HP of Fang is 3 or HP of Fang is 4]The scent of your alpha wolf is strong and exciting.[else]The scarred wolf has an arousing male scent.[end if]".
 
 to say fangdesc:
+	project the Figure of Fang_face_icon;
 	if debugactive is 1:
 		say "     DEBUG -> HP: [HP of Fang], Libido: [libido of Fang], Lust: [lust of Fang], FangWS: [FangWS], FangToy: [FangToy] <- DEBUG[line break]";
 	if HP of Fang is 3 or HP of Fang is 4:
@@ -48,6 +49,7 @@ to say fangdesc:
 		say "     The feral wolf creature seems to be doing better in his new home. He is looking more confident and strong as he sits obediently on watch, clearly adjusting well to his improved position as your beta. His fur is a mix of black and dark gray fur that blends into the shadows as he watches the door with his bright, yellow eyes. You are pleased with how he's turning out so far. He's not made a mess around the Library and remains on his long, rope leash. The fact that he cleverly unties and reties its anchoring point to get around when you're not looking doesn't bother you very much, as the fact he still wears it shows he recognizes your authority as his [if player is male]master[else]mistress[end if][if FangToy is true and a random chance of 1 in 3 succeeds][one of]Fang has his doggy dick toy stuffed in his muzzle, happily working his tongue over it[or]Fang has the playtoy Sandra gave him on the ground between his paws and is giving it a few casual licks[or]Fang's red dildo toy is on the floor beneath him. He's idly rubbing his own hard cock against it, dribbling getting it slick with wolf pre[at random][end if].";
 
 Instead of conversing the Fang:
+	project the Figure of Fang_face_icon;
 	if HP of Fang is 3 or HP of Fang is 4:
 		say "     The wolf creature listens attentively as you tell him what happening out in the city while you stroke and scritch your lupine master.";
 	else:
@@ -59,6 +61,7 @@ Section 2 - Sexxxings
 the fuckscene of Fang is "[sexwithFang]";
 
 to say sexwithFang:
+	project the Figure of Fang_face_icon;
 	[puts Feral Wolf as lead monster in case of impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;
@@ -201,6 +204,7 @@ instead of going up from Bunker while ( lastfuck of Sandra - turns > 15 and Sand
 	now lastfuck of Sandra is turns;
 	now lastfuck of Fang is turns;
 	move player to Grey Abbey Library;
+	project the Figure of Fang_face_icon;
 	say "     As you're preparing to head back out, you catch sight of Sandra slipping through the door to the Library[if libido of Fang is 1] again. Once again, there's[else]. There's[end if] something furtive about her actions and so you remain quiet and follow out shortly after her. Outside in the library, you stay hidden among the stacks, watching her move towards the big wolf on guard[if the number of booked people > 1]. They are alone in here right now, or at least so they think[end if][if libido of Fang is 1]. With a few quiet whispers,[else]. It becomes clear what she's after when[end if] she puts her arms around him and starts stroking his cock, getting the big, feral wolf hard. After a little teasing and some slobbery kisses from the lupine's tongue, she moves onto all fours and waves her rump for him.";
 	say "     'Oh, take me, you big beast! I want to be fucked like an animal!' the usually shy and quiet bunny cries out as the wolf's moving atop her. It seems she's becoming more lustful with her time waiting in the bunker, giving into her hidden lusts more and more. Clearly the rabbit girl is much kinkier than she lets on. You grin as you watch the wolf's cock spreading the bunny's wet, dripping folds before pounding and thrusting into her like a wild, feral wolf. Getting quite aroused by the erotic display before you, you rub your hands over your body.";
 	say "     [bold type]Shall you head over to join them [if libido of Fang is 1]this time [end if]or remain watching quietly?[roman type][line break]";
@@ -482,6 +486,7 @@ Chapter 2 - w/o Sandra	[Only available if 'girl' is banned, removing Sandra from
 
 instead of going up from Bunker while ( lastfuck of Fang - turns >= 24 and HP of Fang is 1 and girl is banned) and player is not neuter:	[ignored for 3+ days]
 	now lastfuck of Fang is turns;
+	project the Figure of Fang_face_icon;
 	say "     After stepping from the bunker and closing the heavy door, you are pounced upon by something. As you start to struggle, you are surprised to find that it's Fang atop you. From his growls and the hard cock rubbing against you, you surmise that the wolf's not playing around. It's been some time since you've given the beast some attention and it looks like he's intent on satisfying his lusts with you whether you like it or not. As his throbbing shaft grinds against you while he tries to get a better grip on you, the scent from the powerful beast is quite enticing. It could be fun to just give in and let the big wolf have his way with you.";
 	say "     [bold type]Shall you let him or reassert your dominance?[roman type][line break]";
 	LineBreak;
@@ -644,6 +649,7 @@ an everyturn rule:
 	else if ( HP of Fang is 3 or HP of Fang is 4 ) and Fang is booked and Fang is visible and lastCandyfucked - turns >= 12 and Candy is bunkered and ( libido of Fang is 7 or libido of Fang is 6 or ( lust of Fang >= 2 and girl is banned ) ) and lust of Candy is 2 and coonstatus is 2:
 		now lust of Candy is 3;
 		now lastfuck of Fang is turns;
+		project the Figure of Fang_face_icon;
 		say "     As you're taking a break, you hear the door to the bunker open. Glancing over, you spot Candy sashaying out again. He smiles and waves to you, giving his tail a big swish. 'I'll be borrowing your big, bad wolf again, hon. I've decided the best way he can repay me for nearly ruining my outfit is with another fucking. I hope you don't mind.' And with that said, he continues over to Fang. This time, he pulls off his dress and tosses it across the librarian's desk.";
 		say "     With growing interest, you decide to stick around again and watch as he hesitates for a moment, but plunges on ahead as he eyes the wolf's large package with obvious lust. Fang, with growing interest and growing erection, watches him draw near before getting up and padding towards him, intent on mounting the coon again, but Candy stops him.";
 		say "     'Ah-ah, tough guy. This time I'm going to get what I want before letting you mount me, you big brute,' he says with his usual flamboyant confidence and taking hold of Fang's canine erection. He strokes over it with his skillful paw, soon leaning in to lick and suck at it as well. Soon he's bobbing his head over it and pushing the large wolf to roll over to he can deep-throat him. Fang's tongue hangs from his mouth as he pants with a big, lupine grin on his face. From your vantage point, you get to watch the wolf's ballsack twitch as he pumps his hot load down the coon's throat and Candy swallows it all down.";
@@ -664,6 +670,7 @@ an everyturn rule:
 		increase ffrivalry by 1;
 		let num be a random number between 5 and 20;
 		if num >= ffrivalry and Felinoid companion is the companion of the player:
+			project the Figure of Fang_face_icon;
 			say "[one of]Fang locks his steely gaze on Klauz and growls softly.[or]Klauz rubs up against you, pushing you away from Fang in a possessive manner.[or]The felinoid at your side growls at Fang.[or]Your felinoid companion and your alpha wolf growl and snap at one another from a few feet away for a minute.[or]Your alpha wolf and the felinoid exchange angry glares at one another and possessives stares at you.[or]Fang growls at Klauz as he moves between you and him. They glare at each other like that for a few moments before breaking off, both clearly angry at the other's presence near you.[or]The feral wolf and large felinoid growl and hiss at one another as they circle around you like you're some kind of prize.[at random]";
 			now ffrivalry is 0;
 

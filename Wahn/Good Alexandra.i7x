@@ -1265,11 +1265,13 @@ Instead of resolving a Survivor Group:
 				increase PoliceStationTwelvePopulation by 3;
 				increase PoliceStationTwelveInfpop by 3;
 				move player to Police Station Twelve;
-				now battleground is "void";
+				now Resolution of Survivor Group is 1; [rescued the stragglers]
 		if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     While you're dealing with the wolf who's defeated you, there's some commotion inside as the remaining wolves take the others. You can do little about it at this point, far too occupied with your own lupine assailant. And while you do manage to make your escape while the others are being dragged off, you can't do anything to help them at this point. By the time you've recovered, it is all over and they are gone.";
+			now Resolution of Survivor Group is 2; [fought but lost, stragglers gone]
 		else if fightoutcome >= 30:
 			say "     Seizing an opening, you make your escape into the woods, leaving those inside behind to their lupine fate.";
+			now Resolution of Survivor Group is 3; [fought but ran, stragglers gone]
 		now Survivor Group is resolved;
 
 
@@ -1322,7 +1324,7 @@ to say survivorgrouptrek:
 	now battleground is "void";
 	say "     Your arrival is met with surprise and congratulations by Alexandra and [if the number of lockered people > 1]the others[else]Jimmy[end if]. As they are getting settled in, they [if wolffightcount > 0]quickly[else]start to[end if] realize that not everyone made it. This dampens their spirits [if wolffightcount > 0]considerably[end if], so Jimmy rounds up a few to help organize a little ceremony for their lost comrades. While a brief and solemn event, it does help them to move on. The cheerful corgi's positive demeanor also helps to lift there spirits a little as he talks to them all afterwards. Eventually all the basic arrangements are made and they can rest after their difficult journey.";
 	now Survivor Group is resolved;
-
+	now Resolution of Survivor Group is 4; [brought in the survivors]
 
 [ ---------- Task 55 - Automatons 2 ------------ ]
 

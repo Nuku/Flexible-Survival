@@ -94,7 +94,7 @@ Instead of resolving a The Dorms Part Three:
 	else:
 		LineBreak;
 		say "     Shaking your head you try not to imagine what's going on as you step over the prone towel in front of you and then go about your way on your business. Some things should just be left well enough alone.";
-		now Resolution of The Dorms Part Three is 99; [desinterest]
+		now Resolution of The Dorms Part Three is 99; [disinterest]
 	now The Dorms Part Three is resolved;
 
 
@@ -145,8 +145,8 @@ Instead of resolving a Training Room:
 	else:
 		LineBreak;
 		say "Shaking your head you decide just to marvel at all the other sporty anthros here instead of trying to work out. You already get enough of a workout just trying to survive this screwed up city anyway, what with either trying to escape feral mutants or fighting them when your feet can't get you out of danger. Looking over the assembled crowd for several more minutes you finally get your fill of the college's gym almost an hour later. From what you can see, everything here is as it should be, and it will continue to be so with the wolverine guarding the place. So, turning on your heel, you tip your head to the big male and then walk out without looking back.";
-		now Resolution of Training Room is 99; [desinterest]
-	Now Training Room is resolved;
+		now Resolution of Training Room is 99; [disinterest]
+	now Training Room is resolved;
 
 
 Section 7 - Janitor's Closet

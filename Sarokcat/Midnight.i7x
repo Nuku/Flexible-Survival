@@ -131,6 +131,7 @@ Instead of resolving the FindingMidnight:
 				now player is in Zoo Giftshop;
 				now battleground is "void";  [blocks a random fight after this]
 				now AngieAroused is 50;
+				now Resolution of FindingMidnight is 1; [angie still focused on Midnight]
 			else: [Angie likes the player more than Midnight]
 				say "     Looking at you with slightly lust fogged feline eyes Angie moans happily, 'And I owe it all to you!' She purrs as she stands up and gives you a large hug, the mingled scent of the two aroused felines filling your head with their exotic aroma. As you open your mouth slightly, Angie covers it with her feline muzzle, her rumbling purr rolling through your body as she kisses you deeply. Pulling back while still holding you in her arms, she looks deep into your eyes, a thoughtful expression spreading over her face as she says, 'I - I really do owe it all to you, don't I? You saved me, spent time with me, we learned how much... fun this new body is together. I...' Looking over to Midnight, she sniffs the air that is still heavy with his musk and you can feel her cock twitch against you as lust makes her shiver, then looks back and forth between the two of you. Breathlessly fast, she pants, 'I feel I should let him mount me, make me into his willing pet forever, but... at the same time, I want to be with you. I... do care deeply about you.'";
 				say "     Taking a deep breath, she continues 'And... now that I think about it, what about all the other animals in the zoo? I'm supposed to be their keeper! Leaving them to take care of themselves while I just lounge around here seems... wrong. Anything might happen while I'm just waiting to be mounted by Midnight - feeling his weight on my back, that hard cock thrust into - oooh...' Angie shivers in arousal against you as she takes another whiff of Midnight's musk and her thoughts are scattered by a wave of lust running through her. Then she pushes her urges down again, barely managing to stop short of succumbing, and goes back to thinking aloud about what she should do.";
@@ -141,6 +142,7 @@ Instead of resolving the FindingMidnight:
 					say "     Reaching down to cup a breast and rub her hermaphrodite sex, you gently whisper to her to go to Midnight, just let it happen and be what she's supposed to be. And that last little push is enough to make up her mind. With a breathless moan, the panther-herm snatches the scented bundle of catnip from you and steps over to Midnight, waving it in front of the large feline's twitching nose. He responds eagerly to the sexually teasing scent, and as she kneels before the large cat, you find your eyes locked to the erotic scene of Midnight eagerly mounting the pantherwoman. Your hands stray over your own body as the sounds of their wild mating fill the gift shop. Watching their bestial coupling, you can't help but wonder what it would be like yourself, and find yourself eagerly anticipating your own turn with the large panther...";
 					now Midnight is in Zoo Giftshop;
 					now AngieAroused is 50;
+					now Resolution of FindingMidnight is 2; [player angie midnight threesome]
 				else: [Angie + Player]
 					LineBreak;
 					say "     Pulling Angie's muzzle to your lips, you give her a deep kiss, then ask her to stay with you and remember her duties to the zoo. Hearing those words makes a look of determination comes over her and the pantherwoman gives you a nod in agreement. 'You're right. Between you and the zoo, there is more in store for me than just being his sex-pet.' Pulling the pack of scented catnip from your pocket, she then steps over to Midnight and looks down at him before saying 'Look, Midnight... I've always loved you and the memory of you mounting me still makes me shudder in lust, but...'";
@@ -174,6 +176,7 @@ Instead of resolving the FindingMidnight:
 							WaitLineBreak;
 							say "     You both lie there for a minute, panting as you try to absorb what just happened. Eventually her cock starts to soften and she pulls it back out of you, then staggers back to lean on the counter, while you stare up at her from your position on the floor. Angie looks down at you with a self-satisfied look on her face, standing there proudly in the nude, her fur matted a bit with cum and sweat.";
 							say "     'That was unbelievably amazing,' she says after getting her breath back with a self-satisfied look on her face, stroking her fur happily. 'Stay here with me and let's do that again soon. I know I just can't wait,' Angie says with a dreamy smile as she looks down at you panting on the floor, her words speaking to some part of you that imagines all kinds of sexy things to do with her as your girlfriend. The increasingly erotic images fill your mind and make your body tingle with desire again even as you try to recover from your intense orgasm.";
+							now Resolution of FindingMidnight is 3; [player and angie]
 						now lastfuck of Angie is turns;
 					else:
 						LineBreak;
@@ -182,7 +185,8 @@ Instead of resolving the FindingMidnight:
 					now AngieAroused is 7;
 				now player is in Zoo Giftshop;
 				now battleground is "void";  [blocks a random fight after this]
-			Now FindingMidnight is resolved;
+				now Resolution of FindingMidnight is 4; [player turned angie down to mount them]
+			now FindingMidnight is resolved;
 		else:
 			say "     Obviously interested in the small bundle you are holding, the large cat sniffs at you several times, before turning and stalking away, obviously unimpressed by your amateurish attempts to tease it into following you. You sigh as you realize that you will probably have to try again later if you want the strangely handsome black feline to come with you...";
 	else if AngieAroused > 0:

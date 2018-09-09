@@ -20,7 +20,7 @@ Instead of resolving a Hidden Kitty:
 	now Sven's Place is known;
 	now battleground is "void";
 	increase score by 5;
-	Now Hidden Kitty is resolved;
+	now Hidden Kitty is resolved;
 
 Sven's Place is a room. It is fasttravel. It is private.
 The description of Sven's Place is "[SvenPlaceDesc]".

@@ -1344,19 +1344,19 @@
 |Stripes|Main Storyline|ndmhigh|value|
 |Stripes|Main Storyline|ndmLisa|value|
 |Stripes|Main Storyline|monitoring|action|
-|Stripes|Candy Shop|20140908213124/8329:Mon 8 September 2014 21:31|indexing|
-|Stripes|Candy Shop|CandyShop|situation|
-|Stripes|Candy Shop|Sweet Tooth|room|
-|Stripes|Candy Shop|sugarferretfight|value|
-|Stripes|Candy Shop|randomferret|value|
-|Stripes|Candy Shop|ferretvisit|value|
-|Stripes|Candy Shop|sugarfaced|adjective|
-|Stripes|Candy Shop|sugarskinned|adjective|
-|Stripes|Candy Shop|sugarbodied|adjective|
-|Stripes|Candy Shop|sugarcocked|adjective|
-|Stripes|Candy Shop|sugartailed|adjective|
-|Stripes|Candy Shop|lastcaffeine|property|
-|Stripes|Candy Shop|caffeinehigh|property|
+|Stripes|CandyShop|20140908213124/8329:Mon 8 September 2014 21:31|indexing|
+|Stripes|CandyShop|CandyShop|situation|
+|Stripes|CandyShop|Sweet Tooth|room|
+|Stripes|CandyShop|sugarferretfight|value|
+|Stripes|CandyShop|randomferret|value|
+|Stripes|CandyShop|ferretvisit|value|
+|Stripes|CandyShop|sugarfaced|adjective|
+|Stripes|CandyShop|sugarskinned|adjective|
+|Stripes|CandyShop|sugarbodied|adjective|
+|Stripes|CandyShop|sugarcocked|adjective|
+|Stripes|CandyShop|sugartailed|adjective|
+|Stripes|CandyShop|lastcaffeine|property|
+|Stripes|CandyShop|caffeinehigh|property|
 |Stripes|Bouncy Castle|20140908213124/42200:Mon 8 September 2014 21:31|indexing|
 |Stripes|Bouncy Castle|Snared Vixen|situation|
 |Stripes|Bouncy Castle|Bouncy Castle|room|
@@ -1528,7 +1528,6 @@
 |Sarokcat|New Events|ruined supplies|situation|
 |Sarokcat|New Events|MTP|value|
 |Sarokcat|New Events|HYG|value|
-|Sarokcat|New Events|LURM|value|
 |Sarokcat|New Events|libvis|value|
 |Sarokcat|Fair Events|20140908213124/4062:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Fair Events|floating balloons|situation|
@@ -1636,7 +1635,7 @@
 |Stripeguy|Warehouse Events|dock team|situation|
 |Stripeguy|Warehouse Events|Hidden Fucknest|scavevent|
 |Stripeguy|Warehouse Events|belaying pin|armament|
-|Stripeguy|Warehouse Events|FreshFish|situation|
+|Stripeguy|Warehouse Events|Fresh Fish|situation|
 |Stripeguy|Warehouse Events|union break|situation|
 |Stripeguy|Warehouse Events|hot stepping|situation|
 |Stripeguy|Warehouse Events|crate shuffle|situation|
@@ -2096,7 +2095,7 @@
 |Stripes|Bottlenose Toy|dolphinflatablefight|value|
 |Stripes|Bottlenose Toy|dolinfloss|value|
 |Nuku Valente|Otter|20140908213124/4232:Mon 8 September 2014 21:31|indexing|
-|Nuku Valente|Otter|Fish|Grab Object|
+|Nuku Valente|Otter|Tasty Fish|Grab Object|
 |Nuku Valente|Otter|Otterdefeat|value|
 |Nuku Valente|Otter|Otterconsent|value|
 |Agentlemancalledb|Sugar Glider|20140908213124/5384:Mon 8 September 2014 21:31|indexing|
@@ -3517,7 +3516,6 @@
 |Sarokcat|Coleen|20140908213124/29857:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Coleen|Womanfruittree|situation|
 |Sarokcat|Coleen|Coleen|woman|
-|Sarokcat|Coleen|Coleendeclined|value|
 |Sarokcat|Coleen|ColeenTalk|value|
 |Sarokcat|Coleen|ColeenFound|value|
 |Sarokcat|Coleen|ColeenCollared|value|

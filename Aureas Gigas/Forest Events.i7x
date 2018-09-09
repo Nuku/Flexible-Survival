@@ -78,13 +78,13 @@ Instead of resolving a Two crash into the Cuckoos Nest:
 		say "     'Soooo... are we gonna do anything, or is this lovey dovey time?' the stag asks with a grin, adjusting his bulge suggestively. Gray whispers in Izzy's ear and after giving him a kiss, she says to the buck, 'It seems that the fellatio provided my boy with a new idea of fun - you get to ram my pussy, while Gray gets round two on some oral action.' All three smile and start to get into the right positions. Meanwhile, you drop the towel and quietly leave, happy to have inspired new ways for the couple to have fun together.";
 		WaitLineBreak;
 		say "     After stepping out of the entrance of the tent, you start to walk back the way you came. The campfire tenders are eyeing you with great interest.[if bodyname of player is listed in infections of Caninelist] The squirrel says boldly, 'Ha! I knew it was gonna be some doggy this time.' The fox rolls his eyes and says, 'We didn't say if it would be for the man or woman, but what the hell I'll throw you a bone.'[else if bodyname of player is listed in infections of Equinelist] The fox says matter of factly, 'Told you it be a horse.' Grumbling, the squirrel hands two marshmallows over and says, 'Yeah yeah... whatever.'[else] Both infected shrug and state that it is a draw and wonder which symbol the couple is going to carve as your tally mark.[end if]";
-		Now CuckooWatched is 2;
-		Now Resolution of Two Crash into the Cuckoos Nest is 1;
+		now CuckooWatched is 2;
+		now Resolution of Two Crash into the Cuckoos Nest is 1;
 	else:
 		say "     Deciding against the idea you start to turn around walk back down the path. You come across Izzy walking with a studly male deer. It seems neither of the campfire cooks are going to win today's bet.";
-		Now CuckooWatched is 99;
-		Now Resolution of Two Crash into the Cuckoos Nest is 2;
-	Now Two Crash into the Cuckoos Nest is resolved;
+		now CuckooWatched is 99;
+		now Resolution of Two Crash into the Cuckoos Nest is 2;
+	now Two Crash into the Cuckoos Nest is resolved;
 
 Avian Tent is a situation.
 The Prereq1 of Avian Tent is Two Crash into the Cuckoos Nest.
@@ -122,12 +122,12 @@ Instead of resolving a Avian Tent:
 		WaitLineBreak;
 		say "     It takes a few minutes for the three to catch their breath and recover. Sliding off the spent giant shaft; the sated cuckooess gets off her osprey partner's lap and start to untie the ropes and blindfold on her lover. Next she gives him a long passionate kiss using plenty of tongue. Beaming with joy she states, 'Oh my god Baby, that was so fucking hot! I loved every second of that! Are you sure you're okay with it sweetie?' Her partner eagerly nods. Shifting her head, she then asks the spent dom, 'Is that convincing enough for you to stay Ace?' Grinning, the osprey says, 'I'll admit you do make a very convincing case.' Sitting up, he pats the other male on the shoulder and says, 'Sorry if things got a little too intense...'";
 		say "     Interrupting him, Gray utters 'No! No! It was totally fine man.' Izzy then asks, 'My eyes were closed did you see who came first?' The osprey shakes his head and replies, 'I didn't have a good view of the situation. But I think your partner came before you did.' Accidentally rustling the bushes when you shift your position, you see the wheels inside the woman's mind work as she looks over in your direction. Suddenly her eyes light up and she starts to smile. Walking over to your locations she drags you out of the bush and asks 'So [if player is female]ma'am[else]buddy[end if] did you happen to see which one of us came first while you were being a peeping tom?' Bashfully you reply it was her. Gray smiles while the osprey gives him a thumbs up. You start to walk away while they are wrapped up in discussion and offering to help the osprey move. Based on the tone you are hearing the start of a new unusual friendship.";
-		Now CuckooWatched is 3; [watched the couple with the osprey partner. Gray won bet]
-		Now Resolution of Avian Tent is 1;
+		now CuckooWatched is 3; [watched the couple with the osprey partner. Gray won bet]
+		now Resolution of Avian Tent is 1;
 	else:
 		say "     Deciding you don't want to watch this couple's unusual proclivities you walk away from the settlement, hearing the sound of the female's moans grow ever distant.";
-		Now CuckooWatched is 4; [did not watch the couple. Izzy won ]
-		Now Resolution of Avian Tent is 2;
+		now CuckooWatched is 4; [did not watch the couple. Izzy won ]
+		now Resolution of Avian Tent is 2;
 	now Avian Tent is resolved;
 
 Sandwich Shop is a situation.
