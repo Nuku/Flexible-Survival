@@ -409,7 +409,7 @@ to say randomvetfight:				[more suitable pets can be added]
 	if tempnum is 5:
 		challenge "German Shepherd";
 	if tempnum is 6:
-		challenge "Rabbit";
+		challenge "Anthro Rabbit";
 	if tempnum is 7:
 		challenge "Feline";
 	if tempnum is 7:

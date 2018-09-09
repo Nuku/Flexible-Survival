@@ -193,10 +193,12 @@ Instead of Resolving a Videoshow:
 		say "     Before long, you find yourself panting with arousal as you watch the trainers reduce their charges to the level of properly trained sexual animals, willing to perform any action on command for their masters. The happy submissive looks on their increasingly equine faces help you to understand just how enjoyable it is to be a well-trained beastslut for an owner. Eventually, however, you come to the end of the film, and stare at the blank screen for several minutes, panting eagerly before blinking and shaking yourself, barely able to grasp just how well put together the seductive little video was. You shudder for a minute as you realize that while the video certainly taught you several tricks about how to handle beasts and animals, the one it was really trying to train was actually you, and you already feel less human and more animalistic just from one viewing. Thoughts of being trained and owned like a good little beast fill your mind as you stagger out of the training booth...";
 		decrease humanity of player by a random number between 25 and 50;
 		increase XP of player by a random number between 35 and 75;
+		now Resolution of Videoshow is 1; [watched the brainwashing video]
 		now Videoshow is resolved;
 		increase score by 10;
 	else:
 		say "     Deciding to leave well enough alone, you leave the room and continue along your way for now, though maybe you will be back later if you are in the area again...";
+		now Resolution of Videoshow is 2; [didn't watched the brainwashing video (yet)]
 
 
 Section 11 - Horsegarden
