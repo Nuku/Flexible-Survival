@@ -720,19 +720,12 @@ to say DBRelationshipTalkMenu:
 					say "[DBTalk2]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off?";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				if companion of player is demon brute:
-					say "     You step back from the purple demon, shaking your head slightly as he gives a questioning look.";
-				else:
-					say "     You murmur the magic words Nermine told you. With a shrug, the demon brute turns into purple mist and is absorbed by the amulet.";
-				WaitLineBreak;
+			now sextablerun is 1;
+			if companion of player is demon brute:
+				say "     You step back from the purple demon, shaking your head slightly as he gives a questioning look.";
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				say "     You murmur the magic words Nermine told you. With a shrug, the demon brute turns into purple mist and is absorbed by the amulet.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

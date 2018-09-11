@@ -153,16 +153,9 @@ instead of conversing the Boghrim:
 					say "[BoghrimTalk4]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -317,13 +310,9 @@ to say BoghrimTalk3: [go hunting]
 								say "     As you make your way back to the orc lair, and when you share a drink soon after, you realize that the orc boss gives you... interested looks, and his cock stays half-hard the whole time. It seems you've impressed him today, proved that you're a 'real man' - he now might be more open to the possibility of getting fucked by you.";
 						WaitLineBreak;
 				else if calcnumber is 0:
-					say "Break off the conversation?";
-					if player consents:
-						now sextablerun is 1;
-						say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
-						WaitLineBreak;
-					else:
-						say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+					now sextablerun is 1;
+					say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
+					WaitLineBreak;
 				else:
 					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			clear the screen and hyperlink list;
@@ -439,16 +428,9 @@ instead of fucking Boghrim:
 						say "[BoghrimSex6]";
 					WaitLineBreak;
 			else if calcnumber is 0:
-				say "Break off the conversation?";
-				LineBreak;
-				say "     ([link]Y[as]y[end link]) - Yes.";
-				say "     ([link]N[as]n[end link]) - No.";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
-					WaitLineBreak;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
+				WaitLineBreak;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		clear the screen and hyperlink list;

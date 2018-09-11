@@ -231,13 +231,9 @@ to say SylviaTalkMenu:
 					say "[SylviaTalk7]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You stand up, indicating an end to the conversation. Sylvia smiles at you, before looking out her window.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You stand up, indicating an end to the conversation. Sylvia smiles at you, before looking out her window.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -311,13 +307,9 @@ to say SylviaTalk6: [Samples from friends]
 					say "[BubbleSample]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You stand up, indicating an end to the conversation. Sylvia smiles at you, before looking out her window.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You stand up, indicating an end to the conversation. Sylvia smiles at you, before looking out her window.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -417,13 +409,9 @@ to say SylviaSexMenu:
 					say "[SylviaSex5]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the collie girl, shaking your head slightly as she gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the collie girl, shaking your head slightly as she gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

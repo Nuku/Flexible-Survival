@@ -90,13 +90,9 @@ to say BeatenElkBullSexMenu:
 					say "[BeatenElkBullSex4]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Just leave him?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You just walk away after checking him over for loot.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You just walk away after checking him over for loot.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -294,13 +290,9 @@ to say BeatenElkCowSexMenu:
 					say "[BeatenElkCowSex4]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Just leave him?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You just walk away after checking her over for loot.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You just walk away after checking her over for loot.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -496,13 +488,9 @@ to say BeatenElkHermSexMenu:
 					say "[BeatenElkHermSex4]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Just leave him?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You just walk away after checking her over for loot.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You just walk away after checking her over for loot.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -697,13 +685,9 @@ to say BeatenElkTransBullSexMenu:
 					say "[BeatenElkTransBullSex4]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Just leave him?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You just walk away after checking him over for loot.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You just walk away after checking him over for loot.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -901,13 +885,9 @@ to say BeatenElkTransCowSexMenu:
 					say "[BeatenElkTransCowSex4]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Just leave him?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You just walk away after checking her over for loot.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You just walk away after checking her over for loot.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

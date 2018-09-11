@@ -377,14 +377,10 @@ to say ForcedSubtoDomSexMenu:
 					say "[ForcedSubToDomSex7]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Does Dom deny you right as your reward is in reach?";
-			if player consents:
-				now sextablerun is 1;
-				say "     Your master's face spreads in an evil grin. 'I'm not sure that you actually want this dick enough. I think we should wait until you're truly ready.' He shoves you away and turns his attention to his two collared pets.";
-				increase libido of player by 10;
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Your master's face spreads in an evil grin. 'I'm not sure that you actually want this dick enough. I think we should wait until you're truly ready.' He shoves you away and turns his attention to his two collared pets.";
+			increase libido of player by 10;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

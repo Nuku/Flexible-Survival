@@ -123,13 +123,9 @@ to say MoreauTalkMenu:
 				-- "Buy something":
 					say "[MoreauPartBuy]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -215,13 +211,9 @@ to say MoreauPartSale:
 					say "[MoreauDickSale]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -442,13 +434,9 @@ to say MoreauPartBuy:
 					say "[MoreauCrotchBuy]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -536,13 +524,9 @@ to MoreauFaceSelection:
 				say "[MoreauFaceBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -652,13 +636,9 @@ to MoreauBodySelection:
 				say "[MoreauBodyBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -769,13 +749,9 @@ to MoreauSkinSelection:
 				say "[MoreauSkinBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -885,13 +861,9 @@ to MoreauTailSelection:
 				say "[MoreauTailBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -1001,13 +973,9 @@ to MoreauCockSelection:
 				say "[MoreauCrotchBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

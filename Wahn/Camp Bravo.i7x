@@ -105,16 +105,9 @@ Instead of resolving a Back at the Camp:
 					say "[GuardLeave]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "     [bold type]Break off the conversation?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the soldier, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the soldier, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -356,13 +349,9 @@ instead of conversing Major Padgett:
 					say "[MajorLeave]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the human soldier, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the human soldier, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -566,13 +555,9 @@ to say CampBravoElaineTalk:
 					say "     You wave Elaine Scott off as she looks at you inquisitively and turn away";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the soldier, shaking your head slightly as she gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the soldier, shaking your head slightly as she gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -797,13 +782,9 @@ to say AdamSexMenu:
 				now lastfuck of Adam is turns;
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the half-minotaur, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the half-minotaur, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -980,13 +961,9 @@ instead of conversing Sergeant Alexander:
 					say "     You wave Sergeant Alexander off as he looks at you inquisitively and turn away.";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the soldier, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the soldier, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

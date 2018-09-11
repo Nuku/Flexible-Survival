@@ -212,13 +212,9 @@ to say TylerBodyTalkMenu:
 					say "[TylerBody2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the dead body, shaking your head slightly as it gives no response.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the dead body, shaking your head slightly as it gives no response.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -296,13 +292,9 @@ to say TawnyaTalkMenu:
 					say "[TawnyaMotive]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head and tell the guard at the door that you don't have anything to say to her. He takes both of you back to lockup.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head and tell the guard at the door that you don't have anything to say to her. He takes both of you back to lockup.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -455,13 +447,9 @@ to say CaneTalkMenu:
 					say "[CaneMotive]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -541,13 +529,9 @@ to say BarryTalkMenu:
 					say "[BarryMotive]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

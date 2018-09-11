@@ -223,13 +223,9 @@ to say PericlesTalkMenu:
 					say "[PericlesCollege]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You apologize and tell him you that you don't have anything to say. He raises a brow but gets back to what he was doing.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You apologize and tell him you that you don't have anything to say. He raises a brow but gets back to what he was doing.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -301,13 +297,9 @@ to say PericlesSexMenu:
 					say "[PericlesSex2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head and decide against sexing up the buff Spartan leader.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head and decide against sexing up the buff Spartan leader.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

@@ -409,13 +409,9 @@ Instead of fucking David:
 						say "[DavidSex11]";
 					WaitLineBreak;
 			else if calcnumber is 0:
-				say "Break off?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
-					WaitLineBreak;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
+				WaitLineBreak;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -507,13 +503,9 @@ instead of conversing David:
 					WaitLineBreak;
 					now lastfuck of David is turns;
 			else if calcnumber is 0:
-				say "Break off?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
-					WaitLineBreak;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
+				WaitLineBreak;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;

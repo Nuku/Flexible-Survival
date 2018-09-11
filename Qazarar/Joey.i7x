@@ -79,13 +79,9 @@ to say JoeyTalkMenu:
 					say "[JoeyTalk2]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the Joey, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the Joey, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -160,13 +156,9 @@ to say JoeySexMenu:
 					say "[JoeySex3]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the catboy, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the catboy, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -278,13 +270,9 @@ to say JoeyTraining: [Training Joey] [{]
 					say "[MinotaurTraining]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You tell Joey that you aren't going to be able to train him right now. He looks disappointed, but says he understands.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You tell Joey that you aren't going to be able to train him right now. He looks disappointed, but says he understands.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

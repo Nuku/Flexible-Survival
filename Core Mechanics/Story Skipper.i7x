@@ -433,6 +433,9 @@ to TraitRestore:
 	if the File of TraitSave exists:
 		say "Restoring Traits...";
 		read File of TraitSave into the Table of GameTraits;
+		truncate Feats of player to 0 entries;
+		repeat with y running through persons:[cleaning out the old data]
+			truncate Traits of y to 0 entries;
 		repeat with x running from 1 to the number of filled rows in the Table of GameTraits:
 			choose row x in the Table of GameTraits;
 			let TraitOwner be OwnerName entry;

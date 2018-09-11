@@ -375,20 +375,16 @@ to say ChineseTrouble:
 						say "[AlphaDive]";
 					wait for any key;
 			else if calcnumber is 0:
-				say "Wait for your timely demise.";
-				if player consents:
-					now sextablerun is 1;
-					say "     Giving up on the idea of leaving this, you wait for your death, which comes in due time.";
-					now battleground is "void";
-					now tailname of player is "dead";
-					now facename of player is "dead";
-					now skinname of player is "dead";
-					now bodyname of player is "dead";
-					now cockname of player is "dead";
-					end the story saying "You were eaten alive!";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     Giving up on the idea of leaving this, you wait for your death, which comes in due time.";
+				now battleground is "void";
+				now tailname of player is "dead";
+				now facename of player is "dead";
+				now skinname of player is "dead";
+				now bodyname of player is "dead";
+				now cockname of player is "dead";
+				end the story saying "You were eaten alive!";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -431,20 +427,16 @@ to say ChineseTrouble:
 						say "[BitchDive]";
 					wait for any key;
 			else if calcnumber is 0:
-				say "It's hopeless anyway, just wait for your end.";
-				if player consents:
-					now sextablerun is 1;
-					say "     Giving up on any hope of survival, you sit down, breathing the polluted air and being squished by her muscles from the inside of her stomach. The end will take just a few more moments...";
-					now battleground is "void";
-					now tailname of player is "dead";
-					now facename of player is "dead";
-					now skinname of player is "dead";
-					now bodyname of player is "dead";
-					now cockname of player is "dead";
-					end the story saying "You were eaten alive!";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     Giving up on any hope of survival, you sit down, breathing the polluted air and being squished by her muscles from the inside of her stomach. The end will take just a few more moments...";
+				now battleground is "void";
+				now tailname of player is "dead";
+				now facename of player is "dead";
+				now skinname of player is "dead";
+				now bodyname of player is "dead";
+				now cockname of player is "dead";
+				end the story saying "You were eaten alive!";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;

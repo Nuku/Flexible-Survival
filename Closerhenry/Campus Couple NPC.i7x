@@ -106,13 +106,9 @@ to say JadakoTalkMenu:
 					say "[JadakoTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back Jadako, who looks at you a little funny. 'Ok, nevermind, I guess?' he questions.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from Jadako, who looks at you a little funny. 'Ok, nevermind, I guess?' he questions.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -177,13 +173,9 @@ to say JosephTalkMenu:
 					say "[JosephTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back Joseph. He gives you a humorous look, before saying, 'If there's anything you need to talk about, I'm all ears.'";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from Joseph. He gives you a humorous look, before saying, 'If there's anything you need to talk about, I'm all ears.'";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -259,13 +251,9 @@ to say CampusCoupleSexMenu:
 					say "[CampusCoupleSex3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation";
-			if player consents:
-				now sextablerun is 1;
-				say "     You change your mind, deciding now isn't a good time. The two understand, since they can always fuck each other later.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You change your mind, deciding now isn't a good time. The two understand, since they can always fuck each other later.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

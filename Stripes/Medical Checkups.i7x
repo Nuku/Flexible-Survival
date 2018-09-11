@@ -517,13 +517,9 @@ to say medeaadjustments:
 									increase carried of cunt pill by 1;
 								wait for any key;
 							else if calcnumber is 0:
-								say "Break off the conversation?";
-								if player consents:
-									now sextablerun is 1;
-									say "     You shake your head, stating that you can't afford to part with your medical supplies. The lizard doctor sighs in disappointment and says, 'I'm sorry then, but I'm afraid that I cannot give you any of my pills then. Perhaps next time.'";
-									wait for any key;
-								else:
-									say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+								now sextablerun is 1;
+								say "     You shake your head, stating that you can't afford to part with your medical supplies. The lizard doctor sighs in disappointment and says, 'I'm sorry then, but I'm afraid that I cannot give you any of my pills then. Perhaps next time.'";
+								wait for any key;
 							else:
 								say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 					clear the screen and hyperlink list;

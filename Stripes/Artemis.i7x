@@ -256,13 +256,9 @@ to say ArtemisTalkMenu:
 					say "[ArtemisPlay]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the rubber tigress, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the rubber tigress, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -364,13 +360,9 @@ to say ArtemisSexMenu:
 					say "[ArtemisTailCock]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the rubber tigress, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the rubber tigress, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

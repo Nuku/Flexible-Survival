@@ -205,13 +205,9 @@ to say subramsex:
 					say "[subramsex2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     Changing your mind, [if player is dominant]you shove the ram onto the ground and tell him exactly that before ordering him to scram. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[else]you shrug your shoulders and tell him exactly that[end if].";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Changing your mind, [if player is dominant]you shove the ram onto the ground and tell him exactly that before ordering him to scram. Your sissy ram whimpers submissively as you loom over him before slowly crawling away[else]you shrug your shoulders and tell him exactly that[end if].";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

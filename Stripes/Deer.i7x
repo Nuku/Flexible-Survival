@@ -80,17 +80,13 @@ Instead of resolving Unusual Creature:
 					say "[Unsualfuck]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Just tell her to follow you.";
-			if player consents:
-				now sextablerun is 1;
-				say "     Unsure what to do, you stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' she asks, making her way to her hooves. You explain that you'd like her to come with you and she looks around a moment before shrugging, 'I have nothing better to do,' she admits, and follows you, a little sullen.";
-				now Unusual Creature is resolved;
-				move Susan to primary lab;
-				move player to primary lab;
-				now Resolution of Unusual Creature is 1; [Told Susan to follow you]
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Unsure what to do, you stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' she asks, making her way to her hooves. You explain that you'd like her to come with you and she looks around a moment before shrugging, 'I have nothing better to do,' she admits, and follows you, a little sullen.";
+			now Unusual Creature is resolved;
+			move Susan to primary lab;
+			move player to primary lab;
+			now Resolution of Unusual Creature is 1; [Told Susan to follow you]
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -348,16 +344,9 @@ to say SusanSexMenu:
 					say "[SusanSex7]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "     [bold type]Break off the conversation?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the deer making her sigh with neediness.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the deer making her sigh with neediness.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

@@ -112,17 +112,10 @@ to say AresWalkMenu:
 					say "[AresWalk_Mall]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "[bold type]Break off the conversation?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				say "     Changing your mind, you turn around right away and go back to Mike, telling him that something urgent came up. Quickly handing over the leash, you leave the surprised stag and a very disappointed human dog behind, then make your way back to the library.";
-				move player to Grey Abbey Library;
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Changing your mind, you turn around right away and go back to Mike, telling him that something urgent came up. Quickly handing over the leash, you leave the surprised stag and a very disappointed human dog behind, then make your way back to the library.";
+			move player to Grey Abbey Library;
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

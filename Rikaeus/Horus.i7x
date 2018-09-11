@@ -117,13 +117,9 @@ to say HorusTalkMenu:
 					say "[HorusDarkness]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You apologize to the God and say that you don't have anything to talk about. He nods and lets you go on your way.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You apologize to the God and say that you don't have anything to talk about. He nods and lets you go on your way.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

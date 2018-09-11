@@ -222,16 +222,9 @@ to TyrSexMenu:
 				else if nam is "Lose: no sex":
 					say "[TyrWon_NoSex]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the Tyr, shaking your head as he gives you a questioning look.";
-				wait for any key;
-		else:
-			say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the Tyr, shaking your head as he gives you a questioning look.";
+			wait for any key;
 	wait for any key;
 	clear the screen and hyperlink list;
 
@@ -621,14 +614,7 @@ to say ArenaFightCheck:
 				increase ArenaBattleCounter by 8;
 				follow the turnpass rule;
 		else if calcnumber is 0:
-			say "[bold type]Exit the fighting menu?[roman type]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	wait for any key;

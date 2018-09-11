@@ -162,13 +162,9 @@ to say DoubleRabbitSexMenu:
 					say "[DoubleRabbitSex2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Do you wish to rebuff the rabbit's proposition to you?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head tell the rabbit that you'd rather not. It gives you a little forlorn look before it quickly recovers, bounding over to its allies who it leads off to somewhere private you guess. No doubt to either find another person or act like the bunnies they are.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head tell the rabbit that you'd rather not. It gives you a little forlorn look before it quickly recovers, bounding over to its allies who it leads off to somewhere private you guess. No doubt to either find another person or act like the bunnies they are.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -229,13 +225,9 @@ to say JockRabbitSexMenu:
 					say "[JockRabbitSex2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Do you wish to rebuff the rabbit's proposition to you?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head tell the rabbit that you'd rather not. It gives a rather sad look in your direction but respects your decision before hurrying off with its fellow bunnies. No doubt to find someone else or to have private time with its friends.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head tell the rabbit that you'd rather not. It gives a rather sad look in your direction but respects your decision before hurrying off with its fellow bunnies. No doubt to find someone else or to have private time with its friends.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

@@ -164,13 +164,9 @@ to say JoshiroTalkMenu:
 					say "[JoshiroTalk4]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the human male and say your goodbyes, then walk down the street in another direction as him. 'Hope to see ya again!' Joshiro calls after you, waving before he moves on himself.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the human male and say your goodbyes, then walk down the street in another direction as him. 'Hope to see ya again!' Joshiro calls after you, waving before he moves on himself.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -242,13 +238,9 @@ to say JoshiroSexMenu:
 					say "[JoshiroSex3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the human male and say your goodbyes, then walk down the street in another direction as him. 'Hope to see ya again!' Joshiro calls after you, waving before he moves on himself.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the human male and say your goodbyes, then walk down the street in another direction as him. 'Hope to see ya again!' Joshiro calls after you, waving before he moves on himself.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -348,13 +340,9 @@ to say JoshiroForcedSexMenu:
 					say "[JoshiroForcedSex4]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the human male and say that you're not in the mood after all. He replies with a groan, and a murmur about making up your mind before handing out beatings. Shrugging, you step back from him and walk away.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the human male and say that you're not in the mood after all. He replies with a groan, and a murmur about making up your mind before handing out beatings. Shrugging, you step back from him and walk away.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

@@ -193,13 +193,9 @@ to say BeatenOrcSexMenu:
 					say "[BeatenOrcSex4]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Just leave him?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You just walk away after checking him over for loot.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You just walk away after checking him over for loot.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

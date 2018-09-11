@@ -124,13 +124,9 @@ to say SnipsTalkMenu:
 					say "[SnipsTalk2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You back away from the cute crab, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You back away from the cute crab, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -288,13 +284,9 @@ to say DinahTalkMenu:
 					say "[DinahTalk1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You back away from the house cat, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You back away from the house cat, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -480,13 +472,9 @@ to say ChirpyTalkMenu:
 					say "[ChirpyTalk1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You back away from the exotic bird, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You back away from the chirpy, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -637,13 +625,9 @@ to say HoboTalkMenu:
 					say "[HoboTalk1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You back away from the helper dog, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You back away from the hobo, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

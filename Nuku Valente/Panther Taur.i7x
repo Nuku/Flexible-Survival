@@ -97,13 +97,9 @@ To say panthertaur tempt: [player wins]
 						say "[panthertaur mount taur]";]
 					wait for any key;
 			else if calcnumber is 0:
-				say "Resist your urges and reject her offer?";
-				if player consents:
-					now sextablerun is 1;
-					say "     As you turn her down, the cat gives a soft huff, almost a hiss, then flees on quick feline paws, her shapely rump the last thing seen.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     As you turn her down, the cat gives a soft huff, almost a hiss, then flees on quick feline paws, her shapely rump the last thing seen.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		clear the screen and hyperlink list;

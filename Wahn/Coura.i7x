@@ -250,17 +250,13 @@ to say MTFRatSexMenu:
 					increase libido of Danny by 1; [counting up on the transformations]
 				WaitLineBreak;
 		else if calcnumber is 0: [cancel sex menu]
-			say "Just let Cole/Coura off scot free for now?";
-			if player consents:
-				now sextablerun is 1;
-				if libido of Danny < 16: [regular Cole is transformed back and let go]
-					say "     As you proclaim that you're not in the mood for anything right now after all, Nermine looks quite disappointed, yet she suppresses her frown after a few seconds and forces herself to say, 'Of course, [master].' Intoning a few tongue-breaking words, she waves her hand over the mall rat, instantly making her features become somewhat more masculine and the small bumps of Coura's breasts disappear from where they were bulging out the t-shirt a tiny bit. 'T-Thank you!' Cole calls out and tries to run outside, only to be stopped short by Nermine's hand tight around his arm. 'The rodent should not think that this matter is over,' she hisses into his large ear, then lets go and glares after him as he flees the store. Nermine whirls around as soon as he is gone, vanishing into the back room to compose herself, clearly pissed off that the anticipation was for naught.";
-					if libido of Danny < 6:
-						now libido of Danny is 6; [first transformation done]
-				else: [freed Coura is sent back to work]
-					say "     As you proclaim that you're not in the mood for anything right now after all, Nermine looks quite disappointed, yet she suppresses her frown after a few seconds and forces herself to say, 'Of course, [master].' Turning her attention back to the mall rat standing ready before you, she barks out, 'The slut should get back to work now. Nermine wants [one of]to see the great gong polished to a mirror's shine[or]all of her canopic jars dusted[or]the third shelf sorted alphabetically[or]her living inventory fed[at random] before the mall rat leaves today.' As the jackaless goes to pull the door open once more and shoo Coura through, the mall rat rolls her eyes as soon as Nermine's back is turned, then gives you a little wave as she says goodbye and hurries after Nermine.";
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			if libido of Danny < 16: [regular Cole is transformed back and let go]
+				say "     As you proclaim that you're not in the mood for anything right now after all, Nermine looks quite disappointed, yet she suppresses her frown after a few seconds and forces herself to say, 'Of course, [master].' Intoning a few tongue-breaking words, she waves her hand over the mall rat, instantly making her features become somewhat more masculine and the small bumps of Coura's breasts disappear from where they were bulging out the t-shirt a tiny bit. 'T-Thank you!' Cole calls out and tries to run outside, only to be stopped short by Nermine's hand tight around his arm. 'The rodent should not think that this matter is over,' she hisses into his large ear, then lets go and glares after him as he flees the store. Nermine whirls around as soon as he is gone, vanishing into the back room to compose herself, clearly pissed off that the anticipation was for naught.";
+				if libido of Danny < 6:
+					now libido of Danny is 6; [first transformation done]
+			else: [freed Coura is sent back to work]
+				say "     As you proclaim that you're not in the mood for anything right now after all, Nermine looks quite disappointed, yet she suppresses her frown after a few seconds and forces herself to say, 'Of course, [master].' Turning her attention back to the mall rat standing ready before you, she barks out, 'The slut should get back to work now. Nermine wants [one of]to see the great gong polished to a mirror's shine[or]all of her canopic jars dusted[or]the third shelf sorted alphabetically[or]her living inventory fed[at random] before the mall rat leaves today.' As the jackaless goes to pull the door open once more and shoo Coura through, the mall rat rolls her eyes as soon as Nermine's back is turned, then gives you a little wave as she says goodbye and hurries after Nermine.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

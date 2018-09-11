@@ -117,13 +117,9 @@ to say ErinSexMenu:
 				WaitLineBreak;
 			infect "Slut Rat";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You inform Erin of your second thoughts. The rat shrugs, then turns around to check on what his sister is doing.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You inform Erin of your second thoughts. The rat shrugs, then turns around to check on what his sister is doing.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -307,13 +303,9 @@ to say VioletSexMenu:
 				WaitLineBreak;
 			infect "Slut Rat";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You inform Violet of your second thoughts. The rat shrugs, then turns around to check on what his sister is doing.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You inform Violet of your second thoughts. The rat shrugs, then turns around to check on what his sister is doing.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

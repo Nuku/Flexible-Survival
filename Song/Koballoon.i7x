@@ -214,12 +214,8 @@ to say BeatTheKoballoon:
 				if (nam is "Fellate him"):
 					say "[KoballoonBeaten6]";
 		else if calcnumber is 0:
-			say "Let him go: Leave the koballoon to wallow in his own arousal?";
-			if player consents:
-				say "     Rather than stoop to the lecherous creature's level, you release his form and step away, much to his dismay. 'Aww, well you're no fun!' the koballoon pouts. He blows a raspberry at you before saddling up and bouncing away on his bountiful sack, likely in search of the group that he was separated from. A trail of sticky pre follows his wake, leaving the strong scent of rubber and arousal to remember him by.";
-				now sextablerun is 1;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "     Rather than stoop to the lecherous creature's level, you release his form and step away, much to his dismay. 'Aww, well you're no fun!' the koballoon pouts. He blows a raspberry at you before saddling up and bouncing away on his bountiful sack, likely in search of the group that he was separated from. A trail of sticky pre follows his wake, leaving the strong scent of rubber and arousal to remember him by.";
+			now sextablerun is 1;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	wait for any key;

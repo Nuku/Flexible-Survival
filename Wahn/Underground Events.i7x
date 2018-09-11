@@ -463,13 +463,9 @@ to say CellFourSex:
 					say "[CellFour7]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     Deciding that you'd better get out of there fast, you quietly slip through the door again. The mind-controlled herm inside cell four looks after you with puzzlement, then sits back down on the bed to wait.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Deciding that you'd better get out of there fast, you quietly slip through the door again. The mind-controlled herm inside cell four looks after you with puzzlement, then sits back down on the bed to wait.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

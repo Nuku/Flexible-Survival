@@ -68,6 +68,7 @@ to say beatferalwolf:
 		say ""; [dealt with in the file where the event is described]
 	else if inasituation is false and wolffight is not 3 and HP of Fang is 0:		[Checking to add Fang before running the regular wolf scenes]
 		if a random number between 1 and 100 < ( fangcount - 95 ) and (player is not neuter ):	[3rd to 5th wolf]
+			project the Figure of Fang_face_icon;
 			say "     You watch the feral wolf drop low to the ground as he whimpers and cowers before you. He even pisses a little to show his submission to you. From the scars on his muzzle and sides, you can see that he's been beaten roughly by several of the other wolves. This wolf, clearly a lowly member of his pack, might make an obedient, if still somewhat feral, pet. You could take him off with you, if you're willing to risk bringing such a beast back with you.";
 			say "     [bold type]Shall you try to tame this beastly wolf creature?[roman type][line break]";
 			LineBreak;

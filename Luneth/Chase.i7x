@@ -194,13 +194,9 @@ to say RegularChaseTalkMenu:
 					say "[RegularChaseRyoTalk]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the anthro tiger, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the anthro tiger, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -289,13 +285,9 @@ to say DomChaseTalkMenu:
 					say "[DomChaseRyoTalk]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the anthro tiger, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the anthro tiger, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -500,13 +492,9 @@ to say ChaseSexMenu:
 					now lastfuck of Chase is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the anthro tiger, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the anthro tiger, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -615,13 +603,9 @@ to say DomChaseSexMenu:
 					now lastfuck of Chase is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the tiger king, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the tiger king, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

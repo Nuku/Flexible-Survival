@@ -252,14 +252,10 @@ to say gator den scene:
 					say "[GatorDenFaceSit]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You decide that you don't really want to spend time with her, and you head back to the Library.";
-				move player to Grey Abbey Library;
-				follow the turnpass rule;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You decide that you don't really want to spend time with her, and you head back to the Library.";
+			move player to Grey Abbey Library;
+			follow the turnpass rule;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

@@ -141,12 +141,8 @@ to say GusSexMenu:
 					say "[GusSex6]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     The stork blinks. 'Is it something wrong with me?' he asks with a worried look, but you assure him that you just had a change of heart and don't feel like having sex at the moment. Gus doesn't seem completely convinced, but nods. 'Well, I wouldn't want you to do anything you don't wish for. Maybe next time, then.' He smiles as he wishes you farewell, but you look back at the stork resuming his reading, you can see a slightly frustrated look on his face.";
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     The stork blinks. 'Is it something wrong with me?' he asks with a worried look, but you assure him that you just had a change of heart and don't feel like having sex at the moment. Gus doesn't seem completely convinced, but nods. 'Well, I wouldn't want you to do anything you don't wish for. Maybe next time, then.' He smiles as he wishes you farewell, but you look back at the stork resuming his reading, you can see a slightly frustrated look on his face.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

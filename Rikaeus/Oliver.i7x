@@ -115,13 +115,9 @@ to say OliverTalkMenu:
 					say "[OliverTalk2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the big kitty who smirks at you and laughs. 'So my little sub just wanted a kiss eh? Could've just said so.' He chuckles before turning his attention to the magazine he has in hand.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the big kitty who smirks at you and laughs. 'So my little sub just wanted a kiss eh? Could've just said so.' He chuckles before turning his attention to the magazine he has in hand.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -187,13 +183,9 @@ to say OliverSexMenu:
 					say "[OliverSex3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step away, but thankfully your dom doesn't look disappointed. 'If you want me, you know where to find me, my little kitty,' he purrs at you, making you smile.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step away, but thankfully your dom doesn't look disappointed. 'If you want me, you know where to find me, my little kitty,' he purrs at you, making you smile.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

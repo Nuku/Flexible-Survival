@@ -150,13 +150,9 @@ to say WhiptailVanquishedSexMenu:
 					say "[Whiptail VanquishedSex8]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You stand up and walk away, shaking your head at the thought of what you almost did.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You stand up and walk away, shaking your head at the thought of what you almost did.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

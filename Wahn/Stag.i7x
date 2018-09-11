@@ -169,13 +169,9 @@ to say Stag loses:
 							break;
 					stop the action;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the stag, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the stag, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -371,13 +367,9 @@ Instead of fucking Mike:
 					now lastfuck of Mike is turns;
 					wait for any key;
 			else if calcnumber is 0:
-				say "Break off the conversation?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the anthro stag, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the anthro stag, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -740,13 +732,9 @@ Instead of fucking Xerxes:
 					now lastfuck of Xerxes is turns;
 					wait for any key;
 			else if calcnumber is 0:
-				say "Break off the conversation?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the human dog, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the human dog, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -1364,13 +1352,9 @@ Instead of fucking Helen:
 					now lastfuck of Helen is turns;
 					wait for any key;
 			else if calcnumber is 0:
-				say "Break off the conversation?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the human dog, shaking your head slightly as she gives a questioning look.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the human dog, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;

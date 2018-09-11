@@ -106,18 +106,18 @@ carry out HuntAction:
 		choose a row with name of HuntId in the Table of GameEventIDs;
 		if debugactive is 1:
 			say "DEBUG -> Situation found: [name entry] by matching with [HuntId] (EXACT MATCH).[line break]";
-		if object entry is inactive:
-			now Found is 37; [found, but the event was banned]
-			if debugactive is 1:
-				say "DEBUG -> Event banned / inactive.[line break]";
-		else if object entry is resolved:
+		if object entry is resolved:
 			now Found is 34; [found, but it is resolved]
 			if debugactive is 1:
 				say "DEBUG -> Already resolved![line break]";
-		else if object entry is not close:
+		else if object entry is not close and object entry is active:
 			now Found is 31; [found, wrong area]
 			if debugactive is 1:
 				say "DEBUG -> In another area![line break]";
+		else if object entry is inactive:
+			now Found is 37; [found, but the event was banned]
+			if debugactive is 1:
+				say "DEBUG -> Event banned / inactive.[line break]";
 		else if level of player < level of object entry:
 			now Found is 32; [found, level too low]
 			if debugactive is 1:
@@ -230,51 +230,50 @@ carry out HuntAction:
 			repeat with X running from 1 to number of filled rows in Table of Random Critters:
 				choose row X from the Table of Random Critters;
 				if there is no area entry, next; [broken creatures / empty lines get ignored]
+				if area entry is "Nowhere", next; [nowhere creatures can't be hunted]
 				if there is no name entry, next; [broken creatures / empty lines get ignored]
 				if Found is not 10 and (name entry matches the text HuntId, case insensitively or enemy title entry matches the text HuntId, case insensitively or enemy name entry matches the text HuntId, case insensitively): [no target creature found yet]
-					if there is an area entry:
-						if area entry exactly matches the text battleground:
-							say "You are almost certain you saw some [name entry] tracks...";
 					if debugactive is 1:
-						say "DEBUG -> Found creature: [name entry] in Battleground: [battleground][line break]";
-					add name entry to PossibleEncounters; [basic chance to find the creature]
-					[extra encounter chances]
-					let zed be perception of player / 3;
-					if zed > 8:
-						now zed is 8;
-					repeat with N running from 1 to zed:
-						add name entry to PossibleEncounters;
-					if "Curious" is listed in feats of player:
-						add name entry to PossibleEncounters;
-					if "Expert Hunter" is listed in feats of player:
-						add name entry to PossibleEncounters;
-						add name entry to PossibleEncounters;
-					if "Master Baiter" is listed in feats of player:
-						repeat with N running from 1 to ( perception of player / 3 ):
-							add name entry to PossibleEncounters;
+						say "DEBUG -> Found creature: [name entry].[line break]";
+					let CreatureUnavailable be 0;
+					[right area for the creature?]
+					if area entry exactly matches the text battleground or area entry is "Everywhere":
+						now Found is 10; [creature found, right area and time]
+						say "You are almost certain you saw some [name entry] tracks...";
+						if debugactive is 1:
+							say "DEBUG -> Found: [Found], Area '[Area Entry]' matches Battleground '[Battleground]'.[line break]";
+					else:
+						now Found is 12; [creature found, wrong area]
+						now CreatureUnavailable is 1;
+						if debugactive is 1:
+							say "DEBUG -> Found: [Found], Area '[Area Entry]' <> Battleground '[Battleground]' mismatch.[line break]";
 					[right time to find this creature?]
 					if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night):
 						now Found is 11; [wrong time of day for that creature]
+						now CreatureUnavailable is 1;
 						if debugactive is 1:
 							say "DEBUG -> Found: [Found], but wrong time of day.[line break]";
-					[right area for the creature?]
-					if there is an area entry:
-						if area entry exactly matches the text battleground:
-							now Found is 10; [creature found, right area and time]
-							if debugactive is 1:
-								say "DEBUG -> Found: [Found], [Area Entry] matches [Battleground].[line break]";
-						else:
-							now Found is 12; [creature found, wrong area]
-							if debugactive is 1:
-								say "DEBUG -> Found: [Found], [Area Entry] <> [Battleground] mismatch.[line break]";
-					else:
-						now Found is 13; [no area specified, error]
-						if debugactive is 1:
-							say "DEBUG -> Found: [Found]; Error, no Area Entry found![line break]";
 					if BannedStatus entry is true:
 						now Found is 14; [banned creatures]
+						now CreatureUnavailable is 1;
 						if debugactive is 1:
 							say "DEBUG -> The creature has been banned from the game![line break]";
+					if CreatureUnavailable is 0: [adding the creature only if it is available]
+						add name entry to PossibleEncounters; [basic chance to find the creature]
+						[extra encounter chances]
+						let zed be perception of player / 3;
+						if zed > 8:
+							now zed is 8;
+						repeat with N running from 1 to zed:
+							add name entry to PossibleEncounters;
+						if "Curious" is listed in feats of player:
+							add name entry to PossibleEncounters;
+						if "Expert Hunter" is listed in feats of player:
+							add name entry to PossibleEncounters;
+							add name entry to PossibleEncounters;
+						if "Master Baiter" is listed in feats of player:
+							repeat with N running from 1 to ( perception of player / 3 ):
+								add name entry to PossibleEncounters;
 				if "Unerring Hunter" is not listed in feats of player and (area entry exactly matches the text battleground, case insensitively or area entry is "Everywhere"): [only adds random monsters if the player isn't an unerring hunter, and the area matches]
 					if there is a lev entry:
 						if lev entry > level of player plus levelwindow, next;
@@ -304,15 +303,15 @@ carry out HuntAction:
 			repeat with z running through unresolved situations:
 				if printed name of z matches the text HuntId, case insensitively:
 					if debugactive is 1:
-						say "DEBUG -> Situation found: [HuntId] by matching with [HuntId].[line break]";
-					if z is inactive:
-						now Found is 37; [found, but the event was banned]
-						if debugactive is 1:
-							say "DEBUG -> Event banned / inactive.[line break]";
-					else if z is not close:
+						say "DEBUG -> Situation found: [printed name of z] by matching with [HuntId].[line break]";
+					if z is not close and z is active:
 						now Found is 31; [found, wrong area]
 						if debugactive is 1:
 							say "DEBUG -> Found: [Found]; In another area![line break]";
+					else if z is inactive:
+						now Found is 37; [found, but the event was banned]
+						if debugactive is 1:
+							say "DEBUG -> Event banned / inactive.[line break]";
 					else if level of player < level of z:
 						now Found is 32; [found, level too low]
 						if debugactive is 1:
@@ -392,7 +391,7 @@ carry out HuntAction:
 		-- 36: [event: prerequisite missing]
 			say "[bold type]Seems you're missing a prerequisite for this. Maybe look around a bit to find that first, or make different choices in your next playthrough...[roman type][line break]";
 		-- 37: [event: banned]
-			say "[bold type]Sadly, this event is inactive right at this moment. It might have been banned by your settings, or turned off because of some other reason. There might be prerequisites for it.[roman type][line break]";
+			say "[bold type]Sadly, this event is inactive right at this moment. It might have been banned by your settings, or turned off because of some other reason. Alternatively, there might just be prerequisites for it.[roman type][line break]";
 	follow the turnpass rule;
 
 to huntingfightchance:
