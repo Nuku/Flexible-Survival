@@ -388,7 +388,7 @@ to say randomdesc:	[male]
 	if T is 3:
 		now slutname is "panther";
 	if T is 4:
-		now slutname is "rabbit";
+		now slutname is "Anthro Rabbit";
 	if T is 5:
 		now slutname is "bear";
 	if T is 6:

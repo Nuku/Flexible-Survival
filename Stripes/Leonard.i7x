@@ -692,10 +692,10 @@ Instead of resolving Concert Hall:
 	else:
 		say "     You make your way through the backstage area to the orchestra pit. As you're about to start searching through it, you notice a cute bunny head poke out from behind the curtain. But even as you're trying to decide how to peacefully introduce yourself, there appears another bunny elsewhere, and then another and another still, more and more bunnies moving in to surround you despite no alarm having been raised.";
 		now fightstatus is 3;
-		challenge "Rabbit";
+		challenge "Anthro Rabbit";
 		if fightstatus is 1:
 			now fightstatus is 3;
-			challenge "Rabbit";
+			challenge "Anthro Rabbit";
 			if fightstatus is 1:
 				say "     Having beaten the large group of bizarre bunnies and driven them back, you start searching the orchestra pit for a violin. Thankfully the instruments are actually in the pit and do not appear to have been damaged by the creatures. If anything, it seems like they have been well maintained. Perhaps those teams of bunnies have been playing them? It takes some fumbling around to navigate through the camped space, but you eventually find the string section and locate the violins.";
 				say "     Hopeful that one of these will make a fine instrument for your handsome lion, you look them over. Not really a judge of quality, you take the violin from the stand labelled as '1st violin' in the hopes it will be the best of them all. Putting it in its case, you check the other cases and folders, taking sets of spare strings, bows and wax, as well as as much different sheet music as you can find. Spotting one of the bunnies watching you nervously from behind the curtain, you kindly decide to not just take it all. Certainly several replacements will be enough for Leonard for quite some time.";
@@ -712,47 +712,12 @@ Instead of resolving Concert Hall:
 			say "you gain more cocks, more pussies, more breasts, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly either male or female.";
 		say "     You become like the other rabbits living here, several who are one. In truth, there are only a few individuals living here, but each having several bodies all with one same mind. You are welcomed into the group, joining their orchestra as you and your several bodies learn to play from the others. And outside of practice comes the pleasure of lustful sex shared with so many bodies, so many lovers, all at once.";
 		now humanity of player is 0;
-		[puts Rabbit Pack as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in Table of Random Critters:
-			choose row y in Table of Random Critters;
-			if name entry is "Rabbit":
-				now monster is y;
-				break;
-		now tailname of player is "Rabbit";
-		now facename of player is "Rabbit";
-		now skinname of player is "Rabbit";
-		now bodyname of player is "Rabbit";
-		now cockname of player is "Rabbit";
-		attributeinfect;
-		now tail of player is tail entry;
-		now face of player is face entry;
-		now skin of player is skin entry;
-		now body of player is body entry;
-		now cock of player is cock entry;
-		if "Male Preferred" is listed in feats of player:
-			now cunts of player is 0;
-			now cunt length of player is 0;
-			now cunt width of player is 0;
-			now breasts of player is 0;
-			now breast size of player is 0;
-		else:
-			if cunts of player < 5, now cunts of player is 5;
-			if cunt length of player < 4, now cunt length of player is 4;
-			if cunt width of player < 4, now cunt width of player is 4;
-			if breasts of player < 10, now breasts of player is 10;
-			if breast size of player < 3, now breast size of player is 3;
-		if "Female Preferred" is listed in feats of player:
-			now cocks of player is 0;
-			now cock length of player is 0;
-			now cock width of player is 0;
-		else:
-			if cocks of player < 5, now cocks of player is 5;
-			if cock length of player < 4, now cock length of player is 4;
-			if cock width of player < 4, now cock width of player is 4;
-		if libido of player < 10, now libido of player is 10;
-		wait for any key;
-		end the story saying "Your mind has been subsumed into your new bunny pack, a life of music and lust in your new warren.";
-		now battleground is "void";
+		now tailname of player is "Anthro Rabbit";
+		now facename of player is "Anthro Rabbit";
+		now skinname of player is "Anthro Rabbit";
+		now bodyname of player is "Anthro Rabbit";
+		now cockname of player is "Anthro Rabbit";
+		end the story saying "Your mind has been subsumed by that of an anthro rabbit, to go off for a life of music and lust in your new warren.";
 		wait for any key;
 		follow the turnpass rule;
 		stop the action;

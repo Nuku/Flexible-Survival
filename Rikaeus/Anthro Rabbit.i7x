@@ -4,9 +4,8 @@ Version 4 of Anthro Rabbit by Rikaeus begins here.
 [- Originally Authored By: Lago Moro -]
 
 "Adds a Anthro Rabbit to Flexible Survival's Wandering Monsters table."
-[Description text for this Extension.]
 
-luckyfoot is a number that varies.
+LastLuckyFootTurn is a number that varies.
 
 Section 1 - Monster Responses
 
@@ -15,9 +14,8 @@ when play begins:
 	add { "Anthro Rabbit" } to infections of guy;
 	add { "Anthro Rabbit" } to infections of furry;
 
-to say AnthroRabbdesc:
-	setmongender 19; [creatures are mixed/variable]
-	choose row monster from the table of random critters;
+to say AnthroRabbDesc:
+	setmongender 9; [creatures are mixed/variable]
 	if bodyname of player is "Anthro Rabbit":
 		now combat abort is 1; [stops the fight]
 		say "     A small humanoid bunny appears in front of you! Less than four foot nine and completely naked, it could pass as a short adult human if it weren't for the rabbit-like qualities it had. [one of]He[or]She[at random] looks at you excitedly, obviously intrigued by the fact that you appear to share the same infection as them. Seconds later, more of them come out of various hiding places, all crowding around you, chittering about random things as they talk about you being a fellow pack member. The one that had appeared in front of you first walks closer to you, tilting its head at you. 'Does fellow rabbit want to join in some fun?' It asks curiously, gesturing to all of the rabbits present. You get the feeling that the small bunny is propositioning you so you have to think about what to do.";
@@ -28,18 +26,6 @@ to say AnthroRabbdesc:
 		say "[JockRabbitSexMenu]";
 	else:
 		say "A small humanoid bunny appears in front of you! Less than four foot nine and completely naked, it could pass as a short adult human if it wasn't for the ears, the paws, and the short fur covering [one of]his body. He[or]her body. She[at random] is looking at you curiously, as if contemplating what to do next. However, before you can say anything, out of various hiding places come multiple similar looking creatures, all of them of varying genders. As they approach, you can hear some of them mutter in an excited voice 'A new pack member!'";
-
-[
-	if inasituation is false:
-		if fightoutcome < 20: [player won]
-			say "[AnthroRabbDefeated]";
-		else if fightoutcome is 22: [submit]
-			say "[AnthroRabbitSubmit]";
-		else if fightoutcome > 19 and fightoutcome < 30: [lost]
-			say "[AnthroRabbBeaten]";
-		else if fightoutcome is 30: [fled]
-			say "[AnthroRabbFled]";
-]
 
 to say AnthroRabbVictory:
 	say "     Knocking the last bunny to the ground you wipe an imaginary bead of sweat from your brow as you give them a gesture as if asking them to try again. This causes several of the rabbits to eep out loud as all of them start to scurry and panic as they scramble to their feet and dash away from you. Shrugging your shoulders, you figure that decides that and head on your way.";
@@ -55,36 +41,32 @@ to say AnthroRabbBeaten:
 		say "     Falling back onto the ground as one of the rabbits give you one good punch, they all punch you. 'New pack member!' You hear some of them mutter again as they all move towards you and start rubbing their paws over you, massaging your wounds as if trying to make you feel better. It certainly does make you feel better, easing the aches and pains a little bit. Once they're done all of the bunnies look over you and nod their heads before chittering amongst themselves and running off, giving you one last glance as they leave.";
 		infect "Anthro Rabbit";
 
-[
-to say AnthroRabbfled:
-	say "     Turning tail and quickly bolting, you gain a quick glimpse behind you and see that the rabbits are looking at you weirdly as if they weren't exactly expecting you to run. If anything you can briefly catch a sensation of sadness from their expression. However, you're too concerned with getting away so you turn a corner and leave them behind, letting the thought of the bunnies you encountered slip from your mind.";
-]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
-	now name entry is "Anthro Rabbit"; [ Infection/Creature name. Capitalized. ]
-	now enemy title entry is "Rabbit Pack"; [what you run into to fight]
+	Choose a blank row from Table of Random Critters;
+	now name entry is "Anthro Rabbit";
+	now enemy title entry is "Rabbit Pack";
 	now enemy name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
-	now attack entry is "[one of]They give a coordinated attack, pushing you back one by one![or]One of them jumps onto your back and smacks you on the head. More than once.[or]You lose your balance and fall on the ground! They try to pin you down by piling on top of you![or]One of them manages to flank you and shoves you to the ground.[at random]"; [Text used when the monster makes an Attack]
-	now defeated entry is "[AnthroRabbBeaten]"; [ Text or say command used when Monster is defeated.]
-	now victory entry is "[AnthroRabbVictory]"; [ Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
-	now desc entry is "[AnthroRabbdesc]";[ Description of the creature when you encounter it.]
-	now face entry is "that of a rabbit, with distinctive ears sprouting from the top of your head and flopping downwards";[ Face description, format as the text "Your face is (your text)."]
+	now attack entry is "[one of]They give a coordinated attack, pushing you back one by one![or]One of them jumps onto your back and smacks you on the head. More than once.[or]You lose your balance and fall on the ground! They try to pin you down by piling on top of you![or]One of them manages to flank you and shoves you to the ground.[at random]";
+	now defeated entry is "[AnthroRabbBeaten]";
+	now victory entry is "[AnthroRabbVictory]";
+	now desc entry is "[AnthroRabbDesc]";
+	now face entry is "that of a rabbit, with distinctive ears sprouting from the top of your head and flopping downwards";
 	now body entry is "far below average height but agile and your hands are human in quality, fingers and everything though they are lightly padded. The same goes for your feet, though they're a tad bit larger, possibly to help you with jumping.";[ Body Description, format as the text "Your Body is (your text)"]
 	now skin entry is "short fur covering almost every inch of your body";[ skin Description, format as the text "You have (your text) skin"]
 	now tail entry is "You have a [one of]short[or]fluffy[or]twitchy[at random] rabbit tail.";[ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]sheathed[or]rabbit[at random]";[ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "floppy bunny ears sprout from the top of your head and hang on the sides of your face"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "you feel your body pulse as it changes right in front of your eyes.[if scale entry < 2] It suddenly grows, becoming larger than it was before, but not as large as you probably were prior to everything.[else if scale entry > 2] It suddenly starts to shrink, becoming smaller and tinier until you are far below average height for what you were prior to the apocalypse.[end if] Your body is pretty fit for your size, matching the lithe and dexterious form that you've acquired"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now body change entry is "you feel your body pulse as it changes right in front of your eyes.[if ScaleValue of player < 2] It suddenly grows, becoming larger than it was before, but not as large as you probably were prior to everything.[else if ScaleValue of player > 2] It suddenly starts to shrink, becoming smaller and tinier until you are far below average height for what you were prior to the apocalypse.[end if] Your body is pretty fit for your size, matching the lithe and dexterious form that you've acquired"; [ body change text. format as "Your body feels funny as (your text)" ]
 	now skin change entry is "a fair coating of fur covers you from head to toe. Feels almost like velvet"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "A small tail sprouts, waggling"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
+	now ass change entry is "a small tail sprouts, waggling"; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
 	now cock change entry is "it shrinks into a furry sheathe. A pair of soft balls descends as well"; [ cock change text. format as "Your cock feels funny as (your text)" ]
 	now str entry is 6;
 	now dex entry is 15;
@@ -92,74 +74,40 @@ When Play begins:
 	now per entry is 18;
 	now int entry is 12;
 	now cha entry is 12;
-	now sex entry is "Both"; 					[ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
-	now HP entry is 80;
-	now lev entry is 4; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 4; [ Amount of Damage monster Does when attacking.]
-	now area entry is "High"; [ Current options are 'Outside' and 'Mall' Case sensitive]
-	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 4; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 3; [ Size of balls apparently ;) sneaky Nuku]
-	now breasts entry is 10; [ Number of Breasts infection will give you. ]
-	now breast size entry is 3; [Size of breasts infection will try to attain ]
-	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 4; [ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 3; [ Width of female sex infection will try and give you ]
-	now libido entry is 10; [ Amount player Libido will go up if defeated ]
-	now loot entry is "lucky horseshoe";
-	now lootchance entry is 0;
-	now scale entry is 2; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now sex entry is "Both";            [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 60;                 [ How many HP has the monster got? ]
+	now lev entry is 4;                 [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 4;                [ Amount of Damage monster Does when attacking.]
+	now area entry is "High";           [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now cocks entry is 1;               [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 5;         [ Length infection will make cock grow to if cocks]
+	now cock width entry is 3;          [ Size of balls ]
+	now breasts entry is 6;             [ Number of Breasts infection will give you. ]
+	now breast size entry is 2;         [ Size of breasts infection will try to attain ]
+	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1;               [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 5;         [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 3;          [ Width of female sex infection will try and give you ]
+	now libido entry is 10;             [ Amount player Libido will go up if defeated ]
+	now loot entry is "";               [ Loot monster drops, ]
+	now lootchance entry is 0;          [ Chance of loot dropping 0-100 ]
+	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]fit[or]slender[or]cute[at random]";
 	now type entry is "[one of]bunny[or]rabbit[at random]";
-	now magic entry is false;
-	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
-	now non-infectious entry is false;[ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
-	now BannedStatus entry is false;   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now magic entry is false;           [ Is this a magic creature? true/false (normally false) ]
+	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
+	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
+	now DayCycle entry is 0;            [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only)]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;    [ Row used to designate any special combat features, "default" for standard combat. ]
 
-[
-Table of infection heat (continued)
-infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
---	--	--	--	--	--	--	--	--	--	--
 
-When Play begins:
-	Choose a blank row from Table of infection heat;
-	now infect name entry is "Anthro Rabbit"; [ This should be exactly the same as your monster name in the main table]
-	now heat cycle entry is 400; [ This is the number of days a heat "cycle" lasts, usually 7 ]
-	now heat duration entry is 400; [ This is how many days of the cycle you are actually in heat. default is 1, set it to the same as cycle for permanently in heat.]
-	now trigger text entry is "[AnthroRabbtrigger]"; [ This is the text that is written to the screen when the player comes into heat]
-	now inheat entry is "[AnthroRabbinheat]"; [This final say block is triggered every 3 hours the player is in heat. you can use defaultheat or write your own. defaultheat raises libido value by 5 every 3 hours. ]
-	now fheat entry is true;
-	now mpregheat entry is true;
-	now mpregtrigger entry is "[AnthroRabbtrigger]";
-
-to say AnthroRabbinheat:
-	if bodyname of player is "Anthro Rabbit" and ( cocks of player + cunts of player > 1 ):
-		say "[one of]Repeat: there is only a me. A single me. A single consciousness. There is no 'we', only 'I'. I can't go insane now.[or]Maybe is the infection, but you find yourself calling a male body a 'cock', and a female one a 'pussy', or similar... what the hell...[or]Even if your individual bodies are weaker, you can coordinate them with ease. And two pair of eyes are better than just one, for example.[or]You realize one of your copies is acting affectionately towards another one, on its own. You can't help it: it's like a tic.[or]How was it? A female copy for every cunt and a male one for every penis? So what would happen if you were to lose both?[or]Note to self: talking and generally do things in perfect synchrony tends to unnerve people.[or]It is a bit odd to define the whole bunch of your copies [']your body[']. You still want to cling to how much sanity you have left, though.[at random]";
-		increase libido of player by 1;
-		decrease humanity of player by 1;
-	else:
-		now turns in heat is 0;
-		now animal heat is False;
-		now inheat is False;
-
-to say AnthroRabbtrigger:
-	if bodyname of player is "Anthro Rabbit" and ( cocks of player + cunts of player > 1 ):
-		say "This is probably the strangest situation you have ever been into. Instinctively you know what exactly is going on, but in practice you are scared and confused. Let's see... you can have female or male 'bodies', but not herms... you have a 'body' for every cock or pussy you had... and what else...";
-	else:
-		now turns in heat is 0;
-		now animal heat is False;
-		now inheat is False;
-]
-
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
-"lucky rabbit foot"	"A trinket in the form of a rabbit's foot that usually brings good luck. The fur appears rather soft to touch."	1	lucky rabbit foot
+"lucky rabbit foot"	"A trinket in the form of a rabbit's foot that usually brings good luck. The fur appears rather soft to touch."	0	lucky rabbit foot
 
 instead of sniffing lucky rabbit foot:
-say "What are you expecting it to smell like? Okay, maybe a little bit of musk if anything, but that's it.";
+	say "What are you expecting it to smell like? Okay, maybe a little bit of musk if anything, but that's it.";
 
 lucky rabbit foot is a grab object.
 the usedesc of lucky rabbit foot is "[lucky rabbit foot use]".
@@ -167,12 +115,12 @@ lucky rabbit foot is part of the player.
 lucky rabbit foot is not temporary.
 
 to say lucky rabbit foot use:
-	if luckyfoot - turns < 4 and lucky rabbit foot is owned:
+	if LastLuckyFootTurn - turns < 5:
 		say "     Shooting a look towards the soft charm the rabbits gifted you, you shake your head and decide not to use it in fear of possibly ruining the novelty of the trinket. Perhaps you should wait a bit.";
-	else if luckyfoot - turns > 3 and lucky rabbit foot is owned:
-		say "     Taking the soft furry trinket into your hands you rub it on your cheek, enjoying the velvety sensation that brushes your face, letting your worries fade away";
+	else:
+		say "     Taking the soft furry trinket into your hands you rub it on your cheek, enjoying the velvety sensation that brushes your face, letting your worries fade away.";
 		SanBoost 15;
-		now luckyfoot is turns;
+		now LastLuckyFootTurn is turns;
 
 lucky rabbit foot is infectious. The strain of lucky rabbit foot is "Anthro Rabbit".
 
@@ -311,5 +259,6 @@ to say JockRabbitSex2:
 	say "     This method of sex continues for quite a bit, both bunnies practically fucking you into each other. With the one in front of you roughly slamming his cock into your mouth and the other into your hole you're pretty occupied for the time being. But you can tell that both of them are getting close, particularly the one that you're sucking as his dick is spilling copious amounts of precum into you, which you're having to swallow. With the other one you can tell vaguely by the tightening of his balls each time they slap against your ass, which is usually a sign someone is close to orgasm.";
 	say "     Sure enough, seconds later you hear both rabbits yell as they slam into you one last time, both balls deep into you, ass and mouth. The amount of cum the one in front of you spills is so much that you have to continuously swallow so as to not choke on it, whereas you're sure that you are probably leaking seed out of your ass profusely. It takes them a bit to come down from their climaxes but when they do, they pull out of you and quickly help you clean up. It's something you didn't expect but are thankful for, nonetheless. Once you're dressed you thank the rabbits for their time and head on your way, a last glance noting that the other bunnies appear to be asking the two who fucked you many questions about how the sex was.";
 	infect "Anthro Rabbit";
+
 
 Anthro Rabbit ends here.

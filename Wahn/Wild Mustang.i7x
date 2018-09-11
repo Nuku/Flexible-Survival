@@ -120,14 +120,10 @@ to say LuciferSexMenu:
 				now lastfuck of Lucifer is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the mustang stallion, shaking your head slightly as he gives a questioning look. Then you walk back to the gate leading out into of this paddock and step through, securely locking it behind you.";
-				move player to Central Farm Square;
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the mustang stallion, shaking your head slightly as he gives a questioning look. Then you walk back to the gate leading out into of this paddock and step through, securely locking it behind you.";
+			move player to Central Farm Square;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

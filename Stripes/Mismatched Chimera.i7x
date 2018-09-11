@@ -107,7 +107,7 @@ to say randombodypart:
 	if T is 15:
 		now bodyselector is "wolf";
 	if T is 16:
-		now bodyselector is "rabbit";
+		now bodyselector is "Anthro Rabbit";
 	if T is 17:
 		now bodyselector is "mouse";
 	if T is 18:

@@ -52,31 +52,37 @@ to say fhuskybeaten:
 		say ". You find yourself considering having some fun with the hapless creature, but can't really decide what to do at this time.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if domtempting is true:
 		choose a blank row in table of fucking options;
 		now title entry is "Recruit for Dominick";
 		now sortorder entry is 1;
 		now description entry is "send the lust-crazed husky to Dom to be bred";
+	[]
 	if "Dominant" is listed in feats of player and player is male and cock length of player > 5 and player is knotted:
 		choose a blank row in table of fucking options;
 		now title entry is "Dominate and tie";
 		now sortorder entry is 2;
 		now description entry is "take what you want and knot the husky bitch's hot cunt";
+	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Quickie fuck";
 		now sortorder entry is 3;
 		now description entry is "get your rocks off by fucking the husky bitch";
+	[]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Lesbian licking";
 		now sortorder entry is 4;
 		now description entry is "make the doggy girl eat you out";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Lick her cunt";
 	now sortorder entry is 9;
 	let luststuck be 0;
 	if libido of player > humanity of player and libido of player > 75, now luststuck is 1;
+	[]
 	now description entry is "eat out that juicy canine muff";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

@@ -98,7 +98,7 @@ to say randombaseform:
 		now headdata is "wolf";
 		now headadjdata is "lupine";
 	if T is 10:
-		now headdata is "rabbit";
+		now headdata is "Anthro Rabbit";
 		now headadjdata is "lapine";
 	if T is 11:
 		now headdata is "pig";
