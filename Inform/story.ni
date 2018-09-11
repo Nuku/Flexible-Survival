@@ -3765,6 +3765,8 @@ carry out showstatting:
 	showstats player;
 
 To showstats (x - Person):
+	sort Feats of player;
+	sort Traits of player;
 	say "Strength: [strength of the x], Dexterity: [dexterity of the x], Stamina: [stamina of the x], Charisma: [Charisma of the x], Perception: [perception of the x], Intelligence: [intelligence of the x].";
 	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [HP of x]/[maxHP of x] Libido: [libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100.";
 	let z be ( level of x plus one) times 10;
@@ -4634,7 +4636,7 @@ Include Greek Mythos by Prometheus.
 Include HellHound by Speedlover.
 Include High Rise Events by Stripes.
 Include High Rise Events by Wahn.
-[Include Horus by Rikaeus.]
+Include Horus by Rikaeus.
 Include How High by Kaleem mcintyre.
 Include Hyena Bikers by Stripes.
 Include Hyena Shoppers by Doots.
@@ -4725,7 +4727,7 @@ Include Amazonian by Stripes.
 Include Ancient Tentacles by Dys.
 Include Anime Babe by Stripes.
 Include Anthro Shaft Beast by Guest Writers.
-[Include Anthro Rabbit by Rikaeus.]
+Include Anthro Rabbit by Rikaeus.
 Include Arctic Fox by Sarokcat.
 Include Ember Breeder by Stripes.
 Include Automaton by Stripes.
@@ -4919,7 +4921,7 @@ Include Prairie Dog by Stripes.
 Include Psycho Weasel by Stripes.
 Include Queen Bee by Stripes.
 Include Quilled Tousky by Stripes.
-Include Rabbit Pack by Guest Writers.
+[Include Rabbit Pack by Guest Writers.]
 Include Ram by Sarokcat.
 Include Random Shemale Smooth Collie by Guest Writers.
 Include Random Tentacle Horror by Guest Writers.
