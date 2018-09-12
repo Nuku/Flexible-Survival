@@ -1364,7 +1364,7 @@ carry out Larissatesting:
 	say "Size: [ScaleValue of Larissa]";
 	say "Body descriptor: [LarissaBodyDesc]";
 	say "Body type: [LarissaBodyType]";
-	say "Daycycle: [SleepRhythm of Larissa] = [if SleepRhythm of Larissa is 0]Normal[else if daycycle is 1]Day[else]Night[end if]";
+	say "Daycycle: [SleepRhythm of Larissa] = [if SleepRhythm of Larissa is 0]Normal[else if SleepRhythm of Larissa is 1]Day[else]Night[end if]";
 	say "Body Category: [LarissaBodycat] = [if LarissaBodycat is 0]humanoid[else if LarissaBodycat is 1]quadrupedal[else if LarissaBodycat is 2]tauric[else if LarissaBodycat is 3]legless[else]unknown![end if]";
 
 Larissa ends here.
