@@ -16,7 +16,7 @@ Feline_encountered is a number that varies.
 
 
 to say feline desc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if Feline_type is 3:			[forced hunting pride fight]
 		setmongender 14; [creatures are female]
@@ -140,7 +140,7 @@ to say huntpride att:
 	say "[one of]The small felines launch an attack, clawing and biting at you![or]The diminutive lionesses attack you in a mix of clawing, grabbing and groping![or]The girly lionesses grope you with their feline hands![or]One of the kitty girls grabs onto you and rubs her body sensually against yours![or]The hunting pride tries to tackle you to the ground so they can lick and pet you into submission![at random]";
 
 to say cat def:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let z be 0;
 	if libido of player >= 40:
 		if player is male:
@@ -206,7 +206,7 @@ to say finallion def:
 	say "     You are victorious is your hard-fought battle against this would-be usurper. You growl triumphantly as you give him a final kick, sending him tumbling down the hill.";
 
 to say cat vict:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	increase Feline_meow by 1;
 	if Feline_attached is 1:
 		say "     The small, curvy feline approaches you and mewls imploringly. As you kneel down, the previous feline comes over, mewling as well, but is kicked away as the new one climbs up onto you, taking her place on your chest. She leans in and begins to eagerly suckle at your chest, leaving the ousted feline to go off in search of a new surrogate";
@@ -252,7 +252,7 @@ to say finallion vict:
 
 
 to say feline cleanup: [post-battle reset of stats to catgirl values]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if hardmode is true and level of player > 3, let debit be level of player - 3;
 	if hardmode is false and Feline_type is 2 and monsterHP <= 0, increase XP of player by 22; [XP difference for beating the male]
@@ -271,13 +271,13 @@ to say feline cleanup: [post-battle reset of stats to catgirl values]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Feline"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -325,9 +325,9 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "park_feline"; [ Row used to designate any special combat features, "default" for standard combat. ]
-
+	now BannedStatus entry is false;
 
 Section 3 - Alt Combat
 
@@ -337,7 +337,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 this is the leoninelust rule:		[continuous lustful weakening of player]
 	if Feline_type is 2 or Feline_type is 4:		[lion man only]
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		let dam be ( Feline_meow * ( lev entry + ( a random number from 60 to ( 90 + lev entry ) ) ) ) divided by 100; [damage based on built-up feline urges]
 		if HP of Leonard >= 7 and HP of Leonard <= 13:
 			now dam is ( dam * 2 ) / 3;

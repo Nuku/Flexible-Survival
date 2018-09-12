@@ -15,6 +15,10 @@ nmformswitch is a truth state that varies.
 fancymfcount is a number that varies.	[controls cycling through the various M/F sex scenes]
 fancyffcount is a number that varies.	[controls cycling through the various F/F sex scenes]
 
+Table of GameCharacterIDs (continued)
+object	name
+Fancy	"Fancy"
+
 Fancy is a woman.
 The description of Fancy is "A rather sexy looking mare eyes you with amusement from where she is seated at the small table she is using as a desk, wearing only her soft pelt of white horse fur and a set of white panties that reveal far more than they conceal. Her body is well built and nicely rounded in all the right places. The horsewoman has nice strong thighs, and her powerful hooves stretch out in front of her, her legs parted teasingly to give you a good view of her tightly stretched panties. She rests her equine muzzle on her slightly hoof-like hands as she looks at you with anticipation, her deep blue eyes twinkling with amusement as she cocks her ears forward to hear what you have to say.".
 the conversation of Fancy is { "Grumble!" }.
@@ -71,7 +75,7 @@ instead of conversing the Fancy:
 [					now scalevalue of player is 3; ]
 [					now bodydesc of player is "sultry"; ]
 [					now bodytype of player is "[one of]equine[or]horse-like[at random]"; ]
-[					now daycycle of player is 2; ]
+[					now SleepRhythm of player is 2; ]
 					follow the turnpass rule;
 			else:
 				say "Defeated by the horseman, you feel utterly humiliated as he prepares to haul his prize off to the Stablemaster for training, only to be saved at the last minute by the intervention of Fancy and several of the other mares who pile on the victor. Their excited cooing and praise for his prowess distracts the horseman as he quickly becomes lost amidst the sea of female horseflesh, his attention diverted from you long enough for you to crawl away and escape. As you begin to recover for a minute, you sigh sadly as you realize that you are in no shape to fight the Stablemaster now, not with your body as sensitive as it is from the horseman's attentions, and by the time you have recovered the Stablemaster will surely be suspicious and check his returning lieutenant carefully.... Unfortunately this means that you will have to wait and try the trap again once you have properly recovered from the horseman's sexual assault...";
@@ -148,7 +152,7 @@ instead of conversing the Fancy:
 		say "     'Back again and looking to help?' Fancy asks you with a happy smile as you approach her again, though she doesn't wait for a response on your part before continuing. 'Now that we have some stuff to do some patchwork around here, we could use some help getting some of the larger pieces we need to do some repairs,' she says with a rather determined nod of her equine head. 'Now I don't expect you to go hauling beams and construction tools back here on your own or anything, but I do need you to find and secure us a good supply of the items. Here,' she says as she hands you what looks like a small radio transceiver. 'I had one of the mares who knows a little bit about electronics still put this together, and I bullied a few of the stallions into agreeing to go out to pick up the items once you find them. It's amazing what a horse will do when his source of sex is threatened,' Fancy says with a soft equine snicker as she shakes her head at the silliness of the stallions.";
 		say "     'All you need to do is locate a good spot somewhere in the city, possibly a large [bold type]hardware[roman type] store or construction site, clean it out of troublemakers, and then guard it while the stallions head there and haul off the materials. Should be simple for a fine and powerful specimen like yourself, right?' the white mare says with a teasing wink as she settles back down in her chair.";
 		now fancyquest is 4;
-		now Hardware Fort is unresolved;
+		now Hardware Fort is active;
 	else if fancyquest is 2:
 		if carried of wyvern goop > 4:
 			say "     'Ah yes! That sticky stuff should work fine to plug up some of the holes and hold some of the walls together when it hardens! Perfect!' Fancy says with increasing enthusiasm as she looks at the items you pull from your pack.";
@@ -167,7 +171,7 @@ instead of conversing the Fancy:
 	else if fancyquest is 1:
 		if fancyaroused > 1:
 			say "     'Hey again there sexy,' Fancy says with a teasing wink as she looks at you curiously for a minute, only to blink when you mention the ignored memos. 'It figures they would just throw them away like that,' the sexy white mare says with a sigh. 'But it's nothing you need to worry your little head about right now,' she adds with a soft teasing smile as she stretches her nearly naked form out teasingly, seemingly unworried about the problem right now with you in front of her.";
-			Now fancyquest is 0;
+			now fancyquest is 0;
 		else:
 			say "     'Hey there again, did you have some more questions about this place or did you need help with something?' Fancy asks with a soft smile on her white muzzle as she looks up at you again. She blinks in surprise as you mention the stack of memos you found, and that you were actually wondering if she needed help instead. Fancy's briefly stunned and then sighs, 'So they just tossed all my requests on a desk somewhere and forgot about them? That sounds about normal for this place, so I don't know why I am surprised.' She shakes her equine head sadly, before concentrating her attention on you again. 'And while I am sure I'm probably not supposed to get help from outside sources, if you are offering I certainly can't afford to turn down some help,' Fancy says with a rueful smile as she looks at you expectantly. Do you offer to help out?";
 			if player consents:
@@ -331,7 +335,7 @@ An everyturn rule:
 			now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
 		if facename of player is not "Nightmare":
 			say "You feel a strange yet familiar burning pressure in your head, and cry out slightly as your face pushes forward and reshapes itself again, your forehead flattening out and your eyes burning with an inner flame as your dark equine muzzle finishes reshaping itself, your dark red mane once more shimmering like fire as it trails down the back of your fully equine face once more.";
-			Now facename of player is "Nightmare";
+			now facename of player is "Nightmare";
 			now face of player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face";
 	if nightmaretf is 3:
 		if tailname of player is not "Nightmare":
@@ -340,7 +344,7 @@ An everyturn rule:
 			now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
 		if facename of player is not "Nightmare":
 			say "You feel a strange yet familiar burning pressure in your head, and cry out slightly as your face pushes forward and reshapes itself again, your forehead flattening out and your eyes burning with an inner flame as your dark equine muzzle finishes reshaping itself, your dark red mane once more shimmering like fire as it trails down the back of your fully equine face once more.";
-			Now facename of player is "Nightmare";
+			now facename of player is "Nightmare";
 			now face of player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face";
 		if skinname of player is not "Nightmare":
 			say "Your body once more burns with that strange inner fire, as it seems to crackle over and under your skin, the strange power within you sweeping over your form until once again you are completely covered in a shadowy midnight black coating of fur.";
@@ -353,7 +357,7 @@ An everyturn rule:
 			now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
 		if facename of player is not "Nightmare":
 			say "You feel a strange yet familiar burning pressure in your head, and cry out slightly as your face pushes forward and reshapes itself again, your forehead flattening out and your eyes burning with an inner flame as your dark equine muzzle finishes reshaping itself, your dark blood red mane once more shimmering like fire as it trails down the back of your fully equine face once more.";
-			Now facename of player is "Nightmare";
+			now facename of player is "Nightmare";
 			now face of player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face";
 		if skinname of player is not "Nightmare":
 			say "Your body once more burns with that strange inner fire, as it seems to crackle over and under your skin, the strange power within you sweeping over your form until once again you are completely covered in a shadowy midnight black coating of fur.";
@@ -374,7 +378,7 @@ to quietrestorenightmareform:
 	if bodyname of player is not "Nightmare" or the player is not pure:
 		now nmformswitch is true;
 		setmonster "Nightmare";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if name entry is "Nightmare":
 			now bodyname of player is "Nightmare";
 			now facename of player is "Nightmare";

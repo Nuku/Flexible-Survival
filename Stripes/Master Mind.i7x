@@ -8,6 +8,10 @@ Section 1 - Capture Task
 
 Section 2 - Master Mind the Automaton
 
+Table of GameCharacterIDs (continued)
+object	name
+Master Mind	"Master Mind"
+
 Master Mind is a woman.
 The description of Master Mind is "[masterminddesc]".
 The conversation of Master Mind is { "meatbag" }.

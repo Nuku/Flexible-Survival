@@ -7,6 +7,10 @@ LastTehuantlKorvinScene is a number that varies. LastTehuantlKorvinScene is usua
 
 Section 1 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Tehuantl	"Tehuantl"
+
 Tehuantl is a person.
 The description of Tehuantl is "[TehuantlDesc]".
 The conversation of Tehuantl is { "Me-ow!" }.
@@ -24,7 +28,7 @@ Instead of conversing the Tehuantl:
 	if HP of Tehuantl is 11: [first heat started]
 		say "[TehuantlHeatIntro]";
 		now HP of Tehuantl is 12;
-		now Feline Relief is unresolved;
+		now Feline Relief is active;
 	else if HP of Tehuantl is 14: [toys found]
 		say "     As you approach Tehuantl you drop your bag and dig out the toys you've collected for her, as well as her extra surprise. When she spots you she rushes over, nearly knocking you down as she hugs you tightly, causing the rubbery sex toys to slip from your grasp and bounce across the floor. 'Oh master, you are so kind!' she rumbles as she surveys the colorful toys scattered around her before she kisses you lightly on the cheek. As Tehuantl gets on her hands and knees to gather and inspect the things you've brought her, you quickly scan the floor for the thin red collar and quickly move to pick it up before she spots it as well.";
 		say "     Quietly sneaking up behind her as she admires a particularly large pink dildo, you carefully unclasp the collar and move to place it around her neck. Tehuantl gives a curious meow as she hears the bell jingle above her head, looking back to see you holding the collar just above her. She smiles as you reach down to place it around her neck, purring happily as you fasten it snugly around her throat. She bats the bell softly several times, delighting in the cute jingle as you gently pet her for a short while before you get back to what you were doing, leaving her to get back to inspecting the toys you've brought her.";
@@ -135,13 +139,9 @@ to say TehuantlSexMenu:
 				now lastfuck of Tehuantl is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the submissive feline, shaking your head slightly as [if HP of Tehuantl < 50]she[else]he[end if] gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the submissive feline, shaking your head slightly as [if HP of Tehuantl < 50]she[else]he[end if] gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -368,7 +368,7 @@ to say TehuantlandSarah:
 Section 5 - Heat, pregnancy and assorted gimmicks
 
 TehuantlStatus is a number that varies. [1 normal, 2 in heat, 3 pregnant]
-TehuantlTimer is a number that varies.
+TehuantlTimer is a number that varies. TehuantlTimer is usually 10000.
 TehuantlSnowStatus is a number that varies.
 SarahTehuantl is a truth state that varies. SarahTehuantl is usually false.
 
@@ -458,7 +458,8 @@ to say TehuantlHeatIntro:
 
 Section 7 - Event
 
-Feline Relief is a situation. Feline Relief is resolved.
+Feline Relief is a situation.
+Feline Relief is a inactive.
 The sarea of Feline Relief is "Red".
 
 instead of resolving Feline Relief:
@@ -489,12 +490,15 @@ instead of resolving Feline Relief:
 			say "     With the three latex women dispatched, you quickly gather up the toys you had set aside, and a couple of the new additions the rubber girls brought back with them before quickly departing the store.";
 			now HP of Tehuantl is 14;
 			now Feline Relief is resolved;
+			now Resolution of Feline Relief is 1; [player won]
 		else: [player fled]
 			say "     Unable to fend off the latex covered women, you decide it best to make a break for it, leaving the bag of toys behind as you duck and weave around the store, drawing your assailants away from the door before you make a break for it, escaping back into the city streets.";
 			say "     It looks like you'll have to return another time to get those toys, hopefully without being disturbed next time.";
 			now HP of Tehuantl is 13;
+			now Resolution of Feline Relief is 2; [player fled]
 	else if HP of Tehuantl is 13:
 		say "     As you wander through the red light district, you once again find yourself outside the BDSM shop you were chased out of by those latex clad dominatrixes. Taking a deep breath, you once again pull the door open a crack and peer inside. Seeing the coast is clear once again you quickly step inside and make a b-line for the back counter. Finding the bag of toys and collar right where you left them, you quickly stuff them into your backpack before you rush back outside, making your escape before the latex mistresses return again.";
+		now Resolution of Feline Relief is 3; [grabbed the stuff stealthily]
 		now HP of Tehuantl is 14;
 		now Feline Relief is resolved;
 

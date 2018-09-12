@@ -55,14 +55,16 @@ Instead of Resolving a Hyper Squirrel Girl:
 						now snow is in Grey Abbey Library;
 						move player to Grey Abbey Library;
 						increase score by 5;
-						now hyper squirrel girl is resolved;
+						now Resolution of Hyper Squirrel Girl is 1; [Snow Recruited]
+						now Hyper Squirrel Girl is resolved;
 					else:
 						say "'Aw, you don't have what I need. You get some, and you got yourself a girl with talents. Trust me, it will be worth it.' She leans over to kiss either of your cheeks, then dances off into the city in a prance.";
 				else:
 					say "'Well fine, play that way. I need a bigger chest. You want me, find me, and bring the goods,' she says, vanishing back into the city.";
 			else:
 				say "'Well shoot then, I can do just fine on my own,' she insists, and is gone in a trail of hyperactivity.";
-				now hyper squirrel girl is resolved;
+				now Resolution of Hyper Squirrel Girl is 2; [Snow rejected]
+				now Hyper Squirrel Girl is resolved;
 		else:
 			say "You think she won'`t be able to find you here, in this dark corridor. You hear her footsteps echoing ever-closer, when they fall silent. Suddenly, she appears behind you, lightly tapping your back. As you curse in surprise, she laughs at your feeble attempt to grab her. 'Too slow again! Come on, catch me...' You follow her giggles outside, as she turns a corner, and vanishes.";
 
@@ -72,6 +74,10 @@ Section 2 - Snow
 Squirrel Den is a room. It is private.	[This is just a holding spot and not a real room]
 
 The description of Squirrel Den is "Not a literal squirrel den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.".
+
+Table of GameCharacterIDs (continued)
+object	name
+Snow	"Snow"
 
 Snow is a person.
 The description of Snow is "[SnowDesc]";
@@ -286,14 +292,14 @@ to say sexwithsnow01:	[Vaginal on Snow]
 			say "     Placing your hands on the squirrel's shoulders, you thrust into the warm confines of her wet cunt. She gives a chittering moan and pushes back onto you, curling that fluffy tail around your back. 'Come on. Let's see what you've got,' she says with a playful little butt wiggle. You grin and give her ass a playful swat along with a firm thrust to make her moan again.";
 			say "     You bang away at the lustful squirrel, drawing more pleasured chitters and moans. Her swollen tits are mashed under her and spill out on either side of her furry body. Those big nuts of hers slap against [if cockname of player is listed in infections of InternalList]your thighs[else]your own[end if] as they rock pendulously. As things heat up further, you start to hear her large shaft slapping against the underside of the table. The hyper-endowed squirrel makes for quite the sexy sight.";
 			say "     When you are about to cum, you push fully into her with a last groan. Your [cock size desc of player] cock pulses inside her squeezing tunnel as you unload shot after shot of semen. By the time you're done, you've emptied a [cum load size of player] load into her cunt and womb. And from her chittering moans, the way her ballsack twitches against [if cockname of player is listed in infections of InternalList]your thighs[else]yours[end if] and the sticky splattering you hear below, you know she's unloading her hefty payload as well. By the time you've pulled out, she seems quite satisfied and remains flopped out on her work table while she recovers[if cock width of player > 16] and while your excess load drains from her gaping vagina[end if].";
-	now wild squirrels is not resolved;
+	now Wild Squirrels is active;
 
 to say sexwithsnow02:	[Anal on Snow]
 	say "     Snow looks you over and gives you a coy grin before turning around and slipping down her pants. She lifts her tail, flashing her ass and pussy at you, giving her rear a wiggle. 'Mmm.. I'm in the mood for something different, hon? How about you take the back door and stuff my tight nut hole?' she asks with a grin. 'What's the problem? Can't a girl-boy want something a little kinkier?' She swishes her tail around again while fingering her wet pussy, then spreading her juices over her pucker, getting it slick and glistening. Will you take her up on her offer?";
 	if player consents:
 		say "     As you move in and grind your stiffening member against her behind, she grins in pleasure and braces herself against the nearby workbench. Pleased as punch, she moans happily as you press your glans to her slick hole and leak precum onto it, getting her even more wet and ready. As you sink your throbbing shaft into her, you grip her hips and press yourself to her back. 'Ohhh... that's so [if cock length of player < 10]nice[else]big[end if]. Do me, baby! Stuff my tight, squirrely ass,' she demands, giving a squeeze around your [cock size desc of player] [cock of player] cock before pushing herself further onto it. Needing no more encouragement, you start pounding away at the eager herm.";
 		say "     With your cock stuffed fully inside her plush rump, you move your hands to her bosom, groping those large tits of hers she enjoys so much. You pinch and tease her nipples, making her whimper and squirm all the more in delight as you fuck her, making the ride even more pleasant as those shivers of pleasure translate into ripples of her inner walls around your [cockname of player] shaft. She releases the table and ends up pressed down atop it as she brings her paws to stroke her neglected cock and finger her pussy at the same time. You ride her good and hard until finally you push deep inside her fuzzy bottom and unleash your hot seed, filling her ass with your creamy cum. She's set off as well, spraying a sizable load of squirrel cum under her worktable and soaking her other paw in her juices. Worn out from the heavy fucking and satisfying finish, you both stay slumped there for a while, enjoying the pleasure of your kinky romp together while you tell her what a sexy squirrel she is.";
-		now wild squirrels is not resolved;
+		now Wild Squirrels is active;
 	else:
 		say "     Snow frowns a little. 'Well, fine, be that way then. It's too bad you don't know a good thing when you see it, but I guess not everyone's into that kind of thing. I'm still up for some fun, hon. Let's see what other trouble we can get into,' she adds with a grin.";
 		WaitLineBreak;
@@ -311,7 +317,7 @@ to say sexwithsnow03:	[Vaginal on player]
 		now facename of child is "Hyper Squirrel";
 		now bodyname of child is "Hyper Squirrel";
 		now skinname of child is "Hyper Squirrel";
-	now wild squirrels is not resolved;
+	now Wild Squirrels is active;
 
 to say sexwithsnow04:	[Anal on player]
 	say "***";
@@ -335,7 +341,7 @@ to say sexwithsnow05:	[Dommed and fucked]
 		now facename of child is "Hyper Squirrel";
 		now bodyname of child is "Hyper Squirrel";
 		now skinname of child is "Hyper Squirrel";
-	now wild squirrels is not resolved;
+	now Wild Squirrels is active;
 
 to say sexwithsnow06:	[Fellatio]
 	say "     'I feel like these need a work out,' she says, reaching below her legs to slowly rub over her distended balls through her pants. She gives off a soft chittering sigh as soft churning is heard, her cum factories ramping up production even as she leers at you lustfully. 'You are going to pucker up and give me a big ole kiss where it counts,' she insists, undoing her pants and letting her huge pink member bob into the air, demanding attention.";
@@ -389,7 +395,7 @@ to say snowsquirrelgivein:
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]athletic[or]curvy[or]agile[at random]";
 	now bodytype of player is "[one of]rodent[or]squirrel-like[at random]";
-	now daycycle of player is 0;
+	now SleepRhythm of player is 0;
 	now humanity of player is 0;
 	end the story saying "You and Snow have lost your minds to the attentions of the two squirrels, your body becoming covered in thick white fur, face becoming pointed and narrow even as your new muzzle is filled with thick shots of seed. You moan and chitter as your belly swells with the gifts of your lovers, your body blossoming into buxom hermaphroditic squirreltude as your humanity eludes you. You feel at home with these two and take a turn with each, enjoying every combination of cock, cunt and mouth with them and petting their long bushy tails before you all rise, satisfied, and hunt the city together.";
 	WaitLineBreak;
@@ -400,9 +406,9 @@ to say snowsquirrelgivein:
 Section 5 - Wild Squirrels
 
 Wild Squirrels is a situation.
-Wild Squirrels is resolved.
+Wild Squirrels is inactive.
 
-Instead of resolving a wild squirrels:
+Instead of resolving a Wild Squirrels:
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
 	say "As you wander, you get the feeling that you are being watched somehow...";
@@ -491,8 +497,8 @@ Instead of resolving a wild squirrels:
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]athletic[or]curvy[or]agile[at random]";
 	now bodytype of player is "[one of]rodent[or]squirrel-like[at random]";
-	now daycycle of player is 0;
-	now wild squirrels is resolved;
+	now SleepRhythm of player is 0;
+	now Wild Squirrels is inactive;
 
 
 When play ends:

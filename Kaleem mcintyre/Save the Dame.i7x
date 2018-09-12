@@ -5,6 +5,7 @@ Section 1 - Save the Dame
 Kenaztalk is a number that varies.
 
 Save the Dame is a situation.
+Save the Dame is inactive.
 The sarea of Save the Dame is "High".
 
 Instead of resolving a Save the Dame:

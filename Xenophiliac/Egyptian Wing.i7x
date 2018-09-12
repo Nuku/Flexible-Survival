@@ -27,8 +27,13 @@ Instead of Resolving a Egyptian Wing:
 
 [Jade Scarab event located in Sarokcat's Consolidated Museum file]
 
-Finding Winged Orb is a situation. Finding Winged Orb is resolved.
+Finding Winged Orb is a situation.
+Finding Winged Orb is inactive. [activated by accepting Amuran's quest]
 The sarea of Finding Winged Orb is "Park".
+
+an everyturn rule:
+	if Finding Winged Orb is inactive and (AmuranAwoken is 2 or AmuranAwoken > 3):
+		now Finding Winged Orb is active;
 
 instead of resolving Finding Winged Orb:
 	say "     Walking through what used to be the city park, you're struck by how much the park has changed. The trees haven't been trimmed in forever, grass is now overrunning the sidewalks; the park is not in a good state. An unfamiliar gling catches your eye as you contemplate the park, however, glimmering out from a nearby tree. Carefully looking around, you check to make sure no one is nearby; seeing no creatures present, you carefully approach the tree, wondering what could be shining so brightly.";
@@ -38,19 +43,17 @@ instead of resolving Finding Winged Orb:
 	say "     You roll 1d20 ([dice]) + ([bonus]) versus 14 - You scored [dice plus bonus] in a dexterity check.";
 	if dice + bonus >= 14:
 		say "     Easily able to shimmy yourself up the tree, you find yourself faced with the shining emblem, still buried within the tree. Gripping the emblem with both of your hands and giving the emblem a hard pull, your strength wins out and without a sound, the sigil comes free, shining brightly in the [if daytimer is day]daytime air[else]nighttime air[end if]. Getting a much better look at the sigil, it's definitely an exact representation of the carving on Amuran's sarcophagus; a circle, most likely a representation of the sun, flanked on both sides by large feathered wings. Holding this emblem in your hands, you soon feel raw [']Power['] running through you; if this is any indication as to what power Amuran has, it must be incredible. Storing the sigil in your backpack, you quickly climb down, preparing to continue on your way.";
-		increase carried of winged sun by 1;
-		now Finding Winged Orb is resolved;
+		now Resolution of Finding Winged Orb is 1; [climbed up and grabbed it]
 	else:
 		say "     Doing your best to climb up, you find yourself having trouble scaling the massive tree. Eventually, however, you're able to drag yourself to where the emblem is, still sticking out from the trunk of the tree. Resting on the thick branch you climbed up to, you grab the emblem and pull with all your might. With a quick release, you yank out the sigil; however, the sudden movements unbalance you, and you tumble swiftly to the earth below. A loud [']THUD['] signifies you hitting the ground, a low, pained groan escaping you as you lay there, recovering yourself. You push yourself up after a few moments, your entire body sore after the fall you've just experienced. Glancing up, it seems that your fall has also attracted a local creature!";
 		fight;
 		if lost is 1:
 			say "     Exhausted, sticky, and lying on the ground after your recent defeat, you're at least content that you were able to keep the emblem hidden. Heaving yourself up, you do your best to recover and head out, reminding yourself to give the emblem to Amuran.";
-			increase carried of winged sun by 1;
-			now Finding Winged Orb is resolved;
 		else:
 			say "     Exhausted after your battle, you're still happy that you were able to find one of the sigils that Amuran needs. Hoisting yourself up, you ready yourself to continue, remembering to deliver the emblem to the divine servant.";
-			increase carried of winged sun by 1;
-			now Finding Winged Orb is resolved;
+		now Resolution of Finding Winged Orb is 2; [fell out of the tree]
+	increase carried of winged sun by 1;
+	now Finding Winged Orb is resolved;
 
 Section 2 - Areas and Rooms
 
@@ -124,7 +127,6 @@ The description of Golden Doors is "[GoldenDoorsDesc]".
 
 EgyptianRiddle is a number that varies.
 MenuRiddleNumber is a number that varies.
-calcnumber is a number that varies.
 LastRiddle is a number that varies.
 
 to say GoldenDoorsDesc:
@@ -358,7 +360,7 @@ instead of conversing Amuran:
 		if player consents:
 			say "[AmuranQuestAccept]";
 			now AmuranAwoken is 2;
-			now Finding Winged Orb is unresolved;
+			now Finding Winged Orb is active;
 		else:
 			say "[AmuranQuestReject]";
 			now AmuranAwoken is 3;
@@ -428,11 +430,16 @@ instead of conversing Amuran:
 		say "     After a few days away, it seems that Amuran has returned. In the familiar position of calm meditation, it seems that Amuran has completed his assignment, and seems quite satisfied with the situation. Leisurely ambling up to the stoic beetle-man, you're quite curious as to the conclusion of his quest. Sensing your approach, Amuran casually stands up, visibly content, and dare you say, happy. Asking him how his search went, he leisurely responds, more relaxed than you've ever seen him.";
 		say "     'Well, young one. It took some nights, but I was able to locate the ashen ruins where the lost relic lay. Recovering Horus's ankh was simple enough, though the inhabitants of the heated world proved partly a nuisance; but they could not stand against Horus's light. The lost piece of Horus has been returned, and my lord is quite pleased with the situation; which, of course, pleases me to no end. I have been informed that my services will not be required for as long as Horus's foresight can see; as such, I am free for now. I believe I shall take many seasons to explore and investigate this world again; it has been aeons since I've done so. For manyith a time, young one, I must extend my gratitude for your assistance in recovering the lost sigils; without that, my task would not be done.' Crossing his arms and bowing to you, it seems that Amuran will remain on Earth for a long, long time (most likely for millennia after your death).";
 		now AmuranAwoken is 5;
+		now Sky Tower is active;
 		now HP of Amuran is 6;
 	else if AmuranAwoken is 2:
 		say "     'Have you made progress in your search?' Amuran says to you, his black eyes staring at you questioningly. Informing him that you've yet to find both conduits, Amuran gives you a nod before returning to his meditations.";
 	else:
 		say "     [one of]Amuran looks to be, as usual, meditating in front of the pool of water.[or]'Greetings, young one. Your explorations go well, I hope.'[or]Surprisingly enough, Amuran looks to be reading a thick tome. From what you can see, the book is a treatise on [']modern['] history; modern to Amuran, at least. Where he got the book from, you're not entirely sure. Did he find the library?[or]A low humming permeates the room, the source of which you soon see; Amuran's wings are out, buzzing periodically in the warm air. Even an immortal insect's wings get tired of being confined all the time.[or]'My appreciation for your assistance cannot be overstated, mortal; many thanks to you, once again.'[or]'Have you encountered anything of note in this diseased city, young one?'[or]Amuran can be seen cleaning one of the many priceless relics that are scattered amongst the room; keeping this room clean is obviously a point of pride to him.[at random]";
+
+Table of GameCharacterIDs (continued)
+object	name
+Amuran	"Amuran"
 
 Amuran is a man.
 The description of Amuran is "[AmuranDescription]";
@@ -480,7 +487,7 @@ to say AmuranQuestAccept:
 	say "     Thinking over it for a few more moments and ultimately deciding to offer your assistance to him, you approach the sitting beetle-man and patiently wait for him to notice you. As the minutes tick by, however, it seems that he's too deep in meditation to notice you standing next to him. Politely, you tap him on his chitinous shoulder, trying to get his attention; and with a heavy shift, you do. He swivels his head to look at you, antennae twitching systematically in the sunlight of the sanctuary. A few moments of uncomfortable silence later, you speak up, informing him that you're willing to help him with his predicament.";
 	say "     You let loose a yelp and step back as Amuran reveals his wings, opening up the massive appendages to the cool air. Twitching them rapidly and wildly, he stares ahead a few seconds before folding his wings back against him. 'It appears that I may be indebted to you, young one, if your offer is genuine. It will likely prove the quicker solution, if you truly do wish to help.' Looking at you, it takes a minute for you to realize that Amuran is waiting for an affirmative answer. Confirming that you do, in fact, wish to assist, he bows his head to you as a sign of thanks. 'Your help is quite welcome, and your offer is accepted. One conduit calls from nearby, a place of ancients and living history; another sings from a cultivated wild, soon to be reclaimed by nature; I cannot get a clearer impression as limited as I am. If you are able to find them, please return them to me forthwith; then I shall be able to complete my task.' Having said his piece, Amuran returns to his meditations. Your task now set before you, there are a few places within the city that sound like what he described...";
 	now AmuranAwoken is 2;
-	now Finding Winged Orb is unresolved;
+	now Finding Winged Orb is active;
 
 to say AmuranQuestReject:
 	say "     Deciding against offering Amuran help for now, you leave the insect-man to his meditating and consider coming back later to help.";
@@ -532,8 +539,6 @@ to say FinalQuestConclusion:
 	say "     Approaching you, it's easy to tell that he's rather happy, if the display a moment ago wasn't enough. Again giving you that odd, bugman [']smile['], he begins to speak, the tone of his voice conveying the pleased state he's in.";
 	say "     'My lord Horus is extremely pleased with this turn of events. His ankh has been returned, once lost for millennia. Having finished my task, I have been told that my abilities will not be needed for many years; likely millennia. I believe I wish to use this time to explore your mortal world; it's been many an aeon since I've had the pleasure. Once again, young one, I remain indebted to you; should you need assistance, do not hesitate to request it.' It seems that Amuran, having finished his task, is going to remain here for (definitely) the forseeable future.";
 	now AmuranAwoken is 5;
-
-calcnumber is a number that varies.
 
 to say AmuranSexMenu:
 	now calcnumber is -1;

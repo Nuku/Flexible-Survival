@@ -20,12 +20,14 @@ Instead of Resolving a Reaching the College:
 		say "[bold type]Your score increases by 20![roman type][line break]";
 		increase score by 20;
 		say "     Leaning against one of the buildings, you watch the gorilla football players running around the corner then take a look around again.";
+		now Resolution of Reaching the College is 1; [caught the ball and played it]
 	else if bonus + dice >= 14:
 		say "     You are startled, but manage a few quick steps back to catch the football in your arms. It was a very powerful throw that leaves you a little winded from the force of it, but you've got it. Looking up, you spot a pack of gorillas in football gear charging at you, some running, but most moving on all fours. 'Over here, man,' comes the cry from one side and you spot another gorilla there with his arms up. 'I'm open,' he says. You toss it to him only to have another speedy primate leap in front and body check him to the side to steal the ball. Holding it in one meaty, hand-like foot, he charges off in a new direction with it. The group turns quickly and charges off after the ball, saving you from getting trampled.";
 		LineBreak;
 		say "[bold type]Your score increases by 5![roman type][line break]";
 		increase score by 5;
 		say "     Leaning against one of the buildings, you watch the gorilla football players running around the corner then take a look around again";
+		now Resolution of Reaching the College is 2; [barely caught the ball and played it]
 	else:
 		say "     You don't react in time and the football strikes you rather hard in the head, then bounces off. 'Aww man, fumbled,' the same, burly voice cries before there is a heavy thundering. As your vision is just starting to clear, you get bowled over and trampled by a pack of gorillas in football uniforms chasing after their ball. Their big, heavy hands and feet stomp over you, ignoring you in an attempt to complete the play. By the time you manage to get up after that rough treatment, you can see them continuing on, one of them throwing a pass to someone else around the corner, restarting the whole thing.";
 		LineBreak;
@@ -36,6 +38,7 @@ Instead of Resolving a Reaching the College:
 		say "[bold type]You are reduced to 1 HP![roman type][line break]";
 		now HP of player is 1;
 		say "     Trying your best to ignore your aches, you lean against one of the buildings and look around again. ";
+		now Resolution of Reaching the College is 3; [fumble]
 	say "     Your travels have lead you to the city's college campus. Built beside a major sporting arena, the college's main focus is its sports program, though there are other programs and classes available, you recall. While you never attended college here, you know they have several teams, including football, baseball, track and field and many others. And if those big gorillas are any indication, it looks like there'll be plenty of powerful creatures running around here.";
 	move player to the College Campus Entrance;
 	now battleground is "void";

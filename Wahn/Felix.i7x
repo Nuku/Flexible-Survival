@@ -158,7 +158,11 @@ to say AndreMeeting:
 
 Section 2 - Felix, the centaur
 
-Felix is a man. The HP of Felix is usually 0.
+Table of GameCharacterIDs (continued)
+object	name
+Felix	"Felix"
+
+Felix is a man. The HP of Felix is normally 0.
 The description of Felix is "[FelixDesc]".
 The conversation of Felix is { "Mew!" }.
 lastFelixTalk is a number that varies. lastFelixTalk is usually 555. [turn-counter for talking delays (humanity restoration)]
@@ -340,8 +344,8 @@ Section 3 - Fucking Felix
 
 Instead of fucking the Felix:
 	[puts Centaur Stallion as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Centaur Stallion":
 			now monster is y;
 			break;
@@ -462,7 +466,11 @@ to say FelixSex6: [Felix fucks Andre]
 
 Section 4 - Andre, the lizard
 
-Andre is a man. The HP of Andre is usually 0.
+Table of GameCharacterIDs (continued)
+object	name
+Andre	"Andre"
+
+Andre is a man. The HP of Andre is normally 0.
 The description of Andre is "[AndreDesc]".
 The conversation of Andre is { "Mew!" }.
 lastAndreTalk is a number that varies. lastAndreTalk is usually 555.	     [turn-counter for talking delays (humanity restoration)]
@@ -552,12 +560,12 @@ to say Plains Lizard wins:
 to say Plains Lizard loses:
 	say "     After having taken quite a few of your blows, the big lizard turns and flees, dashing off quickly through the high grass. With the beating you've given him, you don't think he'll be back anytime soon. Oh, and seems like he dropped something - a leather pouch, with Felix name written on it. You take it with you. Might be best to ask the young centaur about it.";
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Plains Lizard";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -605,15 +613,16 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 5 - Fucking Andre
 
 Instead of fucking the Andre:
 	[puts Plains Lizard as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Plains Lizard":
 			now monster is y;
 			break;

@@ -19,6 +19,10 @@ East of Beach Exit is Outside Exploration.
 instead of sniffing the beach plaza:
 	say "The seashore is near. There is salt in the air.";
 
+Table of GameCharacterIDs (continued)
+object	name
+Bronze Crab	"Bronze Crab"
+
 Bronze Crab is a man. Bronze Crab is in Beach Plaza.
 The description of Bronze Crab is "[BronzeCrabDesc]".
 The conversation of Bronze Crab is { "<This is nothing but a placeholder!>" }.
@@ -304,13 +308,9 @@ instead of entering the Confession Booth:
 				now lastfuck of Brennan is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "     Leave the confessional?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You mumble a soft goodbye and thank-you, then leave the confessional, stepping back out into the church.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You mumble a soft goodbye and thank-you, then leave the confessional, stepping back out into the church.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

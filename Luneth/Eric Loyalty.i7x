@@ -7,7 +7,7 @@ Version 1 of Eric Loyalty by Luneth begins here.
 [   2: Gained a loyalty point                                         ]
 [   3: Continuation                                                   ]
 
-[ OrcPillMpreg of Eric                                                ]
+[ EricOrcPillMpreg                                                ]
 [   0: Eric knows nothing of the pills and has not been dosed         ]
 [   1: Eric knows about the orc pills                                 ]
 [   2: Eric has taken a romantic orc pill                             ]
@@ -15,7 +15,7 @@ Version 1 of Eric Loyalty by Luneth begins here.
 [  11: Eric was dosed with orc pills                                  ]
 
 
-[ PregTimer of Eric                                                   ]
+[ EricPregTimer                                                   ]
 [     0: not pregnant                                                 ]
 [  1-12: visibly pregnant by the player                               ]
 [ 13-24: invisibly pregnant by the player                             ]
@@ -82,13 +82,9 @@ to say EricOfferingMenu:
 					say "[EricOfferingTalk4]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You decide to keep the supplies you have to yourself, at least for now.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You decide to keep the supplies you have to yourself, at least for now.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -170,11 +166,11 @@ to say EricTalk21:
 				WaitLineBreak;
 				say "     Sweat pours off of the young athletes body, making his skin glisten in the yellow lights of the bunker. You can feel yourself getting close to shooting your load inside of the willing body in heat, but when you attempt to mention this to Eric, his only response is to groan out how good he feels. Quickening the pace of your thrusts, you take the redhead's [if (HP of Eric is 21 or HP of Eric is 22)]centaur cock[else if (HP of Eric is 31 or HP of Eric is 32)]satyr cock[else if (HP of Eric is 41 or HP of Eric is 42)]orc cock[end if] in one hand and begin to pump him at a furious speed. The sounds coming from your lover mixed with the tightness of his hole is too much for you to bear, and your orgasm hits you hard, your cum filling up the college guy's ass in heavy, forceful bursts. While still in the throes of your own orgasm, you feel Eric's hole tighten around even further, a surefire sign that he is fast approaching his own.";
 				say "     As you continue to stroke Eric's [if (HP of Eric is 21 or HP of Eric is 22)]horse dick, you make sure to pay special attention to his medial ring and watch as the head of his prick flares out further.[else if (HP of Eric is 31 or HP of Eric is 32)]goat dick, you make sure to pay special attention to his tapered tip and low hanging furry balls.[else if (HP of Eric is 41 or HP of Eric is 42)]orc dick, you make sure to pay special attention to his thick veiny shaft and fully swaying balls.[end if] Finally, the redhead's cock explodes, blasting his chest with his own thick load, and every shot of cum that leaves his body causes his ass to tighten around your cock, milking you like a sultry vice. As both of your orgasms start to die down, you slowly begin to pull your cock out of Eric's hole. Afterwards, you take a seat on the edge of the young athlete's bed, in an attempt to catch your breath. Your attention is brought back to your lover as you hear soft snoring coming from him, and you chuckle a bit to yourself before getting up and pulling the blanket up around Eric, making sure he is kept warm. You gently run your fingers through his short red hair before leaning forward and placing a soft kiss on his lips. You get dressed and head back out into the city, a smile on your face as you leave.";
-				now OrcPillMpreg of Eric is 2;
+				now EricOrcPillMpreg is 2;
 			else: [casual]
 				say "     You explain to Eric that you honestly are just making an offer to him. Now that he is fully male again, certain options have become closed off to him, and the two of you had never discussed the pros and cons of some of the choices that have been made. 'You're talking about the fact that I could get pregnant before but now I can't? I mean, to be completely honest, I never really put any thought into that part of the change.' You explain to Eric that the world has changed after the incident and that more than likely, it will never be the same again, it might be best to keep his options open. Even if he never makes full use of the pills, they are still something to consider.";
 				say "     'I guess that I can understand your point of view. Ever since my body went through the change that it did, I have been thinking about guys a lot. I mean like [italic type]a lot[roman type]. I thought that becoming part girl was the main reason for it, but I'm still having those thoughts even after you helped fix my problem. Don't get me wrong, I still love women, but with the way my thoughts have been working lately, I'm starting to think that I may have been limiting myself.' You and Eric continue to talk about the changes he has gone through both physically and emotionally, and the redhead seems to really appreciate you listening to his worries. 'Alright, hand over one of those pills. I can't guarantee that I will take it, but you're right that I should try to keep my options open!' After handing Eric one of the small pills, you are rewarded with another of his trademark smiles.";
-				now OrcPillMpreg of Eric is 3;
+				now EricOrcPillMpreg is 3;
 				say "[EricTalkMenu]"; [looping back into the menu]
 	else if calcnumber is 2:
 		LineBreak;
@@ -195,25 +191,25 @@ To impregEricChance with (x - text):
 		say "     DEBUG: Mpreg Chance for Eric, base chance 40%, ";
 		say "Father: [x]";
 		LineBreak;
-		if Pregtimer of Eric > 0:
+		if EricPregTimer > 0:
 			say "     ERROR - Already pregnant!";
 	let EricPregChance be 4; [40% base chance]
-	if "Contraception" is not listed in Traits of Eric and Pregtimer of Eric is 0 and a random chance of EricPregChance in 10 succeeds:
+	if "Contraception" is not listed in Traits of Eric and EricPregTimer is 0 and a random chance of EricPregChance in 10 succeeds:
 		if debugactive is 1:
 			say "     Impregnation successful! A new baby is growing in Eric now!";
-		now Pregtimer of Eric is 1; [starts the pregnancy timer]
-		now CurrentBabyDaddy of Eric is x;
+		now EricPregTimer is 1; [starts the pregnancy timer]
+		now EricCurrentBabyDaddy is x;
 	else:
 		if debugactive is 1:
 			say "     Impregnation fail! A chance of [EricPregChance] in 10 didn't succeed.";
 
 an everyturn rule:
-	if Eric is bunkered and OrcPillMpreg of Eric > 1:
-		if PregTimer of Eric > 0: [Eric is pregnant]
-			increase PregTimer of Eric by 1; [counting up towards 24]
+	if Eric is bunkered and EricOrcPillMpreg > 1:
+		if EricPregTimer > 0: [Eric is pregnant]
+			increase EricPregTimer by 1; [counting up towards 24]
 			if debugactive is 1:
-				say "     DEBUG: Eric's pregnancy advanced one turn. Current Turn: [PregTimer of Eric], Target Value: 24";
-			if PregTimer of Eric >= 24 and skipturnblocker is 0: [birthing time]
+				say "     DEBUG: Eric's pregnancy advanced one turn. Current Turn: [EricPregTimer], Target Value: 24";
+			if EricPregTimer >= 24 and skipturnblocker is 0: [birthing time]
 				if Eric is not visible: [player isn't anywhere near him]
 					say "     [bold type]Your thoughts wander back to Eric, and you feel a need to go check in on him.[roman type][line break]";
 				else: [player is next to Eric]
@@ -222,12 +218,12 @@ an everyturn rule:
 					say "     Flinging the soaked garment aside, you turn back to Eric a second later. He is panting rapidly by now, his hands clawing at the ground as a fairly strong contraction hits. While pregnancy and birth may be a lot quicker these days, it doesn't look like they are all that much easier than before. The curve of your <slave/friend/companion>'s' belly heaves with another contraction, followed by a breathless groan from him, and you can see his pucker stretching around something pushing from the inside, opening up more and more. In the heat of the moment, you don't spare a second thought before rushing forward to take position between his legs, hands outstretched. Then the next contraction hits, this time bringing with it a flexible egg-sack that pops past the strained opening in a rush of natural lube. You catch it and see the tiny shape moving on the inside, soon after tearing its way into the world and taking its first breath of air. It is a <orc/centaur/satyr>, looking terribly cute, even though it may be dripping with the fluids that filled the egg.";
 					WaitLineBreak;
 					say "     The tiny <orc/centaur/satyr> lets out a whimper at finding itself in a strange new world outside of its parent, then starts to weakly move its limbs as if to try them out for the first time. Focused on the miracle of life in your hands, you are only shaken out of watching the baby when Eric calls out to you tiredly, 'I want to see it too. A little help here, please?' Reaching out to take his weakly grasping hand, you pull the worn-out young man up into a sitting position, then lay the child into his arms, drawing a happy sigh from your  <slave/friend/companion>. He guides the <orc/centaur/satyr>'s little mouth to a nipple on his flat chest, around which the newborn happily closes their lips. As the tiny being greedily gulps down what they can drink from Eric's breast, <he/she> grows noticeably larger with each passing second. Tiny as the <orc/centaur/satyr> may have been, <he/she> seems in a rush to catch up now, growing so fast that <he/she> skips the stages of toddler, child, and young teen entirely.";
-					if CurrentBabyDaddy of Eric is "player": [player's kid]
+					if EricCurrentBabyDaddy is "player": [player's kid]
 						say "     Now that the <orc/centaur/satyr> is growing up right before your eyes, you do recognize a bit of yourself in <him/her>. They are definitely still <orc/centaur/satyr> through and through, but there's just something about the way they look and act that makes it more than clear in your mind that they're yours. Soon having finished with their drinking from Eric, creating the strange sight of an eighteen-year-old curled against Eric's side and suckling from him, the young <man/woman> seems sated for now and raises <his/her> head, intelligent eyes taking in the whole new world around <him/her>. Reaching out with a fully grown arm for the first time, Eric's offspring gives your arm a squeeze, saying hello to the person who greeted <him/her> into the world. <...detailed accounting where the young adult ends up>";
-					else if CurrentBabyDaddy of Eric is "Urik": [Urik's kid]
+					else if EricCurrentBabyDaddy is "Urik": [Urik's kid]
 						say "     ...";
-				increase OffspringCount of Eric by 1;
-				increase PregCount of Eric by 1; [number of previous pregnancies]
-				now PregTimer of Eric is 0; [resets pregnancy]
+				increase EricOffspringCount by 1;
+				increase EricPregCount by 1; [number of previous pregnancies]
+				now EricPregTimer is 0; [resets pregnancy]
 
 Eric Loyalty ends here.

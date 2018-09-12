@@ -13,6 +13,10 @@ Haroldfucked is a number that varies. Haroldfucked is usually 0.
 tattoohunter is a number that varies.
 Harold is in The Palomino.
 
+Table of GameCharacterIDs (continued)
+object	name
+Harold	"Harold"
+
 Harold is a man.
 The description of Harold is "     Standing behind the bar is a well-built and rather horse-like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons. His slightly hoof-like hands not seeming to slow him down at all. A black leather vest resting against his pure white fur makes him look even more striking due to the sharp contrast of colors. Even more striking however is the spiraling horn emerging from the center of the equine's forehead. Its pearlescent sheen catching and reflecting the colored lights of the club, and making it seem to shimmer and burn with a small rainbow of color every time the unicorn bartender moves his head. Catching you looking in his direction, the equine barkeep winks at you and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.".
 The icon of Harold is Figure of Harold_icon.
@@ -239,8 +243,8 @@ to say dc_fuckedbyharold:
 
 to unicornify:
 	[puts Unicorn as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Unicorn":
 			now monster is y;
 			break;
@@ -261,6 +265,9 @@ LastDrinkserved is a number that varies. LastDrinkserved is usually 250.
 Drinkserved is a number that varies. Drinkserved is usually 0.
 Drink bar is in The Palomino.
 
+Table of GameCharacterIDs (continued)
+object	name
+Drink bar	"Drink bar"
 
 Drink bar is a man.
 The description of Drink bar is "[drinkbardesc]".

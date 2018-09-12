@@ -47,14 +47,17 @@ Instead of resolving a Another Doctor:
 	say "     'My name is Dr. Moffatt, and I am, or was, to be more accurate, the Head of Psychology at this hospital before things became much more interesting.' She runs a gloved paw down the front of her skirt and over her bloated cock, making it twitch a little. 'And while our new hospital director,' she says in a slightly derisive tone, '[if HP of doctor mouse is not 2]is[else]was[end if] quite pleased to study his precious, little nanites, I'm more interested in psychological aspects of the change. As such, I was hoping to find someone willing to help me out.";
 	if skunkbeaststatus is 1:
 		say "     'But now that I've looked you over, it seems you've been too tainted by those rather mundane forest skunks and would not at all be a suitable candidate for my main research. It's most unfortunate - you're rather cute, but I have other options. Come find me when you can,' she says. She pulls a small keycard out of her pocket and hands it to you. 'Much of the hospital's halls have been barricaded or locked, but this card will let you get through those sealing off the Psych Department. Come stop by my office and we'll talk more.' With a final grin before turning and flicking her tail and heading off. Still a little stunned by voluptuous skunk woman, it takes you a few moments to recover, grab your stuff and head out.";
+		now Resolution of Another Doctor is 1; [Blocked by Skunkbeast infection]
 		now XP of Doctor Moffatt is 2;
 	else if jackalmantf > 0 or jackalboytf > 0 or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100):
 		say "     'But now that I've looked you over, it seems you've gone and become too tainted by some strangely persistent infection. It keeps you from being a suitable candidate at all. It's most unfortunate - you're rather cute, but I have other options. Come find me when you can,' she says. She pulls a small keycard out of her pocket and hands it to you. 'Much of the hospital's halls have been barricaded or locked, but this card will let you get through those sealing off the Psych Department. Come stop by my office and we'll talk more.' With a final grin before turning and flicking her tail and heading off. Still a little stunned by voluptuous skunk woman, it takes you a few moments to recover, grab your stuff and head out.";
+		now Resolution of Another Doctor is 2; [Blocked by Jackal infection]
 		now XP of Doctor Moffatt is 2;
 	else:
 		say "     '[if wrcursestatus >= 3 and wrcursestatus < 7]You do seem to have something strange and primal about you, but that should only make things more interesting, don't you think? [end if]Certainly someone as clever and brave as yourself wouldn't be scared of a little experimenting,' she says, again teasing with the last word as she leans forward onto a small table to press her ample bosom out. Your eyes locked on her strangely alluring body, you [if charisma of player < 16]mumble something about wanting to help her[else]suavely say that one always has be open to experimenting these days[end if]. She giggles merrily at your reply and pulls a small keycard out of her pocket. 'Much of the hospital's halls have been barricaded or locked, but this card will let you get through those sealing off the Psych Department. Come stop by my office and we'll talk more.'";
 		WaitLineBreak;
 		say "     Having given you the limited pass card and some directions, the hyperskunk woman gives you another grin before heading out, her tail giving a broad swish as she sways her ample hips. 'Please don't keep me waiting too long, my dear. I could just about burst with excitement,' she says teasingly as she looks back at you over her shoulder. Still a little stunned by voluptuous skunk woman, it takes you a few moments to recover, grab your stuff and head out. As you debate going to visit her to see what she has in mind, you look over the pass card. At least this will make it a little easier to get around the hospital.";
+		now Resolution of Another Doctor is 3; [Wereraptor infection]
 	now Psych Department is known;
 	now HP of Doctor Moffatt is 1;
 	increase hospnav by 1;
@@ -118,6 +121,10 @@ the scent of Psych Department is "The room smells strongly of its sexy skunk occ
 
 Section 3 - Doctor Moffatt
 
+Table of GameCharacterIDs (continued)
+object	name
+Doctor Moffatt	"Doctor Moffatt"
+
 Doctor Moffatt is a person. Doctor Moffatt is in Psych Department.
 The description of Doctor Moffatt is "[drmoffattdesc]".
 The conversation of Doctor Moffatt is { "..." }.
@@ -145,8 +152,8 @@ to say drmoffattdesc:
 
 Instead of conversing the Doctor Moffatt:
 	[puts Hyperskunk as lead monster in case of infection/impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Hyperskunk":
 			now monster is y;
 			break;
@@ -212,8 +219,8 @@ to say skunkPathDialogue:
 		say "     With the changes continuing, but this time in an upward direction, your waist grows fuller. You'd not be called fat, but there's a little extra padding there to flow into those wide hips. Continuing up, your upper body again shifts to more normal proportions for your torso, shoulder and arms, again making your caboose stand out. They almost seem slender in comparison, but are quite lovely and would suit a model or actress, which you say to Dr. Moffatt. She continues to take note of your answers, only pausing on occasion to rub her cock and balls or tweak a nipple.";
 		wait for any key;
 		now bodyname of player is "Hyperskunk";
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Hyperskunk":
 				now monster is y;
 				break;
@@ -305,8 +312,8 @@ to say sexwithDrMoffattHypnoPath:
 		say "     'Right now?' If you do not mind, I would like to work with you some more. Once you are in the proper state of mind... Who knows?'";
 
 to say sexwithDrMoffattSkunkPath:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Hyperskunk":
 			now monster is y;
 			break;
@@ -629,8 +636,8 @@ an everyturn rule:
 
 to hyperskunkdose:
 	[puts Hyperskunk as lead monster in case of infection/impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Hyperskunk":
 			now monster is y;
 			break;

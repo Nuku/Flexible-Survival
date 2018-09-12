@@ -93,11 +93,12 @@ An everyturn rule:
 		say "You remember the [bold type]challenge of the viking chieftain[roman type] against you - running out right about now, your time being up. With you not even showing up, now they'll see Sonya as doubly dishonored - losing in combat against an outlander (with most of them suspecting you of magic or some trickery), who additionally isn't even brave enough to fight her father. Hopefully, you won't run into any of them again, as this'll enrage all of them - even Sonya - a lot. She'd likely try to kill you...";
 		now VikingUltimatum is 0;
 		now Chieftain's Challenge is resolved;
-		repeat with y running from 1 to number of filled rows in Table of random critters:
-			choose row y in table of random critters;
+		now Resolution of Chieftain's Challenge is 99; [failed to show up]
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Viking":
 				now monster is y;
-				now area entry is "nowhere";
+				now area entry is "Nowhere";
 				break;
 	else if VikingUltimatum is 8:
 		say "Time's ticking away if you want to fight for Sonya. The [bold type]chieftain's challenge[roman type] you can answer on the beach will run out today, so better grab your gear now and get moving - but watch out, the man will actually try to kill you...";
@@ -712,7 +713,7 @@ to say VikingDesc:
 			now VikingPregnancy is 0;    [reset into receptive state]
 	else if VikingRelationship is 7: [Sonya is on the ship, her cousin appears and offers an ultimatum]
 		now VikingUltimatum is 24;    [72h to appear for the challenge]
-		now Chieftain's Challenge is unresolved;
+		now Chieftain's Challenge is active;
 		if the player is not facially human or the player is not bodily human or the player is not skintone human: [they see the player as a monster]
 			say "     Walking along the beach, you suddenly find yourself confronted with two male Vikings, rushing towards you as they spot you. The young blond men in light scale mail carry round shields and brandish sharp-looking axes - and are pretty enraged. Seems like your previous encounters Sonya didn't go over too well with these two... brothers, you'd say, from their similar looks. For a moment, it looks like one of them would just keep coming and attack you, until he's stopped in his tracks by the other calling out 'Stop, Svetjalf. This... creature is not ours to slay. We've got a message to deliver.'";
 			say "     The Viking turns to you and continues with a snarl 'So you're the beast that despoiled our cousin? How did you beat her in a fight - or make her believe you did? Magic? Some other treachery? Clearly you've got her controlled somehow, or she wouldn't praise an outlander beast so highly. Bah.' He spits in the sand before your feet. 'Our chieftain Frithjof sent us to pass on a message. He calls upon you, the one who dishonored his daughter, to come to those big rocks at the end of the beach during the next three days. You'll fight - in front of the rest of the clan, to prevent any of your tricks - and he'll spill your guts on the sand. If you at least have the decency to appear and die like a man would, that'll restore some honor to Sonya...' With that said, he and his brother give you a final angry stare, then turn around and walk off to a waiting rowboat some way along the beach.";
@@ -746,12 +747,12 @@ to say VikingAttacks:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Viking";
 	now enemy title entry is "Viking Warrioress";
 	now enemy name entry is "Sonya";
@@ -799,13 +800,14 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;         [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;         [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Events
 
-Chieftain's Challenge is a situation. The level of Chieftain's Challenge is 1. Chieftain's Challenge is resolved.
+Chieftain's Challenge is a situation. The level of Chieftain's Challenge is 1. Chieftain's Challenge is inactive.
 The sarea of Chieftain's Challenge is "Beach".
 
 Instead of resolving a Chieftain's Challenge:
@@ -821,12 +823,12 @@ Instead of resolving a Chieftain's Challenge:
 		say "     Everyone goes silent as a large and muscular man steps forward into the ring of people, pretty imposing in scale-mail armor. He's got the bearing of a seasoned fighter and is armed with a wickedly sharp-looking axe and a large round shield. From his scowl at you and the similar looks, this must be Sonya's father.";
 	LineBreak;
 	now VikingRelationship is 9;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Viking":
 			now monster is y;
 			break;
-	choose row monster from the table of random critters;   [the chieftain is stronger than Sonya]
+	choose row monster from the Table of Random Critters;   [the chieftain is stronger than Sonya]
 	now HP entry is 275;
 	now monsterHP is 275;
 	now lev entry is 15;
@@ -839,18 +841,19 @@ Instead of resolving a Chieftain's Challenge:
 		say "     [VikingDuelEscape]";
 	else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 		say "     [VikingDuelVictory]";
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Viking":
 			now monster is y;
 			break;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now HP entry is 80;
 	now monsterHP is 80;
 	now lev entry is 9;
 	now wdam entry is 15;
 	now lootchance entry is 40;
 	now Chieftain's Challenge is resolved;
+	now Resolution of Chieftain's Challenge is 1; [fought and won (or died)]
 	now VikingUltimatum	is 0;  [finished, one way or another]
 
 to say VikingDuelDeath:
@@ -864,8 +867,8 @@ to say VikingDuelEscape:
 	say "     After you showed up to fight, it seems the Vikings assumed you had the honor to see it through till the end - which is why you totally managed to surprise them when you suddenly took off. You broke out of the circle of watchers, bowling two of them over and running away before they even realized what was happening. After a moment of shock, the gathered onlookers took up chase, throwing rocks and even one or two axes after you, resulting in many bruises and even a moderately severe cut.";
 	say "     Followed by shouts of 'Coward', 'Wimp' and lots of worse terms, you're hunted almost to exhaustion by the enraged mob. Only by dashing through what looked like some talk or negotiation between the hyenas and leopardmen did you finally manage the lose them. Before the representatives of the two gangs managed to react with anything but growls at your sudden appearance, the viking lynch-mob ran straight into them, causing a free for all fight. Not even looking back to check what was happening there or if anyone was still following you, you just kept going until you finally arrived at the library, bloodied and exhausted.";
 	now HP of player is 1;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Viking":
 			now monster is y;
 			break;
@@ -1031,7 +1034,11 @@ Section 5 - NPC Sonya
 If you can add Sonya to the viking longboat, along with discussion topics and a sex scene, just fingers and body contact for women, the guy on top for the other gender. I'd like her to have some scaling conversation about how many children she and the PC have had, some conversations and pointers about interesting events at the Beach for the player to look for. I'm keeping this one simple for the time being.
 ]
 
-Sonya is a woman. The HP of Sonya is usually 0.
+Table of GameCharacterIDs (continued)
+object	name
+Sonya	"Sonya"
+
+Sonya is a woman. The HP of Sonya is normally 0.
 Sonya is in Sonya's Cabin.
 The description of Sonya is "[SonyaDesc]".
 The conversation of Sonya is { "Mew!" }.
@@ -1232,13 +1239,9 @@ to say SonyaSexMenu:
 					say "[SonyaSex3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the sexy viking, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the sexy viking, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -1363,13 +1366,9 @@ to say SonyaArrivalSexMenu:
 					say "[SonyaArrivalSex2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the beautiful viking, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the beautiful viking, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -1501,8 +1500,8 @@ to say mead horn use:
 	VikingInfect;
 
 to VikingInfect:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Viking":
 			now monster is y;
 			break;

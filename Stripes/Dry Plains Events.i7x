@@ -12,7 +12,7 @@ The sarea of Creeping Grass is "Plains".
 Instead of resolving a Creeping Grass:
 	say "     As you check out a few fallen buildings, you notice that the rubble pile has already been partially covered by the dry grasses of the plains. Somehow, despite their recent collapse, the plains are already starting to cover and reclaim them. Checking more closely and prodding it with a stick, you can see that the grass roots, instead of burrowing into the soil, have climbed up the fallen beams and boards, spreading to grow fresh grass overtop of them. Putting some weight on the covered spot, it breaks and crumbles easily, showing that the grasses are breaking down and destroying the ruins they cover.";
 	increase score by 1;
-	Now Creeping Grass is resolved;
+	now Creeping Grass is resolved;
 
 
 Section 2- Ranch House
@@ -23,7 +23,7 @@ The sarea of Ranch House is "Plains".
 Instead of resolving a Ranch House:
 	say "     You come the ruins of what was probably a ranch house. You search through the broken home, but find nothing of use or value. Looking around, you see that some of the fence still stands and notice a second fallen structure. Going over, you can quickly tell that this was once a small stable from the smell of horses hanging over it. You take care where you step, avoiding the dark messes as well as the white ones from equine cum. Hoof-prints in the dirt around the stable head off into the plains where the transformed horses probably live now in some altered form.";
 	increase score by 1;
-	Now Ranch House is resolved;
+	now Ranch House is resolved;
 
 
 Section 3- Soaring Eagle
@@ -34,7 +34,7 @@ The sarea of Soaring Eagle is "Plains".
 Instead of resolving a Soaring Eagle:
 	say "     Taking a short break under one of the rare trees on the plains, you spot a shadow drift across the ground. Looking up, you spot an eagle high up in the sky. As you watch it, you notice that it is not a normal eagle, but some kind of eagle man. Deciding to take no risks, you wait in the shadow of the tree until he passes from sight.";
 	increase score by 1;
-	Now Soaring Eagle is resolved;
+	now Soaring Eagle is resolved;
 
 
 Section 4- Partial Ruin
@@ -59,12 +59,14 @@ Instead of resolving a Partial Ruin:
 	challenge "Prairie Dog";
 	if lost is 1:
 		say "     Before leaving the area, the prairie dogs rummage through the ruins of the building, taking the last few items of value before disappearing back under the earth, leaving the rubble to be reclaimed by the plain and made into more pristine grasslands.";
+		now Resolution of Partial Ruin is 1; [Failed to scavenge anything]
 	else:
 		say "     Having beaten them into retreat, you search through the ruins of the store they destroyed. It seems that little of value remained in here even before they tore the place down from below. You do manage to find a couple of cans of food undamaged by the collapse. After storing it away, you dust yourself off you leave the ruined store behind to be reclaimed by the grasslands, as the burrowing prairie dogs would rather have it.";
 		say "     Food x2 obtained.";
 		increase carried of food by 2;
 		increase score by 5;
-	Now Partial Ruin is resolved;
+		now Resolution of Partial Ruin is 2; [Successfully scavenged food]
+	now Partial Ruin is resolved;
 
 
 Section 5- Hardware Store Ruins
@@ -77,7 +79,7 @@ Instead of resolving a Hardware Store Ruins:
 	say "     Spiked club obtained!";
 	increase carried of spiked club by 1;
 	increase score by 5;
-	Now Hardware Store Ruins is resolved;
+	now Hardware Store Ruins is resolved;
 
 
 Table of Game Objects (continued)
@@ -105,6 +107,7 @@ Instead of resolving a Hunting Party:
 	if Nightmaremastery is 1:
 		say "     Recognizing you as their leader, they nod respectfully and start giving you a report on their activity out here. While they had been hopeful that the equine centaurs could be encouraged to join the staff at the Stables, they seem quite reluctant, and even violent, about the prospect. Not taking no for an answer, the horsemen have been trying to capture some of the female centaurs to [']encourage['] them to come along. Squirming under your gaze as you keep questioning them, they report that they haven't yet been successful, as the four-legged centaurs are much faster than them. You order them back to their task and warn them that you expect results or you'll be seeing them in your office. Taking a mental note of their names, you find yourself equally looking forward to either their success or their failure, as either will get you some new mares to fuck.";
 		increase score by 10;
+		now Resolution of Hunting Party is 1; [Nightmare met horsemen]
 	else:
 		say "     Their stallionhoods are hanging from their sheaths at the ready after their invigorating chase. It seems this pair has decided that you'll be a good enough to satisfy them. Clearly looking as much for a fight as they are sex, they laugh and arrogantly decide to take turns facing you, feeling quite confident.";
 		now horsefight is 1;
@@ -114,7 +117,8 @@ Instead of resolving a Hunting Party:
 		say "     Done with both of them, you decide to get moving before their friends come back for their comrades... and perhaps decide that you'd be a fine addition for their stables as well.";
 		now horsefight is 0;
 		increase score by 1;
-	Now Hunting Party is resolved;
+		now Resolution of Hunting Party is 2; [Fought horsemen]
+	now Hunting Party is resolved;
 
 
 Section 7- Pit Trap
@@ -140,6 +144,7 @@ Instead of resolving a Pit Trap:
 			increase carried of food by 1;
 			increase score by 5;
 			decrease humanity of player by 5;
+			now Resolution of Pit Trap is 1; [Stole bag, Bunker or Caught Outside Scenario]
 		else:
 			say "Pocketknife, medkit and food obtained.";
 			increase carried of pocketknife by 1;
@@ -147,6 +152,7 @@ Instead of resolving a Pit Trap:
 			increase carried of food by 1;
 			increase score by 10;
 			decrease humanity of player by 5;
+			now Resolution of Pit Trap is 2; [Stole bag, Other Scenarios]
 	else:
 		say "     Quickly digging out the rope, you start securing it to a large rock nearby. The soldier keeps babbling his thanks to you. But as you try to warn him to be quiet, it is too late. Emerging from hidden holes in the ground come numerous three foot prairie dog creatures. One of them waves her shovel at you. 'Hey now! You leave that alone. We caught it fair and square! That one's ours,' she says, crossing her fluffy arms over her large breasts. ";
 		if bodyname of player is "Prairie Dog" and facename of player is "Prairie Dog" and skinname of player is "Prairie Dog":
@@ -163,22 +169,24 @@ Instead of resolving a Pit Trap:
 		else:
 			say "     'And maybe we'll have some fun with you as well,' she says with a growl. 'Get [']em, girls,' she says, raising her shovel and charging. The poor soldier, having just managed to get himself up the rope, finds himself swarmed with a pack of horny prairie dogs.";
 			say "[prairiedogfight]";
-	Now Pit Trap is resolved;
+	now Pit Trap is resolved;
 
 to say prairiedogfight:
 	challenge "Prairie Dog";
 	if lost is 1:
 		say "     During your unsuccessful fight with the burrowing rodents, the soldier was easily taken down as well and fucked roughly by the lustful prairie dogs. After having their way with you both, they drag the soldier and his gear down underground with them as they make their escape to finish claiming their prize, leaving only his torn clothes behind. You get up slowly, feeling glad you didn't end up joining him in his fate, though partially longing to discover what it would be like as well. Feeling still flush from the vigorous lovemaking of the coterie of rodents, you think it best you head off before you do anything rash.";
 		decrease score by 10;
+		now Resolution of Pit Trap is 3; [Fought Prairie Dogs, Lost]
 	else:
 		say "     Defeating the prairie dogs, you manage to drive them off. Luckily, you were able to deal with them in time and the soldier still seems to be human. He thanks you profusely for your help and gathers up his gear. He searches through his pack and, needing the medkit for his own injuries, passes you his rations, saying he'll have to head back to base to report in on this new hazard in the area. You wish him well and head your separate ways, feeling much better about yourself.";
 		increase carried of food by 1;
 		increase score by 25;
 		increase humanity of player by 5;
 		increase morale of player by 3;
+		now Resolution of Pit Trap is 4; [Fought Prairie Dogs, Won]
 
 to say prairiedogsex:
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	setmonster "Prairie Dog";
 	say "     Looking from your fellow rodents to the human soldier, you nod at the offer and the reach to grab him. He struggles a little, but superior numbers have him down soon enough. Numerous little paws grab at his clothes and strip him bare. The one prairie dog you spoke with motions for you to pick a spot to have a go at him";
 	if player is herm:
@@ -193,7 +201,7 @@ to say prairiedogsex:
 	else if player is male:
 		say ".";
 		WaitLineBreak;
-		say "     Deciding to get have a go at his ass, you boost his hips up and drive your cock slowly into him[if cock length of player > 12]. It takes some effort to stuff your big meat into the soldier's tight rump, you it is well worth it when you do[end if]. His ass is snug and warm around your pistoning shaft. His cock throbs and twitches as you fuck him as you watch the others scramble atop him, stroking and teasing him all over. Their leader drives her hard shaft into his mouth, fucking his face until he starts moaning and sucking on it hungrily. Another is helped up so she can get his cock into her dripping snatch. Another moves in behind you and, with your cooperation, sinks her throbbing shaft into your tight asshole to give you the same treatment you're giving the soldier. You moan in pleasure at the sensation of fucking and being fucked at once, and the knowledge that you're corrupting this poor soldier making it all the better. You can feel the sandy brown fur spreading over his hips and then up his body and breasts form on his chest. Two lucky rodents get their muzzles onto them and start sucking his nipples, getting him to moan and cum into the rodent in front of you, draining away his human seed to be replaced by much better prairie dog semen as he transforms. He is now well on his way to becoming a prairie dog herm. Lost in the lust of transforming a human, you cum hard, blasting your cum into his ass while the one behind you fills your rump in return. Sated, you cede your place, allowing their leader to move in to take his new pussy's virginity.";
+		say "     Deciding to have a go at his ass, you boost his hips up and drive your cock slowly into him[if cock length of player > 12]. It takes some effort to stuff your big meat into the soldier's tight rump, you it is well worth it when you do[end if]. His ass is snug and warm around your pistoning shaft. His cock throbs and twitches as you fuck him as you watch the others scramble atop him, stroking and teasing him all over. Their leader drives her hard shaft into his mouth, fucking his face until he starts moaning and sucking on it hungrily. Another is helped up so she can get his cock into her dripping snatch. Another moves in behind you and, with your cooperation, sinks her throbbing shaft into your tight asshole to give you the same treatment you're giving the soldier. You moan in pleasure at the sensation of fucking and being fucked at once, and the knowledge that you're corrupting this poor soldier making it all the better. You can feel the sandy brown fur spreading over his hips and then up his body and breasts form on his chest. Two lucky rodents get their muzzles onto them and start sucking his nipples, getting him to moan and cum into the rodent in front of you, draining away his human seed to be replaced by much better prairie dog semen as he transforms. He is now well on his way to becoming a prairie dog herm. Lost in the lust of transforming a human, you cum hard, blasting your cum into his ass while the one behind you fills your rump in return. Sated, you cede your place, allowing their leader to move in to take his new pussy's virginity.";
 	else:
 		say ".";
 		WaitLineBreak;
@@ -203,6 +211,7 @@ to say prairiedogsex:
 	now libido of player is libido of player / 2;
 	decrease humanity of player by 20;
 	increase score by 25;
+	now Resolution of Pit Trap is 1; [Had sex with Soldier]
 
 
 Section 8 - Watering Hole
@@ -215,7 +224,7 @@ when play begins:
 
 
 Instead of resolving a Watering Hole:
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	setmonster "Bald Eagle";
 	say "     In a depression in the grassy plains, you find a greener spot around a small pond. But there is an eagle man bathing himself in the water and clearly enjoying it. The avian creature strokes his hard cock, leaking precum into the water. Focused on his own fun, he hasn't spotted you yet. Shall you approach the bathing bird (Y) or take this opportunity to leave (N) while you still can?";
 	if player consents:
@@ -237,12 +246,14 @@ Instead of resolving a Watering Hole:
 			decrease humanity of player by 15;
 			now thirst of player is 0;
 			increase score by 25;
+			now Resolution of Watering Hole is 1; [Had sex with eagle]
 		else:
 			say "     He seems upset that you've refused his offer, but lets you approach the pond to take some water regardless. His hands move back to his cock, stroking and pumping at it casually. As you lean in to take some water though, he quickly swoops in to attack you and you stumble back a few steps away from the pond onto firmer soil and prepare to fight. It seems he'll try to have his way with you, regardless of your wishes.";
 			challenge "Bald Eagle";
 			if lost is 1:
 				say "     After the eagle has had his way with you, he flies back up into the air. Looking up, you spot several other eagles in the air and decide to hightail it out of there before the others come swooping in to enjoy the beaten interloper by their bathing spot.";
 				decrease score by 1;
+				now Resolution of Watering Hole is 2; [Fought Eagle, Lost]
 			else:
 				say "     After defeating the eagle and sending it on its way, you face the pond, trying to decide if you'll take a drink. Shall you lean down and have some water from the pond?";
 				if player consents:
@@ -254,19 +265,22 @@ Instead of resolving a Watering Hole:
 						decrease humanity of player by a random number between 1 and 4;
 					increase score by 10;
 					now thirst of player is 0;
+					now Resolution of Watering Hole is 3; [Defeated Eagle, Drank]
 				else:
 					say "     Deciding it'd probably be best to avoid the tainted waters, you get up. Spotting more eagles in the air above you, you decide to hightail it out of there before the others come swooping in to deal with the interloper around their bathing spot. You pause only long enough to grab a couple of the feathers scattered around the edge of the pond.";
 					increase carried of eagle feather by 2;
 					increase score by 5;
+					now Resolution of Watering Hole is 4; [Defeated eagle, Did not Drink]
 	else:
 		say "     Rather than risk facing the [if level of player <= 10]powerful [end if]creature for clearly tainted water, you decide to continue on your way, counting yourself lucky that you were able to learn that the water was infected. Had he not been there, you may have ended up drinking it without knowing any better.";
 		increase score by 1;
-	Now Watering Hole is resolved;
+		now Resolution of Watering Hole is 5; [Avoided Watering Hole]
+	now Watering Hole is resolved;
 
 to say eaglefulltf:
 	[puts Bald Eagle as lead monster for infection and impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Bald Eagle":
 			now monster is y;
 			break;
@@ -308,12 +322,14 @@ Instead of resolving a Treasure Hunters:
 		if matriarchowned is 1:
 			say "     Only now do they realize who you are and start fumbling around, trying to hide the shovels and map. 'Oh... umm... we... we didn't recognize you there, Matriarch,' the first starts up. 'We didn't mean to call you a loser, [if player is herm]sir, ma'am, sir,[else if player is female]sir, uh, ma'am,[else]uh, sir,[end if]' the first one adds in a mumble, which earns her a light smack from the second. 'We... we were trying to get the treasure for the gang, yeah! That's right. For you and for the gang,' she babbles in an attempt to curry favor with you. For a brief moment you consider dressing down these idiots and ordering them off their bogus treasure hunt, but decide you really don't want these half-wits trying to do any legitimate work for your gang. You thank them for their diligence and order them back to work. You add that you're looking forward to seeing them show up with the treasure, and will be very disappointed if they don't come back with it. Nodding and bowing submissively, the hyenas babble some thanks and then hurry off to restart their quest. ";
 			increase score by 10;
+			now Resolution of Treasure Hunters is 1; [Player is Matriarch]
 		else if matriarchdefeated > 0:
 			say "     Cluing in that you're a gang member, and a lower-ranked one at that, they strut on over to you confidently. 'We've been hard at work here. Could use a break, you know,' the first says. 'Secret mission stuff,' the other adds quickly, 'so you can't tell no one!' 'Yeah, not even the Matriarch! It's a... uh... surprise.' 'Yeah, that's it. A surprise for her.' It takes considerable effort not to roll your eyes at that, but you somehow manage.";
 			say "     They move in closer, dropping their gear and run their paws over you. 'Now about that [']break['],' the second says as her paw moves down to grope you. Your submissive hyena [if matriarchdefeated is 1]urges[else]nature[end if] causes you to submit to them and accept the fondling from the more confident herms. They strip you down, slide off their loose shirts and push you down onto all fours[if matriarchdefeated is 1]. While you might be able to resist the advances of these lesser gang members, your lustful instincts coax you into letting them take you[end if]. The first moves in front of you, bringing her cock to your face while the other grabs your ass and moves into position behind you. You moan softly and tease their cocks with your hand and your rear, getting them fully hard.";
 			say "     The pair of them guide your mouth and [if player is female]pussy[else]asshole[end if] to line up with the tips of their cocks before they thrust into you as they nod to one another. You moan softly around your muzzleful of cock as you're penetrated from behind. The hyena herms pound into you hard and fast, using your body like your instincts tell you it should. Having hyenas fucking you feels so good, and even if this pair aren't as strong of mates as you'd desire, they still have wonderful shafts to fill you with. Throbbing, pulsing dicks that pump into mouth and [if player is female]cunt[else]rear[end if] and are soon spurting their rich, delicious seed down your throat and into your [if player is female]womb[else]bowels[end if].[impregchance]";
 			say "     Finishing up, the pair grope and fondle you until you cum as well, then leave you there, panting in the grass as they gather their stuff and prepare to head off. 'Now don't forget. Don't tell no one,' they say again. You smile and nod, enjoying the afterglow of the rough fucking, leaving them to their fool's errand now that you've gotten what you wanted.";
 			increase score by 10;
+			now Resolution of Treasure Hunters is 2; [Player is Omega Gang member]
 		else:
 			say "     Cluing in that you're another gang member, they approach you cautiously. 'We're... uh... we're on a mission here. Top secret,' the second, the questionable genius, says. 'So you can't tell no one!' she adds. 'Yeah, not even the Matriarch! It's a... uh... surprise,' the first adds. 'Yeah, that's it. A surprise for her.' It takes considerable effort not to laugh at them, but you somehow manage. 'We've been working hard,' the second says. 'For the gang, you know, and could use a bit of a break, if you know what I mean.' Shall you continue the break you were taking by having some fun with this duo of hyenas?";
 			if player consents:
@@ -321,15 +337,19 @@ Instead of resolving a Treasure Hunters:
 					say "     Deciding to have some fun with this pair, you put your arms around the nominally smarter one and grope her bosom, making her moan. You let your hands roam over her body, slipping off her loose shirt so you can uncover her breasts and fondle them directly. Teasing her nipples, you pull her down to sit in your lap, back to your chest and pussy at your cock. You slowly thrust into her, enjoying her lustful moans and groans. Her cunt is hot, wet and dripping around your shaft, eager to be fucked. Her own swollen cock is tended to by her partner, who drops to her knees and starts licking and sucking at it. You bounce her lightly in your lap, setting the pace for her thrusts into the other hyena's muzzle. You continue playing with her hard nipples while she strokes the other's ears and rides your throbbing shaft.";
 					say "     Being on the receiving end of you both, she cums first, soaking your crotch and blasting her load into her partner's muzzle. With the squeezing, orgasming cunt milking at your cock, you unleash your load shortly afterwards. You pump your hot load into the herm hyena's womb, watching as her partner pumps her own shaft until she splatters her load onto the grass. Finished, you shove her off, telling them that they should get back to work. They nod and grab their stuff, rushing off.";
 					increase score by 10;
+					now Resolution of Treasure Hunters is 3; [Player is Male Gang Member, Sex]
 				else:
 					say "     Deciding to have some fun with this pair, you put your arms around the nominally smarter one and grope her bosom, making her moan. You let your hands roam over her body, slipping off her loose shirt so you can uncover her breasts and fondle them directly. Teasing her nipples, you guide her to lay down on the dry grass and move atop her. Bringing your hips over hers, you grab her sheath and emerging cock, stroking her to full erection before lowering yourself down onto her meat. Enjoying to soft sound of her moan, you start riding her meat and motion for the other to come up and bring her shaft to your mouth. Licking and sucking at it, you lustfully savor the pleasure of having two hyena cocks stuffed inside you, licking and sucking at them until you cum loudly in pleasure and are rewarded with two hot loads of hyena cum from the herms. Finished and satisfied, you push the one back and climb off the other, telling them that they should get back to work. They nod and grab their stuff, rushing off.[impregchance]";
 					increase score by 10;
+					now Resolution of Treasure Hunters is 4; [Player is female Gang Member, Sex]
 			else:
 				say "     Deciding not to waste your time and energy on these fools, you tell them that they should probably get back to work. They seem a little disappointed but nod and head back the way they came.";
 				increase score by 1;
+				now Resolution of Treasure Hunters is 5; [Player is Gang Member, No sex]
 	else:		[non-gang-member]
 		say "     Reminded that you're there, they growl at you and wave their shovels menacingly. 'Don't you go messin['] with us. We're in the hyena gang and we'll fuck you up if you get in our way,' the second one growls. 'And don't you try and get our treasure,' the other adds. 'Yeah, we're watching you,' the questionable genius says, pointing to her eyes and then to you meaningfully. You chuckle a little at their posturing, but decide they're not worth the bother and simply let them walk off.";
 		increase score by 1;
+		now Resolution of Treasure Hunters is 6; [Player is not Gang Member]
 	now Treasure Hunters is resolved;
 
 Dry Plains Events ends here.

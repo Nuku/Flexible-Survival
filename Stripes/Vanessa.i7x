@@ -36,7 +36,7 @@ Version 2 of Vanessa by Stripes begins here.
 
 Section 0 - Event
 
-Paratrooper is a situation. Paratrooper is resolved.		[unlocked after 3rd stage of 'Military presence']
+Paratrooper is a situation. Paratrooper is inactive.		[unlocked after 3rd stage of 'Military presence']
 The sarea of Paratrooper is "Plains".
 when play begins:
 	add Paratrooper to badspots of girl;
@@ -79,16 +79,21 @@ Instead of resolving a Paratrooper:
 			add "water bottle" to invent of Back Of The Library;
 			add "food" to invent of Back Of The Library;
 		increase score by 20;
-		now battleground is "void";
+		now Resolution of Paratrooper is 1; [Vanessa brought in]
 		now HP of Vanessa is 1;
 	else:
 		say "     'Well, thanks anyhow then,' she says, turning around and heading back towards the infected city.";
+		now Resolution of Paratrooper is 99; [disinterest]
 		now HP of Vanessa is 50;
 		increase score by 1;
-	Now Paratrooper is resolved;
+	now Paratrooper is resolved;
 
 
 Section 1 - Vanessa the Centaur
+
+Table of GameCharacterIDs (continued)
+object	name
+Vanessa	"Vanessa"
 
 Vanessa is a woman.
 The description of Vanessa is "[Vanessadesc]".

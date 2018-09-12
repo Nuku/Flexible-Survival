@@ -12,7 +12,7 @@ Use MAX_PROP_TABLE_SIZE of 51000000.
 use MAX_STATIC_DATA of 12500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
-use MAX_NUM_STATIC_STRINGS of 230000. [ Code 10 ]
+use MAX_NUM_STATIC_STRINGS of 270000. [ Code 10 ]
 use SYMBOLS_CHUNK_SIZE of 250000. [ Code 10 ]
 use ALLOC_CHUNK_SIZE of 1450000.
 use MAX_OBJECTS of 2000.
@@ -104,9 +104,10 @@ Include (-
 [ YES_OR_NO_QUESTION_INTERNAL_R; ];
 -) instead of "Yes/No Questions" in "Parser.i6t".
 
-The yes or no message is a text that varies. The yes or no message is "[link]yes[end link] or [link]no[end link]> [run paragraph on]".
+The yes or no message is a text that varies.[@Tag:NotSaved]
+The yes or no message is "[link]yes[end link] or [link]no[end link]> [run paragraph on]".
 
-playerinput is a snippet that varies.
+playerinput is a snippet that varies.[@Tag:NotSaved]
 
 To select an option from (curtable - a table name):
 	while 1 is 1:
@@ -145,39 +146,55 @@ Book 1 - Variable Definitions
 
 The file of flexiblestory is called "flexible1".
 
-monster is a number that varies.
+monster is a number that varies.[@Tag:NotSaved]
 The player has text called name. The name of player is usually "Player".
-The player has a number called Energy.
+A person has a number called Energy.
 A person has a number called HP.
-The player has a number called MaxHP.
+A person has a number called MaxHP.
 A person has a number called XP.
 A person has a number called Level.
-The player has a number called Strength.
+A person has a number called Strength.
 A person has a number called Dexterity.
-The player has a number called Stamina.
-The player has a number called Charisma.
-The player has a number called Intelligence.
-The player has a number called Perception.
-The player has a number called Hunger.
+A person has a number called Stamina.
+A person has a number called Charisma.
+A person has a number called Intelligence.
+A person has a number called Perception.
+A person has a number called Hunger.
 A person has a number called Thirst.
-The player has a number called Morale.
+A person has a number called Morale.
 A person has a number called Lust.
-The player has a number called Humanity.
-The player has a number called Hunger.
-The player has a number called cocks.
-The player has a number called testes.
-The player has a number called breasts.
-The player has a number called cunts.
-The player has a number called Breast Size.
-The player has a number called Cock length.
-The player has a number called Cock Width.
-The player has a number called Cunt length.
-The player has a number called Cunt width.
-The player has a number called armor.
-The player has a number called capacity.
+A person has a number called Loyalty.
+A person has a number called Humanity.
+A person has a number called Hunger.
+A person has a number called cocks.
+A person has a number called testes.
+A person has a number called Testicle Size.
+A person has a number called breasts.
+A person has a number called Breast Size.
+A person has a number called cunts.
+A person has a number called Cock length.
+A person has a number called Cock Width.
+A person has a number called Cunt length.
+A person has a number called Cunt width.
+A person has a number called armor.
+A person has a number called capacity.
 A person has a number called libido.
 A person has a text called linkaction.
+A person has a number called SleepRhythm. [day/night bias]
 
+A person has text called Cock Size Desc.
+A person has text called Cunt Size Desc.
+A person has text called Breast Size Desc.
+A person has text called Short Breast Size Desc.
+A person has a truth state called PlayerMet. PlayerMet is usually false.
+A person has a truth state called PlayerRomanced. PlayerRomanced is usually false.
+A person has a truth state called PlayerFucked. PlayerFucked is usually false.
+A person has a truth state called OralVirgin. OralVirgin is usually true.
+A person has a truth state called Virgin. Virgin is usually true.
+A person has a truth state called AnalVirgin. AnalVirgin is usually true.
+
+The player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
+The player has a text called bodytype. The bodytype is usually "Human".						[broad adjective for species]
 The player has a text called skin. Skin is usually "smooth".
 The player has a text called Cock. Cock is usually "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]".
 The player has a text called face. Face is usually "charmingly human".
@@ -193,10 +210,6 @@ The child has a text called facename. Facename is usually "Human".
 The child has a text called skinname. Skinname is usually "Human".
 The child has a text called cockname. cockname is usually "Human".
 The child has a text called tailname. Tailname is usually "Human".
-The player has text called Cock Size Desc.
-The player has text called Cunt Size Desc.
-The player has text called Breast Size Desc.
-The player has text called Short Breast Size Desc.
 The player has a text called weapon. Weapon is usually "[one of]your quick wit[or]your fists[or]a quick kick[or]your body[or]some impromptu wrestling[or]an unarmed strike[at random]".
 The player has a text called weapon type. Weapon type is usually "Melee".
 A person has a number called Weapon damage. Weapon damage is usually 4.
@@ -204,9 +217,7 @@ A person has a list of text called conversation.
 
 [See the BFandI extension for an explanation on these new variables.]
 A person has a number called scalevalue. The scalevalue is usually 3.						[value for body size]
-The player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
-The player has a text called bodytype. The bodytype is usually "Human".						[broad adjective for species]
-The player has a number called daycycle.												[day/night bias]
+A person has a list of text called Traits.
 
 freecred is a number that varies.
 playon is a number that varies.
@@ -216,12 +227,12 @@ the player has a list of text called tapes.
 the player has a list of text called OpenQuests.
 the player has a list of text called CompletedQuests.
 Rooms has a list of text called invent.
-The player has a list of text called feats.
+The player has a list of text called Feats.
 The player has a list of text called EncounteredEnemies.
 The player has a list of text called BlockList.
 A person can be a trader.
 Scenario is a text that varies.
-Allobjs is a list of text that varies.
+Allobjs is a list of text that varies.[@NotSaved]
 Grab Object is a kind of thing.
 a grab object has a number called objsize. The objsize of grab object is usually 3.	[Used only for armaments and journal.]
 things have a text called scent.
@@ -235,6 +246,7 @@ A armament has a number called hitbonus.	[Rare, usually magic]
 An armament can be ranged or melee. An armament is usually melee.
 Equipment is a kind of grab object.
 Equipment can be equipped or not equipped. Equipment is usually not equipped.
+Equipment can be cursed or not cursed. Equipment is usually not cursed. [can't take it off if cursed]
 Equipment has a text called descmod. The descmod of equipment is usually "".
 Equipment has a text called placement. The placement of equipment is usually "end".
 Equipment has a text called slot. The slot of equipment is usually "".
@@ -269,6 +281,7 @@ Freefeats is a number that varies.
 Lost is a number that varies.
 showlocale is a truth state that varies. showlocale is usually true.
 Child is a person.
+The printed name of Child is "Child".
 Child has a number called Gestation.
 Child can be born. Child is not born.
 Childrenfaces is a list of text that varies.
@@ -282,13 +295,71 @@ NewGraphicsOpened is a truth state that varies. NewGraphicsOpened is usually fal
 [For use with new safe restore]
 RestoreMode is a truth state that varies. RestoreMode is usually false.
 
+Table of GameCharacterIDs
+object	name
+child	"child"
+yourself	"yourself"
+
 A situation is a kind of thing.
 A situation can be resolved or unresolved. A situation is usually unresolved.
+A situation can be active or inactive. A situation is usually active.
+A situation has a number called Resolution.
+A situation has a situation called Prereq1.
+A situation has a truth state called Prereq1ResolvedMandatory. Prereq1ResolvedMandatory of a situation is usually true.
+A situation has a list of numbers called Prereq1Resolution. Prereq1Resolution is usually { 0 }.
+A situation has a situation called Prereq2.
+A situation has a truth state called Prereq2ResolvedMandatory. Prereq2ResolvedMandatory of a situation is usually true.
+A situation has a list of numbers called Prereq2Resolution. Prereq2Resolution is usually { 0 }.
+A situation has a situation called Prereq3.
+A situation has a truth state called Prereq3ResolvedMandatory. Prereq3ResolvedMandatory of a situation is usually true.
+A situation has a list of numbers called Prereq3Resolution. Prereq3Resolution is usually { 0 }.
+A situation has an object called PrereqCompanion.
 A situation has a text called sarea. The sarea of a situation is usually "Outside".
 A situation has a number called level. The level of a situation is usually 0.
 A situation has a number called minscore. The minscore of a situation is usually -2147483648.
 A featset is a kind of thing.
-inasituation is a truth state that varies. inasituation is usually false.
+inasituation is a truth state that varies. inasituation is normally false.
+
+PlaceholderSituation is a situation. PlaceholderSituation is resolved. [needs to always be resolved]
+
+Definition: A situation (called x) is available:
+	if sarea of x is "Nowhere", no; [not findable through exploration/hunting]
+	if x is inactive, no; [for banning]
+	if x is resolved, no; [the player has played through these]
+	if x is not PrereqComplete, no;
+	if x is close:
+		if score < minscore of x:
+			no;
+		else if hardmode is true:
+			yes;
+		else if the level of x < (the level of the player plus levelwindow plus 1):
+			yes;
+	no;
+
+Definition: A situation (called x) is PrereqComplete:
+	if PrereqCompanion of x is not nothing and PrereqCompanion of x is not companion of player, no;
+	if Prereq1ResolvedMandatory of x is true and Prereq1 of x is not resolved, no;
+	if Resolution of Prereq1 of x is not listed in Prereq1Resolution of x, no;
+	if Prereq2ResolvedMandatory of x is true and Prereq2 of x is not resolved, no;
+	if Resolution of Prereq2 of x is not listed in Prereq2Resolution of x, no;
+	if Prereq3ResolvedMandatory of x is true and Prereq3 of x is not resolved, no;
+	if Resolution of Prereq3 of x is not listed in Prereq3Resolution of x, no;
+	yes;
+
+Definition: A situation (called x) is close:
+	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of x is "Allzones" or the sarea of x is "allzones" ) ):
+		yes;
+	no;
+
+Definition: A scavevent (called x) is scavable:
+	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( sarea of x is "Allzones" or the sarea of x is "allzones" ):
+		if score < minscore of x:
+			no;
+		else if hardmode is true:
+			yes;
+		else if the level of x < (the level of the player plus levelwindow plus 1):
+			yes;
+	no;
 
 Definition: A grab object (called x) is wielded:
 	if weapon object of player is x, yes;
@@ -370,34 +441,6 @@ Definition: A person (called x) is knotted:
 Definition: A person (called x) is perminfected:
 	if ( JackalManTF > 0 or JackalBoyTF > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
 	no;
-
-Definition: A situation (called x) is available:
-	if sarea of x is "Nowhere", no;
-	if x is resolved, no;
-	if x is close:
-		if score < minscore of x:
-			no;
-		else if hardmode is true:
-			yes;
-		else if the level of x < (the level of the player plus levelwindow plus 1):
-			yes;
-	no;
-
-Definition: A situation (called x) is close:
-	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( battleground is "Outside" and ( the sarea of x is "Allzones" or the sarea of x is "allzones" ) ):
-		yes;
-	no;
-
-Definition: A scavevent (called x) is scavable:
-	if ( sarea of x exactly matches the text battleground, case insensitively ) or ( sarea of x is "Allzones" or the sarea of x is "allzones" ):
-		if score < minscore of x:
-			no;
-		else if hardmode is true:
-			yes;
-		else if the level of x < (the level of the player plus levelwindow plus 1):
-			yes;
-	no;
-
 
 Definition: A person (called x) is pure:
 	if bodyname of x is facename of x:
@@ -492,12 +535,9 @@ Section Starting Variables
 [ See the Core Mechanics/Presets.i7x file for personalizing your defaults. ]
 
 [
-startgenderchoice is a number that varies.
-startstatbonus is a number that varies.
-startscenariochoice is a number that varies.
-freefeatgeneral is a text that varies.
-freefeatfun is a text that varies.
-hypernull is a number that varies.
+startgenderchoice is a number that varies.[@Tag:NotSaved]
+startstatbonus is a number that varies.[@Tag:NotSaved]
+startscenariochoice is a number that varies.[@Tag:NotSaved]
 ]
 gsms is a number that varies.			[main stat]
 gspg is a number that varies.			[player gender]
@@ -774,9 +814,9 @@ title	subtable	description	toggle
 "Is this all?"	--	"Yep, more to come later, promise!"
 "Exit"	--	"Previous Menu"	menu exit rule
 
-Table of random critters
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
-"Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	--	"default"
+Table of Random Critters
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+"Dragoness"	""	""	0	""	""	""	""	"reptilian snout and great teeth. Two horns spiral backwards over your"	"large and reptilian, covered in [skin of player] flesh. You are forced to all fours except for brief, awkward, moments. It reminds you of a dragon, if you had to guess."	"[one of]dull red[or]dull orange[or]lustrous blue[sticky random] scaled"	"You have a wide, tapered, dragon's tail with a spade at the tip."	"[one of]draconic[or]normally internal[or]reptilian[at random]"	"your face draws forward into a reptilian snout, covered in [skin of player] flesh."	"Your body grows to larger than human norm, becoming quadrupedal, with great spikes along your back. You look very much like a dragon."	"Your skin breaks out in large armored scales that rapidly spread over your body"	"Your spine tingles before it explosively expands backwards into a great, thick, tail with spikes along the top."	"Your cock tingles as it becomes draconic in shape, a vent forming to hold it within you."	20	10	12	12	12	12	"Female"	50	1	20	"Nowhere"	0	0	0	2	10	0	1	15	10	40	""	0	4	"[one of]monstrous[or]large[or]powerful[at random]"	"draconic"	false	false	false	1	"default"	false
 
 understand the command "feed" as something new.
 
@@ -838,7 +878,7 @@ marker is a kind of thing.
 A marker has a list of text called infections.
 Tailweapon is a marker.
 when play begins:
-	add { "Anthro Shaft Beast", "Dragon", "Dragoness", "Drone Wasp", "Ebonflame Drake", "Ebonflame Dragator", "Ebonflame Whelp", "Hermaphrodite Dolphin", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Shaft Beast", "Killer Whale", "Lizard Girl", "Naga", "Pirate Shark", "Red Kangaroo", "Sewer Gator", "Skunk", "Spidergirl", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of Tailweapon;
+	add { "Anthro Shaft Beast", "Dragon", "Dragoness", "Drone Wasp", "Ebonflame drake", "Ebonflame Dragator", "Ebonflame Whelp", "Hermaphrodite Dolphin", "Feral Sea Dragon", "Feral Sea Dragoness", "Feral Shaft Beast", "Killer Whale", "Lizard Girl", "Naga", "Pirate Shark", "Red Kangaroo", "Sewer Gator", "Skunk", "Spidergirl", "Wyvern", "Yamato Dragon", "Yamato Dragoness" } to infections of Tailweapon;
 
 Felinelist is a marker. [list of feline infections]
 when play begins:
@@ -858,7 +898,7 @@ when play begins:
 
 Reptilelist is a marker. [list of reptiles/snakes/dragons/dinosaurs/etc... infections]
 when play begins:
-	add { "Dragon", "Dragoness", "Ebonflame Dragator", "Ebonflame Drake", "Ebonflame Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "Horny Dragon", "Hydra Beast", "Lizard Girl", "Naga", "Reptaur", "Sewer Gator", "Sierrasaur", "Slutty Dragoness", "Snake", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness" } to infections of Reptilelist;
+	add { "Dragon", "Dragoness", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragon", "Feral Sea Dragoness", "Horny Dragon", "Hydra Beast", "Lizard Girl", "Naga", "Reptaur", "Sewer Gator", "Sierrasaur", "Slutty Dragoness", "Snake", "Triceratops", "Wyvern", "Yamato Dragoness", "Yamato Dragoness" } to infections of Reptilelist;
 
 Insectlist is a marker. [list of insectile/arachnid/bug infections]
 when play begins:
@@ -919,11 +959,11 @@ when play begins:
 
 BarbedCocklist is a marker. [List of creatures with a barbed cock]
 when play begins:
-	add { "Anthro Shaft Beast", "Ember Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame Drake", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast", "Sphinx", "Snow Bat", "Tiger", "Tiger Cop", "Tigertaur", "Tigress Hooker", "Wildcat", "Rubber Puma" } to infections of BarbedCocklist;
+	add { "Anthro Shaft Beast", "Ember Breeder", "Catgirl", "Cheetah Woman", "Corota", "Cougar", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feline Gymnast", "Felinoid", "Feral Cheetah", "Feral Gryphon", "Feral Shaft Beast", "Fire Elemental", "Jaguar Warrior", "Leopardman", "Manticore", "Margay", "Ninja Cat", "Pantherherm", "Panther Taur", "Plush lion", "Rubber tigress", "Sabretooth", "Shadow Beast", "Sphinx", "Snow Bat", "Tiger", "Tiger Cop", "Tigertaur", "Tigress Hooker", "Wildcat", "Rubber Puma" } to infections of BarbedCocklist;
 
 Firebreathlist is a marker. [List of fire breathing creatures]
 when play begins:
-	add { "Dragontaur", "Dracovixentaur", "Ebonflame Dragator", "Ebonflame Drake", "Ebonflame Whelp", "Feral Sea Dragoness", "Feral Sea Dragon", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon", "Wyvern" } to infections of Firebreathlist;
+	add { "Dragontaur", "Dracovixentaur", "Ebonflame Dragator", "Ebonflame drake", "Ebonflame Whelp", "Feral Sea Dragoness", "Feral Sea Dragon", "Fire Sprite", "Fire Elemental", "Flaming Lynx", "Yamato Dragoness", "Yamato Dragon", "Wyvern" } to infections of Firebreathlist;
 
 Bluntlist is a marker. [list of infections w/blunt cock]
 when play begins:
@@ -931,7 +971,7 @@ when play begins:
 
 Flightlist is a marker. [list of infections w/flight capability]
 when play begins:
-	add { "Bald Eagle", "Bird of Paradise", "Black Wasp", "Butterfly", "Dragontaur", "Dracovixentaur", "Drone Wasp", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame Drake", "Fire Sprite", "Fluffy Owl", "Hawkman", "Harpy", "Hermaphrodite Gryphon", "Mothgirl", "Fruit Bat", "Pegasus", "Reindeer", "Snow Bat", "Vulpogryph", "Yamato Dragon", "Yamato Dragoness", "Wyvern" } to infections of Flightlist;
+	add { "Bald Eagle", "Bird of Paradise", "Black Wasp", "Butterfly", "Dragontaur", "Dracovixentaur", "Drone Wasp", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame drake", "Fire Sprite", "Fluffy Owl", "Hawkman", "Harpy", "Hermaphrodite Gryphon", "Mothgirl", "Fruit Bat", "Pegasus", "Reindeer", "Snow Bat", "Vulpogryph", "Yamato Dragon", "Yamato Dragoness", "Wyvern" } to infections of Flightlist;
 
 Swimlist is a marker. [list of infections capable of swimming underwater]
 when play begins:
@@ -942,9 +982,9 @@ Part 2 - Rules
 First for constructing the status line (this is the bypass status line map rule):
 	fill status bar with table of fancy status;
 
-d18 is a number that varies.
-descr is text that varies.
-sh-descr is text that varies.
+d18 is a number that varies.[@Tag:NotSaved]
+descr is a text that varies.
+sh-descr is a text that varies.
 cupsize is an indexed text that varies. Cupsize is "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
 Lusting is a text that varies.
 
@@ -956,7 +996,7 @@ understand "vial [text]" as vialing.
 
 Vialing is an action applying to one topic.
 
-Researchbypass is a number that varies. Researchbypass is usually 0.
+Researchbypass is a number that varies. Researchbypass is normally 0.
 
 carry out vialing:
 	let t be the topic understood;
@@ -976,8 +1016,8 @@ carry out vialing:
 		continue the action;
 	say "What harm could a terribly infectious bio-nanite be? Down the hatch!";
 	now monster is 0;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry exactly matches the text target, case insensitively:
 			now monster is y;
 			break;
@@ -985,7 +1025,7 @@ carry out vialing:
 		say "ERROR: That creature infection ([target]) could not be found.";
 		now monster is 1;
 	else:
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now researchbypass is 1;
 		if non-infectious entry is true:
 			now non-infectious entry is false;
@@ -1193,7 +1233,7 @@ carry out Inventorying:
 lastinvfoundindex is a number that varies.
 [another speed up: if we know that the link list is empty (or at least not filled with inventory links) we can skipping searching through it]
 invlinklistfilled is a number that varies.
-To say invquicklink (itemname - a text) for (itemaction - a list of texts):
+To say invquicklink (itemname - a text) for (itemaction - a list of text):
 	let linkcommand be the substituted form of "[entry 2 of itemaction] [itemname]";
 	let the invlinkindex be zero;
 	if invlinklistfilled is zero:
@@ -1409,7 +1449,7 @@ To say short time of day:
 			say "evening";
 
 daytimer is a thing.
-daytimer can be day or night. [daytimer is usually true.	[True/False variable for to indicate if day or night] ]
+daytimer can be day or night. [daytimer is normally true.	[True/False variable for to indicate if day or night] ]
 
 definition: Daytimer is day:
 	if remainder after dividing turns by 8 > 3 or ( remainder after dividing turns by 8 < 0 and remainder after dividing turns by 8 > -5 ):
@@ -1578,11 +1618,11 @@ To process (x - a grab object):
 				if morale of player > 0, now morale of player is 0;
 				say "After drinking something, you feel better.";
 		if "Iron Stomach" is not listed in feats of player:
-			let RandomRow be a random number from 1 to the number of rows in the table of random critters;
-			choose row RandomRow from the table of random critters;
+			let RandomRow be a random number from 1 to the number of rows in the Table of Random Critters;
+			choose row RandomRow from the Table of Random Critters;
 			while area entry is "Nowhere": [runs circles until it finds an available creature]
-				now RandomRow is a random number from 1 to the number of rows in the table of random critters;
-				choose row RandomRow from the table of random critters;
+				now RandomRow is a random number from 1 to the number of rows in the Table of Random Critters;
+				choose row RandomRow from the Table of Random Critters;
 			infect name entry;
 	if x is soda:
 		if "Junk Food Junky" is listed in feats of player:
@@ -1615,8 +1655,8 @@ To process (x - a grab object):
 	if x is dog milk:
 		say "Somehow still warm, you guzzle it down without thinking too hard about its origins. A prickly warmth fills your belly as the cream flows along your gullet.";
 		PlayerDrink 15;
-		repeat with Z running from 1 to number of filled rows in table of random critters:
-			choose row Z from the table of random critters;
+		repeat with Z running from 1 to number of filled rows in Table of Random Critters:
+			choose row Z from the Table of Random Critters;
 			let zed be "collie";
 			if name entry exactly matches the text zed, case insensitively:
 				now monster is Z;
@@ -1629,8 +1669,8 @@ To process (x - a grab object):
 		say "[line break]";
 	if x is infectious and "Iron Stomach" is not listed in feats of player:
 		let found be 0;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is strain of x:
 				now monster is y;
 				now found is 1;
@@ -1675,9 +1715,10 @@ To process (x - a grab object):
 					say ". Your [if scalevalue of player is 3]normal-size[else if scalevalue of player is 2]small[else]tiny[end if] [bodyname of player] hands are just too small to comfortably grip your [x], making swinging it a [if objsize of x - scalevalue of player > 3]very[else if objsize of x - scalevalue of player is 3]quite[else]a little[end if] [one of]unwieldy[or]awkward[or]difficult[at random]";
 			say ".";
 	if x is equipment:
-		if x is equipped:		[unequip]
-			say "     [bold type]You take off the [x].[roman type][line break]";
-			now x is not equipped;
+		if x is equipped: [unequip]
+			if x is not cursed: [explanation why the item can't be taken off is to be done in the item description]
+				say "     [bold type]You take off the [x].[roman type][line break]";
+				now x is not equipped;
 		else:
 			if slot of x is empty:
 				increase score by 0;
@@ -2195,7 +2236,7 @@ Carry out trading:
 skipcockchange is a truth state that varies. skipcockchange is usually false.
 
 This is the sex change rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let singlesexadjust be 0;
 	if "Single Sexed" is listed in feats of player:
 		if player is herm:
@@ -2399,7 +2440,7 @@ This is the sex change rule:
 
 
 This is the breast change rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if breasts of player is not breasts entry:
 		decrease breast size of player by 2;
 		follow the breast descr rule;
@@ -2495,12 +2536,12 @@ to grow balls by (x - a number):
 		say "You can [if player is internal]feel your internal[else]see your[end if] [one of]testes[or]balls[or]orbs[or]nuts[at random] [one of]tingle[or]churn audibly[or]throb[at random] as they grow larger, [if player is internal]body straining to abide this[else]your flesh growing taught with the[end if] expansion, leaving you with a [one of]pair[or]set[at random] of [ball size]!";
 
 To Infect:
-	choose row monster from the table of random critters;
-	if there is no name entry or ( there is a non-infectious in row monster of table of random critters and non-infectious entry is true):
+	choose row monster from the Table of Random Critters;
+	if there is no name entry or ( there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true):
 		continue the action;
-	if ( scenario is "Researcher" or nanite collector is equipped ) and ( there is no resbypass in row monster of table of random critters or resbypass entry is false ):
+	if ( scenario is "Researcher" or nanite collector is equipped ) and ( there is no resbypass in row monster of Table of Random Critters or resbypass entry is false ):
 		vialchance name entry;
-	if scenario is "Researcher" and researchbypass is 0 and ( there is no resbypass in row monster of the table of random critters or resbypass entry is false ):
+	if scenario is "Researcher" and researchbypass is 0 and ( there is no resbypass in row monster of the Table of Random Critters or resbypass entry is false ):
 		continue the action;
 	let x be a random number from 1 to 5;
 	let bodyparts be { 1, 2, 3, 4, 5 };
@@ -2769,13 +2810,13 @@ To Infect:
 
 
 to attributeinfect:		[sets the player values from the new attributes]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if bodyname of player is listed in infections of TaurList or bodyname of player is listed in infections of NoLegList:
 		repeat with z running through equipped equipment:
 			if taur-compatible of z is false:
 				say "     [bold type]Sadly, the [z] [if plural of z is true]are incompatible with your new body type, so you can do nothing but take them off[else]is incompatible with your new body type, so you can do nothing but take it off[end if].[roman type][line break]";
 				now z is not equipped;
-	if there is a scale in row monster of the table of random critters:
+	if there is a scale in row monster of the Table of Random Critters:
 		if scalevalue of player is not scale entry:
 			now scalevalue of player is scale entry;
 			repeat with z running through equipped equipment:
@@ -2789,28 +2830,27 @@ to attributeinfect:		[sets the player values from the new attributes]
 						say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
 						now z is not equipped;
 					else if (scalevalue of player - size of z is -1):
-						say "     [bold type]Your [z] hangs fairly loose on your now smaller frame.[roman type][line break]";
+						say "     [bold type]Your [z] hangs fairly  on your now smaller frame.[roman type][line break]";
 	else:
 		now scalevalue of player is 3;
-	if there is a body descriptor in row monster of the table of random critters:
+	if there is a body descriptor in row monster of the Table of Random Critters:
 		now bodydesc of player is body descriptor entry;
 	else:
 		now bodydesc of player is name entry;
-	if there is a type in row monster of the table of random critters:
+	if there is a type in row monster of the Table of Random Critters:
 		now bodytype of player is type entry;
 	else:
 		now bodytype of player is name entry;
-	if there is a nocturnal in row monster of the table of random critters:
-		if nocturnal entry is true:
-			now daycycle of player is 2; [night-preferred]
-		if nocturnal entry is false:
-			now daycycle of player is 1; [day-preferred]
+	if DayCycle entry is 2:
+		now SleepRhythm of player is 2; [night-preferred]
+	if DayCycle entry is 1:
+		now SleepRhythm of player is 1; [day-preferred]
 	else:
-		now daycycle of player is 0; [standard]
+		now SleepRhythm of player is 0; [standard]
 
 To attributeinfect (x - text):
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry exactly matches the text x, case insensitively:
 			now monster is y;
 			attributeinfect;
@@ -2818,10 +2858,10 @@ To attributeinfect (x - text):
 
 
 To Vialchance (x - a text):
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if researchbypass is 1, continue the action;
-	if there is a non-infectious in row monster of table of random critters and non-infectious entry is true, continue the action;
-	if there is a resbypass in row monster of table of random critters and resbypass entry is true, continue the action;
+	if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true, continue the action;
+	if there is a resbypass in row monster of Table of Random Critters and resbypass entry is true, continue the action;
 	if scenario is "Researcher" or nanite collector is equipped:
 		let vialcollectible be 10 + ( 2 * intelligence of player ) + ( level of player / 2 );
 		if nanitemeter is 1:
@@ -2843,9 +2883,9 @@ To Vialchance (x - a text):
 			now vcoll is 0;
 
 
-predestiny is a number that varies. [use unknown]
+predestiny is a number that varies.[@Tag:NotSaved] [use unknown]
 
-calcnumber is a number that varies.
+calcnumber is a number that varies.[@Tag:NotSaved]
 
 To get a number:
 	get typed command as playerinput;
@@ -3006,169 +3046,7 @@ To level up:
 		funfeatget;
 	increase score by level of the player times level of the player;
 
-Before combat is a number that varies.
-
-To fight:
-	if debugactive is 1:
-		say "     DEBUG: Random Monster Choosing Started[line break]";
-	now monster is a random number from 1 to number of filled rows in the table of random critters;
-	let Q be a list of numbers;
-	if ( bodyname of player is "Mental Mouse" or mousecurse is 1 ) and mouse girl is not tamed: [hunted by the mouse collective]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry exactly matches the text "Mental Mouse", case insensitively:
-				add y to q;
-				add y to q;
-				if "Like Attracts Like" is listed in feats of player:
-					add y to q;
-				if humanity of player < 85:
-					repeat with x running from 1 to ( ( 100 - humanity of player ) / 16 ):
-						add y to q;
-				break;
-	if insectlarva is true and larvaegg is 1 and gestation of child is 0: [hunted by wasp hive anywhere outdoors]
-		if battleground is not "Mall" and battleground is not "Stables" and battleground is not "Hospital" and battleground is not "Museum" and battleground is not "Sealed":
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
-				if name entry exactly matches the text "Black Wasp", case insensitively:
-					add y to q;
-					if "Like Attracts Like" is listed in feats of player:
-						add y to q;
-					if libido of player > 30:
-						repeat with x running from 1 to ( libido of player / 30 ):
-							add y to q;
-					if larvacounter > 3:
-						repeat with x running from 1 to ( larvacounter / 3 ):
-							add y to q;
-					break;
-	repeat with X running from 1 to number of filled rows in table of random critters:
-		choose row X from the table of random critters;
-		if there is a lev entry:
-			if lev entry > level of player plus levelwindow and hardmode is false:
-				next;
-		else:
-			next;
-		if there is no area entry, next;
-[		if area entry is "Everywhere":		[***]
-			if there is a nocturnal in row X of table of random critters:
-				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night), next;
-			add x to q;
-			if "Like Attracts Like" is listed in the feats of player:
-				if bodyname of player is name entry, add x to Q;
-				if facename of player is name entry, add x to Q;
-				if skinname of player is name entry, add x to Q;
-				if tailname of player is name entry, add x to Q;
-				if cockname of player is name entry, add x to Q; ]
-		if area entry matches the text battleground:
-			if there is a nocturnal in row X of table of random critters:
-				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
-					next; [skips if day/night doesn't match]
-			let skipit be 0;
-			repeat with s running through warded flags:
-				if name entry is listed in infections of s:
-					now skipit is 1;
-					break;
-			if skipit is 1, next;
-			add x to q;
-			if "Like Attracts Like" is listed in the feats of player:
-				if bodyname of player is name entry, add x to Q;
-				if facename of player is name entry, add x to Q;
-				if skinname of player is name entry, add x to Q;
-				if tailname of player is name entry, add x to Q;
-				if cockname of player is name entry, add x to Q;
-	if the number of entries in Q is 0 and debugactive is 1:
-		say "     DEBUG: No Possible Monsters Found![line break]";
-	if the number of entries in Q is not 0:
-		sort Q in random order;
-		repeat with Z running through Q:
-			now monster is Z;
-			break;
-		choose row monster from the table of random critters;
-		prepforfight;
-		if "Experienced Scout" is listed in feats of player and a random chance of 2 in 10 succeeds and combat abort is not 1 and inasituation is false:
-			say "You notice an avenue of escape! Do you want to abort the combat?";
-			if player consents:
-				now combat abort is 1;
-				say "You slip away before [name entry] can begin their assault.";
-		if combat abort is 1:
-			now combat abort is 0;
-			rule succeeds;
-			continue the action;
-		let bonus be ( perception of player minus 10 ) divided by 2;
-		decrease bonus by ( dex entry minus 10 ) divided by 2;
-		increase bonus by a random number from 1 to 20;
-		if bonus < 6:
-			if "Wary Watcher" is listed in feats of player:
-				say "The creature is about to get the drop on you, but your vigilance spots it just in time! You ready yourself for battle.";
-			else:
-				say "The creature gets the drop on you!";
-				follow the monster combat mode rule; [select the combat mode for first-strike]
-				choose row monstercom from table of Critter Combat;
-				if there is a continuous in row monstercom of the table of Critter Combat:
-					follow the continuous entry;
-				follow the combat entry;
-				if HP of player < 1 or lost is 1, stop the action;
-		choose row monster from table of random critters;
-		if weapon object of player is ranged:
-			now bonus is ( perception of player minus 10 ) divided by 2;
-			decrease bonus by ( dex entry minus 10 ) divided by 2;
-			increase bonus by a random number from 1 to 20;
-			if bonus > 15:
-				say "You manage to fire your [weapon object of player] quickly before the melee can begin!";
-				now before combat is 1;
-				follow the player attack rule;
-				now before combat is 0;
-		wait for any key;
-		Combat Menu;
-		now inafight is 0;
-		let needed be 0;
-		if player is fastlearning:
-			let needed be (level of player plus 1) times 8;
-		else:
-			let needed be (level of player plus 1) times 10;
-		if XP of player >= needed and humanity of player > 0:
-			level up;
-		now needed is ( level of companion of player ) times 10;
-		if "Good Teacher" is listed in feats of player:
-			now needed is ( level of companion of player ) times 6;
-		if XP of companion of player >= needed and level of companion of player < level of player and humanity of player > 0 and player is not lonely:
-			pet level up;
-	if debugactive is 1:
-		say "     DEBUG: Random Monster Choosing Ended[line break]";
-	rule succeeds;
-
-To challenge:
-	choose row monster from the table of random critters;
-	prepforfight;
-	if combat abort is 1:
-		now combat abort is 0;
-		rule succeeds;
-		stop the action;
-	wait for any key;
-	Combat Menu;
-	now inafight is 0;
-	let needed be 0;
-	if player is fastlearning:
-		let needed be (level of player plus 1) times 8;
-	else:
-		let needed be (level of player plus 1) times 10;
-	if XP of player >= needed and humanity of player > 0:
-		level up;
-	now needed is ( level of companion of player ) times 10;
-	if "Good Teacher" is listed in feats of player:
-		now needed is ( level of companion of player ) times 6;
-	if XP of companion of player >= needed and level of companion of player < level of player and humanity of player > 0 and player is not lonely:
-		pet level up;
-	rule succeeds;
-
-to hardmodeboost: [Controls level boosting for hard mode, runs BEFORE any internal creature adjustments]
-	let debit be 0;
-	choose row monster from the table of random critters;
-	if lev entry < level of player and hardmode is true:
-		now debit is ( level of player ) - lev entry;
-		increase lev entry by debit;
-		increase HP entry by debit * 4;
-		increase wdam entry by (debit / 3);
-		increase dex entry by (debit / 5);
+[ Fight and challenge moved to Core Mechanics/Fighting.i7x]
 
 Playing on is an action applying to nothing.
 understand "play on" as playing on.
@@ -3336,7 +3214,7 @@ This is the explore rule:
 	if "Bad Luck" is listed in feats of player, increase bonus by 1;
 	if something is 1 and blindmode is true, decrease bonus by 3; [already found something, so normal chance of a critter]
 	if a random number from 1 to 20 < 15 plus bonus and battleground is not "void":
-		if there is a area of Battleground in the table of random critters:
+		if there is a area of Battleground in the Table of Random Critters:
 			now something is 1;
 			Fight;
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
@@ -3374,7 +3252,7 @@ to randomfightchance:
 	if "Curious" is listed in feats of player, increase bonus by 2;
 	if "Bad Luck" is listed in feats of player, increase bonus by 1;
 	if a random number from 1 to 20 < 10 plus bonus and battleground is not "void":
-		if there is a area of Battleground in the table of random critters:
+		if there is a area of Battleground in the Table of Random Critters:
 			Fight;
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";
@@ -3399,7 +3277,7 @@ This is the turnpass rule:
 	now showlocale is true;
 	if HP of Velos > 2:
 		if Velos is not in the location of the player:		[traveling w/player]
-			Now Velos is in the location of the player;
+			now Velos is in the location of the player;
 	if breast size of player > 26, now breast size of player is 26;
 	let oldlib be libido of player;
 	if libido of player < 100 and "Horny Bastard" is listed in feats of player:
@@ -3446,10 +3324,10 @@ This is the turnpass rule:
 		if bodyname of player is "Human" or ( shiftable is 2 and humanity of player > 49 ): [blocked for humans and active shifters]
 			now z is 0;
 		if z is 1:
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y from the table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y from the Table of Random Critters;
 				if name entry exactly matches the text bodyname of player, case insensitively:
-					if ( there is no resbypass in row monster of table of random critters or resbypass entry is false ) and ( there is no non-infectious in row monster of table of random critters or non-infectious entry is false ):
+					if ( there is no resbypass in row monster of Table of Random Critters or resbypass entry is false ) and ( there is no non-infectious in row monster of Table of Random Critters or non-infectious entry is false ):
 						now monster is y;
 						say "You can feel the nanites inside you working voraciously to convert your flesh to one whole form.";
 						now researchbypass is 1;
@@ -3653,7 +3531,7 @@ to say spontaneousorgasm:
 		now HP of player is ( 3 * HP of player ) / 4;
 
 This is the monster injury rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let per be ( monsterHP times 100 ) divided by HP entry;
 	if per < 10:
 		now descr is "[one of]on death's door[or]almost defeated[or]barely mobile[at random]";
@@ -3699,8 +3577,8 @@ This is the brain descr rule:
 		now descr is "almost entirely subsumed[lusting]";
 	if libido of player < 21, now lusting is " thoughts.";
 	if libido of player > 80:
-		let mun be a random number from 1 to number of filled rows in table of random critters;
-		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [name in row monster of the table of random critters] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
+		let mun be a random number from 1 to number of filled rows in Table of Random Critters;
+		now lusting is " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [name in row monster of the Table of Random Critters] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
 	else if libido of player > 40:
 		now lusting is " thoughts. You are [one of]distracted by doodling a big breasted monster[or]distracted by doodling a big cocked monster[or]distracted by taking a moment to rub at yourself[at random].";
 	else if libido of player > 20:
@@ -3866,7 +3744,7 @@ understand "linkaction [person]" as linkactioning.
 carry out linkactioning:
 	linkaction noun;
 
-linkcheck is a person that varies.
+linkcheck is a person that varies.[@Tag:NotSaved]
 The linkaction of a person is usually "Possible Actions: [if number of entries of conversation of linkcheck > 0][link]talk[as]talk [linkcheck][end link], [end if][link]smell[as]smell [linkcheck][end link][if linkcheck is companion of player], [link]dismiss[as]dismiss[end link][else], [link]fuck[as]fuck [linkcheck][end link][end if][line break]";
 
 to linkaction (x - Person):
@@ -3888,6 +3766,8 @@ carry out showstatting:
 	showstats player;
 
 To showstats (x - Person):
+	sort Feats of player;
+	sort Traits of player;
 	say "Strength: [strength of the x], Dexterity: [dexterity of the x], Stamina: [stamina of the x], Charisma: [Charisma of the x], Perception: [perception of the x], Intelligence: [intelligence of the x].";
 	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [HP of x]/[maxHP of x] Libido: [libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100.";
 	let z be ( level of x plus one) times 10;
@@ -3896,6 +3776,10 @@ To showstats (x - Person):
 	say "Level: [level of x], XP: [XP of x]/[z]";
 	if the number of entries in feats of the x > 0:
 		say ", Feats: [feats of the x][line break]";
+	if debugactive is 1:
+		say "DEBUG -> Traits: [Traits of Player][line break]";
+	if debugactive is 1:
+		say "DEBUG -> Invent: [Invent of Player][line break]";
 
 This is the self examine rule:
 	now looknow is 1;
@@ -4095,8 +3979,8 @@ This is the location choice rule:
 			now the HP of doctor matt is 100;
 			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Deer":
 					now area entry is "Park";
 					break;
@@ -4111,8 +3995,8 @@ This is the location choice rule:
 			now the HP of doctor matt is 100;
 			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Deer":
 					now area entry is "Park";
 					break;
@@ -4224,9 +4108,9 @@ This is the Menu Exit Rule:
 Instead of examining the infection terminal:
 	say "Filled with glowing characters, the terminal lists all identified infections with some stats beside:[line break]";
 	let z be 0;
-	sort table of random critters in lev order;
-	repeat with X running from 1 to number of filled rows in table of random critters:
-		choose row X from the table of random critters;
+	sort Table of Random Critters in lev order;
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
 		if there is a lev entry:
 			increase z by 1;
 			say "[Name Entry]: Danger Level: [lev entry], Typical Environment: [area entry][line break]";
@@ -4336,15 +4220,17 @@ This is the finish stats rule:
 [	try looking;]
 	rule succeeds;
 
-scavenging is an action applying to nothing.
+ScavengingAction is an action applying to nothing.
 tscavenging is an action applying to one topic.
-Scavengetarget is an indexed text that varies.
+Scavengetarget is an indexed text that varies.[@Tag:NotSaved]
 A scavevent is a kind of situation.
 
-understand "Scavenge" as scavenging.
-understand "Scav" as scavenging.
-understand "Scavenge [text]" as tscavenging.
-understand "Scav [text]" as tscavenging.
+understand "Scavenge" as ScavengingAction.
+understand "Scav" as ScavengingAction.
+[
+understand "Scavenge [text]" as ScavengingAction.
+understand "Scav [text]" as ScavengingAction.
+]
 
 check tscavenging:
 	if location of player is not fasttravel, say "You can only scavenge from quick travel points." instead;
@@ -4352,14 +4238,13 @@ check tscavenging:
 
 Carry out tscavenging:
 	now scavengetarget is the topic understood;
-	try scavenging;
+	try ScavengingAction;
 	now scavengetarget is "";
 
-
-check scavenging:
+check ScavengingAction:
 	if location of player is not fasttravel, say "You can only scavenge from quick travel points." instead;
 
-carry out scavenging:
+carry out ScavengingAction:
 	let x be a random visible dangerous door;
 	if x is not nothing:
 		now battleground is marea of x;
@@ -4396,70 +4281,58 @@ carry out scavenging:
 	randomfightchance;
 	follow turnpass rule;
 
-To Challenge (x - text):
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y from the table of random critters;
-		let TargetFound be 0;
-		if name entry exactly matches the text x, case insensitively:
-			now TargetFound is 1;
-			if debugactive is 1:
-				say "     DEBUG: Monster Found by Name: [x][line break]";
-		if enemy title entry exactly matches the text x, case insensitively:
-			now TargetFound is 1;
-			if debugactive is 1:
-				say "     DEBUG: Monster Found by Enemy Title: [x][line break]";
-		if enemy name entry exactly matches the text x, case insensitively:
-			now TargetFound is 1;
-			if debugactive is 1:
-				say "     DEBUG: Monster Found by Enemy Name: [x][line break]";
-		if TargetFound is 1:
-			now monster is y;
-			now monsterHP is HP entry;
-			challenge;
-			break;
-
 To Infect (x - text):
 	if scenario is "Researcher" and researchbypass is 0:
 		vialchance x;
 		continue the action;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry exactly matches the text x, case insensitively:
-			now monster is y;
-			let reset be 0;
-			if researchbypass is 1 and non-infectious entry is true:
-				now reset is 1;
-				now non-infectious entry is false;
-			infect;
-			if reset is 1:
-				now non-infectious entry is true;
-			break;
+			if BannedStatus entry is true: [banned creatures can't infect]
+				if debugactive is 1:
+					say "DEBUG -> Can't infect with creature [name entry] because it has Banned: [BannedStatus entry][line break]";
+				break;
+			else:
+				now monster is y;
+				let reset be 0;
+				if researchbypass is 1 and non-infectious entry is true:
+					now reset is 1;
+					now non-infectious entry is false;
+				infect;
+				if reset is 1:
+					now non-infectious entry is true;
+				break;
 
 to randominfect: [bypasses researcher protection]
 	now researchbypass is 1;
 	weakrandominfect;
 	now researchbypass is 0;
 
+
 to weakrandominfect: [does not bypass researcher protection]
-	sort table of random critters in random order;
+	sort Table of Random Critters in random order;
 	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
-			next;
-		break;
-	infect;
+	choose row monster from Table of Random Critters;
+	if BannedStatus entry is true: [banned creatures can't be challenged]
+		if debugactive is 1:
+			say "DEBUG -> Can't infect with creature [name entry] because it has Banned: [BannedStatus entry][line break]";
+	else:
+		while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
+			increase monster by 1;
+			choose row monster from Table of Random Critters;
+			if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
+				next;
+			break;
+		infect;
 
 to setmonster ( x - text ): [puts an infection (named x) as lead monster for later use]
 	let found be 0;
-	choose row monster in the table of random critters;
+	choose row monster in the Table of Random Critters;
 	if name entry exactly matches the text x, case insensitively:
 		now found is 1;
 	else:
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry exactly matches the text x, case insensitively:
 				now found is 1;
 				now monster is y;
@@ -4478,8 +4351,8 @@ Spawnmonster is an action applying to one topic.
 understand "spawn [text]" as spawnmonster.
 
 carry out spawnmonster:
-	repeat with X running from 1 to number of filled rows in table of random critters:
-		choose row X from the table of random critters;
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
 		if name entry exactly matches the text topic understood, case insensitively:
 			now monster is X;
 			now monsterHP is HP entry;
@@ -4516,9 +4389,9 @@ Carry out tablelisting:
 		stop the action;
 	else if t in lower case is "creature":
 		say "Name,Level,Area:[line break]";
-		sort table of random critters in lev order;
-		repeat with X running from 1 to number of filled rows in table of random critters:
-			choose row X from the table of random critters;
+		sort Table of Random Critters in lev order;
+		repeat with X running from 1 to number of filled rows in Table of Random Critters:
+			choose row X from the Table of Random Critters;
 			if there is a lev entry:
 				say "[name entry],[lev entry],[area entry][line break]";
 		say "End of list of random critters.";
@@ -4594,9 +4467,9 @@ Carry out tablelisting:
 		stop the action;
 	else if t in lower case is "loot":
 		say "Creature,Loot,Lootchance:[line break]";
-		sort table of random critters in loot order;
-		repeat with X running from 1 to number of filled rows in table of random critters:
-			choose row X from the table of random critters;
+		sort Table of Random Critters in loot order;
+		repeat with X running from 1 to number of filled rows in Table of Random Critters:
+			choose row X from the Table of Random Critters;
 			if there is a loot entry:
 				say "[name Entry],[loot entry],[lootchance entry][line break]";
 		say "End of list of loot.";
@@ -4620,7 +4493,7 @@ Book 8 - People
 
 [Milking was moved to the Milking file in Core Mechanics]
 
-The parser error count is a number that varies. The parser error count is 0.
+The parser error count is a number that varies.[@Tag:NotSaved] The parser error count is 0.
 
 After printing a parser error when the parser error count is at least 0:
 	increment the parser error count;
@@ -4646,8 +4519,10 @@ Include Debugging Tools by Core Mechanics.
 Include Definitions by Core Mechanics.
 Include Feats by Core Mechanics.
 include FS Graphics by Core Mechanics.
+Include Fighting by Core Mechanics.
 Include Fucking by Core Mechanics.
 Include Hunting by Core Mechanics.
+Include Gametables by Core Mechanics.
 Include Game Endings by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
 Include Special Merchandize by Core Mechanics.
@@ -4730,21 +4605,22 @@ Include Brookstone Books by Guest Writers.
 Include Campus Events by Wahn.
 Include Campus Lovers by CloserHenry.
 Include Campus Couple NPC by CloserHenry.
-Include Candy Shop by Stripes.
+Include CandyShop by Stripes.
 Include Capitol Events by Blue Bishop.
 Include Catapult Encounter by Hellerhound.
 Include Central Library by Stripes.
+Include Consolidated Outside Events by Song.
+Include CEPark by Stripes.
 Include Chase by Luneth.
 Include Chance Meetings by Kernog.
 Include Combat Helmet by Nuku Valente.
-Include Consolidated Outside Events by Song.
-Include Consolidated Park Events by Song.
 Include Control Pills by Hellerhound.
 [Include Disorganization by Kaleem mcintyre.] [Disabled till review]
 Include Dmitri the Peacock by Aureas Gigas.
 Include Dry Plains Events by Stripes.
 Include Endings by Darthan.
 Include E-shocker by Stripes.
+Include Event Rewrites by Draegon.
 Include Extra Added Scenes by Kaleem mcintyre.
 Include Extra College Events by Speedlover.
 Include Fair Events by Sarokcat.
@@ -4761,6 +4637,7 @@ Include Greek Mythos by Prometheus.
 Include HellHound by Speedlover.
 Include High Rise Events by Stripes.
 Include High Rise Events by Wahn.
+Include Horus by Rikaeus.
 Include How High by Kaleem mcintyre.
 Include Hyena Bikers by Stripes.
 Include Hyena Shoppers by Doots.
@@ -4828,6 +4705,7 @@ Include Stable Related Events by Sarokcat.
 Include Stable Related Quests by Sarokcat.
 Include Storage Locker by Core Mechanics.
 Include Story Skipper by Core Mechanics.
+Include Story Skipper Loose Variables by Core Mechanics.
 Include Sugar Feud by AGentlemanCalledB.
 Include Tidepool Event by FwuffyMouse.
 Include Toy Store by Song.
@@ -4850,6 +4728,7 @@ Include Amazonian by Stripes.
 Include Ancient Tentacles by Dys.
 Include Anime Babe by Stripes.
 Include Anthro Shaft Beast by Guest Writers.
+Include Anthro Rabbit by Rikaeus.
 Include Arctic Fox by Sarokcat.
 Include Ember Breeder by Stripes.
 Include Automaton by Stripes.
@@ -4904,7 +4783,7 @@ Include Drone Wasp by Nuku Valente.
 Include Dryad by Hellerhound.
 Include Easter Bunny by Stripes.
 Include Ebonflame Dragator by Blue Bishop.
-Include Ebonflame Drake by Blue Bishop.
+Include Ebonflame drake by Blue Bishop.
 Include Ebonflame Whelp by Blue Bishop.
 Include Elf by Nuku Valente.
 Include Elk by Stripes.
@@ -5043,7 +4922,7 @@ Include Prairie Dog by Stripes.
 Include Psycho Weasel by Stripes.
 Include Queen Bee by Stripes.
 Include Quilled Tousky by Stripes.
-Include Rabbit Pack by Guest Writers.
+[Include Rabbit Pack by Guest Writers.]
 Include Ram by Sarokcat.
 Include Random Shemale Smooth Collie by Guest Writers.
 Include Random Tentacle Horror by Guest Writers.
@@ -5192,6 +5071,7 @@ Include Hanu by Kernog.
 Include Harold by Sarokcat.
 Include Hayato by Stripes.
 Include HornyHorsey by femtoAmpere.
+[Include Horus by Rikaeus.]
 Include Hungry Boar Man by Closerhenry.
 Include Hyper Squirrel by Nuku Valente.
 Include HypnoGeeks by Wasp.
@@ -5258,6 +5138,7 @@ Include Sam by Stripes.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
 Include Savina by Kurainyx.
+Include Seraphis by Vinickus.
 Include Serenity by Kurainyx.
 Include Sidney by Stripes.
 Include Skarnoth by Wahn.
@@ -5661,16 +5542,18 @@ To startfreefeats: [gives free feats]
 		now autofeatloading is true;
 	now autofeatloading is false;
 
-
 To startcreatureban: [bans creatures, as requested]
 	say "Banning creatures...";
-	repeat through the table of random critters:
+	repeat through the Table of Random Critters:
 		let bad be 0;
 		repeat with n running through all banned flags:
 			if name entry is listed in infections of n:
 				now bad is 1;
 		if bad is 1:
+			now BannedStatus entry is true;
+[ replaced with the above line so that the Table of Random Critters stays the same
 			blank out the whole row;
+]
 	say "Banning situations...";
 	repeat with n running through situations:
 		let bad be 0;
@@ -5679,10 +5562,9 @@ To startcreatureban: [bans creatures, as requested]
 				say "[n] removed due to [q].";
 				now bad is 1;
 		if bad is 1:
-			now n is resolved;
+			now n is inactive;
 	say "Sorting creatures...";
-	sort table of random critters in lev order;
-
+	sort Table of Random Critters in lev order;
 
 Section Story Start Text
 
@@ -5690,8 +5572,8 @@ To regularstart: [normal start method]
 	if invcolumns < 1 or invcolumns > 4, now invcolumns is 2;
 	follow the starting stats rule;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		clear the screen;
 		say "[bold type]Character Creation:[roman type][line break]";
 		say "(1) [link]Main Stat[as]1[end link] - [bold type][if gsms is 1]Strength[else if gsms is 2]Dexterity[else if gsms is 3]Stamina[else if gsms is 4]Charisma[else if gsms is 5]Perception[else if gsms is 6]Intelligence[else]Random[end if][roman type][line break]";
@@ -5793,7 +5675,7 @@ To regularstart: [normal start method]
 				if player consents:
 					now RestoreMode is true;
 					say "[silent_start]";
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					if RestoreMode is true:
 						now RestoreMode is false;
 						try restoring the game;
@@ -5803,7 +5685,7 @@ To regularstart: [normal start method]
 				say "Confirm game start?";
 				if player consents:
 					say "[gsopt_start]";
-					now trixieexit is 1;
+					now Trixieexit is 1;
 
 to playernaming:
 	say "[bold type]Please enter new name: [roman type]";
@@ -6044,7 +5926,7 @@ to say gsopt_start:
 	startfreefeats;
 	startcreatureban;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-	sort table of random critters in lev order;
+	sort Table of Random Critters in lev order;
 	if scenario is "Caught Outside":	[processes infection data first, then clears so intro text can remain intact]
 		randominfect;
 		randominfect;
@@ -6123,8 +6005,8 @@ to say gsopt_start:
 			now the HP of doctor matt is 100;
 			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Deer":
 					now area entry is "Park";
 					break;
@@ -6195,7 +6077,7 @@ to say silent_start:
 	startfreefeats;
 	startcreatureban;
 	if clearnomore is 0, clear the screen; [skips clearing if it's not wanted]
-	sort table of random critters in lev order;
+	sort Table of Random Critters in lev order;
 	if scenario is "Caught Outside": [processes infection data first, then clears so intro text can remain intact]
 		randominfect;
 		randominfect;
@@ -6289,8 +6171,8 @@ to say silent_start:
 			now the HP of doctor matt is 100;
 			now the icon of doctor matt is figure of pixel;
 			remove orthas from play;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Deer":
 					now area entry is "Park";
 					break;
@@ -6328,16 +6210,6 @@ to say set_invcolumns:
 
 Book 10 - Let the Games Begin
 
-understand "saveword" as savewording.
-understand "save" as savewording.
-understand "oldsave" as saving the game.
-
-savewording is an action applying to nothing.
-
-Carry out savewording:
-	say "You can hear Trixie's voice in your mind, whispering the reality spell for the world as it is...";
-	say "[magic word]";
-
 to say promptsay:
 	let x be the location of the player;
 	let z be the number of entries in invent of x;
@@ -6360,7 +6232,8 @@ to say promptsay:
 	say "[link][bracket]Rest[close bracket][as]rest[end link] ";
 	say "[link][bracket]Save[close bracket][as]save[end link] ";
 	say "[link][bracket]Restore[close bracket][as]restore[end link] ";
-	say "[link][bracket]Saveword[close bracket][as]saveword[end link] ";
+	say "[link][bracket]Export Progress[close bracket][as]export progress[end link] ";
+	say "[link][bracket]Import Progress[close bracket][as]import progress[end link] ";
 	if "Unerring Hunter" is listed in feats of player and (there is a visible dangerous door or earea of location of player is not "void"):
 		say "[link][bracket]Hunt[close bracket][as]huntinglist[end link] ";
 	say "[line break]";
@@ -6426,8 +6299,8 @@ When play begins:
 	if ovipreglevel is not 1, now ovipreglevel is 2;
 	increase the score by 10;
 	let pointlessbump be 0;
-	now monster is a random number from 1 to number of filled rows in the table of random critters;
-	choose row monster in table of random critters;
+	now monster is a random number from 1 to number of filled rows in the Table of Random Critters;
+	choose row monster in Table of Random Critters;
 	regularstart; [original start method. easier to move everything then leave here]
 
 When play begins (this is the graphics window construction rule):

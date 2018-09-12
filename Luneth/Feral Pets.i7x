@@ -20,6 +20,10 @@ to say hobolinkaction:
 Section 1.1 - Cute Crab NPC/Pet
 [Original content created by Nuku Valente]
 
+Table of GameCharacterIDs (continued)
+object	name
+Cute Crab	"Cute Crab"
+
 Cute Crab is a pet. Cute Crab is a part of the player.
 understand "Snips" as Cute Crab.
 The description of Cute Crab is "[SnipsDesc]".
@@ -44,6 +48,10 @@ to say DismissSnips:
 		say "     Looking at you for a long moment, he finally relents and burrows under the ground.";
 	else: [dismissing him in the Computer Lab]
 		say "     Snips quickly scuttles back to the home it has made out of one of the cubicles, cleary more than happy to be able to rest.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Snips	"Snips"
 
 Snips is a man.
 The description of Snips is "[Snipsdesc]".
@@ -116,13 +124,9 @@ to say SnipsTalkMenu:
 					say "[SnipsTalk2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You back away from the cute crab, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You back away from the cute crab, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -132,7 +136,7 @@ to say SnipsTalk1:
 		say "     You decide to take a short rest and just watch what your little crab does with his free time. His cubicle is actually pretty sparse. For the most part he just skuttles around. Once in awhile Snips will pick something up in his claws, but after losing interest in it, he is quick to discard it and move on to the next thing that he can get his pincers on. Finally exhausted, your small crab ends up going to the back of the cubicle, more than likely feeling safer with something covering him overhead. Settling down, you're not exactly sure if he is sleeping or not, but he stops moving completely, so the show must be over. Getting back to your feet, you ready yourself to head back out to the task at hand.";
 	else if number of bunkered people + number of booked people > 3:
 		say "     You decide to take a short rest and just watch what your little crab does with his free time. Someone must have recently fetched some dirt and sand from somewhere, seeing as the ground of Snips's cubicle is completely covered, making it his own little personal beach. You assume that the same person must have also grabbed the medium-sized skillet filled with water. The crab seems to love the upgrade, that is if the bubble blowing is anything to go by. Snips at the moment is busying himself with placing anything that he can find around a small burrow he has made in the soft dirt.";
-		if Char-H of Elijah is "2":
+		if ElijahChar-H is "2":
 			say "     It takes you a moment to notice, but your little crustacean has tucked the toy crab Elijah presented him inside. Adorably, he also makes sure to bring anything shiny he can get his claws on to the entrance of his home. More than likely Elijah was right and the crab just wanted companionship. Settling down, at first Snips gets into a defensive position in front of his home, however once he realizes just which giant has come to visit him he quickly scuttles to your side. After receiving some soothing strokes across his shell Snips is ready for bed apparently, slowly making his way back to his little tunnel. The cute little crab then cuddles up close to his new toy friend and just sit there. You're not exactly sure if he is sleeping or not, but he stops moving completely, so the show must be over. Getting back to your feet, you ready yourself to head back out to the task at hand.";
 		else:
 			say "     While your little crab does seem happier in his new environment, you can't help but wonder if he ever gets lonely. Settling down, at first Snips doesn't even seem to notice that you have arrived, however once he realizes just which giant has come to visit him he quickly scuttles to your side. After receiving some soothing strokes across his shell Snips is ready for bed apparently, slowly making his way back to his little tunnel. Settling down, you're not exactly sure if he is sleeping or not, but he stops moving completely, so the show must be over. Getting back to your feet, you ready yourself to head back out to the task at hand.";
@@ -144,7 +148,7 @@ to say SnipsTalk2:
 		increase humanity of player by 10;
 	else if number of bunkered people + number of booked people > 4:
 		say "     You settle yourself down on the floor next to Snips's cubicle and gently thump the soft dirt until your little crab comes running to see what is going on. He quickly makes a grab for one of your fingers, holding it firmly in one of his pincers. You can tell that the crustacean is being playful, seeing as his grip isn't causing the pain that you know it's capable of delivering.";
-		if Char-H of Elijah is "2":
+		if ElijahChar-H is "2":
 			say "     Eventually, he loosens his grip, instead scuttling back to his home and grabbing his toy crab friend, reminding you of a toddler grabbing its favorite stuffed animal. As the two of them continue to play around in the dirt, you notice the remains of a past meal in the dirt, mostly some sort of plant life. Snatching up a piece, you place it closer to Snips, wondering if he is hungry or not. He doesn't seem particularly interested in it, that is until you look away. He creeps closer to the food that you placed on the dirt and brings his little friend with him. It ends up becoming a game, with you looking away and glancing back quickly to see if you can catch him, and every time you act like you haven't noticed. When Snips is right on top of the food you look away for a few seconds and are able to hear his munching. Quickly turning your attention back to him, you see that the little bit of food is now missing.";
 			say "     Raising an eyebrow at your cute little crab, he quickly points one claw at the toy Elijah gave him. You can't help but burst out laughing, once again being reminded of a child You can almost hear his internal voice say, 'It was them, not me!' Coming down from your laughing fit, Snips blows a few bubbles at you before grabbing his toy and scuttling home. You watch as he cuddles up close to the friend he just accused of eating the food, making you smile once again. You say goodnight before getting back to your feet, and ready yourself to head back out to the task at hand.";
 			increase humanity of player by 10;
@@ -157,7 +161,7 @@ Section 1.3 - Cute Crab Event
 Lost Crab is a situation.
 The sarea of Lost Crab is "Beach".
 
-Instead of resolving lost crab:
+Instead of resolving Lost Crab:
 	say "     While you are exploring, you happen across a crab. The crab has unusually large and expressive eyes. It clacks its great pincers at you, but you don't get much feeling of malice from it.";
 	if food is owned:
 		say "     The crab scuttles towards you and reaches out to poke lightly at where your food is stored. Do you want to give it some?";
@@ -166,16 +170,23 @@ Instead of resolving lost crab:
 			say "     The crab munches quite happily at the food, blowing a few bubbles in between bites to show its appreciation. Laying down next to the crab, you can't help but laugh a little bit at how happy it looks just nibbling away at its food. Without a second thought you reach out and stroke the smooth shell, causing the crab to stop eating and just stare at you with its abnormally huge eyes. From somewhere further down the beach, you can hear a loud roar echo out. The little crab doesn't hesitate to scuttle closer to you, seeking shelter. Wrapping an arm around the frightened crustacean, you continue to play protector while it finishes its meal. Once it is finished eating you get up to carry on with your exploration of the area, glancing back down at the crab to say goodbye. You are met with those huge eyes that almost look back at you imploringly.";
 			say "     The crab raises its pincers in an act that on a human would almost look like it's asking to be picked up. A little leary of the sharp claws, you lean down scooping up the crab. Thankfully, you had interpreted the action correctly as the crab seems content to now come with you. Deciding that if this little guy... errr girl... whatever it is, is going to join you it needs a name. Thinking to yourself a bit, your eyes immediately are drawn to the sizable claws that its sporting. A name pops into your head: Snips! The name goes with the claws while at the same time is perfect for a cute little crab. Informing your companion of their new name all that you receive in response is a few bubbles blown at you. That decided, you go back to the exploration of the beach.";
 			now cute crab is tamed;
+			add "Tamed" to Traits of cute crab;
 			move Snips to Computer Lab;
 			say "[bold type](The cute crab is now tamed! You can make it your active pet by typing [link]pet cute crab[as]pet cute crab[end link]. You can see all of the pets that you have tamed with the [link]pet[as]pet[end link] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [link]pet dismiss[as]pet dismiss[end link], or just [link]dismiss[as]dismiss[end link])[roman type]";
+			now Resolution of Lost Crab is 1; [fed the crab]
 		else:
 			say "     The crab scuttles away sadly.";
-		now lost crab is resolved;
+			now Resolution of Lost Crab is 2; [didn't feed the crab]
+		now Lost Crab is resolved;
 	else:
 		say "     The crab peers at you for several quiet moments before scuttling away, mildly disappointed for some reason.";
 
 Section 2.1 - House Cat NPC/Pet
 [Original content created by Sarokcat]
+
+Table of GameCharacterIDs (continued)
+object	name
+house cat	"house cat"
 
 house cat is a pet. house cat is a part of the player.
 understand "Dinah" as house cat.
@@ -201,6 +212,10 @@ to say DismissDinah:
 		say "     You begin to tell Dinah that she can head on home, only to find a pair of glowing eyes watching you from the shadows, right before they fade away completely.";
 	else: [dismissing her in the computer lab]
 		say "     Reaching down to stroke Dinah's soft fur, you tell her that she can rest for now. Rubbing up against your leg, she then begins to make her way back to her cubicle to laze the day away.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Dinah	"Dinah"
 
 Dinah is a woman.
 The description of Dinah is "[DinahDesc]".
@@ -269,13 +284,9 @@ to say DinahTalkMenu:
 					say "[DinahTalk1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You back away from the house cat, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You back away from the house cat, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -329,14 +340,18 @@ Instead of resolving Lost house cat:
 					say "     Fingering the tiny silver name tag you are able to read the name Dinah. Obviously the cat is a pretty little girl going by the name at least. Stretching as you sit up, you are surprised when you look around and realize how much time has passed while you took care of the little cat. Deciding that you should be heading back, you realize after a few steps that you seem to have a feline following you, but after thinking about it a second, you realize that the little house cat probably wouldn't last much longer out here on the streets alone. You let Dinah follow you all the way back to the Library.";
 					delete chosenmilk;
 					now house cat is tamed;
+					add "Tamed" to Traits of house cat;
 					move Dinah to Computer Lab;
 					say "(The house cat is now tamed! You can make it your active pet by typing [bold type][link]pet house cat[end link][roman type]. You can see all of the pets that you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+					now Resolution of Lost house cat is 1; [fed and adopted the cat]
 					now Lost house cat is resolved;
 				else:
 					say "     Looking over your supplies, you decide that you'd rather not part with the collected milk in the end. Wanting to keep your hard-earned supplies, you decide that the cat will just have to fend for itself.";
+					now Resolution of Lost house cat is 2; [abandoned the cat]
 					now Lost house cat is resolved;
 			else:
 				say "     Deciding to keep hold of your hard-earned supplies instead, you leave the cat alone and resolve not to stop by here again.";
+				now Resolution of Lost house cat is 2; [abandoned the cat]
 				now Lost house cat is resolved;
 		else:
 			say "     Checking through your bag with the cat watching your every move, you don't seem to have anything that you think might tempt the cat out, and after a little bit of trying to coax it out anyways, you reluctantly give up and leave the alleyway and the cat alone. You resolve to come back after finding something the cat might like, perhaps some nice milk from one of the gryphons you have seen flying around town?";
@@ -356,6 +371,10 @@ when play ends:
 
 Section 3.1 - Exotic Bird NPC/Pet
 [Original content created by Sarokcat]
+
+Table of GameCharacterIDs (continued)
+object	name
+Exotic Bird	"Exotic Bird"
 
 Exotic Bird is a pet. Exotic Bird is a part of the player.
 understand "Chirpy" as Exotic Bird.
@@ -381,6 +400,10 @@ to say DismissChirpy:
 		say "     You let out a loud high pitch whistle, followed by a swish of your arm. Chirpy glances down at you from the air, knowing the meaning, and begins to fly back to the Library.";
 	else: [dismissing her in the computer lab]
 		say "     Walking over to the little bird's cubicle, Chirpy happily flutters over to the desk to find ways to amuse herself till you have need of her again.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Chirpy	"Chirpy"
 
 Chirpy is a woman.
 The description of Chirpy is "[ChirpyDesc]".
@@ -449,13 +472,9 @@ to say ChirpyTalkMenu:
 					say "[ChirpyTalk1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You back away from the exotic bird, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You back away from the chirpy, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -465,9 +484,9 @@ to say ChirpyTalk1:
 
 Section 3.3 - Exotic Bird Event
 
-Scared bird is a situation.
-The sarea of Scared bird is "Zoo".
-Instead of resolving Scared bird:
+Scared Bird is a situation.
+The sarea of Scared Bird is "Zoo".
+Instead of resolving Scared Bird:
 	say "     Traveling along the Zoo paths, you hear a strange noise from up ahead. Moving carefully to investigate the area where you heard the noise, you look around the tree there but don't actually see anything. You are about to turn to leave when you hear the sound again from up in the branches. Looking up, you are surprised to see a rather scared-looking exotic bird taking shelter up in the branches, its brilliant plumage obvious at this distance as it huddles nervously above you. You realize that it must have escaped from one of the exotic bird exhibits, and you sigh when you realize that its chances of survival in this violent city without help are pretty slim. Maybe you should try convincing it to come along with you instead of just hiding here?";
 	if carried of food is 0:
 		say "     A quick glance shows that you don't have any food with which to try and coax the bird down with. You'll have to try again later once you've found some food.";
@@ -483,14 +502,17 @@ Instead of resolving Scared bird:
 				say "     Landing on your shoulder, the chipper little bird cuddles up to your neck. You should probably give your new little friend a name. Hmm... a chipper bird name. Chirpy... that sounds like a good name for her. Trying out the name for her, she seems to like it, singing her sweet melody happily.";
 				delete food;
 				now Exotic Bird is tamed;
+				add "Tamed" to Traits of Exotic Bird;
 				move Chirpy to Computer Lab;
 				say "(The exotic bird is now tamed! You can make it your active pet by typing [bold type][link]pet exotic bird[end link][roman type]. You can see all of the pets that you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+				now Resolution of Scared Bird is 1; [adopted the bird]
 				now Scared bird is resolved;
 			else:
 				say "     Sadly, the bird seems too scared to heed your blandishments, and it stays up in the tree shaking and occasionally letting out a soft piteous cry. You obviously aren't going to convince it to trust you right now. Maybe you should try again later.";
 		else:
 			say "     Deciding that you wouldn't have the least idea of how to care for a truly exotic bird yourself, and that you are having enough trouble keeping yourself alive, you decide to leave the bird to its fate. At least it has wings, right?";
-			now Scared bird is resolved;
+			now Resolution of Scared Bird is 2; [abandoned the bird]
+			now Scared Bird is resolved;
 
 Section 3.4 - Exotic Bird Ending
 
@@ -503,6 +525,10 @@ when play ends:
 
 Section 4.1 - Helper Dog NPC/Pet
 [Original content created by Stripes]
+
+Table of GameCharacterIDs (continued)
+object	name
+helper dog	"helper dog"
 
 helper dog is a pet. helper dog is a part of the player.
 understand "Hobo" as helper dog.
@@ -528,6 +554,11 @@ to say DismissHobo:
 		say "     Softly patting Hobo's flank you tell him that it's time to head home. He happily starts to run off but stops when he notices you not following. With a curt nod to him, he tilts his head then resumes his run back to the Library.";
 	else: [dismissing him in the Computer Lab]
 		say "     Walking over to the cubicle that Hobo has made into his own little house, you lean down, giving the faithful dog a tight hug. With a final ear rub that leaves Hobo's tail wagging, you tell him to take it easy at home for awhile.";
+
+
+Table of GameCharacterIDs (continued)
+object	name
+Hobo	"Hobo"
 
 Hobo is a man.
 The description of Hobo is "[HoboDesc]".
@@ -594,13 +625,9 @@ to say HoboTalkMenu:
 					say "[HoboTalk1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You back away from the helper dog, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You back away from the hobo, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -638,14 +665,17 @@ Instead of resolving a Mournful Dog:
 				if total > 21:
 					say "     You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head and check its tag, finding only the name 'Hobo'. Reaching over, you pull the sheets over his former master's body, then you both leave together.";
 					now helper dog is tamed;
+					add "Tamed" to Traits of helper dog;
 					move Hobo to Computer Lab;
 					say "     (The helper dog is now tamed! You can make it your active pet by typing [bold type][link]pet helper dog[as]pet helper dog[end link][roman type]. You can see all of the pets that you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 					increase score by 10;
+					now Resolution of Mournful Dog is 1; [adopted the dog]
 					now Mournful Dog is resolved;
 				else:
 					say "     The dog accepts the food from you, but won't let you get close. Maybe you should come back and try again another time.";
 			else:
 				say "     Hardening your heart to the mournful dog's needs, you close the door and decide to move on.";
+				now Resolution of Mournful Dog is 2; [abandoned the dog]
 				now Mournful Dog is resolved;
 	else:
 		say "     Your passage through the halls finds you at the room with the dead patient and their pet dog. You pinch your nose and poke in again to check on the dog, finding it still there. It perks up a little as you arrive, but still won't approach. It seems in slightly better condition than when you were here last time, but is still quite malnourished.";
@@ -669,11 +699,13 @@ Instead of resolving a Mournful Dog:
 					say "(The helper dog is now tamed! You can make it your active pet by typing [bold type]pet helper dog[roman type]. You can see all of the pets that you have tamed with the [bold type]pet[roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])";
 					now lastfuck of helper dog is turns;
 					increase score by 10;
+					now Resolution of Mournful Dog is 1; [adopted the dog]
 					now Mournful Dog is resolved;
 				else:
 					say "     The dog accepts the food from you, but won't let you get close. Maybe you should come back and try again another time.";
 			else:
 				say "     Hardening your heart to the mournful dog's needs, you decide you can't afford to spare food for the animal and move on.";
+				now Resolution of Mournful Dog is 2; [abandoned the dog]
 				now Mournful Dog is resolved;
 
 hobo-water-gift is a truth state that varies. hobo-water-gift is usually false.

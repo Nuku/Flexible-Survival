@@ -35,7 +35,11 @@ Version 1 of Corbin by Wahn begins here.
 [ CorbinKidCounter - number of children with the player                 ]
 [ CorbinPregCounter - timer for the next birth (48h from start)         ]
 
-Corbin is a man. The HP of Corbin is usually 0. Corbin is in Worker Barracks.
+Table of GameCharacterIDs (continued)
+object	name
+Corbin	"Corbin"
+
+Corbin is a man. The HP of Corbin is normally 0. Corbin is in Worker Barracks.
 The description of Corbin is "[CorbinDesc]".
 The conversation of Corbin is { "Mew!" }.
 CorbinPregnancy is a number that varies. [pregnancy progress variable - after 36 turns, the pregnancy becomes visible]
@@ -356,13 +360,9 @@ to say CorbinSexMenu:
 					say "[CorbinSex7]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the equine cowboy, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the equine cowboy, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

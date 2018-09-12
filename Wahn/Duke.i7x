@@ -13,7 +13,11 @@ Version 1 of Duke by Wahn begins here.
 [   1: Sheep Meadow SW                                                  ]
 [   2: Sheep Meadow SE                                                  ]
 
-Duke is a man. The HP of Duke is usually 0. The thirst of Duke is usually 2. Duke is in Sheep Meadow SE.
+Table of GameCharacterIDs (continued)
+object	name
+Duke	"Duke"
+
+Duke is a man. The HP of Duke is normally 0. The thirst of Duke is normally 2. Duke is in Sheep Meadow SE.
 The description of Duke is "[DukeDesc]".
 The conversation of Duke is { "Mew!" }.
 
@@ -307,7 +311,7 @@ to say DukeSex4: [Duke fucked in the ass]
 
 to say DukeSex5: [Player fucked in the ass]
 	setmonster "German Shepherd";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Stepping up behind Duke, you slide your hand down his back, running through the soft fur until you arrive at a firm asscheek and give it a good squeeze. He gives a quick yip as you do it, moaning as you continue to grope his ass, tongue hanging out of his mouth and tail wagging excitedly. Then you move your hand to his crack, rubbing your fingers between his buns and finding his pucker. The German shepherd gives a lust-filled gasp as you push a probing digit into his back-door, his knotted cock starting to push out of his shaft in arousal. 'I love having my ass played with,' he tells you happily, leaning back to get a bit more of your finger in and rubbing his soft-furred and muscular back against yourself.";
 	WaitLineBreak;
 	say "     Putting your arms around Duke from behind, you feel his muscular chest, then whisper in his ear that he's not the only one who likes hard dick in his ass, reaching down to grab his erect canine manhood. Inviting him to be the top for a change, you walk around Duke, stripping your clothes off on the move to stop on your hands and knees in the grass in front of the German shepherd. Looking back at him, wiggling your naked ass invitingly, you tell him to mount you. Duke is a bit hesitant at first, always having been the bottom in his pairing with Shawn, then his natural (though nanite-enhanced) urges take over, making him follow the guiding arrow of his erect penis.";
@@ -320,7 +324,11 @@ to say DukeSex5: [Player fucked in the ass]
 	if HP of Duke is 10:
 		now HP of Duke is 11;
 
-Shawn is a man. The HP of Shawn is usually 0.
+Table of GameCharacterIDs (continued)
+object	name
+Shawn	"Shawn"
+
+Shawn is a man.
 The description of Shawn is "[ShawnDesc]".
 The conversation of Shawn is { "Mew!" }.
 

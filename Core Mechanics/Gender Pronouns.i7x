@@ -3,16 +3,16 @@ Version 3 of Gender Pronouns by Core Mechanics begins here.
 
 Section 1 - Blue Bishop's Variables and Routines
 
-ghis is text that varies. ghis is usually "their". [Gender text nodule, entails his/her/their]
-ghe is text that varies. ghe is usually "it". [Gender text nodule, entails he/she/it]
-ghim is text that varies. ghim is usually "it". [Gender text nodule, entails him/her/it]
-ghishers is text that varies. ghishers is usually "theirs". [Gender text nodule, entails his/hers/theirs]
-gchis is text that varies. ghis is usually "Their". [Capitalized Versions]
-gche is text that varies. gche is usually "It".
-gchim is text that varies. ghim is usually "It".
-gchishers is text that varies. gchishers is usually "Theirs".
-gdragon is text that varies. gdragon is usually "dragon".
-gmasculine is text that varies. gmasculine is usually "particular".
+ghis is a text that varies. ghis is usually "their". [Gender text nodule, entails his/her/their]
+ghe is a text that varies. ghe is usually "it". [Gender text nodule, entails he/she/it]
+ghim is a text that varies. ghim is usually "it". [Gender text nodule, entails him/her/it]
+ghishers is a text that varies. ghishers is usually "theirs". [Gender text nodule, entails his/hers/theirs]
+gchis is a text that varies. ghis is usually "Their". [Capitalized Versions]
+gche is a text that varies. gche is usually "It".
+gchim is a text that varies. ghim is usually "It".
+gchishers is a text that varies. gchishers is usually "Theirs".
+gdragon is a text that varies. gdragon is usually "dragon".
+gmasculine is a text that varies. gmasculine is usually "particular".
 
 to malepronouns:
 	now ghis is "his";
@@ -284,6 +284,10 @@ to say ItsTheirsf: [possessive pronoun female - picks 'its' or 'theirs' based on
 		say "Its";
 
 Section 4 - Current Monster
+
+Table of GameCharacterIDs (continued)
+object	name
+Currentmonster	"Currentmonster"
 
 Currentmonster is a person.
 Currentmonster has a number called mongender.

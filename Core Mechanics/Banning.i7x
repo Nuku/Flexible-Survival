@@ -12,6 +12,7 @@ A tag has a list of text called infections.
 A tag has a list of situations called badspots.
 A tag can be warded. A tag is usually not warded.
 A tag can be banned. A tag is usually not banned.
+Body Horror is a flag.
 Furry is a flag.
 Guy is a flag.
 Girl is a flag.
@@ -38,7 +39,7 @@ when play begins:
 	add { "Wyvern", "Yamato Dragon", "Yamato Dragoness", "Feral Sea Dragon", "Feral Sea Dragoness", "Snake", "Sierrasaur", "Feral Wolf", "Latex Wolf", "Ebonflame Whelp", "Ebonflame Dragator", "Manticore", "Quilled Tousky", "Hydra Beast", "Feral Shaft Beast", "Flaming Lynx", "Cerberus", "Sabretooth", "Friendship Pony", "Pegasus", "Feral Gryphon", "Shadow Beast", "Behemoth", "Feral Cheetah", "Peculiar Dragon" } to infections of feral;
 
 to new ban menu:
-	let flaglist be {"Furry", "Guy", "Girl", "Transgender", "Hermaphrodite", "Humorous", "Humanoid", "Hellspawn", "Feral"};
+	let flaglist be { "Body Horror", "Furry", "Guy", "Girl", "Transgender", "Hermaphrodite", "Humorous", "Humanoid", "Hellspawn", "Feral"};
 	let taglist be {"Noncon", "Incest", "Vore", "Cockvore", "Mindcontrol"};
 	let countnumber be 1;
 	let nbmexit be 0;
@@ -104,6 +105,8 @@ to banchange (name - text):
 
 to oldflagban (flagname - text):
 	if flagname is:
+		-- "Body Horror":
+			now Body Horror is not banned;
 		-- "Cockvore":
 			now Cockvore is banned;
 		-- "Furry":
@@ -133,6 +136,8 @@ to oldflagban (flagname - text):
 
 to oldflagward (flagname - text):
 	if flagname is:
+		-- "Body Horror":
+			now Body Horror is not warded;
 		-- "Cockvore":
 			now Cockvore is warded;
 		-- "Furry":
@@ -162,6 +167,8 @@ to oldflagward (flagname - text):
 
 to oldflagunban (flagname - text):
 	if flagname is:
+		-- "Body Horror":
+			now Body Horror is not banned;
 		-- "Cockvore":
 			now Cockvore is not banned;
 		-- "Furry":
@@ -191,6 +198,8 @@ to oldflagunban (flagname - text):
 
 to oldflagunward (flagname - text):
 	if flagname is:
+		-- "Body Horror":
+			now Body Horror is not warded;
 		-- "Cockvore":
 			now Cockvore is not warded;
 		-- "Furry":

@@ -117,6 +117,10 @@ to say SylviasRoomDesc:
 
 Section 2 - NPC Declaration
 
+Table of GameCharacterIDs (continued)
+object	name
+Sylvia	"Sylvia"
+
 Sylvia is a woman. The hp of Sylvia is usually 0.
 hpM of Sylvia is a number that varies. hpM of Sylvia is usually 0.
 hpF of Sylvia is a number that varies. hpF of Sylvia is usually 0.
@@ -227,13 +231,9 @@ to say SylviaTalkMenu:
 					say "[SylviaTalk7]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You stand up, indicating an end to the conversation. Sylvia smiles at you, before looking out her window.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You stand up, indicating an end to the conversation. Sylvia smiles at you, before looking out her window.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -307,13 +307,9 @@ to say SylviaTalk6: [Samples from friends]
 					say "[BubbleSample]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You stand up, indicating an end to the conversation. Sylvia smiles at you, before looking out her window.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You stand up, indicating an end to the conversation. Sylvia smiles at you, before looking out her window.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -413,13 +409,9 @@ to say SylviaSexMenu:
 					say "[SylviaSex5]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the collie girl, shaking your head slightly as she gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the collie girl, shaking your head slightly as she gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -462,7 +454,7 @@ The sarea of Despairing Biologist is "Campus".
 when play begins:
 	add Despairing Biologist to badspots of furry;
 
-instead of going to College Walkway East while (Despairing Biologist is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (Despairing Biologist is active and Despairing Biologist is not resolved and Despairing Biologist is active and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	DespairingBiologistEvent;
 
@@ -480,6 +472,7 @@ to DespairingBiologistEvent: [Meet Sylvia]
 			now hpF of Sylvia is 1; [got room number]
 		else:
 			now hpM of Sylvia is 1; [got room number]
+		now Resolution of Despairing Biologist is 1; [banned / warded option]
 		change the northeast exit of Tenvale College Female Dorms to Sylvia's Room; [connecting the location to the travel room]
 		change the southeast exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
 	else:
@@ -502,9 +495,11 @@ to DespairingBiologistEvent: [Meet Sylvia]
 				say "     The male continues to hammer himself into the canine's mouth, occasionally stroking the back of her head or scratching an ear. Noticing his imminent orgasm, the collie brings a hand up between her mouth and his knot, preventing its entrance to her mouth. Giving a few last thrusts, Julian cums inside Sylvia's mouth, his knot throbbing between her fingers. Short of breath, the biology student pulls back, semen oozing from her mouth as the lupine cock slips out, still contracting and leaving trails of sperm on the ground. Swallowing the contents of her mouth, the collie stands up, dusting her knees off and straightening her skirt. 'Mmm, not bad for a first experience. I might even consider doing that again,' she says brightly before kissing her companion on the nose.";
 				say "     'But, fair is fair, I haven't had an orgasm,' she chuckles, playfully attempting to drag the lupine up. As you step forward to offer your services for such a task, she looks at you and laughs good naturedly. 'I only met you a moment ago. What sort of girl would I be if I allowed anyone I met to watch me fellate a friend before allowing the stranger to go down on me.' Seeing your disappointment, she relents slightly. 'I'll tell you what, prove to me that you're not just interested in me sexually. Talk to me later in my room when we aren't both horny, then I'll consider whether you are worth knowing. Room number 059, toodle pip.' Beginning to feel like a third wheel, you leave the two bonding, and continue through the college.";
 				now hp of Sylvia is 2; [watched BJ, got room number]
+				now Resolution of Despairing Biologist is 2; [watched BJ]
 			else: [do not watch]
 				LineBreak;
 				say "     Allowing the wolf to feel the attentions of the collie, you turn to leave. Sylvia pulls back from his cock momentarily and calls after you, 'I'm in room 059 of the female dormitory if you want to talk to me more. You seemed nice enough.' Noting the room in your head, you push past the branches and continue through the college.";
+				now Resolution of Despairing Biologist is 3; [didn't watch BJ]
 				now hp of Sylvia is 1; [got room number]
 			add "Sylvia Quest" to OpenQuests of player;
 			change the northeast exit of Tenvale College Female Dorms to Sylvia's Room; [connecting the location to the travel room]
@@ -512,6 +507,7 @@ to DespairingBiologistEvent: [Meet Sylvia]
 		else:
 			LineBreak;
 			say "     Feeling slightly embarrassed at the willingness of the pair to let you watch, you mutter something about needing to be somewhere before walking hurriedly back the way you came, the collie giggling behind you.";
+			now Resolution of Despairing Biologist is 99; [disinterest]
 			now hp of Sylvia is 100; [event refused, no further contact with her]
 	now Despairing Biologist is resolved; [It won't happen again]
 	now LastCampusWalkin is turns;
@@ -670,16 +666,16 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 				say "     You shake your head, helping her was enough. You wish them well and leave them to their coupling. As you close the door, you hear a yip of pleasure.";
 	now hp of Sylvia is 4; [helped with heat]
 	now hp of Julian is 1;
-	now Charming Picnic is not resolved;
-	now Badminton One is not resolved;
-	now A Wolf's Invitation is unresolved;
+	now Charming Picnic is active;
+	now Badminton One is active;
+	now A Wolf's Invitation is active;
 
 Beach Field Research is a situation.
-Beach Field Research is resolved.
+Beach Field Research is inactive.
 The level of Beach Field Research is 0.
 The sarea of Beach Field Research is "Beach".
 
-after going to Public Beach while (Beach Field Research is not resolved and daytimer is day and hp of Julian is 3 and a random chance of 1 in 2 succeeds):
+after going to Public Beach while (Beach Field Research is active and Beach Field Research is not resolved and Beach Field Research is active and daytimer is day and hp of Julian is 3 and a random chance of 1 in 2 succeeds):
 	move player to Public Beach;
 	BeachFieldResearchEvent;
 
@@ -702,8 +698,10 @@ to BeachFieldResearchEvent: [Meet the group up close]
 			say "     Bringing your other hand around so as to fully encircle his sizable girth, you vigorously masturbate the horse, your hands sliding easily over his length. He seems unsure whether he wants to grasp your shoulders or keep his arms supporting him as he leans back. You can tell that he is edging closer to orgasm by the increased frequency of the spurts of pre. Determined to give him a finish that he won't soon forget, you speed up, his thrusts causing his balls to slap against your arms. With a loud neigh that attracts the attention of other beach-goers, he begins ejaculating. You quickly angle his cock away from your friends, causing the torrent of cum that shoots from it to splatter against the sand near a sunbathing otter. 'What did I tell you kids about splashing me while making a sand castle? Closer to the sea would be better anyway,' the mustelid mumbles sleepily, not bothering to open his eyes.";
 			say "     His orgasmic high over, the horse slumps back against the sand, his phallus softening and drooping. He lies there for a moment before a polite cough catches his attention. 'I wondered where you had got to, Paul. I go to buy us ice cream and turn around to find you gone. And, where are you? Being manually stimulated like a jock behind the gym!' a hawk-woman says irritably, though it sounds it is more out of annoyance than anger. 'I should probably go...' the equine says meekly, redressing and standing up. As the pair walks away, the bird chastising her partner for 'leaving her getting ice cream when they could have both been enjoying themselves,' you turn back to your group of new friends. Evelyn passes you a paper napkin to wipe your slimy hands on while all four of them smirk at you. 'It would seem time in the city really does increase sex drive,' Sylvia jokes. 'Then you shouldn't be going there, Sylv. You're bad enough already,' Evenlyn says, mocking her good-naturedly, causing you all to burst into laughter.";
 			WaitLineBreak;
+			now Resolution of Beach Field Research is 1; [handjob given]
 		else: [Reject him]
 			say "     Not really in the mood to pleasure a complete stranger, you shake your head. The horseman looks irritated and begins to bluster about how you all led him on, but a growl from Julian quickly quiets him. Muttering, he stands up, sulkily pulling his shorts back on over a softening shaft. You watch as he leaves, pleased to see a hawk woman meet him and offer an ice cream. It would appear that he had prior engagements anyway, you think, letting out a sigh of relief. A furry hand on your leg draws your attention back to your group. The female cat, Evelyn is offering you a piece of cheesecake on a plate with a fork. Where they found it, you wouldn't know, but a rumble from your stomach suggests that now is not the time to look a gift horse in the mouth. You join in their inconsequential conversation, laughing at jokes and offering your opinion when necessary.";
+			now Resolution of Beach Field Research is 2; [handjob refused]
 	WaitLineBreak;
 	say "     Sylvia raises a cup with lemonade, causing the group to quieten down. 'We came together because we all agreed that studying the changes in the city could benefit society, but also be fun for us. We may not be the most selfless of people, but our research could be none the less important. While there are most likely others studying in similar fashion to us, we should not let this hinder or discourage us. Without Julian, I may never have gone along this path. For that, I give him thanks,' Sylvia intones. Julian dips his head in recognition but blushes slightly at Evelyn's jab of 'I thought that you'd already rewarded him.' They all chuckle, the wolf included, before Sylvia continues. 'While, yes, Julian has been given certain 'benefits', if not for him and [name of player], who joined us for this picnic, I may have been just another needy bitch in the city, at the mercy of my heat and the many virile males. For this reason, I think that they could be of use to our project. Do you all agree?";
 	say "     They all assent enthusiastically, all of their eyes appraising you. 'If you could all raise your glasses,' the collie requests, which you all do. 'To friendship and science,' she toasts, joined by your voices. Soon after the celebration, you all begin clearing up the picnic, gathering bottles, plates, and cutlery into the wicker basket. As you help them, Sylvia kneels next to you, 'Come by my room at some point, then I'll explain how you can help us. It also means that I get to see you, though I'm sure the knowledge that you are helping advance science is all that you need,' the collie jokes before continuing, 'Don't feel rushed though. We all know that you have other things to do, and we have things we can do without you anyway. I would offer whether you wanted to walk back with us, but you look like you have things you want to do while you're here. So, bye for now,' she says sweetly, causing the others to call farewell too. As they leave, you think how lucky you have been finding friendly people in a city full of those overcome by the nanites.";
@@ -712,7 +710,7 @@ to BeachFieldResearchEvent: [Meet the group up close]
 	now hpM of Sylvia is 4;
 	now hpF of Sylvia is 4;
 	now Beach Field Research is resolved;
-	now Bad Breakup is not resolved;
+	now Bad Breakup is active;
 
 instead of going northeast from Tenvale College Female Dorms while (hp of Sylvia is 5 or hpM of Sylvia is 4 or hpF of Sylvia is 4):
 	SylviaJobProp;
@@ -810,7 +808,7 @@ to SylviaVirginity: [Sylvia willing to give you her maidenhead]
 	now hp of Sylvia is 7;
 
 Bad Breakup is a situation.
-Bad Breakup is resolved.
+Bad Breakup is inactive.
 The sarea of Bad Breakup is "Nowhere".
 
 instead of going north from Dorm Street while (a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
@@ -830,11 +828,11 @@ to BadBreakupEvent: [Cheating Boyfriend]
 	say "     Now that the ex-boyfriend has left, Sylvia unlocks the fox girl's door and guides her inside with you following behind. The miserable student collapses into her bed weeping, Sylvia only leaving her for a moment to re-lock the door. 'You barely know me. Why are you doing this?' the fennec asks the collie. The canine sits beside her and hugs the fox's head to her chest. 'Because I care enough and because you deserve to be loved,' is the reply. 'I would like to be your friend, but I would understand if you don't want anything to do with me at the moment. I can get Rose to come and sit with you while you recover.' Hiccuping between sobs, the fennec clings to Sylvia, managing to utter, 'No, I want you here. No one else cared about me out there.' The collie looks pained at witnessing such desperation and kisses the top of the fox's head. 'I'll stay, dear, but I'll warn you now. Ethan will face retribution for this, Nemesis as my witness.'";
 	say "     You agree with the sentiment, even if you find the oath strange, and ask whether there is anything she would like you to help with. Sylvia looks at you darkly. 'Oh no. This one's personal. I'll get the materials myself and make him feel pain equivalent to what he has inflicted on Chloe here. I might even try some new contraptions out.' The tone in which she says this makes you uncomfortable, and you almost feel some fear for the unfaithful ex-boyfriend. 'Don't kill him. Please. I'm not worth that,' Chloe pleads. 'I won't kill him, but don't think yourself so worthless. You're smart, pretty, and kind-hearted,' the collie reassures her as she strokes her hair. Glancing at you, she adds, '[if player is not defaultnamed][name of player], you[end if] can go if you want. I'll stay with Chloe for now. As you turn and leave, she mutters,' He will pay for this,' and you hope the fennec didn't hear that. Despite the heartbreak Ethan has caused her, the fox is drowning in misery too much to want revenge at the moment.";
 	now Bad Breakup is resolved;
-	now Cheat's Retribution is not resolved;
+	now Cheat's Retribution is active;
 	now LastCampusWalkin is turns;
 
 Cheat's Retribution is a situation.
-Cheat's Retribution is resolved.
+Cheat's Retribution is inactive.
 The sarea of Cheat's Retribution is "Campus".
 
 instead of going to College Walkway East while (a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 8):
@@ -867,14 +865,16 @@ to CheatsRetributionEvent: [Ethan's Punishment]
 		say "     Or should that be her? While Ethan used to be a buff male gorilla, he is now thin, shorter, and definitely female. 'She makes for quite the cute mongoose, don't you think?' Sylvia comments, placing a pad of paper covered in scientific mumbo-jumbo on the table. Chloe gazes out at the frantic feliform for several minutes, the room remaining silent while she commits this moment to memory. She turns away as other students appear and rush to the mongoose's aid. Mouthing [']thank you['] at the collie, the vulpine woman sits beside Sylvia and rests her head on her shoulder. Chloe and Sylvia have bonded considerably since when you first met them, and you can't help but smile. Ethan's punishment may have been morally questionable, but the scene in front of you makes you feel like it was worth it. 'Should we go out and see? It might seem suspicious if we don't go out and check,' Julian asks, receiving a nod in response.";
 		WaitLineBreak;
 		say "     Repacking her notes, Sylvia brings up the rear as you leave the room again and approach the growing mass of onlookers. A mature-looking lion blocks your path. 'Please don't get any closer. A student has just transformed, and we aren't sure whether they are contagious at the moment. I suspect that it was a practical joke, but for now, the area is going to be quarantined, and this student will be taken to the medical office for an examination,' the tall feline informs you. Giving a nod, your group walks back towards the dormitories, the assorted size packs on their backs remaining unquestioned. Once you reach the room where you met them earlier today, they collapse into the chairs, hours of buried stress coming to the surface and exhausting everyone. 'We'll talk about this more another time,' Sylvia says, slouched against the wall. 'But for now, I need to find a safe place to dump the mats and then I want a nap. Well done, everyone, you all did very well.' Taking this as a dismissal, you return to the foyer and wonder what to do next.";
+		now Resolution of Cheat's Retribution is 1; [watched]
 		now SylviaTrapVar is 2;
 	else: [No part in this]
 		say     "'That's fine,' Sylvia says. 'You are allowed to have your own opinion on the matter. Just stay away from the college sauna. You do not want to get caught up in this. Especially if we get caught.' She doesn't seem upset by your decision, but you imagine that she might have been happier if you had agreed to be a part of her scheme. You leave the room again, leaving the friends to carry out their plan. You might hear about the outcome anyway. Hopefully they don't get in too much trouble.";
+		now Resolution of Cheat's Retribution is 2; [stayed out of it]
 		now SylviaTrapVar is 1;
 	now Cheat's Retribution is resolved;
 
 Charming Picnic is a situation.
-Charming Picnic is resolved.
+Charming Picnic is inactive.
 The level of Charming Picnic is 0.
 The sarea of Charming Picnic is "Campus".
 
@@ -891,7 +891,7 @@ to CharmingPicnicEvent: [Picnic]
 	now LastCampusWalkin is turns;
 
 Badminton One is a situation.
-Badminton One is resolved.
+Badminton One is inactive.
 The level of Badminton One is 0.
 The sarea of Badminton One is "Campus".
 
@@ -944,9 +944,9 @@ to MalePrefUnnaturalHeatEvent: [MalePref Alternative]
 			WaitLineBreak;
 			say "     You wish them well and leave them to their coupling. As you close the door, you hear a yip of pleasure.";
 	now hpM of Sylvia is 3; [helped with heat]
-	now Charming Picnic is not resolved;
-	now Badminton One is not resolved;
-	now Bad Breakup is not resolved;
+	now Charming Picnic is active;
+	now Badminton One is active;
+	now Bad Breakup is active;
 
 instead of going northeast from Tenvale College Female Dorms while (SylviaConv is 5 and hpF of Sylvia is 2 and a random chance of 1 in 4 succeeds):
 	move player to Tenvale College Female Dorms;
@@ -983,9 +983,9 @@ to FemPrefUnnaturalHeatEvent: [Sylvia removes skirt]
 			WaitLineBreak;
 			say "     You wish them well and leave them to their coupling. As you close the door, you hear a yip of pleasure.";
 	now hpf of Sylvia is 3; [helped with heat]
-	now Charming Picnic is not resolved;
-	now Badminton One is not resolved;
-	now Bad Breakup is not resolved;
+	now Charming Picnic is active;
+	now Badminton One is active;
+	now Bad Breakup is active;
 
 Sylvia ends here.
 

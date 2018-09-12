@@ -45,7 +45,7 @@ to say WildMustangLoses:
 to say LuciferSexMenu:
 	now sextablerun is 0;
 	setmonster "Feral Mustang";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
@@ -120,14 +120,10 @@ to say LuciferSexMenu:
 				now lastfuck of Lucifer is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the mustang stallion, shaking your head slightly as he gives a questioning look. Then you walk back to the gate leading out into of this paddock and step through, securely locking it behind you.";
-				move player to Central Farm Square;
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the mustang stallion, shaking your head slightly as he gives a questioning look. Then you walk back to the gate leading out into of this paddock and step through, securely locking it behind you.";
+			move player to Central Farm Square;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -315,12 +311,12 @@ to say WildMustangDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Feral Mustang";
 	now enemy title entry is "Wild Mustang";
 	now enemy name entry is "Lucifer";
@@ -368,8 +364,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 2 - NPC
 
@@ -393,6 +390,10 @@ Section 2 - NPC
 [  0: not mentioned                                                   ]
 [  1: player was told about it                                        ]
 [  2: used successfully with Lucifer, Dex-1 is the running count      ]
+
+Table of GameCharacterIDs (continued)
+object	name
+Lucifer	"Lucifer"
 
 Lucifer is a man. Lucifer is in Mustang Paddock.
 The description of Lucifer is "[Luciferdesc]".

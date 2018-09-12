@@ -17,9 +17,9 @@ check supersponsor:
 carry out supersponsor:
 	say "     Trixie flutters in close as you whisper the password to her. 'Excellent! This is the sponsor reward menu for our Patreon supporters. Thanks so much for supporting us and helping the game improve. You're super! You're awesome! You're wonde- Waaaaait... you better not be lying about being allowed access. If you're trying to trick me, I'll be really pissed,' she says, sparks ringing her tiny fists as she looks you over with suspicion.";
 	say "     'Alright. I guess I can trust you. We've got a few special fun perks for you to pick from. A few more will show up from time to time as well. Thanks again and enjoy!'";
-	let trixieexit be 0;
+	let Trixieexit be 0;
 	let weaponsmaster be "Weaponsmaster";
-	while trixieexit is 0:
+	while Trixieexit is 0:
 		let sanitysave be 0;
 		if "Sanity Saver" is listed in feats of player, now sanitysave is 1;
 		say "[bold type]Patreon Cheats:[roman type][line break]";
@@ -174,12 +174,14 @@ carry out supersponsor:
 		else if calcnumber is 12:
 			repeat with petget running through pets:
 				now petget is tamed;
+				if "Tamed" is not listed in Traits of petget:
+					add "Tamed" to Traits of petget;
 			say "They are all now yours! (Warning, the code for some pets may react oddly. They are all set as battle-summonable though.)[line break]";
 		else if calcnumber is 13:
 			now carried of Smug Confidence is 1;
 			say "Ah, there it is. Don't forget to use it.";
 		else:
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		LineBreak;
 
 

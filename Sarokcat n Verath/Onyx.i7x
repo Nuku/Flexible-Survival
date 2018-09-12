@@ -183,6 +183,10 @@ onyxlapdance is a number that varies.	[number of lap dances from Onyx]
 fonyxvagcount is a number that varies.	[number of vaginal sex with Onyx]
 fonyxanalcount is a number that varies.	[number of anal sex with Onyx]
 
+Table of GameCharacterIDs (continued)
+object	name
+Onyx	"Onyx"
+
 Onyx is a man.
 The description of Onyx is "[onyxappearance]".
 The conversation of Onyx is { "Help me!" }.
@@ -246,7 +250,7 @@ instead of conversing the Onyx:
 			now XP of Onyx is 100;
 		else:
 			increase XP of Onyx by 1;
-			now Equineguardpost is unresolved;
+			now Equineguardpost is active;
 	else if XP of Onyx is 1:	[convo while confined]
 		say "     [one of]'Hey again, made any progress so far on those keys?'[or]'I know I had a name.. and I think it began with an... O? Maybe it was Onyx? No wait, that's my current name...'[or]He whickers at you slightly, then seems embarrassed when he realizes what he did.[or]'Come to visit the prisoner again? You aren't the only one who likes to come look, plenty of the mares come by to tell me how much fun I can look forward too, and the men... well let's just not talk about what they talk about doing to me,' Onyx says, and you notice him starting to blush.[or]'You should be careful hanging around talking to me like this, some of the horses come by here pretty often to keep an eye on me. You wouldn't want to end up in a cell next to mine now would you?'[or]'Why are you hanging around here talking to me so much? If you want to know what it is like in here, just lock yourself in one of the other cells why don't you, then you can find out what it is like to be a captive while they teach you about being a proper little horse.'[or]'This is getting to me, I keep thinking about how much fun it would be to be a big dumb horse... or better yet, be fucked by one...'[or]'I wonder if there is any way to reverse the changes at this point, or if I am going to end up a horse even if I get out of here...'[at random]";
 	else if XP of Onyx is 2:
@@ -340,10 +344,10 @@ Section 3 - Sexy Times
 Instead of fucking the Onyx:
 	if guy is not banned:		[Default to Horseman]
 		setmonster "Horseman";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 	else:				[Using Mareslut in case guy is banned]
 		setmonster "Mareslut";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 	if player is neuter:
 		say "     You consider offering to have sex with Onyx, but recall that you currently have no gender and are unable to satisfy the horse in such a manner.";
 	else if XP of Onyx is 9:
@@ -404,7 +408,7 @@ Instead of fucking the Onyx:
 			else:
 				say "     You shake your head slightly to clear it as you push the surprised Onyx back up against the wall, the changing equine seemingly surprised as you take charge of the situation. He moans slightly as your hands roam his body teasingly, your touch lingering on his almost flat crotch and his slightly swelling chest even as you rub your already aroused body against the new equines increasingly sexy form. You can feel yourself grinning as the unsure equine begins to moan with arousal and respond to your dominant touch with increasing submissiveness, his instincts obviously taking over as his body begins to change under your sexual assault. He moans helplessly as he clutches you tight, the slight swellings on his chest blossoming forth into fully formed breasts under your hands, even as you can feel his already diminutive manhood shrink and vanish into his body. For some reason the feeling of Onyx becoming a mare under your touch only increases your arousal, your own pussy dampening with need as you rub your crotch against that of the Stables newest black mare. She moans and throws her head back submissively, and you can see her muzzle shifting and becoming fully equine even as you slip one of your fingers inside her newly formed pussy and begin to massage her velvety soft new mound teasingly. 'Now that's a good looking mare,' you find yourself whispering to the changing mare as her eyes drift closed and she gives herself over to the pleasure of your touch, your arousal growing even harder to contain as you rub your heat-filled body up against the newly formed mare's sexy black form.[line break]";
 				say "     Before long you are moaning almost as hard as Onyx is, as her hands begin to wander your form as well, as she gives herself over to the submissive desires of her new body completely, and you shudder with pleasure as she cries whinnys in pleasure as her first female orgasm wracks her body. The pleasure of taming the sexy mare, and the feel of her body shuddering helplessly against yours, is too much to contain, and you gasp in orgasm as well, pleasure shooting through your body even as the new female Onyx's form slips down the wall limply, with a dazed look in her fully equine new eyes. You find yourself feeling increasingly powerful and dominant as you look down on where Onyx is panting breathlessly against the wall, even as her new hooftipped hands roam her changed body happily. Feeling strangely satisfied with your work here, you gather your wits about you as you prepare to head out to continue roaming the Stables, although you do find yourself thinking that maybe you should come back to visit your own personal pet mare again as soon as she has recovered....";
-			Now XP of Onyx is 80;
+			now XP of Onyx is 80;
 			now lastfuck of onyx is turns;
 			if fancyquest > 0:
 				increase score by 0; [do nothing action]
@@ -425,7 +429,7 @@ Instead of fucking the Onyx:
 				now scalevalue of player is 3;
 				now bodydesc of player is "sultry";
 				now bodytype of player is "[one of]equine[or]horse-like[at random]";
-				now daycycle of player is 0;
+				now SleepRhythm of player is 0;
 				end the story saying "You become another mareslut at the Stables and Onyx's special plaything.";
 				follow the turnpass rule;
 			else:						[MALE SUCCUMB]
@@ -440,7 +444,7 @@ Instead of fucking the Onyx:
 				now scalevalue of player is 3;
 				now bodydesc of player is "feminine";
 				now bodytype of player is "[one of]equine[or]horse-like[at random]";
-				now daycycle of player is 0;
+				now SleepRhythm of player is 0;
 				end the story saying "You become another slutty stallionboi at the Stables and Onyx's special plaything.";
 				follow the turnpass rule;
 		else if Onyxmareslut > 0 or onyxboislut > 0:	[For slut values of 1 and a slut value of 2 when gender doesn't match]
@@ -905,7 +909,7 @@ to say onyxbsubvag1:
 
 to say onyxbsubanalride1:
 	setmonster "Horseman";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Putting Onyx onto his back, you straddle the submissive stud and grind down onto his equine pole. Rising quickly for his dominant friend, he moans happily you take hold of it and get lined up. With a gentle squeeze of his balls to remind him of who's in charge, you can't help but moan a little as you sink your ass down onto his satisfyingly large cock. It pulses and throbs inside you with virility, further exciting you. You run your hands over his strong chest and order him to start thrusting. With permission given, the obedient stallion grabs your hips and presses his hips up rhythmically. Each thrust draws a pleasured shiver from you[if player is male], making your cock[smn] twitch and throb[else if player is female], making your cunt wet with arousal[end if].";
 	say "     You work your hips and squeeze your anal walls down around his meat, thoroughly enjoying taking a ride on it. Having his equine shaft buried inside your ass, knowing it is yours to do with as you wish, is a very satisfying feeling. He's become such a fine, strong stallion, but also an obedient and submissive lover. Having such a big, virile male as your sub to play with as you will is invigorating, adding to the thrill of getting vigorously pounded by him.";
 	WaitLineBreak;
@@ -963,8 +967,8 @@ to femonyxsex:
 		say "     Eager to oblige your need, Onyx is already lowering herself[if scalevalue of player > 3] under you[end if] to more easily access your assets, eager digits parting any obstruction in her way to expose your [cock size desc of player] dick[smn] before her curious gaze.";
 		say "     '[one of]Oh[or]Hm[or]Ah[at random], [if cock length of player > 12][one of]somebody's been eating their vegetables[or]don't think you'll be able to keep this much from me, honey[or]I wonder if it'll even fit[at random][else][one of]somebody's eager to see me[or]looks like you're all ready for a bit of fun[or]lets get this party started[at random][end if]!' Grinning, her tongue caresses along [if cocks of player > 2]the length of two of them[else if cocks of player is 2]the length of both of them[else]its length[end if], eagerly oozing by her touch as [if cocks of player > 1]they're[else]it's[end if] driven to full arousal.";
 		now calcnumber is -1;
-		let trixieexit be 0;
-		while trixieexit is 0:
+		let Trixieexit be 0;
+		while Trixieexit is 0:
 			say "[bold type]Choices:[roman type][line break]";
 			say "(1) [link]Continue Oral[as]1[end link][line break]";
 			say "(2) [link]Fuck her[as]2[end link] [if cock length of player > 15][italic type]- Too large![roman type][end if][line break]";
@@ -988,22 +992,22 @@ to femonyxsex:
 						say "Invalid entry.";
 			if calcnumber is 1:
 				femonyxsex1;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 			else if calcnumber is 2:
 				if cock length of player > 15:
 					say "[bracket]Invalid interaction: You're too large[close bracket][line break]";
 				else:
 					femonyxsex2;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 			else if calcnumber is 3:
 				if cock length of player > 15:
 					say "[bracket]Invalid interaction: You're too large[close bracket][line break]";
 				else:
 					femonyxsex3;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 			else:
 				femonyxsex4;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 	else:
 		femonyxsex4;
 

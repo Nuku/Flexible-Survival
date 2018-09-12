@@ -17,7 +17,7 @@ when play begins:
 
 to say dolphinflatabledesc:
 	setmongender 4; [creature is female]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of player:
@@ -65,7 +65,7 @@ to say dolphinflatabledesc:
 		say "     As you struggle to keep your footing on the wobbly floor of the bouncy castle, you catch sight of the now empty and partially deflated dolphin suit skulking around the edge of your fight. You get the feeling that it's waiting to ensnare you and give you the same treatment which created your opponent.";
 
 to say losetodolphinflatable:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	now dolphinflatablefight is 2;
 	increase dolinfloss by 1;
 	if dolphinmode is 1:			[lose to girl form]
@@ -203,7 +203,7 @@ to say losetodolphinflatable:
 				now scalevalue of player is 3;
 				now bodydesc of player is "inflatable";
 				now bodytype of player is "dolphin";
-				now daycycle of player is 0;
+				now SleepRhythm of player is 0;
 				now breasts of player is 2;
 				now breast size of player is 0;
 				if hellHoundLevel is 0:
@@ -279,15 +279,15 @@ to say beatthedolphinflatable:
 
 to bottleboundstate:
 	let partialengulf be 0;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Bottlenose Toy":
 			now monster is y;
 			break;
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if clearnomore is 0, clear the screen;
 		if tempnum2 is 5 or humanity of player < 50:
 			now obliging is true;
@@ -343,7 +343,7 @@ to bottleboundstate:
 			now scalevalue of player is 3;
 			now bodydesc of player is "inflatable";
 			now bodytype of player is "dolphin";
-			now daycycle of player is 0;
+			now SleepRhythm of player is 0;
 			now breasts of player is 2;
 			now breast size of player is 0;
 			if hellHoundLevel is 0:
@@ -354,7 +354,7 @@ to bottleboundstate:
 			now battleground is "void";
 			now combat abort is 1;
 			WaitLineBreak;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 		else:
 			let k be 0;
@@ -401,7 +401,7 @@ to bottleboundstate:
 						LineBreak;
 						cleanboundmemory;
 						wait for any key;
-						now trixieexit is 1;
+						now Trixieexit is 1;
 				wait for any key;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
@@ -475,12 +475,12 @@ to say dolphinflatableattack:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Bottlenose Toy"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -528,8 +528,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]

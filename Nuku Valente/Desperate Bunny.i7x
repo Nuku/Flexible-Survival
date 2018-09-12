@@ -29,7 +29,7 @@ when play begins:
 	add Needy Rabbit Girl to badspots of girl;
 	add Needy Rabbit Girl to badspots of furry;
 
-After resolving a needy rabbit girl, try looking;
+After resolving a Needy Rabbit Girl, try looking;
 
 Instead of Resolving a Needy Rabbit Girl:
 	if ngrp is 0:
@@ -50,7 +50,7 @@ Instead of Resolving a Needy Rabbit Girl:
 		if player is male:
 			say "     As you approach her, slowly, you speak in gentle tones. She seems to be relaxing a little bit. When you get within twelve feet, you see that her eyes have wandered down, no longer meeting your gaze. Instead she's looking at your belly, or groin. When you reach easy conversational distance, she grabs at your hand. 'I thought I would die alone in this city!' she gasps out. 'I can't even tell you how happy I am to see you.'";
 			now battleground is "Outside";
-			choose row with a area of battleground in the Table of random critters;
+			choose row with a area of battleground in the Table of Random Critters;
 			follow cock descr rule;
 			say "     You ask her if she has been infected, and she nods. 'My rabbit bit me and I changed, but not as much as some of the people I have seen. Have you seen those [name entry]s? Crazy, right?' She presses to your front as she talks, letting her shapely fore compress against you. You can feel she has become quite endowed, six breasts of decreasing size nudging against your body, making your [cock size desc of player], [cock of player] cock stiffen lightly.";
 			say "     Do you follow your urges?";
@@ -62,7 +62,8 @@ Instead of Resolving a Needy Rabbit Girl:
 				say "     She looks clearly disappointed and crosses her arms. 'I thought you were the kind of man to help me, but I guess I was wrong. Or maybe you're shy? Look, you're nice. Here's my address, ok? Come visit any time.";
 			now Rabbit den is known;
 			increase score by 1;
-			now needy rabbit girl is resolved;
+			now Needy Rabbit Girl is resolved;
+			now Resolution of Needy Rabbit Girl is 1; [male/herm player got invite to Sandra's den]
 			stop the action;
 		else:
 			say "     You approach the bunny, whispering soft things to her, and she permits you to walk closer. Something about her expression seems disappointed, but it fades fast. She reaches for your hand. 'It's been so long since I talked to anyone, or even saw anyone that looked human,' she murmurs. 'I just feel so lonely. Can I hold you?'";
@@ -76,13 +77,16 @@ Instead of Resolving a Needy Rabbit Girl:
 					now Rabbit Den is known;
 					now rabbitsibling is 1;
 					increase the score by 1;
+					now Resolution of Needy Rabbit Girl is 2; [player sisterified]
 					now Needy Rabbit Girl is Resolved;
 				else:
 					say "     The bunny looks embarrassed, then frustrated. She bites her bottom lip and sniffles. 'Fine then, I can make it on my own!' she says before defiantly marching away.";
+					now Resolution of Needy Rabbit Girl is 3; [player refused sistership]
 					now Needy Rabbit Girl is resolved;
 					stop the action;
 			else:
 				say "     She looks embarrassed, then frustrated. She bites her bottom lip, then sniffles, 'Fine then, I can make it on my own!' and she defiantly marches away.";
+				now Resolution of Needy Rabbit Girl is 3; [player refused sistership]
 				now Needy Rabbit Girl is resolved;
 				stop the action;
 
@@ -99,6 +103,10 @@ the scent of Rabbit Den is "     This basement hidey-hole has a soft, musky scen
 
 Section 3 - Sandra the Bunny Girl
 
+Table of GameCharacterIDs (continued)
+object	name
+Sandra	"Sandra"
+
 Sandra is a woman.
 The icon of Sandra is Figure of sandy_icon.
 The description of Sandra is "     A mostly human female, if you don't count the rabbit ears, six breasts, and that cute little white tail that sways behind her. She is usually wearing a yellow blouse, jean jacket, and a long red skirt. Her feet are clad in sneakers, well worn.".
@@ -108,7 +116,7 @@ The conversation of Sandra is { "Moved!" }
 Instead of conversing the Sandra:
 	say "[sandtalk][line break]";
 
-sangr is text that varies. sangr is usually "[one of]sister[or]sis['][at random]".
+sangr is a text that varies. sangr is usually "[one of]sister[or]sis['][at random]".
 
 to say sandtalk:
 	if rabbitsibling is 0 and a random chance of 1 in 2 succeeds:

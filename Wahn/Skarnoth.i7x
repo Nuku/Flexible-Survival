@@ -23,9 +23,11 @@ Version 1 of Skarnoth by Wahn begins here.
 
 Section 1 - Description
 
+Table of GameCharacterIDs (continued)
+object	name
+Skarnoth	"Skarnoth"
+
 Skarnoth is a man. The HP of Skarnoth is usually 0.
-Skarnoth has a list of text called Traits.
-Skarnoth has a number called Loyalty.
 The description of Skarnoth is "[SkarnothDesc]".
 The conversation of Skarnoth is { "Woof." }.
 SkarnothLibraryEntry is a number that varies. [when he was brought in]
@@ -84,13 +86,9 @@ to say SkarnothTalkMenu:
 					say "[SkarnothTalk20]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the demonic prince, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the demonic prince, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -109,7 +107,7 @@ Instead of fucking the Skarnoth:
 to say SkarnothSexMenu:
 	project the figure of Skarnoth_naked_icon;
 	setmonster "Demon Prince";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -176,13 +174,9 @@ to say SkarnothSexMenu:
 					say "[SkarnothSex6]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the chained demon, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the chained demon, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -279,12 +273,12 @@ instead of going northwest from Grey Abbey Library while (HP of Skarnoth > 1):
 
 Section 5 - Infection for combat purposes
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Demon Prince";
 	now enemy title entry is "";
 	now enemy name entry is "Skarnoth";
@@ -313,7 +307,7 @@ When Play begins:
 	now HP entry is 275;
 	now lev entry is 20;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 35;              [ Monster's average damage when attacking. ]
-	now area entry is "nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16;       [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 9;         [ Cock width, more commonly used for ball size. ]
@@ -332,8 +326,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Demon Slave":

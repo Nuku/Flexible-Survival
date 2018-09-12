@@ -27,33 +27,37 @@ Instead of resolving a Cow Hunting:
 	if calcnumber is 1: [no]
 		LineBreak;
 		say "     He nods as you tell him you haven't seen any standard non-infected cows around since before the outbreak. 'Well, thanks anyways. But if you do find her after all please come and tell me over at the farm. It's the [bold type]McDermott family farm[roman type] a few miles that way. Or if you could just bring Wendy along... then there'd be a reward in it for you. No worries, she's pretty tame and tractable as long as there isn't a slavering beast running after her.' With that, the cowboy makes his goodbye and walks off to keep searching.";
-		now Missing Cow is unresolved;
 		now McDermott Farm Entrance is known;
 		move Duke to Sheep Meadow SW; [putting him in his starting position]
 		now thirst of Duke is 1; [starting the day/night movement of Duke]
 		now thirst of Corbin is 1; [starting the day/night movement of Corbin]
+		now Resolution of Cow Hunting is 1; [talked to Corbin]
 	else if calcnumber is 2: [rape]
 		LineBreak;
 		say "     The cowboy shouts out a 'No! What the hell's wrong with you fu-', then you land the first blow and the conversation comes to a crashing halt.";
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Cowboy Cuntboy":
 				now monster is y;
 				now area entry is "Plains";
 				now non-infectious entry is false;
 				break;
 		challenge "Cowboy Cuntboy";
+		now Resolution of Cow Hunting is 2; [attacked to Corbin]
 	else if calcnumber is 3: [seriously?]
 		LineBreak;
 		say "     He shrugs 'Why the hell not? Even if I now look like this, it's my job. And a farm isn't the worst place to wait out these strange times - plenty of food, you know. So what about the cow? Have you seen her? No? Well, time to keep searching for me then. If you see her by any chance later - bring the old gal to the [bold type]McDermott farm[roman type] - a few miles that way. There's a reward.' With that, the horsey cowboy walks off to keep searching for the missing cow.";
-		now Missing Cow is unresolved;
 		now McDermott Farm Entrance is known;
 		move Duke to Sheep Meadow SW; [putting him in his starting position]
 		now thirst of Duke is 1; [starting the day/night movement of Duke]
 		now thirst of Corbin is 1; [starting the day/night movement of Corbin]
+		now Resolution of Cow Hunting is 3; [talked to Corbin]
 	now Cow Hunting is resolved; [event resolved, either peacefully or through combat]
 
-Missing Cow is a situation. The level of Missing Cow is 5. Missing Cow is resolved.
+Missing Cow is a situation.
+The Prereq1 of Missing Cow is Cow Hunting.
+The Prereq1Resolution of Missing Cow is { 1, 3 }.
+The level of Missing Cow is 5.
 The sarea of Missing Cow is "Plains".
 
 Instead of resolving a Missing Cow:
@@ -81,10 +85,10 @@ Instead of resolving a Missing Cow:
 			say "     [WendyGryphonAftermath]";
 		else if fightoutcome >= 30: [fled]
 			say "     At some point as you were running, the feral gryphon turned around and made his way back towards the cow. You just hope that he goes back to fucking her and isn't munching on a piece of beef right now...";
+			now Resolution of Missing Cow is 3; [fled and left Wendy with a feral Gryphon]
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     Having driven the gryphon off, you have a look at Wendy the cow, now calmly munching on a mouthful of grass. She doesn't seem to be bothered at all from having been fucked by a gryphon - multiple times at least, before you arrived, judging from the amount of cum oozing out of her pussy and making the fur on her back end wet and sticky.";
 			say "     [WendyGryphonAftermath]";
-	now battleground is "Void"; [avoids random fights after]
 
 to say WendyGryphonAftermath:
 	WaitLineBreak;
@@ -103,9 +107,11 @@ to say WendyGryphonAftermath:
 				say "     Speaking in calming tones to the cow, you walk up to her and stroke her fur for a moment until she gets used to your presence. Since she's just a bit too tall for you to just take her, you lead her over a few feet to the stubby remains of a building that stood here before, maneuvering her into the right position next to a fallen wall. Standing on the low rocks, you gently lift her tail and have a look at her pussy. It's pretty large in human terms, but that's just to be expected from a bigger creature. Milky white cum slowly drips from her pussy lips. You pull our your hard cock and rub it up and down over her sex, then aim it right at her opening and push forward, spreading her slick passage with your manhood. For being so big and just having been fucked by a gryphon, Wendy is amazingly tight, instinctively gripping your member with her inner muscles. You pound into her with eager thrusts, not holding back for a second until you soon blast your own cum into Wendy to mingle with the gryphon's in her womb. Satisfied, you pull out, then put your clothes back on.";
 			else:
 				say "     Speaking in calming tones to the cow, you walk up to her and stroke her fur for a moment until she gets used to your presence and lowers her head again to graze. Then you walk to her back end, gently lift her tail and have a look at her pussy. It's pretty large in human terms, but that's just to be expected from a bigger creature. Milky white cum slowly drips from her pussy lips. You pull our your hard cock and rub it up and down over her sex, then aim it right at her opening and push forward, spreading her slick passage with your manhood. For being so big and just having been fucked by a gryphon, Wendy is amazingly tight, instinctively gripping your member with her inner muscles. You pound into her with eager thrusts, not holding back for a second until you soon blast your own cum into Wendy to mingle with the gryphon's in her womb. Satisfied, you pull out, then put your clothes back on.";
+			now Resolution of Missing Cow is 1; [fucked Wendy]
 		else:
 			LineBreak;
 			say "     Fuck a cow? What strange ideas come up inside you these days... the nanites must be getting to you. You do your best to ignore that inner voice.";
+			now Resolution of Missing Cow is 2; [just brought Wendy to the farm]
 	LineBreak;
 	say "     Stroking Wendy and feeding her bits of grass, you manage to get the cow moving towards the farm. She's got a rather sedate gait and often stops to rip off the rare green and more succulent plants along the way, but after about two hours, you finally arrive at the McDermott farm.";
 	WaitLineBreak;
@@ -118,10 +124,13 @@ to say WendyGryphonAftermath:
 	move Wendy to McDermott Barn;
 	now Missing Cow is resolved;
 
-
 Section 2 - NPC
 
-Wendy is a woman. The HP of Wendy is usually 0.
+Table of GameCharacterIDs (continued)
+object	name
+Wendy	"Wendy"
+
+Wendy is a woman. The HP of Wendy is normally 0.
 The description of Wendy is "[WendyDesc]".
 The conversation of Wendy is { "Moh Moo Moh Mooo Moo - Moh!" }.
 

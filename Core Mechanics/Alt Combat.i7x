@@ -76,7 +76,9 @@ when play begins:
 		add "Human" to EncounteredEnemies of player;
 
 to prepforfight:		[Do all the pre-fight setup, reset values, and then display the image (if any) and the monster description]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
+	if name entry is not listed in EncounteredEnemies of player:
+		add name entry to EncounteredEnemies of player;
 	now combat abort is 0;
 	setmongender 0; [clear monster gender]
 	now skipretaliate is false;
@@ -110,6 +112,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 	repeat with x running through equipped equipment:
 		increase pldodgebonus by dodgebonus of x;
 		increase pldamagebonus by damagebonus of x;
+		increase plfleebonus by fleebonus of x;
 	if weapon object of player is unwieldy:
 		decrease plhitbonus by the absolute value of ( scalevalue of player - objsize of weapon object of player) to the nearest whole number;
 	if weapon object of player is bo staff or weapon object of player is wukongStaff:
@@ -192,7 +195,7 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 				now found is 1;
 				project icon entry;
 				break; ]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if enemy type entry is 0: [non-unique enemies]
 		if enemy title entry is empty or enemy title entry is "": [no special name for the enemy]
 			say "[bold type]You run into a [name entry in lower case].[roman type][line break][desc entry][line break]";
@@ -205,9 +208,6 @@ to prepforfight:		[Do all the pre-fight setup, reset values, and then display th
 			say "[bold type]You run into a [enemy title entry in lower case].[roman type][line break][desc entry][line break]";
 	else if enemy type entry is 2: [unique enemies whose name is known]
 		say "[bold type]You run into [enemy name entry].[roman type][line break][desc entry][line break]";
-	if name entry is not listed in EncounteredEnemies of player:
-		add name entry to EncounteredEnemies of player;
-
 
 Section 2 - Combat
 
@@ -264,7 +264,7 @@ To Combat Menu:
 			repeat through table of basic combat:
 				increase combatopt by 1;
 				say "[bold type][combatopt][roman type] - [link][title entry][as][combatopt][end link][line break][run paragraph on]";
-			say "Your HP: [HP of player]/[maxHP of player]  Libido: [libido of player]      [name in row monster of table of random critters] HP: [monsterHP]/[HP in row monster of table of random critters] >[run paragraph on]";
+			say "Your HP: [HP of player]/[maxHP of player]  Libido: [libido of player]      [name in row monster of Table of Random Critters] HP: [monsterHP]/[HP in row monster of Table of Random Critters] >[run paragraph on]";
 			let k be 0;
 			now keychar is "INVALID";
 			change the text of the player's command to "";
@@ -340,7 +340,7 @@ To Combat Menu:
 			say "Invalid action.";
 
 this is the monster combat mode rule:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	let searchparam be "default";
 	let foundcom be 0;
 	if there is no altcombat in row monster of Table of Random Critters:
@@ -371,7 +371,7 @@ to say combat abort:
 Chapter 2 - Player Attack
 
 This is the player attack rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let currentmonHP be monsterHP;
 	let the attack bonus be dexterity of player + ( level of player * 2 ) + plhitbonus - 10;
 	let the defense bonus be dex entry + ( lev entry * 2 ) + mondodgebonus - 10;
@@ -400,20 +400,20 @@ This is the player attack rule:
 			if "Black Belt" is listed in feats of player:
 				now dam is ( dam times a random number from 105 to 125 ) divided by 100;
 			if "Natural Armaments" is listed in feats of player and bodyname of player is not "Human":
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry matches the text bodyname of player, case insensitively:
 						now z is y;
 						break;
 				if z is 0:		[creature not listed]
 					increase dam by a random number between 0 and 2;
 				else:
-					choose row z in table of random critters;
+					choose row z in Table of Random Critters;
 					let dammy be 2;
 					if wdam entry > 3:					[nerfed for very high damage critters]
 						now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
 					increase dam by a random number between 1 and dammy;
-				choose row monster from table of random critters;
+				choose row monster from Table of Random Critters;
 		if weapon object of player is bo staff:
 			if "Martial Artist" is listed in feats of player and a random chance of 2 in 3 succeeds:
 				increase dam by 1;
@@ -455,18 +455,18 @@ This is the player attack rule:
 			if tailname of player is listed in infections of Tailweapon:
 				increase bonusattack by 1;
 				let z be 0;
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry matches the text tailname of player, case insensitively:
 						now z is y;
 						break;
-				choose row z in table of random critters;
+				choose row z in Table of Random Critters;
 				let dammy be 2;
 				if wdam entry > 3:					[nerfed for very high damage critters]
 					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
 				say "[line break]You make an additional attack using your [tailname of player] tail's natural abilities for [special-style-2][dammy][roman type] damage!";
 				increase dam by dammy;
-				choose row monster from table of random critters;
+				choose row monster from Table of Random Critters;
 		if a random chance of specattchance in 20 succeeds and "Cock Slap" is listed in feats of player and cock length of player >= 12 and bonusattacks < 2:
 			increase bonusattack by 1;
 			let dammy be 0;
@@ -563,7 +563,7 @@ This is the player attack rule:
 		follow the monster injury rule;
 		say "[Name entry] is [descr].";
 	if monsterHP > 0:
-		if before combat is 0:
+		if BeforeCombat is 0:
 			choose row monstercom from table of Critter Combat;
 			if playerpoison > 0, follow the playerpoisoned rule;
 			if there is a continuous in row monstercom of the table of Critter Combat:
@@ -645,7 +645,7 @@ This is the combat pass rule:
 Chapter 4 - Submit
 
 This is the submit rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let temp be the HP of the player;
 	now fightoutcome is 22;
 	Lose;
@@ -656,7 +656,7 @@ This is the submit rule:
 Chapter 5 - Flee
 
 This is the flee rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if rubber sneakers are equipped:
 		LibidoBoost 20;
 		if libido of player >= 100:
@@ -727,7 +727,7 @@ Chapter P - Poison
 
 this is the playerpoisoned rule:
 	if playerpoison > 0:
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		let dam be lev entry + ( playerpoison * 2 );
 		increase dam by a random number between 0 and playerpoison;
 		let dam be dam / 4;
@@ -769,7 +769,7 @@ Book 1 - Standard Retaliate
 [ Since it's default, it skips checking the alternates. ]
 
 to standardretaliate:
-	choose row monster from table of Random Critters;
+	choose row monster from Table of Random Critters;
 	now monsterhit is false;
 	standardstrike;
 	if monsterhit is true:
@@ -823,7 +823,7 @@ to retaliate:
 		if there is a monmiss in row monstercom of the table of Critter Combat:
 			follow the monmiss entry; [perform an alternate miss scene, if it exists]
 		if missskip is 0:
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "[Name Entry] misses!";
 	now peppereyes is 0; [pepperspray wears off]
 	if bananapeeled > 0, decrease bananapeeled by 1;
@@ -846,7 +846,7 @@ to standardstrike:
 	if avoidance is 1:
 		now monsterhit is false;
 	else:
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		let the defense bonus be dexterity of the player + ( level of the player * 2 ) + pldodgebonus + bananapeeled - 10;
 		let the attack bonus be dex entry + ( lev entry * 2 ) + monhitbonus - 10;
 		let the combat bonus be attack bonus minus defense bonus;
@@ -872,7 +872,7 @@ to standardstrike:
 			now monsterhit is false;
 
 to say avoidancecheck:					[collection of all enemy attack avoidance checks]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
 		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
 		now avoidance is 1;
@@ -903,7 +903,7 @@ to say avoidancecheck:					[collection of all enemy attack avoidance checks]
 Book 4 - Standard Hit and Damage
 
 to standardhit:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 100 );
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
@@ -1135,7 +1135,7 @@ to say nofeatabsorbancy:
 Section 4 - Loss and Victory
 
 to win:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	follow the breast descr rule;
@@ -1336,24 +1336,24 @@ to win:
 	if gshep is companion of player:
 		increase gshep_fights by 1;
 		if gshep_postfight is 0 and ( gsd_pet is 12 or gsd_pet is 13 or gsd_pet is 14 ):	[checks on Korvin's post-fight 'feedback']
-			if gshep_fights > 2 and inasituation is false and lastscene of gshep - turns >= 4:
+			if gshep_fights > 2 and inasituation is false and GShepLastScene - turns >= 4:
 				say "[gshep_postfightargue]";
 	follow the ngraphics_blank rule;
 	rule succeeds;
 
 To lose:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	follow the cock descr rule;
 	follow the cunt descr rule;
 	follow the breast descr rule;
 	now lastfightround is turns;
 	now lost is 1;
 	say "[victory entry][line break]";
-	if scenario is "Researcher" and ( there is no resbypass in row monster of table of random critters or resbypass entry is false ):
+	if scenario is "Researcher" and ( there is no resbypass in row monster of Table of Random Critters or resbypass entry is false ):
 		say "";
 	else:
 		infect;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if libido of player < libido entry and non-infectious entry is false:
 		increase libido of player by 4;
 	else:
@@ -1422,7 +1422,7 @@ Chapter 2 - Sample/Basic Rules
 Part 1 - Continuous Effect Example - Aura1
 
 this is the aura1 rule:		[weak aura]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	say "     The [name entry]'s aura of energy continues to sap your strength... [run paragraph on]";
 	let bonus be Stamina of player - 10;
 	let dice be a random number from 1 to 50;
@@ -1442,7 +1442,7 @@ this is the aura1 rule:		[weak aura]
 Part 2 - Alternate Attack Example - Bearhug
 
 this is the bearhug rule:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if name entry is "Snake" or name entry is "Naga":		[crushing coils]
 		say "The [one of][name entry][or]large serpent[purely at random] manages to wrap its powerful tail around you, holding you in its vice-like constriction! You will need to break free before squeezes the fight right out of you.";
 	else:									[crushing arms]
@@ -1474,7 +1474,7 @@ this is the bearhug rule:
 Part 3 - Post-Attack Example - Brag
 
 this is the brag rule:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	say "[one of]'Woo! Take that!' [or]'Aww yeah!' [or]'Like a boss, baby!' [or]'Po feels embarrassed for you,' [at random][one of]your enemy chuckles[or]your opponent gloats[or]the [name entry] laughs derisively[at random].";
 	if monsterHP < HP entry, increase monsterHP by 1;
 
@@ -1484,7 +1484,7 @@ Part 4 - Pre/Post/Miss Combo Example - Power Strike 1
 Warning: if an alternate attack before this one could break the fight and somehow prevent the postattack entry from running, you must provide a reset there as well. It's best to have this reset in the description to cover all your bases.]
 
 this is the ps1charge rule:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if a random chance of 1 in 5 succeeds:
 		say "The creature strikes an impressive DBZ-pose and roars, preparing to show you its true power!";
 		increase wdam entry by ( ( lev entry + 7 ) / 4 );
@@ -1492,7 +1492,7 @@ this is the ps1charge rule:
 		now monsterpowerup is 1;
 
 this is the ps1attack rule:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if monsterpowerup is 0:
 		standardhit; [if not a charged attack, act as normal]
 	if monsterpowerup is 1:
@@ -1503,7 +1503,7 @@ this is the ps1attack rule:
 		now monsterpowerup is 0;
 
 this is the ps1miss rule:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if monsterpowerup is 1:
 		say "Your opponent's ultimate attack fails as they miss!";
 		decrease wdam entry by ( ( lev entry + 7 ) / 4 ); [restore stats to normal]
@@ -1522,7 +1522,7 @@ this is the intstrike rule:
 	if avoidance is 1:
 		now monsterhit is false;
 	else:
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		let the defense bonus be intelligence of player + ( level of player * 2 ) + plmindbonus - 10;
 		let the attack bonus be int entry + ( lev entry * 2 ) + monmindbonus - 10;
 		let the combat bonus be attack bonus minus defense bonus;
@@ -1550,7 +1550,7 @@ this is the intstrike rule:
 Part 6 - Conditional Alternate Attack Example - Humping
 
 this is the humping rule:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if monsterpowerup is 1:
 		say "The enhanced attack strikes! [run paragraph on]";
 		standardhit; [standard attack w/enhanced stats]
@@ -1577,7 +1577,7 @@ this is the humping rule:
 Part 7 - Alternate Attack Example - Feline Taur Pounce
 
 this is the ftaurpounce rule:		[double-damage pouncing]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 ); [Double damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
@@ -1601,7 +1601,7 @@ firebreathcount is a number that varies.
 firebreathready is a truth state that varies. firebreathready is usually false.
 
 this is the firebreath rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 [	say "TEST: firebreathcount = [firebreathcount]."; ]
 	if firebreathready is true:								[fire attack!]
 		now firebreathready is false;

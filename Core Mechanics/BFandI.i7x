@@ -5,7 +5,7 @@ Version 4 of BFandI by Core Mechanics begins here.
 "Creates the 'Brute Force and Ignorance' debugging commands to forcibly check on various data in the game. This document also contains various data on the new player variables created to go with these and what the use and possible applications of the new column entries can include.";
 
 [ BFandI command list:
-bfandi (or bfandi1) checks the various new column entries for critters on the table of random critters.
+bfandi (or bfandi1) checks the various new column entries for critters on the Table of Random Critters.
 bfandi2 lists all existing creatures in the monster table and displays whether they have an altcombat entry, showing that entry if it exists.
 bfandi3 lists all situations in the current area, whether they're resolved or unresolved and it's level. It will also mention if it's a scavevent.
 bfandi4 lists all situations sorted by area, level or name, as selected once run, then provides data similar to bfandi3.
@@ -29,56 +29,52 @@ carry out bfanditesting:
 	say "Your bodytype value is set to [bodytype of player], usable in scenes like: 'You press your [bodytype of player] body against the slutty catgirl as you stuff her wet snatch.' Wonderous!";
 	say "-----";
 	LineBreak;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry matches the text topic understood, case insensitively:
 			now monster is y;
 			say "[bold type][name entry][roman type]: Testing the new table entries.";
-			if there is a scale in row monster of the table of random critters:
+			if there is a scale in row monster of the Table of Random Critters:
 				say "scale entry = [scale entry]     The creature is [bold type][if scale entry is 1]tiny[else if scale entry is 2]small[else if scale entry is 3]normal[else if scale entry is 4]large[else]huge[end if][roman type].";
 			else:
 				say "scale: [bold type]UNSET[roman type]     The [name entry] is of indeterminant size.";
-			if there is a body descriptor in row monster of the table of random critters:
+			if there is a body descriptor in row monster of the Table of Random Critters:
 				say "body descriptor: [body descriptor entry]     Example: The [name entry] has a [body descriptor entry] build.";
 			else:
 				say "body descriptor: [bold type]UNSET[roman type]     The [name entry] has no specified body build/attribute and will use [name entry] instead, for good or ill.";
-			if there is a type in row monster of the table of random critters:
+			if there is a type in row monster of the Table of Random Critters:
 				say "type: [type entry]     Ex: You look over the [name entry], taking in its [type entry] nature.";
 			else:
 				say "type: [bold type]UNSET[roman type]     The [name entry] has no specified species type and will use [name entry], for good or ill.";
-			if there is a magic in row monster of the table of random critters:
+			if there is a magic in row monster of the Table of Random Critters:
 				say "magic: The [name entry] is [if magic entry is false]not [end if]magical.";
 			else:
 				say "magic: [bold type]UNSET[roman type]     An unset creature will be treated as non-magical.";
-			if there is no magic in row monster of table of random critters or magic entry is false:
+			if there is no magic in row monster of Table of Random Critters or magic entry is false:
 				say "This line appears for all creatures known/treated as non-magical.";
-			if there is a magic in row monster of table of random critters and magic entry is true:
+			if there is a magic in row monster of Table of Random Critters and magic entry is true:
 				say "This line appears only for creatures known as magical.";
-			if there is a resbypass in row monster of the table of random critters:
+			if there is a resbypass in row monster of the Table of Random Critters:
 				say "resbypass: [if resbypass entry is true]TRUE[else]FALSE[end if]     Its infection [if resbypass entry is true]bypasses[else]does not bypass[end if] a researcher's protection.";
 			else:
 				say "resbypass: [bold type]UNSET[roman type]     An unset creature will be treated as blocked by researcher's protection.";
-			if there is a resbypass in row monster of the table of random critters and resbypass entry is true:
+			if there is a resbypass in row monster of the Table of Random Critters and resbypass entry is true:
 				say "This line appears for a creature whose infection can bypass a researcher's protection. This should be [bold type]ultra-rare[roman type] and should have a good reason for occurring (such as non-nanite-based infection).";
 			else:
 				say "This line appears for all creatures who cannot bypass a researcher's protection. Almost all creatures should fall into this category.";
-			if there is a non-infectious in row monster of the table of random critters:
+			if there is a non-infectious in row monster of the Table of Random Critters:
 				say "non-infectious: [if non-infectious entry is true]TRUE[else]FALSE[end if]     The [name entry] is [if non-infectious entry is false]infectious[else]non-infectious[end if].";
 			else:
 				say "non-infectious: [bold type]UNSET[roman type]     An unset creature will be treated as infectious.";
-			if there is no non-infectious in row monster of table of random critters or non-infectious entry is false:
+			if there is no non-infectious in row monster of Table of Random Critters or non-infectious entry is false:
 				say "This line appears for all infectious creatures.";
-			if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 				say "This line appears for all non-infectious creatures. Eventually used for non-infectious creatures such as soldier enemies, military robots, etc... and a few critters. The shifting ability should not be able to gain these infections, nor should any source of random infection.";
-			if there is a nocturnal in row monster of the table of random critters:
-				say "nocturnal: [if nocturnal entry is true]TRUE[else]FALSE[end if]     The [name entry] is [bold type][if nocturnal entry is true]nocturnal[else]diurnal[end if][roman type]. They will only appear in random fights [bold type][if nocturnal entry is true]at night[else]during the day[end if][roman type].";
-			else:
-				say "nocturnal: [bold type]UNSET[roman type]     This is the [bold type]standard setting[roman type] for this variable, meaning the creature can be encountered both day and night.";
-			if there is no nocturnal in row monster of the table of random critters or nocturnal entry is false:
+			if DayCycle is 0 or DayCycle is 2:
 				say "It is possible to encounter the [name entry] during the day.";
-			if there is no nocturnal in row monster of the table of random critters or nocturnal entry is true:
+			if DayCycle is 0 or DayCycle is 1:
 				say "It is possible to encounter the [name entry] at night.";
-			if there is a altcombat in row monster of the table of random critters:
+			if there is a altcombat in row monster of the Table of Random Critters:
 				say "altcombat: [altcombat entry]     The [name entry] follows the [altcombat entry] rules for alternate combat.";
 			else:
 				say "altcombat: [bold type]UNSET[roman type]     There is no indication that [name entry] follows an alternate combat method, so it will use the default.";
@@ -109,7 +105,7 @@ This should be set whenever a player's body is changed. It is an adjective to de
 
 [-----------------------------------------------------------------------]
 
-[Description of the new entries in the table of random critters:]
+[Description of the new entries in the Table of Random Critters:]
 
 [ SCALE: A number between 1 and 5 to designate the scale of someone with this infection (from 1=tiny to 5=huge). It should saved as the 'scalevalue of player' during body infection. [scalevalue of player] or [body size of player] can be used to better personalize scenes with monsters/NPCs to a player's size. If other (variable infection) NPCs are given this attribute, it can be saved on them as well, allowing for more descriptive scenes.
 If this entry is not set on a creature, the game will default to '3', which is 'average'.]
@@ -126,7 +122,7 @@ These will be used to describe the player during scenes and should be a single a
 
 [ NON-INFECTIOUS: A truth state to designate whether this creature cannot cause infection. It can eventually be used for non-infectious creatures such as soldier enemies, military robots, etc... and a few critters. The shifting ability should not be able to gain these infections, nor should any source of random infection. ]
 
-[ NOCTURNAL: A truth state to designate whether this creature is nocturnal (true) or diurnal (false). Nocturnal creatures will only be available for encounters during the night. Diurnal creatures will only be available for encounters during the night. An unset creature is treated as the normal case, able to be found both during the day and the night. As such, this variable will most often remain blank. ]
+[ DAYRHTHM: 0 = up at all times, 1 = nocturnal, 2 = diurnal ]
 
 [ ALTCOMBAT: An entry to detect whether the creature has any special behavior during combat. See the 'Alt Combat' document for the updated combat system. An unset creature is treated as using the 'default' combat system. ]
 
@@ -136,10 +132,10 @@ bfanditesting2 is an action applying to one topic.
 understand "bfandi2" as bfanditesting2.
 
 carry out bfanditesting2:
-	sort table of random critters in lev order;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
-		if there is no altcombat in row y of the table of random critters:
+	sort Table of Random Critters in lev order;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
+		if there is no altcombat in row y of the Table of Random Critters:
 			say "[name entry]: [special-style-2]UNSET![roman type]";
 		else:
 			if altcombat entry is "default":
@@ -271,10 +267,10 @@ carry out bfanditesting6:
 		choose row y in Table of Game Objects;
 		say "[name entry][line break]";
 	WaitLineBreak;
-	say "Listing all entries in table of random critters with loot entries, their loot, and loot chance.";
-	sort table of random critters in lev order;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	say "Listing all entries in Table of Random Critters with loot entries, their loot, and loot chance.";
+	sort Table of Random Critters in lev order;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if loot entry is not " " and loot entry is not empty:
 			say "[name entry], [loot entry], [lootchance entry]%[line break]";
 

@@ -3,7 +3,7 @@ Version 5 of Forest Events by Aureas Gigas begins here.
 
 One flew into the Cuckoos Nest is a situation.
 The sarea of One flew into the Cuckoos Nest is "Forest".
-CuckooWatched is a number that varies. CuckooWatched is usually 0.
+CuckooWatched is a number that varies.
 
 when play begins:
 	add One flew into the Cuckoos Nest to badspots of humorous;
@@ -26,13 +26,16 @@ Instead of resolving a One flew into the Cuckoos Nest:
 		WaitLineBreak;
 		say "     Stepping out of the entrance of the tent, still naked and with a trickle of cum running down the inside of her thighs, the cuckoo girl smiles and calls to you, 'You can come out now Gray, and tell your [if player is female]friend[else]buddy[end if] that they can come out as well.' The male cuckoo stands up and replies, 'Be right there Izzy.' Turning to you, he smiles and bashfully begins to explain that this kind of thing is normal for them. Seems like their infection left Izzy with a desire for big dicks and Gray with the desire to see her take them. Gray then hugs Izzy and playfully asks if 'she's grabbed life by the horns'. She gives him a friendly little swat against the chest and the two of them start to cuddle. You leave them be so they can enjoy an intimate moment.";
 		now CuckooWatched is 1; [warned the guy and saw the resolution with them happy together]
+		now Resolution of One flew into the Cuckoos Nest is 1;
 	else:
 		say "     Deciding it's not worth it to get involved in this type of drama, you keep your mouth shut and keep walking.";
 		now CuckooWatched is 100; [ignored the cuckoos]
+		now Resolution of One flew into the Cuckoos Nest is 2;
 	now One flew into the Cuckoos Nest is resolved;
-	now Two Crash into the Cuckoos Nest is not resolved;
 
-Two Crash into the Cuckoos Nest is a situation.	Two Crash into the Cuckoos Nest is resolved.
+Two Crash into the Cuckoos Nest is a situation.
+The Prereq1 of Two Crash into the Cuckoos Nest is One flew into the Cuckoos Nest.
+The Prereq1Resolution of Two Crash into the Cuckoos Nest is { 1, 2 }.
 The sarea of Two crash into the Cuckoos Nest is "Forest".
 
 when play begins:
@@ -46,7 +49,7 @@ Instead of resolving a Two crash into the Cuckoos Nest:
 	say "     You continue on your way to the tent of the cuckoo couple location. Approaching from a different angle than you had previously you see a couple of things that you hadn't seen last time. Behind the tent there appears to be a sizable pile of clothing. ";
 	if CuckooWatched is 100: [ignored them]
 		say "Based on the variety of sizes and shapes of the garments and the fact that they're piled up just behind the tent, the male cuckoo has to know what his lover is up to. Seems like more than a few of the visitors leave at least part of their clothes behind, very possibly as they're being shooed out by the female cuckoo 'before her mate returns'. Seeing many footprints of an anthro bird's feet that lead behind a nearby bush, you think that there is a high probability for them to be into some interesting sexual play. From the looks of it, cuckolding and voyeurism, as the female bird has fun with other males while her mate watches from a concealed position.";
-	else if CuckooWatched is 2: [watched before]
+	else if CuckooWatched is 1: [watched before]
 		say "Based on the variety of sizes and shapes the clothes don't appear to belong to the couple but rather to their 'guests'. All of the boxers and briefs are stretched in the front - and knowing the cuckoo lady's preferences this isn't very surprising. Seems like more than a few of the visitors leave at least part of their clothes behind, very possibly as they're being shooed out by the female cuckoo 'before her mate returns'.";
 	WaitLineBreak;
 	say "     There are also a couple of bras and panties in the pile showing that probably some herms or dick-girls have had their fun with the girl as well. Nearby you see a tree that has been carved into numerous times. Examining the tree closer you see some symbols with tally marks underneath them. Your eyes are drawn to a symbol of a circle with curved horns and one tally mark underneath. Remembering what happened last time, you surmise that the symbol represents the white bull that fucked the cuckooess [if CuckooWatched is 100]while her mate was away[else]while you and the male watched[end if]. Following this logic it is easy to deduce a couple more of the symbols. The dog bone symbol with seven tallies shows that the woman has been 'knotty' with more than a couple of canines, a feather symbol with five marks shows she has had some birdy fun with more than just her husband, a horseshoe marking with three rows of five tally marks indicates that she really likes to go for some 'pony rides'.";
@@ -62,7 +65,7 @@ Instead of resolving a Two crash into the Cuckoos Nest:
 		say "     Quietly you head into the tent, making sure to leave the entry way open so people can see what goes on inside. Gray is still lost in the fantasy pumping his below average-sized cock. Watching the bird up close you can see a certain charm to his appearance. He has a sleek and slender frame with a build that is in pretty decent shape. The cuckoo has a slightly masculine smell like sandalwood. Fortune favors the bold, so you lick your lips move your lean down to his crotch. Softly you start to lick the tapered tip of his avian cock.";
 		say "     Still lost in fantasy, the slim male groans and groggily states, 'Now you want to get spit-roasted... babe that's so fucking hot!' It seems like your involvement has made Gray's role in his fantasy more active. Feeling more daring you decide to start to sucking on his dick at an unhurried pace, gradually going further down the shaft with each bob of your head. After a few long moments of this drawn-out oral you reach the much thicker base, by now the entranced avian has stroking using his claw-like hands and is now caressing his body.";
 		WaitLineBreak;
-		say "     Deciding the daydreamer needs to awaken from his state you decide to quicken the pace of the fellatio. The anthro male's face scrunches up and he opens his eyes. The sight of [if CuckooWatched > 99]a stranger[else]someone he barely knows[end if] sucking him off gets him out of his stupor and he opens his beak to say something. You decide to go on the offensive, smiling around his hard pole and swirling your tongue over its sensitive length. And it works - what comes out of his beak is simply a long contented moan. Then he chuckles and says, 'It's not every day that a person snaps out of an erotic fantasy to see a sexy [if player is female]babe[else]stud[end if] going down on them!'";
+		say "     Deciding the daydreamer needs to awaken from his state you decide to quicken the pace of the fellatio. The anthro male's face scrunches up and he opens his eyes. The sight of [if CuckooWatched is 100]a stranger[else]someone he barely knows[end if] sucking him off gets him out of his stupor and he opens his beak to say something. You decide to go on the offensive, smiling around his hard pole and swirling your tongue over its sensitive length. And it works - what comes out of his beak is simply a long contented moan. Then he chuckles and says, 'It's not every day that a person snaps out of an erotic fantasy to see a sexy [if player is female]babe[else]stud[end if] going down on them!'";
 		say "     You can feel the claws on his hands tenderly touching the top and back of your head, encouraging you to keep going. Given the green light by Gray, you start going full steam back and forth. Deep-throating his shaft is pretty easy [if scalevalue of player < 3]despite your smaller frame [end if]- good thing he's not all that hung. Soon, you hear some noise from outside the tent - a quick glance after pulling off the bird's cock reveals that other inhabitants of the little settlement are greeting someone who came down the trail through the forest. Among the voices to be heard is a high-pitched feminine voice, as well as a deep baritone. Sounds like Izzy and whatever type of 'prey' she was able to attract.";
 		WaitLineBreak;
 		say "     With a grin on your face, you basically 'inhale' Gray's cock, taking it all down to the base in one go that draws a loud moan from the horny bird. The steps and sounds of conversation that had been coming steadily closer towards the tent you're in until that moment stop suddenly. You can't make out what's being said next, not above the moans and slurps your oral service is creating, but a couple of seconds later there is a rustling noise just outside. The source of that no doubt are the bushes next to the tent. Then murmuring starts up, and you hear the female bird's companion say, 'I thought you said your tent would be empty.' She replies, 'I thought it would be... now hush. I wanna see what's going on.'";
@@ -75,14 +78,17 @@ Instead of resolving a Two crash into the Cuckoos Nest:
 		say "     'Soooo... are we gonna do anything, or is this lovey dovey time?' the stag asks with a grin, adjusting his bulge suggestively. Gray whispers in Izzy's ear and after giving him a kiss, she says to the buck, 'It seems that the fellatio provided my boy with a new idea of fun - you get to ram my pussy, while Gray gets round two on some oral action.' All three smile and start to get into the right positions. Meanwhile, you drop the towel and quietly leave, happy to have inspired new ways for the couple to have fun together.";
 		WaitLineBreak;
 		say "     After stepping out of the entrance of the tent, you start to walk back the way you came. The campfire tenders are eyeing you with great interest.[if bodyname of player is listed in infections of Caninelist] The squirrel says boldly, 'Ha! I knew it was gonna be some doggy this time.' The fox rolls his eyes and says, 'We didn't say if it would be for the man or woman, but what the hell I'll throw you a bone.'[else if bodyname of player is listed in infections of Equinelist] The fox says matter of factly, 'Told you it be a horse.' Grumbling, the squirrel hands two marshmallows over and says, 'Yeah yeah... whatever.'[else] Both infected shrug and state that it is a draw and wonder which symbol the couple is going to carve as your tally mark.[end if]";
-		Now CuckooWatched is 3;
+		now CuckooWatched is 2;
+		now Resolution of Two Crash into the Cuckoos Nest is 1;
 	else:
 		say "     Deciding against the idea you start to turn around walk back down the path. You come across Izzy walking with a studly male deer. It seems neither of the campfire cooks are going to win today's bet.";
-		Now CuckooWatched is 99;
-	Now Two Crash into the Cuckoos Nest is resolved;
-	now Avian Tent is not resolved;
+		now CuckooWatched is 99;
+		now Resolution of Two Crash into the Cuckoos Nest is 2;
+	now Two Crash into the Cuckoos Nest is resolved;
 
-Avian Tent is a situation. Avian Tent is resolved.
+Avian Tent is a situation.
+The Prereq1 of Avian Tent is Two Crash into the Cuckoos Nest.
+The Prereq1Resolution of Avian Tent is { 1, 2 }.
 The sarea of Avian Tent is "Forest";
 
 when play begins:
@@ -116,10 +122,12 @@ Instead of resolving a Avian Tent:
 		WaitLineBreak;
 		say "     It takes a few minutes for the three to catch their breath and recover. Sliding off the spent giant shaft; the sated cuckooess gets off her osprey partner's lap and start to untie the ropes and blindfold on her lover. Next she gives him a long passionate kiss using plenty of tongue. Beaming with joy she states, 'Oh my god Baby, that was so fucking hot! I loved every second of that! Are you sure you're okay with it sweetie?' Her partner eagerly nods. Shifting her head, she then asks the spent dom, 'Is that convincing enough for you to stay Ace?' Grinning, the osprey says, 'I'll admit you do make a very convincing case.' Sitting up, he pats the other male on the shoulder and says, 'Sorry if things got a little too intense...'";
 		say "     Interrupting him, Gray utters 'No! No! It was totally fine man.' Izzy then asks, 'My eyes were closed did you see who came first?' The osprey shakes his head and replies, 'I didn't have a good view of the situation. But I think your partner came before you did.' Accidentally rustling the bushes when you shift your position, you see the wheels inside the woman's mind work as she looks over in your direction. Suddenly her eyes light up and she starts to smile. Walking over to your locations she drags you out of the bush and asks 'So [if player is female]ma'am[else]buddy[end if] did you happen to see which one of us came first while you were being a peeping tom?' Bashfully you reply it was her. Gray smiles while the osprey gives him a thumbs up. You start to walk away while they are wrapped up in discussion and offering to help the osprey move. Based on the tone you are hearing the start of a new unusual friendship.";
-		Now CuckooWatched is 6; [watched the couple with the osprey partner. Gray won bet]
+		now CuckooWatched is 3; [watched the couple with the osprey partner. Gray won bet]
+		now Resolution of Avian Tent is 1;
 	else:
 		say "     Deciding you don't want to watch this couple's unusual proclivities you walk away from the settlement, hearing the sound of the female's moans grow ever distant.";
-		Now CuckooWatched is 7; [did not watch the couple. Izzy won ]
+		now CuckooWatched is 4; [did not watch the couple. Izzy won ]
+		now Resolution of Avian Tent is 2;
 	now Avian Tent is resolved;
 
 Sandwich Shop is a situation.
@@ -142,8 +150,10 @@ Instead of resolving a Sandwich Shop:
 		say "     You walk into the back area of the store. The stainless steel sink basin used for washing dishes has been bent and pushed aside by a four foot tall sapling that is piercing the floorboards. Interestingly, only the words '12 inches that'll make your mouth water' and 'try our savory... balls' remain readable on the menu board right beside the little tree, with everything else scratched beyond recognition - what an odd coincidence. Or maybe not - you make out some scraps of paint on the gently swaying branches. Wait, there's not even any wind in here! It is definitively moving on its own.";
 		say "     Who knows who or what that plant might once have been and if it retains some memories of its former self... so you decide to keep your distance as you explore further. All of the refrigerators in the back have already ransacked, their doors standing wide open. Still, you then look inside them one by one just to be sure, and your persistence is rewarded - there is a small brown paper bag behind a couple of shredded boxes in one of them! You look inside and find a brownie that has been wrapped in plastic with a small note saying, 'Here's a treat for your break, love M'. A small shiver runs down your spine as you imagine what might have happened to the owner of that brownie, or their partner. But hey, waste not want not, so you nevertheless take the food and slide it into your backpack.";
 		increase carried of food by 1;
+		now Resolution of Sandwich Shop is 1;
 	else:
 		say "     Seems a little too risky, with likely no reward, so you exit the store and walk in the opposite direction of where the wolves went.";
+		now Resolution of Sandwich Shop is 2;
 	now Sandwich Shop is resolved;
 
 [ BridgetPowellEventVar                                ]
@@ -187,13 +197,16 @@ instead of resolving Thief's Punishment:
 		say "     It takes a couple of minutes for both of them to recover. Embarrassed, Powell stands up and says in a hurried fashion, 'I'll be going now. I won't try something like that ever again, I swear. Bye!' But just as he is about to leave the tigress grabs his tail. 'Where do you think you're going, pint size? I didn't say you could just walk off scot free! If you think one little bit of tongue-wagging is enough, think again!' Bridget tells him in a domineering tone. Futilely tugging at his tail, the rodent starts to stammers out some words, but is immediately interrupted by the personal trainer shushing him.";
 		say "     With a broad grin on her face, Bridget tells her caught thief, 'As your ongoing punishment, you're going to have to massage me, train with me, and see to my every need. In return I'll make sure you're well fed, protected from that gang of assholes, and a lot more in shape. Sound good?' Perplexed, the small mouse gapes at her for a second, then starts to smile and nods eagerly. Bridget slaps him on the back and says jovially, 'Great! I'll make a gym rat out of ya before you know it.' You can't help but smile about how this situation turned out as you leave, walking along one of the dirt tracks into the forest. Behind you, the two of them start doing some warm-up stretches.";
 		now BridgetPowellEventVar is 1; [player knows Powell's fate]
+		now Resolution of Thief's Punishment is 1;
 	else:
 		say "     With a shrug, you shake your head and walk away.";
 		now BridgetPowellEventVar is 99; [player ignored Bridget and Powell]
+		now Resolution of Thief's Punishment is 2;
 	now Thief's Punishment is resolved;
-	now Thief's Reformation is not resolved;
 
-Thief's Reformation is a situation. Thief's Reformation is resolved.
+Thief's Reformation is a situation.
+The Prereq1 of Thief's Reformation is Thief's Punishment.
+The Prereq1Resolution of Thief's Reformation is { 1, 2 }.
 The sarea of Thief's Reformation is "Forest".
 
 when play begins:
@@ -234,9 +247,11 @@ instead of resolving Thief's Reformation:
 		say "     Without any hesitation Powell plunges his manhood inside the feline and starts fucking her wildly, bracing himself against Bridget's rock hard abs. Bridget growls in lust and fills the clearing with pleased roars as she rocks her hips in tempo with his movements. Their intense mating quickly escalates to the point where both are at the edge of climax - then beyond. With satisfied shouts from both athletes, they come at the same time, with Powell's balls pumping a heavy load into Bridget's womb. Breeding his amazonian mistress, he puts enough cum into her to have it squirt our around his still thrusting shaft before too much longer, drenching the bench's leather padding in their mixed fluids.";
 		say "     As the studly mouse sinks forward to lay on Bridget's stretched-out form, his prick still balls-deep in her well-filled pussy, Powell rests his head on her large breasts for a little moment. Deep, contented purring starts to emanate from the depths of the sexy tigress's broad chest and she strokes his back affectionately - then gives a pleased mrowl as her little mouse proceeds to catch her nipple between his lips, suckling more tiger milk directly from the teat. You leave the two to enjoy their intimate moment, idly wondering how long it might take until the rodent has to share the bounty of Bridget's breasts with someone else - or several someones even. Not long would be your guess, if he always cums that much and keeps fucking her...";
 		now BridgetPowellEventVar is 2; [helped them in the fight]
+		now Resolution of Thief's Reformation is 1;
 	else:
 		say "     You decide to play it safe and let the two jocks fight their own battle. Wishing them the best of luck, you quickly dash into the forest on the opposite side of the clearing to lizard gang-members. Behind you, there are sounds of a tough scuffle.";
 		now BridgetPowellEventVar is 98; [left them to fight alone]
+		now Resolution of Thief's Reformation is 2;
 	now Thief's Reformation is resolved;
 
 Forest Events ends here.

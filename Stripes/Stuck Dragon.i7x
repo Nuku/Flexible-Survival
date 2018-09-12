@@ -56,7 +56,11 @@ Section 2 - Trapped Dragon Rear
 lastChristyfucked is a number that varies. lastChristyfucked is usually 300.
 NoIntroduction is a number that varies. NoIntroduction is usually 0.
 
-dragoness is in Old Building. dragoness is a person.
+Table of GameCharacterIDs (continued)
+object	name
+dragoness	"dragoness"
+
+dragoness is a person. dragoness is in Old Building.
 The description of dragoness is "[dragonessdesc]".
 The conversation of dragoness is { "Poot!" }.
 dragonessfuck is a number that varies.
@@ -220,6 +224,10 @@ instead of sniffing Back Room:
 
 Section 4 - Trapped Dragon Front
 
+Table of GameCharacterIDs (continued)
+object	name
+Christy	"Christy"
+
 Christy is a woman. Christy is in Back Room. The description of Christy is "[christydesc]".
 The conversation of Christy is { "Rawr!" }.
 christysausage is a truth state that varies. christysausage is usually false.		[has Christy mentioned the sausage?]
@@ -357,7 +365,7 @@ to say dragonchange:
 		now scalevalue of player is 5;
 		now bodydesc of player is "[one of]fecund[or]bestial[at random]";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
@@ -433,7 +441,7 @@ to say dragonchange:
 		now scalevalue of player is 5;
 		now bodydesc of player is "bestial";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
@@ -728,7 +736,7 @@ to say christyuhoh:
 				WaitLineBreak;
 				now HP of player is 1;
 				now HP of Christy is 90;
-				now Dragon Prey is unresolved;
+				now Dragon Prey is active;
 				now Isolated Street is unknown;
 				now Back Alley is unknown;
 				if Smith Haven Mall Lot South is known:
@@ -755,7 +763,7 @@ to say christyuhoh:
 					say "     'But you're no hero. You're a cad! A rogue! A sneaky, deceitful beast!' she growls as you're knocked back and forth across the room by the rampaging dragoness. You try to regain your footing and do manage to grab your pack and gear before another blow sends you flying across the room. Battered and dizzy, you scramble out the nearby door with Christy's snapping jaws in hot pursuit. You scramble to the open manhole and dive inside before a great wave of fire rushes over it, some spilling down the hole after you. So great are the fires of her rage that the metal and pavement around the manhole melt, flowing down into the tunnel. You can hear her sobbing loudly even over the sounds of her scrapping rubble over the blasted hole, sealing it off fully.";
 					now HP of player is 1;
 				now HP of Christy is 90;
-				now Dragon Prey is unresolved;
+				now Dragon Prey is active;
 				now Isolated Street is unknown;
 				now Back Alley is unknown;
 				if Smith Haven Mall is known:
@@ -773,7 +781,7 @@ Section 9 - Found by Christy
 
 Dragon Prey is a situation.
 The sarea of Dragon Prey is "Outside".
-Dragon Prey is resolved.
+Dragon Prey is inactive.
 
 when play begins:
 	add Dragon Prey to badspots of girl;
@@ -792,7 +800,7 @@ Instead of resolving Dragon Prey:
 		let playernum be 10 + charisma of player;
 		if "Haggler" is listed in feats of player, increase playernum by 3;
 		let playernum be a random number between 1 and playernum;
-		say "     [special-style-1][playernum][roman type] vs [special-style-2]15[roman type]: ";
+		say "     [special-style-1][playernum][roman type] vs [special-style-2]15[roman type]: (Charisma Check)";
 		if playernum >= 15:
 			say "     You quickly start to apologize to Christy with as much sincerity as you can muster under the rather frightening circumstances. You tell her that you're sorry that you upset her and that you didn't mean for her to be hurt. You go on to add that you realized what you were doing was wrong, which is why you went looking for a way to free her. You confess that you've really started to care for her and that you didn't want to hurt her feeling by telling her that it has been you before. You add that she's such a kind and loving soul that you didn't want to hurt her any more than you already had.";
 			say "     She seems moved by your confession and eventually releases you, nuzzling against you as tears run down her scaly cheeks as you stand back up. 'I'm glad you... *sniff*... decided to apologize... *sob*... I don't really want to think about what I might have done otherwise. You... you were my hero,' she says with a growl at the end, knocking you back several feet onto the ground. 'I don't want to ever see you again,' she says, choking back another sob before turning and flying off.";
@@ -802,6 +810,7 @@ Instead of resolving Dragon Prey:
 			else:
 				decrease morale of player by 10;
 			now HP of Christy is 100;
+			now Resolution of Dragon Prey is 1; [begged for life and succeeded]
 		else:
 			say "You quickly start trying to apologize to Christy, but have difficulty sounding sincere under the rather frightening circumstances. You try to tell her that you're sorry that you upset her and that you didn't mean for her to be hurt, but she doesn't buy it. 'No, you're only sorry that you got caught, you wretched liar,' she growls.";
 			now finale is 1;
@@ -921,7 +930,7 @@ to say dragonchange2:
 		now scalevalue of player is 5;
 		now bodydesc of player is "[one of]fecund[or]bestial[at random]";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
@@ -997,7 +1006,7 @@ to say dragonchange2:
 		now scalevalue of player is 5;
 		now bodydesc of player is "bestial";
 		now bodytype of player is "[one of]draconic[or]reptilian[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		now tail of player is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it.";
 		now body of player is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back";
 		now face of player is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns";
@@ -1352,8 +1361,8 @@ to say sldrheat:
 			now battleground is marea of y;
 		if battleground is not "void":
 			let cmonlist be a list of numbers;
-			repeat with X running from 1 to number of filled rows in table of random critters:	[scans for all reptiles in the area]
-				choose row X from the table of random critters;
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[scans for all reptiles in the area]
+				choose row X from the Table of Random Critters;
 				if there is no area entry, next;
 				if there is no name entry, next;
 				if area entry is battleground:
@@ -1363,7 +1372,7 @@ to say sldrheat:
 				now slutfucked is 0;
 				sort cmonlist in random order;
 				now monster is entry 1 of cmonlist;
-				choose row monster from the table of random critters;
+				choose row monster from the Table of Random Critters;
 				say "Hearing your lustful calls being answered in the distance, you rush off to find this reptilian creature hoping it can help satisfy your sexual cravings. You find the [name entry] soon enough, drawn to your calls. Immediately upon seeing the creature, you submit yourself, offering your [bodytype of player] body freely in the hopes of satisfying your lustful, heat-fueled needs.";
 				WaitLineBreak;
 				follow the cock descr rule;

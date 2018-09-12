@@ -19,6 +19,10 @@ GertyRelationship is a number that varies. GertyRelationship is usually 0.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Gerty	"Gerty"
+
 Gerty is a man. The hp of Gerty is usually 0.
 [Gerty will be moved to the Tenvale College Library through Kyle content]
 The description of Gerty is "[GertyDesc]".
@@ -88,13 +92,9 @@ to say GertyTalkMenu:
 				if (nam is "His Success"):
 					say "[GertyTalk4]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from Gerty, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from Gerty, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -184,13 +184,9 @@ to say GertySexMenu:
 					say "[GertySex4]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

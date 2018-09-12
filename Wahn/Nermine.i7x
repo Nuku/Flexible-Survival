@@ -63,10 +63,10 @@ JackalBoyTF is a number that varies.
 JackalManTF is a number that varies.
 Nerminehelpstatus is a number that varies.
 wrcurseNermine is a number that varies.
-wrlastNermine is a number that varies. wrlastNermine is usually 255.
+wrlastNermine is a number that varies. wrlastNermine is normally 10000.
 AngryHorguth is a number that varies.
-NermineFennecTurn is a number that varies.
-NermineBukkakeTurn is a number that varies.
+NermineFennecTurn is a number that varies. NermineFennecTurn is usually 10000.
+NermineBukkakeTurn is a number that varies. NermineBukkakeTurn is usually 10000.
 
 Section 1 - The Mysterious Shop
 
@@ -82,6 +82,10 @@ Bargain Bin is in The Mysterious Shop.
 the scent of Mysterious Shop is "The mysterious shop smells of scented candles and ancient secrets.".
 
 Section 2 - Nermine
+
+Table of GameCharacterIDs (continued)
+object	name
+Nermine	"Nermine"
 
 Nermine is a woman.
 The description of Nermine is "[NermineDesc]".
@@ -226,13 +230,9 @@ instead of conversing the Nermine:
 					say "[NermineCouraSpell]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the jackaless, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the jackaless, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -250,7 +250,7 @@ to say NermineTalk1:
 			now JackalBoyTF is 5; [transformation rejected and disabled]
 		else:
 			say "     'Nermine knew her visitor would love to stay the same!' the happy jackal says with a smile, even as she reaches across the counter to give you a soft lick on the cheek. 'She is looking forward to being very helpful to her little helper in the future...' she says as she grins at you, making you flush.";
-			Now NermineTalk is 1;
+			now NermineTalk is 1;
 	else if NermineTalk is 3:
 		say "     'Nermine can see that you are certainly looking even more handsome than ever, probably as a result of all the hard work you have been doing to help her,' the jackaless says with a smile as she looks you over. 'Now if you want Nermine could help return you to your boring old form, and then you would susceptible to other changes again... but it would seem like such a shame to do so,' Nermine says with a soft smile on her face. Do you ask her to undo the changes from the strange ankhs?";
 		if player consents:
@@ -259,7 +259,7 @@ to say NermineTalk1:
 			now JackalManTF is 5;
 		else:
 			say "     'Nermine knew you would love your new look as much as she does!' the happy jackal says with a smile, even as she leans across the counter to give you a soft lick on the cheek. 'Nermine is looking forward to seeing much more of her handsome associate in the future,' she says as she grins at you, making your body flush eagerly.";
-			Now NermineTalk is 1;
+			now NermineTalk is 1;
 	else if NermineTalk is 4:
 		say "     'Ah, Nermine is happy to be addressed by her handsome master,' the naked jackal-woman says as she saunters over eagerly. 'What can Nermine help her master with?' she says as she poses slightly for your pleasure, stroking one of her clawed hands down her furred side teasingly. 'Sadly Nermine cannot merely give her master items from the shop, everything must be bought or traded for as part of old agreement,' the jackal-woman says with a soft sigh, before perking up slightly. 'Still! Nermine can give her amazingly handsome jackal master herself, whenever or wherever they decide they want to use her,' Nermine says with a happy grin as she licks her lips at the very arousing thought, obviously hoping you will decide to 'use' her often.";
 
@@ -274,7 +274,7 @@ to say NermineTalk2:
 	else if wrcurseNermine is 1 and wrcursestatus >= 3 and wrcursestatus < 100 and wrlastNermine - turns >= 8:
 		say "     Nermine sets aside the book she was leafing through and smiles at you. 'Nermine is having good news. While this is not Nermine's normal area of expertise, she is having books on many such subjects and is finding something which may helping with your raptor problem.' She shows you the open book. The text in it appears to be hand written, but you don't recognize the language or even the alphabet. She points out a drawing of some flowers on the opposite page. 'Nermine is first needing roots of this plant. It is monkshood and the flowers are being a purple color like this,' she adds, indicating a lilac purple section of one of the hanging carpets on the wall. 'They are usually growing closer to the mountains, but there is a greenhouse at the college campus that is having many plants. Perhaps you can be finding it there?'";
 		now wrcurseNermine is 2;
-		now Greenhouse is unresolved;
+		now Greenhouse is active;
 	else if wrcurseNermine is 2 and wrcursestatus >= 3 and wrcursestatus < 100 and a random chance of 1 in 3 succeeds:
 		say "     'If you are wanting Nermine's help with your nightly problem, then you are needing to get monkshood root. Be looking for the purple flower in the greenhouse at the college campus. But if finding it is too much trouble, you could always just be deciding to [bold type]help Nermine[roman type] and we could be dealing with your problem by giving you something better,' she adds with a coy smile and wink of her eye.";
 	else if wrcurseNermine is 3 and wrcursestatus >= 3 and wrcursestatus < 100 and wolfsbane is not owned:
@@ -288,7 +288,7 @@ to say NermineTalk2:
 		now carried of wolfsbane is 0;
 		now Warehouse District is known;
 		now wrcurseNermine is 5;
-		now Getting the Knife is unresolved;
+		now Getting the Knife is active;
 	else if wrcurseNermine is 5 and wrcursestatus >= 3 and wrcursestatus < 100 and a random chance of 1 in 3 succeeds:
 		say "     'You will be needing the silver knife to be helping with your curse. Attempt to be [bold type]getting the knife[roman type] from the warehouse Nermine told you about. While you are doing this, she will be preparing the monkshood potion. But if it's proving to be too much difficult for you, perhaps you would help Nermine as her assistant. There are many things you could be assisting her with,' she says with a sexy rumble, letting her eyes roam over your body.";
 	else if wrcurseNermine is 6 and wrcursestatus >= 3 and wrcursestatus < 100 and silver knife is not owned:
@@ -303,7 +303,7 @@ to say NermineTalk2:
 		say "     She passes you the potion and freshly cleaned blade, which you take carefully. 'Now you are ready for the final step. For it, you are needing to be finding the body of the creature you are becoming. A true one, not those cursed like you,' she emphasizes with a point of her clawed finger. 'You will be needing to check the dinosaur exhibit in the museum and find the right skeleton. They are old bones, but it is an old curse, so it should still be working.";
 		say "     'The ritual is needed to be completed under the light of the moon. Nermine know this is meaning you may be transforming, but it must be done at night so it can be drawn out of you. To do this, you must be drinking the potion (a thought which makes you ill just to consider) and then be spilling your blood onto it with the knife (which sends a shiver along your spine). This is meant as sacrifice to appease the spirits and be drawing the curse out of you. Is old magic and old magic is often... crude like this. The beast within you can sense the power of the silver and of the monkshood. This is why they are affecting you so, but you are needing to be strong and do as you must to be freeing yourself.'";
 		say "     Having received the items and your instructions, all that remains is to do it. You try to remind yourself that you need to go ahead with it, but you are repulsed by the prospect. Besides, isn't monkshood poison? She certainly seemed to use a lot of it. Feeling uncertain and unsettled, you try to decide what to do next.";
-		now Dinosaur Skeleton is unresolved;
+		now Dinosaur Skeleton is active;
 		now wrcurseNermine is 8;
 	else if wrcurseNermine is 8 and wrcursestatus >= 3 and wrcursestatus < 100 and a random chance of 1 in 3 succeeds:
 		say "     'You will need to be going to the Museum and finding the proper [bold type]dinosaur skeleton[roman type] you are needing. You must be performing the ritual at night. Drink the potion, spill your own blood and the curse is being draw out of you. Hopefully.'";
@@ -329,7 +329,7 @@ to say NermineTalk3:
 		say "     She dangles an old, wrought iron key in front of you, but snatches it away as you reach for it. 'You are interested in purchasing oni for yourself, yes?' she asks. You tell her that you want the key to free him, to which she grins. 'If you are to be purchasing oni, then Nermine is needing suitable replacement. Nermine is hearing there is Japanese [bold type]noh mask[roman type] in office of teacher at city college. She is wanting you to go there and get it for Nermine. May be difficult, but you are to be getting oni sex slave in return,' she says with a naughty grin, once more flashing the key before tucking it behind the counter.";
 		say "     While your intention in coming here was just to see if there was a way to free him, it seems that she'll end up selling him off to someone else if you don't give her what she wants. A horny little corner of your mind is tempted by her offer as well. You don't want to betray his trust, but you find yourself looking forward to having some fun with the virgin oni once you've got that chastity belt off him. It looks like you'll be [if reaching the college is unresolved]searching for a means of [bold type]reaching the college[roman type] then[else]returning to the college campus[end if].";
 		now HP of Hayato is 11;
-		now Noh Mask is unresolved;
+		now Noh Mask is active;
 	else if HP of Hayato is 14:
 		say "     You take the noh mask out of your pack. You carefully unwrap it and pass it to Nermine. 'Ah, yes. Quite old, very lovely.' She runs a furry finger along it. 'And a long, sordid history. Excellent. Just as Nermine had been told.' With care, she places it on a shelf behind the counter where it can smile alluringly at customers.";
 		say "     'Now, here is key you are wanting. Oni is to be yours for your amusement,' she says with a coy playfulness. Despite her canine muzzle, she has an expression not unlike that on the porcelain mask.";
@@ -638,7 +638,7 @@ to NermineRequestHelp:
 			increase carried of jackal totem by 1;
 			say "[bold type]You gain 30 Xp![roman type][line break]";
 			increase XP of player by 20;
-			Now Nerminehelpstatus is 4;
+			now Nerminehelpstatus is 4;
 			stop the action;
 		else:
 			say "     'Does Nermine's helper need help in remembering what she asked of [ObjectPro of player]?' Nermine says with an amused look in her eyes. 'It is nice to see someone so eager to help a jackal out, but [SubjectPro of player] should really try to remember better what Nermine needs.' Shaking her canine head from side to side, she makes a soft tsking noise. For some reason you feel vaguely disappointed in yourself at failing your mistress in even so minor a manner. 'Nermine asked to fetch wine from the satyrs in the museum. From a cask or other fresh source - not a cup. It has been found, Nermine's helper should return here to get a reward, making [ObjectPro of player] even more... attractive.' That said, she runs her long tongue over her lips in anticipation, the sight making you shudder with desire.";
@@ -669,8 +669,8 @@ to NermineRequestHelp:
 	else if JackalBoyTF is 1:
 		say "     'Ah yes!' Nermine exclaims with a smile as she spots your new jackal tail. 'This is a great start already! Does the visitor see how helpful Nermine is being? Now her new customer will not have to worry about strange or ugly changes to their rear, [SubjectPro of player] will always have a nice and handsome tail instead!' Seeing your hesitation, the jackal-woman grins and continues, 'Besides, a nice tail like that is sure to be attractive to the right kind of person...' the shopkeeper says with a lusty wink at you, before finishing. 'And there is nothing like a nice fine tail to help one to balance better! The dear visitor must admit, Nermine is a very helpful shopkeeper, but of course there is more help Nermine could give, to make [ObjectPro of player] even better and faster...'";
 		say "     She trails off for a moment with a grin as she sees that she has your full attention. 'But Nermine would need some help in return first, to pay the shop for her help of course.' You can't help but nod at the sense of this and she smiles back at you in response. 'Nermine needs some samples of the goo from one of those flying drakes, wyverns she thinks they are called, in order to make a charm for another customer. If brought three samples would be very appreciative...' The jackal-woman lets her last word hang in the air for a minute, leaving the choice of what to do now up to you.";
-		Now Nerminehelpstatus is 2;
-		Now NermineTalk is 2;
+		now Nerminehelpstatus is 2;
+		now NermineTalk is 2;
 		stop the action;
 	else if Nerminehelpstatus is 1:
 		say "     'Nermine already gave her visitor help! She hopes [SubjectPro of player] did not lose the precious totem?! It should be used soon to avoid that possibility,' Nermine says with exasperation.";
@@ -691,7 +691,7 @@ to NermineRequestHelp:
 				LineBreak;
 				say "[bold type]You gain a jackal totem![roman type][line break]";
 				increase carried of jackal totem by 1;
-				Now Nerminehelpstatus is 1;
+				now Nerminehelpstatus is 1;
 		else:
 			LineBreak;
 			say "     'This is too bad,' the jackal shopkeeper says with a sigh. 'Nermine does so enjoy helping people find themselves, and she had such very high hopes for her guest. If [SubjectPro of player] would change [PosAdj of player] mind though, just come see Nermine again,' Nermine says with a soft wink as she goes back to watching the store.";
@@ -750,13 +750,9 @@ to say NermineSexMenu:
 				now lastfuck of Nermine is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the sexy jackaless, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the sexy jackaless, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -1188,7 +1184,7 @@ An everyturn rule:
 		if JackalBoyTF >= 3:
 			if facename of player is not "Jackalboy":
 				say "     Something seems wrong to you for a minute, a frustration with your current head and face, making you snap and snarl like a beast as you try to work out the problem. You can feel the pressure inside your head building, until finally something seems to snap, and you let out a loud low moan of pleasure as your face begins to reshape itself. Your moaning cry soon transforms as well until the cry of a triumphant jackal echoes throughout the city, as you happily greet the return of the properly handsome face your mistress gave you.";
-				Now facename of player is "Jackalboy";
+				now facename of player is "Jackalboy";
 				now face of player is "narrow canine head, with a long sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's";
 		if JackalBoyTF >= 4:
 			if bodyname of player is not "Jackalboy":

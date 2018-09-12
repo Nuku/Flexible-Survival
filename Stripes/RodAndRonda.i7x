@@ -3,6 +3,10 @@ Version 1 of RodAndRonda by Stripes begins here.
 
 Section 1 - Rod
 
+Table of GameCharacterIDs (continued)
+object	name
+Rod Mallrat	"Rod Mallrat"
+
 Rod Mallrat is a person. "[if HP of Ronda is not 100]A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDonalds[or]one of the tables[or]the guarded bathroom area[at random][else]Rod the slut rat is [one of]stretched out on some cushions[or]curled up for a quick nap[or]wiping some stray globs of cum from her fur and then licking them from her fingers[or]tinkering with some odd and ends she's found among the slut rats['] collected junk[at random][end if].".
 The description of rod mallrat is "[roddesc]".
 The icon of Rod Mallrat is figure of Rod_icon.
@@ -25,7 +29,7 @@ instead of conversing Rod Mallrat:
 	else if hospquest is 8 and nerminepackage > 0 and rodhosp is not 0 and HP of Ronda is not 100:
 		say "     'Those big, spotted hairballs that rolled in here the other day? That was a bad scene, dude. They started to get fresh with some of the girls in the atrium and tried to drag them off. Well, we wouldn't put up with that. Never try to force a mall rat from their mall, man. We don't want none of them goons and their friends in here again.'";
 		now rodhosp is 1;
-	else if progress of alex is 2 and HP of Ronda is not 100:
+	else if AlexProgress is 2 and HP of Ronda is not 100:
 		say "     'Darrell? Yeah, he was here when it all went down. But... you might be a little surprised[if HP of ronda is 0 or HP of Ronda is 10]. Go talk to my girl, she knows where he is.'[else].' He shrugs, and points to the north. 'Go ask the others. They might know where he is.' He seems a little bummed.[end if]";
 	else if HP of Ronda is 0:
 		say "     [one of]'Did I introduce myself yet? I'm Rod, Rod Mallrat.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, you see those nagas? They hunt us mall rats, you know. Scary shit, no joke.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[at random]";
@@ -43,7 +47,7 @@ instead of conversing Rod Mallrat:
 		if Slut Rat Den is unknown:
 			say "     'Now comes the tough part, dude. You'll need to find the nest of those infected rats and all like black-ops infiltrate the place. They drag off anyone they beat, so the best way would be to let them catch you and see if you can learn the way there. I'd totally do it myself, but no rat they take ever makes it back.'";
 		else:
-			say "     'Well, since you know how to find them, now we need to figure out which one of them is Ronda. That'll be trickier. She's got a tattoo of a red heart on her thigh right by her... you know. She did it back when we started going out, before we became professional mall rats instead of just human ones. But the tattoo's still there, giving her a red patch of fur[if pooltable of Slut Rat Den is 3].' Having gotten well acquainted with both Eight-Ball and Skeeball, you know neither of them have a mark like that. Nor have any of the others you've spotted. But that's only a handful of slut rats out of a few dozen who come and go[else].' Having spent some time with several of the slut rats, you've not spotted any of them with a mark like that yet. But that's only a handful out of a few dozen who come and go[end if].";
+			say "     'Well, since you know how to find them, now we need to figure out which one of them is Ronda. That'll be trickier. She's got a tattoo of a red heart on her thigh right by her... you know. She did it back when we started going out, before we became professional mall rats instead of just human ones. But the tattoo's still there, giving her a red patch of fur[if SlutRatDenPoolTable is 3].' Having gotten well acquainted with both Eight-Ball and Skeeball, you know neither of them have a mark like that. Nor have any of the others you've spotted. But that's only a handful of slut rats out of a few dozen who come and go[else].' Having spent some time with several of the slut rats, you've not spotted any of them with a mark like that yet. But that's only a handful out of a few dozen who come and go[end if].";
 			say "     'You'll need to cozy up to the rats until you find Ronda,' he continues. 'Once you find her, get her somewhere alone and give her the stuff. Use these chocolates, bud. They're her fave. Just be careful. We'll only get one shot at this.'";
 			now HP of Ronda is 9;
 	else if HP of Ronda is 9:
@@ -61,8 +65,8 @@ the fuckscene of Rod Mallrat is "[sexwithRod]".
 
 to say sexwithRod:
 	[puts Slut Rat as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Slut Rat":
 			now monster is y;
 			break;
@@ -105,6 +109,10 @@ to say sexwithRod:
 
 
 Section 2 - Ronda
+
+Table of GameCharacterIDs (continued)
+object	name
+Ronda Mallrat	"Ronda Mallrat"
 
 Ronda Mallrat is a person. "[if HP of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note.[else if HP of Ronda is 10]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random].[else if HP of Ronda is 100]Ronda [one of]sits with several slut rats fawning over her[or]is stretched out across some cushions, enjoying some expensive chocolates[or]idly rubs her crotch[or]runs her paws over Rod[at random].[end if]".
 The description of Ronda Mallrat is "[rondadesc]".
@@ -162,8 +170,8 @@ instead of trading the demon seed when the current action involves the ronda:
 		delete demon seed;
 		remove ronda from play;
 		now HP of ronda is 1;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Slut Rat":
 				now area entry is "Mall";
 				break;
@@ -201,7 +209,7 @@ before conversing the Nermine while HP of Ronda is 5:
 to say rondaitems:
 	say "     Pulling out the items Nermine needed to help Ronda, you place them on the counter. She smiles happily and takes them. 'And now it is time to be talking about Nermine's payment for this. The last items Nermine is needing complete the cure are to be found in a private collection in the city. Downtown, there is high rise condo of private art collector. He is keeping veil and staff in his penthouse suite. Nermine is wanting you to be collecting them for her. Veil needed to complete cure, staff is payment. One trip for both. Easy for one working so hard to make amends.";
 	now HP of Ronda is 6;
-	now Art Collector is unresolved;
+	now Art Collector is active;
 	increase score by 10;
 	delete lizard juice;
 	delete awesomest fruit;
@@ -231,7 +239,7 @@ the scent of lizard juice is "The creamy white fluid has a thick, musky scent.".
 Chapter 2 - The Art Collector Event
 
 Art Collector is a situation. The level of Art Collector is 9.
-Art Collector is resolved.
+Art Collector is inactive.
 The sarea of Art Collector is "High".
 
 artleopardfight is a number that varies.
@@ -252,6 +260,7 @@ Instead of resolving a Art Collector:
 	if artleopardfight is 3:		[fled]
 		say "     You manage to feint past the enraged, aroused feline and charge out of the suite. You rush for the stairs with him in hot pursuit, but the lustful moans of the heat-ridden females draw him back inside, letting you escape. You run down as quick as you can for the first several flights, just in case, then slow to a more reasonable pace for your long defeated descent. You'll have to recover and try coming back another time.";
 		now artattempt is 1;
+		now Resolution of Art Collector is 3; [fled]
 	else if artleopardfight is 2:	[lost]
 		say "     The powerful leopard grabs you and runs his paws over you, as if trying to decide what to do with the thief he's caught. But before he can come to a decision, the heat-ridden females on his bed start to yowl in lustful need, longing for the strong male to rejoin them. The muscled feline grabs you roughly and drags you out onto his large patio. While the impressive view of the skyline would normally draw your attention, it is the ground that soon fills your view as he hurls you over the side of the building. You scream as you plummet quickly, spreading yourself out as best you can to slow your fall, but with little effect as the pavement seems to rush up at you. As you are about to strike the ground, everything mercifully goes black.";
 		now artattempt is 1;
@@ -275,10 +284,12 @@ Instead of resolving a Art Collector:
 		decrease morale of player by 20;
 		decrease humanity of player by 8;
 		say "     When you finally awaken, sore and aching all over but somehow alive, you give thanks to the powerful healing abilities of the infection. You slowly struggle to rise, the healing process having taken much out of you. You have left a noticeable dent and several cracks in the pavement where you landed, as well as a sizable red stain. Looking at it as you struggle to get up, you notice that something else is off - the lighting very different now. Looking up, you see that it's [short time of day] now, many hours since your ill-fated fight with the leopardman. After what feels like a Herculean effort, you make it to your feet and stagger off to find someplace to heal in peace.";
+		now Resolution of Art Collector is 2; [lost]
 	else if artleopardfight is 1:	[victory]
 		say "     With the leopardman driven off, you can hear the lustful yowls of the felines get louder as they start to climb off the bed. Unwilling to face down a pack of heat-ridden females, you quickly smash the case, grab the items and make a run for it. You dash to the antechamber and into the stairwell, rushing down the first couple of flights. When you don't hear any pursuit, you relax a little and cautiously slow down, hoping they decided to coax the defeated male from the other room to satisfy them. You look over the strange, unassuming items and hope they are worth the effort as you stow them away carefully and make your way back outside.";
 		increase score by 20;
 		now HP of Ronda is 7;
+		now Resolution of Art Collector is 1; [won]
 		now Art Collector is resolved;
 
 Chapter 3 - The Rescue Attempt
@@ -287,8 +298,8 @@ rondafight is a number that varies.
 
 to say rondarescue:
 	[puts Slut Rat as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Slut Rat":
 			now monster is y;
 			break;
@@ -301,7 +312,7 @@ to say rondarescue:
 		say "     Looking around the various rats in the den at the moment, you aren't able to spot one with Ronda's red heart on their fur. You try to keep a mental list of who you've already checked, though it's hard to tell the slutty rats apart at times.";
 	else:
 		say "     You are about to give up when you spot a flash of red on one of the large rats. This well-endowed herm has another rat's muzzle buried under her hefty balls and licking her snatch. You'd almost missed it because her big testes were covering the little red heart. You're tempted to join in right away, but you won't be able to tempt her somewhere secluded until she's done with her current playtoy anyhow. You snuggle back with one of the other rats and sit back to enjoy the show.";
-		if pooltable of Slut Rat Den is 3:
+		if SlutRatDenPoolTable is 3:
 			if slutratsub > 5 or cocks of player is 0:	[bottom]
 				say "     Finding yourself in Eight-ball's arms, you moan in pleasure as the rat starts playfully teasing you. You giggle happily and wiggle back against her cock, soon rewarded with the pleasant joy of having her cock slide up into your [if player is female]hot pussy[else]tight ass[end if]. You bounce in his lap as you both enjoy the show, watching as Ronda rolls the other rat onto all fours and fucks her good and hard until she's full of overflowing semen, and so are you.[impregchance]";
 			else:			[top]
@@ -432,8 +443,8 @@ to say helpingrod:
 				if libido of player > 50, now libido of player is 50;
 			else if player is female:
 				[puts Mall Rat as lead monster in case of impregnation]
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Mall Rat":
 						now monster is y;
 						break;

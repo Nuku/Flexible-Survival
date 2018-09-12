@@ -14,7 +14,7 @@ when play begins:
 	add Dog Walking to badspots of furry;
 
 Instead of resolving a Dog Walking:
-	now battleground is "void";
+	project the Figure of Mike_face_icon;
 	if HP of Mike is 0: [first meeting]
 		say "     Around a building corner in front of you comes a young naked human woman on all fours. As she trots a bit closer and barks at you, you see she's obviously pregnant and has a collar around her neck. Before you can decide if and what to do now, a bipedal stag walks after her around the corner. He's clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail starting at his navel leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful.";
 		say "     As the guy sees you, he turns to the woman and commands 'Heel, Lea' which she immediately obeys, trotting over to stand beside him on all fours.";
@@ -30,21 +30,25 @@ Instead of resolving a Dog Walking:
 			LineBreak;
 			say "     You chat a bit more before Mike excuses himself, saying that Lea needs to get her exercise and that he should go on walking.";
 			now HP of Mike is 1;
+			now Resolution of Dog Walking is 1; [talked to Mike]
 		else: [fighting]
 			LineBreak;
 			challenge "Stag";
-			Now Dog Walking is resolved;
+			now Resolution of Dog Walking is 2; [fought Mike]
+			now Dog Walking is resolved;
 		increase score by 5;
 	else if HP of Mike is 1: [second meeting]
 		say "     You run into Mike and his 'dog' Lea, out on the street for a walk. The young woman scampers to you quickly and joyfully licks your hands at seeing you again. Mike smiles at her playful behavior as he walks after her over to you.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
 		increase humanity of player by 5;
 		now HP of Mike is 2;
+		now Resolution of Dog Walking is 3; [met Mike again]
 	else if HP of Mike is 98: [first friendly meeting after player attack]
 		say "     You run into Mike and his 'dog' Lea, out on the street for a walk. The young woman looks at you suspiciously and growls silently until Mike steps up and strokes her head. 'It's okay Lea, we just had a misunderstanding last time.' Hearing soothing words from her master, she trots over to you and sniffs at you before licking your hands.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
 		increase humanity of player by 5;
 		now HP of Mike is 2;
+		now Resolution of Dog Walking is 3; [met Mike again]
 	else if HP of Mike is 2: [third meeting - they're under attack by a gang]
 		say "     Moving through the streets, you hear shouting and barking from somewhere ahead. Recognizing the voices of Mike and his 'dog' Lea, you rush forward to find out what's going on.";
 		say "     You find the stag and his female companion being attacked by a gang of several leopardmen. The felines have already split them apart from each other, with three circling Mike and another two having cornered Lea against a closed loading dock.";
@@ -57,21 +61,24 @@ Instead of resolving a Dog Walking:
 			challenge "Leopardman";
 			if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 				say "     After one last slash with the leopardman's claws, you collapse on the ground, bleeding. Luckily though, your intervention distracted them enough that Mike and Lea fought off three of the attackers in the meantime. Now faced with new odds, the leopardman standing over you abandons the fight, dashing away before the stag and his 'dog' can get to him...";
+				now Resolution of Dog Walking is 5; [lost, but distracted the gang enough]
 			else if fightoutcome >= 30: [fled]
 				say "     You running off led to two of the leopardmen giving chase, tailing you for some time until you manage to lose them. As you make your way back to where you last saw Mike and Lea, you see that they fought off the remaining gang members in the meantime.";
+				now Resolution of Dog Walking is 6; [fled, but distracted the gang enough]
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 				say "     Having given the leopardman quite a beating, you grin at the fearful look on his face as he flees, running away as fast as he can. Your intervention distracted the other members of the small gang too, which allowed Mike and Lea to fight off three of their attackers in the meantime. The remaining unhurt one throws the fight as he sees himself confronted with the three of you and flees...";
+				now Resolution of Dog Walking is 4; [helped Mike fight off the gang]
 				increase score by 5;
 			now HP of Mike is 3;
 			say "     Nodding over at you, Mike says 'Thanks a lot for the help' as he kneels next to Lea to check on her. The transformed dog has a long claw-slash on her side and starts to whimper loudly now that the adrenaline of the fight wears off. 'This doesn't look good - might get infected too. I have to get her home.' He picks Lea up in his arms, and you walk down the street together, with you acting as a lookout for more trouble. Soon you arrive at Mike's house, where he leads you to the large dog kennel in the back and sets Lea down on a bed.";
-			now battleground is "void";
 			move player to Mike's Office;
 			now Mike's Home is known;
 		else:
 			LineBreak;
 			say "     You quickly turn around and flee before you get drawn into the fight too and don't stop running until you're well away. With odds of five against two, you don't think you'll see either Mike or Lea again. Who knows what the leopardmen will do with them...";
 			now HP of Mike is 100;
-			Now Dog Walking is resolved;
+			now Resolution of Dog Walking is 7; [left Mike to the gang]
+			now Dog Walking is resolved;
 	else if HP of Mike > 2 and HP of Mike < 98: [further repeat meetings]
 		say "     You run into Mike and his 'dog' Lea again, out on the street for a walk. The young woman scampers to you quickly and joyfully licks your hands at seeing you again. Mike smiles at her playful behavior as he walks after her over to you.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
@@ -140,7 +147,7 @@ to say Stag loses:
 					say "     The stag's eyes get big and he replies 'What the fuck? You think I'm one of those creeps that makes people forget their humanity? Hell no - Lea and the others are actual dogs, man. I'm a professional animal trainer - or was, before this chaos. But then one morning I started sprouting fur. And when I checked on my dogs, they were becoming human. Soon I had a kennel full of humans with the minds of my dogs in them. They may look different, but they're still animals inside and need a master to care for them - and their new form is permanent as it turns out. They won't change again...'";
 					say "     'So you thought I had enslaved Lea, and I thought you were just a feral looking for something to fuck. Two of the few sane people in the town beating each other up - Hah. How about we forget this silly fighting ever happened?' He offers you his hand and you accept and shake it. Saying 'I'm Mike, by the way. See you later, under friendlier circumstances I hope.' he walks away.";
 					now HP of Mike is 98;
-					now Dog Walking is unresolved;
+					now Dog Walking is active;
 				else if (nam is "Suck him off."):
 					say "[MikeSex1]";
 				else if (nam is "Have him suck you off."):
@@ -153,8 +160,8 @@ to say Stag loses:
 					say "[MikeSex5]";
 				if HP of Mike is 0: [if the player hasn't selected talking above and set the HP to 98 by now, Mike will be permanently hostile (99)]
 					now HP of mike is 99;
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
+					repeat with y running from 1 to number of filled rows in Table of Random Critters:
+						choose row y in Table of Random Critters;
 						if name entry is "Stag":
 							now monster is y;
 							now area entry is "Warehouse";
@@ -162,13 +169,9 @@ to say Stag loses:
 							break;
 					stop the action;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the stag, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the stag, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -186,16 +189,16 @@ to say StagDesc:
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 when play begins:
 	add { "Stag" } to infections of guy;
 	add { "Stag" } to infections of furry;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Stag";
 	now enemy title entry is "";
 	now enemy name entry is "Mike";
@@ -243,8 +246,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 4 - Mike and Lea
 
@@ -260,12 +264,17 @@ Section 4 - Mike and Lea
 [  99: hostile after player attack                        ]
 [ 100: lost to the leopardman gang                        ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Mike	"Mike"
+
 Mike is a man. Mike is in Mike's Office.
 The description of Mike is "[MikeDesc]".
 The conversation of Mike is { "Oh, hello." }.
 The icon of Mike is Figure of Mike_icon.
 
 to say MikeDesc:
+	project the Figure of Mike_face_icon;
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Mike] <- DEBUG[line break]";
 	say "     Mike is a bipedal stag, clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful.";
@@ -285,9 +294,10 @@ instead of sniffing Mike:
 	say "     Mike has a nice smell, strong and masculine.";
 
 Instead of fucking Mike:
+	project the Figure of Mike_face_icon;
 	[puts Stag as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Stag":
 			now monster is y;
 			break;
@@ -357,13 +367,9 @@ Instead of fucking Mike:
 					now lastfuck of Mike is turns;
 					wait for any key;
 			else if calcnumber is 0:
-				say "Break off the conversation?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the anthro stag, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the anthro stag, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -508,6 +514,10 @@ instead of conversing Mike:
 	else:
 		say "     Mike is not in a state when he should be able to talk - please report how you got this.";
 
+Table of GameCharacterIDs (continued)
+object	name
+Lea	"Lea"
+
 Lea is a woman. Lea is in Mike's Office.
 The description of Lea is "     Originally one of Mike's dogs, Lea is now a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with her pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication. [if HP of Mike < 5]A deep gash from a leopardman's claw marks her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon.[else if HP of Mike > 4]A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again.[end if]".
 The conversation of Lea is { "Woof." }.
@@ -528,6 +538,10 @@ instead of conversing Lea:
 Section 5 - Xerxes
 
 Chapter 1 - Xerxes Basics
+
+Table of GameCharacterIDs (continued)
+object	name
+Xerxes	"Xerxes"
 
 Xerxes is a man.
 The description of Xerxes is "[XerxesDesc]".
@@ -718,13 +732,9 @@ Instead of fucking Xerxes:
 					now lastfuck of Xerxes is turns;
 					wait for any key;
 			else if calcnumber is 0:
-				say "Break off the conversation?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the human dog, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the human dog, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -751,7 +761,7 @@ to say XerxesSex2: [he sucks the player]
 
 to say XerxesSex3: [player pussy fucked]
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     You step beside the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, happy to get his master's attention[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds]. 'Master sex?' he asks eagerly[end if].";
 	say "     'Good dog' you say as you crouch down beside him, patting his head and stroking his shoulders and muscular back. Your hand strays lower and lower until you touch the smooth curves of his [if lust of Xerxes >= 7]tattooed [end if]bubble butt, then reach under him and grab his hardening cock. Xerxes gives you a pleased yip, his cock throbbing in your hand. Patting the cot, you tell him 'Up here, boy' and reward him with some more stroking as he obeys.";
 	WaitLineBreak;
@@ -763,7 +773,7 @@ to say XerxesSex3: [player pussy fucked]
 
 to say XerxesSex4: [player ass fucked]
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     You step beside the cot you put in here for him and whistle to call Xerxes. The dog with the buck-naked body of a young man immediately rushes to you from where he was patrolling through the long rows of bookshelves in the library. He comes to stand beside you, happy to get his master's attention[if lust of Xerxes >= 4 and a random chance of 2 in 5 succeeds]. 'Master sex?' he asks eagerly[end if].";
 	say "     'Good dog' you say as you crouch down beside him, patting his head and stroking his shoulders and muscular back. Your hand strays lower and lower until you touch the smooth curves of his [if lust of Xerxes >= 7]tattooed [end if]bubble butt, then reach under him and grab his hardening cock. Xerxes gives you a pleased yip, his cock throbbing in your hand. Patting the cot, you tell him 'Up here, boy' and reward him with some more stroking as he obeys.";
 	WaitLineBreak;
@@ -903,7 +913,7 @@ to say XerxesSex8: [female player and felinoid + Xerxes]
 		say "     Still balls-deep inside the human dog, the big cat then throws himself on the ground to lounge on his side, taking Xerxes with him. Stretched out comfortably on the floor, the felinoid holds Xerxes against his warm belly fur with his front paws around him and starts licking his sweaty back. Looks as if he's actively trying to infect him, or at least wants to spread his scent over all of your human pet's body.";
 	else: [fucked by Xerxes]
 		setmonster "Human";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		LineBreak;
 		say "     Watching the animalistic mating of your two beastly companions is quite arousing, so you quickly decide that it's time to join in. You throw off your clothes, already a bit wet at the crotch from the juices of your swollen and dripping pussy, then step up to the two rutting beasts. Running a hand through the soft fur of Klauz, then over the smooth skin of your human dog, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Xerxes. Your human dog has a bit of a pleasantly zoned out expression on his face, panting and grunting in lust as he's fucked. His hard cock bumps against you often, every time the felinoid thrusts into his ass.";
 		say "     Reaching up with a hand, you pull Xerxes['] head down a bit until he looks you in the eye and say 'Xerxes! Who's a good boy? Do you like my friend fucking your ass? I want you to fuck me now too - come on.' Your other hand meanwhile searches out his rock-hard erection and guides it to your moist opening. Between a thrust from Klauz that pushes Xerxes['] manhood into you at first and a kind of automatic urge of his body to keep pounding into a tight and warm hole, your pet is soon fucking you enthusiastically and comes out of his blissed out submissive state for the felinoid a bit. Happy at intimate contact with his mistress, he starts licking your face and participates in hot making out as you pull his lips to yours.";
@@ -944,7 +954,7 @@ to say XerxesSex9: [Female Player with Fang & Xerxes]
 			say "     That should strengthen the hierarchy in your little pack quite nicely. With both your submissive pets still standing where they fucked, patiently waiting for Fang's knot to go down and allowing them to separate, you lay back on the cot and get comfortable.";
 		else: [fucked by Xerxes]
 			setmonster "Human";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			LineBreak;
 			say "     Walking around the two rutting beasts, you run a hand through the rough fur on Fang's flank, then over the smooth skin of your human dog. As you get beside them, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Xerxes - where your human dog immediately greets you by licking your face and woofing at you between the lust-filled pants and grunts as he's fucked. His hard cock bumps against you often, every time Fang thrusts into his ass.";
 			say "     Reaching up with a hand, you pull Xerxes['] head down a bit until he looks you in the eye and say 'Xerxes! Who's a good boy? Do you like my friend fucking your ass? I want you to fuck me now too - come on.' Your other hand meanwhile searches out his rock-hard erection and guides it to your moist opening. Between a thrust from Fang that pushes Xerxes['] manhood into you at first and the dog's libido turning into high gear as he feels your moist tunnel around his cock, your pet is soon fucking you enthusiastically.";
@@ -976,7 +986,7 @@ to say XerxesSex9: [Female Player with Fang & Xerxes]
 			say "     With the powerful wolf once again cementing his dominant position, this worked out well. He and Xerxes still stand for a while where they fucked, waiting until Fang's knot goes down and they can disengage. Satisfied and just a bit exhausted, you lay back on the cot to get a bit of rest.";
 		else: [fucked by Xerxes]
 			setmonster "Human";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			LineBreak;
 			say "     Walking around the two rutting beasts, you run a hand through the rough fur on Fang's flank, then over the smooth skin of your human dog. As you get beside them, you crouch down, then lie on your back. After that it's a simple matter of sliding sideways a bit until you're under Xerxes - where your human dog immediately greets you by licking your face and woofing at you between the lust-filled pants and grunts as he's fucked. His hard cock bumps against you often, every time Fang thrusts into his ass.";
 			say "     Reaching up with a hand, you pull Xerxes['] head down a bit until he looks you in the eye and say 'Xerxes! Who's a good boy? Do you like my master fucking your ass? I want you to fuck me now too - come on.' Your other hand meanwhile searches out his rock-hard erection and guides it to your moist opening. Between a thrust from Fang that pushes Xerxes manhood into you at first and the dog's libido turning into high gear as he feels your moist tunnel around his cock, your pet is soon fucking you enthusiastically.";
@@ -1127,6 +1137,10 @@ to say AwesomeXerxesSex2:
 Section 6 - Helen
 
 Chapter 1 - Helen Basics
+
+Table of GameCharacterIDs (continued)
+object	name
+Helen	"Helen"
 
 Helen is a woman.
 The description of Helen is "[HelenDesc]".
@@ -1338,13 +1352,9 @@ Instead of fucking Helen:
 					now lastfuck of Helen is turns;
 					wait for any key;
 			else if calcnumber is 0:
-				say "Break off the conversation?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the human dog, shaking your head slightly as she gives a questioning look.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the human dog, shaking your head slightly as she gives a questioning look.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;

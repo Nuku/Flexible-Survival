@@ -1,6 +1,10 @@
 Version 1 of Nakoma by Song begins here.
 [ Version 1.0 - Initial talk options and sex scenes - Song                      ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Nakoma	"Nakoma"
+
 Nakoma is a woman. Nakoma is in Nakoma's Tent.
 The description of Nakoma is "[NakomaDesc]".
 The conversation of Nakoma is { "I like plains." }.
@@ -71,13 +75,9 @@ to say NakomaTalkMenu:
 				wait for any key;
 				say "[NakomaTalkMenu]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You excuse yourself and step back from Nakoma.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You excuse yourself and step back from Nakoma.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

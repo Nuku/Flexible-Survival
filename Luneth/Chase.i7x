@@ -79,6 +79,10 @@ ChaseOffspring is a number that varies.
 
 Section 1 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Chase	"Chase"
+
 Chase is a man.
 The description of Chase is "[ChaseDesc]".
 The conversation of Chase is { "mew" }.
@@ -190,13 +194,9 @@ to say RegularChaseTalkMenu:
 					say "[RegularChaseRyoTalk]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the anthro tiger, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the anthro tiger, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -216,7 +216,7 @@ to say RegularChaseTalk1: [just casual conversation]
 to say RegularChaseHelp:
 	if RegChaseHelp is 0:
 		say "     'Hey, I'm sorry to ask this of a friend, but could you do me a small favor?' Not sure what the tiger is on about, you ask Chase what he needs. 'Well, we're kind of running low on food and water around here. I was kind of hoping that if you happened to come across some extra supplies, you wouldn't mind sharing some with us?' Not seeing any reason why not as long as you can keep yourself supplied too, you nod and then ask Chase how much in the way of provisions he and the others would need. 'Not much maybe just 20 pounds of food (8 units) and maybe a couple gallons of water (5 units). The waters not that necessary though, but the food would be really appreciated.' The tiger smiles at you somewhat sheepishly. Gaping and then nodding somewhat bewilderedly at the feline man you tell Chase that you'll see what you can do. 'Thanks and sorry about the inconvenience.' Chase saunters up next to you and then licks his raspy tongue across your [facename of player] face.";
-		Now RegChaseHelp is 1;
+		now RegChaseHelp is 1;
 	else if RegChaseHelp is 1:
 		if carried of water bottle < 5 or carried of food < 8:
 			say "     [one of]'Hey, sorry to bug, but did you ever get that food? We need like 8 things of food and maybe 5 liters of water, if you can spare that much.'[or]'Did you have any luck finding those supplies I'd asked about?'[or]'Don't forget to keep your eyes open for some of the supplies we need here.'[or]'Did you see those small packs of rabbits roaming around? God they always make my mouth water...'[at random]";
@@ -225,7 +225,7 @@ to say RegularChaseHelp:
 			decrease carried of food by 8;
 			say "     'Whoa, thanks a lot for this! This should keep the rest of us going for a while longer!' Chase nuzzles the side of your neck and then licks you across your throat. A shiver racks down your spine from the rough wet feel of the tiger's tongue sliding along your [facename of player] throat. When the feline pulls back Chase says, 'Hey why don't I show you some neat tricks we tigers like to pull off? It may help you to fight and run away better when your outside foraging or whatever.";
 			Increase XP of player by 40 + ( 3 * level of player );
-			Now RegChaseHelp is 2;
+			now RegChaseHelp is 2;
 	else if RegChaseHelp is 2:
 		say "     Chase turns to you with beaming smile. 'I think we are good for now. You pulled us out of the fire that's for sure. We should be ok, as long as we stay vigilante with our scavenging.' Raising his fist up at you, the tiger raises an eyebrow in question. 'Pound it?' Smiling a bit to yourself, you raise your fist as well, meeting him in a pound.";
 
@@ -285,13 +285,9 @@ to say DomChaseTalkMenu:
 					say "[DomChaseRyoTalk]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the anthro tiger, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the anthro tiger, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -496,13 +492,9 @@ to say ChaseSexMenu:
 					now lastfuck of Chase is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the anthro tiger, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the anthro tiger, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -611,13 +603,9 @@ to say DomChaseSexMenu:
 					now lastfuck of Chase is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the tiger king, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the tiger king, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

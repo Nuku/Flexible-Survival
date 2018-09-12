@@ -53,7 +53,7 @@ to say VixenHermNurseGetAnal:
 	say "     A";
 
 to say LoseToVixenNurse:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if vixgender is 0:
 		if player is herm:
 			if a random chance of 1 in 2 succeeds:
@@ -103,7 +103,7 @@ to say LoseToVixenNurse:
 	now lev entry is 4;
 
 to say BeatTheVixenNurse:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "The vixen nurse stops fighting and you move in to catch her, it seems you have a slutty vixen nurse on your hands [bold type]What would you like to do?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -161,23 +161,19 @@ to say BeatTheVixenNurse:
 					-- otherwise: say "Sex menu failed!";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Resist your urges and move on?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You let the vixens hand go and she quickly disappears down a hallway leaving you to gather your thoughts";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You let the vixens hand go and she quickly disappears down a hallway leaving you to gather your thoughts";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 	[value reset]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now lev entry is 4;
 
 
 to say VixenNurseDesc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now lootchance entry is 20;
 	let debit be 0;
 	now vixgender is 0;
@@ -210,12 +206,12 @@ to say VixenNurseDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Vixen Nurse"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -263,16 +259,16 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "vixennurse"; [ Row used to designate any special combat features, "default" for standard combat. ]
-
+	now BannedStatus entry is false;
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
 "vixennurse"	vixhealboost rule	--	--	--	--	--	--	--	--	--
 
 this is the vixhealboost rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if monsterHP <= ( HP entry / 4 ) and lootchance entry > 0 and a random chance of 1 in 4 succeeds:	[weak and not used healing booster]
 		let healed be 25;
 		increase monsterHP by healed;

@@ -7,7 +7,7 @@ when play begins:
 	add Female Dorm One to badspots of girl;
 	add Female Dorm One to badspots of furry;
 
-instead of going north from Dorm Street while (Female Dorm One is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
+instead of going north from Dorm Street while (Female Dorm One is active and Female Dorm One is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	FemaleDormOneEvent;
 
@@ -23,16 +23,18 @@ to FemaleDormOneEvent: [Showers. F solo]
 	if player consents:
 		LineBreak;
 		say "     Amused at her lack of embarrassment but nonetheless maintaining the charade of her being alone, you watch as her paws caress her breasts, squeezing and pushing the soft flesh around. Meanwhile, her tail flits around the side and twitches in front of her pussy, the tip brushing her gash. The student lets out a gasp, the added excitement of an observer heightening her arousal. You consider joining her, but decide against it, not wishing to ruin the moment. She turns around and bends over, running her hands up over her ankles and up her legs. This gives you an unimpeded view of her ass and cunt, the moisture dripping from them unclear whether it is water or juices of arousal. When she reaches her thighs, she turns to face you again before twitching an ear and grabbing her towel. Taking this as your cue to leave, you stealthily slip out of the showers again. Just in time it would seem, as soon as you have taken a few steps down the corridor, a group of girls in various states of undress walk around the corner, towels tucked under their arms or over their shoulders.";
+		now Resolution of Female Dorm One is 1; [watched in the shower]
 	else:
 		LineBreak;
 		say "     Any thrill you might have had is gone with being noticed. You slink out and back into the female dorms, leaving the feline in peace.";
+		now Resolution of Female Dorm One is 2; [didn't watch in the shower]
 	now LastCampusWalkin is turns;
 	now Female Dorm One is resolved;
 
 Female Dorm Two is a situation.
 The sarea of Female Dorm Two is "Nowhere".
 
-instead of going north from Dorm Street while (Female Dorm Two is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
+instead of going north from Dorm Street while (Female Dorm Two is active and Female Dorm Two is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	FemaleDormTwoEvent;
 
@@ -52,7 +54,7 @@ when play begins:
 	add Female Dorm Three to badspots of girl;
 	add Female Dorm Three to badspots of furry;
 
-instead of going north from Dorm Street while (Female Dorm Three is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
+instead of going north from Dorm Street while (Female Dorm Three is active and Female Dorm Three is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	FemaleDormThreeEvent;
 
@@ -68,9 +70,11 @@ to FemaleDormThreeEvent: [Study in room with benefits. FF]
 	if player consents:
 		LineBreak;
 		say "     Eager at her friend's acceptance, the tiger pounces her, pinning her beneath her body before rolling over to allow the nymph to be on top. She grasps the shyer woman's rear and pulls her over her body until her cunt is over the feline's mouth. The two students wait a moment, both breathing heavily from arousal, before the nymph gasps as the tiger thrusts her tongue into her vagina. As her friend grinds against her face, the tigress caresses her ass with one hand and masturbates her own pussy with the other. Squelching noises fill the room as the students take their pleasure in each other. The completed assignment lies forgotten next to their writhing bodies. Cautious of disturbing them, you leave quietly, their moaning spilling into the hallway, much to the amusement of passing residents";
+		now Resolution of Female Dorm Three is 1; [watched in the dorm]
 	else:
 		LineBreak;
 		say "     You can see where this is going and not wishing to listen in, you return to the foyer.";
+		now Resolution of Female Dorm Three is 2; [Didn't watch in the dorm]
 	now LastCampusWalkin is turns;
 	now Female Dorm Three is resolved;
 
@@ -81,7 +85,7 @@ when play begins:
 	add Female Dorm Four to badspots of girl;
 	add Female Dorm Four to badspots of guy;
 
-instead of going north from Dorm Street while (Female Dorm Four is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
+instead of going north from Dorm Street while (Female Dorm Four is active and Female Dorm Four is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	FemaleDormFourEvent;
 
@@ -97,9 +101,11 @@ to FemaleDormFourEvent: [Study in room with benefits. MF]
 	if player consents:
 		LineBreak;
 		say "     Driven by desire, the fox quickly unbuttons his shirt and tosses it out of view before grabbing one of the wolf's breasts, bringing his tongue down to lick around the nipple. She shudders as his breath tickles the sensitive skin of her chest, letting out a needy moan. One of her hands grasps his vulpine cock, masturbating it slowly as her other hand strokes his back. Drawing back from her nipple, the male student crouches, dragging his shaft from her mouth, before licking her vulva. The wolf lets out a gasp, grabbing the back of his head and thrusting her groin against his eager face. After some time, with foreplay seemingly over, the wolf drags the fox across the room, out of your vision. You hear them sitting down on the bed, but the arrival of a group of laughing students means you cannot stay any longer. Shrugging to yourself, you turn and leave, returning to the foyer.";
+		now Resolution of Female Dorm Four is 1; [watched in the study room]
 	else:
 		LineBreak;
 		say "     You can see where this is going and not wishing to listen in, you return to the foyer.";
+		now Resolution of Female Dorm Four is 2; [Didn't watch in the study room]
 	now LastCampusWalkin is turns;
 	now Female Dorm Four is resolved;
 
@@ -110,7 +116,7 @@ when play begins:
 	add Female Dorm Five to badspots of girl;
 	add Female Dorm Five to badspots of guy;
 
-instead of going north from Dorm Street while (Female Dorm Five is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
+instead of going north from Dorm Street while (Female Dorm Five is active and Female Dorm Five is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	FemaleDormFiveEvent;
 
@@ -133,7 +139,7 @@ The sarea of Female Dorm Six is "Nowhere".
 when play begins:
 	add Female Dorm Six to badspots of girl;
 
-instead of going north from Dorm Street while (Female Dorm Six is not resolved and Female Dorm Five is resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
+instead of going north from Dorm Street while (Female Dorm Six is active and Female Dorm Six is not resolved and Female Dorm Five is resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	FemaleDormSixEvent;
 

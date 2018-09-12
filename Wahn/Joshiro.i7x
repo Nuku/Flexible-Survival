@@ -48,12 +48,14 @@ Instead of resolving a Road Wanderer:
 		if calcnumber is 1: [talk]
 			LineBreak;
 			say "     As you approach him, the skimpily dressed man offers his hand to shake without hesitation and says, 'Hey there, I'm Joshiro. Nice to meet a friendly face for once. Not that I had any problems dealing with the others...' He boasts good-naturedly about what creatures he fought recently, and that none could stand against him. After that, Joshiro offers to flex his arms for you so you can give his bicep a squeeze, being all in all very happy to show off his body to you.";
+			now Resolution of Road Wanderer is 1; [talked]
 			say "[JoshiroTalkMenu]";
 		else if calcnumber is 2: [fight]
 			LineBreak;
 			say "     As you step towards the human with lust in your eyes, he takes that in stride, simply raising his fists as he gets ready for a fight. 'One of those are you, eh? Fine, let's get it on!' he calls out, sure of his victory.";
 			challenge "Human Martial Artist";
 			if fightoutcome < 20: [player won]
+				now Resolution of Road Wanderer is 4; [forceful sex with the player]
 				say "[JoshiroForcedSexMenu]";
 				now HP of Joshiro is 22; [fought, player won]
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
@@ -66,19 +68,27 @@ Instead of resolving a Road Wanderer:
 					WaitLineBreak;
 					say "     Riding out your mutual orgasms on top of you, Joshiro calms down a bit and simply enjoys the feeling of your load inside him, breathing deeply to replenish his reserves. Then he looks down at you and puts on a boyish grin, followed by the words, 'Nice cock on ya, stranger. Wanna tell me who just bred my ass?' The corny way he says this makes you chuckle despite yourself, and you can't really deny telling him your name. '[if player is not defaultnamed][name of player], eh? [end if]Pleasure meeting you. And being meated by you, hah!' While you're still groaning about the stupid joke, Joshiro slides himself up on your shaft, carefully sliding his hand behind his back to prevent your load from gushing out of him as he pulls off. It looks rather funny how he standing there, plugging his hole with a finger, but his rear entrance apparently tightens itself up in abnormal speed. Just a minute or two later, Joshiro doesn't run any danger of losing his creamy filling as he goes to grab his shorts and get dressed again. 'So long, you hot fucker!' he says with a smile, then saunters off.";
 					now libido of Joshiro is 4; [Joshiro got fucked]
+					now Resolution of Road Wanderer is 5; [player fought, lost, got ridden]
 				else:
 					say "     Joshiro seems a bit disappointed that you don't have a cock, shrugging to himself and standing up. 'Hm, my bad I guess. But hey, you jumped me, not the other way around.' With that said, he turns around and strolls off, just leaving you behind.";
+					now Resolution of Road Wanderer is 6; [player fought, lost, no sex]
 				now HP of Joshiro is 20; [fought, player lost]
 			else if fightoutcome is 30: [fled]
 				say "     As you run off, you can hear the martial artist shout after you, 'Can't withstand the power of Joshiro Arashi, hah! You better run!'";
+				now Resolution of Road Wanderer is 6; [player fought, ran]
 				now HP of Joshiro is 21; [fought, player ran]
 		else: [avoid]
 			LineBreak;
 			say "     Deciding that you don't want anything to do with this guy, you turn around and walk the other way, leaving him to continue his own path.";
 			now HP of Joshiro is 100; [player not interested]
+			now Resolution of Road Wanderer is 99;
 	now Road Wanderer is resolved; [for now]
 
-Sloppy Seconds is a situation. Sloppy Seconds is resolved. [player must know Tyke, Darius and Joshiro to find this]
+[
+Sloppy Seconds is a situation. Sloppy Seconds is inactive. [player must know Tyke, Darius and Joshiro to find this]
+The Prereq1 of Sloppy Seconds is Road Wanderer.
+The Prereq1Resolution of Sloppy Seconds is { 1, 2, 3, 4, 5, 6 }.
+The Prereq2 of Sloppy Seconds is Joshiro Tales 1.
 The sarea of Sloppy Seconds is "Red".
 
 Instead of resolving a Sloppy Seconds:
@@ -87,10 +97,19 @@ Instead of resolving a Sloppy Seconds:
 	WaitLineBreak;
 	say "     Just as you are about to wander to the front of the building to check on the street fight, you hear noise from behind it. Glancing over the edge of the roof, you spot two anthro canines walking through the alley down there, a muscled dalmatian and his even bigger doberman buddy. It's Darius and Tyke. 'So, what did you wanna show me so bad dude? Dragging me out here all of a sudden!' the black and white furred drug dealer asks and his companion grunts, 'You'll see,' as he uses his superior bulk to drag his friend after himself. From your raised position, you see where they're going already - on the other side of a half-broken fence cutting the alley in two, there is a mattress laid out, and on it you recognize a bare-ass naked Joshiro. The human male is stretched out on his front and dozes, with fresh cum trickling out of his ass. He must have been fucked hard not too long ago to put him in such a state.";
 	say "     As he gets pulled through the hole in the fence, Darius calls out, 'Whoa! What's this? Dragging me out here to introduce your new girlfriend, dawg? You've really fallen for this gay shit, didn't you?' Tyke grunts and makes a throwing away gesture. 'Naw man, I'm not gay! It's just this faggot here! He's something else - try him and you'll see.' Darius ruffles his muzzle and shakes his head, 'You kiddin'? No way I'm gonna stick my dick in a dude!' 'Yes way! Time for you to learn for yourself what I mean!' Tyke responds, his hand grabbing Darius by the neck and shoving him forward. 'What the fuck?' Darius shouts back, yet his buddy doesn't budge, simply cracking his knuckles and nodding towards the naked man. 'Get yo dick in there, man. You're not leaving before you do.' 'That's whacked man, I -' Darius starts to reply, but his words stop as Tyke lets out a threatening growl.";
-	WaitLineBreak;
-	say "     'Fuck!' Darius curses as he turns away from his friend, fully taking in the naked man in front of him for the first time. He mutters something you don't catch, then reaches for his belt buckle and soon slides his jeans down, pulling first his left then his right paw out of them. 'You can hold my pants if yo crazy ass is gonna make me do this!' Darius shouts at his friend and flings his jeans to Tyke, who catches them easily. 'They better not get dirty,' the dalmatian adds gruffly, to which Tyke just chuckles and hangs the article of clothing over his shoulder. Not having any other reason to delay what is demanded of him, Darius steps forward slowly and sets his paw on the mattress. The movement draws attention from the dozing human on it, who groggily rubs his face and says, 'Nngh, Tyke baby! Breeding me again so soon?' Darius barks in an indignant tone, 'Nah, I'm not your faggot boyfriend! He's forcing me to fuck ya dirty ass!'";
-	say "     Joshiro pushes himself up on his elbow and half turns around, looking in confusion to the two canines. His gaze wanders over Darius's spotted shape, his muscled chest and then down to the anthro canine's crotch, where a red-skinned cock is already pushing out of his sheath. 'Okay, I'm fine with that,' the human calls out and picks himself up from the mattress to get on all fours, presenting his ass to Darius. The dalmatian looks down at his growing erection in dismay, weakly saying to no one in particular, 'That's just because... this skanky ass's sex scent that is all of the place. And the fucker presenting like a bitch that wants to be bred. Anyone would get hard from that.'";
+	say "     [bold type]Do you want to keep watching?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Sure, let's see where it goes.";
+	say "     ([link]N[as]n[end link]) - Nah, check the front of the building and see if the way is clear by now.";
+	if player consents:
+		LineBreak;
+		say "     'Fuck!' Darius curses as he turns away from his friend, fully taking in the naked man in front of him for the first time. He mutters something you don't catch, then reaches for his belt buckle and soon slides his jeans down, pulling first his left then his right paw out of them. 'You can hold my pants if yo crazy ass is gonna make me do this!' Darius shouts at his friend and flings his jeans to Tyke, who catches them easily. 'They better not get dirty,' the dalmatian adds gruffly, to which Tyke just chuckles and hangs the article of clothing over his shoulder. Not having any other reason to delay what is demanded of him, Darius steps forward slowly and sets his paw on the mattress. The movement draws attention from the dozing human on it, who groggily rubs his face and says, 'Nngh, Tyke baby! Breeding me again so soon?' Darius barks in an indignant tone, 'Nah, I'm not your faggot boyfriend! He's forcing me to fuck ya dirty ass!'";
+		say "     Joshiro pushes himself up on his elbow and half turns around, looking in confusion to the two canines. His gaze wanders over Darius's spotted shape, his muscled chest and then down to the anthro canine's crotch, where a red-skinned cock is already pushing out of his sheath. 'Okay, I'm fine with that,' the human calls out and picks himself up from the mattress to get on all fours, presenting his ass to Darius. The dalmatian looks down at his growing erection in dismay, weakly saying to no one in particular, 'That's just because... this skanky ass's sex scent is all over the place. And the fucker presenting like a bitch that wants to be bred. Anyone would get hard from that.'";
+	else:
+		LineBreak;
+		say "     <Scene for choice B>";
 ]
+
 Section 2 - Talk Menu
 
 to say JoshiroTalkMenu:
@@ -145,13 +164,9 @@ to say JoshiroTalkMenu:
 					say "[JoshiroTalk4]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the human male and say your goodbyes, then walk down the street in another direction as him. 'Hope to see ya again!' Joshiro calls after you, waving before he moves on himself.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the human male and say your goodbyes, then walk down the street in another direction as him. 'Hope to see ya again!' Joshiro calls after you, waving before he moves on himself.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -174,6 +189,7 @@ to say JoshiroTalk4: [offering sex]
 		say "     As you offer Joshiro to have a good time with him, the Asian man gives you a look up and down, then blows out his breath, rubbing the back of his neck in slight embarrassment. 'You know, a little while ago before all this, I'd have taken you up on that in a second. Now... well, it's like this: I found the most amazing feeling ever, and it comes from taking a big, juicy cock up my rear end. Not sure if I'll ever get enough of that, but until I do, I'd like to focus on trying out everything anal. You wouldn't believe the positions that come up in my mind all of their own, or the variety of dicks that people swing these days! Damn, there was this one guy I met yesterday who had [one of]a two foot horsecock[or]a huge knotted shaft[or]two dicks, side by side[or]a prehensile dick[or]this wiggling tentacle-thing[or]a shaft literally as thick as a beer can[at random]! That felt freaky - freaky good - in me!' He's lost in the memory for a second, then shakes it off and tells you, 'So. Erm. No hard feelings, but thanks, not now.";
 		say "[JoshiroTalkMenu]"; [looping back for more conversation]
 	else:
+		now Resolution of Road Wanderer is 3; [sex with the player]
 		say "[JoshiroSexMenu]"; [moving on to sex]
 
 Section 3 - Joshiro Sex Menus
@@ -195,7 +211,7 @@ to say JoshiroSexMenu:
 	now description entry is "Ask if you can fuck his rear end";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Tease his hole";
+	now title entry is "Tease his hole (includes rimming)";
 	now sortorder entry is 3;
 	now description entry is "Play denial games with the human buttslut";
 	[]
@@ -222,13 +238,9 @@ to say JoshiroSexMenu:
 					say "[JoshiroSex3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the human male and say your goodbyes, then walk down the street in another direction as him. 'Hope to see ya again!' Joshiro calls after you, waving before he moves on himself.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the human male and say your goodbyes, then walk down the street in another direction as him. 'Hope to see ya again!' Joshiro calls after you, waving before he moves on himself.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -252,7 +264,7 @@ to say JoshiroSex3: [ass teasing]
 	say "     After a pleasant little while of relaxed face-fucking, you pull the Asian male up by the chin and reward the sexy man-slut with a long wet kiss. Moving around to his rear next, you plant a hand between his shoulder blades and push the martial artist down until he face-plants on the cardboard beneath the both of you. Moaning submissively with his cheek pressed to the floor, the muscled human wiggles his very inviting ass, showing off a pucker that winks in anticipation of your entry. You chuckle at just how eager he is for sex and give Joshiro's voluptuous ass-cheeks a loud spank; causing the man to groan lustily, then bite his lip to control himself. 'Yeah, you like that ass don't you. C'mon daddy, Fuck me!' the handsome male calls out demandingly.";
 	say "     You move up a little behind him on your knees and look down at the waiting male, a broad grin on your face. Slapping your hands hard on both sides of his rear wins an ecstatic whelp from Joshiro, and you follow up with kneading his ass and thrusting your front against his rear. The slutty man-whore smiles happily as he peers at you over his shoulder and winks in boyish playfulness. You slap your [cock size desc of player], [cock of player] boner between his cheeks, right over Joshiro's winking hole. Then you gather some spit and let it drip from your tongue to act as extra lube for your intent of teasing the moaning hunk before you. Squishing his buns together with your hands, you grind it back and forth for a moment, feeling almost as if you were fucking him for real.";
 	WaitLineBreak;
-	say "     Joshiro's breath comes a little faster as he feels you grind against his ass, your pre and spit making his crack a slick groove to slide your dick against. Yet as you simply continue to do so, the horny man eventually lets out the urgent whisper of, 'Stick it in. Come on. Stick that dick in me.' You put your hand back on his back, pushing down on it a little, then tell the man to stay in position and obey his top. He nods, the slight stubble on his face rustling against the cardboard, then takes a tense breath as you line your dickhead up with his hole. Slowly pressing in, you feel his pucker start to flex around your head, at which point you bend your dick up and thrust against the waiting groove between his buttocks.";
+	say "     Joshiro's breath comes a little faster as he feels you grind against his ass, your pre and spit making his crack a slick groove to slide your dick against. Yet as you simply continue to do so, the horny man eventually lets out the urgent whisper of, 'Stick it in. Come on. Stick that dick in me.' You move your hand to his back, pushing down on it a little, then tell the man to stay in position and obey his top. He nods, the slight stubble on his face rustling against the cardboard, then takes a tense breath as you line your dickhead up with his hole. Slowly pressing in, you feel his pucker start to flex around your head, at which point you bend your dick up and thrust against the waiting groove between his buttocks.";
 	say "     'Nnnghh!' Joshiro groans against the ground in frustration, raising his ass as if to give a better target to penetrate when you pull back once more. You entertain yourself further while fighting back the urge to chuckle. Brushing the large mushroom head of your throbbing cock over his hole repeatedly, you once again miss the target on purpose and slam your crotch hard into his rear. As you watch it wiggle under the impact, you feel your slut whine under his breath, then start trying to push himself up. Seems like the denial got too much for him, but you're not done with him yet! Pushing down on him, you move quickly to swing your body around and literally sit on his shoulder-blades, pinning the man to the ground. Then you lean forward and bury your face between the buns of his ass and start licking.";
 	WaitLineBreak;
 	say "     Eating out the Asian hunk's hole, you find his struggles melt away like butter, a single swipe of your tongue causing the man to almost drool on the cardboard his face is pressed against. Moaning like a bitch in heat under you, the man presents a fun toy to be played with, and you experiment what sounds you can let him make with just the right tease of his hole. The muscles of his sweaty, trained body ripple in a beautiful display as he trembles in arousal, and even more so when you reach around to also stroke his cock. Soon, all the precum he is leaking forms sticky strings between his shaft and the cardboard below. As you push your tongue deeper into Joshiro's rear, you notice a flavor of semen in his depths. Clearly, this buttslut got fucked by someone else not long ago! Eating the cum out of the martial artist makes him moan happily, and you think you can hear him whimper the word 'Mul' in his blissed-out state.";
@@ -272,10 +284,10 @@ to say JoshiroSex3: [ass teasing]
 		say "     'You're quite the stud, handsome,' Joshiro says happily. With your cock still balls deep inside him, and the attractive dude feeling being quite nice to just look at and grope a little, you enjoy the quiet moment between the two of you and get back to making out a little. Only after a long while does Joshiro let out a long breath and then gently slips out of your grasp, creating a slurping sound as he ass pulls off your softening dick and starts leaking dribs and drabs of cum. Getting to his feet with his shorts in hand, the martial artist makes a little show of turning around and wiggling his ass. 'I think I'll better wait to put these back on,' he tells you wish a smirk, brushing his fingers down the crack of his ass and looking at them and your cum that is slowly oozing from his hole. Licking the creamy treat from his fingers, he hangs his shorts over his shoulders and wiggles his eyebrows at you. 'I'll get going now. Sure wouldn't mind running into you sometime again though.' With a wave, he wanders off after that, strolling down the middle of the street fully nude now.";
 	else:
 		LineBreak;
-		say "     Patting the buns of his delicious rear gently, you get up from on top of the needy male and move back behind him, from where you pull Joshiro up with your hands hooking under his armpits. Drawing him against your chest, you kiss the athletic man as he looks over his shoulder. You hands wander over his chest, squeezing and groping his pecs and abs and overloading his senses with these further pleasures. Meanwhile, you grind and fuck your throbbing member between his sweaty, saliva-slick buttocks, still doing nothing more than hot-dogging the panting man. Pounding hard against his ass, you pin down his arms to suppress a last attempt of his to angle your dick so it penetrates, gleefully making use of him as just a big boy toy until you feel a familiar tightness rise in your balls.";
+		say "     Patting the buns of his delicious rear gently, you get up from on top of the needy male and move back behind him, from where you pull Joshiro up with your hands hooking under his armpits. Drawing him against your chest, you kiss the athletic man as he looks over his shoulder. You hands wander over his chest, squeezing and groping his pecs and abs and overloading his senses with these further pleasures. Meanwhile, you grind and fuck your throbbing member between his sweaty, saliva-slick buttocks, still doing nothing more than hot-dogging the panting man. Pounding hard against his ass, you pin down his arms to suppress a last attempt of his to angle your dick so it penetrates, gleefully making use of him as just a big boytoy until you feel a familiar tightness rise in your balls.";
 		say "     With a deep grunt, you slam into him hard one more time and blast your load, covering the small of Joshiro's back with creamy white streaks. They ooze and drip down over his sweaty skin even while more cum is splattered over the Asian male's back, soon reaching the top of his ass-crack, to make grinding the man even slicker with frothed up semen. Joshiro whimpers and opens his mouth to say something, but you get a hand up to his chin, shoving two fingers into his mouth to suck on. Licking his cheek, you tell the tanned human what a good boy he has been and use your other hand to jerk his erection in a rapid tempo. Over-heated on arousal as he is, it takes but a moment to push Joshiro past the point of no return, hollering loudly as his cock erupts with a huge load of cum.";
 		WaitLineBreak;
-		say "     Both of you just grunt and pant for a little while as your orgasms run their course, until Joshiro finally catches his breath and manages to pant, 'You're a cruel, cruel person to tease me like that. Fuuuck, I wanted to feel you inside me!' Patting his chest, you roughly tell him to stop bitching, then lick his cheek somewhat possessively and push him away from your chest to catch himself with his hands on the cardboard square. Glancing down to take in your handiwork of creaming his back, you chuckle and get up, then stand back to watch the Asian man do the same. With his red shorts in hand, he looks himself over and twists around to see your cum oozing down the crack of his butt. 'I think I'll better wait to put these back on,' he tells you wish a weak smirk, still regaining his usual self assurance after what you put him through. He hangs his shorts over his shoulders and says, 'I'll get going now. Sure wouldn't mind running into you sometime again though. But next time you have to fuck me properly, alright?' With a wave, he wanders off after that, strolling down the middle of the street fully nude now.";
+		say "     Both of you just grunt and pant for a little while as your orgasms run their course, until Joshiro finally catches his breath and manages to pant, 'You're a cruel, cruel person to tease me like that. Fuuuck, I wanted to feel you inside me!' Patting his chest, you roughly tell him to stop bitching, then lick his cheek somewhat possessively and push him away from your chest to catch himself with his hands on the cardboard square. Glancing down to take in your handiwork of creaming his back, you chuckle and get up, then stand back to watch the Asian man do the same. With his red shorts in hand, he looks himself over and twists around to see your cum oozing down the crack of his butt. 'I think I'd better wait to put these back on,' he tells you wish a weak smirk, still regaining his usual self assurance after what you put him through. He hangs his shorts over his shoulders and says, 'I'll get going now. Sure wouldn't mind running into you sometime again though. But next time you have to fuck me properly, alright?' With a wave, he wanders off after that, strolling down the middle of the street fully nude now.";
 
 to say JoshiroForcedSexMenu:
 	LineBreak;
@@ -328,13 +340,9 @@ to say JoshiroForcedSexMenu:
 					say "[JoshiroForcedSex4]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the human male and say that you're not in the mood after all. He replies with a groan, and a murmur about making up your mind before handing out beatings. Shrugging, you step back from him and walk away.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the human male and say that you're not in the mood after all. He replies with a groan, and a murmur about making up your mind before handing out beatings. Shrugging, you step back from him and walk away.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -350,12 +358,12 @@ to say JoshiroForcedSex1:
 
 Section 4 - Enemy Definition
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Human Martial Artist";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -403,7 +411,8 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Joshiro ends here.

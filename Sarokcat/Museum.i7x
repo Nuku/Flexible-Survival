@@ -11,7 +11,7 @@ The earea of Museum Foyer is "Museum".
 The description of Museum Foyer is "[museumdesc]".
 
 to say museumdesc:
-	if HP of Solstice is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned, now Adventurer is unresolved;  [Solstice's quest available after visiting the Museum]
+	if HP of Solstice is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned, now Adventurer is active;  [Solstice's quest available after visiting the Museum]
 	say "     You find yourself standing in the foyer of a large museum, apparently one equipped with an emergency generator of some sort as the electric lighting, while dim, still appears to be functioning. The dim lighting casts shadows throughout the large area, evoking a sense of danger and mystery. Along the walls near you are several paintings and small bits of history that would probably be priceless if you had time to worry about such things right now. More disturbing perhaps is the empty pedestal in the center of the entryway, its name plaque proudly proclaiming a preserved woolly mammoth cub to be displayed in the empty spot. Looking further into the area you can see a circular desk marked 'Information'.";
 
 instead of sniffing Museum Foyer:
@@ -23,6 +23,10 @@ East of Museum foyer is Museum entry.
 East of Museum entry is Museum interior.
 
 The marea of Museum entry is "Museum".
+
+Table of GameCharacterIDs (continued)
+object	name
+Valerie	"Valerie"
 
 Valerie is a woman.
 The description of Valerie is "Lying on part of the information desk is what at first appears to be a large lioness, as you move closer it turns its head towards you revealing the pretty face of a woman with slight feline features atop the long leonine body. You realize she is actually a sphinx of some sort, with the lower legs of a lioness, the front paws (and breasts) of an anthro lion, the head of a beautiful woman, and soft wings gracing her back tightly tucked up to her sides, and if the name tag on the counter next to her is any indication, her name is Valerie.".
@@ -44,7 +48,7 @@ instead of conversing the Valerie:
 		increase valtalk by 1;
 	else if Dexterity of Erica is 1:
 		say "     Walking up to Valerie, you explain Eric's plight - being stuck between male and female, with the nanite infection being unable to finish what it started. As you ask her if she might know some relic or artifact that might help, the sphinx blows out her breath and answers with a chuckle, 'Magic? Who believes in magic these days - says the greek sphinx sitting on the front desk of a strangely large museum. Ha! Yeah, I guess there could be something around that might help. Let me think.' The female sphinx pauses to mull things over, murmuring things like '...the bowl of Ham- nah, that's got a hole. Maybe Osiris...' Eventually, she clicks her fingers and calls out, 'Ah, I think I got something. There's the story of the young man Tiresias, a priest of Zeus, who encountered two snakes mating. He hit them with a stick and as punishment for that got transformed into a woman by Hera. Afterwards, Tiresias became a priestess of Hera, married and had children, including Manto. So, since it's in the mythology... I'd try to find the greek wing. There is an exhibit somewhere in there about the [bold type]Temple of Hera[roman type]. Good luck, you'll need it - Greek Gods are notoriously short-tempered.";
-		now Temple of Hera is not resolved;
+		now Temple of Hera is active;
 		now Dexterity of Erica is 2;
 	else:
 		say "     [one of]'There are some satyrs running wild in the halls, I think they are from the greek wing. Did you know there were sphinx legends in Greece too?'[or]'Those damn nymphs get into everything! And they won't stop giggling!'[or]'Hey if you see the minotaur wandering around while your out there, let him know he left his battleaxe over in the Roman wing will you? Thanks!'[or]'History is a fascinating subject, don't you agree?'[or]'What goes on three legs at morning... no no no, that ones already been done.'[or]'What's black and white and, no, wait, I don't think dirty jokes count....'[or]'Several of the old stuffed displays seem to have wandered off on their own, if you see them would you remind them they are only supposed to do that after visiting hours?'[or]'I think the sabretooth lion was eyeing me speculatively the other day, hmm he does have such handsome flanks and tusks, still I DO prefer a bit of intellectual stimulation first...'[or]'I swear, what kind of museum is it where none of the exhibits will hold still! I mean it wouldn't be so bad if they actually took their name plaques with them, but noooo!'[or]'If you think it's crazy out here, you should see back in the museum archives! You wouldn't believe how nuts it is back there.'[or]'Hmm, I wonder what's going to happen to some of the exhibits after all this, some of the artifacts and artwork here is historically priceless!'[or]'When I was leaving the Egyptology area, I swear I saw some jackal-headed beasts. I was probably seeing things, but then again in this place, who knows?'[or]'Don't go near the modern art wing, trust me on this. I locked that area up for a reason.' She shudders at some remembered horror.[or]'I swear I saw one of the robot mockups walking around, though I don't know how that could be possible. I'm not really sure how any of the rest of this is possible either.'[or]'Can I help you with something?'[or]'Did you want to try a riddle?'[or]'I wonder what's going on in the dinosaur wing...[at random]";
@@ -83,8 +87,8 @@ carry out riddlesphinxing:
 		increase riddlewin by 1;
 		if riddlewin > 2:
 			say "     'I'll also be going around the museum to do some of my rounds soon. I wouldn't mind a little companionship on these trips. If you'd like to tag along, perhaps we might even find something interesting to do,' she says with an coy smile and a swish of her tail.";
-		let prizegift be a random number from 1 to number of filled rows in the table of random critters;
-		choose row prizegift from the table of random critters;
+		let prizegift be a random number from 1 to number of filled rows in the Table of Random Critters;
+		choose row prizegift from the Table of Random Critters;
 		if there is a loot entry:
 			if loot entry is not "" and loot entry is not " ":
 				add loot entry to invent of player;

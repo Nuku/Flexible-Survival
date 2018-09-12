@@ -67,8 +67,10 @@ Instead of resolving Scavenging Dalmatian:
 			if humanity of player > 100, now humanity of player is 100;
 			delete food;
 			increase score by 10;
+			now Resolution of Scavenging Dalmatian is 1; [shared food]
 		else:
 			say "     Shaking your head, you turn away from the scavenging mongrel to make your way down the street some other way. It's not your business what others have to do to survive. You've currently got your own shit to deal with.";
+			now Resolution of Scavenging Dalmatian is 2; [didn't share food]
 	else if chips is owned:
 		say "     You know that you don't have any proper food, but maybe some of the small snacks that you have in your pocket will tide the creature over. It might not be much, but it's better than food from a trash can, right?";
 		if player consents:
@@ -78,10 +80,13 @@ Instead of resolving Scavenging Dalmatian:
 			if humanity of player > 100, now humanity of player is 100;
 			delete chips;
 			increase score by 5;
+			now Resolution of Scavenging Dalmatian is 3; [shared chips]
 		else:
 			say "     Knowing that you have no food or snacks on your person, you move down along the street, ignoring the black-spotted mutant rustling through the garbage bin.";
+			now Resolution of Scavenging Dalmatian is 4; [didn't share chips]
 	else:
 		say "     Knowing that you yourself are doing without, you move along the street, ignoring the black-spotted mutant rustling through the garbage bin.";
+		now Resolution of Scavenging Dalmatian is 5; [didn't have food/chips to share]
 	now Scavenging Dalmatian is resolved;
 
 
@@ -108,14 +113,17 @@ Instead of resolving Captured Wyvern:
 			delete medkit;
 			increase humanity of player by 10;
 			increase score by 10;
+			now Resolution of Captured Wyvern is 1; [Defended Wyvern, Used Medkit to heal]
 		else:
 			say "     Shaking your head, you go over and around the sides of the beast, tending to its wounds the best you can with your limited supplies as you strip your shirt off of your body to use for makeshift bandages. Tearing off strips of your upper garment, and even your pants in order to have enough material, you work carefully, but determinedly to cover the wyvern's grisly wounds, going over the entirety of the monster from top to tail.";
 			say "     Looking at the creature to gauge how it feels, you see that your attempts to mend its wounds took too long for your patient's attention, as the wyvern is now asleep. Snorting somewhat in annoyance, you admit a genuine smile as you look down at the flying mutant with wonder. While you wouldn't want to face one of these in battle, you can't help but marvel slightly at the beauty of the creature before you. Reaching out to stroke the sleeping beast's muzzle, you suddenly go rigid as you hear the cries of other wyverns shouting throughout the sky above you.";
 			say "     You find yourself moving on quick feet as you hightail it away from the wyvern before its friends can come around to see you standing there with their wounded kin. Kindness notwithstanding, you're not foolish enough to try and explain to a bunch of angry mutants that you didn't hurt their friend.";
 			increase humanity of player by 10;
 			increase score by 1;
+			now Resolution of Captured Wyvern is 2; [Defended Wyvern, Used clothes to heal]
 	else:
 		say "     The soldiers are just doing their job, you think with some confliction. You have no right to get involved, and there's always the risk of being gunned down yourself if you tried to play the hero. Shaking your head, you turn away and let the uniform-wearing men and women go about their [italic type]duty[roman type] without looking back. The loud chirps of the wyvern seem to grow louder, almost as if calling out for help, but then go quiet all of a sudden.";
+		now Resolution of Captured Wyvern is 3; [Did not defend Wyvern]
 	now Captured Wyvern is resolved;
 
 
@@ -285,8 +293,10 @@ Instead of resolving Ice Cream Truck:
 			say "     Carefully digging through the mess returns a few bottles of milk that don't appear to be too tainted for use, although in the process of searching you managed to get some of the sticky cream on you as well. Trying to scrape the stuff off while leaving the truck, you find that the cream seems to be seeping into your skin, and your insides twist as you feel yourself change slightly.";
 			increase carried of gryphon milk by 2;
 			infect "Hermaphrodite Gryphon";
+			now Resolution of Ice Cream Truck is 1; [Crawled around in Icecream Van]
 	else:
 		say "     Deciding it would be best to avoid any contact with whatever might be left in the truck, you continue on down the road, the truck soon lost in the distance behind you.";
+		now Resolution of Ice Cream Truck is 2; [Did not crawl around in Icecream Van]
 	now Ice Cream Truck is resolved;
 
 
@@ -345,24 +355,25 @@ Instead of resolving Panther Trap:
 	say "     You come across two large piles of debris that all but block the way forward. Despite them, you try and squeeze through. Unfortunately, the gray and tall junk piles fall onto you before you get fully through, trapping you with a loud smashing noise that you swear will be audible throughout the city. You wince to think of the attention coming your way and start trying to escape, fast.";
 	if a random number between one and 20 < 12: [the felitaur heard]
 		[puts Panther Taur as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Panther Taur":
 				now monster is y;
 				break;
 		say "     A panther taur comes up behind you, its trap having fallen on you, and proceeds to use you.";
 		say "[panthertaur rape]";
+		now Resolution of Panther Trap is 1; [Got raped by Panthertaur]
 	else:
 		if a random chance of one in 3 succeeds: [fight a monster instead of being raped]
 			let Q be a list of numbers;
-			repeat with X running from 1 to number of rows in table of random critters:
-				choose row X from the table of random critters;
+			repeat with X running from 1 to number of rows in Table of Random Critters:
+				choose row X from the Table of Random Critters;
 				if there is no area entry, next;
 				if name entry matches the text battleground, case insensitively:
 					add x to Q;
 			sort Q in random order;
 			repeat with Z running through Q:
-				choose row Z from the table of random critters;
+				choose row Z from the Table of Random Critters;
 				if there is a name entry:
 					now monster is Z;
 				else:
@@ -372,8 +383,10 @@ Instead of resolving Panther Trap:
 			decrease the HP of the player by 10;
 			fight;
 			follow the turnpass rule;
+			now Resolution of Panther Trap is 2; [Fought creature]
 		else: [flee without being raped or having to fight]
 			say "     Nobody shows up before you succeed at freeing yourself. Phew.";
+			now Resolution of Panther Trap is 3; [Escaped without problem]
 	now Panther Trap is resolved;
 
 

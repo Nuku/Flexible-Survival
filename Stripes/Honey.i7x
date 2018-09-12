@@ -42,12 +42,14 @@ Instead of resolving a Smashed Hive:
 				else:
 					say ".";
 				say "[beegirlsaved]";
+				now Resolution of Smashed Hive is 1; [saved honey]
 			else:
 				say "     Not wanting to risk getting too close to the enraged bee girl, you grab some chunks of honeycomb and make a run for it.";
 				say "     Honeycomb x 5 obtained.";
 				increase carried of honeycomb by 5;
 				increase score by 10;
 				now HP of bee girl is 100;
+				now Resolution of Smashed Hive is 99; [left honey]
 				now Smashed Hive is resolved;
 		else if healing booster is owned:
 			say "     [bold type]Do you try to help the poor bee girl with a healing booster or do you grab some honey while you can and make a run for it?[roman type][line break]";
@@ -57,6 +59,7 @@ Instead of resolving a Smashed Hive:
 			if player consents:
 				say "     Taking care not to appear threatening and trying to reassure her that you only want to help, you move slowly over to the bee girl. She buzzes angrily at you, but stumbles and cannot remain upright. Moving to her side, you inject her with the healing booster, feeling sorry for this lone survivor and hoping it was worth using a booster to save her.";
 				delete healing booster;
+				now Resolution of Smashed Hive is 1; [saved honey]
 				say "[beegirlsaved]";
 			else:
 				say "     Not wanting to risk getting too close to the enraged bee girl, you grab some chunks of honeycomb and make a run for it.";
@@ -64,6 +67,7 @@ Instead of resolving a Smashed Hive:
 				increase carried of honeycomb by 5;
 				increase score by 10;
 				now HP of bee girl is 100;
+				now Resolution of Smashed Hive is 99; [left honey]
 				now Smashed Hive is resolved;
 		else:
 			say "     Feeling there is nothing that you can do for her, and not wanting to risk staying around an enraged bee girl, you grab some chunks of honeycomb and make a break for it.";
@@ -71,6 +75,7 @@ Instead of resolving a Smashed Hive:
 			increase carried of honeycomb by 5;
 			increase score by 10;
 			now HP of bee girl is 100;
+			now Resolution of Smashed Hive is 99; [left honey]
 	else if HP of bee girl is 1:
 		if companion of player is bee girl:
 			say "     Your meandering through the park takes you back to the ruins of the shattered bee hive. The sticky rubble has been picked through since you were last here, the last of the honey having been taken. Even the bodies of the fallen drones are gone - something you don't want to think about too much. Looking down at Honey, who is clutching your side tightly, she could have shared their grisly fate had you not helped her[if scalevalue of player is 1]. As you hug her[else]. As you kneel down to hug her[end if], you notice some bear tracks and dried dribbles of honey heading off into the woods. You might be able to track down one of the bears responsible for this, if you want to.";
@@ -111,7 +116,7 @@ Instead of resolving a Smashed Hive:
 						now HP of bee girl is 5;
 						increase score by 25;
 						setmonster "Queen Bee";
-						choose row monster from the table of random critters;
+						choose row monster from the Table of Random Critters;
 						now non-infectious entry is false;
 						now tailname of player is "Queen Bee";
 						now facename of player is "Queen Bee";
@@ -131,15 +136,19 @@ Instead of resolving a Smashed Hive:
 					else if fightoutcome >= 20 and fightoutcome <= 29:
 						say "     Having lost and been used by the large bruin, you stagger back into the woods. Honey rejoins you, taking your hand and helping you back to the old hive. 'I'm glad you were willing to stand up to the bear for me, but I'm just happy you're back safe and sound.' You nod and take her hand, leaving the ruins of the old hive behind for good.";
 						now HP of bee girl is 4;
+						now Resolution of Smashed Hive is 2; [lost the fight]
 					else:
 						say "     Unwilling or unable to keep fighting, you and Honey make a break for it, running back into the woods. The pudgy bear only gives pursuit briefly before she's tried and panting for breath. She gives an angry roar of warning not to return and heads back to her campsite. You and the bee girl make your way back to the old hive. 'I'm glad you tried standing up to the bear for me. They're really scary, aren't they?' You nod and take her hand, leaving the ruins of the old hive behind for good.";
 						now HP of bee girl is 4;
+						now Resolution of Smashed Hive is 3; [fled the fight]
 					now Smashed Hive is resolved;
 				else:
 					say "Despite your search, you fail to find that bear. It has to be around here somewhere, but you follow the path in search of traces of where she went, but eventually end up circling back towards the park's main path and give up the search for now.";
+					now Resolution of Smashed Hive is 4; [bear not found]
 			else:
 				say "     Deciding it'd not be worth the bother to try and track down the bear, you gently guide poor Honey away from the site of her loss. Given how the place has been stripped clean, you resolve not to come back here again to spare her the pain.";
 				now HP of bee girl is 2;
+				now Resolution of Smashed Hive is 5; [bear not searched]
 				now Smashed Hive is resolved;
 		else:
 			say "     Your meandering through the park takes you back to the ruins of the shattered bee hive. The sticky rubble has been picked through since you were first here, the last of the honey having been taken. Even the bodies of the fallen drones are gone - something you don't want to think about too much. Without Honey here with you, there's little point in lingering any longer and you head back into the park.";
@@ -157,12 +166,17 @@ to say beegirlsaved:
 	increase carried of honeycomb by 2;
 	increase score by 20;
 	now bee girl is tamed;
+	add "Tamed" to Traits of bee girl;
 	now HP of bee girl is 1;
-	move Honey to Garden;
+	move Honey to Grey Abbey Garden;
 	say "     (The bee girl is now tamed! You can make her your active pet by typing [bold type][link]pet bee girl[as]pet bee girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck bee girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 
 
 Section 2 - Bee Girl NPC/Pet
+
+Table of GameCharacterIDs (continued)
+object	name
+bee girl	"bee girl"
 
 bee girl is a pet. bee girl is a part of the player.
 understand "Honey" as bee girl.
@@ -177,17 +191,21 @@ the fuckscene of bee girl is "[SexWithHoney]".
 
 to say SummonHoney:
 	remove Honey from play;
-	if player is in Garden and Honey is in Garden: [summoning while standing next to her]
+	if player is in Grey Abbey Garden and Honey is in Grey Abbey Garden: [summoning while standing next to her]
 		say "     Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
 	else: [regular summoning]
 		say "     Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
 
 to say DismissHoney:
-	move Honey to Garden;
-	if player is not in Garden: [regular dismiss]
+	move Honey to Grey Abbey Garden;
+	if player is not in Grey Abbey Garden: [regular dismiss]
 		say "     Honey presses a quick kiss to your cheek before flying away.";
 	else: [dismissing her in the abbey]
 		say "     Honey just shrugs her shoulders, going back to work in the garden.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Honey	"Honey"
 
 Honey is a woman.
 The description of Honey is "[HoneyDesc]".
@@ -203,7 +221,7 @@ to say HoneyDesc:
 		say "DEBUG -> HP of bee girl: [HP of bee girl] <- DEBUG[line break]";
 	project the figure of Honey_icon;
 	say "     The bee drone has a youthful appearance despite her maturity. Her face, shoulders, arms and upper chest appear to be mostly human, though her lower body and hands are covered in insectile plating, looking like a tight-fitting yellow and black dress. She has a small pair of insect arms at her sides, which can be used to hold small things. The bee abdomen attached to her tight bottom lacks its stinger.";
-	if player is in Garden:
+	if player is in Grey Abbey Garden:
 		say "     At the moment the little bee girl is busy fixing up the garden.";
 	else:
 		say "     At the moment the little bee girl is flying around, buzzing contently.";
@@ -215,7 +233,7 @@ to say HoneyScent:
 	say "     Honey, unsurprisingly, smells of honey.";
 
 instead of conversing the Honey:
-	if player is in Garden and Honey is in Garden:
+	if player is in Grey Abbey Garden and Honey is in Grey Abbey Garden:
 		say "[HoneyTalkMenu]";
 	else if companion of player is bee girl:
 		say "[HoneyTalkMenu]";
@@ -226,7 +244,7 @@ instead of conversing bee girl:
 	if bee girl is not tamed:
 		say "     Who?";
 	else:
-		if player is in Garden and Honey is in Garden:
+		if player is in Grey Abbey Garden and Honey is in Grey Abbey Garden:
 			say "[HoneyTalkMenu]";
 		else if companion of player is bee girl:
 			say "[HoneyTalkMenu]";
@@ -262,13 +280,9 @@ to say HoneyTalkMenu:
 					say "[HoneyTalk1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the bee girl, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the bee girl, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -364,13 +378,9 @@ to say HoneySexMenu:
 					say "[HoneySex6]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the bee girl, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the bee girl, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

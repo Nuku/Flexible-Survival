@@ -17,11 +17,11 @@ when play begins:
 	add Campus Lovers to badspots of guy;
 	add Campus Lovers to badspots of furry;
 
-instead of going to College Fountain while (Campus Lovers is not resolved and CampusLoversTrackingVariable is 1 and CampusLoversProgressTurn - turns > 3):
+instead of going to College Fountain while (Campus Lovers is active and Campus Lovers is not resolved and CampusLoversTrackingVariable is 1 and CampusLoversProgressTurn - turns > 3):
 	move player to College Fountain;
 	CampusLoversEvent;
 
-instead of going to Dorm Street while (Campus Lovers is not resolved and CampusLoversTrackingVariable is 2 and CampusLoversProgressTurn - turns > 3):
+instead of going to Dorm Street while (Campus Lovers is active and Campus Lovers is not resolved and CampusLoversTrackingVariable is 2 and CampusLoversProgressTurn - turns > 3):
 	move player to Dorm Street;
 	CampusLoversEvent;
 
@@ -53,13 +53,16 @@ to CampusLoversEvent:
 			WaitLineBreak;
 			say "     Coach Weber keeps speeding up his movements, until finally he grits his teeth as he shoves the waiting feline all the way down, popping his knot into him. This pushes Jadako over the edge, and he lets out a wanton moan as his feline cock begins ejecting ropes of thick, white jizz. His entire body quakes as the burly canine lets out a loud growl as his balls quiver and churn. The coach's cock spasms inside the feline, painting Jadako's insides white with his load. The cat's body isn't able to contain all of it, and his teacher's cum slowly begins to drip out of his hole. The young man remains seated on his coach's cock, until he turns his head to face the his lover once again. The two caress each other and kiss sloppily as the horny teen's cock again begins to rise. Seeing they are going to go for another round, you take your opportunity and sneak away, worried that the commotion might attract other infected.";
 			now CampusLoversTrackingVariable is 1;
+			now Resolution of Campus Lovers is 1; [watched em #1]
 		else if calcnumber is 2:
 			LineBreak;
 			say "     Not wanting to risk these two unknown morphs, you slowly back away. After you get far enough away and it seems they haven't notice you, you take a slight jog to put a greater distance between you and them. As you look back to make sure they aren't following you, you see the two against the wall, the cat slowly sliding onto the dog's cock. At least they aren't after you.";
+			now Resolution of Campus Lovers is 2; [didn't watch em #1]
 		else:
 			LineBreak;
 			say "     Something just doesn't sit right with you about these two. You make sure to get away without being detected, before making a mental note to avoid all further contact with the two.";
 			now CampusCoupleRelationship is 100;
+			now Resolution of Campus Lovers is 100; [avoiding them]
 			now Campus Lovers is resolved;
 	else if CampusLoversTrackingVariable is 1: [second time]
 		say "     You're out exploring the campus when you spot a group of people, most likely students, conversing next to the fountain. They seem sane enough, considering they're all fully clothed. The students are too far away for you to hear the specifics of their conversation, but the way they keep looking over their shoulders seems to imply they're gossiping.";
@@ -73,9 +76,11 @@ to CampusLoversEvent:
 			say "     'Whatever. All because people are turning into animals doesn't mean it's ok to go around fucking your teacher and being a complete fag,' the rabbit replies with disdain. The third student, a crow morph, lets out a groan. 'Rod, you're being a complete ass. I'm getting real tired of this shit you keep saying,' he huffs. 'Yeah, man. Just chill. No reason to say shit like that,' the German shepherd joins in. 'It's just a joke you too, no need to get on my case like that,' the rabbit complains. His friends aren't convinced, however. 'Listen, man, if you're gonna be all homophobic and shit we aren't gonna hang out with you anymore. Fix your attitude next time you wanna do anything, dude,' the shepherd states as he and his crow friend turn around and walk off. Rod stares after them with a scowl on his face for a few seconds, then angrily stalks off in the other direction. Glancing back, the canine student sees him go and shakes his head, then wraps his arm around the crow's shoulder, who reaches around his boyfriend's back to give him a squeeze in turn.";
 			LineBreak;
 			say "     Looks like the two of them have been really careful about not showing what they feel - or Rod is just totally oblivious. As for the coach and student you observed earlier - word of their relationship is clearly getting around. Makes you wonder if that creates any problems for the two. Maybe you could try to find them?";
+			now Resolution of Campus Lovers is 3; [listened in #2]
 		else:
 			LineBreak;
 			say "     You decide you don't want to risk finding out what these three students would do to you if they noticed you eavesdropping, so you quietly back off. Eventually, the group seems to get into a short argument and one of them storms off, leaving the other two alone. Huh, wonder what that was about.";
+			now Resolution of Campus Lovers is 4; [didn't listen in #2]
 		now CampusLoversTrackingVariable is 2; [second event done]
 	else if CampusLoversTrackingVariable is 2: [third time]
 		say "     Setting out on the campus in search of anything interesting, your ventures bring you close to the dorms of the college. Some of the rooms are probably abandoned, so it might not be to bad of an idea to peek through the windows for any supplies. Unfortunately, it seems most of the rooms have nothing of value. Just as you are about to give up, you hear the faint sound of someone moaning from one of the windows ahead of you. You sneak along the side of the building to where you heard the noise, and have a little peek. Inside, you see a familiar looking feline and canine going at it. The cat is on his back, legs sticking out on both sides, while the dog is between them, thrusting inside of Jadako. 'O-oh yeah! Take me harder, Coach!' the lithe anthro moans, as you pull your head away from the window.";
@@ -92,6 +97,7 @@ to CampusLoversEvent:
 			LineBreak;
 			say "     'As soon as you enter the dorms, it's the room to your north. Come on by, we'll be happy to entertain you...' the slutty feline states. Coach Weber begins to protest, but Jadako turns and silences him with a kiss. The two seem to forget, or at least disregard, your presence as they roll around on the bed hugging and making out. You leave the two to their business, wondering when you might stop by again.";
 			now Campus Lovers is resolved;
+			now Resolution of Campus Lovers is 5; [watched them #3]
 			now CampusCoupleRelationship is 1;
 			move Joseph to Jadako's Room;
 			move Jadako to Jadako's Room;
@@ -101,6 +107,7 @@ to CampusLoversEvent:
 			LineBreak;
 			say "     As hot as this is, you don't really have time to watch the two fuck. You take care to break away without causing too much noise. As you leave, you hear the two moaning loudly. At least they are having a good time...";
 			now Campus Lovers is resolved;
+			now Resolution of Campus Lovers is 6; [didn't watch them #3]
 			now CampusCoupleRelationship is 1;
 			move Joseph to Jadako's Room;
 			move Jadako to Jadako's Room;

@@ -123,6 +123,7 @@ to say SarahLeftSubmissive:
 		say "[HuskyGangbang]";
 
 to say SarahRescue:
+	now Resolution of Husky Pack is 1; [fought to rescue Sarah]
 	say "     Determined to stop what's going on, you jump forward slamming your shoulder into the alpha husky. He stumbles and falls with a grunt at having the air driven out of his lungs through the sudden lunge, pulling his captive down with him. You make use of the chance at having him out of the way and quickly pick the woman off the ground (grabbing her arm and not the leash). Time seems to slow down as she smiles in gratitude and you glimpse the stamped plaque reading 'Sarah' on her collar, then both of you turn to start running away from the pack of huskies. You make the first step towards escape, but then suddenly something swats sideways against your lower ankle - it is the alpha husky, intent on sweeping your legs out from under you from his position on the ground.";
 	say "     Sent stumbling by his blow, you smack your head into the stone wall of the building and are momentarily dazed, giving the muscular canine enough time to stand up. Since you are pretty out of it as he steps up afterwards, the husky pays you little notice, instead dragging his claws along Sarah's side. Blood wells up from the harsh scratches he leaves on her pale skin, showing that he didn't hold back at all and really wanted to hurt her. The casual violence and cruelty serves to focus your mind again - you'll have to fight to get out of this!";
 	increase morale of the player by 10;
@@ -148,6 +149,7 @@ to say SarahRescue:
 		say "     Helpless to do anything about the spreading infection, you can do little but watch as her hands and feet become more paw-like than human as the fur reaches them and her pussy conforms to a new shape too, just right for a strong canine to sink his bone into. Distracted by the sight of her shifting crotch, only the crunch of re-forming bone draws your attention back to her head - which rapidly forms a slender muzzle and pointy dog's ears, completing her external transformation. You carry Sarah downstairs to put her into a bed to rest, then walk back up into the library and watch the empty streets outside for a moment. Thinking back to what you went through earlier, you don't feel sorry for the huskies you left lying in the street. Getting caught by some of the more dangerous beasts out there would be a fit punishment for what they tried to do.";
 		now inasituation is false;
 		now Sarah is in the bunker;
+		now Resolution of Husky Pack is 6; [player rescued Sarah]
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     Even as your strength gives out and you succumb to the fatigue from combat, furry bodies pile onto you, pinning you down. The heat from their bodies envelopes you, and the air is rich with the scents of exertion and heat.";
 		if GroupFightCounter < 1: [Total Loss]
@@ -164,9 +166,11 @@ to say SarahRescue:
 	else if fightoutcome is 30: [fled]
 		LineBreak;
 		say "     You cry out, pointing off in the distance to try and distract the dogged foes. The candid look that the pack gives you lets you know it's not going to work, but, with them all looking at you within the pause, you kick up dirt, spraying it into their eyes before you make a mad dash. The angry howls and barks begin to fall behind you as you keep running until the noises are well and gone.";
+		now Resolution of Husky Pack is 5; [player fled the huskies]
 	now inasituation is false;
 
 to say HuskyGangbang:
+	now Resolution of Husky Pack is 2; [got gangbanged by huskies]
 	say "     Several of the husky girls approach, and soon their soft pads slide over your body, caressing. One of them [StripCrotch] while another [StripChest]. Wet tongues glide across your bared flesh, joining the stroking digits, and a titter of giggles emit from some of the female huskies. Sarah is getting much of the same treatment, gasps and moans elicited from her as you see one of the girls capturing a nipple between her dark lips, suckling over the pert areole. The wet slide of that slick pink nip dances across the canine's tongue, and the hot breath of one of your companions floods across your own [if breasts of player > 0]breasts[else]chest[end if] before the wet heat of a dog tongue grooms along your nipple. The fragrant perfume of bitch heat wafts up, an erotic miasma of need.";
 	say "     The swell pillows of voluptuous husky breasts nestle the back of your neck into their cleft while slender digits caress from the center of your sternum upwards, gliding over your collar and up to your jawline in soothing pets. One of your wrists is captured between another of the bitch's thighs, and damp lips drag over your palm and fingers, achingly hot and seeking your touch. Sarah's plaintive gasps riddle the air, melting into high-pitched whines and groans, and you can see the woman's folds being spread over the wedge of a canine muzzle. Each moist lap draws a fresh squeal from her as the husky bitch licks her out. Sarah's eyes land on you, and her mouth spreads in a panting O, her taut nipples collected into tight, lick-dampened nubs while her hips roll, riding the face of the cunnilinguist.";
 	WaitLineBreak;
@@ -232,7 +236,8 @@ to say HuskyGangbang:
 
 
 to say HuskyThreesome:
-	say "     Subdued by the persistence of the girl huskies, you finally subbumb to your fatigue from the struggle. The remaining huskies quickly slip arms around you and grip you close with arm bars with cushy, furry breasts smooshing up against your form. A leering smirk plays over the male husky's lips, and he chuckles, 'There we go. Less fighting and more fun, now,' while turning Sarah about to face you. 'All this violence, and for what? Can't you see she wants it?' he continues, his voice deep with a naturally seductive croon to it. With Sarah facing you, her eyes plead, but the male husky lifts one of her knee, displaying her crotch moreso to you, and he dips a single blunt clawtip to trace the seam of her cleft. Hot nectar drools form her slit, copious and flowing down her thigh with the light split of her lips from that insistent digit.";
+	now Resolution of Husky Pack is 3; [husky threesome]
+	say "     Subdued by the persistence of the girl huskies, you finally succumb to your fatigue from the struggle. The remaining huskies quickly slip arms around you and grip you close with arm bars with cushy, furry breasts smooshing up against your form. A leering smirk plays over the male husky's lips, and he chuckles, 'There we go. Less fighting and more fun, now,' while turning Sarah about to face you. 'All this violence, and for what? Can't you see she wants it?' he continues, his voice deep with a naturally seductive croon to it. With Sarah facing you, her eyes plead, but the male husky lifts one of her knee, displaying her crotch moreso to you, and he dips a single blunt clawtip to trace the seam of her cleft. Hot nectar drools form her slit, copious and flowing down her thigh with the light split of her lips from that insistent digit.";
 	say "     Sweet, feminine perfumes waft up from your captors, and the heat of their arousal bathes across your own thighs. The fresh spill of Sarah's juices brings with it its own aroma, joining with the others' while they hold you, watching. One of the combat-wearied husky girls reaches over and [StripCrotch], and your own loins air into the mix. Another of the huskies [StripChest], and you're born in full view. With a lascivious flame burning in his eyes, the alpha husky looks over at you, taking in the sight while his fingers purposely spreads and smear Sarah's juice lips against each other with audibly damp sounds. The teeming juices spill, running rivulets across her thighs, and an exceptionally loud squelch emits when two, thick fingers sink to the knuckle accompanied by Sarah's shrill cry.";
 	WaitLineBreak;
 	say "     The soft pads of husky hands glide over your bared skin, stroking over your [if breasts of player > 0]breasts[else]pecs[end if] and abdomen, thighs and crotch. Though fatigued from the conflict, the husky harem's pets and warm aromas flood over you. All the while, Sarah is sullied, the powerful form of the alpha silhouetting her relatively smaller form. The moist seam of his sheath splits as his potent taper fills out, rising up to cradle the woman's damp cleft down against its veiny top. Your own loins begin to burn with need while smooth strokes pet against you, and the sight of that pulsing erection, so virile and turgid, saws in your view, smearing the cupped cunny's leaking juices all along its length, mingling with its glistening musk.";
@@ -278,6 +283,7 @@ to say HuskyThreesome:
 		say "     A sour frown touches the husky's lips when he sees how reticent you are to clean him off. With a soft sigh, the canine says, 'Well, I had my fun. Let's collect our prize and move on.' His pack comes together, picking up Sarah as they prepare to head off.";
 
 to say HuskyAlphaWin:
+	now Resolution of Husky Pack is 4; [player lost to alpha husky after beating the others]
 	if noncon is not banned:
 		if anal is not banned and anallevel > 1:
 			say "     The powerful physique of the male husky ripples as he seethes forwards towards you. A snarl peels back his lips, and he barks out, 'You hurt my pack, my mates, and for that, you're going to get it.' Lashing out, he grips your scalp and pulls you down onto your knee roughly, the brusque motion slamming your knees against the ground harshly. The husky's muscles are firm, and his movements are adamant as he [StripCrotch]. Beneath the heavy tone of his abdomen, the gleaming pillar of the alpha husky's tapered prick is laced with throbbing veins, livid with his ire. Its pungent scent spreads, rich with the male's virile musk and the salts of exertion, and that cock's heat is radiant, bathing your backside with its intensity. Stooping over your forcefully knelt figure, the alpha husky's breath steals across your neck, and his whisper is ragged with anger, 'This will be for my pleasure, not for yours. I will take each ill you've done unto mine out on your hide,' before his jaws close, gripping on your shoulder like a vice.";
@@ -322,6 +328,10 @@ instead of resolving Medkit Parts:
 	else if Sarah is in the bunker and SarahCured > 0: [Sarah in the bunker and sane]
 		say "     [bold type]Sarah[roman type] should be able to help you sort the good from the bad and put together a usable medkit if you got enough of this stuff.";
 	increase HasParts by 1;
+
+Table of GameCharacterIDs (continued)
+object	name
+Sarah	"Sarah"
 
 Sarah is a woman.
 The description of Sarah is "[SarahDesc]";
@@ -427,13 +437,9 @@ to say SarahTalkMenu:
 				wait for any key;
 				say "[SarahTalkMenu]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -855,13 +861,9 @@ to say SarahSexMenu:
 					say "[SarahSex11]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

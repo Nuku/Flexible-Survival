@@ -22,6 +22,10 @@ OfficeGirlsFriendship is a number that varies.
 
 Section 1 - Melanie
 
+Table of GameCharacterIDs (continued)
+object	name
+Melanie	"Melanie"
+
 Melanie is a woman.
 The description of Melanie is "[MelanieDesc]".
 The conversation of Melanie is { "Hello" }.
@@ -87,16 +91,9 @@ to say MelanieTalkMenu:
 					say "[MelanieTalk3]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the pretty deer, shaking your head slightly as she gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the pretty deer, shaking your head slightly as she gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -209,7 +206,7 @@ to say MelanieTalk3: [ask to meet Mr. B]
 the fuckscene of Melanie is "     As you make an amorous offer to the deer, Melanie gives a little giggle and shakes her head. 'Sorry, but I'm under strict orders to be ready for visitors at all times. Can't disappoint Mr. B,' she says and winks at you.".
 
 
-City Hall Offices is a situation. The level of City Hall Offices is 1. City Hall Offices is resolved.
+City Hall Offices is a situation. The level of City Hall Offices is 1. City Hall Offices is inactive.
 The sarea of City Hall Offices is "High".
 
 Instead of resolving a City Hall Offices:

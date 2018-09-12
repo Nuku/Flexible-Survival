@@ -22,7 +22,7 @@ to say losetolatexmistress:
 			say "     Getting whipped for the delay, you groan and start lapping across her clit. You run your tongue up and down those quivering lips and delve into her dark tunnel. Deciding to punish you for your delay, she grabs the back of your head with her free hand and holds you in place as she releases her bladder. You cough and sputter as that acrid fluid soaks your face and flows into your mouth. With another blow, she orders you to drink, so you find yourself licking across her pee hole and drinking her piss. It has a strong aftertaste of latex to it that clings to your tongue.";
 			say "     When the flow stops, she orders you back to licking, which you do eagerly, if for nothing else than to try and get that taste out of your mouth... or perhaps to get more of it, part of your confused mind thinks. As you eat her out, you get struck several more times and ordered to go faster, slower or deeper, or to suck her clit, or any other thing she desires of you. And you obey, moaning softly as the pain and pleasure blur. Eventually, your obedient licking pays off, your mistress flogging you hard as she cries out in orgasmic bliss. When she pushes you away, you tumble onto the ground, too sore from the whipping to rise. She grinds her heel down onto your shoulder, calling you a good slave. Reeking of her scent, you can't help but smile before passing out, having been complimented by your dark mistress.";
 			if facename of player is not "Latex Mistress":		[WS results in face TF]
-				choose row monster from the table of random critters;
+				choose row monster from the Table of Random Critters;
 				say " Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 				now facename of player is name entry;
 				now face of player is face entry;
@@ -78,12 +78,12 @@ to say beatthelatexmistress:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Latex Mistress"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -131,8 +131,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Definitions

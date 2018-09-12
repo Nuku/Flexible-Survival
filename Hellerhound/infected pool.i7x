@@ -18,6 +18,7 @@ instead of resolving Pure Pool:
 		say "     You come across a pool of water in the park. Unlike the puddles in the city, this one is clean and clear, and you can see the red stones at the bottom. You take a small drink and feel less thirsty.";
 		PlayerDrink 10;
 		now PurePoolSeen is true;
+		now Resolution of Pure Pool is 1; [saw the pool]
 	else if PurePoolSeen is true:
 		say "     Exploring the park, you hear an echoing scream. It sounds like a wyvern, but what are those doing in the park?";
 		say "     Do you check out the situation?";
@@ -35,6 +36,7 @@ instead of resolving Pure Pool:
 						say "     You blow your load into the pool, thick streams of seed spraying from your [cock of player] [one of]cock[smn][or]penis[esmn][or]shaft[smn][or]maleness[esmn][at random], and you scream as your powerful orgasm overtakes you. The seed soaks into the pool, leaving the water murky and infecting the whole thing. The pool becomes cloudy and the clean smell in the air disappears.";
 						now PurePoolPolluted is true;
 						now PurePoolPollutedByPlayer is true;
+						now Resolution of Pure Pool is 2; [player polluted it]
 				else:
 					say "[stop wyvern]";
 			else:
@@ -65,6 +67,7 @@ to say stop wyvern:
 		challenge "Wyvern";
 		say "     After your ferocity in defending the pool, the wyverns decide they have had enough and leave, crashing a path through the park that leads in the direction of the city. Now that you've saved the pool from the danger of infection, you decide that it owes you a good drink and dip your head into the clear water.";
 		ThirstReset;
+		now Resolution of Pure Pool is 3; [player fought wyverns to save the pool]
 	else:
 		say "     You watch silently as the first wyvern overpowers the second, and begins to stroke. This is your last chance to intervene. Do you?";
 		if player consents:
@@ -74,8 +77,10 @@ to say stop wyvern:
 			challenge "Wyvern";
 			say "     After freeing the pool from the danger of infection, you decide that it owes you a good drink.";
 			ThirstReset;
+			now Resolution of Pure Pool is 3; [player fought wyverns to save the pool]
 		else:
 			say "     You watch as the wyvern screams like it did before, then blows its load into the pool, clouding the water and dissipating the clean smell about the area.";
 			now PurePoolPolluted is true;
+			now Resolution of Pure Pool is 4; [player watched wyverns pollute the pool]
 
 Infected Pool ends here.

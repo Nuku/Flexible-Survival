@@ -12,6 +12,10 @@ Version 1 of Santa Claws by Wahn begins here.
 
 Section 1 - Description
 
+Table of GameCharacterIDs (continued)
+object	name
+Santa Claws	"Santa Claws"
+
 Santa Claws is a man. The HP of Santa Claws is usually 0.
 The description of Santa Claws is "[Santa Claws Desc]".
 The conversation of Santa Claws is { "Roar." }.
@@ -128,13 +132,9 @@ to say SantaTalkMenu:
 				wait for any key;
 				now lastfuck of Santa Claws is turns;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the polar bear, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the polar bear, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -192,7 +192,7 @@ to say SantaTalk2:
 					increase carried of food by 2;
 		else if calcnumber is 3:[rub him]
 			setmonster "Polar Bear";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     Lowering a hand, you put it right on the powerful ursine's crotch and rub against the respectable bulge you feel through the soft material. As Santa Claws cock starts to get hard, he gives a lusty rumble that reverberates in his broad chest. His clawed hand wandering down to your hips, pulling you closer, the mighty polar bear says, 'So... you want a really [italic type]special[roman type] present today. I'd be more than happy to give it to you.' His voice starts getting a bit deeper and more animal-like as he adds, 'Hard and deep,' a moment later. With that, the bear sets both of his hands on your body, lifting you up as he stands - which makes you feel pretty tiny compared to the muscled bulk of this big creature, pressed tightly against the warm coat on his body. You can feel the deep vibration run through his chest as he gives a low, aroused growl. Clearly, you've woken the beast inside this man, bringing with it strong urges now that it is no longer slumbering beneath the surface.";
 			say "     Lowering his head to take a good, long sniff of your scent, Santa Claws squeezes your butt, then pulls himself back slightly from the aroused growling and grunting. With a grumbled, 'Let's get this stuff off of you,' he lowers you to lie flat on your back on the throne. Strong clawed hands work quickly to pull off your gear and clothing, dropping it all on the ground, and soon you're lying naked before the big bear. 'Good,' he growls, running his fingers down your [bodytype of player] form until he reaches your crotch and [if player is female]brushes over your nether lips[else]pushes your legs apart a little bit to brush over your pucker[end if].";
 			WaitLineBreak;
@@ -241,7 +241,7 @@ to say SantaTalk7: [Suit Quest info]
 		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay leads to the polar bear waving over a nearby elf with fiery red hair and a goatee. 'Okay Walter, please tell our friend here what you will need.' The diminutive man standing before you looks young, in the ageless fashion that all of the elves inherently carry, but the rich tone and confidence in his voice tell a tale of a well-experienced person. He clears his throat and smiles at you, then says, 'Mostly, it is just the proper materials that we need. We elves aren't that big either, so a single bolt of fabric should do. Something nice, you know. Worsted wool, cashmere, maybe even silk. And please watch the thread count. Any good suit needs good fabric. Or, if you have trouble finding finished fabrics out there, we could even do with just thread. A loom isn't hard to put together or use.'";
 		say "     Thanking the elf and watching him get back to what he was doing before, Santa adds, 'I know that something this specific will be hard to find out there, so I asked around among the recent visitors to the Christmas Village. Maybe you could get fabric or thread at a [bold type]swap meet[roman type]. From what I was told, there should be a somewhat regular one in a [bold type]warehouse[roman type] near the harbor. Though if you do go there... take care. Those meetings are meant to be neutral ground, but one never knows exactly what will happen in these uncertain times.";
 		now thirst of Jay is 2; [initial info given]
-		now Harbor Swap Meet is not resolved;
+		now Harbor Swap Meet is active;
 	else if thirst of Jay > 1 and thirst of Jay < 5:
 		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay again, he asks, 'Have you found a source for fabric or thread yet? As Walter said, they do need at least fabric, or enough thread to make fabric, for that suit. From what I was told, there should be a somewhat regular [bold type]swap meet[roman type] in a [bold type]warehouse[roman type] near the harbor. Though if you do go there... take care. Those meetings are meant to be neutral ground, but one never knows exactly what will happen in these uncertain times.";
 		[Swap meet event in the file Jay.i7x]
@@ -257,12 +257,12 @@ Instead of fucking the Santa Claws:
 
 Section 4 - Infections
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Polar Bear";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -310,15 +310,16 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Christmas Elf Female";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -366,16 +367,17 @@ When Play begins:
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Christmas Elf Male";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -423,8 +425,9 @@ When Play begins:
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Santa Claws ends here.

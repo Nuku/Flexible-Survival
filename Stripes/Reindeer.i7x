@@ -11,7 +11,7 @@ when play begins:
 
 to say reindeerdesc:
 	setmongender 3; [creature is male]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now lootchance entry is 33;
 	say "     You can feel a disturbing chill in the air and even start to shiver as the temperature drops abruptly. As you try to bundle yourself up against the unexpected cold, you hear some jingling bells from above. Looking around you, you can see snow start to fall just as a reindeer begins to fly down. The reindeer has a few Christmas decorations hanging from its antlers and golden bells attached to red straps on his body. As he swoops lower, he laughs merrily, leaving another stream of light snow in his wake.";
 	say "     The holiday reindeer has no wings or other means to fly, he simply is, trotting lightly in the air as he does. You find yourself wondering how such an infection could come about during the middle of summer. [one of]Perhaps his office had a Christmas-in-July party[or]Maybe he worked at the mall and the holiday decorations fell on him[or]Maybe one of the reindeer from the zoo ran into someone who particularly loved the holiday[or]Perhaps he was finally getting around to taking down his Christmas lights when the infection struck[or]Perhaps a forty year old fruitcake was involved[or]Maybe there was an old carton of egg nog at the back of the fridge[in random order]. As he swoops in again, he strokes his stiff cock, firing a few shots of cum at you, intent on sharing some of his holiday cheer.";
@@ -23,7 +23,7 @@ to say reindeerattack:
 		increase libido of player by a random number from 3 to 8;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
 		if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		increase lootchance entry by a random number between 3 and 10;
 		if lootchance entry > 80, now lootchance entry is 80;
 		if libido of player >= 110:
@@ -77,12 +77,12 @@ to say beatthereindeer:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Reindeer"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -130,8 +130,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Egg Nog
@@ -164,8 +165,8 @@ to say nogging:
 	if libido of player > 100, now libido of player is 100;
 	if humanity of player < 1:
 		say "     Drunk on the egg nog, you drink all of it you have down, losing yourself in the holiday spirit as your mind unravels.";
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Reindeer":
 				now monster is y;
 				break;
@@ -253,8 +254,8 @@ to say reindeerheat:
 to say reindeerbreastheat:
 	if breast size of player < 2 or breasts of player is 0:
 		say "You moan lustfully and fondle your chest, teasing your nipples. Your heat is quite unbearable, with your sweet juices running down your legs and filling the air with the scent of your arousal. As you continue to play with yourself, your nipples tingle and grow larger and fuller as your breasts change.";
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Reindeer":
 				now monster is y;
 				break;

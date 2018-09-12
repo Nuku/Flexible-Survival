@@ -65,7 +65,11 @@ to AnthonyQuestlog:
 		-- 8:
 			say "     ";
 
-Anthony is a man. The HP of Anthony is usually 0. Anthony is in Farmhouse Main Room.
+Table of GameCharacterIDs (continued)
+object	name
+Anthony	"Anthony"
+
+Anthony is a man. The HP of Anthony is normally 0. Anthony is in Farmhouse Main Room.
 The description of Anthony is "[AnthonyDesc]".
 The conversation of Anthony is { "Mew!" }.
 The icon of Anthony is Figure of Anthony_clothed_icon.
@@ -121,7 +125,7 @@ instead of conversing the Anthony:
 			say "     Anthony scrapes his claws against each other in a move that betrays his anxiousness, then adds, 'Just the thought of one of my workers, out there all alone with a slobbering beast wanting to gnaw his bones, or something...' Falling silent, he stops the hand-movements a second later, then gives a sigh. 'Everyone here is my responsibility as the owner of this farm. I'm half-minded to go out with you, but then I would be abandoning the rest to look for one man. Who knows what might happen if I'm not here to lead them. I don't think the farm would last long without coordination. Just days ago, we had a behemoth deciding he wanted to move in...'";
 			LineBreak;
 			say "     He looks to you with a hopeful expression, then continues with 'There's a reward too. If you bring Finn back, I can give you a bag of food - farm-fresh and guaranteed infection free[if libido of Anthony > 0] - or... something more intimate, if you prefer[end if]. Just find our [bold type]missing farm hand[roman type] quickly please!'";
-			now Missing Farm Hand is not resolved;
+			now Missing Farm Hand is active;
 			now HP of Anthony is 6; [player got told about Finn]
 		else if HP of Anthony is 6:
 			say "     Anthony scrapes his claws against each other in a move that betrays his anxiousness, then asks, 'Thanks again for the offer. Have you found a trace of Finn yet? Please, you have to find our [bold type]missing farm hand[roman type]!'";
@@ -306,13 +310,9 @@ to say AnthonySexMenu:
 					say "[AnthonySex5]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the tall anteater, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the tall anteater, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -340,7 +340,7 @@ to say AnthonySex2: [oral on Anthony]
 
 to say AnthonySex3: [player ass fucked]
 	setmonster "Giant Anteater";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Smiling at your eagerness to be taken care of by him, Anthony brings his long muzzle to your mouth and kisses you, sliding his tongue inside for a playful bit of tongue-wrestling. Then the giant anteater starts to strip you naked in a swift but gentle manner. While he slides his long claws under the fabric to pull each piece of clothing off, he guides you step by step towards the nearest couch. Soon, you're completely naked and find yourself softly pushed to sit down and lean back, with the slender male crouching down between your legs. 'Just relax and enjoy,' he says in a seductive voice, winking at you as he sticks out his long, long tongue and leans forward.";
 	say "     The soft, luscious fur on Anthony's forearms brushes the insides of your legs as the anteater moves to hook his claws under your thighs, then lifts them up, baring your ass with spread buttocks. Then he lowers his head and rubs the long curve of his muzzle up and down between your cheeks, giving your pucker a playful lick each time he passes it. The teasing touches and stroking have you moaning in no time, prompting the young man to look up at you and give a beaming smile, followed by, 'You like that, don't you? Wait till you see what's next...' With that said, Anthony moves to kneel and lowers his upper body some more, bringing his muzzle against your back door in an all new angle.";
 	WaitLineBreak;
@@ -358,7 +358,7 @@ to say AnthonySex3: [player ass fucked]
 
 to say AnthonySex4: [player pussy fucked]
 	setmonster "Giant Anteater";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Smiling at your eagerness to be taken care of by him, Anthony brings his long muzzle to your mouth and kisses you, sliding his tongue inside for a playful bit of tongue-wrestling. Then the giant anteater starts to strip you naked in a swift but gentle manner. While he slides his long claws under the fabric to pull each piece of clothing off, he guides you step by step towards the nearest couch. Soon, you're completely naked and find yourself softly pushed to sit down and lean back, with the slender male crouching down between your legs. 'Just relax and enjoy,' he says in a seductive voice, winking at you as he sticks out his long, long tongue and leans forward.";
 	say "     The soft, luscious fur on Anthony's forearms brushes the insides of your legs as the anteater moves to hook his claws under your thighs, then spreads and lifts them, baring your wet pussy. Then he lowers his head and rubs the long curve of his muzzle up and down between your nether lips, giving your sensitive clit a playful lick each time he passes it. The teasing touches and stroking have you moaning in no time, prompting the young man to look up at you and give a beaming smile, followed by, 'You like that, don't you? Wait till you see what's next...' With that said, Anthony moves to kneel on the ground and lowers his upper body some more, bringing his muzzle against your pussy in an all new angle.";
 	WaitLineBreak;
@@ -379,12 +379,12 @@ to say AnthonySex5: [fuck Anthony]
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Giant Anteater";
 	now enemy title entry is "";
 	now enemy name entry is "Anthony";
@@ -432,7 +432,8 @@ When Play begins:
 	now magic entry is false;        [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;    [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;   [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "";       [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0;   [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";       [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Anthony ends here.

@@ -35,6 +35,10 @@ the scent of Private Booths is "The booths smell strongly of male lust of numero
 
 Section 2 - Andrew
 
+Table of GameCharacterIDs (continued)
+object	name
+Andrew	"Andrew"
+
 Andrew is a man. Andrew is in Private Booths.
 The description of Andrew is "     [one of]Sitting[or]Adjusting the sizable bulge in his pants while sitting[or]Watching the guys on the dance floor while sitting[or]Sipping idly at a drink while sitting[or]Rubbing the large bulge in his black cargo pants as a particularly sexy ass walks past him while he's sitting[as decreasingly likely outcomes] in the cornermost booth, this black furred wolf bobs his head to the beat. The fellow is of average height and build, but has a considerably lupine body. His arms end in paw-like hands and his legs have become digitigrade, though his wolf tail seems longer than those of others you've seen. He's going topless, wearing only a pair of black cargo pants held up by a rainbow belt. Below that brightly colored belt is a very sizable bulge that draws your eyes before you notice you're staring and look back up at his face. Having noticed your glance, his mischievous violet eyes look you over through his shaggy headfur as his ears perk in your direction and he gives you a lupine smile while twirling a fingertip in one of the messy splatters of white goo on the table at this particularly sticky booth.".
 The conversation of Andrew is { "Sex?" }.
@@ -76,8 +80,8 @@ the fuckscene of Andrew is "[sexwithAndrew]".
 
 to say sexwithAndrew:
 	[puts Black Wolf as lead monster for possible impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Black Wolf":
 			now monster is y;
 			break;
@@ -331,7 +335,7 @@ to andrewinfect:
 	infect "Black Wolf";
 
 
-randomcolorlist is a list of text that varies. randomcolorlist is usually { "pink ", "red ", "green ", "blue ", "teal ", "yellow ", "white ", "black ", "purple ", "gray ", "maroon ", "golden ", "cyan ", "peach " }.
+randomcolorlist is a list of text that varies.[@Tag:NotSaved] randomcolorlist is usually { "pink ", "red ", "green ", "blue ", "teal ", "yellow ", "white ", "black ", "purple ", "gray ", "maroon ", "golden ", "cyan ", "peach " }.
 
 Section x - Not for release
 

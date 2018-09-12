@@ -3,6 +3,7 @@ Dog House by Kaleem mcintyre begins here.
 Section 1 - The Dog House
 
 The DogHouse is a situation.
+DogHouse is inactive.
 Fin is a number that varies.
 Tyraffection is a number that varies.
 Homarusearch is a number that varies.
@@ -161,9 +162,11 @@ Instead of resolving DogHouse:
 					if player consents:
 						LineBreak;
 						say "Calling out to the other man and asking him the whereabouts of his girlfriend, whom you remember Kenaz telling you about earlier, Birch doesn't turn to regard you, but his body posture does go rigid in response to your words. However, just when you are about to speak up to ask him if something is wrong you get a chilling answer from the other. 'My [italic type]girlfriend[roman type] is now a Dalmatian girl with a dick who I haven't seen since we were both brought into that place together. And for your information, the last I saw of her she was in between two Great Danes getting double-dicked in the ass.' And with that Birch runs off like a shot. Your mouth hangs open slightly as you process what you just heard.";
+						now Resolution of DogHouse is 6; [asked Birch about girlfriend]
 					else:
 						LineBreak;
 						say "Seeing no reason to bother the man over something so trivial, especially in light of his present condition and past trauma, you decide to just watch as Birch runs off into the downtown area. You faintly hope the other man will be alright.";
+						now Resolution of DogHouse is 5; [didn't ask Birch about girlfriend]
 					now Tyr's Club is known;
 					now Homarusearch is 2;
 					increase score by 10;
@@ -180,7 +183,7 @@ Instead of resolving DogHouse:
 					now scalevalue of player is 3;
 					now bodydesc of player is "animalistic";
 					now bodytype of player is "canine";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 					wait for any key;
 					end the story saying "Having lost you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later you wind up [if player is male] losing any masculinity you might have had[else]succumbing to your feminine lusts[end if]as you become another nameless bitch along with the Doberman.";
 					wait for any key;
@@ -198,7 +201,7 @@ Instead of resolving DogHouse:
 				now scalevalue of player is 3;
 				now bodydesc of player is "animalistic";
 				now bodytype of player is "canine";
-				now daycycle of player is 0;
+				now SleepRhythm of player is 0;
 				wait for any key;
 				end the story saying "Having lost you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later you wind up [if player is male]losing any masculinity you might have had[else]succumbing to your feminine lusts[end if]as you become another nameless bitch along with the Doberman.";
 				wait for any key;
@@ -234,6 +237,7 @@ Instead of resolving DogHouse:
 					increase score by 10;
 					now DogHouse is resolved;
 					now Tyr's Club is known;
+					now Resolution of DogHouse is 4; [player won against the wolftaur]
 				else:
 					say "[defeatedbywolf]";
 			else:
@@ -255,6 +259,7 @@ to say defeatedbywolf:
 		now Homarusearch is 2;
 		increase score by 10;
 		now DogHouse is resolved;
+		now Resolution of DogHouse is 3; [player didn't help Tyr fight]
 	else:
 		LineBreak;
 		say "Never one to turn away a friend who has helped to save your ass before, you pop your shoulders and then dash off to help the Doberman to fight. Getting to where Tyr is fighting you find the other surrounded by numerous guardsmen and a couple of mean looking pimps, but surprisingly the Dobie is an oasis of calm despite the circle of angry mutants around him. When the group begins to descend on Tyr you're moving to help the Doberman before you know it.";
@@ -284,6 +289,7 @@ to say defeatedbywolf:
 			now Homarusearch is 2;
 			increase score by 10;
 			now DogHouse is resolved;
+			now Resolution of DogHouse is 1; [player won while helping Tyr]
 		now inasituation is false;
 
 to say fightlost:
@@ -293,7 +299,7 @@ to say fightlost:
 	now Homarusearch is 2;
 	increase score by 10;
 	now DogHouse is resolved;
-
+	now Resolution of DogHouse is 2; [player lost while helping Tyr]
 
 when play ends:
 	if darkdays is 1:

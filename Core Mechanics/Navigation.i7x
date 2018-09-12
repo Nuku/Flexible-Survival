@@ -8,9 +8,12 @@ understand "nav" as destinationcheck.
 carry out destinationcheck:
 	[ Note: The city areas and locations within are sorted alphabetically. Please put new rooms in the right spots as you add them ]
 	[ Start of primary rooms - Grey Abbey Library and Trevor Labs ]
-	say "[bold type]Primary Rooms[roman type]: [link][bracket]Grey Abbey Library[close bracket][as]nav Grey Abbey Library[end link] ";
-	if Outside Trevor Labs is known:
-		say "| [link][bracket]Trevor Labs[close bracket][as]nav Outside Trevor Labs[end link] ";
+	if Grey Abbey Library is known or Trevor Labs is known:
+		say "[bold type]Primary Rooms[roman type]: ";
+		if Grey Abbey Library is known:
+			say "[link][bracket]Grey Abbey Library[close bracket][as]nav Grey Abbey Library[end link] ";
+		if Outside Trevor Labs is known:
+			say "| [link][bracket]Trevor Labs[close bracket][as]nav Outside Trevor Labs[end link] ";
 	LineBreak;
 	[start of the capitol area]
 	if Approaching the Capitol Building is known or Disused Garage is known or Office Den is known or Orc Lair Side Entrance is known:
@@ -25,7 +28,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Orc Lair[close bracket][as]nav Orc Lair Side Entrance[end link] ";
 		LineBreak;
 	[a subsection of the 'outside' area (named Central City here)]
-	if Camp Bravo Entrance is known or Gaming Den is known or Green Apartment is known or Fire Station 86 is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
+	if Camp Bravo Entrance is known or Gaming Den is known or Green Apartment is known or Fire Station 86 is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station Twelve is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
 		say "[bold type]Central City[roman type]: ";
 		if Camp Bravo Entrance is known:
 			say "| [link][bracket]Camp Bravo[close bracket][as]nav Camp Bravo Entrance[end link] ";
@@ -41,8 +44,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Pediatrics Lobby[close bracket][as]nav Pediatrics Lobby[end link] ";
 		if Pig Pen is known:
 			say "| [link][bracket]Pig Pen[close bracket][as]nav Pig Pen[end link] ";
-		if Police Station is known:
-			say "| [link][bracket]Police Station[close bracket][as]nav Police Station[end link] ";
+		if Police Station Twelve is known:
+			say "| [link][bracket]Police Station Twelve[close bracket][as]nav Police Station Twelve[end link] ";
 		if Rabbit Den is known:
 			say "| [link][bracket]Rabbit Den[close bracket][as]nav Rabbit Den[end link] ";
 		if Red Apartment is known:
@@ -294,7 +297,7 @@ carry out navigating:
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
 	now battleground is "Outside";
 	if a random number from 1 to 20 < 10 minus bonus and battleground is not "void":
-		if there is a area of Battleground in the table of random critters:
+		if there is a area of Battleground in the Table of Random Critters:
 			Fight;
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";

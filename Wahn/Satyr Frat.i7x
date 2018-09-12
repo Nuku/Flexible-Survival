@@ -61,7 +61,7 @@ to say Satyr Frat Party:
 				say "     Phew, that was close. Though at least you can be sure that you gave Kerr and Talov enough time to make their way into the frat house. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 			now SatyrFratPartyStage is 1;
 			now SatyrFratRichardRelationship is 99;
-			now Let's Party is not resolved;
+			now Let's Party is active;
 		if calcnumber is 2: [lying]
 			LineBreak;
 			say "     Running up to the young human man on quick hooves, you do a bit of play-acting as if you're out of breath, then pant that you saw a group of incubi climbing over the fence behind the house. The athletic young man's eyes widen in alarm and he says 'What?! Where? And who are -' Quickly interrupting him before he can really think about anything, you tell him to come quickly and run past the garage of the frat-house, turning the corner towards the backyard. And it works - the frat party guardian follows you a moment later, leaving his post to check out your imaginary incubi.";
@@ -77,12 +77,12 @@ to say Satyr Frat Party:
 				say "     After finishing off the incubus, you look around and see the frat guy standing over his own opponent. The young man claps your shoulder in camaraderie and keeps a close watch on the bruised incubi as they pick themselves up and flee. When the two of you walk back to the front of the house afterwards, he says 'Thanks for the warning and help. I'm Richard by the way.' He's too intent in getting back to his post to do more than have a short chat on the way, but you get the impression that he's a pretty friendly and nice guy. As you come to the front of the house, your satyr compatriots are nowhere in sight - seems like they made it into the building alright. Getting another bit of thanks from Richard, you say your goodbyes and walk away. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 				now SatyrFratPartyStage is 2;
 			now SatyrFratRichardRelationship is 1;
-			now Let's Party is not resolved;
+			now Let's Party is active;
 		if calcnumber is 3: [sex]
 			LineBreak;
 			say "[SatyrFratSex]";
 			now SatyrFratRichardRelationship is 2;
-			now Let's Party is not resolved;
+			now Let's Party is active;
 		if SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99:
 			change the south exit of Greek Street to Satyr Frat Dummy Room;
 			change the north exit of Satyr Frat Dummy Room to Greek Street;
@@ -116,7 +116,7 @@ to say SatyrFratSex:
 			now SatyrFratPartyStage is 5;
 		else if calcnumber is 2: [Fuck]
 			setmonster "Human";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     As wound up as you've got the athletic student, he eagerly and immediately agrees and lets himself be led around the corner of the frat-house's garage, to a nice secluded spot between several high bushes. Looking back before joining him there, you see your two satyr compatriots, grinning broadly at how you're dealing with the frat party guardian. While they start rolling their barrel on towards the goal, you pull Richard close and give him a deep kiss. His eyes widen at actually being intimate with [if player is not female]another male[else]a herm[end if] for the first time and he freezes for a second, then quickly gets over his shock and happily replies in kind. As you make out with the young man, your hands quickly undo his button and zipper, opening the way to the quite impressive tent showing at the front of his boxer shorts.";
 			say "     He moans between your kisses as you slide your hands under the band of his shorts, fondling his balls and jerking him off with the other hand. Then you kneel down, pulling down his pants and shorts as you go along, freeing his well-sized manhood to dangle just before your nose. Very nicely hung, your young running back. Eager to get going, you take hold of his shaft and slowly lick up the underside of Richard's shaft, making him pant loudly in lust. Soon arriving at the tip of his manhood, you play your tongue over it, teasing his slit for a moment, then slide your lips over his cock and sink them down along its length.";
 			WaitLineBreak;
@@ -150,7 +150,7 @@ to say SatyrFratSex:
 			now SatyrFratPartyStage is 5;
 		else if calcnumber is 2: [Fuck]
 			setmonster "Human";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     As wound up as you've got the athletic student, he eagerly and immediately agrees and lets himself be led around the corner of the frat-house's garage, to a nice secluded spot between several high bushes. Looking back before joining him there, you see your two satyr compatriots, grinning broadly at how you're dealing with the frat party guardian. While they start rolling their barrel on towards the goal, you pull Richard close and give him a deep kiss. His eyes widen at the sudden intimacy and he happily replies in kind. As you make out with the young man, your hands quickly undo his button and zipper, opening the way to the quite impressive tent showing at the front of his boxer shorts.";
 			say "     He moans between your kisses as you slide your hands under the band of his shorts, fondling his balls and jerking him off with the other hand. Then you kneel down, pulling down his pants and shorts as you go along, freeing his well-sized manhood to dangle just before your nose. Very nicely hung, your young running back. Eager to get going, you take hold of his shaft and slowly lick up the underside of Richard's shaft, making him pant loudly in lust. Soon arriving at the tip of his manhood, you play your tongue over it, teasing his slit for a moment, then slide your lips over his cock and sink them down along its length.";
 			WaitLineBreak;
@@ -172,7 +172,8 @@ to say SatyrFratSex:
 		say "     After a bit more pretty nice making out with the student, you leave to pull his pants back up, unobtrusively checking for the satyrs in the meantime. Looks like they made it into the building alright. With a smile, you playfully grope Richard's butt one last time, then bid him farewell and watch as he walks back to his post. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 		now SatyrFratPartyStage is 5;
 
-Let's Party is a situation. Let's Party is resolved.
+Let's Party is a situation.
+Let's Party is inactive.
 The sarea of Let's Party is "Campus".
 when play begins:
 	add Let's Party to badspots of guy;       [frat boys]
@@ -278,13 +279,9 @@ to say SatyrFratSexMenu:
 					say "[SatyrFratSex7]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You change your mind, and tell Talov that you only wanted to see how they were doing, then excuse yourself and leave the somewhat disappointed satyr standing at the bar. Making your way back to the entrance, you leave the crowd of young adults and the beat of their music behind and get back to the center of the campus. You step back from the satyr, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You change your mind, and tell Talov that you only wanted to see how they were doing, then excuse yourself and leave the somewhat disappointed satyr standing at the bar. Making your way back to the entrance, you leave the crowd of young adults and the beat of their music behind and get back to the center of the campus. You step back from the satyr, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -308,7 +305,7 @@ to say SatyrFratSex1: [drinking]
 
 to say SatyrFratSex2:
 	setmonster "Satyr";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Leaning in close over the counter, you ask him where the next shower in here is - as it turns out, just down one short hallway behind the door at the end. Equipped with that important knowledge for your plan, you let Kerr fill two plastic cups. One with the most sticky and sweet drink he has in his repertoire, the other with pure, undiluted satyr wine. Holding both cups in your hands, you then set out to find a mark. Moving through the big living room, then the adjoining kitchen, it doesn't take long till you spot a handsome stud of a college jock - leaning against a wall with a pretty indifferent expression towards all the people enjoying themselves all around. Perfect.";
 	say "     You let your feet carry you towards the guy, then 'accidentally' stumble when you get next to him. Splashing the young man with the contents of both cups, you're even fairly accurate - hitting his chest with the satyr wine and his face and neck with the soda. 'What the hell? Eww - I'm all sticky - and you got this crap in my eyes,' your hapless victim shouts, wiping at his face with both hands and keeping his eyes clenched. Apologizing profusely, you take him by the arm and say that you'll of course help him clean up, then guide the student down the hall and into the thankfully empty bathroom. Locking the door behind you so you're not disturbed, you tell the college athlete to stand still for a moment and get a shower running, nice and warm, then get into the cabin right with him.";
 	WaitLineBreak;
@@ -363,15 +360,15 @@ to say SatyrFratSex2:
 to say SatyrFratSex3:
 	setmonster "Satyress";
 	if SatyressStage is 0:
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Satyress":
 				now monster is y;
 				now area entry is "Campus";
 				now non-infectious entry is false;
 				break;
 		now SatyressStage is 1;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Leaning in close over the counter, you ask him where the next shower in here is - as it turns out, just down one short hallway behind the door at the end. Equipped with that important knowledge for your plan, you let Kerr fill two plastic cups. One with the most sticky and sweet drink he has in his repertoire, the other with pure, undiluted satyr wine. Holding both cups in your hands, you then set out to find a mark. Moving through the big living room, then the adjoining kitchen, it doesn't take long till you spot a blond beauty of a sorority girl - leaning against a wall with a pretty indifferent expression towards all the people enjoying themselves all around. Perfect.";
 	say "     You let your feet carry you towards the young woman, then 'accidentally' stumble when you get next to her. Splashing the attractive student with the contents of both cups, you're even fairly accurate - hitting her chest with the satyr wine and her face and neck with the soda. 'You klutz! Eww - I'm all sticky - and you got this crap in my eyes,' your hapless victim shouts, wiping at her face with both hands and keeping her eyes tightly clenched. Apologizing profusely, you take her by the arm and say that you'll of course help to clean up, then guide the student down the hall and into the thankfully empty bathroom. Locking the door behind you so you're not disturbed, you tell the sorority girl to stand still for a moment and get a shower running, nice and warm, then get into the cabin right with her.";
 	WaitLineBreak;
@@ -453,8 +450,8 @@ to say SatyrFratSex5:
 			WaitLineBreak;
 			say "     For a while, the two of you just let go of everything else, simply dancing and enjoying yourselves in the midst of all the like-minded and more or less drunk students. It is quite a bit of fun, but also a little exhausting, so you eventually make your way back to the bar. Richard takes back his shirt and pulls it on, then squeezes your shoulder and says, 'Thanks, that was great! Gotta rest for a bit now...' With a last charming smile, he walks over to the sofa on the far wall. As you watch him go, swaying a bit in his drunken state and finally plopping down on the cushions, Talov leans in to you over the bar counter. 'Man, that boy really can put away the wine - I'd have thought we had another satyr bro after the first two cups, but no...'";
 			say "     Looking over at Richard, he strokes his goatee in contemplation, then adds, 'You know what? Since our tasty wine doesn't hit the spot for Richard... I have an idea what might. To get a stud like him on the team might be worth getting into a little bit of trouble, don't you agree?' The handsome satyr looks at you, then almost immediately says, 'Sure you do. Who wouldn't, eh? Okay then, now listen closely... our boss, Pan - the big kahuna, you know... he's got the very best stuff. And if one were to take just the right path through that museum of yours... there is an entrance to one of the [bold type]divine wine-cellar[roman type]s. If you sneak in there and tap a barrel, just a little bit, that prime grape juice would surely work wonders with Richard.' Talov's renewed lusty look over at the dozing student is interrupted by someone calling for more drinks and the satyr quickly gets back to filling more cups. 'Good luck, I'm sure you can do it,' he calls to you over the noise, then starts serving a group of rowdy frat-guys.";
-			if Divine Wine-Cellar is resolved:
-				now Divine Wine-Cellar is not resolved;
+			if Divine Wine-Cellar is inactive:
+				now Divine Wine-Cellar is active;
 		else: [player got the good stuff]
 			say "     Letting your eyes wander over the crowd of partying students, you spot who you're looking for right away - Richard, the hunk you encountered when you helped your satyr friends get in here. He's standing over near one of the sofas in the room, moving to the beat of the music. With a smile on your face, you dodge between the crowd of dancing frat guys and girls in between and go for your mark, putting an arm around his shoulders before the cute guy even knows you're there. Eyes going wide and cheeks reddening as he looks over to you and remembers your last encounter, he gives a friendly smile and says, 'Hey! Er... nice to see you again. I got bored waiting for the guy to relieve me because he never came - guess guard duty isn't all that important if no one else cares, hm?'";
 			say "     You couldn't agree more and invite him to share a drink with you, guiding the readily following student back to the bar a moment later. The two satyrs behind the counter greet you with wide grins, with both Kerr and Talov's eyes undressing your friend with their eyes. Richard sits down on a bar-stool just like you do, somewhat surprised at the unabashed lusty looks he is getting from the duo, then you lean in and loudly ask for an empty cup since you got something special for your friend. 'Sure thing, coming right up,' one of the satyrs replies in a cheerful tone, setting down a red plastic cup and also filling another from the seemingly endless wine-barrel they brought along. As he sets the wine cup on the counter in front of you, you're already pouring Richard's drink from the little bottle you got from the museum.";
@@ -577,11 +574,12 @@ instead of sniffing Pan's Special Reserve:
 	say "The wine is aromatic and quite powerful. Something about it fills you with the feeling of boundless energy, like you could dance away all night and day, give yourself to endless revels and never stop enjoying yourself.";
 
 Divine Wine-Cellar is a situation.
+Divine Wine-Cellar is inactive.
 The sarea of Divine Wine-Cellar is "Museum".
+
 when play begins:
 	add Divine Wine-Cellar to badspots of guy; [male satyr]
 	add Divine Wine-Cellar to badspots of furry; [satyr involved]
-	now Divine Wine-Cellar is resolved;
 
 [ JaksEncounters                                            ]
 [  0: not met                                               ]
@@ -646,6 +644,8 @@ Instead of resolving a Divine Wine-Cellar:
 				increase carried of Pan's Special Reserve by 1;
 				if JaksEncounters < 2: [no BJ before]
 					now JaksEncounters is 2; [gave him a BJ]
+				if Resolution of Divine Wine-Cellar < 1:
+					now Resolution of Divine Wine-Cellar is 1; [got satyr-BJ]
 			else if calcnumber is 3: [fuck]
 				LineBreak;
 				say "     Standing up and looking the hunky satyr in the eye, you make the offer of giving up your [if player is female]pussy[else]ass[end if] to him, resulting in Jaks looking down over your form appreciatively. A little movement at the corner of your view draws your attention - and you realize that it's his manhood rapidly filling out to a full erection as you glance down. 'I gladly accept,' the horny satyr says in a very satisfied tone, leaning in and sliding an arm around your chest to pull you in for a kiss. His curly beard tickles pleasantly as you make out with him, tongues wrestling with one another. Coming up for air a long moment later, the satyr sets down the little wine bottle carefully, then grabs hold of you with both hands. Jaks hefts you up, allowing you to encircle his hips with both legs as he goes on to kiss you again and again, then carries you over to the table.";
@@ -663,6 +663,8 @@ Instead of resolving a Divine Wine-Cellar:
 				increase carried of Pan's Special Reserve by 1;
 				if JaksEncounters < 3: [not fucked before]
 					now JaksEncounters is 3; [fucked by Jaks]
+				if Resolution of Divine Wine-Cellar < 2:
+					now Resolution of Divine Wine-Cellar is 2; [got satyr-fucked]
 			now LastJaksEncounter is turns;
 		else: [return visit]
 			say "     Once more, you follow the path your satyr friend Talov explained to you - through the several rooms of the Egyptian exhibit, then turning around and walking back the way you came, but with other rooms taking the place of the previous ones. Passing through a Babylonian garden, then coming to a re-built ancient trading barge filling a very large room, you scale the side of the ship and walk down the steep ladder of its forward hold - only to find yourself coming down into an underground passage, half natural cave half humanly built. A few steps ahead, the tunnel opens into a larger room lit by the flickering light of open flames, and you can already see a number of wine-barrels from your position.";
@@ -707,6 +709,8 @@ Instead of resolving a Divine Wine-Cellar:
 				increase carried of Pan's Special Reserve by 1;
 				if JaksEncounters < 2: [no BJ before]
 					now JaksEncounters is 2; [gave him a BJ]
+				if Resolution of Divine Wine-Cellar < 1:
+					now Resolution of Divine Wine-Cellar is 1; [got satyr-BJ]
 			else if calcnumber is 3: [fuck]
 				LineBreak;
 				say "     Stepping up and looking the hunky satyr in the eye, you make the offer of giving up your [if player is female]pussy[else]ass[end if] to him, resulting in Jaks looking down over your form appreciatively. A little movement at the corner of your view draws your attention - and you realize that it's his manhood rapidly filling out to a full erection as you glance down. 'I gladly accept,' the horny satyr says in a very satisfied tone, leaning in and sliding an arm around your chest to pull you in for a kiss. His curly beard tickles pleasantly as you make out with him, tongues wrestling with one another. Coming up for air a long moment later, the satyr sets down the little wine bottle carefully, then grabs hold of you with both hands. Jaks hefts you up, allowing you to encircle his hips with both legs as he goes on to kiss you again and again, then carries you over to the table.";
@@ -721,6 +725,8 @@ Instead of resolving a Divine Wine-Cellar:
 				else:
 					say "[mimpregchance]";
 				say "     Pushing himself up from the table with both strong arms, Jaks looks down at you with a cheeky grin on his face, then says, 'Pleasure having you here as a visitor. I wouldn't mind if you came along more often.' He pulls his spent cock from your body slowly and gently, wiping off a bit of cum sticking to the cockhead with a finger and then slurping it off with his tongue. The satyr helps you down from the table and waits for you to put your clothes in order, then holds out a little bottle of fine wine to you in a flourish. 'Here, take this. You earned it. Now get out of here, I got duties to perform, you know...' Giving him your thanks, you pocket the sample bottle of wine, then make your way down the short tunnel and to the stairs. Not long after, you're back in the lobby of the museum.";
+				if Resolution of Divine Wine-Cellar < 2:
+					now Resolution of Divine Wine-Cellar is 2; [got satyr-fucked]
 				increase carried of Pan's Special Reserve by 1;
 				if JaksEncounters < 3: [not fucked before]
 					now JaksEncounters is 3; [fucked by Jaks]

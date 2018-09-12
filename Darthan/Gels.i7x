@@ -28,20 +28,20 @@ to say losetopinkgel: [Loss to Pink Gel.]
 		else: [Neuter Player]
 			say "     As the Pink Gel approaches you can see the look of disappointment on her face as she stares at your featureless groin. Undaunted she pushes you onto your back and shoves her pussy into your face. As you begin to lick her juicy nethers your mouth is filled with the taste of strawberry jello. This only serves to increase your pace as the gel girl begins to moan. Looking up you can see that she has started fondling her massive tits while you continue to eat her out. After what seems like hours the pink girl lets out a final moan and arches her back. As she reaches her climax she coats your face in her sweet pink fluids. Once she is finished she gets up and leaves, but not before giving you a final kiss, licking most of her fluids up in the process.";
 		if "Female Preferred" is listed in feats of player and girl is not banned: [Changes target to Pink Gel for infection.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Pink Gel":
 					now monster is y;
 					break;
 		if "Herm Preferred" is listed in feats of player and hermaphrodite is not banned: [Changes target to Purple Gel for infection.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Purple Gel":
 					now monster is y;
 					break;
 		else if guy is not banned: [Changes target to Blue Gel for infection. Cross infect, Pink Gel infects with Blue Gel if no gender preferred feat or if male preferred.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Blue Gel":
 					now monster is y;
 					break;
@@ -101,20 +101,20 @@ to say losetobluegel: [Loss to Blue Gel.]
 		else: [Neuter Player]
 			say "     Seeming displeased that you have no gender, the Blue Gel grabs you by the back of the head an impales your throat on his member. Unable to muster the strength to fight back you are forced to allow the gel to brutally facefuck you. After some time he slams himself fully in your mouth and begins pumping his seed down your throat. When he finally finishes and pulls out you are relieved that the ordeal is over. The gel man has other plans though. Forcing you onto your stomach the blue man lines himself up and pushes into your rear entrance. Eventually, with one final thrust, he fills your bowels with his blue seed. Once he has finished he pulls out dropping you to the ground as his goo leaks from your ass and leaves.";
 		if "Male Preferred" is listed in feats of player and guy is not banned: [Changes target to Blue Gel for infection.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Blue Gel":
 					now monster is y;
 					break;
 		else if "Herm Preferred" is listed in feats of player and hermaphrodite is not banned: [Changes target to Purple Gel for infection.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Purple Gel":
 					now monster is y;
 					break;
 		else if girl is not banned: [Changes target to Pink Gel for infection. Cross infect, Blue Gel infects with Pink Gel if no gender preferred feat or if female preferred.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Pink Gel":
 					now monster is y;
 					break;
@@ -172,14 +172,14 @@ to say losetopurplegel: [Loss to Purple Gel.]
 		else: [Neuter Player]
 			say "     Disappointed that you have no sexual organs for her to enjoy the Purple Gel turns and shoves her pussy in your face while [if breast size of player > 0]sliding her member between your [breast size desc of player] [skinname of player] breasts[else]stoking her member[end if]. You begin licking the girl's waiting pussy as she grinds it against your face. Soon you bring her to her peak and she covers your face with a gush of her juices as her purple seed covers your [if breast size of player > 0]tits[else]chest[end if] and stomach. After finishing the gel girl turns around and gives you a kiss and begins licking her juices off your face. Once she is done she moves down and licks her goo off your [if breast size of player > 0]breasts[else]chest[end if] and stomach. Once she has licked you clean she gives you a final kiss, allowing you to taste the mixed flavors of her fluids, before turning and walking away.";
 		if "Female Preferred" is listed in feats of player and girl is not banned: [Changes target to Pink Gel for infection.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Pink Gel":
 					now monster is y;
 					break;
 		else if "Male Preferred" is listed in feats of player and guy is not banned: [Changes target to Blue Gel for infection.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Blue Gel":
 					now monster is y;
 					break;
@@ -233,12 +233,12 @@ to say purplegeldesc: [Purple Gel Description.]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Pink Gel"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -286,16 +286,17 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Blue Gel"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -343,16 +344,17 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Purple Gel"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -400,8 +402,9 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings

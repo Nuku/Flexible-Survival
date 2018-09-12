@@ -98,10 +98,10 @@ Instead of resolving a Temple of Hera:
 	WaitLineBreak;
 	say "     Hera herself adds in, 'There you have it. Go forth and knock a few heads together - you mortals are good at that, aren't you...' With a slight flick of her wrist, you feel yourself pushed out the door, stumbling right into the museum foyer through it.";
 	now Temple of Hera is resolved;
-	now Biker Hangout is not resolved;
 	now Dexterity of Erica is 3;
 
-Biker Hangout is a situation. Biker Hangout is resolved.
+Biker Hangout is a situation.
+The Prereq1 of Biker Hangout is Temple of Hera.
 The sarea of Biker Hangout is "Junkyard".
 when play begins:
 	add Biker Hangout to badspots of guy;
@@ -129,23 +129,28 @@ Instead of resolving a Biker Hangout:
 			say "     Beaten, you fall down before the man's onslaught - but he doesn't stop hitting you, so enraged is he about your interference. 'So you thought you could just come here to our place and make trouble? Big mistake, buddy!' You're kicked and punched again and again, even harder when the biker's friends join him some moments later. Eventually, they drag you some distance away in the junkyard, laughing about leaving you to be devoured by a hydra. After they leave you, basically to die, the nanites infusing everything these days do their work, rebuilding your body and healing you in short order. Therefore you can actually get up and walk away, just minutes later - long before the appearance of their supposed hydra.";
 			say "     With the bikers now forewarned that someone wants to get Joel back from them, you don't think that you'll be able to do so. They are sure to be more vigilant from now on, so there is little choice but to abandon this quest. Making your way back to the library, you tell Eric about what happened. 'Thanks... at least you tried,' he replies, a tone of sadness in his voice as he finally accepts that he'll just have to stay a cuntboy.";
 			now Dexterity of Erica is 100;
+			now Resolution of Biker Hangout is 2; [fought, lost]
 			move player to bunker;
 		else if fightoutcome >= 30:[fled]
 			say "     Running off as quickly as you can, you leave the biker behind. It doesn't seem like he wants to follow you too much and instead gets busy fucking his 'pet' in short order. With the bikers now forewarned that someone wants to get Joel back from them, you don't think that you'll be able to do so. They are sure to be more vigilant from now on, so there is little choice but to abandon this quest. Making your way back to the library, you tell Eric about what happened. 'Thanks... at least you tried,' he replies, a tone of sadness in his voice as he finally accepts that he'll just have to stay a cuntboy.";
 			now Dexterity of Erica is 100;
+			now Resolution of Biker Hangout is 3; [fought, fled]
 			move player to bunker;
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     Punching out the only lightly infected human, you bend down to pick up the key ring that he dropped during your fight and step forward to free the anthro canine. From this close up, you have your first real look at him - Joel has become a saluki, a slender and wiry breed of dog with a long and thin muzzle. With a short golden coat of fur and whitish-blond long hair on his ears and tail, as well as forming feathery fringes to his arms and legs, he looks pretty beautiful - even if the hair on his tail and the sides of his leg is crusted together by dried cum right now. It only takes a moment to free the young man from the collar padlocked to his neck, though he remains as he is, head lowered and shivering slightly. Man, these guys really did a number on him...";
+			now Resolution of Biker Hangout is 1; [fought, won]
 			say "[JoelSaved]";
 	else if calcnumber is 2: [wait and hit]
 		say "     As the human biker drops his pants and crouches down behind his anthro sex pet, then just rams his erection up Joel's abused asshole, you quietly pick up a rusty pipe from the piles of trash all around you. Walking towards the kennel while trying to stay out of sight from the shack windows at all times, you can't avoid stepping on some spots of rough gravel - but thankfully the gang-member doesn't hear you above the pained whining of his victim. And then, you're right behind him... raise the pipe and club the man over the head with a dull thunk. As his body falls forward on Joel's back, the transformed young man gives a frightened whine - at least until you hiss at him to keep quiet and that you're rescuing him.";
 		WaitLineBreak;
 		say "     Pulling the unconscious man off Rebecca's fiancée, you get your first real look at Joel - he has become a saluki, a slender and wiry breed of dog with a long and thin muzzle. With a short golden coat of fur and whitish-blond long hair on his ears and tail, as well as forming feathery fringes to his arms and legs, he looks pretty beautiful - even if the hair on his tail and the sides of his leg is crusted together by dried cum right now. It only takes a moment to free the young man from the collar padlocked to his neck, though he remains as he is, head lowered and shivering slightly. Man, these guys really did a number on him...";
+		now Resolution of Biker Hangout is 4; [sneaked up and hit them]
 		say "[JoelSaved]";
 	else: [distraction]
 		say "     Dashing back towards the front of the shack, you move up next to one of the bikes, their owner's pride and joy - then give it a powerful shove that makes it fall over, crashing down on the gravelly ground with the sounds of splintering glass and dented metal. You do the same for a second bike, then rush towards the shack, pressing yourself against its wall right at the corner - and it works... the scruffy biker who was in the kennel a moment ago comes running to the front of the shack, right past where you're hiding around the corner. It's almost comical - since the man is naked from the waist down, his cock flapping in the wind as he passes you... but then, you remind yourself just what the bastard was doing and the smile vanishes from your lips instantly. He curses loudly as he sees the damage on his bike and looks around (away from the shack) while bending over it to inspect the heavy machine.";
 		WaitLineBreak;
 		say "     Meanwhile, you duck behind the shack and get to the kennel as quickly as you can, pulling the key ring out of the biker's abandoned pants and stepping forward to free the anthro canine. From this close up, you have your first real look at him - Joel has become a saluki, a slender and wiry breed of dog with a long and thin muzzle. With a short golden coat of fur and whitish-blond long hair on his ears and tail, as well as forming feathery fringes to his arms and legs, he looks pretty beautiful - even if the hair on his tail and the sides of his leg is crusted together by dried cum right now. It only takes a moment to free the young man from the collar padlocked to his neck, though he remains as he is, head lowered and shivering slightly. Man, these guys really did a number on him...";
+		now Resolution of Biker Hangout is 5; [distracted them]
 		say "[JoelSaved]";
 	now Biker Hangout is resolved;
 
@@ -176,7 +181,9 @@ to say pomegranate seed use:
 
 Section 1 - Erica the female athlete
 
-[Smells, Description, Conversation and NPC Interaction]
+Table of GameCharacterIDs (continued)
+object	name
+Erica	"Erica"
 
 Erica is a woman. The HP of Erica is usually 0. The Dexterity of Erica is usually 0.
 The description of Erica is "[Ericadesc]".
@@ -234,13 +241,9 @@ instead of conversing the Erica:
 					say "[EricaTalk2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -367,13 +370,9 @@ to say EricaSexMenu:
 				now lastfuck of Erica is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -1058,13 +1057,9 @@ to say EricaCarlThreesome Sex Menu:
 					say "[EricaCarlThreesome8]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the two of them, saying that you just remembered something important you absolutely have to do. They give you questioning looks, then shrug and look at each other. As you hurry off, the two of them start making out, apparently determined to have fun with or without you.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the two of them, saying that you just remembered something important you absolutely have to do. They give you questioning looks, then shrug and look at each other. As you hurry off, the two of them start making out, apparently determined to have fun with or without you.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

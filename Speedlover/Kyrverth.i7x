@@ -27,6 +27,10 @@ Version 1 of Kyrverth by Speedlover begins here.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Kyrverth	"Kyrverth"
+
 Kyrverth is a man. The HP of Kyrverth is usually 0.
 The description of Kyrverth is "[KyrverthDesc]".
 The conversation of Kyrverth is { "<This is nothing but a placeholder!>" }.
@@ -132,7 +136,7 @@ to say KyrverthNormalChat: [Quest give and normal chat]
 	if KyrverthQuestGiven is 0 and (KyrverthTimer - turns >= 6): [Quest give]
 		if KyrverthStage is 0:
 			say "     'Hi there, would you be willing to help me out? I have been trying to build up a hoard, but it's a bit too dangerous for me out there. Would you be willing to help get the first few [one of]pieces[or]parts[or]bits[at random] of my hoard? You should be able to find something in the [bold type]high rise district[roman type], maybe somewhere that deals in [bold type]jewels?[roman type]";
-			now Jewel Heist is not resolved;
+			now Jewel Heist is active;
 		else if KyrverthStage is 1:
 			say "     'You're willing to help me out again? Awesome! A proper dragon would defeat some knights and hoard their armor, but they won't come to me and there are some pretty [one of]scary[or]dangerous[at random] monsters between here and there so I can't go to them, could you bring me back [bold type]5 bits of chainmail?[roman type]'";
 		else if KyrverthStage is 2:
@@ -366,12 +370,14 @@ Instead of resolving a Strange Sighting:
 		say "     As he arrives he hands you a soda, saying, 'Sorry about that. I'm not exactly the biggest dragon, and I heard some of those savages talking about eating me...'";
 		say "     [bold type]You head back to the library, maybe you should visit the dragon again in the High Rise District - later, when he's calmed down a bit.[roman type][line break]";
 		increase carried of soda by 1;
+		now Resolution of Strange Sighting is 1; [Met Kyrverth]
 		WaitLineBreak;
 		change the South exit of Overgrown Street to Dragons Den;
 		change the North exit of Dragons Den to Overgrown Street;
 	else:
 		LineBreak;
 		say "     You decide to take caution in what could possibly be a trap and continue on your way.";
+		now Resolution of Strange Sighting is 99; [Player not interested]
 	now KyrverthTimer is turns;
 	now battleground is "void";
 	now Strange Sighting is resolved;  [it won't happen again]
@@ -382,7 +388,7 @@ instead of going south from Overgrown Street while (KyrverthTimer - turns <= 6 a
 Jewel Heist is a situation.
 The level of Jewel Heist is 5. [minimum level to find the event]
 The sarea of Jewel Heist is "High".
-Jewel Heist is resolved.
+Jewel Heist is inactive.
 
 when play begins: [flags for blocking this event]
 	add Jewel Heist to badspots of guy;
@@ -435,7 +441,8 @@ to say JewelHeistSneak:
 			say "Almost immediately an alarm goes off, blaring loudly into the night. The wolverine comes around the corner, and he does NOT look happy.";
 			say "[JewelHeistFight]";
 		else:
-			say "You walk into the shop, but it's not what you were expecting. The guard went to all that effort to guard the place and someone has already looted it. Display cases around the room are smashed and the jewelry missing. You look through the drawers behind the desk and find a silver token, round with a hole in the middle. A tag says it is pure silver, maybe this would do for Kyrverth?";
+			say "You walk into the shop, but it's not what you were expecting. The guard went to all that effort to guard the place and someone has already looted it. Display cases around the room are smashed and the jewelry missing. You look through the drawers behind the desk and find a silver token, round with a hole in the middle. A tag says that it is pure silver, maybe this would do for Kyrverth?";
+			now Resolution of Jewel Heist is 1; [Snuck inside]
 			now Jewel Heist is resolved;
 			now SilverToken is 1;
 	else:
@@ -468,6 +475,7 @@ to say JewelHeistFight:
 	else if fightoutcome < 20: [player won]
 		say "     With a last blow, the wolverine topples to the ground. You step over him and enter the shop";
 		say "     You walk into the shop, but it's not what you were expecting. The guard went to all that effort to guard the place and someone has already looted it. Display cases around the room are smashed and the jewelry missing. You look through the drawers behind the desk and find a silver token, round with a hole in the middle. A tag says it is pure silver, maybe this would do for Kyrverth?";
+		now Resolution of Jewel Heist is 2; [Fought your way inside]
 		now Jewel Heist is resolved;
 		now SilverToken is 1;
 	now inasituation is false;

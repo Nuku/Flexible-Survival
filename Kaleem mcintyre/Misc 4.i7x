@@ -4,20 +4,7 @@ Misc 4 by Kaleem mcintyre begins here.
 
 Section 1 - Anal Probing
 
-Anal Probing is a situation.
-The sarea of Anal Probing is "Beach".
-
-when play begins:
-	add Anal Probing to badspots of furry;
-	add Anal Probing to badspots of guy;
-
-Instead of resolving Anal Probing:
-	say "Of all of the strange and slightly twisted things you've come across in the city as of late, seeing a large, naked bipedal male lion lying on the beach, panting and drooling out of the side of his muzzle while being inserted up the ass by what look like metallic tentacles, really takes the cake. Watching as you are, some good twenty feet away, you can almost not believe what your eyes are seeing as you watch the auburn maned feline yowl and then thrust his wide hips up and down while getting spiked up the tailhole by... cylindrical, bodiless limbs. The metal tentacles, which look like living snakes, writhe and flex around the feline as the lion rolls around on his back while looking up at the [short time of day] sky. From what you can see, the coiling things are wrapping themselves almost vice tight around the maned cat, nearly choking the other from what you can see, but at the same time they are stimulating their victim's prostate and balls with fast moving seesaw like motions in and out of the lion's rump. The maned cat's dark pucker seems to have expanded to an almost disproportional width as several of the tentacles have jammed themselves into his tailstar almost impossibly deep.";
-	WaitLineBreak;
-	say "Where the things are coming from, you can't see for sure, but you do note that the majority of the lengthy things seem to be coming from out of the ground itself. Maybe this was some new kind of infection that had contaminated the beach? Not prepared for the thought of the very earth itself becoming a sexual trap you ready yourself to go over to aid the feline, whose cock is rock hard out of his sheath and surging with enough precum to liberally coat his well toned chest and abdomen, when you suddenly freeze solid as an incandescent blanket of white engulfs the entire beach in.";
-	WaitLineBreak;
-	say "Shielding your eyes from the too brilliant light you find yourself faintly able look out from the opening between your fingers to see [italic type]something[roman type] going over to fiddle and fool with the lion. However, it's just too bright to see exactly what. Just before your eyes can adjust themselves you hear a whirling scream of a noise and then silence before the light vanishes. Blinking once you try and focus your gaze over to where the lion was... only to find no one there. Whipping your head around to try and make sure that maybe you didn't miss the other somehow getting up and running away you find yourself confused by this abrupt turn of events. That is, right before you tip your head skyward to hesitantly look up. Like a comet zooming through space you can make out a small, but rapid paced object cutting a pathway throughout the sky headed east. Could that have been a... you shake your head at the impossibility of such a thing. After all, everyone knows that aliens don't exist... right?";
-	now Anal Probing is resolved;
+[rewritten by Draegon]
 
 Section 2 - Birth
 
@@ -29,20 +16,21 @@ when play begins:
 	add Birthing Time to badspots of girl;
 
 Instead of resolving Birthing Time:
-	say "You find yourself walking around the zoo and sighing at the remnants of the once majestic place that are now left dilapidated. Scanning the place almost twice over you find that most of the cages and assortment of eateries have been utterly devastated by the mutants that have gone through the area. Hearing the sounds of someone moaning you find yourself freezing in your tracks as you try and figure out just what kind of whimpering croon you had just heard. Being in this city for so long you've actually learned how to differentiate cries of help from cries of rampant pleasure. Subsequently avoiding the latter because they usually heralded trouble, it takes you a minute to go over the vocal outcry to judge the sincerity of the now yelping groan as being something worthy of your attention. You come to the conclusion that this gasp however, was of someone sounding as though they were in pain, not in the throes of ecstasy. Feeling as though you might be able to help you take a step in the direction of the voice before stopping.";
-	say "     [bold type] Should you really go over and see about it, knowing that there could be danger waiting in the unknown?[roman type][line break]";
+	say "     You find yourself walking around the zoo and sighing at the remnants of the once majestic place that are now left dilapidated. Scanning the place almost twice over, you find that most of the cages and assortment of eateries have been utterly devastated by the mutants that have gone through the area. Hearing the sounds of someone moaning you find yourself freezing in your tracks as you try and figure out just what kind of whimpering croon you had just heard. Being in this city for so long you've actually learned how to differentiate cries of help from cries of rampant pleasure. Subsequently avoiding the latter because they usually heralded trouble, it takes you a minute to go over the vocal outcry to judge the sincerity of the now yelping groan as being something worthy of your attention. You come to the conclusion that this gasp however, was of someone sounding as though they were in pain, not in the throes of ecstasy. Feeling as though you might be able to help you take a step in the direction of the voice before stopping.";
+	say "     [bold type]Should you really go over and see about it, knowing that there could be danger waiting in the unknown?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		LineBreak;
-		say "Not wanting to leave someone in distress, you find yourself moving on hurried feet over to the African Wild Dog enclosure of the zoo. Moving as fast as you can you can see the form of several African wild dogs hanging around the prone figure of another and stop dead in your tracks before you can get to close. On guard you ready yourself for an altercation but after waiting several seconds you slowly let your guard down when none of the bipedal creatures make their way over to you. Curious as to what's going on you make your way around the cage where the canines had normally been kept to see who or rather what is making that awful yowling-yip noise. When you do though, you find your eyes widening slightly and then a blush staining your cheeks as you watch nature taking its due course of things. Lying onto the ground littered with both quilts and pillows and stuffed toys surrounding it, or rather her, was an anthropomorphic mother African wild dog moaning and writhing while several other males stood around her with worried looks covering their muzzles.";
-		say "This sight wouldn't at all have been out of place had it not for the small bundle of fluff and fur trying to ease its way from out of the female's gaping cunt. Your body seems to almost lock up in shock as you watch the female canine anthro push with all of her might with her internal muscles can muster while yowling as the small form of her pup wiggles out to freedom. Feeling slight queasy at seeing a mother giving birth, you take a sudden step back and then another before finally moving completely away from the group just as the baby African wild dog emerges into the world. A quick grumble from your stomach signals that it's almost time for you to throw up, but you hold off in favor of quickening your steps to [italic type]someplace[roman type] else. Preferably, somewhere that you can't hear the yipping infant crying at, which oddly enough seems to be growing louder as more and more whimpers follow after the first set of plaintive cries. Obviously [italic type]mama[roman type] was having a small litter right at the moment, no wonder she was moaning.";
-		now Birthing Time is resolved;
+		say "     Not wanting to leave someone in distress, you find yourself moving on hurried feet over to the African Wild Dog enclosure of the zoo. Moving as fast as you can you can see the form of several African wild dogs hanging around the prone figure of another and stop dead in your tracks before you can get to close. On guard you ready yourself for an altercation but after waiting several seconds you slowly let your guard down when none of the bipedal creatures make their way over to you. Curious as to what's going on you make your way around the cage where the canines had normally been kept to see who or rather what is making that awful yowling-yip noise. When you do though, you find your eyes widening slightly and then a blush staining your cheeks as you watch nature taking its due course of things. Lying onto the ground littered with both quilts and pillows and stuffed toys surrounding it, or rather her, was an anthropomorphic mother African wild dog moaning and writhing while several other males stood around her with worried looks covering their muzzles.";
+		say "     This sight wouldn't at all have been out of place had it not for the small bundle of fluff and fur trying to ease its way from out of the female's gaping cunt. Your body seems to almost lock up in shock as you watch the female canine anthro push with all of her might with her internal muscles can muster while yowling as the small form of her pup wiggles out to freedom. Feeling strangely elated at seeing the miracle of life, you take a sudden step back and then another before finally moving completely away from the group just as the baby African wild dog emerges into the world. Behind you, there are yipping noises from the newborn, which oddly enough seem to be growing louder as more and more whimpers follow after the first set of plaintive cries. Obviously [italic type]mama[roman type] is having a whole litter, no wonder she was groaning.";
+		now Resolution of Birthing Time is 1; [watched]
 	else:
 		LineBreak;
-		say "Not wanting to take the chance on finding out what's going on, as this could be some sort of elaborate trap by a group of mutants looking to prey upon the foolhardy, you slowly back away from the area and then turn to jog off to someplace else. You are just in time too, because as soon as you leave the area, the cries of a baby canine fill the area, followed by another and then another.";
-		now Birthing Time is resolved;
+		say "     Not wanting to take the chance on finding out what's going on, as this could be some sort of elaborate trap by a group of mutants looking to prey upon the foolhardy, you slowly back away from the area and then turn to jog off to someplace else. You are just in time too, because as soon as you leave the area, the cries of a baby canine fill the area, followed by another and then another.";
+		now Resolution of Birthing Time is 2; [not watched]
+	now Birthing Time is resolved;
 
 
 Section 3 - Girl Time
@@ -134,7 +122,7 @@ Instead of resolving Spiritual Love:
 			now scalevalue of player is 3;
 			now bodydesc of player is "animalistic";
 			now bodytype of player is "lupine";
-			now daycycle of player is 0;
+			now SleepRhythm of player is 0;
 			end the story saying "You submitted to the spiritual wolf, becoming his loving mate.";
 			now battleground is "void";
 			wait for any key;
@@ -145,8 +133,10 @@ Instead of resolving Spiritual Love:
 			say "Looking at the ethereal canine all you can do is smile and then shake your head at the thing. While giving up your humanity might be fun, you still have things to do here that are somewhat more important than the paradise the lupine-like creature offers. The white furred canine respectfully bows to you and then looks up to lick you across your nose before walking from your hiding space to where the others are. Going over to the still mating couple you watch as all of the lookalike white canines assemble around the rutting pair, forming a small but protective circle, and then blink owlishly as the canids raise their heads to the sky to howl. A large glowing aurora soon fills up the space of the area and before you can blink the illumination grows as bright as a supernova before quickly winking out of existence. Shaking your head and trying to find your vision with rapid paced flutters of your eyelids you realize in the back of your mind that what you've just seen is truly a once in a lifetime spectacle.";
 			LineBreak;
 			say "A part of you feels sad that you didn't take in on the offer being presented, but another part of you is glad you didn't. When it's time for you to move on to the next level you're sure that you will be ready to take it, if only because you've seen something so majestic from the [italic type]other side[roman type].";
+			now Resolution of Spiritual Love is 1; [went in but avoided the bad end]
 	else:
 		say "Discretion being the better part of valor you take one step back and then another before turning on your heel to beat a hasty retreat. Whatever is going on back there, it might be better not to get involved. Some things are just worth not knowing about after all.";
+		now Resolution of Spiritual Love is 2; [avoided it]
 	now Spiritual Love is resolved;
 
 

@@ -4,6 +4,10 @@ Version 2 of Kristen by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameCharacterIDs (continued)
+object	name
+Kristen	"Kristen"
+
 FindingKristen is a situation.
 The sarea of FindingKristen is "Outside".
 when play begins:
@@ -42,16 +46,19 @@ Instead of resolving FindingKristen:
 					now HP of Kristen is 2;
 					move player to Kristen's Hideout;
 					now Kristen's Hideout is known;
-					now battleground is "void";
+					now Resolution of FindingKristen is 1; [Kristen saved]
 					increase score by 20;
 			if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     The ewe's assault leaves you too weak and dazed to prevent her from grabbing onto the woman and dragging her back down the alley. You can hear the lustful cries of mob of sheep get louder when the poor human's dragged into their midst. Still having enough sense to realize that you very well could be next, you struggle your way up and over the wooden fence and make a run for it.";
+				now Resolution of FindingKristen is 98; [player lost, Kristen lost]
 				now HP of Kristen is 1;
 			else if fightoutcome >= 30:
 				say "     Hearing the mob getting closer, you know you need to make your escape before they get here. You sidestep the ewe as she makes a grab for you, sending her crashing right into the woman as she tries to get up. Finding herself atop an unchanged human, the sheep's attention immediately turns to groping and kissing her. With a running start, you use her woolly back as a springboard to hop up onto the wooden wall and climb over it to get away before things get out of hand.";
+				now Resolution of FindingKristen is 99; [player ran off, Kristen lost]
 				now HP of Kristen is 1;
 		else:
 			say "     Counting yourself lucky that it's not you being chased for a change, you slip off in the opposite direction as the sound starts to draw the interest of more infected mutants.";
+			now Resolution of FindingKristen is 99; [player ran off, Kristen lost]
 			now HP of Kristen is 1;
 	now FindingKristen is resolved;
 

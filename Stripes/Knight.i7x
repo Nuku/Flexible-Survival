@@ -15,7 +15,7 @@ when play begins:
 to say knightdesc:
 	setmongender 3; [creature is male]
 	now kpstatus is 0;
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
@@ -112,7 +112,7 @@ to say losetoknight:
 		else:
 			say "[knightwins_anal]";
 		setmonster "Knight";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 	else if kpstatus is 2:
 		if HP of player > 0:
 			say "     You lower your [if weapon object of player is journal]hands[else][weapon object of player][end if] and drop to one knee before the knight. He smiles as you yield to him and moves closer. '[one of]You must recognize my greatness[or]It is clear that I have impressed you[at random]. Come follow me instead and I shall show you true glory. Here, let me show you...' Sheathing his blade, he opens his breeches and pulls forth his other sword, the one of throbbing flesh. It is an impressive 10 inches of man-meat, perfectly shaped, uncut and steel hard.";
@@ -130,7 +130,7 @@ to say losetoknight:
 		now playercrestnum is knightcrestnum;
 		say "     Taking a moment to look yourself over after your encounter, you see that the crest on your chest has changed to that of [stateplayercrest], like that of the knight who just fucked you. It seems you have indeed been claimed as his new squire.";
 		setmonster "Squire";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 	else if kpstatus is 3:
 		if HP of player > 0:
 			say "     Rather than resist the armored knight, you lower your [if weapon object of player is journal]hands[else][weapon object of player][end if] and give up. He smiles as you relent, giving you a final swat with the flat of his blade before sheathing his sword. 'It is right that you yield to me, peasant. I am a noble hero and I have great deeds to perform. Come [if player is female]damsel[else]peasant[end if], tend to me and you may tell the other commoners of how you worked in service of a brave knight,' he says, pushing you down to the ground beneath him.";
@@ -143,7 +143,7 @@ to say losetoknight:
 			say "     Pulling down his breeches, he frees his noble manhood. It is an impressive 10 inches of man-meat, perfectly shaped, uncut and steel hard. He then removes your gear and any clothing, leaving you bare before him. 'Even a commoner such as yourself can be of use to a knight such as I. My quest left me in need of relief... which you shall provide,' he says with a lustful grin as he looks you over.";
 			say "[knightwins_anal]";
 		setmonster "Squire";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now playercrestnum is knightcrestnum;
 		say "     You sense a strange warmth inside you as the knight's semen affects you somehow. You feel an unusual attraction to the departing knight, beyond his physical, sexual appeal. It is as if there is now some intangible connection to the bold warrior who just fucked you.";
 	else:
@@ -156,7 +156,7 @@ to say losetoknight:
 		else:
 			say "[knightwins_anal]";
 		setmonster "Squire";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now playercrestnum is knightcrestnum;
 		say "     You sense a strange warmth inside you as the knight's semen affects you somehow. You feel an unusual attraction to the departing knight, beyond his physical, sexual appeal. It is as if there is now some intangible connection to the bold warrior who just fucked you.";
 
@@ -204,12 +204,12 @@ to say playercrestzeroed:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Knight"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -258,8 +258,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Drop Item
 

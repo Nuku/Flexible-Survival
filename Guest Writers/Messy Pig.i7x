@@ -57,14 +57,14 @@ to say beatthepig:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	add "Messy Pig" to infections of girl;
 	add "Messy Pig" to infections of furry;
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Messy Pig"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -112,8 +112,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "messypig"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Alt Combat
@@ -133,7 +134,7 @@ this is the pigpussyinc rule:			[increasing likelihood of alt attack]
 this is the pigpussy rule:
 	choose row monstercom from the table of critter combat;
 	now alt1chance entry is 6;
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	let playernum be 150 + humanity of player - libido of player + ( level of player * 2 ) + charisma of player;
 	say "     [piggycheck]";
 	if tempnum is 1, decrease playernum by 30;
@@ -240,8 +241,8 @@ Section 5 - Bound State
 to MessyPigBind:
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if humanity of player < 50:
 			now obliging is true;
 		checkboundrecover;
@@ -265,8 +266,8 @@ to MessyPigBind:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [MessyPigStruggle]";
 		if humanity of player < 1:
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Messy Pig":
 					now monster is y;
 					break;
@@ -281,7 +282,7 @@ to MessyPigBind:
 			now skin of player is skin entry;
 			now body of player is body entry;
 			now cock of player is cock entry;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "A pig pigged out on you";
 		else:
 			let k be 0;
@@ -305,7 +306,7 @@ to MessyPigBind:
 				else:
 					say "     You continue to thrash about from within your hungry captor, and eventually, your efforts are rewarded when you are pushed up and out of her stomach. You travel back through the constricting throat and then get spat out onto the floor, covered in her juices and various food scraps. The irritated piggy snorts angrily as you recover, and after kicking a cloud of dirt at you, she runs away, likely to search for an easier meal.";
 					cleanboundmemory;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					follow the turnpass rule;
 					wait for any key;
 				next;

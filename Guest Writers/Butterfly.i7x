@@ -8,9 +8,9 @@ Version 1 of Butterfly by Guest Writers begins here.
 
 Section 1 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 Section 2 - Variable and constant definitions
 
@@ -28,14 +28,19 @@ ButterflyTummy is a text that varies. ButterflyTummy is usually "".
 ButterflyEncounters is a number that varies. ButterflyEncounters is usually 0.
 ButterflyHasNegligee is a truth state that varies. ButterflyHasNegligee is usually True.
 ButterflyAttire is a text that varies. ButterflyAttire is usually "She is wearing a white negligee, but you can't help but notice the lack of undergarments through its sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest, exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles[else]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly[end if] as her wings flap.".
-ButterflyBaby is a person.
-The butterflybaby has a text called bodyname. Bodyname is usually "Human".
-The butterflybaby has a text called facename. Facename is usually "Human".
-The butterflybaby has a text called skinname. Skinname is usually "Human".
-The butterflybaby has a text called cockname. cockname is usually "Human".
-The butterflybaby has a text called tailname. Tailname is usually "Human".
+ButterflyBabyBodyName is a text that varies. ButterflyBabyBodyName is usually "Human".
+ButterflyBabyFaceName is a text that varies. ButterflyBabyFaceName is usually "Human".
+ButterflyBabySkinName is a text that varies. ButterflyBabySkinName is usually "Human".
+ButterflyBabyCockName is a text that varies. ButterflyBabyCockName is usually "Human".
+ButterflyBabyTailName is a text that varies. ButterflyBabyTailName is usually "Human".
 
-ButterflyBaby has a number called Gestation.
+ButterflyBabyGestation is a number that varies.
+
+Table of GameCharacterIDs (continued)
+object	name
+ButterflyBaby	"ButterflyBaby"
+
+ButterflyBaby is a person.
 
 Section 3 - Monster Responses
 
@@ -70,7 +75,7 @@ To say butterfly defeat:
 		else:
 			say "Having taken one too many blows, the butterfly girl flaps her wings hysterically in dismay and flies off as fast as she can manage.";
 	else if ButterflyPregnant is True:
-		say "Seeing you attempt to cut off her escape route, the [if gestation of ButterflyBaby is 3]heavily pregnant butterfly[else if gestation of ButterflyBaby is 2]visibly pregnant butterfly[else if gestation of ButterflyBaby is 1]butterfly, noticeably in the early stages of pregnancy,[end if] takes the initiative. Flapping her wings hysterically in dismay, she flies off as fast as she can, managing to avoid any harm coming to her developing baby.";
+		say "Seeing you attempt to cut off her escape route, the [if ButterflyBabyGestation is 3]heavily pregnant butterfly[else if ButterflyBabyGestation is 2]visibly pregnant butterfly[else if ButterflyBabyGestation is 1]butterfly, noticeably in the early stages of pregnancy,[end if] takes the initiative. Flapping her wings hysterically in dismay, she flies off as fast as she can, managing to avoid any harm coming to her developing baby.";
 	else if heat enabled is true and inheat is true and ButterflyRaped is 0:
 		say "The Butterfly girl blushes as she senses your feral lust. Knowing she has no chance to escape and preferring not to have her clothing shredded she quickly removes her negligee and sets it aside as you rapidly approach.";
 		if player is male:
@@ -90,8 +95,8 @@ To say butterfly defeat:
 				if butterfly grove is unknown:
 					say "You find a note she left behind with a rough map leading to her home.";
 					now butterfly grove is known;
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Butterfly":
 						now area entry is "Unknown";
 						break;
@@ -129,8 +134,8 @@ To say butterfly defeat:
 					if butterfly grove is unknown:
 						say "You find a note tucked into the negligee consisting of a rough map that you assume leads to her home.";
 						now butterfly grove is known;
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
+					repeat with y running from 1 to number of filled rows in Table of Random Critters:
+						choose row y in Table of Random Critters;
 						if name entry is "Butterfly":
 							now area entry is "Unknown";
 							break;
@@ -139,8 +144,8 @@ To say butterfly defeat:
 					now ButterflyLove is False;
 			else:
 				say "Reacting to her discomfort you ease back to her pace and avoid probing so deep. Appreciating your kindness she embraces your [skin of player] body to get even closer relishing your every thrust as it gently kisses at the opening of her cervix. You gaze lustfully into her [one of]brilliant[or]vibrant[or]vivid[at random] green eyes as one hand stimulates the red nipple on one of her breasts. In response her well-lubricated snatch tightens around your [cocktext]cock and she blushes at the thought of [one of]your intimate copulation[or]your joined bodies[or]your interlocked reproductive organs[or]your linked genitalia[or]your bodies mating[or]you breeding with her[at random]. As you both climax in unison you pump a seemingly never ending supply of cum into her womb. Her eyes letting you know that she welcomes every spurt[if ButterflyCanGetPregnant is True], and the inevitable pregnancy that follows[end if]. After spending some time in each other's arms you each rise to go your separate ways. She gives you a deep kiss in the way only a girl with a tongue like hers can, and then lifts off the ground happily flapping her wings she turns to depart. The last sight you see is your creamy semen oozing from her noticeably red cunt.";
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Butterfly":
 						let debit be 0;
 						if hardmode is true and level of player > 3, let debit be level of player - 3;
@@ -167,8 +172,8 @@ To say butterfly defeat:
 					if butterfly grove is unknown:
 						say "You find a note she left behind with a rough map leading to her home.";
 						now butterfly grove is known;
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
+					repeat with y running from 1 to number of filled rows in Table of Random Critters:
+						choose row y in Table of Random Critters;
 						if name entry is "Butterfly":
 							now area entry is "Unknown";
 							break;
@@ -198,8 +203,8 @@ To say butterfly defeat:
 					if butterfly grove is unknown:
 						say "You find a note tucked into the negligee consisting of a rough map that you assume leads to her home.";
 						now butterfly grove is known;
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
+					repeat with y running from 1 to number of filled rows in Table of Random Critters:
+						choose row y in Table of Random Critters;
 						if name entry is "Butterfly":
 							now area entry is "Unknown";
 							break;
@@ -209,8 +214,8 @@ To say butterfly defeat:
 			else:
 				say "Reacting to her discomfort you withdraw your fingers and gently hold on to her legs. Softly you kiss her petals in apology. Appreciating your consideration she stops resisting as you gently caress her plump stripy abdomen and lower belly as you lap away at her rapidly moistening vagina with your tongue. The butterfly's moans increase as you service her cunt and toy with her erect clitoris, her [ButterflyBreastDesc] tits swinging freely beneath her. Arching her back in ecstasy, her wings flicking about wildly, she cums in a torrent and squirts her sweet and sticky juice over your face in a succession of powerful bursts. As you rub your cum-soaked eyes, she turns and looks at you, embarrassed at her transgression. 'I'm sorry! I'm sorry!' she exclaims, mortified as she attempts to clean your face with her hands and mouth, but is taken aback when you lick between her fingers and retrieve the cum on her lips using yours. Coming to the realization that you loved every moment of her liquid discharge, she accepts your embrace as your [skin of player] body entwines with hers. As her cum drips down and smears between your bodies, you whittle away time cleaning one another with your mouths.";
 				increase ButterflyEncounters by 1;
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Butterfly":
 						let debit be 0;
 						if hardmode is true and level of player > 3, let debit be level of player - 3;
@@ -235,8 +240,8 @@ To say butterfly defeat:
 					if butterfly grove is unknown:
 						say "You find a note tucked into the negligee consisting of a rough map that you assume leads to her home.";
 						now butterfly grove is known;
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
+					repeat with y running from 1 to number of filled rows in Table of Random Critters:
+						choose row y in Table of Random Critters;
 						if name entry is "Butterfly":
 							now area entry is "Unknown";
 							break;
@@ -245,9 +250,9 @@ To say butterfly defeat:
 		else:
 			say "Having taken one too many blows the butterfly girl flaps her wings hysterically in dismay and flies off as fast as she can manage.";
 	if ButterflyPregnant is True:
-		increase gestation of ButterflyBaby by 1;
-		if gestation of ButterflyBaby > 3:
-			now gestation of ButterflyBaby is 0;
+		increase ButterflyBabyGestation by 1;
+		if ButterflyBabyGestation > 3:
+			now ButterflyBabyGestation is 0;
 			now ButterflyPregnant is False;
 			say "You suddenly feel a strange feeling of achievement in your [ball size].";
 		follow the ButterflyTummyDesc rule;
@@ -314,8 +319,8 @@ To say butterfly attack:
 		now ButterflyRevenge is True;
 		if "Sterile" is not listed in feats of player:
 			add "Sterile" to feats of player;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Butterfly":
 				let debit be 0;
 				if hardmode is true and level of player > 3, let debit be level of player - 3;
@@ -364,8 +369,8 @@ To say butterfly attack:
 				if butterfly grove is unknown:
 					say "You find a note she left behind with a rough map leading to her home.";
 					now butterfly grove is known;
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Butterfly":
 						now area entry is "Unknown";
 						break;
@@ -391,8 +396,8 @@ To say butterfly attack:
 				if butterfly grove is unknown:
 					say "You find a note tucked into the negligee consisting of a rough map that you assume leads to her home.";
 					now butterfly grove is known;
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Butterfly":
 						now area entry is "Unknown";
 						break;
@@ -405,9 +410,9 @@ To say butterfly attack:
 		else:
 			say "DEBUG: You should never get here.";
 	if ButterflyPregnant is True:
-		increase gestation of ButterflyBaby by 1;
-		if gestation of ButterflyBaby > 3:
-			now gestation of ButterflyBaby is 0;
+		increase ButterflyBabyGestation by 1;
+		if ButterflyBabyGestation > 3:
+			now ButterflyBabyGestation is 0;
 			now ButterflyPregnant is False;
 			say "You suddenly feel a strange feeling of achievement in your [ball size].";
 		follow the ButterflyTummyDesc rule;
@@ -416,7 +421,7 @@ Section 4 - Monster Definition
 
 When Play begins:
 	add { "Butterfly" } to infections of girl;
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Butterfly"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "Mariposa";
@@ -425,7 +430,7 @@ When Play begins:
 	now defeated entry is "[butterfly defeat]";
 	[ Text or say command used when Monster is defeated.]
 	now victory entry is "[butterfly attack]";
-	now desc entry is "[mongendernum 4]The one hovering before you is a female with richly colored translucent wings and pale velvet skin. Her attractive face is framed by wavy blonde hair down to her chin. Beneath her undulating fringe two large [one of]brilliant[or]vibrant[or]vivid[or]and rich[at random] lime green eyes follow your movements. Two long antennae poke out the top of her head. [ButterflyAttire][if gestation of ButterflyBaby is 3] Small droplets of milk twinkle on the ducts of her nipples.[end if][if ButterflyRaped is 1] One of her hands moves protectively to cover her vagina as she recognizes you.[end if][ButterflyTummy] For a moment her mouth opens and what appears to be a long wiry proboscis uncoils out and then retracts back in almost faster than your eyes can see. Her back blends into a plump yellow and black striped abdomen. [if ButterflyRaped > 0 or inheat is true] She is carrying an ominous looking little black bag in her hand. [end if][if ButterflyRaped is 1]She glares at you [one of]angrily[or]furiously[or]enraged[or]fuming[or]seething in anger[or]with contempt[at random] flapping her wings erratically[else if ButterflyLikesYou is True and ButterflyLove is False] She smiles and looks at you [one of]shyly[or]bashfully[or]sheepishly[or]blushing slightly[at random][else if ButterflyLove is True]She looks at you [one of]adoringly[or]lovingly[or]passionately[or]devotedly[at random][else if ButterflyRevenge is True]She looks at you remarkably calmly considering your previous encounter[else]She looks at you [one of]apprehensively[or]cautiously[or]anxiously[or]nervously[at random][end if][if ButterflyRaped greater than 0]. Something tells you that submitting to her would be bad for your health[end if]."; [ Description of the creature when you encounter it.]
+	now desc entry is "[mongendernum 4]The one hovering before you is a female with richly colored translucent wings and pale velvet skin. Her attractive face is framed by wavy blonde hair down to her chin. Beneath her undulating fringe two large [one of]brilliant[or]vibrant[or]vivid[or]and rich[at random] lime green eyes follow your movements. Two long antennae poke out the top of her head. [ButterflyAttire][if ButterflyBabyGestation is 3] Small droplets of milk twinkle on the ducts of her nipples.[end if][if ButterflyRaped is 1] One of her hands moves protectively to cover her vagina as she recognizes you.[end if][ButterflyTummy] For a moment her mouth opens and what appears to be a long wiry proboscis uncoils out and then retracts back in almost faster than your eyes can see. Her back blends into a plump yellow and black striped abdomen. [if ButterflyRaped > 0 or inheat is true] She is carrying an ominous looking little black bag in her hand. [end if][if ButterflyRaped is 1]She glares at you [one of]angrily[or]furiously[or]enraged[or]fuming[or]seething in anger[or]with contempt[at random] flapping her wings erratically[else if ButterflyLikesYou is True and ButterflyLove is False] She smiles and looks at you [one of]shyly[or]bashfully[or]sheepishly[or]blushing slightly[at random][else if ButterflyLove is True]She looks at you [one of]adoringly[or]lovingly[or]passionately[or]devotedly[at random][else if ButterflyRevenge is True]She looks at you remarkably calmly considering your previous encounter[else]She looks at you [one of]apprehensively[or]cautiously[or]anxiously[or]nervously[at random][end if][if ButterflyRaped greater than 0]. Something tells you that submitting to her would be bad for your health[end if]."; [ Description of the creature when you encounter it.]
 	now face entry is "a pair of [one of]brilliant[or]vibrant[or]vivid[at random] green eyes, two antennae on top of your head, and a streamlined"; [ Face description, format as "Your face is (your text)"]
 	now body entry is "delicate and fragile, streamlined for flight. Two thin, bright and colorful wings stick out of your back. They aren't strong enough to allow you to fly, but with some effort you find you are able to hover without needing to walk"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "velvet and silky"; [ skin Description, format as "You have (your text) skin"]
@@ -465,8 +470,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 5 - Monster Endings
 
@@ -505,23 +511,23 @@ To impregnatebutterfly:
 		now infection is "Butterfly";
 	else:
 		now infection is skinname of player;
-	now skinname of ButterflyBaby is infection;
+	now ButterflyBabySkinName is infection;
 	if a random number from 1 to 100 > 50 and "They Have Your Eyes" is not listed in feats of player:
 		now infection is "Butterfly";
 	else:
 		now infection is bodyname of player;
-	now bodyname of ButterflyBaby is infection;
+	now ButterflyBabyBodyName is infection;
 	if a random number from 1 to 100 > 50 and "They Have Your Eyes" is not listed in feats of player:
 		now infection is "Butterfly";
 	else:
 		now infection is tailname of player;
-	now tailname of ButterflyBaby is infection;
+	now ButterflyBabyTailName is infection;
 	if a random number from 1 to 100 > 50 and "They Have Your Eyes" is not listed in feats of player:
 		now infection is "Butterfly";
 	else:
 		now infection is facename of player;
-	now facename of ButterflyBaby is infection;
-	now gestation of ButterflyBaby is 0; [1;]
+	now ButterflyBabyFaceName is infection;
+	now ButterflyBabyGestation is 0; [1;]
 	follow the ButterflyTummyDesc rule;
 	now ButterflyPregnant is True;
 	if ButterflyBreastDesc is "cute and buoyant B-cup":
@@ -551,8 +557,8 @@ This is the butterflytreatment choice rule:
 			if ButterflyRaped > 1:
 				now ButterflyAttire is "She is wearing a long-sleeved, strapless, skin-tight black leather top with a split down the middle reaching to her navel. The split is pulled together by a zig-zag of lacing as the inner-side of each [ButterflyBreastDesc] breast bulges out around the strands. Her rigid nipples deform the otherwise smooth surface of the leather. Colorful wings extend through sizable openings at the back allowing them complete freedom. A tie around her waist dangles dozens of strips of black leather down below her crotch in the style of a grass skirt, but the gaps in coverage let you see she's completely bare underneath. Her stripy yellow and black abdomen pokes out through the strands at the back. She sports a pair of shiny black PVC stockings up to her thighs and a svelte pair of black high-heeled leather boots on her feet.";
 			if ButterflyRaped is 1:		[She's going to be seriously pissed with you and twice as strong]
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Butterfly":
 						let debit be 0;
 						if hardmode is true and level of player > 4, let debit be level of player - 4;
@@ -569,11 +575,11 @@ This is the butterflytreatment choice rule:
 	decrease the menu depth by 1;
 
 This is the ButterflyTummyDesc rule:
-	if gestation of ButterflyBaby is 3:
+	if ButterflyBabyGestation is 3:
 		now ButterflyTummy is " She is heavily pregnant, and looks ready to give birth at any time.";
-	else if gestation of ButterflyBaby is 2:
+	else if ButterflyBabyGestation is 2:
 		now ButterflyTummy is " Her belly bulges showing the signs of early pregnancy.";
-	else if gestation of ButterflyBaby is 1:
+	else if ButterflyBabyGestation is 1:
 		now ButterflyTummy is " Her skin gives off a radiant glow.";
 	else:
 		now ButterflyTummy is "";
@@ -724,13 +730,13 @@ to say butterfly grove scene:
 		say "You sense someone is watching you, but no matter where you look you can't find anyone. As you look around you spot a small item resting in the grass.";
 		say "[bold type]You gain 1 testosterone pill![roman type][line break]";
 		now carried of testosterone pill is 1;
-	else if ButterflyRaped > 1 and ButterflyPregnant is True and gestation of ButterflyBaby is 3:
-		say "You stumble upon the butterfly who appears to have recently given birth and is nursing a child on her breast. At first she's unsure how you'll react, but as you show interest in the in the child she develops a cautious trust. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of ButterflyBaby] face and [bodyname of ButterflyBaby] body, covered in [skinname of ButterflyBaby] skin. Your child, hungry for knowledge and experience of the world decides to stay with you.";
-		add facename of ButterflyBaby to childrenfaces;
-		add bodyname of ButterflyBaby to childrenbodies;
-		add skinname of ButterflyBaby to childrenskins;
+	else if ButterflyRaped > 1 and ButterflyPregnant is True and ButterflyBabyGestation is 3:
+		say "You stumble upon the butterfly who appears to have recently given birth and is nursing a child on her breast. At first she's unsure how you'll react, but as you show interest in the in the child she develops a cautious trust. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [ButterflyBabyFaceName] face and [ButterflyBabyBodyName] body, covered in [ButterflyBabySkinName] skin. Your child, hungry for knowledge and experience of the world decides to stay with you.";
+		add ButterflyBabyFaceName to childrenfaces;
+		add ButterflyBabyBodyName to childrenbodies;
+		add ButterflyBabySkinName to childrenskins;
 		[now ButterflyProcreated is True;]
-		now gestation of ButterflyBaby is 0;
+		now ButterflyBabyGestation is 0;
 		now ButterflyPregnant is False;
 		follow the ButterflyTummyDesc rule;
 		increase perception of player by 2;
@@ -740,8 +746,8 @@ to say butterfly grove scene:
 		follow the turnpass rule;
 		stop the action;
 	else if ButterflyRaped > 1 and ButterflyPregnant is False:
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Butterfly":
 				let debit be 0;
 				if hardmode is true and level of player > 3, let debit be level of player - 3;
@@ -779,8 +785,8 @@ to say butterfly grove scene:
 						now libido of player is (libido of player) / 2;
 						impregnatebutterfly;
 					else: [No other option but to re-enable her as a random spawn]
-						repeat with y running from 1 to number of filled rows in table of random critters:
-							choose row y in table of random critters;
+						repeat with y running from 1 to number of filled rows in Table of Random Critters:
+							choose row y in Table of Random Critters;
 							if name entry is "Butterfly":
 								now area entry is "High";
 								break;
@@ -800,8 +806,8 @@ to say butterfly grove scene:
 					now carried of testosterone pill is 1;
 					infect "Butterfly";
 					wait for any key;
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
+					repeat with y running from 1 to number of filled rows in Table of Random Critters:
+						choose row y in Table of Random Critters;
 						if name entry is "Butterfly":
 							now area entry is "High";
 							break;
@@ -828,12 +834,12 @@ to say butterfly grove scene:
 			infect "Butterfly";
 			[re-enable her as a random spawn and reset the scenario since we can't really go too far with this]
 			now ButterflyRaped is 1;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Butterfly":
 					now area entry is "High";
 					break;
-	else if ButterflyPregnant is True and ButterflyLove is True and gestation of ButterflyBaby is 1 and ButterflyRaped is 0:
+	else if ButterflyPregnant is True and ButterflyLove is True and ButterflyBabyGestation is 1 and ButterflyRaped is 0:
 		now ButterflyAttire is "She is completely naked and makes no attempt to hide any part of her body from the golden tuft of hair above her pubes to the stiff [one of]ruby[or]scarlet[at random] red nipples decorating her jiggling [ButterflyBreastDesc] breasts like small cherries.";
 		now ButterflyHasNegligee is False;
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy]";
@@ -842,7 +848,7 @@ to say butterfly grove scene:
 		WaitLineBreak;
 		say "As her [ButterflyBreastDesc] breasts press against your [skin of player] body she wraps her legs around your midsection kissing you obsessively. With one hand firmly on her abdomen you position [if cocks of player > 1]the largest of [end if]your cock[smn] against her moist labia. Noticing your member draw near she slides back on both arms around your neck to get a good view of you inserting into her. As she peers down, her antennae bob before your eyes. You press your face into her golden tresses and take in her sweet scent. The moans begin as your cock slips into her cunt and you both begin to rock your hips. Her wings spasming in pulses she begins a kissing assault once again, and you return the favor. As her hindquarters fuck you relentlessly you feel the tension build in your cock. Quickly pulling it out of her you press it between your bodies as it explodes in a torrent spraying cum up over her tummy and splattering it on the underside of her breasts. With her legs still wrapped around your waist, she grinds her clit against your cock[smn] as she holds on to you from a single arm around your neck. With her free hand she scoops the cum off her body and feeds it into her mouth.";
 		wait for any key;
-	else if ButterflyPregnant is True and ButterflyLove is True and gestation of ButterflyBaby is 2 and ButterflyRaped is 0:
+	else if ButterflyPregnant is True and ButterflyLove is True and ButterflyBabyGestation is 2 and ButterflyRaped is 0:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy]";
 		WaitLineBreak;
 		say "The butterfly girl approaches you affectionately, looking more full figured than when you last met. She greets you with a caring hug and a tender kiss. Looking into your eyes, she purrs, 'You're going to be a daddy,' flapping her wings proudly. She draws your hands towards her protruding belly, and you sense the living form inside as you feel a little kick. Your lover notices your eyes on her engorged [ButterflyBreastDesc] breast and smiles, offering it to you. 'Daddy can have the first taste if he wants.' You begin to suckle at her swollen nipple as her thick and sweet milk froths in your mouth. As you enjoy her tasty liquid your thirst and hunger is quenched. Continuing to suck away you feel her hand stroking your throbbing [cocktext]shaft[smn].";
@@ -853,15 +859,15 @@ to say butterfly grove scene:
 		say "After spending many enjoyable hours together you go to head home. Just as you're about to leave you find your face squeezed between her [ButterflyBreastDesc] tits and covered in kisses as she bids you farewell.";
 		now ButterflyBreastDesc is "plump and bouncy D-cup";
 		wait for any key;
-	else if ButterflyLove is True and gestation of ButterflyBaby is 3 and ButterflyRaped is 0:
+	else if ButterflyLove is True and ButterflyBabyGestation is 3 and ButterflyRaped is 0:
 		say "The butterfly girl is hovering before you. [ButterflyAttire][ButterflyTummy]";
 		WaitLineBreak;
-		say "Your butterfly lover embraces you clearly in discomfort. 'I-it's time,' she moans as fluids vacate beneath her bulging tummy. You sit her down on the cleanest spot you can find and spread her knees as her breathing becomes erratic. As she begins to exert and sweat you do what you can to ease the process even if it's only offering her your hand, the hand of her mate, to squeeze. Slowly the top of the baby's head emerges from her birthing canal. You offer encouragement as she heaves and slowly the head emerges, and once past the shoulders the child slips free. Moments later the infant is suckling at one of its mother's [ButterflyBreastDesc] breasts enjoying its first proper meal. You comfort your lover as she tends to the newborn's needs. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of ButterflyBaby] face and [bodyname of ButterflyBaby] body, covered in [skinname of ButterflyBaby] skin. You and your lover decide together that your child needs knowledge of the world and will stay with you.";
-		add facename of ButterflyBaby to childrenfaces;
-		add bodyname of ButterflyBaby to childrenbodies;
-		add skinname of ButterflyBaby to childrenskins;
+		say "Your butterfly lover embraces you clearly in discomfort. 'I-it's time,' she moans as fluids vacate beneath her bulging tummy. You sit her down on the cleanest spot you can find and spread her knees as her breathing becomes erratic. As she begins to exert and sweat you do what you can to ease the process even if it's only offering her your hand, the hand of her mate, to squeeze. Slowly the top of the baby's head emerges from her birthing canal. You offer encouragement as she heaves and slowly the head emerges, and once past the shoulders the child slips free. Moments later the infant is suckling at one of its mother's [ButterflyBreastDesc] breasts enjoying its first proper meal. You comfort your lover as she tends to the newborn's needs. The nanites rapidly transfer personality and knowledge from you and your partner's genes to the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [ButterflyBabyFaceName] face and [ButterflyBabyBodyName] body, covered in [ButterflyBabySkinName] skin. You and your lover decide together that your child needs knowledge of the world and will stay with you.";
+		add ButterflyBabyFaceName to childrenfaces;
+		add ButterflyBabyBodyName to childrenbodies;
+		add ButterflyBabySkinName to childrenskins;
 		now ButterflyProcreated is True;
-		now gestation of ButterflyBaby is 0;
+		now ButterflyBabyGestation is 0;
 		now ButterflyPregnant is False;
 		follow the ButterflyTummyDesc rule;
 		increase perception of player by 2;
@@ -925,9 +931,9 @@ to say butterfly grove scene:
 		say "You sense someone is watching you, but no matter where you look you can't find anyone.";
 		wait for any key;
 	if ButterflyPregnant is True:
-		increase gestation of ButterflyBaby by 1;
-		if gestation of ButterflyBaby > 3:
-			now gestation of ButterflyBaby is 0;
+		increase ButterflyBabyGestation by 1;
+		if ButterflyBabyGestation > 3:
+			now ButterflyBabyGestation is 0;
 			now ButterflyPregnant is False;
 			say "You suddenly feel a strange feeling of achievement in your [ball size].";
 		follow the ButterflyTummyDesc rule;
@@ -993,7 +999,7 @@ to say butterflymagic:
 		replace character number 5 in bmagic with "9";
 	else:
 		replace character number 5 in bmagic with "[ButterflyRaped]";
-	replace character number 6 in bmagic with "[Gestation of ButterflyBaby]";
+	replace character number 6 in bmagic with "[ButterflyBabyGestation]";
 	replace character number 7 in bmagic with "[bcupsize]";
 	say "[bmagic]";
 
@@ -1035,16 +1041,16 @@ To recite butterflymagic (x - text):
 		now ButterflyRaped is the number understood;
 	change the text of the player's command to character number 6 in bmagic;
 	if the player's command matches "[number]":
-		now Gestation of ButterflyBaby is the number understood;
-		if Gestation of ButterflyBaby > 0:
+		now ButterflyBabyGestation is the number understood;
+		if ButterflyBabyGestation > 0:
 			now ButterflyPregnant is True;
 			now butterfly grove is known;
 	if character number 7 in bmagic is "C":
 		now ButterflyBreastDesc is "full and firm C-cup";
 	else if character number 7 in bmagic is "D":
 		now ButterflyBreastDesc is "plump and bouncy D-cup";
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Butterfly":
 			if the butterfly grove is known:
 				now area entry is "Unknown";
@@ -1059,7 +1065,7 @@ Understand "bdebug" as ButterflyDebug.
 
 carry out ButterflyDebug:
 	say "Butterfly debug information:[line break]";
-	say "     gestation of ButterflyBaby: [gestation of ButterflyBaby][line break]";
+	say "     ButterflyBabyGestation: [ButterflyBabyGestation][line break]";
 	say "     ButterflyPregnant: [ButterflyPregnant][line break]";
 	say "     ButterflyRaped: [ButterflyRaped][line break]";
 	say "     ButterflyTummy: [ButterflyTummy][line break]";
@@ -1072,8 +1078,8 @@ carry out ButterflyDebug:
 	say "     ButterflyHasNegligee: [ButterflyHasNegligee][line break]";
 	say "     ButterflyEncounters: [ButterflyEncounters][line break]";
 	say "     ButterflyPantiesFound: [ButterflyPantiesFound][line break]";
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Butterfly":
 			if area entry is not "Unknown":
 				say "     The butterfly is currently out roaming around '[area entry]'.";
@@ -1096,7 +1102,7 @@ carry out butterflyprocreated:
 	now ButterflyProcreated is True;
 	now ButterflyLove is True;
 	now ButterflyRaped is 0;
-	now gestation of ButterflyBaby is 0;
+	now ButterflyBabyGestation is 0;
 	now ButterflyPregnant is False;
 	follow the ButterflyTummyDesc rule;
 	increase perception of player by 2;
@@ -1107,8 +1113,8 @@ spawnbutterfly is an action applying to one topic.
 understand "bspawn" as spawnbutterfly.
 
 carry out spawnbutterfly:
-	repeat with X running from 1 to number of filled rows in table of random critters:
-		choose row X from the table of random critters;
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
 		if name entry is "Butterfly":
 			now monster is X;
 			now monsterHP is HP entry;
@@ -1130,9 +1136,9 @@ carry out impregbutterfly:
 	now ButterflyHasNegligee is False;
 	say "You find a note she left behind with a rough map leading to her home.";
 	now butterfly grove is known;
-	now gestation of ButterflyBaby is 1;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	now ButterflyBabyGestation is 1;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Butterfly":
 			now area entry is "Unknown";
 			break;
@@ -1161,7 +1167,7 @@ carry out resetbutterfly:
 	now ButterflyAttire is "She is wearing a white negligee, but you can't help but notice the lack of undergarments through its sheer semi-translucency. [if ButterflyNegligeeTorn is True]The negligee is [one of]ripped[or]torn[at random] open at the chest, exposing her [ButterflyBreastDesc] breasts and the protruding [one of]ruby[or]scarlet[at random] red nipples that adorn them. Her chest jiggles[else]The negligee is held together at the bust with a white ribbon. Her build is slight and punctuated with a pair of [ButterflyBreastDesc] breasts jiggling slightly[end if] as her wings flap.";
 	now ButterflyHasNegligee is True;
 	now ButterflyEncounters is 0;
-	now Gestation of ButterflyBaby is 0;
+	now ButterflyBabyGestation is 0;
 
 bsave is an action applying to nothing.
 understand "bsave" as bsave.

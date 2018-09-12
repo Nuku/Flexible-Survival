@@ -129,15 +129,19 @@ Instead of resolving a Alternative Entry:
 				else: [no contact with the New Ewe Crowd yet]
 					say "     Hm, you wonder for a moment what you should do now, without much success. Tracking in the sewers is hopeless - even a bloodhound would capitulate to the stench, and the darkness and dirt pretty much rule out reading footprints. The only other idea that comes to you would be to find some friendly sewer-dweller who might have seen the hyenas pass through... but that's highly unlikely, right? A bit beaten and distraught, you walk back to the entrance of the museum. Maybe you should take a while off from this task to clear your head. Go out and maybe find a [bold type]store[roman type] that still has supplies to loot or something like that. You've still got your everyday survival to think of after all...";
 				now HyenaTrailing is 3;
+				now Resolution of Alternative Entry is 1; [won]
 				now Alternative Entry is resolved;
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "     Feeling much abused as the beast deposits you outside its lair, you slowly pull yourself back together before staggering your way down the halls to try to find your way back to the foyer. Once you finally manage to get there, you groan as you realize you aren't sure exactly where you found the large cat's lair. Seems like you will have to try tracking the thieves back to it all over again...";
 				stop the action;
+				now Resolution of Alternative Entry is 2; [lost]
 			else if fightoutcome is 30: [fled]
 				say "     Running away as fast as you can from the beast, you stumble through numerous rooms before eventually finding your way back to the foyer. Once you calm yourself enough to think about things rationally again, you realize you aren't sure exactly where you found the large cat's lair. Seems like you will have to try tracking the thieves back to it all over again...";
+				now Resolution of Alternative Entry is 3; [fled]
 		else:
 			say "     After several hours wandering the halls, you are forced to admit that you have completely lost the trail of the thieves, and sigh as you set out to try to find your way back to the museum foyer so you can try again.";
 			stop the action;
+			now Resolution of Alternative Entry is 4; [perception check fail]
 	else:
 		say "     Wandering through the halls of the museum, you hear a faint rumbling noise from nearby, looking around you realize it is coming from one of the nearby 'Employees Only' doors. Your curiosity getting the better of you, you slowly open the door a crack and peek inside. You are startled to find yourself peeking right into the face of a large sabretooth cat! After a second of panic, the rumbling noise comes again, and you realize that the sound is the cat's soft snoring, the beast obviously having not gotten a good nights sleep in years, you decide to slowly close the door and let sleeping giant man-eating pussycats lie...";
 
@@ -194,10 +198,12 @@ Instead of resolving a Hyena Challenge:
 							say "     Lying there proudly as you enjoy your victory over the formerly proud matriarch, you grin as the hyenas party around you, celebrating your victory as they make you honorary matriarch for a time. You are treated to your pick of everything the gang has, and the hyenas definitely throw one hell of a party. Eventually though, it is time for you to go, the former matriarch handing over the items you wanted easily enough, while the rest of the gang begins to settle down to the rough task of deciding who gets to be the next matriarch. As you walk away down the city streets, you find yourself almost wishing you could go back and claim the matriarch's throne from them on a more permanent basis...";
 							now matriarchowned is 0;
 							now RareQuesting is 9;
+							now Resolution of Hyena Challenge is 1; [won]
 							now Hyena Challenge is resolved;
 						else if fightoutcome > 19: [lost or fled]
 							say "     After several hours of being passed around by the numerous gang members, all eager to get a shot at the person who thought they could challenge the matriarch, you are left alone to recover while the orgy continues without you. Eventually you manage to recover enough from the matriarch's dominant use of your all too willing body, and slowly drag yourself away from the gang's territory. As you stagger down the streets of the city, the cum of many different hyenas matting your thick black fur, you groan as you realize that you certainly don't have a chance of recovering the items Nermine wants from the hyena stronghold now... even as the part of you that the hyena matriarch brought out is wondering if maybe you shouldn't just give up on your silly quest and go back and become a nice little submissive hyena for the much more powerful gang of hyenas...";
 							now matriarchdefeated is 0;
+							now Resolution of Hyena Challenge is 2; [lost/fled against Matriarch]
 							now Hyena Challenge is resolved;
 					else: [female or neuter player]
 						say "     Looking down at the matriarch's defeated guards, you are surprised to hear the crowd of hyenas cheer your victory as loudly as they cheered for their own kind, their praise making you feel slightly more dominant as you straighten up and stretch from your hard-won victory. After several minutes of cheering, and jesting, the crowd grows silent again in anticipation as the matriarch herself steps forward with a grin, and looking around you realize that win or lose, this particular fight is definitely a unique opportunity. If you lose now, you are pretty sure you won't have another chance at getting the items back for Nermine, and so you resolve to fight your hardest to prove your dominance over the powerful matriarch.";
@@ -208,16 +214,20 @@ Instead of resolving a Hyena Challenge:
 							say "     You are treated to your pick of everything the gang has, and the hyenas definitely throw one hell of a party. Eventually though, it is time for you to go, the former matriarch handing over the items you wanted easily enough, while the rest of the gang begins to settle down to the rough task of deciding who gets to be the next matriarch. As you walk away down the city streets, you find yourself almost wishing you could go back and claim the matriarch's throne from them on a more permanent basis...";
 							now matriarchowned is 0;
 							now RareQuesting is 9;
+							now Resolution of Hyena Challenge is 1; [won]
 							now Hyena Challenge is resolved;
 						else if fightoutcome > 19: [lost or fled]
 							say "     After several hours of being passed around by the numerous gang members, you lose track of time as new cocks penetrate your [if player is female]pussy[else]body[end if], everyone being eager to get a shot at the person who thought they could challenge the matriarch and dump a load or two in you. At some point you lose the strapon they gave you, as one of the hyenas rips it off you making you cry out, while the rest laugh at you, since now they know why you came to the fight so ill prepared with a cock of your own. Obviously you are such a submissive slut you don't need one after all!";
 							say "     After even more sex in form of a prolonged gangbang, you are finally left alone to recover while the orgy continues without you, and eventually you manage to recover enough from the matriarch's dominant use of your all too willing body, and slowly drag yourself away from the gang's territory. As you stagger down the streets of the city, the cum of many different hyenas matting your thick black fur, you groan as you realize that you certainly don't have a chance of recovering the items Nermine wants from the hyena stronghold now... even as the part of you that the hyena matriarch brought out is wondering if maybe you shouldn't just give up on your silly quest and go back and become a nice little submissive hyena for the much more powerful gang of hyenas...";
 							now matriarchdefeated is 0;
+							now Resolution of Hyena Challenge is 2; [lost/fled against Matriarch]
 							now Hyena Challenge is resolved;
 				else if fightoutcome > 19: [lost or fled]
 					say "     Defeated and humiliated in front of the laughing gang of hyenas, you are forced to slink away in disgrace from the arena, even as an orgy and several more impromptu challenge matches break out behind you. You are almost safely away when you hear the Hyena matriarch calling out teasingly behind you, inviting you to come back and try again whenever you feel up to it. Her challenge makes you blush with shame, as you resolve to do just that.";
+					now Resolution of Hyena Challenge is 3; [lost/fled]
 			else if fightoutcome > 19: [lost or fled]
 				say "     Defeated by the hyenas, you have no choice but to slink back off down the streets of the city, wondering how you could lose to just a couple hyenas after having come this far successfully... You resolve to try again as soon as you have recovered.";
+				now Resolution of Hyena Challenge is 3; [lost/fled]
 	else:
 		say "     Traveling through the streets of the mostly deserted city, you come across an area completely painted in some kind of strange gang signs placed one on top of the other. Noticing that the paint is still fresh in some places, you decide it might be best to leave the area as quietly and quickly as possible, before one of the strange gang members returns and finds you here.";
 
@@ -240,9 +250,11 @@ Instead of resolving a Anubis Statue:
 			say "     'Excellent! I knew I could count on you to know what is good for you,' the jackal-headed man says as he rubs his claw-tipped hands together in amusement. 'First things first though. I requre a task from you for my help... trust me, it will be well worth the effort,' he says and you listen attentively to what comes next. 'Go to the [bold type]zoo[roman type] here in town, and bring me back these particular [bold type]pheromone[roman type] samples they have stored there. Be sure not to drop any - I know for a fact that you won't find a second set anywhere else.' Tapping the side of his narrow muzzle with a finger in a knowing gesture, the strange man pulls a little scroll of - paper? No actually it's papyrus, from behind his back, handing it to you. 'Oh and If you happen to run into any of those annoying cats while you're at it... give them a good pounding if you don't mind.' With that said, he grins at you and walks through one of the high archways leading out of the room, being gone before you can think of asking any questions.";
 			now statuequest is 0;
 			now anubisrequest is 1;
+			now Resolution of Anubis Statue is 1; [agreed to the bargain]
 		else:
 			LineBreak;
 			say "     'That's too bad,' the strange man says with a sad look on his face. 'I was so looking forward to watching you play with that lovely little jackaless some more.' With a teasing look on his jackal muzzle, he turns and begins to walk away. Before he vanishes through a tall archway, he looks back over his shoulder, throwing you a casual, 'If you change your mind, you know where to find me.'";
+			now Resolution of Anubis Statue is 2; [refused the bargain]
 	else if statuequest is 2:
 		say "     Returning to the museum with the samples the strange man sent you to retrieve, you luckily manage to retrace your steps to the empty pedestal, and are unsurprised to find the jackal-like man leaning up against it with an amused grin. 'Found them I see?' he says with a smirk as he takes the bundle of vials from you eagerly. 'Trust me, these little beauties will make it more than worth your while,' the jackalman says as he begins to carefully mix the pheromones together, the scent of some strange sort of musk filling your nose as he does so. 'Ah there we go!' he says happily as he takes a whiff of the completed project, seeming satisfied as he pulls out a familiar looking ankh with a jackal embossed on it.";
 		say "     The man gives you a wink as he slowly pours the mixture over the ankh, and the metal seems to almost absorb the liquid into itself. 'There we go now, once you use this little beauty, that little shopkeep won't be able to keep her hands off of you. The jackal musk and enhanced pheromone mix should make sure of that,' the man says with a grin as he hands you the strangely scented ankh. 'I told you this little side trip of yours would be beneficial to both of us now didn't I? I look forward to seeing how it works out,' he says in a voice filled with amusement as he turns and wanders off into the dark museum halls again.";
@@ -250,6 +262,7 @@ Instead of resolving a Anubis Statue:
 		LineBreak;
 		say "[bold type]You gain a strange ankh![roman type][line break]";
 		increase carried of strange ankh by 1;
+		now Resolution of Anubis Statue is 3; [brought back the samples]
 
 
 Bestial Pheromones is a situation. The level of Bestial Pheromones is 4.
@@ -280,14 +293,15 @@ Instead of resolving a Bestial Pheromones:
 			if diceroll > 16:
 				say "     Quickly determining the filing system, you manage to hunt down all of the pheromones and chemicals on the list, noting with some surprise they seem to be mostly canine and jackal pheromones and some pheromone enhancing chemicals. You wonder idly what the strange man wants with these particular chemicals, but given the way the strong musk in the room is making your head spin with arousal, you decide to worry about that later. Ducking outside you look down at the double handful of vials you have now and wonder if you really should return them to that strange man in the museum. Then again, the thought of being even more powerful and jackal-like is very tempting as well. Tucking the items in your pack, you resolve to decide later, as you head back out into the zoo.";
 				now statuequest is 2;
+				now Resolution of Bestial Pheromones is 1; [got the stuff]
 				now Bestial Pheromones is resolved;
 			else:
 				say "     You search the area as fast as you can, rummaging through the different vials even as your mind grows more and more clouded with lust. The musk of many different species fills your brain as your jackal nose inhales them happily, causing you to be more and more aroused and focused on touching and stroking your sensuous fur instead of searching the area as time goes on. Eventually you are so aroused that you barely can stop yourself from downing a vial or two of obviously recently collected lion seed, your body so sexually needy that you can think of little else. Forcing yourself to put the vials down you stagger back out into the zoo, running through the overgrown pathways in a vain attempt to clear your head and put some distance between you and the tempting musk-filled room. If you stayed there any longer, that would surely have put your remaining humanity at risk. Once your head has cleared slightly, you realize that if you want to find the items the jackal man asked for, you will need to return, hopefully being more careful this time though...";
-				LineBreak;
-				say "[bold type]Your sanity decreases by 15![roman type][line break]";
-				decrease humanity of player by 15;
+				SanLoss 15;
+				now Resolution of Bestial Pheromones is 2; [didn't find the stuff]
 		else if fightoutcome > 19: [lost or fled]
 			say "     Driven back by the sleek powerful felines, you are forced to retrace your steps down the zoo pathways, needing to rest and relax before you can try again... if you try again anyways.";
+			now Resolution of Bestial Pheromones is 3; [lost/fled]
 
 Twisted fruit grove is a situation. The level of twisted fruit grove is 4.
 The Sarea of Twisted fruit grove is "Park".
@@ -400,6 +414,7 @@ Instead of resolving a Twisted fruit grove:
 			say "     Soon finding yourself all alone, you let out the breath you hadn't realized your were holding, and straighten up before heading back to the park entrance at a run, deciding you have definitely had more than enough excitement for today.";
 			now FelinoidRescued is 2; [player won the fight to save the Felinoid]
 			now RareQuesting is 2;
+			now Resolution of Twisted Fruit Grove is 1; [saved the felinoid]
 			now Twisted fruit grove is resolved;
 			stop the action;
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
@@ -443,6 +458,9 @@ When play ends:
 
 Section 6- Rare Item case
 
+Table of GameCharacterIDs (continued)
+object	name
+Rare Counter	"Rare Counter"
 
 Rare Counter is a man.
 The description of Rare Counter is "[RareCounterDesc]".
@@ -678,7 +696,7 @@ An everyturn rule:
 		if JackalManTF >= 3:
 			if facename of player is not "Jackalman":
 				say "You feel a strange discontent building in your head, as your face seems to burn and flex, its external form not matching that of your internal jackal, causing you to snap and snarl even as the bones in your face begin to shift and stretch again, and you let out a loud howl of triumphant pleasure as your face reshape itself back into a proper jackals visage, your grin once more stretching your muzzle as your gold dusted black fur settles in once more over your handsome jackals countenance.";
-				Now facename of player is "Jackalman";
+				now facename of player is "Jackalman";
 				now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seeming both predatory, and strangely sexy at the same time";
 		if JackalManTF >= 4:
 			if bodyname of player is not "Jackalman":

@@ -18,14 +18,14 @@ RandallBradRelationship is a number that varies.
 CocoRelationship is a number that varies.
 
 Hanging out on the Green is a situation.
-Hanging out on the Green is resolved.
+Hanging out on the Green is inactive.
 The sarea of Hanging out on the Green is "Campus".
 
 when play begins:
 	add Hanging out on the Green to badspots of guy;
 	add Hanging out on the Green to badspots of furry;
 
-instead of going to College Walkway West while (Hanging out on the Green is not resolved and LastCampusWalkin - turns > 0 and StewartRelationship > 0 and RandallBradRelationship < 1 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway West while (Hanging out on the Green is active and Hanging out on the Green is not resolved and LastCampusWalkin - turns > 0 and StewartRelationship > 0 and RandallBradRelationship < 1 and a random chance of 1 in 3 succeeds):
 	move player to College Walkway West;
 	FirstRandallEvent;
 
@@ -41,17 +41,17 @@ to FirstRandallEvent:
 	say "     'Hey! Nice to see you here!' The harpy boy says with a smile. Randall looks at his friend with a curious look. 'Oh, yeah. Randall this is the person I told you I ran into a while back,' he says, gesturing to you. The bunny boy 'ahh's before standing up and holding out his hand. You promptly take it and give it a firm shake. [if player is male and cunts of player < 1]As this is happening he seems to give your clothed dick a lusty look before promptly focusing back on you. [end if]'Nice to meet ya, I'm Randall,' he says, shaking your hand back. You smile at him and let the guy know it's great to meet him. Stewart quickly looks towards the direction of the belltower when it begins to ring, causing him to nudge the bunny. 'Come on, we're late for class,' he says, causing the other to swear as the two run towards Lecture Street. You on the other hand get back to what you were doing.";
 	now RandallBradRelationship is 1;
 	now Hanging out on the Green is resolved;
-	now Bunny Eavesdropper is not resolved;
+	now Bunny Eavesdropper is active;
 
 Bunny Eavesdropper is a situation.
-Bunny Eavesdropper is resolved.
+Bunny Eavesdropper is inactive.
 The sarea of Bunny Eavesdropper is "Campus".
 
 when play begins:
 	add Bunny Eavesdropper to badspots of guy;
 	add Bunny Eavesdropper to badspots of furry;
 
-instead of going to College Walkway West while (Bunny Eavesdropper is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 1 and a random chance of 1 in 3 succeeds):
+instead of going to College Walkway West while (Bunny Eavesdropper is active and Bunny Eavesdropper is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 1 and a random chance of 1 in 3 succeeds):
 	move player to College Belltower;
 	SecondRandallEvent;
 
@@ -68,17 +68,17 @@ to SecondRandallEvent:
 	now RandallBradRelationship is 2;
 	now CocoRelationship is 1;
 	now Bunny Eavesdropper is resolved;
-	now Operation Horny Bunny is not resolved;
+	now Operation Horny Bunny is active;
 
 Operation Horny Bunny is a situation.
-Operation Horny Bunny is resolved.
+Operation Horny Bunny is inactive.
 The sarea of Operation Horny Bunny is "Campus".
 
 when play begins:
 	add Operation Horny Bunny to badspots of guy;
 	add Operation Horny Bunny to badspots of furry;
 
-instead of going to Lecture Street while (Operation Horny Bunny is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 2 and a random chance of 1 in 3 succeeds):
+instead of going to Lecture Street while (Operation Horny Bunny is active and Operation Horny Bunny is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 2 and a random chance of 1 in 3 succeeds):
 	move player to College Belltower;
 	ThirdRandallEvent;
 
@@ -98,8 +98,10 @@ to ThirdRandallEvent:
 		WaitLineBreak;
 		say "     The room is filled with the sound of slurping as Brad begins to thrust in and out Randall's throat, eagerly facefucking him. While this is happening you're wondering how the hell Coco is keeping Jennifer distracted for so long. Nevertheless you continue to star on as your friend takes the throat rape eagerly, occassionally slipping his tongue out to lick at the bunny jock's balls whenever the male is balls deep in his mouth. However, it's very clear that Brad hasn't had any sex in a while by how much he is coming apart only with a blowjob. He's moaning wantonly like a slut, clearly enjoying Randall's tight throat.";
 		say "     However, because of not having sex in a while, it doesn't take much for the basketball player to cum. When he does, it's in such large amounts that it starts to spill out of the bunny boy's mouth. Even then, Brad pulls out and continues to shoot, but this time on Randall's face, coating it in jizz. When the male's done, his partner takes his cock in his mouth, proceeding to clean him off before letting it out of his mouth with a pop. 'Fuck dude, that was brilliant.' The bunny jock mutters. However he quickly notices that he's later for his next class. 'Shit! Maybe we could do this again some other time?' he asks before running off. Randall just sits there in bliss with a happy smile as he pushes the cum coating him into his mouth. Deciding to leave the boy on his own, you head off, making sure to look for him later.";
+		now Resolution of Operation Horny Bunny is 1; [watched em fuck]
 	else:
 		say "     You shake your head and decide against it. You'd rather not interrupt a moment for the bunny boy himself. Instead you turn and make your way elsewhere. Perhaps you'll see them later.";
+		now Resolution of Operation Horny Bunny is 2; [didn't watch em fuck]
 	now RandallBradRelationship is 3;
 	now Operation Horny Bunny is resolved;
 
@@ -107,17 +109,17 @@ instead of going northeast from College Walkway Northeast while RandallBradRelat
 	say "     Upon entering the library you notice a familiar pair of bunnies talking next to a bookshelf. Randall appears to have a frustrated look on his face whereas Brad looks to be having an existential crisis. 'Come on Brad, you should leave her,' the bunny boy begs. The jock, who still appears to be having no clue what to do, speaks up. 'But she's my girlfriend,' he tries countering. However, your friend immediately bites back with an argument. 'Girlfriend?! The chick who's been blue-balling you and trying to manipulate you for the past two-three weeks?!' he quietly yells. That prompts a whine of protest from the bun that Randall is trying to seduce. It's very clear that he agrees with the shorter boy's statement but still appears hesitant.";
 	say "     The bunny boy then decides to make a dirty move, as you see him slip his paw into Brad's shorts, grasping a hold of his slowly hardening cock. 'Come on, just think about it. You know I'll take care of you,' he mutters, starting to plant kisses on the jock's neck. Said male lets out a groan of appreciation before his resistance finally crumbles. 'F-fine,' the basketball player says, causing Randall to cheer before giving his new boyfriend a big sloppy kiss on the lips. After that the conversation dies down to your friend telling Brad it'd be best for him to move in with the bunny boy as he does currently live with Jen. The jock sighs and nods at that, the two of them heading off to the Dorms to start moving everything.";
 	now RandallBradRelationship is 4;
-	now New Roommates is not resolved;
+	now New Roommates is active;
 
 New Roommates is a situation.
-New Roommates is resolved.
+New Roommates is inactive.
 The sarea of New Roommates is "Campus".
 
 when play begins:
 	add New Roommates to badspots of guy;
 	add New Roommates to badspots of furry;
 
-instead of going to Dorm Street while (New Roommates is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 4 and a random chance of 1 in 3 succeeds):
+instead of going to Dorm Street while (New Roommates is active and New Roommates is not resolved and LastCampusWalkin - turns > 0 and RandallBradRelationship is 4 and a random chance of 1 in 3 succeeds):
 	move player to Dorm Street;
 	FourthRandallEvent;
 
@@ -139,8 +141,10 @@ to FourthRandallEvent:
 		say "     Sounds of heavy balls slapping against bunny boy's cheeks fill the room, something that you can clearly hear from the window you're watching at. Randall is moaning like a wanton whore at the moment, showing how much he loves dick. By now he's reached his paw down to his smaller, yet still big dick and has started to masturbate. Brad on the other hand is grunting as he thrusts into his boyfriend. The two of their sounds get louder and louder, signifying that they're nearing orgasm. It isn't until the bunny jock lets out a loud groan and slams into his lover hard that they both cum. Randall shoots his load all over his body, some of it landing in his mouth whereas Brad dumps his jizz into your friend's hole.";
 		WaitLineBreak;
 		say "     Seconds later Randall catches you in the corner of his eye and smiles, waving at you from his blissed out position on the bed. That causes Brad to turn towards you and his eyes widen. With a grunt, the bunny boy gets off the bed, cum leaking out of his hole as he wanders over to the window, opening it wide. 'Hey there! Did you like the show?' he asks with a large grin. You nod at him with matching emotions. 'Good! If you want to visit us later and... maybe have some fun together then come see us in the morning. If you can't tell, my room's to the southwest of the entrance to the building,' he tells you. You let out an assent of agreement and head off on your own, hearing an eep as the window shuts.";
+		now Resolution of New Roommates is 1; [watched em fuck]
 	else:
 		say "     You shake your head. You're in a public place and would rather not be spotted spying on a couple having sex. Instead you turn and head back the way you came, maybe you'll visit later.";
+		now Resolution of New Roommates is 2; [didn't watch em fuck]
 	now RandallBradRelationship is 5;
 	now New Roommates is resolved;
 

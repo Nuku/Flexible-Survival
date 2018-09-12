@@ -17,7 +17,11 @@ Version 1 of Val by Wahn begins here.
 [  3: big bulge                                                ]
 [  4: kid born and taken while the player was out              ]
 
-Val is a man. The HP of Val is usually 0.
+Table of GameCharacterIDs (continued)
+object	name
+Val	"Val"
+
+Val is a man. The HP of Val is normally 0.
 The description of Val is "[ValDesc]".
 The conversation of Val is { "Mew!" }.
 ValPregCounter is a number that varies.
@@ -198,13 +202,9 @@ to say ValSexMenu:
 					say "[ValSex2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the orc breeder, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the orc breeder, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

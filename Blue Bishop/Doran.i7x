@@ -107,7 +107,7 @@ when play begins:
 [   1 = Inactive                                                             ]
 [   2 = Active                                                               ]
 
-DoranPlayerRegard is text that varies.
+DoranPlayerRegard is a text that varies.
 DoranFoodTimer is a number that varies. DoranFoodTimer is usually 555.
 DoranPlayerGenderRegard is a truth state that varies.
 DoranRole is a number that varies. DoranRole is usually 2.
@@ -257,8 +257,8 @@ to say Doran_Beat:
 		say "     'Very well; however, if things change for my victor, I'm always available.' He goes on to explain where he resides. Apparently there's a cave within a not-too-distant [bold type]Rocky Outcropping[roman type], and his instructions are clear enough that you should have no issue getting there, 'Doran's the name, by the way.'";
 		say "     Once he's done, he makes to leave in that direction, scaled and well-toned ass waving at you in his departure, as though to entice you to follow.";
 	now the rocky outcropping is known;
-	choose row monster from the table of random critters;
-	now area entry is "nowhere";
+	choose row monster from the Table of Random Critters;
+	now area entry is "Nowhere";
 
 to say DoranDescription:
 	setmongender 3; [creature is male]
@@ -385,12 +385,12 @@ to say DoranVictory_TurnDown: [turn down]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Peculiar Dragon";
 	now enemy title entry is "Peculiar Dragon";
 	now enemy name entry is "Doran";
@@ -438,8 +438,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;
+	now DayCycle entry is 0;
 	now altcombat entry is "firebreath";
+	now BannedStatus entry is false;
 
 Section 3.0 - Doran NPC Core
 
@@ -449,6 +450,10 @@ the description of Rocky Outcropping is "[RockyOutcroppingDescription]".
 to say RockyOutcroppingDescription:
 	dorangendercheck;
 	say "     The cavernous alcove, of which Doran resides in, is quite large and spacious for the [gdragon]. You find it littered with various bits and baubles [ghe]'s no doubt stumbled upon and collected for [ghis] amusement, though nothing of particular interest or value catches your eye. It's a little unkempt, but isn't all that bad all things considered. [if daytimer is day]For the most part light floods in from the cave's entrance, though there's also a campfire, near the cave's center, which still contains a few errant, glowing embers, indicative of its recent use[else]Faint starlight creeps in from the outside, though the main source of illumination remains [ghis] roaring campfire at the cave's center[end if]. No doubt the surrounding outcropping of stone shields the place from the wind, making the cave relatively calm and quiet.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Doran	"Doran"
 
 Doran is a man. Doran is in Rocky Outcropping.
 the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link], [link]discuss[as]discuss doran[end link][line break]".
@@ -678,8 +683,8 @@ to say DoranSexMenu: [Doran Sex Protocol]
 		now calcnumber is -1;
 		say "     Upon requesting for a bit of action, Doran gets up and moves over to you[if DoranRole is 1], [ghis] demeanor suggesting [ghe]'s in a more submissive mood[end if].";
 		say "     '[one of]Yes[or]Certainly[or]Of course[at random], [DoranPlayerRegard]. [one of]What is their wish[or]How would they have me[or]How may I service them[at random]?'";
-		let trixieexit be 0;
-		while trixieexit is 0:
+		let Trixieexit be 0;
+		while Trixieexit is 0:
 			say "[bold type]Choices:[roman type][line break]";
 			say "(1) [if player is male][link]Mount [ghim][as]1[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 			say "(2) [if player is male][link]Suck your dick[as]2[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
@@ -703,46 +708,46 @@ to say DoranSexMenu: [Doran Sex Protocol]
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 				else:
 					say "[DoranSub_AnalFuck]"; [fuck the dragon]
-					now trixieexit is 1;
+					now Trixieexit is 1;
 			else if calcnumber is 2:
 				if player is not male:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 				else:
 					say "[DoranSub_CockOral]"; [oral cock]
-					now trixieexit is 1;
+					now Trixieexit is 1;
 			else if calcnumber is 3:
 				if player is not female:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 				else:
 					say "[DoranSub_CuntOral]"; [oral cunt]
-					now trixieexit is 1;
+					now Trixieexit is 1;
 			else if calcnumber is 4:
 				if player is not female or cunt length of player < 5:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 				else:
 					say "[DoranSub_CatchCunt]"; [cunt sex]
-					now trixieexit is 1;
+					now Trixieexit is 1;
 			else if calcnumber is 5:
 				if scalevalue of player < 2 and player is not twistcapped:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 				else:
 					say "[DoranSub_CatchAnal]"; [anal sex]
-					now trixieexit is 1;
+					now Trixieexit is 1;
 			else if calcnumber is 6:
 				say "[DoranSub_Rimjob]"; [Rimjob Scene]
-				now trixieexit is 1;
+				now Trixieexit is 1;
 			else if calcnumber is 7:
 				say "[DoranSub_SuckCock]"; [Oral Giving Scene]
-				now trixieexit is 1;
+				now Trixieexit is 1;
 			else if calcnumber is 8:
 				if DoranBallModStatus is 0:
 					say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
 				else:
 					say "[DoranSub_SelfMilking]"; [Self Milking]
-					now trixieexit is 1;
+					now Trixieexit is 1;
 			else:
 				say "[DoranSub_Refused]"; [turn down]
-				now trixieexit is 1;
+				now Trixieexit is 1;
 	if DoranRefusedSex is false:
 		if DoranRole <= 0 and DoranRoleIntensity > 0:
 			decrease DoranRoleIntensity by 1;
@@ -2121,8 +2126,8 @@ to say DoranNeutral_69: [BODY MODDED]
 	now tempnum2 is 0;
 	now calcnumber is -1;
 	let tempnum3 be 0;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type](1)[roman type] [link]'Top.'[as]1[end link]";
 		say "[bold type](2)[roman type] [link]'Bottom.'[as]2[end link]";
 		say "[bold type](3)[roman type] [link]'You decide.'[as]3[end link]";
@@ -2136,15 +2141,15 @@ to say DoranNeutral_69: [BODY MODDED]
 		if calcnumber is 1:
 			now tempnum is 1;
 			say "     '[one of]Very well[or]Certainly[or]No problem[at random].' T";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		else if calcnumber is 2:
 			now tempnum is 2;
 			say "     '[one of]Very well[or]Certainly[or]No problem[at random].' T";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		else:
 			now tempnum is a random number between 1 and 2;
 			say "     'Oh, [one of]how generous[or]my thanks[or]a pleasure[at random]!' T";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		say "he [gdragon] [if tempnum is 1]rolls onto [ghis] back and invites you to climb on [ghim][else if scalevalue of player < 4]sets you down on the ground before moving over you[else]sets you down on the ground before climbing atop you[end if], such that you offer [ghim] unobstructed access to your exposed hindquarters. In turn, you're presented with [ghis] substantive, partially aroused assets [if tempnum is 1]before[else]above[end if] you, the beast eager to tease by prodding you with its [if DoranBallModStatus > 0]perpetually sputtering[else]already oozing[end if] tip.";
 		if tempnum is 1:
 			say "     Shall you go all in? Else you'll show some restraint.";
@@ -2428,8 +2433,8 @@ carry out DoranRequest:
 	else:
 		now calcnumber is -1;
 		say "     '[one of]How may I help [DoranPlayerRegard][or]Yes[or]Is there something [DoranPlayerRegard] needs[or]What would [DoranPlayerRegard] ask of me[at random]?' [line break]";
-		let trixieexit be 0;
-		while trixieexit is 0:
+		let Trixieexit be 0;
+		while Trixieexit is 0:
 			dorangendercheck;
 			say "[bold type]Options:[roman type][line break]";
 			say "(1) [link]Sexual Position[as]1[end link] - [bold type][if DoranRole is 0]Dominant[else if DoranRole is 2]Submissive[else if DoranRole is -1]Dominant (LOCKED)[else]Neutral[end if][roman type][line break]";
@@ -2481,7 +2486,7 @@ carry out DoranRequest:
 				say "[DoranVoreMenu]"; [Vore Implementation]
 			else:
 				say "[DoranRequestExit]"; [End]
-				now trixieexit is 1;
+				now Trixieexit is 1;
 
 
 to say DoranPlayerTitle:
@@ -2520,8 +2525,8 @@ to say DoranPlayerTitle:
 
 to say DoranBodyModMenu: [NEW! Body Modification]
 	say "     Considering the way the world is right now, you ponder the possibility of altering Doran's physical attributes. You presume you'll need some sort of infected item to cause the desired change. Doran looks at you quizzically.";
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type]Body Modifications:[roman type][line break]";
 		if DoranBallModStatus > 0:
 			say "(1) [link]REVERT [if DoranInternal is false]Balls[else]Cum Production[end if][as]1[end link][line break]";
@@ -2606,7 +2611,7 @@ to say DoranBodyModMenu: [NEW! Body Modification]
 							delete tappeditem;
 						else:
 							say "     'Very well, [DoranPlayerRegard]. Don't be afraid to ask me about it again if you change your mind.'";
-						now trixieexit is 1;
+						now Trixieexit is 1;
 		else if calcnumber is 2:
 			if DoranTitModStatus > 0:
 				if nullifying powder is not owned:
@@ -2671,7 +2676,7 @@ to say DoranBodyModMenu: [NEW! Body Modification]
 							delete tappeditem;
 						else:
 							say "     'Very well, [DoranPlayerRegard]. Don't be afraid to ask me about it again if you change your mind.'";
-						now trixieexit is 1;
+						now Trixieexit is 1;
 		else if calcnumber is 3:
 			if tanuki coin is not owned:
 				say "[bracket]Invalid interaction: You require some way to 'flip' [ghis] configuration[close bracket][line break]";
@@ -2689,7 +2694,7 @@ to say DoranBodyModMenu: [NEW! Body Modification]
 				else:
 					say "     'Very well, [DoranPlayerRegard]. Don't be afraid to ask me about it again if you change your mind.'";
 		else:
-			now trixieexit is 1;
+			now Trixieexit is 1;
 
 to say DoranModBallsMenu: [Modify Balls/Cum]
 	now DoranBallModStatus is 1;
@@ -2822,8 +2827,8 @@ to say DoranPosition: [Demeanour Option]
 		if DoranDominanceTopic < 2: [Explanation for non-submissive players who didn't get that intro in his first talk]
 			say "     You bring up the matter of [ghis] overt submissiveness to the [gdragon].";
 			say "     'Oh, [DoranPlayerRegard], is that not to their liking? I have no problem with being on top, if they are so inclined.'";
-			let trixieexit be 0;
-			while trixieexit is 0:
+			let Trixieexit be 0;
+			while Trixieexit is 0:
 				say "[bold type]Sexual Position:[roman type][line break]";
 				say "(1) [link]'Go on top.'[as]1[end link][line break]";
 				say "(2) [link]'Stay on bottom.'[as]2[end link][line break]";
@@ -2843,27 +2848,27 @@ to say DoranPosition: [Demeanour Option]
 						say ". I shouldn't be surprised, as I recall they tried to offer themself when I challenged them--Not that I didn't find the prospect tempting there as I do now";
 					say ". When next they ask for sex, they'll find my regard to be quite different.' [gche] grins mischievously at you.";
 					now DoranRole is 0;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					increase DoranDominanceTopic by 2;
 				else if calcnumber is 2:
 					say "     'My mistake, but don't be afraid to ask if they change their mind.'";
 					now DoranRole is 2;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					increase DoranDominanceTopic by 2;
 				else if calcnumber is 3:
 					if DoranNeutralRole is 0, now DoranNeutralRole is a random number between 1 and 2;
 					say "     'Oh? Hmm, well, [DoranPlayerRegard] commands it... I'm rather disinclined to alter the established roles, but I can switch between them on whatever whim fancies me at the moment. I hope that better suits them.'";
 					now DoranRole is 1;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					increase DoranDominanceTopic by 2;
 				else:
 					say "     'My mistake, but don't be afraid to ask if they change their mind.'";
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					increase DoranDominanceTopic by 2;
 		else:
 			say "     'In a different mood? Would [if DoranRole <= 0]my [end if][DoranPlayerRegard] prefer to [if DoranRole <= 0]be on top again[else if DoranRole is 2]be on bottom[else]alter our arrangement[end if]?'";
-			let trixieexit be 0;
-			while trixieexit is 0:
+			let Trixieexit be 0;
+			while Trixieexit is 0:
 				say "[bold type]Sexual Position:[roman type][line break]";
 				say "(1) [link]'[if DoranRole <= 0]Stay[else]Go[end if] on top.'[as]1[end link]";
 				say "(2) [link]'[if DoranRole is 2]Stay[else]Go[end if] on bottom.'[as]2[end link]";
@@ -2880,19 +2885,19 @@ to say DoranPosition: [Demeanour Option]
 				if calcnumber is 1:
 					say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], my [DoranPlayerRegard] will [if DoranRole <= 0]be kept[else]now be put[end if] in their place.'";
 					now DoranRole is 0;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 				else if calcnumber is 2:
 					say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], [DoranPlayerRegard]'s [gdragon] will [if DoranRole is 2]keep[else]learn[end if] [ghis] place.'";
 					now DoranRole is 2;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 				else if calcnumber is 3:
 					if DoranNeutralRole is 0, now DoranNeutralRole is a random number between 1 and 2;
 					say "     '[one of]Very well[or]No problem[or]Okay[or]Certainly[or]Of course[at random], [DoranPlayerRegard]'s [gdragon] will [if DoranRole is 1]keep surprising[else]surprise[end if] them.'";
 					now DoranRole is 1;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 				else:
 					say "     '[one of]Alright[or]Okay[or]My mistake[or]Certainly[or]Think no more on it[or]Very well[or]Understood[at random].";
-					now trixieexit is 1;
+					now Trixieexit is 1;
 	else:
 		say "     Ah, my [DoranPlayerRegard] does realize they don't have any say it the matter, do they not? Alas, your chance to change your mind has long since passed.";
 
@@ -2952,8 +2957,8 @@ to say DoranAutofireSetting: [Doran Auto-Fire]
 		say "     Approaching Doran, you suggest that [ghe] have [ghis] way with you at [ghis] behest. This seems to amuse [ghim] a fair bit.";
 		say "     'Oh, my [DoranPlayerRegard], I'm beginning to worry that they're more submissive than even me!' A grin across [ghis] face, [ghe] gives you a wink. 'I have no issue with this request. I must inquire, however, as to how strict my [DoranPlayerRegard] wishes this to be. I can be extremely strict, which means I'll pounce them the second I see them and I'm feeling up to it, or I can be a bit more casual, where I'll wait for their cue for a little bit before deciding by myself.'[line break]";
 		now DoranAutofireDiscussed is true;
-		let trixieexit be 0;
-		while trixieexit is 0:
+		let Trixieexit be 0;
+		while Trixieexit is 0:
 			say "[bold type]Auto-Fire:[roman type][line break]";
 			say "(1) [link]Strict[as]1[end link] - Immediate.";
 			say "(2) [link]Loose[as]2[end link] - Two day wait after last sex before becoming active.";
@@ -2974,12 +2979,12 @@ to say DoranAutofireSetting: [Doran Auto-Fire]
 				now DoranAutofireIntensity is 2;
 			else:
 				say "     'No problem, don't be afraid to ask if one changes their mind. Also, keep in mind that if [DoranPlayerRegard] decides they want to be on top again, the conditions will obviously be inappropriate for such a thing as this and I won't do it anymore.'";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 	else:
 		now calcnumber is -1;
 		say "     'Ah, yes, would my [DoranPlayerRegard] like to alter this arrangement?'[line break]";
-		let trixieexit be 0;
-		while trixieexit is 0:
+		let Trixieexit be 0;
+		while Trixieexit is 0:
 			say "[bold type]Auto-Fire:[roman type][line break]";
 			say "(1) [link]Strict[as]1[end link] - Immediate[bold type][if DoranAutofireIntensity is 1]-Set[end if][roman type].";
 			say "(2) [link]Loose[as]2[end link] - Two day wait after last sex before becoming active[bold type][if DoranAutofireIntensity is 2]-Set[end if][roman type].";
@@ -3004,7 +3009,7 @@ to say DoranAutofireSetting: [Doran Auto-Fire]
 				now DoranAutofireIntensity is 0;
 			else:
 				say "     '[one of]Enough on that[or]Moving on[at random].'";
-				now trixieexit is 1;
+				now Trixieexit is 1;
 
 to say DoranGenderSetting: [NEW! Doran's regarded gender]
 	if DoranGenderTopic is 0:
@@ -3068,8 +3073,8 @@ to say DoranVoreMenu: [Doran Vore Extension]
 		say "Certainly, [DoranPlayerRegard], is there anything regarding this arrangement they want to change?";
 	if DoranVoreStatus is not 0:
 		now calcnumber is -1;
-		let trixieexit be 0;
-		while trixieexit is 0:
+		let Trixieexit be 0;
+		while Trixieexit is 0:
 			say "[bold type]Vore Extensions:[roman type][line break]";
 			say "(1) [link]State[as]1[end link] - [bold type][if DoranVoreStatus is 2]Active[else]Inactive[end if][roman type][line break]";
 			say "(2) [link]Duration[as]2[end link] - [bold type][if DoranVoreDuration is 0]Very Short[else if DoranVoreDuration is 1]Short[else if DoranVoreDuration is 2]Medium[else if DoranVoreDuration is 3]Long[end if][roman type][line break]";
@@ -3185,7 +3190,7 @@ to say DoranVoreMenu: [Doran Vore Extension]
 							now DoranDiscussionExit is 1;
 			else:
 				say "     'No problem. Feel free to raise this topic with me any time. Even if I can't fulfil their need for whatever reason, there's no harm in discussing it.'";
-				now trixieexit is 1;
+				now Trixieexit is 1;
 
 Chapter 3.6.2 - Body Modification Tree
 
@@ -3326,8 +3331,8 @@ to say DoranDiscuss_1: [Of One's Past]
 	say "     'Of all the things I could be, they are not what I am now to [DoranPlayerRegard]. I could have been an individual of great fame or fortune, or perhaps I was a helpless cog in some corporate machine. Perhaps I am but a wandering spirit. Perhaps I am the cause of this blight--or perhaps I am but a figment of [DoranPlayerRegard]'s increasingly deranged mind.' [gche] grins, somewhat amused by the notion, before continuing.";
 	say "     'What matters is that any one of these changes your perception of me, and I don't want such a perception to be anything beyond being [DoranPlayerRegard]'s [gdragon].'";
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type][link]1) 'You don't trust me?'[as]1[end link][roman type]";
 		say "[bold type][link]2) 'Why does this matter?'[as]2[end link][roman type]";
 		say "[bold type][link]3) 'As your [DoranPlayerRegard] I could order you to tell me.'[as]3[end link][roman type][line break]";
@@ -3457,7 +3462,7 @@ to say DoranDiscuss_1: [Of One's Past]
 							now DoranDiscussionExit is 1;
 		else if calcnumber is 4:
 			say "     'Understand that I garner no joy from keeping secrets, but I do ask that [DoranPlayerRegard] gain some solace in the assurance that I will never lie to them, and that my past is not of some significance that their lack of knowledge would harm them down the line.' [gche] decides to conclude the topic at that, leaving you to go about your business[if charisma of player > 14], though you remain a fair bit unsure as to [ghis] assurance of honesty[end if].";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 
 to say DoranDiscuss_2: [Of Hobbies and Imagination]
 	say "     You approach Doran, who--oddly enough--seems to be huddled in one of the cave's corners, facing away from you, all the while distracted with something. Quietly, you approach the [gdragon], who appears to be muttering something to [ghim]self, before tapping [ghim] on the side. [gche]'s set off with a right jolt and you see what [ghe]'s been doing.";
@@ -3465,8 +3470,8 @@ to say DoranDiscuss_2: [Of Hobbies and Imagination]
 	say "     'I should, well, uh...' [gche] scuttles about to clean up the toys, no doubt a fair bit shamed by their presence, '...They never say how boring the post-apocalyptic scene can be, and I'm never short on free time.'";
 	LineBreak;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type][link]1) 'Shouldn't you be out scavenging, or something?' I assume something of your size would have to eat a lot.[as]1[end link][roman type][line break]";
 		say "[bold type][link]2) 'Alright, but why dolls?'[as]2[end link][roman type][line break]";
 		say "[bold type][link]3) 'You worry too much about what I think of your pastime.'[as]3[end link][roman type][line break]";
@@ -3626,7 +3631,7 @@ to say DoranDiscuss_2: [Of Hobbies and Imagination]
 			else:
 				say "     'Yeah... Please forgive me, I never intended to harm your impression of me. I would ask that you try to overlook this irregularity.' [gche] lets you off, quickly scurrying back to stow away [ghis] toys.";
 			say "[line break][bold type][bracket]Interaction Unlocked: Request Roleplay[close bracket][roman type]";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 
 to say DoranDiscuss_3: [Of Masters and Pets]
 	say "     As you approach the [gdragon], [ghe] watches your form closely, a smile spreading across [ghis] draconic visage. 'Ah! Greetings [DoranPlayerRegard]! Is there something you would like to discuss today?' [ghe] asks, tilting [ghis] head sideways curiously.";
@@ -3665,8 +3670,8 @@ to say DoranRPMenu:
 		say "     Certainly, [DoranPlayerRegard], what game would they like to play?";
 	if DoranRPRevealRegard is not 0:
 		now calcnumber is -1;
-		let trixieexit be 0;
-		while trixieexit is 0:
+		let Trixieexit be 0;
+		while Trixieexit is 0:
 			say "[bold type]Main Roleplay Categories:[roman type][line break]";
 			say "(1) [link]Matters of a Feral Nature[as]1[end link][line break]";
 			say "(2) [link]Dragons and Similar Fantasy Fare[as]2[end link][line break]";
@@ -3703,15 +3708,15 @@ to say DoranRPMenu:
 					say "     'Ah, I'm sorry [DoranPlayerRegard], I don't believe any roleplay is in session right now.";
 			else:
 				say "     'It's no issue, [DoranPlayerRegard], don't be shy if you're feeling creative.'";
-				now trixieexit is 1;
+				now Trixieexit is 1;
 
 Section 4.1 - Doran Roleplay Submenu Protocols
 
 to say DoranRP_MattersofFeralMenu: [Doran RP: Matters of a Feral Nature Submenu]
 	say "     'This fare generally entails me asserting a more 'bestial' role, so this might be worth their time if that's their interest--or maybe they'd just prefer I not talk nearly as much.' [gche] grins slightly in relation to [ghis] musing.";
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type]Matters of a Feral Nature:[roman type][line break]";
 		say "(1) [link]The Virile Beast[as]1[end link][line break]";
 		say "(-) ----[line break]";
@@ -3730,13 +3735,13 @@ to say DoranRP_MattersofFeralMenu: [Doran RP: Matters of a Feral Nature Submenu]
 			say "[DoranRP_VirileBeast]"; [Doran RP: The Virile Beast Query]
 		else:
 			say "     '[one of]Alright[or]Moving on[or]Very well[or]Got it[at random].'";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 
 to say DoranRP_DragonsAndSimilar: [Doran RP: Dragons and Similar Fantasy Fare Submenu]
 	say "     'Ah, yes, [DoranPlayerRegard]. Since I'm very much a [gdragon], this topic explores that in a more 'Traditional' sense, you could say.'";
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type]Dragons and Similar Fantasy Fare:[roman type][line break]";
 		say "(1) [link]The Knight[as]1[end link][line break]";
 		say "(-) ----[line break]";
@@ -3755,13 +3760,13 @@ to say DoranRP_DragonsAndSimilar: [Doran RP: Dragons and Similar Fantasy Fare Su
 			say "[DoranRP_KnightMenu]"; [Doran RP: The Knight Query]
 		else:
 			say "     '[one of]Alright[or]Moving on[or]Very well[or]Got it[at random].'";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 
 to say DoranRP_Misc: [Doran RP: Miscellaneous Scenes]
 	say "     'Ah, so my [DoranPlayerRegard] has something else in mind, do they? Very well. What would that be?' the [gdragon] asks you, head tilted ever-so-slightly, betraying his curiosity.";
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type]Miscellaneous[roman type][line break]";
 		say "(1) [link]A Dragon's Toy[as]1[end link][line break]";
 		say "(-) ----[line break]";
@@ -3780,7 +3785,7 @@ to say DoranRP_Misc: [Doran RP: Miscellaneous Scenes]
 			say "[DoranRP_DragonsPetMenu]"; [Doran RP: Dragon's Toy Query]
 		else:
 			say "     '[one of]Alright[or]Moving on[or]Very well[or]Got it[at random].'";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 
 Section 4.2 - Doran Roleplay Queries
 

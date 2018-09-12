@@ -8,9 +8,9 @@ Version 2 of Power Plant by Hellerhound begins here.
 Ravaged power plant is a situation.
 
 instead of resolving a Ravaged Power Plant:
-	say "On your walk, you pass a building that was the power station for the city. Now it is dark and silent, and a large hole is smashed through one of the generators. Claw marks cover the floor and walls, and liquids of every kind litter the floor. The fence is also damaged, a large chunk flattened by some large creature that passed by.";
+	say "     On your walk, you pass a building that was the power station for the city. Now it is dark and silent, and a large hole is smashed through one of the generators. Claw marks cover the floor and walls, and liquids of every kind litter the floor. The fence is also damaged, a large chunk flattened by some large creature that passed by.";
 	now Plant Overview is known;
-	say "The power plant lobby is nearby, maybe you could return?";
+	say "     The power plant lobby is nearby, maybe you could return?";
 	now ravaged power plant is resolved;
 
 foundparts is a number that varies.
@@ -19,11 +19,13 @@ Generator Parts is a situation.
 
 instead of resolving a Generator Parts:
 	if foundparts is 0:
-		say "A pile of metal lies in your way. It looks useful, maybe there is a generator that these could fix?";
+		say "     You find a small pile of what looks to be parts of a machine. Or quite a few machines actually. There are dozens and dozens of spark plugs in it, as well as some small circuit boards and various other bits that are harder to identify. Some parts have US Army Part ID numbers engraved on their sides, so they were removed from military equipment. It seems that someone is going around ripping essential parts out of any motor and generator they can find. This must be hindering recovery efforts quite a bit, with how dependent civilization is on electricity. Sadly, you have no idea where this all came from, so even if you took some bits, there is little chance it would be of any use.";
 		now foundparts is 1;
+		now Resolution of Generator Parts is 1; [found the pile]
 	else if foundparts is 1:
-		say "You find the pile again, but with new additions. They look essential for operation. You take them, and wonder where the generator is that these were stolen from?";
-		now generator parts is resolved;
+		say "     You find the pile of gear again and see that it has grown further. Inspecting the collection of spark plugs, metal parts and electronic components, you spot some circuit boards that are ochre in color and seem fairly old. A closer look reveals the inscription 'West Hills Power Plant' on them, which tells you where these belong at least. Just in case they could provide useful if your path brings you to the power plant, you pack the small pieces of electronics in your backpack.";
+		now Generator Parts is resolved;
+		now Resolution of Generator Parts is 2; [grabbed the power plant chips]
 		now foundparts is 2;
 		now fixedgens is 1;
 
@@ -112,6 +114,7 @@ before opening Catwalk Door:
 
 Cat Walk is a room. "The catwalk rises high above the floor next to the rows of large generators, allowing access to them for maintenance. It's pretty warm in here - no wonder, with all the patches of lava still glowing red hot besides and on top of the busted generators. The floor is a metal grate, and thin metal pipes form the handrails. A nearby metal sign reads: Danger, electrocution hazard. You can reach the intact generator from here.[catwalkstuff]".
 West of Catwalk Door is Cat Walk.
+
 to say catwalkstuff:
 	if fixedgens is 1:
 		say "The parts you found match this generator perfectly. You fix the generator, and the malfunction light on the generator turns green to show the generator could work. You wait with bated breath for it to work.";

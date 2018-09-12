@@ -41,15 +41,17 @@ Instead of resolving a Insect Hive:
 		now insectlarva is true;
 		now preghijack is true;
 		now mpreghijack is true;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Black Wasp":
 				now area entry is "High";
 				now non-infectious entry is false; [Wasps unlocked]
+		now Resolution of Insect Hive is 1; [wasps unlocked]
 	else:
 		LineBreak;
 		say "     Deciding discretion is the better part of valor, you exit the alley. Making note of this area, you decide to keep some distance between you and it in the future.";
-	Now Insect Hive is resolved;
+		now Resolution of Insect Hive is 99; [disinterest]
+	now Insect Hive is resolved;
 
 
 Section 2 - Parasite
@@ -93,10 +95,10 @@ an everyturn rule:
 						increase humanity of player by 10;
 						if humanity of player > 100, now humanity of player is 100;
 						now libido of player is libido of player / 2;
-						repeat with y running from 1 to number of filled rows in table of random critters:
-							choose row y in table of random critters;
+						repeat with y running from 1 to number of filled rows in Table of Random Critters:
+							choose row y in Table of Random Critters;
 							if name entry is "Black Wasp":
-								now area entry is "nowhere";
+								now area entry is "Nowhere";
 								now non-infectious entry is true; [Wasps locked again]
 								break;
 				else:
@@ -178,12 +180,12 @@ to say beattheblackwasp:
 
 Chapter 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Black Wasp"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -212,7 +214,7 @@ When Play begins:
 	now HP entry is 40; [ The monster's starting HP. ]
 	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 8; [ Cock width, more commonly used for ball size. ]
@@ -231,8 +233,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "blackwasp"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)

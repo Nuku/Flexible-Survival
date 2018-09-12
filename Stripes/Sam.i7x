@@ -101,6 +101,10 @@ to say minilabdesc:
 
 Section 3 - Sam the Researcher
 
+Table of GameCharacterIDs (continued)
+object	name
+Sam	"Sam"
+
 Sam is a man. Sam is in Mini-Lab.
 The description of Sam is "[samdesc]".
 The conversation of Sam is { "Thanks." }.
@@ -455,7 +459,7 @@ to assaultonminilab:
 				now scalevalue of player is 5;
 				now bodydesc of player is "silky";
 				now bodytype of player is "feline";
-				now daycycle of player is 0;
+				now SleepRhythm of player is 0;
 				end the story saying "Surrendering to Rick the tigertaur you willing become another breeder kitty for the herm.";
 				wait for any key;
 				now battleground is "void";
@@ -762,8 +766,8 @@ Part 2 - Dragon Sex
 
 to say samdragonfirsttime:
 	[puts Dragontaur as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Dragontaur":
 			now monster is y;
 			break;
@@ -782,8 +786,8 @@ to say samdragonoral:
 
 to say samdragonfuck:
 	[puts Dragontaur as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Dragontaur":
 			now monster is y;
 			break;
@@ -797,8 +801,8 @@ to say samdragonfuck:
 
 to say samdragontaurfuck:
 	[puts Dragontaur as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Dragontaur":
 			now monster is y;
 			break;
@@ -966,8 +970,8 @@ to say samDVfuck2_bottom:
 Section 6 - Subroutines and Functions
 
 to vixentaur_active:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Vixentaur":
 			now monster is y;
 			now non-infectious entry is false;
@@ -975,8 +979,8 @@ to vixentaur_active:
 			break;
 
 to dragontaur_active:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Dragontaur":
 			now monster is y;
 			now non-infectious entry is false;
@@ -984,8 +988,8 @@ to dragontaur_active:
 			break;
 
 to DVtaur_active:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Dracovixentaur":
 			now monster is y;
 			now non-infectious entry is false;
@@ -994,8 +998,8 @@ to DVtaur_active:
 
 to tripletaur_active:
 	let found be 0;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Vixentaur" or name entry is "Dragontaur" or name entry is "Dracovixentaur":
 			now monster is y;
 			now non-infectious entry is false;

@@ -530,10 +530,12 @@ Instead of resolving a Dream of a Unicorn:
 				say "When you come down from off of your high you drop back onto the table and then begin to pant like an overworked freight train. Mind whirling as though you've gone through an unbelievable experience, which technically you have, you blink your eyes open and then look down just in time to see Omio collecting your colorful nectar into a large jar. When the redhead speaks next you can only twitch an eye as Omio's words sink deep into your brain. 'Thanks a lot for this sample! I never would have gotten old Harold to give me anything unless I raised my ass for him. But thankfully I didn't have to do that because you did instead!' The redhead holds up the now capped jar and then pulls out a sharpie to label it. 'With this we can test some new theories to see if unicorn cum actually does extend one's life! Maybe if you feel like it you can work we me and my company later on to see if this is true or not?'";
 				WaitLineBreak;
 				say "You pass out from exhaustion before you can comment on that one and when you wake up you have a hard time remembering what exactly happened, that is, until you find your clothes still in a puddle around you on the floor and your lap sticky with your spilled honey. Blushing slightly as the memories return to you, you quickly get up and then go about your way before any trouble can find you. In your backpack are several extra supplies that had been given over by Omio.";
+			now Resolution of Dream of a Unicorn is 1; [sexual testing]
 		else:
 			LineBreak;
 			say "'Well I suppose we can skip it for today then.' Omio smiles patiently while saying this. The look in her eye is a bit forlorn, but at the same time you don't think you're ready for her to try anything more on your. 'Ok, well, I'm going to be working back at home. If you want to come and help me out again just head there.' Omio winks at you and then moves to take of her gloves and scrubs.";
 			say "When the redhead is done with the clean up portion of the examination she lays out several provisions for you and then turns to go off about her way.";
+			now Resolution of Dream of a Unicorn is 2; [sexual testing denied]
 		increase carried of food by 1;
 		increase carried of water bottle by 1;
 		increase carried of tasty peach by 1;

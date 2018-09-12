@@ -13,7 +13,7 @@ The sarea of Marching Band is "Campus".
 Instead of resolving a Marching Band:
 	say "     While exploring the campus, you are suddenly surprised to hear the sound of music starting up. A welcome change from the normal sounds of sex-crazed creatures and horny mutants, you cautiously head over to investigate. You find a variety of infected creatures stuffed into ill-fitting uniforms and carrying instruments as they try to coalesce into a marching band. They start up and stop several times, distracted by one or more of them deciding to hump another, give a blow job or otherwise give in to their sexual desires. But eventually they do get going as their border collie band leader nips them back into position once everyone's gotten off one last time before they can march off the national anthem as they proceed towards one of the fields.";
 	increase score by 1;
-	Now Marching Band is resolved;
+	now Marching Band is resolved;
 
 
 Section 2 - Art Department
@@ -41,7 +41,7 @@ The sarea of Languages Department is "Campus".
 
 Instead of resolving a Languages Department:
 	say "     Passing behind one building, you almost bump into a small group of creatures arguing loudly and incomprehensibly. Among the group are a French frog, a Chinese dragon, an Indian elephant, a Russian bear and several other walking stereotypes who can no longer understand each other. You suspect they've all somehow become altered by the infection into forms to suit the language course they taught or studied. You decide to give what is probably the Languages Department a wide berth before you start speaking another language as well to further compound your problems in this city gone mad.";
-	Now Languages Department is resolved;
+	now Languages Department is resolved;
 
 
 Section 5 - Wandering the Campus
@@ -63,6 +63,7 @@ Instead of resolving a Wandering the Campus:
 	if guy is banned and 7 is not listed in campuswander, add 7 to campuswander;
 	if guy is banned and girl is banned and hermaphrodite is banned:
 		say "     Traveling across the completely unpopulated campus, you have to wonder why you're even bothering to come here.";
+		now Resolution of Wandering the Campus is 3;	[Did not meet anyone]
 	if number of entries in campuswander is 6, say "     You have an uneventual passage across the campus.";
 	let T be a random number between 1 and 6;
 	while T is listed in campuswander:
@@ -101,7 +102,10 @@ Instead of resolving a Wandering the Campus:
 		add 6 to campuswander;
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	now showlocale is true;
-	if number of entries in campuswander is 6, now Wandering the Campus is resolved;
+	now Resolution of Wandering the Campus is 1;	[Met someone]
+	if number of entries in campuswander is 6:
+		now Resolution of Wandering the Campus is 2;	[Met everyone]
+		now Wandering the Campus is resolved;
 
 
 Section 6 - Anime Club
@@ -138,18 +142,24 @@ Instead of resolving a Anime Club:
 				increase score by 10;
 				increase humanity of player by 5;
 				if humanity of player > 100, now humanity of player is 100;
+				now Resolution of Anime Club is 1;	[Saved woman from Anime Babe and Hentai Fan]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     The hentai boy pushes you to sit down beside the captured girl, groping and fondling you while you watch the video. A part of you knows you shouldn't, but you're too weary and aroused from fighting to resist any longer. As you watch, you can almost feel the tentacles on the screen grabbing and touching you just like in the animation. It takes you a few moments to realize that the tentacled mutant behind you is imitating the events on screen, adding to your immersion. The fallen anime babe, recovered from her fight, moves over to snuggle with you, showing there's no hard feelings now that you've settled down to watch some hentai with them. You moan in pleasure, your excitement building.";
 				say "[animeclublost]";
+				now Resolution of Anime Club is 2;	[Lost to Hentai Fan]
 			else if fightoutcome >= 30:
 				say "     Deciding to cut your losses, you dodge your way back to the door and run out of the room. There's a brief pursuit, but it goes no further than the stairs as there's already one new prize to be enjoyed.";
+				now Resolution of Anime Club is 2;	[Ran and left woman to anime club]
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     The anime babe pushes you to sit down beside the captured girl, groping and fondling you while you watch the video. A part of you knows you shouldn't, but you're too weary and aroused from fighting to resist any longer. As you watch, you can almost feel the tentacles on the screen grabbing and touching you just like in the animation. It takes you a few moments to realize that the tentacled mutant behind you is imitating the events on screen, adding to your immersion. You moan in pleasure, your excitement building.";
 			say "[animeclublost]";
+			now Resolution of Anime Club is 3;	[Lost to Anime Babe]
 		else if fightoutcome >= 30:
 			say "     Deciding to cut your losses, you dodge your way back to the door and run out of the room. There's a brief pursuit, but it goes no further than the stairs as there's already one new prize to be enjoyed.";
+			now Resolution of Anime Club is 2;	[Ran and left woman to anime club]
 	else:
 		say "     Deciding it's none of your concern, you creep away before anything else is drawn by the noise or another of those Anime Babes spots you.";
+		now Resolution of Anime Club is 4;	[Ignored woman]
 	now animeclubfight is false;
 	now Anime Club is resolved;
 
@@ -170,8 +180,8 @@ to say animeclublost:
 	say "     Things continue on like this, the four of you having a sexy orgy of tentacular fun. Every available hole is filled repeatedly by tentacle cocks and left overflowing with the hentai fan's tainted seed. Several more videos are watched over the course of this viewing, their sexy contents sinking into your mind even as your body is changed more and more to be like those sexily animated girls getting fucked alongside you";
 	decrease humanity of player by 25;
 	[puts Anime Babe as lead monster for infection and impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Anime Babe":
 			now monster is y;
 			break;
@@ -272,6 +282,7 @@ to AdminIntro:
 			increase humanity of player by 10;
 			if humanity of player > 100:
 				now humanity of player is 100;
+			now Resolution of Course Advice is 1;	[Watched Dana and Kyle make love]
 		else:
 			LineBreak;
 			say "     With a grin on your face, you stand up and walk down the corridor, leaving the advisers offices of the Tenvale College behind for now. While the place seemed so dreadfully normal and regular before, you now know enough to interpret some low sounds that are audible in the building. That banging from somewhere above surely isn't connected to hanging a picture, and the slurp behind one of the doors you pass will likely be someone giving a blow-job.";
@@ -279,12 +290,14 @@ to AdminIntro:
 			increase humanity of player by 10;
 			if humanity of player > 100:
 				now humanity of player is 100;
+			now Resolution of Course Advice is 2;	[Let Dana and Kyle make love in peace]
 		move player to College Administration Building;
 	else:
 		LineBreak;
 		say "     With a shrug, you abandon the idea of exploring the Tenvale College administration building any further. This all seems to dreadfully normal and regular... it's the nanite apocalypse, for fuck's sake! Walking back downstairs and past the peaceful crowd there, you soon step out onto the campus grounds again. Almost the first thing you see out here is an incubus, standing not too far off. He has his leather pants pushed down below his ass and is stroking the sizable erection between his legs for everyone to see.";
 		say "     The demonic exhibitionist doesn't have to hold out his lure for too long, as a sexy little gazelle out on a jog diverts her route to stop by his side. You're too far away to make out the exact words they exchange... but you don't have to really, as the next thing they do is start fucking, right there on the green grass of the college campus. Yeah, this seems more like the regular fare you've been come to expect from this new reality.";
 		move player to College Fountain;
+		now Resolution of Course Advice is 3;	[Left the Adviser's Offices]
 	now Course Advice is resolved;
 
 Campus Events ends here.

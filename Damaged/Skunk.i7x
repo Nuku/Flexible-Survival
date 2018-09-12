@@ -10,7 +10,7 @@ Skunk_type is a number that varies. [if it is 0 it means to pick a new creature 
 skunkfight is a number that varies.
 
 to say skunk_desc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if hardmode is true and level of player > 5, let debit be level of player - 5;
 	if a random number from 1 to 10 > 3 or skunkfight is 3 or skunkbeaststatus is 1: [female skunk]
@@ -34,7 +34,7 @@ to say skunk_desc:
 
 
 to say skunk_attack:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if skunkbeaststatus is 1 and bodyname of player is "Skunkbeast Lord":
 		say "The skunk girl runs up to you, throwing herself upon you as she seeks her skunkbeast lord's affections.";
 		now wdam entry is 0;
@@ -144,8 +144,8 @@ to say sblsex2:		[fellatio]
 
 to say sblsex3:		[skunkbeast tops player]
 	[puts Skunkbeast Lord as lead monster for possible impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Skunkbeast Lord":
 			now monster is y;
 			break;
@@ -158,13 +158,13 @@ to say sblsex4:		[cunnilingus]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Skunk"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -212,8 +212,9 @@ When Play begins:
 	now magic entry is false;        [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;    [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;  [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "forestskunk";  [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
@@ -226,7 +227,7 @@ this is the skunkspray rule:
 		retaliate; [follows the advanced model if alternate]
 
 to skspray:						[ignores defenses, requires no hit, hum/lib check instead to resist]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	let checknum be ( humanity of player + ( level of player * 2 ) + ( plmindbonus * 2 ) - libido of player ) * 2;
 	if checknum > 180, now checknum is 180;
 	let rangenum be 200 + ( monhitbonus + monmindbonus );

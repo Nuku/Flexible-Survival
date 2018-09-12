@@ -2,11 +2,33 @@ Version 3 of Deer by Stripes begins here.
 [Version 3.6 - Updated code and new scenes - Defth]
 [- Originally Authored By: Nuku Valente -]
 
+[ HP of Susan                             ]
+[ 0 = not active                          ]
+[ 1 = angry - creature                    ]
+[ 3 = stag with Dr. Matt                  ]
+[ 4 = happy - NPC w/Dr. Matt              ]
+[ 50+ = NPC w/Dr. Mouse                   ]
+[ 50 = Moved, nothing new                 ]
+[-- 12 turn delay from arrival --         ]
+[ 51 = Requested food/water               ]
+[ 52 = Received food/water                ]
+[-- 16 turn delay & hospquest 18+ --      ]
+[ 53 = Lab coat                           ]
+[ 54 = Returned extra supplies            ]
+[ 73+ Doe-buck w/Dr. Mouse                ]
+[ 73 = Doe-buck Susan                     ]
+[ 74 = Returned extra supplies            ]
+
+
+[ libido of Susan                         ]
+[ 0 = regular form                        ]
+[ 1 = doe-buck form                       ]
+
 "Adds a deer to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
 Section 1 - Event
 
-Unusual Creature is a situation. It is resolved.
+Unusual Creature is a situation. It is inactive.
 The sarea of Unusual Creature is "Park".
 
 After resolving a Unusual Creature, try looking;
@@ -58,45 +80,43 @@ Instead of resolving Unusual Creature:
 					say "[Unsualfuck]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Just tell her to follow you.";
-			if player consents:
-				now sextablerun is 1;
-				say "     Unsure what to do, you stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' she asks, making her way to her hooves. You explain that you'd like her to come with you and she looks around a moment before shrugging, 'I have nothing better to do,' she admits, and follows you, a little sullen.";
-				now battleground is "void";
-				now Unusual Creature is resolved;
-				move Susan to primary lab;
-				move player to primary lab;
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Unsure what to do, you stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' she asks, making her way to her hooves. You explain that you'd like her to come with you and she looks around a moment before shrugging, 'I have nothing better to do,' she admits, and follows you, a little sullen.";
+			now Unusual Creature is resolved;
+			move Susan to primary lab;
+			move player to primary lab;
+			now Resolution of Unusual Creature is 1; [Told Susan to follow you]
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
 to say Unsualgrab:
 	say "     You lunge for her and grab a long-limbed arm. Her brown fur is soft to the touch, warm as well. She's wrenched to her feet with a cry, and struggles, but is unable to escape your grip as you haul her back through the city directly for the lab. Sometimes the direct answer is the best one.";
-	now battleground is "void";
 	now Unusual Creature is resolved;
 	move Susan to primary lab;
 	move player to primary lab;
+	now Resolution of Unusual Creature is 2; [Grabbed Susan]
 
 to say Unsualconsole:
+	project the Figure of Susan_face_icon;
 	say "     You kneel beside her and take a hand. Rubbing gently, you tell her that she's not ugly at all. She refuses your word at first, but slowly warms as you coo soft encouragements. She suddenly pulls you close and kisses firmly, her slender snout against your face for a moment. She quickly agrees to come back with you to the lab, smiling as she goes.";
 	now deerconsent is 1;
-	now battleground is "void";
 	now Unusual Creature is resolved;
 	move Susan to primary lab;
 	move player to primary lab;
+	now Resolution of Unusual Creature is 3; [Consoled Susan]
 
 to say Unsualfuck:
+	project the Figure of Susan_face_icon;
 	say "     Unsure what to do, you obey the urgings of your [cock of player] cock. You grab her and push her to the ground, belly up. Your hands grab at her generous breasts as you slip into her wet, grasping, cunt. She squeals, at first with surprise, then increasingly with pleasure, rising her hips to meet your powerful thrusts. Your bodies dance together, her own cock grinding against your belly each time you plunge deep into her. Her cunt tightens like a vice around you before she arches her back and bleats in delight. You can feel your balls clenching in response, and you fill her belly with hot gushes of seed.";
 	WaitLineBreak;
 	say "     Sated, she hugs tightly to you, and agrees to accompany you to the lab, blushing and satisfied looking the whole way.";
 	now deerconsent is 1;
-	now battleground is "void";
 	now Unusual Creature is resolved;
 	move Susan to primary lab;
 	move player to primary lab;
+	now Resolution of Unusual Creature is 4; [Fucked Susan]
 
 
 Section 2 - NPC Basics
@@ -105,11 +125,16 @@ deerconsent is a number that varies.
 Susanoversize is a truth state that varies. Susanoversize is usually false.
 Susanfirsttime is a number that varies. Susanfirsttime is usually 0
 
+Table of GameCharacterIDs (continued)
+object	name
+Susan	"Susan"
+
 Susan is a person. "Susan, a bipedal deer.". The description of Susan is "[Susandesc]".
 The conversation of Susan is { "Bleat!" }.
 The fuckscene of Susan is "[sexwithSusan]".
 
 to say Susandesc:
+	project the Figure of Susan_face_icon;
 	if debugactive is 1:
 		say "DEBUG ->  HP: [HP of Susan], deerconsent: [deerconsent], Susanoversize: [if Susanoversize is true]True[else]False[end if]  <- DEBUG[line break]";
 	if HP of Susan is 52 and hospcountdown - turns >= 16 and hospquest >= 18 and lastfuck of Susan - turns < 4:
@@ -129,6 +154,7 @@ instead of sniffing Susan:
 	say "The herm deer has a mix of doe and buck scents, heavy with arousal and longing.";
 
 instead of conversing the Susan:
+	project the Figure of Susan_face_icon;
 	let doecheck be false;
 	let ec_check be false;
 	if bodyname of player is "Deer":
@@ -158,8 +184,7 @@ instead of conversing the Susan:
 					now deerconsent is 2;
 			else:
 				say "     She looked crushed at your refusal, but instead of arguing the case further, just sulks and wanders off.";
-				move Susan to dark basement;
-				remove Susan from play;
+				now Susan is nowhere;
 				now deerconsent is 2;
 		else if deerconsent is 2:
 			say "     'You should go talk to the doctor first. I will wait for you.'";
@@ -226,6 +251,7 @@ instead of conversing the Susan:
 Section 3 - Sex with Susan
 
 to say sexwithSusan:
+	project the Figure of Susan_face_icon;
 	if lastfuck of Susan - turns < 4:
 		say "     'As fun as it is, I do need a little break every now and again, my sweet.'";
 	else if HP of doctor matt < 8:
@@ -239,8 +265,9 @@ to say sexwithSusan:
 		say "[SusanSexMenu]";
 
 to say SusanSexMenu:
+	project the Figure of Susan_face_icon;
 	setmonster "Deer";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -317,16 +344,9 @@ to say SusanSexMenu:
 					say "[SusanSex7]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "     [bold type]Break off the conversation?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the deer making her sigh with neediness.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the deer making her sigh with neediness.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -404,7 +424,7 @@ to say SusanSex7: [Susan fucks ass]
 to say Susanlabcoatscene:
 	let x be 1; [default = accept]
 	setmonster "Deer";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     What do you think, hon?' Susan asks, posing in the new lab coat she's wearing. It is a typical one, clean and white, though the back's been adjusted to let her puff of deer tail poke out. 'After a little incident, the doc thought it best I have something on while helping him. Lab chemicals can be dangerous.'";
 	say "     She moves in closer to you, rubbing her body against yours. 'I was hoping you'd come by to play. I've been feeling pretty randy,' she whispers throatily in your ear. She grinds the hard bulge of her covered erection against your [if scalevalue of player < 3]side[else if scalevalue of player > 3]thigh[else]hip[end if]. 'Come on. Let's have some fun,' she says, pulling you off to her bunk in the corner. Dr Mouse notices this, but quietly smiles and says nothing.";
 	say "     Susan gives you a powerful kiss, tongue diving into your mouth as her hands run over you with aggressive need. They slip off your gear, stripping you down before pushing you back onto her cot. Opening her new coat, she reveals that hard black cock you felt earlier. You're unsure, but it seems larger than before, though that may simply be that you've never seen it this full and hard before either. She moves between your legs and aims that pulsing rod at you; it seems your timid doe's ready to be the buck instead. ";
@@ -458,12 +478,12 @@ to say Susanlabcoatscene:
 
 Section 4 - Monster Table Data
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Deer"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "Susan";
@@ -511,17 +531,18 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 To say doestats:
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Deer":
 			now monster is y;
 			break;
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	now lev entry is level of player minus 1;
 	if lev entry < 15:
 		now dex entry is lev entry + 6; [quick dex and HP growth early on]
@@ -650,32 +671,5 @@ when play ends:
 				else:
 					say "     You rut her often and she ends up giving you a new fawn every year for Christmas.";
 				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the egg nog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if player is male] while you rut her from behind[end if].";
-
-Section X - Notes
-
-[ HP of Susan ]
-[ 0 = not active ]
-[ 1 = angry - creature ]
-[ 3 = stag with Dr. Matt ]
-[ 4 = happy - NPC w/Dr. Matt ]
-[ 50+ = NPC w/Dr. Mouse ]
-[ 50 = Moved, nothing new ]
-[-- 12 turn delay from arrival --]
-[ 51 = Requested food/water ]
-[ 52 = Received food/water ]
-[-- 16 turn delay & hospquest 18+ --]
-[ 53 = Lab coat ]
-[ 54 = Returned extra supplies ]
-[ 73+ Doe-buck w/Dr. Mouse ]
-[ 73 = Doe-buck Susan ]
-[ 74 = Returned extra supplies ]
-
-
-[ libido of Susan ]
-[ 0 = regular form ]
-[ 1 = doe-buck form ]
-
-
-
 
 Deer ends here.

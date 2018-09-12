@@ -28,6 +28,10 @@ Christyquest is a number that varies.
 borisfucked is a number that varies. borisfucked is usually 0.
 BorisArtemistalk is a truth state that varies. BorisArtemistalk is usually false.
 
+Table of GameCharacterIDs (continued)
+object	name
+Boris the lion	"Boris the lion"
+
 Boris the lion is a man.
 The description of Boris the lion is "     Standing over by the side of the deserted ticket booth is a person dressed up as a very recognizable cartoon character that is always used to promote the fair. Even you recognize that the person is dressed up as the (semi)famous Boris the lion suit. Moving closer to the familiar face, you realize as he turns to look at you that the suit is far more realistic then any you suit you have ever seen before, a closer look shows there is no loose areas of skin on the costume, and no signs of seams anywhere. You come to the conclusion that whatever it may have once been, it isn't a suit anymore, it's Boris the lion!".
 The conversation of Boris is { "Welcome!" }.
@@ -37,8 +41,8 @@ the scent of Boris is "Boris smells faintly of funfur and lions[if borisquest is
 
 instead of conversing the Boris:
 	[puts Plush Lion as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Plush Lion":
 			now monster is y;
 			break;
@@ -97,7 +101,7 @@ to say borisquestforcock:
 					say "[christy_ending]";
 				else:
 					say "     'That's too bad,' Boris says with a sigh as he lowers the costume back into the box and carefully packs it away. 'I was really looking forward to putting the new cock you got for me to good use,' he says as he pats his new large sheath teasingly.";
-					Now christyquest is 3;
+					now christyquest is 3;
 			else if christyquest is 3:
 				say "     'Trying again and still with a cock? Am I just that irresistible?' Boris says with a smug smile. 'Well, if you need me so badly, you know what to do,' he says as he reaches back and lifts up the other costume once again. Do you put it on?";
 				if player consents:
@@ -142,7 +146,7 @@ to say christy_ending:
 	now scalevalue of player is 3;
 	now bodydesc of player is "plump";
 	now bodytype of player is "[one of]plush[or]leonine[or]costume-like[at random]";
-	now daycycle of player is 0;
+	now SleepRhythm of player is 0;
 	end the story saying "You lose yourself to your new identity.";
 	follow the turnpass rule;
 	stop the action;
@@ -152,9 +156,9 @@ when play ends:
 	if christyquest is 4:
 		say "     When you and your pride leader are finally recovered from the decimated city, there seems to be some talk about what to do with the two of you, you are adamant about remaining together with Boris, and he is just as reluctant to be separated from you. You are stuck in military custody for a while as a bit of a novelty, until finally somehow word gets out to some people in the entertainment industry about the two of you. Before you know it they have arranged for you and Boris to be released, and offered you both jobs, you are somewhat unsure, but Boris seems happy to accept, and soon you are starring in your own live action shows, reliving the best times of your life as you act them out for the cameras. You find yourself loving your new job, as you get to enjoy being yourself, and chasing villains for the audience seems to come to you naturally, even though some of the themes are now more adult then you remember. Whatever else happens though, you are always looking forward to the next time Arthur the Antelope shows up on the set. While you know it's just a costume and not the real Arthur, nothing gives you quite as much of a thrill as foiling his twisted schemes, and maybe, just maybe, you will manage to catch him for good one of these times! There is talk of movies and touring, which is nice enough, but your favorite times are when you and Boris get to spend some alone time in your small pride making even more close memories.";
 
-
-
-
+Table of GameCharacterIDs (continued)
+object	name
+Carnival game	"Carnival game"
 
 Carnival game is a man.
 The description of Carnival game is "Standing open and apparently ready for business, one of the automated carnival games is set up here and seems to be working, although who knows what kind of prizes it will hand out in the current circumstances.".
@@ -191,8 +195,8 @@ carry out gameplay:
 		increase diceroll by bonus;
 		if diceroll > 14:
 			say "Your swift reflexes are the death of all little cardboard targets! They will learn to fear your awesome might! Oh hey, you won a prize, too![line break]";
-			let prizegift be a random number from 1 to number of filled rows in the table of random critters;
-			choose row prizegift from the table of random critters;
+			let prizegift be a random number from 1 to number of filled rows in the Table of Random Critters;
+			choose row prizegift from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " ":
 					add loot entry to invent of player;

@@ -96,17 +96,17 @@ Carry out vialselling:
 			if found > 4:
 				say ", but she shakes her head. 'We have no interest in further samples of that kind. Try hunting for different game.'";
 				continue the action;
-	[locates target within the table of random critters]
+	[locates target within the Table of Random Critters]
 	now monster is 0;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is target:
 			now monster is y;
 			break;
 	if monster is 0:
 		say ", but she shakes her head. 'I'm not really sure where you got that, but it's not on our acquisition list so we can't take it.'";
 		continue the action;
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	now basevalue is ( ( lev entry * 7 ) / 4 );
 	if found is 1:
 		now basevalue is ( basevalue * 2 ) / 3;
@@ -199,10 +199,10 @@ to say zephyrmatt1:
 	say "     'Now, what we need you to do is place a few of these nanite density monitors at a few key locations in the city. They'll help us detect the prop-' she stops herself short. 'Well, a temp doesn't need to know the details. They measure some stuff about the nanites. Perfectly safe,' she adds reassuringly. 'We've set a few up already nearby, but HQ wants them placed at four other key locations across the city: The downtown high rise district, the city park, the beachfront area and the seedy red light district. They should be placed in open, elevated locations where they won't be disturbed. Once you get to an area, try hunting around for a ['][bold type]detector site[roman type]['] to find an appropriate place to set it up.'";
 	say "     She heaves a small suitcase onto the counter and pops it open. She takes a moment to demonstrate how to activate them, then closes it up and slides the case to you. 'They come equipped with a GPS transponder, so we'll be able to know if they've been properly installed or not, so don't get any funny ideas about just dumping them somewhere or sticking them in a few alleys. They've got to be outside in the open and somewhere high up.' Grabbing the heavy case, you sigh and head off, hoping this job will be as easy as she claims, but knowing it won't be somehow.";
 	increase carried of nanite density monitor by 1;
-	now beach detector site is unresolved;
-	now red light detector site is unresolved;
-	now high rise detector site is unresolved;
-	now park detector site is unresolved;
+	now beach detector site is active;
+	now red light detector site is active;
+	now high rise detector site is active;
+	now park detector site is active;
 	now HP of doctor matt is 17;
 
 to say zephyrmatt2:
@@ -223,10 +223,10 @@ to say zephyrmouse1:
 	say "     'Now, what we need you to do is place a few of these nanite density monitors at a few key locations in the city. They'll help us detect the prop-' she stops herself short. 'Well, a temp doesn't need to know the details. They measure some stuff about the nanites. Perfectly safe,' she adds unreassuringly. 'We've set a few up already nearby, but HQ wants them placed at four other key locations across the city: The downtown high rise district, the city park, the beachfront area and the seedy red light district. They should be placed in open, elevated locations where they won't be disturbed. Once you get to an area, try hunting around for a ['][bold type]detector site[roman type]['] to find an appropriate place to set it up.'";
 	say "     She heaves a small suitcase onto the counter and pops it open. She takes a moment to demonstrate how to activate them, then closes it up and slides the case to you. 'They come equipped with a GPS transponder, so we'll be able to know if they've been properly installed or not, so don't get any funny ideas about just dumping them somewhere or sticking them in a few alleys. They've got to be outside in the open and somewhere high up.' Grabbing the heavy case, you sigh and head off, hoping this job will be as easy as she claims, but knowing it won't be somehow.";
 	increase carried of nanite density monitor by 1;
-	now beach detector site is unresolved;
-	now red light detector site is unresolved;
-	now high rise detector site is unresolved;
-	now park detector site is unresolved;
+	now beach detector site is active;
+	now red light detector site is active;
+	now high rise detector site is active;
+	now park detector site is active;
 	now hospquest is 17;
 
 to say zephyrmouse2:
@@ -244,7 +244,7 @@ Chapter 2 - The Situations
 
 Book 1 - Beach
 
-Beach Detector Site is a situation. It is resolved.
+Beach Detector Site is a situation. It is inactive.
 The sarea of Beach Detector Site is "Beach".
 
 Instead of resolving a Beach Detector Site:
@@ -261,6 +261,7 @@ Instead of resolving a Beach Detector Site:
 			challenge "feral sea dragoness";
 		if lost is 1:
 			say "     Defeated, you are forced back to the beach. You'll have to try again later and hope the creature has moved on.";
+			now Resolution of Beach Detector Site is 2; [detector not placed yet, lost fight]
 		else:
 			say "     With the creature defeated, you make it to the rocky spire. You now must climb the wet stone to get to the top. While parts of it are fairly easy to scale, there are a few difficult sections that make the climbing treacherous.";
 			let bonus be ( dexterity of player + strength of player minus 20 ) divided by 2;
@@ -273,13 +274,14 @@ Instead of resolving a Beach Detector Site:
 				decrease HP of player by 20;
 			say "     Tearing open the bags, you pull out the device and place it on a smooth surface at the top of the spire. Activating it, there is a whirring accompanied by a grinding sound as the screw bolts dig into the rock, locking it into place. Given the height and the fresh sea breeze, you're quite confident the detector will get unobstructed readings of... whatever for Zephyr. Your descent is thankfully easier, choosing to make an exhilarating dive from the fifty foot spire into the water and swimming back to shore.";
 			remove "Beach" from ndmlist;
+			now Resolution of Beach Detector Site is 1; [detector placed]
 			now Beach Detector Site is resolved;
 			say "[onelessndm]";
 
 
 Book 2 - Red Light District
 
-Red Light Detector Site is a situation. It is resolved.
+Red Light Detector Site is a situation. It is inactive.
 The sarea of Red Light Detector Site is "Red".
 
 Instead of resolving a Red Light Detector Site:
@@ -296,16 +298,18 @@ Instead of resolving a Red Light Detector Site:
 		challenge "Hermaphrodite Latex Vixen";
 		if lost is 1:
 			say "     Defeated, the hermaphrodite vixen banishes you from her rooftop, forcing you to return another time to try and place the detector after you've recovered.";
+			now Resolution of Red Light Detector Site is 2; [detector not placed, lost fight]
 		else:
 			say "     Having dealt with the cherry red vixen, you let her flee down the fire escape and head over to the sign. Looking it over, you are happy to find there's a few sets of maintenance rungs installed on the back so it can be scaled. Climbing up carefully, you find a good spot near the top of the sign, affixing the device against the black back of the sign, helping to hide it. When you turn it on, there is a whirr as the screws drill themselves into the surface, locking the box securely in place. Pleased with your accomplishment, you head back down and get some distance between you and the highly active group of creatures around here.";
 			remove "Red Light District" from ndmlist;
+			now Resolution of Red Light Detector Site is 1; [detector placed]
 			now Red Light Detector Site is resolved;
 			say "[onelessndm]";
 
 
 Book 3 - High Rise District
 
-High Rise Detector Site is a situation. It is resolved.
+High Rise Detector Site is a situation. It is inactive.
 The sarea of High Rise Detector Site is "High".
 ndmhigh is a number that varies.
 
@@ -319,7 +323,7 @@ Instead of resolving a High Rise Detector Site:
 		let T be a random number between 1 and 4;
 		if T is 1:
 			say ", but are met a few floors later by a pack of bunnies who open the stairwell door as you walk past.";
-			challenge "Rabbit";
+			challenge "Anthro Rabbit";
 		else if T is 2:
 			say ", but run into a pair of cougars descending the stairs quietly on their padded paws.";
 			challenge "Cougar";
@@ -334,6 +338,7 @@ Instead of resolving a High Rise Detector Site:
 			say ", but manage to make it to the top without incident.";
 		if lost is 1:
 			say "     Having been bested, you are forced to descend back down to the street. You'll have to rest and recover before coming back to try again.";
+			now Resolution of High Rise Detector Site is 2; [detector not placed, lost fight]
 		else:
 			say "     Making it to the top floor, you search around quietly, eventually finding the service entrance to the roof and make your way up there. It is rather windy at the top of the tower, a pleasant change after your long, hot climb up the building. The ascent has left you tired, hungry and thirsty, but you still have work to do before you can rest and head back down.";
 			increase thirst of player by 12;
@@ -343,13 +348,14 @@ Instead of resolving a High Rise Detector Site:
 			challenge "Gargoyle";
 			say "     Your battle the with creature completed, you stagger back down to the street level, sore, tired and exhausted, but one step of this job completed at least.";
 			remove "High Rise District" from ndmlist;
+			now Resolution of High Rise Detector Site is 1; [detector placed]
 			now High Rise Detector Site is resolved;
 			say "[onelessndm]";
 
 
 Book 4 - Park
 
-Park Detector Site is a situation. It is resolved.
+Park Detector Site is a situation. It is inactive.
 The sarea of Park Detector Site is "Park".
 
 Instead of resolving a Park Detector Site:
@@ -362,10 +368,12 @@ Instead of resolving a Park Detector Site:
 		challenge "Yamato Dragon";
 		if lost is 1:
 			say "     The victorious dragon drops you off far from its home, leaving you to stagger back to the main path to recover before perhaps trying again.";
+			now Resolution of Park Detector Site is 2; [detector not placed, lost]
 		else:
 			say "     Having beaten the dragon, you drive it off for the moment, but you decide it would be best not to tarry too long. It may have friends and given how fast those creatures fly, they could be here soon. You enter the observatory, most of the building being taken up by the one, large dome housing the telescope. From the torn suit and the excessive amounts of dragon cum around, you wonder if perhaps one of the people working here became that creature.";
 			say "     Setting such musings aside, you look around and quickly find a set of ladder rungs leading up to the shutter for the dome as well as an old manual crank for opening it. With some effort, you manage to get the gate over the telescope, letting the [if daytimer is day]sunlight[else]starlight[end if] in and climb up to the dome. Taking an uncomfortable seat at the edge, you take a quick moment to scan around for any sign of the returning dragon before placing the device against the dome's outer wall and turning it on. There is a sharp whine from the screws as the work to dig into the thick metal, eventually boring their way in and securing the device. You climb back down, close the shutter to hide what you've done and make a run for it back down the hill, taking cover in the trees as you spot more of those dragons flying back to the observatory. Finding you gone, the dragons quickly descend into lustfully mating to vent their frustrations at your escape.";
 			remove "Park" from ndmlist;
+			now Resolution of Park Detector Site is 1; [detector placed]
 			now Park Detector Site is resolved;
 			say "[onelessndm]";
 

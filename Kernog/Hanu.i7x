@@ -6,8 +6,7 @@ acquaintedWithHanu is a number that varies. [0: not met, 1: met and trained wit
 
 This is the monkeyAcquaintancesCheck rule:
 	if acquaintedWithHanu is 1 and acquaintedWithWukong >= 3:
-		now Monkey Duel is unresolved;
-
+		now Monkey Duel is active;
 
 Section 1 - Original situation
 
@@ -31,16 +30,18 @@ Instead of resolving a Hanu:
 		Increase score by 5;
 		now acquaintedWithHanu is 1;
 		follow the monkeyAcquaintancesCheck rule;
+		now Resolution of Hanu is 1; [trained with him]
 	else:
 		LineBreak;
 		say "Waving the other off you turn and head about your way without another word spoken.";
+		now Resolution of Hanu is 2; [left him]
 	now Hanu is resolved;
 
 Section 2 - Monkey Duel
 
-Monkey Duel is a situation. The sarea of Monkey Duel is "Zoo".
-When play begins:
-	now Monkey Duel is resolved;
+Monkey Duel is a situation.
+Monkey Duel is inactive.
+The sarea of Monkey Duel is "Zoo".
 
 Instead of resolving Monkey Duel:
 	say "     'About time you showed up[if player is not defaultnamed], [name of player][end if].' a familiar voice calls you out as you pass under a large tree. Hanu, the monkey with whom you meditated with earlier, is sitting leisurely on one of the branches, his long tail waving at you. With surprising agility, Hanu jumps down from his perch and makes a perfect landing just in front of you. 'You seem to have an habit of being late for training, my pupil. But no matter, let us practice our kung fu together.'";
@@ -81,6 +82,7 @@ Instead of resolving Monkey Duel:
 				say "     On these words, Hanu leaves you, a bruised and reluctant Wukong on his shoulders. A short moment after, you also make your way to the museum's lobby.";
 				WaitLineBreak;
 				move player to Museum;
+				now Resolution of Monkey Duel is 1; [Hanu won]
 				say "[italic type]Wukong was forced to leave the Museum by Hanu. However, you feel that his threats were not empty.[roman type]";
 			else:
 				LineBreak;
@@ -98,6 +100,7 @@ Instead of resolving Monkey Duel:
 				say "[italic type]Wukong's thugs should be at the Zoo, by the time you go back.[roman type]";
 				WaitLineBreak;
 				move player to Museum;
+				now Resolution of Monkey Duel is 2; [Wukong won]
 		else:
 			LineBreak;
 			say "     'Well that was... Blunt,' Hanu reacts. 'But do not worry. I am sure that I can hold my own against our young [']friend[']. Wish me luck, my pupil.' You were about to correct him but Hanu was already on his way to the museum. Shaking your head, you finish your walk, wondering how the whole affair will conclude. A while after, the air fills with monkey noises and people shouting. What happened?";
@@ -107,11 +110,13 @@ Instead of resolving Monkey Duel:
 			say "'With his new bitch?'";
 			say "'Heh heh. Nothing better than to twist the knife in the wound, right?'";
 			say "The two monkeys snicker and walk away. [italic type]It seems that Hanu lost in your absence, and that Wukong sent some thugs at the Zoo.[roman type]";
-		now the area corresponding to a name of "Monkey" in the Table of random critters is "Nowhere";
-		now the area corresponding to a name of "Wukong Thugs" in the Table of random critters is "Zoo";
+			now Resolution of Monkey Duel is 3; [left the monkeys to fight]
+		now the area corresponding to a name of "Monkey" in the Table of Random Critters is "Nowhere";
+		now the area corresponding to a name of "Wukong Thugs" in the Table of Random Critters is "Zoo";
 	else:
 		LineBreak;
 		say "     You blurt out the best excuse you can think of and walk away from the awkward situation as fast as you can, while Hanu sighs loudly in your general direction.";
+		now Resolution of Monkey Duel is 99; [disinterest]
 		now acquaintedWithHanu is 0; [locks Monkey Duel from further acquaintance checks]
 	now Monkey Duel is resolved;
 
@@ -123,12 +128,12 @@ when play begins:
 	add { "Wukong Thugs" } to infections of hermaphrodite;
 	add { "Wukong Thugs" } to infections of furry;
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Wukong Thugs";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -176,12 +181,13 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 to say WukongThugsdesc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Male Preferred" is listed in feats of player:

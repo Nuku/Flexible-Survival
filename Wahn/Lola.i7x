@@ -1,7 +1,7 @@
 Version 1 of Lola by Wahn begins here.
 [ Version 1.0 - New NPC - by Wahn  ]
 
-Lola is a woman. The HP of Lola is usually 0.
+Lola is a woman.
 The description of Lola is "[LolaDesc]".
 The conversation of Lola is { "<This is nothing but a placeholder!>" }.
 The scent of Lola is "     Lola has a light, floral scent with an underlying note of clean fur.".
@@ -74,13 +74,9 @@ to say LolaSexMenu:
 					say "[LolaTalk2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the white-furred bunny, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the white-furred bunny, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -130,13 +126,9 @@ to say LolaSexMenu:
 					say "[LolaSex1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the white-furred bunny, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the white-furred bunny, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

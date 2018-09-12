@@ -39,6 +39,7 @@ Instead of resolving Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! 
 		now Happy Puppy Kennel is known;
 		move player to Happy Puppy Kennel;
 		now battleground is "void";
+		now Resolution of Corrupt Kennel is 1; [Entered as Friend]
 	else if calcnumber is 2:
 		WaitLineBreak;
 		say "     You follow Dominick inside, eager to show him who's boss.";
@@ -52,6 +53,7 @@ Instead of resolving Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! 
 			now Happy Puppy Kennel is known;
 			move player to Happy Puppy Kennel;
 			now battleground is "void";
+			now Resolution of Corrupt Kennel is 2; [Entered Kennel as Foe]
 		else:
 			say "     As the door closes behind you, Dominick turns around to face you; just in time to block your fist with his arm. His eyes narrow and he growls, 'Wrong move, asshole.' He knees you in the groin, and as you double over in pain, he pushes you hard. You topple to the ground, knocking the wind out of your lungs, but you barely have time to register this new misery before Dominick begins kicking you viciously. Unable even to cry out, you tighten into a ball and try to endure. Your battered body now feeling like a giant bruise, you hear Dominick from somewhere above you, 'I warned you once and you ignored it. Now you'll get what [if player is female]bitches[else]fuckers[end if] like you deserve.";
 			say "[ForcedSubmissionToDom]";
@@ -61,6 +63,7 @@ Instead of resolving Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! 
 		now HP of Dominick is 1;
 		now Happy Puppy Kennel is known;
 		now battleground is "void";
+		now Resolution of Corrupt Kennel is 3; [Found Kennel, Did not go in]
 	now Corrupt Kennel is resolved;
 
 Section 2 - Happy Puppy Kennel
@@ -129,6 +132,10 @@ to say hpkdesc:
 
 Section 3 - Dominick
 
+Table of GameCharacterIDs (continued)
+object	name
+Dominick	"Dominick"
+
 Dominick is a person. Dominick is in Happy Puppy Kennel.
 The description of Dominick is "[dominickdesc]".
 The conversation of Dominick is { "Bitches love me!" }.
@@ -182,7 +189,7 @@ the fuckscene of Dominick is "[sexwithDominick]".
 
 to say sexwithDominick:
 	setmonster "Breederslut";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of Dominick < 2:
 		say "     With the way his cock's standing tall, you're sure he'd be up for it, but it's still best to talk to him first.";
 	else if lastfuck of Dominick - turns < 4:
@@ -370,14 +377,10 @@ to say ForcedSubtoDomSexMenu:
 					say "[ForcedSubToDomSex7]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Does Dom deny you right as your reward is in reach?";
-			if player consents:
-				now sextablerun is 1;
-				say "     Your master's face spreads in an evil grin. 'I'm not sure that you actually want this dick enough. I think we should wait until you're truly ready.' He shoves you away and turns his attention to his two collared pets.";
-				increase libido of player by 10;
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Your master's face spreads in an evil grin. 'I'm not sure that you actually want this dick enough. I think we should wait until you're truly ready.' He shoves you away and turns his attention to his two collared pets.";
+			increase libido of player by 10;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -1205,7 +1208,7 @@ An everyturn rule:
 		if ForcedBreederslutTF >= 1:
 			if facename of player is not "Breederslut":
 				say "     Something seems wrong to you for a minute, making you whine and whimper as you try to work out the problem. You can feel the pressure inside your head building, until finally something seems to snap, and you let out a loud low moan of pleasure as your face begins to reshape itself. Your moaning cry soon transforms into a howl, as you happily greet the return of the cute face your master gave you.";
-				Now facename of player is "Breederslut";
+				now facename of player is "Breederslut";
 				now face of player is "that of a cute doggy with a mid-length muzzle, pointed ears and a happy if vapid expression";
 			if cunts of player < 1:
 				now cunts of player is 1;
@@ -1240,7 +1243,7 @@ An everyturn rule:
 		if ForcedBreederslutBoyTF >= 1:
 			if facename of player is not "Breederslut":
 				say "     Something seems wrong to you for a minute, making you whine and whimper as you try to work out the problem. You can feel the pressure inside your head building, until finally something seems to snap, and you let out a loud low moan of pleasure as your face begins to reshape itself. Your moaning cry soon transforms into a howl, as you happily greet the return of the cute face your master gave you.";
-				Now facename of player is "Breederslut";
+				now facename of player is "Breederslut";
 				now face of player is "that of a cute doggy with a mid-length muzzle, pointed ears and a happy if vapid expression";
 			if player is female:
 				now cunts of player is 0;

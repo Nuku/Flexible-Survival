@@ -18,7 +18,7 @@ when play begins:
 
 to say voodoogeckodesc:
 	setmongender 6; [creature is shemale]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
@@ -32,7 +32,7 @@ to say voodoogeckodesc:
 		now vgeckoboost is true;
 
 to say losetovoodoogecko:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of player > 0:
 		say "     Unwilling to continue resisting her, you drop to your knees";
 	else:
@@ -200,12 +200,12 @@ to say vgeckosex_06:		[oral - pussy]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Voodoo Gecko"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -253,8 +253,9 @@ When Play begins:
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Drop Item - Gecko Cum
@@ -271,7 +272,7 @@ to say drinkgeckocum:
 	say "     Feeling drawn to the dark power, you quickly open the container of semen and gulp it down before it can dissipate. You moan softly and exhale a puff of violet mist that leaves a musky scent in the air as a rush of arousal wells up inside you. Even as you feel the cum in your belly start to tingle with infected nanites and strange magicks, you can't help but smile darkly at the rush of excitement you experience.";
 	increase libido of player by 5;
 	setmonster "Voodoo Gecko";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:

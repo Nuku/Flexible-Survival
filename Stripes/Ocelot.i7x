@@ -32,7 +32,7 @@ to say losetoocelot:
 
 
 to say losetoocelot_bt:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of player > 0:
 		say "     Opting to give in rather than fight the small feline, you let him push you to sit on the ground and climb atop you. He runs his paws over your [bodytype of player] body. He nuzzles at your neck and licks your throat softly.";
 	else:
@@ -141,7 +141,7 @@ to say ocelotloss_bt_j2:	[sub on dom - jerk]
 
 
 to say losetoocelot_ld:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of player > 0:
 		say "     Opting to give in rather than fight the large feline, you let him wrap his arms around you and pull you into his lap as he sits down with you. He runs his paws over your [bodytype of player] body. He nuzzles at your neck and licks your throat softly.";
 	else:
@@ -198,7 +198,7 @@ to say beattheocelot:
 
 
 to say beattheocelot_bt:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now noocelotbtsex is 0;
 	if noocelotbtsex > 2:
 		say "     Having beaten the little slip of a kitty, you knock him to the ground. Rather than listen to his pleas, you push him away and give him a hard swat on the ass, warning him to stay away from you in the future, as you've done with the others of his ilk recently. He runs off with a frightened mewl.";
@@ -291,7 +291,7 @@ to say beattheocelot_ld:
 
 to say ocelotdesc:
 	setmongender 3; [creature is male]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
@@ -314,7 +314,7 @@ to say ocelotdesc:
 	now cha entry is 14;
 
 [  --coming soon
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
@@ -365,12 +365,12 @@ to say leghit:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Ocelot"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -418,8 +418,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 to say ocelotbodydesc:

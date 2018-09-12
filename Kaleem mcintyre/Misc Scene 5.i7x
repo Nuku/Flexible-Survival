@@ -90,9 +90,11 @@ Instead of resolving a The Dorms Part Three:
 		increase libido of player by 15;
 		if libido of player > 100, now libido of player is 100;
 		increase score by 1;
+		now Resolution of The Dorms Part Three is 1; [went in]
 	else:
 		LineBreak;
 		say "     Shaking your head you try not to imagine what's going on as you step over the prone towel in front of you and then go about your way on your business. Some things should just be left well enough alone.";
+		now Resolution of The Dorms Part Three is 99; [disinterest]
 	now The Dorms Part Three is resolved;
 
 
@@ -126,6 +128,7 @@ Instead of resolving a Training Room:
 			say "Coming to realize that this is enough for one day you walk nonchalantly out of the room without saying a word to some of the cheering guys and girls talking about you. A few hands do smack your rump however, the offer to come and [']see them later['] being whispered into your ear before the wolverine guarding the front door growls loudly to scare everyone back to what they were doing. You blush some, but make your way out without incident. Between the glare you get from wolverine and the lewd slaps you received across your rump you have a feeling you won't be back here anytime too soon... or ever.";
 			say "[bold type]Your dexterity has increased by 1![roman type][line break]";
 			increase dexterity of player by 1;
+			now Resolution of Training Room is 1; [Treadmill / Dex Training]
 		else:
 			LineBreak;
 			say "Deciding that you could do with some more arm and upper muscles strength you go over to a lonely-looking stack machine and then proceed to adjust the pin into what weight on the contraption to what you think you can pump. Once that has been accomplished you go over and sit down and take the handlebars to begin pumping iron. What you find is that the weight you have set is so minuscule that you nearly send the plates of iron up to the roof. Not feeling the strain that you know you should be feeling you blink to yourself in confusion as you look at the now hovering piece of metal. Slowly releasing the handlebar you get up and then return to the backside of the stack machine to replace the pin under a greater set of plates before returning to your seat. This time you find that you can feel a slight burn as you pull the handlebar down into yourself. Grunting in satisfaction as your arms start to flex and strain from the effort you begin a long series of reps over the course of the next hour.";
@@ -134,6 +137,7 @@ Instead of resolving a Training Room:
 			say "[bold type]Your strength has increased by 1![roman type][line break]";
 			increase strength of player by 1;
 			increase capacity of player by 5;
+			now Resolution of Training Room is 2; [Stacks / Str Training]
 		increase hunger of player by 15;
 		increase thirst of player by 10;
 		increase libido of player by 12;
@@ -141,7 +145,8 @@ Instead of resolving a Training Room:
 	else:
 		LineBreak;
 		say "Shaking your head you decide just to marvel at all the other sporty anthros here instead of trying to work out. You already get enough of a workout just trying to survive this screwed up city anyway, what with either trying to escape feral mutants or fighting them when your feet can't get you out of danger. Looking over the assembled crowd for several more minutes you finally get your fill of the college's gym almost an hour later. From what you can see, everything here is as it should be, and it will continue to be so with the wolverine guarding the place. So, turning on your heel, you tip your head to the big male and then walk out without looking back.";
-	Now Training Room is resolved;
+		now Resolution of Training Room is 99; [disinterest]
+	now Training Room is resolved;
 
 
 Section 7 - Janitor's Closet
@@ -161,10 +166,11 @@ Instead of resolving a Janitor's Closet:
 		WaitLineBreak;
 		say "When he pulls back you ask him what happened to the dog. The canine-equine creature blushes at you before raising an arm to scratch his head. 'Well...ugh you see...the dog and I were on good terms with each other and so...' The fumbling wolftaur tries to say something, but you can't understand him. That is until he curls his left paw into a fist and then sticks the index finger of his right paw into the hole he just made. 'Let's just say that she and I got a lot closer after my clothes started to tear off my body.' You blink at this, tilting your head to the side somewhat, before you watch the long tail of the wolftaur wag at you suddenly. Quickly you get the point and blush at the man. 'Yeah...I'm not sure how to feel about that, but I'm going to make the most of it since I've got my senses back. Thanks again.' Another lick and then the former-janitor-turned-wolftaur is going back into his little closet space. A second later the creature comes out with a bucket, mop and broom. 'What? I'm still the janitor, after all. If I don't clean up this place then who will?' And then the other is off and down the hallway with a wag of his tail and sway of his hips.";
 		increase score by 1;
-		now Janitor's Closet is resolved;
+		now Resolution of Janitor's Closet is 1; [won]
 	else:
 		say "Getting yourself tossed around like a ragdoll by the larger wolftaur you barely have the time to see the other jump away from you with a snarl, completely lost in his feral minded haze, as the other runs off down the hallway. Grunting and getting up you watch as the wolftaur -- who was probably the janitor -- disappears out of sight before you can blink. You suddenly hope that the other staff here can handle the beast because it looks like the proverbial wolf is on the prowl.";
-		now Janitor's Closet is resolved;
+		now Resolution of Janitor's Closet is 2; [lost]
+	now Janitor's Closet is resolved;
 
 
 Section 8 - Teachers Lounge

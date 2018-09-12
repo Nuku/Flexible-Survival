@@ -12,7 +12,7 @@ when play begins:
 
 to say NagaDesc:
 	setmongender 3; [creature is male]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Female Preferred" is listed in feats of player:
@@ -24,7 +24,7 @@ to say NagaDesc:
 	say "     A creature consisting of human and snake blended together in an intimidating mixture slithers into sight ahead of you. It is a naga - a male one, judging from what you see as he raises his human-like upper body to have a good look at you in turn. He has [one of]brown and black[or]bright-red and yellow[or]gray and tan[at random] scales, fine and soft looking. Two muscular arms are his only limbs, if one discounts the great tail that makes up most of the male naga's long body. Clenched in his right hand is a pipe, a crude, but likely effective, makeshift weapon. Of course, he also has great jaws that likely contain sharp, possibly venomous, fangs. His human torso is well-muscled, sleek, and lacking any blemish. The naga's head and face are entirely that of a huge snake, staring unblinkingly and tasting the air with a flickering forked tongue. The moment of mutual examination ends as the naga hisses. 'SSsssubmit - or don't... it will sssatisfy me either way, prey.' With that, he rushes towards you, sliding over the ground quickly with sinuous twists of his snake-body.";
 
 to say LoseToNaga:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let xx be vorelevel * vorelevel;
 	if player is purehuman and nagawarning is false:
 		say "     Your opponent makes a dry hiss, almost as if he was laughing, as he moves over your defeated form, his tongue flicking. Grabbed roughly by the serpentine creature, your arm is twisted behind your back, and you are held tightly from behind. That forked tongue flicks across your cheek as he hisses in your ear. 'You ssshould leave thisss place, human. Your kind is finished in thisss city. Remember it - or you will be punissshed fresh.' He bares his fangs as an added warning before shoving you away, laughing as you stumble off."; [Keeping for thematic value]
@@ -121,12 +121,12 @@ to say WinOverNaga:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Naga";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -174,8 +174,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "snakenaga"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Section 3 - Endings
 

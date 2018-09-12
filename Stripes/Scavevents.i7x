@@ -132,19 +132,18 @@ Instead of resolving a Protected Supplies:
 				if scavengetarget is "soda":
 					now y is "soda";
 				say "Your specific hunting leads you towards your target.";
-	now monster is a random number from 1 to number of filled rows in the table of random critters;
+	now monster is a random number from 1 to number of filled rows in the Table of Random Critters;
 	let Q be a list of numbers;
-	repeat with tt running from 1 to number of filled rows in table of random critters:
-		choose row tt from the table of random critters;
+	repeat with tt running from 1 to number of filled rows in Table of Random Critters:
+		choose row tt from the Table of Random Critters;
 		if there is a lev entry:
 			if lev entry > level of player plus levelwindow and hardmode is false:
 				next;
 		else:
 			next;
 		if area entry matches the text battleground:
-			if there is a nocturnal in row tt of table of random critters:
-				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
-					next; [skips if day/night doesn't match]
+			if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night):
+				next; [skips if day/night doesn't match]
 			add tt to q;
 			if "Like Attracts Like" is listed in the feats of player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
@@ -159,7 +158,7 @@ Instead of resolving a Protected Supplies:
 		repeat with Z running through q:
 			now monster is Z;
 			break;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if lev entry < level of player and hardmode is true:
 			hardmodeboost;
 		say "In your searching through the city, you come across some [y] and move to get it.";
@@ -226,13 +225,13 @@ Instead of resolving a Dropped Handbag:
 		else:
 			say "     You open the bag and put your hand in to rummage through its contents, but are met with a sticky surprise. Pulling it out, you find your hand covered in wet, sticky cum. You can feel the tingles from the infected cum on your hand. Someone, possibly the bag's original owner, filled it with their cum and left it for someone like you to find.";
 			LineBreak;
-			sort table of random critters in random order;
-			repeat with X running from 1 to number of filled rows in table of random critters:
-				choose row X from the table of random critters;
-				if area entry matches the text battleground and ( there is no non-infectious in row monster of table of random critters or non-infectious entry is false ):
+			sort Table of Random Critters in random order;
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:
+				choose row X from the Table of Random Critters;
+				if area entry matches the text battleground and ( there is no non-infectious in row monster of Table of Random Critters or non-infectious entry is false ):
 					now monster is X;
 					break;
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			infect;
 			decrease humanity of player by 5;
 	else:
@@ -783,7 +782,7 @@ Instead of resolving a Scattered Clothing:
 		-- 4: [Feet Item]
 			say "[GiveRandomFeetItem]";
 
-WaistItemsList is a list of objects that varies.
+WaistItemsList is a list of objects that varies.[@Tag:NotSaved]
 the WaistItemsList is {ripped jeans, black jeans, sturdy jeans, skinny jeans, hot pants, gray pants, camo pants, jogging pants, bermuda shorts, black miniskirt, pencil skirt, floral skirt}.
 
 to say GiveRandomWaistItem:
@@ -791,7 +790,7 @@ to say GiveRandomWaistItem:
 	increase carried of entry RandomItemPick of WaistItemsList by 1;
 	say "[bold type]You gain [if plural of entry RandomItemPick of WaistItemsList is true][entry RandomItemPick of WaistItemsList][else]a [entry RandomItemPick of WaistItemsList][end if]![roman type][line break]";
 
-ChestItemsList is a list of objects that varies.
+ChestItemsList is a list of objects that varies.[@Tag:NotSaved]
 the ChestItemsList is {black t-shirt, white t-shirt, maroon pullover, zephyr shirt, camo shirt, sleeveless shirt, mesh shirt}.
 
 to say GiveRandomChestItem:
@@ -799,7 +798,7 @@ to say GiveRandomChestItem:
 	increase carried of entry RandomItemPick of ChestItemsList by 1;
 	say "[bold type]You gain [if plural of entry RandomItemPick of ChestItemsList is true][entry RandomItemPick of ChestItemsList][else]a [entry RandomItemPick of ChestItemsList][end if]![roman type][line break]";
 
-FeetItemsList is a list of objects that varies.
+FeetItemsList is a list of objects that varies.[@Tag:NotSaved]
 the FeetItemsList is {combat boots, brown loafers, leather sandals, high heels, stiletto heels, jogging shoes, cowboy boots}.
 
 to say GiveRandomFeetItem:
@@ -807,7 +806,7 @@ to say GiveRandomFeetItem:
 	increase carried of entry RandomItemPick of FeetItemsList by 1;
 	say "[bold type]You gain [if plural of entry RandomItemPick of FeetItemsList is true][entry RandomItemPick of FeetItemsList][else]a [entry RandomItemPick of FeetItemsList][end if]![roman type][line break]";
 
-CrotchItemsList is a list of objects that varies.
+CrotchItemsList is a list of objects that varies.[@Tag:NotSaved]
 the CrotchItemsList is {ragged loincloth, simple loincloth, boxer briefs, white briefs, orange jockstrap, mesh undies, pink panties}.
 
 to say GiveRandomCrotchItem:

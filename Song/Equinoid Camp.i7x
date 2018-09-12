@@ -36,8 +36,8 @@ Section 2 - Initiation
 
 instead of navigating Equinoid Camp while equinoidstatus is 10:
 	[puts Black Equinoid as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Black Equinoid":
 			now monster is y;
 			break;
@@ -101,6 +101,7 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 				say "     You are brought in front of the tribal leaders, with the one you've met before sitting with a youthful looking equinoid beside her. '[if player is defaultnamed]Newcomer[else][name of player][end if], we welcome you into the tribe and the herd. You are now one with us and welcome among us. As you have voiced intentions of continuing to travel and explore the fallen city for the time being, it has been decided that this cannot be permitted alone. Those who have been recently welcomed are still weak and vulnerable to the outside influences of the creatures of the city.'";
 				say "     'To protect and guide our newest member, we shall send one of our young warriors with you. Liliana is to accompany you, to protect you and to guide you back to us should you stray from the herd.' The equinoid rises stiffly and walks to your side[if player is not lonely], forcing your [companion of player] to step aside for her[end if]. Amaryllis gives her a bit of a jealous glance, but Liliana is either oblivious to it or ignores it entirely. 'We expect you to keep her with you. This is to be a journey for her as well as protection for you. We will not be pleased if you do not fulfill your duties in this regard.' You glance over at your new equinoid companion and nod to the tribal leader before heading into the compound to look around.";
 				now equinoid warrior is tamed;
+				add "Tamed" to Traits of equinoid warrior;
 				now the companion of the player is equinoid warrior;
 				say "     (The equinoid warrior is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type]pet equinoid warrior[roman type] and initiate sex with her while active by typing [bold type][link]fuck equinoid warrior[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], though the herd may not be pleased about that.)[line break]";
 				increase score by 25;

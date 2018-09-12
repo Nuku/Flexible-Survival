@@ -1,6 +1,9 @@
 Version 1 of Basic Locations by Core Mechanics begins here.
 [Version 1.5 - Library Expansion - Luneth]
 
+NPC Nexus is a room.
+The description of NPC Nexus is "This is the extradimensional storage room for unused npcs.".
+
 Grey Abbey Library is a room. Grey Abbey Library is fasttravel. Grey Abbey Library is sleepsafe.
 The description of Grey Abbey Library is "[abbey desc]".
 The earea of Grey Abbey Library is "Outside".
@@ -21,6 +24,8 @@ to say bunker desc:
 	say ". The small sink taking up a corner of the room seems to be broken, producing no water no matter how much the knob is turned. Two doorways to the north and northeast lead to adjoining rooms - showers and a small restroom - while a thicker, secure-looking door opens to the stairwell used to go [bold type]outside[roman type]. Your own personal room is to the south. It's technically just a large maintenance closet, but at least it's private.";
 	if "old boombox" is listed in invent of Bunker:
 		say "     You have set up the old boombox in one corner, where it continues to play despite not being plugged into anything. Maybe it has really amazing batteries - or draws energy some other way. Regardless of the source of its power, the boombox provides a mix of tunes and the occasional weather report on the continuing heat wave. Fiddling with the dials results in different songs and genres of music, but no actual news or broadcast radio. The radio broadcaster you hear seems the same across the stations, though his tone and delivery suits the format of the current [']station[']. Its dials and settings change on their own from time to time as if to provide music to suit the situation or dropping its volume when you're taking a nap.";
+	if debugactive is 1:
+		say "DEBUG -> Invent of Bunker: [Invent of Bunker][line break]";
 
 
 North of Bunker is Communal Shower.
@@ -183,8 +188,8 @@ to say glargeshed desc:
 	project the figure of Library1stfloor_icon;
 	say "     Stepping into the shed, it's a little disconcerting how much bigger it is compared to its outward appearance. Inspecting the interior, the walls are made from basic cement, no drywall or anything, which makes sense since given that this was just a place to stow gardening equipment. Most of the floor is smooth cement as well[if Philip is booked]. Philip has turned the ruined back corner into a muddy wrestling ring to roll around in, the pig prepared for any challengers[else], except for a back corner where the cement has been broken up into jagged balls of rock[end if]. Counters and cabinets line the wall on the right hand side of the shed. To the south is the door leading back out to the courtyard.";
 
-South of Courtyard is Garden.
-Garden is a room. The description of Garden is "[ggarden desc]".
+South of Courtyard is Grey Abbey Garden.
+Grey Abbey Garden is a room. The description of Grey Abbey Garden is "[ggarden desc]".
 
 to say ggarden desc:
 	project the figure of Library1stfloor_icon;

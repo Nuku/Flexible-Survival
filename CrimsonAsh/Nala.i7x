@@ -8,14 +8,14 @@ Version 1 of Nala by CrimsonAsh begins here.
 
 Section 1 - Events
 
-A Harmless Joke is a situation.
-The sarea of A Harmless Joke is "Nowhere".
+Harmless Joke is a situation.
+The sarea of Harmless Joke is "Nowhere".
 
 when play begins:
-	add A Harmless Joke to badspots of girl;
-	add A Harmless Joke to badspots of hellspawn;
+	add Harmless Joke to badspots of girl;
+	add Harmless Joke to badspots of hellspawn;
 
-instead of navigating Grey Abbey Library while (A Harmless Joke is not resolved and HP of Nala is 0 and a random chance of 1 in 3 succeeds):
+instead of navigating Grey Abbey Library while (Harmless Joke is active and Harmless Joke is not resolved and HP of Nala is 0 and a random chance of 1 in 3 succeeds):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action; [can't nav from the player's location, or already there - so we stop this cold]
 	move player to Grey Abbey Library;
@@ -23,7 +23,7 @@ instead of navigating Grey Abbey Library while (A Harmless Joke is not resolved 
 		say "     DEBUG: First Nala Trick on the player - HP of Nala: [HP of Nala][line break]";
 	say "     Walking up to the entrance the library, you reach to open the door leading in. But as you pull it open, you are suddenly drenched in cold water from a bucket set up over the door, soaking you through to the skin. You let out a loud yelp in surprise and start shivering while the bucket makes a hell of a racket as it clatters onto the floor. The whole situation is accompanied by a high-pitched giggling coming from somewhere inside the library. Glancing in that direction, you spot a small figure dart out of a partially opened window and out into the city. Rushing over, you look out after what must have been the trickster who set this trap for you, yet find them nowhere in sight. Grunting and cursing, you reluctantly accept your defeat and head down to the bunker to dry yourself off, now far more weary of doorways.";
 	now HP of Nala is 1; [flag set to remember the progress]
-	now A Harmless Joke is resolved; [event won't happen again]
+	now Harmless Joke is resolved; [event won't happen again]
 
 Fool Me Once is a situation.
 The sarea of Fool Me Once is "Nowhere".
@@ -32,7 +32,7 @@ when play begins:
 	add Fool Me Once to badspots of girl;
 	add Fool Me Once to badspots of hellspawn;
 
-after resting while (Fool Me Once is not resolved and player is in Bunker and HP of Nala is 1):
+after resting while (Fool Me Once is active and Fool Me Once is not resolved and player is in Bunker and HP of Nala is 1):
 	say "     Deciding to rest for the next few hours you lay down, closing your eyes slowly drifting to sleep. You dream of your life before the nanobots and the apocalypse, what little you can remember at least. Of previous friends, your old job and your old worries. Suddenly jolted out of your dream by a barrage of ringing and beeping. You nearly launch yourself from your bedding as you swivel around the blaringly loud room for the source of the noises. Set around the room are nearly a dozen alarm clocks, all at full volume and shrieking bells at you. You stand up and stumble around the room confused but intent on ending to the obnoxious noise. Shutting off a few and simply slamming others onto the floor. Soon enough the room is quiet, but the ringing is quickly replaced by a familiar feminine laughter, looking to the doorway you finally get a good look at your prankster.";
 	say "     The girl before you is clearly demonic in nature, she has light red, almost pink skin and only stands a little over two and a half feet tall. The diminutive imp girl flutters around on her small bat-like wings and clawed feet, her hands ending in sharp purple painted nails. The little demon has adorable facial features with a cute button nose, big glossy eyes with violet pupils and crimson hair tied neatly in a pony-tail. Her scorpion-like tail whips around behind her as she moves, the stinger set at the end dripping an unknown yet sweet-smelling liquid. She sports a set of black lingerie seemingly made to fit her small size and delicate curves, her lacy bra filling perfectly out her perky B-cup breasts. She gives you a toothy smile as you examine her, revealing pearly white, pointed teeth.";
 	WaitLineBreak;
@@ -47,7 +47,7 @@ when play begins:
 	add Fool Me Twice to badspots of girl;
 	add Fool Me Twice to badspots of hellspawn;
 
-after resting while (Fool Me Twice is not resolved and player is in Bunker and HP of Nala is 2):
+after resting while (Fool Me Twice is active and Fool Me Twice is not resolved and player is in Bunker and HP of Nala is 2):
 	say "     Deciding to set your trap as ready to feign rest, you position a blanket across your body to use as a net and close your eyes. You lay waiting for what feels like an hour, just as you're about to give up you hear what sounds like the flapping lightly echoing down the hall. Readying yourself and cracking an eye open you spot the same imp prankster carrying a bucket of suspicious intent. As she makes her way over to your bedside you leap into action, gripping the edge of the blanket and throwing it over her before leaping atop it. You hear a squeal of surprise as the bucket she was holding drops to the floor and the grub-worms inside spill out onto the ground. You pin the struggling bundle of imp and blanket to the floor as she squeals and whines in protest. 'Let me go you big bully!' She yells as you have her fully trapped, her stinger-tipped tail pinned under one of your limbs as it struggles and twists to free itself.";
 	LineBreak;
 	say "     [bold type]What do you do now?[roman type][line break]";
@@ -65,12 +65,15 @@ after resting while (Fool Me Twice is not resolved and player is in Bunker and H
 	if calcnumber is 1:
 		LineBreak;
 		say "[TalkNala]";
+		now Resolution of Fool Me Twice is 1; [talked]
 	else if calcnumber is 2:
 		LineBreak;
 		say "[RapeNala]";
+		now Resolution of Fool Me Twice is 2; [fucked her]
 	else:
 		LineBreak;
 		say "[KickNala]";
+		now Resolution of Fool Me Twice is 3; [threw her out]
 	now Fool Me Twice is resolved;
 
 to say TalkNala:
@@ -94,6 +97,10 @@ to say KickNala:
 	say "     You pick up the struggling bundle of imp and carry the yelling girl out of the bunker and library. As you reach outside you give the little ball of cloth a kick and watch it tumble and fall into the streets. The imp girl dazedly crawls out from under the blanket and gets to shaky feet as she looks your way with a pouty face before taking off to the sky. You have a feeling that's the last you'll see of the little troublemaker.";
 
 Section 2 - NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+Nala	"Nala"
 
 Nala is a woman. The HP of Nala is usually 0.
 The description of Nala is "[NalaDesc]".
@@ -220,13 +227,9 @@ to say NalaSexMenu:
 					say "[NalaSex3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the imp, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the imp, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

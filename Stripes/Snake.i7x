@@ -24,7 +24,7 @@ to say snakedesc:
 	else:
 		say "     Suddenly, you're assailed by";
 	say " what would be a common ring-necked snake, were it not for its great size. This serpent has grown to the size of a boa and is almost two meters in length. This one has silvery scales across its body with bright yellow-orange along the underbelly. Its dark gray head has an orange band at its neck and a pale yellow jaw, which blends into the brighter underside. The enlarged snake hisses at you and attacks.";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
 	else if "Male Preferred" is listed in feats of player:
@@ -62,7 +62,7 @@ to say losetosnake:
 		if snakeocc is 0:
 			now snakehijack is 1;
 			now preghijack is true;
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now name entry is "Snake";
 			impregnate with name entry;
 			now gestation of child is 5;
@@ -83,7 +83,7 @@ to say losetosnake:
 		if snakeocc is 0:
 			now snakehijack is 2;
 			now mpreghijack is true;
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			impregnate with name entry;
 			now gestation of child is 5;
 			now snakeocc is 1;
@@ -207,12 +207,12 @@ to say beatthesnake:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Snake";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -260,9 +260,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "snakenaga"; [ Row used to designate any special combat features, "default" for standard combat. ]
-
+	now BannedStatus entry is false;
 
 Section 3 - Alt Combat
 
@@ -277,7 +277,7 @@ this is the snakebiteinc rule:
 	if alt1chance entry > 40, now alt1chance entry is 40;
 
 this is the snakebite rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 75 ); [+33% damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:

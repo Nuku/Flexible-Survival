@@ -15,7 +15,7 @@ when play begins:
 
 to say ninjadesc:
 	setmongender 3; [creature is male]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let bonus be ( perception of player + dexterity of player - 20 ) divided by 2;
 	let featbonus be 0;
 	if "Experienced Scout" is listed in feats of player, increase featbonus by 1;
@@ -62,7 +62,7 @@ to say beattheninja:
 
 
 to say ninjaattack:
-[	choose row monster from the table of random critters;
+[	choose row monster from the Table of Random Critters;
 	if a random chance of 3 in 10 succeeds:
 		say "While making another acrobatic set of leaps and dodges, the ninja slips a shuriken from his robe and tosses it at you. The bladed star stabs into your [one of]shoulder[or]hip[or]side[or]thigh[or]leg[at random]. There is a stab of pain from the strike, followed from a warm heat that flows into you from the wound, causing a surge of lustful desires in you. As these thoughts momentarily distract you, the feline ninja moves in to make his attack.";
 		increase libido of player by a random number between 2 and 5;
@@ -90,12 +90,12 @@ to say ninjaattack:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Ninja Cat"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -143,8 +143,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "ninjastar"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Ninja Star Alt-Attack		[Pre-attack 30% of the time]
@@ -155,7 +156,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 this is the ninjastar rule:
 	if a random chance of 3 in 10 succeeds and inafight is 1:
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now monsterhit is false;
 		increase dex entry by 4;
 		standardstrike;

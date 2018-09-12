@@ -4,19 +4,17 @@ Beach Events by Sarokcat begins here.
 
 Section 1 - Beach bum
 
-Beach bum is a situation.
-The sarea of Beach bum is "Beach".
+Beach Bum is a situation.
+The sarea of Beach Bum is "Beach".
 
-bbum is a number that varies.
-
-Instead of resolving a Beach bum:
-	if bbum is 0:
+Instead of resolving a Beach Bum:
+	if Resolution of Beach Bum is 0:
 		say "     Traveling along the rough beach, you hear a voice call out to you from nearby, turning you see what seems to be a rough figure sitting outside a small tent on the edge of the beach. The tent is surrounded by what seems to be a large pile of junk, partially covered in sand, and the figure itself is so covered in rags and a multitude of various different pieces of clothing that its true form is impossible to determine.";
 		say "     The strange person calls out to you again, and against your better judgment you move a bit closer, until a normal conversation is possible. In a raspy, hard to understand voice, the figure explains that they live here, scavenging useful items from the beach and trading for food and other items. Apparently the scavenging has been good lately, with all sorts of strange and unusual items washed up along the beach. Unfortunately, the people he usually deals with for food have all pretty much become too changed to deal with, and he was wondering if you would be willing to take their place doing some trading for him.";
 		if player consents:
 			say "     The strange bum seems rather happy to hear it, and you imagine he is smiling underneath all that cloth as he offers you a bit of something to take away with you as a sign of your partnership... admittedly not something you would usually have chosen for yourself though, but it would be rude to refuse.";
-			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
-			choose row bumtrade from the table of random critters;
+			let bumtrade be a random number from 1 to number of filled rows in the Table of Random Critters;
+			choose row bumtrade from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
@@ -24,17 +22,18 @@ Instead of resolving a Beach bum:
 				else:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
-			increase bbum by 1;
+			now Resolution of Beach Bum is 1; [player traded]
 		else:
 			say "     The bum seems to sigh sadly, as he waves you on your way, you get the feeling you probably won't be seeing him around here much longer...";
-			Now Beach bum is resolved;
-	else if bbum is 1:
+			now Resolution of Beach Bum is 99; [desinterest]
+			now Beach bum is resolved;
+	else if Resolution of Beach Bum is 1:
 		say "     Traveling along the long beach you once again see the strange pile of junk and bits of ship wreckage that mark the location of the strange beach bum. Recalling your bargain with the strange person, you trudge over to see if you have anything he might want to trade for.";
 		if chips is owned:
 			say "     Spying something he definitely wants, the beach bum moves more swiftly than you would normally have given him credit for, snatching your package of chips, and ripping it open before you can say a word. In seconds it is stuffing chips into its mouth, pieces of chips flying everywhere and covering its cloth wrappings in bits of chip and grease. Glancing up from its gruesome feast, the bum seems almost embarrassed as it offers you several items from its strange hoard.";
 			delete chips;
-			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
-			choose row bumtrade from the table of random critters;
+			let bumtrade be a random number from 1 to number of filled rows in the Table of Random Critters;
+			choose row bumtrade from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
@@ -42,8 +41,8 @@ Instead of resolving a Beach bum:
 				else:
 					increase carried of dirty water by 1;
 					say "You acquired some dirty water.";
-			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
-			choose row bumtrade from the table of random critters;
+			let bumtrade be a random number from 1 to number of filled rows in the Table of Random Critters;
+			choose row bumtrade from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
@@ -54,8 +53,8 @@ Instead of resolving a Beach bum:
 		else if food is owned:
 			say "     Glancing through your stuff, the bum seems somewhat happy to have found some spare food, which they quickly swipe, before offering you a small item from their beach findings.";
 			delete food;
-			let bumtrade be a random number from 1 to number of filled rows in the table of random critters;
-			choose row bumtrade from the table of random critters;
+			let bumtrade be a random number from 1 to number of filled rows in the Table of Random Critters;
+			choose row bumtrade from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					add loot entry to invent of player;
@@ -75,7 +74,7 @@ The sarea of Flotsam bits is "Beach".
 Instead of resolving a Flotsam bits:
 	say "     Wandering along the beach, you spy a small pile of flotsam washed up on the beach. Approaching cautiously, everything seems safe enough, so you spend a moment searching through the detritus. The only thing of use that you turn up is a sea hardened bit of wood that could possibly serve as a giant club. It is a large log of driftwood with several branch stubs protruding from it. A couple are placed such that you could swing it like a massive club or battering ram. Despite its time in the salt water, the wood is unusually hard, reminding you of the giant tree creatures you've spotted in the city. Shrugging, you take the bit of wood with you and continue along the beach.";
 	increase carried of flotsam club by 1;
-	Now Flotsam bits is resolved;
+	now Flotsam bits is resolved;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -93,7 +92,7 @@ The sarea of Strange tide is "Beach".
 
 Instead of resolving a Strange tide:
 	say "     Walking along the beach, you notice a strange roiling of the tide. Not far out in the water, pausing to look for a minute, it seems almost as if the tide is being disturbed from below. Closer inspection reveals that you can almost see something large moving around down there, or perhaps several somethings moving together. Realizing how vigorously whatever is down there must be moving, you decide to continue on your way before it notices you.";
-	Now Strange tide is resolved;
+	now Strange tide is resolved;
 
 
 Section 4 - Strange wave
@@ -107,7 +106,7 @@ when play begins:
 Instead of resolving a Strange wave:
 	say "     Walking along the beach, you hear a strange noise all of a sudden, almost like a loud groan, causing you to look towards the water. You are shocked to note that there is a large wave of water coming towards you from the beach, and due to the sheer surprise, you almost don't get out of the way in time. Still a decent amount of the water splashes you as it slams into the beach, causing you to wonder just what happened as you clean the water off of you, some of it seeming to cling to you a bit more than you would expect.";
 	infect "Feral Sea Dragon";
-	Now Strange wave is resolved;
+	now Strange wave is resolved;
 
 
 Section 5 - Smashed boat
@@ -120,7 +119,7 @@ Instead of resolving a Smashed boat:
 	increase carried of food by 2;
 	increase carried of water bottle by 1;
 	say "You acquired quite a bit of food, but only a little water.";
-	Now Smashed boat is resolved;
+	now Smashed boat is resolved;
 
 
 Section 6 - Dragon voyeurism
@@ -139,7 +138,7 @@ Instead of resolving a Dragon voyeurism:
 	infect "Feral Sea Dragon";
 	infect "Feral Sea Dragon";
 	infect "Feral Sea Dragon";
-	Now Dragon voyeurism is resolved;
+	now Dragon voyeurism is resolved;
 
 
 Section 7 - relaxing scene
@@ -165,13 +164,13 @@ Instead of resolving a Plundered boat:
 
 Section 9 - Tainted yacht
 
-Tainted yacht is a situation.
-The sarea of Tainted yacht is "Beach".
+Tainted Yacht is a situation.
+The sarea of Tainted Yacht is "Beach".
 when play begins:
-	add Tainted yacht to badspots of hermaphrodite;
-	add Tainted yacht to badspots of furry;
+	add Tainted Yacht to badspots of hermaphrodite;
+	add Tainted Yacht to badspots of furry;
 
-Instead of resolving a Tainted yacht:
+Instead of resolving a Tainted Yacht:
 	say "     While moving along the nearly deserted coast, you spot a small, sixty foot yacht anchored nearby. You think with a bit of effort you might be able to swim out to the anchored boat. Do you try?";
 	if player consents:
 		fight;
@@ -180,9 +179,11 @@ Instead of resolving a Tainted yacht:
 		increase carried of dirty water by 2;
 		infect "Sewer Gator";
 		infect "Sewer Gator";
+		now Resolution of Tainted Yacht is 1; [got in the yacht]
 	else:
 		say "     Deciding some things are best left alone, you continue your nice walk along the sands.";
-	now Tainted yacht is resolved;
+		now Resolution of Tainted Yacht is 99; [desinterest]
+	now Tainted Yacht is resolved;
 
 
 Section 10 - Strange castle
@@ -224,8 +225,10 @@ Instead of resolving a Cream stand:
 		challenge "Hermaphrodite Gryphon";
 		say "     The gryphon being long gone, you shake your head as you begin to recover from the ice cream and the attack, and take a closer look at the back part of the ice cream stand while you are here. You find some small containers of gryphon milk which were obviously fed into the ice cream machine in order to bait the gryphon's little trap. Sighing at the waste, you continue on your way, though you do take a couple containers of the leftover milk, just in case it might come in handy later... or if you find another ice cream machine, that did taste pretty good after all...";
 		increase carried of gryphon milk by 2;
+		now Resolution of Cream stand is 1; [got ice cream]
 	else:
 		say "     Being cautious by nature, you decide to forgo the tasty beach treat, and keep to your own supplies.";
+		now Resolution of Cream stand is 99; [no ice cream]
 	now Cream stand is resolved;
 
 
@@ -256,6 +259,5 @@ Instead of resolving a Lucky seashell:
 		say "     Taking the shell along with you, you find that it seems to make the day brighter as you carry it and makes you feel a bit more human just to have it with you. Eventually reaching the end of your walk, you set the shell back down on the beach so it can brighten someone else's day up like it did yours'";
 		SanBoost 20;
 	now Lucky seashell is resolved;
-
 
 Beach Events ends here.

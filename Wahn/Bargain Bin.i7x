@@ -9,6 +9,10 @@ Section 1 - Bargain Bin
 when play begins:
 	now bargainbinusagetotal is 0;
 
+Table of GameCharacterIDs (continued)
+object	name
+Bargain Bin	"Bargain Bin"
+
 Bargain Bin is a man.
 The description of Bargain Bin is "     This large bin seems filled with a number of small packets, bottles, and charms, boxes, pieces of fabric and who knows what else. You can't even see the bottom of it. Certainly an interesting opportunity to find... something in there. Above the bin someone has posted a recently drawn sign reading, 'Bargain Bin. Pay and draw one item out. Price: One packet of food and one bottle of water. No returns and refunds!' You aren't exactly sure just how much of a bargain this bin really is right now, but you could still find something useful right? Maybe you should try [link]hunt[as]sort Bargain Bin[end link]ing a bargain, or [link]sort[as]sort Bargain Bin[end link]ing through the bin?".
 
@@ -191,8 +195,8 @@ carry out bargainhunting:
 						increase carried of dog milk by 1;
 					say "[bold type]You gain 1 honeycomb![roman type][line break]";
 					increase carried of honeycomb by 1;
-					say "[bold type]You gain 1 fish![roman type][line break]";
-					increase carried of fish by 1;
+					say "[bold type]You gain 1 tasty fish![roman type][line break]";
+					increase carried of Tasty Fish by 1;
 		else if Z is 15: [Dr Matt samples]
 			if girl is banned and ( hermaphrodite is banned or furry is banned ):
 				say "     Searching through the bargain bin, you find a [bold type]small travel pouch[roman type] tucked away in the corner. Curious about what may be inside, you pull the container out and open its zipper. Sadly, when you flip the flap at the top open, all you find is a wad of used bubblegum and a bottle of water. Ugh! Oh well, can't win them all and at least you got some water back...";
@@ -221,6 +225,7 @@ carry out bargainhunting:
 					LineBreak;
 					say "     Turning the unusual thing over in your hands several times and admiring the fine detail, you nearly drop the doll as it begins to shift and move on its own. The little depiction of yourself stretches and turns its head from side to side as it looks around, before focusing its piercing little gaze on you. Blinking, you put the miniature person carefully down on the ground, where it explores its new surroundings for a minute before returning to sit at your feet, obviously happy to stay with you.";
 					now strange doll is tamed;
+					add "Tamed" to Traits of strange doll;
 					now dollfound is 1;
 				else:
 					LineBreak;
@@ -313,7 +318,7 @@ carry out bargainhunting:
 					increase carried of food by 2;
 					say "[bold type]You gain 2 water bottles![roman type][line break]";
 					increase carried of water bottle by 2;
-					Now RomanceBooksFound is 1; [books found and returned]
+					now RomanceBooksFound is 1; [books found and returned]
 				else:
 					LineBreak;
 					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescences your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
@@ -335,7 +340,7 @@ carry out bargainhunting:
 					increase carried of food by 2;
 					say "[bold type]You gain 2 water bottles![roman type][line break]";
 					increase carried of water bottle by 2;
-					Now RomanceBooksFound is 1; [books found and returned]
+					now RomanceBooksFound is 1; [books found and returned]
 				else:
 					LineBreak;
 					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescences your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
@@ -495,8 +500,8 @@ carry out bargainhunting:
 		else:
 			say "     Rummaging through all the strange items in the bin, you find yourself pulling out an object you are sure you have seen somewhere else around the city, and sigh despondently as you tuck your new common item back in your backpack.";
 			LineBreak;
-			let minorbargain be a random number from 1 to number of filled rows in the table of random critters;
-			choose row minorbargain from the table of random critters;
+			let minorbargain be a random number from 1 to number of filled rows in the Table of Random Critters;
+			choose row minorbargain from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					say "[bold type]You acquired 1 [loot entry]![roman type][line break]";
@@ -561,7 +566,7 @@ to say plrtcl:
 			LineBreak;
 			say "     Now, if only you could find another plush lion to play with you...";
 			setmonster "Plush Lion";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now skinname of player is "Plush Lion";
 			now cockname of player is "Plush Lion";
 			now bodyname of player is "Plush Lion";
@@ -578,7 +583,7 @@ to say plrtcl:
 			LineBreak;
 			say "     Now, if only you could find another rubber kitty to play with you...";
 			setmonster "Rubber tigress";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now skinname of player is "Rubber tigress";
 			now cockname of player is "Rubber tigress";
 			now bodyname of player is "Rubber tigress";
@@ -596,7 +601,7 @@ to say plrtcl:
 			LineBreak;
 			say "     Now, if only you could find another confectionary to play with you...";
 			setmonster "Chocolate Lab";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now skinname of player is "Chocolate Lab";
 			now cockname of player is "Chocolate Lab";
 			now bodyname of player is "Chocolate Lab";
@@ -635,6 +640,10 @@ instead of trading the jackal romance novels when the current action involves th
 	now RomanceBooksFound is 1; [gave them back to Nermine]
 
 Section 2 - Strange Doll Companion
+
+Table of GameCharacterIDs (continued)
+object	name
+strange doll	"strange doll"
 
 strange doll is a pet. "The strange-looking doll that you found in the bargain bin of the unusual shop. The small doll seems to always look exactly like you, changes and all. The most unusual part of the whole thing is how it happily follows along behind you loyally wherever you go, its plush body moving on its own through some unknown method. Still, just looking at the little thing manages to bring a smile to your face.".
 strange doll is a part of the player.

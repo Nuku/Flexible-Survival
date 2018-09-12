@@ -32,6 +32,8 @@ Instead of resolving a Captive Breeding:
 			if player is male and libido of player > 40:
 				say "[cuckold choice]";
 			say "     You stroke the captive woman's hair, telling her to hold out, then leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";
+			if Resolution of Captive Breeding is 0:
+				now Resolution of Captive Breeding is 8; [held the hand of a woman in the tentacle monster's breeding pen giving birth]
 		else if calcnumber is 2:[observe]
 			say "     You make your way back to the hallway you came from and peek around the corner to watch what's happening in the room. The captive woman pants and gasps as contractions run through her lower body, then you see a tentacle with a whole row of suckers emerge from her pussy, taking hold of her leg to pull the rest of the creature free. Another and another follows, and soon the woman's monstrous offspring emerges with a wet, sloshing noise. It quickly scuttles off, vanishing under a shelf faster than you'd have thought.";
 			LineBreak;
@@ -40,6 +42,8 @@ Instead of resolving a Captive Breeding:
 				say "[cuckold choice]";
 			LineBreak;
 			say "     You leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";
+			if Resolution of Captive Breeding is 0:
+				now Resolution of Captive Breeding is 7; [watched a woman in the tentacle monster's breeding pen giving birth]
 		else:[leave]
 			say "     This is getting way too creepy for you. You flee back up to the surface, followed by the echoing moans and sounds of the captive woman's unnatural birth.";
 	else: [mpregged man]
@@ -63,6 +67,8 @@ Instead of resolving a Captive Breeding:
 			if libido of player > 40:
 				say "[cuckold choice male]";
 			say "     You stroke the captive man's cheek, telling him to hold out, then leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";
+			if Resolution of Captive Breeding is 0:
+				now Resolution of Captive Breeding is 6; [held the hand of a man in the tentacle monster's breeding pen giving birth]
 		else if calcnumber is 2:[observe]
 			say "     You make your way back to the hallway you came from and peek around the corner to watch what's happening in the room. The captive man pants and gasps as contractions run through his lower body, then you see a tentacle with a whole row of suckers emerge from his asshole, taking hold of the crate below to pull the rest of the creature free. Another and another follows, and soon the man's monstrous offspring emerges with a wet, sloshing noise and lands with a splat on the ground below. It quickly scuttles off, vanishing in the shadows faster than you'd have thought.";
 			LineBreak;
@@ -71,6 +77,8 @@ Instead of resolving a Captive Breeding:
 				say "[cuckold choice male]";
 			LineBreak;
 			say "     You leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";
+			if Resolution of Captive Breeding is 0:
+				now Resolution of Captive Breeding is 5; [watched a man in the tentacle monster's breeding pen give birth]
 		else:[leave]
 			say "     This is getting way too creepy for you. You flee back up to the surface, followed by the echoing moans and sounds of the captive man's unnatural birth.";
 
@@ -84,13 +92,14 @@ to say cuckold choice:
 		LineBreak;
 		say "     'It's for her own good,' echoes as a somewhat lame excuse for your actions through your horny mind as you slip off your clothes and stroke your cock to full hardness. Then you kneel between the woman's legs and bring your erection to her opening, still wet with slimy goo. She moans in arousal as she feels your cockhead against her pussy lips, then gasps as you plunge right in. Still pretty tight for just having had that creature in her - but then, it was squishy enough not to stretch her on the way out. You pump in and out of her vagina, amazed how good this feels and how full your balls feel as they get ready to blast your load into the human below you. The creature's slime lubing your shaft as it thrusts deep might have something to do with that...";
 		say "     But no matter, your thoughts are fully absorbed with cuckolding the tentacle monster here and now. Speeding up your movements more and more, you finally slam in all the way and cum, burst after burst of your seed shooting into the woman's receptive womb. There, that should mix up the tentacle breeding program a bit... breathing deeply, you pull out and get your clothes back on.";
+		now Resolution of Captive Breeding is 1; [fucked a woman in the tentacle monster's breeding pen]
 	else:
 		LineBreak;
 		say "     Getting your impulses under control, you shake those immoral thoughts off. This place is really getting to you, that you could even imagine doing such a thing.";
 
 to say cuckold choice male:
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if player is male:
 		say "     Looking at the man's naked body, now that it isn't deformed by a monster's spawn inside him, you realize he's quite handsome and well-built - seems like tentacle monsters have good standards for their breeding slaves at least. A deviant thought worms his way into your head, coupled with a twitch of your cock. There is one way you could... preempt the tentacle monster impregnating his changed body with more of its offspring...";
 		say "     [bold type]Do you follow the urge?[roman type][line break]";
@@ -101,6 +110,7 @@ to say cuckold choice male:
 			LineBreak;
 			say "     'It's for his own good,' echoes as a somewhat lame excuse for your actions through your horny mind as you slip off your clothes and stroke your cock to full hardness. Then step up to stand in front of the crate, idly thinking that it's just the right height, and bring your erection to his opening, still wet with slimy goo. He moans in arousal as he feels your cockhead against his pucker, then gasps as you plunge right in. Still pretty tight for just having had that creature in him - but then, it was squishy enough not to stretch him out too much on the way out. You pump in and out of the man's tight hole, amazed how good this is and how full your balls feel as they get ready to blast your load into the human below you. The creature's slime lubing your shaft as it thrusts deep might have something to do with that...";
 			say "     But no matter, your thoughts are fully absorbed with cuckolding the tentacle monster here and now. Speeding up your movements more and more, you finally slam in all the way and cum, burst after burst of your seed shooting into the transformed man's receptive insides, no doubt finding its way to a womb somewhere in him. There, that should mix up the tentacle monster breeding program a bit... breathing deeply, you pull out and get your clothes back on.";
+			now Resolution of Captive Breeding is 2; [fucked a man in the tentacle monster's breeding pen]
 		else:
 			LineBreak;
 			say "     Getting your impulses under control, you shake those immoral thoughts off. This place is really getting to you, that you could even imagine doing such a thing.";
@@ -121,6 +131,7 @@ to say cuckold choice male:
 				say "     Eager to make use of - er, give the man relief - you strip off your gear and clothes, then climb on top of the crate with him and straddle his hips. With his shaft hard and ready to go, all slick in precum, it's just a question of rubbing it against your pucker until it lubes its way in and you sink down his shaft. He fills you quite nicely, rubbing sensitive spots inside you as you rock back and forth, grinding your hips down against his. Fucking yourself on his hard pole, you fall into a kind of aroused trance, with sex the only thing that matters anymore. Seems like some of the aphrodisiacs that the creature fed to him wound up in his precum too...";
 				say "     With the oversexed state he was already in, it doesn't take all that long before your captive partner orgasms, trembling and moaning loudly as his cock blasts burst after burst of cum into you. Though even as he finishes cumming a short while later, his cock doesn't even begin to go down allowing you to keep riding him without pause, soon reaching your own climax, then continuing after catching your breath. In the course of quite a while of sweaty sexual grinding, he fills you with his cum several times over and you orgasm again and again, until finally your partner's head sinks back to rest against the wall and he falls into exhausted sleep. With shaky legs, you climb off him, leaving a messy trail of cum dripping from your ass as you go to collect your clothes.";
 				say "     [mimpregchance][mimpregchance][mimpregchance]";
+			now Resolution of Captive Breeding is 3; [mounted a man in the tentacle monster's breeding pen]
 		else:
 			LineBreak;
 			say "     [bold type]Do you at least jerk him off?[roman type][line break]";
@@ -131,6 +142,7 @@ to say cuckold choice male:
 				LineBreak;
 				say "     Putting a hand on the captive human's cock, you jerk his long hard shaft, making him give pleased moans and grunts. Fondling his balls with your other hand, you can feel how full they are, no doubt put into overdrive of cum-production from his oversexed state - he really must be aching for relief. It doesn't take long before your efforts drive him to a quite messy and noisy orgasm, with the guy's erection just blasting away with spurt after massive spurt of cum splashing against his ripped chest. But even after he stops cumming with that impressively large load, he's not done by far.";
 				say "     The cock in your hand shows no sign of going soft and his balls seem as full as ever, so you continue on jerking him off to another climax, and another. Finally, when he's splattered in cum all over, his shaft goes soft and with a satisfied sigh the man's head sinks back against the wall in exhausted sleep.";
+				now Resolution of Captive Breeding is 4; [jerked a man in the tentacle monster's breeding pen]
 			else:
 				LineBreak;
 				say "     With a shrug, you step away and leave the guy where he is.";
@@ -172,6 +184,7 @@ Instead of resolving a Trashed Refuge:
 		else:
 			LineBreak;
 			say "     Better not to risk touching any of those cum-stains accidentally. You leave the room and make your way back to the surface.";
+		now Resolution of Trashed Refuge is 1; [1st visit]
 	else if AbandonedRoomStatus is 1:
 		say "     Roaming through the underground complex you come again to the room some hapless refugees took shelter in before. It's easy to see that didn't work out too well for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
@@ -195,6 +208,7 @@ Instead of resolving a Trashed Refuge:
 		else:
 			LineBreak;
 			say "     Better not to risk touching any of those cum-stains accidentally. You leave the room and make your way back to the surface.";
+		now Resolution of Trashed Refuge is 2; [2nd visit]
 	else if AbandonedRoomStatus is 2:
 		say "     Roaming through the underground complex you come again to the room some hapless refugees took shelter in before. It's easy to see that didn't work out too well for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
@@ -216,12 +230,14 @@ Instead of resolving a Trashed Refuge:
 		else:
 			LineBreak;
 			say "     Better not to risk touching any of those cum-stains accidentally. Most likely there isn't anything more in here anyways. You leave the room and make your way back to the surface.";
+		now Resolution of Trashed Refuge is 3; [3rd visit]
 	else if AbandonedRoomStatus is 3:
 		say "     Roaming through the underground complex you come again to the room some hapless refugees took shelter in before. It's easy to see that didn't work out too well for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
 		say "     As your thoughts wander to maybe searching in here a third time, you suddenly hear a noise behind you. Whirling around, you find yourself face to face with a many-tentacled creature. Looks like you're not the only one returning to this room to pick up some more goodies. With outstretched tentacles, the creature attacks.";
 		challenge "Tentacle Horror";
 		say "     Time to get out of here before more of those things appear. You leave the room and make your way back to the surface.";
+		now Resolution of Trashed Refuge is 4; [4th visit]
 		now Trashed Refuge is resolved;
 
 Hidden Sublevel is a situation.
@@ -230,18 +246,17 @@ The sarea of Hidden Sublevel is "Sealed".
 Instead of resolving a Hidden Sublevel:
 	say "     You come upon a mid-sized room with an elevator, dark and spooky like the rest of the complex under the Trevor Labs. The opposite wall from that elevator looks interesting - seems like a whole section of it was designed to slide away sideways and is currently in that position. Behind where the wall cover would be, there's a thick reinforced door, large enough to require powerful motors to open and close it. Whether this hidden entrance was constructed to keep something out - or in - it's wide open now, and without power to the building, it's stuck for good that way...";
 	now Hidden Sublevel is resolved;
-	now Failed Experiments is unresolved;
-	now Mindshield Storage is unresolved;
-	now Holding Cell Four is unresolved;
 
-Failed Experiments is a situation. Failed Experiments is resolved.
+Failed Experiments is a situation.
+The Prereq1 of Failed Experiments is Hidden Sublevel.
 The sarea of Failed Experiments is "Sealed".
 
 Instead of resolving a Failed Experiments:
 	say "     In the depths of the hidden section in this underground complex, you find a room with row after row of glass tanks. Small and large, they're filled with formaldehyde in which... things are preserved. From just clumps of tentacles, to animals sprouting too many limbs or even heads, to... deformed creatures which have a dismaying resemblance to humans. Seems like even before the nanite infection, unnatural things were being done in these labs. With a shiver running down your spine, you turn away from the failed experiments and make your way back to the surface, unsuccessfully trying to forget what you saw.";
 	now Failed Experiments is resolved;
 
-Mindshield Storage is a situation. Mindshield Storage is resolved.
+Mindshield Storage is a situation.
+The Prereq1 of Mindshield Storage is Hidden Sublevel.
 The sarea of Mindshield Storage is "Sealed".
 
 MSStorageVisited is a number that varies. MSStorageVisited usually is 0.
@@ -292,7 +307,8 @@ The descmod of mindshield helmet is "A shiny silver helmet sits on your head, pr
 The slot of mindshield helmet is "head".
 the scent of mindshield helmet is "The helmet smells like plastic.".
 
-Holding Cell Four is a situation. Holding Cell Four is resolved.
+Holding Cell Four is a situation.
+The Prereq1 of Holding Cell Four is Hidden Sublevel.
 The sarea of Holding Cell Four is "Sealed".
 CellFourVisits is a number that varies.
 
@@ -312,6 +328,7 @@ Instead of resolving a Holding Cell Four:[repeatable event]
 				LineBreak;
 				say "     [AlphaBirth]";
 				increase CellFourVisits by 1;
+				now Resolution of Holding Cell Four is 5;
 			else:
 				LineBreak;
 				say "     Better safe than sorry... who knows what might be lurking in that cell and what made that noise. Leaving it behind you, you rush through the dark and creepy corridors, making your way back to the surface.";
@@ -328,6 +345,7 @@ Instead of resolving a Holding Cell Four:[repeatable event]
 				LineBreak;
 				say "     [AlphaBirth]";
 				increase CellFourVisits by 1;
+				now Resolution of Holding Cell Four is 5;
 			else:
 				LineBreak;
 				say "     Better safe than sorry... who knows what might be lurking in that cell and what made that noise. Leaving it behind you, you rush through the dark and creepy corridors, making your way back to the surface.";
@@ -335,10 +353,11 @@ Instead of resolving a Holding Cell Four:[repeatable event]
 		say "     As you make your way towards holding cell four again, seeing the red warning light at its door down the hallway in front of you, you suddenly hear a hissing voice say 'Do you enjoy visiting my favorite pet? I can make you just like him...'";
 		LineBreak;
 		setmonster "Thought Eater";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now area entry is "Sealed";
 		challenge "Thought Eater";
 		increase CellFourVisits by 1;
+		now Resolution of Holding Cell Four is 3;
 	else:
 		say "     In the depths of the hidden section in this underground complex, you come upon a door bearing the sign 'Holding Cell Four - Warning, danger of mental influence - Wear mindshield helmet before entering.' A red light (which must be on emergency power) glows on the wall next to the word 'unlocked'.";
 		if carried of mindshield helmet is 0:
@@ -444,13 +463,9 @@ to say CellFourSex:
 					say "[CellFour7]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     Deciding that you'd better get out of there fast, you quietly slip through the door again. The mind-controlled herm inside cell four looks after you with puzzlement, then sits back down on the bed to wait.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Deciding that you'd better get out of there fast, you quietly slip through the door again. The mind-controlled herm inside cell four looks after you with puzzlement, then sits back down on the bed to wait.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

@@ -16,6 +16,7 @@ to say catapult fire:
 		say "The nearby soldiers are overtaken with surprise, and the lines fall.";
 	say "The rescue just got set back REALLY far.";
 	extend game by (14 times 8);
+	now Resolution of Loaded Catapult is 1; [fired]
 	now loaded catapult is resolved;
 
 gotcatares is a number that varies.
@@ -57,6 +58,7 @@ instead of resolving a loaded catapult:
 				say "You accidentally bump a trigger rope, and the contraption begins to swing. You get out of there fast. [catapult fire]";
 			else:
 				say "You manage to get the resources without touching the ropes.";
+				now Resolution of Loaded Catapult is 2; [got some supplies]
 				repeat with T running from one to three:
 					increase carried of food by 1;
 					increase carried of water bottle by 1;

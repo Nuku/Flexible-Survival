@@ -53,10 +53,12 @@ Instead of resolving a Noteworthy Ruin:
 			challenge "Orc Female";
 			change the north exit of Dry Plains to Inconspicuous Trail; [connecting the location to the travel room]
 			change the south exit of Inconspicuous Trail to Dry Plains; [connecting the location to the travel room]
+			now Resolution of Noteworthy Ruin is 1; [met Katya]
 			now Noteworthy Ruin is resolved;
 		else:
 			LineBreak;
 			say "     Deciding against exploring the camp, you do turn away from it and keep going. You do make a note of where it was though, in case you want to return to the [bold type]noteworthy ruin[roman type] sometime in the future.";
+			now Resolution of Noteworthy Ruin is 2; [didn't meet Katya]
 			now HP of Katya is 1; [declined to investigate]
 	else if HP of Katya is 1: [didn't investigate before]
 		say "     Roaming through the plains, you come upon the section of ruins again where you made your observation about someone possibly living inside. There are basically just a few sections of roofless wall still standing, as well as a field of scattered stones and high mounds of rubble. This time there is nothing obvious to draw your attention to it, but you remember it from the last time...";
@@ -75,10 +77,12 @@ Instead of resolving a Noteworthy Ruin:
 			challenge "Orc Female";
 			change the north exit of Dry Plains to Inconspicuous Trail; [connecting the location to the travel room]
 			change the south exit of Inconspicuous Trail to Dry Plains; [connecting the location to the travel room]
+			now Resolution of Noteworthy Ruin is 1; [met Katya]
 			now Noteworthy Ruin is resolved;
 		else:
 			LineBreak;
 			say "     Deciding against exploring the camp, you do turn away from it and keep going. You do make a note of where it was though, in case you want to return to the [bold type]noteworthy ruin[roman type] sometime in the future.";
+			now Resolution of Noteworthy Ruin is 2; [didn't meet Katya]
 			now HP of Katya is 1; [declined to investigate]
 
 Section 2 - Monster Responses
@@ -230,13 +234,9 @@ to say KatyaBeatenSexMenu:
 					decrease KatyaResistance by 1;
 				increase libido of Katya by 1;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the groaning orc woman, having decided against violating her as she is vulnerable after all.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the groaning orc woman, having decided against violating her as she is vulnerable after all.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -378,12 +378,12 @@ to say OrcFemDesc:
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Orc Female";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -431,8 +431,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Table of Game Objects (continued)
@@ -698,7 +699,7 @@ to say KatyaTrailFightFlee:
 	say "     Something tells you that you won't be seeing Katya again after this...";
 	wait for any key;
 	move player to Dry Plains;
-	remove Katya from play;
+	now Katya is nowhere;
 
 to say KatyaTrailFightVictory:
 	say "     Overpowering the large cat - tentacles or none, you kick its butt - you eventually get a good grip of its neck-fur, holding the large cat as you land a heavy punch between its eyes. With a groan, its eyes cross and flutter closed, followed by the creature sinking down into unconsciousness. With your own opponent dealt with, you stand up straight and look for Katya - who is standing over two other vanquished shadow beasts. They were no match for her, even two on one. 'Thanks for distracting him,' she calls out to you, nodding towards your own opponent, then strolling over to you and giving you a friendly punch on the shoulder. 'Let's get out of here,' Katya tells you and the two of you hurry back to her camp. After disarming some pretty well-hidden traps, she takes you inside.";
@@ -708,6 +709,10 @@ to say KatyaTrailFightVictory:
 	move player to Hidden Camp;
 
 Section 6 - NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+Katya	"Katya"
 
 Katya is a woman. Katya is in Hidden Camp.
 The description of Katya is "[KatyaDesc]".
@@ -759,13 +764,9 @@ instead of conversing the Katya:
 					say "[KatyaTalk2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the towering orc, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the towering orc, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -914,13 +915,9 @@ to say KatyaSexMenu:
 				increase libido of Katya by 1;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the proud orc woman, shrugging your shoulders as she gives you a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the proud orc woman, shrugging your shoulders as she gives you a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

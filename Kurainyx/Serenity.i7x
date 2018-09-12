@@ -14,9 +14,14 @@ Version 3 of Serenity by Kurainyx begins here.
 
 Section 1 - Serenity in Dry Plains
 
+Table of GameCharacterIDs (continued)
+object	name
+Serenity	"Serenity"
+
+Serenity is a woman.
+
 Naga Hybrid is a situation.
 The sarea of Naga Hybrid is "Plains".
-Serenity is a woman. The HP of Serenity is usually 0.
 
 when play begins:
 	add Naga Hybrid to badspots of girl;
@@ -37,7 +42,8 @@ Instead of resolving a Naga Hybrid:
 			LineBreak;
 			say "     Shaking off your daze, you realize that this naga is trying to hypnotize you with her rattle. Given the snake's ability, trying to fight her would be unwise, so you hastily run in the opposite direction. A quick glance back reveals the reptile's surprised face; however, her shock turns into a scowl a second later when she comes after you. Fortunately, you are able to outrun her, and combined with your headstart, the naga eventually gives up her chase as you leave her far behind.";
 		now HP of Serenity is 1;
-		now Large Cave is unresolved;
+		now Large Cave is active;
+		now Resolution of Naga Hybrid is 1; [1st stage completed]
 	else if HP of Serenity is 1:			[Repeatable encounter]
 		say "     Hearing a familiar rattling, you quickly turn around to find the naga hybrid from before. 'Fancy meeting you again,' the female snake greets as she sashays toward you, her heart-shaped necklace swinging along with her body. 'Perhaps it is merely a coincidence that we cross paths again.' Her mouth twists into a devilish smirk. 'Or perhaps you are the one who is unable to resist gazing upon me again. Whatever the reason, I will be glad to have you.' You shiver as the rattle tail sounds its hypnotic rhythm again.";
 		say "     [bold type]Do you stay with the naga?[roman type][line break]";
@@ -50,6 +56,7 @@ Instead of resolving a Naga Hybrid:
 		else:			[Run away from the snake]
 			LineBreak;
 			say "     Shrugging off the snake's influence, you flee from the naga before she can bring you into her embrace.";
+		now Resolution of Naga Hybrid is 2; [repeat encounter completed]
 	else if carried of Lockbox > 0:			[Have lockbox]
 		say "     You spot the familiar naga from before, her back toward you as she wanders through the landscape. Looks like you are the one who has the element of surprise this time. With the lockbox from the cave in your possession, you have a feeling that your interactions with the snake will change once you reveal that you have something that very likely belongs to her.";
 		say "     [bold type]Should you try to talk to the snake?[roman type][line break]";
@@ -79,17 +86,20 @@ Instead of resolving a Naga Hybrid:
 					now HP of Serenity is 2;
 					move Serenity to Grey Abbey 2F;
 					move player to Grey Abbey 2F;
+					now Resolution of Naga Hybrid is 3; [player had the lockbox and gave it back, Serenity recruited]
 				else:			[Serenity leaves the Dry Plains and the game]
 					LineBreak;
 					say "     You wish Serenity good luck on her journey, and to your surprise, she leans toward you, planting a gentle kiss on your cheek, followed by a playful lick with her forked tongue. 'And good luck to you too[if player is not defaultnamed], [name of player][end if],' Serenity bids. As you part ways with your naga friend, likely for the last time, you are glad that, despite all of the chaos in the city, you still have the mindset to brighten someone's life.";
 					say "[bold type]Your good deed has increased your sanity by 20![roman type][line break]";
 					increase humanity of player by 20;
 					now HP of Serenity is 100;
+					now Resolution of Naga Hybrid is 4; [player had the lockbox and gave it back, Serenity sent along]
 			else:			[Serenity ambushes the player, steals the lockbox, and leaves the game]
 				LineBreak;
 				say "     'I see...' the naga says, looking up at you stone-faced when you reject her plea. 'I suppose that I should have expected your answer, given our previous interactions.' The snake watches you put the lockbox away, not making a single move. You start walking away, but you only make it a few steps before you are knocked to the ground from behind. Snake coils swiftly wrap around you, and you gasp in pain when they begin to squeeze your trapped body. 'I didn't want to do this, but you left me no choice,' the snake-woman coldly states as she tightens her grip even more. Just as it feels like your bones are about to be reduced to dust, you are dropped onto the ground in a pitiful heap. With you writhing in agony, your attacker takes back her lockbox and leaves without a word. Eventually, you are able to get up and hobble away to recover from your injuries. You doubt that you will be seeing the naga again.";
 				decrease HP of player by 30;
 				now HP of Serenity is 100;
+				now Resolution of Naga Hybrid is 5; [Serenity fought and grabbed the box]
 			decrease carried of Lockbox by 1;
 			now Naga Hybrid is resolved;
 		else:
@@ -137,7 +147,12 @@ to say PlainsSerenityHand:		[Handjob for player if they had food or water]
 Section 2 - Large Cave
 
 
-Large Cave is a situation. It is resolved.
+Large Cave is a situation.
+Large Cave is inactive.
+Prereq1 of Large Cave is Naga Hybrid.
+Prereq1ResolvedMandatory of Large Cave is false.
+Prereq1Resolution of Large Cave is { 1, 2 }
+
 The sarea of Large Cave is "Plains".
 
 Instead of resolving Large Cave:
@@ -250,13 +265,9 @@ Instead of conversing the Serenity:
 						say "[SerenityTalkVore]";
 					wait for any key;
 			else if calcnumber is 0:
-				say "Break off the conversation?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the naga, shaking your head slightly. Serenity shrugs and returns to reading her book.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the naga, shaking your head slightly. Serenity shrugs and returns to reading her book.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -345,13 +356,9 @@ to say SerenitySexMenu:
 				now lastfuck of Serenity is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     Serenity lets out a disappointed sigh when you change your mind, and after a few pulls, you free your leg out of her coil and step back.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Serenity lets out a disappointed sigh when you change your mind, and after a few pulls, you free your leg out of her coil and step back.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -439,8 +446,8 @@ Section 5 - Bound State
 to SerenityBind:
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if humanity of player < 50:
 			now obliging is true;
 		checkboundrecover;
@@ -470,7 +477,7 @@ to SerenityBind:
 			wait for any key;
 			now voreloss is true;
 			now bodyname of player is "Naga Hybrid";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "You spent too much time inside of a snake";
 		else:
 			let k be 0;
@@ -493,7 +500,7 @@ to SerenityBind:
 					say "     You resume your struggles to get Serenity to let you out, adding some shouting as you push at the squelching flesh around you. Eventually, the walls contract around you, and they pull you through the naga's stomach and up her throat, until you slip out of Serenity's mouth and onto some cushions. Even though your predator friend is quick to wrap you in some towels as usual, you still shiver. For some reason, you feel like you're exposed and vulnerable now that you're back in the open.";
 					say "     'I do so love having you as my guest. Are you sure that you don't want to stay a bit longer?' Serenity teases with a smirk. Despite having want out of the snake's stomach just moments ago, a part of you is tempted to delve right back in. Serenity chuckles at your silence and pats your head. 'I was just joking. As much fun as it is to make you mine, I think it's safer that you take a break every now and then. I'm sure that being my food can be quite exhausting.' Even though Serenity makes sure that her hypnosis over you is gone before you put on your gear, you cannot help but shiver in anticipation of returning to the snake's stomach as you leave.";
 					cleanboundmemory;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					follow the turnpass rule;
 					wait for any key;
 				next;
@@ -534,12 +541,12 @@ to say SerenityStruggle:
 
 Section 6 - Infection
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Naga Hybrid";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -587,8 +594,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 7 - Endings

@@ -158,11 +158,11 @@ to say SeraphDefeated:
 				say "     Elijah's pointed stare at the cum and femcum staining Gabriel's crotch makes the angel flush bright red, looking down over himself in shame. Then he stammers, 'I - I... yes. I like it. I need it. My [if player is female]mistress said she'd[else]master said he'd[end if] fuck me all the time from now on.' The other angel just gives you an approving nod, 'Nice work training the little slut. Seems you've got Gabe turned into a subby pet, don't you. I'll have to tap that ass myself too sometime...' Before you can reply anything, Elijah then saunters out of the room, going up, most likely to hunt down something to fuck outside.";
 			move Gabriel to bunker;
 			move player to bunker;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Seraphim":
 					now monster is y;
-					now area entry is "nowhere";
+					now area entry is "Nowhere";
 					break;
 	else:
 		LineBreak;
@@ -214,12 +214,12 @@ to say SeraphDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Seraphim";
 	now enemy title entry is "";
 	now enemy name entry is "Gabriel";
@@ -267,10 +267,15 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+Gabriel	"Gabriel"
 
 Gabriel is a man.
 The HP of Gabriel is usually 0.
@@ -355,13 +360,9 @@ instead of fucking Gabriel:
 					now lastfuck of Gabriel is turns;
 					wait for any key;
 			else if calcnumber is 0:
-				say "Break off?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the submissive angel, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the submissive angel, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;

@@ -89,12 +89,12 @@ to say Great Dane Rougedesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
+Table of Random Critters (continued)
 name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Great Dane Rouge"; [ Infection/Creature name. Capitalized. ]
 	now attack entry is "[one of]The Great Dane Rouge attacks with a blinding series of punches![or]The Great Dane Rouge kicks you hard enough that spit flies free from your [facename of player] mouth![or]The Great Dane Rouge uppercuts you with enough strength that you are actually lifted up off the ground![or]The Great Dane Rouge sends a right hook firmly across your jaw![or]The Great Dane Rouge slams her knuckles into your chest sending you falling back onto your back onto the floor![or]The Great Dane Rouge kick you in the chest forcing air to gush out from your lungs![at random]"; [ Successful attack message ]
 	now defeated entry is "[beattheGreat Dane Rouge]"; [ Text when monster loses. Change 'Great Dane Rouge' as above. ]
@@ -139,8 +139,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "powerstrike1"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Table of Game Objects (continued)

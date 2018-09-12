@@ -503,7 +503,7 @@ to fimpregchance:		[Female-particular Pregnancy Roll]
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if playercanub is true, increase target by 1;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if a random chance of 2 in target succeeds:
 			if callovi is true or ovipreglevel is 3:
 				now ovipregnant is true;
@@ -529,7 +529,7 @@ to mimpregchance:		[MPreg-particular Pregnancy Roll]
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if playercanub is true, increase target by 1;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if a random chance of 2 in target succeeds:
 			if callovi is true or ovipreglevel is 3:
 				now ovipregnant is true;
@@ -555,7 +555,7 @@ to selfimpregchance:
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if playercanub is true, increase target by 1;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if a random chance of 2 in target succeeds:
 			if callovi is true or ovipreglevel is 3:
 				now ovipregnant is true;
@@ -634,13 +634,13 @@ to say randomimpreg:		[Use when either would work]
 	randomimpreg;
 
 to randomimpreg:		[Use when either would work]
-	sort table of random critters in random order;
+	sort Table of Random Critters in random order;
 	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+	choose row monster from Table of Random Critters;
+	while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		choose row monster from Table of Random Critters;
+		if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
 	say "[impregchance]";
@@ -649,13 +649,13 @@ to say randommimpreg:		[Use when only MPreg would work]
 	randommimpreg;
 
 to randommimpreg:		[Use when only MPreg would work]
-	sort table of random critters in random order;
+	sort Table of Random Critters in random order;
 	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+	choose row monster from Table of Random Critters;
+	while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		choose row monster from Table of Random Critters;
+		if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
 	say "[mimpregchance]";
@@ -664,13 +664,13 @@ to say randomfimpreg:		[Use when only female pregnancy would work]
 	randomfimpreg;
 
 to randomfimpreg:		[Use when only female pregnancy would work]
-	sort table of random critters in random order;
+	sort Table of Random Critters in random order;
 	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+	choose row monster from Table of Random Critters;
+	while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		choose row monster from Table of Random Critters;
+		if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
 	say "[fimpregchance]";
@@ -679,13 +679,13 @@ to say randomovi:		[random ovi-impregnation - use when either would work]
 	randomovi;
 
 to randomovi:		[random ovi-impregnation - use when either would work]
-	sort table of random critters in random order;
+	sort Table of Random Critters in random order;
 	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+	choose row monster from Table of Random Critters;
+	while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		choose row monster from Table of Random Critters;
+		if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
 	say "[ovichance]";
@@ -694,13 +694,13 @@ to say randommovi:		[random ovi-impregnation - use when only MPreg would work]
 	randommovi;
 
 to randommovi:		[random ovi-impregnation - use when only MPreg would work]
-	sort table of random critters in random order;
+	sort Table of Random Critters in random order;
 	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+	choose row monster from Table of Random Critters;
+	while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		choose row monster from Table of Random Critters;
+		if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
 	say "[movichance]";
@@ -709,13 +709,13 @@ to say randomfovi:		[random ovi-impregnation - use when only female pregnancy wo
 	randomfovi;
 
 to randomfovi:		[random ovi-impregnation - use when only female pregnancy would work]
-	sort table of random critters in random order;
+	sort Table of Random Critters in random order;
 	now monster is 1;
-	choose row monster from table of random critters;
-	while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+	choose row monster from Table of Random Critters;
+	while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 		increase monster by 1;
-		choose row monster from table of random critters;
-		if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		choose row monster from Table of Random Critters;
+		if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 			next;
 		break;
 	say "[fovichance]";

@@ -29,6 +29,10 @@ Section 2 - Beverly
 Bevtalk is a number that varies.
 Bevkitty is a number that varies.
 
+Table of GameCharacterIDs (continued)
+object	name
+Beverly	"Beverly"
+
 Beverly is a woman.
 The description of Beverly is "     Behind a register counter is what looks like a mouse with green eyes intently reading a book, having not noticed you yet. The thick locks of blonde, curly hair on its head fall cutely around their large ears and flows down to frame their slender neck. From the glow of the candles you can make out that the fur of their face and muzzle appears to be a dark, golden-cream in color, and seems to shine even in the low light. Pierced in her right gray ear are a couple of medium-sized gold hooped earrings.".
 The conversation of Beverly is { "Squeak!" }.
@@ -69,6 +73,10 @@ Instead of fucking the Beverly:
 		say "     'You look like a nice person and all, but I'm not ready for any kind of relationship.'";
 
 Section 3 - Book Browsing
+
+Table of GameCharacterIDs (continued)
+object	name
+Bookshelves	"Bookshelves"
 
 Bookshelves is a man
 
@@ -146,7 +154,7 @@ carry out browsebooks:
 		else:
 			say "     When you pass by a table you notice what looks like a large three ring binder. Thinking it's something Beverly has left out accidentally, you pick it up with the intent to ask her when the hand written title catches your eyes, [bold type]Flexible Survival[roman type]. Thumbing through some of the pages, you see that it's a novel made up of short stories, and as you continue reading some of the pages of each story you soon start to wonder that with the way things currently are, is life now imitating art or some gigantic cosmic joke. With a wry smile you close the binder and return it to the pile of books you found it on.";
 			Increase score by 75;
-			Now fsnovel is 1;
+			now fsnovel is 1;
 			Follow the turnpass rule;
 	else if X is 6:
 		If "Weak Psyche" is listed in feats of player:
@@ -220,8 +228,8 @@ To say afsm:
 			Follow the turnpass rule;
 		else:
 			say "     Going to one corner of the store, you search through a pile of books stacked on a table and find an old Army field survival manual. Finding it promising, you grab an unoccupied chair, sit down, and start to look through it. After reading for a spell, your mind begins to ache dully from all the complicated jargon. With your head swimming with so many military acronyms you decide to give it a rest for now and let your head clear. You get up and put the book back on the table where you found it before wandering off to another part of the bookstore.";
-			Now afsmread is turns;
-			Now survfeat is 1;
+			now afsmread is turns;
+			now survfeat is 1;
 			Follow the turnpass rule;
 
 To say thab:
@@ -235,8 +243,8 @@ To say thab:
 			Follow the turnpass rule;
 		else:
 			say "     Walking by a table, a book titled [bold type]The Hunter's Almanac[roman type] catches your eye. Stopping to read the cover, you grin and chuckle softly at the last names of the authors Dewey, Ketchum, and Howe. Thinking it's a humorous look at hunting, you decide to thumb through it, and find that it's actually a book discussing the finer points of being a hunter with humor sprinkled throughout. Leaning against a wall, you quickly peruse through the table of contents, skipping the chapters about gun and ammo selection, field dressing your catch, and anything else that wouldn't be of great help. The chapter discussing setting up a proper deer stand piquing your interest, you decide to start there. After some time though, you eventually lose interest and decide you will come back later to read the chapter on following your quarry's tracks.";
-			Now thabread is turns;
-			Now huntfeat is 1;
+			now thabread is turns;
+			now huntfeat is 1;
 			Follow the turnpass rule;
 
 To say myse:
@@ -250,8 +258,8 @@ To say myse:
 			Follow the turnpass rule;
 		else:
 			say "     You wander the store for a few minutes until you come across the self-improvement section. Shrugging your shoulders, you peruse the titles until one seems promising, simply titled [bold type]Maintaining your Self-esteem[roman type]. Pulling it off the shelf, you begin to leaf through it, and though informative, find it quickly getting dull. Putting it back on the shelf, you promise to yourself that you'll make an effort to finish it.";
-			Now myseread is turns;
-			Now purfeat is 1;
+			now myseread is turns;
+			now purfeat is 1;
 			Follow the turnpass rule;
 
 To say hfgb:
@@ -265,8 +273,8 @@ To say hfgb:
 			Follow the turnpass rule;
 		else:
 			say "     Wandering over to the business and money section on a whim, you start to look through the books on the shelves. Not finding anything of interest, you are just about to move on when a book titled [bold type]How to Find a Good Bargain[roman type] catches your eye. Pulling it out and thumbing through a few pages, you decide to give it a read. Finding an unoccupied chair nearby, you sit down and begin to peruse your new find. After just a few chapters you feel you are only able to just grasp the basics of wheeling and dealing. Getting up and shelving it for now, you decide to come back to it later.";
-			Now hfgbread is turns;
-			Now hagfeat is 1;
+			now hfgbread is turns;
+			now hagfeat is 1;
 			Follow the turnpass rule;
 
 Brookstone Books ends here.

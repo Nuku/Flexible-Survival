@@ -3,8 +3,6 @@ Version 2 of Mannequin by Wahn begins here.
 
 "Adds a Neuter Mannequin to Flexible Survival's Wandering Monsters table"
 
-MannequinFirstEncounter is a number that varies. MannequinFirstEncounter is usually 0.
-
 Section 1 - Monster Responses
 
 to say mannequin wins:
@@ -15,7 +13,7 @@ to say mannequin loses:
 
 to say mannequinDesc:
 	setmongender 0;
-	if MannequinFirstEncounter is 0:
+	if "Mannequin" is not listed in EncounteredEnemies of player: [first encounter]
 		say "     Passing by a loading-dock in the warehouse district, you spot two humanoid dogs cutting a hole in the fence and slip through. Curious what the bulldog and german shepherd are doing in there, you inconspicuously follow them between the long rows and stacks of shipping containers.";
 		WaitLineBreak;
 		say "     'Which one did the coyote say the food was in?' the shepherd asks gruffly, to which the bulldog replies 'A red one, with Transglobal on the side.' Looking up and down the lines of containers, the shepherd wails 'But almost all of them are red!' The bulldog shrugs and walks over to the nearest container and opens it up. 'Oh hey, seventy flatsceen TVs - how... useless, without electricity. Let's check the next one.'";
@@ -23,18 +21,17 @@ to say mannequinDesc:
 		WaitLineBreak;
 		say "     The german shepherd steps in front of the door and looks in too. 'Nah, those are just those dress dummies they use in stores. Normal lifeless puppets, see...' and pokes the first mannequin in the container in the chest - which promptly grabs him by the arm. Within moments, dozens of mannequins pour out of the container and wrestle both dogs to the ground. They jostle against each other with a desperate tenacity, each trying to touch one of their captives. Then you see them change, taking on characteristics of the dogs - one growing out a muzzle, another suddenly sprouting fur, etc.";
 		say "     After the changes stabilize, all of the mannequins lose interest in their captives and start to disperse, each striking out on its own. Left behind on the ground are two more mannequins - those must be the two former dogs, their essence drained away. As they start to get up too, you decide it's time to leave and make your way back to the hole in the fence. One of the mannequins got there before you, though. It might have absorbed the knowledge of its location from the dogs, or just have been lucky. Now it turns to you, eager to make your shape its own.";
-		now MannequinFirstEncounter is 1;
 	else:
 		say "     You cross paths with an animated mannequin which looks like an idealized male in his mid-twenties, with muscled arms, legs and chest and a featureless crotch. It has a pale flesh-colored skin-tone and a chiseled-looking face including sculpted wavy hair. As the mannequin notices you, an almost desperate, needful look crosses its face and it rushes at you.";
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Mannequin";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -82,8 +79,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;         [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;         [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Endings
 
@@ -109,8 +107,8 @@ The usedesc of nullifying powder is "[nullpowderuse]";
 
 to say nullpowderuse:
 	say "     [one of]Upon inspection, it's not particularly infectious and most certainly inedible[or]You briefly inspect the powder[stopping]. You [one of]deduce[or]recall[stopping] that you can apply it to certain parts of your anatomy to reduce their size or remove them outright.";
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type]Diminish Anatomy:[roman type][line break]";
 		say "(1) [if player is male][link]Cock[as]1[end link][else][italic type]Cock-specific interaction[roman type][end if][line break]";
 		say "(2) [if player is male][link]Balls[as]2[end link][else][italic type]Balls-specific interaction[roman type][end if][line break]";
@@ -175,7 +173,7 @@ to say nullpowderuse:
 						decrease cock length of player by 2;
 					follow the cock descr rule;
 					say "     You apply the powder to your rod. After a while, it shrinks down to the point where it's now [cock size desc of player] in size.";
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 2:
 			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
@@ -190,7 +188,7 @@ to say nullpowderuse:
 					decrease cock width of player by 2;
 				follow the cock descr rule;
 				say "     You apply the powder to [if player is internal]where your sack might be[else]your sack[end if]. After a while, they[if player is internal] seem to[end if] shrink down to the point where you[if player is internal], presumably,[end if] have [ball size].";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		else if calcnumber is 3:
 			if player is not female:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
@@ -249,7 +247,7 @@ to say nullpowderuse:
 						decrease cunt width of player by 2;
 					follow the cunt descr rule;
 					say "     You apply the powder to your portal. After a while, it shrinks down to the point where it's now [cunt size desc of player] in size.";
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 4:
 			if breast size of player is 0 and breasts of player is 0:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
@@ -293,7 +291,7 @@ to say nullpowderuse:
 						decrease breast size of player by 2;
 					follow the breast descr rule;
 					say "     You apply the powder to your rack. After a while, it shrinks down to the point where it's now [breast size desc of player] in size.";
-				now trixieexit is 1;
+				now Trixieexit is 1;
 			else:
 				if breasts of player > 2:
 					say "     Your chest is completely flat. You could, however, remove your nipples. Shall you remove one set? Else you'll remove all of them.";
@@ -306,10 +304,10 @@ to say nullpowderuse:
 				else:
 					now breasts of player is 0;
 					say "     Your chest is completely flat, so you decide to remove your nipples instead. After a bit of work you manage to remove the pair, leaving your chest completely barren.";
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else:
 			say "     You decide against using the item right now and stow it away.";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			add "nullifying powder" to invent of player;
 
 Mannequin ends here.

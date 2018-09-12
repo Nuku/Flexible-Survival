@@ -5,6 +5,10 @@ Version 3 of Lance by Verath begins here.
 
 Section 1 - Lance
 
+Table of GameCharacterIDs (continued)
+object	name
+Lance	"Lance"
+
 Lance is a man.
 The description of Lance is "     Leaning against the bar casually is the lithe avian form of the black swan you rescued from the clutches of the hyenas. He is now dressed in a loose black studded outfit, with lots of extra buckles, and his new beak already sports several piercings, which jingle slightly as he bobs his head to the loud music happily.".
 The conversation of Lance is { "Honk!" }.

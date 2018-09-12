@@ -61,6 +61,7 @@ Instead of resolving a Ogre Encounter:
 					WaitLineBreak;
 					say "     The newly inducted bottom is quite hard from the novel sensations you've been giving him during your fuck, so it doesn't take all that long to rub out his own climax. He lets out a loud grunt as his thick shaft starts to throb, spraying his load onto the ground below. After riding out your own orgasm, you pull out your spent cock and give the ogre's ass a hard smack. No longer held up by your hands on his hips, he sinks down on the ground, panting and trying to reconcile with being made to receive a hard dick, including breeding his ass. You smile as you put your clothes back on, then get going and leave the ogre behind. Time will tell what kind of aftermath comes from this. Maybe they'll be out for revenge?";
 					now OgreMeetings is 6; [player won, dominated the ogre leader]
+					now Resolution of Ogre Encounter is 1; [won, fucked the ogre]
 					now Ogre Encounter is resolved; [for now]
 				else if calcnumber is 2:
 					LineBreak;
@@ -73,10 +74,12 @@ Instead of resolving a Ogre Encounter:
 					say "     'Good choice,' he says, beginning to thrust into you again. 'Just take it like the good, little slut you are.' He wastes no time to really start pounding into you. His slick cock slides in and out of your hole rapidly now that it's been stretched out. You feel yourself being pushed up against his chin and start to kiss at his broad chest as a way of thanking him for the rough fucking. His two brothers are now standing a few feet away, stroking their cocks while they watch their leader fuck you. His thrusts start becoming more sporadic, and his breathing becomes heavy and shallow. Soon enough, he wraps his arms around you and gives you a tight squeeze, holding you in place while he slams into you one last time and starts releasing a torrent of cum deep into you. You find yourself orgasming as well, spilling your sticky seed between your bellies.";
 					say "     Even his underlings join in as they grunt, and you feel a spurt of their seed fall onto your back as you hear the rest fall onto the ground. The creature continues to fill you long after your orgasm subsides. Soon, you feel his cock slide out of you with a wet plop, and his grip loosens up. Once he fully removes his arms, you slide off of him and onto the cold cement. 'I told you that it would feel great,' he remarks, putting his clothes back on. 'The name's Gurke, and the other two are Kogs and Grogs.' Finished putting his gear on, he extends his hand down to you. You grab ahold of his meaty hand and are pulled up to your feet. 'You're welcome to see us again any time you wish.' He gives you a smile before walking off. You quickly put your gear back on and head out before any beasts decide they want to try and get sloppy seconds.";
 					mimpregchance;
+					now Resolution of Ogre Encounter is 2; [won, sucmitted for sex]
 					now OgreMeetings is 2; [player won, submitted for sex]
 				else:
 					LineBreak;
 					say "     Deciding that you would like nothing to do with any of the creatures, you just simply turn and walk away, leaving them to lay there and sulk in their defeat. You can hear them talking amongst themselves as you are walking away, but something tells you that this won't be that last time you see these three.";
+					now Resolution of Ogre Encounter is 3; [won, refused sex]
 					now OgreMeetings is 3; [player won, refused sex]
 					now Ogre Encounter is resolved; [for now]
 			else:
@@ -95,9 +98,11 @@ Instead of resolving a Ogre Encounter:
 			else:
 				say "     <WIP: Sorry, we currently do not have scenes for female and herm characters in this event>";
 			now OgreMeetings is 4; [player lost, got fucked]
+			now Resolution of Ogre Encounter is 4; [lost, got fucked]
 		else if fightoutcome is 30: [fled]
 			say "     Taking your arms under your legs, you quickly run off, leaving the aggressive ogres behind.";
 			now OgreMeetings is 5; [player fled]
+			now Resolution of Ogre Encounter is 5; [fled]
 			now Ogre Encounter is resolved; [for now]
 	else if OgreMeetings is 3: [player won but refused sex the last time]
 		say "     ...";
@@ -113,8 +118,10 @@ Instead of resolving a Ogre Encounter:
 			LineBreak;
 			say "     Kogs and Grogs look in awe at your gaping, cum -filled hole and both rush towards you to fill it next. Kogs manages to push Grogs off course and is the first to grab ahold of your hips. Wasting no time, he positions his cock and slams it into your hole. You moan in delight as you are suddenly filled by Kogs['] thick member. 'I hope you like your fucks extra sloppy, Grogs,' Kog taunts mockingly. He starts fucking you in earnest. His thrusts are long and fast as he ravages away at your hole. You moan lewdly beneath him, and you find yourself creeping closer to an orgasm. You feel Gurke's seed get pushed deeper into you and make its way into your belly. As fast as it began, you feel Kogs['] balls tense up as he slams hard into your ass. He starts pumping his seed into your already cum-filled bowels, and after only a couple of spurts, you feel his cum start to drip out of your hole and onto the bed. Finally finished with his orgasm, he pulls free from your hole. Grogs instantly pushes Kogs out of the way and plunges his thick member into your hole, causing you to moan once again from the sudden fullness. Much like Kogs, he fucks you in earnest.";
 			say "     He pushes your head down onto the bed and positions himself a little higher so that he can fuck you harder. Gurke's and Kogs['] seed are starting to slip out around Grogs['] cock, allowing for him to fuck you faster. Grogs gives your ass a hard smack, and you find yourself shooting a load of your seed onto the bed below. Grogs gives a satisfied grunt as he plows your wrecked hole. Before too long, Grogs finally has had enough and thrusts into you, releasing his ample load into you as well. When he pulls out, a flood of their mixed seed spills onto the bed. You fall flat onto the bed with a swelled-out stomach. 'Welcome to the team, partner,' Gurke says with a smile. 'We might have to take you out for a couple of fights here and there. Maybe we'll even let them fuck you after you beat them up.' You don't respond. Instead, you just lay on the bed, silently savoring the sensation of being filled with so much cum. 'Get some rest, pet,' Gurke says. 'And come back to the camp when you're ready to fight or ready for another fucking. Maybe even both, if your lucky.' With that, he leaves you to rest. After a while, you gather your things and head out, still leaking their cum. You make sure to note where their camp is so that you won't have any troubles coming back.";
+			now Resolution of Ogre Encounter is 6; [became ogre plaything]
 		else:
 			say "     You tell him that unfortunately, you do not want to be their personal plaything. All three give a dissatisfied sigh in response. 'If you ever wish to have fun with us again, you know where to find us. We would all enjoy another round of playtime with you, but I won't press the matter. Just know that you are welcome back anytime.' Gurke looks sad while talks, but you don't want to bring it up. Instead, you thank him for his offer. Part of you is a little disappointed that you said no to him, but you remind yourself that you will probably see him again and be asked again.";
+			now Resolution of Ogre Encounter is 7; [refused ogres]
 		now Ogre Encounter is resolved;
 	else if OgreMeetings is 5: [player fled the last time]
 		say "     ...";
@@ -124,12 +131,12 @@ Instead of resolving a Ogre Encounter:
 
 Section 2 - Creature Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Ogre";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -177,8 +184,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Ogres ends here.

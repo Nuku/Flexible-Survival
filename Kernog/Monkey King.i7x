@@ -17,7 +17,7 @@ to say MonkeyKingdesc:
 		say "";
 	else:
 		setmongender 3; [creature is male]
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if "Female Preferred" is listed in feats of player:
 			now sex entry is "Female";
 		else if "Herm Preferred" is listed in feats of player:
@@ -131,12 +131,12 @@ to say beattheMonkeyKing:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Monkey";
 	now enemy title entry is "Monkey King";
 	now enemy name entry is "Wukong";
@@ -184,8 +184,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings
@@ -212,9 +213,6 @@ when play begins:
 	add Crashing the Satyr Party to the badspots of guy;
 	add Hunt Of Mammoth Proportions to the badspots of hermaphrodite;
 	add Take My Royal Word for Granite to the badspots of guy;
-	now Crashing the Satyr Party is resolved; [content is locked until the previous event is resolved]
-	now Hunt Of Mammoth Proportions is resolved; [content is locked until the previous event is resolved]
-	now Take My Royal Word for Granite is resolved; [content is locked until the previous event is resolved]
 
 [Event 1 - quest launcher]
 Monkey King Service is a situation.
@@ -239,13 +237,16 @@ instead of resolving Monkey King Service:
 		now acquaintedWithWukong is 2;
 		say "     You try to speak, but the primate signals you with his prehensile foot to stay quiet. 'You shall become my servant. You should feel honored. A band of rowdy half-beasts is being a nuisance. Always playing their barbaric music, drinking, and shouting, and fucking. One of these lowly [']satyrs['], as they call themselves, even came to me and asked me to join them, and, I quote, [']pull the broomstick from my ass and have fun[']. The nerve!' You let Wukong speak, hesitant as what to say, when the monkey suddenly jumps on his feet. 'Which is why I shall give them a lesson, and you shall help me!'";
 		say "     He throws a small bag at you. You can feel from the touch that it is filled with some kind of powder. 'Throw this powder into the pots where they store their beverages. Once this is done, I will humiliate their leader in front of the entire assembly. That will show them. Now, shoo! Go and do my bidding!' Without letting you the time to place a reply, the monkey leaves you alone. You look back at the drug-filled pouch. What did you get yourself into?";
-		now Crashing The Satyr Party is unresolved;
+		now Resolution of Monkey King Service is 1; [introductions done]
 	else:
 		say "     You slowly backpedal to the main lobby of the museum. 'I'm still waiting!' the voice clamors. Well, he can wait as long as he wants, you want nothing to do with him!";
+		now Resolution of Monkey King Service is 2; [avoiding him]
 	now Monkey King Service is resolved;
 
 [Event 2 - good/evil path branching]
 Crashing The Satyr Party is a situation.
+The Prereq1 of Crashing The Satyr Party is Monkey King Service.
+The Prereq1Resolution of Crashing The Satyr Party is { 1 }.
 The sarea of Crashing The Satyr Party is "Museum".
 The level of Crashing The Satyr Party is 3. [event unlocks at lvl 3]
 
@@ -278,11 +279,13 @@ instead of resolving Crashing the Satyr Party:
 			WaitLineBreak;
 			say "     'You are a person of trust, my [bodyname of player] friend,' Wukong says when you catch up to him. You part ways at the entrance of the Asian exposition. 'I have big plans, for the both of us. Come find me again later[if level of player < 8]. In the meantime, get outside and get some fight experience ([italic type]the next part of the quest will be available at level 8[roman type])[end if].'";
 			now acquaintedWithWukong is 2;
-			now Hunt Of Mammoth Proportions is unresolved;
+			now Resolution of Crashing the Satyr Party is 1; [successfully helped Wukong]
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     'That was some nice romp,' the satyr says to no one in particular. In the meantime, you roll on your side, and try to stand up, when you feel something powdery under your hand. The pouch that Wukong had given you earlier ripped open during the fight, and its content now spread all over the floor. Your task ending up in failure, you scramble away from the satyr and his gang, before you are subjected to more sexual assault.";
+			now Resolution of Crashing the Satyr Party is 2; [lost while helping Wukong]
 		else:
 			say "     You take your legs to your neck and run as far as you can from the satyr. In your flight, you realize that you dropped the drug that Wukong had given you. Now they are lost, and there's nothing you can do, except stay away from the monkey for some time, and pray that he would forget what he had asked you to do.";
+			now Resolution of Crashing the Satyr Party is 3; [fled while helping Wukong]
 	else if calcnumber is 2:
 		LineBreak;
 		say "     Time to turn the tables! You wait a little, until the small assembly finished to quench their lust, then walk towards them calmly. 'Why, look what we have here?' one of the satyr says when seeing you. 'Too bad you missed the party. But I can give you some consolation, if you want.' You try to tell the goat-man that you are not here for that, but he does not seem to listen. It looks like you have a fight on your hands.'";
@@ -298,18 +301,23 @@ instead of resolving Crashing the Satyr Party:
 			say "     Once everyone had a go, the tired and cum-covered monkey was untied, and allowed to leave. 'Now, learn your lesson and don't try any more cheap tricks. Otherwise, the broomstick in your ass will be a literal one!' the leading satyr threatened.' Wukong shuffles away, his head low, but when he passes by you, he gives you a silent, furious glare. 'Pray we never meet again, you dirty pile of manure. I will show them and make this museum mine,' he says to you, his voice filled with tranquil fury.";
 			now acquaintedWithWukong is 3;
 			follow the monkeyAcquaintancesCheck rule;
-			now Take My Royal Word For Granite is unresolved;
+			now Resolution of Crashing the Satyr Party is 4; [successfully sabotaged Wukong]
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     'That was some nice romp,' the satyr says to no one in particular. You hear other orgy goers approaching, attracted by the noises of your struggle. Ditching your original plan, you run away to the museum lobby.";
+			now Resolution of Crashing the Satyr Party is 5; [lost sabotaged Wukong]
 		else:
 			say "     You take your legs to your neck and run as far as you can from the satyr. If they do not want to listen, then screw them!";
+			now Resolution of Crashing the Satyr Party is 6; [fled sabotaged Wukong]
 	else:
 		LineBreak;
 		say "     You decide to not get involved into neighbor disputes, specifically when they involve mythological creatures and talking animals. You throw the pouch away, and settle on peeping on the orgy from afar.";
+		now Resolution of Crashing the Satyr Party is 99; [disinterest]
 	now Crashing the Satyr Party is resolved;
 
 [Event 3a - good path]
 Hunt Of Mammoth Proportions is a situation.
+The Prereq1 of Hunt Of Mammoth Proportions is Crashing the Satyr Party.
+The Prereq1Resolution of Hunt Of Mammoth Proportions is { 1 }. [must have successfully helped]
 The sarea of Hunt Of Mammoth Proportions is "Museum".
 The level of Hunt Of Mammoth Proportions is 8. [event unlocks at lvl 8]
 
@@ -352,6 +360,7 @@ instead of resolving Hunt Of Mammoth Proportions:
 				say "     You part ways with the monkey king, and in good terms, for once. You hope that it will last.";
 				now acquaintedWithWukong is 3;
 				follow the monkeyAcquaintancesCheck rule;
+				now Resolution of Hunt Of Mammoth Proportions is 1; [fought + won]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     'You little scamps!' the mammoth says, as she holds you and Wukong at the level of her eyes. You definitely need a little [']time out['].'";
 				if vorelevel > 1:
@@ -372,6 +381,7 @@ instead of resolving Hunt Of Mammoth Proportions:
 				else:
 					say "     The pachyderm pushes you down to the floor. She drops her massive cock down atop you, making you release an [']Oof!['] as it slams atop you. Wukong is then forced to straddle the massive erection. She starts rubbing her large hands around her shaft and her balls, grinding your bodies against her growing erection[if scalevalue of player is 5]. Once erect, her cock is nearly as large as you are and drools a constant stream of her precum over you[else if scalevalue of player > 2]. Once erect, her cock is larger than you are and drools a constant flow of precum over you[else]. Even before the fight ended, her cock was probably bigger than you and now it's utterly massive, burying you under its enormous weight and drooling what seems like mouthfuls of precum by the second all over you[end if]. The scent of this starts to cloud your mind, making you rub yourself against it as best you can, working to pleasure the hyper-endowed mammoth. Wukong too gets into the game, and eventually, she trumpets in ecstasy. She pushes Wukong in front of her urethra, and presses her cock down onto you hard before blasting a huge load that paints your bodies and a large chunk of the floor and wall behind you) white with her semen. While the mammoth walks away satisfied, the both of you lay there for quite some time, overcome by the strange, yet oddly arousing, experience. Eventually, Wukong turns his head in your direction. 'Let us... Never speak of this again,' he asks. You agree. Once you are in a good enough state to stand up, the both of you part ways without a word.";
 				infect "Mammoth";
+				now Resolution of Hunt Of Mammoth Proportions is 2; [fought + lost]
 			else:
 				say "     You run away as fast as your legs can carry you. 'Wait! Where are you-mmmf!' Wukong's outraged protest is cut short as he is grabbed by the mammoth and bear-hugged against her huge breasts. 'Hng... S-stop.'";
 				say "     'You little scamp. Let me take care of you.'";
@@ -379,17 +389,21 @@ instead of resolving Hunt Of Mammoth Proportions:
 				say "     Eventually, the voices fade away as you leave the prehistory wing. Hopefully Wukong will not be mad at you for this. Well, not madder at least.";
 				now acquaintedWithWukong is 4;
 				follow the monkeyAcquaintancesCheck rule;
+				now Resolution of Hunt Of Mammoth Proportions is 3; [fought + ran]
 			now the companion of player is nullpet;
 		else:
 			LineBreak;
 			say "     'How dare you?!' Wukong replies, when you say to his face that he is alone on this. 'Very well, then. I shall vanquish this beast alone. Begone, you spineless commoner!'";
 			say "     You sigh, then leave without further ado. As you quit the prehistory wing, you can hear the noise of battle behind you. Then, very quickly, the defeated whines of Wukong: 'No, don't put me in [italic type]there[roman type]! Don't! Do-mmmmf!' It sounds like you will not see him for a while.";
+			now Resolution of Hunt Of Mammoth Proportions is 4; [insulted Wukong]
 		now Hunt Of Mammoth Proportions is resolved;
 	else:
 		say "     Wukong notices your companion, and frowns. 'Do you remember what I told you, about my big plans for us? [bold type]Dismiss[roman type] your lousy follower and come to find me again. I promise you that this will be a [bold type]hunt of mammoth proportions[roman type].'";
 
 [Event 3b - evil path]
 Take My Royal Word For Granite is a situation.
+The Prereq1 of Take My Royal Word for Granite is Crashing the Satyr Party.
+The Prereq1Resolution of Take My Royal Word for Granite is { 4 }. [must have successfully sabotaged]
 The sarea of Take My Royal Word For Granite is "Museum".
 The level of Take My Royal Word For Granite is 8. [event unlocks at lvl 8]
 
@@ -413,6 +427,7 @@ instead of resolving Take My Royal Word For Granite:
 			say "     Just as you got yourself into the game, someone taps on your shoulder. It is one of the satyrs from earlier. It seems that a small assembly has formed behind you, and they too want to harass the Asian primate. You realize that a lot of time had already passed, and all things considered you have other things to do. You leave your spot to the satyr, and begin to walk away. On the way, you notice Wukong's staff. It looks like a sturdy weapon, and so you decide to take it for yourself.";
 			say "[bold type]You receive Wukong's staff.[roman type]";
 			increase carried of wukongStaff by 1;
+			now Resolution of Take My Royal Word For Granite is 1; [fought + won]
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     'Ha ha ha! I knew it!' the monkey shouts as he dances around your tired body. 'You are no match for me! And... Hm? And what is this?' Wukong approaches from the sack that Valerie had given you earlier. He begins to unwrap it. You realize that the wrong side is facing you, and you muster your last strengths to stand up and run towards the primate. At this moment, the rag falls to the ground, revealing the statufied head of a gorgon. Her eyes flash, blinding you. You suddenly feel a wave of hotness feel your body. You realize that you are becoming strangely aroused, when [if cocks of player is 1]your cock becomes erect in a flash[else if cocks of player > 1]your cocks become erect in a flash[else if cunts of player is 1]your pussy turns wet in an instant[else]your pussies turn wet in an instant[end if]. At the same time, your movements become more and more sluggish. To your horror, your skin takes a grayish complexion while your muscles become immobile. A scream has barely the time to escape your mouth before your entire body becomes petrified.";
 			say "     The world turns black and silent. What is happening outside? Are you in danger? Your thoughts are interrupted by the feeling of a hand on [if cocks of player is 1]your cock, palping it, before beginning to stroke it[else if cocks of player > 1]one of your cocks, then the other, stroking each of them alternatively[else if cunts of player is 1]your pussy, palping it with curiosity before grinding a finger intensely against your clit[else]your pussies, palping them with curiosity before grinding fingers intensely against each of your slits[end if]. Intense pleasure flow your brain. What is happening? Is Wukong touching you? Unable to move a finger, and forced to focus on the sensations of touch on your changed skin, an intense climax quickly overtakes your body. Something seems to happen outside, like some kind of reaction happened in the outside world. You did not really came, did you?";
@@ -422,14 +437,17 @@ instead of resolving Take My Royal Word For Granite:
 			say "     You eventually wake up some time later, with Valerie overlooking your knocked out body. You rise your head with great difficulty, every muscle in your body feeling sore. 'Thank goodness, you are back to your senses,' Valerie says when she notices you have awaken. 'It is fortunate that the effects were only temporary. Still, it must have been quite an ordeal. Are you feeling alright?' You shake your head, not feeling that good. 'Being turned into a living statue has some effects on the body, I guess,' the sphinx replies. 'I am sorry that we dragged you into this. At the very least, eat and drink this, it will make up for all the energy you had to spend.' On these words, she brings you a sandwitch and a bottle of water, that you down without second thought. It will not make up for the time lost at being a statue, but it is better than anything.";
 			say "[bold type]Looking outside, you realize that you spent nearly half a day, stuck as a statue[roman type]";
 			decrease turns by 4;
+			now Resolution of Take My Royal Word For Granite is 2; [fought + lost]
 		else:
 			say "     You pitifully beat a hasty retreat, with Wukong on your heels. 'You're right to run, peasant!' you can hear him, a few meters behind you, until you manage to reach the main door of the museum and rushes outside. 'You better not show your dirty face around these parts, scum!' you can hear the Monkey King shout, as a final warning. Distraught by your defeat, you go back to the library.";
 			move player to Library;
+			now Resolution of Take My Royal Word For Granite is 3; [fought + fled]
 		now acquaintedWithWukong is 4;
 		follow the monkeyAcquaintancesCheck rule;
 	else:
 		LineBreak;
 		say "Valerie is understandably disappointed by your decision. 'Very well. I guess that I cannot force our problems on you. I will find a way, eventually...'";
+		now Resolution of Take My Royal Word For Granite is 99; [disinterest]
 	now Take My Royal Word For Granite is resolved;
 
 
@@ -444,6 +462,11 @@ wukongStaff is an armament. It is part of the player. It has a weapon "[one of]y
 Section 6 - NPC/Pet
 
 [Temporary ally for now, but could be developped into a full-fledge companion?]
+
+Table of GameCharacterIDs (continued)
+object	name
+wukong	"wukong"
+
 wukong is a pet. wukong is a part of the player.
 [The description of royal tiger is "[WukongDesc]".]
 The weapon damage of wukong is 9.

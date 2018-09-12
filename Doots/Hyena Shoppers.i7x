@@ -27,17 +27,21 @@ Instead of resolving a Hyena Shoppers:
 				say "     When the last of the hyenas pulls out of your mouth you groan, your stomach filled with the hyenas piss and its taste is filling your mouth. As you stifle as burp the leader of the group chuckles, 'What did you expect, a blowjob? The girls and I have a nice pecking order set up, but it's just not the same to humiliate one of your own.' She demonstrates her statement by grabbing the nearest of the hyenas and groping her ass and breasts, quickly her black penis grows completely erect but she does nothing but softly whine, begging for the hyena groping her to touch her more. But she doesn't, instead wiping the last drop of urine from her tip on your nose, pulling up her fly, and walking off with rest of the hyenas in tow. The hyena that was subjected to the groping throws a water bottle and a bag of chips in at your feet. Fighting the urge to drink the water immediately you put the bottle and the chips into your bag before moving on, stifling the occasional burp.";
 				increase carried of water bottle by 1;
 				increase carried of chips by 1;
+				now Resolution of Hyena Shoppers is 1; [WS for food]
 			else: [low/no WS setting]
 				say "     The leader of the group grins before she pushes you to stumble and fall on your back, then grinds her paw onto your face. 'You better beg for the food and lick my paws clean, or I'll just keep rub it all over your face until I get bored.' She stretches her toes before your eyes pressing the paw back to your face. 'Now get to it,' she commands, letting out a barking laugh. Opening your mouth you let one of her toes inside, its taste is bitter and salty, occasionally popping it out of your mouth to beg her for food. The other hyenas around you two are starting to pair off, groping, kissing, and jerking each other off. The hyena with her paw in your mouth gives in, starting to jerk off too. 'Oh I wish I could keep you as my paw bitch forever.'";
 				say "     When she lifts her paw from your face you groan, your mouth dry and her paw's taste is filling your mouth. The leader of the group chuckles 'What did you expect, a blowjob? The girls and I have a nice pecking order set up, but it's just not the same to humiliate one of your own.' She demonstrates her statement by grabbing the nearest of the hyenas and groping her ass and breasts, quickly her black penis grows completely erect but she does nothing but softly whine, begging for the hyena groping her to touch her more. But she doesn't, instead, wrapping her paws again, and walking off with rest of the hyenas in tow. The hyena that was subjected to the groping throws a water bottle and a bag of chips in at your feet. Fighting the urge to drink the water you put the bottle and the chips into your bag before moving on.";
 				increase carried of water bottle by 1;
 				increase carried of chips by 1;
+				now Resolution of Hyena Shoppers is 2; [paw lick for food]
 		else:
 			LineBreak;
 			say "     You're not desperate enough to go around accepting strange deals from hyenas. Refusing the offer politely, you hope that she won't take it personally. With a shrug, the hyena turns around and walks away, the other hyenas following on her heel. You take a peek into the storage room to see if they left anything behind. After a bit of poking around, you actually do manage to find a lonely can of soda in one corner. It must have rolled under the shelf there while the pack were looting the place. There is nothing left for you here, so you move on, eventually finding your way back to where you started.";
 			increase carried of soda by 1;
+			now Resolution of Hyena Shoppers is 3; [refused service]
 	else:
 		LineBreak;
 		say "     Curiosity got the cat fucked, and you have no interest in getting fucked tonight. Doubling your pace, you put as many feet between you and whoever or whatever is making the noise.";
+		now Resolution of Hyena Shoppers is 4; [ran away]
 
 Hyena Shoppers ends here.

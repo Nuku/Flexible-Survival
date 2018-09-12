@@ -12,8 +12,8 @@ Section 1 - Monster Responses
 
 to say fsdm attack:
 	if girl is not banned: [change target to male for infection if valid]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Feral Sea Dragoness":
 				now monster is y;
 				break;
@@ -234,7 +234,7 @@ to say fsdm desc:
 	now firebreathcount is 0;
 	now firebreathready is false;
 	now tempnum2 is 0;
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Female Preferred" is listed in feats of player:
@@ -251,8 +251,8 @@ to fsdmvicmenu:
 	now tempnum2 is 2;
 	now calcnumber is -1;
 	say "     What will you do?";
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		say "[bold type]Choices:[roman type][line break]";
 		say "(1) [if player is male][link]Mount him[as]1[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
 		say "(2) [if player is male][link]Have him suck your dick[as]2[end link][else][italic type]Male-specific interaction[roman type][end if][line break]";
@@ -278,7 +278,7 @@ to fsdmvicmenu:
 				now tempnum is 1;
 				fsdbiasshift;
 				now tempnum is 0;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 2:
 			if player is not male:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
@@ -288,7 +288,7 @@ to fsdmvicmenu:
 				now tempnum is 1;
 				fsdbiasshift;
 				now tempnum is 0;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 3:
 			if player is not female:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
@@ -298,7 +298,7 @@ to fsdmvicmenu:
 				now tempnum is 1;
 				fsdbiasshift;
 				now tempnum is 0;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 4:
 			if player is not female or cunt length of player < 12:
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
@@ -309,7 +309,7 @@ to fsdmvicmenu:
 				now tempnum is 1;
 				fsdbiasshift;
 				now tempnum is 0;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 5:
 			if scalevalue of player < 3 or (scalevalue of player is 3 and player is not twistcapped):
 				say "[bracket]Invalid interaction: You don't meet the criteria[close bracket][line break]";
@@ -320,7 +320,7 @@ to fsdmvicmenu:
 				now tempnum is 1;
 				fsdbiasshift;
 				now tempnum is 0;
-				now trixieexit is 1;
+				now Trixieexit is 1;
 		else if calcnumber is 6:
 			say "[FSDM_6]"; [Oral Giving Cock]
 			if a random chance of 1 in 2 succeeds or "Dominant" is listed in feats of player:
@@ -328,13 +328,13 @@ to fsdmvicmenu:
 			now tempnum is 1;
 			fsdbiasshift;
 			now tempnum is 0;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		else:
 			say "     You have some second thoughts and choose against having your way with the dragon, leaving him to go about your business once more."; [turn down]
-			now trixieexit is 1;
+			now Trixieexit is 1;
 
 fsdsub is a number that varies.
-[fsdmposture is a number that varies.]
+[fsdmposture is a number that varies.[@Tag:NotSaved]]
 fsdbias is a number that varies.
 
 to fsdmsubshift:
@@ -704,12 +704,12 @@ to say FSDM_6: [Oral Giving Cock]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Feral Sea Dragon";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -757,8 +757,9 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "firebreath"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 boundmod2 is a number that varies.
 
@@ -767,8 +768,8 @@ Section 3 - Vore Bound State
 to fsdmvore:
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if clearnomore is 0, clear the screen;
 		if HP of player > 0 or humanity of player < 50:
 			now obliging is true;
@@ -804,8 +805,8 @@ to fsdmvore:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [fsdstrugglebar][line break][run paragraph on]";
 		if humanity of player < 1:
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Feral Sea Dragon":
 					now monster is y;
 					break;
@@ -820,7 +821,7 @@ to fsdmvore:
 			now body of player is body entry;
 			now cock of player is cock entry;
 			now voreloss is true;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "You became a Feral Sea Dragon's meal!";
 		else:
 			let k be 0;
@@ -854,7 +855,7 @@ to fsdmvore:
 					else:
 						say "     You barely manage to get to the beach before sprinting inland, out of the sea dragon's reach. Exhausted and panting as the monster finally gives up and returns back to the ocean, it takes a while for you to clean yourself off and recover from the whole ordeal. Eventually, once you're ready, you go about your business once more.";
 						cleanboundmemory;
-						now trixieexit is 1;
+						now Trixieexit is 1;
 						follow the turnpass rule;
 				else if boundsegment is 1:
 					if struggleatt < 3:
@@ -875,7 +876,7 @@ to fsdmvore:
 							say "     Exhausted and panting as the monster finally gives up and returns back to the ocean, it takes a while for you to clean yourself off and recover from the whole ordeal. Eventually, once you're ready, you go about your business once more.";
 							cleanboundmemory;
 							now tempnum2 is 0;
-							now trixieexit is 1;
+							now Trixieexit is 1;
 							follow the turnpass rule;
 				else:
 					if struggleatt < 3 and struggleatt is not 0:
@@ -900,7 +901,7 @@ to fsdmvore:
 								say "     Grumbling lowly at you, your captor isn't exactly eager to eat you again after being ejected so embarrassingly, and instead decides to swim off into the distance. Free to swim back to the beach, you sit there for a bit to recover and dry yourself off, an exhausted mess. Eventually, once you're ready, you go about your business once more.";
 								cleanboundmemory;
 								now tempnum2 is 0;
-								now trixieexit is 1;
+								now Trixieexit is 1;
 								follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":

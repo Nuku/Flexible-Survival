@@ -41,6 +41,10 @@ Section 1 - Documentation and Setup
 
 [ Players can find the either version of the suit while any sex due to either transforming before entering the room it or re-encountering it after first contact. The code checks for this in both the vacant and occupied versions and displays alternate content accordingly ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Inflatable Otter Suit	"Inflatable Otter Suit"
+
 Inflatable Otter Suit is a person. [mostly male/herm oriented]
 The description of Inflatable Otter Suit is "[InflatableOtterSuitDesc]".
 The HP of Inflatable Otter Suit is 0.
@@ -192,8 +196,8 @@ to InflatableOtterSuitBind:
 	libidoeval;
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		now boundstate is true;
 		if HP of player > 0 or humanity of player < 50:
 			now obliging is true;
@@ -213,7 +217,7 @@ to InflatableOtterSuitBind:
 				now bodyname of player is "InflatableOtterSuitSexSlave";
 				now humanity of player is 0;
 				end the story saying "Trapped by the inflatable otter suit, its endless stimulation has become your whole word.";
-				now trixieexit is 1;
+				now Trixieexit is 1;
 			if InflatableOtterSuitBindStage < 4: [Hides content to prevent endings colliding]
 				now lustatt is libido of player;
 				InflatableOtterSuitSanityOrgasm; [Calls the function defined later on]
@@ -247,7 +251,7 @@ to InflatableOtterSuitBind:
 				now bodyname of player is "InflatableOtterSuitSexSlave";
 				now humanity of player is 0;
 				end the story saying "Trapped by the inflatable otter suit, its endless stimulation has become your whole word.";
-				now trixieexit is 1;
+				now Trixieexit is 1;
 			else: [Section of actions possible during the bind.]
 				let k be 0;
 				now keychar is "INVALID";
@@ -292,7 +296,7 @@ to InflatableOtterSuitBind:
 							now Libido of Inflatable Otter Suit is 0;
 							LineBreak;
 							cleanboundmemory;
-							now trixieexit is 1;
+							now Trixieexit is 1;
 							now InflatableOtterSuitBindStage is 0;
 						else if InflatableOtterSuitBindStage is 2: [Lowers stage to 1]
 							say "     After a considerable amount of effort, you finally force enough air out of the suit to regain some semblance of control over your limbs. Uncomfortable in your current, quite vulnerable position, you rock back and forth until you gain enough momentum to roll onto your fore, then push yourself up to your knees. The suit attempts to reinflate, but it's been weakened too much by your tenacious resistance to flip you back over. Disaster averted, you reach up to seek out its zipper again, determined not to let the inflatable overpower you.";
@@ -304,7 +308,7 @@ to InflatableOtterSuitBind:
 							now Libido of Inflatable Otter Suit is 0;
 							LineBreak;
 							cleanboundmemory;
-							now trixieexit is 1;
+							now Trixieexit is 1;
 							now InflatableOtterSuitBindStage is 0;
 					WaitLineBreak;
 					next;
@@ -496,6 +500,10 @@ to say InflatableOtterSuitStruggleBar: [Displays struggle bar. The amount of str
 
 
 Section 4 - No Cock
+
+Table of GameCharacterIDs (continued)
+object	name
+Stuffed Otter Suit	"Stuffed Otter Suit"
 
 Stuffed Otter Suit is a person. [mostly female/neuter oriented]
 The description of Stuffed Otter Suit is "[StuffedOtterSuitDesc]".

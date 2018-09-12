@@ -83,6 +83,10 @@ Section 2 - NPC
 [ 2: hunting event successfully done              ]
 [ 3: player fucked Boghrim before                 ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Boghrim	"Boghrim"
+
 Boghrim is a man. Boghrim is in Main Hall.
 The description of Boghrim is "[BoghrimDesc]".
 The conversation of Boghrim is { "Mew!" }.
@@ -149,16 +153,9 @@ instead of conversing the Boghrim:
 					say "[BoghrimTalk4]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -313,13 +310,9 @@ to say BoghrimTalk3: [go hunting]
 								say "     As you make your way back to the orc lair, and when you share a drink soon after, you realize that the orc boss gives you... interested looks, and his cock stays half-hard the whole time. It seems you've impressed him today, proved that you're a 'real man' - he now might be more open to the possibility of getting fucked by you.";
 						WaitLineBreak;
 				else if calcnumber is 0:
-					say "Break off the conversation?";
-					if player consents:
-						now sextablerun is 1;
-						say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
-						WaitLineBreak;
-					else:
-						say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+					now sextablerun is 1;
+					say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
+					WaitLineBreak;
 				else:
 					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 			clear the screen and hyperlink list;
@@ -435,16 +428,9 @@ instead of fucking Boghrim:
 						say "[BoghrimSex6]";
 					WaitLineBreak;
 			else if calcnumber is 0:
-				say "Break off the conversation?";
-				LineBreak;
-				say "     ([link]Y[as]y[end link]) - Yes.";
-				say "     ([link]N[as]n[end link]) - No.";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
-					WaitLineBreak;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
+				WaitLineBreak;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		clear the screen and hyperlink list;
@@ -504,23 +490,23 @@ to say BoghrimSex1: [get fucked]
 			say "     Swallowing reflexively as your gaze wanders over the bulging muscles of the monstrously built orc, you steel your resolve and step down from Boghrim's platform, walking towards your designated target. On the way, you pick up an empty beer stein, nice and heavy - perfect to assist in a sucker punch. As you step up to the hulking orc and tap him on the shoulder, you smash the mug over his head as soon as he turns around - which only dents the mug and leaves the orc pretty unimpressed. Uh Oh. This won't be over as quickly as you hoped... ";
 			now inasituation is true;
 			now OrcSpecialFightNumber is 2;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Orc Warrior":
 					now monster is y;
 					break;
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now HP entry is 250;
 			now monsterHP is 250;
 			now lev entry is 16;
 			now wdam entry is 25;
 			challenge "Orc Warrior";
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Orc Warrior":
 					now monster is y;
 					break;
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now HP entry is 125;
 			now monsterHP is 125;
 			now lev entry is 14;
@@ -853,6 +839,10 @@ to say BoghrimSex6: [Hunting trip with Mul]
 
 Section 3 - Boghrim's favorite slave, Jason
 
+Table of GameCharacterIDs (continued)
+object	name
+Jason	"Jason"
+
 Jason is a man. Jason is in Main Hall.
 The description of Jason is "[JasonDesc]".
 The icon of Jason is Figure of Jason_clothed_icon.
@@ -869,12 +859,12 @@ instead of sniffing Jason:
 
 Section 4 - Infection for combat purposes
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Orc Boss"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "Boghrim";
@@ -903,7 +893,7 @@ When Play begins:
 	now HP entry is 300;               [ The monster's starting HP. ]
 	now lev entry is 18;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 30;              [ Monster's average damage when attacking. ]
-	now area entry is "nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16;       [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 9;         [ Cock width, more commonly used for ball size. ]
@@ -922,8 +912,9 @@ When Play begins:
 	now magic entry is false;                     [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;             [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true;    [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;           [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0;           [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;     [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 5 - Endings

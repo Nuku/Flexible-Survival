@@ -6,6 +6,10 @@ Version 1 of Matriarch NPC by Stripes begins here.
 
 Section 1 - Matriarch
 
+Table of GameCharacterIDs (continued)
+object	name
+Matriarch	"Matriarch"
+
 Matriarch is a person.
 The description of Matriarch is "[matriarchdesc]".
 The conversation of Matriarch is { "Good girl!" }.
@@ -68,8 +72,8 @@ to say sexwithMatriarch:
 		else:
 			say "     [HyenaMatSexScenes]";
 	[puts Herm Hyena as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Herm Hyena":
 			now monster is y;
 			break;
@@ -258,8 +262,8 @@ Section 5 - Bound State
 to HyenaMatBind:
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if humanity of player < 50:
 			now obliging is true;
 		checkboundrecover;
@@ -284,8 +288,8 @@ to HyenaMatBind:
 		if humanity of player < 1:
 			say "     The churning flesh pressing down on you from all around, combined with the taunting laughter of the hyena leader, wears you down until you are no longer able to resist the influence of the matriarch's stomach anymore.";
 			wait for any key;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Herm Hyena":
 					now monster is y;
 					break;
@@ -300,7 +304,7 @@ to HyenaMatBind:
 			now skin of player is skin entry;
 			now body of player is body entry;
 			now cock of player is cock entry;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "You were demoted to hyena food";
 		else:
 			let k be 0;
@@ -323,7 +327,7 @@ to HyenaMatBind:
 				else:
 					say "     You continue to make a fuss, and eventually, your prison violently lurches around before you are pushed up through the esophagus, taking a brief return trip through the tight throat, and then unceremoniously spat out onto the cold, hard floor. 'Hmph, guess that you don't want to be hyena food today,' the matriarch says, faintly smirking at the sorry state that you're in. 'Just means that you can go back to being the gang bitch again. Come see me again if you need me to put you in your place with my cock or my stomach.' The hyena leader then strides away, not even giving you another glance, to resume directing the gang. 'I'm glad that you decided to come back to us,' Gina comments with a malevolent grin. 'Means that I and the other hyenas will get to have fun with our favorite slut again.' As you start to clean yourself up, Gina leaves, but not before giving you a hearty slap on the ass. 'Catch you later. I'll be waiting to fill my favorite slut.'";
 					cleanboundmemory;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					follow the turnpass rule;
 					wait for any key;
 				next;

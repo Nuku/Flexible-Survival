@@ -214,12 +214,8 @@ to say BeatTheKoballoon:
 				if (nam is "Fellate him"):
 					say "[KoballoonBeaten6]";
 		else if calcnumber is 0:
-			say "Let him go: Leave the koballoon to wallow in his own arousal?";
-			if player consents:
-				say "     Rather than stoop to the lecherous creature's level, you release his form and step away, much to his dismay. 'Aww, well you're no fun!' the koballoon pouts. He blows a raspberry at you before saddling up and bouncing away on his bountiful sack, likely in search of the group that he was separated from. A trail of sticky pre follows his wake, leaving the strong scent of rubber and arousal to remember him by.";
-				now sextablerun is 1;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			say "     Rather than stoop to the lecherous creature's level, you release his form and step away, much to his dismay. 'Aww, well you're no fun!' the koballoon pouts. He blows a raspberry at you before saddling up and bouncing away on his bountiful sack, likely in search of the group that he was separated from. A trail of sticky pre follows his wake, leaving the strong scent of rubber and arousal to remember him by.";
+			now sextablerun is 1;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	wait for any key;
@@ -363,13 +359,13 @@ to say KoballoonSexBadEnd:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Koballoon"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -417,8 +413,9 @@ When Play begins:
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;
+	now DayCycle entry is 0;
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings

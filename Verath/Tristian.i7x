@@ -4,6 +4,10 @@ Version 2 of Tristian by Verath begins here.
 
 Section 1 - Tristian Basics
 
+Table of GameCharacterIDs (continued)
+object	name
+Tristian	"Tristian"
+
 Tristian is a man.
 The description of Tristian is "     Approaching one of the dim booths a rather cute stallion boy turns to look at you. His shoulder length dark hair is cut into an emo style covering his left eye. You see that he is wearing tight black leather pants with modified boots that come up to his knees that fit his digitigrade legs. He's also wearing a tight shirt that does nothing to hide his tight swimmer's build, you notice the hints of pierced nipples pushing at the fabric of his shirt. On his wrists are spiked cuffs and a few shiny bracelets. As you continue to look him over you notice the multiple rings in his ears pierced right eyebrow and his pierced lower lip. Around his neck is a necklace that incorporates an ankh and a horseshoe.".
 The conversation of Tristian is { "Neigh!" }.
@@ -69,7 +73,7 @@ instead of conversing the Tristian:
 			say "     'Well, I would be,' he admits, 'except his apartment is pretty much right in the territory the hyena gang has been claiming lately. And when I asked around, I found out there have been a lot of them sniffing around over there, like way more than anyone here can take,' he says with a sad sigh. 'I even wanted to go myself, but some of the strippers here talked me out of it. So basically, if he isn't a hyena yet... he will be soon.'";
 			say "     He looks at you with his slightly sad eyes. 'I was just kind of missing him before, but now I'm really worried. And I know it would be better if he were here with me than as part of some gang... Lance is a good guy and not at all into the kinds of rough stuff those hyenas are into, so there won't be anything of my brother left by the time they're done with him.'";
 			say "     Feeling sympathy for your gothy playmate, you offer to go take a look yourself. 'Oh would you?' he says, seeming surprised and happy at your offer. 'I mean, I couldn't ask you to go, but if you do go and see anything. Even if it's just that hyenas were there, could you let me know?' the palomino asks you earnestly, and you readily agree.";
-			now Tristbrother is unresolved;
+			now Tristbrother is active;
 			now HP of Tristian is 8;
 	else if HP of Tristian > 4 and a random chance of 1 in 3 succeeds:
 		say "     Still no word back on my brother,' Tristian says with a sigh as you approach. 'I keep getting more worried about the guy as time goes on too,' he says, before smiling and looking up at you. 'But enough about that. How about a drink?' the large stallion says, and you do your best to smile and take his mind off his brother for a while as you drink and chat with him.";
@@ -146,7 +150,7 @@ to say sexwithtristian:
 
 
 to palominoinfect:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	setmonster "Palomino";
 	now non-infectious entry is false;
 	infect;
@@ -155,7 +159,7 @@ to palominoinfect:
 
 Section 3 - Tristian's Quest
 
-Tristbrother is an situation. Tristbrother is resolved.
+Tristbrother is an situation. Tristbrother is inactive.
 when play begins:
 	add Tristbrother to badspots of hermaphrodite;
 	add Tristbrother to badspots of guy;

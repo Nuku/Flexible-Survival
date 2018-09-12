@@ -55,6 +55,10 @@ Section 2 - Demonstration Example
 [*** BELOW IS AN EXAMPLE OF A CHARACTER USING THE NEW FUCKING TABLE SYSTEM ***]
 [To build your own, the various Testerbot components would have to be renamed to prevent duplication.]
 
+Table of GameCharacterIDs (continued)
+object	name
+Testerbot	"Testerbot"
+
 Testerbot is a person.
 [ Testerbot is in Primary Lab.	]			[Removed again - testing over]
 The description of Testerbot is "[testerbotdesc]".

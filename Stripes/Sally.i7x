@@ -3,6 +3,10 @@ Version 1 of Sally by Stripes begins here.
 
 Section 1 - Sally the Huskybunny
 
+Table of GameCharacterIDs (continued)
+object	name
+Sally	"Sally"
+
 Sally is a woman.
 The description of Sally is "[sallydesc]".
 The conversation of Sally is { "Fuck me!" }.

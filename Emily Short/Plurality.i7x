@@ -8,7 +8,7 @@ Section 1 - Verbs
 
 A thing can be neuter. A thing is usually neuter.
 
-The prior named noun is a thing that varies. The prior named noun is yourself.
+The prior named noun is a thing that varies.[@Tag:NotSaved] The prior named noun is yourself.
 
 After printing the name of something (called the target):
 	mark target in output.

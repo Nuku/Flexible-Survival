@@ -61,6 +61,10 @@ ColeenAlpha is a number that varies.
 ColeenSlut is a number that varies.
 ColeenSpray is a number that varies.
 
+Table of GameCharacterIDs (continued)
+object	name
+Coleen	"Coleen"
+
 Coleen is a woman.
 The description of Coleen is "[CollenStatus]".
 The conversation of Coleen is { "Woof!" }.
@@ -278,7 +282,7 @@ carry out ColeenSpraying:
 					now scalevalue of player is 3;
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 					increase humanity of player by 20;
 					increase ColeenSpray by 1;
 				else:
@@ -296,7 +300,7 @@ carry out ColeenSpraying:
 					now scalevalue of player is 3;
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 					increase humanity of player by 20;
 					increase ColeenSpray by 1;
 					stop the action;
@@ -319,7 +323,7 @@ carry out ColeenSpraying:
 					now scalevalue of player is 3;
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 					increase humanity of player by 20;
 					increase ColeenSpray by 1;
 			else:
@@ -335,7 +339,7 @@ carry out ColeenSpraying:
 					now scalevalue of player is 3;
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 					increase humanity of player by 20;
 					increase ColeenSpray by 1;
 				else:
@@ -351,7 +355,7 @@ carry out ColeenSpraying:
 			now scalevalue of player is 3;
 			now bodydesc of player is "unchanged";
 			now bodytype of player is "human";
-			now daycycle of player is 0;
+			now SleepRhythm of player is 0;
 			increase humanity of player by 20;
 			increase ColeenSpray by 1;
 	else if ColeenSpray is 1:
@@ -361,7 +365,7 @@ carry out ColeenSpraying:
 		now scalevalue of player is 3;
 		now bodydesc of player is "unchanged";
 		now bodytype of player is "human";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		increase humanity of player by 20;
 		increase ColeenSpray by 1;
 	else if ColeenSpray is 2:
@@ -466,7 +470,7 @@ to say SexWithColeen:
 				if player is male:
 					say "     Coleen's face brightens and her husky muzzle pulls back in a happy smile as you fix the collar around her throat, settling it securely so her new nametag can shine out proudly for all to see. 'Now Coleen's name is Bitch!' the newly collared Bitch proclaims proudly as she stares up at you in adoration. 'Thank you so much for taking me in master! Bitch will work hard to be a good bitch for her master!' the formerly independent husky girl says even as she rubs herself up against your body eagerly. 'How would master like to use his new little bitch?' Your pet asks you as she looks up at you eagerly, her position in front of you giving you an idea of a better use to put her mouth to. You grin as you reach down to stroke your cock, her eyes following your every movement eagerly as your [cock of player] rod quickly grows erect at just a touch, the heat scent of a needy bitch all the encouragement it needs to rise to the occasion.";
 					say "     'Why don't you worship your new master's rod,' you say with a grin. Her face lights up eagerly at your suggestion, as she eagerly crawls forward to nuzzle your cock with her soft nose, before running her tongue along it eagerly. You groan in pleasure as she begins to lick and suck on the tip of your cock, tracing her teeth along the base of your cock lightly and making you squirm and thrust forward into her mouth as she does her best to swallow your entire cock into her muzzle. Your new bitch moans around your cock, loving the taste of your thick meat, even as she applies herself to it with renewed vigor, taking to her new submissive role like she was born to it as she begs for you to fill her mouth with your seed. Soon you reward your newest pet with her treat, as your cock sends its sperm shooting deep into her mouth, while she works hard to swallow every drop. Eventually spent, you relax backwards, your newest bitch licking your cock and balls clean even as she enjoys the feel of your seed filling her stomach. You can feel a smile tugging on your face as you look down on her on all fours before you, happy to have yet another good little pet to keep you company and train.";
-					Now ColeenCollared is 1; [pet Coleen]
+					now ColeenCollared is 1; [pet Coleen]
 					now lastfuck of Coleen is turns;
 					now ColeenFound is 2; [husky Coleen fucked]
 				else:
@@ -474,7 +478,7 @@ to say SexWithColeen:
 					say "     The transformed woman's face lights up happily at your suggestion as she crawls over to you on all fours, quickly lowering her head to stick her muzzle into your damp crotch. Deciding to have some fun involving your other pet in this, you quickly gesture to Sarah to join the fun, even as Coleen runs her tongue across your soft pussy lips. The feeling makes you gasp and pet your newest bitches head in encouragement, as she begins to lick and nip at your outer lips eagerly, her tongue starting to tease its way inside your body with every pass. You groan as your new pet gasps and pushes her tongue into you even further, and you smile as you see your other pet has her own husky muzzle buried between Coleen's legs as well.";
 					WaitLineBreak;
 					say "     Your new bitch renews her assault on your sex even as her own is being licked and teased, the sensations making you moan in pleasure as you rock your hips upward with each probing stroke of her tongue. Your new pet's slutty husky instincts come to the fore as she whines and pants eagerly as she slurps and laps at your pussy, savoring every taste of your body, even as her own hips rock back in time with the tongue licking at her own slit. Your body can only take so much of this wanton assault before you find yourself clenching your fingers in her fur as you orgasm, holding her head down in your crotch as she tries to lick up every bit of your juices even as they coat her muzzle. Panting you can see that your newest pet has had her own orgasm as well, and your other pet is just as happily licking up the mess she made on the floor behind her. You can feel a smile tugging at your face as you look down on your two happily licking pets, glad to have such wonderful company to play with and train...";
-					Now ColeenCollared is 1; [pet Coleen]
+					now ColeenCollared is 1; [pet Coleen]
 					now lastfuck of Coleen is turns;
 					now ColeenFound is 2; [husky Coleen fucked]
 			else:

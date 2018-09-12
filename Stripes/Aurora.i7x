@@ -25,6 +25,7 @@ Instead of resolving a Giant's Frozen Yogurt:
 			say "[freeing_aurora]";
 		else:
 			say "     You take a few steps back from the moat of lava and tell her that you don't know how to get her across. You tell her to go back into the yogurt shop and wait for the military rescue. She nods, seeming a little cheered to hear that a rescue will come. She thanks you for trying and staggers her way back inside. You wipe your sweaty brow, glad you've managed to avoid possible trouble.";
+			now Resolution of Giant's Frozen Yogurt is 99;	[Did not help Aurora]
 			now Giant's Frozen Yogurt is resolved;
 	else:
 		say "     You manage to make your way back to the molten moat encircling Aurora and the trendy yogurt shop she's been trapped in. Calling out to her, she emerges and waves happily to you. You head back over to the broken section of wall to make another attempt at knocking it over to make a bridge.";
@@ -64,6 +65,7 @@ to say freeing_aurora:
 			else:
 				say "     Unfortunately, you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to free her.";
 			now HP of frost giantess is 1;
+			now Resolution of Giant's Frozen Yogurt is 2;	[Tried and failed to help Aurora]
 		if aurorafreed is true:
 			say "     Thanks to your efforts, a section of the concrete wall collapses, falling across the lava stream. It cracks in a few spots, but manages to largely hold together. Worried that it won't stay together for long, you hop across to help the giant woman. She heaves a small chest freezer onto her back like a backpack and rushes to join you by the lava's edge. Being so close to the lava makes her a little wobbly, but you're able to support her enough to help her across. The two of you put some distance between the magma flow and soon you're both feeling much better.";
 			WaitLineBreak;
@@ -71,9 +73,11 @@ to say freeing_aurora:
 			say "     She pauses for a moment, looking around the devastated city. 'Look. Things seem really crazy out here and I want to repay you for saving me. Now, I've never really been much of a fighter, but just look at me,' she says, flexing an arm to make her bicep bulge. 'I can come with you and help keep you safe, if you'd like. Besides,' she adds, looking you up and down with an appreciative grin, 'maybe we can think of some other ways I can repay you, too.'";
 			now HP of frost giantess is 2;
 			now frost giantess is tamed;
+			add "Tamed" to Traits of frost giantess;
 			move Aurora to Breakroom;
 			say "     (The frost giantess is now tamed! You can make her your active pet by typing [bold type][link]pet frost giantess[as]pet frost giantess[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link].[roman type])[line break]";
 			increase score by 10;
+			now Resolution of Giant's Frozen Yogurt is 1;	[Recruited Aurora]
 			now Giant's Frozen Yogurt is resolved;
 
 
@@ -83,6 +87,10 @@ the linkaction of Aurora is "[auroralinkaction]".
 
 to say auroralinkaction:
 	say "Possible Actions: [link]talk[as]talk Aurora[end link], [link]smell[as]smell Aurora[end link], [link]fuck[as]fuck Aurora[end link][line break]";
+
+Table of GameCharacterIDs (continued)
+object	name
+frost giantess	"frost giantess"
 
 frost giantess is a pet. frost giantess is a part of the player.
 understand "Aurora" as frost giantess.
@@ -110,6 +118,10 @@ to say DismissAurora:
 	else: [dismissing her in the abbey]
 		say "     ...";
 
+Table of GameCharacterIDs (continued)
+object	name
+Aurora	"Aurora"
+
 Aurora is a woman.
 The description of Aurora is "[AuroraDesc]".
 
@@ -130,7 +142,7 @@ to say AuroraDesc:
 	say "     She's friendly and eager to help you, willing to even come along and fight by your side. While no trained warrior, her punches hit like a ton of bricks. The heat of the city does wear on her, which is why she's carries a small retail ice cream freezer like a backpack. It's full of frozen yogurt and somehow is always cold despite not even being plugged in. Fighting will eventually tire her out and overheat her, but she'll keep fighting as long as you do out of loyalty.";
 
 to say aurora_attack:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "[one of]Grabbing a large chunk of rubble, the giantess hurls it into your opponent[or]One of the giantess's wild blows strikes your foe, knocking them back[or]Aurora [if scale entry < 3]stomps on the much smaller foe[else]gives your opponent kick with her massive foot[end if][or]The giantess's meaty fist bashes into your opponent[or]Balling both fists together, Aurora swings them down onto the [name entry][at random]![run paragraph on]";
 
 instead of conversing frost giantess:
@@ -172,13 +184,9 @@ to say AuroraTalkMenu:
 					say "[AuroraTalk1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the frost giantess, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the frost giantess, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

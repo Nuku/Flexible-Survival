@@ -5,7 +5,7 @@ Version 1 of Jimmy by Stripes begins here.
 Section 1 - Event
 
 [Situation opened by Good Alexandra]
-Automaton Activity is a situation. The level of Automaton Activity is 6. It is resolved.
+Automaton Activity is a situation. The level of Automaton Activity is 6. It is inactive.
 The sarea of Automaton Activity is "Capitol".
 
 instead of resolving Automaton Activity:
@@ -23,15 +23,17 @@ instead of resolving Automaton Activity:
 			now HP of Jimmy is 3;
 			if HP of Alexandra < 57, now HP of Alexandra is 57;
 			now Automaton Activity is resolved;
-			now battleground is "void";
+			now Resolution of Automaton Activity is 1; [won]
 			move Jimmy to Police Lockerroom;
-			move player to Police Station;
+			move player to Police Station Twelve;
 		else if fightoutcome >= 20 and fightoutcome <= 29:	[player lost]
 			say "     During the automaton's sexual assault, you did manage to spot the corgi guy manage to squirm free. He then dropped to all fours and ran off as quickly as his stubby little legs could carry him. His small size helped him to weave between the automatons and make his escape. After your assailant steps away, you rush off after him before another of the robotic people can grab you, but you've lost track of him for now. You hope you can find the little guy before something else does.";
 			now HP of Jimmy is 2;
+			now Resolution of Automaton Activity is 2; [lost]
 		else:
 			say "     As you make your escape from the automaton attacking you, you spot the corgi guy managing to squirm free. He drops to all fours and runs off as quickly as his stubby little legs can carry him. While his small size helps him weave between the automatons and make his escape, he heads off in a direction separate from yours. By the time you're able to circle around, you've lost track of him for now. You hope you can find the little guy before something else does.";
 			now HP of Jimmy is 2;
+			now Resolution of Automaton Activity is 3; [fled]
 	else if HP of Jimmy is 2:
 		say "     Heading back to the area where you encountered the automatons digging out the corgi survivor, you begin searching around in the hopes of locating him.";
 		let bonus be ( the perception of the player minus 10 ) divided by 2;
@@ -47,15 +49,19 @@ instead of resolving Automaton Activity:
 			now HP of Jimmy is 3;
 			if HP of Alexandra < 57, now HP of Alexandra is 57;
 			now Automaton Activity is resolved;
-			now battleground is "void";
+			now Resolution of Automaton Activity is 4; [found and rescued Jimmy]
 			move Jimmy to Police Lockerroom;
-			move player to Police Station;
+			move player to Police Station Twelve;
 	else:
 		say "***ERROR-Jimmy-[HP of Jimmy]E: Result exceeds event parameters.";
 		now Automaton Activity is resolved;
 
 
 Section 2 - Jimmy the Corgi
+
+Table of GameCharacterIDs (continued)
+object	name
+Jimmy	"Jimmy"
 
 Jimmy is a man.
 The description of Jimmy is "[jimmydesc]".
@@ -79,11 +85,11 @@ Instead of conversing the Jimmy:
 	else if HP of Alexandra >= 63 and sgtimer - turns >= 8 and sgtimer is not 255:
 		say "     Speaking with Jimmy, he inform you that one of the survivors from the bingo hall had left a note for any of the missing scouts who might return, telling them where the rest of you had gone. 'Since they'd be left there alone without directions or help to get here, I'd like you to go back there and check it out one last time. Besides, some of those scattered by the wolves may have escaped there.' Agreeing that it's worth a shot, you promise him you'll return to check on the [bold type]survivor group[roman type]'s bingo hall one last time.";
 		now sgtimer is 255;
-		now Survivor Group is unresolved;
-[	else if population of Police Station > 0:
+		now Survivor Group is active;
+[	else if PoliceStationTwelvePopulation > 0:
 		say "***";]
 	else:
-		say "     [one of]'It's nice to be able to sleep in a proper bed again. Sleeping on the floor's not so bad when you're a dog, but being on the bed's much better. And you can have a lot more fun in bed, too,' he adds with a cute chuckle.[or]'Do keep a look out for some doggy treats while you're out there. I've grown a taste for them,' he says, licking his chops.[or][if population of Police Station is 0]'There's always more stuff to do around here, but that just means we'll be able to have more friends.'[else]'There's even more to do around here now that we've got people in our shelter. It feels great to be helping them out though, so I don't mind. Besides, they give me plenty of scritches and hugs and... well, you know,' he says with a tail wag and a lick of his muzzle.[end if][or]'It's nice here and all, but I'm looking forward to the rescue Alexandra keeps talking about.'[or]'Thanks for helping [if population of Police Station > 0]all of [end if]us. Keep up the search for others.'[or]'I don't mind being this short now. It makes me the perfect height for oral sex,' he says with a grin and a wink.[or][if HP of Alexandra >= 65]'I don't like having that- that- robot bitch here,' he growls.[else if HP of Alexandra >= 63]'The newcomers are getting settled in nicely. They've even voted to make me their representative,' he says happily[else]'Clean up's been going well,' he says cheerfully, tail wagging even as he lugs a bucket of grimy mop water with both hands.[end if][at random]";
+		say "     [one of]'It's nice to be able to sleep in a proper bed again. Sleeping on the floor's not so bad when you're a dog, but being on the bed's much better. And you can have a lot more fun in bed, too,' he adds with a cute chuckle.[or]'Do keep a look out for some doggy treats while you're out there. I've grown a taste for them,' he says, licking his chops.[or][if PoliceStationTwelvePopulation is 0]'There's always more stuff to do around here, but that just means we'll be able to have more friends.'[else]'There's even more to do around here now that we've got people in our shelter. It feels great to be helping them out though, so I don't mind. Besides, they give me plenty of scritches and hugs and... well, you know,' he says with a tail wag and a lick of his muzzle.[end if][or]'It's nice here and all, but I'm looking forward to the rescue Alexandra keeps talking about.'[or]'Thanks for helping [if PoliceStationTwelvePopulation > 0]all of [end if]us. Keep up the search for others.'[or]'I don't mind being this short now. It makes me the perfect height for oral sex,' he says with a grin and a wink.[or][if HP of Alexandra >= 65]'I don't like having that- that- robot bitch here,' he growls.[else if HP of Alexandra >= 63]'The newcomers are getting settled in nicely. They've even voted to make me their representative,' he says happily[else]'Clean up's been going well,' he says cheerfully, tail wagging even as he lugs a bucket of grimy mop water with both hands.[end if][at random]";
 [***]
 
 the fuckscene of Jimmy is "[sexwithJimmy]".

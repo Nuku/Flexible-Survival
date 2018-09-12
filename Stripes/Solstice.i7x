@@ -15,7 +15,7 @@ Section 1 - Treasure Hunting
 
 Adventurer is a situation. The level of Adventurer is 5.
 The sarea of Adventurer is "Outside".
-Adventurer is resolved.
+Adventurer is inactive.
 
 when play begins:
 	add Adventurer to badspots of girl;
@@ -32,7 +32,7 @@ Instead of resolving Adventurer:
 		say "     You find yourself wondering what she would have done had the outbreak not occurred, but have no time to ask as she presses onwards. 'And that's where you come in. You seem chummy enough with her that she'll let you roam around the museum. I want you to go in and get the Onyx Crow's head for me. It's incorrectly housed in the Greek Artifacts wing, though it's actually of Scythian origin.' Seeing your lack of recognition in your eyes, she just rolls hers. 'Look, it's a carved crow's head made of black stone with some gold on it. It's about the size of baseball. Simple enough?";
 		say "     'Once you've got it, just find your way back here and I'll trade you some supplies for it.' With a swish of her hips and numerous tails, she grins. 'And maybe throw in a special reward, too.' With that, she runs off into an alley, disappearing and quickly as she came. You find yourself thinking about her offer, wondering if it's time to make a trip back to the museum.";
 		now Adventurer is resolved;
-		now Onyx Crow is unresolved;
+		now Onyx Crow is active;
 		now HP of Solstice is 1;
 	else if HP of Solstice is 2:
 		say "     Managing to find your way through the chaos of the city, you make your way back to the intersection where you first met the vulpine adventurer. True to her word, she steps out from one of the alleyways as you arrive. 'Did you get it?' she asks quickly";
@@ -64,6 +64,7 @@ Instead of resolving Adventurer:
 				WaitLineBreak;
 				say "     After some pleasant snuggling, you both get off the bedroll and carefully pack up the separate pieces of the statuary in bundles of cloth. While Solstice doesn't have plans to put it back together, you both certainly agree that you can't just leave it lying around for someone else to find and reassemble. Before you head out, she gives you another kiss and a pat on the behind, saying she'll see you again soon. It's not until you're well on your way that you remember that you never got those supplies from her. Though you can't say that you were displeased with the reward you ended up receiving instead even as you feel her infection starting to spread into you.";
 				vulpogryphinfect;
+				now Resolution of Adventurer is 1; [had sex with Solstice]
 				now Adventurer is resolved;
 				now HP of Solstice is 4;
 				now lastfuck of Solstice is turns;
@@ -78,6 +79,7 @@ Instead of resolving Adventurer:
 				WaitLineBreak;
 				say "     Before you head out, she gives you a big hug, folding her feathery wings around you. She runs her paws along your back, scritching under your backpack while kissing you. As she lets you go, she gives you a little nip with her beak on your neck. Solstice adds a pat on your behind, saying that she'll see you again soon. Walking off, you go a short distance before you feel a tingle start to spread through you. Feeling the encroaching change, you run your hands over your face and neck, looking for some fluid or break where the nanites might be affecting you, but can't find one. It's not until after the change has run its course that you find it, one of the vulpogryph's feathers having gotten stuck under your backpack.";
 				vulpogryphinfect;
+				now Resolution of Adventurer is 2; [refused sex with Solstice]
 				now Adventurer is resolved;
 				now HP of Solstice is 3;
 				now lastfuck of Solstice is turns;
@@ -90,7 +92,7 @@ Instead of resolving Adventurer:
 
 Onyx Crow is a situation. The level of Onyx Crow is 5.
 The sarea of Onyx Crow is "Museum".
-Onyx Crow is resolved.
+Onyx Crow is inactive.
 
 when play begins:
 	add Onyx Crow to badspots of girl;
@@ -110,8 +112,10 @@ Instead of resolving Onyx Crow:
 		challenge "Cerberus";
 		if cerbfight is 3:
 			say "     Fleeing the three-headed dog, you run from the wing and try to make your way back to the lobby. You'll have to recover and try coming back later. Maybe the dog will be gone by then, but you don't think you'll be that lucky.";
+			now Resolution of Onyx Crow is 3; [fled the cerberus]
 		else if cerbfight is 2:
 			say "     Having passed out after the lustful creature has had its way with you, you awake to find yourself ejected from the room. You are wet and sticky with canine slobber and the herm's juices, which you try your best to wipe off to remove the evidence of your fight with the guard before returning to the lobby. You'll have to recover and try returning there later. Perhaps you'll fare better next time, though part of you certainly enjoyed losing. You find yourself thinking it might just be more fun to keep losing to the creature.";
+			now Resolution of Onyx Crow is 2; [lost to cerberus]
 		else if cerbfight is 1:
 			say "     Having beaten the guard, you are now free to advance upon the case. Looking it over, you can see that it does indeed hold the Onyx Crow. It is a crow's head carved from a glossy, black stone. The detail is a little rough, but there is an ornate band of gold around its base as well as golden eyes. There are also thin traces of gold that run down the back of its had, forming a stylized pattern. It looks expensive enough, but there must be much more valuable pieces than this one.";
 			WaitLineBreak;
@@ -120,8 +124,9 @@ Instead of resolving Onyx Crow:
 			increase carried of Crow Artifact by 1;
 			increase score by 10;
 			now HP of Solstice is 2;
+			now Resolution of Onyx Crow is 1; [won vs cerberus]
 			now Onyx Crow is resolved;
-			now Adventurer is unresolved;
+			now Adventurer is active;
 
 
 Table of Game Objects (continued)
@@ -153,6 +158,10 @@ an everyturn rule:
 
 
 Section 2 - Solstice the Vulpogryph		[coming soon]
+
+Table of GameCharacterIDs (continued)
+object	name
+Solstice	"Solstice"
 
 Solstice is a woman.
 The description of Solstice is "[solsticedesc]".

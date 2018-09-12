@@ -71,6 +71,7 @@ Instead of resolving a Lost Trident:
 	if player consents:
 		LineBreak;
 		say "     Chucking the trident as far as you can you don't stop to watch what happens next with the sea dragons as you continue to swim/run to the shore. Grabbing your backpack and then beating feet as quick as you can you don't turn back even once to see what happens with the feral sea guardians. Had you, you would have seen a half naked male figure rising up out of the sea to take the trident into one of his meaty bronze hands.";
+		now Resolution of Lost Trident is 2; [threw it away]
 	else:
 		LineBreak;
 		say "     Clutching the trident a little tighter into your grip you feel the strongest sense of possessiveness overcome you all of sudden making you unwilling to relinquish your newfound weapon. It would seem that the sea dragons can sense this and are about to make you regret your choice, however.";
@@ -91,6 +92,7 @@ Instead of resolving a Lost Trident:
 						now Lost Trident is resolved;
 		if fightoutcome >= 20:
 			say "     Having lost to one of the feral sea dragons you find yourself being stripped of your newfound weapon and then casually dumped onto the beach by the creature you had just been defeated by. Grunting in utter humiliation you rest on the muddy sands for a minute while lamenting your own weakness. Looks like you know truly understand the meaning about the [italic type]one that got away[roman type] as you listen to the chatter of the feral sea dragons as the reptiles dive back into the sea with your commandeered treasure. Better luck next time.";
+			now Resolution of Lost Trident is 3; [lost]
 
 Section 1a - Trident (Weapon)
 
@@ -235,6 +237,10 @@ instead of going to Atlantis City Residential while ResidentialVisits is 1 and (
 
 Section 4 - NPCs
 
+Table of GameCharacterIDs (continued)
+object	name
+Triton	"Triton"
+
 Triton is a man. Triton is in Atlantis City Entrance.
 The description of Triton is "[TritonDesc]".
 The conversation of Triton is { "<This is nothing but a placeholder!>" }.
@@ -292,13 +298,9 @@ to say TritonTalkMenu:
 					say "[TritonTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head, which simply causes the merman to shrug and return to duty.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head, which simply causes the merman to shrug and return to duty.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -316,6 +318,10 @@ to say TritonTalk3:
 
 instead of fucking Triton:
 	say "     The buff male raises a brow at you, not offended by your offer but rather intrigued. 'As much as I would love to, Alana here would murder me if I scampered off to have fun with you,' he says.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Alana	"Alana"
 
 Alana is a woman. Alana is in Atlantis City Entrance.
 The description of Alana is "[AlanaDesc]".
@@ -366,13 +372,9 @@ to say AlanaTalkMenu:
 					say "[AlanaTalk2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head, which simply causes the mermaid to return back to work.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head, which simply causes the mermaid to return back to work.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -389,9 +391,13 @@ instead of fucking Alana:
 
 An everyturn rule:
 	if daytimer is night:
-		remove Poseidon from play;
+		now Poseidon is nowhere;
 	else if daytimer is day:
 		move Poseidon to Royal Throne Room;
+
+Table of GameCharacterIDs (continued)
+object	name
+Poseidon	"Poseidon"
 
 Poseidon is a man.
 The description of Poseido is "[PoseidonDesc]".
@@ -443,13 +449,9 @@ to say PoseidonTalkMenu:
 					say "[PoseidonTalk2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head, which simply causes the king to return to whatever he was doing.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head, which simply causes the king to return to whatever he was doing.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

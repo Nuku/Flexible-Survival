@@ -18,13 +18,13 @@ to say purehumanend: [Pure Human version]
 	if quitter is 1: [Prevents end now and givein from being used to see the ending.]
 		say "You must play through to see this ending, no cheating!";
 	else if humanity of player < 10: [Succumb version]
-		sort table of random critters in random order;
+		sort Table of Random Critters in random order;
 		now monster is 1;
-		choose row monster from table of random critters;
-		while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		choose row monster from Table of Random Critters;
+		while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 			increase monster by 1;
-			choose row monster from table of random critters;
-			if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			choose row monster from Table of Random Critters;
+			if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 				next;
 			break;
 		let RandomCritterName be name entry;
@@ -94,13 +94,13 @@ to say passhumanend: [Passably Human version]
 		else if skinname of player is "Greek Nymph":
 			say "As you loose the last of your humanity you are drawn back to the Museum by some unknown force. Searching the halls you come across several nymphs that happily welcome you back. After several hours with your new friends you take your place as another sexy Greek Nymph. From then on you spend the rest of your days frolicking through the Museum halls chasing and being chased by the satyrs.";
 		else:	[covers other generic outcomes like tailless forms, oversized junk, etc...]
-			sort table of random critters in random order;
+			sort Table of Random Critters in random order;
 			now monster is 1;
-			choose row monster from table of random critters;
-			while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+			choose row monster from Table of Random Critters;
+			while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 				increase monster by 1;
-				choose row monster from table of random critters;
-				if there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+				choose row monster from Table of Random Critters;
+				if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 					next;
 				break;
 			let RandomCritterName be name entry;

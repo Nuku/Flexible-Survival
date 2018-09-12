@@ -25,6 +25,7 @@ Instead of resolving a Leather Daddy Kitty:
 		say "     With a sigh, the chubby yet fit kitty gets off of you. 'As much as I'd like to take you here and now, you need to learn that you must come to me,' the ocelot says, starting to walk away. However, before he leaves your line of sight, the male turns towards you and smiles. 'Two things you need to know. One, your soon-to-be master's name is Oliver, I give you permission to call me by that. Two, if you wish to explore this further, make your way to the Kitty Sex Dungeon.' The dominant guy informs, winking at you before he leaves you there to muse on the brand new information you have.";
 		change northeast exit of (Entrance to the High Rise District) to Kitty Sex Dungeon;
 		change southwest exit of Kitty Sex Dungeon to (Entrance to the High Rise District);
+		now Resolution of Leather Daddy Kitty is 1; [auto-agreed to be a sub]
 		now OliverRelationship is 2;
 		now Leather Daddy Kitty is resolved;
 		move Oliver to Kitty Sex Dungeon;
@@ -35,11 +36,13 @@ Instead of resolving a Leather Daddy Kitty:
 			say "     You nod your head at the big ocelot, causing him to purr happily before giving you a rough kiss on the lips. It sends shots of pleasure throughout you and makes you whine when the male stops and sets you down. 'Don't worry my little kitty, there'll be more where that came from later,' he whispers huskily in your ear, sending shivers down your spine. The big guy sets you down and starts to walk away. However, he stops just shy of leaving your sights and turns to you. 'My name is Oliver, little kitty, something that I give you permission to call me. Lastly, if you wish to continue, come see me at my Kitty Sex Dungeon.' Your soon to be dom informs you before leaving";
 			change northeast exit of (Entrance to the High Rise District) to Kitty Sex Dungeon;
 			change southwest exit of Kitty Sex Dungeon to (Entrance to the High Rise District);
+			now Resolution of Leather Daddy Kitty is 2; [agreed to be a sub]
 			now OliverRelationship is 2;
 			now Leather Daddy Kitty is resolved;
 			move Oliver to Kitty Sex Dungeon;
 		else:
 			say "     The big kitty sets you down and sighs at you before turning away. 'Alright then, I won't bother you anymore,' he says before walking away from you. You muse inwardly that had you said otherwise it might have been the start of something interesting but... you're not one to relent to another dominant. So, instead, you turn and head in the opposite direction to the one that the big kitty had left in.";
+			now Resolution of Leather Daddy Kitty is 100; [refused]
 			now OliverRelationship is 100;
 			now Leather Daddy Kitty is resolved;
 
@@ -50,6 +53,10 @@ The description of Kitty Sex Dungeon is "[DungeonDesc]"
 
 to say DungeonDesc:
 	say "     The room is a stereotypical sex dungeon. There is a sex bench in the middle of the room, stocks against the wall, sex toys on shelves and so much more. On top of that, the entire place smells of sex and sweat, something that fills you with warmth as you think of the many things that have happened in this area. Interesting enough, there are no items for punishment via pain like flogs or whips. Perhaps Oliver punishes with pleasure rather than pain?[if player is not neuter] You shudder at the thought of being denied orgasm.[end if]";
+
+Table of GameCharacterIDs (continued)
+object	name
+Oliver	"Oliver"
 
 Oliver is a man.
 The description of Oliver is "[OliverDesc]".
@@ -108,13 +115,9 @@ to say OliverTalkMenu:
 					say "[OliverTalk2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the big kitty who smirks at you and laughs. 'So my little sub just wanted a kiss eh? Could've just said so.' He chuckles before turning his attention to the magazine he has in hand.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the big kitty who smirks at you and laughs. 'So my little sub just wanted a kiss eh? Could've just said so.' He chuckles before turning his attention to the magazine he has in hand.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -180,13 +183,9 @@ to say OliverSexMenu:
 					say "[OliverSex3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step away, but thankfully your dom doesn't look disappointed. 'If you want me, you know where to find me, my little kitty,' he purrs at you, making you smile.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step away, but thankfully your dom doesn't look disappointed. 'If you want me, you know where to find me, my little kitty,' he purrs at you, making you smile.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

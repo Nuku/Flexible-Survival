@@ -111,17 +111,21 @@ Instead of resolving a Captured Demon:
 			say "     Having dealt with you, the demon turns back to Private Jackson, who's tried to crawl off in the meantime. He picks the man up by his neck, choking him a bit and runs a clawed hand down his side, leaving shallow but long lines bloody in his pale flesh. 'Don't try to flee again. You're taxing my patience.' With that, he throws his captive back on the bar, bent over and his rear sticking out at the right height.";
 			say "     The demon smacks his manhood against the human's ass several times, creating slapping noises and making him grunt in pain. Looking down at the reddened cheeks and the deeper red hand-print on them, he aims his cock at Private Jackson's virgin pucker and plunges it right in. His victim whimpers in pain as the infernal cock forces his asshole to open and the thick shaft of the demon's cock sinks inside his body. You watch the otherworldly beast fuck the poor man without restraint, slamming in and out and just getting more and more aroused as the soldier begs and struggles weakly to push him off.";
 			say "     Then finally, the demon brute slams his whole shaft inside, roaring in satisfaction as the contents of his balls erupt into his human captive. He keeps pumping blast after blast of cum into the young man, pumping slowly in and out of his hole with squishy noises as cum starts to squirt out around his shaft from the overfilled ass. Pulling Private Jackson's head up by the hair, the demon licks his cheek slowly, then says 'Feel my infernal seed fill your innermost being, little man. You're mine now - now and forever!' With that, he pulls the soldier up against his chest, holding him against his body with his cock still inside the man. Then black-purple smoke starts forming around them both, obscuring them from sight. When it spreads out in the room and slowly blows away, there's nothing to be seen of the demon or his newest slave.";
+			now Resolution of Captured Demon is 2; [lost, David in hell]
 		else if fightoutcome >= 30: [fled]
 			say "     Recognizing a lost fight, you just take your legs under your arms and run as fast as you can. You can only guess what happened to the young soldier you left behind with the demon brute. Nothing good, you're sure...";
+			now Resolution of Captured Demon is 3; [fled, David in hell]
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     After the demon vanishes, you take care of Private Jackson, who's still rather groggy from being choked and manhandled like that. You help him by tying the shreds of his shirt around his wounded chest as an improvised bandage and also to get his now ragged pants back on. With all the naked skin he's showing, the realization how handsome he is prods awake your libido, but since his thoughts are anywhere but at sex right now, you wish him the best as he moves out to rejoin his unit.";
 			LineBreak;
 			say "     Something tells you this might not be the last time you'll see this young man. Maybe you should go looking for the handsome [bold type]soldier[roman type] sometime... out in the city, as you doubt he'll be back in the red light district anytime soon.";
-			Now Thankful Soldier is unresolved;
+			now Resolution of Captured Demon is 1; [won, David saved]
 			increase score by 5;
 	now Captured Demon is resolved;
 
-Thankful Soldier is a situation. Thankful Soldier is resolved. [meeting the guy from 'Captured Demon' again - if you saved him]
+Thankful Soldier is a situation. [meeting the guy from 'Captured Demon' again - if you saved him]
+The Prereq1 of Thankful Soldier is Captured Demon.
+The Prereq1Resolution of Thankful Soldier is { 1 }.
 The sarea of Thankful Soldier is "Outside".
 when play begins:
 	add Thankful Soldier to badspots of guy; [male soldier]
@@ -148,6 +152,7 @@ Instead of resolving a Thankful Soldier:
 				say "     Food x3, Water x1 obtained.";
 				increase carried of food by 3;
 				increase carried of water bottle by 1;
+				now Resolution of Thankful Soldier is 2; [talked to David]
 			else: [fuck the soldier]
 				LineBreak;
 				say "     Stepping closer to the good-looking young soldier, you pull him tight against your body and give him a deep kiss before he can react. The initial look of alarm in his eyes quickly fades as you make out with him, exploring his mouth with your tongue as you run a hand through his hair and goose his bubble butt with the other one.";
@@ -173,6 +178,7 @@ Instead of resolving a Thankful Soldier:
 				LineBreak;
 				say "     For now, you leave your handsome soldier boy to gather up his clothes and continue with his patrol. Hopefully you can catch him here again on his next patrol...";
 				now thirst of David is 1;
+				now Resolution of Thankful Soldier is 3; [sexed David]
 			WaitLineBreak;
 			increase score by 5;
 			now LastTSEvent is turns;
@@ -182,6 +188,7 @@ Instead of resolving a Thankful Soldier:
 			say "     As he recognizes you, he gives you a little wave and walks up to talk. He says [if thirst of David < 2]'Hello and goodbye I guess. I got new order to report to one of the larger beachhead camps in the city for some special duties, so I'm afraid we won't be seeing each other again for now.' You ask him if he knows what he's supposed to do there and he shrugs, saying that he just got ordered to report there.[else]with a bit of a sad expression 'I got ordered to report to one of the larger beachhead camps in the city for some other duties. So I guess that's it for our little meetings in that alley... I'll miss you.' After pulling you in for a goodbye-kiss, he walks away, looking back after a while and waving, then continuing on his way.[end if]";
 			now HP of David is 1;
 			move David to Parade Ground;
+			now Resolution of Thankful Soldier is 1; [David went to Camp Bravo]
 			now Thankful Soldier is resolved;
 		else: [meeting him in the alley to chat or fuck]
 			say "     Moving through the city, you run into a lone soldier patrolling an alley near a small military encampment. It's Private Jackson, the young soldier you saved from that demon brute in the red light district. He's got a slender but still muscular build and a nice-looking face with a boyish charm.";
@@ -194,6 +201,7 @@ Instead of resolving a Thankful Soldier:
 				LineBreak;
 				say "     You chat a bit with David about life before the nanite plague and now and what's going on in the city. Speaking to a regular human about these things calms your mind and strengthens your human self-image a bit. After a while, you say your goodbyes and he goes on walking his patrol. Maybe you'll see him again the next time he comes through here...";
 				SanBoost 10;
+				now Resolution of Thankful Soldier is 2; [talked to David]
 			else: [sex]
 				LineBreak;
 				if thirst of David is 0:
@@ -222,6 +230,7 @@ Instead of resolving a Thankful Soldier:
 				LineBreak;
 				say "     For now, you leave your handsome soldier boy to gather up his clothes and continue with his patrol. Hopefully you can catch him here again in a little while...";
 				WaitLineBreak;
+				now Resolution of Thankful Soldier is 3; [sexed David]
 				if thirst of David < 5:
 					increase thirst of David by 1;
 			now LastTSEvent is turns;
@@ -252,7 +261,7 @@ to say DavidPatrolAnal:
 
 to say DavidPatrolVaginal:
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's lustful moans, he's ready for the real thing.";
 	say "     Opening up the zipper of his pants and letting them drop down, you free his raging hard-on, standing proudly erect in your direction. Quickly stripping off your own clothes and putting them down as an improvised blanket, you give him another quick kiss on the lips and lie down on it, pulling him with you by the hand so he ends up on top of you.";
 	WaitLineBreak;
@@ -270,6 +279,10 @@ to say DavidPatrolRubbing:
 	say "     Stroking his cheek, you tell him to calm down and that his girlfriend surely won't learn about you two once he goes back to her when this is all over. What happens in this city stays in the city. Unless of course you can make him fully yours to keep, you think to yourself...";
 
 Section 2 - NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+David	"David"
 
 David is a man.
 The description of David is "     David Jackson is a young soldier, pretty friendly if a bit shy. He has a slender but still muscular build, a handsome face and short-cut brown hair. [if debugactive is 1][line break]DEBUG -> Dexterity: [Dexterity of David], HP: [HP of David], Libido: [libido of David], Lust: [lust of David], Thirst: [thirst of David] <- DEBUG[end if]".
@@ -396,13 +409,9 @@ Instead of fucking David:
 						say "[DavidSex11]";
 					WaitLineBreak;
 			else if calcnumber is 0:
-				say "Break off?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
-					WaitLineBreak;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
+				WaitLineBreak;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -494,13 +503,9 @@ instead of conversing David:
 					WaitLineBreak;
 					now lastfuck of David is turns;
 			else if calcnumber is 0:
-				say "Break off?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
-					WaitLineBreak;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
+				WaitLineBreak;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -1513,7 +1518,7 @@ to say DavidSex2: [he sucks the player]
 
 to say DavidSex3: [player pussy fucked]
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if thirst of David is 0: [first time]
 		if David is in Parade Ground:
 			say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss before he can react. There's a look of alarm in his eyes for a second, then he accepts your tongue exploring his mouth and gives in. As you come back up for air, he stammers 'I - I shouldn't... we're not supposed to...', but quickly falls silent as you reach down and stroke the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard and pretty pliable.";
@@ -1547,7 +1552,7 @@ to say DavidSex3: [player pussy fucked]
 
 to say DavidSex4: [player ass fucked]
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if David is in Parade Ground:
 		say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then feel the bulge in his pants. With all the minotaur pheromones in the air here, he's already half hard.";
 	else:
@@ -1604,7 +1609,7 @@ to say DavidSex5: [David ass fucked]
 
 to say DavidSex6: [Sven's ass gets fucked by David]
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Stepping up close to the young soldier, you put your arms around him and pull him in for a deep kiss, then let your hands wander down to his crotch. Through the material of his pants you feel his manhood already filling out, as his body reacts to your kiss and touch. As you make out with him some more, you slide your hands under his shirt and feel your way up his hard-muscled chest, then pull the fabric up and over his head. Leaning down a bit you run your tongue over his nipples, playfully sucking on first one, then the other. From David's urgent moans, he's ready for some action.";
 	say "     Smiling, you whirl David around and wrap your arms around his chest from behind, then move a hand down to his crotch. Sliding it under the band of his pants, you fondle your soldier boy's cock and balls, making him pant and groan in lust some more, then whisper in his ear to look over to one of the farther-away beds in the bunker. There, your snowmeow kitty Sven is lying on his stomach, reading a book, tail waving in the air above his enticing furry butt. As wound-up as you already have David, it doesn't take much more than describing how Sven's tight and ready hole would feel around his cock to get him interested. After undoing the soldier's pants and letting them drop, you quickly get rid of your own clothes and the two of you walk over towards Sven naked.";
 	WaitLineBreak;

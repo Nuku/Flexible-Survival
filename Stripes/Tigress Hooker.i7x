@@ -21,7 +21,7 @@ mqfightresult is a number that varies.	[ 1 = win / 2 = lose / 3 = fled (unchange
 
 to say tigress_desc:
 	setmongender 5; [creature is herm]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if mqstatus is 3:				[fighting tigresses at the motel]
 		say "     The lovely tigress is quite upset at the intruder to hir motel home. Shi growls angrily and readies to deal with you soundly so shi can have hir way with you and put you in your place. Under hir.";
@@ -433,9 +433,9 @@ to say paymentcheck:
 	else if dog milk is owned:
 		say "     Finding a container of dog milk, shi smiles happily. 'Ooo! Cream for the kitty.' Shi opens it and sniffs. 'Ugh, it smells of dog. Well, it's still milk, so I'll take it! Maybe we can boil that dog smell out of it,' shi muses. Keeping hir find as payment, shi sets your backpack aside.";
 		delete dog milk;
-	else if Fish is owned:
+	else if Tasty Fish is owned:
 		say "     Finding the fish you've wrapped in old newspaper, shi smiles happily. 'Ooo! Tasty feesh! We'll be eating well back at the motel tonight,' shi rumbles happily. Keeping hir find as payment, shi leans down and gives you a kiss on the cheek for bringing hir such a tasty treat.";
-		delete Fish;
+		delete Tasty Fish;
 	else if soda is owned:
 		say "     Finding a can of soda, shi smiles happily. 'Hey! This is my favorite flavor. I haven't been able to find one for days.' Keeping hir find as payment, shi sets your backpack aside.";
 		delete soda;
@@ -471,12 +471,12 @@ to say paymentcheck:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Tigress Hooker"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -524,8 +524,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Table of Game Objects (continued)
 name	desc	weight	object

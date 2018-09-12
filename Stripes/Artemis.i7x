@@ -51,10 +51,12 @@ Instead of resolving a Poor Kitty:
 			say "     She looks up at you and slowly reaches out to take the cup into her muzzle. Her smooth, rubbery mouth doesn't so much bite into it as absorb the portion her lips touch. Her tongue slides the melting red and white plastic around in her mouth before swallowing it down[if skinname of player is listed in infections of Latexlist]. Seeing her do this is a little disconcerting, given your current nature, but she is careful to only take the cup into her mouth when she goes for the second bite[else]. She takes rest of the cup into her mouth and it soon follows the first bite[end if].";
 			say "     After swallowing the last of it down, she nuzzles against your leg and purrs softly, giving a cute, cat-like mew. You reach down and cautiously pet her head, rubbing the rubber tigress's ears for a bit. After petting her head for a while, you move to back off while she watches you go.";
 			increase score by 5;
+			now Resolution of Poor Kitty is 1;		[Fed rubber kitty once]
 			now HP of rubber tigress is 1;
 		else:
 			say "     You throw the cup several yards away and the tigress bounds over to it. She gives it several playful bats with her paw, sending it skittering across the ground. She hunkers down, hips and tail all atwitch as she creeps closer and then pounces. She bites into the cup, her lips melting through the plastic. As she's doing all this, you're backing away slowly and dash off around the corner. You hear a soft, plaintive mewl in the distance, but that is all.";
 			now HP of rubber tigress is 2;
+			now Resolution of Poor Kitty is 99;		[Refused rubber kitty]
 			now Poor Kitty is resolved;
 	else if HP of rubber tigress is 1:
 		say "     While walking the midway you get this odd feeling that you're being watched. You catch a bit of orange out of the corner of your eye and close to the ground, but it is gone by the time you look. Noticing that you've been in this area before, you suspect you know what's up. You continue nonchalantly while knowing that strange, neuter tigress is following you.";
@@ -69,19 +71,23 @@ Instead of resolving a Poor Kitty:
 			increase carried of cup stack by 1;
 			increase score by 20;
 			now rubber tigress is tamed;
+			add "Tamed" to Traits of rubber tigress;
 			move Artemis to Courtyard;
 			now HP of rubber tigress is 3;
+			now Resolution of Poor Kitty is 2;		[Artemis recruited]
 			now libido of rubber tigress is 30;
 			say "     (The rubber tigress is now tamed! You can make her your active pet by typing [bold type][link]pet rubber tigress[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 			now Poor Kitty is resolved;
 		else:
 			say "     Continuing to walk along, you turn around the next corner and, once out of sight, run around the stand. You move quietly as you sneak back onto the main thoroughfare, finding the strange tigress poking her head around the corner[if weapon object of player is not journal]. You pull out your weapon and charge at her[else]. You raise your fists and charge at her[end if]. She gives a shrill shriek of surprise and scrambles away. You don't expect that thing will be bothering you again.";
 			now HP of rubber tigress is 2;
+			now Resolution of Poor Kitty is 99;		[Refused rubber kitty]
 			now Poor Kitty is resolved;
 	else:
 		say "ERROR-Artemis-[HP of rubber tigress]PK: HP outside of range for the event!";
 		increase carried of cup stack by 1;
 		now rubber tigress is tamed;
+		add "Tamed" to Traits of rubber tigress;
 		now Poor Kitty is resolved;
 
 
@@ -91,6 +97,10 @@ the linkaction of Artemis is "[artemislinkaction]".
 
 to say artemislinkaction:
 	say "Possible Actions: [link]talk[as]talk Artemis[end link], [link]smell[as]smell Artemis[end link], [link]fuck[as]fuck Artemis[end link][line break]";
+
+Table of GameCharacterIDs (continued)
+object	name
+rubber tigress	"rubber tigress"
 
 rubber tigress is a pet. rubber tigress is a part of the player.
 understand "Artemis" as rubber tigress.
@@ -104,15 +114,9 @@ The assault of rubber tigress is "[ArtemisAttack]".
 the fuckscene of rubber tigress is "[SexWithArtemis]".
 templust is a number that varies.
 tempthirst is a number that varies.
-The rubber tigress has a number called cocks.
-The rubber tigress has a number called cunts.
-The rubber tigress has a number called Cock length.
-The rubber tigress has a number called Cock Width.
-The rubber tigress has a number called Cunt length.
-The rubber tigress has a number called Cunt width.
 
 to say SummonArtemis:
-	remove Artemis from play;
+	now Artemis is nowhere;
 	if player is in Courtyard and Artemis is in Courtyard: [summoning while standing next to her]
 		say "     With a sharp whistle you call Artemis over to you, rubbing her head gently the two of you begin to make your way back out into the city.";
 	else: [regular summoning]
@@ -124,6 +128,10 @@ to say DismissArtemis:
 		say "     Letting Artemis know that she can head home, she ends up rubbing her smooth rubbering skin against you almost like a parting hug. Then with a soft growl begins to run back towards the library.";
 	else: [dismissing her in the abbey]
 		say "     Taking a seat on the rim of the fountain Artemis come to lay down at your feet. You tell her it would prolly be best for her to take a little break and stick around the library, her only response is to shrug her shoulders and lay her head down.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Artemis	"Artemis"
 
 Artemis is a woman.
 The description of Artemis is "[ArtemisDesc]".
@@ -248,13 +256,9 @@ to say ArtemisTalkMenu:
 					say "[ArtemisPlay]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the rubber tigress, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the rubber tigress, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -356,13 +360,9 @@ to say ArtemisSexMenu:
 					say "[ArtemisTailCock]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the rubber tigress, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the rubber tigress, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -978,7 +978,7 @@ to say artemissf_sex:
 
 to artemisinfect:
 	setmonster "Rubber tigress";
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	let holdertext be "";
 	now holdertext is sex entry;
 	now sex entry is "nochange";

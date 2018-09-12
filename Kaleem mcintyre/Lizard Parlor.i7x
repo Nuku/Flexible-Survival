@@ -17,6 +17,10 @@ Instead of sniffing Lizard Parlor:
 
 Section 2 - Dan
 
+Table of GameCharacterIDs (continued)
+object	name
+Dan	"Dan"
+
 Dan is a man.
 The description of Dan is "The four-armed iguana moves himself around the loft with slow and measured steps while rolling his four arms around somewhat anxiously. Humming to himself all the while you wonder how the other can stay perpetually happy as he moves around the loft[if findwires is 2 and fixedgens is 2]. With the power back on the green and black scaled reptile works at both cleaning up the condo while at the same time making something to eat for himself and Greg, but it's easy to tell that Dan wants to be doing something more [italic type]vigorous[roman type] with his lover[else]. With the power not working properly the iguana can only work at drawing in several coloring books to stave off his boredom. Though, from the way he is moving his tail about almost anxiously it's easy to see that Dan wants to be outside doing something[end if]. As strong and muscular as he is you have to wonder how much the virus has enhanced what the iguana had already had developed from his Academy training. Toned and limber with green and black scales shimmering in the light of the[if daytimer is day]sun shining in from the patio window[else]lights from the solar powered glow lamps surrounding the condo along with the waning moon light from outside[end if] Dan is quite a handsome specimen to behold. The sight of the naked reptile's genital slit leaking precum down his thighs makes for an interesting spectacle and mildly you wonder how Greg keeps his claws off of the other.".
 The conversation of Dan is { "Let's Do It!" }.
@@ -78,6 +82,10 @@ Instead of fucking the Dan:
 
 
 Section 3 - Greg
+
+Table of GameCharacterIDs (continued)
+object	name
+Greg	"Greg"
 
 Greg is a man.
 The description of Greg is "The taller and more powerfully built raptor/komodo dragon hybrid grunts while trying to find a warm patch of heat to rest in. Given that his much bigger build probably requires the necessary heat since he's gone from mammalian to reptilian the orange and yellow mottled scalie does everything in his power to try and stay warm[if the daytimer is day]. With the sun out it's much easier for Greg to lounge while reading a book as he keeps an eye out on Dan[else]. Without the sun the raptor hybrid has little choice save to wrap himself up with a large and fluffy comforter as he tries to conserve body heat[end if]. The older man's tail lashes beside him somewhat jubilantly as the raptor hisses while flicking his long tongue out to catch the scent of his boyfriend. Dan often comes over to help keep the older man warm by cuddling and nuzzling into Greg's scaly form. It's somewhat plain to see that the two would probably be mating if you weren't here right now as Greg's genital slit is almost drooling down in between his legs.".

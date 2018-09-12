@@ -32,17 +32,21 @@ Instead of resolving a Captured Bird:
 					say "     With an unearthly grace, the phoenix turns about to face you as it hovers. You are scared you'll receive the same treatment as the cat, but the bird's eyes shine with intelligence. It nods its head to you, then takes back to the air, the fire fading quickly after that outburst. You are left with a sense of awe and wonder at the majesty of the creature you helped save.";
 					increase score by 15;
 					now HP of Athanasia is 1;
-					if guy is not banned, now FireAndIce is unresolved;
+					if guy is not banned, now FireAndIce is active;
+					now Resolution of Captured Bird is 1;	[Saved phoenix]
 		if fightoutcome >= 20 and fightoutcome <= 29:			[lost]
 			say "     Keeping you pinned down, the feline enjoys having some fun with you as the others from her group return. They come with buckets of water, tossing them onto the flaming bird until her fires go out and she's left ashen and shivering in the remains of the net. The panther taurs give some celebratory yells, kisses and gropes before, as a team, dragging off their captured prey in the damaged net. The soaked bird shivers, but does not struggle as it's taken away to meet its fate.";
+			now Resolution of Captured Bird is 2;	[Did not save phoenix]
 		if fightoutcome >= 30:							[fled]
 			say "     You manage to make your escape from the felines, leaving them to their original prize. Hearing some of the others returning, you don't stick around to see what's happening and just try and get more distance between you and the lustful predators.";
+			now Resolution of Captured Bird is 3;	[Ran from trying to save phoenix]
 	else:
 		say "     Figuring that it's not your problem, you slip back the way you came, leaving the cats to their grisly barbecue.";
+		now Resolution of Captured Bird is 99;	[Did not try to save phoenix]
 	now Captured Bird is resolved;
 
 
-FireAndIce is a situation. It is resolved. The level of FireAndIce is 6.
+FireAndIce is a situation. It is inactive. The level of FireAndIce is 6.
 
 instead of resolving FireAndIce:
 	project figure of Reindeer_icon;
@@ -79,8 +83,8 @@ the phoenix egg has a truth state called shownermine. shownermine of phoenix egg
 [other show scenes could be created for other NPCs whom the player might show it to]
 
 instead of conversing the Nermine while phoenix egg is owned and shownermine of phoenix egg is false:
-	say "     Pulling out the phoenix egg, you put in on the counter in the hopes that Nermine's expertise may be of use. She remains her normal demeanor, but her golden eyes lock onto it with a hungry greed you've not seen from her before. 'Is that pretty egg for trading with Nermine? Is nothing special... but maybe Nermine can be giving you a small trinket for it,' she says with an alluring smile. You shake your head, telling her you're just looking for information. 'It is phoenix egg, but I am seeing you are knowing that. Nermine live long time, but egg would help her live even longer still,' she says softly. 'Nermine would be trading you...' she starts to say. Catching her tongue slipping across her lips as she eyes the golden egg with a hunger beyond simple greed, you snatch it from the counter and slide it back into your pack.";
-	say "     The jackal woman is clearly disappointed as you take the object of her hunger away. 'Fine! I am telling you this much because I am being nice. Phoenix egg is normally hatching shortly after phoenix is burning to ashes. If not hatched yet, phoenix is weak and needing great heat to be regaining power. It is bird of fire, of sun. Powerful heat is being needed to restore it. Sounds like too much trouble for you. Nermine could be taking care of that for you,' she says, that hungry look in her eye again. You clutch your pack tightly and step back. It's clear you won't be able to trust Nermine on this matter and decide not to mention it to her again.";
+	say "     Pulling out the phoenix egg, you put in on the counter in the hopes that Nermine's expertise may be of use. She remains her normal demeanor, but her golden eyes lock onto it with a hungry greed you've not seen from her before. 'Does the dear visitor want to trade this pretty egg with Nermine? It sadly is nothing special... but maybe Nermine can part with a small trinket for it,' she says with an alluring smile. You shake your head, telling her you're just looking for information. 'It is a phoenix egg, but the jackaless sees that her visitor knows this already. Nermine has been alive for a long time, and the egg would help her live even longer still,' she says softly. 'Nermine would be trading...' she starts to say. Catching her tongue slipping across her lips as she eyes the golden egg with a hunger beyond simple greed, you snatch it from the counter and slide it back into your pack.";
+	say "     The jackal woman is clearly disappointed as you take the object of her hunger away. 'Fine! Keep it then. But Nermine will share some knowledge nonetheless, as not to be called a poor host. Phoenix eggs normally hatch shortly after the phoenix burns to ashes. If it has not yet hatched, the phoenix is weak and needs great heat to regain its power. It is a bird of fire, of the sun. Powerful heat is being needed to restore it. Surely supplying this would be much trouble for the dear visitor. Nermine could be taking care of that instead,' she says, that hungry look in her eye again. You clutch your pack tightly and step back. It's clear you won't be able to trust Nermine on this matter and decide not to mention it to her again.";
 	now shownermine of phoenix egg is true;
 
 
@@ -135,6 +139,10 @@ an everyturn rule:
 
 
 Section 4 - Athanasia
+
+Table of GameCharacterIDs (continued)
+object	name
+Athanasia	"Athanasia"
 
 Athanasia is a woman.
 The description of Athanasia is "[athanasiadesc]".
@@ -464,7 +472,7 @@ to say salamanderraid:
 		say "     Beaten and abused by the victorious salamanders, you're dragged off by them as another prize as they escape the furious phoenix. In her desire to protect her nest, she must not notice you gone until it's far too late. You end up dragged back to the ruins where this group is nesting. There, you're fucked and molested until there's nothing left of you but another horny salamander.";
 		now humanity of player is 0;
 		setmonster "Salamander";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now tailname of player is "Salamander";
 		now facename of player is "Salamander";
 		now skinname of player is "Salamander";
@@ -499,12 +507,12 @@ Section 7 - Gender Shifting
 
 to athanasiasexchange:
 	[puts Snow Leopard as lead monster for gender change (appropriate size)]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Snow Leopard":
 			now monster is y;
 			break;
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 		if cunt length of player < cunt length entry and scenario is not "Researcher", follow the sex change rule;

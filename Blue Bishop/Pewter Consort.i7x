@@ -30,7 +30,7 @@ when play begins:
 	add { "Pewter Consort" } to infections of Tailweapon;
 
 to say pewterdesc:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Female Preferred" is listed in feats of player:
@@ -120,8 +120,8 @@ pewtertorsosuppress is a truth state that varies.
 to pewterbind:
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		now boundstate is true;
 		if HP of player > 0 or humanity of player < 50:
 			now obliging is true;
@@ -166,8 +166,8 @@ to pewterbind:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Struggle: [bracket]-[if struggleatt > 1][bold type]X[roman type][else]-[end if][if struggleatt > 0][bold type]X[roman type][else]-[end if][close bracket][line break][run paragraph on]";
 		if humanity of player < 1:
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Pewter Consort":
 					now monster is y;
 					break;
@@ -181,7 +181,7 @@ to pewterbind:
 			now skin of player is skin entry;
 			now body of player is body entry;
 			now cock of player is cock entry;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "You lost your mind while bound!";
 		else:
 			let k be 0;
@@ -208,7 +208,7 @@ to pewterbind:
 				else:
 					say "     You finally manage to pull yourself free and climb out of the pool. Crawling away and catching your breath, the lot of them appear too preoccupied with attending to each other to pursue you, allowing you to gather your things strewn about and get some additional distance. Eventually, you recover enough from the messy and exhausting ordeal to go about your business once more.";
 					cleanboundmemory;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					follow the turnpass rule;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
@@ -685,12 +685,12 @@ to say pewtercharacterassess:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Pewter Consort";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -738,8 +738,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;
+	now DayCycle entry is 0;
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 to say consortfacechange:
 	if consortinsight is 0:

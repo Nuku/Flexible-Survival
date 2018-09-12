@@ -28,8 +28,8 @@ to say losetocentaurmare:
 		say "     Not seeing what she wants, the centaur mare knocks you roughly to the ground and cuffs you hard on the side of the head, ordering you to get licking. And with that, she turns around and flicks her tail aside, giving you a clear view of her dripping, winking, equine cunt. Unable to help yourself, you dive forward and press your face to her juicy folds, lapping at them as her aroused juices flow down your face. She whinnies and moans in pleasure as you eat her out, the scent of her heat driving you wild. The scent is so strong that you can't help but pleasure yourself as well[if player is female]stuffing several fingers into your cunt[sfn][else]groping any sensitive or erogenous zone your neutered body still has[end if]. Eventually, you become so distracted by your arousal that you quickly neglect her pussy entirely in your lustful daze. Snorting at the disappointingly short licking, she gives you a violent kick to your gut and gallops off while you're stunned.";
 	decrease HP of player by 10;
 	if "Male Preferred" is listed in feats of player and guy is not banned:		[change target to Stallion for infection]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Centaur Stallion":
 				now monster is y;
 				break;
@@ -57,12 +57,12 @@ to say CentaurMareWomb:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Centaur Mare";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -110,8 +110,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hoofstomp"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Section 3 - Endings
 

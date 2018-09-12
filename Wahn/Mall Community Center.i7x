@@ -28,7 +28,7 @@ The sarea of Free Handouts is "Smith Haven".
 Instead of resolving a Free Handouts:
 	FreeHandoutsEvent;
 
-after going to Mall West Wing while (Free Handouts is not resolved):
+after going to Mall West Wing while (Free Handouts is active and Free Handouts is not resolved):
 	FreeHandoutsEvent;
 
 to FreeHandoutsEvent:
@@ -51,6 +51,10 @@ to say HavenCCRoomDesc:
 	say "     The Haven Community Center fills the rooms of a former travel agency, its original purpose still recognizable by the many large and colorful pictures of tropical beaches, serene mountains, and vibrant cities. Yet where travel agents once sold their customers expensive trips all over the world, there are now groups of people, hanging out together, chatting, playing games, and also organizing supplies. One corner of the large office floor is sectioned off with a couple sheets, a sign reading 'Clinic' hung up next to it. Towards the north, you can see an open door with a sign on the wall that says, 'Accounting'. A large goo-person stands in it, blocking the way to a room beyond. Others of the aquanarine humanoids from time to time walk right through him, coming out to have a quiet word with one of the antelope sisters before returning into the back room. All of the goo people keep a respectful distance from anyone else in the center and even retreat when approached.";
 
 Section 3 - Florence
+
+Table of GameCharacterIDs (continued)
+object	name
+Florence	"Florence"
 
 Florence is a woman. Florence is in Haven Community Center.
 The description of Florence is "[FlorenceDesc]".
@@ -148,13 +152,9 @@ to FlorenceTalkMenu:
 					say "[FlorenceTalk_ClinicVolunteer]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the petite antelope, shaking your head slightly as she gives you a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the petite antelope, shaking your head slightly as she gives you a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

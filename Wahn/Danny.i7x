@@ -26,6 +26,10 @@ Version 1 of Danny by Wahn begins here.
 
 Section 1 - Description
 
+Table of GameCharacterIDs (continued)
+object	name
+Danny	"Danny"
+
 Danny is a man. The HP of Danny is usually 0. Danny is in Mall Foodcourt.
 The icon of Danny is Figure of Danny_clothed_icon.
 The description of Danny is "[DannyDesc]".
@@ -87,13 +91,9 @@ to say DannyTalkMenu:
 					say "[DannyTalk2]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the young mall rat, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the young mall rat, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -294,7 +294,7 @@ to say DannySexMenu:
 	setmonster "Mall Rat";
 	project the figure of Danny_naked_icon;
 	say "     What do you want to do with the young adult mall rat?";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -369,13 +369,9 @@ to say DannySexMenu:
 					say "[DannySex7]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the mall rat, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the mall rat, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

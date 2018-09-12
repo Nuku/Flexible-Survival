@@ -9,6 +9,10 @@ ZekeRelationship is a number that varies. ZekeRelationship is usually 0.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Zeke	"Zeke"
+
 Zeke is a man. The hp of Zeke is usually 0.
 The description of Zeke is "[ZekeDesc]".
 The conversation of Zeke is { "<This is nothing but a placeholder!>" }.
@@ -78,13 +82,9 @@ to say ZekeTalkMenu:
 					say "[ZekeTalk3]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the Zeke, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the Zeke, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -195,13 +195,9 @@ to say ZekeSexMenu1: [Cooperative]
 					say "[ZekeSex3]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the fox, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the fox, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -251,13 +247,9 @@ to say ZekeSexMenu2: [Domming Zeke]
 					say "[ZekeSex6]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -298,13 +290,9 @@ to say ZekeSexMenu3: [Dommed by Zeke]
 					say "[ZekeSex8]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

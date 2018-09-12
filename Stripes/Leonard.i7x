@@ -1,5 +1,6 @@
 Version 4 of Leonard by Stripes begins here.
 [Version 4.1.1 - description tweaks]
+[Note: not Resolution flagged yet - use existing variables for now]
 
 "Adds a Male Feline NPC named Leonard to the Flexible Survival game"
 
@@ -18,7 +19,7 @@ Instead of resolving a Feline Friend:
 	say "     Uncertain, you are about to leave when you hear the howl of those wolves, closer than before, you hesitate again. A leonine figure steps from the cave, motioning quickly for you to come inside. He does not seem aggressive and still has a suit coat on, though his lower body is unclothed. 'Quick! They'll not be able to notice your scent over mine and they don't dare come here.' Deciding to risk it, you enter the cave.";
 	now Lion's Den is known;
 	move player to Lion's Den;
-	Now Feline Friend is resolved;
+	now Feline Friend is resolved;
 	now battleground is "void";
 
 
@@ -35,6 +36,10 @@ to say lionsdendesc:
 
 
 Section 2 - Leonard the Lion
+
+Table of GameCharacterIDs (continued)
+object	name
+Leonard	"Leonard"
 
 Leonard is a man. Leonard is in Lion's Den.
 The description of Leonard is "[Leonarddesc]".
@@ -74,8 +79,8 @@ Instead of conversing the Leonard:
 	else if HP of Leonard is 4:
 		say "     The handsome lion moves up beside you, holding you close as he runs a paw over your [if player is female]breast[else]ass[end if], making you moan softly. 'I have a small favor I'd like to ask of you, my dear[if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist] kitty[end if]. The other girls have been so helpful in trying to help make my meager accommodations somewhat more suitable, but I have found myself needing something to occupy my time.' He nuzzles at your neck and slides a finger between your legs. 'When I'm not taking care of my lovely kitties and their needs, that is,' he amends, purring in your ear.";
 		say "     'I used to be an accomplished violinist in my old life, but had to set my practicing aside to deal with other obligations,' he says with remorse. 'But I have found myself thinking that it would be a fine hobby for a proper gentlelion such as myself.' Running his paws over your hips, he continues. 'Would you not like to hear me play, my dear?' You mewl in response to his touch and nod in agreement, longing to hear the handsome lion play something just for you. 'Unfortunately, I have no violin to play. Perhaps one could be found in the city though,' he rumbles thoughtfully. Finding yourself eager to please the handsome male, you quickly promise him that you'll find one for him, not even pausing to consider the matter. He smiles and caresses your cheek. 'Oh, you are such a kind and thoughtful [if bodyname of player is listed in infections of Felinelist or facename of player is listed in infections of Felinelist]kitty[else]lover[end if] to offer doing that for me.' He runs his other paw across your thigh, giving a light squeeze. 'I would be most grateful if you were to bring me one.'";
-		now Music Store is unresolved;
-		now Concert Hall is unresolved;
+		now Music Store is active;
+		now Concert Hall is active;
 		now HP of Leonard is 5;
 	else if HP of Leonard is 5 and violin is not owned:
 		if a random chance of 2 in 5 succeeds:
@@ -171,7 +176,7 @@ Instead of conversing the Leonard:
 		say "     Leonard smiles and gives you another kiss. 'I knew I could count on you, my brave hunter. Now, go out into the park and search for these [bold type]hunting prides[roman type],' he says with confidence. 'I must prepare to deal with these feral upstarts for harassing my lovely girls.' He gets up out of the chair, and you are again reminded of how regal and impressive the handsome lion is. Driven by his words to action, you leave the lion's den, heading back out into the park.";
 		move player to Park Trail;
 		now HP of Leonard is 10;
-		now Hunting Prides is unresolved;
+		now Hunting Prides is active;
 	else if ( HP of Leonard >= 10 and HP of Leonard <= 15 ) or HP of Leonard is 100:
 		say "ERROR-Leonard-[HP of Leonard]C: You should not be able to talk to me!";
 	else if HP of Leonard >= 16:
@@ -635,7 +640,7 @@ Part 1 - Music Store		[perhaps add another instrument for a bunker NPC]
 
 Music Store is a situation. The level of Music Store is 2.
 The sarea of Music Store is "Outside".
-Music Store is resolved.
+Music Store is inactive.
 violinspritefight is a truth state that varies.
 
 Instead of resolving Music Store:
@@ -671,7 +676,7 @@ Part 2 - Concert Hall
 
 Concert Hall is a situation. The level of Concert Hall is 4.
 The sarea of Concert Hall is "High".
-Concert Hall is resolved.
+Concert Hall is inactive.
 
 Instead of resolving Concert Hall:
 	now fightstatus is 0;
@@ -687,10 +692,10 @@ Instead of resolving Concert Hall:
 	else:
 		say "     You make your way through the backstage area to the orchestra pit. As you're about to start searching through it, you notice a cute bunny head poke out from behind the curtain. But even as you're trying to decide how to peacefully introduce yourself, there appears another bunny elsewhere, and then another and another still, more and more bunnies moving in to surround you despite no alarm having been raised.";
 		now fightstatus is 3;
-		challenge "Rabbit";
+		challenge "Anthro Rabbit";
 		if fightstatus is 1:
 			now fightstatus is 3;
-			challenge "Rabbit";
+			challenge "Anthro Rabbit";
 			if fightstatus is 1:
 				say "     Having beaten the large group of bizarre bunnies and driven them back, you start searching the orchestra pit for a violin. Thankfully the instruments are actually in the pit and do not appear to have been damaged by the creatures. If anything, it seems like they have been well maintained. Perhaps those teams of bunnies have been playing them? It takes some fumbling around to navigate through the camped space, but you eventually find the string section and locate the violins.";
 				say "     Hopeful that one of these will make a fine instrument for your handsome lion, you look them over. Not really a judge of quality, you take the violin from the stand labelled as '1st violin' in the hopes it will be the best of them all. Putting it in its case, you check the other cases and folders, taking sets of spare strings, bows and wax, as well as as much different sheet music as you can find. Spotting one of the bunnies watching you nervously from behind the curtain, you kindly decide to not just take it all. Certainly several replacements will be enough for Leonard for quite some time.";
@@ -707,47 +712,12 @@ Instead of resolving Concert Hall:
 			say "you gain more cocks, more pussies, more breasts, more arms and legs as well? Even more heads? Things grow hazy as your mind struggles to understand what it happening to you, your body splitting and forming new, independent copies of itself. At first, it is all very confusing, the last shreds of your old mind trying to believe that you are still one united whole with several additional limbs and genitalia, but eventually clarity sets in as you understand you are simply many, each body singularly either male or female.";
 		say "     You become like the other rabbits living here, several who are one. In truth, there are only a few individuals living here, but each having several bodies all with one same mind. You are welcomed into the group, joining their orchestra as you and your several bodies learn to play from the others. And outside of practice comes the pleasure of lustful sex shared with so many bodies, so many lovers, all at once.";
 		now humanity of player is 0;
-		[puts Rabbit Pack as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Rabbit":
-				now monster is y;
-				break;
-		now tailname of player is "Rabbit";
-		now facename of player is "Rabbit";
-		now skinname of player is "Rabbit";
-		now bodyname of player is "Rabbit";
-		now cockname of player is "Rabbit";
-		attributeinfect;
-		now tail of player is tail entry;
-		now face of player is face entry;
-		now skin of player is skin entry;
-		now body of player is body entry;
-		now cock of player is cock entry;
-		if "Male Preferred" is listed in feats of player:
-			now cunts of player is 0;
-			now cunt length of player is 0;
-			now cunt width of player is 0;
-			now breasts of player is 0;
-			now breast size of player is 0;
-		else:
-			if cunts of player < 5, now cunts of player is 5;
-			if cunt length of player < 4, now cunt length of player is 4;
-			if cunt width of player < 4, now cunt width of player is 4;
-			if breasts of player < 10, now breasts of player is 10;
-			if breast size of player < 3, now breast size of player is 3;
-		if "Female Preferred" is listed in feats of player:
-			now cocks of player is 0;
-			now cock length of player is 0;
-			now cock width of player is 0;
-		else:
-			if cocks of player < 5, now cocks of player is 5;
-			if cock length of player < 4, now cock length of player is 4;
-			if cock width of player < 4, now cock width of player is 4;
-		if libido of player < 10, now libido of player is 10;
-		wait for any key;
-		end the story saying "Your mind has been subsumed into your new bunny pack, a life of music and lust in your new warren.";
-		now battleground is "void";
+		now tailname of player is "Anthro Rabbit";
+		now facename of player is "Anthro Rabbit";
+		now skinname of player is "Anthro Rabbit";
+		now bodyname of player is "Anthro Rabbit";
+		now cockname of player is "Anthro Rabbit";
+		end the story saying "Your mind has been subsumed by that of an anthro rabbit, to go off for a life of music and lust in your new warren.";
 		wait for any key;
 		follow the turnpass rule;
 		stop the action;
@@ -785,7 +755,7 @@ instead of navigating Lion's Den while HP of Leonard >= 10 and HP of Leonard <= 
 
 Hunting Prides is a situation. The level of Hunting Prides is 8.
 The sarea of Hunting Prides is "Park".
-Hunting Prides is resolved.
+Hunting Prides is inactive.
 
 Instead of resolving Hunting Prides:
 	now fightoutcome is 100;
@@ -845,8 +815,8 @@ Instead of resolving Hunting Prides:
 		now humanity of player is 0;
 		now feline_pride_defeat is true;
 		[puts Feline as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Feline":
 				now monster is y;
 				break;
@@ -927,8 +897,8 @@ to say Leonardrivalfight:
 		say "     You and Leonard have a delightful time making increasingly subservient kitties out of the once strong and virile males. This orgy and training session doesn't end until you and they have all been filled until bloated with the handsome lion's semen and he's fully spent in a way he hasn't been since the recital. The nine of you, your trio of girls and their new dark-haired member having joined you at some point later on, curl up to rest together on and beside the large bed in a warm bundle of feline happiness and briefly sated lust.[impregchance][impregchance]";
 		decrease humanity of player by 25;
 		[puts Feline as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Feline":
 				now monster is y;
 				break;
@@ -970,7 +940,7 @@ to say Leonardrivalfight:
 		else:
 			now HP of Leonard is 16;
 			now feline_attached is 0;
-			now PridePark is unresolved;
+			now PridePark is active;
 			now lastdenevent is turns;
 			move player to Lion's Den;
 			follow the turnpass rule;
@@ -987,8 +957,8 @@ to say Leonardrivalfight:
 		now humanity of player is 0;
 		now HP of Leonard is 100;
 		[puts Feline as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Feline":
 				now monster is y;
 				break;

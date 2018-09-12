@@ -20,7 +20,7 @@ Instead of resolving a Hidden Kitty:
 	now Sven's Place is known;
 	now battleground is "void";
 	increase score by 5;
-	Now Hidden Kitty is resolved;
+	now Hidden Kitty is resolved;
 
 Sven's Place is a room. It is fasttravel. It is private.
 The description of Sven's Place is "[SvenPlaceDesc]".
@@ -40,7 +40,11 @@ to say SvenPlaceDesc:
 
 Section 2 - Sven the Snowmeow
 
-Sven is a man. Sven is in Sven's Place. The HP of Sven is usually 0.
+Table of GameCharacterIDs (continued)
+object	name
+Sven	"Sven"
+
+Sven is a man. Sven is in Sven's Place. The HP of Sven is normally 0.
 The description of Sven is "[SvenDesc]".
 The conversation of Sven is { "Mew!" }.
 lastSvendrink is a number that varies. lastSvendrink is usually 555.
@@ -342,8 +346,8 @@ the fuckscene of Sven is "[SexWithSven]".
 
 to say SexWithSven:
 	[puts Snow Leopard as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Snow Leopard":
 			now monster is y;
 			break;
@@ -812,6 +816,10 @@ to say ConfidentSvenSex05:	[Blow job]
 	say "     Eventually, when Sven's cum-shots have ebbed off and no stimulation of his prostate can milk any more out of his long cock, you pull off him with a half-full mouth of feline seed that you purposefully didn't swallow. The purring student finds himself pulled close to you as you stand up, then gets a taste of his own load in an eagerly accepted bout of making out. Sven purrs loudly in your arms as your tongues wrestle back and forth, spreading a snowball of cum and spit between the two of you. Eventually, you pull apart and quickly swallow so both of you can pant for breath. Smiling, your friend tells you, 'Wow, that was... just wow.' He purrs loudly as he gives you a tight hug, then stumbles over to the closest bed and throws himself on it to recover his energy.";
 
 Section 4 - Svetlana
+
+Table of GameCharacterIDs (continued)
+object	name
+Svetlana	"Svetlana"
 
 Svetlana is a woman. The description of Svetlana is "[SvetlanaDesc]".
 The conversation of Svetlana is { "Mew!" }.

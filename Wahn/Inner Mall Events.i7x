@@ -82,19 +82,24 @@ Instead of resolving a Dressing Room Rampage:
 			WaitLineBreak;
 			say "     After you introduce yourself[if player is not defaultnamed] as [name of player][end if], the three of you chat a little while longer until Mark grows soft enough that his dick slips out of his lover all on its own. What doesn't come out though is cum, as all of it is apparently so deeply planted into the elven bottom that there is no danger of leakage from his tight behind. The two of them start picking up clothes to get dressed again, which actually is a bit of a difficult task with all three of you in the small dressing room. After bumping into each other a few times, you are actually allowed to go first at getting dressed, so you can step out and give them a bit more space. As you are about to pull the curtain shut behind yourself, Mark gives you an eager grin, while Jay cheerfully calls out, 'Have a nice day. Hope to see you again sometime [mister].'";
 			now JayMarkRelationship is 3; [fucked around with the two of them, player knows the names]
+			now Resolution of Dressing Room Rampage is 1; [fucked around in the dressing room]
 		else:
 			LineBreak;
 			say "     Face burning in embarrassment, you murmur an apology and step back, drawing the curtain closed again. The sounds of sex from the other side continue without even a hint of an interruption. Shrugging, you turn around, quietly leaving the store again. The rest of your current trip through the building doesn't reveal any particularly interesting situations, so you eventually end up where you started.";
 			now JayMarkRelationship is 1; [saw the two of them]
+			now Resolution of Dressing Room Rampage is 2; [saw them naked in the dressing room]
 	else:
 		LineBreak;
 		say "     The men in the dressing booth seem to be making the best of the whole refugee situation in the mall right now. You wish them well in your mind and turn around, quietly leaving the store again. Moving on, you follow one side of the mall wing, checking out some of the former businesses to pass the time. As you make your way forward, you eventually double back on the other side of the wide mall hallway, and fate leads you past the very store where you heard the commotion from the dressing room just as what must have been the participants walk out of it. Visually, the gay couple couldn't be more different: a towering polar bear in a checkered flannel shirt and jeans, accompanied by what is clearly a Christmas elf, complete with the stereotypical red and green outfit and sharply pointed ears that stick out through the long brown hair cascading over his shoulders.";
 		say "     Yet the fact that one of them is only half as tall as the other doesn't stop them from being together, as evident by their very open affection for one another. Patting the thick and sturdy ursine leg beside him, the elf calls out, 'How about a goodbye kiss, big guy?' With a grin, the large anthro bear picks his boyfriend up for a deep and hungry kiss. Arms wrapped partially around the much bigger man's broad chest, the elf tells him, 'Be careful out there. You may be my big, strong bear now, but I worry sometimes.' With a consoling grunt, his ursine partner replies, 'Of course, hon. Nothing will keep me from coming back to you.' Following another kiss between them, the big polar bear sets his lover down, then walks off towards the mall entrance. Looking after him, you manage to lose track of his diminutive partner. Being only about four feet tall, he is quite easy to lose in the crowds of people populating the mall.";
 		now JayMarkRelationship is 1; [saw the two of them]
-	now Elven Issues is not resolved;
+		now Resolution of Dressing Room Rampage is 3; [saw them outside the dressing room]
+	add "Tag: Met Jay&Mark" to Traits of player;
 	now Dressing Room Rampage is resolved;
 
-Elven Issues is a situation. Elven Issues is resolved.
+Elven Issues is a situation.
+The Prereq1 of Elven Issues is Dressing Room Rampage.
+The Prereq1Resolution of Elven Issues is { 1, 2, 3 }.
 The sarea of Elven Issues is "Smith Haven".
 
 Instead of resolving a Elven Issues:
@@ -108,13 +113,16 @@ Instead of resolving a Elven Issues:
 		project the figure of Jay_elf_outfit_icon;
 		say "     Holding out your foot at just the right moment, you pull the legs out under the thieving marsupial, sending her to fall flat on her face. The four foot tall elf chasing after her calls out in vindication, rushing to stand over the kangaroo with his arms crossed in front of his chest. 'Just because I'm small doesn't mean you can just take whatever you want. Give it back.' Looking up defiantly, she doesn't reply for a long moment. [if JayMarkRelationship is 3]Jay[else]The elf[end if] suddenly grabs a handful of hair, pulling her head up sharply. He meets the woman's eyes with a steely gaze and says in a low tone, 'I am not some weak little victim, stupid bitch. Now give it back, or I'll tell the wolverines all about a certain petty thief disturbing the peace. You'll be out on the street before you know it.' With a growl under her breath, the kangaroo reaches into her pouch, pulling out a thin leather strap tied into a loop. A heavy gold ring dangles from it, clearly belonging to a man. Pulling the band over his head and stuffing the ring under his clothing to let the ring dangle over his breastbone, Jay takes a deep breath and lets it out slowly.";
 		say "     After that, he hisses to the kangaroo, 'Get out of here, and I better not see you causing trouble again.' After pushing herself up to stand, the woman runs off without looking back. As soon as she is gone, the diminutive man turns to you and says, [if JayMarkRelationship is 1]'Thank you, [mister]. I'm Jay, by the way. It's a pleasure to meet you.' [else]'Thank you, [mister].' [end if]You introduce yourself [if player is not defaultnamed]as [name of player][else]in turn[end if] and nod for him to continue. 'I don't have much left from my life before. This was one of the commitment rings I got for myself and Mark. It doesn't even fit me anymore like this, and he's the provider now, but one should always remember where you come from.' With the way he says this, you sense that he has accepted his new self, but he clearly still gets frustrated when bigger people pick on him. Reaching out, the elf shakes your hand and smiles, then adds, 'I'll make sure to return the favor sometime. For now, I need to head to the entrance court to meet up with Mark. Since I can't exactly help him scavenge out there, the least I can do is give him a warm welcome when he returns.' With that said, he ducks into the crowd and is gone a moment later.";
-		now Mark's Dinner Invite is not resolved;
+		now Resolution of Elven Issues is 1; [helped Jay]
 	else:
 		LineBreak;
 		say "     Just after the kangaroo rushes past you, a whole crowd of mall rats rushes out of a video game store, swamping the hallway completely. This stops [if JayMarkRelationship is 3]Jay's[else]the elf's[end if] pursuit cold, preventing him from following the thief any further. By the time the crowd disperses enough for the elf to continue on, the kangaroo is gone without a trace. The slender male pulls himself to his full four foot height and puts his hands on his hips, staring at the people ahead and giving a deep sigh. 'Well, fuck!' he grumbles, then whirls around and stalks off, back the way he came. In his huff, he doesn't even notice you as he dashes past.";
+		now Resolution of Elven Issues is 2; [didn't help Jay]
 	now Elven Issues is resolved;
 
-Mark's Dinner Invite is a situation. Mark's Dinner Invite is resolved.
+Mark's Dinner Invite is a situation.
+The Prereq1 of Mark's Dinner Invite is Elven Issues.
+The Prereq1Resolution of Mark's Dinner Invite is { 1 }. [must have helped Jay]
 The sarea of Mark's Dinner Invite is "Smith Haven".
 
 Instead of resolving a Mark's Dinner Invite:
@@ -186,30 +194,26 @@ to say SizeEnvyMenu:
 					say "[SizeEnvy_Compete]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the group of young men and simply walk out of their temporary home.";
-				now SizeEnvyTracker is 100; [just left]
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the group of young men and simply walk out of their temporary home.";
+			now SizeEnvyTracker is 100; [just left]
+			now Resolution of Size Envy is 7; [left]
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 	now Size Envy is resolved;
 	if MiltonRelationship < 1:
 		now MiltonRelationship is 1; [player knows his name at least]
-	now Standard Maintenance is not resolved;
 	if AxelRelationship < 1:
 		now AxelRelationship is 1; [player knows his name at least]
-	now Donkey Chat is not resolved;
 
 to say SizeEnvy_Observe:
 	say "     Quietly strolling closer, you lean against a nearby wall from where you have a good view of the four young men.";
 	say "[SizeEnvy_Strip]";
 	WaitLineBreak;
 	say "     'Okay, I win. Pay up, guys. Much as I'd love to offer you a chance at having a rub and seeing it in action, we've got some company and don't want to escalate things here, do we?' Nicholas nods in your direction, making the other guys aware of your presence, quickly shoving their dicks back into their pants with startled expressions. Except Milton, that is - he just opens a little pressure valve on his clockwork body, and with a little hiss, the shaft of his brass cock shrinks to its original size. Their mall rat friend stays fully naked from the hips down while the guys go grab the water bottles they lost and hand them over, only then going to collect his pants and putting them back on. With a grin to you, he puts them in a backpack, then tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
+	now Resolution of Size Envy is 1; [watched]
 	now SizeEnvyTracker is 99; [player watched - no interaction]
 
 to say SizeEnvy_Strip:
@@ -244,7 +248,8 @@ to say SizeEnvy_BJ:
 	else:
 		now SizeEnvyTracker is 1; [player gave a BJ to the guys - as a woman]
 		now AxelRelationship is 3;
-	now Donkey Needs is not resolved; [Axel got a BJ and wants more]
+	now Resolution of Size Envy is 2; [gave out BJs]
+	now Donkey Needs is active;
 
 to say SizeEnvy_Compete:
 	say "     Quietly strolling closer, you lean against a nearby wall from where you have a good view of the four young men, then clear your throat. Rob, Axel and Milton are a bit startled as they see you, while Nicholas clearly was already aware of your presence. 'Yeah? What do you want?' he asks, a slight smile on his muzzle as he clearly expects a good answer. When you introduce yourself[if player is not defaultnamed] as [name of player][end if] and pull out a bottle of water from your pack, they look surprised at the sudden intrusion into their group and competition. There is a bit of murmuring from the donkey and clockwork fox, but Nicholas pushes that out of the way by introducing each of his friends in turn and giving you the go-ahead to join in. With a grin on your face, you move right up to them, eager to participate.";
@@ -257,6 +262,7 @@ to say SizeEnvy_Compete:
 		say "[bold type]You gain 4 water bottles![roman type][line break]";
 		increase carried of water bottle by 4;
 		now SizeEnvyTracker is 50; [player competed - won]
+		now Resolution of Size Envy is 3; [competed - 1st]
 	else if cock length of player is 15: [evenly matched]
 		say "     With a confident grin on your face, you pull out your own [cock of player] manhood, jerking its length before the gathered friends. 'Fucking hell,' Rob groans as he sees what you bring to the competition, and even Nicholas gives you a respectful nod after he measures your erection. '[cock length of player] inches, I'm impressed. Guess we're evenly matched, so let's split. You keep your stake and get one more, I'll take the rest. Okay guys, time to pay up.' Rob and Axel quickly shove their dicks back into their pants with startled expressions, then walk off to get your payment. Meanwhile, Milton just opens a little pressure valve on his clockwork body, allowing the shaft of his brass cock to shrink to its original size with a soft hiss, then also goes to get a water bottle from his pack.";
 		say "     Their mall rat friend stays fully naked from the hips down, stroking himself gently before leaning a bit closer to you and whispering, 'This never was about the water. I don't begrudge you half the pot. And thanks for showing your piece. It's a good one.' As the others start to come back, Nicholas winks at you, then grabs his own pants and pulls a bottle from one of the many pockets on it, handing it to you. One by one, the remaining young men give him their bottles, leaving him with a nice armful of pure water bottles. After stuffing them into his backpack, the mall rat tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
@@ -264,6 +270,7 @@ to say SizeEnvy_Compete:
 		say "[bold type]You gain 1 water bottle![roman type][line break]";
 		increase carried of water bottle by 1;
 		now SizeEnvyTracker is 51; [player competed - draw]
+		now Resolution of Size Envy is 4; [competed - draw]
 	else if cock length of player > 8: [third place]
 		say "     Putting on a confident expression, you pull out your own [cock of player] manhood, jerking its length before the gathered friends. 'Fucking hell,' Rob groans as he sees what you bring to the competition, and even Nicholas gives you a respectful nod after he measures your erection. '[cock length of player] inches, not bad at all, but I still win. Okay guys, time to pay up.' Rob and Axel quickly shove their dicks back into their pants with startled expressions, then walk off to get your payment. Meanwhile, Milton just opens a little pressure valve on his clockwork body, allowing the shaft of his brass cock to shrink to its original size with a soft hiss, then also goes to get a water bottle from his pack.";
 		say "     Their mall rat friend stays fully naked from the hips down, stroking himself gently before leaning a bit closer to you and whispering, 'This never was about the water, to be honest. Thanks for showing your piece. It's a good one.' As the others start to come back, Nicholas winks at you, then accepts the stakes of each of his friends, and finally your own bet, leaving him with a nice armful of pure water bottles. After stuffing them into his backpack, the mall rat tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
@@ -271,6 +278,7 @@ to say SizeEnvy_Compete:
 		say "[bold type]You lose 1 water bottle![roman type][line break]";
 		decrease carried of water bottle by 1;
 		now SizeEnvyTracker is 52; [player competed - third place]
+		now Resolution of Size Envy is 5; [competed - 3rd]
 	else:
 		say "     Somewhat nervous about exposing yourself in what turned out to be a group of very big boys indeed, you pull out your own [cock of player] manhood, jerking its length before the gathered friends. 'Finally someone smal-' Rob starts to say, then clamps his hand in front of his mouth, getting red-faced. Nicholas simply gives you an encouraging smile and comes closer to measure your erection. '[cock length of player] inches, not bad at all, but that still leaves me the undisputed winner. Okay guys, time to pay up.' Rob and Axel quickly shove their dicks back into their pants with startled expressions, then walk off to get your payment. Meanwhile, Milton just opens a little pressure valve on his clockwork body, allowing the shaft of his brass cock to shrink to its original size with a soft hiss, then also goes to get a water bottle from his pack.";
 		say "     Their mall rat friend stays fully naked from the hips down, stroking himself gently before leaning a bit closer to you and whispering, 'This never was about the water, to be honest. Thanks for showing your piece too. No need to be self-conscious just because we're bigger. It all depends on how you use [']em, right?' As the others start to come back, Nicholas winks at you, then accepts the stakes of each of his friends, and finally your own bet, leaving him with a nice armful of pure water bottles. After stuffing them into his backpack, the mall rat tells his friends, 'Come on guys, let's hang in the atrium.' Just a moment later, they're gone, leaving you behind in the store.";
@@ -278,11 +286,13 @@ to say SizeEnvy_Compete:
 		say "[bold type]You lose 1 water bottle![roman type][line break]";
 		decrease carried of water bottle by 1;
 		now SizeEnvyTracker is 53; [player competed - third place]
+		now Resolution of Size Envy is 6; [competed - last]
 	now AxelRelationship is 2; [two sided introductions]
 	now MiltonRelationship is 2; [two sided introductions]
-	now Donkey Chat is not resolved;
 
-Standard Maintenance is a situation. Standard Maintenance is resolved.
+Standard Maintenance is a situation.
+The Prereq1 of Standard Maintenance is Size Envy.
+The Prereq1Resolution of Standard Maintenance is { 1, 2, 3, 4, 5, 6, 7 }.
 The sarea of Standard Maintenance is "Smith Haven".
 
 Instead of resolving a Standard Maintenance:
@@ -302,7 +312,8 @@ Instead of resolving a Standard Maintenance:
 		say "     You quietly watch him for a few seconds longer, then shrug and continue on your way. Eventually, you reach the point of the mall where you started your little exploration tour.";
 	now Standard Maintenance is resolved;
 
-Donkey Needs is a situation. Donkey Needs is resolved.
+Donkey Needs is a situation.
+Donkey Needs is inactive.
 The sarea of Donkey Needs is "Smith Haven".
 
 Instead of resolving a Donkey Needs:
@@ -372,9 +383,9 @@ to say AxelBJ:
 	say "     Arousal boiling in his veins, your eager partner can't help himself from scraping one hoof over the stone floor of the hallway, then stomping loudly as you reach his dickhead and engulf it with your lips. Sucking on the broad and flared tip smears the taste of Axel's pre-cum over your palate, delightfully rich and nutty. This leaves you eager for the main event too, so you inhale as much of that equine prick as you can until you feel it in the back of your throat. Waiting a few seconds to let Axel revel in the sensation of tightness, you slowly pull back off his dick to take a gasping breath and look up at him, strings of spit still connecting you to his cock. '[one of]Damn, that's so hot![or]Your throat feels so good![or]You look hot like that![or]Like that dick, eh?[at random] More please!' the donkey boy grunts out, placing a hand on your head to nudge you closer to his crotch.";
 	WaitLineBreak;
 	say "     Grinning at the eagerness of your equine partner, you set to work bobbing your mouth up and down on his shaft, slurping your tongue over his length as you go along. Especially some teasing touches of the flared rim and his cum-slit drive Axel wild, creating more noise with his hooves on the stone floor tiles. With the musky scent of this virile male thick in your nose and his hand now actively pushing you to go deeper when throating him, you kind of lose track of time, with nothing on your mind except servicing your partner's cock. After who knows how long, Axel lets out an urgent grunt of, '[one of]I'm gonna cuuuummmmMMMMMM![or]Gonna cream you, slut![or]Take my load, bitch![or]Take this, babe![or]Hope you're ready for this load![at random]' and starts blasting thick spurts of creamy equine seed into your mouth. The first jet flows directly into your stomach as he's lodged deep in your throat when his cock throbs hard. After another pulse or two, you pull yourself off his fire hose-like erection.";
-	say "     A fresh gush of cum squirts out and covers your tongue in an explosion of Axel's taste, eagerly lapped up and swallowed to make room for the next. Grunting and whinnying, your equine partner fills your mouth with a deluge of cum, almost adding it quicker than you can gulp it down. Soon, there is enough nut-milk in your stomach to be considered as a hearty meal, and you can't help but drool a little cum, unable to keep it all contained with your lips around Axel's shaft. Thankfully, this is about the time when he finally runs out of steam, so only a few drips and dollops of his cream land on the donkey boy's discarded jeans. '[one of]Fuck that was good![or]I'm totally fucked out![or]That was fricking awesome![or]Oh my god, you're a cum vampire![or]Holy shit, you're a keeper![at random]' Axel pants, so exhausted from the intense orgasm that he has to lean back against the wall to brace himself. Meanwhile, you pull off his cock and gulp down the extra mouthful of cum, then give your eager partner a grin.";
+	say "     A fresh gush of cum squirts out and covers your tongue in an explosion of Axel's taste, eagerly lapped up and swallowed to make room for the next. Grunting and whinnying, your equine partner fills your mouth with a deluge of cum, almost adding it quicker than you can gulp it down. Soon, there is enough nut-milk in your stomach to be considered as a hearty meal, and you can't help but drool a little cum, unable to keep it all contained with your lips around Axel's shaft. Thankfully, this is about the time when he finally runs out of steam, so only a few drips and dollops of his cream land on the donkey boy's discarded jeans. '[one of]Fuck that was good[or]I'm totally fucked out[or]That was fricking awesome[or]Oh my god, you're a cum vampire[or]Holy shit, you're a keeper[at random]!' Axel pants, so exhausted from the intense orgasm that he has to lean back against the wall to brace himself. Meanwhile, you pull off his cock and gulp down the extra mouthful of cum, then give your eager partner a grin.";
 	WaitLineBreak;
-	say "     '[one of]Best blowjob I've ever got![or]That was one GREAT blowjob![or]You totally drained my balls![or]Damn, that was some primo head![at random]' Axel is happy to announce in thanks, giving you a shaky fist-bump before pulling his pants back up. A satisfied grin on his face, the young man stumbles off, leaving you behind to wipe away the cum-drool from your lips and suck it off your fingers. Given the state of the city, a free meal certainly isn't something to scoff at...";
+	say "     '[one of]Best blowjob I've ever got[or]That was one GREAT blowjob[or]You totally drained my balls[or]Damn, that was some primo head[at random]!' Axel is happy to announce in thanks, giving you a shaky fist-bump before pulling his pants back up. A satisfied grin on his face, the young man stumbles off, leaving you behind to wipe away the cum-drool from your lips and suck it off your fingers. Given the state of the city, a free meal certainly isn't something to scoff at...";
 	PlayerEat 20;
 	now AxelLastBJ is turns;
 	if AxelRelationship < 3:
@@ -383,8 +394,9 @@ to say AxelBJ:
 		else:
 			now AxelRelationship is 3; [had a BJ from a female player]
 
-
-Donkey Chat is a situation. Donkey Chat is resolved.
+Donkey Chat is a situation.
+The Prereq1 of Donkey Chat is Size Envy.
+The Prereq1Resolution of Donkey Chat is { 1, 2, 3, 4, 5, 6, 7 }.
 The sarea of Donkey Chat is "Smith Haven".
 
 Instead of resolving a Donkey Chat:
@@ -425,10 +437,12 @@ to say DonkeyChat:
 			LineBreak;
 			say "     You start chatting with Axel, at first recounting the things you've seen and done out in the city, then going on to other topics. He explains that he is actually in a band, together with his buddy Milton. Seems like the donkey boy decided not to rack up college loans and instead wants to follow his dream of working his way up as a musician. With the two of you just talking about [']normal['] topics and his excited recounting of gigs they had, as well as their hopes of attracting a producer's attention, time just flies by. Somehow, if feels good for your mental stability to just brush off the grim reality of the current city events and listen to the young man tell you of his dreams. Eventually, he winds down in his tale and thanks you for listening, then gives you a smile and a fist-bump before setting out to meet his friends at the food court.";
 			SanBoost 5;
+			now Resolution of Donkey Chat is 1; [talked]
 		else if calcnumber is 2: [listen to the music]
 			LineBreak;
 			say "     'Oh, sure! You know, me and Milton actually taped this together. We're in a band with Casper and Kim. You'll love it!' the donkey boy says excitedly and twists the speakers of his headphones around far enough that you can listen in at the same time as him. The song that comes up next is fairly catchy and well played, and Axel is happy to point out the [']best['] parts for you, many of them electric guitar solo or duo passages that he himself played. Somehow, if feels good for your mental stability to just brush off the grim reality of the current city events and simply listen to music, as well as the young man telling you about it in excited tones. Eventually, after going through numerous songs, Axel winds down and thanks you for listening, then gives you a smile and a fist-bump before setting out to meet his friends at the food court.";
 			SanBoost 5;
+			now Resolution of Donkey Chat is 2; [listened to music]
 		else: [sex him up]
 			LineBreak;
 			if AxelRelationship < 3: [first time]
@@ -450,6 +464,7 @@ to say DonkeyChat:
 					say "[AxelBJ]";
 					if AxelRelationship < 4:
 						now AxelRelationship is 3; [had a BJ from a female player]
+				now Resolution of Donkey Chat is 3; [oral]
 			else: [repeats]
 				say "     Telling the young man that there is another thing that can drive the boredom away, you lower your hand to rest on his crotch and give the bulge at the front a squeeze. 'Oh? Oh! You wanna do it again? That's awesome! ";
 				if player is male:
@@ -469,8 +484,9 @@ to say DonkeyChat:
 					say "[AxelBJ]";
 					if AxelRelationship < 4:
 						now AxelRelationship is 3; [had a BJ from a female player]
+				now Resolution of Donkey Chat is 4; [repeat oral]
 			if AxelRelationship is not 100:
-				now Donkey Needs is not resolved;
+				now Donkey Needs is active;
 		if AxelRelationship is 1:
 			now AxelRelationship is 2; [two-sided introductions, and a nice chat]
 	else if calcnumber is 2:
@@ -479,14 +495,15 @@ to say DonkeyChat:
 	else:
 		LineBreak;
 		say "     You quietly watch Axel for a few seconds longer, then shrug and continue on your way. Not having any interest in the donkey boy, you resolve to not stop if you see him in the future...";
+		now Resolution of Donkey Chat is 5; [avoiding him]
 		now Donkey Chat is resolved;
 		now Donkey Needs is resolved;
 		now AxelRelationship is 100; [ignoring him]
 
-Full Litter is a situation. Full Litter is resolved.
+Full Litter is a situation.
 The sarea of Full Litter is "Smith Haven".
 
-instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 0 and Full Litter is not resolved and a random chance of 1 in 3 succeeds):
+instead of going north from Mall Foodcourt while (lastMallInteriorScene - turns > 0 and Full Litter is active and Full Litter is not resolved and a random chance of 1 in 3 succeeds):
 	move player to Mall Atrium;
 	if debugactive is 1:
 		say "     DEBUG: Walk-in Event around the mall - Misc atmosphere setting[line break]";
@@ -547,12 +564,14 @@ instead of resolving Prowling Macho:
 				WaitLineBreak;
 				say "     The two of you fill the little restroom with moans and cries of pleasure, not being quiet at all as you drive into her again and again. Somehow, it's almost as if you are being included in her lust and need to breed, your sex-fogged mind caring little about the one or two creatures who intrude on your passion and gasp before shutting the door again. All that's important right now is the bliss of Grace's pussy skillfully wringing your dick, and you hammer into her with wild abandon. The hard fucking leaves your feline partner in a lust-filled daze, and she purrs deeply as your length fills her again and again. She soon releases a needy yowl, her inner muscles trembling and squeezing around you as she climaxes. Feeling Grace twitch around your [cock of player] shaft and knowing that you brought this beautiful woman to orgasm drives your own lust past the point of no return. With a satisfied grunt, you sink into her one last time, then unload everything you got, your cum mingling with the copious deposit that Ray left in her earlier.";
 				say "     As her orgasm slowly ebbs down, Grace slumps back against the wall to recuperate with raspy, heavy breathing. She then opens her eyes again, and for the first time, actually focuses her gaze on you. 'Thanks. I - I really needed that. These heat rushes are just insane. Also, not that I'm complaining about your dick in me or anything, but who are you?' Straightening your spine, you introduce yourself[if player is not defaultnamed] as [name of player][end if] and find yourself relieved that she just smiles in response and gives a little giggle when she looks down at herself. 'Man, what a mess. Any chance that you could hand me some paper towels? Oh, and in case I didn't mention it earlier - always a little fuzzy about these episodes afterwards - I'm Grace.' You slowly pull your length out of her so that the sordid mix of your cum and Ray's doesn't gush like a waterfall, then step to the side and grab several handfuls of paper towels, wiping yourself off and passing along more to Grace.";
+				now Resolution of Prowling Macho is 1; [fucked Grace]
 			else: [female+neuter stroke her]
 				say "     Moving over to where the lynx is still half-sitting, half-lying on the bathroom counter, you rest your hands on the insides of her thighs, stroking the soft fur on her body. Grace reacts to this with a quiet moan and automatically spreads her legs a bit further, her gaze still far away and not even looking at you. Stepping up between the woman's legs, you move a hand to her sex and wipe a finger over the cum-slick folds of her pussy, playing around a little with it and gauging just how much of Ray's load will squelch out when you thrust one finger, then two and three into her depths. With the heat-crazed lynx already warmed up from the hard fuck and creampie, you are free to stroke and rub her to your heart's content, stimulating her pussy and especially the little bump of her clit in a teasing, playful manner.";
 				say "     Grace feels nicely warm and wet around your fingers as you explore her body, and Ray's virile load just drenches your hand, some of it squelching out of her every time you slide in. With each retraction, sticky strings of cum connect you to the moaning lynx, and soon, Ray's cum starts to drip down your elbow as you fondle the moaning and twitching woman. Enjoying playing with this compliant feline quite a bit, you find that you don't mind making use of Ray's sloppy seconds at all, some part you even finding it hot to have this second-hand connection to the handsome wolfman. Eager for more, Grace's legs wrap around your hips to pull you in closer, urging you to continue.";
 				WaitLineBreak;
 				say "     The two of you fill the little restroom with groans and cries of pleasure, Grace not being quiet at all as you rub and caress her on the counter. Somehow, it's almost as if you are being included in her lust and need to get off, caring little about the one or two creatures who intrude on your passion and gasp before shutting the door again. Fingers playing over her most sensitive spots with wild abandon, you push Grace to new heights of pleasure. The manual stimulation leaves your feline partner in a lust-filled daze, and she purrs deeply as you thrust your fingers into her again and again. The lynx soon lets out a needy yowl, her inner muscles trembling and squeezing around your digits as she climaxes. You feel a great satisfaction as you watch her delighted expression and the way her shapely breasts rise and fall during her heaving breaths, the feline panting hotly as your fingers sweep and curl in her slavering pussy.";
 				say "     As her orgasm slowly ebbs down, Grace slumps back against the wall with a dazed, fluttering sigh. She then opens her eyes again, and for the first time, actually focuses her gaze on you. 'Thanks. I - I really needed that. These heat rushes are just insane. Also, not that I'm complaining about you being knuckle deep in me or anything, but who are you?' Straightening your spine, you introduce yourself[if player is not defaultnamed] as [name of player][end if] and find yourself relieved that she just smiles in response and gives a little giggle when she looks down at herself. 'Man, what a mess. Any chance that you could hand me some paper towels? Oh, and in case I didn't mention it earlier - always a little fuzzy about these episodes afterwards - I'm Grace.' You slowly pull yourself out of her so that the frothy mixture of Ray's cum and her quim doesn't gush out like a waterfall, then step to the side and grab several handfuls of paper towels, wiping yourself off and passing along more to Grace.";
+				now Resolution of Prowling Macho is 2; [stroked Grace]
 			WaitLineBreak;
 			say "     Demonstrating a surprising level of aplomb, the feline woman cleans herself up quickly, and after throwing the cum-soaked clumps of paper towels into the trash, she casually pulls her pants back on. Of course, anyone who goes through a full transformation and manages to hold on to their humanity already demonstrates admirable resilience, but it seems that Grace was a tough cookie even before the outbreak. Wiggling her breasts at you with an amused grin, she tugs her top back into place, then pulls a blister pack out of her pocket and looks over to you. 'Everyone always said that I have a shitty taste in men. So what?! Getting your brain fucked out in quickies with muscle hunks has its own appeal. I can't help but get off on it. And hey, guess who's having the last laugh now for buying morning after pills in bulk?' Pushing one of the small white tablets out of its packaging, she throws it into her mouth and swallows, then finishes fixing up her appearance. 'See ya, sweetie. I got places to be,' Grace says, stepping outside of the bathroom again.";
 		else if calcnumber is 2: [eat her out]
@@ -562,12 +581,15 @@ instead of resolving Prowling Macho:
 			WaitLineBreak;
 			say "     As her orgasm slowly ebbs down, Grace slumps back against the wall to recuperate with raspy, heavy breathing. She then opens her eyes again, and for the first time, actually focuses her gaze on you. 'Thanks. I - I really needed that. These heat rushes are just insane. Also, not that I'm complaining about the very nice service or anything, but who are you?' Standing up and introducing yourself[if player is not defaultnamed] as [name of player][end if], you find yourself relieved that she just smiles in response and gives a little giggle when she looks down at herself. 'Usually when something like this happens, I'm a sticky mess. Almost wish I had you around all the time. That was some good tongue-work there! In case I didn't mention it earlier - always a little fuzzy about these episodes afterwards - I'm Grace. Now... could you maybe hand me my pants?'";
 			say "     Demonstrating a surprising level of aplomb, the feline woman casually pulls her pants back on as you hand them to her. Of course, anyone who goes through a full transformation and manages to hold on to their humanity already demonstrates admirable resilience, but it seems that Grace was a tough cookie even before the outbreak. Wiggling her breasts at you with an amused grin, she tugs her top back into place, then pulls a blister pack out of her pocket and looks over to you. 'Everyone always said that I have a shitty taste in men. So what?! Getting your brain fucked out by a brutish muscle hunk has its own appeal. I can't help but get off on it. And hey, guess who's having the last laugh now for buying morning after pills in bulk?' Pushing one of the small white tablets out of its packaging, she throws it into her mouth and swallows, then finishes fixing up her appearance. 'See ya, sweetie. I got places to be,' Grace says, stepping outside of the bathroom again.";
+			now Resolution of Prowling Macho is 3; [ate Grace out]
 		else:
 			LineBreak;
 			say "     Quietly walking to the door, you leave the naked and dripping lynx behind and go about your business.";
+			now Resolution of Prowling Macho is 4; [left Grace after watching]
 	else:
 		LineBreak;
 		say "     With a shrug at the antics of some mall inhabitants, you just turn your back on the two of them, walking on in your tour to find anything that actually interests you.";
+		now Resolution of Prowling Macho is 99; [disinterested in Grace]
 	now Prowling Macho is resolved;
 
 SailboatPainting is a situation.

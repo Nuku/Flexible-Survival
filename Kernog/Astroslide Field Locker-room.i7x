@@ -30,6 +30,11 @@ to say FootFieldLockerdesc:
 
 
 [NPCs]
+
+Table of GameCharacterIDs (continued)
+object	name
+Gorilla Team-Members	"Gorilla Team-Members"
+
 Gorilla Team-Members is a man.
 The description of Gorilla Team-Members is "A highly variable number of gorillas is present at all times in their team locker-room, in all states of dress and undress, as well as sexual arousal. It would be an understatement to say that all these hunky guys, girls and in between are 'just interested' in football - it's more like the whole center of their existence, as you can see from the fact that an adjoining storage room has been totally cleared out to set up numerous bunk beds. Looks like they now live right here next to the field. The gorillas are a definitively are a jovial bunch, and you can hear almost constant chatting, laughing and more than a few aroused moans from all around you.".
 The conversation of Gorilla Team-Members is { "Yap!" }.
@@ -117,13 +122,9 @@ instead of fucking the Gorilla Team-Members:
 						say "[GorillaTeamSex3]";
 					wait for any key;
 			else if calcnumber is 0:
-				say "Break off?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the gorilla you almost asked to have sex with, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the gorilla you almost asked to have sex with, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -275,7 +276,7 @@ to say GorillaTeamSex3: [chain fuck]
 PeepingRoman is a situation.
 The sarea of PeepingRoman is "Nowhere".
 
-instead of going to Astroslide Field Locker-room while (PeepingRoman is not resolved and Furry is not banned and Furry is not warded and a random chance of 1 in 3 succeeds):
+instead of going to Astroslide Field Locker-room while (PeepingRoman is active and PeepingRoman is not resolved and Furry is not banned and Furry is not warded and a random chance of 1 in 3 succeeds):
 	move player to Astroslide Field Locker-room;
 	PeepingRomanEvent;
 
@@ -293,8 +294,10 @@ to PeepingRomanEvent:
 		say "     Roman hoists himself up from the bench, making you hurriedly retreat. However, you ponder about confronting Roman about his secret, the next time you will talk to him.";
 		now HP of Roman is 1;
 		now PeepingRoman is resolved;
+		now Resolution of PeepingRoman is 1; [peeped]
 	else:
 		say "     Privacy is a rare leisure in his city, much more in this place. You decide to give the team captain some much needed privacy. A couple minutes after, he leaves the changing room with a new pair of shorts, just as bulgy as the previous one. As you wonder why he did not choose a bigger size, you notice a tuft of cotton falling from the pair of pants. Weird.";
+		now Resolution of PeepingRoman is 2; [didn't peep]
 
 to say FootballTeamSlice1:
 	say "     You put the tape that Roman gave you inside the recorder, and press [']play[']. The video starts on a close-up of a Black young man's face. 'How do you... Ah. There we go,' he says, before pulling the camera away from his face. It is a rather good-looking young man, clad in football gear. As he was about to speak, another player tugs him by his braids. 'Hey, Zach, is it rolling? Come on, man. Sighing, Zach turns the camera over, showing another, younger Black male. His naked chest still wet from the shower and a towel on his waist. 'You should get some clothes, Mike,' you can hear Zach say.";

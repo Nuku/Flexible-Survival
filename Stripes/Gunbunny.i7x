@@ -101,12 +101,12 @@ to say beatthegunbunny:
 
 Section 5 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Gunbunny"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -154,8 +154,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false; [***temporary]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "gunbunny"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 6 - Gunbunny Alt-Attack
@@ -201,7 +202,7 @@ this is the gb_gat_up rule:			[miss message and gatling odds go up]
 		say "[one of]The bunny girl[or]The gunbunny[or]She[or]The gun-totting rabbit[or]The rabbit-eared girl[at random] eventually has to stop shooting long enough to [if gb_gun is 6]give her space gun a chance to recharge[else]reload[end if], giving you a chance to do something.";
 
 to gb_gatling_attack:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "From behind her back, the gunbunny whips out a [if gb_gun is 6]large [bold type]blaster cannon[roman type] with multiple barrels[else][bold type]gatling gun[roman type][end if]. The thing is bigger than her whole torso (tits included), but you don't have time to wonder where she could have been hiding it. Giggling maniacally, she opens fire, sending a hail of [if gb_gun is 6]plasma pellets[else]bullets[end if] in at you. You make a run for it, but she uses her bunny-powered legs to run and leap quickly as she gives chase.";
 	now monsterhit is false;
 	let gatling_hit be false;

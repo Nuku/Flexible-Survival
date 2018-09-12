@@ -36,9 +36,10 @@ Collar Rack is in The Pretty Kitty.
 
 Section 2 - Andromeda
 
-calcnumber is a number that varies. [Used for player-entered variables for sex menu]
+Table of GameCharacterIDs (continued)
+object	name
+Andromeda	"Andromeda"
 
-[Defining NPC]
 Andromeda is a woman.
 The description of Andromeda is "     The bubbly owner of the store stands behind the checkout counter, looking around with a curious, innocent look in her eyes. Her tall, fuzzy ears swivel around constantly, taking in every sound echoing throughout her establishment and keeping a lookout for trouble. Wide green eyes peer out from her face, with her slightly-protruding muzzle graced by a constant bubbly smile. Night-black hair flows down to her shoulders, a dark contrast to the rest of her face. Roving your eyes down from her face, you see that her body is covered in short, dark-orange fur, with occasional splotches of gray interrupting the constant orange flow. Contrary to many of the denizens of this city, Andromeda is not at all voluptuous, the ripped shirt she's wearing barely showing her breasts while her slim stomach does nothing to dissuade her lean look. Her thin legs and hips are covered by a pair of denim jeans, faded and worn with years of use. Her long, furry tail flicks back and forth excitedly, almost knocking loose knick-knacks on the floor. Her (probably) pawed feet are currently inside a pair of tennis shoes, old and worn, with one missing a lace. Finally noting your roving eyes, she says 'Hey, eyes up here you!' all while giving you a good-natured smile and sticking her tongue out at you.";
 
@@ -61,7 +62,7 @@ instead of conversing Andromeda:
 		say "     After checking through the racks and not seeing one, you ask Andromeda if she's got a small leather jacket. 'No, my leather items were bou- Oh! Wait a sec,' she says, cutting herself off as she rushes to the back. The catgirl returns shortly with a small leather jacket with red and pink trim and a high waistline. 'I got this in with a shipment of other stuff, but didn't have a chance to send it back. Something with a bare midriff like that is too trashy for me to sell to a little girl. A larger version might look pretty sexy on the right woman though,' she adds with a soft sigh as her eyes glaze over. You wait awkwardly for a bit, but it soon becomes clear she's lost in her imagination. With a shrug, you take the unwanted jacket, hoping Gobby will be satisfied with it.";
 		increase HP of Hadiya by 1;
 		now carried of girl's jacket is 1;
-		now Goblin Thief is unresolved;
+		now Goblin Thief is active;
 	else if HP of Andromeda is 1:
 		say "     Walking up to the lithe catgirl, you find that she's hopped up on the counter, sitting comfortably on the checkout line. Waving her feet back and forth casually, her ever-constant smile grows even wider when you approach her.";
 		say "     'Hey! Nice to have you back here!' Andromeda says to you as you approach her. She smiles happily as you lean on the counter and start small talking with her. Chatting a bit about everything that's going on, you can't help but have your mood lightened from the girl's constant bubbly mood. Having exhausted most of the small topics you've thought of, you eventually broach the subject of how she got her shop, and she thinks to herself a bit before responding.";
@@ -148,7 +149,10 @@ instead of fucking Andromeda:
 
 Section 3 - Clothes
 
-[Defining Clothing Shelf]
+Table of GameCharacterIDs (continued)
+object	name
+Clothing Shelf	"Clothing Shelf"
+
 Clothing Shelf is a man.
 The description of Clothing Shelf is "This nearby rack of clothes holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed as '1 food or 1 milk'. The outfits that stick out to you include a simple [bold type]T-shirt and Blue Jeans[roman type] combo, a lovely black [bold type]Blouse Set[roman type] that's combined with a knee-length skirt, a slim [bold type]Tuxedo set[roman type] and tie on a mannequin nearby, and a baggy, comfortable [bold type]Summer Set[roman type], consisting of a no-sleeved shirt and baggy shorts. You'd just have to have payment and ask to [bold type]procure[roman type] the outfit you want.";
 
@@ -353,6 +357,10 @@ carry out SummerObtain:
 			say "     'Well then why'd you bring them up here you big dolt?' Andromeda says to you, doing her best to put on a serious impression, and then failing horribly. 'I'm just teasing you! Feel free to keep looking around, and only get something if you want to!";
 
 Section 4 - Collars
+
+Table of GameCharacterIDs (continued)
+object	name
+Collar Rack	"Collar Rack"
 
 [Defining Collar Rack]
 Collar Rack is a man.

@@ -40,7 +40,7 @@ to say losetomargay:
 		if UBlevel > 1 and margaymet > 2 and MKunleashed is false:
 			let tempmon be monster;
 			setmonster "Megakitty";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			if name entry is "Megakitty":
 				now MKunleashed is true;
 				now area entry is "Midway";
@@ -73,7 +73,7 @@ to say beatthemargay:
 			if UBlevel > 1 and margaymet > 2 and MKunleashed is false:
 				let tempmon be monster;
 				setmonster "Megakitty";
-				choose row monster from the table of random critters;
+				choose row monster from the Table of Random Critters;
 				if name entry is "Megakitty":
 					now MKunleashed is true;
 					now area entry is "Midway";
@@ -99,7 +99,7 @@ to say margayoral:
 	if UBlevel > 1 and margaymet > 2 and MKunleashed is false:
 		let tempmon be monster;
 		setmonster "Megakitty";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if name entry is "Megakitty":
 			now MKunleashed is true;
 			now area entry is "Midway";
@@ -108,12 +108,12 @@ to say margayoral:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Margay"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -161,8 +161,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "margay"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Alt Combat - Sensual Dance
@@ -172,7 +173,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "margay"	margaydance rule	--	--	--	--	--	--	--	--	--
 
 this is the margaydance rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	increase margaydancecount by 1;
 	if margaydancecount is even and a random chance of 2 in 5 succeeds and peppereyes is 0:	[40% of the time on any even round]
 		say "The big kitty performs an erotic dance that is quite tantalizing, seeking to entice you into giving into her rough advances. She runs her paws over her ample figure, her numerous breasts and then down to her wet cunts, fingering them with a moan of desire.";

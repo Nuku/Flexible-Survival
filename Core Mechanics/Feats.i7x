@@ -15,7 +15,6 @@ boosterfeats is a number that varies. boosterfeats is usually 0.
 muggerison is a truth state that varies. muggerison is usually true.
 FeralBirths is a number that varies. FeralBirths is usually 0.
 vampiric is a truth state that varies. vampiric is usually false.
-
 The player has a number called featgained.
 
 Featgetting is an action applying to nothing.
@@ -351,21 +350,21 @@ This is the gainfeat rule:
 to say bestowcitymapfeat:
 	now Beach Plaza is known;
 	now Outside Trevor Labs is known;
-	Now Smith Haven Mall Lot South is known;
+	now Smith Haven Mall Lot South is known;
 	now Park Entrance is known;
 	now City Hospital is known;
-	Now State fair is known;
-	Now Approaching the Capitol Building is known;
-	Now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
-	Now Plant Overview is known;
+	now State fair is known;
+	now Approaching the Capitol Building is known;
+	now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
+	now Plant Overview is known;
 	now Ravaged Power Plant is resolved; [removes the random event for discovering the power plant]
 	now College Campus is known;
 	now Reaching the College is resolved; [removes the random event for discovering the College Campus]
-	Now Entrance to the Red Light District is known;
-	Now Entrance to the High Rise District is known;
-	Now Zoo entrance is known;
-	Now Dry Plains is known;
-	Now Museum Foyer is known;
+	now Entrance to the Red Light District is known;
+	now Entrance to the High Rise District is known;
+	now Zoo entrance is known;
+	now Dry Plains is known;
+	now Museum Foyer is known;
 	now Warehouse District is known;
 	now Urban Forest is known;
 

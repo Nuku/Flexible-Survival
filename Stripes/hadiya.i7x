@@ -77,6 +77,10 @@ the scent of Hyena Shack is "[if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and H
 
 Section 3 - Hadiya
 
+Table of GameCharacterIDs (continued)
+object	name
+Hadiya	"Hadiya"
+
 Hadiya is a person. Hadiya is in Hyena Shack.
 The description of Hadiya is "[hadiyadesc]".
 The conversation of Hadiya is { "Bend over!" }.
@@ -110,7 +114,7 @@ instead of conversing Hadiya:
 	else if ( HP of Hadiya is 7 or HP of Hadiya is 57 ) and guy is not banned:
 		say "     'Hey, butt-boy! I've got a job for you. You've probably been wondering why I'm living here. Thing is, I'm trying to find my guitar. It was really bitchin['] - an all black flying-V with a flaming skull on it. My last boyfriend didn't like my playing and threw it out with a bunch of other junk... so I threw the dumb bitch out. I was so pissed,' she growls. 'Now, I've been looking all over the junkyard for it, but it hasn't turned up yet. It's been taking so long that I've been able to build this shack for myself with other stuff I've found. I want you to keep an eye out for it,' she says, giving your butt a firm squeeze.";
 		increase HP of Hadiya by 1;
-		now Goblin Thief is unresolved;
+		now Goblin Thief is active;
 	else if ( HP of Hadiya > 7 and HP of Hadiya < 13 ) or ( HP of Hadiya > 57 and HP of Hadiya < 63 ) and a random chance of 2 in 5 succeeds:
 		say "     '[one of]Have you found my guitar yet?'[or]Don't forget about my guitar.'[or]I've been all over this place looking for my guitar. Some [bold type]thief[roman type] must've swiped it.'[or]I found the rest of the junk that was thrown out, but my guitar wasn't there. Some [bold type]thief[roman type] must've swiped it.'[or]Those goblins have tunnels all through the junk piles. Dirty little thieves. Try finding a ['][bold type]goblin thief[roman type]['] and see if one of them has stashed it somewhere.'[in random order]";
 	else if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and HP of Hadiya < 63 ):
@@ -268,7 +272,7 @@ to say hadiya_gobby_3somes:
 
 Section 5 - Hadiya's Guitar
 
-Goblin Thief is a situation. Goblin Thief is resolved.
+Goblin Thief is a situation. Goblin Thief is inactive.
 The sarea of Goblin Thief is "Junkyard".
 
 Instead of resolving Goblin Thief:
@@ -293,10 +297,10 @@ Instead of resolving Goblin Thief:
 		say "     'Deal!'";
 		say "     And thus with your bargain struck, the two of you go your separate ways for now. Hmmm... where'll you even find a leather jacket small enough to fit a goblin?";
 		increase HP of Hadiya by 1;
-		now Goblin Thief is resolved;
+		now Goblin Thief is inactive;
 	else if HP of Hadiya is 9 or HP of Hadiya is 59:
 		say "ERROR-Hadiya-[HP of Hadiya]E: You should not be able to get this result. Event should be closed at this time.";
-		now Goblin Thief is resolved;
+		now Goblin Thief is inactive;
 	else if girl's jacket is not owned:
 		say "     As you approach the spot where you'd met Gobby, you're about to go there to meet with him when you remember that you dropped that leather jacket he wants somewhere. You'd best go back and get it if you want to make the deal with him.";
 	else if (HP of Hadiya is 10 or HP of Hadiya is 60):
@@ -348,12 +352,15 @@ Instead of resolving Goblin Thief:
 		now lastfuck of Hadiya is 255;
 		now carried of girl's jacket is 0;
 		now Goblin Thief is resolved;
-		now battleground is "void";
 	else:
 		say "ERROR-Hadiya-[HP of Hadiya]E: You should not be able to get this result. Event should be closed at this time.";
 		now Goblin Thief is resolved;
 
 Section 6 - Gobby
+
+Table of GameCharacterIDs (continued)
+object	name
+Gobby	"Gobby"
 
 Gobby is a man.
 The description of Gobby is "[gobbydesc]".
@@ -415,8 +422,8 @@ Section 8 - Infection by Hadiya
 to hadiyahyenaify:
 	if HP of Hadiya >= 50:
 		[puts Herm Hyena as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Herm Hyena":
 				now monster is y;
 				now sex entry is "Male";

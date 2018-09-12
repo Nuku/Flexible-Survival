@@ -51,7 +51,7 @@ To decide which number is the link/-- number of the/-- selected/clicked hyperlin
 
 Section - Placing links
 
-The hyperlink list is a list of texts variable.
+The hyperlink list is a list of text variable.
 
 The hyperlinked text is a text variable. The hyperlinked text is "".
 The hyperlinked command is a text variable. The hyperlinked command is "".
@@ -107,7 +107,7 @@ Section - Processing hyperlinks
 
 The hyperlink processing rules are a rulebook.
 
-The current hyperlink ID is a number that varies.
+The current hyperlink ID is a number that varies.[@Tag:NotSaved]
 
 
 Section - Selecting replacement command

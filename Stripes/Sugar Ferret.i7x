@@ -10,7 +10,7 @@ when play begins:
 	add { "Sugar Ferret" } to infections of guy;
 	add { "Sugar Ferret" } to infections of furry;
 
-sugferretjoke is truth state that varies. sugferretjoke is usually false.
+sugferretjoke is a truth state that varies. sugferretjoke is normally false.
 
 to say losetosugarferret:
 	if sugarferretfight is 3:
@@ -78,7 +78,7 @@ to say beatthesugarferret:
 
 to say sugarferretdesc:
 	setmongender 19; [creatures are mixed/variable]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
@@ -102,12 +102,12 @@ to say sugarferretdesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Sugar Ferret"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -136,7 +136,7 @@ When Play begins:
 	now HP entry is 90; [ The monster's starting HP. ]
 	now lev entry is 9; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 7; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 4; [ Cock width, more commonly used for ball size. ]
@@ -155,11 +155,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is true;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "sugferret"; [ Row used to designate any special combat features, "default" for standard combat. ]
-
-[A sample structure for succumbing/surviving messages at the end of the game.]
-[Numerous other examples can be found in existing creature files.]
+	now BannedStatus entry is false;
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)
@@ -167,7 +165,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 
 this is the sugferret rule:		[continuous temptation]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if bodyname of player is "Sugar Ferret":
 		say "     [one of]Just looking at the other cute, bouncy ferrets around you is a considerable temptation. If you give in, you could have more soda with them and have some fun[or]The sight of those energetic ferrets makes you want to give in and join them in their wild romp[or]'Yay! Playtime!' one of the ferrets calls out[or]'Weeee! PopPopPopPopPop!' they babble frantically, lost in their caffeine high and you find yourself tempted to give into the manic energy filling you as well[or]'Join us for some fun! Come! We've got sugar!' one of them says in a tempting manner. 'Yeah,' another pipes up, 'we'll share!' Your ferrety impulses do find the offer alluring[at random]...";
 		let targetnum be 200 + humanity of player + ( plmindbonus * 3 ) - libido of player - ( caffeinehigh of player * 2 );
@@ -189,7 +187,7 @@ this is the sugferret rule:		[continuous temptation]
 when play ends:
 	if bodyname of player is "Sugar Ferret":
 		if humanity of player < 10:
-			say "     As your humanity fades, you are overcome by an increasing longing for sugary treats. You roam around for a while, scavenging what candy you can find and guzzling down any soda you gather immediately, thirsty or not. After a few days of this, you remember another spot with lots of sweet treats and make your way back to the Sweet Tooth candy store where you are met by the other sugar ferrets. They happily greet you and welcome you to their group with another orgy of carbonated, over-caffeinated lust.";
+			say "     As your humanity fades, you are overcome by an increasing longing for sugary treats. You roam around for a while, scavenging what candy you can find and guzzling down any soda you gather immediately, thirsty or not. After a few days of this, you remember another spot with lots of sweet treats and make your way back to the Sweet Tooth CandyShop where you are met by the other sugar ferrets. They happily greet you and welcome you to their group with another orgy of carbonated, over-caffeinated lust.";
 		else:
 			say "     You manage to survive your time in the city and are brought out to the military's holding facility. There you impatiently await your release, always tempted by the soda you see around the camp. You resist, knowing that your transformation into a wild, over-caffeinated creature of unbridled lustful energy would not improve your chances of getting out of there. It is very hard on you, but you manage to hold back your cravings.";
 			if alexbrunch >= 4:

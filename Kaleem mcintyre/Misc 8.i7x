@@ -122,6 +122,7 @@ Instead of resolving a Controversy:
 		say "Watching as the two leave you find yourself wondering if you'll ever see those two again. It's only after you see the weasel pick up the boombox and then head off down the street that you realize that you never did catch their names.";
 		now Controversy is resolved;
 		increase score by 30;
+		now Resolution of Controversy is 1; [hit it]
 	else:
 		LineBreak;
 		say "Shaking your head at the offer you watch as the black bear nods to you before blowing out smoke off to the side before taking another puff. Making up your mind to make some small talk with the two guys you ask them what they're doing out here by themselves. 'Me and my friend here came down from Jersey to try and find some hot and immoral babes to fuck,' the weasel says simply. 'But wouldn't you know it, just when we got here this plague shit hit and all the women around here got dicks now. Man, what the fuck is up with that?' The weasel snorts before taking the roach back from the bear and puffing on it once again.";
@@ -136,6 +137,7 @@ Instead of resolving a Controversy:
 		say "Watching as the two leave you find yourself wondering if you'll ever see those two again. It's only after you see the weasel pick up the boombox and then head off down the street that you realize that you never did catch their names.";
 		now Controversy is resolved;
 		increase score by 30;
+		now Resolution of Controversy is 1; [nah]
 
 Section 8 - Dr Feel Good
 
@@ -174,7 +176,8 @@ Instead of resolving a Dr Feel Good:
 				say "Shoving the coat and pants into your [bodyname of player] hands the youth gives you a shaky smile and then hurries around side of you to run out of the room at top speeds. Turning to watch the other go you wonder how many more people in this city are [']missing['] like that fennec's girlfriend.";
 				now carried of doctor's uniform is 1;
 				Increase score by 10;
-				Now Dr Feel Good is resolved;
+				now Dr Feel Good is resolved;
+				now Resolution of Dr Feel Good is 1; [fought & won]
 		if fightoutcome >= 20:		[lose/run]
 			say "Getting your tail beaten by the two vixens you find yourself getting stuck with the syringe and then the world going on [italic type]SPIN[roman type] as everything starts to whirl around you over and over and over...until finally...you pass out. You are uncertain how much time passes while you're unconscious.";
 			now heat enabled is false; [temporarily turning off heat effects]
@@ -199,11 +202,13 @@ Instead of resolving a Dr Feel Good:
 				increase cock length of player by 1;
 				increase the cock width of player by 1;
 			decrease score by 14;
+			now Resolution of Dr Feel Good is 2; [fought & lost/ran]
 			now Dr Feel Good is resolved;
 	else:
 		LineBreak;
 		say "Figuring that the vixens wouldn't do something to actually kill the other you pull back to head off on your way. A yelp two seconds later makes you flip your head back around, but when you don't hear anything afterwards you simply assume that it was the fennec getting his shot.";
-		Now Dr Feel Good is resolved;
+		now Dr Feel Good is resolved;
+		now Resolution of Dr Feel Good is 99; [disinterest]
 
 ]	[***temporarily turned off]
 

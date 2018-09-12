@@ -50,6 +50,10 @@ KTO is a number that varies.
 Kenazaroused is a number that varies.
 rsc is a number that varies.
 
+Table of GameCharacterIDs (continued)
+object	name
+Kenaz	"Kenaz"
+
 Kenaz is a man. Kenaz is in FireHouse.
 The description of Kenaz is "[Kenazcurrentform]".
 The conversation of Kenaz is { "Be on alert!" }.
@@ -202,7 +206,6 @@ HelpKenazOut is a number that varies.
 LastKenazdes is a number that varies. LastKenazdes is usually 660.
 Kenazdes is a number that varies. Kenazdes is usually 0.
 aidKenaz is a number that varies.
-Pertho is resolved.
 
 Carry out HelpingKenazOut:
 	if helpkenazout is 0:
@@ -251,8 +254,8 @@ To say aidKenaz1:
 		WaitLineBreak;
 		say "     'Oh wait a minute!' You turn just in time to see Othala running over to the only table in the room and then grabbing up something before coming up to you to hand you that said something. Amazingly enough what the Dalmatian gives you just so happens to be a...collar and leash? 'This might help make things easier on you.' The salt and pepper haired Dalmatian snickers when you look to the items in question with a curious expression written across your face, but does nothing else as you turn to head out.";
 		decrease carried of food by 10;
-		Now HelpKenazOut is 2;
-		Now Pertho is unresolved;
+		now HelpKenazOut is 2;
+		now Finding Pertho is active;
 	else:
 		say "     'Hey, if you are wondering where the others are, well they come and go as they please for right now, so don't expect to see them around much.' Kenaz chuckles while [one of]sweeping up the floor[or]mopping up the floor[or]polishing down the fire trucks[or]waxing down the fire engines[at random]. 'Oh, by the way did you ever get that food I asked you about? I still need like [bold type]ten[roman type] parcels to be able to feed everyone with?'";
 
@@ -271,7 +274,7 @@ To say aidKenaz3:
 	say "     After that, well things go from bad to all out clusterfuck. From what your mind can process there's a lot of motion and commotion between everyone present as they try to help you help get Pertho off of Kenaz while at the same time trying to do their best to calm the yowling man down as he tries to shake the dog loose. Eventually you regain enough sense of self to dart over and then grab Pertho's muzzle to literally pry the feral mutant's fangs from off of Kenaz's now bleeding leg. Drawing the feral canine back so that Othala and the newcomer can deal with Kenaz you struggle to hold Pertho, the other fighting and growling at you in that canine way the promises a lot of pain on your part when you do. In return you growl at him to shut up and calm down, your voice taking on a low bass rumble that instantly makes the Dalmatian comply in response to your command.";
 	say "     After that, well... Maybe you should try to [italic type]assist[roman type] Kenaz some more since he's probably not in the talking mood at the moment.";
 	now Kenaztalk is 5;
-	Now HelpKenazOut is 4;
+	now HelpKenazOut is 4;
 
 
 
@@ -323,11 +326,11 @@ To say aidKenaz4:
 	else:
 		LineBreak;
 		say "     In the next hour or so you place Pertho into the back room, watch as Kenaz transforms into a sexy Dalmatian, talk to Mannaz and listen to his story about how he got back into the city, via aiding the short staffed military, and then charm Kenaz into being a willing bed partner for you!";
-	Now kto is 1;
-	Now Kenaztalk is 2;
+	now kto is 1;
+	now Kenaztalk is 2;
 	now Kenazaroused is 1;
 	Move OtherDals to the FireHouse;
-	Now HelpKenazOut is 5;
+	now HelpKenazOut is 5;
 	follow the turnpass rule;
 
 
@@ -336,8 +339,8 @@ To say aidKenaz5:
 	say "     '[italic type]Wuff![roman type] Oh sorry about that. That's been happening a lot as of late.' Kenaz rubs the back of his head before smirking at you. From what you can see the other is taking to his new form quite well. 'Anyway, I don't think I have much for you to do for today...oh wait a minute!' Kenaz makes a mad dash over to where the coat racks are and then pulls off a single firefighter coat and then brings it back over to you. 'Here, this may not be much, but please. I want you to have it for all of the trouble you've gone through for me and everyone else.'";
 	say "     Not seeing a reason why you shouldn't you take the offered gift you take the firefighter's coat and then place it into your backpack. 'I'm sorry that I don't have much to offer you, but...' You shush the other before he can start. Letting the Kenaz know that his souvenir will be cherished regardless of its worth gets a smile from the Dalmatian. 'You're a good friend, you know that?' You can only smirk at the other at that point.";
 	now carried of firefighter coat is 1;
-	Now HelpKenazout is 6;
-	Now Kenazdes is turns;
+	now HelpKenazout is 6;
+	now Kenazdes is turns;
 
 
 
@@ -763,11 +766,12 @@ carry out Firepolesliding:
 
 Section 9 - Pertho
 
-Pertho is a situation.
+Finding Pertho is a situation.
+Finding Pertho is inactive.
 LOK is a number that varies.
-The sarea of Pertho is "Red".
+The sarea of Finding Pertho is "Red".
 
-Instead of resolving a Pertho:
+Instead of resolving a Finding Pertho:
 	If lok is 0:
 		say "     Snooping around the red light district, you find yourself coming across a four legged Dalmatian busily humping at the backside of a tigress hooker. From what you can see, the feral mutant is completely enthralled in fucking the herm feline, who just so happens to be moaning and arching hir rump up into the heavy thrusting hips of the spotted canine, making this a perfect opportunity for you to try and nab the other. Better be careful though...";
 		let bonus be (( Dexterity of player minus 10 ) divided by 2);
@@ -778,13 +782,15 @@ Instead of resolving a Pertho:
 			say "     Tentatively you go up behind the panting and drooling four legged Dalmatian and then, once you are sure that the other can't sense your presence, you grab it by its furry neck. Immediately the canine stops his thrusting and then yelps as you pull it bodily off of the tigress. The tigress herm isn't sure what's happening, or why the delightful cock drilling inside of hir cunt has been taken away, but upon turning hir head to see you wrestling the feral Dalmatian down onto the ground the tigress slips her red dress down onto her thighs and then quickly, but quietly, hauls tail out of here. You barely pay the hooker any attention as you try to keep the Dalmatian from biting you, something Pertho seems very keen on doing.";
 			WaitLineBreak;
 			say "     When you finally end up tiring the Dalmatian out, almost ten minutes later, you snap the collar and leash you had been given by Othala onto the now whimpering mutt. Successful with this mission you prepare yourself to go about your way back to the firehouse with contentment brimming inside of your chest. Of course these feelings don't last long as the Dalmatian behind ends up dropping all of his weight onto the ground forcing you to almost literally have to carry the other back to Kenaz and the others.";
-			now Pertho is resolved;
+			now Finding Pertho is resolved;
 			Move player to the Fire Station;
+			now Resolution of Finding Pertho is 1; [dragged the feral dal off]
 			now HelpKenazOut is 3;
 			increase score by 5;
 		else:
 			say "     You must have stepped on something because just as soon as you are about to reach out for the Dalmatian the spotted menace turns and then gives you a penetrating look no canine should be able to make. You freeze for a second and this proves to be a fatal mistake on your part because the Dalmatian quickly pulls himself out from the tigress hooker and then darts off to run away from you at top speeds. Not sure what just happened it takes you a second to gather you wits before you curse and then charge off after the Dalmatian.";
 			say "     Back where shi had been left the tigress hooker looks up and then blinks in confusion as a cool gust of wind whistles across her dripping folds...";
+			now Resolution of Finding Pertho is 2; [Pertho escaped during the last try]
 			now lok is 1;
 	else if lok is 1:
 		say "     Searching around for the feral Dalmatian, Pertho or whatever, you end up finding the canine terror [one of]rooting through a trash can while on the lookout for something to eat[or]cornering a tigress hooker with its muzzle dripping with drool and its hard cock pointed directly out of its sheath[or]scratching at its ear beside a lamppost while yawning slightly[or]napping underneath a bench while looking as comfortable as could be[or]licking at itself with one leg cocked up high into the air[or]chewing on a bone while wagging its long and thing tail[at random]. Seeing this you quietly go around back behind the other while pulling out the collar and leash Othala had given you.";
@@ -796,11 +802,13 @@ Instead of resolving a Pertho:
 			say "     Successfully sneaking up behind the Dalmatian you use your full body weight to pin the other down onto the ground. The Dalmatian yelps and squirms and fights to get away from you, but currently you are too focused to allow the feral mutt to get any kind of leverage as you snap the collar around his neck and then hook the leash onto the metal tether. Getting up off of Pertho you wrap the end of the leash around your [bodyname of player] hand and then tug on it to get the Dalmatian moving.";
 			say "     Of course, as with almost everything in your life, the Dalmatian doesn't want to cooperate so you end up forcibly dragging the other back to the firehouse.";
 			now HelpKenazOut is 3;
+			now Resolution of Finding Pertho is 1; [dragged the feral dal off]
 			Move player to the Fire Station;
-			now Pertho is resolved;
+			now Finding Pertho is resolved;
 			increase score by 5;
 		else:
 			say "     Something goes wrong because quickly Pertho flips an ear up into your direction before turning his head to look at you. Seeing that its [italic type]you[roman type] again the Dalmatian growls and then darts off to head off in the opposite direction you had been coming for it. You curse and try to run after the spotted canine, but you know already that the other has too much of an advantage in distance over you to catch up with the Dalmatian. Looks like you'll have to try again later.";
+			now Resolution of Finding Pertho is 2; [Pertho escaped during the last try]
 
 Section 10 - Table of Game Objects
 
@@ -820,6 +828,10 @@ The slot of firefighter coat is "body".
 Section 11 - OtherDals
 
 Kto is a number that varies.
+
+Table of GameCharacterIDs (continued)
+object	name
+OtherDals	"OtherDals"
 
 OtherDals is a man.
 The description of OtherDals is "[Dalboys1]".
@@ -858,6 +870,10 @@ Instead of conversing the OtherDals:
 
 
 Section 12 - DalmatianTroupe
+
+Table of GameCharacterIDs (continued)
+object	name
+DalmatianTroupe	"DalmatianTroupe"
 
 DalmatianTroupe is a man.
 The description of DalmatianTroupe is "[Dalboys2]".

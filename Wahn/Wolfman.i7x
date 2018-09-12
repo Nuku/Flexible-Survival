@@ -73,23 +73,22 @@ To say Septus loses:
 		say "     [if (HP of Septus is 0 or HP of Septus is 1 or HP of Septus is 2)]'Keep this up, and you'll have a place in the team soon.' He gives your shoulder a squeeze, then walks off to find more candidates out in the city.[else if (HP of Septus is 3 or HP of Septus is 4)]'You've shown your strength and skill. Why don't you join us in our base camp? It's in a warehouse over near 11th street. Just look for the [bold type]entrance[roman type] of our wolfman [bold type]lair[roman type] - there's a large wolf's head painted on the front wall too, you can barely miss it.'[else if HP of Septus is 5]'See you later at the lair. I'm off to find some new candidates.'[end if]";
 		if HP of Septus < 4:
 			increase HP of Septus by 1;
-		if HP of Septus is 4:
-			now Entrance to the Lair is unresolved;
-
+		if Entrance to the Lair is inactive and Entrance to the Lair is not resolved and HP of Septus > 3 and HP of Septus < 99:
+			now Entrance to the Lair is active;
 
 to say Wolfmandesc:
 	setmongender 3;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of Septus is 100:
 		say "     As you explore the ruined city, a tall figure suddenly steps into sight in front of you and gives you a calculating look. It's a well-toned male wolf-morph, standing on two digitigrade legs. His fur is almost completely black, except for a blood red section on his chest that forms the number 7.";
 		say "     He nods his lupine head at you, saying 'I'm Septus, the talent scout of the Fairhaven Wolves. You don't look half bad - but are you worth joining the best football team of this changed world?' He gives you a toothy grin, then pounces at you.";
 		now HP of Septus is 0;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Football Wolfman":
 				now monster is y;
 				break;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now enemy type entry is 2; [name known]
 	else if HP of Septus is 6:
 		let debit be 0;
@@ -100,7 +99,7 @@ to say Wolfmandesc:
 		now lev entry is 12 + debit;
 		now wdam entry is 14 + ( ( debit * 3 ) / 10 );
 		now lootchance entry is 0;
-		now area entry is "nowhere";
+		now area entry is "Nowhere";
 		say "     Septus and several of the nearest wolves move in to fight out, growling angrily and intent on throwing you out for good. The others clear the area and start cheering and howling in excitement like a rowdy crowd of football fans. At this point, the wolfmen aren't going to hold back like they have been during the recruitment and training, rushing at you like an offensive line. You growl back and flex your powerful, lupine body and charge as well, your wild instincts pumping adrenaline into your blood while a small corner of your mind hopes you haven't gotten in over your head.";
 		if jenniferwolves is 1:
 			say "     At least you do have at least one supporter out among the wolves encircling the fight and awaiting its outcome. The wolfman son you had with Jennifer is cheering you on from the edge of the area cleared from the match. A few of the other spectators push and growl at him, eventually a fight breaking out between him and another";
@@ -118,12 +117,12 @@ to say Wolfmandesc:
 				increase HP of player by jenniferwolves * 3;
 	else if HP of Septus is 99:
 		say "ERROR-FW99: This creature should no longer be randomly encountered.";
-		now area entry is "nowhere";
+		now area entry is "Nowhere";
 		now fightoutcome is 19;
 		now combat abort is 1;
 	else if HP of Septus >= 7:
 		say "ERROR-FW[HP of Septus]: This creature should no longer be randomly encountered.";
-		now area entry is "nowhere";
+		now area entry is "Nowhere";
 		now fightoutcome is 19;
 		now combat abort is 1;
 	else:
@@ -138,12 +137,12 @@ to say fw_attack:
 
 Section A - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Football Wolfman";
 	now enemy title entry is "Football Wolfman Recruiter";
 	now enemy name entry is "Septus";
@@ -191,8 +190,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 2 - Sports Drink
 
@@ -214,8 +214,8 @@ instead of sniffing sports drink:
 	say "The drink smells of sugar end electrolytes - perfect to give you some quick energy.";
 
 to wolfmaninfect:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Football Wolfman":
 			now monster is y;
 			break;
@@ -225,7 +225,7 @@ to wolfmaninfect:
 
 Section 3 - Event and Wolfman Lair
 
-Entrance to the Lair is a situation. The level of Entrance to the Lair is 5. Entrance to the Lair is resolved.
+Entrance to the Lair is a situation. The level of Entrance to the Lair is 5. Entrance to the Lair is inactive.
 The sarea of Entrance to the Lair is "Outside".
 
 Instead of resolving a Entrance to the Lair:
@@ -295,10 +295,14 @@ Section 4 - Jennifer, the Cheerleader
 
 [Smells, Description, Conversation and NPC Interaction]
 
-Jennifer is a woman. Jennifer is in Wolfman Lair. The HP of Jennifer is usually 0.
+Table of GameCharacterIDs (continued)
+object	name
+Jennifer	"Jennifer"
+
+Jennifer is a woman. Jennifer is in Wolfman Lair. The HP of Jennifer is normally 0.
 The description of Jennifer is "[Jenniferdesc]".
 The conversation of Jennifer is { "Grrr!" }.
-Jenniferfucked is a number that varies. Jenniferfucked is usually 0.
+Jenniferfucked is a number that varies. Jenniferfucked is normally 0.
 
 instead of sniffing Jennifer:
 	say "Jennifer has a pretty nice female smell.";
@@ -405,13 +409,9 @@ to say JenniferTalkMenu:
 					say "[WolfTeamManager]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from Jennifer, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from Jennifer, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -594,13 +594,9 @@ to say JenniferSexMenu:
 					say "[JenniferSex6]";
 				now lastfuck of Jennifer is turns;
 		else if calcnumber is 0:
-			say "Change your mind?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from Jennifer, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from Jennifer, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -765,12 +761,15 @@ An everyturn rule:
 Section 5 - Septus, the wolfman talent scout
 
 
+Table of GameCharacterIDs (continued)
+object	name
+Septus	"Septus"
 
-Septus is a man. Septus is in Wolfman Lair. The HP of Septus is usually 100.
+Septus is a man. Septus is in Wolfman Lair. The HP of Septus is normally 100.
 The description of Septus is "[Septusdesc]".
 The conversation of Septus is { "Grrr!" }.
 The icon of Septus is Figure of Septus_icon.
-lastSeptusfucked is a number that varies. lastSeptusfucked is usually 555.
+lastSeptusfucked is a number that varies. lastSeptusfucked is normally 555.
 
 instead of sniffing Septus:
 	say "Septus has a strong, musky male smell.";
@@ -788,8 +787,8 @@ instead of conversing Septus:
 
 Instead of fucking Septus:
 	[puts Football Wolfman as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Football Wolfman":
 			now monster is y;
 			break;
@@ -861,13 +860,9 @@ Instead of fucking Septus:
 					wait for any key;
 					now lastfuck of Septus is turns;
 			else if calcnumber is 0:
-				say "Break off the conversation?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the wolfman, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the wolfman, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -964,12 +959,12 @@ to say WolfTeamManager:
 
 Section 7 - Cheerleading
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Wolfman Cheerleader";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -998,7 +993,7 @@ When Play begins:
 	now HP entry is 1;
 	now lev entry is 1;                 [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 1;                [ Monster's average damage when attacking. ]
-	now area entry is "nowhere";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0;         [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 0;          [ Cock width, more commonly used for ball size. ]
@@ -1017,8 +1012,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;            [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;            [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 to say CheerleaderTryout1:

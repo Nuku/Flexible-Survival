@@ -157,6 +157,10 @@ To say KnockedOnVent:[Various reactions to knocking on the vent.]
 
 Section 3 - NPC and Location
 
+Table of GameCharacterIDs (continued)
+object	name
+Vent	"Vent"
+
 Vent is a man. The HP of Vent is usually 0.
 The description of Vent is "[VentDescription]".
 The conversation of Vent is { "blah blah blarg" }.
@@ -198,7 +202,7 @@ Chapter 1 - Main Menus
 to say VentFoxMenu:[Menu for interacting with Vent.]
 	say "     Well, what do you do with the fox?";
 	setmonster "Latex Fox";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -329,7 +333,7 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 to say VentFoxSexMenu:[Pretty self explanatory.]
 	if player is puremale:
 		say "     What kind of sex do you want to have?";
-		choose row monster from table of random critters;
+		choose row monster from Table of Random Critters;
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
@@ -812,7 +816,7 @@ to say VentFoxTongueFucksPlayer:[Player gets fucked by fox's cock-tongue]
 to say VentFoxFucksPlayer:[Player gets fucked by the fox.]
 	setmonster "Latex Fox";
 	now scalevalue of Vent is VentDomSize;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     The fox seems eager to take you, based on the wagging of his tail. Not wanting to keep him waiting, you quickly strip out of your clothes and get onto all fours. As you present your [bodydesc of player] ass to him, he walks toward you sniffing the air quietly. He presses his nose into your balls gently sniffing them before he moves his nose up to your ass. The vulpine gives a few sniffs there as well before continuing with his plan.";
 	if VentFluidAmount is 0: [Average Fluid]
 		if anallevel is 3: [Player gets rimmed by Vent]

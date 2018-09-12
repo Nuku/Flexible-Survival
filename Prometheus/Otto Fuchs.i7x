@@ -32,6 +32,10 @@ to say OttosApartmentDesc:
 
 Section 2 - NPC Declaration
 
+Table of GameCharacterIDs (continued)
+object	name
+Otto	"Otto"
+
 Otto is a man. The hp of Otto is usually 0.
 OttoForm is a number that varies. OttoForm is usually 0.
 The description of Otto is "[OttoDesc]".
@@ -83,10 +87,10 @@ to WoundedCivilianEvent: [Meet Otto Fuchs]
 	now hp of Otto is 1;
 	add "Otto Quest" to OpenQuests of player;
 	now Wounded Civilian is resolved;
-	now Doctor & Soldier is not resolved;
+	now Doctor & Soldier is active;
 
 Doctor & Soldier is a situation.
-Doctor & Soldier is resolved.
+Doctor & Soldier is inactive.
 The level of Doctor & Soldier is 0.
 The sarea of Doctor & Soldier is "Outside".
 
@@ -114,20 +118,22 @@ to DoctorandSoldierEvent: [Otto saves a soldier's life]
 		say "     For a moment, you think that this has killed him as he becomes completely limp. You realize how very wrong you were when his thrashing resumes, and the pained screams increase in intensity. Several of the onlookers turn away and cover their ears. Dr. Fuchs, seeing how concerned many of you are, shouts over the soldier, 'Probably a mixture of the infections fighting each other, incompatibility in blood types, and just the transformation process' normal effects. If his mind survives this, his body will too.' You're not sure whether this is reassuring or not. Froth trickles from the corner of the transforming human's mouth as tawny-orange fur pushes through his skin and his bones realign. His face fills out, forming into that of... a tiger. It seems that the gamble has paid off. The worst of it seemingly over, his body is no longer rigid. The shouts stop too, becoming weak grunts as the last transformations occur.";
 		WaitLineBreak;
 		say "     Before you lies the newly-transformed tiger. The remains of his clothes have torn from his vulnerable form. Like his progenitor, he is covered in rich, black-and-orange-striped fur, a thick tail twitching beneath him. Letting out a sigh, he clambers to his feet and stands up. He has gained several inches in height, as well as elsewhere, judging from the size of his flaccid shaft. A cream-furred scrotum hangs between his legs, the fur on his inner thighs of similar color. He gently feels over his new body, especially interested in what his face feels like. 'I can hear so much more... and the smells. This is going to take some getting used to. Thank you, sir,' he addresses the tiger. 'I would have died if you hadn't all saved me. Thank you, Dr. Fuchs, and you, Miss?' he says turning to the fox, waiting for her name. 'Genevieve,' the nurse replies, giving a small curtsy. The spectacle resolving with a happy ending, much of the crowd disperses, returning to their homes.";
+		now Resolution of Doctor & Soldier is 1; [suggested tiger form]
 	else: [crocodile]
 		say "     The toothy reptile kneels down to make it easier for the nurse to get a blood sample. The young fox woman strokes the crocodile's shoulder as she brings the needle of the syringe to his arm. He flinches slightly as it penetrates his skin, the vulpine's paw rubbing beneath his chin to soothe him. Blood is sucked into the vacuum as she withdraws the plunger, the red liquid the dying soldier's last hope. The fox pulls the needle out of the crocodile's arm and passes the syringe to her superior, Otto watching the soldier intently as he waits for the immunosuppressants to wear off. It doesn't take long for this to happen, the human letting out a pained shout as bones reform violently. The tiger and the wolf quickly try and hold him still to prevent him hurting himself further. Not missing a beat, Dr. Fuchs inserts the needle with precision directly into the thrashing soldier's deltoid, steadily injecting the fluid.";
 		say "     For a moment, you think that this has killed him as he becomes completely limp. You realize how very wrong you were when his thrashing resumes, and the pained screams increase in intensity. Several of the onlookers turn away and cover their ears. Dr. Fuchs, seeing how concerned many of you are, shouts over the soldier, 'Probably a mixture of the infections fighting each other, incompatibility in blood types, and just the transformation process' normal effects. If his mind survives this, his body will too.' You're not sure whether this is reassuring or not. Froth trickles from the corner of the transforming human's mouth as his skin toughens and his bones realign. His face elongates, forming into that of a crocodile. It seems that the gamble has paid off. The worst of it seemingly over, his body is no longer rigid. The shouts stop too, becoming weak grunts as the last transformations occur.";
 		WaitLineBreak;
 		say "     Before you lies the newly-transformed crocodile. The remains of his clothes have torn from his vulnerable form. Like his progenitor, he is covered in brown-green scales, a thick tail squashed underneath him. Letting out a sigh, he clambers to his feet and stands up. He has gained several inches in height. Between his legs, there is an absence of external genitalia, a discrete slit hopefully containing his penis. He gently feels over his new body, especially interested in what his face feels like. 'I can taste so much more... and the smells. This is going to take some getting used to. Thank you, sir,' he addresses the crocodile. 'I would have died if you hadn't all saved me. Thank you, Dr. Fuchs, and you, Miss?' he says turning to the fox, waiting for her name. 'Genevieve,' the nurse replies, giving a small curtsy. The spectacle resolving with a happy ending, much of the crowd disperses, returning to their homes.";
+		now Resolution of Doctor & Soldier is 2; [suggested croc form]
 	say "     The only people remaining are yourself, the ex-soldier, the two medical staff, and the three individuals that intimidated the hyenas. 'Thank the Pack for me the next time you see them. That wouldn't have gone nearly as well without you,' Otto addresses the wolf, gratitude obvious on his face. 'It would be a lot easier if you would accept the Den Mother's offer of protection, but we understand that you can help more people out here. But I better report to my Alpha, be careful, Otto.' He drops to all fours and runs down a side street, towards where you heard the howl earlier. Looking surprisingly grim, the larger tiger steps up to the doctor and rests his paw on his shoulder. 'We need to talk in private about what just happened.' Fuchs's shoulders slump, but he nods. A brief flash of anger crosses Genevieve's face at the tiger's words, but she quickly stifles this, giving you a grateful nod before gently guiding the recent patient towards Otto's house.";
 	WaitLineBreak;
 	say "     The doctor turns to you and shakes your hand. 'You seem to turn up when things go pear-shaped, don't you? Almost as if you know when I'll need help. Thank you, hopefully I'll see you again under better circumstances next time.' The words seem foreboding after the tiger's request to him. Bidding them goodbye, you walk away down the street. Unseen by you, the crocodile and the tiger stonily escort Otto into his house and close the door behind themselves.";
 	now hp of Otto is 2;
 	now Doctor & Soldier is resolved;
-	now Doctor Through the City is not resolved;
+	now Doctor Through the City is active;
 
 Doctor Through the City is a situation.
-Doctor Through the City is resolved.
+Doctor Through the City is inactive.
 The level of Doctor Through the City is 0.
 The sarea of Doctor Through the City is "Outside".
 

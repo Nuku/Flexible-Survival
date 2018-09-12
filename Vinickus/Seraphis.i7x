@@ -18,6 +18,9 @@ Version 1 of Seraphis by Vinickus begins here.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Seraphis	"Seraphis"
 
 Seraphis is a man.
 The description of Seraphis is "[SeraphisDesc]".
@@ -39,9 +42,11 @@ when play begins:
 	add Conflict within the Plains to badspots of guy;
 	add Conflict within the Plains to badspots of furry;
 
+[
 if (cocks of player < 1) and (cunts of player <= 1): [All scenes so far are based around the player character having a dick.]
 	say "     You spot some suspicious figures in the distance, and deciding it's best to avoid such oddities, you turn back from where you came.";
 	now Conflict within the Plains is resolved;
+]
 
 Instead of resolving a Conflict within the Plains:
 	if HP of Seraphis is 0: [First interaction]
@@ -105,6 +110,7 @@ Instead of resolving a Conflict within the Plains:
 					LineBreak;
 					say "     While he is hot, and awfully tempting to bend over for, or even use, you decide it's not worth the risks of dealing with someone so...unstable. At least, that is, for now.";
 					now HP of Seraphis is 50;
+					now Resolution of Conflict within the Plains is 50;
 					now Conflict within the Plains is resolved;
 			else if calcnumber is 2:
 				LineBreak;
@@ -144,28 +150,32 @@ Instead of resolving a Conflict within the Plains:
 					say "     'There we go. Now, for introductions,' he mentions as he turns to you. 'I'm Seraphis, and I must thank you for distracting those three before they could do anything to me that was too severe.' You acknowledge his thanks and give your own name. 'Well, thank you for trusting me with your name, [if player is not defaultnamed][name of player][end if]. Beyond that, I have to go deal with someone immediately. I do hope we meet again though. Goodbye,' he gracefully declares as his arm crosses his waist and his human half bows. He then moves away, getting into a gallop seconds later.";
 					now SeraphisContent is 1;
 					now HP of Seraphis is 61;
+					now Resolution of Conflict within the Plains is 61;
 					now Conflict within the Plains is resolved;
 				else if calcnumber is 3:
 					LineBreak;
 					say "[SubmissiveSeraphisFirst]";
 			else if calcnumber is 3:
-				Linbreak;
+				LineBreak;
 				say "     You decide that whatever is going on here is too strange and dangerous for you, drawing you to get up and move away quickly and quietly.";
 				now HP of Seraphis is 50;
+				now Resolution of Conflict within the Plains is 50;
 				now Conflict within the Plains is resolved;
 		else:
 			LineBreak;
 			say "     You move away as hastily as you can manage without making much noise. Soon you're far, far away from anything immediately dangerous, relatively, at least.";
 			now HP of Seraphis is 50;
+			now Resolution of Conflict within the Plains is 50;
 			now Conflict within the Plains is resolved;
 
 Section 3 - Seraphis Location and Details
 
+[
 if SeraphisContent is 0: [Seraphis isn't pleased enough to open the gate]
 
 
 if SeraphisContent is 1: [Seraphis sees the player as worthy of entrance]
-
+]
 
 to say SeraphisDesc:
 	if debugactive is 1:
@@ -175,15 +185,16 @@ to say SeraphisDesc:
 
 Section 4 - Talk
 
+[
 Instead of conversing the Seraphis:
 
 
-
+]
 
 Section 5 - Sex
 
 to say DominantSeraphisFirst:
-	if gender of player is "Male":
+	if player is male:
 		say "     [if SeraphisNeedy is 1]His words seems to draw you to serve him, to help bring down his need[else]You give in to his stuttered speaking and decide it'd be best to help him first[end if]. The sheer sexual musk radiating off him only makes it that much harder to resist your [if player is dominant]unusually strong submissive side[else if player is submissive]powerful and needy submissive side[end if]. Once you find your body giving into the need, you can't help but walk to his side, stroking a hand through his fur as you lean down for a closer look at his dripping need. You have to question your decision as you do so though, as you're immediately hit with an even more powerful whiff of musk.";
 		say "     Your cock lurches and releases a good dollop of pre as you take a deep breath, your body drawn to take in more air after feeling the sheer heat emitting from his crotch. Of course none of that helps your already aching cock and needy body, making everything all the more sensitive. You can't resist any of your lust-addled mind's needs any longer. You reach forward, grasping the fluid covered cock, giving it a few pumps as you get onto your hand and knees, working yourself right under the beast of a man. The musk right next to his genitals is close to the strongest smelling masculine scent you've encountered, however it is a moot point by now, as your brain is already entirely consumed by the smells and lust.";
 		WaitLineBreak;
@@ -205,16 +216,17 @@ to say DominantSeraphisFirst:
 		say "     'I really needed the help there.' He gives a light chuckle before backing up, your body too drained to do more than stay upright, swiftly failing when his flare starts pulling at your anus. 'You'd be fun to train, but I need to go deal with someone first. And the name's Seraphis, by the way. However, you'll most likely not use that name much, if at all.' Seraphis then turns to you, walking over your form with his cock angled at your face. 'Lick me clean. None of my seed should go to waste.' You use what little energy you have left to do as your told, the musk minimizing your desire to go against anything he says. The salty fluids soon rush over your tongue as you lap up the cum, making sure to pay special attention to his medial ring and behind his flare. After a short period of this, he backs off. 'Good. Now I'll leave you to deal with yourself for now. I'm sure we'll meet again soon.' He gives a wry smile before turning away and moving into a gallop.";
 		now MarkedSeraphisCum is 1;
 		now Conflict within the Plains is resolved;
+		now Resolution of Conflict within the Plains is 1;
 		now HP of Seraphis is 1;
 		now SeraphisContent is 1;
 
 to say SubmissiveSeraphisFirst:
-	if player is "Male":
+	if player is male:
 		say "     You open up your clothes and let your [cockname of player] genitals flop out, your eyes completely locked onto this beast's flank. The donut hole back here, plus the curvy rump around it, is hard to look away from. You know how good it's going to feel to sink your cock down to the root in it, all the while grinding your hips into him[if anallevel < 2]. You gather up as much spit as you can in your mouth, and when there's enough of it, you spit it onto his ass, using your cock to smear it around and into his hole.[else], but you can't resist getting a nice taste of that ass before anything else. Which is why you immediately, and a bit harshly, yank his tail out of the way. Your rough treatment earns you a nice sight of his donut and a quiet, whimpering neigh. With your sight now locked in on your goal, you drop to one knee, propping yourself up as you push your face between those sexy equine curves.";
 		say "     Your nose is quickly met with a strong, masculine musk, and as you poke your tongue out, the taste of sweat and the very same musk you smelled, greets you. With a near mad vigor, you run your tongue over every nook and cranny of his ass, gracing the hole ever so slightly at random intervals, keeping the centaur on edge the entire time. It doesn't take long for his hole to start winking, his excitement growing with each swipe of your tongue, each huffed breath over his ass. Whinny after whinny starts filling your ears, panting gasps and moans following each one, and as you finally move over his twitching hole, you dart your tongue straight into him.";
 		WaitLineBreak;
-		say "     With your tongue wiggling about in his depths, you sloppily thrust it in and out, swiping it around the edges of the inner walls. While you keep up your pleasuring of the beast, you can't help but reach out with your free hand to grip at his ass, rubbing and squeezing his furred flank. You smile to yourself at the sheer noises the centaur makes, giving into the satisfaction of twisting another to your whims. Just as you think about that, you hear huffed utterances, 'Please...pl-please. Fuck. Fuck me.' Your smile grows even more, glee filling you as you give one more thrust of your tongue, and one last suck on his hole. With that, you pull back, angling his flank down towards your hips. [end if][if anallevel < 2]You then angle his flank down towards your hips[end if]. With the centaur's strong back legs lowered, his hips are easy to get into the right position.";
-		say "     The big male's flank is soon mere inches from your cock, and as you pull it closer to your tip, you can feel heat radiate off his rear. That heat envelopes your crotch, driving your lusts further, and as you push your hips forward, you feel his saliva slickened hole part for your [cock size of player] breeding rod. As you sink inch after inch inside him, sheathing your cock in his depths, you move your hand from his flank, resting it on your hip as you push into him. While you sink further in, the lust that filled you before doubles, no, triples as the donut hole tightens and loosens constantly. The hole is quite large, but it has more muscles then most any other hole you've been in, and the mad beast uses them with exceptional skill.";
+		say "     With your tongue wiggling about in his depths, you sloppily thrust it in and out, swiping it around the edges of the inner walls. While you keep up your pleasuring of the beast, you can't help but reach out with your free hand to grip at his ass, rubbing and squeezing his furred flank. You smile to yourself at the sheer noises the centaur makes, giving into the satisfaction of twisting another to your whims. Just as you think about that, you hear huffed utterances, 'Please...pl-please. Fuck. Fuck me.' Your smile grows even more, glee filling you as you give one more thrust of your tongue, and one last suck on his hole. With that, you pull back, angling his flank down towards your hips. [if anallevel < 2]You then angle his flank down towards your hips[end if]. With the centaur's strong back legs lowered, his hips are easy to get into the right position.";
+		say "     The big male's flank is soon mere inches from your cock, and as you pull it closer to your tip, you can feel heat radiate off his rear. That heat envelopes your crotch, driving your lusts further, and as you push your hips forward, you feel his saliva slickened hole part for your [Cock Size Desc of player] breeding rod. As you sink inch after inch inside him, sheathing your cock in his depths, you move your hand from his flank, resting it on your hip as you push into him. While you sink further in, the lust that filled you before doubles, no, triples as the donut hole tightens and loosens constantly. The hole is quite large, but it has more muscles then most any other hole you've been in, and the mad beast uses them with exceptional skill.";
 		WaitLineBreak;
 		say "     Even with how needy he is, you still feel exceptionally skilled muscle movements, twitches, and control. It all drives you closer to the edge even faster than if your sole goal was to get off, but this lustful half-beast still has a great deal more use to you. As you pump in and out of his quivering hole, you focus on the feeling of the sun on your skin, your hips against his rear, but you do everything you can to not think of the slick, suctioning hole quivering around your cock. You try and not think about how it feels when you slam your hips into him, his raised anus pressing against your groin, or how it feels to be pistoning in and out of that warm, fleshy pit.";
 		say "     It's all for not though, and you find your balls tensing and rising with each second, your cock pulsing as you hit the edge and shoot right past it[if player is knotted], shoving your knot straight into his ass[end if]. As you feel your seed pumping through your shaft, the ecstasy of orgasm rushes over your body, filling you with more savage desire as you [if player is knotted]yank your knot out and shove it back in, continuing to pound him as your knot slips in and out of[else]keep pounding in and out of[end if] the fleshy hole you find yourself releasing in.";
@@ -235,17 +247,7 @@ to say SubmissiveSeraphisFirst:
 		say "     You watch as he rises up to his full height, eyes glazed and body sluggish. When he seems to fully recover, he clears his throat and announces his intent, 'I must take care of that insolent fool.' However, he still looks to you, eyes questioning. You give him a single nod and he gallops away. With but dust remaining of his previous presence, you redress and tidy yourself up before leaving the area.";
 		now Conflict within the Plains is resolved;
 		now HP of Seraphis is 15;
+		now Resolution of Conflict within the Plains is 15;
 		now SeraphisContent is 1;
-
-
-[NPCs have these listed as stats by default, can be used for various purposes as variables]
-[
-A person has a number called HP.
-A person has a number called XP.
-A person has a number called Level.
-A person has a number called Dexterity.
-A person has a number called libido.
-A person has a text called linkaction.
-]
 
 Seraphis ends here.

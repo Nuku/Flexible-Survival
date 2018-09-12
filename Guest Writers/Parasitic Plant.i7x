@@ -81,7 +81,7 @@ to say PlantOrSeed:
 
 to say PlantOrSeedRegular:
 	setmongender 5; [creature is herm]		[***maybe???]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "[submitcheck]";
 	let debit be 0;
 	if peachtreefight is 3:
@@ -125,12 +125,12 @@ to say didnotsubmit:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Parasitic Plant"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -178,8 +178,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "parplant"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Alt Combat
@@ -195,7 +196,7 @@ this is the ppstrike rule: [possible sonic attack and sets upcoming strike]
 		now ppatt is true;
 		standardstrike;
 	else:
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now ppatt is false;
 		let the defense bonus be stamina of the player + ( level of player * 2 ) - 10;
 		if gascloud > 0, decrease gascloud by 1;
@@ -220,7 +221,7 @@ this is the ppstrike rule: [possible sonic attack and sets upcoming strike]
 			now monsterhit is false;
 
 this is the ppattack rule:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if ppatt is true:
 		standardhit;
 	else:
@@ -336,8 +337,8 @@ to say parasiticlust:
 			if cockname of player is "Parasitic Plant", now keepcock is 1;
 			now timetillrampage is 0;
 			let hmonlist be a list of numbers;
-			repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear in the current area or Outside ]
-				choose row X from the table of random critters;
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear in the current area or Outside ]
+				choose row X from the Table of Random Critters;
 				if there is no area entry, next;
 				if area entry matches the text battleground:
 					add X to hmonlist;
@@ -348,7 +349,7 @@ to say parasiticlust:
 				repeat with Z running through hmonlist:		[Pick one of the monsters at random]
 					now monster is Z;
 					break;
-				choose row monster from the table of random critters;
+				choose row monster from the Table of Random Critters;
 				LineBreak;
 				say "[one of]Your lustful urges lead you to a [name entry]. Immediately upon seeing the infected monster, you offer yourself to it in the hopes of satisfying some of your seed's hunger.[or]An enticing scent leads to a [name entry]. Hoping to slake your thirst for sexual juices, you immediately submit in the hopes of satisfying your body's carnal hungers.[or]A [name entry] encounters you while you wander in your lustful haze. You submit to it with no reservations, needing to satisfy your deep, internal hunger.[or]A [name entry] crosses your wandering path as you seek out the scents to slake your inner needs. You offer yourself to it, lustful for any sexual satisfaction you may get from it.[or]When your lustful meandering leads to a [name entry], you submit and offer yourself to it.[or]Wandering through the city with no aim greater than lustful self-satisfaction, you come across a [name entry] and give in to it immediately.[in random order]";
 				follow the cock descr rule;
@@ -359,12 +360,12 @@ to say parasiticlust:
 				infect;
 			WaitLineBreak;
 			say "The sex rampage finally ends and you regain control of your urges. You are filled with a copious amount of cum, thick streams of cum are oozing from all your fuckable holes. You can feel the seed deep inside you throb as your plant-like infection reasserts itself as it soaks up the sexual juices it so desired. It seeps through your infected body, reclaiming your altered flesh and spreading further.";
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Parasitic Plant":
 					now monster is y;
 					break;
-			choose row monster from table of random critters;
+			choose row monster from Table of Random Critters;
 			if keepskin is 1:
 				now skinname of player is "Parasitic Plant";
 				now skin of player is skin entry;

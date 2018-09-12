@@ -31,8 +31,10 @@ Section 1 - Events
 [Labors of Herakles]
 Labors Introduction is a situation.
 The sarea of Labors Introduction is "Museum".
+The Level of Labors Introduction is 30.
 
-after going to Museum Foyer while (Labors Introduction is not resolved and level of player > 30 and a random chance of 1 in 2 succeeds):
+[This can stay here, for the time when we eventually make more rooms in the museum. One thing that should be remembered is that _Navigation_ is not _Going_ - it's a completely different command that moves the player by a code command, not the act of walking that would trigger the code below]
+after going to Museum Foyer while (Labors Introduction is active and Labors Introduction is not resolved and level of player > 30 and a random chance of 1 in 2 succeeds):
 	move player to Museum Foyer;
 	LaborsIntroductionEvent;
 
@@ -51,11 +53,10 @@ to LaborsIntroductionEvent: [Invited to perform the Labors]
 	now TwelveLaborsStage is 1;
 	add "Twelve Labors Quest" to OpenQuests of player;
 	now Labors Introduction is resolved;
-	now Meet the Nemean Lion is not resolved;
 
 Meet the Nemean Lion is a situation.
-Meet the Nemean Lion is resolved.
-The level of Meet the Nemean Lion is 0.
+Prereq1 of Meet the Nemean Lion is Labors Introduction.
+The level of Meet the Nemean Lion is 30.
 The sarea of Meet the Nemean Lion is "Plains".
 
 instead of going to Dry Plains while (TwelveLaborsStage is 1 and a random chance of 1 in 5 succeeds):
@@ -120,15 +121,19 @@ to MeettheNemeanLionEvent: [Fight the Nemean Lion]
 				WaitLineBreak;
 				say "     A cross between a groan and a sigh bursts from your mouth as the pressure from the hot sperm deep within you sends you over the edge too. Around his still twitching shaft your cunt begins to repeatedly contract, further cum being squeezed from within your body to trickle over your tummy and onto the bottoms of your breasts. With the lion pressed firmly against your backside, you are held in position while you both recover from your orgasmic paralysis. As soon as the feline takes a step back, you collapse on your side, his shaft sliding from your gaping hole, spilling a new river of semen onto the ground. Through the haze of climax, you become concerned about your companion's approaching banishment. 'Don't worry. Banishment isn't death,' a male voice says from behind you. You rapidly turn your head, but see no-one. 'I'm not supposed to be here, so please forgive my not showing myself. But as I was saying, the lion will be fine. Echidna loves her monsters no matter how mundane or unworldly they appear. Good luck in the Labors.'";
 				say "     You gather the being is gone from the silence that follows, only broken by the feline's deep purrs and your panting. With a flash of light, the lion vanishes leaving you alone beside a sizable pool of cum. 'Now that that's done, would you like to know your next task?' You jump slightly at the sound of Zeus's voice and resist the urge to cover yourself considering he was probably watching the whole thing. 'Well, from your lack of refusal I'll take that as a yes. You must defeat a hydra of extraordinary size. Once again, I'm not allowed to give you hints, but just in case you didn't get help for the previous labor, there are people in the city with a knowledge of myth so you could possibly ask them for advice.' As he turns to leave, he says over his shoulder, 'you'll find your quarry in the junkyard, but he's larger than the [']normal['] hydras you find there.' With that, you are left alone again, the soil drinking the result of your breeding.";
+			now Resolution of Meet the Nemean Lion is 1; [won, had sex]
 		else: [Not interested]
 			say "     You shake your head, saying that you have no wish to fornicate in any way with your recent adversary. Zeus looks momentarily surprised, but quickly recovers. 'Each to their own I suppose. Would you like to know your next task?' You silently contemplate the effort the previous labor took but before you can reply Zeus continues. 'From your lack of refusal I'll take that as a yes. You must defeat a hydra of extraordinary size. Once again, I'm not allowed to give you hints, but just in case you didn't get help for the previous labor, there are people in the city with a knowledge of myth so you could possibly ask them for advice.' As he turns to leave, he says over his shoulder, 'you'll find your quarry in the junkyard, but he's larger than the [']normal['] hydras you find there.' With that, you are left alone again, slightly annoyed that the god didn't wait for a proper response.";
+			now Resolution of Meet the Nemean Lion is 2; [won, not interested in sex]
 		now TwelveLaborsStage is 2;
 		increase carried of lionskin by 1;
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     You come round to a landscape devoid of life. The wounds that previously covered your body have mended and, more importantly, you are alive. With a thunderclap, you are no longer alone. A grim faced Zeus looks down at your prone body before speaking, 'You have failed the first Labor. We seemed to have judged you poorly, you are weak and lucky to be alive. In future think properly and make sure you are ready before attempting to overcome challenges you face. We are unlikely to meet with you again. Farewell.' He disappears in another clap of thunder, leaving you alone as rain begins to pelt from the skies. As you sit up, the realization sinks in that while you may have failed, someone made sure you survived your defeat. Who could be mighty enough to defeat the lion when you couldn't?";
+		now Resolution of Meet the Nemean Lion is 3; [lost]
 	else if fightoutcome is 30: [fled]
 		say "     Realizing that the trial ahead of you may be too difficult, you turn and flee. As you retreat, you can hear the large feline pursuing you, snarls and growls encouraging haste. You barely notice the muscular man you pass as you run down the hill going the opposite direction, too focused on your own problems. You continue fleeing for several minutes before you realize that you weren't being chased any more. You turn around to look back at the hill only to find it gone. The expanse of the plains is unadulterated by hills with large lions. 'Don't be too surprised that it's not there anymore,' a voice says behind you. You spin around to find Zeus glaring at you as he strokes his beard. 'Not only did you fail to defeat the Nemean Lion, but your cowardly actions disgrace yourself and us.' This comment is accompanied by the god spitting at your feet.";
 		say "     'In future think properly and make sure you are ready before attempting to overcome challenges you face. We are unlikely to meet with you again. Farewell.' He disappears in another clap of thunder, leaving you alone as rain begins to pelt from the skies. While you are glad you aren't dead, Zeus's reaction dampens your spirits in sync with the rain soaking your skin. You finally have time to think back on the man you passed as you ran and wonder who he was and whether he was alright. You feel that you have seen him somewhere but can't quite remember. His muscles were huge so perhaps he was a bodybuilder you think to yourself as you trudge on in search of shelter from the rain. It doesn't look like you'll be taking part in the Labors any more.";
+		now Resolution of Meet the Nemean Lion is 4; [fled]
 	now Meet the Nemean Lion is resolved;
 
 Section 2 - Table of Game Objects

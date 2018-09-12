@@ -277,6 +277,7 @@ to FindHighestPlayerStat:
 
 Section 2 - Stripping
 
+[
 understand "teststripcrotch" as StripCrotchAction.
 
 StripCrotchAction is an action applying to one topic.
@@ -284,7 +285,6 @@ StripCrotchAction is an action applying to one topic.
 carry out StripCrotchAction:
 	say "[StripCrotch]";
 
-[
 Example Use:
 say "     Korvin [StripCrotch], then grins eagerly.";
 ]
@@ -310,6 +310,7 @@ to say StripCrotch:
 		say "pulls down your [Waistitem] and [CrotchItem], baring your crotch";
 
 
+[
 understand "zTSelfStripCrotch" as SSCRAction.
 
 SSCRAction is an action applying to nothing.
@@ -317,7 +318,6 @@ SSCRAction is an action applying to nothing.
 carry out SSCRAction:
 	say "[SelfStripCrotch]";
 
-[
 Example Use:
 say "     You [SelfStripCrotch], then wrap your hand around your [cock of player] shaft.";
 ]
@@ -342,6 +342,7 @@ to say SelfStripCrotch:
 	else if WaistItem is not journal and CrotchItem is not journal:
 		say "pull down your [Waistitem] and [CrotchItem], baring your crotch";
 
+[
 understand "zTSelfDressCrotch" as SDCRAction.
 
 SDCRAction is an action applying to nothing.
@@ -349,7 +350,7 @@ SDCRAction is an action applying to nothing.
 carry out SDCRAction:
 	say "[SelfDressCrotch]";
 
-[
+
 Example Use:
 say "     You [SelfDressCrotch], then get ready to move out again.";
 ]
@@ -374,7 +375,7 @@ to say SelfDressCrotch:
 	else if WaistItem is not journal and CrotchItem is not journal:
 		say "collect your [CrotchItem] and [Waistitem] to put them back on";
 
-
+[
 
 understand "zTStripChest" as SCAction.
 
@@ -383,7 +384,6 @@ SCAction is an action applying to nothing.
 carry out SCAction:
 	say "[StripChest]";
 
-[
 Example Use:
 say "     Korvin [StripChest], then grins eagerly.";
 ]
@@ -409,6 +409,7 @@ to say StripChest:
 		say "pulls off your [ChestItem] and [BodyItem], baring your chest";
 
 
+[
 understand "zTSelfStripChest" as SSCAction.
 
 SSCAction is an action applying to nothing.
@@ -416,7 +417,6 @@ SSCAction is an action applying to nothing.
 carry out SSCAction:
 	say "[SelfStripChest]";
 
-[
 Example Use:
 say "     You [SelfStripChest], then grin eagerly.";
 ]
@@ -441,7 +441,7 @@ to say SelfStripChest:
 	else if ChestItem is not journal and BodyItem is not journal:
 		say "pull off your [ChestItem] and [BodyItem], baring your chest";
 
-
+[
 understand "zTSelfDressChest" as SDCAction.
 
 SDCAction is an action applying to nothing.
@@ -449,7 +449,7 @@ SDCAction is an action applying to nothing.
 carry out SDCAction:
 	say "[SelfDressChest]";
 
-[
+
 Example Use:
 say "     You [SelfDressChest], then get ready to move out again.";
 ]
@@ -478,8 +478,8 @@ To MultiInfect (x - text) repeats (repeatCount - number):
 	if scenario is "Researcher" and researchbypass is 0:
 		vialchance x;
 		continue the action;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry exactly matches the text x, case insensitively:
 			now monster is y;
 			let reset be 0;

@@ -15,19 +15,19 @@ Campus Thunder is a situation.
 The level of Campus Thunder is 0.
 The sarea of Campus Thunder is "Campus". [Fountain]
 
-instead of going south from College Administration Building while (Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
+instead of going south from College Administration Building while (Campus Thunder is active and Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
 	move player to College Fountain;
 	ThunderboltEncounter1;
 
-instead of going north from College Campus Entrance while (Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
+instead of going north from College Campus Entrance while (Campus Thunder is active and Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
 	move player to College Fountain;
 	ThunderboltEncounter1;
 
-instead of going east from College Walkway Northwest while (Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
+instead of going east from College Walkway Northwest while (Campus Thunder is active and Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
 	move player to College Fountain;
 	ThunderboltEncounter1;
 
-instead of going west from College Walkway Northeast while (Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
+instead of going west from College Walkway Northeast while (Campus Thunder is active and Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 0):
 	move player to College Fountain;
 	ThunderboltEncounter1;
 
@@ -43,9 +43,10 @@ to ThunderboltEncounter1:
 	LineBreak;
 	say "     As you watch the three leave, you spot under the brown horse's undercarriage a large equine phallus, rapidly gaining in length and getting harder by the second. An eye-blink or two later, they all disappear behind some buildings... Interesting.";
 	now ThunderTrackingVariable is 1;
+	now Resolution of Campus Thunder is 1; [first meeting done]
 	now LastCampusWalkin is turns;
 
-instead of going southeast from College Walkway East while (Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 1):
+instead of going southeast from College Walkway East while (Campus Thunder is active and Campus Thunder is not resolved and LastCampusWalkin - turns > 2 and ThunderTrackingVariable is 1):
 	move player to Greek Street;
 	ThunderboltEncounter2;
 
@@ -72,6 +73,7 @@ to ThunderboltEncounter2:
 			say "     Feeding nearly every inch into your ass, Thunderbolt bottoms up inside you before drawing back and thrusting into you again. The sheer force and pleasure of the first few thrusts nearly knocks you out, but you manage to get used to taking the feral member, greatly enjoying it pounding you into the soft ground below. Bottoming in and out of you, you can feel a trickle of drool run down your chin whilst more pre spurts into your colon. Grunting and neighing Thunderbolt gradually speeds up until he's thrusting with wild abandon, really hammering into you. Feeling his cock stiffen and twitch you can feel his full testicles slapping against your ass as with one final thrust into your ass he bottoms every inch inside you and cums. With a slight bulge pressing out of your tummy you feel him unload into you, triggering your own almost mind-shattering orgasm. Thick streams of horse seed spill into your bulging insides as you clench like a vice around his spurting equine member. Your whole world goes black as the intensity of your climax knocks you unconscious.";
 		say "     When you awaken you feel sore but relieved, and... surrounded by warmth? Opening your eyes you see sitting above you with your head in her lap the lioness Ariana, still in her uniform and smiling down at you. 'Hey sweetie, you alright? I know Bolt can be... rough, but as I'm sure you've experienced, he's worth it,' she says, gazing over to her favorite feral horse, who is contently sleeping in the same area you remember him in. You notice a rather impressive puddle of mixed juices below him and you can still feel some of his seed sloshing in your full tummy. Although looking down you notice your legs and lower body have been washed off and re-clothed. 'I... hope you don't mind sweetie but I cleaned you off and dressed you, Bolt was on top of you when I came by to get him.' You're dazed but manage a smile and thank the pretty lioness. She returns the smile and gently helps you to wobbly feet, it's certainly going to be sore for a while but you feel so amazing that you can't complain. Giving you an arm Ariana speaks again, 'Feels good right? You know, you should join me and sis sometime, we come by every now and again to... relive Bolt here, could be a grand time with the four of us.' She gives you a soft swat on the backside and bids you goodbye, watching you slightly limp away.";
 		now ThunderTrackingVariable is 2; [horse sex for the player completed]
+		now Resolution of Campus Thunder is 2; [horse sex]
 		change the east exit of Thunderbolt's Stable to Greek Street;
 		change the west exit of Greek Street to Thunderbolt's Stable;
 		if daytimer is day:
@@ -80,6 +82,7 @@ to ThunderboltEncounter2:
 	else:
 		LineBreak;
 		say "     Slightly wide-eyed you back away and quickly take your leave of the area and the feral thoughts that plague your head.";
+		now Resolution of Campus Thunder is 99; [disinterest in horse sex]
 		now ThunderTrackingVariable is 50; [horse sex refused]
 	now Campus Thunder is resolved; [the end, for now]
 
@@ -106,6 +109,10 @@ An everyturn rule:
 		move Eres to Thunderbolt's Stable;
 
 Section 3 - Thunderbolt NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+Thunderbolt	"Thunderbolt"
 
 Thunderbolt is a man. Thunderbolt is in Thunderbolt's Stable.
 The description of Thunderbolt is "[ThunderboltDesc]".
@@ -165,13 +172,9 @@ instead of fucking Thunderbolt:
 				now lastfuck of Brennan is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the feral horse, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the feral horse, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -210,6 +213,10 @@ to say ThunderboltSex3: [ass fuck]
 	say "     At that sensation, you clamp around his raging hardness yelling to the skies above as you climax from your stallion's long pole. [if player is male]Spurt after spurt of cum is sent flying, making a mess of the bench you are kneeling upon. [else if player is female]You squirt out femcum, making a mess of the bench you are kneeling upon. [end if]Bolt quickly follows you into sweet oblivion, shooting nearly a gallon of thick horse jizz into your spasming body. It floods your inner walls [if player is mpreg_ok]and interior womb [end if]before spraying out onto the ground below. Pushed out of your well-fucked ass by the torrent of cum still pulsing out of its end, his spurting cock lands on your lower back. It covers your backside with more spunk than you know what to do with. As you are coming down from your mutual orgasms a little while later, his now shrinking cock slides from your back as he withdraws himself from above you. You give him a fond smile and scoop up a few handfuls of thick cum to snack on before cleaning and redressing. Stroking Bolt's mane, you are nuzzled by the horse in his pleasant afterglow, then lead your stallion back to his stable.";
 
 Section 4 - Ariana NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+Ariana	"Ariana"
 
 Ariana is a woman.
 The description of Ariana is "[ArianaDesc]".
@@ -254,18 +261,18 @@ instead of fucking Ariana:
 				now lastfuck of Brennan is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the young lioness, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the young lioness, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 Section 5 - Eres NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+Eres	"Eres"
 
 Eres is a woman.
 The description of Eres is "[EresDesc]".
@@ -310,13 +317,9 @@ instead of fucking Eres:
 				now lastfuck of Brennan is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the young lioness, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the young lioness, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

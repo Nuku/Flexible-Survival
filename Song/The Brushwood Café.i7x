@@ -1,5 +1,5 @@
 Version 1 of The Brushwood Café by Song begins here.
-
+[not resolution tagged as it isn't in the game yet]
 "Adds The Brushwood Café to Flexible Survival, a rustic coffee shop run by a group of Shiba Inus."
 
 
@@ -8,7 +8,7 @@ Section 1 - Setup
 Strange Café is a situation.
 The sarea of Strange Café is "Outside".
 
-BrushwoodStatus is a number that varies. BrushwoodStatus is usually 0.
+BrushwoodStatus is a number that varies.[@Tag:NotSaved] BrushwoodStatus is usually 0.
 
 [ BrushwoodStatus                                               ]
 [ Determines current amount of interaction with the coffee shop ]

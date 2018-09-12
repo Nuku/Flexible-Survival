@@ -42,6 +42,10 @@ GertyQuest is a number that varies. GertyQuest is usually 0.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Kyle	"Kyle"
+
 Kyle is a man. The hp of Kyle is usually 0.
 The description of Kyle is "[KyleDesc]".
 The conversation of Kyle is { "<This is nothing but a placeholder!>" }.
@@ -179,13 +183,9 @@ to say KyleTalkMenu:
 				say "     Kyle gets up and heads for the door out of the back room, and you follow. 'Well, it was nice talking to you. Come back soon when you have some time, and we can chat some more.'";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from Kyle, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from Kyle, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -221,7 +221,7 @@ to say KyleTalk4: [talk about his friend]
 			LineBreak;
 			say "     Some of Kyle's worry instantly fades from his face. 'Oh, thank goodness. I'm sure you'll be able to help him out. Just come back and talk to me again once you've found him, alright? I'll be waiting.'";
 			now GertyQuest is 1;
-			now Angry Snake is not resolved;
+			now Angry Snake is active;
 		else:
 			LineBreak;
 			say "     Kyle looks crestfallen. 'I understand, the city out there is dangerous, and I'm sure you're a busy person. Just... think about it, okay?'";
@@ -236,7 +236,7 @@ to say KyleTalk4: [talk about his friend]
 			LineBreak;
 			say "     Some of Kyle's worry instantly fades from his face. 'Oh, thank goodness. I'm sure you'll be able to help him out. Just come back and talk to me again once you've found him, alright? I'll be waiting.'";
 			now GertyQuest is 1;
-			now Angry Snake is not resolved;
+			now Angry Snake is active;
 		else:
 			LineBreak;
 			say "     Kyle looks crestfallen. 'I understand, the city out there is dangerous, and I'm sure you're a busy person. Just... think about it, okay?'";
@@ -381,13 +381,9 @@ to say KyleSexMenu:
 					say "[KyleSex4]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -420,7 +416,7 @@ Section 4 - Events
 Angry Snake is a situation.
 The level of Angry Snake is 4.
 The sarea of Angry Snake is "High".
-Angry Snake is resolved.
+Angry Snake is inactive.
 
 instead of resolving a Angry Snake:
 	if GertyQuest is 1:
@@ -441,12 +437,15 @@ instead of resolving a Angry Snake:
 			say "     Gerty frowns at you. 'Well, since you're here, you may as well go tell Kyle that I'm fine, and that I'll deliver his books soon. Even if I didn't need the help, I appreciate the thought.' He picks up a small bag you hadn't noticed before, and from the view through the opening you can clearly tell that the bag is full of books, Gerty's haul on this expedition. 'I'll just be sure to pack more dictionaries next time, in case more pests decide to try and stop me.' With his goods clasped firmly in his mechanical hands, he turns around to leave, and stops when he sees you're still there. 'What are you waiting for? Get a move on!' In no time at all you're turned around and out the door, very much not wanting another book thrown at you. Time to talk to Kyle.";
 			now GertyQuest is 2;
 			move Gerty to Tenvale College Library;
+			now Resolution of Angry Snake is 1; [won the fight]
 			now Angry Snake is resolved;
 		else if fightoutcome > 19 and fightoutcome < 30:
 			say "     As you collapse, exhausted and injured, the [if GroupFightCounter is 1]trio of german shepherds prowl[else if GroupFightCounter is 2]remaining pair of german shepherds prowl[else]final german shepherd prowls[end if] towards your prone form, clearly preparing to do unspeakable things. However, their concentration is interrupted by another barrage from Gerty, distracting them momentarily. You quickly take advantage of your opening to get away before their attention is brought to you again. Hopefully Gerty will be fine for now.";
+			now Resolution of Angry Snake is 2; [lost the fight]
 			now GertyQuest is 100;
 		else if fightoutcome is 30:
 			say "     You decide to cut your losses and get out of the bookstore before you are defeated by your canine adversaries. You turn around and run, fleeing out the door of the building to the sound of Gerty hurling both books and insults at your foes. Hopefully he'll be fine for now.";
+			now Resolution of Angry Snake is 3; [fled the fight]
 			now GertyQuest is 100;
 		now inasituation is false;
 	if GertyQuest is 100:
@@ -464,13 +463,15 @@ instead of resolving a Angry Snake:
 			say "     Gerty frowns at you. 'Well, since you're here, you may as well go tell Kyle that I'm fine, and that I'll deliver his books soon. Even if I didn't need the help, I appreciate the thought.' He picks up a small bag you hadn't noticed before, and from the view through the opening you can clearly tell that the bag is full of books, Gerty's haul on this expedition. 'I'll just be sure to pack more dictionaries next time, in case more pests decide to try and stop me.' With his goods clasped firmly in his mechanical hands, he turns around to leave, and stops when he sees you're still there. 'What are you waiting for? Get a move on!' In no time at all you're turned around and out the door, very much not wanting another book thrown at you. Time to talk to Kyle.";
 			now GertyQuest is 2;
 			move Gerty to Tenvale College Library;
+			now Resolution of Angry Snake is 1; [won the fight]
 			now Angry Snake is resolved;
 		if fightoutcome > 19 and fightoutcome < 30:
 			say "     As you collapse, exhausted and injured, the [if GroupFightCounter is 1]trio of german shepherds prowl[else if GroupFightCounter is 2]remaining pair of german shepherds prowl[else]final german shepherd prowls[end if] towards your prone form, clearly preparing to do unspeakable things. However, their concentration is interrupted by another barrage from Gerty, distracting them momentarily. You quickly take advantage of your opening to get away before their attention is brought to you again. Hopefully Gerty will be fine for now.";
+			now Resolution of Angry Snake is 2; [lost the fight]
 		if fightoutcome is 30:
 			say "     You decide to cut your losses and get out of the bookstore before you are defeated by your canine adversaries. You turn around and run, fleeing out the door of the building to the sound of Gerty hurling both books and insults at your foes. Hopefully he'll be fine for now.";
+			now Resolution of Angry Snake is 3; [fled the fight]
 		now inasituation is false;
-
 
 instead of going to Mall Atrium while hp of Kyle is 1: [Kyle date event] [{]
 	KyleDateEvent;

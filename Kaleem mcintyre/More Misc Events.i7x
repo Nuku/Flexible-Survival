@@ -29,9 +29,11 @@ Instead of resolving a Unorthodox Sight:
 		say "     A moment later, you can see proof that the fox really is in control. He tugs the leash as they near a wrecked motorcycle in their path and the wolf obeys right away, moving over and walking around it - a weird relationship, but it seems to work for them. Silently studying the canines a little more openly, you see that the gray-furred wolfman is fully nude except for a red backpack strapped to his muscular back, with straps almost too small for his bulk. He is apparently large in all areas too, as you catch glimpses of a prodigious sheath and weighty balls that swing between his legs as he walks. At the same time, the fox seems utterly average in almost every regard, with nothing to differentiate him from a normal animal except the obvious intelligence he is demonstrating. The fur of the gray wolf's buttocks is matted and seems wet, which you quickly realize is due to the fresh cum oozing out of his asshole with every step as he is led along.";
 		say "     Soon, the fox gives another tug on the leash and stops walking for a second, making his pet react by crouching down next to him and petting him in all of those hard to reach places. With a satisfied yip, the vulpine returns the affection of his companion, licking his muzzle and enjoying further grooming. He eventually leads the wolf onwards, soon vanishing from your sight around a corner. Once they are safely out of range, you get up from your hiding spot and stretch as you reflect on the unorthodox scene you witnessed.";
 		increase FoxMasterEncounters by 1;
+		now Resolution of Unorthodox Sight is 1; [hid and observed]
 	else:
 		LineBreak;
 		say "     With the old saying [']Better safe than sorry['] in the forefront of your mind, you decide not to risk it and just dash the other way, quickly turning a corner. The swift escape avoids any contact at all between yourself and the unknown stranger, which is just fine in your book.";
+		now Resolution of Unorthodox Sight is 99; [disinterest]
 	now Unorthodox Sight is resolved;
 
 Section 2 - Desperation

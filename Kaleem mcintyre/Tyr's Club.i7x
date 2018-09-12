@@ -22,6 +22,10 @@ Tyrtalk is a number that varies.
 TyrDefeated is a number that varies.
 TyrTraining is a truth state that varies. TyrTraining is usually false.
 
+Table of GameCharacterIDs (continued)
+object	name
+Tyr	"Tyr"
+
 Tyr is a man.
 The description of Tyr is "Standing roughly at about seven feet, three inches tall with floppy brown ears and a long, but thin curled tail is the Doberman you met at the dog show arena back at the warehouse district. With only a pair of camouflage shorts on the black and brown furred canine's muscular frame regally stands out as he leans across an undecorated wall while watching the proceedings going on inside of his club. That is, until he turns to notice you walking up to him. The other canine doesn't seem to be specifically trying, but there is an intimidating aura coming from off of him as he stares pointedly at you with his piercing green eyes. Holding you fast into place you don't feel as if you can take a step forward or backwards as the Doberman narrows his jade orbs at you. However, this feeling soon passes when Tyr smiles and waves you over. His perfectly straight fangs give you pause for a second though as the sharpened incisors look ready to rend both flesh and bone. Why does he suddenly seem so much scarier than he had before back at the arena???".
 The conversation of Tyr is { "Battle is the Key to Success!" }.
@@ -52,7 +56,7 @@ Part 2 - Sex Match with Tyr
 
 Instead of fucking the Tyr:
 	setmonster "Doberman";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	If lastfuck of Tyr - turns < 6:
 		say "'Sorry, I'm not ready to go another round with you yet. Maybe come back in a little while?' Tyr rolls his shoulders and you can hear his spine pop slightly.";
 		stop the action;
@@ -218,16 +222,9 @@ to TyrSexMenu:
 				else if nam is "Lose: no sex":
 					say "[TyrWon_NoSex]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the Tyr, shaking your head as he gives you a questioning look.";
-				wait for any key;
-		else:
-			say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the Tyr, shaking your head as he gives you a questioning look.";
+			wait for any key;
 	wait for any key;
 	clear the screen and hyperlink list;
 
@@ -235,7 +232,7 @@ to TyrSexMenu:
 Part 3 - Player Win Scenes
 
 to say TyrLost_Vaginal:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "Letting the other know that you'd like to have a thick piece of Doberman meat stuffed up into your cunt you have no time to prepare before Tyr is knocking you down to the ground in a massive glomp of a hug. 'I was so hoping you'd ask for that!' The Dobie doesn't make a pretense of things as he pulls you out of your clothes and then slips his own shorts down off of his impressive black and brown furred frame. In the time it takes a sparrow to flap its wings Tyr is hiking your hips up onto his shoulders and running his sheath along the length of your [bodyname of player] cunt.[line break]";
 	say "The Dobie's impressive piece of meat wastes no time in pushing free from its warm home as the rocking and grinding motions coming from Tyr excites both his body and yours. Once his cock is about half way engorged and with very little ceremony, Tyr tilts his hips down and then spears you along the length of his tapered shaft. A grunting hiss is your reply to the Dobie's slightly rough entry, but soon you find your body growing accustomed to the thick mass of male meat digging deep inside of your hidden depths as Tyr pushes his hips further up inside of you. 'Don't worry, I'll make sure you feel nothing but pleasure once I'm done with you.' A heavy slurp of tongue across your cheek is the only proof of Tyr promise as he continues to join the two of you together.[line break]";
 	say "Once heavy furred balls are pressed flush up against your honeyed hole Tyr whuffs a heavy pant of air across your [facename of player] face and then dips his muzzle down to kiss you. Paying no never mind to how the other man seems to be taking the dominant role of things, despite the fact that [italic type]you[roman type] won your little bout with him, you reach up to press the Doberman's head into you just as you feel him pull back from out of your sucking nadir. Once he has pulled about half of his shaft free the Dobie proves to be gentle, but forceful as he plunges back into you.[line break]";
@@ -293,7 +290,7 @@ to say TyrLost_Neuter:
 	say "'Sorry about that, but I didn't want to take a chance that you'd refuse my offer to become a Doberman.' The Dobie shrugs at you somewhat helplessly before licking his fangs free of your metallic tasting life fluids. 'Don't worry though, I know you'll come around and make an excellent Doberman. But hey, if you chose not to, then that's fine by me.' Tyr nods to you and then watches as the bite he inflicted hastily begins to seal itself.";
 
 to say TyrLost_GetAnal:	[only available through multiple victory menu]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Tyr falls back hard onto his tail after you last assault. Defeated, the Doberman takes a minute to revel in his loss before he grunts and then flips himself up onto his feet. Just when you think the other is about ready to renew the fight you find yourself cocking your head in confusion as he waves a hand at you. 'Well won warrior. I didn't expect to have my tail handed to me, but I suppose that I still have extra training to do. No matter though, to the victor goes the spoils.' Tyr lowers his head to chuckle about something, what you're not sure, before lifting his face to stare at you with glowing green orbs.";
 	LineBreak;
 	if libido of Tyr is 0:
@@ -371,7 +368,7 @@ to say TyrLost_GetCunnilingus:	[only available through multiple victory menu]
 Part 4 - Player Loss Scenes
 
 to say TyrWon_Vaginal:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "Falling down onto your back in defeat Tyr doesn't bother to brag about his victory as he looks to you with focused jade eyes. 'Good fight warrior. Needs some improvement here and there, but I commend you for your effort. As he walks over to give you a hand up you chuckle at the [']compliment['] before gasping as you find yourself being bodily brought into the Doberman's hold. Looking up at Tyr in confusion you are suddenly reminded of his rules of your fight as he grumbles lustfully into the side of your neck.";
 	say "Tyr kisses, or rather voraciously licks you across your face and then backs you against the end of the cage wall. Not having the energy to fight him after you little stint at trying to knock his head in, you simply give in to the Doberman as he shucks you out of your pants and then proceeds to rub his plump groin against your cunt. 'I'm so going to enjoy this. Do you know how often I get to fuck a willing [']anything['] in this place, wait, never mind, that didn't come out.' Tyr chuckles abashedly after breaking his lips from the connection they share with yours.[line break]";
 	say "Not knowing what to say, as your mind is a little tripped out from that previous lip lock, you just let Tyr do as he pleases while you watch. When the Doberman moves a hand down to reach for the clasp of his shorts your lips pull up into a lecherous smirk as you watch the impressive sheath of the other pulling back from around eight hard inches of Dobie dick. 'Don't worry,' Your eyes snap up to look into the chuckling face of the other canine. 'I promise that you won't feel anything but a minor discomfort from me burying my lance into your sheath.' You dubiously look to the other before getting another lick across the face.[line break]";
@@ -488,6 +485,10 @@ Receptionist is in FightPit.
 Section 4 - Receptionist
 
 ReceptionistTalk is a number that varies.
+
+Table of GameCharacterIDs (continued)
+object	name
+Receptionist	"Receptionist"
 
 Receptionist is a man.
 The description of Receptionist is "Off to the side out of the way a young boy is busy scribbling down on some documents with a feathered pen. With gray fur, wire framed lens, red ball cap on and slightly chubby puppy face looking up at you with bright golden eyes you wonder if Tyr knows the other is here. Staring somewhat transfixed by the other's cute pointed ears, button nose, and, from what you can see by peeking over the desk, a chubby black-furred body you wonder if the Doberman has lost him mind by having the other in this kind of place. That is, right before you notice the sign that says [bold type]Receptionist[roman type] hanging down from off of the side of his desk with a giant arrow pointed upwards. For real?".
@@ -613,14 +614,7 @@ to say ArenaFightCheck:
 				increase ArenaBattleCounter by 8;
 				follow the turnpass rule;
 		else if calcnumber is 0:
-			say "[bold type]Exit the fighting menu?[roman type]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	wait for any key;

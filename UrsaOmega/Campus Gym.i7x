@@ -39,6 +39,10 @@ instead of sniffing Campus Gym:
 
 Section 3 - Randy
 
+Table of GameCharacterIDs (continued)
+object	name
+Randy	"Randy"
+
 Randy is a man.
 Randy is in Campus Gym.
 The description of Randy is "A tall, muscular male rhino-man wearing a tank top and track pants. A nametag states his name as simply 'Randy'. From the way he walks around the gym floor helping people, you suspect he's a former (current?) staff member of the gym.".

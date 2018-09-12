@@ -57,9 +57,11 @@ Instead of Resolving a AngieTrapped:
 			increase AngieHappy by 1;
 			move Angie to the Zoo Giftshop;
 			move player to the Zoo Giftshop;
+			now Resolution of AngieTrapped is 1; [rescued Angie]
 		else:
 			LineBreak;
 			say "     Deciding it might be best to let them fight amongst themselves, you continue on your way.";
+			now Resolution of AngieTrapped is 2; [didn't rescue Angie (yet?)]
 	else if AngieHappy is 1:
 		say "     Traveling down the zoo pathways, you hear some strange sounds coming from one of the enclosures. Taking a cautious look, you see what appears to be a large, panther-like beast, growling and chuffing as it tries to reach something that appears to have fallen into a narrow space beside the den. You watch for a while as the beast tries increasingly desperate measures to get at whatever is stuck in there, before he eventually gives up and stalks off in a huff. Curiosity getting the better of you, you go down to investigate and find that some small, cloth-wrapped packet has rolled into the crack.";
 		say "     Grabbing a nearby branch, you manage to push the small bundle far enough to the front for you to reach and take it, finding the packet surprisingly light. As you take a look at it, you see that it's filled with some kind of dried plant matter. [if facename of player is listed in infections of Felinelist]The smell of the stuff in there is just amazing, waking the desire to sniff it, eat it, roll around in it in you. Only with some willpower do you manage to wrap it up tight again, tucking the packet away for later investigation, then[else]While it seems to exude a nice, pleasantly minty odor, you can't quite tell why the big panther wanted it so badly. Shrugging, you decide to tuck it away for further investigation later and[end if] continue through the zoo.";
@@ -67,7 +69,8 @@ Instead of Resolving a AngieTrapped:
 		say "[bold type]You gain a package of catnip![roman type][line break]";
 		increase carried of catnip by 1;
 		now AngieHappy is 2;
-		Now AngieTrapped is resolved;
+		now Resolution of AngieTrapped is 3; [found catnip]
+		now AngieTrapped is resolved;
 
 catnip is a grab object. It is not temporary.
 
@@ -199,6 +202,10 @@ to say SimpleFelineMast:
 
 Section 3 - Angie
 
+Table of GameCharacterIDs (continued)
+object	name
+Angie	"Angie"
+
 Angie is a woman.
 The description of Angie is "[AngieAppearance]".
 The conversation of Angie is { "Mewl!" }.
@@ -315,13 +322,9 @@ to say AngieTalkMenu:
 					say "[AngieTalk7]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the pantheress, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the pantheress, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -533,13 +536,9 @@ to say AngieSexMenu:
 				wait for any key;
 				now lastfuck of Angie is turns;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the pantheress, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the pantheress, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -831,7 +830,7 @@ to say AngieSex4: [Angie rides the player's cock]
 
 to say AngieSex5: [Angie fucks the player]
 	setmonster "Pantherherm";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if player is herm:
 		say "     As you step up to Angie ant tell her you want to get fucked, the pantheress draws you into an eager kiss, then pants, 'Of course, my love. Do you want to take my cock in your pussy, or rather that tight and sexy ass of yours? (Y = pussy, N = ass)'";
 		if player consents:
@@ -958,7 +957,7 @@ to say AngieSex6: [giving her a blowjob]
 
 to say AngieSex7:
 	setmonster "Pantherherm";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if player is herm: [herms]
 		say "     <just a placeholder for herm players for now, sorry>";
 	else if player is male:
@@ -985,8 +984,8 @@ to say AngieSex7:
 
 [Angie + Panther Taur fun]
 to say AngiePTFun:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Pantherherm":
 			now monster is y;
 			break;

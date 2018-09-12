@@ -1,6 +1,10 @@
 Version 1 of Amaryllis by Song begins here.
 [ Version 1.0 - Initial talk options and sex scenes - Song                      ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Amaryllis	"Amaryllis"
+
 Amaryllis is a woman. Amaryllis is in Equinoid Camp.
 The description of Amaryllis is "[AmaryllisDesc]".
 The conversation of Amaryllis is { "I choose you, playerchu!" }.
@@ -71,13 +75,9 @@ to say AmaryllisTalkMenu:
 				wait for any key;
 				say "[AmaryllisTalkMenu]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You excuse yourself and step back from Amaryllis.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You excuse yourself and step back from Amaryllis.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -151,12 +151,8 @@ to say AmaryllisSexMenu:
 				if (nam is "Anal ride"):
 					say "[AmaryllisSex3]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from Amaryllis, shaking your head slightly as she gives a questioning look.";
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from Amaryllis, shaking your head slightly as she gives a questioning look.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	wait for any key;

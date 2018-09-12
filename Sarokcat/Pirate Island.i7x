@@ -12,7 +12,9 @@ The description of Pirate Island is "     Finally, the island with the treasure 
 instead of sniffing Pirate Island:
 	say "The island smells of the ocean and fetid sea caves.";
 
-
+Table of GameCharacterIDs (continued)
+object	name
+Treasure cave	"Treasure cave"
 
 Treasure cave is a man.
 The description of Treasure cave is "     Not just one cave, but a large series of caves that dot the shores of the island. They look like the perfect place for some suspicious pirate to have hidden some treasure. Still, the dark openings look ominous, and you can hear water sloshing within some of them occasionally. It will take a lot of bravery to explore these caves. You will have to [']hunt for treasure['] in them.".
@@ -90,8 +92,8 @@ carry out treasurehunt:
 					stop the action;
 				if T is 5:
 					say "     Wandering through the dark tunnels, you eventually trip over something as you explore one of the alcoves, reaching down you find a small item, hoping it is part of the treasure you decide to take it with you as you explore. Eventually you find your way back out of the caves, without finding the treasure and rather tired, and examine the site you found... well it may not be part of the treasure, but at least it will make a nice souvenir.";
-					let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
-					choose row minortreasure from the table of random critters;
+					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
+					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
 							say "[bold type]You acquired 1 [loot entry].[roman type][line break]";
@@ -123,8 +125,8 @@ carry out treasurehunt:
 					challenge "Pirate Shark";
 					challenge "Pirate Shark";
 					say "     After a long and exhausting ordeal, the sharks have finally left, leaving you in the cave by yourself. Sighing, you lie down to rest for a minute, only to find something uncomfortable underneath you. Glancing down, you realize they left behind the items they were dicing over! While it may not be actual treasure, it certainly isn't anything to sniff at you think as you tuck the items into your pack.";
-					let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
-					choose row minortreasure from the table of random critters;
+					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
+					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
 							add loot entry to invent of player;
@@ -137,8 +139,8 @@ carry out treasurehunt:
 					else:
 						increase carried of food by 1;
 						say "You acquired some seafood!";
-					let minortreasure be a random number from 1 to number of filled rows in the table of random critters;
-					choose row minortreasure from the table of random critters;
+					let minortreasure be a random number from 1 to number of filled rows in the Table of Random Critters;
+					choose row minortreasure from the Table of Random Critters;
 					if there is a loot entry:
 						if loot entry is not " " and loot entry is not "journal":
 							add loot entry to invent of player;
@@ -204,7 +206,7 @@ Instead of resolving a Noteinbottle:
 				else:
 					say "     Having braved the waves, you drag yourself back up onto the beach, one of your hands clutching the object you worked so hard for tightly. Closer examination shows it appears to be an old style glass bottle, with yes, as you half expected a roll of paper inside! More than a bit curious at this point you quickly open the bottle up and fish the message out. Spreading it out on the sand beside you, you puzzle over the hastily scrawled message. It is very difficult to read, but something about 'rats' and 'missing the food court' can be made out. There also seems to be some kind of warning about some kind of pirate sharks in the deeper water? The marks on the back almost seem to be some kind of map, though without some kind of reference and a boat, it is totally useless to you right now. Still if there are pirates, there might be treasure, right? Just to be on the safe side, you brush some short, gray hairs from the map, roll it up and stick it in your pocket anyway. Perhaps you should do some more investigating.";
 					now tmapfound is 1;
-					Now Noteinbottle is resolved;
+					now Noteinbottle is resolved;
 		if fightoutcome >= 20:
 			say "     Driven back by the sea creatures, you are forced back to the beach. You've lost sight of the bottle for now.";
 	else:
@@ -236,7 +238,7 @@ Instead of resolving Findingboat:
 				challenge "Pirate Shark";
 				if lost is 0:
 					say "     Victorious over the pirates who seem intent on stopping you from reaching the island, you continue along your way, and soon the small island is in sight, the island doesn't seem much different from many other small islands in these waters, but you are sure it is the right one, and even better yet, you can see a much easier path back to the shore from here and a cove to store your boat. It should be much easier to visit and leave the island now that you have been here once!";
-					Now Pirate Island is known;
+					now Pirate Island is known;
 					Move player to Pirate Island;
 					now Findingboat is resolved;
 					now tmapfound is 3;

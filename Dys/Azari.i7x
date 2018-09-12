@@ -22,6 +22,10 @@ North of Shag Shack Entrance is Shag Shack Alley.
 The description of Shag Shack Alley is "[ShagShackAlley_Desc]".
 The scent of Shag Shack Alley is "[ShagShackAlley_Scent]".
 
+Table of GameCharacterIDs (continued)
+object	name
+Azari	"Azari"
+
 Azari is a man.
 The description of Azari is "[Azari_Desc]".
 The conversation of Azari is { "blah" }.
@@ -46,7 +50,7 @@ Section 2 - Scenes
 
 to say Azari_Start:
 	setmonster "Latex Fox";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if Azari_Met is false:
 		say "[Azari_Intro]";
 [	else:

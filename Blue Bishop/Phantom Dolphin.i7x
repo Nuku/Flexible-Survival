@@ -2,6 +2,10 @@ Version 1 of Phantom Dolphin by Blue Bishop begins here.
 [Version 1 -- Commissioned]
 "When in Rome..."
 
+Table of GameCharacterIDs (continued)
+object	name
+Discarded Dolphin	"Discarded Dolphin"
+
 Discarded Dolphin is a person. Discarded Dolphin is in Bouncy Castle.
 the description of Discarded Dolphin is "[flotlook]".
 the fuckscene of Discarded Dolphin is "[flotfuck]".
@@ -134,8 +138,8 @@ to flotbind:
 	libidoeval;
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if clearnomore is 0, clear the screen;
 		checkboundrecover;
 		if lustatt > 99:
@@ -164,7 +168,7 @@ to flotbind:
 			now bodyname of player is "Flotted";
 			now humanity of player is 0;
 			end the story saying "You are milked perpetually by the toy.";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		else:
 			let k be 0;
 			now keychar is "INVALID";
@@ -194,7 +198,7 @@ to flotbind:
 					LineBreak;
 					cleanboundmemory;
 					WaitLineBreak;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 				WaitLineBreak;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
@@ -394,8 +398,8 @@ to flotsanitypassive:
 			decrease humanity of player by 1;
 
 to flotsanityorgasm:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Bottlenose Toy":
 			now monster is y;
 			break;

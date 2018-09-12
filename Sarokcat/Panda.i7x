@@ -24,7 +24,7 @@ to say panda appears:
 			say ". The panda-like woman's eyes fix on you, scanning over your female form, and seeming disappointed at what they find. 'Another woman?' the panda cries out in exasperation. '[one of]We don't need any more competition for mates around here![run paragraph on][or]You won't get the men while I'm around![run paragraph on][or]Maybe we can MAKE you a man![run paragraph on][or]You must have hidden the men for yourself! I'll beat their location out of you![run paragraph on][or]I needed someone to vent my frustration on anyways,[at random]' she says with a growl of pure frustration. Not bothering to let you respond, she charges forward, fire in her eyes.";
 
 to say panda attack:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if medeapanda is true:
 		say "     [if HP of player > 0]Rather than fight a pregnant woman about to go into labor, you decide to just give up and let her have her way[else]You end up getting beaten rather than giving you all to fight a pregnant woman about to go into labor[end if].";
 		now non-infectious entry is true;
@@ -48,12 +48,12 @@ To say panda loss:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Panda";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -101,8 +101,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;  [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "bearhugger";  [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings

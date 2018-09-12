@@ -2,15 +2,15 @@ Stables Hotel by Sarokcat begins here.
 
 "Adds a new area to Flexible Survival with a variety of NPCs."
 
-Section 1 - A Stabled Situation
+Section 1 - Stabled Situation
 [For locating the Stables Hotel]
 
-A Stabled Situation is a situation.
+Stabled Situation is a situation.
 Stablesearchstatus is a number that varies.
 when play begins:
-	add A Stabled Situation to badspots of furry;
+	add Stabled Situation to badspots of furry;
 
-Instead of Resolving a A Stabled Situation:
+Instead of Resolving Stabled Situation:
 	if Stablesearchstatus is 0:
 		say "     Wandering through the streets of the city, you hear a strange noise echoing through the streets, like the sound of numerous hooves hitting the sidewalk repeatedly. As the sound seems to be getting closer, you decide to take cover inside of a nearby abandoned car, peeking out through the windows carefully to see just what is making such a racket. You appear to have gotten under cover just in the nick of time, as a small group of horse-like men come trotting down the street, their equine faces scanning the street carefully as they continue along, most likely looking for a new playmate or two.";
 		say "     The horsemen pass your hiding spot without noticing you fortunately, and continue on their way down the streets. Getting out of the car carefully, you find yourself curious as to just where such a group of horses came from, and after considering for a minute, you follow them to find out, only to sigh as you realize that as alert as that group was, trying to follow them would likely only result in you getting caught by them.";
@@ -32,15 +32,18 @@ Instead of Resolving a A Stabled Situation:
 				delete soda;
 				Move player to The Stables Hotel;
 				now battleground is "void";
-				Now The Stables Hotel is known;
-				now A Stabled Situation is resolved;
+				now The Stables Hotel is known;
+				now Resolution of Stabled Situation is 1; [bribed your way in]
+				now Stabled Situation is resolved;
 			else:
 				LineBreak;
 				say "     Sighing as you search through your pack, the two guards look on with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don't have anything the guards would like right now, and that if you want to get into this strange-looking place, you will need to come back later. Maybe with some chips and soda or something. Everyone likes snack food, right?";
 				now Stablesearchstatus is 2;
+				now Resolution of Stabled Situation is 3; [no bribe in the player's inventory]
 		else:
 			say "     Deciding that it might be best just to leave while you can, you make note of the imposing building's location and head back to the Library for now.";
 			now Stablesearchstatus is 2;
+			now Resolution of Stabled Situation is 2; [didn't approach]
 	else if Stablesearchstatus is 2:
 		say "     Wandering through the city, you find your mind increasingly drawn to those strange horsemen that you encountered earlier, and on impulse, decide to take another look at the strange building where they were taking their captives. Returning to the large fortress-like hotel building, you wonder just how bad things were in this district that the owner would take such obvious security measures when they were building a 'pleasure hotel' in this area, though the easy access to all of the pleasures and perils of the red light district nearby probably is more than enough of an answer.";
 		say "     You note that the building and grounds still seem to be guarded by a couple of those powerful horsemen as you look things over again to see if you missed anything the last time you were here. Sighing as you investigate the area, you realize that the only way in appears to be the one the horses are guarding, and that from the numbers you saw heading into here earlier are any indication, fighting the guards will only get you overwhelmed by more of the horsemen, even if not at first, then on subsequent visits. Looking at the large building speculatively, you realize that if you want to get in, you will have to find some way to bribe the guards into looking the other way each time you visit.";
@@ -56,14 +59,16 @@ Instead of Resolving a A Stabled Situation:
 				delete soda;
 				Move player to The Stables Hotel;
 				now battleground is "void";
-				Now The Stables Hotel is known;
-				now A Stabled Situation is resolved;
+				now The Stables Hotel is known;
+				now Resolution of Stabled Situation is 1; [bribed your way in]
+				now Stabled Situation is resolved;
 			else:
 				LineBreak;
 				say "     You begin searching through your pack as you approach the doors, the two horsemen eyeing you curiously and with increasing amusement as you pull out things to try to tempt them with. After several futile minutes of this, you realize that you probably don't have anything the guards would like right now, and that if you want to get into this strange-looking place, you will need to come back later. Maybe with some chips and soda or something. Everyone likes snack food, right?";
+				now Resolution of Stabled Situation is 3; [no bribe in the player's inventory]
 		else:
 			say "     Deciding that maybe it would be best to just ignore this place and whatever secrets lie inside for now, you shoulder your pack and continue on your way.";
-
+			now Resolution of Stabled Situation is 2; [didn't approach]
 
 Section 2 - The Stables Hotel
 
@@ -104,6 +109,10 @@ The description of Mares Quarters is "     This rather large hall leads to a lar
 Fancy is in Mares Quarters.
 Daisy is in Mares Quarters.
 Feeding Table is in Mares Quarters.
+
+Table of GameCharacterIDs (continued)
+object	name
+Feeding Table	"Feeding Table"
 
 Feeding Table is a man.
 The description of Feeding Table is "     A large table has been set up to the side of the room, and it appears to have several different varieties of food set out on it. Perhaps not surprisingly, most of the food is of the type most attractive to horses, with several different types of oatcakes and cereals set out, as well as some chips and grain trail mixes. There is also a small bowl of what appears to be labeled as 'Mare's Milk'. Looking around, you note that some of the mares are eyeing you with curiosity as you look at the table, and a few even grin as they gesture for you to 'Sample the Food'. Maybe it wouldn't hurt to 'Try the Horsefood' set out on the table?".

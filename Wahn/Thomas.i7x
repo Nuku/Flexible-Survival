@@ -111,14 +111,17 @@ Instead of resolving a Centaur Gangbang:
 						now HP of Thomas is 1;
 						move Thomas to Dry Plains;
 						now ThomasSaved is turns;
+						now Resolution of Centaur Gangbang is 3; [told Thomas he is a herm]
 					else if calcnumber is 2:[lie about it]
 						say "     You tell Thomas you don't see anything special about him - well, except being a centaur stallion. Visibly relieved, Thomas says 'Ok, thanks. I guess I'm just not used to this new body.' Turning his upper body, he takes a look at his equine body. 'Damn. Looking like this, I can't even get away out of the city anymore.' He growls to himself. 'But I'll show those fuckers - since they made me a centaur, let's see how they like it when I use this bad-boy on 'their' mares.' His black horsecock emerges from its sheath, dangling below his equine body and dribbling a bit of pre-cum.";
 						now HP of Thomas is 51;
 						move Thomas to Dry Plains;
+						now Resolution of Centaur Gangbang is 4; [didn't tell Thomas he is a herm (and he becomes a male)]
 						now ThomasSaved is turns;
 					else:[finger him]
 						say "     Stepping forward, you reach out and stroke over Thomas's moist pussy lips, then push a finger in between them. That brings out a surprised gasp and moan out of the black centaur herm - followed by a kick of his hind legs. Literally kicked by a horse, you sail a fair bit through the air, then find yourself on your back, aching all over. 'So you're just another of those sex freaks after all! Fuck off, I'm out of here.' is the last you hear from Thomas as he gallops away.";
 						now HP of Thomas is 100;
+						now Resolution of Centaur Gangbang is 99; [fingered Thomas, got kicked]
 	increase score by 20;
 	now Centaur Gangbang is resolved;
 
@@ -136,13 +139,19 @@ to say LoseToCentaurs:
 	infect "Centaur Stallion";
 	infect "Centaur Mare";
 	infect "Centaur Stallion";
+	now Resolution of Centaur Gangbang is 1; [lost to centaurs]
 
 to say RunFromCentaurs:
 	say "     Recognizing a lost fight, you abruptly turn and run as fast as you can. You can only guess what happened to the man you left behind with the centaurs. Most likely, he's another breeding mare by now...";
+	now Resolution of Centaur Gangbang is 2; [fled from centaurs]
 
 Section 2 - Thomas, the herm centaur
 
-Thomas is a man. The HP of Thomas is usually 0.
+Table of GameCharacterIDs (continued)
+object	name
+Thomas	"Thomas"
+
+Thomas is a man. The HP of Thomas is normally 0.
 The description of Thomas is "[ThomasDesc]".
 The conversation of Thomas is { "Mew!" }.
 lastThomasTalk is a number that varies. lastThomasTalk is usually 555.		[turn-counter for talking delays (humanity restoration)]
@@ -293,13 +302,9 @@ to say ThomasTalkMenu:
 					say "[ThomasTalk9]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the black centaur, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the black centaur, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -566,8 +571,8 @@ Section 3 - Fucking Thomas
 
 Instead of fucking the Thomas:
 	[puts Centaur Stallion as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Centaur Stallion":
 			now monster is y;
 			break;
@@ -676,13 +681,9 @@ to say ThomasSexMenu:
 					say "[ThomasSex9]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the black centaur, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the black centaur, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

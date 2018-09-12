@@ -50,9 +50,11 @@ Instead of resolving a How High:
 		repeat with x running from 1 to 6:
 			infect "Horseman";
 		increase score by 1;
+		now Resolution of How High is 1; [smoked]
 	else:
 		LineBreak;
 		say " You decide that mayhaps it's time to leave before you get entangled in something that you can't get out of. Tobacco smoking, or what you think is tobacco anyway, equines probably herald nothing good for you anyway. Turning you make move yourself away from the congregation of horses just in time to hear some of them whinny at you to come back.";
+		now Resolution of How High is 99; [disinterest]
 	now How High is resolved;
 
 How High ends here.

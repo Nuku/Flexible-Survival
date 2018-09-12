@@ -49,6 +49,10 @@ Pigfed is a number that varies. Pigfed is usually 0.
 Pigfucked is a number that varies. Pigfucked is usually 0.
 lust of philip is 255.
 
+Table of GameCharacterIDs (continued)
+object	name
+philip	"philip"
+
 Philip is a man.
 The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet. He is extremely fat with a bald head, floppy ears, and an upturned nose. Flies are constantly buzzing around him, enticed by his foul odor. He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm. Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Large Shed]. He's made a mudhole of his own in one corner of the large shed by breaking a hole in the wall and cracking a pipe. He spends much of his time lounging in it[end if]. Looking at all the mud, the idea of [bold type]wrestling[roman type] with Philip in it just springs to your mind all of its own.".
 Philip is in Pig Pen.
@@ -106,7 +110,7 @@ Carry out pigfeeding:
 
 To pigfeed:
 	setmonster "Piggy";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if pigfed > 0 and tailname of player is not "Piggy":
 		say "     Philip frowns as he take a close look at you, then he grins and smears a handful of mud above your butt as he yells, 'Suuuueeeyyy, pig, pig, pig!' You're not sure if it's the mud or his words that cause it, but your curly pig tail suddenly regrows.";
 		now tailname of player is "Piggy";
@@ -216,7 +220,7 @@ Carry out Mudwrestling:
 
 To Mudwrestle:
 	setmonster "Piggy";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if bodyname of player is "Piggy":
 		now PlayerPigBodied is true;
 	else:
@@ -477,7 +481,7 @@ to say sexwithphilip:
 		say "     'I know I'm a sexy stud and all,' the boar says, rubbing his big gut, 'but even I need to rest up before another go. Don't worry, you can be my sow again soon.'";
 		stop the action;
 	setmonster "Piggy";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if pigfed < 3:
 		say "     'I know it's hard to resist my charmingly good looks,' Philip smiles, 'But the way to my heart is through my stomach and you simply haven't fed me enough times yet.'";
 		stop the action;

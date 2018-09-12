@@ -84,12 +84,12 @@ ShadowBeastEventState is a number that varies.
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Shadow Beast";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -137,8 +137,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;     [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Events
 
@@ -161,14 +162,18 @@ Instead of resolving a Hunted Survivor:
 			challenge "Shadow Beast";
 			if fightoutcome >= 20 and fightoutcome <= 29: [lost/submitted]
 				say "     With the tentacled panther back into darkness, you're left alone in the hallway, sticky with its cum leaking out of your [if player is female]pussy[else]ass[end if]. Collecting your gear, you clean up as good as you can and go back to the surface exit, relieved as you leave behind the dark corridors. Of the man you helped escape, there is no trace. He must have kept running, vanishing out into the city. Who knows what already has or will happen to him out there - naked and exhausted as he is. On the other hand... he might just get lucky and you could run into him again.";
+				now Resolution of Hunted Survivor is 2; [player lost, man escaped]
 			else if fightoutcome >= 30:	                            [fled]
 				say "     Ducking under grasping tentacles and evading slashing claws, you run along the corridor. The panther creature is literally just one or two steps behind and at times you can feel its hot breath on your neck, but you manage to get to through the access door and slam it closed behind you. Holding it closed as the shadow beast slams against it several times, you listen to its frustrated roars and snarls. Then everything gets quiet, and just as you think you can let go another heavy bump from the inside almost throws the door open. There is a snarl, then again silence. With the creature clever enough to try to trick you into thinking it's gone, you end up holding tight on the door for half an hour at least before you relax. Seems like it's gone after all, this time...";
 				say "     Of the man you helped escape, there is no trace. He must have kept running, vanishing out into the city. Who knows what already has or will happen to him out there - naked and exhausted as he is. On the other hand... he might just get lucky and you could run into him again.";
+				now Resolution of Hunted Survivor is 3; [player fled, man escaped]
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 				say "     After having fought of the tentacled shadow beast, you decide to postpone further underground adventures to another time and walk back towards the access door. Stepping out and closing it behind you gives you relief of the constant tension that there might be something in the darkness, watching you.";
 				say "     Of the man you helped escape, there is no trace. He must have kept running, vanishing out into the city. Who knows what already has or will happen to him out there - naked and exhausted as he is. On the other hand... he might just get lucky and you could run into him again.";
+				now Resolution of Hunted Survivor is 1; [player won, man escaped]
 		else:
 			say "     Whirling around, you run as fast as you can back to the exit and don't look back. The sounds of what's happening behind you follow you though, even though you wish you wouldn't hear the man's panicked struggling, followed by a satisfied-sounding roar and painful scream. Rhythmic grunts and growls interspersed with whimpering indicate that the creature at least didn't hunt the man to eat him, though leaving him to 'just be raped' by some monstrosity from the depths of the underground complex is a bit of a weak excuse. A shudder runs down your spine as you throw the door closed behind you and you do your best to scrub what's happened from your mind.";
+			now Resolution of Hunted Survivor is 4; [man fled from player, was captured by the beasts]
 	now Hunted Survivor is resolved;
 
 Section 4 - Endings

@@ -68,6 +68,7 @@ to say beatferalwolf:
 		say ""; [dealt with in the file where the event is described]
 	else if inasituation is false and wolffight is not 3 and HP of Fang is 0:		[Checking to add Fang before running the regular wolf scenes]
 		if a random number between 1 and 100 < ( fangcount - 95 ) and (player is not neuter ):	[3rd to 5th wolf]
+			project the Figure of Fang_face_icon;
 			say "     You watch the feral wolf drop low to the ground as he whimpers and cowers before you. He even pisses a little to show his submission to you. From the scars on his muzzle and sides, you can see that he's been beaten roughly by several of the other wolves. This wolf, clearly a lowly member of his pack, might make an obedient, if still somewhat feral, pet. You could take him off with you, if you're willing to risk bringing such a beast back with you.";
 			say "     [bold type]Shall you try to tame this beastly wolf creature?[roman type][line break]";
 			LineBreak;
@@ -165,7 +166,7 @@ to say FeralWolfVictorySex:
 		WaitLineBreak;
 		say "     Deciding against it, you turn around and head off, leaving the wolf to the mercy of any other creature that might come across it.";
 
-FeralWolfSpecialFightNumber is a number that varies;
+FeralWolfSpecialFightNumber is a number that varies.
 
 to say FeralWolfDesc:
 	setmongender 3;
@@ -183,14 +184,14 @@ to say FeralWolfDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	add "Feral Wolf" to infections of guy;
 	add "Feral Wolf" to infections of furry;
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Feral Wolf"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -238,8 +239,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hump"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Feral Wolf":

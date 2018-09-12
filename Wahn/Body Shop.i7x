@@ -25,6 +25,10 @@ to say BodyShopDesc:
 
 Section 2 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Moreau	"Moreau"
+
 Moreau is a man.
 The description of Moreau is "[MoreauDesc]".
 The icon of Moreau is Figure of Moreau_soft_icon.
@@ -59,13 +63,13 @@ to say MoreauTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if (FirstMannequinTalk is 0 or (FirstMannequinTalk is 1 and MannequinFirstEncounter is 0)):
+	if (FirstMannequinTalk is 0 or (FirstMannequinTalk is 1 and "Mannequin" is not listed in EncounteredEnemies of player)):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask about the mannequins";
 		now sortorder entry is 1;
 		now description entry is "Try to learn about his store";
 	[]
-	if (FirstMannequinTalk is 1 and MannequinFirstEncounter > 0):
+	if (FirstMannequinTalk is 1 and "Mannequin" is listed in EncounteredEnemies of player):
 		choose a blank row in table of fucking options;
 		now title entry is "Ask for the truth about the mannequins";
 		now sortorder entry is 2;
@@ -119,13 +123,9 @@ to say MoreauTalkMenu:
 				-- "Buy something":
 					say "[MoreauPartBuy]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -211,13 +211,9 @@ to say MoreauPartSale:
 					say "[MoreauDickSale]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -234,7 +230,7 @@ to say MoreauFaceSale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your face to it, giving what you can only describe as a hungry stare. Then it stretches out a hand and touches you, a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the very neutral face of your counterpart start to shift, taking on features that seem more and more like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			if facename of player is not name entry:
 				say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 				now facename of player is name entry;
@@ -256,7 +252,7 @@ to say MoreauBodySale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your body to it, stripping off any clothing that might get in the way. Meanwhile, the creature gives what you can only describe as a hungry stare. Then it steps forward and embraces you, almost intimately - wanting to get as much of your bodies to touch as possible. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you feel your counterpart shift, taking on body features that seem more and more like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			if bodyname of player is not name entry:
 				say "     Your [one of][bodytype of player] [or][bodydesc of player] [or][bodydesc of player] [or][bodytype of player] [or][at random]body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 				now bodyname of player is name entry;
@@ -279,7 +275,7 @@ to say MoreauSkinSale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your body to it, stripping off any clothing that might get in the way. Meanwhile, the creature gives what you can only describe as a hungry stare. Then it steps forward and embraces you, almost intimately - wanting to get as much of your bodies to touch as possible. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, the parts you see of your counterpart shift, taking on a skin very much like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			if skinname of player is not name entry:
 				say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
 				now skinname of player is name entry;
@@ -301,7 +297,7 @@ to say MoreauAssSale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your body to it, stripping off any clothing that might get in the way. Meanwhile, the creature gives what you can only describe as a hungry stare. Then it steps forward and embraces you, almost intimately - wanting to get as much of your bodies to touch as possible. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you glance over the shoulder of your counterpart, seeing its rear end taking on a shape very much like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			if tailname of player is not name entry:
 				say "     Your ass [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 				now tailname of player is name entry;
@@ -323,7 +319,7 @@ to say MoreauDickSale:
 		if MoreauPaymentAccepted is true:
 			say "     The mannequin pulls the curtain closed and waits for you to present your body to it, stripping off any clothing that might get in the way. Meanwhile, the creature gives what you can only describe as a hungry stare. Then it steps forward and lays a hand on your chest, stroking it down your front almost sexually before it comes to cup your genitals. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you glance down between your bodies, seeing its own crotch taking on a shape very much like your own.";
 			setmonster "Mannequin";
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			if cocks of player > 1:
 				say "     Sudden pleasure runs through your doomed [cock of player] cock[smn] as [ittheym] spray[smv] the last of [itstheirm] seed, dwindling down to nothing at all and vanishing, leaving only [one of]the powerful[or]that final[at random] orgasm to remember [itthemm] by as you cease to be a male altogether.";
 			if cunts of player > 1:
@@ -438,13 +434,9 @@ to say MoreauPartBuy:
 					say "[MoreauCrotchBuy]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -528,17 +520,13 @@ to MoreauFaceSelection:
 					setmonster "Succubus";
 				-- "A snow leopard muzzle":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of random critters;
+				choose row monster from the Table of Random Critters;
 				say "[MoreauFaceBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -552,7 +540,7 @@ to say MoreauFaceBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your face to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll stretches out a hand and touches you - a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the facial features of your counterpart start to shift, taking on an appearance that seems more and more like your own.";
-		choose row monster from the Table of random critters;
+		choose row monster from the Table of Random Critters;
 		if debugactive is 1:
 			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
 		if facename of player is not name entry:
@@ -644,17 +632,13 @@ to MoreauBodySelection:
 					setmonster "Succubus";
 				-- "Anthro snow leopard":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of random critters;
+				choose row monster from the Table of Random Critters;
 				say "[MoreauBodyBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -668,7 +652,7 @@ to say MoreauBodyBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your body to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll steps forward and embraces you, almost intimately - wanting to get as much of your bodies to touch as possible. It is a touches you - a cool sensation to feel it against you, breaking the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you feel your counterpart shift, taking on body features that seem more and more like your own.";
-		choose row monster from the Table of random critters;
+		choose row monster from the Table of Random Critters;
 		if debugactive is 1:
 			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
 		if bodyname of player is not name entry:
@@ -761,17 +745,13 @@ to MoreauSkinSelection:
 					setmonster "Succubus";
 				-- "Snow leopard fur":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of random critters;
+				choose row monster from the Table of Random Critters;
 				say "[MoreauSkinBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -785,7 +765,7 @@ to say MoreauSkinBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your skin to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll stretches out a hand and touches you - a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the facial features of your counterpart start to shift, taking on an appearance that seems more and more like your own.";
-		choose row monster from the Table of random critters;
+		choose row monster from the Table of Random Critters;
 		if debugactive is 1:
 			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
 		if skinname of player is not name entry:
@@ -877,17 +857,13 @@ to MoreauTailSelection:
 					setmonster "Succubus";
 				-- "A snow leopard tail":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of random critters;
+				choose row monster from the Table of Random Critters;
 				say "[MoreauTailBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -901,7 +877,7 @@ to say MoreauTailBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your tail to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll stretches out a hand and touches you - a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the features of your counterpart start to shift, taking on an appearance that seems more and more like your own.";
-		choose row monster from the Table of random critters;
+		choose row monster from the Table of Random Critters;
 		if debugactive is 1:
 			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
 		if tailname of player is not name entry:
@@ -993,17 +969,13 @@ to MoreauCockSelection:
 					setmonster "Succubus";
 				-- "A snow leopard groin":
 					setmonster "Snow Leopard";
-				choose row monster from the Table of random critters;
+				choose row monster from the Table of Random Critters;
 				say "[MoreauCrotchBuyPayment]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -1017,7 +989,7 @@ to say MoreauCrotchBuyPayment:
 	say "[MoreauBuyPaymentOptions]";
 	if MoreauPaymentAccepted is true:
 		say "     The mannequin pulls the curtain closed and waits for you to present your cock to it, giving what you can only describe as a sullen stare. Seems like despite the power Moreau has over it, the creature loathes parting with anything it has claimed as its own. For a few seconds nothing more happens, then the living doll stretches out a hand and touches you - a touches you - a cool sensation that breaks the illusion a bit of it being a living thing. Something seems to tug at your self, drawing essence away from your body, and with an odd fascination, you see the features of your counterpart start to shift, taking on an appearance that seems more and more like your own.";
-		choose row monster from the Table of random critters;
+		choose row monster from the Table of Random Critters;
 		if debugactive is 1:
 			say "DEBUG -> Target Infection Name Entry: [name entry] <- DEBUG[line break]";
 		follow the sex change rule;
@@ -1123,7 +1095,7 @@ An everyturn rule:
 		else if facename of player is not BodyShopGuaranteedFace:
 			say "     You can feel the magic that Moreau used to guarantee the new face you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your head to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedFace;
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     Your face [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [face change entry].";
 			now facename of player is name entry;
 			now face of player is face entry;
@@ -1134,7 +1106,7 @@ An everyturn rule:
 		else if bodyname of player is not BodyShopGuaranteedBody:
 			say "     You can feel the magic that Moreau used to guarantee the new body you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your body to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedBody;
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     Your body [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [body change entry].";
 			now bodyname of player is name entry;
 			now body of player is body entry;
@@ -1149,7 +1121,7 @@ An everyturn rule:
 		else if skinname of player is not BodyShopGuaranteedSkin:
 			say "     You can feel the magic that Moreau used to guarantee the new skin you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your skin to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedSkin;
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     Your skin [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [skin change entry].";
 			now skinname of player is name entry;
 			now skin of player is skin entry;
@@ -1163,7 +1135,7 @@ An everyturn rule:
 		else if tailname of player is not BodyShopGuaranteedtail:
 			say "     You can feel the magic that Moreau used to guarantee the new tail you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your tail to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedtail;
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     Your tail [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [ass change entry].";
 			now tailname of player is name entry;
 			now tail of player is tail entry;
@@ -1177,7 +1149,7 @@ An everyturn rule:
 		else if cockname of player is not BodyShopGuaranteedCrotch:
 			say "     You can feel the magic that Moreau used to guarantee the new crotch you bought build up its power, making you feel hot and flushed. Then it overwhelms what infection you currently have and forces your cock to confirm to the set shape once more.";
 			setmonster BodyShopGuaranteedCrotch;
-			choose row monster from the Table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     Your crotch [one of]tingles[or]goes flush[or]vibrates with odd pleasure[or]goes cold[or]feels oily[at random] as [cock change entry].";
 			now cockname of player is name entry;
 			now cock of player is cock entry;
@@ -1187,7 +1159,7 @@ Section 5 - Events
 Body Choice Dilemma is a situation.
 The sarea of Body Choice Dilemma is "Nowhere".
 
-after going to Body Shop while (Body Choice Dilemma is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
+after going to Body Shop while (Body Choice Dilemma is active and Body Choice Dilemma is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
 	BodyChoiceDilemmaEvent;
 
 to BodyChoiceDilemmaEvent:
@@ -1217,12 +1189,14 @@ to BodyChoiceDilemmaEvent:
 		say "     You only have to wait a short moment until the naga comes back with a brand new Jaime. The snow leopard is rubbing his new body in a mist of excitement, clearly enjoying this new form: 'Oh my god... I'm so fluffy! This is amazing! And I'm like, so small and everything! This is exactly what I wanted.' The snow leopard gives you a hug, rubbing his body against you a bit in the process. 'Thank you, friend. This was the right call. And thanks to you too, alligator man. I think this is who I was meant to be.' As the naga's smile twitches lightly in vexation, he puts on his fakest smile, congratulating Jaime his purchase and accompanying him to the entrance of the shop, where the snow leopard departs with a final wave to you.";
 		WaitLineBreak;
 		say "     'Well, a satisfied client always makes for a good day!' the reptile declares with an enthusiastic clap of hands. 'And for your help, as well as for making you wait, it is only normal I give you a little something in return,' the naga declares as he reaches the pile of food cans, taking one and passing it to you. 'Everybody should profit from good business', he concludes with a smile. For a moment, he seems pensive, then asks 'I don't actually look like an alligator, do I?' with worried eyes. You assure the shop keeper that he looks like a naga and nothing else, which seems to reassure him enough.";
+		now Resolution of Body Choice Dilemma is 1; [suggested male]
 	else if calcnumber is 2:
 		LineBreak;
 		say "     When you suggest that the horse would likely enjoy being female, his face brightens up. 'Yeah... Yeah, you're right! I shouldn't hesitate going all the way into being feminine, that's what I came here for isn't it?' The newly determined equine turns to Moreau with a smile. 'I would like the succubus body, please.' The naga keeps his usual polite smile, although his eyes betray his relief: 'Wonderful! I am delighted to hear this. I am certain you will enjoy your pick. Now, all that is left to do is to give you what you desire'. The reptile leads his client to the changing rooms, while you stay behind, unwilling to disturb some sort of potentially emotional moment for the soon-to-be succubus.";
 		say "     You only have to wait a short moment until the naga comes back with a brand new Jaime. The succubus is rubbing her new body in a mist of excitement, clearly enjoying this new form: 'Goodness, look at me... I'm so hot! Old me would totally have fucked me right here on the spot. Actually new me wishes he could, too. No, wait, SHE wishes. Oh, I like the sound of that.' The succubus starts gently rubbing her newly acquired pussy lips, until Moreau brings her back to reality with a polite cough. After a giggle and an apology, she gives you a hug, rubbing her body against you a bit in the process. 'Thank you, friend. This was the right call. And thanks to you too, alligator man. I think this is who I was meant to be.' As the naga's smile twitches lightly in vexation, he puts on his fakest smile, congratulating Jaime on her purchase and accompanying her to the entrance of the shop, where the new female departs with a final wave to you.";
 		WaitLineBreak;
 		say "     'Well, a satisfied client always makes for a good day!' the reptile declares with an enthusiastic clap of hands. 'And for your help, as well as for making you wait, it is only normal I give you a little something in return,' the naga declares as he reaches the pile of food cans, taking one and passing it to you. 'Everybody should profit from good business', he concludes with a smile. For a moment, he seems pensive, then asks 'I don't actually look like an alligator, do I?' with worried eyes. You assure the shop keeper that he looks like a naga and nothing else, which seems to reassure him enough.";
+		now Resolution of Body Choice Dilemma is 2; [suggested female]
 	else:
 		LineBreak;
 		say "     When you suggest that the horse should try being a herm so he would know what it's like being a submissive male AND being a female, he sighs and answers with regret in his voice. 'Well of course that would be the dream, when I showed him my supplies the shop keeper told me I had [']just['] enough for a full body change so... I think I'm a few food cans short for that.' As you slowly turn to the naga, crossing your arms and raising an eyebrow, the shop keeper lets out a discreet but genuine laugh at being caught red-handed and starts speaking after a little cough. 'Well a client getting a full body change is a rare occurrence, and as such it would be a shame to see you leave this shop not fully satisfied, so I could... Bend the rules a bit, and grant you two sets of genitals. On the house.'";
@@ -1230,6 +1204,7 @@ to BodyChoiceDilemmaEvent:
 		WaitLineBreak;
 		say "     You only have to wait a short moment until the naga comes back with a brand new Jaime. The leopard is rubbing her new body in a mist of excitement, clearly enjoying this new form: 'Goodness, look at me... I'm so hot! Old me would totally have fucked me right here on the spot. Actually new me wishes he could, too. No, wait, SHE wishes. [']She['] sounds more right. Yeah, I like the sound of that.' The snow leopard starts gently rubbing her newly acquired pussy lips, until Moreau brings her back to reality with a polite cough. After a giggle and an apology, she gives you a hug, rubbing her body against you a bit in the process. 'Thank you, friend. This was the right call. And thanks to you too, alligator man. I think this is who I was meant to be.' As the naga's smile twitches lightly in vexation, he puts on his fakest smile, congratulating Jaime on her purchase and accompanying her to the entrance of the shop, where the new hermaphrodite departs with a final wave to you.";
 		say "     'Well, a satisfied client always makes for a good day!' the reptile declares with an enthusiastic clap of hands. 'And for your help, as well as for making you wait, it is only normal I give you a little something in return,' the naga declares as he reaches the pile of food cans, taking one and passing it to you. 'Everybody should profit from good business', he concludes with a smile. For a moment, he seems pensive, then asks 'I don't actually look like an alligator, do I?' with worried eyes. You assure the shop keeper that he looks like a naga and nothing else, which seems to reassure him enough.";
+		now Resolution of Body Choice Dilemma is 3; [suggested herm]
 	LineBreak;
 	say "[bold type]You gain 1 food![roman type][line break]";
 	increase carried of food by 1;
@@ -1239,7 +1214,7 @@ to BodyChoiceDilemmaEvent:
 Horn Removal is a situation.
 The sarea of Horn Removal is "Nowhere".
 
-after going to Body Shop while (Horn Removal is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and GusTalkProgress > 0 and a random chance of 1 in 3 succeeds):
+after going to Body Shop while (Horn Removal is active and Horn Removal is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and GusTalkProgress > 0 and a random chance of 1 in 3 succeeds):
 	HornRemovalEvent;
 
 to HornRemovalEvent:
@@ -1251,7 +1226,7 @@ to HornRemovalEvent:
 Drunk Change Party is a situation.
 The sarea of Drunk Change Party is "Nowhere".
 
-after going to Body Shop while (Drunk Change Party is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
+after going to Body Shop while (Drunk Change Party is active and Drunk Change Party is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
 	DrunkAndMakingChangesEvent;
 
 to DrunkAndMakingChangesEvent:
@@ -1279,15 +1254,17 @@ to DrunkAndMakingChangesEvent:
 		say "     The mouse boy, or rather the ill-assorted woman, is soon given a fresh beer that she immediately start gulping down in one go. After some drunken debate, a mall rat boy is pushed where the once-mouse boy previously stood, and the group turns to Moreau again chanting 'Go! Go! Go' while handing him two more six packs. Having no choice but to wait, you patiently witness two more people play this little game and end up with strange mismatched infections, before the group eventually decides it had enough and noisily leaves the shop, leaving behind empty beer cans and not even bothering to thank or say goodbye to the naga. You hear their chants in the distance for quite some time, and can safely assume that the party is far from over for them. Hopefully, they won't do anything stupid - or rather, anything even more stupid than this.";
 		WaitLineBreak;
 		say "     Moreau still seems upset, but appears relieved that the obnoxious group finally left as he starts picking up the beer cans on the floor and dumping them into the shop trashcan. 'Eight of them played that game. [italic type]Eight[roman type].' He sighs as he completes his cleaning, still unnerved by the experience. 'Let's hope that they don't end up regretting their decisions once they sober up, assuming they ever stop partying enough for that to happen. Because they are [italic type]not[roman type] getting those parts back for free after such insufferable behavior in my shop. This is a worthy establishment, not some rave party in somebody's backyard! Oh, well. At least I got a very good deal out of it.' As you curiously look at the many unopened beer cans Moreau obtained from the group, the naga gives you a sly grin. 'It's unusual payment, but alcohol has become quite the valuable item if you know the right people.'";
+		now Resolution of Drunk Change Party is 1; [checked out the party]
 	if calcnumber is 2:
 		say "     You turn back and spend the next ten minutes wandering around the mall. Soon enough you hear the sounds of party getting stronger, and see a group of drunken people, all with strange, mismatched infections, partying their way further down the mall. Happy to have avoided whatever they were up to, you enter the Body Shop and find Moreau picking up empty beer cans on the floor and dumping them in the shop trash can. 'Don't even ask', he says.";
+		now Resolution of Drunk Change Party is 2; [didn't check out the party]
 	now lastBodyShopEvent is turns;
 	now Drunk Change Party is resolved;
 
 Body Poke Poke is a situation.
 The sarea of Body Poke Poke is "Nowhere".
 
-after going to Body Shop while (Body Poke Poke is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
+after going to Body Shop while (Body Poke Poke is active and Body Poke Poke is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
 	BodyPokePokeEvent;
 
 to BodyPokePokeEvent:
@@ -1298,7 +1275,7 @@ to BodyPokePokeEvent:
 Body Supplications is a situation.
 The sarea of Body Supplications is "Nowhere".
 
-after going to Body Shop while (Body Supplications is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
+after going to Body Shop while (Body Supplications is active and Body Supplications is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
 	BodySupplicationsEvent;
 
 to BodySupplicationsEvent:
@@ -1326,16 +1303,18 @@ to BodySupplicationsEvent:
 		say "     If looks could kill, the naga would be annihilated on the spot but eventually, Tirsa can only comply. 'Well, I guess that's the best deal I can get, isn't it? Damn, now I'm gonna have to [italic type]actually[roman type] promote this place.' The naga smiles. 'It would appear so!' Eventually, he leads the hyena to the changing rooms, and she comes out a full panther, although, as promised, Moreau did not restore her crotch to a fully female state. She walks to you and says 'I completely forgot to thank you. If it weren't for you I would have a penis AND be a hyena, and be in a lot more trouble too. I guess now all that's left to do is to promote people in the Body Shop. I should manage; you'd be surprised. I WAS pretty famous back in the day.'";
 		WaitLineBreak;
 		say "     The panther sighs, 'My husband is gonna hate this.' She then makes her leave, leaving you with the satisfied naga. 'You have my own thanks as well,' he says. 'The situation turned out better than expected for everyone. This could actually be very good for me. But now, what can I do for you?'";
-		now Body Popularity is not resolved;
+		now Body Popularity is active;
+		now Resolution of Body Supplications is 1; [listened]
 	if calcnumber is 2:
 		say "     You wait outside. After a little while, the hyena exits the shop, visibly very upset and with tears in her eyes. When you walk in, Moreau seems upset as well. 'Oh, hello', he says after seeing you. When you ask about the hyena, he sighs. 'Well... Let's just say that there parts of being a businessman that are not so pleasant. But anyway, what can I do for you?'";
+		now Resolution of Body Supplications is 2; [didn't listen]
 	now lastBodyShopEvent is turns;
 	now Body Supplications is resolved;
 
-Body Popularity is a situation. Body Popularity is resolved.
+Body Popularity is a situation. Body Popularity is inactive.
 The sarea of Body Popularity is "Nowhere".
 
-after going to Body Shop while (Body Popularity is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
+after going to Body Shop while (Body Popularity is active and Body Popularity is not resolved and lastBodyShopEvent - turns > 1 and HP of Moreau > 0 and a random chance of 1 in 3 succeeds):
 	BodyPopularityEvent;
 
 to BodyPopularityEvent:

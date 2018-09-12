@@ -4,7 +4,11 @@ Version 2 of Alex by Stripes begins here.
 
 Section 1 - Alex & Alex's Condo
 
-Alex is a person. Alex is in Alex's Condo.
+Table of GameCharacterIDs (continued)
+object	name
+Alex	"Alex"
+
+Alex is a man. Alex is in Alex's Condo.
 The conversation of alex is { "Poing!" }.
 alexbrunch is a number that varies.
 alexdiego is a number that varies.
@@ -32,7 +36,7 @@ to say alexcondoscent:
 Section 2 - Conversing with Alex
 
 Instead of conversing the Alex:
-	if progress of alex is 0:
+	if AlexProgress is 0:
 		say "     'Have you come back to reconsider my offer? I could certainly use your help on this. And remember, I'm willing to get you supplies for your assistance,' the mustelid lawyer says with a smile.";
 		say "     [bold type]  Do you agree to help him?[roman type][line break]";
 		LineBreak;
@@ -40,27 +44,27 @@ Instead of conversing the Alex:
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			say "     'Oh, fantastic! Trust me on this, I'm definitely going to make it worth your while. My first client is named Lorenda. She lives in the red light district.' You are about to ask why she lives there, when he can see the question in your eyes before you even ask it, and sighs. 'Lorenda is a landlady there, who owns the buildings where many of the shops are set up. She prefers to live there so she can keep a close eye on her tenants. Now, would you go get her?' He seems impatient. Of course, being a high-level lawyer brings a sizable ego.";
-			now progress of alex is 1;
-			now find lorenda is unresolved;
+			now AlexProgress is 1;
+			now find lorenda is active;
 		else:
 			say "     His smile falters a little, but he tries to remain positive. 'Please continue to consider my proposal. I think we'll both benefit from it.'";
-	else if progress of alex is 3:
+	else if AlexProgress is 3:
 		say "     Alex, just coming off a bout of ferretness, puts down the chew toy and looks up at you as you try to tell him you found Darrell. He looks side to side for the missing sports star, then at you in with a mix of confusion and anger on his face. 'Where's Darrell? I thought you were saying that you'd found him.' This is where you have to explain to Alex that Darrell survived the incident, but not in the same way he started it. Upon hearing that Darrell was still sane and relatively secure mentally, Alex is pleased enough, anyway. 'He can still pay me,' says Alex, 'and that's good enough. Here's your next installment.' He hands you another bit of food and water as payment.";
 		increase carried of food by 1;
 		increase carried of water bottle by 1;
 		increase score by 20;
 		extend game by 2;
 		say "[line break]     'Alright, there's only one client left, and this one's gonna be a doozy, I'll wager. This last client of mine is an aide to a City Council Member - well, possibly ex-city council at this point. He doesn't have a whole lot of money, but his case'll be pretty big news if I can get a court to listen to him. So as far as publicity, this is a huge case for me. I need you to find him and bring him here.' He sighs a bit, and his nose wiggles, almost cutely, you think to yourself. 'I'm not sure where he is, honestly. He was a bit of an outdoorsman, so you might be able to find him at the park or the beach. Other than that, I can't offer you anything else, besides his name, which is Lee.'";
-		now progress of alex is 4;
-	else if alextalk is 0 and progress of alex < 5:
+		now AlexProgress is 4;
+	else if alextalk is 0 and AlexProgress < 5:
 		say "     Alex's whiskers twitch as he looks at you sternly. 'I need you back out there,' he grumbles before relaxing. 'Sorry, I'm just on edge lately. My clients may need your help out there, too. I'm worried about them.'[line break]     He points to his body. 'Besides, look at me. Once we get out of this mess, out there in the real world, I'll be a joke if I don't have some big clients to get me started again. I know there'll be a lot of legal ramifications from all this and I want to be poised to represent those who want a normal life despite their changes. And [if humanity of player < 100]from the looks of you[else]if something goes wrong out there before you're rescued[end if], you may even end up wanting my services. If you can come through, I'll even give you a big discount.";
 		now alextalk is 1;
-	else if progress of alex is 1 and a random chance of 3 in 5 succeeds:
+	else if AlexProgress is 1 and a random chance of 3 in 5 succeeds:
 		say "     'Please continue looking for Lorenda. She's in the red light district. Given what's happening in the city, I think she needs your help first,' he says meaningfully. You nod in understanding, as that part of town would be particularly vulnerable to this outbreak.";
-	else if progress of alex is 2 and a random chance of 3 in 5 succeeds:
+	else if AlexProgress is 2 and a random chance of 3 in 5 succeeds:
 		say "     'I need you to track down Darrell,' the weaselly lawyer says. 'Being a pro sports star, his case could be worth a lot to me. He should be at the Smith Haven Mall.' He points out his window, indicating the large shopping center in the distance and the main route leading to it.";
-		Now Smith Haven Mall Lot is known;
-	else if progress of alex is 4 and a random chance of 3 in 5 succeeds:
+		now Smith Haven Mall Lot is known;
+	else if AlexProgress is 4 and a random chance of 3 in 5 succeeds:
 		say "     The mustelid fiddles with a shiny ball as he looks over his papers. 'Have you found Lee? He should be at the park or the beach.'";
 	else:
 		say "[alexrandomtalk]";
@@ -73,8 +77,8 @@ Section 3 - The Search (Quests)
 
 Meet Alex is an situation.
 The sarea of meet alex is "High".
-Alex has a number called progress.
-Alex has a number called alextalk.
+AlexProgress is a number that varies.
+AlexTalk is a number that varies.
 
 Instead of resolving Meet Alex:
 	say "((Quest arc written by Khabi - update & post-quest by Stripes))[line break]";
@@ -91,8 +95,8 @@ Instead of resolving Meet Alex:
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		say "     'Oh, fantastic! Trust me on this, I'm definitely going to make it worth your while. My first client is named Lorenda. She lives in the red light district.' You are about to ask why she lives there, when he can see the question in your eyes before you even ask it, and sighs. 'Lorenda is a landlady there, who owns the buildings where many of the shops are set up. She prefers to live there so she can keep a close eye on her tenants. Now, would you go get her?' He seems impatient. Of course, being a high-level lawyer brings a sizable ego.";
-		now progress of alex is 1;
-		now find lorenda is unresolved;
+		now AlexProgress is 1;
+		now find lorenda is active;
 	else:
 		say "     'Ah. Well then, if you change your mind, here's my address.' You now have access to Alex's Condo!";
 	now Meet Alex is resolved;
@@ -100,10 +104,10 @@ Instead of resolving Meet Alex:
 
 Find Lorenda is a situation.
 The sarea of Find Lorenda is "Red".
-Find Lorenda is resolved.
+Find Lorenda is inactive.
 Lisacheat is a number that varies.
 
-Instead of conversing the Lisa while progress of alex is 1 and lisacheat is 0:
+Instead of conversing the Lisa while AlexProgress is 1 and lisacheat is 0:
 	say "     You decide to talk to Lisa about your search for Lorenda. She nods and tells you that she may have seen her recently. 'I can't be certain, hon. I used to just work here, so I've only seen her once or twice. But I think it was her that I spotted go by outside. She seemed a little frantic, and ran around a corner before I could call out to her.' She points you in the direction she was heading. That should help narrow down your search.";
 	now lisacheat is 1;
 
@@ -148,30 +152,30 @@ Instead of resolving Find Lorenda:
 		increase carried of water bottle by 2;
 		increase score by 50;
 		extend game by 8;
-		now progress of alex is 2;
+		now AlexProgress is 2;
 		now battleground is "void";
 		now find lorenda is resolved;
 
 [
-Instead of conversing the Rod while progress of alex is 2:
+Instead of conversing the Rod while AlexProgress is 2:
 	say "     'Darrell? Yeah, he was here when it all went down. But... you might be a little surprised.[if HP of ronda is 0] Go talk to my girl, she knows where he is.'[else]' He shrugs, and points to the north. 'Go ask the others. They might know where he is.' He seems a little bummed.[end if]";
 ]
 
-instead of going to Mall Atrium while progress of alex is 2:		[now works for getting there either from Nermine's shop or the food court]
+instead of going to Mall Atrium while AlexProgress is 2:		[now works for getting there either from Nermine's shop or the food court]
 	now the player is in Mall Atrium;
 	if Ronda is in Mall Atrium:
 		say "     You arrive in the atrium of the mall and approach Ronda, Rod's girlfriend. 'Yeah, I know where he is. Darrell, c'mere!' Another mall rat approaches, and it shortly becomes clear that the city's star point guard is now a good deal furrier and rattier. He arrives and asks her 'What's up?' She explains the situation, and he nods, facing you. After some brief explanation, the white rat nods. 'You can go tell Alex I appreciate his concern, but I'm pretty good here at this point.' You try to convince him, but he stands firm on it. 'Nah, I'm good here, man.' Darrell waves and heads back to talk to some of the other rats, putting his arms around a pair of the girls. You sigh a bit, and you have some mixed news for Alex the next time you see him.";
 	else:
 		say "     You arrive in the atrium of the mall and approach one of the various mall rats there. After going back and forth between a few of them, eventually you come to Darrell. It shortly becomes clear that the city's star point guard is now a good deal furrier and rattier. 'What's up?' the white rat asks. After some brief explanation, he nods. 'You can go tell Alex I appreciate his concern, but I'm pretty good here at this point.' You try to convince him, but he stands firm on it. 'Nah, I'm good here, man.' Darrell waves and heads back to talk to some of the other rats, putting his arms around a pair of the girls. You sigh a bit, and you have some mixed news for Alex the next time you see him.";
-	now progress of alex is 3;
+	now AlexProgress is 3;
 
 
-instead of entering the Confession Booth while progress of alex is 4:
+instead of entering the Confession Booth while AlexProgress is 4:
 	say "You ask the priest if she's seen anyone.";
 	say "'Oh! Yes, I believe I know something that might help you. A man has barricaded himself inside one of the storage sheds to the north of the beach. There's a chance that he may be the one you're looking for.' You profusely thank the priestess, who waves off the praise. 'Thank the Goddess for your good fortune, not me. Stay safe and explore a newness of yourself through change, my child.'";
 
 
-instead of conversing the Diego while progress of alex is 4 and alexdiego is 0 and diegotalk is 1:
+instead of conversing the Diego while AlexProgress is 4 and alexdiego is 0 and diegotalk is 1:
 	say "You ask Diego if he's happened to have seen anyone hiding out in the park that meets Lee's description. He shakes his head, saying he's not seen anyone like that, though you can never be certain if they changed too much.";
 	now alexdiego is 1;
 
@@ -185,7 +189,7 @@ Lee's Shed is a room.
 West of Dirty Sheds is Lee's Room.
 
 Instead of going west from dirty sheds:
-	if progress of alex is 4:
+	if AlexProgress is 4:
 		say "     You come to a shed that has been barricaded shut. 'Stay away! I don't want any of you freaks coming in here!' You ask if the person inside is Lee, and you hear what might be a grunt in the affirmative, before he shouts again. 'Who's asking? Who sent you!?' You tell him that Alex sent you, but it appears that, with all the madness going on, it's something he's reluctant to believe. He starts mumbling that it's all some kind of setup.";
 		let success be 0;
 		say "     [bold type]Do you attempt to persuade him to come with you?[roman type][line break]";
@@ -217,7 +221,7 @@ Instead of going west from dirty sheds:
 					say "[line break]     You throw your body against the door, but it seems too tough for you. Maybe you could try again later.";
 		follow the turnpass rule;
 		if success is 1:
-			now progress of alex is 5;
+			now AlexProgress is 5;
 			move player to Alex's Condo;
 			say "     Arriving back at the High Rise district, Alex is bemused to see that this latest client has made a rather serious reassignment in gender, but he is pleased to see that Lee at least seems to have her faculties in order. 'Alright,' he says. 'Here's your reward for the last bit.' You receive one more food and one more water.";
 			increase carried of food by 1;
@@ -238,7 +242,7 @@ Instead of going west from dirty sheds:
 Section 4 - Sexy Times!
 
 Instead of fucking the Alex:
-	if progress of Alex < 5:
+	if AlexProgress < 5:
 		say "     The mustelid lawyer rubs his cute, ferrety ears and shakes his head. 'Look! Right now I think you should focus more on finding my clients than on my changed body's hormone levels.'";
 		stop the action;
 	if alexbrunch < 4:		[Had 0 to 3 brunches]
@@ -403,7 +407,7 @@ to say brunchtimechange:
 		now scalevalue of player is 3;
 		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 [
 		say "[bold type]Your dexterity has increased by 2![roman type][line break]";
 		say "[bold type]Your stamina has dropped by 1![roman type][line break]";
@@ -432,7 +436,7 @@ to say alexbodyreset:
 		now scalevalue of player is 3;
 		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 	if alexbrunch > 3 and cockname of player is not "Ferret":
 		say ". Rubbing his stiff cock against your loins, his precum leaks onto you. You can feel pleasant tingles as they are restored to their mustelid nature";
 		now cockname of player is "Ferret";

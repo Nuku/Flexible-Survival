@@ -64,10 +64,12 @@ instead of resting while (player is in Urban Forest and WerewolfWatching is true
 		else:
 			say "     Now that she has taken care of her immediate need, the she-wolf checks out the rest of you, eager to have more fun. Yet as she sees with disappointment that you lack any proper equipment to go further, she simply gets off you and pads away, disappearing behind some brush.";
 			now WerewolfRelationship is 1; [submitted]
+		now Resolution of Werewolf Surprise is 1; [submitted]
 	else:
 		LineBreak;
 		say "     You attempt to halt the werewolf molesting you and push against her chest to get her off - resulting in the expected violent reaction to your resistance. With a snarl, she slams you down and moves to pin your arms to the ground. You manage to kick the wolf woman off, sending her scrambling to her feet and growling menacingly at you. She circles you for a moment allowing you to get your bearings and stand up, before charging forward with claws extended and teeth bared.";
 		challenge "Werewolf";
+		now Resolution of Werewolf Surprise is 2; [fought]
 	now Werewolf Surprise is resolved;
 
 Section 2 - Scenes
@@ -147,12 +149,12 @@ to say WerewolfDesc:
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Werewolf";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -200,7 +202,8 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only) ]
+	now DayCycle entry is 0; [ True=Nocturnal (night encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Werewolf ends here.

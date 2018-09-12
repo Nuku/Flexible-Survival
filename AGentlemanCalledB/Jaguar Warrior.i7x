@@ -26,7 +26,7 @@ when play begins:
 	add { "Jaguar Warrior" } to infections of furry;
 	add { "Jaguar Warrior" } to infections of Felinelist;
 
-hoodequipped is a number that varies.
+hoodequipped is a number that varies.[@Tag:NotSaved]
 
 to say losetoJaguarWarrior:
 	say "     [if HP of player > 0]Unable to resist[else]Beaten by[end if] the jaguar warrior, you are helpless as he strips you of your gear. [run paragraph on]";
@@ -87,7 +87,7 @@ to say JagWarVic_Anal:
 	say "     With a triumphant roar the jaguar warrior makes one final thrust into you, forcing his entire length into your exhausted body before unleashing his thick feline seed into your bowels[if player is herm] while your own seed splatters across the ground and feminine juices soak your thighs[else if player is male] while your own seed splatters across the ground below you[else if player is female] while your own climax soaks your thighs in feminine juices[end if]. Sated, the jaguar finally pulls his still twitching cock from your body in one quick motion, the sharp barbs sending one last ripple of pain through you as he does so. You slump to the floor as the powerful male releases you, leaving you to recover from the encounter as he stalks off into the museum.";
 
 to say JagWarVic_Oral:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "You wince as the jaguar warrior grips your shoulder tightly, pressing his sharp claws into your flesh as he forces you to your knees while taking hold of his thick feline member with his free hand. You soon find yourself level with the jungle cat's impressive member, already erect and dripping with pre after your [if monsterHP < ( HP entry / 3 ) ]drawn out[else if monsterHP < ( HP entry / 2 )][else]brief[end if] struggle. A shiver runs through you as you eye the barbed feline shaft, quickly moving towards your face as the jaguar moves closer.";
 	say "     Having no other choice, you open your mouth wide as the jaguar warrior grips the back of your head and pulls you forward, driving his length down your throat roughly. You feel the feline barbs that adorn his shaft slide easily across your flesh until he pauses his forward motion. Ripples of pain lance through you as the jaguar pulls back slowly, the pointed spines of his feline cock scraping agonizingly across your tender flesh as he rumbles in satisfaction. As the tip of his length reaches your lips, you try to pull your mouth away, until you feel the jaguar's grip tighten and the threatening presence of his claws at the back of your skull.";
 	WaitLineBreak;
@@ -158,18 +158,18 @@ to say TameTehuantl:
 	move Tehuantl to Grey Abbey 2F;
 	move player to Grey Abbey 2F;
 	setmonster "Jaguar Warrior";
-	choose row monster from the table of random critters;
-	now area entry is "nowhere";
+	choose row monster from the Table of Random Critters;
+	now area entry is "Nowhere";
 	now TehuantlTimer is turns;
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Jaguar Warrior";                   [ The creature's name as displayed and used in naming descriptions]
 	now enemy title entry is "Jaguar Warrior";
 	now enemy name entry is "Tehuantl";
@@ -217,8 +217,9 @@ When Play begins:
 	now magic entry is false;             [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;         [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;    [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;     [ Row used to designate any special combat features, "default" for standard combat. ]
 
 to say JagBodyDesc:
 	if hoodequipped is 0:
@@ -257,7 +258,7 @@ An everyturn rule:
 			if bodyname of player is "Jaguar Warrior":
 				say "     You drop to a knee as you feel a surge of heat roll through you, your feline physique shifting as the power of the jaguar headdress you're wearing ripples through your feline body, remaking you into a powerful jungle predator.";
 			setmonster "Jaguar Warrior";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			if "Female Preferred" is not listed in feats of player:
 				now sex entry is "Male";
 			now hoodequipped is 1;
@@ -267,7 +268,7 @@ An everyturn rule:
 			say "     No longer under the influence of the jaguar headdress, you feel your warrior's physique burning away, leaving your feline form lithe and more delicate as the last of its power drains out of you.";
 		now hoodequipped is 0;
 		setmonster "Jaguar Warrior";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if "Male Preferred" is not listed in feats of player:
 			now sex entry is "Female";
 

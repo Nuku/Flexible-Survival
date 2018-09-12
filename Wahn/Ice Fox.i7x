@@ -36,12 +36,12 @@ Section 2 - Monster Responses
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Ice Fox";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -89,8 +89,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Table of Game Objects (continued)
@@ -224,9 +225,9 @@ instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRe
 	say "     The next words that come from Miyuki's mouth are, 'Okay, where is the local sacred grove? I - oh, wait. You do not [italic type]have one[roman type].' Ending in a groan, she puts on a frown and tells you, 'The one thing I need is the juice of a Mother's Star. It's a fruit. Yay big, with five lobes. You know, symbolizing the ways that the All-Mother created for things to be born.' Raising her hand, she counts them off finger by finger: 'Spontaneous Generation, Budding, Division, Egg-Laying and Live Birth. Come on, there must be something like that here. They're green, then turn yellow when ripe.' That last detail makes you pause for a second, remembering a tropical fruit that fits the description fairly well - a carambola, otherwise known as a starfruit. You mention it to Miyuki, who gets a quite relieved expression, and says, 'I would be very thankful if you could bring me one or more of those then please. If you want, I could even bless you too.";
 	say "     Something like a carambola tree can grow in the city, but that would be fairly hard to find in a random garden. [bold type]Maybe it'd be more worthwhile to check out a botanical garden, or the zoo actually.[roman type] You're fairly certain they have a lot of tropical plants of all sorts there...";
 	now lust of Miyuki is 1; [Carambola quest started]
-	now Carambola Tree is not resolved;
+	now Carambola Tree is active;
 
-Carambola Tree is a situation. Carambola Tree is resolved.
+Carambola Tree is a situation. Carambola Tree is inactive.
 The sarea of Carambola Tree is "Zoo".
 
 instead of resolving a Carambola Tree:
@@ -241,7 +242,7 @@ instead of resolving a Carambola Tree:
 	else if fightoutcome is 30: [fled]
 		say "     Legging it, you run off and shake the angry tigertaur off with some difficulty. Sadly, in the process of the wild chase, you lose all of the carambola you picked. Looks like all of this excitement was for nothing. You'll have to go back to the tree and pick some new ones if you want to help Miyuki out.";
 
-Arctic Enclosure is a situation. Arctic Enclosure is resolved.
+Arctic Enclosure is a situation. Arctic Enclosure is inactive.
 The sarea of Arctic Enclosure is "Zoo".
 
 instead of resolving a Arctic Enclosure:
@@ -312,9 +313,11 @@ to say ArcticEnclosureEntry:
 			LineBreak;
 			say "     Smiling as you accept, you reach out for Miyuki's hand-paw and gently guide it to your lips to kiss it. This clearly pleases the sorceress, as she sways her many tails left and right and gives your ass a grope with one hand. 'I look forward to enjoying some time with you, my love.'";
 			now HP of Miyuki is 3; [player is her mate]
+			now Resolution of Arctic Enclosure is 1; [success, mated]
 		else:
 			LineBreak;
 			say "     'What do you mean, you don't want to be my mate?!' Miyuki calls out in a huff. Crossing her arms, she grumbles and gives you a sour look, then makes a throwing-away gesture. 'Pah! Otherworldly barbarian. You don't know what you're missing.' And with that, she turns away from you, literally giving you a cold shoulder as temperatures seem to suddenly plummet around you.";
+			now Resolution of Arctic Enclosure is 2; [success, mate refused]
 			now HP of Miyuki is 99; [mateship refused]
 		change the northwest exit of Ice Fox's Den to Snow Rabbit's Warren;
 		change the southeast exit of Snow Rabbit's Warren to Ice Fox's Den;
@@ -326,8 +329,9 @@ to say ArcticEnclosureEntry:
 		end the story saying "You certainly won't be getting out from that situation!";
 	else if fightoutcome is 30: [fled]
 		say "     Managing to flee from the building, you shake the angry tigertaurs off with some difficulty. Sadly this means that they're now forewarned about you wanting to move in on their territory. They'll surely be ready for you next time, and might very well set traps. Somehow you don't think going back would be such a good idea, so you resolve not to. [bold type]You've failed this task for Miyuki.[roman type]";
-		now Arctic Enclosure is resolved;
+		now Resolution of Arctic Enclosure is 3; [fled, quest failed]
 		now HP of Miyuki is 100; [failed]
+	now Arctic Enclosure is resolved;
 
 instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRelationship < 100 and lust of Miyuki is 2):
 	if debugactive is 1:
@@ -337,6 +341,10 @@ instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRe
 	now lust of Miyuki is 3; [blessing ready]
 
 Section 6 - NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+Miyuki	"Miyuki"
 
 Miyuki is a woman. Miyuki is in Ice Fox's Den.
 The description of Miyuki is "[MiyukiDesc]".
@@ -408,13 +416,9 @@ instead of conversing the Miyuki:
 						say "[MiyukiTalk5]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the ice fox, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the ice fox, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -458,7 +462,7 @@ to say MiyukiTalk5: [helper quest]
 		say "     Thinking about what Miyuki just said, you vaguely remember that the city zoo had an enclosure with arctic animals. Those seem to be the most likely candidates for whom her invitation might apply. As you tell the ice sorceress, she smiles broadly and strokes your cheek. 'I knew having a helpful local would be useful. Especially one as [if player is MProN]handsome[else]pretty[end if] as yourself.' With a wink, she shoos you to get going, then focuses her attention on the giant snow-star under the ceiling. 'Time to make a bit more room,' she murmurs under her breath, then concentrates deeply. The star grow noticeably thicker before separating into two copies of itself. One of the glistening structures floats through the room to settle against a wall and begins to cut its way into it. The razor-sharp edges shave away rock, starting to excavate an opening.";
 		LineBreak;
 		say "     Time for you to go search for Miyuki's intended guests. Looks like you should be off to find the [bold type]Arctic Enclosure[roman type] in the City Zoo.";
-		now Arctic Enclosure is not resolved;
+		now Arctic Enclosure is active;
 		now HP of Miyuki is 1; [ice fox quest started]
 	else if HP of Miyuki < 3: [quest started, nothing done yet]
 		say "     Miyuki smiles as you offer your help again and asks, 'Have you found any of those poor folk suffering from heatstroke yet? I'm sure they'd want to come here too and keep me company. You did mention a place called the [']zoo['] before. Maybe start there?'";
@@ -522,13 +526,9 @@ to say MiyukiSexMenu:
 				wait for any key;
 				now lastfuck of Miyuki is turns;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the ice fox sorceress, shrugging your shoulders as she gives you a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the ice fox sorceress, shrugging your shoulders as she gives you a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -550,7 +550,7 @@ to say MiyukiSex1: [BJ for Miyuki]
 
 to say MiyukiSex2: [Miyuki fucks player pussy]
 	setmonster "Ice Fox";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Sliding your fingers down over the band of scales on Miyuki's belly, you rub the narrow slit between the flexible little plates down at her crotch. Then you plant a kiss on the white fox's muzzle and tell her that you want to see - and feel - her cock. With a broad smile, she gives you an affectionate lick in return and nods, prompting you to slip a finger between the ridges of her slit, feeling the warm flesh inside as it starts to push out in a growing erection. A pointy dickhead slides right into your waiting palm, with the shaft to go with it hardening even quicker than that as you start to fondle and stroke her sex. Soon, Miyuki is fully erect - including the pre-knot bulge at the base of her shaft, just outside her slit.";
 	say "     'Now what a certain someone has woken my little fox, I wonder that I should do with it...' the ice sorceress adds playfully in almost a purr. Seeing the deep need to be fucked in your gaze, she gives an amused yip and licks her muzzle in anticipation. 'About time I sank myself into a sweet pussy again,' she says with a chuckle, then strokes your cheek and beckons to follow you with one of her nine tails as she walks over towards her warm nest. Arriving at the large ring of blankets and pillows just a step behind the fox, you are helped out of your clothes by her eager hands, then climb into the her soft camp, lying back in its very comfortable expanse.";
 	WaitLineBreak;
@@ -570,7 +570,7 @@ to say MiyukiSex2: [Miyuki fucks player pussy]
 
 to say MiyukiSex3: [Miyuki fucks player pussy - doggy style and ovi]
 	setmonster "Ice Fox";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Sliding your fingers down over the band of scales on Miyuki's belly, you rub the narrow slit between the flexible little plates down at her crotch. Then you plant a kiss on the white fox's muzzle and tell her that you want her to take you as she pleases. With a broad smile, the sorceress gives you an affectionate lick in return and says, 'Stroke me.' Eager to follow her order, you to slip a finger between the ridges of her slit, feeling the warm flesh inside as it starts to push out. A blunt-headed tube of flesh slides right into your waiting palm, with the shaft to go with it hardening rapidly start to fondle and stroke her appendage. It looks fairly interesting - with a relatively rigid shaft, but a flexible opening instead of a dickhead at the end. Your curiosity pushes you to experiment a little with it and as you push the tip of your index finger into the fleshy tube, you realize that it is hollow and quite stretchy.";
 	say "     'Do you like playing with my ovipositor? Wait till you feel it inside you! Mmmm, I can't wait to lay some eggs in that sexy [if player is female]pussy[else]ass[end if] of yours!' the ice sorceress adds playfully in almost a purr. Seeing the deep need to be fucked in your gaze, she gives an amused yip and licks her muzzle in anticipation. 'About time I sank myself into a sweet [if player is female]pussy[else]ass[end if] again,' she says with a chuckle, then strokes your cheek and beckons to follow you with one of her nine tails as she walks over towards her warm nest. Arriving at the large ring of blankets and pillows just a step behind the fox, you are helped out of your clothes by her eager hands, then climb into the her soft camp, getting onto all fours in its very comfortable expanse.";
 	WaitLineBreak;

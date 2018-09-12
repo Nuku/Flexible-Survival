@@ -27,6 +27,10 @@ instead of going to Mall FoodCourt while ( HP of Ronda is 10 and HP of Lucy is 0
 
 Section 2 - Lucy
 
+Table of GameCharacterIDs (continued)
+object	name
+Lucy	"Lucy"
+
 Lucy is a woman.
 The description of Lucy is "[lucydesc]".
 The conversation of Lucy is { "Hey baby!" }.
@@ -73,7 +77,7 @@ to say sexwithLucy:
 		infect "Mall Rat";
 		now lastfuck of Lucy is turns;
 		now HP of Lucy is 2;
-		now Memories of the Mall is unresolved;
+		now Memories of the Mall is active;
 	else:
 		say "     Lucy grins at your offer and grabs your hand in hers, leading you off to her nail salon, putting up the away sign and takes you into the back to her little love nest. She churrs and runs her paws over your [bodydesc of player] body, slipping off your clothes slowly as she licks, kisses or nibbles at each newly-exposed area of your [bodytype of player] form. This gives you moment to decide what fun you'd like to have with your ratty girlfriend this time.";
 		now sextablerun is 0;
@@ -192,7 +196,7 @@ to say lucysex7:
 
 Section 4 - Mall Recall
 
-Memories of the Mall is a situation. It is resolved.
+Memories of the Mall is a situation. It is inactive.
 The sarea of Memories of the Mall is "Outside".
 
 Instead of resolving a Memories of the Mall:

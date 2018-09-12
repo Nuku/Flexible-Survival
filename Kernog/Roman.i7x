@@ -38,6 +38,10 @@ to FootballTeamAdditionsQuestLog:
 	if HP of Roman is 11:
 		say "[bold type]Football team additions (COMPLETED)[roman type]: Roman asked me to keep an eye open for potential talent to recruit into the team. He does not need me to investigate further, for the time being.";
 
+Table of GameCharacterIDs (continued)
+object	name
+Team Captain Roman	"Team Captain Roman"
+
 Team Captain Roman is a man. Understand "Roman" as Team Captain Roman.
 
 The description of Team Captain Roman is "[RomanDesc]";
@@ -175,13 +179,9 @@ instead of conversing the Team Captain Roman:
 					say "[RomanEncourage]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from Roman, who gives you a puzzled look in return.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from Roman, who gives you a puzzled look in return.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -366,13 +366,9 @@ to say RomanFuck1:
 					say "[RomanFuck1Cuni]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     Having second thoughts, you abstain from using Roman to satiate your needs. You step away, letting the ape rest for now.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Having second thoughts, you abstain from using Roman to satiate your needs. You step away, letting the ape rest for now.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -483,13 +479,9 @@ to say RomanFuck2:
 					say "[RomanFuck2Cunt]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     Having second thoughts, you abstain from using Roman to satiate your needs. You step away, letting the ape rest for now.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Having second thoughts, you abstain from using Roman to satiate your needs. You step away, letting the ape rest for now.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -602,11 +594,13 @@ Instead of resolving a Orca Volleyball Player:
 			say "     Willy falls like a log on the sand. The orca catches his breath, then sits on the warm sand. Your scuffle attracted an audience, who look at you as if you were David felling down Goliath. The orca erupts suddenly in a boisterous laughter. 'That's what I call a punch! Seems that you can back what you bark, [bodyname of player]!' You can't help but chuckle too. You offer your hand to Willy, but the cetacean gets back on his feet, with surprising ease. 'Wouldn't want me, if I couldn't take a few tackles, would you?' he asks, as he dusts the sand off his black and white skin. 'Gimme a minute to tell my friends where I'm going. I'll see you on the football field.'";
 			say "     While Willy jogs away, you make a mental note to report back to Roman about your successful recruitment.";
 			now HP of Roman is 7;
+			now Resolution of Orca Volleyball Player is 1; [won against the orca]
 			now Orca Volleyball Player is resolved;
 		else if fightoutcome >= 20 and fightoutcome <= 29:
-			say "     The killer whale grabs you by the neck before you fall down. 'Not so fast, bitch. I'm not down with you!' He carries you towards a chair and has you kneel in front of it. The orca pulls down his speedo and sits down. 'Gimme your towel!' he asks an bottlenose toy who was part of the small audience gathered for your punishment. Willy ties your hands behind your back with the towel, then press your face against his crotch, which he wastes no time stroking to full hardness.";
+			say "     The killer whale grabs you by the neck before you fall down. 'Not so fast, bitch. I'm not done with you!' He carries you towards a chair and has you kneel in front of it. The orca pulls down his speedo and sits down. 'Gimme your towel!' he asks an bottlenose toy who was part of the small audience gathered for your punishment. Willy ties your hands behind your back with the towel, then press your face against his crotch, which he wastes no time stroking to full hardness.";
 			say "     'You're not the first trying to pick a fight with me. They're all bark and no bite, and you're not different. You got a big mouth, and I know one way to use it. The orca forces the tip of his cock past your lips. 'Say [']ah['], bitch.' The titanic length slides down your throat. You feel it wiggle in your esophagus, as it tries to find its way deeper. Willy pulls out at the very last moment, and takes a moment to admire his saliva-coated shaft, before pushing it back inside, under the cheers of the crowd.";
 			say "     After a dozen minutes of this forced public blowjob, Willy's pushes accelerate and the orca lets out a whale-like moan and cums hard, directly into your stomach. His hose-like cock fills your belly with what feels like a gallon of cum before finally pulling out. The cetacean slumps down in his chair. 'Oooh, that felt nice.'[line break]'Hey, Willy. Done with your bitch yet?' one of Willy's friend asks from the crowd. 'Bert and his boy-toy wants to play with us.'[line break]'Uh? Oh, yeah, sure,' the orca says as he stands up and makes his way to the next game. 'As for you, get out of my sight,' he says, shoving your out of the way. The onlookers loose interest in you and you take the opportunity to walk away, after you cough the mouthful of whale-cum lingering in your mouth. You promise yourself to come back later with more [']persuasive['] arguments.";
+			now Resolution of Orca Volleyball Player is 2; [lost against the orca]
 
 Husky Gang is a situation.
 The sarea of Husky Gang is "Outside".
@@ -625,6 +619,7 @@ Instead of resolving a Husky Gang:
 			say "     The Alpha Husky stumbles back on his knees, while the females rush to him and attempt to form a human shield between him and you. Several of them growl and are about to charge at you, when the male barks suddenly. 'Stop!' The others look at him. 'I don't want to see you get hurt, girls. What would the other Alphas say if I could not protect you.' After a flurry of 'Aww!' and other compliments, the Female Huskies help the Alpha get back on his feet. 'You want us to go do some work at the Campus, is that it? Very well. As long as it gets us fed at Tenvale's expense, I don't mind. Come on girls, we move!'";
 			say "     You watch the pack take the way of the college. After this, you decide to return from where you came from, happy to know that you helped Roman, and gave the Husky a good lesson.";
 			now HP of Roman is 11;
+			now Resolution of Husky Gang is 1; [won against the huskies]
 			now Husky Gang is resolved;
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     The Alpha Husky smirks, as he looks down on you. 'Poor shmuck. He's yours, girl. Help yourself!' With a collective squeal, the Female Huskies rush and pile on you, smothering you under ten furry bodies. They [StripChest], and your bottom clothes quickly follow. They use your [bodyname of player] body to pleasure themselves, grinding against your mouth and other parts of your body to get off.";
@@ -633,5 +628,6 @@ Instead of resolving a Husky Gang:
 			infect "Female Husky";
 			infect "Female Husky";
 			infect "Female Husky";
+			now Resolution of Husky Gang is 2; [lost against the huskies]
 
 Roman ends here.

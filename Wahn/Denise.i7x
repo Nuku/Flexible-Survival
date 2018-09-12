@@ -1,5 +1,9 @@
 Version 1 of Denise by Wahn begins here.
 
+Table of GameCharacterIDs (continued)
+object	name
+Denise	"Denise"
+
 Denise is a woman.
 The description of Denise is "[DeniseDesc]".
 The conversation of Denise is { "Mew!" }.
@@ -65,13 +69,9 @@ instead of conversing the Denise:
 					say "[DeniseTalk2]";
 				WaitLineBreak;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the gryphoness, shaking your head slightly as she gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the gryphoness, shaking your head slightly as she gives a questioning look.";
+			WaitLineBreak;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -174,13 +174,9 @@ Instead of fucking the Denise:
 					WaitLineBreak;
 					now lastfuck of Denise is turns;
 			else if calcnumber is 0:
-				say "Break off?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the lioness, shaking your head slightly as she gives a questioning look.";
-					WaitLineBreak;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the gryphoness, shaking your head slightly as she gives a questioning look.";
+				WaitLineBreak;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -231,12 +227,12 @@ to say DeniseSex6:
 		say "     Panting and moaning just as eagerly as you are, it doesn't take long for the gryphon stud behind you to give you what your body so urgently needs, and you cry out in pleasure as Denise fills your heat-filled womb with her seed. Eventually she softens and pulls out of your body, leaving you there kneeling on all fours on the ground with your head lowered as you try to recover your wits, something about the situation and your submissive positioning making you feel happy and content like a good little breeding bitch for a proud gryphon should be...";
 		say "     [ovichance]";
 
-instead of going up from Grey Abbey Library while (Denise is in Garden View and lust of gryphoness > 0 and lust of gryphoness < 16 and knowpreg of gryphoness is 0):
+instead of going up from Grey Abbey Library while (Denise is in Garden View and lust of gryphoness > 0 and lust of gryphoness < 16 and GryphonessKnowpreg is 0):
 	move player to Garden View;
 	if debugactive is 1:
 		say "     DEBUG: DENISE PREGNANCY SPOTTING [line break]";
 	say "     As you come up the stairs, you look over at Denise and notice that her belly's starting to swell rounder. She smiles happily at you, running her paws over her growing pregnancy. It seems you successfully knocked her up recently.";
-	now knowpreg of gryphoness is 1;
+	now GryphonessKnowpreg is 1;
 
 instead of going up from Grey Abbey Library while (Denise is in Garden View and the remainder after dividing libido of gryphoness by 4 is 3): [Denise is present and had a birth with the player being absent]
 	move player to Garden View;
@@ -247,30 +243,30 @@ instead of going up from Grey Abbey Library while (Denise is in Garden View and 
 	increase libido of gryphoness by 1;
 	if T is 0: [first kid]
 		increase weapon damage of gryphoness by 1;
-		if knowpreg of gryphoness is 1:
+		if GryphonessKnowpreg is 1:
 			say "     As you come up the stairs, you look over at Denise and can't help but notice that her pregnant belly is gone. Back to her more slender self, she does have a larger pair of breasts. They are filled with milk for the cute gryphlet you see climb up from between the pillows of her nest a moment later. Denise and the little one come running up to you right away, joining all three of you in a hug. Your herm gryphon child is a cute version of Denise in miniature, with blue feathers and golden fur. She has a pretty face and a happy smile, just like her mother. You can't help but feel happy and proud at the sight of her.";
-		else if knowpreg of gryphoness is 0:
+		else if GryphonessKnowpreg is 0:
 			say "     As you come up the stairs, you look over at Denise and see her pat something between the many pillows of her nest. Hmm... did her breasts get a bit larger, you wonder, unsure if your eyes are deceiving you. Then suddenly, things become rather obvious as the cute gryphlet she cuddled climbs up into sight a moment later. It seems you knocked up the gryphoness and she went through her pregnancy and had her child in the short time you two were separated.";
 			say "     When they notice you, Denise and the little one come running up to you right away, joining all three of you in a hug. Your herm gryphon child is a cute version of Denise in miniature, with blue feathers and golden fur. She has a pretty face and a happy smile, just like her mother. You can't help but feel happy and proud at the sight of her.";
 	else if T is 1: [already got one kid]
 		increase weapon damage of gryphoness by 1;
-		if knowpreg of gryphoness is 1:
+		if GryphonessKnowpreg is 1:
 			say "     As you come up the stairs, you look over at Denise and can't help but notice that her pregnant belly is gone. Back to her more slender self, she does have a larger pair of breasts. They are filled with milk for the cute gryphlet you see climb up from between the pillows of her nest a moment later, soon to be followed by her older sibling. Denise and the little ones come running up to you right away, joining all four of you in a hug. The new child looks much like her sibling did at that age, a cute version of Denise in miniature, with blue feathers and golden fur. She has a pretty face and a happy smile, just like her mother. You can't help but feel happy and proud at the sight of her.";
-		else if knowpreg of gryphoness is 0:
+		else if GryphonessKnowpreg is 0:
 			say "     As you come up the stairs, you look over at Denise and see her pat something between the many pillows of her nest. Hmm... did her breasts get a bit larger, you wonder, unsure if your eyes are deceiving you. Then suddenly, things become rather obvious as the cute gryphlet she cuddled climbs up into sight a moment later, soon followed by her older sibling peeking out of the nest too. It seems you knocked up the gryphoness and she went through her pregnancy and had her child in the short time you two were separated.";
 			say "     When they notice you, Denise and the little one come running up to you right away, joining all four of you in a hug. The new child looks much like her sibling did at that age, a cute version of Denise in miniature, with blue feathers and golden fur. She has a pretty face and a happy smile, just like her mother. You can't help but feel happy and proud at the sight of her.";
 	else if T >= 2: [got two or more kids]
 		increase dexterity of gryphoness by 1;
-		if knowpreg of gryphoness is 1:
+		if GryphonessKnowpreg is 1:
 			say "     As you come up the stairs, you look over at Denise and can't help but notice that her pregnant belly is gone. Back to her more slender self, she does have a larger pair of breasts. They are filled with milk for the cute gryphlet you see climb up from between the pillows of her nest a moment later, soon to be followed by her two older siblings. Denise and the little ones come running up to you right away, joining all five of you in a hug. The new child looks much like her siblings did at that age, a cute version of Denise in miniature, with blue feathers and golden fur. She has a pretty face and a happy smile, just like her mother. You can't help but feel happy and proud at the sight of her.";
 			say "     Your little family reunion goes on for several more moments, then the eldest sibling, by now almost fully grown to adulthood, decides to use the moment to announce that she's moving out. With another snuggle and nuzzle for all her gathered family members, the gryphon heads off into the city, using an open window to launch herself into the air. Denise calls after her, wishing her all the best in finding her fortune and a loving mate of her own.";
-		else if knowpreg of gryphoness is 0:
+		else if GryphonessKnowpreg is 0:
 			say "     As you come up the stairs, you look over at Denise and see her pat something between the many pillows of her nest. Hmm... did her breasts get a bit larger, you wonder, unsure if your eyes are deceiving you. Then suddenly, things become rather obvious as the cute gryphlet she cuddled climbs up into sight a moment later, soon followed by her older siblings peeking out of the nest too. It seems you knocked up the gryphoness and she went through her pregnancy and had her child in the short time you two were separated.";
 			say "     When they notice you, Denise and the little one come running up to you right away, joining all four of you in a hug. The new child looks much like her sibling did at that age, a cute version of Denise in miniature, with blue feathers and golden fur. She has a pretty face and a happy smile, just like her mother. You can't help but feel happy and proud at the sight of her.";
 			say "     Your little family reunion goes on for several more moments, then the eldest sibling, by now almost fully grown to adulthood, decides to use the moment to announce that she's moving out. With another snuggle and nuzzle for all her gathered family members, the gryphon heads off into the city, using an open window to launch herself into the air. Denise calls after her, wishing her all the best in finding her fortune and a loving mate of her own.";
 	increase morale of player by 2;
 	increase libido of gryphoness by 1; [tempnum increase from 3 to 4=0 - no second absentee birth message after this]
-	now knowpreg of gryphoness is 0; [preg reset]
+	now GryphonessKnowpreg is 0; [preg reset]
 
 
 Denise ends here.

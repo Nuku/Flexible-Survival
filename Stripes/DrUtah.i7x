@@ -42,6 +42,10 @@ to say paleodesc:
 
 Section 2 - Dr Utah the Wereraptor
 
+Table of GameCharacterIDs (continued)
+object	name
+Doctor Utah	"Doctor Utah"
+
 Doctor Utah is a person. Doctor Utah is in Paleontology Office.
 The description of Doctor Utah is "[utahdesc]".
 The conversation of Doctor Utah is { "Hiss!" }.

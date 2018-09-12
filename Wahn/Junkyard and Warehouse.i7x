@@ -161,6 +161,10 @@ Section 2 - Steven, chat
 
 StevenSwayed is a number that varies. StevenSwayed is usually 0.
 
+Table of GameCharacterIDs (continued)
+object	name
+Steven	"Steven"
+
 Steven is a person in the Storage Room. "A guard who you recognize as the doorkeeper stands, understandably, by the big steel door. A nametag says 'Steven'."
 The description of Steven is "A man in his thirties, wearing a security outfit. He looks from side to side with a distant look in his eyes. What kind of life did he have before the nanite invasion?".
 The conversation of Steven is {"[Steven flattery]", "What's it like out there? If I only had a gun, I might be able to assist you.", "I don't know how long this infestation has been going on. Long enough, in my opinion.", "None of us knew about the nanites. Just before things went berserk, we grabbed a building and brought in everyone from the streets. You should've seen it.", "Before everything went to hell, I had a house, a son, twenty grand a year. It's all gone now. Those people out there are all I have left.", "Part of me wants to just give in. If civilization is going to hell... but I guess that's why people like me, who don't have anything else, are here for, right?", "You know, if you can find any chips or sodas out there, I can get you a few medkits.", "I miss burger joints. And coffee. And the internet. Hell, even a phone call to my mother would be great.", "Back in college, I played the drums. You think I have time to take it back up?", "I'd offer you a seat, but I don't have a lot around the office. You don't mind standing, right?", "I volunteered to be a guard, just so I wouldn't be wallowing in misery. Plus, you get free health kits.", "I haven't washed this uniform in so long. I could really go for a non-infected shower."}.
@@ -387,8 +391,8 @@ To newStevenconverse:
 
 To Stevenjunkfuck:
 	[puts red horse as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Red Horse":
 			now monster is y;
 			break;
@@ -495,12 +499,12 @@ to say Stevenonbottom:
 		say "     You try to seduce him into letting you fuck him, but he manages to shake off your advances and pushes you back. 'Hey, I said I'm not in the mood.' He gets up and looks around. 'I'm going to go take a walk.'";
 
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Red Horse";
 	now enemy title entry is "";
 	now enemy name entry is "Steven";
@@ -529,7 +533,7 @@ When play begins:
 	now HP entry is 45;
 	now lev entry is 5;
 	now wdam entry is 7;
-	now area entry is "nowhere";
+	now area entry is "Nowhere";
 	now cocks entry is 1;
 	now cock length entry is 15;
 	now cock width entry is 6;
@@ -548,8 +552,9 @@ When play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Chapter 4 - Junkyard
@@ -571,7 +576,7 @@ The marea of Junkyard Gate is "Junkyard".
 
 Section 2 - Junkyard Digups
 
-Junkyard digups is a situation. The printed name of Junkyard digups is "a pile of garbage".
+Junkyard digups is a situation. The printed name of Junkyard digups is "A pile of garbage".
 The sarea of junkyard digups is "Junkyard".
 jdigup is a number that varies.
 
@@ -598,10 +603,10 @@ Steven's Home is a room. "You are in a more cozy and more private part of the ju
 instead of sniffing Steven's Home:
 	say "This spot in the junkyard smells of Steven and his manly, equine scent. It only partially blocks the pervasive scent of the junkyard though.";
 
-a junkyard home is a situation.
-The sarea of a junkyard home is "Junkyard".
+Junkyard Home is a situation.
+The sarea of Junkyard Home is "Junkyard".
 
-Instead of resolving a junkyard home:
+Instead of resolving Junkyard Home:
 	if Stevenremoved is 0:
 		say "You come across what looks like an abandoned habitation, filled with old nesting material and various shiny objects. Is it some kind of bird's nest? You decide to leave it alone... for now.";
 	else:
@@ -663,15 +668,15 @@ Instead of resolving signs of a scuffle:
 	increase scufflecount by 1;
 	say "It looks like two infected creatures were fighting each other out here. You search the area for any fallen loot:[line break]";
 	let opportunity be 0;
-	let firstbeast be a random number from 1 to number of filled rows in the table of random critters;
-	choose row firstbeast from the table of random critters;
+	let firstbeast be a random number from 1 to number of filled rows in the Table of Random Critters;
+	choose row firstbeast from the Table of Random Critters;
 	if there is a loot entry:
 		if loot entry is not "" and loot entry is not " ":
 			add loot entry to invent of player;
 			say "You found 1 x [loot entry]!";
 			now opportunity is 1;
-	let secondbeast be a random number from 1 to number of filled rows in the table of random critters;
-	choose row secondbeast from the table of random critters;
+	let secondbeast be a random number from 1 to number of filled rows in the Table of Random Critters;
+	choose row secondbeast from the Table of Random Critters;
 	if there is a loot entry:
 		if loot entry is not "" and loot entry is not " ":
 			add loot entry to invent of player;

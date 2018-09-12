@@ -41,19 +41,24 @@ Instead of resolving a Demon Chase:
 				LineBreak;
 				say "[bold type]Wayne's Tape 2 has been added to your tape inventory![roman type][line break]";
 				add "Wayne's Tape 2" to tapes of player;
+				now Resolution of Demon Chase is 1; [took Wayne's stuff]
 			else:
 				LineBreak;
 				say "     With a shrug, you drop the wallet, keys, and the tape on the ripped bag and start walking down the street. Hey, at least you got a free bottle of clean water out of it...";
 				LineBreak;
 				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
+				now Resolution of Demon Chase is 2; [discarded Wayne's stuff]
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     The demon chuckles loudly and kicks your legs out from under you, then licks drops of blood from his claws. 'Pathetic mortal, you're not even worth my cum. No, I'll save it all up for when I catch that mutt. He might just burst after a fuck or two, hahaha.' With that said, the demon brute kicks you in the stomach, smiling with evil glee as you curl up in a ball of pain. Then he snatches up the backpack again, pulling items from it and smashing them on the ground. Eventually, just the shredded fabric of the backpack itself is left, which the demon raises to his face and sniffs again. 'You can run, but you can't escape me forever!' the demon shouts, then sets out to chase his intended victim down.";
+			now Resolution of Demon Chase is 3; [lost to the demon]
 		else if fightoutcome is 30: [fled]
 			say "     Taking off at a run, you hear the roars and shouts of 'Fucking coward!' from the large demon, followed by many more curses and threats. Still, you manage to get away, leaving the purple beast in your dust.";
+			now Resolution of Demon Chase is 4; [fled to the demon]
 	else:
 		LineBreak;
 		say "     As you hide, the demon continues his shouts and mocking comments, followed by the sounds of ripping fabric and things being crushed. Peeking out from behind the car, you see him slowly stalking down the street, leaving behind a trail of the destroyed possessions of the young canine. Eventually, just the shredded fabric of the backpack itself is left, which the demon raises to his face and sniffs again. 'You can run, but you can't escape me forever!' the demon shouts, then sets out to chase his intended victim down.";
+		now Resolution of Demon Chase is 5; [hid from to the demon]
 	now Demon Chase is resolved;
 
 to say FamilyFunTape1:
@@ -119,9 +124,11 @@ instead of resolving a Intercepted Bike Courier:
 		LineBreak;
 		say "[bold type]Francis Koenig Observation Video has been added to your tape inventory![roman type][line break]";
 		add "Francis Koenig Observation Video" to tapes of player;
+		now Resolution of Intercepted Bike Courier is 1; [opened the package]
 	else:
 		LineBreak;
 		say "     With a shrug, you drop the envelope on the ground and continue on your path.";
+		now Resolution of Intercepted Bike Courier is 99; [abandoned the package]
 	now Intercepted Bike Courier is resolved;
 
 to say HikingObservationVid:
@@ -297,9 +304,11 @@ instead of resolving a Lost Explorer:
 		increase carried of urban explorer helmet by 1;
 		say "[bold type]'Urban Explorer Helmet Cam Vid #1' has been added to your tape inventory![roman type][line break]";
 		add "Urban Explorer Helmet Cam Vid #1" to tapes of player;
+		now Resolution of Lost Explorer is 1; [found the vid]
 	else:
 		LineBreak;
 		say "     Sometimes caution is the best way to stay alive. Not falling into the temptation of exposing yourself, you creep backwards from where you are, keeping an eye out for anyone or anything that might jump at you. A little while later you're back in the more populated parts of the warehouse district.";
+		now Resolution of Lost Explorer is 99; [did not explore]
 	now Lost Explorer is resolved;
 
 to say UrbanExplorerVid1:

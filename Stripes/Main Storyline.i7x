@@ -5,6 +5,10 @@ Version 2 of Main Storyline by Stripes begins here.
 
 Section 0 - Dr Matt Salacious
 
+Table of GameCharacterIDs (continued)
+object	name
+Doctor Matt	"Doctor Matt"
+
 Doctor Matt is a person. "A figure in a full hazmat suit is busily working at the various terminals, wandering from one to the other when he isn't sitting in that comfy chair. His name badge declares him to be [']Doctor Matt['].".
 The description of Doctor Matt is "[if HP of doctor matt is 100]There is a small tape recorder with a sticky note on it, labeled as [']Doctor Matt['] on one of the lab tables[else]Doctor Matt is working away at the various terminals, wandering from one to another when not working at his lab table or seated in his comfy chair. He has a full environment suit on, covering his whole body, with only a glass visor to show his human face[end if].".
 Doctor Matt is in Primary Lab.
@@ -91,7 +95,7 @@ Instead of conversing the doctor matt:
 		now HP of doctor matt is 5;
 	if HP of doctor matt is 5:
 		say "'Up for another task? Good. Orthas spotted something interesting while hunting. A singular creature. You must understand, one of the standard impulses the infection seems to give on its infectees is the desire to spread the infection. To see just one is unusual. A trait I have only seen in Orthas so far. Go to the park and find this creature, bring it to me for study.'";
-		now unusual creature is unresolved;
+		now unusual creature is active;
 		now HP of doctor matt is 6;
 	else if HP of doctor matt is 6 and unusual creature is unresolved:
 		say "'Did you forget already?' asks Matt, 'Go to the park, find the unusual creature. Bring it here. Orthas said it was intersexed, if that helps.'";
@@ -112,8 +116,8 @@ Instead of conversing the doctor matt:
 		else:
 			say "'Poor news. The specimen escaped, went running off back towards the park. She probably went feral. Nothing to do about it now, just look out for her. Probably dangerous.'";
 			now HP of Susan is 1;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Deer":
 					now monster is y;
 					break;
@@ -344,7 +348,7 @@ Instead of conversing the doctor matt:
 			say "     Once the process is done, you look yourself over. Thankfully there is a mirror over the nearby eye-wash station, so you use that to check your face. Looking at your reflection, you find you've turning back into something more resembling your old self. Your physique is somewhat improved (possibly from all the hiking around you've been doing), but your appearance overall is a little nicer too. Perhaps it is some effect of the nanites making you [if player is female]prettier[else]more handsome[end if]. Looking down, you can see that the spray has not changed your sexual state, though your genitals look pleasantly human once more.";
 			say "     Your self-examination is abruptly cut short as the doctor starts removing the sensors from you with the sharp stings of quickly ripped away tape. Thankfully you've got nicely human skin now. It'd probably hurt so much worse if you had fur[if player is male]... though it is particularly uncomfortable when he unwraps the stuff wound around your cock[smn][end if]. The doctor's bedside manner could definitely use work, though you can't argue with the results, you remind yourself while looking in the mirror again, pleased to see a human face looking back.";
 			setmonster "Human";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now tailname of player is "Human";
 			now facename of player is "Human";
 			now skinname of player is "Human";
@@ -365,12 +369,12 @@ Instead of conversing the doctor matt:
 		say "     'Orthas has also received some news from travelers about the state of the city hospital after the incidents there. Some new chimeric creatures have been observed. It seems these are different from the other ones you've earlier observed. They are likely [if HP of Doctor Mouse is 1]released[else]escaped[end if] test subjects that have been left to roam the halls. They have either subsumed or displaced the earlier chimeras. The accounts state that they are more powerful, so I thought it best to advise you of the occurrence. Exercise caution should you go there.'";
 		say "     And with all that done, Dr. Matt turns back to his computer and dives into the new data he's received. 'I have little else for you to do at the moment. Please check back in a day or so. Until then, go keep yourself occupied elsewhere for now,' he says dismissively.";
 		setmonster "Enhanced Chimera";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now area entry is "Hospital";
 		now non-infectious entry is true;
 		setmonster "Mismatched Chimera";
-		choose row monster from the table of random critters;
-		now area entry is "nowhere";
+		choose row monster from the Table of Random Critters;
+		now area entry is "Nowhere";
 		now HP of Doctor Matt is 19;
 		now level of Doctor Matt is turns;
 	else if HP of Doctor Matt is 19 and level of Doctor Matt - turns >= 8:
@@ -407,7 +411,6 @@ name	desc	weight	object
 "infection monitor"	"     Cobbled together from various items, Dr Matt's infection analyzer can be used to check your body's infection status. Type [bold type]pism[roman type] to use."	1	infection monitor
 
 infection monitor is a grab object.
-infection monitor has a number called progress.
 it is part of the player.
 It is not temporary.
 

@@ -29,6 +29,10 @@ To say jadakoroomdesc:
 
 Section 2 - Declaring Jadako and Joseph
 
+Table of GameCharacterIDs (continued)
+object	name
+Jadako	"Jadako"
+
 Jadako is a man.
 The description of Jadako is "[jadakodesc]".
 The conversation of Jadako is { "<This is nothing but a placeholder!>" }.
@@ -36,6 +40,10 @@ The scent of Jadako is "The lithe feline smells of exotic cologne, covering a he
 
 To say jadakodesc:
 	say "     Jadako is an anthro feline. His fur has a variety of different colors, mostly oranges, blacks, and whites. His large cat ears stand straight up, with a single piercing in his left ear. His frame is thin and wiry, but not without muscle. He wears no clothes, displaying his sheathed cock and long tail. You can't currently see it, but you know it is a bright red shaft, humanoid looking but covered in smooth barbs. His golfball sizes testicles hang below the sheath, covered in his orange fur. Jadako notices you checking him out, as he flexes and performs a couple of poses to show off his body more. He lets out a smooth purr, clearly enjoying the attention.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Joseph	"Joseph"
 
 Joseph is a man.
 The description of Joseph is "[josephdesc]".
@@ -98,13 +106,9 @@ to say JadakoTalkMenu:
 					say "[JadakoTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back Jadako, who looks at you a little funny. 'Ok, nevermind, I guess?' he questions.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from Jadako, who looks at you a little funny. 'Ok, nevermind, I guess?' he questions.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -169,13 +173,9 @@ to say JosephTalkMenu:
 					say "[JosephTalk3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back Joseph. He gives you a humorous look, before saying, 'If there's anything you need to talk about, I'm all ears.'";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from Joseph. He gives you a humorous look, before saying, 'If there's anything you need to talk about, I'm all ears.'";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -251,13 +251,9 @@ to say CampusCoupleSexMenu:
 					say "[CampusCoupleSex3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation";
-			if player consents:
-				now sextablerun is 1;
-				say "     You change your mind, deciding now isn't a good time. The two understand, since they can always fuck each other later.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You change your mind, deciding now isn't a good time. The two understand, since they can always fuck each other later.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

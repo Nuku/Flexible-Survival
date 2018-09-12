@@ -51,6 +51,10 @@ to say bradfordcampdesc:
 
 Section 3 - Bradford
 
+Table of GameCharacterIDs (continued)
+object	name
+Bradford	"Bradford"
+
 Bradford is a person. Bradford is in Bradford's Camp.
 The description of Bradford is "[bradforddesc]".
 The conversation of Bradford is { "Moo, mutherfuckah!" }.
@@ -203,13 +207,9 @@ to say BradfordTalkMenu:
 					say "[personalQuestionBradford]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the bounty hunter, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the bounty hunter, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -316,13 +316,9 @@ to say BradfordBountyMenu:
 					say "[spidergirlBounty]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the bounty hunter, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the bounty hunter, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -468,13 +464,9 @@ to say Bradfordsexmenu:
 					say "[sexwithBradfordLapride]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the bounty hunter, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the bounty hunter, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Bradford is turns;
@@ -550,7 +542,7 @@ to say sexwithBradfordWall: [fucked in the ass against a wall]
 
 to say sexwithBradfordLapride:		[vaginal - lap ride]
 	setmonster "Bovine";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Bradford looks away from the window to run his eyes up and down you[if breast size of player > 3] appreciatively[end if]. 'Alright. I could use a bit of a break. It don't look like nothin's happenin['] out there. Feel good to let off a bit of steam.' He unzips his fly and pulls out his plump bull-cock. It's a girthy ten-inch length of brick-red flesh that's throbbing and ready to go.";
 	say "     The sight of his bovine shaft gets you all the more excited. You straddle his lap and grind your [cunt size desc of player] pussy down atop it. You love the warm feel of it and how it pulses and throbs with need at your touch. After this little bit of teasing[if breast size of player > 3], during which he bares your chest and starts fondling your boobs[end if], you lower yourself [if cunt length of player < 4]slowly down onto the pulsing rod. Given the size of his manhood, you really have to take your time to start, enduring the ache of stuffing yourself until that fades and the pleasure rises to replace it[else if cunt length of player < 7]gradually down onto the pulsing rod. Given the size of his manhood, you have to take your time to start, but it is deliciously satisfying for the added effort[else if cunt length of player > 18]with ease down onto the pulsing rod. Given the size of your spacious cunt, you have little difficulty taking the bull's thick shaft, letting you jump right into action[else]down onto the pulsing rod. His enlarged cock stuffs you nice and full for a satisfying fit that has you moan with pleasure as you take it into you[end if].";
 	WaitLineBreak;

@@ -4,8 +4,6 @@ Version 4 of Tiger Cop by Stripes begins here.
 
 Section 1 - Key Hunt Quest
 
-Policeman is a situation.
-The sarea of Policeman is "High".
 keycollection is a number that varies.
 mqstatus is a number that varies.
 mqcountdown is a number that varies. mqcountdown is usually 99.
@@ -39,6 +37,9 @@ when play begins:
 [	4 third client done		]
 [	5 complete				]
 [	99 refused				]
+
+Policeman is a situation.
+The sarea of Policeman is "High".
 
 Instead of resolving a Policeman:
 	project the icon of Sgt Marks;
@@ -85,8 +86,8 @@ Instead of resolving a Policeman:
 				say "     You are struck firmly across the jaw by the hard club. (15 dmg)";
 			say "[line break]     'And here I thought you were smarter than that, but I guess you're just another stupid, punk looter? I guess I'll have to teach you a hard lesson,' the tiger cop growls, readying to strike again if you get up.";
 			wait for any key;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Tiger Cop":
 					now monster is y;
 					break;
@@ -97,7 +98,8 @@ Instead of resolving a Policeman:
 			else:
 				challenge "Tiger Cop";
 			now mqstatus is 99; [set to refused quest]
-			Now Policeman is resolved;
+			now Resolution of Policeman is 99; [refused the quest]
+			now Policeman is resolved;
 	else:
 		let T be a random number between one and four;
 		if T is 1:
@@ -124,6 +126,7 @@ to say motelkeycheck:
 			say "     You shake your head and tell him you don't have the motel keys for him yet. He growls softly and points off towards the seedier part of town with his nightstick. 'Just you do your work and get them for me. Hop to it.'";
 	else:
 		say "     You shake your head and tell him you don't have the motel keys for him yet. He growls softly and points off towards the seedier part of town with his nightstick. 'Just you do your work and get them for me. Hop to it.'";
+		now Resolution of Policeman is 1; [quest started]
 
 
 to say givekeys:
@@ -140,12 +143,13 @@ to say givekeys:
 	now Police Car is known;
 	now the player is in Police Car;
 	now mqcountdown is 0;
-	Now Policeman is resolved;
+	now Policeman is resolved;
 	increase score by 40;
 	increase XP of player by 10;
 	say "     The feline policeman opens the car and digs around in what appears to be the torn remains of a cop's uniform in the passenger's seat. 'Here, take this. You're gonna need it,' he says meaningfully as he passes you a nightstick. 'If you've got any last minute stuff to take care of or an equipment stash wherever you're holed up, you go get your gear and be back here pronto. I want you to come along on this, but I'm only willin['] to wait 24 hours before I move out. And if somethin['] holds you up, there'll be a key in the lip of the bumper. I should be able to leave somethin['] for ya in the trunk and I'll get in touch after the heat dies down.'";
 	say "     Nightstick obtained.";
 	increase carried of nightstick by 1;
+	now Resolution of Policeman is 2; [Gave Sgt Marks the keys]
 
 
 Section 2 - Tiger Cop character and Police Car location
@@ -167,6 +171,9 @@ to say policecardesc:
 			increase score by 10;
 			now mqpickup is 1;
 
+Table of GameCharacterIDs (continued)
+object	name
+Sgt Marks	"Sgt Marks"
 
 Sgt Marks is a man. Sgt Marks is in Police Car.
 The description of Sgt Marks is "     The tiger cop is quite large and impressively strong looking. His police jacket hangs open, unable to close around his broad, striped chest. His pants mostly fit, thought the bottom of the legs are torn open and leave the bottom third of his leg uncovered. To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast. His tail thrashes about with barely contained excitement as he checks over his equipment and supplies as he gets ready to enact his plan.".
@@ -321,8 +328,8 @@ to say mqlostfight:
 to say totalTH:
 	if libido of player < 70:
 		now libido of player is 70;
-	repeat with y running from 1 to number of filled rows in table of random critters:	[puts Tigress Hooker as lead monster...]
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:	[puts Tigress Hooker as lead monster...]
+		choose row y in Table of Random Critters;
 		if name entry is "Tigress Hooker":
 			now monster is y;
 			break;
@@ -477,14 +484,14 @@ to say BTchangeover:
 			now breast size of player is 0;
 	if player is female:
 		now tailname of player is "Big Tigress";
-		Now facename of player is "Big Tigress";
+		now facename of player is "Big Tigress";
 		now skinname of player is "Big Tigress";
 		now bodyname of player is "Big Tigress";
 		now cockname of player is "Big Tigress";
 		now scalevalue of player is 4;
 		now bodydesc of player is "powerful";
 		now bodytype of player is "feline";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		now tail of player is "From your muscled rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with excitement.";
 		now face of player is "a feminine tiger face and long, flowing hair. Your hair is raven black and curls lightly at the ends as it drapes across your shoulders, framing your steely-blue eyes";
 		now skin of player is "ivory white fur streaked with tiger stripes that covers your";
@@ -492,14 +499,14 @@ to say BTchangeover:
 		now cock of player is "ebon feline";
 	else:
 		now tailname of player is "Big Tiger";
-		Now facename of player is "Big Tiger";
+		now facename of player is "Big Tiger";
 		now skinname of player is "Big Tiger";
 		now bodyname of player is "Big Tiger";
 		now cockname of player is "Big Tiger";
 		now scalevalue of player is 4;
 		now bodydesc of player is "powerful";
 		now bodytype of player is "feline";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		now tail of player is "From your muscled rear emerges a long, white tail with black stripes banding the fur. It flicks behind you with excitement.";
 		now face of player is "a male tiger head with a strong jaw and a predatory gaze. With a fully feline head, you have fur, stripes and whiskers cover your stern muzzle";
 		now skin of player is "ivory white fur streaked with tiger stripes that covers your";
@@ -604,7 +611,7 @@ when play begins:
 
 to say tigercopdesc:
 	setmongender 3; [creature is male]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if hardmode is true and level of player > 8, let debit be level of player - 8; [Boss hard mode growth rates]
 	now HP entry is 90 + ( debit * 6 );
@@ -633,12 +640,12 @@ to say losetotigercop:
 			now pquest is 1;
 			change the west exit of (Entrance to the Red Light District) to Abandoned Storefront;
 			[now Abandoned Storefront is west of Entrance to the Red Light District;]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Tiger Cop":
 					now monster is y;
 					break;
-			now area entry is "nowhere"; [deactivates Tiger Cop as a wandering monster]
+			now area entry is "Nowhere"; [deactivates Tiger Cop as a wandering monster]
 		else:
 			say "     'Bah, I knew you were a no good punk.' The tiger cop shakes his head, seeming almost disappointed. 'Just leave, away from my turf. I won't be so nice the next time, so you better watch your back.' Not one to question your luck, you leave while you have the chance, wary of encountering the cop again.";
 			now pquest is 99;
@@ -653,8 +660,8 @@ to say losetotigercop:
 				say "     Wiping the warm rod across your ass, he gives you another hard swat, making you cry out. 'Get your dumb ass out of here. I might not go so easy on you next time,' he growls.";
 		if player is female:
 			[puts Tigress Hooker as lead monster in case of impregnation]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Tigress Hooker":
 					now monster is y;
 					break;
@@ -699,12 +706,12 @@ To say beattigercop:
 			now pquest is 1;
 			change the west exit of (Entrance to the Red Light District) to Abandoned Storefront;
 			[now Abandoned Storefront is west of Entrance to the Red Light District;]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Tiger Cop":
 					now monster is y;
 					break;
-			now area entry is "nowhere"; [deactivates Tiger Cop as a wandering monster]
+			now area entry is "Nowhere"; [deactivates Tiger Cop as a wandering monster]
 		else:
 			say "     The cop looks surprised that you turned down his offer, and perhaps even disappointed, but he quickly regains his composure. 'I guess you were just a useless, good for nothing punk, no matter how good you are in a scrap. That's the last time I try being nice.' Before you have a chance to be fully alert again, the cop spins on his heel and sprints away, managing to get out of sight. You doubt he'll be any friendlier the next time you run into him.";
 			now pquest is 99;
@@ -726,12 +733,12 @@ To say beattigercop:
 
 Section 9 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Tiger Cop"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -760,7 +767,7 @@ When Play begins:
 	now HP entry is 90;
 	now lev entry is 8; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 12; [Amount of Damage monster Does when attacking.]
-	now area entry is "nowhere"; [ Location of monster, start nowhere, High if active]
+	now area entry is "Nowhere"; [ Location of monster, start nowhere, High if active]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 5; [ Size of balls apparently ;) sneaky Nuku]
@@ -779,8 +786,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 10 - Endings

@@ -19,7 +19,7 @@ Instead of resolving a Leather Wolves:
 	increase score by 10;
 [	say "     With this pack established here, there's clearly no safe way to search the immediate area further and you quietly backtrack.";
 	increase score by 1;]
-	Now Leather Wolves is resolved;
+	now Leather Wolves is resolved;
 
 
 Section 1 - Leather Store
@@ -39,6 +39,10 @@ to say cuerolobodesc:
 
 
 Section 2 - Zigor the Leather Wolf
+
+Table of GameCharacterIDs (continued)
+object	name
+Zigor	"Zigor"
 
 Zigor is a man. Zigor is in Cuero Lobo.
 The description of Zigor is "[zigordesc]".
@@ -322,7 +326,7 @@ to say zigor_S2_04_MM:		[ stage 4 - offer of finale - MM ]
 			now scalevalue of player is 3;
 			now bodydesc of player is "strong";
 		now bodytype of player is "lupine";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		wait for any key;
 		end the story saying "You have been turned into Zigor's latest leather wolf plaything.";
 		now battleground is "void";
