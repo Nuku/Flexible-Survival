@@ -203,7 +203,7 @@ to MoraleBoost (N - number):
 	LineBreak;
 	say "[bold type]Your morale has increased by [N]![roman type][line break]";
 	increase morale of player by N;
-	if humanity of player > 100:
+	if morale of player > 100:
 		now morale of player is 100;
 
 
