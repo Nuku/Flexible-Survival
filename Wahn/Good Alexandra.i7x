@@ -105,7 +105,7 @@ Alexandrastory3 is a truth state that varies.
 
 [bugfix code - comes from renaming the police station and some versions of Alexandra remaining behind in the old room]
 an everyturn rule:
-	if Alexandra is in Police Station:
+	if Alexandra is not nowhere and Alexandra is not in Police Station Twelve and HP of Alexandra > 49:
 		move Alexandra to Police Station Twelve;
 
 Section 6 - Police Station

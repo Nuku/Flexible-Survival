@@ -446,7 +446,7 @@ to say icarussex5_ap_x:	[extreme version of scene 5]
 	PlayerEat 6;
 	now libido of player is libido of player / 2;
 	now humanity of player is humanity of player / 2;
-	remove Icarus from play;
+	now Icarus is nowhere;
 	now HP of Icarus is 7;
 	now ttIcarus is turns;
 	now tti_scene is 0;
@@ -461,7 +461,7 @@ to say icarussex5_ap_x2:	[repeating extreme version of scene 5]
 	PlayerEat 6;
 	decrease libido of player by libido of player / 5;
 	SanLoss 20;
-	remove Icarus from play;
+	now Icarus is nowhere;
 	now HP of Icarus is 9;
 	now ttIcarus is turns;
 
@@ -504,7 +504,7 @@ to say icarussex5_fel_x:	[extreme version of scene 5 - feline]
 	PlayerEat 6;
 	now libido of player is libido of player / 2;
 	now humanity of player is humanity of player / 2;
-	remove Icarus from play;
+	now Icarus is nowhere;
 	now HP of Icarus is 7;
 	now ttIcarus is turns;
 	now tti_scene is 0;
@@ -519,7 +519,7 @@ to say icarussex5_fel_x2:	[repeating extreme version of scene 5 - feline]
 	PlayerEat 6;
 	decrease libido of player by libido of player / 5;
 	decrease humanity of player by 20;
-	remove Icarus from play;
+	now Icarus is nowhere;
 	now HP of Icarus is 9;
 	now ttIcarus is turns;
 
@@ -592,7 +592,7 @@ to say icarussex6_ap:		[violent avian sex]
 		PlayerEat 6;
 		decrease libido of player by libido of player / 5;
 	decrease humanity of player by 20;
-	remove Icarus from play;
+	now Icarus is nowhere;
 	now HP of Icarus is 9;
 	now ttIcarus is turns;
 
@@ -689,7 +689,7 @@ to say icarussex6_fel:		[violent feline sex]
 		PlayerEat 6;
 		decrease libido of player by libido of player / 5;
 	decrease humanity of player by 20;
-	remove Icarus from play;
+	now Icarus is nowhere;
 	now HP of Icarus is 9;
 	now ttIcarus is turns;
 

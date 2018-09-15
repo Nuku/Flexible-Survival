@@ -247,12 +247,12 @@ Instead of conversing the Sam:
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Unable to get up due to your injuries, you cannot stop Sam as he goes on a rampage, roaring angrily. He tosses the bottle you intended for him against a wall, splattering its contents across the concrete. 'You piece of scum. I trusted you, but you're no better than Rick in the end. I don't want to have anything to do with you ever again,' he roars as he shakes you so roughly you black out from the pain. By the time you come to, he's gathered up his remaining supplies and equipment and has left the library for good. It is some time before your body's healed enough for you to get up, leaving you plenty of time to wonder if you made the right decision while you watch a patch of pink fur grow on the wall.";
 				now HP of Sam is 98;
-				remove Sam from play;
+				now Sam is nowhere;
 				dragontaur_active; [activate Dragontaur creature]
 			else:
 				say "     Rather than keep fighting Sam, you begin a tactical retreat, leading Sam out of the library[if the number of booked people + number of bunkered people > 2] while the others cautiously stay out of the way[else if the number of booked people + number of bunkered people is 2] while your other friend there stays out of the way[end if]. Once outside, Sam growls in frustration and takes to the air on his large wings. 'You piece of scum. You're no better than Rick. I don't want to have anything to do with you ever again,' he roars, unleashing a large gout of fire into the air before flying off. With him safely gone, you dump out the vial fluid that's come between you both and wonder if you made the right decision.";
 				now HP of Sam is 98;
-				remove Sam from play;
+				now Sam is nowhere;
 				dragontaur_active; [activate Dragontaur creature]
 		else:
 			LineBreak;
@@ -318,12 +318,12 @@ Instead of conversing the Sam:
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Unable to get up due to your injuries, you cannot stop Sam as she goes on a rampage, growling angrily. She tosses the bottle you intended for her against a wall, splattering its contents across the concrete. 'You piece of scum. I trusted you, but you're no better than Rick in the end. I don't want to have anything to do with you ever again,' she snarls as she shakes you so roughly you black out from the pain. By the time you come to, she's gathered up her remaining supplies and equipment and has left the library for good. It is some time before your body's healed enough for you to get up, leaving you plenty of time to wonder if you made the right decision while you watch a patch of blue scales grow on the wall.";
 				now HP of Sam is 99;
-				remove Sam from play;
+				now Sam is nowhere;
 				vixentaur_active; [activate Vixentaur creature]
 			else:
 				say "     Rather than keep fighting Sam, you begin a tactical retreat, leading Sam out of the library[if the number of booked people + number of bunkered people > 2] while the others cautiously stay out of the way[else if the number of booked people + number of bunkered people is 2] while your other friend there stays out of the way[end if]. Once outside, Sam snarls in frustration and quickly bounds down the hill. 'You piece of scum. You're no better than Rick. I don't want to have anything to do with you ever again,' she growls as she's leaving. With her safely gone, you dump out the vial fluid that's come between you both and wonder if you made the right decision.";
 				now HP of Sam is 99;
-				remove Sam from play;
+				now Sam is nowhere;
 				vixentaur_active; [activate Vixentaur creature]
 		else:
 			LineBreak;
@@ -414,14 +414,14 @@ to assaultonminilab:
 			decrease humanity of player by 20;
 			if libido of player > 100, now libido of player is 100;
 			now HP of Sam is 100;
-			remove Sam from play;
+			now Sam is nowhere;
 			now Mini-Lab is unknown;
 			move player to Grey Abbey Library;
 		else:
 			say "     Rather than continue to risk yourself in a losing fight, you make a break for the basement hatch and run away. Leaving Sam to his feline fate, you head back to the library to consider your next course of action.";
 			WaitLineBreak;
 			now HP of Sam is 100;
-			remove Sam from play;
+			now Sam is nowhere;
 			now Mini-Lab is unknown;
 			move player to Grey Abbey Library;
 	else if calcnumber is 2:
@@ -483,7 +483,7 @@ to assaultonminilab:
 			decrease humanity of player by 20;
 			if libido of player > 100, now libido of player is 100;
 			now HP of Sam is 100;
-			remove Sam from play;
+			now Sam is nowhere;
 			now Mini-Lab is unknown;
 			move player to Grey Abbey Library;
 	else if calcnumber is 3:
@@ -495,7 +495,7 @@ to assaultonminilab:
 		increase carried of soda by 1;
 		decrease humanity of player by 12;
 		now HP of Sam is 100;
-		remove Sam from play;
+		now Sam is nowhere;
 		now Mini-Lab is unknown;
 		move player to Grey Abbey Library;
 	else if calcnumber is 4:
@@ -505,7 +505,7 @@ to assaultonminilab:
 		decrease morale of player by 3;
 		decrease score by 25;
 		now HP of Sam is 100;
-		remove Sam from play;
+		now Sam is nowhere;
 		now Mini-Lab is unknown;
 		move player to Grey Abbey Library;
 

@@ -269,7 +269,7 @@ Figure of Orc_Brothers_clothed_icon is the file "Orc_Brothers_naked.jpg".
 Figure of Orc_Brothers_naked_icon is the file "Orc_Brothers_naked.jpg".
 Figure of Orbul_clothed_icon is the file "Orbul_clothed.jpg".
 Figure of Orbul_naked_icon is the file "Orbul_naked.jpg".
-Figure of Orthas_icon is the file "orthas.jpg".
+Figure of Orthas_icon is the file "Orthas.jpg".
 Figure of Paula_icon is the file "Paula_ig.jpg".
 Figure of Penny_icon is the file "Penny.jpg".
 Figure of Rachel_icon is the file "Rachel_ig.jpg".

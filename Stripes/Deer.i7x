@@ -165,7 +165,7 @@ instead of conversing the Susan:
 	if HP of Susan < 2:
 		if deerconsent is 0:
 			say "     Rather than talk to you, she avoids you entirely. Eventually you give up in trying to approach her at all as she storms off to another part of the building.";
-			remove Susan from play;
+			now Susan is nowhere;
 			now deerconsent is 2;
 		else if deerconsent is 1:
 			say "     She smiles as you approach her, and reaches to take one of your hands. 'Ignore the creep in the hazmat,' she says. 'This is just about us. I want a mate, a partner. Will you be it?' she asks as she leans in and licks your hand once. Her eyes roam hopefully over your [bodydesc of player] form with perked ears and a twitching tail.";

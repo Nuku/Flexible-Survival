@@ -105,7 +105,7 @@ An everyturn rule:
 	if a random chance of 1 in 2 succeeds: [present]
 		move Sylvia to Sylvia's Room;
 	else: [Away on an adventure]
-		remove Sylvia from play;
+		now Sylvia is nowhere;
 
 Section 1 - Room Declaration
 

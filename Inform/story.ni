@@ -662,7 +662,7 @@ Instead of attacking the Cola Vending machine:
 		say "Nothing happens...";
 	if ( a random chance of 5 in 100 succeeds ) or dispensed of noun > 9:
 		say "The machine gives a final spark of defeat. You are certain there is no more soda to be had.";
-		remove Cola Vending machine from play;
+		now Cola Vending Machine is nowhere;
 
 
 Book 3 - Definitions
@@ -3975,7 +3975,7 @@ This is the location choice rule:
 			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
-			remove orthas from play;
+			now Orthas is nowhere;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if name entry is "Deer":
@@ -3991,7 +3991,7 @@ This is the location choice rule:
 			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
-			remove orthas from play;
+			now Orthas is nowhere;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if name entry is "Deer":
@@ -6001,7 +6001,7 @@ to say gsopt_start:
 			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
-			remove orthas from play;
+			now Orthas is nowhere;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if name entry is "Deer":
@@ -6167,7 +6167,7 @@ to say silent_start:
 			now the description of Doctor Matt is "A small recorder labeled 'Doctor Matt' remains abandoned.";
 			now the HP of Doctor Matt is 100;
 			now the icon of Doctor Matt is figure of pixel;
-			remove orthas from play;
+			now Orthas is nowhere;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if name entry is "Deer":

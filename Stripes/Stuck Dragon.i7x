@@ -310,7 +310,7 @@ Carry out dragonfreeing:
 		say "     'My hero! Huh, where did you go?' Christy asks, unaware that you're pinned beneath her. She shifts her bulk around as she tries to find you and then accidentally rubs her pussy against your face, sending waves of pleasure through her body. Overcome by all her pent up lust, Christy starts to grind her pussy back and forth against your head. 'Oh, God yes! No! I must control these urges... I must... oh, screw it! It feels too damn good!'";
 		say "     Christy still doesn't seem to realize that it is your face that she is rubbing her pussy against. If you start protesting this treatment, Christy could snap out of it and stop... or you could just sit back, relax and enjoy this situation.";
 		increase score by 10;
-		remove the dragoness from play;
+		now dragoness is nowhere;
 		now HP of Christy is 2;
 		say "     [bold type]Do you want to yell at Christy to stop?[roman type][line break]";
 		LineBreak;

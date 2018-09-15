@@ -198,7 +198,7 @@ Instead of conversing the Sgt Marks:
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		now mqstatus is 3;
-		remove Sgt Marks from play;
+		now Sgt Marks is nowhere;
 		say "[line break][motelquest]";
 	else if mqcountdown < 8:
 		LineBreak;
@@ -211,7 +211,7 @@ An everyturn rule:
 	if mqstatus is 2 and mqcountdown < 10:
 		increase mqcountdown by 1;
 		if mqcountdown is 9:
-			remove Sgt Marks from play;
+			now Sgt Marks is nowhere;
 			say "[line break]     [bold type]Your 24 hours are up. Sgt Marks has left without you.[roman type]";
 			now mqcountdown is 10;
 

@@ -1205,7 +1205,7 @@ to say tlranaway:
 	wait for any key;
 	now HP of Doctor Matt is 101;
 	move Doctor Matt to dark basement;
-	move orthas to dark basement;
+	move Orthas to dark basement;
 	if Susan is visible:
 		move susan to Hidden Lab;
 	now the door west of Outside Trevor Labs is locked; [not sure how to do this]
@@ -1223,7 +1223,7 @@ to say tlloss:
 	wait for any key;
 	now HP of Doctor Matt is 101;
 	move Doctor Matt to dark basement;
-	move orthas to dark basement;
+	move Orthas to dark basement;
 	if Susan is visible:
 		move susan to Hidden Lab;
 	now the door west of Outside Trevor Labs is locked; [not sure how to do this]

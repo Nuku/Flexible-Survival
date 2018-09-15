@@ -86,7 +86,7 @@ The assault of doberman companion is "[one of]Spike pounces your opponent, landi
 the fuckscene of doberman companion is "[SexWithSpike]".
 
 to say SummonSpike:
-	remove Spike from play;
+	now Spike is nowhere;
 	if player is in Grey Abbey 2F and Spike is in Grey Abbey 2F: [summoning while standing next to him]
 		say "     ...";
 	else: [regular summoning]

@@ -481,7 +481,7 @@ A companion rule for input redirects the player's typed direction command in the
 		wait for any key;
 		clear screen;
 		say "You begin to feel odd indeed. Like the synapses aren't properly connected. Your body has been divorced from your inner compass!";
-		remove the red pill from play;
+		now red pill is nowhere;
 		now the player is deranged;
 		silently try looking.
 

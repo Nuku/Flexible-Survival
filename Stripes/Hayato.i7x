@@ -552,7 +552,7 @@ to say onilairassault:
 	else:													[FLEE]
 		say "     You turn to make your escape and head as quickly as you can away from the oni lair. Glancing back, you see Hayato look at you in surprise as you flee. Taking advantage of the opportunity, his weakened foe leaps atop him and they start wrestling on the ground. The third oni, having lost his opponent, joins in with a growl. Taking one last look from the alleyway, you watch as the fight concludes and turns into a roughhousing threesome. You're no longer able to tell which of them is which. Regardless, it's clear that Hayato's lost himself to the infection.";
 		now HP of Hayato is 98;
-		remove Hayato from play;
+		now Hayato is nowhere;
 		move player to Rusty Walkways;
 	now inasituation is false;
 

@@ -139,7 +139,11 @@ an everyturn rule:
 	else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
 		if player is in Darius's Crib:
 			project the Figure of Darius_face_icon;
-			say "     Walking into the room through the broken wall of the apartment next door, Darius grins broadly as he finds you waiting for him. 'Looks like someone really needs his fix. What can I do for ya, dawg?'";
+			if HP of Darius is 0: [never seen before]
+				say "     A muscled dalmatian comes into the room through the broken wall of the apartment next door. He seems unconcerned with finding you in his apartment, simply nodding to acknowledge your presence. 'Oh hey, new customer looking for a fix? I'm Darius. What can I do for ya, dawg?'";
+				now HP of Darius is 1;
+			else:
+				say "     Walking into the room through the broken wall of the apartment next door, Darius grins broadly as he finds you waiting for him. 'Looks like someone really needs his fix. What can I do for ya, dawg?'";
 		move Darius to Darius's Crib;
 	else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
 		if player is in Darius's Crib:

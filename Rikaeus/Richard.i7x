@@ -5,7 +5,7 @@ Section 1 - Basic Setup for Richard
 
 An everyturn rule:
 	if daytimer is night:
-		remove Richard from play;
+		now Richard is nowhere;
 	else if daytimer is day:
 		move Richard to Richard's Room;
 

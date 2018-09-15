@@ -24,6 +24,9 @@ check sniffing:
 		say "It smells strangely existential, like cats, radioisotopes and poison. It gives you a headache. Perhaps you should stick to smelling more concrete, physical things." instead;
 
 before sniffing:
+	if noun is a situation:
+		say "You can't see any such thing.";
+		stop the action;
 	if noun is a grab object:
 		if noun is not owned:
 			say "I don't see any [Noun] around here to sniff.";

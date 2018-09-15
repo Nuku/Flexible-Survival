@@ -12,8 +12,8 @@ CampusCoupleRelationship is a number that varies.
 
 An everyturn rule:
 	if daytimer is day:
-		remove Jadako from play;
-		remove Joseph from Play;
+		now Jadako is nowhere;
+		now Joseph is nowhere;
 	else if daytimer is night:
 		move Jadako to Jadako's Room;
 		move Joseph to Jadako's Room;

@@ -30,7 +30,7 @@ An everyturn rule:
 	if a random chance of 1 in 2 succeeds: [present]
 		move Julian to Julian's Room;
 	else: [Away on an adventure.]
-		remove Julian from play;
+		now Julian is nowhere;
 
 Section 1 - Room Declaration
 

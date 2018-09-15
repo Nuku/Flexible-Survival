@@ -176,12 +176,12 @@ an everyturn rule:
 			say "     'Oh, I was just about to come see you,' Gwen says with a sexy smile. 'Aunt Van- I mean the sarge has a mission for me. So I'll be heading out. There's some... scouting she needs me to take care of. I probably won't be back here, but hopefully I'll still get to see you once this mess is all done,' she says, running her hands down your side before grabbing your ass.";
 			say "     There's another long round of goodbyes and tears are shed, mostly by the [']mother['] and [']daughter['], though there's a promise by Meredith to see her as soon her work's done. You try to get some more info out of Vanessa, but she says it's military secrets and winks coyly. Still, it doesn't sound like it's anything too dangerous for the sexy centaur - well, at least no more dangerous than any trip out into the city can be. You wish her the best of luck and hope to see her again, watching that sexy ass of hers as she leaves.";
 			now HP of Gwen is 62;
-		remove Gwen from play;
+		now Gwen is nowhere;
 
 after going to Back Of The Library while HP of Gwen is 61:
 	say "     It takes you a few moment to notice that Gwen's not in the library. And more than not just being there, her stuff's gone as well. Aside from some of her childhood crayon drawings left on her bunk, she's cleared out. Asking Meredith about this, she's a little teary eyed, but says that Vanessa needed Gwen to go out on a very important mission. From how thoroughly she's cleared out and her mother's sad face, you know she won't be back here again. While neither of the centaurs will tell you what this mission is, it's clear they both feel it's important enough for her to go deal with it, but safe enough that she can handle it on her own. Meredith does talk about how she'll be seeing her sweet Gwenny again as soon as her own research is done.";
 	now HP of Gwen is 62;
-	remove Gwen from play;
+	now Gwen is nowhere;
 
 
 Gwen ends here.
