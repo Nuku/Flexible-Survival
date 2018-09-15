@@ -62,7 +62,7 @@ to say BarrettTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]0 - Nevermind[as]0[end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -76,7 +76,7 @@ to say BarrettTalkMenu:
 				if (nam is "Chat a bit"):
 					say "[BarrettTalk1]";
 				wait for any key;
-		else if calcnumber is 0:
+		else if calcnumber is 100:
 			now sextablerun is 1;
 			say "     You step back from the gruff man, shaking your head slightly as he gives a questioning look.";
 			wait for any key;
@@ -122,14 +122,13 @@ name	price	object	allowed
 "cervix smasher upgrade"	50	cervix smasher upgrade	true rule
 "tits inflator"	50	tits inflator	true rule
 "tits deflator"	50	tits deflator	true rule
-["tits multiplier injection"	50	tits multiplier injection	true rule
-"tits divider injection"	50	tits divider injection	true rule]
+"tits multiplier injection"	50	tits multiplier injection	true rule
+"tits divider injection"	50	tits divider injection	true rule
 "birth control pill"	50	birth control pill	true rule
 "fertile pill"	50	fertile pill	true rule
 "libido pill"	50	libido pill	true rule
 "libido suppressant"	100	libido suppressant	true rule
 
-[
 The outfitters rack is a backdrop. It is in Zephyr Storeroom. The description of the outfitters rack is "[outfitters rack list]".
 
 Instead of smelling the outfitters rack:
@@ -146,13 +145,14 @@ to say outfitters rack list:
 
 Table of Zephyr Black Market Outfitters Rack
 name	price	object	allowed
-"armored lab coat"	130	armored lab coat	true rule
-"zephyr riot helmet"	100	zephyr riot helmet	true rule
+"zephyr armored lab coat"	130	zephyr armored lab coat	true rule
+"zephyr armored lab gloves"	100	zephyr armored lab gloves	true rule
+"zephyr armored lab boots"	100	zephyr armored lab boots	true rule
+"zephyr riot helmet"	120	zephyr riot helmet	true rule
 "zephyr riot chest piece"	150	zephyr riot chest piece	true rule
-"zephyr riot arm guards"	100	zephyr riot arm guards	true rule
-"zephyr riot shin guards"	100	zephyr riot shin guards	true rule
-"zephyr riot shield"	120	zephyr riot shield	true rule
-]
+"zephyr riot arm guards"	120	zephyr riot arm guards	true rule
+"zephyr riot shin guards"	120	zephyr riot shin guards	true rule
+"zephyr riot shield"	130	zephyr riot shield	true rule
 
 [Table of Zephyr Black Market Catalogue
 "canine dildo"	350	canine dildo	true rule

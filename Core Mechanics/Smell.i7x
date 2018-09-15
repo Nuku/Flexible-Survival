@@ -81,7 +81,7 @@ Section 3 - overrides for included places
 
 [this is the stuff from the main story.ni file. Other content is in their files.]
 
-the scent of doctor matt is "[if HP of Doctor Matt is not 100]Safely encapsulated in his environment suit, he cannot be smelled[else]The doctor isn't here, and his tape recorder smells like old plastic[end if].".
+the scent of Doctor Matt is "[if HP of Doctor Matt is not 100]Safely encapsulated in his environment suit, he cannot be smelled[else]The doctor isn't here, and his tape recorder smells like old plastic[end if].".
 
 the scent of Grey Abbey library is "The smell of books permeates the air in the library. Smelling outside the doors, you can smell the scents of the city. You catch numerous scents of lust and arousal on the breeze, including that of [one of]several lupine creatures[or]some sulfurous stink[or]a variety of canines[or]something like latex[or]a feline in heat[at random].".
 

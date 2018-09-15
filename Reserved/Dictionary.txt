@@ -524,7 +524,7 @@
 |Nuku Valente|Fs Graphics|Figure of Candy_icon|value|
 |Nuku Valente|Fs Graphics|Figure of CarlClothed_icon|value|
 |Nuku Valente|Fs Graphics|Figure of David_icon|value|
-|Nuku Valente|Fs Graphics|Figure of DrMatt_icon|value|
+|Nuku Valente|Fs Graphics|Figure of DrMatt_face_icon|value|
 |Nuku Valente|Fs Graphics|Figure of DrMoffatt1_icon|value|
 |Nuku Valente|Fs Graphics|Figure of DrMoffatt2_icon|value|
 |Nuku Valente|Fs Graphics|Figure of DrMouse_icon|value|

@@ -78,11 +78,11 @@ zephyrpests is a number that varies.
 instead of conversing Larissa:
 	let vialsnagging be false;
 	if scenario is "Researcher" or nanitemeter > 0, let vialsnagging be true;
-	if HP of doctor matt is 16:
+	if HP of Doctor Matt is 16:
 		say "[zephyrmatt1]"; [start task]
-	else if HP of doctor matt is 17 and number of entries in ndmlist > 0 and a random chance of 1 in 3 succeeds:
+	else if HP of Doctor Matt is 17 and number of entries in ndmlist > 0 and a random chance of 1 in 3 succeeds:
 		say "[zephyrmatt2]"; [task reminder]
-	else if HP of doctor matt is 17 and number of entries in ndmlist is 0:
+	else if HP of Doctor Matt is 17 and number of entries in ndmlist is 0:
 		say "[zephyrmatt3]"; [task completion]
 		if HP of Larissa is 0:
 			say "     'So, cute stuff,' Larissa adds, 'What're you up to later?' Cha-ching!";
@@ -98,7 +98,7 @@ instead of conversing Larissa:
 			now HP of Larissa is 1;
 	else if HP of Larissa is 0:
 		say "     'We are looking for extracted vial samples. If you obtain some, please bring it to me to ['][bold type]vialsell <name>[roman type]['] for a credited reward.'";
-		if ( HP of doctor matt < 17 or HP of doctor matt >= 100 ) and ( hospquest < 17 ):
+		if ( HP of Doctor Matt < 17 or HP of Doctor Matt >= 100 ) and ( hospquest < 17 ):
 			if zephyrtask is 0:
 				if furry is not banned and hermaphrodite is not banned:
 					say "     She flips through a few papers on her desk, trying to find something. 'We've also been experiencing a bit of a pest problem. Some of those panther taur creatures have been harassing us.' She holds a photo of a black feline creature with a furred human upper body and a panther's body instead of legs. It's fondling its breasts and smiling lewdly at the camera. 'The guards are able drive them off easily enough, but it does upset the other customers. We're in the business of helping you, but we'll need some help to do that. If you could go beat up some of them around here, it might discourage them from coming around again. We'd appreciate your assistance and will reward you for the completion of the task.'";
@@ -1364,7 +1364,7 @@ carry out Larissatesting:
 	say "Size: [ScaleValue of Larissa]";
 	say "Body descriptor: [LarissaBodyDesc]";
 	say "Body type: [LarissaBodyType]";
-	say "Daycycle: [SleepRhythm of Larissa] = [if SleepRhythm of Larissa is 0]Normal[else if daycycle is 1]Day[else]Night[end if]";
+	say "Daycycle: [SleepRhythm of Larissa] = [if SleepRhythm of Larissa is 0]Normal[else if SleepRhythm of Larissa is 1]Day[else]Night[end if]";
 	say "Body Category: [LarissaBodycat] = [if LarissaBodycat is 0]humanoid[else if LarissaBodycat is 1]quadrupedal[else if LarissaBodycat is 2]tauric[else if LarissaBodycat is 3]legless[else]unknown![end if]";
 
 Larissa ends here.

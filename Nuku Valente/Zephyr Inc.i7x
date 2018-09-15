@@ -203,7 +203,7 @@ to say zephyrmatt1:
 	now red light detector site is active;
 	now high rise detector site is active;
 	now park detector site is active;
-	now HP of doctor matt is 17;
+	now HP of Doctor Matt is 17;
 
 to say zephyrmatt2:
 	say "     'Don't forget about taking care of those nanite detection monitors. Our system shows that there [if number of entries in ndmlist is 1]is still one[else if number of entries in ndmlist is 2]are still two[else if number of entries in ndmlist is 3]are still three[else]are still four[end if] left to be placed. We won't be able to pay you for the work until the whole job is completed. Remember, if you get this done, I'll put a rush on that request from Dr. Matt for you,' she says with a bureaucratic smile that tells you that you have no real choice in the matter.";
@@ -213,7 +213,7 @@ to say zephyrmatt3:
 	say "     'I'll inform head office that Dr. Matt's completed his end of the bargain,' she adds, sliding you a CD-ROM. 'The data's encrypted and Dr. Matt - what an odd name - will be sent the key electronically.' You take the disk and tuck it away somewhere safe.";
 	say "     The woman slides you a credit voucher. 'There you go. That's two hundred free credits, good for any place that accepts the new currency of the new world,' she says with a smile. Again, you have to bite your tongue from saying that this is just about the only place around that takes them right now. You should at least be able to get some supplies or some gear from these guys.";
 	increase freecred by 200;
-	now HP of doctor matt is 18;
+	now HP of Doctor Matt is 18;
 
 [ -- Dr. Mouse versions -- ]
 

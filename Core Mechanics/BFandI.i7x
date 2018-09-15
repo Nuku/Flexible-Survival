@@ -70,9 +70,9 @@ carry out bfanditesting:
 				say "This line appears for all infectious creatures.";
 			if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 				say "This line appears for all non-infectious creatures. Eventually used for non-infectious creatures such as soldier enemies, military robots, etc... and a few critters. The shifting ability should not be able to gain these infections, nor should any source of random infection.";
-			if DayCycle is 0 or DayCycle is 2:
+			if DayCycle entry is 0 or DayCycle entry is 2:
 				say "It is possible to encounter the [name entry] during the day.";
-			if DayCycle is 0 or DayCycle is 1:
+			if DayCycle entry is 0 or DayCycle entry is 1:
 				say "It is possible to encounter the [name entry] at night.";
 			if there is a altcombat in row monster of the Table of Random Critters:
 				say "altcombat: [altcombat entry]     The [name entry] follows the [altcombat entry] rules for alternate combat.";

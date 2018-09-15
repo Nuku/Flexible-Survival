@@ -12,20 +12,20 @@ DariusLostItems is a number that varies.
 Section 1 - Events
 
 after going to Darius's Crib while (HP of Darius is 0 and Darius is in Darius's Crib):
-	project the Figure of Darius_face_icon;
 	try looking;
+	project the Figure of Darius_face_icon;
 	say "     Entering the apartment, you are greeted by an anthro dalmatian, who grins broadly as he sees you. 'Hey there, I'm Darius.' Some barks coming from the apartment next door distract him after that, and the big male turns his head to shout towards the hole in the wall, 'Keep it down, will ya? Got a customer here!' Chuckling about the noise instantly being reduced, he directs his attention back to you, 'So anyways, want a fix? I got some primo stuff laid out over here.'";
 	now HP of Darius is 1; [player knows his name]
 
 after going west from Boundary Street East while (HP of Darius is 0 and Darius is in Entrance to the Red Light District):
-	project the Figure of Darius_face_icon;
 	try looking;
+	project the Figure of Darius_face_icon;
 	say "     Arriving at the street corner, you see an anthro dalmatian just casually leaning against a nearby wall. He waves at you and calls out, 'Yo homie! I'm Darius.' Seems like the guy is unconcerned about any hostile intent on your part. Looking at the tough guy attitude of the male dog, with his muscled upper body, heavy golden neck chain and only a sagging pair of jeans as a sole item of clothing, you can't help but feel like he can indeed take care of himself no matter what.";
 	now HP of Darius is 1; [player knows his name]
 
 after going east from Boundary Street West while (HP of Darius is 0 and Darius is in Entrance to the Red Light District):
-	project the Figure of Darius_face_icon;
 	try looking;
+	project the Figure of Darius_face_icon;
 	say "     Arriving at the street corner, you see an anthro dalmatian just casually leaning against a nearby wall. He waves at you and calls out, 'Yo homie! I'm Darius.' Seems like the guy is unconcerned about any hostile intent on your part. Looking at the tough guy attitude of the male dog, with his muscled upper body, heavy golden neck chain and only a sagging pair of jeans as a sole item of clothing, you can't help but feel like he can indeed take care of himself no matter what.";
 	now HP of Darius is 1; [player knows his name]
 
@@ -262,7 +262,7 @@ instead of fucking the Darius:
 to say SexWithDarius:
 	project the Figure of Darius_face_icon;
 	if (lastfuck of Darius - turns < 6): [he got fucked in the last 18 hours = 6 turns]
-		say "     'Yo slut, don't get greedy. I'm saving some of this spunk for Hannah, by breeding bitch,' the dalmatian barks out amusedly. Then he turns away from you, not really interested in sex right now.";
+		say "     'Yo slut, don't get greedy. I'm saving some of this spunk for Hannah, my breeding bitch,' the dalmatian barks out amusedly. Then he turns away from you, not really interested in sex right now.";
 	else if Darius is not in Darius's Crib:
 		say "[DariusStreetBJ]";
 	else: [ready for sex]

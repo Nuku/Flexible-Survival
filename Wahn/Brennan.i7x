@@ -739,7 +739,7 @@ Instead of resolving Trip to the Water Tower:
 		say "     With its countless nooks, crannies and dark corners, the pump house puts Brennan on guard. Pulling his bat out, the muscular man says, 'Better watch out, I got a bad feeling about this place.' And indeed, the silence of the larger building seems quite ominous to you too. None of the machines are running, and you see a little red lamp burn in a clunky housing on the other end of the room, above which hangs a sign that reads 'Emergency Shutoff'. A lever right next to it looks to be covered in green slime. As you and Brennan set foot into the place, slowly walking towards it, squelching and dripping noises start all around you. Squeezing themselves out of little holes and crannies, half a dozen goo girls do not hesitate one second before they attack!";
 		let GroupFightCounter be 0;
 		now fightoutcome is 0; [reset]
-		while fightoutcome < 20 and GroupFightCounter < 3: [runs for 2 times or until the player loses or flees]
+		while fightoutcome < 20 and GroupFightCounter < 3: [runs for 3 times or until the player loses or flees]
 			now inasituation is true;
 			challenge "Goo Girl";
 			increase GroupFightCounter by 1;

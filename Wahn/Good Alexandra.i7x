@@ -90,10 +90,10 @@ Version 1 of Good Alexandra by Wahn begins here.
 [ 5 = completed doors                               ]
 [ 6 = miscellaneous                                 ]
 
-[ PoliceStationTwelvePopulation                      ]
+[ PoliceStationTwelvePopulation                     ]
 [ generic population count                          ]
 
-[ PoliceStationTwelveInfpop                          ]
+[ PoliceStationTwelveInfpop                         ]
 [ infected population count                         ]
 [ (subset of population)                            ]
 
@@ -103,6 +103,11 @@ Alexandrastory is a truth state that varies.
 Alexandrastory2 is a truth state that varies.
 Alexandrastory3 is a truth state that varies.
 
+[bugfix code - comes from renaming the police station and some versions of Alexandra remaining behind in the old room]
+an everyturn rule:
+	if Alexandra is in Police Station:
+		move Alexandra to Police Station Twelve;
+
 Section 6 - Police Station
 
 Police Station Twelve is a room. It is fasttravel. It is private. It is sleepsafe.
@@ -111,7 +116,6 @@ The description of Police Station Twelve is "[policestationdesc]".
 the scent of Police Station Twelve is "Despite the cleanup, there's still a lingering scent of sex in the air.".
 PoliceStationTwelvePopulation is a number that varies.
 PoliceStationTwelveInfpop is a number that varies.
-
 
 PSdoor is a door. "The heavy doors to the north lead back outside to the parking lot and then into the city beyond.". North of Police Station Twelve is PSdoor. PSdoor is dangerous. North of PSdoor is Wandering the City.
 the marea of PSdoor is "Outside".
@@ -725,7 +729,7 @@ no_AlexandraTask is a number that varies. no_AlexandraTask is usually 255.
 
 to AlexandraTaskChat:
 	let AlexandraTask be a list of numbers;
-	if HP of doctor matt is 0 and AT_Matt is false, add 1 to AlexandraTask;
+	if HP of Doctor Matt is 0 and AT_Matt is false, add 1 to AlexandraTask;
 	if hospquest is 1 and AT_Mouse is false, add 2 to AlexandraTask;
 	if Needy Rabbit Girl is unresolved and AT_Sandra is false, add 3 to AlexandraTask;
 	if Hyper Squirrel Girl is unresolved and AT_Snow is false, add 4 to AlexandraTask;
@@ -1579,7 +1583,7 @@ carry out GoodAlexandra_Skipping:	[***note: imperfect skip]
 	move Alexandra to the Police Station Twelve;
 	now Police Station Twelve is known;
 	move player to Police Station Twelve;
-	say "Now HP of Alexandra is [HP of Alexandra] and placed in the Police Station.";
+	say "Now HP of Alexandra is [HP of Alexandra] and placed in Police Station Twelve.";
 
 
 

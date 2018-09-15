@@ -44,18 +44,18 @@ Instead of resolving Unusual Creature:
 	choose a blank row in table of fucking options;
 	now title entry is "Do you grab her?";
 	now sortorder entry is 1;
-	now description entry is "Forcefully grab her and bring her to doctor Matt";
+	now description entry is "Forcefully grab her and bring her to Doctor Matt";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Do you console her?";
 	now sortorder entry is 2;
-	now description entry is "Try to console her and help her feel better about herself before taking her to doctor Matt";
+	now description entry is "Try to console her and help her feel better about herself before taking her to Doctor Matt";
 	[]
 	if libido of player > 50 and player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Do you follow your instincts and fuck her?";
 		now sortorder entry is 3;
-		now description entry is "Fuck her before taking the doe to doctor Matt. Having a little fun with her before he examines her should be no problem, right";
+		now description entry is "Fuck her before taking the doe to Doctor Matt. Having a little fun with her before he examines her should be no problem, right";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -254,7 +254,7 @@ to say sexwithSusan:
 	project the Figure of Susan_face_icon;
 	if lastfuck of Susan - turns < 4:
 		say "     'As fun as it is, I do need a little break every now and again, my sweet.'";
-	else if HP of doctor matt < 8:
+	else if HP of Doctor Matt < 8:
 		say "     She blushes and nudges you, 'You should talk to the Doctor first.'";
 	else if HP of Susan is 52 and hospcountdown - turns >= 16 and hospquest >= 18:
 		say "[Susanlabcoatscene]";

@@ -21,10 +21,10 @@ Featgetting is an action applying to nothing.
 understand "volunteer" as featgetting.
 
 Check featgetting:
-	if HP of doctor matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
+	if HP of Doctor Matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
 	if featgained of player > ( ( level of player divided by 3 ) + foodwaterbonus + nerminefeat + boosterfeats ), say "You do not yet qualify for more feats." instead;
-	if HP of doctor matt <= 100:
-		if doctor matt is not visible, say "Only Doctor Matt knows how to do this." instead;
+	if HP of Doctor Matt <= 100:
+		if Doctor Matt is not visible, say "Only Doctor Matt knows how to do this." instead;
 	else:
 		if doctor mouse is not visible, say "You should see Dr Mouse about that." instead;
 
@@ -298,7 +298,7 @@ instead of addfeating the basic feats:
 	if level of player > 1:
 		addfeat "More Time" with "You have some more precious time. Though who'd want to stay around here longer? Weirdo!";
 [	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern."; ]
-	if HP of doctor matt > 4 or scenario is "Forgotten":
+	if HP of Doctor Matt > 4 or scenario is "Forgotten":
 		addfeat "Microwaved" with "Thanks to the good advice, you have a great idea! If you can clean water, why not yourself? Genius. Gives you a very potent resistance to species reassignment.";
 	if featunlock is 1:	[available after hospital quest]
 		if "Mutable" is not listed in feats of player:
