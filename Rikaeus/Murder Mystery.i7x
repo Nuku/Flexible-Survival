@@ -229,7 +229,7 @@ to say TylerBody2:
 	now BodyRelationship is 2;
 	move Jenna to Wolverine Guard Station;
 	now MurderMystery is 2;
-	remove Dead Body from play;
+	now Dead Body is nowhere;
 
 instead of fucking Dead Body:
 	say "     'It's a dead body and you're in public. What are you expecting?";

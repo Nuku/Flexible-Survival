@@ -89,7 +89,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Alexandra	"Alexandra"
 
-Alexandra is a woman. Alexandra is in Police Station.
+Alexandra is a woman. Alexandra is in Police Station Twelve.
 AlexandraCreampieCount is a number that varies.
 AlexandraPregCount is a number that varies.
 AlexandraGrowingPups is a number that varies.

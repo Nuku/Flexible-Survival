@@ -190,7 +190,7 @@ The assault of bee girl is "[one of]The bee girl buzzes around, slapping and pun
 the fuckscene of bee girl is "[SexWithHoney]".
 
 to say SummonHoney:
-	remove Honey from play;
+	now Honey is nowhere;
 	if player is in Grey Abbey Garden and Honey is in Grey Abbey Garden: [summoning while standing next to her]
 		say "     Buzzing cheerily at your call, the bumblebee drone flies over to join your side.";
 	else: [regular summoning]

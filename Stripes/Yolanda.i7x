@@ -136,12 +136,12 @@ to say movingYolanda:
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Beaten and distracted by the victorious harpy, you are unable to stop the backpack you were carrying from being snatched up and carried off in the talons of another. Other packs have been torn from Yolanda's back and are similarly being carried off by the others. 'Oh no! My collection!' the raven caws angrily, taking flight clumsily under the remaining burden to give pursuit before you can stop her. 'Give me back my shinies! My playthings! You feathery thieves! Lice-ridden bandits! You... you... mythological robbers!' you hear her crying out as she flies off after the considerably faster harpies, leaving you behind. You wait a while, hoping she'll return, but she never does. Eventually, you have to give up and return back to the library on your own after this ill-fated venture.";
 				now HP of Yolanda is 100;
-				remove Yolanda from play;
+				now Yolanda is nowhere;
 				move player to Grey Abbey Library;
 			else:
 				say "     Driven into retreat by the harpies, you quickly search for an avenue of escape from the harpies. With the backpack of baubles you were carrying unprotected, it gets snatched up by another of the bird women. Other packs have been torn from Yolanda's back and are similarly being carried off by the others. 'Oh no! My collection!' the raven caws angrily, taking flight to give pursuit. She adds a 'You big coward!' down at you as she struggles into the air with the remaining packs atop her. 'Give me back my shinies! My playthings! You... you... mythological robbers!' you hear her crying out as she flies off after the considerably faster harpies, leaving you behind. You wait briefly, but doubt she'd return to you after having abandoned her treasures to be stolen. In the end, you return back to the library, giving up on this ill-fated venture.";
 				now HP of Yolanda is 100;
-				remove Yolanda from play;
+				now Yolanda is nowhere;
 				move player to Grey Abbey Library;
 	else:
 		say "     You fill her in on a few details on how things have been going, leaving out some of the kinkier details so she doesn't scoff at you about them. Not that she's really one to talk, but no point in giving her more material to tease you about.";

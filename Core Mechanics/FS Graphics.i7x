@@ -174,7 +174,7 @@ Figure of DiegoFem_icon is the file "DiegoFem.jpg".
 Figure of DiegoFem_face_icon is the file "DiegoFem_face.jpg".
 Figure of Doran_icon is the file "Doran.jpg".
 Figure of Doran_face_icon is the file "Doran_face.jpg".
-Figure of DrMatt_icon is the file "drmatt.jpg".
+Figure of DrMatt_face_icon is the file "drmatt.jpg".
 Figure of DrMedea_icon is the file "DrMedea_ig.jpg".
 Figure of DrMoffatt1_icon is the file "drmoffatt_ig1.jpg".
 Figure of DrMoffatt2_icon is the file "drmoffatt_ig2.jpg".
@@ -217,6 +217,7 @@ Figure of Jason_clothed_icon is the file "Jason_clothed.jpg".
 Figure of Jason_naked_icon is the file "Jason_naked.jpg".
 Figure of Jill_icon is the file "Jill.jpg".
 Figure of Jimmy_icon is the file "Jimmy_ig.jpg".
+Figure of Klauz_face_icon is the file "Klauz_face.jpg".
 Figure of Koghh_clothed_icon is the file "Koghh_clothed.jpg".
 Figure of Koghh_naked_icon is the file "Koghh_naked.jpg".
 Figure of Koghh_Yatur_naked_icon is the file "Koghh_Yatur_naked.jpg".
@@ -268,7 +269,7 @@ Figure of Orc_Brothers_clothed_icon is the file "Orc_Brothers_naked.jpg".
 Figure of Orc_Brothers_naked_icon is the file "Orc_Brothers_naked.jpg".
 Figure of Orbul_clothed_icon is the file "Orbul_clothed.jpg".
 Figure of Orbul_naked_icon is the file "Orbul_naked.jpg".
-Figure of Orthas_icon is the file "orthas.jpg".
+Figure of Orthas_icon is the file "Orthas.jpg".
 Figure of Paula_icon is the file "Paula_ig.jpg".
 Figure of Penny_icon is the file "Penny.jpg".
 Figure of Rachel_icon is the file "Rachel_ig.jpg".
@@ -590,7 +591,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Doran"	Figure of Doran_icon	"Anymouse1968"	g-white	"normal"
 "Doran_face"	Figure of Doran_face_icon	"Anymouse1968"	g-white	"normal"
 "Dracovixentaur"	Figure of Dracovixentaur_icon	"Anymouse1968"	g-white	"normal"
-"DrMatt"	Figure of DrMatt_icon	"The_Negative"	g-white	"normal"
+"DrMatt"	Figure of DrMatt_face_icon	"The_Negative"	g-white	"normal"
 "DrMedea"	Figure of DrMedea_icon	"Candy"	g-white	"normal"
 "DrMoffatt1"	Figure of DrMoffatt1_icon	"The_Negative"	g-black	"normal"
 "DrMoffatt2"	Figure of DrMoffatt2_icon	"MadTurtle"	g-white	"normal"
@@ -663,6 +664,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Jay_undies"	Figure of Jay_undies_icon	"Lytta"	g-black	"normal"
 "Jill"	Figure of Jill_icon	"Sususmiles"	g-white	"normal"
 "Jimmy"	Figure of Jimmy_icon	"Redragon"	g-white	"normal"
+"Klauz_face"	Figure of Klauz_face_icon	"Sinealas"	g-black	"normal"
 "Red Kangaroo"	Figure of kangaroo_icon	"Anonymous"	g-white	"normal"
 "Koghh_clothed"	Figure of Koghh_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Koghh_naked"	Figure of Koghh_naked_icon	"Kupo Klein"	g-white	"normal"
@@ -983,9 +985,11 @@ carry out artistcredits:
 	say "     Christy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Danny (naked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
 	say "     Danny (design + dressed) by Dragonpunk @ furaffinity.net[line break]";
+	say "     Darius by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";	
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
 	say "     Diego by valdericblackstag @ furaffinity.net[line break]";
 	say "     Diego by Anonymous/Damdidoo[line break]";
+	say "     Dr. Matt by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";	
 	say "     Dr. Matt by The_Negative @ furaffinity.net[line break]";
 	say "     Dr. Medea by Candy @ furaffinity.net[line break]";
 	say "     Dr. Moffatt (color) by The_Negative @ furaffinity.net[line break]";
@@ -999,6 +1003,7 @@ carry out artistcredits:
 	say "     Eric by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Erin Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Fancy by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Fang by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";	
 	say "     Francois by Xenotropos @ furaffinity.net[line break]";
 	say "     Frank by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Felix by Geir @ furaffinity.net[line break]";
@@ -1019,6 +1024,7 @@ carry out artistcredits:
 	say "     Jay by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Jill by Sususmiles @ furaffinity.net[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
+	say "     Klauz by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";	
 	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Korvin by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Krampus by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
@@ -1033,6 +1039,7 @@ carry out artistcredits:
 	say "     Mareslut by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Mason by Abelsword @ https://www.furaffinity.net/user/Abelsword[line break]";
 	say "     Micaela by Kattzie @ furaffinity.net[line break]";
+	say "     Mike (face) Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";	
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
 	say "     Moreau by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Mul by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
@@ -1062,6 +1069,7 @@ carry out artistcredits:
 	say "     Skarnoth by Kien-Biu @ http://nsfwbetitngoan.tumblr.com/[line break]";
 	say "     Snow by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
+	say "     Susan (face) by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";	
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Tiger Shark Warrior by Zealot @ https://www.furaffinity.net/user/Drakosacerdos/[line break]";
 	say "     Timothy by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";

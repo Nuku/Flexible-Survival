@@ -324,11 +324,11 @@ instead of conversing the Eric:
 					WaitLineBreak;
 					say "     You crawl out of the room and make your escape while she's still busy with Eric, having no choice but to concede him to her. With him having accepted being her girlfriend and likely already pregnant from her, there won't be any reason to come back here.";
 					now HP of Eric is 100;
-					remove Eric from play;
+					now Eric is nowhere;
 				else if fightoutcome >= 30: [fled]
 					say "     Taking your legs under your arms, you just run, though as you dash along the corridor you notice Stacy isn't following you. Judging from the loud moans audible from her room, she's too busy fucking Eric... you're pretty sure you lost him for good and won't be seeing the handsome athlete again.";
 					now HP of Eric is 100;
-					remove Eric from play;
+					now Eric is nowhere;
 				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 					say "     A moment later, the transformed woman collapses on the ground, leaving you the only person standing in her by now totally trashed room. You look over at Eric, who's been reduced to lying on the bed moaning, completely lost in the feelings his changed body is giving him. Seeing him there, legs spread and one hand rubbing the lips of his pussy, two possible choices come to mind. You could just take his virginity now while you can, or do the right thing and bring him to safety in the bunker under the library. (Y = fuck him, N = save him) ";
 					if player consents: [take advantage and take him to the bunker]
@@ -371,7 +371,7 @@ instead of conversing the Eric:
 				WaitLineBreak;
 				say "     You crawl out of the room and make your escape while she's still busy with Eric, having no choice but to concede him to her. With him having accepted being her girlfriend and likely already pregnant from her, there won't be any reason to come back here.";
 				now HP of Eric is 100;
-				remove Eric from play;
+				now Eric is nowhere;
 		else: [try it later]
 			say "     Eric looks visibly deflated as you decline. 'Oh... if you change your mind, I'll be here. But we really should hurry - who knows what's happening to Stacy...'";
 	else if (HP of Eric is 1): [virgin in the bunker]
@@ -877,7 +877,7 @@ instead of trading the pomegranate seed when the current action involves the Eri
 		now Dexterity of Erica is 5;
 		now HP of Eric is 200;
 		move Erica to Bunker;
-		remove Eric from play;
+		now Eric is nowhere;
 		if CarlEricInteraction > 0: [Carl knows Eric]
 			now CarlEricaInteraction is 1; [Carl knew Erica as Eric]
 		if David is in Bunker:
@@ -2201,7 +2201,7 @@ instead of going down from the Grey Abbey Library while (Eric is in Bunker and (
 	say "     As you come down into the bunker, you see Eric standing hunched over at his bunk, busy stuffing clothes and gear into his sports bag. Curious about what's going on, you move closer - only to have the young man visibly flinch and whirl around as he becomes aware of a presence behind him. 'Oh. Hey - it's just you,' the college athlete says, some of the tension leaving his body - but he still barely meets your eyes before looking down again and pressing his lips together. Something is definitively not alright here - there's a certain redness to his eyes and you think you can make out a tear in the corner of one. Silence hangs between you for several seconds, then Eric swallows noticeably and clears his throat. He looks just past you, his gaze resting on another bed as he avoids facing you directly, then says, 'I - I was gonna leave a note. But if you're here, it'll be... better like this. I'm... leaving. I can't thank you enough for everything that you've done for me, but your friend... he... Rane just...'";
 	say "     Eric's breathing becomes quick and shallow as he clearly gets more and more agitated, then bursts out with, 'He comes on to me all the time. And then we fuck! I - I can't stop him. Couldn't. Didn't even try to!' He claws at the air in an gesture of pure frustration, then makes a fist and hits the side of his head lightly. 'With everything that happened to me, I don't even really know how to feel about all this! And, and... then I go along with it all. Is that me? Is it those fucking machines messing with my head? I CAN'T TELL ANYMORE. But it must be! I have to get out of here. I just have to get away from HIM. Anything is better than losing myself and ending as just another fuck-hole for a demon!' Shouting the last few words, Eric snatches up his packed bag and runs past you, not giving you even a second to reply. He's inside the stairwell leading out of the bunker before you can get over your shocked surprise at the outburst.";
 	now Dexterity of Eric is 6; [Eric's gone!]
-	remove Eric from play;
+	now Eric is nowhere;
 
 instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 5 and EricFleeingCountdown - turns > 12):
 	move player to Bunker;
@@ -2210,7 +2210,7 @@ instead of going down from the Grey Abbey Library while (Eric is in Bunker and (
 	project the Figure of Eric_down_icon;
 	say "     As you come down into the bunker, you notice that something is... off. Wondering what it might be, you let your gaze wander through the room, along the walls with their simple lights, the entrances of the restroom and shower, row after row of simple beds. There! Your eyes get drawn to one of them - neatly made and standing empty, not showing any trace that it is in use. Was in use, by Eric, whose sports bag and supplies are also conspicuously gone. A folded piece of paper lies on the drab green blanket, beckoning you to pick it up. As you do so, you see that it is a short goodbye-letter, addressed to you. In it, Eric explains that Rane started fucking him when he wanted, without really asking - something that brought discomfort to the student, still unsure about his trans body and feelings about it all. Worse, Eric writes that he couldn't even start to resist Rane, couldn't bring himself to do it - something he suspects is caused the nanites messing with his head. Since he didn't want to just be the 'available fuck-hole' for a demon and 'lose himself to being a mindless slut', the young man ends with the words that he had to go, leaving the bunker to be 'safe'.";
 	now Dexterity of Eric is 6; [Eric's gone!]
-	remove Eric from play;
+	now Eric is nowhere;
 
 instead of going down from the Grey Abbey Library while (Eric is in Bunker and (HP of Eric is 12 or HP of Eric is 13 or HP of Eric is 14 or HP of Eric is 15) and Dexterity of Eric is 7 and EricFleeingCountdown - turns > 12):
 	move player to Bunker;

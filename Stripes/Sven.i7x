@@ -285,14 +285,14 @@ to say SvenRescueFight:
 		say "     After the snow leopard has dealt with you, it catches sight of Sven in the stairwell, mewling softly as he plays with himself in his shorts. Too aroused by the show he received and drawn in by the feline's scent, he doesn't flee as it pads over, switching to move on all fours. He moans softly as it nuzzles and licks his face, pulling off his clothes and mounting him right there. He mewls and moans lustfully as he's taken by the strong male, slowly transforming as their loud rutting continues. Recovering enough to get back up, you can see that the humanity's gone from Sven's eyes and he's succumb to his infection. As there is nothing else you can do for him than to wish him well, you slink away quietly to nurse your wounds and search elsewhere.";
 		now HP of Sven is 99;
 		move Sven to dark basement;
-		remove Sven from play;
+		now Sven is nowhere;
 		move player to Entrance to the Red Light District;
 		decrease score by 20;
 	else:
 		say "     Unwilling to continue fighting the snow leopard, you turn and flee. But he does not pursue you, instead turning his attention to Sven, who is curled up at the top of the stairwell, watching the battle. Aroused by the sight and scent of the snow leopard, he is fondling himself in his shorts and does not try to run as the creature pads over on all fours. Sven moans softly as it nuzzles and licks his face, pulling off his clothes and mounting him right there. You turn away and continue to make your escape, sure that there will soon be another of those sexy snow leopards prowling the area.";
 		now HP of Sven is 99;
 		move Sven to dark basement;
-		remove Sven from play;
+		now Sven is nowhere;
 		move player to Entrance to the Red Light District;
 		decrease score by 20;
 
@@ -300,7 +300,7 @@ to say SvenRescueFight:
 An everyturn rule:
 	if HP of Sven > 0 and HP of Sven < 4 and lastSvendrink - turns > 20 and skipturnblocker is 0:
 		now HP of Sven is 100;
-		remove Sven from play;
+		now Sven is nowhere;
 		say "You briefly remember Sven and have a sinking feeling that something's happened to him.";
 	if HP of Sven is 8 and Candy is in Bunker and lastSvendrink - turns > 11:
 		now HP of Sven is 9;

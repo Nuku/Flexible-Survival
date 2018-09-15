@@ -36,7 +36,7 @@ The assault of Cute Crab is "[one of]Your crab snaps with his great pincers![or]
 the fuckscene of Cute Crab is "The crab is too small and too cute for that sort of thing - you perv.".
 
 to say SummonSnips:
-	remove Snips from play;
+	now Snips is nowhere;
 	if player is in Computer Lab and Snips is in Computer Lab: [summoning while standing next to him]
 		say "     Letting your cute crab Snips know that it's time to head out, Snips quickly climbs onto your foot, ready for adventure!";
 	else: [regular summoning]
@@ -200,7 +200,7 @@ The assault of house cat is "[one of]Your opponent moves back from your attack, 
 the fuckscene of house cat is "With all of the sex-crazed people out there, you're looking to fuck an ordinary house cat? You are one crazy pervert.".
 
 to say SummonDinah:
-	remove Dinah from play;
+	now Dinah is nowhere;
 	if player is in Computer Lab and Dinah is in Computer Lab: [summoning while standing next to her]
 		say "     You call Dinah over to you, watching as she stalks over to your side, walking like a predator on the prowl.";
 	else: [regular summoning]
@@ -388,7 +388,7 @@ The assault of Exotic Bird is "[one of]Chirpy dive bombs your opponent![or]Chirp
 The fuckscene of exotic bird is "The exotic bird is too small for that sort of thing.".
 
 to say SummonChirpy:
-	remove Chirpy from play;
+	now Chirpy is nowhere;
 	if player is in Computer Lab and Chirpy is in Computer Lab: [summoning while standing next to her]
 		say "     Reaching out, you lightly pet Chirpy's brightly colored feathers. With a tip of your head, she instantly flutters over, landing softly on your shoulder.";
 	else: [regular summoning]
@@ -542,7 +542,7 @@ The assault of helper dog is "[one of]The helper dog jogs between your enemy's l
 the fuckscene of helper dog is "You make the offer to your canine companion, but he is uninterested.".
 
 to say SummonHobo:
-	remove Hobo from play;
+	now Hobo is nowhere;
 	if player is in Computer Lab and Hobo is in Computer Lab: [summoning while standing next to him]
 		say "     Leaning down, you ruffle one of Hobo's ears, telling him that it's time to get back out into the city. He happily wags his tail as he begins to trail you.[hoboreset]";
 	else: [regular summoning]
@@ -784,7 +784,7 @@ an everyturn rule:
 				say "     After taking a short break, you go to pick up your pack again, finding that your journal's sitting atop it. Hobo, resting beside your pack, looks up at you and barks once.";
 				now hobo-journal is turns;
 				now lastfuck of helper dog is turns;
-			else if HP of doctor matt is 2 and carried of gryphon milk < 2 and hobo-grmilk is false and hobo-grmilkhelp - turns >= 8 and furry is not banned and hermaphrodite is not banned:
+			else if HP of Doctor Matt is 2 and carried of gryphon milk < 2 and hobo-grmilk is false and hobo-grmilkhelp - turns >= 8 and furry is not banned and hermaphrodite is not banned:
 				say "     Before you even notice, Hobo returns to your side, carrying something in his mouth. As you take it from him, he gives a meaningful bark. Examining it, you find it to be an old-style glass bottle filled with milk. Surprisingly, it is still cold and smells delicious. You're about to taste a sample of it, when Hobo grabs your sleeve and pulls on your arm, keeping you from doing so. Reminded of the request from Dr. Matt for [bold type]gryphon milk[roman type], you cap the milk and tuck it away, wondering at just how smart this dog really is.";
 				now hobo-grmilk is true;
 				now lastfuck of helper dog is turns;

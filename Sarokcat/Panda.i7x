@@ -14,7 +14,7 @@ when play begins:
 to say panda appears:
 	setmongender 4;  [creature is female]
 	if medeapanda is true:
-		say "     You find yourself facing off against a very pregnant female panda. She's dressed in naught but a t-shirt that's been stretched tightly over her ample belly and bosom. You can see the shadow of her black nipples through the thinned fabric. Her pussy and thighs are wet with what might be femcum or amniotic fluid, or quite possibly both. It seems you'll have to subdue her[if HP of doctor matt is 20 or HP of doctor matt is 21] with care[end if] if you don't want to be rather rudely involved in the delivery.";
+		say "     You find yourself facing off against a very pregnant female panda. She's dressed in naught but a t-shirt that's been stretched tightly over her ample belly and bosom. You can see the shadow of her black nipples through the thinned fabric. Her pussy and thighs are wet with what might be femcum or amniotic fluid, or quite possibly both. It seems you'll have to subdue her[if HP of Doctor Matt is 20 or HP of Doctor Matt is 21] with care[end if] if you don't want to be rather rudely involved in the delivery.";
 		decrease pldamagebonus by weapon damage of player / 2;
 	else:
 		say "     Traveling down the zoo paths, you are startled to see a black and white patterned humanoid bear charge through the landscaping and end up right in front of you, panting from the exertion of running around like mad, her modest breasts heave with every breath as she scans the area";

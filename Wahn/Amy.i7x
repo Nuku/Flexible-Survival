@@ -87,7 +87,17 @@ Table of GameCharacterIDs (continued)
 object	name
 Amy	"Amy"
 
-Amy is a woman. The HP of Amy is usually 0.
+Amy is a woman.
+ScaleValue of Amy is 3. [human sized]
+Cocks of Amy is 0. [no cock]
+Cock Length of Amy is 0. [no cock length]
+Cock Width of Amy is 0. [no ball size]
+Testes of Amy is 0. [no balls]
+Cunts of Amy is 1. [1 pussy]
+Cunt Length of Amy is 8. [gets stretched a bit by an alpha husky]
+Cunt Width of Amy is 3. [gets stretched a bit by an alpha husky]
+Breasts of Amy is 4. [4 nipples]
+Breast Size of Amy is 2. [B cup at the start]
 The icon of Amy is Figure of Amy_icon.
 The description of Amy is "[AmyDesc]".
 The conversation of Amy is { "Woof." }.

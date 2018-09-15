@@ -389,8 +389,8 @@ instead of resolving Noh Mask:
 			say "[nohmaskninja]";
 		else:
 			say "     You decide to postpone getting the mask, at least for now. Hayato will have to wait a little longer.";
-		now HP of Hayato is 12;
-	else if HP of Hayato is 12:
+			now HP of Hayato is 12; [didn't fight]
+	else if HP of Hayato is 12: [lost or didn't fight]
 		say "     Returning in search of the Japanese noh mask, you find them still going at it with the anime babe. She's pinned down onto the desk by one of them as he pounds into her. The others are [one of]groping her large boobs[or]taking turns getting blow jobs[or]recovering after fucking her[at random].";
 		say "     It looks like they'll be here for a while, so you'll have to deal with them if you want to get the mask.";
 		say "     [bold type]Shall you attack the ninjas?[roman type][line break]";
@@ -424,8 +424,12 @@ to say nohmaskninja:
 			say "[nohmaskanimebabe]";
 	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     After your defeat by the shadowy feline, you are driven from the office so they can focus on enjoying their main prize. As you leave, you can hear the giggling cries of the anime babe. 'Oh no! Please don't touch me there. Yes, just like that.' You decide it would be best to try again later.";
+		if HP of Hayato < 12:
+			now HP of Hayato is 12; [lost]
 	else if fightoutcome >= 30:
 		say "     Fleeing from the shadowy feline, you dash back down the hall. As you run, you can hear the giggling cries of the anime babe. 'Oh no! Please don't touch me there. Yes, just like that.' You decide it would be best to try again later.";
+		if HP of Hayato < 12:
+			now HP of Hayato is 12; [lost]
 
 
 to say nohmaskanimebabe:
@@ -548,7 +552,7 @@ to say onilairassault:
 	else:													[FLEE]
 		say "     You turn to make your escape and head as quickly as you can away from the oni lair. Glancing back, you see Hayato look at you in surprise as you flee. Taking advantage of the opportunity, his weakened foe leaps atop him and they start wrestling on the ground. The third oni, having lost his opponent, joins in with a growl. Taking one last look from the alleyway, you watch as the fight concludes and turns into a roughhousing threesome. You're no longer able to tell which of them is which. Regardless, it's clear that Hayato's lost himself to the infection.";
 		now HP of Hayato is 98;
-		remove Hayato from play;
+		now Hayato is nowhere;
 		move player to Rusty Walkways;
 	now inasituation is false;
 

@@ -69,12 +69,12 @@ Instead of resolving a Soldier Squad:
 				say "     With that, he thrusts forward, burying his erection in her body with one swift move. Feeling the virgin's hymen break and hearing her pained yip at losing her cherry, the shepherd laughs. 'And a virgin too - this is just too great. Let's knock you up, girlie... make your first time memorable with a litter of my pups.' You can only helplessly watch the dog fuck her like a wild animal until he knots in her and starts filling her with his seed. A look of pure bliss comes over the young husky and she moans as his sperm impregnates her for the very first time. Accompanied by the mocking laughter of the German Shepherd still tied to his new bitch, you slink away in defeat.";
 				now HP of Amy is 100;   [removed from game]
 				now Resolution of Soldier Squad is 3; [tried to take Amy, lost her]
-				remove Amy from play;
+				now Amy is nowhere;
 			else if fightoutcome >= 30: [fled]
 				say "     Fleeing from combat with the German Shepherd, you run off without looking back. The dog-morph shouts after you 'You better run, coward. Not even man enough to lose properly. Guess I'll have to make do with your girlie...' Sliding to a halt around the next corner, you realize the husky didn't come with you when you fled. Oh damn - the thought of going back goes through your mind, then gets interrupted by a dog's yip from the way you came, signifying that your former opponent just took the girl's virginity. Too late now to do anything, you start walking away again...";
 				now HP of Amy is 100;   [removed from game]
 				now Resolution of Soldier Squad is 3; [tried to take Amy, lost her]
-				remove Amy from play;
+				now Amy is nowhere;
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 				say "     Having defeated the German Shepherd, you turn to your husky and start telling her she has to be more careful with strangers and that - unlike you - most of them are not nice people. Then a large shadow falls over you two - seems your little fight attracted the attention of a wyvern!";
 				challenge "Wyvern";
@@ -82,12 +82,12 @@ Instead of resolving a Soldier Squad:
 					say "     After 'hatching' from the wyvern goop egg, you look around, but there's no sign of your husky companion. Looks like her egg was laid somewhere else or is still inside the wyvern...";
 					now HP of Amy is 100;   [removed from game]
 					now Resolution of Soldier Squad is 3; [tried to take Amy, lost her]
-					remove Amy from play;
+					now Amy is nowhere;
 				else if fightoutcome >= 30: [fled]
 					say "     Fleeing from combat with the wyvern, you run off without looking back. Looks like you got away clean and... sliding to a halt around the next corner, you suddenly realize the husky didn't come with you when you fled. Oh damn - you look back around the corner of the building and see the husky being covered in wyvern goop, which hardens to a hard shell around her. Then the wyvern stuffs the 'egg' into her massive vagina and flies off. You're pretty sure you won't be seeing that young woman again - at least not in any shape you'd recognize...";
 					now HP of Amy is 100;   [removed from game]
 					now Resolution of Soldier Squad is 3; [tried to take Amy, lost her]
-					remove Amy from play;
+					now Amy is nowhere;
 				else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 					say "     Having gotten away from the wyvern, you keep a closer eye on your husky companion and bring her to the Grey Abbey Library safely. She's still pretty wound up from all the excitement and the new things all around her, and soon knocks over a smaller bookshelf in the entrance area as she's trying to climb up and sniff the books on the top board. Luckily, she can jump off before it crashes down, but she's still rather frightened at almost having a piece of furniture fall on her. You put an arm around the female husky and stroke her hair. 'Calm down, girl - you have to be a bit more careful, ok?' She nods, saying 'I will, I promise.', then rubs the side of her head against your chest.";
 					say "     'Hm, and I have to have something to call you...' Your view falls onto one of the many books tumbled all over the floor - 'The Life of Amelia Earhart'. 'How about I call you Amelia - no, Amy. Would you like that?' The husky looks at you and says 'Amy? Amy. A M Y. Amy - sounds good. So I'm Amy?' You nod, then show her around a bit. Later, you set up some bedding for her and learn that she prefers a mattress on the ground to a real bed - you guess because she never knew anything else in her short life.";
@@ -115,7 +115,7 @@ Instead of resolving a Soldier Squad:
 			say "     Just wanting to get out of the situation, you take your legs under your arms and run. Though with dog's inborn urges being what they are, the husky follows after you, taking you up on a playful hunt. It's several blocks before you can shake her - not so much because you're faster, but rather a gargoyle suddenly lunging out of the alley you just passed and pulling the dog-morph inside. Judging from the yips, grunts and moans coming from the alley soon, you don't think you'll see the husky again - at least not in a shape you recognize.";
 			now Resolution of Soldier Squad is 7; [ran from Amy]
 			now HP of Amy is 100;   [removed from game]
-			remove Amy from play;
+			now Amy is nowhere;
 		increase score by 10;
 		now SquadEncounters is 3;
 	else if SquadEncounters is 3:

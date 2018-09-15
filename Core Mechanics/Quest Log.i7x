@@ -94,7 +94,7 @@ To ListCompletedQuests:
 		]
 
 To MainStorylineLog:
-	if hp of doctor matt is:
+	if hp of Doctor Matt is:
 		-- 2:
 			say "[bold type]Doctor Matt: [roman type]You've met Doctor Matt and he's asked you to retrieve two samples each of milk from the hermaphrodite gryphons around the city and globs of goo from the goo girls found in the mall sewer.";
 		-- 3:
@@ -120,7 +120,7 @@ To MainStorylineLog:
 		-- 11:
 			say "[bold type]Doctor Matt: [roman type]You feel you might want to go tell Dr Matt about the rest of the events at the hospital.";
 		-- 12:
-			if level of doctor matt - turns < 16:
+			if level of Doctor Matt - turns < 16:
 				say "[bold type]Doctor Matt: [roman type]Check back with the doctor a bit later.";
 			else:
 				say "[bold type]Doctor Matt: [roman type]Perhaps it's time you checked back with the good doctor.";
@@ -135,7 +135,7 @@ To MainStorylineLog:
 		-- 18:
 			say "[bold type]Doctor Matt: [roman type]Having completed Zephyr's task and gotten the info, it's time to return to the doctor.";
 		-- 19:
-			if level of doctor matt - turns < 8:
+			if level of Doctor Matt - turns < 8:
 				say "[bold type]Doctor Matt: [roman type]Check back with the doctor a bit later.";
 			else:
 				say "[bold type]Doctor Matt: [roman type]Perhaps it's time you checked back with the good doctor.";

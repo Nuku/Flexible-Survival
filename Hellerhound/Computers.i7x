@@ -331,7 +331,7 @@ Chapter 3 - Which Program Receives Input?
 To decide what object is the controlling program of (chosen computer - a computer):
 	let the chosen screen be a random screen that is part of the chosen computer;
 	repeat with item running through software which is part of chosen screen:
-		remove item from play;
+		now item is nowhere;
 	if the chosen computer runs no software:
 		decide on nothing;
 	else:

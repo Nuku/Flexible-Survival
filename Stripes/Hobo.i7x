@@ -166,7 +166,7 @@ an everyturn rule:
 				say "     After taking a short break, you go to pick up your pack again, finding that your journal's sitting atop it. Hobo, resting beside your pack, looking up at you and barks once.";
 				now hobo-journal is turns;
 				now lastfuck of helper dog is turns;
-			else if HP of doctor matt is 2 and carried of gryphon milk < 2 and hobo-grmilk is false and hobo-grmilkhelp - turns >= 8 and furry is not banned and hermaphrodite is not banned:
+			else if HP of Doctor Matt is 2 and carried of gryphon milk < 2 and hobo-grmilk is false and hobo-grmilkhelp - turns >= 8 and furry is not banned and hermaphrodite is not banned:
 				say "     Before you've even noticed, your helper dog returns to your side carrying something in his mouth. As you take it from him, he gives a meaningful bark. Examining it, you find it to be an old-style glass bottle filled with milk. Surprisingly, it is still cold and smells delicious. You're about to taste a sample of it, when Hobo grabs your sleeve and pulls on your arm, keeping you from doing so. Reminded of the request from Dr. Matt for [bold type]gryphon milk[roman type], you cap the milk and tuck it away, wondering at just how smart this dog really is.";
 				now hobo-grmilk is true;
 				now lastfuck of helper dog is turns;

@@ -520,7 +520,7 @@ to say DemonLairAttack:
 				say "     Silence stretches out for a few seconds, until groans and cracks start up all around you - seems like this little magical realm won't survive its creator too long. After a hasty retreat back to the gate hub, the three of you stumble through the portal and end up back in the burned-out chapel. 'You should be safe from the hounds now,' Elijah tells you in a quiet voice, then takes the young guy you rescued from hell by the hand. 'And you, I'll bring home safely now. After that, I - I got to be alone for a while.' With a wave to you, he walks off with the student, leaving you to find your way back to the library on your own.";
 				now libido of Skarnoth is 100; [dead]
 				now HP of Elijah is 101; [left after killing Skarnoth]
-				remove Elijah from play;
+				now Elijah is nowhere;
 			else:
 				LineBreak;
 				say "     Stepping into the way of the solemn angel, you hold him back from Skarnoth and quietly say that you will be the one to handle him. Elijah gulps visibly, then nods, relief painfully clear on his face.";
@@ -792,7 +792,7 @@ Section 4 - NPC Interactions
 An everyturn rule:
 	if (HP of Elijah is 0) and (Angel vs Demons is resolved) and (lastfuck of Elijah - turns > 32): [time till demon orgy, after which Elijah will be dragged to hell]
 		now HP of Elijah is 100;
-		remove Elijah from play;
+		now Elijah is nowhere;
 		say "Your mind wanders momentarily to the angel you once saw fighting those demons, but soon forget about him and return to your more immediate concerns.";
 	[NPC Interaction section - sorted by Elijah HP state and NPC/pet - see file header]
 	if (HP of Elijah is 1 or HP of Elijah is 2) and (NPCintCounter - turns > 2):
@@ -1274,7 +1274,7 @@ Instead of fucking the Elijah:
 			LineBreak;
 			say "     You don't think you'll see that angel ever again after this, as the demons are very likely gonna take him home to hell with them, to use and abuse for all eternity.";
 			now HP of Elijah is 100;
-			remove Elijah from play;
+			now Elijah is nowhere;
 			move player to Entrance to the Red Light District;
 		else:
 			say "     You manage to get your feral impulses under control. Now that you're a bit more rational again, you can't think of a worse time or place to try to get it on with an angel.";
@@ -2046,12 +2046,12 @@ to say losetochurchdemons:
 	LineBreak;
 	say "     You don't think you'll see that angel ever again after this, as the demons are very likely gonna take him home to hell with them, to use and abuse for all eternity.";
 	now HP of Elijah is 100;
-	remove Elijah from play;
+	now Elijah is nowhere;
 
 to say fledfromchurchdemons:
 	say "     Recognizing a lost fight, you just take your legs under your arms and run as fast as you can. You can only guess what happened after that to the angel you left behind with all the demons. Nothing good, you're sure...";
 	now HP of Elijah is 100;
-	remove Elijah from play;
+	now Elijah is nowhere;
 
 
 Section 7 - Endings

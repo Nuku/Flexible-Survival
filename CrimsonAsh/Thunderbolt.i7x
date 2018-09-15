@@ -102,8 +102,8 @@ instead of going to Thunderbolt's Stable:
 
 An everyturn rule:
 	if daytimer is night:
-		remove Ariana from play;
-		remove Eres from play;
+		now Ariana is nowhere;
+		now Eres is nowhere;
 	else if daytimer is day:
 		move Ariana to Thunderbolt's Stable;
 		move Eres to Thunderbolt's Stable;

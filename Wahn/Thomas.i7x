@@ -550,7 +550,7 @@ instead of navigating Dry Plains while ((libido of Thomas is 1 or libido of Thom
 	else:
 		LineBreak;
 		say "     Apologizing and saying it's not your fight, you run away. Somehow you doubt that they'll be able to make a stand without you... so you likely won't see Thomas anymore.";
-		remove Thomas from play;
+		now Thomas is nowhere;
 		now HP of Thomas is 100;
 
 to say LoseToCentaurs2:
@@ -559,12 +559,12 @@ to say LoseToCentaurs2:
 	say "     While the rest of the party is busy raping Thomas, a bearded centaur takes Jill to the side and starts shouting at her. 'You ruined everything, you stupid bitch - no matter how good you look, no one will want to pay much for a mare that might run off! I'll have to use you as breeding stock - maybe you'll at least give me a strong son, or some more obedient girls with your looks.' With that, the centaur moves behind her and thrusts his hard horsecock into her pussy, mounting her hard and forcefully. Holding her down, he pounds into her, creating loud slapping noises as his balls hit her ass. Soon, he gives a lust-filled grunt and his balls pump a huge load into her womb. 'Not bad, little bitch. I should have done this sooner.' He walks to her front and pulls her head to his crotch. 'Why don't you clean me off and get me hard again for another round.'";
 	LineBreak;
 	say "     After the gangbang around Thomas runs its course and Jill gets fucked again several times by the bearded centaur, the hunting party moves back out into the plains, taking their thoroughly fucked mares with them.";
-	remove Thomas from play;
+	now Thomas is nowhere;
 	now HP of Thomas is 100;
 
 to say RunFromCentaurs2:
 	say "     Deciding that this is a lost fight, you run like hell, getting yourself to safety. You don't know what exactly happened to Thomas and Jill after that, but a good guess is that they were taken away with the hunting party and both used as breeding mares...";
-	remove Thomas from play;
+	now Thomas is nowhere;
 	now HP of Thomas is 100;
 
 Section 3 - Fucking Thomas

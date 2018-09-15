@@ -608,7 +608,7 @@ instead of using First Aid Manual:
 
 the scent of First Aid Manual is "     It smells like an old book.".
 
-Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mattintel is 0 and ( HP of doctor matt > 0 and HP of doctor matt < 100 ):
+Instead of conversing the Doctor Matt while 5 is listed in bookcollection and mattintel is 0 and ( HP of Doctor Matt > 0 and HP of Doctor Matt < 100 ):
 	say "     As you're about to talk to Dr. Matt, you consider passing along intel on the creatures in the city, which he can then relay to the military to help in their planning. With your knowledge from the book, you know which information is most likely to cause them to rethink and delay their plans. This would then buy you more time in the infected city, possibly buying you and Dr Matt more time to investigate what's happening, or just so you can do as you please in this fallen city.";
 	say "     [bold type]Shall you relay this intelligence to the military?[roman type][line break]";
 	LineBreak;

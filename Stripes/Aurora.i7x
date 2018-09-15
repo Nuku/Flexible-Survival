@@ -106,7 +106,7 @@ the fuckscene of frost giantess is "[SexWithAurora]".
 
 
 to say SummonAurora:
-	remove Aurora from play;
+	now Aurora is nowhere;
 	if player is in Breakroom and Aurora is in Breakroom: [summoning while standing next to her]
 		say "     ...";
 	else: [regular summoning]
