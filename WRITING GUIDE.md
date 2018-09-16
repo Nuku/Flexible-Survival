@@ -281,6 +281,20 @@ To be added later.
  * `if ( 100 + humanity of player - libido of player ) > a random number between 1 and 150` | a random check pitting the player's humanity and libido against one another (yes = resisted, no=gave in)
 * `if a random number between 0 and humanity of player > a random number between 0 and libido of player` | another check pitting the player's humanity and libido against one another (yes=resisted, no=gave in)
 
+### Events and situations
+* An event is framed within a "situation". A situation has four properties:
+	** its area of play, `sarea` (optional) - a situation without _sarea_ has to be fired manually
+	** its minimal level, `level` (optional)
+  ** A boolean indicating if the situation is resolved, and not to be fired again: `resolved`
+  ** A number indicating how it was resolved: `Resolution`
+* If a situation has one or several situations that has to be resolved beforehand, the latter must be declared within these fields:
+	** `Prereq1 of Explosion Aftermath is Gas Station.` [Gas Station has to be resolved, or this event does not come up]
+	** `Prereq1Resolution of Inspecting the Wreckage is { 2 }.` [The Prerequisite resolved event needs one of the listed resolutions for this to come up]
+	** `Prereq2 of Explosion Aftermath is Scorched Earth.` [if a second situation needs to be resolved]
+	** `Prereq1Resolution of Explosion Aftermath is { 1,2,3 }.` [If several resolutions activate this event]
+	** `PrereqCompanion of Putting Out the Fire is Firefighter` [needed companion/pet to get the situation]
+
+
 ## Questions?
 Join the Discord group and ask questions or just talk about the game in the `fs-singleplayer` channel!
 
