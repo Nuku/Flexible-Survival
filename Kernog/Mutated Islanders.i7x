@@ -5,7 +5,7 @@ Version 1 of Mutated Islanders by Kernog begins here.
 Section 1 - Monster Responses
 
 when play begins:
-	add { "Mutated Islanded" } to infections of guy;
+	add { "Mutated Islander" } to infections of guy;
 
 to say mutatedIslanderDesc:
 	if inasituation is true:
@@ -44,8 +44,8 @@ name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	sk
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of Random Critters;
-	now name entry is "Mutated Islanded M";
+	Choose a blank row from Table of random critters;
+	now name entry is "Mutated Islander";
 	now enemy title entry is "";
 	now enemy name entry is "";
 	now enemy type entry is 0; [non-unique enemy]

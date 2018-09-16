@@ -203,7 +203,7 @@ to MoraleBoost (N - number):
 	LineBreak;
 	say "[bold type]Your morale has increased by [N]![roman type][line break]";
 	increase morale of player by N;
-	if humanity of player > 100:
+	if morale of player > 100:
 		now morale of player is 100;
 
 
@@ -493,5 +493,14 @@ To MultiInfect (x - text) repeats (repeatCount - number):
 			if reset is 1:
 				now non-infectious entry is true;
 			break;
+
+to say nameOrDefault:
+	if player is defaultnamed:
+		if player is male:
+			say "[one of]boy[or]dude[or]man[or]guy[at random]";
+		else:
+			say "[one of]girl[or]babe[or]sweetie[at random]";
+	else:
+		say "[name of player]";
 
 Basic Functions ends here.
