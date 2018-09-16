@@ -498,7 +498,9 @@ Definition: A person (Called x) is booked:
 	if the location of x is Garden View, yes;
 	if the location of x is Darkened Alcove, yes;
 	if the location of x is Attic, yes;
-	if x is Zoe and "Saved" is in the Traits of Zoe and Rabbit Tagger is resolved, yes; [Zoe is absent during the day, but we need the booked to be true for the room description.]
+	if x is Zoe:
+		if "Saved" is listed in Traits of Zoe, yes;
+			[if Rabbit Tagger is resolved,] [What is this?][ yes; ][Zoe is absent during the day, but we need the booked to be true for the room description.]
 	no;
 
 Definition: A person (Called x) is bunkered:
