@@ -494,4 +494,13 @@ To MultiInfect (x - text) repeats (repeatCount - number):
 				now non-infectious entry is true;
 			break;
 
+to say nameOrDefault:
+	if player is defaultnamed:
+		if player is male:
+			say "[one of]boy[or]dude[or]man[or]guy[at random]";
+		else:
+			say "[one of]girl[or]babe[or]sweetie[at random]";
+	else:
+		say "[name of player]";
+
 Basic Functions ends here.
