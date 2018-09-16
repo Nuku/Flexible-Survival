@@ -167,6 +167,7 @@ to EventRestore:
 to RoomSave:
 	say "Saving Rooms...";
 	blank out the whole of Table of GameRooms; [empty out all old data]
+	blank out the whole of Table of GameRoomInventories; [empty out all old data]
 	if number of rooms > number of rows in the table of GameRooms: [making sure we got enough room for all situations]
 		say "Error! Not enough rows to save all rooms in the table of GameRooms. Please report this on the FS Discord.";
 	repeat with x running through rooms: [rebuilds the table of GameRooms with current data]

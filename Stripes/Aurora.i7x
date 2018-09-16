@@ -1,5 +1,6 @@
 Version 1 of Aurora by Stripes begins here.
 [Version 1.0 - Sex w/Aurora]
+[Version 1.1 - Added unbirth scene - Written by Rizzy, Coded by Kurainyx]
 
 "Adds a frost giantess companion."
 
@@ -205,6 +206,10 @@ Section 3 - Sex w/Aurora
 to say SexWithAurora:
 	if lastfuck of frost giantess - turns < 8:
 		say "     'Mmm... tempting, very tempting, but how about we wait for a bit first?' she says with a happy smile.";
+	else if ublevel is 3 and a random chance of 1 in 3 succeeds:
+		say "     Aurora smiles at your offer of sex, but she has a little lewd smile on her lips. 'Well, I have an idea. You're so small, and you may not be enough for me...' she says, gently reaching to pick you up, and you wiggle in confusion when she brings you close to her cunt. 'But I have an idea. Are you okay with this?' she asks, and you nod, having an inkling of what she has in store. Soon, her icy folds press to your face, and you can feel the lips spreading as she pushes you inside of her body, the oppressive walls gripping you with some form of strength only a gal the giant's size would have. Aurora sighs, and gripping your feet, she uses your smaller form as a sex aid, and you can only breathe in when she pulls you all the way out, breaking [']water['] while [']swimming['] in her sex.";
+		say "     After a good couple of minutes of this, she finally starts to clench harder. Her fingers slip, and her palm presses you to the cervix, and a loud moan leaves the giant. 'O-oH! Y-yes, m-more!' the gal cries out, pushing on you as best she can as the closed barrier opens, and you spill out into her womb just as the giant screams in pleasure. You ride out the orgasm inside of Aurora, and soon, after what sounds like a heavy session of gushing over the floor, Aurora pokes at your bulge in her belly. 'A-are you really in there?' Affirming that you are, she moans a little at the thought. 'O-oh my... well, I guess that you can stay, b-but [']momma['] needs to rest for a bit.' she says, and your giant friend reclines. You can feel sleep coming on, the slow beat of her heart, the warmth, and the circumstances making you all drowsy enough that you pass out quickly.";
+		say "     Coming to later, you find Aurora has still kept you inside and is walking somewhere. You push about as you wake up, and Aurora moans. 'O-oh... time to let you out~' She squats, pushing as you slowly breach her cervix again, sliding out bit by bit till your face is outside of her body, and you can feel yourself drop out, thankfully into her waiting hand as she dries you off with some towels that she found. 'T-there we go.'";
 	else:
 		say "     Aurora smiles broadly at the offer and grabs you into a powerful hug. 'That'd be great! Let's do it, [if player is male and scalevalue of player < 5]little guy[else if player is male]big guy[else if player is female and scalevalue of player < 5]little lady[else if player is female]big girl[else]hon[end if],' she says happily. She grunts a little as she wrestles her way out of those tight, stretched pants and shirt of hers, baring herself before you.";
 		if player is male and cock length of player >= 8:
