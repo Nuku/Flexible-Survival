@@ -113,7 +113,7 @@ When Play begins:
 	now face change entry is "it is pressed flat, all your features disappearing except for your eyes and mouth which shift uncomfortably as they are overtaken by an icing-like appearance"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
 	now body change entry is "your joints suddenly start to become stiff. A powerful pressure builds as your body is pressed into a flattened human-like form, leaving you in the flat, featureless shape of a gingerbread [if player is male]man[else if player is female]woman[else]person[end if]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
 	now skin change entry is "it becomes dry and crusty like gingerbread. While the cracking noises it makes are a little disconcerting at first, you still seem to be able to move without causing any damage"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
-	now ass change entry is "as it becomes uncomfortably tight, losing all form and definition as you backside becomes completely flat"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now ass change entry is "as it becomes uncomfortably tight, losing all form and definition as your backside becomes completely flat"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "shifts to a mostly human form before becoming strange, gingerbread-like flesh. It feels rough and dry, despite being perfectly soft and flexible"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12; [ These are now the creature's stats... ]
 	now dex entry is 12; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]

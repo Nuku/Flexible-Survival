@@ -27,7 +27,7 @@ to say Dolphin wins:
 			say "She seems put off by your denial and screams, 'You will be brought down'";
 			decrease dolphinwantmate by 1;
 	else if dolphinwantmate is -2:
-		say "She grabs you harshly, fingers biting into your skin, drawing blood. She then flips you over so hard that your head spins. She then reaches into her top slit, dragging her cock out with her hand, and strokes it hard against you back. She then bends back and slams forward, ripping open your ass. You pass out from the pain.";
+		say "She grabs you harshly, fingers biting into your skin, drawing blood. She then flips you over so hard that your head spins. She then reaches into her top slit, dragging her cock out with her hand, and strokes it hard against your back. She then bends back and slams forward, ripping open your ass. You pass out from the pain.";
 		say "When you are conscious again, it seems that the nanites have repaired the damage to your body, but there is still piss floating out of your ass, along with clumps of blood. You can't be her mate any longer. It looks like she is still too pissed to even think in that direction.";
 		decrease HP of player by 40;
 	say "She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her flipper-like hands.";

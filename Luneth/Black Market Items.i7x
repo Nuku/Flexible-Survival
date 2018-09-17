@@ -265,7 +265,7 @@ to say cervix smasher upgrade use:
 		if debugactive is 1:
 			say "DEBUG -> After-Use: Cunts of player: [cunts of player]; Cunt Length of player: [cunt length of player][line break]";
 	else:
-		say "     You [SelfStripCrotch], then pop the tip off of the device and ready yourself to use it. Seeing as your not a female, you don't exactly have a pussy to insert the cylinder into. Apparently, the small device has some sort of timer since it starts to spew out the gel onto the ground. You can't help but feel extremely frustrated over the wasted purchase.";
+		say "     You [SelfStripCrotch], then pop the tip off of the device and ready yourself to use it. Seeing as you're not a female, you don't exactly have a pussy to insert the cylinder into. Apparently, the small device has some sort of timer since it starts to spew out the gel onto the ground. You can't help but feel extremely frustrated over the wasted purchase.";
 		LibidoLoss 10;
 
 Part 11 - Tits Inflator Pump

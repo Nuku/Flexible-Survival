@@ -259,7 +259,7 @@ instead of going west from Golden Doors while SethTempleNumber is 1:
 The description of Temple of Set is "[TempleOfSetDesc]".
 
 to say TempleOfSetDesc:
-	say "     Walking into the inky shadow of this room, you squint your eyes as you examine the room, trying your best to work out what's in here. The only light you have are from lit torches along the wall, shining low light throughout the strange alcove. As your eyes slowly adjust to the darkness, a large statue exposes itself to you, standing watchfully in the back of the room. [if intelligence of player > 15]You immediately recognize this as a statue of Set, Egyptian lord of chaos[else]You don't know the significance of the statue, but you feel very intimidated by it[end if]. Build in front of the imposing statue is a simple stone altar, a few lines of heiroglyphics lining the sides of the table. On each side of the altar lie sizable stone statues. Jackal-headed guards watch over the shrine, holding deadly metal blades.";
+	say "     Walking into the inky shadow of this room, you squint your eyes as you examine the room, trying your best to work out what's in here. The only light you have are from lit torches along the wall, shining low light throughout the strange alcove. As your eyes slowly adjust to the darkness, a large statue exposes itself to you, standing watchfully in the back of the room. [if intelligence of player > 15]You immediately recognize this as a statue of Set, Egyptian lord of chaos[else]You don't know the significance of the statue, but you feel very intimidated by it[end if]. Build in front of the imposing statue is a simple stone altar, a few lines of hieroglyphics lining the sides of the table. On each side of the altar lie sizable stone statues. Jackal-headed guards watch over the shrine, holding deadly metal blades.";
 	say "     Finally drawing your eyes to what lies on the altar, you barely contain a gasp as the item lying there. An exquisite golden sword lies on the altar, torchlight glinting off of the exquisite blade. It would take almost no effort to [bold type]pick up[roman type] the[bold type] antique sword[roman type] off of the altar.";
 
 instead of sniffing Temple of Set:
@@ -668,7 +668,7 @@ Section X - Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"ancient blade"	"An ancient sword of Egyptian make, the blade looks as if it was forged yesterday. Heiroglyphics are carved into the blade, telling stories that are long forgotten."	6	ancient blade
+"ancient blade"	"An ancient sword of Egyptian make, the blade looks as if it was forged yesterday. Hieroglyphics are carved into the blade, telling stories that are long forgotten."	6	ancient blade
 
 ancient blade is an armament.
 It is part of the player.

@@ -1867,7 +1867,7 @@ carry out autoattackberserk:
 carry out autoattackpass:
 	if "Instinctive Combat" is listed in feats of player:
 		now autoattackmode is 3; [autopass, no choice, always pass]
-		say "You feel calm. Your sure everything will work out in the end. Don't mind the monsters attacking you.";
+		say "You feel calm. You're sure everything will work out in the end. Don't mind the monsters attacking you.";
 	else:
 		say "You feel you are missing the instincts to do this.";
 
@@ -1881,7 +1881,7 @@ carry out autoattackcoward:
 carry out autoattacksubmit:
 	if "Instinctive Combat" is listed in feats of player:
 		now autoattackmode is 5; [autosubmit, no choice, always submit]
-		say "Your increased libido clouds your thinking, wouldn't it be fun to let the monsters play with you.";
+		say "Your increased libido clouds your thinking. Wouldn't it be fun to let the monsters play with you?";
 	else:
 		say "You feel you are missing the instincts to do this.";
 
