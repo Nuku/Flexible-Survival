@@ -179,6 +179,7 @@ Numerous more examples for More/Less Anal listed in the second half of this docu
 * `if the number of tamed pets is 0` | does the player have no pets at all yet?
 
 ### NPC variables
+Every NPC has these variables:
 * Name (text)
 * LocationName(text)
 * Energy (number)
@@ -220,6 +221,96 @@ Numerous more examples for More/Less Anal listed in the second half of this docu
 * Virgin (truth state)
 * AnalVirgin (truth state)
 
+These should be filled out accurately for your NPC by you:
+```
+ScaleValue(number)
+SleepRhythm(number)
+Cocks(number)
+Cock Length(number)
+Cock Width(number)
+Testes(number)
+Cunts(number)
+Cunt Length(number)
+Cunt Width(number)
+Breasts(number)
+Breast Size(number)
+```
+Just like so:
+```
+Amy is a woman.
+ScaleValue of Amy is 3. [human sized]
+SleepRhythm(number) [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Amy is 0. [no cock]
+Cock Length of Amy is 0. [no cock length]
+Cock Width of Amy is 0. [no ball size]
+Testes of Amy is 0. [no balls]
+Cunts of Amy is 1. [1 pussy]
+Cunt Length of Amy is 8. [gets stretched a bit by an alpha husky]
+Cunt Width of Amy is 3. [gets stretched a bit by an alpha husky]
+Breasts of Amy is 4. [4 nipples]
+Breast Size of Amy is 2. [B cup at the start]
+```
+This will allow you to make use of these values in scenes, and be quite useful if you have a NPC that might gender shift or the like.
+An example:
+```
+if cock length of player > cunt length of Amy + 2: [some stretching allowed]
+	say "     The female husky wines a little as you bottom out inside her before your cock is all the way in. 'Not so deep please, you're too big.' [...]'";
+else if cock length of player < cunt length of Amy - 3: [a bit small, eh?]
+	say "     The female husky gives a needy whine and asks, 'Are you, ehm... already in?'";
+else: [regular sex]
+	say "     ...";
+```
+
+These variables should be used to track the npc's status and interactions with the player:
+```
+Loyalty(number) [how much the npc likes you - increase if you recruited them and do nice things]
+Humanity(number) [is your npc about to go nuts?]
+PlayerMet(truth state) [has the npc met the player?]
+PlayerRomanced(truth state) [has the player shown romantic interest in the npc?]
+PlayerFucked(truth state) [ever had sex with the player?]
+OralVirgin(truth state)
+Virgin(truth state)
+AnalVirgin(truth state)
+```
+And can be used like so:
+```
+if Virgin of Amy is true:
+	say "     'Please be gentle, it's my first time,' the husky sighs out shily as she spreads her legs. [...]'";
+	now Virgin of Amy is false;
+else: [regular repeat sex]
+	say "...";
+```
+
+These variables are used by _pets_ (Note: "Cute Crab" pet object is NOT the same as "Snips" the cute crab npc - so you do not have to worry about overwriting combat relevant values. The 'pet' objects are invisible and glued to the player, you'll not really interact with them)
+```
+HP(number)
+XP(number)
+Level(number)
+Weapon Damage(number)
+```
+
+And _these_ variables are unused by npcs, so please make use of them. They're easier to save than if you declare new variables for things:
+```
+Energy(number)
+HP(number)
+MaxHP(number)
+XP(number)
+Level(number)
+Armor(number)
+Weapon Damage(number)
+Capacity(number)
+Strength(number)
+Dexterity(number)
+Stamina(number)
+Charisma(number)
+Intelligence(number)
+Perception(number)
+Hunger(number)
+Thirst(number)
+Morale(number)
+Lust(number)
+Libido(number)
+```
 
 ### Objects
 * `if water bottle is owned` *or* `if carried of water bottle > 0` | is the player carrying a water bottle?
@@ -282,17 +373,63 @@ To be added later.
 * `if a random number between 0 and humanity of player > a random number between 0 and libido of player` | another check pitting the player's humanity and libido against one another (yes=resisted, no=gave in)
 
 ### Events and situations
-* An event is framed within a "situation". A situation has four properties:
-	** its area of play, `sarea` (optional) - a situation without _sarea_ has to be fired manually
-	** its minimal level, `level` (optional)
-  ** A boolean indicating if the situation is resolved, and not to be fired again: `resolved`
-  ** A number indicating how it was resolved: `Resolution`
-* If a situation has one or several situations that has to be resolved beforehand, the latter must be declared within these fields:
+* An event is framed within a "situation". A situation has four main properties:
+  ** Resolved/Unresolved: Only things the player actually has _done_ are resolved now.
+  ** Active/Inactive: Banned events, or events that are activated by talking to an npc for example are inactive.
+ 	** Sarea: give your event a Sarea if you want it to be triggered when exploring in this zone
+  ** Level: the event will only trigger if the player is at or above the given level (default: 0)
+
+For progressive events, you can use Resolution like any other tracking variable:
+```
+instead of resolving Daily Food Ration:
+	if Resolution of Daily Food Ration is 0: [default value, first time]
+		say "You come and grab your ration for the day";
+		now Resolution of Daily Food Ration is 1; [1st encounter done]
+	else if Resolution of Daily Food Ration is 1:
+		say "'Take it, but we'll be running out soon.'";
+		now Resolution of Daily Food Ration is 2; [2nd encounter done]
+	else if Resolution of Daily Food Ration is 2:
+		say "'Sorry, all out. Seems like people came to get food, then transformed and just came back to grab another. Some assholes just can't be trusted.'";
+		now Resolution of Daily Food Ration is 3; [3nd encounter done]
+		now Daily Food Ration is resolved; [end of the chain]
+```
+
+* If a situation has one or several criteria that has to be met beforehand, they must be declared with these lines:
 	** `Prereq1 of Explosion Aftermath is Gas Station.` [Gas Station has to be resolved, or this event does not come up]
 	** `Prereq1Resolution of Inspecting the Wreckage is { 2 }.` [The Prerequisite resolved event needs one of the listed resolutions for this to come up]
 	** `Prereq2 of Explosion Aftermath is Scorched Earth.` [if a second situation needs to be resolved]
 	** `Prereq1Resolution of Explosion Aftermath is { 1,2,3 }.` [If several resolutions activate this event]
 	** `PrereqCompanion of Putting Out the Fire is Firefighter` [needed companion/pet to get the situation]
+Up to three events can be prerequisites for any given one.
+
+### Player Imports and Exports: the ID tags
+For the new import/export system to work, all NPCs, Situations and Rooms need to be entered into a table that holds their IDs. This means that a NPC definition would look like this:
+```
+Table of GameCharacterIDs (continued)
+object	name
+Amy	"Amy"
+
+Amy is a woman.
+```
+You just need to drop the upper code block just right above where you make the character, fill in the proper name and that's it.
+
+Similar to ID tagging NPCs, the same thing needs to be done Situations/Events:
+```
+Table of GameEventIDs (continued)
+Object	Name
+Grumpy Old Men	"Grumpy Old Men"
+
+Grumpy Old Men is a situation.
+```
+
+And for the Rooms:
+```
+Table of GameRoomIDs (continued)
+Object	Name
+2F Trevor Labs	"2F Trevor Labs"
+
+2F Trevor Labs is a room.
+```
 
 
 ## Questions?
