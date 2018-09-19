@@ -83,7 +83,7 @@ instead of going down from the Grey Abbey Library while (Dexterity of Erica is 0
 [ Next part of the quest in /Sarokcat/Museum.i7x (talking to Valerie)]
 
 an everyturn rule: [bugfix code to update saves which had the event actually resolved and active from the start]
-	if Dexterity of Erica is 2 and Temple of Hera is resolved:
+	if Dexterity of Erica < 3 and Temple of Hera is resolved:
 		now Temple of Hera is active;
 		now Temple of Hera is not resolved;
 
