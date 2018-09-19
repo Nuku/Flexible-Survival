@@ -145,7 +145,7 @@ Numerous more examples and more specific results for fightoutcome can be seen in
 * `if anallevel is 3` *or* `if "More Anal" is listed in feats of player` | is the player set for More Anal?
 * `if anallevel is 1` *or* `if "Less Anal" is listed in feats of player` | is the player set for Less Anal?
 * `if anallevel > 1` *or* `if anallevel is not 1` *or* `if "Less Anal" is not listed in feats of player` | if the player not set for Less Anal? (normal or More Anal)
-* `if analalevel < 3` *or* `if anallevel is not 3` *or* `if "More Anal" is not listed in feats of player` | if player is not set for More Anal? (normal or Less Anal)
+* `if anallevel < 3` *or* `if anallevel is not 3` *or* `if "More Anal" is not listed in feats of player` | if player is not set for More Anal? (normal or Less Anal)
 Numerous more examples for More/Less Anal listed in the second half of this document: ----
 
 ### Pregnancy and children

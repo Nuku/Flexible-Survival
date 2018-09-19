@@ -965,7 +965,7 @@ carry out artistcredits:
 	say "     Alex by canned @ weasyl.com (6cans @ furaffinity.net)[line break]";
 	say "     Andre by Wemd @ furaffinity.net[line break]";
 	say "     Anthony (dressed) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
-	say "     Anthony (design, naked) by FsMaverick @ http://www.furaffinity.net/user/fsmaverick/[line break]";
+	say "     Anthony (design, naked) by FsMaverick @ https://www.furaffinity.net/user/fsmaverick/[line break]";
 	say "     Artemis by FaroreNightclaw @ furaffinity.net[line break]";
 	say "     Athanasia by SandySchreiber @ furaffinity.net[line break]";
 	say "     Blanche (color) by The_Negative @ furaffinity.net[line break]";
@@ -986,11 +986,11 @@ carry out artistcredits:
 	say "     Christy by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Danny (naked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
 	say "     Danny (design + dressed) by Dragonpunk @ furaffinity.net[line break]";
-	say "     Darius by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";	
+	say "     Darius by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     David by Keitaro87 @ y-gallery.net / kei87art.tumblr.com[line break]";
 	say "     Diego by valdericblackstag @ furaffinity.net[line break]";
 	say "     Diego by Anonymous/Damdidoo[line break]";
-	say "     Dr. Matt by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";	
+	say "     Dr. Matt by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Dr. Matt by The_Negative @ furaffinity.net[line break]";
 	say "     Dr. Medea by Candy @ furaffinity.net[line break]";
 	say "     Dr. Moffatt (color) by The_Negative @ furaffinity.net[line break]";
@@ -1004,7 +1004,7 @@ carry out artistcredits:
 	say "     Eric by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Erin Headshot by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Fancy by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Fang by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";	
+	say "     Fang by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Francois by Xenotropos @ furaffinity.net[line break]";
 	say "     Frank by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
 	say "     Felix by Geir @ furaffinity.net[line break]";
@@ -1025,7 +1025,7 @@ carry out artistcredits:
 	say "     Jay by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Jill by Sususmiles @ furaffinity.net[line break]";
 	say "     Jimmy by Redragon @ ???[line break]";
-	say "     Klauz by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";	
+	say "     Klauz by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Koghh by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Korvin by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Krampus by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
@@ -1040,7 +1040,7 @@ carry out artistcredits:
 	say "     Mareslut by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Mason by Abelsword @ https://www.furaffinity.net/user/Abelsword[line break]";
 	say "     Micaela by Kattzie @ furaffinity.net[line break]";
-	say "     Mike (face) Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";	
+	say "     Mike (face) Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
 	say "     Moreau by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Mul by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
@@ -1070,7 +1070,7 @@ carry out artistcredits:
 	say "     Skarnoth by Kien-Biu @ http://nsfwbetitngoan.tumblr.com/[line break]";
 	say "     Snow by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
-	say "     Susan (face) by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";	
+	say "     Susan (face) by Sinealas @ https://www.furaffinity.net/user/sinealas/[line break]";
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Tiger Shark Warrior by Zealot @ https://www.furaffinity.net/user/Drakosacerdos/[line break]";
 	say "     Timothy by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";

@@ -761,7 +761,7 @@ the vmusings of Nermine is "[nerminemusing]";
 to say nerminemusing:
 	say "     Calling Nermine over, you prod yourself until Velos concedes to your request. The jackal is obviously a little disturbed by the serpent, but isn't particularly surprised.";
 	say "     'I see many maladies in my time, few so strange.'";
-	say "     'Hey, rude! I know my my appearance isn't the least bit flattering, but double check who you're calling a malady!'";
+	say "     'Hey, rude! I know my appearance isn't the least bit flattering, but double check who you're calling a malady!'";
 	say "     'Stranger... I go in back, I might have book for this.' The snake grumbles a bit as the jackal leaves, looking around the strange shop.";
 	say "     'What tacky fare... Did that statue just wink at me back there? I'm really not sure we should be here.' He clams up when Nermine returns, this time with some dusty tome.";
 	say "     'Okay, let Nermine see if she can fix your problem.'";

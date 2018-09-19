@@ -53,7 +53,7 @@ an everyturn rule:
 			increase Sleeptimercount by 1;
 
 [player rests: [Do not uncomment. Placed inside resting code of story.ni]
-	if Sleeptimercount >= 10: [Player is on the brink of collapse, sleeping for just one turn isnt going to fix them]
+	if Sleeptimercount >= 10: [Player is on the brink of collapse, sleeping for just one turn isn't going to fix them]
 		if silk hammock is owned or silk hammock is present:
 			decrease Sleeptimercount by 6;
 		else:

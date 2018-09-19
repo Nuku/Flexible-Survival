@@ -92,7 +92,7 @@ to say LoseToVixenNurse:
 				increase libido of player by 15;
 				if libido of player > 100, now libido of player is 100;
 		else if player is female:
-			say "     The vixen nurse pushes you down to the ground, getting you onto all fours. The herm vixen is on you moments later, driving her large fox cock into your pussy, making you moan. She nips at your ears and growls playfully as she pumps her hard shaft into you again and again. You find yourself growing even more aroused[if player is male]when she reaches around to stroke your pulsing shaft in return,[end if] and are soon pushing back into her thrusts trying to get as much of her inside your pussy as you can. She gives you a few slaps on the rear with her clipboard, then drives her knot inside you, unleashing her hot seed. This pushes you over the edge, causing you to cum as well.";
+			say "     The vixen nurse pushes you down to the ground, getting you onto all fours. The herm vixen is on you moments later, driving her large fox cock into your pussy, making you moan. She nips at your ears and growls playfully as she pumps her hard shaft into you again and again. You find yourself growing even more aroused[if player is male] when she reaches around to stroke your pulsing shaft in return[end if], and are you soon pushing back into her thrusts, trying to get as much of her inside your pussy as you can. She gives you a few slaps on the rear with her clipboard, then drives her knot inside you, unleashing her hot seed. This pushes you over the edge, causing you to cum as well.";
 			impregchance;
 			say "     She holds you tightly to her for a minute fox cum still flowing into you while her knot holds. Eventually she is able to pull out a flood of cum flowing from your pussy as she moves on to let you recover.";
 		else:
@@ -162,7 +162,7 @@ to say BeatTheVixenNurse:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     You let the vixens hand go and she quickly disappears down a hallway leaving you to gather your thoughts";
+			say "     You let the vixen's hand go and she quickly disappears down a hallway, leaving you to gather your thoughts.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
