@@ -3,6 +3,11 @@ Version 3 of Hayato by Stripes begins here.
 [Version 3.1 - Character relocation - Luneth]
 "Adds an Oni NPC named Hayato (Hal) to the Flexible Survival game."
 
+an everyturn rule: [bugfix code to update saves which had the event erroneously resolved]
+	if HP of Hayato < 14 and Noh Mask is resolved:
+		now Noh Mask is not resolved;
+
+
 Section 1 - Event
 
 Garage Demon is a situation.
