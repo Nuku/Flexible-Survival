@@ -104,9 +104,9 @@ NadiaChar-L is a text that varies. NadiaChar-L is normally "0". [unassigned]
 NadiaChar-M is a text that varies. NadiaChar-M is normally "0". [unassigned]
 
 An everyturn rule: [pregnancy progress every turn]
-	if NadiaPregCounter1 is 1:  [time to give birth]
+	if NadiaPregCounter1 is 1: [time to give birth]
 		say "[NadiaEggBirth]";
-	if NadiaPregCounter1 > 0:   [she's pregnant, so let's recalculate her looks]
+	if NadiaPregCounter1 > 0: [she's pregnant, so let's recalculate her looks]
 		say "[NadiaPregVisibilityUpdate]";
 	if NadiaPregCounter1 > 1:
 		decrease NadiaPregCounter1 by 1;
@@ -116,7 +116,7 @@ An everyturn rule: [pregnancy progress every turn]
 		decrease NadiaPregCounter3 by 1;
 
 to say NadiaEggBirth: [time to give birth]
-	now NadiaPregCounter1 is 0;          [empty place for an egg]
+	now NadiaPregCounter1 is 0; [empty place for an egg]
 	if player is in Garden View:
 		if NadiaPregCounter2 is 0:
 			if NadiaDescription is 1 or NadiaDescription is 2:
@@ -151,9 +151,9 @@ to say NadiaEggBirth: [time to give birth]
 			now NadiaPregCounter3 is 0; [clearing the variable]
 	increase NadiaChickCounter by 1;
 	increase NadiaFertilityCounter by 1;
-	if NadiaDescription < 6:  [she's not reached Goddess stage yet]
-		say "[NadiaDescriptionUpdate]";    [checks progression to the next stage]
-	say "[NadiaPregVisibilityUpdate]";   [to give her non-pregnant looks]
+	if NadiaDescription < 6: [she's not reached Goddess stage yet]
+		say "[NadiaDescriptionUpdate]"; [checks progression to the next stage]
+	say "[NadiaPregVisibilityUpdate]"; [to give her non-pregnant looks]
 
 to say NadiaMaidenBirthingText:
 	say "     'It's time,' Nadia says between gasps. 'I can feel the shell hardening!' Fortunately, since Nadia never strays too far from her nest, it's easy to lead her back to it and she lies down on one of the softer cushions with her wings spread, anticipating the egg's arrival.";
@@ -190,8 +190,8 @@ to say NadiaDescriptionUpdate: [basic description update]
 		now NadiaDescription is 1;
 
 to say NadiaPregVisibilityUpdate: [pregnancy description update]
-	now NadiaPregVisibility is 0;          [variable reset]
-	if NadiaPregCounter1 > 0:   [has to be pregnant for anything to be visible]
+	now NadiaPregVisibility is 0; [variable reset]
+	if NadiaPregCounter1 > 0: [has to be pregnant for anything to be visible]
 		if NadiaPregCounter1 < 13: [1st pregnancy egg ready to pop out]
 			increase NadiaPregVisibility by 3;
 		else if NadiaPregCounter1 < 25: [1st pregnancy egg getting bigger]
@@ -230,7 +230,7 @@ to say NadiaDesc: [how she looks]
 			say "     Nadia is now a veritable goddess, a wellspring of life. Having exceeded all expectations, even her own, it's quite impossible to imagine how she can appear any more fecund than she already is. With how readily and enthusiastically her body has adapted to the immense number of impregnations and births she's gone through despite her petite form - resulting in lush, fertile hips and sumptuous, firm breasts beyond imagination - she looks practically fit to be worshipped, her entire body swaying erotically with every step she takes. The crimson, wavy waterfall of her hair cascades freely down to the back of her knees, and each and every one of her feathers are brilliant and beautiful, glowing with their own inner radiance.";
 			say "     Despite spending much of her time in and around her nest, Nadia's limbs and thighs are toned, and her wings have grown broader and more powerful, draped about her like a cloak of many colors when they're folded about her back. Her generous, tantalizing nipples are now constantly stiff, and her slick, sensitive cunt is swollen with heat and fertility even when she's pregnant. Nadia looks absolutely blissful and croons maternally as she rubs her belly, suggestive of the hypertrophied womb and ovaries that lie beneath, ever ready to be bred with more eggs.";
 			say "     Nadia's mere presence in the library is a ray of light in this broken world, a blossom in a garden choked with weeds. Just looking at her in the little world of her nest makes you feel warm and peaceful inside.";
-		else if NadiaDescription is 5:    [basic appearance]
+		else if NadiaDescription is 5: [basic appearance]
 			say "     Finally in full blossom, the exquisite flower that is Nadia is practically unrecognizable from the frightened, washed-out creature you brought back to the library. Her feathers resplendent in color, her flowing crimson hair and tail-feathers working together to reach the floor in one unbroken line, she manages to add a splash of color to the library all by herself - and her blissful face doesn't hurt, either. Full, firm breasts promise adequate nursing for the next generation she easily ushers into the world by virtue of her massive hips that force wide her stance, and her pussy has finally joined her nipples in exposing themselves, puffy, wet and eager to be bred over and over again.";
 			say "     Truly a mother in every sense of the word now, Nadia seems to exude an aura of calm and peace when she ventures from her nest, even when she's not crooning or singing. Perhaps when all this is over, there will be hope for the future in a nanite-torn world, but for now, you must struggle in your own way, and Nadia in hers.";
 		else if NadiaDescription is 4:
@@ -258,7 +258,7 @@ to say NadiaDesc: [how she looks]
 			say "     Currently, she's resting in her nest, looking pleased with herself and her talons clasped over her lower belly. Would that you have such peace, or trust in the bunker to defend you as securely as she trusts in her nest.";
 		if NadiaChickCounter > 29:
 			say "     Nadia's massive brood of [NadiaChickCounter] chicks brings her immense joy. The eldest of the little horde have already moved out from the library and have begun reclaiming nearby buildings and rooftops for their own, remaining in close contact with their mother, while the rest remain under Nadia's wing to help her care for the steady stream of new additions to their huge family. The broody bird herself has little need to do anything personally anymore, with her numerous chicks serving as her hands, eyes and ears, and when not caring for her brood is more than content to focus on the important job of being pregnant and laying...over and over and over again, with no end in sight.";
-		else if NadiaChickCounter > 10:    [chick appearance]
+		else if NadiaChickCounter > 10: [chick appearance]
 			say "     Nadia's [NadiaChickCounter] chicks are a colorful, cheerful lot in their bright plumage, an even mix of boys and girls. The older ones are now mature enough to run errands like keeping the nest clean, running out into the city for whatever their mother desires, and caring for their younger siblings, taking a load off her hands. Nadia herself keeps everything in her little world well-organized, while tending to, playing with and reading to the younger chicks from the many books in the library.";
 		else if NadiaChickCounter > 1:
 			say "     Nadia's [NadiaChickCounter] chicks are a colorful, cheerful lot in their bright plumage, an even mix of boys and girls. Despite their constant vying for her attention, she has boundless energy when it comes to dealing with them all, tirelessly keeping them fed, watered, disciplined and entertained.";
@@ -385,7 +385,7 @@ This is the NadiaSex rule:
 		else if (nam is "TESTING: Add 10 chicks to her counter"):
 			increase NadiaChickCounter by 10;
 			increase NadiaFertilityCounter by 10;
-			say "[NadiaDescriptionUpdate]";    [checks progression to the next stage]
+			say "[NadiaDescriptionUpdate]"; [checks progression to the next stage]
 		wait for any key;
 	now lastfuck of Nadia is turns;
 
@@ -466,21 +466,21 @@ to say NadiaSex4: [Fuck her pussy]
 			WaitLineBreak;
 			say "     After it's all over, the two of you lie in her nest for a long while to recover from your orgasms, Nadia gently nuzzling at you with her beak. 'Wait for the harvest,' she says. 'I promise it'll be good.'";
 	if NadiaPregCounter1 is 0: [not already preggers]
-		now NadiaPregCounter1 is 38;  [she gets knocked up for sure - 38 turns till birth]
+		now NadiaPregCounter1 is 38; [she gets knocked up for sure - 38 turns till birth]
 	else if NadiaFertilityCounter > 4 and NadiaPregCounter2 is 0 or NadiaPregCounter3 is 0: [allowing multiple pregnancies after her 4th egg/pill + a slot free as 2nd or 3rd pregnancy]
 		let NadiaPregChance be a random number from 1 to 20;
 		if NadiaFertilityCounter > 17: [matron stage]
-			if NadiaPregChance > 5:    [75% chance]
+			if NadiaPregChance > 5: [75% chance]
 				if NadiaPregCounter2 is 0:
-					now NadiaPregCounter2 is 38;      [38 turns till birth as 2nd pregnancy]
+					now NadiaPregCounter2 is 38; [38 turns till birth as 2nd pregnancy]
 				else:
-					now NadiaPregCounter3 is 38;      [38 turns till birth as 3rd pregnancy]
-		else:           [mother stage]
-			if NadiaPregChance > 10:   [50% chance]
+					now NadiaPregCounter3 is 38; [38 turns till birth as 3rd pregnancy]
+		else: [mother stage]
+			if NadiaPregChance > 10: [50% chance]
 				if NadiaPregCounter2 is 0:
-					now NadiaPregCounter2 is 38;      [38 turns till birth as 2nd pregnancy]
+					now NadiaPregCounter2 is 38; [38 turns till birth as 2nd pregnancy]
 				else:
-					now NadiaPregCounter3 is 38;      [38 turns till birth as 3rd pregnancy]
+					now NadiaPregCounter3 is 38; [38 turns till birth as 3rd pregnancy]
 
 to say NadiaSex5: [flying and fucking]
 	if NadiaPregVisibility < 2:
@@ -493,21 +493,21 @@ to say NadiaSex5: [flying and fucking]
 		say "     Finally, you can't take it any longer. The heat of the chase has soundly worked its way into the base of your shaft and it explodes into Nadia, her cunt clenching tight to ensure that not one drop is wasted when it could go towards growing another child in her. Moaning and chirping, she pushes herself off the ground with her hands, perhaps vaguely aware of the fact that she should be back in her nest to brood and lay the life that's no doubt taken root inside her, but falls back with a whimper. You gently coax Nadia into your embrace, reassuring the broody bird that you'll protect her out here and that nothing will happen to her nest and brood while she's away and also taking the opportunity to suck at her nipples.";
 		say "     'Bad!' she says halfheartedly. 'That's for the children...mmm...oh...' Soothed, she chirps happily and snuggles up against you, her feathers still slick in spots from your recent exertions.";
 		if NadiaPregCounter1 is 0: [not already preggers]
-			now NadiaPregCounter1 is 38;  [she gets knocked up for sure - 38 turns till birth]
+			now NadiaPregCounter1 is 38; [she gets knocked up for sure - 38 turns till birth]
 		else if NadiaFertilityCounter > 4 and NadiaPregCounter2 is 0 or NadiaPregCounter3 is 0: [allowing multiple pregnancies after her 4th egg/pill + a slot free as 2nd or 3rd pregnancy]
 			let NadiaPregChance be a random number from 1 to 20;
 			if NadiaFertilityCounter > 17: [matron stage]
-				if NadiaPregChance > 5:    [75% chance]
+				if NadiaPregChance > 5: [75% chance]
 					if NadiaPregCounter2 is 0:
-						now NadiaPregCounter2 is 38;      [38 turns till birth as 2nd pregnancy]
+						now NadiaPregCounter2 is 38; [38 turns till birth as 2nd pregnancy]
 					else:
-						now NadiaPregCounter3 is 38;      [38 turns till birth as 3rd pregnancy]
-			else:           [mother stage]
-				if NadiaPregChance > 10:   [50% chance]
+						now NadiaPregCounter3 is 38; [38 turns till birth as 3rd pregnancy]
+			else: [mother stage]
+				if NadiaPregChance > 10: [50% chance]
 					if NadiaPregCounter2 is 0:
-						now NadiaPregCounter2 is 38;      [38 turns till birth as 2nd pregnancy]
+						now NadiaPregCounter2 is 38; [38 turns till birth as 2nd pregnancy]
 					else:
-						now NadiaPregCounter3 is 38;      [38 turns till birth as 3rd pregnancy]
+						now NadiaPregCounter3 is 38; [38 turns till birth as 3rd pregnancy]
 	else if NadiaPregVisibility < 4:
 		say "     Nadia looks a little uncertain at your suggestion. With the way her eyes are glinting and her breath quickening, it's not hard to see that she's finding your avian form quite attractive, but at the same time she's getting a little too gravid to be cavorting around the city. At last, the impasse is broken by a kick from within Nadia's pregnant belly, making her smile. Seems like someone's called the tiebreaker vote.";
 		say "     'I don't think I can fly right now,' she says as she waddles over and carefully leans into you, snuggling the firm mounds of her baby bump and milk-filled breasts against your warmth. Nadia's breath comes in quick, deep gouts as she inhales your scent, her pulse quickening beneath her skin and most prominent about her womb. Her own scent deepens, becoming thick with arousal, and your swelling, throbbing meat brushes against the inside of her thighs, causing her to whimper with arousal. It's a little while before she has enough sense to form words again, 'but I think something can be arranged.'";
@@ -520,17 +520,17 @@ to say NadiaSex5: [flying and fucking]
 		if NadiaFertilityCounter > 4 and NadiaPregCounter2 is 0 or NadiaPregCounter3 is 0: [allowing multiple pregnancies after her 4th egg/pill + a slot free as 2nd or 3rd pregnancy]
 			let NadiaPregChance be a random number from 1 to 20;
 			if NadiaFertilityCounter > 17: [matron stage]
-				if NadiaPregChance > 5:    [75% chance]
+				if NadiaPregChance > 5: [75% chance]
 					if NadiaPregCounter2 is 0:
-						now NadiaPregCounter2 is 38;      [38 turns till birth as 2nd pregnancy]
+						now NadiaPregCounter2 is 38; [38 turns till birth as 2nd pregnancy]
 					else:
-						now NadiaPregCounter3 is 38;      [38 turns till birth as 3rd pregnancy]
-			else:           [mother stage]
-				if NadiaPregChance > 10:   [50% chance]
+						now NadiaPregCounter3 is 38; [38 turns till birth as 3rd pregnancy]
+			else: [mother stage]
+				if NadiaPregChance > 10: [50% chance]
 					if NadiaPregCounter2 is 0:
-						now NadiaPregCounter2 is 38;      [38 turns till birth as 2nd pregnancy]
+						now NadiaPregCounter2 is 38; [38 turns till birth as 2nd pregnancy]
 					else:
-						now NadiaPregCounter3 is 38;      [38 turns till birth as 3rd pregnancy]
+						now NadiaPregCounter3 is 38; [38 turns till birth as 3rd pregnancy]
 	else:
 		say "     Nadia appears quite nervous at the prospect, patting her monstrously swollen belly. 'I'm sorry,' she says. 'I just don't feel like leaving my nest right now...why don't we stay in here and cuddle a bit?' She spreads her wings invitingly, looking quite hopeful, and you get the distinct feeling that she intends to do more than cuddle, if you accept. It seems like her nesting instincts are demanding that she stay confined and grounded - it's probably not best to push her at the moment.";
 
@@ -585,7 +585,7 @@ Instead of resolving a Bird Troubles:
 	else:
 		LineBreak;
 		say "     Tears begin to well up in Nadia's eyes. 'I'm sorry,' she says. 'I shouldn't have asked - of course you don't have anywhere to go, let alone let me stay. They're everywhere now, aren't they? I suspected as much, after all these days alone. There's nothing left to hope for. Thank you for saving my life, but goodbye.' With that, she speeds away from you. You shout and give chase, but she's gone by the time you round the corner to the now-opened door, with not even a feather left in sight.";
-		now HP of Nadia is 99;  [refused her]
+		now HP of Nadia is 99; [refused her]
 		now Nadia is nowhere;
 		now Resolution of Bird Troubles is 99; [refused Nadia]
 	now Bird Troubles is resolved;
@@ -594,7 +594,7 @@ Lost Chick is a situation. The level of Lost Chick is 5. Lost Chick is inactive.
 The sarea of Lost Chick is "Campus".
 
 when play begins:
-	add Lost Chick to badspots of girl;     [female gymnasts]
+	add Lost Chick to badspots of girl; [female gymnasts]
 
 Instead of resolving a Lost Chick:
 	if HP of Nadia is 2: [first attempt]
@@ -656,9 +656,9 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 			say "     Slowly, Nadia begins to moan softly as a gentle warmth gathers in her lower belly and begins to spread out to the rest of her body. Unable to control herself, the bird of paradise rubs her breasts as they grow bigger and firmer, milk glands and ducts within developing to better feed future chicks she will bear. The rest of her body is not forgotten - her hips widen a little, the bone structure shifting to better allow eggs through. Not to be left out, her pussy grows wet as it becomes more prominent, her thickening lips advertising her newfound boost in fertility.";
 			say "     The transformation complete, Nadia sinks back into her nest with a contented sigh with her wings splayed out. She looks happier, her body more motherly and elegant, the myriad colors on her body more vibrant. A good time for her to be bred, in fact, and she looks eager enough.";
 			increase NadiaFertilityCounter by 1;
-			if NadiaDescription < 6:  [she's not reached goddess stage yet]
-				say "[NadiaDescriptionUpdate]";    [checks progression to the next stage]
-		else:                           [pregnant]
+			if NadiaDescription < 6: [she's not reached goddess stage yet]
+				say "[NadiaDescriptionUpdate]"; [checks progression to the next stage]
+		else: [pregnant]
 			if NadiaPregCounter2 > 0:
 				if NadiaPregCounter2 > 12:
 					decrease NadiaPregCounter2 by 12;
@@ -669,7 +669,7 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 					decrease NadiaPregCounter3 by 12;
 				else:
 					now NadiaPregCounter3 is 2;
-			if NadiaPregCounter1 > 12:         [not yet ready to lay the egg]
+			if NadiaPregCounter1 > 12: [not yet ready to lay the egg]
 				if NadiaPregVisibility is 4:
 					say "     With a faint gurgle, Nadia's womb expands once more, her chicks squirming within her as the drug-fueled nanites force them to grow and mature. The broody bird's belly is massive at this point, but doesn't stop growing until it fills most of her lap, her skin stretched thin and taut.";
 					say "     Engorged to their fullest, Nadia's breasts rub heavily against her belly as they grow further out and down, the dripping milk from her now dark-brown nipples turning into trickles, seeping into her feathers as she cries out in orgasm again, feminine juices bursting from her cunt and soaking her nest as the effects of the pill fade.";
@@ -685,14 +685,14 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 				else if NadiaPregVisibility is 1:
 					say "     Humming to herself, Nadia places her talons on her flat belly and begins to massage herself, looking up every now and then to make sure you're watching. Her efforts are rewarded as her waist grows into a small baby bump, curving gently outwards, and her eyes brighten as her breasts swell slightly to match the life within her womb. Eventually, the pill's effects wear off, and she beckons you forward to nibble at your cheek with her beak. 'Thank you. That's for letting me skip all the boring parts and get to the good stuff,' she says with a chirp of pleasure.";
 				decrease NadiaPregCounter1 by 12;
-			else:                         [ready to lay the egg]
+			else: [ready to lay the egg]
 				if NadiaPregCounter2 is 0:
 					say "     Humming a lullaby to herself, Nadia cradles her expanding belly with both hands as the pill's effects cause her third trimester to pass in a matter of minutes. Tilting her head as she catches your eye, she coos gently and winks, keeping her pleasant demeanor - up to the point where her belly suddenly stops growing and her expression turns to one of shock. A damp patch on her feathers is spreading outwards from her pussy, and it isn't cum.";
 				else:
 					say "     You wait to see if Nadia can actually get any bigger than the monstrous size she already is - and she does, if only a little as one of her chicks finally grows to full term within her, rounding her out beautifully. Suddenly, though, her addled expression turns to one of alarm, and she struggles to push herself upright.";
 					say "     'Hurry!' she calls out to you. 'I-I felt the shell harden, I'm going to lay now!'";
 				say "[NadiaEggBirth]";
-			say "[NadiaPregVisibilityUpdate]";   [after pregnancy progression or birth]
+			say "[NadiaPregVisibilityUpdate]"; [after pregnancy progression or birth]
 	else:
 		say "     Nadia whimpers, tears gathering in her large, black eyes, but sinks back into the soft confines of her nest. It's a little hard not to feel a twinge of pity for her, but you do have your reasons.";
 
@@ -722,7 +722,7 @@ instead of going up from Grey Abbey Library while (Nadia is in Garden View and H
 	say "     'Have you seen Vera while out in the city?' she asks you worriedly. 'Silly girl went out to check one of the older stores down by the campus, and hasn't come back yet. I told her not to go, especially all on her own, but I suppose she was curious about how her mother used to live. Her wings aren't strong enough for her to fly very much yet, so I'm worried that she can't make it back safely and may be stuck out there...'";
 	say "     Admittedly, it's a little hard to remember just which of Nadia's chicks is which, especially when the broody bird keeps on adding to their number, but it shouldn't be too hard to find one of them when avians, especially ones as colorful as birds of paradise, aren't exactly a common sight on the campus. You agree to keep an eye out for her lost chick when you're in the area; Nadia nods and turns back to the window, calling out every now and then in the hope that her lost daughter will return to her.";
 	now Lost Chick is active; [event open now]
-	now HP of Nadia is 2;   [quest given]
+	now HP of Nadia is 2; [quest given]
 
 instead of going up from Grey Abbey Library while (Nadia is in Garden View and NadiaDescription is 6 and NadiaPregVisibility is 5 and NadiaChickCounter > 19 and HP of Nadia is 4):
 	move player to Garden View;

@@ -59,7 +59,7 @@ Instead of resolving a Soldier Squad:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] to take her with you, [link]2[end link] to talk to her, [link]3[end link] give her her first sexual experience or [link]4[end link] to run off.";
-		if calcnumber is 1:  [take her along]
+		if calcnumber is 1: [take her along]
 			say "     You say hello to the innocent young husky and introduce yourself[if player is not defaultnamed] as [name of player][end if]. In response, she licks over your face and sniffs you. Pulling the young woman away and looking in her eyes, you ask if she can talk. To that, she turns her head a bit, thinking, then replies '...talk? I haven't before, but I guess I can. You smell nice.' Her tail wags and she smiles at you innocently. Clearing your throat and doing your best to sound friendly, you offer to take her for a trip, showing her the city and bringing her to your place.";
 			LineBreak;
 			say "     Happy to join you for an exciting new experience, the husky trots by your side as you make your way back along the side of the house, ducking under the windows along the way as you don't know if any of the soldiers are in the house. When you get to the street, you hurry her along, running between hiding spots. Everything goes well until, several blocks away, the husky spots another dog-morph on the street. Before you can stop her, she barks a loud greeting at him and bounces out onto the open street, her tail held high. You have no choice but to follow her, stepping between the canine woman and a German Shepherd who's already giving her a hungry leer.";

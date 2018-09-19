@@ -38,7 +38,7 @@ Section 2 - Conversing with Alex
 Instead of conversing the Alex:
 	if AlexProgress is 0:
 		say "     'Have you come back to reconsider my offer? I could certainly use your help on this. And remember, I'm willing to get you supplies for your assistance,' the mustelid lawyer says with a smile.";
-		say "     [bold type]  Do you agree to help him?[roman type][line break]";
+		say "     [bold type]Do you agree to help him?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";

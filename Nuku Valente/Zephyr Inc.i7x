@@ -330,7 +330,7 @@ Instead of resolving a High Rise Detector Site:
 			if lost is 0:
 				challenge "Cougar";
 		else if T is 3:
-			say ", but are surprised as a creature leaps out from behind a partially open door. Having heard you coming, it must have lain in wait until you moved past. His surprise blow is uncoordinated, but does make you stumble on the steps. You take [special-style-2]8[roman type]  damage.";
+			say ", but are surprised as a creature leaps out from behind a partially open door. Having heard you coming, it must have lain in wait until you moved past. His surprise blow is uncoordinated, but does make you stumble on the steps. You take [special-style-2]8[roman type] damage.";
 			now ndmhigh is 1;
 			challenge "Zebra";
 			now ndmhigh is 0;

@@ -156,7 +156,7 @@ to say horror victory:
 	else:
 		if eggplanted is 0:
 			if tentsubmit is 1:
-				say "As you lie down in a clear sign of submission, the creature approaches you  excitedly, extending its many tentacles towards you as it does so.";
+				say "As you lie down in a clear sign of submission, the creature approaches you excitedly, extending its many tentacles towards you as it does so.";
 			else:
 				say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime-coated appendages before you hit the ground. ";
 			if player is not female:

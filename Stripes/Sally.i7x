@@ -33,7 +33,7 @@ to say sexwithSally:
 		say "     Sally, hearing you step up, stops what she was doing and dashes towards you. She whines softly and tugs at her leash, looking at you longingly. When you smile down at her, she bounds around happily on all fours, knowing what's coming and needing it badly. She hops back onto her bunk and rolls over, panting like a dog as she whines again, displaying her hybrid herm body that is available for your enjoyment. The air around the bunk is saturated in the scent of her arousal and her male and female cum, exciting you greatly. ";
 		if player is male:
 			say "     As your needy fucktoy is a herm, how would you like to enjoy your puppy-bun pet?";
-			say "     [bold type]  Do you feel like enjoying her pussy or her cock this time?[roman type][line break]";
+			say "     [bold type]Do you feel like enjoying her pussy or her cock this time?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Her cock.";
 			say "     ([link]N[as]n[end link]) - Her pussy.";

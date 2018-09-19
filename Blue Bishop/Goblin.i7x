@@ -230,7 +230,7 @@ to say losetogob_m:
 					else:
 						say "[if scalevalue of player > 3][one of]Whew, ah, what a ride[or]Ah, give me a second, big one[or]Heh, I still have the magic touch, even with someone so large[at random][else][one of]Oh, you've gone and made a mess of yourself[or]Whew, I'm going to need a second[or]Ho boy, what a ride[at random][end if]";
 					say "...' Taking a moment to catch his breath, creature eventually pulls himself free from you, casually wiping his spent tool clean against your behind before he crawls back into the hole from whence he came, regarding you with a sly grin as he departs, allowing you to recover and go about your business once more.[impregchance]";
-	else:         [oral]
+	else: [oral]
 		say "!' Exposing his cock from behind the cover of his loincloth, he lets you watch as he begins to stroke himself erect before you. It's not long before he's ready, and is quick to point it out by irreverently prodding your closed lips with the oozing tool.";
 		If player is submissive or HP of player > 0:
 			say "     [if scalevalue of player > 4]He's a little ill at ease when you find yourself quickly compelled to comply, perhaps because he's putting himself between the jaws of a creature significantly larger than he. Regardless, you hide his rod within the confines of your maw, much to the goblin's approval[else]Finding yourself quickly compelled to comply, you open your maw to engulf the rod, to which he responds by shamelessly thrusting the length of it in its entirety within the confines of your hole, much in spite any complaints you could offer up against this reckless treatment[end if].";

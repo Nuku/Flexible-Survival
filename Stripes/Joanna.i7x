@@ -249,7 +249,7 @@ to say plantexam:
 	if HP of Joanna < 5, now HP of Joanna is 5;
 
 to say joannaoffer:
-	say "     As you come up to talk to Joanna, she puts her arms around you and runs her paws over you. 'Mmm... I was hoping you'd stop by, sweetie. I've been really enjoying our time together, but I'm starting to want more. I crave more,' she says, sliding her long tongue across your cheek, making you shiver in delight? fear? anticipation? Her fingers continue over your body, teasing you lightly. 'Will you help me, my lovely hero?[no line break][if plantdefeat > 0]  I may even be able to help you out a little while I'm at it,[end if]' she purrs, sliding her tongue across your ear before nibbling on it. 'It's nothing much. Just a little seed,' she whispers.";
+	say "     As you come up to talk to Joanna, she puts her arms around you and runs her paws over you. 'Mmm... I was hoping you'd stop by, sweetie. I've been really enjoying our time together, but I'm starting to want more. I crave more,' she says, sliding her long tongue across your cheek, making you shiver in delight? fear? anticipation? Her fingers continue over your body, teasing you lightly. 'Will you help me, my lovely hero?[no line break][if plantdefeat > 0] I may even be able to help you out a little while I'm at it,[end if]' she purrs, sliding her tongue across your ear before nibbling on it. 'It's nothing much. Just a little seed,' she whispers.";
 	say "     [bold type]Shall you accept her offer?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
@@ -666,7 +666,7 @@ Definition: a person is planttailed:
 [ 6 = refused her seed on initial offer ] = joannaoffernum = 1  //  lust of joanna is 3+
 [ 7 = accepted her seed ] = lust of joanna is 3+
 
-[ 90 = helped w/dogs          ]  Dog Chase resolved, joannadogsaved is true, Palomino is known
+[ 90 = helped w/dogs          ] Dog Chase resolved, joannadogsaved is true, Palomino is known
 [ 91 = asked Harold about her ]
 [ 92 = chat w/Joanna          ]
 

@@ -2832,7 +2832,7 @@ to attributeinfect:		[sets the player values from the new attributes]
 						say "     [bold type]As you shrink, [z] becomes far too big to fit you. You have little choice but to take [if plural of z is true]them[else]it[end if] off.[roman type][line break]";
 						now z is not equipped;
 					else if (scalevalue of player - size of z is -1):
-						say "     [bold type]Your [z] hangs fairly  on your now smaller frame.[roman type][line break]";
+						say "     [bold type]Your [z] hangs fairly on your now smaller frame.[roman type][line break]";
 	else:
 		now scalevalue of player is 3;
 	if there is a body descriptor in row monster of the Table of Random Critters:

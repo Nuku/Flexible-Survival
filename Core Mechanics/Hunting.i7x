@@ -90,7 +90,7 @@ carry out HuntAction:
 					say "You manage to find your way towards [name entry]!";
 					huntingfightchance;
 					move player to object entry ;
-					now object entry  is known;
+					now object entry is known;
 					now Found is 20; [room found]
 				else:
 					say "But despite searching for quite a while, you fail to find it.[line break]";

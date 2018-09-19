@@ -367,7 +367,7 @@ to say AlexandraContraceptionTalk:
 		else if player is male: [male/herm player]
 			if AlexandraCreampieCount > 5: [player came in her plenty]
 				say "'After pumping me full of cum all those times, now you wanna let me get contraception? Seems I don't even need it if you're shooting blanks,' she throws at your face, literally daring you to take her and prove otherwise.";
-			else if AlexandraCreampieCount > 2:  [player came in her 3-5 times]
+			else if AlexandraCreampieCount > 2: [player came in her 3-5 times]
 				say "'Why the sudden change of pace, boss? You've creampied me plenty before. Worried you're shooting blanks and wanna calm your nerves? Less scary if the bitch is barren anyways?' Raising one eyebrow to give you a long look, Alexandra presses herself against your side and adds, 'How about we just try again instead? A stud like you will succeed the next time, I'm sure.' Spurring you on, the dobie wiggles her breasts and licks the side of your neck, eager to have sex with you instead of having to stop her chances at getting pregnant.";
 			else if AlexandraCreampieCount > 0: [player came in her 1-2 times]
 				say "'Aww, you wanna play it safe now? A pity, I liked you taking me all rough and tumble, with not a care in the world. A little risk makes things more exciting, you know.' With that said, Alexandra presses herself against your side and adds, 'Just one more time, take a risk!' Spurring you on, the dobie wiggles her breasts and licks the side of your neck, eager to have sex with you instead of having to stop her chances at getting pregnant.";

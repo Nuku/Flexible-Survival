@@ -122,7 +122,7 @@ this is the swarmattack rule:		[damage bonus based on remaining health]
 	follow the player injury rule;
 	say "You are [descr].";
 
-this is the sporecloud rule:      [Spore aura following spore blast attack]
+this is the sporecloud rule: [Spore aura following spore blast attack]
 	choose row monster from Table of Random Critters;
 	if SporeCloud is 0 and a random chance of 1 in 5 succeeds:
 		say "     As the [name entry] continue fighting their excited movements begin releasing fungal spores into the air!";

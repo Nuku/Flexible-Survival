@@ -20,9 +20,9 @@ to say losetonerdymouse:
 	say "     The mouse grins at you and sticks his tongue out mockingly 'Brains over brawn ftw! Ha ha ha! Ha ha ha ha ha!' he arches his back and looks up to the sky as he gives his oddly familiar laugh. After laughing in this manner for an excessively long time, he turns his attention back to you and, empowered by his victory over you, flips you off while grinning.";
 	if player is not male and breast size of player > 0: [no cock and at least an A-cup]
 		say "     The rodent freezes as he stares at you. 'Oh crap, oh crap... I... I am so... soooo sorry. I... I was just so caught up in defending myself... Are you okay Miss?' as he talks he's hurrying to your side to help you up only to trip over his own feet. The nerd ends up face first between your breasts. Almost immediately you feel a dampness in your cleavage, the little nerd undoubtedly drooling at having a close up with breasts. He pulls back quickly, his face beet red 'I didn't mean it! I would never do... er... not that you aren't pretty. I just.. prefer girls that have an IQ higher than their bust size.' The mouse's embarrassment had been so cute right up [']til that point. As if sensing your rising anger, he gives a startled squeak before scampering away as fast as he can.";
-	else if breast size of player > 0:   [cock + at least an A-cup]
+	else if breast size of player > 0: [cock + at least an A-cup]
 		say "     The rodent freezes as he stares at you. 'Oh crap, oh crap... I... I am so... soooo sorry. I.. I was just so caught up in defending myself... Are you okay Miss?' as he talks he's hurrying to your side to help you up only to trip over his own feet. The nerd ends up face first between your breasts. Almost immediately you feel a dampness in your cleavage, the little nerd undoubtedly drooling at having a close up with breasts. The mouse places his paws down to push himself up, one landing right on your crotch. The mouse bolts upright, his face covered in a blush. 'You... have a...' He clears his throat blushing. 'I didn't mean to grab... I... uh...' He stands quickly, an obvious bulge in his pants and without another word, bolts as quickly as he can.";
-	else if scalevalue of player < 3:   [smaller than average player body]
+	else if scalevalue of player < 3: [smaller than average player body]
 		say "     He stares at you for a moment before smiling and holding out a paw to help you up. 'Sorry, us little guys really shouldn't be fighting each other. AH CHOO.' His ears flatten back as he looks at you sheepishly. 'I... s-sorry - allergies.' He hands you a tissue so you can wipe your face off. 'I think I'm still allergic to pet dander. At least I'm not a cat or a dog. Then I'd be allergic to myself.' He laughs some before starting to walk away. 'Watch yourself out there.'";
 	else:
 		say "     'You're the loser now. Jerk!' The mouse, empowered with his victory over you, grows bold and spits on you. Having had enough of this smarmy little bastard you stagger to your feet with fists balled. He gives a terrified squeak before darting off as fast as he can run.";
@@ -135,11 +135,11 @@ when play ends:
 			say "     You give in to the vast nerdiness inside your head. After pouring over all of the books you can find in the library you grow bored and desire a more structured path of learning. Wandering around, you eventually find yourself at the College Campus and are overjoyed at the thought of getting a higher education. Almost immediately you find yourself on the receiving end of a wedgie to shouts of 'NERD!'. Ah, sweet academia.";
 		else:
 			say "     You survived, by some miracle, with your humanity still intact. It takes some time but you finally find a place you fit in, surrounded by those like you, by fellow nerds.";
-			if player is male:      [MALE]
+			if player is male: [MALE]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player: [F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";
-			else:            [F-STERILE]
+			else: [F-STERILE]
 				say "     Additional text for a female survivor who cannot become preggers.";
 ]
 

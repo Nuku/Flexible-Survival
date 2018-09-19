@@ -89,7 +89,7 @@ instead of sniffing Main & 7th Street:
 	say "     An unpleasant odor hangs in the air, emanating from the burned wreck standing in the middle of the road.";
 
 West of Main & 7th Street is Looted Shops.
-The earea of Looted Shops  is "Outside".
+The earea of Looted Shops is "Outside".
 The description of Looted Shops is "[LootedShopsDesc]".
 
 to say LootedShopsDesc:

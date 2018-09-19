@@ -4004,7 +4004,7 @@ to say DoranRP_VirileBeastScenePool:
 		say "     You are awoken from your prior lapse in consciousness to feel of a hot liquid rushing against your face. It only takes a second for the acrid stench and taste to inform you that you're being marked again by the [gdragon], [if tempnum is 0]meekly obliging such harsh treatment, much to [ghis] approval[else]instinctively spitting it out and struggling once more to free yourself of [ghis] hold, to little avail[end if]. Satisfied with [ghis] little wake-up call, the beast continues going about the business [ghe] had planned for [ghis] little toy.";
 		now DoranDiscussion_var1 is 0;
 		now DoranRP_var4 is 2;
-	else if a random chance of 1 in 3 succeeds:  [Wake to being fucked]
+	else if a random chance of 1 in 3 succeeds: [Wake to being fucked]
 		say "     Gradually, you stir awake once more, but it's soon made clear that your bestial captor is fucking you regardless of your lack of consciousness. Still sore and swollen with [ghis] seed, [ghe]'s already tied to you, and in the few seconds that follow the [gdragon] roars out once more, flooding your [if DoranRP_var3 is 2]bowels[else]womb[end if] with [ghis] seed yet again, [if tempnum is 0]soon compelled to orgasm as well, you're unable to resist moaning out in approval for such wanton abuse[else]groaning and struggling to try and free you once more, not that it ever seems to do much good[end if]. The [gdragon] takes this moment to rest for a bit.";
 		now DoranDiscussion_var1 is 1;
 	else if a random chance of 1 in 2 succeeds: [Attempting Escape]

@@ -146,7 +146,7 @@ Instead of resolving a Conflict within the Plains:
 					else:
 						say "well, for the most part, for you definitely lost your old body,' he remarks with some evident disappointment. ";
 					say "'Either way, I need to get out of this, so if you'd mind staying back for a second....' The centaur pauses as he looks down, eyes closed the next second. Then, with a flick of a wrist his eyes open again, his hooved feet lifting one after another.";
-					WaitLineBreak;;;
+					WaitLineBreak;
 					say "     'There we go. Now, for introductions,' he mentions as he turns to you. 'I'm Seraphis, and I must thank you for distracting those three before they could do anything to me that was too severe.' You acknowledge his thanks and give your own name. 'Well, thank you for trusting me with your name, [if player is not defaultnamed][name of player][end if]. Beyond that, I have to go deal with someone immediately. I do hope we meet again though. Goodbye,' he gracefully declares as his arm crosses his waist and his human half bows. He then moves away, getting into a gallop seconds later.";
 					now SeraphisContent is 1;
 					now HP of Seraphis is 61;

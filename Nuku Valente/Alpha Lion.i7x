@@ -97,7 +97,7 @@ Alpha Lion ends here.
 
 Alpha Lion infection tables and monster based on Flexible Infection v3, for inclusion in Infection based games.
 
-Example:  * Simba the Alpha Lion - Adds Simba to Your Apartment.
+Example: * Simba the Alpha Lion - Adds Simba to Your Apartment.
 
 	*: "Simba the Alpha Lion"
 

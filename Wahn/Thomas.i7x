@@ -192,11 +192,11 @@ to say ThomasDesc:
 				say "     Nearby but still a bit off, you see [if (libido of Thomas is 1 or libido of Thomas is 21)]another centaur[else if (libido of Thomas is 2 or libido of Thomas is 12 or libido of Thomas is 22)]two more centaurs[end if] keeping lookout over the surrounding plain. Looks like Thomas small herd is security-conscious and ready for other infectees. Probably wise, with what you've seen in the city...";
 
 instead of conversing the Thomas:
-	if (HP of Thomas is 0):     [not yet met]
+	if (HP of Thomas is 0): [not yet met]
 		say "ERROR-Thomas-001B: He should not be around yet anywhere where players can see him.";
 	else if (HP of Thomas is 100): [avoiding the player]
 		say "ERROR-Thomas-100B: He should be avoiding the player now and not be seen again.";
-	else:     [knows he's a herm]
+	else: [knows he's a herm]
 		say "     Thomas nods to you and says 'Hello my friend, what did you want to talk about?'";
 		wait for any key;
 		say "[ThomasTalkMenu]";
@@ -576,7 +576,7 @@ Instead of fucking the Thomas:
 		if name entry is "Centaur Stallion":
 			now monster is y;
 			break;
-	if (HP of Thomas is 0):    [not yet met]
+	if (HP of Thomas is 0): [not yet met]
 		say "ERROR-Thomas-001C: He should not be around yet anywhere where players can see him.";
 	else if (HP of Thomas is 100): [avoiding the player]
 		say "ERROR-Thomas-100B: He should be avoiding the player now and not be seen again.";
