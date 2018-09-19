@@ -2,7 +2,7 @@ Version 1 of Pericles by Rikaeus begins here.
 [Version 1 - New NPC, New Events]
 
 [ PericlesRelationship                                     ]
-[   0: Hasnt met                                           ]
+[   0: Hasn't met                                          ]
 [   1: Has met via Bjorn Event                             ]
 [   2: Has seen his second event                           ]
 [   3: Has seen his third event                            ]
@@ -183,7 +183,7 @@ instead of conversing the Pericles:
 	else if PericlesRelationship > 6:
 		say "     When you approach the Spartan-Helot he's currently working on his paperwork. Seeing your shadow hover over his sheets he looks up and smiles. 'Is there anything you need friend?' he asks, speaking in a warm tone.";
 		say "[PericlesTalkMenu]";
-	else :
+	else:
 		say "     As you walk up to Pericles, who has been wandering around his room, he looks up at you and smiles. 'What do you want?' he asks, clearly happy to see you.";
 		say "[PericlesTalkMenu]";
 
@@ -243,7 +243,7 @@ instead of fucking Pericles:
 	if PericlesRelationship is 7:
 		say "     The Spartan gives you a disapproving look before shaking his head. 'I'm sorry friend, but you have to prove yourself again to me somehow after those failures in the war,' he says before returning to what he was doing.";
 	else if BjornRelationship is 3:
-		say "     He shakes his head as he looks towards Bjorn who is standing inside the room. 'I'm sorry friend but I'd rather not do it with the viking here.' Pericles says to you, making you rather dissapointed.";
+		say "     He shakes his head as he looks towards Bjorn who is standing inside the room. 'I'm sorry friend but I'd rather not do it with the viking here,' Pericles says to you, making you rather disappointed.";
 	else if (lastfuck of Pericles - turns < 3): [he got fucked in the last 9 hours = 3 turns]
 		say "     Pericles raises a brow and shakes his head at you. 'Even with my mutation I need some time to rest friend,' he says, chuckling at the end.";
 	else if PericlesRelationship > 7 and cocks of player > 0 and cunts of player < 1:

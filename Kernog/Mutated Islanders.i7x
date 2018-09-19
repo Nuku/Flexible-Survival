@@ -19,7 +19,7 @@ to say loseMutatedIslander:
 	if inasituation is true:
 		say "";
 	else:
-		if scalevalue of player >= 5 :
+		if scalevalue of player >= 5:
 			say "     Obviously too big to be used in any other way, the islander sits on your belly, knocking the air out of you, and humps energetically his massive erection on your [bodyname of player] body, showering it with his musky pre. Your comfort seems not to be the islander's priority, and he seems to actually revel in mashing his thick glans against your [facename of player] face. His grunts turn more and more guttural, until, with a couple of final thrusts, the mutated islander lets out a long, thunderous moan, and cum begins to gush out of his cock. A literal torrent of thick white spunk, which splashes over your face in an unending stream. With the weight of the islander pinning you down, you are forced to take most of it. You almost drown a couple of time, as the thick, salty semen flows freely into your mouth, and as you are forced to gulp it down in order to not choke.";
 			say "     'Yes, finally!' the mutated islander shouts triumphantly. He hurriedly jerks off until his massive cock reaches a towering erection. He grabs you, and pulls you face-first against his urethra. Coated by the copious amounts of pre which leak from his pee-hole, the successive pushes make you eventually slip your [facename of player] head inside the islander's shaft. He moans loudly, and another gush of pre splashes on you. You cannot help but wonder how, even with the islander's humongous size, it seems to accommodate you, stretching around your head like rubber. The outline of your head becomes a clearly visible bulge under the tanned skin.";
 		if scalevalue of player is 4:

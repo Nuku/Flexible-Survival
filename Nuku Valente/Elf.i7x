@@ -167,7 +167,7 @@ when play ends:
 				else:
 					say "     You maintain a fairly modest standing in the tribe, pulling your weight where need be. When there isn't the matter of hunting or bringing in new [']Recruits['], you fill the forest with the sounds of sex for many long hours. You couldn't be more content...";
 		else:
-			say "     Once the military picks you up, you get through processing with almost zero issue. You quickly find that society is eager to embrace an infected so conventionally attractive and normal-looking, allowing you to go about your daily life with extreme ease ";
+			say "     Once the military picks you up, you get through processing with almost zero issue. You quickly find that society is eager to embrace an infected so conventionally attractive and normal-looking, allowing you to go about your daily life with extreme ease";
 			if "Horny Bastard" is listed in feats of player:
 				say ". Given your infection's overwhelming influence to sate your lust, you manage to turn this to your benefit by becoming an owner of an upper-class night club. It proves to be quite effective at bringing coin in, and you get the benefit of picking and choosing whomever satisfies your desire at the time.";
 			else:

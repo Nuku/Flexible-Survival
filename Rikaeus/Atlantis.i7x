@@ -2,7 +2,7 @@ Version 1 of Atlantis by Rikaeus begins here.
 [Version 1 - New Area, New NPC, New Events]
 
 [ PoseidonRelationship                                     ]
-[   0: Hasnt acquired trident                              ]
+[   0: Hasn't acquired trident                             ]
 [   1: Has acquired the trident                            ]
 [   2: Has entered Atlantis                                ]
 [   3: Has accepted the courtship                          ]
@@ -12,31 +12,31 @@ Version 1 of Atlantis by Rikaeus begins here.
 [  99: Has refused the courtship                           ]
 
 [ FirstAtlantisVisit                                       ]
-[   0: Hasnt visited Atlantis                              ]
+[   0: Hasn't visited Atlantis                             ]
 [   1: Has visited Atlantis                                ]
 
 [ TritonRelationship                                       ]
-[   0: Hasnt met him                                       ]
+[   0: Hasn't met him                                      ]
 [   1: Has met him                                         ]
 
 [ AlanaRelationship                                        ]
-[   0: Hasnt met her                                       ]
+[   0: Hasn't met her                                      ]
 [   1: Has met her                                         ]
 
 [ CenterVists                                              ]
-[   0: Hasnt visited yet                                   ]
+[   0: Hasn't visited yet                                  ]
 [   1: First Visit                                         ]
 
 [ ResidentialVisits                                        ]
-[   0: Hasnt visited yet                                   ]
+[   0: Hasn't visited yet                                  ]
 [   1: First Visit                                         ]
 
 [ MarketVisits                                             ]
-[   0: Hasnt visited yet                                   ]
+[   0: Hasn't visited yet                                  ]
 [   1: First Visit                                         ]
 
 [ KurtRelationship                                         ]
-[   0: Hasnt seen yet                                      ]
+[   0: Hasn't seen yet                                     ]
 [   1: Has heard him perform                               ]
 
 PoseidonRelationship is a number that varies.
@@ -384,7 +384,7 @@ to say AlanaTalk1:
 
 to say AlanaTalk2:
 	say "     You ask the mermaid what her job at the gate consists of, something that she offers no resistance against on answering. 'Me and the brat over there guard the only entrance to Atlantis, which is this magical gate that King Poseidon made thousands of years ago,' she says, gesturing to the golden thing behind her. You ask her what's so special about it something that she replies to rather quickly. 'It's what generates the bubble you're in right now. Without it certain species or beings wouldn't be able to be in the city,' Alana says. You mention that to get down here requires to be able to breathe underwater in the first place. That prompts a surprising chuckle from her as she answers you. 'Only recently did it. After all, Atlantis wasn't here for that long. It was in other places before. Places that didn't require gills or something else to get to,' is her response to her. You nod, figuring that you understand it.";
-	say "     You then ask her what would happen if the gate was destroyed. She raises a brow as if sizing you up on whether or not you'd do such a thing before shrugging. 'If that did happen then water would come rushing in. The buildings wouldn;t be destroyed as they're reinforced but people would be hurt,' Alana says to you. That actually makes sense, since the water wouldn't be displaced anymore. However before you can head off on your own, Triton makes a side comment. 'Even so, it's very unlikely for that to happen as the gate is extremely strong,' he says, swinging his trident at it for emphasis as it doesn't leave a mark. After he does so you decide to let them return to work as you've gotten all the information you could get.";
+	say "     You then ask her what would happen if the gate was destroyed. She raises a brow as if sizing you up on whether or not you'd do such a thing before shrugging. 'If that did happen then water would come rushing in. The buildings wouldn't be destroyed as they're reinforced but people would be hurt,' Alana says to you. That actually makes sense, since the water wouldn't be displaced anymore. However before you can head off on your own, Triton makes a side comment. 'Even so, it's very unlikely for that to happen as the gate is extremely strong,' he says, swinging his trident at it for emphasis as it doesn't leave a mark. After he does so you decide to let them return to work as you've gotten all the information you could get.";
 
 instead of fucking Alana:
 	say "     The woman glares at you and behind her you can see Triton furiously shaking his head, practically telling you to stop that train of conversation. Perhaps it's best not to talk to her about this.";

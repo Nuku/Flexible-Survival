@@ -2,7 +2,7 @@ Version 1 of Male Dorm Events by Rikaeus begins here.
 [Version 1 - Set of Events for the Male Dorms]
 
 [ JustinRelationship                                       ]
-[   0: Hasnt met                                           ]
+[   0: Hasn't met                                          ]
 [   1: Has seen sucking off/riding males in the male dorm  ]
 
 JustinRelationship is a number that varies.

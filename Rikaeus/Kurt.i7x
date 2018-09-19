@@ -2,7 +2,7 @@ Version 1 of Kurt by Rikaeus begins here.
 [Version 1 - New Rooms, New NPC, New Events]
 
 [ KurtRelationship                                         ]
-[   0: Hasnt seen yet                                      ]
+[   0: Hasn't seen yet                                     ]
 [   1: Has heard him perform                               ]
 [   2: Ran into him in the city center                     ]
 

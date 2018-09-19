@@ -191,7 +191,7 @@ The conversation of Sewer Gator is { "Gator stuff" }.
 The scent of the Sewer Gator is "The gator smells strongly of sex and the sewers.";
 
 to say GatorDesc:
-	say "     The gator is a formidable sight, covered in green scales and plenty of muscle to back them up. She has no problem showing off her thick cock to you, as well as giving you glimpses of her cunt while she seductivelly shakes her wide hips. As you continue to look her over, she flashes you a smirk as she eyes you with a hungry gaze.";
+	say "     The gator is a formidable sight, covered in green scales and plenty of muscle to back them up. She has no problem showing off her thick cock to you, as well as giving you glimpses of her cunt while she seductively shakes her wide hips. As you continue to look her over, she flashes you a smirk as she eyes you with a hungry gaze.";
 
 instead of conversing the Gator:
 	say "[gator den repeat]";
@@ -204,7 +204,7 @@ to say gator den entrance:
 	say "[gator den scene]";
 
 to say gator den repeat:
-	say "     'Mmm, that was so hot,' the gator says, quickly regaining her stamina after your romp with her. ' Want to go for another round?'";
+	say "     'Mmm, that was so hot,' the gator says, quickly regaining her stamina after your romp with her. 'Want to go for another round?'";
 	say "[gator den scene]";
 
 to say gator den scene:

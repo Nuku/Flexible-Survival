@@ -411,7 +411,7 @@ Section 4 - Tire Iron
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"tire iron"	"A heavy tire iron - a good, cliche make-shift weapon."	1	tire iron
+"tire iron"	"A heavy tire iron - a good, cliché makeshift weapon."	1	tire iron
 
 tire iron is an armament. It is part of the player. It has a weapon "[one of]your tire iron[or]the tire iron[or]your metal tire iron[at random]". The weapon damage of tire iron is 6. The weapon type of tire iron is "Melee". It is not temporary.
 

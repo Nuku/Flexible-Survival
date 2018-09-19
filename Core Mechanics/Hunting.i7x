@@ -89,7 +89,7 @@ carry out HuntAction:
 				if diceroll >= 15:
 					say "You manage to find your way towards [name entry]!";
 					huntingfightchance;
-					move player to object entry ;
+					move player to object entry;
 					now object entry is known;
 					now Found is 20; [room found]
 				else:

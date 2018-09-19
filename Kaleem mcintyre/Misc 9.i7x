@@ -55,7 +55,7 @@ Instead of resolving a The Magic Cap:
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		LineBreak;
-		say "Telling the Cerberus that you were just browsing, you chuckle nervously before slowly setting the statue back into the case. Seeing that you're not here to steal, the Cerberus comes over, hefts you up by your collar, and then casually walks you out of the Museum. When the beast tosses you out onto your hea,d you get the feeling that would-be thieves are not wanted inside of the Museum. You make a mental note to yourself that you're going to avoid that particular case for now on - right after you get an ice pack for the headache growing inside of your noggin['].";
+		say "Telling the Cerberus that you were just browsing, you chuckle nervously before slowly setting the statue back into the case. Seeing that you're not here to steal, the Cerberus comes over, hefts you up by your collar, and then casually walks you out of the Museum. When the beast tosses you out onto your head, you get the feeling that would-be thieves are not wanted inside of the Museum. You make a mental note to yourself that you're going to avoid that particular case for now on - right after you get an ice pack for the headache growing inside of your noggin['].";
 		Decrease HP of player by 6;
 		If HP of player < 1, now HP of player is 1;
 		now Resolution of Magic Cap is 1; [put it back]

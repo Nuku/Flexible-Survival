@@ -7,10 +7,10 @@ Section 1 - Monster Responses
 when play begins:
 	add { "Slime Cube" } to infections of hermaphrodite;
 
-[ Slime falls upon you while you explore the island. Big cube of transluscent material, which reminds you of the goo girl]
+[ Slime falls upon you while you explore the island. Big cube of translucent material, which reminds you of the goo girl]
 to say slimeCubeDesc:
 	if inasituation is false:
-		say "     A big and gooey transluscent cube stands in front of you. Despite making you remember the goo girls of the city, its body is completely featureless, save the few boney remnants of previous victims floating inside. It wobbles slowly in your direction, and it seems it will relentlessly do so until it absorbs you into its body.";
+		say "     A big and gooey translucent cube stands in front of you. Despite making you remember the goo girls of the city, its body is completely featureless, save the few boney remnants of previous victims floating inside. It wobbles slowly in your direction, and it seems it will relentlessly do so until it absorbs you into its body.";
 	else:
 		say ""; [dealt with in the event]
 
@@ -88,7 +88,7 @@ to say slimeCubeVoreScene:
 		say "     Like a giant die, the slime rolls on the ground until it reaches your knocked-out force, and slams down on you. Your body pops into the gelatinous body, and slowly floats towards its center. The inside of the slime feels hot on your skin, and you understand that the creature aims to digest you slowly, after making sure that you oppose no more resistance.";
 	if fightoutcome is 22:
 		say "     You welcome the slime as he rolls in a die-like fashion upon you, and slams down on your waiting body. Your body pops into the gelatinous body, and slowly floats towards its center. The inside of the slime feels hot on your skin, and you understand that the creature aims to digest you slowly, after making sure that you oppose no more resistance.";
-	say "     The slime washes around your body, as he attempts to keep you stimulated and placated.[if player is female and cunts of player > 1] It slowly pushes past each of your pussy lips, then suddenly stretches inside, forming thick slimy limbs relentlessly pounding each of your wombs.[else if player is female] It slowly pushes past your pussy lips, then suddenly stretches inside, forming a thick slimy limb relentlessly pounding your womb.[end if][if the player is male and cocks of player > 1] An ever-changing flow wraps around each of your [cockname of player] shafts, keeping them hard and massaged, experimently focusing their efforts on your [cocks of player] glans.[else if player is male] An ever-changing flow wraps around your [cockname of player] shaft, keeping it hard and massaged, experimently focusing their efforts on your glans.[end if]. The slime does not forget to relentlessly tease every part of your body, including your nipples and your [breasts of player] [bodyname of player] breasts[if anallevel is not 1], and flowing into your ass[end if].";
+	say "     The slime washes around your body, as he attempts to keep you stimulated and placated.[if player is female and cunts of player > 1] It slowly pushes past each of your pussy lips, then suddenly stretches inside, forming thick slimy limbs relentlessly pounding each of your wombs.[else if player is female] It slowly pushes past your pussy lips, then suddenly stretches inside, forming a thick slimy limb relentlessly pounding your womb.[end if][if the player is male and cocks of player > 1] An ever-changing flow wraps around each of your [cockname of player] shafts, keeping them hard and massaged, experimentally focusing their efforts on your [cocks of player] glans.[else if player is male] An ever-changing flow wraps around your [cockname of player] shaft, keeping it hard and massaged, experimentally focusing their efforts on your glans.[end if]. The slime does not forget to relentlessly tease every part of your body, including your nipples and your [breasts of player] [bodyname of player] breasts[if anallevel is not 1], and flowing into your ass[end if].";
 	say "     Time is on the essence. If you do not struggle out in time, these intense sensations may be the last you will ever experience.";
 	WaitLineBreak;
 	slimeCubeVore;
@@ -103,7 +103,7 @@ to slimeCubeVore:
 			now obliging is true;
 		checkboundrecover;
 		if lustatt > 99:
-			say "     The sexual stimulation of the slime pushes you past your limits. You cum hard, while the slime patiently absorbs your discharge, as an appetizer . You feel your life force fading away and your mind blank out further, as you come back from your pleasure height.";
+			say "     The sexual stimulation of the slime pushes you past your limits. You cum hard, while the slime patiently absorbs your discharge, as an appetizer. You feel your life force fading away and your mind blank out further, as you come back from your pleasure height.";
 			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
 			now lustatt is libido of player;
 			if struggleatt is 1, now struggleatt is 0;
@@ -117,7 +117,7 @@ to slimeCubeVore:
 			increase thirst of player by 2;
 		else if enduring is false or (enduring is true and a random chance of 2 in 3 succeeds):
 			increase thirst of player by 1;
-		say "     You float in the middle of a transluscent slime. The gelatinous material slowly flows around your body, relentlessly penetrating and stimulating you. Despite its viscosity, you are certain that, with some effort, you may 'swim' your way out. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
+		say "     You float in the middle of a translucent slime. The gelatinous material slowly flows around your body, relentlessly penetrating and stimulating you. Despite its viscosity, you are certain that, with some effort, you may 'swim' your way out. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
 		now enduring is false;
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break][run paragraph on]";

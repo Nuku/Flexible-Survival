@@ -502,7 +502,7 @@ Part D - Restaurant Events
 instead of going to Restaurant while HP of Erin >= 2:
 	if vorelevel >= 2 and ublevel >= 2 and Strange Island is not resolved:
 		say "[strangeIsland]";
-	else if a random chance of 1 in 3 succeeds :
+	else if a random chance of 1 in 3 succeeds:
 		say "[ratTwincest]";
 
 to say ratTwincest:
