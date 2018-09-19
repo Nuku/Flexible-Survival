@@ -84,8 +84,9 @@ instead of going down from the Grey Abbey Library while (Dexterity of Erica is 0
 
 an everyturn rule: [bugfix code to update saves which had the event actually resolved and active from the start]
 	if Dexterity of Erica < 3 and Temple of Hera is resolved:
-		now Temple of Hera is active;
 		now Temple of Hera is not resolved;
+	if Dexterity of Erica is 2:
+		now Temple of Hera is active;
 
 Temple of Hera is a situation.
 Temple of Hera is inactive.
