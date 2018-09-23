@@ -491,8 +491,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is battleitem;
 		-- "bcending":
 			now NumberVarValue entry is bcending;
-		-- "Bch":
-			now NumberVarValue entry is Bch;
 		-- "bclatearrival":
 			now NumberVarValue entry is bclatearrival;
 		-- "bcuntethered":
@@ -809,8 +807,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is DemonFoxInteractions;
 		-- "DemonFoxStatus":
 			now NumberVarValue entry is DemonFoxStatus;
-		-- "demonseedfound":
-			now NumberVarValue entry is demonseedfound;
 		-- "dentedbikecount":
 			now NumberVarValue entry is dentedbikecount;
 		-- "DianaRelationship":
@@ -847,8 +843,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is doggyboned;
 		-- "doggyness":
 			now NumberVarValue entry is doggyness;
-		-- "dogmilkfound":
-			now NumberVarValue entry is dogmilkfound;
 		-- "dolcastlefight":
 			now NumberVarValue entry is dolcastlefight;
 		-- "dolinfloss":
@@ -939,8 +933,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is dragontaurcatch;
 		-- "dragontype":
 			now NumberVarValue entry is dragontype;
-		-- "Dre":
-			now NumberVarValue entry is Dre;
 		-- "Drinkserved":
 			now NumberVarValue entry is Drinkserved;
 		-- "dronevict":
@@ -1169,16 +1161,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is GarthRelationship;
 		-- "gascloud":
 			now NumberVarValue entry is gascloud;
-		-- "gatherdemonseed":
-			now NumberVarValue entry is gatherdemonseed;
-		-- "gatherdogmilk":
-			now NumberVarValue entry is gatherdogmilk;
-		-- "gatherspottedfur":
-			now NumberVarValue entry is gatherspottedfur;
-		-- "gathertaintedwool":
-			now NumberVarValue entry is gathertaintedwool;
-		-- "gatherwolfcum":
-			now NumberVarValue entry is gatherwolfcum;
 		-- "gatorconsent":
 			now NumberVarValue entry is gatorconsent;
 		-- "gatordefeat":
@@ -1731,8 +1713,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is lastNadiaSpotted;
 		-- "lastoctofight":
 			now NumberVarValue entry is lastoctofight;
-		-- "LastOmioteatime":
-			now NumberVarValue entry is LastOmioteatime;
 		-- "lastorcabeat":
 			now NumberVarValue entry is lastorcabeat;
 		-- "lastPaulahealing":
@@ -1921,8 +1901,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is mattintel;
 		-- "mdasslevel":
 			now NumberVarValue entry is mdasslevel;
-		-- "mdl":
-			now NumberVarValue entry is mdl;
 		-- "mdmaxlossscene":
 			now NumberVarValue entry is mdmaxlossscene;
 		-- "mdrakeanal":
@@ -2181,14 +2159,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is OfficeGirlsFriendship;
 		-- "OgreMeetings":
 			now NumberVarValue entry is OgreMeetings;
-		-- "Ointerrogate":
-			now NumberVarValue entry is Ointerrogate;
 		-- "OliverRelationship":
 			now NumberVarValue entry is OliverRelationship;
-		-- "Omiotalk":
-			now NumberVarValue entry is Omiotalk;
-		-- "omq":
-			now NumberVarValue entry is omq;
 		-- "Onyxboislut":
 			now NumberVarValue entry is Onyxboislut;
 		-- "onyxdma":
@@ -2203,8 +2175,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is onyxlapdance;
 		-- "Onyxmareslut":
 			now NumberVarValue entry is Onyxmareslut;
-		-- "opcl":
-			now NumberVarValue entry is opcl;
 		-- "orcadom":
 			now NumberVarValue entry is orcadom;
 		-- "orcafdom":
@@ -2595,8 +2565,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is SpidertaurRelationship;
 		-- "spiritlove":
 			now NumberVarValue entry is spiritlove;
-		-- "spottedfurfound":
-			now NumberVarValue entry is spottedfurfound;
 		-- "Spriteconsent":
 			now NumberVarValue entry is Spriteconsent;
 		-- "Spritedefeat":
@@ -2669,8 +2637,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is SylviaTrapVar;
 		-- "SylviaVirginCheck":
 			now NumberVarValue entry is SylviaVirginCheck;
-		-- "taintedwoolfound":
-			now NumberVarValue entry is taintedwoolfound;
 		-- "Targetturns":
 			now NumberVarValue entry is Targetturns;
 		-- "tatsave":
@@ -2753,8 +2719,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is TomeInteractions;
 		-- "TomeTimer":
 			now NumberVarValue entry is TomeTimer;
-		-- "Tpfs":
-			now NumberVarValue entry is Tpfs;
 		-- "Treasurefound":
 			now NumberVarValue entry is Treasurefound;
 		-- "treasurehunt":
@@ -2921,8 +2885,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is WhoringExperience;
 		-- "WineFound":
 			now NumberVarValue entry is WineFound;
-		-- "wolfcumfound":
-			now NumberVarValue entry is wolfcumfound;
 		-- "wolffight":
 			now NumberVarValue entry is wolffight;
 		-- "wolfhermdefeat":
@@ -4243,8 +4205,6 @@ to VariableNumberLoad:
 					now battleitem is numberVarValue entry;
 				-- "bcending":
 					now bcending is numberVarValue entry;
-				-- "Bch":
-					now Bch is numberVarValue entry;
 				-- "bclatearrival":
 					now bclatearrival is numberVarValue entry;
 				-- "bcuntethered":
@@ -4561,8 +4521,6 @@ to VariableNumberLoad:
 					now DemonFoxInteractions is numberVarValue entry;
 				-- "DemonFoxStatus":
 					now DemonFoxStatus is numberVarValue entry;
-				-- "demonseedfound":
-					now demonseedfound is numberVarValue entry;
 				-- "dentedbikecount":
 					now dentedbikecount is numberVarValue entry;
 				-- "DianaRelationship":
@@ -4599,8 +4557,6 @@ to VariableNumberLoad:
 					now doggyboned is numberVarValue entry;
 				-- "doggyness":
 					now doggyness is numberVarValue entry;
-				-- "dogmilkfound":
-					now dogmilkfound is numberVarValue entry;
 				-- "dolcastlefight":
 					now dolcastlefight is numberVarValue entry;
 				-- "dolinfloss":
@@ -4691,8 +4647,6 @@ to VariableNumberLoad:
 					now dragontaurcatch is numberVarValue entry;
 				-- "dragontype":
 					now dragontype is numberVarValue entry;
-				-- "Dre":
-					now Dre is numberVarValue entry;
 				-- "Drinkserved":
 					now Drinkserved is numberVarValue entry;
 				-- "dronevict":
@@ -4921,16 +4875,6 @@ to VariableNumberLoad:
 					now GarthRelationship is numberVarValue entry;
 				-- "gascloud":
 					now gascloud is numberVarValue entry;
-				-- "gatherdemonseed":
-					now gatherdemonseed is numberVarValue entry;
-				-- "gatherdogmilk":
-					now gatherdogmilk is numberVarValue entry;
-				-- "gatherspottedfur":
-					now gatherspottedfur is numberVarValue entry;
-				-- "gathertaintedwool":
-					now gathertaintedwool is numberVarValue entry;
-				-- "gatherwolfcum":
-					now gatherwolfcum is numberVarValue entry;
 				-- "gatorconsent":
 					now gatorconsent is numberVarValue entry;
 				-- "gatordefeat":
@@ -5483,8 +5427,6 @@ to VariableNumberLoad:
 					now lastNadiaSpotted is numberVarValue entry;
 				-- "lastoctofight":
 					now lastoctofight is numberVarValue entry;
-				-- "LastOmioteatime":
-					now LastOmioteatime is numberVarValue entry;
 				-- "lastorcabeat":
 					now lastorcabeat is numberVarValue entry;
 				-- "lastPaulahealing":
@@ -5673,8 +5615,6 @@ to VariableNumberLoad:
 					now mattintel is numberVarValue entry;
 				-- "mdasslevel":
 					now mdasslevel is numberVarValue entry;
-				-- "mdl":
-					now mdl is numberVarValue entry;
 				-- "mdmaxlossscene":
 					now mdmaxlossscene is numberVarValue entry;
 				-- "mdrakeanal":
@@ -5933,14 +5873,8 @@ to VariableNumberLoad:
 					now OfficeGirlsFriendship is numberVarValue entry;
 				-- "OgreMeetings":
 					now OgreMeetings is numberVarValue entry;
-				-- "Ointerrogate":
-					now Ointerrogate is numberVarValue entry;
 				-- "OliverRelationship":
 					now OliverRelationship is numberVarValue entry;
-				-- "Omiotalk":
-					now Omiotalk is numberVarValue entry;
-				-- "omq":
-					now omq is numberVarValue entry;
 				-- "Onyxboislut":
 					now Onyxboislut is numberVarValue entry;
 				-- "onyxdma":
@@ -5955,8 +5889,6 @@ to VariableNumberLoad:
 					now onyxlapdance is numberVarValue entry;
 				-- "Onyxmareslut":
 					now Onyxmareslut is numberVarValue entry;
-				-- "opcl":
-					now opcl is numberVarValue entry;
 				-- "orcadom":
 					now orcadom is numberVarValue entry;
 				-- "orcafdom":
@@ -6345,8 +6277,6 @@ to VariableNumberLoad:
 					now SpidertaurRelationship is numberVarValue entry;
 				-- "spiritlove":
 					now spiritlove is numberVarValue entry;
-				-- "spottedfurfound":
-					now spottedfurfound is numberVarValue entry;
 				-- "Spriteconsent":
 					now Spriteconsent is numberVarValue entry;
 				-- "Spritedefeat":
@@ -6419,8 +6349,6 @@ to VariableNumberLoad:
 					now SylviaTrapVar is numberVarValue entry;
 				-- "SylviaVirginCheck":
 					now SylviaVirginCheck is numberVarValue entry;
-				-- "taintedwoolfound":
-					now taintedwoolfound is numberVarValue entry;
 				-- "Targetturns":
 					now Targetturns is numberVarValue entry;
 				-- "tatsave":
@@ -6503,8 +6431,6 @@ to VariableNumberLoad:
 					now TomeInteractions is numberVarValue entry;
 				-- "TomeTimer":
 					now TomeTimer is numberVarValue entry;
-				-- "Tpfs":
-					now Tpfs is numberVarValue entry;
 				-- "Treasurefound":
 					now Treasurefound is numberVarValue entry;
 				-- "treasurehunt":
@@ -6669,8 +6595,6 @@ to VariableNumberLoad:
 					now WhoringExperience is numberVarValue entry;
 				-- "WineFound":
 					now WineFound is numberVarValue entry;
-				-- "wolfcumfound":
-					now wolfcumfound is numberVarValue entry;
 				-- "wolffight":
 					now wolffight is numberVarValue entry;
 				-- "wolfhermdefeat":

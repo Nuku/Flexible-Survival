@@ -79,7 +79,7 @@ instead of sniffing Anthony:
 
 to say AnthonyDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [HP of Anthony] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Anthony], FinnTrackingProgress: [FinnTrackingProgress]<- DEBUG[line break]";
 	say "     Anthony McDermott is a tall anthro anteater in a kilt, with a light and slender build and the characteristic elongated head and narrow snout of a giant anteater. He has large brown eyes and expressive, flexible ears on top of his head, plus a beautiful mane of brown hair down to the midst of his back. One lock of his mane hangs down over his brow, giving him a somewhat dashing appearance.";
 	say "     The young man's body is covered in lustrous and silky fur, with most of it light brown to blond and pretty short, showing off the fit shape and light muscles of his upper body, abs, legs and (you assume) crotch. Meanwhile, his forearms and lower legs have longer, almost purely blond hair covering them, and the very long prehensile tail behind him looks pretty big with the thick and darker brown fur along its length.";
 	say "     Another thing of note are the long and curved claws on his hands and feet, longer than the fingers themselves. Looking at them makes you recall something you once read about a regular giant anteater being able to kill a jaguar in a stand-up fight...";
@@ -138,7 +138,7 @@ instead of fucking the Anthony:
 	project the figure of Anthony_face_icon;
 	say "     Anthony looks at you with interest as you make him your amorous offer, then sighs and shakes his head. 'I'd love to take you up on that, but right now isn't such a good time, sorry. With all the things that I have to worry about, sudden emergencies coming up and so on, I... can't just take time off right now. People on the farm count on me and grandfather would spin in his grave if I started fucking around with someone before sorting out the problems we have.'";
 
-instead of going northwest from Central Farm Square while (HP of Anthony is 0 or HP of Anthony is 1 or HP of Anthony is 3 or HP of Anthony is 4 or HP of Anthony is 5):
+instead of going northwest from Central Farm Square while (HP of Anthony is 0 or HP of Anthony is 1 or HP of Anthony is 3 or HP of Anthony is 4 or HP of Anthony is 5 or HP of Anthony is 6):
 	move player to Farmhouse Main Room;
 	if graphics is true:
 		project the figure of Anthony_face_icon;

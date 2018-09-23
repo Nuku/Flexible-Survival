@@ -242,7 +242,7 @@ earea of Outside Trevor Labs is "Outside".
 
 Away from Labs is a door. "East of here lays the rest of the city." It is dangerous. The marea of Away from Labs is "Outside". Away from labs is east of Outside Trevor Labs and west of Wandering the City.
 
-Trevor Labs Lobby is a room. "     You're standing in the ground floor lobby of Trevor Labs. New age furniture has been ripped to shreds and thrown around, while the walls and floor are splattered in unknown liquids. Most of the gunk is creamy white, with some reddish-brown and even green streaks mixed in... all of it well dried by now thankfully. It is somewhat dark in here, but some emergency lights draw your attention to the stairs leading up and down.".
+Trevor Labs Lobby is a room. "     You're standing in the ground floor lobby of Trevor Labs. New age furniture has been ripped to shreds and thrown around, while the walls and floor are splattered in unknown liquids. Most of the gunk is creamy white, with some reddish-brown and even green streaks mixed in... all of it well dried by now thankfully. It is somewhat dark in here, but some emergency lights draw your attention to a set of stairs consisting of seemingly floating slabs of marble and thin steel wires, leading up in the back of the room. From a sign pointing out that the labs are up there, this seems to have been a ploy to impress visitors. Beside a duo of (currently out of power) elevators, a metal fire safety door hides a much more simple stairwell leading into the basement.".
 The earea of Trevor Labs Lobby is "Sealed".
 
 West of Outside Trevor Labs is Trevor Labs Lobby.

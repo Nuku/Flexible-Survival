@@ -1,6 +1,14 @@
 Version 1 of Richard by Rikaeus begins here.
 [Version 1 - Creation of Richard the npc]
 
+RichardRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if SatyrFratRichardRelationship is 4 and RichardRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change the east exit of Tenvale College Dorms to Richard's Room; [connecting the location to the travel room]
+		change the west exit of Richard's Room to Tenvale College Dorms; [connecting the location to the travel room]
+		now RichardRoomConnection is 1; [make sure that it connects the room only once]
+
 Section 1 - Basic Setup for Richard
 
 An everyturn rule:

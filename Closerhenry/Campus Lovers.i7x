@@ -9,6 +9,13 @@ Version 2 of Campus Lovers by Closerhenry begins here.
 CampusLoversTrackingVariable is a number that varies.
 CampusLoversProgressTurn is a number that varies.
 CampusCoupleRelationship is a number that varies.
+JadakoRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if CampusCoupleRelationship is 1 and JadakoRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change the south exit of Jadako's Room to Tenvale College Male Dorms;
+		change the north exit of Tenvale College Male Dorms to Jadako's Room;
+		now JadakoRoomConnection is 1; [make sure that it connects the room only once]
 
 Campus Lovers is a situation.
 The sarea of Campus Lovers is "Campus".
@@ -114,6 +121,5 @@ to CampusLoversEvent:
 			change the south exit of Jadako's Room to Tenvale College Male Dorms;
 			change the north exit of Tenvale College Male Dorms to Jadako's Room;
 	now CampusLoversProgressTurn is turns; [saves the last turn in which their story progressed]
-
 
 Campus Lovers ends here.

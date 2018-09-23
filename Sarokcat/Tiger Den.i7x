@@ -48,11 +48,11 @@ Instead of Resolving a TigerVSTaur:
 			say "     'The name's Chase,' the tiger man says as he leads you through the mostly unused maze of paths in the animal care area of the zoo, eventually leading you to a small employee entrance into the zoo maintenance tunnels. Glancing around to be sure the coast is clear, he leads you down. 'I worked near here before this all happened, and liked to visit the zoo and the big cats on my lunch break, so when shit started getting weird I ended up heading to the zoo again. Turns out that was even more of a mess than most of the rest of the area, though most of the animals were gone at that point, still was plenty of changed around. Ended up taking shelter in the tiger's cage for while, since well, I figured most of the other creatures wouldn't look there... and hey if I actually encountered one of [']em myself, I would kind of rather end up becoming a tiger than most of the other animals around,' Chase says with a shrug as he leads you through the maze of paths, finally stopping at a large iron door.";
 			say "     'Sadly I never did actually encounter a tiger that day, but there must have been enough of whatever is causing the changes left over in their den to change me, I still don't regret it though... this body is so much better than my old one was,' he says, flashing you a grin as he opens the door, revealing a large open area that must have been used to garage the employee buggies at one time. 'And hey!' Chase says as he opens his arms clearly meaning to show off the room. Furniture is placed haphazardly all over, causing the place to look like a major battle took place here at some point. 'At least I'm not alone like this,' the tiger man says with a grin as he points out several other tiger men and tiger women who look up to see what's happening. 'Welcome to the Tiger Den,' your guide says somewhat smugly as he leads you further inside.";
 			now HP of Chase is 1;
+			now PlayerMet of Chase is true;
 			move player to Tiger Den;
 			now Tiger Den is known;
 			now Resolution of TigerVSTaur is 2; [helped Chase]
 			now TigerVSTaur is resolved;
-			now battleground is "void";  [blocks a post-event fight]
 	else:
 		say "     Deciding to let the two infected beasts finish their little dominance battle in privacy, you continue along your way without stopping to see what happens.";
 		now Resolution of TigerVSTaur is 99; [ignored Chase]

@@ -88,14 +88,12 @@ carry out destinationcheck:
 			say "| [link][bracket]The Palomino[close bracket][as]nav The Palomino[end link] ";
 		LineBreak;
 	[start of the dry plains area]
-	if Dry Plains is known or McDermott Farm Entrance is known or Researcher Studio is known or Rocky Outcropping is known:
+	if Dry Plains is known or McDermott Farm Entrance is known or Rocky Outcropping is known:
 		say "[bold type]Dry Plains[roman type]: ";
 		if Dry Plains is known:
 			say "[link][bracket]Dry Plains[close bracket][as]nav Dry Plains[end link] ";
 		if McDermott Farm Entrance is known:
 			say "| [link][bracket]McDermott Farm Entrance[close bracket][as]nav McDermott Farm Entrance[end link] ";
-		if Researcher Studio is known:
-			say "| [link][bracket]Researcher Studio[close bracket][as]nav Researcher Studio[end link] ";
 		if Rocky Outcropping is known:
 			say "| [link][bracket]Rocky Outcropping[close bracket][as]nav Rocky Outcropping[end link] ";
 		LineBreak;

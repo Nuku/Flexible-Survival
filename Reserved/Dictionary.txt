@@ -1223,29 +1223,6 @@
 |Kaleem Mcintyre|Warehouse District|Gloomy Warehouse|room|
 |Kaleem Mcintyre|Warehouse District|Gloomy Warehouses|room|
 |Kaleem Mcintyre|Warehouse District|S Harbor|room|
-|Kaleem Mcintyre|Pursuit Of Science|20140908213124/16111:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Pursuit Of Science|Dream of a Unicorn|situation|
-|Kaleem Mcintyre|Pursuit Of Science|leopard suit|Equipment|
-|Kaleem Mcintyre|Pursuit Of Science|lumpy box|Grab Object|
-|Kaleem Mcintyre|Pursuit Of Science|medallion|Grab Object|
-|Kaleem Mcintyre|Pursuit Of Science|undisclosed case|Grab Object|
-|Kaleem Mcintyre|Pursuit Of Science|Organi Rod|armament|
-|Kaleem Mcintyre|Pursuit Of Science|gatherwolfcum|value|
-|Kaleem Mcintyre|Pursuit Of Science|gatherdemonseed|value|
-|Kaleem Mcintyre|Pursuit Of Science|gatherdogmilk|value|
-|Kaleem Mcintyre|Pursuit Of Science|wolfcumfound|value|
-|Kaleem Mcintyre|Pursuit Of Science|demonseedfound|value|
-|Kaleem Mcintyre|Pursuit Of Science|dogmilkfound|value|
-|Kaleem Mcintyre|Pursuit Of Science|Dre|value|
-|Kaleem Mcintyre|Pursuit Of Science|opcl|value|
-|Kaleem Mcintyre|Pursuit Of Science|mdl|value|
-|Kaleem Mcintyre|Pursuit Of Science|gathertaintedwool|value|
-|Kaleem Mcintyre|Pursuit Of Science|gatherspottedfur|value|
-|Kaleem Mcintyre|Pursuit Of Science|taintedwoolfound|value|
-|Kaleem Mcintyre|Pursuit Of Science|spottedfurfound|value|
-|Kaleem Mcintyre|Pursuit Of Science|Bch|value|
-|Kaleem Mcintyre|Pursuit Of Science|Ointerrogate|value|
-|Kaleem Mcintyre|Pursuit Of Science|omioquesting|action|
 |Kaleem Mcintyre|Save The Dame|20140908213124/5966:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Save The Dame|Save the Dame|situation|
 |Kaleem Mcintyre|Save The Dame|Kenaztalk|value|
@@ -1290,12 +1267,6 @@
 |Kaleem Mcintyre|Apartment 319|20140908213124/7053:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Apartment 319|Apartment 319|situation|
 |Kaleem Mcintyre|Apartment 319|AptAid|value|
-|Kaleem Mcintyre|Important Research Quests|20140908213124/12959:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Important Research Quests|Important Treasure|situation|
-|Kaleem Mcintyre|Important Research Quests|Friendship's Proof|situation|
-|Kaleem Mcintyre|Important Research Quests|Ouroboros|situation|
-|Kaleem Mcintyre|Important Research Quests|Special Delivery|situation|
-|Kaleem Mcintyre|Important Research Quests|Tpfs|value|
 |Kaleem Mcintyre|Reservoir|20140908213124/8279:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Reservoir|Reservoir|room|
 |Kaleem Mcintyre|Reservoir|Reservoir Main Pathway|room|

@@ -1,6 +1,14 @@
 Version 1 of Hitching Post by SgtPepper234 begins here.
 [ Verson 1 - New File]
 
+HitchingRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if Public Hitching Post is resolved and HitchingRoomConnection is 0:
+		change the northeast exit of Park Trail to Picnic Area; [connecting the location to the other room]
+		change the southwest exit of Picnic Area to Park Trail;
+		now HitchingRoomConnection is 1; [room connected]
+
 Picnic Area is a room.
 earea of Picnic Area is "Park".
 The description of Picnic Area is "     The ground here is poured concrete over a 10 meter squared area. Broken benches and built in barbeques indicate that this was once a public picnic spot. Set into the ground nearby is a large set of reinforced prison stocks.".

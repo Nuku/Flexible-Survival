@@ -40,7 +40,7 @@ Version 3 of Sylvia by Prometheus begins here.
 [   4: Four conversations                                       ]
 
 [SylviaVirginCheck                                              ]
-[   0: Sylvia's virginity intact								]
+[   0: Sylvia's virginity intact                                ]
 [   1: Refused to take Sylvia's virginity                       ]
 [   2: Took Sylvia's virginity                                  ]
 
@@ -49,6 +49,13 @@ Version 3 of Sylvia by Prometheus begins here.
 [   1: Did not take part in Ethan's Punishment                  ]
 [   2: Took part in Ethan's Punishment                          ]
 
+SylviaRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if Despairing Biologist is resolved and (Resolution of Despairing Biologist is 1 or Resolution of Despairing Biologist is 2 or Resolution of Despairing Biologist is 3) and SylviaRoomConnection is 0:
+		change the northeast exit of Tenvale College Female Dorms to Sylvia's Room; [connecting the location to the travel room]
+		change the southeast exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
+		now SylviaRoomConnection is 1; [room connected]
 
 [QUEST LOG]
 to SylviaQuestLog:

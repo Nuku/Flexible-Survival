@@ -25,6 +25,15 @@ Version 1 of Kyrverth by Speedlover begins here.
 [Ref pic 2, same as above, don't put in the game: https://d.facdn.net/art/incorgnito/1506117821/1506117821.incorgnito_forces1websize.png ]
 [Pic one for descriptions and sizing]
 
+
+KyrverthRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if Strange Sighting is resolved and Resolution of Strange Sighting is 1 and KyrverthRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change the South exit of Overgrown Street to Dragons Den;
+		change the North exit of Dragons Den to Overgrown Street;
+		now KyrverthRoomConnection is 1; [make sure that it connects the room only once]
+
 Section 1 - Basic Setup
 
 Table of GameCharacterIDs (continued)
