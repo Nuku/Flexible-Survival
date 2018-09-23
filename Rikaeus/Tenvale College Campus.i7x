@@ -67,6 +67,13 @@ The marea of Campus Grounds is "Campus".
 
 the scent of College Campus Entrance is "[one of]You catch a whiff of sweat and arousal[or]You notice the strong scent of rabbits[or]Like elsewhere in the city, the scent of sex lingers in the air[at random].".
 
+campus map is an object. It is in College Campus Entrance. It is fixed in place. Understand "map" as campus map.
+the description of campus map is "[Map_Tenvale_College_Desc]".
+The icon of campus map is Figure of Map_Tenvale_College_icon.
+
+to say Map_Tenvale_College_Desc:
+	say "     A large display board stands proudly at the entrance of the college, showing a map of the expansive grounds of the institution.";
+
 [Room Declaration]
 East of College Campus Entrance is College Walkway East.
 Southwest of Dorm Street is College Walkway East.

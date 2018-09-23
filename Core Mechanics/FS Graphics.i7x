@@ -358,10 +358,12 @@ Figure of RaneDefendingEric_icon is the file "Rane&Eric1.jpg". [Hellhound fight]
 Figure of RaneSavingEric_icon is the file "Rane&Eric2.jpg". [after the Hellhound fight]
 
 [maps]
-Figure of Map_Smith_Haven_Mall_icon is the file "Map_Mall.jpg".
+Figure of Beach_Overlook_icon is the file "Beach_overlook.jpg".
 Figure of Bunker_icon is the file "Bunker.jpg".
 Figure of Library1stfloor_icon is the file "Library1stfloor.jpg".
 Figure of Library2ndfloor_icon is the file "Library2ndfloor.jpg".
+Figure of Map_Smith_Haven_Mall_icon is the file "Map_Mall.jpg".
+Figure of Map_Tenvale_College_icon is the file "Campus_Map.jpg".
 
 [emap - special]
 Figure of emap_special_signalnotfound_icon is the file "emap_special_signalnotfound.png".
@@ -524,6 +526,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon	"TwilightMaster"	g-white	"normal"
 "Artemis"	Figure of Artemis_icon	"FaroreNightclaw"	g-white	"normal"
 "Athanasia"	Figure of Athanasia_icon	"SandySchreiber"	g-white	"normal"
+"Beach Overlook"	Figure of Beach_Overlook_icon	"Nokturnalkittie"	g-black	"inline_only"
 "Bear"	Figure of Bear_icon	"Anymouse1968"	g-white	"normal"
 "Beaver"	Figure of Beaver2_icon	"HBruton"	g-white	"normal"
 "Black Equinoid"	Figure of BlackEquinoid_icon	"Anymouse1968"	g-white	"normal"
@@ -551,6 +554,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Bunker"	Figure of Bunker_icon	"Luneth"	g-white	"inline_only"
 "Bunny Jock"	Figure of BunnyJock_icon	"Darian821"	g-black	"normal"
 "Buster"	Figure of Buster_icon	"Padunk"	g-white	"normal"
+"Campus Map"	Figure of Map_Tenvale_College_icon	"Anonymous"	g-black	"inline_only"
 "Candy"	Figure of Candy_icon	"uniformvixen"	g-black	"normal"
 "Carl_clothed"	Figure of Carl_clothed_icon	"Hufnaar"	g-black	"normal"
 "Carl_naked"	Figure of Carl_naked_icon	"Hufnaar"	g-black	"normal"
