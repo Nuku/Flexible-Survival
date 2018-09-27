@@ -50,6 +50,14 @@ Version 2 of Vent Fox by Dys begins here.
 [   2 = Small                                                        ]
 [   3 = Average                                                      ]
 
+GarageRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if VentFoxContentLevel is 3 and GarageRoomConnection is 0:
+		change the North exit of Smith Haven Mall Lot West to Maintenance Garage;
+		change the South exit of Maintenance Garage to Smith Haven Mall Lot West;
+		now GarageRoomConnection is 1; [room connected]
+
 Section 0 - Variables
 
 VentFoxEncounterCount is a number that varies.

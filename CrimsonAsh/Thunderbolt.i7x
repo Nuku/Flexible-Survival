@@ -8,6 +8,13 @@ Version 1 of Thunderbolt by CrimsonAsh begins here.
 [  50: player refused horse sex                         ]
 
 ThunderTrackingVariable is a number that varies.
+ThunderboltRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if Campus Thunder is resolved and Resolution of Campus Thunder is 2 and ThunderboltRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change the east exit of Thunderbolt's Stable to Greek Street;
+		change the west exit of Greek Street to Thunderbolt's Stable;
+		now ThunderboltRoomConnection is 1; [make sure that it connects the room only once]
 
 Section 1 - Events
 

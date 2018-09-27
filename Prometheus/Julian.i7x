@@ -11,6 +11,14 @@ Version 1 of Julian by Prometheus begins here.
 [   7:                                                       ]
 [ 100: Refused his conversation                              ]
 
+JulianRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if Wolf's Invitation is resolved and Resolution of Wolf's Invitation is 1 and JulianRoomConnection is 0:
+		change the northeast exit of Tenvale College Male Dorms to Julian's Room; [connecting the location to the travel room]
+		change the southwest exit of Julian's Room to Tenvale College Male Dorms; [connecting the location to the travel room]
+		now JulianRoomConnection is 1; [room connected]
+
 [QUEST LOG]
 to JulianQuestLog:
 	if hp of Julian is:
@@ -232,12 +240,12 @@ to AWolfsInvitationEvent: [Room invitation from Julian]
 		say "     He turns to you, nervously scratching a wrist. 'What you did to help Sylvia was really kind,' he mumbles, conversing with people he barely knows apparently not his strong point. 'She seems to trust you, and I trust her judgement, so... would you like to talk some more at some point? I'd like to get to know you more, especially if you're going to be one of Sylvia's friends.' He looks at you earnestly, his deep brown eyes meeting your own. 'I'll let you think about it more,' he says, standing up, 'Come and see me if you feel like it.' After giving you his room number, he walks away, his social anxiety overcoming his desire to continue talking to you. You stand up and return to the path, trying to decide whether, and if so when, you want to visit his room.";
 		now hp of Julian is 2; [Got room number]
 		add "Julian Quest" to OpenQuests of player;
-		now Resolution of A Wolf's Invitation is 1; [got invited]
+		now Resolution of Wolf's Invitation is 1; [got invited]
 		change the northeast exit of Tenvale College Male Dorms to Julian's Room; [connecting the location to the travel room]
 		change the southwest exit of Julian's Room to Tenvale College Male Dorms; [connecting the location to the travel room]
 	else: [Go]
 		say "     Apologizing that you have places to be, you leave the wolf dejected on the bench and return to the path. You don't think that he'll be doing that again.";
-		now Resolution of A Wolf's Invitation is 2; [rejected him]
+		now Resolution of Wolf's Invitation is 2; [rejected him]
 		now hp of Julian is 100; [Rejected him]
 	now A Wolf's Invitation is resolved;
 

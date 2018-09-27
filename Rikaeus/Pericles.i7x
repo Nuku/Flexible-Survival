@@ -10,6 +10,15 @@ Version 1 of Pericles by Rikaeus begins here.
 [   5: Has seen his fifth event, now available in room     ]
 [   6: Managed to convince Bjorn to apologize, share rooms ]
 
+
+PericlesRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if History Video is resolved and PericlesRoomConnection is 0:
+		change the west exit of Second Floor Male Dorms to Pericles' Room; [connecting the location to the travel room]
+		change the east exit of Pericles' Room to Second Floor Male Dorms; [connecting the location to the travel room]
+		now PericlesRoomConnection is 1; [room connected]
+
 Daily Training Session is a situation.
 Daily Training Session is inactive.
 The sarea of Daily Training Session is "Campus".

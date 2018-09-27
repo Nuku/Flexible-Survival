@@ -17,6 +17,13 @@ when play begins:
 	add Policeman to badspots of hermaphrodite;
 	add Policeman to badspots of furry;
 
+TigerCopRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if pquest > 0 and TigerCopRoomConnection is 0:
+		change the Northwest exit of (Entrance to the Red Light District) to Abandoned Storefront;
+		now TigerCopRoomConnection is 1; [room connected]
+
 [	mqstatus            ]
 [	0 new				]
 [	1 key hunting		]
@@ -638,7 +645,7 @@ to say losetotigercop:
 		if player consents:
 			say "     Despite some reservations, you decide to help the tiger cop with his mission. When you tell him, he grins broadly. 'Great. I thought it would be right up your alley, and I guess I was right.' His grin seems to grow more predatory, and he wastes no time before continuing. 'Well, now I've got to go and start gettin['] things ready, so we'll have to start your new job later. When you're ready, come meet me down in the [bold type]Red Light District[roman type], and I'll have a place set up.' The cop starts walking away, but looks over his shoulder at you before he leaves. 'By the way, I'm Sergeant Marks. Make sure you come prepared to be the best whore you can be.'";
 			now pquest is 1;
-			change the west exit of (Entrance to the Red Light District) to Abandoned Storefront;
+			change the Northwest exit of (Entrance to the Red Light District) to Abandoned Storefront;
 			[now Abandoned Storefront is west of Entrance to the Red Light District;]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
@@ -704,7 +711,7 @@ To say beattigercop:
 		if player consents:
 			say "     Despite some reservations, you decide to help the tiger cop with his mission. When you tell him, he grins broadly. 'Great. I thought it would be right up your alley, and I guess I was right.' His grin seems to grow more predatory, and he wastes no time before continuing. 'Well, now I've got to go and start gettin['] things ready, so we'll have to start your new job later. When you're ready, come meet me down in the [bold type]Red Light District[roman type], and I'll have a place set up.' The cop starts walking away, but looks over his shoulder at you before he leaves. 'By the way, I'm Sergeant Marks. Make sure you come prepared to be the best whore you can be.'";
 			now pquest is 1;
-			change the west exit of (Entrance to the Red Light District) to Abandoned Storefront;
+			change the Northwest exit of (Entrance to the Red Light District) to Abandoned Storefront;
 			[now Abandoned Storefront is west of Entrance to the Red Light District;]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;

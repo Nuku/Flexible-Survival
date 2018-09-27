@@ -538,4 +538,15 @@ carry out RoomEmptying:
 	repeat with x running through rooms:
 		truncate Invent of x to 0 entries; [cleaning out the old data]
 
+
+RemoveFeat is an action applying to one topic.
+
+understand "RemoveFeat [text]" as RemoveFeat.
+
+carry out RemoveFeat:
+	if topic understood is listed in feats of player:
+		remove topic understood from feats of player;
+	else:
+		say "[topic understood] is not in Feats of Player!";
+
 Debugging Tools ends here.

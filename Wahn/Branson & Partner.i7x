@@ -20,6 +20,14 @@ Version 1 of Branson & Partner by Wahn begins here.
 OfficeGirlsDominance is a number that varies.
 OfficeGirlsFriendship is a number that varies.
 
+BransonRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if HP of Melanie > 3 and HP of Melanie < 100 and BransonRoomConnection is 0:
+		change the north exit of Branson & Partner Reception to B&P Company Offices;
+		change the south exit of B&P Company Offices to Branson & Partner Reception;
+		now BransonRoomConnection is 1; [room connected]
+
 Section 1 - Melanie
 
 Table of GameCharacterIDs (continued)

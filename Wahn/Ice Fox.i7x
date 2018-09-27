@@ -27,6 +27,15 @@ Version 1 of Ice Fox by Wahn begins here.
 
 MiyukiRelationship is a number that varies.
 lastSnowStarGiven is a number that varies. lastSnowStarGiven is usually 10000.
+MiyukiRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if Arctic Enclosure is resolved and (Resolution of Arctic Enclosure is 1 or Resolution of Arctic Enclosure is 2) and MiyukiRoomConnection is 0:
+		change the northwest exit of Ice Fox's Den to Snow Rabbit's Warren;
+		change the southeast exit of Snow Rabbit's Warren to Ice Fox's Den;
+		change the southeast exit of Ice Fox's Den to Snow Fox Enclosure;
+		change the northwest exit of Snow Fox Enclosure to Ice Fox's Den;
+		now MiyukiRoomConnection is 1; [room connected]
 
 Section 1 - Events
 

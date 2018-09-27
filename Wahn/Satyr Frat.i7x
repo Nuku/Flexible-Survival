@@ -27,6 +27,13 @@ Version 1 of Satyr Frat by Wahn begins here.
 SatyrFratPartyStage is a number that varies.
 SatyrFratRichardRelationship is a number that varies.
 SatyressStage is a number that varies.
+SatyrFratRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if SatyrFratPartyStage > 0 and SatyrFratPartyStage < 99 and SatyrFratRoomConnection is 0:
+		change the south exit of Greek Street to Satyr Frat Dummy Room;
+		change the north exit of Satyr Frat Dummy Room to Greek Street;
+		now SatyrFratRoomConnection is 1; [room connected]
 
 to say Satyr Frat Party:
 	now battleground is "void";

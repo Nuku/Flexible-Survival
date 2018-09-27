@@ -9,6 +9,14 @@ Version 1 of Oliver by Rikaeus begins here.
 [   99: Has said Big Kitty to Little Ocelot                             ]
 [   100: Permanantly locked out of Oliver                               ]
 
+OliverRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if Leather Daddy Kitty is resolved and (Resolution of Leather Daddy Kitty is 1 or Resolution of Leather Daddy Kitty is 2) and OliverRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change northeast exit of (Entrance to the High Rise District) to Kitty Sex Dungeon;
+		change southwest exit of Kitty Sex Dungeon to (Entrance to the High Rise District);
+		now OliverRoomConnection is 1; [make sure that it connects the room only once]
+
 Section 1 - Event encountering Oliver
 
 OliverRelationship is a number that varies.

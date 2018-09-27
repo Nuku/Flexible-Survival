@@ -27,6 +27,13 @@ OrcFemSpecialFightNumber is a number that varies.
 KatyaResistance is a number that varies. KatyaResistance is usually 6.
 KatyaRelationship is a number that varies. KatyaRelationship is usually 0.
 KatyaDildoTaken is a number that varies.
+KatyaRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if Noteworthy Ruin is resolved and Resolution of Noteworthy Ruin is 1 and KatyaRoomConnection is 0:
+		change the north exit of Dry Plains to Inconspicuous Trail; [connecting the location to the travel room]
+		change the south exit of Inconspicuous Trail to Dry Plains; [connecting the location to the travel room]
+		now KatyaRoomConnection is 1; [room connected]
 
 Section 1 - Events
 

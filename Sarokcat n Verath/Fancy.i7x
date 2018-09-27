@@ -3,6 +3,26 @@ Fancy by Sarokcat n Verath begins here.
 
 "Adds an NPC to Flexible Survival with a variety of responses and goals..."
 
+[ fancyquest ]
+[ 0 = not started / refused ]
+[ 1 = found ignored memos ]
+[ 2 = agreed to find items ]
+[ 3 = gave tiger patches and wyvern goop ]
+	[ got leather duster ]
+[ 4 = told to find construction materials / tools ]
+
+[ 16 = become Stablemaster ]
+[ 101 = fled Hardware Fort in front of Horsemen ]
+[ 102 = failed Hardware Fort too often ]
+
+NightmareOfficeRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if fancyquest > 15 and fancyquest < 100 and NightmareOfficeRoomConnection is 0:
+		change the north exit of Employee Access to Master's Office;
+		change the south exit of Master's Office to Employee Access;
+		now NightmareOfficeRoomConnection is 1; [room connected]
+
 Section 0 - NPC Setup
 
 Fancytalk is a number that varies.
@@ -412,17 +432,7 @@ the scent of leather duster is "The leather smells vaguely of saddle oil.".
 
 Section X - Variables
 
-[ fancyquest ]
-[ 0 = not started / refused ]
-[ 1 = found ignored memos ]
-[ 2 = agreed to find items ]
-[ 3 = gave tiger patches and wyvern goop ]
-	[ got leather duster ]
-[ 4 = told to find construction materials / tools ]
 
-[ 16 = become Stablemaster ]
-[ 101 = fled Hardware Fort in front of Horsemen ]
-[ 102 = failed Hardware Fort too often ]
 
 
 

@@ -52,6 +52,13 @@ to say BoardwalkDesc:
 instead of sniffing the Boardwalk2:
 	say "     The air smells fresh and salty.";
 
+beach overview is an object. It is in Boardwalk2. It is fixed in place. Understand "map" as beach overview.
+the description of beach overview is "[Beach_Overlook_Desc]".
+The icon of beach overview is Figure of Beach_Overlook_icon.
+
+to say Beach_Overlook_Desc:
+	say "     From the railing at the edge of the platform, you have an exceptional overlook over the whole public beach and beyond.";
+
 [Restaurant]
 North of Boardwalk2 is Restaurant.
 Restaurant is a Room.

@@ -134,6 +134,7 @@ to EventSave:
 		now Resolution entry is Resolution of x;
 		now SituationArea entry is sarea of x;
 	write File of EventSave from the Table of GameEvents; [freshly made table gets saved to file]
+	blank out the whole of Table of GameEvents; [empty it after saving]
 	if debugactive is 1:
 		say "DEBUG -> File of EventSave written.[line break]";
 
@@ -192,6 +193,8 @@ to RoomSave:
 				now ItemName entry is entry y in Invent of x;
 	write File of RoomSave from the Table of GameRooms; [freshly made table gets saved to file]
 	write File of RoomInventorySave from the Table of GameRoomInventories; [freshly made table gets saved to file]
+	blank out the whole of Table of GameRooms; [empty after saving]
+	blank out the whole of Table of GameRoomInventories; [empty after saving]
 	if debugactive is 1:
 		say "DEBUG -> File of RoomSave written.[line break]";
 
@@ -265,6 +268,7 @@ to PossessionSave:
 			now EquippedStatus entry is PossessionEquipped;
 			now CurseStatus entry is PossesssionCursed;
 	write File of PossessionSave from the Table of GamePossessions; [freshly made table gets saved to file]
+	blank out the whole of Table of GamePossessions; [empty after saving to file]
 	if debugactive is 1:
 		say "DEBUG -> File of PossessionSave written.[line break]";
 
@@ -358,6 +362,8 @@ to CharacterSave:
 			say "Error! The character [x] is not listed in the Table of GameCharacterIDs and cannot be saved. Please report this on the FS Discord.";
 	write File of CharacterSave from the Table of GameCharacters; [freshly made table gets saved to file]
 	write File of TraitSave from the Table of GameTraits; [freshly made table gets saved to file]
+	blank out the whole of Table of GameCharacters; [empty after saving]
+	blank out the whole of Table of GameTraits; [empty after saving]
 	if debugactive is 1:
 		say "DEBUG -> File of CharacterSave written.[line break]";
 		say "DEBUG -> File of TraitSave written.[line break]";
@@ -374,9 +380,11 @@ to CharacterRestore:
 				if CharacterIdName is listed in PetList:
 					if debugactive is 1:
 						say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
+				[
 				else if CharacterIdName is "yourself":
 					if debugactive is 1:
 						say "DEBUG -> The player doesn't get moved.[line break]";
+				]
 				else if there is a name of LocationName entry in the Table of GameRoomIDs:
 					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
 					move CharacterObject to TargetRoom;
@@ -510,6 +518,8 @@ to PlayerSave:
 			now EntryText entry is entry y of BlockList of player;
 	write File of PlayerSave from the Table of PlayerData; [freshly made table gets saved to file]
 	write File of PlayerListsSave from the Table of PlayerLists; [freshly made table gets saved to file]
+	blank out the whole of Table of PlayerData; [empty after saving]
+	blank out the whole of Table of PlayerLists; [empty after saving]
 	if debugactive is 1:
 		say "DEBUG -> File of PlayerSave written.[line break]";
 
@@ -583,6 +593,7 @@ to BeastSave:
 		now non-infectious entry is BeastNonInfect;
 		now sex entry is BeastSex;
 	write File of BeastSave from the Table of GameBeasts; [freshly made table gets saved to file]
+	blank out the whole of Table of GameBeasts; [empty after saving]
 	if debugactive is 1:
 		say "DEBUG -> File of BeastSave written.[line break]";
 
@@ -613,20 +624,16 @@ Section 2 - Trixie
 understand "export progress" as ProgressExport.
 ProgressExport is an action applying to nothing.
 
-Check ProgressExport:
-	if Trixie is not visible, say "You should go to Trixie in the Grey Abbey Library if you want to do this." instead;
-
 Carry out ProgressExport:
-	say "[TrixieExport]";
+	say "[ProgressionExport]";
 
-To say TrixieExport:
+To say ProgressionExport:
 	if wrcursestatus is 5:
 		wrcurserecede; [puts player back to normal form and restores proper stats for saving]
 	LineBreak;
-	say "     Trixie waggles her fingers and smiles at you. 'An image of your reality now has been stored in some otherworldly storage caches called [']Files[']. Don't ask me to explain what those are. It's magic, you know! Just be sure to come here to [bold type]Import Progress[roman type] to restore your most recent magic files. Oh, and coming to me again to [bold type]Export Progress[roman type] will replace those things with new ones, so be careful not to overwrite any magic files you might want to keep.'";
+	say "     Writing save files.";
 	SaveEverything;
 	if wrcursestatus is 5:
-		say "[line break]     Trixie waves her magic wand around and you flash between your normal form and your wereraptor form a few times so she can examine it before leaving you fully as a wereraptor once again.";
 		wrcursesave; [puts player back to complete wereraptor form]
 
 To SaveEverything:
@@ -641,27 +648,18 @@ To SaveEverything:
 understand "Import Progress" as ProgressImport.
 ProgressImport is an action applying to nothing.
 
-Check ProgressImport:
-	if Trixie is not visible, say "You should go to Trixie in the Grey Abbey Library if you want to do this." instead;
-
 Carry out ProgressImport:
-	say "     Trixie gives a sage nod and looks at you, then says, 'Sure, I can do that. But you need to be prepared for a lot of changes in your whole reality all around us. And such things to take some time to take hold properly.'";
 	say "     [bold type]Do you really want to start the import process?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, I'll wait a minute (or ten) to reclaim my progress!";
 	say "     ([link]N[as]n[end link]) - Erh, not right now.";
 	if player consents:
 		LineBreak;
-		say "     Trixie smiles at you and nods. 'Okay then, let's see what we have in these magic files floating in the ether.' She pulls out a wand and swishes it through the air, then points right at you.";
-		say "[TrixieImport]";
-	else:
-		LineBreak;
-		say "     Trixie pats your hand and nods in understanding. 'Okay, another time then.'";
+		say "     <Press any key to start import>";
+		wait for any key;
+		say "[ProgressionImport]";
 
-To say TrixieImport:
-	RestoreEverything;
-
-to RestoreEverything:
+to say ProgressionImport:
 	EventRestore;
 	RoomRestore;
 	PossessionRestore;
