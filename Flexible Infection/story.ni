@@ -3850,9 +3850,8 @@ A Bigfoot is a infection model. The description of Bigfoot is "This great sasqua
 The move rate of a Bigfoot is 2.
 The attack rate of a Bigfoot is 2.
 The reflex of a Bigfoot is 12.
-A Bigfoot is horny.
-The primary attack description of a Bigfoot is "suddenly reaches for [printed name of Targetx] and pulls them to her chest, forcing a teat into their mouth, feeding them thick gulps of sweet nourishing milk. As the milk flows, change can be seen in".
-The TF description of a Bigfoot is "groans as they swell, body curving and armoring itself as thick plates overtake their old form. A strange blue and biege creature results, huge breasts jiggling as she looks around, now a".
+The primary attack description of a Bigfoot is "bellows out in fury, reaching for [printed name of Targetx], roughly shoving them aside and bruising".
+The TF description of a Bigfoot is "clutches at their head, grunting and groaning as they swell monstrously. Their body is overcome with shaggy hair as they become an immense".
 
 Section - Momma Nido
 
