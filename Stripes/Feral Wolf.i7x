@@ -227,7 +227,7 @@ When Play begins:
 	now breasts entry is 6; [ Number of Breasts infection will give you. ]
 	now breast size entry is 9; [Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 2; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 15;
 	now cunt width entry is 10;
 	now libido entry is 50; [ Amount player Libido will go up if defeated ]

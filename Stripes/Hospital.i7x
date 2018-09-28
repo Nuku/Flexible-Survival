@@ -516,7 +516,7 @@ Instead of conversing the Doctor Mouse:
 			say "     'I had hoped to obtain some samples, but the creatures cannot be located. I don't have anything further for you,' the mouse says, shaking his head.";
 			say "     (Unable to proceed with current creature blocks. Girl, guy, herm and furry are all needed for subsequent segments.)";
 		else if DoctorMouseProgress minus turns < 8:
-			say "     'Please leave me to my research for the moment. I believe I shall have more need for you once I am done,' Doctor Mouse says as he waves you off dismissively while standing one of the lab stools to use one of the microscopes to examine a sample.";
+			say "     'Please leave me to my research for the moment. I believe I shall have more need for you once I am done,' Doctor Mouse says as he waves you off dismissively while standing on a lab stool to use one of the microscopes, examining a sample.";
 		else:
 			extend game by 16;
 			say "[hospquestpt3]";
