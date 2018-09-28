@@ -195,6 +195,29 @@ Segment	Shift Text	Desc Text	Unshift Text
 "rear" 	"A long red tail emerges from your bottom, swaying stiffly behind you with every step."	"You have a fox's tail, stiffer than pictured in most art. It has red fur, except for some black at the tip."
 "full"	"Vixen"	"You have become a perfectly ordinary red vixen. Only the light of intelligence in your eyes give any clue to your old self. Red fur covers most of your body, white and black on your ears, paws, and tailtip, and white running along your underbelly. You have the most unreasonable urge to find a rodent and sink your teeth into it.[if the pregnant of player is greater than 0] Your belly bulges with new kits.[end if]"
 
+Section - Bigfoot
+
+Table Bigfoot - Bigfoot shifts
+Segment	Shift Text	Desc Text	Unshift Text
+"head"	"Visions of thick forests fill you as thick tangled hair erupts over your face. With a snarl, you see the world in a new way."	"You have the white-furred  head of a sasquatch."
+"chest"	"Your muscles become more defined even as they are lost beneath the shaggy white fur that covers your chest."	"Your chest ripples with power, though it is unseen beneath the shaggy white fur."
+"gut"	"White fur spreads over your powerful belly."	"You have soft white fur covering your belly of tough flesh."
+"pelvis"	"Your cock spills free, large and wagging in the breeze. It does not seem bothered by any chill breezes."	"You have a thick and crude looking penis dangling before you."
+"left upper arm"	"Your left arm bulges with power as white fur sweeps over it."	"Your left arm is shaped powerfully and fuzilly."
+"left forearm"	"White fur creeps over your left forearm."	"Your left forearm is covered in soft white fur."
+"left hand"	"Your left hand grows as white fur overtakes it. Your fingernails are almost lost to it, becoming wider and cruder."	"You have a massive white-furred mitt of a hand, powerful and dangerous."
+"right upper arm"	"Your right arm bulges with power as white fur sweeps over it."	"Your right arm is shaped powerfully and fuzilly."
+"right forearm"	"White fur creeps over your right forearm."	"Your right forearm is covered in soft white fur."
+"right hand"	"Your right hand grows as white fur overtakes it. Your fingernails are almost lost to it, becoming wider and cruder."	"You have a massive white-furred mitt of a hand, powerful and dangerous."
+"left thigh"	"Your left thigh plumps up with powerful muscles hidden beneath a white carpet."	"Your left thigh is powerful and covered in shaggy white hair."
+"left shin"	"Your left shin expands, becoming almost as wide as your thigh, thick with muscles and covered in white fur."	"Your left shin is covered in white fur and is unusually wide."
+"left foot"	"Your balance is lost a moment as your left foot expands dramatically."	"Your left foot is huge and fuzzy, plodding with each step."
+"right thigh"	"Your right thigh plumps up with powerful muscles hidden beneath a white carpet."	"Your right thigh is powerful and covered in shaggy white hair."
+"right shin"	"Your right shin expands, becoming almost as wide as your thigh, thick with muscles and covered in white fur."	"Your right shin is covered in white fur and is unusually wide."
+"right foot"	"Your balance is lost a moment as your right foot expands dramatically."	"Your right foot is huge and fuzzy, plodding with each step."
+"rear" 	"Your ass tightens into a tight bun, where the white hair doesn't conceal it."	"You don't have a tail, who needs one of those? You do have a tight powerful ass that is covered in shaggy white fur."
+"full"	"Bigfoot"	"You are a towering sasquatch, otherwise known as the bigfoot. Your titular great feet carry you easily, striding with swinging arms capped with equally gigantic hands, suited for grabbing at whatever catches your interest. Your face is primitive, but somewhat human. When you smile, your teeth are slightly crooked but in working order. You've never felt so powerful and in charge of things before."
+
 Section - Slutrat
 
 Table slutrat - slutrat shifts
@@ -400,10 +423,10 @@ Segment	Shift Text	Desc Text
 "right hand"	"Your fingers go numb as hooves grow at the tips of each, your palm and hand going woolly."	"Your hand is a mix between hand and hoof, with hoofs at the ends of fingers."
 "left thigh"	"Your hips widen a little as your plump thighs gain a layer of thick white wool."	"Your left thigh has gone fat and woolly."
 "left shin"	"Wool sweeps over your left shin as it becomes woolly and plump."	"Your left shin is woolly and fattened."
-"left foot"	"Your food abruptly clenches into a hard black hoof at the end of your left leg."	"You have a sheep's hoof for a left foot."
+"left foot"	"Your foot abruptly clenches into a hard black hoof at the end of your left leg."	"You have a sheep's hoof for a left foot."
 "right thigh"	"Your hips widen a little as your plump thighs gain a layer of thick white wool."	"Your right thigh has gone fat and woolly."
 "right shin"	"Wool sweeps over your right shin as it becomes woolly and plump."	"Your right shin is woolly and fattened."
-"right foot"	"Your food abruptly clenches into a hard black hoof at the end of your right leg."	"You have a sheep's hoof for a right foot."
+"right foot"	"Your foot abruptly clenches into a hard black hoof at the end of your right leg."	"You have a sheep's hoof for a right foot."
 "rear"	"Your bottom swells out into an attractive bubble just before it is consumed in thick curls of wool."														"You have quite an ass, it's almost a shame it's covered in so much wool. The wagging little tail is a nice touch though."
 "full"		"Sheep"	"You have become a sheep person. Your horizontally barred eyes retain the spark of intelligence, though the rest of you seems lost under the layer of wool, only your black wet nose exposed. The wool does help keep you nice and warm though. Your feet have become hooves, but you still have fingers, and can speak at that. Let's hope there aren't any wolves about..."
 
@@ -3820,6 +3843,17 @@ The tentaclec is a body part. The body part origin of the tentaclec is "pelvis".
 
 The tentaclee is a body part. The body part origin of the tentaclee is "chest". The shift of the tentaclee is "You shake in pain as an enormous firm green slime tentacle bursts from your back." The desc of the tentaclee is "A large firm green tentacle that grew from the remains of your back, you find it's strong enough to move you around easily." The TF table of the tentaclee is Table 5.
 
+Section - Bigfoot
+
+A Bigfoot is a infection model. The description of Bigfoot is "This great sasquatch lumbers around with a soft occasional grunt. He looks powerul and huge with great hands. He is covered in white shaggy hair/fur that shields him from the elements. His feet are calloused along the bottom and furred atop of that and he walks on legs that look like two powerful columns.". The TF Table of Bigfoot is table Bigfoot. Bigfoot is male. 
+
+The move rate of a Bigfoot is 2.
+The attack rate of a Bigfoot is 2.
+The reflex of a Bigfoot is 12.
+A Bigfoot is horny.
+The primary attack description of a Bigfoot is "suddenly reaches for [printed name of Targetx] and pulls them to her chest, forcing a teat into their mouth, feeding them thick gulps of sweet nourishing milk. As the milk flows, change can be seen in".
+The TF description of a Bigfoot is "groans as they swell, body curving and armoring itself as thick plates overtake their old form. A strange blue and biege creature results, huge breasts jiggling as she looks around, now a".
+
 Section - Momma Nido
 
 A Momma Nido is a infection model. The description of Momma Nido is "What a curious looking creature. You're certain you saw it somewhere, but can't quite place it. Blue tough hide covers most of its curvaceous form, with a horn mounted on firm looking snout. She has two large and heavy breasts, a beige color that stands out against her largely blue body, with huge brown nipples. Wrapped around her right leg is a frilly band with white frills and a [one of]blue[or]green[or]yellow[or]orange[sticky random] center band. Her female sex is exposed and pouting, looking wet and ready, surrounded by the tough looking beige flesh that goes up across her belly like a plate. Covering her belly is a white apron that drapes down towards her lower belly but no further. Behind her is a pointed, thick tail, blue as the rest of her.". The TF Table of Momma Nido is table Nidoqueen. Momma Nido is female. Momma Nido is sterile. Momma Nido is semifertile.
@@ -5338,7 +5372,7 @@ when play ends:
 		if the skunkpregnant of the player is not 0, say "     Your belly continues to grow, and finally you sink to your knees, your hands resting on the ground to steady yourself. However, before long, the skunkbeast from earlier comes by, nipping at your shoulder as he bends you forward once more. The pleasure is simply too wonderful, and you give in completely, letting your mind think of him only as Master, with you as his Pet... Each thrust of his cock forces away a little more of your humanity, until you're nothing but his horny cock-loving skunk-bitch. From all the constant mating, you eventually give birth to your first litter, a full [skunkpregnant of the player] animal kittens, nursing them as you happily await your next heat, so you can serve your Master's desire for another litter...";
 		if the tf table of pelvis is table 20, say "     You wander the land, seeking things to plunge your cock into, always hungering for the next coupling. Only a select few manage to satiate your need for very long, but you leave a large scattering of pregnant women and mysterious feline births.";
 	if lioness cock is visible and nursing of the player is not 0 and the pregnant of the player is 0:
-		say "     Your huge lioness cock does not go unnoticed by your passenger for long. She soon longs for your 'other' sort of milk, and becomes your mate. She never stops being clingy, however, and is usually seen holding to your front and riding your cock eighteen hours out of the day. Every year she grows round and large and she parts from you for a few weeks before she gives birth to a large litter of kittens. The kittens are infectious, and you two flee another city while they cause chaos behind you. Amazingly, it seems your shaft is retractable, and do so on its own when you are in the middle of mating with a female.";
+		say "     Your huge lioness cock does not go unnoticed by your passenger for long. She soon longs for your 'other' sort of milk, and becomes your mate. She never stops being clingy, however, and is usually seen holding to your front and riding your cock eighteen hours out of the day. Every year she grows round and large and she parts from you for a few weeks before she gives birth to a large litter of kittens. The kittens are infectious, and you two flee another city while they cause chaos behind you. Amazingly, it seems your shaft is retractable, and can do so on its own when you are in the middle of mating with a female.";
 	else:
 		if pregnant of the player is greater than 0 and the tf table of the pelvis is table 21 :
 			say "     The lion man finds you as you collapse under your own weight. He lifts you into your strong arms and nuzzles your cheek before carrying you away, to make you his alpha mate and bear the strongest of his children. You never see your home city again, but bear at least [pregnant of the player], if not more cubs over the next year as you adjust to being a lioness in his pride.";
@@ -5346,7 +5380,7 @@ when play ends:
 			if lioness cock is visible, say "     Being an alpha female is made easier with your huge twitching clit shaft. When others of your pride disobey you, you work out your frustration and deepen familial bonds by fucking them until they submit in a puddle of pleasured fluids. Besides bearing children, you also sire several.";
 			if the nursing of the player is not 0, say "     The cat at your chest becomes your best female friend. She calms as you settle into the role of alpha female and helps you to enforce the rules of the pride. She never stops enjoying your thick cream however.";
 		else:
-			if lioness cock is visible, say "     You are eventually taken in by a woman who finds the presence of your cock quite interesting on your odd body. She seems immune to any mutagenic effects and cares for you until the end of your days as your lover, giving birth to great litters of kittens every year. Amazingly, it seems your shaft is retractable, and do so on its own when you are in the middle of mating with a female.";
+			if lioness cock is visible, say "     You are eventually taken in by a woman who finds the presence of your cock quite interesting on your odd body. She seems immune to any mutagenic effects and cares for you until the end of your days as your lover, giving birth to great litters of kittens every year. Amazingly, it seems your shaft is retractable, and can do so on its own when you are in the middle of mating with a female.";
 			if the nursing of the player is not 0:
 				if the tf table of pelvis is table 20:
 					say "     Despite the constant hunger you feel, your agony is lessened with the presence of the small feline companion. She relies on you for food and protection, often held in your arms, as often nursing from you as not. When you rest, she expresses her thanks with skilled tongue and paws, stroking your huge leonine shaft, or sometimes just riding it until you fill her with seed. When the episodes become particularly bad, she is the only one who can keep up with you, and you are both locked in one another's arms for weeks at a time, rutting wildly.";
@@ -5362,6 +5396,8 @@ when play ends:
 					say "You collect up your small herd of [number of on-stage furry doe] and hurry them out of the city before they can be hurt by armed response to the outbreak. You live in the forests of the northwest, loving, fucking, and managing your herd dutifully. Your children eventually spawn off new alpha bucks to spread over a modestly impressive area, claiming several state parks for your kind.";
 			if tf table of head is table Dragon Babe:
 				say "You flee the city at the sound of the incoming military, taking to the sewers and moving for what feels like a month of migration. You find a new city, still abandoned, mostly. It seems to have a lot of mutants in it, but more interestingly, some untouched humans still holding out. You have learned the sewers well, and your charms and skill keep you fed, too well fed. One day you find yourself stuck running along a familiar passage. For some reason, you don't feel nervous about the situation, knowing someone, despite all logic, will be along shortly to free you, and perhaps something more interesting than that. You can hardly wait.";
+			if tf table of head is table bigfoot:
+				say "You wander away from the city, it is not your place. You find the wilderness to be far more to your liking. You live wild and free, uninhibited by anyone, at least until you happen upon a camper in the forest, minding his business. You stalk him for hours until you are sure he is no threat, then you approach. The first he knows of you is your great hand coming down on his shoulder. He jumps with surprise, but soon comes around. Maybe having a friend could help make things interesting...";
 			if tf table of head is table Fox Taur:
 				say "[foxtaur ending][line break]";
 			if tf table of head is table goblin:
@@ -5813,6 +5849,8 @@ An Hawk Milk is a kind of drink. An Hawk Milk is edible. understand "milk" as Ha
 
 An Baby Bottle is a kind of drink. An Baby Bottle is edible. understand "bottle" as Baby Bottle. The TF table of an Baby Bottle is table nidoqueen. The description of a Baby Bottle is "A baby bottle, with clear plastic containing creamy looking fluid within and a great big ole rubber teat at the end for baby satisfaction.". an Baby Bottle is infectitem.
 
+Jack Links is a kind of thing. It is edible. Understand "jerky" as Jack Links. Understand "beef jerky" as Jack Links. The description of Jack Links is "A red and black plastic bag with tasty beef jerky inside. How can you resist?!". Jack Links is infectitem. The TF Table of Jack Links is table Bigfoot.
+
 An Echo'N Brand Mayonnaise is a kind of drink. An Echo'N Brand Mayonnaise is edible. understand "mayo" as Echo'N Brand Mayonnaise. The TF table of an Echo'N Brand Mayonnaise is table echoen. The description of a Echo'N Brand Mayonnaise is "A jar of Echo'N Brand Mayonnaise. What an odd brand, and no ingredient list!". an Echo'N Brand Mayonnaise is infectitem.
 
 Fox Soda can is a kind of drink. Understand "fox soda" as Fox Soda can. understand "Fox Soda" as 1 Fox Soda can. The description of a Fox Soda can is "This a red can of soda, labeled as 'Fox Soda.' You find it strange that you have never heard of that brand before.". The tf table of Fox Soda can is table latex fox. Fox soda can is infectitem.
@@ -6025,6 +6063,7 @@ Longtail is a woman in lewis pond. She has a male name "Longtail". She has a fem
 Jazmine is a woman in Food court. She has a male name "Jacob". She has a female name "Jazmine".
 Understand "Jacob" as Jazmine.
 1 tobasco sauce is in food court. "A bottle of tobasco sauce sits on one of the tables.".
+1 Jack Links is in food court. "Someone left a bag of jerky sitting here!".
 1 Echo'N Brand Mayonnaise is in food court. "Did someone bring some mayo from home and leave it here? Odd.".
 1 Glamour Magazine and 1 fennec ear hat is in Al's Hunting Emporium. [3 doe are in al's hunting emporium.]
 Christopher is a man in Fantastic Furs. He has a male name "Christopher". He has a female name "Christie".
