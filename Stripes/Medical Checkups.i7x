@@ -1,6 +1,7 @@
 Version 5 of Medical Checkups by Stripes begins here.
 [ Version 4.0 - Main Storyline tie-in - Stripes]
 [ Version 5.0 - Added cunt pills - Kurainyx]
+[ Version 5.1 - Easier cunt pill access for males - Kurainyx]
 [- Originally Authored By: Hellerhound -]
 
 Section 1 - Pediatrics Office
@@ -110,14 +111,14 @@ instead of conversing the Doctor Medea:
 				if medeaget is 2, now medeaget is 3;
 		else if HP of Doctor Medea is 2:
 			if medeaget is 2:
-				say "     You present the equipment and supplies to Dr. Medea, who seems quite pleased with your haul. 'Yes, it seems you've obtained everything I'd listed. We're halfway there, now. For the procedure itself, I will also be needing some more specialized equipment. Your best chance of locating it would be at either the [bold type]Pediatrics Ward[roman type] or the [bold type]Obstetrics Department[roman type] of the City Hospital for these supplies I require.'";
+				say "     You present the equipment and supplies to Dr. Medea, who seems quite pleased with your haul. 'Yes, it seems you've obtained everything I'd listed. We're halfway there, now. For the procedure itself, I will also be needing some more specialized equipment. Your best chance of locating it would be at either the [bold type]Pediatrics Ward[roman type] or the [bold type]Obstetrics Department[roman type] of the City Hospital for these supplies I require.' Alternatively, with these supplies you've brought back, I can continue work on some special pills that you might be interested in.";
 				now Obstetrics Department is active;
 				now HP of doctor medea is 3;
 				now medeaget is 3;
 			else:
 				say "     'I would like you to try to obtain those supplies the clinic was supposed to receive. Without them, there's little I can do to assist you.'";
 		else if HP of Doctor Medea is 3:
-			say "     'I would like to you try to obtain that specialized equipment I've described. Without it, I cannot complete the procedure. If you're still interested, you should try searching the City Hospital for those items.'";
+			say "[medeaadjustments]";
 		else if HP of Doctor Medea is 4:
 			say "     When you place the requested equipment on the counter for Dr. Medea, she is quite pleased. 'Excellent! Give me a few moments to look this over and prepare, but we should be able to start any time now.'";
 			now HP of Doctor Medea is 6;
@@ -170,7 +171,10 @@ to say medeaadjustments:
 		say "     'Wonderful! You managed to get the supplies. Thanks! I can now provide you with more services and resume my work on my pills again!' the lizard doctor says happily.";
 		now medeaget is 3;
 	else if medeaget is 3:
-		say "     'In thanks for your help, I can provide you with several services. As before, I can determine if you're pregnant and provide some information on the fetus. I can also adjust your degree of fertility [if lust of Doctor Medea >= 3]and your estrus cycle [end if]if you'd like. Would you like me to do that? I could make you extra fertile or even sterile if you'd like.' While she seems rather eager about the first, she's clearly less enthused about the second.";
+		if cunts of player < 1 and HP of Doctor Medea is 3:
+			say "     'I still would like for you to try to obtain that specialized equipment I've described. Without it, I cannot complete the procedure. If you're still interested, you should try searching the City Hospital for those items.' Additionally, with the supplies you had brought back earlier, I have developed some special pills that you might be interested in.";
+		else:
+			say "     'In thanks for your help, I can provide you with several services. As before, I can determine if you're pregnant and provide some information on the fetus. I can also adjust your degree of fertility [if lust of Doctor Medea >= 3]and your estrus cycle [end if]if you'd like. Would you like me to do that? I could make you extra fertile or even sterile if you'd like.' While she seems rather eager about the first, she's clearly less enthused about the second.";
 	if medeaub is false and medeaget >= 3 and player is female and playercanvore is true:
 		say "     As you're listening to her, you feel that dark hunger inside you well up. That heady scent of reptilian arousal starts to make your mouth water. Your reaction does not go unnoticed and the doctor urges you to take a seat while she examines you. 'Hmmm... this is most interesting. And you say that your body's become capable of ingesting prey nearly your own size whole? Most intriguing.'";
 		WaitLineBreak;
@@ -178,10 +182,13 @@ to say medeaadjustments:
 		say "     'Now, this alteration would be a one-way procedure, though you should be able to resist the urge... if you're willing to try, that is. I should expect you'd not want to,' she adds as she rubs her lower belly, pausing as she imagines what it would be like. 'I should mention that I won't risk the procedure should you already be pregnant. You'll just have to come back at another time instead.'";
 		now medeaub is true;
 	blank out the whole of table of fucking options;
-	choose a blank row in table of fucking options;
-	now title entry is "Check for pregnancy";
-	now sortorder entry is 1;
-	now description entry is "check on a potential pregnancy.";
+	[]
+	if player is female:
+		choose a blank row in table of fucking options;
+		now title entry is "Check for pregnancy";
+		now sortorder entry is 1;
+		now description entry is "check on a potential pregnancy.";
+	[]
 	if HP of Doctor Matt is 21 or hospquest is 21:
 		choose a blank row in table of fucking options;
 		if HP of Doctor Matt is 21:
@@ -190,81 +197,97 @@ to say medeaadjustments:
 			now title entry is "Doctor Mouse's demand";
 		now sortorder entry is -50;
 		now description entry is "discuss obtaining her notes.";
+	[]
 	if medeaget is 3:
 		if "Selective Mother" is listed in feats of player:
 			choose a blank row in table of fucking options;
 			now title entry is "Remove impregnation control";
 			now sortorder entry is 2;
 			now description entry is "remove your ability to pick if a mate can impregnate you. (-Selective Mother)";
+		[]
 		else if "Fertile" is listed in feats of player:
 			choose a blank row in table of fucking options;
 			now title entry is "Remove excess fertility";
 			now sortorder entry is 2;
 			now description entry is "restore your normal level of fertility. (-Fertile)";
+			[]
 			choose a blank row in table of fucking options;
 			now title entry is "Gain impregnation control";
 			now sortorder entry is 3;
 			now description entry is "bestow the ability to pick if a mate can impregnate you. (+Selective Mother)";
+		[]
 		else if "Sterile" is listed in feats of player:
 			choose a blank row in table of fucking options;
 			now title entry is "Remove sterility";
 			now sortorder entry is 2;
 			now description entry is "restore your normal level of fertility. (-Sterile)";
+		[]
 		else:
 			choose a blank row in table of fucking options;
 			now title entry is "Gain increased fertility";
 			now sortorder entry is 2;
 			now description entry is "increase your body's fertility. (+Fertile)";
+			[]
 			choose a blank row in table of fucking options;
 			now title entry is "Become sterile";
 			now sortorder entry is 3;
 			now description entry is "render you sterile. (+Sterile)";
+		[]
 		if "Sterile" is not listed in feats of player and heat enabled is true:
 			if lust of Doctor Medea >= 3 and heatlevel is not 1:
 				choose a blank row in table of fucking options;
 				now title entry is "Heat exam";
 				now sortorder entry is 4;
 				now description entry is "examine the current state of your heat cycle.";
+		[]
 		if "Sterile" is not listed in feats of player and heat enabled is true and animal heat is true:
 			if lust of Doctor Medea <= 2:
 				choose a blank row in table of fucking options;
 				now title entry is "Discuss heat control";
 				now sortorder entry is 5;
 				now description entry is "discuss heat control with you.";
+			[]
 			else if heatlevel is 1:
 				choose a blank row in table of fucking options;
 				now title entry is "Reactivate heats";
 				now sortorder entry is 5;
 				now description entry is "allow you to go into heat again.";
+			[]
 			else if heatlevel is 2:
 				choose a blank row in table of fucking options;
 				now title entry is "Block heats";
 				now sortorder entry is 5;
 				now description entry is "prevent you from going into heat.";
+				[]
 				choose a blank row in table of fucking options;
 				now title entry is "Intensify heats";
 				now sortorder entry is 6;
 				now description entry is "make your heats even more intense.";
+			[]
 			else if heatlevel is 3:
 				choose a blank row in table of fucking options;
 				now title entry is "Restore normal heats";
 				now sortorder entry is 5;
 				now description entry is "reduce your heat level to normal.";
+		[]
 		if player is impreg_ok:
 			choose a blank row in table of fucking options;
 			now title entry is "Oviposition";
 			now sortorder entry is 7;
 			now description entry is "talk to you about egg-laying.";
+		[]
 		if medeaub is true and playercanub is false and gestation of child is 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Gain unbirthing ability";
 			now sortorder entry is 8;
 			now description entry is "allow you to unbirth your foes.";
+		[]
 		if medeapill is false:
 			choose a blank row in table of fucking options;
 			now title entry is "Pills";
 			now sortorder entry is 9;
 			now description entry is "Talk to her about her pills";
+		[]
 		else if medeapill is true:
 			choose a blank row in table of fucking options;
 			now title entry is "Cunt Pills";
@@ -473,55 +496,58 @@ to say medeaadjustments:
 					now medeapill is true;
 				else if nam is "Cunt Pills":		[Trade for cunt pills]
 					say "     'Did you bring any medkits or healing boosters to trade for my special pills?' Medea asks.";
-					if carried of medkit < 1 and carried of healing booster < 1:
-						say "     You shake your head, stating that you don't have any of them on you. The lizard doctor sighs in disappointment and says, 'I'm sorry then, but I'm afraid that I cannot give you any of my pills then. Perhaps next time.'";
-					else:
-						now sextablerun is 0;
-						blank out the whole of table of fucking options;
-						[]
-						if carried of medkit > 1:
-							choose a blank row in table of fucking options;
-							now title entry is "Trade medkit";
-							now sortorder entry is 1;
-							now description entry is "Trade a medkit for a cunt pill";
-						[]
-						if carried of healing booster > 1:
-							choose a blank row in table of fucking options;
-							now title entry is "Trade healing booster";
-							now sortorder entry is 2;
-							now description entry is "Trade a healing booster for a cunt pill";
-						[]
-						sort the table of fucking options in sortorder order;
-						repeat with y running from 1 to number of filled rows in table of fucking options:
-							choose row y from the table of fucking options;
-							say "[link][y] - [title entry][as][y][end link][line break]";
-						say "[link]0 - Nevermind[as]0[end link][line break]";
-						while sextablerun is 0:
-							say "Pick the corresponding number> [run paragraph on]";
-							get a number;
-							if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-								now current menu selection is calcnumber;
-								choose row calcnumber in table of fucking options;
-								say "[title entry]: [description entry]?";
-								if player consents:
-									let nam be title entry;
-									clear the screen and hyperlink list;
-								now sextablerun is 1;
-								if nam is "Trade medkit":
+					now sextablerun is 0;
+					blank out the whole of table of fucking options;
+					[]
+					if carried of medkit > 0:
+						choose a blank row in table of fucking options;
+						now title entry is "Trade medkit";
+						now sortorder entry is 1;
+						now description entry is "Trade a medkit for a cunt pill";
+					[]
+					if carried of healing booster > 0:
+						choose a blank row in table of fucking options;
+						now title entry is "Trade healing booster";
+						now sortorder entry is 2;
+						now description entry is "Trade a healing booster for a cunt pill";
+					[]
+					sort the table of fucking options in sortorder order;
+					repeat with y running from 1 to number of filled rows in table of fucking options:
+						choose row y from the table of fucking options;
+						say "[link][y] - [title entry][as][y][end link][line break]";
+					say "[link]0 - Nevermind[as]0[end link][line break]";
+					while sextablerun is 0:
+						say "Pick the corresponding number> [run paragraph on]";
+						get a number;
+						if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+							now current menu selection is calcnumber;
+							choose row calcnumber in table of fucking options;
+							say "[title entry]: [description entry]?";
+							if player consents:
+								let nam be title entry;
+								clear the screen and hyperlink list;
+							now sextablerun is 1;
+							if nam is "Trade medkit":
+								if carried of medkit > 0:
 									say "You take out a medkit from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.'";
 									decrease carried of medkit by 1;
 									increase carried of cunt pill by 1;
-								if nam is "Trade healing booster":
+								else:
+									say "     You shake your head, stating that you don't have any of them on you. The lizard doctor sighs in disappointment and says, 'I'm sorry then, but I'm afraid that I cannot give you any of my pills then. Perhaps next time.'";
+							if nam is "Trade healing booster":
+								if carried of healing booster > 0:
 									say "You take out a healing booster from your bag and hand it over to Medea. The lizard doctor takes your offered item and takes it into a nearby room. She comes back to you a moment later and places a pink capsule into your hand. 'A pleasure doing business with you,' Medea says with a smile. 'I'm sure that you'll put that to good use.'";
 									decrease carried of healing booster by 1;
 									increase carried of cunt pill by 1;
-								wait for any key;
-							else if calcnumber is 0:
-								now sextablerun is 1;
-								say "     You shake your head, stating that you can't afford to part with your medical supplies. The lizard doctor sighs in disappointment and says, 'I'm sorry then, but I'm afraid that I cannot give you any of my pills then. Perhaps next time.'";
-								wait for any key;
-							else:
-								say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+								else:
+									say "     You shake your head, stating that you don't have any of them on you. The lizard doctor sighs in disappointment and says, 'I'm sorry then, but I'm afraid that I cannot give you any of my pills then. Perhaps next time.'";
+							wait for any key;
+						else if calcnumber is 0:
+							now sextablerun is 1;
+							say "     You shake your head, stating that you can't afford to part with your medical supplies. The lizard doctor sighs in disappointment and says, 'I'm sorry then, but I'm afraid that I cannot give you any of my pills then. Perhaps next time.'";
+							wait for any key;
+						else:
+							say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 					clear the screen and hyperlink list;
 				else if nam is "Doctor Matt's request" or nam is "Doctor Mouse's demand":
 					say "[medeaassistance_plot]";
