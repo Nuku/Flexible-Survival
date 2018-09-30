@@ -4933,7 +4933,6 @@ Include Prairie Dog by Stripes.
 Include Psycho Weasel by Stripes.
 Include Queen Bee by Stripes.
 Include Quilled Tousky by Stripes.
-[Include Rabbit Pack by Guest Writers.]
 Include Ram by Sarokcat.
 Include Random Shemale Smooth Collie by Guest Writers.
 Include Random Tentacle Horror by Guest Writers.
@@ -5035,7 +5034,9 @@ Include Brian by Vinickus.
 Include Brooke by Stripes.
 Include Bryony by Song.
 Include Bubble by Stripes.
+Include Cynthia by Prometheus.
 Include Campus Gym by UrsaOmega.
+Include Cadmea by Prometheus.
 Include Carl by Wahn.
 Include Chris by Wahn.
 Include Cindy by Stripes.
@@ -5152,6 +5153,7 @@ Include Savina by Kurainyx.
 Include Seraphis by Vinickus.
 Include Serenity by Kurainyx.
 Include Sidney by Stripes.
+Include Sirius by Prometheus.
 Include Skarnoth by Wahn.
 Include Skarnoth Loyalty by Luneth.
 Include Solstice by Stripes.

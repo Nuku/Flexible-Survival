@@ -53,8 +53,10 @@ to LaborsIntroductionEvent: [Invited to perform the Labors]
 	now TwelveLaborsStage is 1;
 	add "Twelve Labors Quest" to OpenQuests of player;
 	now Labors Introduction is resolved;
+	now Meet the Nemean Lion is active;
 
 Meet the Nemean Lion is a situation.
+Meet the Nemean Lion is inactive.
 Prereq1 of Meet the Nemean Lion is Labors Introduction.
 The level of Meet the Nemean Lion is 30.
 The sarea of Meet the Nemean Lion is "Plains".
@@ -142,12 +144,17 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "lionskin"	"The skin of the Nemean Lion. Ethically acquired after completing the first labor of Herakles."	5	lionskin
 
+lionskin is a grab object.
 lionskin is equipment.
 It is not temporary.
+The plural of lionskin is false.
+The taur-compatible of lionskin is true.
+The size of lionskin is 3.
 The AC of lionskin is 100.
 The effectiveness of lionskin is 40.
 The placement of lionskin is "body".
 The descmod of lionskin is "You have the hide of a big cat wrapped around your shoulders.".
 The slot of lionskin is "body".
+The scent of lionskin is "The Nemean Lion's skin still smells of his musk, a potent, authority-demanding scent."
 
 Greek Mythos ends here.
