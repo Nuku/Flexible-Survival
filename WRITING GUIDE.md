@@ -135,6 +135,15 @@ The current list options are: felinelist, caninelist, equinelist, vulpinelist, r
 * `if fightoutcome >= 20 and fightoutcome <= 29` | did the player lose their last fight?
 * `if fightoutcome >= 30` | did the player manage to flee from their last fight?
 Numerous more examples and more specific results for fightoutcome can be seen in this document: ----
+#### Setting up a first-time encounter
+```
+to say InfectionNameDesc:
+    setmongender 0;
+    if "InfectionName" is not listed in EncounteredEnemies of player: [first encounter]
+        say "     First creature encounter";
+    else:
+        say "     Repeat Creature encounter.";
+```
 
 ### Feats
 * `if "Male Preferred" is listed in feats of player` | does the player have the Male Preferred feat? (feat name is case sensitive)
