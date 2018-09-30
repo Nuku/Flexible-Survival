@@ -164,9 +164,9 @@ This is the musiclisten rule:
 To say jazzfriends:
 	if Sarah is in the bunker:
 		if SarahSlut is 0:
-			say "     Sarah seems to mildly enjoy the music as she snuggles up onto the cot she has claimed while sighing peacefully at nothing in particular[if Coleen is in the bunker]. Coleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";
+			say "     Sarah seems to mildly enjoy the music as she snuggles up onto the cot she has claimed while sighing peacefully at nothing in particular[if Colleen is in the bunker]. Colleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";
 		else:
-			say "     You find Sarah coming up over to you to snuggle up while the jazz music plays softly in the background. The husky female seems to enjoy the music as she starts to pant happily while looking up at you with shining eyes. She almost seems to want to ask you to dance, but is holding back for some reason. Maybe because she would feel awkward in her new form? Regardless, you snuggle up close to her as you both listen to the soft rhythms bouncing through the bunker[if Coleen is in the bunker]. Coleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";
+			say "     You find Sarah coming up over to you to snuggle up while the jazz music plays softly in the background. The husky female seems to enjoy the music as she starts to pant happily while looking up at you with shining eyes. She almost seems to want to ask you to dance, but is holding back for some reason. Maybe because she would feel awkward in her new form? Regardless, you snuggle up close to her as you both listen to the soft rhythms bouncing through the bunker[if Colleen is in the bunker]. Colleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";
 			if SarahPups > 1:
 				say "     Sarah's pups all come around to bark and yip before making a circle to surround you and Sarah, almost as if they are trying to contain the feelings that both you and her are sharing right now.";
 	If Fang is in the Grey Abbey Library:
@@ -189,8 +189,8 @@ To say jazzfriends:
 	if humanity of player > 100, now humanity of player is 100;
 
 to say tangofriends:
-	if Coleen is in the bunker:
-		say "     Coleen seems to like the music flowing throughout the boombox and as she gets up to dance while flipping and twirling herself around with no small amount of skill.";
+	if Colleen is in the bunker:
+		say "     Colleen seems to like the music flowing throughout the boombox and as she gets up to dance while flipping and twirling herself around with no small amount of skill.";
 	if helper dog is tamed:
 		say "     Hobo moves over to the platform beside the door to the bunker, sitting there and watching as he seems to listen both to the outside and to the music with an air of appreciation.";
 	if cute crab is tamed:
@@ -217,8 +217,8 @@ to say R&Bfriends:
 			say "     Fang pads over to you and then lays his head down onto your lap. The music seems to have gotten to the other in a strange way as you could almost swear that tears are in his eyes. Maybe this canine has more soul than you think as you lay a hand down to stroke him across his rugged mane of fur. Neither of you speak as you just listen to the tunes. You find that words have no place here now.";
 		else:
 			say "     Fang moves over towards you before plopping himself down to listen to the R&B melody wafting from out of the speakers of the boombox. By the slow wag of his tail, you can see that the feral creature likes the music very much.";
-	If Coleen is in the bunker:
-		say "     The rhythm of the melody playing on the boombox puts Coleen to sleep.";
+	If Colleen is in the bunker:
+		say "     The rhythm of the melody playing on the boombox puts Colleen to sleep.";
 	if Sarah is in the bunker:
 		if SarahSlut is 0:
 			say "     When a firm husky arm snakes its way out around your waist to hold you close, you jump a little, before noticing that it is just Sarah snuggling up against you. Smiling down at the medic, you lay your head on top of hers and let the music simply wash away all of your thoughts. There is no here or now, there is only this moment where you are connected to everything around you by invisible threads. Perhaps especially so to the husky woman next to you.";
@@ -255,8 +255,8 @@ to say RockandRollfriends:
 		say "     Brushing up beside her to feel Sarah's furry body rolling against your own, you suddenly wish that both of you were in a normal bar doing this while getting drunk off of shared vodka and rum while dance lights flash around both your bodies. Maybe when all of this is over you and she could have your own private dance session together. Whether that will be with the husky female dancing on your lap or in your bed, well, the jury is out on that one.";
 		if SarahPups > 0:
 			say "     All around you, the puppies seem to be watching their mother curiously as the older female just moves and sways without her usual flustering or timid mannerisms embellishing her actions. Some of the pups try and mimic the older husky's maneuvers, but in the end they mostly seem to just fall over each other cutely.";
-	If Coleen is in the bunker:
-		say "     At hearing the music playing on the boombox, Coleen proceeds to rock the house as she howls and swivels her body while dancing with the beat of the drumset and electric guitars being played.";
+	If Colleen is in the bunker:
+		say "     At hearing the music playing on the boombox, Colleen proceeds to rock the house as she howls and swivels her body while dancing with the beat of the drumset and electric guitars being played.";
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
 			say "     Fang seems to have woken up from his inopportune nap as the wolf rises onto his feet and then pads over into your direction. Seeing that he's not quite happy about being so rudely interrupted by the annoying sounds, you have to block the other off from the boom box as you can clearly see the other wanting to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this. After all, a win is a win in your book by any accounts.";
@@ -293,8 +293,8 @@ to say Oceanfriends:
 			say "     Fang slowly comes over to where you are and then curls himself up at your head. Panting softly, the big male has no problem whimpering at the sounds of the music and then drifting off to sleep as he listens to the music with you.";
 		else:
 			say "     Fang sleepy pads himself over to you and then curls up to go to sleep. No muss, no fuss. Just a large bundle of sleepy wolf curling himself up next to your head.";
-	If Coleen is in the bunker:
-		say "     Coleen makes her way over to [if sarah is bunkered]where Sarah is and then proceeds to snuggle up with the other husky woman[else]the bunk and sits on the floor beside you, leaning back against the cot[end if].";
+	If Colleen is in the bunker:
+		say "     Colleen makes her way over to [if sarah is bunkered]where Sarah is and then proceeds to snuggle up with the other husky woman[else]the bunk and sits on the floor beside you, leaning back against the cot[end if].";
 	if house cat is tamed:
 		say "     The small feline you rescued earlier meows as she moves into your lap to curl up.";
 	if bee girl is tamed:

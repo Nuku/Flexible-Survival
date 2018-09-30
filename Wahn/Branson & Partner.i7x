@@ -27,6 +27,8 @@ an everyturn rule:
 		change the north exit of Branson & Partner Reception to B&P Company Offices;
 		change the south exit of B&P Company Offices to Branson & Partner Reception;
 		now BransonRoomConnection is 1; [room connected]
+	if HP of Melanie > 1 and City Hall Offices is inactive:
+		now City Hall Offices is active;
 
 Section 1 - Melanie
 
@@ -156,7 +158,7 @@ to say MelanieTalk3: [ask to meet Mr. B]
 					say "     To get the power back to work, it might be a good idea to check the power plant. Thinking back to a city tour you took some years back, you remember that the scenic [bold type]plant overview[roman type] isn't too far from the library. The other half of Branson's requirements should hopefully only include a quick stop at the [bold type]City Hall Offices[roman type] in the high rise district.";
 				else:
 					say "     Thinking about what to do next, a quick stop at the [bold type]City Hall Offices[roman type] in the [bold type]High Rise District[roman type] might be a good idea. Surely that shouldn't be that dangerous.";
-				now City Hall Offices are not resolved;
+				now City Hall Offices is active;
 				now HP of Melanie is 2; [listened to the plan]
 			else:
 				LineBreak;

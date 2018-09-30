@@ -39,7 +39,7 @@ Instead of sniffing Gloomy Warehouse:
 	say "The glum looking warehouse smells of sorrows left forgotten and strangely enough...dogs?";
 
 
-South of Gloomy Warehouses is S Harbor.
+South of Gloomy Warehouse is S Harbor.
 
 The description of S Harbor is "The southern harbor, unlike its twin the northern area, stands somewhat more meticulously as there are both pirates and otters running around mopping and sweeping up the area. A large burly creature, reminiscent of a sea serpent and naga crossed together, walks across the area shouting out orders and whacking those who look to be slacking off over the back of the head to get them back into shape. This person, whoever they are, doesn't seem to tolerate any sort of foolishness and makes a show of it by growling and hissing at anyone giving them any lip. From the looks of things though, no one seems ready to complain as they all seem somewhat happy at having some with leadership capabilities of the one who's taking charge of this area. The fact that there is a large luxury boat docked on this side of the warehouse only serves to show that even in the face of the chaos some order will still try to find a way to prevail through the madness.".
 

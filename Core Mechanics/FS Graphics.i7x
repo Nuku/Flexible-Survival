@@ -157,6 +157,7 @@ Figure of Chris_clothed_icon is the file "Chris_clothed.jpg".
 Figure of Chris_naked_icon is the file "Chris_naked.jpg".
 Figure of Chris_face_icon is the file "Chris_face.jpg".
 Figure of Christy_pregnant_icon is the file "ChristyPregnant.jpg".
+Figure of Colleen_face_icon is the file "Colleen_face.jpg".
 Figure of Danny_naked_icon is the file "Danny_naked.jpg".
 Figure of Danny_clothed_icon is the file "Danny_clothed.jpg".
 Figure of Danny_face_icon is the file "Danny_face.jpg".
@@ -201,6 +202,7 @@ Figure of Francois_icon is the file "Francois_ig.jpg".
 Figure of Frank_icon is the file "Frank.jpg".
 Figure of Gabriel_icon is the file "Gabriel.jpg".
 Figure of Garrett_icon is the file "garrett_ig.jpg".
+Figure of Garth_face_icon is the file "Garth_face.jpg".
 Figure of Gillian_icon is the file "Gillian_ig.jpg".
 Figure of Gobby_icon is the file "gobby_ig.jpg".
 Figure of Grant_icon is the file "grant_ig.jpg".
@@ -572,6 +574,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Chris_naked"	Figure of Chris_naked_icon	"Kupo Klein"	g-white	"normal"
 "Chris_face_icon"	Figure of Chris_face_icon	"Kupo Klein"	g-black	"normal"
 "Christy_pregnant"	Figure of Christy_pregnant_icon	"Anymouse1968"	g-white	"normal"
+"Colleen_face"	Figure of Colleen_face_icon	"SineAlas"	g-white	"normal"
 "Cougar"	Figure of Cougar_icon	"catnamedfish"	g-white	"normal"
 "Danny_naked"	Figure of Danny_naked_icon	"Laylo"	g-white	"normal"
 "Danny_clothed"	Figure of Danny_clothed_icon	"Dragonpunk"	g-white	"normal"
@@ -629,6 +632,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Fiona"	Figure of Fiona_icon	"Valen"	g-white	"normal"
 "Gabriel"	Figure of Gabriel_icon	"Darian821"	g-black	"normal"
 "Garrett"	Figure of Garrett_icon	"Catmonkshiro"	g-black	"normal"
+"Garth_face"	Figure of Garth_face_icon	"SineAlas"	g-white	"normal"
 "Gillian"	Figure of Gillian_icon	"Eevachu"	g-white	"normal"
 "Giraffe"	Figure of Giraffe_icon	"Sharei"	g-white	"normal"
 "Gobby"	Figure of Gobby_icon	"lionsilverwolf"	g-white	"normal"
@@ -987,6 +991,7 @@ carry out artistcredits:
 	say "     Carl + Eric by Lyttathebug @ https://lyttathebug.deviantart.com/[line break]";
 	say "     Chris by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Christy by Anymouse1968 @ furaffinity.net[line break]";
+	say "     Colleen (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Danny (naked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
 	say "     Danny (design + dressed) by Dragonpunk @ furaffinity.net[line break]";
 	say "     Darius by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
@@ -1013,6 +1018,7 @@ carry out artistcredits:
 	say "     Felix by Geir @ furaffinity.net[line break]";
 	say "     Gabriel by Darian821 @ y-gallery.net[line break]";
 	say "     Garrett by Catmonkshiro @ furaffinity.net[line break]";
+	say "     Garth (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Gillian by Eevachu @ furaffinity.net[line break]";
 	say "     Gobby by lionsilverwolf @ furaffinity.net[line break]";
 	say "     Grant by uniformvixen @ furaffinity.net[line break]";

@@ -1226,7 +1226,7 @@ Section 9 - Conversation on other NPCs
 
 [
 Thoughts on others:
-Coleen -
+Colleen -
 Elijah -
 Onyx -
 Icarus -
@@ -1244,7 +1244,7 @@ A_Sandra is a truth state that varies. A_Sandra is usually false.
 A_Sally is a truth state that varies. A_Sally is usually false.
 A_Sarah is a truth state that varies. A_Sarah is usually false.
 A_Sarah2 is a truth state that varies. A_Sarah2 is usually false.
-A_Coleen is a truth state that varies. A_Coleen is usually false.
+A_Colleen is a truth state that varies. A_Colleen is usually false.
 A_Solstice is a truth state that varies. A_Solstice is usually false.
 A_David is a truth state that varies. A_David is usually false.
 A_Elijah is a truth state that varies. A_Elijah is usually false.
@@ -1265,7 +1265,7 @@ to UpdateAlexandraNPCChat:
 	if A_Sandra is false and Sandra is bunkered, add 8 to AlexandraNPC;
 	if A_Sally is false and Sally is bunkered, add 9 to AlexandraNPC;
 [	if A_Sarah is false and Sarah is bunkered, add 10 to AlexandraNPC;]
-[	if A_Coleen is false and Coleen is bunkered, add 11 to AlexandraNPC;]
+[	if A_Colleen is false and Colleen is bunkered, add 11 to AlexandraNPC;]
 	if A_Solstice is false and Solstice is booked, add 12 to AlexandraNPC;
 	if A_David is false and David is booked, add 13 to AlexandraNPC;
 [	if A_Elijah is false and Elijah is bunkered, add 14 to AlexandraNPC;
@@ -1298,7 +1298,7 @@ to say AlexandraNPCChat:
 		-- 10:
 			say "[A_SarahComment]";
 		-- 11:
-			say "[A_ColeenComment]";
+			say "[A_ColleenComment]";
 		-- 12:
 			say "[A_SolsticeComment]";
 		-- 13:
@@ -1360,10 +1360,10 @@ to say A_SallyComment:	[Sally]
 	say "     'That huskybunny slut you found is quite a bit of fun, I must say. I borrowed her for a bit, boss,' she says with a wink. 'Now, I seen a lot of critters out there, but nothing quite like her. I'm not sure what you did to get your hands on such a sweet-ass fucktoy, but I expect you'll not be telling that story to the military if they ever get off their asses and get us out of here.";
 	now A_Sally is true;
 
-to say A_SarahComment: [Coleen]
+to say A_SarahComment: [Colleen]
 	say "...";
 
-to say A_ColeenComment: [Coleen]
+to say A_ColleenComment: [Colleen]
 	say "...";
 
 to say A_SolsticeComment:	[Solstice]

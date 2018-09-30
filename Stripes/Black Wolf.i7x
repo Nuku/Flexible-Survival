@@ -58,7 +58,7 @@ When Play begins:
 	now face change entry is "vision blurs and a dark bulge pushes out below your nose. As your altered eyes come back into focus, you can see you've grown a lupine muzzle";
 	now body change entry is "your hands and feet feel like soft clay. They shift, stretch and bulge, remolding themselves to become more paw-like. As this change is subsiding, you notice that your body's changed as well, though less dramatically. You now have a rather normal looking body with an average build";
 	now skin change entry is "it feels like ripples are running over it. As these pass across you, short, dark hairs are pushed out that extend further each time the wave moves across them. In time, you are covered in a thick pelt of black fur, turning to purple at your groin";
-	now ass change entry is "the end of your spine forms into a black, lupine time with a streak of purple along its underside";
+	now ass change entry is "the end of your spine forms into a black, lupine tail with a streak of purple along its underside";
 	now cock change entry is "it twitches and throbs, spurting cum as wonderful sensations pulse through it. It takes on a more lupine shape, forming a sheath for itself and taking on a rich, purple color";
 	now str entry is 12; [ These are now the creature's stats... ]
 	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]

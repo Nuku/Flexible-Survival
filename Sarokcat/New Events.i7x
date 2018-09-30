@@ -35,7 +35,7 @@ Instead of Resolving a Military presence:
 		extend game by 12;
 		now mtp is 3;
 		if girl is not banned, now Paratrooper is active; [- Vanessa]
-		[also makes the 'womanfruittree' event live - Coleen]
+		[also makes the 'womanfruittree' event live - Colleen]
 	else if mtp is 3:
 		say "     Traveling through the city, you come across what appears to have been a military style barricade, currently unoccupied. Investigating further, you find that several military tents had been set up past the barricade in a mostly empty store parking lot. Investigating carefully in case there are still any trigger-happy soldiers around, you find that the makeshift camp seems completely empty, though there are several signs of a struggle in some areas.";
 		say "     Gathering up your courage, you start looking in some of the tents, only to be surprised when you find that the large tents are full of empty, movable beds with restraints and scientific equipment. Looking closer, you can see that several of the beds were occupied sometime recently, and from the looks of things, the occupants managed to either free themselves from their restraints or [']convinced['] whoever was with them to free them instead.";

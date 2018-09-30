@@ -92,10 +92,6 @@ Temple of Hera is a situation.
 Temple of Hera is inactive.
 The sarea of Temple of Hera is "Museum".
 
-when play begins:
-	add Temple of Hera to badspots of guy;       [male soldiers]
-	add Temple of Hera to badspots of furry;     [female husky involved]
-
 Instead of resolving a Temple of Hera:
 	say "     After walking through the labyrinthine passages of the museum for quite a while, it becomes more and more obvious that something strange and unusual happened to this place when all the craziness started. It's a bit hard to say with hallways seemingly looping around and suddenly having developed new forks when you get to a portion that you went through before, but your guess is that you're about half a mile deep in here. At least the glowing 'EXIT' signs that every room and hallway holds give you confidence that you'll find your way back out, as every time you tried, the museum foyer was just two or three rooms back - if one follows the green arrows...";
 	say "     Almost ready to call off the search after stumbling into the Easter Islands exhibit - again - for the third time, your eyes suddenly notice a sign on the wall. 'Ancient Greece' is shown above a doorway flanked by two tall Doric columns. Hopeful that you've finally found what you're looking for, you hastily make your way to the door and step through it - right into a large chamber that might just belong in an ancient temple. Marble plates cover the floor and walls, shining in an unearthly light that radiates from a large golden throne in the middle of the room and also adding in a slight echo. On it, a majestic-looking woman sits, garbed in a magnificent white tunic with gold embroidery at its edges. She sets down the large pomegranate in her hand on the armrest of the golden throne, then turns her beautiful visage to look at you.";

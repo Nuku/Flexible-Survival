@@ -124,7 +124,8 @@ Snowy Forest Trail is a room. Snowy Forest Trail is northeast of Urban Forest.
 The description of Snowy Forest Trail is "     You're on a narrow trail through the urban forest, in an area of fairly dense growth. Fragments of the buildings formerly occupying this part of the city are few and far between, with trees and other plants forming what seems to be a century-old forest. Interestingly, this part of the woods is a lot cooler than the rest of the city, with some snow covering low-hanging branches and the ground under your feet. Despite this, you don't actually feel uncomfortable, which might actually be a wholly positive result of the nanites. Towards the north, this effect only gets more pronounced - there are white flakes in the air there, falling at a placid pace to settle in a glistening blanket of undisturbed snow.".
 earea of Snowy Forest Trail is "Forest".
 
-Forest Cave Entrance is a room. Forest Cave Entrance is north of Snowy Forest Trail.
+Forest Cave Entrance is a room.
+Forest Cave Entrance is north of Snowy Forest Trail.
 The description of Forest Cave Entrance is "[ForestCaveEntranceDesc]".
 earea of Forest Cave Entrance is "Forest".
 
@@ -140,7 +141,8 @@ to say ForestCaveEntranceDesc:
 Frozen Cave Tunnel is a room. Frozen Cave Tunnel is northeast of Forest Cave Entrance.
 The description of Frozen Cave Tunnel is "     You're in what seems like a natural cave tunnel, leading steadily downwards in a slow curve. Might actually be a spiral, now that you think of it - remembering the part you've already got behind you and what you can see ahead. And you can actually see, despite being underground and in a cave, thanks to the ever-present snow all around you. Each flake has a tiny and dim glow to it, making them whiter than white and creating a beautiful sparkling effect that covers the ground in a smooth layer and has settled into all of the cracks and rough surfaces of the cave walls. Seeing wondrous sights like this makes it hard to remember that you're still in the city sometimes, and that all of this didn't exist just a short while ago.".
 
-Ice Fox's Den is a room. Ice Fox's Den is below Frozen Cave Tunnel.
+Ice Fox's Den is a room.
+Ice Fox's Den is below Frozen Cave Tunnel.
 The description of Ice Fox's Den is "[IceFoxDenDesc]";
 
 to say IceFoxDenDesc:

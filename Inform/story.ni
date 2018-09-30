@@ -5039,7 +5039,7 @@ Include Campus Gym by UrsaOmega.
 Include Carl by Wahn.
 Include Chris by Wahn.
 Include Cindy by Stripes.
-Include Coleen by Sarokcat.
+Include Colleen by Sarokcat.
 Include Corbin by Wahn.
 Include Coura by Wahn.
 Include Daisy by Sarokcat n Verath.
