@@ -53,10 +53,8 @@ to LaborsIntroductionEvent: [Invited to perform the Labors]
 	now TwelveLaborsStage is 1;
 	add "Twelve Labors Quest" to OpenQuests of player;
 	now Labors Introduction is resolved;
-	now Meet the Nemean Lion is active;
 
 Meet the Nemean Lion is a situation.
-Meet the Nemean Lion is inactive.
 Prereq1 of Meet the Nemean Lion is Labors Introduction.
 The level of Meet the Nemean Lion is 30.
 The sarea of Meet the Nemean Lion is "Plains".
