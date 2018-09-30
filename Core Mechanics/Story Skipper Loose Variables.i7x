@@ -3721,12 +3721,6 @@ to NumberListVariableSave:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
 					now NumberListVarValue entry is entry y of campuswander;
-		-- "cepark2list":
-			if the number of entries in cepark2list is not 0:
-				repeat with y running from 1 to the number of entries in cepark2list:
-					choose a blank row in the table of GameNumberLists;
-					now NumberListVarName entry is CurrentVariableName;
-					now NumberListVarValue entry is entry y of cepark2list;
 		-- "Francois_Discovered":
 			if the number of entries in Francois_Discovered is not 0:
 				repeat with y running from 1 to the number of entries in Francois_Discovered:
@@ -7435,7 +7429,6 @@ to VariableNumberListLoad:
 		truncate AlexandraNPC to 0 entries; [cleaning out the old data]
 		truncate bookcollection to 0 entries; [cleaning out the old data]
 		truncate campuswander to 0 entries; [cleaning out the old data]
-		truncate cepark2list to 0 entries; [cleaning out the old data]
 		truncate Francois_Discovered to 0 entries; [cleaning out the old data]
 		truncate Francois_Undiscovered to 0 entries; [cleaning out the old data]
 		truncate leodenlist to 0 entries; [cleaning out the old data]
@@ -7453,8 +7446,6 @@ to VariableNumberListLoad:
 					add NumberListVarValue entry to bookcollection;
 				-- "campuswander":
 					add NumberListVarValue entry to campuswander;
-				-- "cepark2list":
-					add NumberListVarValue entry to cepark2list;
 				-- "Francois_Discovered":
 					add NumberListVarValue entry to Francois_Discovered;
 				-- "Francois_Undiscovered":
