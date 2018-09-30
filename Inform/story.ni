@@ -4658,7 +4658,7 @@ Include Capitol Events by Blue Bishop.
 Include Catapult Encounter by Hellerhound.
 Include Central Library by Stripes.
 Include Consolidated Outside Events by Song.
-Include CEPark by Stripes.
+Include Consolidated Park Events by Song.
 Include Chase by Luneth.
 Include Chance Meetings by Kernog.
 Include Combat Helmet by Nuku Valente.
