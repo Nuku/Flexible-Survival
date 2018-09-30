@@ -74,6 +74,7 @@ The icon of beach overview is Figure of Beach_Overlook_icon.
 
 to say Beach_Overlook_Desc:
 	say "     From the railing at the edge of the platform, you have an exceptional overlook over the whole public beach and beyond.";
+
 Table of GameRoomIDs (continued)
 Object	Name
 Restaurant	"Restaurant"

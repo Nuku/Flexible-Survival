@@ -60,6 +60,7 @@ Section 4 - Fox Hunt (by Kaleem)
 
 Table of GameEventIDs (continued)
 Object	Name
+Groundskeepers Cabin	"Groundskeepers Cabin"
 
 Groundskeepers Cabin is a situation.
 The sarea of Groundskeepers Cabin is "Park".
@@ -73,6 +74,7 @@ Section 6 - Badger Sighting (by Sarokcat)
 
 Table of GameEventIDs (continued)
 Object	Name
+Badger Sighting	"Badger Sighting"
 
 Badger Sighting is a situation.
 The sarea of Badger Sighting is "Park".
@@ -87,6 +89,7 @@ Section 7 - Empty Jeep (by Sarokcat)
 
 Table of GameEventIDs (continued)
 Object	Name
+Empty Jeep	"Empty Jeep"
 
 Empty Jeep is a situation.
 The sarea of Empty Jeep is "Park".
@@ -101,6 +104,7 @@ Section 8 - Small Fire (by Sarokcat)
 
 Table of GameEventIDs (continued)
 Object	Name
+Small Fire	"Small Fire"
 
 Small Fire is a situation.
 The sarea of Small Fire is "Park".
@@ -115,6 +119,7 @@ Section 9 - Torn Vegetation (by Sarokcat)
 
 Table of GameEventIDs (continued)
 Object	Name
+Torn Vegetation	"Torn Vegetation"
 
 Torn Vegetation is a situation.
 The sarea of Torn Vegetation is "Park".
@@ -129,6 +134,7 @@ Section 10 - Abandoned Picnic (by Sarokcat)
 
 Table of GameEventIDs (continued)
 Object	Name
+Abandoned Picnic	"Abandoned Picnic"
 
 Abandoned Picnic is a situation.
 The sarea of Abandoned Picnic is "Park".

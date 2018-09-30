@@ -992,7 +992,6 @@ The level of Badminton One is 0.
 The sarea of Badminton One is "Campus".
 
 instead of going to College Walkway East while (Badminton One is active and Badminton One is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
-instead of going to College Walkway East while ((hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	BadmintonOneEvent;
 

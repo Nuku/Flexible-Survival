@@ -18,6 +18,7 @@ an everyturn rule:
 		change the west exit of Second Floor Male Dorms to Pericles' Room; [connecting the location to the travel room]
 		change the east exit of Pericles' Room to Second Floor Male Dorms; [connecting the location to the travel room]
 		now PericlesRoomConnection is 1; [room connected]
+
 Table of GameEventIDs (continued)
 Object	Name
 Daily Training Session	"Daily Training Session"

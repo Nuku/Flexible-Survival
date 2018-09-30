@@ -16,6 +16,7 @@ an everyturn rule:
 		change the south exit of Jadako's Room to Tenvale College Male Dorms;
 		change the north exit of Tenvale College Male Dorms to Jadako's Room;
 		now JadakoRoomConnection is 1; [make sure that it connects the room only once]
+
 Table of GameEventIDs (continued)
 Object	Name
 Campus Lovers	"Campus Lovers"

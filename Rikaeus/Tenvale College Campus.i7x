@@ -86,6 +86,7 @@ The icon of campus map is Figure of Map_Tenvale_College_icon.
 
 to say Map_Tenvale_College_Desc:
 	say "     A large display board stands proudly at the entrance of the college, showing a map of the expansive grounds of the institution.";
+
 Table of GameRoomIDs (continued)
 Object	Name
 College Walkway East	"College Walkway East"
