@@ -4,6 +4,10 @@ Red Light District by Wahn begins here.
 
 Section 1 - Locations
 
+Table of GameRoomIDs (continued)
+Object	Name
+Entrance to the Red Light District	"Entrance to the Red Light District"
+
 Entrance to the Red Light District is a room. It is fasttravel.
 The earea of Entrance to the Red Light District is "Red".
 The description of Entrance to the Red Light District is "[RedLightDesc]".
@@ -15,7 +19,12 @@ to say RedLightDesc:
 instead of smelling Entrance to the Red Light District:
 	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
 
-East of Entrance to the Red Light District is Boundary Street East.
+Table of GameRoomIDs (continued)
+Object	Name
+Boundary Street East	"Boundary Street East"
+
+Boundary Street East is a room.
+Boundary Street East is east of Entrance to the Red Light District.
 The earea of Boundary Street East is "Red".
 The description of Boundary Street East is "[RedLightBoundaryEastDesc]".
 
@@ -25,8 +34,12 @@ to say RedLightBoundaryEastDesc:
 instead of smelling Boundary Street East:
 	say "     The aroma of fire and ash is ever-present in your nose, so close to the burned chapel. Of course, this doesn't reduce the other scents present, so you can also smell sex, with a musky scent of arousal hanging thick in the air.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Burned-Out Chapel	"Burned-Out Chapel"
+
 Burned-Out Chapel is a room. It is fasttravel.
-East of Boundary Street East is Burned-Out Chapel.
+Burned-Out Chapel is east of Boundary Street East.
 The description of Burned-Out Chapel is "[chapelplacedesc]".
 earea of Burned-Out Chapel is "Red".
 
@@ -43,14 +56,23 @@ to say chapelplacedesc:
 	else if (HP of Elijah is 100): [after the demons had an orgy there]
 		say "     This chapel has had a fire recently, severely damaging its roof and interior. The walls are blackened with soot and there isn't much left of the benches other kindling. Behind a cracked altar, there is a horrible sticky mess of ash and demonic cum. Surprisingly, there are no demons in sight, but you do hear some moans and ominous sounds from several side doors.";
 
-Northeast of Burned-Out Chapel is Sacristy.
+Table of GameRoomIDs (continued)
+Object	Name
+Sacristy	"Sacristy"
+
+Sacristy is a room.
+Sacristy is northeast of Burned-Out Chapel.
 The description of Sacristy is "     This sacristy has been... redecorated recently. You're pretty sure it didn't originally have red silk drapes and a large bed, currently bathed in the light of about a hundred candles. There's a fire going in a brazier with a large stack of bibles beside it to provide additional fuel. In between various dildos and sex toys strewn about on the bed, there's a golden chalice and a few crosses, which got used for the same purpose as the rest, from their sticky state...".
 
 instead of sniffing Sacristy:
 	say "The heavy scent of burned wood hangs in the room, mixed with a trace of blood and [if HP of Elijah is 100]the all-pervading stench of [end if]demonic cum.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Darius's Crib	"Darius's Crib"
 
-Southeast of Boundary Street East is Darius's Crib. It is sleepsafe.
+Darius's Crib is a room.
+Darius's Crib is southeast of Boundary Street East. It is sleepsafe.
 The description of Darius's Crib is "[DariusCribDesc]".
 
 to say DariusCribDesc:
@@ -79,8 +101,12 @@ name	price	object	allowed
 "dalmatian cum"	1	dalmatian cum	true rule
 "dalmatian fur"	2	dalmatian fur	true rule
 
+Table of GameRoomIDs (continued)
+Object	Name
+Boundary Street West	"Boundary Street West"
 
-West of Entrance to the Red Light District is Boundary Street West.
+Boundary Street West is a room.
+Boundary Street West is west of Entrance to the Red Light District.
 The earea of Boundary Street West is "Red".
 The description of Boundary Street West is "[RedLightBoundaryWestDesc]".
 
@@ -90,6 +116,6 @@ to say RedLightBoundaryWestDesc:
 instead of smelling Boundary Street West:
 	say "     This place smells very strongly of sex, with a musky scent of arousal hanging thick in the air. This neighborhood was clearly struck hard by the infection, being particularly vulnerable. The scents of several lustful creatures waft by your nose, so strong that their origins can't be far off. You catch the scent of what you guess to be [one of]a hyper-masculine creature[or]some kind of feline creature[or]a strong latex source[or]a dark and powerful female[or]arousing pollen[or]a large marsupial[or]an arousing perfume[or]a herm and cheap sex[at random], making your head swim a bit before you shake the sensation off.";
 
-Northwest of Boundary Street West is Porn Store.
+Porn Store is northwest of Boundary Street West.
 
 Red Light District ends here.

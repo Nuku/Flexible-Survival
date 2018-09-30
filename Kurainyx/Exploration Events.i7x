@@ -6,6 +6,10 @@ Version 1 of Exploration Events by Kurainyx begins here.
 
 Section 1 - Capitol
 
+Table of GameEventIDs (continued)
+Object	Name
+PewterPet	"PewterPet"
+
 PewterPet is a situation.
 The sarea of PewterPet is "Capitol".
 

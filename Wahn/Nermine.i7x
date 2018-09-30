@@ -70,6 +70,10 @@ NermineBukkakeTurn is a number that varies. NermineBukkakeTurn is usually 10000.
 
 Section 1 - The Mysterious Shop
 
+Table of GameRoomIDs (continued)
+Object	Name
+Mysterious Shop	"Mysterious Shop"
+
 The Mysterious Shop is a room. The Mysterious Shop Entrance is a door. It is south of The Mysterious Shop and north of Mall West Wing. The Mysterious Shop Entrance is open.
 
 The description of The Mysterious Shop Entrance is "     People in here keep giving one of the stores on the north side strange looks - and you can see why as you inspect it closer. The [bold type]mysterious shop[roman type] does not seem to... belong there. It is as if someone transplanted it to this location from an old-timey street with brick walls, taking a foot or two of the walls around with it to kind of merge and meld with the normal mall side walls. The wood-framed big glass window allows you a view into a store that looks over-stuffed with all sorts of strange and unusual items.".

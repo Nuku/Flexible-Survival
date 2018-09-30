@@ -5,6 +5,10 @@ Dmitri the Peacock by Aureas Gigas begins here.
 [  1: first event (sexual massage) completed                       ]
 [ 99: stopped the charmer cold                                     ]
 
+Table of GameEventIDs (continued)
+Object	Name
+Captivating Plumage	"Captivating Plumage"
+
 Captivating Plumage is a situation.
 The sarea of Captivating Plumage is "High".
 Peacocked is a number that varies. Peacocked is usually 0.
@@ -147,6 +151,10 @@ Instead of resolving a Captivating Plumage:
 		now peacocked is 8;
 		now Resolution of Captivating Plumage is 8;
 		now Captivating Plumage is resolved;
+
+Table of GameRoomIDs (continued)
+Object	Name
+Argos Antiques	"Argos Antiques"
 
 Argos Antiques is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Argos Antiques is "[argosantdesc]".

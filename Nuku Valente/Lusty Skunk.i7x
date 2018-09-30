@@ -6,6 +6,10 @@ Version 2 of Lusty Skunk by Nuku Valente begins here.
 
 Section 1 - The Situation
 
+Table of GameEventIDs (continued)
+Object	Name
+Lusty Skunk	"Lusty Skunk"
+
 Lusty Skunk is a situation.
 The sarea of Lusty Skunk is "Forest".
 

@@ -14,6 +14,10 @@ Version 2 of Consolidated Outside Events by Song begins here.
 
 Section 1 - Grumpy Old Men (by Kaleem)
 
+Table of GameEventIDs (continued)
+Object	Name
+Grumpy Old Men	"Grumpy Old Men"
+
 Grumpy Old Men is a situation.
 The sarea of Grumpy Old Men is "Outside".
 
@@ -32,6 +36,10 @@ Instead of resolving Grumpy Old Men:
 
 Section 2 - Fleeing Minotaur (by Kaleem)
 
+Table of GameEventIDs (continued)
+Object	Name
+Fleeing Minotaur	"Fleeing Minotaur"
+
 Fleeing Minotaur is a situation.
 The sarea of Fleeing Minotaur is "Outside".
 
@@ -47,6 +55,10 @@ Instead of resolving Fleeing Minotaur:
 
 
 Section 3 - Scavenging Dalmatian (by Kaleem)
+
+Table of GameEventIDs (continued)
+Object	Name
+Scavenging Dalmatian	"Scavenging Dalmation"
 
 Scavenging Dalmatian is a situation.
 The sarea of Scavenging Dalmatian is "Outside".
@@ -92,6 +104,10 @@ Instead of resolving Scavenging Dalmatian:
 
 Section 4 - Captured Wyvern (by Kaleem)
 
+Table of GameEventIDs (continued)
+Object	Name
+Captured Wyvern	"Captured Wyvern"
+
 Captured Wyvern is a situation.
 The sarea of Captured Wyvern is "Outside".
 
@@ -129,6 +145,10 @@ Instead of resolving Captured Wyvern:
 
 Section 5 - Secrets (by Kaleem)
 
+Table of GameEventIDs (continued)
+Object	Name
+Secrets	"Secrets"
+
 Secrets is a situation.
 The sarea of Secrets is "Outside".
 
@@ -146,6 +166,10 @@ Instead of resolving Secrets:
 
 Section 6 - School Spirit (by hiccup)
 
+Table of GameEventIDs (continued)
+Object	Name
+School Spirit	"School Spirit"
+
 School Spirit is a situation.
 The sarea of School Spirit is "Outside".
 
@@ -159,6 +183,10 @@ Instead of resolving School Spirit:
 
 
 Section 7 - Another Survivor (by hiccup)
+
+Table of GameEventIDs (continued)
+Object	Name
+Another Survivor	"Another Survivor"
 
 Another Survivor is a situation.
 The sarea of Another Survivor is "Outside".
@@ -174,6 +202,10 @@ Instead of resolving Another Survivor:
 
 
 Section 8 - Masturbating Fox (by hiccup)
+
+Table of GameEventIDs (continued)
+Object	Name
+Masturbating Fox	"Masturbating Fox"
 
 Masturbating Fox is a situation.
 The sarea of Masturbating Fox is "Outside".
@@ -192,6 +224,10 @@ Instead of resolving Masturbating Fox:
 
 Section 9 - Giant Egg (by hiccup)
 
+Table of GameEventIDs (continued)
+Object	Name
+Giant Egg	"Giant Egg"
+
 Giant Egg is a situation.
 The sarea of Giant Egg is "Outside".
 
@@ -202,6 +238,10 @@ Instead of resolving Giant Egg:
 
 
 Section 10 - Ice Cream Truck (by Sarokcat)
+
+Table of GameEventIDs (continued)
+Object	Name
+Ice Cream Truck	"Ice Cream Truck"
 
 Ice Cream Truck is a situation.
 The sarea of Ice Cream Truck is "Outside".
@@ -302,6 +342,10 @@ Instead of resolving Ice Cream Truck:
 
 Section 11 - Wyvern Flight (by Sarokcat)
 
+Table of GameEventIDs (continued)
+Object	Name
+Wyvern Flight	"Wyvern Flight"
+
 Wyvern Flight is a situation.
 The sarea of Wyvern Flight is "Outside".
 
@@ -314,6 +358,10 @@ Instead of resolving Wyvern Flight:
 
 
 Section 12 - Strange Preacher (by Sarokcat)
+
+Table of GameEventIDs (continued)
+Object	Name
+Strange Preacher	"Strange Preacher"
 
 Strange Preacher is a situation.
 The sarea of Strange Preacher is "Outside".
@@ -330,6 +378,10 @@ Instead of resolving Strange Preacher:
 
 Section 13 - Hyena Kill (by Hellerhound)
 
+Table of GameEventIDs (continued)
+Object	Name
+Hyena Kill	"Hyena Kill"
+
 Hyena Kill is a situation.
 The sarea of Hyena Kill is "Outside".
 
@@ -342,6 +394,10 @@ Instead of resolving Hyena Kill:
 
 
 Section 14 - Panther Trap (by Hellerhound)
+
+Table of GameEventIDs (continued)
+Object	Name
+Panther Trap	"Panther Trap"
 
 Panther Trap is a situation.
 The sarea of Panther Trap is "Outside".
@@ -391,6 +447,10 @@ Instead of resolving Panther Trap:
 
 
 Section 15 - CatsandDogs (by Stripes)
+
+Table of GameEventIDs (continued)
+Object	Name
+CatsandDogs	"CatsandDogs"
 
 CatsandDogs is a situation.
 The sarea of CatsandDogs is "Outside".

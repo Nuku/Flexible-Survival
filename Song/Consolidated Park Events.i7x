@@ -12,6 +12,10 @@ Version 2 of Consolidated Park Events by Song begins here.
 
 Section 1 - Strange Sight (by Kaleem)
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange Sight	"Strange Sight"
+
 Strange Sight is a situation.
 The sarea of Strange Sight is "Park".
 
@@ -25,6 +29,10 @@ Instead of resolving Strange Sight:
 
 Section 2 - Anxious Soldiers (by Kaleem)
 
+Table of GameEventIDs (continued)
+Object	Name
+Anxious Soldiers	"Anxious Soldiers"
+
 Anxious Soldiers is a situation.
 The sarea of Anxious Soldiers is "Park".
 
@@ -35,16 +43,23 @@ Instead of resolving Anxious Soldiers:
 
 Section 3 - Mysterious Girl (by Kaleem)
 
+Table of GameEventIDs (continued)
+Object	Name
+Mysterious Girl	"Mysterious Girl"
+
 Mysterious Girl is a situation.
 The sarea of Mysterious Girl is "Park".
 
 Instead of resolving Mysterious Girl:
-	say "     While taking a quick break in the park, you find yourself stumbling over a peculiar sight. Not exactly sure of what you're seeing, you gaze at a young girl lying down in slumber beside a large pine tree. This in itself wouldn't have been so mysterious were it not in fact that the female in question is surrounded by several feral wolves, all of which are now looking at you with evil intent in their darkened eyes. Not exactly sure what's going on, you take several tentative steps back from the assembled pack of wolves, just in time to hear the girl mewl and then sneeze somewhat softly in her sleep. Most of the wolves flip their heads around to look at the (probably seventeen-year-old) human female, though you do notice that their pointed ears are still aimed in your direction. The young woman, who you just now happen to really get a better look at, seems to be almost completely human save for a few key features. With a slightly pale complexion, thin limbs for arms and legs, a pair of furry wolf ears placed neatly up onto her head, and a gothic-looking dress on, you have to wonder what's up with this bizarre girl and why she's not being instantly violated by the feral creatures sitting around her.";
+	say "     While taking a quick break in the park, you find yourself stumbling over a peculiar sight. Not exactly sure of what you're seeing, you gaze at a young girl lying down in slumber beside a large pine tree. This in itself wouldn't have been so mysterious were it not in fact that the female in question is surrounded by several feral wolves, all of whom were now looking at you with evil intent in their darkened eyes. Not exactly sure what's going on, you take several tentative steps back from the assembled pack of wolves, just in time to hear the girl mewl and then sneeze somewhat softly in her sleep. Most of the wolves flip their heads around to look at the (probably seventeen-year-old) human female, though you do notice that their pointed ears are still aimed in your direction. The young woman, who you just now happen to really get a better look at, seems to be almost completely human save for a few key features. With a slightly pale complexion, thin limbs for arms and legs, a pair of furry wolf ears placed neatly up onto her head, and a gothic-looking dress on, you have to wonder what's up with this bizarre girl and why she's not being instantly violated by the feral creatures sitting around her.";
 	say "     Interestingly enough, your answer comes when one of the wolves, a shaggy, brown-furred thing that looks as though it hadn't seen water in days, shuffles itself up and over so that it can dip its snout under one of the female's prone hands. Said hand slowly starts to pet the beast's snout, and you feel as though there's something very [italic type]off[roman type] about this kid. When bleary eyes open with several sleepy blinks, you feel your blood freeze as crimson eyes turn to regard you with a somewhat confused look. There's just too much age and wisdom in those orbs for the girl to be human, and you quickly feel the need to leave. Swallowing thickly, you nod to the teenager, who stares at you impassively, then back away so that you can turn and run. Moving away on fast feet, you're left wonder who or what that young girl was.";
 	now Mysterious Girl is resolved;
 
 
-Section 4 - Groundskeepers Cabin (by Sarokcat)
+Section 4 - Fox Hunt (by Kaleem)
+
+Table of GameEventIDs (continued)
+Object	Name
 
 Groundskeepers Cabin is a situation.
 The sarea of Groundskeepers Cabin is "Park".
@@ -54,7 +69,10 @@ Instead of resolving Groundskeepers Cabin:
 	now Groundskeepers Cabin is resolved;
 
 
-Section 5 - Badger Sighting (by Sarokcat)
+Section 6 - Badger Sighting (by Sarokcat)
+
+Table of GameEventIDs (continued)
+Object	Name
 
 Badger Sighting is a situation.
 The sarea of Badger Sighting is "Park".
@@ -65,7 +83,10 @@ Instead of resolving Badger Sighting:
 	now Badger Sighting is resolved;
 
 
-Section 6 - Empty Jeep (by Sarokcat)
+Section 7 - Empty Jeep (by Sarokcat)
+
+Table of GameEventIDs (continued)
+Object	Name
 
 Empty Jeep is a situation.
 The sarea of Empty Jeep is "Park".
@@ -76,7 +97,10 @@ Instead of resolving Empty Jeep:
 	now Empty Jeep is resolved;
 
 
-Section 7 - Small Fire (by Sarokcat)
+Section 8 - Small Fire (by Sarokcat)
+
+Table of GameEventIDs (continued)
+Object	Name
 
 Small Fire is a situation.
 The sarea of Small Fire is "Park".
@@ -87,7 +111,10 @@ Instead of resolving Small Fire:
 	now Small Fire is resolved;
 
 
-Section 8 - Torn Vegetation (by Sarokcat)
+Section 9 - Torn Vegetation (by Sarokcat)
+
+Table of GameEventIDs (continued)
+Object	Name
 
 Torn Vegetation is a situation.
 The sarea of Torn Vegetation is "Park".
@@ -98,7 +125,10 @@ Instead of resolving Torn Vegetation:
 	now Torn Vegetation is resolved;
 
 
-Section 9 - Abandoned Picnic (by Sarokcat)
+Section 10 - Abandoned Picnic (by Sarokcat)
+
+Table of GameEventIDs (continued)
+Object	Name
 
 Abandoned Picnic is a situation.
 The sarea of Abandoned Picnic is "Park".

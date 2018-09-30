@@ -23,6 +23,10 @@ Version 2 of Gryphons Plot by Shay begins here.
 
 GryphPlotTracking is a number that varies.
 
+Table of GameEventIDs (continued)
+Object	Name
+Gryphon's Plot	"Gryphon's Plot"
+
 Gryphon's Plot is a situation. The level of Gryphon's Plot is 2.
 the sarea of Gryphon's Plot is "Outside".
 

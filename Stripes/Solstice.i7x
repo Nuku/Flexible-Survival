@@ -13,6 +13,10 @@ Version 2 of Solstice by Stripes begins here.
 
 Section 1 - Treasure Hunting
 
+Table of GameEventIDs (continued)
+Object	Name
+Adventurer	"Adventurer"
+
 Adventurer is a situation. The level of Adventurer is 5.
 The sarea of Adventurer is "Outside".
 Adventurer is inactive.
@@ -89,6 +93,9 @@ Instead of resolving Adventurer:
 		say "     As you wander through the city, you spot the flash of silver tails at the edge of a rooftop. You rush up the building's fire escape, but by the time you make it there, the roof is empty.";
 		now Adventurer is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Onyx Crow	"Onyx Crow"
 
 Onyx Crow is a situation. The level of Onyx Crow is 5.
 The sarea of Onyx Crow is "Museum".

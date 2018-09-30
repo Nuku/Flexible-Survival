@@ -30,6 +30,10 @@ bcuntethered is a number that varies. [Determines whether or not the Bouncy Cast
 bcending is a number that varies. [Determines bad ends]
 [Previously included dolcastleturn, which elapses 1 hour (turn/3) per empty dolphin suit checked. Since this was unrealistically long for something that would take a minute to do at most, I've removed the stat entirely]
 
+Table of GameEventIDs (continued)
+Object	Name
+Snared Vixen	"Snared Vixen"
+
 Snared Vixen is a situation. The level of Snared Vixen is 5.
 the sarea of Snared Vixen is "Beach".
 
@@ -163,56 +167,131 @@ bcduofightlost is a truth state that varies. bcduofightlost is usually false.
 bcduofightfled is a truth state that varies. bcduofightfled is usually false.
 bcseenthroneroom is a truth state that varies. bcseenthroneroom is usually false.
 
+Table of GameRoomIDs (continued)
+Object	Name
+Bouncy Castle	"Bouncy Castle"
+
 The Bouncy Castle is a room. Bouncy Castle is fasttravel. Bouncy Castle is unknown. Bouncy Castle is private.
 The description of Bouncy Castle is "[bcentrance]".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Fencing Room	"Fencing Room"
 
 The Fencing Room is a room. The Fencing Room is east of Bouncy Castle.
 The description of Fencing Room is "[bcfencingroom]".
 
+Table of GameRoomIDs (continued)
+Object	Name
+Bouncing Play Room	"Bouncing Play Room"
+
 The Bouncing Play Room is a room. The Bouncing Play Room is south of Fencing Room. The Bouncing Play Room is east of Ball Pit Room.
 The description of Bouncing Play Room is "[bcplayroom]".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Ball Pit Room	"Ball Pit Room"
 
 The Ball Pit Room is a room. The Ball Pit Room is south of Toy Room.
 The description of Ball Pit Room is "[bcballpitroom]".
 
+Table of GameRoomIDs (continued)
+Object	Name
+Toy Room	"Toy Room"
+
 The Toy Room is a room. The Toy Room is west of Bouncy Castle.
 The description of Toy Room is "[bctoyroom]".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Punching Pillars	"Punching Pillars"
 
 The Punching Pillars is a room. The Punching Pillars is west of Ball Pit Room.
 The description of Punching Pillars is "[bcpunchingpillars]".
 
+Table of GameRoomIDs (continued)
+Object	Name
+Knight's Chambers	"Knight's Chambers"
+
 The Knight's Chambers is a room. The Knight's Chambers is north of Punching Pillars.
 The description of Knight's Chambers is "[bcknightschambers]".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Great Hall	"Great Hall"
 
 The Great Hall is a room. The Great Hall is east of Bouncing Play Room.
 The description of Great Hall is "[bcgreathall]".
 
+Table of GameRoomIDs (continued)
+Object	Name
+King's Chambers	"King's Chambers"
+
 The King's Chambers is a room. The King's Chambers is north of Great Hall.
 The description of King's Chambers is "[bckingschamber]".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Lower Tower	"Lower Tower"
 
 The Lower Tower is a room. The Lower Tower is southeast of Ball Pit Room.
 The description of Lower Tower is "[bclowertower]".
 
-The Upper Tower is a room. The Upper Tower is up of Lower Tower.
+Table of GameRoomIDs (continued)
+Object	Name
+Upper Tower	"Upper Tower"
+
+The Upper Tower is a room. The Upper Tower is above Lower Tower.
 The description of Upper Tower is "[bcuppertower]".
 
-The Tower Turret is a room. The Tower Turret is up of Upper Tower.
+Table of GameRoomIDs (continued)
+Object	Name
+Tower Turret	"Tower Turret"
+
+The Tower Turret is a room. The Tower Turret is above Upper Tower.
 The description of Tower Turret is "[bctowerturret]".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Upper Hall	"Upper Hall"
 
 The Upper Hall is a room. The Upper Hall is north of Upper Tower.
 The description of Upper Hall is "[bcupperhall]".
 
+Table of GameRoomIDs (continued)
+Object	Name
+Western Parapets	"Western Parapets"
+
 The Western Parapets is a room. The Western Parapets is west from Upper Hall.
 The description of Western Parapets is "[bcwestparapets]".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Eastern Parapets	"Eastern Parapets"
 
 The Eastern Parapets is a room. The Eastern Parapets is east from Upper Hall.
 The description of Eastern Parapets is "[bceastparapets]".
 
+Table of GameRoomIDs (continued)
+Object	Name
+Castle Throne Room	"Castle Throne Room"
+
 The Castle Throne Room is a room. The Castle Throne Room is northeast of Western Parapets. The Castle Throne Room is northwest of Eastern Parapets.
 The description of Castle Throne Room is "[bcthroneroom]".
 
-BouncyCastleExit is a room. "Leaving the bouncy castle."  BouncyCastleSlideExit is east of Eastern Parapets. BouncyCastleSlideExit is west of Western Parapets. BouncyCastleExit is north of Bouncy Castle.
+Table of GameRoomIDs (continued)
+Object	Name
+BouncyCastleExit	"BouncyCastleExit"
 
+BouncyCastleExit is a room. "Leaving the bouncy castle."
+BouncyCastleExit is north of Bouncy Castle.
+
+Table of GameRoomIDs (continued)
+Object	Name
+BouncyCastleSlideExit	"BouncyCastleSlideExit"
+
+BouncyCastleSlideExit is a room.
+BouncyCastleSlideExit is east of Eastern Parapets. BouncyCastleSlideExit is west of Western Parapets.
 
 the scent of Bouncy Castle is "This place smells of rubber and the ocean.".
 

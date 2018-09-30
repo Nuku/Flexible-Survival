@@ -40,6 +40,10 @@ an everyturn rule:
 
 Section 1 - Room Declaration
 
+Table of GameRoomIDs (continued)
+Object	Name
+Julian's Room	"Julian's Room"
+
 Julian's Room is a room.
 The description of Julian's Room is "[JuliansRoomDesc]".
 

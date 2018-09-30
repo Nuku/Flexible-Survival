@@ -20,6 +20,10 @@ Serenity	"Serenity"
 
 Serenity is a woman.
 
+Table of GameEventIDs (continued)
+Object	Name
+Naga Hybrid	"Naga Hybrid"
+
 Naga Hybrid is a situation.
 The sarea of Naga Hybrid is "Plains".
 
@@ -146,6 +150,9 @@ to say PlainsSerenityHand:		[Handjob for player if they had food or water]
 
 Section 2 - Large Cave
 
+Table of GameEventIDs (continued)
+Object	Name
+Large Cave	"Large Cave"
 
 Large Cave is a situation.
 Large Cave is inactive.

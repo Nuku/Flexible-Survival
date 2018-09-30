@@ -21,6 +21,10 @@ Section 1 - Event encountering Oliver
 
 OliverRelationship is a number that varies.
 
+Table of GameEventIDs (continued)
+Object	Name
+Leather Daddy Kitty	"Leather Daddy Kitty"
+
 Leather Daddy Kitty is a situation. The level of Leather Daddy Kitty is 2.
 The sarea of Leather Daddy Kitty is "high".
 when play begins:
@@ -55,6 +59,10 @@ Instead of resolving a Leather Daddy Kitty:
 			now Leather Daddy Kitty is resolved;
 
 Section 2 - Declaring the Room and Oliver
+
+Table of GameRoomIDs (continued)
+Object	Name
+Kitty Sex Dungeon	"Kitty Sex Dungeon"
 
 Kitty Sex Dungeon is a room. It is private.
 The description of Kitty Sex Dungeon is "[DungeonDesc]"

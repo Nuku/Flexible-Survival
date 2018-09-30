@@ -707,6 +707,10 @@ to say testosterone pill use:
 
 Section 8 - Monster Locations
 
+Table of GameRoomIDs (continued)
+Object	Name
+Butterfly Grove	"Butterfly Grove"
+
 Butterfly Grove is a room. "[butterfly grove scene]". It is unknown. It is fasttravel. It is private.
 
 to say butterfly grove scene:
@@ -945,6 +949,9 @@ After examining butterfly grove:
 	say "You head home.";
 	move player to Grey Abbey Library;
 
+Table of GameRoomIDs (continued)
+Object	Name
+Lingerie Store	"Lingerie Store"
 
 Lingerie Store is a room. "[lingerie store scene]". It is unknown. It is fasttravel. It is private.
 

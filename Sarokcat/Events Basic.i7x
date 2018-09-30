@@ -46,7 +46,7 @@ Instead of resolving a Satyr party:
 	now Satyr party is resolved;
 
 Sphinx sighting is a situation.
-Museumsphinx is a number that varies.[@Tag:NotSaved]
+Museumsphinx is a number that varies.
 
 Instead of resolving a Sphinx sighting:
 	say "Several of your scouts return from their patrols and report with some excitement having spotted a strange leonine beast with the head of a woman and the wings of a great bird soaring across the sky. Wracking your brain, you think you have heard of something like that before, and after consulting with the Nerd you come to the conclusion that the strange beast is something called a Sphinx, and that they are said to be very knowledgeable creatures. Deciding your tribe could use a bit more knowledge on occasion, and that if nothing else, this sphinx like creature sounds like it would make a lovely new tribe member, you order your scouts to keep an eye out for the beast as they go about their patrols. You smile as you think of what fun you could have with a beast like that, and hope that your scouts will be able to find the beast, or even more importantly, the beasts lair, sometime soon...";
@@ -78,7 +78,7 @@ Instead of resolving a Kinkysextoys:
 	Now Kinkysextoys is resolved;
 
 Ratpack is a situation.
-Mallratsighting is a number that varies.[@Tag:NotSaved]
+Mallratsighting is a number that varies.
 
 Instead of resolving a Ratpack:
 	say "Your forages return from wandering the city, only to report that several areas have already been picked clean by a group of scavengers with long ratlike tails, and slightly ratlike looks. You vaguely recall hearing about a group of rats In the area that managed to preserve a decent amount of territory from the other infected, and order your foragers to be careful not to provoke the rats while scavenging the area. Thinking about the ratlike creatures you smile as you realize that finding them could be very beneficial to your tribe, especially if they are willing to trade, and if they are hostile well... you are sure they will make lovely lusty little tribe members for you to breed...";
@@ -106,7 +106,7 @@ Instead of resolving an Impromptu orgy:
 	Increase the morale of tribe of player by 10;
 
 Thelonesurvivor is a situation.
-Survivorhunting is a number that varies.[@Tag:NotSaved]
+Survivorhunting is a number that varies.
 
 Instead of resolving Thelonesurvivor:
 	say "One of your tribe members reports a strange encounter with an untransformed human wandering the city, you listen eagerly as they describe their surprising find, and the subsequent fight with the survivor. Apparently the human was hiding in some kind of bunker throughout the changes in the city, and has just now been forced out into the city to try to recover enough food and water to survive. You grin as you realize that while the human managed to get away this time, from the sounds of things, your tribe member managed to infect them with a little bit of your species strain of the infection, giving you a head start on the other species in the area on making this lone survivor into a nice and productive member of your own tribe! You give the orders for your scouts and warriors to be on the lookout for this wandering human, as they are sure to show themselves again sometime soon in their quest for supplies, and while it may take several encounters, you are sure if you keep trying you will manage to fuck any resistance they might have to the idea right out of them...";

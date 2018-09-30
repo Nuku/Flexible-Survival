@@ -24,6 +24,10 @@ to OttoQuestLog:
 
 Section 1 - Room Declaration
 
+Table of GameRoomIDs (continued)
+Object	Name
+Otto's Apartment	"Otto's Apartment"
+
 Otto's Apartment is a room.
 The description of Otto's Apartment is "[OttosApartmentDesc]".
 
@@ -80,6 +84,10 @@ Section 4 - Sex
 
 Section 5 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Wounded Civilian	"Wounded Civilian"
+
 Wounded Civilian is a situation.
 The level of Wounded Civilian is 0.
 The sarea of Wounded Civilian is "Outside".
@@ -98,6 +106,10 @@ to WoundedCivilianEvent: [Meet Otto Fuchs]
 	now hp of Otto is 1;
 	add "Otto Quest" to OpenQuests of player;
 	now Wounded Civilian is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Doctor & Soldier	"Doctor & Soldier"
 
 Doctor & Soldier is a situation.
 Prereq1 of Doctor & Soldier is Wounded Civilian.
@@ -140,6 +152,10 @@ to DoctorandSoldierEvent: [Otto saves a soldier's life]
 	say "     The doctor turns to you and shakes your hand. 'You seem to turn up when things go pear-shaped, don't you? Almost as if you know when I'll need help. Thank you, hopefully I'll see you again under better circumstances next time.' The words seem foreboding after the tiger's request to him. Bidding them goodbye, you walk away down the street. Unseen by you, the crocodile and the tiger stonily escort Otto into his house and close the door behind themselves.";
 	now hp of Otto is 2;
 	now Doctor & Soldier is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Doctor Through the City	"Doctor Through the City"
 
 Doctor Through the City is a situation.
 Prereq1 of Doctor Through the City is Doctor & Soldier.

@@ -4,6 +4,10 @@ Kitsune by Kaleem mcintyre begins here.
 
 Section 1 - Strange Fox
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange Fox	"Strange Fox"
+
 Strange Fox is a situation.
 KTP is a number that varies.
 
@@ -112,6 +116,10 @@ star bell is a grab object. It is part of the player. It is not temporary.
 
 instead of sniffing star bell:
 	say "The smell of sweet dreams fills the bell and you as well as you hold it close to your nose.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Strange Bell	"Strange Bell"
 
 Strange Bell is a situation.
 Strange Bell is inactive.

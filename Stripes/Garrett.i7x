@@ -4,6 +4,10 @@ Version 1 of Garrett by Stripes begins here.
 
 Section 0 - Related Scavevents	[Created by Wahn - Transposed from Scavevents]
 
+Table of GameEventIDs (continued)
+Object	Name
+Gryphon Milkman	"Gryphon Milkman"
+
 Gryphon Milkman is a scavevent.
 The sarea of Gryphon Milkman is "Outside".
 when play begins:
@@ -18,6 +22,9 @@ Instead of resolving a Gryphon Milkman:
 	increase carried of gryphon milk by 1;
 	now Gryphon Milkman is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Free Milk	"Free Milk"
 
 Free Milk is a scavevent.
 The sarea of Free Milk is "Outside".
@@ -30,6 +37,9 @@ Instead of resolving a Free Milk:
 	increase carried of gryphon milk by 1;
 	now Free Milk is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Abandoned Milk	"Abandoned Milk"
 
 Abandoned Milk is a scavevent.
 The sarea of Abandoned Milk is "Outside".

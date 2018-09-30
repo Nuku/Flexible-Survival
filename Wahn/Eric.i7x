@@ -133,6 +133,10 @@ lastRaneEricInteraction is a number that varies.
 
 Section 1 - Meeting Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Barricaded Lockerroom	"Barricaded Lockerroom"
+
 Barricaded Lockerroom is a situation. The level of Barricaded Lockerroom is 8.
 The sarea of Barricaded Lockerroom is "Campus".
 when play begins:
@@ -166,6 +170,10 @@ Instead of resolving a Barricaded Lockerroom:
 		say "     Deciding not to bother with the crazed fellow further, you head off before anything else notices you poking around.";
 		now Resolution of Barricaded Lockerroom is 99; [disinterest]
 		now Barricaded Lockerroom is resolved;
+
+Table of GameRoomIDs (continued)
+Object	Name
+Sports Arena Lockerroom	"Sports Arena Lockerroom"
 
 Sports Arena Lockerroom is a room. It is fasttravel. It is private.
 The description of Sports Arena Lockerroom is "[lroomdesc]".

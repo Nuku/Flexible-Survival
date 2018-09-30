@@ -42,6 +42,10 @@ Version 3 of Hadiya by Stripes begins here.
 
 Section 1 - The Situation
 
+Table of GameEventIDs (continued)
+Object	Name
+Annoyed Hyena	"Annoyed Hyena"
+
 Annoyed Hyena is a situation.
 The sarea of Annoyed Hyena is "Junkyard".
 when play begins:
@@ -61,6 +65,10 @@ Instead of Resolving a Annoyed Hyena:
 
 
 Section 2 - Hyena Shack
+
+Table of GameRoomIDs (continued)
+Object	Name
+Hyena Shack	"Hyena Shack"
 
 Hyena Shack is a room. It is fasttravel. It is private.
 
@@ -271,6 +279,10 @@ to say hadiya_gobby_3somes:
 
 
 Section 5 - Hadiya's Guitar
+
+Table of GameEventIDs (continued)
+Object	Name
+Goblin Thief	"Goblin Thief"
 
 Goblin Thief is a situation. Goblin Thief is inactive.
 The sarea of Goblin Thief is "Junkyard".

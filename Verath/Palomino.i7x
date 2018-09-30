@@ -6,6 +6,10 @@ Version 2 of Palomino by Verath begins here.
 
 Section 1 - The Palomino Club
 
+Table of GameRoomIDs (continued)
+Object	Name
+PALOMINO	"PALOMINO"
+
 The Palomino is a room. It is fasttravel.
 The earea of The Palomino is "Outside".
 

@@ -5,8 +5,12 @@ Version 1 of Tanuki by Nuku Valente begins here.
 
 Section 1 - The Situation
 
+Table of GameRoomIDs (continued)
+Object	Name
+Shinto Shrine	"Shinto Shrine"
+
 Shinto Shrine is a room. "How odd for an American city. A shinto shrine lays nestled in a small bamboo forest in this part of the park, tucked just off a narrow gravel trail and looking reasonably well kept. It is made of stone and features a number of carved pillars holding up a typically Japanese roof, gently curved and crowned by forked roof finials. In the midst of the structure, a large bronze mirror disc rests on an elaborate half-circular stand. There is a small box for donations, and a miniature iron mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
-Northwest of Park Trail is Shinto Shrine.
+Shinto Shrine is northwest of Park Trail.
 
 instead of sniffing Shinto Shrine:
 	say "The shrine smells faintly of cherry blossoms and spring. The scent puts you at ease.";

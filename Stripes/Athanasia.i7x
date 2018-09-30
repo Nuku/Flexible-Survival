@@ -4,6 +4,10 @@ Version 4 of Athanasia by Stripes begins here.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Captured Bird	"Captured Bird"
+
 Captured Bird is a situation. The level of Captured Bird is 3.
 
 when play begins:
@@ -45,6 +49,9 @@ Instead of resolving a Captured Bird:
 		now Resolution of Captured Bird is 99;	[Did not try to save phoenix]
 	now Captured Bird is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+FireAndIce	"FireAndIce"
 
 FireAndIce is a situation. It is inactive. The level of FireAndIce is 6.
 
@@ -89,6 +96,10 @@ instead of conversing the Nermine while phoenix egg is owned and shownermine of 
 
 
 Section 3 - The Volcanic Cave
+
+Table of GameRoomIDs (continued)
+Object	Name
+Volcanic Cave	"Volcanic Cave"
 
 Volcanic Cave is a room. "     Partway down the volcanic crater, this cave is filled with heat from the lava further down[if HP of Athanasia >= 5]. The cave is just as hot as before, but with Athanasia here it seems more bearable and only a mild inconvenience[else]. You are hot and sweating, but managing to cope for the moment[end if]. It seems the passage this cave leads into goes much deeper, but the eruption has blocked it off. The cave contains a few open pools of magma, though the air is a little clearer of noxious gasses.".
 down of A Volcanic Crater is Volcanic Cave.

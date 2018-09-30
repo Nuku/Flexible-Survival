@@ -2,6 +2,10 @@ Dog House by Kaleem mcintyre begins here.
 
 Section 1 - The Dog House
 
+Table of GameEventIDs (continued)
+Object	Name
+DogHouse	"DogHouse"
+
 The DogHouse is a situation.
 DogHouse is inactive.
 Fin is a number that varies.

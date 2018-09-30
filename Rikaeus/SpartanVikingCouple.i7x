@@ -70,6 +70,10 @@ VikingWar is a number that varies.
 VikingSpartanWar is a number that varies.
 WarLossCounter is a number that varies.
 
+Table of GameEventIDs (continued)
+Object	Name
+War Declaration	"War Declaration"
+
 War Declaration is a situation.
 The sarea of War Declaration is "Nowhere".
 
@@ -100,6 +104,10 @@ to FirstVikingWarEvent:
 	now VikingWar is turns;
 	now War Declaration is resolved;
 	now Assault On The Gym is active;
+
+Table of GameEventIDs (continued)
+Object	Name
+Assault On The Gym	"Assault On The Gym"
 
 Assault On The Gym is a situation.
 Assault On The Gym is inactive.
@@ -154,6 +162,10 @@ to SecondVikingWarEvent:
 			now VikingWar is turns;
 			now Assault On The Gym is resolved;
 			now Raid On The Fountain is active;
+
+Table of GameEventIDs (continued)
+Object	Name
+Raid On The Fountain	"Raid On The Fountain"
 
 Raid On The Fountain is a situation.
 Raid On The Fountain is inactive.
@@ -213,6 +225,10 @@ to ThirdVikingWarEvent:
 			now Siege Of The Belltower is active;
 			now VikingWar is turns;
 
+Table of GameEventIDs (continued)
+Object	Name
+Siege Of The Belltower	"Siege Of The Belltower"
+
 Siege Of The Belltower is a situation.
 Siege Of The Belltower is inactive.
 The sarea of Siege Of The Belltower is "Campus".
@@ -268,6 +284,10 @@ to FourthVikingWarEvent:
 			now Siege of The Belltower is resolved;
 			now Battle For Tenvale Campus is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+Battle For Tenvale Campus	"Battle For Tenvale Campus"
+
 Battle For Tenvale Campus is a situation.
 Battle For Tenvale Campus is inactive.
 The sarea of Battle For Tenvale Campus is "Campus".
@@ -317,6 +337,9 @@ to FifthVikingWarEvent:
 		now Battle For Tenvale Campus is resolved;
 		now Peace Between Communities is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+Peace Between Communities	"Peace Between Communities"
 
 Peace Between Communities is a situation.
 Peace Between Communities is inactive.

@@ -5,6 +5,10 @@ Version 1 of Latex Quad Husky by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Shipping Container	"Shipping Container"
+
 Shipping Container is a situation.
 The sarea of Shipping Container is "Outside".
 latexhuskymode is a truth state that varies. latexhuskymode is usually false.

@@ -3,6 +3,10 @@ Version 2 of Underwater Zone by Hellerhound begins here.
 
 Section 1 - Gill Fruit Tree
 
+Table of GameEventIDs (continued)
+Object	Name
+Gill Fruits Tree	"Gill Fruits Tree"
+
 Gill Fruits Tree is a situation.
 the sarea of Gill Fruits Tree is "Beach".
 

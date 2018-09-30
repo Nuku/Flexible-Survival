@@ -159,7 +159,11 @@ to palominoinfect:
 
 Section 3 - Tristian's Quest
 
-Tristbrother is an situation. Tristbrother is inactive.
+Table of GameEventIDs (continued)
+Object	Name
+Tristbrother	"Tristbrother"
+
+Tristbrother is a situation. Tristbrother is inactive.
 when play begins:
 	add Tristbrother to badspots of hermaphrodite;
 	add Tristbrother to badspots of guy;

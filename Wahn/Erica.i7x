@@ -88,9 +88,17 @@ an everyturn rule: [bugfix code to update saves which had the event actually res
 	if Dexterity of Erica is 2:
 		now Temple of Hera is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+Temple of Hera	"Temple of Hera"
+
 Temple of Hera is a situation.
 Temple of Hera is inactive.
 The sarea of Temple of Hera is "Museum".
+
+when play begins:
+	add Temple of Hera to badspots of guy;       [male soldiers]
+	add Temple of Hera to badspots of furry;     [female husky involved]
 
 Instead of resolving a Temple of Hera:
 	say "     After walking through the labyrinthine passages of the museum for quite a while, it becomes more and more obvious that something strange and unusual happened to this place when all the craziness started. It's a bit hard to say with hallways seemingly looping around and suddenly having developed new forks when you get to a portion that you went through before, but your guess is that you're about half a mile deep in here. At least the glowing 'EXIT' signs that every room and hallway holds give you confidence that you'll find your way back out, as every time you tried, the museum foyer was just two or three rooms back - if one follows the green arrows...";
@@ -102,6 +110,10 @@ Instead of resolving a Temple of Hera:
 	say "     Hera herself adds in, 'There you have it. Go forth and knock a few heads together - you mortals are good at that, aren't you...' With a slight flick of her wrist, you feel yourself pushed out the door, stumbling right into the museum foyer through it.";
 	now Temple of Hera is resolved;
 	now Dexterity of Erica is 3;
+
+Table of GameEventIDs (continued)
+Object	Name
+Biker Hangout	"Biker Hangout"
 
 Biker Hangout is a situation.
 The Prereq1 of Biker Hangout is Temple of Hera.

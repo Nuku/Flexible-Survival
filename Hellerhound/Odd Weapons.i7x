@@ -16,6 +16,10 @@ The slot of garbage can shield is "shield".
 
 the scent of garbage can shield is "Despite everything that you try to do about it, a slight scent of garbage seems to be an inescapable part of this makeshift shield. But hey... one makes use of what you get.".
 
+Table of GameEventIDs (continued)
+Object	Name
+Fallen Survivor	"Fallen Survivor"
+
 Fallen Survivor is a scavevent. The sarea of Fallen Survivor is "Allzones".
 
 instead of resolving a Fallen Survivor:
@@ -50,6 +54,10 @@ the scent of infected sword is "The infected sword smells of a myriad of musky s
 instead of purifying an infected sword:
 	say "That doesn't even fit in the microwave. Also, putting metal in one is a really bad idea.";
 	stop the action;
+
+Table of GameEventIDs (continued)
+Object	Name
+Sword Nest	"Sword Nest"
 
 Sword Nest is a situation.
 gotsword is a number that varies.
@@ -178,6 +186,10 @@ the scent of dirty whip is "The sticky whip smells of equine cum.".
 horse whip is an armament. It is part of the player. It has a weapon "[one of]your whip[or]your studded whip[or]your metallic whip[or]brown streak[at random]". the weapon damage of horse whip is 6. The weapon type of horse whip is "Melee". It is not temporary.
 
 the scent of horse whip is "The horse whip smells of leather and oils.".
+
+Table of GameEventIDs (continued)
+Object	Name
+Destroyed Bushes	"Destroyed Bushes"
 
 Destroyed Bushes is a situation.
 the sarea of Destroyed Bushes is "Park".

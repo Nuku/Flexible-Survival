@@ -1,5 +1,9 @@
 Version 1 of AG Beach Events by Aureas Gigas begins here.
 
+Table of GameEventIDs (continued)
+Object	Name
+Riptide	"Riptide"
+
 Riptide is a situation.
 The sarea of Riptide is "Beach".
 
@@ -9,6 +13,10 @@ Instead of resolving a Riptide:
 	WaitLineBreak;
 	say "     Bashfully, the black-furred man explains, that he grew up inland and that this was his first time at a beach. The waterlogged ursine blushes and states 'Ironically, I was more worried about a shark attack than drowning.' Beaming a large grin that shows off her sharp teeth, the shark girl jokes, 'I was thinking about it, but you've got way too much fur.' Taking the wise-crack in stride, the sopping wet male retorts, 'Such a shame. How about I make it up to you by paying for a meal at the café?' The athletic shark girl chuckles and says, 'Deal.' The pair then head off, leaving you to appreciate that even in this twisted world, there are still people out there who watch out for others.";
 	now Riptide is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Hang Ten	"Hang Ten"
 
 Hang Ten is a situation. The sarea of Hang Ten is "Beach".
 
@@ -32,6 +40,10 @@ Instead of resolving a Hang Ten:
 		say "     You tell the nereid you were only interested in how she was able to shred the waves. Taking this in stride, the blonde surfer grins and proclaims, 'Always good to have a fan, if you find a board I could teach you some tricks.' She then paddles out to ride some more waves. Having another friendly face on the beach.";
 		now Resolution of Hang Ten is 2; [met and kept things to a clothed, friendly level]
 	now Hang Ten is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Parasol Nap	"Parasol Nap"
 
 Parasol Nap is a situation.
 The sarea of Parasol Nap is "Beach".

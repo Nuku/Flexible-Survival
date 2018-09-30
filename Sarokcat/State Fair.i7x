@@ -5,6 +5,10 @@ Version 1 of State Fair by Sarokcat begins here.
 
 Section 1 - State Fair environment
 
+Table of GameRoomIDs (continued)
+Object	Name
+State Fair	"State Fair"
+
 State Fair is a room. It is fasttravel.
 The earea of State Fair is "Midway".
 
@@ -13,11 +17,15 @@ The description of State Fair is "     The entrance to the state fair. Colorful 
 instead of sniffing State Fair:
 	say "The scents of popcorn and cotton candy and other treats fill the air. Beneath those enticing scents lie the strange scents of arousal, as if those musky scents are trying to hide beneath them. Among those scents, you catch the whiff of [one of]several felines[or]a rubbery scent[or]plush toys[or]male arousal[or]female heat[or]manly sweat[or]lupine cum[at random]";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Midway	"Midway"
+
 Midway is a room.
 Midway entry is a door. "The midway stretches to the west.". It is dangerous.
 
-West of Midway entry is Midway.
-West of State Fair is Midway entry.
+Midway is west of Midway entry.
+Midway entry is west of State Fair.
 
 The marea of Midway entry is "Midway".
 

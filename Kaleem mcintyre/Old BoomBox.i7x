@@ -20,6 +20,10 @@ Instead of using the old boombox:
 
 Section 1 - Old BoomBox
 
+Table of GameEventIDs (continued)
+Object	Name
+Old Record Store	"Old Record Store"
+
 Old Record Store is a situation.
 The sarea of Old Record Store is "Outside".
 

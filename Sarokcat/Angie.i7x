@@ -34,6 +34,10 @@ LastAngieLearned is a number that varies. LastAngieLearned is usually 250.
 
 Section 1 - Finding Angie
 
+Table of GameEventIDs (continued)
+Object	Name
+AngieTrapped	"AngieTrapped"
+
 AngieTrapped is a situation.
 The sarea of AngieTrapped is "Zoo".
 when play begins:
@@ -95,6 +99,10 @@ to say catnip use:
 
 
 Section 2 - Zoo Giftshop
+
+Table of GameRoomIDs (continued)
+Object	Name
+Zoo Giftshop	"Zoo Giftshop"
 
 Zoo Giftshop is a room.
 Zoo Giftshop is west of Zoo entrance.

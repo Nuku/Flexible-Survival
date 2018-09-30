@@ -11,6 +11,10 @@ Section 1 - Strange Sight
 
 Section 2 - Wish
 
+Table of GameEventIDs (continued)
+Object	Name
+Wish	"Wish"
+
 Wish is a situation.
 The sarea of Wish is "High".
 
@@ -22,6 +26,10 @@ Instead of resolving a Wish:
 
 Section 3 - Loving Bond
 
+Table of GameEventIDs (continued)
+Object	Name
+Loving Bond	"Loving Bond"
+
 Loving Bond is a situation.
 The sarea of Loving Bond is "High".
 
@@ -32,6 +40,10 @@ Instead of resolving a Loving Bond:
 
 
 Section 4 - Challenge of the Alphas
+
+Table of GameEventIDs (continued)
+Object	Name
+Challenge of the Alphas	"Challenge of the Alphas"
 
 Challenge of the Alphas is a situation. The level of Challenge of the Alphas is 8.
 

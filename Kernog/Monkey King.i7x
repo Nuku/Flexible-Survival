@@ -215,6 +215,11 @@ when play begins:
 	add Take My Royal Word for Granite to the badspots of guy;
 
 [Event 1 - quest launcher]
+
+Table of GameEventIDs (continued)
+Object	Name
+Monkey King Service	"Monkey King Service"
+
 Monkey King Service is a situation.
 The sarea of Monkey King Service is "Museum".
 The level of Monkey King Service is 3. [event unlocks at lvl 3]
@@ -244,6 +249,11 @@ instead of resolving Monkey King Service:
 	now Monkey King Service is resolved;
 
 [Event 2 - good/evil path branching]
+
+Table of GameEventIDs (continued)
+Object	Name
+Crashing The Satyr Party	"Crashing The Satyr Party"
+
 Crashing The Satyr Party is a situation.
 The Prereq1 of Crashing The Satyr Party is Monkey King Service.
 The Prereq1Resolution of Crashing The Satyr Party is { 1 }.
@@ -315,6 +325,11 @@ instead of resolving Crashing the Satyr Party:
 	now Crashing the Satyr Party is resolved;
 
 [Event 3a - good path]
+
+Table of GameEventIDs (continued)
+Object	Name
+Hunt Of Mammoth Proportions	"Hunt Of Mammoth Proportions"
+
 Hunt Of Mammoth Proportions is a situation.
 The Prereq1 of Hunt Of Mammoth Proportions is Crashing the Satyr Party.
 The Prereq1Resolution of Hunt Of Mammoth Proportions is { 1 }. [must have successfully helped]
@@ -401,6 +416,11 @@ instead of resolving Hunt Of Mammoth Proportions:
 		say "     Wukong notices your companion, and frowns. 'Do you remember what I told you, about my big plans for us? [bold type]Dismiss[roman type] your lousy follower and come to find me again. I promise you that this will be a [bold type]hunt of mammoth proportions[roman type].'";
 
 [Event 3b - evil path]
+
+Table of GameEventIDs (continued)
+Object	Name
+Take My Royal Word For Granite	"Take My Royal Word For Granite"
+
 Take My Royal Word For Granite is a situation.
 The Prereq1 of Take My Royal Word for Granite is Crashing the Satyr Party.
 The Prereq1Resolution of Take My Royal Word for Granite is { 4 }. [must have successfully sabotaged]
@@ -478,6 +498,10 @@ The assault of wukong is "[one of]Wukong hits the enemy in the head with his sta
 [the fuckscene of monkey king is "[sexwithRyousei]".]
 
 [Section 7 - Monkey Duel events (Wukong victorious)
+
+Table of GameEventIDs (continued)
+Object	Name
+Monkey King Harem	"Monkey King Harem"
 
 Monkey King Harem is a situation.
 The sarea of Monkey King Harem is "Museum".

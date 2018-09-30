@@ -27,6 +27,10 @@ when play begins:
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Inner Predator	"Inner Predator"
+
 Inner Predator is a scavevent. The level of Inner Predator is 4.
 The sarea of Inner Predator is "Allzones".
 when play begins:

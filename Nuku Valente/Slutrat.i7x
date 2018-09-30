@@ -197,6 +197,10 @@ To say slut rat growth:
 
 Section 1 - Slut Rat Den & Arrival
 
+Table of GameRoomIDs (continued)
+Object	Name
+Slut Rat Den	"Slut Rat Den"
+
 Slut Rat Den is a room. "This little slice of [']heaven['] is a cleaned out section of the sewers. Despite its location, it smells of a soft incense, mixed with the heavy, musky odor of the rats that dwell within it. Large pillows have been thrown around, many supporting the full rumps of their rodent owners as they watch your movements. For entertainment, besides one another, small heaps of books have been scattered about wherever their owners last grew tired of them. A dart board is also set up on the far wall with small metal darts poking in it at wildly varying points.[slutratdenscene]". Slut Rat Den is private. Slut Rat Den is fasttravel.
 
 SlutratSub is a number that varies. SlutratSub is usually 5.		[0 to 10 range, 5=neutral, higher is more a rat sub]
@@ -491,6 +495,10 @@ To say slutratdomsex:
 
 
 Section 5 - Pool Hall
+
+Table of GameEventIDs (continued)
+Object	Name
+Pool Hall	"Pool Hall"
 
 Pool Hall is a situation.
 Pool Hall is inactive.

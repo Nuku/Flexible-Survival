@@ -1,5 +1,9 @@
 Version 1 of Female Dorm Events by Prometheus begins here.
 
+Table of GameEventIDs (continued)
+Object	Name
+Female Dorm One	"Female Dorm One"
+
 Female Dorm One is a situation.
 The sarea of Female Dorm One is "Nowhere".
 
@@ -31,6 +35,10 @@ to FemaleDormOneEvent: [Showers. F solo]
 	now LastCampusWalkin is turns;
 	now Female Dorm One is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Female Dorm Two	"Female Dorm Two"
+
 Female Dorm Two is a situation.
 The sarea of Female Dorm Two is "Nowhere".
 
@@ -46,6 +54,10 @@ to FemaleDormTwoEvent: [Study in room]
 	say "     The gorgon quickly writes something down before turning around to face her tutor, her tail encircling his leg lightly. 'Thank you, what would I do without you,' she says gratefully. Her hands glide down his scaly arm as they gaze at each other fondly. It would seem that she doesn't have the same effect as Medusa. The female student guides the dragon out of your line of sight and you hear the creak of bed springs which you assume to be them sitting down. 'Now, tell me about your week, did you manage to finish your dissertation?' the young woman asks. 'I haven't managed much more. Barely any left, but so many interesting things have been happening recently and I enjoy helping you and the other students,' the tutor replies. As they begin discussing various other things, you give them more privacy, despite the open door, and return to the foyer.";
 	now LastCampusWalkin is turns;
 	now Female Dorm Two is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Female Dorm Three	"Female Dorm Three"
 
 Female Dorm Three is a situation.
 The sarea of Female Dorm Three is "Nowhere".
@@ -78,6 +90,10 @@ to FemaleDormThreeEvent: [Study in room with benefits. FF]
 	now LastCampusWalkin is turns;
 	now Female Dorm Three is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Female Dorm Four	"Female Dorm Four"
+
 Female Dorm Four is a situation.
 The sarea of Female Dorm Four is "Nowhere".
 
@@ -109,6 +125,10 @@ to FemaleDormFourEvent: [Study in room with benefits. MF]
 	now LastCampusWalkin is turns;
 	now Female Dorm Four is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Female Dorm Five	"Female Dorm Five"
+
 Female Dorm Five is a situation.
 The sarea of Female Dorm Five is "Nowhere".
 
@@ -132,6 +152,10 @@ to FemaleDormFiveEvent: [Male transform in showers]
 	say "     'Still there are worse things than being a girl fox. They're pretty, agile, and it's not as if I have to give up interest in girls.' His face seems torn between misery, wonder, and excitement, his loss of humanity being countered by anticipation of what he, or should that be [italic type]she [roman type]now, can do with the change. Tearing loudly, her shorts rip open from the growth of his hips and backside, a lush tail sweeping free from the fabric. Her body only covered by a stretched shirt, the newly transformed vixen admires herself in a mirror, feeling over her body curiously and giggling softly. She turns around, beginning to stoop for the shreds of her clothing when she catches sight of you. A blush shows through her fur, embarrassed about being caught in the girl's dormitory. Unfortunately for her, the gasp that she lets out upon seeing you is too much for her t-shirt, causing it to shred apart too, leaving her completely naked. With a squeak, she barrels past you, desperate to have some time to come to terms with today's events.";
 	now LastCampusWalkin is turns;
 	now Female Dorm Five is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Female Dorm Six	"Female Dorm Six"
 
 Female Dorm Six is a situation.
 The sarea of Female Dorm Six is "Nowhere".

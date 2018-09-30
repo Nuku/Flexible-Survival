@@ -18,6 +18,10 @@ an everyturn rule:
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Campus Thunder	"Campus Thunder"
+
 Campus Thunder is a situation.
 The level of Campus Thunder is 0.
 The sarea of Campus Thunder is "Campus". [Fountain]
@@ -94,6 +98,10 @@ to ThunderboltEncounter2:
 	now Campus Thunder is resolved; [the end, for now]
 
 Section 2 - Location
+
+Table of GameRoomIDs (continued)
+Object	Name
+Thunderbolt's Stable	"Thunderbolt's Stable"
 
 Thunderbolt's Stable is a room.
 The description of Thunderbolt's Stable is "[TStableDesc]".

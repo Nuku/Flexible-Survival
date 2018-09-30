@@ -9,6 +9,10 @@ Section 1- Electric shockers
 
 Section 2 - Hyena cages
 
+Table of GameEventIDs (continued)
+Object	Name
+Hyena cages	"Hyena cages"
+
 Hyena cages is a situation.
 The sarea of Hyena cages is "Zoo".
 
@@ -18,6 +22,10 @@ Instead of Resolving a Hyena cages:
 
 
 Section 3 - Pachyderm predicament
+
+Table of GameEventIDs (continued)
+Object	Name
+Pachyderm predicament	"Pachyderm predicament"
 
 Pachyderm predicament is a situation.
 The sarea of Pachyderm predicament is "Zoo".
@@ -33,6 +41,10 @@ Instead of Resolving a Pachyderm predicament:
 
 Section 4 - Snake knot
 
+Table of GameEventIDs (continued)
+Object	Name
+Snake knot	"Snake knot"
+
 Snake knot is a situation.
 The sarea of Snake knot is "Zoo".
 
@@ -42,6 +54,10 @@ Instead of Resolving a Snake knot:
 
 
 Section 5 - Useful pamphlet
+
+Table of GameEventIDs (continued)
+Object	Name
+Useful pamphlet	"Useful pamphlet"
 
 Useful pamphlet is a situation.
 The sarea of Useful pamphlet is "Zoo".
@@ -56,6 +72,10 @@ Instead of Resolving a Useful pamphlet:
 
 Section 6 - Unidentified sex scene
 
+Table of GameEventIDs (continued)
+Object	Name
+Unidentified sex scene	"Unidentified sex scene"
+
 Unidentified sex scene is a situation.
 The sarea of Unidentified sex scene is "Zoo".
 
@@ -67,6 +87,10 @@ Instead of Resolving a Unidentified sex scene:
 
 
 Section 7 - Grizzly gone
+
+Table of GameEventIDs (continued)
+Object	Name
+Grizzly gone	"Grizzly gone"
 
 Grizzly gone is a situation.
 The sarea of Grizzly gone is "Zoo".
@@ -81,6 +105,10 @@ Instead of Resolving a Grizzly gone:
 
 
 Section 8 - Tasty Treats
+
+Table of GameEventIDs (continued)
+Object	Name
+Tasty Treats	"Tasty Treats"
 
 Tasty Treats is a situation.
 The sarea of Tasty Treats is "Zoo".
@@ -97,6 +125,10 @@ Section 9- - AngieTrapped
 
 Section 10 - Panda parade
 
+Table of GameEventIDs (continued)
+Object	Name
+Panda parade	"Panda parade"
+
 Panda parade is a situation.
 The sarea of Panda parade is "Zoo".
 
@@ -107,6 +139,10 @@ Instead of Resolving a Panda parade:
 
 
 Section 11 - Petting zoo
+
+Table of GameEventIDs (continued)
+Object	Name
+Petting zoo	"Petting zoo"
 
 Petting zoo is a situation.
 The sarea of Petting zoo is "Zoo".
@@ -120,6 +156,10 @@ Instead of Resolving a Petting zoo:
 
 Section 12 - Instructional video
 
+Table of GameEventIDs (continued)
+Object	Name
+Instructional video	"Instructional video"
+
 Instructional video is a situation.
 The sarea of Instructional video is "Zoo".
 
@@ -130,6 +170,10 @@ Instead of Resolving a Instructional video:
 
 
 Section 13 - Vet supplies
+
+Table of GameEventIDs (continued)
+Object	Name
+Vet supplies	"Vet supplies"
 
 Vet supplies is a situation.
 The sarea of Vet supplies is "Zoo".
@@ -225,6 +269,10 @@ to say vetsup_hshots:
 
 Section 14 - Feeding time
 
+Table of GameEventIDs (continued)
+Object	Name
+Feeding time	"Feeding time"
+
 Feeding time is a situation. The level of feeding time is 9.
 The sarea of Feeding time is "Zoo".
 when play begins:
@@ -255,6 +303,10 @@ Instead of Resolving a Feeding time:
 
 Section 15 - Security Station
 
+Table of GameEventIDs (continued)
+Object	Name
+Security Station	"Security Station"
+
 Security Station is a situation.
 The sarea of Security Station is "Zoo".
 when play begins:
@@ -271,6 +323,10 @@ Instead of Resolving a Security Station:
 
 Section 16 - Broken fences
 
+Table of GameEventIDs (continued)
+Object	Name
+Broken fences	"Broken fences"
+
 Broken fences is a situation.
 The sarea of Broken fences is "Zoo".
 
@@ -280,6 +336,10 @@ Instead of Resolving a Broken fences:
 
 
 Section 17 - Wandering beasts
+
+Table of GameEventIDs (continued)
+Object	Name
+Wandering beasts	"Wandering beasts"
 
 Wandering beasts is a situation.
 The sarea of Wandering beasts is "Zoo".
@@ -292,6 +352,10 @@ Instead of Resolving a Wandering beasts:
 
 Section 18 - Roaming spots
 
+Table of GameEventIDs (continued)
+Object	Name
+Roaming spots	"Roaming spots"
+
 Roaming spots is a situation.
 The sarea of Roaming spots is "Zoo".
 
@@ -302,6 +366,10 @@ Instead of Resolving a Roaming spots:
 
 
 Section 19 - Picture striping
+
+Table of GameEventIDs (continued)
+Object	Name
+Picture striping	"Picture striping"
 
 Picture striping is a situation.
 The sarea of Picture striping is "Zoo".
@@ -318,6 +386,10 @@ Instead of Resolving a Picture striping:
 
 
 Section 20 - Lazy River (Event by Shadowwolf94)
+
+Table of GameEventIDs (continued)
+Object	Name
+Lazy River	"Lazy River"
 
 Lazy River is a situation.
 The sarea of Lazy River is "Zoo".

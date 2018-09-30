@@ -7,6 +7,10 @@ Version 1 of Egyptian Wing by Xenophiliac begins here.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Egyptian Wing	"Egyptian Wing"
+
 Egyptian Wing is a situation. The level of Egyptian Wing is 10.
 The sarea of Egyptian Wing is "Museum".
 
@@ -26,6 +30,10 @@ Instead of Resolving a Egyptian Wing:
 	now Egyptian Wing is resolved;
 
 [Jade Scarab event located in Sarokcat's Consolidated Museum file]
+
+Table of GameEventIDs (continued)
+Object	Name
+Finding Winged Orb	"Finding Winged Orb"
 
 Finding Winged Orb is a situation.
 Finding Winged Orb is inactive. [activated by accepting Amuran's quest]
@@ -57,11 +65,40 @@ instead of resolving Finding Winged Orb:
 
 Section 2 - Areas and Rooms
 
+Table of GameRoomIDs (continued)
+Object	Name
+Egypt Wing Entrance	"Egypt Wing Entrance"
+
 Egypt Wing Entrance is a room. it is fasttravel. it is private.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Egyptian Wing Foyer	"Egyptian Wing Foyer"
+
 Egyptian Wing Foyer is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Mythical Murals	"Mythical Murals"
+
 Mythical Murals is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Golden Doors	"Golden Doors"
+
 Golden Doors is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Temple of Set	"Temple of Set"
+
 Temple of Set is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Sanctum of Horus	"Sanctum of Horus"
+
 Sanctum of Horus is a room.
 
 [Egypt Wing Entrance]
@@ -72,7 +109,7 @@ to say EgyptWingEntrDesc:
 instead of sniffing Egypt Wing Entrance:
 	say "     The scent of the museum has not changed much, but you do detect a faint hint of dry desert air.";
 
-North of Egypt Wing Entrance is Egyptian Wing Foyer.
+Egyptian Wing Foyer is north of Egypt Wing Entrance.
 
 [Egyptian Wing Foyer]
 The description of Egyptian Wing Foyer is "[EgyptWingFoyerDesc]".
@@ -83,9 +120,9 @@ to say EgyptWingFoyerDesc: [East passage left for possible further expansions]
 instead of sniffing Egyptian Wing Foyer:
 	say "     The smell of dry, barren air is much stronger here, having rapidly replaced the smell of the museum behind you.";
 
-North of Egyptian Wing Foyer is Golden Doors.
-South of Egyptian Wing Foyer is Egypt Wing Entrance.
-East of Egyptian Wing Foyer is Mythical Murals.
+Golden Doors is north of Egyptian Wing Foyer.
+Egypt Wing Entrance is south of Egyptian Wing Foyer.
+Mythical Murals is east of Egyptian Wing Foyer.
 
 [Mythical Mural]
 The description of Mythical Murals is "[MythicalMuralDesc]".
@@ -96,7 +133,7 @@ to say MythicalMuralDesc:
 instead of sniffing Mythical Murals:
 	say "     This room smells overwhelmingly of dust and aged paper, bringing your thoughts back to old paperbacks you used to have.";
 
-West of Mythical Murals is Egyptian Wing Foyer.
+Egyptian Wing Foyer is west of Mythical Murals.
 
 EgyptMuralExamine is an action applying to nothing.
 
@@ -134,9 +171,9 @@ to say GoldenDoorsDesc:
 instead of sniffing Golden Doors:
 	say "     This room smells quite similar to the rest of the Egyptian Wing, albeit with a tinge of metal to it.";
 
-North of Golden Doors is Sanctum of Horus.
-South of Golden Doors is Egyptian Wing Foyer.
-West of Golden Doors is Temple of Set.
+Sanctum of Horus is north of Golden Doors.
+Egyptian Wing Foyer is south of Golden Doors.
+Temple of Set is west of Golden Doors.
 
 instead of going north from Golden Doors while EgyptianRiddle is 0: [add cycling riddles?]
 	say "     Approaching the solid metal doors in front of you, you look around for some sort of way to open the doors. Even with all of your detective prowess, however, there seems to be no way to open the gigantic doors. No levers, no buttons; not even a door handle. These doors seem to be standing here permanently, keeping everything out; or keeping something in. Deciding as one last-ditch effort to try and push the doors, you put all your might forward to open these great doors. Your efforts prove fruitless, however; even though you thought nothing would happen, you figure it was worth a shot. Stepping back and taking a discouraged look at the imposing portals, you're quite shocked when [']something['] begins to appear on the golden doorways, rapidly etching itself into the solid metal slabs.";
@@ -265,7 +302,7 @@ to say TempleOfSetDesc:
 instead of sniffing Temple of Set:
 	say "     You're unable to pin down the smell of this room; you think it's constantly changing.";
 
-East of Temple of Set is Golden Doors.
+Golden Doors is east of Temple of Set.
 
 SethTempleNumber is a number that varies.
 SwordOfSeth is an action applying to nothing.
@@ -313,7 +350,7 @@ to say SanctumofHorusDesc:
 instead of sniffing Sanctum of Horus:
 	say "     While this room smells just like the rest of the Egyptian Wing, every whiff of the warm air reminds you of bright, sunny days.";
 
-South of Sanctum of Horus is Golden Doors.
+Golden Doors is south of Sanctum of Horus.
 
 RevealAmuran is an action applying to nothing.
 

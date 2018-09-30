@@ -1124,6 +1124,10 @@ to AlexandraFeatAbsorb:
 		say "...";
 		[now AlexandraGains... is active;]
 
+Table of GameEventIDs (continued)
+Object	Name
+AlexandraHornyTrait	"AlexandraHornyTrait"
+
 AlexandraHornyTrait is a situation.
 AlexandraHornyTrait is inactive.
 The sarea of AlexandraHornyTrait is "Nowhere".
@@ -1152,6 +1156,10 @@ to AlexandraHornyTrait_Event:
 		say "     Grabbing her a bit more firmly by the neck, you draw Alexandra close and give her a demanding kiss. Feeling her hands on your body, you smile inwardly at her eagerness for sex, then pull her away from you and proclaim that she should get back to guarding the door. The needy bitch looks at you in surprise, her breath coming in short pants from the arousal that flared up in her. She frowns at the refusal to sate her needs, but you can see from the fact that her tail is still wagging that she isn't really cross with you. 'Bastard,' she says more as an observation than a curse, followed by the words, 'Don't let me wait too long, boss. I'm fucking dripping here.' With that, she steps back from you, shaking her chest in a last-minute try to entice you with her well-rounded breasts. She then saunters over to where she was leaning against the wall when you came in.";
 	add "Horny" to Traits of Alexandra;
 	now AlexandraHornyTrait is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+AlexandraBroodmTrait	"AlexandraBroodmTrait"
 
 AlexandraBroodmTrait is a situation.
 AlexandraBroodmTrait is inactive.
@@ -1191,6 +1199,9 @@ to AlexandraBroodmTrait_Event:
 	add "Fertility Treatment Option" to Traits of Alexandra;
 	now AlexandraBroodmTrait is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+AlexandraPlayersBitch	"AlexandraPlayersBitch"
 
 AlexandraPlayersBitch is a situation.
 AlexandraPlayersBitch is inactive.

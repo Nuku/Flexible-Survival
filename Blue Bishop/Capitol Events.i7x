@@ -7,6 +7,10 @@ Version 1 of Capitol Events by Blue Bishop begins here.
 
 Section 1 - Pre-existing events by Sweraptor
 
+Table of GameEventIDs (continued)
+Object	Name
+dragatorspot	"dragatorspot"
+
 dragatorspot is a situation.
 The sarea of dragatorspot is "Capitol".
 
@@ -15,6 +19,9 @@ Instead of resolving dragatorspot:
 	increase score by 1;
 	now dragatorspot is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+whelpspot	"whelpspot"
 
 whelpspot is a situation.
 The sarea of whelpspot is "Capitol".
@@ -28,6 +35,10 @@ Instead of resolving whelpspot:
 
 
 Section 2 - Ebonflame Nest
+
+Table of GameEventIDs (continued)
+Object	Name
+Ebonflame Nest	"Ebonflame Nest"
 
 Ebonflame Nest is a situation.
 The sarea of Ebonflame Nest is "Capitol".
@@ -132,6 +143,10 @@ to say ebonflamegauntlet:
 
 Section 3 - Strange Meeting
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange Meeting	"Strange Meeting"
+
 Strange Meeting is a situation.
 The sarea of Strange Meeting is "Capitol".
 
@@ -145,6 +160,10 @@ Instead of resolving Strange Meeting:
 
 Section 4 - Failed Escape
 
+Table of GameEventIDs (continued)
+Object	Name
+Failed Escape	"Failed Escape"
+
 Failed Escape is a situation.
 The sarea of Failed Escape is "Capitol".
 
@@ -154,6 +173,10 @@ Instead of resolving Failed Escape:
 
 
 Section 5 - Charred Pickets
+
+Table of GameEventIDs (continued)
+Object	Name
+Charred Pickets	"Charred Pickets"
 
 Charred Pickets is a situation.
 The sarea of Charred Pickets is "Capitol".

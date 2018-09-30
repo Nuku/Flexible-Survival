@@ -29,6 +29,11 @@ to TwelveLaborsQuestLog:
 Section 1 - Events
 
 [Labors of Herakles]
+
+Table of GameEventIDs (continued)
+Object	Name
+Labors Introduction	"Labors Introduction"
+
 Labors Introduction is a situation.
 The sarea of Labors Introduction is "Museum".
 The Level of Labors Introduction is 30.
@@ -53,6 +58,10 @@ to LaborsIntroductionEvent: [Invited to perform the Labors]
 	now TwelveLaborsStage is 1;
 	add "Twelve Labors Quest" to OpenQuests of player;
 	now Labors Introduction is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Meet the Nemean Lion	"Meet the Nemean Lion"
 
 Meet the Nemean Lion is a situation.
 Prereq1 of Meet the Nemean Lion is Labors Introduction.

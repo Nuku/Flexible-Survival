@@ -44,7 +44,13 @@ SonnyRelationship is a number that varies.
 JennaRelationship is a number that varies.
 
 [Room Declaration]
-Southwest of Mall West Wing is Mall Lockerroom.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Mall Lockerroom	"Mall Lockerroom"
+
+Mall Lockerroom is a room.
+Mall Lockerroom is southwest of Mall West Wing.
 The description of Mall Lockerroom is "[MallLockerroomDesc]".
 
 to say MallLockerroomDesc:

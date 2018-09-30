@@ -14,6 +14,10 @@ lastlibrarybrowse is a number that varies. lastlibrarybrowse is usually 255.
 
 Section 1 - General Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Cheetah Cheater	"Cheetah Cheater"
+
 Cheetah Cheater is a situation.
 The level of Cheetah Cheater is 0.
 The sarea of Cheetah Cheater is "Campus".
@@ -31,6 +35,10 @@ to CheetahCheaterEvent:
 	say "     'Ian, you're such a cheater!' she pants. He turns towards her and smirks 'I know.' Her nose scrunches in confusion for a second. 'That's not what I... Oh when are you going to stop making that joke!' He laughs a little bit, 'When you manage to keep up.' She looks at him, her face pensive. 'How about...' She stands and seductively drapes herself over him. 'I show you how well I can keep up.' With a look on his face like he has won the lottery, Ian stumbles out a yes and they both dash off, presumably going somewhere private.";
 	now Cheetah Cheater is resolved;
 	now LastCampusWalkin is turns;
+
+Table of GameEventIDs (continued)
+Object	Name
+Pregnant Friend	"Pregnant Friend"
 
 Pregnant Friend is a situation.
 The level of Pregnant Friend is 0.
@@ -52,6 +60,10 @@ to PregnantFriendEvent:
 	say "     They both get up from the bench and walk down the path. You step out from behind the bush you have been hiding in and head off to continue exploring.";
 	now Pregnant Friend is resolved;
 	now LastCampusWalkin is turns;
+
+Table of GameEventIDs (continued)
+Object	Name
+CatsVSDogs	"CatsVSDogs"
 
 CatsVSDogs is a situation.
 The level of CatsVSDogs is 0.
@@ -79,6 +91,10 @@ to CatsVSDogsEvent:
 		now CatsVSDogs is resolved;
 	now LastCampusWalkin is turns;
 
+Table of GameEventIDs (continued)
+Object	Name
+SharkFountain	"SharkFountain"
+
 SharkFountain is a situation.
 The level of SharkFountain is 0.
 The sarea of SharkFountain is "Campus". [Fountain]
@@ -100,6 +116,10 @@ to SharkFountainEvent:
 		now SharkFountain is resolved;
 	now LastCampusWalkin is turns;
 
+Table of GameEventIDs (continued)
+Object	Name
+Fountain Naiad	"Fountain Naiad"
+
 Fountain Naiad is a situation.
 The sarea of Fountain Naiad is "Campus".
 
@@ -119,6 +139,10 @@ to NaiadFountainEvent:
 	now LastCampusWalkin is turns;
 	now Fountain Naiad is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Campus Racing	"Campus Racing"
+
 Campus Racing is a situation.
 Campus Racing is inactive.
 The sarea of Campus Racing is "Campus".
@@ -135,6 +159,10 @@ to CampusRacingEvent:
 	say "     The two take off, leaving behind a small cloud of dust. The cheetah-girl on all fours takes an early head start sprinting with almost blinding speed down the track the equine runner hot on her heels. Reaching the halfway point within seconds the athletic centauress catches up with her friend, showing impressive acceleration in her galloping technique. Neck to neck, the two near the finish line and you watch with anticipation for which will win. The cheetah girl takes a small lead near the last few dozen meters before the centauress takes a sudden leap, being ahead by a few inches as they cross the white finish line. Huffing and puffing the two look to each other, with the spotted cheetah looking slightly flushed at her loss. 'Finally! I finally beat you Mary!' squeals the centauress in delight. Barely finishing the sentence the equine girl whinnies in surprise as her shapely rump is slapped by the pawed hand of her friend before the leopardess takes off running and giggling. 'Why you!' Shouts the centaur before she starts running after her mischievous friend. You take your leave from the track as they run off.";
 	now Campus Racing is resolved;
 	now LastCampusWalkin is turns;
+
+Table of GameEventIDs (continued)
+Object	Name
+Frat Party Recruiter	"Frat Party Recruiter"
 
 Frat Party Recruiter is a situation.
 Frat Party Recruiter is inactive.
@@ -178,6 +206,10 @@ to FratPartyRecruiterEvent:
 		say "";
 	increase FratPartyRecruiterProgression by 1;
 	now LastCampusWalkin is turns;
+
+Table of GameEventIDs (continued)
+Object	Name
+Undie Race	"Undie Race"
 
 Undie Race is a situation.
 The sarea of Undie Race is "Campus".
@@ -261,6 +293,10 @@ instead of going east from College Campus Entrance while (LastCampusWalkin - tur
 Section 3 - Special Events / Mechanisms
 
 [Administration Introduction - Waiting for the Course Advisor]
+
+Table of GameEventIDs (continued)
+Object	Name
+Course Advice	"Course Advice"
 
 Course Advice is a situation.
 The sarea of Course Advice is "Campus".
@@ -510,6 +546,10 @@ to RyouseiLibraryEvent:
 		now CollegeLibraryRyouseiEncounter is 1;
 	else:
 		say "     You walk back to the bookshelves, and, inspired by Ryousei, decide to check the Asian history section. Shortly after, the tiger is back at your sides, but looks disheveled. 'Well, this place of knowledge is so, er, admirable,' the feline replies your query, while he readjusts his kimono. 'I wandered and... got lost. Shall we go soon? I do not wish to overstay my welcome in this place.' You follow his look to the information desk, and notice a middle-aged vulpine employee ogling at the tiger, and licking [if Girl is not banned and Girl is not warded]her[else]his[end if] chops. Ryousei makes a beeline for the exit, almost losing you again.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Campus Patrol	"Campus Patrol"
 
 Campus Patrol is a situation.
 Campus Patrol is inactive.

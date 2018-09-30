@@ -17,6 +17,10 @@ GloryFate is a number that varies.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Refugee Mare	"Refugee Mare"
+
 Refugee Mare is a situation. Refugee Mare is inactive.
 The sarea of Refugee Mare is "Smith Haven".
 

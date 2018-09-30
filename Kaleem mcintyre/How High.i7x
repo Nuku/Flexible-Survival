@@ -4,6 +4,10 @@ How High by Kaleem mcintyre begins here.
 
 Section 1- How High
 
+Table of GameEventIDs (continued)
+Object	Name
+How High	"How High"
+
 How High is a situation.
 The sarea of How High is "Park".
 when play begins:

@@ -4,6 +4,10 @@ Version 6 of Sven by Stripes begins here.
 
 Section 1 - Event and Hideaway
 
+Table of GameEventIDs (continued)
+Object	Name
+Hidden Kitty	"Hidden Kitty"
+
 Hidden Kitty is a situation. The level of Hidden Kitty is 5.
 The sarea of Hidden Kitty is "Red".
 when play begins:
@@ -21,6 +25,10 @@ Instead of resolving a Hidden Kitty:
 	now battleground is "void";
 	increase score by 5;
 	now Hidden Kitty is resolved;
+
+Table of GameRoomIDs (continued)
+Object	Name
+Sven's Place	"Sven's Place"
 
 Sven's Place is a room. It is fasttravel. It is private.
 The description of Sven's Place is "[SvenPlaceDesc]".

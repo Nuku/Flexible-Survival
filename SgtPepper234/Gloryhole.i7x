@@ -3,8 +3,12 @@ Version 1 of Gloryhole by SgtPepper234 begins here.
 
 MichaelGholeMeetings is a number that varies.
 
+Table of GameRoomIDs (continued)
+Object	Name
+Bathroom Stalls	"Bathroom Stalls"
+
 Bathroom Stalls is a room.
-Inside of Mall Restroom is Bathroom Stalls.
+Bathroom Stalls is inside of Mall Restroom.
 
 The description of Bathroom Stalls is "     These dingy bathroom stalls are separated by cheap plasticised chipboard barriers. Slick patches of white gunk cover the floors and the musty odor of sex fills the air. The doors that still have latches actually have some degree of functionality, though a few stalls are without any doors at all. There is gap beneath the doors, barriers and the floor, as is usual for a cheaply constructed mall bathroom. Holes of varying sizes have been drilled into the stall walls and made less hazardous by the addition of duct tape. Their purpose is obvious.";
 

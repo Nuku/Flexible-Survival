@@ -4,6 +4,10 @@ Beach Events by Sarokcat begins here.
 
 Section 1 - Beach bum
 
+Table of GameEventIDs (continued)
+Object	Name
+Beach bum	"Beach bum"
+
 Beach Bum is a situation.
 The sarea of Beach Bum is "Beach".
 
@@ -68,6 +72,10 @@ Instead of resolving a Beach Bum:
 
 Section 2 - Flotsam bits
 
+Table of GameEventIDs (continued)
+Object	Name
+Flotsam bits	"Flotsam bits"
+
 Flotsam bits is a situation.
 The sarea of Flotsam bits is "Beach".
 
@@ -87,6 +95,10 @@ instead of sniffing flotsam club:
 
 Section 3 - Strange tide
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange tide	"Strange tide"
+
 Strange tide is a situation.
 The sarea of Strange tide is "Beach".
 
@@ -96,6 +108,10 @@ Instead of resolving a Strange tide:
 
 
 Section 4 - Strange wave
+
+Table of GameEventIDs (continued)
+Object	Name
+Strange wave	"Strange wave"
 
 Strange wave is a situation.
 The sarea of Strange wave is "Beach".
@@ -111,6 +127,10 @@ Instead of resolving a Strange wave:
 
 Section 5 - Smashed boat
 
+Table of GameEventIDs (continued)
+Object	Name
+Smashed boat	"Smashed boat"
+
 Smashed boat is a situation.
 The sarea of Smashed boat is "Beach".
 
@@ -123,6 +143,10 @@ Instead of resolving a Smashed boat:
 
 
 Section 6 - Dragon voyeurism
+
+Table of GameEventIDs (continued)
+Object	Name
+Dragon voyeurism	"Dragon voyeurism"
 
 Dragon voyeurism is a situation.
 The sarea of Dragon voyeurism is "Beach".
@@ -143,6 +167,10 @@ Instead of resolving a Dragon voyeurism:
 
 Section 7 - relaxing scene
 
+Table of GameEventIDs (continued)
+Object	Name
+relaxing scene	"relaxing scene"
+
 relaxing scene is a situation.
 The sarea of relaxing scene is "Beach".
 
@@ -154,6 +182,10 @@ Instead of resolving a relaxing scene:
 
 Section 8 - Plundered boat
 
+Table of GameEventIDs (continued)
+Object	Name
+Plundered boat	"Plundered boat"
+
 Plundered boat is a situation.
 The sarea of Plundered boat is "Beach".
 
@@ -163,6 +195,10 @@ Instead of resolving a Plundered boat:
 
 
 Section 9 - Tainted yacht
+
+Table of GameEventIDs (continued)
+Object	Name
+Tainted Yacht	"Tainted Yacht"
 
 Tainted Yacht is a situation.
 The sarea of Tainted Yacht is "Beach".
@@ -188,6 +224,10 @@ Instead of resolving a Tainted Yacht:
 
 Section 10 - Strange castle
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange castle	"Strange castle"
+
 Strange castle is a situation.
 The sarea of Strange castle is "Beach".
 
@@ -197,6 +237,10 @@ Instead of resolving a Strange castle:
 
 
 Section 11 - otter view
+
+Table of GameEventIDs (continued)
+Object	Name
+otter view	"otter view"
 
 otter view is a situation.
 The sarea of otter view is "Beach".
@@ -209,6 +253,10 @@ Instead of resolving a otter view:
 
 
 Section 12 - Cream stand
+
+Table of GameEventIDs (continued)
+Object	Name
+Cream stand	"Cream stand"
 
 Cream stand is a situation. The level of Cream stand is 2.
 The sarea of Cream stand is "Beach".
@@ -233,6 +281,10 @@ Instead of resolving a Cream stand:
 
 
 Section 13 - Lucky seashell
+
+Table of GameEventIDs (continued)
+Object	Name
+Lucky seashell	"Lucky seashell"
 
 Lucky seashell is a situation.
 The sarea of Lucky seashell is "Beach".

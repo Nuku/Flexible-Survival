@@ -2,6 +2,10 @@ Version 1 of Rane Events by KorekaBii begins here.
 
 RaneDeedsTracker is a number that varies.
 
+Table of GameEventIDs (continued)
+Object	Name
+Rane's Good Deed	"Rane's Good Deed"
+
 Rane's Good Deed is a situation.
 Rane's Good Deed is inactive.
 the sarea of Rane's Good Deed is "Outside".

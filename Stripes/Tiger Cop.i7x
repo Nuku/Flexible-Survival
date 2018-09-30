@@ -45,6 +45,10 @@ an everyturn rule:
 [	5 complete				]
 [	99 refused				]
 
+Table of GameEventIDs (continued)
+Object	Name
+Policeman	"Policeman"
+
 Policeman is a situation.
 The sarea of Policeman is "High".
 
@@ -160,6 +164,10 @@ to say givekeys:
 
 
 Section 2 - Tiger Cop character and Police Car location
+
+Table of GameRoomIDs (continued)
+Object	Name
+Police Car	"Police Car"
 
 Police Car is a room. It is private. It is fasttravel.
 The description of Police Car is "[policecardesc]".
@@ -543,6 +551,10 @@ nightstick is an armament. It is part of the player. It has a weapon "[one of]yo
 the scent of the nightstick is "     The nightstick smells faintly of violent authority.".
 
 Section 7 - Prostitution Quest
+
+Table of GameRoomIDs (continued)
+Object	Name
+Abandoned Storefront	"Abandoned Storefront"
 
 Abandoned Storefront is a room. It is private.
 The description of Abandoned Storefront is "     If you're seeing this, something went wrong.".

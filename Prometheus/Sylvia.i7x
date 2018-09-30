@@ -122,6 +122,10 @@ an everyturn rule:
 
 Section 1 - Room Declaration
 
+Table of GameRoomIDs (continued)
+Object	Name
+Sylvia's Room	"Sylvia's Room"
+
 Sylvia's Room is a room.
 The description of Sylvia's Room is "[SylviasRoomDesc]".
 
@@ -471,6 +475,10 @@ to say SylviaSex5: [Tribbing]
 
 Section 5 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Despairing Biologist	"Despairing Biologist"
+
 Despairing Biologist is a situation.
 The level of Despairing Biologist is 0.
 The sarea of Despairing Biologist is "Campus".
@@ -721,6 +729,10 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 		now hp of Julian is 1;
 	now Unnatural Heat is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Beach Field Research	"Beach Field Research"
+
 Beach Field Research is a situation.
 Prereq1 of Beach Field Research is Unnatural Heat.
 Prereq2 of Beach Field Research is Julian's Room Event.
@@ -872,6 +884,10 @@ to SylviasReward: [Sylvia willing to allow you to mate with her]
 		now Resolution of Sylvia's Reward is 7; [Refused]
 	now hp of Sylvia is 7;
 
+Table of GameEventIDs (continued)
+Object	Name
+Bad Breakup	"Bad Breakup"
+
 Bad Breakup is a situation.
 Prereq1 of Bad Breakup is Beach Field Research.
 Prereq1Resolution of Bad Breakup is { 1, 2 }.
@@ -895,6 +911,10 @@ to BadBreakupEvent: [Cheating Boyfriend]
 	say "     You agree with the sentiment, even if you find the oath strange, and ask whether there is anything she would like you to help with. Sylvia looks at you darkly. 'Oh no. This one's personal. I'll get the materials myself and make him feel pain equivalent to what he has inflicted on Chloe here. I might even try some new contraptions out.' The tone in which she says this makes you uncomfortable, and you almost feel some fear for the unfaithful ex-boyfriend. 'Don't kill him. Please. I'm not worth that,' Chloe pleads. 'I won't kill him, but don't think yourself so worthless. You're smart, pretty, and kind-hearted,' the collie reassures her as she strokes her hair. Glancing at you, she adds, '[if player is not defaultnamed][name of player], you[end if] can go if you want. I'll stay with Chloe for now. As you turn and leave, she mutters,' He will pay for this,' and you hope the fennec didn't hear that. Despite the heartbreak Ethan has caused her, the fox is drowning in misery too much to want revenge at the moment.";
 	now Bad Breakup is resolved;
 	now LastCampusWalkin is turns;
+
+Table of GameEventIDs (continued)
+Object	Name
+Cheat's Retribution	"Cheat's Retribution"
 
 Cheat's Retribution is a situation.
 Prereq1 of Cheat's Retribution is Bad Breakup.
@@ -938,6 +958,10 @@ to CheatsRetributionEvent: [Ethan's Punishment]
 		now SylviaTrapVar is 1;
 	now Cheat's Retribution is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Charming Picnic	"Charming Picnic"
+
 Charming Picnic is a situation.
 Prereq1 of Charming Picnic is Unnatural Heat.
 Prereq1Resolution of Charming Picnic is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
@@ -957,6 +981,10 @@ to CharmingPicnicEvent: [Picnic]
 	now Charming Picnic is resolved;
 	now LastCampusWalkin is turns;
 
+Table of GameEventIDs (continued)
+Object	Name
+Badminton One	"Badminton One"
+
 Badminton One is a situation.
 Prereq1 of Badminton One is Unnatural Heat.
 Prereq1Resolution of Badminton One is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
@@ -964,6 +992,7 @@ The level of Badminton One is 0.
 The sarea of Badminton One is "Campus".
 
 instead of going to College Walkway East while (Badminton One is active and Badminton One is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while ((hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	BadmintonOneEvent;
 

@@ -43,7 +43,12 @@ instead of going east from Mall East Wing while HP of Santa Claws is 0:
 	else:
 		say "     Nah, you step back from the curtain of snowfall and walk back towards the normal shops in the west.";
 
-East of Mall East Wing is Christmas Village.
+Table of GameRoomIDs (continued)
+Object	Name
+Christmas Village	"Christmas Village"
+
+Christmas Village is a room.
+Christmas Village is east of Mall East Wing.
 The description of Christmas Village is "[CVillageDesc]".
 
 to say CVillageDesc:

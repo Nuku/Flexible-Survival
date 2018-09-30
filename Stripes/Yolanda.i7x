@@ -30,7 +30,12 @@ Version 2 of Yolanda by Stripes begins here.
 
 Section 1 - Raven Nest
 
-Inside from the Red Apartment is a room called Raven Nest.		[see the Qytat a'th Lundrues.i7x file in the Hellerhound folder for this location.]
+Raven Nest is inside from the Red Apartment.		[see the Qytat a'th Lundrues.i7x file in the Hellerhound folder for this location.]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Raven Nest	"Raven Nest"
+
 Raven Nest is a room. It is sleepsafe.
 The description of Raven Nest is "[ravennestdesc]";
 
@@ -559,6 +564,10 @@ Section 4 - Events
 
 jbfound is a number that varies.
 
+Table of GameEventIDs (continued)
+Object	Name
+Jewelry Box	"Jewelry Box"
+
 Jewelry Box is a scavevent.
 when play begins:
 	add Jewelry Box to badspots of girl;
@@ -586,6 +595,9 @@ Instead of resolving a Jewelry Box:
 	else:									[player fled]
 		say "     After making your escape, you give up on scavenging for now and head back to safer territory to rest and recover.";
 
+Table of GameEventIDs (continued)
+Object	Name
+Raven Key Fob	"Raven Key Fob"
 
 Raven Key Fob is a scavevent. Raven Key Fob is inactive.
 

@@ -7,6 +7,10 @@ mtrp is a number that varies.
 
 Section 1 - The Situations	[two ways to meet Lisa now]
 
+Table of GameEventIDs (continued)
+Object	Name
+Mouse Taur Encounter	"Mouse Taur Encounter"
+
 Mouse Taur Encounter is a situation.
 The sarea of Mouse Taur Encounter is "Red".
 When play begins:
@@ -32,6 +36,10 @@ Instead of Resolving a Mouse Taur Encounter:
 		now Porn Store is known;
 		now Mouse Taur Encounter is resolved;
 		now Find Porn Store is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Find Porn Store	"Find Porn Store"
 
 Find Porn Store is a situation. The level of Find Porn Store is 5.
 The sarea of Find Porn Store is "Red".
@@ -117,6 +125,10 @@ to say LisaIntroTalk:
 	say "     As you enter the store with your mouse taur host, you give your name and begin idly chatting about time before everything went bad. You settle on an offered chair Lisa pulls out some snacks, sharing with you as you talk with her. 'I planned to be a teacher,' she explains, 'Grade school, but then this happened. It seems that some mice that lived in my house became infected. They never bit me or anything, but close proximity seems to have been enough. I'm pretty certain their fur got onto a bit of my food. Maybe the indirect contact is why it took several days for me to change, and into an unconventional form too.' But change she did, becoming a curvy mouse taur that wandered the city alone, fending for herself until she recently found this porn store and moved in.";
 
 Section 2 - Porn Store and Lisa
+
+Table of GameRoomIDs (continued)
+Object	Name
+Porn Store	"Porn Store"
 
 Porn Store is a room. It is fasttravel. It is sleepsafe. It is private.
 The description of Porn Store is "[pornstoredesc]".

@@ -1,6 +1,10 @@
 Version 10 of Soldier Events by Wahn begins here.
 [Version 10 - David+Brutus]
 
+Table of GameEventIDs (continued)
+Object	Name
+Soldier Squad	"Soldier Squad"
+
 Soldier Squad is a situation.
 The sarea of Soldier Squad is "Warehouse".
 when play begins:
@@ -241,6 +245,10 @@ Instead of resolving a Soldier Squad:
 		now battleground is "void";
 		now Soldier Squad is resolved;  [for now]
 
+Table of GameEventIDs (continued)
+Object	Name
+Human Urges	"Human Urges"
+
 Human Urges is a situation.
 The sarea of Human Urges is "Red".
 when play begins:
@@ -256,6 +264,10 @@ Instead of resolving a Human Urges:
 	increase score by 5;
 	now Human Urges is resolved;
 	now battleground is "void";
+
+Table of GameEventIDs (continued)
+Object	Name
+Soldiers & Snowmeows	"Soldiers & Snowmeows"
 
 Soldiers & Snowmeows is a situation.
 The sarea of Soldiers & Snowmeows is "Red".
@@ -349,6 +361,10 @@ Instead of resolving a Soldiers & Snowmeows:
 		now SnowmeowSoldierStatus is 3;
 		now Soldiers & Snowmeows is resolved;  [for now]
 
+Table of GameEventIDs (continued)
+Object	Name
+Dangerous Load	"Dangerous Load"
+
 Dangerous Load is a situation.
 The sarea of Dangerous Load is "Outside".
 when play begins:
@@ -406,6 +422,10 @@ Instead of resolving a Dangerous Load:
 			say "     Not in the mood to watch the results of your choice earlier, you snatch a dropped MRE, then get going, quickly ducking out of sight around the corner. Behind you, lusty bellows and shocked gasps echo through the streets until you're a block or two distant.";
 			now Resolution of Dangerous Load is 2; [kicked the booster away, didn't watch them fuck]
 	now Dangerous Load is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Lone Soldier	"Lone Soldier"
 
 Lone Soldier is a situation.
 The sarea of Lone Soldier is "Outside".
@@ -494,6 +514,10 @@ Instead of resolving a Lone Soldier:
 		say "     Gasping for breath and bruised, the soldier stumbles away from the beaten hyenas, then braces himself against a dumpster to compose himself. After a short moment, he looks back to his attackers, nodding to himself that they're no longer a threat. Then the man suddenly turns his head and looks right in your direction! He must have caught a glimpse of movement from you in the corner of his eye. 'Fuck, another savage!' he swears loudly and clenches his fist - but only for a second before he winces and looks down at his bruised knuckles. Fist-fights against anthro animals sure are hard on a guy and even with the ever-present nanites, it'll take some moments before he heals... so the soldier chooses retreat over an uncertain fight. Without another word, he starts to run for the other end of the alley, leaving you far behind in mere moments. Then he's gone around the far corner, out of sight.";
 		now Resolution of Lone Soldier is 5; [didn't warn Monty]
 	now Lone Soldier is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Containment Barrier	"Containment Barrier"
 
 Containment Barrier is a situation.
 The sarea of Containment Barrier is "Outside".

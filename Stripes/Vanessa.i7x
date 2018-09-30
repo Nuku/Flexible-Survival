@@ -36,6 +36,10 @@ Version 2 of Vanessa by Stripes begins here.
 
 Section 0 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Paratrooper	"Paratrooper"
+
 Paratrooper is a situation. Paratrooper is inactive.		[unlocked after 3rd stage of 'Military presence']
 The sarea of Paratrooper is "Plains".
 when play begins:

@@ -55,6 +55,10 @@ Instead of resolving Sky Tower:
 		now HorusRelationship is 1;
 		move player to Palace Near The Sun;
 
+Table of GameRoomIDs (continued)
+Object	Name
+Palace Near The Sun	"Palace Near The Sun"
+
 Palace Near The Sun is a room.
 The description of Palace Near The Sun is "[palacenearthesundesc]"
 
@@ -153,6 +157,10 @@ instead of fucking the Horus:
 		say "     The God shakes his head and gives you a smile. 'I'm sorry but the Darkness requires my attention for now.' He says with an apologetic look in his eyes.";
 	else if HorusRelationship < 10:
 		say "     Horus gives you a soft smile and shakes his head. 'I'm sorry my friend but despite your small victory against the Darkness we still need to focus on it.' He starts before continuing with a chuckle. 'Afterall, what kind of king would I be if I focused on sex over solving a problem involving the people?' Looks like you won't be getting into bed with the deity until the issue with the mutant is solved.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Nightmare Mutation	"Nightmare Mutation"
 
 Nightmare Mutation is a situation. The level of Nightmare Mutation is 10.
 Nightmare Mutation is inactive.

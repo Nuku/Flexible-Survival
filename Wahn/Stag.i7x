@@ -7,6 +7,10 @@ Section 1 - Dog-Walking Event
 
 [First meeting, the player can then peacefully chat with the stag guy or try to 'free' his pet, leading to combat and further hostile meetings...]
 
+Table of GameEventIDs (continued)
+Object	Name
+Dog Walking	"Dog Walking"
+
 Dog Walking is a situation. The level of Dog Walking is 7.
 The sarea of Dog Walking is "Warehouse".
 when play begins:
@@ -279,14 +283,28 @@ to say MikeDesc:
 		say "DEBUG -> HP: [HP of Mike] <- DEBUG[line break]";
 	say "     Mike is a bipedal stag, clothed in jeans and hiking boots, with his shirtless upper body showing he's in good shape. His skin is covered in short brown fur, getting lighter at the belly and showing a cream colored treasure trail leading down to his crotch. Atop his head is a large rack of antlers, proud and powerful.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Mike's Home	"Mike's Home"
+
 Mike's Home is a room. It is a fasttravel. It is private.
 The description of Mike's Home is "     You're at a house with a very large fenced backyard at the edge of the warehouse district. A good location for a dog breeder, as the neighbors didn't complain about noise. At the side of the house (north from you) is the back entrance. Mike has given you the hidden location of the back door's key.".
 
-North of Mike's Home is Mike's Office.
+Table of GameRoomIDs (continued)
+Object	Name
+Mike's Office	"Mike's Office"
+
+Mike's Office is a room.
+Mike's Office is north of Mike's Home.
 Mike's Office is sleepsafe.
 The description of Mike's Office is "     You're in Mike's office, a relatively large room. A desk with a computer stands in the back, next to a filing cabinet. Lots of boxes of equipment and sacks of dog food line the walls. Seemingly a new addition to the room is a single bed in the center, its white sheets showing a few stains that are most likely dried cum.[if HP of Mike < 5] Lea, Mike's transformed dog lies on it, whining pitifully.[end if]".
 
-East of Mike's Office is Dog Kennels.
+Table of GameRoomIDs (continued)
+Object	Name
+Dog Kennels	"Dog Kennels"
+
+Dog Kennels	is a room.
+Dog Kennels is east of Mike's Office.
 Dog Kennels is sleepsafe.
 The description of Dog Kennels is "     This part of the building consists of a long hallway lined with quite a few large dog kennels on each side. In them are Mike's transformed dogs, many of which rest on air mattresses he added when they became human. The rest sit in front of their wire mesh kennel doors, giving you dog-eyed looks in hope of a walk or some play-time.".
 

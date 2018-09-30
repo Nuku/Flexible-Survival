@@ -10,6 +10,10 @@ Section 1 - Leather Wolves
 
 Section 2 - Fetish Store
 
+Table of GameEventIDs (continued)
+Object	Name
+Fetish Store	"Fetish Store"
+
 Fetish Store is a situation.
 The sarea of Fetish Store is "Red".
 
@@ -29,6 +33,10 @@ riding crop is an armament. It is part of the player. It has a weapon "[one of]y
 the scent of the riding crop is "The riding crop smells of leather and discipline.".
 
 Section 3 - Raided Corner Store
+
+Table of GameEventIDs (continued)
+Object	Name
+Raided Corner Store	"Raided Corner Store"
 
 Raided Corner Store is a situation. The level of Raided Corner Store is 3.
 The sarea of Raided Corner Store is "Red".
@@ -73,6 +81,10 @@ Section 4 - Aussie Pub
 
 Section 5 - Flooded Street
 
+Table of GameEventIDs (continued)
+Object	Name
+Flooded Street	"Flooded Street"
+
 Flooded Street is a situation. The level of Flooded Street is 3.
 The sarea of Flooded Street is "Red".
 when play begins:
@@ -97,6 +109,10 @@ Instead of resolving a Flooded Street:
 
 
 Section 6 - Strip Bar
+
+Table of GameEventIDs (continued)
+Object	Name
+Strip Bar	"Strip Bar"
 
 Strip Bar is a situation.
 The sarea of Strip Bar is "Red".
@@ -184,6 +200,10 @@ to say stripbarsearch:
 
 
 Section 7 - Evangelist
+
+Table of GameEventIDs (continued)
+Object	Name
+Evangelist	"Evangelist"
 
 Evangelist is a situation.
 The sarea of Evangelist is "Red".
@@ -285,6 +305,10 @@ to say orgyoutcome:
 
 
 Section 8 - Business as Usual
+
+Table of GameEventIDs (continued)
+Object	Name
+Business as Usual	"Business as Usual"
 
 Business as Usual is a situation.
 The sarea of Business as Usual is "Red".

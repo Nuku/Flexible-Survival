@@ -4,6 +4,10 @@ Version 4 of Frank by Stripes begins here.
 
 Section 1 - Event and Comic Store
 
+Table of GameEventIDs (continued)
+Object	Name
+Mephitness	"Mephitness"
+
 Mephitness is a situation. The level of Mephitness is 6.
 The sarea of Mephitness is "High".
 when play begins:
@@ -74,6 +78,9 @@ Instead of resolving a Mephitness:
 	now skunkfight is 0;
 	now Mephitness is resolved;
 
+Table of GameRoomIDs (continued)
+Object	Name
+Comic Shop	"Comic Shop"
 
 Comic Shop is a room. It is fasttravel. It is private.
 The description of Comic Shop is "[comicshopdesc]".

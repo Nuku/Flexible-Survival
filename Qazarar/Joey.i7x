@@ -174,6 +174,10 @@ to say JoeySex3: [Joey fucked]
 
 Section 4 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Stray Catboy	"Stray Catboy"
+
 Stray Catboy is a situation.
 The level of Stray Catboy is 5.
 The sarea of Stray Catboy is "Outside".

@@ -3,6 +3,11 @@ Astroslide Field Showers by Kernog begins here.
 "Adds the Astroslide Field Shower, a room used for events whenever the player enters it."
 
 [General]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Astroslide Field Showers	"Astroslide Field Showers"
+
 Astroslide Field Showers is a room.
 Astroslide Field Showers is north of Astroslide Field Locker-room.
 

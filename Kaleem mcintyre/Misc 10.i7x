@@ -3,6 +3,10 @@ Misc 10 by Kaleem mcintyre begins here.
 [
 Section 1 - Mysterious Stranger
 
+Table of GameEventIDs (continued)
+Object	Name
+Mysterious Stranger	"Mysterious Stranger"
+
 Mysterious Stranger is a situation. The level of Mysterious Stranger is 7.
 
 The sarea of Mysterious Stranger is "Outside".
@@ -46,6 +50,10 @@ to say capsuleuse:
 
 Section 2 - Air Drop
 
+Table of GameEventIDs (continued)
+Object	Name
+Air Drop	"Air Drop"
+
 Air Drop is a situation. The level of Air Drop is 3.
 
 The sarea of Air Drop is "Outside".
@@ -66,6 +74,10 @@ Instead of resolving a Air Drop:
 ]
 
 Section 3 - Magical Girl
+
+Table of GameEventIDs (continued)
+Object	Name
+Magical Girl	"Magical Girl"
 
 Magical Girl is a situation.
 The sarea of Magical Girl is "Outside".
@@ -117,6 +129,10 @@ Instead of smelling Sailor Outfit:
 
 Section 4 - June Mermaid
 
+Table of GameEventIDs (continued)
+Object	Name
+June Mermaid	"June Mermaid"
+
 June Mermaid is a situation.
 The sarea of June Mermaid is "Warehouse".
 
@@ -129,6 +145,10 @@ Instead of resolving a June Mermaid:
 
 Section 5 - Anomaly
 
+Table of GameEventIDs (continued)
+Object	Name
+Anomaly	"Anomaly"
+
 Anomaly is a situation.
 The sarea of Anomaly is "Warehouse".
 
@@ -140,6 +160,10 @@ Instead of resolving a Anomaly:
 
 
 Section 6 - Free Catch!
+
+Table of GameEventIDs (continued)
+Object	Name
+Free Catch	"Free Catch"
 
 Free Catch is a situation.
 The sarea of Free Catch is "Warehouse".
@@ -155,6 +179,10 @@ Instead of resolving a Free Catch:
 
 Section 7 - Rumors
 
+Table of GameEventIDs (continued)
+Object	Name
+Rumors	"Rumors"
+
 Rumors is a situation.
 The sarea of Rumors is "Warehouse".
 
@@ -167,6 +195,10 @@ Instead of resolving a Rumors:
 
 Section 8 - Diving contest
 
+Table of GameEventIDs (continued)
+Object	Name
+Diving Contest	"Diving Contest"
+
 Diving Contest is a situation.
 The sarea of Diving Contest is "Warehouse".
 
@@ -177,6 +209,10 @@ Instead of resolving a Diving Contest:
 
 
 Section 9 - Lackadaisical
+
+Table of GameEventIDs (continued)
+Object	Name
+Lackadaisical	"Lackadaisical"
 
 Lackadaisical is a situation.
 The sarea of Lackadaisical is "Warehouse".

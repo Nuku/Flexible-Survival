@@ -22,6 +22,10 @@ Version 1 of Mall Community Center by Wahn begins here.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Free Handouts	"Free Handouts"
+
 Free Handouts is a situation.
 The sarea of Free Handouts is "Smith Haven".
 
@@ -43,7 +47,12 @@ to FreeHandoutsEvent:
 
 Section 2 - Locations
 
-West of Mall West Wing is Haven Community Center.
+Table of GameRoomIDs (continued)
+Object	Name
+Haven Community Center	"Haven Community Center"
+
+Haven Community Center is a room.
+Haven Community Center is west of Mall West Wing.
 The description of Haven Community Center is "[HavenCCRoomDesc]".
 Haven Community Center is sleepsafe.
 

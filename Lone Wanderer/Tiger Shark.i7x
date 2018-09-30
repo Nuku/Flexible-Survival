@@ -44,6 +44,10 @@ to TigerSharkInfect:	[Function to infect the player. By default the Tiger Shark 
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Shark Warrior	"Shark Warrior"
+
 Shark Warrior is a situation.
 The sarea of Shark Warrior is "Beach".
 when play begins:

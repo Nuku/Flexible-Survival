@@ -17,6 +17,10 @@ when play begins:
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Razorback Fury	"Razorback Fury"
+
 Razorback Fury is a situation.
 The level of Razorback Fury is 7.
 The sarea of Razorback Fury is "Forest".
@@ -43,6 +47,10 @@ Instead of resolving a Razorback Fury:
 			now monster is y;
 			now area entry is "Forest";
 			break;
+
+Table of GameEventIDs (continued)
+Object	Name
+Boar Payback	"Boar Payback"
 
 Boar Payback is a situation.
 The Prereq1 of Boar Payback is Razorback Fury.
@@ -89,6 +97,10 @@ Instead of resolving a Boar Payback:
 	now Boar Payback is resolved;
 	now RazorbackBoarEvents is 2;
 
+Table of GameEventIDs (continued)
+Object	Name
+Canine Indecision	"Canine Indecision"
+
 Canine Indecision is a situation.
 The Prereq1 of Canine Indecision is Boar Payback.
 The level of Canine Indecision is 7.
@@ -126,6 +138,10 @@ Instead of resolving a Canine Indecision:
 		now Resolution of Canine Indecision is 51; [Andy went back to his buddies (on his own)]
 	now Canine Indecision is resolved;
 	now RazorbackBoarEvents is 3;
+
+Table of GameEventIDs (continued)
+Object	Name
+Boar Encounter	"Boar Encounter"
 
 Boar Encounter is a situation.
 Boar Encounter is inactive.

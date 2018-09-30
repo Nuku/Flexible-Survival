@@ -85,6 +85,10 @@ Version 3 of Elijah by Wahn begins here.
 
 Section 1 - Meeting Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Angel vs Demons	"Angel vs Demons"
+
 Angel vs Demons is a situation. The level of Angel vs Demons is 10.
 The sarea of Angel vs Demons is "Red".
 when play begins:
@@ -546,6 +550,10 @@ Section 3 - Gathering (and other) Events
 
 [This event exists mainly to allow players with girl banned to have a means to find a honeycomb.]
 
+Table of GameEventIDs (continued)
+Object	Name
+Sweet Surprise	"Sweet Surprise"
+
 Sweet Surprise is a situation. Sweet Surprise is inactive.
 The sarea of Sweet Surprise is "Park".
 
@@ -556,6 +564,10 @@ Instead of resolving a Sweet Surprise:
 	now Sweet Surprise is resolved;
 
 [This event exists mainly to give players another means to obtain a healing booster.]
+
+Table of GameEventIDs (continued)
+Object	Name
+Examination Room	"Examination Room"
 
 Examination Room is a situation. Examination Room is inactive. The level of Examination Room is 8.
 The sarea of Examination Room is "Hospital".

@@ -53,10 +53,21 @@ SilverToken is a number that varies. SilverToken is usually 0.
 KyrverthMaleBoning is a number that varies. KyrverthMaleBoning is usually 0.
 
 [Room Declaration]
-West of Entrance to the High Rise District is Overgrown Street.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Overgrown Street	"Overgrown Street"
+
+Overgrown Street is a room.
+Overgrown Street is west of Entrance to the High Rise District.
 The description of Overgrown Street is "[OvergrownStreetDesc]".
 
 [Room Declaration - Room will go public after first encounter with Kyrverth]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Dragons Den	"Dragons Den"
+
 Dragons Den is a room.
 The description of Dragons Den is "[DragonsDenDesc]".
 
@@ -356,6 +367,10 @@ Section 4 - Events
 [Strange sighting - Encounter Kyrverth		]
 [Jewel Heist - First Quest					]
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange Sighting	"Strange Sighting"
+
 Strange Sighting is a situation.
 The level of Strange Sighting is 5. [minimum level to find the event]
 The sarea of Strange Sighting is "High".
@@ -393,6 +408,10 @@ Instead of resolving a Strange Sighting:
 
 instead of going south from Overgrown Street while (KyrverthTimer - turns <= 6 and KyrverthStage is 0): [No other requirements, just 6 turns since the event]
 	say "That's probably not the best idea, he's probably still pretty upset.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Jewel Heist	"Jewel Heist"
 
 Jewel Heist is a situation.
 The level of Jewel Heist is 5. [minimum level to find the event]

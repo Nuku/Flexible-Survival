@@ -2,7 +2,12 @@ Version 1 of HellHound by Speedlover begins here.
 
 Section 1 - Basic setup
 
-Northwest of Dirty Sheds is Overgrown Area.
+Overgrown Area is northwest of Dirty Sheds.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Overgrown Area	"Overgrown Area"
+
 Overgrown Area is a Room.
 The description of Overgrown Area is "[OvergrownBlockDesc]";
 

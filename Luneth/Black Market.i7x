@@ -23,7 +23,11 @@ Version 1 of Black Market by Luneth begins here.
 
 Section 1 - Location
 
-West of Zephyr Lobby is Zephyr Storeroom.
+Table of GameRoomIDs (continued)
+Object	Name
+Zephyr Storeroom	"Zephyr Storeroom"
+
+Zephyr Storeroom is west of Zephyr Lobby.
 Zephyr Storeroom is a room. The description of Zephyr Storeroom is "[zephyrstoreroom desc]".
 
 to say zephyrstoreroom desc:

@@ -4,6 +4,10 @@ Version 2 of Francois by AGentlemanCalledB begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Gourmet Treats	"Gourmet Treats"
+
 Gourmet Treats is a situation. The level of Gourmet Treats is 8.
 The sarea of Gourmet Treats is "High".
 
@@ -141,6 +145,10 @@ to say BakeryRetriever:
 		challenge "Retriever";
 
 Section 2 - Location
+
+Table of GameRoomIDs (continued)
+Object	Name
+Bone-Appetit	"Bone-Appetit"
 
 Bone-Appetit is a room. It is fasttravel. It is private.
 The description of Bone-Appetit is "[BoneAppetitdesc]".

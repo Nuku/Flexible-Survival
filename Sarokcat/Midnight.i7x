@@ -106,6 +106,9 @@ Instead of fucking the Midnight:
 
 Section 2- midnight quests
 
+Table of GameEventIDs (continued)
+Object	Name
+FindingMidnight	"FindingMidnight"
 
 FindingMidnight is a situation.
 the sarea of FindingMidnight is "Zoo".

@@ -18,6 +18,11 @@ CloudKnowledge is a number that varies.
 StewartLocationCounter is a number that varies.
 
 [Room Declaration]
+
+Table of GameRoomIDs (continued)
+Object	Name
+The Clouds	"The Clouds"
+
 The Clouds is a room. It is private.
 The description of The Clouds is "[CloudDesc]"
 
@@ -43,6 +48,10 @@ instead of going Down from The Clouds:
 	else:
 		say "     You direct yourself over to the edge of the clouds, taking a peek downward to confirm that there is a pool below you, as you do not wish to be a pancake on the ground. Thankfully there is a pool below you so you mentally prepare yourself. As you do this you suddenly hear cheering behind you, specifically people asking you to do a cannonball. With a shrug of your shoulders you decide to oblige them. Taking a couple steps back you start off into a run before launching yourself off the edge. Once airborne you are spinning in the air, wondering why the fuck you jumped off a cluster of clouds hundreds of feet in the air. Thankfully you do not go splat on the pavement, instead landing in the pool, causing an eruption of water to spray all the students at the pool. With an ecstatic smile, you clamber on out of the liquid and go on your way, ignoring the naiads yelling at you for wasting their water.";
 		move player to Athletic Street;
+
+Table of GameRoomIDs (continued)
+Object	Name
+Stewart's Room	"Stewart's Room"
 
 Stewart's Room is a room. It is private.
 The description of Stewart's Room is "[StewartRoomDesc]"

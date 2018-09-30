@@ -179,6 +179,10 @@ to say SatyrFratSex:
 		say "     After a bit more pretty nice making out with the student, you leave to pull his pants back up, unobtrusively checking for the satyrs in the meantime. Looks like they made it into the building alright. With a smile, you playfully grope Richard's butt one last time, then bid him farewell and watch as he walks back to his post. Maybe you should return here sometime later and see how this [bold type]party[roman type] develops...";
 		now SatyrFratPartyStage is 5;
 
+Table of GameEventIDs (continued)
+Object	Name
+Let's Party	"Let's Party"
+
 Let's Party is a situation.
 Let's Party is inactive.
 The sarea of Let's Party is "Campus".
@@ -579,6 +583,10 @@ to say SpecialWineUsing:
 
 instead of sniffing Pan's Special Reserve:
 	say "The wine is aromatic and quite powerful. Something about it fills you with the feeling of boundless energy, like you could dance away all night and day, give yourself to endless revels and never stop enjoying yourself.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Divine Wine-Cellar	"Divine Wine-Cellar"
 
 Divine Wine-Cellar is a situation.
 Divine Wine-Cellar is inactive.

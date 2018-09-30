@@ -6,6 +6,10 @@ Version 1 of Urban Forest by Stripes begins here.
 
 Section 1 - Urban Forest
 
+Table of GameRoomIDs (continued)
+Object	Name
+Urban Forest	"Urban Forest"
+
 Urban Forest is a room.
 Urban Forest is fasttravel.
 The earea of Urban Forest is "Forest".

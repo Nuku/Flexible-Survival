@@ -1,6 +1,10 @@
 Version 2 of Underground Events by Wahn begins here.
 [ Version 2 - Captive Breeding with a male version ]
 
+Table of GameEventIDs (continued)
+Object	Name
+Captive Breeding	"Captive Breeding"
+
 Captive Breeding is a situation.
 The sarea of Captive Breeding is "Sealed".
 
@@ -147,6 +151,10 @@ to say cuckold choice male:
 				LineBreak;
 				say "     With a shrug, you step away and leave the guy where he is.";
 
+Table of GameEventIDs (continued)
+Object	Name
+Trashed Refuge	"Trashed Refuge"
+
 Trashed Refuge is a situation.
 The sarea of Trashed Refuge is "Sealed".
 
@@ -240,12 +248,20 @@ Instead of resolving a Trashed Refuge:
 		now Resolution of Trashed Refuge is 4; [4th visit]
 		now Trashed Refuge is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Hidden Sublevel	"Hidden Sublevel"
+
 Hidden Sublevel is a situation.
 The sarea of Hidden Sublevel is "Sealed".
 
 Instead of resolving a Hidden Sublevel:
 	say "     You come upon a mid-sized room with an elevator, dark and spooky like the rest of the complex under the Trevor Labs. The opposite wall from that elevator looks interesting - seems like a whole section of it was designed to slide away sideways and is currently in that position. Behind where the wall cover would be, there's a thick reinforced door, large enough to require powerful motors to open and close it. Whether this hidden entrance was constructed to keep something out - or in - it's wide open now, and without power to the building, it's stuck for good that way...";
 	now Hidden Sublevel is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Failed Experiments	"Failed Experiments"
 
 Failed Experiments is a situation.
 The Prereq1 of Failed Experiments is Hidden Sublevel.
@@ -254,6 +270,10 @@ The sarea of Failed Experiments is "Sealed".
 Instead of resolving a Failed Experiments:
 	say "     In the depths of the hidden section in this underground complex, you find a room with row after row of glass tanks. Small and large, they're filled with formaldehyde in which... things are preserved. From just clumps of tentacles, to animals sprouting too many limbs or even heads, to... deformed creatures which have a dismaying resemblance to humans. Seems like even before the nanite infection, unnatural things were being done in these labs. With a shiver running down your spine, you turn away from the failed experiments and make your way back to the surface, unsuccessfully trying to forget what you saw.";
 	now Failed Experiments is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Mindshield Storage	"Mindshield Storage"
 
 Mindshield Storage is a situation.
 The Prereq1 of Mindshield Storage is Hidden Sublevel.
@@ -306,6 +326,10 @@ The placement of mindshield helmet is "head".
 The descmod of mindshield helmet is "A shiny silver helmet sits on your head, providing some protection. Maybe more than just physical too.".
 The slot of mindshield helmet is "head".
 the scent of mindshield helmet is "The helmet smells like plastic.".
+
+Table of GameEventIDs (continued)
+Object	Name
+Holding Cell Four	"Holding Cell Four"
 
 Holding Cell Four is a situation.
 The Prereq1 of Holding Cell Four is Hidden Sublevel.

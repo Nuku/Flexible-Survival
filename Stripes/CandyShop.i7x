@@ -6,6 +6,10 @@ Version 1 of CandyShop by Stripes begins here.
 
 Section 1 - CandyShop event
 
+Table of GameEventIDs (continued)
+Object	Name
+CandyShop	"CandyShop"
+
 CandyShop is a situation. The level of CandyShop is 9.
 The sarea of CandyShop is "Midway".
 sugarferretfight is a number that varies.
@@ -76,6 +80,10 @@ Instead of resolving a CandyShop:
 
 
 Section 2 - Sweet Tooth
+
+Table of GameRoomIDs (continued)
+Object	Name
+Sweet Tooth	"Sweet Tooth"
 
 Sweet Tooth is a room. "[Sweet Tooth scene]". It is unknown. It is fasttravel. It is private.
 

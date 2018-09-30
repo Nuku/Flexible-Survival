@@ -5,6 +5,9 @@ Random Events by Hiccup begins here.
 
 Section 1 - The Situations
 
+Table of GameEventIDs (continued)
+Object	Name
+Wet Clothes	"Wet Clothes"
 
 Wet Clothes is a situation.
 the sarea of Wet Clothes is "Warehouse".
@@ -14,6 +17,9 @@ Instead of Resolving a Wet Clothes:
 	increase the score by 1;
 	now Wet Clothes is Resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Politics	"Politics"
 
 Politics is a situation.
 the sarea of Politics is "Campus".
@@ -23,6 +29,9 @@ Instead of Resolving a Politics:
 	increase the score by 1;
 	now Politics is Resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Failed Survivor	"Failed Survivor"
 
 Failed Survivor is a situation.
 the sarea of Failed Survivor is "Junkyard".
@@ -39,6 +48,9 @@ Instead of Resolving a Failed Survivor:
 	increase the score by 1;
 	now Failed Survivor is Resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Tracks	"Tracks"
 
 Tracks is a situation.
 the sarea of Tracks is "Plains".

@@ -54,6 +54,10 @@ lastDavidSarahInteraction is a number that varies. lastDavidSarahInteraction is 
 
 Section 1 - Sarah and the Husky pack
 
+Table of GameEventIDs (continued)
+Object	Name
+Husky Pack	"Husky Pack"
+
 Husky Pack is a situation. The level of Husky Pack is 8.
 the sarea of Husky Pack is "Outside".
 when play begins:
@@ -317,6 +321,10 @@ to say HuskyAlphaWin:
 	else:
 		say "     With a snarl, the male husky looks to his pack, anger teeming from his every motion, and a livid erection throbs against his toned abdomen. The furious eyes glare over you, and he spits, 'You ruined our fun, you ass. You're not worth my time.' Turning his back to you, he kicks at the dirt, digging it back to spatter across your form before he collects his pack and leaves.";
 
+
+Table of GameEventIDs (continued)
+Object	Name
+Medkit Parts	"Medkit Parts"
 
 Medkit Parts is a situation.
 HasParts is a number that varies.

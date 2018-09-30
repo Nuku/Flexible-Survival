@@ -21,6 +21,10 @@ Version 1 of Joshiro by Wahn begins here.
 
 Section 1 - Initial Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Road Wanderer	"Road Wanderer"
+
 Road Wanderer is a situation.
 The sarea of Road Wanderer is "High".
 
@@ -83,6 +87,12 @@ Instead of resolving a Road Wanderer:
 			now HP of Joshiro is 100; [player not interested]
 			now Resolution of Road Wanderer is 99;
 	now Road Wanderer is resolved; [for now]
+
+[
+
+Table of GameEventIDs (continued)
+Object	Name
+Sloppy Seconds	"Sloppy Seconds"
 
 Sloppy Seconds is a situation. Sloppy Seconds is inactive. [player must know Tyke, Darius and Joshiro to find this]
 The Prereq1 of Sloppy Seconds is Road Wanderer.

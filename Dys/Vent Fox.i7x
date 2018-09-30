@@ -197,6 +197,10 @@ to say VentScent:
 instead of conversing the Vent:
 	say "     You speak to Vent casually, and he seems to listen attentively, even giving a nod here and there.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Maintenance Garage	"Maintenance Garage"
+
 Maintenance Garage is a room.
 The description of Maintenance Garage is "[MaintenanceGarageDescription]".
 

@@ -10,6 +10,10 @@ This is the monkeyAcquaintancesCheck rule:
 
 Section 1 - Original situation
 
+Table of GameEventIDs (continued)
+Object	Name
+Hanu	"Hanu"
+
 Hanu is a situation. The sarea of Hanu is "Zoo".
 
 Instead of resolving a Hanu:
@@ -38,6 +42,10 @@ Instead of resolving a Hanu:
 	now Hanu is resolved;
 
 Section 2 - Monkey Duel
+
+Table of GameEventIDs (continued)
+Object	Name
+Monkey Duel	"Monkey Duel"
 
 Monkey Duel is a situation.
 Monkey Duel is inactive.

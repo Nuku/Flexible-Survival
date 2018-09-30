@@ -5,6 +5,10 @@ Disorganization by Kaleem mcintyre begins here.
 
 Section 1- Disorganization in the ranks
 
+Table of GameEventIDs (continued)
+Object	Name
+Disorganization	"Disorganization"
+
 Disorganization is a situation. The level of Disorganization is 9.
 DRS is a number that varies.[@Tag:NotSaved]
 when play begins:

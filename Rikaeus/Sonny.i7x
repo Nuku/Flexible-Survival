@@ -296,6 +296,10 @@ instead of going to Bone-Appetit while SonnyFood is 1:
 	now SonnyFood is 2;
 	now Manicotti Shopping is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+Manicotti Shopping	"Manicotti Shopping"
+
 Manicotti Shopping is a situation. The level of Manicotti Shopping is 2. Manicotti Shopping is inactive.
 The sarea of Manicotti Shopping is "high".
 

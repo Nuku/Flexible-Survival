@@ -6,6 +6,10 @@ Version 2 of Tiger Den by Sarokcat begins here.
 
 Section 1 - Tiger Den environment
 
+Table of GameRoomIDs (continued)
+Object	Name
+Tiger Den	"Tiger Den"
+
 Tiger Den is a room. It is fasttravel. Tiger Den is sleepsafe. It is private.
 the scent of Tiger Den is "The enclosed basement hideout smells strongly of tigers.".
 The description of Tiger Den is "[tigerden desc]".
@@ -13,7 +17,12 @@ The description of Tiger Den is "[tigerden desc]".
 to say tigerden desc:
 	say "     Sparsely furnished, this large concrete basement garage bears a slight resemblance to your own emergency bunker back at the library, and while it seems to be not quite as well hidden, its size certainly seems to make up for it. Half of the large room is however sectioned off by small movable screens someone has set up, separating the basement into a slightly confusing maze of temporary rooms. In the half of the room that is still open, you can see several tiger-like humans, with alterations ranging from merely tiger furred with some feline features, to those with a full tiger head and only a few human features like hands and walking on two legs, much like the one you rescued. It looks like they have barricaded the defensible entry way with scavenged furniture and items, and with the traps they have placed in the empty maintenance tunnels, it seems like they should be safe from most of the infected as long as they can stay here, although several of the tigers do eye you warily as you move around the den, just in case you decide to do something stupid and cause trouble. Heading east will take you into the tiger's washroom.";
 
-east of Tiger Den is Washroom.
+Washroom is east of Tiger Den.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Washroom	"Washroom"
+
 Washroom is a room. The description of Washroom is "[twashroom desc]".
 The invent of Washroom is { "dirty water" }.
 
@@ -22,6 +31,10 @@ to say twashroom desc:
 
 
 Section 2 - TigerVSTaur
+
+Table of GameEventIDs (continued)
+Object	Name
+TigerVSTaur	"TigerVSTaur"
 
 TigerVSTaur is a situation. The level of TigerVSTaur is 9.
 The sarea of TigerVSTaur is "Zoo".

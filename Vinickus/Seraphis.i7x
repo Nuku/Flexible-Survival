@@ -36,6 +36,10 @@ SeraphisNeedy is a number that varies. [Helps differentiate the two dominant Ser
 
 Section 2 - Seraphis Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Conflict within the Plains	"Conflict within the Plains"
+
 Conflict within the Plains is a situation. The level of Conflict within the Plains is 6.
 The sarea of Conflict within the Plains is "Plains".
 when play begins:

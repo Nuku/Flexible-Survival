@@ -54,6 +54,10 @@ fangsidney is a truth state that varies. fangsidney is usually false.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Meeting Sidney	"Meeting Sidney"
+
 Meeting Sidney is a situation.
 The sarea of Meeting Sidney is "Outside".
 when play begins:

@@ -23,6 +23,10 @@ sanreq is an action applying to nothing.
 
 Section 1 - The Situation
 
+Table of GameEventIDs (continued)
+Object	Name
+Needy Rabbit Girl	"Needy Rabbit Girl"
+
 Needy Rabbit Girl is a situation.
 
 when play begins:
@@ -92,6 +96,10 @@ Instead of Resolving a Needy Rabbit Girl:
 
 
 Section 2 - Rabbit Den
+
+Table of GameRoomIDs (continued)
+Object	Name
+Rabbit Den	"Rabbit Den"
 
 Rabbit Den is a room. It is fasttravel. It is private.
 earea of Rabbit Den is "Outside".

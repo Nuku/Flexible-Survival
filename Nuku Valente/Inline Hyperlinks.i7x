@@ -288,6 +288,10 @@ Example: * Survival Mode - A simple example that shows the most basic usage. The
 
 	Include Inline Hyperlinks by Daniel Stelzer.
 
+	Table of GameRoomIDs (continued)
+	Object	Name
+	The Jungle	"The Jungle"
+
 	The Jungle is a room. "You are [swing state] from a thick, rope-like vine. Another dangles from the canopy twenty-five or so feet away. A thick jungle mist obscures the view beyond, as well as the forest floor."
 
 	Before reading a command:
@@ -344,6 +348,10 @@ Example: ** Maze - It can be difficult to work with text substitutions in Inform
 				if count > 0:
 					say ", ";
 			say ". ";
+
+	Table of GameRoomIDs (continued)
+	Object	Name
+	R01	"R01"
 
 	R01 is a room. R02 is north of R01. R03 is east of R01. R04 is north of R02 and northwest of R03. R05 is northeast of R02. R06 is north of R05. R07 is west of R06. R08 is southwest of R04 and northwest of R02. R09 is east of R06. R10 is northeast of R06. R11 is east of R10. R12 is southeast of R09. R13 is south of R12. R14 is northeast of R12. R14 is southeast of R11. R15 is up from R03. R16 is east of R15. R17 is north of R16. R18 is down from R17. The description of R18 is "A maze of twisty little passages, all alike. A breeze blows from the northeast. Exits: [exits]"
 
@@ -484,6 +492,10 @@ A companion rule for input redirects the player's typed direction command in the
 		now red pill is nowhere;
 		now the player is deranged;
 		silently try looking.
+
+	Table of GameRoomIDs (continued)
+	Object	Name
+	R01	"R01"
 
 	R01 is a room. R02 is north of R01. R03 is east of R01. R04 is north of R02 and northwest of R03. R05 is northeast of R02. R06 is north of R05. R07 is west of R06. R08 is southwest of R04 and northwest of R02. R09 is east of R06. R10 is northeast of R06. R11 is east of R10. R12 is southeast of R09. R13 is south of R12. R14 is northeast of R12. R14 is southeast of R11. R15 is up from R03. R16 is east of R15. R17 is north of R16. R18 is down from R17. The description of R18 is "A maze of twisty little passages, all alike. A breeze blows from the northeast. Exits: [exits]"
 

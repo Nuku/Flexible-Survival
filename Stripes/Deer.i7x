@@ -28,6 +28,10 @@ Version 3 of Deer by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Unusual Creature	"Unusual Creature"
+
 Unusual Creature is a situation. It is inactive.
 The sarea of Unusual Creature is "Park".
 

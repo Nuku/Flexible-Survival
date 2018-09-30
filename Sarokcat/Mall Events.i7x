@@ -4,6 +4,10 @@ Mall Events by Sarokcat begins here.
 
 Section 1 - Tight space
 
+Table of GameEventIDs (continued)
+Object	Name
+Tight space	"Tight space"
+
 Tight Space is a scavevent.
 The sarea of Tight Space is "Mall".
 
@@ -39,6 +43,10 @@ Instead of resolving Tight Space:
 
 Section 2 - Strange echo
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange echo	"Strange echo"
+
 Strange echo is a situation.
 The sarea of Strange echo is "Mall".
 
@@ -48,6 +56,10 @@ Instead of resolving a Strange echo:
 
 
 Section 3 - Sewer worker
+
+Table of GameEventIDs (continued)
+Object	Name
+Sewer worker	"Sewer worker"
 
 Sewer worker is a situation.
 The sarea of Sewer worker is "Mall".
@@ -60,6 +72,10 @@ Instead of resolving a Sewer worker:
 
 Section 4 - totally lost
 
+Table of GameEventIDs (continued)
+Object	Name
+totally lost	"totally lost"
+
 totally lost is a situation.
 The sarea of totally lost is "Mall".
 
@@ -69,6 +85,10 @@ Instead of resolving a totally lost:
 
 
 Section 5 - Captive Rat
+
+Table of GameEventIDs (continued)
+Object	Name
+Captive Rat	"Captive Rat"
 
 Captive Rat is a situation. The level of Captive Rat is 6.
 The sarea of Captive Rat is "Mall".
@@ -94,6 +114,10 @@ Instead of resolving a Captive Rat:
 	now Captive rat is resolved;
 
 Section 6 - puddle of goo
+
+Table of GameEventIDs (continued)
+Object	Name
+puddle of goo	"puddle of goo"
 
 puddle of goo is a situation.
 The sarea of puddle of goo is "Mall".
@@ -123,6 +147,10 @@ Instead of resolving a puddle of goo:
 
 Section 7 - Strange symbol
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange symbol	"Strange symbol"
+
 Strange symbol is a situation.
 The sarea of Strange symbol is "Mall".
 
@@ -132,6 +160,10 @@ Instead of resolving a Strange symbol:
 	now Strange symbol is resolved;
 
 Section 8 - Goo Gathering
+
+Table of GameEventIDs (continued)
+Object	Name
+Goo Gathering	"Goo Gathering"
 
 Goo Gathering is a situation. The level of Goo Gathering is 2.
 The sarea of Goo Gathering is "Mall".
@@ -159,6 +191,10 @@ Instead of resolving a Goo Gathering:
 
 
 Section 9 - Old rail system
+
+Table of GameEventIDs (continued)
+Object	Name
+Old rail system	"Old rail system"
 
 Old rail system is a situation.
 The sarea of Old rail system is "Mall".

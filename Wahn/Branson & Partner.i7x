@@ -215,6 +215,9 @@ to say MelanieTalk3: [ask to meet Mr. B]
 
 the fuckscene of Melanie is "     As you make an amorous offer to the deer, Melanie gives a little giggle and shakes her head. 'Sorry, but I'm under strict orders to be ready for visitors at all times. Can't disappoint Mr. B,' she says and winks at you.".
 
+Table of GameEventIDs (continued)
+Object	Name
+City Hall Offices	"City Hall Offices"
 
 City Hall Offices is a situation. The level of City Hall Offices is 1. City Hall Offices is inactive.
 The sarea of City Hall Offices is "High".

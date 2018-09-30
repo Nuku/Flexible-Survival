@@ -8,6 +8,9 @@ an everyturn rule:
 		change the northeast exit of Park Trail to Picnic Area; [connecting the location to the other room]
 		change the southwest exit of Picnic Area to Park Trail;
 		now HitchingRoomConnection is 1; [room connected]
+Table of GameRoomIDs (continued)
+Object	Name
+Picnic Area	"Picnic Area"
 
 Picnic Area is a room.
 earea of Picnic Area is "Park".
@@ -41,6 +44,10 @@ carry out HitchInPrisonStock:
 	else:
 		LineBreak;
 		say "     You decide to leave the stocks and continue your journey. Let some other submissive breeder lock themselves in.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Public Hitching Post	"Public Hitching Post"
 
 Public Hitching Post is a situation.
 The sarea of Public Hitching Post is "Park".

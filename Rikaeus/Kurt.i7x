@@ -9,6 +9,10 @@ Version 1 of Kurt by Rikaeus begins here.
 KurtRelationship is a number that varies.
 KurtEvent is a number that varies.
 
+Table of GameEventIDs (continued)
+Object	Name
+Surprise Shark Encounter	"Surprise Shark Encounter"
+
 Surprise Shark Encounter is a situation.
 The sarea of Surprise Shark Encounter is "Atlantis".
 
@@ -33,6 +37,10 @@ to FirstKurtEvent:
 	now Predator's Lunch is active;
 	now KurtEvent is turns;
 	move player to Atlantis City Center;
+
+Table of GameEventIDs (continued)
+Object	Name
+Predator's Lunch	"Predator's Lunch"
 
 Predator's Lunch is a situation.
 Predator's Lunch is inactive.

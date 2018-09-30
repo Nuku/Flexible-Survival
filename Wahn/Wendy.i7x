@@ -3,6 +3,10 @@ Version 1 of Wendy by Wahn begins here.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Cow Hunting	"Cow Hunting"
+
 Cow Hunting is a situation. The level of Cow Hunting is 5.
 The sarea of Cow Hunting is "Plains".
 when play begins:
@@ -53,6 +57,10 @@ Instead of resolving a Cow Hunting:
 		now thirst of Corbin is 1; [starting the day/night movement of Corbin]
 		now Resolution of Cow Hunting is 3; [talked to Corbin]
 	now Cow Hunting is resolved; [event resolved, either peacefully or through combat]
+
+Table of GameEventIDs (continued)
+Object	Name
+Missing Cow	"Missing Cow"
 
 Missing Cow is a situation.
 The Prereq1 of Missing Cow is Cow Hunting.

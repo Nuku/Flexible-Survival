@@ -2,6 +2,10 @@ Version 1 of Shrinking Shrooms by Defth begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Mushroom cave	"Mushroom cave"
+
 Mushroom cave is a situation.
 The sarea of Mushroom cave is "Outside".
 
@@ -56,6 +60,10 @@ Understand "shrooms" as glowing mushroom.
 Understand "glowing shrooms" as glowing mushroom.
 
 Section 3 - Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Hungry dog	"Hungry dog"
 
 Hungry dog is a situation.
 The sarea of Hungry dog is "Outside".
@@ -136,6 +144,10 @@ Instead of resolving a Hungry dog:
 		say "     (Further options for this scene are locked for players who did not select 'more vore'. You can change your settings with the help of Trixie in the library, if you really want to see the rest.)";
 		now Resolution of Hungry Dog is 3; [vore-disabled resolution]
 		now Hungry Dog is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Little trouble	"Little trouble"
 
 Little trouble is a situation.
 The sarea of Little trouble is "Outside".

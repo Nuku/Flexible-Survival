@@ -18,6 +18,9 @@ an everyturn rule:
 		change the west exit of Second Floor Male Dorms to Pericles' Room; [connecting the location to the travel room]
 		change the east exit of Pericles' Room to Second Floor Male Dorms; [connecting the location to the travel room]
 		now PericlesRoomConnection is 1; [room connected]
+Table of GameEventIDs (continued)
+Object	Name
+Daily Training Session	"Daily Training Session"
 
 Daily Training Session is a situation.
 Daily Training Session is inactive.
@@ -47,6 +50,10 @@ to FirstPericlesEvent:
 	now Daily Training Session is resolved;
 	now History Class Lesson is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+History Class Lesson	"History Class Lesson"
+
 History Class Lesson is a situation.
 History Class Lesson is inactive.
 The sarea of History Class Lesson is "Campus".
@@ -72,6 +79,10 @@ to SecondPericlesEvent:
 	now History Class Lesson is resolved;
 	now Private Masturbation is active;
 	now LastCampusWalkin is turns;
+
+Table of GameEventIDs (continued)
+Object	Name
+Private Masturbation	"Private Masturbation"
 
 Private Masturbation is a situation.
 Private Masturbation is inactive.
@@ -135,6 +146,10 @@ to ThirdPericlesEvent:
 			say "     You quietly excuse yourself and just slip out of the room, leaving Pericles to finish himself off on his own.";
 			now Resolution of Private Masturbation is 3; [player didn't watch]
 	now LastCampusWalkin is turns;
+
+Table of GameEventIDs (continued)
+Object	Name
+History Video	"History Video"
 
 History Video is a situation.
 History Video is inactive.

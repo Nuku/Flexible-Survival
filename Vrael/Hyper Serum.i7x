@@ -6,6 +6,10 @@ Hyper Serum by Vrael begins here.
 
 HyperSerumTracker is a number that varies.
 
+Table of GameEventIDs (continued)
+Object	Name
+Mysterious Briefcase	"Mysterious Briefcase"
+
 Mysterious Briefcase is a situation.
 The sarea of Mysterious Briefcase is "Outside".
 

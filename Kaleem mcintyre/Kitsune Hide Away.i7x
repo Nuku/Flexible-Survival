@@ -4,6 +4,10 @@ Kitsune Hide Away by Kaleem mcintyre begins here.
 
 Section 1 - Foxy Hideaway
 
+Table of GameRoomIDs (continued)
+Object	Name
+Foxy Hideaway	"Foxy Hideaway"
+
 Foxy Hideaway is a room. It is fasttravel. It is private.
 
 The description of Foxy Hideaway is "All around you the scents of flora and fauna surround the small enclosed area kept hidden behind a single door. The smells of the various plants has your nose literally twitching a mile a minute as you smell everything from jasmine to lavender to roses to honeysuckles filling up the den of the silver vulpine. From what you can see Kitsune has placed a large four-poster bed in the middle of his hideaway, strange considering that there is grass growing throughout the floor around the feet of the plush sleeping pallet. There are also two nightstands on either side of the room with elegant lamps dominating the top of said stands, both are on but running at a low lighting. On both the left and right sides of the walls there are tapestries with silver and white nine-tailed kitsunes standing regal in place, almost as though they were watching the room for intruders. Besides the flowers growing throughout the room there are small ornaments, such as vases and other assorted pottery, placed onto the floor with incense sticks burning within them. With all of this grandiose ensemble collected together the room should feel oppressed, but maybe because of that it instead of in spite of it the area feels... open for some reason.".

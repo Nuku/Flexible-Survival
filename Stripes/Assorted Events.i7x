@@ -5,6 +5,10 @@ Version 4 of Assorted Events by Stripes begins here.
 
 Section 1 - Ninjas?
 
+Table of GameEventIDs (continued)
+Object	Name
+Fallen Kunoichi	"Fallen Kunoichi"
+
 Fallen Kunoichi is a situation.
 The sarea of Fallen Kunoichi is "Museum".
 when play begins:
@@ -25,6 +29,9 @@ name	desc	weight	object
 
 bo staff is an armament. It is part of the player. It has a weapon "[one of]your bo staff[or]your fighting staff[or]your staff[or]your bo staff with a hard whack[or]the long pole[or]your staff with a fast jab[at random]". The weapon damage of bo staff is 4. The weapon type of bo staff is "Melee". It is not temporary.
 
+Table of GameEventIDs (continued)
+Object	Name
+Suddenly Ninjas	"Suddenly Ninjas"
 
 Suddenly Ninjas is a situation.
 The sarea of Suddenly Ninjas is "Museum".
@@ -71,6 +78,10 @@ to say lostninjahorde:
 
 Section 2 - Outside Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Losing It	"Losing It"
+
 Losing It is a situation. The level of Losing It is 7.
 when play begins:
 	add Losing It to badspots of furry;
@@ -100,6 +111,9 @@ Instead of resolving a Losing It:
 
 [CatsandDogs moved to Consolidated Outside Events]
 
+Table of GameEventIDs (continued)
+Object	Name
+Tour Bus	"Tour Bus"
 
 Tour Bus is a situation. The level of Tour Bus is 6.
 when play begins:
@@ -114,6 +128,10 @@ instead of resolving a Tour Bus:
 
 
 Section 3 - Diego Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Trickster	"Trickster"
 
 Trickster is a situation. The level of Trickster is 4.
 wolffight is a number that varies.
@@ -186,6 +204,9 @@ name	desc	weight	object
 
 combat knife is an armament. It is part of the player. It has a weapon "[one of]your large knife[or]your combat knife[or]the large blade[or]your combat knife with a strong thrust[or]your large blade with a quick slash[at random]". The weapon damage of combat knife is 6. The weapon type of combat knife is "Melee". It is not temporary.
 
+Table of GameEventIDs (continued)
+Object	Name
+Prank Aftermath	"Prank Aftermath"
 
 Prank Aftermath is a situation. Prank Aftermath is inactive. The level of Prank Aftermath is 7.
 prankevent is a number that varies.
@@ -224,6 +245,10 @@ instead of resolving a Prank Aftermath:
 
 
 Section 4 - Park Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Lovers Bench	"Lovers Bench"
 
 Lovers Bench is a situation.
 The sarea of Lovers Bench is "Park".
@@ -508,6 +533,9 @@ to say BenchDBFemaleSex: [FF Brutus/Player]
 [ pets needing scenes ]
 [ rubber tigress ]
 
+Table of GameEventIDs (continued)
+Object	Name
+PeachTree	"PeachTree"
 
 PeachTree is a situation. The level of PeachTree is 7.
 The sarea of PeachTree is "Park".
@@ -592,6 +620,10 @@ instead of sniffing tasty peach:
 
 
 Section 5 - State Fair Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Concession Stand	"Concession Stand"
 
 Concession Stand is a situation.
 The sarea of Concession Stand is "Midway".
@@ -714,6 +746,9 @@ when play ends:
 				say ". The fel beasts breed you incessantly, filling your womb with litters of their spawn. Regardless of your form, they are always pure hellspawn like their brethren. They nurse from your breasts and grow strong, eventually joining the others in mating you until the ends of time.";
 		stop the action;
 
+Table of GameEventIDs (continued)
+Object	Name
+Sweet Exchange	"Sweet Exchange"
 
 Sweet Exchange is a situation.
 The sarea of Sweet Exchange is "Midway".
@@ -744,6 +779,9 @@ Instead of resolving a Sweet Exchange:
 		say "     As you go, you ponder the strange negotiations between the two groups and wonder if you might try looking for that [bold type]CandyShop[roman type] the excitable ferrets mentioned.";
 	now Sweet Exchange is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Caught Glider	"Caught Glider"
 
 Caught Glider is a situation. Caught Glider is inactive.
 The sarea of Caught Glider is "Midway".
@@ -767,6 +805,10 @@ Instead of resolving a Caught Glider:
 
 
 Section 6 - Beach Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Beach Party	"Beach Party"
 
 Beach Party is a situation. The level of Beach Party is 5.
 The sarea of Beach Party is "Beach".
@@ -841,6 +883,10 @@ Instead of resolving a Beach Party:
 
 Section 7 - Mall Events
 
+Table of GameEventIDs (continued)
+Object	Name
+B&R	"B&R"
+
 B&R is a situation.
 The sarea of B&R is "Mall".
 
@@ -852,6 +898,10 @@ Instead of resolving a B&R:
 
 Section 8 - Zoo Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Slumbering Giant	"Slumbering Giant"
+
 Slumbering Giant is a situation.
 The sarea of Slumbering Giant is "Zoo".
 when play begins:
@@ -861,6 +911,9 @@ Instead of resolving a Slumbering Giant:
 	say "     Going over a small rise, you are met with an impressive sight. Lying down in one of the smaller pasture paddocks is a giant human being. You'd guess he's about forty feet tall and he takes up a good part of the grassy area he's sleeping in. You'd not spotted him until now because his chosen napping spot is a depression behind the hill you're on. He's wearing a large tan jacket that's scaled to his size and nothing else. He groans softly and rolls over, giving you a view of his enormous cock, semi-hard in his sleep. Yawning wide, he gives his enormous balls a scratch and his cock a quick rub before his hand slides back to the ground with a heavy thud. Given the size of he and knowing how grumpy you can be if someone wakes you up from a nap, you quietly turn around and sneak off, hoping he won't wake up until you're long gone from here.";
 	now Slumbering Giant is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+My Own Zoo Playset	"My Own Zoo Playset"
 
 My Own Zoo Playset is a situation. The level of My Own Zoo Playset is 12.
 The sarea of My Own Zoo Playset is "Zoo".
@@ -889,6 +942,10 @@ Instead of resolving a My Own Zoo Playset:
 
 
 Section 9 - Sealed Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Destroyed Records	"Destroyed Records"
 
 Destroyed Records is a situation.
 The sarea of Destroyed Records is "Sealed".

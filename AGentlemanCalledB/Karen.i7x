@@ -184,6 +184,10 @@ to say SexWithKaren:
 
 Section 2- Karen Quest
 
+Table of GameEventIDs (continued)
+Object	Name
+Forgotten Past	"Forgotten Past"
+
 Forgotten Past is a situation.
 Forgotten Past is inactive. [Disabled for reactivation after the player talked to Francois]
 The sarea of Forgotten Past is "Campus".
