@@ -86,7 +86,7 @@ Figure of Ram_icon is the file "FS_Ram.jpg".
 Figure of Reindeer_icon is the file "Reindeer_ig.jpg".
 Figure of SandMan_icon is the file "Sand Man.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.jpg".
-Figure of Pewter_Consort_icon is the file "Pewter_Consort.png".
+Figure of Pewter_Consort_icon is the file "Pewter_Consort.jpg".
 Figure of PirateShark_icon is the file "sharkpirate.png".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
 Figure of SnowBat_icon is the file "SnowBat_ig.jpg".
