@@ -61,12 +61,11 @@ Section 4 - Sex
 Section 5 - Events
 
 Dual Leadership is a situation.
-Dual Leadership is inactive.
 Prereq1 of Dual Leadership is Den of the Pack.
 The level of Dual Leadership is 0.
 The sarea of Dual Leadership is "Nowhere".
 
-after going to Sanctuary Hotel Lobby while (hp of Cadmea is 1 and a random chance of 1 in 2 succeeds):
+after going to Sanctuary Hotel Lobby while (Dual Leadership is active and Dual Leadership is not resolved and hp of Cadmea is 1 and a random chance of 1 in 2 succeeds):
 	DualLeadershipEvent;
 
 Instead of resolving Dual Leadership:

@@ -69,12 +69,11 @@ Object	Name
 Den of the Pack	"Den of the Pack"
 
 Den of the Pack is a situation.
-Den of the Pack is inactive.
 Prereq1 of Den of the Pack is Suppressant Supply Run.
 The level of Den of the Pack is 0.
 The sarea of Den of the Pack is "Outside".
 
-after going to Bright Alley while (hp of Cynthia is 1 and a random chance of 1 in 2 succeeds):
+after going to Bright Alley while (Den of the Pack is active and Den of the Pack is not resolved and hp of Cynthia is 1 and a random chance of 1 in 2 succeeds):
 	DenofthePackEvent;
 
 Instead of resolving Den of the Pack:
@@ -103,7 +102,6 @@ to DenofthePackEvent:
 	say "     You follow her back to the side door with its grizzled doorman, the mercenary giving the feline a smile as he lets you leave again. From the filth and griminess of the alleyway you exit into, you wouldn't know how decadent the inside of the hotel was. Cynthia beckons for you to come with her, and you walk together in silence until you are back where she greeted you earlier. 'Sorry that I have to leave you here, but I need to get back to spying on people in the city from the rooftops, and you should be getting back to that library you love so much. I'll have to come and visit you at some point and withdraw a book now that there are unlikely to be late fees,' she jokes. 'I might even test your security just so you know how lucky you are that no one has attacked you there. Be well, and I'll be seeing you, even if you don't see me'. The sniper fastens her gas mask on again and climbs up the ladder, leaving you to decide what to do next.";
 	now hp of Cadmea is 1;
 	now Den of the Pack is resolved;
-	now Dual Leadership is active;
 	now Sanctuary Alleyway is known;
 
 Section 6 - Sanctuary Hotel Location

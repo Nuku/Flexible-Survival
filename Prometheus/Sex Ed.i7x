@@ -68,7 +68,7 @@ to LectureChoiceEvent: [Choose Lecture to attend]
 		now sortorder entry is 2;
 		now description entry is "Listen to a Comparative Anatomy Lecture";
 	[]
-	if EnrollmentTokens > 0 and BehaviorandCustoms is 0 and 2 > 3: [disabled for now]
+	if EnrollmentTokens > 0 and BehaviorandCustoms is 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Enroll in the Behavior and Customs Lecture";
 		now sortorder entry is 3;

@@ -59,7 +59,7 @@ Prereq1 of Meet the Nemean Lion is Labors Introduction.
 The level of Meet the Nemean Lion is 30.
 The sarea of Meet the Nemean Lion is "Plains".
 
-instead of going to Dry Plains while (TwelveLaborsStage is 1 and a random chance of 1 in 5 succeeds):
+instead of going to Dry Plains while (Meet the Nemean Lion is active and Meet the Nemean Lion is not resolved and TwelveLaborsStage is 1 and a random chance of 1 in 5 succeeds):
 	move player to Dry Plains;
 	MeettheNemeanLionEvent;
 
