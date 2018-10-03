@@ -377,7 +377,7 @@ to say ZoeSexDP:
 	else:
 		say "     You sit on the cot, and Zoe joins you on your lap. You carefully line up the first cock and slide it in. Then, after you are set in, you line your other cock with her ass, and push in. Zoe gasps, but you are not over yet. You pick your remaining [cockname of player] shaft and let it enter the bunny's pussy, stretching her by twice your [cock size desc of player] girth. [if Zoe is not CuntFitsForPlayerCock and wslevel is not 1]The added cock makes the girl's belly bulge obscenely, all the way down to her cervix. You feel her inner muscles convulse around your twin lengths. 'Oh fuck! Oh fuck!' she keeps panting. Then, with a shudder, a stream of piss leaks out of her urethra. 'My bladder... Fuck!'[else if Zoe is not CuntFitsForPlayerCock]The added cock makes the girl's belly bulge obscenely, all the way down to her cervix. You feel her inner muscles convulse around your twin lengths. 'Oh fuck! Oh fuck!' she keeps panting.[end if]. Zoe suddenly throws back her head and screams 'Fuuuuck!', while rivulets of fem-cum squirt out of her cunt. Instead of asking to stop, Zoe turns around. 'Keep fucking me! Fuck me and don't stop!' she orders. You are far from finished. Your remaining cock presses on her ass, and her anal ring gets the same treatment as her cunt. 'Ooh. Oh yeah,' she repeats as she gets used to the size of the penetration. You do not think twice and start hammering at her. With two cocks in the same hole and two in the other, it feels very tight, and the both of you relish in this pleasure, while Zoe slowly works herself to a second orgasm. You savor for long minutes the too rare pleasure of taking two tight holes at the same time. You enjoy their differences in shape and in muscle contractions. Zoe grabs your other cocks as if they were handle bars and try to stroke them, whenever a hearty bump into her cervix or her ass does not make her see stars and lose focus. You do not notice if Zoe has cummed again, or how much, but your explosive climax happened eventually. [if Zoe is PlayerCumLoadInflates]You slam your four cocks as far into Zoe as you can, while they keep cumming again, and again. A small bump appeared on Zoe. The bump grows to obscene proportions, from the combined fillage of her womb and her stomach by your [cum load size of player][else]You slam your two cocks as far into Zoe as you can, while they keep cumming again. A delirious bunny gently pats her belly, as your cocks fill it with two [cum load size of player][end if].";
 	WaitLineBreak;
-	say "";
+	say "     Once you are both down from your orgasmic height, the both of you cuddle for a moment. 'Best. Sex. Ever,' Zoe comments. You cannot help but agree on this. A not-so-quick shower later, you are on the way back to the library, where you part ways with Zoe, after promising to each other to do this again.";
 
 
 to say ZoeMolest:
@@ -457,9 +457,9 @@ to say ZoeMolestVag:
 	else:
 		say "     'N-No, please,' Zoe pleads. 'It's too big.' You answer snidely that you are sure that she has seen and will see bigger, while you line your [cockname of player] with her pussy. You push inside, inch by inch, stretching Zoe to her limits and then some. You eventually bottom out. Zoe looks away, not daring to look at the bulge your cock forms on her belly. You start going back and forth inside of her, eliciting groans from your living toy each time you stretch her a little further[if player is knotted] or your over-sized barbs scratch her pussy[end if]. You eventually feel your orgasm coming, so you decide to push stronger and stronger until she fits all of you. Zoe wiggles and screams while your [cockname of player] shaft presses dangerously stronger on her cervix. Then, with a hearty hump, you breach that last barrier, and the young girl squeals as you invade her womb, and make the bulge advance several inch further[if player is knotted]. Your knot starts to grow, but is still outside, so you push even further until it pops in, with a sick noise of vaginal muscles rearranging themselves under the effect of the nanites[end if][if wslevel is not 3]. You feel something warm trickle on your crotch, as Zoe loses control of her bladder from the sheer size of the insertion. This does not deter you as you make the last few remaining humps[end if].";
 	if Zoe is PlayerCumLoadInflates:
-		say "";
+		say "     The bunny girl's belly slowly fills with your cum, with obscene [italic type]glug, glug[roman type] sounds. Zoe is left gasping, as her womb is filled to full capacity and beyond, and the overfill flows out of her cunt. When you finally lift your body off her, more of your fluids squirt on the floor, as the spasms of her body, eject it. Meanwhile, you [SelfDressCrotch] and bang on the door. The wolverine guard opens, and appraises the situation. 'Clean your mess before you get out, will ya. The mop's on your left.'";
 	else:
-		say "";
+		say "     Your cock squirt their load inside Zoe's womb, joining the many others before you. Letting Zoe recover on the floor of the van, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and lets you out. 'Don't worry about [']accidents['], we're keeping her on the pill,' he says nonchalently, while munching on the supply you gave him. 'Come again soon, and all that.'";
 
 to say ZoeMolestAnal:
 	say "     You force Zoe to give you access to her ass, and push your fingers in. the bunny girl winces, but when you pull out your fingers, they are wet with the cum of previous visitors. You point this out to Zoe while swiping your fingers off her fur. The bunny's only response is a heartbroken sob. You lean over and make a show of frotting your [cock size desc of player] cock over her buttcheeks.";
@@ -468,9 +468,9 @@ to say ZoeMolestAnal:
 	else:
 		say "     'N-No, please,' Zoe pleads. 'It's too big.' You answer snidely that you are sure that she has seen and will see bigger, while you line your [cockname of player] with her asshole. You push inside, inch by inch, stretching Zoe to her limits and then some. You eventually bottom out. Zoe looks straight in front of her, not daring to look at the bulge your cock forms on her belly. You start going back and forth inside of her, eliciting groans from your living toy each time you stretch her a little further[if player is knotted] or your over-sized barbs scratch her anal ring[end if]. You eventually feel your orgasm coming, so you decide to push stronger and stronger until she fits all of you. Zoe wiggles and screams while your [cockname of player] shaft makes its way further towards her stomach[if player is knotted]. Your knot starts to grow, but is still outside, so you push even further until it pops in, with a sick noise of innards rearranging themselves under the effect of the nanites[end if][if wslevel is not 3]. You hear something trickle on your crotch, as Zoe loses control of her bladder from the sheer size of the insertion. This does not deter you as you make the last few remaining humps[end if].";
 	if Zoe is PlayerCumLoadInflates:
-		say "";
+		say "     The bunny girl's belly slowly fills with your cum, with obscene [italic type]glug, glug[roman type] sounds. Zoe is left gasping, as her ass is filled to full capacity and beyond, and the overfill flows out of her butthole. When you finally lift your body off her, more of your fluids squirt on the floor, as the spasms of her body eject it. Meanwhile, you [SelfDressCrotch] and bang on the door. The wolverine guard opens, and appraises the situation. 'Clean your mess before you get out, will ya. The mop's on your left.'";
 	else:
-		say "";
+		say "     Your cock squirt their load inside Zoe's ass, joining the many others before you. Letting Zoe recover on the floor of the van, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and lets you out. 'Got her good, huh? Don't worry, she's used to it,' he says nonchalently, while munching on the supply you gave him. 'Come again soon, and all that.'";
 
 to say ZoeMolestDP:
 	say "     You force Zoe to give you access to her ass, and tell her that she's in for a treat. 'Wh-What do you mean?' the bunny girl asks anxiously. For all answer, you let your first cock slap on her right buttcheek, then slap her left buttcheek with the second shaft. You play drums with her white furry butt until she realizes what you are talking about. 'Y-You fucking creep, stay away from me!' Tied as she is, Zoe cannot do much more than bark, while you put her butt up in the air, and prepare [if cocks of player > 2]two of your[else]your[end if] cocks for each of her holes.";
@@ -479,9 +479,9 @@ to say ZoeMolestDP:
 	else:
 		say "     Working only one of Zoe's holes would have already been a bit much, but you were now stretching both of her holes at the same time. Zoe's muscles squeeze around you while her nanites work double time to accomodate you while you mate the poor bunny. You lift her off the ground and piledrive her, your twin shafts forming a complex bump on her belly. Zoe's teary eyes roll in their sockets as you take her to a world she could have never dreamed of before[if player is knotted]. Zoe's ordeal is not quite over yet, as your knots start to form and stretch her even further. Two hard lumps appear on her crotch, as you lock your shafts inside of her[end if][if wslevel is not 3]. You hear something drip down on the floor, as Zoe loses control of her bladder from the sheer size of the insertion. This does not deter you as you make the last few remaining humps[end if].";
 	if Zoe is PlayerCumLoadInflates:
-		say "";
+		say "     The bunny girl's belly slowly fills with your cum, with obscene [italic type]glug, glug[roman type] sounds. Zoe is left gasping, as her body is filled to full capacity and beyond, and the overfill flows out of her holes. When you finally lift your body off her, more of your fluids squirt on the floor, as the spasms of her body eject it. Meanwhile, you [SelfDressCrotch] and bang on the door. The wolverine guard opens, and appraises the situation. 'Clean your mess before you get out, will ya. The mop's on your left.'";
 	else:
-		say "";
+		say "     Your cock squirt their load inside Zoe's body, joining the many others before you. Letting Zoe recover on the floor of the van, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and lets you out. 'Well, that was something. I wonder if I let several people in at the same time. Not that she'd have room to complain,' he says nonchalently, while munching on the supply you gave him. 'Come again soon, and all that.'";
 
 [Move rule]
 an everyturn rule:
@@ -499,12 +499,11 @@ an everyturn rule:
 Part B - Suspicious van
 
 [The van is where Zoe will be if she is captured. It is a container, with specific rules. Locked until Zoe's quest is resolved, it is guarded by a Wolverine van guard, with which the player will interact]
-Suspicious van is a container.
+Suspicious Van is a closed container. It is openable.
 Suspicious Van is in Smith Haven Mall Lot West.
 The description of Suspicious Van is "[suspiciousVanDesc]".
 instead of sniffing Suspicious Van:
-	say "It smells of oil[if Resolution of Rabbit Tagger is 0], and there is a lingering smell of male sweat in the vicinity[end if].".
-Suspicious Van is closed. Suspicious van is locked.
+	say "It smells of oil[if Resolution of Rabbit Tagger is 0], and there is a lingering smell of male sweat in the vicinity[end if].";
 
 to say suspiciousVanDesc:
 	if Resolution of Rabbit Tagger is 0:
@@ -572,11 +571,11 @@ to wolverineGuardPaid:
 	say "     The guard grabs your offering, and puts it into his bag 'Thaaank you!' He gets off his seat, and unlocks the backdoor of the van with his key. 'Here's the rules: no maiming, no blood, no piss, no shitstuff. You got one hour; if I bang on the door, it doesn't matter if you're [']almost there[']: you pull out and you get out. Are we good? Good.' After this, he opens the van, letting you gaze at Zoe's laying form, in the back.";
 	now Suspicious van is open;
 
-instead of opening the suspicious van while Resolution of Rabbit Tagger is 0:
+instead of opening the Suspicious Van while Resolution of Rabbit Tagger is 0:
 	say "The wolverine guard is in the way. 'Wanna have fun inside? Talk to me first.'";
 
-instead of closing the suspicious van while Resolution of Rabbit Tagger is 0:
-	say "'No point closing the door now.'";
+instead of closing the Suspicious Van while Suspicious Van is open and Resolution of Rabbit Tagger is 0:
+	say "No point in closing the door now.";
 
 Instead of going southeast from Smith Haven Mall Lot West while Suspicious Van is open:
 	say "As you start to walk away from the vehicle, the guard stops you. 'Having second thoughts? No refunds, boy!'[line break]";
