@@ -66,7 +66,7 @@ instead of resolving Bobcat Encounter:
 			now Bobcat Encounter is resolved;
 		else:
 			LineBreak;
-			say "     C";
+			say "     You stare at the cat for a minute, scratching the back of your neck awkwardly as you think of what to say. You were curious maybe? The feline creature huffs in impatience while you think, putting his paws on his lithe, furry hips. 'Well that's a fine how-do-ya-do, dident your mother ever teach you it's impolite to stare.' He gives an indignant huff, before he drops back down the hole, disappearing from sight. You stare down the dark, deep hole a moment before backing up, looking around at your surroundings and then turning around, on your way. 'Come back when you've learned to greet properly!' You hear echoed out from the inside of the tree. With a shrug, you walk away and try to remember some of the landmarks near the tree, to make sure you don't run into him again for another embarrassing encounter.";
 			now Resolution of Bobcat Encounter is 99; [disinterest]
 			now Bobcat Encounter is resolved;
 	else if Resolution of Bobcat Encounter is 1 or Resolution of Bobcat Encounter is 2: [got fucked once before]

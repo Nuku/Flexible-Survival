@@ -51,7 +51,7 @@ cunt length of Zoe is normally 8.
 ScaleValue of Zoe is normally 2.
 
 The description of Zoe is "[ZoeDesc]".
-The conversation of Zoe is {"[ZoeTalk]"}.
+The conversation of Zoe is {"Placeholder"}.
 instead of sniffing Zoe:
 	say "Zoe's fur retains the smell of the paint she uses during her getaways.";
 
@@ -59,13 +59,13 @@ to say ZoeDesc:
 	if Resolution of Rabbit Tagger is 2: [saved]
 		say "     Zoe looks as lively as ever. The small bunny's short, white fur is dirtied, here and there, by paint stains of many colors. She wears her usual clothes: a short-sleeved T-shirt and a pair of shorts. [if Loyalty of Zoe < 5]Zoe gives you a polite smile, but you notice that she keeps her guard around you[else]Zoe's smile beams at you, and the young girl seems completely relaxed in your presence.[end if]";
 	else if Resolution of Rabbit Tagger is 1: [tied up]
-		say "     You look at Zoe's hogtied body, into the van. Her fur is ruffled in many places, and glued together around her crotch. The ropes force her to stay on her knees, face to the ground and arms to the back. Zoe returns you a broken look[if XP of Zoe is 1], which instantly turns into a mix of resignation and contained anger when she recognizes you from earlier[end if].";
+		say "     You look at Zoe's hogtied body, inside the van. Her fur is ruffled in many places, and glued together around her crotch. The ropes force her to stay on her knees, face to the ground and arms to the back. Zoe returns you a broken look[if XP of Zoe is 1], which instantly turns into a mix of resignation and contained anger when she recognizes you from earlier[end if].";
 	else:
 		say "WARN: This description should not appear.";
 	if debugactive is 1:
 		say "DEBUG: Zoe's traits: [Traits of Zoe]. XP: [XP of Zoe]. HP: [HP of Zoe][line break]";
 
-to say ZoeTalk:
+instead of conversing the Zoe:
 	if Resolution of Rabbit Tagger is 2:
 		say "     You greet Zoe, who replies with a [if Loyalty of Zoe < 5]curt[else]happy[end if] 'Hey.'";
 		if XP of Zoe is 1:
@@ -197,62 +197,62 @@ to say ZoeGoodFuckMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Vanilla";
 	now sortorder entry is 1;
-	now description entry is "Do some classic shenanigans with Zoe, letting her choose what she wants to do with you.";
+	now description entry is "Do some classic shenanigans with Zoe, letting her choose what she wants to do with you";
 	[]
 	if player is male and Loyalty of Zoe >= 7 and anallevel > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 2;
-		now description entry is "Have fun with Zoe's butt.";
+		now description entry is "Have fun with Zoe's butt";
 	else if Loyalty of Zoe >= 7:
 		choose a blank row in table of fucking options;
 		now title entry is "*Anal - Locked*";
 		now sortorder entry is 2;
-		now description entry is "You do not fill the conditions: having a penis, and allowing anal content.";
+		now description entry is "You do not fill the conditions: having a penis, and allowing anal content";
 	[]
 	if Loyalty of Zoe >= 8 and (player is female or (player is male and anallevel > 1)):
 		choose a blank row in table of fucking options;
 		now title entry is "Pegging";
 		now sortorder entry is 3;
-		now description entry is "Tell Zoe you want her to use her strap-on.";
+		now description entry is "Tell Zoe you want her to use her strap-on";
 	else if Loyalty of Zoe >= 8:
 		choose a blank row in table of fucking options;
 		now title entry is "*Strap-on - Locked*";
 		now sortorder entry is 3;
-		now description entry is "You do not fill the conditions: having a vagina, and allowing anal content.";
+		now description entry is "You do not fill the conditions: having a vagina, and allowing anal content";
 	[]
 	if Loyalty of Zoe >= 9 and player is submissive:
 		choose a blank row in table of fucking options;
 		now title entry is "Roleplay (sub)";
 		now sortorder entry is 4;
-		now description entry is "Perform a roleplay scenario with Zoe, with you as the sub.";
+		now description entry is "Perform a roleplay scenario with Zoe, with you as the sub";
 	else if Loyalty of Zoe >= 9:
 		choose a blank row in table of fucking options;
 		now title entry is "*Roleplay (sub) - Locked*";
 		now sortorder entry is 4;
-		now description entry is "You do not fill the conditions: having the [bold type]submissive[roman type] trait.";
+		now description entry is "You do not fill the conditions: having the [bold type]submissive[roman type] trait";
 	[]
 	if Loyalty of Zoe >= 10 and player is dominant:
 		choose a blank row in table of fucking options;
 		now title entry is "Roleplay (dom)";
 		now sortorder entry is 5;
-		now description entry is "Perform a roleplay scenario with Zoe, with you as the dom.";
+		now description entry is "Perform a roleplay scenario with Zoe, with you as the dom";
 	else if Loyalty of Zoe >= 10:
 		choose a blank row in table of fucking options;
 		now title entry is "*Roleplay (dom) - Locked*";
 		now sortorder entry is 5;
-		now description entry is "You do not fill the conditions: having the [bold type]submissive[roman type] trait.";
+		now description entry is "You do not fill the conditions: having the [bold type]submissive[roman type] trait";
 	[]
 	if Loyalty of Zoe >= 11 and cocks of player > 2 and player is kinky:
 		choose a blank row in table of fucking options;
 		now title entry is "Multi-cock fun";
 		now sortorder entry is 6;
-		now description entry is "Indulge into Zoe's latest fantasy.";
+		now description entry is "Indulge into Zoe's latest fantasy";
 	else if Loyalty of Zoe >= 11:
 		choose a blank row in table of fucking options;
 		now title entry is "*Multi-cock fun - Locked*";
 		now sortorder entry is 6;
-		now description entry is "You do not fill the conditions: have more than two cocks, and the [bold type]kinky[roman type] trait.";
+		now description entry is "You do not fill the conditions: have more than two cocks, and the [bold type]kinky[roman type] trait";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -373,34 +373,34 @@ to say ZoeSexDP:
 	else:
 		say "     You sit on the cot, and Zoe joins you on your lap. You carefully line up the first cock and slide it in. Then, after you are set in, you line your other cock with her ass, and push in. Zoe gasps, but you are not over yet. You pick your remaining [cockname of player] shaft and let it enter the bunny's pussy, stretching her by twice your [cock size desc of player] girth. [if Zoe is not CuntFitsForPlayerCock and wslevel is not 1]The added cock makes the girl's belly bulge obscenely, all the way down to her cervix. You feel her inner muscles convulse around your twin lengths. 'Oh fuck! Oh fuck!' she keeps panting. Then, with a shudder, a stream of piss leaks out of her urethra. 'My bladder... Fuck!'[else if Zoe is not CuntFitsForPlayerCock]The added cock makes the girl's belly bulge obscenely, all the way down to her cervix. You feel her inner muscles convulse around your twin lengths. 'Oh fuck! Oh fuck!' she keeps panting.[end if]. Zoe suddenly throws back her head and screams 'Fuuuuck!', while rivulets of fem-cum squirt out of her cunt. Instead of asking to stop, Zoe turns around. 'Keep fucking me! Fuck me and don't stop!' she orders. You are far from finished. Your remaining cock presses on her ass, and her anal ring gets the same treatment as her cunt. 'Ooh. Oh yeah,' she repeats as she gets used to the size of the penetration. You do not think twice and start hammering at her. With two cocks in the same hole and two in the other, it feels very tight, and the both of you relish in this pleasure, while Zoe slowly works herself to a second orgasm. You savor for long minutes the too rare pleasure of taking two tight holes at the same time. You enjoy their differences in shape and in muscle contractions. Zoe grabs your other cocks as if they were handle bars and try to stroke them, whenever a hearty bump into her cervix or her ass does not make her see stars and lose focus. You do not notice if Zoe has cummed again, or how much, but your explosive climax happened eventually. [if Zoe is PlayerCumLoadInflates]You slam your four cocks as far into Zoe as you can, while they keep cumming again, and again. A small bump appeared on Zoe. The bump grows to obscene proportions, from the combined fillage of her womb and her stomach by your [cum load size of player][else]You slam your two cocks as far into Zoe as you can, while they keep cumming again. A delirious bunny gently pats her belly, as your cocks fill it with two [cum load size of player][end if].";
 	WaitLineBreak;
-	say "";
+	say "     Once you are both down from your orgasmic height, the both of you cuddle for a moment. 'Best. Sex. Ever,' Zoe comments. You cannot help but agree on this. A not-so-quick shower later, you are on the way back to the library, where you part ways with Zoe, after promising to each other to do this again.";
 
 
 to say ZoeMolest:
-	say "You jump into the van, and the guard closes the door to give you some privacy. Zoe looks at you, anxious, as you ponder. [bold type]What do you want to do with Zoe?[roman type]";
+	say "You jump into the van, and the guard closes the door to give you some privacy. Zoe looks at you, anxious, as you ponder. [bold type]What do you want to do with Zoe?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Mouth";
 	now sortorder entry is 1;
-	now description entry is "Use the bunny's mouth.";
+	now description entry is "Use the bunny's mouth";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Pussy";
 	now sortorder entry is 2;
-	now description entry is "Fuck Zoe's pussy.";
+	now description entry is "Fuck Zoe's pussy";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ass";
 	now sortorder entry is 3;
-	now description entry is "Take Zoe's ass.";
+	now description entry is "Take Zoe's ass";
 	[]
 	if cocks of player > 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Double penetration";
 		now sortorder entry is 4;
-		now description entry is "Use both holes at the same time.";
+		now description entry is "Use both holes at the same time";
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -426,14 +426,12 @@ to say ZoeMolest:
 				if nam is "Double penetration":
 					say "[ZoeMolestDP]";
 				wait for any key;
+				now Suspicious Van is closed;
+				follow the turnpass rule;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     Having second thoughts, you abstain from using Zoe to satiate your needs. You step away, letting the bunny alone for now.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Having second thoughts, you abstain from using Zoe to satiate your needs. You step away, letting the bunny alone for now.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -453,9 +451,9 @@ to say ZoeMolestVag:
 	else:
 		say "     'N-No, please,' Zoe pleads. 'It's too big.' You answer snidely that you are sure that she has seen and will see bigger, while you line your [cockname of player] with her pussy. You push inside, inch by inch, stretching Zoe to her limits and then some. You eventually bottom out. Zoe looks away, not daring to look at the bulge your cock forms on her belly. You start going back and forth inside of her, eliciting groans from your living toy each time you stretch her a little further[if player is knotted] or your over-sized barbs scratch her pussy[end if]. You eventually feel your orgasm coming, so you decide to push stronger and stronger until she fits all of you. Zoe wiggles and screams while your [cockname of player] shaft presses dangerously stronger on her cervix. Then, with a hearty hump, you breach that last barrier, and the young girl squeals as you invade her womb, and make the bulge advance several inch further[if player is knotted]. Your knot starts to grow, but is still outside, so you push even further until it pops in, with a sick noise of vaginal muscles rearranging themselves under the effect of the nanites[end if][if wslevel is not 3]. You feel something warm trickle on your crotch, as Zoe loses control of her bladder from the sheer size of the insertion. This does not deter you as you make the last few remaining humps[end if].";
 	if Zoe is PlayerCumLoadInflates:
-		say "";
+		say "     The bunny girl's belly slowly fills with your cum, with obscene [italic type]glug, glug[roman type] sounds. Zoe is left gasping, as her womb is filled to full capacity and beyond, and the overfill flows out of her cunt. When you finally lift your body off her, more of your fluids squirt on the floor, as the spasms of her body, eject it. Meanwhile, you [SelfDressCrotch] and bang on the door. The wolverine guard opens, and appraises the situation. 'Clean your mess before you get out, will ya. The mop's on your left.'";
 	else:
-		say "";
+		say "     Your cock squirt their load inside Zoe's womb, joining the many others before you. Letting Zoe recover on the floor of the van, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and lets you out. 'Don't worry about [']accidents['], we're keeping her on the pill,' he says nonchalently, while munching on the supply you gave him. 'Come again soon, and all that.'";
 
 to say ZoeMolestAnal:
 	say "     You force Zoe to give you access to her ass, and push your fingers in. the bunny girl winces, but when you pull out your fingers, they are wet with the cum of previous visitors. You point this out to Zoe while swiping your fingers off her fur. The bunny's only response is a heartbroken sob. You lean over and make a show of frotting your [cock size desc of player] cock over her butt-cheeks.";
@@ -464,9 +462,9 @@ to say ZoeMolestAnal:
 	else:
 		say "     'N-No, please,' Zoe pleads. 'It's too big.' You answer snidely that you are sure that she has seen and will see bigger, while you line your [cockname of player] with her asshole. You push inside, inch by inch, stretching Zoe to her limits and then some. You eventually bottom out. Zoe looks straight in front of her, not daring to look at the bulge your cock forms on her belly. You start going back and forth inside of her, eliciting groans from your living toy each time you stretch her a little further[if player is knotted] or your over-sized barbs scratch her anal ring[end if]. You eventually feel your orgasm coming, so you decide to push stronger and stronger until she fits all of you. Zoe wiggles and screams while your [cockname of player] shaft makes its way further towards her stomach[if player is knotted]. Your knot starts to grow, but is still outside, so you push even further until it pops in, with a sick noise of innards rearranging themselves under the effect of the nanites[end if][if wslevel is not 3]. You hear something trickle on your crotch, as Zoe loses control of her bladder from the sheer size of the insertion. This does not deter you as you make the last few remaining humps[end if].";
 	if Zoe is PlayerCumLoadInflates:
-		say "";
+		say "     The bunny girl's belly slowly fills with your cum, with obscene [italic type]glug, glug[roman type] sounds. Zoe is left gasping, as her ass is filled to full capacity and beyond, and the overfill flows out of her butthole. When you finally lift your body off her, more of your fluids squirt on the floor, as the spasms of her body eject it. Meanwhile, you [SelfDressCrotch] and bang on the door. The wolverine guard opens, and appraises the situation. 'Clean your mess before you get out, will ya. The mop's on your left.'";
 	else:
-		say "";
+		say "     Your cock squirt their load inside Zoe's ass, joining the many others before you. Letting Zoe recover on the floor of the van, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and lets you out. 'Got her good, huh? Don't worry, she's used to it,' he says nonchalently, while munching on the supply you gave him. 'Come again soon, and all that.'";
 
 to say ZoeMolestDP:
 	say "     You force Zoe to give you access to her ass, and tell her that she's in for a treat. 'Wh-What do you mean?' the bunny girl asks anxiously. For all answer, you let your first cock slap on her right butt-cheek, then slap her left butt-cheek with the second shaft. You play drums with her white furry butt until she realizes what you are talking about. 'Y-You fucking creep, stay away from me!' Tied as she is, Zoe cannot do much more than bark, while you put her butt up in the air, and prepare [if cocks of player > 2]two of your[else]your[end if] cocks for each of her holes.";
@@ -475,9 +473,9 @@ to say ZoeMolestDP:
 	else:
 		say "     Working only one of Zoe's holes would have already been a bit much, but you were now stretching both of her holes at the same time. Zoe's muscles squeeze around you while her nanites work double time to accommodate you while you mate the poor bunny. You lift her off the ground and pile-drive her, your twin shafts forming a complex bump on her belly. Zoe's teary eyes roll in their sockets as you take her to a world she could have never dreamed of before[if player is knotted]. Zoe's ordeal is not quite over yet, as your knots start to form and stretch her even further. Two hard lumps appear on her crotch, as you lock your shafts inside of her[end if][if wslevel is not 3]. You hear something drip down on the floor, as Zoe loses control of her bladder from the sheer size of the insertion. This does not deter you as you make the last few remaining humps[end if].";
 	if Zoe is PlayerCumLoadInflates:
-		say "";
+		say "     Your cock squirt their load inside Zoe's ass, joining the many others before you. Letting Zoe recover on the floor of the van, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and lets you out. 'Got her good, huh? Don't worry, she's used to it,' he says nonchalently, while munching on the supply you gave him. 'Come again soon, and all that.'";
 	else:
-		say "";
+		say "     Your cock squirt their load inside Zoe's ass, joining the many others before you. Letting Zoe recover on the floor of the van, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and lets you out. 'Got her good, huh? Don't worry, she's used to it,' he says nonchalently, while munching on the supply you gave him. 'Come again soon, and all that.'";
 
 [Move rule]
 an everyturn rule:
@@ -492,17 +490,16 @@ an everyturn rule:
 			if player is in Makeshift Rec Room:
 				say "     '[']Morning,' Zoe says, as she passes you on her way out, her bag strapped on her shoulders. 'I'm out for the day. Take care.' And off she goes, to leave her art on another wall of the city.";
 
-Part B - Suspicious van
+Part B - Suspicious Van
 
-[The van is where Zoe will be if she is captured. It is a container, with specific rules. Locked until Zoe's quest is resolved, it is guarded by a Wolverine Van Guard, with which the player will interact]
-Suspicious van is a container.
+[The van is where Zoe will be if she is captured. It is a container, with specific rules. Locked until Zoe's quest is resolved, it is guarded by a Wolverine Pimp, with which the player will interact]
+Suspicious Van is a closed container. It is openable.
+Suspicious Van is locked.
 Suspicious Van is in Smith Haven Mall Lot West.
 The description of Suspicious Van is "[suspiciousVanDesc]".
 
 instead of sniffing Suspicious Van:
 	say "It smells of oil[if Resolution of Rabbit Tagger is 1], and there is a lingering smell of male sweat and cum in the vicinity[end if].";
-
-Suspicious Van is closed. Suspicious van is locked.
 
 to say suspiciousVanDesc:
 	if Rabbit Tagger is not resolved:
@@ -516,43 +513,52 @@ an everyturn rule:
 	if Resolution of Rabbit Tagger is 1 and skipturnblocker is 0:
 		let randomnumber be a random number between 1 and 2;
 		if randomnumber is 1:
-			if "Used" is listed in the Traits of Zoe and Suspicious van is visible:
+			if "Used" is listed in the Traits of Zoe and Suspicious Van is visible:
 				say "     The backdoor of the van opens, and a [one of]wolverine[or]German Shepherd[or]Hyena[or]Gryphon[or]Orc[or]Collie[or]Hawkman[at random] gets off the vehicle. With a sigh of satisfaction, it puts his cock back into his pants and walks away, not giving a single look back. Right after, a [one of]wolverine[or]German Shepherd[or]Hyena[or]Gryphon[or]Orc[or]Collie[or]Hawkman[purely at random] who was waiting for his turn jumps into the van, and closes the door. After a short moment, the van starts shaking again.";
 			else if "Used" is not listed in the Traits of Zoe:
 				add "Used" to the Traits of Zoe;
-				if Suspicious van is visible:
+				if Suspicious Van is visible:
 					say "     You see a [one of]wolverine[or]German Shepherd[or]Hyena[or]Gryphon[or]Orc[or]Collie[or]Hawkman[at random] present himself to the wolverine guard. After giving him some a [one of]bottle of water[or]can of soda[or]bag of chips[or]bit of food[at random], the guard opens the door of the vehicle. The man jumps inside, and you hear Zoe shout just as the guard closes the door. After a short moment, the van starts shaking.";
+			now Suspicious Van is closed;
 		else:
 			if "Used" is listed in the Traits of Zoe:
 				remove "Used" from the Traits of Zoe;
-				if Suspicious van is visible:
+				if Suspicious Van is visible:
 					say "     The backdoor of the van opens, and a [one of]wolverine[or]German Shepherd[or]Hyena[or]Gryphon[or]Orc[or]Collie[or]Hawkman[at random] gets off the vehicle. With a sigh of satisfaction, it puts his cock back into his pants and walks away, not giving a single look back. The wolverine guard gives a look inside the van, smirks, then closes the door.";
+					now Suspicious Van is closed;
+		if Suspicious Van is visible and Suspicious Van is open:
+			say "     Looking at you, the Wolverine Pimp glances down to his wristwatch, then shrugs and closes the door of the van.";
+		now Suspicious Van is closed;
 
 Part C - Van guard
 
-Wolverine Van Guard is a man.
-Wolverine Van Guard is in Nowhere.
-Understand "van guard" as Wolverine Van Guard.
+Table of GameCharacterIDs (continued)
+object	name
+Wolverine Pimp	"Wolverine Pimp"
 
-The description of Wolverine Van Guard is "You gauge the anthro wolverine sitting in a chair, next to the van. He wears a tattered security guard outfit, which he seems to have [']upgraded['] by ripping out the sleeves. His clothes are tattered with stains, which you suspect may not be water or grape juice. The guard raises an eyebrow at you. 'What are you looking at?'".
-The conversation of Wolverine Van Guard is { "'[one of]Looking for fun times? [bold type]Trade me[roman type] some food or beverage, and you'll get a turn.[or]The girl's here of her own will, I swear. Not that you can disprove anything... Heh heh![or]Watch out if you want a pass with the bunny: she bites. Don't forget to use the ring gag.[or]I wonder when the boss will let her go. Hell, I'd rather wonder [italic type]if[roman type] the boss will let her go. Ha ha ha...[at random]'" }.
+Wolverine Pimp is a man.
+Wolverine Pimp is in Nowhere.
+Understand "van guard" as Wolverine Pimp.
 
-instead of sniffing Wolverine Van Guard:
+The description of Wolverine Pimp is "You gauge the anthro wolverine sitting in a chair, next to the van. He wears a tattered security guard outfit, which he seems to have [']upgraded['] by ripping out the sleeves. His clothes are tattered with stains, which you suspect may not be water or grape juice. The guard raises an eyebrow at you. 'What are you looking at?'".
+The conversation of Wolverine Pimp is { "'[one of]Looking for fun times? [bold type]Trade me[roman type] some food or beverage, and you'll get a turn.[or]The girl's here of her own will, I swear. Not that you can disprove anything... Heh heh![or]Watch out if you want a pass with the bunny: she bites. Don't forget to use the ring gag.[or]I wonder when the boss will let her go. Hell, I'd rather wonder [italic type]if[roman type] the boss will let her go. Ha ha ha...[at random]'" }.
+
+instead of sniffing Wolverine Pimp:
 	say "The wolverine gives off an intimidating, bestial smell.";
 
-instead of trading the food when the current action involves the Wolverine Van Guard:
+instead of trading the food when the current action involves the Wolverine Pimp:
 	say "[wolverineTrade]";
 	decrease carried of food by 1;
 
-instead of trading the water bottle when the current action involves the Wolverine Van Guard:
+instead of trading the water bottle when the current action involves the Wolverine Pimp:
 	say "[wolverineTrade]";
 	decrease carried of water bottle by 1;
 
-instead of trading the chips when the current action involves the Wolverine Van Guard:
+instead of trading the chips when the current action involves the Wolverine Pimp:
 	say "[wolverineTrade]";
 	decrease carried of chips by 1;
 
-instead of trading the soda when the current action involves the Wolverine Van Guard:
+instead of trading the soda when the current action involves the Wolverine Pimp:
 	say "[wolverineTrade]";
 	decrease carried of soda by 1;
 
@@ -561,7 +567,7 @@ to say wolverineTrade:
 		say "     'Sorry girl, but what's inside's not for you. You lack the, er, [']prerequisites['].'";
 	else if "Used" is listed in the Traits of Zoe:
 		say "     'Someone's inside already. Wait your turn.'";
-	else if the suspicious van is open:
+	else if the Suspicious Van is open:
 		say "     'You already paid me. Get on with it!'";
 	else:
 		wolverineGuardPaid;
@@ -570,12 +576,12 @@ to say wolverineTrade:
 
 to wolverineGuardPaid:
 	say "     The guard grabs your offering, and puts it into his bag 'Thaaank you!' He gets off his seat, and unlocks the backdoor of the van with his key. 'Here's the rules: no maiming, no blood, no piss, no shitstuff. You got one hour; if I bang on the door, it doesn't matter if you're [']almost there[']: you pull out and you get out. Are we good? Good.' After this, he opens the van, letting you gaze at Zoe's laying form, in the back.";
-	now Suspicious van is open;
+	now Suspicious Van is open;
 
-instead of opening the suspicious van while Resolution of Rabbit Tagger is 1:
+instead of opening the Suspicious Van while Resolution of Rabbit Tagger is 1:
 	say "The wolverine guard is in the way. 'Wanna have fun inside? Talk to me first.'";
 
-instead of closing the suspicious van while Resolution of Rabbit Tagger is 1:
+instead of closing the Suspicious Van while Resolution of Rabbit Tagger is 1:
 	say "'No point closing the door now.'";
 
 Instead of going southeast from Smith Haven Mall Lot West while Suspicious Van is open:
@@ -583,7 +589,7 @@ Instead of going southeast from Smith Haven Mall Lot West while Suspicious Van i
 	if player consents:
 		LineBreak;
 		say "'Your loss...' the wolverine says. He closes the door of the van and lets you go.";
-		now Suspicious van is closed;
+		now Suspicious Van is closed;
 		move player to Smith Haven Mall Lot South;
 
 Instead of going northeast from Smith Haven Mall Lot West while Suspicious Van is open:
@@ -591,7 +597,7 @@ Instead of going northeast from Smith Haven Mall Lot West while Suspicious Van i
 	if player consents:
 		LineBreak;
 		say "'Your loss...' the wolverine says. He closes the door of the van and lets you go.";
-		now Suspicious van is closed;
+		now Suspicious Van is closed;
 		move player to Smith Haven Mall Lot North;
 
 Section 3 - Quest Events
@@ -629,10 +635,10 @@ to ZoeTheTaggerRabbitEvents:
 		say "     Eventually, Logan's orgasm seems to ebb off and he leans in to give the bunny girl a demanding kiss, licking her face and then forcing his long tongue into her mouth. In the midst of making out with her, he slides his cock deep into Zoe's freshly-bred pussy, making cum squirt our around his cock and soaking the cute little tail of the bunny girl. Then he pulls away from (and out of) her with a sudden movement, coming to stand over the spray-painting young woman. Holding his cock out for her, slimy and literally dripping with cum, the wolverine growls, 'Let's see if you have taken the lesson to heart. If you want your pants back, suck it dry!'";
 		say "     Wiping a tear away at this new level of harsh treatment, the frightened bunny girl gets up on her paws, crouching before her captor and haltingly opens her mouth. She sticks her tongue out a little, seemingly unsure about what to do next. Logan is quick to tell her, putting a hand on the back of her head and pushing her close to his dick. With some pointers from the wolverine, Zoe licks and sucks his dick, slurping off the cum and female juices before being commanded to swallow. With more of his cum dripping from her spread little pussy, the bunny goes on to clean her captor's cock. Eventually, the man gives a satisfied snort and tousles her hair, then says, 'That was good, little slut! Wouldn't mind to take you again and again actually.'";
 		WaitLineBreak;
-		say "     Giving Zoe an overbearing grin, the wolverine tucks his softening cock back into his uniform pants and zips up, then walks over to where he threw her pants. Picking them up, Logan tosses the garment over to her and chuckles as it lands in the puddle of his cum that is still leaking from her pussy. 'You won't need them where I'm taking you, fuck-toy,' he sneers at her, after kicking away her backpack and her spray cans. The wolverine drags the bunny, squirming and screaming, [if player is in Smith Haven Mall Lot West]to the suspicious van parked in that section of the lock. He pulls out the keys, open the back doors, and lock the bunny inside. 'Be a good girl and stay here.' The wolverine leaves, only to come back with another guard, carrying ropes with him. The two men enter the van, who starts to shake violently as a scuffle takes place. There is a lot of shouting, of which you can hear a few words like 'community service' or 'whore out'. After everything quiets down, the two security guards walk out. The leader walks back to the mall, while his subordinate remains by the door, and gives you a nothing-to-see-here look[else]towards the western parking lot. 'You're going to make some community work for us, you little whore.'[line break]'No, let me go! Someone, help!'[line break]The sound of a loud slap interrupts the rabbit's shouting, just as the pair turns around the corner, leaving you alone[end if].";
+		say "     Giving Zoe an overbearing grin, the wolverine tucks his softening cock back into his uniform pants and zips up, then walks over to where he threw her pants. Picking them up, Logan tosses the garment over to her and chuckles as it lands in the puddle of his cum that is still leaking from her pussy. 'You won't need them where I'm taking you, fuck-toy,' he sneers at her, after kicking away her backpack and her spray cans. The wolverine drags the bunny, squirming and screaming, [if player is in Smith Haven Mall Lot West]to the Suspicious Van parked in that section of the lock. He pulls out the keys, open the back doors, and lock the bunny inside. 'Be a good girl and stay here.' The wolverine leaves, only to come back with another guard, carrying ropes with him. The two men enter the van, who starts to shake violently as a scuffle takes place. There is a lot of shouting, of which you can hear a few words like 'community service' or 'whore out'. After everything quiets down, the two security guards walk out. The leader walks back to the mall, while his subordinate remains by the door, and gives you a nothing-to-see-here look[else]towards the western parking lot. 'You're going to make some community work for us, you little whore.'[line break]'No, let me go! Someone, help!'[line break]The sound of a loud slap interrupts the rabbit's shouting, just as the pair turns around the corner, leaving you alone[end if].";
 		now Resolution of Rabbit Tagger is 1; [the player let Zoe get captured]
 		now Zoe is in Suspicious Van;
-		move Wolverine Van Guard to Smith Haven Mall Lot West;
+		move Wolverine Pimp to Smith Haven Mall Lot West;
 	else: [stop him]
 		LineBreak;
 		say "     Calling out, you draw the attention of the strong wolverine and he turns his head to glance your way from the corner of his eyes. 'Move on, this is official mall business. Nothing to see here,' he replies, splitting his attention between yourself and his captive. And that's pretty much all it takes, as Zoe uses that moment to kick up at him, landing a straight blow to the man's balls. With a breathless groan of pain, the guy falls to the ground, curling up as he holds his aching crotch. His captive quickly jumps to her feet and pulls her pants back up, then dashes back to the spot where she sprayed the wall, snatching up two cans and hastily stuffing them in a backpack lying against the building.";
