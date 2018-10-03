@@ -58,7 +58,7 @@ instead of sniffing Zoe:
 to say ZoeDesc:
 	if Resolution of Rabbit Tagger is 1:
 		say "     Zoe looks as lively as ever. The small bunny's short, white fur is dirtied, here and there, by paint stains of many colors. She wears her usual clothes: a short-sleeved T-shirt and a pair of shorts. [if Loyalty of Zoe < 5]Zoe gives you a polite smile, but you notice that she keeps her guard around you[else]Zoe's smile beams at you, and the young girl seems completely relaxed in your presence.[end if]";
-	else if Resolution of Rabbit Tagger is 0:
+	else if Resolution of Rabbit Tagger is 2:
 		say "     You look at Zoe's hogtied body, into the van. Her fur is ruffled in many places, and glued together around her crotch. The ropes force her to stay on her knees, face to the ground and arms to the back. Zoe returns you a broken look[if XP of Zoe is 1], which instantly turns into a mix of resignation and contained anger when she recognizes you from earlier[end if].";
 	else:
 		say "WARN: This description should not appear.";
@@ -481,7 +481,7 @@ to say ZoeMolestDP:
 	if Zoe is PlayerCumLoadInflates:
 		say "     The bunny girl's belly slowly fills with your cum, with obscene [italic type]glug, glug[roman type] sounds. Zoe is left gasping, as her body is filled to full capacity and beyond, and the overfill flows out of her holes. When you finally lift your body off her, more of your fluids squirt on the floor, as the spasms of her body eject it. Meanwhile, you [SelfDressCrotch] and bang on the door. The wolverine guard opens, and appraises the situation. 'Clean your mess before you get out, will ya. The mop's on your left.'";
 	else:
-		say "     Your cock squirt their load inside Zoe's body, joining the many others before you. Letting Zoe recover on the floor of the van, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and lets you out. 'Well, that was something. I wonder if I let several people in at the same time. Not that she'd have room to complain,' he says nonchalently, while munching on the supply you gave him. 'Come again soon, and all that.'";
+		say "     Your cock squirt their load inside Zoe's body, joining the many others before you. Letting Zoe recover on the floor of the van, you [SelfDressCrotch] and bang on the door. The wolverine guard opens and lets you out. 'Well, that was something. I wonder if I let several people in at the same time' he says nonchalently, while munching on the supply you gave him. 'Come again soon, and all that.'";
 
 [Move rule]
 an everyturn rule:
@@ -499,14 +499,15 @@ an everyturn rule:
 Part B - Suspicious van
 
 [The van is where Zoe will be if she is captured. It is a container, with specific rules. Locked until Zoe's quest is resolved, it is guarded by a Wolverine van guard, with which the player will interact]
-Suspicious Van is a closed container. It is openable.
+Suspicious van is a container.
 Suspicious Van is in Smith Haven Mall Lot West.
 The description of Suspicious Van is "[suspiciousVanDesc]".
 instead of sniffing Suspicious Van:
-	say "It smells of oil[if Resolution of Rabbit Tagger is 0], and there is a lingering smell of male sweat in the vicinity[end if].";
+	say "It smells of oil[if Resolution of Rabbit Tagger is 2], and there is a lingering smell of male sweat in the vicinity[end if].";
+Suspicious Van is closed. Suspicious van is locked.
 
 to say suspiciousVanDesc:
-	if Resolution of Rabbit Tagger is 0:
+	if Resolution of Rabbit Tagger is 2:
 		say "     You take a look at the van. It is a big, white van, in a rather good state compared to the other vehicles, as if someone has regularly taken care of it after the start of the nanite plague. A quick test tells you that the doors are locked.";
 	else if "Used" is listed in the Traits of Zoe:
 		say "     You take a look at the van. It is constantly shaking and squeaking. After you take a few steps closer, you hear loud grunts coming from inside the vehicle, and the cries of Zoe.";
@@ -514,7 +515,7 @@ to say suspiciousVanDesc:
 		say "     You take a look at the van. It sits, immobile, in the middle of parking. Since you know what is used for, the vehicle makes you unnerved.";
 
 an everyturn rule:
-	if Resolution of Rabbit Tagger is 0 and skipturnblocker is 0:
+	if Resolution of Rabbit Tagger is 2 and skipturnblocker is 0:
 		let randomnumber be a random number between 1 and 2;
 		if randomnumber is 1:
 			if "Used" is listed in the Traits of Zoe and Suspicious van is visible:
@@ -571,11 +572,14 @@ to wolverineGuardPaid:
 	say "     The guard grabs your offering, and puts it into his bag 'Thaaank you!' He gets off his seat, and unlocks the backdoor of the van with his key. 'Here's the rules: no maiming, no blood, no piss, no shitstuff. You got one hour; if I bang on the door, it doesn't matter if you're [']almost there[']: you pull out and you get out. Are we good? Good.' After this, he opens the van, letting you gaze at Zoe's laying form, in the back.";
 	now Suspicious van is open;
 
-instead of opening the Suspicious Van while Resolution of Rabbit Tagger is 0:
+instead of opening the suspicious van while Resolution of Rabbit Tagger is not 2:
+	say "The van is locked. Peering through the window, you do not see anything of value in it, anyway.";
+
+instead of opening the suspicious van while Resolution of Rabbit Tagger is 2:
 	say "The wolverine guard is in the way. 'Wanna have fun inside? Talk to me first.'";
 
-instead of closing the Suspicious Van while Suspicious Van is open and Resolution of Rabbit Tagger is 0:
-	say "No point in closing the door now.";
+instead of closing the suspicious van while Resolution of Rabbit Tagger is 2:
+	say "'No point closing the door now.'";
 
 Instead of going southeast from Smith Haven Mall Lot West while Suspicious Van is open:
 	say "As you start to walk away from the vehicle, the guard stops you. 'Having second thoughts? No refunds, boy!'[line break]";
@@ -625,7 +629,7 @@ to ZoeTheTaggerRabbitEvents:
 		say "     Wiping a tear away at this new level of harsh treatment, the frightened bunny girl gets up on her paws, crouching before her captor and haltingly opens her mouth. She sticks her tongue out a little, seemingly unsure about what to do next. Logan is quick to tell her, putting a hand on the back of her head and pushing her close to his dick. With some pointers from the wolverine, Zoe licks and sucks his dick, slurping off the cum and female juices before being commanded to swallow. With more of his cum dripping from her spread little pussy, the bunny goes on to clean her captor's cock. Eventually, the man gives a satisfied snort and tousles her hair, then says, 'That was good, little slut! You can expect more of the same if you show your ass here again. I'll certainly have an eye out for you for another round.'";
 		WaitLineBreak;
 		say "     Giving Zoe an overbearing grin, the wolverine tucks his softening cock back into his uniform pants and zips up, then walks over to where he threw her pants. Picking them up, Logan tosses the garment over to her and chuckles as it lands in the puddle of his cum that is still leaking from her pussy. You won't need them where I'm taking you, fuck-toy,' he sneers at her, after kicking away her backpack and her spray cans. The wolverine drags the bunny, squirming and screaming, [if player is in Smith Haven Mall Lot West]to the suspicious van parked in that section of the lock. He pulls out the keys, open the back doors, and lock the bunny inside. 'Be a good girl and stay here.' The wolverine leaves, only to come back with another guard, carrying ropes with him. The two men enter the van, who starts to shake violently as a scuffle takes place. There is a lot of shouting, of which you can hear a few words like 'community service' or 'whore out'. After everything quiets down, the two security guards walk out. The leader walks back to the mall, while his subordinate remains by the door, and gives you a nothing-to-see-here look[else]towards the western parking lot. 'You're going to make some community work for us, you little whore.'[line break]'No, let me go! Someone, help!'[line break]The sound of a loud slap interrupts the rabbit's shouting, just as the pair turns around the corner, leaving you alone[end if].";
-		now Resolution of Rabbit Tagger is 0; [the player let Zoe get captured]
+		now Resolution of Rabbit Tagger is 2; [the player let Zoe get captured]
 		now Zoe is in Suspicious Van;
 		move Wolverine van guard to Smith Haven Mall Lot West;
 	else: [stop him]
