@@ -4554,6 +4554,7 @@ After printing a parser error when the parser error count is at least 0:
 Book 9 - Add-Ons
 
 [ Everything needed for the basic game functionality ]
+Include Gametables by Core Mechanics.
 Include Alt Combat by Core Mechanics.
 Include Alt Vore by Core Mechanics.
 Include Assorted Items by Stripes.
@@ -4571,7 +4572,6 @@ include FS Graphics by Core Mechanics.
 Include Fighting by Core Mechanics.
 Include Fucking by Core Mechanics.
 Include Hunting by Core Mechanics.
-Include Gametables by Core Mechanics.
 Include Game Endings by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
 Include Special Merchandize by Core Mechanics.
@@ -5157,6 +5157,7 @@ Include Matriarch NPC by Stripes.
 Include Meredith by Stripes.
 Include Micaela by Stripes.
 Include Midnight by Sarokcat.
+Include Milo by CrimsonAsh.
 Include Mouse Taur by Nuku Valente.
 Include Nadia by Wahn.
 Include Nakoma by Song.
