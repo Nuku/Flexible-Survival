@@ -499,12 +499,12 @@ an everyturn rule:
 Part B - Suspicious van
 
 [The van is where Zoe will be if she is captured. It is a container, with specific rules. Locked until Zoe's quest is resolved, it is guarded by a Wolverine van guard, with which the player will interact]
-Suspicious van is a container.
+Suspicious van is a closed container. It is lockable. It is locked.
 Suspicious Van is in Smith Haven Mall Lot West.
 The description of Suspicious Van is "[suspiciousVanDesc]".
 instead of sniffing Suspicious Van:
 	say "It smells of oil[if Resolution of Rabbit Tagger is 2], and there is a lingering smell of male sweat in the vicinity[end if].";
-Suspicious Van is closed. Suspicious van is locked.
+
 
 to say suspiciousVanDesc:
 	if Resolution of Rabbit Tagger is 2:
