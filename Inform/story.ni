@@ -447,6 +447,18 @@ Definition: A person (called x) is knotted:
 	if cockname of player is listed in infections of knotlist, yes;
 	no;
 
+a person can be barbed. a person is usually not barbed.
+
+Definition: A person (called x) is barbed:
+	if cockname of player is listed in infections of BarbedCocklist, yes;
+	no;
+
+a person can be flared. a person is usually not flared.
+
+Definition: A person (called x) is flared:
+	if cockname of player is listed in infections of Bluntlist, yes;
+	no;
+
 Definition: A person (called x) is perminfected:
 	if ( JackalManTF > 0 or JackalBoyTF > 0 ) or nightmaretf > 0 or HellHoundlevel > 0 or ( wrcursestatus >= 7 and wrcursestatus < 100 ), yes;
 	no;
@@ -520,6 +532,31 @@ Definition: A person (Called x) is bunkered:
 	if the location of x is Underground Restroom, yes;
 	if the location of x is Maintenance Closet, yes;
 	no;
+
+Definition: A person (called x) is CockFitsInPlayerPussy:
+	if cock length of x > cunt length of player + 1, no; [some stretching allowed]
+	yes;
+
+Definition: A person (called x) is CuntFitsForPlayerCock:
+	if cock length of player > cunt length of x + 1, no; [some stretching allowed]
+	yes;
+
+Definition: A person (called x) is PlayerCumLoadInflates: [yes = inflation; can be adapted for any kind of inflation (egg, enema, etc.)]
+	if ScaleValue of x is 1 and cock width of player >= 6, yes;
+	if ScaleValue of x is 2 and cock width of player >= 12, yes;
+	if ScaleValue of x is 3 and cock width of player >= 16, yes;
+	if ScaleValue of x is 4 and cock width of player >= 25, yes;
+	if cock width of player >= 32, yes;
+	no;
+
+Definition: A person (called x) is CumLoadInflatesPlayer: [yes = inflation; can be adapted for any kind of inflation (egg, enema, etc.)]
+	if ScaleValue of player is 1 and cock width of x >= 6, yes;
+	if ScaleValue of player is 2 and cock width of x >= 12, yes;
+	if ScaleValue of player is 3 and cock width of x >= 16, yes;
+	if ScaleValue of player is 4 and cock width of x >= 25, yes;
+	if cock width of x >= 32, yes;
+	no;
+
 
 A thing can be rooted in place. A thing is usually not rooted in place.
 A thing can be restful. A thing is usually not restful.
@@ -5183,6 +5220,7 @@ Include Yolanda by Stripes.
 Include Zeke by Qazarar.
 Include Zephias by Wahn.
 Include Zigor by Stripes.
+Include Zoe by Kernog.
 
 [Pets]
 Include Artemis by Stripes.
