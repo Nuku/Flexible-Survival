@@ -494,6 +494,9 @@ Finding a Way in is a situation.
 Finding a Way in is inactive.		[unable to do this until activated]
 The sarea of Finding a Way in is "Hospital".
 
+an everyturn rule: [to restore the openness of the door after an export/import]
+	if Finding a Way in is resolved and locked stairwell is locked:
+		now locked stairwell is unlocked;
 
 Instead of resolving a Finding a Way in:
 	if hospnav > 2 and hospstairs > 0:		[at least 4 waypoints and the stairs up]
@@ -503,7 +506,6 @@ Instead of resolving a Finding a Way in:
 		now the player is in Hidden Lab;
 		now locked stairwell is unlocked;
 		now Finding a Way in is resolved;
-		now battleground is "void"; [prevents a post-event fight]
 	else:
 		say "     You continue searching the hospital, but are unable to find your way through, reaching another dead end. It seems you will have to continue to explore the hospital further to learn your way around.";
 

@@ -1167,7 +1167,6 @@ Name(text)	Type(text)
 "shadowy"	"number"
 "SharkFountainCounter"	"number"
 "shiftable"	"number"
-"shiftcatch"	"number"
 "sierramem"	"number"
 "SilverToken"	"number"
 "sirenfight"	"number"

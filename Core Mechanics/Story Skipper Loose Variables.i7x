@@ -2475,8 +2475,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is SharkFountainCounter;
 		-- "shiftable":
 			now NumberVarValue entry is shiftable;
-		-- "shiftcatch":
-			now NumberVarValue entry is shiftcatch;
 		-- "sierramem":
 			now NumberVarValue entry is sierramem;
 		-- "SilverToken":
@@ -6181,8 +6179,6 @@ to VariableNumberLoad:
 					now SharkFountainCounter is numberVarValue entry;
 				-- "shiftable":
 					now shiftable is numberVarValue entry;
-				-- "shiftcatch":
-					now shiftcatch is numberVarValue entry;
 				-- "sierramem":
 					now sierramem is numberVarValue entry;
 				-- "SilverToken":

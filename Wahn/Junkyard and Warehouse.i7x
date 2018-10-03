@@ -573,7 +573,13 @@ Chapter 4 - Junkyard
 
 Section 1 - The environment
 
+Table of GameRoomIDs (continued)
+Object	Name
+Junkyard Entrance	"Junkyard Entrance"
+
+Junkyard Entrance is a room.
 Junkyard Entrance is east of the Abandoned Lot. "In this dirty part of the town you stand on the road to an even dirtier place. The smells of the city junkyard, of rotting food and fetid water, reek from the north. The dirt road curves to the west, back to the abandoned warehouse complex."
+The earea of Junkyard Entrance is "Junkyard".
 
 instead of sniffing Junkyard Entrance:
 	say "The junkyard smells predominantly of old machinery and oil, though there's a faint smell of normal trash as well from piles of that scattered around.";

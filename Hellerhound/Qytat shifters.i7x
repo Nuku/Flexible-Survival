@@ -8,12 +8,12 @@ Shifting Room is a room. "[shiftingroom][line break]A room in a tent. The walls 
 It is private.
 It is fasttravel.
 
-shiftcatch is a number that varies.
-an everyturn rule:
-	if shiftcatch is 0 and shiftable is 1:
-		change the north exit of Qytat Plaza to Shifting Room;
-		now shiftcatch is 1;
+ShiftingRoomConnection is a number that varies.[@Tag:NotSaved]
 
+an everyturn rule:
+	if shiftable is 1 and ShiftingRoomConnection is 0:
+		change the north exit of Qytat Plaza to Shifting Room;
+		now ShiftingRoomConnection is 1; [room connected]
 
 to say shiftingroom:
 	say "As you walk towards the tent to the north, you see a bunch of muddy footprints leading inside. You follow, but the mud seems to have been cleaned from in here, since the whole room is pristine. The acrid tang of nanites no longer permeates the air here, and the soft bluish glow warms you.";
