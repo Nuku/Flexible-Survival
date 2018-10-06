@@ -41,6 +41,10 @@ MiltonRelationship is a number that varies.
 AxelRelationship is a number that varies.
 AxelLastBJ is a number that varies. AxelLastBJ is usually 10000.
 
+Table of GameEventIDs (continued)
+Object	Name
+Dressing Room Rampage	"Dressing Room Rampage"
+
 Dressing Room Rampage is a situation.
 The sarea of Dressing Room Rampage is "Smith Haven".
 
@@ -97,6 +101,10 @@ Instead of resolving a Dressing Room Rampage:
 	add "Tag: Met Jay&Mark" to Traits of player;
 	now Dressing Room Rampage is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Elven Issues	"Elven Issues"
+
 Elven Issues is a situation.
 The Prereq1 of Elven Issues is Dressing Room Rampage.
 The Prereq1Resolution of Elven Issues is { 1, 2, 3 }.
@@ -120,6 +128,10 @@ Instead of resolving a Elven Issues:
 		now Resolution of Elven Issues is 2; [didn't help Jay]
 	now Elven Issues is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Mark's Dinner Invite	"Mark's Dinner Invite"
+
 Mark's Dinner Invite is a situation.
 The Prereq1 of Mark's Dinner Invite is Elven Issues.
 The Prereq1Resolution of Mark's Dinner Invite is { 1 }. [must have helped Jay]
@@ -136,6 +148,9 @@ Instead of resolving a Mark's Dinner Invite:
 
 [ End of Jay + Mark content, other events below ]
 
+Table of GameEventIDs (continued)
+Object	Name
+Size Envy	"Size Envy"
 
 Size Envy is a situation.
 The sarea of Size Envy is "Smith Haven".
@@ -290,6 +305,10 @@ to say SizeEnvy_Compete:
 	now AxelRelationship is 2; [two sided introductions]
 	now MiltonRelationship is 2; [two sided introductions]
 
+Table of GameEventIDs (continued)
+Object	Name
+Standard Maintenance	"Standard Maintenance"
+
 Standard Maintenance is a situation.
 The Prereq1 of Standard Maintenance is Size Envy.
 The Prereq1Resolution of Standard Maintenance is { 1, 2, 3, 4, 5, 6, 7 }.
@@ -311,6 +330,10 @@ Instead of resolving a Standard Maintenance:
 		LineBreak;
 		say "     You quietly watch him for a few seconds longer, then shrug and continue on your way. Eventually, you reach the point of the mall where you started your little exploration tour.";
 	now Standard Maintenance is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Donkey Needs	"Donkey Needs"
 
 Donkey Needs is a situation.
 Donkey Needs is inactive.
@@ -393,6 +416,10 @@ to say AxelBJ:
 			now AxelRelationship is 4; [had a BJ from a male player]
 		else:
 			now AxelRelationship is 3; [had a BJ from a female player]
+
+Table of GameEventIDs (continued)
+Object	Name
+Donkey Chat	"Donkey Chat"
 
 Donkey Chat is a situation.
 The Prereq1 of Donkey Chat is Size Envy.
@@ -500,6 +527,10 @@ to say DonkeyChat:
 		now Donkey Needs is resolved;
 		now AxelRelationship is 100; [ignoring him]
 
+Table of GameEventIDs (continued)
+Object	Name
+Full Litter	"Full Litter"
+
 Full Litter is a situation.
 The sarea of Full Litter is "Smith Haven".
 
@@ -517,12 +548,20 @@ to FullLitterEvent:
 	now Full Litter is resolved;
 	now lastMallInteriorScene is turns;
 
+Table of GameEventIDs (continued)
+Object	Name
+Cat Toy Vendors	"Cat Toy Vendors"
+
 Cat Toy Vendors is a situation.
 The sarea of Cat Toy Vendors is "Smith Haven".
 
 instead of resolving Cat Toy Vendors:
 	say "     Wandering through the hallways of the expansive Smith Haven Mall, you spot some cat-morphs selling various custom cat toys to their feline kin. Apparently a surprising number of the transformed people in the crowd of refugees in here are captivated by an instinctual love of mice on string. It is charming to see their wide-eyed expressions as many a head track a toy mouse being demonstrated, with them instinctually wiggling their butts as they get into a slightly pouncing stance. The vendors giggle to each other as a whole group of new customers line up and get ready to trade food and drinks for the small toys being sold.";
 	now Cat Toy Vendors is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Prowling Macho	"Prowling Macho"
 
 Prowling Macho is a situation.
 The sarea of Prowling Macho is "Smith Haven".
@@ -591,6 +630,10 @@ instead of resolving Prowling Macho:
 		say "     With a shrug at the antics of some mall inhabitants, you just turn your back on the two of them, walking on in your tour to find anything that actually interests you.";
 		now Resolution of Prowling Macho is 99; [disinterested in Grace]
 	now Prowling Macho is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+SailboatPainting	"SailboatPainting"
 
 SailboatPainting is a situation.
 The sarea of SailboatPainting is "Smith Haven".

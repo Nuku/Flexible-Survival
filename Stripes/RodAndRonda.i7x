@@ -238,6 +238,10 @@ the scent of lizard juice is "The creamy white fluid has a thick, musky scent.".
 
 Chapter 2 - The Art Collector Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Art Collector	"Art Collector"
+
 Art Collector is a situation. The level of Art Collector is 9.
 Art Collector is inactive.
 The sarea of Art Collector is "High".

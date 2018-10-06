@@ -21,6 +21,11 @@ An everyturn rule:
 Section 1 - Declaring the Room
 
 [Room Declaration]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Jadako's Room	"Jadako's Room"
+
 Jadako's Room is a room.
 The description of Jadako's Room is "[jadakoroomdesc]".
 

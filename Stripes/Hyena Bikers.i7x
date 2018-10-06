@@ -7,6 +7,10 @@ Version 2 of Hyena Bikers by Stripes begins here.
 
 Section 1- Core Event Tree
 
+Table of GameEventIDs (continued)
+Object	Name
+Hyena Bikers	"Hyena Bikers"
+
 Hyena Bikers is a situation.
 The sarea of Hyena Bikers is "High".
 when play begins:

@@ -4,6 +4,10 @@ Version 6 of Sven by Stripes begins here.
 
 Section 1 - Event and Hideaway
 
+Table of GameEventIDs (continued)
+Object	Name
+Hidden Kitty	"Hidden Kitty"
+
 Hidden Kitty is a situation. The level of Hidden Kitty is 5.
 The sarea of Hidden Kitty is "Red".
 when play begins:
@@ -21,6 +25,10 @@ Instead of resolving a Hidden Kitty:
 	now battleground is "void";
 	increase score by 5;
 	now Hidden Kitty is resolved;
+
+Table of GameRoomIDs (continued)
+Object	Name
+Sven's Place	"Sven's Place"
 
 Sven's Place is a room. It is fasttravel. It is private.
 The description of Sven's Place is "[SvenPlaceDesc]".
@@ -996,8 +1004,8 @@ when play ends:
 				if SarahSlut is 4:			[Sarah pet]
 					say "     Sven and Sarah don't get along well, at odds as cats and dogs often are. Initially, when you're just starting to get settled in, they are quite irritating, as there is little space for them to avoid one another. You start to worry that won't be able to get them to reconcile and will have to take some drastic measures. Not wanting to lose either of them, you fret over it for quite some time.";
 					say "     And then one night, one of Sarah's anthro pups snuggles up with the sleeping kitty in his plush, oversized cat bed. The two become almost inseparable, the cute puppy girl following the kitty around the house and sleeping beside him every night. Sven and Sarah's become less irritated with each other and are soon friends, if never lovers. In time, when little Anja grows up into a mature, sexy husky girl, her relationship with Sven changes and they become lovers as well. Anja bears numerous litters of hybrid pups and kittens, all of whom make wonderfully submissive and lustful pets for any form of play. The husky-patterned kitties and snowmeow-spotted doggies are very popular and add to your kennel's offered love pets.";
-				if ColeenCollared is 1:			[Coleen pet]
-					say "     During her time with you, Sven is also at odds with Coleen, though she does give him a slightly different look when he's not watching than Sarah does. You are a little more hopeful they'll be able to bridge the gap before she goes, but it doesn't look like it's going to happen. But then, the night before you're to have the general visit, you hear a commotion and rush to Sven's cat bed. There you find Coleen having pinned the kitty down and riding his feline cock eagerly. The snowmeow mrowls in delight and you can smell his arousal, as well as the beginning of the husky's heat. It seems she decided to take this last chance to sate her lusts with him despite their rocky relationship. With her more aggressive nature and military training, she would easily be able to pin your kitty pet and be bred by him. They go at it all night long, ensuring the general will be quite surprised by her litter of husky-snowmeow hybrid pups in a few months.";
+				if ColleenCollared is 1:			[Colleen pet]
+					say "     During her time with you, Sven is also at odds with Colleen, though she does give him a slightly different look when he's not watching than Sarah does. You are a little more hopeful they'll be able to bridge the gap before she goes, but it doesn't look like it's going to happen. But then, the night before you're to have the general visit, you hear a commotion and rush to Sven's cat bed. There you find Colleen having pinned the kitty down and riding his feline cock eagerly. The snowmeow mrowls in delight and you can smell his arousal, as well as the beginning of the husky's heat. It seems she decided to take this last chance to sate her lusts with him despite their rocky relationship. With her more aggressive nature and military training, she would easily be able to pin your kitty pet and be bred by him. They go at it all night long, ensuring the general will be quite surprised by her litter of husky-snowmeow hybrid pups in a few months.";
 				if Sandra is in the bunker:		[Sandra rescued]
 					say "     You come home one day to find Sandra the bunny girl spread out on your couch with Sven pounding away eagerly at her pussy. From the look, and smell, of things, they'd been going at it for quite a while. The rabbit, having come over to visit you while in heat and wanting to share her lustful need with you, arrived while you were out. Despite their somewhat shy, timid natures, they soon gave in to their arousal and had a long, lustful breeding session leaving her bloated with snow leopard cum. Her swollen tummy doesn't go away completely, growing into hybrid cabbits in her sated womb. They are lovely pair of white bunnies girls with long snowmeow tails and markings. The twins, despite their timid, quiet natures, always seem to get themselves pulled into wild, erotic escapades.";
 				if pink raccoon is tamed:		[pink raccoon pet]

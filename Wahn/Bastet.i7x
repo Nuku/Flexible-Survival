@@ -84,6 +84,10 @@ to say NermineBastetQuestFail:
 	now libido of Nermine is 100; [Bastet quest failed]
 	now Restaurateur's Office is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Restaurateur's Office	"Restaurateur's Office"
+
 Restaurateur's Office is a situation. Restaurateur's Office is inactive.
 The sarea of Restaurateur's Office is "Museum".
 when play begins:

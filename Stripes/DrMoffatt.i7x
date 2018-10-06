@@ -29,6 +29,10 @@ Section 0 - Hypnosis variables
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Another Doctor	"Another Doctor"
+
 Another Doctor is a situation.
 The sarea of Another Doctor is "Hospital".
 when play begins:
@@ -67,6 +71,10 @@ Instead of resolving a Another Doctor:
 
 
 Section 2 - Psych Department
+
+Table of GameRoomIDs (continued)
+Object	Name
+Psych Department	"Psych Department"
 
 Psych Department is a room. It is fasttravel. It is private.
 The description of Psych Department is "[psychdesc]".

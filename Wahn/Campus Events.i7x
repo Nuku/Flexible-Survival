@@ -9,6 +9,10 @@ FratPartyRecruiterProgression is a number that varies.
 
 Section 1 - Marching Band
 
+Table of GameEventIDs (continued)
+Object	Name
+Marching Band	"Marching Band"
+
 Marching Band is a situation.
 The sarea of Marching Band is "Campus".
 
@@ -18,6 +22,10 @@ Instead of resolving a Marching Band:
 	now Marching Band is resolved;
 
 Section 2 - Art Department
+
+Table of GameEventIDs (continued)
+Object	Name
+Arts Department	"Arts Department"
 
 Arts Department is a situation. The level of Arts Department is 3.
 The sarea of Arts Department is "Campus".
@@ -37,6 +45,10 @@ Section 3 - Phi Iota Gamma
 
 Section 4 - Languages Department
 
+Table of GameEventIDs (continued)
+Object	Name
+Languages Department	"Languages Department"
+
 Languages Department is a situation.
 The sarea of Languages Department is "Campus".
 
@@ -46,6 +58,10 @@ Instead of resolving a Languages Department:
 
 
 Section 5 - Wandering the Campus
+
+Table of GameEventIDs (continued)
+Object	Name
+Wandering the Campus	"Wandering the Campus"
 
 Wandering the Campus is a situation. The level of Wandering the Campus is 9.
 The sarea of Wandering the Campus is "Campus".
@@ -114,6 +130,10 @@ Instead of resolving a Wandering the Campus:
 
 
 Section 6 - Anime Club
+
+Table of GameEventIDs (continued)
+Object	Name
+Anime Club	"Anime Club"
 
 Anime Club is a situation. the level of Anime Club is 12.
 The sarea of Anime Club is "Campus".

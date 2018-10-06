@@ -5,6 +5,10 @@ Version 2 of Cindy by Stripes begins here.
 
 Section 1 - Sunny Snacks
 
+Table of GameRoomIDs (continued)
+Object	Name
+Sunny Snacks	"Sunny Snacks"
+
 Sunny Snacks is a room.
 Sunny Snacks is northeast of Public Beach.
 The description of Sunny Snacks is "[sunnysnacksdesc]".

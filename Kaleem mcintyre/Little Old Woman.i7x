@@ -1,6 +1,10 @@
 Little Old Woman by Kaleem mcintyre begins here.
 [ Moved to Warehouse area - Stripes ]
 
+Table of GameEventIDs (continued)
+Object	Name
+Defenseless old lady	"Defenseless old lady"
+
 Defenseless old lady is a situation. The sarea of Defenseless old lady is "Warehouse".
 
 Instead of resolving a Defenseless old lady:

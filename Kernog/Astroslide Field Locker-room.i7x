@@ -10,6 +10,11 @@ tempGorillaGender is a number that varies.
 tempGorillaName2 is a text that varies.
 
 [General]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Astroslide Field Locker-room	"Astroslide Field Locker-room"
+
 Astroslide Field Locker-room is a room.
 [Astroslide Football Field is east of Astroslide Field Locker-room.]
 
@@ -273,6 +278,11 @@ to say GorillaTeamSex3: [chain fuck]
 [Tenvale Gorillas Quest is in its own extension (Kernog folder)]
 
 [Events]
+
+Table of GameEventIDs (continued)
+Object	Name
+PeepingRoman	"PeepingRoman"
+
 PeepingRoman is a situation.
 The sarea of PeepingRoman is "Nowhere".
 

@@ -1,5 +1,9 @@
 Version 1 of Walkinmall by Ssely begins here.
 
+Table of GameEventIDs (continued)
+Object	Name
+Mall Wandering	"Mall Wandering"
+
 Mall Wandering is a situation.
 The sarea of Mall Wandering is "Smith Haven".
 
@@ -11,6 +15,10 @@ instead of resolving Mall Wandering:
 	LineBreak;
 	say "     After a while, it seems that the walls, shops, and residents repeat - passing by barely noticed as your mind is lost in thought. Shaking off your moody trance, you realize that you've done a whole circuit of the place, ending up where you started.";
 	now Mall Wandering is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Mall Orgy	"Mall Orgy"
 
 Mall Orgy is a situation.
 The sarea of Mall Orgy is "Smith Haven".
@@ -65,6 +73,10 @@ instead of resolving Mall Orgy:
 		say "     You decide against staring and just leave with a shrug.";
 		now Resolution of Mall Orgy is 99; [Player not interested]
 		now Mall Orgy is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+OtterBoi Meeting	"OtterBoi Meeting"
 
 OtterBoi Meeting is a situation. OtterBoi Meeting is inactive.
 The sarea of OtterBoi Meeting is "Smith Haven".

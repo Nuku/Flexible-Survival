@@ -2,6 +2,10 @@ Version 1 of Recordings by Wahn begins here.
 
 "Adds an event where the player can find tapes"
 
+Table of GameEventIDs (continued)
+Object	Name
+Demon Chase	"Demon Chase"
+
 Demon Chase is a situation.
 The sarea of Demon Chase is "Outside".
 
@@ -98,6 +102,10 @@ to say FamilyFunTape2:
 	say "     Staying pressed together like that for a little while, the father pulls his son's chest up to hug him from behind, then stretches his neck to kiss Wayne. 'That was intense,' he says in a very satisfied tone. 'I hope that you know that I'll want to tap this sweet ass more from now on? Would be a crime to not use such a fucking amazing boy-pussy!' Wayne chuckles, sticking out his tongue and meeting his father for a french kiss, then moans, 'Counting on it, dad!' The two of them hug and kiss for some more time before Wayne's father eventually pulls out and collects his clothes. Still naked, the man stops at the door and turns back to look at his son. 'I'll make breakfast in a little bit. Wear your jockstrap, then I'll bend you over the counter for round two!' And with that, he exits the room.";
 	say "     Wayne stays lying on the bed for a little while, laughing happily in between panting breaths, then eventually sits up and looks right at the camera. 'So, Luth, this was my first time. With more to come, I guess. Hope you enjoyed the show. Can't wait to try this out with you too...' Grinning, the naked young man stands up and goes to turn off the recording after that.";
 
+Table of GameEventIDs (continued)
+Object	Name
+Intercepted Bike Courier	"Intercepted Bike Courier"
+
 Intercepted Bike Courier is a situation.
 The sarea of Intercepted Bike Courier is "Outside".
 
@@ -138,6 +146,10 @@ to say HikingObservationVid:
 	say "     Observing the pairing of man and beast in the meadow, you can easily tell that those two have a lot of experience doing this. It is obvious in the sure aim of the dog, the ecstatic expression of his owner and the way the animal keeps obeying commands even while having his dick sheathed in the human, lapping his master's sweaty back as he is told to pause once or twice. The man jerks himself off while letting his canine companion fuck him, then eventually calls out a command that seems to release all bounds from the furry beast. With a loud bark, the proud German shepherd just goes wild humping his mate, even clamping his teeth lightly on the back of the man's neck as he starts to buck against his ass, apparently breeding the man's clenching hole with his canine seed. The human isn't far behind either, jerking off frantically to join his feral mate in climax until he sprays his cum all over the blanket under them.";
 	say "     The next fifteen minutes or so on the tape are filled with the man and animal entwined in the doggy style pose, with the German shepherd's side being petted and stroked by the knotted man, and the two of them sharing some licks. The fact that the animal doesn't try at all to dismount and go ass to ass with his partner is an additional indicator that this dog is well-trained in coupling with his human master. Only after some more time, apparently enough for the knot to go down, does the dog eventually pull out, immediately pushing his muzzle between the man's buttocks to lap up what cum leaks out of him. Then he is embraced by the man and drawn into another bout of making out with his human mate, followed by the two of them lying on the blanket and cuddling. The tape ends a little while later.";
 
+Table of GameEventIDs (continued)
+Object	Name
+Abandoned Uniform	"Abandoned Uniform"
+
 Abandoned Uniform is a situation.
 The sarea of Abandoned Uniform is "Outside".
 
@@ -167,6 +179,9 @@ to say BodycamTape_Nielson:
 	WaitLineBreak;
 	say "     Clearly enraged by her pompous and cold-hearted proclamation, the transformed policeman roars, 'I'm Officer Leslie Nielson of the Metropolitan Police Force! You've got another thing coming, you bitch, if you think I'll do anything for you after you've stolen my humanity. Get off me, you whore!' He bucks up against her and shoves the blonde minotaur off his body, leading to a struggle between the two of them, in the course of which his ripped clothes are shaken off his form, sending the bodycam tumbling to the ground. You catch a few more glimpses of them struggling from a tilted angle on the alley ground, mostly seeing Kelly's tree-trunk like legs and her pussy gushing some of the cop's apparently quite voluminous load of cum. And that is the last image on the tape too, as she steps onto the camera with a heavy hoof a second later.";
 
+Table of GameEventIDs (continued)
+Object	Name
+Abandoned Pizza Delivery Car	"Abandoned Pizza Delivery Car"
 
 Abandoned Pizza Delivery Car is a situation.
 The sarea of Abandoned Pizza Delivery Car is "Outside".
@@ -190,6 +205,9 @@ to say PizzaCarDashcamVid:
 	WaitLineBreak;
 	say "     Just stopping the car in the middle of the road, the pizza guy gets out and grabs the remaining stack of pizzas he has left, then strides up to the two girls and chats them up. They appear delighted at his appearance, happily reaching out to stroke his fur. Before long, all three of them are talking with one another, followed by them walking off together. The rest of the tape is filled with a view of the empty street, only interrupted by a few (still human) passersby who do nothing but hurry past with somewhat distraught expressions on their faces.";
 
+Table of GameEventIDs (continued)
+Object	Name
+Dressing Room Spycam	"Dressing Room Spycam"
 
 Dressing Room Spycam is a situation.
 The sarea of Dressing Room Spycam is "High".
@@ -222,6 +240,9 @@ to say DressingRoomSpycamVid:
 	say "     Several moans are heard in the background, and a couple minutes later, Easca returns to the dressing room while Maia is still fucking their captive, bringing along yet another surprised female who gets drawn into their circle. And another. And another. Mutual love and sisterhood is established between a good dozen women and herms, who share their male cum dumpster equally among them. Some come back for seconds or even thirds before they are done. By the end of his time getting railed by all of these strong and big-dicked herms, the voyeur is literally drenched in their cum. Using the remains of his clothes to wipe their toy down, Maia eventually discovers that underneath the creamy splatters, the ordeal managed to transform him. Sun-bronzed and apparently weather-beaten skin covers the male's now fairly muscular physique. Even so, his body is a far cry from his towering mistresses, more suited to the role of a serf or manual laborer than a warrior.";
 	say "     Easca grabs her captive by the chin and makes him look her in the eye as she asks, 'Have you learned your lesson, little man?' He meekly nods to her, which makes the powerful Amazonian laugh out loud. 'Good. You may keep serving me and my kin, to drain our balls whenever we desire. I'll call you Agori, so everyone will know your status.' Throwing him the cum-soaked rags of his clothes to tie around his waist as a loincloth, the band of Amazonian warriors sets out for parts unknown, followed by their still rather sticky male slave. The rest of the tape's content are fairly boring, as all you can see is the cum-splattered dressing room, its contents slowly drying. Just to be sure that there is nothing interesting left to see, you speed forward through it all, but the room remains empty up till the time that the camera runs out of power a number of hours later.";
 
+Table of GameEventIDs (continued)
+Object	Name
+Drone Wreckage	"Drone Wreckage"
 
 Drone Wreckage is a situation.
 The sarea of Drone Wreckage is "High".
@@ -281,6 +302,10 @@ to say DariusHannahVid2: [Note: This is a post infection video of Darius fucking
 	WaitLineBreak;
 	say "     'You're mine bitch, as are the pups I just put into you,' Darius grunts in satisfaction, his muzzle right next to one of Hannah's ears. Her blissed-out expression betraying the strong effect that being bred has had on her, the spotted woman can't do much more than whine submissively in reply, which makes her alpha laugh and grin. The two of them stay together for that for some more time, with Darius whispering more things into his knotted bitch's ear until he eventually gets soft enough to pull out of her. His red canine shaft swings left and right between his legs, dripping cum, as he walks up to the camera and then turns it off.";
 
+Table of GameEventIDs (continued)
+Object	Name
+Lost Explorer	"Lost Explorer"
+
 Lost Explorer is a situation.
 The sarea of Lost Explorer is "Warehouse".
 
@@ -333,6 +358,10 @@ to say UrbanExplorerVid1:
 	WaitLineBreak;
 	say "     As Mason is revealed to your view completely, you realize that he passed out in exhaustion from the combined transformation and orgasm. While he did transform, this was far from a total conversion to match his feral partner. He may be feline and match the beast in black fur and some bio-luminescent patches, but the young man is still anthro in appearance, with recognizable arms and legs meant for bipedal locomotion. None of this seems to matter much to the urban explorer's sated captor, and the large beast bends its head down to groom Mason's chest, where his fur is a sticky mess from his own load and the pre leaked on him earlier. After a thorough cat-wash of his new convert, the tentacled cat lifts the dozing young anthro with his surprisingly strong appendages and slings him across his back, carrying his freshly fucked plaything to parts unknown.";
 	say "     The rest of the video is filled with several more hours of the same view, with nothing more interesting happening than a rat eventually dashing past, so you rewind after fast-forwarding through it and eject the tape.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Abandoned Fitness Dojo	"Abandoned Fitness Dojo"
 
 Abandoned Fitness Dojo is a situation.
 The sarea of Abandoned Fitness Dojo is "High".

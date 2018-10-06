@@ -110,7 +110,7 @@ Chapter - The map-display window kind
 
 A map-display window is a kind of graphlink g-window.
 
-The map viewport is a g-window that varies. [if the author doesn't explicitly name the map viewport, we will automatically select a map-display window to be the viewport when play begins. In most cases, this will be the only existing map-display window.]
+The map viewport is a g-window that varies.[@Tag:NotSaved] [if the author doesn't explicitly name the map viewport, we will automatically select a map-display window to be the viewport when play begins. In most cases, this will be the only existing map-display window.]
 
 [The author may provide a maximum map size to use. This refers to the number of *tiles* to be displayed, not the maximum number of pixels, and can be used to restrict the size of the map for either performance or aesthetic reasons. For example, a fixed map size combined with a restricted number of available zoom levels can make it easier to predict the output size of the map.]
 A map-display window has a number called the maximum map width. The maximum map width of a map-display window is usually 0.
@@ -638,7 +638,7 @@ Some UI-buttons are defined by the Table of Map Buttons.
 
 [The UI-layer is a global variable holding the layer number on which the buttons should be placed. It should generally be at least 2 layers higher than the map layer. If no display-layer is explicitly set for the UI-frame, it will be placed one level beneath the UI-layer.]
 
-The UI-layer is a number that varies. The UI-layer is usually 4.
+The UI-layer is a number that varies.[@Tag:NotSaved] The UI-layer is usually 4.
 
 
 Table of Map Buttons

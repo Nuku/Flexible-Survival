@@ -13,6 +13,10 @@ Campus Gym by UrsaOmega begins here.
 
 Section 1 - Finding the gym
 
+Table of GameEventIDs (continued)
+Object	Name
+Working Out	"Working Out"
+
 Working Out is a situation.
 the sarea of Working Out is "Campus".
 
@@ -29,6 +33,10 @@ Instead of resolving a Working Out:
 	now Working Out is resolved;
 
 Section 2 - Campus Gym
+
+Table of GameRoomIDs (continued)
+Object	Name
+Campus Gym	"Campus Gym"
 
 Campus Gym is a room. It is fasttravel. It is private.
 

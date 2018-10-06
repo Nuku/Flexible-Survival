@@ -206,6 +206,10 @@ Section 4 - Events
 [***********************************************************]
 [***********************************************************]
 
+Table of GameEventIDs (continued)
+Object	Name
+Harbor Swap Meet	"Harbor Swap Meet"
+
 Harbor Swap Meet is a situation.
 Harbor Swap Meet is inactive.
 The sarea of Harbor Swap Meet is "Warehouse".

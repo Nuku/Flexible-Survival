@@ -10,6 +10,10 @@ an everyturn rule: [bugfix code to update saves which had the event erroneously 
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Garage Demon	"Garage Demon"
+
 Garage Demon is a situation.
 The sarea of Garage Demon is "Capitol".
 when play begins:
@@ -88,6 +92,10 @@ to say halhistory:
 
 
 Section 2 - Location
+
+Table of GameRoomIDs (continued)
+Object	Name
+Disused Garage	"Disused Garage"
 
 Disused Garage is a room. It is fasttravel. It is private.
 The description of Disused Garage is "[disusedgaragedesc]".
@@ -375,6 +383,10 @@ to say hayatosex5:
 
 Section 4 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Noh Mask	"Noh Mask"
+
 Noh Mask is a situation. Noh Mask is inactive. The level of Noh Mask is 9.
 The sarea of Noh Mask is "Campus".
 when play begins:
@@ -455,6 +467,9 @@ to say nohmaskanimebabe:
 		now HP of Hayato is 13;
 	now fightoutcome is 0;
 
+Table of GameEventIDs (continued)
+Object	Name
+Oni Lair	"Oni Lair"
 
 Oni Lair is a situation. Oni Lair is inactive. The level of Oni Lair is 9.
 The sarea of Oni Lair is "Capitol".

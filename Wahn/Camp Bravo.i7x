@@ -3,6 +3,10 @@ Version 2 of Camp Bravo by Wahn begins here.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Red Light Requisition	"Red Light Requisition"
+
 Red Light Requisition is a situation.
 The sarea of Red Light Requisition is "Red".
 when play begins: [these exceptions are based on the second half so people aren't left standing]
@@ -19,6 +23,10 @@ Instead of resolving a Red Light Requisition:
 		say "     What's going on here? Why are soldiers looting the red light district and gathering up whole sacks of dildos and who knows what? Maybe you'll find out one of these days...";
 	increase score by 5;
 	now Red Light Requisition is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Trickster's Masterpiece	"Trickster's Masterpiece"
 
 Trickster's Masterpiece is a situation.
 The sarea of Trickster's Masterpiece is "Outside".
@@ -50,6 +58,9 @@ Instead of resolving a Trickster's Masterpiece:
 	now Back at the Camp is active;
 	now Trickster's Masterpiece is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Back at the Camp	"Back at the Camp"
 
 Back at the Camp is a situation. Back at the Camp is inactive. [enabled by the 'Trickster's Masterpiece' event]
 The sarea of Back at the Camp is "Outside".
@@ -147,6 +158,9 @@ to say GuardLeave:
 	say "     You follow the soldier's order and walk away. Too bad, getting into the camp would surely have been interesting. Maybe you should return later and try to convince them to let you in.";
 	now Resolution of Back at the Camp is 4; [left]
 
+Table of GameRoomIDs (continued)
+Object	Name
+Camp Bravo Entrance	"Camp Bravo Entrance"
 
 Camp Bravo Entrance is a room. It is a fasttravel. It is private.
 The description of Camp Bravo Entrance is "     You're at the entrance of Camp Bravo, a mid-sized military camp consisting of row after row of olive green tents. Two soldiers are on guard here, using a barricade line of wrecked cars as cover as they vigilantly watch the street. To the north lies the parade ground in the center of the camp.".
@@ -242,18 +256,33 @@ to say OrwellBJ:
 	WaitLineBreak;
 	say "     As you stand back up Private Marc Orwell looks over his shoulder and says, 'Thanks, I really, really needed that!' 'Anytime,' you tell him, licking your lips. As you swallow the last drops of his cum, Marc gives you a pretty nice and distracting view - bent over the hood of the car, all business to an observer from the front with his rifle and uniform cap and shirt... while at the same time showing off his bare ass to you, pants pooled around his legs and combat boots, his now softening cock dangling between his legs.";
 
-North of Camp Bravo Entrance is Parade Ground.
+Table of GameRoomIDs (continued)
+Object	Name
+Parade Ground	"Parade Ground"
+
+Parade Ground is a room.
+Parade Ground is north of Camp Bravo Entrance.
 The description of Parade Ground is "     You're in Camp Bravo, surrounded by green military tents. To the north lies the tent of the camp's commanding officer, west is the quartermaster's tent and to the south is the entrance of the camp. In the middle of the camp is an mostly empty parade ground with a wooden hitching post and a single field bed. There are various patches of dried cum on them and the ground around. An impressively large minotaur sits next to it, munching on vegetables and bread brought to him by a grizzled looking soldier. Seems like caring for the beast is his responsibility.".
 
 Instead of sniffing Parade Ground:
 	say "     The heavy scent of cum and a musky minotaur odor hang in the air. It must be laden with pheromones, as you're getting quite horny just from taking it in.";
 
-North of the Parade Ground is the Major's Tent.
+Table of GameRoomIDs (continued)
+Object	Name
+Major's Tent	"Major's Tent"
+
+Major's Tent is a room.
+Major's Tent is north of Parade Ground.
 The description of Major's Tent is "     You're in a sparely furnished military tent, holding only a field desk, a small table, several chairs and a field bed. Major Padgett, the camp's commander sits at the desk, reading scout reports and other paperwork. On top of the table at one wall of the tent rests a military radio.".
 
 Instead of sniffing Major's Tent:
 	say "     Even in here, the minotaur cum smell is still pretty strong. No wonder, since it's been rutting people in the area right before the tent.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Quartermaster's Tent	"Quartermaster's Tent"
+
+Quartermaster's Tent is a room.
 West of the Parade Ground is the Quartermaster's Tent.
 The description of Quartermaster's Tent is "     You're in the large tent of Camp Bravo's quartermaster. It holds a long row of filled shelves in the back, combined with various crates stacked high and a few large sacks resting on the floor next to the quartermaster's field desk. A medical corpsman is bent over one of them, counting its contents.".
 

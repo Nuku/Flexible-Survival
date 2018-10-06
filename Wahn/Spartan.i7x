@@ -230,6 +230,10 @@ When Play begins:
 
 Section 3 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+History Lecture	"History Lecture"
+
 History Lecture is a situation.			[repeatable event infecting with Spartan/Helot strains - source of it all]
 The sarea of History Lecture is "Campus".
 

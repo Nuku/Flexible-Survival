@@ -20,6 +20,10 @@ DianaRelationship is a number that varies.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Dressing Room Crisis	"Dressing Room Crisis"
+
 Dressing Room Crisis is a situation.
 The sarea of Dressing Room Crisis is "Smith Haven".
 
@@ -112,6 +116,10 @@ Instead of resolving a Dressing Room Crisis:
 		now DianaRelationship is 101; [player ignored her]
 		now Resolution of Dressing Room Crisis is 100; [ignored]
 	now Dressing Room Crisis is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Mall Optitian	"Mall Optitian"
 
 Mall Optitian is a situation.
 The Prereq1 of Mall Optitian is Dressing Room Crisis.

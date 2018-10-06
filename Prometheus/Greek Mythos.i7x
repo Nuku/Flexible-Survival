@@ -29,6 +29,11 @@ to TwelveLaborsQuestLog:
 Section 1 - Events
 
 [Labors of Herakles]
+
+Table of GameEventIDs (continued)
+Object	Name
+Labors Introduction	"Labors Introduction"
+
 Labors Introduction is a situation.
 The sarea of Labors Introduction is "Museum".
 The Level of Labors Introduction is 30.
@@ -54,12 +59,16 @@ to LaborsIntroductionEvent: [Invited to perform the Labors]
 	add "Twelve Labors Quest" to OpenQuests of player;
 	now Labors Introduction is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Meet the Nemean Lion	"Meet the Nemean Lion"
+
 Meet the Nemean Lion is a situation.
 Prereq1 of Meet the Nemean Lion is Labors Introduction.
 The level of Meet the Nemean Lion is 30.
 The sarea of Meet the Nemean Lion is "Plains".
 
-instead of going to Dry Plains while (TwelveLaborsStage is 1 and a random chance of 1 in 5 succeeds):
+instead of going to Dry Plains while (Meet the Nemean Lion is active and Meet the Nemean Lion is not resolved and TwelveLaborsStage is 1 and a random chance of 1 in 5 succeeds):
 	move player to Dry Plains;
 	MeettheNemeanLionEvent;
 
@@ -142,12 +151,17 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "lionskin"	"The skin of the Nemean Lion. Ethically acquired after completing the first labor of Herakles."	5	lionskin
 
+lionskin is a grab object.
 lionskin is equipment.
 It is not temporary.
+The plural of lionskin is false.
+The taur-compatible of lionskin is true.
+The size of lionskin is 3.
 The AC of lionskin is 100.
 The effectiveness of lionskin is 40.
 The placement of lionskin is "body".
 The descmod of lionskin is "You have the hide of a big cat wrapped around your shoulders.".
 The slot of lionskin is "body".
+The scent of lionskin is "The Nemean Lion's skin still smells of his musk, a potent, authority-demanding scent."
 
 Greek Mythos ends here.

@@ -458,6 +458,10 @@ to say TehuantlHeatIntro:
 
 Section 7 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Feline Relief	"Feline Relief"
+
 Feline Relief is a situation.
 Feline Relief is a inactive.
 The sarea of Feline Relief is "Red".

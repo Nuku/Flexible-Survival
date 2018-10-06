@@ -803,6 +803,10 @@ to say DiegoCollarQuestRefuse:
 	now XP of Diego is 99; [player knows of the plan, has no interest]
 	now Hunting down Hunter is inactive;
 
+Table of GameEventIDs (continued)
+Object	Name
+Hunting down Hunter	"Hunting down Hunter"
+
 Hunting down Hunter is a situation.
 Hunting down Hunter is inactive. [turned on by taking Diego's quest]
 The sarea of Hunting down Hunter is "Outside".

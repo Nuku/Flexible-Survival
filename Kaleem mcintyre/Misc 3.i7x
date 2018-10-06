@@ -10,6 +10,10 @@ Section 1 - Mysterious Girl
 
 Section 2 - Jam Session
 
+Table of GameEventIDs (continued)
+Object	Name
+Jam Session	"Jam Session"
+
 Jam Session is a situation.
 The sarea of Jam Session is "Junkyard".
 when play begins:
@@ -27,6 +31,10 @@ Instead of resolving Jam Session:
 	now Jam Session is resolved;
 
 Section 3 - Blind Boy's Love
+
+Table of GameEventIDs (continued)
+Object	Name
+Blind Boy's Love	"Blind Boy's Love"
 
 Blind Boy's Love is a situation.
 The sarea of Blind Boy's Love is "Junkyard".
@@ -58,6 +66,10 @@ Instead of resolving Blind Boy's Love:
 
 
 Section 4 - Dragonian Trial
+
+Table of GameEventIDs (continued)
+Object	Name
+Dragonian Trial	"Dragonian Trial"
 
 Dragonian Trial is a situation.
 The sarea of Dragonian Trial is "Beach".

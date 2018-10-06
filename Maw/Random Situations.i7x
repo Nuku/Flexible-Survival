@@ -18,7 +18,7 @@ Beast's Den is bad.]
 Susan Sighting is a situation.
 Nerd's Opinion is a situation.
 Nerd's Opinion is resolved.
-Novelstudies is a number that varies.
+Novelstudies is a number that varies.[@Tag:NotSaved]
 [Susan's Location is a situation.]
 
 Chapter 2 - Rules

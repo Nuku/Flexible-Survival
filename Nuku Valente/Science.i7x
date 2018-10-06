@@ -95,7 +95,7 @@ Definition: A Research (called J) is complete:
 Part 2 - Research Topics
 
 The nerd has a research called current.
-cur is a text that varies.
+cur is a text that varies.[@Tag:NotSaved]
 
 Local Survey is a Research.
 The description of it is "Surveying our immediate surroundings will better prepare us for the unexpected (Perception +5%)".

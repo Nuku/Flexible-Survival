@@ -7,6 +7,10 @@ Version 1 of Hyena Hideout by Stripes begins here.
 
 Section 1- Hyena Hideout
 
+Table of GameRoomIDs (continued)
+Object	Name
+Hyena Hideout	"Hyena Hideout"
+
 Hyena Hideout is a room. It is fasttravel. It is private.
 earea of Hyena Hideout is "Outside".
 

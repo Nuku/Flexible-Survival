@@ -6,6 +6,10 @@ Version 2 of High Rise Events by Stripes begins here.
 
 Section 1- Rabid Lawyers
 
+Table of GameEventIDs (continued)
+Object	Name
+Rabid Lawyers	"Rabid Lawyers"
+
 Rabid Lawyers is a situation.
 The sarea of Rabid Lawyers is "High".
 when play begins:
@@ -20,6 +24,10 @@ Instead of resolving a Rabid Lawyers:
 
 
 Section 2- Pigging Out
+
+Table of GameEventIDs (continued)
+Object	Name
+Pigging Out	"Pigging Out"
 
 Pigging Out is a situation. The level of Pigging Out is 3.
 The sarea of Pigging Out is "High".
@@ -134,6 +142,10 @@ cleaver is an armament. It is part of the player. It has a weapon "[one of]your 
 the scent of the cleaver is "The heavy blade smells faintly of blood."
 
 Section 3- Small Park
+
+Table of GameEventIDs (continued)
+Object	Name
+Small Park	"Small Park"
 
 Small Park is a situation.
 The sarea of Small Park is "High".
@@ -251,6 +263,10 @@ to say doggyinfect:
 
 Section 4- Corporate Fat Cats
 
+Table of GameEventIDs (continued)
+Object	Name
+Corporate Fat Cats	"Corporate Fat Cats"
+
 Corporate Fat Cats is a situation.
 The sarea of Corporate Fat Cats is "High".
 when play begins:
@@ -264,6 +280,10 @@ Instead of resolving a Corporate Fat Cats:
 
 
 Section 5- Veterinary Hospital
+
+Table of GameEventIDs (continued)
+Object	Name
+Veterinary Hospital	"Veterinary Hospital"
 
 Veterinary Hospital is a situation.
 The sarea of Veterinary Hospital is "High".
@@ -439,6 +459,10 @@ to say randomvetfight:				[more suitable pets can be added]
 
 Section 6- Golf Store
 
+Table of GameEventIDs (continued)
+Object	Name
+Golf Store	"Golf Store"
+
 Golf Store is a situation.
 The sarea of Golf Store is "High".
 when play begins:
@@ -462,6 +486,10 @@ the scent of the golf club is "The golf club smells faintly of grass, bad slices
 
 Section 7- Electronics Store
 
+Table of GameEventIDs (continued)
+Object	Name
+Electronics Store	"Electronics Store"
+
 Electronics Store is a situation.
 The sarea of Electronics Store is "High".
 when play begins:
@@ -476,6 +504,10 @@ Instead of resolving a Electronics Store:
 
 
 Section 8 - Cameo
+
+Table of GameEventIDs (continued)
+Object	Name
+Cameo	"Cameo"
 
 Cameo is a situation. The level of Cameo is 4.
 The sarea of Cameo is "High".
@@ -587,6 +619,10 @@ Instead of resolving a Cameo:
 
 
 Section 9 - Raul's Wild Kingdom
+
+Table of GameEventIDs (continued)
+Object	Name
+Wild Kingdom	"Wild Kingdom"
 
 Wild Kingdom is a situation.
 The sarea of Wild Kingdom is "High".

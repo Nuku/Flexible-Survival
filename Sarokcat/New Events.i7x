@@ -6,6 +6,10 @@ New Events by Sarokcat begins here.
 
 Section 1 - Military presence
 
+Table of GameEventIDs (continued)
+Object	Name
+Military presence	"Military presence"
+
 Military presence is a situation
 
 MTP is a number that varies.
@@ -35,7 +39,7 @@ Instead of Resolving a Military presence:
 		extend game by 12;
 		now mtp is 3;
 		if girl is not banned, now Paratrooper is active; [- Vanessa]
-		[also makes the 'womanfruittree' event live - Coleen]
+		[also makes the 'womanfruittree' event live - Colleen]
 	else if mtp is 3:
 		say "     Traveling through the city, you come across what appears to have been a military style barricade, currently unoccupied. Investigating further, you find that several military tents had been set up past the barricade in a mostly empty store parking lot. Investigating carefully in case there are still any trigger-happy soldiers around, you find that the makeshift camp seems completely empty, though there are several signs of a struggle in some areas.";
 		say "     Gathering up your courage, you start looking in some of the tents, only to be surprised when you find that the large tents are full of empty, movable beds with restraints and scientific equipment. Looking closer, you can see that several of the beds were occupied sometime recently, and from the looks of things, the occupants managed to either free themselves from their restraints or [']convinced['] whoever was with them to free them instead.";
@@ -64,6 +68,10 @@ Section 3 - Wyvern Flight
 
 Section 4 - Abandonedplayer
 
+Table of GameEventIDs (continued)
+Object	Name
+Abandonedplayer	"Abandonedplayer"
+
 Abandonedplayer is a situation. The sarea of Abandonedplayer is "Warehouse".
 
 Instead of Resolving a Abandonedplayer:
@@ -72,6 +80,10 @@ Instead of Resolving a Abandonedplayer:
 
 
 Section 5 - Hyena Gang
+
+Table of GameEventIDs (continued)
+Object	Name
+Hyena Gang	"Hyena Gang"
 
 Hyena Gang is a situation.
 when play begins:
@@ -130,6 +142,10 @@ Instead of Resolving a Hyena Gang:
 
 Section 6 - Locked utility room
 
+Table of GameEventIDs (continued)
+Object	Name
+Locked utility room	"Locked utility room"
+
 Locked utility room is a situation.
 The sarea of Locked utility room is "Mall".
 when play begins:
@@ -150,6 +166,10 @@ Instead of Resolving a Locked utility room:
 
 Section 7 - Transformed Seals
 
+Table of GameEventIDs (continued)
+Object	Name
+Transformed Seals	"Transformed Seals"
+
 Transformed Seals is a situation.
 The sarea of Transformed Seals is "Beach";
 
@@ -160,6 +180,10 @@ Instead of Resolving a Transformed Seals:
 
 Section 8 - Wrecked ships
 
+Table of GameEventIDs (continued)
+Object	Name
+Wrecked ships	"Wrecked ships"
+
 Wrecked ships is a situation.
 The sarea of Wrecked ships is "Beach".
 
@@ -169,6 +193,10 @@ Instead of Resolving a Wrecked ships:
 
 
 Section 9 - Dolphin lotion
+
+Table of GameEventIDs (continued)
+Object	Name
+Dolphin lotion	"Dolphin lotion"
 
 Dolphin lotion is a situation.
 The sarea of Dolphin lotion is "Beach".
@@ -181,6 +209,10 @@ Instead of Resolving a Dolphin lotion:
 
 Section 10 - Broken fountain
 
+Table of GameEventIDs (continued)
+Object	Name
+Broken fountain	"Broken fountain"
+
 Broken fountain is a situation.
 The sarea of Broken fountain is "Park".
 
@@ -192,6 +224,10 @@ Instead of Resolving a Broken fountain:
 
 Section 11 - Scenic View
 
+Table of GameEventIDs (continued)
+Object	Name
+Scenic View	"Scenic View"
+
 Scenic View is a situation.
 The sarea of Scenic View is "Park".
 
@@ -202,6 +238,10 @@ Instead of Resolving a Scenic View:
 
 
 Section 12 - Twisted grove
+
+Table of GameEventIDs (continued)
+Object	Name
+Twisted grove	"Twisted grove"
 
 Twisted grove is a situation.
 The sarea of Twisted grove is "Park".
@@ -216,6 +256,10 @@ Instead of Resolving a Twisted grove:
 
 Section 13 - Ominous hole
 
+Table of GameEventIDs (continued)
+Object	Name
+Ominous hole	"Ominous hole"
+
 Ominous hole is a situation.
 The sarea of Ominous hole is "Park".
 
@@ -225,6 +269,10 @@ Instead of Resolving a Ominous hole:
 
 
 Section 14 - squatters den
+
+Table of GameEventIDs (continued)
+Object	Name
+squatters den	"squatters den"
 
 squatters den is a situation.
 The sarea of squatters den is "Mall".
@@ -238,6 +286,10 @@ Instead of resolving a squatters den:
 
 Section 15 - Leaking pipe
 
+Table of GameEventIDs (continued)
+Object	Name
+leaking pipe	"leaking pipe"
+
 leaking pipe is a situation.
 The sarea of leaking pipe is "Mall".
 
@@ -248,6 +300,10 @@ Instead of resolving a leaking pipe:
 
 
 Section 16 - Library Visitor
+
+Table of GameEventIDs (continued)
+Object	Name
+library visitor	"library visitor"
 
 library visitor is a situation.
 libvis is a number that varies.
@@ -289,6 +345,10 @@ Instead of Resolving a library visitor:
 
 
 Section 17 - ruined supplies
+
+Table of GameEventIDs (continued)
+Object	Name
+ruined supplies	"ruined supplies"
 
 ruined supplies is a situation.
 The sarea of ruined supplies is "Mall".

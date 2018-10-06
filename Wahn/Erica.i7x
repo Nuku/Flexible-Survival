@@ -88,6 +88,10 @@ an everyturn rule: [bugfix code to update saves which had the event actually res
 	if Dexterity of Erica is 2:
 		now Temple of Hera is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+Temple of Hera	"Temple of Hera"
+
 Temple of Hera is a situation.
 Temple of Hera is inactive.
 The sarea of Temple of Hera is "Museum".
@@ -106,6 +110,10 @@ Instead of resolving a Temple of Hera:
 	say "     Hera herself adds in, 'There you have it. Go forth and knock a few heads together - you mortals are good at that, aren't you...' With a slight flick of her wrist, you feel yourself pushed out the door, stumbling right into the museum foyer through it.";
 	now Temple of Hera is resolved;
 	now Dexterity of Erica is 3;
+
+Table of GameEventIDs (continued)
+Object	Name
+Biker Hangout	"Biker Hangout"
 
 Biker Hangout is a situation.
 The Prereq1 of Biker Hangout is Temple of Hera.

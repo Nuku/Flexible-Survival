@@ -26,6 +26,10 @@ Version 4 of New Ewe Store by Sarokcat begins here.
 
 Section 1- The Situations
 
+Table of GameEventIDs (continued)
+Object	Name
+New Ewe Store	"New Ewe Store"
+
 New Ewe Store is a situation.
 The sarea of New Ewe Store is "Outside".
 when play begins:
@@ -97,6 +101,10 @@ Instead of Resolving a New Ewe Store:
 		now New Ewe Storeroom is known;
 		move player to New Ewe Storeroom;
 
+Table of GameEventIDs (continued)
+Object	Name
+Little Lost Lamb	"Little Lost Lamb"
+
 Little Lost Lamb is a situation.
 Little Lost Lamb is inactive.
 The sarea of Little Lost Lamb is "Mall".
@@ -132,6 +140,10 @@ Instead of resolving Little Lost Lamb:
 
 
 Section 2 - New Ewe Storeroom & NPCs
+
+Table of GameRoomIDs (continued)
+Object	Name
+New Ewe Storeroom	"New Ewe Storeroom"
 
 New Ewe Storeroom is a room. It is fasttravel. It is private.
 

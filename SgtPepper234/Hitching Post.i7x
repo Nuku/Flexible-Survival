@@ -9,6 +9,10 @@ an everyturn rule:
 		change the southwest exit of Picnic Area to Park Trail;
 		now HitchingRoomConnection is 1; [room connected]
 
+Table of GameRoomIDs (continued)
+Object	Name
+Picnic Area	"Picnic Area"
+
 Picnic Area is a room.
 earea of Picnic Area is "Park".
 The description of Picnic Area is "     The ground here is poured concrete over a 10 meter squared area. Broken benches and built in barbeques indicate that this was once a public picnic spot. Set into the ground nearby is a large set of reinforced prison stocks.".
@@ -41,6 +45,10 @@ carry out HitchInPrisonStock:
 	else:
 		LineBreak;
 		say "     You decide to leave the stocks and continue your journey. Let some other submissive breeder lock themselves in.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Public Hitching Post	"Public Hitching Post"
 
 Public Hitching Post is a situation.
 The sarea of Public Hitching Post is "Park".

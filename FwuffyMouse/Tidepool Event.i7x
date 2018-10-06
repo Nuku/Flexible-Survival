@@ -1,5 +1,9 @@
 Tidepool Event by FwuffyMouse begins here.
 
+Table of GameEventIDs (continued)
+Object	Name
+Tidepool Treasure	"Tidepool Treasure"
+
 Tidepool Treasure is a scavevent.
 The sarea of Tidepool Treasure is "Beach".
 

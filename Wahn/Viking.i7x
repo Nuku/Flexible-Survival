@@ -807,6 +807,10 @@ When Play begins:
 
 Section 3 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Chieftain's Challenge	"Chieftain's Challenge"
+
 Chieftain's Challenge is a situation. The level of Chieftain's Challenge is 1. Chieftain's Challenge is inactive.
 The sarea of Chieftain's Challenge is "Beach".
 
@@ -949,6 +953,10 @@ to say VikingPublicSex:
 
 Section 4 - Viking Ship
 
+Table of GameRoomIDs (continued)
+Object	Name
+Viking Ship	"Viking Ship"
+
 Viking Ship is a room. It is a fasttravel. Viking Ship is private.
 The description of Viking Ship is "[VShipDesc]".
 
@@ -985,7 +993,12 @@ instead of navigating Viking Ship:
 		else: [catch-all for the rest]
 			say "     Sonya is already waiting for you as you climb aboard, embracing you and planting a long kiss on your lips before you even have a chance to greet her. Then she says, 'Welcome back, my love. Want to join me in our cabin?' With that, the beautiful woman goes to the hatch below deck, giving you a lusty grin before walking down the stairs.";
 
-down from Viking Ship is Sonya's Cabin.
+Sonya's Cabin is below Viking Ship.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Sonya's Cabin	"Sonya's Cabin"
+
 Sonya's Cabin is a room.
 The description of Sonya's Cabin is "[SCDesc]".
 

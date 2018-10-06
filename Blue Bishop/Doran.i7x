@@ -444,6 +444,10 @@ When Play begins:
 
 Section 3.0 - Doran NPC Core
 
+Table of GameRoomIDs (continued)
+Object	Name
+Rocky Outcropping	"Rocky Outcropping"
+
 Rocky Outcropping is a room. It is fasttravel. It is private. It is sleepsafe.
 Outcropping Exit is a door. Outcropping Exit is dangerous. The marea of Outcropping Exit is "Plains". Outcropping Exit is undescribed. Outcropping Exit is east of Rocky Outcropping.
 the description of Rocky Outcropping is "[RockyOutcroppingDescription]".

@@ -5,6 +5,10 @@ Tattoo Parlor by Sarokcat begins here.
 
 Section 1 - Tattoo Parlor
 
+Table of GameRoomIDs (continued)
+Object	Name
+Tattoo Parlor	"Tattoo Parlor"
+
 Tattoo Parlor is a room. It is fasttravel. It is private.
 
 The description of Tattoo Parlor is "[TattooParlorDescription]".
@@ -21,6 +25,10 @@ instead of sniffing Tattoo Parlor:
 
 Section 2 - Finding the parlor
 
+Table of GameEventIDs (continued)
+Object	Name
+tattoonpiercing	"tattoonpiercing"
+
 tattoonpiercing is a situation.
 The sarea of tattoonpiercing is "Red".
 
@@ -33,6 +41,10 @@ Instead of resolving tattoonpiercing:
 		now Tattoo Parlor is known;
 		now tattoohunter is 2;
 		now tattoonpiercing is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+findingkara	"findingkara"
 
 findingkara is a situation. The level of findingkara is 9.
 The sarea of findingkara is "Red".

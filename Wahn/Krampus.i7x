@@ -20,7 +20,12 @@ after going to Krampus's Cave while (HP of Krampus is 0): [introduction]
 
 Section 2 - Location
 
-North of Christmas Village is Krampus's Cave.
+Table of GameRoomIDs (continued)
+Object	Name
+Krampus's Cave	"Krampus's Cave"
+
+Krampus's Cave is a room.
+Krampus's Cave is north of Christmas Village.
 The description of Krampus's Cave is "[KrampusCaveDesc]".
 
 to say KrampusCaveDesc:

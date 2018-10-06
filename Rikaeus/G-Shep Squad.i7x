@@ -5,6 +5,10 @@ Version 1 of G-Shep Squad by Rikaeus begins here.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Canine Patrol	"Canine Patrol"
+
 Canine Patrol is a situation.
 The sarea of Canine Patrol is "Red".
 when play begins:
@@ -73,6 +77,10 @@ Instead of resolving a Canine Patrol:
 
 
 Section 2 - K9 Vans
+
+Table of GameRoomIDs (continued)
+Object	Name
+K9 Vans	"K9 Vans"
 
 K9 Vans is a room. It is fasttravel. It is private. It is sleepsafe.
 

@@ -3,6 +3,10 @@ Version 1 of Infected Pool by Hellerhound begins here.
 
 Section 1 - Pure Pool
 
+Table of GameEventIDs (continued)
+Object	Name
+Pure Pool	"Pure Pool"
+
 Pure Pool is a situation.
 The sarea of Pure Pool is "Park".
 PurePoolSeen is a truth state that varies. PurePoolSeen is usually false.

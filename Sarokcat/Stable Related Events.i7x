@@ -5,6 +5,10 @@ Stable Related Events by Sarokcat begins here.
 
 Section 1 - Kitchenkegger
 
+Table of GameEventIDs (continued)
+Object	Name
+Kitchenkegger	"Kitchenkegger"
+
 Kitchenkegger is a situation.
 The sarea of Kitchenkegger is "Stable".
 when play begins:
@@ -34,6 +38,10 @@ Instead of Resolving a Kitchenkegger:
 
 Section 2 - Tack room
 
+Table of GameEventIDs (continued)
+Object	Name
+Tack room	"Tack room"
+
 Tack room is a situation.
 The sarea of Tack room is "Stable".
 
@@ -55,6 +63,10 @@ Instead of Resolving a Tack room:
 
 Section 3 - Onyxroom
 
+Table of GameEventIDs (continued)
+Object	Name
+Onyxroom	"Onyxroom"
+
 Onyxroom is a situation.
 The sarea of Onyxroom is "Stable".
 
@@ -65,6 +77,10 @@ Instead of Resolving a Onyxroom:
 
 
 Section 4 - Unlucky elevator
+
+Table of GameEventIDs (continued)
+Object	Name
+Unlucky elevator	"Unlucky elevator"
 
 Unlucky elevator is a situation.
 The sarea of Unlucky elevator is "Stable".
@@ -77,6 +93,10 @@ Instead of Resolving a Unlucky elevator:
 
 Section 5 - Lupine visit
 
+Table of GameEventIDs (continued)
+Object	Name
+Lupine visit	"Lupine visit"
+
 Lupine visit is a situation.
 The sarea of Lupine visit is "Stable".
 
@@ -87,6 +107,10 @@ Instead of Resolving a Lupine visit:
 
 
 Section 6 - Soldierstabling
+
+Table of GameEventIDs (continued)
+Object	Name
+Soldierstabling	"Soldierstabling"
 
 Soldierstabling is a situation.
 The sarea of Soldierstabling is "Stable".
@@ -132,6 +156,10 @@ Instead of Resolving a Soldierstabling:
 
 Section 7 - Satisfied customer
 
+Table of GameEventIDs (continued)
+Object	Name
+Satisfied customer	"Satisfied customer"
+
 Satisfied customer is a situation.
 The sarea of Satisfied customer is "Stable".
 when play begins:
@@ -145,6 +173,10 @@ Instead of Resolving a Satisfied customer:
 
 
 Section 8 - Hyenahorsemeet
+
+Table of GameEventIDs (continued)
+Object	Name
+Hyenahorsemeet	"Hyenahorsemeet"
 
 Hyenahorsemeet is a situation.
 hyenastabledeal is a number that varies.
@@ -160,6 +192,10 @@ Instead of Resolving a Hyenahorsemeet:
 
 
 Section 9 - Waitingcustomer
+
+Table of GameEventIDs (continued)
+Object	Name
+Waitingcustomer	"Waitingcustomer"
 
 Waitingcustomer is a situation.
 The sarea of Waitingcustomer is "Stable".
@@ -180,6 +216,10 @@ Instead of Resolving a Waitingcustomer:
 	say "     Recovering from the fight with the waiting creature, you sigh as you wonder just what kind of place they are running here. Gathering your wits around you, you glance around the room one last time, before heading back in the direction of the entryway, though you get the feeling that there are plenty of similar waiting rooms likely scattered throughout the hotel...";
 
 Section 10 - Videoshow
+
+Table of GameEventIDs (continued)
+Object	Name
+Videoshow	"Videoshow"
 
 Videoshow is a situation.
 The sarea of Videoshow is "Stable".
@@ -205,6 +245,10 @@ Instead of Resolving a Videoshow:
 
 Section 11 - Horsegarden
 
+Table of GameEventIDs (continued)
+Object	Name
+Horsegarden	"Horsegarden"
+
 Horsegarden is a situation.
 The sarea of Horsegarden is "Stable".
 
@@ -216,6 +260,10 @@ Instead of Resolving a Horsegarden:
 
 
 Section 12 - Transformationledger
+
+Table of GameEventIDs (continued)
+Object	Name
+Transformationledger	"Transformationledger"
 
 Transformationledger is a situation.
 The sarea of Transformationledger is "Stable".

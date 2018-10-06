@@ -158,6 +158,10 @@ to say SnipsTalk2:
 
 Section 1.3 - Cute Crab Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Lost Crab	"Lost Crab"
+
 Lost Crab is a situation.
 The sarea of Lost Crab is "Beach".
 
@@ -296,6 +300,10 @@ to say DinahTalk1:
 
 
 Section 2.3 - House Cat Event
+
+Table of GameEventIDs (continued)
+Object	Name
+Lost house cat	"Lost house cat"
 
 Lost house cat is a situation.
 The sarea of Lost house cat is "Outside".
@@ -484,6 +492,10 @@ to say ChirpyTalk1:
 
 Section 3.3 - Exotic Bird Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Scared Bird	"Scared Bird"
+
 Scared Bird is a situation.
 The sarea of Scared Bird is "Zoo".
 Instead of resolving Scared Bird:
@@ -636,6 +648,10 @@ to say HoboTalk1:
 	say "     WIP";
 
 Section 4.3 - Helper Dog Event
+
+Table of GameEventIDs (continued)
+Object	Name
+Mournful Dog	"Mournful Dog"
 
 Mournful Dog is a situation.
 The sarea of Mournful Dog is "Hospital".

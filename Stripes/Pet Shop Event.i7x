@@ -8,6 +8,10 @@ Version 2 of Pet Shop Event by Stripes begins here.
 [ Sven - HP of Sven = 6 ]
 [ Korvin - gsd_pet = 15 ]
 
+Table of GameEventIDs (continued)
+Object	Name
+Pet Shop	"Pet Shop"
+
 Pet Shop is a situation.
 
 instead of resolving a pet shop:

@@ -11,6 +11,10 @@ Version 4 of Food and Water Finding by Nuku Valente begins here.
 
 Section 1 - The Situation
 
+Table of GameEventIDs (continued)
+Object	Name
+potential resources	"potential resources"
+
 potential resources is a scavevent.
 The sarea of potential resources is "Allzones".
 

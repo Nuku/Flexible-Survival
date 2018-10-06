@@ -110,6 +110,10 @@ an everyturn rule:
 
 Section 6 - Police Station
 
+Table of GameRoomIDs (continued)
+Object	Name
+Police Station Twelve	"Police Station Twelve"
+
 Police Station Twelve is a room. It is fasttravel. It is private. It is sleepsafe.
 The earea of Police Station Twelve is "Outside".
 The description of Police Station Twelve is "[policestationdesc]".
@@ -117,14 +121,22 @@ the scent of Police Station Twelve is "Despite the cleanup, there's still a ling
 PoliceStationTwelvePopulation is a number that varies.
 PoliceStationTwelveInfpop is a number that varies.
 
-PSdoor is a door. "The heavy doors to the north lead back outside to the parking lot and then into the city beyond.". North of Police Station Twelve is PSdoor. PSdoor is dangerous. North of PSdoor is Wandering the City.
+PSdoor is a door. "The heavy doors to the north lead back outside to the parking lot and then into the city beyond.". PSdoor is north of Police Station Twelve. PSdoor is dangerous. Wandering the City is north of PSdoor.
 the marea of PSdoor is "Outside".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Police Lockerroom	"Police Lockerroom"
 
 Police Lockerroom is a room. It is sleepsafe. Police Lockerroom is east of Police Station Twelve.
 The description of Police Lockerroom is "[policelockerdesc]".
 The scent of Police Lockerroom is "Despite the cleanup, there's still a lingering scent of sex in the air.".
 
-Cell Block A is a room. It is sleepsafe. Cell Block A is down from Police Station Twelve.
+Table of GameRoomIDs (continued)
+Object	Name
+Cell Block A	"Cell Block A"
+
+Cell Block A is a room. It is sleepsafe. Cell Block A is below Police Station Twelve.
 The description of Cell Block A is "[CellBlockAdesc]".
 The scent of Cell Block A is "Despite the cleanup, there's still a lingering scent of sweat, sex and other less pleasant odors.".
 
@@ -1190,6 +1202,9 @@ to say A_Task54:	[Group Rescue]
 		say "     'Have you had a chance to go through that strange forest? Given the extent of it, it's possible you might find a [bold type]survivor[roman type] in there[if HP of Alexandra is 62]. Not wanting to get her hopes up too high, you let her know you're following some leads. Having been reminded, you start thinking about going back again. Perhaps you'll be able to convince at least a few of them to come with you[end if].";
 		now sextablerun is 0; [continued talking allowed]
 
+Table of GameEventIDs (continued)
+Object	Name
+Survivor Group	"Survivor Group"
 
 Survivor Group is a situation. Survivor Group is inactive.
 The sarea of Survivor Group is "Forest".
@@ -1522,6 +1537,9 @@ to say A_Task57:
 		say "     'I need you to check out the [bold type]microchip factory[roman type]. It's in the area around the devastated area around the Capitol building, right about... here,' she points to an intersection on her map. 'If you can find out what those Automaton analysts are up to, we should be able to do something about it. I don't really want to leave this place undefended, but if you need back-up, just come get me. I don't want to risk losing you because you were cocky or wanted to prove yourself to me. You've more than proven yourself to me,' she adds, giving you a peck and quick lick on the cheek.";
 		now sextablerun is 0; [continued talking allowed]
 
+Table of GameEventIDs (continued)
+Object	Name
+Microchip Factory	"Microchip Factory"
 
 Microchip Factory is a situation. Microchip Factory is inactive.
 The sarea of Microchip Factory is "Capitol".
@@ -1557,7 +1575,7 @@ Section 11 - Debug and Notes
 to say badAlexandra_debug:
 	say "DEBUG (Bad Girl Alexandra) -> HP: [HP of Alexandra], Level: [level of Alexandra], Lust: [lust of Alexandra], Libido: [libido of Alexandra], XP: [XP of Alexandra], Story 1: [if Alexandrastory is true]Y[else]N[end if], Story 2: [if Alexandrastory2 is true]Y[else]N[end if], Story 3: [if Alexandrastory3 is true]Y[else]N[end if], dobieanal = [if dobieanal is true]Y[else]N[end if], lastdobiemess: [lastdobiemess], lastAlexandraPast: [lastAlexandraPast], lastfuck: [lastfuck of Alexandra], AlexandraPregCount: [AlexandraPregCount], AlexandraGrowingPups: [AlexandraGrowingPups] <- DEBUG[line break]";
 	say "DEBUG (Traits of Alexandra) [traits of Alexandra][line break]";
-	say "DEBUG (NPC Chat) -> A_Candy: [if A_Candy is true]Y[else]N[end if], A_Sven: [if A_Sven is true]Y[else]N[end if], A_Fang: [if A_Fang is true]Y[else]N[end if], A_Philip: [if A_Philip is true]Y[else]N[end if], A_Mack: [if A_Mack is true]Y[else]N[end if], A_Sam: [if A_Sam is true]Y[else]N[end if], A_Snow: [if A_Snow is true]Y[else]N[end if], A_Sandra: [if A_Sandra is true]Y[else]N[end if], A_Sally: [if A_Sally is true]Y[else]N[end if], A_Sarah: [if A_Sarah is true]Y[else]N[end if], A_Sarah2: [if A_Sarah2 is true]Y[else]N[end if], A_Coleen: [if A_Coleen is true]Y[else]N[end if], A_Solstice: [if A_Solstice is true]Y[else]N[end if], A_David: [if A_David is true]Y[else]N[end if], A_Elijah: [if A_Elijah is true]Y[else]N[end if], A_Onyx: [if A_Onyx is true]Y[else]N[end if], A_Helen: [if A_Helen is true]Y[else]N[end if], A_Xerxes: [if A_Xerxes is true]Y[else]N[end if], A_Icarus: [if A_Icarus is true]Y[else]N[end if], no_AlexandraNPC: [no_AlexandraNPC] <- DEBUG[line break]";
+	say "DEBUG (NPC Chat) -> A_Candy: [if A_Candy is true]Y[else]N[end if], A_Sven: [if A_Sven is true]Y[else]N[end if], A_Fang: [if A_Fang is true]Y[else]N[end if], A_Philip: [if A_Philip is true]Y[else]N[end if], A_Mack: [if A_Mack is true]Y[else]N[end if], A_Sam: [if A_Sam is true]Y[else]N[end if], A_Snow: [if A_Snow is true]Y[else]N[end if], A_Sandra: [if A_Sandra is true]Y[else]N[end if], A_Sally: [if A_Sally is true]Y[else]N[end if], A_Sarah: [if A_Sarah is true]Y[else]N[end if], A_Sarah2: [if A_Sarah2 is true]Y[else]N[end if], A_Colleen: [if A_Colleen is true]Y[else]N[end if], A_Solstice: [if A_Solstice is true]Y[else]N[end if], A_David: [if A_David is true]Y[else]N[end if], A_Elijah: [if A_Elijah is true]Y[else]N[end if], A_Onyx: [if A_Onyx is true]Y[else]N[end if], A_Helen: [if A_Helen is true]Y[else]N[end if], A_Xerxes: [if A_Xerxes is true]Y[else]N[end if], A_Icarus: [if A_Icarus is true]Y[else]N[end if], no_AlexandraNPC: [no_AlexandraNPC] <- DEBUG[line break]";
 
 to say goodAlexandra_debug:
 	say "DEBUG (Good Girl Alexandra) -> HP: [HP of Alexandra], Story 1: [if Alexandrastory is true]Y[else]N[end if], Story 2: [if Alexandrastory2 is true]Y[else]N[end if], Story 3: [if Alexandrastory3 is true]Y[else]N[end if], lastAlexandraPast: [lastAlexandraPast], lastfuck: [lastfuck of Alexandra] <- DEBUG[line break]";

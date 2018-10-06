@@ -52,6 +52,10 @@ LastMarketWalkin is a number that varies. LastMarketWalkin is usually 10000.
 
 Section 1 - Poseidon's Trident?
 
+Table of GameEventIDs (continued)
+Object	Name
+Lost Trident	"Lost Trident"
+
 Lost Trident is a situation. The level of Lost Trident is 9.
 
 The sarea of Lost Trident is "Beach".
@@ -107,10 +111,15 @@ instead of sniffing bronze trident:
 
 Section 2 - Areas of Atlantis
 
-West of Atlantis City Entrance is Atlantis City Center.
-East of Atlantis City Market is Atlantis City Center.
-South of Royal Palace Entrance is Atlantis City Center.
-North of Atlantis City Residential is Atlantis City Center.
+Atlantis City Center is west of Atlantis City Entrance.
+Atlantis City Center is east of Atlantis City Market.
+Atlantis City Center is south of Royal Palace Entrance.
+Atlantis City Center is north of Atlantis City Residential.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Atlantis City Center	"Atlantis City Center"
+
 Atlantis City Center is a room.
 The description of Atlantis City Center is "[AtlantisCenter]".
 earea of Atlantis City Center is "Atlantis".
@@ -118,7 +127,12 @@ earea of Atlantis City Center is "Atlantis".
 to say AtlantisCenter:
 	say "     The beautiful city center is teeming with people of all kinds. You see a shark man talking with what looks to be a greenish-toned catfish like man. Also, you are surrounded by a lot of human-looking males and females. Although if you didn't know this already you'd think they were actual humans rather than the mermen and mermaids they are. What really hits you is the fact that the city appears to be so peaceful in such a hectic world, as if the apocalypse changed nothing for them. It really lives up to the legends of being a utopia. Looking around you notice to your north is the Royal Palace of the city, with stairs leading right up to it. To the south is the residential area of Atlantis, where the various citizens live. To your west is the marketplace where everyone trades goods and services. Lastly, to your east is where you came into the city.";
 
-West of Atlantis City Center is Atlantis City Market.
+Atlantis City Market is west of Atlantis City Center.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Atlantis City Market	"Atlantis City Market"
+
 Atlantis City Market is a room.
 The description of Atlantis City Market is "[AtlantisMarket]".
 earea of Atlantis City Market is "Atlantis".
@@ -126,7 +140,12 @@ earea of Atlantis City Market is "Atlantis".
 to say AtlantisMarket:
 	say "     Upon entering the market you are met with sounds of people talking and bartering. At a stall selling weapons you hear a Pirate Shark trying to reduce the price of the sword they're attempting to buy but to no avail. Over towards another one you see what you assume to be a mermaid couple wondering whether or not they should have fish for dinner. You're sure that at some point you can find something to buy here as well. To the east is the city center that you arrived from.";
 
-South of Atlantis City Center is Atlantis City Residential.
+Atlantis City Residential is south of Atlantis City Center.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Atlantis City Residential	"Atlantis City Residential"
+
 Atlantis City Residential is a room.
 The description of Atlantis City Residential is "[AtlantisResidential]".
 earea of Atlantis City Residential is "Atlantis".
@@ -134,14 +153,23 @@ earea of Atlantis City Residential is "Atlantis".
 to say AtlantisResidential:
 	say "     The living area of the city looks nice, just like the rest of the city. The houses are made out of various colors of coral and have a modern yet rustic look to them. Just like the other places in Atlantis there are people wandering around and some even just lounging out in front of their houses or apartment complexes. You're sure that you could meet some people who live here at a point in the future. To the north is the center of the city.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Kurt's Abode	"Kurt's Abode"
+
 Kurt's Abode is a room.
 The description of Kurt's Abode is "[KurtsAbode]".
 
 to say KurtsAbode:
 	say "     The living room of the shark-musician is rather quaint, though from what you know of the man it's to be expected. The area is decorated with simple paintings of the city as well as various types of guitars, which you're sure he can play. To your right is a doorway that leads to his kitchen which from where you're standing you can see it is rather spick and span. Wandering around a bit more you muse that your friend is a very clean person but you guess that's not exactly a bad thing in any situation really. Though you do have a thought to tell the shark-morph that he needs more furniture or something to spruce up the place.";
 
-North of Atlantis City Center is Royal Palace Entrance.
-South of Royal Throne Room is Royal Palace Entrance.
+Royal Palace Entrance is north of Atlantis City Center.
+Royal Palace Entrance is south of Royal Throne Room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Royal Palace Entrance	"Royal Palace Entrance"
+
 Royal Palace Entrance is a room.
 The description of Royal Palace Entrance is "[RoyalPalace]".
 earea of Royal Palace Entrance is "Atlantis".
@@ -149,7 +177,12 @@ earea of Royal Palace Entrance is "Atlantis".
 to say RoyalPalace:
 	say "     The entrance to the royal palace of Atlantis is, in your opinion, the most beautiful thing in the world. It's appears to be made of dark blue stone and sapphire gems. The gates to the north are guarded by a couple of mermaid and merman guards, though they appear to be unconcerned about you, as if they were allowing you to go ahead. To the south of the palace is the center of the city.";
 
-North of Royal Palace Entrance is Royal Throne Room.
+Royal Throne Room is north of Royal Palace Entrance.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Royal Throne Room	"Royal Throne Room"
+
 Royal Throne Room is a room.
 The description of Royal Throne Room is "[ThroneRoom]".
 earea of Royal Throne Room is "Atlantis".
@@ -157,7 +190,12 @@ earea of Royal Throne Room is "Atlantis".
 to say ThroneRoom:
 	say "     The throne room of the entire palace is as opulent as the rest of the place, although at the back is a simple sapphire throne, as odd as that sounds. [if Poseidon is in Royal Throne Room]The friendly yet powerful god is sitting on said throne, overlooking the entire area. [end if]Behind it is a large golden trident that is hung on the wall Across the walls are various murals of ocean scenery. To your back is the hallway that leads to the outside, and just like the entrance is guarded by a couple guards.[if Poseidon is not in Royal Throne Room and PoseidonRelationship is 2] It appears that Poseidon is not here, perhaps he is in his room?[end if]";
 
-North of Royal Throne Room is Royal Bed Chambers.
+Table of GameRoomIDs (continued)
+Object	Name
+Royal Bed Chambers	"Royal Bed Chambers"
+
+Royal Bed Chambers is a room.
+Royal Bed Chambers is north of Royal Throne Room.
 The description of Royal Bed Chambers is "[PoseidonBedroom]".
 earea of Royal Bed Chambers is "Atlantis".
 

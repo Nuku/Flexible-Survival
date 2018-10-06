@@ -492,8 +492,14 @@ an everyturn rule:
 
 Part B - Suspicious Van
 
+<<<<<<< HEAD
 [The van is where Zoe will be if she is captured. It is a container, with specific rules. Locked until Zoe's quest is resolved, it is guarded by a Wolverine van guard, with which the player will interact]
 Suspicious van is a closed container. It is openable. It is lockable. It is locked.
+=======
+[The van is where Zoe will be if she is captured. It is a container, with specific rules. Locked until Zoe's quest is resolved, it is guarded by a Wolverine Pimp, with which the player will interact]
+Suspicious Van is a closed container. It is openable.
+Suspicious Van is locked.
+>>>>>>> e4671837dc2edd8c48364e45a31a62710c688f50
 Suspicious Van is in Smith Haven Mall Lot West.
 The description of Suspicious Van is "[suspiciousVanDesc]".
 

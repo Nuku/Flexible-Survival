@@ -4,6 +4,10 @@ Fair Events by Sarokcat begins here.
 
 Section 1 - floating balloons
 
+Table of GameEventIDs (continued)
+Object	Name
+floating balloons	"floating balloons"
+
 floating balloons is a situation.
 The sarea of floating balloons is "Midway".
 
@@ -12,6 +16,10 @@ Instead of Resolving a floating balloons:
 	now floating balloons is resolved;
 
 Section 2 - Game crazy
+
+Table of GameEventIDs (continued)
+Object	Name
+Game crazy	"Game crazy"
 
 Game crazy is a situation.
 The sarea of Game crazy is "Midway".
@@ -24,6 +32,10 @@ Instead of Resolving a Game crazy:
 
 Section 3 - fair food cart
 
+Table of GameEventIDs (continued)
+Object	Name
+fair food cart	"fair food cart"
+
 fair food cart is a scavevent.
 The sarea of fair food cart is "Midway".
 
@@ -33,6 +45,10 @@ Instead of Resolving a fair food cart:
 	now fair food cart is resolved;
 
 Section 4 - Happy silly feeling
+
+Table of GameEventIDs (continued)
+Object	Name
+Happy silly feeling	"Happy silly feeling"
 
 Happy silly feeling is a situation.
 The sarea of Happy silly feeling is "Midway".
@@ -44,6 +60,10 @@ Instead of Resolving a Happy silly feeling:
 
 Section 5 - Flashing fair lights
 
+Table of GameEventIDs (continued)
+Object	Name
+Flashing fair lights	"Flashing fair lights"
+
 Flashing fair lights is a situation.
 The sarea of Flashing fair lights is "Midway".
 
@@ -53,6 +73,10 @@ Instead of Resolving a Flashing fair lights:
 	now Flashing fair lights is resolved;
 
 Section 6 - Salty taffy
+
+Table of GameEventIDs (continued)
+Object	Name
+Salty taffy	"Salty taffy"
 
 Salty taffy is a scavevent.
 The sarea of Salty taffy is "Midway".
@@ -67,6 +91,10 @@ Instead of Resolving a Salty taffy:
 
 Section 7 - Prize winning toss
 
+Table of GameEventIDs (continued)
+Object	Name
+Prize winning toss	"Prize winning toss"
+
 Prize winning toss is a situation.
 The sarea of Prize winning toss is "Midway".
 
@@ -77,6 +105,10 @@ Instead of Resolving a Prize winning toss:
 
 Section 8 - Sudden stampede
 
+Table of GameEventIDs (continued)
+Object	Name
+Sudden stampede	"Sudden stampede"
+
 Sudden stampede is a situation.
 The sarea of Sudden stampede is "Midway".
 
@@ -85,6 +117,10 @@ Instead of Resolving a Sudden stampede:
 	now Sudden stampede is resolved;
 
 Section 9 - Strange barker
+
+Table of GameEventIDs (continued)
+Object	Name
+Strange barker	"Strange barker"
 
 Strange barker is a situation.
 The sarea of Strange barker is "Midway".
@@ -95,6 +131,10 @@ Instead of Resolving a Strange barker:
 
 Section 11 - Ferris fun time
 
+Table of GameEventIDs (continued)
+Object	Name
+Ferris fun time	"Ferris fun time"
+
 Ferris fun time is a situation.
 The sarea of Ferris fun time is "Midway".
 
@@ -104,6 +144,10 @@ Instead of Resolving a Ferris fun time:
 	now Ferris fun time is resolved;
 
 Section 12 - Rubber tiger chase
+
+Table of GameEventIDs (continued)
+Object	Name
+Rubber tigerchase	"Rubber tigerchase"
 
 Rubber tigerchase is a situation. The level of Rubber tigerchase is 6.
 The sarea of Rubber tigerchase is "Midway".
@@ -125,6 +169,10 @@ Instead of Resolving a Rubber tigerchase:
 
 
 Section 13 - Lion modifying
+
+Table of GameEventIDs (continued)
+Object	Name
+Lion Modifying	"Lion Modifying"
 
 Lion Modifying is a situation.
 The sarea of Lion Modifying is "Midway".
@@ -157,6 +205,10 @@ Instead of conversing the Lisa while borisquest is 3:
 
 
 Section 14 - Locked lockers
+
+Table of GameEventIDs (continued)
+Object	Name
+Locked Lockers	"Locked Lockers"
 
 Locked Lockers is a situation. The level of Locked Lockers is 6.
 The sarea of Locked lockers is "Midway".

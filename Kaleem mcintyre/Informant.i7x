@@ -2,6 +2,10 @@ Informant by Kaleem mcintyre begins here.
 
 Section 1 - Informant
 
+Table of GameEventIDs (continued)
+Object	Name
+Informant	"Informant"
+
 Informant is a situation. The level of Informant is 9.
 
 The sarea of Informant is "High".
@@ -29,6 +33,10 @@ Instead of resolving a Informant:
 
 
 Section 2 - Agency
+
+Table of GameRoomIDs (continued)
+Object	Name
+Agency	"Agency"
 
 Agency is a room. It is fasttravel. It is private.
 The description of Agency is "Back behind some of the less prominent buildings of the high rise there stands and old fashion deli that seems to be in good shape, despite the rough times the city is having. At the side of the deli a stone flight of stairs leads down to where a nondescript black door stands in wait for certain... irregular... customers. Pushing the door open you find a cool office with a fan swirling up on the ceiling filling out the strangely expansive room hidden from the rest of the world. A plush red carpet covers the floor of the room while a single desk and chair stands in front of three large bookcases filled to the brim with old tomes. A comfy looking couch sits to the left of the doorway while a gargantuan fish tank filled with multicolored fish and turtles has been positioned onto the right side of the entryway. All in all the room both looks and feels like something pulled out of an old fashion detective novel, especially with the uninteresting door in the back that looks as though it hasn't seen much use in quite a while. Homaru is sitting down at his desk and looking over something.".

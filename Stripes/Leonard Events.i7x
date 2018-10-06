@@ -490,6 +490,10 @@ leoparklist is a list of numbers that varies. leoparklist is usually {1, 2, 5, 6
 Leonardwrdesk is a truth state that varies. Leonardwrdesk is usually false.
 Leonardcabinet is a truth state that varies. Leonardcabinet is usually false.
 
+Table of GameEventIDs (continued)
+Object	Name
+PridePark	"PridePark"
+
 PridePark is a situation. PridePark is inactive.
 The sarea of PridePark is "Park".
 

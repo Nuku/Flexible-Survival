@@ -711,20 +711,20 @@ to NumberVariableSave:
 			now NumberVarValue entry is CloudKnowledge;
 		-- "CocoRelationship":
 			now NumberVarValue entry is CocoRelationship;
-		-- "ColeenAlpha":
-			now NumberVarValue entry is ColeenAlpha;
-		-- "ColeenCollared":
-			now NumberVarValue entry is ColeenCollared;
-		-- "ColeenFound":
-			now NumberVarValue entry is ColeenFound;
-		-- "ColeenSarahInteraction":
-			now NumberVarValue entry is ColeenSarahInteraction;
-		-- "ColeenSlut":
-			now NumberVarValue entry is ColeenSlut;
-		-- "ColeenSpray":
-			now NumberVarValue entry is ColeenSpray;
-		-- "ColeenTalk":
-			now NumberVarValue entry is ColeenTalk;
+		-- "ColleenAlpha":
+			now NumberVarValue entry is ColleenAlpha;
+		-- "ColleenCollared":
+			now NumberVarValue entry is ColleenCollared;
+		-- "ColleenFound":
+			now NumberVarValue entry is ColleenFound;
+		-- "ColleenSarahInteraction":
+			now NumberVarValue entry is ColleenSarahInteraction;
+		-- "ColleenSlut":
+			now NumberVarValue entry is ColleenSlut;
+		-- "ColleenSpray":
+			now NumberVarValue entry is ColleenSpray;
+		-- "ColleenTalk":
+			now NumberVarValue entry is ColleenTalk;
 		-- "CollegeLibraryBrutusEncounter":
 			now NumberVarValue entry is CollegeLibraryBrutusEncounter;
 		-- "CollegeLibraryRyouseiEncounter":
@@ -1625,8 +1625,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is lastChristyfucked;
 		-- "lastchurchattempt":
 			now NumberVarValue entry is lastchurchattempt;
-		-- "lastColeenSarahInteraction":
-			now NumberVarValue entry is lastColeenSarahInteraction;
+		-- "lastColleenSarahInteraction":
+			now NumberVarValue entry is lastColleenSarahInteraction;
 		-- "lastconfession":
 			now NumberVarValue entry is lastconfession;
 		-- "lastConfSvenEricInteraction":
@@ -2475,8 +2475,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is SharkFountainCounter;
 		-- "shiftable":
 			now NumberVarValue entry is shiftable;
-		-- "shiftcatch":
-			now NumberVarValue entry is shiftcatch;
 		-- "sierramem":
 			now NumberVarValue entry is sierramem;
 		-- "SilverToken":
@@ -2996,8 +2994,8 @@ to TruthVariableSave:
 	if CurrentVariableName is:
 		-- "A_Candy":
 			now TruthVarValue entry is A_Candy;
-		-- "A_Coleen":
-			now TruthVarValue entry is A_Coleen;
+		-- "A_Colleen":
+			now TruthVarValue entry is A_Colleen;
 		-- "A_David":
 			now TruthVarValue entry is A_David;
 		-- "A_Elijah":
@@ -3412,8 +3410,8 @@ to TruthVariableSave:
 			now TruthVarValue entry is medeaub;
 		-- "Meredith_anal":
 			now TruthVarValue entry is Meredith_anal;
-		-- "Meredith_Coleen_fun1":
-			now TruthVarValue entry is Meredith_Coleen_fun1;
+		-- "Meredith_Colleen_fun1":
+			now TruthVarValue entry is Meredith_Colleen_fun1;
 		-- "Meredith_Vanessa_fun1":
 			now TruthVarValue entry is Meredith_Vanessa_fun1;
 		-- "Meredith_Vanessa_fun2":
@@ -4419,20 +4417,20 @@ to VariableNumberLoad:
 					now CloudKnowledge is numberVarValue entry;
 				-- "CocoRelationship":
 					now CocoRelationship is numberVarValue entry;
-				-- "ColeenAlpha":
-					now ColeenAlpha is numberVarValue entry;
-				-- "ColeenCollared":
-					now ColeenCollared is numberVarValue entry;
-				-- "ColeenFound":
-					now ColeenFound is numberVarValue entry;
-				-- "ColeenSarahInteraction":
-					now ColeenSarahInteraction is numberVarValue entry;
-				-- "ColeenSlut":
-					now ColeenSlut is numberVarValue entry;
-				-- "ColeenSpray":
-					now ColeenSpray is numberVarValue entry;
-				-- "ColeenTalk":
-					now ColeenTalk is numberVarValue entry;
+				-- "ColleenAlpha":
+					now ColleenAlpha is numberVarValue entry;
+				-- "ColleenCollared":
+					now ColleenCollared is numberVarValue entry;
+				-- "ColleenFound":
+					now ColleenFound is numberVarValue entry;
+				-- "ColleenSarahInteraction":
+					now ColleenSarahInteraction is numberVarValue entry;
+				-- "ColleenSlut":
+					now ColleenSlut is numberVarValue entry;
+				-- "ColleenSpray":
+					now ColleenSpray is numberVarValue entry;
+				-- "ColleenTalk":
+					now ColleenTalk is numberVarValue entry;
 				-- "CollegeLibraryBrutusEncounter":
 					now CollegeLibraryBrutusEncounter is numberVarValue entry;
 				-- "CollegeLibraryRyouseiEncounter":
@@ -5333,8 +5331,8 @@ to VariableNumberLoad:
 					now lastChristyfucked is numberVarValue entry;
 				-- "lastchurchattempt":
 					now lastchurchattempt is numberVarValue entry;
-				-- "lastColeenSarahInteraction":
-					now lastColeenSarahInteraction is numberVarValue entry;
+				-- "lastColleenSarahInteraction":
+					now lastColleenSarahInteraction is numberVarValue entry;
 				-- "lastconfession":
 					now lastconfession is numberVarValue entry;
 				-- "lastConfSvenEricInteraction":
@@ -6181,8 +6179,6 @@ to VariableNumberLoad:
 					now SharkFountainCounter is numberVarValue entry;
 				-- "shiftable":
 					now shiftable is numberVarValue entry;
-				-- "shiftcatch":
-					now shiftcatch is numberVarValue entry;
 				-- "sierramem":
 					now sierramem is numberVarValue entry;
 				-- "SilverToken":
@@ -6709,8 +6705,8 @@ to VariableTruthLoad:
 			if TruthVarName entry is:
 				-- "A_Candy":
 					now A_Candy is TruthVarValue entry;
-				-- "A_Coleen":
-					now A_Coleen is TruthVarValue entry;
+				-- "A_Colleen":
+					now A_Colleen is TruthVarValue entry;
 				-- "A_David":
 					now A_David is TruthVarValue entry;
 				-- "A_Elijah":
@@ -7125,8 +7121,8 @@ to VariableTruthLoad:
 					now medeaub is TruthVarValue entry;
 				-- "Meredith_anal":
 					now Meredith_anal is TruthVarValue entry;
-				-- "Meredith_Coleen_fun1":
-					now Meredith_Coleen_fun1 is TruthVarValue entry;
+				-- "Meredith_Colleen_fun1":
+					now Meredith_Colleen_fun1 is TruthVarValue entry;
 				-- "Meredith_Vanessa_fun1":
 					now Meredith_Vanessa_fun1 is TruthVarValue entry;
 				-- "Meredith_Vanessa_fun2":

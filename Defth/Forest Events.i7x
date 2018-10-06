@@ -2,6 +2,10 @@ Version 1 of Forest Events by Defth begins here.
 
 [Pulma normal vore and cock vore]
 
+Table of GameEventIDs (continued)
+Object	Name
+Small Cave	"Small Cave"
+
 Small Cave is a situation.
 The sarea of Small Cave is "Forest".
 When play begins:

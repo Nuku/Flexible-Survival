@@ -2,6 +2,10 @@ Shifting by Hellerhound begins here.
 
 Section 1 - Secure Area Situation
 
+Table of GameEventIDs (continued)
+Object	Name
+Secure Area	"Secure Area"
+
 Secure Area is a situation. The level of Secure Area is 12.
 halodestroyed is a number that varies.
 

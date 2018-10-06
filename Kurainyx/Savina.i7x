@@ -117,6 +117,10 @@ to say SavinaIntroFight:			[Player fights with Gargoyle. Winning creates the Dee
 
 Section 2 - Deep Forest
 
+Table of GameRoomIDs (continued)
+Object	Name
+Deep Forest	"Deep Forest"
+
 Deep Forest is a room. It is fasttravel. It is private.
 The description of Deep Forest is "     You are in a small clearing deep inside of the Urban Forest. The trees here are massive and tower over you, and the area is shrouded in perpetual gloom from the thick canopy. Resting among the tree branches up above, Savina waits for you to do her bidding.".
 

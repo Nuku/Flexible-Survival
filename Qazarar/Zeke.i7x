@@ -354,12 +354,20 @@ instead of going south from Mall East Wing while ZekeRelationship is 0:
 
 Section 5 - Location
 
+Table of GameRoomIDs (continued)
+Object	Name
+Gaming Den	"Gaming Den"
+
 Gaming Den is a room. It is a fasttravel. It is private.
 The description of Gaming Den is "     The basement is surprisingly spacious, with a large entertainment center set up on one wall. Other walls feature shelves, packed with games, movies, books, and miscellaneous paraphernalia. The center space around the room is taken up by several couches, chairs, and beanbags, set up facing the television.".
 The scent of Gaming Den is "<text>".
 
+Table of GameRoomIDs (continued)
+Object	Name
+Game Store	"Game Store"
+
 Game Store is a room.
 The description of Game Store is "     The store is almost nothing but shelves and shelves full of games and game accessories. There are plenty of places that have been cleaned out on the shelves, but for the most part it all still seems to be there. It seems there have been other priorities to collecting video games.".
-North of Game Store is Mall East Wing.
+Mall East Wing is north of Game Store.
 
 Zeke ends here.

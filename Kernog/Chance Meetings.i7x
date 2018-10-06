@@ -6,6 +6,11 @@ Section 1 - Main situation
 [The main goal of tis extension is to provide interaction between NPCs]
 [Please ensure that NPCs either know the player (thanks to secondary variables) or are following him as a companion with if x is companion of player]
 [if no rule is met, a low-level fight is launched, in order to provide the event a default closure]
+
+Table of GameEventIDs (continued)
+Object	Name
+Chance Meeting	"Chance Meeting"
+
 Chance Meeting is a situation.
 The sarea of Chance Meeting is "Outside".
 

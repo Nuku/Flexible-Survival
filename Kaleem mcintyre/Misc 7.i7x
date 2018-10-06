@@ -1,6 +1,10 @@
 Version 2 of Misc 7 by Kaleem mcintyre begins here.
 [Version 2.1 - Horse Sense patched to allow avoidance - Stripes]
 
+Table of GameEventIDs (continued)
+Object	Name
+Horse Sense	"Horse Sense"
+
 Horse Sense is a situation.
 The sarea of Horse Sense is "Plains".
 when play begins:
@@ -25,6 +29,9 @@ Instead of Resolving a Horse Sense:
 	increase score by 1;
 	now Horse Sense is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Victim	"Victim"
 
 Victim is a situation. The level of Victim is 8.
 The sarea of Victim is "Red".
@@ -63,6 +70,9 @@ Instead of Resolving a Victim:
 			now Resolution of Victim is 3; [fought and won against the pimp]
 			now Victim is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Runaway	"Runaway"
 
 Runaway is a situation.
 The sarea of Runaway is "Beach".
@@ -89,6 +99,9 @@ Instead of Resolving a Runaway:
 	increase score by 1;
 	now Runaway is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Portrait	"Portrait"
 
 Portrait is a situation. The level of Portrait is 9.
 The sarea of Portrait is "Outside".
@@ -112,6 +125,9 @@ Instead of Resolving a Portrait:
 	increase score by 1;
 	now Portrait is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Hurting	"Hurting"
 
 Hurting is a situation.
 The sarea of Hurting is "Hospital".
@@ -156,6 +172,10 @@ Instead of Resolving a Hurting:
 		now Hurting is resolved;
 		now Resolution of Hurting is 99; [disinterest]
 
+Table of GameEventIDs (continued)
+Object	Name
+Conchien	"Conchien"
+
 Conchien is a situation.
 The sarea of Conchien is "Outside".
 beauceronmet is a truth state that varies. beauceronmet is usually false.
@@ -173,6 +193,9 @@ Instead of Resolving a Conchien:
 	increase score by 1;
 	now Conchien is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Chocolate Treat	"Chocolate Treat"
 
 Chocolate Treat is a situation.
 The sarea of Chocolate Treat is "High".

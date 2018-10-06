@@ -14,6 +14,10 @@ LastWerewolfFuck is a number that varies. LastWerewolfFuck is usually 10000.
 WerewolfWatching is a truth state that varies. WerewolfWatching is usually false.
 WerewolfRelationship is a number that varies.
 
+Table of GameEventIDs (continued)
+Object	Name
+Werewolf Surprise	"Werewolf Surprise"
+
 Werewolf Surprise is a situation.
 The sarea of Werewolf Surprise is "Nowhere".
 

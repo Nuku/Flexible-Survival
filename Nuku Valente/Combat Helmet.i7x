@@ -15,6 +15,10 @@ The placement of combat helmet is "face".
 The descmod of combat helmet is "A green and brown camo army helmet rests atop your head.".
 The slot of combat helmet is "head".
 
+Table of GameEventIDs (continued)
+Object	Name
+Lost Gear	"Lost Gear"
+
 Lost Gear is a situation.
 lgnumber is a number that varies.
 

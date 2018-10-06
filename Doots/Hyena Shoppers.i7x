@@ -1,5 +1,9 @@
 Version 1 of Hyena Shoppers by Doots begins here.
 
+Table of GameEventIDs (continued)
+Object	Name
+Hyena Shoppers	"Hyena Shoppers"
+
 Hyena Shoppers is a situation.
 The sarea of Hyena Shoppers is "Outside".
 

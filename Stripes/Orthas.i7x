@@ -36,7 +36,7 @@ to say OrthasNPCdesc:
 Meeting Orthas is a situation.
 The sarea of Meeting Orthas is "Nowhere".
 
-instead of going to Trevor Labs Lobby while (Meeting Orthas is not resolved and Resolution of Meeting Orthas is 0):
+instead of going to Trevor Labs Lobby while (Meeting Orthas is not resolved and Resolution of Meeting Orthas is 0 and Orthas is in Trevor Labs Lobby):
 	move player to Trevor Labs Lobby;
 	MeetingOrthasEvent;
 

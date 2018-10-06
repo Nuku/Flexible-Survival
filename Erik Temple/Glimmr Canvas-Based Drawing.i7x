@@ -3532,7 +3532,7 @@ From this point on, the code does not differ from the Inform documentation's "Ti
 
 	A card can be quadrupled, tripled, paired or uncombined.
 
-	Test rank is a number that varies. Definition: a card is matching if its rank is the test rank.
+	Test rank is a number that varies.[@Tag:NotSaved] Definition: a card is matching if its rank is the test rank.
 
 	A hand-ranking rule (this is the counting multiples rule):
 		now every card is uncombined;
@@ -3611,4 +3611,4 @@ From this point on, the code does not differ from the Inform documentation's "Ti
 	A hand-ranking rule (this is the default rule):
 		high card.
 
-	Sort-debugging is a truth state that varies.
+	Sort-debugging is a truth state that varies.[@Tag:NotSaved]

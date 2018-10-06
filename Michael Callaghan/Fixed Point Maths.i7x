@@ -10,10 +10,10 @@ The specification of a real number is "Represents a fixed point number in the ra
 
 Section 2 - Constants for precision
 
-Precision is a number that varies. Precision is 4.
-Divisor is a number that varies. Divisor is 10000.
-HalfDivisor is a number that varies. HalfDivisor is 4999.
-[Pi is a real number that varies. Pi is 3.1416.]
+Precision is a number that varies.[@Tag:NotSaved] Precision is 4.
+Divisor is a number that varies.[@Tag:NotSaved] Divisor is 10000.
+HalfDivisor is a number that varies.[@Tag:NotSaved] HalfDivisor is 4999.
+[Pi is a real number that varies.[@Tag:NotSaved] Pi is 3.1416.]
 
 Chapter 2 - Internal functions
 
@@ -515,7 +515,7 @@ Chapter 10 - Converting text to a real number
 
 Section 1 - Flag for invalid conversion
 
-Invalid conversion is a truth state that varies.
+Invalid conversion is a truth state that varies.[@Tag:NotSaved]
 Invalid conversion is false.
 
 Section 2 - Conversion routine
@@ -640,7 +640,7 @@ When we are writing a fixed point number in Inform 7, we have to include all fou
 
 Fixed point numbers are a kind of value called real number. Therefore, we can create variables of this form in the following way:
 
-	TwoPi is a real number that varies. TwoPi is 6.2832.
+	TwoPi is a real number that varies.[@Tag:NotSaved] TwoPi is 6.2832.
 
 Section : Saying fixed point numbers
 

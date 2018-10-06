@@ -4,6 +4,10 @@ Version 5 of Stuck Dragon by Stripes begins here.
 
 Section 1 - Finding the Building
 
+Table of GameEventIDs (continued)
+Object	Name
+Find Building	"Find Building"
+
 Find Building is a situation.
 the sarea of Find Building is "Mall".
 
@@ -16,8 +20,16 @@ Instead of Resolving a Find Building:
 	now the Isolated Street is known;
 	now Find Building is Resolved;
 
+Table of GameRoomIDs (continued)
+Object	Name
+Isolated Street	"Isolated Street"
+
 Isolated Street is a room. It is fasttravel. It is private. Inside from the Isolated Street is a room called Old Building.
 The description of Isolated Street is "The only thing of interest on this street is an old, rundown building that has been around for a while. It's been condemned for as long as you can remember, so you have no idea what this building was used for.".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Old Building	"Old Building"
 
 Old Building is a room.
 The description of Old Building is "[dragonessbldg]".
@@ -183,6 +195,10 @@ to say dragonesssex:
 
 Section 3 - Bypass the Blocked Door
 
+Table of GameEventIDs (continued)
+Object	Name
+Another Ladder	"Another Ladder"
+
 Another Ladder is a situation.
 the sarea of Another Ladder is "Mall".
 
@@ -199,8 +215,16 @@ Instead of Resolving a Another Ladder:
 		now the Back Alley is known;
 		now Another Ladder is Resolved;
 
+Table of GameRoomIDs (continued)
+Object	Name
+Back Alley	"Back Alley"
+
 Back Alley is a room. It is fasttravel. It is private. Inside from the Back Alley is a room called Back Room.
 The description of Back Alley is "You're standing in an alley behind an old building. It's the same old building that you found earlier. Debris and wrecked cars have cut off this area from the rest of the city. There is a side entrance to the old building here. It looks like you've found the way around the blocked doorway. Hopefully the dragoness has not yet been found.".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Back Room	"Back Room"
 
 Back Room is a room. The description of Back Room is "[backroomdesc]".
 
@@ -329,6 +353,10 @@ Carry out dragonfreeing:
 
 
 Section 5 - Small Dark Room and Egg
+
+Table of GameRoomIDs (continued)
+Object	Name
+Small Dark Room	"Small Dark Room"
 
 Small Dark Room is a room. The description of Small Dark Room is "     You're curled up in a ball inside a dark room that is so small that the curved walls and ceiling are pressing against your body from all sides. You should try to [link]STRUGGLE[end link] to get out.".
 dragontype is a number that varies.
@@ -778,6 +806,10 @@ to say christyuhoh:
 
 
 Section 9 - Found by Christy
+
+Table of GameEventIDs (continued)
+Object	Name
+Dragon Prey	"Dragon Prey"
 
 Dragon Prey is a situation.
 The sarea of Dragon Prey is "Outside".

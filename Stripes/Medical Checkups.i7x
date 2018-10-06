@@ -7,14 +7,30 @@ Version 5 of Medical Checkups by Stripes begins here.
 Section 1 - Pediatrics Office
 
 Pediatrics door is a door. "The city lies out of the huge hole in the roof and south wall, jagged edges making the going difficult, but passable.".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Pediatrics Lobby	"Pediatrics Lobby"
+
 Pediatrics Lobby is a room. "You're in the lobby of a pediatrics clinic, surrounded by utter chaos. The formerly cushy seats have been ripped apart, their stuffing lying in heaps on the ground and even the wooden frames smashed to pieces. Claw-marks gouge the floor and walls. Patches of dried cum are almost everywhere, with even a steak of it on the ceiling. This makes moving around in here somewhat of an obstacle course, unless you want to step in something. A pair of metal doors to the deeper rooms of the clinic are still intact, battered but apparently resistant enough to ward off whatever creature or creatures did all this.".
 Pediatrics Lobby is fasttravel.
 The earea of Pediatrics Lobby is "Outside".
 Pediatrics door is dangerous.
-North of Pediatrics door is pediatrics Lobby.
-South of Pediatrics door is Wandering the City.
+Pediatrics Lobby is north of Pediatrics door.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Wandering the City	"Wandering the City"
+
+Wandering the City is a room.
+Wandering the City is south of Pediatrics door.
 The marea of pediatrics door is "Outside".
-North of Pediatrics Lobby is Doctors Office.
+Doctors Office is north of Pediatrics Lobby.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Doctors Office	"Doctors Office"
+
 Doctors Office is a room. "A doctor's office, this one is a wreck. There are stains everywhere and food and water stockpiled in the cabinets. The clock is no longer running, and an oil lamp stands on the blue marble counter, on and burning. It fills the air with smoke. You idly wonder what happened to the smoke detectors.".
 
 the scent of the Doctors Office is "The doctor's office smells of antiseptic and aroused lizard scents.".
@@ -667,6 +683,10 @@ to say medeapandafight:
 
 Section 4 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Abandoned Truck	"Abandoned Truck"
+
 Abandoned Truck is a situation.
 the sarea of Abandoned Truck is "Outside".
 
@@ -697,6 +717,9 @@ instead of resolving an Abandoned Truck:
 			now Resolution of Abandoned Truck is 99; [disinterest]
 		now Abandoned Truck is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Obstetrics Department	"Obstetrics Department"
 
 Obstetrics Department is a situation. Obstetrics Department is inactive.
 the sarea of Obstetrics Department is "Hospital".

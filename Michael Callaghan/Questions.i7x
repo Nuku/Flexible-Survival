@@ -6,32 +6,32 @@ Chapter 1 - Global provisions for asking questions
 
 Section 1 - Variables for asking questions
 
-Current question is text that varies.
-Current prompt is text that varies.
-Saved prompt is text that varies.
-Current question menu is a list of text that varies.
-Current answer is indexed text that varies.
+Current question is text that varies.[@Tag:NotSaved]
+Current prompt is text that varies.[@Tag:NotSaved]
+Saved prompt is text that varies.[@Tag:NotSaved]
+Current question menu is a list of text that varies.[@Tag:NotSaved]
+Current answer is indexed text that varies.[@Tag:NotSaved]
 
 Section 2 - Default command line prompts for asking questions
 
-Closed number prompt is text that varies. Closed number prompt is "Please enter a number >".
-Open number prompt is text that varies. Open number prompt is ">".
+Closed number prompt is text that varies.[@Tag:NotSaved] Closed number prompt is "Please enter a number >".
+Open number prompt is text that varies.[@Tag:NotSaved] Open number prompt is ">".
 
-Closed menu prompt is text that varies. Closed menu prompt is "Please select a number between 1 and [number of entries in current question menu] >".
-Open menu prompt is text that varies. Open menu prompt is ">".
+Closed menu prompt is text that varies.[@Tag:NotSaved] Closed menu prompt is "Please select a number between 1 and [number of entries in current question menu] >".
+Open menu prompt is text that varies.[@Tag:NotSaved] Open menu prompt is ">".
 
-Closed yes/no prompt is text that varies. Closed yes/no prompt is "Please enter Y or N (Yes or No) >".
-Open yes/no prompt is text that varies. Open yes/no prompt is ">".
+Closed yes/no prompt is text that varies.[@Tag:NotSaved] Closed yes/no prompt is "Please enter Y or N (Yes or No) >".
+Open yes/no prompt is text that varies.[@Tag:NotSaved] Open yes/no prompt is ">".
 
-Closed gender prompt is text that varies. Closed gender prompt is "Please enter M, F or N (Male or Female or Neuter) >".
-Open gender prompt is text that varies. Open gender prompt is ">".
+Closed gender prompt is text that varies.[@Tag:NotSaved] Closed gender prompt is "Please enter M, F or N (Male or Female or Neuter) >".
+Open gender prompt is text that varies.[@Tag:NotSaved] Open gender prompt is ">".
 
-Closed text prompt is text that varies. Closed text prompt is "Please enter your answer >".
-Open text prompt is text that varies. Open text prompt is ">".
+Closed text prompt is text that varies.[@Tag:NotSaved] Closed text prompt is "Please enter your answer >".
+Open text prompt is text that varies.[@Tag:NotSaved] Open text prompt is ">".
 
 Section 3 - Flag to determine if the question is open or closed
 
-Closed question mode is a truth state that varies.
+Closed question mode is a truth state that varies.[@Tag:NotSaved]
 
 Section 4 - Phrase used to ask questions in closed mode
 
@@ -119,7 +119,7 @@ Chapter 2 - Questions that require a number answer
 
 Section 1 - Flag to set number question mode
 
-Number question mode is a truth state that varies.
+Number question mode is a truth state that varies.[@Tag:NotSaved]
 
 Section 2 - Action for number questions
 
@@ -169,7 +169,7 @@ Chapter 3 - Questions that require an answer from a menu
 
 Section 1 - Flag to set menu question mode
 
-Menu question mode is a truth state that varies.
+Menu question mode is a truth state that varies.[@Tag:NotSaved]
 
 Section 2 - Action for menu questions
 
@@ -223,7 +223,7 @@ Chapter 4 - Questions that require a yes/no answer
 
 Section 1 - Flag to set yes/no question mode
 
-Yes/no question mode is a truth state that varies.
+Yes/no question mode is a truth state that varies.[@Tag:NotSaved]
 
 Section 2 - Value for use with yes/no questions
 
@@ -279,7 +279,7 @@ Chapter 5 - Questions that require a gender answer
 
 Section 1 - Flag to set gender question mode
 
-Gender question mode is a truth state that varies.
+Gender question mode is a truth state that varies.[@Tag:NotSaved]
 
 Section 2 - Value for use with gender questions
 
@@ -337,8 +337,8 @@ Chapter 6 - Questions that require a text answer
 
 Section 1 - Flag to set text question mode
 
-Text question mode is a truth state that varies.
-Punctuation removal is a truth state that varies.
+Text question mode is a truth state that varies.[@Tag:NotSaved]
+Punctuation removal is a truth state that varies.[@Tag:NotSaved]
 
 Section 2 - Action for text questions
 
@@ -390,8 +390,8 @@ Chapter 7 - Real number question mode (for use with Fixed Point Maths by Michael
 
 Section 1 - Default command line prompts for real numbers
 
-Closed real number prompt is text that varies. Closed real number prompt is "Please enter a number >".
-Open real number prompt is text that varies. Open real number prompt is ">".
+Closed real number prompt is text that varies.[@Tag:NotSaved] Closed real number prompt is "Please enter a number >".
+Open real number prompt is text that varies.[@Tag:NotSaved] Open real number prompt is ">".
 
 Section 2 - Phrase to ask a real number question in closed mode
 
@@ -421,7 +421,7 @@ To ask an open question in real number mode:
 
 Section 4 - Flag for real number question mode
 
-Real number question mode is a truth state that varies.
+Real number question mode is a truth state that varies.[@Tag:NotSaved]
 
 Section 5 - Action for real number questions
 
@@ -432,7 +432,7 @@ Understand "say [real number]" as real number questioning when real number quest
 
 Section 6 - Answer form for real numbers
 
-Current number is a real number that varies.
+Current number is a real number that varies.[@Tag:NotSaved]
 
 Section 7 - Rules for real number questions
 
@@ -885,7 +885,7 @@ Example: * Open Sesame - A short example to show the question rules with an init
 
 	Gathering is a scene. Gathering begins when the location is the room of requirements.
 	Gathering ends when stage is complete.
-	Stage is data that varies.
+	Stage is data that varies.[@Tag:NotSaved]
 
 	When Gathering begins:
 		now stage is name;
@@ -911,10 +911,10 @@ Example: * Open Sesame - A short example to show the question rules with an init
 			now current question is "Are you happy with your responses?";
 			ask a closed question, in yes/no mode.
 
-	The player's name is indexed text that varies.
-	The player's age is a number that varies.
-	The player's sex is a gender that varies.
-	The player's character is text that varies.
+	The player's name is indexed text that varies.[@Tag:NotSaved]
+	The player's age is a number that varies.[@Tag:NotSaved]
+	The player's sex is a gender that varies.[@Tag:NotSaved]
+	The player's character is text that varies.[@Tag:NotSaved]
 
 	A text question rule (this is the gather name rule):
 		if gathering is happening and stage is name:
@@ -987,7 +987,7 @@ Example: * Quiz Night - A short example to show creating a multiple choice quiz.
 	"How many books are there in the Old Testament"	{"23", "39", "37", "41"}	2
 	"What is a Cantaloupe?"	{"Animal", "Star", "Fruit", "Vegetable"}	3
 
-	The expected answer is a number that varies.
+	The expected answer is a number that varies.[@Tag:NotSaved]
 
 	Every turn when the location is the pub (this is the pub rule):
 		choose a random row in the table of quiz questions;

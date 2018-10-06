@@ -5,6 +5,10 @@ Version 2 of Central Library by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Central Library	"Central Library"
+
 Central Library is a situation. The level of Central Library is 6.
 The sarea of Central Library is "High".
 centrallib is a number that varies.

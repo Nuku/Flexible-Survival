@@ -385,7 +385,13 @@ When Play begins:
 
 basement portal is a door. basement portal is dangerous.
 Down of Trevor Labs Lobby is basement portal.
-Down of basement portal is dark basement.
+
+Table of GameRoomIDs (continued)
+Object	Name
+dark basement	"dark basement"
+
+dark basement is a room.
+dark basement is below basement portal.
 The marea of basement portal is "Sealed". The basement portal is open. The description of Basement Portal is "A foot-thick steel door that looks like it was designed more to keep something in, than anything else... ". understand "basement" and "portal" as the basement portal.
 
 

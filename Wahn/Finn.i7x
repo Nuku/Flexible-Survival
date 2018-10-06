@@ -1,6 +1,10 @@
 Version 1 of Finn by Wahn begins here.
 [Version 1 - Put into its own file]
 
+Table of GameEventIDs (continued)
+Object	Name
+Missing Farm Hand	"Missing Farm Hand"
+
 Missing Farm Hand is a situation. The level of Missing Farm Hand is 5. Missing Farm Hand is inactive.
 The sarea of Missing Farm Hand is "Plains".
 

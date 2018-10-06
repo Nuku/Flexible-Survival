@@ -1,6 +1,10 @@
 Version 1 of High Rise Events by Wahn begins here.
 [ Version 1 - First Event ]
 
+Table of GameEventIDs (continued)
+Object	Name
+Road Fuck Aftermath	"Road Fuck Aftermath"
+
 Road Fuck Aftermath is a situation.
 The sarea of Road Fuck Aftermath is "High".
 

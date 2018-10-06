@@ -1530,7 +1530,8 @@ an everyturn rule:
 				say "     Here between the untamed trees of the Urban Forest, the shadows seem especially deep and seem to play tricks on your eyes. Every little movement of branches and leaves draws your gaze, and the ominous feeling of being watched fills you with tension. The sensation of something's predatory gaze resing on you can't be all in your head, can it?";
 				now WerewolfWatching is true;
 			else: [repeat message for following turns]
-				say "     You [italic type]still[roman type] can't shake the feeling that something is watching you. A cold shiver runs down your back.";
+				if a random chance of 1 in 3 succeeds:
+					say "     You [italic type]still[roman type] can't shake the feeling that something is watching you. A cold shiver runs down your back.";
 		else:
 			now WerewolfWatching is false;
 
@@ -4554,6 +4555,7 @@ After printing a parser error when the parser error count is at least 0:
 Book 9 - Add-Ons
 
 [ Everything needed for the basic game functionality ]
+Include Gametables by Core Mechanics.
 Include Alt Combat by Core Mechanics.
 Include Alt Vore by Core Mechanics.
 Include Assorted Items by Stripes.
@@ -4571,7 +4573,6 @@ include FS Graphics by Core Mechanics.
 Include Fighting by Core Mechanics.
 Include Fucking by Core Mechanics.
 Include Hunting by Core Mechanics.
-Include Gametables by Core Mechanics.
 Include Game Endings by Core Mechanics.
 Include Gender Pronouns by Core Mechanics.
 Include Special Merchandize by Core Mechanics.
@@ -4971,7 +4972,6 @@ Include Prairie Dog by Stripes.
 Include Psycho Weasel by Stripes.
 Include Queen Bee by Stripes.
 Include Quilled Tousky by Stripes.
-[Include Rabbit Pack by Guest Writers.]
 Include Ram by Sarokcat.
 Include Random Shemale Smooth Collie by Guest Writers.
 Include Random Tentacle Horror by Guest Writers.
@@ -5073,11 +5073,13 @@ Include Brian by Vinickus.
 Include Brooke by Stripes.
 Include Bryony by Song.
 Include Bubble by Stripes.
+Include Cynthia by Prometheus.
 Include Campus Gym by UrsaOmega.
+Include Cadmea by Prometheus.
 Include Carl by Wahn.
 Include Chris by Wahn.
 Include Cindy by Stripes.
-Include Coleen by Sarokcat.
+Include Colleen by Sarokcat.
 Include Corbin by Wahn.
 Include Coura by Wahn.
 Include Daisy by Sarokcat n Verath.
@@ -5156,6 +5158,7 @@ Include Matriarch NPC by Stripes.
 Include Meredith by Stripes.
 Include Micaela by Stripes.
 Include Midnight by Sarokcat.
+Include Milo by CrimsonAsh.
 Include Mouse Taur by Nuku Valente.
 Include Nadia by Wahn.
 Include Nakoma by Song.
@@ -5190,6 +5193,7 @@ Include Savina by Kurainyx.
 Include Seraphis by Vinickus.
 Include Serenity by Kurainyx.
 Include Sidney by Stripes.
+Include Sirius by Prometheus.
 Include Skarnoth by Wahn.
 Include Skarnoth Loyalty by Luneth.
 Include Solstice by Stripes.

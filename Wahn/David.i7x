@@ -76,6 +76,10 @@ lastRyouseiDavidInteraction is a number that varies. lastRyouseiDavidInteraction
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Captured Demon	"Captured Demon"
+
 Captured Demon is a situation.
 The sarea of Captured Demon is "Red".
 when play begins:
@@ -122,6 +126,10 @@ Instead of resolving a Captured Demon:
 			now Resolution of Captured Demon is 1; [won, David saved]
 			increase score by 5;
 	now Captured Demon is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Thankful Soldier	"Thankful Soldier"
 
 Thankful Soldier is a situation. [meeting the guy from 'Captured Demon' again - if you saved him]
 The Prereq1 of Thankful Soldier is Captured Demon.

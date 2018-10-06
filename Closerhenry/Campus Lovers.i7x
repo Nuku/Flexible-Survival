@@ -17,6 +17,10 @@ an everyturn rule:
 		change the north exit of Tenvale College Male Dorms to Jadako's Room;
 		now JadakoRoomConnection is 1; [make sure that it connects the room only once]
 
+Table of GameEventIDs (continued)
+Object	Name
+Campus Lovers	"Campus Lovers"
+
 Campus Lovers is a situation.
 The sarea of Campus Lovers is "Campus".
 
@@ -121,5 +125,6 @@ to CampusLoversEvent:
 			change the south exit of Jadako's Room to Tenvale College Male Dorms;
 			change the north exit of Tenvale College Male Dorms to Jadako's Room;
 	now CampusLoversProgressTurn is turns; [saves the last turn in which their story progressed]
+
 
 Campus Lovers ends here.

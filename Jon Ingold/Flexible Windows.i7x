@@ -237,7 +237,7 @@ Section - I6 for making a window
 
 Constructing something is an activity.
 
-The pending g-window is a g-window that varies.
+The pending g-window is a g-window that varies.[@Tag:NotSaved]
 
 To g-make (g - a g-window):
 	now g is g-present;
@@ -480,7 +480,7 @@ Section - Shifting and knowing where we are
 
 [ Updated code by Erik Temple. ]
 
-The current g-window is a g-window that varies. The current g-window is the main-window.
+The current g-window is a g-window that varies.[@Tag:NotSaved] The current g-window is the main-window.
 
 To set/move/shift the/-- focus to (g - a g-window), clearing the window:
     if g is g-present
@@ -899,7 +899,7 @@ Section - Processing hyperlinks
 
 The hyperlink processing rules are a rulebook.
 
-The current hyperlink ID is a number that varies.
+The current hyperlink ID is a number that varies.[@Tag:NotSaved]
 
 
 Section - Selecting the replacement command
@@ -1329,7 +1329,7 @@ Now we set up and open the graphics-window. Note that we don't need to open the 
 
 This is enough to set up the graphics panel. Now let's give it some images.
 
-	*: The current image is a figure-name that varies.
+	*: The current image is a figure-name that varies.[@Tag:NotSaved]
 
 	Figure 1 is the file "letter.jpg". Figure 2 is the file "scraps.jpg".
 

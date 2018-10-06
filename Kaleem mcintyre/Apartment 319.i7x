@@ -2,6 +2,10 @@ Apartment 319 by Kaleem mcintyre begins here.
 
 Section 1 - Apartment 319
 
+Table of GameEventIDs (continued)
+Object	Name
+Apartment 319	"Apartment 319"
+
 Apartment 319 is a situation.
 Apartment 319 is inactive.
 AptAid is a number that varies.

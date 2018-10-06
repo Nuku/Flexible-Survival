@@ -1,6 +1,11 @@
 Astroslide Football Field by Kernog begins here.
 
 [General]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Astroslide Football Field	"Astroslide Football Field"
+
 Astroslide Football Field is a room. It is fasttravel. It is private.
 Astroslide Football Field is west of Athletic Street.
 Astroslide Football Field is east of Astroslide Field Locker-room.

@@ -8,6 +8,10 @@ Table of GameCharacterIDs (continued)
 object	name
 Kristen	"Kristen"
 
+Table of GameEventIDs (continued)
+Object	Name
+FindingKristen	"FindingKristen"
+
 FindingKristen is a situation.
 The sarea of FindingKristen is "Outside".
 when play begins:
@@ -63,6 +67,10 @@ Instead of resolving FindingKristen:
 
 
 Section 2 - Kristen's Hideout
+
+Table of GameRoomIDs (continued)
+Object	Name
+Kristen's Hideout	"Kristen's Hideout"
 
 Kristen's Hideout is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Kristen's Hideout is "[krishideoutdesc]".

@@ -6,6 +6,10 @@ Version 2 of Brookstone Books by Guest Writers begins here.
 
 Section 1 - Brookstone Books environment
 
+Table of GameRoomIDs (continued)
+Object	Name
+Brookstone Books	"Brookstone Books"
+
 Brookstone Books is a room. Brookstone Books entrance is a door. It is south of Brookstone Books and north of Mall East Wing. The Brookstone Books entrance is open.
 
 Instead of examining the Brookstone Books entrance:

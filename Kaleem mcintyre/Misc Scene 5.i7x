@@ -14,6 +14,10 @@ Section 2 - The Pack
 
 Section 3 - Lady Surrounded by Butterflies
 
+Table of GameEventIDs (continued)
+Object	Name
+Lady Surrounded by Butterflies	"Lady Surrounded by Butterflies"
+
 Lady Surrounded by Butterflies is a situation.
 The sarea of Lady Surrounded by Butterflies is "Plains".
 
@@ -27,6 +31,10 @@ Instead of resolving a Lady Surrounded by Butterflies:
 
 Section 4 - The Dorms Part One
 
+Table of GameEventIDs (continued)
+Object	Name
+Dorms Part One	"Dorms Part One"
+
 The Dorms Part One is a situation.
 The sarea of The Dorms Part One is "Campus".
 
@@ -37,6 +45,10 @@ Instead of resolving a The Dorms part one:
 
 
 Section 5 - The Dorms Part Two
+
+Table of GameEventIDs (continued)
+Object	Name
+Dorms Part Two	"Dorms Part Two"
 
 The Dorms Part Two is a situation.
 The sarea of The Dorms Part Two is "Campus".
@@ -54,6 +66,10 @@ Instead of resolving a The Dorms Part Two:
 
 
 Section 6 - The Dorms Part Three
+
+Table of GameEventIDs (continued)
+Object	Name
+Dorms Part Three	"Dorms Part Three"
 
 The Dorms Part Three is a situation.
 The sarea of The Dorms Part Three is "Campus".
@@ -99,6 +115,10 @@ Instead of resolving a The Dorms Part Three:
 
 
 Section 6 - Training
+
+Table of GameEventIDs (continued)
+Object	Name
+Training Room	"Training Room"
 
 Training Room is a situation.
 The sarea of Training Room is "Campus".
@@ -151,6 +171,10 @@ Instead of resolving a Training Room:
 
 Section 7 - Janitor's Closet
 
+Table of GameEventIDs (continued)
+Object	Name
+Janitor's Closet	"Janitor's Closet"
+
 Janitor's Closet is a situation.
 The sarea of Janitor's Closet is "Campus".
 When play begins:
@@ -175,6 +199,10 @@ Instead of resolving a Janitor's Closet:
 
 Section 8 - Teachers Lounge
 
+Table of GameEventIDs (continued)
+Object	Name
+Teachers Lounge	"Teachers Lounge"
+
 Teachers Lounge is a situation.
 The sarea of Teachers Lounge is "Campus".
 
@@ -185,6 +213,10 @@ Instead of resolving a Teachers Lounge:
 
 
 Section 9 - Roof Top
+
+Table of GameEventIDs (continued)
+Object	Name
+Campus Rooftop	"Campus Rooftop"
 
 Campus Rooftop is a situation.
 The sarea of Campus Rooftop is "Campus".
@@ -216,6 +248,10 @@ to say special gift:
 
 
 Section 10 - Dog and Pony Show
+
+Table of GameEventIDs (continued)
+Object	Name
+DogAndPony Show	"DogAndPony Show"
 
 DogAndPony Show is a situation.
 The sarea of DogAndPony Show is "Campus".

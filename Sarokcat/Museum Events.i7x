@@ -6,6 +6,10 @@ Museum Events by Sarokcat begins here.
 
 Section 1- Sealed wing
 
+Table of GameEventIDs (continued)
+Object	Name
+Sealed wing	"Sealed wing"
+
 Sealed wing is a situation.
 The sarea of Sealed wing is "Museum".
 
@@ -15,6 +19,10 @@ Instead of Resolving a Sealed wing:
 
 
 Section 2- Moving painting
+
+Table of GameEventIDs (continued)
+Object	Name
+Moving painting	"Moving painting"
 
 Moving painting is a situation.
 The sarea of Moving painting is "Museum".
@@ -26,6 +34,10 @@ Instead of Resolving a Moving painting:
 
 Section 3- Updating artwork
 
+Table of GameEventIDs (continued)
+Object	Name
+Updating artwork	"Updating artwork"
+
 Updating artwork is a situation.
 The sarea of Updating artwork is "Museum".
 
@@ -35,6 +47,10 @@ Instead of Resolving a Updating artwork:
 
 
 Section 4- Drunken satyrs
+
+Table of GameEventIDs (continued)
+Object	Name
+Drunken satyrs	"Drunken satyrs"
 
 Drunken satyrs is a situation.
 The sarea of Drunken satyrs is "Museum".
@@ -46,6 +62,10 @@ Instead of Resolving a Drunken satyrs:
 
 Section 5- Strange drums
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange drums	"Strange drums"
+
 Strange drums is a situation.
 The sarea of Strange drums is "Museum".
 
@@ -55,6 +75,10 @@ Instead of Resolving a Strange drums:
 
 
 Section 6- Missing Sabretooth
+
+Table of GameEventIDs (continued)
+Object	Name
+Missing Sabretooth	"Missing Sabretooth"
 
 Missing Sabretooth is a situation.
 The sarea of Missing Sabretooth is "Museum".
@@ -66,6 +90,10 @@ Instead of Resolving a Missing Sabretooth:
 
 Section 7- Giant battleaxe
 
+Table of GameEventIDs (continued)
+Object	Name
+Giant battleaxe	"Giant battleaxe"
+
 Giant battleaxe is a situation.
 The sarea of Giant battleaxe is "Museum".
 
@@ -76,6 +104,10 @@ Instead of Resolving a Giant battleaxe:
 
 
 Section 8- Missing lamp
+
+Table of GameEventIDs (continued)
+Object	Name
+Missing lamp	"Missing lamp"
 
 Missing lamp is a situation.
 The sarea of Missing lamp is "Museum".
@@ -111,6 +143,10 @@ Instead of Resolving a Missing lamp:
 
 Section 9- Night watchmen uniform
 
+Table of GameEventIDs (continued)
+Object	Name
+Night Watchmen Uniform	"Night Watchmen Uniform"
+
 Night Watchmen Uniform is a situation.
 The sarea of Night watchmen uniform is "Museum".
 
@@ -120,6 +156,10 @@ Instead of Resolving a Night watchmen uniform:
 
 
 Section 10- Art appreciation
+
+Table of GameEventIDs (continued)
+Object	Name
+Art appreciation	"Art appreciation"
 
 Art appreciation is a situation.
 The sarea of Art appreciation is "Museum".

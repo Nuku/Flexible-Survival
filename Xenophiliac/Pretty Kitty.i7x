@@ -6,6 +6,11 @@ Pretty Kitty by Xenophiliac begins here.
 Section 1 - The Pretty Kitty
 
 [Defining the store itself]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Pretty Kitty	"Pretty Kitty"
+
 The Pretty Kitty is a room. The Pretty Kitty entrance is a door. It is south of Mall West Wing and north of The Pretty Kitty. The The Pretty Kitty entrance is open.
 Instead of examining the The Pretty Kitty entrance:
 	say "Through the multiple clothing displays and stoic mannequins, the lights of [the other side of the The Pretty Kitty entrance] are [if findwires is 2 and fixedgens is 2]on, displaying bright light throughout the store.[else]off, not surprising considering that there is no power. Candles and the occasional lantern are providing some light in the store.";

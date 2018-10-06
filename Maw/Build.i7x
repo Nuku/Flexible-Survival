@@ -88,7 +88,7 @@ After examining the blueprints:
 Part 2 - Constructs
 
 
-cur is a text that varies.
+cur is a text that varies.[@Tag:NotSaved]
 
 Section - Ranch
 

@@ -78,8 +78,8 @@ replacement (some text)
 with 100 blank rows
 
 The HI-max-hyperlinks is initially 100.
-The HI-min-hyperlinks is a number that varies.
-The HI-hyperlinks-counter is a number that varies.
+The HI-min-hyperlinks is a number that varies.[@Tag:NotSaved]
+The HI-hyperlinks-counter is a number that varies.[@Tag:NotSaved]
 
 First when play begins (this is the initializing replacement commands list rule):
 	choose a blank row in Table of Hyperlink Commands;
@@ -153,7 +153,7 @@ To decide which number is the result of gestalt of LineInputEcho:
 Before printing a parser error:
 	LineBreak;
 
-HI capturing is a truth state that varies. Hi capturing is usually false.
+HI capturing is a truth state that varies.[@Tag:NotSaved] Hi capturing is usually false.
 To start HI hyperlink capture:
 	now HI capturing is true;
 	start capturing text;
@@ -263,11 +263,11 @@ A hyperlink emphasis is a kind of value. The plural of hyperlink emphasis is hyp
 
 A hyperlink type has a hyperlink emphasis called style.
 
-The active style is a hyperlink emphasis that varies.
+The active style is a hyperlink emphasis that varies.[@Tag:NotSaved]
 
 we-are-parser-speaking is initially false. [It's possible to have, say, an emphasized object hyperlink within a parser error message; this variable keeps track of whether we need to return to the parser style after switching off another hyperlink style.]
 
-Capturing-depth is a number that varies. Capturing-depth is initially 0.
+Capturing-depth is a number that varies.[@Tag:NotSaved] Capturing-depth is initially 0.
 
 To say o:
 	increment capturing-depth;
@@ -296,7 +296,7 @@ To say x:
 		end HI hyperlink capture;
 		reset styles with active style;
 
-txtlink is an indexed text that varies.
+txtlink is an indexed text that varies.[@Tag:NotSaved]
 To say setlink:
 	increment capturing-depth;
 	if capturing-depth is 1:
@@ -368,7 +368,7 @@ Chapter - Changing Style
 Understand the command "hyperlinks" as something new.
 Setting the hyperlink emphasis is an action out of world applying to nothing. Understand "hyperlinks" as setting the hyperlink emphasis.
 
-tempstyles is a list of hyperlink emphases that varies.
+tempstyles is a list of hyperlink emphases that varies.[@Tag:NotSaved]
 
 Carry out setting the hyperlink emphasis (this is the Hyperlink Interface carry out setting hyperlink emphasis rule):
 	carry out the setup hyperlink emphasis activity;
@@ -462,7 +462,7 @@ Chapter - Screen Reader Mode
 
 [Screen reader mode does not have much effect by itself; it's mainly provided as a hook for authors with games containing other visual-oriented features. For instance, Blue Lacuna's backwards messages are described in prose rather than presented literally if screen reader mode is true.]
 
-Screen reader mode is a truth state that varies.
+Screen reader mode is a truth state that varies.[@Tag:NotSaved]
 
 Setting screen reader mode is an action out of world. Understand "screenreader" or "screen reader" as setting screen reader mode.
 
@@ -504,7 +504,7 @@ Chapter - Beginning Play
 
 Section - Hyperlink Interface setup rule
 
-pre-game hyperlink setting is a truth state that varies. pre-game hyperlink setting is true.
+pre-game hyperlink setting is a truth state that varies.[@Tag:NotSaved] pre-game hyperlink setting is true.
 
 When play begins (this is the Hyperlink Interface setup trigger rule):
 	if hyperlinks required is false:

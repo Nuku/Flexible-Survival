@@ -413,6 +413,10 @@ to say KyleSex4: [Kyle fucks player ass]
 
 Section 4 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Angry Snake	"Angry Snake"
+
 Angry Snake is a situation.
 The level of Angry Snake is 4.
 The sarea of Angry Snake is "High".

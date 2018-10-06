@@ -90,6 +90,10 @@ Section 1 - Initial Events
 [***********************************************************]
 [***********************************************************]
 
+Table of GameEventIDs (continued)
+Object	Name
+Lone Survivor	"Lone Survivor"
+
 Lone Survivor is a situation.
 The sarea of Lone Survivor is "Outside".
 
@@ -351,6 +355,10 @@ to say Apartment2bLooting:
 	say "[bold type]You gain 1 soda bottle![roman type][line break]";
 	increase carried of soda by 1;
 
+Table of GameEventIDs (continued)
+Object	Name
+Army Convoy	"Army Convoy"
+
 Army Convoy is a situation.
 The sarea of Army Convoy is "Nowhere".
 
@@ -477,6 +485,10 @@ to say ArmyConvoyTrip:
 	now BrennanRelationship is 6; [player got home after the convoy trip]
 	now Thanks & Cherries is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+Thanks & Cherries	"Thanks & Cherries"
+
 Thanks & Cherries is a situation.
 Thanks & Cherries is inactive.
 The sarea of Thanks & Cherries is "Nowhere".
@@ -518,6 +530,10 @@ Section 2 - Outgoing Brennan Events
 [***********************************************************]
 [***********************************************************]
 [***********************************************************]
+
+Table of GameEventIDs (continued)
+Object	Name
+Wolf Whisperer	"Wolf Whisperer"
 
 Wolf Whisperer is a situation.
 Wolf Whisperer is inactive.
@@ -624,6 +640,10 @@ instead of resolving Wolf Whisperer:
 			now Resolution of Wolf Whisperer is 97; [abandoned wounded Brennan - he didn't make it]
 			now BrennanRelationship is 97; [abandoned wounded Brennan - he didn't make it]
 
+Table of GameEventIDs (continued)
+Object	Name
+Entrance Checks	"Entrance Checks"
+
 Entrance Checks is a situation.
 Entrance Checks is inactive. [blocked till BrennanRelationship reaches 8]
 The sarea of Entrance Checks is "Nowhere".
@@ -637,6 +657,10 @@ instead of going north from Smith Haven Mall Lot South while (Entrance Checks is
 	wait for any key;
 	move player to Mall Foodcourt;
 	now Entrance Checks is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Bunny Frat Invite	"Bunny Frat Invite"
 
 Bunny Frat Invite is a situation.
 Bunny Frat Invite is inactive. [blocked till BrennanRelationship reaches 8]
@@ -656,6 +680,10 @@ to BunnyFratInviteEvent:
 	say "     Eager to demonstrate, he throws an arm around his fellow bunny and pulls him close, then slips a hand under his Tenvale College shirt and rubs his abs and firm pecs in circling movements, grinning broadly all the while. Yet any further try at convincing Brennan to join up are curtailed as the human man spots you and immediately calls out to you. 'Sorry guys, gotta catch up with my friend over there. Haven't seen [ObjectPro of player] in [italic type]ages[roman type]!' Brennan gives as a quick excuse, then hurries over to you and grabs you by the upper arm, turning you around and walking you down the next pathway. 'Man am I glad to see you. Those guys are nice, but at times just a bit [italic type]too[roman type] insistent getting friendly with everyone...' You join Brennan in some friendly conversation until the bunnies get tired of waiting around and move on. He thanks you for the timely rescue and then gets going himself soon after.";
 	now Bunny Frat Invite is resolved;
 	now LastCampusWalkin is turns;
+
+Table of GameEventIDs (continued)
+Object	Name
+Fountain Discussion	"Fountain Discussion"
 
 Fountain Discussion is a situation.
 Fountain Discussion is inactive.
@@ -678,6 +706,10 @@ to FountainDiscussionEvent:
 	now Fountain Discussion is resolved;
 	now LastCampusWalkin is turns;
 
+Table of GameEventIDs (continued)
+Object	Name
+Infernal Offer	"Infernal Offer"
+
 Infernal Offer is a situation.
 Infernal Offer is inactive.
 The sarea of Infernal Offer is "Campus". [Fountain]
@@ -696,6 +728,10 @@ to InfernalOfferEvent:
 	now Infernal Offer is resolved;
 	now LastCampusWalkin is turns;
 
+Table of GameEventIDs (continued)
+Object	Name
+Slaver Caravan	"Slaver Caravan"
+
 Slaver Caravan is a situation.
 Slaver Caravan is inactive.
 The sarea of Slaver Caravan is "Outside".
@@ -706,6 +742,10 @@ Instead of resolving Slaver Caravan:
 	say "     Quietly talking to your friend while observing the group moving farther and farther away, you learn from him that those who do not have the temperament, physique or aggression to overpower others still do their best to make this whole situation worse - by paying slavers to do their dirty work. It is clear that he is more than opposed to the sheer concept of forced servitude. Eventually, the rear guard of the centaurs turns around to check for anyone following, so the two of you have to quickly duck completely out of sight. Head bent low to keep it behind the concrete barrier, Brennan grumbles, 'I wish there was something I could do to stop them, but they usually ride out in groups, and centaurs are not easy to take down.' You keep yourself concealed until the slaver party is barely visible in the distance, entering the start of the dry plains. Then you say your goodbyes to Brennan and get moving once more.";
 	now Slaver Caravan is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Slave Hunter	"Slave Hunter"
+
 Slave Hunter is a situation.
 Slave Hunter is inactive.
 The sarea of Slave Hunter is "Outside".
@@ -714,6 +754,10 @@ Instead of resolving Slave Hunter:
 	say "     The clatter of hooves on asphalt makes you pause and listen for where the noise is coming from. It seems to be quite close, and before you can do much more than take a little bit of cover in a somewhat deeper entrance doorframe, a gasping and wheezing anthro Dalmatian sprints past your position. He is in full flight, panic obvious in his every movement. The canine is about forty feet down the road when his pursuer appears - a centaur moving at full gallop. The human half of the hybrid is swinging a lasso as he dashes after the runaway, soon launching it and bringing the Dalmatian to the ground in a bone-rattling tumble. 'Told ya running is pointless, doggie. Got a buyer who pays premium for anything with spots. No way I was gonna let you just skip out on me.' With great sureness and speed, he trusses the captive dog up and throws him to hang over his equine back.";
 	say "     Only once the centaur turns around again do you get your first good look of him. His upper body is lean and muscular, fitting to a lower equine half that seems to be built for speed. The slaver has some saddlebags strapped to his equine back, while the human chest bears a crossed set of leather straps that he must have gotten in a fetish store. The taut material serves to accentuate his abs and muscled pecs, and a handsome bearded face completes the image of a charming rogue. You do not get any more opportunity to study him further, as the slaver gallops off a moment later, complete with his new acquisition.";
 	now Slave Hunter is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Trip to the Water Tower	"Trip to the Water Tower"
 
 Trip to the Water Tower is a situation.
 Trip to the Water Tower is inactive. [blocked till BrennanRelationship reaches 8]
@@ -867,6 +911,10 @@ Section 4 - Location
 
 [connecting to the Green Apartment / Green Lobby in Core Mechanics/Basic Locations]
 
+Table of GameRoomIDs (continued)
+Object	Name
+Survivor Refuge	"Survivor Refuge"
+
 Survivor Refuge is a room. Survivor Refuge is above Green Lobby.
 The description of Survivor Refuge is "[SurvivorRefugeDesc]".
 
@@ -876,11 +924,19 @@ to say SurvivorRefugeDesc:
 Brennan's Microwave is an object. It is in Survivor Refuge. It is fixed in place. Understand "microwave" as Brennan's Microwave.
 The description of Brennan's Microwave is "A mid-sized white microwave stands on one of the work surfaces of the kitchen, clashing a bit with the decor. But who cares about that as long as you can [bold type]microwave[roman type] stuff with it?".
 
+Table of GameRoomIDs (continued)
+Object	Name
+Brennan's Bedroom	"Brennan's Bedroom"
+
 Brennan's Bedroom is a room. Brennan's Bedroom is west of Survivor Refuge.
 The description of Brennan's Bedroom is "[BrennansRoomDesc]".
 
 to say BrennansRoomDesc:
 	say "     Brennan's bedroom is fairly large and kept in the same style as the main part as the loft - walnut floor and elegant furniture also made from wood in rich tones of red and brown. One of those is an expansive double bed, fairly low to the ground and with a really thick mattress. This gives a lot of room for people to do all sorts of things on it. The bed is standing on a large, white and very fluffy carpet. You see in this room more signs cluing you on Brennan's practical nature: a spare baseball bat leaning against the wall just beside the bed, a telescope for scouting and observation set up near the window, as well as a writing desk in one corner, which has a cleanly organized collection of medkits, immunity boosters and all sorts of other emergency items.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Brennan's Bathroom	"Brennan's Bathroom"
 
 Brennan's Bathroom is a room. Brennan's Bathroom is south of Survivor Refuge.
 The description of Brennan's Bathroom is "[BrennansBathroomDesc]".
@@ -1914,6 +1970,10 @@ Section 8 - Apartment Events
 [***********************************************************]
 [***********************************************************]
 
+Table of GameEventIDs (continued)
+Object	Name
+Brennan Shower Walkin	"Brennan Shower Walkin"
+
 Brennan Shower Walkin is a situation.
 The sarea of Brennan Shower Walkin is "Nowhere".
 
@@ -1926,6 +1986,10 @@ after going to Brennan's Bathroom while (Brennan Shower Walkin is active and Bre
 	say "     Dropping the sponge in the bucket, he makes a sideways step to snatch up a towel, wrapping it securely around his hips before turning around. His front side is nothing to sneeze at either: six-pack abs and muscular pecs crowned by a head with a friendly, masculine face and a short beard. Brennan looks at you and smiles in slight embarrassment, then says, 'Okay, I'll go get dressed now. Feel free to freshen up too. It's clean water, still warm from the microwave.' After a nod towards the bucket, the man hurries past you, making sure to close the bathroom door this time.";
 	now Brennan Shower Walkin is resolved; [no repeats]
 
+Table of GameEventIDs (continued)
+Object	Name
+Feeding Wolves	"Feeding Wolves"
+
 Feeding Wolves is a situation.
 The sarea of Feeding Wolves is "Nowhere".
 
@@ -1934,6 +1998,10 @@ after going to Survivor Refuge while (Feeding Wolves is active and Feeding Wolve
 	say "     Before you enter the main room of the apartment, you hear the beeping of a microwave, followed by some barking. As it turns out, Brennan is just preparing some food, with Romulus and Remus standing by his side and being impatient for getting their share. 'Hey guys, you got to wait till it's all the way through, unless you want to grow a beak and cluck like a chicken. Or whatever else laid that thing,' the human survivor tells the two of them, all the while still watching what is cooking through the window. A short while later, the alarm sounds with a high-pitched 'Ding' and Brennan opens the microwave door. Armed with pot-holders, he pulls a glass salad bowl filled with water (and something white and oval) out of the microwave, quickly setting it down on the kitchen counter. Then he decants the water into a canister with the words 'clean water' on it before he lifts a huge egg out of the bowl.";
 	say "     The thing that Brennan is holding is as big as an ostrich's egg, with an obviously very tough shell, as he has to saw at it with a large-toothed bread-knife, then splits it open with a screwdriver and a kitchen mallet. The contents of the hard-boiled egg are split into two dog bowls, one each for Romulus and Remus - who immediately start wolfing their food down. Stepping back from his canine companions and wiping his brow from all the effort, Brennan notices you and says hello. 'I'm sure I don't have to tell you this, but one has to make use of [italic type]all[roman type] sources of food in times like this. One can find all sorts of eggs out there in the city, if one knows where to look. But don't worry - I wait at least a day after collection to make sure that they're not fertilized. Anything that could have hatched, would have hatched by then.'";
 	now Feeding Wolves is resolved; [no repeats]
+
+Table of GameEventIDs (continued)
+Object	Name
+Soldier Questions	"Soldier Questions"
 
 Soldier Questions is a situation.
 The sarea of Soldier Questions is "Nowhere".

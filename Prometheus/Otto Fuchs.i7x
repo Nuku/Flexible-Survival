@@ -24,6 +24,10 @@ to OttoQuestLog:
 
 Section 1 - Room Declaration
 
+Table of GameRoomIDs (continued)
+Object	Name
+Otto's Apartment	"Otto's Apartment"
+
 Otto's Apartment is a room.
 The description of Otto's Apartment is "[OttosApartmentDesc]".
 
@@ -37,6 +41,17 @@ object	name
 Otto	"Otto"
 
 Otto is a man. The hp of Otto is usually 0.
+ScaleValue of Otto is 3. [human sized]
+SleepRhythm of Otto is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Otto is 1. [One cock]
+Cock Length of Otto is 6. [Six Inches]
+Cock Width of Otto is 2. [Each testicle 1 inch across]
+Testes of Otto is 2. [Two balls]
+Cunts of Otto is 0. [No pussy]
+Cunt Length of Otto is 0. [No Cunt]
+Cunt Width of Otto is 0. [No Cunt]
+Breasts of Otto is 2. [2 nipples]
+Breast Size of Otto is 0. [Flat at the start]
 OttoForm is a number that varies. OttoForm is usually 0.
 The description of Otto is "[OttoDesc]".
 The conversation of Otto is { "Interesting" }.
@@ -69,6 +84,10 @@ Section 4 - Sex
 
 Section 5 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Wounded Civilian	"Wounded Civilian"
+
 Wounded Civilian is a situation.
 The level of Wounded Civilian is 0.
 The sarea of Wounded Civilian is "Outside".
@@ -87,10 +106,13 @@ to WoundedCivilianEvent: [Meet Otto Fuchs]
 	now hp of Otto is 1;
 	add "Otto Quest" to OpenQuests of player;
 	now Wounded Civilian is resolved;
-	now Doctor & Soldier is active;
+
+Table of GameEventIDs (continued)
+Object	Name
+Doctor & Soldier	"Doctor & Soldier"
 
 Doctor & Soldier is a situation.
-Doctor & Soldier is inactive.
+Prereq1 of Doctor & Soldier is Wounded Civilian.
 The level of Doctor & Soldier is 0.
 The sarea of Doctor & Soldier is "Outside".
 
@@ -130,10 +152,14 @@ to DoctorandSoldierEvent: [Otto saves a soldier's life]
 	say "     The doctor turns to you and shakes your hand. 'You seem to turn up when things go pear-shaped, don't you? Almost as if you know when I'll need help. Thank you, hopefully I'll see you again under better circumstances next time.' The words seem foreboding after the tiger's request to him. Bidding them goodbye, you walk away down the street. Unseen by you, the crocodile and the tiger stonily escort Otto into his house and close the door behind themselves.";
 	now hp of Otto is 2;
 	now Doctor & Soldier is resolved;
-	now Doctor Through the City is active;
+
+Table of GameEventIDs (continued)
+Object	Name
+Doctor Through the City	"Doctor Through the City"
 
 Doctor Through the City is a situation.
-Doctor Through the City is inactive.
+Prereq1 of Doctor Through the City is Doctor & Soldier.
+Prereq1Resolution of Doctor Through City is { 1, 2 }.
 The level of Doctor Through the City is 0.
 The sarea of Doctor Through the City is "Outside".
 

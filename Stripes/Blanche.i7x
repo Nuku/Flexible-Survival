@@ -4,6 +4,10 @@ Version 2 of Blanche by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Wolfrape	"Wolfrape"
+
 Wolfrape is a situation. The level of Wolfrape is 16.
 The sarea of Wolfrape is "Capitol".
 when play begins:
@@ -50,6 +54,9 @@ Instead of resolving Wolfrape:
 
 Section 2 - Office Den
 
+Table of GameRoomIDs (continued)
+Object	Name
+Office Den	"Office Den"
 
 Office Den is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Office Den is "[officedendesc]".

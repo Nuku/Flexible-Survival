@@ -1,5 +1,9 @@
 Sewer Tunnel by Hellerhound begins here.
 
+Table of GameEventIDs (continued)
+Object	Name
+Hidden Grate	"Hidden Grate"
+
 Hidden Grate is a situation.
 The sarea of Hidden Grate is "Park".
 
@@ -21,8 +25,9 @@ instead of resolving a Hidden Grate:
 	else:
 		say "You leave the grate and whatever might be below it alone.";
 
-
-
+Table of GameRoomIDs (continued)
+Object	Name
+South Sewer Tunnel	"South Sewer Tunnel"
 
 South Sewer Tunnel is a room. "This sewer tunnel is one of the largest you've seen[if Smith Haven Mall Lot is known], even compared to the sewers under the mall[end if]. A large river runs through the center, filled with muck from the city. From the direction it heads, you ascertain that it leads down to the sea. This must be the major drainage duct.[line break][if the perception of the player > 12]It doesn't look like there are many infected in the water. Maybe something of value could be found if you [bold type]search[roman type]?[end if]".
 
@@ -33,8 +38,12 @@ the scent of South Sewer Tunnel is "This area smells strongly of waste and drain
 
 the scent of North Sewer Tunnel is "This area smells strongly of waste and drainage water. It's hard to tell, but there may be trace odors from the infected down here as well.".
 
-Red Grate is a door. Up from Red Grate is Entrance to the Red Light District. "[if the player is in North Sewer Tunnel]This grate is just a hole in the ceiling. From the red light filtering down, it seems to lead to the red light district.[else]There is an open grate underneath one of the red lamps near here. The cover is just lifted out of the way carefully, as if whoever moved it intended to replace it as soon as they returned.[end if]".
+Red Grate is a door. Entrance to the Red Light District is above Red Grate. "[if the player is in North Sewer Tunnel]This grate is just a hole in the ceiling. From the red light filtering down, it seems to lead to the red light district.[else]There is an open grate underneath one of the red lamps near here. The cover is just lifted out of the way carefully, as if whoever moved it intended to replace it as soon as they returned.[end if]".
 Red Grate is open.
+
+Table of GameRoomIDs (continued)
+Object	Name
+North Sewer Tunnel	"North Sewer Tunnel"
 
 North Sewer Tunnel is a room. "This sewer tunnel is one of the largest you've seen[if Smith Haven Mall Lot is known], even compared to the sewers under the mall[end if]. A large river runs through the center, filled with muck from the city. From the direction the tunnel heads towards, you ascertain that it comes from the mall. This must be the north segment of the major drainage duct.[line break][if the perception of the player > 12]It doesn't look like there are many infected in the water. Maybe something of value could be found if you [bold type]search[roman type]?". North Sewer Tunnel is north of South Sewer Tunnel. North Sewer Tunnel is below Red Grate.
 

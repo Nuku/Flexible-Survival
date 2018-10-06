@@ -248,6 +248,10 @@ an everyturn rule:
 
 Section 3 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Lonely Gryphoness	"Lonely Gryphoness"
+
 Lonely Gryphoness is a situation.
 The sarea of Lonely Gryphoness is "Outside".
 when play begins:
@@ -296,6 +300,10 @@ Instead of resolving Lonely Gryphoness:
 		say "     Deciding to just stop and enjoy the beautiful music while you can, you pause for a while in the street as the sweet notes wash over you. The sad song causing you to blink back tears more than once as the soft notes wash over you. Eventually the music stops rather abruptly, and you wonder just what might have happened to the singer that would cause them to break off mid note. Sighing, you figure you probably won't be hearing that particular song again, as you continue on out into the city...";
 		now Resolution of Lonely Gryphoness is 3; [denise was taken by something]
 		now Lonely Gryphoness is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Gryphoness nest	"Gryphoness nest"
 
 Gryphoness nest is a situation. Gryphoness nest is inactive.
 The sarea of Gryphoness nest is "Beach".

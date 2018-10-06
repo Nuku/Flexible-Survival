@@ -120,9 +120,17 @@ to say snow star use:
 
 Section 4 - Location
 
+Table of GameRoomIDs (continued)
+Object	Name
+Snowy Forest Trail	"Snowy Forest Trail"
+
 Snowy Forest Trail is a room. Snowy Forest Trail is northeast of Urban Forest.
 The description of Snowy Forest Trail is "     You're on a narrow trail through the urban forest, in an area of fairly dense growth. Fragments of the buildings formerly occupying this part of the city are few and far between, with trees and other plants forming what seems to be a century-old forest. Interestingly, this part of the woods is a lot cooler than the rest of the city, with some snow covering low-hanging branches and the ground under your feet. Despite this, you don't actually feel uncomfortable, which might actually be a wholly positive result of the nanites. Towards the north, this effect only gets more pronounced - there are white flakes in the air there, falling at a placid pace to settle in a glistening blanket of undisturbed snow.".
 earea of Snowy Forest Trail is "Forest".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Forest Cave Entrance	"Forest Cave Entrance"
 
 Forest Cave Entrance is a room. Forest Cave Entrance is north of Snowy Forest Trail.
 The description of Forest Cave Entrance is "[ForestCaveEntranceDesc]".
@@ -137,8 +145,16 @@ to say ForestCaveEntranceDesc:
 	else if MiyukiRelationship is 100:
 		say "     A single track of delicate paw-prints with surprisingly large claw-marks leads into the cave. Looks like Miyuki is home. You're not sure if you want to take the chance of another encounter with her, after how last time went...";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Frozen Cave Tunnel	"Frozen Cave Tunnel"
+
 Frozen Cave Tunnel is a room. Frozen Cave Tunnel is northeast of Forest Cave Entrance.
 The description of Frozen Cave Tunnel is "     You're in what seems like a natural cave tunnel, leading steadily downwards in a slow curve. Might actually be a spiral, now that you think of it - remembering the part you've already got behind you and what you can see ahead. And you can actually see, despite being underground and in a cave, thanks to the ever-present snow all around you. Each flake has a tiny and dim glow to it, making them whiter than white and creating a beautiful sparkling effect that covers the ground in a smooth layer and has settled into all of the cracks and rough surfaces of the cave walls. Seeing wondrous sights like this makes it hard to remember that you're still in the city sometimes, and that all of this didn't exist just a short while ago.".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Ice Fox's Den	"Ice Fox's Den"
 
 Ice Fox's Den is a room. Ice Fox's Den is below Frozen Cave Tunnel.
 The description of Ice Fox's Den is "[IceFoxDenDesc]";
@@ -148,12 +164,20 @@ to say IceFoxDenDesc:
 	if HP of Miyuki > 2 and HP of Miyuki < 100:
 		say "     Two openings in the cave walls allow access to adjoining rooms, one in the southeast and another in the northwest.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Snow Rabbit's Warren	"Snow Rabbit's Warren"
+
 Snow Rabbit's Warren is a room.
 The description of Snow Rabbit's Warren is "[SnowRabbitsWarrenDesc]";
 
 to say SnowRabbitsWarrenDesc:
 	say "     You're in a mid-sized cave that is split into two parts by a not quite hip-high wall of ice. The far side of it has a colossal mound of snow, almost reaching the rocky ceiling at its highest point. Numerous snow-white rabbits are hopping around in this enclosure, and also digging into the snow, creating tunnels and chambers within. The little animals look basically just like oval fluffs of fur when they sit down, only extending their surprisingly long legs when they move around. On the 'visitor' side of the cave, Russel has made a camp for himself in a little niche, with a sleeping bag rolled out as well as stacks of supplies that he needs to care for his charges.";
 	say "     Sadly, the former zookeeper seems to busy for anything but helping his animal friends settle in right now, so you don't even have a chance to chat with him.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Snow Fox Enclosure	"Snow Fox Enclosure"
 
 Snow Fox Enclosure is a room.
 The description of Snow Fox Enclosure is "[SnowFoxEnclosureDesc]";
@@ -236,6 +260,10 @@ instead of going to Ice Fox's Den while (Miyuki is in Ice Fox's Den and MiyukiRe
 	now lust of Miyuki is 1; [Carambola quest started]
 	now Carambola Tree is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+Carambola Tree	"Carambola Tree"
+
 Carambola Tree is a situation. Carambola Tree is inactive.
 The sarea of Carambola Tree is "Zoo".
 
@@ -250,6 +278,10 @@ instead of resolving a Carambola Tree:
 		say "     On top of everything else that the tigertaur did to you, she also snatches up the fruit, stuffing them into a satchel carried over her shoulder. As you eventually get back to your feet and leave the tree afterwards, you refrain from picking another carambola - who knows, the tigress might be watching. Maybe you should come back another time when you're better prepared to clash with her.";
 	else if fightoutcome is 30: [fled]
 		say "     Legging it, you run off and shake the angry tigertaur off with some difficulty. Sadly, in the process of the wild chase, you lose all of the carambola you picked. Looks like all of this excitement was for nothing. You'll have to go back to the tree and pick some new ones if you want to help Miyuki out.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Arctic Enclosure	"Arctic Enclosure"
 
 Arctic Enclosure is a situation. Arctic Enclosure is inactive.
 The sarea of Arctic Enclosure is "Zoo".

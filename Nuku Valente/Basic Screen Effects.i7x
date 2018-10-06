@@ -157,7 +157,7 @@ Table of Ordinary Status
 left	central	right
 "[location]"	""	"[score]/[turn count]"
 
-Status bar table is a table-name that varies. Status bar table is the Table of Ordinary Status.
+Status bar table is a table-name that varies.[@Tag:NotSaved] Status bar table is the Table of Ordinary Status.
 
 To fill the/-- status bar/line with (selected table - a table-name):
 	let __n be the number of rows in the selected table;
@@ -173,7 +173,7 @@ To fill the/-- status bar/line with (selected table - a table-name):
 		increase __index by 1;
 	end repeat.
 
-Right alignment depth is a number that varies. Right alignment depth is 14.
+Right alignment depth is a number that varies.[@Tag:NotSaved] Right alignment depth is 14.
 
 Section 2 (for Z-machine only)
 

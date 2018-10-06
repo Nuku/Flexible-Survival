@@ -3,6 +3,10 @@ Version 2 of Toy Store by Song begins here.
 [ Version 2 - Full rewrite of event. Dys contributed heavily, writing up most of the sex scene on defeat/submission ]
 [ - This creature was originally created by Hellerhound and has since been relocated to Song's folder after substantial overhauls - ]
 
+Table of GameEventIDs (continued)
+Object	Name
+Toy Store	"Toy Store"
+
 Toy Store is a situation. The level of Toy Store is 1.
 when play begins:
 	add Toy Store to badspots of guy;

@@ -5,6 +5,10 @@ Warehouse Events by StripeGuy begins here.
 
 Section 1 - dock team
 
+Table of GameEventIDs (continued)
+Object	Name
+dock team	"dock team"
+
 dock team is a situation.
 The sarea of dock team is "Warehouse".
 
@@ -25,6 +29,10 @@ Instead of Resolving a dock team:
 	now dock team is resolved;
 
 Section 2 - Hidden Fucknest
+
+Table of GameEventIDs (continued)
+Object	Name
+Hidden Fucknest	"Hidden Fucknest"
 
 Hidden Fucknest is a scavevent.
 The sarea of Hidden Fucknest is "Warehouse".
@@ -79,6 +87,10 @@ instead of sniffing the belaying pin:
 
 Section 3 - Fresh Fish
 
+Table of GameEventIDs (continued)
+Object	Name
+Fresh Fish	"Fresh Fish"
+
 Fresh Fish is a situation.
 The sarea of Fresh Fish is "Warehouse".
 
@@ -104,6 +116,10 @@ Instead of Resolving a Fresh Fish:
 	now Fresh Fish is resolved;
 
 Section 4 - union break
+
+Table of GameEventIDs (continued)
+Object	Name
+union break	"union break"
 
 union break is a situation.
 The sarea of union break is "Warehouse".
@@ -132,6 +148,10 @@ Instead of Resolving a union break:
 
 Section 5 - hot stepping
 
+Table of GameEventIDs (continued)
+Object	Name
+hot stepping	"hot stepping"
+
 hot stepping is a situation.
 The sarea of hot stepping is "Warehouse".
 
@@ -154,6 +174,10 @@ Instead of Resolving a hot stepping:
 	now hot stepping is resolved;
 
 Section 6 - crate shuffle
+
+Table of GameEventIDs (continued)
+Object	Name
+crate shuffle	"crate shuffle"
 
 crate shuffle is a situation.
 The sarea of crate shuffle is "Warehouse".
