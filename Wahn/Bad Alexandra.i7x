@@ -551,60 +551,60 @@ to say badAlexandraSex:
 		choose a blank row in table of fucking options;
 		now title entry is "Bend her over";
 		now sortorder entry is 1;
-		now description entry is "Bend her over a table and fuck the bitch.";
+		now description entry is "Bend her over a table and fuck the bitch";
 	[]
 	if player is male and lust of Alexandra <= 12:
 		choose a blank row in table of fucking options;
 		now title entry is "Against the wall";
 		now sortorder entry is 2;
-		now description entry is "Press your bitch against the wall and fuck her hard.";
+		now description entry is "Press your bitch against the wall and fuck her hard";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "All fours";
 		now sortorder entry is 3;
-		now description entry is "Fuck your bitch on all fours.";
+		now description entry is "Fuck your bitch on all fours";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
-		now description entry is "Take her up the ass.";
+		now description entry is "Take her up the ass";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now sortorder entry is 5;
-		now description entry is "Have Alexandra suck you off.";
+		now description entry is "Have Alexandra suck you off";
 	[]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Get cunnilingus";
 		now sortorder entry is 6;
-		now description entry is "Have Alexandra lick your snatch.";
+		now description entry is "Have Alexandra lick your snatch";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Lick Alexandra";
 	now sortorder entry is 7;
-	now description entry is "Lick Alexandra's snatch.";
+	now description entry is "Lick Alexandra's snatch";
 	[]
 	if player is not neuter and lust of Alexandra <= 12:
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 8;
-		now description entry is "69 with the dobie.";
+		now description entry is "69 with the dobie";
 	[]
 	if player is male and ( HP of Alexandra > 3 or lust of Alexandra > 12 ):
 		choose a blank row in table of fucking options;
 		now title entry is "Titty fuck";
 		now sortorder entry is 9;
-		now description entry is "Fuck those lovely melons of hers.";
+		now description entry is "Fuck those lovely melons of hers";
 	[]
 	if player is not neuter and level of Alexandra is 2 and lastfuck of Fang - turns >= ( 9 - HP of Fang):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Fang";
 		now sortorder entry is 10;
-		now description entry is "Share her with the wolf.";
+		now description entry is "Share her with the wolf";
 	[]
 	if vorelevel > 2 and glowing mushroom is owned:
 		choose a blank row in table of fucking options;

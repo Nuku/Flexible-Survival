@@ -115,6 +115,7 @@ carry out TestMode:
 	increase carried of glob of goo by 5;
 	increase carried of honeycomb by 5;
 	increase carried of healing booster by 5;
+	increase freecred by 5000;
 	sort feats of player;
 	now Terminatorsleep is true;
 	now TestingActive is true;

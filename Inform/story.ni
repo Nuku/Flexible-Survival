@@ -4697,6 +4697,7 @@ Include Hyper Serum by Vrael.
 Include Infected Pool by Hellerhound.
 Include Inner Mall Events by Wahn.
 Include Inventory Management Enhancements by Core Mechanics.
+Include Ironscale Items by Taelyn.
 Include Junkyard Events by Stripes.
 Include Kitsune by Kaleem mcintyre.
 Include Latex Quad Husky by Stripes.
@@ -4757,6 +4758,7 @@ Include Storage Locker by Core Mechanics.
 Include Story Skipper by Core Mechanics.
 Include Story Skipper Loose Variables by Core Mechanics.
 Include Sugar Feud by AGentlemanCalledB.
+Include TFTG Feats by Luneth.
 Include Tidepool Event by FwuffyMouse.
 Include Toy Store by Song.
 Include Underground Events by Wahn.
@@ -5137,6 +5139,7 @@ Include Jenna by Rikaeus.
 Include Jimmy by Stripes.
 Include Joanna by Stripes.
 Include Joey by Qazarar.
+Include Joshiro by Wahn.
 Include Julian by Prometheus.
 Include Kara by Sarokcat.
 Include Karen by AGentlemanCalledB.
@@ -5175,6 +5178,7 @@ Include Orthas by Stripes.
 Include Otto Fuchs by Prometheus.
 Include Palomino by Verath.
 Include Paula by Stripes.
+Include Percy by Taelyn.
 Include Pericles by Rikaeus.
 Include Phantom Dolphin by Blue Bishop.
 Include Phantom Pony by Blue Bishop.
@@ -5198,6 +5202,7 @@ Include Skarnoth by Wahn.
 Include Skarnoth Loyalty by Luneth.
 Include Solstice by Stripes.
 Include Sonny by Rikaeus.
+Include Spike by Wahn.
 Include Stag by Wahn.
 Include Stella by Stripes.
 Include Stewart by Rikaeus.

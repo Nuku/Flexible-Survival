@@ -292,6 +292,12 @@ The invent of Sitting Area is { "chips" }.
 to say usittingarea desc:
 	project the figure of Library2ndfloor_icon;
 	say "     Obviously meant for small study groups, the area around you has only a few tables and couches spread about. Most of the nearby shelves have been knocked down, leaving their books strewn across the floor. Although disorganized, the area also has a very lived-in feel to it, helping you relax your nerves and reflect on your next move. Heading southwest will take you back to the second floor landing, and a huge window overlooks the back of the library to the southeast.";
+	if doberman companion is tamed:
+		say "     At the edge of the open floor area, Spike has made a little man-cave for himself, dragging a mattress up from the bunker and setting a desk on its side to block the passage between two bookshelves. The little nook that created contains a number of posters of scantily dressed women. ";
+		if Spike is visible:
+			say "The dobie frequently strokes himself off while looking at them.";
+		else:
+			LineBreak;
 
 Table of GameRoomIDs (continued)
 Object	Name
