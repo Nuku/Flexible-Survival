@@ -5,7 +5,6 @@ Section 1 - Artemis's Disciple/Apollo's Disciple
 
 Divine Twins is a situation.
 the sarea of Divine Twins is "Museum".
-when play begins:
 
 instead of resolving Divine Twins:
 	say "     Continuing to explore the Museum, your attention is drawn to what sounds like a heated argument. Choosing to listen in on what they are fighting about, you identify that one voice is male while the other is female. The woman has a regal voice, but at the same time, there is an edge to it that speaks volumes about how it would not be wise to cross her. 'Brother, we both know that women should be the ones that should be in control. Looking at the state of this world is proof enough of this fact!' Her sibling has the same regality in his voice, however he seems to be far quicker to anger. 'The only reason that this place has advanced as far as it has is strictly because men have been the ones in charge! Females are built for nothing more than serving males and procreation!' The disagreement is clearly over gender superiority.";
