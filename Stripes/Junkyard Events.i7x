@@ -6,6 +6,10 @@ Version 1 of Junkyard Events by Stripes begins here.
 
 Section 1 - Goblin Trap
 
+Table of GameEventIDs (continued)
+Object	Name
+Goblin Trap	"Goblin Trap"
+
 Goblin Trap is a situation. The level of Goblin Trap is 2.
 The sarea of Goblin Trap is "Junkyard".
 goblinfight is a number that varies.
@@ -28,6 +32,10 @@ Instead of resolving a Goblin Trap:
 
 
 Section 2 - Goblin Raiding Party
+
+Table of GameEventIDs (continued)
+Object	Name
+Raiding Party	"Raiding Party"
 
 Raiding Party is a situation. The level of Raiding Party is 2.
 The sarea of Raiding Party is "Junkyard".
@@ -90,6 +98,10 @@ Instead of resolving a Raiding Party:
 
 Section 3 - Stripped Car
 
+Table of GameEventIDs (continued)
+Object	Name
+Stripped Car	"Stripped Car"
+
 Stripped Car is a situation.
 The sarea of Stripped Car is "Junkyard".
 
@@ -100,6 +112,10 @@ Instead of resolving a Stripped Car:
 
 
 Section 4 - Scattered Trash
+
+Table of GameEventIDs (continued)
+Object	Name
+Scattered Trash	"Scattered Trash"
 
 Scattered Trash is a situation.
 The sarea of Scattered Trash is "Junkyard".
@@ -136,6 +152,10 @@ Instead of resolving a Scattered Trash:
 
 
 Section 5 - Stray Cat
+
+Table of GameEventIDs (continued)
+Object	Name
+Stray Cat	"Stray Cat"
 
 Stray Cat is a situation. The level of Stray Cat is 7.
 The sarea of Stray Cat is "Junkyard".

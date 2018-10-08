@@ -4,6 +4,10 @@ Version 1 of Skunkbeast Lord by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Skunkbeast Battle	"Skunkbeast Battle"
+
 Skunkbeast Battle is a situation. The level of Skunkbeast Battle is 15.
 The sarea of Skunkbeast Battle is "Forest".
 skunkbeaststatus is a number that varies.

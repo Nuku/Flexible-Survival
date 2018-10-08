@@ -2,6 +2,10 @@ Version 1 of Forest Gang Bang by Defth begins here.
 
 [Forest event - wolves gang bang]
 
+Table of GameEventIDs (continued)
+Object	Name
+Pack Bang	"Pack Bang"
+
 Pack Bang is a situation.
 The sarea of Pack bang is "Forest".
 When play begins:

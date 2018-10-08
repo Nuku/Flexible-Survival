@@ -41,6 +41,10 @@ Version 1 of Thomas by Wahn begins here.
 
 Section 1 - Meeting Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Centaur Gangbang	"Centaur Gangbang"
+
 Centaur Gangbang is a situation. The level of Centaur Gangbang is 5.
 The sarea of Centaur Gangbang is "Plains".
 when play begins:

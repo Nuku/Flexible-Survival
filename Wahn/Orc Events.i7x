@@ -3,6 +3,10 @@ Version 1 of Orc Events by Wahn begins here.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Orc Tag Team	"Orc Tag Team"
+
 Orc Tag Team is a situation.
 The sarea of Orc Tag Team is "Warehouse".
 when play begins:

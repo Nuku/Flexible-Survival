@@ -5,6 +5,10 @@ Version 1 of Bradford by Stripes begins here.
 
 Section 1 - Lead-in Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Bounty Hunter	"Bounty Hunter"
+
 Bounty Hunter is a situation.
 The sarea of Bounty Hunter is "Red".
 when play begins:
@@ -39,6 +43,10 @@ Instead of resolving Bounty Hunter:
 
 
 Section 2 - Bradford's Camp
+
+Table of GameRoomIDs (continued)
+Object	Name
+Bradford's Camp	"Bradford's Camp"
 
 Bradford's Camp is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Bradford's Camp is "[bradfordcampdesc]".

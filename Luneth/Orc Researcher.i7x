@@ -3,6 +3,10 @@ Version 1 of Orc Researcher by Luneth begins here.
 
 Section 1- Orc Researcher
 
+Table of GameEventIDs (continued)
+Object	Name
+Orc Researcher	"Orc Researcher"
+
 Orc Researcher is a situation.
 The sarea of Orc Researcher is "Warehouse".
 

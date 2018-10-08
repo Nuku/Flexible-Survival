@@ -5,6 +5,10 @@ Sugar Feud by AGentlemanCalledB begins here.
 [Events will eventually be compiled into a single consolidated event.
 See also; "Sweet Exchange", "Caught Glider" - Stripes\assorted events]
 
+Table of GameEventIDs (continued)
+Object	Name
+Sugar Shack	"Sugar Shack"
+
 Sugar Shack is a situation.
 The sarea of Sugar Shack is "Midway".
 when play begins:

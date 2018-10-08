@@ -4,6 +4,10 @@ Version 2 of Zigor by Stripes begins here.
 
 Section 0 - Event	[Transposed from Red Events]
 
+Table of GameEventIDs (continued)
+Object	Name
+Leather Wolves	"Leather Wolves"
+
 Leather Wolves is a situation.
 The sarea of Leather Wolves is "Red".
 when play begins:
@@ -23,6 +27,10 @@ Instead of resolving a Leather Wolves:
 
 
 Section 1 - Leather Store
+
+Table of GameRoomIDs (continued)
+Object	Name
+Cuero Lobo	"Cuero Lobo"
 
 Cuero Lobo is a room. It is fasttravel. It is private.
 The description of Cuero Lobo is "[cuerolobodesc]".

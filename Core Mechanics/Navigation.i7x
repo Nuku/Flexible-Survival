@@ -88,14 +88,12 @@ carry out destinationcheck:
 			say "| [link][bracket]The Palomino[close bracket][as]nav The Palomino[end link] ";
 		LineBreak;
 	[start of the dry plains area]
-	if Dry Plains is known or McDermott Farm Entrance is known or Researcher Studio is known or Rocky Outcropping is known:
+	if Dry Plains is known or McDermott Farm Entrance is known or Rocky Outcropping is known:
 		say "[bold type]Dry Plains[roman type]: ";
 		if Dry Plains is known:
 			say "[link][bracket]Dry Plains[close bracket][as]nav Dry Plains[end link] ";
 		if McDermott Farm Entrance is known:
 			say "| [link][bracket]McDermott Farm Entrance[close bracket][as]nav McDermott Farm Entrance[end link] ";
-		if Researcher Studio is known:
-			say "| [link][bracket]Researcher Studio[close bracket][as]nav Researcher Studio[end link] ";
 		if Rocky Outcropping is known:
 			say "| [link][bracket]Rocky Outcropping[close bracket][as]nav Rocky Outcropping[end link] ";
 		LineBreak;
@@ -240,7 +238,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Phi Iota Gamma[close bracket][as]nav Phi Iota Gamma[end link] ";
 		LineBreak;
 	[start of the forest area]
-	if Urban Forest is known or Bunny House is known or Deep Forest is known or Happy Puppy Kennel is known:
+	if Urban Forest is known or Bunny House is known or Deep Forest is known or Happy Puppy Kennel is known [or Ironscale Hollow is known]: [What?]
 		say "[bold type]Urban Forest[roman type]: ";
 		if Urban Forest is known:
 			say "[link][bracket]Urban Forest[close bracket][as]nav Urban Forest[end link] ";
@@ -250,8 +248,13 @@ carry out destinationcheck:
 			say "| [link][bracket]Deep Forest[close bracket][as]nav Deep Forest[end link] ";
 		if Happy Puppy Kennel is known:
 			say "| [link][bracket]Happy Puppy Kennel[close bracket][as]nav Happy Puppy Kennel[end link] ";
+<<<<<<< HEAD
 		if Ironscale Hollow is known:
 			say "| [link][bracket]Ironscale Hollow[close bracket][as]nav Ironscale Hollow[end link] ";
+=======
+		[if Ironscale Hollow is known:
+			say "| [link][bracket]Ironscale Hollow[close bracket][as]nav Ironscale Hollow[end link] ";] [Not defined]
+>>>>>>> upstream/master
 		LineBreak;
 	[start of the warehouse area]
 	if Warehouse District is known or Hyena Hideout is known or Mike's Home is known or Spider's Web is known or Wolfman Lair is known:

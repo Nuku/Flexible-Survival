@@ -295,6 +295,9 @@ understand "use hammock" as resting.
 
 Section 4 - NPC
 
+Table of GameRoomIDs (continued)
+Object	Name
+Spider's Web	"Spider's Web"
 
 Spider's Web is a room. It is a fasttravel. Spider's Web is private. Spider's Web is sleepsafe.
 The description of Spider's Web is "[WebDesc]".

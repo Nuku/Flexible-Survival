@@ -491,8 +491,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is battleitem;
 		-- "bcending":
 			now NumberVarValue entry is bcending;
-		-- "Bch":
-			now NumberVarValue entry is Bch;
 		-- "bclatearrival":
 			now NumberVarValue entry is bclatearrival;
 		-- "bcuntethered":
@@ -713,20 +711,20 @@ to NumberVariableSave:
 			now NumberVarValue entry is CloudKnowledge;
 		-- "CocoRelationship":
 			now NumberVarValue entry is CocoRelationship;
-		-- "ColeenAlpha":
-			now NumberVarValue entry is ColeenAlpha;
-		-- "ColeenCollared":
-			now NumberVarValue entry is ColeenCollared;
-		-- "ColeenFound":
-			now NumberVarValue entry is ColeenFound;
-		-- "ColeenSarahInteraction":
-			now NumberVarValue entry is ColeenSarahInteraction;
-		-- "ColeenSlut":
-			now NumberVarValue entry is ColeenSlut;
-		-- "ColeenSpray":
-			now NumberVarValue entry is ColeenSpray;
-		-- "ColeenTalk":
-			now NumberVarValue entry is ColeenTalk;
+		-- "ColleenAlpha":
+			now NumberVarValue entry is ColleenAlpha;
+		-- "ColleenCollared":
+			now NumberVarValue entry is ColleenCollared;
+		-- "ColleenFound":
+			now NumberVarValue entry is ColleenFound;
+		-- "ColleenSarahInteraction":
+			now NumberVarValue entry is ColleenSarahInteraction;
+		-- "ColleenSlut":
+			now NumberVarValue entry is ColleenSlut;
+		-- "ColleenSpray":
+			now NumberVarValue entry is ColleenSpray;
+		-- "ColleenTalk":
+			now NumberVarValue entry is ColleenTalk;
 		-- "CollegeLibraryBrutusEncounter":
 			now NumberVarValue entry is CollegeLibraryBrutusEncounter;
 		-- "CollegeLibraryRyouseiEncounter":
@@ -809,8 +807,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is DemonFoxInteractions;
 		-- "DemonFoxStatus":
 			now NumberVarValue entry is DemonFoxStatus;
-		-- "demonseedfound":
-			now NumberVarValue entry is demonseedfound;
 		-- "dentedbikecount":
 			now NumberVarValue entry is dentedbikecount;
 		-- "DianaRelationship":
@@ -847,8 +843,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is doggyboned;
 		-- "doggyness":
 			now NumberVarValue entry is doggyness;
-		-- "dogmilkfound":
-			now NumberVarValue entry is dogmilkfound;
 		-- "dolcastlefight":
 			now NumberVarValue entry is dolcastlefight;
 		-- "dolinfloss":
@@ -939,8 +933,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is dragontaurcatch;
 		-- "dragontype":
 			now NumberVarValue entry is dragontype;
-		-- "Dre":
-			now NumberVarValue entry is Dre;
 		-- "Drinkserved":
 			now NumberVarValue entry is Drinkserved;
 		-- "dronevict":
@@ -1169,16 +1161,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is GarthRelationship;
 		-- "gascloud":
 			now NumberVarValue entry is gascloud;
-		-- "gatherdemonseed":
-			now NumberVarValue entry is gatherdemonseed;
-		-- "gatherdogmilk":
-			now NumberVarValue entry is gatherdogmilk;
-		-- "gatherspottedfur":
-			now NumberVarValue entry is gatherspottedfur;
-		-- "gathertaintedwool":
-			now NumberVarValue entry is gathertaintedwool;
-		-- "gatherwolfcum":
-			now NumberVarValue entry is gatherwolfcum;
 		-- "gatorconsent":
 			now NumberVarValue entry is gatorconsent;
 		-- "gatordefeat":
@@ -1643,8 +1625,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is lastChristyfucked;
 		-- "lastchurchattempt":
 			now NumberVarValue entry is lastchurchattempt;
-		-- "lastColeenSarahInteraction":
-			now NumberVarValue entry is lastColeenSarahInteraction;
+		-- "lastColleenSarahInteraction":
+			now NumberVarValue entry is lastColleenSarahInteraction;
 		-- "lastconfession":
 			now NumberVarValue entry is lastconfession;
 		-- "lastConfSvenEricInteraction":
@@ -1731,8 +1713,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is lastNadiaSpotted;
 		-- "lastoctofight":
 			now NumberVarValue entry is lastoctofight;
-		-- "LastOmioteatime":
-			now NumberVarValue entry is LastOmioteatime;
 		-- "lastorcabeat":
 			now NumberVarValue entry is lastorcabeat;
 		-- "lastPaulahealing":
@@ -1921,8 +1901,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is mattintel;
 		-- "mdasslevel":
 			now NumberVarValue entry is mdasslevel;
-		-- "mdl":
-			now NumberVarValue entry is mdl;
 		-- "mdmaxlossscene":
 			now NumberVarValue entry is mdmaxlossscene;
 		-- "mdrakeanal":
@@ -2181,14 +2159,8 @@ to NumberVariableSave:
 			now NumberVarValue entry is OfficeGirlsFriendship;
 		-- "OgreMeetings":
 			now NumberVarValue entry is OgreMeetings;
-		-- "Ointerrogate":
-			now NumberVarValue entry is Ointerrogate;
 		-- "OliverRelationship":
 			now NumberVarValue entry is OliverRelationship;
-		-- "Omiotalk":
-			now NumberVarValue entry is Omiotalk;
-		-- "omq":
-			now NumberVarValue entry is omq;
 		-- "Onyxboislut":
 			now NumberVarValue entry is Onyxboislut;
 		-- "onyxdma":
@@ -2203,8 +2175,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is onyxlapdance;
 		-- "Onyxmareslut":
 			now NumberVarValue entry is Onyxmareslut;
-		-- "opcl":
-			now NumberVarValue entry is opcl;
 		-- "orcadom":
 			now NumberVarValue entry is orcadom;
 		-- "orcafdom":
@@ -2505,8 +2475,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is SharkFountainCounter;
 		-- "shiftable":
 			now NumberVarValue entry is shiftable;
-		-- "shiftcatch":
-			now NumberVarValue entry is shiftcatch;
 		-- "sierramem":
 			now NumberVarValue entry is sierramem;
 		-- "SilverToken":
@@ -2595,8 +2563,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is SpidertaurRelationship;
 		-- "spiritlove":
 			now NumberVarValue entry is spiritlove;
-		-- "spottedfurfound":
-			now NumberVarValue entry is spottedfurfound;
 		-- "Spriteconsent":
 			now NumberVarValue entry is Spriteconsent;
 		-- "Spritedefeat":
@@ -2669,8 +2635,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is SylviaTrapVar;
 		-- "SylviaVirginCheck":
 			now NumberVarValue entry is SylviaVirginCheck;
-		-- "taintedwoolfound":
-			now NumberVarValue entry is taintedwoolfound;
 		-- "Targetturns":
 			now NumberVarValue entry is Targetturns;
 		-- "tatsave":
@@ -2753,8 +2717,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is TomeInteractions;
 		-- "TomeTimer":
 			now NumberVarValue entry is TomeTimer;
-		-- "Tpfs":
-			now NumberVarValue entry is Tpfs;
 		-- "Treasurefound":
 			now NumberVarValue entry is Treasurefound;
 		-- "treasurehunt":
@@ -2921,8 +2883,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is WhoringExperience;
 		-- "WineFound":
 			now NumberVarValue entry is WineFound;
-		-- "wolfcumfound":
-			now NumberVarValue entry is wolfcumfound;
 		-- "wolffight":
 			now NumberVarValue entry is wolffight;
 		-- "wolfhermdefeat":
@@ -3034,8 +2994,8 @@ to TruthVariableSave:
 	if CurrentVariableName is:
 		-- "A_Candy":
 			now TruthVarValue entry is A_Candy;
-		-- "A_Coleen":
-			now TruthVarValue entry is A_Coleen;
+		-- "A_Colleen":
+			now TruthVarValue entry is A_Colleen;
 		-- "A_David":
 			now TruthVarValue entry is A_David;
 		-- "A_Elijah":
@@ -3450,8 +3410,8 @@ to TruthVariableSave:
 			now TruthVarValue entry is medeaub;
 		-- "Meredith_anal":
 			now TruthVarValue entry is Meredith_anal;
-		-- "Meredith_Coleen_fun1":
-			now TruthVarValue entry is Meredith_Coleen_fun1;
+		-- "Meredith_Colleen_fun1":
+			now TruthVarValue entry is Meredith_Colleen_fun1;
 		-- "Meredith_Vanessa_fun1":
 			now TruthVarValue entry is Meredith_Vanessa_fun1;
 		-- "Meredith_Vanessa_fun2":
@@ -3759,12 +3719,6 @@ to NumberListVariableSave:
 					choose a blank row in the table of GameNumberLists;
 					now NumberListVarName entry is CurrentVariableName;
 					now NumberListVarValue entry is entry y of campuswander;
-		-- "cepark2list":
-			if the number of entries in cepark2list is not 0:
-				repeat with y running from 1 to the number of entries in cepark2list:
-					choose a blank row in the table of GameNumberLists;
-					now NumberListVarName entry is CurrentVariableName;
-					now NumberListVarValue entry is entry y of cepark2list;
 		-- "Francois_Discovered":
 			if the number of entries in Francois_Discovered is not 0:
 				repeat with y running from 1 to the number of entries in Francois_Discovered:
@@ -4243,8 +4197,6 @@ to VariableNumberLoad:
 					now battleitem is numberVarValue entry;
 				-- "bcending":
 					now bcending is numberVarValue entry;
-				-- "Bch":
-					now Bch is numberVarValue entry;
 				-- "bclatearrival":
 					now bclatearrival is numberVarValue entry;
 				-- "bcuntethered":
@@ -4465,20 +4417,20 @@ to VariableNumberLoad:
 					now CloudKnowledge is numberVarValue entry;
 				-- "CocoRelationship":
 					now CocoRelationship is numberVarValue entry;
-				-- "ColeenAlpha":
-					now ColeenAlpha is numberVarValue entry;
-				-- "ColeenCollared":
-					now ColeenCollared is numberVarValue entry;
-				-- "ColeenFound":
-					now ColeenFound is numberVarValue entry;
-				-- "ColeenSarahInteraction":
-					now ColeenSarahInteraction is numberVarValue entry;
-				-- "ColeenSlut":
-					now ColeenSlut is numberVarValue entry;
-				-- "ColeenSpray":
-					now ColeenSpray is numberVarValue entry;
-				-- "ColeenTalk":
-					now ColeenTalk is numberVarValue entry;
+				-- "ColleenAlpha":
+					now ColleenAlpha is numberVarValue entry;
+				-- "ColleenCollared":
+					now ColleenCollared is numberVarValue entry;
+				-- "ColleenFound":
+					now ColleenFound is numberVarValue entry;
+				-- "ColleenSarahInteraction":
+					now ColleenSarahInteraction is numberVarValue entry;
+				-- "ColleenSlut":
+					now ColleenSlut is numberVarValue entry;
+				-- "ColleenSpray":
+					now ColleenSpray is numberVarValue entry;
+				-- "ColleenTalk":
+					now ColleenTalk is numberVarValue entry;
 				-- "CollegeLibraryBrutusEncounter":
 					now CollegeLibraryBrutusEncounter is numberVarValue entry;
 				-- "CollegeLibraryRyouseiEncounter":
@@ -4561,8 +4513,6 @@ to VariableNumberLoad:
 					now DemonFoxInteractions is numberVarValue entry;
 				-- "DemonFoxStatus":
 					now DemonFoxStatus is numberVarValue entry;
-				-- "demonseedfound":
-					now demonseedfound is numberVarValue entry;
 				-- "dentedbikecount":
 					now dentedbikecount is numberVarValue entry;
 				-- "DianaRelationship":
@@ -4599,8 +4549,6 @@ to VariableNumberLoad:
 					now doggyboned is numberVarValue entry;
 				-- "doggyness":
 					now doggyness is numberVarValue entry;
-				-- "dogmilkfound":
-					now dogmilkfound is numberVarValue entry;
 				-- "dolcastlefight":
 					now dolcastlefight is numberVarValue entry;
 				-- "dolinfloss":
@@ -4691,8 +4639,6 @@ to VariableNumberLoad:
 					now dragontaurcatch is numberVarValue entry;
 				-- "dragontype":
 					now dragontype is numberVarValue entry;
-				-- "Dre":
-					now Dre is numberVarValue entry;
 				-- "Drinkserved":
 					now Drinkserved is numberVarValue entry;
 				-- "dronevict":
@@ -4921,16 +4867,6 @@ to VariableNumberLoad:
 					now GarthRelationship is numberVarValue entry;
 				-- "gascloud":
 					now gascloud is numberVarValue entry;
-				-- "gatherdemonseed":
-					now gatherdemonseed is numberVarValue entry;
-				-- "gatherdogmilk":
-					now gatherdogmilk is numberVarValue entry;
-				-- "gatherspottedfur":
-					now gatherspottedfur is numberVarValue entry;
-				-- "gathertaintedwool":
-					now gathertaintedwool is numberVarValue entry;
-				-- "gatherwolfcum":
-					now gatherwolfcum is numberVarValue entry;
 				-- "gatorconsent":
 					now gatorconsent is numberVarValue entry;
 				-- "gatordefeat":
@@ -5395,8 +5331,8 @@ to VariableNumberLoad:
 					now lastChristyfucked is numberVarValue entry;
 				-- "lastchurchattempt":
 					now lastchurchattempt is numberVarValue entry;
-				-- "lastColeenSarahInteraction":
-					now lastColeenSarahInteraction is numberVarValue entry;
+				-- "lastColleenSarahInteraction":
+					now lastColleenSarahInteraction is numberVarValue entry;
 				-- "lastconfession":
 					now lastconfession is numberVarValue entry;
 				-- "lastConfSvenEricInteraction":
@@ -5483,8 +5419,6 @@ to VariableNumberLoad:
 					now lastNadiaSpotted is numberVarValue entry;
 				-- "lastoctofight":
 					now lastoctofight is numberVarValue entry;
-				-- "LastOmioteatime":
-					now LastOmioteatime is numberVarValue entry;
 				-- "lastorcabeat":
 					now lastorcabeat is numberVarValue entry;
 				-- "lastPaulahealing":
@@ -5673,8 +5607,6 @@ to VariableNumberLoad:
 					now mattintel is numberVarValue entry;
 				-- "mdasslevel":
 					now mdasslevel is numberVarValue entry;
-				-- "mdl":
-					now mdl is numberVarValue entry;
 				-- "mdmaxlossscene":
 					now mdmaxlossscene is numberVarValue entry;
 				-- "mdrakeanal":
@@ -5933,14 +5865,8 @@ to VariableNumberLoad:
 					now OfficeGirlsFriendship is numberVarValue entry;
 				-- "OgreMeetings":
 					now OgreMeetings is numberVarValue entry;
-				-- "Ointerrogate":
-					now Ointerrogate is numberVarValue entry;
 				-- "OliverRelationship":
 					now OliverRelationship is numberVarValue entry;
-				-- "Omiotalk":
-					now Omiotalk is numberVarValue entry;
-				-- "omq":
-					now omq is numberVarValue entry;
 				-- "Onyxboislut":
 					now Onyxboislut is numberVarValue entry;
 				-- "onyxdma":
@@ -5955,8 +5881,6 @@ to VariableNumberLoad:
 					now onyxlapdance is numberVarValue entry;
 				-- "Onyxmareslut":
 					now Onyxmareslut is numberVarValue entry;
-				-- "opcl":
-					now opcl is numberVarValue entry;
 				-- "orcadom":
 					now orcadom is numberVarValue entry;
 				-- "orcafdom":
@@ -6255,8 +6179,6 @@ to VariableNumberLoad:
 					now SharkFountainCounter is numberVarValue entry;
 				-- "shiftable":
 					now shiftable is numberVarValue entry;
-				-- "shiftcatch":
-					now shiftcatch is numberVarValue entry;
 				-- "sierramem":
 					now sierramem is numberVarValue entry;
 				-- "SilverToken":
@@ -6345,8 +6267,6 @@ to VariableNumberLoad:
 					now SpidertaurRelationship is numberVarValue entry;
 				-- "spiritlove":
 					now spiritlove is numberVarValue entry;
-				-- "spottedfurfound":
-					now spottedfurfound is numberVarValue entry;
 				-- "Spriteconsent":
 					now Spriteconsent is numberVarValue entry;
 				-- "Spritedefeat":
@@ -6419,8 +6339,6 @@ to VariableNumberLoad:
 					now SylviaTrapVar is numberVarValue entry;
 				-- "SylviaVirginCheck":
 					now SylviaVirginCheck is numberVarValue entry;
-				-- "taintedwoolfound":
-					now taintedwoolfound is numberVarValue entry;
 				-- "Targetturns":
 					now Targetturns is numberVarValue entry;
 				-- "tatsave":
@@ -6503,8 +6421,6 @@ to VariableNumberLoad:
 					now TomeInteractions is numberVarValue entry;
 				-- "TomeTimer":
 					now TomeTimer is numberVarValue entry;
-				-- "Tpfs":
-					now Tpfs is numberVarValue entry;
 				-- "Treasurefound":
 					now Treasurefound is numberVarValue entry;
 				-- "treasurehunt":
@@ -6669,8 +6585,6 @@ to VariableNumberLoad:
 					now WhoringExperience is numberVarValue entry;
 				-- "WineFound":
 					now WineFound is numberVarValue entry;
-				-- "wolfcumfound":
-					now wolfcumfound is numberVarValue entry;
 				-- "wolffight":
 					now wolffight is numberVarValue entry;
 				-- "wolfhermdefeat":
@@ -6791,8 +6705,8 @@ to VariableTruthLoad:
 			if TruthVarName entry is:
 				-- "A_Candy":
 					now A_Candy is TruthVarValue entry;
-				-- "A_Coleen":
-					now A_Coleen is TruthVarValue entry;
+				-- "A_Colleen":
+					now A_Colleen is TruthVarValue entry;
 				-- "A_David":
 					now A_David is TruthVarValue entry;
 				-- "A_Elijah":
@@ -7207,8 +7121,8 @@ to VariableTruthLoad:
 					now medeaub is TruthVarValue entry;
 				-- "Meredith_anal":
 					now Meredith_anal is TruthVarValue entry;
-				-- "Meredith_Coleen_fun1":
-					now Meredith_Coleen_fun1 is TruthVarValue entry;
+				-- "Meredith_Colleen_fun1":
+					now Meredith_Colleen_fun1 is TruthVarValue entry;
 				-- "Meredith_Vanessa_fun1":
 					now Meredith_Vanessa_fun1 is TruthVarValue entry;
 				-- "Meredith_Vanessa_fun2":
@@ -7511,7 +7425,6 @@ to VariableNumberListLoad:
 		truncate AlexandraNPC to 0 entries; [cleaning out the old data]
 		truncate bookcollection to 0 entries; [cleaning out the old data]
 		truncate campuswander to 0 entries; [cleaning out the old data]
-		truncate cepark2list to 0 entries; [cleaning out the old data]
 		truncate Francois_Discovered to 0 entries; [cleaning out the old data]
 		truncate Francois_Undiscovered to 0 entries; [cleaning out the old data]
 		truncate leodenlist to 0 entries; [cleaning out the old data]
@@ -7529,8 +7442,6 @@ to VariableNumberListLoad:
 					add NumberListVarValue entry to bookcollection;
 				-- "campuswander":
 					add NumberListVarValue entry to campuswander;
-				-- "cepark2list":
-					add NumberListVarValue entry to cepark2list;
 				-- "Francois_Discovered":
 					add NumberListVarValue entry to Francois_Discovered;
 				-- "Francois_Undiscovered":

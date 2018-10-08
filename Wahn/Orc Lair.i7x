@@ -26,6 +26,10 @@ OrcSlaverStatus is a number that varies. OrcSlaverStatus is usually 0.
 OrcSlaverCaptureTime is a number that varies. OrcSlaverCaptureTime is usually 10000.
 Koghhstatus is a number that varies.
 
+Table of GameEventIDs (continued)
+Object	Name
+Orcish Slave Raid	"Orcish Slave Raid"
+
 Orcish Slave Raid is a situation.
 The sarea of Orcish Slave Raid is "Warehouse".
 when play begins:
@@ -338,19 +342,38 @@ to say LoseToOrcRaidRepeat:
 
 Section 2 - Orc Lair
 
+Table of GameRoomIDs (continued)
+Object	Name
+Orc Lair Side Entrance	"Orc Lair Side Entrance"
+
 Orc Lair Side Entrance is a room. It is a fasttravel. It is private.
 The description of Orc Lair Side Entrance is "     You're standing outside a side door leading into the Capitol District police station. Maybe it'd be a good idea not to stay here too long, with this being the main orc lair in the city. Sooner or later, one of them is bound to come out or return here...".
 
-West of Orc Lair Side Entrance is Dark Hallway 2.
+Table of GameRoomIDs (continued)
+Object	Name
+Dark Hallway 2	"Dark Hallway 2"
+
+Dark Hallway 2 is a room.
+Dark Hallway 2 is west of Orc Lair Side Entrance.
 The description of Dark Hallway 2 is "     You're in a long windowless hallway continuing to the west and ending at the side door of the building in the east. An unmarked door leads to the north. It's pretty dark in here with no windows or electricity for the lights on the ceiling.".
 
-North of Dark Hallway 2 is Observation Room.
+Table of GameRoomIDs (continued)
+Object	Name
+Observation Room	"Observation Room"
+
+Observation Room is a room.
+Observation Room is north of Dark Hallway 2.
 The description of Observation Room is "     This is a relatively small room with recording equipment and a one-way-mirror window in the west wall, allowing a view into the interrogation room to the west. Not much to see currently, though - it's pretty dark in there. Though from what you can make out of its contents... and the splash of what's clearly dried cum on the glass, you'd bet that room has seen quite a bit of use recently. Interestingly, the sound system is hooked up to a car battery standing on the single table in here - so you bet one could also hear everything going on next door clearly. Maybe it'd be worth your while to [bold type]wait[roman type] here and observe what might happen.".
 
 before going North from Dark Hallway 2:
 	say "     The door of the observation room is a bit warped or something, requiring you to wiggle and lift the doorknob a bit as you open it. That fact, together with the relatively small size of the room might actually make it a rare safe spot in the orc lair. If you do want to get some rest somewhere in here, this would be the place to do it...";
 
-West of Dark Hallway 2 is Dark Hallway 1.
+Table of GameRoomIDs (continued)
+Object	Name
+Dark Hallway 1	"Dark Hallway 1"
+
+Dark Hallway 1 is a room.
+Dark Hallway 1 is west of Dark Hallway 2.
 The description of Dark Hallway 1 is "     You're in a long windowless hallway continuing to the east and ending at the entrance of a large room in the west. From the sounds of many orcs talking, drinking and fucking that echo from in there, you're pretty sure you shouldn't go that way right now. Thankfully, with no electricity to run the lights, it's pretty dark in the hallway, so you're relatively safe in its shadowy length. A locked door bearing a plaque with 'Interrogation' on it leads to the north, while another with the sign 'Cells' lies to the south.".
 
 after going west from Dark Hallway 2 while a random chance of 1 in 2 succeeds:
@@ -359,8 +382,12 @@ after going west from Dark Hallway 2 while a random chance of 1 in 2 succeeds:
 after going north from Breeder Lockup A while a random chance of 1 in 2 succeeds:
 	say "     [OrcLairMainChamberWatching]";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Main Hall	"Main Hall"
 
-West of Dark Hallway 1 is Main Hall.
+Main Hall is a room.
+Main Hall is west of Dark Hallway 1.
 The description of Main Hall is "     This is the main hall of the orc lair, where the big brutes come to chug beer, hang out, fuck and fight. All the desks in what previously was the main working area of this police station have been pushed together to form a long table in the center of the room, which is laden with food and drink - whole kegs of beer and all kinds of other stuff. Mattresses and sofas brought in from somewhere else are strewn about the room - with some of them currently in use by the twenty-odd orcs present.".
 
 instead of going West from Dark Hallway 1:
@@ -451,13 +478,28 @@ instead of going West from Dark Hallway 2 while bodyname of player is "Orc Warri
 instead of going North from Breeder Lockup A while bodyname of player is "Orc Warrior" and player is pure and BoghrimMet is 0:
 	say "[BoghrimSlaveDeal]";
 
-West of Main Hall is Bright Hallway 1.
+Table of GameRoomIDs (continued)
+Object	Name
+Bright Hallway 1	"Bright Hallway 1"
+
+Bright Hallway 1 is a room.
+Bright Hallway 1 is west of Main Hall.
 The description of Bright Hallway 1 is "     You're in a long hallway with a big, wire-reinforced window at its end in the west. That and the row of still-working fluorescent lights on the ceiling illuminate it brightly. Two closed (and locked) doors flank the hallway to the north and south, while it extends further to the west and ends in the east at the main hall of the police station turned orc lair.".
 
-West of Bright Hallway 1 is Bright Hallway 2.
+Table of GameRoomIDs (continued)
+Object	Name
+Bright Hallway 2	"Bright Hallway 2"
+
+Bright Hallway 2 is a room.
+Bright Hallway 2 is west of Bright Hallway 1.
 The description of Bright Hallway 2 is "     You're in a long hallway that ends at a big, wire-reinforced window in the west wall. That and the row of still-working fluorescent lights on the ceiling illuminate it brightly. Two doors flank this section of the hallway to the north and south, with the northern one closed and locked, while the southern one hangs a bit crookedly and has a splintered ruin where its lock and handle once were.".
 
-South of Bright Hallway 2 is Police Station Lockerroom.
+Table of GameRoomIDs (continued)
+Object	Name
+Police Station Lockerroom	"Police Station Lockerroom"
+
+Police Station Lockerroom is a room.
+Police Station Lockerroom is south of Bright Hallway 2.
 The description of Police Station Lockerroom is "[PLRDesc]".
 PLRLooted is a number that varies.
 
@@ -539,7 +581,12 @@ to say OrcLairMainChamberWatching:
 			say "     As it splashes down, you realize that the creature consists of nothing but cum and has a feminine figure - though not for long, as the cum girl immediately starts to meld with the orc seed all around herself. She quivers and shifts, her face showing an expression of surprise as she looks down and sees green veins working their way through her body. When the rapid change of the cum creature finishes, it no longer looks female, but has the form of a burly and muscular, if a bit slimy-looking, orc. The newly transformed cum-orc gives a loud bellow and wades forward with sloshing movements to sink its mouth on the nearest orc's cock, hungry for more.";
 			say "     Finally shaking off the strange fascination that made you watch the things going on in there, you duck back into the dark shadows of the hallway. Getting caught up in between all the orcs in the main chamber of this police station turned orc lair is really something you should avoid - especially as they just might throw you in with their new pet at the moment.";
 
-South of Dark Hallway 1 is Breeder Lockup A.
+Table of GameRoomIDs (continued)
+Object	Name
+Breeder Lockup A	"Breeder Lockup A"
+
+Breeder Lockup A is a room.
+Breeder Lockup A is south of Dark Hallway 1.
 The description of Breeder Lockup A is "     You're in a room holding two large cells to the east and west - most likely originally the 'drunk tank' and another group holding cell. Now the orcs use them to lock up their newly caught slaves. A door to the north allows you to leave this place again. A bent nail to hold a key is driven into the south wall, well out of reach of anyone inside the cells.".
 
 Cell Door 1 is a door.
@@ -547,6 +594,10 @@ Cell Door 1 is west of Breeder Lockup A.
 Cell Door 1 is lockable and locked.
 The description of Cell Door 1 is "     A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it. [if CellDoorStatus is 1 or CellDoorStatus is 3]Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if]".
 Cell Key unlocks Cell Door 2.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Slave Cell 1	"Slave Cell 1"
 
 Slave Cell 1 is a room.
 Slave Cell 1 is west of Cell Door 1.
@@ -558,6 +609,10 @@ Cell Door 2 is east of Breeder Lockup A.
 Cell Door 2 is lockable and locked.
 The description of Cell Door 2 is "     A metal cell door, consisting of a sturdy frame and several cell bars, plus three crossbars. Its lock has a mechanism that locks itself when the door swings shut, as well as a spring at the top preventing it from standing open without someone holding on to it. [if CellDoorStatus is 2 or CellDoorStatus is 3]Though looking closer, you realize the lock has been busted and won't engage at all now - which makes this a pretty easy to escape cell[end if]".
 Cell Key unlocks Cell Door 2.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Slave Cell 2	"Slave Cell 2"
 
 Slave Cell 2 is a room.
 Slave Cell 2 is east of Cell Door 2.

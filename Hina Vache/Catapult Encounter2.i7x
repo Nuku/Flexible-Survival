@@ -5,6 +5,10 @@ The Bait of Diego is usually journal.
 BaitList is a list of objects that varies.[@Tag:NotSaved]
 the BaitList is {medkit, water bottle, soda, chips, food}.
 
+Table of GameEventIDs (continued)
+Object	Name
+Loaded Catapult	"Loaded Catapult"
+
 Loaded Catapult is a situation.
 The sarea of Loaded Catapult is "Outside".
 

@@ -9,6 +9,10 @@ ForcedBreederslutBoyTF is a number that varies.
 
 Section 1 - Lead-in Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Corrupt Kennel	"Corrupt Kennel"
+
 Corrupt Kennel is a situation.
 The sarea of Corrupt Kennel is "Forest".
 when play begins:
@@ -67,6 +71,10 @@ Instead of resolving Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! 
 	now Corrupt Kennel is resolved;
 
 Section 2 - Happy Puppy Kennel
+
+Table of GameRoomIDs (continued)
+Object	Name
+Happy Puppy Kennel	"Happy Puppy Kennel"
 
 Happy Puppy Kennel is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Happy Puppy Kennel is "[hpkdesc]".

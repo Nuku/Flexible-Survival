@@ -4,6 +4,10 @@ Section 1 - Save the Dame
 
 Kenaztalk is a number that varies.
 
+Table of GameEventIDs (continued)
+Object	Name
+Save the Dame	"Save the Dame"
+
 Save the Dame is a situation.
 Save the Dame is inactive.
 The sarea of Save the Dame is "High".

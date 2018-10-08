@@ -17,6 +17,10 @@ Azari_Corruption is a number that varies. Azari_Corruption is usually 0.
 
 Section 1 - Location & NPC
 
+Table of GameRoomIDs (continued)
+Object	Name
+Shag Shack Alley	"Shag Shack Alley"
+
 Shag Shack Alley is a room.
 North of Shag Shack Entrance is Shag Shack Alley.
 The description of Shag Shack Alley is "[ShagShackAlley_Desc]".

@@ -448,6 +448,7 @@ to say PercyCrafting1: [Con 1]
 		if player consents:
 			LineBreak;
 			say "     You hand Percy the materials who looks them over with experienced eye. 'Hmmm. This knife is old but well made, Likely military. Cold War maybe?' The Pangolin puts the two materials off the side before returning his focus to you. 'Anyways, this shouldn't take too long. I'll have to remove the blade and fasten it to the haft, then secure it with some binding. I should have it done in a [bold type]few hours[roman type].'";
+<<<<<<< HEAD
 			say "[bold type]pocketknife removed.[roman type][line break]";
 			LineBreak;
 			say "[bold type]Broke-Ass Hoe removed.[roman type][line break]";
@@ -455,6 +456,16 @@ to say PercyCrafting1: [Con 1]
 			now Stamina of Percy is 1;
 			delete Broke-Ass Hoe;
 			delete pocketknife;
+=======
+			LineBreak;
+			say "[bold type]Pocketknife removed.[roman type][line break]";
+			delete pocketknife;
+			LineBreak;
+			say "[bold type]Broke-Ass Hoe removed.[roman type][line break]";
+			delete Broke-Ass Hoe;
+			now Strength of Percy is a random number from 2 to 3; [sets the needed time to a random value]
+			now Stamina of Percy is 1;
+>>>>>>> upstream/master
 			CreditLoss 50;
 		else:
 			LineBreak;

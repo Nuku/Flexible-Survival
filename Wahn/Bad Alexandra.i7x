@@ -551,60 +551,60 @@ to say badAlexandraSex:
 		choose a blank row in table of fucking options;
 		now title entry is "Bend her over";
 		now sortorder entry is 1;
-		now description entry is "Bend her over a table and fuck the bitch.";
+		now description entry is "Bend her over a table and fuck the bitch";
 	[]
 	if player is male and lust of Alexandra <= 12:
 		choose a blank row in table of fucking options;
 		now title entry is "Against the wall";
 		now sortorder entry is 2;
-		now description entry is "Press your bitch against the wall and fuck her hard.";
+		now description entry is "Press your bitch against the wall and fuck her hard";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "All fours";
 		now sortorder entry is 3;
-		now description entry is "Fuck your bitch on all fours.";
+		now description entry is "Fuck your bitch on all fours";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal";
 		now sortorder entry is 4;
-		now description entry is "Take her up the ass.";
+		now description entry is "Take her up the ass";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now sortorder entry is 5;
-		now description entry is "Have Alexandra suck you off.";
+		now description entry is "Have Alexandra suck you off";
 	[]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Get cunnilingus";
 		now sortorder entry is 6;
-		now description entry is "Have Alexandra lick your snatch.";
+		now description entry is "Have Alexandra lick your snatch";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Lick Alexandra";
 	now sortorder entry is 7;
-	now description entry is "Lick Alexandra's snatch.";
+	now description entry is "Lick Alexandra's snatch";
 	[]
 	if player is not neuter and lust of Alexandra <= 12:
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 8;
-		now description entry is "69 with the dobie.";
+		now description entry is "69 with the dobie";
 	[]
 	if player is male and ( HP of Alexandra > 3 or lust of Alexandra > 12 ):
 		choose a blank row in table of fucking options;
 		now title entry is "Titty fuck";
 		now sortorder entry is 9;
-		now description entry is "Fuck those lovely melons of hers.";
+		now description entry is "Fuck those lovely melons of hers";
 	[]
 	if player is not neuter and level of Alexandra is 2 and lastfuck of Fang - turns >= ( 9 - HP of Fang):
 		choose a blank row in table of fucking options;
 		now title entry is "Threesome with Fang";
 		now sortorder entry is 10;
-		now description entry is "Share her with the wolf.";
+		now description entry is "Share her with the wolf";
 	[]
 	if vorelevel > 2 and glowing mushroom is owned:
 		choose a blank row in table of fucking options;
@@ -1124,6 +1124,10 @@ to AlexandraFeatAbsorb:
 		say "...";
 		[now AlexandraGains... is active;]
 
+Table of GameEventIDs (continued)
+Object	Name
+AlexandraHornyTrait	"AlexandraHornyTrait"
+
 AlexandraHornyTrait is a situation.
 AlexandraHornyTrait is inactive.
 The sarea of AlexandraHornyTrait is "Nowhere".
@@ -1152,6 +1156,10 @@ to AlexandraHornyTrait_Event:
 		say "     Grabbing her a bit more firmly by the neck, you draw Alexandra close and give her a demanding kiss. Feeling her hands on your body, you smile inwardly at her eagerness for sex, then pull her away from you and proclaim that she should get back to guarding the door. The needy bitch looks at you in surprise, her breath coming in short pants from the arousal that flared up in her. She frowns at the refusal to sate her needs, but you can see from the fact that her tail is still wagging that she isn't really cross with you. 'Bastard,' she says more as an observation than a curse, followed by the words, 'Don't let me wait too long, boss. I'm fucking dripping here.' With that, she steps back from you, shaking her chest in a last-minute try to entice you with her well-rounded breasts. She then saunters over to where she was leaning against the wall when you came in.";
 	add "Horny" to Traits of Alexandra;
 	now AlexandraHornyTrait is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+AlexandraBroodmTrait	"AlexandraBroodmTrait"
 
 AlexandraBroodmTrait is a situation.
 AlexandraBroodmTrait is inactive.
@@ -1191,6 +1199,9 @@ to AlexandraBroodmTrait_Event:
 	add "Fertility Treatment Option" to Traits of Alexandra;
 	now AlexandraBroodmTrait is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+AlexandraPlayersBitch	"AlexandraPlayersBitch"
 
 AlexandraPlayersBitch is a situation.
 AlexandraPlayersBitch is inactive.
@@ -1226,7 +1237,7 @@ Section 9 - Conversation on other NPCs
 
 [
 Thoughts on others:
-Coleen -
+Colleen -
 Elijah -
 Onyx -
 Icarus -
@@ -1244,7 +1255,7 @@ A_Sandra is a truth state that varies. A_Sandra is usually false.
 A_Sally is a truth state that varies. A_Sally is usually false.
 A_Sarah is a truth state that varies. A_Sarah is usually false.
 A_Sarah2 is a truth state that varies. A_Sarah2 is usually false.
-A_Coleen is a truth state that varies. A_Coleen is usually false.
+A_Colleen is a truth state that varies. A_Colleen is usually false.
 A_Solstice is a truth state that varies. A_Solstice is usually false.
 A_David is a truth state that varies. A_David is usually false.
 A_Elijah is a truth state that varies. A_Elijah is usually false.
@@ -1265,7 +1276,7 @@ to UpdateAlexandraNPCChat:
 	if A_Sandra is false and Sandra is bunkered, add 8 to AlexandraNPC;
 	if A_Sally is false and Sally is bunkered, add 9 to AlexandraNPC;
 [	if A_Sarah is false and Sarah is bunkered, add 10 to AlexandraNPC;]
-[	if A_Coleen is false and Coleen is bunkered, add 11 to AlexandraNPC;]
+[	if A_Colleen is false and Colleen is bunkered, add 11 to AlexandraNPC;]
 	if A_Solstice is false and Solstice is booked, add 12 to AlexandraNPC;
 	if A_David is false and David is booked, add 13 to AlexandraNPC;
 [	if A_Elijah is false and Elijah is bunkered, add 14 to AlexandraNPC;
@@ -1298,7 +1309,7 @@ to say AlexandraNPCChat:
 		-- 10:
 			say "[A_SarahComment]";
 		-- 11:
-			say "[A_ColeenComment]";
+			say "[A_ColleenComment]";
 		-- 12:
 			say "[A_SolsticeComment]";
 		-- 13:
@@ -1360,10 +1371,10 @@ to say A_SallyComment:	[Sally]
 	say "     'That huskybunny slut you found is quite a bit of fun, I must say. I borrowed her for a bit, boss,' she says with a wink. 'Now, I seen a lot of critters out there, but nothing quite like her. I'm not sure what you did to get your hands on such a sweet-ass fucktoy, but I expect you'll not be telling that story to the military if they ever get off their asses and get us out of here.";
 	now A_Sally is true;
 
-to say A_SarahComment: [Coleen]
+to say A_SarahComment: [Colleen]
 	say "...";
 
-to say A_ColeenComment: [Coleen]
+to say A_ColleenComment: [Colleen]
 	say "...";
 
 to say A_SolsticeComment:	[Solstice]

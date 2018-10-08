@@ -6,6 +6,10 @@ Version 4 of Leonard by Stripes begins here.
 
 Section 1 - Event and Lion's Den
 
+Table of GameEventIDs (continued)
+Object	Name
+Feline Friend	"Feline Friend"
+
 Feline Friend is a situation.
 The sarea of Feline Friend is "Park".
 when play begins:
@@ -22,6 +26,9 @@ Instead of resolving a Feline Friend:
 	now Feline Friend is resolved;
 	now battleground is "void";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Lion's Den	"Lion's Den"
 
 Lion's Den is a room. It is fasttravel. It is private.
 The description of Lion's Den is "[lionsdendesc]".
@@ -638,6 +645,10 @@ Section 4 - Finding a Violin
 
 Part 1 - Music Store		[perhaps add another instrument for a bunker NPC]
 
+Table of GameEventIDs (continued)
+Object	Name
+Music Store	"Music Store"
+
 Music Store is a situation. The level of Music Store is 2.
 The sarea of Music Store is "Outside".
 Music Store is inactive.
@@ -673,6 +684,10 @@ Instead of resolving Music Store:
 
 
 Part 2 - Concert Hall
+
+Table of GameEventIDs (continued)
+Object	Name
+Concert Hall	"Concert Hall"
 
 Concert Hall is a situation. The level of Concert Hall is 4.
 The sarea of Concert Hall is "High".
@@ -752,6 +767,10 @@ instead of navigating Lion's Den while HP of Leonard >= 10 and HP of Leonard <= 
 		say "You find yourself thinking of Leonard and want to return to him, but this reminds you that he's asked you to take care of an important task - dealing with those [bold type]hunting prides[roman type][one of]. Feeling a stronger bond to your pride sisters after the recital and orgy, protecting them is foremost in your mind[or]. Not wanting to return to your handsome lion master without completing the job, you decide to stay focused on that first[or]. Reminding yourself how much more pleased (and therefore passionate) he'll be when you come back victorious, you are eager to get the job done[or]. Thinking of those affectionate pride sisters you'd snuggled with during the concert, you want to protect them from being stolen away from Leonard[or]. Not wanting to get distracted by thoughts of sex with your handsome lion, you turn your thoughts back to dealing with those other felines first[in random order].";
 	else:
 		say "[Leonardrivalfight]";
+
+Table of GameEventIDs (continued)
+Object	Name
+Hunting Prides	"Hunting Prides"
 
 Hunting Prides is a situation. The level of Hunting Prides is 8.
 The sarea of Hunting Prides is "Park".

@@ -21,6 +21,10 @@ This is the zephyrad rule:
 	say "- Wrestling Wolf threat level reassessed to level 15."; ]
 	now Zephyr Lobby is known;
 
+Table of GameRoomIDs (continued)
+Object	Name
+Zephyr Lobby	"Zephyr Lobby"
+
 Zephyr Lobby is a room. "[zephyrlobbydesc]". It is fasttravel. It is private.
 earea of Zephyr Lobby is "High".
 
@@ -244,6 +248,10 @@ Chapter 2 - The Situations
 
 Book 1 - Beach
 
+Table of GameEventIDs (continued)
+Object	Name
+Beach Detector Site	"Beach Detector Site"
+
 Beach Detector Site is a situation. It is inactive.
 The sarea of Beach Detector Site is "Beach".
 
@@ -281,6 +289,10 @@ Instead of resolving a Beach Detector Site:
 
 Book 2 - Red Light District
 
+Table of GameEventIDs (continued)
+Object	Name
+Red Light Detector Site	"Red Light Detector Site"
+
 Red Light Detector Site is a situation. It is inactive.
 The sarea of Red Light Detector Site is "Red".
 
@@ -308,6 +320,10 @@ Instead of resolving a Red Light Detector Site:
 
 
 Book 3 - High Rise District
+
+Table of GameEventIDs (continued)
+Object	Name
+High Rise Detector Site	"High Rise Detector Site"
 
 High Rise Detector Site is a situation. It is inactive.
 The sarea of High Rise Detector Site is "High".
@@ -354,6 +370,10 @@ Instead of resolving a High Rise Detector Site:
 
 
 Book 4 - Park
+
+Table of GameEventIDs (continued)
+Object	Name
+Park Detector Site	"Park Detector Site"
 
 Park Detector Site is a situation. It is inactive.
 The sarea of Park Detector Site is "Park".

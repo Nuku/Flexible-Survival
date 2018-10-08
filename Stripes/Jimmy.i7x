@@ -5,6 +5,11 @@ Version 1 of Jimmy by Stripes begins here.
 Section 1 - Event
 
 [Situation opened by Good Alexandra]
+
+Table of GameEventIDs (continued)
+Object	Name
+Automaton Activity	"Automaton Activity"
+
 Automaton Activity is a situation. The level of Automaton Activity is 6. It is inactive.
 The sarea of Automaton Activity is "Capitol".
 

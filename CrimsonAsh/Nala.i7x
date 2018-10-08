@@ -8,6 +8,10 @@ Version 1 of Nala by CrimsonAsh begins here.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Harmless Joke	"Harmless Joke"
+
 Harmless Joke is a situation.
 The sarea of Harmless Joke is "Nowhere".
 
@@ -25,6 +29,10 @@ instead of navigating Grey Abbey Library while (Harmless Joke is active and Harm
 	now HP of Nala is 1; [flag set to remember the progress]
 	now Harmless Joke is resolved; [event won't happen again]
 
+Table of GameEventIDs (continued)
+Object	Name
+Fool Me Once	"Fool Me Once"
+
 Fool Me Once is a situation.
 The sarea of Fool Me Once is "Nowhere".
 
@@ -39,6 +47,10 @@ after resting while (Fool Me Once is active and Fool Me Once is not resolved and
 	say "     She lets out another laugh before speaking, 'Hehe you looked like a chicken with its head cut off, running around like mad!' She speaks in a slightly high-pitched yet oddly melodic voice before cracking down and laughing madly at her own prank before she turns and flees at a remarkable speed. Her small wings dart her down the hall and out of the bunker before you can fully register what just happened. You still try to rush after the little runt but she's long gone, her laughter still ringing in the air. Grunting in frustration you head back down to the bunker planning on using what time you have left of your rest productively to end this nuisance. You form a plan to feign sleep next time and catch the imp surprised.";
 	now HP of Nala is 2; [flag set to remember the progress]
 	now Fool Me Once is resolved; [won't happen again]
+
+Table of GameEventIDs (continued)
+Object	Name
+Fool Me Twice	"Fool Me Twice"
 
 Fool Me Twice is a situation.
 The sarea of Fool Me Twice is "Nowhere".

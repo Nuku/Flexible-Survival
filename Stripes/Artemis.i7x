@@ -33,6 +33,10 @@ Version 4 of Artemis by Stripes begins here.
 
 Section 1 - Encounter
 
+Table of GameEventIDs (continued)
+Object	Name
+Poor Kitty	"Poor Kitty"
+
 Poor Kitty is a situation.
 The sarea of Poor Kitty is "Midway".
 when play begins:

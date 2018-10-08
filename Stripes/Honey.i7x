@@ -20,6 +20,10 @@ to say honeylinkaction:
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Smashed Hive	"Smashed Hive"
+
 Smashed Hive is a situation.
 The sarea of Smashed Hive is "Park".
 when play begins:

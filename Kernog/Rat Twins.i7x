@@ -418,6 +418,10 @@ when play begins:
 
 Part B - Initial Event - Pirate Standoff
 
+Table of GameEventIDs (continued)
+Object	Name
+Pirate Standoff	"Pirate Standoff"
+
 Pirate Standoff is a situation.
 The sarea of Pirate Standoff is "Beach".
 
@@ -472,6 +476,10 @@ Instead of resolving a Pirate Standoff:
 
 Part C - Meeting the Twins again
 
+Table of GameEventIDs (continued)
+Object	Name
+Rat Twins Invitation	"Rat Twins Invitation"
+
 Rat Twins Invitation is a situation.
 The sarea of Rat Twins Invitation is "Nowhere".
 
@@ -523,6 +531,9 @@ to say ratTwincest:
 		LineBreak;
 		say "     You walk away, and pass the time getting some rest and chatting with the regular patrons of the place. A dozen minutes or so later, the door to the storage room opens and Violet comes out. 'Hey, it's nice to see you again. Don't be a stranger, come here,' she says as she notices you. Erin is on her heels, and wrap his arms around her chest, but freezes as he sees you, and turn the embrace into an awkward hug.'";
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange Island	"Strange Island"
 
 Strange Island is a situation.
 The sarea of Strange Island is "Nowhere".
@@ -576,6 +587,10 @@ to say TwinsRoleplay:
 		LineBreak;]
 
 Part E - Outside Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Tied Rat Twins	"Tied Rat Twins"
 
 Tied Rat Twins is a scavevent.
 When play begins:

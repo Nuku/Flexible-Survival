@@ -5,6 +5,10 @@ Version 1 of Micaela by Stripes begins here.
 
 Section 1 - Lead-in Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Easter Eggs	"Easter Eggs"
+
 Easter Eggs is a scavevent.
 The sarea of Easter Eggs is "Forest".
 when play begins:
@@ -67,6 +71,10 @@ to say micaelaintro_pass:
 
 
 Section 2 - Bunny House
+
+Table of GameRoomIDs (continued)
+Object	Name
+Bunny House	"Bunny House"
 
 Bunny House is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Bunny House is "[bunnyhousedesc]".

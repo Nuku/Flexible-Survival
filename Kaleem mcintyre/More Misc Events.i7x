@@ -9,6 +9,10 @@ FoxMasterEncounters is a number that varies.
 
 Section 1- Unorthodox Sight
 
+Table of GameEventIDs (continued)
+Object	Name
+Unorthodox Sight	"Unorthodox Sight"
+
 Unorthodox Sight is a situation.
 The sarea of Unorthodox Sight is "Red".
 when play begins:
@@ -43,6 +47,10 @@ Section 2 - Desperation
 
 Section 3 - Family Fun
 
+Table of GameEventIDs (continued)
+Object	Name
+Family Fun	"Family Fun"
+
 Family Fun is a situation.
 The sarea of Family Fun is "Beach".
 when play begins:
@@ -58,6 +66,10 @@ Instead of resolving a Family Fun:
 
 Section 4 - Magic
 
+Table of GameEventIDs (continued)
+Object	Name
+Ritual Location	"Ritual Location"
+
 Ritual Location is a situation.
 The sarea of Ritual Location is "Mall".
 
@@ -71,6 +83,10 @@ Instead of resolving a Ritual Location:
 	now Ritual Location is resolved;
 
 Section 5 - Auto Shop
+
+Table of GameEventIDs (continued)
+Object	Name
+Auto Shop	"Auto Shop"
 
 Auto Shop is a situation.
 The sarea of Auto Shop is "Red".

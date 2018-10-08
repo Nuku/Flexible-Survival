@@ -33,8 +33,8 @@ SarahCured is a number that varies.
 SarahShower is a number that varies.
 CarlSarahSex is a number that varies.
 
-ColeenSarahInteraction is a number that varies.
-lastColeenSarahInteraction is a number that varies. lastColeenSarahInteraction is usually 10000.
+ColleenSarahInteraction is a number that varies.
+lastColleenSarahInteraction is a number that varies. lastColleenSarahInteraction is usually 10000.
 
 CarlSarahInteraction is a number that varies.
 lastCarlSarahInteraction is a number that varies. lastCarlSarahInteraction is usually 10000.
@@ -53,6 +53,10 @@ DavidSarahInteraction is a number that varies.
 lastDavidSarahInteraction is a number that varies. lastDavidSarahInteraction is usually 10000.
 
 Section 1 - Sarah and the Husky pack
+
+Table of GameEventIDs (continued)
+Object	Name
+Husky Pack	"Husky Pack"
 
 Husky Pack is a situation. The level of Husky Pack is 8.
 the sarea of Husky Pack is "Outside".
@@ -318,6 +322,10 @@ to say HuskyAlphaWin:
 		say "     With a snarl, the male husky looks to his pack, anger teeming from his every motion, and a livid erection throbs against his toned abdomen. The furious eyes glare over you, and he spits, 'You ruined our fun, you ass. You're not worth my time.' Turning his back to you, he kicks at the dirt, digging it back to spatter across your form before he collects his pack and leaves.";
 
 
+Table of GameEventIDs (continued)
+Object	Name
+Medkit Parts	"Medkit Parts"
+
 Medkit Parts is a situation.
 HasParts is a number that varies.
 
@@ -338,7 +346,7 @@ The description of Sarah is "[SarahDesc]";
 
 to say SarahDesc:
 	if debugactive is 1:
-		say "     DEBUG -> SarahSlut: [SarahSlut], SarahTalk: [SarahTalk], SarahCured: [SarahCured], CarlSarahInteraction: [CarlSarahInteraction], lastCarlSarahInteraction: [lastCarlSarahInteraction], CarlSarahSex: [CarlSarahSex], ColeenSarahInteraction: [ColeenSarahInteraction], lastColeenSarahInteraction: [lastColeenSarahInteraction], EricSarahInteraction: [EricSarahInteraction], cboyEricSarahInteraction: [cboyEricSarahInteraction], lastEricSarahInteraction: [lastEricSarahInteraction], FangSarahInteraction: [FangSarahInteraction], lastFangSarahInteraction: [lastFangSarahInteraction]  <- DEBUG[line break]";
+		say "     DEBUG -> SarahSlut: [SarahSlut], SarahTalk: [SarahTalk], SarahCured: [SarahCured], CarlSarahInteraction: [CarlSarahInteraction], lastCarlSarahInteraction: [lastCarlSarahInteraction], CarlSarahSex: [CarlSarahSex], ColleenSarahInteraction: [ColleenSarahInteraction], lastColleenSarahInteraction: [lastColleenSarahInteraction], EricSarahInteraction: [EricSarahInteraction], cboyEricSarahInteraction: [cboyEricSarahInteraction], lastEricSarahInteraction: [lastEricSarahInteraction], FangSarahInteraction: [FangSarahInteraction], lastFangSarahInteraction: [lastFangSarahInteraction]  <- DEBUG[line break]";
 	if SarahSlut < 1:
 		project the figure of Sarah_clothed_icon;
 	else:
@@ -1057,7 +1065,7 @@ To say SarahPupstate:
 		increase otherhuskies by 1;
 	if Amy is booked:
 		increase otherhuskies by 1;
-	if Coleen is bunkered:
+	if Colleen is bunkered:
 		increase otherhuskies by 1;
 	if SarahPups > 11:
 		say "Sarah is surrounded by her large brood of [SarahPups] puppies, several of them vying for her attention at any one second in time. Fortunately this seems to make your little husky breeder happier than ever as she smiles at your and her puppies and rubs her belly in anticipation of many more litters to come.";
@@ -1257,26 +1265,26 @@ instead of going up from Grey Abbey Library while (Sarah is in Bunker and Carl i
 	if CarlSarahSex is 2:
 		say "[SarahCarlOral2F]";
 
-after going down from Grey Abbey Library while (Sarah is in Bunker and Coleen is in Bunker and ColeenSarahInteraction < 2 and SarahCured > 1 and (lastColeenSarahInteraction - turns > 6)):
+after going down from Grey Abbey Library while (Sarah is in Bunker and Colleen is in Bunker and ColleenSarahInteraction < 2 and SarahCured > 1 and (lastColleenSarahInteraction - turns > 6)):
 	move player to Bunker;
-	if ColeenSarahInteraction is 0:
+	if ColleenSarahInteraction is 0:
 		if debugactive is 1:
-			say "     DEBUG -> COLEEN & SARAH SPEND TIME TOGETHER 1 - ColeenSarahInteraction: [ColeenSarahInteraction] <- DEBUG[line break]";
-		say "[SarahColeenScene1]";
-	else if ColeenSarahInteraction is 1:
+			say "     DEBUG -> Colleen & SARAH SPEND TIME TOGETHER 1 - ColleenSarahInteraction: [ColleenSarahInteraction] <- DEBUG[line break]";
+		say "[SarahColleenScene1]";
+	else if ColleenSarahInteraction is 1:
 		if debugactive is 1:
-			say "     DEBUG -> COLEEN & SARAH SPEND TIME TOGETHER 2 - ColeenSarahInteraction: [ColeenSarahInteraction] <- DEBUG[line break]";
-		say "[SarahColeenScene2]";
+			say "     DEBUG -> Colleen & SARAH SPEND TIME TOGETHER 2 - ColleenSarahInteraction: [ColleenSarahInteraction] <- DEBUG[line break]";
+		say "[SarahColleenScene2]";
 
-to say SarahColeenScene1:
-	say "     As you enter the bunker, you see Sarah sitting cross-legged on her bed, with Coleen one row over on another. The two women smile and laugh as they chat with one another. Looks like the female soldier opened up a bit to her fellow bunker-dweller, now that Sarah has her sexual urges under control. Still, it is clear that she does keep her distance from the anthro husky - not wanting to risk infection even though she's become friends with the other woman.";
-	now ColeenSarahInteraction is 1;
-	now lastColeenSarahInteraction is turns;
+to say SarahColleenScene1:
+	say "     As you enter the bunker, you see Sarah sitting cross-legged on her bed, with Colleen one row over on another. The two women smile and laugh as they chat with one another. Looks like the female soldier opened up a bit to her fellow bunker-dweller, now that Sarah has her sexual urges under control. Still, it is clear that she does keep her distance from the anthro husky - not wanting to risk infection even though she's become friends with the other woman.";
+	now ColleenSarahInteraction is 1;
+	now lastColleenSarahInteraction is turns;
 
-to say SarahColeenScene2:
-	say "     As you enter the bunker, you see Sarah sitting cross-legged on her bed, with Coleen one row over on another. The two women each have an open MRE on their laps, sharing a meal and chatting with one another. Looks like the female soldier opened up a bit to her fellow bunker-dweller, now that Sarah has her sexual urges under control. Still, it is clear that she does keep her distance from the anthro husky - not wanting to risk infection even though she's become friends with the other woman.";
-	now ColeenSarahInteraction is 2;
-	now lastColeenSarahInteraction is turns;
+to say SarahColleenScene2:
+	say "     As you enter the bunker, you see Sarah sitting cross-legged on her bed, with Colleen one row over on another. The two women each have an open MRE on their laps, sharing a meal and chatting with one another. Looks like the female soldier opened up a bit to her fellow bunker-dweller, now that Sarah has her sexual urges under control. Still, it is clear that she does keep her distance from the anthro husky - not wanting to risk infection even though she's become friends with the other woman.";
+	now ColleenSarahInteraction is 2;
+	now lastColleenSarahInteraction is turns;
 
 after going down from Grey Abbey Library while (Sarah is in Bunker and Alexandra is in library and AlexandraSarahInteraction is 0 and SarahCured > 1): [initial Alexandra / Sarah meet]
 	move player to Bunker;

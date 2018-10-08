@@ -23,6 +23,10 @@ waterworks is a number that varies.[@Tag:NotSaved]
 resevquest is a number that varies.[@Tag:NotSaved]
 bookfind is a number that varies.[@Tag:NotSaved]
 
+Table of GameRoomIDs (continued)
+Object	Name
+Reservoir "Reservoir"
+
 Reservoir is a room. It is fasttravel.
 
 The description of Reservoir is "[reservoirdesc]".
@@ -42,13 +46,17 @@ instead of sniffing Reservoir:
 
 Section 1a - Reservoir Main Pathway
 
+Table of GameRoomIDs (continued)
+Object	Name
+Reservoir Main Pathway  "Reservoir Main Pathway"
+
 Reservoir Main Pathway is a room.
 Reservoir Main Pathway entry is a door. It is dangerous.
 
 The description of Reservoir Main Pathway entry is "There's something you may need important over here!" It is dangerous.
 
-West of Reservoir Main Pathway entry is Reservoir Main Pathway.
-North of Reservoir is Reservoir Main Pathway entry.
+Reservoir Main Pathway is west of Reservoir Main Pathway entry.
+Reservoir Main Pathway entry is north of Reservoir.
 
 The description of Reservoir Main Pathway is "[pathwaydesc]".
 
@@ -70,21 +78,57 @@ The marea of Reservoir Main Pathway entry is "Reservoir".
 
 Section 2 - Reservoir Events
 
+Table of GameEventIDs (continued)
+Object	Name
+For Purity's Sake "For Purity's Sake"
+
 For Purity's Sake is a situation. The Level of For Purity's Sake is 18.
+
+Table of GameEventIDs (continued)
+Object	Name
+Technical Assistance  "Technical Assistance"
 
 Technical Assistance is a situation. Technical Assistance is inactive.
 
+Table of GameEventIDs (continued)
+Object	Name
+Slightly Sidetracked  "Slightly Sidetracked"
+
 Slightly Sidetracked is a situation. Slightly Sidetracked is inactive.
+
+Table of GameEventIDs (continued)
+Object	Name
+Flight of stairs  "Flight of stairs"
 
 Flight of stairs is a situation. Flight of stairs is inactive.
 
+Table of GameEventIDs (continued)
+Object	Name
+ThreeDoors  "ThreeDoors"
+
 ThreeDoors is a situation. ThreeDoors is inactive.
+
+Table of GameEventIDs (continued)
+Object	Name
+The beast of the tainted waters "The beast of the tainted waters"
 
 The beast of the tainted waters is a situation. The beast of the tainted waters is inactive.
 
+Table of GameEventIDs (continued)
+Object	Name
+Fight to remember "Fight to remember"
+
 Fight to remember is a situation. Fight to remember is inactive.
 
+Table of GameEventIDs (continued)
+Object	Name
+PassionAfterTheBattle "PassionAfterTheBattle"
+
 PassionAfterTheBattle is a situation. PassionAfterTheBattle is inactive.
+
+Table of GameEventIDs (continued)
+Object	Name
+Sanctuary "Sanctuary"
 
 Sanctuary is a situation. Sanctuary is inactive.
 
@@ -100,6 +144,9 @@ Instead of resolving For Purity's Sake:
 		now For Purity's Sake is resolved;
 		now Technical Assistance is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+Technical Assistance  "Technical Assistance"
 
 Technical Assistance is a situation.
 The sarea of Technical Assistance is a "Reservoir".
@@ -157,6 +204,9 @@ to say resevfight1:
 	if T is 3:
 		challenge "spidergirl";
 
+Table of GameEventIDs (continued)
+Object	Name
+Slightly Sidetracked  "Slightly Sidetracked"
 
 Slightly Sidetracked is a situation.
 The sarea of Slightly Sidetracked is "Reservoir".
@@ -188,6 +238,9 @@ To say resevfight2:
 	if T is 4:
 		challenge "spidergirl";
 
+Table of GameEventIDs (continued)
+Object	Name
+Flight of stairs  "Flight of stairs"
 
 Flight of stairs is a situation.
 The sarea of Flight of stairs is "Reservoir".
@@ -203,6 +256,9 @@ Instead of resolving a Flight of stairs:
 		now Flight of stairs is resolved;
 		now ThreeDoors is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+ThreeDoors  "ThreeDoors"
 
 ThreeDoors is a situation;
 
@@ -310,6 +366,10 @@ This is the doorcheck rule:
 
 Section 3 - Reservoir Fight (Preparation)
 
+Table of GameEventIDs (continued)
+Object	Name
+The beast of the tainted waters "The beast of the tainted waters"
+
 The beast of the tainted waters is a situation.
 The sarea of The beast of the tainted waters is "Reservoir".
 
@@ -331,6 +391,10 @@ Instead of Resolving a The beast of the tainted waters:
 
 
 Section 4 - Reservoir (Fight)
+
+Table of GameEventIDs (continued)
+Object	Name
+Fight to remember "Fight to remember"
 
 Fight to remember is a situation.
 The sarea of Fight to remember is "Reservoir".
@@ -446,6 +510,10 @@ Instead of resolving a A Fight to remember:
 
 Section 5 - Water At Last
 
+Table of GameEventIDs (continued)
+Object	Name
+PassionAfterTheBattle "PassionAfterTheBattle"
+
 PassionAfterTheBattle is a situation.
 The sarea of PassionAfterTheBattle is "Reservoir".
 
@@ -464,6 +532,10 @@ Instead of resolving a PassionAfterTheBattle:
 		now Sanctuary is resolved;
 
 Section 6 - Sanctuary
+
+Table of GameEventIDs (continued)
+Object	Name
+Sanctuary "Sanctuary"
 
 Sanctuary is a situation.
 

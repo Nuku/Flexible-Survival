@@ -5,6 +5,10 @@ Version 1 of The Brushwood Café by Song begins here.
 
 Section 1 - Setup
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange Café	"Strange Café"
+
 Strange Café is a situation.
 The sarea of Strange Café is "Outside".
 

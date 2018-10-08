@@ -5,6 +5,10 @@ Version 2 of Museum by Sarokcat begins here.
 
 Section 1 - Museum environment
 
+Table of GameRoomIDs (continued)
+Object	Name
+Museum Foyer	"Museum Foyer"
+
 Museum Foyer is a room. It is fasttravel.
 The earea of Museum Foyer is "Museum".
 
@@ -19,8 +23,14 @@ instead of sniffing Museum Foyer:
 
 Museum entry is a door. "The museum halls stretch off towards the east.". It is dangerous.
 
-East of Museum foyer is Museum entry.
-East of Museum entry is Museum interior.
+Museum entry is east of Museum foyer.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Museum interior	"Museum interior"
+
+Museum interior is a room.
+Museum interior is east of Museum entry.
 
 The marea of Museum entry is "Museum".
 

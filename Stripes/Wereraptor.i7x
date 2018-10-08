@@ -17,6 +17,10 @@ Version 4 of Wereraptor by Stripes begins here.
 
 Section 0 - Event Activation
 
+Table of GameEventIDs (continued)
+Object	Name
+Paleontology Professor	"Paleontology Professor"
+
 Paleontology Professor is a situation. The level of Paleontology Professor is 7.
 The sarea of Paleontology Professor is "Campus".
 
@@ -687,6 +691,10 @@ Section 4 - Cure Events
 
 Part 1 - Greenhouse and Wolfsbane
 
+Table of GameEventIDs (continued)
+Object	Name
+Greenhouse	"Greenhouse"
+
 Greenhouse is a situation. The level of Greenhouse is 7. Greenhouse is inactive.
 The sarea of Greenhouse is "Campus".
 
@@ -752,6 +760,10 @@ the scent of wolfsbane is "     The wolfsbane has a strong scent that makes you 
 
 Part 2 - Getting the Knife
 
+Table of GameEventIDs (continued)
+Object	Name
+Getting the Knife	"Getting the Knife"
+
 Getting the Knife is a situation. The level of Getting the Knife is 7. Getting the Knife is inactive.
 The sarea of Getting the Knife is "Warehouse".
 
@@ -806,6 +818,10 @@ the scent of chainmail vest is "     There is little scent to the chainmail itse
 
 
 Part 3 - Dinosaur Skeleton
+
+Table of GameEventIDs (continued)
+Object	Name
+Dinosaur Skeleton	"Dinosaur Skeleton"
 
 Dinosaur Skeleton is a situation. The level of Dinosaur Skeleton is 9. Dinosaur Skeleton is inactive.
 The sarea of Dinosaur Skeleton is "Museum".

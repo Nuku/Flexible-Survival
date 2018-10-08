@@ -1,6 +1,11 @@
 Version 1 of Spike by Wahn begins here.
 [Version 1 - New Character]
 
+[ HP of Spike                                  ]
+[   0: not met yet                             ]
+[   1: recruited                               ]
+[  99: sent into the city                      ]
+[ 100: sent back to Alexandra                  ]
 
 [ libido of Spike - Spike in subby position    ]
 [  0: nothing yet                              ]
@@ -23,7 +28,7 @@ Version 1 of Spike by Wahn begins here.
 
 Section 1 - Introduction
 
-instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Library and a random chance of 1 in 4 succeeds):
+instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Library and libido of Alexandra > 2 and a random chance of 1 in 4 succeeds and 2 < 1): [disabled for now, character WIP]
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -63,13 +68,16 @@ instead of navigating Grey Abbey Library while (Alexandra is in Grey Abbey Libra
 		else:
 			LineBreak;
 			say "     Telling the young man that no, you [italic type]actually[roman type] just want him to go back to his mother hand help her keep on top of the unruly bunch of his siblings, Spike growls under his breath. Flinging the cigarette away with an angry flick of his wrist, the anthro canine grumbles, 'This is fucking stupid,' and looks to the ground sulkily. For a moment, it seems like he'll just reject your decision, but then he suddenly looks up at you and barks out, 'I thought that you'd be different. Like a real leader or something!' And with that, he turns his back to you, shuffling off to get back into the library.";
+			now HP of Spike is 100;
 	else: [send him away - you monster!]
 		LineBreak;
 		say "     As you tell the young dog that he should go off on his own, he freezes in motion for a second, not sure what to reply. Clearly, this is one option that he hadn't even considered when he played through things in his mind. You see him swallow nervously, glancing to the library entrance for a second before he shakes his head to himself. 'Okay then, I'll do it,' Spike says, his firm tone sounding just a little bit brittle to your ears as he pushes himself off from the wall. 'I'm gonna go make my own way, out there. Alone in the city,' he adds, taking a few slow steps down the road as if waiting to hear you say that he passed the test and that you'll keep him now. But no, all you give him is a wish for good luck, which leaves Spike standing there for a moment longer, his back turned to you, before he runs away, not stopping for one second before he is out of sight.";
 		decrease libido of Alexandra by 1; [one less teen following Alexandra around]
+		now HP of Spike is 99;
 
 to say SpikeAccepted:
 	say "     As you agree to take Spike along as your companion, his tail starts wagging up a storm and the young man says excitedly, 'Right on! We'll make this city ours! Let's have some fun!' With his hand lowering to rub the crotch of his jeans, you have little doubt what sort of 'fun' he expects to soon have. Taking another drag from his smoke, the anthro canine then flicks it aside and takes position by your side, steeling his expression to be properly tough and just a bit overbearing, as he expects the right-hand man of 'The Boss' would need to be.";
+	now HP of Spike is 1;
 
 Section 2 - Combat Pet
 
@@ -86,31 +94,34 @@ The assault of doberman companion is "[one of]Spike pounces your opponent, landi
 the fuckscene of doberman companion is "[SexWithSpike]".
 
 to say SummonSpike:
-	now Spike is nowhere;
-	if player is in Grey Abbey 2F and Spike is in Grey Abbey 2F: [summoning while standing next to him]
-		say "     ...";
+	if Spike is visible: [summoning while standing next to him]
+		say "     You give a sharp whistle and wave to Spike, directing him to follow you. The young canine quickly rushes to your side and takes his spot to support you.";
+		now Spike is nowhere;
 	else: [regular summoning]
-		say "     ...";
+		say "     And how do you want to do that? Cell phone reception kinda went downhill with the start of the nanite apocalypse and it's not like you can just magic up Spike to appear next to you. Go pick him up yourself.";
+		now companion of player is nullpet;
 
 to say DismissSpike:
-	move Spike to Grey Abbey Library;
-	if player is in Grey Abbey 2F: [regular dismiss]
-		say "     ...";
-	else: [dismissing him in the abbey]
-		say "     ...";
+	if player is in Sitting Area:
+		say "     You tell Spike that you don't need him right now. He looks at you with a somewhat disappointed expression, then shrugs and goes over to hang out in his improvised man-cave.";
+	else if player is booked or player is bunkered: [dismissing him in the abbey]
+		say "     You tell Spike that you don't need him right now. He looks at you with a somewhat disappointed expression, then shrugs and walks off, likely to hang out in his improvised man-cave on the upper floor.";
+	else:
+		say "     You tell Spike that you don't need him right now. He looks at you with a somewhat disappointed expression, glancing around. 'Err, okay then. I'll make my way back to the library. See ya, [if thirst of Spike is 1][name of player][else]Boss[end if].' With that said, he wanders off and is quickly out of sight.";
+	move Spike to Sitting Area;
 
 Section 3 - NPC
 
 Spike is a man.
 The description of Spike is "[SpikeDesc]".
 The conversation of Spike is { "<This is nothing but a placeholder!>" }.
-The scent of Spike is "     ...".
+The scent of Spike is "     Spike's scent of dog is almost drowned out by some sort of after-shave he's found out in the city. It's a good, masculine scent, you only wish he wouldn't be using quite as much of it.".
 
 to say SpikeDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Spike] <- DEBUG[line break]";
 	say "     Spike is young doberman that looks to be about eighteen years old. He clearly has been working out a bit, giving him a toned but not too bulky physique that should serve him well in a fight. The young man is dressed in a pair of ripped jeans, a skin-tight mesh shirt showing off his toned chest, as well as a loose-fitting collar around his neck, studded with spikes. With half of his head hair shaved off and the other half dyed neon green and hanging down one side of his face as a middling long strand, he certainly has a memorable look.";
-	if player is in Grey Abbey 2F:
+	if player is in Sitting Area:
 		say "     Having claimed a corner of the upper library floor as his, Spike has made a little man-cave for himself, dragging a mattress up from the bunker and setting the desk that had occupied the corner as a little reading nook on its side, to block a passage between two bookshelves. Posters of scantily dressed human women, as well as one or two with anthro furry erotic art have been pinned to the back wall so that he can look at them when lying down. Which Spikes does quite a bit, day-dreaming about things while stroking himself.";
 	else:
 		say "     Accompanying you on your travel throughout the city, he is never far away, usually just a step behind and a little to the side, serving as muscle and glowering at anyone who might dream of crossing you. As he notices your attention on himself, the doberman strokes a hand through his green-dyed hair and gives you a [if libido of Spike > 40]slightly frightened[else]respectful[end if] nod.";
@@ -137,10 +148,7 @@ instead of conversing doberman companion:
 			say "     Spike isn't here.";
 
 to say SpikeTalkMenu:
-
-to say SpikeTalkMenu:
 	LineBreak;
-	project the figure of Spike_face_icon;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -237,9 +245,14 @@ instead of fucking the Spike:
 
 to say SexWithSpike:
 	if (lastfuck of Spike - turns < 6): [he got fucked in the last 18 hours = 6 turns]
-		say "     <Reason why Spike doesn't feel like having sex right now. Exhaustion, duty, or otherwise>";
+		say "     Spike looks at you somewhat wide-eyed, then clears his throat. 'Uhm, I - I'm not ready for another round yet [if thirst of Spike is 1][name of player][else]Boss[end if]. Guess I need to build up my stamina to keep up with you.";
 	else: [ready for sex]
-		say "     As you walk up to Spike, <positive reaction at being approached for sex>";
+		if libido of Spike < 20 or libido of Spike is 100: [eager for any sex OR promised that he doesn't have to do gay stuff]
+			say "     As you walk up to Spike, he notices the horny look in your eyes and his tail starts wagging.";
+		else if libido of Spike < 40: [pressured into subby sex]
+			say "     Watching Spike as you approach him, you notice his Adam's Apple bounce a little as he swallows, apparently preparing himself to doing what you might demand of him.";
+		else if libido of Spike < 60: [forced into subby sex]
+			say "     Watching Spike as you approach him, you can't help but grin at the moment in which he notices your attention, flinching slightly before he steels himself for what you might force him to do next.";
 		wait for any key;
 		say "[SpikeSexMenu]";
 
@@ -248,7 +261,7 @@ to say SpikeSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male: [only males and herms can get a blowjob]
+	if player is male and libido of Spike is not 100: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -334,12 +347,20 @@ to say SpikeSex1: [oral on the player]
 		else if calcnumber is 2: [pressured into it]
 			LineBreak;
 			say "     Looking scornfully at the resistant young man, you tell him in no uncertain terms that you are very disappointed in his performance as your companion. After all, how can you count on him for important tasks if he even fails at the most simple things you give him as a test. Something even the most stupid slut you could pick up on the street would be capable of doing. Spike's face is a study of emotions as you make your accusation-filled little speech, going from disapproval, to shock, to a deep worry. He gulps when you come to a stop, looking at him expectantly, then slowly sinks to his haunches. A grin spreads over your face when you look at the trembling canine on the ground before you, especially as he gulps nervously when you push aside your clothes to free your [cock of player] shaft to stand erect before his eyes.";
-			say "     ...";
+			say "     Spike looks wide-eyed at your erection, either unsure about how to proceed or still not really wanting to do this. Doesn't matter which, as you place a hand on top of his head, then firmly push him towards your crotch and tell him to start licking. 'Uhm... okay. Will do, [if thirst of Spike is 1][name of player][else]Boss[end if],' he replies haltingly and glances up in the hope that you'll change his mind. It takes an impatient clearing of your throat to get him going finally. Submitting to what he must do to redeem himself in your eyes, the young man laps over your cock with his long, floppy tongue. The anthro doberman starts out slow, exploring the full length of your manhood in a novice's curiosity until he reaches the tip and slurps up the pre that already has leaked out of your slit. Closing his muzzle to swallow and raising his eyebrows at the unexpected and apparently enticing taste, Spike then goes back for more, licking over your dickhead again and again.";
+			WaitLineBreak;
+			say "     You allow the young canine a little while of just slurping at your tip, then eventually declare that it isn't enough and he needs to really go down on your dick. With that said, you reach down and cradle the back of his head in your fingers. Slowly pushing his head forward, you tell him to open wide. Spike's Adam's Apple bobs nervously as he swallows, then parts his muzzle and allows your erection to slide into it against the warm and slick surface of his broad tongue. Holding his head steady with your hand, you pump in and out of his muzzle with steady thrusts, enjoying the warmth of his mouth around your manhood. Part of you longs to just go all out in face-fucking your companion, but you temper the impulse to not overwhelm your sub in training. To stave off the temptation for now, pull out instead, then slap your drippingly wet shaft against the top of his muzzle, lying across its length.";
+			say "     Finding himself crossing his eyes to look at your cock, the canine whimpers in confusion, then looks up, the unspoken question of what to do now in his gaze. You simply give him a grin and tell him to lick. Eyebrows drawing together for a second, Spike takes a second to realize that his nose is pressed right against your balls, with that obviously being what you want serviced. Alexandra's son suppresses a whine as he slowly licks your balls, slurping over them and giving each one attention. Despite being totally new to it, he apparently is a natural at giving oral pleasure, and it doesn't take long before you have to tell him to get his muzzle around your dick again, as you want to blow in his mouth when you come. The kneeling young man nods silently and then takes your [cock of player] shaft into his muzzle, this time not even having to be led by your hand on his head.";
+			WaitLineBreak;
+			say "     Slowly getting used to what is expected of him, Spike gets back to his first solo blowjob, bobbing on your cock in a dutiful manner. Except the need for a slight smack to the back of his head as a reminder to cover his teeth with his lips, the young man actually does a nice job of it, clearly a quick study - if motivated [italic type]properly[roman type]. Soon, you can't suppress moans and grunts anymore and just let them out, loudly letting your companion know that you are about to come. He freezes for a second, tempted to pull off, then pushes aside his reluctance and instead intensifies his attack on your manhood. Closing his muzzle around it, Spike sucks hard, which serves very well to push you over the edge in very short notice. Hands shooting forward to clamp onto his canine head, you hump into his muzzle and keep his nose pressed against your crotch as spurts of cum splash the back of his throat. While you keep hold of Spike's head, the young man's hands grasp your legs, his grip tightening every time a new spurt of seed erupts into him.";
+			say "     You ride out your orgasm, filling the dobie's stomach with your load, then also pulling back to cover his tongue with more of the creamy fluid. Eventually, you pull Spike off your now sensitive cock and pat his head, telling him that he's proven himself - for now. As he stands before you, an expression of mixed relief and worry washes over his face, no doubt from Spike wondering what he might need to do next. You just throw an arm around his shoulders in a vaguely possessive fashion, then rub the dobie's hair and tell him that good things come to those who prove themselves to you. 'I'll make sure to remember that,' he answers and wipes off a spurt of cum from the side of his muzzle and wipes that off against his leg.";
 			now libido of Spike is 21; [pressured into it]
 		else if calcnumber is 3: [forced into it]
 			LineBreak;
-			say "     Stepping right into the young doberman's comfort zone, you give him not a second further to react, simply snatching him by the loose collar and using that convenient handhold to wrench him even closer. Spike lets out a somewhat choked gasp at suddenly being man-handled, his eyes wide in fear as your merciless gaze studies his face. Telling him that he gave himself to you, with everything this implies, you then physically push him down, making the anthro canine fall to his knees before you. A grin spreads over your face when you look at the trembling doberman on the ground, especially as he gulps nervously when you push aside your clothes to free your [cock of player] shaft to stand erect before his eyes.";
-			say "     ...";
+			say "     Stepping right into the young doberman's comfort zone, you don't give him even a second to react, simply snatching him by the loose collar and using that convenient handhold to wrench him even closer. Spike lets out a somewhat choked gasp at suddenly being man-handled, his eyes wide in fear as your merciless gaze studies his face. Telling him that he gave himself to you, with everything this implies, you then physically push him down, making the anthro canine fall to his knees before you. A grin spreads over your face when you look at the trembling doberman on the ground, especially as he gulps nervously when you push aside your clothes to free your [cock of player] shaft to stand erect before his eyes.";
+			say "     'But I - oommmphh,' Spike starts to say, which gives you just what you needed, an open mouth and warm doggy tongue to slide your dick against. Grabbing a handful of his green hair, you give him a sharp warning about not biting you, then hold the young man's head tightly and just slam your hips forward. Your erection slips easily between his lips, only stopping as his nose is pressed against your crotch. Spike sputters and coughs at the sudden intrusion of your cock, his hands moving to weakly grab your legs and push himself away - without much success, as you keep hold of him in an unrelenting grip. It feels kinda nice how his trembling tongue is moving against your cock as he tries to speak and or push your shaft aside and you leave him to struggle a bit, then finally reach down with your other hand and grab his throat. Squeezing lightly, you growl for him to hold still and listen, then lay out in no uncertain terms that he's yours to do with as you please.";
+			WaitLineBreak;
+			say "     You keep your grip on Spike's neck for a little while longer to allow his situation to fully sink in, then let go, chuckling a little as you feel the warmth of the shallow, panicky breaths that follow against your cock. Despite the fact that he has now given up struggling, you grab the young man's head with both hands, getting a good grip as you begin to face-fuck him. There are some gurgles and choking noises during your first few ";
 			now libido of Spike is 41; [forced into it]
 		else:
 			LineBreak;

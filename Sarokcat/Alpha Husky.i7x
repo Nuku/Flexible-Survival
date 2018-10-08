@@ -76,6 +76,10 @@ to say Alpha Husky attack:
 			delete fertile pill;
 			now Husky Gathering is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+Husky Gathering	"Husky Gathering"
+
 Husky Gathering is a situation. It is inactive.
 
 Instead of resolving Husky Gathering:

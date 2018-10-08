@@ -6,21 +6,70 @@ Smith Haven Mall by Wahn begins here.
 
 Section 1 - Mall Area
 
+Table of GameRoomIDs (continued)
+Object	Name
+Smith Haven Mall Lot North	"Smith Haven Mall Lot North"
+
 Smith Haven Mall Lot North is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Smith Haven Mall Lot East	"Smith Haven Mall Lot East"
+
 Smith Haven Mall Lot East is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Smith Haven Mall Lot South	"Smith Haven Mall Lot South"
+
 Smith Haven Mall Lot South is a room. It is fasttravel.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Smith Haven Mall Lot West	"Smith Haven Mall Lot West"
+
 Smith Haven Mall Lot West is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Mall Foyer	"Mall Foyer"
+
 Mall Foyer is a room. Mall Foyer entrance is a door. It is north of Mall Foyer and south of Smith Haven Mall Lot North.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Mall Atrium	"Mall Atrium"
+
 Mall Atrium is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Mall Foodcourt	"Mall Foodcourt"
+
 Mall Foodcourt is a room. Mall Food Court entrance is a door. It is south of Mall Foodcourt and north of Smith Haven Mall Lot South.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Mall East Wing	"Mall East Wing"
+
 Mall East Wing is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Mall West Wing	"Mall West Wing"
+
 Mall West Wing is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Mall Restroom	"Mall Restroom"
+
 Mall Restroom is a room.
 
-Southeast of Smith Haven Mall Lot North is Smith Haven Mall Lot East.
-Southwest of Smith Haven Mall Lot North is Smith Haven Mall Lot West.
-Southwest of Smith Haven Mall Lot East is Smith Haven Mall Lot South.
-Southeast of Smith Haven Mall Lot West is Smith Haven Mall Lot South.
+Smith Haven Mall Lot East is southeast of Smith Haven Mall Lot North.
+Smith Haven Mall Lot West is southwest of Smith Haven Mall Lot North.
+Smith Haven Mall Lot South is southwest of Smith Haven Mall Lot East.
+Smith Haven Mall Lot South is southeast of Smith Haven Mall Lot West.
 
 Instead of examining the Mall Foyer entrance:
 	say "Through the glass doors, you make out [the other side of the Mall Foyer entrance].";
@@ -114,7 +163,7 @@ To say mallfoyer:
 		say "     Your footsteps echo off the marble floor as you walk into the foyer. With it being dark outside right now, the only light in the area is coming from a few lanterns sitting on tables in a coffee shop. You see sitting around them [one of]two[or]three[or]four[at random] wolverines, all of them watching as you walk by the shop.";
 
 
-South of Mall Foyer is Mall Atrium.
+Mall Atrium is south of Mall Foyer.
 
 the scent of Mall Foyer is "The foyer smells heavily of male musk due to the wolverines.".
 
@@ -133,9 +182,9 @@ To say mallatrium:
 		say "     The dark, spacious, atrium is barely lit by the few lanterns some rats have set up on the edges of the large fountain sitting in the middle of the rotunda. Their quiet chatter can be heard echoing off the domed roof as they idly sit by the silent fountain, though you don't want to seem rude by eavesdropping on their conversation. With the HVAC system down, the air is stuffy and you can smell the light stench of stagnant water coming from the fountain's pool. To the north is the mall foyer. To the south is the entrance to the food court. To the east and west are the main wings of the mall.";
 
 
-East of Mall Atrium is Mall East Wing.
-South of Mall Atrium is Mall Foodcourt.
-West of Mall Atrium is Mall West Wing.
+Mall East Wing is east of Mall Atrium.
+Mall Foodcourt is south of Mall Atrium.
+Mall West Wing is west of Mall Atrium.
 
 [the scent of Mall Atrium is "The atrium smells of old, standing water coming from the fountain.".	]
 
@@ -178,7 +227,7 @@ To say mfcourt:
 	say "     There is a sign with a temporary notice standing in the hallway, stating that you enter the restrooms at your own risk. Strange - makes you wonder what exactly is in those rooms to the [bold type]east[roman type].";
 
 
-East of Mall Foodcourt is Mall Restroom.
+Mall Restroom is east of Mall Foodcourt.
 The earea of Mall Restroom is "Mall".
 Mall Restroom is not sleepsafe.
 
@@ -228,7 +277,12 @@ the scent of Mall Restroom is "It smells kind of bad in here with the open hole 
 
 Section 12 - Shag Shack
 
-Northeast of Smith Haven Mall Lot East is Shag Shack Entrance.
+Table of GameRoomIDs (continued)
+Object	Name
+Shag Shack Entrance	"Shag Shack Entrance"
+
+Shag Shack Entrance is a room.
+Shag Shack Entrance is northeast of Smith Haven Mall Lot East.
 Shag Shack Entrance is sleepsafe.
 The description of Shag Shack Entrance is "[ShagShackEntranceDesc]".
 
@@ -248,7 +302,12 @@ the scent of Shag Shack Entrance is "Scent of messy sex hangs in the air - which
 
 Section 13 - Branson & Partner Land Management
 
-North of Smith Haven Mall Lot North is Branson & Partner Reception. Branson & Partner Reception is sleepsafe.
+Table of GameRoomIDs (continued)
+Object	Name
+Branson & Partner Reception	"Branson & Partner Reception"
+
+Branson & Partner Reception is a room.
+Branson & Partner Reception is north of Smith Haven Mall Lot North. Branson & Partner Reception is sleepsafe.
 The description of Branson & Partner Reception is "[BPReceptionDesc]".
 
 to say BPReceptionDesc:
@@ -261,6 +320,10 @@ to say BPReceptionDesc:
 	else:
 		say "     The reception of the firm 'Branson & Partner Land Management' has an air of understated elegance that shows you're in a respectable business establishment. A granite-tiled floor and light gray walls set the frame for a modern-looking reception desk with a curved glass front. Beside it, a bright green potted plant gives the whole room a friendly feeling. The rest of the room is filled with several stands holding brochures about current lots the firm owns, flanking a small seating area of white leather armchairs.";
 		say "     Surprisingly, the reception is staffed even in the midst of everything going on - a pretty anthro doe wearing a pristine white shirt is sitting behind the desk, giving you a well-practiced welcoming smile. On second look, you notice that the glass front of the desk is only very lightly frosted, allowing a teasing view of the woman's long, cream-colored legs behind it.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+B&P Company Offices	"B&P Company Offices"
 
 B&P Company Offices is a room. B&P Company Offices is sleepsafe.
 The description of B&P Company Offices is "[BPOfficesDesc]".

@@ -144,6 +144,11 @@ When Play begins:
 Section 3 - Events
 
 [ Event by Wahn]
+
+Table of GameEventIDs (continued)
+Object	Name
+Hunted Survivor	"Hunted Survivor"
+
 Hunted Survivor is a situation.
 The sarea of Hunted Survivor is "Sealed".
 

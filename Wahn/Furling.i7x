@@ -7,6 +7,10 @@ when play begins:
 	add { "Furling" } to infections of Transgender; [Cuntboy]
 	add { "Furling" } to infections of furry;
 
+Table of GameEventIDs (continued)
+Object	Name
+Cheerleader vs Furling	"Cheerleader vs Furling"
+
 Cheerleader vs Furling is a situation. The level of Cheerleader vs Furling is 5.
 The sarea of Cheerleader vs Furling is "Campus".
 when play begins:

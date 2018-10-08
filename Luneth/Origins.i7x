@@ -21,6 +21,10 @@ to say VideoCameraUse:
 
 Section 2 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Lost Camera	"Lost Camera"
+
 Lost Camera is a situation.
 the sarea of Lost Camera is "Outside".
 

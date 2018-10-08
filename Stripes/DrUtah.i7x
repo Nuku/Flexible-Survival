@@ -28,6 +28,10 @@ UtahGender is a number that varies.
 
 Section 1 - Paleontology Office
 
+Table of GameRoomIDs (continued)
+Object	Name
+Paleontology Office	"Paleontology Office"
+
 Paleontology Office is a room. It is fasttravel. It is private.
 The description of Paleontology Office is "[paleodesc]".
 

@@ -119,6 +119,10 @@ instead of navigating Equinoid Camp while equinoidstatus is 10:
 
 Section 3 - Equinoid Camp
 
+Table of GameRoomIDs (continued)
+Object	Name
+Equinoid Camp	"Equinoid Camp"
+
 Equinoid Camp is a room. It is fasttravel. It is private. It is sleepsafe.
 The earea of Equinoid Camp is "Park".
 The description of Equinoid Camp is "[EquinoidCampDesc]".
@@ -129,6 +133,10 @@ to say EquinoidCampDesc:
 
 instead of sniffing Equinoid Camp:
 	say "The equinoid camp smells strongly of the horse people living there. The scent of long, lush grass and wild flowers hangs in the air.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Nakoma's Tent	"Nakoma's Tent"
 
 Nakoma's Tent is a room. It is private. It is sleepsafe.
 Nakoma's Tent is east of Equinoid Camp.

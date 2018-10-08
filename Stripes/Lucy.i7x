@@ -196,6 +196,10 @@ to say lucysex7:
 
 Section 4 - Mall Recall
 
+Table of GameEventIDs (continued)
+Object	Name
+Memories of the Mall	"Memories of the Mall"
+
 Memories of the Mall is a situation. It is inactive.
 The sarea of Memories of the Mall is "Outside".
 

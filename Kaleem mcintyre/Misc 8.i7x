@@ -5,6 +5,10 @@ Misc 8 by Kaleem mcintyre begins here.
 
 Section 1 - An Old Tale
 
+Table of GameEventIDs (continued)
+Object	Name
+An Old Tale	"An Old Tale"
+
 An Old Tale is a situation.
 The sarea of Old Tale is "High".
 When play begins:
@@ -21,6 +25,10 @@ Instead of resolving a Old Tale:
 
 Section 2 - Peace
 
+Table of GameEventIDs (continued)
+Object	Name
+Peace	"Peace"
+
 Peace is a situation.
 The sarea of Peace is "Plains".
 
@@ -36,6 +44,10 @@ Instead of resolving a Peace:
 
 Section - 3 Champion
 
+Table of GameEventIDs (continued)
+Object	Name
+Champion	"Champion"
+
 Champion is a situation.
 The sarea of Champion is "High".
 
@@ -50,6 +62,10 @@ Instead of resolving a Champion:
 
 
 Section 4 - Cosplay
+
+Table of GameEventIDs (continued)
+Object	Name
+Cosplay	"Cosplay"
 
 Cosplay is a situation.
 The sarea of Cosplay is "Red".
@@ -76,6 +92,10 @@ Section 5 - Fox hunt
 
 Section 6 - Fantasy
 
+Table of GameEventIDs (continued)
+Object	Name
+Fantasy	"Fantasy"
+
 Fantasy is a situation.
 The sarea of Fantasy is "High".
 When play begins:
@@ -90,6 +110,10 @@ Instead of resolving a Fantasy:
 
 
 Section 7 - Controversy
+
+Table of GameEventIDs (continued)
+Object	Name
+Controversy	"Controversy"
 
 Controversy is a situation.
 
@@ -140,6 +164,10 @@ Instead of resolving a Controversy:
 		now Resolution of Controversy is 1; [nah]
 
 Section 8 - Dr Feel Good
+
+Table of GameEventIDs (continued)
+Object	Name
+Dr Feel Good	"Dr Feel Good"
 
 Dr Feel Good is a situation.
 The sarea of Dr Feel Good is "Hospital". The level of Dr Feel Good is 5.

@@ -19,6 +19,10 @@ to say klauzlinkaction:
 
 Section 1 - Situation
 
+Table of GameEventIDs (continued)
+Object	Name
+Injured Felinoid	"Injured Felinoid"
+
 Injured Felinoid is a situation. The level of Injured Felinoid is 6.
 The sarea of Injured Felinoid is "Park".
 when play begins:

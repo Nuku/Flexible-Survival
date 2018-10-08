@@ -22,6 +22,10 @@ Version 2 of Zoo Events by Wahn begins here.
 MalakhiRelationship is a number that varies.
 BarnabasRelationship is a number that varies.
 
+Table of GameEventIDs (continued)
+Object	Name
+Circle of Life	"Circle of Life"
+
 Circle of Life is a situation.
 The sarea of Circle of Life is "Zoo".
 
@@ -74,6 +78,10 @@ Instead of resolving a Circle of Life:
 		say "     Trying not to listen to the frightened shouts, roars and growls coming from the direction both of the beast-people ran off in, you quickly walk the other way. One redeeming fact (maybe?) is that the noise goes on and on, so you don't think the predator went after the gazelles for food. Flashes of what might be going on between them instead dominate your imagination until you finally are out of earshot.";
 	now Circle of Life is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Jungle Chase	"Jungle Chase"
+
 Jungle Chase is a situation.
 The sarea of Jungle Chase is "Zoo".
 
@@ -117,6 +125,10 @@ Instead of resolving a Jungle Chase:
 		now Resolution of Jungle Chase is 3; [fled]
 	now Jungle Chase is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Meeting Malakhi	"Meeting Malakhi"
+
 Meeting Malakhi is a situation.
 The Prereq1 of Meeting Malakhi is Jungle Chase.
 The Prereq1Resolution of Meeting Malakhi is { 1, 2, 3 }.
@@ -158,6 +170,10 @@ Instead of resolving a Meeting Malakhi:
 		now Resolution of Meeting Malakhi is 4; [said you're out to enslave people]
 	now Meeting Malakhi is resolved;
 	now MalakhiRelationship	is 2; [talked to Malakhi]
+
+Table of GameEventIDs (continued)
+Object	Name
+Tiger Trick	"Tiger Trick"
 
 Tiger Trick is a situation.
 The Prereq1 of Tiger Trick is Meeting Malakhi.
@@ -213,6 +229,10 @@ Instead of resolving a Tiger Trick:
 		now MalakhiRelationship is 98; [didn't watch Malakhi play his trick on Sheera]
 		now Resolution of Tiger Trick is 4;
 	now Tiger Trick is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Zookeepers at Work	"Zookeepers at Work"
 
 Zookeepers at Work is a situation.
 The Prereq1 of Zookeepers at Work is Tiger Trick.
@@ -282,6 +302,10 @@ Instead of resolving a Zookeepers at Work:
 			now Resolution of Zookeepers at Work is 99; [ignored them]
 		now Zookeepers at Work is resolved; [for now]
 
+Table of GameEventIDs (continued)
+Object	Name
+Zookeepers at Play	"Zookeepers at Play"
+
 Zookeepers at Play is a situation.
 The Prereq1 of Zookeepers at Play is Zookeepers at Work.
 The Prereq1Resolution of Zookeepers at Play is { 1, 2, 3 }.
@@ -318,6 +342,10 @@ Instead of resolving a Zookeepers at Play:
 		now Resolution of Zookeepers at Play is 99; [ignored them]
 	now Zookeepers at Play is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Escaped Wolf Pack	"Escaped Wolf Pack"
+
 Escaped Wolf Pack is a situation.
 The sarea of Escaped Wolf Pack is "Zoo".
 
@@ -328,6 +356,10 @@ to EscapedWolfPackEvent: [Bent bars in zoo]
 	say "     As you walk along the path between the exhibits, you reflect on how the Zoo sort of lacks a purpose now that so many of the animals have escaped into the city, mutating and fusing with the residents. Beside you, the bars on some of the fencing are bent and broken, and viewing windows are shattered, leaving debris lying on the concrete below. Reaching the barrier around a pit, you read the information panel about its previous occupants. 'The Gray Wolf ([italic type]Canis lupus[roman type]) is a canine native to the wilderness and remote areas of Eurasia and North America. They are the largest living member of the wolf family. Its winter fur is long and bushy and predominantly a mottled gray in color, although nearly pure white, red, or brown to black can also occur.' A large tree has collapsed against one side, crushing the surrounding fence and explaining the complete absence of wolves in there.";
 	say "     You debate whether or not to clamber down, but decide that there is little point for such an action with so much risk of injury. You might heal, but why risk the pain? As you circle around the wolf pit, you reach another information board giving more facts about wolves. 'Gray wolves are social animals, traveling in family groups consisting of a mated pair, accompanied by the pair's adult offspring. The leader of this pack is called the Alpha. The gray wolf is typically an apex predator, with only humans and tigers posing a serious threat to it.' You hadn't really thought about wolves and tigers being in the same place, but thinking about some stories, you suppose that it shouldn't be that much of a surprise. You lose interest in the enclosure and continue on your way through the Zoo.";
 	now Escaped Wolf Pack is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Meerkat Patrol	"Meerkat Patrol"
 
 Meerkat Patrol is a situation.
 The sarea of Meerkat Patrol is "Zoo".
@@ -351,6 +383,10 @@ to MeerkatPatrolEvent: [Meerkats returning from an excursion to the city]
 		now Resolution of Meerkat Patrol is 2; [not so friendly]
 	now Meerkat Patrol is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Lemur Jerks	"Lemur Jerks"
+
 Lemur Jerks is a situation.
 The sarea of Lemur Jerks is "Zoo".
 
@@ -362,6 +398,10 @@ instead of resolving Lemur Jerks:
 	say "     As you're walking the stone-lined walkways of the zoo you hear a weird noise from behind you, followed by muffled laughter. Turning around, the source of it isn't immediately obvious - until another spurt of cum sprays right past your nose, just barely missing you. Glancing up you spot a group of what appear to be lemur-men in a large tree, making a sport of trying to hit you as they jerk off. It looks like there are about four of them up there, looking fairly close to what you know of regular lemurs: they're covered in brownish-red to gray hair and sport long furry tails with a black and white stripe pattern. What isn't so typical are the intelligent green eyes with which they observe you, or the fact that they're joking with one another like a group of horny frat boys. 'You always were shit at aiming, with a basketball or a dick!' one of them riles up the last one who came and missed you, while a third one is panting eagerly as he jerks himself with furious speed.";
 	say "     'Gnnngh! Watch and weep guys as I cream [ObjectPro of player]!' the lemur boasts, and despite the danger you can't help but catch your gaze on the massive ten-inch monster of a cock he is stroking between his legs. For a little guy, that's one freaking huge member! Of course, this means that you are barely in time to remember that you really should get some cover, jumping out of the way of your second close call at lemur bukkake today. The groaning and grunting monkey's friends holler and laugh as his seed splashes nothing but the ground, ribbing him mercilessly. Snickering and only throwing quick glances at you, they're mostly busy with each other. When the topic of 'You just wait, I'll be ready for another shot in a second' comes up, you decide it might be best to move on from the tree that houses these rascals. As you hurry off, the monkeys blow a raspberry after you and laugh among themselves.";
 	now Lemur Jerks is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Gazelle Breeding Bitch	"Gazelle Breeding Bitch"
 
 Gazelle Breeding Bitch is a situation.
 The sarea of Gazelle Breeding Bitch is "Zoo".
@@ -379,6 +419,10 @@ instead of resolving Gazelle Breeding Bitch:
 	say "     Liberally coated in gazelle cum, inside and out, the sated bitch slumps back on the ground, eyes closed but with a very content smile on her muzzle. Yet sadly, the calm and comfort of their shared moment doesn't last long, as loud rustling noises can be heard from somewhere close to them. Whatever it is, something big is moving through the underbrush, spooking the gazelles. The exhaustion of sex seemingly forgotten in an instant, the slender herms jump to their feet and get ready to flee. 'Help me carry her!' their leader calls out after a second or two, and before you can blink, they've lifted their canine bitch from the ground and start running off with her held between them. Left behind, you are the only one who can see that all the noise seems to have been a false alarm, as no horrible beast or anything ends up appearing on the path where the scene played out. With a shrug, you simply chuckle at the antics of the little herd and wonder what will become of them and their new bitch.";
 	now Gazelle Breeding Bitch is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Egged Tigress	"Egged Tigress"
+
 Egged Tigress is a situation.
 The sarea of Egged Tigress is "Zoo".
 
@@ -392,6 +436,10 @@ instead of resolving Egged Tigress:
 	WaitLineBreak;
 	say "     Telling yourself to watch out for any avians with horny expressions and yellow feathers that you might encounter, you leave the tigress to give birth in peace. As you go on your way, you can't help but wonder what the offspring will look like once they hatch. Sadly, staying to observe wouldn't likely be a good idea, as you might very well be jumped by all six of them if they noticed you.";
 	now Egged Tigress is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Panda Shepherd	"Panda Shepherd"
 
 Panda Shepherd is a situation.
 The sarea of Panda Shepherd is "Zoo".
@@ -409,6 +457,10 @@ instead of resolving Panda Shepherd:
 	now Panda Shepherd is resolved;
 
 
+Table of GameEventIDs (continued)
+Object	Name
+Elven Mount	"Elven Mount"
+
 Elven Mount is a situation.
 The sarea of Elven Mount is "Zoo".
 
@@ -424,6 +476,10 @@ instead of resolving Elven Mount:
 	WaitLineBreak;
 	say "     Focusing on you, the male cat growls between his teeth, clearly stating his claim on the woman he sheathed himself in. Then he gets back to fucking her again, using short, rapid thrusts to hump into her like the wild beast he is. His furious assault of her pussy pushes the elf forward, losing hold with her hands and landing face-first in the grass below. She doesn't seem to mind much, moaning and mumbling in ecstasy as she is fucked roughly by the feral male. After a few more moments of frantic mating, you notice that the cheetah's breathing getting heavier and his hip thrusts getting deeper, right before he hilts himself in his elven partner and cums. A huge load of feline cum starts to gush into her, pushing the elf to her own climax from the sensation of being bred by her beastly mate.";
 	say "     As the young woman lets out an ecstatic howl and claws up some of the grass she is slumped upon, a mixture of cum and femcum starts to ooze out around the feline's shaft, trickling down the insides of her legs. The elf stays still for a little while, just riding out the height of her orgasm, then eventually pushes herself back up onto all fours and glances your way. Seeing that you're still there and watching, she reaches between her legs and scoops some of the mixed fluids up, licking them off her own fingers with sensual pleasure before locking eyes with you again and winking. Her mate dismounts from the woman not long after, and the two of them curl up together in the back corner of the enclosure, happy to while away their time in there and seemingly with little interest to go out exploring again, now that they have found each other.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Cheetah Trade	"Cheetah Trade"
 
 Cheetah Trade is a scavevent.
 The sarea of Cheetah Trade is "Zoo".
@@ -457,6 +513,10 @@ instead of resolving Cheetah Trade:
 	now Cheetah Trade is resolved;
 
 
+Table of GameEventIDs (continued)
+Object	Name
+Bird Masturbation	"Bird Masturbation"
+
 Bird Masturbation is a situation.
 The sarea of Bird Masturbation is "Zoo".
 
@@ -480,6 +540,10 @@ instead of resolving Bird Masturbation:
 		say "     With a shrug, you push yourself off the wall and wander off, leaving the horny bird behind.";
 		now Resolution of Bird Masturbation is 2; [didn't watch the bird]
 	now Bird Masturbation is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Lemur Conga Gangbang	"Lemur Conga Gangbang"
 
 Lemur Conga Gangbang is a situation.
 The sarea of Lemur Conga Gangbang is "Zoo".

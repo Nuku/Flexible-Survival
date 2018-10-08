@@ -3,12 +3,16 @@ Version 2 of Tyr's Club by Kaleem mcintyre begins here.
 
 Section 1 - Tyr's Club
 
+Table of GameRoomIDs (continued)
+Object	Name
+Tyr's Club	"Tyr's Club"
+
 Tyr's Club is a room. It is private. It is fasttravel.
 
 The description of Tyr's Club is "Inside of the underground room hidden underneath an unused cabin inside of the park Tyr has made a large gym/fighting arena where several dozen mutants are busy training, exercising or else practicing some form of physical training. Over by the side you can see Tyr watching the collective with a wary eye. The Doberman is standing as strong and powerful as he usual is, but instead of being draped in his usual jeans and t-shirt he's only wearing a pair of cut-off camouflage shorts. Said shorts happen to be showing the Dobie's more than plentiful crotch off, and from the large bulge hiding within it would seem that Tyr is not lacking in the cock department."
 Tyr is in Tyr's Club.
-West of Tyr's Club is FightPit.
-North of Tyr's Club is Club Lockerroom.
+FightPit is west of Tyr's Club.
+Club Lockerroom is north of Tyr's Club.
 
 Instead of sniffing Tyr's Club:
 	say "The club smells heavily of sweat, tension, concentrated focus and lots of testosterone/estrogen.";
@@ -471,6 +475,10 @@ to say TyrWon_NoSex:
 
 Section 3 - Fight Pit
 
+Table of GameRoomIDs (continued)
+Object	Name
+FightPit	"FightPit"
+
 FightPit is a room.
 
 Instead of sniffing FightPit:
@@ -625,6 +633,10 @@ an everyturn rule:
 
 
 Section 7 - LockerRoom
+
+Table of GameRoomIDs (continued)
+Object	Name
+Club Lockerroom	"Club Lockerroom"
 
 Club Lockerroom is a room.
 

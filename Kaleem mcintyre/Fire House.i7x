@@ -4,17 +4,26 @@ Fire House by Kaleem mcintyre begins here.
 
 Section 1 - FireStation
 
+Table of GameRoomIDs (continued)
+Object	Name
+Fire Station 86	"Fire Station 86"
+
 Fire Station 86 is a room. It is fasttravel.
 earea of Fire Station 86 is "Outside".
 
 The description of Fire Station 86 is "At the far end of the downtown red light district area stands a red brick firehouse rising up almost virtuously in protest of the depravity that has currently taken hold of the once prominent metropolis. Immaculate as the day she had been first opened, the numbers 86 gleam almost smugly across the front side of the building. [if Kenaztalk is 0]From the way the garage doors are void of the usual sticky mess of cum, milk and other fluids it would seem as though someone has been taking especially good care of the place. Wondering if that said someone is still inside, and hoping that if they are they have kept some of their humanity intact, you walk over to the single garage door and then bang on the front to try and get somebody's attention. A minute or two later the large metal door rolls up, allowing you entrance. Entering into the cool building, you find that the firehouse is exactly as you would have imagined it to be[else]Wondering how Kenaz is doing you head for the door of the firehouse and then knock on the door. It takes less than a minute for the other man to come open the door for you[end if].".
 
-North of Fire Station 86 is Firehouse.
-
 the scent of Fire Station 86 is "The station smells relatively clean. Odd considering the things happening with the city as of now.".
 
 
 Section 1a - Firehouse
+
+Table of GameRoomIDs (continued)
+Object	Name
+Firehouse	"Firehouse"
+
+Firehouse is a room.
+Firehouse is north of Fire Station 86.
 
 KTO is a number that varies.
 Up of Firehouse is Sleeping Quarters.
@@ -705,6 +714,10 @@ Section 7 - Upstairs
 
 Down of Sleeping Quarters is Firehouse. UpperFirepole is in Sleeping Quarters.
 
+Table of GameRoomIDs (continued)
+Object	Name
+Sleeping Quarters	"Sleeping Quarters"
+
 Sleeping Quarters is a room.
 The description of Sleeping Quarters is "[SleepQuarters]".
 
@@ -765,6 +778,10 @@ carry out Firepolesliding:
 
 
 Section 9 - Pertho
+
+Table of GameEventIDs (continued)
+Object	Name
+Finding Pertho	"Finding Pertho"
 
 Finding Pertho is a situation.
 Finding Pertho is inactive.
@@ -910,6 +927,10 @@ Instead of conversing the DalmatianTroupe:
 
 
 Section 13 -NeverNeverLand
+
+Table of GameRoomIDs (continued)
+Object	Name
+NeverNeverland	"NeverNeverland"
 
 NeverNeverland is a room. It is unknown. It is private.
 

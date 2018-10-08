@@ -3,6 +3,10 @@ Version 1 of Apocalypse Store by DrGryphon begins here.
 
 "Adds new equipment for the player."
 
+Table of GameEventIDs (continued)
+Object	Name
+Clothing Store	"Clothing Store"
+
 Clothing Store is a scavevent. The sarea of Clothing Store is "Outside".
 
 instead of resolving Clothing Store:

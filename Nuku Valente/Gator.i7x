@@ -354,6 +354,10 @@ to say GatorDenFaceSit:
 			say "     While you had just serviced the gator's cunt, the thought of servicing her stomach somehow also sounds enticing. Despite the obvious danger of being eaten by the predator, you find yourself deciding if you really want to get the hungry reptile's attention before she's gone so that you can offer yourself as her snack.";
 			say "[GatorVoreOffer]";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Gator Den	"Gator Den"
+
 Gator Den is a room. "[gator den entrance]". It is unknown. It is fasttravel. It is private.
 
 [Turned off automatically going back to Grey Abbey after any den scene]

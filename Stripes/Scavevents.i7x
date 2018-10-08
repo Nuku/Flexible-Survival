@@ -6,6 +6,9 @@ Version 3 of Scavevents by Stripes begins here.
 
 "Adds a batch of random events which can occur while scavenging around the city."
 
+Table of GameEventIDs (continued)
+Object	Name
+Tight Fit	"Tight Fit"
 
 Section 1 - Tight Fit
 
@@ -94,6 +97,10 @@ Instead of resolving a Tight Fit:
 
 
 Section 2 - Protected Supplies
+
+Table of GameEventIDs (continued)
+Object	Name
+Protected Supplies	"Protected Supplies"
 
 Protected Supplies is a scavevent.
 The sarea of Protected Supplies is "Allzones".
@@ -199,6 +206,10 @@ Instead of resolving a Protected Supplies:
 
 Section 3 - Dropped Handbag
 
+Table of GameEventIDs (continued)
+Object	Name
+Dropped Handbag	"Dropped Handbag"
+
 Dropped Handbag is a scavevent.
 the sarea of Dropped Handbag is "Allzones".
 
@@ -242,6 +253,10 @@ Instead of resolving a Dropped Handbag:
 
 Section 4 - Dented Bike (by Wahn)
 
+Table of GameEventIDs (continued)
+Object	Name
+Dented Bike	"Dented Bike"
+
 Dented Bike is a scavevent.
 The sarea of Dented Bike is "Allzones".
 dentedbikecount is a number that varies.
@@ -271,6 +286,10 @@ Instead of resolving a Dented Bike:
 
 
 Section 5 - Looted Supermarket (by Wahn)
+
+Table of GameEventIDs (continued)
+Object	Name
+Looted Supermarket	"Looted Supermarket"
 
 Looted Supermarket is a scavevent.
 The sarea of Looted Supermarket is "Allzones".
@@ -336,6 +355,10 @@ Instead of resolving a Looted Supermarket:
 
 Section 6 - Abandoned Cars (by Wahn)
 
+Table of GameEventIDs (continued)
+Object	Name
+Abandoned Cars	"Abandoned Cars"
+
 Abandoned Cars is a scavevent.
 The sarea of Abandoned Cars is "Allzones".
 
@@ -372,6 +395,10 @@ Section 8 - Free Milk (by Wahn)
 
 Section 9 - Manna from Heaven (by Wahn)
 
+Table of GameEventIDs (continued)
+Object	Name
+Manna from Heaven	"Manna from Heaven"
+
 Manna from Heaven is a scavevent.
 The sarea of Manna from Heaven is "Outside".
 
@@ -382,6 +409,10 @@ Instead of resolving a Manna from Heaven:
 
 
 Section 10 - Plains Scavenging (by Kaleem)
+
+Table of GameEventIDs (continued)
+Object	Name
+Plains Scavenging	"Plains Scavenging"
 
 Plains Scavenging is a scavevent.
 The sarea of Plains Scavenging is "Plains"
@@ -503,6 +534,10 @@ Instead of resolving a Plains Scavenging:
 
 Section 11 - Garden Veggies
 
+Table of GameEventIDs (continued)
+Object	Name
+Garden Veggies	"Garden Veggies"
+
 Garden Veggies is a scavevent.
 The sarea of Garden Veggies is "Outside".
 veggiegardenfight is a number that varies.
@@ -549,6 +584,10 @@ Instead of resolving a Garden Veggies:
 
 
 Section 12 - Free Drink
+
+Table of GameEventIDs (continued)
+Object	Name
+Free Drink	"Free Drink"
 
 Free Drink is a scavevent.
 The sarea of Free Drink is "Campus".
@@ -608,6 +647,10 @@ Instead of resolving a Free Drink:
 
 Section 13 - Liefeld's Disease
 
+Table of GameEventIDs (continued)
+Object	Name
+DbLD	"DbLD"
+
 DbLD is a scavevent.
 The sarea of DbLD is "Allzones".
 
@@ -622,6 +665,10 @@ Instead of resolving a DbLD:
 
 
 Section 14 - Hospital Scavenging
+
+Table of GameEventIDs (continued)
+Object	Name
+Patient Rooms	"Patient Rooms"
 
 Patient Rooms is a scavevent.
 The sarea of Patient Rooms is "Hospital".
@@ -701,6 +748,10 @@ Instead of resolving a Patient Rooms:
 
 Section 15 - Shattered House
 
+Table of GameEventIDs (continued)
+Object	Name
+Shattered House	"Shattered House"
+
 Shattered House is a scavevent.
 The sarea of Shattered House is "Allzones".
 
@@ -764,6 +815,10 @@ Section 16 - Abandoned Milk (by cmacleod42)
 Section 17 - Scattered Clothing
 
 RandomItemPick is a number that varies.
+
+Table of GameEventIDs (continued)
+Object	Name
+Scattered Clothing	"Scattered Clothing"
 
 Scattered Clothing is a scavevent.
 The sarea of Scattered Clothing is "Allzones".

@@ -6,11 +6,19 @@ Version 4 of Church of the Maternal Beast by Guest Writers begins here.
 
 Book 1 - Rooms
 
+Table of GameRoomIDs (continued)
+Object	Name
+Beach Plaza	"Beach Plaza"
+
 Beach Plaza is a Room. "     As you step out of the dirty, ill-kempt street you are met surprised by the sunny scene spread out in front of you, an open and relatively clean plaza with steps leading down to a small stretch of public beach. There are various infected cavorting around in the sand and water, laughing and enjoying themselves. To the north is a church, its wide double doors open and inviting, and to the west is a set of stairs down onto the beach proper.".
 The Beach Plaza is fasttravel.
 The Beach Plaza is not known.
-Beach Exit is a door. Beach Exit is dangerous. The marea of Beach Exit is "Outside". Beach Exit is undescribed. Beach Exit is east of Beach Plaza. East of Beach Exit is Outside Exploration.
+Beach Exit is a door. Beach Exit is dangerous. The marea of Beach Exit is "Outside". Beach Exit is undescribed. Beach Exit is east of Beach Plaza. Outside Exploration is east of Beach Exit.
 [The Beach Plaza is private.]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Public Beach	"Public Beach"
 
 Public Beach is a Room. "[publicbeachdesc]".
 
@@ -19,13 +27,13 @@ to say publicbeachdesc:
 	say "     A few changed faces glance up at you, and a few smile friendlily, but otherwise you're left alone. There seem to be [if daytimer is day]a lot of aquatic infected here[else]quite a few aquatic infected here even at night[end if], otters & dolphins mainly, though one big hunk of an orca does stand out. He's got a whistle around his meaty neck and seems to be acting as the lifeguard here. He looks occupied right now however.";
 	say "     Thanks to the lifeguard, the immediate area on the beach seems peaceful enough, but things seem less supervised (and civilized) should you follow the sandy shoreline [link]southwards[as]south[end link]. Should you rather stay here and perhaps even get a snack, there's a small beach-side restaurant you can go [link]inside[as]in[end link]. The [link]west[end link] leads out onto some sand bars before the water gets too deep and choppy for the casual swimmer as those rocky outcroppings start to appear. To your [link]north[end link] is set of dirty dingy sheds. Should you wish to leave the beach, it is backed by a short block wall to the [link]east[end link] with stairs leading back up to the plaza.";
 
-West of Beach Plaza is Public Beach.
+Public Beach is west of Beach Plaza.
 
 Unsupervised Beach is a door. "The beach continues along to the south, but is unsupervised. Unlike here, you see few people around... perhaps for good reason." Unsupervised Beach is dangerous.
 The marea of Unsupervised Beach is "Beach".
 
-South of Public Beach is Unsupervised Beach.
-South of Unsupervised Beach is UnsupBeach. [Check]
+Unsupervised Beach is south of Public Beach.
+UnsupBeach is south of Unsupervised Beach. [Check]
 
 instead of sniffing the beach plaza:
 	say "The seashore is near. There is salt in the air.";
@@ -33,9 +41,12 @@ instead of sniffing the beach plaza:
 instead of sniffing Public Beach:
 	say "The salt in the air is reminiscent of high tide at the beach.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Church Hall	"Church Hall"
 
 Church Hall is a room. "     The inside of the Church is dim but not dark - relaxing, one could say. It seems all terribly normal, wooden pews filling much of the long hall, a smattering of heads sitting here and there. There's definitely no lack of space. There are some signs that whatever religion is practiced here, it's not anything you recognize. There are no crosses or other recognizable religious symbols. There are several freshly painted motifs however and they all seem to depict some great stylized beast offering protection and shelter to those near it. At the far end of the church, there seems to be a recessed door that, based on the outside of the building, must lead down some stairs.".
-North of Beach Plaza is Church Hall.
+Church Hall is north of Beach Plaza.
 There is a Notice Board in the Church Hall. It is rooted in place.
 There is a Confession Booth in the Church Hall. "Standing against one wall, the dark wood of the large confession booth catches the eye. It has been modified to allow even a large creature such of those Panther Taurs to fit inside.". It is Rooted in place.
 The invent of Church Hall is { "nullifying powder" }.
@@ -52,12 +63,19 @@ instead of sniffing the Overgrown Block:
 	else:
 		say "This deserted spot smells faintly of the seaside air.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Dirty Sheds	"Dirty Sheds"
 
 Dirty Sheds is a room. "     Set a way back from the beach, the row of dilapidated sheds were used to store things like lifesaving equipment and other stuff. Now the overlong grass makes it nearly impossible to open the doors, and that is if you could do something about the big rusted padlocks on most of the doors. One seems to have been broken into already however, the door hanging off its hinges and ransacked interior barely visible. Between two of the sheds there is one oddity, a path north has been worn into the overlong grass.".
-north of public beach is Dirty Sheds.
+Dirty Sheds is north of public beach.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Overgrown Block	"Overgrown Block"
 
 Overgrown Block is a room. "[block description]".
-North of Dirty Sheds is overgrown block.
+Overgrown Block is north of Dirty Sheds.
 
 to say block description:
 	if daytimer is night:	[night]

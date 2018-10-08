@@ -8,6 +8,10 @@ Section 1 - Anal Probing
 
 Section 2 - Birth
 
+Table of GameEventIDs (continued)
+Object	Name
+Birthing Time	"Birthing Time"
+
 Birthing Time is a situation.
 The sarea of Birthing Time is "Zoo".
 
@@ -34,6 +38,10 @@ Instead of resolving Birthing Time:
 
 
 Section 3 - Girl Time
+
+Table of GameEventIDs (continued)
+Object	Name
+Girl Time	"Girl Time"
 
 Girl Time is a situation.
 The sarea of Girl Time is "Red".
@@ -63,6 +71,10 @@ Instead of resolving Girl Time:
 
 Section 4 - Snake Charmer
 
+Table of GameEventIDs (continued)
+Object	Name
+Snake Charmer	"Snake Charmer"
+
 Snake Charmer is a situation.
 The sarea of Snake Charmer is "Zoo".
 
@@ -74,6 +86,10 @@ Instead of resolving Snake Charmer:
 
 
 Section 5 - Spiritual Love
+
+Table of GameEventIDs (continued)
+Object	Name
+Spiritual Love	"Spiritual Love"
 
 Spiritual Love is a situation.
 The sarea of Spiritual Love is "Park".

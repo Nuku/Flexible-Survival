@@ -3,6 +3,10 @@ Misc 9 by Kaleem mcintyre begins here.
 
 Section 2 - Mysterious
 
+Table of GameEventIDs (continued)
+Object	Name
+Clotho	"Clotho"
+
 Clotho is a situation.
 The sarea of Clotho is "Red".
 
@@ -16,6 +20,10 @@ Instead of resolving a Clotho:
 
 
 Section 3 - Crone
+
+Table of GameEventIDs (continued)
+Object	Name
+Atropis	"Atropis"
 
 Atropis is a situation.
 Atropis is inactive.
@@ -37,6 +45,10 @@ Instead of resolving Atropis:
 
 
 Section 4 - The Magic Cap
+
+Table of GameEventIDs (continued)
+Object	Name
+Magic Cap	"Magic Cap"
 
 The Magic Cap is a situation. The level of The Magic Cap is 5.
 The sarea of The Magic Cap is "Museum".
@@ -100,7 +112,11 @@ Section 5 - Fashion Statement
 
 fashionfight is a number that varies.
 
-Fashion statement is a situation.
+Table of GameEventIDs (continued)
+Object	Name
+Fashion Statement	"Fashion Statement"
+
+Fashion Statement is a situation.
 The sarea of Fashion Statement is "Campus".
 
 Instead of resolving a Fashion Statement:

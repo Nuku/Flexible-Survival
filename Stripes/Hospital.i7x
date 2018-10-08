@@ -9,6 +9,9 @@ Section 1 - City Hospital
 hospnav is a number that varies.
 hospstairs is a number that varies.
 
+Table of GameRoomIDs (continued)
+Object	Name
+City Hospital	"City Hospital"
 
 City Hospital is a room. It is fasttravel.
 The earea of City Hospital is "Hospital".
@@ -20,18 +23,26 @@ to say CityHospitalDesc:
 	say "     Inside the lobby, there are further signs of the chaos of transformations while staff tried to figure out what was happening. The waiting area is presently clear of people and creatures, through there is a lot of scattered clothes, as well as gurneys, crutches and other medical items. In some cases, these are piled up in an attempt to barricade the doors. It appears that searching will have another difficulty to it, as you won't be able to simply follow the hospital floor plans[if hospquest > 0] to that corner[end if].";
 	say "     From the shadows of one hall, you catch the glimpse of a strange, misshapen form before it slips further into the shadows of the hospital, away from the emergency lighting. It moved quite unevenly on its two malformed legs. Perhaps this place will be even more disturbing than the others you've searched before and you may want to rethink coming here.";
 
-Hospital Halls is a door. "To the north are a pair of double-doors leading into the hospital.". It is dangerous.
+Hospital Halls is north of City Hospital.
 
-North of City Hospital is Hospital Halls.
-North of Hospital Halls is Hospital interior.
+Hospital Halls is a door. "To the north are a pair of double-doors leading into the hospital.". It is dangerous.
 
 The marea of Hospital Halls is "Hospital".
 
 the scent of City Hospital is "The hospital smells predominantly of antiseptic, but beneath that is a layer of arousal and fear.".
 
+Table of GameRoomIDs (continued)
+Object	Name
+Hospital interior	"Hospital interior"
+
+Hospital interior is a room.
+Hospital interior is north of Hospital Halls.
 
 Section 2 - Hospital Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Hung Like A	"Hung Like A"
 
 Hung Like A is a situation.
 The sarea of Hung Like A is "Hospital".
@@ -41,6 +52,9 @@ Instead of resolving a Hung Like A:
 	increase score by 1;
 	now Hung Like A is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Pharmaceutical Storage	"Pharmaceutical Storage"
 
 Pharmaceutical Storage is a situation.
 The sarea of Pharmaceutical Storage is "Hospital".
@@ -91,6 +105,9 @@ to say drugsearch:
 		say "     You find a small syringe with cloudy, orange fluid in it and labelled as a [']libido suppressant['].";
 		increase carried of libido suppressant by 1;
 
+Table of GameEventIDs (continued)
+Object	Name
+Ambulance Dock	"Ambulance Dock"
 
 Ambulance Dock is a situation.
 The sarea of Ambulance Dock is "Hospital".
@@ -120,6 +137,9 @@ Instead of resolving a Ambulance Dock:
 	increase score by 1;
 	now Ambulance Dock is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Operating Room	"Operating Room"
 
 Operating Room is a situation.
 The sarea of Operating Room is "Hospital".
@@ -143,6 +163,9 @@ bonesaw is an armament. It is part of the player. It has a weapon "[one of]the b
 
 the scent of the bonesaw is "The bonesaw smells faintly of antiseptic and blood.".
 
+Table of GameEventIDs (continued)
+Object	Name
+Staff Lounge	"Staff Lounge"
 
 Staff Lounge is a situation.
 The sarea of Staff Lounge is "Hospital".
@@ -160,6 +183,9 @@ Instead of resolving a Staff Lounge:
 	increase score by 1;
 	now Staff Lounge is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Interruption	"Interruption"
 
 Interruption is a situation.
 The sarea of Interruption is "Hospital".
@@ -169,6 +195,9 @@ Instead of resolving a Interruption:
 	increase score by 1;
 	now Interruption is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Maternity Ward	"Maternity Ward"
 
 Maternity Ward is a situation.
 The sarea of Maternity Ward is "Hospital".
@@ -186,6 +215,9 @@ Instead of resolving a Maternity Ward:
 	increase score by 1;
 	now Maternity Ward is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Radiology	"Radiology"
 
 Radiology is a situation. The level of Radiology is 5.
 The sarea of Radiology is "Hospital".
@@ -280,6 +312,9 @@ to say hospfight4:		[no Raccoon, flags handled internally]
 		else:
 			challenge "Enhanced Chimera";
 
+Table of GameEventIDs (continued)
+Object	Name
+Pathology	"Pathology"
 
 Pathology is a situation. The level of Pathology is 5.
 The sarea of Pathology is "Hospital".
@@ -303,6 +338,9 @@ Instead of resolving a Pathology:
 	increase score by 1;
 	now Pathology is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Cafeteria	"Cafeteria"
 
 Cafeteria is a situation.
 The sarea of Cafeteria is "Hospital".
@@ -318,6 +356,9 @@ Instead of resolving a Cafeteria:
 	increase score by 1;
 	now Cafeteria is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Chaplaincy	"Chaplaincy"
 
 Chaplaincy is a situation.
 The sarea of Chaplaincy is "Hospital".
@@ -328,6 +369,9 @@ instead of resolving Chaplaincy:
 	increase score by 5;
 	now Chaplaincy is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Records Room	"Records Room"
 
 Records Room is a situation. The level of Records Room is 5.
 The sarea of Records Room is "Hospital".
@@ -348,6 +392,9 @@ instead of resolving Records Room:
 	increase score by 5;
 	now Records Room is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Surrounding Area	"Surrounding Area"
 
 Surrounding Area is a situation.
 The sarea of Surrounding Area is "Hospital".
@@ -357,6 +404,9 @@ instead of resolving Surrounding Area:
 	say "     As you continue to scout the area out, you consider slipping into one of the homes. Just as you're about to step into the open and head for the open door, a trio of those jaguar orderlies come into view as they turn a corner. They seem to be on patrol in the area, looking around very intently. You slip further into the shadows and wait for them to pass before leaving the neighborhood. It seems the orderlies are still scouring the area for any survivors they can grab and you'd rather not risk being caught by them.";
 	now Surrounding Area is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Stairwell	"Stairwell"
 
 Stairwell is a situation.
 The sarea of Stairwell is "Hospital".
@@ -371,6 +421,9 @@ Instead of resolving a Stairwell:
 		increase score by 5;
 		now Stairwell is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Missing Powder	"Missing Powder"
 
 Missing Powder is a situation. [Added by Blue Bishop]
 the sarea of Missing Powder is "Hospital".
@@ -403,11 +456,15 @@ An everyturn rule:
 
 Locked stairwell is a door. "Off to one side are a pair of heavy, metal doors leading to a stairwell."
 Locked stairwell is lockable and locked.
-Locked stairwell is up of City Hospital.
+Locked stairwell is above City Hospital.
 The description of Locked stairwell is "Off to one side are a pair of heavy, metal doors leading to a stairwell."
 
-Up of Locked stairwell is Hidden Lab
+Table of GameRoomIDs (continued)
+Object	Name
+Hidden Lab	"Hidden Lab"
 
+Hidden Lab is a room.
+Hidden Lab is above Locked stairwell.
 The description of Hidden Lab is "     Part of the hospital testing labs have been converted to be used by the white mouse to work on his analysis of the nanite infection. The short fellow has set up several small experiments that are running, likely analyzing some of the biological changes caused by the nanites. These are on the lab tables in the room while the mouse scurries around between them, occasionally having to climb up onto one of the stools to do his work.[line break]     Part of the room has been cleared out to make space for a small cot and collection of supplies. The cot doesn't look like it's been used recently and the food supplies are in disarray. The mouse is probably just grabbing a snack when he remembers to eat, being so focused on his work.[line break]     Off to one side of the room are a pair of collared and chained hybrids, a duo of those mismatched, patchwork chimeras. They have water and food dishes, as well as a small chemical toilet within reach of their tethers. At the moment, they are [one of]fucking[or]laying down[or]kissing[or]fondling one another[or]sleeping[or]eating[or]drinking[or]masturbating[at random].".
 
 the scent of the Hidden Lab is "The doctor's lab smells primarily of the chemicals and samples from his experiments, but this only partially masks the scents of sex from his chained chimeras.".
@@ -429,11 +486,17 @@ to say hospprogress:
 			if hospstairs is 1:
 				say ". Between that and the open stairwell you've found to get upstairs, you should now be successful at [bold type]finding a way in[roman type] to reach those illuminated upper rooms with a little searching.";
 
+Table of GameEventIDs (continued)
+Object	Name
+Finding a Way in	"Finding a Way in"
 
 Finding a Way in is a situation.
 Finding a Way in is inactive.		[unable to do this until activated]
 The sarea of Finding a Way in is "Hospital".
 
+an everyturn rule: [to restore the openness of the door after an export/import]
+	if Finding a Way in is resolved and locked stairwell is locked:
+		now locked stairwell is unlocked;
 
 Instead of resolving a Finding a Way in:
 	if hospnav > 2 and hospstairs > 0:		[at least 4 waypoints and the stairs up]
@@ -443,7 +506,6 @@ Instead of resolving a Finding a Way in:
 		now the player is in Hidden Lab;
 		now locked stairwell is unlocked;
 		now Finding a Way in is resolved;
-		now battleground is "void"; [prevents a post-event fight]
 	else:
 		say "     You continue searching the hospital, but are unable to find your way through, reaching another dead end. It seems you will have to continue to explore the hospital further to learn your way around.";
 
@@ -516,7 +578,7 @@ Instead of conversing the Doctor Mouse:
 			say "     'I had hoped to obtain some samples, but the creatures cannot be located. I don't have anything further for you,' the mouse says, shaking his head.";
 			say "     (Unable to proceed with current creature blocks. Girl, guy, herm and furry are all needed for subsequent segments.)";
 		else if DoctorMouseProgress minus turns < 8:
-			say "     'Please leave me to my research for the moment. I believe I shall have more need for you once I am done,' Doctor Mouse says as he waves you off dismissively while standing one of the lab stools to use one of the microscopes to examine a sample.";
+			say "     'Please leave me to my research for the moment. I believe I shall have more need for you once I am done,' Doctor Mouse says as he waves you off dismissively while standing on a lab stool to use one of the microscopes, examining a sample.";
 		else:
 			extend game by 16;
 			say "[hospquestpt3]";
@@ -1343,22 +1405,29 @@ instead of going to Trevor Labs Lobby while hospquest > 11:		[Lab unenterable af
 	else:
 		now the player is in Trevor Labs Lobby;
 
+Table of GameRoomIDs (continued)
+Object	Name
+Loading Dock	"Loading Dock"
 
 Loading Dock is a room.
 The description of Loading Dock is "This loading dock is discreetly placed behind and down the hill from Trevor Labs. The security gate outside it has been broken open. From the scattered clothes and splatters of dried, musky fluids around, it seems like some of those infected within got out before the security doors were closed. Using the keycard you found, you can slip in this way to go [link]down[end link] into the underground labs if you'd like. Otherwise, you can head [link]east[end link] around the hill again to get back to the main road.".
 
 undergroundlab is a door. undergroundlab is dangerous.
-Down of Loading Dock is undergroundlab.
-Down of undergroundlab is darkbasement2.
+undergroundlab is below Loading Dock.
+darkbasement2 is below undergroundlab.
 The marea of undergroundlab is "Sealed". The description of undergroundlab is "A security-locked door that is armored and sealed. Thankfully, the security card you found opens it.".
 
 the scent of Loading Dock is "This place has the stale smell of sex, as if nothing's left this place for some time.".
 
-aroundthehill is a door. east from Loading Dock is aroundthehill.
-east of aroundthehill is darkbasement2.
+aroundthehill is a door. aroundthehill is east from Loading Dock.
+darkbasement2 is east of aroundthehill.
 
 instead of going east from Loading Dock:
 	move player to Outside Trevor Labs;
+
+Table of GameRoomIDs (continued)
+Object	Name
+darkbasement2	"darkbasement2"
 
 darkbasement2 is a room. [placeholder room for the doors]
 
@@ -1415,6 +1484,10 @@ Instead of conversing the Valerie while hospquest is 8 and valhosp is 0 and valt
 	if nerminepackage is 2:
 		say "     The Viking great longboat? It's a brand new exhibit. One of the museum's archaeologists found it a year ago and it's finally ready and on display. It dates back about a thousand years and is the only [italic type]drekar[roman type] ever found. They were the largest of the Viking ships and feared by all. I can certainly understand why you'd want to see it while you're here. It's in the Medieval History wing. Just follow the signs for the Viking Longboat.";
 	now valhosp is 1;
+
+Table of GameEventIDs (continued)
+Object	Name
+Dinosaur Nest	"Dinosaur Nest"
 
 Dinosaur Nest is a situation.
 The sarea of Dinosaur Nest is "Museum".
@@ -1523,6 +1596,10 @@ Instead of conversing the Ronda Mallrat while nerminepackage > 0 and rondahosp i
 	say "     'Well, those kitty-litter heads didn't like that and started to get pushy about it. By that point, their boyfriends had had enough and rallied the troops to deal with them. That slutty vixen came running out of the store and the dude on her radio was squawking to know what was happening. We kicked the lot of them out. They came poking back once or twice, but they're not allowed to shop here anymore. We told Bruno, he's security, on them and that crazy wolverine and a few of the boys sent them packing.'";
 	now rondahosp is 1;
 ]
+
+Table of GameEventIDs (continued)
+Object	Name
+Viking Longboat	"Viking Longboat"
 
 Viking Longboat is a situation.
 The sarea of Viking Longboat is "Museum".

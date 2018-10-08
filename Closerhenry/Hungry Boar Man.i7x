@@ -17,6 +17,10 @@ PhilipWrestleEnd is a number that varies.
 
 Section 1 - The Situation
 
+Table of GameEventIDs (continued)
+Object	Name
+Hungry Piggy	"Hungry Piggy"
+
 Hungry Piggy is a situation.
 
 After resolving a hungry piggy, try looking;
@@ -32,6 +36,10 @@ Instead of Resolving a Hungry Piggy:
 
 
 Section 2 - Pig Pen
+
+Table of GameRoomIDs (continued)
+Object	Name
+Pig Pen	"Pig Pen"
 
 Pig Pen is a room. It is fasttravel. It is private.
 

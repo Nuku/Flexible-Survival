@@ -13,6 +13,10 @@ Section 2 - Panther Trap
 
 Section 3 - Intact Fountain
 
+Table of GameEventIDs (continued)
+Object	Name
+Intact Fountain	"Intact Fountain"
+
 Intact Fountain is a situation. The sarea of Intact Fountain is "Campus".
 
 instead of resolving an intact fountain:

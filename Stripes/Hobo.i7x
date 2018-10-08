@@ -5,6 +5,10 @@ Version 2 of Hobo by Stripes begins here.
 
 Section 1 - Encounter
 
+Table of GameEventIDs (continued)
+Object	Name
+Mournful Dog	"Mournful Dog"
+
 Mournful Dog is a situation.
 The sarea of Mournful Dog is "Hospital".
 hdog is a number that varies.

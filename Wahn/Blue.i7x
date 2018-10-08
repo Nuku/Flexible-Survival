@@ -21,7 +21,12 @@ BlueDesignator is a text that varies.
 
 Section 1 - Location
 
-North of Haven Community Center is Goo Refuge.
+Table of GameRoomIDs (continued)
+Object	Name
+Goo Refuge	"Goo Refuge"
+
+Goo Refuge is a room.
+Goo Refuge is north of Haven Community Center.
 The description of Goo Refuge is "[GooRefugeDesc]".
 Goo Refuge is sleepsafe.
 

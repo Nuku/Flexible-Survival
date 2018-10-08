@@ -321,6 +321,10 @@ When Play begins:
 
 Section 4 - Mutt Pack Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Mutt Pack Submission	"Mutt Pack Submission"
+
 Mutt Pack Submission is a situation.
 Mutt Pack Submission is inactive. [activated by fighting the mutt pack]
 The sarea of Mutt Pack Submission is "Junkyard".
@@ -384,6 +388,10 @@ to say PackSubmissionScenes:
 		WaitLineBreak;
 		say "     You shoot your load directly into his ass. Soaking it in your seed and causing the dog your fucking to howl in delight and loll his tongue out. His ass quivers around your member as you shoot the last ropes of your jism into your mutt. Seemingly unmoving and passed out you pull your cock from the abused ass of the dog. Your cock is still rock hard and as you look around you see the other four dogs with their backs turned and presenting they're winking assholes to you. A few of them shake in anticipation and you feel yourself driven forward, moving and thrusting your member in another mutt's ass.";
 		say "     You fuck the new dog raw, pounding him hard before pulling out and cumming on his furry back. Then you take the next, then the next, and finally you fuck the last beast surrounding you until you're surrounded by panting, cum covered canines. You yourself are staggering and drained dry from the pack of dogs. You wipe your cock clean on the ass of your final conquest and stand up slowly, stretching and giving one last look at the pack of mutts before smiling and heading off, eager to run into another pack.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Mutt Pack Attack	"Mutt Pack Attack"
 
 Mutt Pack Attack is a situation.
 Mutt Pack Attack is inactive.

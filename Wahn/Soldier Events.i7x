@@ -1,6 +1,10 @@
 Version 10 of Soldier Events by Wahn begins here.
 [Version 10 - David+Brutus]
 
+Table of GameEventIDs (continued)
+Object	Name
+Soldier Squad	"Soldier Squad"
+
 Soldier Squad is a situation.
 The sarea of Soldier Squad is "Warehouse".
 when play begins:
@@ -241,6 +245,10 @@ Instead of resolving a Soldier Squad:
 		now battleground is "void";
 		now Soldier Squad is resolved;  [for now]
 
+Table of GameEventIDs (continued)
+Object	Name
+Human Urges	"Human Urges"
+
 Human Urges is a situation.
 The sarea of Human Urges is "Red".
 when play begins:
@@ -256,6 +264,10 @@ Instead of resolving a Human Urges:
 	increase score by 5;
 	now Human Urges is resolved;
 	now battleground is "void";
+
+Table of GameEventIDs (continued)
+Object	Name
+Soldiers & Snowmeows	"Soldiers & Snowmeows"
 
 Soldiers & Snowmeows is a situation.
 The sarea of Soldiers & Snowmeows is "Red".
@@ -349,6 +361,10 @@ Instead of resolving a Soldiers & Snowmeows:
 		now SnowmeowSoldierStatus is 3;
 		now Soldiers & Snowmeows is resolved;  [for now]
 
+Table of GameEventIDs (continued)
+Object	Name
+Dangerous Load	"Dangerous Load"
+
 Dangerous Load is a situation.
 The sarea of Dangerous Load is "Outside".
 when play begins:
@@ -367,9 +383,22 @@ Instead of resolving a Dangerous Load:
 	WaitLineBreak;
 	say "     Getting over his shock in record time, Shaw grabs for another injector that he himself carries - only to find it cracked and broken by his hard landing. The soldier then looks around frantically for the original red tube - and he spots it moments later, rolling down the slightly inclined sidewalk towards you. 'Help me with that, quick!' he shouts to you, holding out his hand.";
 	say "     [bold type]So, what do you want to do now?[roman type][line break]";
-	say "     ([link]Y[as]y[end link]) - Kick the cylinder away from him, down the road.";
-	say "     ([link]N[as]n[end link]) - Snatch up the injector and throw it for the guy to catch.";
-	if player consents: [let the transformation happen]
+	say "     ([link]Y[as]y[end link]) - Snatch up the injector and throw it for the guy to catch.";
+	say "     ([link]N[as]n[end link]) - Kick the cylinder away from him, down the road.";
+	if player consents: [stop the transformation]
+		LineBreak;
+		say "     Proving cool under pressure, you grab the little cylinder from the ground and give it a skillful throw - sending it sailing through the air in what seems like slow motion, to be successfully caught by corporal Shaw. He literally rips the protective cap off its end and rams the injector into a still growing pec on his fellow soldier - whose transformation slows down rapidly, then stops fully. As soon as his muscles aren't under high tension anymore, private Kerry collapses with a groan. For a moment, nothing can be heard but the breathless panting of everyone involved as your bodies come down from all the excitement again.";
+		say "     Then you step a little closer and glance down upon private Kerry. Where the young man formerly was pretty slim, he's built like a football-player now and has grown at least half a foot, with two about three inch long horns poking out of his red buzz-cut hair on the left and right of his head. He shifts a little uncomfortably on the ground, pushing himself up - then pulls the tail he was lying on out from under himself and looks at it in surprise. It is thin and covered in short fur, with a bigger red tuft of fur at the end.";
+		WaitLineBreak;
+		say "     'Well, fuck!' corporal Shaw says from where he is leaning against the wall next to you, rubbing a hurting arm. 'Guess the booster shots don't last as long as usual when you're strongly exposed. Wouldn't that have been good to know before this fuck-up of an operation.' Yet another ripping sound draws your attention back to the muscular soldier on the ground - turns out he flexed his leg muscles to stand up and burst the increasingly ragged pants he's wearing, tearing them at the seams.";
+		say "     As Kerry stands up, he wavers a little on his thicker than before legs, which causes something to slip out of the large rip in his pants at the back, dividing the camo pattern fabric into what's basically just two flaps over his buttocks. The object falling to the ground interestingly bounces a little, once, twice, then rolls to a stop in the drain at the edge of the road - it's an electric blue butt-plug, wet with a creamy white sheen.";
+		WaitLineBreak;
+		say "     The young soldier out of whose ass it slipped starts to lean down to take it again, exposing his clearly well-fucked and cum-dripping asshole to both corporal Shaw and yourself. This prompts the other man to clear his throat and say, 'Leave it, kid. I - I don't think the sample you had is still valid now anyways.' Looking back at him and realizing his state of mostly un-dress, Kerry blushes and replies with a, 'Yes sir!' Then he scrambles to improvise at least a loincloth from his jacket, replacing the split pants.";
+		say "     The two soldiers gather their stuff, faces red with embarrassment, then talk with one another in quiet murmurs for a moment. Finally, private Kerry approaches you a bit shyly. 'Um, I gotta thank you for what you did. Helping me stop - you know... transforming. So. Here, take this - I can't wear it anyways now.' With that, he hands you his army helmet, as well as two MREs. The soldiers then march off, clearly not wanting to talk about what happened here.";
+		increase carried of food by 2;
+		increase carried of combat helmet by 1;
+		now Resolution of Dangerous Load is 3; [stopped the transformation]
+	else: [let the transformation happen]
 		LineBreak;
 		say "     Kicking the injector away from the desperate man, you see his eyebrows draw together in outrage. Corporal Shaw even makes a few steps towards you - in the course of which he misses the ever quicker transformation of his fellow soldier. Fabric tears and falls to the ground as he grows and grows, his face drawing out into a muzzle as the horns curve to the front, giving him an anthro bull's head. By now towering over the other man, the newly transformed minotaur makes a step forward on his furred legs ending in hooves, lowering his head to sniff at his superior.";
 		say "     The warm wash of air from minotaur Kerry's breath is the first sign for corporal Shaw that he's in big trouble, causing him to whirl around and gape at the hulking beast that was his squad-mate just minutes before. Gaze inevitably drawn to the thick and meaty shaft dangling between the bull-man's legs, Shaw gulps, then calls out, 'Private! Stand down! Fuck, Kerry! Don't do this kid! I'll use this if I must!' His hands snatch up the rifle hanging by a strap around his torso, threatening the minotaur with it.";
@@ -392,20 +421,11 @@ Instead of resolving a Dangerous Load:
 			LineBreak;
 			say "     Not in the mood to watch the results of your choice earlier, you snatch a dropped MRE, then get going, quickly ducking out of sight around the corner. Behind you, lusty bellows and shocked gasps echo through the streets until you're a block or two distant.";
 			now Resolution of Dangerous Load is 2; [kicked the booster away, didn't watch them fuck]
-	else: [stop the transformation]
-		LineBreak;
-		say "     Proving cool under pressure, you grab the little cylinder from the ground and give it a skillful throw - sending it sailing through the air in what seems like slow motion, to be successfully caught by corporal Shaw. He literally rips the protective cap off its end and rams the injector into a still growing pec on his fellow soldier - whose transformation slows down rapidly, then stops fully. As soon as his muscles aren't under high tension anymore, private Kerry collapses with a groan. For a moment, nothing can be heard but the breathless panting of everyone involved as your bodies come down from all the excitement again.";
-		say "     Then you step a little closer and glance down upon private Kerry. Where the young man formerly was pretty slim, he's built like a football-player now and has grown at least half a foot, with two about three inch long horns poking out of his red buzz-cut hair on the left and right of his head. He shifts a little uncomfortably on the ground, pushing himself up - then pulls the tail he was lying on out from under himself and looks at it in surprise. It is thin and covered in short fur, with a bigger red tuft of fur at the end.";
-		WaitLineBreak;
-		say "     'Well, fuck!' corporal Shaw says from where he is leaning against the wall next to you, rubbing a hurting arm. 'Guess the booster shots don't last as long as usual when you're strongly exposed. Wouldn't that have been good to know before this fuck-up of an operation.' Yet another ripping sound draws your attention back to the muscular soldier on the ground - turns out he flexed his leg muscles to stand up and burst the increasingly ragged pants he's wearing, tearing them at the seams.";
-		say "     As Kerry stands up, he wavers a little on his thicker than before legs, which causes something to slip out of the large rip in his pants at the back, dividing the camo pattern fabric into what's basically just two flaps over his buttocks. The object falling to the ground interestingly bounces a little, once, twice, then rolls to a stop in the drain at the edge of the road - it's an electric blue butt-plug, wet with a creamy white sheen.";
-		WaitLineBreak;
-		say "     The young soldier out of whose ass it slipped starts to lean down to take it again, exposing his clearly well-fucked and cum-dripping asshole to both corporal Shaw and yourself. This prompts the other man to clear his throat and say, 'Leave it, kid. I - I don't think the sample you had is still valid now anyways.' Looking back at him and realizing his state of mostly un-dress, Kerry blushes and replies with a, 'Yes sir!' Then he scrambles to improvise at least a loincloth from his jacket, replacing the split pants.";
-		say "     The two soldiers gather their stuff, faces red with embarrassment, then talk with one another in quiet murmurs for a moment. Finally, private Kerry approaches you a bit shyly. 'Um, I gotta thank you for what you did. Helping me stop - you know... transforming. So. Here, take this - I can't wear it anyways now.' With that, he hands you his army helmet, as well as two MREs. The soldiers then march off, clearly not wanting to talk about what happened here.";
-		increase carried of food by 2;
-		increase carried of combat helmet by 1;
-		now Resolution of Dangerous Load is 3; [stopped the transformation]
 	now Dangerous Load is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Lone Soldier	"Lone Soldier"
 
 Lone Soldier is a situation.
 The sarea of Lone Soldier is "Outside".
@@ -494,6 +514,10 @@ Instead of resolving a Lone Soldier:
 		say "     Gasping for breath and bruised, the soldier stumbles away from the beaten hyenas, then braces himself against a dumpster to compose himself. After a short moment, he looks back to his attackers, nodding to himself that they're no longer a threat. Then the man suddenly turns his head and looks right in your direction! He must have caught a glimpse of movement from you in the corner of his eye. 'Fuck, another savage!' he swears loudly and clenches his fist - but only for a second before he winces and looks down at his bruised knuckles. Fist-fights against anthro animals sure are hard on a guy and even with the ever-present nanites, it'll take some moments before he heals... so the soldier chooses retreat over an uncertain fight. Without another word, he starts to run for the other end of the alley, leaving you far behind in mere moments. Then he's gone around the far corner, out of sight.";
 		now Resolution of Lone Soldier is 5; [didn't warn Monty]
 	now Lone Soldier is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Containment Barrier	"Containment Barrier"
 
 Containment Barrier is a situation.
 The sarea of Containment Barrier is "Outside".

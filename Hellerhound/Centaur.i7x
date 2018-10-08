@@ -9,6 +9,10 @@ Section 1 - Dry Plains
 
 Section 2 - Tainted Centaur Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Apple Tree	"Apple Tree"
+
 Apple Tree is a situation. The level of Apple Tree is 6.
 The sarea of Apple Tree is "Plains".
 centaurmate is a number that varies.

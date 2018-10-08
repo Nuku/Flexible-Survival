@@ -25,6 +25,10 @@ to say alexscent:
 
 The description of Alex is "[if alexbrunch < 4]A mostly humanoid male with ferret-like ears and a long, sinuous tail. He has a twitchy animal nose with whiskers around it. He has a slightly rumpled suit on, still looking good despite his changes. He is a pleasant enough looking person who looks even better in those moments when he's not stressed or worried by his clients[else]Alex is a sexy ferret male, with a cute mustelid head. His twitchy animal nose has an array of whiskers around it. He has a slightly rumpled suit on, still looking good despite his changes. You find his new look quite pleasing to the eyes and he certainly seems much happier and friendlier of late. It seems the changes he's undergone are for the better[end if].".
 
+Table of GameRoomIDs (continued)
+Object	Name
+Alex's Condo	"Alex's Condo"
+
 Alex's Condo is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Alex's Condo is "     Near the top of the high rise condo building, Alex's home has an good view of the area, if partially blocked by several of the other surrounding high rises. His place is fairly well-maintained, the mustelid tidying up occasionally. It does have the faint, tangy smell of mustelid musk, but it's not too strong. It is well-furnished, with expensive, trendy-looking furniture and decor. The big screen television and large stereo are silent, but fill a sizable portion of one wall. Several pieces of classy art adorn the others, all matching nicely with each other and the room decor as a whole. There are several legal briefs and law books open on the coffee table in the living room. Scattered around the floor are several colorful rubber objects, clearly outlets for any ferrety urges[if alexbrunch > 3]. There has been an increase in the number of rubber toys and shiny things scattered around the condo as the lawyer's gotten more ferrety[end if]. A glance in the kitchen shows that it's not as tidy, and is equally ultra-modern, if now useless. He's set up a small camper stove on his stove top and is using that for cooking. Between bouts of manic ferretness, the mustelid lawyer is sitting on his couch, focusing on his papers.".
 
@@ -75,7 +79,11 @@ to say alexrandomtalk:
 
 Section 3 - The Search (Quests)
 
-Meet Alex is an situation.
+Table of GameEventIDs (continued)
+Object	Name
+Meet Alex	"Meet Alex"
+
+Meet Alex is a situation.
 The sarea of meet alex is "High".
 AlexProgress is a number that varies.
 AlexTalk is a number that varies.
@@ -101,6 +109,9 @@ Instead of resolving Meet Alex:
 		say "     'Ah. Well then, if you change your mind, here's my address.' You now have access to Alex's Condo!";
 	now Meet Alex is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Find Lorenda	"Find Lorenda"
 
 Find Lorenda is a situation.
 The sarea of Find Lorenda is "Red".
@@ -184,9 +195,18 @@ instead of conversing the Alex while gettinglee > 4 and alexleeinfo is 0:
 	say "     Normally, I shouldn't divulge information about a client's case, but this is an emergency and you can be considered part of my staff.' He slips a paper from one of the case files on his table. This memo that Lee found discusses under the table deals between members of the governor's staff and the city councillors of several cities in the area. If that's really Lee in there, mention that I want to talk with him about these names here and he should realize that you could only get that info from me. If it's not him, it won't mean anything to that person and the information is still safe until brought to court.";
 	now alexleeinfo is 5;
 
+Table of GameRoomIDs (continued)
+Object	Name
+Lee's Shed	"Lee's Shed"
 
 Lee's Shed is a room.
-West of Dirty Sheds is Lee's Room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Lee's Room	"Lee's Room"
+
+Lee's Room is a room.
+Lee's Room is west of Dirty Sheds.
 
 Instead of going west from dirty sheds:
 	if AlexProgress is 4:

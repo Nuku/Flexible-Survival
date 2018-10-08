@@ -297,6 +297,10 @@ Would you like to continue anyway?";
 			unless the player consents:
 				stop game abruptly.
 
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Royal Albert Hall	"Royal Albert Hall"
+
 	Royal Albert Hall is a room.
 
 	Test me with "listen".

@@ -4,6 +4,10 @@ Version 1 of Velos by Blue Bishop begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange Serpent	"Strange Serpent"
+
 Strange Serpent is a situation. The minscore of Strange Serpent is 200.
 The sarea of Strange Serpent is "Mall".
 

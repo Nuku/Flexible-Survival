@@ -225,6 +225,10 @@ to wolfmaninfect:
 
 Section 3 - Event and Wolfman Lair
 
+Table of GameEventIDs (continued)
+Object	Name
+Entrance to the Lair	"Entrance to the Lair"
+
 Entrance to the Lair is a situation. The level of Entrance to the Lair is 5. Entrance to the Lair is inactive.
 The sarea of Entrance to the Lair is "Outside".
 
@@ -241,6 +245,10 @@ Instead of resolving a Entrance to the Lair:
 	now Wolfman Lair is known;
 	now Entrance to the Lair is resolved;
 	move player to Wolfman Lair;
+
+Table of GameRoomIDs (continued)
+Object	Name
+Wolfman Lair	"Wolfman Lair"
 
 Wolfman Lair is a room. It is fasttravel. It is private.
 The description of Wolfman Lair is "[lairdesc]".

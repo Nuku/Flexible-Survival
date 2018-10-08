@@ -7,6 +7,10 @@ piginitiation is a number that varies.
 
 Section 1 - Initial Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Frat House	"Frat House"
+
 Frat House is a situation. The level of Frat House is 3.
 The sarea of Frat House is "Campus".
 when play begins:
@@ -23,6 +27,10 @@ Instead of resolving a Frat House:
 
 
 Section 2 - Phi Iota Gamma Frat House
+
+Table of GameRoomIDs (continued)
+Object	Name
+Phi Iota Gamma	"Phi Iota Gamma"
 
 Phi Iota Gamma is a room. It is fasttravel. It is private.
 The description of Phi Iota Gamma is "[phiiotagammadesc]".

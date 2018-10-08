@@ -18,6 +18,10 @@ Version 1 of Rane by Wahn begins here.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Rooftop Rumble	"Rooftop Rumble"
+
 Rooftop Rumble is a situation. The level of Rooftop Rumble is 7.
 The sarea of Rooftop Rumble is "Warehouse".
 
@@ -169,6 +173,10 @@ to say MeetRane:
 		LineBreak;
 		say "     You watch as Rane takes off in one direction, not looking back to see if you're following as he bounds over the asphalt. Thinking about everything you saw and heard, despite having been 'saved' by him, you still don't feel quite comfortable in just going with someone you just met and don't actually know. Before long he's disappeared and you make the decision to get going yourself - not in the direction he went though.";
 		say "     Part of you feels bad for seemingly walking out like that. A thought crosses your mind as you realize that the direction Rane was heading in coincides with where the City Park would be, you wonder if maybe exploring the [bold type]park[roman type] and hunting for the [bold type]blue oni[roman type] would be an option if you had a change of heart in the future?";
+
+Table of GameEventIDs (continued)
+Object	Name
+blue Oni	"blue Oni"
 
 The blue Oni is a situation.
 The Prereq1 of The blue Oni is Rooftop Rumble.

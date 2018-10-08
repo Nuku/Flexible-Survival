@@ -697,6 +697,10 @@ Example: * Reading Email - A laptop set up with a password lock program that giv
 
 	Include Computers by Emily Short.
 
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Conference Room	"Conference Room"
+
 	Conference room is a room.
 
 	The conference table is a thing in the Conference Room. The small laptop is a laptop on the conference table.
@@ -723,6 +727,10 @@ Example: * USB Drive - A very simple implementation of a laptop that can search 
 	*: "USB Drive"
 
 	Include Computers by Emily Short.
+
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Ventilation Duct	"Ventilation Duct"
 
 	The Ventilation Duct is a room.
 
@@ -765,6 +773,10 @@ We also want the computer to revert back to the operating system if switched off
 	*: "Operations"
 
 	Include Computers by Emily Short.
+
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Conference Room	"Conference Room"
 
 	Conference room is a room.
 
@@ -843,6 +855,10 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 	*: "Balance Checking"
 
 	Include Computers by Emily Short.
+
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Bank Forecourt	"Bank Forecourt"
 
 	The Bank Forecourt is a room. The High Street is north of Bank Forecourt.
 

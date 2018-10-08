@@ -5,6 +5,10 @@ Version 3 of Down Under Pub by Stripes begins here.
 
 Section 1 - Aussie Pub Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Aussie Pub	"Aussie Pub"
+
 Aussie Pub is a situation.
 The sarea of Aussie Pub is "Red".
 lastpubvisit is a number that varies.
@@ -65,6 +69,10 @@ Instead of resolving a Aussie Pub:
 
 
 Section 2 - Down Under Pub
+
+Table of GameRoomIDs (continued)
+Object	Name
+Down Under Pub	"Down Under Pub"
 
 Down Under Pub is a room. "[down under pub scene]". It is unknown. It is fasttravel. It is private.
 
@@ -256,14 +264,37 @@ to say roofloorshow:
 
 Section 4 - Gillian's Flat
 
+Table of GameRoomIDs (continued)
+Object	Name
+Gillian's Flat	"Gillian's Flat"
+
 Gillian's Flat is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Gillian's Flat is "     Located above the Down Under Pub, Gillian the barmaid's been living here. It's nothing fancy, but it certainly beats living out on the streets, especially these days. The studio apartment is sparsely decorated, having a loveseat and a bed and not much else. The small dining table's pushed up against one wall, probably to leave more room for that big tail of hers to swing around. There's a couple of generic motivational posters up on the wall.[line break]     From here, going [bold type]down[roman type] the stairs will take you to the pub. Exiting and heading [bold type]east[roman type] will lead you back to towards the district's entrance.".
-[Downtopub is a door. Downtopub is down from Gillian's Flat.
-PlaceholderforDUP is a room. PlaceholderforDUP is down of Downtopub.
+[Downtopub is a door. Downtopub is below Gillian's Flat.
+
+Table of GameRoomIDs (continued)
+Object	Name
+PlaceholderforDUP	"PlaceholderforDUP"
+
+PlaceholderforDUP is a room. PlaceholderforDUP is below Downtopub.
 EasttoRLD is a door. EasttoRLD is east from Gillian's Flat.
+
+Table of GameRoomIDs (continued)
+Object	Name
+PlaceholderforRLD	"PlaceholderforRLD"
+
 PlaceholderforRLD is a room. PlaceholderforRLD is east of EasttoRLD.	]
 
+Table of GameRoomIDs (continued)
+Object	Name
+PlaceholderforDUP	"PlaceholderforDUP"
+
 PlaceholderforDUP is a room. PlaceholderforDUP is down from Gillian's Flat.
+
+Table of GameRoomIDs (continued)
+Object	Name
+PlaceholderforRLD	"PlaceholderforRLD"
+
 PlaceholderforRLD is a room. PlaceholderforRLD is east from Gillian's Flat.
 
 the scent of Gillian's Flat is "The room smells of the female roo living there.".

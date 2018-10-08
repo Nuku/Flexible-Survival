@@ -6,6 +6,10 @@ Stable Related Quests by Sarokcat begins here.
 
 Section 1- Equineguardpost [onyx quest part 1]
 
+Table of GameEventIDs (continued)
+Object	Name
+Equineguardpost	"Equineguardpost"
+
 Equineguardpost is a situation. Equineguardpost is inactive. The level of Equineguardpost is 3.
 The sarea of Equineguardpost is "Stable".
 
@@ -42,6 +46,10 @@ Instead of Resolving a Equineguardpost:
 
 Section 3 - Stablestoreroom [onyx quest part 2]
 
+Table of GameEventIDs (continued)
+Object	Name
+Stablestoreroom	"Stablestoreroom"
+
 Stablestoreroom is a situation. Stablestoreroom is inactive.
 The sarea of Stablestoreroom is "Stable".
 
@@ -69,6 +77,10 @@ Section 4 - Ignored Memos
 
 [Fancy intro quest]
 
+Table of GameEventIDs (continued)
+Object	Name
+Ignored Memos	"Ignored Memos"
+
 Ignored Memos is a situation.
 The sarea of Ignored Memos is "Stable".
 
@@ -87,6 +99,10 @@ Instead of Resolving a Ignored Memos:
 Section 6- Hardware Fort
 
 [fancy quest part 2]
+
+Table of GameEventIDs (continued)
+Object	Name
+Hardware Fort	"Hardware Fort"
 
 Hardware Fort is a situation.
 Hardware Fort is inactive.
@@ -378,6 +394,10 @@ instead of sniffing medium sledge:
 
 Section 7 - horsepowering (Fancy quest part 3)
 
+Table of GameEventIDs (continued)
+Object	Name
+horsepowering	"horsepowering"
+
 horsepowering is a situation.
 The sarea of horsepowering is "Stable".
 
@@ -423,6 +443,10 @@ Section 8 - technicalbookstore
 
 [Fancy quest part 3]
 
+Table of GameEventIDs (continued)
+Object	Name
+technicalbookstore	"technicalbookstore"
+
 technicalbookstore is a situation.
 
 Instead of resolving a technicalbookstore:
@@ -445,6 +469,10 @@ Instead of resolving a technicalbookstore:
 
 
 Section 9 - contract hyenegotiation (Fancy quest part 4)
+
+Table of GameEventIDs (continued)
+Object	Name
+contract hyenegotiation	"contract hyenegotiation"
 
 contract hyenegotiation is a situation.
 provingstallionhood is a number that varies.
@@ -504,6 +532,10 @@ to say HyenegotiationHyenaAbuse:
 
 Section 10 - Horsepitfight (Fancy quest part 4b)
 
+Table of GameEventIDs (continued)
+Object	Name
+Horsepitfight	"Horsepitfight"
+
 Horsepitfight is a situation.
 The sarea of Horsepitfight is "Stable".
 
@@ -560,6 +592,10 @@ hellgatherquest is a number that varies.
 Section 11 - goldenfocushunt
 
 [Fancy quest part 5a]
+
+Table of GameEventIDs (continued)
+Object	Name
+goldenfocushunt	"goldenfocushunt"
 
 goldenfocushunt is a situation.
 The sarea of goldenfocushunt is "Museum".

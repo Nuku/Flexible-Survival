@@ -11,6 +11,10 @@ libidomemory is a number that varies.	[remembers pre-fight libido]
 
 Section 1 - Insect Hive Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Insect Hive	"Insect Hive"
+
 Insect Hive is a situation.
 The sarea of Insect Hive is "High".
 when play begins:

@@ -11,6 +11,10 @@ Version 1 of HypnoGeeks by Wasp begins here.
 HG_Stage is a number that varies.
 HG_Flashback_Turns is a number that varies. HG_Flashback_Turns is usually 0.
 
+Table of GameEventIDs (continued)
+Object	Name
+HypnoGeeks	"HypnoGeeks"
+
 HypnoGeeks is a situation.
 The level of HypnoGeeks is 5. [minimum level to find the event]
 The sarea of HypnoGeeks is "Campus".

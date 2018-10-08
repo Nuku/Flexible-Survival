@@ -49,7 +49,7 @@ carry out HuntAction:
 	let PossibleEncounters be a list of text;
 	let Found be 0;
 	let HuntId be "Target Name";
-	now HuntID is topic understood;
+	now HuntID is topic understood in title case;
 	if debugactive is 1:
 		say "DEBUG -> Battleground: [battleground]; Target: [HuntId][line break]";
 	[extra encounter chances]

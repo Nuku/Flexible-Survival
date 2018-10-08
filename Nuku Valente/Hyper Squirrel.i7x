@@ -5,6 +5,10 @@ Version 2 of Hyper Squirrel by Nuku Valente begins here.
 
 Section 1 - Hyper Squirrel Girl Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Hyper Squirrel Girl	"Hyper Squirrel Girl"
+
 Hyper Squirrel Girl is a situation.
 hsrp is a number that varies.
 squirrelfucked is a number that varies. squirrelfucked is usually 0.
@@ -70,6 +74,10 @@ Instead of Resolving a Hyper Squirrel Girl:
 
 
 Section 2 - Snow
+
+Table of GameRoomIDs (continued)
+Object	Name
+Squirrel Den	"Squirrel Den"
 
 Squirrel Den is a room. It is private.	[This is just a holding spot and not a real room]
 
@@ -404,6 +412,10 @@ to say snowsquirrelgivein:
 
 
 Section 5 - Wild Squirrels
+
+Table of GameEventIDs (continued)
+Object	Name
+Wild Squirrels	"Wild Squirrels"
 
 Wild Squirrels is a situation.
 Wild Squirrels is inactive.

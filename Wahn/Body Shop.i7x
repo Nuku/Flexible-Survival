@@ -16,7 +16,13 @@ lastBodyShopEvent is a number that varies. lastBodyShopEvent is usually 10000.
 Section 1 - Rooms
 
 [Room Declaration]
-Southeast of Mall East Wing is Body Shop.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Body Shop	"Body Shop"
+
+Body Shop is a room.
+Body Shop is southeast of Mall East Wing.
 The description of Body Shop is "[BodyShopDesc]".
 
 to say BodyShopDesc:
@@ -1156,6 +1162,10 @@ An everyturn rule:
 
 Section 5 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Body Choice Dilemma	"Body Choice Dilemma"
+
 Body Choice Dilemma is a situation.
 The sarea of Body Choice Dilemma is "Nowhere".
 
@@ -1211,6 +1221,10 @@ to BodyChoiceDilemmaEvent:
 	now lastBodyShopEvent is turns;
 	now Body Choice Dilemma is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Horn Removal	"Horn Removal"
+
 Horn Removal is a situation.
 The sarea of Horn Removal is "Nowhere".
 
@@ -1222,6 +1236,10 @@ to HornRemovalEvent:
 	say "     Said horn is so prominent that the stork actually has a hand wrapped around it to help his head support the weight. 'Heh, it's no worry. He always pays a little something extra when that happens. And Mr. Moreau doesn't mind getting a free horn every once in a while without having to give anything else back.' Speaking of, the snake leads the bird to the changing rooms, and one minute later, Gus comes out unburdened from the out-of-place body part. 'Anyway, I should really get going, there's more work waiting for me at the Shag Shack. Speaking of, why don't you drop me a visit soon?' he says with a wink before departing.";
 	now lastBodyShopEvent is turns;
 	now Horn Removal is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Drunk Change Party	"Drunk Change Party"
 
 Drunk Change Party is a situation.
 The sarea of Drunk Change Party is "Nowhere".
@@ -1261,6 +1279,10 @@ to DrunkAndMakingChangesEvent:
 	now lastBodyShopEvent is turns;
 	now Drunk Change Party is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Body Poke Poke	"Body Poke Poke"
+
 Body Poke Poke is a situation.
 The sarea of Body Poke Poke is "Nowhere".
 
@@ -1271,6 +1293,10 @@ to BodyPokePokeEvent:
 	say "     When you enter the Body Shop, you see Moreau, having not noticed you, giving small pokes to one of his mannequins['] faces. 'Goddamit Margaret, what's wrong with you? You can barely keep up your pose since yesterday. Could you be sick? Can you guys even [italic type]get[roman type] sick?' When he notices you, the naga lets out a forced laugh, clearly to keep up appearances more than anything, before crossing his arms with a pouty face and giving you a vexed snort. 'What? I can give them names if I want. They're MY mannequins.'";
 	now lastBodyShopEvent is turns;
 	now Body Poke Poke is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Body Supplications	"Body Supplications"
 
 Body Supplications is a situation.
 The sarea of Body Supplications is "Nowhere".
@@ -1310,6 +1336,10 @@ to BodySupplicationsEvent:
 		now Resolution of Body Supplications is 2; [didn't listen]
 	now lastBodyShopEvent is turns;
 	now Body Supplications is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Body Popularity	"Body Popularity"
 
 Body Popularity is a situation. Body Popularity is inactive.
 The sarea of Body Popularity is "Nowhere".

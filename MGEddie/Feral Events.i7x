@@ -1,6 +1,10 @@
 Feral Events by MGEddie begins here.
 [Version 1 - New Feral Event]
 
+Table of GameEventIDs (continued)
+Object	Name
+Breeding Pack	"Breeding Pack"
+
 Breeding Pack is a situation.
 The sarea of Breeding Pack is "High".
 

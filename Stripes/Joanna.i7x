@@ -5,6 +5,10 @@ Version 4 of Joanna by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Overrun Garden	"Overrun Garden"
+
 Overrun Garden is a situation. The level of Overrun Garden is 10.
 The sarea of Overrun Garden is "High".
 when play begins:
@@ -125,6 +129,10 @@ to say losejoannafight:
 
 
 Section 2 - Flower Garden
+
+Table of GameRoomIDs (continued)
+Object	Name
+Flower Garden	"Flower Garden"
 
 Flower Garden is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Flower Garden is "     Joanna's garden is lush and beautiful, thriving with large and fragrant flowers under her care. Having cleared away the remains of the monstrous plant, she's taken its place at the center of the garden. She uproots herself from time to time to walk around and tend to her flowers. There is a stone path to walk that weaves through the various beds and bushes.".
@@ -585,6 +593,10 @@ Section 8 - Pre-Plant Joanna
 
 joannadogsaved is a truth state that varies. joannadogsaved is usually false.
 joannaharoldtalk is a number that varies.
+
+Table of GameEventIDs (continued)
+Object	Name
+Dog Chase	"Dog Chase"
 
 Dog Chase is a situation. The level of Dog Chase is 2.
 The sarea of Dog Chase is "Outside".

@@ -27,6 +27,10 @@ instead of conversing Zephias:
 
 Section 2 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Captured Soldier	"Captured Soldier"
+
 Captured Soldier is a situation.
 Captured Soldier is inactive.
 The sarea of Captured Soldier is "Warehouse".

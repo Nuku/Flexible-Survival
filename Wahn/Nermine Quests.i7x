@@ -6,6 +6,10 @@ Version 1 of Nermine Quests by Wahn begins here.
 
 Section 1 - Meeting Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange Shop	"Strange Shop"
+
 Strange Shop is a situation.
 
 Instead of resolving a Strange Shop:
@@ -30,6 +34,10 @@ Instead of resolving a Strange Shop:
 	now Strange Shop is resolved;
 
 Section 2 - Quest Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Bacchus Wine	"Bacchus Wine"
 
 Bacchus Wine is a situation. The level of Bacchus Wine is 4.
 The Sarea of Bacchus Wine is "Museum".
@@ -75,6 +83,10 @@ Instead of resolving a Bacchus Wine:
 			challenge "Satyr";
 			challenge "Satyr";
 
+Table of GameEventIDs (continued)
+Object	Name
+Stolen Jewelry	"Stolen Jewelry"
+
 Stolen Jewelry is a situation.
 The Sarea of Stolen Jewelry is "Museum".
 HyenaTrailing is a number that varies.
@@ -101,6 +113,10 @@ Instead of conversing the Valerie while HyenaTrailing is 1:
 	say "     'Hyenas? In the museum?' the sphinx says with a confused look as she looks around the foyer incredulously. 'If the city wasn't in the state its currently in, I would say you were going crazy.' Valerie adds a little haughtily, rejecting the mere idea out of hand. When you explain why you are asking however, she lets out a low growl. 'Someone stole from the museum? How horrible! But... hm, they didn't come through here, I can tell you that for sure. I'd have noticed, believe me!' She pauses to think for a minute. 'Hmm... that means they must have found another way to break in. I'd help you search, but given what you told me, I think it is even more important that I stay here and guard the entrance. Who knows what other furry barbarians might move in to sack the place otherwise!'";
 	say "     She fans out her feathered wings for a moment, as if ready to pounce the next person walking in the door, then folds them back in again and sits down to stare at the entrance. Crossing her forepaws on the information desk, she glances sideways to you and adds, 'I'll hold this post. Meanwhile, you go and find whatever [bold type]alternative entry[roman type]point the thieves took. Give [']em a good thumping if you run into the bastards and please make sure they can't get in that way anymore.";
 	now HyenaTrailing is 2;
+
+Table of GameEventIDs (continued)
+Object	Name
+Alternative Entry	"Alternative Entry"
 
 Alternative Entry is a situation. The level of Alternative Entry is 8.
 The Sarea of Alternative Entry is "Museum".
@@ -146,6 +162,10 @@ Instead of resolving a Alternative Entry:
 		say "     Wandering through the halls of the museum, you hear a faint rumbling noise from nearby, looking around you realize it is coming from one of the nearby 'Employees Only' doors. Your curiosity getting the better of you, you slowly open the door a crack and peek inside. You are startled to find yourself peeking right into the face of a large sabretooth cat! After a second of panic, the rumbling noise comes again, and you realize that the sound is the cat's soft snoring, the beast obviously having not gotten a good nights sleep in years, you decide to slowly close the door and let sleeping giant man-eating pussycats lie...";
 
 [ Questioning Mary about the Hyena Thieves has been moved to the file "New Ewe Store.i7x" ]
+
+Table of GameEventIDs (continued)
+Object	Name
+Hyena Challenge	"Hyena Challenge"
 
 Hyena Challenge is a situation. The level of Hyena Challenge is 12.
 when play begins:
@@ -231,6 +251,10 @@ Instead of resolving a Hyena Challenge:
 	else:
 		say "     Traveling through the streets of the mostly deserted city, you come across an area completely painted in some kind of strange gang signs placed one on top of the other. Noticing that the paint is still fresh in some places, you decide it might be best to leave the area as quietly and quickly as possible, before one of the strange gang members returns and finds you here.";
 
+Table of GameEventIDs (continued)
+Object	Name
+Anubis Statue	"Anubis Statue"
+
 Anubis Statue is a situation.
 The Sarea of Anubis Statue is "Museum".
 statuequest is a number that varies.
@@ -264,6 +288,9 @@ Instead of resolving a Anubis Statue:
 		increase carried of strange ankh by 1;
 		now Resolution of Anubis Statue is 3; [brought back the samples]
 
+Table of GameEventIDs (continued)
+Object	Name
+Bestial Pheromones	"Bestial Pheromones"
 
 Bestial Pheromones is a situation. The level of Bestial Pheromones is 4.
 The Sarea of Bestial Pheromones is "Zoo".
@@ -302,6 +329,10 @@ Instead of resolving a Bestial Pheromones:
 		else if fightoutcome > 19: [lost or fled]
 			say "     Driven back by the sleek powerful felines, you are forced to retrace your steps down the zoo pathways, needing to rest and relax before you can try again... if you try again anyways.";
 			now Resolution of Bestial Pheromones is 3; [lost/fled]
+
+Table of GameEventIDs (continued)
+Object	Name
+Twisted fruit grove	"Twisted fruit grove"
 
 Twisted fruit grove is a situation. The level of twisted fruit grove is 4.
 The Sarea of Twisted fruit grove is "Park".

@@ -17,6 +17,10 @@ Version 1 of Randall and Brad by Rikaeus begins here.
 RandallBradRelationship is a number that varies.
 CocoRelationship is a number that varies.
 
+Table of GameEventIDs (continued)
+Object	Name
+Hanging out on the Green	"Hanging out on the Green"
+
 Hanging out on the Green is a situation.
 Hanging out on the Green is inactive.
 The sarea of Hanging out on the Green is "Campus".
@@ -42,6 +46,10 @@ to FirstRandallEvent:
 	now RandallBradRelationship is 1;
 	now Hanging out on the Green is resolved;
 	now Bunny Eavesdropper is active;
+
+Table of GameEventIDs (continued)
+Object	Name
+Bunny Eavesdropper	"Bunny Eavesdropper"
 
 Bunny Eavesdropper is a situation.
 Bunny Eavesdropper is inactive.
@@ -69,6 +77,10 @@ to SecondRandallEvent:
 	now CocoRelationship is 1;
 	now Bunny Eavesdropper is resolved;
 	now Operation Horny Bunny is active;
+
+Table of GameEventIDs (continued)
+Object	Name
+Operation Horny Bunny	"Operation Horny Bunny"
 
 Operation Horny Bunny is a situation.
 Operation Horny Bunny is inactive.
@@ -110,6 +122,10 @@ instead of going northeast from College Walkway Northeast while RandallBradRelat
 	say "     The bunny boy then decides to make a dirty move, as you see him slip his paw into Brad's shorts, grasping a hold of his slowly hardening cock. 'Come on, just think about it. You know I'll take care of you,' he mutters, starting to plant kisses on the jock's neck. Said male lets out a groan of appreciation before his resistance finally crumbles. 'F-fine,' the basketball player says, causing Randall to cheer before giving his new boyfriend a big sloppy kiss on the lips. After that the conversation dies down to your friend telling Brad it'd be best for him to move in with the bunny boy as he does currently live with Jen. The jock sighs and nods at that, the two of them heading off to the Dorms to start moving everything.";
 	now RandallBradRelationship is 4;
 	now New Roommates is active;
+
+Table of GameEventIDs (continued)
+Object	Name
+New Roommates	"New Roommates"
 
 New Roommates is a situation.
 New Roommates is inactive.

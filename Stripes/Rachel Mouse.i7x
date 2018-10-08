@@ -6,6 +6,10 @@ Version 1 of Rachel Mouse by Stripes begins here.
 
 Section 1 - Encounter
 
+Table of GameEventIDs (continued)
+Object	Name
+Quiet Apartment Building	"Quiet Apartment Building"
+
 Quiet Apartment Building is a situation.
 The sarea of Quiet Apartment Building is "Red".
 when play begins:

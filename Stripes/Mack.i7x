@@ -19,6 +19,10 @@ Version 2 of Mack by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Finding Mack	"Finding Mack"
+
 Finding Mack is a situation. The level of Finding Mack is 8.
 The sarea of Finding Mack is "Forest".
 
@@ -123,6 +127,9 @@ to attackingnutsofactory:
 
 Section 3 - Nutso Factory
 
+Table of GameRoomIDs (continued)
+Object	Name
+Nutso Factory	"Nutso Factory"
 
 Nutso Factory is a room. It is fasttravel. It is private.
 The description of Nutso Factory is "[nutsofactorydesc]".

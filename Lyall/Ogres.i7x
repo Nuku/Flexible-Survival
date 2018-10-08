@@ -8,6 +8,10 @@ Version 1 of Ogres by Lyall begins here.
 [  4: player lost, got fucked              ]
 [  5: player fled                          ]
 
+Table of GameEventIDs (continued)
+Object	Name
+Ogre Encounter	"Ogre Encounter"
+
 Ogre Encounter is a situation.
 The level of Ogre Encounter is 10. [minimum level to find the event]
 The sarea of Ogre Encounter is "Junkyard".

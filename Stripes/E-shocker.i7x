@@ -5,6 +5,10 @@ Version 2 of E-shocker by Stripes begins here.
 
 Section 1 - Encounter
 
+Table of GameEventIDs (continued)
+Object	Name
+Electric shockers	"Electric shockers"
+
 Electric shockers is a situation. The level of electric shockers is 10.
 [This is to restrict low-level players from unknowingly finding the superweapon.]
 The sarea of Electric shockers is "Zoo".

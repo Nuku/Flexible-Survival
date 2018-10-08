@@ -692,7 +692,7 @@ when play ends:
 		else:
 			if humanity of player < 10:
 				if HP of Fang is 3:
-					say "     Having succumbed to another infection, Fang has lost his slutty bitch and, having no more reason to stay, leaves the bunker. With his newfound confidence, he forms a small pack of his own[if ColeenAlpha is 0]. Taking Sandra with him, he leads her off to be his special bunny fucktoy, a role that she enjoys greatly. She bears him many quick-footed pups who become runners for the pack, chasing down prey so the stronger wolves can catch them and take them down[end if].";
+					say "     Having succumbed to another infection, Fang has lost his slutty bitch and, having no more reason to stay, leaves the bunker. With his newfound confidence, he forms a small pack of his own[if ColleenAlpha is 0]. Taking Sandra with him, he leads her off to be his special bunny fucktoy, a role that she enjoys greatly. She bears him many quick-footed pups who become runners for the pack, chasing down prey so the stronger wolves can catch them and take them down[end if].";
 				else if HP of Fang is 4:
 					say "     Having succumbed to another infection, Fang has lost his slutty bitch and, having no more reason to stay, leaves the bunker. With his newfound confidence, he forms a small pack of his own.";
 			else:

@@ -12,28 +12,40 @@ Version 2 of Consolidated Park Events by Song begins here.
 
 Section 1 - Strange Sight (by Kaleem)
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange Sight	"Strange Sight"
+
 Strange Sight is a situation.
 The sarea of Strange Sight is "Park".
 
 Instead of resolving Strange Sight:
 	say "     Walking through the forested area of the park, you get the unnerving feeling that something is watching you. Mind instantly on edge, you find your senses spreading out around you as you try and locate the unknown entity, then whip your head over to a clump of bushes when you suddenly hear them rustle. After seeing so many mutants taking what they want by force, you're eager to turn tail and flee, but on deeper introspection, you realize that the feeling you're getting right now isn't exactly foreboding so much as it is just... uncomfortable. It's like someone is staring at you from across a room without saying anything, studying you.";
-	say "     Steeling your resolve, you find your feet taking you over to the bushes before you can weigh the pros and cons of giving in to your curiosity. Moving closer to the foliage, you take a few calming breaths before reaching out with a shaky hand to part the clump of leaves. Once you do, you nearly jump back at the sight before you. Standing regal on four legs is some kind of bizarre hybrid, sporting the body of a horse, the face of a human, and scales of myriad colors in place of fur. Armor-like hide covers the creature's neck on down to its chest, catching the surrounding light in strange and mysterious ways. On top of the monster's head stands an impressive white, spiral-shaped horn that has to be almost twelve inches long, if not more. A shaggy mane of green hair spills out around the side of the beast's neck, doing nothing to hide the human face of the mutant staring back at you";
+	say "     Steeling your resolve, you find your feet taking you over to the bushes before you can weigh the pros and cons of giving in to your curiosity. Moving closer to the foliage, you take a few calming breaths before reaching out with a shaky hand to part the clump of leaves. Once you do, you nearly jump back at the sight before you. Standing regal on four legs is some kind of bizarre hybrid, sporting the body of a horse, the face of a human, and scales of myriad colors in place of fur. Armor-like hide covers the creature's neck on down to its chest, catching the surrounding light in strange and mysterious ways. On top of the monster's head stands an impressive white, spiral-shaped horn that has to be almost twelve inches long, if not more. A shaggy mane of green hair spills out around the side of the beast's neck, doing nothing to hide the human face of the mutant staring back at you.";
 	say "     Not knowing what to say or do as the lips of the stallion-like animal rise up to smile at you, your body seems to freeze in place as you stare at it. The strange amalgamation gives you a small nod, as though approving of you in some way, then turns to scamper off somewhere into the park. A long and bushy tail whips behind its back just as it disappears out of sight.";
 	increase score by 1;
 	now Strange Sight is resolved;
 
 
-Section 2 - Anxiety (by Kaleem)
+Section 2 - Anxious Soldiers (by Kaleem)
 
-Anxiety is a situation.
-The sarea of Anxiety is "Park".
+Table of GameEventIDs (continued)
+Object	Name
+Anxious Soldiers	"Anxious Soldiers"
 
-Instead of resolving Anxiety:
-	say "     Seeing a group of soldiers patrolling the park, you find your spirits lifting and run over to them to ask for help. You quickly realize that this was a mistake. The moment they catch sight of you, the armed humans raise the barrels of their guns while yelling at you to halt. Skidding to an immediate stop, you find yourself somewhat confused as the uniformed men and women glare at you before turning their heads to talk to one another. The conversation that occurs in front of you has your stomach knotting with butterflies while your heart freezes inside of your chest as the words [italic type]contaminated[roman type] and [italic type]neutralize[roman type] come up far too many times for comfort between the assembled group of soldiers. Given that are five of them in total, you don't think that it would be wise to try and test your luck against them, especially given their twitchy and easily agitated appearance. Deciding that it's time to get lost, you flip your head to the left and then gasp and wave one of your hands around frantically while shouting [italic type]monster[roman type]. The five soldiers instantly swing their guns in the direction you're pointing and start firing wildly. You quickly run away before they can realize that they've been tricked.";
-	now Anxiety is resolved;
+Anxious Soldiers is a situation.
+The sarea of Anxious Soldiers is "Park".
+
+Instead of resolving Anxious Soldiers:
+	say "     Seeing a group of soldiers patrolling the park, you find your spirits lifting and run over to them to ask for help. You quickly realize that this was a mistake. The moment they catch sight of you, the armed humans raise the barrels of their guns while yelling at you to halt. Skidding to an immediate stop, you find yourself somewhat confused as the uniformed men and women glare at you before turning their heads to talk to one another. The conversation between the assembled group of soldiers has your stomach knotting with butterflies while your heart freezes inside of your chest, the words [italic type]contaminated[roman type] and [italic type]neutralize[roman type] coming up far too many times for comfort. Given that there are five of them in total, you don't think that it would be wise to try and test your luck against them. Deciding that it's time to get lost, you flip your head to the left and then gasp and wave one of your hands around frantically while shouting [italic type]monster[roman type]. The five soldiers instantly swing their guns in the direction you're pointing toward and start firing wildly. You quickly run away before they can realize that they've been tricked.";
+	now Anxious Soldiers is resolved;
 
 
 Section 3 - Mysterious Girl (by Kaleem)
+
+Table of GameEventIDs (continued)
+Object	Name
+Mysterious Girl	"Mysterious Girl"
 
 Mysterious Girl is a situation.
 The sarea of Mysterious Girl is "Park".
@@ -46,16 +58,9 @@ Instead of resolving Mysterious Girl:
 
 Section 4 - Fox Hunt (by Kaleem)
 
-Fox Hunt is a situation.
-The sarea of Fox Hunt is "Park".
-
-Instead of resolving Fox Hunt:
-	say "     While leisurely walking through the park, you happen to hear the sounds of baying hounds howling off in the distance. Not really understanding what's going on, you blink in surprise when a large latex fox runs straight pass you as though running for its life. Cocking your head to the side in wonder, you have just enough time to jump out of the ways as several hound-like mutants dart pass you on the trail of the rubbery vulpine. When a powerful anthro mustang clomps his way after the hounds, you can only shake your head incredulously at what you've just seen.";
-	increase score by 1;
-	now Fox Hunt is resolved;
-
-
-Section 5 - Groundskeepers Cabin (by Sarokcat)
+Table of GameEventIDs (continued)
+Object	Name
+Groundskeepers Cabin	"Groundskeepers Cabin"
 
 Groundskeepers Cabin is a situation.
 The sarea of Groundskeepers Cabin is "Park".
@@ -66,6 +71,10 @@ Instead of resolving Groundskeepers Cabin:
 
 
 Section 6 - Badger Sighting (by Sarokcat)
+
+Table of GameEventIDs (continued)
+Object	Name
+Badger Sighting	"Badger Sighting"
 
 Badger Sighting is a situation.
 The sarea of Badger Sighting is "Park".
@@ -78,6 +87,10 @@ Instead of resolving Badger Sighting:
 
 Section 7 - Empty Jeep (by Sarokcat)
 
+Table of GameEventIDs (continued)
+Object	Name
+Empty Jeep	"Empty Jeep"
+
 Empty Jeep is a situation.
 The sarea of Empty Jeep is "Park".
 
@@ -88,6 +101,10 @@ Instead of resolving Empty Jeep:
 
 
 Section 8 - Small Fire (by Sarokcat)
+
+Table of GameEventIDs (continued)
+Object	Name
+Small Fire	"Small Fire"
 
 Small Fire is a situation.
 The sarea of Small Fire is "Park".
@@ -100,6 +117,10 @@ Instead of resolving Small Fire:
 
 Section 9 - Torn Vegetation (by Sarokcat)
 
+Table of GameEventIDs (continued)
+Object	Name
+Torn Vegetation	"Torn Vegetation"
+
 Torn Vegetation is a situation.
 The sarea of Torn Vegetation is "Park".
 
@@ -110,6 +131,10 @@ Instead of resolving Torn Vegetation:
 
 
 Section 10 - Abandoned Picnic (by Sarokcat)
+
+Table of GameEventIDs (continued)
+Object	Name
+Abandoned Picnic	"Abandoned Picnic"
 
 Abandoned Picnic is a situation.
 The sarea of Abandoned Picnic is "Park".

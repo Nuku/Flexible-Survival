@@ -7,6 +7,10 @@ Version 1 of Event Rewrites by Draegon begins here.
 
 Section 1 - Anal Probing
 
+Table of GameEventIDs (continued)
+Object	Name
+Anal Probing	"Anal Probing"
+
 Anal Probing is a situation.
 The sarea of Anal Probing is "Beach".
 

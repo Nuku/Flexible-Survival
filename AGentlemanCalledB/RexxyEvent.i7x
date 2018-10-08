@@ -25,6 +25,10 @@ Version 3 of RexxyEvent by AGentlemanCalledB begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Forced Adoption	"Forced Adoption"
+
 Forced Adoption is a situation.
 
 The sarea of Forced Adoption is "High".
@@ -139,6 +143,10 @@ An everyturn rule:
 
 
 Section 3 - Rex's Place
+
+Table of GameRoomIDs (continued)
+Object	Name
+Rex's Place	"Rex's Place"
 
 Rex's Place is a room. It is fasttravel. It is private.
 

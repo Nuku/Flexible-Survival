@@ -5,6 +5,10 @@ Stables Hotel by Sarokcat begins here.
 Section 1 - Stabled Situation
 [For locating the Stables Hotel]
 
+Table of GameEventIDs (continued)
+Object	Name
+Stabled Situation	"Stabled Situation"
+
 Stabled Situation is a situation.
 Stablesearchstatus is a number that varies.
 when play begins:
@@ -72,22 +76,36 @@ Instead of Resolving Stabled Situation:
 
 Section 2 - The Stables Hotel
 
+Table of GameRoomIDs (continued)
+Object	Name
+Stables Hotel	"Stables Hotel"
+
 Stables Hotel is a room. It is fasttravel. It is private.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Hotel Stable	"Hotel Stable"
+
 Hotel Stable is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Hotel Stalls	"Hotel Stalls"
+
 Hotel Stalls is a room.
 
 The description of Stables Hotel is "     The lobby of this large sprawling building seems to be in surprisingly good repair. The room is lit by fashionable oil lamps lining the walls, filling the room with a warm light and illuminating the reception area. The reception desk is currently empty, although someone has set up an obviously handwritten sign that welcomes new visitors to 'The Stables' and asks that they ring the bell for service. Unfortunately, there doesn't appear to be a bell here to ring right now. A smaller sign is set on the other edge of the desk, advising all customers to please have payment ready when they enter the area.".
 
 
-Northeast of Stables Hotel is Hotel Stalls.
-West of Stables Hotel is Employee Access.
+Hotel Stalls is northeast of Stables Hotel.
+Employee Access is west of Stables Hotel.
 
 The invent of The Stables Hotel is { "lucky horseshoe", "lucky horseshoe" }.
 
 Stable Entry is a door. "The lobby trails off to the north where a series of elevators and large double doors can be seen.". It is dangerous.
 
-North of Stable Entry is Hotel Stable.
-North of The Stables Hotel is Stable Entry.
+Hotel Stable is north of Stable Entry.
+Stable Entry is north of The Stables Hotel.
 
 The marea of Stable Entry is "Stable".
 
@@ -99,9 +117,12 @@ instead of sniffing Hotel Stalls:
 
 The description of Hotel Stalls is "     This room appears to be the small lobby to one of the guest wings, and while it looks like the main part of the building is still mostly boarded up, this part appears to have been repaired recently, and halls to the north and south appear to have been refurbished for use. Strangely enough, someone seems to have hung a sign in this area, labeling this particular area 'The Stalls'.".
 
-North of Hotel Stalls is Mares Quarters.
-South of Hotel Stalls is Holding Pens.
+Mares Quarters is north of Hotel Stalls.
+Holding Pens is south of Hotel Stalls.
 
+Table of GameRoomIDs (continued)
+Object	Name
+Mares Quarters	"Mares Quarters"
 
 Mares Quarters is a room.
 
@@ -149,6 +170,10 @@ Carry out Marefeeding:
 		decrease humanity of player by 5;
 
 
+Table of GameRoomIDs (continued)
+Object	Name
+Holding Pens	"Holding Pens"
+
 Holding Pens is a room.
 
 The description of Holding Pens is "     This area seems to be a rather large hallway, with several open doors leading into small cell-like rooms that are all mostly unoccupied, though the smell of equine musk lingers strongly in the air. Strangely enough, all of the rooms seem to have been modified with small bars to make them hard to escape from. [if XP of Onyx < 3]Interestingly enough, one of the cells at the end of the hallway appears to be occupied[else]Onyx's holding pen remains open, as if awaiting a new occupant[end if]. Next to it, someone has hung a handmade sign reading ['][if XP of Onyx >= 60 and XP of Onyx <= 79]Obsidian[else]Onyx[end if]['].".
@@ -157,6 +182,9 @@ Onyx is in Holding Pens.
 instead of sniffing Holding Pens:
 	say "The holding pen smells like a mix of human and equine scents, though the equine scents are much stronger and overpowering than the weaker human ones.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Employee Access	"Employee Access"
 
 Employee Access is a room.
 

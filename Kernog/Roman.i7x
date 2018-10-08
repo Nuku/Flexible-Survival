@@ -554,6 +554,11 @@ to say RomanFuck2Cunt:
 	say "     You walk back an elated Roman back to the football field. 'These were among the best hours of my life. Actually, the times when you are around are all the best hours of my life.' Roman accompanies his thanks with a warm kiss. 'Gotta go back to supervise training. See you around, [if player is not defaultnamed][name of player][else]champ[end if].'";
 
 [Outside event for finding Roman's tape]
+
+Table of GameEventIDs (continued)
+Object	Name
+Grocery Store Security Camera	"Grocery Store Security Camera"
+
 Grocery Store Security Camera is a situation.
 The sarea of Grocery Store Security Camera is "Outside".
 
@@ -576,6 +581,11 @@ to say RomanTransformationFootage:
 
 
 [Team additions quest]
+
+Table of GameEventIDs (continued)
+Object	Name
+Orca Volleyball Player	"Orca Volleyball Player"
+
 Orca Volleyball Player is a situation.
 The sarea of Orca Volleyball Player is "Beach".
 
@@ -601,6 +611,10 @@ Instead of resolving a Orca Volleyball Player:
 			say "     'You're not the first trying to pick a fight with me. They're all bark and no bite, and you're not different. You got a big mouth, and I know one way to use it. The orca forces the tip of his cock past your lips. 'Say [']ah['], bitch.' The titanic length slides down your throat. You feel it wiggle in your esophagus, as it tries to find its way deeper. Willy pulls out at the very last moment, and takes a moment to admire his saliva-coated shaft, before pushing it back inside, under the cheers of the crowd.";
 			say "     After a dozen minutes of this forced public blowjob, Willy's pushes accelerate and the orca lets out a whale-like moan and cums hard, directly into your stomach. His hose-like cock fills your belly with what feels like a gallon of cum before finally pulling out. The cetacean slumps down in his chair. 'Oooh, that felt nice.'[line break]'Hey, Willy. Done with your bitch yet?' one of Willy's friend asks from the crowd. 'Bert and his boy-toy wants to play with us.'[line break]'Uh? Oh, yeah, sure,' the orca says as he stands up and makes his way to the next game. 'As for you, get out of my sight,' he says, shoving your out of the way. The onlookers loose interest in you and you take the opportunity to walk away, after you cough the mouthful of whale-cum lingering in your mouth. You promise yourself to come back later with more [']persuasive['] arguments.";
 			now Resolution of Orca Volleyball Player is 2; [lost against the orca]
+
+Table of GameEventIDs (continued)
+Object	Name
+Husky Gang	"Husky Gang"
 
 Husky Gang is a situation.
 The sarea of Husky Gang is "Outside".

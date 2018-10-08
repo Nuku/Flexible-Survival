@@ -1,6 +1,10 @@
 Version 5 of Forest Events by Aureas Gigas begins here.
 [ Version 5 - Fifth Event ]
 
+Table of GameEventIDs (continued)
+Object	Name
+One flew into the Cuckoos Nest	"One flew into the Cuckoos Nest"
+
 One flew into the Cuckoos Nest is a situation.
 The sarea of One flew into the Cuckoos Nest is "Forest".
 CuckooWatched is a number that varies.
@@ -32,6 +36,10 @@ Instead of resolving a One flew into the Cuckoos Nest:
 		now CuckooWatched is 100; [ignored the cuckoos]
 		now Resolution of One flew into the Cuckoos Nest is 2;
 	now One flew into the Cuckoos Nest is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Two Crash into the Cuckoos Nest	"Two Crash into the Cuckoos Nest"
 
 Two Crash into the Cuckoos Nest is a situation.
 The Prereq1 of Two Crash into the Cuckoos Nest is One flew into the Cuckoos Nest.
@@ -86,6 +94,10 @@ Instead of resolving a Two crash into the Cuckoos Nest:
 		now Resolution of Two Crash into the Cuckoos Nest is 2;
 	now Two Crash into the Cuckoos Nest is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Avian Tent	"Avian Tent"
+
 Avian Tent is a situation.
 The Prereq1 of Avian Tent is Two Crash into the Cuckoos Nest.
 The Prereq1Resolution of Avian Tent is { 1, 2 }.
@@ -130,6 +142,10 @@ Instead of resolving a Avian Tent:
 		now Resolution of Avian Tent is 2;
 	now Avian Tent is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Sandwich Shop	"Sandwich Shop"
+
 Sandwich Shop is a situation.
 The sarea of Sandwich Shop is "Forest".
 
@@ -162,6 +178,9 @@ Instead of resolving a Sandwich Shop:
 [ 98: didn't help in the fight against the lizards     ]
 [ 99: didn't stay to see what Bridget does with Powell ]
 
+Table of GameEventIDs (continued)
+Object	Name
+Thief's Punishment	"Thief's Punishment"
 
 Thief's Punishment is a situation.
 The sarea of Thief's Punishment is "Forest".
@@ -203,6 +222,10 @@ instead of resolving Thief's Punishment:
 		now BridgetPowellEventVar is 99; [player ignored Bridget and Powell]
 		now Resolution of Thief's Punishment is 2;
 	now Thief's Punishment is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Thief's Reformation	"Thief's Reformation"
 
 Thief's Reformation is a situation.
 The Prereq1 of Thief's Reformation is Thief's Punishment.

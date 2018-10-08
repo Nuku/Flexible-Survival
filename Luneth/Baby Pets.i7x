@@ -131,6 +131,10 @@ to say DashTalk1:
 
 Section 1.3 - Fox Kit Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Abandoned Fox	"Abandoned Fox"
+
 Abandoned Fox is a situation.
 The sarea of Abandoned Fox is "Park".
 
@@ -329,6 +333,10 @@ to say PeppyTalk1:
 	say "     WIP";
 
 Section 2.3 - Skunk Kit Event
+
+Table of GameEventIDs (continued)
+Object	Name
+Lost skunk kit	"Lost skunk kit"
 
 Lost skunk kit is a situation.
 The sarea of Lost skunk kit is "Forest".

@@ -3,6 +3,10 @@ Catapult Encounter by Hellerhound begins here.
 
 Section 1 - Catapult Encounter
 
+Table of GameEventIDs (continued)
+Object	Name
+Loaded Catapult	"Loaded Catapult"
+
 Loaded Catapult is a situation.
 catafire is a number that varies.
 

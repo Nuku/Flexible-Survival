@@ -5,12 +5,16 @@ Park Events by Sarokcat begins here.
 
 Section 1 - Poppy field
 
-Poppy field is a situation.
-The sarea of Poppy field is "Park".
-when play begins:
-	add Poppy field to badspots of hermaphrodite;
+Table of GameEventIDs (continued)
+Object	Name
+Poppy Field	"Poppy Field"
 
-Instead of Resolving a Poppy field:
+Poppy Field is a situation.
+The sarea of Poppy Field is "Park".
+when play begins:
+	add Poppy Field to badspots of hermaphrodite;
+
+Instead of Resolving a Poppy Field:
 	say "     Traveling through the park, you stumble into a less used area where some strange flowers appear to have taken root. Looking closer at the brilliant blooms, you feel a sense of peace and tranquility wash over you, and for some reason you feel like stopping to relax here for a while. Do you take a rest?";
 	if player consents:
 		say "     Yawning, you stop to sit in the field of flowers for a minute, and find your eyes drifting shut, you aren't sure just how much time has passed, when all of a sudden something knocks you awake! Shaking off the damage and some plants that strangely seem to have settled on you, you begin to fight!.";
@@ -20,11 +24,11 @@ Instead of Resolving a Poppy field:
 		infect "Parasitic Plant";
 		infect "Parasitic Plant";
 		now Resolution of Poppy Field is 1; [fight]
-		now Poppy field is resolved;
+		now Poppy Field is resolved;
 	else:
 		say "     You shake yourself and stagger onwards, your head feeling much clearer once you get out of the fields.";
 		now Resolution of Poppy Field is 1; [avoid]
-		now Poppy field is resolved;
+		now Poppy Field is resolved;
 
 
 Section 2 - Empty jeep
@@ -38,8 +42,12 @@ Section 3 - small fire
 
 
 Section 4 - fallen tree
+[
+Table of GameEventIDs (continued)
+Object	Name
+fallen tree	"fallen tree"
 
-[fallen tree is a situation. The level of fallen tree is 4.
+fallen tree is a situation. The level of fallen tree is 4.
 The sarea of fallen tree is "Park".
 when play begins:
 	add fallen tree to badspots of girl;
@@ -59,6 +67,10 @@ Instead of Resolving a fallen tree:
 
 
 Section 5 - Felinoid lair
+
+Table of GameEventIDs (continued)
+Object	Name
+Felinoid lair	"Felinoid lair"
 
 Felinoid lair is a situation.
 The sarea of Felinoid lair is "Park".

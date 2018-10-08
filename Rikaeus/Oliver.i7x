@@ -9,9 +9,21 @@ Version 1 of Oliver by Rikaeus begins here.
 [   99: Has said Big Kitty to Little Ocelot                             ]
 [   100: Permanantly locked out of Oliver                               ]
 
+OliverRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if Leather Daddy Kitty is resolved and (Resolution of Leather Daddy Kitty is 1 or Resolution of Leather Daddy Kitty is 2) and OliverRoomConnection is 0: [event resolved the right way, room not connected yet]
+		change northeast exit of (Entrance to the High Rise District) to Kitty Sex Dungeon;
+		change southwest exit of Kitty Sex Dungeon to (Entrance to the High Rise District);
+		now OliverRoomConnection is 1; [make sure that it connects the room only once]
+
 Section 1 - Event encountering Oliver
 
 OliverRelationship is a number that varies.
+
+Table of GameEventIDs (continued)
+Object	Name
+Leather Daddy Kitty	"Leather Daddy Kitty"
 
 Leather Daddy Kitty is a situation. The level of Leather Daddy Kitty is 2.
 The sarea of Leather Daddy Kitty is "high".
@@ -47,6 +59,10 @@ Instead of resolving a Leather Daddy Kitty:
 			now Leather Daddy Kitty is resolved;
 
 Section 2 - Declaring the Room and Oliver
+
+Table of GameRoomIDs (continued)
+Object	Name
+Kitty Sex Dungeon	"Kitty Sex Dungeon"
 
 Kitty Sex Dungeon is a room. It is private.
 The description of Kitty Sex Dungeon is "[DungeonDesc]"

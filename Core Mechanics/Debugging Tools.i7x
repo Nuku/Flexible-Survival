@@ -115,6 +115,7 @@ carry out TestMode:
 	increase carried of glob of goo by 5;
 	increase carried of honeycomb by 5;
 	increase carried of healing booster by 5;
+	increase freecred by 5000;
 	sort feats of player;
 	now Terminatorsleep is true;
 	now TestingActive is true;
@@ -537,5 +538,16 @@ understand "NukeRoomInvents" as RoomEmptying.
 carry out RoomEmptying:
 	repeat with x running through rooms:
 		truncate Invent of x to 0 entries; [cleaning out the old data]
+
+
+RemoveFeat is an action applying to one topic.
+
+understand "RemoveFeat [text]" as RemoveFeat.
+
+carry out RemoveFeat:
+	if topic understood is listed in feats of player:
+		remove topic understood from feats of player;
+	else:
+		say "[topic understood] is not in Feats of Player!";
 
 Debugging Tools ends here.

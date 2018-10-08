@@ -8,6 +8,10 @@ Table of GameCharacterIDs (continued)
 object	name
 Kristen	"Kristen"
 
+Table of GameEventIDs (continued)
+Object	Name
+FindingKristen	"FindingKristen"
+
 FindingKristen is a situation.
 The sarea of FindingKristen is "Outside".
 when play begins:
@@ -33,13 +37,12 @@ Instead of resolving FindingKristen:
 				if fightoutcome >= 10 and fightoutcome <= 19:
 					say "     After your victory, you turn to check on the woman only to find the mound of crushed boxes empty. Looking up, you can see her atop the wooden wall, looking down at you. ";
 					if ( bodyname of player is "Human" or bodyname of player is "Herm Human" ) and player is pure and ( breast size of player < 10 and cock length of player < 12 and cock width of player < 16 ) and breasts of player <= 2 and ( breast size of player < 2 or ( cock length of player < 7 and cock width of player < 7 ) ):
-						say "     Without further hesitation, she reaches out to grab your hand to help a fellow human. Helping you up and over the well, you run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
+						say "Without further hesitation, she reaches out to grab your hand to help a fellow human. Helping you up and over the well, you run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
 					else if player is bodily human and player is facially human and player is skintone human and tail of player is "":
-						say "     She hesitates momentarily, you looking human enough at first glance, but your altered sexuality causing her to pause briefly. It lasts only a moment though before she reaches out with her hand to help you up and over the wooden wall to make your escape with her. You run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
+						say "She hesitates momentarily, you looking human enough at first glance, but your altered sexuality causing her to pause briefly. It lasts only a moment though before she reaches out with her hand to help you up and over the wooden wall to make your escape with her. You run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
 					else:
-						say "     She hesitates for a few moments, staring at your mutated body. It is only when the sound of the approaching mob catches her attention does she reach out to take your hand. Helping you up and over the wall, you run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
-					say "     Clearly having a destination in mind, she sneaks through alleys and behind buildings, trying her best to remain out of sight from the more randy creatures around.";
-					say "     'I really want to thank you for helping me out back there. I don't think I would have made it without your help. I'm Kristen, by the way.'";
+						say "She hesitates for a few moments, staring at your mutated body. It is only when the sound of the approaching mob catches her attention does she reach out to take your hand. Helping you up and over the wall, you run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
+					say "     Clearly having a destination in mind, she sneaks through alleys and behind buildings, trying her best to remain out of sight from the more randy creatures around. 'I really want to thank you for helping me out back there. I don't think I would have made it without your help. I'm Kristen, by the way.'";
 					say "     As you introduce yourselves, you're able to take in her appearance. The Caucasian woman stands about five foot ten inches. She has fair skin with only a light tan, leading you to suspect that she's been hiding indoors a lot lately or using quite a bit of sunscreen. She's got shoulder-length dirty blonde hair in a ponytail, which is now partially undone by the rough handling earlier. Her eyes are a very pretty blue and she's got a silver stud earring on each ear.";
 					say "     'We're getting close to the place I've been hiding out. I guess I can trust you, so I'll show you. It's not great, but I've been safe enough. If I hadn't gone out to lo- well, if I'd stayed here, I'd not have gotten into that mess earlier.'";
 					say "     She's leading you along the rear of a stretch of two-story shops. Several of them have been damaged by the rampage of some creature. She slips into the lower floor of a half-ruined travel agency and grabs the extension ladder stashed inside. Carrying it a few buildings over, she uses it to climb up to the second story of one of them and go through an open window. After you follow her up, the pulls the ladder inside, cutting off the means of entry.";
@@ -64,6 +67,10 @@ Instead of resolving FindingKristen:
 
 
 Section 2 - Kristen's Hideout
+
+Table of GameRoomIDs (continued)
+Object	Name
+Kristen's Hideout	"Kristen's Hideout"
 
 Kristen's Hideout is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Kristen's Hideout is "[krishideoutdesc]".

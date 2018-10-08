@@ -10,6 +10,10 @@ Chapter 1 - Abandoned Lot into Storage Room
 
 Section 1 - Lot Environment
 
+Table of GameRoomIDs (continued)
+Object	Name
+Abandoned Lot	"Abandoned Lot"
+
 Abandoned Lot is a room.
 Abandoned Lot is fasttravel.
 The earea of Abandoned Lot is "Outside".
@@ -21,8 +25,8 @@ to say LotDesc:
 
 Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints -- human footprints, in fact! -- leading up to it[else]There are many doors along the wall, but the only one open to you is the one leading outside[end if].";
 
-Lot Exit is a door. Lot Exit is dangerous. The marea of Lot Exit is "Outside". Lot Exit is undescribed. Lot Exit is west of Abandoned Lot. West of Lot Exit is Outside Exploration.
-South of Abandoned Lot is Warehouse Door.
+Lot Exit is a door. Lot Exit is dangerous. The marea of Lot Exit is "Outside". Lot Exit is undescribed. Lot Exit is west of Abandoned Lot. Outside Exploration is west of Lot Exit.
+Warehouse Door is south of Abandoned Lot.
 
 instead of sniffing Abandoned Lot:
 	say "This area smells of dry earth, old machinery and oil.";
@@ -150,9 +154,13 @@ Chapter 2 - Storage Room and Steven
 
 Section 1 - The environment
 
+Table of GameRoomIDs (continued)
+Object	Name
+storage room	"storage room"
+
 The storage room is a room. "The inside of this warehouse has been converted into a shelter. The large stockpile of packaging and spare parts remains in the center of the room, a remnant of the city's industry. More heavily guarded are the stockpiles of bottled water in the corner. A line of survivors stretches from the water all the way around the wall. Few of them carry any possessions; they sit on blankets as they talk to one another. Every now and then, a glint of color or a patch of fur catches your eye; it seems at least a few of these survivors have already been mutated, and are desperately trying to hide it.";
 
-South of the Warehouse Door is the Storage Room.
+Storage Room is south of the Warehouse Door.
 
 instead of sniffing Storage Room:
 	say "The storage room smells of the human survivors and their supplies. Fear is thick in the air, almost completely masking the faint traces of other non-human scents among the group. It seems a few of them are at least slightly infected and desperately trying to hide it.";
@@ -289,9 +297,13 @@ Chapter 3 - The Office and StevenFucking
 
 Section 1 - The Office
 
+Table of GameRoomIDs (continued)
+Object	Name
+Steven's Office	"Steven's Office"
+
 Steven's Office is a room. "The office is very sparsely decorated. A desk made from pallets and a chair made from crates sits on one corner of the room. A pallet in another corner functions as a bookshelf, showing a couple of books and a blackened popsicle picture frame, with 'Daddy' crayoned inside. Nothing else is decorated. A door leads back to the warehouse floor.";
 
-Outside of Steven's Office is Storage Room. Inside of Storage Room is nowhere.
+Storage Room is outside of Steven's Office. Nowhere is inside of Storage Room.
 
 instead of sniffing Steven's Office:
 	say "The room smells like Steven, strong and manly.";
@@ -561,20 +573,35 @@ Chapter 4 - Junkyard
 
 Section 1 - The environment
 
+Table of GameRoomIDs (continued)
+Object	Name
+Junkyard Entrance	"Junkyard Entrance"
+
+Junkyard Entrance is a room.
 Junkyard Entrance is east of the Abandoned Lot. "In this dirty part of the town you stand on the road to an even dirtier place. The smells of the city junkyard, of rotting food and fetid water, reek from the north. The dirt road curves to the west, back to the abandoned warehouse complex."
+The earea of Junkyard Entrance is "Junkyard".
 
 instead of sniffing Junkyard Entrance:
 	say "The junkyard smells predominantly of old machinery and oil, though there's a faint smell of normal trash as well from piles of that scattered around.";
 
 Junkyard Gate is a door. "The junkyard to the north appears threatening and dangerous, but there's probably plenty of loot for the taking." Junkyard Gate is dangerous.
 
-North of Junkyard Gate is Junkyard Interior.
-North of Junkyard Entrance is Junkyard Gate.
+Table of GameRoomIDs (continued)
+Object	Name
+Junkyard Interior	"Junkyard Interior"
+
+Junkyard Interior is a room.
+Junkyard Interior is north of Junkyard Gate.
+Junkyard Gate is north of Junkyard Entrance.
 
 The marea of Junkyard Gate is "Junkyard".
 
 
 Section 2 - Junkyard Digups
+
+Table of GameEventIDs (continued)
+Object	Name
+Junkyard digups	"A pile of garbage"
 
 Junkyard digups is a situation. The printed name of Junkyard digups is "A pile of garbage".
 The sarea of junkyard digups is "Junkyard".
@@ -597,11 +624,26 @@ Instead of resolving junkyard digups:
 
 Section 3 - Steven's Home
 
-Steven's Home is a room. "You are in a more cozy and more private part of the junkyard. All of the hard metal objects have been cleared, and instead the floor is lined with mattress stuffing and foam insulation, topped off with wild grass for a natural feel. It also doesn't smell as bad, thanks to the pine needles and wildflower petals mixed into the floor. You feel safe and protected here." It is fasttravel. It is private. Outside of Steven's Home is Junkyard Entrance. Inside of Junkyard Entrance is nowhere.
+Table of GameRoomIDs (continued)
+Object	Name
+Steven's Home	"Steven's Home"
+
+Steven's Home is a room. "You are in a more cozy and more private part of the junkyard. All of the hard metal objects have been cleared, and instead the floor is lined with mattress stuffing and foam insulation, topped off with wild grass for a natural feel. It also doesn't smell as bad, thanks to the pine needles and wildflower petals mixed into the floor. You feel safe and protected here." It is fasttravel. It is private.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Junkyard Entrance	"Junkyard Entrance"
+
+Junkyard Entrance is a room.
+Junkyard Entrance is outside of Steven's Home. Nowhere is inside of Junkyard Entrance.
 [The sarea of Steven's Home is "Junkyard."]
 
 instead of sniffing Steven's Home:
 	say "This spot in the junkyard smells of Steven and his manly, equine scent. It only partially blocks the pervasive scent of the junkyard though.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Junkyard Home	"Junkyard Home"
 
 Junkyard Home is a situation.
 The sarea of Junkyard Home is "Junkyard".
@@ -619,6 +661,10 @@ Instead of resolving Junkyard Home:
 
 
 Section 4 - Finding a tool
+
+Table of GameEventIDs (continued)
+Object	Name
+unused tool	"unused tool"
 
 an unused tool is a situation.
 The sarea of an unused tool is "Junkyard".
@@ -659,6 +705,10 @@ Instead of resolving an unused tool:
 
 
 Section 5 - Find a random infected object
+
+Table of GameEventIDs (continued)
+Object	Name
+signs of a scuffle	"signs of a scuffle"
 
 signs of a scuffle is a situation.
 The sarea of signs of a scuffle is "Junkyard".

@@ -27,8 +27,19 @@ OrcFemSpecialFightNumber is a number that varies.
 KatyaResistance is a number that varies. KatyaResistance is usually 6.
 KatyaRelationship is a number that varies. KatyaRelationship is usually 0.
 KatyaDildoTaken is a number that varies.
+KatyaRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if Noteworthy Ruin is resolved and Resolution of Noteworthy Ruin is 1 and KatyaRoomConnection is 0:
+		change the north exit of Dry Plains to Inconspicuous Trail; [connecting the location to the travel room]
+		change the south exit of Inconspicuous Trail to Dry Plains; [connecting the location to the travel room]
+		now KatyaRoomConnection is 1; [room connected]
 
 Section 1 - Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Noteworthy Ruin	"Noteworthy Ruin"
 
 Noteworthy Ruin is a situation. The level of Noteworthy Ruin is 8.
 The sarea of Noteworthy Ruin is "Plains".
@@ -507,11 +518,20 @@ to say KatyasDildoAssFuck:
 
 Section 4 - Location
 
+Table of GameRoomIDs (continued)
+Object	Name
+Inconspicuous Trail	"Inconspicuous Trail"
+
 Inconspicuous Trail is a room.
 The description of Inconspicuous Trail is "     You're on a fairly seldom-used trail through the expansive grassland of the dry plains. If you hadn't known exactly what to look for, there would be little chance you'd even have noticed this trail. Just a little distance further to the northeast is Katya's hidden camp.".
 earea of Inconspicuous Trail is "Plains".
 
-Northeast of Inconspicuous Trail is Hidden Camp. Hidden Camp is sleepsafe.
+Table of GameRoomIDs (continued)
+Object	Name
+Hidden Camp	"Hidden Camp"
+
+Hidden Camp is a room.
+Hidden Camp is northeast of Inconspicuous Trail. Hidden Camp is sleepsafe.
 The description of Hidden Camp is "[KatyasCampDesc]".
 earea of Hidden Camp is "Plains".
 

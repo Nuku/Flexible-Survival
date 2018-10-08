@@ -1,6 +1,11 @@
 Version 1 of Blake by Ssely begins here.
 
-East of Smith Haven Mall Lot East is Dirty Alley.
+Table of GameRoomIDs (continued)
+Object	Name
+Dirty Alley	"Dirty Alley"
+
+Dirty Alley is a room.
+Dirty Alley is east of Smith Haven Mall Lot East.
 The description of Dirty Alley is "[DirtyAlleyDesc]".
 
 to say DirtyAlleyDesc:

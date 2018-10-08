@@ -6,6 +6,10 @@ Version 1 of Aurora by Stripes begins here.
 
 Section 1 - Encounter
 
+Table of GameEventIDs (continued)
+Object	Name
+Giant's Frozen Yogurt	"Giant's Frozen Yogurt"
+
 Giant's Frozen Yogurt is a situation.
 The sarea of Giant's Frozen Yogurt is "Capitol".
 the level of Giant's Frozen Yogurt is 5.

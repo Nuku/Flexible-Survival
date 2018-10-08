@@ -113,13 +113,24 @@ BarryMotive is a number that varies.
 BodyRelationship is a number that varies.
 
 [Room Declaration]
-East of the Mall Foyer is Wolverine Guard Station.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Wolverine Guard Station	"Wolverine Guard Station"
+
+Wolverine Guard Station is a room.
+Wolverine Guard Station is east of the Mall Foyer.
 The description of Wolverine Guard Station is "[WolverineGuardStationDesc]".
 
 to say WolverineGuardStationDesc:
 	say "     The guard station is situated within a coffee shop. There are tiny little tables where big wolverines are sat at, working on paperwork their boss more than likely has assigned them. The shop counter has a wolverine sitting there with a lot more work than the others. Although judging by the fact that said male is also the receptionist, he surely must have more patience than the others. All in though, the place seems pretty homey and looks to be where the wolverines have also set up home as you can see a door with a sign that says sleeping quarters.";
 
 [Room Declaration]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Wolverine Lockup	"Wolverine Lockup"
+
 Wolverine Lockup is a room.
 The description of Wolverine Lockup is "[WolverineLockupDesc]".
 

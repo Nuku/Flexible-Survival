@@ -6,6 +6,10 @@ Version 2 of Dry Plains Events by Stripes begins here.
 
 Section 1- Creeping Grass
 
+Table of GameEventIDs (continued)
+Object	Name
+Creeping Grass	"Creeping Grass"
+
 Creeping Grass is a situation.
 The sarea of Creeping Grass is "Plains".
 
@@ -16,6 +20,10 @@ Instead of resolving a Creeping Grass:
 
 
 Section 2- Ranch House
+
+Table of GameEventIDs (continued)
+Object	Name
+Ranch House	"Ranch House"
 
 Ranch House is a situation.
 The sarea of Ranch House is "Plains".
@@ -28,6 +36,10 @@ Instead of resolving a Ranch House:
 
 Section 3- Soaring Eagle
 
+Table of GameEventIDs (continued)
+Object	Name
+Soaring Eagle	"Soaring Eagle"
+
 Soaring Eagle is a situation.
 The sarea of Soaring Eagle is "Plains".
 
@@ -38,6 +50,10 @@ Instead of resolving a Soaring Eagle:
 
 
 Section 4- Partial Ruin
+
+Table of GameEventIDs (continued)
+Object	Name
+Partial Ruin	"Partial Ruin"
 
 Partial Ruin is a situation. The level of Partial Ruin is 5.
 The sarea of Partial Ruin is "Plains".
@@ -71,6 +87,10 @@ Instead of resolving a Partial Ruin:
 
 Section 5- Hardware Store Ruins
 
+Table of GameEventIDs (continued)
+Object	Name
+Hardware Store Ruins	"Hardware Store Ruins"
+
 Hardware Store Ruins is a situation.
 The sarea of Hardware Store Ruins is "Plains".
 
@@ -92,6 +112,10 @@ the scent of the spiked club is "The heavy club smells of blood, sweat and anger
 
 
 Section 6- Hunting Party
+
+Table of GameEventIDs (continued)
+Object	Name
+Hunting Party	"Hunting Party"
 
 Hunting Party is a situation. The level of Hunting Party is 9.
 The sarea of Hunting Party is "Plains".
@@ -122,6 +146,10 @@ Instead of resolving a Hunting Party:
 
 
 Section 7- Pit Trap
+
+Table of GameEventIDs (continued)
+Object	Name
+Pit Trap	"Pit Trap"
 
 Pit Trap is a situation. The level of Pit Trap is 5.
 The sarea of Pit Trap is "Plains".
@@ -216,6 +244,10 @@ to say prairiedogsex:
 
 Section 8 - Watering Hole
 
+Table of GameEventIDs (continued)
+Object	Name
+Watering Hole	"Watering Hole"
+
 Watering Hole is a situation. The level of Watering Hole is 8.
 The sarea of Watering Hole is "Plains".
 when play begins:
@@ -303,6 +335,10 @@ to say eaglefulltf:
 
 
 Section 9 - Treasure Hunters
+
+Table of GameEventIDs (continued)
+Object	Name
+Treasure Hunters	"Treasure Hunters"
 
 Treasure Hunters is a situation.
 The sarea of Treasure Hunters is "Plains".

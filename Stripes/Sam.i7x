@@ -39,6 +39,10 @@ Version 2 of Sam by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Another Researcher	"Another Researcher"
+
 Another Researcher is a situation.
 The sarea of Another Researcher is "Outside".
 when play begins:
@@ -72,6 +76,10 @@ Instead of resolving Another Researcher:
 
 
 Section 2 - Mini-Lab
+
+Table of GameRoomIDs (continued)
+Object	Name
+Mini-Lab	"Mini-Lab"
 
 Mini-Lab is a room. It is fasttravel. It is private.
 The description of Mini-Lab is "[minilabdesc]".
