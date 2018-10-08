@@ -534,6 +534,7 @@ Definition: A person (Called x) is bunkered:
 	no;
 
 Definition: A person (called x) is CockFitsInPlayerPussy:
+	if "Twisted Capacity" is listed in the feats of player, yes;
 	if cock length of x > cunt length of player + 1, no; [some stretching allowed]
 	yes;
 
