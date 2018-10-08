@@ -97,20 +97,19 @@ after going to Darius's Crib while (Darius is not in Darius's Crib):
 
 Table of GameEventIDs (continued)
 Object	Name
-Joshiro Tales 1	"Joshiro Tales 1"
+JoshiroEncounterTale 1	"JoshiroEncounterTale 1"
 
-Joshiro Tales 1 is a situation.
-The sarea of Joshiro Tales 1 is "Nowhere".
+JoshiroEncounterTale 1 is a situation.
+The sarea of JoshiroEncounterTale 1 is "Nowhere".
 
-after going to Darius's Crib while (Joshiro Tales 1 is active and Joshiro Tales 1 is not resolved and a random chance of 1 in 3 succeeds and HP of Darius > 0 and Darius is in Darius's Crib):
-	project the Figure of Darius_face_icon;
+after going to Darius's Crib while (JoshiroEncounterTale 1 is active and JoshiroEncounterTale 1 is not resolved and a random chance of 1 in 3 succeeds and HP of Darius > 0 and Darius is in Darius's Crib):
+	project the Figure of Tyke_clothed_icon;
 	say "     As you enter the short hallway to Darius's dingy apartment, you hear voices from ahead. Peeking into the room, it becomes clear that the dalmatian has another visitor right now. A towering doberman is standing next to Darius, sporting a ripped physique with a V shaped torso. He is dressed in little but a bandanna around his neck and a flimsy pair of shorts with a broad belt at the top. The outline of his weighty cock is very clearly visible through the fabric. Both canines are holding bottles of beer in their hands. As Darius's visitor takes a swallow from his, barks from what sounds like puppies come from the apartment next door, through the hole that has been knocked into the connecting wall. 'Man, you're one lucky dude Dar. Just grabbing yourself a bitch right from the street and having all the tail you need at home, all the time.' The spotted canine laughs and grins at his buddy, 'What can I say Tyke, you just gotta know how to pick em. Hannah is a great bitch, even if she started out as a dude. But not for long once she felt my dick of course.'";
 	say "     The doberman's eyes go wide and he makes a choking sound as his beer goes the wrong way, then coughs and gapes at Darius. 'You lucky dog! So she just switched to a babe right away? I'm still not used to how things work these days. Or maybe they don't do so for everyone. Bitches haven't been all that plentiful for myself I have to say.' Tyke is silent for a few seconds, then adds, 'For example, when things were just starting out with all this shit, an Asian dude crossed my path one morning. I thought I'd just threaten him a little bit and get his money, try out my new bod, but nope, even though he was just a human, he was ready to throw down and we tussled. Had crazy moves and all that shit, that guy. And the weirdest part was - he kept rubbing my junk as he passed me. Couldn't help but get hard from the friction. Then he kicked my paws out from under me and before I know it, the freaky faggot was ramming his ass down my dick!'";
 	WaitLineBreak;
 	say "     Tyke grumbles as Darius lets out a full-throated laugh and murmurs, 'Yeah yeah, you're lucky we're friends. What am I supposed to do if most people I run into are fucking flamers who just want to ride my cock? I'm not gay or anything, but some of them admittedly do have some sweet holes on them.' A visible twitch goes through the cock barely contained by Tyke's shorts, prompting Darius to comment, 'Seriously? Chubbing up for the love of your life?' The dobie gives him a punch in the shoulder and replies, 'Oh please! Just saying that the dude had a tight ass that really milked my cock. And a huge ego too - 'Joshiro Arashi wins again!' he shouted, raising his arms and posing as if people were taking photos of him bouncing on my cock and being blasted full of nut-milk. Bastard splattered me with his come too, then pulled off my dick and just strutted away.'";
 	say "     Darius looks at the other canine thoughtfully and smirks. 'Wait, he just stayed human? Man, I think you're shooting blanks or something. Hannah turned right before my eyes in just a few moments. And you know that she's a fully working bitch. I've got enough puppies to prove it.' The large doberman replies, 'Nope, that's not it. I left my share of dobie converts out there over the last little while.' 'Yeah, all dudes who sucked you off I bet,' Darius bursts out in amusement. 'Okay, fuck this. I'll go find myself a bitch right now! Can't call me a fag if I drag a preggers puppy machine here, can you?!' Tyke scoffs and grumbles at his buddy, then stomps out of the apartment, passing you without a glance and throwing the front door shut behind him as he leaves.";
-	now Joshiro Tales 1 is resolved;
-
+	now JoshiroEncounterTale 1 is resolved;
 
 Section 2 - NPC
 
@@ -181,7 +180,7 @@ an everyturn rule:
 				say "     An anthro dalmatian comes strolling down the street from the west in an unhurried tempo, then stops for a second to say, 'Hey there, I'm Darius. You look like you could use some of my goods. Wanna come in and buy something?' He doesn't wait for a reply and simply enters an apartment building in the southeast, leaving you to decide if you want to follow after him.";
 			else if player is in Entrance to the Red Light District:
 				project the Figure of Darius_face_icon;
-				say "     Darius pushes himself off the wall he was leaning against and walks off to the east in an unhurried tempo. Watching the muscled canine go, you can't help but feel like he is daring any stupid creature with ideas to attack him.";
+				say "     An anthro dalmatian pushes himself off the wall he was leaning against just as you arrive. He gives you a nod in greeting and says, 'Hey there, I'm Darius. You look like you could use some of my special goods. Why don't you come join me in my crib and we can talk business?' Not waiting for a reply, he wanders off to the east in an unhurried tempo. Watching the muscled canine go, you can't help but feel like he is daring any stupid creature with ideas to attack him.";
 			now HP of Darius is 1;
 		else:
 			if player is in Darius's Crib:
