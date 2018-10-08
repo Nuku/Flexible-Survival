@@ -556,6 +556,10 @@ When Play begins:
 
 Section 5 - NPCs
 
+Table of GameCharacterIDs (continued)
+object	name
+Joshiro	"Joshiro"
+
 Joshiro is a man.
 ScaleValue of Joshiro is 3. [human sized]
 Cocks of Joshiro is 1.
