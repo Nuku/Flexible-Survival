@@ -250,6 +250,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Deep Forest[close bracket][as]nav Deep Forest[end link] ";
 		if Happy Puppy Kennel is known:
 			say "| [link][bracket]Happy Puppy Kennel[close bracket][as]nav Happy Puppy Kennel[end link] ";
+		if Ironscale Hollow is known:
+			say "| [link][bracket]Ironscale Hollow[close bracket][as]nav Ironscale Hollow[end link] ";
 		LineBreak;
 	[start of the warehouse area]
 	if Warehouse District is known or Hyena Hideout is known or Mike's Home is known or Spider's Web is known or Wolfman Lair is known:
