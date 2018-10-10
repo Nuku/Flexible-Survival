@@ -558,6 +558,54 @@ Definition: A person (called x) is CumLoadInflatesPlayer: [yes = inflation; can 
 	if cock width of x >= 32, yes;
 	no;
 
+Definition: A person (called x) is barefoot:
+	let FeetItem be a grab object;
+	now FeetItem is journal;
+	repeat with z running through equipped equipment:
+		if slot of z is "feet":
+			now FeetItem is z;
+	if FeetItem is journal: [already naked]
+		yes;
+	else:
+		no;
+
+Definition: A person (called x) is barecrotch:
+	let WaistItem be a grab object;
+	now WaistItem is journal;
+	let CrotchItem be a grab object;
+	now CrotchItem is journal;
+	repeat with z running through equipped equipment:
+		if slot of z is "waist":
+			now WaistItem is z;
+	repeat with z running through equipped equipment:
+		if slot of z is "crotch":
+			now CrotchItem is z;
+	if WaistItem is journal and CrotchItem is journal: [already naked]
+		yes;
+	else:
+		no;
+
+Definition: A person (called x) is barechest:
+	let ChestItem be a grab object;
+	now ChestItem is journal;
+	let BodyItem be a grab object;
+	now BodyItem is journal;
+	repeat with z running through equipped equipment:
+		if slot of z is "chest":
+			now ChestItem is z;
+	repeat with z running through equipped equipment:
+		if slot of z is "Body":
+			now BodyItem is z;
+	if ChestItem is journal and BodyItem is journal: [already naked]
+		yes;
+	else:
+		no;
+
+Definition: A person (called x) is naked:
+	if x is barecrotch and x is barechest and x is barefoot:
+		yes;
+	else:
+		no;
 
 A thing can be rooted in place. A thing is usually not rooted in place.
 A thing can be restful. A thing is usually not restful.
