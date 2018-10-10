@@ -376,6 +376,29 @@ to say SelfDressCrotch:
 		say "collect your [CrotchItem] and [Waistitem] to put them back on";
 
 [
+Adds the uppermost layer of bottom clothes, that the player wears, in the text
+Example use:
+say "     You feel the cold wind blow on your [crotchDesc]";
+]
+to say crotchDesc:
+	let WaistItem be a grab object;
+	now WaistItem is journal;
+	let CrotchItem be a grab object;
+	now CrotchItem is journal;
+	repeat with z running through equipped equipment:
+		if slot of z is "waist":
+			now WaistItem is z;
+	repeat with z running through equipped equipment:
+		if slot of z is "crotch":
+			now CrotchItem is z;
+	if WaistItem is journal and CrotchItem is journal: [already naked]
+		say "bare crotch";
+	else if WaistItem is journal and CrotchItem is not journal:
+		say "[CrotchItem]";
+	else if WaistItem is not journal:
+		say "[WaistItem]";
+
+[
 
 understand "zTStripChest" as SCAction.
 
@@ -473,6 +496,45 @@ to say SelfDressChest:
 		say "collect and put your [ChestItem] back on";
 	else if ChestItem is not journal and BodyItem is not journal:
 		say "collect your [ChestItem] and [BodyItem] to put them back on";
+
+[
+Adds the uppermost layer of top clothes, that the player wears, in the text
+Example use:
+say "     The water splashes on your [chestDesc]";
+]
+to say chestDesc:
+	let ChestItem be a grab object;
+	now ChestItem is journal;
+	let BodyItem be a grab object;
+	now BodyItem is journal;
+	repeat with z running through equipped equipment:
+		if slot of z is "chest":
+			now ChestItem is z;
+	repeat with z running through equipped equipment:
+		if slot of z is "Body":
+			now BodyItem is z;
+	if ChestItem is journal and BodyItem is journal: [already naked]
+		say "bare chest";
+	else if ChestItem is not journal and BodyItem is journal:
+		say "[ChestItem]";
+	else:
+		say "[BodyItem]";
+
+[
+Adds footwear name in the text
+Example use:
+say "     You walk on the dirty floor with your [feetDesc]";
+]
+to say feetDesc:
+	let FeetItem be a grab object;
+	now FeetItem is journal;
+	repeat with z running through equipped equipment:
+		if slot of z is "feet":
+			now FeetItem is z;
+	if FeetItem is journal: [already naked]
+		say "bare feet";
+	else:
+		say "[FeetItem]";
 
 To MultiInfect (x - text) repeats (repeatCount - number):
 	if scenario is "Researcher" and researchbypass is 0:
