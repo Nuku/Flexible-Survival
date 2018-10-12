@@ -547,21 +547,21 @@ instead of sniffing Wolverine Pimp:
 	say "The wolverine gives off an intimidating, bestial smell.";
 
 instead of trading the food when the current action involves the Wolverine Pimp:
-	if "Used" is listed in the traits of Zoe:
+	if "Used" is listed in the traits of Zoe or player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
 		decrease carried of food by 1;
 
 instead of trading the water bottle when the current action involves the Wolverine Pimp:
-	if "Used" is listed in the traits of Zoe:
+	if "Used" is listed in the traits of Zoe or player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
 		decrease carried of water bottle by 1;
 
 instead of trading the chips when the current action involves the Wolverine Pimp:
-	if "Used" is listed in the traits of Zoe:
+	if "Used" is listed in the traits of Zoe or player is not male or the Suspicious Van is open:
 		say "[wolverineTradeRefuse]";
 	else:
 		say "[wolverineTrade]";
