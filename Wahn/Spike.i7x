@@ -81,6 +81,10 @@ to say SpikeAccepted:
 
 Section 2 - Combat Pet
 
+Table of GameCharacterIDs (continued)
+object	name
+doberman companion	"doberman companion"
+
 doberman companion is a pet. doberman companion is a part of the player.
 understand "Spike" as doberman companion.
 understand "doberman" as doberman companion.
@@ -111,6 +115,10 @@ to say DismissSpike:
 	move Spike to Sitting Area;
 
 Section 3 - NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+Spike	"Spike"
 
 Spike is a man.
 The description of Spike is "[SpikeDesc]".
