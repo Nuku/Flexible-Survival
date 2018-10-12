@@ -552,22 +552,38 @@ instead of sniffing Wolverine Pimp:
 	say "The wolverine gives off an intimidating, bestial smell.";
 
 instead of trading the food when the current action involves the Wolverine Pimp:
-	say "[wolverineTrade]";
-	decrease carried of food by 1;
+	if "Used" is listed in the traits of Zoe:
+		say "[wolverineTradeRefuse]";
+	else:
+		say "[wolverineTrade]";
+		decrease carried of food by 1;
 
 instead of trading the water bottle when the current action involves the Wolverine Pimp:
-	say "[wolverineTrade]";
-	decrease carried of water bottle by 1;
+	if "Used" is listed in the traits of Zoe:
+		say "[wolverineTradeRefuse]";
+	else:
+		say "[wolverineTrade]";
+		decrease carried of water bottle by 1;
 
 instead of trading the chips when the current action involves the Wolverine Pimp:
-	say "[wolverineTrade]";
-	decrease carried of chips by 1;
+	if "Used" is listed in the traits of Zoe:
+		say "[wolverineTradeRefuse]";
+	else:
+		say "[wolverineTrade]";
+		decrease carried of chips by 1;
 
 instead of trading the soda when the current action involves the Wolverine Pimp:
-	say "[wolverineTrade]";
-	decrease carried of soda by 1;
+	if "Used" is listed in the traits of Zoe or player is not male or the Suspicious Van is open:
+		say "[wolverineTradeRefuse]";
+	else:
+		say "[wolverineTrade]";
+		decrease carried of soda by 1;
 
 to say wolverineTrade:
+	say "     The guard grabs your offering, and puts it into his bag 'Thaaank you!' He gets off his seat, and unlocks the backdoor of the van with his key. 'Here's the rules: no maiming, no blood, no piss, no shitstuff. You got one hour; if I bang on the door, it doesn't matter if you're [']almost there[']: you pull out and you get out. Are we good? Good.' After this, he opens the van, letting you gaze at Zoe's laying form, in the back.";
+	now Suspicious Van is open;
+
+to say wolverineTradeRefuse:
 	if player is not male:
 		say "     'Sorry girl, but what's inside's not for you. You lack the, er, [']prerequisites['].'";
 	else if "Used" is listed in the Traits of Zoe:
@@ -575,13 +591,7 @@ to say wolverineTrade:
 	else if the Suspicious Van is open:
 		say "     'You already paid me. Get on with it!'";
 	else:
-		wolverineGuardPaid;
-
-[TODO: Fucking the guard is allowed during rescue attempt]
-
-to wolverineGuardPaid:
-	say "     The guard grabs your offering, and puts it into his bag 'Thaaank you!' He gets off his seat, and unlocks the backdoor of the van with his key. 'Here's the rules: no maiming, no blood, no piss, no shitstuff. You got one hour; if I bang on the door, it doesn't matter if you're [']almost there[']: you pull out and you get out. Are we good? Good.' After this, he opens the van, letting you gaze at Zoe's laying form, in the back.";
-	now Suspicious Van is open;
+		say "     ERROR: 'No reason I should tell you no. Tell someone in the bug-report channel about it.'";
 
 instead of opening the Suspicious Van while Resolution of Rabbit Tagger is 1:
 	say "The wolverine guard is in the way. 'Wanna have fun inside? Talk to me first.'";
