@@ -11,7 +11,7 @@ Object	Name
 CandyShop	"CandyShop"
 
 CandyShop is a situation. The level of CandyShop is 9.
-The sarea of CandyShop is "Midway".
+The sarea of CandyShop is "Fair".
 sugarferretfight is a number that varies.
 
 when play begins:
@@ -110,7 +110,7 @@ to say Sweet Tooth scene:
 			now sex entry is "Both";
 		else:
 			now sex entry is "Male";
-		now area entry is "Midway";
+		now area entry is "Fair";
 		now non-infectious entry is false;
 		now resbypass entry is true;
 		now sugarferretfight is 0;

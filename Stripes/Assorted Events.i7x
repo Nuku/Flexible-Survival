@@ -626,7 +626,7 @@ Object	Name
 Concession Stand	"Concession Stand"
 
 Concession Stand is a situation.
-The sarea of Concession Stand is "Midway".
+The sarea of Concession Stand is "Fair".
 foodvendor is a number that varies.
 when play begins:
 	add Concession Stand to badspots of furry;
@@ -751,7 +751,7 @@ Object	Name
 Sweet Exchange	"Sweet Exchange"
 
 Sweet Exchange is a situation.
-The sarea of Sweet Exchange is "Midway".
+The sarea of Sweet Exchange is "Fair".
 when play begins:
 	add Sweet Exchange to badspots of furry;
 	add Sweet Exchange to badspots of girl;
@@ -784,7 +784,7 @@ Object	Name
 Caught Glider	"Caught Glider"
 
 Caught Glider is a situation. Caught Glider is inactive.
-The sarea of Caught Glider is "Midway".
+The sarea of Caught Glider is "Fair".
 when play begins:
 	add Caught Glider to badspots of furry;
 	add Caught Glider to badspots of girl;

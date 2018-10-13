@@ -10,24 +10,12 @@ Object	Name
 State Fair	"State Fair"
 
 State Fair is a room. It is fasttravel.
-The earea of State Fair is "Midway".
+The earea of State Fair is "Fair".
 
 The description of State Fair is "     The entrance to the state fair. Colorful banners and signs plaster the large open area. Numerous food shops and game booths are set up near the large ticket booth. The fair entrance seems relatively deserted, and the ticketing area is wide open, allowing people to come and go as they please. While most of the shops and booths are closed up, one of the nearby game booths seems to still be open for business, with an automatic prize dispensing system set up. It looks like the prizes have been somewhat mixed up though. In contrast to the eerie emptiness of the fair entry, you can see some signs of activity and hear some fair noises coming from off to the west down the midway.".
 
 instead of sniffing State Fair:
 	say "The scents of popcorn and cotton candy and other treats fill the air. Beneath those enticing scents lie the strange scents of arousal, as if those musky scents are trying to hide beneath them. Among those scents, you catch the whiff of [one of]several felines[or]a rubbery scent[or]plush toys[or]male arousal[or]female heat[or]manly sweat[or]lupine cum[at random]";
-
-Table of GameRoomIDs (continued)
-Object	Name
-Midway	"Midway"
-
-Midway is a room.
-Midway entry is a door. "The midway stretches to the west.". It is dangerous.
-
-Midway is west of Midway entry.
-Midway entry is west of State Fair.
-
-The marea of Midway entry is "Midway".
 
 Borismate is a number that varies.
 boristalk is a number that varies.

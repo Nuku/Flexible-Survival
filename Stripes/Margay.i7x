@@ -43,7 +43,7 @@ to say losetomargay:
 			choose row monster from the Table of Random Critters;
 			if name entry is "Megakitty":
 				now MKunleashed is true;
-				now area entry is "Midway";
+				now area entry is "Fair";
 			say "     'I can't wait to tell Big Momma about you. The Megakitty so loves to meet the new kitties in our family,' she purrs, caressing your head tenderly before pushing you in further.";
 			say "     While not quite understanding her meaning, her words do please you and you wriggle gently in her rippling cunny, adding to her pleasure";
 		say "     Soon enough, you're fully encapsulated in her womb, feeling content and sleepy from the warmth and the milk. You feel quite happy as her uterine wall forms a placenta and an umbilical cord snakes its way down to connect to your navel, bonding you to your beautiful and loving feline mother. Feeling her paws rubbing over her full belly, you drift into a peaceful slumber, knowing she'll take care of you.";
@@ -76,7 +76,7 @@ to say beatthemargay:
 				choose row monster from the Table of Random Critters;
 				if name entry is "Megakitty":
 					now MKunleashed is true;
-					now area entry is "Midway";
+					now area entry is "Fair";
 				say "     As you're starting to push your way into her welcoming cunny, she caresses you tenderly. 'Mmm... you'll make a fine, loving kitty. I can't wait to let Big Momma know. The Megakitty will be looking forward to meeting you.'";
 				say "     With your head sliding into her, you find it difficult to focus on her words, but feel quite pleased to have made her happy";
 			say "     As this continues, you soon have your whole head into her and you're being drawn even deeper, your altered instincts urge you to accept this and you barely struggle. Your body slides further and further into her as her vagina and belly stretch with ease to accommodate you. As your hips are slid over, [if player is male]your rock-hard cock[smn] [ismv] pressed[else]your dripping puss[yfn] slide[sfv][end if] against those warm, rippling walls and you cum hard, much to the feline's delight.";
@@ -102,7 +102,7 @@ to say margayoral:
 		choose row monster from the Table of Random Critters;
 		if name entry is "Megakitty":
 			now MKunleashed is true;
-			now area entry is "Midway";
+			now area entry is "Fair";
 		say "     'If you're not going to be a good little kitty and play with me properly, I think we'll need to send Big Momma after you. The Megakitty will make sure you're brought up right as a sexy kitty,' she calls out at you as you walk off. You're not quite sure what all that means, but it could be trouble.";
 
 
@@ -142,7 +142,7 @@ When Play begins:
 	now HP entry is 55; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 7; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Midway"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now area entry is "Fair"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
