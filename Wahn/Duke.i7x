@@ -13,6 +13,10 @@ Version 1 of Duke by Wahn begins here.
 [   1: Sheep Meadow SW                                                  ]
 [   2: Sheep Meadow SE                                                  ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Duke	"Duke"
+
 Duke is a man. The HP of Duke is normally 0. The thirst of Duke is normally 2. Duke is in Sheep Meadow SE.
 The description of Duke is "[DukeDesc]".
 The conversation of Duke is { "Mew!" }.
@@ -133,14 +137,14 @@ to say DukeShawnFirstTimeSex:
 	say "     Wincing, holding his horned head, Shawn rises from the ground on unsteady digitigrade legs. 'Man, I had the weirdest dream...' he says, then adds 'Wait - what's this?' as he looks at his hand, arm, then down his body. Nonplussed at his furred, anthro ram body, he looks to you, then is almost bowled over as Duke rushes in and gives him an exuberant embrace. The shepherd hugs his ram friend tight, saying 'It's me, Duke - so good to have you finally back. I've missed you terribly.'";
 	say "     There is a moment of silence as the two of them just look into each other's eyes, then suddenly, they kiss and start making out with each other. Basically forgetting the world around them, Duke and Shawn just keep going at it, hands exploring each other's body while they're busy tongue-wrestling or Duke licks Shawn's face. It doesn't take long until the anthro canine sinks to the floor, still embracing Shawn and pulling him down with him to lie together in the green grass. Their make-out-session continues some more with Shawn now lying on top of Duke - until there is a moaned 'Fuck me' audible from Duke between their kisses.";
 	LineBreak;
-	say "     Do you want to watch them go at it ([link]Y[as]y[end link]), or would you rather give em some privacy ([link]N[as]n[end link])?";
+	say "     Do you want to watch them go at it ([link]Y[as]y[end link]), or would you rather give [']em some privacy ([link]N[as]n[end link])?";
 	if player consents:
 		LineBreak;
 		say "     Giving his canine lover a last loud smooch, Shawn moves back a little bit, coming to kneel between Duke's legs and looking down on him. A smile on the ram's face, he takes hold of his hard cock and rubs it against the German shepherd's knotted shaft, then takes both of them in one hand and strokes them together. Next, he moves his hands to Duke's legs, rubbing the insides of his thighs and lifting the legs up into the air. Duke readily helps him out with that, taking over holding his own legs in that position, his tail beating against the ground in the dog-morph's eagerness for what will come next.";
 		say "     With Duke's hips raised a bit and his legs spread, he's in a perfect position for Shawn, who quickly aims his hard cock then pushes its tip against the German shepherd's pucker, easily stretching it around his shaft as he did so many times before when they were animals. Still, now with both of them in anthro shape, it's kind of their first time, so Shawn takes it slow, sinking his manhood into the dog bit by bit and taking breaks for him to get used to it. When he finally is all the way inside, Shawn leans forward, with Duke meeting his lips for a kiss. Then the ram takes up thrusting into his partner, quickly getting faster and harder as his libido runs high.";
 		WaitLineBreak;
 		say "     The two of them going at it is quite a show. They're like - well... a bit like animals, though with lots of caresses and kisses between the loving partners thrown in. Standing where you are, watching them, you suddenly notice movement to your sides - it's several sheep, who've moved over to have a look too. One of them gives you a meaning-laden 'Meeeh', then looks back at Duke and Shawn.";
-		say "     Observed by a growing flock of spectators, still oblivious to anything except each other, the dissimilar partners eventually reach an breathtaking and quite noisy orgasm. There is a shout of 'I'm coming!' by Shawn, right at the same time as Duke gasps and his knotted cock starts shooting long spurts of the dog's seed all over his chestfur.";
+		say "     Observed by a growing flock of spectators, still oblivious to anything except each other, the dissimilar partners eventually reach an breathtaking and quite noisy orgasm. There is a shout of 'I'm coming!' by Shawn, right at the same time as Duke gasps and his knotted cock starts shooting long spurts of the dog's seed all over his chest-fur.";
 	else:
 		LineBreak;
 		say "     Silently moving back a bit from the two men, you turn to leave, but are stopped from actually walking away by quite a few sheep encircling the scene now. One of them gives you a meaning-laden 'Meeeh', then returns its attention to Duke and Shawn. Observed by a growing flock of spectators, still oblivious to anything except each other, the dissimilar partners eventually reach an breathtaking and quite noisy orgasm. There is a shout of 'I'm coming!' by Shawn, right at the same time as Duke gasps in lust himself.";
@@ -210,7 +214,7 @@ instead of fucking the Duke:
 
 to say DukeSexMenu:
 	blank out the whole of table of fucking options;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him blow your cock";
 		now sortorder entry is 1;
@@ -228,13 +232,13 @@ to say DukeSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Finger-fuck Duke and jerk him off at the same time.";
 		now toggle entry is DukeSex rule;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Duke's ass";
 		now sortorder entry is 6;
 		now description entry is "Fill the German shepherd's ass with your cock.";
 		now toggle entry is DukeSex rule;
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Let him fuck your ass";
 		now sortorder entry is 7;
@@ -298,7 +302,7 @@ to say DukeSex4: [Duke fucked in the ass]
 	say "     Putting your arms around Duke from behind, you feel his muscular chest, while at the same time grinding your hips against his ass, letting him feel your hard cock. The dog-morph is like putty in your hands, content in your embrace and moaning as he pushes his ass back against your crotch. After letting go of him for a second and a really quick strip on your part, you move into place behind him again, pulling him against your naked form and feeling the soft fur of his back against your chest. Your hard cock pokes his butt, sliding up and down between his firm buns as Duke pushes himself back against you, rotating his hips a bit.";
 	say "     Panting, the German shepherd turns his head and says over his shoulder 'Put it in please. Fuck me, I need it.' Grinning at having this muscular bottom boy for your pleasure, you reach down to take hold of your shaft, setting its tip at the canine's waiting pucker and thrust in, burying your manhood in him in one deep thrust. Duke's clearly used to taking hard cocks without complaint, only giving a loud satisfied moan as your hips meet his ass with an audible slap. His back passage stretches easily to allow your member in, then tightens around you, proving his skillful muscle control.";
 	WaitLineBreak;
-	say "     After just resting like that for a moment, revelling in holding the athletic shepherd and being balls-deep inside him, you start thrusting in and out, fucking him with slow and sure strokes. Following his pants of 'Harder! Faster!', you quickly speed up until you're really pounding his ass, giving it to him like he is used to from getting mounted by a horny ram. He really is an amazing bottom - easy to penetrate but still tight and gripping when he flexes his muscles, almost jerking you off inside of his ass. And pretty vocal too, yipping in pleasure each time you hit his prostate.";
+	say "     After just resting like that for a moment, reveling in holding the athletic shepherd and being balls-deep inside him, you start thrusting in and out, fucking him with slow and sure strokes. Following his pants of 'Harder! Faster!', you quickly speed up until you're really pounding his ass, giving it to him like he is used to from getting mounted by a horny ram. He really is an amazing bottom - easy to penetrate but still tight and gripping when he flexes his muscles, almost jerking you off inside of his ass. And pretty vocal too, yipping in pleasure each time you hit his prostate.";
 	say "     Soon, the wild ride you're giving him pushes Duke over the edge and he orgasms, his sphincter gripping your cock like a vise as his knotted shaft starts spurting arcs of cum in the air. With Duke's hot hole tight around your cock and creating breathtaking sensations as you fuck him through his climax, you soon feel a familiar tingle rise in your balls. Plunging in one last time, you grind your hips against his furry ass and hold on tight as you come, shooting burst after burst of cum deep into his asshole.";
 	WaitLineBreak;
 	say "     Holding the German shepherd until your orgasm ebbs out and the last spurt of cum is shot inside him, you pull out after a while, feeling his pucker pull tight the moment you leave his body, not letting one drop of your load escape. Duke turns around and gives your shoulder a squeeze, then leans in to lick your face. 'Thanks a lot, you were awesome. A really great friend to have.'";
@@ -307,7 +311,7 @@ to say DukeSex4: [Duke fucked in the ass]
 
 to say DukeSex5: [Player fucked in the ass]
 	setmonster "German Shepherd";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Stepping up behind Duke, you slide your hand down his back, running through the soft fur until you arrive at a firm asscheek and give it a good squeeze. He gives a quick yip as you do it, moaning as you continue to grope his ass, tongue hanging out of his mouth and tail wagging excitedly. Then you move your hand to his crack, rubbing your fingers between his buns and finding his pucker. The German shepherd gives a lust-filled gasp as you push a probing digit into his back-door, his knotted cock starting to push out of his shaft in arousal. 'I love having my ass played with,' he tells you happily, leaning back to get a bit more of your finger in and rubbing his soft-furred and muscular back against yourself.";
 	WaitLineBreak;
 	say "     Putting your arms around Duke from behind, you feel his muscular chest, then whisper in his ear that he's not the only one who likes hard dick in his ass, reaching down to grab his erect canine manhood. Inviting him to be the top for a change, you walk around Duke, stripping your clothes off on the move to stop on your hands and knees in the grass in front of the German shepherd. Looking back at him, wiggling your naked ass invitingly, you tell him to mount you. Duke is a bit hesitant at first, always having been the bottom in his pairing with Shawn, then his natural (though nanite-enhanced) urges take over, making him follow the guiding arrow of his erect penis.";
@@ -320,7 +324,11 @@ to say DukeSex5: [Player fucked in the ass]
 	if HP of Duke is 10:
 		now HP of Duke is 11;
 
-Shawn is a man. The HP of Shawn is normally 0.
+Table of GameCharacterIDs (continued)
+object	name
+Shawn	"Shawn"
+
+Shawn is a man.
 The description of Shawn is "[ShawnDesc]".
 The conversation of Shawn is { "Mew!" }.
 

@@ -19,6 +19,10 @@ GertyRelationship is a number that varies. GertyRelationship is usually 0.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Gerty	"Gerty"
+
 Gerty is a man. The hp of Gerty is usually 0.
 [Gerty will be moved to the Tenvale College Library through Kyle content]
 The description of Gerty is "[GertyDesc]".
@@ -38,7 +42,7 @@ instead of conversing the Gerty:
 	say "[GertyTalkMenu]";
 
 to say GertyTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you want to talk with Gerty about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -68,7 +72,7 @@ to say GertyTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -87,16 +91,12 @@ to say GertyTalkMenu:
 					say "[GertyTalk3]";
 				if (nam is "His Success"):
 					say "[GertyTalk4]";
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from Gerty, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from Gerty, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say GertyTalk1: [talk about him]
@@ -111,7 +111,7 @@ to say GertyTalk2: [talk about the city]
 
 to say GertyTalk3: [talk about his arms]
 	say "     'Oh, these?' Gerty flexes one of his robotic limbs. 'They are quite the contraption, if I do say so myself. When this whole mess happened, I had run into Kyle shortly after his own... transformation, if you will. At the point, we didn't know very much about what was going on, so we never really realized the risk it posed. His infection ended up spreading to me, though for some reason altered. Kyle doesn't like to talk about it, I've noticed, and I think he feels guilty. I don't think it's worth worrying about really, since it's all resolved now. The form I ended up with had no arms, a most inconvenient thing, you may have noticed. I simply wasn't willing to stand for that. I wasn't going to live an existence where I couldn't create art, read books, and the like. So I solved the problem.";
-	say "     'I'd already been something of a tinker before, and had a few ideas for something like these. With my lack of appendages, I couldn't exactly put it together myself, so I grabbed a few of the mechanical engineering students. Getting those college students to properly assemble my arm was like herding cats, literally in some cases, but I kept them in line. And eventually, I had this fantastic harness created, all according to my specifications. Now I'm back to being as mobile and dextrous as I ever was, maybe more.' Gerty wiggles his robotic fingers at you. 'Impressive, isn't it?'";
+	say "     'I'd already been something of a tinker before, and had a few ideas for something like these. With my lack of appendages, I couldn't exactly put it together myself, so I grabbed a few of the mechanical engineering students. Getting those college students to properly assemble my arm was like herding cats, literally in some cases, but I kept them in line. And eventually, I had this fantastic harness created, all according to my specifications. Now I'm back to being as mobile and dexterous as I ever was, maybe more.' Gerty wiggles his robotic fingers at you. 'Impressive, isn't it?'";
 	if GertyRelationship < 3:
 		increase GertyRelationship by 1;
 
@@ -133,11 +133,11 @@ instead of fucking the Gerty:
 		say "[GertySexMenu]";
 
 to say GertySexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -148,7 +148,7 @@ to say GertySexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the snakeman's ophidian shaft";
 	[]
-	[if cocks of player > 0:
+	[if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the lizardman";
 		now sortorder entry is 3;
@@ -163,7 +163,7 @@ to say GertySexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -183,16 +183,12 @@ to say GertySexMenu:
 				if (nam is "Take Gerty's shaft in your ass"):
 					say "[GertySex4]";
 				WaitLineBreak;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say GertySex1: [Get blown]

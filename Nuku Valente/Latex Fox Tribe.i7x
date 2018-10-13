@@ -1,7 +1,7 @@
 Latex Fox Tribe by Nuku Valente begins here.
 
 Latex Foxes is a species.
-The description of it is "Their body is covered in red and white latex. Their head is a mixture of canine and human, a perpetual sneer showing off exposed teeth. Their body is largely human, with only faint hints of bestial physique. They have arms that are largely human, except their hands are somewhat paw like, with black claws at the ends of fingers. Their legs are digitigrade and shaped like dog legs with large paws for feet. They have a large fox tail cartoonishly ballooning from their bottom. Sexually, they come in male and female varieties. They average around eight inches. Females average a C cup. They have no need to eat, but do enjoy chewing things with their rubbery teeth.".
+The description of it is "Their body is covered in red and white latex. Their head is a mixture of canine and human, a perpetual sneer showing off exposed teeth. Their body is largely human, with only faint hints of bestial physique. They have arms that are largely human, except their hands are somewhat pawlike, with black claws at the ends of fingers. Their legs are digitigrade and shaped like dog legs with large paws for feet. They have a large fox tail cartoonishly ballooning from their bottom. Sexually, they come in male and female varieties. They average around eight inches. Females average a C cup. They have no need to eat, but do enjoy chewing things with their rubbery teeth.".
 The skin of it is "red and white latex".
 The skinadj of it is "rubbery".
 The body of it is "rubber pool toy fox".

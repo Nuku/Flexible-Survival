@@ -15,7 +15,11 @@ Version 1 of Joey by Qazarar begins here.
 [	2: slut Joey, sexable                                      ]
 
 Section 1 - Basic Setup
-	
+
+Table of GameCharacterIDs (continued)
+object	name
+Joey	"Joey"
+
 Joey is a man. The hp of Joey is usually 3.
 The libido of Joey is usually 0.
 The description of Joey is "[JoeyDesc]".
@@ -24,7 +28,7 @@ The scent of Joey is "     Joey has a nice, furry scent.".
 
 to say JoeyDesc:
 	say "     The catboy is of average height, with a thin frame. He has effeminate facial features, that nicely match his feline appearance, with fine orange fur covering the visible parts of his body, along with ears and a tail to match. The only piece of clothing he is wearing is a pair of tight shorts with a noticeable bulge.";
-	
+
 Section 2 - Talk
 
 instead of conversing the Joey:
@@ -36,11 +40,11 @@ instead of conversing the Joey:
 		say "     As you walk up to Joey, he gives a seductive smile. 'Hey coach, is it time for more training?'";
 	WaitLineBreak;
 	say "[JoeyTalkMenu]";
-	
+
 	[set up different talks for naive Joey, slut Joey, and warrior Joey]
 to say JoeyTalkMenu:
-	say "[line break]";
-	say "What do you want to talk with Joey about?";	
+	LineBreak;
+	say "What do you want to talk with Joey about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -58,7 +62,7 @@ to say JoeyTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -74,18 +78,14 @@ to say JoeyTalkMenu:
 				if (nam is "Training"):
 					say "[JoeyTalk2]";
 				WaitLineBreak;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the Joey, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the Joey, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say JoeyTalk1: [talk about him]
 	if libido of Joey is 0:
 		say "     After you ask, it doesn't take long before Joey gives you an answer. 'The day of the incident, I was attacked by one of those feral catgirls on my way home, and I barely got away. After seeing what happened to me, and what else was out there, I was terrified of everything outside, and stayed cooped up where it would be safe. Eventually though, I got tired of hiding, and decided to stop being scared anymore. But it's hard to explore and leave safety when I can barely handle even the weakest things out there. And now I've got you to train me!' He smiles at you. 'Looking forward to it, coach!'";
@@ -96,7 +96,7 @@ to say JoeyTalk1: [talk about him]
 
 to say JoeyTalk2: [training]
 	say "[JoeyTraining]";
-	
+
 Section 3 - Sex
 
 instead of fucking the Joey:
@@ -112,11 +112,11 @@ instead of fucking the Joey:
 	]
 
 to say JoeySexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -127,7 +127,7 @@ to say JoeySexMenu:
 	now sortorder entry is 2;
 	now description entry is "Taste his feline shaft";
 	[]
-	if cocks of player > 0: [only males and herms can fuck him]
+	if player is male: [only males and herms can fuck him]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the catboy";
 		now sortorder entry is 3;
@@ -137,7 +137,7 @@ to say JoeySexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -155,16 +155,12 @@ to say JoeySexMenu:
 				if (nam is "Fuck the catboy"):
 					say "[JoeySex3]";
 				WaitLineBreak;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the catboy, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the catboy, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JoeySex1: [oral on the player]
@@ -177,6 +173,10 @@ to say JoeySex3: [Joey fucked]
 	say "     Text";
 
 Section 4 - Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Stray Catboy	"Stray Catboy"
 
 Stray Catboy is a situation.
 The level of Stray Catboy is 5.
@@ -200,21 +200,26 @@ instead of resolving a Stray Catboy:
 				now hp of Joey is 1;
 				move Joey to Grey Abbey 2F;
 				move Player to Grey Abbey Library;
+				now Resolution of Stray Catboy is 1; [won, training J]
 				now Stray Catboy is resolved;
 			else: [Denying training]
 				say "     You shake your head and tell the catboy that you're too busy handling other things right now, and won't be able to train him. He looks crestfallen, and you think you see a glimmer of tears in the corners of his eyes, but he turns away before you can be sure. After that, he goes running off into the city. You doubt you'll be seeing him again soon.";
+				now Resolution of Stray Catboy is 2; [won, not training J]
 				now Stray Catboy is resolved;
 		else if fightoutcome > 19 and fightoutcome < 30: [Losing]
 			say "     When you come to after failing to defeat your foe, you are alone. It seems the feline took the opportunity left when the wolf was distracted, and fled. Perhaps you'll see them again.";
+			now Resolution of Stray Catboy is 3; [lost]
 		else if fightoutcome > 29: [Fleeing]
 			say "     You decide to cut your losses and flee from the wolf, unable to defeat it. As you run away, you take one glance back over your shoulder, and see the wolf advancing on the prone feline once more, this time with nobody to stop him. Maybe another day you'll see that feline again, but for now, you try not to think about what you've done, and continue fleeing.";
+			now Resolution of Stray Catboy is 4; [fled]
 	else: [Watching]
 		LineBreak;
 		say "     You decide not to interfere, and instead to simple watch what is about to happen. The feline on the ground begins to come to fully as the wolf paws at him, and starts to look somewhat panicked. His reaction shifts instead towards embarrassment when the wolf tears the shorts he was wearing, demonstrating that he is certainly a male, and leaving his average endowment in the open. Once the cat is naked, the wolf advances forward until it is standing on top of him. The large canine shaft hangs briefly in the air, dwarfing the feline member beneath it, before the tip traces its way down along that member, eventually settling just outside the cat's rear hole.";
 		say "     The cat seems about to say something, perhaps an object, but instead lets out a gasp of shock as the canine cock enters him in a single swift stroke, stopping only when his ass meets the knot. For a few moments, he is impaled on the knotted shaft, breathlessly waiting for something else to happen. The wolf then breaks that silence by starting to move, thrusting in and out, the knot repeatedly slapping against the feline's flesh as the dick spreads him open. The expression on his face has become one of almost unwilling bliss as he is continually hammered by the feral beast above him. Eventually it comes to an end, and the wolf slams fully into the catboy, locking the knot into him, and finishing. He lets out a mewling moan as he is filled by the canine seed. The two remain in that position, enjoying the sensations, and you decide it's time for you to go.";
+		now Resolution of Stray Catboy is 5; [watched]
 		now Stray Catboy is resolved;
 	now inasituation is false;
-	
+
 to say JoeyTraining: [Training Joey] [{]
 	if hp of Joey is 3:
 		say "     The first thing you do is explain to Joey exactly how the training is going to work. You'll definitely teach him some things the normal way, but that isn't enough to really learn how to fight. For that, he needs practical experience. Because of that, the main thing you'll be doing is taking him to fight creatures out in the city, and telling him how to improve, to let him put his skills to use. Once the catboy understands the purpose of the combat, you move on and explain the other major thing. If the fight doesn't feel real, if there are no consequences, he won't be able to learn anywhere near as well. Because of that, you won't step in for any of his fights or what may follow, unless his life is in serious danger. Joey is a bit more nervous about that, but you eventually convince him, and are ready to take him for his first day of training.";
@@ -233,7 +238,7 @@ to say JoeyTraining: [Training Joey] [{]
 	now title entry is "A Centaur";
 	now sortorder entry is 2;
 	now description entry is "Test him against a more challenging creature.";
-	[]	
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A Feral Wolf";
 	now sortorder entry is 2;
@@ -248,7 +253,7 @@ to say JoeyTraining: [Training Joey] [{]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -268,18 +273,14 @@ to say JoeyTraining: [Training Joey] [{]
 				if (nam is "A Minotaur"):
 					say "[MinotaurTraining]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You tell Joey that you aren't going to be able to train him right now. He looks disappointed, but says he understands.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You tell Joey that you aren't going to be able to train him right now. He looks disappointed, but says he understands.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
-	
+
 to say FoxTraining:
 	say "     Your choice made, you take Joey out into the city in search of a monster you know he can defeat. Slipping through the streets until you find the signs of your target, Joey eagerly following behind[if libido of Joey is 1]. As you go, you give him as much advice as you can about combat, and the basics. When you think he has the basics down, you focus fully on finding your target[end if]. Once you manage to track down a latex fox, it's time for your student to take the lead. You tell him what to do, and he nods, approaching the fox.";
 	WaitLineBreak;
@@ -293,12 +294,12 @@ to say FoxTraining:
 		say "     Joey springs into action, rushing at the fox for a surprise attack, and sending it reeling when it connects. Following what he's learned from you, he doesn't give the fox a chance to recover, as he keeps attacking it. Soon enough the fox whimpers, and Joey lets up, allowing it to run away[if hp of Joey is 3]. Joey seems pleased at his first victory, and the fact that he was able to win that fight on his own[end if]. Joey returns to where you stood, watching the fight, ready to listen to what you have to say about it. You tell him he did well[if libido is 0], but point out what you noticed that could maybe help him improve[end if], and then bring him back to the library, training concluded for the moment[if hp of Joey is 4]. Next time, you think he'll be ready to face something harder[end if].";
 		if hp of Joey < 4:
 			increase hp of Joey by 1;
-	
+
 to say CentaurTraining:
 	say "     For this bout of training, you decide to take Joey to the edge of the city, nearer the plains, to challenge a different creature from what is in the heart of the city. It doesn't take long before you spot a lone equine shape galloping across the plains, and you know you've found your target. You give Joey a few last minute words of advice for the fight before moving to stand in a more shaded spot, leaving Joey to his own devices. After that, it's almost no time at all before the shape gets close enough that you can tell it is a centaur that stands before the catboy.";
 	WaitLineBreak;
 	if hp of Joey < 4:
-		say "     The catboy hesitates at the sight of the creature, but the centaur has no such issue.	He lets loose an arrow at Joey, leaving causing him to scramble out of the way. Now that Joey is on the defensive, the battle quickly falls out of his favor. The catboy is able to use his quick reflexes to dodge the arrows for several minutes, with the centaur laughing all the while. However, he soon succumbs to exhaustion, and falls to his knees. When he does so, the centaur stops firing, putting the bow away. The creature then trots forward, toward the kneeling catboy, until he looms over the feline. Joey looks slightly out of sorts, but seems to become fully aware of his surroundings once again when the centaur's overly large endowment is left directly in front of his face, with the tip just barely touching his cheek.";
+		say "     The catboy hesitates at the sight of the creature, but the centaur has no such issue. He lets loose an arrow at Joey, leaving causing him to scramble out of the way. Now that Joey is on the defensive, the battle quickly falls out of his favor. The catboy is able to use his quick reflexes to dodge the arrows for several minutes, with the centaur laughing all the while. However, he soon succumbs to exhaustion, and falls to his knees. When he does so, the centaur stops firing, putting the bow away. The creature then trots forward, toward the kneeling catboy, until he looms over the feline. Joey looks slightly out of sorts, but seems to become fully aware of his surroundings once again when the centaur's overly large endowment is left directly in front of his face, with the tip just barely touching his cheek.";
 		say "     Joey is unable to take his eyes off of the cock dangling in front of him, his eyes following the motions each time it bobs. Eventually Joey gives in to the temptation he seems to feel, and reaches up both of his hands, gently grasping the equine member. Slowly he starts stroking it, running his hands up and down the length, never taking his eyes away from the flared head. The feline starts to mix up his technique, alternating hands, adding more than simple stroking, and it soon pays off. The centaur lets out a bestial noise, and the throbbing length beneath him unloads, streaks of seed arcing out onto the face of the shocked catboy, the load large enough that it coats his face and still has enough to drip downward, leaving streaks of cum all over his body.";
 		WaitLineBreak;
 		say "     For several moments, the catboy is still, drenched in lust. His eyes are closed, and he seems almost intoxicated by the scent. Then he licks his lips, perhaps partially out of nerves, and ends up with the taste of the centaur cum to accompany the scent. You can tell he likes it when his tongue darts out again, collecting more and more of the sticky coating. He soon remembers that the source is there for the taking, and he eagerly leans back towards the dangling equine dick, only partially flaccid from its release. Using his hands once again, Joey starts to urge the centaur back to full hardness, teasing up and down the length with his hands, and occasionally licking the head, growing used to the strong musky taste of it. Finally the shaft is fully erect once more, and the cum-splattered feline seems to be working up the courage to take it into his mouth.";
@@ -310,7 +311,7 @@ to say CentaurTraining:
 		say "     He unleashes several more blows at the centaur, wearing the larger creature down. Before Joey can completely knock him out, however, the centaur manages to trip the feline, and uses the brief moment to stand back up fully. Rather than press that momentary advantage, the centaur rears up, turns around, and flees. The catboy may not have completely beaten the centaur, but you can tell he has improved a great deal. He walks back over to where you were watching the fight, beaming widely, clearly satisfied with himself. Before he can get too full of himself, you give him all the feedback you can about his fight, making sure that he'll win the next time. As you teach him, you also escort him back to the library, musing about how you'll train him next.";
 		if hp of Joey < 6:
 			increase hp of Joey by 1;
-	
+
 to say WolfTraining:
 	say "     This time, you think it will be best to bring Joey to face off against a Feral Wolf, giving him a chance to beat the creature he lost to when you first met him - or perhaps to see what it would have done to him if you didn't interfere. You lead your student out of the central part of the city, nearer to where those wolves make their homes. It doesn't take very long before you spot one sniffing around on a street, otherwise deserted. You nod to Joey, and he returns the gesture, before walking confidently towards the waiting wolf.";
 	WaitLineBreak;
@@ -323,7 +324,7 @@ to say WolfTraining:
 		say "     The wolf doesn't hesitate to leap at Joey, a quick attack meant to catch prey off guard. However, the feline is prepared, and sidesteps the surprise attack. He takes advantage of the opportunity that leaves to attack the canine's open flank, causing it to scramble around to face him once more. For several moments, the two combatants simply circle each other, watching carefully. This time Joey makes the first move, darting forwards to attack the wolf, surprising it. The battle continues as such, with the catboy's speed and mindfulness allowing him to outmaneuver the wolf, until finally he defeats it. Victorious, he returns to you, ready to celebrate his victory. You let him enjoy it for now, knowing you'll help him correct the errors he made on the way back to the library.";
 		if hp of Joey < 9:
 			increase hp of Joey by 1;
-	
+
 to say MinotaurTraining:
 	say "     You decide that it's time to really put Joey's skills to the test. You lead him out of the main city, giving him as much advice as you can along the way. Once you reach the right area, you spend some time with the catboy searching the area, looking for the perfect opponent. After some time, you spot it: a hulking minotaur, striding along the plains. Defeating something like that is enough to prove anyone a true warrior, something Joey is looking forward to. But losing to something like that carries serious risks - something he might also end up looking forward to. Slightly nervous, but not overwhelmed, Joey leaves you standing where you are, and goes to meet the beast face to face.";
 	WaitLineBreak;
@@ -345,4 +346,5 @@ to say MinotaurTraining:
 			increase hp of Joey by 1;
 			now libido of Joey is 1;
 [}]
+
 Joey ends here.

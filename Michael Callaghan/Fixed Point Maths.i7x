@@ -4,16 +4,16 @@ Chapter 1 - Basic definitions
 
 Section 1 - Defining a fixed point number
 
-[A real number is a kind of value.  -999999.9999 specifies a real number with parts whole and fractional.]
+[A real number is a kind of value. -999999.9999 specifies a real number with parts whole and fractional.]
 
 The specification of a real number is "Represents a fixed point number in the range -214748.3648 to 214748.3647."
 
 Section 2 - Constants for precision
 
-Precision is a number that varies.  Precision is 4.
-Divisor is a number that varies.  Divisor is 10000.
-HalfDivisor is a number that varies.  HalfDivisor is 4999.
-[Pi is a real number that varies.  Pi is 3.1416.]
+Precision is a number that varies.[@Tag:NotSaved] Precision is 4.
+Divisor is a number that varies.[@Tag:NotSaved] Divisor is 10000.
+HalfDivisor is a number that varies.[@Tag:NotSaved] HalfDivisor is 4999.
+[Pi is a real number that varies.[@Tag:NotSaved] Pi is 3.1416.]
 
 Chapter 2 - Internal functions
 
@@ -515,7 +515,7 @@ Chapter 10 - Converting text to a real number
 
 Section 1 - Flag for invalid conversion
 
-Invalid conversion is a truth state that varies.
+Invalid conversion is a truth state that varies.[@Tag:NotSaved]
 Invalid conversion is false.
 
 Section 2 - Conversion routine
@@ -620,31 +620,31 @@ Chapter : About Fixed Point Maths
 
 Section : Introduction
 
-Inform 7 allows the use of integer numbers and their addition, subtraction, multiplication and division.  Division is limited to returning an integer result and, separately, a remainder.  If we want to use more complex mathematical functions or non-integer numbers, there is no in-built facility to do so.
+Inform 7 allows the use of integer numbers and their addition, subtraction, multiplication and division. Division is limited to returning an integer result and, separately, a remainder. If we want to use more complex mathematical functions or non-integer numbers, there is no in-built facility to do so.
 
 Section : About this extension
 
-This extension allows us to use fixed point numbers in Inform 7, such as 12.2344.  It includes a modest range of mathematical functions using fixed point numbers and, where appropriate, their equivalents for integer numbers.  Details of the functions provided are set out in this documentation.
+This extension allows us to use fixed point numbers in Inform 7, such as 12.2344. It includes a modest range of mathematical functions using fixed point numbers and, where appropriate, their equivalents for integer numbers. Details of the functions provided are set out in this documentation.
 
 Section : How the extension works
 
-Although Inform 7 allows only the use of integers, a number can be divided into two parts.  See Chapter 14 of the manual.  Therefore, we can use this flexibility to create fixed point numbers with an integer and a decimal part.
+Although Inform 7 allows only the use of integers, a number can be divided into two parts. See Chapter 14 of the manual. Therefore, we can use this flexibility to create fixed point numbers with an integer and a decimal part.
 
 Section : Precision and range
 
-Fixed point maths is set up for use with numbers that have four decimal places.  The range of numbers supported is -214748.3648 to 214748.3647.  Note that because we are using four decimal places and numbers only in the range -214748.3658 to 214748.3647, some functions can become subject to significant rounding errors when using very large or very small values.
+Fixed point maths is set up for use with numbers that have four decimal places. The range of numbers supported is -214748.3648 to 214748.3647. Note that because we are using four decimal places and numbers only in the range -214748.3658 to 214748.3647, some functions can become subject to significant rounding errors when using very large or very small values.
 
 Section : Defining fixed point numbers
 
-When we are writing a fixed point number in Inform 7, we have to include all four decimal places, even if they are zeros.  For example, if we want the number 12.5 as a fixed point number, we write 12.5000.
+When we are writing a fixed point number in Inform 7, we have to include all four decimal places, even if they are zeros. For example, if we want the number 12.5 as a fixed point number, we write 12.5000.
 
-Fixed point numbers are a kind of value called real number.  Therefore, we can create variables of this form in the following way:
+Fixed point numbers are a kind of value called real number. Therefore, we can create variables of this form in the following way:
 
-	TwoPi is a real number that varies.  TwoPi is 6.2832.
+	TwoPi is a real number that varies.[@Tag:NotSaved] TwoPi is 6.2832.
 
 Section : Saying fixed point numbers
 
-Fixed point numbers can be negative.  There is a problem (as at version 5T18 of Inform 7) that causes negative numbers to be printed incorrectly where the number consists of parts.  Therefore, this extension uses a modified form of say statement with fixed point numbers.  We use the form 'X as a number' in the say statement.
+Fixed point numbers can be negative. There is a problem (as at version 5T18 of Inform 7) that causes negative numbers to be printed incorrectly where the number consists of parts. Therefore, this extension uses a modified form of say statement with fixed point numbers. We use the form 'X as a number' in the say statement.
 
 	say "[TwoPi as a number]";
 	say "[-1234.6789 as a number]".
@@ -658,13 +658,13 @@ The old form "as a number" is being retained for backwards compatability.
 
 Section : Error checking
 
-This extension does not include error checking routines.  The most common error is division by 0.  As all division operations reduce to integer division equivalents, division by 0 will be trapped by Inform 7 in any event.  Overflow and underflow errors will not be checked so if you try to add, subtract, multiply or divide values and the results exceed the limits of the extensions precision, the results may not be as expected.
+This extension does not include error checking routines. The most common error is division by 0. As all division operations reduce to integer division equivalents, division by 0 will be trapped by Inform 7 in any event. Overflow and underflow errors will not be checked so if you try to add, subtract, multiply or divide values and the results exceed the limits of the extensions precision, the results may not be as expected.
 
 If you try to calculate the square root or log of a negative number, the result will always be 0.
 
 Section : Credits
 
-Thanks to Ron Newcomb and Mike Tarbert for their helpful comments that have helped to improve this extension.  Any errors and omissions remain with the author.
+Thanks to Ron Newcomb and Mike Tarbert for their helpful comments that have helped to improve this extension. Any errors and omissions remain with the author.
 
 Section : Version history
 
@@ -674,7 +674,7 @@ Version 3 - 1 August 2009: Allows for text to be converted to a real number.
 
 Version 2 - 22 June 2009: Version numbering changed to prevent problems installing and using the extension under Inform 7.
 
-Version 1.2 - 27 April 2009: Note added to indicate that real numbers can now be printed using simple say statements.  Square root function renamed real sqaure root to avoid clashes with the new (integer based) square root in version 5Z71.
+Version 1.2 - 27 April 2009: Note added to indicate that real numbers can now be printed using simple say statements. Square root function renamed real sqaure root to avoid clashes with the new (integer based) square root in version 5Z71.
 
 Version 1.1 - 14 September 2008: Small change to enable "The Classroom" to compile under 5U92.
 
@@ -688,7 +688,7 @@ We can convert a fixed point number to an integer number using the phrase 'X as 
 
 	let val be 12.5678 as an integer.
 
-This takes a fixed point number and turns it into the nearest integer.  For example 2.1 becomes 2.  3.5611 becomes 4.  -1.2345 becomes -1 and -1.7823 becomes -2.
+This takes a fixed point number and turns it into the nearest integer. For example 2.1 becomes 2. 3.5611 becomes 4. -1.2345 becomes -1 and -1.7823 becomes -2.
 
 0.5 is used as the boundary for rounding up or down so 12.4999 or below will round down to 12 and 12.5000 or above will round up to 13.
 
@@ -698,7 +698,7 @@ We can convert a fixed point number to the next highest integer using the phrase
 
 	let val be 12.0012 rounded up.
 
-This always rounds away from 0.  For example 2.1000 becomes 3 and -5.0123 becomes -6.
+This always rounds away from 0. For example 2.1000 becomes 3 and -5.0123 becomes -6.
 
 Section : Rounding down a fixed point number to an integer
 
@@ -706,7 +706,7 @@ We can convert a fixed point number to the next lowest integer using the phrase 
 
 	let val be 12.0012 rounded down.
 
-This always rounds towards 0.  For example 2.8888 becomes 2 and -5.7878 becomes -5.
+This always rounds towards 0. For example 2.8888 becomes 2 and -5.7878 becomes -5.
 
 Section : Absolute value of a number
 
@@ -715,7 +715,7 @@ We can find the absolute value of a number using the phrase 'the absolute value 
 	let val be the absolute value of -12.3456;
 	let val be the absolute value of -45;
 
-The function leaves positive values unchanged and converts negative numbers to their positive equivalent.  -12.3456 becomes 12.3456, etc.  This function works for both fixed point and integer numbers.
+The function leaves positive values unchanged and converts negative numbers to their positive equivalent. -12.3456 becomes 12.3456, etc. This function works for both fixed point and integer numbers.
 
 Section : Convert an integer to a fixed point number
 
@@ -734,7 +734,7 @@ We can change a positive number to a negative number and a negative number to a 
 	let val be the reverse of -12.345;
 	let val be the negation of -12.345.
 
-This converts 25 to -25 and -12.345 to 12.345.  This function works for both fixed point and integer numbers.
+This converts 25 to -25 and -12.345 to 12.345. This function works for both fixed point and integer numbers.
 
 Chapter : Comparisons between fixed point numbers
 
@@ -772,7 +772,7 @@ If we want to test whether a fixed point number < 0, we use the phrase 'if X is 
 	if val1 is negative:
 		say "val1 < 0".
 
-We need a separate function for this as a fixed point number is made up of two number parts.  -0.2333 contains the parts 0 and -2333.  Testing only the first part of the number would give an incorrect result as it is not less than 0.
+We need a separate function for this as a fixed point number is made up of two number parts. -0.2333 contains the parts 0 and -2333. Testing only the first part of the number would give an incorrect result as it is not less than 0.
 
 Chapter : Addition, subtraction, multiplication and division
 
@@ -784,7 +784,7 @@ We add two floating point numbers using the phrase 'X real plus Y'.
 	let val1 be 2 real plus -3.3333;
 	let val1 be val1 real plus 10.
 
-As we can see from these examples, integer numbers can be used within fixed point addition.  The reason that we use real plus to designate fixed point addition is to avoid namespace clashes with the Inform 7 integer addition.
+As we can see from these examples, integer numbers can be used within fixed point addition. The reason that we use real plus to designate fixed point addition is to avoid namespace clashes with the Inform 7 integer addition.
 
 Section : Subtraction
 
@@ -794,7 +794,7 @@ We subtract two floating point numbers using the phrase 'X real minus Y'.
 	let val1 be 2 real minus 3.3333;
 	let val1 be val1 real minus 10.
 
-As we can see from these examples, integer numbers can be used within fixed point subtraction.  The reason that we use real minus to designate fixed point subtraction is to avoid namespace clashes with the Inform 7 integer subtraction.
+As we can see from these examples, integer numbers can be used within fixed point subtraction. The reason that we use real minus to designate fixed point subtraction is to avoid namespace clashes with the Inform 7 integer subtraction.
 
 Section : Multiplication
 
@@ -804,7 +804,7 @@ We multiply two floating point numbers using the phrase 'X real times Y'.
 	let val1 be 2 real times -3.3333;
 	let val1 be val1 real times 10.
 
-As we can see from these examples, integer numbers can be used within fixed point multiplication.  The reason that we use real times to designate fixed point multiplication is to avoid namespace clashes with the Inform 7 integer multiplication.
+As we can see from these examples, integer numbers can be used within fixed point multiplication. The reason that we use real times to designate fixed point multiplication is to avoid namespace clashes with the Inform 7 integer multiplication.
 
 Section : Division
 
@@ -814,7 +814,7 @@ We divide two floating point numbers using the phrase 'X real divided by Y'.
 	let val1 be 2 real divided by -3.3333;
 	let val1 be val1 real divided by 10.
 
-As we can see from these examples, integer numbers can be used within fixed point division.  The reason that we use real divided by to designate fixed point division is to avoid namespace clashes with the Inform 7 integer division.
+As we can see from these examples, integer numbers can be used within fixed point division. The reason that we use real divided by to designate fixed point division is to avoid namespace clashes with the Inform 7 integer division.
 
 Chapter : Additional functions
 
@@ -852,7 +852,7 @@ We can calculate the square root of a number using the phrase 'the real square r
 	let val be the real square root of 5;
 	let val be the real square root of 23.4566.
 
-The method used to calculate the square root of a number is the Newton-Raphson iteration method.  If you try to calculate the square root of a negative number, the result is 0.0000.
+The method used to calculate the square root of a number is the Newton-Raphson iteration method. If you try to calculate the square root of a negative number, the result is 0.0000.
 
 Section : Degrees to radians and radians to degrees
 
@@ -878,9 +878,9 @@ We can calculate the sine of an angle in degrees using the phrase 'the sine of X
 
 We can use fixed point numbers or integer numbers.
 
-The method used to calculate the sine of a number is the Taylor expansion series for the sine of a number.  The angle is normalised into the range 0 to 360 degrees.  If the angle is 0, 90, 180, 270 or 360, the results 0, 1, 0, -1, 0 are returned.  If the angle is not one of these numbers, the angle is further normalised to 0 to 90 degrees, converted to radians and the result calculated from the Taylor Series for this angle.
+The method used to calculate the sine of a number is the Taylor expansion series for the sine of a number. The angle is normalised into the range 0 to 360 degrees. If the angle is 0, 90, 180, 270 or 360, the results 0, 1, 0, -1, 0 are returned. If the angle is not one of these numbers, the angle is further normalised to 0 to 90 degrees, converted to radians and the result calculated from the Taylor Series for this angle.
 
-We can calculate the arcsin of a number in the range -1 to 1 by using the phrase 'the arcsine of X'.  Values outside the range -1 to 1 will return the result 0.0000.
+We can calculate the arcsin of a number in the range -1 to 1 by using the phrase 'the arcsine of X'. Values outside the range -1 to 1 will return the result 0.0000.
 
 	let val be the arcsine of 0.2500.
 
@@ -913,7 +913,7 @@ We can calculate the arctangent of a number by using the phrase 'the arctangent 
 	let val be the arctangent of 0.5000;
 	let val be the arctangent of 1.
 
-We can use fixed point number or integer numbers.  The result is returned as an angle to the nearest tenth of a degree.
+We can use fixed point number or integer numbers. The result is returned as an angle to the nearest tenth of a degree.
 
 Section : Natural logs
 
@@ -922,7 +922,7 @@ We can find the natural log (to base e) of a number by using the phrase 'the nat
 	let val be the natural log of 10;
 	let val be the natural log of 2.3456.
 
-We can use fixed point numbers or integer numbers.  Calculating the natural log of a number equal to or less than 0 will return the result 0.0000.
+We can use fixed point numbers or integer numbers. Calculating the natural log of a number equal to or less than 0 will return the result 0.0000.
 
 Section : E to the power X
 
@@ -935,15 +935,15 @@ We can use fixed point numbers or integer numbers.
 
 Chapter : Converting text to a number
 
-We can convert text to a real point number using the phrase, let X be the number derived from "text".  For example:
+We can convert text to a real point number using the phrase, let X be the number derived from "text". For example:
 
 	let X be the number derived from "-12.2345".
 
-If the text does not match the requirements for a real number, an internal flag, invalid conversion, is set to true.  We can use this flag to ensure that the text is a real number.
+If the text does not match the requirements for a real number, an internal flag, invalid conversion, is set to true. We can use this flag to ensure that the text is a real number.
 
 	let X be the number derived from "a123.1222":
 	if invalid conversion is true:
-		say "This is not valid real number.  It must contain only digits and the characters '+ - and .'  There must be [precision] digits after the decimal point.";
+		say "This is not valid real number. It must contain only digits and the characters '+ - and .' There must be [precision] digits after the decimal point.";
 	else:
 		say "[X]".
 
@@ -953,7 +953,7 @@ Example: * The Classroom - Shows the use of the sine function
 
 	Include Fixed Point Maths by Michael Callaghan.
 
-	The classroom is a room.  A chalk board is in the classroom.  Understand "chalkboard" as the chalk board.
+	The classroom is a room. A chalk board is in the classroom. Understand "chalkboard" as the chalk board.
 
 	Instead of examining the chalk board:
 		say "Someone has drawn a curve like a sine wave turned through 90 degrees.";
@@ -977,12 +977,12 @@ Example: *** Ballistics - Shows the use of real numbers in ballistic calculation
 
 	The Firing Range is a room.
 
-	The large gun is in the firing range.  The description is "A large field artillery gun.  Towards the base of the gun you find a small brass handle that seems to be turnable.  By it is a note that says hit your target at a range of 1,918 metres.  You have 5 projectiles to fire.  When you are ready, simply fire the gun."
+	The large gun is in the firing range. The description is "A large field artillery gun. Towards the base of the gun you find a small brass handle that seems to be turnable. By it is a note that says hit your target at a range of 1,918 meters. You have 5 projectiles to fire. When you are ready, simply fire the gun."
 
-	The large gun has a number called angle.  The angle of the large gun is 12.
-	The large gun has a number called projectiles.  The projectiles of the gun is 5.
+	The large gun has a number called angle. The angle of the large gun is 12.
+	The large gun has a number called projectiles. The projectiles of the gun is 5.
 
-	A brass handle is part of the large gun.  The description is "The brass handle can be turned to adjust the angle of the gun.  A pointer shows the angle that you have set.  It currently points to [angle of the large gun] degrees."
+	A brass handle is part of the large gun. The description is "The brass handle can be turned to adjust the angle of the gun. A pointer shows the angle that you have set. It currently points to [angle of the large gun] degrees."
 
 	Instead of turning the handle:
 		say "Try turning the handle to a number."
@@ -1001,7 +1001,7 @@ Example: *** Ballistics - Shows the use of real numbers in ballistic calculation
 
 	Check adjusting it to:
 		if the number understood < 1 or the number understood > 90:
-			say "That is physically impossible.  The gun can be set to an angle from 1 to 90 degrees." instead.
+			say "That is physically impossible. The gun can be set to an angle from 1 to 90 degrees." instead.
 
 	Carry out adjusting it to:
 		now the angle of the gun is the number understood.
@@ -1009,7 +1009,7 @@ Example: *** Ballistics - Shows the use of real numbers in ballistic calculation
 	Report adjusting it to:
 		say "You turn the handle and set the angle of the gun to [angle of the gun] degrees."
 
-	Understand "fire [something]" as firing.  Firing is an action applying to one thing.
+	Understand "fire [something]" as firing. Firing is an action applying to one thing.
 
 	Check firing:
 		if the noun is not the gun:
@@ -1020,7 +1020,7 @@ Example: *** Ballistics - Shows the use of real numbers in ballistic calculation
 
 	Report firing:
 		say "The gun recoils violently and lets out a deep throated roar as the projectile is launched.";
-		say "After a few seconds, you see the projectile land at [distance as an integer] metres.";
+		say "After a few seconds, you see the projectile land at [distance as an integer] meters.";
 		if the distance as an integer is 1918:
 			end the story finally saying "Congratulations, you have passed your basic field artillery exam.";
 		if the distance as an integer < 10:

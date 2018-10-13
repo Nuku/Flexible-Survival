@@ -7,6 +7,10 @@ Version 2 of Hyena Bikers by Stripes begins here.
 
 Section 1- Core Event Tree
 
+Table of GameEventIDs (continued)
+Object	Name
+Hyena Bikers	"Hyena Bikers"
+
 Hyena Bikers is a situation.
 The sarea of Hyena Bikers is "High".
 when play begins:
@@ -15,13 +19,14 @@ when play begins:
 	add Hyena Bikers to badspots of furry;
 
 Instead of resolving a Hyena Bikers:
+	setmonster "Herm Hyena";
 	move Grant to Hyena Hideout;
 	say "     As you pass down one street, you see a lot of fresh graffiti sprayed onto the concrete high-rises around you. Looking it over, you see it proclaim the strength of the hyena gang. This puzzles you, as you thought you were well out of hyena territory.";
 	say "     You hear the roar of engines from out of a side street. It takes you a moment to even place the sound; it has been so long since you've heard a motor running. Motorcycles, your mind screams. As the moment of realization sets in, you are already running as the hyenas on motor bikes chase after you, cackling loudly. The next corner is too far away, but you continue running, looking for escape to either side. The nearby buildings both have no access within reach. The bikers overtake you and encircle you, laughing like hyenas as they keep you hemmed in. Many of the bikes have heavy bags tied to them (presumably filled with ill-gotten gains) and a couple carry spare tanks of gas.";
 	wait for any key;
 	[puts Herm Hyena as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Herm Hyena":
 			now monster is y;
 			break;
@@ -34,35 +39,36 @@ Instead of resolving a Hyena Bikers:
 		challenge "Herm Hyena";
 		if lost is 1:
 			say "[beatenbyhb]";
-			Now Hyena Bikers is resolved;
+			now Hyena Bikers is resolved;
 			stop the action;
 		challenge "Herm Hyena";
 		if lost is 1:
 			say "[beatenbyhb]";
-			Now Hyena Bikers is resolved;
+			now Hyena Bikers is resolved;
 			stop the action;
 		challenge "Herm Hyena";
 		if lost is 1:
 			say "[beatenbyhb]";
-			Now Hyena Bikers is resolved;
+			now Hyena Bikers is resolved;
 			stop the action;
 		if lost is 0:
 			say "     Having struck down the third gang member, the others start to move in to mob you, but there's a laughing bark from the back. The hyenas stop, turning to look at their leader. He steps up, a big male with a well-built body in a leather jacket. He has a pair of sunglasses that have been modified to fit his muzzle. You ready your weapon, preparing to deal with this stronger enemy, but he speaks instead of attacking.";
 			say "     'You're pretty tough. You're certainly brave and resourceful, managing on your own up to this point. But you should really consider sticking with the hyenas instead of going solo after this. You won't be able to go it alone forever and someone like you could fight for a good position.'";
-			say "     As the first hyena who faced you tries to get back up, he gives hir a hard smack in the back of the head. The herm drops hir tire iron, which the leader kicks over to you. 'Take that, watch yourself and think on the offer.'  He boots the defeated hyenas back to their bikes and the gang gets on their bikes and rides off. You are left with your strange prize and the biker's offer mulling through your mind.";
+			say "     As the first hyena who faced you tries to get back up, he gives hir a hard smack in the back of the head. The herm drops hir tire iron, which the leader kicks over to you. 'Take that, watch yourself and think on the offer.' He boots the defeated hyenas back to their bikes and the gang gets on their bikes and rides off. You are left with your strange prize and the biker's offer mulling through your mind.";
 			increase carried of tire iron by 1;
 			if hyg < 2:					[alternate progress in joining the gang]
 				now hyg is 2;
 			say "     Tire iron obtained.";
 			increase score by 5;
-	Now Hyena Bikers is resolved;
+			now Resolution of Hyena Bikers is 1; [fought the bikers and won]
+	now Hyena Bikers is resolved;
 
 
 Section 2 - Subroutines
 
 to say ridetimecheck:
 	if matriarchowned is 1:				[matriarch]
-		say "     You are quickly recognized by the hyenas as their leader and their laughing stops. One of the bikers, apparently their leader, pulls to a stop and gets off to talk to you. He is a strong, well-built male in a leather jacket and sunglasses modified to fit his muzzle. 'We're sorry about that, Matriarch. We were busy on our duties,' he says as he points to their bags of loot, 'and so we'd missed your inauguration. I'd like to make that up to you. Perhaps you'd like us to drop you off somewhere while we return to the hideout.'  He gives you a playful smile. 'And maybe you would care for a little fun as well?'";
+		say "     You are quickly recognized by the hyenas as their leader and their laughing stops. One of the bikers, apparently their leader, pulls to a stop and gets off to talk to you. He is a strong, well-built male in a leather jacket and sunglasses modified to fit his muzzle. 'We're sorry about that, Matriarch. We were busy on our duties,' he says as he points to their bags of loot, 'and so we'd missed your inauguration. I'd like to make that up to you. Perhaps you'd like us to drop you off somewhere while we return to the hideout.' He gives you a playful smile. 'And maybe you would care for a little fun as well?'";
 		say "[gimmearide]";
 		increase score by 20;
 	else if matriarchdefeated is 1:	[submissive hyena]
@@ -137,7 +143,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide you'd like to ride back with the gang as they return to the hideout. The leader nods, saying he's looking forward to getting back as well. [line break]";
 		Move player to Hyena Hideout, without printing a room description;
-		Now Hyena Hideout is known;
+		now Hyena Hideout is known;
 		now Hyena Bikers is resolved;
 	else if title entry is "Abbey":
 		if bikedest is 0:
@@ -152,15 +158,15 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the Smith Haven Mall. He gives a rough, hyena laugh. 'Planning on doing some shopping? Be sure to take advantage of the five-finger discount sale going on.' [line break]";
 		Move player to Smith Haven Mall Lot South, without printing a room description;
-		Now Smith Haven Mall Lot South is known;
+		now Smith Haven Mall Lot South is known;
 		now Hyena Bikers is resolved;
 	else if title entry is "Park":
 		if bikedest is 0:
-			now ridemessage is "     You decide to get dropped off at the city park. 'Sure, we can drop you there if you'd like. Just be careful, there's a lot of weird stuff in there.'  He points to one of his gang members at the back, a pantsless herm with three long, floppy dongs between hir legs. 'It took a night-long orgy and that's the best we could do for poor Bill.' [line break][postridesex]";
+			now ridemessage is "     You decide to get dropped off at the city park. 'Sure, we can drop you there if you'd like. Just be careful, there's a lot of weird stuff in there.' He points to one of his gang members at the back, a pantsless herm with three long, floppy dongs between hir legs. 'It took a night-long orgy and that's the best we could do for poor Bill.' [line break][postridesex]";
 		else:
 			now ridemessage is "     You decide to get dropped off at the city park. 'Sure, I can drop you there if you'd like. Just be careful, there's a lot of weird stuff in there and don't take your eyes off the plants.' [line break][postridesex]";
 		Move player to Park Entrance, without printing a room description;
-		Now Park Entrance is known;
+		now Park Entrance is known;
 		now Hyena Bikers is resolved;
 	else if title entry is "Beach":
 		if bikedest is 0:
@@ -168,7 +174,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the beach plaza. He gives a rough, hyena laugh. 'Planning on getting a tan? Just be careful, I've heard there's some spooky stuff going on there in the evening.' [line break]";
 		Move player to Beach Plaza, without printing a room description;
-		Now Beach Plaza is known;
+		now Beach Plaza is known;
 		now Hyena Bikers is resolved;
 		[now Beach Area is resolved;] [removes the random event for discovering the beach]
 	else if title entry is "Hospital":
@@ -177,7 +183,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the City Hospital. He seems a little nervous at that. 'Just be careful in there, I've heard tales of strange monsters and the ex-staff capturing people and dragging them back for experiments. We should be safe enough in the parking lot together, but you'll be on your own after I drop you off.' [line break]";
 		Move player to City Hospital, without printing a room description;
-		Now City Hospital is known;
+		now City Hospital is known;
 		now Hyena Bikers is resolved;
 	else if title entry is "State Fair":
 		if bikedest is 0:
@@ -185,26 +191,26 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the State Fair. He gives a rough, hyena laugh. 'Looking for a little fun at the carnival? I've got a fun ride for you right here,' he jokes, giving his ample package a squeeze. [line break]";
 		Move player to State fair, without printing a room description;
-		Now State fair is known;
+		now State fair is known;
 		now Hyena Bikers is resolved;
 	else if title entry is "High Rise District":
 		now ridemessage is "     You decide to get dropped off in the High Rise District. He gives a rough, hyena laugh. 'Looking to head back where we first met? Didn't know you were so sentimental,' he jokes, though he has a tender smile as he helps you mount up. [line break][postridesex]";
 		Move player to Entrance to the High Rise District, without printing a room description;
-		Now Entrance to the High Rise District is known;
+		now Entrance to the High Rise District is known;
 		now Hyena Bikers is resolved;
 	else if title entry is "Red Light District":
 		if bikedest is 0:
-			now ridemessage is "     You decide to get dropped off in the Red Light District. He seems a little nervous at that. 'Just be careful in there. With the whole city gone sex-crazy, that place has got to be the worst of all. Watch your ass or something'll be humping it.'  He's willing to drop you off at the entrance, but won't risk his riders by venturing any further in. [line break][postridesex]";
+			now ridemessage is "     You decide to get dropped off in the red light district. He seems a little nervous at that. 'Just be careful in there. With the whole city gone sex-crazy, that place has got to be the worst of all. Watch your ass or something'll be humping it.' He's willing to drop you off at the entrance, but won't risk his riders by venturing any further in. [line break][postridesex]";
 		else:
-			now ridemessage is "     You decide to get dropped off in the Red Light District. He seems a little nervous at that. 'Just be careful in there. With the whole city gone sex-crazy, that place has got to be the worst of all. Watch your ass or something'll be humping it.'  He's willing to drop you off at the entrance, but won't risk his riders by venturing any further in. [line break]";
+			now ridemessage is "     You decide to get dropped off in the red light district. He seems a little nervous at that. 'Just be careful in there. With the whole city gone sex-crazy, that place has got to be the worst of all. Watch your ass or something'll be humping it.' He's willing to drop you off at the entrance, but won't risk his riders by venturing any further in. [line break]";
 		Move player to Entrance to the Red Light District, without printing a room description;
-		Now Entrance to the Red Light District is known;
+		now Entrance to the Red Light District is known;
 		now Hyena Bikers is resolved;
 	else if title entry is "The Stables":
 		if bikedest is 0:
-			now ridemessage is "     You decide to get dropped off at The Stables whorehouse. 'Going to check up on our deal, are you? Or maybe just the wares? You be careful in there. I've heard those equines can be rather rough about recruiting and they may try to pull something on you if you're not careful.'  He cautions you as you mount up. [line break][postridesex]";
+			now ridemessage is "     You decide to get dropped off at The Stables whorehouse. 'Going to check up on our deal, are you? Or maybe just the wares? You be careful in there. I've heard those equines can be rather rough about recruiting and they may try to pull something on you if you're not careful.' He cautions you as you mount up. [line break][postridesex]";
 		else:
-			now ridemessage is "     You decide to get dropped off at The Stables whorehouse. 'Going to check up on our deal, are you? Or maybe just the wares? You be careful in there. I've heard those equines can be rather rough about recruiting and they may try to pull something on you if you're not careful.'  He cautions you as you mount up. [line break]";
+			now ridemessage is "     You decide to get dropped off at The Stables whorehouse. 'Going to check up on our deal, are you? Or maybe just the wares? You be careful in there. I've heard those equines can be rather rough about recruiting and they may try to pull something on you if you're not careful.' He cautions you as you mount up. [line break]";
 		Move player to Stables, without printing a room description;
 		now Hyena Bikers is resolved;
 	else if title entry is "Capitol Bldg":
@@ -213,8 +219,8 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the Capitol Building. He gives a rough, hyena laugh. 'Are you looking for some help from the governor? Ain't gonna happen. That place is all torn up. Some kinda volcano or meteor strike or something has made a mess of it. I'll drop you off as close as I can, but don't expect to find much.'[line break]";
 		Move player to Approaching the Capitol Building, without printing a room description;
-		Now Approaching the Capitol Building is known;
-		Now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
+		now Approaching the Capitol Building is known;
+		now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
 		now Hyena Bikers is resolved;
 	else if title entry is "Power Plant":
 		if bikedest is 0:
@@ -222,7 +228,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the city's power plant. If he wonders why you want to go there, he holds his tongue. [line break]";
 		Move player to Plant Overview, without printing a room description;
-		Now Plant Overview is known;
+		now Plant Overview is known;
 		now Ravaged Power Plant is resolved; [removes the random event for discovering the power plant]
 		now Hyena Bikers is resolved;
 	else if title entry is "College Campus":
@@ -231,7 +237,7 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the city's college campus. 'We kept our distance from that spot. It doesn't look like those jocks and their steroids reacted well to this whole mess. You be careful.' [line break]";
 		Move player to College Campus, without printing a room description;
-		Now College Campus is known;
+		now College Campus is known;
 		now Reaching the College is resolved; [removes the random event for discovering the College Campus]
 		now Hyena Bikers is resolved;
 	else if title entry is "Warehouse District":
@@ -240,14 +246,14 @@ This is the bikeride rule:
 		else:
 			now ridemessage is "     You decide to get dropped off at the warehouse district along the waterfront. 'Good thinking, casing out those warehouses for stuff for the gang.' [line break]";
 		Move player to Warehouse District, without printing a room description;
-		Now Warehouse District is known;
+		now Warehouse District is known;
 		now Hyena Bikers is resolved;
 	else if title entry is "Stay":
 		now ridemessage is "     You decide to decline the ride, telling him that you still have some searching to do around here. He nods and wishes you well, adding that he hopes to see you back at the gang hideout soon.";
 		now Hyena Bikers is resolved;
 	decrease the menu depth by 1;
 	rule succeeds;
-
+	now Resolution of Hyena Bikers is 2; [got a bike ride]
 
 to say bikeattack:
 	[dodge three times - 10 dmg each]
@@ -283,13 +289,13 @@ Section 3 - Sexy Subroutines
 
 to say beatenbyhb:
 	say "     After the first hyena steps back after had hir way with you, you can see there are others ready and waiting to play with their newly captured toy. The next in line is a strong male in a leather jacket and sunglasses. His jeans are unzipped, revealing his large shaft. It is quite impressive - substantially larger than the average hyena herm.";
-	say "     He grabs your jaw and stuffs his thick cock into your mouth while another hyena, a herm, lines hirself up behind you. You moan loudly as you feel hir shaft pressing into you, spreading your [if cunts of player > 0][cunt size desc of player] pussy[else]tight asshole[end if]. With a firm grip on your rear, shi pounds you hard and fast, clearly quite pent up and intent on relieving hir need deep inside you.";
+	say "     He grabs your jaw and stuffs his thick cock into your mouth while another hyena, a herm, lines hirself up behind you. You moan loudly as you feel hir shaft pressing into you, spreading your [if player is female][cunt size desc of player] pussy[else]tight asshole[end if]. With a firm grip on your rear, shi pounds you hard and fast, clearly quite pent up and intent on relieving hir need deep inside you.";
 	[WaitLineBreak]
 	say "     You try your best not to neglect that thick cock filling your mouth, working your lips and tongue over its hard, black length. The hyena leader is quite the stud, with a much bigger cock than the other herms have. It fills your mouth quite full and tastes of male and virility. His pre leaks onto your tongue and down your throat as he starts thrusting, arousing you further.";
-	say "     The two hyenas continue to thrust themselves into your body as they spear you from each end. You can hear the sounds of the other bikers having fun together around you, further exciting you. You take it eagerly, moaning and squirming in pleasure until finally you feel the hot rush of cum down your throat, followed by another series of blasts into your [if cunts of player > 0]eager pussy[else]gripping asshole[end if]. [If cocks of player > 0]Your cock dangles beneath you as you cum, spraying your unwanted seed onto the pavement beneath you as the strong, dominant hyenas have their way with you.[end if]";
+	say "     The two hyenas continue to thrust themselves into your body as they spear you from each end. You can hear the sounds of the other bikers having fun together around you, further exciting you. You take it eagerly, moaning and squirming in pleasure until finally you feel the hot rush of cum down your throat, followed by another series of blasts into your [if player is female]eager pussy[else]gripping asshole[end if]. [if player is male]Your cock dangles beneath you as you cum, spraying your unwanted seed onto the pavement beneath you as the strong, dominant hyenas have their way with you.[end if]";
 	[WaitLineBreak]
 	say "     That pair done with you, you are pushed roughly into the hands of others. You are bent over one of their bikes and another pair take you again. Other stroke their cocks and cum all over your face. You lick up as much of it as you can get, much to their amusement.";
-	say "     Eventually, the orgy winds down once all hyenas feel quite sated and you quite full of hyena cum in every available hole. A shadow passes over you and you look up, still quite dazed with lust. The hyena leader is standing above you. 'You're certainly brave and resourceful, managing on your own up to this point. But you should really consider sticking with the hyenas instead of going solo after this.'  With that, he turns back to his group and gets on his bike. Following their leader, the bikers mount up once again and ride off, leaving you in a puddle of cum, with part of you longing to be used again.[impregchance]"; [another chance for impregnation]
+	say "     Eventually, the orgy winds down once all hyenas feel quite sated and you quite full of hyena cum in every available hole. A shadow passes over you and you look up, still quite dazed with lust. The hyena leader is standing above you. 'You're certainly brave and resourceful, managing on your own up to this point. But you should really consider sticking with the hyenas instead of going solo after this.' With that, he turns back to his group and gets on his bike. Following their leader, the bikers mount up once again and ride off, leaving you in a puddle of cum, with part of you longing to be used again.[impregchance]"; [another chance for impregnation]
 	infect "Herm Hyena"; [second dose of infection]
 	decrease humanity of player by 5;
 	increase libido of player by 12;
@@ -298,16 +304,16 @@ to say beatenbyhb:
 	if hyg < 2:					[alternate progress in joining the gang]
 		now hyg is 2;
 	now lastfuck of grant is turns;
-	Now Hyena Bikers is resolved;
+	now Hyena Bikers is resolved;
+	now Resolution of Hyena Bikers is 3; [beaten]
 
 
 to say postridesex:
-	[WaitLineBreak]
 	if matriarchowned is 1:				[matriarch]
 		say "     You are led to the gang leader's bike and asked to get on. He mounts up behind you and the bikes roar to life again. The ride takes some time to cross the city, with several twists and turns to take routes that are clear enough for the bikes. In some areas, you are crossing alleys and riding on the sidewalk in others just to get past clumps of abandoned cars. The bikers know many of these paths, the leader tells you during a brief pause, having found many of them as individual riders before they teamed up and became part of the hyena gang. You are proud to have such fine members in your gang.";
-		say "     During the whole of the ride, you can feel the hard bulge of his cock pressing to your rear and the occasional nuzzle of his muzzle at your ear. The hard throb of the engine beneath you sends further pleasure through your altered body, making your excitement grow further. The strength of his male scent any time you pause makes your [if cunts of player > 0 and cocks of player > 0]pussy wet and cock throb[else if cunts of player > 0]pussy wet[else]cock throb[end if].";
+		say "     During the whole of the ride, you can feel the hard bulge of his cock pressing to your rear and the occasional nuzzle of his muzzle at your ear. The hard throb of the engine beneath you sends further pleasure through your altered body, making your excitement grow further. The strength of his male scent any time you pause makes your [if player is herm]pussy wet and cock throb[else if player is female]pussy wet[else]cock throb[end if].";
 		[WaitLineBreak]
-		if cunts of player > 0:			[female/herm matriarch]
+		if player is female:			[female/herm matriarch]
 			say "     Eventually, you reach your destination and the gang comes to a stop. The biker grinds his cock against you a few more times and asks if he may further serve his matriarch. Having seen him and his group in action, you decide he's worthy of mating with you. You turn your head to kiss him lustfully. His tongue dives into your mouth and soon you're naked and laying across the bike. He grabs one of your legs and raises it up as he lines up his cock.";
 			say "     He rumbles softly in your ear as his cock starts to sink into you, making you moan in pleasure. After all the stimulation on the ride, you are aching to be filled and the biker is just as eager to do the job. He's quite well hung, larger than the other hyena herms you've seen and it only makes you want the virile male all the more.";
 			[WaitLineBreak]
@@ -315,7 +321,7 @@ to say postridesex:
 			say "     Around you, you can see that many of the others in the gang have broken off into groups and are going at it like wild animals. They ease into their roles as tops or bottoms, masters or bitches, quite smoothly. It's clear this is a well-organized group with the pecking order and team units well established. Wherever you choose to look, you are given a lovely show, with an array of positions and carnal acts to watch while the studly male fucks you good and hard.";
 			[WaitLineBreak]
 			say "     The strong male pants heavily as he pounds into you vigorously. You can hear the bitch beneath you groan, possibly in pleasure, as each thrust presses the bike against them. Certainly the tongue only gets more frantic in its licking, even diving at your asshole from time to time, making you shiver at this new delight.";
-			if cocks of player > 0:		[climax for herm matriarch]
+			if player is male:		[climax for herm matriarch]
 				say "     Your hard cock leaks precum onto your body as the hyena pounds you. As his knot pops into you, locking you both together, you are driven over the edge. Your pussy quivers around his shaft, milking at it as your cock empties its load across your chest. The well-hung male groans and slams into you hard one last time, releasing his hot load into you in heavy spurts. As the biker leader spreads his seed in you, the hyena tongue licking you eagerly laps up what few drops leak out around that thick knot.[impregchance]";
 			else:				[climax for female matriarch]
 				say "     As his knot pops into you, locking you both together, you are driven over the edge. Your pussy quivers around his shaft, milking at it eagerly. The well-hung male groans and slams into you hard one last time, releasing his hot load into you in heavy spurts. As the leader spreads his seed in you, the hyena tongue licking you eagerly laps up what few drops leak out around that thick knot.[impregchance]";
@@ -333,17 +339,17 @@ to say postridesex:
 			increase grantfucked by 1;
 	else:						[regular gang member]
 		say "     You are led to the gang leader's bike and told to get on. He mounts up behind you and the bikes roar to life again. The ride takes some time to cross the city, with several twists and turns to take routes that are clear enough for the bikes. In some areas, you are crossing alleys and riding on the sidewalk in others just to get past clumps of abandoned cars. The bikers know many of these paths, the leader tells you during a brief pause, having found many of them as individual riders before they teamed up and became part of the hyena gang.";
-		say "     During the whole of the ride, you can feel the hard bulge of his cock pressing to your rear and the occasional nuzzle of his muzzle at your ear. The hard throb of the engine beneath you sends further pleasure through your altered body, making your excitement grow further. The strength of his male scent any time you pause makes your [if cunts of player > 0 and cocks of player > 0]pussy wet and cock throb[else if cunts of player > 0]pussy wet[else]cock throb[end if].";
+		say "     During the whole of the ride, you can feel the hard bulge of his cock pressing to your rear and the occasional nuzzle of his muzzle at your ear. The hard throb of the engine beneath you sends further pleasure through your altered body, making your excitement grow further. The strength of his male scent any time you pause makes your [if player is herm]pussy wet and cock throb[else if player is female]pussy wet[else]cock throb[end if].";
 		[WaitLineBreak]
 		say "     Eventually, you reach your destination and the gang comes to a stop. The biker grinds his cock against you a few more times and you turn your head to kiss him in thanks. His tongue dives into your mouth and soon you're naked and laying across the bike. He grabs one of your legs and raises it up as he lines up his cock.";
-		if cunts of player > 0:			[female/herm]
+		if player is female:			[female/herm]
 			say "     He rumbles softly in your ear as his cock starts to sink into you, making you moan in pleasure. After all the stimulation on the ride, you are aching to be filled and the biker is just as eager to do the job. He's quite well hung, larger than the other hyena herms you've seen and it only makes you want the virile male all the more.";
 			[WaitLineBreak]
 			say "     As he thrusts into you, his bike sways and you're worried it'll topple over. But the rider just whistles and one of the gang's lower flunkies rushes over, propping the bike up with hir own body. You feel a moment of concern for them, but once hir wet tongue starts lapping at your wet puss and his hard rod as it stuffs you, you're pleased to see shi's getting some fun out of being the obedient and submissive bitch.";
 			say "     Around you, you can see that many of the others in the gang have broken off into groups and are going at it like wild animals. They ease into their roles as tops or bottoms, masters or bitches, quite smoothly. It's clear this is a well-organized group with the pecking order and team units well established. Wherever you choose to look, you are given a lovely show, with an array of positions and carnal acts to watch while the studly male fucks you good and hard.";
 			[WaitLineBreak]
 			say "     The strong male pants heavily as he pounds into you vigorously. You can hear the bitch beneath you groan, possibly in pleasure, as each thrust presses the bike against them. Certainly the tongue only gets more frantic in its licking, even diving at your asshole from time to time, making you shiver at this new delight.";
-			if cocks of player > 0:		[herm climax]
+			if player is male:		[herm climax]
 				say "     Your hard cock leaks precum onto your body as the hyena pounds you. As his knot pops into you, locking you both together, you are driven over the edge. Your pussy quivers around his shaft, milking at it as your cock empties its load across your chest. The well-hung male groans and slams into you hard one last time, releasing his hot load into you in heavy spurts. As the leader spreads his seed in you, the hyena tongue licking you eagerly laps up what few drops leak out around that thick knot.[impregchance]";
 			else:				[female climax]
 				say "     As his knot pops into you, locking you both together, you are driven over the edge. Your pussy quivers around his shaft, milking at it eagerly. The well-hung male groans and slams into you hard one last time, releasing his hot load into you in heavy spurts. As the leader spreads his seed in you, the hyena tongue licking you eagerly laps up what few drops leak out around that thick knot.[impregchance]";
@@ -361,11 +367,11 @@ to say postridesex:
 
 
 to say bikersubsex:
-	say "     After circling around you for a while, they stop their bikes and get off, moving towards you intently as a group. One steps through the others, moving up close to you. 'And what is a low-ranked member like you doing out on your own, I wonder,' their leader asks. 'Looking for trouble, are you?' he asks. 'Or perhaps just a little fun? I think you should get yourself to work, taking care of some real hyenas who've been doing some real work for the gang. We've been out collecting for days and could use a little reward.'  He starts unzipping his jeans, showing he has no intent to make this a request and you find yourself complying, submitting to the higher-ranked male. His cock is out but a moment before you have your mouth wrapped around it.";
-	say "     You are helped out of the little clothes you have and you have another hyena, a herm, lining up behind you. You moan loudly as you feel hir shaft pressing into you, spreading your [if cunts of player > 0][cunt size desc of player] pussy[else]tight asshole[end if]. With a firm grip on your rear, shi pounds you hard and fast, clearly quite pent up and intent on relieving hir need deep inside you.";
+	say "     After circling around you for a while, they stop their bikes and get off, moving towards you intently as a group. One steps through the others, moving up close to you. 'And what is a low-ranked member like you doing out on your own, I wonder,' their leader asks. 'Looking for trouble, are you?' he asks. 'Or perhaps just a little fun? I think you should get yourself to work, taking care of some real hyenas who've been doing some real work for the gang. We've been out collecting for days and could use a little reward.' He starts unzipping his jeans, showing he has no intent to make this a request and you find yourself complying, submitting to the higher-ranked male. His cock is out but a moment before you have your mouth wrapped around it.";
+	say "     You are helped out of the little clothes you have and you have another hyena, a herm, lining up behind you. You moan loudly as you feel hir shaft pressing into you, spreading your [if player is female][cunt size desc of player] pussy[else]tight asshole[end if]. With a firm grip on your rear, shi pounds you hard and fast, clearly quite pent up and intent on relieving hir need deep inside you.";
 	[WaitLineBreak]
 	say "     You try your best not to neglect that thick cock filling your mouth, working your lips and tongue over its hard, black length. The hyena leader is quite the stud, with a much bigger cock than the other herms have. It fills your mouth quite full and tastes of male and virility. His pre leaks onto your tongue and down your throat as he starts thrusting, arousing you further.";
-	say "     The two hyenas continue to thrust themselves into your body as they spear you from each end. You can hear the sounds of the other bikers having fun together around you, further exciting you. You take it eagerly, moaning and squirming in pleasure until finally you feel the hot rush of cum down your throat, followed by another series of blasts into your [if cunts of player > 0]eager pussy[else]gripping asshole[end if]. [If cocks of player > 0]Your cock dangles beneath you, spraying its undesirable, submissive seed onto the pavement beneath you as the stronger, more dominant hyenas have their way with you.[end if]";
+	say "     The two hyenas continue to thrust themselves into your body as they spear you from each end. You can hear the sounds of the other bikers having fun together around you, further exciting you. You take it eagerly, moaning and squirming in pleasure until finally you feel the hot rush of cum down your throat, followed by another series of blasts into your [if player is female]eager pussy[else]gripping asshole[end if]. [if player is male]Your cock dangles beneath you, spraying its undesirable, submissive seed onto the pavement beneath you as the stronger, more dominant hyenas have their way with you.[end if]";
 	say "     That pair done with you, you are pushed roughly into the hands of others. You are bent over one of their bikes and another pair take you again. Others stroke their cocks and cum all over your face. You lick up as much of it as you can get, much to their amusement.";
 	[WaitLineBreak]
 	say "     Eventually, the orgy winds down, everyone feeling quite sated and you quite full of hyena cum in every available hole. The hyenas mount up once again and ride off, leaving you to your own devices, but longing to be used again.[impregchance]";
@@ -379,16 +385,16 @@ to say bikersubsex:
 
 
 to say bikerbitchsex:
-	say "     With so many hyenas circling around you, your submissive urges start to come back and you drop to all fours, presenting yourself to them. This makes them get off their bikes and laugh all the louder. One hyena in a leather jacket and sunglasses strides up first, full of confidence and the strong scent of dominance. 'And what's a weak little bitch like you doing so far from home?'  He strokes a paw over your bottom, squeezing your rump. 'Looking for a strong alpha to fill you, are you?'";
-	say "     Your subservient instincts make you moan and press your rear back into his touch, making him smile wider. 'Yes, I think you are.'  With that, he brings his cock to your [if cunts of player > 0]wet pussy[else]eager ass[end if] and slowly sinks in. You moan even louder in satisfaction. He's larger than the average hyena and fills you so very full, just what your bitch body is craving.";
+	say "     With so many hyenas circling around you, your submissive urges start to come back and you drop to all fours, presenting yourself to them. This makes them get off their bikes and laugh all the louder. One hyena in a leather jacket and sunglasses strides up first, full of confidence and the strong scent of dominance. 'And what's a weak little bitch like you doing so far from home?' He strokes a paw over your bottom, squeezing your rump. 'Looking for a strong alpha to fill you, are you?'";
+	say "     Your subservient instincts make you moan and press your rear back into his touch, making him smile wider. 'Yes, I think you are.' With that, he brings his cock to your [if player is female]wet pussy[else]eager ass[end if] and slowly sinks in. You moan even louder in satisfaction. He's larger than the average hyena and fills you so very full, just what your bitch body is craving.";
 	[WaitLineBreak]
 	say "     Another hyena moves in front of you, presenting hir cock to your lips. Shi doesn't have to say or do anything more; you stuff it into your mouth, licking and sucking it eagerly. As the male behind you thrusts, you are rocked between them, riding those hard poles. Around you, you can hear the others having fun together, further exciting you.";
-	if cocks of player > 0:			[male/herm insert]
-		say "     Your cock dangles beneath you, spraying its undesirable, submissive seed onto the pavement beneath you as the stronger, more dominant hyenas have their way with you. You are but a [if cunts of player > 0]breedtoy[else]fucktoy[end if] for them and your sex-addled mind wouldn't have it any other way.";
-	if cunts of player > 0:			[female/herm second half]
+	if player is male:			[male/herm insert]
+		say "     Your cock dangles beneath you, spraying its undesirable, submissive seed onto the pavement beneath you as the stronger, more dominant hyenas have their way with you. You are but a [if player is female]breedtoy[else]fucktoy[end if] for them and your sex-addled mind wouldn't have it any other way.";
+	if player is female:			[female/herm second half]
 		say "     The pair continue to pound their cocks into you from each end until finally you are given a hot load of hyena cum down your throat. Your dripping cunt grips firmly around the male's cock, but he only groans and slows his pace to almost a standstill. This makes you moan all the louder with need as the herm pulls hir cock from you and steps back. The male leader keeps his paws firmly on your rear, holding you from riding him as your body desires.";
 		[WaitLineBreak]
-		say "     'Not so fast, my eager slut. I intend to keep your pussy all to myself. I was looking for a nice bitch to fill with big, strong cubs.'  His words are like a delicious torture to you, making you want his seed to breed you all the more, but knowing the dominant male will not give it to you until later. You start to beg him to breed you now, but another herm comes up and stuffs hir cock in your muzzle, silencing you.";
+		say "     'Not so fast, my eager slut. I intend to keep your pussy all to myself. I was looking for a nice bitch to fill with big, strong cubs.' His words are like a delicious torture to you, making you want his seed to breed you all the more, but knowing the dominant male will not give it to you until later. You start to beg him to breed you now, but another herm comes up and stuffs hir cock in your muzzle, silencing you.";
 		say "     The orgy continues like that for quite some time, with many hyenas enjoying your eager muzzle while the male takes his good, sweet time with you. As the leader, the others let him keep your pussy all to himself until finally, in the end you are given your reward. You feel his knot swell fully inside you, locking you tight as his cock throbs inside you, blasting burst after burst of hot hyena cum into you. Because he held back so long, there is so much of it. All trapped by his knot, you can feel the hot, virile seed being forced into your womb, filling it with his sperm.[impregchance]";
 		say "     Once the breeding session is done and his knot has gone down, he pulls out of you. A little of his cum leaks out, but most is safely stored in your womb, filling you with warmth. He drags you over to his bike and tosses you onto it like another prize and mounts it. You ride back to the hideout on his motorcycle, with him playing with your well-used pussy from time to time. The ride over, he tosses you off and tells you to be a good bitch and come back for more later.";
 	else:					[male second half]
@@ -409,7 +415,7 @@ Section 4 - Tire Iron
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"tire iron"	"A heavy tire iron - a good, cliche make-shift weapon."	1	tire iron
+"tire iron"	"A heavy tire iron - a good, cliché makeshift weapon."	1	tire iron
 
 tire iron is an armament. It is part of the player. It has a weapon "[one of]your tire iron[or]the tire iron[or]your metal tire iron[at random]". The weapon damage of tire iron is 6. The weapon type of tire iron is "Melee". It is not temporary.
 
@@ -418,6 +424,10 @@ instead of sniffing tire iron:
 
 
 Section 5 - Grant
+
+Table of GameCharacterIDs (continued)
+object	name
+Grant	"Grant"
 
 Grant is a man.
 The description of Grant is "[grantdesc]".
@@ -454,8 +464,8 @@ instead of conversing the Grant:
 
 instead of fucking the grant:
 	[puts Herm Hyena as lead monster for possible impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Herm Hyena":
 			now monster is y;
 			break;
@@ -465,12 +475,12 @@ instead of fucking the grant:
 		disable the Stay option;
 	if lastfuck of grant - turns < 8:
 		if matriarchdefeated is 2:
-			say "     The biker leader hops off the crate and push you against it roughly. He leans overtop you and nibbles your ear. As you start to hope he'll mount you, he swats you hard on the rear. 'You're overeager, little bitch. Come back later and I'll be in the mood to show you what a real male's like.'  He gives you another swat on the ass before shoving you back into the room. Many of the others around chuckle as the impressive male sends you off firmly. You blush and slink away, but long for [']later['] to come.";
+			say "     The biker leader hops off the crate and push you against it roughly. He leans overtop you and nibbles your ear. As you start to hope he'll mount you, he swats you hard on the rear. 'You're overeager, little bitch. Come back later and I'll be in the mood to show you what a real male's like.' He gives you another swat on the ass before shoving you back into the room. Many of the others around chuckle as the impressive male sends you off firmly. You blush and slink away, but long for [']later['] to come.";
 		else:
 			say "     'Well, you're certainly had a good time and are eager if you're back for more this soon. I do need a little chance to recover before I go again. I'm not quite ready for another [']ride['] quite yet,' Grant says with a grin.";
 	else if matriarchdefeated is 2:
 		if bodyname of player is not "Herm Hyena":
-			say "     The hyena biker glances down at you, looking over your [bodyname of player] form and shakes his head. 'Now, that just won't do at all.'  He grabs your shoulder and pushes you to your knees in front of him. With his legs around you, he holds you close. You watch as he pulls out his impressive cock and strokes himself hard.";
+			say "     The hyena biker glances down at you, looking over your [bodyname of player] form and shakes his head. 'Now, that just won't do at all.' He grabs your shoulder and pushes you to your knees in front of him. With his legs around you, he holds you close. You watch as he pulls out his impressive cock and strokes himself hard.";
 			say "     Your eyes remain locked on this display, enable to draw away as those suppressed hyena urges start to rise again, keeping you submissively waiting for what you know is coming. The scent of his arousal grows stronger, turning you on as well, making you more and more eager for what is to come. And cum he does, spraying his thick, ample seed across your face and chest, marking you with his semen and letting it soak into you, seeking to restore the hyena bitch in you.";
 		else:
 			if grantbitch is 0:
@@ -503,21 +513,21 @@ instead of fucking the grant:
 		now lastfuck of grant is turns;
 	else:
 		say "     'Oh? Interested in taking a ride with the big, bad biker, are we? [if matriarchowned is 1]It would be my pleasure to serve you, my matriarch,'[else if matriarchdefeated is 1]I could stand for a joyride, little sub,'[else]Best to have our fun away from Gina's watchful eye. I'll just give you a lift somewhere,'[end if] he replies with a wink.";
-		say "     The biker leader leads to you the garage where his bike is stored. A few of his team are there, working on their bikes or shooting the breeze. They all smarten up as they see [if matriarchowned is 1]you both[else]him[end if] come in, then relax when he nods to them[if matriarchowned is 1]. 'Just giving our matriarch a lift, boys. You guys still have some time for R&R.'  They wait respectfully for their matriarch to leave before breaking into a bit of roughhousing[else]. 'Just a little joyride, boys. No mission yet.'  They chuckle a little, grinning as they eye the new member they met out on the road[end if].";
+		say "     The biker leader leads to you the garage where his bike is stored. A few of his team are there, working on their bikes or shooting the breeze. They all smarten up as they see [if matriarchowned is 1]you both[else]him[end if] come in, then relax when he nods to them[if matriarchowned is 1]. 'Just giving our matriarch a lift, boys. You guys still have some time for R&R.' They wait respectfully for their matriarch to leave before breaking into a bit of roughhousing[else]. 'Just a little joyride, boys. No mission yet.' They chuckle a little, grinning as they eye the new member they met out on the road[end if].";
 		[WaitLineBreak]
 		say "     You and Grant roar out on his bike, taking a short but scenic ride through the city before riding to the top of a parking structure. There, he stops the bike and takes you into his arms";
-		if cocks of player > 0 and cunts of player > 0 and matriarchowned is 1:		[herm matriarch]
+		if player is herm and matriarchowned is 1:		[herm matriarch]
 			say ". The biker runs his paws along your body, shifting between your cock and pussy while licking and nibbling along your neck. 'And what can I do to serve my matriarch today?' he rumbles softly in your ear.";
 			say "     (Y=to be fucked, N=to fuck him)";
-			if the player consents:
+			if player consents:
 				say "[grantfsex]";
 			else:
 				say "[grantmbottom]";
-		else if cocks of player > 0 and matriarchowned is 1:				[male matriarch]
+		else if player is male and matriarchowned is 1:				[male matriarch]
 			say ". The biker runs his paws along your body, shifting them to your cock while licking and nibbling along your neck. 'And how can I serve my matriarch today?' he rumbles softly in your ear, to which you respond by giving his ass a firm squeeze.";
 			wait for any key;
 			say "[grantmbottom]";
-		else if cunts of player > 0:
+		else if player is female:
 			say ". The biker runs his paws along your body and between your legs to rub your pussy while licking and nibbling along your neck. 'Come, my eager lady, let's get you nice and filled,' he rumbles softly in your ear.";
 			wait for any key;
 			say "[grantfsex]";
@@ -552,38 +562,38 @@ to say grantstretch:
 
 to say grantbitchsex1:
 	say "     As you come over to the alpha male with the intent to solicit his attention, he glances over at you for a moment. As if knowing what you're after by reading your body language, Grant hops off the crates and grabs you roughly. With a shove, he has you pressed down across what was his seat moments ago as his paws roam over your body. 'You need a good fucking, don't you, bitch?' he rumbles in your ear.";
-	say "     Keeping a paw to hold you down even though this is what you came over for, he opens his jeans and removes any unnecessary clothes between his cock and your ass. That done, he brings his free paw to your rear, teasing your [if cunts of player > 0]cunt[else]balls[end if] and tailhole while rubbing his erection against your bottom.";
+	say "     Keeping a paw to hold you down even though this is what you came over for, he opens his jeans and removes any unnecessary clothes between his cock and your ass. That done, he brings his free paw to your rear, teasing your [if player is female]cunt[else]balls[end if] and tailhole while rubbing his erection against your bottom.";
 	[WaitLineBreak]
-	say "     His cock is quite large, bigger than the other hyenas and you whimper with need as he presses it against your [if cunts of player > 0]pussy[else]tailhole[end if] teasingly. You try to push your rear back to take him in, but he keeps you held down. Clearly he's going to use you as he sees fit without any say from you and your instincts have you submit to him. You moan needfully, but cease your struggles and let him set the pace.";
+	say "     His cock is quite large, bigger than the other hyenas and you whimper with need as he presses it against your [if player is female]pussy[else]tailhole[end if] teasingly. You try to push your rear back to take him in, but he keeps you held down. Clearly he's going to use you as he sees fit without any say from you and your instincts have you submit to him. You moan needfully, but cease your struggles and let him set the pace.";
 	say "     Grant continues to grind his cock against you. 'You want this, don't you?' he rumbles with a soft chuckle in his voice. 'Maybe I'll keep you to be my special bitch,' he whispers in your ear as he slowly sinks that thick meat into you, making you moan and nod your head vigorously.";
 	[WaitLineBreak]
-	if cunts of player > 0:
+	if player is female:
 		say "     Your pussy squeezes and trembles as the large cock spreads you wide and starts pounding into you hard and fast. His precum leaks steadily into you, making you even wetter inside. The feel of that big prick inside you is so good, making you love to be used like the weak, submissive bitch your new instincts say you are.";
 		say "[grantstretch]";
 	else:
 		say "     Your anal walls stretch painfully wide to take the large cock, but the pressure of it against your prostate gives you much more pleasure. As your tailhole starts to get used to the intruder, the biker starts pounding into you hard and fast. His precum leaks steadily into you, making your back passage slick for him. The feel of that big prick inside you is so good, making you love to be used like the weak, submissive bitch your new instincts say you are.";
 	[WaitLineBreak]
 	say "     Glancing past his strong body, you can see several of the other hyenas have stopped to watch the show. Some have even paired off to have a little fun while others look on enviously. You can't help but think they envy your position, given how much you're enjoying being used by such a stud.";
-	if cunts of player > 0:
-		say "     As he fucks you, the male doesn't neglect his bitch's needs either. Now that you're properly submitting to him, his paws can roam to tease your nipples and finger your clit while he breeds you[if cocks of player > 0]. He also makes sure to give some attention to your cock and balls as well, clearly very familiar with pleasing herms[end if]. His sharp teeth and slobbery tongue play against your ear as he tells you again and again what a good bitch you are and that he'll fill you with what you need.";
+	if player is female:
+		say "     As he fucks you, the male doesn't neglect his bitch's needs either. Now that you're properly submitting to him, his paws can roam to tease your nipples and finger your clit while he breeds you[if player is male]. He also makes sure to give some attention to your cock and balls as well, clearly very familiar with pleasing herms[end if]. His sharp teeth and slobbery tongue play against your ear as he tells you again and again what a good bitch you are and that he'll fill you with what you need.";
 		[WaitLineBreak]
-		say "     The hard fucking feels wonderful, but all good things must come to an end. After you've had several orgasms, he buries his cock to just before the knot and unleashes his hot seed, blasting it against your cervix. Your pussy clenches down on the thick rod, milking it for semen as his knot rubs against your wet folds. You can feel his fertile load flowing up into your womb, sending you into another crashing climax [if cocks of player > 0]and painting your own seed across the crate[else]that leaves you exhausted and panting on the crate[end if].[impregchance]";
-		say "     Grant pulls his spent shaft free with a wet pop before wiping it against your butt. Done with you, he pulls you roughly from the box and onto the floor. He teasingly grins down at you as he hops back onto the crate. 'You're in my seat.'  You moan softly and lower your ears at his playful admonishment, nuzzling at his sheath and cock, to finish licking him clean. He rubs your ears and strokes your muzzle lightly before sending you off with a light swat on your rear for your impertinence.";
+		say "     The hard fucking feels wonderful, but all good things must come to an end. After you've had several orgasms, he buries his cock to just before the knot and unleashes his hot seed, blasting it against your cervix. Your pussy clenches down on the thick rod, milking it for semen as his knot rubs against your wet folds. You can feel his fertile load flowing up into your womb, sending you into another crashing climax [if player is male]and painting your own seed across the crate[else]that leaves you exhausted and panting on the crate[end if].[impregchance]";
+		say "     Grant pulls his spent shaft free with a wet pop before wiping it against your butt. Done with you, he pulls you roughly from the box and onto the floor. He teasingly grins down at you as he hops back onto the crate. 'You're in my seat.' You moan softly and lower your ears at his playful admonishment, nuzzling at his sheath and cock, to finish licking him clean. He rubs your ears and strokes your muzzle lightly before sending you off with a light swat on your rear for your impertinence.";
 		wait for any key;
 	else:
 		say "     As he fucks you, the male doesn't neglect his bitch's needs either. Now that you're properly submitting to him, his paws can roam to tease your nipples and stroke your cock while he screws you. His sharp teeth and slobbery tongue play against your ear as he tells you again and again what a good bitch you are and that he'll fill you with what you need.";
 		[WaitLineBreak]
 		say "     The hard fucking feels wonderful, but all good things must come to an end. After fucking you through one orgasm that leaves a sticky stain on the side of the crate and getting you hard and ready to blow again, he buries his cock to just before the knot and unleashes his hot seed, blasting it deep inside your ass. You can feel his virile load shooting into your bowels, sending you into another crashing climax that leaves you exhausted and panting on the crate.[mimpregchance]";
-		say "     Grant pulls his spent shaft free with a wet pop before wiping it against your butt. Done with you, he pulls you roughly from the box and onto the floor. He teasingly grins down at you as he hops back onto the crate. 'You're in my seat.'  You moan softly and lower your ears at his playful admonishment, nuzzling at his sheath and cock, to finish licking him clean. He rubs your ears and strokes your muzzle lightly before sending you off with a light swat on your rear for your impertinence.";
+		say "     Grant pulls his spent shaft free with a wet pop before wiping it against your butt. Done with you, he pulls you roughly from the box and onto the floor. He teasingly grins down at you as he hops back onto the crate. 'You're in my seat.' You moan softly and lower your ears at his playful admonishment, nuzzling at his sheath and cock, to finish licking him clean. He rubs your ears and strokes your muzzle lightly before sending you off with a light swat on your rear for your impertinence.";
 		wait for any key;
 
 
 to say grantbitchsex2:
-	say "     You run your hands over his sheath and ballsack, caressing those large orbs while your mouth works over the big cock before you. Though his expression hardly changes, you're clearly pleasing him as he rewards you by shifting one of his feet to rub at your [if cocks of player > 0 and cunts of player > 0]cock and pussy[else if cocks of player > 0]cock[else]pussy[end if]. The alternate pleasures of his soft fur and rough pawpads against your sensitive flesh makes you moan wetly around his cock.";
-	say "     While you greedily suck his cock, obediently servicing this strong male, he continues the footjob while softly telling you what a good bitch and a proper fucktoy you make for the gang. These words ring true to your lustful instincts and you suck him off all the harder[if cocks of player > 0]. His paw strokes along your erection, rubbing against your shaft and teasing your glans with his toes. At times, he presses your stiff member between his foot and your tummy and other times he kneads your balls with his furred digits[end if][if cunts of player > 0]. His softly furred foot rubs at your pussy, stroking your sensitive folds. He slips a furred digit into your pussy a few times and carefully teases your clit with a blunt claw at one point[end if].";
+	say "     You run your hands over his sheath and ballsack, caressing those large orbs while your mouth works over the big cock before you. Though his expression hardly changes, you're clearly pleasing him as he rewards you by shifting one of his feet to rub at your [if player is herm]cock and pussy[else if player is male]cock[else]pussy[end if]. The alternate pleasures of his soft fur and rough pawpads against your sensitive flesh makes you moan wetly around his cock.";
+	say "     While you greedily suck his cock, obediently servicing this strong male, he continues the footjob while softly telling you what a good bitch and a proper fucktoy you make for the gang. These words ring true to your lustful instincts and you suck him off all the harder[if player is male]. His paw strokes along your erection, rubbing against your shaft and teasing your glans with his toes. At times, he presses your stiff member between his foot and your tummy and other times he kneads your balls with his furred digits[end if][if player is female]. His softly furred foot rubs at your pussy, stroking your sensitive folds. He slips a furred digit into your pussy a few times and carefully teases your clit with a blunt claw at one point[end if].";
 	[WaitLineBreak]
-	say "     Torn between your longing for the taste of the male's cum and the continued attention from his foot, you are eventually pulled hard towards the hyena's groin, stuffing his cock deep into your mouth. You can feel his ballsack draw up and his cock throb moments before his hot seed blasts down your throat. Much of his hot seed flows down into your belly, but a little washes back to fill your mouth with his rich, manly taste[if cocks of player > 0]. Your cock throbs against his paw, spraying your weak, unworthy seed onto his foot[end if][if cunts of player > 0]. Your pussy quivers against his footpaw, soaking it in your juices as you cum as well[end if].";
-	say "     Once he's finally drained, he pushes you off his cock and you land on your ass, panting for breath even as you lick your lips to seek every last drop. With a teasing grin, he holds up his sticky footpaw. You dip your ears in playful submission and take it in your hands, licking and kissing it until it's clean of your [if cocks of player > 0 and cunts of player > 0]semen and femme juices[else if cocks of player > 0]semen[else]femme juices[end if].";
+	say "     Torn between your longing for the taste of the male's cum and the continued attention from his foot, you are eventually pulled hard towards the hyena's groin, stuffing his cock deep into your mouth. You can feel his ballsack draw up and his cock throb moments before his hot seed blasts down your throat. Much of his hot seed flows down into your belly, but a little washes back to fill your mouth with his rich, manly taste[if player is male]. Your cock throbs against his paw, spraying your weak, unworthy seed onto his foot[end if][if player is female]. Your pussy quivers against his footpaw, soaking it in your juices as you cum as well[end if].";
+	say "     Once he's finally drained, he pushes you off his cock and you land on your ass, panting for breath even as you lick your lips to seek every last drop. With a teasing grin, he holds up his sticky footpaw. You dip your ears in playful submission and take it in your hands, licking and kissing it until it's clean of your [if player is herm]semen and femme juices[else if player is male]semen[else]femme juices[end if].";
 	wait for any key;
 
 
@@ -592,9 +602,9 @@ to say grantbitchsex3:
 	say "     He grabs your ass and gives it a squeeze, making you moan softly. And as you moan, he presses his muzzle to your lips, kissing you and diving his tongue into your mouth. Yours eyes go wide in surprise that such a powerful male would deign to kiss such a lowly member of the gang as you. Your eyes then close slowly as your adoration grows for this male who doesn't neglect the needs of even his fucktoy bitch.";
 	[WaitLineBreak]
 	say "     And you have no trouble thinking of yourself as his. Your submissive instincts having drawn you back to him again and again, giving yourself to him. As he presses you down onto the crate again, you moan loudly, looking forward to his thick meat filling you and claiming your body like the submissive slut you are.";
-	say "     When his cock slides between your ass cheeks, leaking precum between them, you whimper and grip the box, but hold yourself steady for the dominant male. He strokes your rear tenderly and clearly has a smile in his voice as he says, 'That's a good little bitch. Time for your reward.'  He shifts his hips and lines his cock into position before thrusting slowly into you.";
+	say "     When his cock slides between your ass cheeks, leaking precum between them, you whimper and grip the box, but hold yourself steady for the dominant male. He strokes your rear tenderly and clearly has a smile in his voice as he says, 'That's a good little bitch. Time for your reward.' He shifts his hips and lines his cock into position before thrusting slowly into you.";
 	[WaitLineBreak]
-	if cunts of player > 0:
+	if player is female:
 		say "     You are filled with pleasure as the studly male sinks his cock into your pussy, spreading your wet lips around his thick shaft. It somehow feels even better than before, like this is exactly where you belong, bent over for this dominant, loving master. Your body is meant for him and your womb is meant for his seed. That image makes your pussy quiver and you lick your lips, hopeful to feel it soon.";
 		say "[grantstretch]";
 		say "     Glancing back, you can see the hangers on are watching again, eying you both lustfully and enviously. Let them watch and be jealous all they want, you think. It is too late, you are his special bitch now";
@@ -605,17 +615,17 @@ to say grantbitchsex3:
 			say " breeder";
 		else:
 			say " fucktoy";
-		say ".'  As he groans out that last word, his knot pops into you, sending you both over the edge.";
+		say ".' As he groans out that last word, his knot pops into you, sending you both over the edge.";
 		[WaitLineBreak]
 		say "     Feeling the hot rush of the stud's seed into you, you grip the wood, sinking your claws into it. His cock has pushed into your womb, blasting his thick load deep inside you in an attempt to breed his new bitch. You feel so warm and full inside as his ample load fills you.";
-		say "     With his knot locked inside you, you can feel him continuing to spurt semen into you for quite some time. During this long breeding session, he licks and nibbles at your ears, whispering how much he loves his new bitch, his special fucktoy, his hyena slut. His words feel so right to you hyena body and submissive urges that you moan and eventual orgasm again from it all[if cocks of player > 0]. Your cock sprays your unwanted, submissive seed against the side of the box, showing how much you enjoy being the biker's slut[end if].[impregchance]";
+		say "     With his knot locked inside you, you can feel him continuing to spurt semen into you for quite some time. During this long breeding session, he licks and nibbles at your ears, whispering how much he loves his new bitch, his special fucktoy, his hyena slut. His words feel so right to you hyena body and submissive urges that you moan and eventual orgasm again from it all[if player is male]. Your cock sprays your unwanted, submissive seed against the side of the box, showing how much you enjoy being the biker's slut[end if].[impregchance]";
 		[WaitLineBreak]
 		say "     As your quivering vagina starts to settle down, his knot has shrunk enough for him to pull out. A gush of hyena cum soaks your thighs, though you do manage to keep quite a bit of it inside by clenching tightly. He shoves you down and reclaims his seat, doing so firmly, but in no way hurting you. He grins and makes a casual motion to his crotch and you're at it immediately, licking your stud clean before heading off with a swat to the rump that makes you moan and giggle.";
 		wait for any key;
 	else:
 		say "     You are filled with pleasure as the studly male sinks his cock into your ass, spreading your tailhole wide around his thick shaft. Having stretched you out last time, there is little pain now and it somehow feels even better than before. It is like this is exactly where you belong, bent over for this dominant, loving master. Your body is meant for him and your ass is meant for his cum. That image makes your anal walls quiver and you lick your lips, longing to feel it soon.";
 		say "     Glancing back, you can see the hangers on are watching again, eying you both lustfully and enviously. Let them watch and be jealous all they want, you think. It is too late, you are his special bitch and fucktoy now.";
-		say "     His paws are not idle, playing with your cock and balls even as he tries to work his growing knot into you. 'Ngg... I knew you'd come back, slut. And I'm glad, only a special bitch like you deserves to be my personal fucktoy.'  As he groans out that last word, his knot pops into you, sending you both over the edge.";
+		say "     His paws are not idle, playing with your cock and balls even as he tries to work his growing knot into you. 'Ngg... I knew you'd come back, slut. And I'm glad, only a special bitch like you deserves to be my personal fucktoy.' As he groans out that last word, his knot pops into you, sending you both over the edge.";
 		[WaitLineBreak]
 		say "     Feeling the hot rush of the stud's seed into you, you grip the wood, sinking your claws into it. His cock has pushed deep into your tight rump, blasting his thick load inside you as he claims you as his new bitch. You feel so warm and full inside as his ample load fills you while your own submissive cum paints the crate.[mimpregchance]";
 		say "     With his knot locked inside you, you can feel him continuing to spurt semen into you for quite some time. During this long breeding session, he licks and nibbles at your ears, whispering how much he loves his new bitch, his special fucktoy, his hyena slut. His words feel so right to you hyena body and submissive urges that you moan and eventual orgasm again from it all.";
@@ -626,9 +636,9 @@ to say grantbitchsex3:
 
 to say grantbitchsex4:
 	say "     Grant smiles as you come up to him. 'Back again, my little bitch? Just can't get enough of it, can you?' he says with a rough, hyena chuckle, but smiling down at his special fucktoy tenderly. Knowing he wants no answer in words, you step into arms reach, giving yourself over to whatever he's in the mood to do with you.";
-	say "     He grins and rubs the bulge in his jeans, staying in his seat this time. 'Pull it out, my sweet slut, and I'll give it to you.'  You pull them open quickly and get that swelling cock in your paws as fast as you can. As you start nuzzling and licking it, he reaches down and pulls you up into his lap, back to his chest and facing the room of gathered hyenas.";
+	say "     He grins and rubs the bulge in his jeans, staying in his seat this time. 'Pull it out, my sweet slut, and I'll give it to you.' You pull them open quickly and get that swelling cock in your paws as fast as you can. As you start nuzzling and licking it, he reaches down and pulls you up into his lap, back to his chest and facing the room of gathered hyenas.";
 	[WaitLineBreak]
-	if cunts of player > 0:
+	if player is female:
 		say "     You moan loudly as he settles you down onto his cock, spreading your pussy wide around his thick meat. The sound draws the attention of the others and all eyes turn to you and you smile happily, quivering in delight as you show them all that you are his special bitch.";
 		say "[grantstretch]";
 		say "     His paws tease your nipples and fondle your breasts, showing off his fucktoy as you bounce in his lap. The wet sounds of sex can be heard across the room as almost everyone stops what they were doing to stare. The only other sounds come from the sex that breaks out from other couples turned on by your display.";
@@ -636,8 +646,8 @@ to say grantbitchsex4:
 		say "     You moan loudly as he settles you down onto his cock, spreading your asshole wide around his thick meat. The sound draws the attention of the others and all eyes turn to you and you smile happily, quivering in delight as you show them all that you are his special bitch.";
 		say "     His paws stroke your hard cock and bitch balls, showing off his fucktoy as you bounce in his lap. The wet sounds of sex can be heard across the room as almost everyone stops what they were doing to stare. The only other sounds come from the sex that breaks out from other couples turned on by your display.";
 	[WaitLineBreak]
-	say "     Grant nibbles along your neck and whispers softly in your ear. 'Give them a good show, my pet. Let them all see what they're missing out on.'  You obediently cry out louder and ride him harder and faster, though your moans are in no way false or forced, loving every moment of your lustful display. You let them all see that you belong to him as none of them ever will be his slut. That he is yours as much as you are his.";
-	if cunts of player > 0:
+	say "     Grant nibbles along your neck and whispers softly in your ear. 'Give them a good show, my pet. Let them all see what they're missing out on.' You obediently cry out louder and ride him harder and faster, though your moans are in no way false or forced, loving every moment of your lustful display. You let them all see that you belong to him as none of them ever will be his slut. That he is yours as much as you are his.";
+	if player is female:
 		say "     You have several small orgasms before your master drives his knot deep inside you and pumps his hot, virile seed into your womb. The heat and fullness of it plumping your tummy a little drives you to a powerful orgasm that wracks your body with delight. As you pant, leaning back against him, he snuggles you in his arms, telling you again what a good slut you are and you are filled with warmth and pride at having pleased him so.[impregchance]";
 		[WaitLineBreak]
 		say "     Once his knot goes down, he slides you off and sets you back on the floor. You immediately drop to your knees and submissively clean your master's cock before getting your customary swat on the rump and heading off. You wander around the room a little, showing off your pussy, wet and leaking his cum onto the floor as you go.";
@@ -649,11 +659,11 @@ to say grantbitchsex4:
 
 
 to say grantbitchsex5:
-	say "     As you step up to the hyena biker, he hops off the crate and grabs you roughly. You find yourself bent over the crate and feel his bared cock at your tight rump moments later. 'It is always pleasant to see you, my little bitch. Did you need something?' he asks softly as he teases his cock against your [if cunts of player > 0]pussy[else]asshole[end if]. You moan softly and he continues to tease you. 'I'm sorry, what did you need, slut?' he whispers.";
-	say "     You grip the wooden crate tightly and moan that you need his cock. He licks your ear. 'Say it loud. Let them all hear,' he whispers, pressing his large glans slightly into your [if cunts of player > 0]slit[else]tailhole[end if], just enough to get you really hungry for more.";
+	say "     As you step up to the hyena biker, he hops off the crate and grabs you roughly. You find yourself bent over the crate and feel his bared cock at your tight rump moments later. 'It is always pleasant to see you, my little bitch. Did you need something?' he asks softly as he teases his cock against your [if player is female]pussy[else]asshole[end if]. You moan softly and he continues to tease you. 'I'm sorry, what did you need, slut?' he whispers.";
+	say "     You grip the wooden crate tightly and moan that you need his cock. He licks your ear. 'Say it loud. Let them all hear,' he whispers, pressing his large glans slightly into your [if player is female]slit[else]tailhole[end if], just enough to get you really hungry for more.";
 	[WaitLineBreak]
-	say "     'I need your cock,' you cry out. 'I need you to fuck me. Take me. Make me yours. Use me and fill me like your little fucktoy, master.'  Clearly pleased with your response, he drives his cock firmly into you and starts pounding away at you like a beast. You moan and squirm beneath him, loving every moment of his rough lovemaking.";
-	if cunts of player > 0:
+	say "     'I need your cock,' you cry out. 'I need you to fuck me. Take me. Make me yours. Use me and fill me like your little fucktoy, master.' Clearly pleased with your response, he drives his cock firmly into you and starts pounding away at you like a beast. You moan and squirm beneath him, loving every moment of his rough lovemaking.";
+	if player is female:
 		say "[grantstretch]";
 	say "     When at last his hot load fills you, you cry out again for all to hear, cumming hard yourself. When he's done seeding you like his little bitch, he French kisses you before pulling out. With you on the floor and pressed back against his crate, he wipes his cock clean on your face, covering you in his scent. He retakes his seat, one leg on either side of you and scritches your ears. When you recover enough to get up, he gives you spank and a grin to send you off.[impregchance]";
 
@@ -666,8 +676,8 @@ to say grantfsex:
 	say "     You grip him tightly, rocking your hips up into each thrust the studly hyena makes. Your arms stroke his muscular back, feeling the strength of this impressive male fucking you. His tongue and lips keep at your nipples. He uses one paw to help support his weight while the other grips your ass, squeezing it as he pounds into you.";
 	say "     'Mmm... you feel so good. So hot and wet around my cock, [if matriarchowned is 1]my matriarch[else if matriarchdefeated is 1]you eager sub[else]my lovely[end if],' he rumbles before nuzzling up to lick and nibble along your neck. You tilt your head back and run a paw through his hair, stroking his ears.";
 	[WaitLineBreak]
-	say "     The wet sounds of your sex from the hard, steady thrusts of the hyena into your sopping pussy surround you. The slap of his heavy balls against your ass makes you long more and more for the virile seed within them[if cocks of player > 0]. Your penis is pressed between you both and his soft fur rubs against it deliciously[end if]. His panting grows heavier as his excitement builds, growing closer until finally he thrusts hard into you one last time, driving his cock fully into you and tying with you.";
-	say "     You can feel his cock throb inside you as it blasts shot after shot of thick semen into your womb, making you swell just little from its amount. The feel of so much virile heat shooting into you sends you over the edge and you climax moments later[if cocks of player > 0]. Your pussy quivers around the thick shaft as your cock spurts a sticky mess between you both[else]. Your pussy quivers around his thick shaft, milking it for as much as he can give[end if].[impregchance]";
+	say "     The wet sounds of your sex from the hard, steady thrusts of the hyena into your sopping pussy surround you. The slap of his heavy balls against your ass makes you long more and more for the virile seed within them[if player is male]. Your penis is pressed between you both and his soft fur rubs against it deliciously[end if]. His panting grows heavier as his excitement builds, growing closer until finally he thrusts hard into you one last time, driving his cock fully into you and tying with you.";
+	say "     You can feel his cock throb inside you as it blasts shot after shot of thick semen into your womb, making you swell just little from its amount. The feel of so much virile heat shooting into you sends you over the edge and you climax moments later[if player is male]. Your pussy quivers around the thick shaft as your cock spurts a sticky mess between you both[else]. Your pussy quivers around his thick shaft, milking it for as much as he can give[end if].[impregchance]";
 	[WaitLineBreak]
 	say "     When his knot finally comes down and he pulls out of you, he wipes himself [if matriarchdefeated is not 1]and you [end if]off with a towel left there for that purpose. He gets up slowly and stretches, showing off his sexy body to you before [if matriarchdefeated is 1]waiting for you to rise[else]helping you up[end if].";
 	hyenaify;
@@ -692,13 +702,13 @@ to say grantmbottom:
 	say "     He gives a soft, submissive whine as you tease your tip against him. As you let your precum leak out to get him slick, he [if grantfucked > 2]moans softly and pushes back, letting his practiced tailhole kiss your cock. It seems he's becoming eager for you to fill him[else]chews at his lip and grips the blankets even as he tries to relax for you[end if]. You find the sight very arousing and start to sink into him.";
 	[WaitLineBreak]
 	say "     He releases a soft moan and buries his face in the blankets as your [cockname of player] penis sinks into him. His warm rump around you feels so nice and doing it to such a strong male makes it all the better. You can't help telling him so, which makes his ears blush pink inside and dip a little, though he clearly grins and rocks into your thrusts all the more.";
-	say "     Not to neglect him, you reach around and stroke his ample penis. It is pleasantly larger than your other subordinates' and has a hefty pair of balls to go with it. Almost any of the girls back at the hideout would bend over for him at a word, but here he is, taking it up the ass from you. Your cock throbs inside him at that thought, drawing another moan from him.";
+	say "     Not to neglect him, you reach around and stroke his ample penis. It is pleasantly larger than your other subordinates['] and has a hefty pair of balls to go with it. Almost any of the girls back at the hideout would bend over for him at a word, but here he is, taking it up the ass from you. Your cock throbs inside him at that thought, drawing another moan from him.";
 	[WaitLineBreak]
 	say "     The wet sounds of your sex from your hard, steady thrusts into the hyena's pre-slick tailhole surround you. The slap of your balls against his makes you long to get this tough biker to cum as you fill his ass. And from the growing wet spot in the blankets under him, that will be soon. His panting grows heavier as you lean over him, whispering what a good pack member he is, such a competent leader, a virile male, a stud. And your little fucktoy right now.";
 	say "     'Go on. Show me how much you enjoy being under your matriarch. Cum for me, hon,' you rumble in his ear, licking and nibbling at it as you stroke his cock and pound into him, pushing yourself fully into his rear. He groans loudly and his tailhole spasms around you as his cock throbs in your paw, unleashing massive spurts of cum onto the blankets.";
 	[WaitLineBreak]
 	say "     This sets you off and you growl, firing your hot load into him, spraying your dominant seed into your subordinate's tight ass. His tongue hangs out to one side and he grins happily, loving the feel of you claiming [if grantfucked is 0]his virgin tailhole[else]him again[end if].";
-	say "     Once you've both drained your balls, you slowly pull your cock from his slick bottom and give him a playful swat. He rolls over, grabbing a nearby towel left for these times and wipes you clean, then himself[if cunts of player > 0]. You eye the large mess of hyena cum he's left and wonder if you should let him fill you next time[end if]. He gets up slowly and helps you up, taking you back to the bike.";
+	say "     Once you've both drained your balls, you slowly pull your cock from his slick bottom and give him a playful swat. He rolls over, grabbing a nearby towel left for these times and wipes you clean, then himself[if player is female]. You eye the large mess of hyena cum he's left and wonder if you should let him fill you next time[end if]. He gets up slowly and helps you up, taking you back to the bike.";
 	increase grantfucked by 1;
 	hyenaify;
 

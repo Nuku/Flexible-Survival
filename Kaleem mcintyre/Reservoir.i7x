@@ -1,15 +1,31 @@
 Reservoir by Kaleem mcintyre begins here.
+[note not Resolution flagged since it's not in the game]
 
 "Adds a new adventuring area to Flexible Survival with a special event and some searching."
 
 Section 1 - Reservoir facility
 
 Resevquest is a number that varies.
-bloblost is a truth state that varies.  bloblost is usually false.
+bloblost is a truth state that varies. bloblost is usually false.
 waterworks is a number that varies.
 
 [ *** Content removed due to size issues and need for repairs ]
 [
+
+ldoor is a number that varies.[@Tag:NotSaved]
+rdoor is a number that varies.[@Tag:NotSaved]
+doorsearch is a number that varies.[@Tag:NotSaved]
+descriptionmessage is a text that varies.[@Tag:NotSaved]
+lastResevoirfix is a number that varies.[@Tag:NotSaved]
+lastResevoirfix is a number that varies.[@Tag:NotSaved]
+oozing is a number that varies.[@Tag:NotSaved]
+waterworks is a number that varies.[@Tag:NotSaved]
+resevquest is a number that varies.[@Tag:NotSaved]
+bookfind is a number that varies.[@Tag:NotSaved]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Reservoir "Reservoir"
 
 Reservoir is a room. It is fasttravel.
 
@@ -30,13 +46,17 @@ instead of sniffing Reservoir:
 
 Section 1a - Reservoir Main Pathway
 
+Table of GameRoomIDs (continued)
+Object	Name
+Reservoir Main Pathway  "Reservoir Main Pathway"
+
 Reservoir Main Pathway is a room.
 Reservoir Main Pathway entry is a door. It is dangerous.
 
 The description of Reservoir Main Pathway entry is "There's something you may need important over here!" It is dangerous.
 
-West of Reservoir Main Pathway entry is Reservoir Main Pathway.
-North of Reservoir is Reservoir Main Pathway entry.
+Reservoir Main Pathway is west of Reservoir Main Pathway entry.
+Reservoir Main Pathway entry is north of Reservoir.
 
 The description of Reservoir Main Pathway is "[pathwaydesc]".
 
@@ -58,25 +78,59 @@ The marea of Reservoir Main Pathway entry is "Reservoir".
 
 Section 2 - Reservoir Events
 
-resevquest is a number that varies.
+Table of GameEventIDs (continued)
+Object	Name
+For Purity's Sake "For Purity's Sake"
 
 For Purity's Sake is a situation. The Level of For Purity's Sake is 18.
 
-Technical Assistance is a situation. Technical Assistance is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Technical Assistance  "Technical Assistance"
 
-Slightly Sidetracked is a situation. Slightly Sidetracked is resolved.
+Technical Assistance is a situation. Technical Assistance is inactive.
 
-Flight of stairs is a situation. Flight of stairs is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Slightly Sidetracked  "Slightly Sidetracked"
 
-ThreeDoors is a situation. ThreeDoors is resolved.
+Slightly Sidetracked is a situation. Slightly Sidetracked is inactive.
 
-The beast of the tainted waters is a situation. The beast of the tainted waters is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Flight of stairs  "Flight of stairs"
 
-A Fight to remember is a situation. A fight to remember is resolved.
+Flight of stairs is a situation. Flight of stairs is inactive.
 
-PassionAfterTheBattle is a situation. PassionAfterTheBattle is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+ThreeDoors  "ThreeDoors"
 
-Sanctuary is a situation. Sanctuary is resolved.
+ThreeDoors is a situation. ThreeDoors is inactive.
+
+Table of GameEventIDs (continued)
+Object	Name
+The beast of the tainted waters "The beast of the tainted waters"
+
+The beast of the tainted waters is a situation. The beast of the tainted waters is inactive.
+
+Table of GameEventIDs (continued)
+Object	Name
+Fight to remember "Fight to remember"
+
+Fight to remember is a situation. Fight to remember is inactive.
+
+Table of GameEventIDs (continued)
+Object	Name
+PassionAfterTheBattle "PassionAfterTheBattle"
+
+PassionAfterTheBattle is a situation. PassionAfterTheBattle is inactive.
+
+Table of GameEventIDs (continued)
+Object	Name
+Sanctuary "Sanctuary"
+
+Sanctuary is a situation. Sanctuary is inactive.
 
 
 The sarea of For Purity's Sake is "Reservoir".
@@ -88,13 +142,14 @@ Instead of resolving For Purity's Sake:
 		now resevquest is 1;
 		increase score by 2;
 		now For Purity's Sake is resolved;
-		now Technical Assistance is unresolved;
+		now Technical Assistance is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+Technical Assistance  "Technical Assistance"
 
 Technical Assistance is a situation.
 The sarea of Technical Assistance is a "Reservoir".
-
-bookfind is a number that varies.
 
 Instead of resolving a Technical Assistance:
 	If resevquest is 1:
@@ -116,11 +171,11 @@ Instead of resolving a Technical Assistance:
 				now resevquest is 2;
 				increase score by 5;
 				now Technical Assistance is resolved;
-				now Slightly Sidetracked is unresolved;
+				now Slightly Sidetracked is active;
 				now bookfind is 1;
 			else:
 				say "Searching over and under you can't seem to find anything remotely useful to your needs. Grunting you begin to feel somewhat annoyed, but before you can you sigh and realize that you need to look a little harder. Maybe you should try a little harder to find the material you need?";
-				if the player consents:
+				if player consents:
 					say "You find yourself looking around the room, though as quietly as you can so as not to alert more trouble.";
 					follow the turnpass rule;
 					wait for any key;
@@ -137,7 +192,7 @@ Instead of resolving a Technical Assistance:
 					now resevquest is 2;
 					increase score by 5;
 					now Technical Assistance is resolved;
-					now Slightly Sidetracked is unresolved;
+					now Slightly Sidetracked is active;
 					now bookfind is 1;
 
 to say resevfight1:
@@ -149,6 +204,9 @@ to say resevfight1:
 	if T is 3:
 		challenge "spidergirl";
 
+Table of GameEventIDs (continued)
+Object	Name
+Slightly Sidetracked  "Slightly Sidetracked"
 
 Slightly Sidetracked is a situation.
 The sarea of Slightly Sidetracked is "Reservoir".
@@ -166,7 +224,7 @@ Instead of resolving Slightly Sidetracked:
 		now resevquest is 3;
 		increase score by 3;
 		now Slightly Sidetracked is resolved;
-		now Flight of stairs is unresolved;
+		now Flight of stairs is active;
 
 
 To say resevfight2:
@@ -180,37 +238,37 @@ To say resevfight2:
 	if T is 4:
 		challenge "spidergirl";
 
+Table of GameEventIDs (continued)
+Object	Name
+Flight of stairs  "Flight of stairs"
 
 Flight of stairs is a situation.
 The sarea of Flight of stairs is "Reservoir".
 
 Instead of resolving a Flight of stairs:
 	If resevquest is 3:
-		say "Upon getting away from the horde that you just had to deal with you find yourself panting slightly as a sweat dribbles down onto your [facename of player] face. Reaching an [bodyname of player] arm up to rub at your forehead only realize that you've gotten some goop onto your scalp. Quickly you rub the sticky substance off before moving more hurriedly up the stairwell. Once you are at the top of the stairs you turn and look up to see what it was that dropped onto you... and then wished you hadn't. Trailing across the ceiling in small lines of multicoloured slime is -- what you're almost positive it could only be -- a mishmash of mutant cum lining the walls.";
+		say "Upon getting away from the horde that you just had to deal with you find yourself panting slightly as a sweat dribbles down onto your [facename of player] face. Reaching an [bodyname of player] arm up to rub at your forehead only realize that you've gotten some goop onto your scalp. Quickly you rub the sticky substance off before moving more hurriedly up the stairwell. Once you are at the top of the stairs you turn and look up to see what it was that dropped onto you... and then wished you hadn't. Trailing across the ceiling in small lines of multicolored slime is -- what you're almost positive it could only be -- a mishmash of mutant cum lining the walls.";
 		say "By the looks of all of the gunk it appears as though the creatures here were having some kind of contest to see who, or rather what, could inseminate the top of the building the most. You're almost frightened by your curiosity to know what won as more and more sticky trails dribble down onto the concrete of the stairs you just walked up. A fleeting sense of gratefulness overcomes you that you are not found by any more mutants right now as the smell of the musk and cum is making you somewhat lightheaded. Turning back and walking onwards you focus your thoughts on looking for the main computer terminal to the reservoir.";
 		increase libido of player by 20;
 		if libido of player > 100, now libido of player is 100;
 		now resevquest is 4;
 		increase score by 10;
 		now Flight of stairs is resolved;
-		now ThreeDoors is unresolved;
+		now ThreeDoors is active;
 
+Table of GameEventIDs (continued)
+Object	Name
+ThreeDoors  "ThreeDoors"
 
 ThreeDoors is a situation;
 
 The sarea of ThreeDoors is "Reservoir".
 
-ldoor is a number that varies.
-rdoor is a number that varies.
-doorsearch is a number that varies.
-
 Instead of Resolving ThreeDoors:
 	If resevquest is 4:
 		say "Before you stands three doors, each of them lined together perfectly in a row. Suspicion wells within you as all three are covered in slimy mucous like substance, yet you are sure that one of the doors must be the main terminal room for the Reservoir. The problem is if 'one' of them is the main room... then just what's behind the other two? A small bud of fear wells inside of your belly as you try not to imagine just what could be waiting in store for you behind the other two false doorways. The terror at what might be waiting on the other side of the correct entryway already making you nervous enough as is.";
-		say "However, you have to pick one to move forward. But which one? Trying to recall your memories of the Technical manual you glanced through before coming up this way, you find yourself coming to a blank as to which path to take. Aside from knowing that you need whichever leads down, you're uncertain which door lead that way.  It's not like you can you really go back and ask one of the creatures here for help.  Well, not and expect to get a useful answer anyway.  You have something of a dilemma on your hands.";
+		say "However, you have to pick one to move forward. But which one? Trying to recall your memories of the Technical manual you glanced through before coming up this way, you find yourself coming to a blank as to which path to take. Aside from knowing that you need whichever leads down, you're uncertain which door lead that way. It's not like you can you really go back and ask one of the creatures here for help. Well, not and expect to get a useful answer anyway. You have something of a dilemma on your hands.";
 		say "[doorcheck]";
-
-descriptionmessage is a text that varies.
 
 to say doorcheck:
 	say "Looking over the doors you wonder which you should chose.";
@@ -236,7 +294,7 @@ This is the doorcheck rule:
 	if title entry is "Left Door":
 		if ldoor is 0:
 			say "Looking at the door with the yellowish stains covering its front you bolster your courage and chose that door to walk in through. Grabbing the knob, while trying very hard not to touch any of slime covering the wood frame, you twist the handle and then push open the door. It's jammed!! Now this is a slight problem. On the one hand, this could be a sign to leave well enough alone. On the other it could mean that you need to use some force to open the stubborn barrier. What should you do? (Y=Go in, N=Don't)";
-			If player consents:
+			if player consents:
 				now doorsearch is 0;
 				while doorsearch is 0:
 					let bonus be (( the Strength of the player minus 10 ) divided by 2);
@@ -281,7 +339,7 @@ This is the doorcheck rule:
 		now resevquest is 5;
 		now lastResevoirfix is turns;
 		now ThreeDoors is resolved;
-		now The beast of the tainted waters is unresolved;
+		now The beast of the tainted waters is active;
 	else if title entry is "Right Door":
 		if rdoor is 0:
 			say "Taking hold of the door's handle you are mildly astonished when the door opens without any protest. That elation doesn't last long because soon said door is taking from your hand and then you are grabbed bodily!";
@@ -290,7 +348,7 @@ This is the doorcheck rule:
 			say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
 			if diceroll > 8:
-				say "You manage to knock the unknown person away from you with an elbow and then duck into a defensive crouch as you wonder what to expect next. What you come to find is that your 'captor' is actually a German Shepherd that seems to be looking at you in confusion. All the standard markings apply to this creature and you guess that it must have been someone's pet before the canine changed into the bipedal creature it is now. Growling at you in aggression as it sees that you are not willing to cooperate the German Shepherd is soon stalking over to you. The intent to dominant you shines clearly in the mutants dark eyes.";
+				say "You manage to knock the unknown person away from you with an elbow and then duck into a defensive crouch as you wonder what to expect next. What you come to find is that your 'captor' is actually a German Shepherd that seems to be looking at you in confusion. All the standard markings apply to this creature and you guess that it must have been someone's pet before the canine changed into the bipedal creature it is now. Growling at you in aggression as it sees that you are not willing to cooperate the German Shepherd is soon stalking over to you. The intent to dominant you shines clearly in the mutant's dark eyes.";
 				challenge "German Shepherd";
 				say "Having driven the creature off you to begin looking around the room. Nothing of interest pops out at you, or anything else for that matter. The room actually looks as though it were some manner of storage closet that happened to have modified into a makeshift doggy room for 'Rover' back there. You see a standard doggy bed set in the corner, a dish with some drinking water, though no food, a TV on a stand, some chairs and a desk dominating the center of the room. Mops, buckets, and brooms lie around on the floor and you can't help but wonder what the janitor, or other figure that dressed up the room as such, was like before things all went to hell. Giving a shrug you decide that it doesn't matter. Time won't come back or change the fact that the world as it is no longer how it once was. Shaking your head you decide to leave.";
 			else:
@@ -308,10 +366,12 @@ This is the doorcheck rule:
 
 Section 3 - Reservoir Fight (Preparation)
 
+Table of GameEventIDs (continued)
+Object	Name
+The beast of the tainted waters "The beast of the tainted waters"
+
 The beast of the tainted waters is a situation.
 The sarea of The beast of the tainted waters is "Reservoir".
-
-lastResevoirfix is a number that varies.
 
 Instead of Resolving a The beast of the tainted waters:
 	if resevquest is 5:
@@ -327,16 +387,17 @@ Instead of Resolving a The beast of the tainted waters:
 			now resevquest is 6;
 			now lastResevoirfix is turns;
 			now The beast of the tainted waters is resolved;
-			now A Fight to remember is unresolved;
+			now A Fight to remember is active;
 
 
 Section 4 - Reservoir (Fight)
 
-A Fight to remember is a situation.
-The sarea of A Fight to remember is "Reservoir".
+Table of GameEventIDs (continued)
+Object	Name
+Fight to remember "Fight to remember"
 
-lastResevoirfix is a number that varies.
-oozing is a number that varies.
+Fight to remember is a situation.
+The sarea of Fight to remember is "Reservoir".
 
 Instead of resolving a A Fight to remember:
 	if resevquest is 6:
@@ -357,7 +418,7 @@ Instead of resolving a A Fight to remember:
 					say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 					now resevquest is 7;
 					now Fight to remember is resolved;
-					now PassionAfterTheBattle is unresolved;
+					now PassionAfterTheBattle is active;
 				else if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
 					now A Fight to remember is resolved;
 					now oozing is 1;
@@ -370,7 +431,7 @@ Instead of resolving a A Fight to remember:
 					now scalevalue of player is 5;
 					now bodydesc of player is "gleatinous";
 					now bodytype of player is "ooze";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 					end the story saying "You have been absorbed by the blob creature.";
 					now battleground is "void";
 					wait for any key;
@@ -393,7 +454,7 @@ Instead of resolving a A Fight to remember:
 						say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 						now resevquest is 7;
 						now A Fight to remember is resolved;
-						now PassionAfterTheBattle is unresolved;
+						now PassionAfterTheBattle is active;
 					else if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
 						now A Fight to remember is resolved;
 						now oozing is 1;
@@ -406,7 +467,7 @@ Instead of resolving a A Fight to remember:
 						now scalevalue of player is 5;
 						now bodydesc of player is "gleatinous";
 						now bodytype of player is "ooze";
-						now daycycle of player is 0;
+						now SleepRhythm of player is 0;
 						end the story saying "You have been absorbed by the blob creature.";
 						now battleground is "void";
 						wait for any key;
@@ -424,7 +485,7 @@ Instead of resolving a A Fight to remember:
 						say "Seeing the gelatos creature broken into a million pieces you let out a roar of triumph as you pump your fist up into the air. That battle may have been daunting but in the end you triumphed and for that you now can take a moment to feel proud about yourself. Done? Ok, now go and unfreeze the reservoir and then finish cleaning it up so that the city can have water again!";
 						now resevquest is 7;
 						now A Fight to remember is resolved;
-						now PassionAfterTheBattle is unresolved;
+						now PassionAfterTheBattle is active;
 					else if fightoutcome >= 20 and fightoutcome <= 29:		[***partially fixed]
 						now A Fight to remember is resolved;
 						now oozing is 1;
@@ -437,7 +498,7 @@ Instead of resolving a A Fight to remember:
 						now scalevalue of player is 5;
 						now bodydesc of player is "gleatinous";
 						now bodytype of player is "ooze";
-						now daycycle of player is 0;
+						now SleepRhythm of player is 0;
 						end the story saying "You have been absorbed by the blob creature.";
 						now battleground is "void";
 						wait for any key;
@@ -447,13 +508,14 @@ Instead of resolving a A Fight to remember:
 						say "Turning tail to run you realize that you're going to have to rethink this battle entire battle! [bold type]Remember you only have so long before the blob breaks the window![roman type]";
 						now lastResevoirfix is turns;
 
-
 Section 5 - Water At Last
+
+Table of GameEventIDs (continued)
+Object	Name
+PassionAfterTheBattle "PassionAfterTheBattle"
 
 PassionAfterTheBattle is a situation.
 The sarea of PassionAfterTheBattle is "Reservoir".
-
-waterworks is a number that varies.
 
 Instead of resolving a PassionAfterTheBattle:
 	If resevquest is 7:
@@ -471,16 +533,20 @@ Instead of resolving a PassionAfterTheBattle:
 
 Section 6 - Sanctuary
 
+Table of GameEventIDs (continued)
+Object	Name
+Sanctuary "Sanctuary"
+
 Sanctuary is a situation.
 
 Instead of resolving a Sanctuary:
-	If waterworks is 1:
-		Say "Because of your efforts the military is able to work at speeding up the process of trying to restore some form of order to the city, now that they have an infinite supply of water on their hands. Though they're not too sure how to act around you, given your [facename of player] face and [bodyname of player] form, despite you being the one to help make the improbable here possible, they do give you a few nods and words of congratulations. Speaking with some of them you come to find out that the military men and women aren't as bad as you would have first believed, and though they don't offer you any provisions and the likes, you do end up chatting many of them up and learning about their thoughts and feelings about dealing with the [italic type]problems[roman type] here in the metropolis. Maybe you can offer to help them out sometime? [bold type](There's nothing left to do here, but if you come back to talk to the military you will get a chance to work with them to speed up their efforts to help out in the city via time loss... wait... is that a good thing or no? This event is repeatable.)[roman type]";
+	if waterworks is 1:
+		say "Because of your efforts the military is able to work at speeding up the process of trying to restore some form of order to the city, now that they have an infinite supply of water on their hands. Though they're not too sure how to act around you, given your [facename of player] face and [bodyname of player] form, despite you being the one to help make the improbable here possible, they do give you a few nods and words of congratulations. Speaking with some of them you come to find out that the military men and women aren't as bad as you would have first believed, and though they don't offer you any provisions and the likes, you do end up chatting many of them up and learning about their thoughts and feelings about dealing with the [italic type]problems[roman type] here in the metropolis. Maybe you can offer to help them out sometime? [bold type](There's nothing left to do here, but if you come back to talk to the military you will get a chance to work with them to speed up their efforts to help out in the city via time loss... wait... is that a good thing or no? This event is repeatable.)[roman type]";
 		Extend game by -16;
 
 
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "icicle knives"	"Twin pair of daggers made from the thoughts and feelings of those who were devoured by a monster and then frozen in an icy tomb of flesh and slime. Carry a chilly sharp edge to them that can pierce as well as cut."	5	icicle knives
 
@@ -489,7 +555,7 @@ It is part of the player.
 It has a weapon "[one of]frozen blades of cold[or]whispering twins of water and ice[or]thin, but sharp blades[at random]". The weapon damage of icicle knives is 16. The weapon type of icicle knives is "Melee". It is not temporary. the objsize of icicle knives is 2.
 
 Instead of sniffing icicle knives:
-	Say "These frozen blades both breathe and smell of a perpetual frost made of the forgotten thoughts and chilled promises left abandoned in a watery reservoir.";
+	say "These frozen blades both breathe and smell of a perpetual frost made of the forgotten thoughts and chilled promises left abandoned in a watery reservoir.";
 
 
 

@@ -2,6 +2,10 @@ Version 1 of Phantom Dolphin by Blue Bishop begins here.
 [Version 1 -- Commissioned]
 "When in Rome..."
 
+Table of GameCharacterIDs (continued)
+object	name
+Discarded Dolphin	"Discarded Dolphin"
+
 Discarded Dolphin is a person. Discarded Dolphin is in Bouncy Castle.
 the description of Discarded Dolphin is "[flotlook]".
 the fuckscene of Discarded Dolphin is "[flotfuck]".
@@ -22,7 +26,7 @@ to say flotlook:
 		say "     [italic type][if flotintense < 2]The thing looks completely inanimate. You're fairly certain there'll be little to no consequence in using it right now[else if flotintense < 4]The thing appears to be mostly in a mundane state right now, but it seems to subtly become excited as you approach. You could probably get away with using it[else if flotintense < 6]The thing seems tinged with a streak of wanton menace. You could probably get away with using it, but not for long[else if flotintense < 8]You feel ill at ease near the thing, as though you're being drawn to the tainted object. You don't think it'd be particularly wise to use it right now[else]The thing seems to undulate from the corners of your eyes, as though thrumming with an otherworldly need. You feel overwhelmingly drawn to the thing, but you'd have to be insane to use it now[end if]...[roman type][line break]";
 		if flotmarked is true:
 			say "     [italic type]You feel as though you've been marked by this object.[roman type]";
-	say "[line break]";
+	LineBreak;
 
 flotmarked is a truth state that varies.
 flotintense is a number that varies. flotintense is usually -1.
@@ -134,8 +138,8 @@ to flotbind:
 	libidoeval;
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if clearnomore is 0, clear the screen;
 		checkboundrecover;
 		if lustatt > 99:
@@ -164,7 +168,7 @@ to flotbind:
 			now bodyname of player is "Flotted";
 			now humanity of player is 0;
 			end the story saying "You are milked perpetually by the toy.";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		else:
 			let k be 0;
 			now keychar is "INVALID";
@@ -175,7 +179,7 @@ to flotbind:
 				if the player's command matches "[number]":
 					now keychar is "[number understood]";
 			if keychar in lower case exactly matches the text "s" or keychar in lower case exactly matches the text "1" or keychar in lower case exactly matches the text "return" or keychar in lower case matches the text "struggle":
-				say "[line break]";
+				LineBreak;
 				increase struggleatt by 1;
 				if struggleatt < boundsegment:
 					say "You struggle to ";
@@ -185,41 +189,41 @@ to flotbind:
 						say "pry yourself free of the toy's powerful hold, [one of]creaking and groaning against your protests[or]engulfing vinyl trying its best to pull you back within its hold[or]squeaking against your motions as you fight it[or]rocking violently against the waves[at random].";
 					else:
 						say "escape this prison of a toy, [one of]creaking and groaning around you[or]enveloping vinyl trying its best to keep you within its hold[or]squeaking against your motions as you fight it[or]thrashing against the waves as it clings to you[at random].";
-					say "[line break]";
+					LineBreak;
 					flotsanitypassive;
 					flotlust;
 				else:
 					say "     [if flotintense < 3]Easily[else if flotintense < 5]With relative ease[else if flotintense < 8]Eventually[else]Finally[end if], you manage to wrench yourself free of the possessed toy and dive into the waters, [if flotintense < 3]though it quickly regresses to a state of complete inanimacy[else if flotintense < 5]gradually cooling down and becoming inanimate once more[else if flotintense < 8]quivering for a moment as it slowly begins to fill the void you left[else if flotintense < 10]the mess of a thing trembling in distress over its now-missing rider[else]the thing flailing in your general direction in hopes to be one with you once more, forcing you to swim even further[end if].";
 					say "     You climb back onto the castle and clean yourself off. [if flotintense > 4]It's likely best that you leave the vinyl object alone until it 'cools down' a bit[else]The vinyl object remains relatively harmless, for now at least[end if]...";
-					say "[line break]";
+					LineBreak;
 					cleanboundmemory;
 					WaitLineBreak;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 				WaitLineBreak;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
-				say "[line break]";
+				LineBreak;
 				if 1 is 1: [if obliging is true]
 					say "You continue to [if flotintense < 5]ride the vinyl dolphin[else]oblige the vinyl dolphin's influence[end if], ";
 					if flotintense < 7:
 						say "[one of]loudly creaking against your weight[or]squeaking against your body as you rub against it[or]motion slicked by sweat and saltwater[or]rocking gently against the waves[at random].";
 					else:
 						say "[one of]loudly creaking as it continues to milk you[or]squeaking as it uses your own sexual fluids to lubricate its motion[or]body trembling under its now-powerful influence[or]its motions emphasized by the waves[at random].";
-					say "[line break]";
+					LineBreak;
 					now obliging is true;
 					flotsanitypassive;
 					flotlust;
 					now obliging is false;
 				[else:
 					say "     ABIDE NYI.";
-					say "[line break]";
+					LineBreak;
 					flotsanitypassive;
 					increase lustatt by 35 + (lustadjust * 5);] [Not needed, keeping just in case]
 				WaitLineBreak;
 				next;
 			else:
 				now enduring is true;
-				say "[line break]";
+				LineBreak;
 				if boundrecover is true:
 					if flotintense < 2:
 						increase humanity of player by 1;
@@ -229,7 +233,7 @@ to flotbind:
 						increase humanity of player by 3;
 					if humanity of player > 100, now humanity of player is 100;
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity[if flotintense > 4] within these confines[end if], recovering a small portion of your lost humanity.";
-					say "[line break]";
+					LineBreak;
 					flotlust;
 					now boundrecover is false;
 				else:
@@ -240,7 +244,7 @@ to flotbind:
 						say "[one of]softly creaking as it tries to work against your resistance[or]with what moderate power it has over you[or]squeaking under your weight as it tries nonetheless[or]bobbing against the waves[at random].";
 					else:
 						say "[one of]barely able to resist the overwhelming power it has over you[or]creaking against you as it makes every effort in spite of you[or]seemingly undaunted by your efforts[or]writhing against the waves with you[at random].";
-					say "[line break]";
+					LineBreak;
 					flotlust;
 					flotsanitypassive;
 				WaitLineBreak;
@@ -394,8 +398,8 @@ to flotsanitypassive:
 			decrease humanity of player by 1;
 
 to flotsanityorgasm:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Bottlenose Toy":
 			now monster is y;
 			break;
@@ -435,7 +439,7 @@ to say flotstrugglebar:
 when play ends:
 	if bodyname of player is "Flotted":
 		say "     Cool ocean water the only balm against the intense heat of your perpetual enslavement, you're barely able to discern what the dolphin is actually doing, seemingly content to swim around playfully, meeting various creatures and peoples -- all of whom appear wholly unaware of your ultimate fate, even as you moan out loudly with each thrust of the vinyl toy's tendrils.";
-		say "     On occasion, the creature even seems inclined to have fun with some of those it encounters, often [if player is male and player is not female and anallevel < 3]used to ride[else]made to be ridden by[end if] them. You're unsure if inflatable toy particularly enjoys this, or if it likes to surprise you from time to time.";
+		say "     On occasion, the creature even seems inclined to have fun with some of those it encounters, often [if player is puremale and anallevel < 3]used to ride[else]made to be ridden by[end if] them. You're unsure if inflatable toy particularly enjoys this, or if it likes to surprise you from time to time.";
 		say "     No doubt content to milk you until the end of days, your memories blur into a haze of constant orgasms. Writhing against your tight, slippery prison with each motion against the waters, it's eventually all you can think of...";
 
 

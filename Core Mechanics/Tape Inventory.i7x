@@ -58,7 +58,7 @@ carry out tapeing:
 		-- "Grocery Store Tape":
 			say "[RomanTransformationFootage]"; [Source: Kernog/Roman.i7x]
 		-- "Gorilla Locker-room Tape 1":
-			say "[FootballTeamSlice1]";[Source: Kernog/Astroslide Field Locker-room.i7x]
+			say "[FootballTeamSlice1]"; [Source: Kernog/Astroslide Field Locker-room.i7x]
 		-- "Carter's Tape":
 			say "[CartersRecording]"; [Source: Luneth/Origins.i7x]
 		-- "Francis Koenig Observation Video":
@@ -69,9 +69,21 @@ carry out tapeing:
 			say "[PizzaCarDashcamVid]";
 		-- "Dressing Room Spycam Vid":
 			say "[DressingRoomSpycamVid]";
+		-- "Darius's Home Vid 1":
+			say "[DariusHannahVid1]";
+		-- "Darius's Home Vid 2":
+			say "[DariusHannahVid2]";
 		-- "Traffic Drone #006 Footage":
 			say "[TrafficDrone#006Vid]";
-[Template - see below the end of file]
+		-- "Urban Explorer Helmet Cam Vid #1": [Source: Wahn/Recordings.i7x]
+			say "[UrbanExplorerVid1]";
+		-- "Fitness Studio Security Vid":
+			say "[FitnessStudioVid]";
+[ Template to fill for new tapes ]
+[
+		-- "TAPE NAME":
+			say "[TAPE SCENE]";
+]
 
 to deletetape (x - text):	[removes 1 tape of a given type from the player's inventory]
 	let found be 0;
@@ -111,9 +123,3 @@ Carry out tapedropping:
 	remove entry z from tapes of player;
 
 Tape Inventory ends here.
-
-[ Template to fill for new tapes ]
-[
-		-- "TAPE NAME":
-			say "[TAPE SCENE]";
-]

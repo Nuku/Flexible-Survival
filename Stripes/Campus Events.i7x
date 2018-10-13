@@ -7,16 +7,24 @@ Version 1 of Campus Events by Stripes begins here.
 
 Section 1 - Marching Band
 
+Table of GameEventIDs (continued)
+Object	Name
+Marching Band	"Marching Band"
+
 Marching Band is a situation.
 The sarea of Marching Band is "Campus".
 
 Instead of resolving a Marching Band:
 	say "     While exploring the campus, you are suddenly surprised to hear the sound of music starting up. A welcome change from the normal sounds of sex-crazed creatures and horny mutants, you cautiously head over to investigate. You find a variety of infected creatures stuffed into ill-fitting uniforms and carrying instruments as they try to coalesce into a marching band. They start up and stop several times, distracted by one or more of them deciding to hump another, give a blow job or otherwise give in to their sexual desires. But eventually they do get going as their border collie band leader nips them back into position once everyone's gotten off one last time before they can march off the national anthem as they proceed towards one of the fields.";
 	increase score by 1;
-	Now Marching Band is resolved;
+	now Marching Band is resolved;
 
 
 Section 2 - Art Department
+
+Table of GameEventIDs (continued)
+Object	Name
+Arts Department	"Arts Department"
 
 Arts Department is a situation. The level of Arts Department is 3.
 The sarea of Arts Department is "Campus".
@@ -36,15 +44,23 @@ Section 3 - Phi Iota Gamma
 
 Section 4 - Languages Department
 
+Table of GameEventIDs (continued)
+Object	Name
+Languages Department	"Languages Department"
+
 Languages Department is a situation.
 The sarea of Languages Department is "Campus".
 
 Instead of resolving a Languages Department:
 	say "     Passing behind one building, you almost bump into a small group of creatures arguing loudly and incomprehensibly. Among the group are a French frog, a Chinese dragon, an Indian elephant, a Russian bear and several other walking stereotypes who can no longer understand each other. You suspect they've all somehow become altered by the infection into forms to suit the language course they taught or studied. You decide to give what is probably the Languages Department a wide berth before you start speaking another language as well to further compound your problems in this city gone mad.";
-	Now Languages Department is resolved;
+	now Languages Department is resolved;
 
 
 Section 5 - Wandering the Campus
+
+Table of GameEventIDs (continued)
+Object	Name
+Wandering the Campus	"Wandering the Campus"
 
 Wandering the Campus is a situation. The level of Wandering the Campus is 9.
 The sarea of Wandering the Campus is "Campus".
@@ -62,7 +78,8 @@ Instead of resolving a Wandering the Campus:
 	if guy is banned and 6 is not listed in campuswander, add 6 to campuswander;
 	if guy is banned and 7 is not listed in campuswander, add 7 to campuswander;
 	if guy is banned and girl is banned and hermaphrodite is banned:
-		say "     Travelling across the completely unpopulated campus, you have to wonder why you're even bothering to come here.";
+		say "     Traveling across the completely unpopulated campus, you have to wonder why you're even bothering to come here.";
+		now Resolution of Wandering the Campus is 3;	[Did not meet anyone]
 	if number of entries in campuswander is 6, say "     You have an uneventual passage across the campus.";
 	let T be a random number between 1 and 6;
 	while T is listed in campuswander:
@@ -92,7 +109,7 @@ Instead of resolving a Wandering the Campus:
 		challenge "Painted Wolf Herm";
 		add 4 to campuswander;
 	if T is 5:
-		say "     As you're trying to move across the campus in search of what you need, you are cut short by what you thought was a passed out creature rising to his feet as you get close. The snow leopard moans and wipes his brow, staggering a little. 'Aww man, where's the beer?  I could really use another drink,' he says, panting at the heat. Licking his lips as he looks you over, he eyes your [if breast size of player > 0]tits[else]crotch[end if] and licks his muzzle, intent on using you to slake his thirst.";
+		say "     As you're trying to move across the campus in search of what you need, you are cut short by what you thought was a passed out creature rising to his feet as you get close. The snow leopard moans and wipes his brow, staggering a little. 'Aww man, where's the beer? I could really use another drink,' he says, panting at the heat. Licking his lips as he looks you over, he eyes your [if breast size of player > 0]tits[else]crotch[end if] and licks his muzzle, intent on using you to slake his thirst.";
 		challenge "Snow Leopard";
 		add 5 to campuswander;
 	if T is 6:
@@ -101,10 +118,17 @@ Instead of resolving a Wandering the Campus:
 		add 6 to campuswander;
 	now battleground is "void"; [prevents a random fight, as these are replacement random fights]
 	now showlocale is true;
-	if number of entries in campuswander is 6, now Wandering the Campus is resolved;
+	now Resolution of Wandering the Campus is 1;	[Met someone]
+	if number of entries in campuswander is 6:
+		now Resolution of Wandering the Campus is 2;	[Met everyone]
+		now Wandering the Campus is resolved;
 
 
 Section 6 - Anime Club
+
+Table of GameEventIDs (continued)
+Object	Name
+Anime Club	"Anime Club"
 
 Anime Club is a situation. the level of Anime Club is 12.
 The sarea of Anime Club is "Campus".
@@ -122,7 +146,7 @@ Instead of resolving a Anime Club:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		now animeclubfight is true;
 		say "     Shoving open the door to the anime club, you find three figures in front of a television in there. On the screen and providing most of the light in the [if daytimer is day]blind-[end if]darkened room is [if player is animebabebodied]an entrancing video of tentacle porn[else]a video of tentacle porn[end if]. But the moans and sticky sounds of sex aren't just coming from the video, but also from those watching. The captured woman is being held in the arms of a young man with several slimy tentacles of his own, helped by the anime babe who grabbed her in the first place. She's struggling a little, but is quickly becoming focused on the video while the pair grope and fuck her, much like is happening on screen.";
 		say "     Keeping your eyes averted from the screen, you move in the rescue the young woman before things get out of hand. This prompts the anime babe to get up and come at you, trying to protect their prize.";
@@ -138,40 +162,46 @@ Instead of resolving a Anime Club:
 				increase score by 10;
 				increase humanity of player by 5;
 				if humanity of player > 100, now humanity of player is 100;
+				now Resolution of Anime Club is 1;	[Saved woman from Anime Babe and Hentai Fan]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     The hentai boy pushes you to sit down beside the captured girl, groping and fondling you while you watch the video. A part of you knows you shouldn't, but you're too weary and aroused from fighting to resist any longer. As you watch, you can almost feel the tentacles on the screen grabbing and touching you just like in the animation. It takes you a few moments to realize that the tentacled mutant behind you is imitating the events on screen, adding to your immersion. The fallen anime babe, recovered from her fight, moves over to snuggle with you, showing there's no hard feelings now that you've settled down to watch some hentai with them. You moan in pleasure, your excitement building.";
 				say "[animeclublost]";
+				now Resolution of Anime Club is 2;	[Lost to Hentai Fan]
 			else if fightoutcome >= 30:
 				say "     Deciding to cut your losses, you dodge your way back to the door and run out of the room. There's a brief pursuit, but it goes no further than the stairs as there's already one new prize to be enjoyed.";
+				now Resolution of Anime Club is 2;	[Ran and left woman to anime club]
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     The anime babe pushes you to sit down beside the captured girl, groping and fondling you while you watch the video. A part of you knows you shouldn't, but you're too weary and aroused from fighting to resist any longer. As you watch, you can almost feel the tentacles on the screen grabbing and touching you just like in the animation. It takes you a few moments to realize that the tentacled mutant behind you is imitating the events on screen, adding to your immersion. You moan in pleasure, your excitement building.";
 			say "[animeclublost]";
+			now Resolution of Anime Club is 3;	[Lost to Anime Babe]
 		else if fightoutcome >= 30:
 			say "     Deciding to cut your losses, you dodge your way back to the door and run out of the room. There's a brief pursuit, but it goes no further than the stairs as there's already one new prize to be enjoyed.";
+			now Resolution of Anime Club is 2;	[Ran and left woman to anime club]
 	else:
 		say "     Deciding it's none of your concern, you creep away before anything else is drawn by the noise or another of those Anime Babes spots you.";
+		now Resolution of Anime Club is 4;	[Ignored woman]
 	now animeclubfight is false;
 	now Anime Club is resolved;
 
 to say animeclublost:
 	setmonster "Hentai Fan";
-	if cocks of player > 0:
+	if player is male:
 		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty lowers her head into your lap and sets herself to licking and sucking your cock. She works eagerly to suck you off, her tongue playfully sliding over your shaft [if cunts of player > 1]while the hentai fan pushes squirming tentacles into your pussies[else if cunts of player is 1]while the hentai fan pushes a squirming tentacle into your pussy[else if anallevel > 1]as the hentai fan pushes a squirming tentacle into your ass, fucking you with it[else]as she kneads your balls[end if]. The pleasure of being assaulted by tentacles as you watch a hentai video is very arousing and quickly has you moaning lustfully. Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
-	else if cunts of player > 0:
+	else if player is female:
 		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty spreads your legs and your pussy's lips. With yourself spread open, the hentai fan shoves a tentacle cock into your cunt[sfn], stuffing your needy hole[sfn] just like you're seeing on the screen. The pleasure of being tentacle raped as you watch a hentai video is very arousing and quickly has you moaning lustfully. Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
 	else:
 		say "     As those slick tendrils slide over you, squeezing sensitive spots, the animated beauty rubs sadly over your bare groin and pushes you into a kneeling position. She keeps your head pointed towards the television as she uses her other hand to guide a tentacle cock to your ass. You groan softly in kinky pleasure as it pushes into your anus and starts to fuck you. The pleasure of being tentacle raped as you watch a hentai video is very arousing and quickly has you moaning lustfully. Beside you, the tentacled guy is bouncing the increasingly transformed girl in his lap, stuffing her cunt with his throbbing cock.";
-	if cunts of player > 0:
+	if player is female:
 		say "     After he's cum into the girl beside you and she's fully transformed into another slutty anime babe, he turns his full attention upon up. Pulling you into his lap, he stuffs his still hard and cum-slick cock into your cunt and starts giving you the same treatment he just gave his other prize[if cunts of player > 1]. He fills your other juicy holes and your mouth with tentacle cocks[else if anallevel > 1]. He crams a tentacle cock into your ass and another down your throat[else]. He gropes your chest and ass with his tentacle cocks[end if], something that's incredibly arousing to you while under the effects of the video that's captivated your attention. After a thoroughly delightful fucking, he cums in a steady rush of semen from his cocks, coating you inside and out with his tainted seed.[impregchance][impregchance]";
-	else if cocks of player > 0:
+	else if player is male:
 		say "     After he's cum into the girl beside you and she's fully transformed into another slutty anime babe, he turns his full attention upon you. He restrains you with those sexy tentacles of his and has the new anime babe climb into your lap so she can ride your cock while he gropes and fondles you with his tendrils[if anallevel > 1]. As she rides you, he fucks you thoroughly with a tentacle cock up your ass and pushing another down your throat. It squirms and pumps delightfully inside you, fucking deep inside your bowels. When it starts to cum in a steady flow, you cum hard in the new anime babe's cream-filled pussy[else]. As she rides you, he even pushes a tentacle cock up your ass and another down your throat, fucking you with them until you cum hard in her cream-filled pussy[end if]. Being coated inside and out by the hentai creature's tainted seed is incredibly arousing while under the effects of the video that's captivated your attention.[mimpregchance][mimpregchance]";
 	else:
 		say "     After he's cum into the girl beside you and she's fully transformed into another slutty anime babe, he turns his full attention upon you. He restrains you with those sexy tentacles of his and shoves his large cock into your ass alongside the tentacle already filling you. His hands and tentacles grope you, one of those tendrils stuffing your mouth and going down your throat. As he has his way with you, you can see the two anime babes making out beside you. You only notice this out of the corner of your eye, your focus still locked on the animation on the screen, much of which is being duplicated upon your person at this very moment. He fucks you thoroughly with those two throbbing rods up your ass at once until he groans and cums in a steady flow filling you from both ends with his tainted seed.[mimpregchance][mimpregchance]";
 	say "     Things continue on like this, the four of you having a sexy orgy of tentacular fun. Every available hole is filled repeatedly by tentacle cocks and left overflowing with the hentai fan's tainted seed. Several more videos are watched over the course of this viewing, their sexy contents sinking into your mind even as your body is changed more and more to be like those sexily animated girls getting fucked alongside you";
 	decrease humanity of player by 25;
 	[puts Anime Babe as lead monster for infection and impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Anime Babe":
 			now monster is y;
 			break;
@@ -203,6 +233,10 @@ to say animeclublost:
 
 Section 7 - Administration Introduction - Waiting for the Course Advisor
 
+Table of GameEventIDs (continued)
+Object	Name
+Course Advice	"Course Advice"
+
 Course Advice is a situation.
 The sarea of Course Advice is "Campus".
 
@@ -224,7 +258,7 @@ instead of resolving Course Advice:
 
 to AdminIntro:
 	say "     Exploring the campus, you come upon one of the administrative buildings of the college. Surprisingly, it all seems to be in regular use, with students coming and going... seemingly oblivious to the fact that they've almost all been transformed in various ways. You stop one anthro dolphin [one of]guy[or]girl[at random] at random as they try to push past you and go in, asking what's going on. 'Isn't it obvious? People are becoming animals and whatnot - if that's not a reason to re-evaluate the courses you take, what is? The advisory office is in there. I'm gonna go for marine biology, you know.'";
-	say "     With that, the student gives a little wave, then enters the building. Your curiosity demands that you check this out in further detail, so you follow inside. The entrance hall is fairly well filled, with numerous students sitting in small seating groups and chatting, office workers walking along with folders. Seems eerily normal, for any place during the nanite apocalypse. The upside is that nothing is gonna attack you in here, from the looks of it.";
+	say "     With that, the student gives a little wave, then enters the building. Your curiosity demands that you check this out in further detail, so you follow inside. The entrance hall is fairly well-filled, with numerous students sitting in small seating groups and chatting, office workers walking along with folders. Seems eerily normal, for any place during the nanite apocalypse. The upside is that nothing is gonna attack you in here, from the looks of it.";
 	WaitLineBreak;
 	say "     Glancing around, you see the tail-fin of your dolphin acquaintance vanish around a corner at the upper end of a stairway to the upper floor. Someone is certainly eager to meet their advisers. Following upwards yourself, you come to the landing of the second floor - but the dolphin isn't anywhere in sight. Hm, too bad. But hey, you know where they were going - there is a sign reading 'Course Adviser's Offices' with an arrow to the right. Following that hint, you soon arrive in a long hallway flanked by a number of doors, with waiting chairs arranged along the sides. No dolphin in sight here either - must have had an appointment and gone in right away.";
 	say "     [bold type]Well, the place is pretty peaceful and maybe you could talk with the student some more, or find out what the administrators side on the matter is. Do you want to sit down and wait around a bit?[roman type][line break]";
@@ -263,7 +297,7 @@ to AdminIntro:
 			say "     Their pairing escalates into full-on rutting, which is a glorious spectacle as the powerful stallion takes his lioness friend as his mate, pumping into her with hard thrusts and pulling her down into each and every one of them. Their passion burns incredibly hot, which means it can't last forever, and before much longer, Dana throws her head back and roars in orgasm, her inner muscles trembling around Kyle's shaft.";
 			WaitLineBreak;
 			say "     The squeeze on his prick is enough to push Kyle over the edge in a few heartbeats - especially as her cervix contracts into a very snug ring around his dickhead. With an aroused grunt, he grinds his crotch up against her body as his balls give their first hard throb, blasting a thick throb of cum into her womb. It is awe-inspiring to see Kyle's cum-factories pulse and Dana's stomach grow visibly with each cum-shot, soon giving her a faux-pregnant little bump.";
-			say "     In fact, the view of their culmination is enough to move you past the point of no return, and with a wash of pleasure through your whole body, [if player is male]you start to shoot too, splattering the ground before your seat with long splashes of semen. One of them even hits Kyle (barely), leaving a white splash across his grey hoof[else if player is female]your pussy starts to drip with femcum, leaking down to leave a little wet spot on the seat[else]your crotch starts to tingle quite nicely[end if]. For a moment, nothing but heavy breathing fills the hallway as the three of you ride out your orgasms, then slowly come back to your senses.";
+			say "     In fact, the view of their culmination is enough to move you past the point of no return, and with a wash of pleasure through your whole body, [if player is male]you start to shoot too, splattering the ground before your seat with long splashes of semen. One of them even hits Kyle (barely), leaving a white splash across his gray hoof[else if player is female]your pussy starts to drip with femcum, leaking down to leave a little wet spot on the seat[else]your crotch starts to tingle quite nicely[end if]. For a moment, nothing but heavy breathing fills the hallway as the three of you ride out your orgasms, then slowly come back to your senses.";
 			WaitLineBreak;
 			say "     Craning her neck a little, Dana shares a kiss with Kyle, who hugs her lovingly from behind and pants, 'I love you Dana.' She sinks back into his embrace and smiles broadly, then gets very round eyes as her gaze falls upon you. Reflexively trying to jump up and cover herself doesn't lead her very far - not while she is still impaled on her boyfriend's cock. 'Umm... I was gonna say sorry for fucking like bunnies in front of you, but... you enjoyed that, didn't you?' she says and winks after a nod at your own state.";
 			say "     With a grin on your face, you wish the two of them well, then stand up. After putting your clothes in order, you then walk down the corridor, leaving the advisers offices of the Tenvale College behind for now. While the place seemed so dreadfully normal and regular before, you now know enough to interpret some low sounds that are audible in the building. That banging from somewhere above surely isn't connected to hanging a picture, and the slurp behind one of the doors you pass will likely be someone giving a blow-job.";
@@ -272,6 +306,7 @@ to AdminIntro:
 			increase humanity of player by 10;
 			if humanity of player > 100:
 				now humanity of player is 100;
+			now Resolution of Course Advice is 1;	[Watched Dana and Kyle make love]
 		else:
 			LineBreak;
 			say "     With a grin on your face, you stand up and walk down the corridor, leaving the advisers offices of the Tenvale College behind for now. While the place seemed so dreadfully normal and regular before, you now know enough to interpret some low sounds that are audible in the building. That banging from somewhere above surely isn't connected to hanging a picture, and the slurp behind one of the doors you pass will likely be someone giving a blow-job.";
@@ -279,12 +314,14 @@ to AdminIntro:
 			increase humanity of player by 10;
 			if humanity of player > 100:
 				now humanity of player is 100;
+			now Resolution of Course Advice is 2;	[Let Dana and Kyle make love in peace]
 		move player to College Administration Building;
 	else:
 		LineBreak;
 		say "     With a shrug, you abandon the idea of exploring the Tenvale College administration building any further. This all seems to dreadfully normal and regular... it's the nanite apocalypse, for fuck's sake! Walking back downstairs and past the peaceful crowd there, you soon step out onto the campus grounds again. Almost the first thing you see out here is an incubus, standing not too far off. He has his leather pants pushed down below his ass and is stroking the sizable erection between his legs for everyone to see.";
 		say "     The demonic exhibitionist doesn't have to hold out his lure for too long, as a sexy little gazelle out on a jog diverts her route to stop by his side. You're too far away to make out the exact words they exchange... but you don't have to really, as the next thing they do is start fucking, right there on the green grass of the college campus. Yeah, this seems more like the regular fare you've been come to expect from this new reality.";
 		move player to College Fountain;
+		now Resolution of Course Advice is 3;	[Left the Adviser's Offices]
 	now Course Advice is resolved;
 
 Campus Events ends here.

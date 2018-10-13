@@ -2,7 +2,12 @@ Dog House by Kaleem mcintyre begins here.
 
 Section 1 - The Dog House
 
+Table of GameEventIDs (continued)
+Object	Name
+DogHouse	"DogHouse"
+
 The DogHouse is a situation.
+DogHouse is inactive.
 Fin is a number that varies.
 Tyraffection is a number that varies.
 Homarusearch is a number that varies.
@@ -44,7 +49,7 @@ Instead of resolving DogHouse:
 				say "Swallowing what you can as quickly as you can you don't get much of a chance to back off with the hand still pushing your head down securely into the dog's lap. Gulping down everything the Doberman has to give you, you find your belly getting pleasantly full as the Dobie keeps cumming and cumming without pause. When the other finally does stop firing off his load you stay where you are for several seconds as you try and get every milky drop of cum out of the other. When you at last get a chance to pull back from off the Doberman you raise your face up to look the other square in the eye and then lick the Dobie across his pitch black nose.[line break]";
 				say "The panting canid doesn't say anything, but he does lick you in return before settling himself further back into the seats of the bleachers you both happen to be seated on. Picking up on some of the sudden quiet going on you're not prepared to look around you to see a multitude of eyes leering at you in awe. Not knowing what to say, you wipe your mouth off with the back of your [bodyname of player] hand and then turn your head away to look at the scene coming to a close in the cage down below. When heavy arms wrap themselves around you, your body gives a small jerk of surprise right before a dark drown and black muzzle nuzzles up close into your neck.";
 				WaitLineBreak;
-				say "'Thanks for that little gift lover.' The voice is thick and rich and you can't help but lean back into the body of the Doberman hugging up to you as a sense of protectiveness crosses its way along your soul. 'I love a sexy [if cocks of player > 0 and cunts of player > 0]herm[else if cocks of player > 0]guy[else]girl[end if] like you who knows how to please me. Maybe I can return the favor some time?' You let the other know that you might be willing to have him do that if you have some time later on. 'That's fair.' Unlike many people who might try and flirt and hound to get what they want, the Dobie simply keeps his large muscled arms wrapped around your shoulders while nuzzling intensively into your neck.[line break]";
+				say "'Thanks for that little gift lover.' The voice is thick and rich and you can't help but lean back into the body of the Doberman hugging up to you as a sense of protectiveness crosses its way along your soul. 'I love a sexy [if player is herm]herm[else if player is male]guy[else]girl[end if] like you who knows how to please me. Maybe I can return the favor some time?' You let the other know that you might be willing to have him do that if you have some time later on. 'That's fair.' Unlike many people who might try and flirt and hound to get what they want, the Dobie simply keeps his large muscled arms wrapped around your shoulders while nuzzling intensively into your neck.[line break]";
 				say "The rising climax of the show happening in the cage comes about a minute after your own, thankfully drawing the crowd of spectators['] attentions away from you, after the pit bull barks out twice and then hunches forward into his smooth skinned bitch before stilling his hips. You don't have to guess about what's happening as you watch the woman yelp and then moan while trembling underneath her stud.[line break]";
 				say "'Not a bad show, but I wish the next guy up would be a Doberman. You know what I mean?' the Dobie behind you whispers into your ears, and you can only grunt in response. When the pit bull has finished his work a large wolfhound steps into the cage and then growls something to the other mutant. From what you can see the other appears to be the boss around here as the pit hastily, but reluctantly, pulls out from the girl and then wipes his soaked cock off onto the back of the human-looking woman. The female shudders and then slumps down onto the ground, but has little time for a reprieve as the pit bull swiftly picks her up and then throws her over his shoulder to walk back behind a door that you hadn't seen earlier.";
 				WaitLineBreak;
@@ -91,7 +96,7 @@ Instead of resolving DogHouse:
 				else:
 					LineBreak;
 					say "Feeling that maybe pleasuring the herm as shi obviously wants to be pleasured would be better for the both of you, you reach out to gently grab at the Dal's hand to stop hir from fingering hirself. When brown eyes whip down to look at you from with the mask of a surprised spotted face you smile and tell the herm that you'll take care of hir. The Dalmatian says very little as you lean your head down and then bury your face in between hir legs. The sweet scent of Dal bitch filling your nose makes your stomach rumble in want and without having to be told you quickly slip your tongue into the unnamed herm's gooey pussy.[line break]";
-					say "The hissing moan the Dal let's out bring a feral smile to your lips, especially when firm thighs begin to close around your head. Chuckling at the Dalmatian's antics you vaguely note that the other, while being completely dual gendered, and possessing a pretty nice piece of meat about hirself, does not make a move to stroke at hir cock. Taking this to mean something you make no move to either stroke or tongue the Dal herm's erection as instead you drill your tongue further down into your nameless lover.";
+					say "The hissing moan the Dal lets out brings a feral smile to your lips, especially when firm thighs begin to close around your head. Chuckling at the Dalmatian's antics you vaguely note that the other, while being completely dual gendered, and possessing a pretty nice piece of meat about hirself, does not make a move to stroke at hir cock. Taking this to mean something you make no move to either stroke or tongue the Dal herm's erection as instead you drill your tongue further down into your nameless lover.";
 					WaitLineBreak;
 					say "When the fluttering folds begin to slam tighter into your tongue you work just a tad bit faster on the Dalmatian as you bring hir further and further towards hir climax. Licking over the nub of hir clit, squeezing your tongue up deeper up into hir uterus and then nibbling at the Dal's labia you listen with self-satisfied pleasure as the spotted canine sounds off hir pleasure by groaning and bouncing hir hips back and forth into your face harder and faster. A curl of your tongue against the herm's inner dimensions, followed by a powerful pull of your lips, does the other in.[line break]";
 					say "Howling with an intensity, the likes of which make several heads turn in your direction to look back in wonder, you bring the Dalmatian off just in time for the smooth skinned bitch inside of the cage to get hilted fully by the pit bull. Your face is creamed with feminine nectar and liberally you drink up everything you can from the Dal while at the same time burying your tongue up into your lover's fluttering folds. The Dalmatian reaches a hand out to hold you steady as shi thrusts hir hips forward into you and in the back of your mind you have to note how odd it is that the herm makes no apparent move to stroke at hir cock, even as the long length of maleness coats your [facename of player] head in male cum.";
@@ -116,16 +121,16 @@ Instead of resolving DogHouse:
 		say "You take a guess that periodically one of the beasts from upstairs must come around to take some of the males down here up the ass just to show them who's boss. The people upstairs must have realized that if left alone for too long with one strong male lording over the lot then the possibility of a revolt might become a reality that the guards might not be able to handle. A sad thing really since this probably hasn't helped the damaged psyches of the canines down here to regain some sense of pride about themselves. Moreover, from the looks in their eyes, all thirty three of them, the canines and humans are so lost in their lusts that they don't seem to even realize that they are prisoners.[line break]";
 		say "Surveying the lot of them you can see that most, if not all of the males trapped here are either fully canid in physical appearance or have some varying canine-like features about themselves. From floppy ears to curled tails there is not one human here who has not been affected by the virus. Yet, that begs the question of why the [']humans['] haven't fully turned yet? Maybe something to do with their individual genetic compositions?";
 		WaitLineBreak;
-		say "A pleading whine turns your head over just in time to see a bitch of a Rottweiler pressing her ass up at the front of the gates holding the females back from getting to their males. The small nub of a tail highlighting the firm buns of the other is... somewhat tempting... you have to admit, if only silently, as you watch the Rottie moan while rubbing across her four ample tits. From what you can see of them, after looking around the buxom black and brown coloured bitch, the rest of the females are in the same shape as the men.[line break]";
+		say "A pleading whine turns your head over just in time to see a bitch of a Rottweiler pressing her ass up at the front of the gates holding the females back from getting to their males. The small nub of a tail highlighting the firm buns of the other is... somewhat tempting... you have to admit, if only silently, as you watch the Rottie moan while rubbing across her four ample tits. From what you can see of them, after looking around the buxom black and brown colored bitch, the rest of the females are in the same shape as the men.[line break]";
 		say "Narrowing your eyes to look the lot of them over you can see that the bitches look as though they've been used hard and put away very wet as cum and other fluids are dripping down onto the floor around them in large puddles. The scent smacking you across the nose has you shaking your head in distaste as the smell of females in heat nearly gives you a headache.";
 		WaitLineBreak;
-		say "Perhaps as long as the females are in heat then they would be restless for a male's attention and vice versa. Keeping them close would ensure that the males never lost their lusts and that even if they did try and copulate with one another, they would always be hungry for a bitch. The heat scent is probably boiling the blood of every male in here[if cocks of player > 0]and without wanting it to happen you find yourself falling prey to such desire as your cock thickens inside of your pants[else]but the scent does little for you as you brush your hand in front of your nose to cast aside the slightly annoying scent[end if].";
+		say "Perhaps as long as the females are in heat then they would be restless for a male's attention and vice versa. Keeping them close would ensure that the males never lost their lusts and that even if they did try and copulate with one another, they would always be hungry for a bitch. The heat scent is probably boiling the blood of every male in here[if player is male]and without wanting it to happen you find yourself falling prey to such desire as your cock thickens inside of your pants[else]but the scent does little for you as you brush your hand in front of your nose to cast aside the slightly annoying scent[end if].";
 		say "Sighing you try to think of a way to get the others out of here, right before you realize that you originally only came to get Birch and get out of here. Do you really have the time to rescue everyone? Looking at the yapping females and then growling and snarling males, you realize that you're going to make time.";
 		WaitLineBreak;
 		if Tyraffection is 1:
-			say "When the sounds of someone coming down the steps meets your ears you jump slightly before whipping your head around to find someplace to hide. Ducking over by a set floor shelves you watch as two burly looking wolftaurs come down with an arm full of a familiar looking Doberman. The Dobie, who appears to be slightly roughed up, is moaning and struggling to little avail as he works to get himself free from the dark furred mutants holding him steadily into place. 'Let me go you assholes!' The Doberman snarls, but a quick cuff along the back of the head has him quiet soon enough.";
+			say "When the sounds of someone coming down the steps meets your ears, you jump slightly before whipping your head around to find someplace to hide. Ducking over by a set floor shelves, you watch as two burly looking wolftaurs come down with an arm full of a familiar looking Doberman. The Dobie, who appears to be slightly roughed up, is moaning and struggling to little avail as he works to get himself free from the dark-furred mutants holding him still. 'Let me go you assholes!' the Doberman snarls, but a quick cuff along the back of the head has him quiet soon enough.";
 			WaitLineBreak;
-			say "Watching as one of the wolftaurs fishes out a key from a pouch at its side and then goes to unlock the cell of the male's side of the prison you find your eyes narrowing when you see the other one casually opens the door and then pull out a needle to inject the Doberman with something before tossing the Dobie inside with the other males. Instantly the other males are about to pounce on the new meat and seeing this you know you don't have much time to do anything before the others start to go at the Dobie. You could try to save him, but that would mean going against the guards, and if you fail to beat them then you'll wind up in the same position as the other. Is it worth it to try and rescue Tyr?[line break]";
+			say "Watching as one of the wolftaurs fishes out a key from a pouch at its side and then goes to unlock the cell of the male's side of the prison, you find your eyes narrowing when you see the other one casually opens the door and then pull out a needle to inject the Doberman with something before tossing the Dobie inside with the other males. Instantly the other males are about to pounce on the new meat and seeing this you know you don't have much time to do anything before the others start to go at the Dobie. You could try to save him, but that would mean going against the guards, and if you fail to beat them then you'll wind up in the same position as the other. Is it worth it to try and rescue Tyr?[line break]";
 			say "A somewhat frightened yip from the other decides things for you. While you might not have known him long you feel a need to try and at least attempt to save the other. Letting out a ferocious yell you draw the attentions of everyone and everything in the room. That alone gives you ample time as you charge at the wolftaurs.";
 			WaitLineBreak;
 			challenge "Wolftaur";
@@ -142,7 +147,7 @@ Instead of resolving DogHouse:
 					say "'Tell you what,' Tyr says just as he goes to take a step away from you. 'When this is over, come by my place and we'll see about getting you fit into shape and maybe making some playtime with each other, ok?' You tell the Doberman that you'll think about it which gets a large smile out of Tyr. 'That's more than I could have hoped for.' The Dobie whispers this part, but by the time you realize what he said you are trying to look over the human-like males fucking the bitches to try and see which one is the firefighter you're supposed to be saving. Coincidentally enough, Tyr makes his exit out of the room just as you are trying to remember what Homaru told you about Birch that would make him stand out from the rest.";
 					WaitLineBreak;
 					say "Not knowing what to do as you continue to watch the smooth skinned males humping the feral bitches you decide to ultimately just call out the other man's name and see what happens. Upon doing so one of the lust drunk canid-like hybrids stops and then turns to look at you with almost hauntingly almond brown eyes. Floppy black and white ears perk up on to the top of the brown haired man's head as the other cocks his head to the side while looking at you in question.[line break]";
-					say "Seeing the other and then going over to speak to him you watch as clouded almond coloured eyes blink at you before something registers inside of the other man's mind. 'Y-yeah... I-I'm Birch. A firefighter at station 86. Oh damn!' the floppy eared human-mutant hybrid grunts before his hips thrust themselves automatically into soft, wet folds of the bitch in front of him. 'I-I...' You don't have a good feeling about the other staying as he is, especially not with all of this rampant debauchery going around, so doing what you think at the time, you quickly pull the other man back by the shoulder and out of the bitch's wet snatch.";
+					say "Seeing the other and then going over to speak to him you watch as clouded almond colored eyes blink at you before something registers inside of the other man's mind. 'Y-yeah... I-I'm Birch. A firefighter at station 86. Oh damn!' the floppy eared human-mutant hybrid grunts before his hips thrust themselves automatically into soft, wet folds of the bitch in front of him. 'I-I...' You don't have a good feeling about the other staying as he is, especially not with all of this rampant debauchery going around, so doing what you think at the time, you quickly pull the other man back by the shoulder and out of the bitch's wet snatch.";
 					WaitLineBreak;
 					say "A whine comes from him at the loss of heat around his knotted canine dick, but you don't take the time to care as you hear the sounds of someone coming down the stairs. What it turns out to be is a large wolf/husky mix, the same as the one who had been guarding the doorway. However, instead of walking down the stairs the other man tumbles and then ends up lying sprawled onto the ground unconscious. From the mix of blood and saliva leaking from his nose you can assume that someone punched him in the face with some surprisingly powerful force. When Tyr comes down the steps rubbing his knuckles into opposite palm you can only chuckle at the other.[line break]";
 					say "'What? Could I really have let them do what they wanted to me and then get away with it?' You shake your head at Tyr, laughing outright when the Dobie goes over to literally walk all over the unconscious door guard, and then ask him what he's done. 'Oh, just cause a mass amount of confusion. I don't think this place will be able to be left standing in a while so why don't get out of here?";
@@ -161,9 +166,11 @@ Instead of resolving DogHouse:
 					if player consents:
 						LineBreak;
 						say "Calling out to the other man and asking him the whereabouts of his girlfriend, whom you remember Kenaz telling you about earlier, Birch doesn't turn to regard you, but his body posture does go rigid in response to your words. However, just when you are about to speak up to ask him if something is wrong you get a chilling answer from the other. 'My [italic type]girlfriend[roman type] is now a Dalmatian girl with a dick who I haven't seen since we were both brought into that place together. And for your information, the last I saw of her she was in between two Great Danes getting double-dicked in the ass.' And with that Birch runs off like a shot. Your mouth hangs open slightly as you process what you just heard.";
+						now Resolution of DogHouse is 6; [asked Birch about girlfriend]
 					else:
 						LineBreak;
 						say "Seeing no reason to bother the man over something so trivial, especially in light of his present condition and past trauma, you decide to just watch as Birch runs off into the downtown area. You faintly hope the other man will be alright.";
+						now Resolution of DogHouse is 5; [didn't ask Birch about girlfriend]
 					now Tyr's Club is known;
 					now Homarusearch is 2;
 					increase score by 10;
@@ -180,9 +187,9 @@ Instead of resolving DogHouse:
 					now scalevalue of player is 3;
 					now bodydesc of player is "animalistic";
 					now bodytype of player is "canine";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 					wait for any key;
-					end the story saying "Having lost you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later you wind up [if cocks of player > 0] losing any masculinity you might have had[else]succumbing to your feminine lusts[end if]as you become another nameless bitch along with the Doberman.";
+					end the story saying "Having lost you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later you wind up [if player is male] losing any masculinity you might have had[else]succumbing to your feminine lusts[end if]as you become another nameless bitch along with the Doberman.";
 					wait for any key;
 					follow the turnpass rule;
 					stop the action;
@@ -198,9 +205,9 @@ Instead of resolving DogHouse:
 				now scalevalue of player is 3;
 				now bodydesc of player is "animalistic";
 				now bodytype of player is "canine";
-				now daycycle of player is 0;
+				now SleepRhythm of player is 0;
 				wait for any key;
-				end the story saying "Having lost you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later you wind up [if cocks of player > 0]losing any masculinity you might have had[else]succumbing to your feminine lusts[end if]as you become another nameless bitch along with the Doberman.";
+				end the story saying "Having lost you are injected with whatever they gave to Tyr and then thrown into the cage with the other males. A serious round of fucking later you wind up [if player is male]losing any masculinity you might have had[else]succumbing to your feminine lusts[end if]as you become another nameless bitch along with the Doberman.";
 				wait for any key;
 				follow the turnpass rule;
 				stop the action;
@@ -208,7 +215,7 @@ Instead of resolving DogHouse:
 			say "Grunting when you realize that you can hear somebody coming you find a place to hide over by a row of lockers and then crouch down to watch whoever or rather whatever is about to come your way. When two wolftaurs pad their way down the stairs holding a squirming bundle you can only gaze in surprise when you note that the hybrid wolves are holding tightly onto a slightly beaten up looking Dalmatian herm who looks somewhat familiar.[line break]";
 			say "As the one of the hybrids pulls a key off from out of a pouch at his side, you watch as another pulls out a needle and then sticks it into the arm of the dazed herm Dal. When the former unlatches the door to the female's side of the holding cells and then tosses the unnamed Dalmatian in you feel slightly bad for the herm as she is quickly swarmed over by the lust drunken females. When the door slams close and you can see the guards moving about their way towards the stairs you find your head turning just in time to see several of the horny females growling and barking at each other in want for the only male-like figure between the lot of them.";
 			WaitLineBreak;
-			say "The mixed gendered Dal doesn't try to fight, though whether that was because shi couldn't or didn't want to you can't be too sure of, but nonetheless soon the other is being rolled over onto hir back and then straddled by one of the horny females. As you take a moment to watch as some of the other bitches begin to lick and pant while drooling along the sides of the Dal herm's groin and underside, you find your own c[if cocks of player > 0]ock begins to grow stiff[else]unt begins to moisten[end if] between your legs. When the shouting of an enraged male catches your attention you flip your head over to the other side of the holding area to see as a floppy, spotted eared human grabbing at the bars of the cage and barking with all the force he can muster up out of his lungs.[line break]";
+			say "The mixed gendered Dal doesn't try to fight, though whether that was because shi couldn't or didn't want to you can't be too sure of, but nonetheless soon the other is being rolled over onto hir back and then straddled by one of the horny females. As you take a moment to watch as some of the other bitches begin to lick and pant while drooling along the sides of the Dal herm's groin and underside, you find your own c[if player is male]ock begins to grow stiff[else]unt begins to moisten[end if] between your legs. When the shouting of an enraged male catches your attention you flip your head over to the other side of the holding area to see as a floppy, spotted eared human grabbing at the bars of the cage and barking with all the force he can muster up out of his lungs.[line break]";
 			say "Unlike the others this one isn't growling because he wants to get at the horny bitches, but because he's actually angry. 'Get away from my girlfriend!' So that's the reason, you think silently. Not seeing what you can do to help the distressed male, at least at the moment, you look around to try and assess your options with what's available on hand.";
 			WaitLineBreak;
 			say "From what you can gather the dungeon-like area doesn't hold much, however, inside of the lockers there are quite a number of items that would be of some use to you. When your eyes fall onto a crowbar, conveniently hanging out of one of the slightly opened cabinets, you can feel a feral smirk playing across your [facename of player] lips. Grabbing the metal bar you make your way over to the male's side of the cages and then tell all of them to get back before sticking one end of the crowbar the lock and door. Those who still have some mental control over their animal lusts drag the others back as you start to pull on the bar.[line break]";
@@ -234,6 +241,7 @@ Instead of resolving DogHouse:
 					increase score by 10;
 					now DogHouse is resolved;
 					now Tyr's Club is known;
+					now Resolution of DogHouse is 4; [player won against the wolftaur]
 				else:
 					say "[defeatedbywolf]";
 			else:
@@ -255,6 +263,7 @@ to say defeatedbywolf:
 		now Homarusearch is 2;
 		increase score by 10;
 		now DogHouse is resolved;
+		now Resolution of DogHouse is 3; [player didn't help Tyr fight]
 	else:
 		LineBreak;
 		say "Never one to turn away a friend who has helped to save your ass before, you pop your shoulders and then dash off to help the Doberman to fight. Getting to where Tyr is fighting you find the other surrounded by numerous guardsmen and a couple of mean looking pimps, but surprisingly the Dobie is an oasis of calm despite the circle of angry mutants around him. When the group begins to descend on Tyr you're moving to help the Doberman before you know it.";
@@ -284,6 +293,7 @@ to say defeatedbywolf:
 			now Homarusearch is 2;
 			increase score by 10;
 			now DogHouse is resolved;
+			now Resolution of DogHouse is 1; [player won while helping Tyr]
 		now inasituation is false;
 
 to say fightlost:
@@ -293,7 +303,7 @@ to say fightlost:
 	now Homarusearch is 2;
 	increase score by 10;
 	now DogHouse is resolved;
-
+	now Resolution of DogHouse is 2; [player lost while helping Tyr]
 
 when play ends:
 	if darkdays is 1:

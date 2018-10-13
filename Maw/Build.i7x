@@ -13,7 +13,7 @@ carry out builds:
 	say "Available Designs: [no line break]";
 	repeat with x running through valid construct:
 		if x is complete, next;
-		say "[line break]";
+		LineBreak;
 		say "[x]([progress of x]/[cost of x])[if building of blueprints is x](building construction)[end if][no line break]";
 	say "To begin a new build, type [bold type]build (building) at (direction)[roman type].";
 
@@ -32,7 +32,7 @@ Check constructing:
 Carry out constructing:
 	say "[description of noun]";
 	say "[line break]Construct?";
-	if the player consents:
+	if player consents:
 		now building of blueprints is noun;
 		now origin of blueprints is location of player;
 		now facing of blueprints is second noun;
@@ -88,7 +88,7 @@ After examining the blueprints:
 Part 2 - Constructs
 
 
-cur is a text that varies.
+cur is a text that varies.[@Tag:NotSaved]
 
 Section - Ranch
 
@@ -168,7 +168,7 @@ The proximity of it is "You can smell someone's dinner coming from the".
 
 Book - Building!
 
-An everyturn rule(this is the Can We Build It rule):
+An everyturn rule (this is the Can We Build It rule):
 	if blueprints is not started, continue the action;
 	let z be the number of valid not placed constructs;
 	if z is 0, continue the action;

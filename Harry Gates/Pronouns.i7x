@@ -1,12 +1,12 @@
 Pronouns by Harry Gates begins here.
 
-Parse_debug is a text that varies.  Parse_debug is "false".
+Parse_debug is a text that varies.[@Tag:NotSaved] Parse_debug is "false".
 
-A person is either herm or noherm.  A person is usually noherm.
+A person is either herm or noherm. A person is usually noherm.
 
-P_target is a person that varies.
+P_target is a person that varies.[@Tag:NotSaved]
 
-P_attacker is a person that varies.
+P_attacker is a person that varies.[@Tag:NotSaved]
 
 Section 1 - Verb phrasebooks
 
@@ -112,7 +112,7 @@ To say Subj_Pronoun of/for (Pronoun_target - a person):
 			if Pronoun_target is male:
 				say "he";
 			else:
-				say "she".
+				say "she";
 
 To say Cap_Subj_Pronoun of/for (Pronoun_target - a person):
 	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
@@ -125,7 +125,7 @@ To say Cap_Subj_Pronoun of/for (Pronoun_target - a person):
 			if Pronoun_target is male:
 				say "He";
 			else:
-				say "She".
+				say "She";
 
 To say Obj_Pronoun of/for (Pronoun_target - a person):
 	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
@@ -141,7 +141,7 @@ To say Obj_Pronoun of/for (Pronoun_target - a person):
 				if Pronoun_target is male:
 					say "him";
 				else:
-					say "her".
+					say "her";
 
 To say NoRef_Obj_Pronoun of/for (Pronoun_target - a person):
 	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
@@ -154,7 +154,7 @@ To say NoRef_Obj_Pronoun of/for (Pronoun_target - a person):
 			if Pronoun_target is male:
 				say "him";
 			else:
-				say "her".
+				say "her";
 
 To say Cap_Obj_Pronoun of/for (Pronoun_target - a person):
 	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
@@ -170,7 +170,7 @@ To say Cap_Obj_Pronoun of/for (Pronoun_target - a person):
 				if Pronoun_target is male:
 					say "Him";
 				else:
-					say "Her".
+					say "Her";
 
 To say Poss_Pronoun of/for (Pronoun_target - a person):
 	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
@@ -183,7 +183,7 @@ To say Poss_Pronoun of/for (Pronoun_target - a person):
 			if Pronoun_target is male:
 				say "his";
 			else:
-				say "hers".
+				say "hers";
 
 To say Cap_Poss_Pronoun of/for (Pronoun_target - a person):
 	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
@@ -196,7 +196,7 @@ To say Cap_Poss_Pronoun of/for (Pronoun_target - a person):
 			if Pronoun_target is male:
 				say "His";
 			else:
-				say "Hers".
+				say "Hers";
 
 To say Poss_Det_Pronoun of/for (Pronoun_target - a person):
 	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
@@ -209,7 +209,7 @@ To say Poss_Det_Pronoun of/for (Pronoun_target - a person):
 			if Pronoun_target is male:
 				say "his";
 			else:
-				say "her".
+				say "her";
 
 To say Cap_Poss_Det_Pronoun of/for (Pronoun_target - a person):
 	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
@@ -222,7 +222,7 @@ To say Cap_Poss_Det_Pronoun of/for (Pronoun_target - a person):
 			if Pronoun_target is male:
 				say "His";
 			else:
-				say "Her".
+				say "Her";
 
 To say Ref_Pronoun of/for (Pronoun_target - a person):
 	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
@@ -235,7 +235,7 @@ To say Ref_Pronoun of/for (Pronoun_target - a person):
 			if Pronoun_target is male:
 				say "himself";
 			else:
-				say "herself".
+				say "herself";
 
 To say Cap_Ref_Pronoun of/for (Pronoun_target - a person):
 	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";
@@ -248,7 +248,7 @@ To say Cap_Ref_Pronoun of/for (Pronoun_target - a person):
 			if Pronoun_target is male:
 				say "Himself";
 			else:
-				say "Herself".
+				say "Herself";
 
 To say You_Both for (Pronoun_target - a person) and (Pronoun_attacker - a person):
 	if Parse_debug is "true", say "([if Pronoun_target is the player]the player[else][printed name of Pronoun_target][end if])";

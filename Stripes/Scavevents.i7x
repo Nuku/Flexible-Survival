@@ -1,11 +1,14 @@
 Version 3 of Scavevents by Stripes begins here.
 [version 3 - Scavevents 13 to 15 added ]
-[version 3.1 - altered Free Milk and Gryphon Milkman event to add some flavour text for Dairy. Added new Abandoned Milk event - by cmacleod42]
+[version 3.1 - altered Free Milk and Gryphon Milkman event to add some flavor text for Dairy. Added new Abandoned Milk event - by cmacleod42]
 [version 3.2 - special content for Satyr-shape player in the free drink event - by Wahn]
 [version 3.3 - Gryphon Milkman, Free Milk and Abandoned Milk moved to Garrett.i7x file - Stripes ]
 
 "Adds a batch of random events which can occur while scavenging around the city."
 
+Table of GameEventIDs (continued)
+Object	Name
+Tight Fit	"Tight Fit"
 
 Section 1 - Tight Fit
 
@@ -23,7 +26,7 @@ Instead of resolving a Tight Fit:
 	if x is 5:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -77,7 +80,7 @@ Instead of resolving a Tight Fit:
 		say " [if scalevalue of player is 3]to squirm in and out of[else if scalevalue of player is 2] for a normal person to squirm in and out of. Being smaller, you've got a better shot at making it[end if].";
 		let bonus be ( the dexterity of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		if scalevalue of player is 2, increase bonus by 5;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
@@ -95,6 +98,10 @@ Instead of resolving a Tight Fit:
 
 Section 2 - Protected Supplies
 
+Table of GameEventIDs (continued)
+Object	Name
+Protected Supplies	"Protected Supplies"
+
 Protected Supplies is a scavevent.
 The sarea of Protected Supplies is "Allzones".
 
@@ -108,7 +115,7 @@ Instead of resolving a Protected Supplies:
 	if x is 5:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -132,34 +139,33 @@ Instead of resolving a Protected Supplies:
 				if scavengetarget is "soda":
 					now y is "soda";
 				say "Your specific hunting leads you towards your target.";
-	now monster is a random number from 1 to number of filled rows in the table of random critters;
+	now monster is a random number from 1 to number of filled rows in the Table of Random Critters;
 	let Q be a list of numbers;
-	repeat with tt running from 1 to number of filled rows in table of random critters:
-		choose row tt from the table of random critters;
+	repeat with tt running from 1 to number of filled rows in Table of Random Critters:
+		choose row tt from the Table of Random Critters;
 		if there is a lev entry:
 			if lev entry > level of player plus levelwindow and hardmode is false:
 				next;
 		else:
 			next;
 		if area entry matches the text battleground:
-			if there is a nocturnal in row tt of table of random critters:
-				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
-					next; [skips if day/night doesn't match]
+			if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night):
+				next; [skips if day/night doesn't match]
 			add tt to q;
-			if "Like Attracts Like" is listed in the feats of the player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of the player and bodyname of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of player and bodyname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of the player and cockname of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of player and cockname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
-			if "Like Attracts Like" is listed in the feats of the player and facename of player is name entry and a random chance of 1 in 2 succeeds:
+			if "Like Attracts Like" is listed in the feats of player and facename of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
 	if the number of entries in q is not 0:
 		sort Q in random order;
 		repeat with Z running through q:
 			now monster is Z;
 			break;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if lev entry < level of player and hardmode is true:
 			hardmodeboost;
 		say "In your searching through the city, you come across some [y] and move to get it.";
@@ -176,7 +182,7 @@ Instead of resolving a Protected Supplies:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Attack.";
 			say "     ([link]N[as]n[end link]) - Leave.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				let scavfight be 1;
 		if scavfight is 1:
@@ -196,21 +202,24 @@ Instead of resolving a Protected Supplies:
 			decrease morale of player by 1;
 	else:
 		say "You come across the scenes of a scuffle between two creatures. There are tufts of fur, feathers and blood scattered about, as well as other bodily fluids. In the middle of this mess [one of]are the few crumbs left from whatever food they appear to have been fighting over[or]the empty soda can they appear to have been fighting over[or]the empty and crushed water bottle they appear to have been fighting over[at random]. Unsure if you're disappointed that you got here too late or pleased that you didn't need to fight one or both of these vicious creatures to get it, you move on.";
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 3 succeeds, mallrecall;
 
 
 Section 3 - Dropped Handbag
+
+Table of GameEventIDs (continued)
+Object	Name
+Dropped Handbag	"Dropped Handbag"
 
 Dropped Handbag is a scavevent.
 the sarea of Dropped Handbag is "Allzones".
 
 Instead of resolving a Dropped Handbag:
 	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it. Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.";
-	say "     [bold type] Do you want to search it?  It doesn't seem like they'll be needing it anymore.[roman type][line break]";
+	say "     [bold type] Do you want to search it? It doesn't seem like they'll be needing it anymore.[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		let T be a random number between 1 and 100;
 		if T < 41:
@@ -227,23 +236,26 @@ Instead of resolving a Dropped Handbag:
 		else:
 			say "     You open the bag and put your hand in to rummage through its contents, but are met with a sticky surprise. Pulling it out, you find your hand covered in wet, sticky cum. You can feel the tingles from the infected cum on your hand. Someone, possibly the bag's original owner, filled it with their cum and left it for someone like you to find.";
 			LineBreak;
-			sort table of random critters in random order;
-			repeat with X running from 1 to number of filled rows in table of random critters:
-				choose row X from the table of random critters;
-				if area entry matches the text battleground and ( there is no non-infectious in row monster of table of random critters or non-infectious entry is false ):
+			sort Table of Random Critters in random order;
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:
+				choose row X from the Table of Random Critters;
+				if area entry matches the text battleground and ( there is no non-infectious in row monster of Table of Random Critters or non-infectious entry is false ):
 					now monster is X;
 					break;
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			infect;
 			decrease humanity of player by 5;
 	else:
 		LineBreak;
 		say "     Deciding not to bother, you continue on your way.";
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 2 succeeds, mallrecall;
 	now Dropped Handbag is resolved;
 
 
 Section 4 - Dented Bike (by Wahn)
+
+Table of GameEventIDs (continued)
+Object	Name
+Dented Bike	"Dented Bike"
 
 Dented Bike is a scavevent.
 The sarea of Dented Bike is "Allzones".
@@ -254,7 +266,7 @@ Instead of resolving a Dented Bike:
 	let difficulty be a random number from 8 to 16;
 	if hardmode is true, increase difficulty by a random number between 0 and 2;
 	let bonus be ( perception of player + level of player minus 10 ) divided by 2;
-	if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+	if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 	let dice be a random number from 1 to 20;
 	say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 	if bonus + dice > difficulty:
@@ -271,10 +283,13 @@ Instead of resolving a Dented Bike:
 	say "Looking around, you find a few more tufts of fur and some messy splatters of cum leading away, but that's it.";
 	increase dentedbikecount by 1;
 	if dentedbikecount is 3, now Dented Bike is resolved;
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 3 succeeds, mallrecall;
 
 
 Section 5 - Looted Supermarket (by Wahn)
+
+Table of GameEventIDs (continued)
+Object	Name
+Looted Supermarket	"Looted Supermarket"
 
 Looted Supermarket is a scavevent.
 The sarea of Looted Supermarket is "Allzones".
@@ -287,7 +302,7 @@ Instead of resolving a Looted Supermarket:
 		let difficulty be a random number from 6 to 16;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( perception of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice > difficulty:
@@ -298,7 +313,7 @@ Instead of resolving a Looted Supermarket:
 		let difficulty be 12;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( intelligence of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice > difficulty:
@@ -310,7 +325,7 @@ Instead of resolving a Looted Supermarket:
 		let difficulty be 12;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( intelligence of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		if bonus + dice > difficulty:
@@ -323,7 +338,7 @@ Instead of resolving a Looted Supermarket:
 		let difficulty be a random number from 10 to 18;
 		if hardmode is true, increase difficulty by a random number between 0 and 2;
 		let bonus be ( strength of player + level of player minus 10 ) divided by 2;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		if crowbar is owned:
 			increase bonus by 3;
 			let x be 1;
@@ -336,10 +351,13 @@ Instead of resolving a Looted Supermarket:
 			say "You wander elsewhere to look for supplies, but aren't able to find any on this trip.";
 	increase supermarketcount by 1;
 	if supermarketcount is 3, now Looted Supermarket is resolved;
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 4 succeeds, mallrecall;
 
 
 Section 6 - Abandoned Cars (by Wahn)
+
+Table of GameEventIDs (continued)
+Object	Name
+Abandoned Cars	"Abandoned Cars"
 
 Abandoned Cars is a scavevent.
 The sarea of Abandoned Cars is "Allzones".
@@ -350,7 +368,7 @@ Instead of resolving a Abandoned Cars:
 	let difficulty be a random number from 8 to 15;
 	if hardmode is true, increase difficulty by a random number between 0 and 2;
 	let bonus be ( strength of player minus 10 ) divided by 2;
-	if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+	if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 	if crowbar is owned:
 		increase bonus by 3;
 		let x be 1;
@@ -363,7 +381,6 @@ Instead of resolving a Abandoned Cars:
 	else:
 		say "Try as you might, the trunk of this car is too damaged for you to break into it. You'll have to try looking elsewhere.";
 	now Abandoned Cars is resolved;
-	if ( battleground is "Outside" or battleground is "High" ) and a random chance of 1 in 3 succeeds, mallrecall;
 
 
 Section 7 - Gryphon Milkman (by Wahn)
@@ -378,6 +395,10 @@ Section 8 - Free Milk (by Wahn)
 
 Section 9 - Manna from Heaven (by Wahn)
 
+Table of GameEventIDs (continued)
+Object	Name
+Manna from Heaven	"Manna from Heaven"
+
 Manna from Heaven is a scavevent.
 The sarea of Manna from Heaven is "Outside".
 
@@ -388,6 +409,10 @@ Instead of resolving a Manna from Heaven:
 
 
 Section 10 - Plains Scavenging (by Kaleem)
+
+Table of GameEventIDs (continued)
+Object	Name
+Plains Scavenging	"Plains Scavenging"
 
 Plains Scavenging is a scavevent.
 The sarea of Plains Scavenging is "Plains"
@@ -402,7 +427,7 @@ Instead of resolving a Plains Scavenging:
 	if x is 5:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -458,7 +483,7 @@ Instead of resolving a Plains Scavenging:
 			increase bonus by 2;
 			now petbonus is true;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 		increase dice by bonus;
@@ -495,7 +520,7 @@ Instead of resolving a Plains Scavenging:
 		else:
 			let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
 			if hardmode is true and bonus > 10, now bonus is 10;
-			if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+			if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 			let dice be a random number from 1 to 20;
 			say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs [difficulty]: ";
 			increase dice by bonus;
@@ -509,11 +534,15 @@ Instead of resolving a Plains Scavenging:
 
 Section 11 - Garden Veggies
 
+Table of GameEventIDs (continued)
+Object	Name
+Garden Veggies	"Garden Veggies"
+
 Garden Veggies is a scavevent.
 The sarea of Garden Veggies is "Outside".
 veggiegardenfight is a number that varies.
 gardenveg is a number that varies.
-lastgardenveg is a number that varies. lastgardenveg is normally 255.
+lastgardenveg is a number that varies. lastgardenveg is usually 255.
 when play begins:
 	add Garden Veggies to badspots of furry;
 
@@ -522,27 +551,23 @@ Instead of resolving a Garden Veggies:
 	if girl is banned and guy is banned:
 		say "     During your search for more supplies, you find a small backyard garden, but the plants are shriveled and dying in the parched soil. Between the heat wave and the dry weather, the plants are withering away. You gather up what feeble veggies you can, having to strip the garden bare to get even get enough for a single meal.";
 		increase carried of food by 1;
-		if a random chance of 1 in 3 succeeds, mallrecall;
 		now Garden Veggies is resolved;
 	else if lastgardenveg - turns < 8:
-		say "     Finding yourself back in the neighbourhood where you found the small garden, you decide to check on it again, but none of the produce has ripened yet. They seem to be growing rather quickly, but you'll have to wait a little longer.";
+		say "     Finding yourself back in the neighborhood where you found the small garden, you decide to check on it again, but none of the produce has ripened yet. They seem to be growing rather quickly, but you'll have to wait a little longer.";
 	else if gardenveg is 0:
 		say "     As you're searching around the area for supplies, you find a small garden in the back yard of a home. It's only got a dozen or so plants, but they're surprisingly still alive despite the heat wave and dry weather. And even better than that, they're fruiting. Only a little of the produce is ripe, but you snag what's ready to be picked. You try to remember to return here again once the rest of the veggies have had time to mature. Between the tomatoes, beans and peas, you should have enough for a meal. It'll certainly be more nutritious than some of your meals lately.";
 		increase carried of food by 1;
 		now lastgardenveg is turns;
-		if a random chance of 1 in 4 succeeds, mallrecall;
 	else if gardenveg is 1:
-		say "     Finding yourself back in the neighbourhood where you found that small garden, you decide to check on it again. You are very pleased to see that more of the vegetables are ready to be picked. They seem to be growing unusually quickly, but certainly look normal and safe enough to eat. You pick some more of the produce, tomatoes and beans mostly this time. It's enough for another vegetarian meal to keep you fed for another day.";
+		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to check on it again. You are very pleased to see that more of the vegetables are ready to be picked. They seem to be growing unusually quickly, but certainly look normal and safe enough to eat. You pick some more of the produce, tomatoes and beans mostly this time. It's enough for another vegetarian meal to keep you fed for another day.";
 		increase carried of food by 1;
 		now lastgardenveg is turns;
-		if a random chance of 1 in 4 succeeds, mallrecall;
 	else if gardenveg is 2:
-		say "     Finding yourself back in the neighbourhood where you found that small garden, you decide to check on it again. Since your last visit, more vegetables have ripened and are ready to be picked. Very thankful for having found these plants, you gather up another batch of veggies, taking even more this time. You dig up several of the carrots, having become large enough to pick, another couple of tomatoes and more beans and peas. With so much of the produce mature and ready, you get enough for two meals this time.";
+		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to check on it again. Since your last visit, more vegetables have ripened and are ready to be picked. Very thankful for having found these plants, you gather up another batch of veggies, taking even more this time. You dig up several of the carrots, having become large enough to pick, another couple of tomatoes and more beans and peas. With so much of the produce mature and ready, you get enough for two meals this time.";
 		increase carried of food by 2;
 		now lastgardenveg is turns;
-		if a random chance of 1 in 4 succeeds, mallrecall;
 	else if gardenveg is 3:
-		say "     Finding yourself back in the neighbourhood where you found that small garden, you decide to make a quick detour to go check on it. Finding more ripe veggies, you prepare to pick more supplies, but are interrupted by a loud bleat as the back door of the home behind you opens and an angry sheep bursts forth. 'So you're the thief who's been stealing from my garden! Oh, you are so fucked now,' the sheep says, launching itself at you.";
+		say "     Finding yourself back in the neighborhood where you found that small garden, you decide to make a quick detour to go check on it. Finding more ripe veggies, you prepare to pick more supplies, but are interrupted by a loud bleat as the back door of the home behind you opens and an angry sheep bursts forth. 'So you're the thief who's been stealing from my garden! Oh, you are so fucked now,' the sheep says, launching itself at you.";
 		now veggiegardenfight is 1;
 		if guy is banned:
 			challenge "Ewe";
@@ -560,6 +585,10 @@ Instead of resolving a Garden Veggies:
 
 Section 12 - Free Drink
 
+Table of GameEventIDs (continued)
+Object	Name
+Free Drink	"Free Drink"
+
 Free Drink is a scavevent.
 The sarea of Free Drink is "Campus".
 when play begins:
@@ -572,7 +601,7 @@ Instead of resolving a Free Drink:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
-	if the player consents:
+	if player consents:
 		LineBreak;
 		decrease thirst of player by 10;
 		if thirst of player < 0, now thirst of player is 0;
@@ -582,7 +611,7 @@ Instead of resolving a Free Drink:
 		if winefound is 1:
 			say "     You do manage to save some of the wine in a vial to give to Nermine.";
 			now winefound is 2;
-		if bodyname of player is "Satyr" and player is pure and cocks of player > 0:
+		if bodyname of player is "Satyr" and player is pure and player is male:
 			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst and gets you in a rather nice mood, waking the need to party and enjoy yourself in you. And that's not the only thing it wakes - your cock starts to fill out a bit as you imagine drunken revels with some very shapely partners. Laughing at your obvious arousal, one of the satyrs slaps you on the back and asks 'Hey brother, wanna come with us to the Phi Alpha Nu frat-house? We're the surprise guests and it'll be... legendary!' He gives you a salacious look as he does so, eyes wandering down to your crotch, then winks meaningfully.";
 			LineBreak;
 			say "     Do you go with the satyrs?";
@@ -591,9 +620,9 @@ Instead of resolving a Free Drink:
 				say "     [Satyr Frat Party]"; [Further content in Wahn/Satyr Frat.i7x]
 			else:
 				LineBreak;
-				say "     You shake your head and tell the two of them that you can't come with em right now. The satyr who invited you looks a bit deflated at you declining his offer and tries to come up with a convincing reason to join them anyways - until he's interrupted by his friend. 'Let's get going Kerr, he doesn't want to come. I wanna go on and party with some hunky fratboys...' With a sigh, Kerr the satyr gives you a little wave, then gets back to rolling the cask along with his partner. Before they get too far away to understand it over the rumbling noise of the wooden barrel on the stone floor, you can hear him wonder 'Why would anyone not go to a party? Some people are strange...'";
+				say "     You shake your head and tell the two of them that you can't come with [']em right now. The satyr who invited you looks a bit deflated at you declining his offer and tries to come up with a convincing reason to join them anyways - until he's interrupted by his friend. 'Let's get going Kerr, he doesn't want to come. I wanna go on and party with some hunky fratboys...' With a sigh, Kerr the satyr gives you a little wave, then gets back to rolling the cask along with his partner. Before they get too far away to understand it over the rumbling noise of the wooden barrel on the stone floor, you can hear him wonder 'Why would anyone not go to a party? Some people are strange...'";
 		else:
-			say "     Taking the drink, you swallow down the rich, flavourful wine. It quenches some of your thirst, but leaves you feeling a little strange as well. They laugh and slap you on the back after taking big drinks of their own. Their break done, one of the satyrs wipes his mouth with the back of his hand and says, 'Let's get going Kerr, we got a frat party to get to!' Corking the large cask back up, the second satyr gives you a friendly wave and they resume rolling it down the sidewalk.";
+			say "     Taking the drink, you swallow down the rich, flavorful wine. It quenches some of your thirst, but leaves you feeling a little strange as well. They laugh and slap you on the back after taking big drinks of their own. Their break done, one of the satyrs wipes his mouth with the back of his hand and says, 'Let's get going Kerr, we got a frat party to get to!' Corking the large cask back up, the second satyr gives you a friendly wave and they resume rolling it down the sidewalk.";
 			LineBreak;
 			say "     Looking at the jolly satyrs moving on, something inside makes you want to join them, find out what party they're aiming for. Do you go after them and try to score an invitation for the fun?";
 			if player consents:
@@ -618,6 +647,10 @@ Instead of resolving a Free Drink:
 
 Section 13 - Liefeld's Disease
 
+Table of GameEventIDs (continued)
+Object	Name
+DbLD	"DbLD"
+
 DbLD is a scavevent.
 The sarea of DbLD is "Allzones".
 
@@ -628,22 +661,14 @@ Instead of resolving a DbLD:
 	increase score by 5;
 	now DbLD is resolved;
 
-Table of Game Objects (continued)
-name	desc	weight	object
-"shoulder pad"	"An oversized, padded shoulderpad that juts out to the side too much. It won't cover much, but it might help."	2	shoulder pad
 
-shoulder pad is equipment.
-It is not temporary.
-The AC of shoulder pad is 13.
-The effectiveness of shoulder pad is 13.
-The placement of shoulder pad is "body".
-The descmod of shoulder pad is "A single, armoured pad is strapped to your shoulder.".
-The slot of shoulder pad is "body".
-
-the scent of shoulder pad is "The shoulder pad stinks of the [']90s.".
 
 
 Section 14 - Hospital Scavenging
+
+Table of GameEventIDs (continued)
+Object	Name
+Patient Rooms	"Patient Rooms"
 
 Patient Rooms is a scavevent.
 The sarea of Patient Rooms is "Hospital".
@@ -659,7 +684,7 @@ Instead of resolving a Patient Rooms:
 	if x is 5:
 		if "Survivalist" is listed in feats of player and a random chance of 1 in 3 succeeds:
 			now y is "medkit";
-		else if "Three Bags Full" is listed in feats of the player and a random chance of 1 in 5 succeeds:
+		else if "Three Bags Full" is listed in feats of player and a random chance of 1 in 5 succeeds:
 			now y is "medkit";
 		else:
 			now y is "dirty water";
@@ -701,7 +726,7 @@ Instead of resolving a Patient Rooms:
 		say "     Deciding to search through some of the hospital rooms for items left behind during the outbreak, you go through several rooms and find nothing before reaching one that's been barricaded from the inside. Checking carefully, it doesn't appear that anyone is inside there now. A little puzzled, you risk asking if anyone's there, but get no response. But peering through the window, you also see a bottle of water sitting out on the small dresser inside.";
 		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14: ";
 		increase dice by bonus;
@@ -723,6 +748,10 @@ Instead of resolving a Patient Rooms:
 
 Section 15 - Shattered House
 
+Table of GameEventIDs (continued)
+Object	Name
+Shattered House	"Shattered House"
+
 Shattered House is a scavevent.
 The sarea of Shattered House is "Allzones".
 
@@ -736,7 +765,7 @@ Instead of resolving a Shattered House:
 		say ".";
 		let bonus be ( the strength of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
 		increase dice by bonus;
@@ -749,7 +778,7 @@ Instead of resolving a Shattered House:
 		say ".";
 		let bonus be ( the dexterity of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 16:[line break]";
 		increase dice by bonus;
@@ -764,7 +793,7 @@ Instead of resolving a Shattered House:
 		say ".";
 		let bonus be ( the perception of the player plus level of the player minus 10 ) divided by 2;
 		if hardmode is true and bonus > 10, now bonus is 10;
-		if "Three Bags Full" is listed in feats of the player, increase bonus by 1;
+		if "Three Bags Full" is listed in feats of player, increase bonus by 1;
 		let dice be a random number from 1 to 20;
 		say "You roll 1d20([dice])+[bonus] -- [dice plus bonus] vs 14:[line break]";
 		increase dice by bonus;
@@ -777,7 +806,6 @@ Instead of resolving a Shattered House:
 			if a random chance of 2 in 3 succeeds:
 				say "     As you're pulling yourself out, you see that the collapse has also attracted one of the local creatures, eager to take advantage of the situation.";
 				fight;
-	if battleground is "Outside", mallrecall;
 	now Shattered House is resolved;
 
 Section 16 - Abandoned Milk (by cmacleod42)
@@ -787,6 +815,10 @@ Section 16 - Abandoned Milk (by cmacleod42)
 Section 17 - Scattered Clothing
 
 RandomItemPick is a number that varies.
+
+Table of GameEventIDs (continued)
+Object	Name
+Scattered Clothing	"Scattered Clothing"
 
 Scattered Clothing is a scavevent.
 The sarea of Scattered Clothing is "Allzones".
@@ -805,15 +837,15 @@ Instead of resolving a Scattered Clothing:
 		-- 4: [Feet Item]
 			say "[GiveRandomFeetItem]";
 
-WaistItemsList is a list of objects that varies.
-the WaistItemsList is {ripped jeans, black jeans, sturdy jeans, skinny jeans, hot pants, grey pants, camo pants, jogging pants, bermuda shorts, black miniskirt, pencil skirt, floral skirt}.
+WaistItemsList is a list of objects that varies.[@Tag:NotSaved]
+the WaistItemsList is {ripped jeans, black jeans, sturdy jeans, skinny jeans, hot pants, gray pants, camo pants, jogging pants, bermuda shorts, black miniskirt, pencil skirt, floral skirt}.
 
 to say GiveRandomWaistItem:
 	now RandomItemPick is a random number from 1 to the number of entries in WaistItemsList;
 	increase carried of entry RandomItemPick of WaistItemsList by 1;
 	say "[bold type]You gain [if plural of entry RandomItemPick of WaistItemsList is true][entry RandomItemPick of WaistItemsList][else]a [entry RandomItemPick of WaistItemsList][end if]![roman type][line break]";
 
-ChestItemsList is a list of objects that varies.
+ChestItemsList is a list of objects that varies.[@Tag:NotSaved]
 the ChestItemsList is {black t-shirt, white t-shirt, maroon pullover, zephyr shirt, camo shirt, sleeveless shirt, mesh shirt}.
 
 to say GiveRandomChestItem:
@@ -821,7 +853,7 @@ to say GiveRandomChestItem:
 	increase carried of entry RandomItemPick of ChestItemsList by 1;
 	say "[bold type]You gain [if plural of entry RandomItemPick of ChestItemsList is true][entry RandomItemPick of ChestItemsList][else]a [entry RandomItemPick of ChestItemsList][end if]![roman type][line break]";
 
-FeetItemsList is a list of objects that varies.
+FeetItemsList is a list of objects that varies.[@Tag:NotSaved]
 the FeetItemsList is {combat boots, brown loafers, leather sandals, high heels, stiletto heels, jogging shoes, cowboy boots}.
 
 to say GiveRandomFeetItem:
@@ -829,12 +861,12 @@ to say GiveRandomFeetItem:
 	increase carried of entry RandomItemPick of FeetItemsList by 1;
 	say "[bold type]You gain [if plural of entry RandomItemPick of FeetItemsList is true][entry RandomItemPick of FeetItemsList][else]a [entry RandomItemPick of FeetItemsList][end if]![roman type][line break]";
 
-CrotchItemsList is a list of objects that varies.
+CrotchItemsList is a list of objects that varies.[@Tag:NotSaved]
 the CrotchItemsList is {ragged loincloth, simple loincloth, boxer briefs, white briefs, orange jockstrap, mesh undies, pink panties}.
 
 to say GiveRandomCrotchItem:
 	now RandomItemPick is a random number from 1 to the number of entries in CrotchItemsList;
-	increase carried of entry RandomItemPick of WaistItemsList by 1;
+	increase carried of entry RandomItemPick of CrotchItemsList by 1;
 	say "[bold type]You gain [if plural of entry RandomItemPick of CrotchItemsList is true][entry RandomItemPick of CrotchItemsList][else]a [entry RandomItemPick of CrotchItemsList][end if]![roman type][line break]";
 
 Scavevents ends here.

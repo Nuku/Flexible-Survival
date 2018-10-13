@@ -1559,7 +1559,7 @@ Carry out dumping imap:
 	let image-map-width be a number;
 	let image-map-height be a number;
 	let total-length be a number;
-	say "[line break]";
+	LineBreak;
 	if intensive rules tracing is active:[we disable RULES ALL temporarily to avoid the enumeration of each iteration through the loops that build the data dump.]
 		now rules-altered is true;
 		suspend rules tracing;
@@ -1598,10 +1598,10 @@ Carry out dumping imap:
 			say "[row-count]: ";
 			repeat with item running through current-row:
 				say "[item], ";
-			say "[line break]";
+			LineBreak;
 			increment row-count;
 	say "[variable letter spacing]";
-	say "[line break]";
+	LineBreak;
 	if the noun is tile-graphlinked:
 		let row-count be 1;
 		repeat with current-row running through the linked command array of the noun:
@@ -1609,7 +1609,7 @@ Carry out dumping imap:
 				unless entry (column-count) of current-row is "":
 					say "[one of][line break][The noun] has individual graphlinks defined for the following tiles (given in the image-map's internal tile coordinates):[line break][or][stopping]([column-count], [row-count]) [quotation mark][entry column-count of current-row][quotation mark][line break]";
 			increment row-count;
-		say "[line break]";
+		LineBreak;
 	if rules-altered is true:
 		activate intensive rules tracing.
 
@@ -1630,7 +1630,7 @@ Use image-map graphlink preview translates as (- Constant Glimmr_GRAPHLINK_PREVI
 To #if utilizing the image-map graphlink preview option:
 	(- #ifdef Glimmr_GRAPHLINK_PREVIEW; -)
 
-The graphlink preview color is a glulx color value variable. The graphlink preview color is usually g-Light-Grey.
+The graphlink preview color is a glulx color value variable. The graphlink preview color is usually g-Light-Gray.
 
 
 Glimmr Canvas-Based Drawing ends here.
@@ -2077,7 +2077,7 @@ Section: Using canvases to manage display
 
 At first glance, the canvas may almost look unnecessary: elements will be displayed in a graphics window, so why not assign the element directly to the window? Why do we need the canvas to mediate?
 
-There are ly two answers. First, canvases provide an easy way to change the display content of a graphics window at a stroke. We can, for example, set up two canvases with different elements. We first show Canvas A in our graphics window, and then, when we want to change the content of the window, we simply change the associated canvas of the window to Canvas B. The next time the window refreshes, it will display our second composition.  Canvases can thus be used as discrete "pages" to be shown in a graphics window. See the "Two Canvases, One Window" example.
+There are ly two answers. First, canvases provide an easy way to change the display content of a graphics window at a stroke. We can, for example, set up two canvases with different elements. We first show Canvas A in our graphics window, and then, when we want to change the content of the window, we simply change the associated canvas of the window to Canvas B. The next time the window refreshes, it will display our second composition. Canvases can thus be used as discrete "pages" to be shown in a graphics window. See the "Two Canvases, One Window" example.
 
 We can also display the same canvas in two or more windows at the same time, using different display parameters. So, if we have a detailed map that would benefit from being seen both in close-up and at long-range, we could show the map at one scale in one window, and at another in the other. See the "One Canvas, Two Windows" example.
 
@@ -2477,9 +2477,9 @@ Before we get to the buttons, we need to set up the window and canvas. For an ex
 
 	Hello is a room.
 
-	The graphics-window is a graphlink g-window spawned by the main-window. The position is g-placebelow. The scale method is g-fixed-size. The measurement is 35. The back-colour is g-White.
+	The graphics-window is a graphlink g-window spawned by the main-window. The position is g-placebelow. The scale method is g-fixed-size. The measurement is 35. The back-color is g-White.
 
-	The back-colour of the main-window is g-White.
+	The back-color of the main-window is g-White.
 
 	The graphics-canvas is a g-canvas. The canvas-width is 248. The canvas-height is 35.
 	The associated canvas of the graphics-window is the graphics-canvas.
@@ -2566,13 +2566,13 @@ The example starts out in essentially the same way as the previous:
 	Include Glimmr Graphic Hyperlinks by Erik Temple.
 	Include Glimmr Bitmap Font by Erik Temple.
 
-	The graphics-window is a graphlink g-window spawned by the main-window. The position is g-placebelow. The scale method is g-fixed-size. The measurement is 35. The back-colour is g-White.
+	The graphics-window is a graphlink g-window spawned by the main-window. The position is g-placebelow. The scale method is g-fixed-size. The measurement is 35. The back-color is g-White.
 
 	The graphics-canvas is a g-canvas. The canvas-width is 248. The canvas-height is 35.
 	The associated canvas of the graphics-window is the graphics-canvas.
 	The associated canvas of a g-element is the graphics-canvas.
 
-	The back-colour of the main-window is g-White.
+	The back-color of the main-window is g-White.
 
 	Hello is a room.
 
@@ -2599,7 +2599,7 @@ Compare the Table of Button Labels here with the one for Simple Buttons--we've b
 
 	A button is a kind of stroked rectangle primitive. The associated canvas of a button is the graphics-canvas. The tint of a button is g-LightGray. The background tint of a button is g-MidGray. The graphlink status of a button is g-active.
 
-	A label is a kind of bitmap-rendered string. The associated canvas of a label is the graphics-canvas. The scaling factor of a label is 0.2500. The display-layer of a label is 2. The alignment of a label is center-aligned. The tint is g-Dark-Grey. The text-string is "0".
+	A label is a kind of bitmap-rendered string. The associated canvas of a label is the graphics-canvas. The scaling factor of a label is 0.2500. The display-layer of a label is 2. The alignment of a label is center-aligned. The tint is g-Dark-Gray. The text-string is "0".
 
 	A button has a label called the associated label.
 
@@ -2732,7 +2732,7 @@ Next we define our graphics window and its accompanying canvas. For other exampl
 
 	*: Chapter - Graphics window
 
-	The graphics-window is a graphics g-window spawned by the main-window. The position of the graphics-window is g-placeabove. The measurement of the graphics-window is 50. The back-colour of the graphics-window is g-black.
+	The graphics-window is a graphics g-window spawned by the main-window. The position of the graphics-window is g-placeabove. The measurement of the graphics-window is 50. The back-color of the graphics-window is g-black.
 
 	The graphics-window canvas is a g-canvas. The canvas-width is 500. The canvas-height is 300. The associated canvas of the graphics-window is graphics-window canvas.
 
@@ -2814,20 +2814,20 @@ We have a couple of types of objects that are not sprites. Rectangle primitives 
 
 	Table of Backcloth Elements
 	backcloth	origin	endpoint	tint	display status	associated room
-	Ground_level	{32, 57}	{169, 245}	g-dark-grey	g-active	Entrance Chamber
-	Shaft_level	{182, 57}	{319, 245}	g-dark-grey	g-inactive	Shaft
-	Upper_level	{332, 57}	{469, 245}	g-dark-grey	g-inactive	Upper Chamber
+	Ground_level	{32, 57}	{169, 245}	g-dark-gray	g-active	Entrance Chamber
+	Shaft_level	{182, 57}	{319, 245}	g-dark-gray	g-inactive	Shaft
+	Upper_level	{332, 57}	{469, 245}	g-dark-gray	g-inactive	Upper Chamber
 
 
 	Section - Title-text bitmap-rendered strings
 
 	A title-text is a kind of bitmap-rendered string. The graphlink status of a title-text is g-inactive. The associated canvas of a title-text is graphics-window canvas.
 
-	Ground_level_1 is a title-text.  The origin is {39, 63}.  The text-string is "Ground level". The associated font is Glimmr C&C. Ground_level_1 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The associated room of Ground_level_1 is Entrance Chamber.
+	Ground_level_1 is a title-text. The origin is {39, 63}. The text-string is "Ground level". The associated font is Glimmr C&C. Ground_level_1 is left-aligned. The tint is g-medium-gray. The background tint is g-placenullcol. The display-layer is 2. The associated room of Ground_level_1 is Entrance Chamber.
 
-	Shaft_2 is a title-text.  The origin is {189, 63}.  The text-string is "Shaft". The associated font is Glimmr C&C. Shaft_2 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The display status of Shaft_2 is g-inactive. The associated room of Shaft_2 is Shaft.
+	Shaft_2 is a title-text. The origin is {189, 63}. The text-string is "Shaft". The associated font is Glimmr C&C. Shaft_2 is left-aligned. The tint is g-medium-gray. The background tint is g-placenullcol. The display-layer is 2. The display status of Shaft_2 is g-inactive. The associated room of Shaft_2 is Shaft.
 
-	Upper_level_3 is a title-text.  The origin is {341, 63}.  The text-string is "Upper level". The associated font is Glimmr C&C. Upper_level_3 is left-aligned. The tint is g-medium-grey. The background tint is g-placenullcol.  The display-layer is 2. The display status of Upper_level_3 is g-inactive. The associated room of Upper_level_3 is Upper Chamber.
+	Upper_level_3 is a title-text. The origin is {341, 63}. The text-string is "Upper level". The associated font is Glimmr C&C. Upper_level_3 is left-aligned. The tint is g-medium-gray. The background tint is g-placenullcol. The display-layer is 2. The display status of Upper_level_3 is g-inactive. The associated room of Upper_level_3 is Upper Chamber.
 
 Finally, the table that converts the location to the coordinates that the player's avatar should have onscreen. (These were mapped using Glimmr Canvas Editor's "instances" feature.)
 
@@ -3116,7 +3116,7 @@ We then define the rooms and other behavior. Note that each room has an image-ma
 	Every turn while the player is in the Den:
 		say "[one of]The Manticore roars[or]A snort echoes through the chamber. The Manticor shakes its mane[or]The Manticore stares at you. You feel that your impudence is truly epic[or]The spiked pad at the end of the Manticore's tail sways lazily over the beast's back[purely at random]."
 
-	The Manticore is an animal in the Den. "The Manticore stirs. His eyes lock on yours." The character is the Manticore-sprite. The description is "More fearsome than the villagers said. A massive catlike creature. Its tail is studded with large, deadly spikes."
+	The Manticore is an animal in the Den. "The Manticore stirs. His eyes lock on yours." The character is the Manticore-sprite. The description is "More fearsome than the villagers said. A massive cat-like creature. Its tail is studded with large, deadly spikes."
 
 	Understand "shoot [something]" as attacking.
 
@@ -3361,7 +3361,7 @@ From this point on, the code does not differ from the Inform documentation's "Ti
 
 	Suit is a kind of value. The suits are hearts, clubs, diamonds, and spades. Understand "heart" as hearts. Understand "club" as clubs. Understand "diamond" as diamonds. Understand "spade" as spades.
 
-	A card is a kind of thing.  A card has a suit. A card has a number called rank. Understand the suit property as describing a card. Understand the rank property as describing a card.
+	A card is a kind of thing. A card has a suit. A card has a number called rank. Understand the suit property as describing a card. Understand the rank property as describing a card.
 
 	52 cards are in the card repository.
 
@@ -3532,7 +3532,7 @@ From this point on, the code does not differ from the Inform documentation's "Ti
 
 	A card can be quadrupled, tripled, paired or uncombined.
 
-	Test rank is a number that varies. Definition: a card is matching if its rank is the test rank.
+	Test rank is a number that varies.[@Tag:NotSaved] Definition: a card is matching if its rank is the test rank.
 
 	A hand-ranking rule (this is the counting multiples rule):
 		now every card is uncombined;
@@ -3611,4 +3611,4 @@ From this point on, the code does not differ from the Inform documentation's "Ti
 	A hand-ranking rule (this is the default rule):
 		high card.
 
-	Sort-debugging is a truth state that varies.
+	Sort-debugging is a truth state that varies.[@Tag:NotSaved]

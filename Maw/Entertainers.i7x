@@ -23,14 +23,14 @@ This is the entertainvailable rule:
 		rule succeeds;
 	rule fails;
 
-An everyturn rule(this is the entertainer rule):
+An everyturn rule (this is the entertainer rule):
 	if the remainder after dividing turns by 4 is not 0, continue the action;
 	if workers of entertainer is 0, stop the action;
 	let foragers be workers of entertainer;
 	let x be a random number from 80 to 120;
 	if Novelstudies is 2:
 		increase x by 20;
-	if "Theatre" is listed in perks of tribe of player:
+	if "theater" is listed in perks of tribe of player:
 		increase x by 20; [Not yet implemented]
 	now x is foragers * 20 * x;
 	now x is x divided by (population of tribe of player); [Keeps it at a fraction of a whole number, so 1-20 would be max. If 5% of population is entertainment, +1 moral.]

@@ -6,17 +6,21 @@ Version 2 of Palomino by Verath begins here.
 
 Section 1 - The Palomino Club
 
-The Palomino is a room. It is fasttravel. [in order to make something only found through a quest or revealed, put 'It is private.' here as well]
-Palomino Exit is a door. Palomino Exit is dangerous. The marea of Palomino Exit is "Outside". Palomino Exit is undescribed. Palomino Exit is southwest of The Palomino. Southwest of Palomino Exit is Outside Exploration.
+Table of GameRoomIDs (continued)
+Object	Name
+PALOMINO	"PALOMINO"
+
+The Palomino is a room. It is fasttravel.
+The earea of The Palomino is "Outside".
 
 The description of The Palomino is "[palominodesc]".
 
 to say palominodesc:
 	say "     Ducking down a darkened alleyway, you find yourself standing in front of a door that has recently been painted dark red. The sound of a techno rhythm from inside is making the door vibrate. Looking above the door, you see a hand lettered sign that simply says 'The Palomino'. Going through the door, you find yourself in a short, ordinary-looking hallway, set slightly apart from the loud music and flashing lights spreading down the hallway from around the far corner.";
 	say "     Stepping around the corner of the hall, the room beyond is much bigger than you expected. It has a gothic theme going on - dark, with some rough, black, wooden tables and benches along the sides of the room and smaller, private booths with lower tables secreted away in the darker corners. There are coarse tapestries draped on the walls, one of them depicting a young man resting in the arms of a well-built anthropomorphic stallion. Looking closer at the tapestry, you can see that the young man's legs have started to shift from the knees down into digitigrade horse legs and a blond tail is just starting to grow from above his ass. There is also a random scattering of dark red cushions to offset the cellar dungeon look of the place.";
-	say "     A mirror ball sparkles and sends a shimmering wave of reflected colours over the foggy dance floor, where around thirty or so people are dancing to the beat of the music. At the far end of the room, some big speakers are loudly blaring out some canned music, and a thick drink bar with several stools positioned in front of it takes up part of the room as well.";
+	say "     A mirror ball sparkles and sends a shimmering wave of reflected colors over the foggy dance floor, where around thirty or so people are dancing to the beat of the music. At the far end of the room, some big speakers are loudly blaring out some canned music, and a thick drink bar with several stools positioned in front of it takes up part of the room as well.";
 
-The invent of The Palomino is { "soda" , "soda" }.
+The invent of The Palomino is { "soda", "soda" }.
 
 instead of sniffing Palomino:
 	say "The infected dance club smells strongly of aroused males, sweat and sex. Lots of sex.";
@@ -30,7 +34,7 @@ when play begins:
 to say Palominowins:
 	say "'wow you got here how did that happen.'";
 	wait for any key;
-	if cocks of player > 0:
+	if player is male:
 		say "yay";
 	else:
 		say "how the heck did you find me hiding here?";
@@ -39,27 +43,30 @@ To say Palominoloses:
 	say "how the heck did you manage to get this, that's the real riddle I suppose...'";
 
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Palomino";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She riddles you this and that till you cry.[at random]";
 	now defeated entry is "[Palominoloses]";
 	now victory entry is "[Palominowins]";
-	now desc entry is "The Palomino is watching you!!";[ Description of the creature when you encounter it.]
+	now desc entry is "The Palomino is watching you!!"; [ Description of the creature when you encounter it.]
 	now face entry is "that is a mixture of human and equine features, with a short palomino-like muzzle and dark equine eyes. Your features are only accentuated by the multiple earrings hanging from your new, more equine ears and the long, dark black mane which hangs down the side of your face. The lovely spiked collar Tristian gave you finishes the new look of your face"; [You have a (your text) face."]
 	now body entry is "that of a humanoid horse, thick and rather muscular. Your hands and feet have slightly hoof-like fingernails. You are wearing the outfit that your fellow horse goth picked out for you, your strong torso covered in a tight, long-sleeved fishnet shirt, the fishnet pattern tracing down your well-muscled arms to your spiked cuffs. Your thick, black leather pants only serve to accentuate your well-defined lower body, and your slightly hoof-like feet rest easily in the modified black leather boots Tristian had made for you";
 	now skin entry is "[one of]palomino spotted[or]lightly furred[or]palomino furred[at random]";
-	now tail entry is "You have a long black horse's tail hanging from your rear, swishing from side to side across your rear. Someone has braided a few small pieces of gothic silver jewelry into the tail, and it makes a soft chiming noise as it sways when you walk.";[ Tail description, write a whole Sentence or leave blank. ]
+	now tail entry is "You have a long black horse's tail hanging from your rear, swishing from side to side across your rear. Someone has braided a few small pieces of gothic silver jewelry into the tail, and it makes a soft chiming noise as it sways when you walk."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]stallion[or]equine[or]flared[at random]";
-	now face change entry is "you wake up from your long night with the stallion. You yawn and stretch, only to find your mouth opening wider than ever before and a strange loud jingling noise in your ears. Blinking, you reach up to find that your face seems to have changed at some point during the night. As you blink your new equine eyes, you trace your fingers over your new equine snout, and then reach up to tug on your larger equine ears. As your ear jingles again, you realize that at some point while you were resting your partner took time to attach several ear rings to your new ears. The thought makes you smile as you look around, for him, only to spot a spiked leather collar he obviously left out for you. Your new muzzle pulls back into a larger grin as you slip the collar on and get ready to face the day"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "you wake up from your long night with the stallion. You notice your body has changed at some point to be more like his, and you take in your new more equine form in amazement, wiggling your new feet and enjoying its well-shaped form. Looking around, you note that he has laid out a nice new outfit to go with your new body. As you look over the items he left, you find yourself smiling at the fishnet shirt and black leather pants he left you, as well as the proper spiked cuffs and specially modified boots for your new feet"; [ body change text. format as "Your body feels funny as (your text)" ]
+	now face change entry is "you wake up from your long night with the stallion. You yawn and stretch, only to find your mouth opening wider than ever before and a strange loud jingling noise in your ears. Blinking, you reach up to find that your face seems to have changed at some point during the night. As you blink your new equine eyes, you trace your fingers over your new equine snout, and then reach up to tug on your larger equine ears. As your ear jingles again, you realize that at some point while you were resting your partner took time to attach several ear rings to your new ears. The thought makes you smile as you look around, for him, only to spot a spiked leather collar he obviously left out for you. Your new muzzle pulls back into a larger grin as you slip the collar on and get ready to face the day"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "you wake up from your long night with the stallion. You notice your body has changed at some point to be more like his, and you take in your new more equine form in amazement, wiggling your new feet and enjoying its well-shaped form. Looking around, you note that he has laid out a nice new outfit to go with your new body. As you look over the items he left, you find yourself smiling at the fishnet shirt and black leather pants he left you, as well as the proper spiked cuffs and specially modified boots for your new feet"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "you wake up from your long night with the stallion, and you go to scratch it, only to find it seems to be covered in soft, palomino patterned fur, just like your lover's";
 	now ass change entry is "you wake up, and you moan and roll over as you reach down, only to feel a large amount of hair covering your ass. Blinking, you look down to see your new long equine tail, which someone has braided several small silver gothic charms into";
-	now cock change entry is "you wake up, and you reach down to stroke it, only to find that your morning wood is even more impressive with a thick equine cock, the feel of its new sensitive flared tip making you moan as you stroke it several times with a smile"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now cock change entry is "you wake up, and you reach down to stroke it, only to find that your morning wood is even more impressive with a thick equine cock, the feel of its new sensitive flared tip making you moan as you stroke it several times with a smile"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 17;
 	now sta entry is 13;
@@ -89,18 +96,19 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Endings
 
 when play ends:
 	if bodyname of player is "Palomino":
 		if humanity of player < 10:
-			say "     Surrendering to the infection, you finally realize that you want nothing more than to be a lovely little slutty pony for your handsome male stallion. Wasting no time, you run on your new equine feet back to the club where your new master is waiting. Arriving at the club, you are happy to be welcomed into Tristian's waiting arms, and even happier when your new master lets you know what you will be doing for him from now on. You love your stallion taking you back to the dressing room and helping you into your new stage clothes, and the crowd outside goes wild when he announces your first night as the Palomino's newest stripper!  You love the feeling of showing off your handsome [if cocks of player > 0 and cunts of player > 0]herm[else if cocks of player > 0]male[else if cunts of player > 0]female[else]genderless[end if] body on the stage, as you dance and tease the other clubgoers using what you learned here in the club from Tristian and the other dancers.";
-			if cocks of player > 0:
+			say "     Surrendering to the infection, you finally realize that you want nothing more than to be a lovely little slutty pony for your handsome male stallion. Wasting no time, you run on your new equine feet back to the club where your new master is waiting. Arriving at the club, you are happy to be welcomed into Tristian's waiting arms, and even happier when your new master lets you know what you will be doing for him from now on. You love your stallion taking you back to the dressing room and helping you into your new stage clothes, and the crowd outside goes wild when he announces your first night as the Palomino's newest stripper! You love the feeling of showing off your handsome [if player is herm]herm[else if player is male]male[else if player is female]female[else]genderless[end if] body on the stage, as you dance and tease the other clubgoers using what you learned here in the club from Tristian and the other dancers.";
+			if player is male:
 				say "     Soon you and several other strippers are nearly naked on stage and showing off for the all too appreciative audience, as you grind up against the naked bodies of a black swan, while a well-endowed panther grinds up against you from behind. Your first night is a tremendous success, though the best part is how happy your dominant stud is with you afterwards. You wake up from a night of wonderful sex to find several new piercings for you to wear to demonstrate who you belong to, as well as his tag hanging from your collar. Smiling happily, you settle in to your new life as one of the clubs strippers with ease, dancing all night for the patrons, and dancing with your mate and several other strippers afterwards.";
-			else if cunts of player > 0:
+			else if player is female:
 				say "     Soon you and several other strippers are nearly naked on stage and showing off for the all too appreciative audience, as you grind up against the naked bodies of a black swan, while a well-endowed panther grinds up against you from behind. Your first night on the stage is a tremendous success. Being female, you don't really draw your dominant stud's attention like you used to, but you've got plenty of dancers to enjoy a wild romp with after the show. You wake up from a night of wonderful sex to find yourself in a new harness suitable to your female form and a tag hanging from your collar denoting you as club property. Smiling happily, you settle in to your new life as one of the clubs strippers with ease, dancing all night for the patrons and dancing with several other strippers afterwards.";
 				if player is impreg_ok:
 					say "     After one particularly hot show, you and some of the male strippers enact a plan where they get Tristian riled up with a private show. During this, you sneak a ride on his cock after the guys have gotten him too hard with their asses and distract him with their luscious cocks, letting you get fucked by your palomino stud after so long. He seems a little hurt by this treachery at first, but gets over it quickly enough, especially as your belly starts to swell with his foals, more palomino studs to stalk the dance floor and ride the stripper poles.";

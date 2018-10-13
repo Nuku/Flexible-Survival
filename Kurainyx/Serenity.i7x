@@ -1,7 +1,8 @@
-Version 2 of Serenity by Kurainyx begins here.
+Version 3 of Serenity by Kurainyx begins here.
 [Version 1 - Created Serenity]
 [Version 2 - Added two new sex scenes, one variation for end of sex scenes, and a hint to pacify Serenity after the first encounter]
 [Version 3 - Added a series of non-fatal vore scenes]
+[Version 3.1 - Added an intro variant to vore bound state scene]
 "Adds a female naga npc to Flexible Survival"
 
 [  HP of Serenity                                            ]
@@ -13,9 +14,18 @@ Version 2 of Serenity by Kurainyx begins here.
 
 Section 1 - Serenity in Dry Plains
 
+Table of GameCharacterIDs (continued)
+object	name
+Serenity	"Serenity"
+
+Serenity is a woman.
+
+Table of GameEventIDs (continued)
+Object	Name
+Naga Hybrid	"Naga Hybrid"
+
 Naga Hybrid is a situation.
 The sarea of Naga Hybrid is "Plains".
-Serenity is a woman. The HP of Serenity is normally 0.
 
 when play begins:
 	add Naga Hybrid to badspots of girl;
@@ -29,33 +39,35 @@ Instead of resolving a Naga Hybrid:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Submit to the naga hybrid.";
 		say "     ([link]N[as]n[end link]) - Run away from the snake.";
-		if the player consents:			[Serenity hypnotizes player and makes them eat her pussy. She takes one food or water and gets player off with her hands, but players with nothing get nothing]
+		if player consents:			[Serenity hypnotizes player and makes them eat her pussy. She takes one food or water and gets player off with her hands, but players with nothing get nothing]
 			LineBreak;
 			say "     [PlainsSerenitySubmit]";
 		else:			[Run away from the snake]
 			LineBreak;
 			say "     Shaking off your daze, you realize that this naga is trying to hypnotize you with her rattle. Given the snake's ability, trying to fight her would be unwise, so you hastily run in the opposite direction. A quick glance back reveals the reptile's surprised face; however, her shock turns into a scowl a second later when she comes after you. Fortunately, you are able to outrun her, and combined with your headstart, the naga eventually gives up her chase as you leave her far behind.";
 		now HP of Serenity is 1;
-		now Large Cave is unresolved;
+		now Large Cave is active;
+		now Resolution of Naga Hybrid is 1; [1st stage completed]
 	else if HP of Serenity is 1:			[Repeatable encounter]
 		say "     Hearing a familiar rattling, you quickly turn around to find the naga hybrid from before. 'Fancy meeting you again,' the female snake greets as she sashays toward you, her heart-shaped necklace swinging along with her body. 'Perhaps it is merely a coincidence that we cross paths again.' Her mouth twists into a devilish smirk. 'Or perhaps you are the one who is unable to resist gazing upon me again. Whatever the reason, I will be glad to have you.' You shiver as the rattle tail sounds its hypnotic rhythm again.";
 		say "     [bold type]Do you stay with the naga?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Submit to the naga hybrid.";
 		say "     ([link]N[as]n[end link]) - Run away from the snake.";
-		if the player consents:			[Serenity hypnotizes player and makes them eat her pussy. She takes one food or water and gets player off with her hands, but players with nothing get nothing]
+		if player consents:			[Serenity hypnotizes player and makes them eat her pussy. She takes one food or water and gets player off with her hands, but players with nothing get nothing]
 			LineBreak;
 			say "     [PlainsSerenitySubmit]";
 		else:			[Run away from the snake]
 			LineBreak;
 			say "     Shrugging off the snake's influence, you flee from the naga before she can bring you into her embrace.";
+		now Resolution of Naga Hybrid is 2; [repeat encounter completed]
 	else if carried of Lockbox > 0:			[Have lockbox]
 		say "     You spot the familiar naga from before, her back toward you as she wanders through the landscape. Looks like you are the one who has the element of surprise this time. With the lockbox from the cave in your possession, you have a feeling that your interactions with the snake will change once you reveal that you have something that very likely belongs to her.";
 		say "     [bold type]Should you try to talk to the snake?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Get the naga's attention.";
 		say "     ([link]N[as]n[end link]) - Don't confront the naga now.";
-		if the player consents:
+		if player consents:
 			LineBreak;
 			say "     You call out to the naga, who promptly turns her head in your direction. Even from far away, you can almost see the cocky smirk on her face as she heads toward you. 'Am I so enticing that my prey is starting to come to me?' she asks when you are close enough. When you tell her that you have something that she might be interested in, she chuckles. 'And my prey is even offering me gifts. What a delightful turn of events,' the cheeky reptile teases. Fishing out the lockbox and holding it up, all traces of the naga's arrogance and smugness is replaced with shock. 'Wh-where did you get that?' the surprised hybrid asks softly. You tell her about the cave you explored, as well as your suspicions about how the lockbox belongs to her. 'Yes, it does belong to me,' the scaled-woman says, holding out her necklace to show that it indeed matches the symbol on the lockbox. 'I had lost it quite some time ago. Please, I-' She moves toward you but freezes when you instinctively take a step back.";
 			say "     The naga stares at you for a few seconds with fearful eyes, as though you are about to run away. Eventually, she says, 'I... I know that I have wronged you, and you have every right to be suspicious of me, but I promise you that this is not one of my tricks. I figured that someone had taken my lockbox, so I've been going after anyone I encounter in the hopes that I might find it again. And now that it's right in front of me...' She sighs mournfully and looks at you with pleading eyes. 'I'm afraid that I have nothing to trade for it except for my gratitude and a vow to never bother you again. Just...' The naga's voice quivers, and she bows deeply. 'Please, I've been searching for that lockbox for so long, and it is very precious to me. I beg of you, please let me have it.' Despite the hybrid's intimidating form, right now, she looks so vulnerable. It really does seem like that she is genuinely telling you the truth.";
@@ -63,7 +75,7 @@ Instead of resolving a Naga Hybrid:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Give the naga her stuff back.";
 			say "     ([link]N[as]n[end link]) - It's yours now. Finders keepers.";
-			if the player consents:			[Serenity is given lockbox, and player can choose to let her leave the game or invite her back to the bunker]
+			if player consents:			[Serenity is given lockbox, and player can choose to let her leave the game or invite her back to the bunker]
 				LineBreak;
 				say "     The naga raises her head when she hears you approach, and a warm, grateful smile spreads across her face when you allow her to take back her coveted treasure. 'Thank you. I suppose I, at the very least, owe you my name. I'm Serenity,' she says, slowly extending a hand, which you shake as you introduce yourself. 'You don't know how much returning this means to me.' The now-friendly snake glances down at the lockbox. 'On second thought, I do need to check if everything is still here, so would you like to see what all the fuss is about?' Accepting the invitation, you watch as Serenity shifts her body, placing the lockbox on her coils, as though they were a makeshift table. She then fiddles with her necklace until the tip of a key pops out of the bottom, which she promptly uses to open the lockbox, revealing a stack of photographs.";
 				say "     Serenity carefully flips through the photos while you look at them from the side. Many of them are pictures of a man and a woman, most likely a couple, but some of them include a second, younger woman in the group. Serenity holds up one of the pictures with the trio and points to the younger woman. 'As you might have guessed, that's me,' she informs. 'Well, the me before all of this crazy stuff. The other two are my parents.' As the hybrid continues to look through the pictures, you notice that all of the pictures are dated back by at least a few years, so you ask why there doesn't seem to be any recent photos. Serenity's breath hitches from your question. 'Oh, um, well, that's because... My parents... They're not around anymore...' She stops to take a deep breath. 'I was away on a trip at the time... There was a car accident and...' With a sigh, she puts the photos back into the lockbox and gently closes the lid. 'You can see why this lockbox means so much to me.'";
@@ -72,23 +84,26 @@ Instead of resolving a Naga Hybrid:
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Invite Serenity to stay with you.";
 				say "     ([link]N[as]n[end link]) - Let Serenity go.";
-				if the player consents:			[Serenity moves into Grey Abbey]
+				if player consents:			[Serenity moves into Grey Abbey]
 					LineBreak;
 					say "     Serenity smiles when you tell her about the bunker in The Grey Abbey, pleased that you have a safe place of your own. However, one of her brows rise with intrigue when you invite her to stay with you. 'First you return my prized possession, and now you want to take me to your home?' The naga lets out a mock gasp and smirks. 'One might think that you are trying to seduce me. How scandalous.' The coy snake's smile softens into a genuine one. 'In all seriousness though, that is very generous of you. If you truly will have me, then I will be more than happy to move in with you and keep you company.'";
 					now HP of Serenity is 2;
 					move Serenity to Grey Abbey 2F;
 					move player to Grey Abbey 2F;
+					now Resolution of Naga Hybrid is 3; [player had the lockbox and gave it back, Serenity recruited]
 				else:			[Serenity leaves the Dry Plains and the game]
 					LineBreak;
 					say "     You wish Serenity good luck on her journey, and to your surprise, she leans toward you, planting a gentle kiss on your cheek, followed by a playful lick with her forked tongue. 'And good luck to you too[if player is not defaultnamed], [name of player][end if],' Serenity bids. As you part ways with your naga friend, likely for the last time, you are glad that, despite all of the chaos in the city, you still have the mindset to brighten someone's life.";
 					say "[bold type]Your good deed has increased your sanity by 20![roman type][line break]";
 					increase humanity of player by 20;
 					now HP of Serenity is 100;
+					now Resolution of Naga Hybrid is 4; [player had the lockbox and gave it back, Serenity sent along]
 			else:			[Serenity ambushes the player, steals the lockbox, and leaves the game]
 				LineBreak;
 				say "     'I see...' the naga says, looking up at you stone-faced when you reject her plea. 'I suppose that I should have expected your answer, given our previous interactions.' The snake watches you put the lockbox away, not making a single move. You start walking away, but you only make it a few steps before you are knocked to the ground from behind. Snake coils swiftly wrap around you, and you gasp in pain when they begin to squeeze your trapped body. 'I didn't want to do this, but you left me no choice,' the snake-woman coldly states as she tightens her grip even more. Just as it feels like your bones are about to be reduced to dust, you are dropped onto the ground in a pitiful heap. With you writhing in agony, your attacker takes back her lockbox and leaves without a word. Eventually, you are able to get up and hobble away to recover from your injuries. You doubt that you will be seeing the naga again.";
 				decrease HP of player by 30;
 				now HP of Serenity is 100;
+				now Resolution of Naga Hybrid is 5; [Serenity fought and grabbed the box]
 			decrease carried of Lockbox by 1;
 			now Naga Hybrid is resolved;
 		else:
@@ -119,11 +134,11 @@ to say PlainsSerenitySubmit:		[Player hypnotized, gives cunnilingus, and receive
 
 
 to say PlainsSerenityHand:		[Handjob for player if they had food or water]
-	if cocks of player > 0:
+	if player is male:
 		say "     The hybrid gently grabs [if cocks of player > 1]one of your cocks[else]your cock[end if] in her hand and begins pumping up and down, eliciting a moan from you. 'Yes, that's it. My hand is all that I need to bring you to ecstasy,' she croons. 'You will enjoy it so much that you will come find me again and again, just for my simple touch.' You are already leaking pre, slickening the serpent's grip so that her fingers glide across your penis, sending jolts of pleasure through your body. Still trapped in the naga's embrace, you are unable to do anything when you feel your climax draw near, only for it to be denied when the teasing hand stops. The pattern of working you up and then denying your release repeats, and your pleas fall on deaf ears while the snake looks at you with an almost sadistic glee. Finally, after what seems like an eternity, the naga gives you what you want and pumps her hand at a feverish pace. You scream in rapturous delight as your cum spurts out, spraying onto the dirt and parts of the snake's coils.";
 		WaitLineBreak;
 		say "     Your exhausted body is gently lowered to the ground as the coils unwind from you, and you watch while the snake holds up one of her cum-stained fingers up to her mouth, her long, forked tongue flicking out to lick up some of your fluids. 'Mmm, what a delightful taste my prey has,' the naga remarks before sticking the finger into her mouth, letting you get a clear view of her seductively licking and sucking the appendage. By the time she finishes [italic type]cleaning[roman type] the rest of her hand, you can almost feel a fire growing in your loins again. 'Do be sure to have more gifts for the next time you are ready to submit to me. I look forward to you being my prey again.' With that, the captivating reptile waves goodbye and slithers off, her hypnotic control over you fading after a few minutes. As you resume your exploration, you wonder if perhaps you can [bold type]find something else in the Dry Plains[roman type] besides your rations to appease the naga.";
-	else if cunts of player > 0:
+	else if player is female:
 		say "     The hybrid gently sinks her fingers into [if cunts of player > 1]one of your cunts[else]your cunt[end if] and begins pumping up and down, eliciting a moan from you. 'Yes, that's it. My hand is all that I need to bring you to ecstasy,' she croons. 'You will enjoy it so much that you will come find me again and again, just for my simple touch.' You are already dripping, slickening the serpent's grip so that her fingers glide in and out of your pussy, sending jolts of pleasure through your body. Still trapped in the naga's embrace, you are unable to do anything when you feel your climax draw near, only for it to be denied when the teasing hand stops. The pattern of working you up and then denying your release repeats, and your pleas fall on deaf ears while the snake looks at you with an almost sadistic glee. Finally, after what seems like an eternity, the naga gives you what you want and pumps her hand at a feverish pace. You scream in rapturous delight as your femcum spurts out, spraying onto the dirt and parts of the snake's coils.";
 		WaitLineBreak;
 		say "     Your exhausted body is gently lowered to the ground as the coils unwind from you, and you watch while the snake holds up one of her femcum-stained fingers up to her mouth, her long, forked tongue flicking out to lick up some of your fluids. 'Mmm, what a delightful taste my prey has,' the naga remarks before sticking the finger into her mouth, letting you get a clear view of her seductively licking and sucking the appendage. By the time she finishes [italic type]cleaning[roman type] the rest of her hand, you can almost feel a fire growing in your loins again. 'Do be sure to have more gifts for the next time you are ready to submit to me. I look forward to you being my prey again.' With that, the captivating reptile waves goodbye and slithers off, her hypnotic control over you fading after a few minutes. As you resume your exploration, you wonder if perhaps you can [bold type]find something else in the Dry Plains[roman type] besides your rations to appease the naga.";
@@ -135,8 +150,16 @@ to say PlainsSerenityHand:		[Handjob for player if they had food or water]
 
 Section 2 - Large Cave
 
+Table of GameEventIDs (continued)
+Object	Name
+Large Cave	"Large Cave"
 
-Large Cave is a situation. It is resolved.
+Large Cave is a situation.
+Large Cave is inactive.
+Prereq1 of Large Cave is Naga Hybrid.
+Prereq1ResolvedMandatory of Large Cave is false.
+Prereq1Resolution of Large Cave is { 1, 2 }
+
 The sarea of Large Cave is "Plains".
 
 Instead of resolving Large Cave:
@@ -145,7 +168,7 @@ Instead of resolving Large Cave:
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go exploring.";
 	say "     ([link]N[as]n[end link]) - Play it safe.";
-	if the player consents:			[Exploring the cave]
+	if player consents:			[Exploring the cave]
 		LineBreak;
 		say "     You carefully venture into the cave, moving quietly and keeping alert for any surprise attacks. There are no branching paths as you explore the cave, and after a few minutes, you find yourself walking into a large cavern. With even more cum markings all over the place, you believe that you have found the lair of the mysterious beast, who seems to be out at the moment. At first glance, you don't see anything that really catches your eye, but a quick circle of the chamber reveals a camping tent partially hidden behind some rubble. Unfortunately, the tent and any potentially useful items inside of it have been drenched in the beast's cum at some point in time, and you really do not want to sift through the infected mess. At least there's a backpack to the side that managed to escape unscathed.";
 		say "     With no sign of any danger, you search the backpack, finding it packed with shiny objects, trophies, and various trinkets. It seems that the owner of this camp was either a looter or a thief, and they likely had to abandon this backpack when the current occupant moved into the cave. While it is tempting to keep the small fortune worth of stuff, they have little practical use in helping you survive the nanite-infested city and would just add unnecessary weight to lug around. Discarding the valuables, you dig through the rest of the backpack and find useful supplies in the form of some food and water, which you set aside to take later. Near the bottom of the backpack, you find a lockbox that has a picture of a heart with a snake around it on the cover. Staring at the decoration because it looks familiar, it takes a moment for you to recall that the mysterious rattlesnake and cobra hybrid was wearing a necklace with the same symbol. You try to open the container, but unsurprisingly, it looks like you need a key to unlock it.";
@@ -229,7 +252,7 @@ Instead of conversing the Serenity:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Nevermind[as]100[end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -248,14 +271,10 @@ Instead of conversing the Serenity:
 					if nam is "Her urges":
 						say "[SerenityTalkVore]";
 					wait for any key;
-			else if calcnumber is 100:
-				say "Break off the conversation?";
-				if the player consents:
-					now sextablerun is 1;
-					say "     You step back from the naga, shaking your head slightly. Serenity shrugs and returns to reading her book.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     You step back from the naga, shaking your head slightly. Serenity shrugs and returns to reading her book.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -274,7 +293,7 @@ to say SerenityTalkVore: [Opens vore scenes]
 
 instead of fucking the Serenity:
 	if HP of Serenity < 3:		[Try to have snek sex before talking to her]
-		say "     Serenity stares at you with an amused grin when you propose to have some sex with her. With a playful roll of her eyes, she says, 'I am aware of how unresistable I am to you, but perhaps you could hold your libido in check for a few minutes so that we can talk about my new living arrangement with you.'";
+		say "     Serenity stares at you with an amused grin when you propose to have some sex with her. With a playful roll of her eyes, she says, 'I am aware of how irresistible I am to you, but perhaps you could hold your libido in check for a few minutes so that we can talk about my new living arrangement with you.'";
 	else if (lastfuck of Serenity - turns < 6): [Had sex in the last 18 hours = 6 turns]
 		say "     'As tempting as it is to play with you again, bending you to my whim is tiring work,' Serenity says. 'Let me rest a bit more, and I suggest that you do the same. You're going to need it.'";
 	else:
@@ -287,7 +306,7 @@ to say SerenitySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Penetrate Serenity's pussy";
 		now sortorder entry is 1;
@@ -298,13 +317,13 @@ to say SerenitySexMenu:
 	now sortorder entry is 2;
 	now description entry is "Serenity has you service her cunt";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Get your cock serviced";
 		now sortorder entry is 3;
 		now description entry is "Serenity tends to your cock with her hands and tongue";
 	[]
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Get your cunt serviced";
 		now sortorder entry is 4;
@@ -319,7 +338,7 @@ to say SerenitySexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -343,16 +362,12 @@ to say SerenitySexMenu:
 					say "[SerenityFeeds]";
 				now lastfuck of Serenity is turns;
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     Serenity lets out a disappointed sigh when you change your mind, and after a few pulls, you free your leg out of her coil and step back.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Serenity lets out a disappointed sigh when you change your mind, and after a few pulls, you free your leg out of her coil and step back.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say SerenitySex1:		[Serenity takes your cock into her cunt]
@@ -367,10 +382,10 @@ to say SerenitySex1:		[Serenity takes your cock into her cunt]
 to say SerenitySex2:		[Serenity has you service her cunt]
 	say "     [SerenitySexIntro]";
 	say "     Serenity maneuvers you downwards until you are inches away from her slit. With one hand, she spreads her slit open, revealing the pink abyss that is her pussy. A wave of her musk hits you, urging you to dive right on in and taste the tantalizing cunt. 'A marvelous sight, isn't it?' the naga says, watching how you can't take your eyes off of her glorious folds. 'I know that you want to worship it, and you will, in a moment. For now, I just want you to take a deep breath.' You do as you're instructed, and you end up getting another lungful of the heady snake musk. 'Yes, that's it,' Serenity croons. 'Take in my scent. Let it wash over you, enter you. Revel in it so that you learn to adore it because I assure you, it will become very familiar to you as we spend our time together.' Basking in the naga's essence, your hypnosis-induced mind is clouded even further, making you lust for only one thing. Seeing your need, Serenity leans back and waves a hand over her cunt. 'Now, you are ready.'";
-	say "     The coils around your body loosen slightly, allowing you to rush forward and plant your face into the snake's canal. The wonderful musk only grows stronger with proximity, igniting your own arousal to maddening levels, but your lust is trumped by the desire to drag your tongue across every inch of the seductive snake's snatch to both pleasure the naga and for you to drink in the succulent juices. 'Feel my embrace. Explore every inch of me. Savor my taste on your tongue. Relish in the pleasure that you're giving me,' Serenity intones, her voice clearly echoing in your mind despite your noisy slurps. 'You adore the attention I lavish upon you, and you adore tending to me. My needs are great, and you are the only one who can satisfy them. ' Spurred by the seductive words, you drive your face deeper into the warm folds, intent on finding the naga's most sensitive spots. Even when you pull back for your air, your ceaseless ministrations flick and tease her clit before you dive right back in.";
+	say "     The coils around your body loosen slightly, allowing you to rush forward and plant your face into the snake's canal. The wonderful musk only grows stronger with proximity, igniting your own arousal to maddening levels, but your lust is trumped by the desire to drag your tongue across every inch of the seductive snake's snatch to both pleasure the naga and for you to drink in the succulent juices. 'Feel my embrace. Explore every inch of me. Savor my taste on your tongue. Relish in the pleasure that you're giving me,' Serenity intones, her voice clearly echoing in your mind despite your noisy slurps. 'You adore the attention I lavish upon you, and you adore tending to me. My needs are great, and you are the only one who can satisfy them.' Spurred by the seductive words, you drive your face deeper into the warm folds, intent on finding the naga's most sensitive spots. Even when you pull back for your air, your ceaseless ministrations flick and tease her clit before you dive right back in.";
 	WaitLineBreak;
-	say "     'You are doing a splendid job,' your serpentine lover coos as she pets your head, the loving gesture only increasing your drive to tend to the sexy reptile. 'Your devotion is admirable, but there's no need for you to neglect yourself. Your commitment to me has left you needing your own release. Feel free to tend to yourself, if you think that you can continue your duty to me.' Serenity slides the coil that is over your crotch away, revealing your [if cocks of player > 0]rock-hard cock[else if cunts of player > 0]own cunt dripping with arousal[else]body quivering with need[end if]. Given permission, you reach a hand down to your [if cocks of player > 0]rod[else if cunts of player > 0]pussy[else]rear[end if]. Your heightened arousal makes your self-service drive you wild, which you channel into worshipping the pussy of the serpent. Between your hand and the satisfaction of pleasing the one who brought you to this state, your body floods with euphoria, and you strive to push the both of you over the edge.";
-	say "     Eventually, your loving licks interspersed with sucking on the naga's clit brings Serenity to orgasm, her musky honey splashing onto your face as she hisses in satisfaction. The intoxicating aroma from the snake femcum is overwhelming, and you reach your climax as well, your [if cocks of player > 0]cock spurting out cum onto the serpent's scales[else if cunts of player > 0]own femcum spurting onto the serpent's scales[else]body spasming from the pleasure[end if]. With your ministrations coming to a halt, you are slowly dragged away from the captivating cunt and raised towards Serenity's face, who then playfully flicks her tongue over your face. 'That was simply divine,' she remarks, gently licking away her juices off of you. 'And now, it is time for you to rest. Sleep now, my dear[if player is not defaultnamed] [name of player][end if], and when you wake, you will be back to your wonderful self.' Following the suggestion, both out of your own need and because it was Serenity's command, you close your eyes and drift off to sleep.";
+	say "     'You are doing a splendid job,' your serpentine lover coos as she pets your head, the loving gesture only increasing your drive to tend to the sexy reptile. 'Your devotion is admirable, but there's no need for you to neglect yourself. Your commitment to me has left you needing your own release. Feel free to tend to yourself, if you think that you can continue your duty to me.' Serenity slides the coil that is over your crotch away, revealing your [if player is male]rock-hard cock[else if player is female]own cunt dripping with arousal[else]body quivering with need[end if]. Given permission, you reach a hand down to your [if player is male]rod[else if player is female]pussy[else]rear[end if]. Your heightened arousal makes your self-service drive you wild, which you channel into worshipping the pussy of the serpent. Between your hand and the satisfaction of pleasing the one who brought you to this state, your body floods with euphoria, and you strive to push the both of you over the edge.";
+	say "     Eventually, your loving licks interspersed with sucking on the naga's clit brings Serenity to orgasm, her musky honey splashing onto your face as she hisses in satisfaction. The intoxicating aroma from the snake femcum is overwhelming, and you reach your climax as well, your [if player is male]cock spurting out cum onto the serpent's scales[else if player is female]own femcum spurting onto the serpent's scales[else]body spasming from the pleasure[end if]. With your ministrations coming to a halt, you are slowly dragged away from the captivating cunt and raised towards Serenity's face, who then playfully flicks her tongue over your face. 'That was simply divine,' she remarks, gently licking away her juices off of you. 'And now, it is time for you to rest. Sleep now, my dear[if player is not defaultnamed] [name of player][end if], and when you wake, you will be back to your wonderful self.' Following the suggestion, both out of your own need and because it was Serenity's command, you close your eyes and drift off to sleep.";
 	say "     [SerenitySexOutro]";
 
 to say SerenitySex3:		[Serenity gives a handjob and blowjob]
@@ -379,21 +394,21 @@ to say SerenitySex3:		[Serenity gives a handjob and blowjob]
 	say "     Serenity grasps your meaty tool with her whole hand and slowly slides up and down your length, each stroke a euphoric treat to you. It does not take long before pre leaks out of your rod, slickening the serpent's grip and allowing her to speed up her pumping. Trapped in both a haze of pleasure and the coils of the serpent, you can do nothing but submit to the naga's whims as she rapidly brings you closer to your climax. Suddenly, the wondrous sensations stop, moments away from your sweet release, when the heavenly hand withdraws, and the serpent chuckles as you whine desperately in need. 'As much fun as you're having, I have something far better in mind, something that I think the both of us will find positively [italic type]delicious[roman type],' Serenity explains as her forked tongue slips out of her mouth and seductively licks her lip. By the time you realize what the snake has planned for you, she has lowered her head toward your cock, taking it into her mouth.";
 	WaitLineBreak;
 	say "     You gasp as your dick is enveloped in the warm, slick depths of the naga's maw. Serenity's tongue is quick to tend to you, the long appendage swirling and dragging all along your length in a whirl of sensual licks. Before long, your scaly lover soon starts moving her head back and forth, her lips gliding effortlessly as they caress your dick alongside her tongue, all the while keeping her entrancing gaze right on your face as it contorts from the overwhelming pleasure. Your breaths become ragged as you approach your climax once again, and this time, Serenity shows no sign of stopping her ministrations. Moments away from shooting your load, the naga plunges your dick deep into her mouth, and her dexterous tongue swiftly coils around your twitching shaft, much like how her body has coiled around the rest of your body. The tongue-cocoon tugging and constricting around your rod is a new surge of pleasure on your already-overloaded senses, and with a loud groan, you cum right into the serpent's maw.";
-	say "     Exhausted from your explosive release, you go slack in your scaly prison and watch as Serenity's head rises back up to give you a satisfied smirk. Instead of saying anything, she opens her mouth, showing off the load you left inside of her, before closing her mouth and tilting her head back. When she shows you her open mouth again, not a trace of your cum remains. 'Simply delicious,' she compliments, lavisciously licking her lips. 'I am tempted to have another serving.' Despite your exhaustion, you find yourself nodding fervently, eager to please the naga, which makes Serenity chuckle and pat your head. 'I shall save it for another time. A delicacy like you must be enjoyed in moderation. For now though, I imagine that my methods must've been quite exhausting for you, so sleep, my dear[if player is not defaultnamed] [name of player][end if], and when you wake, you will be back to your wonderful self.' Following the suggestion, both out of your own need and because it was Serenity's command, you close your eyes and drift off to sleep.";
+	say "     Exhausted from your explosive release, you go slack in your scaly prison and watch as Serenity's head rises back up to give you a satisfied smirk. Instead of saying anything, she opens her mouth, showing off the load you left inside of her, before closing her mouth and tilting her head back. When she shows you her open mouth again, not a trace of your cum remains. 'Simply delicious,' she compliments, lasciviously licking her lips. 'I am tempted to have another serving.' Despite your exhaustion, you find yourself nodding fervently, eager to please the naga, which makes Serenity chuckle and pat your head. 'I shall save it for another time. A delicacy like you must be enjoyed in moderation. For now though, I imagine that my methods must've been quite exhausting for you, so sleep, my dear[if player is not defaultnamed] [name of player][end if], and when you wake, you will be back to your wonderful self.' Following the suggestion, both out of your own need and because it was Serenity's command, you close your eyes and drift off to sleep.";
 	say "     [SerenitySexOutro]";
 
 to say SerenitySex4:		[Serenity gives a handjob and cunnilingus]
 	say "     [SerenitySexIntro]";
-	say "     Serenity slips her hand in between her coils, grinning wickedly, and you gasp when she slides her fingers down your body and brushes your cunt[smn]. 'My hand feels wonderful, doesn't it?' the smirking serpent asks, making a gap in her coils to reveal your groin. She then uses a finger to trace along the lips of [if cunts of player > 1]one of your pussies[else]your pussy[end if]. 'It's so warm and smooth, more than capable of sending you into the throes of ecstasy. You crave for its touch, to let it give you pleasure beyond your wildest imagination.' As the naga's words seep into your mind, she slowly sinks her index finger inside of your cunt, sending a spike of delight into your core. Your moans fill the room as you try to drive the wonderful finger deeper, but your scaly prison holds you steady. 'I do so love watching you squirm,' Serenity teases, feeling your struggles as she takes her finger out of you to teases the edges of your vagina. 'And you love it when I make you squirm, so why don't we make things more enjoyable for the both of us?'";
+	say "     Serenity slips her hand in between her coils, grinning wickedly, and you gasp when she slides her fingers down your body and brushes your cunt[sfn]. 'My hand feels wonderful, doesn't it?' the smirking serpent asks, making a gap in her coils to reveal your groin. She then uses a finger to trace along the lips of [if cunts of player > 1]one of your pussies[else]your pussy[end if]. 'It's so warm and smooth, more than capable of sending you into the throes of ecstasy. You crave for its touch, to let it give you pleasure beyond your wildest imagination.' As the naga's words seep into your mind, she slowly sinks her index finger inside of your cunt, sending a spike of delight into your core. Your moans fill the room as you try to drive the wonderful finger deeper, but your scaly prison holds you steady. 'I do so love watching you squirm,' Serenity teases, feeling your struggles as she takes her finger out of you to teases the edges of your vagina. 'And you love it when I make you squirm, so why don't we make things more enjoyable for the both of us?'";
 	say "     Serenity enters you again, this time adding her other fingers, minus the thumb. As she thrusts her fingers in and out of your pussy, her thumb occasionally flicks across your clit, adding spikes of ecstasy. Your cunt leaks profusely under the euphoric treatment, slickening the serpent's fingers, allowing her to gradually speed up her pumping. Trapped in both a haze of pleasure and the coils of the serpent, you can do nothing but submit to the naga's whims as she rapidly brings you closer to your climax. Suddenly, the wondrous sensations stop, moments away from your sweet release, when the heavenly hand withdraws, and the serpent chuckles as you whine desperately in need. 'As much fun as you're having, I have something far better in mind, something that I think the both of us will find positively [italic type]delicious[roman type],' Serenity explains as her forked tongue slips out of her mouth and seductively licks her lip. By the time you realize what the snake has planned for you, she has lowered her head toward your cunt.";
 	WaitLineBreak;
 	say "     You gasp as you feel the naga's tongue enters your passage. In a whirl of sensual licks, Serenity's tongue seemingly knowing where to strike to give you the most pleasure. She tends to every inch of your pussy, even reaching into spots that rarely get, and also sorely need, attention. As your scaly lover continues to drag across your sensitive walls, her hands glide over the exposed portions of your body, all the while keeping her entrancing gaze right on your face as it contorts from the overwhelming pleasure. Your breaths become ragged as you approach your climax once again, and this time, Serenity shows no sign of stopping her ministrations. Moments away from your release, the naga plunges her tongue deep inside of you, and one of her hands begins to play with your clit at the same time. The new surge of pleasure wreaks havoc on your already-overloaded senses, and you are finally sent teetering over the brink when the exploring tongue finds and attacks your G-spot. With a loud groan, you spurt femcum into the serpent's maw.";
-	say "     Exhausted from your explosive release, you go slack in your scaly prison and watch as Serenity's head rises back up to give you a satisfied smirk, even when her face was plastered by your juices. Instead of saying anything, her tongue flicks out, licking up your femcum until only a few spots in hard to reach places remain. 'Simply delicious,' she compliments, lavisciously licking her lips. 'I am tempted to have another serving.' Despite your exhaustion, you find yourself nodding fervently, eager to please the naga, which makes Serenity chuckle and pat your head. 'I shall save it for another time. A delicacy like you must be enjoyed in moderation. For now though, I imagine that my methods must've been quite exhausting for you, so sleep, my dear[if player is not defaultnamed] [name of player][end if], and when you wake, you will be back to your wonderful self.' Following the suggestion, both out of your own need and because it was Serenity's command, you close your eyes and drift off to sleep.";
+	say "     Exhausted from your explosive release, you go slack in your scaly prison and watch as Serenity's head rises back up to give you a satisfied smirk, even when her face was plastered by your juices. Instead of saying anything, her tongue flicks out, licking up your femcum until only a few spots in hard to reach places remain. 'Simply delicious,' she compliments, lasciviously licking her lips. 'I am tempted to have another serving.' Despite your exhaustion, you find yourself nodding fervently, eager to please the naga, which makes Serenity chuckle and pat your head. 'I shall save it for another time. A delicacy like you must be enjoyed in moderation. For now though, I imagine that my methods must've been quite exhausting for you, so sleep, my dear[if player is not defaultnamed] [name of player][end if], and when you wake, you will be back to your wonderful self.' Following the suggestion, both out of your own need and because it was Serenity's command, you close your eyes and drift off to sleep.";
 	say "     [SerenitySexOutro]";
 
 to say SerenitySexIntro:		[Intros before sex scene]
 	say "     'Off with your clothes then. You won't be needing them, as I will be the one who will keep you warm,' Serenity instructs eagerly. Shedding your clothes, you barely have time to put them aside before she pulls you closer with her tail as her coils start circling both of your legs. You gasp at the feeling of the soft, scaly flesh sliding across your body as more and more of you is covered by the naga until the coils rest at your neck, her rattle tail resting right beside your head. 'You look lovely, [if player is not defaultnamed][name of player][else]dear[end if]. All wrapped up like a gift for me,' Serenity teases, her head drawing close to you. 'I'm going to have so much fun playing with you, and all you have to do is [italic type]relax[roman type].' The sexy serpent hisses the last word into your ear at the same time her tail rattles into the other, and the two-pronged attack on your hearing leaves your mind open to the snake.";
-	say "     'It's just you and me now,' Serenity says, her voice and rattling seeming to come from all directions. 'Be a [if cocks of player > 0]good boy[else if cunts of player > 0]good girl[else]dear[end if] and pay close attention to my voice, alright?' You nod without hesitation, prompting the entrancing snake to continue. 'Now, take a deep breath. Forget your responsibilities. Forget your worries. Forget your fears. Empty your mind of everything except my guiding words and our desire for each other. I only want to care for you, to give you pleasure beyond imagination, and all that I ask is for you to obey my commands. Submit yourself to me, and I will show you blisssss.' Again, Serenity hisses into your ear along with a powerful shake of her tail, ingraining her will into your malleable mind, and the world fades away as you sink into the naga's embrace, both literally and figuratively.";
+	say "     'It's just you and me now,' Serenity says, her voice and rattling seeming to come from all directions. 'Be a [if player is male]good boy[else if player is female]good girl[else]dear[end if] and pay close attention to my voice, alright?' You nod without hesitation, prompting the entrancing snake to continue. 'Now, take a deep breath. Forget your responsibilities. Forget your worries. Forget your fears. Empty your mind of everything except my guiding words and our desire for each other. I only want to care for you, to give you pleasure beyond imagination, and all that I ask is for you to obey my commands. Submit yourself to me, and I will show you blisssss.' Again, Serenity hisses into your ear along with a powerful shake of her tail, ingraining her will into your malleable mind, and the world fades away as you sink into the naga's embrace, both literally and figuratively.";
 	WaitLineBreak;
 
 to say SerenitySexOutro:		[Outros after sex scene]
@@ -414,18 +429,21 @@ to say SerenityFeeds:		[Vore Scenes]
 		now SerenityHunger is 1;
 	else if SerenityHunger is 1:
 		say "     'I do so enjoyed my last meal, and I have no doubt that this one will be so much better.' Serenity says with a smirk, looping a coil around your body to pull you closer. It seems that she's back to her usual teasing now that she is more comfortable with eating you. Like before, your hungry friend helps you take off your gear, except this time, she's much more hands-on. As you expose yourself, the ravenous reptile pulls your back into her chest, her hands reaching over your shoulders to grope your body. 'Such a lovely little morsel you are,' the naga whispers, her words intertwining with her enchanting rattle. 'I cannot wait to have you inside of me again, and I bet that you can't wait either. Within my supple flesh, you'll be kept warm and safe, and all I ask is for you to be mine.' As the last of your gear is tossed aside, leaving you naked before the naga, her sinuous form promptly takes you into its embrace, coils of muscle and scales looping around you.";
-		say "     You are unable to tear your eyes away from Serenity's piercing gaze as she continues to tell you how wondrous it will be to be a part of her until only your head remains above her coils. So entranced by her seduction, you don't struggle at all when the snake's maw descends upon you, engulfing your head with ease. She spends a few moments to use her tongue to tease and taste your face, before proceeding to devour the rest of you. The coils around you slowly unravel, only to replaced by the damp depths of the naga's maw. As the upper half of your body starts sliding down her throat, you notice that even though you've been through this same passage before, the slick walls hugging you feels more intimate and sensual than before. It's hard to say whether that is because you're you're still under Serenity's hypnosis or simply because you're acclimating to the bizarre activity. Regardless, you can't help but moan in pleasure as the throat walls clench down on you.";
+		say "     You are unable to tear your eyes away from Serenity's piercing gaze as she continues to tell you how wondrous it will be to be a part of her until only your head remains above her coils. So entranced by her seduction, you don't struggle at all when the snake's maw descends upon you, engulfing your head with ease. She spends a few moments to use her tongue to tease and taste your face, before proceeding to devour the rest of you. The coils around you slowly unravel, only to replaced by the damp depths of the naga's maw. As the upper half of your body starts sliding down her throat, you notice that even though you've been through this same passage before, the slick walls hugging you feels more intimate and sensual than before. It's hard to say whether that is because you're still under Serenity's hypnosis or simply because you're acclimating to the bizarre activity. Regardless, you can't help but moan in pleasure as the throat walls clench down on you.";
 		WaitLineBreak;
-		say "     Suddenly, your descent stops when your crotch enters the snake's mouth, and you gasp as Serenity's tongue [if cocks of player > 0]wraps around your cock[else if cunts of player > 0]thrusts inside of your cunt[else]thrusts inside of your rear[end if]. With your upper half being subjected to the pulsating throat and your lower half being tended by the teasing tongue, it doesn't take long for the dual assault on your senses become overwhelming, and your body shakes in ecstasy[if cocks of player > 0], your cum raining down on you as Serenity gulps it down[else if cunts of player > 0], your juices raining down on you as Serenity gulps it down[end if]. Even when you come down from your climax, the ravenous serpent's throat continues to constrict around you, as though trying to squeeze out one more orgasm from you. Tired from the ordeal, you barely notice when Serenity tilts her head up, resuming your journey into the dark depths.";
+		say "     Suddenly, your descent stops when your crotch enters the snake's mouth, and you gasp as Serenity's tongue [if player is male]wraps around your cock[else if player is female]thrusts inside of your cunt[else]thrusts inside of your rear[end if]. With your upper half being subjected to the pulsating throat and your lower half being tended by the teasing tongue, it doesn't take long for the dual assault on your senses become overwhelming, and your body shakes in ecstasy[if player is male], your cum raining down on you as Serenity gulps it down[else if player is female], your juices raining down on you as Serenity gulps it down[end if]. Even when you come down from your climax, the ravenous serpent's throat continues to constrict around you, as though trying to squeeze out one more orgasm from you. Tired from the ordeal, you barely notice when Serenity tilts her head up, resuming your journey into the dark depths.";
 		say "     Carried through the living tunnel, you eventually come to a rest in the serpent's stomach. While your first stay in the tight confines was enjoyable enough, the shifting walls feel softer this time around, and the air even seems to be less stifling. The constant rubbing coming from all around feels wondrous and better than any massage as they knead away your aches and stress. 'Delicious as usual,' you hear Serenity say along with a moan of satisfaction. 'Do get comfy, my little morsel. It feels heavenly to have you inside of me, so our time together is going to be longer than before. Much longer.' Even though you could think of several things that you probably should be attending to, the thought of resting inside of this writhing space sounds more appealing. With nothing to do except listen to the symphony of shifting flesh and enjoying the constant stimulation, you relax inside of the snake's interior, falling asleep in the twisted, yet pleasurable, confines.";
-		say "     You are awoken by the stomach walls suddenly clenching tightly on your body, dragging you in the direction of your legs, and you soon realise that your time inside of the naga is up. As you wait for your exit, you get enjoy the remaining moments of the naga's luscious flesh caressing your body as you're sliding along. You even get the sudden urge to press yourself against the slick walls to better feel their sensual touch. When you are expelled from the snake's mouth, you land on a pile of pillows, just like before, and Serenity is quick to tend to you with some towels. 'Did you enjoy yourself? I surely did,' she teases while she dries you off. 'You do a wonderful job at being my food, and I could not resist keeping you for several hours. Maybe for the next time you treat me to a meal, I'll make you mine for even longer.' As you prepare to leave, you find yourself already thinking about the next time you can enter the naga's inviting depths.";
+		say "     You are awoken by the stomach walls suddenly clenching tightly on your body, dragging you in the direction of your legs, and you soon realize that your time inside of the naga is up. As you wait for your exit, you get enjoy the remaining moments of the naga's luscious flesh caressing your body as you're sliding along. You even get the sudden urge to press yourself against the slick walls to better feel their sensual touch. When you are expelled from the snake's mouth, you land on a pile of pillows, just like before, and Serenity is quick to tend to you with some towels. 'Did you enjoy yourself? I surely did,' she teases while she dries you off. 'You do a wonderful job at being my food, and I could not resist keeping you for several hours. Maybe for the next time you treat me to a meal, I'll make you mine for even longer.' As you prepare to leave, you find yourself already thinking about the next time you can enter the naga's inviting depths.";
 		now SerenityHunger is 2;
 	else:
-		say "     A devious grin crosses Serenity's face, and she lunges right at you, tossing you into a pile of cushions. Before you can get back up, the snake's coils descend upon you, wrapping you in a cocoon of scales. You instinctively struggle from the sudden attack, but you are promptly subdued as the naga plays her entrancing rattle. 'Now, now, we'll have none of that,' Serenity whispers, her hood expanding to dominate your vision, relaxing you even further. 'That's it. No need for any struggles. You are safe with me, but we know that I can offer you so much more. I can see it in your eyes. You crave for my warm embrace. The world can be such a scary place so that's why you want to be tucked away inside of me. You'll be safe with me, hidden away in a chamber of bliss, and you'll forget all of your worries. All you have to do is give yourself to me.'";
-		say "     Even before you offered yourself to Serenity, a part of you was already longing to retake your place in her stomach, and now that you're under her spell, your desire has been magnified. In your addled state, you aren't sure how or when you got naked, but it is of little concern as you reverently watch Serenity loom over you. The snake flicks her tongue across your face, and although the cool touch feels pleasant, it is only a small taste of what is soon to come. When the naga finally opens her mouth, you can't help but moan in wanton need. However, instead of proceeding with her meal, Serenity remains in front of you, and her coils relax their grip on you. It becomes clear what she wants when one of her fingers beckons you forward. Taking the invitation, you lean forward, steadily moving your head into the welcoming maw. A warm breath of air makes you shiver in anticipation, spurring you to hasten your trip into the dark depths.";
+		if a random chance of 1 in 2 succeeds or (player is kinky and a random chance of 3 in 4 succeeds):
+			say "     Serenity chuckles softly when you give her permission to eat you. 'Time and time again you have come to fill my belly,' she says as her bewitching rattle brings you under her influence. 'Perhaps I should indulge your attachment to me and make this stay with me more... [italic type]permanent[roman type].' Even if it's just because of the naga's glamor, the fatal implications makes you quiver with lust, an act that is swiftly noticed by your mistress. 'An enticing prospect, is it not?' the snake croons. 'You would give yourself fully to me, to melt away in eternal bliss, and you would stay with me forever. You would become a part of something far greater as you become one with me.' Serenity smirks maliciously at your eager nods and wanton moans, but her smile softens when she gently caresses your cheeks. 'But I would miss that cute, enthralled face of yours too much, so you're going to have to settle for just a brief stay within me.' Despite the change of plans, you have no problem with agreeing to whatever whim your scaly lover wants.";
+		else:
+			say "     A devious grin crosses Serenity's face, and she lunges right at you, tossing you into a pile of cushions. Before you can get back up, the snake's coils descend upon you, wrapping you in a cocoon of scales. You instinctively struggle from the sudden attack, but you are promptly subdued as the naga plays her entrancing rattle. 'Now, now, we'll have none of that,' Serenity whispers, her hood expanding to dominate your vision, relaxing you even further. 'That's it. No need for any struggles. You are safe with me, but we know that I can offer you so much more. I can see it in your eyes. You crave for my warm embrace. The world can be such a scary place so that's why you want to be tucked away inside of me. You'll be safe with me, hidden away in a chamber of bliss, and you'll forget all of your worries. All you have to do is give yourself to me.'";
+		say "     Even before you had offered yourself to Serenity, a part of you was already longing to retake your place in her stomach, and now that you're under her spell, your desire has been magnified. In your addled state, you aren't sure how or when you got naked, but it is of little concern as you reverently watch Serenity loom over you. The snake flicks her tongue across your face, and although the cool touch feels pleasant, it is only a small taste of what is soon to come. When the naga finally opens her mouth, you can't help but moan in wanton need. However, instead of proceeding with her meal, Serenity remains in front of you, and her coils relax their grip on you. It becomes clear what she wants when one of her fingers beckons you forward. Taking the invitation, you lean forward, steadily moving your head into the welcoming maw. A warm breath of air makes you shiver in anticipation, spurring you to hasten your trip into the dark depths.";
 		WaitLineBreak;
-		say "     As your head enters the serpent's throat, you suddenly feel the rest of your body being lifted into the air, Serenity apparently unable to resist gulping you down any longer. Delving into the naga's throat, the familiar walls start caressing you, sending tingles of pleasure through your body. The supple flesh grind against your [if cocks of player > 0]cock[smn], and in your already-aroused state, you soon coat the pulsating walls with your cum[else if cunts of player > 0]cunt[smn], and in your already-aroused state, you soon coat the pulsating walls with your juices[else]crotch, and in your already-aroused state, your squirms of pleasure are restrained by the constricting throat[end if]. Eventually, you arrive in the stomach of the beast. Despite your recent orgasm, the churning walls around you are already building you up again. The constant stimulation is enhanced when you feel Serenity push down on [if cocks of player > 0]your cock[smn][else if cunts of player > 0]your cunt[smn][else]you[end if]. As if knowing exactly where to press or rub the bulge you're making in her coils, Serenity bring you to another climax. Exhausted from the trip and your dual release, you soon drift off into a restful sleep.";
-		say "     When you come to, you are shrouded in darkness, but the surrounding gurgles and feeling of flesh pressing into you tells you that you're still residing inside of your hungry friend. 'Finally awake in there?' Serenity asks when she notices your movements. 'I do hope that you're comfortable in there because I'm not letting you out anytime soon, although, I suppose if you make enough of a fuss, I guess I could let you free.' With Serenity's hypnosis having faded away during your nap, the thought of getting out and continuing your explorations comes to mind. However, it's hard to deny the pleasures of the naga's stomach kneading away your stress and even building up your arousal. Surely there isn't any harm in staying in these odd, but soothing, confines for a bit longer, right?";
+		say "     As your head enters the serpent's throat, you suddenly feel the rest of your body being lifted into the air, Serenity apparently unable to resist gulping you down any longer. Delving into the naga's throat, the familiar walls start caressing you, sending tingles of pleasure through your body. The supple flesh grind against your [if player is male]cock[smn], and in your already-aroused state, you soon coat the pulsating walls with your cum[else if player is female]cunt[sfn], and in your already-aroused state, you soon coat the pulsating walls with your juices[else]crotch, and in your already-aroused state, your squirms of pleasure are restrained by the constricting throat[end if]. Eventually, you arrive in the stomach of the beast. Despite your recent orgasm, the churning walls around you are already building you up again. The constant stimulation is enhanced when you feel Serenity push down on [if player is male]your cock[smn][else if player is female]your cunt[sfn][else]you[end if]. As if knowing exactly where to press or rub the bulge you're making in her coils, Serenity bring you to another climax. Exhausted from the trip and your dual release, you soon drift off into a restful sleep.";
+		say "     When you come to, you are shrouded in darkness, but the surrounding gurgles and feeling of flesh pressing into you tells you that you're still residing inside of your hungry friend. 'Finally awake in there?' Serenity asks when she notices your movements. 'I do hope that you're comfortable in there, because I'm not letting you out anytime soon. Although, I suppose if you make enough of a fuss, I guess I could let you free.' With Serenity's hypnosis having faded away during your nap, the thought of getting out and continuing your explorations comes to mind. However, it's hard to deny the pleasures of the naga's stomach kneading away your stress and even building up your arousal. Surely there isn't any harm in staying in these odd, but soothing, confines for a bit longer, right?";
 		WaitLineBreak;
 		SerenityBind;
 
@@ -435,14 +453,14 @@ Section 5 - Bound State
 to SerenityBind:
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if humanity of player < 50:
 			now obliging is true;
 		checkboundrecover;
 		if clearnomore is 0, clear the screen;
 		if lustatt > 99:
-			say "     Overtaken by lust, you [if cocks of player > 0]press your cock[smn] against the stomach walls, rubbing into the supple flesh, until you reach your climax, your cum splashing all over yourself and the surrounding walls[else if cunts of player > 0]press your cunt[smn] against the stomach walls, rubbing into the supple flesh, until you reach your climax, your juices splashing all over yourself and the surrounding walls[else]vigorously rub yourself into the supple flesh until your body is racked with orgasmic pleasure[end if]. Your mind somewhat cleared by your release, you wonder if you should remain inside of the naga to let her stomach bring you to another satisfying climax.";
+			say "     Overtaken by lust, you [if player is male]press your cock[smn] against the stomach walls, rubbing into the supple flesh until you reach your climax, your cum splashing all over yourself and the surrounding walls[else if player is female]press your cunt[sfn] against the stomach walls, rubbing into the supple flesh until you reach your climax, your juices splashing all over yourself and the surrounding walls[else]vigorously rub yourself into the supple flesh until your body is racked with orgasmic pleasure[end if]. Your mind somewhat cleared by your release, you wonder if you should remain inside of the naga to let her stomach bring you to another satisfying climax.";
 			LineBreak;
 			now struggleatt is 0;
 			if libido of player > 25, decrease libido of player by (libido of player / 10) + 1;
@@ -460,13 +478,13 @@ to SerenityBind:
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [SerenityStruggle]";
 		if humanity of player < 1:
 			LineBreak;
-			say "     As the snake's stomach continues to grind your helpless form, thoughts of struggling fade away until even the desire to leave the strange, but comforting, confines completely disappear. Everything else since entering this wonderous haven become little more than afterthoughts as you let the pulsing walls have their way with you. With a moan of delight from the encompassing walls keeping you in a constant state of bliss, you give in to your surroundings. You aren't sure how long has passed since you submitted to the twisting flesh, not that you really care, but when the stomach walls suddenly lurch, you know that Serenity is trying to expel you from her insides. As you are pulled toward the exit, you actually try to brace yourself to remain in your new home, but the snake's muscles are too powerful, and you're eventually dumped into the harsh world.";
+			say "     As the snake's stomach continues to grind your helpless form, thoughts of struggling fade away until even the desire to leave the strange, but comforting, confines completely disappear. Everything else since entering this wonderous haven becomes little more than afterthoughts as you let the pulsing walls have their way with you. With a moan of delight from the encompassing walls keeping you in a constant state of bliss, you give in to your surroundings. You aren't sure how long has passed since you submitted to the twisting flesh, not that you really care, but when the stomach walls suddenly lurch, you know that Serenity is trying to expel you from her insides. As you are pulled toward the exit, you actually try to brace yourself to remain in your new home, but the snake's muscles are too powerful, and you're eventually dumped into the harsh world.";
 			say "     'I think someone has enjoyed their stay a little too much,' Serenity jokes as she drops you onto some cushion and then swathes you in a bundle of towels. 'While I was tempted to keep you even longer, you've been inside of me for more than a day. I've had my meal, but I think that you're overdue for your own, not to mention some rest.' You deny that you need any of those things and ask her to eat you again instead. At first, your reptilian friend is amused by your antics, but as you refuse to leave her and even start begging her to consume you, a worried frown crosses her face. Placing her hands on your cheeks to hold your head steady, she stares directly into your eyes, her brow furrowed with concern.";
-			say "     'You're serious... And you're not hypnotized either…' Serenity sighs heavily and drops her gaze. 'I... I honestly didn't know that this could happen, but it really does look like you've somehow become addicted to being eaten by me.' Serenity looks back up at you with regret, but after a moment of thought, determination appears in her eyes. 'I want you to listen to me. I really am sorry that I did this to you, and I will do everything in my power to help you. To be honest, I've grown very fond of you, and I was wondering if we could somehow stay together if ever get out of here, but not like this. Still, while I do hope that this condition of yours is temporary, if you end up not being able to resist being away from me, I promise to take good care of you.' Whether it's because of your own free will or just a desire to comply with the one that provides you with the intimate space that you've grown fond of, you accept Serenity's offer.";
+			say "     'You're serious... And you're not hypnotized either...' Serenity sighs heavily and drops her gaze. 'I... I honestly didn't know that this could happen, but it really does look like you've somehow become addicted to being eaten by me.' Serenity looks back up at you with regret, but after a moment of thought, determination appears in her eyes. 'I want you to listen to me. I really am sorry that I did this to you, and I will do everything in my power to help you. To be honest, I've grown very fond of you, and I was wondering if we could somehow stay together if we ever get out of here, but not like this. Still, while I do hope that this condition of yours is temporary, if you end up not being able to resist being away from me, I promise to take good care of you.' Whether it's because of your own free will or just a desire to comply with the one that provides you with the intimate space that you've grown fond of, you accept Serenity's offer.";
 			wait for any key;
 			now voreloss is true;
 			now bodyname of player is "Naga Hybrid";
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "You spent too much time inside of a snake";
 		else:
 			let k be 0;
@@ -487,9 +505,9 @@ to SerenityBind:
 					wait for any key;
 				else:
 					say "     You resume your struggles to get Serenity to let you out, adding some shouting as you push at the squelching flesh around you. Eventually, the walls contract around you, and they pull you through the naga's stomach and up her throat, until you slip out of Serenity's mouth and onto some cushions. Even though your predator friend is quick to wrap you in some towels as usual, you still shiver. For some reason, you feel like you're exposed and vulnerable now that you're back in the open.";
-					say "     'I do so love having you as my guest. Are you sure that you don't want to stay a bit longer?' Serenity teases with a smirk. Despite having want out of the snake's stomach just moments ago, a part of you is tempted to delve right back in. Serenity chuckles at your silence and pats your head. 'I was just joking. As much fun as it is to make you mine, I think it's safer that you take a break every now and then. I'm sure that being my food can be quite exhausting' Even though Serenity makes sure that her hypnosis over you is gone before you put on your gear, you cannot help but shiver in anticipation of returning to the snake's stomach as you leave.";
+					say "     'I do so love having you as my guest. Are you sure that you don't want to stay a bit longer?' Serenity teases with a smirk. Despite having want out of the snake's stomach just moments ago, a part of you is tempted to delve right back in. Serenity chuckles at your silence and pats your head. 'I was just joking. As much fun as it is to make you mine, I think it's safer that you take a break every now and then. I'm sure that being my food can be quite exhausting.' Even though Serenity makes sure that her hypnosis over you is gone before you put on your gear, you cannot help but shiver in anticipation of returning to the snake's stomach as you leave.";
 					cleanboundmemory;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					follow the turnpass rule;
 					wait for any key;
 				next;
@@ -497,12 +515,12 @@ to SerenityBind:
 				LineBreak;
 				if obliging is true:
 					decrease struggleatt by 1;
-					say "     [one of]You relax into the caressing touches of the rippling, warm walls all around you[or]Thoughts of being with the naga forever tempt you as you submit to her stomach[or]Aroused by the constant stimulation, you [if cocks of player > 0]play with your cock[smn][else if cunts of player > 0]play with your cunt[smn][else]thrust a finger into your ass[end if][at random].";
+					say "     [one of]You relax into the caressing touches of the rippling, warm walls all around you[or]Thoughts of being with the naga forever tempt you as you submit to her stomach[or]Aroused by the constant stimulation, you [if player is male]play with your cock[smn][else if player is female]play with your cunt[sfn][else]thrust a finger into your ass[end if][at random].";
 					wyvhumanityroll;
 					increase lustatt by 14 + (lustadjust * 4);
 				else:
 					decrease struggleatt by 1;
-					say "     [one of]You relax into the caressing touches of the rippling, warm walls all around you[or]Thoughts of being with the naga forever tempt you as you submit to her stomach[or]Aroused by the constant stimulation, you [if cocks of player > 0]play with your cock[smn][else if cunts of player > 0]play with your cunt[smn][else]thrust a finger into your ass[end if][at random].";
+					say "     [one of]You relax into the caressing touches of the rippling, warm walls all around you[or]Thoughts of being with the naga forever tempt you as you submit to her stomach[or]Aroused by the constant stimulation, you [if player is male]play with your cock[smn][else if player is female]play with your cunt[sfn][else]thrust a finger into your ass[end if][at random].";
 					wyvhumanityroll;
 					increase lustatt by 7 + (lustadjust * 2);
 				wait for any key;
@@ -530,13 +548,16 @@ to say SerenityStruggle:
 
 Section 6 - Infection
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Naga Hybrid";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[NonCombatError]";
 	now defeated entry is "[NonCombatError]";
 	now victory entry is "[NonCombatError]";
@@ -580,8 +601,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 7 - Endings

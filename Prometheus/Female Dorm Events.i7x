@@ -1,5 +1,9 @@
 Version 1 of Female Dorm Events by Prometheus begins here.
 
+Table of GameEventIDs (continued)
+Object	Name
+Female Dorm One	"Female Dorm One"
+
 Female Dorm One is a situation.
 The sarea of Female Dorm One is "Nowhere".
 
@@ -7,7 +11,7 @@ when play begins:
 	add Female Dorm One to badspots of girl;
 	add Female Dorm One to badspots of furry;
 
-instead of going north from Dorm Street while (Female Dorm One is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
+instead of going north from Dorm Street while (Female Dorm One is active and Female Dorm One is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	FemaleDormOneEvent;
 
@@ -23,16 +27,22 @@ to FemaleDormOneEvent: [Showers. F solo]
 	if player consents:
 		LineBreak;
 		say "     Amused at her lack of embarrassment but nonetheless maintaining the charade of her being alone, you watch as her paws caress her breasts, squeezing and pushing the soft flesh around. Meanwhile, her tail flits around the side and twitches in front of her pussy, the tip brushing her gash. The student lets out a gasp, the added excitement of an observer heightening her arousal. You consider joining her, but decide against it, not wishing to ruin the moment. She turns around and bends over, running her hands up over her ankles and up her legs. This gives you an unimpeded view of her ass and cunt, the moisture dripping from them unclear whether it is water or juices of arousal. When she reaches her thighs, she turns to face you again before twitching an ear and grabbing her towel. Taking this as your cue to leave, you stealthily slip out of the showers again. Just in time it would seem, as soon as you have taken a few steps down the corridor, a group of girls in various states of undress walk around the corner, towels tucked under their arms or over their shoulders.";
+		now Resolution of Female Dorm One is 1; [watched in the shower]
 	else:
 		LineBreak;
 		say "     Any thrill you might have had is gone with being noticed. You slink out and back into the female dorms, leaving the feline in peace.";
+		now Resolution of Female Dorm One is 2; [didn't watch in the shower]
 	now LastCampusWalkin is turns;
 	now Female Dorm One is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Female Dorm Two	"Female Dorm Two"
 
 Female Dorm Two is a situation.
 The sarea of Female Dorm Two is "Nowhere".
 
-instead of going north from Dorm Street while (Female Dorm Two is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
+instead of going north from Dorm Street while (Female Dorm Two is active and Female Dorm Two is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	FemaleDormTwoEvent;
 
@@ -45,6 +55,10 @@ to FemaleDormTwoEvent: [Study in room]
 	now LastCampusWalkin is turns;
 	now Female Dorm Two is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Female Dorm Three	"Female Dorm Three"
+
 Female Dorm Three is a situation.
 The sarea of Female Dorm Three is "Nowhere".
 
@@ -52,7 +66,7 @@ when play begins:
 	add Female Dorm Three to badspots of girl;
 	add Female Dorm Three to badspots of furry;
 
-instead of going north from Dorm Street while (Female Dorm Three is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
+instead of going north from Dorm Street while (Female Dorm Three is active and Female Dorm Three is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	FemaleDormThreeEvent;
 
@@ -68,11 +82,17 @@ to FemaleDormThreeEvent: [Study in room with benefits. FF]
 	if player consents:
 		LineBreak;
 		say "     Eager at her friend's acceptance, the tiger pounces her, pinning her beneath her body before rolling over to allow the nymph to be on top. She grasps the shyer woman's rear and pulls her over her body until her cunt is over the feline's mouth. The two students wait a moment, both breathing heavily from arousal, before the nymph gasps as the tiger thrusts her tongue into her vagina. As her friend grinds against her face, the tigress caresses her ass with one hand and masturbates her own pussy with the other. Squelching noises fill the room as the students take their pleasure in each other. The completed assignment lies forgotten next to their writhing bodies. Cautious of disturbing them, you leave quietly, their moaning spilling into the hallway, much to the amusement of passing residents";
+		now Resolution of Female Dorm Three is 1; [watched in the dorm]
 	else:
 		LineBreak;
 		say "     You can see where this is going and not wishing to listen in, you return to the foyer.";
+		now Resolution of Female Dorm Three is 2; [Didn't watch in the dorm]
 	now LastCampusWalkin is turns;
 	now Female Dorm Three is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Female Dorm Four	"Female Dorm Four"
 
 Female Dorm Four is a situation.
 The sarea of Female Dorm Four is "Nowhere".
@@ -81,7 +101,7 @@ when play begins:
 	add Female Dorm Four to badspots of girl;
 	add Female Dorm Four to badspots of guy;
 
-instead of going north from Dorm Street while (Female Dorm Four is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
+instead of going north from Dorm Street while (Female Dorm Four is active and Female Dorm Four is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	FemaleDormFourEvent;
 
@@ -97,11 +117,17 @@ to FemaleDormFourEvent: [Study in room with benefits. MF]
 	if player consents:
 		LineBreak;
 		say "     Driven by desire, the fox quickly unbuttons his shirt and tosses it out of view before grabbing one of the wolf's breasts, bringing his tongue down to lick around the nipple. She shudders as his breath tickles the sensitive skin of her chest, letting out a needy moan. One of her hands grasps his vulpine cock, masturbating it slowly as her other hand strokes his back. Drawing back from her nipple, the male student crouches, dragging his shaft from her mouth, before licking her vulva. The wolf lets out a gasp, grabbing the back of his head and thrusting her groin against his eager face. After some time, with foreplay seemingly over, the wolf drags the fox across the room, out of your vision. You hear them sitting down on the bed, but the arrival of a group of laughing students means you cannot stay any longer. Shrugging to yourself, you turn and leave, returning to the foyer.";
+		now Resolution of Female Dorm Four is 1; [watched in the study room]
 	else:
 		LineBreak;
 		say "     You can see where this is going and not wishing to listen in, you return to the foyer.";
+		now Resolution of Female Dorm Four is 2; [Didn't watch in the study room]
 	now LastCampusWalkin is turns;
 	now Female Dorm Four is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Female Dorm Five	"Female Dorm Five"
 
 Female Dorm Five is a situation.
 The sarea of Female Dorm Five is "Nowhere".
@@ -110,7 +136,7 @@ when play begins:
 	add Female Dorm Five to badspots of girl;
 	add Female Dorm Five to badspots of guy;
 
-instead of going north from Dorm Street while (Female Dorm Five is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
+instead of going north from Dorm Street while (Female Dorm Five is active and Female Dorm Five is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	FemaleDormFiveEvent;
 
@@ -127,13 +153,17 @@ to FemaleDormFiveEvent: [Male transform in showers]
 	now LastCampusWalkin is turns;
 	now Female Dorm Five is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Female Dorm Six	"Female Dorm Six"
+
 Female Dorm Six is a situation.
 The sarea of Female Dorm Six is "Nowhere".
 
 when play begins:
 	add Female Dorm Six to badspots of girl;
 
-instead of going north from Dorm Street while (Female Dorm Six is not resolved and Female Dorm Five is resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
+instead of going north from Dorm Street while (Female Dorm Six is active and Female Dorm Six is not resolved and Female Dorm Five is resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	FemaleDormSixEvent;
 
@@ -145,8 +175,8 @@ to FemaleDormSixEvent: [New Vixen shown around]
 	say "     Entering the foyer of the female dormitory, you are met by the firm breasts of a dragon-woman. Beside her is a familiar vixen looking nervous and trying to avoid the eyes of students as they walk past the doors. Both of them are completely devoid of clothing, the dragon proudly showing off her form. 'We of the Naturist's Club are always pleased to have new members, though it is unusual for someone not to have a room as part of the college,' the scaly woman says questioningly. The young fox stands on tippy-toes and whispers something in her ear, the posture accentuating her slim build. The senior student lets out a laugh and claps the surprised vulpine on the back. 'Serves you right for searching for a woman's unmentionables, though I'm glad you're taking to your new form so well.' It would seem that the fox's actions are neither uncommon or of great offense.";
 	say "     The dragon takes her acquaintance by the shoulder and lopes down the hallway, the shorter vixen having to trot to keep up. 'Well then, we have several spare rooms from students that attempted to flee into the city or moved in with friends, so I'll get you a room near mine. That way I can make sure you're coping and you have a friendly face nearby. It'll also mean that other members of the club will see you, allowing you to make more friends with similar interests.' They stop outside a door, which the dragon unlocks, revealing a desk overseen by lots of pictures of dragons. 'This is mine, I'll have a word with one of the college administrators, either in the dorm or central building, but until then, if you don't mind, you can sleep on my floor. I have some spare blankets and pillows as Mum was quite determined to make sure I had everything I needed.' The vixen rushes forward and gives the larger woman a hug, her bright fur contrasting with the dark scales. 'Thank you,' she whimpers, pleased at such kindness.";
 	WaitLineBreak;
-	say "     The dragon turns to face you and enquires pointedly, 'Can I help you? You seem to be following us and it is rude to stare from so close without making any compliments. So, what is your favourite part of me? Breasts? Face? Legs? ... pussy?' The unabashed way in which she asks startles you, making you look at her blankly for a moment before hesitantly saying that her regal visage is probably her most striking feature. 'Probably lying, but flattery isn't unwelcome.' She pushes the shy vixen forward with her tail, though the fox doesn't cover herself, instead leaving her arms hanging limply at her sides. 'And my friend? What is your favourite aspect about her, and don't say face again or I won't let you look any more.' You let your eyes roam over the vulpine's svelte body, taking in her slender limbs, curvy body, and cute face. She speaks up, 'I would have thought you would know by now after watching me transform,' causing a chuckle from her companion again.";
-	say "     'My my, aren't you the little voyeur. Ogling two girls as they walk around naked in the dorms even after catching one of them in the shower unawares. You really must have an appreciation for the female form.' The scaled woman's comments see to be raising the confidence of her companion, her posture becoming more relaxed. She begins to smile, understanding that she should find pleasure in showing of her body, and teasing rather than reprimanding those who seem obsessed with it. 'Perhaps I'll see you another time, maybe let you have a closer look, away from the judgement of others,' the vixen offers saucily. Shepherding the fox into her room the dragon lets out yet another snort of laughter, 'That's the spirit. Leave them wanting more,' she chortles. 'But don't lose who you are. Being sexy is fun, but don't let it rule your every action.' With that she closes the door, signalling the end of the conversation.";
+	say "     The dragon turns to face you and enquires pointedly, 'Can I help you? You seem to be following us and it is rude to stare from so close without making any compliments. So, what is your favorite part of me? Breasts? Face? Legs? ... pussy?' The unabashed way in which she asks startles you, making you look at her blankly for a moment before hesitantly saying that her regal visage is probably her most striking feature. 'Probably lying, but flattery isn't unwelcome.' She pushes the shy vixen forward with her tail, though the fox doesn't cover herself, instead leaving her arms hanging limply at her sides. 'And my friend? What is your favorite aspect about her, and don't say face again or I won't let you look any more.' You let your eyes roam over the vulpine's svelte body, taking in her slender limbs, curvy body, and cute face. She speaks up, 'I would have thought you would know by now after watching me transform,' causing a chuckle from her companion again.";
+	say "     'My my, aren't you the little voyeur. Ogling two girls as they walk around naked in the dorms even after catching one of them in the shower unawares. You really must have an appreciation for the female form.' The scaled woman's comments see to be raising the confidence of her companion, her posture becoming more relaxed. She begins to smile, understanding that she should find pleasure in showing of her body, and teasing rather than reprimanding those who seem obsessed with it. 'Perhaps I'll see you another time, maybe let you have a closer look, away from the judgement of others,' the vixen offers saucily. Shepherding the fox into her room the dragon lets out yet another snort of laughter, 'That's the spirit. Leave them wanting more,' she chortles. 'But don't lose who you are. Being sexy is fun, but don't let it rule your every action.' With that she closes the door, signaling the end of the conversation.";
 	now LastCampusWalkin is turns;
 	now Female Dorm Six is resolved;
 

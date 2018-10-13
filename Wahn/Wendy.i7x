@@ -3,12 +3,17 @@ Version 1 of Wendy by Wahn begins here.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Cow Hunting	"Cow Hunting"
+
 Cow Hunting is a situation. The level of Cow Hunting is 5.
 The sarea of Cow Hunting is "Plains".
 when play begins:
 	add Cow Hunting to badspots of hermaphrodite; [Cuntboy cowboy]
 
 Instead of resolving a Cow Hunting:
+	project the Figure of Corbin_face_icon;
 	say "     Roaming through the plains, you see a person off in the distance who waves and starts walking towards you. As he comes closer, you see that it's a guy in the shape of a humanoid horse, wearing a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area. His chest is bare, showing off a well-built upper body with washboard abs.";
 	say "     'Hi there, I'm Corbin James. I was wondering if you might have seen a cow somewhere... an actual one, I mean. Some critter broke through the fences and the cows got out over at the farm I work at. I found most of them, but the best producer, Wendy, is still missing...'";
 	LineBreak;
@@ -27,33 +32,41 @@ Instead of resolving a Cow Hunting:
 	if calcnumber is 1: [no]
 		LineBreak;
 		say "     He nods as you tell him you haven't seen any standard non-infected cows around since before the outbreak. 'Well, thanks anyways. But if you do find her after all please come and tell me over at the farm. It's the [bold type]McDermott family farm[roman type] a few miles that way. Or if you could just bring Wendy along... then there'd be a reward in it for you. No worries, she's pretty tame and tractable as long as there isn't a slavering beast running after her.' With that, the cowboy makes his goodbye and walks off to keep searching.";
-		now Missing Cow is unresolved;
 		now McDermott Farm Entrance is known;
 		move Duke to Sheep Meadow SW; [putting him in his starting position]
 		now thirst of Duke is 1; [starting the day/night movement of Duke]
 		now thirst of Corbin is 1; [starting the day/night movement of Corbin]
+		now Resolution of Cow Hunting is 1; [talked to Corbin]
 	else if calcnumber is 2: [rape]
 		LineBreak;
 		say "     The cowboy shouts out a 'No! What the hell's wrong with you fu-', then you land the first blow and the conversation comes to a crashing halt.";
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Cowboy Cuntboy":
 				now monster is y;
 				now area entry is "Plains";
 				now non-infectious entry is false;
 				break;
 		challenge "Cowboy Cuntboy";
+		now Resolution of Cow Hunting is 2; [attacked to Corbin]
 	else if calcnumber is 3: [seriously?]
 		LineBreak;
 		say "     He shrugs 'Why the hell not? Even if I now look like this, it's my job. And a farm isn't the worst place to wait out these strange times - plenty of food, you know. So what about the cow? Have you seen her? No? Well, time to keep searching for me then. If you see her by any chance later - bring the old gal to the [bold type]McDermott farm[roman type] - a few miles that way. There's a reward.' With that, the horsey cowboy walks off to keep searching for the missing cow.";
-		now Missing Cow is unresolved;
 		now McDermott Farm Entrance is known;
 		move Duke to Sheep Meadow SW; [putting him in his starting position]
 		now thirst of Duke is 1; [starting the day/night movement of Duke]
 		now thirst of Corbin is 1; [starting the day/night movement of Corbin]
+		now Resolution of Cow Hunting is 3; [talked to Corbin]
 	now Cow Hunting is resolved; [event resolved, either peacefully or through combat]
 
-Missing Cow is a situation. The level of Missing Cow is 5. Missing Cow is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Missing Cow	"Missing Cow"
+
+Missing Cow is a situation.
+The Prereq1 of Missing Cow is Cow Hunting.
+The Prereq1Resolution of Missing Cow is { 1, 3 }.
+The level of Missing Cow is 5.
 The sarea of Missing Cow is "Plains".
 
 Instead of resolving a Missing Cow:
@@ -66,7 +79,7 @@ Instead of resolving a Missing Cow:
 	say "     ([link]N[as]n[end link]) - Attack the gryphon.";
 	if player consents:
 		LineBreak;
-		say "     You decide to just wait the gryphon out, keeping your distance - at first - and finding a good spot from which you can observe them. Lustful moos and gryphon shrieks sound out across the plains as the cow is fucked by the winged lion, both of them oblivious to anything around them. As you watch the unequal partners' coupling, you find yourself walking slowly towards them, eager to get a better view. Soon you're pretty close - close enough to hear the squelching noises as the gryphon thrusts in and see the wetness of the cow's fur on her backside and hind legs. This obviously has been going on for quite a while, with more than one load of the mythical beast leaking out around his shaft as he pounds into Wendy.";
+		say "     You decide to just wait the gryphon out, keeping your distance - at first - and finding a good spot from which you can observe them. Lustful moos and gryphon shrieks sound out across the plains as the cow is fucked by the winged lion, both of them oblivious to anything around them. As you watch the unequal partners['] coupling, you find yourself walking slowly towards them, eager to get a better view. Soon you're pretty close - close enough to hear the squelching noises as the gryphon thrusts in and see the wetness of the cow's fur on her backside and hind legs. This obviously has been going on for quite a while, with more than one load of the mythical beast leaking out around his shaft as he pounds into Wendy.";
 		say "     The sex continues with unabated wildness for some more time, until you notice the feral gryphon getting louder in his shrieks and faster with his thrusts. Finally he pushes all of his hard cock into her a final time, knotting the bovine as he blasts another large load of his seed into her. Staying bound to Wendy for some more time after that, her pussy and womb flooded with his seed held in by the knot, the gryphon rubs the side of his beak and head against her back affectionately, taking care not to hurt her with the sharp tip of his beak.";
 		WaitLineBreak;
 		say "     Some time later, he dismounts, pulling his knotted shaft free with a pop and a gush of milky white cum. The gryphon's cock dangles down between his legs, wet and dripping, quickly softening. Now done with his bovine mate, the large creature looks around, giving a surprised squawk as he notices you for the first time. Putting a somewhat possessive as well as protective paw on the cow's back, he gives you a distrustful look. Not quite sure if this feral creature can even understand you, you raise your hands in a pacifying gesture and concentrate on keeping a calming tone of voice as you explain to him that you just want to bring Wendy back home where she'll be taken care of.";
@@ -81,14 +94,14 @@ Instead of resolving a Missing Cow:
 			say "     [WendyGryphonAftermath]";
 		else if fightoutcome >= 30: [fled]
 			say "     At some point as you were running, the feral gryphon turned around and made his way back towards the cow. You just hope that he goes back to fucking her and isn't munching on a piece of beef right now...";
+			now Resolution of Missing Cow is 3; [fled and left Wendy with a feral Gryphon]
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     Having driven the gryphon off, you have a look at Wendy the cow, now calmly munching on a mouthful of grass. She doesn't seem to be bothered at all from having been fucked by a gryphon - multiple times at least, before you arrived, judging from the amount of cum oozing out of her pussy and making the fur on her back end wet and sticky.";
 			say "     [WendyGryphonAftermath]";
-	now battleground is "Void";[avoids random fights after]
 
 to say WendyGryphonAftermath:
 	WaitLineBreak;
-	if cocks of player > 0:
+	if player is male:
 		say "     Seeing the thoroughly bred cunt of this large and docile creature right in front of you, the thought comes into your mind that you could just... try her out yourself. It's not like one more load would make much of a difference now, would it?";
 		LineBreak;
 		say "     [bold type]What now?[roman type][line break]";
@@ -103,12 +116,15 @@ to say WendyGryphonAftermath:
 				say "     Speaking in calming tones to the cow, you walk up to her and stroke her fur for a moment until she gets used to your presence. Since she's just a bit too tall for you to just take her, you lead her over a few feet to the stubby remains of a building that stood here before, maneuvering her into the right position next to a fallen wall. Standing on the low rocks, you gently lift her tail and have a look at her pussy. It's pretty large in human terms, but that's just to be expected from a bigger creature. Milky white cum slowly drips from her pussy lips. You pull our your hard cock and rub it up and down over her sex, then aim it right at her opening and push forward, spreading her slick passage with your manhood. For being so big and just having been fucked by a gryphon, Wendy is amazingly tight, instinctively gripping your member with her inner muscles. You pound into her with eager thrusts, not holding back for a second until you soon blast your own cum into Wendy to mingle with the gryphon's in her womb. Satisfied, you pull out, then put your clothes back on.";
 			else:
 				say "     Speaking in calming tones to the cow, you walk up to her and stroke her fur for a moment until she gets used to your presence and lowers her head again to graze. Then you walk to her back end, gently lift her tail and have a look at her pussy. It's pretty large in human terms, but that's just to be expected from a bigger creature. Milky white cum slowly drips from her pussy lips. You pull our your hard cock and rub it up and down over her sex, then aim it right at her opening and push forward, spreading her slick passage with your manhood. For being so big and just having been fucked by a gryphon, Wendy is amazingly tight, instinctively gripping your member with her inner muscles. You pound into her with eager thrusts, not holding back for a second until you soon blast your own cum into Wendy to mingle with the gryphon's in her womb. Satisfied, you pull out, then put your clothes back on.";
+			now Resolution of Missing Cow is 1; [fucked Wendy]
 		else:
 			LineBreak;
 			say "     Fuck a cow? What strange ideas come up inside you these days... the nanites must be getting to you. You do your best to ignore that inner voice.";
+			now Resolution of Missing Cow is 2; [just brought Wendy to the farm]
 	LineBreak;
 	say "     Stroking Wendy and feeding her bits of grass, you manage to get the cow moving towards the farm. She's got a rather sedate gait and often stops to rip off the rare green and more succulent plants along the way, but after about two hours, you finally arrive at the McDermott farm.";
 	WaitLineBreak;
+	project the Figure of Corbin_face_icon;
 	say "     Having been spotted on your approach, the anthro horse cowboy Corbin you met before out in the plains comes to greet you. 'Hey there, you actually found her. Thanks a lot for bringing Wendy back.' He rubs the cow's neck and scritches her on a special spot behind her ears as he talks to her 'You got frightened and ran away, then couldn't find your way back, could you? Poor Wendy, you must be really feeling the pressure in your udder now. Go on, you know the way to the milking shed, I'll be along shortly.' With a pleased 'Moo', the cow trots towards one of the larger buildings on the farm.";
 	say "     Corbin nods with a smile as she starts walking, then gets pretty wide eyes as her hindquarters come into sight, still covered in by-now dried cum. 'What the -?' he gasps, turning to you with a questioning look, after which you explain about the gryphon you found the cow with. 'Wow, that's a pretty wild story. One of those winged lion things and Wendy having sex? I'll have to go check her out right now... oh, about the reward - go to the farmhouse and talk to Mr. McDermott, ok?'";
 	LineBreak;
@@ -120,6 +136,9 @@ to say WendyGryphonAftermath:
 
 Section 2 - NPC
 
+Table of GameCharacterIDs (continued)
+object	name
+Wendy	"Wendy"
 
 Wendy is a woman. The HP of Wendy is normally 0.
 The description of Wendy is "[WendyDesc]".
@@ -132,7 +151,7 @@ to say WendyDesc:
 	say "     Wendy is a cow - but not just any cow. She's had quite a bit of excitement out in the dry plains lately, getting lost and having an... interesting time with a large feral gryphon. As you walk up to her stall, she gives a greeting 'Mooh', seemingly recognizing you. Then she turns, moving her hindquarters in your direction and looking back at you. Might just be your imagination, but it's a bit as if she was presenting herself to you, wanting a little more interspecies attention.";
 
 instead of fucking the Wendy:
-	if cocks of player is 0:
+	if player is not male:
 		say "     Sadly, you won't get very far with Wendy in your current gender state. She might be horny for another fuck by an exotic partner, but just isn't intelligent enough to take an active role and do anything but get fucked by someone's cock.";
 	else if lastfuck of Wendy - turns < 4:
 		say "     Wendy still seems a little worn from your earlier fun with her. It might be better to give her a bit more of a break. Besides, what if you got caught?";

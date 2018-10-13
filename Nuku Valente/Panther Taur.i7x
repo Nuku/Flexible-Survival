@@ -18,12 +18,12 @@ to say defeated_panthertaur:
 	say "     The cat mewls sadly, backing away before she raises her hands to her heavy breasts, pressing them together as she gives you a smoldering look. Wouldn't it be nice to make love instead of war?[panthertaur tempt]";
 
 To say panthertaur tempt: [player wins]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if libido of player - humanity of player > 10:
-		if cocks of player > 0:
+		if player is male:
 			say "Overcome by your urges, you grin as you move to mount the inviting taur.";
 			say "[mount panthertaur]";
-		else if cunts of player > 0:
+		else if player is female:
 			say "Overcome by your urges, you eye the panthertaur's length, making your decision.";
 			say "[panthertaur ride cowgirl]";
 		else:
@@ -34,7 +34,7 @@ To say panthertaur tempt: [player wins]
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if cocks of player > 0 [and bodyname of player is not in infections of Taurlist]:
+		if player is male [and bodyname of player is not in infections of Taurlist]:
 			choose a blank row in table of fucking options;
 			now title entry is "Mount the taur";
 			now sortorder entry is 1;
@@ -45,19 +45,19 @@ To say panthertaur tempt: [player wins]
 		now sortorder entry is 2;
 		now description entry is "Suck a load from the herm's thick cock";
 		[]
-		if cunts of player > 0 [and bodyname of player is not in infections of Taurlist]:
+		if player is female [and bodyname of player is not in infections of Taurlist]:
 			choose a blank row in table of fucking options;
 			now title entry is "Ride her cock";
 			now sortorder entry is 3;
 			now description entry is "Get that thick feline shaft in your cunt on your terms";
 		[
-		if cocks of player > 0 and bodyname of player is in infections of Taurlist:
+		if player is male and bodyname of player is in infections of Taurlist:
 			choose a blank row in table of fucking options;
 			now title entry is "Mount the other taur";
 			now sortorder entry is 4;
 			now description entry is "Mount the herm taur and stuff her cunt";
 		][
-		if cunts of player > 0 and bodyname of player is in infections of Taurlist:
+		if player is female and bodyname of player is in infections of Taurlist:
 			choose a blank row in table of fucking options;
 			now title entry is "Get mounted by the other taur";
 			now sortorder entry is 5;
@@ -72,7 +72,7 @@ To say panthertaur tempt: [player wins]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Turn her down[as]100[end link][line break]";
+		say "[link]0 - Turn her down[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -96,43 +96,39 @@ To say panthertaur tempt: [player wins]
 					if (nam is "Get mounted by the other taur"):
 						say "[panthertaur mount taur]";]
 					wait for any key;
-			else if calcnumber is 100:
-				say "Resist your urges and reject her offer?";
-				if the player consents:
-					now sextablerun is 1;
-					say "     As you turn her down, the cat gives a soft huff, almost a hiss, then flees on quick feline paws, her shapely rump the last thing seen.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     As you turn her down, the cat gives a soft huff, almost a hiss, then flees on quick feline paws, her shapely rump the last thing seen.";
+				wait for any key;
 			else:
-				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		clear the screen and hyperlink list;
 
 to say panthertaur rape: [panthertaur wins or player gets mounted]
-	if cocks of player > 0 and cunts of player is 0 and anallevel > 1: [checks that 1.male and 2.not less anal]
+	if player is puremale and anallevel > 1: [checks that 1.male and 2.not less anal]
 		if player is submissive:
 			say "     The large taur pushes you to your hands and knees before settling above you, her paws on the sides of your head, and cock poking at your ass. She thrusts forward, trying to bury her dick inside your ass, missing her target instead thrusting against your [cock of player] cock. You start wanting it as she tries to sheath herself inside you. You reach back, spreading your cheeks to help her in getting her barbed cock inside you. Both of you moaning out loud once she hits her target, filling your asshole with her thick cock and rubbing against your prostate. It takes a while but eventually she manages to hilt inside you, her furred balls slapping against your behind.";
-			say "     Once she has managed to embed herself inside your butt there is no stopping her, she keeps pounding your butt like its her property, which it very much is right now. You moan as the barbs covering her member keeps raking on the inside of your ass. If another survivor would come across you two they couldn't tell you from another mutant that has lost their senses, face down ass up, drooling on the ground, with a panther taur filling their ass. With a yowl she hilts herself before the feline erection inside your ass twitches and unloads the cargo of her nuts inside your colon. You moan is submissive pleasure as you finally cum, your cum slowly oozing out of the tip of your penis. With a soft purr she pulls out of you, your pucker left gaped and leaking her cum as she pats your butt with a paw before leaving you there, quickly you get up and make your way to safer area.";
+			say "     Once she has managed to embed herself inside your butt there is no stopping her, she keeps pounding your butt like it's her property, which it very much is right now. You moan as the barbs covering her member keeps raking on the inside of your ass. If another survivor would come across you two they couldn't tell you from another mutant that has lost their senses, face down ass up, drooling on the ground, with a panther taur filling their ass. With a yowl she hilts herself before the feline erection inside your ass twitches and unloads the cargo of her nuts inside your colon. You moan is submissive pleasure as you finally cum, your cum slowly oozing out of the tip of your penis. With a soft purr she pulls out of you, your pucker left gaped and leaking her cum as she pats your butt with a paw before leaving you there, quickly you get up and make your way to safer area.";
 		else if "Dominant" is listed in feats of player:
 			say "     The large taur pushes you to your hands and knees before settling above you, her paws on the sides of your head, and cock poking at your ass. She thrusts forward, trying to bury her dick inside your ass, missing her target instead thrusting against your [cock of player] cock. Grunting, you try to avoid her thrusting cock as she tries to sheath herself inside you. She presses her paw to the back of your head, her claws reminding you who is in control here. You grunt in pain when she hits her target, filling your asshole with her thick cock and rubbing against your prostate. It takes a while but eventually she manages to hilt inside you, her furred balls slapping against your behind.";
-			say "     Once she has managed to embed herself inside your butt there is no stopping her, she keeps pounding your butt like its her property, which it very much is right now. You whimper as the barbs covering her member keeps raking on the inside of your ass. If another survivor would come across you two they couldn't tell you from another mutant that has lost their senses, face down ass up, whimpering on the ground, with a panther taur filling their ass. With a yowl she hilts herself before the feline erection inside your ass twitches and unloads the cargo of her nuts inside your colon. You sigh as she finally finishes using your ass your cock remains limp despite the pressure on your prostate. With a soft purr she pulls out of you, your pucker left gaped and leaking her cum as she pats your butt with a paw before leaving you there, quickly you get up and make your way to safer area.";
+			say "     Once she has managed to embed herself inside your butt there is no stopping her, she keeps pounding your butt like it's her property, which it very much is right now. You whimper as the barbs covering her member keeps raking on the inside of your ass. If another survivor would come across you two they couldn't tell you from another mutant that has lost their senses, face down ass up, whimpering on the ground, with a panther taur filling their ass. With a yowl she hilts herself before the feline erection inside your ass twitches and unloads the cargo of her nuts inside your colon. You sigh as she finally finishes using your ass your cock remains limp despite the pressure on your prostate. With a soft purr she pulls out of you, your pucker left gaped and leaking her cum as she pats your butt with a paw before leaving you there, quickly you get up and make your way to safer area.";
 		else:
 			say "     The large taur pushes you to your hands and knees before settling above you, her paws on the sides of your head, and cock poking at your ass. She thrusts forward, trying to bury her dick inside your ass, missing her target instead thrusting against your [cock of player] cock. Resigning yourself into being the panthers cock sleeve for a while you prepare yourself for the inevitable penetration. She thrusts once, missing her target and hot dogging her feline member between your ass cheeks instead, twice, this time grinding against your [cock of player] cock, third time she manages to bury her cock inside your back passage. Once she pierces your pucker you bite your lip while she yowls loudly. She shuffles her paws before thrusting as deep as she can, eventually her furred balls slap against your behind.";
-			say "     Once she has managed to embed herself inside your butt there is no stopping her, she keeps pounding your butt like its her property, which it very much is right now. You whimper as the barbs covering her member keeps raking on the inside of your ass. If another survivor would come across you two they couldn't tell you from another mutant that has lost their senses, face down ass up, and a panther taur filling their ass. With a yowl she hilts herself before the feline erection inside your ass twitches and unloads the cargo of her nuts inside your colon. You moan from the feeling of her hot feline pudding filling your ass, your cock throbs but your unable to cum despite the pressure on your prostate. With a soft purr she pulls out of you, your pucker left gaped and leaking her cum as she pats your butt with a paw before leaving you there, quickly you get up and make your way to safer area.";
-	else if cunts of player is 0: [Oral for players who failed cunt check]
+			say "     Once she has managed to embed herself inside your butt there is no stopping her, she keeps pounding your butt like it's her property, which it very much is right now. You whimper as the barbs covering her member keeps raking on the inside of your ass. If another survivor would come across you two they couldn't tell you from another mutant that has lost their senses, face down ass up, and a panther taur filling their ass. With a yowl she hilts herself before the feline erection inside your ass twitches and unloads the cargo of her nuts inside your colon. You moan from the feeling of her hot feline pudding filling your ass, your cock throbs but your unable to cum despite the pressure on your prostate. With a soft purr she pulls out of you, your pucker left gaped and leaking her cum as she pats your butt with a paw before leaving you there, quickly you get up and make your way to safer area.";
+	else if player is not female: [Oral for players who failed cunt check]
 		say "     The feline shoves you roughly to the ground, her lower forepaws on your shoulders as she inches up to you, thrusting her long, barbed shaft against your lips and growling with an obvious desire. Her powerful rear hips rock forward, nudging you until you open your mouth and permit the salty pole across your tongue. The barbs prove soft, caressing over your mouth as she begins to rock into you, purring all the louder with approval. Her paw hands caress over your head, stroking ears and running down over your cheek and [skin of player] skin. You can see her balls bouncing with each thrust, her many breasts jiggling just in front of you.";
 		say "     She draws you forward, pressing the shaft as far into your mouth as she can, trying to wedge it down your throat as she goes tense, flooding you with great rushes of feline pudding. Most of it arrives in your belly, a direct injection of protein; some of it backwashes, splattering across her own thick member and across your front. With a satisfied mew, she draws back, freeing herself from your lips with a pop before she settles. She looks at you a moment, then turns and leaves without word, tail swaying.";
 		PlayerEat 5;
-	else if (cunts of player > 0 and anallevel is 3):
+	else if (player is female and anallevel is 3):
 		if player is submissive:
 			say "     The large taur pushes you to your hands and knees before settling above you, her paws on the sides of your head, and cock poking at your ass. She thrusts forward, trying to bury her dick inside your ass, missing her target instead thrusting between the lips of your [cunt size desc of player] [cockname of player in lower case] pussy. You start wanting it as she tries to sheath herself inside your colon. You reach back, spreading your cheeks to help her in getting her barbed cock inside you. Both of you moaning out loud once she hits her target, filling your asshole with her thick cock. It takes a while but eventually she manages to hilt inside you, her furred balls slapping against your behind.";
-			say "     Once she has managed to embed herself inside your butt there is no stopping her, she keeps pounding your butt like its her property, which it very much is right now. You moan as the barbs covering her member keeps raking on the inside of your ass. If another survivor would come across you two they couldn't tell you from another mutant that has lost their senses, face down ass up, drooling on the ground, with a panther taur filling their ass. With a yowl she hilts herself before the feline erection inside your ass twitches and unloads the cargo of her nuts inside your colon. You moan in submissive pleasure as you finally cum, your pussy fluttering and clenching around a cock that is filling your ass instead. With a soft purr she pulls out of you, your pucker left gaped and leaking her cum as she pats your butt with a paw before leaving you there, quickly you get up and make your way to safer area.";
+			say "     Once she has managed to embed herself inside your butt there is no stopping her, she keeps pounding your butt like it's her property, which it very much is right now. You moan as the barbs covering her member keeps raking on the inside of your ass. If another survivor would come across you two they couldn't tell you from another mutant that has lost their senses, face down ass up, drooling on the ground, with a panther taur filling their ass. With a yowl she hilts herself before the feline erection inside your ass twitches and unloads the cargo of her nuts inside your colon. You moan in submissive pleasure as you finally cum, your pussy fluttering and clenching around a cock that is filling your ass instead. With a soft purr she pulls out of you, your pucker left gaped and leaking her cum as she pats your butt with a paw before leaving you there, quickly you get up and make your way to safer area.";
 		else if "Dominant" is listed in feats of player:
 			say "     The large taur pushes you to your hands and knees before settling above you, her paws on the sides of your head, and cock poking at your ass. She thrusts forward, trying to bury her dick inside your ass, missing her target instead thrusting between the lips of your [cunt size desc of player] [cockname of player in lower case] pussy. Grunting, you try to avoid her thrusting cock as she tries to sheath herself inside you. She presses her paw to the back of your head, her claws reminding you who is in control here. You grunt in pain when she hits her target, filling your asshole with her thick cock. It takes a while but eventually she manages to hilt inside you, her furred balls slapping against your behind.";
-			say "     Once she has managed to embed herself inside your butt there is no stopping her, she keeps pounding your butt like its her property, which it very much is right now. You moan as the barbs covering her member keeps raking on the inside of your ass. If another survivor would come across you two they couldn't tell you from another mutant that has lost their senses, face down ass up, whimpering on the ground, with a panther taur filling their ass. With a yowl she hilts herself before the feline erection inside your ass twitches and unloads the cargo of her nuts inside your colon. You sigh as she finally finishes using your ass. With a soft purr she pulls out of you, your pucker left gaped and leaking her cum as she pats your butt with a paw before leaving you there, quickly you get up and make your way to safer area.";
+			say "     Once she has managed to embed herself inside your butt there is no stopping her, she keeps pounding your butt like it's her property, which it very much is right now. You moan as the barbs covering her member keeps raking on the inside of your ass. If another survivor would come across you two they couldn't tell you from another mutant that has lost their senses, face down ass up, whimpering on the ground, with a panther taur filling their ass. With a yowl she hilts herself before the feline erection inside your ass twitches and unloads the cargo of her nuts inside your colon. You sigh as she finally finishes using your ass. With a soft purr she pulls out of you, your pucker left gaped and leaking her cum as she pats your butt with a paw before leaving you there, quickly you get up and make your way to safer area.";
 		else:
 			say "     The large taur pushes you to your hands and knees before settling above you, her paws on the sides of your head, and cock poking at your ass. She thrusts forward, trying to bury her dick inside your ass, missing her target instead thrusting against your buttocks. Resigning yourself into being the panthers cock sleeve for a while you prepare yourself for the inevitable penetration. She thrusts once, missing her target and hot dogging her feline member between your ass cheeks instead, twice, this time grinding between the lips of your [cunt size desc of player], third time she manages to bury her cock inside your back passage. Once she pierces your pucker you bite your lip while she yowls loudly. She shuffles her paws before thrusting as deep as she can, eventually her furred balls slap against your behind.";
-			say "     Once she has managed to embed herself inside your butt there is no stopping her, she keeps pounding your butt like its her property, which it wery much is right now. You whimper as the barbs covering her member keeps raking on the inside of your ass. If another survivor would come across you two they couldn't tell you from another mutant that has lost their senses, face down ass up, and a panther taur filling their ass. With a yowl she hilts herself before the feline erection inside your ass twitches and unloads the cargo of her nuts inside your colon. You moan from the feeling of her hot feline pudding filling your ass, your pussy leaks like crazy but unable to cum without a cock filling it. With a soft purr she pulls out of you, your pucker left gaped and leaking her cum as she pats your butt with a paw before leaving you there, quickly you get up and make your way to safer area.";
+			say "     Once she has managed to embed herself inside your butt there is no stopping her, she keeps pounding your butt like it's her property, which it very much is right now. You whimper as the barbs covering her member keeps raking on the inside of your ass. If another survivor would come across you two they couldn't tell you from another mutant that has lost their senses, face down ass up, and a panther taur filling their ass. With a yowl she hilts herself before the feline erection inside your ass twitches and unloads the cargo of her nuts inside your colon. You moan from the feeling of her hot feline pudding filling your ass, your pussy leaks like crazy but unable to cum without a cock filling it. With a soft purr she pulls out of you, your pucker left gaped and leaking her cum as she pats your butt with a paw before leaving you there, quickly you get up and make your way to safer area.";
 	else:
 		if cunt length of player < 10 or cunt width of player < 8:
 			say "     She moves up behind you, giving a soft purr of approval as she bowls you over onto your back. She clambers over you easily, many soft breasts along her belly rubbing against your [breast size desc of player] chest. She thrusts her hips forward, and you can feel her thick, spined member rubbing along your left leg, then your right as she rocks, trying to find the target. Her powerful lower paws pin you in place as she gets the aim right, nudging the massive head to your [cunt size desc of player] lips and shoving forward.";
@@ -141,7 +137,7 @@ to say panthertaur rape: [panthertaur wins or player gets mounted]
 			increase cunt length of player by 2;
 			increase cunt width of player by 1;
 		else:
-			say "     The feline brushes her paw like hands across your [skin of player] body, pressing to your front with her two heavy milk bags. Her hands reach for your sides, caressing as she bites at your ears gently, whispering, 'You will do just fine.'[line break][line break]She prowls behind you, then hooks her forepaws around your torso, hefting you up as she eases herself forward. You can feel her firm spear press against your thick lips, then push smoothly into your trembling form. Despite its mass, the cat has no issue fucking your huge pussy, holding you firmly to her lower torso as she rocks against you powerfully, letting her heavy balls slap against you with potent thuds.";
+			say "     The feline brushes her pawlike hands across your [skin of player] body, pressing to your front with her two heavy milk bags. Her hands reach for your sides, caressing as she bites at your ears gently, whispering, 'You will do just fine.'[line break][line break]She prowls behind you, then hooks her forepaws around your torso, hefting you up as she eases herself forward. You can feel her firm spear press against your thick lips, then push smoothly into your trembling form. Despite its mass, the cat has no issue fucking your huge pussy, holding you firmly to her lower torso as she rocks against you powerfully, letting her heavy balls slap against you with potent thuds.";
 			say "     The barbs of the shaft tickle and pull at your inner walls with every withdraw of the firm tool, sending ecstatic tingles along your spine and keeping your paralyzed form locked in one fitful release after another. Those barbs press harder suddenly, digging softly against your flesh as great floods of seed rush out into your body, rounding your belly with molten heat spreading through you, and pouring in a waterfall back down along the shaft and your thighs, dripping to the ground below.[impregchance] The cat, roaring her satisfaction, is slow to gently pull you free and set you to your shaking feet.";
 
 to say mount panthertaur:
@@ -179,14 +175,14 @@ to say suck panthertaur:
 to say panthertaur ride cowgirl:
 	say "     Deciding you want to take the panther's herm cock into your cunt on your own terms you grin at her, ordering her to get down on her backs. She seems slightly reluctant to do so but complies as you insist, settling on her backs and watching you, displaying her many rows of breasts along with that proud spire and orbs of hers. Shedding any clothes in the way, you quickly move to straddle her underbelly, one hand hefting and guiding that tip to your [cunt size desc of player] lips. Holding it in place, you push yourself back onto it, guiding that tapered tip inside of you with a shiver of excitement from both you and the taur.";
 	if cunt length of player < 10 or cunt width of player < 8:
-		say "     You let out a grunt as that length proves a bit of a challenge to fit inside your [cunt size desc of player] pussy. Undetered however, you wiggle and brace yourself, slowly rocking and grinding yourself down on that length bit by bit. Gradually, you do manage to stretch yourself out more around that thick spire, but you're still not able to take it all. Once you've fit as much of that length as it seems you're going to be able to take for now, you grip onto her breasts for support and start riding that cock more properly, though you're forced to keep your riding of her somewhat slow for the time being. She still seems to be enjoying it however, and the soft flesh barbs slowly dragging along your walls are sending thrills of pleasure up your spine.";
+		say "     You let out a grunt as that length proves a bit of a challenge to fit inside your [cunt size desc of player] pussy. Undeterred however, you wiggle and brace yourself, slowly rocking and grinding yourself down on that length bit by bit. Gradually, you do manage to stretch yourself out more around that thick spire, but you're still not able to take it all. Once you've fit as much of that length as it seems you're going to be able to take for now, you grip onto her breasts for support and start riding that cock more properly, though you're forced to keep your riding of her somewhat slow for the time being. She still seems to be enjoying it however, and the soft flesh barbs slowly dragging along your walls are sending thrills of pleasure up your spine.";
 		WaitLineBreak;
 		say "     With the tightness of your [cunt size desc of player] cunt and the thickness of her cock as well as those barbs teasing your walls and your clit, it doesn't look like either of you are going to be lasting long. So it's not too much longer until she shudders and arches under you, cock throbbing powerfully and blasting thick feline scene into your ready depths. Your belly feels slightly bloated for a second before much of it washes back out along her exposed length, splattering her breasts, balls, and your thighs. The sensations of it all is enough to set you off as well, your walls gripping and squeezing around her shaft ";
-		if cocks of player > 0:
-			say "while your own [if cocks of player > 1]lengths twitch and spray[else]length twitches and sprays[end if] your seed across her plentiful breasts. ";
+		if player is male:
+			say "while your own length[smn] twitch[esmv] and spray[smv] your seed across her plentiful breasts. ";
 		else:
 			say "while you moan and tremble over her. ";
-		say "Once you've both recovered enough, you pull off of her (with a small gush of those fluids that hadn't already spilled out), and get cleaned up before continuing on your way.[impregchance][Line Break]";
+		say "Once you've both recovered enough, you pull off of her (with a small gush of those fluids that hadn't already spilled out), and get cleaned up before continuing on your way.[impregchance]";
 		increase cunt length of player by 2;
 		increase cunt width of player by 1;
 		now libido of player is (libido of player + libido of player + 40) / 3;
@@ -194,38 +190,41 @@ to say panthertaur ride cowgirl:
 		say "     The two of you let out a load moan in sync as you easily manage to sink your way down onto that massive spire and you can feel the taur's body rumbling with a heavy purr beneath you. Flashing her a grin, you brace yourself by gripping a pair of her breasts as you push yourself up... before allowing yourself to sink right back down, coaxing another moan from you both. Rather enjoying the thickness of her shaft and the way those soft fleshy barbs drag along your walls, you quickly set a quick pace bouncing yourself up and down on her length, your [cunt size desc of player] passage easily handling it all.";
 		WaitLineBreak;
 		say "     Your gyrating hips and your hands on her breasts have the taur moaning and squirming beneath you, her hips bucking slightly every now and then to meet your motions. You find you can't quite mind it though, as every thrust brings another thrill of pleasure for you as well. Your hands squeeze onto her breasts as you feel yourself getting closer, speeding up your motions while her forepaws suddenly grip and press down on your shoulders... Making you gasp as you're hilted fully on that cock and cry out, climax hitting you hard while she grinds up hard into you. Your walls squeeze and grip that thick cock, soaking her sheath and balls with your juices";
-		if cocks of player > 0:
-			say " while your own [if cocks of player > 1]lengths twitch and spray[else]length twitches and sprays[end if] your seed across her plentiful breasts.";
+		if player is male:
+			say " while your own length[smn] twitch[esmv] and spray[smv] your seed across her plentiful breasts.";
 		else:
 			say " while you moan and tremble over her.";
-		say "     The sensations of your rippling walls send her over the edge in that next moment, and her cock jerks powerfully inside of you as it unloads its potent load, feline cum surging deep inside of you and splattering out around her base as you both revel in your climaxes. You take a moment to gather your wits before giving her a smile and slowly lifting yourself off of her length, seed oozing onto her breasts and dripping onto the ground as you get cleaned up before continuing on your way.[impregchance][Line Break]";
+		say "     The sensations of your rippling walls send her over the edge in that next moment, and her cock jerks powerfully inside of you as it unloads its potent load, feline cum surging deep inside of you and splattering out around her base as you both revel in your climaxes. You take a moment to gather your wits before giving her a smile and slowly lifting yourself off of her length, seed oozing onto her breasts and dripping onto the ground as you get cleaned up before continuing on your way.[impregchance]";
 		now libido of player is (libido of player + libido of player + 40) / 3;
 
 
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
-	now name entry is "Panther Taur"; [The creature's name as displayed and used in naming descriptions]
+	Choose a blank row from Table of Random Critters;
+	now name entry is "Panther Taur"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "She [one of]leaps at you and catches you between her heavy breasts, applying the softest crushing you've ever had[or]strikes at you with her clawed hands[or]lashes out with a powerful set of sharp claws[or]rushes right at you, forcing you to back against a wall[at random].";
 	now defeated entry is "[defeated_panthertaur]";
 	now victory entry is "[panthertaur rape]";
-	now desc entry is "[mongendernum 5]An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her slitted, pretty [one of]blue[or]brown[or]green[at random] eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more heavy bumps, swaying with every powerful step of those large paws of hers.  Behind her, tucked between her hindlegs, is a thick sheath, large as a can of Pringles, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.";
-	now face entry is "feline, with a blunt snout, wet black nose and pointed ears above your head"; [ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws[if breasts of player > 2]. All your breasts except the first two rest on the chest of that lower torso, swaying with each step[end if]"; [ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]furry[or]black furred[at random]"; [ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a long, black, feline tail that likes to curl and uncurl at its own whim."; [ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "[one of]black sheathed[or]barbed[at random]"; [ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "you feel warmth as your face begins to reshape into a muzzle, long teeth filling your new mouth, tongue becoming rougher. Your ears are tugged as if by an angry mother, soon perched at the top of your head, pointed and twitching"; [ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "you stagger in place, almost toppling backwards as new legs sprout out, ruining your balance. Fortunately, those new legs dig into the ground, helping to restore your equilibrium as you rapidly grow the torso of a panther from the hips down. Your hands become somewhat paw like, claws sliding free[if breasts of player > 2]. Your breasts quiver as all but the top two migrate downward, settling on the undercarriage of your new torso[end if]"; [ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "soft ticklish sensation greets the arrival of a thick pelt of pure black fur across your [bodytype of player] body"; [ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "you shake it, a new limb extending from it, becoming a long tail, clearly feline in build"; [ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "your cock draws up against your belly as a sheath wraps around it. It also grows soft barbs around the head, sure to stimulate any partner"; [ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now desc entry is "[mongendernum 5]An almost pure black panther creature, with a humanoid torso. Her face has some human features, like that snarl, and her slitted, pretty [one of]blue[or]brown[or]green[at random] eyes, but is, overall, feline in make. She has two large breasts on her upper chest, bouncing lightly with her steps. On her undercarriage rest six more heavy bumps, swaying with every powerful step of those large paws of hers. Behind her, tucked between her hindlegs, is a thick sheath, large as a can of chips, with large seed factories to match, all jostling as she moves. Despite her bulk, she moves with grace and agility, which is a shame, since she seems to think you'd be good prey.";
+	now face entry is "feline, with a blunt snout, wet black nose and pointed ears above your head"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "bent into a whole new shape, with the body of a black panther attached at your midsection, extending out behind you with four powerful paws[if breasts of player > 2]. All your breasts except the first two rest on the chest of that lower torso, swaying with each step[end if]"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "[one of]furry[or]black furred[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a long, black, feline tail that likes to curl and uncurl at its own whim."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "[one of]black sheathed[or]barbed[at random]"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "you feel warmth as your face begins to reshape into a muzzle, long teeth filling your new mouth, tongue becoming rougher. Your ears are tugged as if by an angry mother, soon perched at the top of your head, pointed and twitching"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "you stagger in place, almost toppling backwards as new legs sprout out, ruining your balance. Fortunately, those new legs dig into the ground, helping to restore your equilibrium as you rapidly grow the torso of a panther from the hips down. Your hands become somewhat pawlike, claws sliding free[if breasts of player > 2]. Your breasts quiver as all but the top two migrate downward, settling on the undercarriage of your new torso[end if]"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "soft ticklish sensation greets the arrival of a thick pelt of pure black fur across your [bodytype of player] body"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "you shake it, a new limb extending from it, becoming a long tail, clearly feline in build"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "your cock draws up against your belly as a sheath wraps around it. It also grows soft barbs around the head, sure to stimulate any partner"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 12;
 	now dex entry is 18; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 10; [ These values may be used as part of alternate combat.]
@@ -240,7 +239,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 14; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 15; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 6; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 6; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 8; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -249,15 +248,15 @@ When Play begins:
 	now libido entry is 40; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
-	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]animalistic[or]exotic[or]tauric[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]animalistic[or]exotic[or]tauric[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]feline[or]panthertaur[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "ftaurpounce"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings
@@ -268,9 +267,9 @@ when play ends:
 			say "You get the sudden urge to prowl, and begin seeking an ideal mate. Something within you does not allow you to accept any but the strongest.[if cocks of player > 1] Oddly enough, exposed and vulnerable females seem to always be acceptable. Just the thought of pinning a female down and shoving your [cock size desc of player] [cock of player] rod into their depths is enough to give you a raging hard on.[end if]";
 		else:
 			say "Your feline body draws stares, mixed between envy and disgust. You eventually gather a bit of a following, all too eager to see to your needs as they worship you as some kind of strange new god. Not that you mind much, it's nice to be waited on.";
-			if cocks of player > 0:
+			if player is male:
 				say "Strangely enough, some women travel a distance to find you. It seems people are remembering that felines are ancient caretakers of mothers and ask for your blessings over their bellies, usually pregnant already, sometimes now.[line break][line break]Those that are not often present themselves, begging to be filled with your [cock size desc of player] [cock of player] shaft. You are only too pleased to comply, filling such supplicants to overflowing with thick seed, then life. They become priests to you, remaining faithfully at your side as they birth litters of healthy kittens.";
-			if cunts of player > 0:
+			if player is female:
 				say "You have your fair share of male suitors, most filled with empty praise and grabbing hands. They are pleasing for satisfying itches but little else. It is not until one arrives with the strength to topple you that you feel the stirrings of something close to love. You welcome the man to your bosom, and at your side, for the rest of your lives, producing a large, healthy family of cats.";
 
 Panther Taur ends here.

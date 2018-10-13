@@ -1,5 +1,6 @@
-Version 1 of Debugging Tools by Core Mechanics begins here.
+Version 2 of Debugging Tools by Core Mechanics begins here.
 [Version 1 - By Wahn, moved to Core Mechanics]
+[Version 2 - By Dys, adds more functions, changes npcdebugmode to debugmode]
 "Adds a debug function for npcs to the Flexible Survival game"
 
 [ Activating the debug mode show the npc's variables in their description and show when a walk-in event fires]
@@ -8,21 +9,26 @@ Version 1 of Debugging Tools by Core Mechanics begins here.
 [ debugactive 0 = Debug off]
 [ debugactive 1 = Debug on]
 
-debugactive is a number that varies. debugactive is 0.
-RandomGenNumber is a number that varies.
+debugactive is a number that varies.[@Tag:NotSaved] debugactive is 0.
+RandomGenNumber is a number that varies.[@Tag:NotSaved]
 
-npcdebugmode is an action applying to nothing.
-understand "npcdebug" as npcdebugmode.
-understand "npc debug" as npcdebugmode.
-understand "debug npcs" as npcdebugmode.
-understand "debugnpcs" as npcdebugmode.
+debugmode is an action applying to nothing.
+understand "npcdebug" as debugmode.
+understand "npc debug" as debugmode.
+understand "debug npcs" as debugmode.
+understand "debugnpcs" as debugmode.
+understand "debug" as debugmode.
 
-carry out npcdebugmode:
+carry out debugmode:
 	if debugactive is 0:
 		say "NPC DEBUG MODE ACTIVATED.";
+		if "Debugger" is not listed in Traits of player:
+			add "Debugger" to Traits of player;
 		now debugactive is 1;
 	else:
 		say "NPC DEBUG MODE DISABLED.";
+		if "Debugger" is listed in Traits of player:
+			remove "Debugger" from Traits of player;
 		now debugactive is 0;
 
 turncountdisplay is an action applying to nothing.
@@ -35,14 +41,14 @@ carry out turncountdisplay:
 	say "DEBUG: CURRENT TURN IS [turns]";
 
 TestMode is an action applying to nothing.
-TestingActive is a truth state that varies.
-
+TestingActive is a truth state that varies.[@Tag:NotSaved]
 understand "iwannatest" as TestMode.
 
 check TestMode:
 	if TestingActive is true, say "You're already in testing mode." instead;
 
 carry out TestMode:
+	add "Automatic Survival" to feats of player;
 	add "Bestial Power" to feats of player;
 	add "Black Belt" to feats of player;
 	add "Breeding True" to feats of player;
@@ -85,6 +91,7 @@ carry out TestMode:
 	add "Survivalist" to feats of player;
 	add "The Horde" to feats of player;
 	add "Toughened" to feats of player;
+	add "Unerring Hunter" to feats of player;
 	add "Vampiric" to feats of player;
 	now vampiric is true;
 	add "Wary Watcher" to feats of player;
@@ -108,14 +115,15 @@ carry out TestMode:
 	increase carried of glob of goo by 5;
 	increase carried of honeycomb by 5;
 	increase carried of healing booster by 5;
+	increase freecred by 5000;
+	sort feats of player;
+	now Terminatorsleep is true;
 	now TestingActive is true;
 
 SubDomFlip is an action applying to nothing.
 understand "flip janus coin" as SubDomFlip.
-understand "flip Janus Coin" as SubDomFlip.
 understand "flip sub dom" as SubDomFlip.
 understand "flip subdom" as SubDomFlip.
-understand "flip SubDom" as SubDomFlip.
 
 carry out SubDomFlip:
 	say "     Summoning a magic coin with the two-faced god Janus on its sides, you look at it for a second, then throw the shiny coin into the air. After watching it turn end over end, ";
@@ -131,13 +139,13 @@ carry out SubDomFlip:
 		add "Submissive" to feats of player;
 	else:
 		say "you catch - no, try to catch it in your hand.";
-		say "     Somehow it slips through your fingers, bouncing off the ground and rolling around a little, until it comes to a sudden standstill. And that is how it remains, just standing on its side, falling over in neither direction. As you pick the little disc of metal off the ground, it is strangely cold between your fingers for a second. Almost seems like its giving you the cold shoulder since you fit neither of its different faces.";
+		say "     Somehow it slips through your fingers, bouncing off the ground and rolling around a little, until it comes to a sudden standstill. And that is how it remains, just standing on its side, falling over in neither direction. As you pick the little disc of metal off the ground, it is strangely cold between your fingers for a second. Almost seems like it's giving you the cold shoulder since you fit neither of its different faces.";
 
-PregTestMirror is an action applying to nothing.
-understand "preg test" as PregTestMirror.
-understand "pregtest" as PregTestMirror.
+PregStatus is an action applying to nothing.
+understand "preg status" as PregStatus.
+understand "pregstatus" as PregStatus.
 
-carry out PregTestMirror:
+carry out PregStatus:
 	say "     DEBUG: You summon up a magic mirror and look into it:[line break]";
 	say "impreg_ok: ";
 	if player is impreg_ok:
@@ -250,6 +258,68 @@ carry out PlayerSizeChange:
 		say "     Set player size to huge.";
 		now scalevalue of player is 5;
 
+[Allows the spawning of any item in game.]
+itemcheat is an action applying to one topic.
+understand "itemcheat [text]" as itemcheat.
+
+check itemcheat:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out itemcheat:
+	repeat with x running through grab objects:
+		if the printed name of x exactly matches the text topic understood, case insensitively:
+			increase carried of x by 1;
+			break;
+
+allitemcheat is an action applying to nothing.
+understand "allitemcheat" as allitemcheat.
+
+check allitemcheat:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out itemcheat:
+	repeat with x running through grab objects:
+		increase carried of x by 1;
+
+ListAllItems is an action applying to nothing.
+understand "ListAllItems" as ListAllItems.
+
+check ListAllItems:
+	if debugactive is 0, say "You aren't currently debugging!" instead;
+
+carry out ListAllItems:
+	repeat with x running from 1 to number of filled rows in table of game objects:
+		choose row x from the table of game objects;
+		say "[name entry]: [desc entry][line break]";
+
+[Impregnates the player with specified creature.]
+impregwith is an action applying to one topic.
+understand "impreg with [text]" as impregwith.
+
+check impregwith:
+	if debugactive is 0, say "You aren't currently debugging." instead;
+
+carry out impregwith:
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
+		if name entry exactly matches the text topic understood, case insensitively:
+			impregnate with name entry;
+			break;
+
+[Infects player with any creature to test infection.]
+infectwith is an action applying to one topic.
+understand "infect with [text]" as infectwith.
+
+check infectwith:
+	if debugactive is 0, say "You aren't currently debugging.";
+
+carry out infectwith:
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
+		if name entry exactly matches the text topic understood, case insensitively:
+			infect name entry;
+			break;
+
 [Allows the player to add or remove the "Kinky" feat without leveling. Useful for testing some scenes.]
 AddRemoveKinky is an action applying to nothing.
 understand "add kinky" as AddRemoveKinky.
@@ -257,18 +327,31 @@ understand "remove kinky" as AddRemoveKinky.
 
 carry out AddRemoveKinky:
 	if player is kinky:
+		say "DEBUG: Kinky removed.";
 		remove "Kinky" from feats of player;
 	else:
+		say "DEBUG: Kinky added.";
 		add "Kinky" to feats of player;
 
+
+ShowEncounteredEnemies is an action applying to nothing.
+
+understand "ShowEncounteredEnemies" as ShowEncounteredEnemies.
+
+carry out ShowEncounteredEnemies:
+	sort EncounteredEnemies of player;
+	say "     DEBUG: Enemies that the player encountered so far: [EncounteredEnemies of player]";
+	say "     DEBUG:";
+	let RandomCreature be a random number from 1 to number of entries in EncounteredEnemies of player;
+	say " thoughts. You are almost entirely subsumed with a random thought of [one of]fucking[or]being fucked by[at random] a [entry RandomCreature of EncounteredEnemies of player in lower case] [one of]wildly[or]slowly[or]for hours[or]forever[or]until you pass out[at random], the daydream distracting you for half an hour.";
 
 InfectionOverview is an action applying to nothing.
 
 understand "infectionoverview" as InfectionOverview.
 
 carry out InfectionOverview:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		now cocks of player is 1;
 		now cunts of player is 1;
 		now cock length of player is 10;
@@ -278,7 +361,7 @@ carry out InfectionOverview:
 		now skin of player is the skin entry;
 		now body of player is the body entry;
 		now cock of player is the cock entry;
-		say "[bold type][name entry][roman type]:";
+		say "[bold type][y] - [name entry][roman type]:";
 		LineBreak;
 		DescriptionDisplay;
 		LineBreak;
@@ -287,24 +370,24 @@ to DescriptionDisplay:
 	now looknow is 1;
 	let cocktext be "";
 	follow the cock descr rule;
-	if cocks of player > 0:
+	if player is male:
 		if cocks of player > 1:
-			now cocktext is "have [cocks of player] [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size].";
+			now cocktext is "have [cocks of player] [cock size desc of player] [cock length of player]-inch-long [cock of player] [one of]cocks[or]penises[or]shafts[or]manhoods[at random]. They are [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath them hangs[end if] [one of]a pair of[or]a set of[at random] [ball size].";
 		else:
-			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of the player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size].";
+			now cocktext is "have a [cock size desc of player] [cock length of player]-inch-long [cock of player] [one of]cock[or]penis[or]shaft[or]maleness[at random]. It is [if libido of player <= 25]only somewhat aroused at the moment[else if libido of player <= 50]partially hard and dribbling a little pre[else if libido of player <= 75]erect and leaking precum[else]fully erect and drooling precum steadily[end if]. [if player is internal]Though they are not outwardly apparent, you wager you have[else]Underneath it hangs[end if] [one of]a pair of[or]a set of[at random] [ball size].";
 	let cunttext be "";
 	follow the cunt descr rule;
-	if cunts of player > 0:
+	if player is female:
 		if cunts of player > 1:
 			now cunttext is " have [cunts of player] [cunt size desc of player] [one of]cunts[or]pussies[or]vaginas[at random]. Further probing shows them to be [cunt length of player] inches deep and able to stretch to about [cunt width of player] around. They are [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
 		else:
 			now cunttext is "r [one of]cunt[or]pussy[or]vagina[or]cleft[at random] looks [cunt size desc of player], and further probing shows it to be [cunt length of player] inches deep and able to stretch to [cunt width of player] around. It is [if libido of player <= 25]a little damp at the moment[else if libido of player <= 50]wet with your juices[else if libido of player <= 75]hot and dripping juices[else]drooling musky nectar down your thighs[end if].";
-	say "Looking over yourself, your body is covered in [skin of the player] skin. Your face is [face of the player].[run paragraph on]";
+	say "Looking over yourself, your body is covered in [skin of player] skin. Your face is [face of player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "face":
 			say " [descmod of x][run paragraph on]";
-	say " Your body is [body of the player].[run paragraph on]";
+	say " Your body is [body of player].[run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "body":
@@ -325,12 +408,12 @@ to DescriptionDisplay:
 	if tail of player is empty:
 		say "";
 	else:
-		say " [tail of the player][run paragraph on]";
+		say " [tail of player][run paragraph on]";
 	repeat with x running through equipped owned equipment:
 		if descmod of x is "", next;
 		if placement of x is "end":
 			say " [descmod of x]";
-	say "[line break]";
+	LineBreak;
 	if cocktext is not empty:
 		if cunttext is empty:
 			say "A private peek shows that you [cocktext]";
@@ -361,11 +444,110 @@ to DescriptionDisplay:
 	else if heat enabled is true:
 		if inheat is true:
 			say "You also feel [if heatlevel is 3]an intense[else]a[end if] need to be on the receiving end of a good, hard fuck because of your presently heated state.";
-		else if heatlevel is 1 and player is impreg_able and cockname of player is not "human":
+		else if heatlevel is 1 and player is impreg_able and cockname of player is not "Human":
 			say "You are thankfully spared some undo sexual yearning because you've prevented your tainted womb from going into heat.";
-		else if heatlevel is 3 and player is impreg_able and cockname of player is not "human":
+		else if heatlevel is 3 and player is impreg_able and cockname of player is not "Human":
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you.";
 	now looknow is 0;
 	rule succeeds;
+
+DebugCritterRow is an action applying to one topic.
+
+understand "DebugCritterRow [text]" as DebugCritterRow.
+
+carry out DebugCritterRow:
+	let NumericalValue be 0;
+	now NumericalValue is numerical value of topic understood;
+	say "Text Given: [topic understood]; Number understood: [NumericalValue][line break]";
+	if NumericalValue < the number of rows in the Table of Random Critters:
+		choose row NumericalValue in the Table of Random Critters;
+		say "Creature Entry: [name entry][line break]";
+		say "Enemy Title: [enemy title entry][line break]";
+		say "Enemy Name: [enemy name entry][line break]";
+		say "Enemy Type: [enemy type entry][line break]";
+	else:
+		say "Row Number outside of the table!";
+
+DebugPrintCritterRow is an action applying to one topic.
+
+understand "DebugPrintCritterRow [text]" as DebugPrintCritterRow.
+
+carry out DebugPrintCritterRow:
+	let NumericalValue be 0;
+	now NumericalValue is numerical value of topic understood;
+	say "Text Given: [topic understood]; Number understood: [NumericalValue][line break]";
+	if NumericalValue < the number of rows in the Table of Random Critters:
+		choose row NumericalValue in the Table of Random Critters;
+		say "[current table row]";
+	else:
+		say "Row Number outside of the table!";
+
+to PrereqAnalyze (X - situation):
+	if PrereqCompanion of X is not nothing:
+		say "PrereqCompanion: [PrereqCompanion of X][line break]";
+		LineBreak;
+	if Prereq1 of X is not nothing:
+		say "Prereq1: [Prereq1 of X] - ";
+		if Prereq1 of X is resolved:
+			say "resolved";
+		else:
+			say "unresolved";
+		LineBreak;
+		LineBreak;
+		say "Prereq1Resolution: [Prereq1Resolution of X][line break]";
+		say "Resolution of Prereq1: [Resolution of Prereq1 of X][line break]";
+		if Resolution of Prereq1 of X is not listed in Prereq1Resolution of X:
+			say "[Resolution of Prereq1 of X] not listed in [Prereq1Resolution of X][line break]";
+		else:
+			say "[Resolution of Prereq1 of X] is listed in [Prereq1Resolution of X][line break]";
+		LineBreak;
+	if Prereq2 of X is not nothing:
+		say "Prereq2: [Prereq2 of X] - ";
+		if Prereq2 of X is resolved:
+			say "resolved";
+		else:
+			say "unresolved";
+		LineBreak;
+		LineBreak;
+		say "Prereq2Resolution: [Prereq2Resolution of X][line break]";
+		say "Resolution of Prereq2: [Resolution of Prereq2 of X][line break]";
+		if Resolution of Prereq2 of X is not listed in Prereq2Resolution of X:
+			say "[Resolution of Prereq2 of X] not listed in [Prereq2Resolution of X][line break]";
+		else:
+			say "[Resolution of Prereq2 of X] is listed in [Prereq2Resolution of X][line break]";
+		LineBreak;
+	if Prereq2 of X is not nothing:
+		say "Prereq3: [Prereq3 of X] - ";
+		if Prereq3 of X is resolved:
+			say "resolved";
+		else:
+			say "unresolved";
+		LineBreak;
+		LineBreak;
+		say "Prereq3Resolution: [Prereq3Resolution of X][line break]";
+		say "Resolution of Prereq3: [Resolution of Prereq3 of X][line break]";
+		if Resolution of Prereq3 of X is not listed in Prereq3Resolution of X:
+			say "[Resolution of Prereq3 of X] not listed in [Prereq3Resolution of X][line break]";
+		else:
+			say "[Resolution of Prereq3 of X] is listed in [Prereq3Resolution of X][line break]";
+
+
+RoomEmptying is an action applying to nothing.
+understand "NukeRoomInvents" as RoomEmptying.
+
+carry out RoomEmptying:
+	repeat with x running through rooms:
+		truncate Invent of x to 0 entries; [cleaning out the old data]
+
+
+RemoveFeat is an action applying to one topic.
+
+understand "RemoveFeat [text]" as RemoveFeat.
+
+carry out RemoveFeat:
+	if topic understood is listed in feats of player:
+		remove topic understood from feats of player;
+	else:
+		say "[topic understood] is not in Feats of Player!";
 
 Debugging Tools ends here.

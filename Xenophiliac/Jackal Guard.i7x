@@ -18,57 +18,61 @@ to say beatthestoneguardian:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-   Choose a blank row from Table of random critters;
-   now name entry is "Jackal Guard";
-   now attack entry is "[one of]Slamming his solid stone fist straight into your chest and knocking the breath out of you, you think that the guardian may have broken a few of your ribs[or]Slashing a deep gash across your chest, you're not even sure if you're going to survive this encounter[or]You're almost knocked out when the stone guardian hits you with his entire weight[at random].";
-   now defeated entry is "[beatthestoneguardian]";
-   now victory entry is "[losetostoneguardian]";
-   now desc entry is "[stoneguardiandesc]";
-   now face entry is "Impossible - Jackal Guard Error";
-   now body entry is "Impossible - Jackal Guard Error";
-   now skin entry is "Impossible - Jackal Guard Error";
-   now tail entry is "Impossible - Jackal Guard Error";
-   now cock entry is "Impossible - Jackal Guard Error";
-   now face change entry is "Impossible - Jackal Guard Error";
-   now body change entry is "Impossible - Jackal Guard Error";
-   now skin change entry is "Impossible - Jackal Guard Error";
-   now ass change entry is "Impossible - Jackal Guard Error";
-   now cock change entry is "Impossible - Jackal Guard Error";
-   now str entry is 12;
-   now dex entry is 16;
-   now sta entry is 12;
-   now per entry is 12;
-   now int entry is 12;
-   now cha entry is 12;
-   now sex entry is "No Change";
-   now HP entry is 75;
-   now lev entry is 15;
-   now wdam entry is 13;
-   now area entry is "Nowhere";
-   now cocks entry is 0;
-   now cock length entry is 0;
-   now cock width entry is 0;
-   now breasts entry is 0;
-   now breast size entry is 0;
-   now male breast size entry is 0;
-   now cunts entry is 0;
-   now cunt length entry is 0;
-   now cunt width entry is 0;
-   now libido entry is 45;
-   now loot entry is "";
-   now lootchance entry is 0;
-   now scale entry is 3;
-   now body descriptor entry is "Impossible - Jackal Guard Error";
-   now type entry is "Impossible - Jackal Guard Error";
-   now magic entry is true;
-   now resbypass entry is false;
-   now non-infectious entry is true;
-   blank out the nocturnal entry;
-   now altcombat entry is "default";
+	Choose a blank row from Table of Random Critters;
+	now name entry is "Jackal Guard";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
+	now attack entry is "[one of]Slamming his solid stone fist straight into your chest and knocking the breath out of you, you think that the guardian may have broken a few of your ribs[or]Slashing a deep gash across your chest, you're not even sure if you're going to survive this encounter[or]You're almost knocked out when the stone guardian hits you with his entire weight[at random].";
+	now defeated entry is "[beatthestoneguardian]";
+	now victory entry is "[losetostoneguardian]";
+	now desc entry is "[stoneguardiandesc]";
+	now face entry is "Impossible - Jackal Guard Error";
+	now body entry is "Impossible - Jackal Guard Error";
+	now skin entry is "Impossible - Jackal Guard Error";
+	now tail entry is "Impossible - Jackal Guard Error";
+	now cock entry is "Impossible - Jackal Guard Error";
+	now face change entry is "Impossible - Jackal Guard Error";
+	now body change entry is "Impossible - Jackal Guard Error";
+	now skin change entry is "Impossible - Jackal Guard Error";
+	now ass change entry is "Impossible - Jackal Guard Error";
+	now cock change entry is "Impossible - Jackal Guard Error";
+	now str entry is 12;
+	now dex entry is 16;
+	now sta entry is 12;
+	now per entry is 12;
+	now int entry is 12;
+	now cha entry is 12;
+	now sex entry is "No Change";
+	now HP entry is 75;
+	now lev entry is 15;
+	now wdam entry is 13;
+	now area entry is "Nowhere";
+	now cocks entry is 0;
+	now cock length entry is 0;
+	now cock width entry is 0;
+	now breasts entry is 0;
+	now breast size entry is 0;
+	now male breast size entry is 0;
+	now cunts entry is 0;
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 45;
+	now loot entry is "";
+	now lootchance entry is 0;
+	now scale entry is 3;
+	now body descriptor entry is "Impossible - Jackal Guard Error";
+	now type entry is "Impossible - Jackal Guard Error";
+	now magic entry is true;
+	now resbypass entry is false;
+	now non-infectious entry is true;
+	now DayCycle entry is 0;
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Jackal Guard ends here.

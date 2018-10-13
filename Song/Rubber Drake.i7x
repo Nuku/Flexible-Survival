@@ -26,24 +26,27 @@ to say rubberdrakedesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	Choose a blank row from Table of random critters;
-	now name entry is "Rubber Drake"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "ERROR: Rubber Drake - Not a creature."; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beattherubberdrake]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetorubberdrake]"; [ Text when monster wins. Change 'template' as above. ]
+	Choose a blank row from Table of Random Critters;
+	now name entry is "Rubber Drake"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
+	now attack entry is "ERROR: Rubber Drake - Not a creature."; [ Successful attack message ]
+	now defeated entry is "[beattherubberdrake]"; [ Text when monster loses. ]
+	now victory entry is "[losetorubberdrake]"; [ Text when monster wins. ]
 	now desc entry is "[rubberdrakedesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "stretched out into a draconic muzzle with brow ridges and horns. It all feels kind of rubbery and molded together. Even the tiara you're wearing is part of it and appears as if shoddily painted golden-yellow. It's like some kind of [if mdasslevel > 0]Magic Drake [end if]mask that you can't take off, though it certainly feels like it's part of you when you touch it";
 	now body entry is "excessively curved with outlandishly oversized hips and buttocks on an otherwise average (if nine-foot tall) frame. This massive bottom has no real weight to it, feeling empty as if filled only with air, much like the rest of you. Your hands and feet have changed, now sporting rubbery talons like costume gloves. You have a pair of latex wings on your back that, despite being balloon-like, you're able to move around[if mdasslevel > 0]. Overall, you look and feel like a rubbery imitation of a certain drake you've met[end if]";
 	now skin entry is "green rubber with a scale pattern printed across your";
 	now tail entry is "You sport a puffy rubber tail loosely shaped like that of a dragon.";
 	now cock entry is "[one of]green[or]rubber[or]draconic[at random]";
-	now face change entry is "stretches and shifts, and you begin to feel light-headed. Through momentarily blurred vision, you can see a rubbery, draconic muzzle start to form. Brow ridges and horns sprout up, but they're made of firm rubber and feel as if a molded part of your head. The whole of it seems to be molded together actually, with the seams a little uneven at times";
+	now face change entry is "stretches and shifts, and you begin to feel lightheaded. Through momentarily blurred vision, you can see a rubbery, draconic muzzle start to form. Brow ridges and horns sprout up, but they're made of firm rubber and feel as if a molded part of your head. The whole of it seems to be molded together actually, with the seams a little uneven at times";
 	now body change entry is "an unusual sensation spreads through you. Starting off as a tingle of strange energy, it builds until your body starts reshaping itself. Your figure changes, becoming nearly nine feet tall, with an exaggeratedly curvy shape. While your torso and arms are standard enough, your [if breast size of player > 5]breasts, [end if]ass and hips swell up, inflating to great size. They grow and grow until each buttock exceeds your own waist in size. Distracted by this change, you hardly notice at first your hands and feet gaining rubbery talons and textured scales. The growing pressure at your shoulder blades does get your attention though, building uncomfortably until finally pushing out a pair of latex dragon wings with inflated, balloon-like struts";
 	now skin change entry is "green rubber spreads across your skin with a scaled pattern marked onto it";
 	now ass change entry is "your rear puffs up, filling with air pressure. This grows and grows until that air is funneled into a new, draconic tail made of rubber that swells from your spine";
@@ -58,11 +61,11 @@ When Play begins:
 	now HP entry is 24; [ The monster's starting HP. ]
 	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 36; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 30; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 15; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 15; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -71,15 +74,15 @@ When Play begins:
 	now libido entry is 45; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4;
 	now body descriptor entry is "[one of]plump[or]pudgy[or]rubbery[or]inflatable[or]curvaceous[or]girly[or]feminine[at random]";
 	now type entry is "[one of]draconic[or]inflatable[at random]";
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;
+	now DayCycle entry is 0;
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
@@ -118,7 +121,7 @@ when play ends:
 			say "     Things grow hazier as you cement your dominance over your mindless kin, slaking your lusts on as many of them as you can before finally collapsing in large pool of musty seed, spent and brutally satisfied. Even in your exhausted state, the koballoons continue to worship you, licking and rubbing along every part of your body, their long, smooth tongues and nimble hands driving you to a string of almost painfully powerful peaks. While very enjoyable, you eventually grow weary of this, and you rise on unsteady footing to command your group's attention, your head still spinning from the intensity of it all. Communicating in a clear, confident voice, you cobble together a plan to fortify and patrol the fair, delegating duties to those whose skills most suit them. The greatest honor, however, is bestowed upon a particularly cute femboy who you've taken a liking to, selecting them as your personal, dedicated fucktoy to use [if player is male]and fill [end if]as you see fit, a fine familiar with a bountiful booty to match. Over time, you become known as [if breast size of player > 0]queen[else]king[end if] of the kobolds, making one of the deserted buildings your court. The rare, uninformed uninfected who enter your territory are brought to you and converted through long and intimate sessions of lovemaking, shown the bliss of becoming another rubber drone as they're [if player is male]stuffed with cock and cum[else]forced to satisfy you for days on end[end if].";
 		else if humanity of player < 10: [Low-sanity ending]
 			say "     Succumbing to the instincts roaring through you, you try to seek out the koballoons again, returning to the fair they transformed you at. When you don't find them immediately, your nanite-riddled mind begins to shut down. You scour the area in your heedless panic, desperate for the touch of another rubbery kobold, only barely avoiding the patrolling mutants in your hurry. In the end, you're forced to retreat, finding no trace of the gang and unwilling to continue putting yourself in danger by staying here.";
-			say "     You wander the city aimlessly for a while, making love to many partners, but nothing quite scratches the itch deep within your body. Eventually you make your way to the Red Light District, where you spot a strange figure walking along the street. It's [if mdasslevel > 0]the Magic Drake you've ran into before[else]a hyper-endowed green drake[end if], with huge, scaly tits, a massive log of a shaft, and a heavy ballsack that sways as she moves. She's almost an exact replica of yourself, barring the reptilian hide, yet your simple mind fails to see the connection. You snap out of your idle reverie when she notices you and try to flee, but it's too late - the drake is already giving chase. You only make it a couple paces before the much stronger and heavier mutant is upon you, pinning you down with her bulk and oddly-shaped scepter.";
+			say "     You wander the city aimlessly for a while, making love to many partners, but nothing quite scratches the itch deep within your body. Eventually you make your way to the red light district, where you spot a strange figure walking along the street. It's [if mdasslevel > 0]the Magic Drake you've ran into before[else]a hyper-endowed green drake[end if], with huge, scaly tits, a massive log of a shaft, and a heavy ballsack that sways as she moves. She's almost an exact replica of yourself, barring the reptilian hide, yet your simple mind fails to see the connection. You snap out of your idle reverie when she notices you and try to flee, but it's too late - the drake is already giving chase. You only make it a couple paces before the much stronger and heavier mutant is upon you, pinning you down with her bulk and oddly-shaped scepter.";
 			say "     'Don't think that you can run away from me, my slutty familiar. I know who did this to you,' she says, her voice dripping with malice as she grinds her already erect phallus across the ridge of your back. The intense aroma of her body permeates the air in a musky, intoxicating miasma, much more potent and arousing than the synthetic scent of your erstwhile lovers. 'Such disobedient toys, no less. I should have just captured them all when I had the chance,' she muses as pre-cum oozes from her shaft, her thick hands pressing down to smear it across your rubbery flesh. When you release a low, pleasured moan in response, the shemale drake chuckles to herself and rises to her feet. 'Now, be a good familiar and tend to your mistress,' she purrs, crooking a finger.";
 			say "     You need no further encouragement, crawling up onto all fours in front of her, your broken mind eager to service this strangely alluring creature. At first, you draw several slow, teasing licks across her cumslit, coating your palate in her pungent flavor. Her pre leaks in a thick, perpetual stream of lubricating fluid, and your tongue bores deep into that yielding channel to chase after more. 'Mmh, that's a fine, fat-assed slut,' she moans happily, her thick tail thrashing behind her as she pushes that titanic cock firm against your lips. Invigorated by her words, you open your maw to accept more of your mistress's maleness, your throat stretching to lead that three-foot dick deeper into your yielding passage. Her length's heat and aroma fill your mind with lurid fantasies of giving yourself over to this dominant drake, clearly much more sexy and capable than yourself. Her hands wrap around your horns, and she gives them a firm pull to stuff more of her massive cock into your body, guiding you all the way down until your face is pressed up against the emerald scales of her crotch.'";
 			say "     Gurgling helplessly around her girth, you're faintly aware of her incanting something, but the words are incomprehensible to you. Your vision blocked by her groin, you can only moan and breathe deeply of her scent, shivering as her warm pre pools in your stomach. 'There,' she finally says, smiling down at you, 'that should do it.' Unsure what she means, the purpose of her previous incantations becomes quickly apparent when the cold, phallic end of her staff tickles your asshole. You groan loudly, shaking your rear, pleading without words for her to stuff that magical rod deep inside of your clenching colon. Sensing your compliance, the drake raises one hand and gestures toward her, guiding the staff along within it. Soon, it spreads the elastic rim of your anus and fills your rump with its smooth and shiver-inducing presence, making your entire body tense around the oversized, improvised butt plug. Your eyes roll back into your head, then flutter closed as that staff begins to thrust in and out of you in a gentle, stimulating rhythm.";
@@ -127,7 +130,7 @@ when play ends:
 				say "The asynchronous buggering has you blow your load and squirt all over the ground twice over before the shemale ";
 			else if player is male:
 				say "The asynchronous buggering has you blow your load twice over before the shemale ";
- 			else if player is female:
+			else if player is female:
 				say "The asynchronous buggering has you squirt all over the ground twice over before the shemale ";
 			else:
 				say "Although neuter, you still derive a certain sinful enjoyment from the asynchronous buggering, pleasing your gorgeous mistress until she ";

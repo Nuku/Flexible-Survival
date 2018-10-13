@@ -1,0 +1,12 @@
+--langdef=Inform
+--langmap=Inform:.i7x.ni
+--regex-Inform=/^\s*(.+?) ?is a (number|truth state) that/\1/f,func/
+--regex-Inform=/^\s*(.+?) ?is text that/\1/f,func/
+--regex-Inform=/^\s*(.+?) ?is a (situation|scavevent)/\1/f,func/
+--regex-Inform=/^\s*to say ?(.+?) ?:/\1/f,func/
+--regex-Inform=/^\s*carry out ?(.+?):]/\1/f,func/
+--regex-Inform=/^\s*Definition: A person ?(.+?) ?is ([^\[]+):/\2/f,func/
+--regex-Inform=/^\s*(.+?) ?is a (woman|man)/\1/f,func/
+--regex-Inform=/^\s*instead of ?(.+?):/\1/f,func/
+--regex-Inform=/^\s*(.+?) ?is a room/\1/f,func/
+--regex-Inform=/^\s*This is the (.+?) rule:/\1/f,func/

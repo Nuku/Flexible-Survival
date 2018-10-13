@@ -23,6 +23,10 @@ Version 1 of Skarnoth by Wahn begins here.
 
 Section 1 - Description
 
+Table of GameCharacterIDs (continued)
+object	name
+Skarnoth	"Skarnoth"
+
 Skarnoth is a man. The HP of Skarnoth is usually 0.
 The description of Skarnoth is "[SkarnothDesc]".
 The conversation of Skarnoth is { "Woof." }.
@@ -31,6 +35,7 @@ SkarnothLibraryEntry is a number that varies. [when he was brought in]
 to say SkarnothDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Skarnoth], LEVEL: [level of Skarnoth], LIBIDO: [libido of Skarnoth], LIBRARY ENTRY TURN: [SkarnothLibraryEntry] <- DEBUG[line break]";
+	project the figure of Skarnoth_undies_icon;
 	say "     Skarnoth the demon prince is a magnificent specimen of masculinity, with a strikingly handsome face framed by blood-red hair. His firm pecs and six-pack abs would fit an underwear model - which he kind of is, as you stripped him of his regalia, taking off anything but a skin-tight black thong. The strip of fabric does more to show off the bulge of his package than to conceal anything.";
 	say "     Letting your gaze stray from the flawless, reddish skin of the demon's torso, his similarity to the perfection a Greek statue does diminish a bit - as Skarnoth's otherworldly nature shows clearly on the rest of his body. Starting with a few small scales on the sides of his upper body, then larger and more solid ones on his hips and down the legs, the infernal being has overlapping, flexible scales. His feet bear sharp claws, as do the hands (if a bit smaller ones), and further scale-plates make it appear like he is wearing elaborate bracers as well as pauldrons to cover his shoulders. Also, he has a long tail with a ridge of scales running down the backside, ending in a spaded tip. A pair of large horns curving up from his head completes the image of a handsome and dangerous predator.";
 
@@ -40,9 +45,56 @@ Section 2 - Talking
 
 instead of conversing the Skarnoth:
 	if (HP of Skarnoth > 0):
-		say "     <This is a placeholder text for this WIP npc. Please have some patience until there is time to write more content for Skarnoth>";
+		say "[SkarnothTalkMenu]";
 	else:
 		say "ERROR-Skarnoth-[HP of Skarnoth]C: He isn't in one of the states she should be in! Please report how you got to this message.";
+
+to say SkarnothTalkMenu:
+	say "     What do you want to talk to Skarnoth about?";
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Chat a bit";
+	now sortorder entry is 1;
+	now description entry is "Just talk with the demon prince";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Offer Skarnoth an item";
+	now sortorder entry is 1;
+	now description entry is "Give a gift to the demon prince";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Chat a bit"):
+					say "[SkarnothTalk1]";
+				if (nam is "Offer Skarnoth an item"):
+					say "[SkarnothTalk20]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the demonic prince, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say SkarnothTalk1:
+	say "     <Placeholder Scene, to be filled in soon>";
 
 Section 3 - Sex
 
@@ -53,8 +105,9 @@ Instead of fucking the Skarnoth:
 	say "[SkarnothSexMenu]";
 
 to say SkarnothSexMenu:
+	project the figure of Skarnoth_naked_icon;
 	setmonster "Demon Prince";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -63,19 +116,19 @@ to say SkarnothSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Give him a blow-job";
 	[]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck him";
 		now sortorder entry is 2;
 		now description entry is "Use the demon's mouth";
 	[
-	if (cocks of player > 0 or cunts of player > 0):
+	if player is not neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "69 with Skarnoth";
 		now sortorder entry is 3;
 		now description entry is "Share oral pleasures with your male demon";
 	[]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride Skarnoth's dick (vaginal)";
 		now sortorder entry is 4;
@@ -86,7 +139,7 @@ to say SkarnothSexMenu:
 	now sortorder entry is 5;
 	now description entry is "Let the demon fill your ass with his seed";
 	]
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Skarnoth's ass";
 		now sortorder entry is 6;
@@ -96,7 +149,7 @@ to say SkarnothSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -120,14 +173,10 @@ to say SkarnothSexMenu:
 				else if (nam is "Take Skarnoth's ass"):
 					say "[SkarnothSex6]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the chained demon, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the chained demon, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -141,6 +190,8 @@ to say SkarnothSex1: [player sucks him]
 	WaitLineBreak;
 	say "     Skarnoth makes use of you for his own enjoyment, humping your mouth hard and almost without pause, which keeps you just a bit delirious but also somehow wanting for him to do it more. You don't know how long your breathtaking session takes, but at some point, the throbs of more pre come faster and faster while Skarnoth's grunts raise in urgency. Preparing yourself for his orgasm, you gulp down as he pulls out most of the way to cover your tongue with his load. The demon's cum is thick and creamy, even spicier than his pre and really quite hot, filling you with an inner warmth as you swallow it. More and more blasts of cum are blasted into your mouth and you do your best to eat it all, but after a little while, its hotness becomes a little bit of an issue - both in taste and temperature, as you start sweating and getting a red head, your eyes tearing up just a little.";
 	say "     At that point, Skarnoth pulls his manhood out and blasts your face with the next spurt of cum, leaving a hot line of sticky whiteness across one cheek. 'Hope you like jalapeno peppers,' he says with a chuckle, 'And if not... you'll surely get used to it soon. Trust me, they all do.' He keeps a hand on your head to hold you close while aiming his cock with the other one, doing his very best to cover as much as possible of your face and upper body with his load. Only when his orgasm finally ebbs off does the demon let go, loosening his tail from around your hips too as he leans back in satisfaction. 'That was fun,' he says loudly, smiling as you get to your feet and start wiping up his cum to lick it off your fingers. 'Be sure to come back for more... master,' the demon adds after that, with the last word being an almost amused afterthought.";
+	if Loyalty of Skarnoth < 10:
+		increase Loyalty of Skarnoth by 1;
 
 to say SkarnothSex2: [facefuck Skarnoth]
 	say "     Hooking a hand behind Skarnoth's head, you pull the sexy demon up from his seat, right into a demanding kiss. Chuckling under his breath, he proceeds to tongue-wrestle with you and slides those strong arms of his around your body, clawed hands kneading the cheeks of your butt. As you pull back from the bout of making out a moment later, the demon says in a teasing tone, 'You need it bad, don't you. How about you - umphH!' That's how far he gets before you push two fingers into his mouth and grunt commandingly for him to suck on your invading digits. The inner glow of the demon prince's eyes flares up a little as he realizes that you're planning to dominate him in this sexual encounter, and you can feel his muscles start to tense - right until you run a finger along his neck, reminding him of the collar you put on him.";
@@ -161,6 +212,8 @@ to say SkarnothSex2: [facefuck Skarnoth]
 		say "     Feeling Skarnoth suck hard on your dick, you're not too far behind joining your partner in orgasm and bury your erection all the way down his throat. Almost as soon as your swinging balls hit his chin in one last satisfying slap, you start blasting away with spurt after spurt of thick and creamy cum, filling Skarnoth's stomach with your load. You keep his face tightly pressed against your crotch for a while as your orgasm goes on with more and more semen being pumped into Skarnoth - so much so that he eventually has to push against your hips to show he's running out of air. With an amused huff through your nose, you pull back and allow him to gasp for air, splashing the demon's red-skinned face with several blasts of cum before the climax eventually tapers off. Only after you've finished cumming and made the demon lick off the last drops from your softening prick do you take hold of his tail and slowly pull it out of your ass.";
 		WaitLineBreak;
 		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then wipes his face with a slow swipe of his clawed hand. Looking at the white cum sticking to his fingers, he gives you a wink and then sucks it off finger by finger before sauntering over to throw himself on his red leather chair.";
+		if Loyalty of Skarnoth < 10:
+			increase Loyalty of Skarnoth by 1;
 	else:
 		LineBreak;
 		say "     As turned on as you are by the demon hunk, you still decide to stop him before things get out of hand. After all, you're the boss here and he should better remember that! Catching the long tail in an iron grip, you pull it away from your ass and tell Skarnoth that he's been a bad boy, underlining it by yanking his horns back, forcing him to look up at you. Grinning, he licks his sloppy lips and replies in a challenging tone, 'And what are you gonna do about it?' In reaction to that, you crouch down with his tail in hand, ignoring Skarnoth's tries to free the long appendage with sharp tugs. Looking at the glistening fleshy spade at the end, lubed with his own pre to allow for easier fucking, the choice is clear. Slapping Skarnoth's buttocks with your other hand and pulling one cheek to the side a little, you shove his tail-tip at the demon prince's own pucker, burying it all the way to where your fist is closed around the tail.";
@@ -168,6 +221,8 @@ to say SkarnothSex2: [facefuck Skarnoth]
 		WaitLineBreak;
 		say "     Keeping his face tightly pressed against your crotch for a while as your orgasm goes on - with more and more semen being pumped into Skarnoth - he eventually has to push against your hips to show he's running out of air. With an amused huff through your nose, you pull back and allow him to gasp for air, splashing the demon's red-skinned face with several blasts of cum before the climax eventually tapers off. Meanwhile, the demon pushes himself to orgasm by tail-fucking his own ass, blasting long streaks of demon cum all over the floor between your legs";
 		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then wipes his face with a slow swipe of his clawed hand. Looking at the white cum sticking to his fingers, he gives you a wink and then sucks it off finger by finger before sauntering over to throw himself on his red leather chair.";
+		if Loyalty of Skarnoth > 1 and Loyalty of Skarnoth < 10:
+			decrease Loyalty of Skarnoth by 1;
 
 to say SkarnothSex3: [69 with Skarnoth]
 	say "     A";
@@ -197,12 +252,16 @@ to say SkarnothSex6: [Skarnoth's ass fucked]
 		say "     Feeling Skarnoth's insides almost milk your dick, you're not too far behind joining your partner in orgasm and slam hard against his ass. Almost as soon as your swinging balls hit his warm skin in one last satisfying slap, you start blasting away with spurt after spurt of thick and creamy cum, filling Skarnoth's asshole with your load. The two of you stay tightly pressed together for a while, bent over and with him bracing against the chair, you against his strong back. Only after your respective orgasms have tapered off and you've caught your breaths do you take hold of his tail and slowly pull it out of your ass, then withdraw your dick from between his cheeks.";
 		WaitLineBreak;
 		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then glances over at his high-backed chair. 'Made quite a mess though,' the demon adds and nods to the white, slightly glowing splashes of his cum on the red leather. With a wink, he then swipes off the creamy goop and brings the hand used for that to his face, slurping his cum off finger by finger.";
+		if Loyalty of Skarnoth < 10:
+			increase Loyalty of Skarnoth by 1;
 	else:
 		LineBreak;
 		say "     As turned on as you are by the demon hunk, you still decide to stop him before things get out of hand. After all, you're the boss here and he should better remember that! Catching the long tail in an iron grip, you pull it away from your ass and tell Skarnoth that he's been a bad boy, underlining it with a harsh thrust into his ass. Pulling the flexible tail forward, you smile as you see the spade at the end, glistening in his pre-cum. You know just what to do with it. Slapping Skarnoth's buttocks with your other hand, you command the demon to suck on his tail and swallow the pre on it - which he does without complaint. Having stopped the demon from getting one over on you, fucking him almost seems to feel even better than before, and you hump him hard and deep with great pleasure.";
 		say "     Being taken like that quickly pushes the demon closer and closer to his limits, and before much longer he groans, 'Yeah! Just like... nnnnghhHHHH! FUCK!' With that, the bent-over shape of the demon prince starts trembling and twitching, as do his inner muscles around your prick, tensing up with every new spurt of cum he is blasting all over the leather upholstery of his high-backed chair. Feeling Skarnoth's insides almost milking your dick, you're not too far behind joining your partner in orgasm and slam hard against his ass. Almost as soon as your swinging balls hit his warm skin in one last satisfying slap, you start blasting away with spurt after spurt of thick and creamy cum, filling Skarnoth's asshole with your load. The two of you stay tightly pressed together for a while, bent over and with him bracing against the chair, you against his strong back. Only after your respective orgasms have tapered off and you've caught your breaths do you slowly withdraw your dick from between his cheeks.";
 		WaitLineBreak;
 		say "     As you start picking up your gear and pants to get dressed, Skarnoth stands up straight and enjoys the sight of your naked body, even going so far as lightly slapping your ass as you bend over. 'That was fun,' he says with a chuckle, then glances over at his high-backed chair. 'Made quite a mess though,' the demon adds and nods to the white, slightly glowing splashes of his cum on the red leather. With a wink, he then swipes off the creamy goop and brings the hand used for that to his face, slurping his cum off finger by finger.";
+		if Loyalty of Skarnoth > 1 and Loyalty of Skarnoth < 10:
+			decrease Loyalty of Skarnoth by 1;
 
 Section 4 - Events
 
@@ -214,13 +273,16 @@ instead of going northwest from Grey Abbey Library while (HP of Skarnoth > 1):
 
 Section 5 - Infection for combat purposes
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Demon Prince";
+	now enemy title entry is "";
+	now enemy name entry is "Skarnoth";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[one of]Skarnoth[or]The demon prince[or]The powerful demon[or]The handsome demon[at random] [one of]flashes past you in a flurry of claw-slashes with his hands, leaving behind bleeding gashes in your side.[or]jumps forward and gives you a bear hug, forcing both arms against your sides in impotent immobility. As air is being driven out of your lungs, you feel his breath hotly against your cheek, followed by his tongue licking possessively along your jawline. An eye-blink later, he lets go of you, laughing as you collapse to the ground and gasp for air.[or]throws himself on you and grabs your arm, then humps his hips forward. He is playing with you, only leaving a few scratches after making sure you feel his erect cock rub against your side.[or]gets a grip on your shoulder and throws you to the ground wish a harsh shove, which puts you on all fours with your ass raised. 'That's the proper way to await your master. Maybe you'll be an amusing pet after all.'[or]gives you a head-ringing slap that dazes you for a second, then lets his clawed hands roam over your body, feeling and groping you.[or]grabs you by the neck and aggressively kisses you, with his tongue exploring your mouth.[at random]";
 	now defeated entry is "[line break]";
 	now victory entry is "[line break]";
@@ -245,11 +307,11 @@ When Play begins:
 	now HP entry is 275;
 	now lev entry is 20;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 35;              [ Monster's average damage when attacking. ]
-	now area entry is "nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16;       [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 9;         [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;            [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;            [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;        [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;              [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -264,8 +326,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Demon Slave":

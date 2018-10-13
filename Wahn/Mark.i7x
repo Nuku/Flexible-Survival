@@ -26,6 +26,10 @@ Section 1 - NPC
 [***********************************************************]
 [***********************************************************]
 
+Table of GameCharacterIDs (continued)
+object	name
+Mark	"Mark"
+
 Mark is a man.
 The description of Mark is "[MarkDesc]".
 The conversation of Mark is { "<This is nothing but a placeholder!>" }.
@@ -82,7 +86,7 @@ instead of conversing the Mark:
 	if XP of Mark is 0:
 		say "     ERROR: Mark shouldn't be available to talk to yet. Please report to Wahn on the FS Discord/Forum and quote this tracking number for easier bugfixing: [XP of Mark]";
 	else:
-		say "[MarkTalkMenu]"
+		say "[MarkTalkMenu]";
 
 to say MarkTalkMenu:
 	LineBreak;
@@ -156,7 +160,7 @@ to say MarkTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -190,16 +194,13 @@ to say MarkTalkMenu:
 				if (nam is "Talk about the suit for Jay"):
 					say "[MarkSuitQuest]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the large polar bear, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "[MarkTalkMenu]";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the large polar bear, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say MarkTalk1: [talk about him]
@@ -415,9 +416,9 @@ to say MarkScavengingTarget4:
 		increase carried of water bottle by 2;
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
 		say "     Wavering and exhausted, you collapse on the ground and instantly find yourself covered by multiple colorful gel people, putting the world in a confusing jumble of multicolored shades as you see it through their transparent flesh. Your lungs start burning from the lack of air after a few moments, and the urge of just trying to breath, even through it would just mean inhaling a bunch of goop, rises more and more. But all is not lost, as an apparently pink and blue bear suddenly steps into your line of sight, plunging his clawed hand through the gel to wrench you out of the pile-up. Finding yourself shaken around (to free you of splatters of goo) and then thrown over Mark's shoulder, you see a whole horde of previous victims of the supermarket trap ooze forward from the back of the store. Your polar bear companion doesn't wait for them to arrive, or even your own opponents to re-form and attack, instead just running out of the place, carrying you to safety.";
-		say "     The gel people follow for half a block, then seem to give up on you and return to their home, no doubt preparing for others who are more gullible and less formidable in a fight. Putting you down on your own feet and stopping to catch his breath, Mark says, 'Well, that went sideways quickly. Still, it is tempting to go back there sometime and maybe snatch the bait out from under them. The original ambush group wasn't that big. If you train up a bit maybe, I bet that we could fight em off and get out before the others arrive.' The two of you make your way back to the Mall, and after giving you a companionable squeeze of the shoulder, the big bear goes off to go find his lover Jay.";
+		say "     The gel people follow for half a block, then seem to give up on you and return to their home, no doubt preparing for others who are more gullible and less formidable in a fight. Putting you down on your own feet and stopping to catch his breath, Mark says, 'Well, that went sideways quickly. Still, it is tempting to go back there sometime and maybe snatch the bait out from under them. The original ambush group wasn't that big. If you train up a bit maybe, I bet that we could fight [']em off and get out before the others arrive.' The two of you make your way back to the Mall, and after giving you a companionable squeeze of the shoulder, the big bear goes off to go find his lover Jay.";
 	else if fightoutcome is 90: [fled]
-		say "     Abandoning the fight, you turn around and run, calling for Mark to do the same. He kicks a blue gel creature out of his way and follows you, dashing out of the store. Looking back over your shoulder, you see that more and more creatures emerge from the depths of the store, a whole horde of previous victims of the insidious trap in the supermarket. The gel people follow for half a block, then seem to give up on you and return to their home, no doubt preparing for others who are more gullible and less formidable in a fight. Stopping to catch his breath, Mark says, 'Well, that went sideways quickly. Still, it is tempting to go back there sometime and maybe snatch the bait out from under them. The original ambush group wasn't that big. If you train up a bit maybe, I bet that we could fight em off and get out before the others arrive.' The two of you make your way back to the Mall, and after giving you a companionable squeeze of the shoulder, the big bear goes off to go find his lover Jay.";
+		say "     Abandoning the fight, you turn around and run, calling for Mark to do the same. He kicks a blue gel creature out of his way and follows you, dashing out of the store. Looking back over your shoulder, you see that more and more creatures emerge from the depths of the store, a whole horde of previous victims of the insidious trap in the supermarket. The gel people follow for half a block, then seem to give up on you and return to their home, no doubt preparing for others who are more gullible and less formidable in a fight. Stopping to catch his breath, Mark says, 'Well, that went sideways quickly. Still, it is tempting to go back there sometime and maybe snatch the bait out from under them. The original ambush group wasn't that big. If you train up a bit maybe, I bet that we could fight [']em off and get out before the others arrive.' The two of you make your way back to the Mall, and after giving you a companionable squeeze of the shoulder, the big bear goes off to go find his lover Jay.";
 
 to say MarkScavengingTarget5: [behemoth attack]
 	say "     'See that place up there? It is -' Mark starts to say, but his words are drowned out by a monstrous bellow, followed by [one of]a shrieking harpy, flying past with panicked beats of her wings[or]a screaming husky running past in a panic[or]the shriek of a panicked latex fox dashing past[or]the shriek of a centaur dashing past with hooves clattering on the asphalt[at random]. The creature chasing after the fleeing person is a true monster, a giant behemoth - and you are right in its path! Before either Mark or you have any chance to react, the beast literally runs you over, and a casual swipe of its leg swats the big polar bear to the side, impacting against the side of a building with a loud thud. Your friend collapses to the ground like a puppet with its strings cut, having hit the side of his head on a brick wall.";
@@ -469,14 +470,14 @@ to say MarkSuitQuest:
 			say "     You angle your steps towards the west wing while having your fairly interesting conversation with the slender elf, all the while encountering a series of interesting situations among the teeming masses of refugees, including more than a few that know Jay and who say hello to him in passing. Therefore, it isn't too hard to keep your friend occupied for quite a while. Eventually, you double back at the far end and walk back, reaching Nermine's shop. Your companion stops for a moment to check out the strange things laid out behind the shop window, giving you the opportunity to glance at a public clock: Perfect, it's been just a little over an hour since you left Mark to make his preparations, so you start out towards the east wing with Jay.";
 			WaitLineBreak;
 			say "     'It was really nice talking with you,' Jay says as you reach the inconspicuous 'Staff Only' door that leads to the non-public areas of the mall. The Christmas elf digs out his key and opens the door, then pauses and looks back at you. 'Hm, Mark will be back home by now and he usually picks up dinner for the two of us. Wanna come up and join us today? We've got lots of pre-packaged food from his scavenging, so I'm sure we can make the meal stretch for three.' You smile and accept his invitation, working hard to not show a grin until he turns around and starts leading the way down the service corridor and upstairs. Soon, Jay pushes open the door to the former office he and his husband now live in. He calls out, 'Honey, I'm home and I brought a ...' Further words are put on hold as he sees the low dinner table, with its elf-sized chair and sitting cushions for others, made up with a white linen tablecloth. Plates and gleaming cutlery is laid out on it, and a decorative glass bowl with a lit candle sets a very nice mood.";
-			say "     'Welcome to Tati's,' Mark's deep voice suddenly says, with the polar bear stepping forward from where he had been standing behind the door. 'Your table is waiting, sir.' Jay draws in a breath as he looks at his husband, dressed in the waiter's uniform of the place where they met. Glancing back at you too a moment later, he sees your broad grin and bursts out, 'Aha! So you've planned this together! Totally got me, I have to admit.' Then Mark gently picks him up in his arms and happily says, 'Surprise,' followed by a deep kiss. Setting his lover back down, Mark guides Jay and yourself over to the table and bids you to sit down, then serves up an excellent meal of Romanian dishes, complete with a fancy entree and a savoury main course. All three of you sit down and start to eat heartily, with Mark explaining the little adventure you and he went through to get the restaurant accessories. The two of them frequently hold hands while you eat, with Jay's hand almost vanishing in the much larger paw of his lover.";
+			say "     'Welcome to Tati's,' Mark's deep voice suddenly says, with the polar bear stepping forward from where he had been standing behind the door. 'Your table is waiting, sir.' Jay draws in a breath as he looks at his husband, dressed in the waiter's uniform of the place where they met. Glancing back at you too a moment later, he sees your broad grin and bursts out, 'Aha! So you've planned this together! Totally got me, I have to admit.' Then Mark gently picks him up in his arms and happily says, 'Surprise,' followed by a deep kiss. Setting his lover back down, Mark guides Jay and yourself over to the table and bids you to sit down, then serves up an excellent meal of Romanian dishes, complete with a fancy entree and a savory main course. All three of you sit down and start to eat heartily, with Mark explaining the little adventure you and he went through to get the restaurant accessories. The two of them frequently hold hands while you eat, with Jay's hand almost vanishing in the much larger paw of his lover.";
 			WaitLineBreak;
 			project the figure of Jay_suit_quest_icon;
 			say "     Eventually, when the three of you have finished off all of the food and conversation has drifted on to some old stories of theirs being recounted for you, Mark clears his throat. 'So Jay, we've got another surprise for you. But I'll let our friend [if player is not defaultnamed][name of player] [end if] give it to you. After all, [SubjectPro of player] was the one who actually had it made.' With a grin to you, Mark nods towards a flat carton box that you quickly retrieve. Carrying it on both outstretched arms, you bring the box to the table and set it down in front of Jay. Visibly touched by yet another gift, the slender elf holds his breath and lifts the lid of the box. He swallows and then releases the gasp of air, then bursts out, 'Oh my god! Is that - yes, it is!' Lifting the jacket of his new suit out of the box, he runs a hand over the shiny black fabric and smiles broadly.";
 			say "     'It's perfect!' the elf says in a cheerful outburst, then lays the garment down carefully so he can stand up and peel the Christmas elf tunic and skin-tight green shirt off his body. The getup is carelessly thrown to the side and Jay slips the suit jacket on, closing its middle button over his slender, naked chest. 'Thank you so much!' a beaming Jay says to both of you, nodding to you and directing a lust-filled gaze at his husband. 'You don't know how much I missed being properly dressed.' Mark chuckles and nods his head, eyes resting on his lover's crotch, where a quickly hardening erection can be seen in the elf's skin-tight green leggings. 'Oh, I have a good guess if that's the indicator. Seems like it's time for dessert, my little hottie.' With that said, he starts to take off his waiter uniform, drawing Jay's full attention.";
 			WaitLineBreak;
 			project the figure of Jay_undies_icon;
-			say "     Not wanting to be the third wheel in them reliving that special day they met, you quietly rise and turn to the door. Yet before you have made more than a few steps, a voice from behind you calls out, 'Wait!' Glancing back, you see the two of them already half-undressed, with Mark having his arms around the elf as he stands next to his much larger lover. Jay looks down to the suit jacket that he carefully put back in the box, then over to you again. 'You're now officially our new best friend. You can count yourself invited for dinner, always. And... other things, maybe.' Mark meets Jay's gaze as the elf looks over to him in silent question, then the two of them smile and nod to each other. The polar bear adds, [if cocks of player is 0]'Too bad you're not a guy, but if that ever changes, we definitively could have some fun together[else]'Any guy who's this eager and friendly in helping out people he met only a short while ago is worth having some fun with. Hope you check back with us sometime[end if].'";
+			say "     Not wanting to be the third wheel in them reliving that special day they met, you quietly rise and turn to the door. Yet before you have made more than a few steps, a voice from behind you calls out, 'Wait!' Glancing back, you see the two of them already half-undressed, with Mark having his arms around the elf as he stands next to his much larger lover. Jay looks down to the suit jacket that he carefully put back in the box, then over to you again. 'You're now officially our new best friend. You can count yourself invited for dinner, always. And... other things, maybe.' Mark meets Jay's gaze as the elf looks over to him in silent question, then the two of them smile and nod to each other. The polar bear adds, [if player is not male]'Too bad you're not a guy, but if that ever changes, we definitively could have some fun together[else]'Any guy who's this eager and friendly in helping out people he met only a short while ago is worth having some fun with. Hope you check back with us sometime[end if].'";
 			say "     The moment passes as Jay leans in to nibble Mark's furry ear a little and lets his hands wander over the large ursine's body. Mark replies in kind, and you're all but forgotten for now as the two of them start to make out and undress even further. Now actually making your way out of the room, you close the door behind you and start hearing moans from inside as you walk away. Leaving the polar bear and elf couple, you feel pretty good about yourself, not just because of the excellent meal filling your stomach, but also the good turn you arranged for your new friends. And maybe you'll make use of their other offer sometime too...'";
 			now hunger of player is 0;
 			now thirst of player is 0;
@@ -527,7 +528,7 @@ to say TatiHyenaMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -551,17 +552,13 @@ to say TatiHyenaMenu:
 				if (nam is "Offer yourself to the hyena waiting to fuck someone"):
 					say "[TatiHyenaFuck]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Change your mind and leave?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back and turn around, intending to leave the restaurant, only to see that several more hyenas have come in behind you. 'Leaving so soon?' one of them says with a lewd grin, rubbing the front of his leather bike pants. Seems like just walking out of here isn't an option...";
-				wait for any key;
-				say "[TatiHyenaMenu]";
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back and turn around, intending to leave the restaurant, only to see that several more hyenas have come in behind you. 'Leaving so soon?' one of them says with a lewd grin, rubbing the front of his leather bike pants. Seems like just walking out of here isn't an option...";
+			wait for any key;
+			say "[TatiHyenaMenu]";
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say TatiHyenaMatriarch:
@@ -631,7 +628,7 @@ to say TatiHyenaCharm:
 to say TatiHyenaFuck:
 	setmonster "Herm Hyena";
 	say "     Walking up to the hyenas fucking their new recruit, you step next to the one jerking his own cock and waiting his turn. The horny guy opens his mouth to warn you off and say that he's up next, only to let out a burst of laughter as you pull your clothes off and bend over the table instead, presenting yourself for him. 'Seems like I'm done waiting,' he tells his companion and shares a fist-bump with them, then steps up behind you and rubs his shaft up and down between the buns of your ass. ";
-	if cunts of player > 0:
+	if player is female:
 		say "Proceeding to brush the dickhead further down, your hyena moans in pleasure as he touches the soft folds of your sex. He pushes into your pussy without delay, grunting in satisfaction as he sheathes himself in a warm and tight hole. 'The newbie has a sweet pussy,' your fucker casually calls out to his friends as he begins to pound you from behind in a rapid tempo.";
 		say "     Being mated by this horn-dog of a hyena is a fairly straightforward affair of being deep-dicked with long and hard thrusts and him slapping your ass a few times. It doesn't take all that long before he builds up to a final quick push all the way into your pussy, unloading his seed right against the trembling ring of your cervix. You can feel his cock throb hard with spurt after spurt being deposited into your body. Yet before he even has the time to finish completely, another hyena pulls the guy away from your ass, making his dick slip out and splatter your back with a few splashes of cum. 'I wanna try out the new slut too,' the newcomer grunts, and before you know what, he's already thrust into you and starts pounding away. This is pretty much how the next hour or so goes for you, with one hyena after the other making use of your increasingly sloppy pussy and dumping their loads into it.";
 		infect "Herm Hyena";
@@ -652,7 +649,7 @@ to say TatiHyenaFuck:
 	say "[TatiMallReturn]";
 
 to say TatiMallReturn:
-	say "     The way back to the mall is thankfully without any dangerous interruptions, leaving you free to make good time there. As you arrive at the north entrance, Mark gives a friendly wave to the gathered wolverine guards and takes a seat at the coffee shop, inviting you to share a cup with him. Sipping the hot liquid, he smiles at you and says, 'I really appreciate all the effort you've been putting into helping Jay and me. It is unusual to find someone who wants to help out selflessly in a situation like this.' The polar bear reaches out and squeezes your arm in a friendly way, then adds, 'I'll stash the restaurant gear with our neighbours for now. Wouldn't want Jay to find it and ruin the surprise.'";
+	say "     The way back to the mall is thankfully without any dangerous interruptions, leaving you free to make good time there. As you arrive at the north entrance, Mark gives a friendly wave to the gathered wolverine guards and takes a seat at the coffee shop, inviting you to share a cup with him. Sipping the hot liquid, he smiles at you and says, 'I really appreciate all the effort you've been putting into helping Jay and me. It is unusual to find someone who wants to help out selflessly in a situation like this.' The polar bear reaches out and squeezes your arm in a friendly way, then adds, 'I'll stash the restaurant gear with our neighbors for now. Wouldn't want Jay to find it and ruin the surprise.'";
 	now thirst of Jay is 7; [got the Tati supplies]
 
 [***********************************************************]
@@ -664,7 +661,7 @@ Section 4 - Fucking
 [***********************************************************]
 
 instead of fucking the Mark:
-	if cocks of player is 0:
+	if player is not male:
 		say "     Sniffing the air a little and glancing down to your crotch, Mark gives a rumbling sound from the depth of his broad chest as he clears his throat, then shakes his head. 'Sorry, but I'm gay. Not really interested in anything but men, at least in terms of sex....'";
 	else:
 		if thirst of Jay < 9:
@@ -690,7 +687,7 @@ to say MarkSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -705,7 +702,7 @@ to say MarkSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -721,16 +718,12 @@ to say MarkSexMenu:
 				if (nam is "Suck Mark off"):
 					say "[MarkSex2]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the slender elf, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the large polar bear, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say MarkSex1: [oral on the player]

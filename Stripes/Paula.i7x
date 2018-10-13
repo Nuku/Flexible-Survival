@@ -14,7 +14,7 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 	WaitLineBreak;
 	say "     '...coming to, dammit. Anesthesia!' a male voice barks authoritatively.";
 	say "     'Applying anesthesia,' another voice replies quickly, this one female.";
-	say "     The first voice returns. 'It's working. Good. Continue the application.'  After a brief pause. 'Nurse, apply more vixen until her symptoms improve.'";
+	say "     The first voice returns. 'It's working. Good. Continue the application.' After a brief pause. 'Nurse, apply more vixen until her symptoms improve.'";
 	say "     'Gladly, doctor,' a second female giggles.";
 	say "     'Dammit, nurse! This is no laughing matter. This is a serious medical operation. Now lick faster!' he responds.";
 	WaitLineBreak;
@@ -26,7 +26,7 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - The doctor.";
 	say "     ([link]N[as]n[end link]) - The nurses.";
-	if the player consents:
+	if player consents:
 		say "     Moving past the doberwoman, you charge at the doctor while telling her to help the prisoner. You can see her heading towards the vixens, one of them leaving the patient to deal with the interruption while the other continues to ride her face. But you've got your own problems to deal with in the form of the horny doctor.";
 		now hdmode is 3;
 		challenge "Horny Doctor";
@@ -63,7 +63,7 @@ to say paula_rescue:	[This is one of Good Alexandra's tasks.]
 			now HP of Paula is 2;
 	if HP of Paula is 2:		[lost or fled]
 		say "     Once you've put some distance between you and the hospital, you and Alexandra pause somewhere out of sight to take stock of the situation. Before the incident in the operating room, the two of you had managed to collect some usable medical supplies, at least enough to deal with some basic problems those under her protection might have. Clearly disappointed with her failure at saving a potential survivor, she's glad that the two of you were at least able to make it out of there intact. She is a little sullen for a while, but focuses on still moving forward with her plans.";
-	move player to Police Station;
+	move player to Police Station Twelve;
 	follow the turnpass rule;
 
 
@@ -80,6 +80,10 @@ to say paula_saved:
 
 
 Section 1 - Paula the Vixen Nurse
+
+Table of GameCharacterIDs (continued)
+object	name
+Paula	"Paula"
 
 Paula is a woman.
 The description of Paula is "[pauladesc]".
@@ -105,18 +109,18 @@ Instead of conversing the Paula:
 		say "     Pointing out that that's a pretty grim outlook, especially since military rescue is coming, she just rolls her eyes. 'Oh, you believe that garbage, do you? Who'd want to come in here to try and save a bunch of pervy monsters like us? That's just to keep us borderline cases quiet and complacent a little longer.";
 		say "     'Look, I'm a realist, not a pessimist. And I realize that things have gone to Hell in a handbasket. No point in expecting the best out of people - you'll rarely get it and just be disappointed in them almost all the time. But when you don't, at least you can have your expectations exceeded,' she says, running a paw across your hip with a sultry swish of her tail. 'On rare occasions.'";
 		now HP of Paula is 4;
-	else if population of Police Station > 0 and a random chance of 1 in 4 succeeds:
+	else if PoliceStationTwelvePopulation > 0 and a random chance of 1 in 4 succeeds:
 		say "[paulasurvivors]";
 	else:
-		say "     [one of][if population of Police Station is 0]'Any patients for me?'[else]'I've got a little bit of time before I have to see my next patient.'[end if][or]'You seem to go wandering around outside quite a bit. Probably perving on the mutants, aren't you?'[or]'You know, you're going to get yourself into real trouble out there if you keep pressing your luck. If you end up hurt, come see me for some [bold type]healing[roman type].'[or]'I wonder which of you two'll snap first and turn this place into a sex harem. Probably [if HP of Alexandra < 61]Officer Doggy out there - she's wound pretty tight. She should learn to relax and have a little fun. Therapeutically ease the pressure and all[else]be you, running around out there, probably getting up to all sorts of kinky stuff with those mutants out there. You'll end up some kind of sex perv and come back here to ravage us all[end if],' she says, stretching her arms up, causing her quad breasts to press against the fabric straining to cover them.[or]'I'd made out alright on my own for a while, but my luck was bound to run out.'[or]'I think this vixen look's not bad. Better than those itchy scaly patches I'd picked up.'[or]'Can you believe I was a part-time nurse at that hospital before all this? This isn't what I had in mind when I was hoping to become full-time staff,' she says, fondling her double-bosom teasingly.[or]'So you thinking to get some [if HP of paula >= 5]more [end if]sex out of me in return for letting me stay here. Well, I guess that should be expected,' she says, giving her booty a shake in your direction.[or][if HP of Alexandra >= 65]'That robo-chick is one cold as ice bitch. She's caught and she's still smug like her shiny ass makes her better than the rest of us or something. Miss Bow-Wow should put dents in her chassis until she talks.'[else]'You just like coming here to stare at me in my nurse's outfit, don't you?'  Dirty perv,' she grumbles even as she turns and bends over to reach for something, tail raised and flicking.[end if][in random order]";
+		say "     [one of][if PoliceStationTwelvePopulation is 0]'Any patients for me?'[else]'I've got a little bit of time before I have to see my next patient.'[end if][or]'You seem to go wandering around outside quite a bit. Probably perving on the mutants, aren't you?'[or]'You know, you're going to get yourself into real trouble out there if you keep pressing your luck. If you end up hurt, come see me for some [bold type]healing[roman type].'[or]'I wonder which of you two'll snap first and turn this place into a sex harem. Probably [if HP of Alexandra < 61]Officer Doggy out there - she's wound pretty tight. She should learn to relax and have a little fun. Therapeutically ease the pressure and all[else]be you, running around out there, probably getting up to all sorts of kinky stuff with those mutants out there. You'll end up some kind of sex perv and come back here to ravage us all[end if],' she says, stretching her arms up, causing her quad breasts to press against the fabric straining to cover them.[or]'I'd made out alright on my own for a while, but my luck was bound to run out.'[or]'I think this vixen look's not bad. Better than those itchy scaly patches I'd picked up.'[or]'Can you believe I was a part-time nurse at that hospital before all this? This isn't what I had in mind when I was hoping to become full-time staff,' she says, fondling her double-bosom teasingly.[or]'So you thinking to get some [if HP of paula >= 5]more [end if]sex out of me in return for letting me stay here. Well, I guess that should be expected,' she says, giving her booty a shake in your direction.[or][if HP of Alexandra >= 65]'That robo-chick is one cold as ice bitch. She's caught and she's still smug like her shiny ass makes her better than the rest of us or something. Miss Bow-Wow should put dents in her chassis until she talks.'[else]'You just like coming here to stare at me in my nurse's outfit, don't you?' Dirty perv,' she grumbles even as she turns and bends over to reach for something, tail raised and flicking.[end if][in random order]";
 [***]
 
 to say paulasurvivors:
 	let infpoppercent be 0;
-	now infpoppercent is ( 100 * infpop of Police Station ) / population of Police Station;
-	if population of Police Station > 20:
+	now infpoppercent is ( 100 * PoliceStationTwelveInfpop ) / PoliceStationTwelvePopulation;
+	if PoliceStationTwelvePopulation > 20:
 		say "'I'm actually pretty busy doing regular check-ups on those survivors, mostly monitoring them for infections and so on[if infpoppercent is 100]. They're all pretty much infected with something by this point, but it's still important to monitor their condition to make sure their condition doesn't deteriorate too badly[else]. As of my last check, I'd say they're about [infpoppercent]% of them are more infected than human at this point. It's more a matter of making sure their condition doesn't deteriorate too badly[end if].";
-	else if population of Police Station > 12:
+	else if PoliceStationTwelvePopulation > 12:
 		say "'I'm fairly busy doing regular check-ups on the remaining survivors. I'm mostly monitoring them for infections and so on[if infpoppercent is 100]. They're all pretty much infected with something by this point, but it's still important to monitor their condition to make sure their condition doesn't deteriorate too badly[else]. As of my last check, I'd say they're about [infpoppercent]% of them are more infected than human at this point. It's more a matter of making sure their condition doesn't deteriorate too badly[end if].";
 	else:
 		say "'Some of my time's taken up doing regular check-ups on the remaining survivors. I'm mostly monitoring them for infections and so on[if infpoppercent is 100]. They're all pretty much infected with something by this point, but it's still important to monitor their condition to make sure their condition doesn't deteriorate too badly[else]. As of my last check, I'd say they're about [infpoppercent]% of them are more infected than human at this point. It's more a matter of making sure their condition doesn't deteriorate too badly[end if].";
@@ -139,7 +143,7 @@ to say sexwithPaula:
 		say "     'You're back pretty quickly for more, don't you think? Probably means you're losing it, if you're back asking for sex again so soon. Try holding out a little longer before we knock boots again,' she adds, running her paws along her sides in a sultry manner in a clear invitation that you are indeed welcome back for more soon.";
 	else:
 		if HP of Paula is 4:
-			say "     'And so it begins,' she says with a bit of sigh. 'Knew there'd be a catch to staying here.'  Despite her words, she show no reluctance in the speed at which she strips herself down, baring her silver-furred body to you. With a slow stretch and a swish of her tail, she spreads herself out on the cot. With one foot sitting up on the edge of it, she puts herself on tantalizing display for you. 'Guess I'll just have to learn to put up with it somehow,' she purrs, running her tongue along the edge of her lips.";
+			say "     'And so it begins,' she says with a bit of sigh. 'Knew there'd be a catch to staying here.' Despite her words, she show no reluctance in the speed at which she strips herself down, baring her silver-furred body to you. With a slow stretch and a swish of her tail, she spreads herself out on the cot. With one foot sitting up on the edge of it, she puts herself on tantalizing display for you. 'Guess I'll just have to learn to put up with it somehow,' she purrs, running her tongue along the edge of her lips.";
 		else:
 			say "     'Back for more, I see. Taking advantage of the poor nurse you've taken in. Well, if that's how it has to be,' she says, grinding her sexy body against yours. She rubs her ample bosom against your chest before moving her paws up to slowly unbutton her nurse's outfit. Even as she's stripping down, she moves over to the cot with a sultry sway to her hips. Dropping her clothes to the floor, she stretches out on her makeshift examination table in a steamy pin-up pose.";
 		say "     'So, what did you have in mind[if HP of Paula > 4] this time[end if]?'";
@@ -150,7 +154,7 @@ to say sexwithPaula:
 to say Paulasexmenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fellatio";
 		now sortorder entry is 1;
@@ -172,7 +176,7 @@ to say Paulasexmenu:
 		now title entry is "***TBD***";
 		now sortorder entry is 5;
 		now description entry is "another sex position";]
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Get cunnilingus";
 		now sortorder entry is 6;
@@ -232,7 +236,7 @@ to say paulasex01:
 	say "     Opening her muzzle, she takes your [cock size desc of player] cock past her lips[if cock length of player > 36] with some effort[else if cock length of player > 24] with some effort at first[end if]. Working her tongue and palate, she's quite enthusiastic about blowing you, working her muzzle over your [cock of player] manhood while her paws stroke the base of your shaft[if cockname of player is not listed in infections of internallist], your balls[end if] and your hips. Your breathing gets heavy and your penis pulses and throbs in her mouth as your excitement builds under her tender care. Eventually you can no longer hold back and, with a moan of 'Oh nurse!' you unload your [cum load size of player] load into her sucking maw[if cock width of player < 30]. She swallows it all down eagerly, licking away the last drops before releasing your spent shaft[else]. She swallows as much of it as she can, but it's too much and some ends up overflowing from her pretty muzzle and dripping down onto her bosom before you're finally spent[end if].";
 
 to say paulasex02:
-	say "     'Well, I guess I'll just have to let you get it out, else you could end up snapping and running wild.'  Stretching her arms up above her head, she gives an exaggerated sigh, giving you a clear view of her twin pairs of breasts. The soft, silvery fur of her chest does not hide the shapely nature of her double-bosom and their perky nipples.";
+	say "     'Well, I guess I'll just have to let you get it out, else you could end up snapping and running wild.' Stretching her arms up above her head, she gives an exaggerated sigh, giving you a clear view of her twin pairs of breasts. The soft, silvery fur of her chest does not hide the shapely nature of her double-bosom and their perky nipples.";
 	say "     Dropping to her knees, she takes hold of your erection and, after giving it a few playful strokes, nestles it in her warm bosom. Her twin racks cradle your [cock size desc of player] member in their soft embrace. Pointing her muzzle down, she kisses your glans before slipping her lips around it. She grinds her chest against your shaft in this delightful manner. You put a hand on the vixen's head and caress her ears.";
 	say "     She works your arousal between her tits, gently pressing them around it with her paws. Soon this treatment has you panting and rocking your hips into her motion. Sensing you getting close, she lowers her muzzle further and sucks on you harder. A few final licks finishes the job, causing you to groan in lustful release, pumping your [cum load size of player] load into her warm, sucking muzzle. She licks your shaft clean with a self-satisfied sigh before getting back up and closing up her shirt with a professional air.";
 	say "     'Be sure to come see me again if you need another treatment. And I hope you appreciate it; not all of my patients receive this level of service.";
@@ -251,7 +255,7 @@ to say paulasex05:
 to say paulasex06:
 	say "     Hopping up onto the edge of her examination table, you spread your legs, inviting her to lick your pussy. She puts her paws on your thighs and parts your legs a little further. 'Here, let me have a look at that,' she says. 'Hmm... yes, indeed,' she adds, leaning in closer to give your wet folds a long, slow lick. And that lick is followed by another and then another. Soon she's wriggling that vulpine tongue of hers around inside your cunny, eating out your snatch with obvious relish.";
 	say "     You place a hand on the vixen's head, caressing those pointed ears of hers. This encourages her to place a few fingers on your clit and tease at it as well. Her other hand finds its way between her own legs and a few fingers slip into her wet cunt. She frigs herself with soft moans of enjoyment as her tongue plays around along your inner walls. Her tongue moves in luxurious ways, teasing any inner pleasure spot it can find in her attempt to satisfy her partner.";
-	say "     Subject to this fine tonguework, you can only last so long before tilting your head back and crying out in lustful release. Your hot femmecum flows across the lapping vixen's tongue. The hand between her legs moves frantically, soon pushing her to orgasm as well. The added zeal she applies to licking and kissing your clit at this point rekindles your climax to a second peak. You're both left panting and very damp at the crotch from your orgasms by the time she pulls away. She teasingly declares your examination done and gives your rear a swat as you hop down from the examination table.";
+	say "     Subject to this fine tonguework, you can only last so long before tilting your head back and crying out in lustful release. Your hot femcum flows across the lapping vixen's tongue. The hand between her legs moves frantically, soon pushing her to orgasm as well. The added zeal she applies to licking and kissing your clit at this point rekindles your climax to a second peak. You're both left panting and very damp at the crotch from your orgasms by the time she pulls away. She teasingly declares your examination done and gives your rear a swat as you hop down from the examination table.";
 
 to say paulasex07:
 	say "***TBD***";
@@ -285,9 +289,9 @@ carry out paulahealing:
 		say "     'We've got to ration our medical supplies. I know you're kind of a big help to Alexandra, but access is limited to once a day. We have to be sure we have enough for any survivors in need we're sheltering.";
 	else:
 		let healed be ( maxHP of player - HP of player ) / 2;
-		if "Rapid Healing" is listed in the feats of the player:
+		if "Rapid Healing" is listed in the feats of player:
 			now healed is ( healed times 110 ) divided by 100;
-		if "Regeneration" is listed in the feats of the player:
+		if "Regeneration" is listed in the feats of player:
 			now healed is ( healed times 110 ) divided by 100;
 		if ( healed + HP of player ) > maxHP of player, now healed is ( maxHP of player - HP of player );
 		increase HP of player by healed;

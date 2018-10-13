@@ -2,11 +2,37 @@ Version 3 of Deer by Stripes begins here.
 [Version 3.6 - Updated code and new scenes - Defth]
 [- Originally Authored By: Nuku Valente -]
 
+[ HP of Susan                             ]
+[ 0 = not active                          ]
+[ 1 = angry - creature                    ]
+[ 3 = stag with Dr. Matt                  ]
+[ 4 = happy - NPC w/Dr. Matt              ]
+[ 50+ = NPC w/Dr. Mouse                   ]
+[ 50 = Moved, nothing new                 ]
+[-- 12 turn delay from arrival --         ]
+[ 51 = Requested food/water               ]
+[ 52 = Received food/water                ]
+[-- 16 turn delay & hospquest 18+ --      ]
+[ 53 = Lab coat                           ]
+[ 54 = Returned extra supplies            ]
+[ 73+ Doe-buck w/Dr. Mouse                ]
+[ 73 = Doe-buck Susan                     ]
+[ 74 = Returned extra supplies            ]
+
+
+[ libido of Susan                         ]
+[ 0 = regular form                        ]
+[ 1 = doe-buck form                       ]
+
 "Adds a deer to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
 Section 1 - Event
 
-Unusual Creature is a situation. It is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Unusual Creature	"Unusual Creature"
+
+Unusual Creature is a situation. It is inactive.
 The sarea of Unusual Creature is "Park".
 
 After resolving a Unusual Creature, try looking;
@@ -22,24 +48,24 @@ Instead of resolving Unusual Creature:
 	choose a blank row in table of fucking options;
 	now title entry is "Do you grab her?";
 	now sortorder entry is 1;
-	now description entry is "Forcefully grab her and bring her to doctor Matt";
+	now description entry is "Forcefully grab her and bring her to Doctor Matt";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Do you console her?";
 	now sortorder entry is 2;
-	now description entry is "Try to console her and help her feel better about herself before taking her to doctor Matt";
+	now description entry is "Try to console her and help her feel better about herself before taking her to Doctor Matt";
 	[]
-	if libido of player > 50 and cocks of player > 0:
+	if libido of player > 50 and player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Do you follow your instincts and fuck her?";
 		now sortorder entry is 3;
-		now description entry is "Fuck her before taking the doe to doctor Matt. Having a little fun with her before he examines her should be no problem, right";
+		now description entry is "Fuck her before taking the doe to Doctor Matt. Having a little fun with her before he examines her should be no problem, right";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Just tell her to follow you.[as]100[end link][line break]";
+	say "[link]0 - Just tell her to follow you.[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> ";
 		get a number;
@@ -57,46 +83,44 @@ Instead of resolving Unusual Creature:
 				if (nam is "Do you follow your instincts and fuck her?"):
 					say "[Unsualfuck]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Just tell her to follow you.";
-			if the player consents:
-				now sextablerun is 1;
-				say "     Unsure what to do, you stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' she asks, making her way to her hooves. You explain that you'd like her to come with you and she looks around a moment before shrugging, 'I have nothing better to do,' she admits, and follows you, a little sullen.";
-				now battleground is "void";
-				now Unusual Creature is resolved;
-				move Susan to primary lab;
-				move player to primary lab;
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Unsure what to do, you stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' she asks, making her way to her hooves. You explain that you'd like her to come with you and she looks around a moment before shrugging, 'I have nothing better to do,' she admits, and follows you, a little sullen.";
+			now Unusual Creature is resolved;
+			move Susan to primary lab;
+			move player to primary lab;
+			now Resolution of Unusual Creature is 1; [Told Susan to follow you]
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
 to say Unsualgrab:
 	say "     You lunge for her and grab a long-limbed arm. Her brown fur is soft to the touch, warm as well. She's wrenched to her feet with a cry, and struggles, but is unable to escape your grip as you haul her back through the city directly for the lab. Sometimes the direct answer is the best one.";
-	now battleground is "void";
 	now Unusual Creature is resolved;
 	move Susan to primary lab;
 	move player to primary lab;
+	now Resolution of Unusual Creature is 2; [Grabbed Susan]
 
 to say Unsualconsole:
+	project the Figure of Susan_face_icon;
 	say "     You kneel beside her and take a hand. Rubbing gently, you tell her that she's not ugly at all. She refuses your word at first, but slowly warms as you coo soft encouragements. She suddenly pulls you close and kisses firmly, her slender snout against your face for a moment. She quickly agrees to come back with you to the lab, smiling as she goes.";
 	now deerconsent is 1;
-	now battleground is "void";
 	now Unusual Creature is resolved;
 	move Susan to primary lab;
 	move player to primary lab;
+	now Resolution of Unusual Creature is 3; [Consoled Susan]
 
 to say Unsualfuck:
+	project the Figure of Susan_face_icon;
 	say "     Unsure what to do, you obey the urgings of your [cock of player] cock. You grab her and push her to the ground, belly up. Your hands grab at her generous breasts as you slip into her wet, grasping, cunt. She squeals, at first with surprise, then increasingly with pleasure, rising her hips to meet your powerful thrusts. Your bodies dance together, her own cock grinding against your belly each time you plunge deep into her. Her cunt tightens like a vice around you before she arches her back and bleats in delight. You can feel your balls clenching in response, and you fill her belly with hot gushes of seed.";
 	WaitLineBreak;
 	say "     Sated, she hugs tightly to you, and agrees to accompany you to the lab, blushing and satisfied looking the whole way.";
 	now deerconsent is 1;
-	now battleground is "void";
 	now Unusual Creature is resolved;
 	move Susan to primary lab;
 	move player to primary lab;
+	now Resolution of Unusual Creature is 4; [Fucked Susan]
 
 
 Section 2 - NPC Basics
@@ -105,11 +129,16 @@ deerconsent is a number that varies.
 Susanoversize is a truth state that varies. Susanoversize is usually false.
 Susanfirsttime is a number that varies. Susanfirsttime is usually 0
 
+Table of GameCharacterIDs (continued)
+object	name
+Susan	"Susan"
+
 Susan is a person. "Susan, a bipedal deer.". The description of Susan is "[Susandesc]".
 The conversation of Susan is { "Bleat!" }.
 The fuckscene of Susan is "[sexwithSusan]".
 
 to say Susandesc:
+	project the Figure of Susan_face_icon;
 	if debugactive is 1:
 		say "DEBUG ->  HP: [HP of Susan], deerconsent: [deerconsent], Susanoversize: [if Susanoversize is true]True[else]False[end if]  <- DEBUG[line break]";
 	if HP of Susan is 52 and hospcountdown - turns >= 16 and hospquest >= 18 and lastfuck of Susan - turns < 4:
@@ -118,7 +147,7 @@ to say Susandesc:
 		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing a little over six feet tall. Her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She's grown in size since you first found her, her body a mix of masculine strength and feminine sensuality. She has broadened shoulders and chest, but a slender waist and girly hips. Her arms and legs are still slender and effeminate, but have gained increased strength to match her enlarged form.";
 		say "     Her head is now crowned by an impressive rack of antlers and Susan's face is somewhere between that of a strong buck and a delicate doe. Her male genitals have grown as part of her transformation, giving her a foot-long cock and balls the size of juicy lemons. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absent-mindedly. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
 	else if HP of Susan < 52:
-		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing about 5['] 6'. Her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large plum sized balls contained in a creamy coloured softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
+		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing about 5['] 6'. Her nose, ear-tips and hands are darker in hue, creating an interesting pattern of fur overall. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large, plum-sized balls contained in a creamy colored, softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
 	else if HP of Susan < 73:
 		say "     Susan is a bipedal deer with soft brown fur and creamy off-white belly and undertail standing a little over six feet tall. Her nose, eartips and hands are dark hues. She's grown in size since you first found her, her body a mix of masculine strength and feminine sensuality. She has broadened shoulders and chest, but a slender waist and girly hips. Her arms and legs are still slender and effeminate, but have gained increased strength to match her enlarged form. Atop her head is now an impressive rack of antlers and her face is somewhere between that of a strong buck and a delicate doe.";
 		say "     She's been provided a lab coat while working with Dr. Mouse. She's hemmed it slightly so better fit her altered body. It covers those large, black teated breasts of hers as well as her plump, ebon-black fleshed cock and creamy furred sheath and balls. Her male genitals have grown as part of her transformation, giving her a foot-long cock and balls the size of juicy lemons. She frequently slips a hooved hand into her coat to absentmindedly fondle her manhood. She looks at you with increased confidence, though she still has that hungry, lustful look in her eyes. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.";
@@ -129,6 +158,7 @@ instead of sniffing Susan:
 	say "The herm deer has a mix of doe and buck scents, heavy with arousal and longing.";
 
 instead of conversing the Susan:
+	project the Figure of Susan_face_icon;
 	let doecheck be false;
 	let ec_check be false;
 	if bodyname of player is "Deer":
@@ -139,7 +169,7 @@ instead of conversing the Susan:
 	if HP of Susan < 2:
 		if deerconsent is 0:
 			say "     Rather than talk to you, she avoids you entirely. Eventually you give up in trying to approach her at all as she storms off to another part of the building.";
-			remove Susan from play;
+			now Susan is nowhere;
 			now deerconsent is 2;
 		else if deerconsent is 1:
 			say "     She smiles as you approach her, and reaches to take one of your hands. 'Ignore the creep in the hazmat,' she says. 'This is just about us. I want a mate, a partner. Will you be it?' she asks as she leans in and licks your hand once. Her eyes roam hopefully over your [bodydesc of player] form with perked ears and a twitching tail.";
@@ -147,7 +177,7 @@ instead of conversing the Susan:
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - You do agree to be the little herm's mate.";
 			say "     ([link]N[as]n[end link]) - You think the doe and you should see other people.";
-			if the player consents:
+			if player consents:
 				if "Female Preferred" is listed in feats of player:
 					say "     She sniffs you with some concern, 'Oh dear, uh, pun not intended. You simply cannot be my stag. I can smell it. So I will be the stag.' She playfully slaps your ass and gives you an impish smile. Warm tingles sweep over your form as change is felt building. 'Go talk to the doctor. I will wait for you.'";
 					deerfy;
@@ -158,8 +188,7 @@ instead of conversing the Susan:
 					now deerconsent is 2;
 			else:
 				say "     She looked crushed at your refusal, but instead of arguing the case further, just sulks and wanders off.";
-				move Susan to dark basement;
-				remove Susan from play;
+				now Susan is nowhere;
 				now deerconsent is 2;
 		else if deerconsent is 2:
 			say "     'You should go talk to the doctor first. I will wait for you.'";
@@ -168,7 +197,7 @@ instead of conversing the Susan:
 	else if HP of Susan is 3:
 		say "     '[one of]I guess it's alright living here. I mean, the doctor's nice enough... though he does look at me oddly at times.'[or][if doecheck is true]I'm so glad you decided to be my mate,' she says happily[else]Please don't forget about me when all of this is over,' she says with concern[end if].[or][if lastfuck of Susan - turns >= 4]We should have some more fun again soon,' she says eagerly[else]This transformation's made me so excitable. With the way I'm feeling, I think I'll be ready for another round of fun soon,' she says, stretching and thus inadvertently putting her sexy doe-buck body on display[end if].[or]You're such a brave doe to keep going out there. I was so, so scared and confused that I almost broke down completely. Thank you for finding and helping me,' she says affectionately.[or]There's not too much to do around here when you're not around. Dr. Matt doesn't want me touching stuff and I don't think that scary dragon downstairs likes me very much.'[or][if HP of Orthas > 3]I don't like how that dragon downstairs looks at you, my deer[else]I don't think that scary dragon downstairs likes me very much[end if].'[at random]";
 	else if HP of Susan >= 4 and HP of Susan < 50:
-		say "     '[one of]I guess it's alright living here. I mean, the doctor's nice enough... though he does look at me oddly at times.'[or][if doecheck is true]I'm so glad you decided to be my mate,' she says happily[else]Please don't forget about me when all of this is over,' she says with concern[end if].[or][if lastfuck of Susan - turns >= 4 and cocks of player > 0]We should have some more fun again soon,' she says eagerly[else if lastfuck of Susan - turns >= 4]Let's see if we can't get your cock back so you can be my buck again[else]This transformation's made me so excitable. With the way I'm feeling, I think I'll be ready for another round of fun soon,' she says, stretching and thus inadvertently putting her sexy doe body on display[end if].[or]You're such a brave buck to keep going out there. I was so, so scared and confused that I almost broke down completely. Thank you for finding and helping me,' she says affectionately.[or]There's not too much to do around here when you're not around. Dr. Matt doesn't want me touching stuff and I don't think that scary dragon downstairs likes me very much.'[or][if HP of Orthas > 3]I don't like how that dragon downstairs looks at you, my deer[else]I don't think that scary dragon downstairs likes me very much[end if].'[at random]";
+		say "     '[one of]I guess it's alright living here. I mean, the doctor's nice enough... though he does look at me oddly at times.'[or][if doecheck is true]I'm so glad you decided to be my mate,' she says happily[else]Please don't forget about me when all of this is over,' she says with concern[end if].[or][if lastfuck of Susan - turns >= 4 and player is male]We should have some more fun again soon,' she says eagerly[else if lastfuck of Susan - turns >= 4]Let's see if we can't get your cock back so you can be my buck again[else]This transformation's made me so excitable. With the way I'm feeling, I think I'll be ready for another round of fun soon,' she says, stretching and thus inadvertently putting her sexy doe body on display[end if].[or]You're such a brave buck to keep going out there. I was so, so scared and confused that I almost broke down completely. Thank you for finding and helping me,' she says affectionately.[or]There's not too much to do around here when you're not around. Dr. Matt doesn't want me touching stuff and I don't think that scary dragon downstairs likes me very much.'[or][if HP of Orthas > 3]I don't like how that dragon downstairs looks at you, my deer[else]I don't think that scary dragon downstairs likes me very much[end if].'[at random]";
 	else if HP of Susan is 50 and hospcountdown - turns >= 12:
 		say "     Susan glances over at the busy Doctor Mouse and moves further away from him before speaking to you. 'I could use your help, my mate. Now, the doctor's been nice to me and makes sure that I'm brought food, but it's this icky hospital stuff. He says its perfectly nutritious and all of that, but it's all bland mush. If anything, it tastes more like medicine and antiseptic cleaners than food. I need you to bring me some food and water so I can have something edible from time to time.'";
 		say "     She takes another glance over at the mouse and, finding him still busy, continues. 'I was helping him when he was figuring out how that enhancement machine we took from the lab. I've also been taking notes for him while he's run some tests on the staff. I can fudge those numbers to hide that I used it on you. But I don't want to risk upsetting the doctor for nothing. Gimme about a half-dozen meals and bottles of water and we'll call it even,' she says with a grin.";
@@ -190,7 +219,7 @@ instead of conversing the Susan:
 				say "     'I'll tuck that away for later. I'll only use a little every now and then,' the doe says, taking the food from you. 'I could still use another [foodneed] more meal(s) though.' You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
 		if tempnum2 > waterneed:
 			if waterneed is 0:
-				say "     'Great, sweetie! A mouthful of this after every meal'll help wash the taste of that hospital gunk out of my mouth after I have to choke it down. Even the water they bring me in here tastes a little off,' she says quietly. She discretely stashes the water in her personal locker. You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
+				say "     'Great, sweetie! A mouthful of this after every meal'll help wash the taste of that hospital gunk out of my mouth after I have to choke it down. Even the water they bring me in here tastes a little off,' she says quietly. She discreetly stashes the water in her personal locker. You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
 			else:
 				say "     'Let me put that away for safe keeping. Every little bit helps,' the doe says, taking the water from you. 'I could still use another [waterneed] more liter(s) though.' You quietly look over your depleted supplies, hoping you have enough for yourself as well.";
 		if foodneed is 0 and waterneed is 0:
@@ -207,16 +236,16 @@ instead of conversing the Susan:
 	else if HP of Susan is 52 and hospcountdown - turns >= 16 and hospquest >= 18 and lastfuck of Susan - turns < 4:
 		say "[Susanlabcoatscene]";
 	else if HP of Susan <= 52:
-		say "     '[one of]I guess it's alright staying here. I mean, the doctor's tries to be friendly enough, though he can be a bit cold at times.'[or][if doecheck is true]I'm so glad you decided to be my mate,' she says happily[else if ec_check is true]I got to help the doctor with your current, sexy form,' she says, running her hands over your chimeric body[else]Please don't forget about me when all of this is over,' she says with concern[end if].[or][if lastfuck of Susan - turns >= 4 and cocks of player > 0]We should have some more fun again soon,' she says eagerly[else if lastfuck of Susan - turns >= 4]Let's see if we can't get your cock back so you can be my buck again[else]This transformation's made me so excitable. With the way I'm feeling, I think I'll be ready for another round of fun soon,' she says, stretching and thus inadvertently putting her sexy doe body on display[end if].[or]You're such a brave buck to keep going out there. I was so, so scared and confused that I almost broke down completely. Thank you for finding and helping me,' she says affectionately.[or]I'm glad Dr. Mouse is giving me little things to do around here. It helps keep my mind occupied while you're away. Those big orderlies don't seem particularly friendly, so it's not like I can chat with them.'[or][if HP of Orthas > 3]I'm glad we're done with that dragon. I didn't like you she looked at you[else]I don't like how those jaguars look at me sometimes. I can't help feeling like they see me as dinner... but that might just be the timid doe in me talking[end if].'[or]I don't like how those jaguars look at me sometimes. I can't help feeling like they see me as dinner... but that might just be the timid doe in me talking.'[or]Those... creatures Dr. Mouse has me feeding are really creepy,' she says about the chained chimeras. 'He says they're poor victims of the transformation. He ran some tests on them in the early days, but wasn't able to help them get better.' She gives a visible shudder and looks away from them.[at random]";
+		say "     '[one of]I guess it's alright staying here. I mean, the doctor's tries to be friendly enough, though he can be a bit cold at times.'[or][if doecheck is true]I'm so glad you decided to be my mate,' she says happily[else if ec_check is true]I got to help the doctor with your current, sexy form,' she says, running her hands over your chimeric body[else]Please don't forget about me when all of this is over,' she says with concern[end if].[or][if lastfuck of Susan - turns >= 4 and player is male]We should have some more fun again soon,' she says eagerly[else if lastfuck of Susan - turns >= 4]Let's see if we can't get your cock back so you can be my buck again[else]This transformation's made me so excitable. With the way I'm feeling, I think I'll be ready for another round of fun soon,' she says, stretching and thus inadvertently putting her sexy doe body on display[end if].[or]You're such a brave buck to keep going out there. I was so, so scared and confused that I almost broke down completely. Thank you for finding and helping me,' she says affectionately.[or]I'm glad Dr. Mouse is giving me little things to do around here. It helps keep my mind occupied while you're away. Those big orderlies don't seem particularly friendly, so it's not like I can chat with them.'[or][if HP of Orthas > 3]I'm glad we're done with that dragon. I didn't like you she looked at you[else]I don't like how those jaguars look at me sometimes. I can't help feeling like they see me as dinner... but that might just be the timid doe in me talking[end if].'[or]I don't like how those jaguars look at me sometimes. I can't help feeling like they see me as dinner... but that might just be the timid doe in me talking.'[or]Those... creatures Dr. Mouse has me feeding are really creepy,' she says about the chained chimeras. 'He says they're poor victims of the transformation. He ran some tests on them in the early days, but wasn't able to help them get better.' She gives a visible shudder and looks away from them.[at random]";
 	else if hospcountdown - turns > 12 and ( HP of Susan is 53 or HP of Susan is 73 ):
 		say "     Susan leads you over to her small corner of the room and opens up her personal locker. 'I've gotten used to the hospital food. It's not really so bad. Since I don't really need this stuff anymore, you can have the leftovers back,' she says. She returns a meal's worth of food and a pair of water bottles.";
 		increase carried of food by 1;
 		increase carried of water bottle by 2;
 		increase HP of Susan by 1;
 	else if HP of Susan is 53:	[doe-y w/lab coat]
-		say "     '[one of]It's not bad staying here. I mean, the doctor's tries to be friendly enough and he can be a bit cold at times, but he lets me do my own thing when he doesn't need my help.'[or][if doecheck is true]I'm so glad you decided to be my mate,' she says happily[else if ec_check is true]Can you tell I got to help Dr. Mouse with your new form, my mate?' she asks teasingly, running her hands over chimeric body[else]Please don't forget about me when all of this is over,' she says with concern[end if].[or][if lastfuck of Susan - turns >= 4 and cocks of player > 0]We should have some more fun again soon,' she says eagerly[else if lastfuck of Susan - turns >= 4]Let's see if we can't get your cock back so you can be my buck again[else]This transformation's made me so excitable. With the way I'm feeling, I think I'll be ready for another round of fun soon,' she says, stretching and thus inadvertently pressing the top of her lab coat around her bosom in a tantalizing display[end if].[or]You're such a brave buck to keep going out there. I was so, so scared and confused that I almost broke down completely. Thank you for finding and helping me,' she says affectionately.[or]I'm glad Dr. Mouse is giving me little things to do around here. It helps keep my mind occupied while you're away. Those big orderlies don't seem particularly friendly, so it's not like I can chat with them.'[or]I don't like how those jaguars look at me sometimes. I can't help feeling like they see me as dinner... but that might just be the timid doe in me talking.'[or]Those poor creatures,' she says sadly as she looks over at the chained chimeras she's been tending to for Dr. Mouse. 'He says they're unfortunate victims of a particularly chaotic transformation. He ran some tests on them in the early days, but wasn't able to help them get better.' She sighs sadly and looks away.[at random]";
+		say "     '[one of]It's not bad staying here. I mean, the doctor's tries to be friendly enough and he can be a bit cold at times, but he lets me do my own thing when he doesn't need my help.'[or][if doecheck is true]I'm so glad you decided to be my mate,' she says happily[else if ec_check is true]Can you tell I got to help Dr. Mouse with your new form, my mate?' she asks teasingly, running her hands over chimeric body[else]Please don't forget about me when all of this is over,' she says with concern[end if].[or][if lastfuck of Susan - turns >= 4 and player is male]We should have some more fun again soon,' she says eagerly[else if lastfuck of Susan - turns >= 4]Let's see if we can't get your cock back so you can be my buck again[else]This transformation's made me so excitable. With the way I'm feeling, I think I'll be ready for another round of fun soon,' she says, stretching and thus inadvertently pressing the top of her lab coat around her bosom in a tantalizing display[end if].[or]You're such a brave buck to keep going out there. I was so, so scared and confused that I almost broke down completely. Thank you for finding and helping me,' she says affectionately.[or]I'm glad Dr. Mouse is giving me little things to do around here. It helps keep my mind occupied while you're away. Those big orderlies don't seem particularly friendly, so it's not like I can chat with them.'[or]I don't like how those jaguars look at me sometimes. I can't help feeling like they see me as dinner... but that might just be the timid doe in me talking.'[or]Those poor creatures,' she says sadly as she looks over at the chained chimeras she's been tending to for Dr. Mouse. 'He says they're unfortunate victims of a particularly chaotic transformation. He ran some tests on them in the early days, but wasn't able to help them get better.' She sighs sadly and looks away.[at random]";
 	else if HP of Susan is 54:
-		say "     '[one of]I guess it's alright staying here. I mean, the doctor's tries to be friendly enough, though he can be a bit cold at times. It's because he's so dedicated to his work.'[or][if doecheck is true]I'm so glad you decided to be my mate,' she says happily[else if ec_check is true]Can you tell I got to help Dr. Mouse with your new form, my mate?' she asks teasingly, running her hands over chimeric body[else]Please don't forget about me when all of this is over,' she says with concern[end if].[or][if lastfuck of Susan - turns >= 4 and cocks of player > 0]We should have some more fun again soon,' she says eagerly[else if lastfuck of Susan - turns >= 4]Let's see if we can't get your cock back so you can be my buck again[else]This transformation's made me so excitable. With the way I'm feeling, I think I'll be ready for another round of fun soon,' she says, stretching and thus inadvertently pressing the top of her lab coat around her bosom in a tantalizing display[end if].[or]You're such a brave buck to keep going out there. I was so, so scared and confused that I almost broke down completely. Thank you for finding and helping me,' she says affectionately.[or]I'm glad Dr. Mouse is giving me little things to do around here. It helps keep my mind occupied while you're away. Those big orderlies aren't very talkative, though they make up for it in other ways,' she adds with a wink and a flick of her cute doe tail[or]I guess those jaguars aren't so bad. Dr. Mouse introduced me to a couple of them. They seem mean and can play a little rough with a timid doe like me, but they're not so bad once you get to know them,' she giggles.[or]Those poor creatures Dr. Mouse has me feeding aren't so bad once you get used to them. They can even be downright friendly once they get used to you, as long as you're careful. I help keep them calm so the doctor can focus on his important work.'[at random]";
+		say "     '[one of]I guess it's alright staying here. I mean, the doctor's tries to be friendly enough, though he can be a bit cold at times. It's because he's so dedicated to his work.'[or][if doecheck is true]I'm so glad you decided to be my mate,' she says happily[else if ec_check is true]Can you tell I got to help Dr. Mouse with your new form, my mate?' she asks teasingly, running her hands over chimeric body[else]Please don't forget about me when all of this is over,' she says with concern[end if].[or][if lastfuck of Susan - turns >= 4 and player is male]We should have some more fun again soon,' she says eagerly[else if lastfuck of Susan - turns >= 4]Let's see if we can't get your cock back so you can be my buck again[else]This transformation's made me so excitable. With the way I'm feeling, I think I'll be ready for another round of fun soon,' she says, stretching and thus inadvertently pressing the top of her lab coat around her bosom in a tantalizing display[end if].[or]You're such a brave buck to keep going out there. I was so, so scared and confused that I almost broke down completely. Thank you for finding and helping me,' she says affectionately.[or]I'm glad Dr. Mouse is giving me little things to do around here. It helps keep my mind occupied while you're away. Those big orderlies aren't very talkative, though they make up for it in other ways,' she adds with a wink and a flick of her cute doe tail[or]I guess those jaguars aren't so bad. Dr. Mouse introduced me to a couple of them. They seem mean and can play a little rough with a timid doe like me, but they're not so bad once you get to know them,' she giggles.[or]Those poor creatures Dr. Mouse has me feeding aren't so bad once you get used to them. They can even be downright friendly once they get used to you, as long as you're careful. I help keep them calm so the doctor can focus on his important work.'[at random]";
 	else if HP of Susan is 73:	[doe-buck w/lab coat]
 		say "     '[one of]It's not bad staying here. I mean, the doctor's tries to be friendly enough and he can be a bit cold at times, but he lets me do my own thing when he doesn't need my help.'[or][if doecheck is true]I'm so glad you decided to be my mate. I really enjoy getting to be both the doe and the buck with you,' she says happily[else if ec_check is true]Can you tell I got to help Dr. Mouse with your new form, my mate?' she asks teasingly, running her hands possessively over chimeric body[else]I really enjoyed being the buck. You should be my sweet doe again soon,' she says, caressing your cheek with her strong hand[end if].[or][if lastfuck of Susan - turns >= 4]We should have some more fun again soon,' she says eagerly[else]I'm even more excitable now that I'm a strong, sexy doe-buck like you, my mate. Thank you for letting me have my turn on top. We should do it again soon,' she says, caressing your rear[end if].[or]You're a brave buck to keep going out there. I was so silly and scared before that I almost broke down completely before I met you. I feel much more confident now, thanks to you,' she says, leaning in to give you a kiss.[or]I'm glad Dr. Mouse is giving me little things to do around here. It helps keep my mind occupied while you're away.'[or]Those jaguars don't seem quite so scary anymore,' she states. 'I might have to show them I'm not a little timid doe anymore,' she says, smacking a fist into her palm with a grin.[or]Those poor creatures,' she says sadly as she looks over at the chained chimeras she's been tending to for Dr. Mouse. 'He says they're unfortunate victims of a particularly chaotic transformation. He ran some tests on them in the early days, but wasn't able to help them get better.' She sighs sadly and looks away.[at random]";
 	else:
@@ -226,9 +255,10 @@ instead of conversing the Susan:
 Section 3 - Sex with Susan
 
 to say sexwithSusan:
+	project the Figure of Susan_face_icon;
 	if lastfuck of Susan - turns < 4:
 		say "     'As fun as it is, I do need a little break every now and again, my sweet.'";
-	else if HP of doctor matt < 8:
+	else if HP of Doctor Matt < 8:
 		say "     She blushes and nudges you, 'You should talk to the Doctor first.'";
 	else if HP of Susan is 52 and hospcountdown - turns >= 16 and hospquest >= 18:
 		say "[Susanlabcoatscene]";
@@ -239,18 +269,19 @@ to say sexwithSusan:
 		say "[SusanSexMenu]";
 
 to say SusanSexMenu:
+	project the Figure of Susan_face_icon;
 	setmonster "Deer";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0 and cock length of player > 6 and cock length of player < 15:
+	if player is male and cock length of player > 6 and cock length of player < 15:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Susan";
 		now sortorder entry is 1;
 		now description entry is "Fill your little doe's pussy with your cock";
 	[]
-	if cocks of player > 0 and cock length of player < 6:
+	if player is male and cock length of player < 6:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Susan with your small penis";
 		now sortorder entry is 2;
@@ -264,17 +295,17 @@ to say SusanSexMenu:
 	[]
 	if cock length of player >= 15 and Susanoversize is true:
 		choose a blank row in table of fucking options;
-		now title entry is "Hyper Fun";
+		now title entry is "Hyper fun";
 		now sortorder entry is 4;
 		now description entry is "Now you know you can fit your giant cock on her, why not do it again?";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Make Susan Suck your cock";
 		now sortorder entry is 5;
 		now description entry is "Make the deer suck the cock she loves so very much";
 	[]
-	if HP of Susan >= 2 and cunts of player > 0:
+	if HP of Susan >= 2 and player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Let Susan fuck your pussy";
 		now sortorder entry is 6;
@@ -290,7 +321,7 @@ to say SusanSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> ";
 		get a number;
@@ -316,17 +347,10 @@ to say SusanSexMenu:
 				else if nam is "Let Susan fuck your ass":
 					say "[SusanSex7]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "     [bold type]Break off the conversation?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the deer making her sigh with neediness.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the deer making her sigh with neediness.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -369,7 +393,7 @@ to say SusanSex4: [Hyper Fun]
 	WaitLineBreak;
 	say "     As you break the kiss and lean up, you're treated to the lovely sight of your cervine lover panting in pleasure as you fuck her. Her cream-furred breasts jiggle and nicely with every large thrust of your pulsing rod into her[if cock length of player >= 36]. Her chest is stretched visibly by your titanic member's phallic shape[else if cock length of player >= 24]. Her tummy is stretched by your mighty member to raise a phallic bulge that moves with every thrust[else]. Her tummy shows a notable bulge from having your large member stuffed inside her[end if]. She rubs a paw over her plumped tummy in blissful awe.";
 	WaitLineBreak;
-	say "     'Do it. Do it, my big buck. Give it to me and fill your needy doe-oh-oh-oooooh!' she calls out in orgasmic delight. The feeling of having her hot tunnel squeeze and quiver around you as her femmecum soaks your crotch is wonderful. It's so good, you can't hold back for long before you two are crying out in climactic release. You pump your [cum load size of player] load into the moaning doe, painting her uterus with your semen.";
+	say "     'Do it. Do it, my big buck. Give it to me and fill your needy doe-oh-oh-oooooh!' she calls out in orgasmic delight. The feeling of having her hot tunnel squeeze and quiver around you as her femcum soaks your crotch is wonderful. It's so good, you can't hold back for long before you two are crying out in climactic release. You pump your [cum load size of player] load into the moaning doe, painting her uterus with your semen.";
 	deerfy;
 	if HP of Susan is 2:
 		now HP of Susan is 4;
@@ -404,26 +428,26 @@ to say SusanSex7: [Susan fucks ass]
 to say Susanlabcoatscene:
 	let x be 1; [default = accept]
 	setmonster "Deer";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     What do you think, hon?' Susan asks, posing in the new lab coat she's wearing. It is a typical one, clean and white, though the back's been adjusted to let her puff of deer tail poke out. 'After a little incident, the doc thought it best I have something on while helping him. Lab chemicals can be dangerous.'";
 	say "     She moves in closer to you, rubbing her body against yours. 'I was hoping you'd come by to play. I've been feeling pretty randy,' she whispers throatily in your ear. She grinds the hard bulge of her covered erection against your [if scalevalue of player < 3]side[else if scalevalue of player > 3]thigh[else]hip[end if]. 'Come on. Let's have some fun,' she says, pulling you off to her bunk in the corner. Dr Mouse notices this, but quietly smiles and says nothing.";
-	say "     Susan gives you a powerful kiss, tongue diving into your mouth as her hands run over you with aggressive need.  They slip off your gear, stripping you down before pushing you back onto her cot. Opening her new coat, she reveals that hard black cock you felt earlier. You're unsure, but it seems larger than before, though that may simply be that you've never seen it this full and hard before either. She moves between your legs and aims that pulsing rod at you; it seems your timid doe's ready to be the buck instead. ";
-	if cocks of player > 0:
+	say "     Susan gives you a powerful kiss, tongue diving into your mouth as her hands run over you with aggressive need. They slip off your gear, stripping you down before pushing you back onto her cot. Opening her new coat, she reveals that hard black cock you felt earlier. You're unsure, but it seems larger than before, though that may simply be that you've never seen it this full and hard before either. She moves between your legs and aims that pulsing rod at you; it seems your timid doe's ready to be the buck instead. ";
+	if player is male:
 		say "     ";
 		say "     [bold type]Shall you let her take you or shall you take your rightful place as the buck in this relationship?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let her take you.";
 		say "     ([link]N[as]n[end link]) - Be the buck.";
-		if the player consents:
+		if player consents:
 			now x is 1; [accept]
 		else:
 			now x is 0; [refuse]
 	if x is 1:
-		say "     Smiling up at your lover, you willingly spread your legs and raise your hips, welcoming her into you. She thrusts her ebon rod into you, sinking it [if cunts of player > 0]sensually into your needy cunny[else]slowly into your tight asshole[end if]. She gives a long, moaning bleat of happiness as she penetrates you, fucking someone for the first time.";
-		say "     'Mmmm yeah! That's so nice. I should do this more often,' she pants between thrusts. Growing more excited, she leans over you with her hands on your shoulders as she pounds into you. 'You feel so good, baby. Why didn't I do this before?  Being the buck's great.'";
+		say "     Smiling up at your lover, you willingly spread your legs and raise your hips, welcoming her into you. She thrusts her ebon rod into you, sinking it [if player is female]sensually into your needy cunny[else]slowly into your tight asshole[end if]. She gives a long, moaning bleat of happiness as she penetrates you, fucking someone for the first time.";
+		say "     'Mmmm yeah! That's so nice. I should do this more often,' she pants between thrusts. Growing more excited, she leans over you with her hands on your shoulders as she pounds into you. 'You feel so good, baby. Why didn't I do this before? Being the buck's great.'";
 		WaitLineBreak;
 		say "     Susan fucks you hard and rough, though more from inexperience and over-eagerness than callousness. If anything, her cervine face smiles down at you with even greater affection and you can't help but feel your bond with her growing as well. So focused are you on looking into her doey eyes that you miss at first how your pretty doe is changing. She bulks up, especially at the chest and shoulders, as her body gets stronger. She transitions into a strong and sexy doe-buck that is an attractive mix of the feminine and the masculine.";
-		say "     If the wonderful sensations from your [if cunts of player > 0]vagina[else]ass[end if] are to be believed, her body is not the only thing to have changed. Her cock has definitely added a couple more inches inside you as well, adding to your pleasure. As antlers start to sprout from the top of her head, she releases a long pent-up cry of lustful release as she climaxes. Throughout her climax, they rapidly grow up and outwards until she has an impressive rack and Susan has fully become a strong and sexy doe-buck. You feel an orgasmic rush of delight as her potent semen flows into you, spreading her altered doe-buck infection to you as well.[impregchance]";
+		say "     If the wonderful sensations from your [if player is female]vagina[else]ass[end if] are to be believed, her body is not the only thing to have changed. Her cock has definitely added a couple more inches inside you as well, adding to your pleasure. As antlers start to sprout from the top of her head, she releases a long pent-up cry of lustful release as she climaxes. Throughout her climax, they rapidly grow up and outwards until she has an impressive rack and Susan has fully become a strong and sexy doe-buck. You feel an orgasmic rush of delight as her potent semen flows into you, spreading her altered doe-buck infection to you as well.[impregchance]";
 		now libido of Susan is 1;
 		now HP of Susan is 73;
 		if name entry is "Deer":			[Adjusting infection size values]
@@ -445,7 +469,7 @@ to say Susanlabcoatscene:
 	now hospcountdown is turns;
 	WaitLineBreak;
 	if HP of Susan is 53:
-		say "     While Susan rests and recovers, you approach Dr. Mouse to speak to him about her odd behaviour.";
+		say "     While Susan rests and recovers, you approach Dr. Mouse to speak to him about her odd behavior.";
 		say "     'I'm uncertain exactly what may have happened. I've not really enquired about your relationship with her - I've never had an interest in mundane interpersonal matters - but she does tend to prattle on about her feelings for you. She has expressed that she had no desire to take the dominant or male role. Then again, she may simply have been denying her male urges for so long that they built up beyond her level of self-control,' he posits.";
 		say "     'Regardless, it appears she's calmed down and back to normal after that bit of fun the two of you had over there. All's well that ends well, it seems.'";
 	else:
@@ -458,22 +482,23 @@ to say Susanlabcoatscene:
 
 Section 4 - Monster Table Data
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
-
-[ Adds a blank row to the table, this is immediately filled ;) ]
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Deer"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "Susan";
+	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[if level of player > 5][one of]One of her helpers grabs you from behind as she lands a solid punch in your gut.[or]Just as you dodge past one of her strikes, you feel soft hands pawing at your groin, one of her helpers manhandling you with eager roughness.[or]To the cheer of her herd, she headbutts you, sharp antlers stinging powerfully where they strike.[at random][else][one of]She mashes you against the ground, heavy breasts pressed to you.[or]Her thick cock slaps against you as she roughly shoves at you.[or]Thick horns prove to be quite sharp as they poke you.[or]A sudden kick lands in your midsection as she lands a hoof on you.[at random][end if]";
 	now defeated entry is "[if level of player > 5]Her allies array in front of her suddenly, guarding her as they all start to back away. The fight seems to be over, for now.[else]She gives a loud bleat of pain and scowls at you before she takes flight. Her graceful body carries her long and fast away.[end if]";
 	now victory entry is "[deer attack]";
-	now desc entry is "[mongendernum 5]     A bipedal deer with soft brown fur and creamy off-white belly and undertail. Her nose, eartips and hands are dark hues. Atop her head is a large rack of antlers, proud and powerful. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large plum sized balls contained in a creamy coloured softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.[if level of player > 5] [doestats][end if]"; [ Description of the creature when you encounter it.]
+	now desc entry is "[mongendernum 5]     A bipedal deer with soft brown fur and creamy off-white belly and undertail. Her nose, eartips and hands are dark hues. Atop her head is a large rack of antlers, proud and powerful. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large, plum-sized balls contained in a creamy colored, softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.[if level of player > 5] [doestats][end if]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a furry, [if Susan is in primary lab or Susan is in Hidden Lab]feminine[else]antlered[end if], head of an enchanting stag-doe. Your eyes burn with a smoldering lust as they look about from the end of your muzzled face";
 	now body entry is "feminine and graceful looking[if libido of Susan > 0], though your chest and shoulders become strong and masculine[end if]. You have long delicate arms and hands, capped with blackened fingertips, like hooves that don't compromise dexterity";
-	now skin entry is "brown furred"; [ skin Description, format as the text "You have (your text) skin"]
+	now skin entry is "brown furred"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "Your butt has a deer's tail over it, fluffy and cute with soft cream along the underside. The rest of your ass is quite curvy, your tail hiding nothing.";
 	now cock entry is "pitch black human";
 	now face change entry is "your face draws out into a snout, slender with a wide nose, new scents teasing your addled senses as your ears grow long and narrow, twitching towards sounds. Thick fur swells ticklishly over your new contours as a distracting pain builds at the top of your head[if Susan is in primary lab or Susan is in Hidden Lab]. Grand new antler points swell and grow ornately[end if]. You give a pant, long tongue hanging a moment";
@@ -491,7 +516,7 @@ When Play begins:
 	now HP entry is 30;
 	now lev entry is 3; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
-	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 6; [ Size of balls apparently ;) sneaky Nuku]
@@ -504,24 +529,24 @@ When Play begins:
 	now libido entry is 70; [ Amount player Libido will go up if defeated ]
 	now loot entry is "";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[if libido of Susan > 0][one of]androgynous[or]strong[or]sexy[at random][else][one of]effeminate[or]sexy[or]alluring[at random][end if]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[if libido of Susan > 0][one of]androgynous[or]strong[or]sexy[at random][else][one of]effeminate[or]sexy[or]alluring[at random][end if]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "cervine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 To say doestats:
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Deer":
 			now monster is y;
 			break;
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	now lev entry is level of player minus 1;
 	if lev entry < 15:
 		now dex entry is lev entry + 6; [quick dex and HP growth early on]
@@ -540,26 +565,26 @@ Section 5 - Monster Victory
 to say deer attack:
 	say "She approaches your fallen form with a smile on her cervine face. 'Little doe, this is where you belong, as part of my herd. You had your chance to be the stag,' she says, tongue rolling across her snout as she reaches to rub over your [skin of player] [breast size desc of player] chest.";
 	WaitLineBreak;
-	if cunts of player > 0:
+	if player is female:
 		say "Wrestling your hips up into position, she pinches your bottom with her hard fingertips, 'Naughty doe, playing so hard to get. See what you're missing.' She sinks into you with a wet squelch, your mutinous body already warm and set for her arrival as she sinks deeply into your grasping cunt, thick plug snugly held within you a moment before she draws back. Her motions are sharp and powerful, thick balls slapping up against your ass with each movement.";
 		if breasts of player > 0:
 			say "Her hands wrap around you and she softly teases at your nipples, flicking and pinching at them as she rocks against you. As she adjusts her angle of entry, she makes to grab at your [breast size desc of player] breasts, massaging into the sensitive flesh eagerly, kneading at you as her groin grinds up against your ass, pushing that black cock as deep as it can go.";
-		say "With a triumphant bleat, she unleashes into your waiting cunt, powerful squirts of virile seed splashing into your belly.[impregchance] You groan with unasked for pleasure, body trembling as climax overtakes you. You clench powerfully around her tool, coating it with your own arousal. [if cocks of player > 0]Your [cock size desc of player] dick lurches, then begins to spray against the ground as it abruptly reaches peak as well, emptying your [short ball size] balls in waves of bliss. [end if]You slump to the ground and the deer slips off of you, stroking herself a few last times as she eyes you hungrily. 'Later!' she says, turning to leave.";
+		say "With a triumphant bleat, she unleashes into your waiting cunt, powerful squirts of virile seed splashing into your belly.[impregchance] You groan with unasked for pleasure, body trembling as climax overtakes you. You clench powerfully around her tool, coating it with your own arousal. [if player is male]Your [cock size desc of player] dick lurches, then begins to spray against the ground as it abruptly reaches peak as well, emptying your [short ball size] balls in waves of bliss. [end if]You slump to the ground and the deer slips off of you, stroking herself a few last times as she eyes you hungrily. 'Later!' she says, turning to leave.";
 	else:
 		say "She scowls, 'You are missing something, doe.' She reaches between your legs, rubbing slowly, the soft fur tickling delightfully at sensitive flesh as she caresses you. Warm tingles of nanite change creep through you.";
 		follow the sex change rule;
-		if cunts of player > 0:
+		if player is female:
 			say "Wrestling your hips up into position, she pinches your bottom with her hard fingertips, 'Naughty doe, playing so hard to get. See what you're missing.' She sinks into you with a wet squelch, your mutinous body already warm and set for her arrival as she sinks deeply into your grasping cunt, thick plug snugly held within you a moment before she draws back. Her motions are sharp and powerful, thick balls slapping up against your ass with each movement.";
 			if breasts of player > 0:
 				say "Her hands wrap around you and she softly teases at your nipples, flicking and pinching at them as she rocks against you. As she adjusts her angle of entry, she makes to grab at your [breast size desc of player] breasts, massaging into the sensitive flesh eagerly, kneading at you as her groin grinds up against your ass, pushing that black cock as deep as it can go.";
-			say "With a triumphant bleat, she unleashes into your waiting cunt, powerful squirts of virile seed splashing into your belly.[impregchance] You groan with unasked for pleasure, body trembling as climax overtakes you. You clench powerfully around her tool, coating it with your own honies. [if cocks of player > 0]Your [cock size desc of player] dick lurches, then begins to spray against the ground as it abruptly reaches peak as well, emptying your [short ball size] balls in waves of bliss. [end if]You slump to the ground and the deer slips off of you, stroking herself a few last times as she eyes you hungrily. 'Later!' she says, turning to leave.";
+			say "With a triumphant bleat, she unleashes into your waiting cunt, powerful squirts of virile seed splashing into your belly.[impregchance] You groan with unasked for pleasure, body trembling as climax overtakes you. You clench powerfully around her tool, coating it with your own honies. [if player is male]Your [cock size desc of player] dick lurches, then begins to spray against the ground as it abruptly reaches peak as well, emptying your [short ball size] balls in waves of bliss. [end if]You slump to the ground and the deer slips off of you, stroking herself a few last times as she eyes you hungrily. 'Later!' she says, turning to leave.";
 		else:
 			say "She grunts in frustration, 'You refuse to be a proper doe for me,' she complains darkly before rolling you onto your belly, 'No matter, even a man can be made a doe,' she says with a disturbing smile as she hikes your ass up and aligns her heavy block cock to you. She roughly mounts, plunging the thick plug of a member into your poor ass, showing her dominance with her punishing motions. Her hands show her softer side, caressing your front in slow circular rubs, promise of a better future, if you can get past the searing pain and humiliation you are suffering.";
-			if cocks of player > 0:
+			if player is male:
 				say "Her soft palm brushes against your [cock of player] member, starting to stroke it in time with her deep pushes into your body. Possible despite yourself, pleasure builds in your loins and spreads through you. You want to release so badly all of a sudden, [cock size desc of player] pole throbbing needfully as she strokes it faster and faster.";
 			WaitLineBreak;
 			say "She pulls you back suddenly, body rigid as heat begins to spread inside of you from her twitching member.[mimpregchance]";
-			if cocks of player > 0:
+			if player is male:
 				say "Your [short ball size] balls lurch and you spray into the air, coaxed on by gentle squeezes of her hand, milking you even as she fills you with her thick seed.";
 			say "Her tongue licks over an ear, 'Good doe. You will be welcome in the herd when you learn your place,' she whispers as she draws free and leaves you, bruised but sated. As she goes, you see her scratching lightly at her heavy balls, scheming lustfully of her next conquest.";
 
@@ -571,7 +596,7 @@ to deerfy:
 		infect "Deer";
 		if "Microwaved" is listed in feats of player:
 			say "WARNING: Sex shifting nanites detected! Allow?";
-			if the player consents:
+			if player consents:
 				say "Ok.";
 				follow the sex change rule;
 			else:
@@ -586,7 +611,7 @@ to deerfy:
 		infect "Deer";
 		if "Microwaved" is listed in feats of player:
 			say "WARNING: Sex altering nanites detected! Allow?";
-			if the player consents:
+			if player consents:
 				say "Ok.";
 				follow the sex change rule;
 			else:
@@ -604,15 +629,23 @@ when play ends:
 				say "     Fear grips your heart and you take off running like the wind until you reach Susan's arms, leaping into them and curling up against her a moment. She calms you and pets you. Despite your loss of humanity, she remains clear, and cares for you as a mother, even if she likes playing with you like a lover. When Dr Mouse leaves the city, she goes with him and takes you into hiding with them. As the doctor continues his work in the shadows, the deer continues to care for you to the end of your days, never leaving you wanting for company, or anything else.";
 			else:
 				say "     You can feel your humanity drifting away from you and flee to where your instincts urge you. You find the herd of deer, led by that magnificent stag. On seeing you, Susan steps forward and welcomes you into her arms, holding your shivering form tight to herself, 'Now you see?' she whispers, then lays you down, rutting you to the cheers of the others, many of whom stroke their black cocks over your coupling bodies, spraying you and her with hot strings of seed even as she fills your belly and officially claims you as her own.";
-				say "     When she is done, she rises from you, and one of your pack sisters takes her place, rutting you just as eagerly. She rolls over, putting you on top [if cunts of player > 0]and leaving the way open for another sister to come up and claim your ass, sandwiching you between as you're fucked by[else]fucking you wildly before passing you along to[end if] each sister in turn, passed around twice through the entire circle of adoring deer. By the time it is done, you are sore but satisfied, and begin your life as a member of the herd.";
+				say "     When she is done, she rises from you, and one of your pack sisters takes her place, rutting you just as eagerly. She rolls over, putting you on top [if player is female]and leaving the way open for another sister to come up and claim your ass, sandwiching you between as you're fucked by[else]fucking you wildly before passing you along to[end if] each sister in turn, passed around twice through the entire circle of adoring deer. By the time it is done, you are sore but satisfied, and begin your life as a member of the herd.";
 		else:
 			if Susan is in primary lab:
-				say "     When the rescue comes, you return to Susan and leave the city hand in hand. Despite any other loves or friends you pick up, she remains your favored. Her belly is swollen round often with the fruit of your couplings, and she accompanies you almost everywhere, tending to your every whim. You are both happy with the arrangement, and remain together, loving, for the rest of your long lives, eventually tended to by the children you sired and raised so well.";
-				if HP of Orthas >= 4:
-					say "     Susan remains your loving and loyal doe, bearing twin foals from your union. Your new family convinces you to settle down with them in a life that, though perhaps unplanned, you still find rewarding. Her work assisting Dr. Matt's research continues to yield fascinating discoveries.";
-					say "     Your two relationships cause some friction at first, but eventually Susan and Orthas learn to live with, and even rely on and care for each other in times of trouble. Your children grow up together, well-protected and cared for. Dr. Matt's exposure to your family causes him to reconsider some of his less ethical approaches to science.";
+				if player is male and "Sterile" is not listed in feats of player:
+					say "     When the rescue comes, you return to Susan and leave the city hand in hand. Despite any other loves or friends you pick up, she remains your favored. Her belly is swollen round often with the fruit of your couplings, and she accompanies you almost everywhere, tending to your every whim. You are both happy with the arrangement, and remain together, loving, for the rest of your long lives, eventually tended to by the children you sired and raised so well.";
+					if HP of Orthas >= 4:
+						say "     Susan remains your loving and loyal doe, bearing twin foals from your union. Your new family convinces you to settle down with them in a life that, though perhaps unplanned, you still find rewarding. Her work assisting Dr. Matt's research continues to yield fascinating discoveries.";
+						say "     Your two relationships cause some friction at first, but eventually Susan and Orthas learn to live with, and even rely on and care for each other in times of trouble. Your children grow up together, well-protected and cared for. Dr. Matt's exposure to your family causes him to reconsider some of his less ethical approaches to science.";
+				else:
+					say "     When the rescue comes, you return to Susan and leave the city hand in hand. Despite any other loves or friends you pick up, she remains your favored. She accompanies you almost everywhere, tending to your every whim. You are both happy with the arrangement, and remain together, loving, for the rest of your long lives.";
+					if HP of Orthas >= 4:
+						say "     Your twin relationships with both Susan and Orthas cause some friction at first, but eventually the two of them learn to live with, and even rely on and care for each other in times of trouble. Dr. Matt's exposure to your family causes him to reconsider some of his less ethical approaches to science.";
 			else if Susan is in hidden lab:
-				say "     When the rescue comes, you return to Susan and leave the city hand in hand, using your false identities as cover. Despite any other loves or friends you pick up, she remains your favored. Her belly is swollen round often with the fruit of your couplings, and she accompanies you almost everywhere, tending to your every whim. You are both happy with the arrangement, and remain together, loving, for the rest of your long lives, eventually tended to by the children you sired and raised so well.";
+				if player is male and "Sterile" is not listed in feats of player:
+					say "     When the rescue comes, you return to Susan and leave the city hand in hand, using your false identities as cover. Despite any other loves or friends you pick up, she remains your favored. Her belly is swollen round often with the fruit of your couplings, and she accompanies you almost everywhere, tending to your every whim. You are both happy with the arrangement, and remain together, loving, for the rest of your long lives, eventually tended to by the children you sired and raised so well.";
+				else:
+					say "     When the rescue comes, you return to Susan and leave the city hand in hand, using your false identities as cover. Despite any other loves or friends you pick up, she remains your favored. She accompanies you almost everywhere, tending to your every whim. You are both happy with the arrangement, and remain together, loving, for the rest of your long lives.";
 			else:
 				say "     Your sleek lines attract many. You easily secure a job as a secretary, but live for the weekends, when you'd hit the clubs and dance the night away to the gawkings of others. Though some humans remain fearful on basis of your being mutated at all, more than a few approach you openly, seeing your attention and affection. You show them a good time, on the dance floor, or the bedroom floor, depending on how much you like them. Man, woman, you find yourself not caring as much between the two.";
 	if bodyname of player is "Reindeer":
@@ -626,48 +659,21 @@ when play ends:
 		else:
 			if Susan is in primary lab:
 				say "     Susan happily joins you when you move north, sharing your home. At first, she merely tolerates your collection of holiday kitsch. But she loves you deeply all the same, and you her. ";
-				if cocks of player is 0 and "Sterile" is not listed in feats of player:
+				if player is not male and "Sterile" is not listed in feats of player:
 					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight. Every year, come Christmas Day, you give birth to a new fawn";
-				else if cocks of player is 0:
+				else if player is not male:
 					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight.";
 				else:
 					say "     You rut her often and she ends up giving you a new fawn every year for Christmas.";
-				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the egg nog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if cocks of player > 0] while you rut her from behind[end if].";
+				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the egg nog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if player is male] while you rut her from behind[end if].";
 			if Susan is in Hidden Lab:
 				say "     Susan happily joins you when you move north, sharing your home. Dr Mouse is a little upset about losing his assistant, but you find him a bit grinchy and always keep your dealings with him brief. At first, she merely tolerates your collection of holiday kitsch. But she loves you deeply all the same, and you her. ";
-				if cocks of player is 0 and "Sterile" is not listed in feats of player:
+				if player is not male and "Sterile" is not listed in feats of player:
 					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight. Every year, come Christmas day, you give birth to a new fawn";
-				else if cocks of player is 0:
+				else if player is not male:
 					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight.";
 				else:
 					say "     You rut her often and she ends up giving you a new fawn every year for Christmas.";
-				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the egg nog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if cocks of player > 0] while you rut her from behind[end if].";
-
-Section X - Notes
-
-[ HP of Susan ]
-[ 0 = not active ]
-[ 1 = angry - creature ]
-[ 3 = stag with Dr. Matt ]
-[ 4 = happy - NPC w/Dr. Matt ]
-[ 50+ = NPC w/Dr. Mouse ]
-[ 50 = Moved, nothing new ]
-[-- 12 turn delay from arrival --]
-[ 51 = Requested food/water ]
-[ 52 = Received food/water ]
-[-- 16 turn delay & hospquest 18+ --]
-[ 53 = Lab coat ]
-[ 54 = Returned extra supplies ]
-[ 73+ Doe-buck w/Dr. Mouse ]
-[ 73 = Doe-buck Susan ]
-[ 74 = Returned extra supplies ]
-
-
-[ libido of Susan ]
-[ 0 = regular form ]
-[ 1 = doe-buck form ]
-
-
-
+				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the egg nog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if player is male] while you rut her from behind[end if].";
 
 Deer ends here.

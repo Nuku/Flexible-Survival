@@ -9,7 +9,7 @@ when play begins:
 
 to say losetopiggy:
 	say "     You were beaten by the creature.";
-	if cocks of player > 0:
+	if player is male:
 		say "     Additional paragraph for a male/herm player.";
 	else:
 		say "     Additional paragraph for a female player.";
@@ -18,9 +18,9 @@ to say beatthepiggy:
 	say "     You were victorious over the creature.";
 	if libido of player > 40:
 		say "     Additional paragraph for a player with a libido greater than 40. Do they want sex?";
-		if the player consents:
+		if player consents:
 			say "     The player agreed to sex. Fun times begin.";
-			if cunts of player > 0:
+			if player is female:
 				say "     The player is female/herm, so sex goes like this for her.";
 			else:
 				say "     The player must be male, so sex goes like this for him.";
@@ -35,16 +35,19 @@ to say piggydesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
-	now name entry is "Piggy"; [The creature's name as displayed and used in naming descriptions]
-	now attack entry is "ERROR-Piggy - You two shouldn't be fighting."; [Text used when the monster succeeds on an attack]
-	now defeated entry is "[beatthepiggy]"; [ Text when monster loses. Change 'template' as above. ]
-	now victory entry is "[losetopiggy]"; [ Text when monster wins. Change 'template' as above. ]
+	Choose a blank row from Table of Random Critters;
+	now name entry is "Piggy"; [ Infection/Creature name. Capitalized. ]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
+	now attack entry is "ERROR-Piggy - You two shouldn't be fighting."; [ Successful attack message ]
+	now defeated entry is "[beatthepiggy]"; [ Text when monster loses. ]
+	now victory entry is "[losetopiggy]"; [ Text when monster wins. ]
 	now desc entry is "[piggydesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "clearly porcine, having plump, rounded cheeks surrounding your upturned pig nose. Your head is bald with big, floppy pig ears atop it. Your features are rather hog-like now, with the occasional piggish snort to go along with it";
 	now body entry is "quite big, plump and fat with pig hooves instead of feet";
@@ -66,11 +69,11 @@ When Play begins:
 	now HP entry is 24; [ The monster's starting HP. ]
 	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 18; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 10; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 8; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 8; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 4; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -85,8 +88,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings
@@ -98,7 +102,7 @@ when play ends:
 			say "     You succumb to your Piggy infection.";
 		else:
 			say "     You survive, but were infected by the Piggy.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

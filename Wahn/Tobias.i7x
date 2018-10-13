@@ -8,11 +8,11 @@ after going to Smith Haven Mall Lot East while HP of Tobias is 0 and a random ch
 	say "     As you stand there, movement on the far side of the car catches your eye. An anthro doberman dressed in jeans and an open vest, as well as black leather gloves, steps into view from the other side of the truck, holding the leashes for two other dobermans, one male one female. They are anthro canines, just like him, but in sharp contrast, they are naked and on all fours with collars and muzzles on them. The leashed bitch looks back at you and gives a whine, trying to move back behind the truck, but her owner(?) is having none of it, looking impatiently at the other dobie and keeping her on a tight leash. 'What is it now?' the standing man barks out, then follows her gaze to you and scoffs at her. 'Oh? Being watched by [ObjectPro of player] has your panties in a twist? Let me remind you - animals don't wear any of those. You're a pet, bitch, and not an obedient one right now. I told you to do your business [italic type]now[roman type]!'";
 	WaitLineBreak;
 	say "     Cowering before the sharp and commanding tone of her master, the female canine pushes past her hesitation and pushes her hips down with spread legs, releasing a small trickle of urine onto the asphalt. 'Wasn't so hard after all, eh?' the standing doberman comments in a biting tone, then gives both of the leashes a short dug. 'Now that that's done for, let's go meet our new acquaintance,' he says next, then guides his pets around the car to come to stand before you. The male collared dobie sits on his haunches after a second, looking up with interest, while the female hangs her head in obvious shame and remains standing. Ignoring the reactions of his submissive companions, the clothed doberman steps forward and offers you a hand in greeting.";
-	say "     'Pleasure to meet you, I'm Tobias Black.' While you tell him your own name, he pulls a business card out of a breast pocket and hands it to you. It reads, 'Tobias Black - Animal Handler, Trainer, Breeder' and has a stylized paw-print in the upper left corner. 'Sorry that I didn't acknowledge you earlier. You know how it is with dogs in training, one has to address any disobedience immediately to avoid any bad habits forming. Dane here is about fully trained by now, but Cara still needs work. But don't you worry, she'll be an excellently obedient bitch in no time at all.' The man's behaviour towards you is markedly different from the side his pets experience, and he seems very friendly, even jovial. He seems to want to chat a bit with you, and is clearly waiting for you to say something.";
+	say "     'Pleasure to meet you, I'm Tobias Black.' While you tell him your own name, he pulls a business card out of a breast pocket and hands it to you. It reads, 'Tobias Black - Animal Handler, Trainer, Breeder' and has a stylized paw-print in the upper left corner. 'Sorry that I didn't acknowledge you earlier. You know how it is with dogs in training, one has to address any disobedience immediately to avoid any bad habits forming. Dane here is about fully trained by now, but Cara still needs work. But don't you worry, she'll be an excellently obedient bitch in no time at all.' The man's behavior towards you is markedly different from the side his pets experience, and he seems very friendly, even jovial. He seems to want to chat a bit with you, and is clearly waiting for you to say something.";
 	WaitLineBreak;
 	say "[TobiasTalkMenu]";
 	now hp of Tobias is 1; [initial event done]
-	now Refugee Mare is not resolved;
+	now Refugee Mare is active;
 
 to say TobiasTalkMenu:
 	LineBreak;
@@ -58,7 +58,7 @@ to say TobiasTalkMenu:
 	now title entry is "Ask if he couldn't instead train his pets to be strong and confident in their own right";
 	now sortorder entry is 13;
 	now description entry is "Suggest a different path to take with Cara and Dane.";
-	[]	
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Demand that he free his pets";
 	now sortorder entry is 14;
@@ -78,12 +78,12 @@ to say TobiasTalkMenu:
 	now title entry is "Ask if you can fuck his dogs";
 	now sortorder entry is 17;
 	now description entry is "Express the desire to have sex with the dobies";
-	[]	
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -120,21 +120,17 @@ to say TobiasTalkMenu:
 					say "[TobiasTalk17]";
 				wait for any key;
 				say "[TobiasTalkMenu]"; [looping back into the menu to talk to him at the player's heart's content]
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the dobie, shaking your head slightly as he gives a questioning look. 'Oh well, have a nice day then. Maybe we'll see each other in the Food Court sometime,' he says and walks off, followed by his two pets.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the dobie, shaking your head slightly as he gives a questioning look. 'Oh well, have a nice day then. Maybe we'll see each other in the Food Court sometime,' he says and walks off, followed by his two pets.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 
 to say TobiasTalk1: [Ask him about himself]
-	say "     'Oh, I've been a dog trainer for close to ten years now. Started my business after coming back from the war. Which one, you ask? One of the shitty ones that no one even remembers, in the Kosovo. Stopping one group of asshole Europeans from stringing up their neighbours, and vice versa, at times.' He shrugs and brushes the topic aside, then says, 'Started with just two kennels and a bitch. Really good one, though. Purebred puppies go for quite a bit, and the ones I didn't sell got trained. Ever seen 'The Revivicator II', 'Mall Pig' or 'Inspector Gumbo'? All my dogs in those movies.' Reaching out to pat Dane on the head, the man adds, 'This current crisis hit out of the blue, but I was prepared for [italic type]something[roman type] to go down, so my place is well stocked. And apparently my skills are quite useful these days too.'";
+	say "     'Oh, I've been a dog trainer for close to ten years now. Started my business after coming back from the war. Which one, you ask? One of the shitty ones that no one even remembers, in the Kosovo. Stopping one group of asshole Europeans from stringing up their neighbors, and vice versa, at times.' He shrugs and brushes the topic aside, then says, 'Started with just two kennels and a bitch. Really good one, though. Purebred puppies go for quite a bit, and the ones I didn't sell got trained. Ever seen 'The Revivicator II', 'Mall Pig' or 'Inspector Gumbo'? All my dogs in those movies.' Reaching out to pat Dane on the head, the man adds, 'This current crisis hit out of the blue, but I was prepared for [italic type]something[roman type] to go down, so my place is well stocked. And apparently my skills are quite useful these days too.'";
 
 to say TobiasTalk2: [Ask what he is doing at the mall]
 	say "     'Oh, I'm just stopping by for some supplies and a good warm meal. This is one of the few places that one can relax and let your guard down. Also, at some point it is important to socialize newly trained pets with large groups of people. That can bring some previously hidden issues to the forefront so they can be dealt with - like Cara's little hangup [if HP of Tobias is 0]just now[else]when we met[end if].";
@@ -172,7 +168,11 @@ to say TobiasTalk17: [Ask if you can fuck his dogs]
 
 Section 2 - NPC
 
-Tobias is a man. 
+Table of GameCharacterIDs (continued)
+object	name
+Tobias	"Tobias"
+
+Tobias is a man.
 The description of Tobias is "[TobiasDesc]".
 The conversation of Tobias is { "<This is nothing but a placeholder!>" }.
 The scent of Tobias is "     Tobias smells nicely masculine, in a furry, earthy way with a little bit of honest sweat in the mix too.".
@@ -187,13 +187,13 @@ instead of conversing the Tobias:
 
 instead of fucking the Tobias:
 	say "     A smile spreads over Tobias's face as he checks you out, followed by him giving a pleased nod. 'Definitively an interesting offer you're making. Not quite the time or place for it, right here and now, but I'll keep your interest in mind. There should be some opportunities for a hookup sometime, if you're still game then. But you better be prepared for a workout - I'm a fairly demanding partner in bed, just so you know.";
-	
+
 to say TobiasSexMenu:
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -204,7 +204,7 @@ to say TobiasSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the dobie's canine shaft";
 	[]
-	if cunts of player > 0: [only females and herms can take him in the pussy]
+	if player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Tobias's shaft in your pussy";
 		now sortorder entry is 5;
@@ -219,7 +219,7 @@ to say TobiasSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -239,16 +239,12 @@ to say TobiasSexMenu:
 				if (nam is "Take Tobias's shaft in your ass"):
 					say "[TobiasSex6]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the dobie, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the dobie, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say TobiasSex1: [oral on the player]

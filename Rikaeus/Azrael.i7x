@@ -28,15 +28,19 @@ ClassPaymentAccepted is a truth state that varies.
 Section 1 - Introduction Event
 
 instead of going up from College Administration Building while AzraelRelationship is 0:
-	say "     When you make your way up the stairs you are suddenly greeted by a demon brute of all people. Bracing yourself for an attack you are surprised when nothing happens. Upon a closer look of the large male you notice he's not the same color as the ones you've ran into before. His skin instead is a pale purple that doesn't scream angry. On top of that you notice his attire. The demon is wearing a rather fancy looking suit and a pair of glasses, something that makes him appear rather educated. Even then so, he's giving you an exasperated look. 'I know you have probably had terrible encounters with my brethren but I am completely different from them.' He says with a sigh before holding out their hand. You shake it tentatively, an action that makes the big guy roll his eyes.";
-	say "     'My name is Theodore, and I am Dean Azrael's assistant. What is your business with him?' You explain to the male that you are new here and have no idea what to do. That appears to garner some recognition in the demon's eyes. 'Oh, then you may wish to follow me.' He tells you. The guy leads you to a door before opening it, revealing an office with, to your utter surprise an angel in a business suit sitting in a chair. Theo informs him that you're a new student, to your confusion before closing the door when he leaves. Azrael, you assume, gets up and walks in front of his desk before sitting on it. 'Welcome to Tenvale College. I am the Dean of the whole college. You wish to enroll?'";
+	say "     When you make your way up the stairs you are suddenly greeted by a demon brute of all people. Bracing yourself for an attack you are surprised when nothing happens. Upon a closer look of the large male you notice he's not the same color as the ones you've ran into before. His skin instead is a pale purple that doesn't scream angry. On top of that you notice his attire. The demon is wearing a rather fancy looking suit and a pair of glasses, something that makes him appear rather educated. Even then so, he's giving you an exasperated look. 'I know you have probably had terrible encounters with my brethren but I am completely different from them,' he says with a sigh before holding out their hand. You shake it tentatively, an action that makes the big guy roll his eyes.";
+	say "     'My name is Theodore, and I am Dean Azrael's assistant. What is your business with him?' You explain to the male that you are new here and have no idea what to do. That appears to garner some recognition in the demon's eyes. 'Oh, then you may wish to follow me,' he tells you. The guy leads you to a door before opening it, revealing an office with, to your utter surprise an angel in a business suit sitting in a chair. Theo informs him that you're a new student, to your confusion before closing the door when he leaves. Azrael, you assume, gets up and walks in front of his desk before sitting on it. 'Welcome to Tenvale College. I am the Dean of the whole college. You wish to enroll?'";
 	WaitLineBreak;
-	say "     You inform him that you really aren't sure at the moment as you were just curious about what was up here. With a sigh the angel crosses his arms. 'Very well, in any case, if you wish to enroll in the future, ask me. Because you're new, I have to take care of it as all of the admissions clerks have... become feral.' He explains with a roll of his eyes. Azrael's posture loosens up quickly though as he smiles at you. 'Although if you wish to just talk with me that's fine... I'm sure we can have some fun too.' He says, winking at you before he gets back to his work.";
+	say "     You inform him that you really aren't sure at the moment as you were just curious about what was up here. With a sigh the angel crosses his arms. 'Very well, in any case, if you wish to enroll in the future, ask me. Because you're new, I have to take care of it as all of the admissions clerks have... become feral,' he explains with a roll of his eyes. Azrael's posture loosens up quickly though as he smiles at you. 'Although if you wish to just talk with me that's fine... I'm sure we can have some fun too,' he says, winking at you before he gets back to his work.";
 	now AzraelRelationship is 1;
 	move player to Dean's Office;
 	move Azrael to Dean's Office;
 
 Section 2 - Declaring Azrael
+
+Table of GameCharacterIDs (continued)
+object	name
+Azrael	"Azrael"
 
 Azrael is a man.
 The description of Azrael is "[AzraelDesc]".
@@ -79,7 +83,7 @@ to say AzraelTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -97,27 +101,23 @@ to say AzraelTalkMenu:
 				if (nam is "Enroll"):
 					say "[AzraelEnroll]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You shake your head, which causes the angel to shrug and return to whatever he was working on.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You shake your head, which causes the angel to shrug and return to whatever he was working on.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say AzraelDean:
-	say "     As soon as you ask him how he even became Dean in the first place, Azrael sighs and leans back in his chair. 'You vaguely understand what happened during you humans' apocalypse, yes?' He questions. You nod, knowing as much as that somebody released the nanites into the world which is what caused the changes. He nods and speaks up. 'Yes... that. What you humans, yes you're still human to me even if you look different. Anyways, what you don't understand is that the nanites caused a disturbance amongst Heaven and Hell and the other Divine Realms.' He explains, a weary frown forming on his face. You tilt your head, a tad bit confused about the Divine Realms. Azrael rolls his eyes, but still answers your confusion. 'The Divine Realms are more or less the areas that... more powerful beings reside.' He says. Ah, that explains it, you then ask him to continue.";
-	say "     Nodding, the angel does as such. 'When the nanites hit your world, it kind of halted death. Sure, you had millions dying due to the nanites not understanding what to do and more or less turning them into gray dust or goo. However, they also bolstered everyone's health making it really hard for you to die.' He continues. You ask him what death has to do with him being Dean of a college. He raises his brow at you and gives you a peculiar stare. 'You must not be the religious type, I am Azrael, also known as the Angel of Death. I more or less help dead people pass on. But with death being slowed down severely... I don't have much of a job right now, hence me being Dean. Someone has to keep these students in line.' He says. You wonder why here specifically but Azrael says that's another question for another day before returning to his work.";
+	say "     As soon as you ask him how he even became Dean in the first place, Azrael sighs and leans back in his chair. 'You vaguely understand what happened during you humans['] apocalypse, yes?' he questions. You nod, knowing as much as that somebody released the nanites into the world which is what caused the changes. He nods and speaks up. 'Yes... that. What you humans, yes you're still human to me even if you look different. Anyways, what you don't understand is that the nanites caused a disturbance amongst Heaven and Hell and the other Divine Realms,' he explains, a weary frown forming on his face. You tilt your head, a tad bit confused about the Divine Realms. Azrael rolls his eyes, but still answers your confusion. 'The Divine Realms are more or less the areas that... more powerful beings reside,' he says. Ah, that explains it, you then ask him to continue.";
+	say "     Nodding, the angel does as such. 'When the nanites hit your world, it kind of halted death. Sure, you had millions dying due to the nanites not understanding what to do and more or less turning them into gray dust or goo. However, they also bolstered everyone's health making it really hard for you to die,' he continues. You ask him what death has to do with him being Dean of a college. He raises his brow at you and gives you a peculiar stare. 'You must not be the religious type, I am Azrael, also known as the Angel of Death. I more or less help dead people pass on. But with death being slowed down severely... I don't have much of a job right now, hence me being Dean. Someone has to keep these students in line,' he says. You wonder why here specifically but Azrael says that's another question for another day before returning to his work.";
 
 to say AzraelClasses:
-	say "     The angel smiles when you mention enrolling into classes. 'Great! First of all I need you to fill this out.' He says, handing you like two pieces of paper. You take a look and see that it's just two sheets asking for basic information. Although a few of the questions have been catered to the current world situation. Like for example, question twenty, do you ever plan to change infections while on campus. You muse that it probably makes sense to ask this so they could accommodate for any weird changes, like suddenly being partial to water. You mark it as possible, as you are unsure as to whether or not you'll get the whim to transform into something else while at college. While you're filling this out, Azrael explains the courses.";
-	say "     'So, how courses work here compared to they did before the apocalypse is rather simple. To enroll in a class you must pay with either five bottles of water or five pieces of food.' He starts, a thought running through your head, saying it makes sense. 'Once you have either one of those, you come talk to me with them in hand and I'll show you what classes we have.' He informs. You nod and continue to finish up your paperwork, Azrael continuing to speak. 'We have a lot of courses available but the list I hand you at times may lack some of them as they are either full or something's happened to have that class unavailable at the moment, understand?' Once more you shake your head up and down and hand the angel the two pieces of paper. He accepts them and holds his hand out for you to shake. 'Great! Talk to me again when you want to enroll,' the male tells you.";
+	say "     The angel smiles when you mention enrolling into classes. 'Great! First of all I need you to fill this out,' he says, handing you like two pieces of paper. You take a look and see that it's just two sheets asking for basic information. Although a few of the questions have been catered to the current world situation. Like for example, question twenty, do you ever plan to change infections while on campus. You muse that it probably makes sense to ask this so they could accommodate for any weird changes, like suddenly being partial to water. You mark it as possible, as you are unsure as to whether or not you'll get the whim to transform into something else while at college. While you're filling this out, Azrael explains the courses.";
+	say "     'So, how courses work here compared to they did before the apocalypse is rather simple. To enroll in a class you must pay with either five bottles of water or five pieces of food,' he starts, a thought running through your head, saying it makes sense. 'Once you have either one of those, you come talk to me with them in hand and I'll show you what classes we have,' he informs you. You nod and continue to finish up your paperwork, Azrael continuing to speak. 'We have a lot of courses available but the list I hand you at times may lack some of them as they are either full or something's happened to have that class unavailable at the moment, understand?' Once more you shake your head up and down and hand the angel the two pieces of paper. He accepts them and holds his hand out for you to shake. 'Great! Talk to me again when you want to enroll,' the male tells you.";
 	WaitLineBreak;
-	say "     Before you can leave he stops you and holds something out. It is a silver key with a tag on it, listing a number. 'This is the key to your dorm room. It is in the male dorms, to the northwest as soon as you enter. [if cunts of player > 0]I do apologize as the female dorms are full.[end if]' He explains as you take the key. You nod and turn to leave once more. The angel lets out a parting goodbye before he returns to his work.";
+	say "     Before you can leave he stops you and holds something out. It is a silver key with a tag on it, listing a number. 'This is the key to your dorm room. It is in the male dorms, to the northwest as soon as you enter[if player is female]. I do apologize as the female dorms are full[end if],' he explains as you take the key. You nod and turn to leave once more. The angel lets out a parting goodbye before he returns to his work.";
 	change northwest exit of Second Floor Male Dorms to Your Dorm Room;
 	change southeast exit of Your Dorm Room to Second Floor Male Dorms;
 	now AzraelRelationship is 2;

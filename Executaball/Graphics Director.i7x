@@ -6,7 +6,7 @@ Section 1 - Declarations and variables
 
 [New Graphics modifier]
 The graphics window position is g-right. The graphics window proportion is 30.
-ngraphics_currentartist is a text that varies. ngraphics_currentartist is usually "None".
+ngraphics_currentartist is a text that varies.[@Tag:NotSaved] ngraphics_currentartist is usually "None".
 TempClearBypass is a number that varies. TempClearBypass is usually 0.
 [Because of new system, setting this to 1 is needed for making projections work when applied in a 'look' order]
 
@@ -27,7 +27,7 @@ This is the ngraphics_clearcheck rule:
 			say "[bold type]DEBUG:[roman type] After looking, *Function not run* because TempClearBypass = 1 [line break]";
 	else:
 		follow the ngraphics_blank rule;
-		say "[bold type]ERROR:[roman type] You have an invald graphics clear bypass state! Please inform the FS developers in Discord. Here is an important number: [TempClearBypass] [line break]";
+		say "[bold type]ERROR:[roman type] You have an invalid graphics clear bypass state! Please inform the FS developers in Discord. Here is an important number: [TempClearBypass] [line break]";
 
 This is the ngraphics_refresh rule:
 	if graphics is true and NewGraphics is true:
@@ -56,9 +56,9 @@ Section 3 - Tables
 Table of Common Color Values
 glulx color value	assigned number
 g-black	0		[== $000000]
-g-dark-grey	4473924	[== $444444]
-g-medium-grey	8947848	[== $888888]
-g-light-grey	14540253	[== $DDDDDD]
+g-dark-gray	4473924	[== $444444]
+g-medium-gray	8947848	[== $888888]
+g-light-gray	14540253	[== $DDDDDD]
 g-white	16777215		[== $FFFFFF]
 g-yellow-orange	39423		[== $0099FF]
 g-ice-blue	15645627		[== $EEBBBB]
@@ -80,8 +80,8 @@ carry out graphicmoding:
 	if NewGraphicsOpened is true:
 		follow the ngraphics_blank rule;
 		now calcnumber is -1;
-		let trixieexit be 0;
-		while trixieexit is 0:
+		let Trixieexit be 0;
+		while Trixieexit is 0:
 			clear the screen;
 			say "[bold type]Graphics Settings:[roman type][line break]";
 			say "Please note that the graphics side window will remain on screen despite any of these settings! If you are bothered by the blank space, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. Selecting 'INLINE ONLY' or 'OFF' will no longer generate a side window.[line break]";
@@ -112,11 +112,11 @@ carry out graphicmoding:
 				-- 2:
 					say "Exit graphics menu?";
 					if player consents:
-						now trixieexit is 1;
+						now Trixieexit is 1;
 	else:
 		now calcnumber is -1;
-		let trixieexit be 0;
-		while trixieexit is 0:
+		let Trixieexit be 0;
+		while Trixieexit is 0:
 			clear the screen;
 			say "[bold type]Graphic Settings:[roman type][line break]";
 			say "NOTE: The graphics window has not been opened yet. To enable the new side-window graphics, simply save your game right now, close your game completely, then select [bold type]restore[roman type] at the start menu. You will then be prompted for graphic modifications.[line break]";
@@ -142,7 +142,7 @@ carry out graphicmoding:
 				-- 2:
 					say "Exit graphics menu?";
 					if player consents:
-						now trixieexit is 1;
+						now Trixieexit is 1;
 
 Section 5 - Debug Commands
 
@@ -188,8 +188,7 @@ carry out graphicsdebugreport:
 	else:
 		say "NewGraphicsInteger = STATE_ERROR";
 
-
-Graphics Director ends here.
+[
 
 ---- DOCUMENTATION ----
 
@@ -214,3 +213,7 @@ The roomview-canvas is a g-canvas. The associated canvas of the graphics-window 
 	try looking;]
 
 Legacy code -
+
+]
+
+Graphics Director ends here.

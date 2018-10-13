@@ -5,8 +5,12 @@ Version 1 of Tanuki by Nuku Valente begins here.
 
 Section 1 - The Situation
 
+Table of GameRoomIDs (continued)
+Object	Name
+Shinto Shrine	"Shinto Shrine"
+
 Shinto Shrine is a room. "How odd for an American city. A shinto shrine lays nestled in a small bamboo forest in this part of the park, tucked just off a narrow gravel trail and looking reasonably well kept. It is made of stone and features a number of carved pillars holding up a typically Japanese roof, gently curved and crowned by forked roof finials. In the midst of the structure, a large bronze mirror disc rests on an elaborate half-circular stand. There is a small box for donations, and a miniature iron mallet beside a bell. Perhaps it could be [bold type]rung[roman type]? The air smells of cherry blossoms and spring. You feel safe here.".
-Northwest of Park Trail is Shinto Shrine.
+Shinto Shrine is northwest of Park Trail.
 
 instead of sniffing Shinto Shrine:
 	say "The shrine smells faintly of cherry blossoms and spring. The scent puts you at ease.";
@@ -17,7 +21,7 @@ SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
 Shinto Shrine has a Grab Object called Demand.
 The demand of Shinto Shrine is usually journal.
 
-tanukiList is a list of objects that varies.
+tanukiList is a list of objects that varies. [@Tag:NotSaved]
 the tanukiList is {medkit, dirty water, water bottle, dog milk, soda, chips, glob of goo, food, gryphon milk, distilled milk, libido pill, acid milk, batcubus milk, cheetah milk, cow milk, margay milk, blue gel, cheese, musky cock flower, lembas bread, mammoth jerky, pink gel, pita bread, purple gel, psionic egg, psionic larva, skunk goo, sticky sushi, tentacle tip, awesome fruit, awesomer fruit, awesomest fruit, wyvern goop, centaur cum, earthen seed, demon seed, fennec semen, gecko cum, hawkman seed, orc cum, gryphon cum, pewter seed, rhino cum, sea dragon cum, silver semen, smilodon cum, wolf cum, orc femcum, mead horn, orc brew, pony cider, satyr wine, Satyress Wine, egg nog, sports drink, chocolate milk, tasty peach, birth control pill, fertile pill, pepperspray, glowing mushroom, estosterogen pill, eagle feather, honeycomb, behemoth horn, testosterone pill, centaur hair, corota venom, tuft of chin fur, dolphin milk, dryad cum, ebonflame scale, elk antler, lucky horseshoe, glowing ember, foul scuttler spit, red fur, hermaid kelp, libido suppressant, stray links, Spotted fur, peacock feather, nullifying powder, cock pill, healing booster, Fish, Pegasus Quill, pirate bandana, tousky quill, tainted wool, Tiger patch, Chipped tooth, spider webbing, spidertaur hair, pixie dust, crushed candies, estrogen pill, dragon scale, dragon hair, zebra fur, lizard juice}.
 demandIndex is a number that varies.
 
@@ -85,8 +89,8 @@ check leafing:
 
 carry out leafing:
 	say "Concentrating intently on leaves, you feel a large one appear over you and settle on your head. Suddenly erotic pulses rock your form as you begin to assume your natural form!";
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Tanuki":
 			now monster is y;
 			break;
@@ -109,7 +113,7 @@ check ballgrowing:
 	if facename of player is not "Tanuki", say "You need to have your head on right to do that." instead;
 
 carry out ballgrowing:
-	if cocks of player is 0:
+	if player is not male:
 		say "Your tanuki magic forms a set a balls for you, growing a tiny cock to go with them.";
 		now cocks of player is 1;
 		now cock length of player is 2;
@@ -126,7 +130,7 @@ check ballshrinking:
 carry out ballshrinking:
 	decrease cock width of player by a random number between 1 and 5;
 	if cock width of player < 1:
-		say "You have no more balls!  Your [if cocks of player > 1]cocks go[else]cock goes[end if] away as well for now!";
+		say "You have no more balls! Your [if cocks of player > 1]cocks go[else]cock goes[end if] away as well for now!";
 		now cocks of player is 0;
 		now cock length of player is 0;
 		now cock width of player is 0;
@@ -142,7 +146,7 @@ check cockgrowing:
 	if facename of player is not "Tanuki", say "You need to have your head on right to do that." instead;
 
 carry out cockgrowing:
-	if cocks of player is 0:
+	if player is not male:
 		say "Your tanuki magic grows a cock for you as you form a tiny set a balls for yourself as well.";
 		now cocks of player is 1;
 		now cock width of player is 2;
@@ -202,27 +206,30 @@ carry out breastshrinking:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Tanuki"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "";
 	now defeated entry is "";
 	now victory entry is "";
-	now desc entry is "";[ Description of the creature when you encounter it.]
-	now face entry is "sleek muzzled with a raccoon's mask and set of large expressive ears";[ Face description, format as the text "Your face is (your text)"]
-	now body entry is "somewhat pudgy and oddly animal-like, like a cartoon rendition of some kind of raccoon perhaps.";[ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "[one of]tanuki coloured[or]stripe furred[at random]";[ skin Description, format as the text "You have (your text) skin"]
-	now tail entry is "A thick and rounded tail sways behind you with black stripes along its length, covered in [skin of player] texture.";[ Tail description, write a whole Sentence or leave blank. ]
-	now cock entry is "[one of]sheathed[or]size changing[or]knotted[at random]";[- Cock Description, format as you have a "size" (your text) cock-]
-	now face change entry is "it draws into a narrow snout and a raccoon mask of black appears on your face."; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "it becomes fatter and a little shorter as you take on the stereotypical stature of a tanuki."; [- body change text. format as "Your body feels funny as (your text)" -]
-	now skin change entry is "brown and black fur explodes across you in tanuki-like patterns as your skin is left tingling."; [- skin change text. format as "Your skin feels funny as (your text)" -]
-	now ass change entry is "a thick and fluffy looking tail emerges from your bottom."; [- ass/tail change text. format as "Your ass feels funny as (your text)" -]
-	now cock change entry is "it grows a [skin of player] sheath."; [- cock change text. format as "Your cock feels funny as (your text)" -]
+	now desc entry is ""; [ Description of the creature when you encounter it.]
+	now face entry is "sleek muzzled with a raccoon's mask and set of large expressive ears"; [ Face description, format as "Your face is (your text)"]
+	now body entry is "somewhat pudgy and oddly animal-like, like a cartoon rendition of some kind of raccoon perhaps"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "[one of]tanuki colored[or]stripe furred[at random]"; [ skin Description, format as "You have (your text) skin"]
+	now tail entry is "A thick and rounded tail sways behind you with black stripes along its length, covered in [skin of player] texture."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]sheathed[or]size changing[or]knotted[at random]"; [- Cock Description, format as you have a "size" (your text) cock-]
+	now face change entry is "it draws into a narrow snout and a raccoon mask of black appears on your face"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "it becomes fatter and a little shorter as you take on the stereotypical stature of a tanuki"; [- body change text. format as "Your body feels funny as (your text)." -]
+	now skin change entry is "brown and black fur explodes across you in tanuki-like patterns as your skin is left tingling"; [- skin change text. format as "Your skin feels funny as (your text)." -]
+	now ass change entry is "a thick and fluffy looking tail emerges from your bottom"; [- ass/tail change text. format as "Your ass feels funny as (your text)." -]
+	now cock change entry is "it grows a [skin of player] sheath"; [- cock change text. format as "Your cock feels funny as (your text)." -]
 	now str entry is 12;
 	now dex entry is 18;
 	now sta entry is 14;
@@ -252,8 +259,9 @@ When Play begins:
 	now magic entry is true;
 	now resbypass entry is true; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if SatisfiedTanuki is 0:
@@ -273,20 +281,20 @@ to say tancoindesc:
 
 the scent of tanuki coin is "It has a benign, metallic smell about it.";
 
-tanuki coin is a grab object. It is part of the player. It is fast.  It is not temporary.  The usedesc of tanuki coin is "[usetancoin]".
+tanuki coin is a grab object. It is part of the player. It is fast. It is not temporary. The usedesc of tanuki coin is "[usetancoin]".
 
 to say usetancoin:
 	say "[line break]     You flip the coin";
 	if internalbypass is false:
 		say "... It lands leaf-side up";
-		if cocks of player is 0 or (cocks of player > 0 and cockname of player is not listed in infections of internallist):
+		if player is not male or (player is male and cockname of player is not listed in infections of internallist):
 			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
 		else:
 			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have grown back, in spite of your previously internal anatomy!";
 		now internalbypass is true;
 	else:
 		say "... It lands dragon-side up";
-		if cocks of player is 0 or (cocks of player > 0 and cockname of player is not listed in infections of internallist):
+		if player is not male or (player is male and cockname of player is not listed in infections of internallist):
 			say ". You feel a strange, tingling sensation in your groin, but nothing else happens. Strange...";
 		else:
 			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have disappeared, receding once more in compliance with your internal infection!";

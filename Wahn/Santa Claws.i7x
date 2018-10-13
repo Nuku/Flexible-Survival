@@ -12,6 +12,10 @@ Version 1 of Santa Claws by Wahn begins here.
 
 Section 1 - Description
 
+Table of GameCharacterIDs (continued)
+object	name
+Santa Claws	"Santa Claws"
+
 Santa Claws is a man. The HP of Santa Claws is usually 0.
 The description of Santa Claws is "[Santa Claws Desc]".
 The conversation of Santa Claws is { "Roar." }.
@@ -39,7 +43,12 @@ instead of going east from Mall East Wing while HP of Santa Claws is 0:
 	else:
 		say "     Nah, you step back from the curtain of snowfall and walk back towards the normal shops in the west.";
 
-East of Mall East Wing is Christmas Village.
+Table of GameRoomIDs (continued)
+Object	Name
+Christmas Village	"Christmas Village"
+
+Christmas Village is a room.
+Christmas Village is east of Mall East Wing.
 The description of Christmas Village is "[CVillageDesc]".
 
 to say CVillageDesc:
@@ -94,12 +103,12 @@ to say SantaTalkMenu:
 		now title entry is "A Suit for Jay";
 		now sortorder entry is 7;
 		now description entry is "Talk about getting Jay a business suit";
-	[]	
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -127,14 +136,10 @@ to say SantaTalkMenu:
 					say "[SantaTalk7]";
 				wait for any key;
 				now lastfuck of Santa Claws is turns;
-		else if calcnumber is 100:
-			say "Break off?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the polar bear, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the polar bear, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -192,12 +197,12 @@ to say SantaTalk2:
 					increase carried of food by 2;
 		else if calcnumber is 3:[rub him]
 			setmonster "Polar Bear";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     Lowering a hand, you put it right on the powerful ursine's crotch and rub against the respectable bulge you feel through the soft material. As Santa Claws cock starts to get hard, he gives a lusty rumble that reverberates in his broad chest. His clawed hand wandering down to your hips, pulling you closer, the mighty polar bear says, 'So... you want a really [italic type]special[roman type] present today. I'd be more than happy to give it to you.' His voice starts getting a bit deeper and more animal-like as he adds, 'Hard and deep,' a moment later. With that, the bear sets both of his hands on your body, lifting you up as he stands - which makes you feel pretty tiny compared to the muscled bulk of this big creature, pressed tightly against the warm coat on his body. You can feel the deep vibration run through his chest as he gives a low, aroused growl. Clearly, you've woken the beast inside this man, bringing with it strong urges now that it is no longer slumbering beneath the surface.";
-			say "     Lowering his head to take a good, long sniff of your scent, Santa Claws squeezes your butt, then pulls himself back slightly from the aroused growling and grunting. With a grumbled, 'Let's get this stuff off of you,' he lowers you to lie flat on your back on the throne. Strong clawed hands work quickly to pull off your gear and clothing, dropping it all on the ground, and soon you're lying naked before the big bear. 'Good,' he growls, running his fingers down your [bodytype of player] form until he reaches your crotch and [if cunts of player > 0]brushes over your nether lips[else]pushes your legs apart a little bit to brush over your pucker[end if].";
+			say "     Lowering his head to take a good, long sniff of your scent, Santa Claws squeezes your butt, then pulls himself back slightly from the aroused growling and grunting. With a grumbled, 'Let's get this stuff off of you,' he lowers you to lie flat on your back on the throne. Strong clawed hands work quickly to pull off your gear and clothing, dropping it all on the ground, and soon you're lying naked before the big bear. 'Good,' he growls, running his fingers down your [bodytype of player] form until he reaches your crotch and [if player is female]brushes over your nether lips[else]pushes your legs apart a little bit to brush over your pucker[end if].";
 			WaitLineBreak;
 			say "     Rising to his impressively tall height before you, Santa Claws impatiently undoes the belt of his suit and the buttons on the red coat. He has it off in a second after that, revealing a wide chest with snow-white fur, which at the same time is well-padded against the cold as well as being pretty muscular. The pants are next to go, being pushed - no almost ripped - off of his legs by the polar bear's clawed hands, which leaves him standing in his full naked glory in the middle of the Christmas Village. One look down at his hips shows you that Santa is more than ready to give you your present. His thick shaft is standing fully erect and pointing at your crotch. A little murmur from the side suddenly makes you realize that the two of you are far from alone. There is a whole crowd of elves gathered all around, watching with eager expressions, many of them murmuring to each other and some stroking themselves.";
-			if cunts of player > 0:
+			if player is female:
 				say "     Dropping down on all fours, the sexy polar bear pushes his muzzle between your legs, taking great huffs of your aroused scent and lapping at your sex. It feels pretty nice to have that warm, wet tongue brush over your nether lips, then push in between them for a moment before moving further up to stimulate your clit. After a few more moments of oral fun, the snow-white male raises his head and looks at you. His eyes almost glow with lust as untamed feral needs take over the human mind in the same body, and with a roar, the mighty beast rears up and mounts you. Soft, white fur brushes against your naked body as the at least 1500 pound ursine covers you completely, holding himself up with strong arms as his hips position the thick cock between his legs at your opening. Helplessly lying under such a massive partner might frighten others, but you, as horny and wound up as you are, just take it in stride, even eagerly meeting his muzzle in a sloppy kiss as the bear licks your face.";
 				WaitLineBreak;
 				say "     Then, with a single mighty thrust, everything changes, as the polar bear sinks his erection into your body all the way, straight from the start. You can't help but dig your hands into his luxurious pelt, holding on for dear life as the quasi-feral man bucks against you in a rapid pace. It feels so good to have your pussy stretched wide by his hard shaft and feel its thick girth rubbing against sensitive spots inside of your body that you don't even remember how long your mating lasts. It's all just a blissful haze of pleasure and lust, writhing on the wooden throne's cushioned seat. You're fucked hard and deep, giving you multiple orgasms in a row that come crashing over you, making you pant and moan loudly as femcum trickles out of your pussy and coats his thrusting shaft. After quite a while, the mighty polar bear's moans and grunts get louder and louder too, eventually culminating in a satisfied roar as his thick shaft pulses inside you, flooding your womb with his fertile seed.[fimpregchance]";
@@ -205,9 +210,9 @@ to say SantaTalk2:
 				LineBreak;
 				say "     After remaining some more time like that, leaning against the soft-furred chest of your partner and enjoying his warmth, you climb down from of his throne and put your gear back on. Time to get back to the business of surviving in this crazy, flexible world...";
 			else:
-				say "     Dropping down on all fours, the sexy polar bear pushes his muzzle between your legs, taking great huffs of your aroused scent and lapping at your [if cocks of player > 0]own [cock of player] cock. It feels pretty nice to have that warm, wet tongue brush over your erection, wrapping around its shaft for a moment before licking the cock-head. The bear then[else]sexless crotch. It feels pretty nice to have that warm, wet tongue brush over your sensitive skin, before the bear[end if] lowers his head a bit more and goes for your pucker. Strong hands take hold of your legs and spread them, allowing the large ursine easy access to your rear. What follows is a very nice bit of getting your ass eaten out, with him running that tongue over your puckered opening and pushing in against it, wiggling the tip in and getting your hole wet and ready. Then, after a few more moments of oral fun, the snow-white male raises his head and looks at you. His eyes almost glow with lust as untamed feral needs take over the human mind in the same body, and with a roar, the mighty beast rears up and mounts you. Soft, white fur brushes against your naked body as the at least 1500 pound ursine covers you completely, holding himself up with strong arms as his hips position the thick cock between his legs at your opening. Helplessly lying under such a massive partner might frighten others, but you, as horny and wound up as you are, just take it in stride, even eagerly meeting his muzzle in a sloppy kiss as the bear licks your face.";
+				say "     Dropping down on all fours, the sexy polar bear pushes his muzzle between your legs, taking great huffs of your aroused scent and lapping at your [if player is male]own [cock of player] cock. It feels pretty nice to have that warm, wet tongue brush over your erection, wrapping around its shaft for a moment before licking the cock-head. The bear then[else]sexless crotch. It feels pretty nice to have that warm, wet tongue brush over your sensitive skin, before the bear[end if] lowers his head a bit more and goes for your pucker. Strong hands take hold of your legs and spread them, allowing the large ursine easy access to your rear. What follows is a very nice bit of getting your ass eaten out, with him running that tongue over your puckered opening and pushing in against it, wiggling the tip in and getting your hole wet and ready. Then, after a few more moments of oral fun, the snow-white male raises his head and looks at you. His eyes almost glow with lust as untamed feral needs take over the human mind in the same body, and with a roar, the mighty beast rears up and mounts you. Soft, white fur brushes against your naked body as the at least 1500 pound ursine covers you completely, holding himself up with strong arms as his hips position the thick cock between his legs at your opening. Helplessly lying under such a massive partner might frighten others, but you, as horny and wound up as you are, just take it in stride, even eagerly meeting his muzzle in a sloppy kiss as the bear licks your face.";
 				WaitLineBreak;
-				say "     Then, with a single mighty thrust, everything changes, as the polar bear sinks his erection into your body all the way, straight from the start. You can't help but dig your hands into his luxurious pelt, holding on for dear life as the quasi-feral man bucks against you in a rapid pace. It feels so good to have your asshole stretched wide by his hard shaft and feel its thick girth rubbing against sensitive spots inside your body that you don't even remember how long your mating lasts. It's all just a blissful haze of pleasure and lust, writhing on the wooden throne's cushioned seat. You're fucked hard and deep, giving you multiple orgasms in a row that come crashing over you, making you pant and moan loudly as you [if cocks of player > 0]come all over yourself[else]twitch weakly in your climax[end if]. After quite a while, the mighty polar bear's moans and grunts get louder and louder too, eventually culminating in a satisfied roar as his thick shaft pulses inside you, flooding your insides with his fertile seed.[mimpregchance]";
+				say "     Then, with a single mighty thrust, everything changes, as the polar bear sinks his erection into your body all the way, straight from the start. You can't help but dig your hands into his luxurious pelt, holding on for dear life as the quasi-feral man bucks against you in a rapid pace. It feels so good to have your asshole stretched wide by his hard shaft and feel its thick girth rubbing against sensitive spots inside your body that you don't even remember how long your mating lasts. It's all just a blissful haze of pleasure and lust, writhing on the wooden throne's cushioned seat. You're fucked hard and deep, giving you multiple orgasms in a row that come crashing over you, making you pant and moan loudly as you [if player is male]come all over yourself[else]twitch weakly in your climax[end if]. After quite a while, the mighty polar bear's moans and grunts get louder and louder too, eventually culminating in a satisfied roar as his thick shaft pulses inside you, flooding your insides with his fertile seed.[mimpregchance]";
 				say "     Still breathing heavily, but with reason coming back into his eyes now that the mating urges of his animal form have been sated, Santa Claws sighs, 'Thank you. You felt amazing.' With that said, he pulls you tight against his broad chest in a tight bear-hug, then stands up. The way his still half-hard cock shifts inside your well-bred butt-hole gives you a nice little tingle as he moves and you feel very warm and protected in this embrace. Still holding on to you, the polar bear then sits back on the throne, leaning back while stroking your [skin of player] skin. 'Watching out over the village and handing out presents all the time sometimes makes me forget that my body has needs too, so... hope that I didn't get too wild on ya.' Looking back to all the orgasms you had while being fucked just minutes ago, you chuckle and tell him that it's no problem. No problem at all.";
 				LineBreak;
 				say "     After remaining some more time like that, leaning against the soft-furred chest of your partner and enjoying his warmth, you climb off his throne and put your gear back on. Time to get back to the business of surviving in this crazy, flexible world...";
@@ -229,7 +234,7 @@ to say SantaTalk4: [talking about Krampus]
 to say SantaTalk5: [talking about Mark]
 	say "     As you bring up the other polar bear, Santa smiles and nods to you, then says, 'Mark is a good and dependable man who loves his husband with all of his heart. I am proud to call him a friend and can honestly say that there are few people I'd prefer to have by my side if a truly dire situation came up.' Letting his gaze wander over the happy and carefree Christmas Elves living in his domain, the big white bear puts on a more serious expression for a second, then lets out a deep breath. Sometimes I wish that I too could just forget, like most of them did. But no, it is my responsibility, my duty, to protect them. Being aware of what grim realities the outside world entails is definitely part of that. When Jay and Mark came here, I recognized in him one of the worst examples of PTSD that I'd seen since... ah, no. Don't let me get you down with a tale like that, I shouldn't be gossiping about their private matters anyways. One thing I can say is that I am glad that their transformations went relatively well, and Mark is better for it now.'";
 	say "     Falling quiet after the last words, the large, white bear leans back in his throne and gives a welcoming smile to a newcomer who cautiously steps through the curtain of snow flakes demarcating the Christmas Village from the rest of the Mall. He waves the person closer and wishes them a friendly welcome, then starts to chat a bit. Apparently, your talk about the current topic is over, and as you walk away, you can't help but wonder if that is because you almost got a snippet of Santa's past, or to protect the privacy of Mark and Jay. Maybe a bit of both...";
-	
+
 to say SantaTalk6: [talking about Jay]
 	say "     Stroking his furry white chin, Santa raises an eyebrow and glances to the small, fairly carefree inhabitants of the Christmas Village. 'Jay is actually a special case among the elves. Most of those who come and choose to stay as part of my domain are lost and just want to forget. He wasn't, and he didn't, with his transformation mostly an accident, caused by the aftermath of the events that he and his partner Mark witnessed before fleeing to the Mall. In the end, the two of them do not actually live in the Christmas Village and still have a life outside of its boundaries. They visit often though, and have become good friends of mine, which makes me glad that things worked out alright in the way that they did.'";
 	if thirst of Jay is 0:
@@ -241,7 +246,7 @@ to say SantaTalk7: [Suit Quest info]
 		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay leads to the polar bear waving over a nearby elf with fiery red hair and a goatee. 'Okay Walter, please tell our friend here what you will need.' The diminutive man standing before you looks young, in the ageless fashion that all of the elves inherently carry, but the rich tone and confidence in his voice tell a tale of a well-experienced person. He clears his throat and smiles at you, then says, 'Mostly, it is just the proper materials that we need. We elves aren't that big either, so a single bolt of fabric should do. Something nice, you know. Worsted wool, cashmere, maybe even silk. And please watch the thread count. Any good suit needs good fabric. Or, if you have trouble finding finished fabrics out there, we could even do with just thread. A loom isn't hard to put together or use.'";
 		say "     Thanking the elf and watching him get back to what he was doing before, Santa adds, 'I know that something this specific will be hard to find out there, so I asked around among the recent visitors to the Christmas Village. Maybe you could get fabric or thread at a [bold type]swap meet[roman type]. From what I was told, there should be a somewhat regular one in a [bold type]warehouse[roman type] near the harbor. Though if you do go there... take care. Those meetings are meant to be neutral ground, but one never knows exactly what will happen in these uncertain times.";
 		now thirst of Jay is 2; [initial info given]
-		now Harbor Swap Meet is not resolved;
+		now Harbor Swap Meet is active;
 	else if thirst of Jay > 1 and thirst of Jay < 5:
 		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay again, he asks, 'Have you found a source for fabric or thread yet? As Walter said, they do need at least fabric, or enough thread to make fabric, for that suit. From what I was told, there should be a somewhat regular [bold type]swap meet[roman type] in a [bold type]warehouse[roman type] near the harbor. Though if you do go there... take care. Those meetings are meant to be neutral ground, but one never knows exactly what will happen in these uncertain times.";
 		[Swap meet event in the file Jay.i7x]
@@ -249,8 +254,7 @@ to say SantaTalk7: [Suit Quest info]
 		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay again, he says, 'Do not worry about the suit. Work is progressing on it, and my elves will have it ready by the time it is needed.'";
 	else:
 		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay again, he says, 'My elves finished it and it already has been delivered to Mark. He said something about wanting to talk to you again. I'd advise searching him out at the north entrance of the mall, in the mornings or afternoons.'";
-	
-		
+
 Section 3 - Sex
 
 Instead of fucking the Santa Claws:
@@ -258,27 +262,30 @@ Instead of fucking the Santa Claws:
 
 Section 4 - Infections
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Polar Bear";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "He should not fight, how did you see this?";          [ Text used when the monster succeeds on an attack ]
 	now defeated entry is "He should not fight, how did you see this?";         [ Text when monster loses. ]
-	now victory entry is "He should not fight, how did you see this?";[ Text when monster wins. ]
+	now victory entry is "He should not fight, how did you see this?"; [ Text when monster wins. ]
 	now desc entry is "This is not a wandering monster.";                      [ Description of the creature when you encounter it. ]
-	now face entry is "now the large and wide head of a polar bear, with a short muzzle tipped in a wet, black nose. Two rounded ears and a respectable set of teeth finish the picture of an ursine predator";[ Face Description, format as the text "Your face is (your text)." ]
-	now body entry is "that of a bipedal polar bear, thickly proportioned and muscled, with large paw-like hands ending in sharp claws";[ Body Description, format as the text "Your body is (your text)." ]
-	now skin entry is "[one of]fur-covered[or]white-furred[or]snow-white furred[at random]";[ Skin desc., format as the text "Your body is covered in (your text) skin."  Note: the word 'skin' is automatically included at the end. ]
-	now tail entry is "You have a short ursine tail that hangs over your ass.";[ Tail desc., written as a full sentence or left blank for none. ]
-	now cock entry is "ursine";[ Cock desc., format as "You have a 'size' (your text) cock." ]
-	now face change entry is "it re-forms into a pretty wide and big shape, with the lower half of your face pushing out to become a muzzle, filled with sharp teeth. Your nose takes on a black color, also getting really wet, while both of your ears move to the top of your head and become rounded and ursine";[ Face TF text, format as "Your face feels funny as (your text)." ]
-	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands and feet become paw-like, ending in sharp claws";[ Body TF text, format as "Your body feels funny as (your text)." ]
-	now skin change entry is "thick snow-white fur spreads across your skin";[ Skin TF text, format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your rump becomes thicker, more rounded and bear-like, with a short fuzzy tail hanging down over your new ursine ass";[ Ass/Tail TF text, format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "a furred sheath grows around it, protecting it when it's not erect";[ Cock TF text, format as "Your cock feels funny as (your text)." ]
+	now face entry is "now the large and wide head of a polar bear, with a short muzzle tipped in a wet, black nose. Two rounded ears and a respectable set of teeth finish the picture of an ursine predator"; [ Face. Format as Your face is [face of player]. ]
+	now body entry is "that of a bipedal polar bear, thickly proportioned and muscled, with large paw-like hands ending in sharp claws"; [ Body. Format as "Your body is [body of player]." ]
+	now skin entry is "[one of]fur-covered[or]white-furred[or]snow-white furred[at random]"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
+	now tail entry is "You have a short ursine tail that hangs over your ass."; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
+	now cock entry is "ursine"; [ Cock. Format as "You have a 'size' [cock of player] cock." ]
+	now face change entry is "it re-forms into a pretty wide and big shape, with the lower half of your face pushing out to become a muzzle, filled with sharp teeth. Your nose takes on a black color, also getting really wet, while both of your ears move to the top of your head and become rounded and ursine"; [ Face TF text. Format as "Your face tingles as [face change entry]." ]
+	now body change entry is "it becomes large, thicker, and more muscular, more ursine. Your neck widens, as do your arms and legs, and your hands and feet become paw-like, ending in sharp claws"; [ Body TF text, format as "Your body tingles as [body change entry]. ]
+	now skin change entry is "thick snow-white fur spreads across your skin"; [ Skin TF text, format as "Your skin tingles as [skin change entry]. ]
+	now ass change entry is "your rump becomes thicker, more rounded and bear-like, with a short fuzzy tail hanging down over your new ursine ass"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now cock change entry is "a furred sheath grows around it, protecting it when it's not erect"; [ Cock TF text, format as "Your groin tingles as [cock change entry]." ]
 	now str entry is 20;
 	now dex entry is 12;
 	now sta entry is 22;
@@ -293,7 +300,7 @@ When Play begins:
 	now cocks entry is 1;                 [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 9;           [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 12;           [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;               [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;               [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;           [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;                 [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -303,21 +310,25 @@ When Play begins:
 	now loot entry is "";                 [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;            [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 4;                 [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]muscled[or]burly[or]strong[at random]";       [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "[one of]muscled[or]burly[or]strong[at random]";       [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]ursine[or]bear-like[at random]";         [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Christmas Elf Female";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "They don't fight.";
 	now defeated entry is "They don't fight.";
 	now victory entry is "They don't fight.";
@@ -325,9 +336,9 @@ When Play begins:
 	now face entry is "delicate and beautiful, with a petite nose and elfin features. Your full, lustrous lips seem to be made to smile and laugh. The eyes through which you see the world are slightly larger than a human's, showing very round and shiny green irises. Two pointed ears poke out from under your long blond hair and complete the picture";
 	now body entry is "that of a lithe and slender human being, if proportioned to be pretty short. It is garbed in tight, dark green leather pants and leaf green tunic, allowing for unhindered, graceful movement";
 	now skin entry is "[one of]pale, flawless[or]pristine[or]perfect[at random]";
-	now tail entry is "You have a petite and shapely butt, just waiting to be grabbed.";  [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a petite and shapely butt, just waiting to be grabbed.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into beautiful, elfin features. Your ears lengthen and taper to narrow points. And finally, from one blink to the next, your eyes change in some way, allowing for much sharper vision"; [ format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into beautiful, elfin features. Your ears lengthen and taper to narrow points. And finally, from one blink to the next, your eyes change in some way, allowing for much sharper vision"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a more attractive form, leaving you with a lithe and slender body in proportions a bit shorter than a regular human. A sound of wind-chimes behind you draws your attention, and when you turn around, there's a small pile of clothing sitting on the ground at your feet. Slipping into the soft boots, tight leather pants and soft tunic that were provided for you makes things feel just right";
 	now skin change entry is "it seems to soften and smooth out, creating the impression of timeless youth. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a petite, shapely behind";
@@ -346,9 +357,9 @@ When Play begins:
 	now cocks entry is 0;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 7;         [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 4;          [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;             [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;             [ Number of nipples the infection will give a player. ]
 	now breast size entry is 2;         [ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 8;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 4;          [ Width of female sex the infection will try to give a player. ]
@@ -356,22 +367,26 @@ When Play begins:
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]alluring[or]sexy[or][if cocks of player > 0]handsome[else]sultry[end if][at random]";
+	now body descriptor entry is "[one of]alluring[or]sexy[or][if player is male]handsome[else]sultry[end if][at random]";
 	now type entry is "[one of]elven[or]fae[at random]";
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Christmas Elf Male";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "They don't fight.";
 	now defeated entry is "They don't fight.";
 	now victory entry is "They don't fight.";
@@ -379,9 +394,9 @@ When Play begins:
 	now face entry is "beautiful and elfin, with handsome, if a bit delicate features. Your full, lustrous lips seem to be made to smile and laugh. The eyes through which you see the world are slightly larger than a human's, showing very round and shiny green irises. Two pointed ears poke out from under your long blond hair and complete the picture";
 	now body entry is "that of a lithe and slender human being, if proportioned to be pretty short. It is garbed in tight, dark green leather pants and leaf green tunic, allowing for unhindered, graceful movement";
 	now skin entry is "[one of]pale, flawless[or]pristine[or]perfect[at random]";
-	now tail entry is "You have a firm and shapely bubble butt, just waiting to be grabbed.";  [ Tail desc., written as a full sentence or left blank for none. ]
+	now tail entry is "You have a firm and shapely bubble butt, just waiting to be grabbed.";  [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]
 	now cock entry is "[one of]amazing[or]perfect[or]human-like[at random]";
-	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into handsome, elfin features. Your ears lengthen and taper to narrow points. And finally, from one blink to the next, your eyes change in some way, allowing for much sharper vision"; [ format as "Your face feels funny as (your text)" ]
+	now face change entry is "your facial muscles seem to ripple under the skin, rearranging themselves into handsome, elfin features. Your ears lengthen and taper to narrow points. And finally, from one blink to the next, your eyes change in some way, allowing for much sharper vision"; [ format as "Your face feels funny as (your text)." ]
 	now body change entry is "it is reshaped into a more attractive form, leaving you with a lithe and slender body in proportions a bit shorter than a regular human. A sound of wind-chimes behind you draws your attention, and when you turn around, there's a small pile of clothing sitting on the ground at your feet. Slipping into the soft boots, tight leather pants and soft tunic that were provided for you makes things feel just right";
 	now skin change entry is "it seems to soften and smooth out, creating the impression of timeless youth. Any blemishes and unwanted hair are wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a petite, shapely behind";
@@ -400,9 +415,9 @@ When Play begins:
 	now cocks entry is 1;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 7;         [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 4;          [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2;             [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2;             [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0;         [ Size of breasts the infection will try to attain. ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
 	now cunt length entry is 8;         [ Depth of female sex the infection will attempt to give a player. ]
 	now cunt width entry is 4;          [ Width of female sex the infection will try to give a player. ]
@@ -410,13 +425,14 @@ When Play begins:
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0;          [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 2;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "[one of]alluring[or]sexy[or][if cocks of player > 0]handsome[else]sultry[end if][at random]";
+	now body descriptor entry is "[one of]alluring[or]sexy[or][if player is male]handsome[else]sultry[end if][at random]";
 	now type entry is "[one of]elven[or]fae[at random]";
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Santa Claws ends here.

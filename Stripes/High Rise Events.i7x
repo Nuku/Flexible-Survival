@@ -6,6 +6,10 @@ Version 2 of High Rise Events by Stripes begins here.
 
 Section 1- Rabid Lawyers
 
+Table of GameEventIDs (continued)
+Object	Name
+Rabid Lawyers	"Rabid Lawyers"
+
 Rabid Lawyers is a situation.
 The sarea of Rabid Lawyers is "High".
 when play begins:
@@ -15,12 +19,15 @@ when play begins:
 Instead of resolving a Rabid Lawyers:
 	say "     While searching the city, you encounter a large pack of wolves in front of a law firm. They are partially dressed in suits, mainly the jackets and ties, though some have the torn-open remains of pants. They are growling and slavering as they snap at each other or swinging their briefcases around. Mixed among the pack are several smaller wolves in skirts or shirts, clutching reports, pouring coffee or helping the larger ones. Much of the helping seems to take the form of the interns sucking them off or getting pounded good and hard by one of the bigger males. Unwilling to face the legal teeth of a pack of rabid lawyers, you slink off as quietly and as quickly as you can.";
 	increase score by 1;
-	mallrecall;
-	Now Rabid Lawyers is resolved;
+	now Rabid Lawyers is resolved;
 
 
 
 Section 2- Pigging Out
+
+Table of GameEventIDs (continued)
+Object	Name
+Pigging Out	"Pigging Out"
 
 Pigging Out is a situation. The level of Pigging Out is 3.
 The sarea of Pigging Out is "High".
@@ -38,10 +45,10 @@ Instead of resolving a Pigging Out:
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			say "     When you first step in, the pig is somewhat startled by your presence. Her heavy bulk struggles to get up, but she soon relaxes and smiles as she sees your piggish features and eager attitude. With a grin, she picks up a handful of food from the floor with her left hand, the one she'd had in her pussy. As you reach for it, you can see her wet juices running over the sugary dessert, making your mouth water for it all the more. You stuff the food into your mouth, chewing noisily as you enjoy its added seasoning.";
 			say "     As you eat, she helps you out of your clothes, tossing them onto a knocked over table. With you now naked, she runs her messy hands over your body as she pulls you into her arms. She grabs another of the scattered pastries from the floor and stuffs it into her mouth before sloppily kissing you, smearing the creamy filling into your mouth with her tongue.";
-			if cocks of player > 0:
+			if player is male:
 				say "     You place your hands on her sow tits, making her squeal in pleasure. She lays herself back on the floor, squishing some of the expensive food beneath her bulk. You bury your face in her teats, licking and suckling at them playfully. She oinks and moans in pleasure between mouthfuls. You work your way down her chest, tending to each of her six breasts until that brings you between her legs and that wet, cavernous slit beckons to you.";
 				say "     You grab a nearby bottle of maple syrup and tear off the top, pouring it right onto those wet lips before you bury your face between her large thighs. You lick all over her messy pussy, the maple sweetness tasting wonderful with her porcine juices. You stuff your tongue into her, delving deeper for more of her sweet honey until she finally orgasms and soaks your face with it.";
 				say "     You smile up at her, licking your chops as she motions for you to climb atop her. You do so eagerly, bringing your hard cock into position at her pussy before burying it in her ample folds. With your face pressed to her piggish snout, she snuffles at your face and licks away the sticky syrup and her own juices with squeals of pleasure as you fuck her.";
@@ -51,7 +58,7 @@ Instead of resolving a Pigging Out:
 				say "     She presses you down to the floor, flattening several soft pastries beneath you. She moves her heavy bulk atop you, bringing her wet and dripping pussy over your face. You moan softly as she presses it to your mouth, smearing her juices onto you, which you quickly start lapping up from her pussy.";
 				say "     With her atop you, you barely catch sight of her grabbing a bottle of maple syrup. A few moments later, you feel the cool, sticky fluid flowing down between your legs. She spreads your petals and pours more over them before burying her snout between your thighs and licking hungrily at your sticky puss. You both moan and squeal in pleasure until you climax, adding more hot juices to the sticky mess.";
 				say "     She pauses to stuff several more pastries into her mouth, gobbling them down. She ends up dropping crumbs onto your sticky groin where they cling to the syrupy, slobbery film of your juices. After her quick gorging, she climbs off of you and goes to the back and into the food locker. At first you think she's going to come out with more food for you both, but when she comes out with only a cucumber and a grin, you realize she has something else in mind.";
-				say "     She plops herself down onto the messy floor, seating herself between your legs. Stroking your thigh, she moves her piggy hand up to your wet, messy cunny and spreads your lips. With a grin, she sinks the long, slender cucumber into you, making you squeal. She works the vegetable in and out several times before she lays back, one leg over yours and the other under. With considerable labour, she moves her heavy bulk closer, taking the other half of the cuke into her pussy.";
+				say "     She plops herself down onto the messy floor, seating herself between your legs. Stroking your thigh, she moves her piggy hand up to your wet, messy cunny and spreads your lips. With a grin, she sinks the long, slender cucumber into you, making you squeal. She works the vegetable in and out several times before she lays back, one leg over yours and the other under. With considerable labor, she moves her heavy bulk closer, taking the other half of the cuke into her pussy.";
 				say "     With a little careful practice, you both set up a nice rhythm where you rock back and forth, pushing the cuke into each other over and over again. You both fondle your breasts and stuff more of the scattered desserts into your hungry mouths. A wet puddle of juices pool beneath it as your pleasure builds and builds until you finally crash over the edge and she follows a few breaths later. You both writhe in orgasm, eventually snapping the green vegetable in half as you squeal loudly.";
 				say "     Your romp with her continues for several hours. Between gorging and fucking, you feel quite full and satisfied when you both finally part ways, with you munching on your half of the sticky cucumber and she doing the same with hers.";
 			infect "Messy Pig";
@@ -62,51 +69,58 @@ Instead of resolving a Pigging Out:
 			SanLoss 10;
 			increase score by 25;
 			now restaurantpig is 1;
+			now Resolution of Pigging Out is 1; [ate with the pig]
 		else:
 			say "     You resist the urge to join her in the messy feast, but you would still like to opportunity to search the place for supplies.";
 			say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				challenge "Messy Pig";
 				if lost is 1:
 					say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food. She tosses it in a heap on the floor beside you. With an oink, she drops down onto the floor next to the food and grabs you by the neck. She buries your face between her legs, giving you a noseful of her strong scent and wet pussy. As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger. Once she's satisfied that you're properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure. With you to tend to her pussy, she can stuff food into her hungry maw with both hands. After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
 					infect "Messy Pig"; [extra infection]
 					decrease score by 5;
 					now restaurantpig is 1;
+					now Resolution of Pigging Out is 3; [fought the pig for food, lost]
 				else:
 					say "     After defeating the pig and sending it on its way, you pick carefully through the ruined restaurant. The food in the main dining area and kitchen is all clearly tainted, but you do manage to find a little in the back of the walk-in cooler that is clean and undamaged by the gorging pig. You get enough for two meals packed away using some of the kitchenware to pack it up. While doing so, you also find a big kitchen knife that you decide to bring along.";
 					say "     Food x 2 and cleaver added to inventory.";
 					increase carried of food by 2;
 					increase carried of cleaver by 1;
 					increase score by 5;
+					now Resolution of Pigging Out is 2; [fought the pig for food, won]
 			else:
 				say "     Looking around the messy restaurant and the scattered food around the pig, you're not so sure they'll be anything salvageable left and decide it may not be worth the risk to try.";
 				increase score by 1;
+				now Resolution of Pigging Out is 4; [didn't fight the pig for food]
 	else:
 		say "     You look at the disgusting mess that she's already made of the place and feel your hopes of some fine dining dashed. You would still like to opportunity to search the place for supplies.";
 		say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
-		if the player consents:
+		if player consents:
 			challenge "Messy Pig";
 			if lost is 1:
 				say "     After you wipe your face and catch your breath, you see her return from the food locker with another armload of food. She tosses it in a heap on the floor beside you. With an oink, she drops down onto the floor next to the food and grabs you by the neck. She buries your face between her legs, giving you a noseful of her strong scent and wet pussy. As she smears your face across her pussy lips, you find yourself licking at them with increasing lustful hunger. Once she's satisfied that you're properly set to work, she starts stuffing handfuls of food into her piggish snout with oinks of pleasure. With you to tend to her pussy, she can stuff food into her hungry maw with both hands. After numerous squealing orgasms, she seems satisfied and shoves you out of the restaurant, sending you off on your way.";
 				infect "Messy Pig"; [extra infection]
 				decrease score by 5;
 				now restaurantpig is 1;
+				now Resolution of Pigging Out is 3; [fought the pig for food, lost]
 			else:
 				say "     After defeating the pig and sending it on its way, you pick carefully through the ruined restaurant. The food in the main dining area and kitchen is all clearly tainted, but you do manage to find a little in the back of the walk-in cooler that is clean and undamaged by the gorging pig. You get enough for two meals packed away using some of the kitchenware to pack it up. While doing so, you also find a big kitchen knife that you decide to bring along.";
 				say "     Food x 2 and cleaver added to inventory.";
 				increase carried of food by 2;
 				increase carried of cleaver by 1;
 				increase score by 5;
+				now Resolution of Pigging Out is 2; [fought the pig for food, won]
 		else:
 			say "     Looking around the messy restaurant and the scattered food around the pig, you're not so sure they'll be anything salvageable left and decide it may not be worth the risk to try.";
 			increase score by 1;
-	Now Pigging Out is resolved;
+			now Resolution of Pigging Out is 4; [didn't fight the pig for food]
+	now Pigging Out is resolved;
 
 to say piggycheck:	[to check if player has a pig-like head or body]
 	now tempnum is 0;
@@ -129,6 +143,10 @@ the scent of the cleaver is "The heavy blade smells faintly of blood."
 
 Section 3- Small Park
 
+Table of GameEventIDs (continued)
+Object	Name
+Small Park	"Small Park"
+
 Small Park is a situation.
 The sarea of Small Park is "High".
 when play begins:
@@ -146,10 +164,12 @@ Instead of resolving a Small Park:
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		say "[dogparksearch]";
+		now Resolution of Small Park is 1; [searched the dog park]
 	else:
 		say "     You go off, deciding to find a safer place to search.";
 		increase score by 1;
-	Now Small Park is resolved;
+		now Resolution of Small Park is 99; [disinterest]
+	now Small Park is resolved;
 
 
 to say dogparksearch:
@@ -185,7 +205,7 @@ to say dogparksearch:
 		[random canine infection]
 		say "[doggyinfect]";
 	if T is 9:
-		say "     You look around the park and are fortunately not spotted by any monsters. You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. While you walk through the park, you pass near the large tree at the center of the park and the dog smell is the strongest here. It is very thick in the air around it and you can see the trunk discoloured with markings and thick cum splashes. Despite its origins, the scent is very attractive, drawing you in.";
+		say "     You look around the park and are fortunately not spotted by any monsters. You search around the park, finding many signs of attacked residents. There are torn and cum-stained clothes in several clusters, along with dog leashes and collars. The area is thick with the scent of dog. While you walk through the park, you pass near the large tree at the center of the park and the dog smell is the strongest here. It is very thick in the air around it and you can see the trunk discolored with markings and thick cum splashes. Despite its origins, the scent is very attractive, drawing you in.";
 		say "     [bold type]Do you want to examine it more closely?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
@@ -226,7 +246,7 @@ to say doggyinfect:
 	else if tempnum is 4:
 		infect "Pit bull";
 	else if tempnum is 5:
-		infect "Ashen Breeder";
+		infect "Ember Breeder";
 	else if tempnum is 6:
 		infect "Chocolate Lab";
 	else if tempnum is 7:
@@ -243,6 +263,10 @@ to say doggyinfect:
 
 Section 4- Corporate Fat Cats
 
+Table of GameEventIDs (continued)
+Object	Name
+Corporate Fat Cats	"Corporate Fat Cats"
+
 Corporate Fat Cats is a situation.
 The sarea of Corporate Fat Cats is "High".
 when play begins:
@@ -252,11 +276,14 @@ when play begins:
 Instead of resolving a Corporate Fat Cats:
 	say "     You come across a pair of hefty felines on the steps of one of the many high-rise buildings. Their business suits have mostly been removed and scattered around them. One is a male black cat with white paws and a splash of white on his wide belly. The other is a chubby Maine Coon tom with the thick, fluffy fur of the breed. They are rolling around against one another, groping each other. While stroking the black cat's cock, the other cat goes on about looking forward to some asset growth. The black cat nibbles at the portly Maine Coon's ear, telling him how he wants to set up this merger and come out on top. They continue to go on like this, bantering in corporate lingo while the black cat mounts the other while you walk off, leaving the fat cats to their [']merger['].";
 	increase score by 1;
-	mallrecall;
-	Now Corporate Fat Cats is resolved;
+	now Corporate Fat Cats is resolved;
 
 
 Section 5- Veterinary Hospital
+
+Table of GameEventIDs (continued)
+Object	Name
+Veterinary Hospital	"Veterinary Hospital"
 
 Veterinary Hospital is a situation.
 The sarea of Veterinary Hospital is "High".
@@ -270,8 +297,8 @@ when play begins:
 
 Instead of resolving a Veterinary Hospital:
 	if lust of Medea is 1:
-		say "     You come across a veterinary hospital at the ground level of one of the high rises. Recalling your discussion with Dr. Medea about the supplies she needs to affect your [if cunts of player > 0]infected[else]male[end if] womb's heat cycle, you take a moment to listen for monsters inside. You don't hear any, but it is an animal hospital, so it still seems somewhat risky. Deciding to take the risk, you venture inside.";
-		attempttowait;
+		say "     You come across a veterinary hospital at the ground level of one of the high rises. Recalling your discussion with Dr. Medea about the supplies she needs to affect your [if player is female]infected[else]male[end if] womb's heat cycle, you take a moment to listen for monsters inside. You don't hear any, but it is an animal hospital, so it still seems somewhat risky. Deciding to take the risk, you venture inside.";
+		WaitLineBreak;
 		say "     You cautiously enter the veterinary hospital and look around. As you suspected, it was rather hard hit by the outbreak. You can see the tattered remains of the secretary and the vets['] clothes scattered about, as well as many dried pools of cum. The scent of feline and canine arousal is strong in the air, making the infection inside you tingle. Feeling you shouldn't stay long, you do your best to remain focused by repeatedly looking at the list you were given as a reminder of what you need to find. As you're nearing the end, it is becoming quite difficult, all those intense, sexual, animal scents have you panting with lust. A large part of you just wants to give up on humanity, find some beast and let it have its way with you as long and as often as it likes. Knowing you can't tarry any longer, you pack up what you've found and make for the exit";
 		if furry is not banned and hermaphrodite is not banned:
 			say ".";
@@ -282,10 +309,11 @@ Instead of resolving a Veterinary Hospital:
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     After dealing with the panther taur, you find it quite tempting to stay and continue to have fun with the sexy feline herm. Surely she'd be able to satisfy that lustful itch of your for animal sex, some part of you suggests. It takes some effort of will, but you're able to rein yourself in and leave the place before it gets any stronger. Once outside, you breathe in the (relatively) fresher air outside to try and clear your head. Trying to recover your self-control, you leave the immediate area and ponder your next course of action. Despite the close call, finding a sexy beast to fuck you remains high on your list.";
 				now lust of medea is 2;
+				now Resolution of Veterinary Hospital is 2; [won and got medea's supplies]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     After the panther taur's had her way with you, she pushes you back inside her veterinary clinic home. Lost in a daze of animal lust, you don't resist as she secures you with a collar and leash to the wall before mounting you. You're fucked over and over again in numerous positions, fed on a diet of her cum and milk until you're nothing but another lust-crazed panther taur by the time she releases you out into the city[if player is impreg_ok] with a belly full of her cubs[end if].";
 				setmonster "Panther Taur";
-				choose row monster from the table of random critters;
+				choose row monster from the Table of Random Critters;
 				now humanity of player is 0;
 				if libido of player < 90, now libido of player is 90;
 				now tailname of player is "Panther Taur";
@@ -303,16 +331,17 @@ Instead of resolving a Veterinary Hospital:
 				follow the sex change rule;
 				wait for any key;
 				end the story saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
-				now battleground is "void";
 				wait for any key;
 				follow the turnpass rule;
 				stop the action;
 			else:
 				say "     Not feeling it would be wise to stay and fight given the circumstances, you clutch your pack full of stolen veterinary supplies all the tighter and dodge your way past the big feline. Still running to put some distance between her in case she chooses to pursue you, you breathe in the (relatively) fresher air outside to try and clear your head. Trying to recover your self-control, you leave the immediate area and ponder your next course of action. Despite the close call, finding a sexy beast to fuck you remains high on your list.";
+				now Resolution of Veterinary Hospital is 3; [fled]
 		else:
 			say " as quickly as you can, breathing in the (relatively) fresher air outside to try and clear your head. Trying to recover your self-control, you leave the immediate area and ponder your next course of action. Finding a sexy beast to fuck you remains high on your list.";
 			now libido of player is ( 100 + libido of player + libido of player ) / 3;
 			decrease humanity of player by 5;
+			now Resolution of Veterinary Hospital is 4; [fight banned, so the player just ran out with the supplies]
 		now lust of Medea is 2;
 	else:
 		say "     You find a veterinary hospital at the ground level of one of the high rises. You don't hear any monsters within and consider entering. There could be some useful supplies within, but it is an animal hospital, so it does seem a somewhat risky venture.";
@@ -322,10 +351,12 @@ Instead of resolving a Veterinary Hospital:
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			say "[vetsearch]";
+			now Resolution of Veterinary Hospital is 1; [searched the place]
 		else:
 			say "     You go off, deciding to find a safer place to search.";
 			increase score by 1;
-	Now Veterinary Hospital is resolved;
+			now Resolution of Veterinary Hospital is 99; [disinterest]
+	now Veterinary Hospital is resolved;
 
 
 to say vetsearch:
@@ -411,7 +442,7 @@ to say randomvetfight:				[more suitable pets can be added]
 	if tempnum is 5:
 		challenge "German Shepherd";
 	if tempnum is 6:
-		challenge "rabbit pack";
+		challenge "Anthro Rabbit";
 	if tempnum is 7:
 		challenge "Feline";
 	if tempnum is 7:
@@ -428,6 +459,10 @@ to say randomvetfight:				[more suitable pets can be added]
 
 Section 6- Golf Store
 
+Table of GameEventIDs (continued)
+Object	Name
+Golf Store	"Golf Store"
+
 Golf Store is a situation.
 The sarea of Golf Store is "High".
 when play begins:
@@ -438,7 +473,7 @@ Instead of resolving a Golf Store:
 	say "     Golf club obtained.";
 	increase carried of golf club by 1;
 	increase score by 5;
-	Now Golf Store is resolved;
+	now Golf Store is resolved;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -451,21 +486,28 @@ the scent of the golf club is "The golf club smells faintly of grass, bad slices
 
 Section 7- Electronics Store
 
+Table of GameEventIDs (continued)
+Object	Name
+Electronics Store	"Electronics Store"
+
 Electronics Store is a situation.
 The sarea of Electronics Store is "High".
 when play begins:
 	add Small Park to badspots of humorous;
 
 Instead of resolving a Electronics Store:
-	say "     In the corner of one of the high-rise office buildings, you spot an odd pair of beings. They are a duo of strange, cybernetic people with vacant, luminescent eyes. Unlike any of the others you've seen in the city, you are drawn to investigate. From behind a car, you watch them as they eat the electronic hardware from the displays. One is a glossy white with blue highlights and a smooth, dome head. He is dressed in loose-fitting, slacker wear. The other has a matte black finish where he's not flesh and wearing a grey suit and charcoal tie.";
+	say "     In the corner of one of the high-rise office buildings, you spot an odd pair of beings. They are a duo of strange, cybernetic people with vacant, luminescent eyes. Unlike any of the others you've seen in the city, you are drawn to investigate. From behind a car, you watch them as they eat the electronic hardware from the displays. One is a glossy white with blue highlights and a smooth, dome head. He is dressed in loose-fitting, slacker wear. The other has a matte black finish where he's not flesh and wearing a gray suit and charcoal tie.";
 	say "     As you watch, the darker one twitches and shudders for a moment while trying to swallow down a big mouthful. His eyes blink, then turn a solid blue. He smacks his chest a few times to reboot himself. Once that is settled, he opens his jacket, accesses a panel on himself and pulls out a video card, swapping it for a newer model from one of the shelves.";
 	say "     With this impromptu upgrade completed, they get back to squabbling over the various electronic phones, mp3 players and doodads, babbling marketing buzzwords all the while.";
 	increase score by 1;
-	mallrecall;
-	Now Electronics Store is resolved;
+	now Electronics Store is resolved;
 
 
 Section 8 - Cameo
+
+Table of GameEventIDs (continued)
+Object	Name
+Cameo	"Cameo"
 
 Cameo is a situation. The level of Cameo is 4.
 The sarea of Cameo is "High".
@@ -524,11 +566,11 @@ Instead of resolving a Cameo:
 		say "     Managing to outmaneuver the chocolate dogs, you push your way out of the store and into the courtyard around the shops. Looking back, you spot the dogs pressed up against the glass, leaving chocolate streaks on windows before they hop down and return to their lustful consumption of the chocolates. You are quite certain there will be nothing left in the store except for the white chocolate stains from their sexual play as they celebrate their victory at defending their delicious prize.";
 	else if choclabfight is 2:
 		say "     When the victorious Labrador moves back, you look up to find yourself surrounded by the trio who look at you lustfully. The other two flow atop you and start humping at your body. You are buried in flowing chocolate as they cover you completely[if cunts of player > 1]. You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussies and asshole with a hard chocolate cock for each[else if cunts of player is 1]. You can feel their creamy tendrils flow into your every orifice, fucking your mouth, pussy and asshole with a hard chocolate cock for each[else]. You can feel their creamy tendrils flow into your mouth and asshole, fucking you at both ends with a hard chocolate cock[end if][if cocks of player > 1]. Their flowing bodies form warm, wet cunts around your cocks, sucking and squeezing at them as they pound into you[else if cocks of player is 1]. Their flowing bodies form a warm, wet cunt around your cock, sucking and squeezing at them as they pound into you[end if].";
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
-		say "     As this goes on, you can feel them flowing over your whole body, sliding off your clothes and backpack. Completely naked, you can feel their flowing, rippling chocolate flesh sliding all over you, stimulating you so fully you sink further and further into a haze. You barely notice the added weight of the third Labrador joining in, but you are somehow keenly aware that he's finished off the last of those chocolates as more and more of that creamy, white chocolate seed is pumped into you[if cocks of player > 0] while you pump your own cum out for them to enjoy[end if]";
+		WaitLineBreak;
+		say "     As this goes on, you can feel them flowing over your whole body, sliding off your clothes and backpack. Completely naked, you can feel their flowing, rippling chocolate flesh sliding all over you, stimulating you so fully you sink further and further into a haze. You barely notice the added weight of the third Labrador joining in, but you are somehow keenly aware that he's finished off the last of those chocolates as more and more of that creamy, white chocolate seed is pumped into you[if player is male] while you pump your own cum out for them to enjoy[end if]";
 		if bodyname of player is "Chocolate Lab" or facename of player is "Chocolate Lab":
 			say ".";
-			if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+			WaitLineBreak;
 			say "     During this rampant, fluidic sex with the dogs, you can feel much of your chocolate being intermingling with that of the other Labradors. It feels like you are simultaneously filled and drained over and over again as your lovers mate you. You seem to flow into them as they flow into you in an orgasmic melding of pleasure. You feel yourself becoming much more canine and craving more and more chocolate, causing you to suck, squeeze and gulp down all you can get from them until finally much of you is gone.";
 			decrease humanity of player by a random number between 25 and 35;
 			increase hunger of player by 12;
@@ -541,8 +583,8 @@ Instead of resolving a Cameo:
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
 		[puts Chocolate Lab as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Chocolate Lab":
 				now monster is y;
 				break;
@@ -560,7 +602,7 @@ Instead of resolving a Cameo:
 		if hellHoundLevel is 0:
 			follow the sex change rule;
 			follow the sex change rule;
-		if waiterhater is 0, wait for any key; [skips waiting if it's not wanted]
+		WaitLineBreak;
 		if libido of player < 70, now libido of player is 70;
 		say "     When they are finally sated, they flow away from you, leaving you in a pool of creamy chocolate. You struggle to sit up as they flow over the last of the scattered chocolates before heading out the door. One of them, which you somehow sense to be the one who defeated you, turns back and looks at you, as if to see if you will follow before flowing after the others.";
 		say "     Trying again to pull yourself up, you discover that you've fully become flowing, animate chocolate like your assailants. You try to pull yourself together, taking stock that you've changed and fully become a chocolate Labrador like those sexy, tasty hounds";
@@ -577,6 +619,10 @@ Instead of resolving a Cameo:
 
 
 Section 9 - Raul's Wild Kingdom
+
+Table of GameEventIDs (continued)
+Object	Name
+Wild Kingdom	"Wild Kingdom"
 
 Wild Kingdom is a situation.
 The sarea of Wild Kingdom is "High".

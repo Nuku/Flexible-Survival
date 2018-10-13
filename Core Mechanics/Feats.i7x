@@ -15,17 +15,16 @@ boosterfeats is a number that varies. boosterfeats is usually 0.
 muggerison is a truth state that varies. muggerison is usually true.
 FeralBirths is a number that varies. FeralBirths is usually 0.
 vampiric is a truth state that varies. vampiric is usually false.
-
 The player has a number called featgained.
 
 Featgetting is an action applying to nothing.
 understand "volunteer" as featgetting.
 
 Check featgetting:
-	if HP of doctor matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
+	if HP of Doctor Matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
 	if featgained of player > ( ( level of player divided by 3 ) + foodwaterbonus + nerminefeat + boosterfeats ), say "You do not yet qualify for more feats." instead;
-	if HP of doctor matt <= 100:
-		if doctor matt is not visible, say "Only Doctor Matt knows how to do this." instead;
+	if HP of Doctor Matt <= 100:
+		if Doctor Matt is not visible, say "Only Doctor Matt knows how to do this." instead;
 	else:
 		if doctor mouse is not visible, say "You should see Dr Mouse about that." instead;
 
@@ -79,7 +78,7 @@ featgrabbing is an action applying to one topic.
 
 understand "featgrab [text]" as featgrabbing.
 
- Check featgrabbing:
+Check featgrabbing:
 	if featqualified is 0:
 		say "You are not ready to learn a new feat." instead;
 
@@ -101,7 +100,7 @@ To FunFeatget:
 	decrease featgained of player by 1;
 ]
 
- To FunFeatget:
+To FunFeatget:
 	blank out the whole of table of gainable feats;
 	repeat with x running through not functional featsets:
 		try addfeating x;
@@ -192,7 +191,7 @@ instead of addfeating the fun feats:
 		addfeat "Litter Bearer" with "Greatly increases the chance of multiple children in one birth - twins or more at over 50% chance.";
 	if "Fertile" is listed in feats of player:
 		addfeat "Selective Mother" with "You can decide if you want to become pregnant.";
-[	addfeat "Unerring Hunter" with "Cheater! Well, somehow, you always find what you hunt for, provided it's in the area to be found. Amazing!";	]
+[	addfeat "Unerring Hunter" with "Cheater! Well, somehow, you always find what you hunt for, provided it's in the area to be found. Amazing!"; ]
 	addfeat "Curious" with "You enjoy poking around everywhere, increasing your chance of finding stuff while exploring or hunting... including trouble.";
 	addfeat "Kinky" with "Submitting to crazy beasts is right up your alley, and you gain morale when you do so. Being beat up still lowers it. It can occasionally open new, kinkier sex scenes.";
 	if "Dominant" is not listed in feats of player:
@@ -201,7 +200,7 @@ instead of addfeating the fun feats:
 		addfeat "Dominant" with "Defeating monsters gets you excited, gaining a small libido, morale or XP boost from it. It may occasionally open new, dominant scene variations.";
 	if Strange Serpent is resolved or scenario is "Forgotten":
 		addfeat "Touched by Madness" with "On your travels you appear to have contracted some manner of strange aura which may cause some monsters to behave weirdly around you. (Caution, you may experience more extreme content by choosing this feat.)[line break]";
-	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight. You may choose [bold type]auto attack normal/berserk/pass/coward/submit[roman type].";[put next to submissive because that seemed logical. move elsewhere if so desired.]
+	addfeat "Instinctive Combat" with "With all the changes, you've gained new instincts on how to fight. You may choose [bold type]auto attack normal/berserk/pass/coward/submit[roman type]."; [put next to submissive because that seemed logical. move elsewhere if so desired.]
 	if featunlock is 1:	[available after hospital quest]
 		addfeat "Perky" with "You are of positive spirits, regaining morale gradually and +20% max morale.";
 	if "Strong Psyche" is not listed in feats of player, addfeat "Weak Psyche" with "Having a higher mental succeptibility to corruption by the nanites, you have a weaker grip on your human identity.";
@@ -253,13 +252,13 @@ instead of addfeating the basic feats:
 	if "Vore Predator" is listed in feats of player and "Iron Stomach" is listed in feats of player:
 		addfeat "Safe Appetite" with "You will not gain infection from consuming your foes.";
 	if stamina of player > 14:
-		addfeat "Toughened" with "You take less damage than others(-20% damage)";
+		addfeat "Toughened" with "You take less damage than others (-20% damage)";
 	if scenario is "Researcher" and ( intelligence of player > 14 or level of player >= 9 ):
 		addfeat "Expert Researcher" with "Your expert skills allow you a second opportunity to get an infection vial.";
 	if intelligence of player > 14:
 		addfeat "Fast Learner" with "You assimilate new information rapidly. -20% XP needed to level.";
 		addfeat "Expert Medic" with "You are especially good at using medkits, +25% hitpoints restored per use, and a 20% chance of saving a kit when it should be lost.";
-	if intelligence of player > 12 and ( bodyname of player is not "human" or facename of player is not "human" ):
+	if intelligence of player > 12 and ( bodyname of player is not "Human" or facename of player is not "Human" ):
 		addfeat "Know Thyself" with "By thinking like an enemy that has infected you, you know better how to deal with them and gain a +0 to +2 bonus to hit matching enemies each round. Thinking with your other head gradually gets your infected loins more excited as well. You gain more XP from these fights as well.";
 	if intelligence of player > 15 and level of player > 5:
 		addfeat "Weaponsmaster" with "Your experience and knowledge allow you to assess a weapon's worth and wield it better.";
@@ -298,15 +297,15 @@ instead of addfeating the basic feats:
 		addfeat "Strong Back" with "You can carry impressive amounts of stuff. +50 lb tolerance.";
 	if level of player > 1:
 		addfeat "More Time" with "You have some more precious time. Though who'd want to stay around here longer? Weirdo!";
-[	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern.";	]
-	if HP of doctor matt > 4 or scenario is "Forgotten":
+[	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern."; ]
+	if HP of Doctor Matt > 4 or scenario is "Forgotten":
 		addfeat "Microwaved" with "Thanks to the good advice, you have a great idea! If you can clean water, why not yourself? Genius. Gives you a very potent resistance to species reassignment.";
 	if featunlock is 1:	[available after hospital quest]
 		if "Mutable" is not listed in feats of player:
 			addfeat "Resistant" with "You are more resistant to random physical changes from infection.";
 		if "Resistant" is not listed in feats of player:
 			addfeat "Mutable" with "You are more prone to physical changes from mutation.";
-		addfeat "Mighty Mutation" with "You can gain(and lose) stats from mutants.";
+		addfeat "Mighty Mutation" with "You can gain (and lose) stats from mutants.";
 		if "Mighty Mutation" is listed in feats of player:
 			addfeat "Bestial Power" with "Your body will no longer drop in stats from random mutation.";
 		addfeat "Vampiric" with "You suck some blood from your defeated foe, recovering a little health, thirst and hunger.";
@@ -320,7 +319,7 @@ This is the gainfeat rule:
 	if autofeatloading is true or player consents:
 		add nam to feats of player;
 		say "You have gained '[nam]'!";
-[		decrease menu depth by 1;			]
+[		decrease menu depth by 1; ]
 		increase featgained of player by 1;
 		if nam is "Automatic Survival":
 			decrease featgained of player by 1;
@@ -346,25 +345,26 @@ This is the gainfeat rule:
 			now vampiric is true;
 	if autofeatloading is false, wait for any key;
 	if autofeatloading is false, clear the screen and hyperlink list;
+	sort feats of player;
 
 to say bestowcitymapfeat:
 	now Beach Plaza is known;
 	now Outside Trevor Labs is known;
-	Now Smith Haven Mall Lot South is known;
+	now Smith Haven Mall Lot South is known;
 	now Park Entrance is known;
 	now City Hospital is known;
-	Now State fair is known;
-	Now Approaching the Capitol Building is known;
-	Now Government Assistance is resolved;	[removes the random event for discovering the Capitol Bldg]
-	Now Plant Overview is known;
-	now Ravaged Power Plant is resolved;	[removes the random event for discovering the power plant]
+	now State fair is known;
+	now Approaching the Capitol Building is known;
+	now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
+	now Plant Overview is known;
+	now Ravaged Power Plant is resolved; [removes the random event for discovering the power plant]
 	now College Campus is known;
-	now Reaching the College is resolved;	[removes the random event for discovering the College Campus]
-	Now Entrance to the Red Light District is known;
-	Now Entrance to the High Rise District is known;
-	Now Zoo entrance is known;
-	Now Dry Plains is known;
-	Now Museum Foyer is known;
+	now Reaching the College is resolved; [removes the random event for discovering the College Campus]
+	now Entrance to the Red Light District is known;
+	now Entrance to the High Rise District is known;
+	now Zoo entrance is known;
+	now Dry Plains is known;
+	now Museum Foyer is known;
 	now Warehouse District is known;
 	now Urban Forest is known;
 

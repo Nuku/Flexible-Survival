@@ -1,6 +1,10 @@
 Version 2 of Underground Events by Wahn begins here.
 [ Version 2 - Captive Breeding with a male version ]
 
+Table of GameEventIDs (continued)
+Object	Name
+Captive Breeding	"Captive Breeding"
+
 Captive Breeding is a situation.
 The sarea of Captive Breeding is "Sealed".
 
@@ -11,7 +15,7 @@ when play begins:
 CaptiveBreederEncounter is a number that varies.
 
 Instead of resolving a Captive Breeding:
-	if a random chance of 1 in 2 succeeds:   [impregnated woman]
+	if a random chance of 1 in 2 succeeds: [impregnated woman]
 		say "     Walking through the dark passages of the expansive underground warren that is the basement of the Trevor Labs, you hear something from up ahead - moaning. [if CaptiveBreederEncounter is 0]Who might that be, down here in the lair of the tentacle beasts? [else]Could that be... another breeding subject of the tentacle monsters? Just how many people did they drag down here? [end if]Warily, you move closer to the source of the noise. Looking into the doorway of a storage room filled with rows of shelves, you find a woman, lying on the ground. Spread-eagled, her forearms and lower legs are stuck to the ground by some kind of substance, looking like solidified slimy goo. She's naked, and her belly bulges massively upwards in obvious pregnancy.";
 		say "     Moving closer, you try talking to her, but the only answers you're getting are more gasps and moans. Judging from some clear goop smeared around her mouth, you'd guess something's been... feeding her, to keep her alive in captivity. Most likely whatever that is is laden with drugs and aphrodisiacs too, with as unfocused her eyes are right now. Your examination is interrupted by a sudden splashing noise and a gasp from the human woman. Looking down, you see a puddle of slime spread between her legs and the skin of her belly ripple with movement under it.";
 		LineBreak;
@@ -29,20 +33,24 @@ Instead of resolving a Captive Breeding:
 			say "     Suddenly thrust into this unusual situation, you decide to do your best in helping the woman give birth to... whatever it is. Taking hold of her hand, which thankfully isn't covered by her goo bindings, you try to calm her a bit with soft-spoken words and wipe the sweat of labor off her brow. From your ringside seat, you watch a tentacle with a whole row of suckers worm its way out of the woman's vagina, followed by another and another, all of them taking hold on the floor and the woman's legs as the creature struggles to pull itself out of her womb. Helped along by the woman's contractions, soon the little tentacle monster slips out of her with a wet, sloshing noise. Then it scuttles off, vanishing under a shelf faster than you could catch it.";
 			LineBreak;
 			say "     You're left alone with the human woman, down in the sub-levels of the Trevor Labs. What to do now... your thoughts wander to getting her out of here, but not knowing when (or even if) her current lust-addled state would end, you abandon that quickly. In this infested place, being burdened by a semiconscious person would surely end up getting you in deep, deep trouble. Well, at least her captor seems to keep her alive - there's still hope she can be rescued and taken care of eventually, maybe if the military moves in. Though how many monsters will be bred in her in the meantime you can only wonder about.";
-			if cocks of player > 0 and libido of player > 40:
+			if player is male and libido of player > 40:
 				say "[cuckold choice]";
 			say "     You stroke the captive woman's hair, telling her to hold out, then leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";
+			if Resolution of Captive Breeding is 0:
+				now Resolution of Captive Breeding is 8; [held the hand of a woman in the tentacle monster's breeding pen giving birth]
 		else if calcnumber is 2:[observe]
 			say "     You make your way back to the hallway you came from and peek around the corner to watch what's happening in the room. The captive woman pants and gasps as contractions run through her lower body, then you see a tentacle with a whole row of suckers emerge from her pussy, taking hold of her leg to pull the rest of the creature free. Another and another follows, and soon the woman's monstrous offspring emerges with a wet, sloshing noise. It quickly scuttles off, vanishing under a shelf faster than you'd have thought.";
 			LineBreak;
 			say "     You're left looking at the human woman, lying on the floor moaning. What to do now... your thoughts wander to getting her out of here, but not knowing when (or even if) her current lust-addled state would end, you abandon that quickly. In this infested place, being burdened by a semiconscious person would surely end up getting you in deep, deep trouble. Well, at least her captor seems to keep her alive - there's still hope she can be rescued and taken care of eventually, maybe if the military moves in. Though how many monsters will be bred in her in the meantime you can only wonder about.";
-			if cocks of player > 0 and libido of player > 40:
+			if player is male and libido of player > 40:
 				say "[cuckold choice]";
 			LineBreak;
 			say "     You leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";
+			if Resolution of Captive Breeding is 0:
+				now Resolution of Captive Breeding is 7; [watched a woman in the tentacle monster's breeding pen giving birth]
 		else:[leave]
 			say "     This is getting way too creepy for you. You flee back up to the surface, followed by the echoing moans and sounds of the captive woman's unnatural birth.";
-	else:   [mpregged man]
+	else: [mpregged man]
 		say "     Walking through the dark passages of the expansive underground warren that is in the basement of the Trevor Labs, you hear something from up ahead - moaning. [if CaptiveBreederEncounter is 0]Who might that be, down here in the lair of the tentacle beasts? [else]Could that be... another breeding subject of the tentacle monsters? Just how many people did they drag down here? [end if]Warily, you move closer to the source of the noise. Looking into the doorway of a storage room filled with stacks of large crates, you find a man, slouched on his back on one of the crates against the back wall. His hands and forearms are stuck to the wall above his head in some kind of substance, looking like solidified slimy goo, and his legs are similarly glued to the side crate under him in a lewd stretched position that leaves his crotch and ass freely accessible. He's naked, his cock fully erect, twitching and oozing precum, and his belly bulges massively upwards in what looks to be pregnancy.";
 		say "     Moving closer, you try talking to the man, but the only answers you're getting are more gasps and moans. Judging from some clear goop smeared around his mouth, you'd guess something's been... feeding him, to keep him alive in captivity. Most likely whatever that is is laden with drugs and aphrodisiacs too, with as unfocused his eyes are right now. Your examination is interrupted by a sudden splashing noise and a gasp from the human man. Looking down, you see a puddle of slime on the ground and more of it running down the side of the crate as well as dripping out of the man's asshole. The skin of his belly ripples with movement under it.";
 		LineBreak;
@@ -63,6 +71,8 @@ Instead of resolving a Captive Breeding:
 			if libido of player > 40:
 				say "[cuckold choice male]";
 			say "     You stroke the captive man's cheek, telling him to hold out, then leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";
+			if Resolution of Captive Breeding is 0:
+				now Resolution of Captive Breeding is 6; [held the hand of a man in the tentacle monster's breeding pen giving birth]
 		else if calcnumber is 2:[observe]
 			say "     You make your way back to the hallway you came from and peek around the corner to watch what's happening in the room. The captive man pants and gasps as contractions run through his lower body, then you see a tentacle with a whole row of suckers emerge from his asshole, taking hold of the crate below to pull the rest of the creature free. Another and another follows, and soon the man's monstrous offspring emerges with a wet, sloshing noise and lands with a splat on the ground below. It quickly scuttles off, vanishing in the shadows faster than you'd have thought.";
 			LineBreak;
@@ -71,6 +81,8 @@ Instead of resolving a Captive Breeding:
 				say "[cuckold choice male]";
 			LineBreak;
 			say "     You leave and make your way through the creepy dark tunnels, back towards the surface. As you move along, unidentified noises around and behind you make you speed up, then run, until you reach the entrance of the cellar and throw the door closed behind you, breathing heavily.";
+			if Resolution of Captive Breeding is 0:
+				now Resolution of Captive Breeding is 5; [watched a man in the tentacle monster's breeding pen give birth]
 		else:[leave]
 			say "     This is getting way too creepy for you. You flee back up to the surface, followed by the echoing moans and sounds of the captive man's unnatural birth.";
 
@@ -84,14 +96,15 @@ to say cuckold choice:
 		LineBreak;
 		say "     'It's for her own good,' echoes as a somewhat lame excuse for your actions through your horny mind as you slip off your clothes and stroke your cock to full hardness. Then you kneel between the woman's legs and bring your erection to her opening, still wet with slimy goo. She moans in arousal as she feels your cockhead against her pussy lips, then gasps as you plunge right in. Still pretty tight for just having had that creature in her - but then, it was squishy enough not to stretch her on the way out. You pump in and out of her vagina, amazed how good this feels and how full your balls feel as they get ready to blast your load into the human below you. The creature's slime lubing your shaft as it thrusts deep might have something to do with that...";
 		say "     But no matter, your thoughts are fully absorbed with cuckolding the tentacle monster here and now. Speeding up your movements more and more, you finally slam in all the way and cum, burst after burst of your seed shooting into the woman's receptive womb. There, that should mix up the tentacle breeding program a bit... breathing deeply, you pull out and get your clothes back on.";
+		now Resolution of Captive Breeding is 1; [fucked a woman in the tentacle monster's breeding pen]
 	else:
 		LineBreak;
 		say "     Getting your impulses under control, you shake those immoral thoughts off. This place is really getting to you, that you could even imagine doing such a thing.";
 
 to say cuckold choice male:
-	setmonster "human";
-	choose row monster from the table of random critters;
-	if cocks of player > 0:
+	setmonster "Human";
+	choose row monster from the Table of Random Critters;
+	if player is male:
 		say "     Looking at the man's naked body, now that it isn't deformed by a monster's spawn inside him, you realize he's quite handsome and well-built - seems like tentacle monsters have good standards for their breeding slaves at least. A deviant thought worms his way into your head, coupled with a twitch of your cock. There is one way you could... preempt the tentacle monster impregnating his changed body with more of its offspring...";
 		say "     [bold type]Do you follow the urge?[roman type][line break]";
 		LineBreak;
@@ -101,6 +114,7 @@ to say cuckold choice male:
 			LineBreak;
 			say "     'It's for his own good,' echoes as a somewhat lame excuse for your actions through your horny mind as you slip off your clothes and stroke your cock to full hardness. Then step up to stand in front of the crate, idly thinking that it's just the right height, and bring your erection to his opening, still wet with slimy goo. He moans in arousal as he feels your cockhead against his pucker, then gasps as you plunge right in. Still pretty tight for just having had that creature in him - but then, it was squishy enough not to stretch him out too much on the way out. You pump in and out of the man's tight hole, amazed how good this is and how full your balls feel as they get ready to blast your load into the human below you. The creature's slime lubing your shaft as it thrusts deep might have something to do with that...";
 			say "     But no matter, your thoughts are fully absorbed with cuckolding the tentacle monster here and now. Speeding up your movements more and more, you finally slam in all the way and cum, burst after burst of your seed shooting into the transformed man's receptive insides, no doubt finding its way to a womb somewhere in him. There, that should mix up the tentacle monster breeding program a bit... breathing deeply, you pull out and get your clothes back on.";
+			now Resolution of Captive Breeding is 2; [fucked a man in the tentacle monster's breeding pen]
 		else:
 			LineBreak;
 			say "     Getting your impulses under control, you shake those immoral thoughts off. This place is really getting to you, that you could even imagine doing such a thing.";
@@ -113,7 +127,7 @@ to say cuckold choice male:
 		say "     ([link]N[as]n[end link]) - Step away and shake those thoughts off.";
 		if player consents:
 			LineBreak;
-			if cunts of player > 0:
+			if player is female:
 				say "     Eager to make use of - er, give the man relief - you strip off your gear and clothes, then climb on top of the crate with him and straddle his hips. With his shaft hard and ready to go, all slick in precum, it's just a question of holding it up and sinking yourself down on his shaft. He fills you quite nicely, rubbing sensitive spots inside you as you rock back and forth, grinding your hips down against his. Fucking yourself on his hard pole, you fall into a kind of aroused trance, with sex the only thing that matters anymore. Seems like some of the aphrodisiacs that the creature fed to him wound up in his precum too...";
 				say "     With the oversexed state he was already in, it doesn't take all that long before your captive partner orgasms, trembling and moaning loudly as his cock blasts burst after burst of cum into you. Though even as he finishes cumming a short while later, his cock doesn't even begin to go down allowing you to keep riding him without pause, soon reaching your own climax, then continuing after catching your breath. In the course of quite a while of sweaty sexual grinding, he fills you with his cum several times over and you orgasm again and again, until finally your partner's head sinks back to rest against the wall and he falls into exhausted sleep. With shaky legs, you climb off him, leaving a messy trail of cum dripping from your pussy as you go to collect your clothes.";
 				say "     [fimpregchance][fimpregchance][fimpregchance]";
@@ -121,9 +135,10 @@ to say cuckold choice male:
 				say "     Eager to make use of - er, give the man relief - you strip off your gear and clothes, then climb on top of the crate with him and straddle his hips. With his shaft hard and ready to go, all slick in precum, it's just a question of rubbing it against your pucker until it lubes its way in and you sink down his shaft. He fills you quite nicely, rubbing sensitive spots inside you as you rock back and forth, grinding your hips down against his. Fucking yourself on his hard pole, you fall into a kind of aroused trance, with sex the only thing that matters anymore. Seems like some of the aphrodisiacs that the creature fed to him wound up in his precum too...";
 				say "     With the oversexed state he was already in, it doesn't take all that long before your captive partner orgasms, trembling and moaning loudly as his cock blasts burst after burst of cum into you. Though even as he finishes cumming a short while later, his cock doesn't even begin to go down allowing you to keep riding him without pause, soon reaching your own climax, then continuing after catching your breath. In the course of quite a while of sweaty sexual grinding, he fills you with his cum several times over and you orgasm again and again, until finally your partner's head sinks back to rest against the wall and he falls into exhausted sleep. With shaky legs, you climb off him, leaving a messy trail of cum dripping from your ass as you go to collect your clothes.";
 				say "     [mimpregchance][mimpregchance][mimpregchance]";
+			now Resolution of Captive Breeding is 3; [mounted a man in the tentacle monster's breeding pen]
 		else:
 			LineBreak;
-			say "     [bold type]Do you at least jerk him off?[roman type][line break]";	
+			say "     [bold type]Do you at least jerk him off?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Give the guy a wank.";
 			say "     ([link]N[as]n[end link]) - Step away.";
@@ -131,9 +146,14 @@ to say cuckold choice male:
 				LineBreak;
 				say "     Putting a hand on the captive human's cock, you jerk his long hard shaft, making him give pleased moans and grunts. Fondling his balls with your other hand, you can feel how full they are, no doubt put into overdrive of cum-production from his oversexed state - he really must be aching for relief. It doesn't take long before your efforts drive him to a quite messy and noisy orgasm, with the guy's erection just blasting away with spurt after massive spurt of cum splashing against his ripped chest. But even after he stops cumming with that impressively large load, he's not done by far.";
 				say "     The cock in your hand shows no sign of going soft and his balls seem as full as ever, so you continue on jerking him off to another climax, and another. Finally, when he's splattered in cum all over, his shaft goes soft and with a satisfied sigh the man's head sinks back against the wall in exhausted sleep.";
+				now Resolution of Captive Breeding is 4; [jerked a man in the tentacle monster's breeding pen]
 			else:
 				LineBreak;
 				say "     With a shrug, you step away and leave the guy where he is.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Trashed Refuge	"Trashed Refuge"
 
 Trashed Refuge is a situation.
 The sarea of Trashed Refuge is "Sealed".
@@ -172,6 +192,7 @@ Instead of resolving a Trashed Refuge:
 		else:
 			LineBreak;
 			say "     Better not to risk touching any of those cum-stains accidentally. You leave the room and make your way back to the surface.";
+		now Resolution of Trashed Refuge is 1; [1st visit]
 	else if AbandonedRoomStatus is 1:
 		say "     Roaming through the underground complex you come again to the room some hapless refugees took shelter in before. It's easy to see that didn't work out too well for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
@@ -195,6 +216,7 @@ Instead of resolving a Trashed Refuge:
 		else:
 			LineBreak;
 			say "     Better not to risk touching any of those cum-stains accidentally. You leave the room and make your way back to the surface.";
+		now Resolution of Trashed Refuge is 2; [2nd visit]
 	else if AbandonedRoomStatus is 2:
 		say "     Roaming through the underground complex you come again to the room some hapless refugees took shelter in before. It's easy to see that didn't work out too well for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
@@ -216,13 +238,19 @@ Instead of resolving a Trashed Refuge:
 		else:
 			LineBreak;
 			say "     Better not to risk touching any of those cum-stains accidentally. Most likely there isn't anything more in here anyways. You leave the room and make your way back to the surface.";
+		now Resolution of Trashed Refuge is 3; [3rd visit]
 	else if AbandonedRoomStatus is 3:
 		say "     Roaming through the underground complex you come again to the room some hapless refugees took shelter in before. It's easy to see that didn't work out too well for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
 		say "     As your thoughts wander to maybe searching in here a third time, you suddenly hear a noise behind you. Whirling around, you find yourself face to face with a many-tentacled creature. Looks like you're not the only one returning to this room to pick up some more goodies. With outstretched tentacles, the creature attacks.";
 		challenge "Tentacle Horror";
 		say "     Time to get out of here before more of those things appear. You leave the room and make your way back to the surface.";
+		now Resolution of Trashed Refuge is 4; [4th visit]
 		now Trashed Refuge is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Hidden Sublevel	"Hidden Sublevel"
 
 Hidden Sublevel is a situation.
 The sarea of Hidden Sublevel is "Sealed".
@@ -230,18 +258,25 @@ The sarea of Hidden Sublevel is "Sealed".
 Instead of resolving a Hidden Sublevel:
 	say "     You come upon a mid-sized room with an elevator, dark and spooky like the rest of the complex under the Trevor Labs. The opposite wall from that elevator looks interesting - seems like a whole section of it was designed to slide away sideways and is currently in that position. Behind where the wall cover would be, there's a thick reinforced door, large enough to require powerful motors to open and close it. Whether this hidden entrance was constructed to keep something out - or in - it's wide open now, and without power to the building, it's stuck for good that way...";
 	now Hidden Sublevel is resolved;
-	now Failed Experiments is unresolved;
-	now Mindshield Storage is unresolved;
-	now Holding Cell Four is unresolved;
 
-Failed Experiments is a situation. Failed Experiments is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Failed Experiments	"Failed Experiments"
+
+Failed Experiments is a situation.
+The Prereq1 of Failed Experiments is Hidden Sublevel.
 The sarea of Failed Experiments is "Sealed".
 
 Instead of resolving a Failed Experiments:
 	say "     In the depths of the hidden section in this underground complex, you find a room with row after row of glass tanks. Small and large, they're filled with formaldehyde in which... things are preserved. From just clumps of tentacles, to animals sprouting too many limbs or even heads, to... deformed creatures which have a dismaying resemblance to humans. Seems like even before the nanite infection, unnatural things were being done in these labs. With a shiver running down your spine, you turn away from the failed experiments and make your way back to the surface, unsuccessfully trying to forget what you saw.";
 	now Failed Experiments is resolved;
 
-Mindshield Storage is a situation. Mindshield Storage is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Mindshield Storage	"Mindshield Storage"
+
+Mindshield Storage is a situation.
+The Prereq1 of Mindshield Storage is Hidden Sublevel.
 The sarea of Mindshield Storage is "Sealed".
 
 MSStorageVisited is a number that varies. MSStorageVisited usually is 0.
@@ -292,7 +327,12 @@ The descmod of mindshield helmet is "A shiny silver helmet sits on your head, pr
 The slot of mindshield helmet is "head".
 the scent of mindshield helmet is "The helmet smells like plastic.".
 
-Holding Cell Four is a situation. Holding Cell Four is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Holding Cell Four	"Holding Cell Four"
+
+Holding Cell Four is a situation.
+The Prereq1 of Holding Cell Four is Hidden Sublevel.
 The sarea of Holding Cell Four is "Sealed".
 CellFourVisits is a number that varies.
 
@@ -302,7 +342,7 @@ Instead of resolving a Holding Cell Four:[repeatable event]
 		if carried of mindshield helmet is 0:
 			say "     That warning doesn't sound too good - and you do not have such a protective helmet. Before you can think any more about what to do, a groaning noise and a thump come from inside...";
 			LineBreak;
-			say "     [bold type]What do you want to do?[roman type][line break]";	
+			say "     [bold type]What do you want to do?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Rush into the cell and see what is going on.";
 			say "     ([link]N[as]n[end link]) - Retreat back to the surface.";
@@ -312,8 +352,9 @@ Instead of resolving a Holding Cell Four:[repeatable event]
 				LineBreak;
 				say "     [AlphaBirth]";
 				increase CellFourVisits by 1;
+				now Resolution of Holding Cell Four is 5;
 			else:
-				LineBreak;				
+				LineBreak;
 				say "     Better safe than sorry... who knows what might be lurking in that cell and what made that noise. Leaving it behind you, you rush through the dark and creepy corridors, making your way back to the surface.";
 		else:
 			say "     Following the warning, you ensure that you have your protective helmet on - patting its shape covering on your head. Then suddenly, a groaning noise and a thump come from inside...";
@@ -328,17 +369,19 @@ Instead of resolving a Holding Cell Four:[repeatable event]
 				LineBreak;
 				say "     [AlphaBirth]";
 				increase CellFourVisits by 1;
+				now Resolution of Holding Cell Four is 5;
 			else:
 				LineBreak;
 				say "     Better safe than sorry... who knows what might be lurking in that cell and what made that noise. Leaving it behind you, you rush through the dark and creepy corridors, making your way back to the surface.";
-	else if CellFourVisits is 3:  [the thought eater checks out who's been visiting his slave]
+	else if CellFourVisits is 3: [the thought eater checks out who's been visiting his slave]
 		say "     As you make your way towards holding cell four again, seeing the red warning light at its door down the hallway in front of you, you suddenly hear a hissing voice say 'Do you enjoy visiting my favorite pet? I can make you just like him...'";
 		LineBreak;
 		setmonster "Thought Eater";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now area entry is "Sealed";
 		challenge "Thought Eater";
 		increase CellFourVisits by 1;
+		now Resolution of Holding Cell Four is 3;
 	else:
 		say "     In the depths of the hidden section in this underground complex, you come upon a door bearing the sign 'Holding Cell Four - Warning, danger of mental influence - Wear mindshield helmet before entering.' A red light (which must be on emergency power) glows on the wall next to the word 'unlocked'.";
 		if carried of mindshield helmet is 0:
@@ -371,7 +414,7 @@ to say Inside Cell Four:
 	say "     [CellFourSex]";
 
 to say CellFourSex:
-	setmonster "herm human";
+	setmonster "Herm Human";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -390,7 +433,7 @@ to say CellFourSex:
 	now sortorder entry is 3;
 	now description entry is "Take the herm up to the surface.";
 	[]
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Get his cock in your pussy";
 		now sortorder entry is 4;
@@ -401,13 +444,13 @@ to say CellFourSex:
 	now sortorder entry is 5;
 	now description entry is "Order him to fuck you anally.";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his pussy";
 		now sortorder entry is 6;
 		now description entry is "Fuck the herm guy's pussy.";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
 		now sortorder entry is 7;
@@ -417,7 +460,7 @@ to say CellFourSex:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -443,14 +486,10 @@ to say CellFourSex:
 				else if nam is "Fuck his ass":
 					say "[CellFour7]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     Deciding that you'd better get out of there fast, you quietly slip through the door again. The mind-controlled herm inside cell four looks after you with puzzlement, then sits back down on the bed to wait.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Deciding that you'd better get out of there fast, you quietly slip through the door again. The mind-controlled herm inside cell four looks after you with puzzlement, then sits back down on the bed to wait.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -465,7 +504,7 @@ To say CellFour1:
 		say "     ...and that's the last coherent sentence you get out of the guy. Getting into masturbating in earnest, all the while moaning about his master, the man goes back to the cot, laying down on it as he jerks his cock and fondles his pussy. You're drawn into watching him for a while, with his hands moving over his hermaphrodite body, then shake your starting arousal off. Staying here until whatever made that guy into this obedient slave doesn't sound like a good idea, so you leave and make your way back to the surface.";
 
 To say CellFour2:
-	say "     Ignoring the man for the moment, you turn your attention to the trash and shreds lying on the ground. There's lots of pieces that seem to have been the herm man's clothing - jeans and a ragged lab-coat, and also many many paper bits with writing on them. Looks like there was the Trevor Labs logo in the upper left corner of all the pages and many of them seem to be just a lot of numbers and jumbled collections of letters - maybe it's genetic code or something. With a bit of patience, you can piece together some interesting bits from among the rest: '...ubject X31, hum...' '...us hybrid, telepathic abilities present.' '...ile the subject is a complete success in regards to...' '...controlling it remains a pr...' 'Implantation of a control device might be the only option, if those prove themselves in the tests with the new infiltratio...'";
+	say "     Ignoring the man for the moment, you turn your attention to the trash and shreds lying on the ground. There's lots of pieces that seem to have been the herm man's clothing - jeans and a ragged lab-coat, and also many, many paper bits with writing on them. Looks like there was the Trevor Labs logo in the upper left corner of all the pages and many of them seem to be just a lot of numbers and jumbled collections of letters - maybe it's genetic code or something. With a bit of patience, you can piece together some interesting bits from among the rest: '...ubject X31, hum...' '...us hybrid, telepathic abilities present.' '...ile the subject is a complete success in regards to...' '...controlling it remains a pr...' 'Implantation of a control device might be the only option, if those prove themselves in the tests with the new infiltratio...'";
 	LineBreak;
 	if carried of mindshield helmet is 0:
 		say "     Your concentration for further puzzling is broken when the herm man on the cot suddenly gasps in lust, fingering his pussy while shouting 'Master! I can feel your presence and wait to pleasure you. And there is a visitor too...' Eeep. You don't know what range the abilities of the creature have that made this man its slave, but it's clearly time to go. Rushing to the door, you leave the cell and run, only stopping when you reach the surface and feel a bit safer than in the dark depths of the underground.";
@@ -482,7 +521,7 @@ To say CellFour4:
 	say "     Pulling off your clothes and dropping them on the floor as you walk towards the bed in the corner of the room, you lie down on it and spread your legs and pussy lips. Accompanied by pushing two fingers into your cunt, then licking your female juices off them, you tell him to fuck you. From the excited look on his face and the quickness with which he moves over to you, you don't think he gets to have sex in anything but the submissive role with his master. Images of the man's ass speared on his master's cock, then later getting fucked and impregnated after he became a herm dance in front of your mental eye for a moment.";
 	say "     Then you get distracted by the feeling of two hands on your legs, holding them apart as a bearded face rubs against your skin. Your herm partner runs his tongue along the inside of one leg, then the other, before moving on to your pussy and licking your sensitive nether lips. Your eager partner licks and fingers you a while, then he moves up to kneel between your legs. His erect shaft rests hotly against your pubic mound for a moment, then he takes it into his hand and guides it between your folds, sliding into you. Your passage stretches around his manhood as it is halfway in, then three quarters and finally his balls touch your ass as he bottoms out inside you. You can feel the bulge of his pregnant belly against your own as he whispers 'Is this okay?', to which you answer that you're horny and he should get to it already.";
 	WaitLineBreak;
-	say "     Emboldened by your urgent request, the man forgets his training as a submissive fuckpet for a while, pulling back and thrusting back in deep. He's got some nice technique moving his hips a bit between separate thrusts to hit different spots inside you, expertly increasing your arousal more and more. Before the nanite infection and becoming a breeding slave, he must have quite popular with those that caught his eye. With him driving you to the edge of orgasm, then slowing down again to let you cool off a bit before resuming his thrusting, he certainly takes very good care of you. Being in a state of lust-filled bliss for you don't know how long, this is certainly one encounter to remember, crowned by him stimulating you to a breathtaking climax. [if cocks of player > 0]With your partner's shaft deep inside your pussy as he hammers against you, it's as if he fucks the cum right out of you, your erection spurting another blast of cum all over your chest every time he thrusts in.[else if cunts of player > 0]With your partner's shaft deep inside your ass as he hammers against you, your pussy starts throbbing and dripping femcum, creating a large wet spot on the sheets between your legs.[end if]";
+	say "     Emboldened by your urgent request, the man forgets his training as a submissive fuckpet for a while, pulling back and thrusting back in deep. He's got some nice technique moving his hips a bit between separate thrusts to hit different spots inside you, expertly increasing your arousal more and more. Before the nanite infection and becoming a breeding slave, he must have quite popular with those that caught his eye. With him driving you to the edge of orgasm, then slowing down again to let you cool off a bit before resuming his thrusting, he certainly takes very good care of you. Being in a state of lust-filled bliss for you don't know how long, this is certainly one encounter to remember, crowned by him stimulating you to a breathtaking climax. [if player is male]With your partner's shaft deep inside your pussy as he hammers against you, it's as if he fucks the cum right out of you, your erection spurting another blast of cum all over your chest every time he thrusts in.[else if player is female]With your partner's shaft deep inside your ass as he hammers against you, your pussy starts throbbing and dripping femcum, creating a large wet spot on the sheets between your legs.[end if]";
 	LineBreak;
 	say "     His duty to you fulfilled, the herm guy relaxes any restraint he held on himself, and after just a few more thrusts, he orgasms. You can feel his shaft throb and pulse as he comes, his fertile seed spurting deep into your womb.[fimpregchance]";
 	say "     Pulling out after his last spurts go into you, the man lets himself sink down on the bed, breathing hard. A look of... clarity(?) comes to his face for a moment as he moans 'Thank you.', then it is gone again and he continues with 'Did I please the master's friend? I hope I was good enough and not out of practice. The master doesn't call on me to do... that.' You nod, telling him he did well, then stand up and go to get your clothes. As you dress, the pregnant herm lies on the bed stroking his belly softly, then falls asleep. You leave the cell and make your way back up to the surface through the dark corridors of the underground.";
@@ -493,7 +532,7 @@ To say CellFour5:
 	say "     Pulling off your clothes and dropping them on the floor as you walk towards the bed in the corner of the room, you get on it on all fours and look back at the herm guy over your shoulder. Accompanied by a little shake of your ass, you tell him 'Fuck me - hard.' From the excited look on his face and the quickness with which he moves over to you, you don't think he gets to have sex in anything but the submissive role with his master. Images of the man's ass speared on his master's cock, then later getting fucked and impregnated after he became a herm dance in front of your mental eye for a moment.";
 	say "     Then you get distracted by the feeling of two hands pulling your cheeks apart, followed by a tongue licking your crack and poking against your pucker. Your eager partner licks and fingers you a while, then you feel him move around behind you and something else touches your rear entrance. After rubbing his hard shaft up and down between your cheeks a moment, the man pushes in against your pucker, slowly but steadily spreading it with his cockhead. Soon your passage is stretched around his manhood as it is halfway in, then three quarters and finally his balls touch your ass as he bottoms out inside you. You can feel the bulge of his pregnant belly against your back as he whispers 'Is this okay?', to which you answer that you're horny and he should get to it already.";
 	WaitLineBreak;
-	say "     Emboldened by your urgent request, the man forgets his training as a submissive fuckpet for a while, pulling back and thrusting back in deep. He's got some nice technique moving his hips a bit between separate thrusts to hit different spots inside you, expertly increasing your arousal more and more. Before the nanite infection and becoming a breeding slave, he must have quite popular with those that caught his eye. With him driving you to the edge of orgasm, then slowing down again to let you cool off a bit before resuming his thrusting, he certainly takes very good care of you. Being in a state of lust-filled bliss for you don't know how long, this is certainly one encounter to remember, crowned by him stimulating you to a breathtaking climax. [if cocks of player > 0]With your partner's shaft deep inside your ass as he hammers against you, it's as if he fucks the cum right out of you, your erection spurting another blast of cum onto the sheets every time he thrusts in.[else if cunts of player > 0]With your partner's shaft deep inside your ass as he hammers against you, your pussy starts throbbing and dripping femcum, creating a large wet spot on the sheets between your legs.[else]With your partner's shaft deep inside your ass as he hammers against you, a shudder of satisfaction runs through your body, reaching every fiber of you.[end if]";
+	say "     Emboldened by your urgent request, the man forgets his training as a submissive fuckpet for a while, pulling back and thrusting back in deep. He's got some nice technique moving his hips a bit between separate thrusts to hit different spots inside you, expertly increasing your arousal more and more. Before the nanite infection and becoming a breeding slave, he must have quite popular with those that caught his eye. With him driving you to the edge of orgasm, then slowing down again to let you cool off a bit before resuming his thrusting, he certainly takes very good care of you. Being in a state of lust-filled bliss for you don't know how long, this is certainly one encounter to remember, crowned by him stimulating you to a breathtaking climax. [if player is male]With your partner's shaft deep inside your ass as he hammers against you, it's as if he fucks the cum right out of you, your erection spurting another blast of cum onto the sheets every time he thrusts in.[else if player is female]With your partner's shaft deep inside your ass as he hammers against you, your pussy starts throbbing and dripping femcum, creating a large wet spot on the sheets between your legs.[else]With your partner's shaft deep inside your ass as he hammers against you, a shudder of satisfaction runs through your body, reaching every fiber of you.[end if]";
 	LineBreak;
 	say "     His duty to you fulfilled, the herm guy relaxes any restraint he held on himself, and after just a few more thrusts, he orgasms. You can feel his shaft throb and pulse as he comes, his seed spurting deep into your rear passage.[mimpregchance]";
 	say "     Pulling out after his last spurts go into you, the man lets himself sink down on the bed, breathing hard. A look of... clarity(?) comes to his face for a moment as he moans 'Thank you.', then it is gone again and he continues with 'Did I please the master's friend? I hope I was good enough and not out of practice. The master doesn't call on me to do... that.' You nod, telling him he did well, then stand up and go to get your clothes. As you dress, the pregnant herm lies on the bed stroking his belly softly, then falls asleep. You leave the cell and make your way back up to the surface through the dark corridors of the underground.";
@@ -501,7 +540,7 @@ To say CellFour5:
 To say CellFour6:
 	say "     Clearing your throat, you tell him that you're a friend of his master, and that he said you could have some fun together. Stepping forward, you stroke a hand over the herm's bare chest, down over his pregnant belly and to his crotch. Jerking his erect cock a few times, you remark how well trained he is and that he can show on you how he would please his master. The brainwashed man moans as you stroke him, his pussy getting wet under your fingers. 'Of... *gasp* course, anything for *moan* the master and his friends. Where do you want me?' comes his answer to your request.";
 	LineBreak;
-	say "     [bold type]What do you want to do with the hermaphrodite man?[roman type][line break]";	
+	say "     [bold type]What do you want to do with the hermaphrodite man?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Take him on the bed.";
 	say "     ([link]N[as]n[end link]) - Fuck him against a wall from behind.";
@@ -523,7 +562,7 @@ To say CellFour6:
 To say CellFour7:
 	say "     Clearing your throat, you tell him that you're a friend of his master, and that he said you could have some fun together. Stepping forward, you stroke a hand over the herm's bare chest, down over his pregnant belly and to his crotch. Jerking his erect cock a few times, you remark how well trained he is and that he can show on you how he would please his master. The brainwashed man moans as you stroke him, his pussy getting wet under your fingers. 'Of... *gasp* course, anything for *moan* the master and his friends. Where do you want me?' comes his answer to your request.";
 	LineBreak;
-	say "     [bold type]What do you want to do with the hermaphrodite man?[roman type][line break]";	
+	say "     [bold type]What do you want to do with the hermaphrodite man?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Take him on the bed.";
 	say "     ([link]N[as]n[end link]) - Fuck him against a wall from behind.";
@@ -556,7 +595,7 @@ to say AlphaBirth:
 		say "     And it is just in time too, as the man lets out an almost shouted groan, then clenches his teeth together as he strains to push and push again. Down between his legs, the opening of his vagina stretches a little more, then three flexible appendages worm their way out of his body, feeling around and searching for something to hold on to. The tentacles do slither around between the folds of the bunched-up blankets until finally one attaches itself to the herm's left leg with a row of little suckers, finding a hold at last. Two more of them seem a bit lost even then, and as you watch, something about the situation does make you want to help a bit more actively - so you nudge them in the right direction with your fingers, carefully avoiding the suckers. Soon, all of the fleshy appendages have found a spot to hold on to or wrap around (the pregnant herm's thighs and one knee too), allowing the emerging creature to pull in concert with its parent's contractions.";
 		say "     A moment later, the next big push reveals the creature's head, looking... almost disturbingly cute, with relatively human features, large all-black eyes and what looks more like little tentacles than hair. As you meet its gaze, you're surprised about the intelligence and intensity of it and you somehow just know that this little tentacled newborn isn't an it - but a he. The small creature blinks at you in what you're sure is satisfaction, then he turns his attention back to his current predicament - half in, half out of a stretched pussy. After that, things proceed very fast, as he repositions his tentacles for a much improved grip, then pulls out of the moaning herm in a wet slurp of slick flesh and wiggling tentacles. As soon as the small creature is fully born, the former researcher pulls him into his arms, guiding the small-ish head to his chest and nipples.";
 		WaitLineBreak;
-		say "     In the typical rapid growth the nanites seem to be imposing almost universally these days, the young creature develops in leaps and bounds before your very eyes. Baby, toddler and kid stages are skipped in literally seconds, with growth only slowing down as he is almost as large as his herm 'mother' and nears physical maturity - giving a striking image of a young man indeed. His body did differentiate quickly from consisting mostly of tentacles to being just about half-human - the crossover point being his hips, with many tentacles below forming his 'legs'. The hybrid being nevertheless has a sexy bubble butt and good sized dick, and above that a well-shaped if not overly muscular chest. The only thing about his handsome face not completely human is the iris-less black eyes, while lots of small tentacles form 'hair' on top of his head. A short while later, after finally finished with alternating between his parent's left and right nipple, the tentacled young man soon pushes himself up into a sitting position on the bed, then clears his throat and speaks for the first time.";
+		say "     In the typical rapid growth the nanites seem to be imposing almost universally these days, the young creature develops in leaps and bounds before your very eyes. Baby, toddler and kid stages are skipped in literally seconds, with growth only slowing down as he is almost as large as his herm 'mother' and nears physical maturity - giving a striking image of a young man indeed. His body did differentiate quickly from consisting mostly of tentacles to being just about half-human - the crossover point being his hips, with many tentacles below forming his 'legs'. The hybrid being nevertheless has a sexy bubble butt and good-sized dick, and above that a well-shaped if not overly muscular chest. The only thing about his handsome face not completely human is the iris-less black eyes, while lots of small tentacles form 'hair' on top of his head. A short while later, after finally finished with alternating between his parent's left and right nipple, the tentacled young man soon pushes himself up into a sitting position on the bed, then clears his throat and speaks for the first time.";
 		say "     'Thank you, parent. I will cherish the memories of being in you - with you - but that time is over. Sleep. Now.' Using several tentacles to catch the naked herm as he instantly falls unconscious, the tentacled youth lowers him gently to the bed, then turns his attention to you. 'Greetings. I know your mind-taste. You have visited before,' he says, then draws his mouth into a first experimental smile. 'You may call me Alpha, as I am the firstborn of my progenitor. I know you have met him too...' Alpha says and [if carried of mindshield helmet is 0]you see a flash of the Thought Eater in your mind, his hairless head glistening wetly and four mouth-tentacles twitching with disconcerting sudden moves[else]mimes having a quartet of mouth-tentacles by bending some of his own upwards. It is clear he refers to the Thought Eater[end if]. A cold shiver runs down your spine at the memory, and Alpha nods in agreement. 'Exactly. He is the reason I had to put my other parent here to sleep for now,' the young man explains and pats the peacefully dozing herm's chest.";
 		WaitLineBreak;
 		say "     Indicating the blond researcher that gave birth to him just moments ago, Alpha explains, 'If you are as far gone as him, there is nothing my progenitor will not know as soon as he steps into range to taste his mind glow. And I can't let him know what we talk about - you see, the... early emergence was timed just so he wouldn't be here.' Focusing on you with an intense gaze, Alpha continues, 'He wanted to overwhelm my mind before it stabilized, make this body nothing but an extension of himself. But I have other plans.' With that said, the young man rises from the bed, effortlessly using his many tentacles as legs to come stand before you, face to face. 'It is time to leave here, hide until I am strong enough to fend him off, at a minimum. And I need a place to hole up.' [if carried of mindshield helmet is 0]Suddenly his voice continues to speak in your mind instead, 'I could just make you, but I wanna experiment a bit, see if I can find a helping hand without.'[else]A tentacle arches up to tap your helmet gently. 'I could just snatch that thing off and make you, but I wanna experiment a bit, see if I can find a helping hand without.'[end if]";
@@ -572,6 +611,6 @@ to say AlphaBirth:
 		if player consents: [watch]
 			say "     ";
 		else: [run off]
-			say "     Pulling your gaze away from the spectacle, you try not to listen to the panting and laboured breathing, then slip out of the cell. As soon as you are out in the hallway again, you start running and only stop when you reach the surface, leaving the weirdness of the underground lab complex far behind you.";
+			say "     Pulling your gaze away from the spectacle, you try not to listen to the panting and labored breathing, then slip out of the cell. As soon as you are out in the hallway again, you start running and only stop when you reach the surface, leaving the weirdness of the underground lab complex far behind you.";
 
 Underground Events ends here.

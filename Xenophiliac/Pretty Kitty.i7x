@@ -6,6 +6,11 @@ Pretty Kitty by Xenophiliac begins here.
 Section 1 - The Pretty Kitty
 
 [Defining the store itself]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Pretty Kitty	"Pretty Kitty"
+
 The Pretty Kitty is a room. The Pretty Kitty entrance is a door. It is south of Mall West Wing and north of The Pretty Kitty. The The Pretty Kitty entrance is open.
 Instead of examining the The Pretty Kitty entrance:
 	say "Through the multiple clothing displays and stoic mannequins, the lights of [the other side of the The Pretty Kitty entrance] are [if findwires is 2 and fixedgens is 2]on, displaying bright light throughout the store.[else]off, not surprising considering that there is no power. Candles and the occasional lantern are providing some light in the store.";
@@ -14,18 +19,18 @@ Instead of examining the The Pretty Kitty entrance:
 The description of The Pretty Kitty is "[PKDesc]".
 to say PKDesc:
 	if thirst of Andromeda is 0:
-		say "	Walking through the double-glass doors, you walk into what seems to be a small clothing boutique. Racks of many different clothes line the walls of this store, with some expensive-looking pieces displayed proudly on mannequins. Clothing for any season and situation sit neatly-folded on wooden shelves, price tags hanging off each piece. Pleasant music plays quietly over the store speakers, giving a relaxing feel to your stay here. [if findwires is 2 and fixedgens is 2]Digital bells ring as you walk through the door[else]A metal bell, currently tied to the door with string, rings as you enter[end if], signaling your entrance into the store. The few people browsing the remaining wares look up at you, but quickly go back to perusing the different selections of clothes. You hear a loud [']EEEP['] from behind the checkout counter beside you as a figure pops out from behind it. A catgirl, apparently the caretaker of this store, smiles happily at you.";
+		say "     Walking through the double-glass doors, you walk into what seems to be a small clothing boutique. Racks of many different clothes line the walls of this store, with some expensive-looking pieces displayed proudly on mannequins. Clothing for any season and situation sit neatly-folded on wooden shelves, price tags hanging off each piece. Pleasant music plays quietly over the store speakers, giving a relaxing feel to your stay here. [if findwires is 2 and fixedgens is 2]Digital bells ring as you walk through the door[else]A metal bell, currently tied to the door with string, rings as you enter[end if], signaling your entrance into the store. The few people browsing the remaining wares look up at you, but quickly go back to perusing the different selections of clothes. You hear a loud [']EEEP['] from behind the checkout counter beside you as a figure pops out from behind it. A catgirl, apparently the caretaker of this store, smiles happily at you.";
 		LineBreak; [There for first description clarification]
-		say "'Hi there! Welcome to my shop, The Pretty Kitty, named after little ol['] me! Feel free to take a look around, we've got prime merchandise available here!' the perky catgirl yells at you as she pops up from behind the counter, bouncing happily up and down. She stops bouncing for a moment, looking deep in thought, before realizing something important. 'Oh! I forgot to introduce myself. I'm Andromeda! If you need anything, don't be shy!'";
+		say "     'Hi there! Welcome to my shop, The Pretty Kitty, named after little ol['] me! Feel free to take a look around, we've got prime merchandise available here!' the perky catgirl yells at you as she pops up from behind the counter, bouncing happily up and down. She stops bouncing for a moment, looking deep in thought, before realizing something important. 'Oh! I forgot to introduce myself. I'm Andromeda! If you need anything, don't be shy!'";
 		now thirst of Andromeda is 1;
 	else:
-		say "	You walk back into The Pretty Kitty, the familiar ringing of [if findwires is 2 and fixedgens is 2]digital bells [else]a metal bell [end if]blaring throughout the store. Andromeda waves happily at you, obviously happy to see you've come back.";
+		say "     You walk back into The Pretty Kitty, the familiar ringing of [if findwires is 2 and fixedgens is 2]digital bells [else]a metal bell [end if]blaring throughout the store. Andromeda waves happily at you, obviously happy to see you've come back.";
 		if libido of Andromeda >= 2:
-			say "	Giving a throaty purr when she sees who walked into her establishment, Andromeda winks slyly at you, with, you could swear, a lustful look in her eyes.";
+			say "     Giving a throaty purr when she sees who walked into her establishment, Andromeda winks slyly at you, with, you could swear, a lustful look in her eyes.";
 			LineBreak;
-			say "Well hey there, welcome back. Did you come to shop, talk, or did you wanna play some more?' the not-so-innocent proprietor quietly says to you. 'Just give me a hollar if you need anything, beautiful.'";
+			say "     Well hey there, welcome back. Did you come to shop, talk, or did you wanna play some more?' the not-so-innocent proprietor quietly says to you. 'Just give me a holler if you need anything, beautiful.'";
 		else:
-			say "	'Hi [if player is female]miss[else if player is male]mister[else]there[end if]! Nice to see you back here. Did you come to chat with little me, or are you looking to change up your [italic type]horrid[roman type] attire?' the perky catgirl says, winking slyly at you. 'Either way, welcome back!'";
+			say "     'Hi [if player is female]miss[else if player is male]mister[else]there[end if]! Nice to see you back here. Did you come to chat with little me, or are you looking to change up your [italic type]horrid[roman type] attire?' the perky catgirl says, winking slyly at you. 'Either way, welcome back!'";
 
 the scent of The Pretty Kitty is "Inhaling deeply, the smell of clean clothes rushes into your nose, reminding you of clean laundry.".
 
@@ -36,14 +41,15 @@ Collar Rack is in The Pretty Kitty.
 
 Section 2 - Andromeda
 
-calcnumber is a number that varies. [Used for player-entered variables for sex menu]
+Table of GameCharacterIDs (continued)
+object	name
+Andromeda	"Andromeda"
 
-[Defining NPC]
 Andromeda is a woman.
 The description of Andromeda is "     The bubbly owner of the store stands behind the checkout counter, looking around with a curious, innocent look in her eyes. Her tall, fuzzy ears swivel around constantly, taking in every sound echoing throughout her establishment and keeping a lookout for trouble. Wide green eyes peer out from her face, with her slightly-protruding muzzle graced by a constant bubbly smile. Night-black hair flows down to her shoulders, a dark contrast to the rest of her face. Roving your eyes down from her face, you see that her body is covered in short, dark-orange fur, with occasional splotches of gray interrupting the constant orange flow. Contrary to many of the denizens of this city, Andromeda is not at all voluptuous, the ripped shirt she's wearing barely showing her breasts while her slim stomach does nothing to dissuade her lean look. Her thin legs and hips are covered by a pair of denim jeans, faded and worn with years of use. Her long, furry tail flicks back and forth excitedly, almost knocking loose knick-knacks on the floor. Her (probably) pawed feet are currently inside a pair of tennis shoes, old and worn, with one missing a lace. Finally noting your roving eyes, she says 'Hey, eyes up here you!' all while giving you a good-natured smile and sticking her tongue out at you.";
 
 The conversation of Andromeda is { "I'm a cat!" }.
-the scent of Andromeda is "     Andromeda smells clean, obviously taking care of herself, but she has been unable to rid herself of the distinct undertones of [Italic type]cat[roman type]."
+the scent of Andromeda is "     Andromeda smells clean, obviously taking care of herself, but she has been unable to rid herself of the distinct undertones of [italic type]cat[roman type]."
 
 [Talking with NPC - Individual scenes play till done, then random talks]
 instead of conversing Andromeda:
@@ -61,18 +67,18 @@ instead of conversing Andromeda:
 		say "     After checking through the racks and not seeing one, you ask Andromeda if she's got a small leather jacket. 'No, my leather items were bou- Oh! Wait a sec,' she says, cutting herself off as she rushes to the back. The catgirl returns shortly with a small leather jacket with red and pink trim and a high waistline. 'I got this in with a shipment of other stuff, but didn't have a chance to send it back. Something with a bare midriff like that is too trashy for me to sell to a little girl. A larger version might look pretty sexy on the right woman though,' she adds with a soft sigh as her eyes glaze over. You wait awkwardly for a bit, but it soon becomes clear she's lost in her imagination. With a shrug, you take the unwanted jacket, hoping Gobby will be satisfied with it.";
 		increase HP of Hadiya by 1;
 		now carried of girl's jacket is 1;
-		now Goblin Thief is unresolved;
+		now Goblin Thief is active;
 	else if HP of Andromeda is 1:
 		say "     Walking up to the lithe catgirl, you find that she's hopped up on the counter, sitting comfortably on the checkout line. Waving her feet back and forth casually, her ever-constant smile grows even wider when you approach her.";
 		say "     'Hey! Nice to have you back here!' Andromeda says to you as you approach her. She smiles happily as you lean on the counter and start small talking with her. Chatting a bit about everything that's going on, you can't help but have your mood lightened from the girl's constant bubbly mood. Having exhausted most of the small topics you've thought of, you eventually broach the subject of how she got her shop, and she thinks to herself a bit before responding.";
 		say "     'Well, I guess it started when I was in high school. Ever since I was a kid, art had always interested me, but high school was where my love of it bloomed. While I did alright in all of my other classes, the art classes I took always excited me, and from there, I took as many different art classes in college as I could. I loved painting, drawing, all of that stuff. Being able to think of new ideas and put them on paper, or taking something in life and immortalizing it in paper is a great feeling, one that is hard to describe to people. But, although I love being artistic, I soon found out that it wasn't a very lucrative occupation then, especially for someone starting out. So I took a look at what I could do for a living, while still doing what I really enjoy. I took a look at a lot of opportunities, but none of them interested me very much. I figured I'd end up doing something I hated, but a friend of mine mentioned fashion designing. I hadn't even considered that!' she yells at you, not waiting for you to recover before continuing. 'Researching into it, fashion design was actually really cool. Being able to think out ideas and patterns for clothes that people around the world wear is so cool! It also allowed me to keep drawing and sketching, which let me to keep doing at least a part of what I enjoy.'";
 		WaitLineBreak;
-		say "     'I drew up a few sketches and plans, and after a long time trying to find someone that would even look at my designs, I was finally able to find someone online. I sent them all of my ideas and designs, and after like a week of nervous waiting, I got a message back saying they wanted to use some of my ideas, and extended a possible job offer to me. Me! Someone online who sent them ideas out of the blue! I was ecstatic, and I couldn't wait. Their headquarters was stationed here, so I had to come up here once to interview. I passed with flying colors, and they had me move up here. Working as a designer, and doing well at it, gave me enough excess cash to rent out this' She extends her hands out, obviously meaning the small store 'space here, and set up my own little shop. While I didn't get much business at first, people liked the few of my designs that I had on display, and enjoyed having their own locally-owned boutique. Soon enough, I had business enough to turn a tidy profit, and I was able to keep on goin['].'";
+		say "     'I drew up a few sketches and plans, and after a long time trying to find someone that would even look at my designs, I was finally able to find someone online. I sent them all of my ideas and designs, and after like a week of nervous waiting, I got a message back saying they wanted to use some of my ideas, and extended a possible job offer to me. Me! Someone online who sent them ideas out of the blue! I was ecstatic, and I couldn't wait. Their headquarters was stationed here, so I had to come up here once to interview. I passed with flying colors, and they had me move up here. Working as a designer, and doing well at it, gave me enough excess cash to rent out this,' she extends her hands out, obviously meaning the small store, 'space here, and set up my own little shop. While I didn't get much business at first, people liked the few of my designs that I had on display, and enjoyed having their own locally-owned boutique. Soon enough, I had business enough to turn a tidy profit, and I was able to keep on goin['].'";
 		say "     Andromeda shrugs. 'That's about all there is to it. While not very glamorous, I like to think that I was doing well for myself. That is, until everyone changed and now all they do is try to hump you. No appreciation for the finer things in life now!' Andromeda [']harrumphs['] as she says so. Idly wondering to yourself, you ask her if she has any of her personal designs on display.";
 		say "     'Nah, not right now. I usually brought in a few generic types and designs of clothing, for people who weren't interested in my own personal designs. That stuff is what's on display. I think I packed most of my own stuff in the back. I want those saved for when this all blows over.' Andromeda smiles at you, seemingly finished with her story. You're about to interject with another comment, but a stag-morph coughs loudly behind you, carrying a pair of jeans and a simple shirt. Andromeda [']EEPs['] loudly and immediately jumps down, motioning for the man to step up. 'Talk at you later!' you hear, yelled loudly in your direction.";
 		increase HP of Andromeda by 1;
 	else if HP of Andromeda is 2:
-		say "     Deciding to chat with Andromeda again, you approach the counter figuring you'll find her there. Contrary to your expectations, she isn't standing behind the counter as usual. Looking around the empty store, it seems she's not anywhere in here. Shrugging to yourself, you figure you'll come back later. Preparing to leave, you barely catch the almost-silent snore from behind the counter. Going back to checkout, you slowly lean over the counter and, looking down, find an interesting sight. It seems that Andromeda has fallen asleep, her back leaning against the side of the counter and legs folded under her. Smiling to yourself and getting back up, you can't hold back the quiet chuckle that escapes your lips at the sight. That seems to have been enough to have woken the catgirl, however, because you're barely turned around before you hear a familiar 'Hi!' echo from her usual position. Turning back around, Andromeda's familiar happy-go-lucky smile is looking your way. Chuckling to yourself once again, you inquire as to the reason for her 'catnap'.";
+		say "     Deciding to chat with Andromeda again, you approach the counter figuring you'll find her there. Contrary to your expectations, she isn't standing behind the counter as usual. Looking around the empty store, it seems she's not anywhere in here. Shrugging to yourself, you figure you'll come back later. Preparing to leave, you barely catch the almost-silent snore from behind the counter. Going back to checkout, you slowly lean over the counter, and looking down, find an interesting sight. It seems that Andromeda has fallen asleep, her back leaning against the side of the counter and legs folded under her. Smiling to yourself and getting back up, you can't hold back the quiet chuckle that escapes your lips at the sight. That seems to have been enough to have woken the catgirl, however, because you're barely turned around before you hear a familiar 'Hi!' echo from her usual position. Turning back around, Andromeda's familiar happy-go-lucky smile is looking your way. Chuckling to yourself once again, you inquire as to the reason for her 'catnap'.";
 		say "     You swear you can see Andromeda blush, even beneath her orange fur. 'Well, sometimes you gotta take a quick nap to get through the day. Seeing as how no one was around, it wouldn't be a harm to nap real quick. It has been worse since I changed though. Guess it comes with being a cat!' she proclaims loudly, thought you think she's still blushing. Changing the subject to avoid her any more awkwardness, you ask if she'd be comfortable sharing how she changed.";
 		say "     You hear a barely audible sigh from her, and you inwardly smile at her embarrassment. 'Sure! Nothing bad really, my story's similar to a lot of the mall-goers still here. I was working here on a slow day, putting a guy who bought something through checkout. Can't remember what he bought... Anyways, we were in the middle of checkout when there's this BIG commotion outside. The guy at checkout asked me to hold his purchase and ran outside to see what was going on. Nothing happened for a few minutes, and I'm waiting behind the counter, when the same guy runs back in, except he was growing fur! I had no idea what happened or what was going on, so I freaked out and bolted for the storage room. I didn't know if he was going to attack me or something, and I didn't want to take that chance. If I hadn't have run...' Her mood darkens a moment, and she visibly shudders, from fear rather than joy. 'Anyways, he managed to grip my leg, scratching down my leg as we both tumbled to the ground. I flipped over and just started kicking wildly. One of my kicks must've landed in his face or something, because he let go of my leg. I didn't look back as I ran into the storage room, locking it and hiding there.'";
 		WaitLineBreak;
@@ -85,7 +91,7 @@ instead of conversing Andromeda:
 		say "     You mention that your just surprised that she'd be carrying such... odd items for sale. Doesn't seem like something that'd be carried in a normal clothing store...";
 		say "     Drilling holes in your head with her angered gaze, she puts her hands to her hips with a loud [']Humph['], Andromeda swishes her tail furiously as she talks. 'Well you're one to talk! You went and got one, and I got paid for it, business at work! Now get outta here before I grab my broom!' Batting her tail at you, you have no choice but to skip out of the store, escaping the all-powerful tail wielded by the embarrassed proprietor.";
 	else:
-		say "	[one of]'Business has been good lately. Sure, payment is in the form of food and milk right now, but it works!'[or]Andromeda is sitting on the counter, batting at her own tail. She absent-mindedly waves at you, instead concentrating on pinning down the offending tail.[or]'That mouse girl in the bookstore looks sooo delectable. I could just eat her up.'[or]'Buy something or get the heck out!' she yells at you, obviously putting on a joking tough guy impression.[or]You and Andromeda idly chat, just enjoying the pleasure of sane company.[or]Andromeda looks around, making sure nobody is paying attention, and brings a paw up behind her ear, scratching furiously. A look of serenity crosses her face, which soon changes to embarrassment when she sees you looking her way. She deftly removes her paw from her ear and looks away, but you're pretty sure she's blushing under all that fur.[or]Currently involved in moving a customer through checkout, Andromeda quickly waves at you before going back to the task at hand.[at random]";
+		say "     [one of]'Business has been good lately. Sure, payment is in the form of food and milk right now, but it works!'[or]Andromeda is sitting on the counter, batting at her own tail. She absent-mindedly waves at you, instead concentrating on pinning down the offending tail.[or]'That mouse girl in the bookstore looks sooo delectable. I could just eat her up.'[or]'Buy something or get the heck out!' she yells at you, obviously putting on a joking tough guy impression.[or]You and Andromeda idly chat, just enjoying the pleasure of sane company.[or]Andromeda looks around, making sure nobody is paying attention, and brings a paw up behind her ear, scratching furiously. A look of serenity crosses her face, which soon changes to embarrassment when she sees you looking her way. She deftly removes her paw from her ear and looks away, but you're pretty sure she's blushing under all that fur.[or]Currently involved in moving a customer through checkout, Andromeda quickly waves at you before going back to the task at hand.[at random]";
 
 [Fucking with NPC]
 instead of fucking Andromeda:
@@ -148,7 +154,10 @@ instead of fucking Andromeda:
 
 Section 3 - Clothes
 
-[Defining Clothing Shelf]
+Table of GameCharacterIDs (continued)
+object	name
+Clothing Shelf	"Clothing Shelf"
+
 Clothing Shelf is a man.
 The description of Clothing Shelf is "This nearby rack of clothes holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed as '1 food or 1 milk'. The outfits that stick out to you include a simple [bold type]T-shirt and Blue Jeans[roman type] combo, a lovely black [bold type]Blouse Set[roman type] that's combined with a knee-length skirt, a slim [bold type]Tuxedo set[roman type] and tie on a mannequin nearby, and a baggy, comfortable [bold type]Summer Set[roman type], consisting of a no-sleeved shirt and baggy shorts. You'd just have to have payment and ask to [bold type]procure[roman type] the outfit you want.";
 
@@ -211,9 +220,9 @@ carry out TshirtObtain:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face.";
-		if the player consents:
-			say "	Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+		if player consents:
+			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -248,9 +257,9 @@ carry out BlouseObtain:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face.";
-		if the player consents:
+		if player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -285,9 +294,9 @@ carry out TuxedoObtain:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face.";
-		if the player consents:
+		if player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -302,7 +311,7 @@ carry out TuxedoObtain:
 					delete gryphon milk;
 					increase carried of tuxedo by 1;
 				else if dolphin milk is owned:
-					say "	Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tentative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your outfit, figuring that Andromeda is going to be busy for a while.";
+					say "     Putting the jar of dolphin milk on the counter, Andromeda looks at it curiously. Picking up the jar, she deftly unscrews it and sniffs it curiously, and you figure that she hasn't had dolphin milk before. Taking a tentative lick of the milk, she lets out a squeal and starts to haphazardly drink the dolphin milk. She waves at you absent-mindedly, too wrapped up in drinking. You smile to yourself as you pick up your outfit, figuring that Andromeda is going to be busy for a while.";
 					delete dolphin milk;
 					increase carried of tuxedo by 1;
 				else if distilled milk is owned:
@@ -322,9 +331,9 @@ carry out SummerObtain:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure these would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face.";
-		if the player consents:
+		if player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the outfit.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -353,6 +362,10 @@ carry out SummerObtain:
 			say "     'Well then why'd you bring them up here you big dolt?' Andromeda says to you, doing her best to put on a serious impression, and then failing horribly. 'I'm just teasing you! Feel free to keep looking around, and only get something if you want to!";
 
 Section 4 - Collars
+
+Table of GameCharacterIDs (continued)
+object	name
+Collar Rack	"Collar Rack"
 
 [Defining Collar Rack]
 Collar Rack is a man.
@@ -387,9 +400,9 @@ carry out SpikedCollarObtain:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face as her tail swishes behind her, probably from embarrassment.";
-		if the player consents:
+		if player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the collar.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -427,9 +440,9 @@ carry out FuzzyCollarObtain:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face as her tail swishes behind her, probably from embarrassment.";
-		if the player consents:
+		if player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the collar.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -462,14 +475,14 @@ carry out FuzzyCollarObtain:
 			say "     'Well then why'd you bring them up here you big dolt?' Andromeda says to you, doing her best to put on a serious impression, and then failing horribly. 'I'm just teasing you! Feel free to keep looking around, and only get something if you want to!";
 
 carry out NametagCollarObtain:
-	say	"     Bringing the spiky collar up to the checkout counter, you're sure Andromeda is blushing slightly as you set the thick leather collar on the counter. Indicating that you'd like to purchase the collar, she smiles at you, doing her best to hide her embarrassment.";
+	say	"     Bringing the nametag collar up to the checkout counter, you're sure Andromeda is blushing slightly as you set the thick leather collar on the counter. Indicating that you'd like to purchase the collar, she smiles at you, doing her best to hide her embarrassment.";
 	if scalevalue of player >= 5 or scalevalue of player <= 1:
 		say "     Andromeda looks you over intently, and lets out a disheartened sigh. 'Sorry hun, I don't carry that in your size.' She shoots you a sad frown, but perks right back up. 'If you [if scalevalue of player <= 1]get bigger[else if scalevalue of player >= 5]shrink down some,[end if] I'm sure this would fit!' You replace what you were going to buy, hoping you'll be able to get it sometime.";
 	else:
 		say	"     'You suuuuurrrrre you wanna buy these?' Andromeda says to you, a thin smile appearing on her face as her tail swishes behind her, probably from embarrassment.";
-		if the player consents:
+		if player consents:
 			say "     Alright! Now like it says on the price tag, it costs one packet of food or some of that [italic type]lovely[roman type] milk. Which one do you want to pay with?' - (Y for Food, N for Milk)";
-			if the player consents:
+			if player consents:
 				if food is owned:
 					say "     You slide a packet of food over to the bubbly catgirl, who snaps it off the counter as soon as you put it down. Looking closely over the packet of food, she checks over it for a few moments before smiling happily and letting you pick up the collar.";
 					say "     'Thanks for the purchase, and come again soon!'";
@@ -508,7 +521,7 @@ Section 5 - Items
 [T-Shirt Outfit]
 Table of Game Objects (continued)
 name	desc	weight	object
-"t-shirt & blue jeans"	"A set of new blue jeans, paired with a grey T-shirt. Boring, but practical."	2	t-shirt & blue jeans
+"t-shirt & blue jeans"	"A set of new blue jeans, paired with a gray T-shirt. Boring, but practical."	2	t-shirt & blue jeans
 
 t-shirt & blue jeans is equipment.
 It is not temporary.
@@ -612,4 +625,4 @@ Section 6 - Comments and Variables
 [thirst of Andromeda -- Used for store description]
 
 
-The Pretty Kitty ends here.
+Pretty Kitty ends here.

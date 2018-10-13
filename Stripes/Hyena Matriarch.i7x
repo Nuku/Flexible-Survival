@@ -1,4 +1,4 @@
-Hyena matriarch by Stripes begins here.
+Hyena Matriarch by Stripes begins here.
 [- Originally Authored By: Sarokcat -]
 [Version 2 - Adds Vore Scenes and Ending]
 
@@ -7,14 +7,14 @@ Hyena matriarch by Stripes begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 matriarchdefeated is a number that varies.
 matriarchowned is a number that varies.
 
 to say matriarch attack:
 	[puts Herm Hyena as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Herm Hyena":
 			now monster is y;
 			break;
@@ -22,7 +22,7 @@ to say matriarch attack:
 		say "     'The hyena matriarch grins as you fall prone before her, defeated and completely helpless... just the way she likes you. The matriarch lets loose wild hyenalike laughter at someone like you actually thinking you could challenge her dominance. The laughter is picked up by the watching circle of gang members, and soon the noise is rebounding off the walls as their laughter surrounds you, searing into your soul and making you feel even more humiliated. The matriarch slowly walks around your prone form as you shudder in humiliation, before she grabs your ass and hauls it upwards, causing you to squeak in surprise.";
 		say "     'You like this, don't you?' the matriarch whispers to you in a raspy, lustful voice as she leans forward over you, her claws massaging your ass as she holds it up for her inspection. 'You love the thought of everyone seeing you defeated, seeing you fucked underneath me, while they watch laughing. You just love the idea of being my little submissive breeder bitch don't you? You wouldn't have challenged me otherwise...' she says as she runs her hands along your body, before pushing your face down into the ground where it belongs, the jeers and comments from the rest of the hyena pack somehow making the experience in submission feel even dirtier and naughtier. And on some level, you can't help but realize that she is right, you are loving this, your body growing hot and needy as she teases it, her strong musk and dominant actions overwhelming your mind.";
 		WaitLineBreak;
-		if cunts of player > 0:
+		if player is female:
 			say "     'Don't worry,' she whispers to you as the laughter searing your soul grows louder, 'I'm here to help you, to help you become the little submissive breeder bitch you know you are inside.' Her strong, dominant voice causes you to whimper as it burns its wicked words into you. Suddenly you can feel your ass moved slightly for better access, and her strong, dominant form presses you down into the ground as she thrusts into your hot wet cunt, making you cry out in need as the hot burning that was building within you explodes into a raging wildfire of need. As she continues to thrust into you, muttering strong, dominating words into your ears, you find yourself unable to focus on anything more than your bodies['] raging desires. The laughing and sounds of an orgy breaking out around you, as well as the matriarch's soft experienced whispering blend together into a background of pleasure, as she fucks you hard and fast, just like you now realize you needed.";
 			say "     Your body burns with need and pleasure as she takes you, making her hers, her slut, her slave, her plaything to do with as she will. You can feel the exquisite pleasure of being completely helpless and dominated underneath her shooting through you, the joy of submitting working its way deep in your soul. You find yourself crying out and begging underneath her as you draw closer and closer to orgasm, begging her not to stop, but for more. You find yourself begging her to take you, to use you, to fill you up with her wonderful dominant seed and make you nothing more than her breeding slut. Your wanton submission making the hyenas around you laugh and the matriarch above you cries out in victory, her body tensing and shuddering as she draws close to orgasm. You suddenly feel her teeth sinking into your shoulder as she holds you in position, your body shuddering in ecstasy at the teeth of your dominant mate holding you in place, holding you ready to receive her seed. You cry out in pleasure as she moans in orgasm above you, her hot seed coating your eager womb, as she marks you in yet another way as hers, the feeling of her hard cock in your needy pussy, makes you feel as if you have lost all hold on your masculinity, and no matter how hard you try you can't even bring yourself to imagine trying to be anything other than a willing breeding hole at this moment in time.[impregchance]";
 			WaitLineBreak;
@@ -40,7 +40,7 @@ to say matriarch attack:
 		say "     'The hyena matriarch grins as you fall prone once again before her, defeated and completely helpless... just the way she likes you. The matriarch lets loose wild hyenalike laughter at you actually daring to challenge her dominance again. The laughter is picked up by the watching circle of gang members, and soon the noise is rebounding off the walls as their laughter surrounds you, searing into your soul and making you feel even more humiliated. The sound is also strangely exciting and exhilarating, as your body grows flush with need as it prepares for what you know is coming. The matriarch slowly walks around your prone form, making you shudder in both humiliation and anticipation, before grabbing your ass and hauling it upwards, causing you to moan wantonly as she does.";
 		say "     'You like this so much, don't you?' the matriarch whispers to you in a raspy, lustful voice as she leans forward over you, her claws massaging your ass as she holds it up for her inspection. 'You just love everyone seeing you defeated, witnessing your true submissive self, and seeing you fucked harshly underneath me, while they watch laughing. You loved the idea of being my little submissive breeder so much you had to come back again didn't you? You wouldn't have challenged me otherwise...' she says as she runs her hands along your body, before pushing your face down into the ground where it belongs, the jeers and comments from the rest of the hyena pack somehow making the experience in submission feel even better as they witness your humiliation. And on a deep level, you realize that she is right, you are loving this, you must have wanted this so badly without even knowing, as your body growing hot and pliant underneath her, as she teases it, her strong musk and dominant actions overwhelming your mind and soul as you eagerly submit under her hands.";
 		WaitLineBreak;
-		if cunts of player > 0:
+		if player is female:
 			say "     'Don't worry,' she whispers to you as the laughter searing your soul grows louder. 'Since you want it so bad, I'll help you,' she says, her words making your body twist in need and pleasure. 'I'll help you become the little submissive breeder bitch you know you are inside, and make sure everyone else knows it to.' Her strong, dominant voice causes you to whimper as it burns its wicked words into you. Suddenly you can feel your ass moved slightly for better access, and her strong, dominant form presses you down into the ground as she thrusts into your hot wet cunt, making you cry out in need as the hot burning that has been building within you since her first dominant touch, explodes into a raging wildfire of need. As she continues to thrust into you, muttering strong, dominating words into your ears, you find your mind unable to focus on anything more than your bodies['] raging desires, as it retreats once more into a pleasurable state of submission. The laughing and sounds of an orgy breaking out around you, as well as the matriarch's soft experienced whispering blend together into a background of pleasure, as she fucks you hard and fast, like you now realize you have always needed. You needed to be used, to be fucked, to be dominated just like this.";
 			say "     Your body burns with need and pleasure as she takes you, making her hers, her slut, her slave, her plaything to do with as she will. You can feel the exquisite pleasure of being completely helpless and dominated underneath her shooting through you, the joy of submitting expanding and anchoring itself deep in your soul, where you know it can never be completely removed. You find yourself crying out and begging underneath her as you draw closer and closer to orgasm, begging her not to stop, but for more. You find yourself begging her to take you, to use you, to fill you up with her wonderful dominant seed and make you nothing more than her breeding slut, you beg to be used by her, to be used by anyone who will take your submissive little body. Your wanton submission making the hyenas around you laugh and the matriarch above you cries out in victory, her body tensing and shuddering as she draws close to orgasm. You suddenly feel her teeth sinking into your shoulder as she holds you in position, your body shuddering in ecstasy at the teeth of your dominant mate holding you in place, holding you ready and eager to receive her seed. You cry out in pleasure as she moans in orgasm above you, her hot seed coating your waiting womb, painting it with her cub making liquid, as she marks you in yet another way as hers, the feeling of her hard cock in your needy pussy, makes you feel as if you have lost all hold on your masculinity, and no matter how hard you try you can't even bring yourself to imagine ever trying to be anything other than a willing breeding hole again. Your mind filling with thoughts of being taken again and again, like a good little breeding slut, with her warm seed filling you up with her strong, dominant hyena cubs again and again.[impregchance]";
 			WaitLineBreak;
@@ -66,36 +66,39 @@ To say matriarch loss:
 	say "     Taking advantage of the invitation her prostrated form with its upraised ass provides you, you slowly move around behind her, reveling in your victory. Your cock stiffens as you hear her defeated whimper and the cackling laughter of the hyena's surrounding you both, something about the situation speaking directly to your primal hyena instincts. Your mouth contorts into a feral grin as your hands dig into the coarse fur of her ass, before you sheathe your [cock of player] cock into her in one swift thrust, causing her to cry out in pain and pleasure underneath you. Her warm folds wrap your cock with delicious bliss flavored with the feel of victory and the joy of forcing her submission, causing you to moan in delight as you thrust into her.";
 	say "     Building up a rhythm of quick thrusts into her warm wetness, the former matriarch begins to whine and beg underneath you, her obvious submission increasing your pleasure as you turn the formerly dominant hyena into just another breeding slut underneath you. Around you, you are obviously not the only member of the hyena den aroused by the situation, as an orgy begins to break out among the laughing onlookers. The thrill of all the eyes watching you as you reduce the former matriarch to just another breeding hole makes the experience even more exciting as you pound into her body, every thrust driving her face down into the ground where it belongs.";
 	WaitLineBreak;
-	say "     You feel your pleasure growing as you reach the edge of your orgasm, your thrusts stronger and more dominant as she clenches her body underneath you, her soft lips massaging your cock needily, practically begging for you to fill her with your seed. Finally she shudders underneath you with a truly wanton moan, and you can almost sense something break inside her, almost tell the moment she gives herself up to your dominance completely and surrenders herself to your will. The pleasure as you realize the completeness of your victory makes your body shudder as it floods through you, sending you over the edge in the best orgasm of your life as you explode into her. The former matriarch cries out underneath you wantonly, as she embraces her new role in life, the role of a breeding slut, the lowest of the low in the pecking order, a slut for any and all to use as they please, and she embraces it willingly. You can't help but feel completely satisfied as you rest on her back, your cock still spurting into her slowing, ensuring she is filled with your strong virile seed. Eventually you pull yourself out, and flop down on your side as you watch the rest of your new subjects celebrating your victory with an orgy around you.";
+	say "     You feel your pleasure growing as you reach the edge of your orgasm, your thrusts stronger and more dominant as she clenches her body underneath you, her soft lips massaging your cock needily, practically begging for you to fill her with your seed. Finally she shudders underneath you with a truly wanton moan, and you can almost sense something break inside her, almost tell the moment she gives herself up to your dominance completely and surrenders herself to your will. The pleasure as you realize the completeness of your victory makes your body shudder as it floods through you, sending you over the edge in the best orgasm of your life as you explode into her. The former matriarch cries out underneath you wantonly, as she embraces her new role in life, the role of a breeding slut, the lowest of the low in the pecking order, a slut for any and all to use as they please, and she embraces it willingly. You can't help but feel completely satisfied as you rest on her back, your cock still spurting into her slowing, ensuring she is filled with your strong, virile seed. Eventually you pull yourself out, and flop down on your side as you watch the rest of your new subjects celebrating your victory with an orgy around you.";
 	increase matriarchowned by 1;
 
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	add "Hyena Matriarch" to infections of furry;
 	add "Hyena Matriarch" to infections of hermaphrodite;
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Hyena Matriarch"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]She rakes you with her claws, leaving bloody gashes behind.[or]She backhands you with enough force to send you flying.[or]Her excited member grinds against you as she tries to wrestle you into a submissive position.[or]She rips at you with her insanely sharp teeth.[or]Her hyena laugh fills the room, distracting you with the powerful desire to join her in laughter.[or]She leaps forward suddenly, knocking you to the ground under her.[or]She poses and begins rubbing her large member enticingly, obviously trying to convince you it would be better to submit... and it almost works.[at random]";
 	now defeated entry is "[matriarch loss]";
 	now victory entry is "[matriarch attack]";
 	now desc entry is "[mongendernum 5]The matriarch strides forward, a confident look on her face as she passes her defeated guards. 'Well now you have my attention,' she snarls, her magnificent spotted fur rising as the challenge circle forms around the two of you."; [ Description of the creature when you encounter it.]
-	now face entry is "very hyena look to you now, with a muzzle filled with sharp teeth and a pair of hyena-like ears perched atop your head. Ever since the change you can't help but feel more confident and mighty, anyone who glanced your way could tell you have a leader's"; [ Face description, format as the text "Your face is (your text)."]
-	now body entry is "that of a powerful fighter, with toned muscles, leaving you with an imposing yet attractive figure. Not left unchanged, your hands are now paw-like in nature, with sharp claws at the tip of each digit"; [ Body Description, format as the text "Your Body is (your text)"]
-	now skin entry is "brown furred"; [ skin Description, format as the text "You have (your text) skin"]
+	now face entry is "very hyena look to you now, with a muzzle filled with sharp teeth and a pair of hyena-like ears perched atop your head. Ever since the change you can't help but feel more confident and mighty, anyone who glanced your way could tell you have a leader's"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "that of a powerful fighter, with toned muscles, leaving you with an imposing yet attractive figure. Not left unchanged, your hands are now paw-like in nature, with sharp claws at the tip of each digit"; [ Body Description, format as "Your Body is (your text)"]
+	now skin entry is "brown furred"; [ skin Description, format as "You have (your text) skin"]
 	now tail entry is "Your rear end has become tightly muscled, with enough size to it that one could still get a nice hand full. Hanging just above your sculpted derriere is a hyena tail, its brown-furred length barely reaching past your upper thigh."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]knotted[or]black[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]
-	now face change entry is "it rapidly stretches outward, your mouth suddenly feeling very full as your new teeth settle into place. Finding your hands moving instinctively up to your ears, you feel them as they migrate up to the top of your skull. Making their new home on your scalp, they begin taking a more triangular shape, leaving you with hyena ears"; [ face change text. format as "Your face feels funny as (your text)" ]
-	now body change entry is "as it lose any trace of fat you may have had on you, it being replaced with tightly compacted muscle. Focus shifts to your hands as you feel them reshaping into more paw like appendages. When the transformation finally settles, you're left with new hyena-like paws with sharp claws"; [ body change text. format as "Your body feels funny as (your text)" ]
-	now skin change entry is "it is covered in shaggy brown fur"; [ skin change text. format as "Your skin feels funny as (your text)" ]
-	now ass change entry is "it tightens noticeably and becomes attractively muscled. Given no time to rest, you feel a sharp pain as your tail bone starts grow out, lengthening out to a more animalistic norm. Pain subsiding you find a freshly grown brown-furred tail, a quick test shows that you have slight control over your new hyena tail."; [ ass/tail change text. format as "Your ass feels funny as (your text)" ]
-	now cock change entry is "it turns pitch black, a knot forming at the base"; [ cock change text. format as "Your cock feels funny as (your text)" ]
+	now face change entry is "it rapidly stretches outward, your mouth suddenly feeling very full as your new teeth settle into place. Finding your hands moving instinctively up to your ears, you feel them as they migrate up to the top of your skull. Making their new home on your scalp, they begin taking a more triangular shape, leaving you with hyena ears"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "as it lose any trace of fat you may have had on you, it being replaced with tightly compacted muscle. Focus shifts to your hands as you feel them reshaping into more pawlike appendages. When the transformation finally settles, you're left with new hyena-like paws with sharp claws"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "it is covered in shaggy brown fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "it tightens noticeably and becomes attractively muscled. Given no time to rest, you feel a sharp pain as your tail bone starts grow out, lengthening out to a more animalistic norm. Pain subsiding you find a freshly grown brown-furred tail, a quick test shows that you have slight control over your new hyena tail"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it turns pitch black, a knot forming at the base"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 22;
 	now dex entry is 20;
 	now sta entry is 18;
@@ -106,7 +109,7 @@ When Play begins:
 	now HP entry is 100;
 	now lev entry is 12; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 13; [Amount of Damage monster Does when attacking.]
-	now area entry is "Hyena hideout"; [ Current options are 'Outside' and 'Mall' Case sensitive]
+	now area entry is "Hyena hideout"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 7; [ Size of balls apparently ;) sneaky Nuku]
@@ -119,15 +122,15 @@ When Play begins:
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
 	now loot entry is "lucky horseshoe";
 	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
-	[ These represent the new additions to the table of random critters ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]lean[or]muscled[at random]";
 	now type entry is "hyena"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if matriarchowned is 1:
@@ -166,9 +169,9 @@ when play ends:
 			if humanity of player < 10:
 				say "     Your mind gone from the infection, you eventually find yourself wandering back towards the hyena's den. While at first they drive you away, on one of your visits Gina manages to recognize your changed form, and instead of driving you off they take you with them. Taking care of you is no easy task, but perhaps because of how well used you were while with them before, they find your body eventually returning to a more familiar hyenalike shape, much to Gina's delight. Soon you find yourself once more where you belong, a vital part of the large gang of hyenas as they continue to spread throughout the city, breeding the next generation of hyenas for your matriarch, much to the joy of your animalistic mind.";
 			else:
-				say "     You feel somewhat relieved to have escaped the hyena gang with your mind and body mostly intact, though you still sometimes find yourself dreaming of your time spent being the gang's breeding slut. Often waking up from dreams of being dominated and used by the entire gang, while you beg and whimper for more, only to find yourself desperately horny and needy and sadly so very very alone.";
+				say "     You feel somewhat relieved to have escaped the hyena gang with your mind and body mostly intact, though you sometimes find yourself dreaming of your time spent being the gang's breeding slut. You often wake up from dreams of being dominated and used by the entire gang while you beg and whimper for more, only to find yourself desperately horny and needy and sadly so very, very alone.";
 
 to matriarchify:
 	Infect "Hyena Matriarch";
 
-Hyena matriarch ends here.
+Hyena Matriarch ends here.

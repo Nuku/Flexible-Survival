@@ -36,7 +36,7 @@ To say GLAM:
 
 Chapter - ASCII map
 
-[If the player's interpreter does not support graphics, the Automap text-based map (ASCII or Unicode) will be shown instead. This map is shown by expanding the number of lines in the status window. We can set the number of lines in the text map by using this variable. The default is 12 rows.]
+[if the player's interpreter does not support graphics, the Automap text-based map (ASCII or Unicode) will be shown instead. This map is shown by expanding the number of lines in the status window. We can set the number of lines in the text map by using this variable. The default is 12 rows.]
 
 The text-map depth is a number variable. The text-map depth is usually 12.
 
@@ -53,7 +53,7 @@ Chapter - Configuration
 
 When play begins:
 	if glulx graphics is supported:
-		now the current zoom is map zoomed in;[refers to Automap's zoom, which must always be set to zoomed in.]
+		now the current zoom is map zoomed in; [refers to Automap's zoom, which must always be set to zoomed in.]
 		if the current zoom level of the map-renderer is 0:
 			now the current zoom level of the map-renderer is the initial zoom level of the associated tileset of the map-renderer;
 		if the map viewport is not a map-display window:
@@ -91,7 +91,7 @@ First for constructing the status line (this is the bypass status line map rule)
 		reserve automap memory of (text-map depth) rows;
 		continue the action.
 
-[If you prefer that the MAP command toggle the ASCII version of the map rather than close the map window entirely, you can copy the following into your story file:
+[if you prefer that the MAP command toggle the ASCII version of the map rather than close the map window entirely, you can copy the following into your story file:
 
 Chapter - Deciding (in place of Chapter - Hacking Automap in Glimmr Automap by Erik Temple)
 
@@ -110,7 +110,7 @@ Chapter - The map-display window kind
 
 A map-display window is a kind of graphlink g-window.
 
-The map viewport is a g-window that varies. [If the author doesn't explicitly name the map viewport, we will automatically select a map-display window to be the viewport when play begins. In most cases, this will be the only existing map-display window.]
+The map viewport is a g-window that varies.[@Tag:NotSaved] [if the author doesn't explicitly name the map viewport, we will automatically select a map-display window to be the viewport when play begins. In most cases, this will be the only existing map-display window.]
 
 [The author may provide a maximum map size to use. This refers to the number of *tiles* to be displayed, not the maximum number of pixels, and can be used to restrict the size of the map for either performance or aesthetic reasons. For example, a fixed map size combined with a restricted number of available zoom levels can make it easier to predict the output size of the map.]
 A map-display window has a number called the maximum map width. The maximum map width of a map-display window is usually 0.
@@ -203,7 +203,7 @@ For scaling a map-display window (called the viewport) (this is the resize canva
 	#end if;
 	reserve automap memory of y-win to the nearest whole number rows by x-win to the nearest whole number columns;
 	if the map is drawn and the current zoom is not map absent:
-		do nothing;[Automap's map is drawn by the phrase "if the map is drawn"; hence this odd instruction.]
+		do nothing; [Automap's map is drawn by the phrase "if the map is drawn"; hence this odd instruction.]
 	now the map-width of the map-renderer is (map width * tile-width of associated tileset of the map-renderer);
 	now the map-height of the map-renderer is (map height * tile-height of associated tileset of the map-renderer);
 	now the canvas-width of the associated canvas of the viewport is map-width of the map-renderer;
@@ -322,7 +322,7 @@ A clicking graphlink rule when the current graphlink window is a map-display win
 					#if utilizing Glimmr debugging;
 					say "[>console][GLAM]Mouse input received on graphlink '[current graphlink]' in window [italic type][current graphlink window][roman type]: ([current graphlink x], [current graphlink y]). Automap graphlink rules triggered for room [i][glulx equivalent of alt entry][/i].[<]";
 					#end if;
-					follow the automap graphlink rules for the glulx equivalent of alt entry;[the glulx equivalent is a type-casting routine. It returns a room.]
+					follow the automap graphlink rules for the glulx equivalent of alt entry; [the glulx equivalent is a type-casting routine. It returns a room.]
 				else:
 					#if utilizing Glimmr debugging;
 					say "[>console][GLAM]Mouse input received on graphlink '[current graphlink]' in window [italic type][current graphlink window][roman type]: ([current graphlink x], [current graphlink y]). Automap graphlink rules triggered.[<]";
@@ -570,7 +570,7 @@ Carry out dumping automap data:
 	repeat with count running from 1 to (map width * map height):
 		increase scan by 1;
 		if scan > map width:
-			say "[line break]";
+			LineBreak;
 			let scan be 1;
 		if map glyph of count is 32:
 			say "... ";
@@ -591,7 +591,7 @@ Carry out dumping automap links:
 	repeat with count running from 1 to (map width * map height):
 		increase scan by 1;
 		if scan > map width:
-			say "[line break]";
+			LineBreak;
 			let scan be 1;
 		if linked room-ID of count is 0:
 			say ".. ";
@@ -638,7 +638,7 @@ Some UI-buttons are defined by the Table of Map Buttons.
 
 [The UI-layer is a global variable holding the layer number on which the buttons should be placed. It should generally be at least 2 layers higher than the map layer. If no display-layer is explicitly set for the UI-frame, it will be placed one level beneath the UI-layer.]
 
-The UI-layer is a number that varies. The UI-layer is usually 4.
+The UI-layer is a number that varies.[@Tag:NotSaved] The UI-layer is usually 4.
 
 
 Table of Map Buttons
@@ -1053,7 +1053,7 @@ The Automap extension can dynamically change the maximum size of its map array, 
 
 It is therefore important that we set the automap reserved area to a number that is high enough for our map to display as we want it to. GLAM calculates the dimensions by determining the number of tiles that would in the graphics window at the current zoom level. If GLAM calculates that the window would hold 45 horizontally and 24 tiles vertically, then the total number of tiles would be 45 x 24 = 1080. The default value set by Glimmr Automap is rather arbitrary (3200), but probably adequate to most purposes. We can in any case set the value higher if we like:
 
-	*:  Use automap reserved area of at least 3400.
+	*: Use automap reserved area of at least 3400.
 
 If for some reason we need to make the automap reserved area less than 3200, we need to replace the section titled "Section - Maximum map size use option". If we want to make it less than 400, we need to edit the Automap extension directly. (We can make the *map*--as opposed to the memory reserved for it--smaller by setting maximum dimensions; see below.)
 

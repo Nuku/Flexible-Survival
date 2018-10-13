@@ -8,6 +8,10 @@ Section 1 - Capture Task
 
 Section 2 - Master Mind the Automaton
 
+Table of GameCharacterIDs (continued)
+object	name
+Master Mind	"Master Mind"
+
 Master Mind is a woman.
 The description of Master Mind is "[masterminddesc]".
 The conversation of Master Mind is { "meatbag" }.
@@ -50,7 +54,7 @@ to say sexwithmastermind:
 		say "     Left with the role of bad cop, you push her roughly from behind, pressing her firmly against the wall of bars. Growling, you demand to know where the other automaton elite like her are and what their plan is. She groans a little, but doesn't answer. Pressing a little harder, you also reach around to grope her breast firmly. Despite her metallic skin, her tit is soft and squeezing it draws another groan from her. Grabbing between her thighs, you rub at her thinly covered crotch roughly, ordering her to tell you everything she knows.";
 		WaitLineBreak;
 		say "     'I know far more than your primitive meat brain can hold, you neanderthal,' she taunts. 'And it'll take more than that to get me to talk.' You manhandle her roughly for her insolence before pulling that silvery jumpsuit of her open from the rear. With her bare flesh-metal exposed to you, you grab that tight ass of hers and give it a hard slap. You have to bite back a yowl from hitting her metal bottom, at least pleased that she gives a whimper as well.";
-		if cocks of player > 0:
+		if player is male:
 			say "     Having gotten hard from your rough interrogation methods, you grind your manhood against her shiny buns and kick her legs apart. She squirms a little, but it's easy to keep her in position thanks to the handcuffs and her half-removed jumpsuit restricting her movement. Pressing your glans to her slick pussy, you again demand the information.";
 			WaitLineBreak;
 			say "     'Don't you dare, you meat beast.' Your prisoner, unable to pull free, can only squirm and moan as you rub your cock against her waiting folds, coaxing more clear, oily lubrication to leak from it. When you repeat your question, her response is to bite her lip and remain silent. A part of you is pleased, glad for the excuse to drive your [cock of player] penis into her[if cock length of player > 14], spreading her wide open to accommodate your [cock size desc of player] manhood[end if]. Still groping her bosom and tweaking those hard nipples of hers, you pound away at her pussy, stuffing her over and over again. And her body responds to the fucking, her hips grinding back onto you.";
@@ -71,7 +75,7 @@ to say sexwithmastermind:
 		say "     Deciding to have another go at [']interrogating['] the prisoner, you collect the cell door keys from the security safe as well as a set of handcuffs. Returning to her cell, you order the robotic woman to place her hands between the bars. 'Ah. I am to be [']questioned['] again, am I? Do you think you can break me this time? You're welcome to try,' she says flatly while letting you handcuff her to the bars. Her dispassionate attitude frustrates you, making your blood boil a little.";
 		say "     With her secured, you enter her cell and push her firmly against the bars. Already worked up, you jump right into it by pulling open her silvery jumpsuit so you can grope one of her shiny breasts. Playing with her tit and pinching her nipple causes her to release a soft whimper that she tries to bite back. Tweaking it again causes her to moan a little louder, so you keep it up. Adding a pair of fingers plunging into her slick pussy, you demand to know what she and the others are planning.";
 		say "     'Once you're all remade into automatons, you won't be so uppity. Oh, how I will enj- Ahhh! enjoy seeing you as a mindless robot.' Master Mind's nipples are hard and her pussy wet with juices, perhaps turned on by the sinister thought of turning you into another robotic slave";
-		if cocks of player > 0:
+		if player is male:
 			say ". Pushing her hard enough against the bars that her metallic skin makes them clang, you kick her legs apart and press your stiff cock against her well-lubed pussy. With your erection poised to fuck your prisoner, you ask her again for information on the others.";
 			WaitLineBreak;
 			say "     'Filthy organic! You'll get nothing from me!' she says as she struggles to pull free. Being pinned between you and the bars as well as bound by the handcuffs and her half-removed jumpsuit, she's unable to push you away. If anything, her struggles only further excite some dark corner of your mind, urging you on. With a slight growl, you thrust into her pussy, [if cock length of player > 14]spreading her wide to accommodate your [cock size desc of player] manhood[else]pushing your [cock size desc of player] manhood forward[end if]. Still groping her bosom and tweaking those hard nipples of hers, you pound away at her pussy, stuffing her over and over again. And her body responds to the fucking, her hips grinding back onto you.";

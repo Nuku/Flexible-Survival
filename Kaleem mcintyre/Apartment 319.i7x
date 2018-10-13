@@ -2,7 +2,12 @@ Apartment 319 by Kaleem mcintyre begins here.
 
 Section 1 - Apartment 319
 
+Table of GameEventIDs (continued)
+Object	Name
+Apartment 319	"Apartment 319"
+
 Apartment 319 is a situation.
+Apartment 319 is inactive.
 AptAid is a number that varies.
 
 The sarea of Apartment 319 is "High".
@@ -13,7 +18,7 @@ When play begins:
 
 Instead of resolving a Apartment 319:
 	if AptAid is 0:
-		Say "Briskly walking through the streets of the high rise you come across a man jogging down the streets. Not thinking much of him you step out of his way, being that he's going in the opposite direction of you. It's only when he's shot passed you that you realize that there is something strange about the other. But not being able to place it at the moment you simply shrug and go off about your way.";
+		say "Briskly walking through the streets of the high rise you come across a man jogging down the streets. Not thinking much of him you step out of his way, being that he's going in the opposite direction of you. It's only when he's shot passed you that you realize that there is something strange about the other. But not being able to place it at the moment you simply shrug and go off about your way.";
 	If AptAid is 1 and ( guy is banned or hellspawn is banned or furry is banned or hermaphrodite is banned ):
 		say "Jogging down the side of the streets of the high rise district you end up bumping into someone. Not being able to stop yourself you flail around wildly to collect your balance only to end up collapsing on the other in spite of your attempts. Luckily whoever is in front of you is able to catch you weight before you end up dragging the both of you down onto the pavement. 'Whoa there, are you okay stranger?' The person holding you up, who just so happens to be a Dalmatian, asks with their dark brown eyes shining at you somewhat playfully.";
 		say "Nodding to the other you pull yourself away from them to stand on your own two feet and then, on a whim, look down to inspect the shirt the Dal is wearing, an oddity in this town with almost everyone running around half naked. What you see makes your senses slightly spark and quickly you tip your head up to ask the Dal if he is from station 86. 'Y-yes, I am. Who are you though?' The man wearing the blue firefighter's embroidered shirt takes a step back from you, yet in spite of this you give the Dalmatian the rundown of what's happening and who you just so happen to be. Watching the other's face go through a multitude of expression before stilling on surprise you can bet that he never imagined hearing this information when he woke up today. ";
@@ -21,13 +26,14 @@ Instead of resolving a Apartment 319:
 		say "'Wow. That's...something. I didn't know Kenaz and Birch were... The Dalmatian seems to consider something while rubbing a hand against the back of his head before finally shrugging, almost helplessly so. 'Well, I guess I have a reason to hope in this city again. Heh, if you wouldn't mind I've got some things to think over while I finish up my run so...' Asking the other if he's going back to the fire station you get a slow nod from him. 'Y-yeah, I just, have some things to finish up back home so after I deal with that I'll head on over there a little later.' With a slow lick over the end of his muzzle the firefighter looks at you and then moves past you to go off about his way. Faintly you realize that it's almost as if he's trying to run away from you.";
 		say "Not sure what that was on about you don't think it's worth the hassle of trying to figure out as you've done your duty towards Kenaz by finding another member of his team. Time to head back to Homaru to ask the informant if he's found anyone else.";
 		say "(This content requires the guy, hellspawn, furry and hermaphrodite flags.)[line break]";
+		now Resolution of Apartment 319 is 100; [essential parts banned]
 		now Apartment 319 is resolved;
 		now HomaruSearch is 4;
 	else if AptAid is 1:
 		say "Finding the condominium that Homaru had told you about earlier you enter into the plush looking building and then head up the back stairwell on up to the third floor. Once there you quietly move through the hallway until you find the doorway marked with the numbers 319. Remembering that this is where one of the missing firefighters was [']supposed['] to be living at you knock on the door three times and then wait. As the wood barrier creaks open, ever so slightly, you find yourself nervously taking a step back when a voice seeps through the small crack of the doorway. 'Can I help you?";
 		say "Grunting low in your throat to try and suppress some of the unease that has gripped at your heart you tell the person who you are and then ask him if he happens to be one of the firefighters from station 86. 'Yes, but who are you?' The door opens a little more and you can faintly see a splash of black on white as a long snout peeks out. Informing the other know that you are friends with Kenaz, and that you are trying to find his coworkers, you watch as the door opens just a little more. What you see slightly amazes you as you find yourself looking into the fully transformed face of a Dalmatian mutant who is currently staring back at you somewhat unsurely.";
 		WaitLineBreak;
-		say "'Well, I guess that's a horse of a different colour then. Or maybe [']dog['] in my case.' When the door opens fully you can only watch in awe as a naked and half aroused Dalmatian male nervously squirms around in place while looking at you somewhat confusedly. 'The name's Dagaz. I know, strange as hell, but my sire was a weirdo like that.' [']Dagaz['] can only shrug as he timidly smiles at you.";
+		say "'Well, I guess that's a horse of a different color then. Or maybe [']dog['] in my case.' When the door opens fully you can only watch in awe as a naked and half aroused Dalmatian male nervously squirms around in place while looking at you somewhat confusedly. 'The name's Dagaz. I know, strange as hell, but my sire was a weirdo like that.' [']Dagaz['] can only shrug as he timidly smiles at you.";
 		say "Not sure what to say at this point, as you really hadn't thought up anything after the initial [italic type]rescue[roman type] effort had been completed. So, on a whim, you ask the other man how he's doing. 'Oh, fine as can be. I've been hiding in my uncle's pad while trying to wait this whole thing out[if findwires is 2 and fixedgens is 2]. With the power back on I've been able to get the radio and TV working so I've been somewhat ok[else]. Without any power I've just been trying to find ways to cure my boredom[end if]. Thank you for asking by the way.' Dagaz chuckles and then sighs before shaking his head.";
 		WaitLineBreak;
 		say "Seeing that the other is alright you let him know that Kenaz is at the fire station and that he's holding down the fort as best he can by himself. 'Really? I'm surprised about that with the city the way it is. What did he turn into?' The question is both honest and a little pointed, as though the other man is somewhat envious over something. When you let him know that Kenaz is still, roughly, 98% human Dagaz is quick to growl in anger. 'Lucky bastard! He would be the one that gets to keep his skin while I...' A bitten of cough ends the rant before it could begin.";
@@ -42,11 +48,13 @@ Instead of resolving a Apartment 319:
 			LineBreak;
 			say "Making the decision that whatever going on with Dagaz is going to [italic type]be[roman type] your problem as of now, you make plans to come back later on to in the evening to check up on the other man. Because whatever is going on, it's mighty suspicious![line break][line break]";
 			now AptAid is 2;
+			now Resolution of Apartment 319 is 1; [resolved to come back and check it out]
 			increase score by 1;
 		else:
 			LineBreak;
 			say "Deciding that it's not really much of your concern, as the Dalmatian looked as healthy as could be, despite his weird tramp stamp, you simply bow your head to the closed door and then turn to go about your way. You've done your civic duty for the day after all.";
 			now Homarusearch is 4;
+			now Resolution of Apartment 319 is 99; [ignored what goes on with Dagaz]
 			now Apartment 319 is resolved;
 			increase score by 3;
 	if AptAid is 2:
@@ -96,7 +104,7 @@ Instead of resolving a Apartment 319:
 										WaitLineBreak;
 										say "Another attack by the paddle, this time across the flat of the Dalmatian's chest, has Dagaz crying out as he thrusts his hips wildly into the air. When your fourth strike lights a bolt of pain across the outer edge of the firefighter's right butt cheek Dagaz is nearly howling his praise, or maybe submission, to the night sky outside as he shudders and shakes while humping his cock up at nothing. The red tapered mass of flesh is now leaking pre almost like a broke water fountain and from both the smell and then look of the gooey mess dripping onto the hardwood floor you can tell it won't be long now.";
 										WaitLineBreak;
-										say "Hitting the Dalmatian over and over with the paddle - up over his left pectoral muscle, down across his arm, up over his torso and then across his other butt cheek - you beat the other man until Dagaz is soon nothing more than a yowling mess of fur, sweat and free flowing pre cum. Looking at the Dalmatian's pulsating cock you don't fight the perverted smirk that creepss higher onto your lips as you watch the bulb of the spotted canine's knot swelling up to its full girth. Turning your head to look to the paddle in your hands you chuckle before lifting your eyes to look intently up at Dagaz's whimpering form.";
+										say "Hitting the Dalmatian over and over with the paddle - up over his left pectoral muscle, down across his arm, up over his torso and then across his other butt cheek - you beat the other man until Dagaz is soon nothing more than a yowling mess of fur, sweat and free flowing pre cum. Looking at the Dalmatian's pulsating cock you don't fight the perverted smirk that creeps higher onto your lips as you watch the bulb of the spotted canine's knot swelling up to its full girth. Turning your head to look to the paddle in your hands you chuckle before lifting your eyes to look intently up at Dagaz's whimpering form.";
 										say "     [bold type]Should you?[roman type][line break]";
 										LineBreak;
 										say "     ([link]Y[as]y[end link]) - Yes.";
@@ -110,6 +118,7 @@ Instead of resolving a Apartment 319:
 											say "Now comes the really fun part: the clean up! Joy...";
 											say "When Dagaz comes to later on its with the sun shining down on his face and his body covered with a slightly scratchy feeling blanket. Not really sure of what's going on the Dalmatian tries to stand himself up only to stop when he feels something, very hard and very unforgiving hampering his attempts. Turning to look at his back, after he rolls himself over onto his stomach, the Dalmatian gasps as he observes the end of a familiar looking wooden paddle stuffed up into his tailhole. Gaping in confusion it takes the Dalmatian maybe a full three minutes to recall what happened last night, but when all of his memories return the firefighter can only whimper and groan as he blushes furiously while wagging his thin whip of a tail back behind him like mad.";
 											now Homarusearch is 4;
+											now Resolution of Apartment 319 is 2; [player gave Dagaz a paddling]
 											now Apartment 319 is resolved;
 											increase score by 25;
 										else:
@@ -119,17 +128,20 @@ Instead of resolving a Apartment 319:
 											say "Rubbing your fingers through the trailing mess that ends up falling across the fur of Dagaz's chest you watch as the Dalmatian suddenly goes slack inside of his sling. Having not expected that to happen you take a second to panic you press your fingers against the Dal's throat and then sigh as you find a strong and steady pulse underneath your fingers. At that point you pull your other hand from off of the firefighter's still pulsating dick and then go to work trying to release the other man from his bonds.";
 											say " Ten minutes later you free the Dalmatian and then set about cleaning Dagaz up off both spooge and sweat after finding some clean towels stored inside of his hallway closet. Setting the dozing doggy onto his couch and finding a blanket to cover him up in you turn to get ready to leave, but then stop after realizing that you left the paddle you had used on him over on the floor underneath the now listless looking sling. Turning to regard the slumbering Dalmatian...you smirk deviously as you mildly wonder if...";
 											now Homarusearch is 4;
+											now Resolution of Apartment 319 is 3; [player stroked off Dagaz]
 											now Apartment 319 is resolved;
 											increase score by 25;
 									else:
 										LineBreak;
 										say "Thinking that would be over the line you go and help the Dalmatian out of his sling and then proceed to carry the shivering and whimpering Dalmatian over to his couch. When the other begins to sob and whine at you about how you [']ruined everything['] and that he's [']such a pervert['] you prepare yourself for a long night of trying to soothe the other man as leaving Dagaz alone right now would just be unforgivable with the other in his current state.";
 										WaitLineBreak;
-										say " Morning ends up finding the both of you half asleep on top of one another, and you slightly confused as you wonder where in heck you are. That is, until you look to the Dalmatian and then think over last night's little [']adventure[']. Grunting at some of the crap you have to go through for the sake of friendship you shake your head before turning to look into Dagaz's snoring face. Taking a moment to marvel at how sexy the other is you kiss the firefighter on the tip of his nose and then extract yourself from him so as to go about your day. A quiet whimper caresses itself across your ears making you stop from your departure to turn and look at the still asleep Dalmatian. Deciding to find a blanket to throw across the other man before you leave you faintly wonder is this how lovers feel towards one another when one of them is either ill or injured. This warm and protective feeling...";
+										say "Morning ends up finding the both of you half asleep on top of one another, and you slightly confused as you wonder where in heck you are. That is, until you look to the Dalmatian and then think over last night's little [']adventure[']. Grunting at some of the crap you have to go through for the sake of friendship you shake your head before turning to look into Dagaz's snoring face. Taking a moment to marvel at how sexy the other is you kiss the firefighter on the tip of his nose and then extract yourself from him so as to go about your day. A quiet whimper caresses itself across your ears making you stop from your departure to turn and look at the still asleep Dalmatian. Deciding to find a blanket to throw across the other man before you leave you faintly wonder is this how lovers feel towards one another when one of them is either ill or injured. This warm and protective feeling...";
 										now Homarusearch is 4;
+										now Resolution of Apartment 319 is 4; [stayed with Dagaz after stopping the SM session]
 										now Apartment 319 is resolved;
 										increase score by 25;
-										extend game by -8;
+										follow the turnpass rule;
+										follow the turnpass rule;
 								else if fightoutcome >= 20 and fightoutcome <= 29:
 									say "Having lost to the incubus you are swiftly picked up and then thrown headfirst out of the apartment. Landing on your head you can only lament your own weakness as you listen the front door slam shut behind your right before the sounds of someone being lashed and spanked start up from the other side of the closed door. A yowl follows the noise and tiredly you can only hope that Dagaz will be alright in there. You're definitely going to come see about him later before going back to Homaru.";
 									now AptAid is 3;
@@ -192,8 +204,9 @@ Instead of resolving a Apartment 319:
 				WaitLineBreak;
 		else:
 			LineBreak;
-			say "Not wanting to get mixed up in all of this since Dagaz [']supposedly['] got himself into this situation of his own volition you tip your head to the unknown mutant and then casually walk out of the apartment. Finding the door slamming close behind you, you don't try and think about the sounds of yipping and yowling going on behind you as you simply walk on about your way.";
+			say "Not wanting to get mixed up in all of this since Dagaz [']supposedly['] got himself into this situation of his own volition you tip your head to the unknown mutant and then casually walk out of the apartment. Finding the door slamming close behind you, you don't try and think about the sounds of yipping and yowling going on behind you as you simply walk on about your way. Maybe you should come back some other time to check on Dagaz then.";
 			now Homarusearch is 4;
+			now AptAid is 3;
 			increase score by 2;
 			WaitLineBreak;
 	if AptAid is 3:
@@ -204,6 +217,7 @@ Instead of resolving a Apartment 319:
 		say "'Anyway, thanks for the assist and don't go running your trap off to anybody about this, okay?' A slow and unsure nod has the firefighter smiling at you. A quick lick across your [facename of player] cheek and Dagaz is pulling back to blush somewhat unsurely at you. 'Thank you, friend.' And with that, the Dalmatian walks backwards into his home and then quietly closes his door, leaving you standing in confusion as you look at the now sealed doorway.";
 		WaitLineBreak;
 		say "Feeling like you've done all you can here, it's time to head back to Homaru's place!";
+		now Resolution of Apartment 319 is 5; [checked in with Dagaz after his SM session]
 		now Homarusearch is 4;
 		increase score by 20;
 

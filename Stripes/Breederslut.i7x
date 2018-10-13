@@ -22,13 +22,16 @@ to say beatthebreederslut:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Breederslut";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The template attacks you in some abstract manner![or]The template leaves you greater understanding, thereby lowering your resistance to it![or]The template batters you with examples![or]The template firmly makes its point![at random]";
 	now defeated entry is "[beatthebreederslut]";
 	now victory entry is "[losetobreederslut]";
@@ -53,11 +56,11 @@ When Play begins:
 	now HP entry is 15; [ The monster's starting HP. ]
 	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 3; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 12; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -72,8 +75,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Heat
@@ -99,12 +103,12 @@ to say bsheat:
 	increase libido of player by 3;
 	if Dominick is visible and ( lastfuck of Dominick - turns ) >= 8 and a random chance of libido of player in 150 succeeds:
 		setmonster "Breederslut";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		LineBreak;
 		say "     Looking over at Dominick, you feel another tremble of excitement strike your loins. You start to pant, suddenly feeling very hot - especially between your legs. The sexy husky's nose sniffs the air, turning towards you with a confident grin. His cock twitches and dribbles a strand of pre onto the floor. With your eyes drawn to that meaty red pole, your insides flutter again with heated desire.";
 		say "     'Come here, you horny thing,' Dom says, getting up from his seat. 'I know you want it.' His canine shaft, now fully erect, stands proud and ready for you. With the heat only growing stronger in your loins, you obey and head over to him. Moving onto all fours, you present yourself to him with a needy whine.";
 		WaitLineBreak;
-		say "     Dom places his paws on your rump and gives your ass a squeeze. 'That's a good [if cocks of player > 0]wannabe-[end if]bitch,' he says, kneeling down to sniff your puffy dog-cunt. His hot, wet breath fans across your hot, wet folds moments before he gives your dripping cunt a nice, long lick. 'Oh, how I love that taste. Nothing like a bitch in heat to get a stud hard. So hot and ready for a belly full of my puppies. You'd like that, wouldn't you?' he pants in your ear even as he mounts you and sinks his canine cock into your trembling tunnel. All you can do in moan in response, your heat-addled mind loving the thought of your belly getting filled by a litter of his pups.";
+		say "     Dom places his paws on your rump and gives your ass a squeeze. 'That's a good [if player is male]wannabe-[end if]bitch,' he says, kneeling down to sniff your puffy dog-cunt. His hot, wet breath fans across your hot, wet folds moments before he gives your dripping cunt a nice, long lick. 'Oh, how I love that taste. Nothing like a bitch in heat to get a stud hard. So hot and ready for a belly full of my puppies. You'd like that, wouldn't you?' he pants in your ear even as he mounts you and sinks his canine cock into your trembling tunnel. All you can do in moan in response, your heat-addled mind loving the thought of your belly getting filled by a litter of his pups.";
 		say "     He pounds your juicy cunt with considerable zeal, his cock throbbing inside you all the while. You imagine his doggy dick is drooling precum laced with sperm, a chance to become pregnant even now. Not that you want it to stop; your body simply aches for a thorough fucking. You push back into his thrusts, whining and panting like the bitch in heat you are. He takes the nape of your neck in his jaws and growls his dominance and ownership of you.";
 		WaitLineBreak;
 		say "     He ruts you like what feels like a long time, having pushed you to several short orgasms. But now a big one is building even as his panting grows heavier. His knot bulges larger, tying the two of you together, ensuring there will be no escape from your deliciously decadent fate. Knowing he's getting close as well turns you on all the more, your overheated womb demanding his gooey load to put out the fiery need burning inside it by this point. And when it does come, it is a powerful blast of cum after another, painting your vagina and leaking into your womb to claim your pups.";
@@ -117,23 +121,23 @@ to say bsheat:
 Section 8 - Definitions
 
 Definition: a person is breederslutfaced:
-	if the facename of the player is "Breederslut", yes;
+	if facename of player is "Breederslut", yes;
 	no;
 
 Definition: a person is breederslutskinned:
-	if the skinname of the player is "Breederslut", yes;
+	if skinname of player is "Breederslut", yes;
 	no;
 
 Definition: a person is breederslutbodied:
-	if the bodyname of the player is "Breederslut", yes;
+	if bodyname of player is "Breederslut", yes;
 	no;
 
 Definition: a person is breederslutcocked:
-	if the cockname of the player is "Breederslut", yes;
+	if cockname of player is "Breederslut", yes;
 	no;
 
 Definition: a person is breedersluttailed:
-	if the tailname of the player is "Breederslut", yes;
+	if tailname of player is "Breederslut", yes;
 	no;
 
 
@@ -149,7 +153,7 @@ when play ends:
 				say "     You succumb to your template infection.";
 		else:
 			say "     You survive, but were infected by the template.";
-			if cocks of player > 0:							[MALE/HERM]
+			if player is male:							[MALE/HERM]
 				say "     Additional text for a male/herm survivor.";
 			else if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 				say "     Additional text for a female survivor who can become preggers.";

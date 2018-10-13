@@ -6,7 +6,7 @@ Version 1 of Albino Mouse by Stripes begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviours that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
+[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 when play begins:
 	add { "Albino Mouse" } to infections of furry;
@@ -33,7 +33,7 @@ to say beatdrmouse:
 
 
 to say drmousedesc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	setmongender 3;
 	if hospfight is 1:
@@ -66,27 +66,30 @@ to say drmousedesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Albino Mouse"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[drmouseattack]";
 	now defeated entry is "[beatdrmouse]";
 	now victory entry is "[losetodrmouse]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[drmousedesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "mouse-like head with large ears and cute whiskers on your muzzle"; [ Face description, format as the text "Your face is (your text)."]
-	now body entry is "small and mouse-like, with pink paws for hands and feet"; [ Body Description, format as the text "Your Body is (your text)."]
-	now skin entry is "pure white fur over your"; [ skin Description, format as the text "your body is covered in (your text) skin."]
+	now face entry is "mouse-like head with large ears and cute whiskers on your muzzle"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "small and mouse-like, with pink paws for hands and feet"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "pure white fur over your"; [ skin Description, format as "your body is covered in (your text) skin."]
 	now tail entry is "You have a long, murine tail."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "pink"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it deforms and reshapes itself into something more rodent-like. You gain large ears and whiskers around your muzzle. Your eyes turn a blood-red"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it becomes that of an anthropomorphic mouse. At only about four feet tall, your stature matches your species. Your hands are replaced with pink paws with nimble digits"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft, white fur covers you"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "long, thin tail forms. It is rodent-like and has pale white fur covering it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it turns a soft pink in colour. It is nearly human in shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it turns a soft pink in color. It is nearly human in shape"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 8;
 	now dex entry is 12;
 	now sta entry is 12;
@@ -97,7 +100,7 @@ When Play begins:
 	now HP entry is 30;
 	now lev entry is 4; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
 	now wdam entry is 3; [Amount of Damage monster Does when attacking.]
-	now area entry is "nowhere"; [ Location of monster, in this case nowhere]
+	now area entry is "Nowhere"; [ Location of monster, in this case nowhere]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
@@ -116,7 +119,8 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Albino Mouse ends here.

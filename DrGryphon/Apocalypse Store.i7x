@@ -3,7 +3,11 @@ Version 1 of Apocalypse Store by DrGryphon begins here.
 
 "Adds new equipment for the player."
 
-Clothing Store is a scavevent.  The sarea of Clothing Store is "Outside".
+Table of GameEventIDs (continued)
+Object	Name
+Clothing Store	"Clothing Store"
+
+Clothing Store is a scavevent. The sarea of Clothing Store is "Outside".
 
 instead of resolving Clothing Store:
 	say "While walking through one of the older parts the city, you come across an old used clothing store. The place looks like a bomb went off inside, with windows and doors that are blown out, along with a torn apart interior and debris littered around the floor.";
@@ -16,7 +20,7 @@ instead of resolving Clothing Store:
 	increase score by 5;
 	now Clothing Store is resolved;
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "Apocalypse Skirt"	"A very short skirt that has been singed and torn by an explosion. It's still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Skirt
 "Apocalypse Shorts"	"A pair of stretchy running shorts that have been singed and torn by an explosion. They're still wearable and the destroyed look fits in with the current situation."	1	Apocalypse Shorts

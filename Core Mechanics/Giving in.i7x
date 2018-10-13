@@ -12,7 +12,7 @@ understand "givein to nanites" as givingup.
 understand "givein to changes" as givingup.
 
 check givingup:
-	if the humanity of the player > 99:
+	if the humanity of player > 99:
 		say "To what? There is nothing to take control if you do.";
 		stop the action;
 
@@ -25,7 +25,7 @@ carry out givingup:
 		now quitter is 1;
 	else:
 		say "Do you want to take control of your desires again, or not?";
-		if the player consents:
+		if player consents:
 			say "You pull your mind back together.";
 			now givingupton is 0;
 			now quitter is 0;
@@ -34,7 +34,7 @@ carry out givingup:
 
 an everyturn rule:
 	if givingupton is 1:
-		decrease the humanity of the player by 20;
+		decrease humanity of player by 20;
 		say "The nanites work inside your partially willing brain, making you more feral. ([humanity of player]/100)";
 		decrease score by 200;
 		if humanity of player < 0:

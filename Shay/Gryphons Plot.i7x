@@ -1,4 +1,4 @@
-﻿Version 2 of Gryphons Plot by Shay begins here.
+Version 2 of Gryphons Plot by Shay begins here.
 [ Original Event idea by Hellerhound ]
 [ Version 1 - Ideas for expansion by Wahn]
 [ Version 2 - Complete rewrite by Shay ]
@@ -22,6 +22,10 @@
 [ 100: player had no interest, event resolved                                                            ]
 
 GryphPlotTracking is a number that varies.
+
+Table of GameEventIDs (continued)
+Object	Name
+Gryphon's Plot	"Gryphon's Plot"
 
 Gryphon's Plot is a situation. The level of Gryphon's Plot is 2.
 the sarea of Gryphon's Plot is "Outside".
@@ -77,16 +81,20 @@ instead of resolving a Gryphon's Plot:
 					if fightoutcome < 20: [player won]
 						say "[PlayerWinsVsGryphonPlot1]";
 						now GryphPlotTracking is 10; [player helped the soldiers]
+						now Resolution of Gryphon's Plot is 10; [player helped the soldiers]
 					else if fightoutcome > 19 and fightoutcome < 30: [lost]
 						say "[PlayerLosesVsGryphonPlot1]";
 						now GryphPlotTracking is 90; [player tried to help, failed - soldiers transformed, these specific gryphons pissed at the player]
+						now Resolution of Gryphon's Plot is 90; [player tried to help, failed - soldiers transformed, these specific gryphons pissed at the player]
 					else if fightoutcome is 90: [fled]
 						say "[PlayerFleesVsGryphonPlot1]";
 						now GryphPlotTracking is 20; [player tried to help, failed - soldiers transformed, these specific gryphons pissed at the player]
+						now Resolution of Gryphon's Plot is 20; [player tried to help, failed - soldiers transformed, these specific gryphons pissed at the player]
 				else if calcnumber is 2: [helping the gryphons]
 					LineBreak;
 					say "[PlayerHelpsGryphonPlot1]";
 					now GryphPlotTracking is 50; [player helped the gryphons]
+					now Resolution of Gryphon's Plot is 50; [player helped the gryphons]
 				else if calcnumber is 3: [watching]
 					LineBreak;
 					say "[PlayerWatchesGryphonPlot1]";
@@ -94,14 +102,17 @@ instead of resolving a Gryphon's Plot:
 					LineBreak;
 					say "     Taking one last look at the scene you decide, the situation clearly isn't your problem. Quietly stepping back, you wander away slowly to avoid to attracting any unwanted attention to yourself. Soon, you are well out of sight of the event as the screeching and other noises die down. Although you didn't wish to be involved, a part of you can't help but wonder how things worked out. Despite the fact that you are curious, you decide that alone isn't enough to go back and possibly run into any trouble that may still linger there. Forcibly pushing the recent event out of mind, you continue on your merry way.";
 					now GryphPlotTracking is 100; [player had no interest]
+					now Resolution of Gryphon's Plot is 100; [player had no interest]
 					now Gryphon's Plot is Resolved; [event will not come up again]
 			else: [not perceptive enough / unlucky]
 				say "     Setting out in search of where the gryphons are, you wander through the deserted streets. Some time later, as you continue trekking through the cities['] rubble for the source of the noise, all sounds eventually cease. Hm, seems like you won't find that group of gryphons today. Maybe if you were a bit more perceptive, you might have found a quicker way to get to them...";
 				now GryphPlotTracking is 1; [player failed to find them]
+				now Resolution of Gryphon's Plot is 1; [player failed to find them]
 		else: [refused to investigate]
 			LineBreak;
 			say "     With a shrug, you try to ignore the noises and concentrate on your immediate surroundings instead. Surviving in the city is difficult enough without actively going out to find trouble...";
 			now GryphPlotTracking is 100; [player had no interest]
+			now Resolution of Gryphon's Plot is 100; [player had no interest]
 			now Gryphon's Plot is Resolved; [event will not come up again]
 	else if GryphPlotTracking is 10: [player helped the soldiers, gryphons are pissed]
 		say "     As you wander through the streets of the creature-infested city, you stumble upon a group of non-infected human soldiers. Inching forward to take a closer look, something inside your head clicks. You knew they looked familiar, it is the soldiers you saved from the gryphons awhile back! One of the men spots you and waves you over, patting a place on the ground beside him.";
@@ -122,14 +133,17 @@ instead of resolving a Gryphon's Plot:
 				say "[bold type]You gain 3 units of food![roman type][line break]";
 				increase carried of food by 3;
 				now GryphPlotTracking is 11; [helped the soldiers beat up the gryphons]
+				now Resolution of Gryphon's Plot is 11; [helped the soldiers beat up the gryphons]
 			else:
 				LineBreak;
 				say "     Turning the soldiers down, you watch as the looks on their faces instantly turn from happy to disappointed. Rising from your place on the ground, you say your goodbyes to the men. They see you off with solemn waves as you continue along your merry way.";
 				now GryphPlotTracking is 18; [refused to help the soldiers beat up the gryphons]
+				now Resolution of Gryphon's Plot is 18; [refused to help the soldiers beat up the gryphons]
 		else:
 			LineBreak;
 			say "     Deciding that you want nothing to do with whatever the men are up to, you turn your back on the soldier's offer. Surprised by your reaction, but not deterred, they grudgingly, but determinedly, return to their task as you continue along your merry way.";
 			now GryphPlotTracking is 19; [refused to sit with them]
+			now Resolution of Gryphon's Plot is 19; [refused to sit with them]
 			now Gryphon's Plot is Resolved; [event will not come up again]
 	else if GryphPlotTracking is 30: [player watched the gryphons, soldiers are transformed]
 		say "     Walking through the ruins of the city, you come across a sight that you don't see all that often. Three gryphons huddled around a slowly dying fire ahead of you are wearing torn and stained army uniforms, telling you that the men haven't been transformed all that long, or at least have not succumbed to the infection yet, likely retaining much of their original personality. Then things click in your mind, and you remember the soldiers in that jeep being attacked by gryphons. This must be them!";
@@ -141,9 +155,11 @@ instead of resolving a Gryphon's Plot:
 			if player consents:
 				LineBreak;
 				say "     Walking forward with your shoulders high and wings lightly spread upon your back, you confidently approach them. Taking note of your gryphon features, the men tense up, ready for a fight. You take another step closer, and one shouts, 'Go away! We don't want your kind here!' before throwing a nearby, empty aluminum can in your direction as one of his friends next to him chuckles. 'At ease, Kevin. His kind is now also our kind. Nothing else they can take away from us.' The man, Kevin, looks down at his feet grumbling, 'I guess that you are right' before returning to his position around the small fire. With Kevin calmed down, his friend turns to you. 'I would get going. They are at bay for now, but we have all been wronged by gryphons. Maybe that shouldn't be held against all gryphons, as it was only a few, but they took what little we had left. Which I'll be the first to admit, wasn't much to begin with...' That said, he turns back to the group, and their slowly dying flame in silence. The conversation clearly over, you start to distance yourself from the scene, continuing along your way.";
+				now Resolution of Gryphon's Plot is 31; [gryphon player talked to the soldier gryphons]
 			else:
 				LineBreak;
 				say "     Deciding that it is not worth the trouble, you leave the gathering of men and continue along your way throughout the city. After all, you have enough trouble as it is, why go actively look for it?";
+				now Resolution of Gryphon's Plot is 32; [gryphon player avoided to the soldier gryphons]
 		else:
 			say "     Do you want to approach them and have a chat?";
 			LineBreak;
@@ -159,12 +175,15 @@ instead of resolving a Gryphon's Plot:
 					LineBreak;
 					say "[bold type]You gain 3 units of food![roman type][line break]";
 					increase carried of food by 3;
+					now Resolution of Gryphon's Plot is 33; [human player talked to soldier gryphons]
 				else:
 					LineBreak;
 					say "     Approaching the group, you are met with looks that convey a mixture of alarm and surprise, following by one gryphon soldier stepping up to speak, his voice raspy and obviously pained. 'Please, just leave us alone, we have nothing else to give. We have already recently lost our humanity.' And with that, he returns to his seat around the fire, all the gryphons staring at you with caution. Not feeling as if the gryphons want your company in the midst of their pity party, you start to distance yourself from the scene and continue along your way...";
+					now Resolution of Gryphon's Plot is 34; [infected player talked to soldier gryphons]
 			else:
 				LineBreak;
 				say "     Deciding that it is not worth the trouble, you leave the gathering of men and continue along your way throughout the city.";
+				now Resolution of Gryphon's Plot is 34; [player avoided soldier gryphons]
 				now Gryphon's Plot is Resolved; [event will not come up again]
 	else if GryphPlotTracking is 40: [player watched the gryphons, soldiers are transformed, and the player joined in for the submission]
 		say "     Walking through the ruins of the city, you come across a sight that you don't see all that often. Three gryphons huddled around a slowly dying fire ahead of you are wearing torn and stained army uniforms, telling you that the men haven't been transformed all that long, or at least have not succumbed to the infection yet, likely retaining much of their original personality. Then things click in your mind, and you remember the soldiers in that jeep being attacked by gryphons. This must be them!";
@@ -183,6 +202,7 @@ instead of resolving a Gryphon's Plot:
 			if player consents:
 				LineBreak;
 				say "     Putting your hands in front of you in a peaceful gesture, you drop to your knees and convey to the soldiers that they can do anything they please with you. Smirking, the gryphons strip off the tattered remnants of their clothing before the one who looks like the leader steps forth, stroking his cock to full erect before shoving it into your waiting mouth. Meanwhile, the other two approach you from behind, and you feel one cock make its way [if player is male]into your ass, burying himself balls-deep inside, [else if player is female]into your soaking wet pussy, burying himself balls-deep inside, [else]against the underside of your sexless crotch, rubbing his cock where it feels good, [end if]while, the other makes use of one of your free hands. Locked into a mess of sex and sweat, it isn't long before you lose consciousness, the gryphons making thorough use of all of your holes. You wake three hours later, drenched in buckets load of cum, the gryphons and their fire nowhere to be found. Cleaning yourself off as best you can, you gather your pack and continue upon your way. What a wild time...";
+				now Resolution of Gryphon's Plot is 41; [player submitted to the vengeful soldier gryphons]
 			else:
 				LineBreak;
 				say "     Backing away from the gryphons, you draw your weapon. Looks like the only way out of this is to fight...";
@@ -199,10 +219,11 @@ instead of resolving a Gryphon's Plot:
 					now inasituation is false; [reset]
 					increase GroupFightCounter by 1;
 				if fightoutcome < 20: [player won]
-					say "     The third gryphon, wary of the defeat of the first two, draws back from you. Whimpering with a sexual need and looking ashamed, he addresses you, 'I'm sorry, I don't what came over me. I guess the infection has taken home more rapidly than I can control or I had realized.' The gryphon then drops two MREs at your feet, turning to you with a look of regret. 'Please, take these as an apology. I'm sorry that I don't have more to offer...'  He then spreads his wings and disappears into the distance. His two companions use the moment in which you pounce on the food to make their own escapes.";
+					say "     The third gryphon, wary of the defeat of the first two, draws back from you. Whimpering with a sexual need and looking ashamed, he addresses you, 'I'm sorry, I don't what came over me. I guess the infection has taken home more rapidly than I can control or I had realized.' The gryphon then drops two MREs at your feet, turning to you with a look of regret. 'Please, take these as an apology. I'm sorry that I don't have more to offer...' He then spreads his wings and disappears into the distance. His two companions use the moment in which you pounce on the food to make their own escapes.";
 					LineBreak;
 					say "[bold type]You gain 2 units of food![roman type][line break]";
 					increase carried of food by 2;
+					now Resolution of Gryphon's Plot is 42; [player fought off the vengeful soldier gryphons]
 				else if fightoutcome > 19 and fightoutcome < 30: [lost]
 					say "     Not strong enough to single-handedly defeat the group of gryphons, you fall to your knees, the loser of the battle. With pleased smirks, the soldiers converge upon you, bending you over to have the best access to your holes. Taking turns, the gryphons [if player is male]shove themselves balls-deep into your ass[else if player is female]shove themselves balls-deep into your soaking wet pussy[else]rub themselves against the underside of your sexless crotch where it feels good[end if]. Soon, undeniably locked in a mix of sex and sweat, it isn't long before you lose all sense of consciousness.";
 					if carried of food > 2:
@@ -217,13 +238,16 @@ instead of resolving a Gryphon's Plot:
 						decrease carried of water bottle by 3;
 					else:
 						say "     You wake three hours later, your body covered in a bucket load of cum as you collect your pack, which you notice thankfully has the same heft as before. You guess that despite the gryphons having you in a vulnerable position, they had decided to leave your belongings alone. Shrugging your shoulders at the fact, you clean as much cum as you can off of your body, before slowly but surely continuing along your way...";
+					now Resolution of Gryphon's Plot is 43; [player lost to the vengeful soldier gryphons]
 				else if fightoutcome is 90: [fled]
 					say "     Not having much faith in your ability to fight the men off, you flee. The soldiers donning unattended hard-ons shout curses in your direction in the wake of your successful escape...";
 					now Gryphon's Plot is Resolved; [event will not come up again]
+					now Resolution of Gryphon's Plot is 44; [player fled from to the vengeful soldier gryphons]
 		else:
 			say "     With a shrug you turn you turn your back on the group of gryphons and walk off down the street.";
+			now Resolution of Gryphon's Plot is 45; [player didn't speak to soldier gryphons]
 	else if GryphPlotTracking is 50: [player helped the gryphons, soldiers are transformed]
-		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaim, 'Hey, I know you. You are the one who helped those other gryphons make me like this! Let's see how strong you are without your friends along. Come on, guys, let's get em!' Seeing no other option than to fight, you ready your weapon.";
+		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaim, 'Hey, I know you. You are the one who helped those other gryphons make me like this! Let's see how strong you are without your friends along. Come on, guys, let's get [']em!' Seeing no other option than to fight, you ready your weapon.";
 		let GroupFightCounter be 0;
 		now fightoutcome is 0; [reset]
 		while fightoutcome < 20 and GroupFightCounter < 2: [runs for 2 times or until the player loses or flees]
@@ -241,6 +265,7 @@ instead of resolving a Gryphon's Plot:
 			say "[bold type]You gain 2 units of food![roman type][line break]";
 			increase carried of food by 2;
 			now GryphPlotTracking is 51; [player fought off vengeful soldier gryphons]
+			now Resolution of Gryphon's Plot is 51; [player fought off vengeful soldier gryphons]
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
 			say "     Not strong enough to single-handedly defeat the vengeful group of gryphons, you fall to your knees, the loser of the battle. With pleased smirks, the soldiers converge upon you, two of them taking turns beating you as the third helps himself to any items he wants from your pack. Between the two of them, it isn't long before you have thoroughly learned your lesson, falling into a state of unconsciousness.";
 			PlayerWounded 10;
@@ -257,9 +282,11 @@ instead of resolving a Gryphon's Plot:
 			else:
 				say "     You wake three hours later, your body stiff as you collect your pack, which you notice has the same heft as before. You guess that despite the gryphons taking apart its contents, they couldn't find anything that they wanted. Shrugging your shoulders at the fact and ignoring the protests of your thoroughly bruised body, you slowly, but surely, continue along your way, making a note in your head to try and avoid the soldiers should you encounter them in the near future...";
 				now GryphPlotTracking is 59; [player got a beating from vengeful soldier gryphons]
+				now Resolution of Gryphon's Plot is 59; [player got a beating from vengeful soldier gryphons]
 		else if fightoutcome is 90: [fled]
 			say "     Not having much faith in your ability to fight the men off, you flee, the soldiers cursing at you as you disappear into the distance...";
 			now GryphPlotTracking is 58; [player ran from the vengeful soldier gryphons]
+			now Resolution of Gryphon's Plot is 58; [player ran from the vengeful soldier gryphons]
 			now Gryphon's Plot is Resolved; [event will not come up again]
 	else if GryphPlotTracking is 90 or GryphPlotTracking is 20: [player tried to help, failed, gryphons are pissed]
 		say "     Wandering through the ruins of the city, you see an unusual sight: There is a group of gryphons, still wearing the tattered remains of army uniforms upon their bodies as they sit huddled around a fire. Inching closer to the unlikely scene, you accidentally step on an empty aluminum can, causing the gryphon soldiers to jerk up in alarm as they are alerted to your presence. Spotting you, one of the gryphons exclaims, 'Hey, I know you. You tried to help us fight the gryphons off that one day. Don't worry about the fact that you didn't succeed. We still appreciate that you tried. Besides, all of us are starting to like our new forms anyway. I always wanted to fly when I was a kid. Granted, I was thinking it would be as an airplane pilot, but you know, growing wings of my own I guess is the next best thing.' The soldier then reaches into his pack, pulling out three MREs and hands them to you with a wink. 'For the road, kid. Good luck out there.' With that said, he returns to his seat near their makeshift fire, as you continue on your way, three MREs richer than before...";
@@ -267,6 +294,7 @@ instead of resolving a Gryphon's Plot:
 		say "[bold type]You gain 3 units of food![roman type][line break]";
 		increase carried of food by 3;
 		now GryphPlotTracking is 91; [player got a thanks from the soldier gryphons for trying to help]
+		now Resolution of Gryphon's Plot is 91; [player got a thanks from the soldier gryphons for trying to help]
 		now Gryphon's Plot is Resolved; [event will not come up again]
 
 to say PlayerWinsVsGryphonPlot1: [player beat up the 3 gryphons]
@@ -281,7 +309,7 @@ to say PlayerWinsVsGryphonPlot1: [player beat up the 3 gryphons]
 
 to say PlayerLosesVsGryphonPlot1: [player lost to the 3 gryphons]
 	setmonster "Hermaphrodite Gryphon";
-	say "     Breathing heavily, you fall to the ground, too exhausted to continue the fight. As you do so, the gryphons no longer see you as a threat and renew the aerial assault on the soldiers. While your own intervention was enough to allow the soldiers to somewhat regain their bearings, you watch helplessly as the gryphons show it to not be enough. As they corner the desperate men, their shafts harden in anticipation. You struggle to get back on your feet as you watch the gryphons fuck the soldiers, the formerly uninfected men becoming increasingly less human. Smiling in satisfaction as their goal is accomplished, they turn to you, smirking. 'Your turn,' one gryphon screeches out just as you finally get back onto your feet. You attempt to escape their grasp, but between the three of them, it isn't long before they have you held down, taking turns at shoving their cocks inside of your [if cunts of player > 0]pussy[else]ass[end if]. The by now fully transformed soldiers join in, and you soon lose consciousness in the midst of a gang-bang by horny gryphons. You wake a couple hours later, cum covering every surface of your body.";
+	say "     Breathing heavily, you fall to the ground, too exhausted to continue the fight. As you do so, the gryphons no longer see you as a threat and renew the aerial assault on the soldiers. While your own intervention was enough to allow the soldiers to somewhat regain their bearings, you watch helplessly as the gryphons show it to not be enough. As they corner the desperate men, their shafts harden in anticipation. You struggle to get back on your feet as you watch the gryphons fuck the soldiers, the formerly uninfected men becoming increasingly less human. Smiling in satisfaction as their goal is accomplished, they turn to you, smirking. 'Your turn,' one gryphon screeches out just as you finally get back onto your feet. You attempt to escape their grasp, but between the three of them, it isn't long before they have you held down, taking turns at shoving their cocks inside of your [if player is female]pussy[else]ass[end if]. The by now fully transformed soldiers join in, and you soon lose consciousness in the midst of a gang-bang by horny gryphons. You wake a couple hours later, cum covering every surface of your body.";
 	if carried of food > 1:
 		say "     Picking up your pack, you notice that you are two cans of food short, but that's not the only thing on your mind. Having lost the brave soldiers to their fate, despite everything you could do, makes you feel a bit less sure of yourself, thinking that maybe the situation in the city is hopeless after all.";
 		LineBreak;
@@ -307,7 +335,7 @@ to say PlayerFleesVsGryphonPlot1: [player fled the 3 gryphons]
 
 
 to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
-	if the bodyname of the player is not "Hermaphrodite Gryphon":
+	if bodyname of player is not "Hermaphrodite Gryphon":
 		say "     Stepping up and making it clear with just who you stand with, you watch as the soldiers become increasingly desperate, the odds now stacked even higher against them. Although the gryphons are wary that you aren't one of their own, they gladly accept your help. Soon, with the combined efforts of you and your unlikely allies, the uninfected men are converged upon. They climb into the stuck car in a last ditch attempt to save themselves from the fate that will befall them. Rushing forward in aggressive maneuvers, you and the gryphons make quick work of the soldiers['] final effort to protect themselves. Ripping the metal doors off of the jeep as they reach in and pull the soldiers out, they roughly strip them of their clothes with an obvious lustful intent, their cocks dripping pre-cum as they bend the still struggling soldiers over and thrust in balls-deep. Ignoring you, they fuck the men ravenously as they begin to change, their once fully human forms gaining a feral look, as their feet shift into sharp talons, and their tanned skin turns into the gryphon's blue. The soldiers are fully transformed by the time the gryphons turn back to you, looking your way with contemplating looks on their face. Then they gesture to the newly transformed soldiers, all with cum leaking from their every hole. Seems like that you're being offered their sloppy seconds. With that, the gryphons fly away, satisfied looks upon their blue, furred faces. Now the only thing that is left to do, is to decide whether or not you want to take them up on the offer...";
 		LineBreak;
 		say "     [bold type]What do you want to do?[roman type][line break]";
@@ -315,21 +343,21 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if cocks of player > 0: [Option only visible for males and herms]
+		if player is male: [Option only visible for males and herms]
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck a soldier-gryphon's pussy";
 			now sortorder entry is 1;
 			now description entry is "Fuck the pussy of a newly transformed herm to your heart's content";
 		[]
-		if cocks of player > 0: [Option only visible for males and herms]
+		if player is male: [Option only visible for males and herms]
 			choose a blank row in table of fucking options;
-			now title entry is "Pound a soldier-gryphon's ass.";
+			now title entry is "Pound a soldier-gryphon's ass";
 			now sortorder entry is 2;
 			now description entry is "Fuck a soldier's tight and most likely virgin pucker";
 		[]
-		if cunts of player > 0: [Option only visible for females and herms]
+		if player is female: [Option only visible for females and herms]
 			choose a blank row in table of fucking options;
-			now title entry is "Ride a soldier-gryphon's cock.";
+			now title entry is "Ride a soldier-gryphon's cock";
 			now sortorder entry is 3;
 			now description entry is "Take charge and get a taste of a hard, gryphon shaft";
 		[]
@@ -337,7 +365,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Just Leave[as]100[end link][line break]";
+		say "[link]0 - Just Leave[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -354,17 +382,10 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 						say "[GryphonAss]";
 					if (nam is "Ride a soldier-gryphon's cock"):
 						say "[GryphonRide]";
-			else if calcnumber is 100:
-				say "Are you sure you wish to leave?";
-				LineBreak;
-				say "     ([link]Y[as]y[end link]) - Yes.";
-				say "     ([link]N[as]n[end link]) - No.";
-				if the player consents:
-					now sextablerun is 1;
-					say "     Deciding that despite being a part of what led to the soldiers being transformed into their new gryphon state, you don't wish to take advantage of the already thoroughly broken men. Distancing yourself from the scene, you leave the gryphons to clean themselves up and potentially explore their new shapes as you continue along on your merry way.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     Deciding that despite being a part of what led to the soldiers being transformed into their new gryphon state, you don't wish to take advantage of the already thoroughly broken men. Distancing yourself from the scene, you leave the gryphons to clean themselves up and potentially explore their new shapes as you continue along on your merry way.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 				clear the screen and hyperlink list;
@@ -376,21 +397,21 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
-		if cocks of player > 0: [Option only visible for males and herms]
+		if player is male: [Option only visible for males and herms]
 			choose a blank row in table of fucking options;
 			now title entry is "Fuck a soldier-gryphon's pussy";
 			now sortorder entry is 1;
 			now description entry is "Fuck the pussy of a newly transformed herm to your heart's content";
 		[]
-		if cocks of player > 0: [Option only visible for males and herms]
+		if player is male: [Option only visible for males and herms]
 			choose a blank row in table of fucking options;
-			now title entry is "Pound a soldier-gryphon's ass.";
+			now title entry is "Pound a soldier-gryphon's ass";
 			now sortorder entry is 2;
 			now description entry is "Fuck a soldier's tight and most likely virgin pucker";
 		[]
-		if cunts of player > 0: [Option only visible for females and herms]
+		if player is female: [Option only visible for females and herms]
 			choose a blank row in table of fucking options;
-			now title entry is "Ride a soldier-gryphon's cock.";
+			now title entry is "Ride a soldier-gryphon's cock";
 			now sortorder entry is 3;
 			now description entry is "Take charge and get a taste of a hard, gryphon shaft";
 		[]
@@ -398,7 +419,7 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Just Leave[as]100[end link][line break]";
+		say "[link]0 - Just Leave[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -415,15 +436,16 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 						say "[GryphonAss]";
 					if (nam is "Ride a soldier-gryphon's cock"):
 						say "[GryphonRide]";
-			else if calcnumber is 100:
+			else if calcnumber is 0:
 				say "Are you sure you wish to leave?";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
-				if the player consents:
+				if player consents:
 					now sextablerun is 1;
 					say "     Deciding that despite being a part of what led to the soldiers being transformed into their new gryphon state, you don't wish to take advantage of the already thoroughly broken men you distance yourself from the scene, leaving the gryphons to clean themselves up and potentially explore their new shapes as you continue along on your merry way.";
 					wait for any key;
+
 to say GryphonPussy:
 	say "     Lining your cock up with the hermaphrodite gryphon's soaking wet cunt, you hear the newly transformed man let out a wanton moan. Taking the soldier's sound of need as a good of an invitation as any, you proceed to bury yourself balls-deep inside of the newly formed cunt of your temporary fuck toy, to his obvious and verbal enjoyment. Painfully erect inside of the gryphon's softly clenching vaginal walls, your cock lets out copious amounts of precum, lubricating the soldier's snatch for the pounding that is to come. The man, succumbing to the lustful needs of his new form, begins rocking his hips into you in time with your thrusts as you start to earnestly fuck him.";
 	LineBreak;
@@ -470,16 +492,18 @@ to say PlayerWatchesGryphonPlot1: [player observes the gryphons]
 			decrease carried of water bottle by 2;
 		else:
 			say "     Waking up a few hours later, you are sticky all over with dried cum, but you shrug it off in good spirits. After all, you had a lot of fun in your time with the gryphons...";
-			LineBreak;
-			say "[bold type]Your morale increases by 10![roman type][line break]";
-			increase morale of player by 10;
-			fimpregchance; [4 chances - it was a really long gangbang after all]
-			fimpregchance;
-			mimpregchance;
-			mimpregchance;
-			now GryphPlotTracking is 40; [player watched the gryphons do their thing and joined in for the submission]
+		LineBreak;
+		say "[bold type]Your morale increases by 10![roman type][line break]";
+		increase morale of player by 10;
+		fimpregchance; [4 chances - it was a really long gangbang after all]
+		fimpregchance;
+		mimpregchance;
+		mimpregchance;
+		now GryphPlotTracking is 40; [player watched the gryphons do their thing and joined in for the submission]
+		now Resolution of Gryphon's Plot is 40; [player watched the gryphons do their thing and joined in for the submission]
 	else:
 		say "     Deciding not to risk it, you silently get up from your hiding place and start to make your way to a safe distance from the scene. You can still hear the sounds of the gryphons['] orgy, as you continue along your way through the ruins of the infested city...";
 		now GryphPlotTracking is 30; [player watched the gryphons do their thing]
+		now Resolution of Gryphon's Plot is 30; [player watched the gryphons do their thing]
 
 Gryphons Plot ends here.

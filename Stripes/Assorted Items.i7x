@@ -8,9 +8,9 @@ Section 1 - Nullo Wafers
 
 [ - Project discarded for now, replaced by BlueBishop's nullification powder - ]
 [
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
-"nullo wafers"	"A box of bland, dry cookies. It's packaging proclaims [']Now with less flavour![']"	1	nullo wafers
+"nullo wafers"	"A box of bland, dry cookies. It's packaging proclaims [']Now with less flavor![']"	1	nullo wafers
 
 nullo wafers is a grab object. It is temporary. It is a part of the player.
 
@@ -19,7 +19,7 @@ the usedesc of nullo wafers is "[nullo wafers use]";
 
 to say nullo wafers use:
 	say "     Pulling out the box of cookies, you start by planning on having just a few, but something about their bland crunchiness has you keep eating until you end up polishing off the whole box. Maybe you were hungrier than you thought. Your tummy gives a bit of an upset rumble and a wave of cool tingles wash through you that flows down to your loins.";
-	if cunts of player > 0 and cocks of player > 0:		[HERM]
+	if player is herm:		[HERM]
 		let cockgone be false;
 		let cuntgone be false;
 		let cockcountdown be false;
@@ -71,7 +71,7 @@ to say nullo wafers use:
 
 Section 2 - Libido Pill
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "libido pill"	"A sex-enhancement pill for getting you (or someone else) horny."	0	libido pill
 

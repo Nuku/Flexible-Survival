@@ -3,21 +3,36 @@ Version 1 of Beach by Speedlover begins here.
 Section 1 - Basic Setup [of rooms]
 
 [Beach plaza]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Beach Plaza	"Beach Plaza"
+
 Beach Plaza is a Room.
 The Beach Plaza is fasttravel. The Beach Plaza is not known.
-The description of beach plaza is "[BeachplazaDesc]".
+The description of beach plaza is "[BeachPlazaDesc]".
 earea of Beach Plaza is "Outside".
 
-to say BeachplazaDesc:
+to say BeachPlazaDesc:
 	say "     Quite different from the dirty, ill-kempt streets of the city you know, the plaza you are standing upon presents itself in a sunny scene. It is fairly large, open and relatively clean, with a boardwalk extending toward the west. You can see a wooden railing in the distance there, with the sea visible beyond that. Remembering the layout of the beach from previous visits, you know that there is a sharp cliff that way, with stairs leading down to the public beach and the rest of the coastline. To the north is a church, its wide doors open and inviting.";
-	say "     Numerous infected are present on this peaceful plaza, strolling around in a relaxed fashion and checking out various vendor stalls and buildings. Which is a bit surprising, to say the least - given the state of affairs everywhere else. Maybe the towering bronze statue of a crab straddling the street like an archway has something to do with it. You certainly do not remember that being there before all the trouble in the city started.".
+	say "     Numerous infected are present on this peaceful plaza, strolling around in a relaxed fashion and checking out various vendor stalls and buildings. Which is a bit surprising, to say the least - given the state of affairs everywhere else. Maybe the towering bronze statue of a crab straddling the street like an archway has something to do with it. You certainly do not remember that being there before all the trouble in the city started.";
 
 Beach Exit is a door. Beach Exit is dangerous.
 The marea of Beach Exit is "Outside". Beach Exit is undescribed. Beach Exit is east of Beach Plaza.
-East of Beach Exit is Outside Exploration.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Outside Exploration	"Outside Exploration"
+
+Outside Exploration is a room.
+Outside Exploration is east of Beach Exit.
 
 instead of sniffing the beach plaza:
 	say "The seashore is near. There is salt in the air.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Bronze Crab	"Bronze Crab"
 
 Bronze Crab is a man. Bronze Crab is in Beach Plaza.
 The description of Bronze Crab is "[BronzeCrabDesc]".
@@ -31,11 +46,16 @@ instead of conversing the Bronze Crab:
 	say "     You try to strike up a conversation with the giant crustacean, drawing the gaze of its eye-stalks. After listening to what you say for a few moments, its mandibles unfold from their normally relaxed position and you hear a series of clicks that have a metallic ring to them. After a few seconds of that, it finishes up with a sharper click and taps the street next to you with one front leg before turning its attention back towards the city approach. Feels like you just were lectured and then dismissed.";
 
 instead of fucking the Bronze Crab:
-	say "     Amorous thoughts fill your mind and you step closer to one of the giant crab's legs, to... rub ub against it? Climb on it? Whatever it was, you are stopped cold by a huge pincer, closing around your midsection to hold you firm. With carefully meted-out force (to not accidentally snap you in half), the crab picks you up and sets you down outside the plaza, releasing its grasp there. You hear some clicking noises and see it gesture towards the city, although it doesn't seem to mind that you walk back to the plaza - without trying to have sex with it this time.";
+	say "     Amorous thoughts fill your mind, and you step closer to one of the giant crab's legs to... rub up against it? Climb on it? Whatever it was, you are stopped cold by a huge pincer, closing around your midsection to hold you firm. With carefully meted-out force (to not accidentally snap you in half), the crab picks you up and sets you down outside the plaza, releasing its grasp there. You hear some clicking noises and see it gesture towards the city, although it doesn't seem to mind that you walk back to the plaza - without trying to have sex with it this time.";
 
 
 [Boardwalk]
-West of Beach Plaza is Boardwalk2.
+Boardwalk2 is west of Beach Plaza.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Boardwalk2	"Boardwalk"
+
 Boardwalk2 is a Room.
 The description of Boardwalk2 is "[BoardwalkDesc]".
 Boardwalk2 is a room with printed name "Boardwalk".
@@ -43,21 +63,31 @@ earea of Boardwalk2 is "Outside".
 
 to say BoardwalkDesc:
 	say "     The broad boardwalk you are standing on extends for a fair bit, starting at the beach plaza to east of your position and leading to the edge of the beachside cliffs just west of here. A wooden railing makes sure no one falls over the edge while they enjoy the view of the open ocean and the beach and coastline at the foot of the cliff. A set of broad stairs lead down to the beach, twisting back and forth as they descend the rock wall. Meanwhile, small stores flank the boardwalk up here, although from what you can see they are almost uniformly closed. Apparently most now house people who are living in them, no doubt fled from the city to this halfway peaceful area.";
-	say "     There is a decent amount of people of all sorts of species here, either chit-chatting or simply just hanging out by themselves, sitting at one of the many tables of a cafe that is actually still open. Sadly, the long line coming out of the door tells you that you won't be getting an ice-cream cone or other treat anytime soon. Overall, this area is a nice difference from the insanity of the city as everyone here appears to just want to relax.";
+	say "     There is a decent amount of people of all sorts of species here, either chit-chatting or simply just hanging out by themselves, sitting at one of the many tables of a café that is actually still open. Sadly, the long line coming out of the door tells you that you won't be getting an ice-cream cone or other treat anytime soon. Overall, this area is a nice difference from the insanity of the city as everyone here appears to just want to relax.";
 
 instead of sniffing the Boardwalk2:
 	say "     The air smells fresh and salty.";
 
-[Restaurant]
-North of Boardwalk2 is Restaurant.
+beach overview is an object. It is in Boardwalk2. It is fixed in place. Understand "map" as beach overview.
+the description of beach overview is "[Beach_Overlook_Desc]".
+The icon of beach overview is Figure of Beach_Overlook_icon.
+
+to say Beach_Overlook_Desc:
+	say "     From the railing at the edge of the platform, you have an exceptional overlook over the whole public beach and beyond.";
+
+Table of GameRoomIDs (continued)
+Object	Name
+Restaurant	"Restaurant"
+
 Restaurant is a Room.
+Restaurant is north of Boardwalk2.
 The description of Restaurant is "[RestaurantDesc]".
 
 to say RestaurantDesc:
-	say "     The restaraunt is an interesting combination of high class and casual that seems to work, at least in your opinion. There are tables scattered throughout the building with some up against the wall and under windows that are open at the moment. In the back end of the food establishment is a bar with stools lined up to allow people to order their alcohol whenever they want it. Overall it's a very nice place.";
+	say "     The restaurant is an interesting combination of high class and casual that seems to work, at least in your opinion. There are tables scattered throughout the building with some up against the wall and under windows that are open at the moment. In the back end of the food establishment is a bar with stools lined up to allow people to order their alcohol whenever they want it. Overall it's a very nice place.";
 
 instead of sniffing the Restaurant:
-	say "     The restaurant smells of hamburgers, french fries, and many other kinds of foods, something that makes your stomach rumble.";
+	say "     The restaurant smells of hamburgers, French fries, and many other kinds of foods, something that makes your stomach rumble.";
 
 Rat Twins Stash is a container. It is closed. The description of Rat Twins Stash is "[RatTwinsTapeGet]".
 
@@ -77,8 +107,13 @@ to say RatTwinsTapeGet:
 
 
 [Public Beach]
-Down of Boardwalk2 is Public Beach.
+Public Beach is below Boardwalk2.
 Public Beach is northwest of Wild Fringe.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Public Beach	"Public Beach"
+
 Public Beach is a Room.
 The description of Public Beach is "[PublicBeachDesc]".
 earea of Public Beach is "Beach".
@@ -90,10 +125,15 @@ to say PublicBeachDesc:
 instead of sniffing Public Beach:
 	say "     The salt in the air is reminiscent of high tide at the beach.";
 
-South of Public beach is Shallow Bay.
-West of Wild Fringe is Shallow Bay.
-Southeast of Rocky Cliff is Shallow Bay.
-East of BeachEnd is Shallow Bay.
+Table of GameRoomIDs (continued)
+Object	Name
+Shallow Bay	"Shallow Bay"
+
+Shallow Bay is a room.
+Shallow Bay is south of Public beach.
+Shallow Bay is west of Wild Fringe.
+Shallow Bay is southeast of Rocky Cliff.
+Shallow Bay is east of BeachEnd.
 The description of Shallow Bay is "[ShallowBayDesc]".
 earea of Shallow Bay is "Beach".
 
@@ -104,8 +144,13 @@ instead of sniffing the Wild Fringe:
 	say "     You sniff around, and since the ocean water is almost sloshing into your nose, there is little wonder that you smell salt.";
 
 [Wild Fringe]
-Southeast of Public Beach is Wild Fringe.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Wild Fringe	"Wild Fringe"
+
 Wild Fringe is a Room.
+Wild Fringe is southeast of Public Beach.
 The description of Wild Fringe is "[WildFringeDesc]".
 earea of Wild Fringe is "Beach".
 
@@ -121,15 +166,23 @@ Beach Exploration is a door. Beach Exploration is dangerous.
 The marea of Beach Exploration is "Beach". Beach Exploration is undescribed.
 Beach Exploration is southeast of Wild Fringe.
 
-Southeast of Beach Exploration is BeachDummyRoom.
+Table of GameRoomIDs (continued)
+Object	Name
+BeachDummyRoom	"BeachDummyRoom"
 
 BeachDummyRoom is a room.
+BeachDummyRoom is southeast of Beach Exploration.
 The description of BeachDummyRoom is "This is a dummy room for exploration purposes.".
 
 [Dirty Sheds]
-Northwest of Public Beach is Dirty Sheds.
+Dirty Sheds is northwest of Public Beach.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Dirty Sheds	"Dirty Sheds"
+
 Dirty Sheds is a Room.
-North of Rocky Cliff is Dirty Sheds.
+Dirty Sheds is north of Rocky Cliff.
 The description of Dirty Sheds is "[DirtyShedsDesc]".
 earea of Dirty Sheds is "Beach".
 
@@ -144,8 +197,13 @@ instead of sniffing the Dirty Sheds:
 [-----------------------------------------------------------------------------]
 
 [Rocky Cliff]
-West of Public Beach is Rocky Cliff.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Rocky Cliff	"Rocky Cliff"
+
 Rocky Cliff is a Room.
+Rocky Cliff is west of Public Beach.
 The description of Rocky Cliff is "[RockyCliffDesc]".
 earea of Rocky Cliff is "Beach".
 
@@ -157,10 +215,15 @@ instead of sniffing the Rocky Cliff:
 	say "     The place smells of the ocean mixed with an earth scent, something that you attribute to the cliffs.";
 
 [BeachEnd]
-South of Rocky Cliff is BeachEnd.
+BeachEnd is south of Rocky Cliff.
 The description of BeachEnd is "[BeachEndDesc]".
 BeachEnd is southwest of Public Beach.
 BeachEnd is a room with printed name "End of the Beach".
+
+Table of GameRoomIDs (continued)
+Object	Name
+BeachEnd	"End of the Beach"
+
 BeachEnd is a Room.
 earea of BeachEnd is "Beach".
 
@@ -170,8 +233,13 @@ to say BeachEndDesc:
 instead of sniffing the BeachEnd:
 	say "     All you can smell out here is the strong scent of the ocean.";
 
-[Rock Arch - *****Swimming is defined in Hellerhounds file - Underwater zone for FS*****]
-Southwest of BeachEnd is Rock Arch.
+[Rock Arch - *****Swimming is defined in Hellerhound's file - Underwater zone*****]
+Rock Arch is southwest of BeachEnd.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Rock Arch	"Rock Arch"
+
 Rock Arch is a Room.
 The description of Rock Arch is "[RockArchDesc]".
 
@@ -185,6 +253,10 @@ after entering the Rock Arch:
 	say "     You look up with awe at the natural rock formation. Not everyone can say that they visited this place.";
 	increase score by 5;
 
+Table of GameRoomIDs (continued)
+Object	Name
+Wyvern Nest	"Wyvern Nest"
+
 Wyvern Nest is a room. [Wyvern Nest is above Rock Arch.]
 the description of Wyvern Nest is "[WyvernNestDesc]".
 
@@ -193,10 +265,14 @@ to say WyvernNestDesc:
 	say "     ...";
 [
 instead of going up from Rock Arch:
-	say "     strength check!";
+	say "     Strength check!";
 	say "     Fail: Slip, scrape for some damage and splash into the water";
 	say "     Success: move to the nest";
 ]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Open Ocean	"Open Ocean"
 
 Open Ocean is a room. Open Ocean is south of Rock Arch.
 The description of Open Ocean is "[AboveShip]";
@@ -204,15 +280,23 @@ The description of Open Ocean is "[AboveShip]";
 to say AboveShip:
 	say "     Below you is a large sunken ship and you can see multiple underwater creatures swimming around down there. If you needed to you could go down there but you would need some way to breathe. Of course, if you decided against that then there is the rock arch to the north. You could always swim back.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Sunken Ship	"Sunken Ship"
+
 Sunken Ship is a Room.
 Sunken Ship is below Open Ocean.
 understand "Shipwreck" as Sunken Ship.
 understand "Wreck" as Sunken Ship.
 The description of Sunken Ship is "A large ship lays sunken and rotting here. From the breaks in the old hull, it seems the ship ran afoul of the rocky waters and went down long ago. It is now an attraction for divers and sea creatures alike. Maybe going here was a bad idea. There is a cloudy mess of thick seed hanging in the water and stuck to part of the ship, tribute to some huge beast. You'd best be careful. Although in the distance to your west you can see a sparkling sight in the distance. From here, you can barely make out the lighter spot in the rocks that is the [bold type]Rock Arch[roman type] you passed through to get here. You could surface and swim to it if you want to get back to the beach.".
 
-The invent of Sunken Ship is { "sea dragon cum" , "sea dragon cum" }.
+The invent of Sunken Ship is { "sea dragon cum", "sea dragon cum" }.
 
 the scent of Sunken Ship is "You can't smell anything while underwater.".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Atlantis City Entrance	"Atlantis City Entrance"
 
 Atlantis City Entrance is a room.
 The description of Atlantis City Entrance is "[CityEntrance]";
@@ -224,9 +308,13 @@ to say CityEntrance:
 [CHURCH HALL]
 [--------------------------------------------------------------------------------------------------------------------]
 
-Church Hall is a room. "     The inside of the Church is dim but not dark - relaxing, one could say. It seems all terribly normal, wooden pews filling much of the long hall, a smattering of heads sitting here and there. There's definitely no lack of space. There are some signs that whatever religion is practiced here, it's not anything you recognise. There are no crosses or other recognisable religious symbols. There are several freshly painted motifs however and they all seem to depict some great stylised beast offering protection and shelter to those near it. At the far end of the church, there seems to be a recessed door that, based on the outside of the building, must lead down some stairs.".
+Table of GameRoomIDs (continued)
+Object	Name
+Church Hall	"Church Hall"
 
-North of Beach Plaza is Church Hall.
+Church Hall is a room. "     The inside of the Church is dim but not dark - relaxing, one could say. It seems all terribly normal, wooden pews filling much of the long hall, a smattering of heads sitting here and there. There's definitely no lack of space. There are some signs that whatever religion is practiced here, it's not anything you recognize. There are no crosses or other recognizable religious symbols. There are several freshly painted motifs however and they all seem to depict some great stylized beast offering protection and shelter to those near it. At the far end of the church, there seems to be a recessed door that, based on the outside of the building, must lead down some stairs.".
+
+Church Hall is north of Beach Plaza.
 There is a Church Notice Board in the Church Hall. It is rooted in place.
 There is a Confession Booth in the Church Hall. "Standing against one wall, the dark wood of the large confession booth catches the eye. It has been modified to allow even a large creature such of those Panther Taurs to fit inside.". It is Rooted in place.
 The invent of Church Hall is { "nullifying powder" }.
@@ -253,7 +341,7 @@ Instead of examining the Church Notice Board:
 lastconfession is a number that varies. lastconfession is 248.
 
 instead of examining the confession booth:
-	Say "     It's quiet and nondescript, perhaps you should try to [bold type][link]enter[as]enter confession[end link][roman type] it and confess, or just talk to whomever is inside?";
+	say "     It's quiet and nondescript, perhaps you should try to [bold type][link]enter[as]enter confession[end link][roman type] it and confess, or just talk to whomever is inside?";
 
 instead of sniffing the confession booth:
 	say "It smells faintly of incense and arousal from the various creatures who have been within it.";
@@ -284,7 +372,7 @@ instead of entering the Confession Booth:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -303,16 +391,12 @@ instead of entering the Confession Booth:
 					say "[ChurchDemonCleanse]";
 				now lastfuck of Brennan is turns;
 				wait for any key;
-		else if calcnumber is 100:
-			say "     Leave the confessional?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You mumble a soft goodbye and thank-you, then leave the confessional, stepping back out into the church.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You mumble a soft goodbye and thank-you, then leave the confessional, stepping back out into the church.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say ChurchQuestion:

@@ -37,7 +37,7 @@ Setting action variables for an actor inserting a data storage device into a com
 Instead of an actor inserting something which is not a data storage device into an extension port (this is the restrict extension port usage rule):
 	if the actor is not the player:
 		rule fails;
-	say "[The noun] [is-are] not a suitable device for reading with [the second noun]."
+	say "[The noun] [is-are] not a suitable device for reading with [the second noun].";
 
 Section 2 - Startup Behavior
 
@@ -83,7 +83,7 @@ A laptop is a kind of computer. A laptop can be open or closed. A laptop can be 
 A trackpad is a kind of selection device. A trackpad is part of every laptop.
 
 Instead of touching a trackpad (this is the correct insufficient trackpad information rule):
-	say "Try CLICK ON (some option) WITH [the noun], or just CLICK ON (option), to make a selection."
+	say "Try CLICK ON (some option) WITH [the noun], or just CLICK ON (option), to make a selection.";
 
 Definition: a thing is a concealed component:
 	if it is a keyboard and it is part of a closed laptop:
@@ -331,7 +331,7 @@ Chapter 3 - Which Program Receives Input?
 To decide what object is the controlling program of (chosen computer - a computer):
 	let the chosen screen be a random screen that is part of the chosen computer;
 	repeat with item running through software which is part of chosen screen:
-		remove item from play;
+		now item is nowhere;
 	if the chosen computer runs no software:
 		decide on nothing;
 	else:
@@ -412,7 +412,7 @@ Section 2 - Selection with a Selection Device
 
 Understand "click on [text] with [a selection device]" or "select [text] with [a selection device]" or "pick [text] with [a selection device]" or "click [text] with [a selection device]" as selecting it with.
 
-Understand "click on [text] with [something]" or "select [text] with [something]" or "pick [text] with [something]" or "click [text] with [something]" as selecting it with.  Selecting it with is an action applying to a topic and one thing.
+Understand "click on [text] with [something]" or "select [text] with [something]" or "pick [text] with [something]" or "click [text] with [something]" as selecting it with. Selecting it with is an action applying to a topic and one thing.
 
 Understand "click [text]" or "select [text]" or "click on [text]" or "pick [text]" as selecting it with.
 
@@ -697,6 +697,10 @@ Example: * Reading Email - A laptop set up with a password lock program that giv
 
 	Include Computers by Emily Short.
 
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Conference Room	"Conference Room"
+
 	Conference room is a room.
 
 	The conference table is a thing in the Conference Room. The small laptop is a laptop on the conference table.
@@ -723,6 +727,10 @@ Example: * USB Drive - A very simple implementation of a laptop that can search 
 	*: "USB Drive"
 
 	Include Computers by Emily Short.
+
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Ventilation Duct	"Ventilation Duct"
 
 	The Ventilation Duct is a room.
 
@@ -765,6 +773,10 @@ We also want the computer to revert back to the operating system if switched off
 	*: "Operations"
 
 	Include Computers by Emily Short.
+
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Conference Room	"Conference Room"
 
 	Conference room is a room.
 
@@ -844,6 +856,10 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 
 	Include Computers by Emily Short.
 
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Bank Forecourt	"Bank Forecourt"
+
 	The Bank Forecourt is a room. The High Street is north of Bank Forecourt.
 
 	The ATM is a computer in the Bank Forecourt. The ATM is switched on. The ATM runs welcome screen. The description is "The ATM is the sort with a small, roughly square screen; a keypad for numeric input; and a slot in which to insert a debit card."
@@ -902,8 +918,8 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 
 	Price is a kind of value. $99.99 specifies a price.
 
-	Checking account balance is a price that varies. Checking account balance is $2894.82.
-	Cash in hand is a price that varies. Cash in hand is $15.97.
+	Checking account balance is a price that varies. Checking account balance is $2894.82.[@Tag:NotSaved]
+	Cash in hand is a price that varies. Cash in hand is $15.97.[@Tag:NotSaved]
 
 	After taking inventory:
 		say "You are carrying [cash in hand] in cash."

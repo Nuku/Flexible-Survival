@@ -1084,10 +1084,10 @@ To image-map (IMG_MAP - a list of lists of numbers) at (COORD1 - a list of numbe
 Chapter - Global variables
 [The global variables support a very brief form of drawing command; they are not used for the standard length commands.]
 
-The current graphics window is a g-window that varies.
-The current foreground-color is a number that varies. The current foreground-color is usually 0.
-The current background-color is a number that varies. The current background-color is usually 0.
-The current font is a font that varies.
+The current graphics window is a g-window that varies.[@Tag:NotSaved]
+The current foreground-color is a number that varies.[@Tag:NotSaved] The current foreground-color is usually 0.
+The current background-color is a number that varies.[@Tag:NotSaved] The current background-color is usually 0.
+The current font is a font that varies.[@Tag:NotSaved]
 
 [These are here only to overcome I7's limitation on the number of local variables that can be present in a single routine. They are not user-modifiable, since they will be set within the drawing routines.]
 The g-imgwidth is a number variable. The g-imgwidth is 0.
@@ -1117,7 +1117,7 @@ Part - Routines for color specification
 
 Chapter - Get color from lookup table (by name)
 
-To decide which number is color/colour (hue - a glulx color value):
+To decide which number is color/color (hue - a glulx color value):
 	(- ColVal({hue}) -)
 
 
@@ -1434,7 +1434,7 @@ Glimmr Drawing Commands ends here.
 
 Glimmr Drawing Commands (GDC) is the most basic of the Glimmr extensions, and is required by (nearly) all others. It exposes the three basic Glulx drawing commands at the I7 level, enabling authors to write their own drawing rules without using any I6 code. Glimmr Drawing Commands also adds a number of "derived" commands--commands that use the basic commands to do new things. These include everything from drawing a line to connect any two points on the screen, to "painting" text to the screen, to drawing a grid of images.
 
-Glimmr Drawing Commands requires Jon Ingold's Flexible Windows as well as Michael Callaghan's Fixed Point Maths. For those familiar with I6, the three infglk functions that GDC implements are glk_image_draw, glk_image_draw_scaled, and glk_window_fill_rect. It does not implement the glk_window_erase_rect command, since this is easily imitated by drawing a rectangle in the background color of the window (Flexible Windows's "back-colour" g-window property).
+Glimmr Drawing Commands requires Jon Ingold's Flexible Windows as well as Michael Callaghan's Fixed Point Maths. For those familiar with I6, the three infglk functions that GDC implements are glk_image_draw, glk_image_draw_scaled, and glk_window_fill_rect. It does not implement the glk_window_erase_rect command, since this is easily imitated by drawing a rectangle in the background color of the window (Flexible Windows's "back-color" g-window property).
 
 A note on what GDC will *not* do: It does not:
 
@@ -2368,7 +2368,7 @@ Now we are ready to tackle the font table. The columns for an image font table a
 
 The "glyph" and "char" columns are the same as their counterparts in the bitmap font table (see the bitmap font section for an explanation). The glyph-ref column is the figure name of the glyph associated with the character, e.g. Figure of Glimmr Lucidex 33.
 
-The "yoffset" and "advance" columns are similar in purpose to their counterparts in the bitmap font table.  The yoffset column describes the y-offset, number of pixels down from the imaginary top line of the font we should place the image file of the glyph. An uppercase "A", for example, which is a tall character, likely will have a y-offset of 0. A character like lowercase "y", however, is a short character and will likely have a positive y-offset.
+The "yoffset" and "advance" columns are similar in purpose to their counterparts in the bitmap font table. The yoffset column describes the y-offset, number of pixels down from the imaginary top line of the font we should place the image file of the glyph. An uppercase "A", for example, which is a tall character, likely will have a y-offset of 0. A character like lowercase "y", however, is a short character and will likely have a positive y-offset.
 
 That said, it is *highly* recommended that the yoffset always be set to 0, with every image file being the full height of the font-height. In other words, if the full font-height is 56 pixels, every image file should be sized at 56 pixels, with the glyph placed appropriately within. This is because scaling is inherently inaccurate, and images of different heights may not scale in exactly the same way. (Please see the image files for the Glimmr Image Font for a real-world example.) The yoffset column is there if it is needed, and a negative value can even be used, if needed, to make characters taller than the standard, but the quality of the output really will be better if height is controlled with the images rather than with offsets.
 

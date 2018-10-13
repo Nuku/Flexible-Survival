@@ -18,13 +18,17 @@ Version 1 of Gordon by Rikaeus begins here.
 [   2: Tawnya says that Gordon is Tyler's ex               ]
 [   3: Says that he would've killed Kevin instead          ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Gordon	"Gordon"
+
 Gordon is a man.
 The description of Gordon is "[GordonDesc]".
 The conversation of Gordon is { "<this is a placeholder!>" }.
 The scent of Gordon is "The monkey smells like cologne, bananas and musk. An odd combination of scents but you guess it works for him."
 
 to say GordonDesc:
-	say "     The monkey has pitch black fur and hazel eyes. Personally you think the black is really weird because you don't recall ever hearing about monkeys having that color of fur, at least completely covering their body. But after a while you guess that you've probably haven't seen every type of monkey. Besides the fur and his eyes, he's wearing what amounts to a chef outfit, minus the hat. You figure that's his uniform for the Doggy Bowl, which makes complete and total sense, since he's the head chef. The monkey winks at you suggestively when he notices that you're staring at him, which causes you to quickly look away."
+	say "     The monkey has pitch black fur and hazel eyes. Personally you think the black is really weird because you don't recall ever hearing about monkeys having that color of fur, at least completely covering their body. But after a while you guess that you've probably haven't seen every type of monkey. Besides the fur and his eyes, he's wearing what amounts to a chef outfit, minus the hat. You figure that's his uniform for the Doggy Bowl, which makes complete and total sense, since he's the head chef. The monkey winks at you suggestively when he notices that you're staring at him, which causes you to quickly look away.";
 
 instead of conversing the Gordon:
 	if HP of Gordon is 0: [should be not yet available]
@@ -37,7 +41,7 @@ instead of conversing the Gordon:
 		say "[GordonTalkMenu]";
 
 to say GordonTalkMenu:
-	say "[line break]";
+	LineBreak;
 	say "What do you wish to talk about with the monkey?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -57,7 +61,7 @@ to say GordonTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -73,23 +77,19 @@ to say GordonTalkMenu:
 				if (nam is "Motive Suspicion"):
 					say "[GordonMotive]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say GordonFurEvidence:
 	if GordonFurSuspicion is 0: [never talked about it]
 		say "     You take out the fur and set it onto the table before proceeding to tell the monkey that this was found in the victim's hand. 'What are you showing me this for? Is this your way of saying you want to bed me?' he asks, wagging his eyebrows. You shake your head at his horny response and tell him that you'd figure that you'd ask if it was his. 'Ahahah! It's obviously not mine as I do have black fur here,' Gordon says, gesturing to his fur. However, that isn't all the guy says as the lewd look returns to his face. 'Of course... you could always check down below with your mouth,' the monkey says.";
 		say "     [bold type]Do you want to blow him or take him by his word?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, you have to know for sure.";
 		say "     ([link]N[as]n[end link]) - No, you'll take him by his word.";
 		if player consents:
@@ -104,7 +104,7 @@ to say GordonFurEvidence:
 	if GordonFurSuspicion is 1: [Says it's not his due to it being brown]
 		say "     You once more take out the fur and ask him about it. This appears to create a look of excitement on his face as the lewd smile returns. 'Ohoho! Have you thought about my offer?' Gordon says, once more wagging his eyebrows suggestively at you. You sigh and ask him if he wouldn't just let you check his whole body to see that it truly is black fur. The monkey shakes his head at you. 'Nope! It's not as fun this way! At least my way I'd get a blowjob,' he says, causing you to inwardly groan. You guess it's time for you to decide if you'd blow him or not.";
 		say "     [bold type]Do you want to blow him or take him by his word?[roman type][line break]";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes, you have to know for sure.";
 		say "     ([link]N[as]n[end link]) - No, you'll take him by his word.";
 		if player consents:
@@ -136,11 +136,11 @@ instead of fucking Gordon:
 		say "[GordonSexMenu]";
 
 to say GordonSexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -151,13 +151,13 @@ to say GordonSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the monkey's hard shaft";
 	][
-	if cocks of player > 0: [only males and herms can fuck him]
+	if player is male: [only males and herms can fuck him]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the unrepentent monkey";
 		now sortorder entry is 3;
 		now description entry is "Take Gordon's ass for a ride";
 	][
-	if cunts of player > 0: [only females and herms can take him in the pussy]
+	if player is female: [only females and herms can take him in the pussy]
 		choose a blank row in table of fucking options;
 		now title entry is "Take Gordon's shaft in your pussy";
 		now sortorder entry is 4;
@@ -172,7 +172,7 @@ to say GordonSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -194,16 +194,12 @@ to say GordonSexMenu:
 				if (nam is "Take Gordon's shaft in your ass"):
 					say "[GordonSex5]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step away from the enslaved monkey, who oddly looks a bit disappointed.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step away from the enslaved monkey, who oddly looks a bit disappointed.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say GordonSex1: [oral on the player]

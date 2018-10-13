@@ -20,6 +20,10 @@ DianaRelationship is a number that varies.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Dressing Room Crisis	"Dressing Room Crisis"
+
 Dressing Room Crisis is a situation.
 The sarea of Dressing Room Crisis is "Smith Haven".
 
@@ -63,16 +67,16 @@ Instead of resolving a Dressing Room Crisis:
 			say "     Shaking your head, you tell Diana that she's got it all wrong - everyone would love to be with a cute girl like her, if she just gave them a chance. 'I - um, do you really mean that?' the shy young woman replies, wiping her eyes and looking at you in surprise. You smile back at her and tell her that she'll just have to meet the right person. In the end, [italic type]she[roman type] is what counts, not her body or the specifics of her looks. You go on to assure her that new body is both exotic and attractive, so she shouldn't be worrying about her appearance, either. Diana just eats up your words, putting a lot of faith in a person she just met. Before long, the young woman wraps her arms around you and gives you a tight hug. 'Thank you so much. I'll take that to heart!'";
 			say "     The smiling Siamese-gryphon hybrid looks at you with a new level of confidence clearly written on her face, as if trying to engrave your features into her memory, then suddenly blinks and glances at the drawn curtain, thinking of the rest of the mall for the first time since you stepped into her life. 'Oh! I should get back to the others. The group of refugees I'm staying with, I mean. We're housed in the optician in the west wing, in case you want to... come visit me sometime. I hope you do.' She gives you a friendly smile, then leans forward to plant a peck on your cheek and leaves the store with a skip in her step.";
 			now DianaRelationship is 1; [player gave her a pep talk]
-			now Mall Optitian is not resolved;
+			now Resolution of Dressing Room Crisis is 1; [talked]
 		else if calcnumber is 2: [make a move on her]
 			LineBreak;
-			say "     Stepping up into the dressing booth and reaching out to gently stroke her cheek, you tell Diana that she's got it all wrong - everyone would love to be with a cute girl like her, if she just gave them a chance. 'I - um, do you really mean that?' the shy young woman replies, wiping her eyes and looking at you in surprise. You smile back at her and tell her you do, putting your arms around Diana and holding her. [if cocks of player is 0]'B-but you're a girl! Does that mean... oh! So you're a... Um, I have been curious about being with women, to be honest.' [end if]When she relaxes a little into your embrace, you slide a finger under her chin to tilt her head up, then kiss the young woman, making her almost melt into your touch. Spellbound by the sensual contact, Diana attempts to return the favor, her feline tongue parting your lips to entwine with your own. What she lacks in experience, she more than makes up for in lustful enthusiasm, the hybrid's curvy form pressing against you as she purrs with need in her throat.";
+			say "     Stepping up into the dressing booth and reaching out to gently stroke her cheek, you tell Diana that she's got it all wrong - everyone would love to be with a cute girl like her, if she just gave them a chance. 'I - um, do you really mean that?' the shy young woman replies, wiping her eyes and looking at you in surprise. You smile back at her and tell her you do, putting your arms around Diana and holding her. [if player is not male]'B-but you're a girl! Does that mean... oh! So you're a... Um, I have been curious about being with women, to be honest.' [end if]When she relaxes a little into your embrace, you slide a finger under her chin to tilt her head up, then kiss the young woman, making her almost melt into your touch. Spellbound by the sensual contact, Diana attempts to return the favor, her feline tongue parting your lips to entwine with your own. What she lacks in experience, she more than makes up for in lustful enthusiasm, the hybrid's curvy form pressing against you as she purrs with need in her throat.";
 			say "     Reaching behind your back, you quietly draw the curtain closed, then continue to make out with your new friend. Diana readily allows you to follow up by sliding your hands under her top, caressing her breasts and then inching the article of clothing up, soon pulling it off over her head. Her fur extends down to the start of her shoulders, where it meshes with flawless pale skin. Her firm, A cup breasts make it easy to cover one with each of your hands, caressing the young woman. While petite, Diana's breasts prove very sensitive, her nipples growing hard after just a little pinch. When you lower your head and give them an eager lick, the hybrid girl gasps out. 'That feels really good,' she admits in a breathless voice, moaning loudly when you start to alternate your attention between each of her breasts in turn, your tongue lashing over the sensitive flesh of her mounds.";
 			WaitLineBreak;
 			say "     In her unfamiliar state of sizzling arousal, Diana is more than eager to do anything to keep going, so when your hands start searching for the zipper of her skirt, she guides them to it, allowing you to pull it down. Leaning back a little to have a good look at the hybrid as the fabric around her hips falls away, you see that the slender young woman has blue fur on the insides of her thighs, reaching almost halfway up to where her feminine sex lies hidden by a pair of thin pink panties. You give Diana an encouraging smile and tell her how beautiful she is, then kiss her again before sinking to your knees before her. Looking up at her wide-eyed face, you hook two fingers over the elastic of her underwear and pull it down in one smooth motion, finally stripping her completely bare. Diana bites her lower lip, ashamed at letting herself be exposed like this, then gives a cute little squeak as you bring your face against her sex and give it a lick.";
 			say "     'Nnnghh. Please - Please just keep going,' she pants out, her hands moving cautiously to rest on your shoulders, lusting for your contact. Lapping along the edges of her sensitive nether lips a few times, you soon direct your attention to her clit, encircling it with the tip of your tongue a few times before sweeping the flat of that warm, slick muscle against it repeatedly, your merciless assault on her senses making Diana tremble and moan with desire. She sucks a sharp breath through her teeth when your lips clamp down over her button, overwhelming her with a sudden wave of arousal. 'F-Fuck, yes!' Diana gasps out, grinding against your face as her lusts soar. Before long, the young woman's legs start to grow a little wobbly from your relentless oral stimulation, and she sighs, 'I - I think I need to sit down.' Smiling in understanding, you let go of her hips and watch her take a step or two back, then sit down on the little bench in the booth. Once she's settled, you take your place between her legs again and return to pleasuring her mound.";
 			WaitLineBreak;
-			if cocks of player > 0:
+			if player is male:
 				say "     After a little more time of playing around with your new friend, you look up and see her leaning back against the dressing booth wall, eyes closed and just giving in to all of the feelings you have awakened in her. Which makes it just the perfect time to stand up and release the hard length of your [cock of player] shaft from the tight confines of your clothes. Hard cock in hand, you bend your knees a little and brush it over Diana's sex, drawing a moan from her, then slip the head in between her nether lips before she knows what is going on. You grunt in satisfaction as the warm and wet cave of her sex enfolds your shaft, the desire to ram deep into her burning on your soul. Then suddenly, you encounter a little bit of resistance - not from Diana, but rather a flexible membrane in her otherwise so eager pussy. The girl is a virgin!";
 				say "     As you bump her hymen and pause, Diana's eyes shoot open, her blue, cat-like irises catching your gaze in an intense look. Swallowing, you start to ask if she wants you to go ahead, but before the question has even left your lips, she lets out a deep mrowl, filled with animalistic need. The next thing that happens is that Diana humps her hips towards your crotch, spearing herself on your shaft and wrapping both legs around your body. A little yowl escapes her lips at the momentary pain of losing her cherry, to be replaced by an eager moan as you do the natural thing and push into her the rest of the way. Diana's arms wrap around your shoulders and she meets your lips in a hungry kiss, purring pleasantly from the depths of her throat. The two of you need no words to understand each other after that, your bodies doing the talking for you - from the way her legs push against your ass, to your own exploration of her mouth with your tongue and the young woman's fingernails raking your back to urge you to fuck her harder.";
 				WaitLineBreak;
@@ -94,23 +98,32 @@ Instead of resolving a Dressing Room Crisis:
 				say "     The smiling Siamese-gryphon hybrid looks at you with adoration and delight clearly written on her face, as if trying to engrave your features into her memory, then suddenly blinks and glances at the drawn curtain, thinking of the rest of the mall for the first time since you stepped into her life. 'Oh! I should get back to the others, they might worry where I am for so long. The group of refugees I'm staying with, I mean. We're housed in the optician in the west wing, in case you want to... come visit me sometime. I hope you do.' She gives you a dreamy smile, then slides herself out from between you and the dressing booth wall, quickly collecting her clothes and pulling them on. Moments later, Diana plants a peck on your cheek, then ducks behind the curtain and is gone.";
 			now DianaTransformationProgress is 1;
 			now DianaRelationship is 10; [player took her virginity]
-			now Mall Optitian is not resolved;
+			now Resolution of Dressing Room Crisis is 2; [fucked]
 		else if calcnumber is 3: [suggest putting on a paper bag - you monster!]
 			LineBreak;
 			say "     Stepping up into the dressing booth and reaching out to stroke her cheek, you tell Diana that she's actually got things quite wrong - a lot of people would love to get to know a cute girl like her quite closely. 'I - um, do you really mean that?' the shy young woman replies, wiping her eyes and looking at you in surprise. You smile lustily at her and tell her that you do, then let your gaze wander down to the small-ish bumps of her breasts and the slender physique of her body. Adding that guys would surely love to take her for a spin, you casually mention that a paper bag would always be an option if she feels so bad about her head - as long as her pussy is still accessible. This creates a completely gob-smacked expression on Diana's face, followed by a deep red flush and her shouting, 'You - you pig!' And with that, she gives your face a full-force slap that leaves your cheek red and stinging, then slips past you, running out of the store and sobbing all the way.";
 			now DianaRelationship is 100; [freaked out]
+			now Resolution of Dressing Room Crisis is 99; [freaked]
 	else if calcnumber is 2:
 		LineBreak;
 		say "     Grabbing a handful of the dark blue curtain, you wrench it aside to reveal a young woman who is a hybrid of three species. Her body is human overall, Caucasian and with pale skin, but she has the clawed feet of a gryphon, with light blue fur having spread halfway up her thighs. On the other end, her body is crowned by a feline head that shows the typical coloring of a Siamese cat, with black fur on her face and ears that lightens to white on the rest of her head and shoulders, where the fur thins out and stops. The hybrid female is naked, apparently having been in the middle of checking out her mixed-together form. Your sudden intrusion makes her whirl around in shock, scream and then snatch up her clothes, dashing past you without a second's pause. She runs from the store, naked as she is, with one arm covering her petite breasts, the other clutching an armful of fabric. As she runs down the corridor outside, you hear her sob and shout, 'Don't look at me!'";
 		say "     Well, seems like that wasn't the best approach for a distressed young woman. You did get a nice view of all of her assets, but was that really worth putting the poor girl through even more of a shock?";
 		now DianaRelationship is 100; [freaked out]
+		now Resolution of Dressing Room Crisis is 99; [freaked]
 	else if calcnumber is 3:
 		LineBreak;
 		say "     With a shrug, you turn around and walk away, leaving whoever is in that dressing room to deal with their own problems.";
 		now DianaRelationship is 101; [player ignored her]
+		now Resolution of Dressing Room Crisis is 100; [ignored]
 	now Dressing Room Crisis is resolved;
 
-Mall Optitian is a situation. Mall Optitian is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Mall Optitian	"Mall Optitian"
+
+Mall Optitian is a situation.
+The Prereq1 of Mall Optitian is Dressing Room Crisis.
+The Prereq1Resolution of Mall Optitian is { 1, 2 }.
 The sarea of Mall Optitian is "Smith Haven".
 
 Instead of resolving a Mall Optitian:
@@ -156,7 +169,7 @@ to say DianaTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -178,17 +191,15 @@ to say DianaTalkMenu:
 				if (nam is "Crouch down in front of her and eat her out"):
 					say "[DianaOral1]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You tell the young woman that you don't have time to hang out with her right now and say your goodbyes.";
-				now Mall Optitian is resolved;
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You tell the young woman that you don't have time to hang out with her right now and say your goodbyes.";
+			now Mall Optitian is resolved;
+			if Resolution of Mall Optitian is 0:
+				now Resolution of Mall Optitian is 1; [just talk]
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 
@@ -213,6 +224,7 @@ to say DianaTalk4: [hang out at the bookstore]
 	SanBoost 15;
 	follow the turnpass rule; [time advanced]
 	now Mall Optitian is resolved;
+	now Resolution of Mall Optitian is 2; [hung out at the book store]
 
 to say DianaOral1: [Eat her out in public]
 	say "     Stepping up close to Diana, you gently push her back against the wall and tell her in a teasing tone that you got another idea what you could do together. The young woman looks surprised, but at the same time intrigued by the sudden implication of a more racy way to pass the time. 'Oh, what's that?' the young woman asks with a smile on her face and one eyebrow raised. In reply, you just grin and sink to your knees, hooking your fingers over the elastic of her skirt and pulling it down and exposing her panties. 'What?! You can't do that here! Someone might -' Diana's shocked outburst is interrupted by a high-pitched gasp as you pull her panties down too and move to lap your tongue over her nether lips. 'Oh god, yes!' she pants loudly as the tip of your tongue plays with her clit a few seconds, then draws back from her exposed sex.";
@@ -244,6 +256,7 @@ to say DianaOral1: [Eat her out in public]
 		say "     Diana happily accepts your words and viewpoint, still eager to put a lot of faith in the person she met only a little while ago and let claim her virginity. Arms wrapping around you, the naked young woman gives you a tight hug and says, 'Thank you so much. I'll take those words to heart. And... this was fun. A bit scandalous, but I kinda like that, if I think about it now.' Turning her head to look over to the spectators still watching the two of you, Diana hesitates for a second, then finds her voice and calls out, 'Okay, show's over folks. Go about your business.' With that said, she quickly collects her clothes from the ground and gets dressed again, with the little group of voyeurs melting away before much longer. 'You're amazing, you know that?' Diana says with a happy smile, then leans in to kiss you on the lips before stroking your cheek. 'I think I'll need some alone-time in the bookstore now to calm down from all of this. Can't come back to Nana and the others too soon, and smelling all aroused. See you soon.' With that said, Diana gives you a little wave of goodbye and walks out of the side passage.";
 		now DianaTransformationProgress is 2; [gryphon/cat transformations met, starting to overlap]
 	now DianaRelationship is 11; [public cunnilingus done]
+	now Resolution of Mall Optitian is 3; [public oral]
 	now Mall Optitian is resolved;
 
 Diana ends here.

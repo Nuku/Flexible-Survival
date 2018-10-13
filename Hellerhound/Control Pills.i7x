@@ -1,6 +1,6 @@
 Control Pills by Hellerhound begins here.
 
-Table of Game Objects(continued)
+Table of Game Objects (continued)
 name	desc	weight	object
 "birth control pill"	"A small red pill, supposed to prevent accidental conception. It says 'lasts for 30 days', but with the nanites around, it's probably more like 3..."	1	birth control pill
 "fertile pill"	"A small blue pill, with the words 'Fertile 9h' on it. You've never seen the like before."	1	fertile pill
@@ -32,17 +32,17 @@ to say fertilepilluse:
 	if inheat is true:[extend heat]
 		decrease turns in heat by 8;
 		say "Your cunt seems to be getting even wetter, and the heat more intense. Looks like it'll last a bit longer now.";
-	if "Fertile" is listed in the feats of the player:
+	if "Fertile" is listed in the feats of player:
 		now wasfertile is 1;
-		remove "Fertile" from the feats of the player;
+		remove "Fertile" from the feats of player;
 	else:
 		now wasfertile is 0;
-	if "Sterile" is listed in the feats of the player:
+	if "Sterile" is listed in the feats of player:
 		now wassterile is 1;
-		remove "Sterile" from the feats of the player;
+		remove "Sterile" from the feats of player;
 	else:
 		now wassterile is 0;
-	add "Fertile" to the feats of the player;
+	add "Fertile" to the feats of player;
 
 
 steriletime is a number that varies.
@@ -58,17 +58,17 @@ to say controlpilluse:
 	if inheat is True:
 		now inheat is false;
 		say "Your heat ends abruptly.";
-	if "Fertile" is listed in the feats of the player:
+	if "Fertile" is listed in the feats of player:
 		now wasfertile is 1;
-		remove "Fertile" from the feats of the player;
+		remove "Fertile" from the feats of player;
 	else:
 		now wasfertile is 0;
-	if "Sterile" is listed in the feats of the player:
+	if "Sterile" is listed in the feats of player:
 		now wassterile is 1;
-		remove "Sterile" from the feats of the player;
+		remove "Sterile" from the feats of player;
 	else:
 		now wassterile is 0;
-	add "Sterile" to the feats of the player;
+	add "Sterile" to the feats of player;
 
 an everyturn rule:
 	if steriletime > 0:
@@ -78,9 +78,9 @@ an everyturn rule:
 		else:
 			say "Your odd feeling goes away, and you realize that you are no longer protected by the pill.";
 			if wassterile is 0:
-				remove "Sterile" from the feats of the player;
+				remove "Sterile" from the feats of player;
 			if wasfertile is 1:
-				add "Fertile" to the feats of the player;
+				add "Fertile" to the feats of player;
 	if fertiletime > 0:
 		decrease fertiletime by 3;
 		if fertiletime > 0:
@@ -90,9 +90,9 @@ an everyturn rule:
 		else:
 			say "Your mating desire fades, and you realize the fertility pill has worn off.";
 			if wassterile is 1:
-				add "Sterile" to the feats of the player;
+				add "Sterile" to the feats of player;
 			if wasfertile is 0:
-				remove "Fertile" from the feats of the player;
+				remove "Fertile" from the feats of player;
 
 
 

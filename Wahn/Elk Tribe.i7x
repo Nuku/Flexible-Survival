@@ -17,9 +17,9 @@ to say ElkBullVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		if HP of player > 0:    [player submits]
+		if HP of player > 0: [player submits]
 			say "     ...";
-		else:  [player beaten]
+		else: [player beaten]
 			say "     ...";
 
 to say ElkBullBeaten:
@@ -59,7 +59,7 @@ to say BeatenElkBullSexMenu:
 	now sortorder entry is 3;
 	now description entry is "CCCC.";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "DDD";
 		now sortorder entry is 4;
@@ -69,7 +69,7 @@ to say BeatenElkBullSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -89,16 +89,12 @@ to say BeatenElkBullSexMenu:
 				if (nam is "DDD"):
 					say "[BeatenElkBullSex4]";
 				WaitLineBreak;
-		else if calcnumber is 100:
-			say "Just leave him?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You just walk away after checking him over for loot.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You just walk away after checking him over for loot.";
+			WaitLineBreak;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say BeatenElkBullSex1:
@@ -138,28 +134,31 @@ to say ElkBullDesc:
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
 			say "     The elk bull looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
 			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his cock demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
+			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his cock demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
 		else:
 			say "     ...";
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Elk Tribe Bull";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribesman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]lowers his head and hits you with a sweep of his horns[or]grabs you by the throat and throws you to the ground[or]grabs you with one of his hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
 	now defeated entry is "[ElkBullBeaten]";
 	now victory entry is "[ElkBullVictorious]";
 	now desc entry is "[ElkBullDesc]";
-	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if cocks of player > 0]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
-	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
+	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if player is male]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
+	now body entry is "something between an elk and a human being [if player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
 	now tail entry is "You have a short, brown tail.";
 	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if cocks of player > 0]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if cocks of player > 0]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if cocks of player > 0]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
+	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if player is male]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
+	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
 	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
 	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
 	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
@@ -177,7 +176,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 15; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 9; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -192,8 +191,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -208,17 +208,17 @@ the usedesc of elk bull fur is "[elk bull fur use]";
 to say elk bull fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Elk Tribe Bull";
-	
-	
+
+
 Section 2 - Elk Tribe Cow
 
 to say ElkCowVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		if HP of player > 0:    [player submits]
+		if HP of player > 0: [player submits]
 			say "     ...";
-		else:  [player beaten]
+		else: [player beaten]
 			say "     ...";
 
 to say ElkCowBeaten:
@@ -259,7 +259,7 @@ to say BeatenElkCowSexMenu:
 	now sortorder entry is 3;
 	now description entry is "CCCC.";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "DDD";
 		now sortorder entry is 4;
@@ -269,7 +269,7 @@ to say BeatenElkCowSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -289,16 +289,12 @@ to say BeatenElkCowSexMenu:
 				if (nam is "DDD"):
 					say "[BeatenElkCowSex4]";
 				WaitLineBreak;
-		else if calcnumber is 100:
-			say "Just leave him?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You just walk away after checking her over for loot.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You just walk away after checking her over for loot.";
+			WaitLineBreak;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say BeatenElkCowSex1:
@@ -336,28 +332,31 @@ to say ElkCowDesc:
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
 			say "     The elk cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
 			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Cupping one of her breasts and giving its nipple a demonstrative pinch, the female elk steps forward to take her pleasure from you, if you want or not.";
+			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Cupping one of her breasts and giving its nipple a demonstrative pinch, the female elk steps forward to take her pleasure from you, if you want or not.";
 		else:
 			say "     ...";
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Elk Tribe Cow";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribeswoman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]grabs you by the throat and throws you to the ground[or]grabs you with one of her hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
 	now defeated entry is "[ElkCowBeaten]";
 	now victory entry is "[ElkCowVictorious]";
 	now desc entry is "[ElkCowDesc]";
-	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if cocks of player > 0]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
-	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
+	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if player is male]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
+	now body entry is "something between an elk and a human being [if player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
 	now tail entry is "You have a short, brown tail.";
 	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if cocks of player > 0]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if cocks of player > 0]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if cocks of player > 0]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
+	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if player is male]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
+	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
 	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
 	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
 	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
@@ -375,7 +374,7 @@ When Play begins:
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 3; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -390,8 +389,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -406,17 +406,17 @@ the usedesc of elk cow fur is "[elk cow fur use]";
 to say elk cow fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Elk Tribe Cow";
-	
-	
+
+
 Section 3 - Elk Tribe Herm
 
 to say ElkHermVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		if HP of player > 0:    [player submits]
+		if HP of player > 0: [player submits]
 			say "     ...";
-		else:  [player beaten]
+		else: [player beaten]
 			say "     ...";
 
 to say ElkHermBeaten:
@@ -457,7 +457,7 @@ to say BeatenElkHermSexMenu:
 	now sortorder entry is 3;
 	now description entry is "CCCC.";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "DDD";
 		now sortorder entry is 4;
@@ -467,7 +467,7 @@ to say BeatenElkHermSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -487,16 +487,12 @@ to say BeatenElkHermSexMenu:
 				if (nam is "DDD"):
 					say "[BeatenElkHermSex4]";
 				WaitLineBreak;
-		else if calcnumber is 100:
-			say "Just leave him?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You just walk away after checking her over for loot.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You just walk away after checking her over for loot.";
+			WaitLineBreak;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say BeatenElkHermSex1:
@@ -529,33 +525,36 @@ to say ElkHermDesc:
 			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
 			say "elk tribeswoman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
 		[clothing]
-		say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare. A noticable bulge in the loincloth tells you that this isn't a regular female[or]wears not a stitch of clothing, with a male's weighty shaft between her legs as openly presented as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare. A noticable bulge in the loincloth tells you that this isn't a regular female[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare. A noticable bulge in the loincloth tells you that this isn't a regular female[at random]. ";
+		say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[or]wears not a stitch of clothing, with a male's weighty shaft between her legs as openly presented as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[at random]. ";
 		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh. ";
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
 			say "     The elk herm looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
 			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the hermaphrodite elk steps forward to take her pleasure from you, if you want or not.";
+			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the hermaphrodite elk steps forward to take her pleasure from you, if you want or not.";
 		else:
 			say "     ...";
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Elk Tribe Herm";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribeswoman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]grabs you by the throat and throws you to the ground[or]grabs you with one of her hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
 	now defeated entry is "[ElkHermBeaten]";
 	now victory entry is "[ElkHermVictorious]";
 	now desc entry is "[ElkHermDesc]";
-	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if cocks of player > 0]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
-	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
+	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if player is male]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
+	now body entry is "something between an elk and a human being [if player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
 	now tail entry is "You have a short, brown tail.";
 	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if cocks of player > 0]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if cocks of player > 0]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if cocks of player > 0]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
+	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if player is male]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
+	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
 	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
 	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
 	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
@@ -573,7 +572,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 15; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 9; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 4; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 4; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -588,8 +587,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -612,9 +612,9 @@ to say ElkTransBullVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		if HP of player > 0:    [player submits]
+		if HP of player > 0: [player submits]
 			say "     ...";
-		else:  [player beaten]
+		else: [player beaten]
 			say "     ...";
 
 to say ElkTransBullBeaten:
@@ -654,7 +654,7 @@ to say BeatenElkTransBullSexMenu:
 	now sortorder entry is 3;
 	now description entry is "CCCC.";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "DDD";
 		now sortorder entry is 4;
@@ -664,7 +664,7 @@ to say BeatenElkTransBullSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -684,16 +684,12 @@ to say BeatenElkTransBullSexMenu:
 				if (nam is "DDD"):
 					say "[BeatenElkTransBullSex4]";
 				WaitLineBreak;
-		else if calcnumber is 100:
-			say "Just leave him?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You just walk away after checking him over for loot.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You just walk away after checking him over for loot.";
+			WaitLineBreak;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say BeatenElkTransBullSex1:
@@ -733,28 +729,31 @@ to say ElkTransBullDesc:
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
 			say "     The elk trans bull looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
 			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his crotch demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
+			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing his crotch demonstratively, the elk steps forward to take his pleasure from you, if you want or not.";
 		else:
 			say "     ...";
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Elk Tribe Trans Bull";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribesman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]lowers his head and hits you with a sweep of his horns[or]grabs you by the throat and throws you to the ground[or]grabs you with one of his hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
 	now defeated entry is "[ElkTransBullBeaten]";
 	now victory entry is "[ElkTransBullVictorious]";
 	now desc entry is "[ElkTransBullDesc]";
-	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if cocks of player > 0]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
-	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
+	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose[if player is male]. Atop your head is a small rack of antlers that have begun to form[else]. Your muzzle is slender and your features delicate, looking alluring and feminine[end if]";
+	now body entry is "something between an elk and a human being [if player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
 	now tail entry is "You have a short, brown tail.";
 	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if cocks of player > 0]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if cocks of player > 0]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if cocks of player > 0]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
+	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk[if player is male]. A firm, grinding noise grows louder in your new ears as a small rack of antlers form atop your head[end if]";
+	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
 	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
 	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
 	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
@@ -772,7 +771,7 @@ When Play begins:
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 0; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 1; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -787,8 +786,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -803,17 +803,17 @@ the usedesc of elk trans bull fur is "[elk trans bull fur use]";
 to say elk trans bull fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Elk Tribe Trans Bull";
-	
-	
+
+
 Section 5 - Elk Tribe Trans Cow
 
 to say ElkTransCowVictorious:
 	if inasituation is true: [dealt with in the event]
 		say "";
 	else:
-		if HP of player > 0:    [player submits]
+		if HP of player > 0: [player submits]
 			say "     ...";
-		else:  [player beaten]
+		else: [player beaten]
 			say "     ...";
 
 to say ElkTransCowBeaten:
@@ -854,7 +854,7 @@ to say BeatenElkTransCowSexMenu:
 	now sortorder entry is 3;
 	now description entry is "CCCC.";
 	[]
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "DDD";
 		now sortorder entry is 4;
@@ -864,7 +864,7 @@ to say BeatenElkTransCowSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -884,16 +884,12 @@ to say BeatenElkTransCowSexMenu:
 				if (nam is "DDD"):
 					say "[BeatenElkTransCowSex4]";
 				WaitLineBreak;
-		else if calcnumber is 100:
-			say "Just leave him?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You just walk away after checking her over for loot.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You just walk away after checking her over for loot.";
+			WaitLineBreak;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say BeatenElkTransCowSex1:
@@ -931,28 +927,31 @@ to say ElkTransCowDesc:
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
 			say "     The elk trans cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
 			[comment]
-			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favour and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favour and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have occured a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the transgendered elk steps forward to take her pleasure from you, if you want or not.";
+			say "[one of]'Trespassing on our tribal lands... a sure sign of overconfidence and stupidity. There's a price to be paid for that, outlander. Do yourself a favor and just submit[or]'I'd been hoping for another outlander like you to appear while I am hunting. Time to pay for your trespass of your tribal lands. Do yourself a favor and just submit[or]'Another outlander intruding here? You'll lever learn, will you? This is tribal land and violating it comes with a price[or]'This land belongs to the elk tribe, outlander. In coming here, you have incurred a debt to my people. But do not worry, I know just the way you can pay us back[at random].' Rubbing her cock demonstratively, the transgendered elk steps forward to take her pleasure from you, if you want or not.";
 		else:
 			say "     ...";
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Elk Tribe Trans Cow";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "The [one of]mighty elk[or]towering herbivore[or]muscular elk[or]powerful anthro cervine[or]elk tribeswoman[at random] [one of]slaps you around a bit[or]gives you a painful kick[or]grabs you by the throat and throws you to the ground[or]grabs you with one of her hands and headbutts you[or]grabs you by the throat, choking you a bit before you can free yourself[at random]!";
 	now defeated entry is "[ElkTransCowBeaten]";
 	now victory entry is "[ElkTransCowVictorious]";
 	now desc entry is "[ElkTransCowDesc]";
 	now face entry is "that of an elk, with an elongated muzzle and broad, dark nose. Your muzzle is slender and your features delicate, looking alluring and feminine";
-	now body entry is "something between an elk and a human being [if cocks of player > 0]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
+	now body entry is "something between an elk and a human being [if player is male]with a strong chest and broad shoulders. You are well over seven feet tall and your[else]with a slender, sexily curved body. While by no means petite, you are smaller than the males of your kind. Your[end if] limbs end in darkened, hoof-like hands and feet";
 	now skin entry is "[one of]brown-furred[or]dark-furred[at random]";
 	now tail entry is "You have a short, brown tail.";
 	now cock entry is "cervine";
-	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if cocks of player > 0]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk";
-	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if cocks of player > 0]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
+	now face change entry is "it starts to pulse and throb, bulging in some spots and tightening in others as your whole cranium changes shape. You grow a [if player is male]broad[else]slender[end if] muzzle with a flat, dark nose. Your ears move to the top corners of your head and form cups, completing your head's transition into that of an elk";
+	now body change entry is "it becomes difficult to control your limbs. Your hands and feet start changing first, fingers fusing to form three broad and strong digits tipped with hoof-like ends. The changes progresses up your limbs, changing shape and structure until the transition starts affecting your torso. There, your body becomes [if player is male]broad-shouldered and muscular[else]slender and sexily curved[end if] with a definite cervine look overall";
 	now skin change entry is "random tufts of brown fur start to sprout all over you. These start as just a few hairs, but expand continuously until the whole of you is covered in it";
 	now ass change entry is "twinges of transformation focus in on the base of your spine, soon forming a short tuft of a tail";
 	now cock change entry is "a rush of arousal fills you. Your manhood pulses and throbs, dribbling precum as it changes shape, becoming quite cervine in form. When the transformation ends, the excitement remains as you long to put your new cock to use";
@@ -970,7 +969,7 @@ When Play begins:
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 15; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 9; [ Cock width, more commonly used for ball size. ]
-	now breasts entry is 2; [ Number of breasts the infection will give a player. ]
+	now breasts entry is 2; [ Number of nipples the infection will give a player. ]
 	now breast size entry is 3; [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 3; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0; [ The number of cunts the infection will try to cause if sex entry is 'Female' or 'Both'. ]
@@ -985,8 +984,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1001,7 +1001,7 @@ the usedesc of elk trans cow fur is "[elk trans cow fur use]";
 to say elk trans cow fur use:
 	say "     Holding the tuft of fur between your fingers, you stroke over it, delighted in its softness. Strangely, the hair disintegrates after a while, becoming a cloud of fine particles that are absorbed into your skin.";
 	infect "Elk Tribe Trans Cow";
-		
+
 
 Section 4 - Endings
 

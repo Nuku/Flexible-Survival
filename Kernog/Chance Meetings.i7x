@@ -5,7 +5,12 @@ Section 1 - Main situation
 [Chance Meeting is a repeatable situations. It semi-randomly plays NON-REPEATABLE situations involving one or several NPCs]
 [The main goal of tis extension is to provide interaction between NPCs]
 [Please ensure that NPCs either know the player (thanks to secondary variables) or are following him as a companion with if x is companion of player]
-[If no rule is met, a low-level fight is launched, in order to provide the event a default closure]
+[if no rule is met, a low-level fight is launched, in order to provide the event a default closure]
+
+Table of GameEventIDs (continued)
+Object	Name
+Chance Meeting	"Chance Meeting"
+
 Chance Meeting is a situation.
 The sarea of Chance Meeting is "Outside".
 
@@ -27,7 +32,7 @@ Instead of resolving Chance Meeting:
 				challenge "female husky";
 	else:
 		LineBreak;
-		say "     Favouring caution, you quietly slip away and continue your patrol.";
+		say "     Favoring caution, you quietly slip away and continue your patrol.";
 
 Section 2 - Non-repeatable sub-events
 
@@ -47,7 +52,7 @@ to say Generation Conflict:
 	say "     'We found the key of the restaurant's storage room, so we simply put our stuff there when we're out in the city,' Erin says. 'Besides, most visitors know our faces, and they tend to behave themselves. With some encouragement, of course.'";
 	say "     'He means sex,' Violet interjects, making Brennan cough out his soda, to the general hilarity. 'And so... you got a shelter, old man?'";
 	say "     'I'm not [italic type]that[roman type] old. And yes. I found myself an empty flat, downtown. Well isolated. It's as safe as it can be. If you two want to find a better place. Well... I would not mind having some company. [if player is not defaultnamed][name of player][else][subjpro_cap of player][end if] visits me from time to time, and you are welcome to do the same.'";
-	say "     'Neat,' Violet replies, as she absentmindedly pushes Remus' head from her crotch, as if it was no big thing. 'Well, don't be a stranger either, if you pass by the beach.' Violet suddenly turns towards you: 'Anyway, you've been quite silent, pal. How's it hanging on your end?'";
+	say "     'Neat,' Violet replies, as she absentmindedly pushes Remus's head from her crotch, as if it was no big thing. 'Well, don't be a stranger either, if you pass by the beach.' Violet suddenly turns towards you. 'Anyway, you've been quite silent, pal. How's it hanging on your end?'";
 	WaitLineBreak;
 	say "     The four of you keep talking for some time, and eventually, Brennan decides to keep moving. Erin and Violet take their leave as well, after offering you and Brennan a spare soda they salvaged from a vending machine ('It was like the giving tree: we kept kicking, we kept winning,' Erin tells you). On your own once again, you resume your exploration.";
 	say "     Drinking the soda offered by Erin and Violet [bold type]quenched your thirst a little[roman type]. Also, [bold type]you earned an additional soda[roman type].";
@@ -55,4 +60,4 @@ to say Generation Conflict:
 	increase carried of soda by 1;
 	now generationConflictFlag is 1;
 
-Chance Meetings end here.
+Chance Meetings ends here.

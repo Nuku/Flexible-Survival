@@ -4,8 +4,8 @@ Version 4 of Fucking by Core Mechanics begins here.
 
 Section 1 - Fucking action and table
 
-A person has a number called lastfuck. lastfuck is normally 255.
-A person has a text called fuckscene. fuckscene is normally "".
+A person has a number called lastfuck. lastfuck is usually 255.
+A person has a text called fuckscene. fuckscene is usually "".
 
 Fucking is an action applying to one thing.
 
@@ -42,12 +42,12 @@ instead of fucking Doctor Matt:
 Table of fucking options
 title	sortorder	subtable	description	toggle
 "Nothing"	1	--	"Nothing here."	sexytable rule
-with 20 blank rows.
+with 40 blank rows.
 
 This is the sexytable rule:
 	say "I'm a placeholder! :)";
 
-sextablerun is a number that varies. sextablerun is normally 0.
+sextablerun is a number that varies. sextablerun is usually 0.
 
 
 Section 2 - Demonstration Example
@@ -55,21 +55,25 @@ Section 2 - Demonstration Example
 [*** BELOW IS AN EXAMPLE OF A CHARACTER USING THE NEW FUCKING TABLE SYSTEM ***]
 [To build your own, the various Testerbot components would have to be renamed to prevent duplication.]
 
+Table of GameCharacterIDs (continued)
+object	name
+Testerbot	"Testerbot"
+
 Testerbot is a person.
 [ Testerbot is in Primary Lab.	]			[Removed again - testing over]
 The description of Testerbot is "[testerbotdesc]".
 The conversation of Testerbot is { "Disgusting!" }.
-lastfuck of Testerbot is normally 555.
+lastfuck of Testerbot is usually 555.
 
 to say testerbotdesc:				[Description]
-	say "Testerbot is a boxy robot with a collection of orifices and probes built in, created as part of Dr Matt's continued testing of the infection. There are several buttons, dials and lights on its chest, as well as a pair of handles built onto its sides and another handle of the top of its head. There are several sticky stains on the robot's aluminium chassis. Despite the grin stickered on its face, it is quite aggressively slumped in the corner.";
+	say "Testerbot is a boxy robot with a collection of orifices and probes built in, created as part of Dr Matt's continued testing of the infection. There are several buttons, dials and lights on its chest, as well as a pair of handles built onto its sides and another handle of the top of its head. There are several sticky stains on the robot's aluminum chassis. Despite the grin stickered on its face, it is quite aggressively slumped in the corner.";
 
 instead of conversing the Testerbot:	[Talking]
 	say "[one of]'Why was I programmed to feel pain?'[or]'You organic creatures are disgusting.'[or]'Why do you lifeforms make so many fluids?'[or]'Why must you use me to satisfy your squishy, biological urges?'[or]'I am unfortunately programmed to submit to your repulsive, animal desires,'[at random] the robot complains.";
 
-the scent of Testerbot is "Testerbot reeks of sex, as that's what it's used for. What a sad, sad life it leads.".	[Smell]
+the scent of Testerbot is "Testerbot reeks of sex, as that's what it's used for. What a sad, sad life it leads.". [Smell]
 
-the fuckscene of Testerbot is "[sexwithTesterbot]".		[Fucking]
+the fuckscene of Testerbot is "[sexwithTesterbot]". [Fucking]
 
 to say sexwithTesterbot:
 	if lastfuck of Testerbot - turns < 4:
@@ -99,25 +103,25 @@ to say testerbotselection:
 	now sortorder entry is 5;
 	now description entry is "Have the robot fuck your ass.";
 	now toggle entry is testerbotsexy rule;
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Face fuck";
 		now sortorder entry is 1;
 		now description entry is "Use testorbot to orally please you.";
 		now toggle entry is testerbotsexy rule;
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck Testerbot";
 		now sortorder entry is 2;
 		now description entry is "Fill one of the robot's pussy-like orifices.";
 		now toggle entry is testerbotsexy rule;
-	if cunts of player > 0:
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Fucked by Testerbot";
 		now sortorder entry is 3;
 		now description entry is "Order the robot to push one of those probes in you.";
 		now toggle entry is testerbotsexy rule;
-	if cocks of player > 0:
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Anal on Testerbot";
 		now sortorder entry is 4;
@@ -152,7 +156,7 @@ to say testerbotselection:
 					say "     Ordering the robot to bend over, you bring your hard cock to its artificial anal orifice. 'Yes, do me hard... uhhh...' It shudders visibly before continuing. 'I've been... ugh... such a bad robot bitch.' As you sink your cock into it, the robot clenches down on the worktable, cracking the wood a little. Ignoring it, you start thrusting into it as the snug back entrance clenches and squeezes much like an asshole. As you pound away, a hidden cassette player starts up inside the robot, playing some grunts and wet, slapping sounds lifted from a porno. This almost is enough to cover the dull, metal thumps as you bang against the boxy, metal robot's body. Grabbing the robot's side handles, you thrust hard into it and shoot your hot semen into that gripping hole until your balls are drained. Finished its duty, the robot slowly walks back to the wall socket to recharge, leaking your cum as it goes.";
 					decrease libido of player by 15;
 				else if nam is "Anal":
-					say "     At your order, the robot bends you over a worktable. You can her a motor whirring, followed by a clicking sound as one of the probes is moved and locked into position. The robot lines up the cock with your asshole and sighs audibly before saying 'I will make you my bitch' in a monotone voice before sliding the self-lubricating dildo up your butt. You grunt a little as it starts pressing into you, then start to enjoy it as the robot thrusts into you with measured strokes[if cocks of player > 0]. The cock attachment presses at your prostate with every thrust, pleasantly stimulating the sensitive gland[else]. The cock attachment pleasantly stimulates you as it slides back and forth inside you[end if]. An internal tape player starts up, playing back some grunts and moans from some porno. As the robot pounds into you, the dildo starts to vibrate, increasing the pleasure you receive until finally you cum with a moan of ecstasy. Finished its duty, the robot gingerly unhooks the used probe and holds it at a distance in its pincher hand before releasing it into a cleaning vat. After shuddering and bemoaning that it feels so dirty, the robot slumps back by the wall socket and plugs in to recharge.";
+					say "     At your order, the robot bends you over a worktable. You can her a motor whirring, followed by a clicking sound as one of the probes is moved and locked into position. The robot lines up the cock with your asshole and sighs audibly before saying 'I will make you my bitch' in a monotone voice before sliding the self-lubricating dildo up your butt. You grunt a little as it starts pressing into you, then start to enjoy it as the robot thrusts into you with measured strokes[if player is male]. The cock attachment presses at your prostate with every thrust, pleasantly stimulating the sensitive gland[else]. The cock attachment pleasantly stimulates you as it slides back and forth inside you[end if]. An internal tape player starts up, playing back some grunts and moans from some porno. As the robot pounds into you, the dildo starts to vibrate, increasing the pleasure you receive until finally you cum with a moan of ecstasy. Finished its duty, the robot gingerly unhooks the used probe and holds it at a distance in its pincher hand before releasing it into a cleaning vat. After shuddering and bemoaning that it feels so dirty, the robot slumps back by the wall socket and plugs in to recharge.";
 					decrease libido of player by 15;
 				wait for any key;
 		else:

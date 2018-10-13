@@ -1,13 +1,23 @@
 Version 1 of Blake by Ssely begins here.
 
-East of Smith Haven Mall Lot East is Dirty Alley.
+Table of GameRoomIDs (continued)
+Object	Name
+Dirty Alley	"Dirty Alley"
+
+Dirty Alley is a room.
+Dirty Alley is east of Smith Haven Mall Lot East.
 The description of Dirty Alley is "[DirtyAlleyDesc]".
 
 to say DirtyAlleyDesc:
-	say "     Dumpsters and trash bags litter the floor, the back-alley of the brothel is coated in a thick layer of grime - the darkness from the corrugated metal overhead shrouds the scene in a thick fog. Before you sits a leather-clad rat - this alleyway seeming to be his home. He doesn't notice you for the meanwhile, your eyes darting around his living quarters. The rat's bed is made up of a couple layers - trash bags being used as the mattress, a few salvaged blankets covering the mattress, and a dirty, unkempt duvet over-top that. Despite his disgusting living conditions, his bed was surprisingly well made - blankets tucked underneath their neighbouring bags.";
+	say "     Dumpsters and trash bags litter the floor, the back-alley of the brothel is coated in a thick layer of grime - the darkness from the corrugated metal overhead shrouds the scene in a thick fog. Before you sits a leather-clad rat - this alleyway seeming to be his home. He doesn't notice you for the meanwhile, your eyes darting around his living quarters. The rat's bed is made up of a couple layers - trash bags being used as the mattress, a few salvaged blankets covering the mattress, and a dirty, unkempt duvet over-top that. Despite his disgusting living conditions, his bed was surprisingly well made - blankets tucked underneath their neighboring bags.";
 	WaitLineBreak;
 
-Blake is a man. Blake is in Dirty Alley. The HP of Blake is normally 0.
+Table of GameCharacterIDs (continued)
+object	name
+Blake	"Blake"
+
+Blake is a man.
+Blake is in Dirty Alley.
 The description of Blake is "[BlakeDesc]".
 The conversation of Blake is { "Mew!" }.
 

@@ -1,7 +1,6 @@
 Version 2 of Additional Tome Scenes by Dys begins here.
-[v1 - Adds tentacles and demon fox.                                         ]
-[v2 - Breaks up the file into more abstract pieces.                         ]
-
+[v1 - Adds tentacles and demon fox                                         ]
+[v2 - Breaks up the file into more abstract pieces                         ]
 
 "Adds additional content to the Ancient Tome item."
 
@@ -9,14 +8,14 @@ Version 2 of Additional Tome Scenes by Dys begins here.
 [ DEMON FOX CODE -- Dys/Demon Fox.i7x                                       ]
 
 [ TomeTimer tracks how long it's been since the player has been             ]
-[ influenced by the tome.                                                   ]
+[ influenced by the tome                                                    ]
 [ TomeInfluence tracks how much the player has been influenced              ]
-[   0 = Never influenced. Cannot use tome.                                  ]
-[   1 = Influenced once. Cannot use tome.                                   ]
-[   2 = Influenced twice. Cannot use tome.                                  ]
-[   3 = Influenced three times. Can now use the tome.                       ]
+[   0 = Never influenced. Cannot use tome                                   ]
+[   1 = Influenced once. Cannot use tome                                    ]
+[   2 = Influenced twice. Cannot use tome                                   ]
+[   3 = Influenced three times. Can now use the tome                        ]
 [ TomeInteractions tracks the number of times the player has used the tome. ]
-[ TomeEventPending flags if a tome event is waiting to fire.                ]
+[ TomeEventPending flags if a tome event is waiting to fire                 ]
 
 
 Section 1 - Variables
@@ -34,13 +33,13 @@ to say TomeSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0 and cunts of player is 0 and TentacleInteractions > 0:
+	if player is puremale and TentacleInteractions > 0:
 		choose a blank row from table of fucking options;
 		now title entry is "Summon a tentacle monster";
 		now sortorder entry is 1;
 		now description entry is "Perhaps you could get the tentacle monster to have its way with you";
 	[]
-	if cocks of player > 0 and cunts of player is 0 and DemonFoxInteractions > 0:
+	if player is puremale and DemonFoxInteractions > 0:
 		choose a blank row from table of fucking options;
 		now title entry is "Summon a demon fox";
 		now sortorder entry is 2;
@@ -65,7 +64,7 @@ to say TomeSexMenu:
 					-- "Summon a tentacle monster":
 						say "[TentacleSex]";
 					-- "Summon a demon fox":
-						say "[DemonFoxMenu]";
+						say "[DemonFoxSummon]";
 				WaitLineBreak;
 		else if calcnumber is 0:
 			say "     Change your mind and do something else?";

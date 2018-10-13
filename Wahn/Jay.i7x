@@ -31,6 +31,10 @@ Section 1 - NPC
 [***********************************************************]
 [***********************************************************]
 
+Table of GameCharacterIDs (continued)
+object	name
+Jay	"Jay"
+
 Jay is a man.
 The description of Jay is "[JayDesc]".
 The conversation of Jay is { "<This is nothing but a placeholder!>" }.
@@ -66,7 +70,7 @@ an everyturn rule:
 			move Jay to Mall East Wing;
 		else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning, reading]
 			if player is in Mall East Wing and Jay is in Mall East Wing:
-				say "     Having made his rounds to talk to most of his 'neighbours', Jay eventually drifts over to the [']Brookstone Books['] store and goes inside.";
+				say "     Having made his rounds to talk to most of his 'neighbors', Jay eventually drifts over to the [']Brookstone Books['] store and goes inside.";
 			if player is in Brookstone Books:
 				say "     Jay the Christmas Elf walks into the store and wishes Beverly a good morning, then picks up a paperback novel from a shelf and climbs onto a comfortable sofa in the seating area. Sitting down cross-legged, he starts to page through the book with interest.";
 			move Jay to Brookstone Books;
@@ -96,7 +100,7 @@ instead of conversing the Jay:
 	if XP of Jay is 0:
 		say "     ERROR: Jay shouldn't be available to talk to yet. Please report to Wahn on the FS Discord/Forum and quote this tracking number for easier bug-fixing: [XP of Jay]";
 	else:
-		say "[JayTalkMenu]"
+		say "[JayTalkMenu]";
 
 to say JayTalkMenu:
 	LineBreak;
@@ -139,7 +143,7 @@ to say JayTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while Sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -161,16 +165,13 @@ to say JayTalkMenu:
 				if (nam is "Ask him about Krampus"):
 					say "[JayTalk5]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now Sextablerun is 1;
-				say "     You step back from the diminutive elf, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+				say "[JayTalkMenu]";
+		else if calcnumber is 0:
+			now Sextablerun is 1;
+			say "     You step back from the diminutive elf, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JayTalk1: [talk about him]
@@ -205,8 +206,12 @@ Section 4 - Events
 [***********************************************************]
 [***********************************************************]
 
+Table of GameEventIDs (continued)
+Object	Name
+Harbor Swap Meet	"Harbor Swap Meet"
+
 Harbor Swap Meet is a situation.
-Harbor Swap Meet is resolved.
+Harbor Swap Meet is inactive.
 The sarea of Harbor Swap Meet is "Warehouse".
 
 Instead of resolving a Harbor Swap Meet:
@@ -229,9 +234,11 @@ Instead of resolving a Harbor Swap Meet:
 			say "[SilkDelivery]";
 			decrease carried of chocolate milk by 5;
 			now Harbor Swap Meet is resolved;
+			now Resolution of Harbor Swap Meet is 2; [player paid for the silk]
 	else if thirst of Jay is 4: [player who is friends with Aelias can pick up the silk easily]
 		say "     Returning to the swap meet, you ring the little bell again and Aelias comes down from his nest. Under his arm, he holds a bulging spindle of silk thread. 'Hello my lovely little fly,' he tells you, leaning forward to plant a kiss on your lips, then hands over the load of silk with a smile. 'I hope that this is exactly what you needed. I can tell you, it was a pain in the ass to keep spinning for hour after hour to make it, but what don't I do for my favorite prey. Have fun with it, and I hope to see you for some more action between us soon.' With a little grope of your ass, the spidertaur then starts to pull himself up the strand he slid down on, effortlessly reaching his home away from home above and vanishing inside.";
 		say "[SilkDelivery]";
+		now Resolution of Harbor Swap Meet is 1; [player who is friends with A got the silk easily]
 		now Harbor Swap Meet is resolved;
 
 to say SilkDelivery:
@@ -250,7 +257,7 @@ Section 5 - Fucking
 [***********************************************************]
 
 instead of fucking the Jay:
-	if cocks of player is 0:
+	if player is not male:
 		say "     Looking you up and down, Jay gives you a friendly smile, but at the same time shakes his head. 'Thanks for the offer, but I'm as gay as a three dollar bill. Got a husband to prove it, too. I'm flattered, but you're at the wrong address here I'm afraid...'";
 	else:
 		if thirst of Jay < 9:
@@ -272,7 +279,7 @@ to say JaySexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -287,7 +294,7 @@ to say JaySexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -303,16 +310,12 @@ to say JaySexMenu:
 				if (nam is "Suck Jay off"):
 					say "[JaySex2]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the slender elf, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the slender elf, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say JaySex1: [oral on the player]
@@ -321,8 +324,6 @@ to say JaySex1: [oral on the player]
 to say JaySex2: [oral on Jay]
 	say "     A";
 
-Jay ends here.
-
 [ Collected Comments and ideas ]
 
 [ Song: Between the boyish figure and brazen desires of the bottoming elf, there's ample room for some content involving the player sharing the horny male with his far larger lover, spit-roasting him on all fours while giving sawing, asynchronous thrusts back and forth into his well-stretched jaw and jealously gripping asshole. Letting out all those pesky inhibitions with every firm thrust as he moans and drools around throbbing dick, all too happy to wrap his arms around the waist of the one screwing his pretty face while his seizing rear massages the pole splitting it wide open. ]
@@ -330,3 +331,5 @@ Jay ends here.
 [ Once everything is said and done, the two could even give an extended show of Mark pulling his still-trembling partner against his broad, snowy muzzle, tongue extending to draw several slow, firm licks through the valley of his buns before its tip presses sinuously against that circle-pet star, gliding into that cum-soaked passage with unwavering resolve. Knowing his lover inside and out, Mark's able to draw a cornucopia of pleasured sounds from his submissive mate, from gurgling moans to breathy cries as his tongue sweeps across every sensitive nerve of his clenching anal lining, only to dip below to grind roughly against his prostate, forcibly milking long strands of thick, stringy pre from the flaring tip of Jay's dick. ]
 
 [ Oh, what a show that would be. Something the player could paw off to in their post-sex haze, riling themselves up on the myriad sounds and expressions the horny elf makes as he's orally ravaged into blissful oblivion. ]
+
+Jay ends here.

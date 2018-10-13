@@ -19,6 +19,10 @@ Section 1 - NPC
 CandyUrikInteraction is a number that varies.
 lastCandyUrikInteraction is a number that varies.
 
+Table of GameCharacterIDs (continued)
+object	name
+Urik	"Urik"
+
 Urik is a man.
 The description of Urik is "[UrikDesc]".
 The icon of Urik is Figure of Urik_clothed_icon.
@@ -33,7 +37,7 @@ The conversation of Urik is { "<Placeholder>" }.
 The scent of Urik is "     Urik has a quite masculine smell, underlined with a little bit of sweat and cum that somehow just makes him more attractive.".
 
 Instead of fucking Urik:
-	if(lastfuck of Urik - turns < 5):
+	if (lastfuck of Urik - turns < 5):
 		say "     Urik says, 'I need a break for a moment [master]. Please...'";
 	else:
 		LineBreak;
@@ -51,13 +55,13 @@ Instead of fucking Urik:
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job";
 		[]
-		if (lust of Urik > 0 and cocks of player > 0):
+		if (lust of Urik > 0 and player is male):
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";
 			now sortorder entry is 2;
 			now description entry is "Get a blow-job";
 		[]
-		if (cunts of player > 0):
+		if player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Let Urik fuck your pussy";
 			now sortorder entry is 3;
@@ -69,7 +73,7 @@ Instead of fucking Urik:
 			now sortorder entry is 4;
 			now description entry is "Let the orc warrior fill your ass with his seed";
 		]
-		if (cocks of player > 0):
+		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Urik's ass";
 			now sortorder entry is 5;
@@ -79,7 +83,7 @@ Instead of fucking Urik:
 		repeat with y running from 1 to number of filled rows in table of fucking options:
 			choose row y from the table of fucking options;
 			say "[link][y] - [title entry][as][y][end link][line break]";
-		say "[link]100 - Nevermind[as]100[end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
 		while sextablerun is 0:
 			say "Pick the corresponding number> [run paragraph on]";
 			get a number;
@@ -103,14 +107,10 @@ Instead of fucking Urik:
 						say "[UrikSex5]";
 					wait for any key;
 					now lastfuck of Urik is turns;
-			else if calcnumber is 100:
-				say "[bold type]Break off?[roman type][line break]";
-				if the player consents:
-					now sextablerun is 1;
-					say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -199,7 +199,7 @@ instead of conversing Urik:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -221,14 +221,10 @@ instead of conversing Urik:
 					say "[UrikTalk4]";
 				wait for any key;
 				now lastfuck of Urik is turns;
-		else if calcnumber is 100:
-			say "Break off?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the orc warrior, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the orc warrior, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -249,10 +245,10 @@ to say UrikTalk3: [send him to the orc lair]
 to say UrikTalk4: [talk about Eric]
 	if UrikEricInteraction is 1: [Urik grabbed Eric, player stepped in and allowed Eric to watch the orc finger himself]
 		say "     Urik grumbles a little and says, 'Don't worry - I haven't touched a hair on your little redhead. You're the boss and he's a dick-less freak anyways.'";
-	otherwise	if UrikEricInteraction is 2: [Urik grabbed Eric, player stepped in and allowed Eric to get oral pleasure from the orc]
+	else	if UrikEricInteraction is 2: [Urik grabbed Eric, player stepped in and allowed Eric to get oral pleasure from the orc]
 		say "     Urik grumbles a little and says, 'Don't worry - I haven't touched a hair on your little redhead. You're the boss.' There are a few moments of silence, then the large orc adds in a casual tone, 'Even though it's a downright shame to not train the lil pussy properly. He's got the temperament of a breeder slut - that's for sure. Should have seen the look in his eyes when he tasted my cum.'";
 	else if UrikEricInteraction is 3: [Urik went down on Eric's pussy, then fed him his orc cum in a sloppy kiss]
-		say "     Urik gives a little amused snort as you bring up Eric, then waves his hand in the air casually. 'I do admit - the kid's kinda cute to have hanging around. But really, he's too frigging shy! Hell, you've declared that he can order me around and what does he do? Nothing, that's what! A day-old orcling has more balls than him - and chest hair, and a fucking dick. Any orc teen would be out roaming the neighbourhood for something to fuck!' The muscled orc rubs his crotch through the loincloth and a smile spreads over his face, 'Not that the lil redhead didn't want some action though... after a bit of encouragement.' As you raise your eyebrow at his comment, Urik is fast to add, 'Hey boss. Don't you look at me that way... I didn't do nothing until he asked for it. He even said please, hmpf. Needs some lessons to realize he has to just take what he wants, that kid.'";
+		say "     Urik gives a little amused snort as you bring up Eric, then waves his hand in the air casually. 'I do admit - the kid's kinda cute to have hanging around. But really, he's too frigging shy! Hell, you've declared that he can order me around and what does he do? Nothing, that's what! A day-old orcling has more balls than him - and chest hair, and a fucking dick. Any orc teen would be out roaming the neighborhood for something to fuck!' The muscled orc rubs his crotch through the loincloth and a smile spreads over his face, 'Not that the lil redhead didn't want some action though... after a bit of encouragement.' As you raise your eyebrow at his comment, Urik is fast to add, 'Hey boss. Don't you look at me that way... I didn't do nothing until he asked for it. He even said please, hmpf. Needs some lessons to realize he has to just take what he wants, that kid.'";
 	else if UrikEricInteraction is 4: [Eric + Urik had 69 action]
 		say "     Urik gives a little amused snort as you bring up Eric, then waves his hand in the air casually. 'Well, at least he's learning - came right up to me the last time and said he wants some fun.' The orc sticks out his tongue and wiggles it up and down, then grins. 'I'm just doing what he wants me to, alright boss? Following your orders and being all nice and accommodating.' A twitch of the thick shaft hidden under the orc warrior's loincloth tells you that he's clearly enjoying the time he spends with Eric.";
 	else if UrikEricInteraction is 5: [Eric thanked Urik for being nice (and all the oral sex) with a BJ]
@@ -263,7 +259,7 @@ to say UrikTalk4: [talk about Eric]
 
 Section 3 - Events
 
-instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Candy is in bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
+instead of navigating Grey Abbey Library while (Urik is in Sitting Area and Candy is in Bunker and CandyUrikInteraction < 1 and (lastfuck of Urik - turns > 10)):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;

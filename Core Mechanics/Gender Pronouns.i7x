@@ -3,16 +3,16 @@ Version 3 of Gender Pronouns by Core Mechanics begins here.
 
 Section 1 - Blue Bishop's Variables and Routines
 
-ghis is text that varies. ghis is usually "their". [Gender text nodule, entails his/her/their]
-ghe is text that varies. ghe is usually "it".	[Gender text nodule, entails he/she/it]
-ghim is text that varies. ghim is usually "it". [Gender text nodule, entails him/her/it]
-ghishers is text that varies. ghishers is usually "theirs". [Gender text nodule, entails his/hers/theirs]
-gchis is text that varies. ghis is usually "Their". [Capitalized Versions]
-gche is text that varies. gche is usually "It".
-gchim is text that varies. ghim is usually "It".
-gchishers is text that varies. gchishers is usually "Theirs".
-gdragon is text that varies. gdragon is usually "dragon".
-gmasculine is text that varies. gmasculine is usually "particular".
+ghis is a text that varies. ghis is usually "their". [Gender text nodule, entails his/her/their]
+ghe is a text that varies. ghe is usually "it". [Gender text nodule, entails he/she/it]
+ghim is a text that varies. ghim is usually "it". [Gender text nodule, entails him/her/it]
+ghishers is a text that varies. ghishers is usually "theirs". [Gender text nodule, entails his/hers/theirs]
+gchis is a text that varies. ghis is usually "Their". [Capitalized Versions]
+gche is a text that varies. gche is usually "It".
+gchim is a text that varies. ghim is usually "It".
+gchishers is a text that varies. gchishers is usually "Theirs".
+gdragon is a text that varies. gdragon is usually "dragon".
+gmasculine is a text that varies. gmasculine is usually "particular".
 
 to malepronouns:
 	now ghis is "his";
@@ -52,37 +52,37 @@ to neutpronouns:
 
 Section 2 Stripes's Definitions
 
-to say subjpro_cap of (x - a person):	[Subjective Pronoun: He/She]
+to say subjpro_cap of (x - a person): [Subjective Pronoun: He/She]
 	if cunts of x is 0:
 		say "He";
 	else:
 		say "She";
 
-to say subjpro of (x - a person):	[subjective pronoun: he/she]
+to say subjpro of (x - a person): [subjective pronoun: he/she]
 	if cunts of x is 0:
 		say "he";
 	else:
 		say "she";
 
-to say possadj_cap of (x - a person):	[Possessive Adjective: His/Her <something>]
+to say possadj_cap of (x - a person): [Possessive Adjective: His/Her <something>]
 	if cunts of x is 0:
 		say "His";
 	else:
 		say "Her";
 
-to say possadj of (x - a person):	[possessive adjective: his/her <something>]
+to say possadj of (x - a person): [possessive adjective: his/her <something>]
 	if cunts of x is 0:
 		say "his";
 	else:
 		say "her";
 
-to say objpro of (x - a person):	[objective pronoun: <to> him/her]
+to say objpro of (x - a person): [objective pronoun: <to> him/her]
 	if cunts of x is 0:
 		say "him";
 	else:
 		say "her";
 
-to say posspro of (x - a person):	[possessive pronoun: <something> = his/hers]
+to say posspro of (x - a person): [possessive pronoun: <something> = his/hers]
 	if cunts of x is 0:
 		say "his";
 	else:
@@ -92,81 +92,93 @@ Section 3 - Plurals
 
 [short singular/plural statements - these add an s, es, y/ies as needed to a noun or a verb based on one or the other sexual characteristic]
 
-to say smn:   [stick an s on if multiple male - noun]
+to say smn: [stick an s on if multiple male - noun]
 	if cocks of player > 1:
 		say "s";
 	else:
 		say "";
 
-to say sfn:    [stick an s on if multiple female - noun]
+to say sfn: [stick an s on if multiple female - noun]
 	if cunts of player > 1:
 		say "s";
 	else:
 		say "";
 
-to say esmn:   [stick an es on if multiple male - noun]
+to say esmn: [stick an es on if multiple male - noun]
 	if cocks of player > 1:
 		say "es";
 	else:
 		say "";
 
-to say esfn:    [stick an es on if multiple female - noun]
+to say esfn: [stick an es on if multiple female - noun]
 	if cunts of player > 1:
 		say "es";
 	else:
 		say "";
 
-to say ymn:   [sticks y/ies on if multiple male - noun]
+to say ymn: [sticks y/ies on if multiple male - noun]
 	if cocks of player > 1:
 		say "ies";
 	else:
 		say "y";
 
-to say yfn:    [sticks y/ies on if multiple female - noun]
+to say yfn: [sticks y/ies on if multiple female - noun]
 	if cunts of player > 1:
 		say "ies";
 	else:
 		say "y";
 
-to say smv:    [stick an s on if single male - verb]
+to say smv: [stick an s on if single male - verb]
 	if cocks of player > 1:
 		say "";
 	else:
 		say "s";
 
-to say sfv:    [stick an s on if single female - verb]
+to say sfv: [stick an s on if single female - verb]
 	if cunts of player > 1:
 		say "";
 	else:
 		say "s";
 
-to say esmv:    [stick an es on if single male - verb]
+to say esmv: [stick an es on if single male - verb]
 	if cocks of player > 1:
 		say "";
 	else:
 		say "es";
 
-to say esfv:    [stick an es on if single female - verb]
+to say esfv: [stick an es on if single female - verb]
 	if cunts of player > 1:
 		say "";
 	else:
 		say "es";
 
-to say ymv:    [stick an y/ies on if single male - verb]
+to say ymv: [stick an y/ies on if single male - verb]
 	if cocks of player > 1:
 		say "y";
 	else:
 		say "ies";
 
-to say yfv:    [sticks y/ies on if single female - verb]
+to say yfv: [sticks y/ies on if single female - verb]
 	if cunts of player > 1:
 		say "y";
 	else:
 		say "ies";
+
+to say ismv: [uses is/are based on cock pluralization - verb]
+	if cocks of player > 1:
+		say "are";
+	else:
+		say "is";
+
+to say isfv: [uses is/are based on cunt pluralization - verb]
+	if cunts of player > 1:
+		say "are";
+	else:
+		say "is";
 
 [
 Example:
-say "Your cock[smn] smash[esmv] into the goblin's face.  Your juicy puss[yfn] then grind[sfv] against his pointy nose.";
+say "Your cock[smn] smash[esmv] into the goblin's face. Your juicy puss[yfn] then grind[sfv] against his pointy nose.";
 1 cock: Your cock smashes into the goblin's face...
 2+ cocks: Your cocks slam into the goblin's face...
 1 cunt: ...Your juicy pussy then grinds against his pointy nose.
@@ -175,103 +187,107 @@ say "Your cock[smn] smash[esmv] into the goblin's face.  Your juicy puss[yfn] th
 
 [short singular/plural pronoun statements - these pick between the two relevant pronouns based on plurality of either male of female sex organs]
 
-to say ittheym:   [subject pronoun male - picks 'it' or 'they' based on multiple male]
+to say ittheym: [subject pronoun male - picks 'it' or 'they' based on multiple male]
 	if cocks of player > 1:
 		say "they";
 	else:
 		say "it";
 
-to say ittheyf:   [subject pronoun female - picks 'it' or 'they' based on multiple female]
+to say ittheyf: [subject pronoun female - picks 'it' or 'they' based on multiple female]
 	if cunts of player > 1:
 		say "they";
 	else:
 		say "it";
 
-to say itthemm:   [object pronoun male - picks 'it' or 'them' based on multiple male]
+to say itthemm: [object pronoun male - picks 'it' or 'them' based on multiple male]
 	if cocks of player > 1:
 		say "them";
 	else:
 		say "it";
 
-to say itthemf:   [object pronoun female - picks 'it' or 'them' based on multiple female]
+to say itthemf: [object pronoun female - picks 'it' or 'them' based on multiple female]
 	if cunts of player > 1:
 		say "them";
 	else:
 		say "it";
 
-to say itstheirm:   [possessive adjective male - picks 'its' or 'their' based on multiple male]
+to say itstheirm: [possessive adjective male - picks 'its' or 'their' based on multiple male]
 	if cocks of player > 1:
 		say "their";
 	else:
 		say "its";
 
-to say itstheirf:   [possessive adjective female - picks 'its' or 'their' based on multiple female]
+to say itstheirf: [possessive adjective female - picks 'its' or 'their' based on multiple female]
 	if cunts of player > 1:
 		say "their";
 	else:
 		say "its";
 
-to say itstheirsm:   [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
+to say itstheirsm: [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
 	if cocks of player > 1:
 		say "theirs";
 	else:
 		say "its";
 
-to say itstheirsf:   [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
+to say itstheirsf: [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
 	if cunts of player > 1:
 		say "theirs";
 	else:
 		say "its";
 
-to say ItTheym:   [subject pronoun male - picks 'it' or 'they' based on multiple male]
+to say ItTheym: [subject pronoun male - picks 'it' or 'they' based on multiple male]
 	if cocks of player > 1:
 		say "They";
 	else:
 		say "It";
 
-to say ItTheyf:   [subject pronoun female - picks 'it' or 'they' based on multiple female]
+to say ItTheyf: [subject pronoun female - picks 'it' or 'they' based on multiple female]
 	if cunts of player > 1:
 		say "They";
 	else:
 		say "It";
 
-to say ItThemm:   [object pronoun male - picks 'it' or 'them' based on multiple male]
+to say ItThemm: [object pronoun male - picks 'it' or 'them' based on multiple male]
 	if cocks of player > 1:
 		say "Them";
 	else:
 		say "It";
 
-to say ItThemf:   [object pronoun female - picks 'it' or 'them' based on multiple female]
+to say ItThemf: [object pronoun female - picks 'it' or 'them' based on multiple female]
 	if cunts of player > 1:
 		say "Them";
 	else:
 		say "It";
 
-to say ItsTheirm:   [possessive adjective male - picks 'its' or 'their' based on multiple male]
+to say ItsTheirm: [possessive adjective male - picks 'its' or 'their' based on multiple male]
 	if cocks of player > 1:
 		say "Their";
 	else:
 		say "Its";
 
-to say ItsTheirf:   [possessive adjective female - picks 'its' or 'their' based on multiple female]
+to say ItsTheirf: [possessive adjective female - picks 'its' or 'their' based on multiple female]
 	if cunts of player > 1:
 		say "Their";
 	else:
 		say "Its";
 
-to say ItsTheirsm:   [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
+to say ItsTheirsm: [possessive pronoun male - picks 'its' or 'theirs' based on multiple male]
 	if cocks of player > 1:
 		say "Theirs";
 	else:
 		say "Its";
 
-to say ItsTheirsf:   [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
+to say ItsTheirsf: [possessive pronoun female - picks 'its' or 'theirs' based on multiple female]
 	if cunts of player > 1:
 		say "Theirs";
 	else:
 		say "Its";
 
 Section 4 - Current Monster
+
+Table of GameCharacterIDs (continued)
+object	name
+Currentmonster	"Currentmonster"
 
 Currentmonster is a person.
 Currentmonster has a number called mongender.
@@ -286,16 +302,16 @@ currentmonster can be neuterpro.
 currentmonster can be neuter.
 currentmonster can be multiple.
 
-currentmonster can be neuterX.	[0/10]	[genderless/non-applicable]
-currentmonster can be neuterM.	[1/11]	[male-type neuter]
-currentmonster can be neuterF.	[2/12]	[female-type neuter]
-currentmonster can be male.		[3/13]
-currentmonster can be female.	[4/14]
-currentmonster can be herm.		[5/15]
-currentmonster can be shemale.	[6/16]	[shemale/futa/dickgirl/etc.]
-currentmonster can be mherm.	[7/17]
-currentmonster can be cuntboy.	[8/18]
-currentmonster can be variable.	[9/19]
+currentmonster can be neuterX.  [0/10] [genderless/non-applicable]
+currentmonster can be neuterM.  [1/11] [male-type neuter]
+currentmonster can be neuterF.  [2/12] [female-type neuter]
+currentmonster can be male.     [3/13]
+currentmonster can be female.   [4/14]
+currentmonster can be herm.     [5/15] [herm/futa/etc.]
+currentmonster can be shemale.  [6/16] [shemale/dickgirl/etc.]
+currentmonster can be mherm.    [7/17]
+currentmonster can be cuntboy.  [8/18]
+currentmonster can be variable. [9/19]
 
 [  TABLE OF MONGENDER VALUES  ]
 [  0 - Neuter X (genderless)  ][N]
@@ -338,7 +354,7 @@ to say mongendernum (x - a number):
 	else:
 		neutpronouns;
 
-Definition: currentmonster is malepro:			[creature referred to as male]
+Definition: currentmonster is malepro: [creature referred to as male]
 	if mongender of currentmonster is 1, yes;
 	if mongender of currentmonster is 3, yes;
 	if mongender of currentmonster is 7, yes;
@@ -349,7 +365,7 @@ Definition: currentmonster is malepro:			[creature referred to as male]
 	if mongender of currentmonster is 18, yes;
 	no;
 
-Definition: currentmonster is femalepro:			[creature referred to as female - can also be used to determine if breasts]
+Definition: currentmonster is femalepro: [creature referred to as female - can also be used to determine if breasts]
 	if mongender of currentmonster is 2, yes;
 	if mongender of currentmonster is 4, yes;
 	if mongender of currentmonster is 5, yes;
@@ -360,14 +376,14 @@ Definition: currentmonster is femalepro:			[creature referred to as female - can
 	if mongender of currentmonster is 16, yes;
 	no;
 
-Definition: currentmonster is neuterpro:			[creature referred to as neuter (it/they)]
+Definition: currentmonster is neuterpro: [creature referred to as neuter (it/they)]
 	if mongender of currentmonster is 0, yes;
 	if mongender of currentmonster is 9, yes;
 	if mongender of currentmonster is 10, yes;
 	if mongender of currentmonster is 19, yes;
 	no;
 
-Definition: currentmonster is neuter:			[creature is genderless or has no genitals]
+Definition: currentmonster is neuter: [creature is genderless or has no genitals]
 	if mongender of currentmonster is 0, yes;
 	if mongender of currentmonster is 1, yes;
 	if mongender of currentmonster is 2, yes;
@@ -420,7 +436,7 @@ Definition: currentmonster is variable:
 	if mongender of currentmonster is 9 or mongender of currentmonster is 19, yes;
 	no;
 
-Definition: currentmonster is cocked:			[Male, herm, shemale, m-herm]
+Definition: currentmonster is cocked: [Male, herm, shemale, m-herm]
 	if mongender of currentmonster is 3, yes;
 	if mongender of currentmonster is 5, yes;
 	if mongender of currentmonster is 6, yes;
@@ -433,7 +449,7 @@ Definition: currentmonster is cocked:			[Male, herm, shemale, m-herm]
 	if mongender of currentmonster is 19, yes;
 	no;
 
-Definition: currentmonster is cunted:			[Female, herm, m-herm, cuntboy]
+Definition: currentmonster is cunted: [Female, herm, m-herm, cuntboy]
 	if mongender of currentmonster is 4, yes;
 	if mongender of currentmonster is 5, yes;
 	if mongender of currentmonster is 7, yes;
@@ -502,11 +518,11 @@ to say himher:
 
 Section 6 - Starshard's Rules and Definitions
 
-A person has a text called SubjectPro. SubjectPro is usually "they". [Subject Pronoun, they/he/she]
-A person has a text called ObjectPro. ObjectPro is usually "them". [Object Pronoun, them/him/her]
-A person has a text called PosAdj. PosAdj is usually "their". [Possessive Adjective, their/his/her]
-A person has a text called PosPro. PosPro is usually "theirs". [Possessive Pronoun, theirs/his/hers]
-A person has a text called ReflexPro. ReflexPro is usually "themselves". [Reflexive Pronoun, themselves/himself/herself]
+A person has a text called SubjectPro. SubjectPro is usually "they". [Subject Pronoun, it/he/she]
+A person has a text called ObjectPro. ObjectPro is usually "them". [Object Pronoun, it/him/her]
+A person has a text called PosAdj. PosAdj is usually "their". [Possessive Adjective, its/his/her]
+A person has a text called PosPro. PosPro is usually "theirs". [Possessive Pronoun, its/his/hers]
+A person has a text called ReflexPro. ReflexPro is usually "themselves". [Reflexive Pronoun, itself/himself/herself]
 A person has a text called SubjectProCap. SubjectProCap is usually "They".
 A person has a text called ObjectProCap. ObjectProCap is usually "Them".
 A person has a text called PosAdjCap. PosAdjCap is usually "Their".
@@ -555,17 +571,17 @@ to SetHermPronouns for (x - a person):
 	now PronounSet of x is "Herm";
 
 To SetNeutralPronouns for (x - a person):
-    now SubjectPro of x is "it";
-    now ObjectPro of x is "it";
-    now PosAdj of x is "its";
-    now PosPro of x is "its";
-    now ReflexPro of x is "itself";
-    now SubjectProCap of x is "It";
-    now ObjectProCap of x is "It";
-    now PosAdjCap of x is "Its";
-    now PosProCap of x is "Its";
-    now ReflexProCap of x is "Itself";
-    now PronounSet of x is "Neutral";
+	now SubjectPro of x is "it";
+	now ObjectPro of x is "it";
+	now PosAdj of x is "its";
+	now PosPro of x is "its";
+	now ReflexPro of x is "itself";
+	now SubjectProCap of x is "It";
+	now ObjectProCap of x is "It";
+	now PosAdjCap of x is "Its";
+	now PosProCap of x is "Its";
+	now ReflexProCap of x is "Itself";
+	now PronounSet of x is "Neutral";
 
 This is the SetPlayerPronouns rule:
 	if PronounChoice of player is:
@@ -578,7 +594,7 @@ This is the SetPlayerPronouns rule:
 		-- "Neutral":
 			SetNeutralPronouns for player;
 		-- "Auto":
-			if cocks of player > 0 and cunts of player > 0:
+			if player is herm:
 				if breast size of player > 0: [herm]
 					SetHermPronouns for player;
 				else: [male herm]
@@ -668,13 +684,25 @@ to say mister:
 	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
 		say "mister";
 	else:
-		say "missy";
+		say "miss";
 
 to say Mister:
 	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
 		say "Mister";
 	else:
-		say "Missy";
+		say "Miss";
+
+to say Sir:
+	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+		say "Sir";
+	else:
+		say "Ma'am";
+
+to say sir:
+	if PronounSet of player is "Male" or PronounSet of player is "Neutral":
+		say "sir";
+	else:
+		say "ma'am";
 
 [Being verbs]
 

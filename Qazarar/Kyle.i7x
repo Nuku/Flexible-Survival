@@ -42,6 +42,10 @@ GertyQuest is a number that varies. GertyQuest is usually 0.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Kyle	"Kyle"
+
 Kyle is a man. The hp of Kyle is usually 0.
 The description of Kyle is "[KyleDesc]".
 The conversation of Kyle is { "<This is nothing but a placeholder!>" }.
@@ -149,7 +153,7 @@ to say KyleTalkMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -178,16 +182,12 @@ to say KyleTalkMenu:
 					say "[KyleTalk8]";
 				say "     Kyle gets up and heads for the door out of the back room, and you follow. 'Well, it was nice talking to you. Come back soon when you have some time, and we can chat some more.'";
 				WaitLineBreak;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from Kyle, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from Kyle, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say KyleTalk1: [talk about him]
@@ -221,7 +221,7 @@ to say KyleTalk4: [talk about his friend]
 			LineBreak;
 			say "     Some of Kyle's worry instantly fades from his face. 'Oh, thank goodness. I'm sure you'll be able to help him out. Just come back and talk to me again once you've found him, alright? I'll be waiting.'";
 			now GertyQuest is 1;
-			now Angry Snake is not resolved;
+			now Angry Snake is active;
 		else:
 			LineBreak;
 			say "     Kyle looks crestfallen. 'I understand, the city out there is dangerous, and I'm sure you're a busy person. Just... think about it, okay?'";
@@ -236,7 +236,7 @@ to say KyleTalk4: [talk about his friend]
 			LineBreak;
 			say "     Some of Kyle's worry instantly fades from his face. 'Oh, thank goodness. I'm sure you'll be able to help him out. Just come back and talk to me again once you've found him, alright? I'll be waiting.'";
 			now GertyQuest is 1;
-			now Angry Snake is not resolved;
+			now Angry Snake is active;
 		else:
 			LineBreak;
 			say "     Kyle looks crestfallen. 'I understand, the city out there is dangerous, and I'm sure you're a busy person. Just... think about it, okay?'";
@@ -316,12 +316,12 @@ instead of fucking the Kyle:
 		say "     When you broach the subject again, Kyle becomes visibly both nervous and excited. 'Okay, I think I'm ready for this. Let's head to the back room, okay?' The lizardman turns around and walks through the bookshop towards the back room, his pace faster than usual. Just as excited as Kyle, you follow. Once the two of you are together in the privacy of the rear area of the store, he turns back towards you. For a moment, he closes his eyes and breathes deeply. 'Alright, whenever you're ready.' You don't give Kyle the chance to be nervous, and you press right up against him, kissing him deeply. You put your arms around him, holding tight as he reciprocates. The intense lip locking is only broken occasionally to breathe.";
 		say "     You pull back slightly, and grin at Kyle. From his expression, you can tell he would be blushing if he were capable. At the same time, you let go of Kyle with one of your hands, and reach downwards to his pants. You take a few moments to fiddle with the button on the front as you make out with him, until eventually it comes open. Wasting no time, you grab the side of the waistline and yank, lowering his pants just enough that his now-hard member becomes partially visible. After that it is a simple task for you to reach in and quickly grasp his shaft, pulling it free of the legwear. For a time, you simply stand there, your hand wrapped around Kyle's reptilian cock, and your lips locked with his.";
 		WaitLineBreak;
-		if cocks of player > 0: [for males and herms]
+		if player is male: [for males and herms]
 			say "     Slowly you start to stroke the cock in your hand, pressing yourself more closely against Kyle. After a few moments of this, he relaxes slightly, and reaches downward himself, wrapping his scaled hand around your [cockname of player in lower case] cock, and beginning to match your pace. The two of you remain like that for a while, staring into each other's eyes as you each stroke the other's dick, mere inches away from each other. Soon enough, however, the arousal between the two of you grows stronger, and you each stroke faster, kiss harder, and push more deeply against the other. The friction heats up as you furiously masturbate each other, your cocks occasionally bumping against the other member.";
 			say "     In the moment of heated action, you're pressing so hard against Kyle that he falls, and as entwined as you are, you fall as well. You knock a stack of books over, and land in the pile it creates, still close to the lizardman's body. Not deterred in the least, you resume your energetic stroking, and it's mere moments before Kyle decides to do the same, and you're back to the state you were in before, albeit on the ground now. Soon, however, the lust builds to a peak, and finally both you and Kyle climax, repeated spurts of seed leaping outward, and covering both of your chests, as well as a number of books. You begin to breathe more slowly, and can hear that Kyle is doing the same, as you each melt into a simple embrace, laying on the discarded books, and unaffected by the sticky fluids pressed between you.";
 			WaitLineBreak;
 			say "     Your rest is interrupted, however, by the sound of an opening door and a voice. 'Is everything alright back here? I heard a crash.' Looking towards the door, you have just enough time to see Beverly peeking her head in before she gasps and closes it again. After that, you can't help but chuckle, and soon Kyle does the same. 'Okay, I'll admit, this whole situation is pretty funny.' He looks down at you and the pile you're laying on. 'Though maybe we got slightly out of hand. Next time we'll have to be more careful.' Kyle stands up, and reaches down to pull you up with him. 'And there's definitely going to be a next time, love. That was fantastic, believe me.' The lizardman suddenly leans forward and kisses you. 'Now, get out of here. I'll clean up back here and try to calm down Beverly. See you again soon.' You nod, and after a parting hug, leave the bookstore back room.";
-		else if cunts of player > 0: [female variant]
+		else if player is female: [female variant]
 			say "     Sorry, this text is a placeholder. There is currently no scene here for female players.";
 		now thirst of Kyle is 1;
 	else: [ready for sex]
@@ -330,11 +330,11 @@ instead of fucking the Kyle:
 		say "[KyleSexMenu]";
 
 to say KyleSexMenu:
-	say "[line break]";
+	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if cocks of player > 0: [only males and herms can get a blowjob]
+	if player is male: [only males and herms can get a blowjob]
 		choose a blank row in table of fucking options;
 		now title entry is "Get a blowjob";
 		now sortorder entry is 1;
@@ -345,7 +345,7 @@ to say KyleSexMenu:
 	now sortorder entry is 2;
 	now description entry is "Wrap your lips around the lizardman's reptilian shaft";
 	[]
-	if cocks of player > 0: [only males and herms can fuck him]
+	if player is male: [only males and herms can fuck him]
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the lizardman";
 		now sortorder entry is 3;
@@ -360,7 +360,7 @@ to say KyleSexMenu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -380,20 +380,16 @@ to say KyleSexMenu:
 				if (nam is "Take Kyle's shaft in your ass"):
 					say "[KyleSex4]";
 				WaitLineBreak;
-		else if calcnumber is 100:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
+			WaitLineBreak;
 		else:
-			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say KyleSex1: [oral on the player]
-	say "     It doesn't take long after you enter the room before Kyle has already taken a hold of your erection. He strokes it a few times, and sinks to his knees. He smiles up at you from his lowered position, and then starts licking up and down your shaft with his lengthy tongue, performing some rather impressive feats of dexterity with it as he does so. Soon he shifts forward, and engulfs your dick in his reptilian mouth, starting to bob up and down, adding the the sensation offered by his skilled tongue. He looks up, and you lock eyes as he pleasures you, the feelings only growing more intense. Kyle is the one to break your eye contact, as he pushes down further onto your [cock of player in lower case] cock, and reaches below to tease your sack as well.";
+	say "     It doesn't take long after you enter the room before Kyle has already taken a hold of your erection. He strokes it a few times, and sinks to his knees. He smiles up at you from his lowered position, and then starts licking up and down your shaft with his lengthy tongue, performing some rather impressive feats of dexterity with it as he does so. Soon he shifts forward, and engulfs your dick in his reptilian mouth, starting to bob up and down, adding to the sensation offered by his skilled tongue. He looks up, and you lock eyes as he pleasures you, the feelings only growing more intense. Kyle is the one to break your eye contact, as he pushes down further onto your [cock of player in lower case] cock, and reaches below to tease your sack as well.";
 	say "     In no time at all, your pleasure peaks, and your shaft begins to pulse just as Kyle looks back up at you, sending strands of cum down the lizardman's throat. Just as they start to slow, he pulls back off of your dick, and the last few spurts end up on his face, and on his glasses. He stands up, and takes his glasses off, and wipes them off with a cloth from the nearby table before putting them back on. 'I hope you liked that, love. I certainly did, even if the cleanup might be a bit messy.' He steps forward once again, and plants a quick kiss on your lips. 'We've probably spent enough time back here for now though. Let's do this again sometime.' You nod, and the two of you head back out into the bookstore, though you can't help but notice Kyle still has a streak of seed on his cheek.";
 
 to say KyleSex2: [oral on Kyle]
@@ -417,10 +413,14 @@ to say KyleSex4: [Kyle fucks player ass]
 
 Section 4 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Angry Snake	"Angry Snake"
+
 Angry Snake is a situation.
 The level of Angry Snake is 4.
 The sarea of Angry Snake is "High".
-Angry Snake is resolved.
+Angry Snake is inactive.
 
 instead of resolving a Angry Snake:
 	if GertyQuest is 1:
@@ -441,12 +441,15 @@ instead of resolving a Angry Snake:
 			say "     Gerty frowns at you. 'Well, since you're here, you may as well go tell Kyle that I'm fine, and that I'll deliver his books soon. Even if I didn't need the help, I appreciate the thought.' He picks up a small bag you hadn't noticed before, and from the view through the opening you can clearly tell that the bag is full of books, Gerty's haul on this expedition. 'I'll just be sure to pack more dictionaries next time, in case more pests decide to try and stop me.' With his goods clasped firmly in his mechanical hands, he turns around to leave, and stops when he sees you're still there. 'What are you waiting for? Get a move on!' In no time at all you're turned around and out the door, very much not wanting another book thrown at you. Time to talk to Kyle.";
 			now GertyQuest is 2;
 			move Gerty to Tenvale College Library;
+			now Resolution of Angry Snake is 1; [won the fight]
 			now Angry Snake is resolved;
 		else if fightoutcome > 19 and fightoutcome < 30:
 			say "     As you collapse, exhausted and injured, the [if GroupFightCounter is 1]trio of german shepherds prowl[else if GroupFightCounter is 2]remaining pair of german shepherds prowl[else]final german shepherd prowls[end if] towards your prone form, clearly preparing to do unspeakable things. However, their concentration is interrupted by another barrage from Gerty, distracting them momentarily. You quickly take advantage of your opening to get away before their attention is brought to you again. Hopefully Gerty will be fine for now.";
+			now Resolution of Angry Snake is 2; [lost the fight]
 			now GertyQuest is 100;
 		else if fightoutcome is 30:
 			say "     You decide to cut your losses and get out of the bookstore before you are defeated by your canine adversaries. You turn around and run, fleeing out the door of the building to the sound of Gerty hurling both books and insults at your foes. Hopefully he'll be fine for now.";
+			now Resolution of Angry Snake is 3; [fled the fight]
 			now GertyQuest is 100;
 		now inasituation is false;
 	if GertyQuest is 100:
@@ -464,13 +467,15 @@ instead of resolving a Angry Snake:
 			say "     Gerty frowns at you. 'Well, since you're here, you may as well go tell Kyle that I'm fine, and that I'll deliver his books soon. Even if I didn't need the help, I appreciate the thought.' He picks up a small bag you hadn't noticed before, and from the view through the opening you can clearly tell that the bag is full of books, Gerty's haul on this expedition. 'I'll just be sure to pack more dictionaries next time, in case more pests decide to try and stop me.' With his goods clasped firmly in his mechanical hands, he turns around to leave, and stops when he sees you're still there. 'What are you waiting for? Get a move on!' In no time at all you're turned around and out the door, very much not wanting another book thrown at you. Time to talk to Kyle.";
 			now GertyQuest is 2;
 			move Gerty to Tenvale College Library;
+			now Resolution of Angry Snake is 1; [won the fight]
 			now Angry Snake is resolved;
 		if fightoutcome > 19 and fightoutcome < 30:
 			say "     As you collapse, exhausted and injured, the [if GroupFightCounter is 1]trio of german shepherds prowl[else if GroupFightCounter is 2]remaining pair of german shepherds prowl[else]final german shepherd prowls[end if] towards your prone form, clearly preparing to do unspeakable things. However, their concentration is interrupted by another barrage from Gerty, distracting them momentarily. You quickly take advantage of your opening to get away before their attention is brought to you again. Hopefully Gerty will be fine for now.";
+			now Resolution of Angry Snake is 2; [lost the fight]
 		if fightoutcome is 30:
 			say "     You decide to cut your losses and get out of the bookstore before you are defeated by your canine adversaries. You turn around and run, fleeing out the door of the building to the sound of Gerty hurling both books and insults at your foes. Hopefully he'll be fine for now.";
+			now Resolution of Angry Snake is 3; [fled the fight]
 		now inasituation is false;
-
 
 instead of going to Mall Atrium while hp of Kyle is 1: [Kyle date event] [{]
 	KyleDateEvent;

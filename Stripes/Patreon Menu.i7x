@@ -17,9 +17,9 @@ check supersponsor:
 carry out supersponsor:
 	say "     Trixie flutters in close as you whisper the password to her. 'Excellent! This is the sponsor reward menu for our Patreon supporters. Thanks so much for supporting us and helping the game improve. You're super! You're awesome! You're wonde- Waaaaait... you better not be lying about being allowed access. If you're trying to trick me, I'll be really pissed,' she says, sparks ringing her tiny fists as she looks you over with suspicion.";
 	say "     'Alright. I guess I can trust you. We've got a few special fun perks for you to pick from. A few more will show up from time to time as well. Thanks again and enjoy!'";
-	let trixieexit be 0;
+	let Trixieexit be 0;
 	let weaponsmaster be "Weaponsmaster";
-	while trixieexit is 0:
+	while Trixieexit is 0:
 		let sanitysave be 0;
 		if "Sanity Saver" is listed in feats of player, now sanitysave is 1;
 		say "[bold type]Patreon Cheats:[roman type][line break]";
@@ -36,14 +36,16 @@ carry out supersponsor:
 		say "[if sshh is true](9) Hard hat - Taken[else][link](9) Hard hat[as]9[end link] - Available[end if][line break]";
 		say "[if ssos is true](10) Orange shield - Taken[else][link](10) Orange shield[as]10[end link] - Available[end if][line break]";
 		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][else][link](11) Sanity Saver[as]11[end link] - Available[end if][line break]";
+		say "[link](12) Claim all the pets![as]12[end link][line break]";
+		say "[link](13) Revel in being awesome[as]13[end link][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-10)> ";
+			say "Choice? (0-13)> ";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 11:
+			if calcnumber >= 0 and calcnumber <= 13:
 				break;
 			else:
-				say "Invalid choice. Pick from 0 to 11.";
+				say "Invalid choice. Pick from 0 to 13.";
 		if calcnumber is 1:
 			sslvl12;
 		else if calcnumber is 2:
@@ -169,8 +171,17 @@ carry out supersponsor:
 			else:
 				say "     You release the iron clad defense of your mind.";
 				remove "Sanity Saver" from feats of player;
+		else if calcnumber is 12:
+			repeat with petget running through pets:
+				now petget is tamed;
+				if "Tamed" is not listed in Traits of petget:
+					add "Tamed" to Traits of petget;
+			say "They are all now yours! (Warning, the code for some pets may react oddly. They are all set as battle-summonable though.)[line break]";
+		else if calcnumber is 13:
+			now carried of Smug Confidence is 1;
+			say "Ah, there it is. Don't forget to use it.";
 		else:
-			now trixieexit is 1;
+			now Trixieexit is 1;
 		LineBreak;
 
 
@@ -193,10 +204,26 @@ to sslvl12:
 		increase vetcheater by 1;
 
 
+
+Table of Game Objects (continued)
+name	desc	weight	object
+"smug confidence"	"As if anything could hurt you! You're one of the better ones out there."	1	smug confidence
+
+Smug Confidence is equipment.
+Smug Confidence is not temporary.
+The AC of Smug Confidence is 5.
+The effectiveness of Smug Confidence is 20.
+The placement of Smug Confidence is "face".
+The descmod of Smug Confidence is "You walk with a renewed confidence.".
+The slot of Smug Confidence is "head".
+
+Instead of smelling Smug Confidence:
+	say "It smells a bit like victory! Thanks for supporting us.";
+
 Table of Game Objects (continued)
 name	desc	weight	object
 "dildo club"	"A big, bright purple dildo. It's about three feet long and has a handle on it for easy swinging."	5	dildo club
-"banana peel gun"	"A colourful toy gun made of plastic. But rather than fire foam darts or shoot water, it's able to launch banana peels without ever needing to be reloaded."	2	banana peel gun
+"banana peel gun"	"A colorful toy gun made of plastic. But rather than fire foam darts or shoot water, it's able to launch banana peels without ever needing to be reloaded."	2	banana peel gun
 "orange shield"	"A round shield made of burnished bronze with an red-orange 'P' emblem on it."	6	orange shield
 "hard hat"	"A yellow construction hard hat you've found to help protect your noggin."	2	hard hat
 
@@ -206,7 +233,7 @@ dildo club is an armament. It is part of the player. It has a weapon "[one of]yo
 the scent of the dildo club is "The sex toy club smells of latex and your humiliated foes."
 
 [Banana Peel Gun]
-banana peel gun is an armament. It is part of the player. It has a weapon "[one of]your[or]the[purely at random] [one of]strange gun[or]colourful gun[or]plastic gun[or]odd toy gun[or]plantain pistol[or]banana blaster[or]banana peel gun[or]banana peel launcher[at random], [one of]striking your foe in the face[or]tripping up your foe with a messy peel[or]causing your foe to slide into something[or]making your foe stumble and twist themselves painfully[or]causing a comedic pratfall[at random][bananerred]". The weapon damage of banana peel gun is 4. It is not temporary. It is ranged. The objsize of banana peel gun is 3.
+banana peel gun is an armament. It is part of the player. It has a weapon "[one of]your[or]the[purely at random] [one of]strange gun[or]colorful gun[or]plastic gun[or]odd toy gun[or]plantain pistol[or]banana blaster[or]banana peel gun[or]banana peel launcher[at random], [one of]striking your foe in the face[or]tripping up your foe with a messy peel[or]causing your foe to slide into something[or]making your foe stumble and twist themselves painfully[or]causing a comedic pratfall[at random][bananerred]". The weapon damage of banana peel gun is 4. It is not temporary. It is ranged. The objsize of banana peel gun is 3.
 
 the scent of the banana peel gun is "The odd toy gun smells unsurprisingly like banana pudding. Unfortunately, none can be found inside."
 

@@ -122,7 +122,7 @@ Include (-
              	graph_width  = gg_arguments-->0;
              	graph_height = gg_arguments-->1;
 
-	glk_window_fill_rect(gg_picwin, color , 0, 0, graph_width, graph_height);
+	glk_window_fill_rect(gg_picwin, color, 0, 0, graph_width, graph_height);
 	}
 ];
 
@@ -205,17 +205,17 @@ Section 4 - Inform 7 Wrappers for Defining Window and Colors
 
 Include Glulx Text Effects by Emily Short. [This makes colors available to us.]
 
-Currently shown picture is a figure-name that varies. [This the author may set during the course of the source.]
+Currently shown picture is a figure-name that varies.[@Tag:NotSaved] [This the author may set during the course of the source.]
 
-Internally selected picture is a figure-name that varies. [This is the picture selected by the picture selection rules, which might be the 'currently shown picture' (by default) or might be, say, the current frame of an animation in progress. The author should not set this directly, but instead write additional picture selection rules if he wants to change it.]
+Internally selected picture is a figure-name that varies.[@Tag:NotSaved] [This is the picture selected by the picture selection rules, which might be the 'currently shown picture' (by default) or might be, say, the current frame of an animation in progress. The author should not set this directly, but instead write additional picture selection rules if he wants to change it.]
 
-Graphics window pixel count is a number that varies. Graphics window proportion is a number that varies.
+Graphics window pixel count is a number that varies.[@Tag:NotSaved] Graphics window proportion is a number that varies.[@Tag:NotSaved]
 
-Graphics background color is a glulx color value that varies.
+Graphics background color is a glulx color value that varies.[@Tag:NotSaved]
 
 Glulx window position is a kind of value. The Glulx window positions are g-null, g-above, g-below, g-left, and g-right.
 
-Graphics window position is Glulx window position that varies.
+Graphics window position is Glulx window position that varies.[@Tag:NotSaved]
 
 
 Section 4a - More Wrappers (for use without Collage Tools by Emily Short)
@@ -250,7 +250,7 @@ Section 6 - Inform 7 Wrapper Phrases and Rules for Drawing
 To build graphics window:
 	(- MakeGraphicsWindow(); -)
 
-Current graphics drawing rule is a rule that varies. The current graphics drawing rule is the standard placement rule.
+Current graphics drawing rule is a rule that varies.[@Tag:NotSaved] The current graphics drawing rule is the standard placement rule.
 
 [By default we want to clear the screen to the established background color, then draw our image centered in the window, scaling it down to fit if necessary.]
 
@@ -301,9 +301,9 @@ Simple Graphical Window creates one graphics window, and provides some different
 
 **** Rules for drawing in windows ****
 
-Whenever Inform needs to re-fill the window -- at the start of the game, or when a saved game is restored, or when the player resizes the window manually -- Simple Graphical Window will follow a rule that varies, the "current graphics drawing rule". The author may set this to any of the following:
+Whenever Inform needs to re-fill the window -- at the start of the game, or when a saved game is restored, or when the player resizes the window manually -- Simple Graphical Window will follow a rule, the "current graphics drawing rule". The author may set this to any of the following:
 
-	(1) (The default.) The standard placement rule. The standard placement rule fills the window with a background color, then draws the currently shown picture (a figure-name that varies, and which the author can reset during the game). The picture is centered in the available screen space, unless it is too large, in which case it is scaled down proportionally to fit. A picture is never scaled up, on the grounds that upscaling images usually produces unattractively fuzzy results. Note that this and rules 2-4 will all behave incorrectly if we don't have at least one figure defined in our game source. In that case, see rule 5.
+	(1) (The default.) The standard placement rule. The standard placement rule fills the window with a background color, then draws the currently shown picture (a figure-name, and which the author can reset during the game). The picture is centered in the available screen space, unless it is too large, in which case it is scaled down proportionally to fit. A picture is never scaled up, on the grounds that upscaling images usually produces unattractively fuzzy results. Note that this and rules 2-4 will all behave incorrectly if we don't have at least one figure defined in our game source. In that case, see rule 5.
 
 	(2) The fully scaled image rule. Fills the window completely with the currently shown picture, regardless of proportion. This is unlikely to look good with images of any complexity, but is included for completeness.
 
@@ -373,9 +373,9 @@ The background color used by the standard placement rule depends on the "graphic
 	Table of Common Color Values
 	glulx color value	assigned number
 	g-black	0		[== $000000]
-	g-dark-grey	4473924	[== $444444]
-	g-medium-grey	8947848	[== $888888]
-	g-light-grey	14540253	[== $DDDDDD]
+	g-dark-gray	4473924	[== $444444]
+	g-medium-gray	8947848	[== $888888]
+	g-light-gray	14540253	[== $DDDDDD]
 	g-white	16777215		[== $FFFFFF]
 
 where the assigned number of each value is the decimal representation of a hex color code. To use any of the preset values, we might write
@@ -395,7 +395,7 @@ It is likely that we'll want to use other colors besides those provided by this 
 	g-yellow-orange	39423		[== $0099FF]
 	g-ice-blue	15645627		[== $EEBBBB]
 
-These numbers are conversions of hex color numbers. The principle is that the hex number represents the amount of blue in the first two digits (from 00 to FF); the amount of green in the next two digits; and the amount of red in the last two digits. Thus $0000FF has no blue or green in it, but the maximum possible amount of red. Where each pair of digits is equal (as in $444444 or $A0A0A0), we will have equal components of each color and the result will be some shade of grey. The number for g-ice-blue was selected by formulating a hex color number with a large amount of blue and a moderate amount of red and green ($EEBBBB). Similarly, the number for g-yellow-orange is the conversion of ($0099FF), with the maximum amount of red, a fair amount of green, and no blue.
+These numbers are conversions of hex color numbers. The principle is that the hex number represents the amount of blue in the first two digits (from 00 to FF); the amount of green in the next two digits; and the amount of red in the last two digits. Thus $0000FF has no blue or green in it, but the maximum possible amount of red. Where each pair of digits is equal (as in $444444 or $A0A0A0), we will have equal components of each color and the result will be some shade of gray. The number for g-ice-blue was selected by formulating a hex color number with a large amount of blue and a moderate amount of red and green ($EEBBBB). Similarly, the number for g-yellow-orange is the conversion of ($0099FF), with the maximum amount of red, a fair amount of green, and no blue.
 
 Converting a hex number to a decimal one can be performed with a scientific calculator or with a hexadecimal conversion application found online; if we're at a loss, googling "hexadecimal conversion calculator" will likely turn up an appropriate application.
 

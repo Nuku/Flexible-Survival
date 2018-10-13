@@ -22,13 +22,16 @@ to say Robed Cultist Desc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Robed Cultist";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The robed cultist slashes at you with a sharp knife.[or]You are kneed in the side by the cultist - that wide robe totally hid the movement till it was too late.[or]The cultist slashes at you with one hand showing scales and claws.[at random]";
 	now defeated entry is "[Robed Cultist Loses]";
 	now victory entry is "[Robed Cultist Wins]";
@@ -59,7 +62,7 @@ When Play begins:
 	now cock width entry is 4;          [ Size of balls ]
 	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 2;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
 	now cunt length entry is 8;
 	now cunt width entry is 6;
@@ -72,8 +75,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 to say Deep One Wins:
@@ -91,20 +95,23 @@ to say Deep One Desc:
 		stop the action; [dealt with at the event source]
 	say ""; [for now]
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Deep One";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The fish-man slashes at you with his claws.[or]The fish-man snaps at you with a maw full of sharp teeth.[or]A kick from the fish-man sends you stumbling backwards.[at random]";
 	now defeated entry is "[Deep One Loses]";
 	now victory entry is "[Deep One Wins]";
 	now desc entry is "[Deep One Desc]";
 	now face entry is "that of a human-fish hybrid, with a very wide maw filled with countless sharp teeth. Now having lidless eyes to take in the world, you never blink anymore. Instead of hair, a series of fins held up by bony spikes start on top of your head, running halfway down your back";
 	now body entry is "shaped like a swimmers, with a long and flexible build that is tailor-made for swimming, darting and gliding through the water. The webbing between the fingers and toes of your claw-armed extremities also contributes to being well-adjusted to life in the ocean";
-	now skin entry is "[one of]grey-blue and scaly[or]grey-blue[or]scaly[at random]";
+	now skin entry is "[one of]gray-blue and scaly[or]gray-blue[or]scaly[at random]";
 	now tail entry is "Your buttocks are firm and tight, optimizing the hydrodynamics of your body.";
 	now cock entry is "[one of]nonhuman[or]flared[or]upwards-curving[at random]";
 	now face change entry is "it reshapes itself, giving you a very wide maw in which you can feel many sharp teeth with your tongue. Then your whole outlook on the world changes as your eyes grow into fairly large and lidless lenses that put your surroundings into a sharp, put somehow distant light";
@@ -141,7 +148,8 @@ When Play begins:
 	now magic entry is true;
 	now resbypass entry is true;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Robed Cultist ends here.

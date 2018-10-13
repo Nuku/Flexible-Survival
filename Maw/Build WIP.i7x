@@ -27,7 +27,7 @@ carry out researchlist:
 	say "Available Designs: [no line break]";
 	repeat with x running through valid construct:
 		if x is complete, next;
-		say "[line break]";
+		LineBreak;
 		say "[x]([progress of x]/[cost of x])[if current2 of blueprints is x](Current construction)[end if][no line break]";
 	say "To begin a new build, type [bold type]build (building) at (direction)[roman type].";
 
@@ -42,7 +42,7 @@ Check constructing:
 Carry out constructing:
 	say "[description of noun]";
 	say "[line break]Construct?";
-	if the player consents:
+	if player consents:
 		now current2 of blueprints is noun;
 		now lolcation is second noun;
 		say "Your builders begin constructing [noun] in the [second noun].";
@@ -59,7 +59,7 @@ A Construct has a number called progress.
 A Construct has a number called cost.
 A Construct has a rule called completion.
 The completion of a Construct is usually nothing rule;
-lolcation is a text that varies.
+lolcation is a text that varies.[@Tag:NotSaved]
 
 This is the nothing rule:
 do nothing;
@@ -84,7 +84,7 @@ Carry out Completion:
 Part 2 - Constructs
 
 The blueprint has a Construct called current2.
-cur is a text that varies.
+cur is a text that varies.[@Tag:NotSaved]
 
 Agricultural Zone is a Construct.
 The description of it is "A massive, flat area filled with rows upon rows of [one of]wheat[or]corn[or]tomato stalks[or]apple trees[or]grape vines[or]marijuana[sticky random]. You feel at peace here, the wildlife of the area unperterbed and singing happily. The rustic look quite an eyesore for the city-folk. (Increases farmers' efficency by offering organized plot of farmland (No effect on hunters))".

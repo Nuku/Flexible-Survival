@@ -63,7 +63,7 @@ to say wolverinelocation:							[sets random location for the wolverine]
 to say losetowolverine:
 	now wolvfightresult is 2;
 	if lbfight is 1:						[Viking Longboat - Hospital Quest]
-		if cunts of player > 0:
+		if player is female:
 			if a random chance of 2 in 3 succeeds:
 				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you. Soon, he's buried his muzzle between your legs and sniffing your crotch. He grabs you roughly and drags you back towards the alcove he was standing guard in before you arrived.";
 				say "     Keeping you pinned down, he looks around for any other threats to his post. This gives you a moment to look around for a way out of this predicament, but find none.";
@@ -79,11 +79,11 @@ to say losetowolverine:
 	else if wrknifefight is true:		[Getting the Knife - Wereraptor]
 		say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you away from the warehouse he's so vigilantly guarding.";
 		if HP of player > 0, now HP of player is HP of player / 2;
-	else if inasituation is false:
+	else if inasituation is true:
 		say ""; [Dealt with at the event source]
 	else:
 		[Normal encounter]
-		if cunts of player > 0:
+		if player is female:
 			if a random chance of 3 in 5 succeeds:
 				say "     The obsessed wolverine knocks you to ground, getting ready to strike again when he starts to sniff at you. Soon, he's buried his muzzle between your legs and sniffing your crotch. He grabs you roughly and drags you back towards the [wolvloc] he was protecting so aggressively.";
 				say "     Keeping you pinned down, he looks around for any other threats to his post. This gives you a moment to look around as well, but you can't spot anything of use or wealth around. Any food has long since been eaten by the wolverine and you don't see anything of particular value to you or anyone in this crisis.";
@@ -100,18 +100,18 @@ to say losetowolverine:
 				say "     The obsessed wolverine strikes you down onto the pavement and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you off from the [wolvloc] he's protecting so aggressively.";
 
 to say wolv_oral:
-	say "     The fanatical wolverine knocks you down with a growl. As he gets ready to strike you again, he holds back and instead grapples you roughly. Your face is pressed into the creature's groin, his dark brown cock emerging from its sheath to grind against your cheek. Precum drools across your cheek and lips, the beast's musky scent arousing you. You lick the sticky precum from your lips and then lick at its source. Eager for more, the lustful mutant forces his meaty shaft into your mouth and fucks it hard. He pounds his pulsing rod into your mouth with firm thrusts while holding your head with his powerful paws. Despite the rough treatment, you moan and try your best to lick and suck at the throbbing penis stuffed into your mouth and throat. With a growl, he cums, shooting his strong flavoured cum down your throat, warming your belly with it. Once spent, the bestial wolverine is less crazed, sending you firmly on your way before wandering back to the [wolvloc] he's guarding so adamantly.";
+	say "     The fanatical wolverine knocks you down with a growl. As he gets ready to strike you again, he holds back and instead grapples you roughly. Your face is pressed into the creature's groin, his dark brown cock emerging from its sheath to grind against your cheek. Precum drools across your cheek and lips, the beast's musky scent arousing you. You lick the sticky precum from your lips and then lick at its source. Eager for more, the lustful mutant forces his meaty shaft into your mouth and fucks it hard. He pounds his pulsing rod into your mouth with firm thrusts while holding your head with his powerful paws. Despite the rough treatment, you moan and try your best to lick and suck at the throbbing penis stuffed into your mouth and throat. With a growl, he cums, shooting his strong flavored cum down your throat, warming your belly with it. Once spent, the bestial wolverine is less crazed, sending you firmly on your way before wandering back to the [wolvloc] he's guarding so adamantly.";
 
 to say beatthewolverine:
 	now wolvfightresult is 1;
 	if lbfight is 0 and libfight is not 1 and wrknifefight is false and inasituation is false:
-		if cunts of player > 0 and libido of player > 39 and bodyname of player is "Wolverine Guard":
+		if player is female and libido of player > 39 and bodyname of player is "Wolverine Guard":
 			say "     Having managed to beat the wolverine until you finally knocked him down, you look over the powerful male and you feel a yearning inside you. The excitement of the fight has gotten your wolverine body quite aroused. Your eyes wander down to the hefty package between his legs and you see that his cock is half-hard as well, aroused by the scent of a strong female.";
 			say "     [bold type]Do you give in to your urges and ride that thick monster?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
-			if the player consents:
+			if player consents:
 				LineBreak;
 				say "     Finding the prospect very enticing, you take a hold of his thick shaft and stroke it to full erection. He rumbles appreciatively and rocks his hips, thrusting into your warm paw. Once you've gotten him sufficiently ready, you climb atop that thick pole and line it up with your wet pussy.";
 				say "     You take it slow at first, despite your instincts screaming to cram it in, letting yourself adjust to its girth and enjoy the feeling of him filling you. But once you've finally gotten it all in, you start riding hard and fast, eager to let this strong male mate with you.";
@@ -133,27 +133,30 @@ to say beatthewolverine:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Wolverine Guard"; [Name of your new Monster]
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The aggressive male clubs you with his heavy fist, staggering you for a moment![or]The wolverine slashes his claws across your side before you can pull away![or]The wolverine's teeth snap at you, but you grab his shoulders to keep him from sinking them into you. This leaves you open for a pair of hard jabs to the breadbasket![or]The powerful creature lands a heavy punch to your temple![or]The guard manages to land a powerful uppercut that rattles your teeth![or]The aggressive creature swings a series of wild punches. You manage to block some, but the barrage wears you down further![at random]";
 	now defeated entry is "[beatthewolverine]";
 	now victory entry is "[losetowolverine]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[wolverinedesc]"; [ Description of the creature when you encounter it.]
-	now face entry is "now wolverine's head, with a strong muzzle. Aside from the lighter patches above your brows, you dark brown fur covers your face"; [ Face description, format as the text "Your face is (your text)."]
-	now body entry is "stocky and muscled, coiled and itching for a fight"; [ Body Description, format as the text "Your body is (your text)."]
-	now skin entry is "dark brown fur with lighter patches at your sides, flanks and rear to cover your"; [ skin Description, format as the text "You have (your text) skin."]
+	now face entry is "now wolverine's head, with a strong muzzle. Aside from the lighter patches above your brows, you dark brown fur covers your face"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "stocky and muscled, coiled and itching for a fight"; [ Body Description, format as "Your body is (your text)."]
+	now skin entry is "dark brown fur with lighter patches at your sides, flanks and rear to cover your"; [ skin Description, format as "You have (your text) skin."]
 	now tail entry is "You have a short, thickly furred tail hanging from your rear."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "brown"; [ Cock Description, format as you have a 'size' (your text) cock]
 	now face change entry is "it shifts and changes, forming a short muzzle. Your new nose and muzzle twitch as your whiskers grow in. Coarse, dark fur starts to spread over it, giving you a wolverine's head"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it grows tougher, becoming tall, yet stocky in build. You have wide shoulders and a large body that is all coiled muscle. Your hands and feet become paw-like, with black claws at the ends of your digits. You become aware of your own growing scent, strong and mustelid in odor. You feel yourself filling with aggressive power, as well as an urge to protect... something"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "coarse fur spreads across your body. It is a dark brown with some lighter patches forming along your sides, flanks and rear"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "you start to shift, gaining a short, thickly furred tail"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it becomes brown in colour, but otherwise human-like in appearance. As you watch, your new shaft is bundled up in a coarse-furred sheath which spreads down to cover your ballsack as well"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now cock change entry is "it becomes brown in color, but otherwise human-like in appearance. As you watch, your new shaft is bundled up in a coarse-furred sheath which spreads down to cover your ballsack as well"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 16;
 	now dex entry is 14;
 	now sta entry is 18;
@@ -183,29 +186,30 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 when play ends:
 	if bodyname of player is "Wolverine Guard":
 		if humanity of player < 10:
-			if jamessex is 3 and cunts of player > 0:
+			if jamessex is 3 and player is female:
 				say "     You find your growing urge to protect and defend your post increasing. Joining James at the Central Library, you become his mate and share the duty with him. He accepts him place now, no longer fighting his powerful body. Most of the time, you both guard it together, though occasionally alone so the other can get a brief nap. As with that first time, you rut often on the library steps. The lustful growls of your animalistic sex carry far, warning any would be interlopers away. You eventually bear him some kits, who grow big and strong like their parents and take up the duty to protect the library as well. You live peaceably with the librarians inside, guarding their home and leaving them undisturbed. There is some commotion when the soldiers come through the city, but you, your mate and your offspring are able to drive them off, protecting your post.";
 			else:
 				say "     You find your growing urge to protect and defend your post increasing. Cutting short your wandering, you head back to the bunker at the Abbey to clear your head. Once there, you decide to scout around from top to bottom, making sure it's secure before you relax. You find nothing, but still remain on edge, and patrol on guard for any disturbances. You keep at your post, staying on watch without rest, protecting it from the monsters of the city and the soldiers who later arrive. You keep it, and its contents, safe from interlopers day after day.";
 		else:
 			if centrallib is 5:
-				say "     When the military enters the city and rescue you and the other survivors, you recall another wolverine you met. Telling them about James, you give them information on how to take him calmly, with a soldier disguised in a company jacket and a call from the security company's headquarters relayed through the military network, they convince him to switch assignments. He joins you in one of the military staging camps, happy to see a friendly face[if cunts of player > 0]. You share a good romp with him that evening[end if].";
+				say "     When the military enters the city and rescue you and the other survivors, you recall another wolverine you met. Telling them about James, you give them information on how to take him calmly, with a soldier disguised in a company jacket and a call from the security company's headquarters relayed through the military network, they convince him to switch assignments. He joins you in one of the military staging camps, happy to see a friendly face[if player is female]. You share a good romp with him that evening[end if].";
 				say "     The security company, now involved, helps to get you both cleared. Your idea was able to rescue several of their employees and they offer to hire you on as well. You and James get partnered with ";
-				if cocks of player > 0 and cunts of player > 0:
+				if player is herm:
 					say "a female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, its another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with the off-duty pair eager to spend time with one another. ";
-				else if cocks of player > 0:
+				else if player is male:
 					say "a female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, its another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with the female eager to spend time with either of you when off duty. ";
 				else:
 					say "another female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, its another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with James eager to spend time with either of you when off duty. ";
 				say "     Your wild romps get rather loud and vicious sounding at times, so eventually the guardhouse you all share as home gets soundproofed.";
-			else if HP of doctor matt <= 100:
+			else if HP of Doctor Matt <= 100:
 				say "     You hold out until the rescue comes and you are taken in by the military. You wait impatiently for your release, always on edge and feeling that there's something you should be doing. You are eventually moved into the care of Dr. Matt, who has you alternate with Orthas as his personal guard at the research station the military sets him up at to combat the spreading infection. While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
 			else:
 				say "     You hold out until the rescue comes and you are taken in by the military. With your false identity never questioned, you wait impatiently for your release, always on edge and feeling that there's something you should be doing. One day, you are released and are quickly picked up by a large van. You are quietly taken to where Dr Mouse is hiding, apparently having funneled some bribes through a third party to gain custody of you. He takes you on as his private security guard, watching over him as he conducts his secret research. He works for a variety of foreign countries and infected factions[if susan is in hidden lab]. Susan continues to accompany him as an assistant and a lover for you when off duty[end if]. While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";

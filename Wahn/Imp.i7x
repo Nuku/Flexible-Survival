@@ -53,13 +53,13 @@ to say Imp Sex Menu:
 	now description entry is "Snap the little demon's neck";
 	[]
 	[
-	if (cocks of player > 0):
+	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Wrap him around your dick and jerk off";
 		now sortorder entry is 2;
 		now description entry is "Use the little demon as a cock-sleeve";
 	[]
-	if (cunts of player > 0):
+	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Stick him in your pussy";
 		now sortorder entry is 3;
@@ -75,7 +75,7 @@ to say Imp Sex Menu:
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
-	say "[link]100 - Nevermind[as]100[end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
 	while sextablerun is 0:
 		say "Pick the corresponding number> [run paragraph on]";
 		get a number;
@@ -97,14 +97,10 @@ to say Imp Sex Menu:
 				else if (nam is "Stick him in your ass"):
 					say "[ImpSex3]";
 				wait for any key;
-		else if calcnumber is 100:
-			say "[bold type]Just leave instead?[roman type][line break]";
-			if the player consents:
-				now sextablerun is 1;
-				say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving the bruised imp behind.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving the bruised imp behind.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -149,13 +145,16 @@ to say ImpDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Imp";
+	now enemy title entry is "";
+	now enemy name entry is "";
+	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]Swinging his arm like a baseball pitcher, the imp sends a fire-ball flying your way. Thankfully it is pretty small, so you're just a little singed.[or]In a lightning-quick flying maneuver, the little demon swoops past your face and gives your nose a kick. Ouch, that smarts![or]Swooping down between your legs, the imp leaves thin bloody scratches near your ankles.[or]As he flutters straight towards your face, you deflect the imp with your hands, earning some bloody scratches in the process.[at random]";
 	now defeated entry is "[Imp loses]";
 	now victory entry is "[Imp wins]";
@@ -186,7 +185,7 @@ When Play begins:
 	now cock width entry is 2;          [ Size of balls ]
 	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;    [ Breast size for if Sex="Male", usually zero. ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
 	now cunts entry is 0;               [ number of pussies if sex is 'Female' or 'Both' ]
 	now cunt length entry is 0;
 	now cunt width entry is 0;
@@ -194,13 +193,14 @@ When Play begins:
 	now loot entry is "";               [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 00;         [ Percentage chance of dropping loot, from 0-100. ]
 	now scale entry is 1;               [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
-	now body descriptor entry is "slender";      [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender"   Use [one of] to vary ]
+	now body descriptor entry is "slender";      [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "demonic";        [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Events
 
@@ -239,16 +239,16 @@ to say ImpEncounter:
 	if randomnumber is:
 		-- 1:
 			say "     As you make your way through the mostly lifeless streets, filled with abandoned cars and trash, you hear a harrowing howl start in the distance, followed by another, and another. You freeze in your steps and a cold shiver runs down your spine as you hear them - that surely came from no normal dog, and neither a wolf. From your experience, you'd rather guess... hellhound. Thankfully the beasts seem to be a fair distance off, as you wouldn't want to be what they're running down right about now.";
-			say "     Then suddenly, you hear voices call to each other far closer to your position - just around the next corner you'd say. They are rather deep, so your guess would be that its males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Neither of us is stupid enough to try dragging them away from humping their fresh mortal prey.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
+			say "     Then suddenly, you hear voices call to each other far closer to your position - just around the next corner you'd say. They are rather deep, so your guess would be that it's males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Neither of us is stupid enough to try dragging them away from humping their fresh mortal prey.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
 		-- 2:
 			say "     As you make your way through the mostly lifeless streets, filled with abandoned cars and trash, you come upon a rather disconcerting sight. There are paw-prints on the asphalt, or rather... indented into it, as if the black material partially melted at the point of contact. Add to that the visible areas in which something caustic seems to have dripped onto the road, creating foul-smelling discolored spots, and you have to guess that it's hellhound tracks you've found. Even worse, it isn't just one, but rather a whole pack of them from the number of imprints. Thankfully, the trail is cold as you crouch down and touch it. They seem to have been chasing something or someone, a guess that becomes a certainty as you spot a bunch of clothing shreds and cum-stains behind a car along the route they took. With a cold shiver running down your spine at the thought of what happened over there, you hold your breath for a moment and silently listen for any sign that the pack might be coming back this way.";
-			say "     Silence stretches out around you, only interrupted by a very far-off screech of something - a bird or dinosaur-creature maybe. But just as you're starting to let out a relieved breath, you suddenly hear voices call to each other far closer to your position - just around the next corner you'd say. They are rather deep, so your guess would be that its males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Neither of us is stupid enough to try dragging them away from humping their fresh mortal prey.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
+			say "     Silence stretches out around you, only interrupted by a very far-off screech of something - a bird or dinosaur-creature maybe. But just as you're starting to let out a relieved breath, you suddenly hear voices call to each other far closer to your position - just around the next corner you'd say. They are rather deep, so your guess would be that it's males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Neither of us is stupid enough to try dragging them away from humping their fresh mortal prey.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
 		-- 3:
 			say "     As you make your way through the mostly lifeless streets, filled with abandoned cars and trash, you come upon a rather disconcerting sight. The street is splashed with dried, brown splotches of blood and splinters of bone crunch under your steps. Looks like something was torn to pieces, right here in the open. A few steps further, you see what - or rather who - it was... the ripped off head of a minotaur lies behind a car wreck, eyes still opened wide in horror and staring blankly at you. All around the grisly scene, there are paw-prints on the asphalt, or rather... indented into it, as if the black material partially melted at the point of contact. This does lead you to the conclusion that in all likelihood, a pack of hellhounds is responsible. Thankfully, the trails are cold as you crouch down and touch them, and the blood is dried all the way, so it didn't happen recently. With a cold shiver running down your spine, you hold your breath for a moment and silently listen for any sign that the pack might be coming back this way.";
-			say "     Silence stretches out around you, except for the wind blowing past the buildings. But just as you're starting to let out a relieved breath, you suddenly hear voices call to each other close to your position - just around the next corner you'd say. They are rather deep, so your guess would be that its males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Be happy that they get fresh mortal prey and don't try to chew on us instead.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
+			say "     Silence stretches out around you, except for the wind blowing past the buildings. But just as you're starting to let out a relieved breath, you suddenly hear voices call to each other close to your position - just around the next corner you'd say. They are rather deep, so your guess would be that it's males of some kind talking to one another. A first one says, 'Those fucking mutts! They were supposed to come wi-' Another interrupts him, 'Oh, shut up already! Be happy that they get fresh mortal prey and don't try to chew on us instead.' A third voice speaks up, 'Yeah, right - and the boss will punish us if we waste time instead of searching. So get going! You go left, you right and I'll just fly down this road.'";
 	wait for any key;
 
-An everyturn rule:   [hellhound bad end progress every turn]
+An everyturn rule: [hellhound bad end progress every turn]
 	if libido of Skarnoth is 10: [player got found and marked]
 		if ImpPlayerMarkingTurn - turns is 8:
 			say "     A shiver runs down your spine suddenly and out of nowhere you hear... something. It is a padding sound, accompanied by scraping noise - like paws on asphalt, with their claws scratching over the stone as their owner sprints after prey. Then another and another beast joins the hunt, the rising sound soon accompanied by hungry growls and eager barks. Cold sweat breaks out over you as you become more and more convinced that they will suddenly appear and rip you to shreds - but then the strange effect reaches a terrifying climax as an unknown creature screeches in pain. The noises cuts off with shocking abruptness after that, the last thing in the air being satisfied growls out of many bestial throats.";
@@ -267,7 +267,7 @@ An everyturn rule:   [hellhound bad end progress every turn]
 			say "     The three of them pounce upon you like wild beasts, leaving you not a chance to recover or even fight back. Pushing you down and growling in savage amusement, they rip your clothes and gear to shreds... mostly without giving you more than just a few nips with their teeth. Finally, the lead hellhound steps over your body and grabs your neck between his powerful jaws to hold you tight and lines himself up with your body. With a savage thrust, the beast fills you with its knotted cock, then fucks you mercilessly until breeding your hole with a heavy load of demon cum. One after another, they all take turns using you, going again and again until you're nothing but a cummy mess. Only after that are you dragged over the back of the lead hound by one of his pack-mates, then carried to the portal they entered your world through.";
 			say "     A succubus and incubus pair of demons welcome you to your new home - their demon prince's lair, which is decorated in a lewd medieval style. After a thorough scrubbing you're brought before Skarnoth, a handsome horned demon around whom a noticeable aura of power ripples in the air. The demon lord makes sure to show you his... displeasure, at being cheated out of an angelic slave, and after a hard fucking you're added to the pool of his mortal pets - to be played with, abused and used.";
 			now tailname of player is "Demon Slave";
-			Now facename of player is "Demon Slave";
+			now facename of player is "Demon Slave";
 			now skinname of player is "Demon Slave";
 			now bodyname of player is "Demon Slave";
 			now cockname of player is "Demon Slave";
@@ -278,7 +278,7 @@ Section 4 - Endings
 
 when play ends:
 	if bodyname of player is "Imp":
-		if humanity of player < 10:   [succumbed]
+		if humanity of player < 10: [succumbed]
 			say "     Finally giving in to your base desires, you take off and fly over the city on the search for someone to fuck. Small as you may be, from high up everyone looks tiny and weak - which makes you feel powerful and strong. They're just insects to you, mortal mayflies to be played with. Before long, your search bears fruit - there is a small group of people holed up on top of a building, uninfected humans that have the stairwell barricaded and cower from the monsters below in a shack on the roof. Of course, this doesn't protect them from you as you, with your wings and demonic powers. With little more than a few fireballs thrown around, you frighten them into obedience and gain a flock of fucktoys to serve your every whim. This even goes so far that they never even dare to try calling out to the soldiers as they sweep the city, instead hiding according to your commands and being left behind - all yours, forever.";
 		else:[sane]
 			say "     Rescued by the military, you are released after a short while of quarantine. With your small stature and demonic looks, it isn't easy to find a new place in the post-nanite world, but the fact that you do have functional wings does pay off in the end and you're hired as a courier by the 'Skymail' express delivery service. Supplanting the bike couriers of the big cities, the mixed crew of gryphons, harpies and even demons just like yourself does quite well, and before long the bigger companies usually have a little balcony added to their high rises for speedy drop-offs. As you and those like you become part of the typical day to day of many people - regularly swooshing past over their heads with important documents - the distrust about looking like a demon lessons bit by bit too. Sure, you get splashed with holy water by bigots once in a while, but that becomes the exception as society integrates all the new species of new people...";
