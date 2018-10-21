@@ -4815,6 +4815,7 @@ Include Warehouse District by Kaleem Mcintyre.
 Include Warehouse Events by StripeGuy.
 Include Wereraptor by Stripes.
 Include Werewolf by CrimsonAsh.
+Include Xeno Nest by Kernog.
 Include Zephyr Phone by Executaball.
 Include Zoo Events by Sarokcat.
 Include Zoo Events by Wahn.
