@@ -10,7 +10,7 @@ Object	Name
 Sugar Shack	"Sugar Shack"
 
 Sugar Shack is a situation.
-The sarea of Sugar Shack is "Midway".
+The sarea of Sugar Shack is "Fair".
 when play begins:
 	add Sugar Shack to badspots of furry;
 	add Sugar Shack to badspots of girl;

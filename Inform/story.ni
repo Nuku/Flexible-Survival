@@ -3284,7 +3284,7 @@ This is the explore rule:
 			plot;
 			now battleground is "void";
 			wait for any key;
-	if something is 0 and a random number from 1 to 20 < ( bonus + 8 ) and there is an unresolved situation:
+	if something is 0 and a random number from 1 to 20 < ( bonus + 8 ) and there is an active unresolved situation:
 		let L be a random available situation;
 		If L is not nothing:
 			if battleground is "Smith Haven":
@@ -4360,14 +4360,13 @@ carry out ScavengingAction:
 			try resolving potential resources;
 		else:
 			now tempnum is 1;
-			let L be a random scavable unresolved scavevent;
+			let L be a random available scavevent;
 			If L is not nothing:
 				say "[one of]During your search for supplies, you end up at[or]Searching systematically for resources, you locate[or]Following signs of recent activity, you end up at[or]Doing a slow circuit while scavenging, you manage to find[or]Wandering around aimlessly in search of supplies, you locate[at random] [L].";
 				try resolving L;
 			else if L is nothing:
 				try resolving potential resources;
 		now inasituation is false;
-		now battleground is "void";
 		say "[line break]";
 	else:
 		say "Your search turns up empty.";

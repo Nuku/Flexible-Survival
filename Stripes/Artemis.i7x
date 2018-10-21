@@ -38,7 +38,7 @@ Object	Name
 Poor Kitty	"Poor Kitty"
 
 Poor Kitty is a situation.
-The sarea of Poor Kitty is "Midway".
+The sarea of Poor Kitty is "Fair".
 when play begins:
 	add Poor Kitty to badspots of girl;
 	add Poor Kitty to badspots of furry;

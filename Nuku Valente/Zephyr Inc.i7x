@@ -25,7 +25,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Zephyr Lobby	"Zephyr Lobby"
 
-Zephyr Lobby is a room. "[zephyrlobbydesc]". It is fasttravel. It is private.
+Zephyr Lobby is a room. "[zephyrlobbydesc]". It is fasttravel.
 earea of Zephyr Lobby is "High".
 
 sblzephyr is a truth state that varies. sblzephyr is usually false.
