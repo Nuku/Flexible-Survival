@@ -299,4 +299,12 @@ Definition: A person (called x) is naked:
 	else:
 		no;
 
+Definition: A person (called x) is MuzzleFaced:
+	if facename of x is listed in Equinelist or facename of x is listed in Vulpinelist or facename of x is listed in Caninelist, yes;
+	else, no;
+
+Definition: A person (called x) is FeralBodied:
+	if bodyname of x is listed in Feral, yes;
+	else, no;
+
 Definitions ends here.

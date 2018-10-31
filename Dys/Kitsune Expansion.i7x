@@ -11,7 +11,7 @@ Section 1 - Talk
 Section 2 - Sex
 
 to say Kitsune_NewMaleDomScenes:
-	say "     Placeholder text for a menu goes here.";
+	say "     Blushing and then whispering into Kitsune's ear after shuffling over to him somewhat nervously, you realize you should let the silver fox know what you want. Your heart nearly jumps into your throat when you hear the other growl at you in want. An air of dominance comes over the vulpine like a thick fog and instantly you can feel your stomach tighten up into knots. What are you going to request to do with him?";
 	blank out the whole of table of fucking options;
 	[New Scene!]
 	choose a blank row from table of fucking options;
@@ -62,21 +62,45 @@ to say Kitsune_NewMaleDomScenes:
 Section 2.1 - Individual Scenes
 
 to say Kitsune_ServiceOrally:
-	say "     <Placeholder>";
-	now Kitsunearoused is 2;
-	kitsuneinfect;
-	now lastfuck of Kitsune is turns;
+	say "     [if player is submissive]Timidly[else]Eagerly[end if], you make your suggestion to the fox, watching his expression to see if he likes the idea. You're met with a small smirk and another lustful growl as the vulpine closes the gap between the two of you, locking his muzzle with your [if player is MuzzleFaced]own in a heated kiss, his tongue flicking across your teeth and into your maw eagerly. The deep french kiss is erotic and exciting, all the things you could've wanted from the wonderful vulpine, and you can't help but melt into his embrace.[else]face, his tongue brushing against your lips, seeking entrance. You quickly grant him what he wants, embracing the lustful yet awkward kiss, feeling his tongue swirling around inside your mouth.[end if] Of course, it doesn't last forever. Soon enough, Kitsune breaks the kiss, your mouth connected to his by a strand of saliva. He grins salaciously at you before stepping back and shifting into his quadrupedal form, [if player is FeralBodied]making sure that his chest is level with the top of your head[else]adjusting his size so the top of his head comes up to your chest[end if].";
+	say "     It would seem your silvery companion wants you to enjoy him in his more natural form, which only serves to excite you further. You [if player is FeralBodied]duck your head down, going into a slight crouch to fit yourself beneath him, wiggling closer to his groin[else]get down on your hands and knees, crawling beneath him to his waiting sheath[end if]. The masculine musk rolling off of him is intoxicating, a wonderful, heady aroma that makes you shiver in arousal. Eager to get started, you extend your tongue to lick along his heavy sack, letting the salty taste fill your senses. Involuntarily, you moan as you continue to work those hefty nuts with your tongue, occasionally taking one into your mouth to suckle. If the small, lusful growl from the fox above you is any indication of how much he's enjoying this, you can't wait to see how much he'll like your next step. You eagerly move on to his sheath, lapping along the plump, fuzzy flesh, feeling it throb and pulse under your teasing tongue. Slowly but surely his length begins to emerge, the entire tool slipping free in just under a minute of your expert treatment.";
+	WaitLineBreak;
+	say "     Deciding it's time to move on to the main event, you wrap your lips around the tip of his pulsing member. Immediately, a spurt of pre lands on your tongue, setting your tastebuds alight with Kitsune's exotic musky flavor, making you desire more. He's not one to deny you this as you feel a gentle tail pressing against the back of your head, urging you on. A low growl reinforces the fox's desire, so you quickly and eagerly oblige him, taking a bit of his length past your lips, swirling your tongue around its girth. You continue this treatment for just a bit longer, electing to tease the vulpine.";
+	if scalevalue of player > 3: [Small player]
+		if player is twistedcapped: [Player is able to take it all.]
+			say "     <the player is able to take all of Kitsune's cock despite their small size, going to face fucking, then eventually ending in him knotting not only their mouth, but their throat too.>";
+			WaitLineBreak;
+			say "     <player is filled with a large volume of fox cum, their belly being bloated quite decently.>";
+		else: [Player is unable to take it all, though depending on chance, Kitsune might force the knot in anyway.]
+			if a random chance of 3 in 4 succeeds:
+			 	say "     <Kitsune gently uses the character's mouth before pushing in as far as he can without hurting them.>";
+				WaitLineBreak;
+				say "     <Kitsune eventually cums down their throat, but a good portion of the cum spills out of their mouth and nose. The player still gets swollen a decent bit.>";
+			else:
+				say "     <Kitsune gently uses the player's maw for a bit before moving on to rougher fucking. Eventually, he overcomes the player's body's resistance, and manages to knot their mouth.>";
+				WaitLineBreak;
+				say "     <Player gets filled heavily by kitsune's seed, but still not as much as throat knotting. A bit leaks out of the player's nose.>";
+	else:
+		say "     Another soft growl from the fox urges you on, [if player is FeralBodied]taking a step forward to take another few inches of his shaft into your [if player is MuzzleFaced]maw[else]mouth[end if].[else]wrapping your hands around his shaft just a bit further down, giving it gentle pumps as you take another few inches into your mouth eagerly.[end if] Kitsune let's you continue on your own for a bit, but he seems to be growing a tad bit impatient as his hips suddenly lurch forward, cramming another several inches into you. You can feel his tip press against the back of your throat and you can't help but let out a low moan as he starts thrusting into your mouth at a gentle yet steady pace. As he grows more and more eager, his thrusts get faster and faster until he manages to breach your throat, pressing the final few inches up to the knot inside your mouth. He growls and barks as he redoubles his efforts, his large knot making soft pats as he works to get it past your lips. Harder and harder he presses, until finally, it slips in with a lewd pop. It quickly begins to throb and swell even larger, locking it behind your teeth until he's well and truly finished with you.";
+		WaitLineBreak;
+		say "     You groan lowly around the cock embedded in your mouth and throat, body jolting gently as Kitsune makes his final thrusts to push himself over the edge. You can feel his entire shaft undulate and throb as he reaches his climax, the rush of rich fox seed spilling straight down your throat. You do your best to gulp it down eager, rope of rope of the thick cream quickly filling your stomach. It does stop at that, though, the flow continuing until your belly starts to swell with its volume. Only then does the stream seem to taper off, slowly but surely ending with a final few spurts. You feel a tail gently caressing your belly as Kitsune lets out a content rumble. It seems the two of you will be stuck like this for a fair bit while the fox's afterglow wears off.";
+	Kitsune_FuckFinish;
+
 
 to say Kitsune_RideCockAnal:
 	say "     <Placeholder>";
-	now Kitsunearoused is 2;
-	kitsuneinfect;
-	now lastfuck of Kitsune is turns;
+	Kitsune_FuckFinish;
 
 Section 2.2 - Kitsune Decide
 
 to say Kitsune_Decide:
 	say "     <super duper placeholder. This will be a very big thing when done.>";
+	Kitsune_FuckFinish;
+
+
+Section 2.4 - Functions
+
+to Kitsune_FuckFinish:
 	now Kitsunearoused is 2;
 	kitsuneinfect;
 	now lastfuck of Kitsune is turns;
