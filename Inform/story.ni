@@ -9,7 +9,7 @@ Use slow route-finding.
 [ To determine if one of these is your issue, use the Errors tab in the inform 7 window. ]
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 51000000.
-use MAX_STATIC_DATA of 12500000.
+use MAX_STATIC_DATA of 3500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 270000. [ Code 10 ]
