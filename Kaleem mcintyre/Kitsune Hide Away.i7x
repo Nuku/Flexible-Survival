@@ -150,7 +150,7 @@ Instead of fucking Kitsune:
 				say "Realizing that you lack the right [italic type]equipment[roman type], you sadly breath a heavy breath before smiling demurely at Kitsune. Kitsune lifts up your chin to press a finger against your lips before replacing his finger with his lips.";
 		else:
 			LineBreak;
-			if player is not male:
+			if player is not puremale:
 				let pick be 0;
 				if player is female:
 					say "Blushing and then whispering into Kitsune's ear after shuffling over to him somewhat nervously, you try and let the silver fox-man know what you want without having to spell everything out in clear detail. Your heart nearly jumps into your throat when you hear the other growl at you in want. An air of dominance comes over the vulpine like a thick fog and instantly you can feel your stomach tighten up into knots.";
