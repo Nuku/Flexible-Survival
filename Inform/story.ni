@@ -4670,6 +4670,7 @@ Include Kitsune Hide Away by Kaleem mcintyre.
 Include Mall Community Center by Wahn.
 Include Mall Residents by Rikaeus.
 Include Medical Checkups by Stripes.
+Include Milking Facility by Kernog.
 Include Museum by Sarokcat.
 Include New Ewe Store by Sarokcat.
 Include PIG Frat by Stripes.
@@ -4814,6 +4815,7 @@ Include Warehouse District by Kaleem Mcintyre.
 Include Warehouse Events by StripeGuy.
 Include Wereraptor by Stripes.
 Include Werewolf by CrimsonAsh.
+Include Xeno Nest by Kernog.
 Include Zephyr Phone by Executaball.
 Include Zoo Events by Sarokcat.
 Include Zoo Events by Wahn.
