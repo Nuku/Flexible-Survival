@@ -94,16 +94,16 @@ When Play begins:
 	now cha entry is 18;
 	now sex entry is "Female";  [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 80;
-	now lev entry is 9;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
-	now wdam entry is 11;  [ Amount of Damage monster Does when attacking. ]
-	now area entry is "High";  [ Current options are 'Outside' and 'Mall'. Case sensitive]
-	now cocks entry is 0;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 0;  [ Length infection will make cock grow to if cocks]
-	now cock width entry is 0;  [ Size of balls ]
-	now breasts entry is 4;  [ Number of Breasts infection will give you. ]
-	now breast size entry is 4;  [ Size of breasts infection will try to attain ]
-	now male breast size entry is 0;  [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1;  [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now lev entry is 9; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
+	now wdam entry is 11; [ Amount of Damage monster Does when attacking. ]
+	now area entry is "High"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls ]
+	now breasts entry is 4; [ Number of Breasts infection will give you. ]
+	now breast size entry is 4; [ Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 10;
 	now cunt width entry is 4;
 	now libido entry is 50;  [ Amount player Libido will go up if defeated ]

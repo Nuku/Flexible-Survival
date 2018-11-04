@@ -1003,7 +1003,7 @@ an everyturn rule:
 			else if player is in Survivor Refuge:
 				say "     Suddenly, the door to the bedroom opens and Brennan steps out of it, dressed in nothing more than some baggy boxer shorts and followed by some very eager wolves. He wishes you a good morning, then quickly stops by the kitchen to feed his feral canines, ducking back into the bedroom while they're still wolfing down their food.";
 			else if player is in Brennan's Bathroom:
-				say "     You hear the front door open and close, then happy barks by Romulus and Remus. Sounds like Brennan woke up and just went to feed them.";
+				say "     You hear a door open and close, then happy barks by Romulus and Remus. Sounds like Brennan woke up and just went to feed them.";
 		else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
 			if player is in Brennan's Bedroom:
 				project the figure of Brennan_face_icon;
