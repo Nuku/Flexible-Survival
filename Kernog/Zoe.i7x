@@ -57,6 +57,7 @@ instead of sniffing Zoe:
 
 to say ZoeDesc:
 	if Resolution of Rabbit Tagger is 2: [saved]
+		project the figure of Zoe_face_icon;
 		say "     Zoe looks as lively as ever. The small bunny's short, white fur is dirtied, here and there, by paint stains of many colors. She wears her usual clothes: a short-sleeved T-shirt and a pair of shorts. [if Loyalty of Zoe < 5]Zoe gives you a polite smile, but you notice that she keeps her guard around you[else]Zoe's smile beams at you, and the young girl seems completely relaxed in your presence.[end if]";
 	else if Resolution of Rabbit Tagger is 1: [tied up]
 		say "     You look at Zoe's hogtied body, inside the van. Her fur is ruffled in many places, and glued together around her crotch. The ropes force her to stay on her knees, face to the ground and arms to the back. Zoe returns you a broken look[if XP of Zoe is 1], which instantly turns into a mix of resignation and contained anger when she recognizes you from earlier[end if].";
@@ -67,6 +68,7 @@ to say ZoeDesc:
 
 instead of conversing the Zoe:
 	if Resolution of Rabbit Tagger is 2:
+		project the figure of Zoe_face_icon;
 		say "     You greet Zoe, who replies with a [if Loyalty of Zoe < 5]curt[else]happy[end if] 'Hey.'";
 		if XP of Zoe is 1:
 			say "The rabbit seems [if Loyalty of Zoe < 5]to have something on her mind[else]impatient to tell you her day[end if]. '[one of]Check this out...[or]I made an interesting encounter, today...[or]You'll never guess what happened to me today...[at random]'";
@@ -106,6 +108,7 @@ instead of conversing the Zoe:
 
 instead of fucking Zoe:
 	if Resolution of Rabbit Tagger is 2: [saved]
+		project the figure of Zoe_face_icon;
 		if Loyalty of Zoe < 5:
 			if "Propositioned" is not listed in the Traits of Zoe:
 				say "     Zoe tenses up when you proposition her for sex. 'I... Um...' She looks away, her mouth contorting with anxiety. 'I don't... I don't feel like it. Is it okay, if...' You give Zoe an understanding. She looks visibly relieved, although she still acts wary. 'Thanks. Sorry, I'm just... Not in the mood for that kind of thing.'";
@@ -183,6 +186,7 @@ to say ZoeSecondTime:
 9: unlocks dom RP
 10: unlocks special DP and sub RP]
 to say ZoeGoodFuckMenu:
+	project the figure of Zoe_face_icon;
 	say "     'Good timing. I was feeling... Lonely,' the bunny replies your invitation. She walks by you, brushing your body with her furry legs. 'Come on, we go to the usual place.' On your way to Zoe's old hideout, you discuss about what you want to do today.";
 	if Loyalty of Zoe is:
 		-- 7: say "On the way, Zoe suddenly cuts your chatter. 'So, I was thinking... I want to try some butt stuff. I heard that if it's done well, it feels just as good as the old-fashioned way, and I'm curious. [if anallevel is 1]Of course, if anal's not your thing, I'm not forcing you, or anything.[else]Do you want to try it out?[end if]'";
@@ -628,6 +632,7 @@ to ZoeTheTaggerRabbitEvents:
 	say "     As you make your way through the chaos of parked, crashed and often cum-smeared cars, a sudden clicking noise makes you listen up. Sounds like some marbles being shaken in a metal can... Then a hissing noise follows, drawing your attention to the side of the Mall, where a small-ish figure is spray-painting the anarchy symbol on the wall. Dressed in baggy camo pants and a black hoodie, it is hard to make out who or what it is exactly - though the snow-white fur covering the slender hand with the can hints at it being an anthro furry. The spray-painter shakes the can in their hand once more, preparing to add some more writing next to the symbol - and in their eagerness of thinking up something fitting, the furry concentrates on the wall itself just a little too much... totally missing the wolverine guard coming around the outside corner of the mall on his patrol.";
 	say "     With a growl, the guardsman storms up to the hapless spray-painter, who tries to escape in fright. Futilely, in this case, as the muscular wolverine runs them down with little effort, capitalizing well on the first few seconds of surprise. Getting a hold of the black hoodie, he stops the fleeing furry cold with a harsh wrench backwards, making them sprawl on the asphalt of the parking lot. Wandering closer in a relatively casual pace (as not to appear as an accomplice and drawing the ire of the wolverine yourself), you can make out that the spray-painter is a young bunny girl with snow-white fur, except the dark brown mop of her head hair. She looks up at the predator standing over her with fright-widened blue eyes and tries to pull away, only to be stopped once more by his unrelenting grip on her clothes.";
 	WaitLineBreak;
+	project the figure of Zoe_face_icon;
 	say "     'What do we have here?! A dirty little punk in the midst of vandalism. You're going straight in the lockup!' the guardsman growls out with determination and pulls her up to stand, putting his other hand on her shoulder and ready to lead her to the mall entrance. 'No please! Let me go,' the bunny girl wails, then suddenly ducks low and wrenches her hoodie from the wolverine's grip. She half-falls down to the ground, but manages to push herself up in a mad scramble, the blunt claws on her slender paws scraping over the asphalt as she starts to run away. 'Fuck!' the guardsman barks and pounces on his would-be escapee, this time only barely fast enough to snatch her, hooking his strong fingers behind the belt-line of the girl's camo pants. Loose as the pants are, this pulls them down over her slender hips and thighs, tangling her lower legs up in fabric. The wolverine makes use of this opportunity, grabbing the hoodie and really wrapping it around his fist to avoid further escape attempts.";
 	say "     'Okay, that's it! No more mister nice-guy. Gonna punish you myself, punk! What's your name anyways?' the mall guardsman growls aggressively, giving her a slap on the snowy-white buttocks. 'Ouch! I - I'm Zoe. Please don't hit me anymore,' the spray-painter sobs, turning her big blue eyes to him beseechingly. 'Oh, I'm not gonna hit you,' her captor replies, a domineering grin spreading over his muzzle as he goes on to say, 'But there will be a fair bit of pounding in your future.' After that, he lowers a hand to undo the button of his uniform pants, then pulls down the zipper to reveal his rapidly hardening cock. As it flops out to rest against the curve of Zoe's buttocks, the wolverine runs his thumb over the folds of her exposed pussy, then dips the fingertip in to feel her insides. 'Virgin too, eh? Nice - gonna enjoy breaking you in!' he barks lustily and leans forward to lick the cheek of the trembling bunny girl.";
 	say "     [bold type]Well, that escalated quickly. What do you want to do now?[roman type][line break]";

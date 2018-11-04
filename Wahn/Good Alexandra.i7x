@@ -218,6 +218,7 @@ to say alexandrascent_gg:
 to say alexandradesc_gg:
 	if debugactive is 1:
 		say "[goodAlexandra_debug]";
+	project the figure of Alexandra_clothed0_neutral_icon;
 	say "     Alexandra, once a cop for the city, has been transformed into a Doberman woman by the infection. She's remained in uniform, showing her attempt to keep up her duties, wearing a light blue shirt, darker pants and a policeman's hat. She's got a rather normal, human build, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle, and her short fur has the two-tone black and tan markings of the breed. She has an average-sized rack under her shirt.";
 
 to say alexandratalk_gg:
@@ -232,6 +233,7 @@ to say alexandratalk_gg:
 		say "     'When morning came and I returned, the station had been deserted save for a few lingering mutants. I drove them off and decided to stay, hoping to help any survivors who came looking for police assistance. When no one turned up, I went out on my own, trying to find citizens to help. I... think I was starting to crack by the time I ran into you. I'm not going out on patrol as much for a while.'";
 		now HP of Alexandra is 52;
 	else if HP of Alexandra is 65 and HP of Master Mind is 0:
+		project the figure of Alexandra_clothed0_neutral_icon;
 		say "     'We should interrogate the prisoner and see what we can find out. She's been frustratingly uncommunicative.";
 	else if HP of Alexandra is 65:
 		say "[goodalexandrasex_first]";
@@ -243,6 +245,7 @@ to say alexandratalk_gg:
 		say "[alexandratalk_gg_menu]"; [access regular conversation content]
 
 to say alexandratalk_gg_menu:
+	project the figure of Alexandra_clothed0_smile_icon;
 	say "     There's a few topics you might be able to discuss with Alexandra. Is there anything in particular on your mind or do you just want to chat?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;

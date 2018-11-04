@@ -23,6 +23,18 @@ Carry out BuyingAction:
 		say "You purchase [name entry] for [price entry] creds.";
 		add name entry to invent of player;
 		decrease freecred by price entry;
+	else if outfitters rack is visible: [Zephyr Storeroom/Library Shop; see file Black Market.i7x]
+		if the noun is an object listed in the Table of Zephyr Black Market Outfitters Rack:
+			say "";
+		else:
+			say "That doesn't seem to be sold here.";
+			continue the action;
+		if price entry > freecred:
+			say "You can't afford the [name entry], it costs [price entry] freecred.";
+			continue the action;
+		say "You purchase [name entry] for [price entry] creds.";
+		add name entry to invent of player;
+		decrease freecred by price entry;
 	else if price sign is visible: [Zephyr store in Zephyr Lobby; see file Zephyr Inc.i7x]
 		if the noun is an object listed in the table of zephyr goods:
 			say "";

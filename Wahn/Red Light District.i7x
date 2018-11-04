@@ -36,6 +36,18 @@ instead of smelling Boundary Street East:
 
 Table of GameRoomIDs (continued)
 Object	Name
+Dingy Alley	"Dingy Alley"
+
+Dingy Alley is a room.
+Dingy Alley is north of Boundary Street East.
+The earea of Dingy Alley is "Red".
+The description of Dingy Alley is "[DingyAlleyDesc]";
+
+to say DingyAlleyDesc:
+	say "     You're in a dingy alley between two buildings, ending at a brick wall at the end. There is a sturdy door with a viewslit in it, and you can see barred windows one floor up. A large mattress with telltale stains is laid out on the ground not far from the door, and there is a large cardboard sign that promises 'Freshest Whores in Town!'";
+
+Table of GameRoomIDs (continued)
+Object	Name
 Burned-Out Chapel	"Burned-Out Chapel"
 
 Burned-Out Chapel is a room. It is fasttravel.
