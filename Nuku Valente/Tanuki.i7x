@@ -432,6 +432,12 @@ To say Tanukisurvivaltalk:
 			follow turnpass rule;
 		otherwise:
 			say "'Aw, be that way, but the offer's open, champ!' When he thinks you aren't looking at him directly, he speaks more quietly to himself, 'nailed it, I'm a great dad.'";
+	if scalevalue of player < 4:
+		say "He tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original dad, and that's alright. My biologicals are all off that way.' He points to the East. 'I invited them to come along, but they said this place was too far. Maybe I[']ll find another place that[']s closer to them? Nevermind me, this is about you!' He pats your shoulders softly. 'Now let's see...'";
+	otherwise:
+		say "He cranes his head back a little to look up at you. 'I[']ve never had such a large child before. It's kind of exciting, to tell you the truth. Don[']t worry about it though. A good father is a good father, no matter how big or small he might be.' He wags a finger as he talks, nodding to himself. 'Now as for advice...'";
+	
+
 
 
 instead of fucking Tanuki Dad:
