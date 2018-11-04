@@ -9,7 +9,7 @@ Use slow route-finding.
 [ To determine if one of these is your issue, use the Errors tab in the inform 7 window. ]
 Use MAX_INDIV_PROP_TABLE_SIZE of 500000.
 Use MAX_PROP_TABLE_SIZE of 51000000.
-use MAX_STATIC_DATA of 12500000.
+use MAX_STATIC_DATA of 3500000.
 Use MAX_OBJ_PROP_COUNT of 1280.
 use MAX_SYMBOLS of 13000000. ["Compiler finished with code 10"]
 use MAX_NUM_STATIC_STRINGS of 270000. [ Code 10 ]
@@ -4396,6 +4396,7 @@ Include Kitsune Hide Away by Kaleem mcintyre.
 Include Mall Community Center by Wahn.
 Include Mall Residents by Rikaeus.
 Include Medical Checkups by Stripes.
+Include Milking Facility by Kernog.
 Include Museum by Sarokcat.
 Include New Ewe Store by Sarokcat.
 Include PIG Frat by Stripes.
@@ -4540,6 +4541,7 @@ Include Warehouse District by Kaleem Mcintyre.
 Include Warehouse Events by StripeGuy.
 Include Wereraptor by Stripes.
 Include Werewolf by CrimsonAsh.
+Include Xeno Nest by Kernog.
 Include Zephyr Phone by Executaball.
 Include Zoo Events by Sarokcat.
 Include Zoo Events by Wahn.

@@ -519,7 +519,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Alexandra_naked"	Figure of Alexandra_naked_icon	"Lyttathebug"	g-black	"normal"
 "Alex"	Figure of Alex_icon	"canned"	g-black	"normal"
 "Alpha Husky"	Figure of AlphaHusky_icon	"Anymouse1968"	g-white	"normal"
-"Amazonian"	Figure of Amazon_icon	"Little Wax Raven"	g-white	"normal"
+"Amazonian"	Figure of Amazon_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Amy"	Figure of Amy_icon	"Sususmiles"	g-white	"normal"
 "Amy_face"	Figure of Amy_face_icon	"Sususmiles"	g-white	"normal"
 "Andre"	Figure of Andre_icon	"Wemd"	g-black	"normal"
@@ -720,7 +720,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "MarcOrwell"	Figure of MarcOrwell_icon	"CrashBurnDraw"	g-black	"normal"
 "Marc_face"	Figure of Marc_face_icon	"CrashBurnDraw"	g-black	"normal"
 "Marc_fucked"	Figure of Marc_fucked_icon	"Laylo"	g-black	"normal"
-"Mareslut"	Figure of Mareslut_icon	"Little Wax Raven"	g-white	"normal"
+"Mareslut"	Figure of Mareslut_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Mason"	Figure of Mason_icon	"Abelsword"	g-black	"normal"
 "MasterMind"	Figure of MasterMind_icon	""	g-white	"normal"
 "Megakitty"	Figure of Megakitty_icon	"BushyCat"	g-white	"normal"
@@ -759,7 +759,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Orthas_naked"	Figure of Orthas_naked_icon	"The_Negative"	g-white	"normal"
 "Parasol_Nap"	Figure of Parasol_Nap_icon	"Watsup"	g-black	"normal"
 "Paula"	Figure of Paula_icon	"Kikeri-arts"	g-white	"normal"
-"Penny"	Figure of Penny_icon	"Little Wax Raven"	g-white	"normal"
+"Penny"	Figure of Penny_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Plush Lion"	Figure of PlushLion_icon	"Anymouse1968"	g-white	"normal"
 "Pink Gel"	Figure of PinkGel_icon	"Rastear"	g-black	"normal"
 "Pink Poodle"	Figure of PinkPoodle_icon	"Anymouse1968"	g-white	"normal"
@@ -795,7 +795,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sidney_vixen"	Figure of Sidney_vixen_Icon	"Anymouse1968"	g-white	"normal"
 "Sidney_clothed"	Figure of Sidney_clothed_Icon	"Anymouse1968"	g-white	"normal"
 "Skunkbeast Lord"	Figure of SkunkbeastLord_icon	"MoT"	g-black	"normal"
-"Snow"	Figure of Snow_icon	"Little Wax Raven"	g-white	"normal"
+"Snow"	Figure of Snow_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Snow Bat"	Figure of SnowBat_icon	"Rosali"	g-black	"normal"
 "Snow Leopard"	Figure of SnowLeopard_icon	"Anymouse1968"	g-black	"normal"
 "Sonny_halfwool_jeans"	Figure of Sonny_halfwool_jeans_icon	"The_Negative"	g-black	"normal"
@@ -817,7 +817,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Thought Eater"	Figure of ThoughtEater_icon	"Rastear"	g-black	"normal"
 "Tiger Cop"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
 "Tiger Shark"	Figure of TSW_icon	"Zealot"	g-white	"normal"
-"Timothy"	Figure of Timothy_icon	"Little Wax Raven"	g-white	"normal"
+"Timothy"	Figure of Timothy_icon	"Waxraven/WXRVN"	g-white	"normal"
 "TSW_headshot"	Figure of TSW_headshot_icon	"Zealot"	g-black	"normal"
 "TSW_naked"	Figure of TSW_naked_icon	"Zealot"	g-white	"normal"
 "TSW_sansNecklace"	Figure of TSW_sansNecklace_icon	"Zealot"	g-white	"normal"
@@ -888,7 +888,7 @@ carry out artistcredits:
 	LineBreak;
 	say "Infections:[line break]";
 	say "     Alpha Husky by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Amazon by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Amazon by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Anthro Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
 	say "     Anthro Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
 	say "     Bear by Anymouse1968 @ furaffinity.net[line break]";
@@ -1055,7 +1055,7 @@ carry out artistcredits:
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Marc (fucked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
-	say "     Mareslut by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Mareslut by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Mason by Abelsword @ https://www.furaffinity.net/user/Abelsword[line break]";
 	say "     Micaela by Kattzie @ furaffinity.net[line break]";
 	say "     Mike (face) SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
@@ -1069,7 +1069,7 @@ carry out artistcredits:
 	say "     Orthas (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Orthas by The_Negative @ furaffinity.net[line break]";
 	say "     Paula by Kikeri-arts @ deviantart.com[line break]";
-	say "     Penny by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Penny by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Rachel by o-kemono @ furaffinity.net[line break]";
 	say "     Rane Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Rane by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
@@ -1087,12 +1087,12 @@ carry out artistcredits:
 	say "     Stella by Furball @ furaffinity.net[line break]";
 	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Skarnoth by Kien-Biu @ http://nsfwbetitngoan.tumblr.com/[line break]";
-	say "     Snow by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Snow by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
 	say "     Susan (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Tiger Shark Warrior by Zealot @ https://www.furaffinity.net/user/Drakosacerdos/[line break]";
-	say "     Timothy by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Timothy by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
 	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Tristian by Enaya-TheWhiteWolfen @ https://www.furaffinity.net/user/enaya-thewhitewolfen/";
@@ -1148,7 +1148,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Little Wax Raven", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;

@@ -556,6 +556,14 @@ To MultiInfect (x - text) repeats (repeatCount - number):
 				now non-infectious entry is true;
 			break;
 
+to randomInfect:
+	let RandomRow be a random number from 1 to the number of rows in the Table of Random Critters;
+	choose row RandomRow from the Table of Random Critters;
+	while area entry is "Nowhere": [runs circles until it finds an available creature]
+		now RandomRow is a random number from 1 to the number of rows in the Table of Random Critters;
+		choose row RandomRow from the Table of Random Critters;
+	infect name entry;
+
 to say nameOrDefault:
 	if player is defaultnamed:
 		if player is male:
