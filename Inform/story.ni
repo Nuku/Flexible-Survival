@@ -910,6 +910,7 @@ title	subtable	description	toggle
 ["Rest"	--	"Take a breather"	rest rule]
 ["Examine yourself"	--	--	Self examine rule]
 "Help"	Table of Help	"Get some help on this madness!"
+"Strength: [strength of player], Dexterity: [dexterity of player], Stamina: [stamina of player], Charisma: [Charisma of player], Intelligence: [intelligence of player], Perception: [perception of player]."	--	"Stats"	--
 "Health: [HP of player]/[maxHP of player], Lust: [lust of player], Morale: [morale of player], Humanity: [Humanity of player]"	--	"More stats"	--
 "Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours, Score: [score]"	--	"Time until the game ends."	Turnpass rule
 
@@ -1038,7 +1039,6 @@ when play begins:
 
 Machinelist is a marker. [list of machine infections]
 when play begins:
-	add { "Junkman", "Wildcat" } to infections of Machinelist;
 	add { "Clockwork Fox", "Junkman", "Wildcat" } to infections of Machinelist;
 
 Humanishlist is a marker. [list of humanish infections]
