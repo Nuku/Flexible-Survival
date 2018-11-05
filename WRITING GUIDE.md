@@ -181,6 +181,7 @@ Numerous more examples for More/Less Anal listed in the second half of this docu
 * `if number of booked people + number of bunkered people > 3` | are there at least 4 NPCs in the Bunker and Library together?
 (note: booked and bunkered do not apply to the player or to Trixie. These exist for checking/counting in-game NPCs only.)
 * `if lastfuck of Alexandra - turns < 6` | has it been less than six turns since Alexandra was last fucked? (usable on most NPCs)
+* `[(6 - lastfuck of Alexandra - turns) * 3]` | displays the number of hours remaining before the effect of lastfuck ends (also usable on other type of counters)
 * `if bee girl is tamed` | is the bee girl one of the player's pets?
 * `if companion of player is bee girl` | is the bee girl the player's current companion (active pet)?
 * `if level of companion of player > 3` | is the player's current companion level 4 or higher?

@@ -222,12 +222,6 @@ to InflatableOtterSuitBind:
 				now lustatt is libido of player;
 				InflatableOtterSuitSanityOrgasm; [Calls the function defined later on]
 				InflatableOtterSuitProgress; [Calls the function defined later on]
-		if enduring is true: [Decreases lust gained if the player selects enduring.]
-			increase lustatt by 2 + lustadjust;
-			decrease humanity of player by 1;
-		else:
-			increase lustatt by 4 + (lustadjust * 2);
-			decrease humanity of player by 2 + psycheadjust;
 		now enduring is false;
 		if InflatableOtterSuitBindStage < 4: [Hides content to prevent endings colliding]
 			CheckInflatableOtterSuitSegment;
@@ -273,10 +267,6 @@ to InflatableOtterSuitBind:
 							say "     The suit's tight embrace makes it almost impossible to move your limbs, the constricting pressure of the air hugging your form leaving your hazy thoughts to drift. The pleasure radiating from your groin melts away your will to resist, making you shiver and moan softly as you try to wiggle free. Despite your best efforts, the suit's hold remains firm, denying you even the faintest hope of escape.";
 						else: [Debug failsafe]
 							say "     ERROR <OtterSuitStruggleMessage>: This text should never appear. Please file a bug report on the FS Discord and include the above error message.";
-						now Libido of Inflatable Otter Suit is 0;
-						LineBreak;
-						InflatableOtterSuitSanityPassive;
-						InflatableOtterSuitLust;
 					else if lustatt > 79: [player would escape the bind, but lust is too high]
 						if InflatableOtterSuitBindStage is 1:
 							say "     With some difficulty, you manage to secure a hold on the suit's finnicky zipper and overpower its resistance, pulling it down enough to start squirming free. The suit clings to your arms as you tug them out of the puffy sleeves, reaching up to tear away the hood covering your face with one while fending off its continued efforts to ensnare you with the other. Just as you're about to pry it off, your rising arousal gets the better of you and you squeal into the gag, spraying your [cum load size of player] load into the suit's rippling cocksheath.";
@@ -310,8 +300,6 @@ to InflatableOtterSuitBind:
 							cleanboundmemory;
 							now Trixieexit is 1;
 							now InflatableOtterSuitBindStage is 0;
-					WaitLineBreak;
-					next;
 				else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2": [player picked oblige/abide - currently no custom text for each!]
 					LineBreak;
 					if InflatableOtterSuitBindStage is 1:
@@ -337,14 +325,6 @@ to InflatableOtterSuitBind:
 							say "     The euphoria of your unrelenting stimulation plateaus in what feels like one constant, soothing orgasm. Your arms and legs tremble with tension before falling limp inside the tightly inflated vinyl. You hump weakly into the suit's supple sheath, your mind awash in pleasure, and you plead for that building climax with what muffled moans you can muster.";
 						else: [if 2+]
 							say "     You readily give yourself over to the suit's perverted purpose, thrusting up into its squeezing cock-sheath with what little movement your constricting captor permits. You tense with wild need as the suit worships you from every angle, coaxing moans and squeals of pleasure from you that grow more bestial by the moment. Your thoughts fade away under the constant assault on your senses, but you struggle to care anymore. All that matters is bringing yourself to another mind-shattering orgasm, chasing after that drug-like release over and over again in a ceaseless pursuit of bound and gagged bliss.";
-					increase Libido of Inflatable Otter Suit by 1;
-					LineBreak;
-					now obliging is true;
-					InflatableOtterSuitSanityPassive;
-					InflatableOtterSuitLust;
-					now obliging is false;
-					WaitLineBreak;
-					next;
 				else: [player picked endure/recover]
 					now enduring is true;
 					LineBreak;
@@ -357,10 +337,6 @@ to InflatableOtterSuitBind:
 							increase humanity of player by 3;
 						if humanity of player > 100, now humanity of player is 100;
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity, recovering a small portion of your lost humanity.";
-						LineBreak;
-						now Libido of Inflatable Otter Suit is 0;
-						InflatableOtterSuitLust;
-						now boundrecover is false;
 					else: [endure]
 						if InflatableOtterSuitBindStage is 1:
 							let randomnumber be a random number from 1 to 3;
@@ -389,12 +365,18 @@ to InflatableOtterSuitBind:
 									say "     You continue to try and resist, to find any semblance of mental clarity. Your efforts are made null when the shifting suit squeezes tightly around your length, your achingly needy cock forced to twitch and throb as it's caressed by the slickly squelching material. You give a soft, lustful sigh and let your eyes flutter closed, feeling your mind give more and more as the lovely suit stimulates every part of you without stop.";
 								-- 3:
 									say "     You can scarcely move inside the suit, much less hold on to your mental faculties. The material's smooth inner layer pulls flush to your [skin of player] flesh, and the tainted vinyl clenches rhythmically around your pre-spurting cock. You try to resist the suit's teasing, writhing and bucking helplessly, but your thoughts grow muddier as it pleasures you into a drooling stupor.";
+				if Trixieexit is 0:
+					if boundrecover is false, InflatableOtterSuitSanityPassive;
+					InflatableOtterSuitLust;
+					if obliging is true:
+						increase Libido of Inflatable Otter Suit by 1;
+						now obliging is false;
+					else:
 						now Libido of Inflatable Otter Suit is 0;
-						LineBreak;
-						InflatableOtterSuitLust;
-						InflatableOtterSuitSanityPassive;
-					WaitLineBreak;
-					next;
+					if boundrecover is true, now boundrecover is false;
+				WaitLineBreak;
+				next;
+
 
 to CheckInflatableOtterSuitSegment: [Boundsegment is used above to compare to the player's struggle attribute. If lower, continue struggling. If equal to, escape.]
 	if InflatableOtterSuitBindStage is 1:
@@ -481,14 +463,13 @@ to InflatableOtterSuitSanityOrgasm: [Causes sanity to sharply plummet upon orgas
 	let endureadj be 1;
 	if enduring is true:
 		now endureadj is 2; [Value to divide sanity loss by if enduring.]
-	else:
-		if struggleatt > 0, decrease struggleatt by 1;
-		if InflatableOtterSuitBindStage is 1:
-			decrease humanity of player by (3 + psycheadjust) / endureadj;
-		else if InflatableOtterSuitBindStage is 2:
-			decrease humanity of player by (4 + psycheadjust) / endureadj;
-		else if InflatableOtterSuitBindStage is 3:
-			decrease humanity of player by (4 + psycheadjust * 2) / endureadj;
+	if struggleatt > 0, decrease struggleatt by 1;
+	if InflatableOtterSuitBindStage is 1:
+		decrease humanity of player by (3 + psycheadjust) / endureadj;
+	else if InflatableOtterSuitBindStage is 2:
+		decrease humanity of player by (4 + psycheadjust) / endureadj;
+	else if InflatableOtterSuitBindStage is 3:
+		decrease humanity of player by (4 + psycheadjust * 2) / endureadj;
 
 to say InflatableOtterSuitStruggleBar: [Displays struggle bar. The amount of struggle turns necessary to escape is always equal to the bound segment.]
 	if InflatableOtterSuitBindStage is 1:

@@ -113,7 +113,7 @@ to say ElkBullDesc:
 	setmongender 3;
 	if inasituation is true:
 		say ""; [dealt with in the origin event]
-	else:
+	else: [standard descripton]
 		say "     As you move through the snowy forest, ";
 		[appearance of the tribesman]
 		if a random chance of 1 in 3 succeeds: [spotted the elk]

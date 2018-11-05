@@ -34,6 +34,7 @@ Version 1 of Skarnoth Loyalty by Luneth begins here.
 [   2: Skarnoth is an addict                                              ]
 
 SkarnothMasterSlave is a number that varies.
+SkarnothThongStatus is a number that varies.
 
 Section 1 - Skarnoth Loyalty Convos
 
