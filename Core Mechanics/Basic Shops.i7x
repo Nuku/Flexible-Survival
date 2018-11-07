@@ -8,23 +8,13 @@ Understand "buy [grab object]" as BuyingAction.
 Does the player mean BuyingAction the dirty water: It is very unlikely.
 
 Check BuyingAction:
-	if price sign is not visible and medicine case is not visible and (Darius's Inventory is not visible and Darius is not visible), say "Buy what from whom?" instead;
+	if price sign is not visible and outfitters rack is visible and medicine case is not visible and (Darius's Inventory is not visible and Darius is not visible), say "Buy what from whom?" instead;
 
 Carry out BuyingAction:
 	if the medicine case is visible: [Black Market in Zephyr Storeroom/Library Shop; see file Black Market.i7x]
 		if the noun is an object listed in the table of zephyr black market medicine case:
 			say "";
-		else:
-			say "That doesn't seem to be sold here.";
-			continue the action;
-		if price entry > freecred:
-			say "You can't afford the [name entry], it costs [price entry] freecred.";
-			continue the action;
-		say "You purchase [name entry] for [price entry] creds.";
-		add name entry to invent of player;
-		decrease freecred by price entry;
-	else if outfitters rack is visible: [Zephyr Storeroom/Library Shop; see file Black Market.i7x]
-		if the noun is an object listed in the Table of Zephyr Black Market Outfitters Rack:
+		else if the noun is an object listed in the Table of Zephyr Black Market Outfitters Rack:
 			say "";
 		else:
 			say "That doesn't seem to be sold here.";

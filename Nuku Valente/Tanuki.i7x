@@ -356,7 +356,6 @@ instead of sniffing Tanuki Dad:
 
 instead of conversing the Tanuki Dad:
 	LineBreak;
-[	project the figure of Boghrim_face_icon;]
 	say "What do you want to talk with Tanuki about?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -365,7 +364,7 @@ instead of conversing the Tanuki Dad:
 	now title entry is "Survival";
 	now sortorder entry is 1;
 	now description entry is "Get some tricks about surviving these harsh times.";
-	[]
+	[
 	choose a blank row in table of fucking options;
 	now title entry is "Romance";
 	now sortorder entry is 2;
@@ -375,14 +374,14 @@ instead of conversing the Tanuki Dad:
 		choose a blank row in table of fucking options;
 		now title entry is "Balls";
 		now sortorder entry is 3;
-		now description entry is "Ask about his big balls.";
+		now description entry is "Ask about his big balls";
 	[]
 	if HP of Tanuki Dad > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Hunting";
 		now sortorder entry is 3;
 		now description entry is "Suggest that the two of you go out hunting";
-	[
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Fighting";
 	now sortorder entry is 4;
@@ -405,13 +404,13 @@ instead of conversing the Tanuki Dad:
 				let nam be title entry;
 				now sextablerun is 1;
 				if (nam is "Survival"):
-					say "[Tanukisurvivaltalk]";
+					say "[TanukiSurvivalTalk]";
 				if (nam is "Romance"):
-					say "[BoghrimTalk2]";
+					say "[TanukiRomanceTalk]";
 				if (nam is "Hunting"):
-					say "[BoghrimTalk3]";
-				if (nam is "Fighting"):
-					say "[BoghrimTalk4]";
+					say "[TanukiHuntingTalk]";
+				if (nam is "Balls"):
+					say "[TanukiBallsTalk]";
 				WaitLineBreak;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -421,7 +420,7 @@ instead of conversing the Tanuki Dad:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 	
-To say Tanukisurvivaltalk:
+To say TanukiSurvivalTalk:
 	now the humanity of the player is 20;
 	say "'It[']s a tough world out there.' He nods appreciatively. 'The most important part is that you keep your chin up.'";
 	If humanity of player < 40:
@@ -433,6 +432,14 @@ To say Tanukisurvivaltalk:
 		otherwise:
 			say "'Aw, be that way, but the offer's open, champ!' When he thinks you aren't looking at him directly, he speaks more quietly to himself, 'nailed it, I'm a great dad.'";
 
+to say TanukiRomanceTalk:
+	say "...";
+
+to say TanukiHuntingTalk:
+	say "...";
+
+to say TanukiBallsTalk:
+	say "...";
 
 instead of fucking Tanuki Dad:
 	say "He bursts into a merry fit of laughter. 'I'm your father, not your boyfriend. There is a difference.' He wags a finger at you reprimandingly. 'I know people look at these big things, but they are my tools, not my masters.'";
