@@ -11,13 +11,13 @@ Section 1 - Talk
 Section 2 - Sex
 
 to say Kitsune_NewMaleDomScenes:
-	say "     Blushing and then whispering into Kitsune's ear after shuffling over to him somewhat nervously, you realize you should let the silver fox know what you want. Your heart nearly jumps into your throat when you hear the other growl at you in want. An air of dominance comes over the vulpine like a thick fog and instantly you can feel your stomach tighten up into knots. What are you going to request to do with him?";
+	say "     [if player is submissive]Blushing and then whispering into Kitsune's ear after shuffling over to him somewhat nervously[else]Asking the silver fox to have some fun on top today[end if], you realize you should let the vulpine know what you want. Your heart nearly jumps into your throat when you hear the other growl at you in want. An air of faux-dominance comes over the vulpine like a thick fog and instantly you can feel your [if player is submissive]stomach tighten up into knots[else]excitement begin to grow[end if]. What are you going to request to do with him?";
 	blank out the whole of table of fucking options;
 	[New Scene!]
 	choose a blank row from table of fucking options;
 	now title entry is "Service him orally";
 	now sortorder entry is 1;
-	now description entry is "Please Kitsune with you mouth";
+	now description entry is "Please your foxy friend with you mouth";
 	[Old Legacy Scene]
 	choose a blank row from table of fucking options;
 	now title entry is "Let the fox mount you";
@@ -89,7 +89,13 @@ to say Kitsune_ServiceOrally:
 
 
 to say Kitsune_RideCockAnal:
-	say "     <Placeholder>";
+	say "     Kitsune rolls onto his back in feral form, showing off his plump sheath, using magic to make his body only a bit bigger than you. He gestures with his tails for you to climb atop him.";
+	say "     Gently, he wraps his tails around you, putting you in position above his sheath. [if player is male]Kitsune also uses a tail to stroke along your cock. [end if][if player is female]Kitsune uses another tail to genly rub against the your snatch. [end if]His sheath bunches up against your rear, as he grinds against you.";
+	WaitLineBreak;
+	say "     As Kitsune grows from his sheath, he grinds the tip between your ass-cheeks, the taper pressing against your hole. He eventually pushes his way inside, using his tails to hold you steady as his erection grows longer and firmer inside you. Soon enough, you feel his knot pressing against your entrance, the fox having grown fully erect inside you.";
+	say "     Each tail grips you more firmly, slowly pulling your body off of his shaft before pushing you back down. This goes on for a little while before the fox's orgasm draws closer, his movements getting rougher as his knot pulses against you. Eventually, he uses his strong tails to press you hard against his groin, his knot stretching you wider and wider until it slips in with a pop, tying you.";
+	WaitLineBreak;
+	say "     Now inside you, the vulpine continues to buck, much more restricted by his knot. [if player is male]He strokes you to completion, making you cum over his tail and belly. [end if][if player is female]His caresses against your cunt grow firmer, the unending friction against your cunt enough to drive you to orgasm. [end if]Finally, he cums, spilling load after load inside you, none able to escape around his knot.";
 	Kitsune_FuckFinish;
 
 Section 2.2 - Kitsune Decide
