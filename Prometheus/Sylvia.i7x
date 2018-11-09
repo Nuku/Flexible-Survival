@@ -55,13 +55,6 @@ Version 3 of Sylvia by Prometheus begins here.
 [   1: Did not take part in Ethan's Punishment                  ]
 [   2: Took part in Ethan's Punishment                          ]
 
-SylviaRoomConnection is a number that varies.[@Tag:NotSaved]
-
-an everyturn rule:
-	if Despairing Biologist is resolved and (Resolution of Despairing Biologist is 1 or Resolution of Despairing Biologist is 2 or Resolution of Despairing Biologist is 3) and SylviaRoomConnection is 0:
-		change the northeast exit of Tenvale College Female Dorms to Sylvia's Room; [connecting the location to the travel room]
-		change the southeast exit of Sylvia's Room to Tenvale College Female Dorms; [connecting the location to the travel room]
-		now SylviaRoomConnection is 1; [room connected]
 
 [QUEST LOG]
 to SylviaQuestLog:
@@ -121,10 +114,6 @@ an everyturn rule:
 		now Sylvia is nowhere;
 
 Section 1 - Room Declaration
-
-Table of GameRoomIDs (continued)
-Object	Name
-Sylvia's Room	"Sylvia's Room"
 
 Sylvia's Room is a room.
 The description of Sylvia's Room is "[SylviasRoomDesc]".
@@ -272,11 +261,15 @@ to say SylviaTalk1: [Talk about her]
 
 to say SylviaTalk2: [Talk about her family]
 	say "     'Wanting to learn about my family, are you? Do you reckon that you might like my brother more than me? Tough. He isn't here,' Sylvia jokes. 'My father was a soldier but has now retired. My brother, however, had enlisted before I left for university. My sister and I were miserable the day he left, but he sent us letters fairly often. I don't know how he is now since, as you know, the mail stopped getting into the city. My family must be so worried about me,' the collie laments, looking at the photo on her desk. 'My mother was a housekeeper. Yes, we still have those in England, but the birth of my brother meant that she had to stay at home. When my sister and I were born, she realized that things needed to change, and so she started baking for the village shop.' Sylvia sighs, fond memories of childhood in the fore of her mind.";
-	say "     You cough politely, wanting to hear more. When you point out that she has yet to mention the family friend that encouraged her into science, she snaps from her thoughts and continues. 'I was lucky to have a supportive family. Even if I hadn't been interested in science, they would have been happy. However, a friend of the family, an entrepreneur, said that biologists could go far in the world, and would be willing to employ me once I had been to university. The family that my mother was a maid for also were willing to help me, as I had grown up on their estate. I was a very lucky young lady growing up.' She smiles returning to her youth.";
+	say "     You cough politely, wanting to hear more. When you point out that she has yet to mention the family friend that encouraged her into science, she snaps from her thoughts and continues. 'I was lucky to have a supportive family. Even if I hadn't been interested in science, they would have been happy. However, a friend of the family, an entrepreneur, said that biologists could go far in the world, and would be willing to employ me once I had been to university. The family that my mother was housekeeper for were also willing to help me, as I had grown up on their estate. I was a very lucky young lady growing up.' She smiles returning to her youth.";
 
 to say SylviaTalk3: [Talk about her friends]
 	say "     'My friends? Am I not good enough for you?' Sylvia teases. 'Well, you've already met Julian. He's a biophysicist, so we work together fairly often, especially since he used to be part of my laboratory group. Julian has a twisty mind and is good at working out problems, a trait that I'm sure you already saw when you met us. He is a little shy, though that may just be compared to me. I doubt that everyone would just accept someone watching them touch someone's privates in broad daylight. He's from Canada, so, of course, he's really nice. He claims he grew up among wolves, but that may just be an expression.";
-	say "     'There are also Evelyn and Evenlyn, who are twins. Why someone would name their children such similar names is beyond me. Perhaps it's a London thing as that is where they were from. They were studying engineering I'm told. I met them after the changes when I was going to the lab to see how damaged it was. They were stealing from the rooms. I doubt that the equipment is usable anymore, but they seem to think that the machines are still valuable. They're cats, so I was surprised when they were willing to talk to me so quickly. Really quite charismatic those two,' the collie contemplates, scratching her chin. I met Septus, the captain of the wolf football team. He seemed nice, but was slightly disappointed when I said I wasn't interested in becoming a cheerleader. He says hello if he sees me while looking for new recruits, so I'd consider him a friend.' Sylvia thinks for a minute. 'I think that's all.'";
+	say "     'There are also Evelyn and Evenlyn, who are twins. Why someone would name their children such similar names is beyond me. Perhaps it's a London thing as that is where they were from. They were studying engineering I'm told. I met them after the changes when I was going to the lab to see how damaged it was. They were stealing from the rooms. I doubt that the equipment is usable anymore, but they seem to think that the machines are still valuable. They're cats, so I was surprised when they were willing to talk to me so quickly. Really quite charismatic those two,' the collie contemplates, scratching her chin. 'I met Septus, the captain of the wolf football team. He seemed nice, but was slightly disappointed when I said I wasn't interested in becoming a cheerleader. He says hello if he sees me while looking for new recruits, so I'd consider him a good acquaintance.' Sylvia thinks for a minute. 'I think that's all.'";
+	WaitLineBreak;
+	say "     'Though I suppose Madeleine is sort of my friend. We have a rivalry over who can do better in various things. Science, sports, friendships... if I express an interest in something she will try and outdo me and I can't let that happen, especially as she is French. If you aren't familiar with history, France and England have quite a record of hostility towards each other, but have more similarities than many would admit. The interactions between us are fairly similar to this. If she gets an A in an assignment, then I have to get and A+. If I participate in a fencing tournament, she makes it her mission to defeat me. Don't tell her I said this, but she's is probably more charismatic than me and I'm lucky I have as amazing a friend as Julian. If she would just accept I'm better than her we might be able to spend more time together, she isn't exactly hard on the eyes.' From the way she delivers this last statement, you can tell that she enjoys the competition.";
+	if SylviaTrapVar > 0:
+		say "     'You remember Chloe too, don't you? Cute fennec girl who's good with computers. Telling you about my friends wouldn't be complete without including her. Her ex-boyfriend still makes for a better mongoose than gorilla and she gets to be free from such a disappointment. I'm considering including her in my research group. We're getting to be quite a few of us aren't we? Though considering the number of people you get to meet, my circle of friends may expand even further. Getting to know people has become so much easier since becoming animals, something which I've mentioned in my dissertation if you're interested. I really must get around to asking about you at some point, I don't feel I know much about you...'";
 
 to say SylviaTalk4: [Talk about her hobbies]
 	say "     'What do I do for fun? Well, I like knitting, moonlit walks on the beach, and plotting the downfall of the government,' Sylvia says, attempting to look serious. Recognising humor, you give a snort before waiting for her to answer properly. She smirks at you for a second before saying, 'Growing up, I learnt how to play badminton. I'm quite good at it too, enough so that I was a national representative for a while. Withdrew from the team later in high school, but I carried on playing casually. I did sabre fencing during the winter, as badminton is a summer sport. I wasn't quite as good at that, but Daddy says most people don't fight fair outside of the strip, so I learnt self-defense too. My family allowed me to practice on them, even my mother. They considered it very important that I be able to protect myself, but the fencing means that I can shank someone with a sword if I have mine at hand,' she explains, gesturing at a wooden case that is sticking out from under her bed.";
@@ -294,23 +287,41 @@ to say SylviaTalk6: [Samples from friends]
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if companion of player is gryphoness:
+	if AngieAroused > 1 and female is not banned and herm is not banned and female is not warded and herm is not warded:
 		choose a blank row in table of fucking options;
-		now title entry is "Denise";
+		now title entry is "Angie";
 		now sortorder entry is 1;
-		now description entry is "Ask the Gryphoness for a sample";
+		now description entry is "Have a trip to the zoo and see the herm panther";
 	[]
-	if companion of player is cute crab:
+	[if hp of Blanche > 2 and female is not banned and male is not banned and female is not warded and male is not warded:
 		choose a blank row in table of fucking options;
-		now title entry is "Crab";
+		now title entry is "Blanche";
 		now sortorder entry is 2;
-		now description entry is "See whether the crab will help her";
+		now description entry is "Visit the wolf woman in her den";]
 	[]
-	if Bubble is booked:
+	if Bubble is booked and female is not banned and female is not warded:
 		choose a blank row in table of fucking options;
 		now title entry is "Bubble";
 		now sortorder entry is 3;
 		now description entry is "Take the collie to see the inflatable vixen";
+	[]
+	if companion of player is cute crab:
+		choose a blank row in table of fucking options;
+		now title entry is "Crab";
+		now sortorder entry is 4;
+		now description entry is "See whether the crab will help her";
+	[]
+	if companion of player is little fox:
+		choose a blank row in table of fucking options;
+		now title entry is "Dash";
+		now sortorder entry is 5;
+		now description entry is "Ask the baby fox to be brave and give a sample";
+	[]
+	if companion of player is gryphoness and female is not banned and herm is not banned and female is not warded and herm is not warded:
+		choose a blank row in table of fucking options;
+		now title entry is "Denise";
+		now sortorder entry is 6;
+		now description entry is "Ask the Gryphoness for a sample";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -327,12 +338,18 @@ to say SylviaTalk6: [Samples from friends]
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Denise"):
-					say "[DeniseSample]";
-				if (nam is "Crab"):
-					say "[CrabSample]";
+				if (nam is "Angie"):
+					say "[AngieSample]";
+				[if (nam is "Blanche"):
+					say "[BlancheSample]";]
 				if (nam is "Bubble"):
 					say "[BubbleSample]";
+				if (nam is "Crab"):
+					say "[CrabSample]";
+				if (nam is "Dash"):
+					say "[DashSample]";
+				if (nam is "Denise"):
+					say "[DeniseSample]";
 				WaitLineBreak;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -342,9 +359,28 @@ to say SylviaTalk6: [Samples from friends]
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
-to say DeniseSample: [Take sample from Denise. Sylvia X Gryphoness]
-	say "     You gesture to the hermaphrodite gryphon following you and introduce her to the collie. 'You have such pretty feathers,' Sylvia croons, stroking a paw over the vibrant, blue plumage. Denise leans towards the attention, enjoying the affection. 'Would you mind if I took two feathers? One can be molted, but I would like a fresh one for comparison,' the student requests, her hand getting closer to the gryphon's back end. While initially hesitant, your companion agrees when Sylvia's hand reaches her genitals, a thumb rubbing over her pussy while her palm cups her balls. Pleased at such easy consent, Sylvia stoops and picks a feather off of the floor before grasping one on the gryphoness['] neck. With a sharp pull, a feather comes away in her hand, though not without a pained squawk from Denise. The collie quickly stores her samples in two vials before turning back to you both. 'Now that that's out of the way, perhaps I can reward such a pretty bird for her bravery.'";
-	say "     Denise is keen, and you don't have any problem with that. After all, being plucked must hurt. Sylvia goes down between the gryphon's legs, grasping her cock in one hand and massaging her cunt with the other. Denise lets out a warble and begins thrusting her hips forward, pushing the collie's fingers into her slit and her shaft through the canine's grip. Content to just watch, you sit on the bed and allow them to continue. With a slurp, Sylvia takes the avian's shaft into her mouth, her tongue dancing over its length as it is withdrawn. This continues for several minutes, the thrusts speeding up as Denise closes on orgasm. Pulling out of the collie's mouth, your gryphoness companion squirts her cum over the collie, who sits there, allowing herself to be splattered with spooge. When Denise has finished, the canine collects some of the semen in a vial and adds it to her collection. Overall, a very productive session. Sylvia tosses you a bottle of water in thanks.";
+to say AngieSample: [Sylvia X Angie]
+	say "     Your thoughts go to Angie, the panther-herm at the zoo, and you suggest to Sylvia that she may be willing to provide a sample. The collie quickly slides a few things into her bag and slings it over her shoulder. Your journey through the city is uneventful, with the most exciting moment being a stray dog rushing into an alleyway, an old bone grasped firmly between its teeth. As you near the gates of the zoo, the cries and calls of its occupants greet your ears along with the smell of hundreds of animals that had been confined. Sylvia looks around with interest as you walk towards the gift shop, her enthusiasm about non-human beings undulled by the nanite outbreak. When you enter the room, Angie looks up, [if AngieAroused is 50]the majestic panther, Midnight, curled up in a corner deep asleep. [else]a stack of books detailing the mating habits of tigers in plain sight on the counter. [end if]She greets you warmly and looks curiously at the collie following you, disappointed at her lack of feline features but nonetheless appreciative of the canine's physique.";
+	say "     You quickly explain who Sylvia is, with her piping in to explain what she wants and why. 'I'll happily reward you for your help, whether it is with food, water, or release.' The black feline smirks at this, the groin of her shorts stirring as her length stiffens. 'That sounds like a good deal. So you want a sample of fur and sexual fluid?' She questions, before brushing a few strands off the counter. 'You can collect the semen yourself as part of payment.' The collie chuckles at her reply, 'Nothing beats collecting sperm by hand.' 'Who said anything about using your hands?' Angie responds, pushing the surprised student's back over a chair before circling around and positioning her hardening cock in front of the canine's mouth. Sylvia lets out a soft murr as the shaft baps her in the nose before sliding into her open mouth.";
+	WaitLineBreak;
+	say "     The zookeeper doesn't wait before pressing her penis deeper, the collie's throat bulging around its girth. You question how Sylvia is able to do this without gagging or showing any discomfort. She seems to be taking the [']no hands['] policy seriously, not stimulating her dripping pussy as her face is used by the horny feline. 'Mmm, where did you find this girl? She knows how to treat a cock that's for sure,' Angie moans. As if feeling that that sells her short, Sylvia sneaks her tongue out and traces it over the kitty's balls each time she bottoms out. The feline's hands play over the collie's breasts in reward for this treatment, caressing the swell of flesh and tweaking the nipples. 'I don't think I'm going to last much longer. Your throat is [italic type]tight[roman type].' Giving a few final thrusts, Angie withdraws as she begins to cum. The first few spurts shoot into the canine's mouth and esophagus, the following jets splattering over her face and chest. 'I hope you can still use those as samples,' the pantheress says with slight worry. 'Not that I would mind having to do this again.'";
+	say "     As Sylvia sits up, she is quite the sight. Semen drips from her breasts upwards, matting her fur. 'I think there's plenty of sample material here, don't you think [name of player]? You have to agree, there is probably enough cum on her to fill a glass. You pass her one of the vials from her backpack and she scrapes a decent pool from her nose into it. 'You'd put many of the men at the campus to shame with that release. I might be back to continue this another time if that's alright with you Angie,' the collie says as she tightens the lid of the vial. The feline blushes beneath her fur and mumbles that that should be fine [if AngieAroused is 50]as long as Midnight can join in too. [else]and that perhaps they could do more. [end if]Collecting a few strands of fur from the pantheress['] arm, Sylvia stores the samples and slings her backpack over her shoulder again. You both wave goodbye to Angie and walk back to the campus. The zoology student is going to need a long shower later, but gives you a bottle of water in payment first.";
+	say "[bold type]You gain a water bottle![roman type][line break]";
+	increase carried of water bottle by 1;
+
+[to say BlancheSample: [Julian X Blanche]
+	if Resolution of BlancheSample is not > 0:
+		say "     You remember the mature white wolf that you saved in the Capitol District and are about to suggest her as a potential sample donor when Julian enters the room behind you. 'Fancy seeing you here[if player is not defaultnamed] [name of player][end if]. Helping Sylvia with her research?' he asks as the collie walks over and gives him a loving hug. 'They're indispensable, I don't know what I would do without either of you. But I believe [if player is herm]they [else if player is male]he [else]she [end if]was about to say something before you came in,' Sylvia says, and expectant look directed at you. You tell them about Blanche and how you saved her from Drakes and helped her back to her den. 'She sounds nice. I think I'll come along too,' the dark-furred wolf responds. 'Nice, Julian. Expressing interest in another woman in front of your girlfriend,' the collie dryly replies. 'I didn't mean it exactly like that, and anyway, I thought we were polyamorous?' the lupine says, ears flat against his head in embarrassment.";
+		say "     'Don't worry, we are. I just like teasing you about it. Not many people were open about such relationships before the outbreak and I like to feel that I was ahead of the trend. But we should go and meet this wolf woman before our friend here decides we need some privacy.' They don't take long to pack the necessary equipment and soon you are walking across the campus and towards the gate. 'Would you like to take point on this expedition Julian. Because I wouldn't want you to miss out on experiencing how [']nice['] Blanche is. You might sulk,' Sylvia asks, smiling like a coal-scuttle. 'I graciously accept your offer, feel free to observe,' the wolf replies, bowing extravagently, causing a few passersby to look on curiously. The collie snorts and pushes him forward. 'Well then, lead dear alpha.' You escort them as you trudge through the city, ensuring that you aren't taken by surprise, the two of them remaining relaxed and looking around as you travel. Before long, you are outside Blanche's makeshift den and you knock before entering, the scientists following you inside.";
+		WaitLineBreak;
+		say "     Blanche looks up as you descent the stairs into the basement, her tail wagging slowly behind her as she sees that it is you, though it slows for a moment as she sees that you have company. 'Who are they?,' she cautiously asks while eying them warily. [if hp of Blanche > 6]'And please keep your voices down. The children are sleeping.' [end if]Before you can reply, Sylvia steps forward, hands held up in an unthreatening manner. 'Hello, my name is Sylvia, and this is my friend Julian. We met [if player is not defaultnamed][name of player] [else]your rescuer [end if]at the college. I'm a biologist doing research on the forms that the nanite plague has changed people into. And I was wondering whether you would be willing to provide a sample of biological material for study?' Blanche waves for her to lower her hands, but still looks wary of the two students.";
+		say "     'Where are our manners? Would you like something to eat or drink?' Julian interjects. 'I would be interested in talking to you for a bit if you don't mind, even if you would prefer not to take part in our research, and you can never have too much food or drink when the outside can be so dangerous.' Blanche reacts with a small smile at the black wolf's offer, eyeing him up, though you are unsure whether it is to gauge whether he is a threat or a potential lover. 'That sounds very civilized. I don't see why I can't at least allow you to convince me of the merits of your proposal, and you seem an interesting couple so I would be lying if I said I wasn't interested in knowing more about you. Come. I'll clear one of the desks and share what food you can spare,' the white wolf replies. She brushes some papers from a table while you collect some chairs and the two students lay out the selection of sandwiches and cans of drink from a backpack.";
+		WaitLineBreak;
+		say "     As you seat yourselves, Sylvia apologizes to Blanche. 'I'm sorry for behaving like I was more concerned about the science than I was about you. I haven't met too many people in the city who thought of me as a person as opposed to a potential recepticle for breeding, so I try and explain what I want before they try and jump me. I'm glad that Julian appears to remember proper etiquette when I can't.'";]
+
+to say BubbleSample: [Take sample from Bubble. Sylvia X Latex Vixen]
+	say "     Wondering whether Sylvia would be interested in meeting Bubble, you inform her of the latex vixen living on the upper floors of the library. The collie happily collects her equipment in a bag and follows you through the city. Luckily, there are no attacks, and you arrive at the library safely. 'I do like the smell of books,' the canine confesses as you walk over to the stairs. Upon reaching the second floor, you are greeted by Bubble, whom is lounging around on a chair, her legs spread and a paw rubbing over her gash. She looks up, but doesn't stop masturbating. 'Oh, hi. I didn't realize we were having anyone new here today. Where'd they find you?' The two women look at each other, though Sylvia doing so with more scrutiny as she makes mental notes of interesting features and qualities. 'Your friend here,' the collie gestures at you, 'has agreed to help me with my research into the infection of the city. Would you be willing to provide a sample, perhaps some of the lubrication that seems to be pouring from your vagina?'";
+	say "     'Ooh, someone's confident. Perhaps you could earn it. With your tongue, say?' Bubble responds cheekily. Unfazed, Sylvia drops to her knees, collecting a small amount of the secretion before pressing her mouth up against the vixen's leaking vulva. The sound of slurping and moaning fills the library, both participants caring little if anyone else knows what they are doing. A paw strokes over the vixen's rubbery skin, feeling the bulge of her breasts before returning to spread her pussy wide for the finale. With a gasp, Bubble begins squirting her lube across the floor, the collie quickly moving her face out of the way, though keeping her fingers pistoning in and out. 'Mmm, you definitely earnt your sample,' the vixen tiredly mumbles. With all parties satisfied, Sylvia stands up and collects her belongings. Just to make sure of her safety, you escort her back to her room, chatting about how you met Bubble. 'Thank you, I'll be sure to compare Bubble's sample with those of other latex creatures,' the collie says, tossing you a water bottle";
 	say "[bold type]You gain a water bottle![roman type][line break]";
 	increase carried of water bottle by 1;
 
@@ -353,11 +389,18 @@ to say CrabSample: [Take sample from crab. Non-sexual.]
 	say "[bold type]You gain a water bottle![roman type][line break]";
 	increase carried of water bottle by 1;
 
-to say BubbleSample: [Take sample from Bubble. Sylvia X Latex Vixen]
-	say "     Wondering whether Sylvia would be interested in meeting Bubble, you inform her of the latex vixen living on the upper floors of the library. The collie happily collects her equipment in a bag and follows you through the city. Luckily, there are no attacks, and you arrive at the library safely. 'I do like the smell of books,' the canine confesses as you walk over to the stairs. Upon reaching the second floor, you are greeted by Bubble, whom is lounging around on a chair, her legs spread and a paw rubbing over her gash. She looks up, but doesn't stop masturbating. 'Oh, hi. I didn't realize we were having anyone new here today. Where'd they find you?' The two women look at each other, though Sylvia doing so with more scrutiny as she makes mental notes of interesting features and qualities. 'Your friend here,' the collie gestures at you, 'has agreed to help me with my research into the infection of the city. Would you be willing to provide a sample, perhaps some of the lubrication that seems to be pouring from your vagina?'";
-	say "     'Ooh, someone's confident. Perhaps you could earn it. With your tongue, say?' Bubble responds cheekily. Unfazed, Sylvia drops to her knees, collecting a small amount of the secretion before pressing her mouth up against the vixen's leaking vulva. The sound of slurping and moaning fills the library, both participants caring little if anyone else knows what they are doing. A paw strokes over the vixen's rubbery skin, feeling the bulge of her breasts before returning to spread her pussy wide for the finale. With a gasp, Bubble begins squirting her lube across the floor, the collie quickly moving her face out of the way, though keeping her fingers pistoning in and out. 'Mmm, you definitely earnt your sample,' the vixen tiredly mumbles. With all parties satisfied, Sylvia stands up and collects her belongings. Just to make sure of her safety, you escort her back to her room, chatting about how you met Bubble. 'Thank you, I'll be sure to compare Bubble's sample with those of other latex creatures,' the collie says, tossing you a water bottle";
+to say DashSample: [Sylvia, Julian and fox. Non-sexual]
+	say "     You lift the small fox onto Sylvia's bed and ask him to sit still and be brave while Sylvia gets a fur sample. However, he doesn't listen and begins to snuffle around on her duvet, taking in all the interesting smells that permeate the fabric. You are hear the door open behind you and someone enter. 'Oh. Hello, who's the handsome fellow on the bed? You haven't found yourself a new man have you Sylvia?' they ask, their voice identifying them as Julian. Sylvia lets out a snort. 'I think he's a bit young for me. Maybe when he's older,' she jokes back. 'When he's tired of exploring and hopefully before finding some of the items I keep under my bed, Dash here is going to donate some fur for my research.' Julian sits on the bed, startling the young fox for a moment before the vulpine begins to nudge the dark-furred wolf, familiarising himself with his scent. 'He's so adorable! Where did you find him?' Julian asks you, stroking the smaller canidae's back. You explain that you found him in the park and gave him some food and since then the little fox had wanted to be with you.";
+	say "     As you tell the tale, Sylvia sits on the other side of the kit who is basking in being the center of attention. 'I'd consider kidnapping him from you and keeping him for myself, but I haven't checked the college's rules on pets since the outbreak,' the collie teases you while scritching under his chin. Judging from his current behavior you might wonder whether the fox would accept this, but you know him better than that and you imagine it would take a greater bribe than mere attention to seperate him from you. Giving the cute fur donor a kiss on his snout, Sylvia stands up again and brushes the fur that has collected in her palm into a clear plastic bag and labels it. 'Julian, let the puppy go. He has important business in the city that we are keeping him from. He and his sidekick are going to save the world,' she mock scolds the wolf. With a sigh he too stands up. 'Fine. I came to tell you that Dr. Vayne wanted to discuss some of your research. Bye[if player is not defaultnamed] [name of player][end if].' 'Another successful sample taken but I should go and talk to Dr. Vayne. Here. Have a water bottle in payment. Make sure you share it with Dash,' the collie says as she brushes any loose fur from her clothes.";
 	say "[bold type]You gain a water bottle![roman type][line break]";
 	increase carried of water bottle by 1;
+
+to say DeniseSample: [Take sample from Denise. Sylvia X Gryphoness]
+	say "     You gesture to the hermaphrodite gryphon following you and introduce her to the collie. 'You have such pretty feathers,' Sylvia croons, stroking a paw over the vibrant, blue plumage. Denise leans towards the attention, enjoying the affection. 'Would you mind if I took two feathers? One can be molted, but I would like a fresh one for comparison,' the student requests, her hand getting closer to the gryphon's back end. While initially hesitant, your companion agrees when Sylvia's hand reaches her genitals, a thumb rubbing over her pussy while her palm cups her balls. Pleased at such easy consent, Sylvia stoops and picks a feather off of the floor before grasping one on the gryphoness['] neck. With a sharp pull, a feather comes away in her hand, though not without a pained squawk from Denise. The collie quickly stores her samples in two vials before turning back to you both. 'Now that that's out of the way, perhaps I can reward such a pretty bird for her bravery.'";
+	say "     Denise is keen, and you don't have any problem with that. After all, being plucked must hurt. Sylvia goes down between the gryphon's legs, grasping her cock in one hand and massaging her cunt with the other. Denise lets out a warble and begins thrusting her hips forward, pushing the collie's fingers into her slit and her shaft through the canine's grip. Content to just watch, you sit on the bed and allow them to continue. With a slurp, Sylvia takes the avian's shaft into her mouth, her tongue dancing over its length as it is withdrawn. This continues for several minutes, the thrusts speeding up as Denise closes on orgasm. Pulling out of the collie's mouth, your gryphoness companion squirts her cum over the collie, who sits there, allowing herself to be splattered with spooge. When Denise has finished, the canine collects some of the semen in a vial and adds it to her collection. Overall, a very productive session. Sylvia tosses you a bottle of water in thanks.";
+	say "[bold type]You gain a water bottle![roman type][line break]";
+	increase carried of water bottle by 1;
+
 
 to say SylviaTalk7: [Traps]
 	say "     'I had wondered if this question would come up. I didn't tell you when you asked about my interests because it isn't a socially acceptable pastime. It tends to cause people to drift away from me, and I enjoy your company. But you asked, so I shall answer. You may have noticed that I'm not as physically capable as many of the other people in the city, and I wasn't any stronger or tough as a human. What I do have is my mind, a platitude my father was fond of telling me, though he gave me a solution as well. He told me that indirectly fighting someone reduces the chances of coming to harm and that a trap may give me some deniability if I planned it well. A sort of incentive for excellence in its own way. He started off by teaching me some of the tricks he learned in the military, but it didn't take me long to start experimenting and improvising beyond bear traps and tripwires. The trick was to make it look like someone was careless, unlucky, or that you couldn't have been involved. I'm proud to say that I never got caught and any accusations came to nothing.'";
@@ -462,9 +505,9 @@ to say SylviaSex4: [Anal]
 	WaitLineBreak;
 	say "     Sylvia turns her head, watching your penis appear and disappear from view. You can hear her tongue slapping in her mouth, mirroring the sound of your groin against her rear. You lean over her, bringing an arm up to cup the side of her face as she twists around to exchange a kiss with you. Breaking the kiss, she leans forward, angling her body so that her chest is pressed against the ground with her rear raised in true canine fashion. You can hear the moisture dripping from her cunt splashing against the carpet, your actions greatly arousing the collie. You run a hand over her tummy, feeling the impacts of your thrusts through her body. Resuming your grip on either side of her hips, you increase the rate at which you pound into her";
 	if cockname of player is listed in infections of Knotlist:
-		say "     As you near climax, a strong urge to knot her arises. Desperately, you attempt to force your knot past her anal ring, each thrust swelling your knot further. In a last-ditch attempt, you grab her legs and pull back on her as you press forward. Sylvia lets out a cry of pure pleasure, her anus relenting enough for you to knot her. Not a moment afterwards, your climax erupts, cum shooting deep into her bowels, setting off her own orgasm. You both let out howls of ecstasy as her ass squeezes around your [cock of player]cock, and juices spray from her pussy onto your leg. Exhausted, you both lie there, waiting for your penis to soften. Remembering her request from last time, you grab a beaker and hold it beneath your bodies. As you pull out with a slurp, a steady flow of semen runs into the beaker. Sylvia collapses on her side before hauling herself to her feet. She takes the beaker from you and, giving you a wink, takes a sip. Shaking your head and chuckling, you stand up and dress yourself.";
+		say "     As you near climax, a strong urge to knot her arises. Desperately, you attempt to force your knot past her anal ring, each thrust swelling your knot further. In a last-ditch attempt, you grab her legs and pull back on her as you press forward. Sylvia lets out a cry of pure pleasure, her anus relenting enough for you to knot her. Not a moment afterwards, your climax erupts, cum shooting deep into her bowels, setting off her own orgasm. You both let out howls of ecstasy as her ass squeezes around your [cock of player] cock, and juices spray from her pussy onto your leg. Exhausted, you both lie there, waiting for your penis to soften. Remembering her request from last time, you grab a beaker and hold it beneath your bodies. As you pull out with a slurp, a steady flow of semen runs into the beaker. Sylvia collapses on her side before hauling herself to her feet. She takes the beaker from you and, giving you a wink, takes a sip. Shaking your head and chuckling, you stand up and dress yourself.";
 	else:
-		say "     Nearing climax, your grip tightens, and you manage a last few powerful strokes before you cum inside of her, setting off her own orgasm. You feel her ass squeeze around your [cock of player]cock as juices spray from her pussy onto your leg. You let out a sigh, feeling your semen slosh against your tip as her muscles compress around you. Remembering her request from last time, you grab a beaker and hold it beneath your bodies. As you pull out with a slurp, a steady flow of semen runs into the beaker. Sylvia collapses on her side before hauling herself to her feet. She takes the beaker from you and, giving you a wink, takes a sip. Shaking your head and chuckling, you stand up and dress yourself.";
+		say "     Nearing climax, your grip tightens, and you manage a last few powerful strokes before you cum inside of her, setting off her own orgasm. You feel her ass squeeze around your [cock of player] cock as juices spray from her pussy onto your leg. You let out a sigh, feeling your semen slosh against your tip as her muscles compress around you. Remembering her request from last time, you grab a beaker and hold it beneath your bodies. As you pull out with a slurp, a steady flow of semen runs into the beaker. Sylvia collapses on her side before hauling herself to her feet. She takes the beaker from you and, giving you a wink, takes a sip. Shaking your head and chuckling, you stand up and dress yourself.";
 
 to say SylviaSex5: [Tribbing]
 	say "     Sitting down on the bed, your eyes start looking over Sylvia's naked body. As her tail wags idly, you catch a glimpse of her canine spade. You stand up and close the door before approaching the collie, an idea of what you want firm in your mind. Sylvia turns to face you, having heard the door. Upon hearing your wish for lesbian fun, she smiles and agrees readily, her hand grasping your thigh as she leans in to kiss you. As your mouths meet, her tongue slips past your lips and begins caressing your own, the wide organ effortlessly tracing around your mouth. Breaking the kiss, you pull back and remove your clothes, before embracing her again, your breasts rubbing against each other, causing warmth to grow in your loins.";
@@ -474,10 +517,6 @@ to say SylviaSex5: [Tribbing]
 	say "     Sylvia rolls onto all fours, and you kneel behind her. Gripping her hips, you start grinding your groins together, squelching noises filling the room. As you get closer to climax, you occasionally pull back and thrust against her, copying male actions. This seems to activate something in Sylvia's mind as she begins panting and yipping, perhaps fulfilling her perceived role. As your orgasm crests, you cease thrusting and settle for grinding. Contracting and spasming, your vulva spreads against her own, squirting your fem-cum into her puffed lips. Her own climax sprays her juices partially into you, the feeling causing you to quiver in hypersensitivity. Tired, but very satisfied, you both slump, breathing heavily. After relaxing for a short time, you stand, giving her a deep kiss, before dressing and getting ready to return to the city.";
 
 Section 5 - Events
-
-Table of GameEventIDs (continued)
-Object	Name
-Despairing Biologist	"Despairing Biologist"
 
 Despairing Biologist is a situation.
 The level of Despairing Biologist is 0.
@@ -729,10 +768,6 @@ to UnnaturalHeatEvent: [Sylvia removes skirt]
 		now hp of Julian is 1;
 	now Unnatural Heat is resolved;
 
-Table of GameEventIDs (continued)
-Object	Name
-Beach Field Research	"Beach Field Research"
-
 Beach Field Research is a situation.
 Prereq1 of Beach Field Research is Unnatural Heat.
 Prereq2 of Beach Field Research is Julian's Room Event.
@@ -884,10 +919,6 @@ to SylviasReward: [Sylvia willing to allow you to mate with her]
 		now Resolution of Sylvia's Reward is 7; [Refused]
 	now hp of Sylvia is 7;
 
-Table of GameEventIDs (continued)
-Object	Name
-Bad Breakup	"Bad Breakup"
-
 Bad Breakup is a situation.
 Prereq1 of Bad Breakup is Beach Field Research.
 Prereq1Resolution of Bad Breakup is { 1, 2 }.
@@ -909,15 +940,13 @@ to BadBreakupEvent: [Cheating Boyfriend]
 	WaitLineBreak;
 	say "     Now that the ex-boyfriend has left, Sylvia unlocks the fox girl's door and guides her inside with you following behind. The miserable student collapses into her bed weeping, Sylvia only leaving her for a moment to re-lock the door. 'You barely know me. Why are you doing this?' the fennec asks the collie. The canine sits beside her and hugs the fox's head to her chest. 'Because I care enough and because you deserve to be loved,' is the reply. 'I would like to be your friend, but I would understand if you don't want anything to do with me at the moment. I can get Rose to come and sit with you while you recover.' Hiccuping between sobs, the fennec clings to Sylvia, managing to utter, 'No, I want you here. No one else cared about me out there.' The collie looks pained at witnessing such desperation and kisses the top of the fox's head. 'I'll stay, dear, but I'll warn you now. Ethan will face retribution for this, Nemesis as my witness.'";
 	say "     You agree with the sentiment, even if you find the oath strange, and ask whether there is anything she would like you to help with. Sylvia looks at you darkly. 'Oh no. This one's personal. I'll get the materials myself and make him feel pain equivalent to what he has inflicted on Chloe here. I might even try some new contraptions out.' The tone in which she says this makes you uncomfortable, and you almost feel some fear for the unfaithful ex-boyfriend. 'Don't kill him. Please. I'm not worth that,' Chloe pleads. 'I won't kill him, but don't think yourself so worthless. You're smart, pretty, and kind-hearted,' the collie reassures her as she strokes her hair. Glancing at you, she adds, '[if player is not defaultnamed][name of player], you[end if] can go if you want. I'll stay with Chloe for now. As you turn and leave, she mutters,' He will pay for this,' and you hope the fennec didn't hear that. Despite the heartbreak Ethan has caused her, the fox is drowning in misery too much to want revenge at the moment.";
+	now Resolution of Bad Breakup is 1;
 	now Bad Breakup is resolved;
 	now LastCampusWalkin is turns;
 
-Table of GameEventIDs (continued)
-Object	Name
-Cheat's Retribution	"Cheat's Retribution"
-
 Cheat's Retribution is a situation.
 Prereq1 of Cheat's Retribution is Bad Breakup.
+Prereq1Resolution of Cheat's Retribution is { 1 }.
 The sarea of Cheat's Retribution is "Campus".
 
 instead of going to College Walkway East while (Cheat's Retribution is active and Cheat's Retribution is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 8):
@@ -958,10 +987,6 @@ to CheatsRetributionEvent: [Ethan's Punishment]
 		now SylviaTrapVar is 1;
 	now Cheat's Retribution is resolved;
 
-Table of GameEventIDs (continued)
-Object	Name
-Charming Picnic	"Charming Picnic"
-
 Charming Picnic is a situation.
 Prereq1 of Charming Picnic is Unnatural Heat.
 Prereq1Resolution of Charming Picnic is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
@@ -980,10 +1005,6 @@ to CharmingPicnicEvent: [Picnic]
 	say "     Julian sits next to her, eying some slices of ham, letting out chuckles as Sylvia continues her tale. All of them seem very fond of each other, casually touching each other as they pass food and express concern and support as they exchange stories. Julian tells them of his childhood, of walks through the snowy forests of Canada and watching wolves hunt through his father's binoculars. The twins then regale them with how they convinced some soldiers to eat some peaches, leaving before they noticed the effects. You smile, glad that people still take the time for such activities as picnics, that would have been viewed as mundane before the outbreak, but now are a reminder of what was and the hope for the future. As you leave, you turn your head and watch as Julian finally grabs the ham, devouring it in three bites.";
 	now Charming Picnic is resolved;
 	now LastCampusWalkin is turns;
-
-Table of GameEventIDs (continued)
-Object	Name
-Badminton One	"Badminton One"
 
 Badminton One is a situation.
 Prereq1 of Badminton One is Unnatural Heat.
