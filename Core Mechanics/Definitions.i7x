@@ -300,11 +300,11 @@ Definition: A person (called x) is naked:
 		no;
 
 Definition: A person (called x) is MuzzleFaced:
-	if facename of x is listed in Equinelist or facename of x is listed in Vulpinelist or facename of x is listed in Caninelist, yes;
-	else, no;
+	if facename of x is listed in { "test" }, yes;
+	no;
 
 Definition: A person (called x) is FeralBodied:
-	if bodyname of x is listed in Feral, yes;
-	else, no;
+	if bodyname of x is listed in { "test" }, yes;
+	no;
 
 Definitions ends here.

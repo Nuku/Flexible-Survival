@@ -1,4 +1,4 @@
-Version 1 of Kitsune Expansion by Dys starts here.
+Version 1 of Kitsune Expansion by Dys begins here.
 
 Section 0 - Variables
 
@@ -130,5 +130,6 @@ to say Kitsune_OldAnalDom:
 	now Kitsunearoused is 2;
 	kitsuneinfect;
 	now lastfuck of Kitsune is turns;
+
 
 Kitsune Expansion ends here.
