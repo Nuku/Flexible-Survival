@@ -1526,8 +1526,8 @@ to NumberVariableSave:
 		-- "KTO":
 			now NumberVarValue entry is KTO;
 		-- "KTP":
-			now NumberVarValue entry is KTP;
-		-- "ktspeciesbonus":
+[			now NumberVarValue entry is KTP;
+		-- "ktspeciesbonus":] [What is KTP? Inform does not know]
 			now NumberVarValue entry is ktspeciesbonus;
 		-- "KurtEvent":
 			now NumberVarValue entry is KurtEvent;
@@ -5225,8 +5225,8 @@ to VariableNumberLoad:
 					now kpstatus is numberVarValue entry;
 				-- "KTO":
 					now KTO is numberVarValue entry;
-				-- "KTP":
-					now KTP is numberVarValue entry;
+[				-- "KTP":
+					now KTP is numberVarValue entry;] [What is this? Inform does not know.]
 				-- "ktspeciesbonus":
 					now ktspeciesbonus is numberVarValue entry;
 				-- "KurtEvent":
