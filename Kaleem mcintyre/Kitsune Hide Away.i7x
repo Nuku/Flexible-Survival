@@ -8,7 +8,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Foxy Hideaway	"Foxy Hideaway"
 
-Foxy Hideaway is a room. It is fasttravel. It is private.
+Foxy Hideaway is a room. It is fasttravel. It is private. It is safe.
 
 The description of Foxy Hideaway is "All around you the scents of flora and fauna surround the small enclosed area kept hidden behind a single door. The smells of the various plants has your nose literally twitching a mile a minute as you smell everything from jasmine to lavender to roses to honeysuckles filling up the den of the silver vulpine. From what you can see Kitsune has placed a large four-poster bed in the middle of his hideaway, strange considering that there is grass growing throughout the floor around the feet of the plush sleeping pallet. There are also two nightstands on either side of the room with elegant lamps dominating the top of said stands, both are on but running at a low lighting. On both the left and right sides of the walls there are tapestries with silver and white nine-tailed kitsunes standing regal in place, almost as though they were watching the room for intruders. Besides the flowers growing throughout the room there are small ornaments, such as vases and other assorted pottery, placed onto the floor with incense sticks burning within them. With all of this grandiose ensemble collected together the room should feel oppressed, but maybe because of that it instead of in spite of it the area feels... open for some reason.".
 
@@ -182,11 +182,7 @@ Instead of fucking Kitsune:
 
 to kitsuneinfect:
 	[puts Kitsune as lead monster]
-	repeat with y running from 1 to number of filled rows in Table of Random Critters:
-		choose row y in Table of Random Critters;
-		if name entry is "Kitsune":
-			now monster is y;
-			break;
+	setmonster "Kitsune";
 	now non-infectious entry is false;
 	infect "Kitsune";
 	now non-infectious entry is true;
@@ -265,8 +261,6 @@ when play ends:
 			say "'I had a feeling that this might happen, though honestly I was hoping that it wouldn't,' Kitsune says, and you can only tilt your head to the side as you try and figure out what the other means. 'Don't try and think right now. You'll only make yourself sick, little kit.' The soothing voice of the other kitsune speaks into your head and instantly you want to do nothing more than cuddle up with the other in order to bury yourself underneath the older male's fluffy silver tails. 'Let's leave this place and return home, there is much I have to begin teaching you about how to be a proper kitsune.' With a flick of his graceful silver hand Kitsune summons up a large blue ball of fire and then brings it to his muzzle to blow against the flame. The mystic fire turns into a rolling cloud that soon over takes both you and he and the next thing that you know you are being transported away from the mundane world of humans. No one you know would ever see you again because in the other world where Kitsune resides you would spend the next nine hundred plus years studying how to be a proper kitsune. Though four hundred or so of those years would be spent as the other's bed mate.";
 		else:
 			say "By the time the military comes in to clean up the city, you and Kitsune have gotten close enough to each other than you decide not to part. The silver fox-man is amused with the human's attempts to study him, but only because he spends nine-tenths of the time confusing their machines on the who/how/what of what he is. In the end they scientist who had examined the two of you end up releasing you after Kitsune's strain finally makes them surrender to their own ignorance. Of course this matters little to you because once you and Kitsune have stepped out into the free world you both spend the next hundred or so years getting to know each other even better than before, while at the same time you receive lessons on how to be a proper kitsune from the other male. As the years roll by more and more tails slip out from your backside, beautifully fluffy as well as luxuriously soft, the flowing appendages become the key sight for others to know you by as the title Many-Tales soon follows you around like a restless spirit. One reason why others call you this is because of your numerous tails, which you almost never seem to conceal with your powers, and two because of the stories you tell others when asked by them to retell some of your past during your more idle hours. Kitsune spends a lot of time teasing you about this when you two are alone together, but you return his jibes by calling him Old Man whenever he does. This results in a lot of fights between you two, though most of them good natured one, but it also ends with a lot of passionate make up sex with your long time friend.";
-
-[ Edit this to have the correct name as well]
 
 
 Kitsune Hide Away ends here.
