@@ -39,6 +39,7 @@ Definition: A situation (called x) is available:
 
 Definition: A situation (called x) is PrereqComplete:
 	if PrereqCompanion of x is not nothing and PrereqCompanion of x is not companion of player, no;
+	if PrereqTime is not "Any" and ((PrereqTime is "Day" and Daytimer is night) or (PrereqTime is "Night" and Daytimer is day)), no;
 	if Prereq1ResolvedMandatory of x is true and Prereq1 of x is not resolved, no;
 	if Resolution of Prereq1 of x is not listed in Prereq1Resolution of x, no;
 	if Prereq2ResolvedMandatory of x is true and Prereq2 of x is not resolved, no;

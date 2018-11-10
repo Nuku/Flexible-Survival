@@ -115,6 +115,13 @@ Figure of Alexandra_clothed_icon is the file "Alexandra_clothed.jpg".
 Figure of Alexandra_clothed_preg_icon is the file "Alexandra_clothed_preg.jpg".
 Figure of Alexandra_face_icon is the file "Alexandra_face.jpg".
 Figure of Alexandra_naked_icon is the file "Alexandra_naked.jpg".
+Figure of Alexandra_clothed0_frown_icon is the file "Alexandra_clothed0_frown.jpg".
+Figure of Alexandra_clothed1_frown_icon is the file "Alexandra_clothed1_frown.jpg".
+Figure of Alexandra_clothed2_frown_icon is the file "Alexandra_clothed2_frown.jpg".
+Figure of Alexandra_clothed0_neutral_icon is the file "Alexandra_clothed0_neutral.jpg".
+Figure of Alexandra_clothed0_smile_icon is the file "Alexandra_clothed0_smile.jpg".
+Figure of Alexandra_naked_smile_icon is the file "Alexandra_naked_smile.jpg".
+Figure of Alexandra_naked_frown_icon is the file "Alexandra_naked_frown.jpg".
 Figure of Alex_icon is the file "Alex_ig.jpg".
 Figure of Amy_icon is the file "Amy.jpg".
 Figure of Amy_face_icon is the file "Amy_face.jpg".
@@ -305,6 +312,7 @@ Figure of Sonny_halfwool_nude_icon is the file "Sonny_halfwool_nude.jpg".
 Figure of Sonny_shaved_jeans_icon is the file "Sonny_shaved_jeans.jpg".
 Figure of Sonny_shaved_nude_icon is the file "Sonny_shaved_nude.jpg".
 Figure of Sonny_face_icon is the file "Sonny_face.jpg".
+Figure of Spike_face_icon is the file "Spike_face.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of Susan_face_icon is the file "Susan_face.jpg".
 Figure of Timothy_icon is the file "Timothy.jpg".
@@ -332,6 +340,7 @@ Figure of Yatur_clothed_icon is the file "Yatur_clothed.jpg".
 Figure of Yatur_naked_icon is the file "Yatur_naked.jpg".
 Figure of Yolanda_icon is the file "Yolanda_ig.jpg".
 Figure of Zigor_icon is the file "Zigor_ig.jpg".
+Figure of Zoe_face_icon is the file "Zoe_face.jpg".
 
 [scene icons]
 Figure of BrutusFuckingDavid_icon is the file "Brutus&David1.jpg". [Brutus fucking David]
@@ -516,6 +525,13 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Alexandra_clothed"	Figure of Alexandra_clothed_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_clothed_preg"	Figure of Alexandra_clothed_preg_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_face"	Figure of Alexandra_face_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_clothed0_frown"	Figure of Alexandra_clothed0_frown_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_clothed1_frown"	Figure of Alexandra_clothed1_frown_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_clothed2_frown"	Figure of Alexandra_clothed2_frown_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_clothed0_neutral"	Figure of Alexandra_clothed0_neutral_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_clothed0_smile"	Figure of Alexandra_clothed0_smile_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_naked_smile"	Figure of Alexandra_naked_smile_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_naked_frown"	Figure of Alexandra_naked_frown_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_naked"	Figure of Alexandra_naked_icon	"Lyttathebug"	g-black	"normal"
 "Alex"	Figure of Alex_icon	"canned"	g-black	"normal"
 "Alpha Husky"	Figure of AlphaHusky_icon	"Anymouse1968"	g-white	"normal"
@@ -807,6 +823,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Stella"	Figure of Stella_icon	"Furball"	g-white	"normal"
 "Skarnoth_undies"	Figure of Skarnoth_undies_icon	"Kien-Biu"	g-black	"normal"
 "Skarnoth_naked"	Figure of Skarnoth_naked_icon	"Kien-Biu"	g-black	"normal"
+"Spike_face"	Figure of Spike_face_icon	"SineAlas"	g-black	"normal"
 "Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Susan_face"	Figure of Susan_face_icon	"SineAlas"	g-black	"normal"
 "Talov_Kerr_Barrel"	Figure of Talov_Kerr_Barrel_icon	"Kupo Klein"	g-black	"normal"
@@ -847,6 +864,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Yuppie Mink_F"	Figure of YuppieMink_icon	"Anymouse1968"	g-white	"normal"	[only shown for female version]
 "Zebra"	Figure of Zebra_icon	"Purplepardus"	g-black	"normal"
 "Zigor"	Figure of Zigor_icon	"AugurMew"	g-black	"normal"
+"Zoe_face"	Figure of Zoe_face_icon	"SineAlas"	g-black	"normal"
 [emap - special]
 "Navigation - Signal Lost Screen"	Figure of emap_special_signalnotfound_icon	"executaball"	g-black	"normal"
 "Navigation - Shutdown Screen"	Figure of emap_special_shutdown_icon	"executaball"	g-black	"normal"
@@ -1089,6 +1107,7 @@ carry out artistcredits:
 	say "     Skarnoth by Kien-Biu @ http://nsfwbetitngoan.tumblr.com/[line break]";
 	say "     Snow by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
+	say "     Spike Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Susan (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Tiger Shark Warrior by Zealot @ https://www.furaffinity.net/user/Drakosacerdos/[line break]";
@@ -1104,6 +1123,7 @@ carry out artistcredits:
 	say "     Yatur by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Yolanda by SandySchreiber @ furaffinity.net[line break]";
 	say "     Zigor by AugurMew @ furaffinity.net[line break]";
+	say "     Zoe Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "Scenes:[line break]";
 	say "     Bottlenose Trapped by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Brutus & David by Rocketman @ http://rocketmenstudio.tumblr.com/[line break]";

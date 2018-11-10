@@ -22,11 +22,15 @@ understand "volunteer" as featgetting.
 
 Check featgetting:
 	if HP of Doctor Matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
-	if featgained of player > ( ( level of player divided by 3 ) + foodwaterbonus + nerminefeat + boosterfeats ), say "You do not yet qualify for more feats." instead;
+	if featgained of player > ( ( level of player divided by 3 ) + foodwaterbonus + nerminefeat + boosterfeats ): [not ready for more feats]
+		if Doctor Matt is present:
+			say "     As you step up to him and volunteer for testing, Dr. Matt picks up a little scanner and circles it over your torso, then shakes his head. 'I'm sorry, you're not yet ready for further procedures. You see, the nanite structures that are receptive to adjustment and reprogramming aren't all that prevalent and get deconstructed by the rest after I send a signal that seems to be lacking the right codes. It'll take some time before I can experiment on you again.'" instead;
+		else:
+			say "You do not yet qualify for more feats." instead;
 	if HP of Doctor Matt <= 100:
 		if Doctor Matt is not visible, say "Only Doctor Matt knows how to do this." instead;
 	else:
-		if doctor mouse is not visible, say "You should see Dr Mouse about that." instead;
+		if doctor mouse is not visible, say "You should see Dr. Mouse about that." instead;
 
 carry out featgetting:
 	featget;

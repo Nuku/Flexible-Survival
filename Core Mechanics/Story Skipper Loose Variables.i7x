@@ -639,10 +639,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is CarlShower;
 		-- "CassandraFucked":
 			now NumberVarValue entry is CassandraFucked;
-		-- "catadiff":
-			now NumberVarValue entry is catadiff;
-		-- "catafire":
-			now NumberVarValue entry is catafire;
 		-- "catdogstate":
 			now NumberVarValue entry is catdogstate;
 		-- "CatgirlFucked":
@@ -1221,8 +1217,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is GorillasMemberQuestCounter;
 		-- "GorillasRep":
 			now NumberVarValue entry is GorillasRep;
-		-- "gotcatares":
-			now NumberVarValue entry is gotcatares;
 		-- "gotsword":
 			now NumberVarValue entry is gotsword;
 		-- "gotwhip":
@@ -4345,10 +4339,6 @@ to VariableNumberLoad:
 					now CarlShower is numberVarValue entry;
 				-- "CassandraFucked":
 					now CassandraFucked is numberVarValue entry;
-				-- "catadiff":
-					now catadiff is numberVarValue entry;
-				-- "catafire":
-					now catafire is numberVarValue entry;
 				-- "catdogstate":
 					now catdogstate is numberVarValue entry;
 				-- "CatgirlFucked":
@@ -4927,8 +4917,6 @@ to VariableNumberLoad:
 					now GorillasMemberQuestCounter is numberVarValue entry;
 				-- "GorillasRep":
 					now GorillasRep is numberVarValue entry;
-				-- "gotcatares":
-					now gotcatares is numberVarValue entry;
 				-- "gotsword":
 					now gotsword is numberVarValue entry;
 				-- "gotwhip":

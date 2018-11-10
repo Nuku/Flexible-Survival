@@ -5,7 +5,7 @@ Version 3 of Random Shemale Smooth Collie by Guest Writers begins here.
 "Adds a Shemale Smooth Collie to Flexible Survival's Wandering Monsters table, With Impreg chance"
 
 when play begins:
-	add { "Shemale Smooth Collie" } to infections of hermaphrodite;
+	add { "Shemale Smooth Collie" } to infections of transgender;
 	add { "Shemale Smooth Collie" } to infections of furry;
 	add { "Shemale Smooth Collie" } to infections of Knotlist;
 	add { "Shemale Smooth Collie" } to infections of Caninelist;
@@ -222,20 +222,20 @@ When Play begins:
 	now per entry is 12;
 	now int entry is 12;
 	now cha entry is 10;
-	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now sex entry is "Male"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
 	now HP entry is 50;
 	now lev entry is 9; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 8; [ Amount of Damage monster Does when attacking.]
 	now area entry is "Outside"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
-	now cock length entry is 12; [ Length infection will make cock grow to if cocks]
-	now cock width entry is 3; [ Size of balls apparently ;) sneaky Nuku]
+	now cock length entry is 18; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
 	now breasts entry is 6; [ Number of Breasts infection will give you. ]
 	now breast size entry is 10; [ Size of breasts infection will try to attain ]
-	now male breast size entry is 4; [ Breast size for if Sex="Male", usually zero. ]
-	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
-	now cunt length entry is 24; [ Length of female sex infection will attempt to give you. ]
-	now cunt width entry is 10; [ Width of female sex infection will try and give you ]
+	now male breast size entry is 8; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0; [ Length of female sex infection will attempt to give you. ]
+	now cunt width entry is 0; [ Width of female sex infection will try and give you ]
 	now libido entry is 30; [ Amount player Libido will go up if defeated ]
 	now loot entry is "dog milk";
 	now lootchance entry is 60; [ Chance of loot dropping 0-100 ]

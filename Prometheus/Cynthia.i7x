@@ -111,7 +111,8 @@ Object	Name
 Sanctuary Alleyway	"Sanctuary Alleyway"
 
 Sanctuary Alleyway is a room. It is fasttravel.
-The description of Sanctuary Alleyway Building is "[SanctuaryAlleywayDesc]".
+Sanctuary Alleyway is private.
+The description of Sanctuary Alleyway is "[SanctuaryAlleywayDesc]".
 The earea of Sanctuary Alleyway is "Outside".
 
 to say SanctuaryAlleywayDesc:
