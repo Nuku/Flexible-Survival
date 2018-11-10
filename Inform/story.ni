@@ -4474,6 +4474,7 @@ Include Inventory Management Enhancements by Core Mechanics.
 Include Ironscale Items by Taelyn.
 Include Junkyard Events by Stripes.
 Include Kitsune by Kaleem mcintyre.
+Include Kitsune Expansion by Dys.
 Include Latex Quad Husky by Stripes.
 Include Leonard Events by Stripes.
 Include Little Old Woman by Kaleem mcintyre.
