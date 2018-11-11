@@ -460,7 +460,7 @@ instead of resolving Take My Royal Word For Granite:
 			now Resolution of Take My Royal Word For Granite is 2; [fought + lost]
 		else:
 			say "     You pitifully beat a hasty retreat, with Wukong on your heels. 'You're right to run, peasant!' you can hear him, a few meters behind you, until you manage to reach the main door of the museum and rushes outside. 'You better not show your dirty face around these parts, scum!' you can hear the Monkey King shout, as a final warning. Distraught by your defeat, you go back to the library.";
-			move player to Library;
+			move player to Grey Abbey Library;
 			now Resolution of Take My Royal Word For Granite is 3; [fought + fled]
 		now acquaintedWithWukong is 4;
 		follow the monkeyAcquaintancesCheck rule;

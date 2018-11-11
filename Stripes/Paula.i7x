@@ -3,6 +3,19 @@ Version 1 of Paula by Stripes begins here.
 
 "Adds a vixen nurse NPC to Flexible Survival."
 
+[  HP of Paula          ]
+[ overall status        ]
+[ 0 = Task not prompted ]
+[ 1 = Alexandra got supplies, no Paula ]
+[ 2 = got supplies w/o Paula           ]
+[ 3 = got supplies and Paula           ]
+[ 4 = talked to Paula                  ]
+[ 5 = had sex                          ]
+
+[   hunger of Paula   - Whether at library or not     ]
+[   0:     Paula at Police Station     ]
+[   1:     Paula at Library            ]
+
 Section 0 - Rescuing Paula
 
 to say paula_rescue:	[This is one of Good Alexandra's tasks.]
@@ -109,10 +122,13 @@ Instead of conversing the Paula:
 		say "     Pointing out that that's a pretty grim outlook, especially since military rescue is coming, she just rolls her eyes. 'Oh, you believe that garbage, do you? Who'd want to come in here to try and save a bunch of pervy monsters like us? That's just to keep us borderline cases quiet and complacent a little longer.";
 		say "     'Look, I'm a realist, not a pessimist. And I realize that things have gone to Hell in a handbasket. No point in expecting the best out of people - you'll rarely get it and just be disappointed in them almost all the time. But when you don't, at least you can have your expectations exceeded,' she says, running a paw across your hip with a sultry swish of her tail. 'On rare occasions.'";
 		now HP of Paula is 4;
-	else if PoliceStationTwelvePopulation > 0 and a random chance of 1 in 4 succeeds:
-		say "[paulasurvivors]";
-	else:
-		say "     [one of][if PoliceStationTwelvePopulation is 0]'Any patients for me?'[else]'I've got a little bit of time before I have to see my next patient.'[end if][or]'You seem to go wandering around outside quite a bit. Probably perving on the mutants, aren't you?'[or]'You know, you're going to get yourself into real trouble out there if you keep pressing your luck. If you end up hurt, come see me for some [bold type]healing[roman type].'[or]'I wonder which of you two'll snap first and turn this place into a sex harem. Probably [if HP of Alexandra < 61]Officer Doggy out there - she's wound pretty tight. She should learn to relax and have a little fun. Therapeutically ease the pressure and all[else]be you, running around out there, probably getting up to all sorts of kinky stuff with those mutants out there. You'll end up some kind of sex perv and come back here to ravage us all[end if],' she says, stretching her arms up, causing her quad breasts to press against the fabric straining to cover them.[or]'I'd made out alright on my own for a while, but my luck was bound to run out.'[or]'I think this vixen look's not bad. Better than those itchy scaly patches I'd picked up.'[or]'Can you believe I was a part-time nurse at that hospital before all this? This isn't what I had in mind when I was hoping to become full-time staff,' she says, fondling her double-bosom teasingly.[or]'So you thinking to get some [if HP of paula >= 5]more [end if]sex out of me in return for letting me stay here. Well, I guess that should be expected,' she says, giving her booty a shake in your direction.[or][if HP of Alexandra >= 65]'That robo-chick is one cold as ice bitch. She's caught and she's still smug like her shiny ass makes her better than the rest of us or something. Miss Bow-Wow should put dents in her chassis until she talks.'[else]'You just like coming here to stare at me in my nurse's outfit, don't you?' Dirty perv,' she grumbles even as she turns and bends over to reach for something, tail raised and flicking.[end if][in random order]";
+	if hunger of Paula is 0: [At police station]
+		if PoliceStationTwelvePopulation > 0 and a random chance of 1 in 4 succeeds:
+			say "[paulasurvivors]";
+		else:
+			say "     [one of][if PoliceStationTwelvePopulation is 0]'Any patients for me?'[else]'I've got a little bit of time before I have to see my next patient.'[end if][or]'You seem to go wandering around outside quite a bit. Probably perving on the mutants, aren't you?'[or]'You know, you're going to get yourself into real trouble out there if you keep pressing your luck. If you end up hurt, come see me for some [bold type]healing[roman type].'[or]'I wonder which of you two'll snap first and turn this place into a sex harem. Probably [if HP of Alexandra < 61]Officer Doggy out there - she's wound pretty tight. She should learn to relax and have a little fun. Therapeutically ease the pressure and all[else]be you, running around out there, probably getting up to all sorts of kinky stuff with those mutants out there. You'll end up some kind of sex perv and come back here to ravage us all[end if],' she says, stretching her arms up, causing her quad breasts to press against the fabric straining to cover them.[or]'I'd made out alright on my own for a while, but my luck was bound to run out.'[or]'I think this vixen look's not bad. Better than those itchy scaly patches I'd picked up.'[or]'Can you believe I was a part-time nurse at that hospital before all this? This isn't what I had in mind when I was hoping to become full-time staff,' she says, fondling her double-bosom teasingly.[or]'So you thinking to get some [if HP of paula >= 5]more [end if]sex out of me in return for letting me stay here. Well, I guess that should be expected,' she says, giving her booty a shake in your direction.[or][if HP of Alexandra >= 65]'That robo-chick is one cold as ice bitch. She's caught and she's still smug like her shiny ass makes her better than the rest of us or something. Miss Bow-Wow should put dents in her chassis until she talks.'[else]'You just like coming here to stare at me in my nurse's outfit, don't you?' Dirty perv,' she grumbles even as she turns and bends over to reach for something, tail raised and flicking.[end if][in random order]";
+	else if hunger of Paula > 0:
+		say "[PaulaTalkMenu]";
 [***]
 
 to say paulasurvivors:
@@ -125,6 +141,40 @@ to say paulasurvivors:
 	else:
 		say "'Some of my time's taken up doing regular check-ups on the remaining survivors. I'm mostly monitoring them for infections and so on[if infpoppercent is 100]. They're all pretty much infected with something by this point, but it's still important to monitor their condition to make sure their condition doesn't deteriorate too badly[else]. As of my last check, I'd say they're about [infpoppercent]% of them are more infected than human at this point. It's more a matter of making sure their condition doesn't deteriorate too badly[end if].";
 
+to say PaulaTalkMenu:
+	say "     There's a few topics you might be able to discuss with Paula. Is there anything in particular on your mind or do you just want to chat?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "About Her";
+	now sortorder entry is 1;
+	now description entry is "Ask the vixen about herself.";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "About Her":
+					say "[PaulaTalk1]";
+				wait for any key;
+
+to say PaulaTalk1:
+	say "     'You want to know about me now? How long was I in the police station, and you waited until now to ask me about myself. A girl might get insulted if she weren't as forgiving as I am. I just hope you aren't trying to take advantage of me. Because I'm not sure I would be able to stop you,' she teases suggestively. 'I grew up in a small town in the north where everyone knew everybody else and newcomers were a once in a decade occurence and visitors only appeared when they were lost. When I was young, there was only the post office which my parents managed, a small shop that sold groceries and a petrol station. We had a police building too I suppose, but barely. The nearest medical practice was several hours drive away, so if you got hurt you were reliant on someone's mother to having a look at you and decide whether or not they could patch you up or that someone was going to have to rush you to a hospital with your blood staining the seats of their truck. We were a close community, perhaps too close but I can't remember anyone looking too obviously inbred. So I think there was some disappointment when I decided I wanted to leave and see a bit more of the world.'";
+	say "     'I didn't get to see much more of the world in the end. My parents gave me a small amount of money so I could make a life somewhere else, and I heard at how nice California was, so I came here and started a course on nursing, doing waitressing to help pay the fees. After I completed the course, top of my class I might add, I started looking for employment at the hospital here, but they weren't hiring so I had to decide whether to find another job here while I waited, or look further afield. After a few days of lying around at home thinking about how I missed my mother, I decided I would try some of the doctors around the city. Everyone of them I went to didn't have any jobs going. Dr. Fuchs I think he was called, could only afford the salary of the one nurse who assisted him, and Dr. Medea at the pediatrics clinic already had sufficient staff for her needs.'";
+	WaitLineBreak;
+	say "     'They were very apologetic, but regret doesn't pay the bills and I was beginning to think I would have to return north. Perhaps I should have, I might have avoided the sea of pheremones that the city seems to have become, but I decided to stay and wait, hoping that a vacancy would appear at the hospital. Then the transformed started rampaging around and my chances of paid work flew south for the winter. After I found out that the hospital had become a sex trap, I thought that I could perhaps use my medical knowledge to help people in exchange for food and water, all I had to do was [']borrow['] some of their supplies that they weren't using. It didn't go very well. I got rather badly bitten by one of the patients on my way out and then the staff were adamant that they had to treat me. The rest you know. I thought it was about to be a change from naughty nurses to perverted policemen, but you and Alexandra have done alright I suppose. You haven't disappointed me too much so I think I made the right choice. But haven't you got heroic acts to be doing? Go on, we can talk another time.'";
 
 Section 3 - Sex with Paula
 
@@ -298,14 +348,5 @@ carry out paulahealing:
 		say "     'Alright, what seems to be the problem?' she asks. As you point out your injuries to her, she looks them over. 'You know, you'd not be in such rough shape if you chose to stick around here with us. It's not like you're doing any good gallivanting around out there,' she says cynically. 'Much better to just stay here and keep out of trouble,' she adds, groping you with a passing paw even as she grumbles teasingly. After her quick examination, she digs out the necessary supplies from her bag, all while making a show of waving her rear in the air. 'You're probably just out there to chase some tail. Typical.'";
 		say "     Despite her cynical edge and teasing mannerisms, she takes proper care of you, treating your wounds and ensuring you're properly patched up before letting you off the examination table with another sharp retort and a swat on your rear. You feel considerably better, having recovered [special-style-1][healed][roman type] HP.";
 		now lastPaulahealing is turns;
-
-[  HP of Paula          ]
-[ overall status        ]
-[ 0 = Task not prompted ]
-[ 1 = Alexandra got supplies, no Paula ]
-[ 2 = got supplies w/o Paula           ]
-[ 3 = got supplies and Paula           ]
-[ 4 = talked to Paula                  ]
-[ 5 = had sex                          ]
 
 Paula ends here.

@@ -20,10 +20,12 @@ The invent of Shinto Shrine is { "tanuki coin" }.
 SatisfiedTanuki is a number that varies. SatisfiedTanuki is usually 5.
 Shinto Shrine has a Grab Object called Demand.
 The demand of Shinto Shrine is usually journal.
+Tanuki Mom is a female person.
 
 tanukiList is a list of objects that varies. [@Tag:NotSaved]
 the tanukiList is {medkit, dirty water, water bottle, dog milk, soda, chips, glob of goo, food, gryphon milk, distilled milk, libido pill, acid milk, batcubus milk, cheetah milk, cow milk, margay milk, blue gel, cheese, musky cock flower, lembas bread, mammoth jerky, pink gel, pita bread, purple gel, psionic egg, psionic larva, skunk goo, sticky sushi, tentacle tip, awesome fruit, awesomer fruit, awesomest fruit, wyvern goop, centaur cum, earthen seed, demon seed, fennec semen, gecko cum, hawkman seed, orc cum, gryphon cum, pewter seed, rhino cum, sea dragon cum, silver semen, smilodon cum, wolf cum, orc femcum, mead horn, orc brew, pony cider, satyr wine, Satyress Wine, egg nog, sports drink, chocolate milk, tasty peach, birth control pill, fertile pill, pepperspray, glowing mushroom, estosterogen pill, eagle feather, honeycomb, behemoth horn, testosterone pill, centaur hair, corota venom, tuft of chin fur, dolphin milk, dryad cum, ebonflame scale, elk antler, lucky horseshoe, glowing ember, foul scuttler spit, red fur, hermaid kelp, libido suppressant, stray links, Spotted fur, peacock feather, nullifying powder, cock pill, healing booster, Fish, Pegasus Quill, pirate bandana, tousky quill, tainted wool, Tiger patch, Chipped tooth, spider webbing, spidertaur hair, pixie dust, crushed candies, estrogen pill, dragon scale, dragon hair, zebra fur, lizard juice}.
 demandIndex is a number that varies.
+Tanukigender is a number that varies. Tanukigender is usually -1.
 
 ringing is an action applying to nothing.
 
@@ -40,9 +42,40 @@ Instead of taking the ornate bell:
 Instead of taking the donation box:
 	say "While you're fairly sure you could pry it up, a feeling of impending doom stays your thieving hands.";
 
+Tanukibell is a situation.
+
 check ringing:
 	if the player is not in Shinto Shrine, say "I see nothing to ring here." instead;
-	if SatisfiedTanuki < 1, say "Nothing happens." instead;
+	if SatisfiedTanuki < 1, try resolving tanukibell instead;
+	
+
+Instead of resolving tanukibell:
+	if Tanukigender is -1:
+		say "[']You want to keep talking to me?[']";
+		say "The voice seems to be coming just beside your ear, familiar from before. [']Well, you are my child now, so I suppose you are due some time with your parent. Would you prefer your parent be a mother or a father?";
+		say "1) Father, 2) Mother>";
+		get typed command as playerinput;
+		if playerinput matches "f" or playerinput matches "1":
+			now tanukigender is 1;
+			now Tanuki Dad is in shinto shrine;
+		else if playerinput matches "m" or playerinput matches "2":
+			say "'I'm not sure I'm in the mood for that' (This option is not coded!)";
+			stop the action;
+[			now tanukigender is 2;
+			now Tanuki Mom is in shinto shrine;]
+		else:
+			say "[']I don't quite understand. Go on, think about it. I'll still be here.[']";
+			continue the action;
+		say "The pitch of the voice shifts subtly to match your choice. 'Well, there we are,' speaks the [if tanukigender is 2]female[otherwise]male[end if] voice. 'Now then, go ahead and ring that little bell if you need more parental advice. I'll go get the book. This is going to be so much fun!' Though you see no form, you can hear the sound of padded feet dashing away.";
+		wait for any key;
+		say "There is a rushing noise and a loud pop, a [if tanukigender is 2]female[otherwise]male[end if] figure appears with a bright smile. The tanuki bows towards you.  'There we are! Now, I hope you are ready for grade A parenting. I have so much to teach you! First lesson, don't ring the bell anymore.'";
+		stop the action;
+	if TanukiGender > 0:
+		say "'Didn't I tell you not to ring that?' They wave a finger at you admonoshingly. 'What am I going to do with you? Go to your room!' With a flurry of leaves, your vision is lost a moment before you find yourself somewhere else.";
+		now the player is in bunker;
+	
+		
+		
 
 Carry out ringing:
 	say "You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
@@ -299,5 +332,122 @@ to say usetancoin:
 		else:
 			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have disappeared, receding once more in compliance with your internal infection!";
 		now internalbypass is false;
+		
+Section 4 - Tanuki Dad
+
+Tanuki Dad is a male person.
+TanukiTopics is a list of text that varies.
+
+Table of GameCharacterIDs (continued)
+object	name
+Tanuki Dad	"Tanuki Dad"
+Tanuki Mom	"Tanuki Mom"
+
+The description of Tanuki Dad is "[TanukiDadDesc]".
+[The icon of Tanuki Dad is Figure of Jason_clothed_icon.]
+
+to say TanukiDadDesc:
+	say "     The tanuki spirit here has taken on the form of a father. You can tell, with the sharp blazer he's wearing with that big bold tie. He has his hands on either side of it, grinning at you proudly, his child. His belly is considerable, bulging in his clothing. Competing for the bulging contest, his great balls resist even the thought of trying to fit into any pants, so they are allowed to hang free, furry and virile. Compared to them, his furry sheath is actualy comparatively small, not that he seems to care much.";
+	add "Tanuki Balls" to TanukiTopics.
+
+
+instead of sniffing Tanuki Dad:
+	say "     He smells clean, if you don't mind the scent of fur and a bit of saki that clings to him. Noticing your attention, he grins. You would think this would be hard to notice, since grinning is his default expression, but there is a difference.";
+
+instead of conversing the Tanuki Dad:
+	LineBreak;
+	say "What do you want to talk with Tanuki about?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Survival";
+	now sortorder entry is 1;
+	now description entry is "Get some tricks about surviving these harsh times.";
+	[
+	choose a blank row in table of fucking options;
+	now title entry is "Romance";
+	now sortorder entry is 2;
+	now description entry is "Ask for advice on finding that special someone";
+	[]
+	if "Tanuki Balls" is listed in TanukiTopics:
+		choose a blank row in table of fucking options;
+		now title entry is "Balls";
+		now sortorder entry is 3;
+		now description entry is "Ask about his big balls";
+	[]
+	if HP of Tanuki Dad > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Hunting";
+		now sortorder entry is 3;
+		now description entry is "Suggest that the two of you go out hunting";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Fighting";
+	now sortorder entry is 4;
+	now description entry is "Talk about fighting with Boghrim";
+	sort the table of fucking options in sortorder order;
+	]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Survival"):
+					say "[TanukiSurvivalTalk]";
+				if (nam is "Romance"):
+					say "[TanukiRomanceTalk]";
+				if (nam is "Hunting"):
+					say "[TanukiHuntingTalk]";
+				if (nam is "Balls"):
+					say "[TanukiBallsTalk]";
+				WaitLineBreak;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     The tanuki gives you a rather big grin, patting his round belly.";
+			WaitLineBreak;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	clear the screen and hyperlink list;
+	
+To say TanukiSurvivalTalk:
+	now the humanity of the player is 20;
+	say "'It[']s a tough world out there.' He nods appreciatively. 'The most important part is that you keep your chin up.'";
+	If humanity of player < 40:
+		say "His wet nose twitches softly. 'Looks like you're letting things get to you. I know how to relax you. Go on, play a few notes.' He gestures broadly to his expansive, if clothed, belly. 'Beat a few bars and you'll be right as rain.'";
+		if the player consents:
+			say "You reach your [if scalevalue of player is 3]normal-size[else if scalevalue of player is 4]large[else]massive[end if] [bodyname of player] hands out and pat lightly at his belly. He reaches with his furry paws and pats at your hands in return. 'Go on, harder, and faster. Think of a song!' You play all the harder, thinking up a [one of]lively[or]rhythmic[or]random[at random] song to play with his belly serving as the drum. He manages to somehow hum along with the song in your head despite you not sharing it. Time passes without you noticing. By the time the drum session is over, you feel more grounded and together.";
+			increase the humanity of the player by 50;
+			follow turnpass rule;
+		otherwise:
+			say "'Aw, be that way, but the offer's open, champ!' When he thinks you aren't looking at him directly, he speaks more quietly to himself, 'nailed it, I'm a great dad.'";
+	if scalevalue of player < 4:
+		say "He tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original dad, and that's alright. My biologicals are all off that way.' He points to the East. 'I invited them to come along, but they said this place was too far. Maybe I[']ll find another place that[']s closer to them? Nevermind me, this is about you!' He pats your shoulders softly. 'Now let's see...'";
+	otherwise:
+		say "He cranes his head back a little to look up at you. 'I[']ve never had such a large child before. It's kind of exciting, to tell you the truth. Don[']t worry about it though. A good father is a good father, no matter how big or small he might be.' He wags a finger as he talks, nodding to himself. 'Now as for advice...'";
+	
+
+
+to say TanukiRomanceTalk:
+	say "...";
+
+to say TanukiHuntingTalk:
+	say "...";
+
+to say TanukiBallsTalk:
+	say "...";
+
+instead of fucking Tanuki Dad:
+	say "He bursts into a merry fit of laughter. 'I'm your father, not your boyfriend. There is a difference.' He wags a finger at you reprimandingly. 'I know people look at these big things, but they are my tools, not my masters.'";
 
 Tanuki ends here.

@@ -28,7 +28,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Orc Lair[close bracket][as]nav Orc Lair Side Entrance[end link] ";
 		LineBreak;
 	[a subsection of the 'outside' area (named Central City here)]
-	if Camp Bravo Entrance is known or Gaming Den is known or Green Apartment is known or Fire Station 86 is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station Twelve is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
+	if Camp Bravo Entrance is known or Gaming Den is known or Green Apartment is known or Fire Station 86 is known or Milking Facility Entrance is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station Twelve is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
 		say "[bold type]Central City[roman type]: ";
 		if Camp Bravo Entrance is known:
 			say "| [link][bracket]Camp Bravo[close bracket][as]nav Camp Bravo Entrance[end link] ";
@@ -38,6 +38,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Green Apartment Building[close bracket][as]nav Green Apartment Building[end link] ";
 		if Fire Station 86 is known:
 			say "| [link][bracket]Fire Station 86[close bracket][as]nav Fire Station 86[end link] ";
+		if Milking Facility Entrance is known:
+			say "| [link][bracket]Milking Facility Entrance[close bracket][as]nav Milking Facility Entrance[end link] ";
 		if Mini-Lab is known:
 			say "| [link][bracket]Mini-Lab[close bracket][as]nav Mini-Lab[end link] ";
 		if Pediatrics Lobby is known:
@@ -238,7 +240,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Phi Iota Gamma[close bracket][as]nav Phi Iota Gamma[end link] ";
 		LineBreak;
 	[start of the forest area]
-	if Urban Forest is known or Bunny House is known or Deep Forest is known or Happy Puppy Kennel is known [or Ironscale Hollow is known]: [What?]
+	if Urban Forest is known or Bunny House is known or Deep Forest is known or Happy Puppy Kennel is known or Ironscale Hollow is known:
 		say "[bold type]Urban Forest[roman type]: ";
 		if Urban Forest is known:
 			say "[link][bracket]Urban Forest[close bracket][as]nav Urban Forest[end link] ";
@@ -248,13 +250,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Deep Forest[close bracket][as]nav Deep Forest[end link] ";
 		if Happy Puppy Kennel is known:
 			say "| [link][bracket]Happy Puppy Kennel[close bracket][as]nav Happy Puppy Kennel[end link] ";
-<<<<<<< HEAD
 		if Ironscale Hollow is known:
 			say "| [link][bracket]Ironscale Hollow[close bracket][as]nav Ironscale Hollow[end link] ";
-=======
-		[if Ironscale Hollow is known:
-			say "| [link][bracket]Ironscale Hollow[close bracket][as]nav Ironscale Hollow[end link] ";] [Not defined]
->>>>>>> upstream/master
 		LineBreak;
 	[start of the warehouse area]
 	if Warehouse District is known or Hyena Hideout is known or Mike's Home is known or Spider's Web is known or Wolfman Lair is known:

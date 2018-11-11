@@ -115,6 +115,13 @@ Figure of Alexandra_clothed_icon is the file "Alexandra_clothed.jpg".
 Figure of Alexandra_clothed_preg_icon is the file "Alexandra_clothed_preg.jpg".
 Figure of Alexandra_face_icon is the file "Alexandra_face.jpg".
 Figure of Alexandra_naked_icon is the file "Alexandra_naked.jpg".
+Figure of Alexandra_clothed0_frown_icon is the file "Alexandra_clothed0_frown.jpg".
+Figure of Alexandra_clothed1_frown_icon is the file "Alexandra_clothed1_frown.jpg".
+Figure of Alexandra_clothed2_frown_icon is the file "Alexandra_clothed2_frown.jpg".
+Figure of Alexandra_clothed0_neutral_icon is the file "Alexandra_clothed0_neutral.jpg".
+Figure of Alexandra_clothed0_smile_icon is the file "Alexandra_clothed0_smile.jpg".
+Figure of Alexandra_naked_smile_icon is the file "Alexandra_naked_smile.jpg".
+Figure of Alexandra_naked_frown_icon is the file "Alexandra_naked_frown.jpg".
 Figure of Alex_icon is the file "Alex_ig.jpg".
 Figure of Amy_icon is the file "Amy.jpg".
 Figure of Amy_face_icon is the file "Amy_face.jpg".
@@ -126,7 +133,7 @@ Figure of Anthony_naked_icon is the file "Anthony_naked.jpg".
 Figure of Anthony_clothed_icon is the file "Anthony_clothed.jpg".
 Figure of Anthony_face_icon is the file "Anthony_face.jpg".
 Figure of Artemis_icon is the file "artemisengulf_ig.jpg".
-Figure of Athanasia_icon is the file "Athanasia_ig.jpg".
+Figure of Anastasia_icon is the file "Athanasia_ig.jpg".
 Figure of Blanche1_icon is the file "blanche_ig1.jpg".
 Figure of Blanche2_icon is the file "Blanche_ig2.jpg".
 Figure of Blot_icon is the file "FSTF_blot.jpg".
@@ -305,6 +312,7 @@ Figure of Sonny_halfwool_nude_icon is the file "Sonny_halfwool_nude.jpg".
 Figure of Sonny_shaved_jeans_icon is the file "Sonny_shaved_jeans.jpg".
 Figure of Sonny_shaved_nude_icon is the file "Sonny_shaved_nude.jpg".
 Figure of Sonny_face_icon is the file "Sonny_face.jpg".
+Figure of Spike_face_icon is the file "Spike_face.jpg".
 Figure of Stella_icon is the file "Stella_ig.jpg".
 Figure of Susan_face_icon is the file "Susan_face.jpg".
 Figure of Timothy_icon is the file "Timothy.jpg".
@@ -332,6 +340,7 @@ Figure of Yatur_clothed_icon is the file "Yatur_clothed.jpg".
 Figure of Yatur_naked_icon is the file "Yatur_naked.jpg".
 Figure of Yolanda_icon is the file "Yolanda_ig.jpg".
 Figure of Zigor_icon is the file "Zigor_ig.jpg".
+Figure of Zoe_face_icon is the file "Zoe_face.jpg".
 
 [scene icons]
 Figure of BrutusFuckingDavid_icon is the file "Brutus&David1.jpg". [Brutus fucking David]
@@ -516,10 +525,17 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Alexandra_clothed"	Figure of Alexandra_clothed_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_clothed_preg"	Figure of Alexandra_clothed_preg_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_face"	Figure of Alexandra_face_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_clothed0_frown"	Figure of Alexandra_clothed0_frown_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_clothed1_frown"	Figure of Alexandra_clothed1_frown_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_clothed2_frown"	Figure of Alexandra_clothed2_frown_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_clothed0_neutral"	Figure of Alexandra_clothed0_neutral_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_clothed0_smile"	Figure of Alexandra_clothed0_smile_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_naked_smile"	Figure of Alexandra_naked_smile_icon	"Lyttathebug"	g-black	"normal"
+"Alexandra_naked_frown"	Figure of Alexandra_naked_frown_icon	"Lyttathebug"	g-black	"normal"
 "Alexandra_naked"	Figure of Alexandra_naked_icon	"Lyttathebug"	g-black	"normal"
 "Alex"	Figure of Alex_icon	"canned"	g-black	"normal"
 "Alpha Husky"	Figure of AlphaHusky_icon	"Anymouse1968"	g-white	"normal"
-"Amazonian"	Figure of Amazon_icon	"Little Wax Raven"	g-white	"normal"
+"Amazonian"	Figure of Amazon_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Amy"	Figure of Amy_icon	"Sususmiles"	g-white	"normal"
 "Amy_face"	Figure of Amy_face_icon	"Sususmiles"	g-white	"normal"
 "Andre"	Figure of Andre_icon	"Wemd"	g-black	"normal"
@@ -531,7 +547,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Anthony_face"	Figure of Anthony_face_icon	"Laylo"	g-black	"normal"
 "Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon	"TwilightMaster"	g-white	"normal"
 "Artemis"	Figure of Artemis_icon	"FaroreNightclaw"	g-white	"normal"
-"Athanasia"	Figure of Athanasia_icon	"SandySchreiber"	g-white	"normal"
+"Anastasia"	Figure of Anastasia_icon	"SandySchreiber"	g-white	"normal"
 "Beach Overlook"	Figure of Beach_Overlook_icon	"Nokturnalkittie"	g-black	"inline_only"
 "Bear"	Figure of Bear_icon	"Anymouse1968"	g-white	"normal"
 "Beaver"	Figure of Beaver2_icon	"HBruton"	g-white	"normal"
@@ -720,7 +736,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "MarcOrwell"	Figure of MarcOrwell_icon	"CrashBurnDraw"	g-black	"normal"
 "Marc_face"	Figure of Marc_face_icon	"CrashBurnDraw"	g-black	"normal"
 "Marc_fucked"	Figure of Marc_fucked_icon	"Laylo"	g-black	"normal"
-"Mareslut"	Figure of Mareslut_icon	"Little Wax Raven"	g-white	"normal"
+"Mareslut"	Figure of Mareslut_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Mason"	Figure of Mason_icon	"Abelsword"	g-black	"normal"
 "MasterMind"	Figure of MasterMind_icon	""	g-white	"normal"
 "Megakitty"	Figure of Megakitty_icon	"BushyCat"	g-white	"normal"
@@ -759,7 +775,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Orthas_naked"	Figure of Orthas_naked_icon	"The_Negative"	g-white	"normal"
 "Parasol_Nap"	Figure of Parasol_Nap_icon	"Watsup"	g-black	"normal"
 "Paula"	Figure of Paula_icon	"Kikeri-arts"	g-white	"normal"
-"Penny"	Figure of Penny_icon	"Little Wax Raven"	g-white	"normal"
+"Penny"	Figure of Penny_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Plush Lion"	Figure of PlushLion_icon	"Anymouse1968"	g-white	"normal"
 "Pink Gel"	Figure of PinkGel_icon	"Rastear"	g-black	"normal"
 "Pink Poodle"	Figure of PinkPoodle_icon	"Anymouse1968"	g-white	"normal"
@@ -795,7 +811,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Sidney_vixen"	Figure of Sidney_vixen_Icon	"Anymouse1968"	g-white	"normal"
 "Sidney_clothed"	Figure of Sidney_clothed_Icon	"Anymouse1968"	g-white	"normal"
 "Skunkbeast Lord"	Figure of SkunkbeastLord_icon	"MoT"	g-black	"normal"
-"Snow"	Figure of Snow_icon	"Little Wax Raven"	g-white	"normal"
+"Snow"	Figure of Snow_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Snow Bat"	Figure of SnowBat_icon	"Rosali"	g-black	"normal"
 "Snow Leopard"	Figure of SnowLeopard_icon	"Anymouse1968"	g-black	"normal"
 "Sonny_halfwool_jeans"	Figure of Sonny_halfwool_jeans_icon	"The_Negative"	g-black	"normal"
@@ -807,6 +823,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Stella"	Figure of Stella_icon	"Furball"	g-white	"normal"
 "Skarnoth_undies"	Figure of Skarnoth_undies_icon	"Kien-Biu"	g-black	"normal"
 "Skarnoth_naked"	Figure of Skarnoth_naked_icon	"Kien-Biu"	g-black	"normal"
+"Spike_face"	Figure of Spike_face_icon	"SineAlas"	g-black	"normal"
 "Succubus"	Figure of Succubus_clothed_icon	"Kupo Klein"	g-white	"normal"
 "Susan_face"	Figure of Susan_face_icon	"SineAlas"	g-black	"normal"
 "Talov_Kerr_Barrel"	Figure of Talov_Kerr_Barrel_icon	"Kupo Klein"	g-black	"normal"
@@ -817,7 +834,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Thought Eater"	Figure of ThoughtEater_icon	"Rastear"	g-black	"normal"
 "Tiger Cop"	Figure of SgtMarks_icon	"Anyare"	g-white	"normal"
 "Tiger Shark"	Figure of TSW_icon	"Zealot"	g-white	"normal"
-"Timothy"	Figure of Timothy_icon	"Little Wax Raven"	g-white	"normal"
+"Timothy"	Figure of Timothy_icon	"Waxraven/WXRVN"	g-white	"normal"
 "TSW_headshot"	Figure of TSW_headshot_icon	"Zealot"	g-black	"normal"
 "TSW_naked"	Figure of TSW_naked_icon	"Zealot"	g-white	"normal"
 "TSW_sansNecklace"	Figure of TSW_sansNecklace_icon	"Zealot"	g-white	"normal"
@@ -847,6 +864,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Yuppie Mink_F"	Figure of YuppieMink_icon	"Anymouse1968"	g-white	"normal"	[only shown for female version]
 "Zebra"	Figure of Zebra_icon	"Purplepardus"	g-black	"normal"
 "Zigor"	Figure of Zigor_icon	"AugurMew"	g-black	"normal"
+"Zoe_face"	Figure of Zoe_face_icon	"SineAlas"	g-black	"normal"
 [emap - special]
 "Navigation - Signal Lost Screen"	Figure of emap_special_signalnotfound_icon	"executaball"	g-black	"normal"
 "Navigation - Shutdown Screen"	Figure of emap_special_shutdown_icon	"executaball"	g-black	"normal"
@@ -888,7 +906,7 @@ carry out artistcredits:
 	LineBreak;
 	say "Infections:[line break]";
 	say "     Alpha Husky by Anymouse1968 @ furaffinity.net[line break]";
-	say "     Amazon by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Amazon by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Anthro Shaft Beast concept created by TwilightMaster @ furaffinity.net[line break]";
 	say "     Anthro Shaft Beast artwork by Demon-Man @ furaffinity.net[line break]";
 	say "     Bear by Anymouse1968 @ furaffinity.net[line break]";
@@ -982,7 +1000,7 @@ carry out artistcredits:
 	say "     Anthony (dressed) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
 	say "     Anthony (design, naked) by FsMaverick @ http://www.furaffinity.net/user/fsmaverick/[line break]";
 	say "     Artemis by FaroreNightclaw @ furaffinity.net[line break]";
-	say "     Athanasia by SandySchreiber @ furaffinity.net[line break]";
+	say "     Anastasia by SandySchreiber @ furaffinity.net[line break]";
 	say "     Blanche (color) by The_Negative @ furaffinity.net[line break]";
 	say "     Blanche (lineart) by Xenotropos @ furaffinity.net[line break]";
 	say "     Blot by Anymouse1968 @ furaffinity.net[line break]";
@@ -1055,7 +1073,7 @@ carry out artistcredits:
 	say "     Master Mind by HBruton @ furaffinity.net[line break]";
 	say "     Marc Orwell by CrashBurnDraw @ y-gallery.net[line break]";
 	say "     Marc (fucked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
-	say "     Mareslut by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Mareslut by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Mason by Abelsword @ https://www.furaffinity.net/user/Abelsword[line break]";
 	say "     Micaela by Kattzie @ furaffinity.net[line break]";
 	say "     Mike (face) SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
@@ -1069,7 +1087,7 @@ carry out artistcredits:
 	say "     Orthas (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Orthas by The_Negative @ furaffinity.net[line break]";
 	say "     Paula by Kikeri-arts @ deviantart.com[line break]";
-	say "     Penny by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Penny by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Rachel by o-kemono @ furaffinity.net[line break]";
 	say "     Rane Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Rane by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
@@ -1087,12 +1105,13 @@ carry out artistcredits:
 	say "     Stella by Furball @ furaffinity.net[line break]";
 	say "     Sidney by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Skarnoth by Kien-Biu @ http://nsfwbetitngoan.tumblr.com/[line break]";
-	say "     Snow by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Snow by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Sonny by The_Negative @ furaffinity.net / Colors by nokturnalkittie @ furaffinity.net[line break]";
+	say "     Spike Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Susan (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Thomas by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Tiger Shark Warrior by Zealot @ https://www.furaffinity.net/user/Drakosacerdos/[line break]";
-	say "     Timothy by Little Wax Raven @ http://www.waxraven.tumblr.com/[line break]";
+	say "     Timothy by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Tiny Tim by Obieblu @ tumblr.com[line break]";
 	say "     Toven by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Tristian by Enaya-TheWhiteWolfen @ https://www.furaffinity.net/user/enaya-thewhitewolfen/";
@@ -1104,6 +1123,7 @@ carry out artistcredits:
 	say "     Yatur by Kupo Klein @ http://kupo-klein.tumblr.com/[line break]";
 	say "     Yolanda by SandySchreiber @ furaffinity.net[line break]";
 	say "     Zigor by AugurMew @ furaffinity.net[line break]";
+	say "     Zoe Headshot by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "Scenes:[line break]";
 	say "     Bottlenose Trapped by Anymouse1968 @ furaffinity.net[line break]";
 	say "     Brutus & David by Rocketman @ http://rocketmenstudio.tumblr.com/[line break]";
@@ -1148,7 +1168,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Little Wax Raven", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;

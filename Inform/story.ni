@@ -132,11 +132,9 @@ To get next key as (S - a snippet): (-
 	{S} = VM_KeyChar();  -)
 
 Include (-
-
 [ Serial s;
 	for (s=0 : s<6 : s++) print (char) ROM_GAMESERIAL->s;
 ];
-
 -)
 
 To say serial number: (- Serial(); -).
@@ -188,13 +186,14 @@ A person has text called Breast Size Desc.
 A person has text called Short Breast Size Desc.
 A person has a truth state called PlayerMet. PlayerMet is usually false.
 A person has a truth state called PlayerRomanced. PlayerRomanced is usually false.
-[A person has a truth state called PlayerFriended. PlayerFriended is usually false.] [leave commented out until new infection system update]
-[A person has a truth state called PlayerControlled. PlayerControlled is usually false.] [leave commented out until new infection system update]
+A person has a truth state called PlayerFriended. PlayerFriended is usually false. [not saved till new infection system update]
+A person has a truth state called PlayerControlled. PlayerControlled is usually false. [not saved till new infection system update]
 A person has a truth state called PlayerFucked. PlayerFucked is usually false.
 A person has a truth state called OralVirgin. OralVirgin is usually true.
 A person has a truth state called Virgin. Virgin is usually true.
 A person has a truth state called AnalVirgin. AnalVirgin is usually true.
-[A person has a truth state called SexuallyExperienced. SexuallyExperienced is usually false.] [leave commented out until new infection system update]
+A person has a truth state called PenileVirgin. PenileVirgin is usually true. [not saved till new infection system update]
+A person has a truth state called SexuallyExperienced. SexuallyExperienced is usually false. [not saved till new infection system update]
 
 The player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
 The player has a text called bodytype. The bodytype is usually "Human".						[broad adjective for species]
@@ -233,6 +232,11 @@ Rooms has a list of text called invent.
 The player has a list of text called Feats.
 The player has a list of text called EncounteredEnemies.
 The player has a list of text called BlockList.
+The player has a list of text called AnalVirginitiesTaken.
+The player has a list of text called VirginitiesTaken.
+The player has a list of text called OralVirginitiesTaken.
+The player has a list of text called PenileVirginitiesTaken.
+
 A person can be a trader.
 Scenario is a text that varies.
 Allobjs is a list of text that varies.[@NotSaved]
@@ -317,6 +321,7 @@ A situation has a situation called Prereq3.
 A situation has a truth state called Prereq3ResolvedMandatory. Prereq3ResolvedMandatory of a situation is usually true.
 A situation has a list of numbers called Prereq3Resolution. Prereq3Resolution is usually { 0 }.
 A situation has an object called PrereqCompanion.
+A situation has a text called PrereqTime. The PrereqTime of a situation is usually "Any".
 A situation has a text called sarea. The sarea of a situation is usually "Outside".
 A situation has a number called level. The level of a situation is usually 0.
 A situation has a number called minscore. The minscore of a situation is usually -2147483648.
@@ -347,6 +352,7 @@ Definition: A situation (called x) is available:
 
 Definition: A situation (called x) is PrereqComplete:
 	if PrereqCompanion of x is not nothing and PrereqCompanion of x is not companion of player, no;
+	if PrereqTime is not "Any" and ((PrereqTime is "Day" and Daytimer is night) or (PrereqTime is "Night" and Daytimer is day)), no;
 	if Prereq1ResolvedMandatory of x is true and Prereq1 of x is not resolved, no;
 	if Resolution of Prereq1 of x is not listed in Prereq1Resolution of x, no;
 	if Prereq2ResolvedMandatory of x is true and Prereq2 of x is not resolved, no;
@@ -558,6 +564,54 @@ Definition: A person (called x) is CumLoadInflatesPlayer: [yes = inflation; can 
 	if cock width of x >= 32, yes;
 	no;
 
+Definition: A person (called x) is barefoot:
+	let FeetItem be a grab object;
+	now FeetItem is journal;
+	repeat with z running through equipped equipment:
+		if slot of z is "feet":
+			now FeetItem is z;
+	if FeetItem is journal: [already naked]
+		yes;
+	else:
+		no;
+
+Definition: A person (called x) is barecrotch:
+	let WaistItem be a grab object;
+	now WaistItem is journal;
+	let CrotchItem be a grab object;
+	now CrotchItem is journal;
+	repeat with z running through equipped equipment:
+		if slot of z is "waist":
+			now WaistItem is z;
+	repeat with z running through equipped equipment:
+		if slot of z is "crotch":
+			now CrotchItem is z;
+	if WaistItem is journal and CrotchItem is journal: [already naked]
+		yes;
+	else:
+		no;
+
+Definition: A person (called x) is barechest:
+	let ChestItem be a grab object;
+	now ChestItem is journal;
+	let BodyItem be a grab object;
+	now BodyItem is journal;
+	repeat with z running through equipped equipment:
+		if slot of z is "chest":
+			now ChestItem is z;
+	repeat with z running through equipped equipment:
+		if slot of z is "Body":
+			now BodyItem is z;
+	if ChestItem is journal and BodyItem is journal: [already naked]
+		yes;
+	else:
+		no;
+
+Definition: A person (called x) is naked:
+	if x is barecrotch and x is barechest and x is barefoot:
+		yes;
+	else:
+		no;
 
 A thing can be rooted in place. A thing is usually not rooted in place.
 A thing can be restful. A thing is usually not restful.
@@ -802,8 +856,8 @@ title	subtable	description	toggle
 "Dexterity: [Dexterity of player]"	--	"Speed, agility. Dexterity helps to land hits with melee weapons and avoid being hit in kind."	finish stats rule
 "Stamina: [stamina of player]"	--	"Your ability to withstand punishment. Stamina also helps to resist the physical aspects of infection."	finish stats rule
 "Charisma: [Charisma of player]"	--	"Your ability to exert social force. Deal with NPCs favorably, also helps resist mental aspects of infection."	finish stats rule
-"Perception: [Perception of player]"	--	"Your ability to detect things. Also helps resist mental aspects of infection."	finish stats rule
 "Intelligence: [Intelligence of player]"	--	"Your ability to logically compute things. Helps with activities that require 'book smarts'."	finish stats rule
+"Perception: [Perception of player]"	--	"Your ability to detect things. Also helps resist mental aspects of infection."	finish stats rule
 ["Reroll Stats"	--	"Randomize your stats. Do this as often as you want."	random stats rule]
 "Select a Stat to gain [if started is 0]+5[else]+1[end if]"	--	"You are satisfied with your stats"	--
 "Restore a save"	--	"Restore a save game!"	prerestore the game rule
@@ -854,7 +908,7 @@ title	subtable	description	toggle
 ["Rest"	--	"Take a breather"	rest rule]
 ["Examine yourself"	--	--	Self examine rule]
 "Help"	Table of Help	"Get some help on this madness!"
-"Strength: [strength of player], Dexterity: [dexterity of player], Stamina: [stamina of player], Charisma: [Charisma of player], Perception: [perception of player], Intelligence: [intelligence of player]."	--	"Stats"	--
+"Strength: [strength of player], Dexterity: [dexterity of player], Stamina: [stamina of player], Charisma: [Charisma of player], Intelligence: [intelligence of player], Perception: [perception of player]."	--	"Stats"	--
 "Health: [HP of player]/[maxHP of player], Lust: [lust of player], Morale: [morale of player], Humanity: [Humanity of player]"	--	"More stats"	--
 "Time Remaining: [( turns minus targetturns ) divided by 8] days, [(remainder after dividing ( turns minus targetturns ) by 8 ) times 3] hours, Score: [score]"	--	"Time until the game ends."	Turnpass rule
 
@@ -910,7 +964,6 @@ Incest is a flag.
 Noncon is a flag.
 Mindcontrol is a flag.
 Vore is a flag.
-
 when play begins:
 	add { "Awesome tree", "Bottlenose Toy", "Cock Cannon", "Quilled Tousky" } to infections of humorous;
 	add { "Ember Breeder", "Bear", "Black Equinoid", "Bovine", "Chinchilla", "Deer", "Doberman", "Ebonflame Drake", "Ewe", "Feline", "Female Husky", "Fruit Bat", "German Shepherd", "Harpy", "Herm Hyena", "Hermaphrodite Dolphin", "Hermaphrodite Gryphon", "Killer Whale", "Lizard Girl", "Painted Wolf Herm", "Pirate Shark", "Pit bull", "Platypus", "Ram", "Red Kangaroo", "Sea Otter", "Sewer Gator", "Shemale Smooth Collie", "Skunk", "Slut Rat", "Snow Bat", "Trash Coon", "Wildcat" } to infections of furry;
@@ -983,7 +1036,7 @@ when play begins:
 
 Machinelist is a marker. [list of machine infections]
 when play begins:
-	add { "Junkman", "Wildcat" } to infections of Machinelist;
+	add { "Clockwork Fox", "Junkman", "Wildcat" } to infections of Machinelist;
 
 Humanishlist is a marker. [list of humanish infections]
 when play begins:
@@ -1020,7 +1073,7 @@ when play begins:
 
 Flightlist is a marker. [list of infections w/flight capability]
 when play begins:
-	add { "Bald Eagle", "Bird of Paradise", "Black Wasp", "Butterfly", "Dragontaur", "Dracovixentaur", "Drone Wasp", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame drake", "Fire Sprite", "Fluffy Owl", "Hawkman", "Harpy", "Hermaphrodite Gryphon", "Mothgirl", "Fruit Bat", "Pegasus", "Reindeer", "Snow Bat", "Vulpogryph", "Yamato Dragon", "Yamato Dragoness", "Wyvern" } to infections of Flightlist;
+	add { "Bald Eagle", "Bird of Paradise", "Black Wasp", "Butterfly", "Dragontaur", "Dracovixentaur", "Drone Wasp", "Ebonflame Whelp", "Ebonflame Dragator", "Ebonflame drake", "Fire Sprite", "Fluffy Owl", "Fruit Bat", "Hawkman", "Harpy", "Hermaphrodite Gryphon", "Mothgirl", "Pegasus", "Queen Bee", "Reindeer", "Snow Bat", "Vulpogryph", "Yamato Dragon", "Yamato Dragoness", "Wyvern" } to infections of Flightlist;
 
 Swimlist is a marker. [list of infections capable of swimming underwater]
 when play begins:
@@ -1392,9 +1445,7 @@ Carry out using a grab object (called x):
 		say "You don't see any [x] in your backpack.";
 
 [MassUsing is an action applying to a number and one thing.
-
 Understand "use [number] [owned grab object]" as massusing.
-
 Carry out massusing:
 	repeat with z running from 1 to number:
 		if second noun is owned:
@@ -1938,7 +1989,6 @@ Section Hyperlinks
 [creates method to toggle hyperlinks on/off at any point in game.]
 [HyperToggle is an action applying to nothing.
 understand "Hyper Toggle" as HyperToggle.
-
 carry out HyperToggle:
 	if hypernull is 0:
 		now hypernull is 1;
@@ -2053,16 +2103,12 @@ To say special-style-2: [name can be changed if desired, just adjust calls to it
 [
 To say alert-style: [already used for end game text]
 	(- glk_set_style(style_Alert); -)
-
 To say header-style: [already used for game title at start]
 	(- glk_set_style(style_Header); -)
-
 To say note-style: [already used for score changes]
 	(- glk_set_style(style_Note); -)
-
 To say blockquote-style:
 	(- glk_set_style(style_BlockQuote); -)
-
 To say input-style:
 	(- glk_set_style(style_Input); -)
 ]
@@ -3059,8 +3105,8 @@ To level up:
 		say "[link]2 - Dexterity[as]2[end link][line break]";
 		say "[link]3 - Stamina[as]3[end link][line break]";
 		say "[link]4 - Charisma[as]4[end link][line break]";
-		say "[link]5 - Perception[as]5[end link][line break]";
-		say "[link]6 - Intelligence[as]6[end link][line break]";
+		say "[link]5 - Intelligence[as]5[end link][line break]";
+		say "[link]6 - Perception[as]6[end link][line break]";
 		say "[link]7 - Random[as]7[end link][line break]";
 		now calcnumber is 0;
 		while calcnumber < 1 or calcnumber > 7:
@@ -3082,11 +3128,11 @@ To level up:
 			increase charisma of player by 1;
 			say "Your charisma grows.";
 		else if calcnumber is 5:
-			increase perception of player by 1;
-			say "Your perception grows.";
-		else if calcnumber is 6:
 			increase intelligence of player by 1;
 			say "Your intelligence grows.";
+		else if calcnumber is 6:
+			increase perception of player by 1;
+			say "Your perception grows.";
 	else:
 		increase ssstash by 1;
 	increase maxHP of player by ( stamina of player minus 10 ) divided by 2;
@@ -3236,7 +3282,7 @@ This is the explore rule:
 			plot;
 			now battleground is "void";
 			wait for any key;
-	if something is 0 and a random number from 1 to 20 < ( bonus + 8 ) and there is an unresolved situation:
+	if something is 0 and a random number from 1 to 20 < ( bonus + 8 ) and there is an active unresolved situation:
 		let L be a random available situation;
 		If L is not nothing:
 			if battleground is "Smith Haven":
@@ -3818,7 +3864,7 @@ carry out showstatting:
 To showstats (x - Person):
 	sort Feats of player;
 	sort Traits of player;
-	say "Strength: [strength of the x], Dexterity: [dexterity of the x], Stamina: [stamina of the x], Charisma: [Charisma of the x], Perception: [perception of the x], Intelligence: [intelligence of the x].";
+	say "Strength: [strength of the x], Dexterity: [dexterity of the x], Stamina: [stamina of the x], Charisma: [Charisma of the x], Intelligence: [intelligence of the x], Perception: [perception of the x].";
 	say "Humanity: [humanity of the x]/100, Morale: [morale of the x], HP: [HP of x]/[maxHP of x] Libido: [libido of x]/100, Hunger: [hunger of x]/100, Thirst: [thirst of x]/100.";
 	let z be ( level of x plus one) times 10;
 	if "Fast Learner" is listed in feats of x:
@@ -4131,9 +4177,9 @@ This is the random stats rule:
 	follow the d18 rule;
 	now the Charisma of the player is d18;
 	follow the d18 rule;
-	now the Perception of the player is d18;
-	follow the d18 rule;
 	now the Intelligence of the player is d18;
+	follow the d18 rule;
+	now the Perception of the player is d18;
 	decrease the score by 1;
 	rule succeeds.
 
@@ -4142,8 +4188,8 @@ This is the starting stats rule:
 	now the Dexterity of the player is 12;
 	now the Stamina of the player is 12;
 	now the Charisma of the player is 12;
-	now the Perception of the player is 12;
 	now the Intelligence of the player is 12;
+	now the Perception of the player is 12;
 	decrease the score by 0;
 	rule succeeds.
 
@@ -4203,11 +4249,11 @@ This is the finish stats rule:
 			increase charisma of player by 1;
 			say "Your charisma grows.";
 		if Current menu selection is 5:
-			increase perception of player by 1;
-			say "Your perception grows.";
-		if Current menu selection is 6:
 			increase intelligence of player by 1;
 			say "Your intelligence grows.";
+		if Current menu selection is 6:
+			increase perception of player by 1;
+			say "Your perception grows.";
 		decrease menu depth by 1;
 		rule succeeds;
 	if Current menu selection is 1:
@@ -4239,17 +4285,17 @@ This is the finish stats rule:
 		else:
 			rule fails;
 	if Current menu selection is 5:
-		say "Your perception is your specialty.";
-		say "Are you sure?";
-		if player consents:
-			increase perception of player by 5;
-		else:
-			rule fails;
-	if Current menu selection is 6:
 		say "Your intelligence is your specialty.";
 		say "Are you sure?";
 		if player consents:
 			increase intelligence of player by 5;
+		else:
+			rule fails;
+	if Current menu selection is 6:
+		say "Your perception is your specialty.";
+		say "Are you sure?";
+		if player consents:
+			increase perception of player by 5;
 		else:
 			rule fails;
 	now started is 1;
@@ -4312,14 +4358,13 @@ carry out ScavengingAction:
 			try resolving potential resources;
 		else:
 			now tempnum is 1;
-			let L be a random scavable unresolved scavevent;
+			let L be a random available scavevent;
 			If L is not nothing:
 				say "[one of]During your search for supplies, you end up at[or]Searching systematically for resources, you locate[or]Following signs of recent activity, you end up at[or]Doing a slow circuit while scavenging, you manage to find[or]Wandering around aimlessly in search of supplies, you locate[at random] [L].";
 				try resolving L;
 			else if L is nothing:
 				try resolving potential resources;
 		now inasituation is false;
-		now battleground is "void";
 		say "[line break]";
 	else:
 		say "Your search turns up empty.";
@@ -4623,6 +4668,7 @@ Include Kitsune Hide Away by Kaleem mcintyre.
 Include Mall Community Center by Wahn.
 Include Mall Residents by Rikaeus.
 Include Medical Checkups by Stripes.
+Include Milking Facility by Kernog.
 Include Museum by Sarokcat.
 Include New Ewe Store by Sarokcat.
 Include PIG Frat by Stripes.
@@ -4700,6 +4746,7 @@ Include Inventory Management Enhancements by Core Mechanics.
 Include Ironscale Items by Taelyn.
 Include Junkyard Events by Stripes.
 Include Kitsune by Kaleem mcintyre.
+Include Kitsune Expansion by Dys.
 Include Latex Quad Husky by Stripes.
 Include Leonard Events by Stripes.
 Include Little Old Woman by Kaleem mcintyre.
@@ -4767,6 +4814,7 @@ Include Warehouse District by Kaleem Mcintyre.
 Include Warehouse Events by StripeGuy.
 Include Wereraptor by Stripes.
 Include Werewolf by CrimsonAsh.
+Include Xeno Nest by Kernog.
 Include Zephyr Phone by Executaball.
 Include Zoo Events by Sarokcat.
 Include Zoo Events by Wahn.
@@ -5061,7 +5109,7 @@ Include Andrew by Stripes.
 Include Angie by Sarokcat.
 Include Anthony by Wahn.
 Include Ares by Wahn.
-Include Athanasia by Stripes.
+Include Anastasia by Stripes.
 Include Azari by Dys.
 Include Bastet by Wahn.
 Include Bjorn by Rikaeus.
@@ -5496,8 +5544,8 @@ to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 	now the Dexterity of the player is 10;
 	now the Stamina of the player is 10;
 	now the Charisma of the player is 10;
-	now the Perception of the player is 10;
 	now the Intelligence of the player is 10;
+	now the Perception of the player is 10;
 	[Boost two stats for increased spread in results]
 	let T be a random number between 1 and 6;
 	if T is 1:
@@ -5509,9 +5557,9 @@ to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 	if T is 4:
 		increase charisma of player by 3;
 	if T is 5:
-		increase perception of player by 3;
-	if T is 6:
 		increase intelligence of player by 3;
+	if T is 6:
+		increase perception of player by 3;
 	now T is a random number between 1 and 6;
 	if T is 1:
 		increase strength of player by 2;
@@ -5522,9 +5570,9 @@ to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 	if T is 4:
 		increase charisma of player by 2;
 	if T is 5:
-		increase perception of player by 2;
-	if T is 6:
 		increase intelligence of player by 2;
+	if T is 6:
+		increase perception of player by 2;
 	now tempnum is 12; [remaining 12 points applied randomly one at a time]
 	while tempnum is not 0:
 		now T is a random number between 1 and 6;
@@ -5550,14 +5598,14 @@ to randomstatstart:	[same total points, but spread randomly between 10 to 18]
 				now charisma of player is 18;
 				increase tempnum by 1;
 		if T is 5:
-			increase perception of player by 1;
-			if perception of player > 18:
-				now perception of player is 18;
-				increase tempnum by 1;
-		if T is 6:
 			increase intelligence of player by 1;
 			if intelligence of player > 18:
 				now intelligence of player is 18;
+				increase tempnum by 1;
+		if T is 6:
+			increase perception of player by 1;
+			if perception of player > 18:
+				now perception of player is 18;
 				increase tempnum by 1;
 
 To startfreefeats: [gives free feats]
@@ -5635,7 +5683,7 @@ To regularstart: [normal start method]
 	while Trixieexit is 0:
 		clear the screen;
 		say "[bold type]Character Creation:[roman type][line break]";
-		say "(1) [link]Main Stat[as]1[end link] - [bold type][if gsms is 1]Strength[else if gsms is 2]Dexterity[else if gsms is 3]Stamina[else if gsms is 4]Charisma[else if gsms is 5]Perception[else if gsms is 6]Intelligence[else]Random[end if][roman type][line break]";
+		say "(1) [link]Main Stat[as]1[end link] - [bold type][if gsms is 1]Strength[else if gsms is 2]Dexterity[else if gsms is 3]Stamina[else if gsms is 4]Charisma[else if gsms is 5]Intelligence[else if gsms is 6]Perception[else]Random[end if][roman type][line break]";
 		say "(2) [link]Player Gender[as]2[end link] - [bold type][if gspg is 1]Male[else]Female[end if][roman type][line break]";
 		say "(3) [link]Game Type[as]3[end link] - [bold type][scenario][roman type][line break]";
 		say "(4) [link]Difficulty Modes[as]4[end link] - [if gshm is false and gsnhm is false and gsbm is false][bold type]Normal[roman type][else if gshm is true][bold type]Hard[roman type][end if][if gshm is true and ( gsnhm is true or gsbm is true )] | [end if][if gsnhm is true][bold type]No-Heal[roman type][end if][if gsnhm is true and gsbm is true] | [end if][if gsbm is true][bold type]Blind[roman type][end if][line break]";
@@ -5826,8 +5874,8 @@ to say gsopt_1:
 		say "(2) [link]Dexterity[as]2[end link] = [if gsms is 2][bold type]17[roman type][else if gsms is 7]??[run paragraph on][else]12[end if]: Affects your likelihood to hit and dodge.";
 		say "(3) [link]Stamina[as]3[end link] = [if gsms is 3][bold type]17[roman type][else if gsms is 7]??[run paragraph on][else]12[end if]: Increases your total health pool and your overall endurance.";
 		say "(4) [link]Charisma[as]4[end link] = [if gsms is 4][bold type]17[roman type][else if gsms is 7]??[run paragraph on][else]12[end if]: Deals with social interactions with NPCs and your pets, and affects your morale.";
-		say "(5) [link]Perception[as]5[end link] = [if gsms is 5][bold type]17[roman type][else if gsms is 7]??[run paragraph on][else]12[end if]: Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
-		say "(6) [link]Intelligence[as]6[end link] = [if gsms is 6][bold type]17[roman type][else if gsms is 7]??[run paragraph on][else]12[end if]: Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
+		say "(5) [link]Intelligence[as]5[end link] = [if gsms is 5][bold type]17[roman type][else if gsms is 7]??[run paragraph on][else]12[end if]: Increases the efficacy of healing medkits, your chances of vial collection (if able) and your success at escaping.";
+		say "(6) [link]Perception[as]6[end link] = [if gsms is 6][bold type]17[roman type][else if gsms is 7]??[run paragraph on][else]12[end if]: Influences your success while scavenging and hunting, success with ranged weapons and affects your morale.";
 		say "(7) [link]Random[as]7[end link]: Randomize your stat points upon creation.";
 		say "[line break]";
 		say "(0) [link]Return to main menu[as]0[end link][line break]";
@@ -5857,9 +5905,9 @@ To gs_stats: [apply stat bonus]
 	else if gsms is 4:
 		increase charisma of player by 5;
 	else if gsms is 5:
-		increase perception of player by 5;
-	else if gsms is 6:
 		increase intelligence of player by 5;
+	else if gsms is 6:
+		increase perception of player by 5;
 	else if gsms is 7 and started is 1:
 		randomstatstart;
 	else if started is 1:

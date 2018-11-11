@@ -491,6 +491,10 @@ to impregchance:		[General Pregnancy Routine]
 	else if player is mpreg_able:
 		say "[mimpregchance]";
 
+To impregchance with (x - text):
+	setmonster x;
+	impregchance;
+
 to say fimpregchance:		[Female-particular Pregnancy Roll]
 	fimpregchance;
 

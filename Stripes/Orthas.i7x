@@ -34,6 +34,10 @@ to say OrthasNPCdesc:
 	say "     Orthas is a black-scaled dragoness with an overall hunanoid build that shows quite a few muscles while still being decidedly feminine. Her large F-cup breasts leave little doubt of that, making quite a distracting display with every breath she takes. She stands about six and a half feet tall and has a large set of wings folded aganst her back, completing the image of a strong woman that few would dare mess with. Behind her, a long reptilian tail sways slowly from left to right.";
 	say "     Being the guardian of the Trevor Labs building, most of Orthas's time is spent in its lobby, where she dutyfully guards the entrance and the stairs that lead up into the offices and labs.";
 
+Table of GameEventIDs (continued)
+Object	Name
+Meeting Orthas	"Meeting Orthas"
+
 Meeting Orthas is a situation.
 The sarea of Meeting Orthas is "Nowhere".
 
