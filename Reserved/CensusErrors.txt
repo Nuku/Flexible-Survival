@@ -6,7 +6,7 @@
 <p class="hangingin2"><b>Anthony.jpg by Figures</b> - title contains a full stop</p>
 <p class="hangingin2"><b>Anthrosb_ig.jpg by Figures</b> - title contains a full stop</p>
 <p class="hangingin2"><b>Artemisengulf_ig.jpg by Figures</b> - title contains a full stop</p>
-<p class="hangingin2"><b>Athanasia_ig.jpg by Figures</b> - title contains a full stop</p>
+<p class="hangingin2"><b>Anastasia_ig.jpg by Figures</b> - title contains a full stop</p>
 <p class="hangingin2"><b>Beaver_ig1.jpg by Figures</b> - title contains a full stop</p>
 <p class="hangingin2"><b>Beaver_ig2.jpg by Figures</b> - title contains a full stop</p>
 <p class="hangingin2"><b>Blanche.jpg by Figures</b> - title contains a full stop</p>

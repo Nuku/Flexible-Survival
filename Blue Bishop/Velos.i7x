@@ -834,12 +834,12 @@ to say borismusing:
 	say "     'Yeah...' The mascot returns to where he was standing, lost in thought. With a sigh, Velos retreats back within your depths, leaving you to go on your way.";
 
 
-Part 23 - Athanasia
+Part 23 - Anastasia
 
-the vmusings of Athanasia is "[athanasiamusing]";
+the vmusings of Anastasia is "[Anastasiamusing]";
 
-to say athanasiamusing:
-	say "     'Where have you brought me? This place is sweltering! Is... Is that lava? Why are we even here?' Velos line of enquiry elicited by his summoning, he seems a little more distressed by the apparent scenery, and is doubtlessly a bit surprised when Athanasia approaches.";
+to say Anastasiamusing:
+	say "     'Where have you brought me? This place is sweltering! Is... Is that lava? Why are we even here?' Velos line of enquiry elicited by his summoning, he seems a little more distressed by the apparent scenery, and is doubtlessly a bit surprised when Anastasia approaches.";
 	say "     'Hello... What strange creature have you brought here?'";
 	say "     'Ah, that would explain it, and I could easily reflect that question back at you, bird who also appears to be on fire.'";
 	say "     'You are one of few manners. I can tell.'";
@@ -853,7 +853,7 @@ to say athanasiamusing:
 	say "     'What makes you assume that I am such?'";
 	say "     'Well, granted, it's generally safe to assume that a more feral creature would be less articulated than what you are, but how else would you be that way?'";
 	say "     'We all have our secrets. A serpent like yourself can appreciate that sentiment.' The avian seems to shift to a slight defensive stance, perhaps inferring that this is a subject that could be pressed against her, but Velos seems to not pursue it.";
-	say "     'Very well--I think we'll cut this short, this place puts an even larger strain on me than usual. Take care.' Ending his discussion on a more polite note, Athanasia seems to calm a bit down as he retreats back into your hole, leaving you to your own matters.";
+	say "     'Very well--I think we'll cut this short, this place puts an even larger strain on me than usual. Take care.' Ending his discussion on a more polite note, Anastasia seems to calm a bit down as he retreats back into your hole, leaving you to your own matters.";
 
 
 Part 23 - Dr Matt
@@ -978,7 +978,7 @@ to postmuse (x - a number ):
 [ 20 - Nermine			]
 [ 21 - Onyx				]
 [ 22 - Boris			]
-[ 23 - Athanasia			]
+[ 23 - Anastasia			]
 [ 24 - Dr. Matt			]
 [ 25 - Doran				]
 [ 26 - xxx				]

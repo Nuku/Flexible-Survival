@@ -133,7 +133,7 @@ Figure of Anthony_naked_icon is the file "Anthony_naked.jpg".
 Figure of Anthony_clothed_icon is the file "Anthony_clothed.jpg".
 Figure of Anthony_face_icon is the file "Anthony_face.jpg".
 Figure of Artemis_icon is the file "artemisengulf_ig.jpg".
-Figure of Athanasia_icon is the file "Athanasia_ig.jpg".
+Figure of Anastasia_icon is the file "Athanasia_ig.jpg".
 Figure of Blanche1_icon is the file "blanche_ig1.jpg".
 Figure of Blanche2_icon is the file "Blanche_ig2.jpg".
 Figure of Blot_icon is the file "FSTF_blot.jpg".
@@ -547,7 +547,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Anthony_face"	Figure of Anthony_face_icon	"Laylo"	g-black	"normal"
 "Anthro Shaft Beast"	Figure of AnthroShaftBeast_icon	"TwilightMaster"	g-white	"normal"
 "Artemis"	Figure of Artemis_icon	"FaroreNightclaw"	g-white	"normal"
-"Athanasia"	Figure of Athanasia_icon	"SandySchreiber"	g-white	"normal"
+"Anastasia"	Figure of Anastasia_icon	"SandySchreiber"	g-white	"normal"
 "Beach Overlook"	Figure of Beach_Overlook_icon	"Nokturnalkittie"	g-black	"inline_only"
 "Bear"	Figure of Bear_icon	"Anymouse1968"	g-white	"normal"
 "Beaver"	Figure of Beaver2_icon	"HBruton"	g-white	"normal"
@@ -1000,7 +1000,7 @@ carry out artistcredits:
 	say "     Anthony (dressed) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
 	say "     Anthony (design, naked) by FsMaverick @ http://www.furaffinity.net/user/fsmaverick/[line break]";
 	say "     Artemis by FaroreNightclaw @ furaffinity.net[line break]";
-	say "     Athanasia by SandySchreiber @ furaffinity.net[line break]";
+	say "     Anastasia by SandySchreiber @ furaffinity.net[line break]";
 	say "     Blanche (color) by The_Negative @ furaffinity.net[line break]";
 	say "     Blanche (lineart) by Xenotropos @ furaffinity.net[line break]";
 	say "     Blot by Anymouse1968 @ furaffinity.net[line break]";
