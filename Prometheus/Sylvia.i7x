@@ -115,6 +115,10 @@ an everyturn rule:
 
 Section 1 - Room Declaration
 
+Table of GameRoomIDs (continued)
+Object	Name
+Sylvia's Room	"Sylvia's Room"
+
 Sylvia's Room is a room.
 The description of Sylvia's Room is "[SylviasRoomDesc]".
 
