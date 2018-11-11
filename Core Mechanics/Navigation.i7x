@@ -178,7 +178,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Egypt Wing Entrance[close bracket][as]nav Egypt Wing Entrance[end link] ";
 		LineBreak;
 	[start of the red light area]
-	if Entrance to the Red Light District is known or Bradford's Camp is known or Bright Alley is known or Burned-Out Chapel is known or Cuero Lobo is known or Down Under Pub is known or Gillian's Flat is known or Police Car is known or Porn Store is known or Sven's Place is known or Tattoo Parlor is known:
+	if Entrance to the Red Light District is known or Bradford's Camp is known or Bright Alley is known or Burned-Out Chapel is known or Cuero Lobo is known or Down Under Pub is known or Gillian's Flat is known or Police Car is known or Porn Store is known or Sanctuary Alleyway is known or Sven's Place is known or Tattoo Parlor is known:
 		say "[bold type]Red Light District[roman type]: ";
 		if Entrance to the Red Light District is known:
 			say "[link][bracket]Entrance to the Red Light District[close bracket][as]nav Entrance to the Red Light District[end link] ";
@@ -198,6 +198,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Police Car[close bracket][as]nav Sven's Place[end link] ";
 		if Porn Store is known:
 			say "| [link][bracket]Porn Store[close bracket][as]nav Porn Store[end link] ";
+		if Sanctuary Alleyway is known:
+			say "| [link][bracket]Sanctuary Alleyway[close bracket][as]nav Sanctuary Alleyway[end link] ";
 		if Sven's Place is known:
 			say "| [link][bracket]Sven's Place[close bracket][as]nav Sven's Place[end link] ";
 		if Tattoo Parlor is known:
