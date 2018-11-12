@@ -347,6 +347,7 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith is 0: [firs
 	say "     As you enter the sacristy, you find a breathtakingly beautiful succubus there, lounging on a large bed. She stretches and flexes her naked body to give you quite a show as she stands up from the bed and comes to stand before you. 'Hello there, brave traveler. You walk right into a building inhabited by demons to visit me - that has to be rewarded. Come on, why don't you share this bed with me...' As she talks, she gives you little touches and caresses, inevitably heightening your arousal a bit.";
 	increase libido of player by 5;
 	now HP of Lilith is 1; [has met the player, not the demon brute yet]
+	now PlayerMet of Lilith is true;
 
 instead of going northeast from Burned-Out Chapel while HP of Lilith > 0: [not the first meeting]
 	if LilithPregnancy is 4:

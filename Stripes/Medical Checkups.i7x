@@ -63,8 +63,9 @@ The description of Doctor Medea is "Doctor Medea is a relatively human lizard. S
 The conversation of Doctor Medea is { "Babies!" }.
 
 instead of conversing the Doctor Medea:
-	if Medeaget is 0:
+	if PlayerMet of Medea is false: [never talked before]
 		say "     Doctor Medea is a relatively human lizard, clothed, with multicolored scales[if park entrance is known]. You suspect she got caught in the park initially[else]. You wonder where she got such an interesting infection[end if]. 'Hello. I am Doctor Medea. I used to work here, and am only still here because the monster that broke in was too dumb to read the [']Pull['] sign on the doors and just tried to ram its way in. The condition of the lobby keeps the other monsters away, thinking this place has already been looted. Perhaps I could help you with something?' she asks with a helpful smile.";
+		now PlayerMet of Medea is true; [met and talked to the character]
 	else:
 		say "     You approach Doctor Medea again. All that is different is there is now a darker line running down her skirt to where some whitish cum is dripping. It looks like she came in herself, since the door is still dust covered except for your marks. 'Have you come looking for some help with your pregnancy needs?' she asks with more interest than a doctor perhaps should.";
 	if HP of Doctor Matt is 20:
