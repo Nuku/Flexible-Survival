@@ -42,7 +42,12 @@ Instead of taking the ornate bell:
 Instead of taking the donation box:
 	say "While you're fairly sure you could pry it up, a feeling of impending doom stays your thieving hands.";
 
+Table of GameEventIDs (continued)
+Object	Name
+Tanukibell	"Tanukibell"
+
 Tanukibell is a situation.
+The sarea of Tanukibell is "Nowhere".
 
 check ringing:
 	if the player is not in Shinto Shrine, say "I see nothing to ring here." instead;
