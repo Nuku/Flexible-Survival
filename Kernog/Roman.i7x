@@ -206,6 +206,8 @@ to say RomanTalk4: [Team recruits Quest start]
 	else if HP of Roman is 9:
 		say "     'A rather... Passionate recruit arrived while you were away. Great job,' Roman says. 'Our new friend, Noire, was adamant to start training. As in, to train our players. So, we got a win-win deal: she will teach my boys self-defense and we will teach her how to play football. That, and I told them to stay off from the horses['] part of the Park.' Roman sighs as he goes through the next item on his list. 'Next request is a little special. Players want more, um, [italic type]feminine[roman type] cheerleaders. Not just for their dancing I guess, but whatever. Remember that Alpha Husky whom I told you about? The one that changed me? I want him to do some [']community service['] for us as reparation. If you have the time, be on the lookout for this [bold type]Husky gang[roman type].'";
 		now HP of Roman is 10;
+		if Husky Gang is resolved:
+			now Husky Gang is not resolved;
 	else:
 		say "     'Hey, if it isn't my best friend! Come here for a hug, buddy! [one of]You should show me your place, one of these days.[or]We should hang around, one of these days.[or]As you can see, I'm not using padding anymore. The cotton was always tickling me, anyway![at random]'";
 
@@ -623,6 +625,7 @@ Instead of resolving a Husky Gang:
 	say "     Sounds from an animated discussion echoes through the street, coming from just around the corner. Deciding to act cautiously, you hide behind the rusting remains of a car and wait for the group to pass. Soon, a large pack of Huskies turn the corner. You count at least ten females, escorted by a muscular Alpha Husky.";
 	if HP of Roman is not 10:
 		say "     You have no business with them. So you let the horde pass. The mutants do not notice you, chattering to each other as they travel to their next destination. Once they are gone, you walk away from your hiding place, and after some more exploration decide to return to your starting point.";
+		now Husky Gang is resolved;
 	else:
 		say "     The Alpha's appearance perfectly fits the description that Roman gave you, at the Football Field. It seems that you found your cheerleaders. You walk away from your hiding place. [one of]The Alpha Husky instantly growls as he sees you. 'Who the fuck are you?' You quickly explain why you are here. 'Roman? Oh yeah, that gorilla. Does he make good use of the pussy I gave him?' he asks sarcastically. 'I'll let the girls take care of you, once I knocked you on your ass.'[or]'You again?' the Alpha growls. He cracks his fingers, and walk towards you with a determined look on his face. 'Was the last lesson not enough? Fine by me. I won't say no to one more bitch in my pack.'[stopping] Behind him, the females shout encouragements for their champion. '[one of]Yeah, bite his ass[or]Take that loser off[or]That wimpy [bodyname of player] is no match for our boy[at random]!'";
 		WaitLineBreak;

@@ -105,45 +105,45 @@ after going to Darius's Crib while (Darius is not in Darius's Crib):
 		LineBreak;
 		say "     Wandering into the kitchen, you open up the cupboards and check them out, finding mostly pots and pans. In a corner behind the kitchen counter, there is a cooler filled with fresh snow, in which a dozen bottles of beer are chilling. Taking one of them out, you see that it's some kind of craft beer with a flip-top. Sadly, even though there are so many bottles, you're quite sure that its absence would be noticed, so you return the beer to where it came from.";
 		if carried of Bliss Tablet > 11:
-				LineBreak;
-				say "     [bold type]You got enough Bliss to drop some in each and every bottle. Do you want to do so?[roman type][line break]";
-				say "     [link](1)[as]1[end link] - Yeah, let's do all of them.";
-				say "     [link](2)[as]2[end link] - No, one is enough.";
-				say "     [link](3)[as]3[end link] - No, you don't want to drug any of the beer.";
-				now calcnumber is 0;
-				while calcnumber < 1 or calcnumber > 3:
-					say "Choice? (1-3)>[run paragraph on]";
-					get a number;
-					if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
-						break;
-					else:
-						say "Invalid choice. Type [link]1[end link] to spike everything, [link]2[end link] to spike one beer or [link]3[end link] to do nothing.";
-				if calcnumber is 1:
-					LineBreak;
-					say "     Methodically taking the bottles out one by one and slowly pulling the flip-top to the side, you drop a Bliss tablet into each of them. After only a little while, you've spiked the whole stash and returned them into their icy surroundings. Replacing the lid of the cooler, you wander back to the middle of the room.";
-					now Stamina of Darius is 2;
-					decrease carried of Bliss Tablet by 12;
-				else if calcnumber is 2:
-					LineBreak;
-					say "     Snatching up a bottle again, you slowly and carefully pull the flip-top to the side, then drop your Bliss tablet into the opening before closing the beer back up. Settling the bottle back between its siblings, you replace the lid of the cooler, then wander back to the middle of the room.";
-					now Stamina of Darius is 1;
-					decrease carried of Bliss Tablet by 1;
+			LineBreak;
+			say "     [bold type]You got enough Bliss to drop some in each and every bottle. Do you want to do so?[roman type][line break]";
+			say "     [link](1)[as]1[end link] - Yeah, let's do all of them.";
+			say "     [link](2)[as]2[end link] - No, one is enough.";
+			say "     [link](3)[as]3[end link] - No, you don't want to drug any of the beer.";
+			now calcnumber is 0;
+			while calcnumber < 1 or calcnumber > 3:
+				say "Choice? (1-3)>[run paragraph on]";
+				get a number;
+				if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+					break;
 				else:
-					LineBreak;
-					say "     With a shrug, you put the lid back on the cooler and wander back to the middle of the room.";
+					say "Invalid choice. Type [link]1[end link] to spike everything, [link]2[end link] to spike one beer or [link]3[end link] to do nothing.";
+			if calcnumber is 1:
+				LineBreak;
+				say "     Methodically taking the bottles out one by one and slowly pulling the flip-top to the side, you drop a Bliss tablet into each of them. After only a little while, you've spiked the whole stash and returned them into their icy surroundings. Replacing the lid of the cooler, you wander back to the middle of the room.";
+				now Stamina of Darius is 2;
+				decrease carried of Bliss Tablet by 12;
+			else if calcnumber is 2:
+				LineBreak;
+				say "     Snatching up a bottle again, you slowly and carefully pull the flip-top to the side, then drop your Bliss tablet into the opening before closing the beer back up. Settling the bottle back between its siblings, you replace the lid of the cooler, then wander back to the middle of the room.";
+				now Stamina of Darius is 1;
+				decrease carried of Bliss Tablet by 1;
+			else:
+				LineBreak;
+				say "     With a shrug, you put the lid back on the cooler and wander back to the middle of the room.";
 		else if carried of Bliss Tablet > 0:
-				say "     [bold type]Do you want to dose a bottle with Bliss?[roman type][line break]";
+			say "     [bold type]Do you want to dose a bottle with Bliss?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Yeah, that could be fun.";
+			say "     ([link]N[as]n[end link]) - No, you don't want to drug any of the beer.";
+			if player consents:
 				LineBreak;
-				say "     ([link]Y[as]y[end link]) - Yeah, that could be fun.";
-				say "     ([link]N[as]n[end link]) - No, you don't want to drug any of the beer.";
-				if player consents:
-					LineBreak;
-					say "     Snatching up a bottle again, you slowly and carefully pull the flip-top to the side, then drop your Bliss tablet into the opening before closing the beer back up. Settling the bottle back between its siblings, you replace the lid of the cooler, then wander back to the middle of the room.";
-					now Stamina of Darius is 1;
-					decrease carried of Bliss Tablet by 1;
-				else:
-					LineBreak;
-					say "     With a shrug, you put the lid back on the cooler and wander back to the middle of the room.";
+				say "     Snatching up a bottle again, you slowly and carefully pull the flip-top to the side, then drop your Bliss tablet into the opening before closing the beer back up. Settling the bottle back between its siblings, you replace the lid of the cooler, then wander back to the middle of the room.";
+				now Stamina of Darius is 1;
+				decrease carried of Bliss Tablet by 1;
+			else:
+				LineBreak;
+				say "     With a shrug, you put the lid back on the cooler and wander back to the middle of the room.";
 		else: [no bliss owned]
 			say "As you put the lid back on the cooler, an idle thought comes to your mind and you begin wondering if you could spike the beers with something fun instead of taking them. With that in mind, you wander back to the middle of the room.";
 	else:

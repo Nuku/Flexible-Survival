@@ -109,6 +109,10 @@ Alexandrastory3 is a truth state that varies.
 
 Section 6 - Police Station
 
+Table of GameRoomIDs (continued)
+Object	Name
+Police Station Twelve	"Police Station Twelve"
+
 Police Station Twelve is a room. It is fasttravel. It is private. It is sleepsafe.
 The earea of Police Station Twelve is "Outside".
 The description of Police Station Twelve is "[policestationdesc]".
@@ -116,13 +120,20 @@ the scent of Police Station Twelve is "Despite the cleanup, there's still a ling
 PoliceStationTwelvePopulation is a number that varies.
 PoliceStationTwelveInfpop is a number that varies.
 
-
 PSdoor is a door. "The heavy doors to the north lead back outside to the parking lot and then into the city beyond.". North of Police Station Twelve is PSdoor. PSdoor is dangerous. North of PSdoor is Wandering the City.
 the marea of PSdoor is "Outside".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Police Lockerroom	"Police Lockerroom"
 
 Police Lockerroom is a room. It is sleepsafe. Police Lockerroom is east of Police Station Twelve.
 The description of Police Lockerroom is "[policelockerdesc]".
 The scent of Police Lockerroom is "Despite the cleanup, there's still a lingering scent of sex in the air.".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Cell Block A	"Cell Block A"
 
 Cell Block A is a room. It is sleepsafe. Cell Block A is down from Police Station Twelve.
 The description of Cell Block A is "[CellBlockAdesc]".
