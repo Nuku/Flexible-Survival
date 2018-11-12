@@ -12,6 +12,13 @@ Version 1 of Darius by Wahn begins here.
 [   1: grinded on an ass and came                               ]
 [   2: fucked player ass                                        ]
 
+[ Stamina of Darius - drug status                               ]
+[   0: normal                                                   ]
+[   1: player spiked one beer                                   ]
+[   2: player spiked all beers                                  ]
+[   3: unconscious and horny (once)                             ]
+[   4: unconscious and horny (every night)                      ]
+
 
 DariusLostItems is a number that varies.
 
@@ -96,7 +103,49 @@ after going to Darius's Crib while (Darius is not in Darius's Crib):
 				say "You find a few pairs of discarded pants that seem to have been failed experiments in cutting a proper and comfortable hole to stick a tail through.";
 	else if calcnumber is 2:
 		LineBreak;
-		say "     Wandering into the kitchen, you open up the cupboards and check them out, finding mostly pots and pans. In a corner behind the kitchen counter, there is a cooler filled with fresh snow, in which three bottles of beer are chilling. Taking one of them out, you see that it's some kind of craft beer with a flip-top. Sadly, with only three bottles overall, you're quite sure that its absence would be noticed, so you return the beer to where it came from and put the lid back on the cooler before you wander back to the middle of the room.";
+		say "     Wandering into the kitchen, you open up the cupboards and check them out, finding mostly pots and pans. In a corner behind the kitchen counter, there is a cooler filled with fresh snow, in which a dozen bottles of beer are chilling. Taking one of them out, you see that it's some kind of craft beer with a flip-top. Sadly, even though there are so many bottles, you're quite sure that its absence would be noticed, so you return the beer to where it came from.";
+		if carried of Bliss Tablet > 11:
+				LineBreak;
+				say "     [bold type]You got enough Bliss to drop some in each and every bottle. Do you want to do so?[roman type][line break]";
+				say "     [link](1)[as]1[end link] - Yeah, let's do all of them.";
+				say "     [link](2)[as]2[end link] - No, one is enough.";
+				say "     [link](3)[as]3[end link] - No, you don't want to drug any of the beer.";
+				now calcnumber is 0;
+				while calcnumber < 1 or calcnumber > 3:
+					say "Choice? (1-3)>[run paragraph on]";
+					get a number;
+					if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+						break;
+					else:
+						say "Invalid choice. Type [link]1[end link] to spike everything, [link]2[end link] to spike one beer or [link]3[end link] to do nothing.";
+				if calcnumber is 1:
+					LineBreak;
+					say "     Methodically taking the bottles out one by one and slowly pulling the flip-top to the side, you drop a Bliss tablet into each of them. After only a little while, you've spiked the whole stash and returned them into their icy surroundings. Replacing the lid of the cooler, you wander back to the middle of the room.";
+					now Stamina of Darius is 2;
+					decrease carried of Bliss Tablet by 12;
+				else if calcnumber is 2:
+					LineBreak;
+					say "     Snatching up a bottle again, you slowly and carefully pull the flip-top to the side, then drop your Bliss tablet into the opening before closing the beer back up. Settling the bottle back between its siblings, you replace the lid of the cooler, then wander back to the middle of the room.";
+					now Stamina of Darius is 1;
+					decrease carried of Bliss Tablet by 1;
+				else:
+					LineBreak;
+					say "     With a shrug, you put the lid back on the cooler and wander back to the middle of the room.";
+		else if carried of Bliss Tablet > 0:
+				say "     [bold type]Do you want to dose a bottle with Bliss?[roman type][line break]";
+				LineBreak;
+				say "     ([link]Y[as]y[end link]) - Yeah, that could be fun.";
+				say "     ([link]N[as]n[end link]) - No, you don't want to drug any of the beer.";
+				if player consents:
+					LineBreak;
+					say "     Snatching up a bottle again, you slowly and carefully pull the flip-top to the side, then drop your Bliss tablet into the opening before closing the beer back up. Settling the bottle back between its siblings, you replace the lid of the cooler, then wander back to the middle of the room.";
+					now Stamina of Darius is 1;
+					decrease carried of Bliss Tablet by 1;
+				else:
+					LineBreak;
+					say "     With a shrug, you put the lid back on the cooler and wander back to the middle of the room.";
+		else: [no bliss owned]
+			say "As you put the lid back on the cooler, an idle thought comes to your mind and you begin wondering if you could spike the beers with something fun instead of taking them. With that in mind, you wander back to the middle of the room.";
 	else:
 		LineBreak;
 		say "     You keep your hands to yourself, not touching anything in your surroundings.";
@@ -127,33 +176,65 @@ Darius is a man.
 Darius is in Darius's Crib.
 The description of Darius is "[DariusDesc]".
 The conversation of Darius is { "<This is nothing but a placeholder!>" }.
-The scent of Darius is "     Leaning forward to get a sniff of Darius, you find yourself grabbed by the back of your head and pulled in against his chest, burying your nose between the bulging pecs on the tall canine. He chuckles as you can't help but sniff his masculine aroma, with the slight scent of his sweat made oh so very tempting by pheromones that tell you that this is a top dog.".
+The scent of Darius is "[DariusScent]";
+
+to say DariusScent:
+	if Stamina of Darius < 3: [non-drugged]
+		say "     Leaning forward to get a sniff of Darius, you find yourself grabbed by the back of your head and pulled in against his chest, burying your nose between the bulging pecs on the tall canine. He chuckles as you can't help but sniff his masculine aroma, with the slight scent of his sweat made oh so very tempting by pheromones that tell you that this is a top dog.";
+	else:
+		say "     Leaning forward to get a sniff of Darius, you move your nose close to his slowly rising and falling chest. Being able to take him in freely in his passed-out state, you sniff his masculine aroma, with the slight scent of his sweat made oh so very tempting by pheromones that tell you that this is a top dog.";
 
 to say DariusDesc:
 	project the Figure of Darius_face_icon;
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Darius] <- DEBUG[line break]";
-	say "     Darius is a proud specimen of an anthro canine, tall and well-built with broad shoulders and a muscled torso. The man clearly knows this quite well, as he happily shows off by keeping his chest bare, a baggy pair of jeans the only article of fabric on his body. Aware of the fact that you're checking him out, he even flexes a little, making the firm bulges of his pecs and bicep twitch suggestively while grinning broadly. Then he lets a hand wander up to his neck, casually stroking along the heavy gold chain he wears, as if to boast that he can afford such accessories.";
+	if Stamina of Darius < 3: [non-drugged]
+		say "     Darius is a proud specimen of an anthro canine, tall and well-built with broad shoulders and a muscled torso. The man clearly knows this quite well, as he happily shows off by keeping his chest bare, a baggy pair of jeans the only article of fabric on his body. Aware of the fact that you're checking him out, he even flexes a little, making the firm bulges of his pecs and bicep twitch suggestively while grinning broadly. Then he lets a hand wander up to his neck, casually stroking along the heavy gold chain he wears, as if to boast that he can afford such accessories.";
+	else:
+		say "     Darius is a proud specimen of an anthro canine, tall and well-built with broad shoulders and a muscled torso. The man clearly knows this quite well, as he happily shows off by keeping his chest bare, a baggy pair of jeans the only article of fabric on his body. But of course, right now he's completely helpless in a blissed-out state, the result of you spiking his beer with some of his own drug inventory. Slumped on the sofa and dozing at the same time as being hard as a rock in his half-open jeans opens up quite a few fun possibilities. Question is, will you take the opportunity to have some fun with this big doggie on your own terms instead of his?";
 
 an everyturn rule:
 	if TimekeepingVar is 1 or TimekeepingVar is -7: [midnight]
-		if player is in Darius's Crib and Darius is in Darius's Crib:
-			project the Figure of Darius_face_icon;
-			say "     'Getting kinda late,' the dalmatian drug dealer says with a glance at a wall clock, then shoos you out of his apartment. 'Come back tomorrow if you want anything,' he says to you, then pushes the apartment building's front door shut behind you. The lock is still busted, so you could just walk back in, but no doubt Darius will take the time to pack away all his goods before he enjoys himself with his bitches.";
-			wait for any key;
-			move player to Boundary Street East;
-		now Darius is nowhere;
+		if Stamina of Darius is 1: [one beer spiked with Bliss]
+			if player is in Darius's Crib and Darius is in Darius's Crib:
+				project the Figure of Darius_face_icon;
+				say "     Stopping by the kitchen, the dalmatian drug dealer gets a bottle of beer and sips from it. For a moment, you wonder if that was the one you doctored, and after just a little while, it becomes clear that it was. As the large man keeps drinking, the extra ingredient in his booze has a noticable effect on him, as he gets quite visibly hard in his pants as well as a bit wobbly on his legs. 'Got quite a kick, this one. Top grade craft beer, I tell you,' Darius comments with slightly slurred words and stumbles a little as he makes his way to the couch, dropping onto it. Lifting the bottle once more, he takes another large swig, then calls out to you, 'Getting kinda late. So, buzz off and come back tomorrow if you want some stuff.' With that said, he waves you to the door and starts rubbing his bulge, not even looking if you're really going.";
+				say "     You make a few steps that way, but before you're even halfway there, you hear a thunk from behind you. Looks like Darius passed out and dropped is bottle, with the remains of the beer leaking into the carpet now. He's slumped backwards on the couch, the front of his jeans half-open. This would be a perfect opportunity to have some fun with the guy and not have to worry about his domineering personality.";
+				wait for any key;
+			now Stamina of Darius is 3; [passed out and horny, once]
+		else if Stamina of Darius is 2: [all beers spiked with Bliss]
+			if player is in Darius's Crib and Darius is in Darius's Crib:
+				project the Figure of Darius_face_icon;
+				say "     Stopping by the kitchen, the dalmatian drug dealer gets a bottle of beer and sips from it. Remembering that you spiked every last one of them, you suppress a grin and keep watching, eager to see the results of your little trick. As the large man keeps drinking, the extra ingredient in his booze has a noticable effect on him, as he gets quite visibly hard in his pants as well as a bit wobbly on his legs. 'Got quite a kick, this one. Top grade craft beer, I tell you,' Darius comments with slightly slurred words and stumbles a little as he makes his way to the couch, dropping onto it. Lifting the bottle once more, he takes another large swig, then calls out to you, 'Getting kinda late. So, buzz off and come back tomorrow if you want some stuff.' With that said, he waves you to the door and starts rubbing his bulge, not even looking if you're really going.";
+				say "     You make a few steps that way, but before you're even halfway there, you hear a thunk from behind you. Looks like Darius passed out and dropped is bottle, with the remains of the beer leaking into the carpet now. He's slumped backwards on the couch, the front of his jeans half-open. This would be a perfect opportunity to have some fun with the guy and not have to worry about his domineering personality.";
+			now Stamina of Darius is 4; [nightly passed out state]
+		else:
+			if player is in Darius's Crib and Darius is in Darius's Crib:
+				project the Figure of Darius_face_icon;
+				say "     Stopping by the kitchen, the dalmatian drug dealer gets a bottle of beer and sips from it. Casually drinking his booze, he eventually comments to you, 'Getting kinda late. Go on and clear out. You can come back tomorrow if you want anything.' With that, the big man shoos you out of his apartment building, pushing the front door shut behind you. The lock is still busted, so you could just walk back in, but no doubt Darius will take the time to pack away all his goods before he enjoys himself with his bitches.";
+				wait for any key;
+				move player to Boundary Street East;
+			now Darius is nowhere;
 	[else if TimekeepingVar is 0 or TimekeepingVar is -8:] [pre dawn - unused, Darius sleeps]
 	[else if TimekeepingVar is 7 or TimekeepingVar is -1:] [early morning - unused, Darius sleeps in]
 	else if TimekeepingVar is 6 or TimekeepingVar is -2: [mid-morning]
-		if player is in Darius's Crib:
-			project the Figure of Darius_face_icon;
-			if HP of Darius is 0: [never seen before]
-				say "     A muscled dalmatian comes into the room through the broken wall of the apartment next door. He seems unconcerned with finding you in his apartment, simply nodding to acknowledge your presence. 'Oh hey, new customer looking for a fix? I'm Darius. What can I do for ya, dawg?'";
-				now HP of Darius is 1;
+		if Stamina of Darius is 3 or Stamina of Darius is 4: [passed out after once getting dosed]
+			if player is in Darius's Crib:
+				project the Figure of Darius_face_icon;
+				say "     Slowly waking up from his drunken slumber, Darius finds himself slumped on the couch and looks down over himself with a a groan. 'Must have been a fun night, but fuck if I remember anything about it,' he mumbles to himself and shakes his head slowly to clear it. With a grunt, the dalmatian then gets up and puts his pants back in order, only not actually noticing your presence. He puts on his usual toothy smile and looks at you somewhat predatorily as he says, 'Hey there. What can I do for ya, dawg? Wanna buy some of the good stuff?'";
+			if Stamina of Darius is 3: [drugged only once]
+				now Stamina of Darius is 0; [no beers drugged]
 			else:
-				say "     Walking into the room through the broken wall of the apartment next door, Darius grins broadly as he finds you waiting for him. 'Looks like someone really needs his fix. What can I do for ya, dawg?'";
-		move Darius to Darius's Crib;
+				now Stamina of Darius is 2; [back to spiked beers]
+		else: [normal wake-up]
+			if player is in Darius's Crib:
+				project the Figure of Darius_face_icon;
+				if HP of Darius is 0: [never seen before]
+					say "     A muscled dalmatian comes into the room through the broken wall of the apartment next door. He seems unconcerned with finding you in his apartment, simply nodding to acknowledge your presence. 'Oh hey, new customer looking for a fix? I'm Darius. What can I do for ya, dawg?'";
+					now HP of Darius is 1;
+				else:
+					say "     Walking into the room through the broken wall of the apartment next door, Darius grins broadly as he finds you waiting for him. 'Looks like someone really needs his fix. What can I do for ya, dawg?'";
+			move Darius to Darius's Crib;
 	else if TimekeepingVar is 5 or TimekeepingVar is -3: [noon]
 		if player is in Darius's Crib:
 			project the Figure of Darius_face_icon;
@@ -203,7 +284,10 @@ an everyturn rule:
 Section 3 - Conversation
 
 instead of conversing the Darius:
-	say "[DariusTalkMenu]";
+	if Stamina of Darius > 2:
+		say "     He's currently half-passed out after you dosed his beer with aphrodisiac drugs. You can talk at him, but there really isn't anything he could reply right now.";
+	else:
+		say "[DariusTalkMenu]";
 
 to say DariusTalkMenu:
 	project the Figure of Darius_face_icon;
@@ -270,7 +354,10 @@ to say DariusTalk3: [drugs]
 Section 4 - Fucking
 
 instead of fucking the Darius:
-	say "[SexWithDarius]";
+	if Stamina of Darius < 3:
+		say "[SexWithDarius]";
+	else:
+		say "[BlissedDariusSexMenu]";
 
 to say SexWithDarius:
 	project the Figure of Darius_face_icon;
@@ -285,6 +372,7 @@ to say SexWithDarius:
 to say DariusSexMenu:
 	LineBreak;
 	now sextablerun is 0;
+	say "     [bold type]What do you want to do with him?[roman type][line break]";
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
@@ -484,5 +572,95 @@ to say DariusButtJob:
 
 to say DariusSex3: [ask to fuck him]
 	say "     As you step up to the large canine and say that you want to fuck him, Darius bursts out with an amused chuckle and shakes his head in disbelief. 'Are you tripping on something, dude? I don't swing that way! Even if I did, I wouldn't just lift my tail for any horny bastard waltzing in here.' Waving his hand dismissively at you, he gives you an unimpressed stare, then raises one eyebrow. 'So, what now? I want some action, slut! And don't embarrass yourself with stupid offers again.'";
+
+
+to say BlissedDariusSexMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Give him a BJ";
+	now sortorder entry is 1;
+	now description entry is "Suck Darius off";
+	[
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck his muzzle";
+		now sortorder entry is 2;
+		now description entry is "Face-fuck the dalmatian";
+	[]
+	if player is female:
+		choose a blank row in table of fucking options;
+		now title entry is "Sink your pussy onto his dick";
+		now sortorder entry is 3;
+		now description entry is "Ride the dalmatian's red rocket";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Sink your asshole onto his dick";
+	now sortorder entry is 4;
+	now description entry is "Ride the dalmatian's red rocket";
+	[]
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck him";
+		now sortorder entry is 5;
+		now description entry is "Take the dalmatian's ass";
+	]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Give him a BJ"):
+					say "[BlissedDariusSex1]";
+				if (nam is "Fuck his muzzle"):
+					say "[BlissedDariusSex2]";
+				if (nam is "Sink your pussy onto his dick"):
+					say "[BlissedDariusSex3]";
+				if (nam is "Sink your asshole onto his dick"):
+					say "[BlissedDariusSex4]";
+				if (nam is "Fuck him"):
+					say "[BlissedDariusSex5]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the muscular dalmatian, leaving him slumped on the sofa.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say BlissedDariusSex1:
+	say "     Approaching the unconscious man, your eyes wander over his muscular form leaning back against the backrest of the sofa. His broad chest rises and falls in a slow and even rhythm, a sign that he's very unlikely to wake up, no matter what you do to him. Sitting down next to him, you slide a hand down over his firm pecs and abs, feeling them and the softness of his fur. You savor the moment of having this hunk for yourself right now, docile and passed out. Teasing his nipples and pinching them lightly would likely make him punch you if he was awake, but now all that happens is that they get hard, and even more so as you lean in and playfully suck on first one, then the other. After a little while of just enjoying Darius's chest, you turn your attention lower, where the sexy anthro's cock is barely hidden by a half-drawn zipper. It is an easy task to just pull it the rest of the way and tug the sides of his jeans aside, revealing the proudly erect red rocket of your unconscious dog.";
+	say "     Wrapping your fingers around the warmth of his rod, you hold Darius's shaft upright and stroke up and down its length. He's at least ten inches long, with a nice and red shaft complete with tapered tip and the pre-knot bulge typical for canines at the base. Nice thickness too, and the furry orbs of his balls lie nicely in your hand as you cup and squeeze them. Completing your leisurely inspection of his manhood, you lean forward and lick a drop of pre off the tip. The flavor of the virile male unfolds on your tongue, making you hungry for more, so you slide your lips over his dickhead and sink down onto his shaft. Darius lets out a pleased grunt as his erection is enveloped by something warm and tight, but even this isn't enough to rouse him from his drugged slumber, so you're not slammed onto his shaft by a hand on your head but instead can take him at your own pace.";
+	WaitLineBreak;
+	say "     Eventually having taken the canine shaft right up to the bulge at the base, with it tickling your tonsils, you wait for a few seconds, then slide back off, playing your tongue over the shaft as you go. After pulling the head out of your mouth with a playful and intentional pop, you take some deep breaths and feast your eyes on the long piece of man-meat before your eyes. Then it's back down onto the sleeping dalmatian's cock, sucking and bobbing on its hard length while your fingers caress his balls. Giving the drugged dealer a leisurely blow-job, your mouth is filled with his taste as he leaks pre onto your tongue in little dribs and spurts. You can feel his balls tighten a little as the anthro's arousal mounts and the bulge of his knot starts to inflate a little right before your eyes. This makes you go down on him with even greater fervor, eager to taste the strong man's load.";
+	say "     It doesn't take much longer before the dalmatian lets out an urgent grunt, his hips humping up reflexively even though he is still out for the count overall. You can feel the throb in his balls and his cock as the first spurt of cum shoots out, right down your throat, followed by a second in close succession. The third splash of canine seed you take on your tongue instead, having pulled back far enough that you can taste Darius's rich man-milk. His orgasm doesn't let up for quite a while and the dal floods your mouth with his load, forcing you to gulp down cum several times just to keep from drowning in the seer volume of it. When Darius's climax eventually peters off, you feel like you had half a meal of cum in your stomach, which might just be the truth, as the anthro dog gave you a big and creamy load of protein.";
+	WaitLineBreak;
+	say "     Pulling off the slowly softening canine cock, you smack your lips and lick off any last dribs of cum from his dickhead, then gently lay his dick onto his abs. Tugging the jeans back into position, you raise their zipper at least as far as it was before, then stand up, leaving the dalmatian passed out on his couch and none the wiser. In all likelyhood, he'll not remember a thing about what just happened here.";
+	PlayerEat 15;
+
+to say BlissedDariusSex2:
+	say "...";
+
+to say BlissedDariusSex3:
+	say "...";
+
+to say BlissedDariusSex4:
+	say "...";
+
+to say BlissedDariusSex5:
+	say "...";
 
 Darius ends here.
