@@ -14,10 +14,6 @@ Version 1 of Stella by Stripes begins here.
 
 Section 0 - Event
 
-Table of GameEventIDs (continued)
-Object	Name
-Eager Dal	"Eager Dal"
-
 Eager Dal is a situation.
 The sarea of Eager Dal is "Red".
 when play begins:
@@ -136,7 +132,7 @@ Understand "Stella move" as stellamoving.
 
 check stellamoving:
 	If Stella is not visible, say "Who?" instead;
-	if Police Station Twelve is not known or HP of Alexandra < 52, say "There's nowhere else to send her." instead;
+	if Police Station Twelve is not known or HP of Alexandra < 52 or hunger of Alexandra is 1, say "There's nowhere else to send her." instead;
 	if laststellamove - turns < 16, say "What? I just got settled in here. Maybe later." instead;
 
 carry out stellamoving:

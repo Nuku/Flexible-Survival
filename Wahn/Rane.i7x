@@ -113,6 +113,9 @@ Instead of resolving a Rooftop Rumble:
 				say "     The sounds of screaming, crashes and breaking bones fill the air until it grows silent once more. With all the strength you can manage, you try again to get to your feet, and just as you feel about to crash backwards yet again, something grips your arm tightly and in an instant you are hauled to your feet. Shaking your head and trying to get your bearings, your eyes finally regain focus, and realization dawns that you are looking at something very big and very blue.";
 				WaitLineBreak;
 				say "     [MeetRane]";
+				now HP of Rane is 5;
+				now Resolution of Rooftop Rumble is 2; [fought & lost]
+				now Rooftop Rumble is resolved;
 			else if fightoutcome >= 30:[fled]
 				say "     Taking your legs under your arms, you manage to slip out of the circle of gang-members and make a run for it, dashing back into the alley you came from. Making use of all the tricks you know, you manage shake your human attackers after a while, but are left gasping for air and with burning leg-muscles. You resolve not to return to that area in the future, as the whole 'blue devil' and gang situation seems a bit too hot to handle.";
 				now Rooftop Rumble is resolved;
@@ -167,24 +170,24 @@ to say MeetRane:
 	say "     [bold type]Do you follow the blue oni?[roman type][line break]";
 	if player consents:
 		LineBreak;
-		say "     Despite the creeping thought that you're going with someone you only just met in this lawless city, you decide to follow Rane. That turns out to be a much more difficult task than expected given the devil's unbelievable speed and the fact that he doesn't look back to check on you. Even going as fast as you can, you're steadily losing ground, but at least you manage to keep him in sight until he enters the City Park. Following into the overgrown park you quickly realize that you lost track of him and before you know it are stumbling aimlessly through the vegetation, almost positive now that you're lost. It takes some time for you to find your way back out again, but you do manage it by climbing trees from time to time to aim your path towards one of the burned-out husks of distant high-rises. Well, at least now you know that Rane lives somewhere in the [bold type]park[roman type], so you can explore it sometime and hunt for the [bold type]blue oni[roman type].";
+		say "     Despite the creeping thought that you're going with someone you only just met in this lawless city, you decide to follow Rane. That turns out to be a much more difficult task than expected given the devil's unbelievable speed and the fact that he doesn't look back to check on you. Even going as fast as you can, you're steadily losing ground, but at least you manage to keep him in sight until he enters the City Park. Following into the overgrown park you quickly realize that you lost track of him and before you know it are stumbling aimlessly through the vegetation, almost positive now that you're lost. It takes some time for you to find your way back out again, but you do manage it by climbing trees from time to time to aim your path towards one of the burned-out husks of distant high-rises. Well, at least now you know that Rane lives somewhere in the [bold type]park[roman type], so you can explore it sometime and hunt for the [bold type]wandering blue oni[roman type].";
 		move player to Park Entrance;
 	else:
 		LineBreak;
 		say "     You watch as Rane takes off in one direction, not looking back to see if you're following as he bounds over the asphalt. Thinking about everything you saw and heard, despite having been 'saved' by him, you still don't feel quite comfortable in just going with someone you just met and don't actually know. Before long he's disappeared and you make the decision to get going yourself - not in the direction he went though.";
-		say "     Part of you feels bad for seemingly walking out like that. A thought crosses your mind as you realize that the direction Rane was heading in coincides with where the City Park would be, you wonder if maybe exploring the [bold type]park[roman type] and hunting for the [bold type]blue oni[roman type] would be an option if you had a change of heart in the future?";
+		say "     Part of you feels bad for seemingly walking out like that. A thought crosses your mind as you realize that the direction Rane was heading in coincides with where the City Park would be, you wonder if maybe exploring the [bold type]park[roman type] and hunting for the [bold type]wandering blue oni[roman type] would be an option if you had a change of heart in the future?";
 
 Table of GameEventIDs (continued)
 Object	Name
-blue Oni	"blue Oni"
+Wandering Blue Oni	"Wandering Blue Oni"
 
-The blue Oni is a situation.
-The Prereq1 of The blue Oni is Rooftop Rumble.
-The Prereq1Resolution of The blue Oni is { 1, 2 }.
-The level of The blue Oni is 5.
-The sarea of The blue Oni is "Park".
+Wandering Blue Oni is a situation.
+The Prereq1 of Wandering Blue Oni is Rooftop Rumble.
+The Prereq1Resolution of Wandering Blue Oni is { 1, 2 }.
+The level of Wandering Blue Oni is 5.
+The sarea of Wandering Blue Oni is "Park".
 
-Instead of resolving a The blue Oni:
+Instead of resolving a Wandering Blue Oni:
 	say "     As you move through the overgrown park's wilderness, you have an eye out for Rane, the blue oni whom you met in the warehouse district... without much success. Lots of trees and large bushes everywhere make it easy for someone to conceal himself in the woods, and you don't think there's much chance of finding the blue devil if he doesn't want to be spotted. A bit disappointed from the fruitless search, you wander back towards the entrance of the park - only to suddenly hear a voice from somewhere to the side: 'Hey there, sexy. Been waiting for you slow ass...'";
 	say "     You find the blue devil leaning up against one of the pillars forming the Torii arch leading to the Japanese shrine in the park. From the amused gleam in his eyes, he must have spotted you when you were out looking for him, then circled around to oh so casually wait for you here. He certainly is very sure of himself. You can't help but admire his imposing presence, fit and muscular and with an enticing air of masculinity. Giving you a meaningful wink, Rane steps away from the pillar and walks into the small bamboo forest concealing the shrine.";
 	WaitLineBreak;
@@ -195,25 +198,25 @@ Instead of resolving a The blue Oni:
 		now HP of Rane is 99;
 		move player to shrine;
 		now Rane is nowhere;
-		now Resolution of The blue Oni is 1; [rejected because of hellhound]
+		now Resolution of Wandering Blue Oni is 1; [rejected because of hellhound]
 	else if jackalmantf is 4: [Jackalman Transformation]
 		say "then his eyes go wide as the image changes. The mirror now shows someone standing behind you - it's the jackal-headed man you met in the museum, with one hand-paw resting on your shoulder. The image turns his head to look out of the mirror at you, then vanishes after giving you a nod with an amused expression on his face.";
 		say "     After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. He looks at you with a somewhat more respectful tone in his eyes, then says 'Anubis is watching out for you? That's a powerful patron you have there. You'll have to tell me sometime how you managed to attract his attention and favor.' Looks like he's now ready to talk... and do other things with you.";
 		move Rane to shrine;
 		now HP of Rane is 6;
 		move player to shrine;
-		now Resolution of The blue Oni is 2; [comment about Jackalman]
+		now Resolution of Wandering Blue Oni is 2; [comment about Jackalman]
 	else if Nightmaremastery is 1: [Player is Stablemaster]
 		say "then his eyes go wide as the image changes. The mirror now shows you sitting on a large horse made of fire and shadows. It's clearly male, with an erect horsecock dangling between its legs, dripping cum from the tip. The stallion turns his head to look out of the mirror at you with flaming eyes, then nods its head at you as if promising that together you will mount and rule over everything.";
 		say "     After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. He looks at you with a somewhat more respectful tone in his eyes, then says 'So, the Nightmare spirit infuses you. Fine by me - but don't think you'll be able to make me your bitch. This oni is made from tougher stuff.' Now knowing who and what you are, he nevertheless stays where he is, looking ready to talk... or do other things with you.";
-		now Resolution of The blue Oni is 3; [comment about Nightmare]
+		now Resolution of Wandering Blue Oni is 3; [comment about Nightmare]
 	else:
 		say "then the usual open smile creeps back over his face and he nods to your reflection. After silently murmuring a few Japanese words and giving bow to the mirror, Rane turns around and faces you once more. Looks like he's now ready to talk... and do other things with you.";
 		move Rane to shrine;
 		now HP of Rane is 6;
 		move player to shrine;
-		now Resolution of The blue Oni is 4; [regular join]
-	now The blue Oni is resolved;
+		now Resolution of Wandering Blue Oni is 4; [regular join]
+	now Wandering Blue Oni is resolved;
 
 Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)

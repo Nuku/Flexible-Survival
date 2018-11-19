@@ -1008,7 +1008,7 @@ To impregAlexandraChance with (x - text):
 	if "Broodmother" is listed in Traits of Alexandra:
 		increase AlexandraPregChance by 1; [10% extra chance]
 		increase MaxPups by 1; [1 more max pup]
-	if "Fertility Treatment" is listed in Traits of Alexandra:
+	if "Fertility Treatments" is listed in Traits of Alexandra:
 		increase AlexandraPregChance by 2; [20% extra chance]
 		increase MaxPups by 2; [2 more max pups]
 	if "Contraception" is not listed in Traits of Alexandra and lust of Alexandra is 0 and a random chance of AlexandraPregChance in 10 succeeds:

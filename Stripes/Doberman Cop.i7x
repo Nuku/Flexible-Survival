@@ -26,19 +26,22 @@ to say Dobermandesc:
 	now lev entry is 7 + debit;
 	now wdam entry is 10 + ( debit / 4 );
 	if dobielibido < 0:
+		project the figure of Alexandra_clothed0_neutral_icon;
 		say "     The female Doberman cop has found you again and growls firmly for you to halt and be searched. She strides over with confidence, a determined look upon her long muzzle. It doesn't appear like she's yet recognized you, seeming too focused on being the cop to realize that you've met before.";
 		say "     She's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle, and her short fur has the two-tone black and tan markings of the breed. She is wearing a light blue shirt, darker pants and a policeman's hat. She has an average-sized rack under her shirt.";
 	else if dobielibido < 50:
+		project the figure of Alexandra_clothed0_frown_icon;
 		say "     A female Doberman in a cop's uniform charges at you, growling firmly for you to halt and be searched. In the brief moment before she's upon you, you can see that she's got a pretty normal human build overall, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle, and her short fur has the two-tone black and tan markings of the breed. She is wearing a light blue shirt, darker pants and a policeman's hat. She has an average-sized rack under her shirt.";
 		if the player is bodily human and the player is facially human and the player is skintone human and the tail of the player is "":
 			say "     '[one of]Halt, citizen[or]Freeze! Police[or]Stand down, citizen[at random]!' she calls out one last time, pulling out her nightstick.";
 		else:
 			say "     '[one of]Halt, mutant[or]Freeze! Police[or]Surrender, creature[or]Come quietly[or]I order you to stand down, mutant[at random]!' she calls out one last time, pulling out her nightstick.";
 	else if dobielibido < 100 or inasituation is true:
-		project the figure of DobermanCop_icon;
+		project the figure of Alexandra_clothed1_frown_icon;
 		say "     The female Doberman cop has found you again and growls angrily, pulling out her nightstick. She's looking more disheveled and wild-eyed than before, her lusts starting to take hold of her. She still has her uniform on, but her shirt's half unbuttoned to show off her breasts better and you can see moist juices soaking her thighs. Despite her attempts to restrain it, her tail wags excitedly at having found you again, regardless of her apparent anger at you.";
 	else:
 		project the figure of DobermanCop_icon;
+		project the figure of Alexandra_clothed2_frown_icon;
 		say "     The female Doberman cop has found you again and snarls at you. She's looking rather rougher now, with her shirt hanging open to expose her bare breasts and the crotch of her pants soaked and stained with her fluids. From the wild look in her eyes and the way she slaps her palm with her nightstick, it looks like she's through being the good cop and intends to come down on you hard. Her tail wags and you catch the scent of fresh arousal coming from her, clearly her body wanting to play some more - one way or another.";
 		increase str entry by 2;
 		if hardmode is false, now lev entry is 9;
@@ -85,6 +88,7 @@ to say losetodobie1:		[low-lust player loss]
 					now dobielibido is -100;
 					now fightoutcome is 19;
 					now Police Station Twelve is known;
+					move Alexandra to Police Station Twelve;
 					now HP of Alexandra is 50;
 					now area entry is "Nowhere";
 					increase score by 20;
@@ -202,6 +206,7 @@ to say losttodobie2:		[mid-lust player loss]
 
 
 to say losetodobie3:		[high-lust player loss]
+	project the figure of Alexandra_naked_frown_icon;
 	choose row monster from the Table of Random Critters;
 	let fine be 0;
 	let timepenalty be 0;
@@ -346,7 +351,7 @@ to say weaponconf:
 
 
 to say beattheDoberman:
-	project the figure of DobermanCop_icon;
+	project the figure of Alexandra_naked_frown_icon;
 	if dobielibido < 1, now dobielibido is 1;
 	say "     Your last attack knocks away the policewoman's nightstick, sending it skittering across the ground as she's knocked down. She releases a canine whimper that she quickly stifles as she fails to get back up.";
 	if dobielibido < 50:			[low-lust cop]
