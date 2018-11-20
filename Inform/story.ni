@@ -4703,6 +4703,7 @@ Include Campus Lovers by CloserHenry.
 Include Campus Couple NPC by CloserHenry.
 Include CandyShop by Stripes.
 Include Capitol Events by Blue Bishop.
+Include Carrypacks by Indigo Eclipse.
 Include Catapult Encounter by Hellerhound.
 Include Central Library by Stripes.
 Include Consolidated Outside Events by Song.
