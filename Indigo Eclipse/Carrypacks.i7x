@@ -20,9 +20,9 @@ the usedesc of Hiking Backpack is "[HBPuse]".
 
 to say HBPuse:
 	if Hiking Backpack is equipped:
-		decrease capacity of player by 25;
+		decrease capacity of player by 10;
 	else:
-		increase capacity of player by 25;
+		increase capacity of player by 10;
 
 Happy Trails is a scavevent. The sarea of Happy Trails is "Allzones".
 
