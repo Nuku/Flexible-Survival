@@ -150,23 +150,23 @@ to say BeatenOrcSexMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Milk him for some orc cum";
 	now sortorder entry is 1;
-	now description entry is "Collect a bottle of cum from him.";
+	now description entry is "Collect a bottle of cum from him";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Blow him off";
 	now sortorder entry is 2;
-	now description entry is "Suck the orc warrior's cock.";
+	now description entry is "Suck the orc warrior's cock";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ride his cock";
 	now sortorder entry is 3;
-	now description entry is "Impale yourself on the orc warrior's cock.";
+	now description entry is "Impale yourself on the orc warrior's cock";
 	[]
 	if player is male and bodyname of player is "Orc Warrior" and player is pure:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck his ass";
 		now sortorder entry is 4;
-		now description entry is "Take the orc warrior's ass.";
+		now description entry is "Take the orc warrior's ass";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

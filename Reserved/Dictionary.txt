@@ -516,7 +516,7 @@
 |Nuku Valente|Fs Graphics|Figure of Andrew_icon|value|
 |Nuku Valente|Fs Graphics|Figure of Anthony_icon|value|
 |Nuku Valente|Fs Graphics|Figure of Artemis_icon|value|
-|Nuku Valente|Fs Graphics|Figure of Athanasia_icon|value|
+|Nuku Valente|Fs Graphics|Figure of Anastasia_icon|value|
 |Nuku Valente|Fs Graphics|Figure of Blanche1_icon|value|
 |Nuku Valente|Fs Graphics|Figure of Blanche2_icon|value|
 |Nuku Valente|Fs Graphics|Figure of Brooke_icon|value|
@@ -2754,7 +2754,7 @@
 |Blue Bishop|Velos|Sven|man|
 |Blue Bishop|Velos|Christy|woman|
 |Blue Bishop|Velos|Nermine|woman|
-|Blue Bishop|Velos|Athanasia|woman|
+|Blue Bishop|Velos|Anastasia|woman|
 |Blue Bishop|Velos|velospostmusings|value|
 |Blue Bishop|Velos|vpostmusenum|value|
 |Blue Bishop|Velos|velosfleepenalty|value|
@@ -3327,12 +3327,12 @@
 |Stripes|Leonard|felinebodied|adjective|
 |Stripes|Leonard|felinecocked|adjective|
 |Stripes|Leonard|felinetailed|adjective|
-|Stripes|Athanasia|20140908213124/12738:Mon 8 September 2014 21:31|indexing|
-|Stripes|Athanasia|Captured Bird|situation|
-|Stripes|Athanasia|FireAndIce|situation|
-|Stripes|Athanasia|phoenix egg|Grab Object|
-|Stripes|Athanasia|Volcanic Cave|room|
-|Stripes|Athanasia|shownermine|property|
+|Stripes|Anastasia|20140908213124/12738:Mon 8 September 2014 21:31|indexing|
+|Stripes|Anastasia|Captured Bird|situation|
+|Stripes|Anastasia|FireAndIce|situation|
+|Stripes|Anastasia|phoenix egg|Grab Object|
+|Stripes|Anastasia|Volcanic Cave|room|
+|Stripes|Anastasia|shownermine|property|
 |Stripes|Newt|20140908213124/5271:Mon 8 September 2014 21:31|indexing|
 |Stripes|Newt|Newt|woman|
 |Stripes|Andrew|20140908213124/9517:Mon 8 September 2014 21:31|indexing|

@@ -28,7 +28,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Orc Lair[close bracket][as]nav Orc Lair Side Entrance[end link] ";
 		LineBreak;
 	[a subsection of the 'outside' area (named Central City here)]
-	if Camp Bravo Entrance is known or Gaming Den is known or Green Apartment is known or Fire Station 86 is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station Twelve is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
+	if Camp Bravo Entrance is known or Gaming Den is known or Green Apartment is known or Fire Station 86 is known or Milking Facility Entrance is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station Twelve is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
 		say "[bold type]Central City[roman type]: ";
 		if Camp Bravo Entrance is known:
 			say "| [link][bracket]Camp Bravo[close bracket][as]nav Camp Bravo Entrance[end link] ";
@@ -38,6 +38,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Green Apartment Building[close bracket][as]nav Green Apartment Building[end link] ";
 		if Fire Station 86 is known:
 			say "| [link][bracket]Fire Station 86[close bracket][as]nav Fire Station 86[end link] ";
+		if Milking Facility Entrance is known:
+			say "| [link][bracket]Milking Facility Entrance[close bracket][as]nav Milking Facility Entrance[end link] ";
 		if Mini-Lab is known:
 			say "| [link][bracket]Mini-Lab[close bracket][as]nav Mini-Lab[end link] ";
 		if Pediatrics Lobby is known:
@@ -176,7 +178,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Egypt Wing Entrance[close bracket][as]nav Egypt Wing Entrance[end link] ";
 		LineBreak;
 	[start of the red light area]
-	if Entrance to the Red Light District is known or Bradford's Camp is known or Bright Alley is known or Burned-Out Chapel is known or Cuero Lobo is known or Down Under Pub is known or Gillian's Flat is known or Police Car is known or Porn Store is known or Sven's Place is known or Tattoo Parlor is known:
+	if Entrance to the Red Light District is known or Bradford's Camp is known or Bright Alley is known or Burned-Out Chapel is known or Cuero Lobo is known or Down Under Pub is known or Gillian's Flat is known or Police Car is known or Porn Store is known or Sanctuary Alleyway is known or Sven's Place is known or Tattoo Parlor is known:
 		say "[bold type]Red Light District[roman type]: ";
 		if Entrance to the Red Light District is known:
 			say "[link][bracket]Entrance to the Red Light District[close bracket][as]nav Entrance to the Red Light District[end link] ";
@@ -196,6 +198,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Police Car[close bracket][as]nav Sven's Place[end link] ";
 		if Porn Store is known:
 			say "| [link][bracket]Porn Store[close bracket][as]nav Porn Store[end link] ";
+		if Sanctuary Alleyway is known:
+			say "| [link][bracket]Sanctuary Alleyway[close bracket][as]nav Sanctuary Alleyway[end link] ";
 		if Sven's Place is known:
 			say "| [link][bracket]Sven's Place[close bracket][as]nav Sven's Place[end link] ";
 		if Tattoo Parlor is known:

@@ -2,14 +2,21 @@ Version 1 of Jimmy by Stripes begins here.
 [Version 1.1 - Dialogue tweaked for Police Station survivors, still needs survivor info section]
 "Adds corgi NPC named Jimmy to the Flexible Survival game."
 
+[          HP of Jimmy         ]
+[ 0 - task not started         ]
+[ 1 - task started             ]
+[ 2 - Jimmy ran off            ]
+[ 3 - Jimmy rescued            ]
+[ 4 - spoke to Jimmy           ]
+[ 5 - had anal sex             ]
+
+[   hunger of Jimmy     - Whether at library or not  ]
+[   0:     Jimmy at Police Station     ]
+[   1:     Jimmy at Library            ]
+
 Section 1 - Event
 
 [Situation opened by Good Alexandra]
-
-Table of GameEventIDs (continued)
-Object	Name
-Automaton Activity	"Automaton Activity"
-
 Automaton Activity is a situation. The level of Automaton Activity is 6. It is inactive.
 The sarea of Automaton Activity is "Capitol".
 
@@ -93,9 +100,49 @@ Instead of conversing the Jimmy:
 		now Survivor Group is active;
 [	else if PoliceStationTwelvePopulation > 0:
 		say "***";]
+	else if hunger of Jimmy > 0:
+		say "[JimmyTalkMenu]";
 	else:
 		say "     [one of]'It's nice to be able to sleep in a proper bed again. Sleeping on the floor's not so bad when you're a dog, but being on the bed's much better. And you can have a lot more fun in bed, too,' he adds with a cute chuckle.[or]'Do keep a look out for some doggy treats while you're out there. I've grown a taste for them,' he says, licking his chops.[or][if PoliceStationTwelvePopulation is 0]'There's always more stuff to do around here, but that just means we'll be able to have more friends.'[else]'There's even more to do around here now that we've got people in our shelter. It feels great to be helping them out though, so I don't mind. Besides, they give me plenty of scritches and hugs and... well, you know,' he says with a tail wag and a lick of his muzzle.[end if][or]'It's nice here and all, but I'm looking forward to the rescue Alexandra keeps talking about.'[or]'Thanks for helping [if PoliceStationTwelvePopulation > 0]all of [end if]us. Keep up the search for others.'[or]'I don't mind being this short now. It makes me the perfect height for oral sex,' he says with a grin and a wink.[or][if HP of Alexandra >= 65]'I don't like having that- that- robot bitch here,' he growls.[else if HP of Alexandra >= 63]'The newcomers are getting settled in nicely. They've even voted to make me their representative,' he says happily[else]'Clean up's been going well,' he says cheerfully, tail wagging even as he lugs a bucket of grimy mop water with both hands.[end if][at random]";
 [***]
+
+to say JimmyTalkMenu:
+	say "     There's a few topics you might be able to discuss with Jimmy. Is there anything in particular on your mind or do you just want to chat?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "About Him";
+	now sortorder entry is 1;
+	now description entry is "Ask the corgi about himself.";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if nam is "About Him":
+					say "[JimmyTalk1]";
+				wait for any key;
+
+to say JimmyTalk1:
+	say "     'So you want to know about little old me do you? What's the story behind the cute bundle of cuddles before you? I've lived in the city since the day I was born. Apart from a few vacations and school trips, I haven't ever left, and despite the current crisis, I still don't plan on it. This is my city and I'll not give it up just because a few people have gone overboard on the debauchery!' Though he had meant it humorously, he looks adorably determined, his stubby arms folded in front of him, though his manicly wagging tail rather ruins any chances of looking tough. 'As far as I can remember, I've always been a cheerful sort of person and if my apartment had survived I could have shown you all my school pictures with me genuinely smiling while so many of the others had to force theirs. Despite my cheerfulness, I didn't have many friends at school. I wasn't smart enough for the nerds nor athletic enough for the jocks. I couldn't draw well enough to associated with the artistically inclined either.'";
+	say "     'So I just sort of drifted through, no one really wanting to be my friend, but not really being bullied either. A few people would take pity on me and let me sit with them from time to time at lunch, but I didn't fit in so I was usually left to be taken in by another group every few weeks. I'm making it sound much worse than it was and you don't need to feel sorry for me. That was then, and now I have you[if hunger of Paula > 0], Paula,[end if] and Alexandra. I was good at English classes, especially the oratory presentations, so when I had graduated high school, I did a dual degree in English and Political Science. It was only when I had recieved the bit of paper at the end that I realized that I didn't know what I wanted to do next. My parents had moved house to the other side of the country, meaning I couldn't live at home while I decided, so I asked my sister for a loan and bought an apartment. I do hope she's alright. She was meant to be leaving for a business trip just after people started changing, so I don't even know whether she is in the city or not.' Jimmy has a moment of silent to take a breath and contemplate this thought. 'She's probably fine, but could I have a moment? I'm not feeling my usual pep. We can talk again later if that's alright.'";
+
+[to say JimmyTalk2:
+	say "     Everyone else in my family is a bit more impressive than me. Apart from my parents and me, I have two brothers and a sister. My dad was editor for some scientific journal that I can't remember the name of and didn't often have time to spend with the rest of us so I can't say I was particularly close. Mum did consultancy for security companies ";]
+
+Section 3 - Sex with Jimmy
 
 the fuckscene of Jimmy is "[sexwithJimmy]".
 
@@ -136,13 +183,5 @@ to say Jimmysex02:
 	say "     Easing him off your shaft and setting him back down, he has to clutch your leg for support as he's still weak at the knees. '[if HP of Jimmy is 4]Oh wow! I mean... I'd never... that was awesome. I wish I knew how great that felt; I'd have been doing that for years had I known[else][one of]That just keeps getting better and better[or]Oh, how I ache, but it's such a good ache[or]Mmmm... I feel so warm and full[at random][end if].' Cuddling the cute guy, you help him wipe up the mess you two've made with some rags. After sharing another kiss, he flops out on his cot, rubbing his [if cock width of player > 24]bulging [else if cock width of player >= 12]rounded [else]tummy with a happy smile on his doggy muzzle.";
 	if HP of Jimmy is 4, now HP of Jimmy is 5;
 
-
-[          HP of Jimmy         ]
-[ 0 - task not started         ]
-[ 1 - task started             ]
-[ 2 - Jimmy ran off            ]
-[ 3 - Jimmy rescued            ]
-[ 4 - spoke to Jimmy           ]
-[ 5 - had anal sex             ]
 
 Jimmy ends here.

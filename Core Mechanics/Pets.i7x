@@ -60,7 +60,7 @@ Carry out petcounting:
 	if companion of player is nullpet:
 		say "Active pet: NONE[line break]";
 	else:
-		say "Active pet: [companion of player]";
+		say "Active pet: [companion of player][line break]";
 	say "PET COMMANDS:[line break]";
 	say "[bold type]pet <name>[roman type] - Make the named pet your active one.";
 	say "[bold type]pet dismiss[roman type] - Stop using any pet for now.";

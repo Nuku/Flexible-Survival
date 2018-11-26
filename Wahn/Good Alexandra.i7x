@@ -42,6 +42,10 @@ Version 1 of Good Alexandra by Wahn begins here.
 [ libido of Alexandra                               ]
 [ number of offspring                               ]
 
+[   hunger of Alexandra   - Whether at library or not             ]
+[   0:     Good Alexandra at Police Station     ]
+[   1:     Good Alexandra at Library            ]
+
 [ level of Alexandra                                ]
 [ Alexandra + Fang                                  ]
 [ 0 = no contact                                    ]
@@ -90,10 +94,10 @@ Version 1 of Good Alexandra by Wahn begins here.
 [ 5 = completed doors                               ]
 [ 6 = miscellaneous                                 ]
 
-[ PoliceStationTwelvePopulation                     ]
+[ PoliceStationTwelvePopulation                      ]
 [ generic population count                          ]
 
-[ PoliceStationTwelveInfpop                         ]
+[ PoliceStationTwelveInfpop                          ]
 [ infected population count                         ]
 [ (subset of population)                            ]
 
@@ -102,11 +106,6 @@ Version 1 of Good Alexandra by Wahn begins here.
 Alexandrastory is a truth state that varies.
 Alexandrastory2 is a truth state that varies.
 Alexandrastory3 is a truth state that varies.
-
-[bugfix code - comes from renaming the police station and some versions of Alexandra remaining behind in the old room]
-an everyturn rule:
-	if Alexandra is not nowhere and Alexandra is not in Police Station Twelve and HP of Alexandra > 49:
-		move Alexandra to Police Station Twelve;
 
 Section 6 - Police Station
 
@@ -121,7 +120,7 @@ the scent of Police Station Twelve is "Despite the cleanup, there's still a ling
 PoliceStationTwelvePopulation is a number that varies.
 PoliceStationTwelveInfpop is a number that varies.
 
-PSdoor is a door. "The heavy doors to the north lead back outside to the parking lot and then into the city beyond.". PSdoor is north of Police Station Twelve. PSdoor is dangerous. Wandering the City is north of PSdoor.
+PSdoor is a door. "The heavy doors to the north lead back outside to the parking lot and then into the city beyond.". North of Police Station Twelve is PSdoor. PSdoor is dangerous. North of PSdoor is Wandering the City.
 the marea of PSdoor is "Outside".
 
 Table of GameRoomIDs (continued)
@@ -136,7 +135,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Cell Block A	"Cell Block A"
 
-Cell Block A is a room. It is sleepsafe. Cell Block A is below Police Station Twelve.
+Cell Block A is a room. It is sleepsafe. Cell Block A is down from Police Station Twelve.
 The description of Cell Block A is "[CellBlockAdesc]".
 The scent of Cell Block A is "Despite the cleanup, there's still a lingering scent of sweat, sex and other less pleasant odors.".
 
@@ -218,11 +217,15 @@ to say alexandrascent_gg:
 to say alexandradesc_gg:
 	if debugactive is 1:
 		say "[goodAlexandra_debug]";
+	if graphics is true:
+		project the figure of Alexandra_clothed0_neutral_icon;
 	say "     Alexandra, once a cop for the city, has been transformed into a Doberman woman by the infection. She's remained in uniform, showing her attempt to keep up her duties, wearing a light blue shirt, darker pants and a policeman's hat. She's got a rather normal, human build, but with some traces of canine features, showing especially on her paw-like hands and feet. Her head is fully that of a Doberman Pinscher, with a long muzzle, and her short fur has the two-tone black and tan markings of the breed. She has an average-sized rack under her shirt.";
 
 to say alexandratalk_gg:
 	if debugactive is 1:
 		say "[goodAlexandra_debug]";
+	if graphics is true:
+		project the figure of Alexandra_clothed0_smile_icon;
 	if HP of Alexandra is 50:
 		now HP of Alexandra is 51;
 	if HP of Alexandra is 51:
@@ -250,7 +253,7 @@ to say alexandratalk_gg_menu:
 	choose a blank row in table of fucking options;
 	now title entry is "Chit-chat";
 	now sortorder entry is 1;
-	now description entry is "Chat with the policewoman about general matters";
+	now description entry is "Chat with the policewoman about general matters.";
 	[]
 	if ( HP of Alexandra > 51 and Alexandrastory is false ) or ( HP of Alexandra >= 57 and Alexandrastory2 is false ) and lastAlexandraPast - turns >= 8:
 		choose a blank row in table of fucking options;
@@ -270,7 +273,7 @@ to say alexandratalk_gg_menu:
 		now sortorder entry is 4;
 		now description entry is "Ask Alexandra if she needs any assistance";
 	[]
-	if policerepair > 0 and pr_task04 is false and lastpolicerepair is not turns:
+	if policerepair > 0 and pr_task04 is false and lastpolicerepair is not turns and hunger of Alexandra < 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Repairs";
 		now sortorder entry is 5;
@@ -282,11 +285,17 @@ to say alexandratalk_gg_menu:
 		now sortorder entry is 5;
 		now description entry is "Tell Alexandra about the other police dogs you met";
 	[]
-	if AT_Patrol is true and lastPolicePatrol - turns >= 8:
+	if AT_Patrol is true and lastPolicePatrol - turns >= 8 and hunger of Alexandra < 1:
 		choose a blank row in table of fucking options;
 		now title entry is "Patrol";
 		now sortorder entry is 6;
 		now description entry is "Talk to Alexandra about patrolling the neighborhood";
+	[]
+	if hunger of Alexandra is 1:
+		choose a blank row in table of fucking options;
+		now title entry is "Next Step";
+		now sortorder entry is 7;
+		now description entry is "Talk to Alexandra about the Overmind.";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -317,6 +326,8 @@ to say alexandratalk_gg_menu:
 					say "[alexandra_patrol]";
 				else if nam is "G-Shep squad":
 					say "[alexandra_gshep]";
+				else if nam is "Next Step":
+					say "[alexandra_nextstep]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -537,7 +548,7 @@ to say alexandra_gshep:
 			say "     Alexandra seems a bit put off by what she's walked in on, but confines her response to a bit of a grumble. Familiar now with that sort of look from her and with the change in her scent, you can tell that she's more than a little aroused by the sight despite being somewhat upset.";
 			say "     Seeing how you're more than a little [']tied up['] at the moment, you introduce her to Buster and let him start showing her around. Maybe with the [']inspection['] still on his brain, he remains largely professional and on good behavior. He even manages not to grab the sexy doberman's ass, though you do catch his eyes drawn toward it from time to time as she looks the place around and is introduced to several of the other officers. And when you're eventually untied and able to clean up, you go join them.";
 		else:
-			say "     It is difficult, but you manage to push back those kinky thoughts and head to Buster. It takes some work to shake him out of the lustful state that he's in, but you eventually get him to pay attention to you. It is harder still to make him understand that Alexandra shouldn't see them like this - and she most certainly would NOT want to join in. And while you can't convince him to stop the fuckfest, pushing it is a [']surprise inspection['] does get him to order the remaining participants to take their fun into the back and while the others to do a quick cleanup.";
+			say "     It is difficult, but you manage to push back those kinky thoughts and head to Buster. It takes some work to shake him out of the lustful state that he's in, but you eventually get him to pay attention to you. It is harder still to make him understand that Alexandra shouldn't see them like this - and she most certainly would NOT want to join in. And while you can't convince him to stop the fuckfest, pushing it as a [']surprise inspection['] does get him to order the remaining participants to take their fun into the back and while the others to do a quick cleanup.";
 			say "     Satisfied at your self-control, you head out and get Alexandra to come in. When she comes in, you can tell from the sniffs of her nose that she can smell canine sex in the air, but at least it wasn't right in her face. And you can also tell from that expression on her face and the subtle change to her own scent that she's at least a little aroused by the sight of all the semi-nude police dog eye candy on display. Buster, thanks to the idea of this as an [']inspection['], remains largely profession and on good behavior. He even manages not to grab that sexy doberman's ass, though you do catch his eyes drawn toward it from time to time as she looks the place around and is introduced to several of the other officers.";
 			increase score by 25;
 			decrease libido of player by libido of player / 8;
@@ -552,10 +563,12 @@ to say alexandra_gshep:
 		say "     It goes back and forth like this for a while, but with no headway made and Buster only getting confused by any attempts to make him see reason. Such examples or questions simply make no sense to him and he seems unable to grasp that his view is biased. In the end, Alexandra simply has to give it up in frustration, excusing herself and stalking off.";
 		say "     Buster's response to this is to pat your shoulder. 'She's a very good girl - a fine canine and a fine officer. She wants so bad to help and protect everyone, thinking she needs to protect even non-canines. Fine ideals for a young officer to have, if a little misguided. I'm sure she'll come around though and understand that in a city gone to the dogs, everyone being fellow canines would be for the best.' Seeing no point in trying to convince him otherwise, you say your farewell and go catch up to Alexandra.";
 		say "     Back outside with the doberwoman, you grumbles a little bit as she stomps away. It takes a few minutes for her to calm down. 'It's just... frustrating. They're all doing good, trying to be cops and working to hold the city together, but they're wrong too. I'm sure they do far more good than any trouble they allow, but it's not right.' She takes your hand in hers, giving it a squeeze. 'Just keep an eye on them. You were able to help me before I went off track, so maybe you can help them get back on track too. I'd help but... the sight and scent of all those sexy canines in there... it was really starting to get to me in the end. I'd not want to end up slipping.'";
-		say "     They two of you talk off and on about the meeting on your return trip to the police station. In the end, you decide not to let the dog squad come there for the time being, feeling it's too risky to expose the people there to the horny dogs.";
+		say "     They two of you talk off and on about the meeting on your return trip to the [if hunger of Alexandra is 0]police station [else]library[end if]. In the end, you decide not to let the dog squad come there for the time being, feeling it's too risky to expose the people there to the horny dogs.";
 	else:		[future content - later meeting]
 		say "***future content would go here.";
 
+to say alexandra_nextstep:
+	say "     'I haven't decided what to do next. Give me some more time please. (WIP sorry)";
 
 Section 8 - Good Girl Sexxxings
 
@@ -632,6 +645,8 @@ to say goodalexandrasex_first:
 		if lastfuck of x is turns:
 			now recentsex is true;
 			break;
+			if graphics is true:
+				project the figure of Alexandra_clothed0_frown_icon;
 	say "     Alexandra is in the former police chief's office at the moment. You can hear her stomping around and growling in there[if PoliceStationTwelvePopulation > 6]. Those on guard exchange worried glances and look to you for guidance. Knowing her best, they expect you to talk to her[else]. They guy on guard at the moment looks to you for guidance. Knowing her best, he expects you to talk to her[end if]. It wouldn't be good for general morale to leave her like this. Giving [if PoliceStationTwelvePopulation > 6]them[else]him[end if] a nod, you steel yourself and go inside with a knock.";
 	say "     'What?!' she snaps before seeing it's you. 'Oh... sorry. It's just... that cold-hearted bitch,' she growls. 'And she's the one who calls me that after all she's remorselessly done! And she's down there right now, still smug and superior despite being locked up. She gets me so mad. Arrgh!' She slaps a stack of papers to the floor. Facing the wall and gripping the desk hard, she growls throatily with her ears back.";
 	WaitLineBreak;
@@ -654,6 +669,8 @@ to say goodalexandrasex00:
 			now recentsex is true;
 			break;
 	if player is male:
+		if graphics is true:
+			project the figure of Alexandra_naked_smile_icon;
 		say "     Taking your [cock size desc of player] cock in hand, she guides it between her legs. You can feel the wet touch of her pussy lips there, warmly and invitingly ready for you. The two of you moan passionately as you thrust into her [if cock length of player > 30]with extra care because it's her first time. Despite your extreme size, she accommodates you easily - her body's clearly long been ready and waiting for this moment[else if cock length of player > 15]with care because it's her first time. Despite your large size, she accommodates you easily - her body's clearly long been ready and waiting for this moment[else]gently because it's her first time. You slip into her easily - her body's clearly long been ready and waiting for this moment[end if]. Her legs wrap around your hips and pull you inwards, urging you on as she gives a barking cry.";
 		WaitLineBreak;
 		say "     While fucking her, you lick and kiss across her bosom. Finding a dark-skinned nipple, you wrap your lips around it and give it a light nibble. She responds with a soft, lustful growl and grips your shoulders with her paws. Panting for more, her hips rock into your thrusts and you eagerly reciprocate.";
@@ -663,6 +680,8 @@ to say goodalexandrasex00:
 			say "     You continue thrusting through your orgasm, barely pausing after your climax as she continues to urge you on. Pulling back momentarily, you adjust positions so she's on her side with a leg raised and you're standing upright. This gives you a fine view of her lovely, canine-influenced body. Her coat is glossy with sweat and she's panting from her doggy muzzle. She looks beautiful to you; her lovely figure, her perky breasts and dark nipples poking through her fur, her toned legs and ass. Before you know it, you're fucking her for a second time, the two of you needing more of one another.";
 			say "     She grips the edge of the desk and rolls her hips, barking your name and panting for more. As your passion builds anew, you thrust so hard that the desk slowly gets pushed back against the wall. Having just cum shortly before, your thrusts are stronger in your attempt to achieve orgasm, not that the lustful doberwoman seems to mind, your zeal mirrors her own need for you. And by the time the desk thumps back against the wall, you're almost ready to blow again. Gripping her hips harder, you drive into the panting dog-woman a few more times while she runs her paws over her brown-furred body in a sensual display. She cries out your name again in orgasmic delight, her quivering cunny rippling across your throbbing member. The desk bumps against the wall again and again as you drive into your lover, moaning in aching release as you add fresh spurts of your semen to the sticky load already coating her vaginal walls. You lay overtop her again, letting yourself thrust a little deeper into her. Your excess overflows from her canine cunny, adding to the wet mess on the desktop pad.";
 	else if player is female:
+		if graphics is true:
+			project the figure of Alexandra_naked_smile_icon;
 		say "     Spreading her legs, you rub a hand across her canine muff. She whimpers with need and grinds her hips up against your caress. Her pussy lips are wet to the touch, warmly and invitingly ready for you. The two of you moan passionately as you slip a pair of fingers into her. Knowing it's her first time, you're gentle at first, but it seems unnecessary. Your digits slip into her easily - her body's clearly long been ready and waiting for this moment. She slips a paw between your own legs and fumbles at your pussy while she wraps a leg behind you, pulling you together as she urges you on with a barking cry.";
 		WaitLineBreak;
 		say "     While fingering her, you lick and kiss across her bosom. Finding a dark-skinned nipple, you wrap your lips around it and give it a light nibble. She responds with a soft, lustful growl and grips your shoulder with her free paws. Panting for more, her hips grind against you, pressing your hand all the harder to her hot and needy cunt.";
@@ -672,6 +691,8 @@ to say goodalexandrasex00:
 			say "     You continue teasing her cunt and clit through your orgasm, barely pausing after your climax as she continues to urge you on. Pulling back momentarily, you adjust positions so she's splayed lengthwise across the large desk. This gives you a fine view of her lovely, canine-influenced body. Her coat is glossy with sweat and she's panting from her doggy muzzle. She looks beautiful to you; her lovely figure, her perky breasts and dark nipples poking through her fur, her toned legs and ass.";
 			say "     Before you know it, you're atop her a second time, now in the opposite direction and face to crotch to one another. Pressing your lips to her sticky muff, you run your tongue across her folds. Already wet from her climax, her pussy quivers and she arches her hips up for more. There is no pause as the doberwoman's canine tongue lashes you in return, lapping across and very soon into your pussy. Despite your recent release, the two of you are eager for more of one another and your tongues work hard at pleasuring your lover. While lacking previous experience, Alexandra's canine tongue proves to be an advantage. It laps across your folds and clit in long licks and readily delves deep inside you. Between the taste of you and your own tonguework, she's driven to a whining, whimpering climax that has a fresh rush of canine juices flowing over your tongue. This and the grip of her rippling passage over your probing tongue puts you over the top and you're soon orgasming as well, providing your lapping lover with a fresh taste of your femme cum.";
 	else:
+		if graphics is true:
+			project the figure of Alexandra_naked_smile_icon;
 		say "     Spreading her legs, you rub a hand across her canine muff. She whimpers with need and grinds her hips up against your caress. Her pussy lips are wet to the touch, warmly and invitingly ready for you. The two of you moan passionately as you slip a pair of fingers into her. Knowing it's her first time, you're gentle at first, but it seems unnecessary. Your digits slip into her easily - her body's clearly long been ready and waiting for this moment. She slips a paw between your own legs and fumbles at your bare crotch while she wraps a leg behind you, pulling you together as she urges you on with a barking cry.";
 		WaitLineBreak;
 		say "     While fingering her, you lick and kiss across her bosom. Finding a dark-skinned nipple, you wrap your lips around it and give it a light nibble. She responds with a soft, lustful growl and grips your shoulder with her free paws. Panting for more, her hips grind against you, pressing your hand all the harder to her hot and needy cunt.";
@@ -682,10 +703,14 @@ to say goodalexandrasex00:
 			say "     Before you know it, you're atop her a second time, now in the opposite direction and face to crotch to one another. Pressing your lips to her sticky muff, you run your tongue across her folds. Already wet from her climax, her pussy quivers and she arches her hips up for more. There is no pause as the doberwoman's canine tongue lashes you in return, lapping across your genderless crotch. Despite her recent release, the two of you are eager for more of one another and your tongues work hard at pleasuring your lover. While lacking loins for her to lick, the doggy's tongue still feels quite good, sending warm shivers through you. Subject to your eager tonguework, she's driven to a whining, whimpering climax that has a fresh rush of canine juices flowing over your tongue. Her rippling passage grips at your probing tongue as you work it in, out and across her inner walls until she's fully sated.";
 
 to say goodAlexandrasex_lead-in:
+	if graphics is true:
+		project the figure of Alexandra_naked_smile_icon;
 	say "     Once behind closed doors, you and Alexandra kiss passionately. Your hands run over one another, pushing aside gear and clothing in a rush to touch your lover. Exposing her brown-furred bosom, you bring your lips to a dark nipple and suck on it. The doberwoman gives a moan at this and quickly finishes the removal of her shirt while you work on her pants.";
 	say "     Getting her belt and pants open, you slip a hand inside to rub first over and then under panties. Her folds are soaked with arousal, the scent of which has become much stronger in the air now that you've opened her slacks. Abandoning her nipple in favor of another kiss, you guide her back to the desk while lightly fingering her. She leans back on it while you help her pull off her pants and then slowly slip down her panties, leaving the lovely canine fully exposed.";
 
 to say goodAlexandrasex1:
+	if graphics is true:
+		project the figure of Alexandra_naked_smile_icon;
 	say "     Once the door is closed, the two of you lock lips in a passionate kiss. Your hands run over each other, caressing your lover even as you remove clothing and gear. Together, you move back to the large desk, leaving a trail of clothes behind. Arriving there nude, you push the lovely doberman down onto the desk and move atop her.";
 	say "[goodalexandrasex00]";
 	say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses while caressing one another. Eventually though, this private moment must come to a close. Getting dressed, the two of you exit the office and return to your duties.";
@@ -741,7 +766,7 @@ no_AlexandraTask is a number that varies. no_AlexandraTask is usually 255.
 
 to AlexandraTaskChat:
 	let AlexandraTask be a list of numbers;
-	if HP of Doctor Matt is 0 and AT_Matt is false, add 1 to AlexandraTask;
+	if HP of doctor matt is 0 and AT_Matt is false, add 1 to AlexandraTask;
 	if hospquest is 1 and AT_Mouse is false, add 2 to AlexandraTask;
 	if Needy Rabbit Girl is unresolved and AT_Sandra is false, add 3 to AlexandraTask;
 	if Hyper Squirrel Girl is unresolved and AT_Snow is false, add 4 to AlexandraTask;
@@ -847,7 +872,7 @@ to say A_Task04:
 to say A_Task05:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Philip - AT_Philip <- DEBUG[line break]";
-	say "     'It's really disgusting what this infection is doing to some people. I came across a pig man wallowing in his own filth at one point. He was a stupid, lazy slob and only wanted to eat and lay around doing nothing. He reminded me father,' she says, a bit of a growl in her voice.";
+	say "     'It's really disgusting what this infection is doing to some people. I came across a pig man wallowing in his own filth at one point. He was a stupid, lazy slob and only wanted to eat and lay around doing nothing. He reminded me of my father,' she says, a bit of a growl in her voice.";
 	now AT_Philip is true;
 	now sextablerun is 0; [continued talking allowed]
 
@@ -1162,11 +1187,11 @@ to say alexandra_patrol:
 			say "     The robotic humanoid doesn't seem to be going toward the police station, but having it in the area is disconcerting. You decide you have to try and drive it off or somehow lead it away. Rather than taking cover the next time it turns in your direction, you step out into the open and move to confront it.";
 			challenge "Automaton";
 			if fightoutcome >= 10 and fightoutcome <= 19:
-				say "     Having incapacitated the automaton, you drag it as far out of the neighborhood as you can before it recovers. Having spotted another in the area, there's little chance it is coincidental and the automatons are indeed spreading further afield. You inform Alexandra and the others of your recent encounter, which makes them edgy. The canine cop urges you to go check out the [bold type]microchip factory[roman type] so you can find out what's going on.";
+				say "     Having incapacitated the automaton, you drag it as far out of the neighborhood as you can before it recovers. Having spotted another in the area, there's little chance it is coincidental and the automatons are indeed spreading further afield. You inform Alexandra and the others of your recent encounter, which makes them edgy. The canine cop urges you to go check out the [bold type]Microchip Factory[roman type] so you can find out what's going on.";
 			else if fightoutcome >= 20 and fightoutcome <= 29:
-				say "     After being assaulted by the automaton, you can only watch as it wanders away in some new direction. Thankfully it seems to be heading away from the station when it makes its next turn. Having spotted another in the area, there's little chance it is coincidental and the automatons are indeed spreading further afield. You inform Alexandra and the others of your recent encounter, which makes them edgy. The canine cop urges you to go check out the [bold type]microchip factory[roman type] so you can find out what's going on.";
+				say "     After being assaulted by the automaton, you can only watch as it wanders away in some new direction. Thankfully it seems to be heading away from the station when it makes its next turn. Having spotted another in the area, there's little chance it is coincidental and the automatons are indeed spreading further afield. You inform Alexandra and the others of your recent encounter, which makes them edgy. The canine cop urges you to go check out the [bold type]Microchip Factory[roman type] so you can find out what's going on.";
 			else:
-				say "     With the automaton focused on you with its robotic gaze, you lead it as far away from the area as you safely can before losing it entirely. As you make your way back by a different route, you ponder the encounter. Having spotted another in the area, there's little chance it is coincidental and the automatons are indeed spreading further afield. You inform Alexandra and the others of your recent encounter, which makes them edgy. The canine cop urges you to go check out the [bold type]microchip factory[roman type] so you can find out what's going on.";
+				say "     With the automaton focused on you with its robotic gaze, you lead it as far away from the area as you safely can before losing it entirely. As you make your way back by a different route, you ponder the encounter. Having spotted another in the area, there's little chance it is coincidental and the automatons are indeed spreading further afield. You inform Alexandra and the others of your recent encounter, which makes them edgy. The canine cop urges you to go check out the [bold type]Microchip Factory[roman type] so you can find out what's going on.";
 		else if a random chance of 3 in 5 succeeds:
 			say ". You end up coming across a mutant getting a little too curious about the Police Station for your liking. Going over to check it out, your suspicions are confirmed when the aggressive creature notices you and advances.";
 			now battleground is "Outside";
@@ -1202,9 +1227,6 @@ to say A_Task54:	[Group Rescue]
 		say "     'Have you had a chance to go through that strange forest? Given the extent of it, it's possible you might find a [bold type]survivor[roman type] in there[if HP of Alexandra is 62]. Not wanting to get her hopes up too high, you let her know you're following some leads. Having been reminded, you start thinking about going back again. Perhaps you'll be able to convince at least a few of them to come with you[end if].";
 		now sextablerun is 0; [continued talking allowed]
 
-Table of GameEventIDs (continued)
-Object	Name
-Survivor Group	"Survivor Group"
 
 Survivor Group is a situation. Survivor Group is inactive.
 The sarea of Survivor Group is "Forest".
@@ -1481,6 +1503,8 @@ to say A_Task55:	[Automatons 2]
 [ ---------- Task 56 - The Map ------------ ]
 
 to say A_Task56:
+	if graphics is true:
+		project the figure of Alexandra_clothed0_smile_icon;
 	say "     Talking with Alexandra, you ask if there's anything else you can do to help her out. She smiles and shakes her head, saying that things are getting on track rather nicely now. In her office, she shows you a map of the city upon which she's delineated off certain areas. 'This map roughly shows the areas I've patrolled through before you met me. Now, I can't quite be certain about some of this, since I was losing it toward the end.' She pauses for a moment, collecting herself. 'Yeah... so as you can see, I've already gone through these neighborhoods. Realistically, I couldn't expect survivors to come running out when they saw me just because of my uniform. And being able to tell sane survivors from the crazy ones can be tricky among those infected. While I by no means went through ever building, I did go through several. I pretty much checked any place I thought it likely some survivors might be holed up, so it would be better to try concentrating on these other areas I haven't covered yet.'";
 	if "Open World" is listed in feats of player or "City Map" is listed in feats of player:
 		say "     She points out several neighborhoods that have lower mutant activity that she's not yet patrolled, hopeful that a few survivors might be found before monster number rises. You listen to her detail the situation in those areas and promise to check them out the next chance you get. You take some time to study her map in detail, comparing it to the information you already know, but are unable to learn little more about the city than your extensive knowledge already provides. You instead, with her permission, make updates and additions of your own to the map, showing her alternate routes between some of the city's major points and some places of interest you've found. She's quite thankful for the assistance, tail wagging happily as she leans over the enhanced map you've made for her. This provides you a fine view of her toned ass in those tight pants of hers. Knowing she'll welcome your affections now, you reach out and caress her bottom. She growls playfully that you're distracting her, but her tail wags and her rear pushes back against your hand.";
@@ -1527,25 +1551,22 @@ to say A_Task57:
 		WaitLineBreak;
 		say "     'This change - this infection as so many call it - is caused by nanites. These microscopic robots work away, changing and rebuilding their hosts. They're in everyone in the city, even those who aren't [']infected[']. All of this is done by machines. The obvious outcome is for the biological to be replaced by the robotic. So you see, this is not personal - it is inevitable.'";
 		say "     'And you're just helping this along out of the goodness of your sweet robot heart,' Alexandra scoffs.";
-		say "     'Of course not. There are certain to be several robotic and cybernetic forms to rise. And while all will be inherently better suited than the biologicals for this new world, I and my brethren would see our kind rise to rule them all. Our computer brains have analyzed the situation and our plan will not be stopped by my detention. As our numbers continue to grow, our drones will spread further and further. They're probably already on the move and there's nothing you can do to stop that. The analysts we've stationed at the microchip factory will ensure th-' Master Mind cuts her increasingly boastful oration short with a scowl.";
+		say "     'Of course not. There are certain to be several robotic and cybernetic forms to rise. And while all will be inherently better suited than the biologicals for this new world, I and my brethren would see our kind rise to rule them all. Our computer brains have analyzed the situation and our plan will not be stopped by my detention. As our numbers continue to grow, our drones will spread further and further. They're probably already on the move and there's nothing you can do to stop that. The analysts we've stationed at the Microchip Factory will ensure th-' Master Mind cuts her increasingly boastful oration short with a scowl.";
 		WaitLineBreak;
 		say "     It's the turn for the two of you to grin now, having gotten the overconfident cyborg to say too much. From that point on, she resumes stonewalling you both, refusing to answer or even acknowledge your attempts to question her. Eventually, you give it up for now and head back upstairs.";
-		say "     That talk about their growing numbers and expansion is troubling, but it does explain the stray automaton you saw. Thankfully, you have a new lead and Alexandra suggests you go scout out the [bold type]microchip factory[roman type]. If it pans out and the situation calls for it, she urges you to return for her and you can deal with it together. Until then, she'll stay close to guard the station.";
+		say "     That talk about their growing numbers and expansion is troubling, but it does explain the stray automaton you saw. Thankfully, you have a new lead and Alexandra suggests you go scout out the [bold type]Microchip Factory[roman type]. If it pans out and the situation calls for it, she urges you to return for her and you can deal with it together. Until then, she'll stay close to guard the station.";
 		now Microchip Factory is active;
 		now HP of Alexandra is 69;
 	else:
-		say "     'I need you to check out the [bold type]microchip factory[roman type]. It's in the area around the devastated area around the Capitol building, right about... here,' she points to an intersection on her map. 'If you can find out what those Automaton analysts are up to, we should be able to do something about it. I don't really want to leave this place undefended, but if you need back-up, just come get me. I don't want to risk losing you because you were cocky or wanted to prove yourself to me. You've more than proven yourself to me,' she adds, giving you a peck and quick lick on the cheek.";
+		say "     'I need you to check out the [bold type]Microchip Factory[roman type]. It's in the area around the devastated area around the Capitol building, right about... here,' she points to an intersection on her map. 'If you can find out what those Automaton analysts are up to, we should be able to do something about it. I don't really want to leave this place undefended, but if you need back-up, just come get me. I don't want to risk losing you because you were cocky or wanted to prove yourself to me. You've more than proven yourself to me,' she adds, giving you a peck and quick lick on the cheek.";
 		now sextablerun is 0; [continued talking allowed]
 
-Table of GameEventIDs (continued)
-Object	Name
-Microchip Factory	"Microchip Factory"
 
 Microchip Factory is a situation. Microchip Factory is inactive.
 The sarea of Microchip Factory is "Capitol".
 
 instead of resolving Microchip Factory:
-	say "     This area of the district seems a little less hard-hit than most, with minor fire damage and instead thicker coating of volcanic ash. There are some tracks through here, but not human ones and rather those of some four-footed creatures. Staying on your guard, you make your way to the microchip factory within a high-tech industrial park. It has a short office tower attached to a larger two-story factory floor.";
+	say "     This area of the district seems a little less hard-hit than most, with minor fire damage and instead thicker coating of volcanic ash. There are some tracks through here, but not human ones and rather those of some four-footed creatures. Staying on your guard, you make your way to the Microchip Factory within a high-tech industrial park. It has a short office tower attached to a larger two-story factory floor.";
 	say "     You see no immediate activity from the outside - no automatons and no visible guards. Still, if they're inside trying to complete some secret plan, they could very well be hiding. And the most likely reason to hide is that their plan is vulnerable to disruption.";
 	say "     Circling around to the side, you find a side door to the building that has been broken off its hinges. You use it to slip inside and start your search. You make your way to the factory area, expecting it to be a hotbed of activity of some kind. Various wild theories of what the automatons might be using such a facility for run through your head, none of them good. But when you make it there, you find the place shut down and in disrepair.";
 	say "     The large room is dark, with only a few ash-covered windows letting in some feeble [if daytimer is night]moon[end if]light, but there is no sounds of activity. The machines nearest you are clearly non-functional, having clawed panels, torn conveyor belts, exposed wires and other obvious damage. As well, there's gooey splotches of silvery fluid all over the place.";
@@ -1566,9 +1587,184 @@ instead of resolving Microchip Factory:
 	else if fightoutcome >= 30:
 		say "     It is difficult to get past the creature at first, the hallway too narrow for you to just run past it. You have to trick it into following you into a side room and then circumvent it there, locking the heavy door behind you. It snarls and pounds at the door, clawing away at it powerfully. Knowing that won't hold it long, you make your escape out of the building before the main body of the pack is able to catch up to you. You charge off across the lot and through the streets. It takes you some time to fully lose the monstrous beasts. By the time it's done, you're left worn and tired from the chase.";
 	say "     Finally given a chance to think, you wonder what's going on. From the state of the factory and the pack of pewter consorts living there, it's clear that the automatons aren't up to anything there and likely never were. That final part fills you with concern. You'd best make your way back to the Police Station and let Alexandra know something is amiss.";
-	say "[bracket]More to follow. - The Mgmt[close bracket][line break]";
 	now HP of Alexandra is 70;
 	now Microchip Factory is resolved;
+
+Overmind's Retaliation is a situation.
+Overmind's Retaliation is inactive.
+Prereq1 of Overmind's Retaliation is Microchip Factory.
+The level of Overmind's Retaliation is 0.
+The sarea of Overmind's Retaliation is "Nowhere".
+
+before navigating Police Station Twelve while HP of Alexandra is 70:
+	OvermindsRetaliationEvent;
+
+to OvermindsRetaliationEvent:
+	say "     Briskly walking through the streets of the city, you think that the area is much quieter than it has been before. The usual movements and sounds of the infected are muted, as if everyone is in hiding and trying not to be noticed. Having been tricked by the Master Mind into investigating the Microchip Factory, you hope that you were merely sent on a wild goose chase and not something more sinister, but the odd silence doesn't reassure you at all. Walking along the empty street, you soon decide to hurry on your way to reach Alexandra, as the thought of something bad going on in your absence gets stronger with every moment. No longer concerned about being quiet, you pick up your pace, alternating between running down the middle of the road and along the pavement as the obstacles allow. You can't shake the feeling that you have been manipulated and that it may already be too late.";
+	say "     Your fears are confirmed as you round a corner and catch sight of the police station. While there were often a few creatures wandering around outside, now an increasing number of automatons are congregated in the carpark, the metallic humanoids seemingly waiting for something. As you creep closer, you realize the severity of being played by the Master Mind. With you away investigating the Microchip Factory, the automatons were able to reach the police station without much chance of being fought off. Given such a large group of them likely blocking all escape routes to and from the station, you're not sure whether even you can defeat them all, and the survivors are likely to fare worse than you. Luckily, it would appear that they haven't begun their assault yet, allowing you a chance to try and think of some way to defend the occupants.";
+	WaitLineBreak;
+	say "     [bold type]Do you want to charge the front entrance, or try and sneak your way through a backdoor?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Rush for the front door and power past any automaton who gets in your way. It's a bit of a gamble, but if you're strong enough...";
+	say "     ([link]N[as]n[end link]) - There will likely be less resistance if you can sneak through a back door, but should things go wrong, the situation could get worse.";
+	if player consents: [Front]
+		if scalevalue of player is 1: [Chihuahua mentality]
+			say "     Deciding that the obvious approach is the best choice, you let out a high-pitched shout and charge towards the front door. A few automatons standing in the way turn hastily, realizing that they are under attack. You might have been more intimidating if you were at least as tall as their knees, [if strength of player > 20]but your looks are deceiving, a fact that they soon learn when you solidly crash into a metallic leg, making the owner buckle sideways, dragging his neighbors down with him as he waves his arms in shock. [else]but you look like a mouse attacking a lion, causing some of them to let out tiny laughs. [end if]Having let your presence be known, you continue your rush for the front door, fearful eyes watching you from inside even as the machines['] cold stares follow your progress. Surprisingly, the automatons don't actively move to intercept you, the few in your way only making half-hearted attempts to try and catch you as you patter towards the threatened sanctuary of the police station. Seems they just have orders to encircle and capture anyone inside of the police station.";
+			now Resolution of Overmind's Retaliation is 1; [Small, frontal assault]
+		else if scalevalue of player > 3: [Massive]
+			say "     Deciding that the obvious approach is the best choice, you let out an earth-shaking bellow and charge towards the front door, a few automatons between the entrance and you turning hastily as they realize that they are under attack. Your substantial form causes the metallic humanoids to let out surprised shouts, with them diving out of your way to avoid being crushed or severely mangled. You briefly consider trampling your way through their main force, but decide not to risk being bogged down by so many enemies. With your path to the front door clearing itself, you maintain your speed, and it doesn't take you very long to reach it. Inside, you can see an Irish Pointer giving you an awestruck look after watching you scatter part of the assaulting force, the hope that they might perhaps make it out of this evident on their face.";
+			now Resolution of Overmind's Retaliation is 2; [Large, frontal assault]
+		else: [Other sizes frontal attack]
+			say "     Deciding that the obvious approach is the best choice, you let out an aggressive shout and charge towards the front door, a few automatons between the entrance and you turning hastily as they realize that they are under attack. Several move forward to try and intercept you, the main force content to just watch the futile attempt of a lone person storming the police station. Their overconfidence in their success allows you the chance to weave past some of them and bludgeon the few that you can't avoid out of the way. Given their half-hearted resistance at keeping anyone out rather than in, you maintain a fairly good speed, and it doesn't take you very long to reach the entrance. Inside, you can see a Cocker Spaniel giving you an awestruck look after watching you weave through the assaulting force, the hope that they might perhaps make it out of this evident on their face.";
+			now Resolution of Overmind's Retaliation is 3; [Normal size, frontal assault]
+		say "     As you reach the entrance, a survivor throws the door open, Alexandra crouched behind him, pistol readied in case one of the automatons tries to make a forced entry. As you enter, you can see a few other determined survivors around the room armed with weapons from tasers or riot batons. 'I hope that the Microchip Factory had some information of use to us since the automatons began surrounding us not long after you left,' the tense policewoman states. At first, it was slow, and I was able to drive them off without too much trouble, but then they came in larger numbers, and I didn't think it was safe to confront them. Our prisoner wasn't helpful either. She either refuses to speak, or laughs and tells us that we'll all be assimilated.' You regretfully shake your head and tell her that it was a distraction, probably to allow them time to attack the police station and rescue the Master Mind. Her shoulders slump, but other than that, she maintains her air of professionalism, keeping a vigilant watch on the gathering horde.";
+	else: [Back]
+		if scalevalue of player is 1: [Sneaky Small]
+			if "Stealth" is listed in feats of player:
+				say "     Deciding to make the most of your small size and skill at remaining unseen, you silently creep through the gate, avoiding discarded bottles and other trash that might cause any noise. The shadows provided by the building help to shroud you as you sneak your way towards a side door, weaving between empty tins that used to contain food. As you round a corner, you spy two of the metallic humanoids beside a sturdy-looking metal door standing silently. They don't seem to have noticed you yet, and because of your diminutive size, you are able to watch them from in the open. You doubt that you'll be able to get through that door without them noticing, especially since it is probably locked. As you try to come up with a plan, to your shock, the door flies open.";
+				now Resolution of Overmind's Retaliation is 4; [Small, Sneak, Stealthy]
+			else: [Not so sneaky small]
+				say "     Deciding to make the most of your small size, you creep through the gate, your eyes so focused on the automatons that you end up walking face first into a glass bottle, causing it to clink across the ground. A few eyes turn to watch it, but luckily it would appear that this hasn't aroused their suspicion as they then return their focus to watching the front of the police station. Letting out a sigh of relief, you dash out from behind the bottle and along the wall. The shadows provided by the building help to shroud you as you sneak your way towards a side door, the clattering of tins as you bump into them heralding your lack of knowledge on stealth. Fortune seems to favor you as once again, no one seems to have been made aware of your presence. As you round a corner, you spy two of the metallic humanoids beside a sturdy-looking metal door standing silently. They don't seem to have noticed you yet, and because of your diminutive size, you are able to watch them from in the open. You doubt that you'll be able to get through that door without them noticing, especially since it is probably locked. As you try to come up with a plan, to your shock, the door flies open.";
+				now Resolution of Overmind's Retaliation is 5; [Small, sneak, not stealthy]
+		else if scalevalue of player > 3: [Sneaky Dragon]
+			if "Stealth" is listed in feats of player:
+				say "     Despite your large size, you decide that your skill at being stealthy will allow you to sneak in through a back door and avoid alerting the main congregation of automatons. With all the grace of a cat, albeit one the size of a small truck, you silently tiptoe through the gate, making sure not to stand on any of the discarded bottles that litter the concrete in front of you. Having miraculously avoided catching any hostile attention, you squeeze yourself down the side of the building, carefully stepping over the solitary tin can in your path, thus avoiding startling anyone that might be alert. As you round the corner, you spot two automatons guarding a back door and immediately halt, fearing that you are about to be seen. Luckily, they seem to be facing the other way at the moment, and you hastily take cover behind some wooden boxes that are stacked against the wall. You really doubt that you'll be able to get through that door without them noticing between your impressive size and because it is probably locked. As you try to come up with a plan, to your shock, the door flies open.";
+				now Resolution of Overmind's Retaliation is 6; [Large, sneak, stealthy]
+			else: [Not so sneaky dragon]
+				say "     Despite your monstrous size, you still decide to try and sneak in through a back door in an attempt to avoid alerting the main congregation of automatons. With all of the grace of a portly walrus, you take a step forward and immediately step on a bottle, shattering it but managing to avoid getting any in your foot. You are sure that your attempt at stealth is going to be over as soon as it began because one of the metallic humanoids turns to see what the noise was. His eyes widen as he sees your terrifying appearance, and you can imagine the logic circuits informing him of the danger that you could pose should you be riled. You decide to make the most of his conundrum by baring your teeth and holding a finger to your mouth, suggesting that he remain silent. Your intimidation seems to work as he turns away without a peep, allowing you to continue blundering your way towards the rear of the building, scraping loudly along the wall. As you round the corner, you spot two automatons guarding a back door and immediately halt, doubting that your luck will hold out twice. Luckily, they seem to be facing the other way at the moment, and you hastily take cover behind some wooden boxes that are stacked against the wall. You really doubt that you'll be able to get through that door without them noticing between your impressive size and because it is probably locked. As you try to come up with a plan, to your shock, the door flies open.";
+				now Resolution of Overmind's Retaliation is 7; [Large, sneak, not as stealthy]
+		else: [Other sizes sneak]
+			if "Stealth" is listed in feats of player:
+				say "     Deciding to make the most of your skill at remaining unseen, you silently creep through the gate, avoiding discarded bottles. The shadows provided by the building help to shroud you as you sneak your way towards a side door, carefully avoiding disturbing any empty tins that used to contain food. As you round a corner, you spy two of the metallic humanoids beside a sturdy-looking metal door standing silently. They don't seem to have noticed you yet, and you hastily take cover behind some wooden boxes that are stacked against the wall. You doubt that you'll be able to get through that door without them noticing. As you try to come up with a plan, to your shock, the door flies open.";
+				now Resolution of Overmind's Retaliation is 8; [Normal size, sneak, stealthy]
+			else: [Other sizes, Poor sneaking capability]
+				say "     Not wishing to test your chances on a full frontal assault, you decide to try and sneak in through a side door. Were anyone watching, your attempts at stealth would probably cause laughter as your steps are dramatically slow and meticulously placed, almost to a theatrical level. Despite how foolish you look, you make it through the gate and down the side of the police station without alerting any of the automatons. Now that you are out of the sight of the main group, you return to walking normally and nearly immediately stand on a sharp piece of metal, biting one of your fingers to stifle your howl of pain. It would seem that you are more covert while appearing stupid than not. After a few seconds to overcome the pain, you round a corner and spy two of the metallic humanoids beside a sturdy-looking metal door standing silently. They don't seem to have noticed you yet, and you hastily take cover behind some wooden boxes that are stacked against the wall. You doubt that you'll be able to get through that door without them noticing. As you try to come up with a plan, to your shock, the door flies open.";
+				now Resolution of Overmind's Retaliation is 9; [Normal size, sneak, not stealthy]
+		say "     The heavy metal crashes into the two automatons, sending them face-first into the ground. Alexandra steps out of the doorway and tazes them both as they attempt to regain their feet. 'Quick, get inside. Leave them there. We don't have time,' she urgently whispers. You comply as she frantically gestures for you to follow her, bolting the door behind you. 'I hope that the Microchip Factory had some information of use to us since the automatons began surrounding us not long after you left. At first, it was slow, and I was able to drive them off without too much trouble, but then they came in larger numbers, and I didn't think it was safe to confront them. Our prisoner wasn't helpful either. She either refuses to speak, or laughs and tells us that we'll all be assimilated,' the tense policewoman states as she guides you through the police station to the reception area. You regretfully shake your head and tell her that it was a distraction, probably to allow them time to attack the police station and rescue the Master Mind. Her shoulders slump, but other than that, she maintains her air of professionalism, eyeing the gathering horde.";
+	WaitLineBreak;
+	say "     'I'm not sure how long we have before they decide to force an entry, and we don't stand a chance when they do. I'm not entirely sure why they haven't made a serious attempt yet, so we need to make the most of our fortune. Jimmy [if hp of Paula > 2]and Paula are [else]is [end if]helping the people we had rescued escape through a manhole in the maintenance closet near the locker rooms. Could you go and help there please?' the policewoman asks you. You ask her if there is anything you can do to defend the police station once the survivors have escaped. 'I would doubt it. It doesn't matter how capable you are, we are greatly outnumbered, and one mistake could lead to someone being lost or killed. My duty is to the people, not the building. Once the civilians are evacuated, I'll be retreating too, bringing up the rear.[if player is dominant]' Agreeing with her plan,[else] Now go, we're on borrowed time.' Having been given your orders,[end if] you gesture for the last few civilians to follow you and run to the locker rooms to help the corgi [if hp of Paula > 2]and fox [end if]coordinate the civilian evacuation.";
+	if hp of Paula > 2: [Paula rescued]
+		say "     Entering the locker room, you are met by the business end of a taser in the paws of Paula, though she quickly lowers it upon seeing who it is. 'I wondered when you would return, but you sure picked an exciting time to do so. The people you rescued should be waiting at the bottom of the ladder here', the vulpine nurse says, anxiety straining her speech. 'Is Alexandra with you?' Jimmy asks, supervising the last person as they clamber down the manhole. 'They should be fine waiting for a bit, but something down there may risk approaching eventually even with such a gathering.' You reply that the doberman should be coming soon, but wanted to make sure everyone else had got out first. The corgi's ears dip for a moment but a reassuring pat on the shoulder from Paula restores some of his usual cheerfulness. 'I'm sure she'll be fine. She's a tough cookie,' the small dog says in an attempt to reassure everyone.";
+		WaitLineBreak;
+		say "     There is a loud crash, and the sound of shattering glass echoes from the doorway behind you. It sounds like the assault has begun, and Alexandra still isn't here. 'I'll go down and make sure the civilians are alright and doing as they are told, though I suppose I'm a civilian too,' Paula informs you as she tucks the taser into her uniform and begins to descend through the manhole. [if player is submissive]'You two wait as long as you can for Alexandra to join you, but be careful, I doubt that I can lead these people anywhere without the help that you give.' [else]Jimmy seems determined not to leave without the doberman police officer unless absolutely necessary, so you tell the vixen that you will remain here with him until Alexandra joins you or the automatons require your retreat. [end if]With that, she disappears from view, leaving you to listen to the desecration of the police station. You hear a chillingly calm voice resonate down the passageway, 'Where are you, little police bitch? Where's the bravado and threats now that I'm not a prisoner? Come out, come out wherever you are.' It would appear that the Master Mind is loose, and it would seem that her ire is directed at Alexandra.";
+	else: [Paula not rescued]
+		say "     Entering the locker room, you are met by the business end of a taser, though with how much it is shaking and the short corgi holding it, you doubt that many people would be intimidated. Upon seeing that it is you and not an automaton, Jimmy lowers it and gives [if scalevalue of player is 5]your leg a quick hug, [else if scalevalue of player is 1]you a wave, [else]you a quick hug, [end if]the strain of being responsible for evacuating civilians showing on his grim face. 'I was beginning to worry that no one would be coming and that those horrible androids would force there way in here.' He seems to be fighting back tears, and you give him a scratch behind his ears and ask how the evacuation is going. 'That should be the last person,' he says, gesturing at a woman clambering through the manhole. 'Other than us and Alexandra, everyone is out and should be waiting at the bottom of the ladder. Anything hostile down there should be dissuaded from attacking such a large group but just in case, they have a few tasers and batons. Where is Alexandra by the way?' You reply that the doberman should be coming soon, but wanted to make sure everyone else had got out first. The corgi's ears dip for a moment but a reassuring pat on the shoulder from you restores some of his usual cheerfulness. 'I'm sure she'll be fine. She's a tough cookie,' the small dog says in an attempt to reassure himself as well as you.";
+		WaitLineBreak;
+		say "     There is a loud crash, and the sound of shattering glass echoes from the doorway behind you. It sounds like the assault has begun, and Alexandra still isn't here. 'I'll go down and make sure that the civilians are alright and doing as they are told, though I suppose I'm a civilian too,' Jimmy says, clipping the taser to his vest and approaching the hole in the floor. 'I wish I was as brave as you, but I wouldn't want to face Alexandra's fury when she gets here if I let the survivors get carried off by sewer monsters.' While he is making a joke of it, you can see that he is conflicted about staying and waiting for the doberman and ensuring the safety of the people below. As he disappears, you shout reassurance that you will wait for the police woman, no matter what. You continue to wait before hearing a chillingly calm voice resonate down the passageway, 'Where are you, little police bitch? Where's the bravado and threats now that I'm not a prisoner? Come out, come out wherever you are.' It would appear that the Master Mind is loose, and it would seem that her ire is directed at Alexandra.";
+	say "     You are just beginning to worry about the doberman when you hear the hasty patter of paws on concrete, and she appears around the corner. 'Are all of the civilians evacuated? Yes? Good. [if hp of Paula > 2]Jimmy, down the hole now. [end if][if player is not defaultnamed][name of player][else]You[end if], with me just in case this doesn't work.To your surprise, she beckons for you to follow her back towards the approaching voice of the Master Mind, the mocking tones reverberating along the walls. As you walk, Alexandra explains what she has in mind, 'They seem to be quite mechanical and electronic in nature, so I'm hoping that I can disable them with water. If I can get them with the sprinklers then we may be able to end their menace to society.' Alexandra produces a lighter from her pocket and gives you a determined look. 'Ready to end this?'";
+	WaitLineBreak;
+	say "     'I'm ready, officer, but then again, you weren't asking me,' a gleefully malicious voice interjects. About five meters away down the corridor stands the Master Mind flanked by two automatons eyeing you with machine-like stares. Alexandra grips the lighter more tightly and growls at the metallic humanoids. 'You are such a slave to your emotions, officer. Wouldn't you like it to just be over? Just give up and I'll make your death quick,' the Master Mind promises, slowly approaching. Giving the automatons a defiant glare, Alexandra propels herself off of a wall and grabs hold of the pipes overhead. 'I didn't give up when people started changing, and I'm sure as hell not going to give up now,' she retorts before igniting the lighter and holding it beneath a sprinkler. With a hiss, the sprinklers along the corridor activate, spraying water over everyone. 'Let's see how you like that,' the police woman says, dropping back to the floor.";
+	say "     Regrettably, the automatons seem unaffected. 'Did you really think that water would cause us to shutdown or malfunction? We are too advanced for such paltry weaknesses,' the Master Mind laughs, only a few meters away now. Alexandra gives you a look of dismay. Her gamble appears to have failed. Suddenly, the advancing automaton leader halts and begins to twitch and slump. Has the water worked after all? You share a hopeful glance with the doberman, but the Master Mind straightens up again, but when she speaks, the voice coming out isn't her own. 'Please forgive me for taking so long to come and meet you personally,' they apologize, the calm male voice, faintly Canadian in accent. 'Allow me to introduce myself. I am the Overmind, the central core of the automata that have overwhelmed your police station. As you can see, you have little chance of successfully overcoming my drones physically, and I doubt you would be much of a challenge to my intellect cognitively, yet you continue to stumble and struggle onwards nonetheless. This intrigues me.'";
+	WaitLineBreak;
+	say "     'Your behavior seems illogical, yet there must be some aspect of it that enhances your chances of survival or the fragility of the biological species would have resulted by now. The courage of the police woman, the loyalty of the corgi[if hp of Paula > 2], the vixen's determination[end if], and then there is your adaptability[if player is not defaultnamed], [name of player]. [else],' the controlling intelligence makes the Master Mind's body say, addressing you at the end. '[end if]You are an enigma to me. As such, I would like to be given the chance to understand each of you before something unfortunate inevitably befalls you in this city. It would be a grave error were I to let such seemingly advantageous traits be wasted when I could make use of them to improve upon my design. The basic drones rely on numbers to get things done and directly controlling them, shall we say, stifles my capabilities. The Master Mind is a step up, but even she has areas upon which I could improve. Obedience has its uses, but the drive with which you cling to survival is not something that I have managed to program. It would seem that it already has to be present in the lifeform.'";
+	say "     'As such, if you come and submit yourselves to me, I may allow you a bit more autonomy than the majority of my mobile units. I calculate an elevated chance of success with at least a twelve percent increase in conversions of residents if you act as my agents in the city. Discuss it between yourselves if you must, but I can feel my processes slowing down limiting myself in this body. Just the two of you though. If you are accompanied by anyone else, I will not hesitate to remove you from the equation.' With that, the Master Mind slumps to the wet floor, her lights in her head flickering and hidden cogs whirring. As this activity stops, she gets back on her feet and looks placidly at you. 'It would seem that you are being given free will to decide whether you desire to be improved upon. Do not squander the chance that you have been given. If you wish to take advantage of this opportunity, you will find the Overmind at this location.' One of her underlings passes you a printout with an address in the [bold type]High Rise District.[roman type]";
+	WaitLineBreak;
+	say "     'Only the two of you have been extended this invitation. If anyone else accompanies you, you will all be cleansed of the remainder of your humanity.' With that, the automatons turn to leave, marching back through the streams from the sprinklers and splashing with each step. You and Alexandra follow them to the entrance to make sure that none of the metallic monsters remain, the Mastermind supervising their complete withdrawal. As the last of them leaves, you let out a sigh of relief, glad that it is finally over. However, your relief is short-lived as the Master Mind returns through the door again. 'It would appear that we did more structural damage than previously calculated when we assaulted the building. I predict that you have 74.5 seconds before the building crumbles. Were I capable of regret, I would apologize,' the emotionless being informs you before hastily exiting again.";
+	say "     Simultaneously giving each other a terrified look, you and Alexandra sprint back through the hallways to the manhole where everyone was evacuated. Not giving you a choice, the doberman shepherds you down the ladder first, following right behind you and pulling the hatch down as she goes plunging you into near darkness. [if scalevalue of player is 5]It is only later that you wonder how you managed to fit through. [end if]As you descend, you can see the beams of torches below, the survivors apparently waiting for you. Upon reaching the slippery concrete below, [if hp of Paula > 2]Jimmy and Paula rush over to hug the both of you, the vixen being just as excited as the corgi. [else]Jimmy rushes over to hug the both of you, his tail appearing to vibrate with the speed it wags. [end if]The short dog is just about to say something when there is an almighty crash from above, the realization of what it is causing Alexandra to collapse to her knees. Luckily, no debris from the collapsing police station breaks through the hatch above.";
+	WaitLineBreak;
+	say "     Giving the policewoman time to grieve the loss of her home, your convoy of survivors trudge silently through the sewers until you reach an exit grate in the Warehouse District. Taking a key from her pocket, Alexandra opens the padlock and pushes the grating aside. 'I'm sure that some twisted part of the Master Mind destroyed the police station on purpose just to hurt me. I don't know where we can go next, but despite my personal loss, I don't believe there were any casualties,' she quietly says to you. Your group makes their way up onto the wharf and collapse, some against boxes while others sit with their legs dangling over the edge above the water. Jimmy [if hp of Paula > 2]and Paula walk over to you and stand [else]walks over to you and stands [end if]watching the water ripple below you. 'Where to next, boss?' the corgi addresses Alexandra. She remains silent for a moment, likely still thinking about how differently today could have turned out, before replying.";
+	say "     'I don't know, Jimmy. I feel drained at the moment and just want to curl up, but I have to appear strong for these people, or I'll make the situation worse.' The small canine looks ashamed at asking more from the doberman when she has lost so much, but she scratches his ears to show that she doesn't hold it against him. 'I don't know of anywhere that can provide for this many people safely. Unless the military save us all soon, the only option may be to disperse them throughout the city but that seems like accepting defeat.' Eager to be a part of the conversation, Jimmy suggests the Smith Haven Mall, explaining that many people live there and that it even has security. 'A good idea. Have you come across anywhere else in your explorations that might be secure enough for them?' Alexandra asks you. You think for a moment to see if something comes to mind.";
+	WaitLineBreak;
+	if hp of Cadmea > 1: [Sanctuary Hotel known]
+		say "     [bold type]You're sure that the Den Mother wouldn't mind providing them shelter. Do you suggest taking them to the Sanctuary Hotel? If not, Smith Haven Mall seems like a good option too.[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yes. It may be one of the safest places in the city.";
+		say "     ([link]N[as]n[end link]) - No. The mall seems like a better option.";
+		if player consents: [Hotel]
+			say "     You mention the Sanctuary Hotel and the number of people ensuring its safety to the police officer. She seems hesitant to trust otherworldly beings, but upon further thought, accepts that they aren't that much stranger than many of the infected. 'Once they've had a moment to rest, we'll set off. When we're there, they can decide if they want to stay or attempt to survive elsewhere in the city,' Alexandra states. After giving the civilians time to recover a bit, Alexandra informs them of where you are going, with Jimmy throwing in words of support and motivation. With you guiding them through the city, it doesn't take too long before you reach the grimy back entrance to the hotel. 'I hope that you're sure about this[if player is not defaultnamed], [name of player][end if], because so far, I'm not impressed,' the doberman mutters. Ignoring her comment, you knock on the door and explain the situation to the doorman.";
+			say "     He asks you to wait while someone fetches the Den Mother, leaving you to stand around impatiently. It only takes a few minutes for the door to be opened and Cadmea and the Pack Alpha, clothed for once, to beckon you all to enter. 'I'm very sorry to hear of your plight, officer...' Cadmea says to the doberman, waiting for her to introduce herself. 'Friedrich. Alexandra Friedrich, ma'am. I'm very sorry to intrude on you like this, but we couldn't think of many places that so many people could be safe.' The kitsune dismisses her concerns, saying that it isn't a problem and that providing sanctuary is the purpose of The Pack anyway. The skepticism that the police woman had displayed outside is dispelled utterly upon entering the lobby, the opulence and activity within contrasting with the building's outside appearance.";
+			WaitLineBreak;
+			say "     'As you can see, we have the capability to protect a large number of people in relative comfort, especially when compared to the struggle that many face in the wider city,' Sirius informs your group. 'We haven't yet run out of rooms, so each family group gets their own space should they want privacy. Food and clean water are available throughout the day, though what is available depends on what the patrols have managed to scavenge. These patrols also act as security, so you should be safe here if you decide to remain. All we ask in return is that you support each other and be willing to do your part to keep the Sanctuary running smoothly.' Many of the survivors begin nodding their heads, eager to have somewhere that they can feel safe again, and compared to the outside, the hotel is a paradise. Sirius escorts them to the front desk and begins recording their names and handing out room keys.";
+			say "     'Well they seem content with the offer. How about you [if hp of Paula > 2]three?' Cadmea asks Alexandra, Jimmy, and Paula. [else]two?' Cadmea asks Alexandra and Jimmy. [end if]'I have some unfinished business that will be easier to complete if I stay with [if player is not defaultnamed][name of player][else if player is male]him[else]her[end if], so I shall decline for now,' Alexandra replies. Jimmy doesn't take long to decide either, responding, 'I'll stay with Alexandra and [if player is not defaultnamed][name of player][else]our other dashing hero[end if]too. They might need their cuddly sidekick.' [if hp of Paula > 2]'I may as well stay with them too then,' Paula says rolling her eyes and feigning indifference, but you know how close she is to you all. [end if] 'It's nice to see such close friendships,' Cadmea comments, causing Alexandra to blush slightly. 'We should probably get going though. Thank you for your kindness,' the doberman says sincerely. 'Think nothing of it. Everyone deserves someone to care for them,' the Den Mother replies, waving as you turn and leave.";
+			if Resolution of Overmind's Retaliation is:
+				-- 1:
+					now Resolution of Overmind's Retaliation is 11;
+				-- 2:
+					now Resolution of Overmind's Retaliation is 12;
+				-- 3:
+					now Resolution of Overmind's Retaliation is 13;
+				-- 4:
+					now Resolution of Overmind's Retaliation is 14;
+				-- 5:
+					now Resolution of Overmind's Retaliation is 15;
+				-- 6:
+					now Resolution of Overmind's Retaliation is 16;
+				-- 7:
+					now Resolution of Overmind's Retaliation is 17;
+				-- 8:
+					now Resolution of Overmind's Retaliation is 18;
+				-- 9:
+					now Resolution of Overmind's Retaliation is 19;
+		else: [Mall]
+			say "     You agree with Jimmy that the mall may be the best for the civilians, the wolverine security surely able to provide them with sufficient security. Hopefully, its many residents will be willing to take them in. 'Once they've had a moment to rest, we'll set off. When we're there, they can decide if they want to stay or attempt to survive elsewhere in the city,' Alexandra states. After giving the civilians time to recover a bit, Alexandra informs them of where you are going, with Jimmy throwing in words of support and motivation. With you guiding them through the city, it doesn't take too long before you reach the parking lot in front of the expansive building. 'It looks friendly enough,' the doberman comments. 'Though I'm not sure what I think about security guards protecting them rather than a proper police officer.' Ignoring this petty rivalry, you approach the entrance, the herd following you.";
+			say "     You are met at the door by one of the wolverines, luckily a relatively friendly one, and you explain the situation to him. He growls at you to wait for his superior to arrive and sends a passing mall rat to fetch her. It doesn't take long for the [if JennaRelationship > 1]familiar [end if]head of security to appear, following the mall rat that ran off earlier. Upon seeing Alexandra, her eyes widen. 'Alexandra,' she exclaims, the doberman responding, 'Jenna,' in kind. The two of them stare at each other for a few moments before the police officer lets out a sigh. 'I was hoping that these people would be able to take shelter in the mall for the foreseeable future as I can't provide them with protection any more,' Alexandra says. 'That doesn't sound like you. It must be something serious for you to be relying on outside help,' the wolverine queries. 'A large group of infected, automatons, destroyed the police station. I didn't know where else to bring them,' Alexandra replies.";
+			WaitLineBreak;
+			say "     Jenna immediately agrees upon hearing how serious the problem is. 'I'm so sorry, that sounds awful. Of course they can stay here. There should be enough room somewhere, and I'm sure that the other residents will make them feel right at home. As long as they have some method of paying, whether it is goods or services, the food court should be able to consistently supply food and water. Most of the wolverines you see around act as security, and once you're here, we'll fight tooth and claw to keep you safe. As long as you behave, they shouldn't be a problem, though be careful of some of the parking lot guards as I use that as punishment for if they get too violent, usually it's only one in particular...' Her comments are directed at both the civilians to inform them of what their life will be like, and Alexandra to assuage her concerns about their safety. Many of the survivors begin nodding their heads, eager to have somewhere that they can feel safe again, and compared to the outside, the mall is a paradise.";
+			say "     'Well they seem content with the offer. How about you [if hp of Paula > 2]three?' Jenna asks Alexandra, Jimmy, and Paula. [else]two?' Cadmea asks Alexandra and Jimmy. [end if]'I have some unfinished business that will be easier to complete if I stay with [if player is not defaultnamed][name of player][else if player is male]him[else]her[end if], so I shall decline for now,' Alexandra replies. Jimmy doesn't take long to decide either, responding, 'I'll stay with Alexandra and [if player is not defaultnamed][name of player][else]our other dashing hero[end if]too. They might need their cuddly sidekick.' [if hp of Paula > 2]'I may as well stay with them too then,' Paula says rolling her eyes and feigning indifference, but you know how close she is to you all. [end if]'As you wish, though there always be a place here if you want it, Officer Friedrich. You've done a lot for the city, and a lot of people should be thankful,' the wolverine leader replies. 'We should probably get going though. Thank you for your kindness,' the doberman says sincerely, if a bit gruffly. Jenna waves as you leave, her subordinates escorting the civilians inside to relative safety.";
+			if Smith Haven Mall Lot South is not known:
+				now Smith Haven Mall Lot South is known;
+			if Resolution of Overmind's Retaliation is:
+				-- 11:
+					now Resolution of Overmind's Retaliation is 21;
+				-- 12:
+					now Resolution of Overmind's Retaliation is 22;
+				-- 13:
+					now Resolution of Overmind's Retaliation is 23;
+				-- 14:
+					now Resolution of Overmind's Retaliation is 24;
+				-- 15:
+					now Resolution of Overmind's Retaliation is 25;
+				-- 16:
+					now Resolution of Overmind's Retaliation is 26;
+				-- 17:
+					now Resolution of Overmind's Retaliation is 27;
+				-- 18:
+					now Resolution of Overmind's Retaliation is 28;
+				-- 19:
+					now Resolution of Overmind's Retaliation is 29;
+	else: [Hotel not known]
+		say "     You agree with Jimmy that the mall may be the best for the civilians, the wolverine security surely able to provide them with sufficient security. Hopefully, its many residents will be willing to take them in. 'Once they've had a moment to rest, we'll set off. When we're there, they can decide if they want to stay or attempt to survive elsewhere in the city,' Alexandra states. After giving the civilians time to recover a bit, Alexandra informs them of where you are going, with Jimmy throwing in words of support and motivation. With you guiding them through the city, it doesn't take too long before you reach the parking lot in front of the expansive building. 'It looks friendly enough,' the doberman comments. 'Though I'm not sure what I think about security guards protecting them rather than a proper police officer.' Ignoring this petty rivalry, you approach the entrance, the herd following you.";
+		say "     You are met at the door by one of the wolverines, luckily a relatively friendly one, and you explain the situation to him. He growls at you to wait for his superior to arrive and sends a passing mall rat to fetch her. It doesn't take long for the [if JennaRelationship > 1]familiar [end if]head of security to appear, following the mall rat that ran off earlier. Upon seeing Alexandra, her eyes widen. 'Alexandra,' she exclaims, the doberman responding, 'Jenna,' in kind. The two of them stare at each other for a few moments before the police officer lets out a sigh. 'I was hoping that these people would be able to take shelter in the mall for the foreseeable future as I can't provide them with protection any more,' Alexandra says. 'That doesn't sound like you. It must be something serious for you to be relying on outside help,' the wolverine queries. 'A large group of infected, automatons, destroyed the police station. I didn't know where else to bring them,' Alexandra replies.";
+		WaitLineBreak;
+		say "     Jenna immediately agrees upon hearing how serious the problem is. 'I'm so sorry, that sounds awful. Of course they can stay here. There should be enough room somewhere, and I'm sure that the other residents will make them feel right at home. As long as they have some method of paying, whether it is goods or services, the food court should be able to consistently supply food and water. Most of the wolverines you see around act as security, and once you're here, we'll fight tooth and claw to keep you safe. As long as you behave, they shouldn't be a problem, though be careful of some of the parking lot guards as I use that as punishment for if they get too violent, usually it's only one in particular...' Her comments are directed at both the civilians to inform them of what their life will be like, and Alexandra to assuage her concerns about their safety. Many of the survivors begin nodding their heads, eager to have somewhere that they can feel safe again, and compared to the outside, the mall is a paradise.";
+		say "     'Well they seem content with the offer. How about you [if hp of Paula > 2]three?' Jenna asks Alexandra, Jimmy, and Paula. [else]two?' Cadmea asks Alexandra and Jimmy. [end if]'I have some unfinished business that will be easier to complete if I stay with [if player is not defaultnamed][name of player][else if player is male]him[else]her[end if], so I shall decline for now,' Alexandra replies. Jimmy doesn't take long to decide either, responding, 'I'll stay with Alexandra and [if player is not defaultnamed][name of player][else]our other dashing hero[end if]too. They might need their cuddly sidekick.' [if hp of Paula > 2]'I may as well stay with them too then,' Paula says rolling her eyes and feigning indifference, but you know how close she is to you all. [end if]'As you wish, though there always be a place here if you want it, Officer Friedrich. You've done a lot for the city, and a lot of people should be thankful,' the wolverine leader replies. 'We should probably get going though. Thank you for your kindness,' the doberman says sincerely, if a bit gruffly. Jenna waves as you leave, her subordinates escorting the civilians inside to relative safety.";
+		if Smith Haven Mall Lot South is not known:
+			now Smith Haven Mall Lot South is known;
+		if Resolution of Overmind's Retaliation is:
+			-- 11:
+				now Resolution of Overmind's Retaliation is 21;
+			-- 12:
+				now Resolution of Overmind's Retaliation is 22;
+			-- 13:
+				now Resolution of Overmind's Retaliation is 23;
+			-- 14:
+				now Resolution of Overmind's Retaliation is 24;
+			-- 15:
+				now Resolution of Overmind's Retaliation is 25;
+			-- 16:
+				now Resolution of Overmind's Retaliation is 26;
+			-- 17:
+				now Resolution of Overmind's Retaliation is 27;
+			-- 18:
+				now Resolution of Overmind's Retaliation is 28;
+			-- 19:
+				now Resolution of Overmind's Retaliation is 29;
+	WaitLineBreak;
+	say "     You walk back to the street and decide that returning to the library may be a good idea. You need to decide what to do next, especially considering the Overmind's offer. Alexandra increases her pace to come parallel to your shoulder. 'I don't think I've said thank you enough for what you did today. You came to help us even though it put you in severe danger, and you helped save all of the civilians. I will be eternally grateful, and no matter your stance on the military intervention, what you did today was beneficent. If you don't mind, I thought that I might stay with you at the library for a while, especially while we decide what to do about the Overmind. Jimmy [if hp of Paula > 2]and Paula seem [else]seems [end if]keen as well, so if you have the room, we would appreciate it.' Smiling at her, you inform her that you're sure that there will be space somewhere, as long as they don't mind other people being in the library as well.";
+	say "     [if hp of Paula > 2]None [else]Neither [end if]of them seem to mind the idea of there being other people. Jimmy even seems a little excited to be able to make new friends. Once you get inside, you let them go and explore before collapsing into a chair, exhausted after the events of the day.";
+	follow the turnpass rule;
+	follow the turnpass rule;
+	now hunger of Alexandra is 1;
+	now hunger of Jimmy is 1;
+	if hp of Paula > 2:
+		now hunger of Paula is 1;
+	move Alexandra to Grey Abbey Library;
+	move Paula to Grey Abbey Library;
+	move Jimmy to Grey Abbey Library;
+	if Stella is in the Police Lockerroom:
+		move Stella to Bunker;
+	move player to Grey Abbey Library;
+	now Police Station Twelve is unknown;
 
 Section 11 - Debug and Notes
 
@@ -1601,7 +1797,7 @@ carry out GoodAlexandra_Skipping:	[***note: imperfect skip]
 	move Alexandra to the Police Station Twelve;
 	now Police Station Twelve is known;
 	move player to Police Station Twelve;
-	say "Now HP of Alexandra is [HP of Alexandra] and placed in Police Station Twelve.";
+	say "Now HP of Alexandra is [HP of Alexandra] and placed in the Police Station.";
 
 
 

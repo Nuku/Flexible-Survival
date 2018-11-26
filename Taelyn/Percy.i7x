@@ -27,6 +27,10 @@ Version 1 of Percy by Taelyn begins here.
 [Add Entreances to the West(Snowy Forest), North(Kobold Caverns), and East(Mystical Forest)]
 [Adding mini questlines to unlock more Percy content, relationship, and equipment          ]
 
+an everyturn rule: [bugfix for old exports]
+	if HP of Percy > 0 and Percy is in NPC Nexus:
+		move Percy to Ironscale Hollow;
+
 the linkaction of Percy is "[Percylinkaction]".
 
 to say Percylinkaction:
@@ -77,7 +81,7 @@ Section 2 - Talking with Percy
 instead of conversing the Percy:
 	if HP of Percy is 0: [not encountered yet]
 		say "     ERROR: Percy shouldn't be where a player can see him yet! Please report to Wahn on the FS discord or forum and quote this tracking number for easier bugfixing: [HP of Percy]";
-	else if HP of Percy > 1: [repeat talk with regular Percy]
+	else: [repeat talk with regular Percy]
 		say "[PercyTalkMenu]";
 
 to say PercyTalkMenu:
@@ -355,6 +359,10 @@ to say SouthBurrow desc:
 	[say "To the [bold type]Northeast[roman type] looks to be a clearing among the trees. Some kind of glade, though you get a somewhat strange feeling as you look towards it. You could almost swear seeing a glint of blue from it.";]
 
 Part 2 - Ironscale Hollow
+
+Table of GameRoomIDs (continued)
+Object	Name
+Ironscale Hollow	"Ironscale Hollow"
 
 Ironscale Hollow is a room. It is fasttravel. Ironscale Hollow is sleepsafe. It is private.
 Ironscale Hollow is north of Southern Burrow Entrance.
