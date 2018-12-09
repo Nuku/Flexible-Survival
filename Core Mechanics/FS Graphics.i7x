@@ -254,6 +254,7 @@ Figure of MarcOrwell_icon is the file "MarcOrwell.jpg".
 Figure of Marc_face_icon is the file "Marc_face.jpg".
 Figure of Marc_fucked_icon is the file "Marc_fucked.jpg".
 Figure of Mason_icon is the file "Mason.jpg".
+Figure of Medea_face_icon is the file "Medea_face.jpg".
 Figure of Mike_face_icon is the file "Mike_face.jpg".
 Figure of Mike_icon is the file "Mike.jpg".
 Figure of Monty_ass_icon is the file "Monty_ass.jpg".
@@ -738,6 +739,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Mareslut"	Figure of Mareslut_icon	"Waxraven/WXRVN"	g-white	"normal"
 "Mason"	Figure of Mason_icon	"Abelsword"	g-black	"normal"
 "MasterMind"	Figure of MasterMind_icon	""	g-white	"normal"
+"Medea_face"	Figure of Medea_face_icon	"LocksTO"	g-white	"normal"
 "Megakitty"	Figure of Megakitty_icon	"BushyCat"	g-white	"normal"
 "Mental Mouse"	Figure of MentalMice_icon	""	g-white	"normal"
 "Messy Pig"	Figure of MessyPig_icon	"Anymouse1968"	g-white	"normal"
@@ -1075,6 +1077,7 @@ carry out artistcredits:
 	say "     Marc (fucked) by Laylo @ https://www.furaffinity.net/user/lay-lo/[line break]";
 	say "     Mareslut by Waxraven/WXRVN @ http://www.waxraven.tumblr.com/[line break]";
 	say "     Mason by Abelsword @ https://www.furaffinity.net/user/Abelsword[line break]";
+	say "     Medea by LocksTO @ https://www.furaffinity.net/user/locksto/[line break]";
 	say "     Micaela by Kattzie @ furaffinity.net[line break]";
 	say "     Mike (face) SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Mike by Darian821 @ y-gallery.net[line break]";
