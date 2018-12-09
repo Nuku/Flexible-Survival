@@ -205,7 +205,6 @@ Figure of Fiona_icon is the file "Fiona.jpg".
 Figure of Fancy_icon is the file "FSTF_Fancy_ig.jpg".
 Figure of Fang_face_icon is the file "Fang_face.jpg".
 Figure of Felix_icon is the file "Felix.jpg".
-Figure of Felix_face_icon is the file "Felix_face.jpg".
 Figure of Francois_icon is the file "Francois_ig.jpg".
 Figure of Frank_icon is the file "Frank.jpg".
 Figure of Gabriel_icon is the file "Gabriel.jpg".
@@ -288,6 +287,7 @@ Figure of Rane_clothed_icon is the file "Rane_clothed.jpg".
 Figure of Rane_face_icon is the file "Rane_face.jpg".
 Figure of Rod_icon is the file "rod.jpg".
 Figure of RondaSR_icon is the file "ronda_ig.jpg".
+Figure of Ruby_naked_icon is the file "Ruby_naked.jpg".
 Figure of Ryousei_face_icon is the file "Ryousei_face.jpg".
 Figure of Ryousei_fundoshi_icon is the file "Ryousei_fundoshi.jpg".
 Figure of Ryousei_naked_icon is the file "Ryousei_naked.jpg".
@@ -645,8 +645,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Fang_face"	Figure of Fang_face_icon	"SineAlas"	g-black	"normal"
 "Feline_F1"	Figure of Feline_F1_icon	"Anymouse1968"	g-white	"normal"	[shows one of these two for female Feline]
 "Feline_F2"	Figure of Feline_F2_icon	"Anymouse1968"	g-white	"normal"	[shows one of these two for female Feline]
-"Felix_face"	Figure of Felix_face_icon	"Geir"	g-black	"normal"
-"Felix"	Figure of Felix_icon	"Geir"	g-black	"normal"
+"Felix"	Figure of Felix_icon	"ConnyChiwa"	g-white	"normal"
 "Francois"	Figure of Francois_icon	"Xenotropos"	g-white	"normal"
 "Frank"	Figure of Frank_icon	"Dolphpup"	g-black	"normal"
 "Feral Shaft Beast"	Figure of FeralShaftBeast_icon	"Demon-Man"	g-white	"normal"
@@ -789,6 +788,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Reindeer"	Figure of Reindeer_icon	"MoT"	g-black	"normal"
 "Rod"	Figure of Rod_icon	"The_Negative"	g-white	"normal"
 "RondaSR"	Figure of RondaSR_icon	"uniformvixen"	g-black	"normal"
+"Ruby_naked"	Figure of Ruby_naked_icon	"Watsup"	g-white	"normal"
 "Ryousei_face"	Figure of Ryousei_face_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_fundoshi"	Figure of Ryousei_fundoshi_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_naked"	Figure of Ryousei_naked_icon	"ValdericBlackstag"	g-black	"normal"
@@ -1042,7 +1042,7 @@ carry out artistcredits:
 	say "     Fang by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
 	say "     Francois by Xenotropos @ furaffinity.net[line break]";
 	say "     Frank by Dolphpup @ weasyl.com (Isil @ furaffinity.net)[line break]";
-	say "     Felix by Geir @ furaffinity.net[line break]";
+	say "     Felix by ConnyChiwa @ https://www.furaffinity.net/user/connychiwa/[line break]";
 	say "     Gabriel by Darian821 @ y-gallery.net[line break]";
 	say "     Garrett by Catmonkshiro @ furaffinity.net[line break]";
 	say "     Garth (face) by SineAlas @ https://www.furaffinity.net/user/SineAlas/[line break]";
@@ -1093,6 +1093,7 @@ carry out artistcredits:
 	say "     Rane by Inkydemon @ https://www.furaffinity.net/user/inkydemon/[line break]";
 	say "     Rod by The_Negative @ furaffinity.net[line break]";
 	say "     Ronda (Slut Rat) by uniformvixen @ furaffinity.net[line break]";
+	say "     Ruby by Watsup @ https://www.furaffinity.net/user/watsup/[line break]";
 	say "     Ryousei by ValdericBlackstag @ https://www.furaffinity.net/user/valdericblackstag/[line break]";
 	say "     Sally by Furball @ furaffinity.net[line break]";
 	say "     Sam (as Dracovixentaur) by Anymouse1968 @ furaffinity.net[line break]";
@@ -1168,7 +1169,7 @@ carry out ArtistBanning:
 	artistbanmenu;
 
 to artistbanmenu: [more compact version]
-	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
+	let artistlist be {"Abelsword", "Anonymous", "Anyare", "Anymouse1968", "Aosuka", "Astro", "AugurMew", "Bix707", "Bludwing", "Boo3", "BushyCat", "Caltroplay", "Candy", "canned", "Catmonkshiro", "catnamedfish", "Cirrusthecloud", "ConnyChiwa", "Cooper", "CrashBurnDraw", "Damdidoo", "Darian821", "dbd", "Demon-Man", "dhstein", "Dolphpup", "Dragonpunk", "Eevachu", "Familliar", "FaroreNightclaw", "Feralise", "Furball", "FsMaverick", "Geir", "Genelightfoot", "HBruton", "Hioshiru", "Hufnaar", "Inkydemon", "JaxxBlackFox", "Kadel", "Kattzie", "Keitaro87", "Kien-Biu", "Kikeri-arts", "Kupo Klein", "KV1NN4", "Lay", "Laylo", "lionsilverwolf", "Waxraven/WXRVN", "Luneth", "Lyttathebug", "MadTurtle", "MoT", "Nokturnalkittie", "Obieblu", "o-kemono", "Padunk", "Purplepardus", "Rastear", "RedCoatCat", "Redragon", "Rosali", "Rukis", "SandySchreiber", "Seija", "Sharei", "SineAlas", "Soryane", "SparklePens", "Strype", "Sususmiles", "The_Negative", "TheRedAngel", "TheWhiteWolfen", "TwilightMaster", "TylerAz", "Uniformvixen", "Unknown", "valdericblackstag", "Valen", "Watsup", "Wemd", "Xenotropos"};
 	now calcnumber is -1;
 	let countnumber be 1;
 	let abmexit be 0;

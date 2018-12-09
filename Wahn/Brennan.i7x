@@ -968,6 +968,27 @@ object	name
 Brennan	"Brennan"
 
 Brennan is a man.
+ScaleValue of Brennan is 3. [human sized]
+Cocks of Brennan is 0.
+Cock Length of Brennan is 9.
+Cock Width of Brennan is 2.
+Testes of Brennan is 0.
+Cunts of Brennan is 1.
+Cunt Length of Brennan is 9.
+Cunt Width of Brennan is 2.
+Breasts of Brennan is 2. [2 nipples]
+Breast Size of Brennan is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Brennan is false.
+PlayerRomanced of Brennan is false.
+PlayerFriended of Brennan is false.
+PlayerControlled of Brennan is false.
+PlayerFucked of Brennan is false.
+OralVirgin of Brennan is false.
+Virgin of Brennan is false.
+AnalVirgin of Brennan is false.
+PenileVirgin of Brennan is true.
+SexuallyExperienced of Brennan is true.
 The description of Brennan is "[BrennanDesc]".
 The conversation of Brennan is { "<This is nothing but a placeholder!>" }.
 The scent of Brennan is "     Brennan smells nicely masculine, with a little hint of sweat on his muscular chest, as well as... something else, rather hard to place your finger on.".

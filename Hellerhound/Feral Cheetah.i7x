@@ -189,7 +189,7 @@ to say cheetahheat:
 			say "A waft on the breeze catches your nose, your head snapping around as the need between your legs throbs. Unable to control your lust you strike out in the direction of and immediately upon seeing the infected monster that you scented drop onto you immediately submit, offering yourself freely.";
 			say "[cheetahreset]";
 			let hmonlist be a list of numbers;
-			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear "outside" ]
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear "Outside" ]
 				choose row X from the Table of Random Critters;
 				if there is no area entry, next;
 				if area entry is "Zoo":

@@ -478,12 +478,12 @@ instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
 	move player to Dry Plains;
-	say "     As you come out into the dry plains, a rather concerned looking Thomas gallops up to you. 'Someone needs our help - please hurry!' He dashes off again before you can say anything, so you hurry up and do your best to follow him. Soon, you come into sight of a slavering behemoth of a creature chasing after a teenage centaur. 'Please, can you help me save him? We can't let him get caught by that!'";
+	say "     As you come out into the dry plains, a rather concerned looking Thomas gallops up to you. 'Someone needs our help - please hurry!' He dashes off again before you can say anything, so you hurry up and do your best to follow him. Soon, you come into sight of a slavering behemoth of a creature chasing after a visibly exhausted teenage centaur. 'Please, can you help me save him? We can't let him get caught by that! Maybe just wave at it then run the other way, leading it away?'";
 	LineBreak;
 	say "     [bold type]What's your reply?[roman type][line break]";
 	LineBreak;
-	say "     ([link]Y[as]y[end link]) - Take on the behemoth.";
-	say "     ([link]N[as]n[end link]) - Run away.";
+	say "     ([link]Y[as]y[end link]) - Approach the behemoth.";
+	say "     ([link]N[as]n[end link]) - Leave them and get yourself to safety.";
 	if player consents:
 		LineBreak;
 		challenge "Behemoth";

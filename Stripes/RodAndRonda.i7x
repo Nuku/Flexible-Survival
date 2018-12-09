@@ -7,7 +7,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Rod Mallrat	"Rod Mallrat"
 
-Rod Mallrat is a person. "[if HP of Ronda is not 100]A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDonalds[or]one of the tables[or]the guarded bathroom area[at random][else]Rod the slut rat is [one of]stretched out on some cushions[or]curled up for a quick nap[or]wiping some stray globs of cum from her fur and then licking them from her fingers[or]tinkering with some odd and ends she's found among the slut rats['] collected junk[at random][end if].".
+Rod Mallrat is a person. "[if HP of Ronda is not 100]A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDaniels[or]one of the tables[or]the guarded bathroom area[at random][else]Rod the slut rat is [one of]stretched out on some cushions[or]curled up for a quick nap[or]wiping some stray globs of cum from her fur and then licking them from her fingers[or]tinkering with some odd and ends she's found among the slut rats['] collected junk[at random][end if].".
 The description of rod mallrat is "[roddesc]".
 The icon of Rod Mallrat is figure of Rod_icon.
 Rod is a trader.

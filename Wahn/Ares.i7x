@@ -21,6 +21,27 @@ object	name
 Ares	"Ares"
 
 Ares is a man. HP of Ares is usually 0.
+ScaleValue of Ares is 3. [human sized]
+Cocks of Ares is 1.
+Cock Length of Ares is 9.
+Cock Width of Ares is 2.
+Testes of Ares is 2.
+Cunts of Ares is 0.
+Cunt Length of Ares is 9.
+Cunt Width of Ares is 2.
+Breasts of Ares is 2. [2 nipples]
+Breast Size of Ares is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Ares is false.
+PlayerRomanced of Ares is false.
+PlayerFriended of Ares is false.
+PlayerControlled of Ares is false.
+PlayerFucked of Ares is false.
+OralVirgin of Ares is false.
+Virgin of Ares is true.
+AnalVirgin of Ares is true.
+PenileVirgin of Ares is false.
+SexuallyExperienced of Ares is true.
 The description of Ares is "[AresDesc]".
 The conversation of Ares is { "Woof." }.
 AresDannyEncounters is a number that varies.

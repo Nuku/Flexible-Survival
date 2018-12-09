@@ -194,6 +194,11 @@ A person has a truth state called Virgin. Virgin is usually true.
 A person has a truth state called AnalVirgin. AnalVirgin is usually true.
 A person has a truth state called PenileVirgin. PenileVirgin is usually true. [not saved till new infection system update]
 A person has a truth state called SexuallyExperienced. SexuallyExperienced is usually false. [not saved till new infection system update]
+A person has a text called Originalgender. Originalgender is usually "Undefined". [original gender of the pre-transform person]
+A person has a text called PlayerOriginalgender. PlayerOriginalGender is usually "Undefined". [first meeting gender with the player]
+A person has a text called PlayerLastGender. PlayerLastGender is usually "Undefined". [gender of the player during the last meeting]
+A person has a text called PlayerLastBodytype. PlayerLastBodytype is usually "Undefined". [bodytype of the player during the last meeting]
+A person has a number called PlayerLastSize. PlayerLastSize is usually 3. [size of the player during the last meeting]
 
 The player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
 The player has a text called bodytype. The bodytype is usually "Human".						[broad adjective for species]
@@ -3099,7 +3104,7 @@ To level up:
 	say "You have gained level [level of player]! Congratulations!";
 	if remainder after dividing level of player by 2 is 0:
 		say "Current stats:[line break]";
-		say "Strength: [strength of player], Dexterity: [dexterity of player], Stamina: [stamina of player], Charisma: [Charisma of player], Perception: [perception of player], Intelligence: [intelligence of player].";
+		say "Strength: [strength of player], Dexterity: [dexterity of player], Stamina: [stamina of player], Charisma: [Charisma of player], Intelligence: [intelligence of player], Perception: [perception of player].";
 		say "Pick a stat to increase.";
 		say "[link]1 - Strength[as]1[end link][line break]";
 		say "[link]2 - Dexterity[as]2[end link][line break]";
@@ -3220,6 +3225,7 @@ check resting:
 				say "...and you thankfully complete your nap in peace.";
 		else if roughing is true:
 			say "You are thankfully able to complete your nap in peace.";
+
 to Rest:
 	let num1 be maxHP of the player divided by 4;
 	let num2 be ( ( stamina of the player * 3 ) / 2 ) + level of the player;
@@ -3261,6 +3267,7 @@ carry out resting:
 		else:
 			increase HP of player by (level of rubber tigress) / 2; [grants additional rest]
 	Rest;
+	follow the turnpass rule;
 	follow the turnpass rule;
 	follow the player injury rule;
 	say "You are [descr]([HP of player]/[maxHP of player]).";
@@ -3885,6 +3892,10 @@ This is the self examine rule:
 	[ Infection Descriptions Below   ]
 	say "Looking at yourself, your body is covered in [skin of player] skin. Your face is [face of player]. ";
 	say "Your body is [body of player]. ";
+	if tail of player is empty:
+		say "";
+	else:
+		say " [tail of player] ";
 	follow the breast descr rule;
 	if breasts of player > 0:
 		if breast size of player is 0:
@@ -3917,10 +3928,6 @@ This is the self examine rule:
 		say "Two small scars from Boghrim's tusks mark your shoulder, a reminder of the first time the big orc fucked you. ";
 	if "Top Dog" is listed in feats of player:
 		say "Your back still bears the scars left by Alexandra's claws during a bout of intense mating, a reminder of your dominance over her and your status as 'Top Dog'. ";
-	if tail of player is empty:
-		say "";
-	else:
-		say " [tail of player] ";
 	[ ^^ Infection Descriptions Done ]
 	[ Genital Descriptions Below     ]
 	let cocktext be "";
@@ -5037,6 +5044,7 @@ Include Robed Cultist by Wahn.
 Include Rodeo Clown by Stripes.
 Include Rubber Drake by Song.
 Include Rubber Tigress by Sarokcat.
+Include Ruby by CrimsonAsh.
 Include Saber Kitty by Blaydrex.
 Include Sabretooth by Sarokcat.
 Include Salamander by Stripes.
@@ -5130,6 +5138,7 @@ Include Cadmea by Prometheus.
 Include Carl by Wahn.
 Include Chris by Wahn.
 Include Cindy by Stripes.
+Include College Guards by Rikaeus.
 Include Colleen by Sarokcat.
 Include Corbin by Wahn.
 Include Coura by Wahn.
@@ -5183,6 +5192,7 @@ Include Inflatable Orca by Song.
 Include Inflatable Otter Suit by Song.
 Include Informant by Kaleem mcintyre.
 Include Janice by Sarokcat.
+Include Jake by Rikaeus.
 Include Jay by Wahn.
 Include Jenna by Rikaeus.
 Include Jimmy by Stripes.
@@ -5239,6 +5249,7 @@ Include Richard by Rikaeus.
 Include RodAndRonda by Stripes.
 Include Roman by Kernog.
 Include Sally by Stripes.
+Include Sakura Sato by Rikaeus.
 Include Sam by Stripes.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
@@ -5271,6 +5282,7 @@ Include Val by Wahn.
 Include Vanessa by Stripes.
 Include Velos by Blue Bishop.
 Include Vent Fox by Dys.
+Include Wally by Rikaeus.
 Include Wendy by Wahn.
 Include Wild Mustang by Wahn.
 Include Yolanda by Stripes.

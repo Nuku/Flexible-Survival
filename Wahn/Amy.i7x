@@ -88,6 +88,7 @@ object	name
 Amy	"Amy"
 
 Amy is a woman.
+[physical details as of game start]
 ScaleValue of Amy is 3. [human sized]
 Cocks of Amy is 0. [no cock]
 Cock Length of Amy is 0. [no cock length]
@@ -98,6 +99,18 @@ Cunt Length of Amy is 8. [gets stretched a bit by an alpha husky]
 Cunt Width of Amy is 3. [gets stretched a bit by an alpha husky]
 Breasts of Amy is 4. [4 nipples]
 Breast Size of Amy is 2. [B cup at the start]
+[Basic Interaction states as of game start]
+PlayerMet of Amy is false.
+PlayerRomanced of Amy is false.
+PlayerFriended of Amy is false.
+PlayerControlled of Amy is false.
+PlayerFucked of Amy is false.
+OralVirgin of Amy is true.
+Virgin of Amy is true.
+AnalVirgin of Amy is true.
+PenileVirgin of Amy is true.
+SexuallyExperienced of Amy is false.
+
 The icon of Amy is Figure of Amy_icon.
 The description of Amy is "[AmyDesc]".
 The conversation of Amy is { "Woof." }.

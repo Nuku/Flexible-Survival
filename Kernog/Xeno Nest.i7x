@@ -126,10 +126,8 @@ to say nestFacehugger:
 	increase diceroll by bonus;
 	if diceroll <= 12:
 		say "     You hear something screech, next to you. You do not think twice and leap away. A crab-like creature flies past your head. As soon as it lands on the floor, you kick it away and run the other way. Who knows what could have happened if you did not react in time? Afterwards, you find the door leading to the upper floor, and leave this strange place.";
-		xenoNestWin;
 	else:
 		say "     You hear something screech, next to you. You make the mistake of turning your head in the direction of the sound. You barely have the time to notice the crab-like creature jumping towards you, before it clamps down on your head. You feel its long legs squeeze around your [face of player], while its tail wraps around your neck. Safely anchored, the creature pushes a tube-like organ down your throat. You gag as the organ forces its way in. You wrestle with the creature, falling on the ground as you do so, but you cannot budge the chitinous creature from you. The effects of the lack of air slowly takes hold, and your consciousness begins to fade. The last thing you feel is an oblong object being forced past your jaw, and slowly slipping inside your throat.";
-		xenoNestFailure;
 
 
 to say nestTrilobite:
@@ -139,10 +137,8 @@ to say nestTrilobite:
 	increase diceroll by bonus;
 	if diceroll <= 12:
 		say "     A guttural growl erupts from the ceiling, and a large, octopus-like creature falls on you. It tries to overpower you with its musuclar tentacle arms, and thin tendrils growing lining up its underside. Fortunately, you manage to overpower the creature, and push it back. It flops almost pathetically on the nest's floor, while you put as much distance as possible between you and it.";
-		xenoNestWin;
 	else:
 		say "     A guttural growl erupts from the ceiling, and a large, octopus-like creature falls on you.  Its musuclar tentacle arms wrap around your body, while the sheer weight flattens you on your back. The creature's arms squeeze tight, preventing you from struggling while thin tendrils wrap around your head and lock it in place against a long slit of the creature. A thick, tongue-like organ slides out of the hole, and into your mouth. It stretches your [face of player] jaw and dives into your esophagus, creating a visible bulge in your throat. You wiggle on the fleshy floor with your aggressor, while you slowly asphyxiate from the constriction and the organ gagging your mouth. Your last conscious feeling is the sensation of an oblong object being forced past your jaw, and slowly slipping inside your throat.";
-		xenoNestFailure;
 
 to xenoNestFailure:
 	ovichance;
@@ -172,10 +168,10 @@ to xenoLoot:
 	say "     ([link]N[as]n[end link]) - Water";
 	if player consents:
 		LineBreak;
-		increase carried of food by 1;
+		add "Food" to the invent of player;
 		say " You put a pack of food into your bag.";
 	else:
-		increase carried of water bottle by 1;
+		add "Water Bottle" to the invent of player;
 		LineBreak;
 		say "You put a bottle of mineral water into your bag.";
 

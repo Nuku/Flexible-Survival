@@ -157,6 +157,9 @@ to EventRestore:
 					now EventObject is inactive;
 				now Resolution of EventObject is Resolution entry;
 				now sarea of EventObject is SituationArea entry;
+				[bugfix code after re-naming Midway to Fair]
+				if sarea of EventObject is "Midway":
+					now sarea of EventObject is "Fair";
 				if debugactive is 1:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";
 			else:
@@ -609,6 +612,9 @@ to BeastRestore:
 			if there is a Name of BeastName in the Table of Random Critters:
 				choose row with Name of BeastName in Table of Random Critters;
 				now Area entry is BeastArea;
+				[bugfix code after re-naming Midway to Fair]
+				if Area entry is "Midway":
+					now Area entry is "Fair";
 				now non-infectious entry is BeastNonInfect;
 				now sex entry is BeastSex;
 				if debugactive is 1:

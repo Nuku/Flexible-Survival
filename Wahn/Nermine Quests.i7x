@@ -31,6 +31,7 @@ Instead of resolving a Strange Shop:
 		WaitLineBreak;
 		say "     With that said, she twists the ornate door-handle, opening the wooden door into what clearly is a mid-sized storage room, overstuffed with more strange items. She smirks mysteriously as she walks in on slender paws, then pulls a small wooden box out of one of the shelves, carrying it with her as she walks back out into the store and closes the door once more. Opening what she is carrying and revealing leaves inside, the jackaless asks, 'Should Nermine make two cups of tea? It might provide some relaxiation for overstressed nerves.' Once more baffled by the strangeness that is her and her store, you accept, drinking a cup of admittedly excellent tea with the storekeeper before you eventually step out into the mall.";
 	move player to Mall West Wing;
+	now Smith Haven Mall Lot South is known;
 	now Strange Shop is resolved;
 
 Section 2 - Quest Events

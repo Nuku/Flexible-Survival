@@ -60,6 +60,27 @@ object	name
 Carl	"Carl"
 
 Carl is a man.
+ScaleValue of Carl is 3. [human sized]
+Cocks of Carl is 1.
+Cock Length of Carl is 9.
+Cock Width of Carl is 4.
+Testes of Carl is 2.
+Cunts of Carl is 0.
+Cunt Length of Carl is 9.
+Cunt Width of Carl is 2.
+Breasts of Carl is 2. [2 nipples]
+Breast Size of Carl is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Carl is false.
+PlayerRomanced of Carl is false.
+PlayerFriended of Carl is false.
+PlayerControlled of Carl is false.
+PlayerFucked of Carl is false.
+OralVirgin of Carl is false.
+Virgin of Carl is true.
+AnalVirgin of Carl is false.
+PenileVirgin of Carl is false.
+SexuallyExperienced of Carl is true.
 The icon of Carl is Figure of Carl_clothed_icon.
 The description of Carl is "[CarlDesc]".
 The conversation of Carl is { "Woof." }.

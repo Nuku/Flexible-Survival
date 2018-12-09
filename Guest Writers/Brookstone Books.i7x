@@ -228,6 +228,8 @@ To say afsm:
 	else:
 		If survfeat is 1:
 			say "     Feeling that you're ready for another go at the Army field survival manual, you pick it up and continue right where you left off. After awhile of reading your eyelids begin to grow heavy, and just as you had about enough of even more of the military acronyms, you reach the end of it. While rubbing your eyes, you sigh in relief and close the book. As you put the manual back onto the pile you found it on, you feel that you gained enough understanding of how you can best to survive in the much changed city.";
+			LineBreak;
+			say "[bold type]'Survivalist' has been added to your feats![roman type][line break]";
 			Add "Survivalist" to feats of player;
 			Follow the turnpass rule;
 		else:
@@ -243,6 +245,8 @@ To say thab:
 	else:
 		If huntfeat is 1:
 			say "     You figure you're ready for another go at [bold type]The Hunter's Almanac[roman type] and decide to skip to the chapter about following your quarry's tracks to read the finer ways of tracking. Even though you intended to just skim it, you find that there's a lot of good points made and find an unoccupied chair to relax in and read. When you're done reading the chapter you snap the book close with a smile, optimistic that whatever you're looking for will now be easier to find.";
+			LineBreak;
+			say "[bold type]'Expert Hunter' has been added to your feats![roman type][line break]";
 			Add "Expert Hunter" to feats of player;
 			Follow the turnpass rule;
 		else:
@@ -258,6 +262,8 @@ To say myse:
 	else:
 		If purfeat is 1:
 			say "     You head back to the self-improvement section to pull the self-help book off the shelf, find an unoccupied chair to sit in, and pick up where you left off. Only when Beverly comes over to check on you do you look up. After blinking a couple times, you chuckle quietly and tell her you're ok. Spending a little more time with the book, you gleam as much info as you can from it until you feel that you have more of a mental grip of your current situation.";
+			LineBreak;
+			say "[bold type]'Strong Psyche' has been added to your feats![roman type][line break]";
 			Add "Strong Psyche" to feats of player;
 			Follow the turnpass rule;
 		else:
@@ -273,6 +279,8 @@ To say hfgb:
 	else:
 		If hagfeat is 1:
 			say "     Deciding that you want to get further into [bold type]How to Find a Good Bargain[roman type], you head back to the shelf to grab it then sit down to read. Before you even realize it, you're finished with the book. Having found it quite informative, you go back to re-read some of the finer points of bargaining. When you are done you put the book back on the shelf, confident that you are able to easily wheel and deal with anyone you come across.";
+			LineBreak;
+			say "[bold type]'Haggler' has been added to your feats![roman type][line break]";
 			Add "Haggler" to feats of player;
 			Follow the turnpass rule;
 		else:

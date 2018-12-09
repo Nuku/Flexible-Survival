@@ -77,6 +77,12 @@ to VariableSave:
 	write File of IndexedTextSave from the Table of GameIndexedTexts; [freshly made table gets saved to file]
 	write File of TextListSave from the Table of GameTextLists; [freshly made table gets saved to file]
 	write File of NumberListSave from the Table of GameNumberLists; [freshly made table gets saved to file]
+	blank out the whole of Table of GameTexts; [empty out all old data]
+	blank out the whole of Table of GameNumbers; [empty out all old data]
+	blank out the whole of Table of GameTruths; [empty out all old data]
+	blank out the whole of Table of GameIndexedTexts; [empty out all old data]
+	blank out the whole of Table of GameTextLists; [empty out all old data]
+	blank out the whole of Table of GameNumberLists; [empty out all old data]
 
 to TextVariableSave:
 	choose blank row in Table of GameTexts;
@@ -2837,6 +2843,14 @@ to NumberVariableSave:
 			now NumberVarValue entry is vpostmusenum;
 		-- "waiterhater":
 			now NumberVarValue entry is waiterhater;
+		-- "WallyQuestDenial":
+			now NumberVarValue entry is WallyQuestDenial;
+		-- "WallyOrcFled":
+			now NumberVarValue entry is WallyOrcFled;
+		-- "InsightGained":
+			now NumberVarValue entry is InsightGained;
+		-- "WallyTrust":
+			now NumberVarValue entry is WallyTrust;
 		-- "WallStanding":
 			now NumberVarValue entry is WallStanding;
 		-- "WarLossCounter":
@@ -6535,6 +6549,14 @@ to VariableNumberLoad:
 					now vpostmusenum is numberVarValue entry;
 				-- "waiterhater":
 					now waiterhater is numberVarValue entry;
+				-- "WallyQuestDenial":
+					now WallyQuestDenial is numberVarValue entry;
+				-- "WallyOrcFled":
+					now WallyOrcFled is numberVarValue entry;
+				-- "InsightGained":
+					now InsightGained is numberVarValue entry;
+				-- "WallyTrust":
+					now WallyTrust is numberVarValue entry;
 				-- "WallStanding":
 					now WallStanding is numberVarValue entry;
 				-- "WarLossCounter":
