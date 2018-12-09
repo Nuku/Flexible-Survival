@@ -287,7 +287,7 @@ Figure of Rane_clothed_icon is the file "Rane_clothed.jpg".
 Figure of Rane_face_icon is the file "Rane_face.jpg".
 Figure of Rod_icon is the file "rod.jpg".
 Figure of RondaSR_icon is the file "ronda_ig.jpg".
-Figure of Ruby_naked_icon is the file "Ruby_naked.jpg".
+[Figure of Ruby_naked_icon is the file "Ruby_naked.jpg".] [Not found]
 Figure of Ryousei_face_icon is the file "Ryousei_face.jpg".
 Figure of Ryousei_fundoshi_icon is the file "Ryousei_fundoshi.jpg".
 Figure of Ryousei_naked_icon is the file "Ryousei_naked.jpg".
@@ -788,7 +788,7 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Reindeer"	Figure of Reindeer_icon	"MoT"	g-black	"normal"
 "Rod"	Figure of Rod_icon	"The_Negative"	g-white	"normal"
 "RondaSR"	Figure of RondaSR_icon	"uniformvixen"	g-black	"normal"
-"Ruby_naked"	Figure of Ruby_naked_icon	"Watsup"	g-white	"normal"
+["Ruby_naked"	Figure of Ruby_naked_icon	"Watsup"	g-white	"normal"] [Not found]
 "Ryousei_face"	Figure of Ryousei_face_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_fundoshi"	Figure of Ryousei_fundoshi_icon	"ValdericBlackstag"	g-black	"normal"
 "Ryousei_naked"	Figure of Ryousei_naked_icon	"ValdericBlackstag"	g-black	"normal"
