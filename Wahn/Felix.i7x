@@ -26,7 +26,7 @@ Section 1 - Walk-in Event to put him into the dry plains room
 instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 and libido of Thomas > 9 and libido of Thomas < 20 and (FelixSaved - turns > 8) and HP of Felix is 0):
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
-	project the Figure of Felix_face_icon;
+	project the Figure of Felix_icon;
 	say "     As you come out into the dry plains, you see a centaur at your usual meeting spot with Thomas - though it isn't him, but Felix, the young centaur colt you helped save. He smiles and waves as he notices you, then trots closer. 'Hello there, nice to see you again. [if libido of Thomas is 10]Thomas is[else if libido of Thomas is 11]Thomas and Sandy are[else if libido of Thomas is 12]Thomas and the others are[end if] out gathering supplies and I offered to wait here in case you came along. I - I wanted to speak with you privately anyways.' He hesitates a moment, biting his lip before continuing. 'You see - I think there's... something stalking me, hiding out in the high grass. I feel like - whatever it is - watches me from time to time. But then, it might just be paranoia and I don't want to alarm everyone for nothing. Could you maybe help me out with this? There might be tracks or something...'";
 	LineBreak;
 	say "     What do you answer? Do you want to try looking for Felix mysterious stalker ([link]Y[as]y[end link]), or wave it off as just his imagination ([link]N[as]n[end link]) ?";
@@ -56,7 +56,7 @@ instead of navigating Dry Plains while (HP of Felix is 1 and libido of Felix is 
 	say "[NavCheck Dry Plains]";
 	if NavCheckReturn is false, stop the action;
 	move player to Dry Plains;
-	project the Figure of Felix_face_icon;
+	project the Figure of Felix_icon;
 	say "     As you come out into the dry plains to your usual meeting spot with the centaurs, Felix is waiting for you. He's trying his best to look calm, but you can see something is up. 'See that large pile of rubble back there in the midst of all that high grass? I saw something moving there just now.' He gives a slight sideways nod with his head, as not too obviously point out the location. 'Please, can you go look?'";
 	say "     [Stalker1]";
 
@@ -195,7 +195,7 @@ instead of conversing the Felix:
 		say "[FelixTalkMenu]";
 
 to say FelixTalkMenu:
-	project the Figure of Felix_face_icon;
+	project the Figure of Felix_icon;
 	blank out the whole of table of fucking options;
 	choose a blank row in table of fucking options;
 	now title entry is "Just chat a bit";

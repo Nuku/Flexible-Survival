@@ -88,6 +88,27 @@ object	name
 Boghrim	"Boghrim"
 
 Boghrim is a man. Boghrim is in Main Hall.
+ScaleValue of Boghrim is 3. [human sized]
+Cocks of Boghrim is 1.
+Cock Length of Boghrim is 16.
+Cock Width of Boghrim is 8.
+Testes of Boghrim is 2.
+Cunts of Boghrim is 0.
+Cunt Length of Boghrim is 9.
+Cunt Width of Boghrim is 2.
+Breasts of Boghrim is 2. [2 nipples]
+Breast Size of Boghrim is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Boghrim is false.
+PlayerRomanced of Boghrim is false.
+PlayerFriended of Boghrim is false.
+PlayerControlled of Boghrim is false.
+PlayerFucked of Boghrim is false.
+OralVirgin of Boghrim is false.
+Virgin of Boghrim is true.
+AnalVirgin of Boghrim is false.
+PenileVirgin of Boghrim is false.
+SexuallyExperienced of Boghrim is true.
 The description of Boghrim is "[BoghrimDesc]".
 The conversation of Boghrim is { "Mew!" }.
 The icon of Boghrim is Figure of Boghrim_clothed_icon.

@@ -47,5 +47,6 @@ Instead of resolving a Hyena Shoppers:
 		LineBreak;
 		say "     Curiosity got the cat fucked, and you have no interest in getting fucked tonight. Doubling your pace, you put as many feet between you and whoever or whatever is making the noise.";
 		now Resolution of Hyena Shoppers is 4; [ran away]
+	now Hyena Shoppers is resolved;
 
 Hyena Shoppers ends here.

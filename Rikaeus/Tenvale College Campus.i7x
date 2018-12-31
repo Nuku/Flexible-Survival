@@ -43,7 +43,10 @@ Instead of Resolving a Reaching the College:
 		now HP of player is 1;
 		say "     Trying your best to ignore your aches, you lean against one of the buildings and look around again. ";
 		now Resolution of Reaching the College is 3; [fumble]
-	say "     Your travels have lead you to the city's college campus. Built beside a major sporting arena, the college's main focus is its sports program, though there are other programs and classes available, you recall. While you never attended college here, you know they have several teams, including football, baseball, track and field and many others. And if those big gorillas are any indication, it looks like there'll be plenty of powerful creatures running around here.";
+	say "     'Are you alright?' A male voice asks from behind you as you recover from what you've just encountered. Turning around you spot two people of varying heights with one much taller than the other. The first person is a male dressed in only sandals, a red cloak, a red-plumed helmet, and a armored jock-strap. Sheathed on his hip and back is a sword and shield, clearly showing he means business at least in protecting the area. To his right is a very tall woman with light green skin and blonde hair wearing a crop top that showed off her ample breasts in a modest way and a skirt that was slightly raised, hinting at something under it. You nod your head, saying that you're perfectly fine and ask what place you've stumbled upon. With a friendly smile not befitting their physique, the green-skinned one starts speaking.";
+	say "     'This is Tenvale College, where a lot of people come to study and learn,' she says, gesturing to the many people wandering around from place to place. 'Of course, nobody here is immune to the sexual urges though so be warned there are rather strong people here that do succumb to their urges and will attack you to sate them,' the male says with an apologizing look. You nod and ask for them names, wanting to thank them for their help. 'Well, I'm Hailey and this is Marcus, we're sort of guards for the college,' the female says. After giving your thanks they nod and then head off to their posts. Looking around you see that they're right and that you should be careful, while this place is safer than outside it still poses some danger. Though from what you can see there are plenty of places to explore, so what should you start with?";
+	now PlayerMet of Hailey is true;
+	now PlayerMet of Marcus is true;
 	move player to the College Campus Entrance;
 	now battleground is "void";
 	now College Campus Entrance is known;
@@ -187,7 +190,31 @@ Pericles' Room is a room.
 The description of Pericles' Room is "[periclesroomdesc]".
 
 to say periclesroomdesc:
-	say "     The strong male's room is the complete opposite of what one would define as a Spartan room. He has posters of various fictional books lining the wall as well as various weapons, both meticulously taken care of. On top of that, there is a large bookshelf filled with various books that match the posters. Beyond that he has a simple bed with red sheets, a computer sitting in the corner for his homework, and a window looking over the entire campus. The Spartan-Helot himself is wandering between throughout the room doing various things from looking at paperwork to looking out upon the campus.";
+	say "     The strong male's room is the complete opposite of what one would define as a Spartan room. He has posters of various fictional books lining the wall as well as various weapons, both meticulously taken care of. On top of that, there is a large bookshelf filled with various books that match the posters. Beyond that he has a simple bed with red sheets, a computer sitting in the corner for his homework, and a window looking over the entire campus. The Spartan-Helot himself is wandering between throughout the room doing various things from looking at paperwork to looking out upon the campus. One last thing you do note is that this room seems to be larger than the other dorm rooms. This causes you to guess that the wall to the room next door was knocked down to give it more size.";
+
+[Room Declaration]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Jake's Room	"Jake's Room"
+
+Jake's Room is a room.
+The description of Jake's Room is "[jakesroomdesc]".
+
+to say jakesroomdesc:
+	say "     There are two things you notice when you enter the panda's room. First and foremost is the size of the room. It's twice the size you would have guessed with the spacing of the doors, causing you to suspect that the wall was knocked down to add more room. The second item you notice is the large tarp covering the right half of the room that's splattered with the occasional bits of paint. Beyond just the tarp there are various art supplies on that side with an easel, a pottery stand, and a sculpting stand. It's on that side that you find Jake. On the left side you find a lounging area with a bed, a couch, and a computer that you assume is for the panda to do his homework for his other subjects. [if Lust of Jake is 1]On the wall above the couch you spot a very familiar and intimate picture of you sucking off Jake.[end if] Next to the couch is a table and sitting on it is an instant camera which you take note of. Taking a glance at your friend he seems to be hard at work at one of his many art projects.";
+
+[Room Declaration]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Wally's Room	"Wally's Room"
+
+Wally's Room is a room.
+The description of Wally's Room is "[wallysroomdesc]"
+
+to say wallysroomdesc:
+	say "     Taking a glance around the otter's room you notice it's not that very decorated, though to be honest it does make sense, since he is new to the campus. What it is decorated with is bits and bobs obviously from his previous home, a computer for school-work, a bookshelf, and a bed. Deciding to take a look at the items from his cave, you wander around, looking at them. Some of them are seashells that you assume he found while wandering the beach. Another one of the items is a photo of a young teen and his parents, something you assume to be a family picture for Wally. The last of the major items appears to be what's on your friends bed and he's sitting on. It's a large blue quilt that covers the entire thing, seemingly handmade. It intrigues you, as you wonder if the otter made it himself. Other than all that the room is rather bare";
 
 [Room Declaration]
 
@@ -252,6 +279,19 @@ earea of College Walkway Northwest is "Campus".
 
 to say campusnorthwestdesc:
 	say "     The pathway you're on at the moment is littered with boxers and panties as well as wet spots that you swear is cum stains. If you didn't know better you'd think that there had been an orgy on this walkway. Ignoring the disarray of the area itself you take a look around. You can see to your east the fountain where in the distance you notice people hanging out. To the northeast is the Administration Building where people can go to register. Lastly to the northwest is the belltower of the college. Lastly, to your southeast is the college's entrance.";
+
+[Room Declaration]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Creative Street	"Creative Street"
+
+Creative Street is a room.
+Creative Street is west of College Walkway Northwest.
+The description of Creative Street is "[creativestreetdesc]".
+
+to say creativestreetdesc:
+	say "     The street you're on is sexually clean for the most part in regards to fluids like cum and stuff. However looking around you realize the buildings are covered in paint. Not messily though, as they appear to make up multiple murals all over the place. They're rather beautiful and catch your eyes for a few minutes as you stare at them. Other than that there are a few students wandering about, some of them going into buildings marked as museums, galleries, etc. A few of them are covered in paint themselves making you assume that they're art students. Overall this place is pretty nice looking. If you look to the east you see a walkway that leads away from here.";
 
 [Room Declaration]
 

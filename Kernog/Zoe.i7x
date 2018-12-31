@@ -621,6 +621,7 @@ Object	Name
 Rabbit Tagger	"Rabbit Tagger"
 
 Rabbit Tagger is a situation.
+The sarea of Rabbit Tagger is "Nowhere".
 
 [Event trigger]
 instead of going to Smith Haven Mall Lot West while (a random chance of 1 in 3 succeeds and Rabbit Tagger is not resolved):

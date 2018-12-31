@@ -33,6 +33,7 @@ Instead of resolving Injured Felinoid:
 	if felinoidrescued is 2:
 		say "     Traveling through the park trails, keeping a wary eye out for any more strange glades, you notice a small damp red spot on the ground ahead. Moving forward carefully to look at it, you realize with some surprise that it is somethings blood! Looking around you see several other spots of blood leaving a trail heading deeper into the underbrush, whatever went that way was definitely injured pretty badly and might need some help... Do you investigate?";
 		if player consents:
+			project the Figure of Klauz_face_icon;
 			say "     Your curiosity getting the better of you, you slowly follow the trail of blood through the trees, the sound of soft trickling water beginning to fill your ears as the trail grows fresher. Eventually you emerge into a small secluded glade, a small natural spring surrounded by large flat rocks trickling happily away in the center of the glade. Your attention is immediately drawn however, to the wounded felinoid hauling itself to its feet painfully as you approach, the wounded beast obviously still willing to put up a fight as it limps forward to attack.";
 			challenge "Felinoid";
 			if lost is 0:
@@ -65,6 +66,7 @@ Instead of resolving Injured Felinoid:
 			else:
 				say "     Defeated even by the wounded beast, you slowly stagger back off into the park, sighing as you realize that the combat certainly hasn't helped either of you feel any better.";
 	else if felinoidrescued is 3:
+		project the Figure of Klauz_face_icon;
 		say "     Traveling through the trails of the park yet again, you pause as you hear something moving behind you, turning around carefully you see what is by now a rather familiar-looking felinoid stalking toward you purposefully, intent on proving his dominance. You realize that while his wounds are obviously mostly healed, a fresh combat certainly won't help his situation any... do you prepare to fight anyways?";
 		if player consents:
 			challenge "Felinoid";
@@ -129,6 +131,7 @@ the fuckscene of felinoid Companion is "[sexwithfelinoidpet]".
 
 to say SummonKlauz:
 	now Klauz is nowhere;
+	project the Figure of Klauz_face_icon;
 	if player is in Back Of The Library and Klauz is in Back Of The Library: [summoning while standing next to him]
 		say "     ...";
 	else: [regular summoning]
@@ -161,9 +164,11 @@ to say KlauzScent:
 	say "     Klauz smells strong and masculine[if player is female or player is mpreg_ok]. It is quite arousing[end if].";
 
 to say Klauzdesc:
-	say "     Klauz, the golden felinoid that you rescued, is lean and powerful as he stalks along besides you eagerly, obviously one of the most powerful allies you could have as you try to survive in the city. Of course he still doesn't seem to have recovered completely from his ordeal, and is thus more than content to let you take the lead in combat and in your travels around the city. You can't help but wonder just how the large cat sees you and why he bothers following you around - whether he sees you more as a friend, a companion, or as a potential mate...";
+	project the Figure of Klauz_face_icon;
+	say "     Klauz, the white-golden felinoid that you rescued, is lean and powerful as he stalks along besides you eagerly, obviously one of the most powerful allies you could have as you try to survive in the city. Of course he still doesn't seem to have recovered completely from his ordeal, and is thus more than content to let you take the lead in combat and in your travels around the city. You can't help but wonder just how the large cat sees you and why he bothers following you around - whether he sees you more as a friend, a companion, or as a potential mate...";
 
 instead of conversing the Klauz:
+	project the Figure of Klauz_face_icon;
 	if player is in Back Of The Library and Klauz is in Back Of The Library:
 		say "[KlauzTalkMenu]";
 	else if companion of player is Felinoid companion:
@@ -175,6 +180,7 @@ instead of conversing Felinoid companion:
 	if Felinoid companion is not tamed:
 		say "     Who?";
 	else:
+		project the Figure of Klauz_face_icon;
 		if player is in Back Of The Library and Klauz is in Back Of The Library:
 			say "[KlauzTalkMenu]";
 		else if companion of player is Felinoid companion:

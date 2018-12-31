@@ -545,6 +545,30 @@ Segment	Shift Text	Desc Text	Unshift Text
 "rear" 	"Your rear quickly turns red from the rubber moving over it."              	"Your rear end is coated in red rubber."	"Your rear feels odd as the latex shifts"
 "full" 	"latex fox"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female latex fox, made of shiny red rubber, wielding a large squeaking tail.[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1] You are a hermaphroditic latex fox. Your extreme curves are only challenged by your massive white rubber cock.[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1] You are a male anthropomorphic fox made of latex rubber.[end if][if the pregnant of player is greater than 0] Your body is rounder still for the pregnancy you are experiencing.[end if]"	--
 
+
+Section - Hippo Alchemist
+
+table hippo alchemist - Hippo Shifts
+Segment	Shift Text	Desc Text	Unshift Text
+"head"	"Your cheeks baloon outwards as your face curves with newgained fat and muscle. Long curled ears of a hippo sprout from your skull, twitching softly.[if the destined femininity of the player is 1] Your eyebrows grow thicker as your lashes extend.[else] Your facial hair grows dramatically, gaining you a styles beard and moustache.[end if]"         	"You have the head of a hippo, purple and ponderous.[if the destined femininity of the player is 1]  You have long lashes and thick eyebrows.[else] You have a thick beard and long moustache.[end if]"	"Your hippo like head changes"
+"chest"	"Your chest expands with muscle and fat in equal abundance as the skin turns a purple hue.[if the destined femininity of the player is 1] Your chest grows forward, allowing two great mounds to occupy it.[end if]"           	"You have the chest and back of a purple hippo[if the destined femininity of the player is 1] Your chest has two, large, breasts that rest heavily against your muscled chest.[end if]"	"Your back itches as it shifts"
+"gut"	"You perhaps regret that cookie as your gut swells with what may seem to be fat before you can confirm it is equally muscle-bound."          	"You have a ponderous purple belly of a hippo, powerful and fat."	"Your huge gut shifts as it changes"
+"pelvis"	"Purple flesh turns darker the further down between your legs it goes, leaving a[if the destined masculinity of the player is 1] bloated but perfectly human penis[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1] and a [end if][if the destined femininity of the player is 1] pouting, purple-tinged vagina[end if]."          	"You have a [if the destined femininity of the player is 1]bloated but perfectly human cock [end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1] and [end if][if the destined masculinity of the player is 1]purple-tinted vagina[end if]."	"Your cock strains as it starts to change"
+"left upper arm"	"Purple spreads up and down your upper left arm."               	"Your upper left arm is purple as well as being quite bulky."	"Your massive left upper arm begins to change"
+"left forearm"	"Your left forearm bulges with new muscles as the skin turns purple."        	"Your left forearm appears powerful and purple."	"The purple in your left forearm fades as things change"
+"left hand"	"Your fingers baloon into great grasping digits as purple overtakes the skin."     	"Your left hand has become big and purple."	"Your left hand begins to shrink and stops being purple"
+"right upper arm"	"Purple spreads up and down your upper right arm."               	"Your upper right arm is purple as well as being quite bulky."	"Your massive right upper arm begins to change"
+"right forearm"	"Your right forearm bulges with new muscles as the skin turns purple."        	"Your right forearm appears powerful and purple."	"The purple in your right forearm fades as things change"
+"right hand"	"Your fingers baloon into great grasping digits as purple overtakes the skin."     	"Your right hand has become big and purple."	"Your right hand begins to shrink and stops being purple"
+"left thigh"	"Purple overtakes your left thigh as it swells with newfound power."            	"Your left thigh is powerful and purple with tense muscles."	"Your balance wavers as your left thigh shifts"
+"left shin"	"Purple flesh runs along your left shin as your muscles compete with soft fat."       	"Your left shin looks large and purple."	"Your purple skin flows as your left shin reforms"
+"left foot"	"Your foot becomes large and purple as if injured, but there is no pain there, only strength."            	"You have a large flat purple foot with big darker purple toes."	"The purple flesh of your left foot begins to change"
+"right thigh"	"Purple overtakes your right thigh as it swells with newfound power."            	"Your right thigh is powerful and purple with tense muscles."	"Your balance wavers as your right thigh shifts"
+"right shin"	"Purple flesh runs along your right shin as your muscles compete with soft fat."       	"Your right shin looks large and purple."	"Your purple skin flows as your right shin reforms"
+"right foot"	"Your foot becomes large and purple as if injured, but there is no pain there, only strength."            	"You have a large flat purple foot with big darker purple toes."	"The purple flesh of your right foot begins to change"
+"rear" 	"Purple skin pushes outwards into a little twitchy nub of a tail."              	"Your have a naked purple nub of a tail."	"Your rear feels odd as the latex shifts"
+"full" 	"hippo alchemist"	"[if the destined femininity of the player is 1 and the destined masculinity of the player is 0]You are a female hippo, large and round and powerful. Your fat and muscles compete for space, leaving you curved with hidden might.[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1] You are a hermaphroditic purple hippo. Your generous curves compete with your big purple human cock dangling between your legs.[end if][if the destined femininity of the player is 0 and the destined masculinity of the player is 1] You are a male hippo, waddling on two great purple legs with big toes. Behind you, a little nub of a tail sways wildly. Your face is adorned with a thick moustache and beard.[end if][if the pregnant of player is greater than 0] Your body is rounder still for the pregnancy you are experiencing.[end if]"	--
+
 Section - Kangaroo
 
 table Kangaroo - Kangaroo Shifts
@@ -2830,6 +2854,7 @@ Definition: A thing is femme:
 	if the rabbit vagina is touchable, yes;
 	if the feline torso is a part of the rear, yes;
 	if the tf table of the pelvis is table latex fox and the destined femininity of the player is 1, yes;
+	if the tf table of the pelvis is table hippo alchemist and the destined femininity of the player is 1, yes;
 	if the tf table of the pelvis is table minotaur and the destined femininity of the player is 1, yes;
 	if the tf table of the pelvis is table goblin and the destined femininity of the player is 1, yes;
 	if the tf table of the pelvis is table werewolf and the destined femininity of the player is 1, yes;
@@ -2845,11 +2870,11 @@ if the tf table of ctype of n is table otter, yes;
 no;
 
 Definition: a thing is engulfed:
+if the person is off-stage, no;
 if they are in dark belly[ and the engulfer is not nothing], yes;
 if they are in womb[ and the engulfer is not nothing], yes;
 if they are in egg[ and the engulfer is not nothing], yes;
 if they are in Birthing Pouch[ and the engulfer is not nothing], yes;
-if the person is off-stage, no;
 no;
 
 Definition: A thing (Called N) is playerheld:
@@ -2912,6 +2937,7 @@ if the tf table of the pelvis is table demonic mouse, no;
 if the tf table of the pelvis is table feral dragoness, no;
 if the tf table of the pelvis is table otter, yes;
 if the tf table of the pelvis is table latex fox and the destined masculinity of the player is 0, no;
+if the tf table of the pelvis is table hippo alchemist and the destined masculinity of the player is 0, no;
 if the tf table of the pelvis is table minotaur and the destined masculinity of the player is 0, no;
 if the tf table of the pelvis is table goblin and the destined masculinity of the player is 0, no;
 if the tf table of the pelvis is table werewolf and the destined masculinity of the player is 0, no;
@@ -3649,7 +3675,7 @@ Instead of eating a thing(called the victim): [controls players eating of things
 		if the victim is not a drink:
 			say "You pick up [the victim] and eat it. Your tummy feels odd.";
 		else:
-			say "You pick up [the victim] and drink. it. Your tummy feels odd.";
+			say "You pick up [the victim] and drink it. Your tummy feels odd.";
 		remove victim from play;
 		if rabbit vagina is not visible and the tf table of the victim is table 22: [special case for easter egg]
 			grow rabbit vagina from pelvis;
@@ -4391,6 +4417,18 @@ The attack rate of a Lioness is 3.
 The reflex of a Lioness is 6.
 The primary attack description of a Lioness is "leans forward and attaches herself to the groin suckling noisily. Moments later, change is seen on".
 The TF description of a Lioness is "gasps in a high tone as they begin to shrink right out of their clothing, soon becoming a".
+
+Section - Big Hippo
+
+A Big Hippo is a infection model. The description of a Big Hippo is "They are a lumbering purple biped with smooth [one of]purple[or]brown[or]purple[or]tan[or]yellow[at random] skin. They have a moustache and beard, quite thick and stylized. They also have hair, big hippo ears popking free of it. Their gut hangs free with fat and power combined." The TF table of a Big Hippo is Table hippo alchemist. Big Hippo is male.
+
+The move rate of a Big Hippo is 1.
+The attack rate of a Big Hippo is 3.
+The reflex of a Big Hippo is 4.
+The willpower of a Big Hippo is 7.
+The Big Hippo is stat-switched.
+The primary attack description of a Big Hippo is "fishes out a vial and offers it. Against all good advice, it is accepted and a change soon comes to".
+The TF description of a Big Hippo is "grunts as they  begin to swell and grow, turning purple as they become a".
 
 Section - Werewolves
 
@@ -5364,6 +5402,8 @@ when play ends:
 				say "You flee the city at the sound of the incoming military, taking to the sewers and moving for what feels like a month of migration. You find a new city, still abandoned, mostly. It seems to have a lot of mutants in it, but more interestingly, some untouched humans still holding out. You have learned the sewers well, and your charms and skill keep you fed, too well fed. One day you find yourself stuck running along a familiar passage. For some reason, you don't feel nervous about the situation, knowing someone, despite all logic, will be along shortly to free you, and perhaps something more interesting than that. You can hardly wait.";
 			if tf table of head is table Fox Taur:
 				say "[foxtaur ending][line break]";
+			if tf table of head is table Hippo Alchemist:
+				say "You're picked up by the military and whisked away to a safe city. They determine that you are largely harmless, only forbidding you from playing with chemicals. You get a job at a coffee shop where your special brews bring a smile to the patron's faces. By the time they notice anything amiss, they will have forgotten that sweet cup of coffee you had offered them...";
 			if tf table of head is table goblin:
 				let u be the number of compatible on-stage npc persons;
 				say "You [if u is greater than 0], and [u] others, [end if] flee to the outskirts of the city. A great roaring sound comes from above, where an airship comes in for a landing, its various gears spinning wildly in the struggle to keep it aloft. As soon as the plank is lowered, you dash up it. The goblins there greet their new member[if u is greater than 0]s[end if] eagerly and the ship sales off into the sky, towards adventure!";
@@ -5817,6 +5857,8 @@ An Echo'N Brand Mayonnaise is a kind of drink. An Echo'N Brand Mayonnaise is edi
 
 Fox Soda can is a kind of drink. Understand "fox soda" as Fox Soda can. understand "Fox Soda" as 1 Fox Soda can. The description of a Fox Soda can is "This a red can of soda, labeled as 'Fox Soda.' You find it strange that you have never heard of that brand before.". The tf table of Fox Soda can is table latex fox. Fox soda can is infectitem.
 
+Strange Beaker is a kind of drink. Understand "beaker" as Strange Beaker. understand "Strange Beaker" as 1 Strange Beaker. The description of a Strange Beaker is "A sciency looking flask with some off-blue fluid in it. Who left it? Smells sweet.". The tf table of Strange Beaker is table hippo alchemist. Strange Beaker is infectitem.
+
 Wyvern Water can is a kind of drink. Understand "wyvern water" as Wyvern Water can. understand "Wyvern Water" as 1 Wyvern Water can. The description of a Wyvern Water can is "This a purple can of soda, labeled as 'Wyvern Water.' You find it strange that you have never heard of that brand before.". The tf table of Wyvern Water can is table wyvern. Wyvern Water can is infectitem.
 
 A pentagram is a kind of thing. The description of pentagram is "A design you scrawled on your floor on a joke. What were you thinking when you did that?". A pentagram is fixed in place.
@@ -5948,7 +5990,7 @@ Lewis Pond is a room. "A fair-sized pond, big enough to take a few minutes swimm
 [First Floor Mall (which links to Commercial district and second floor mall).]
 First Floor Mall Lobby is a room. "Soft muzak plays from cleverly(not) concealed(yea, right) speakers. Welcome to consumer heaven, where all your needs are met for 19.99 each. To the north is a small Radioshack, didn't those close down already? To the south is a small hunting store, popular enough with the local rednecks. West leads to the food court, one of your favorite places. Escalators lead up to the second floor as well, and the street is back East.". East of First Floor Mall Lobby is Commercial District. Radioshack is a room. South of Radioshack is First Floor Mall Lobby. The description of radioshack is "     You have questions, we have answers[line break] [line break]    Do they have answers for a plague of infectious monsters? Maybe. There's a lot of small electronic gizmos around here, including some cell phones and GPS systems. On one wall, several LCD TVs play the discovery channel in HD.".
 There is 1 Aviator Goggles in Radioshack. "Someone seems to have abandoned a good looking pair of goggles here.".
-Food Court is a room. "Chinese, BBQ, even a McDonalds tucked in there. This place has it all! Well, everything but comfortable seats. These metal chairs are not ergonomic for any creature of earth, but people put up with it for cheap good eats. The main area of the mall is to the east.". East of Food Court is First Floor Mall Lobby.
+Food Court is a room. "Chinese, BBQ, even a McDaniels tucked in there. This place has it all! Well, everything but comfortable seats. These metal chairs are not ergonomic for any creature of earth, but people put up with it for cheap good eats. The main area of the mall is to the east.". East of Food Court is First Floor Mall Lobby.
 There is one baby bottle in Food Court. "Someone left their baby bottle sitting on one of the tables.".
 Al's Hunting Emporium is a room. "If you can shoot it, we can get you the ammo. What a motto. Since there aren't quite as many hunters as one would think, the place makes a side market on hunting clothes, though some of the stuff they have stocked here really makes you wonder. The exit from this doomed outlet is North.". North of Al's Hunting Emporium is First Floor Mall Lobby.
 There is 1 longbow in Al's Hunting Emporium. "There is a rather fancy longbow on a rack among other, much more plain, examples.".
@@ -5968,6 +6010,7 @@ The holdingpen is a room. Holdingpen is dark. [used to store out of play monster
 Dark belly and womb and egg and holdingpen and birthing pouch are not IC.
 
 There is a vending machine in Johnson Park Entrance. The vending machine is an openable container. It is open. It is fixed in place. There is a fox soda can and a pack of nuts and a wyvern water can in the vending machine. Understand "machine" as vending machine. The description of a vending machine is "A machine full of tasty snacks for hungry park visitors.".
+There is a Strange Beaker in the vending machine.
 
 The home of Collie is Sheep Pasture.
 [World.Places end]

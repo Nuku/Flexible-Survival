@@ -78,6 +78,10 @@ carry out HuntAction:
 			if debugactive is 1:
 				say "DEBUG -> This room is private and can't be found![line break]";
 				now Found is 21;
+		else if object entry is not fasttravel:
+			if debugactive is 1:
+				say "DEBUG -> This room is not fasttravel and can't be found directly![line break]";
+				now Found is 23;
 		else:
 			say "It should be somewhere...";
 			if "Unerring Hunter" is not listed in feats of player:
@@ -380,6 +384,8 @@ carry out HuntAction:
 			say "[bold type]You don't think you can find a way there without help. The path may be well hidden or you could need a guide.[roman type][line break]";
 		-- 22: [room: perception check fail]
 			say "[bold type]Maybe you should train to be a bit more perceptive to find it...[roman type][line break]";
+		-- 23: [room: non-fasttravel]
+			say "[bold type]What you hunted for isn't a fasttravel room. You'll have to find your way there some other way...[roman type][line break]";
 		-- 31: [event: wrong area]
 			say "[bold type]Perhaps you should try looking somewhere closer to what you seek...[roman type][line break]";
 		-- 32: [event: level too low]
