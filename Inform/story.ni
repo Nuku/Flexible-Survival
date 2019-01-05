@@ -4651,6 +4651,7 @@ Include Astroslide Field Locker-room by Kernog.
 Include Astroslide Field Showers by Kernog.
 Include Astroslide Football Field by Kernog.
 Include Atlantis by Rikaeus.
+Include Avalon by Taelyn.
 Include Azrael by Rikaeus.
 Include Beach by Speedlover.
 Include Bargain Bin by Wahn.
@@ -4908,6 +4909,7 @@ Include Feral Mutt by CrimsonAsh.
 Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
 Include Feral Shaft Beast by Guest Writers.
+Include Feral Unicorn by Taelyn.
 Include Feral Wolf by Stripes.
 Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
@@ -5109,6 +5111,7 @@ Include Zebra by Vervaine.
 
 [NPCs]
 Include Alex by Stripes.
+Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
 Include Alexandra Cuckolding by Wahn.
 Include Alpha Fang Scenes by Nuku Valente.
