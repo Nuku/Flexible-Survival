@@ -226,7 +226,7 @@ to detailbirth:
 	LineBreak;
 	if player is female and pregtype < 2:
 		say "     With a sudden pouring of fluids, [if ovipregnant is true]egglaying[else]birth[end if] is upon you. You settle without much choice, breathing quickly as your body spasms in readiness.";
-	else:
+	else: [mpreg]
 		say "     There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels. With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.";
 	follow cunt descr rule;
 	if player is female and pregtype < 2:
@@ -342,6 +342,20 @@ To Birth:
 			say "... And yet, a part of you is awash in contentment, an instinctual need to transmit and spread your infection temporarily sated. Though you do become faintly aware of that emptiness inside your belly again.";
 		else:
 			say "     As your rebirthed offspring snuggles up beside you, you rest to recover from the ordeal of childbirth. Despite what you've done to the creature, you feel a contentment welling up inside you, your instinctual need to transmit your infection temporarily sated. Though you do become faintly aware of that emptiness inside your belly again.";
+	else if "Chase's Breeder" is listed in feats of player: [special NPC impregnation]
+		if player is female and pregtype < 2:
+			say "     Vagina birth of the chosen one.";
+		else if breasts of player > 0:
+			say "     Anal birth of the chosen one - with boobs.";
+		else:
+			say "     Anal birth of the chosen one - no boobs.";
+		if ChaseOffspring is 0:
+			say "twin1";
+		if ChaseOffspring is 1:
+			say "twin2";
+		else:
+			say "regulars";
+		increase ChaseOffspring by 1;
 	else if "Wild Womb" is listed in feats of player:
 		if player is female and pregtype < 2:
 			say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms so it may suckle[else]suckles[end if] at your [breast size desc of player] breast. Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk. A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
@@ -350,21 +364,13 @@ To Birth:
 		else:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring. A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire in their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
 		say "     As your feral offspring stalks off into the city, leaving you to recover from the ordeal of childbirth, a part of you worries about your contribution to the ever growing number of creatures in the city...and yet, a part of you is awash in contentment, an instinctual need to propagate and spread your infection temporarily sated.";
-	else:
+	else: ["normal pregnancies"]
 		if player is female and pregtype < 2:
 			say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms so it may suckle[else]suckles[end if] at your [breast size desc of player] breast. Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
 		else if breasts of player > 0:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It starts to suckle at your [breast size desc of player] breast, growing rapidly against you as strange sensations sweep over your [bodytype of player] body. Not only nutrition but personality and knowledge seep through the teat into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
 		else:
 			say "     Your child pushes free of the flexible shell enclosing it and you gather into your arms, feeling a strong affection for your bizarrely born child. It nuzzles at your chest and starts nursing, struggling for a while to draw milk from your flat chest, but your [bodytype of player] body strives to complete its task and begins to lactate temporarily to feed your offspring. As it feeds, it grows rapidly against you as strange sensations sweep over your body. Not only nutrition but personality and knowledge seep through the nipple into the newborn, who is not newborn for long, soon a young adult. They pop free and stand, smiling. With a slow turn, they show off their [facename of child] face and [bodyname of child] body, covered in [skinname of child] skin.";
-		if "Chase's Breeder" is listed in feats of player:
-			if ChaseOffspring is 0:
-				say "twin1";
-			if ChaseOffspring is 1:
-				say "twin2";
-			else:
-				say "regulars";
-			increase ChaseOffspring by 1;
 		increase hunger of player by 3;
 		increase thirst of player by 3;
 	if "Wild Womb" is not listed in feats of player:
@@ -475,10 +481,10 @@ To impregnate with (x - text):
 		now facename of child is infection;
 	if player is not female:
 		say "[line break]     There is a pleasant sense of warmth from your lower belly, filling an emptiness you did not know was there.";
-		if pregtype is 0, now pregtype is 1;
+		if pregtype is 0, now pregtype is 2; [mpreg]
 	else:
 		say "[line break]     You have an odd feeling, a palpable wave of contentment from within your lower belly.";
-		if pregtype is 0, now pregtype is 2;
+		if pregtype is 0, now pregtype is 1; [fpreg]
 
 Chapter 3-2 - Impregchance and Ovichance Routines
 
@@ -513,7 +519,7 @@ to fimpregchance:		[Female-particular Pregnancy Roll]
 				now ovipregnant is true;
 			else:
 				now ovipregnant is false;
-			now pregtype is 1;
+			now pregtype is 1; [fpreg]
 			impregnate with name entry;
 			if libido of player > 49:
 				now libido of player is (libido of player) / 2;
@@ -539,7 +545,7 @@ to mimpregchance:		[MPreg-particular Pregnancy Roll]
 				now ovipregnant is true;
 			else:
 				now ovipregnant is false;
-			now pregtype is 2;
+			now pregtype is 2; [mpreg]
 			impregnate with name entry;
 			if libido of player > 49:
 				now libido of player is (libido of player) / 2;

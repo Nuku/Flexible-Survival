@@ -167,6 +167,7 @@ to EventRestore:
 					say "DEBUG -> [x]: EventIdName: [EventIdName] not found in Table of GameEventIDs!";
 	else:
 		say "No Event Save File Found!";
+	blank out the whole of Table of GameEvents; [empty it after restoring]
 
 to RoomSave:
 	say "Saving Rooms...";
@@ -243,6 +244,8 @@ to RoomRestore:
 					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
 	else:
 		say "No Room Save File Found!";
+	blank out the whole of Table of GameRooms; [empty out all old data]
+	blank out the whole of Table of GameRoomInventories; [empty out all old data]
 
 to PossessionSave:
 	say "Saving Possessions...";
@@ -302,6 +305,7 @@ to PossessionRestore:
 					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] not found in Table of Game Objects!";
 	else:
 		say "No Possession Save File Found!";
+	blank out the whole of Table of GamePossessions; [empty out all old data]
 
 to CharacterSave:
 	say "Saving Characters...";
@@ -440,6 +444,8 @@ to CharacterRestore:
 					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs!";
 	else:
 		say "No Character Save File Found!";
+	blank out the whole of Table of GameCharacters; [empty out all old data]
+	blank out the whole of Table of GameTraits; [empty out all old data]
 
 to TraitRestore:
 	if the File of TraitSave exists:
@@ -578,6 +584,8 @@ to PlayerRestore:
 				-- "BlockList":
 					if EntryText entry is not listed in BlockList of player:
 						add EntryText entry to BlockList of player;
+	blank out the whole of Table of PlayerData; [empty out all old data]
+	blank out the whole of Table of PlayerLists; [empty out all old data]
 
 to BeastSave:
 	say "Saving Beasts...";
@@ -624,6 +632,7 @@ to BeastRestore:
 					say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters!";
 	else:
 		say "No Beast Save File Found!";
+	blank out the whole of Table of GameBeasts; [empty out all old data]
 
 Section 2 - Trixie
 
