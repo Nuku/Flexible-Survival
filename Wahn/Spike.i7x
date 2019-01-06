@@ -57,11 +57,17 @@ Version 2 of Spike by Wahn begins here.
 [  4: fucked the player's pussy + ass              ]
 
 thirst of Spike is usually 1. [standard setting change]
+MaxHP of Spike is usually 1. [for now the player is always the father as the default]
 
 an everyturn rule:
 	if HP of Spike is 1 and doberman companion is not tamed: [error fix]
 		add "Tamed" to Traits of doberman companion;
 		now doberman companion is tamed;
+		now thirst of Spike is 1; [default "Boss" name]
+	if doberman companion is tamed and companion of player is not doberman companion and (Spike is in NPC Nexus or Spike is nowhere): [if the player had him as companion as they exported, he won't be in his room]
+		move Spike to Sitting Area;
+	if MaxHP of Spike is 0:
+		now MaxHP of Spike is 1;
 
 Section 1 - Introduction
 
@@ -181,6 +187,7 @@ Virgin of Spike is true.
 AnalVirgin of Spike is true.
 PenileVirgin of Spike is false.
 SexuallyExperienced of Spike is true.
+MainInfection of Spike is "Doberman".
 The conversation of Spike is { "<This is nothing but a placeholder!>" }.
 The scent of Spike is "     Spike's scent of dog is almost drowned out by some sort of after-shave he's found out in the city. It's a good, masculine scent, you only wish he wouldn't be using quite as much of it.".
 
@@ -222,11 +229,10 @@ to say SpikeTalkMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is not defaultnamed and thirst of Spike is 0:
-		choose a blank row in table of fucking options;
-		now title entry is "The name he should address you by";
-		now sortorder entry is 1;
-		now description entry is "Ask about the name or title Spike should use for you";
+	choose a blank row in table of fucking options;
+	now title entry is "The name he should address you by";
+	now sortorder entry is 1;
+	now description entry is "Ask about the name or title Spike should use for you";
 	[]
 	if Spike is visible:
 		choose a blank row in table of fucking options;
@@ -793,9 +799,8 @@ to say SpikeSex1: [oral on the player]
 			say "     With his own cock in hand and jerking it in a frantic pace, Spike gets back to his first solo blowjob, bobbing on your cock in a very enthusiastic way. Except the need for a little reminder to cover his teeth with his lips, the young man really does a nice job of it, clearly a quick study - if motivated [italic type]properly[roman type]. Soon, you can't suppress moans and grunts anymore and just let them out, loudly letting your companion know that you are about to come. He just intensifies his attack on your manhood, closing his muzzle around it and sucking hard, which serves very well to push you over the edge in very short notice. Hands shooting forward to clamp onto his canine head, you hump into his muzzle and keep his nose pressed deep into your pubes as spurts of cum splash the back of his throat. While you keep hold of Spike up top and make him eat your load, he keeps jerking himself and barrels over the line of no return to his own climax just moments later.";
 			say "     The young dobie grunts around the cock in his muzzle as he starts to shoot long streaks of sperm all over the ground between your legs, each spurt making his whole body twitch and tremble, including the tongue half-wrapped around your own shaft and giving you quite pleasurable sensations. Together, the two of you ride out your respective orgasms, until you eventually pull Spike off your now sensitive cock and help him to stand before you once more. Guiding his muzzle to your lips, you kiss him openly and suck on his tongue, tasting some of your own seed on it. With a teasing smile, you tell him that good things come to those who prove themselves to you, and that he will enjoy himself greatly as your companion. 'I'm sure that I will,' he answers and licks his muzzle, then pushes his softening cock back into his jeans and zips himself up.";
 			now libido of Spike is 1; [talked into it]
-			now OralVirgin of Spike is false;
 			now PlayerFriended of Spike is true;
-			add "Spike" to OralVirginitiesTaken of player;
+			NPCSexAftermath Spike receives "OralCock" from Player;
 		else if calcnumber is 2: [pressured into it]
 			LineBreak;
 			say "     Looking scornfully at the resistant young man, you tell him in no uncertain terms that you are very disappointed in his performance as your companion. After all, how can you count on him for important tasks if he even fails at the most simple things you give him as a test. Something even the most stupid slut you could pick up on the street would be capable of doing. Spike's face is a study of emotions as you make your accusation-filled little speech, going from disapproval, to shock, to a deep worry. He gulps when you come to a stop, looking at him expectantly, then slowly sinks to his haunches. A grin spreads over your face when you look at the trembling canine on the ground before you, especially as he gulps nervously when you push aside your clothes to free your [cock of player] shaft to stand erect before his eyes.";
@@ -807,9 +812,8 @@ to say SpikeSex1: [oral on the player]
 			say "     Slowly getting used to what is expected of him, Spike gets back to his first solo blowjob, bobbing on your cock in a dutiful manner. Except the need for a slight smack to the back of his head as a reminder to cover his teeth with his lips, the young man actually does a nice job of it, clearly a quick study - if motivated [italic type]properly[roman type]. Soon, you can't suppress moans and grunts anymore and just let them out, loudly letting your companion know that you are about to come. He freezes for a second, tempted to pull off, then pushes aside his reluctance and instead intensifies his attack on your manhood. Closing his muzzle around it, Spike sucks hard, which serves very well to push you over the edge in very short notice. Hands shooting forward to clamp onto his canine head, you hump into his muzzle and keep his nose pressed against your crotch as spurts of cum splash the back of his throat. While you keep hold of Spike's head, the young man's hands grasp your legs, his grip tightening every time a new spurt of seed erupts into him.";
 			say "     You ride out your orgasm, filling the dobie's stomach with your load, then also pulling back to cover his tongue with more of the creamy fluid. Eventually, you pull Spike off your now sensitive cock and pat his head, telling him that he's proven himself - for now. As he stands before you, an expression of mixed relief and worry washes over his face, no doubt from Spike wondering what he might need to do next. You just throw an arm around his shoulders in a vaguely possessive fashion, then rub the dobie's hair and tell him that good things come to those who prove themselves to you. 'I'll make sure to remember that,' he answers and brushes away a spurt of cum from the side of his muzzle, wiping it off on the ground.";
 			now libido of Spike is 21; [pressured into it]
-			now OralVirgin of Spike is false;
 			now PlayerControlled of Spike is true;
-			add "Spike" to OralVirginitiesTaken of player;
+			NPCSexAftermath Spike receives "OralCock" from Player;
 		else if calcnumber is 3: [forced into it]
 			LineBreak;
 			say "     Stepping right into the young doberman's comfort zone, you don't give him even a second to react, simply snatching him by the loose collar and using that convenient handhold to wrench him even closer. Spike lets out a somewhat choked gasp at suddenly being man-handled, his eyes wide in fear as your merciless gaze studies his face. Telling him that he gave himself to you, with everything this implies, you then physically push him down, making the anthro canine fall to his knees before you. A grin spreads over your face when you look at the trembling doberman on the ground, especially as he gulps nervously when you push aside your clothes to free your [cock of player] shaft to stand erect before his eyes.";
@@ -821,9 +825,8 @@ to say SpikeSex1: [oral on the player]
 			say "     Just a moment later, as he tenses up nicely around your dick when realization about what you mean hits, you orgasm, shooting a first heavy spurt of cum right down his throat. Spike pushes against you weakly as he is subjected to the indignity of getting fed your cum, futilely struggling against your firm grip and just increasing the pleasure of your climax with everything he does. Between your satisfied growls at each throb of cum gushing into your doggy toy's stomach, you call out what a good pet and cumdump he is, rubbing your dominance in hard. Soon, Spike's resistance falters and then stops entirely as he finally seems to accept what role you've given him. To test this, you pull the dobie's muzzle off your cock with a wet slurp, then command him to open wide and aim the final few spurts of your load onto his trembling tongue, painting it with white streaks. With a grin, you give the follow-up order to swallow, which Spike does with little more than a short whimper.";
 			say "     Patting your dobie companion's head possessively, you keep praising him for being a good pet, then demand that he cleans your cock and balls with his tongue. 'Y-yes boss,' the young man says in a subdued tone and gets to work, slowly lapping away at your crotch. You spend some further time having fun in teaching him the proper way to service you, making Spike re-do lick after lick of every part of your genitals, then eventually push him away from your crotch and casually tell him to clean himself up. He takes being manhandled like this without complaint, his gaze filled with just the right amount of trepidation at what you might do if he said anything.";
 			now libido of Spike is 41; [forced into it]
-			now OralVirgin of Spike is false;
 			now PlayerControlled of Spike is true;
-			add "Spike" to OralVirginitiesTaken of player;
+			NPCSexAftermath Spike receives "OralCock" from Player;
 		else: [allow him to refuse subby sex]
 			LineBreak;
 			say "     Slowly reaching out to put a hand on his shoulder, you smile at the young man and tell him that he doesn't have to worry. You wouldn't want to do anything that he isn't comfortable with. 'Thanks [SpikePlayerAdress], I appreciate it. I would do almost anything for you, but you know... I'm a [italic type]real[roman type] man. In control and on top. Not a bitch to service anyone - even you.' Giving him a little squeeze with your hand and nodding to the impressionable young man, you tell Spike that you'll respect his position. His tail wags left and right at this show of being treated [']right['], and it's confirmed in his stance. Looks like your decision did cost you the immediate pleasure of enjoying the doberman's mouth, but gained you a new level of devotion from your young follower.";
@@ -886,9 +889,8 @@ to say SpikeSex2: [oral on the player's pussy]
 			WaitLineBreak;
 			say "     While you cling to Spike as he eats you out, his hand is busy jerking himself off, and so the dobie barrels over the line of no return to his own climax just moments later. He grunts loudly with his nose still buried against your crotch as he starts to shoot long streaks of sperm all over the ground between your legs, each spurt making his whole body twitch and tremble, including the tongue pressed against your clit and giving you quite pleasurable sensations. Together, the two of you ride out your respective orgasms, until you eventually pull Spike back from your now sensitive sex and help him to stand before you once more. Guiding his muzzle to your lips, you kiss him openly and suck on his tongue, tasting some of your own fluids on it. With a teasing smile, you tell him that good things come to those who prove themselves to you, and that he will enjoy himself greatly as your companion. 'I'm sure that I will,' he answers and licks his muzzle, then pushes his softening cock back into his jeans and zips himself up.";
 			now libido of Spike is 1; [talked into it]
-			now OralVirgin of Spike is false;
 			now PlayerFriended of Spike is true;
-			add "Spike" to OralVirginitiesTaken of player;
+			NPCSexAftermath Spike receives "OralPussy" from Player;
 		else if calcnumber is 2: [pressured into it]
 			LineBreak;
 			say "     Looking scornfully at the resistant young man, you tell him in no uncertain terms that you are very disappointed in his performance as your companion. After all, how can you count on him for important tasks if he even fails at the most simple things you give him as a test. Something even the most stupid slut you could pick up on the street would be capable of doing. Spike's face is a study of emotions as you make your accusation-filled little speech, going from disapproval, to shock, to a deep worry. He gulps when you come to a stop, looking at him expectantly, then slowly sinks to his haunches. A grin spreads over your face when you look at the trembling canine on the ground before you, especially as he gulps nervously when you [SelfStripCrotch]. Using the fingers of one hand, you spread the folds of your sex and brush over the clit, telling him that he must service you till you're satisfied.";
@@ -902,9 +904,8 @@ to say SpikeSex2: [oral on the player's pussy]
 			WaitLineBreak;
 			say "     You ride out your orgasm while the dobie drinks down your femcum and continues to lap at your sex until you pat his head and order him to stop. Pulling Spike back from your now sensitive sex, you tell him that he's proven himself - for now. As he stands before you, an expression of mixed relief and worry washes over his face, no doubt from Spike wondering what he might need to do next. You just stroke his muzzle in a vaguely possessive fashion, then rub the dobie's hair and tell him that good things come to those who prove themselves to you. 'I'll make sure to remember that,' he answers and brushes away a drop of femcum from the side of his muzzle, wiping it off on the ground.";
 			now libido of Spike is 21; [pressured into it]
-			now OralVirgin of Spike is false;
 			now PlayerControlled of Spike is true;
-			add "Spike" to OralVirginitiesTaken of player;
+			NPCSexAftermath Spike receives "OralPussy" from Player;
 		else if calcnumber is 3: [forced into it]
 			LineBreak;
 			say "     Stepping right into the young doberman's comfort zone, you don't give him even a second to react, simply snatching him by the loose collar and using that convenient handhold to wrench him even closer. Spike lets out a somewhat choked gasp at suddenly being man-handled, his eyes wide in fear as your merciless gaze studies his face. Telling him that he gave himself to you, with everything this implies, you then physically push him down, making the anthro canine fall to his knees before you. A grin spreads over your face when you look at the trembling canine on the ground before you, especially as he gulps nervously when you [SelfStripCrotch]. Using the fingers of one hand, you spread the folds of your sex and brush over the clit, telling him that he must service you till you're satisfied.";
@@ -916,9 +917,8 @@ to say SpikeSex2: [oral on the player's pussy]
 			say "     Between your high-pitched moans coming with each throb of femcum gushing onto your doggy toy, you call out what a good pet and bitch-boy he is, rubbing your dominance in hard. Soon, Spike's resistance falters and then stops entirely as he finally seems to accept what role you've given him. To test this, you pull the dobie's muzzle away from your crotch and command him to lick your fluids off his own muzzle, which he does with swipes of that long tongue of his. Grinning, you give the follow-up order to swallow, which Spike does with little more than a short whimper. Patting your doberman companion's head possessively, you keep praising him in a condescending tone, then demand that he cleans your crotch with his tongue. 'Y-yes boss,' the young man says in a subdued tone and gets to work, slowly lapping away at your crotch.";
 			say "     You spend some further time having fun in teaching him the proper way to service you, making Spike re-do lick after lick of every part of your genitals, then eventually push him away from your crotch and casually tell him to clean himself up. He takes being manhandled like this without complaint, his gaze filled with just the right amount of trepidation at what you might do if he said anything.";
 			now libido of Spike is 41; [forced into it]
-			now OralVirgin of Spike is false;
 			now PlayerControlled of Spike is true;
-			add "Spike" to OralVirginitiesTaken of player;
+			NPCSexAftermath Spike receives "OralPussy" from Player;
 		else: [allow him to refuse subby sex]
 			LineBreak;
 			say "     Slowly reaching out to put a hand on his shoulder, you smile at the young man and tell him that he doesn't have to worry. You wouldn't want to do anything that he isn't comfortable with. 'Thanks [SpikePlayerAdress], I appreciate it. I would do almost anything for you, but you know... I'm a [italic type]real[roman type] man. In control and on top. Not a bitch to service anyone - even you.' Giving him a little squeeze with your hand and nodding to the impressionable young man, you tell Spike that you'll respect his position. His tail wags left and right at this show of being treated [']right['], and it's confirmed in his stance. Looks like your decision did cost you the immediate pleasure of enjoying the doberman's mouth, but gained you a new level of devotion from your young follower.";
@@ -992,6 +992,7 @@ to say SpikeSex3: [oral on Spike]
 	if Lust of Spike is 0:
 		now Lust of Spike is 1;
 	PlayerEat 10;
+	NPCSexAftermath Player receives "OralCock" from Spike;
 
 to say SpikeSex4: [cherry popping]
 	if libido of Spike > 0 and libido of Spike < 20: [joyful dobie]
@@ -1039,17 +1040,17 @@ to say SpikeSex4: [cherry popping]
 		say "     Despite the harsh treatment and you just taking what pleasure you want from his gripping asshole, the stimulation of Spike's prostate isn't something the young man can deny. He may whimper and groan as you force your dick into his hole again and again, yet somewhere in between, there's a shocked moan or two too and reaching beneath him, your questing fingers find that his canine cock has pushed out of its sheath. Squeezing his erection sharply, you laugh and comment that it can't be too bad if he's hard from being fucked, then demand for him to beg you for more sex. You do indeed get that, as Spike gasps out between groans, 'Fuck me! Take me [SpikePlayerAdress]! *Nnnnghhhh* Fuck my ass!' Going back to harsh thrusts with your hands on his hips after that, you rail your little bitch-boy good, hammering into him faster and faster until you can barely contain your lust anymore. Then finally, you slam into him one last time and erupt into his depth, flooding the young man with your virile cum and claiming his ass as yours.";
 		say "     You stay on top of Spike for long enough that your spurts of cum eventually ebb off and then cease, then wrench your shaft out of his hole with little regard to the sore state of his pucker. With the pained gurgle of the dobie in your ears, you eagerly take in your handiwork: His tail-star is far from the tight little button it once was, instead showing as a reddened ring that only slowly pulls closed again. Even as it does so, at some point the movement slows down and comes to a stop, leaving a tiny bit of a gape behind, just enough for the creamy white cum you bred him with to leak out. You've definitively left a lasting mark on Spike, who just lies where you left him, exhausted and sore, while you grab your gear and get dressed again. Not really paying him too much attention while you get dressed, you see him look down in shame as he pulls his pants on a little while later, gingerly pulling it over his aching ass.";
 		now libido of Spike is 42; [anal virginity taken (brutally)]
-	now AnalVirgin of Spike is false;
-	add "Spike" to AnalVirginitiesTaken of player;
 	if Lust of Spike is 0:
 		now Lust of Spike is 1;
+	NPCSexAftermath Spike receives "AssFuck" from Player;
 
 to say SpikeSex5: [Spike fucks player pussy]
 	say "     A";
+	NPCSexAftermath Player receives "PussyFuck" from Spike;
 
 to say SpikeSex6: [Spike fucks player ass]
 	say "     A";
-
+	NPCSexAftermath Player receives "AssFuck" from Spike;
 
 Spike ends here.
 
