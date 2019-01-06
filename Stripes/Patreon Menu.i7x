@@ -38,14 +38,15 @@ carry out supersponsor:
 		say "[if sanitysave is 1][link](11) Sanity Saver - Taken[as]11[end link][else][link](11) Sanity Saver[as]11[end link] - Available[end if][line break]";
 		say "[link](12) Claim all the pets![as]12[end link][line break]";
 		say "[link](13) Revel in being awesome[as]13[end link][line break]";
+		say "[link](14) Return to humanity[as]14[end link][line break]";
 		say "[link](0) Abort[as]0[end link][line break]";
 		while 1 is 1:
-			say "Choice? (0-13)> ";
+			say "Choice? (0-14)> ";
 			get a number;
-			if calcnumber >= 0 and calcnumber <= 13:
+			if calcnumber >= 0 and calcnumber <= 14:
 				break;
 			else:
-				say "Invalid choice. Pick from 0 to 13.";
+				say "Invalid choice. Pick from 0 to 14.";
 		if calcnumber is 1:
 			sslvl12;
 		else if calcnumber is 2:
@@ -180,6 +181,19 @@ carry out supersponsor:
 		else if calcnumber is 13:
 			now carried of Smug Confidence is 1;
 			say "Ah, there it is. Don't forget to use it.";
+		else if calcnumber is 14:
+			Now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
+			Now bodytype of player is "Human";
+			Now skin of player is "smooth";
+			Now cock of player is "[one of]normal[or]flesh-toned[or]uninfected[or]human[at random]";
+			Now face of player is "Human";
+			Now tail of player is "Human";
+			Now body of player is "Human";
+			Now bodyname of player is "Human";
+			Now facename  of player is "Human";
+			Now skinname of player is "Human";
+			Now Cockname of player is "Human";
+			Now Tailname of player is "Human";
 		else:
 			now Trixieexit is 1;
 		LineBreak;
