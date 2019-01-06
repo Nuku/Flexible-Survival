@@ -24,7 +24,7 @@ Version 1 of Percy by Taelyn begins here.
 [   3: Gambeson                                                                            ]
 
 [Future Content Notes:                                                                     ]
-[Add Entreances to the West(Snowy Forest), North(Kobold Caverns), and East(Mystical Forest)]
+[Add Entreances to the East(Snowy Forest), West(Kobold Caverns), and Northwest(Avalon Keep)]
 [Adding mini questlines to unlock more Percy content, relationship, and equipment          ]
 
 an everyturn rule: [bugfix for old exports]
@@ -55,6 +55,11 @@ Cunt Width of Percy is 0. []
 Breasts of Percy is 2. [2 nipples]
 Breast Size of Percy is 0. [flat]
 Humanity of Percy is 70.
+PlayerMet of Percy is false.
+PlayerRomanced of Percy is false.
+PlayerFriended of Percy is false.
+PlayerControlled of Percy is false.
+PlayerFucked of Percy is false.
 OralVirgin of Percy is true.
 Virgin of Percy is true.
 AnalVirgin of Percy is true.
@@ -155,7 +160,7 @@ to say PercyTalkMenu:
 	clear the screen and hyperlink list;
 
 to say PercyTalk1: [Rumors]
-	let randomnumber be a random number from 1 to 3;[fix to 4 once drap list is created]
+	let randomnumber be a random number from 1 to 5;[fix to 4 once drap list is created]
 	if randomnumber is:
 		-- 1:
 			say "     'I'm sure you know this didn't used to be a forest[if player is not defaultnamed], [name of player][end if]. They sprouted up almost overnight once the infection hit. I wouldn't try harming the trees around here though. There's more to them that meets the eye.'";
@@ -164,7 +169,9 @@ to say PercyTalk1: [Rumors]
 		-- 3:
 			say "     'A Knight and Squire tried to attack me the other day.  They kept calling me a monster.' Percy looks slightly saddened by the thought. 'Not all the knights are like that though, you know? Those are just the ones that lost themselves to the infections. Some of the sane ones come to me to have new equipment forged.'";
 		-- 4:
-			say "     'If you need a good source of leather, those [bold type]Herm Hyenas[roman type] sometimes drop scraps of them now and then. Just... promise me you'll be careful[if player is not defaultnamed], [name of player][end if].'";
+			say "     'The wisps are strange little guys. I used to read stories about how wisps lead people to their destiny or great treasures. I first met one while exploring the Mysterious Glade down the path from my burrow. I'm not sure I would have ever found Avalon without their help.'";
+		-- 5:
+			say "     'Kobolds may be a bit mischievous, but I like them. They come here from time to time to have things made that they can't make themselves; things like more advanced weapons and armors. They have some smiths themselves, but they aren't very good yet. A few of them have asked me to teach time, but if I did, it could upset the Heroes, and I'd rather stay neutral in their silly war.'";
 	wait for any key;
 	say "[PercyTalkMenu]";
 
@@ -315,7 +322,7 @@ instead of going northwest from Urban Forest while (HP of Percy < 1):
 
 Part 2 - Pangolin Reencounter
 
-instead of going north from Southern Burrow Entrance while (HP of Percy < 2):
+instead of going northwest from Southern Burrow Entrance while (HP of Percy < 2):
 	say "     You head down into the burrow where you had seen the strange creature from before roll down. The tunnel is dimly lit by small yellowish crystals embedded in the earthen walls. Not that there was much to see. Most of the tunnel is the same; a rounded passage carved out by claws and large enough for even larger creatures to pass through relatively unhindered. Just as you begin to wonder just how long this tunnel is, a wooden wall comes into view. It is built out of whole logs and solid enough that it would take a massive force to break through. Luckily, there is also a door, which means that you haven't reached a dead-end. There was even a sign hanging above it with a hammer and anvil crudely drawn on it. You reach for the ironwork handle and pull tentatively. Unfortunately, the door seems to be barred from the other side and no amount of pulling is going to change that.";
 	say "     [bold type]Knock on the door?[roman type]";
 	LineBreak;
@@ -349,14 +356,16 @@ Part 1 - South Entrance
 
 Southern Burrow Entrance is a room. Southern Burrow Entrance is northwest of Urban Forest.
 The description of Southern Burrow Entrance is "[SouthBurrow desc]".
+earea of Southern Burrow Entrance is "Forest".
 
 to say SouthBurrow desc:
 	say "     If it wasn't for the degraded fences and crumbling houses, you could almost believe that you were in a natural forest. The birds sing in harmony, and the gentle breeze blowing through the leaves bring with it the herbal scent of the trees and earth around you. You've come to a point where the path splits.";
 	LineBreak;
-	say "     To the [bold type]North[roman type] is a large burrow that continues deep into an earthen mound. Fresh tracks cover the ground, both coming to and from the tunnel, as well as passing by.";
+	say "To the [bold type]North[roman type] looks to be a clearing among the trees. Some kind of glade, though you get a somewhat strange feeling as you look towards it. You could almost swear seeing a glint of blue from it.";
+	LineBreak;
+	say "     To the [bold type]Northeast[roman type] is a large burrow that continues deep into an earthen mound. Fresh tracks cover the ground, both coming to and from the tunnel, as well as passing by.";
 	LineBreak;
 	say "     To the [bold type]Southwest[roman type] is the entrance to the Urban Forest. You can still see the edge of the tree line if you look hard enough, and the buildings in the area are more intact than where you currently are.";
-	[say "To the [bold type]Northeast[roman type] looks to be a clearing among the trees. Some kind of glade, though you get a somewhat strange feeling as you look towards it. You could almost swear seeing a glint of blue from it.";]
 
 Part 2 - Ironscale Hollow
 
@@ -365,7 +374,7 @@ Object	Name
 Ironscale Hollow	"Ironscale Hollow"
 
 Ironscale Hollow is a room. It is fasttravel. Ironscale Hollow is sleepsafe. It is private.
-Ironscale Hollow is north of Southern Burrow Entrance.
+Ironscale Hollow is northeast of Southern Burrow Entrance.
 The description of Ironscale Hollow is "[IronscaleHollow desc]".
 
 the scent of Ironscale Hollow is "It smells of dirt and iron.".

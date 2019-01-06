@@ -38,28 +38,28 @@ The sarea of Unusual Creature is "Park".
 After resolving a Unusual Creature, try looking;
 
 Instead of resolving Unusual Creature:
-	say "     Your ears pick up a faint sound in your searchings and you approach carefully. Peeking through the bushes, you see a deer, bipedal, female if not for the thick black shaft that dangles between her legs. She is crying quietly, face buried in her palms, body curled against a tree. She doesn't react as you slip in closer, not even noticing you until you're almost on top of you. She gasps loudly when she does notice you, throwing herself back against the tree with wide eyes.";
-	say "     'Don't look at me!' she cries, falling in against herself, hugging herself to hide her alien form.";
+	say "     Wandering through the wildly overgrown park, your ears pick up a faint sound and you decide to check it out. Carefully bending aside a branch, you peer into the bushes and see a bipedal deer woman not too far away in the underbrush. She doesn't appear to be wearing clothing and has only the fur on her body to protect her from the elements, which allows you to realize that she's not quite completely female, instead having a the thick black shaft dangling between her legs. The hermaphrodite is crying quietly, face buried in her palms and her body curled against a tree. She doesn't react as you slip in closer, not even noticing you until you're almost on top of her. She gasps loudly when she does notice you, throwing herself back against the tree with wide eyes.";
+	say "     'Don't look at me! I'm a monster,' the anthro deer cries out, trying futilely to cover her nonhuman form with arms and hands. Clearly, she's retained a much more human self-image than most infected in the city. Tension and stress is visible in everything from her stance to the somewhat shrill tone of her voice. You can see the muscles in her legs tremble, possibly preparing for all out flight from you.";
 	LineBreak;
-	say "What do you want to do with the deer?";
+	say "     [bold type]Quick! What do you want to do with the deer?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Do you grab her?";
+	now title entry is "Grab her before she runs off";
 	now sortorder entry is 1;
-	now description entry is "Forcefully grab her and bring her to Doctor Matt";
+	now description entry is "You were asked to bring her in by Dr. Matt and she's freaking out right now. Sometimes one has to be a little forceful with people";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Do you console her?";
+	now title entry is "Try to calm her down and console her";
 	now sortorder entry is 2;
-	now description entry is "Try to console her and help her feel better about herself before taking her to Doctor Matt";
+	now description entry is "A calm voice and a smile sometimes can work wonders with desperate and distraught people. You can take her to Dr. Matt once she's more relaxed";
 	[]
 	if libido of player > 50 and player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Do you follow your instincts and fuck her?";
+		now title entry is "Jump the woman and fuck her";
 		now sortorder entry is 3;
-		now description entry is "Fuck her before taking the doe to Doctor Matt. Having a little fun with her before he examines her should be no problem, right";
+		now description entry is "Dominate the doe and then take her to Doctor Matt. Having a little fun with before he examines her should be no problem, right";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -76,52 +76,47 @@ Instead of resolving Unusual Creature:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Do you grab her?"):
+				if (nam is "Grab her before she runs off"):
 					say "[Unsualgrab]";
-				if (nam is "Do you console her?"):
+				if (nam is "Try to calm her down and console her"):
 					say "[Unsualconsole]";
-				if (nam is "Do you follow your instincts and fuck her?"):
+				if (nam is "Jump the woman and fuck her"):
 					say "[Unsualfuck]";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     Unsure what to do, you stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' she asks, making her way to her hooves. You explain that you'd like her to come with you and she looks around a moment before shrugging, 'I have nothing better to do,' she admits, and follows you, a little sullen.";
+			say "     Unsure what to do, you just stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' the anthro deer asks, shifting her weight from one hoof to the other. 'I - I'm Susan. But... aren't you horrified by this freaky body of mine? I mean, you don't seem to be one of the rape-y ones, so what's your deal hanging out with the ugly mutant?' Calmly stating that she's far from that, you smile at her and explain that there's actually someone working on understanding and fixing this whole mess. Susan looks around at the overgrown park, then up at the colossal form of a wyvern circling high in the sky. Finally she shrugs her furred shoulders. 'I really doubt that will work, but I guess I don't have anything better to do,' she muses, then nods for you to lead the way.";
+			say "[SusanLabArrival]"; [this is found in the file Main Storyline.i7x]
 			now Unusual Creature is resolved;
-			move Susan to primary lab;
-			move player to primary lab;
 			now Resolution of Unusual Creature is 1; [Told Susan to follow you]
-			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
 to say Unsualgrab:
-	say "     You lunge for her and grab a long-limbed arm. Her brown fur is soft to the touch, warm as well. She's wrenched to her feet with a cry, and struggles, but is unable to escape your grip as you haul her back through the city directly for the lab. Sometimes the direct answer is the best one.";
+	say "     With a quick lunge forward, you grab hold of one arm of the long-limbed doe. Her brown fur is soft to the touch under your fingers and pleasantly warm, creating a counterpoint to the woman's shrill squeal of terror and her trying to pull away from you. 'NoNoNoNo! Let me go!' she whimpers while struggling to escape, her whole attention on simply getting away. Not making any aggressive move even in a situation like this, you don't have too hard a time curtailing all attempts of escape and soon pin her against the tree, arms held down against her sides. She seems to resign herself to being your prisoner after another moment or two, then finally says, 'I - I give up. P-please be gentle, alright? I'm Susan.' Clearing your throat, you explain that you're not actually here for any sort of sex and instead just want to bring her to someone who's working on understanding and fixing this whole mess.";
+	say "     Susan looks left and right at the overgrown park, then up at the colossal form of a wyvern circling high in the sky. Finally she shrugs her furred shoulders. 'I really doubt that will work. Or maybe it will work, if the guy has his own goon squad.' The last sentence is said sullenly, with her gaze resting straight on yourself, prompting you to soften your grasp a little and apologizing for being a little rough. But of course, who knows what trouble she may have run into if you had let her go. This argument mollifies the anthro doe a little, until she finally says, 'Fine. Okay. Maybe you are right. I'll meet your scientist buddy.' Then she nods for you to lead the way.";
+	say "[SusanLabArrival]"; [this is found in the file Main Storyline.i7x]
 	now Unusual Creature is resolved;
-	move Susan to primary lab;
-	move player to primary lab;
 	now Resolution of Unusual Creature is 2; [Grabbed Susan]
 
 to say Unsualconsole:
 	project the Figure of Susan_face_icon;
-	say "     You kneel beside her and take a hand. Rubbing gently, you tell her that she's not ugly at all. She refuses your word at first, but slowly warms as you coo soft encouragements. She suddenly pulls you close and kisses firmly, her slender snout against your face for a moment. She quickly agrees to come back with you to the lab, smiling as she goes.";
+	say "     Raising your hands in a consoling gesture and smiling at her, you tell the anthro doe that she has nothing to fear from you and is far from being a monster. There is a slight pause in her sobbing and she looks doubtfully past her hands, really focusing on you for the first time. Slowly reaching out, you hold an open hand for her to take, which she does with some hesitation. Rubbing your thumb gently over the soft fur of her hand, you tell her that she's not ugly at all. 'B-but I'm a freak. A creature just like all of those... those feral beasts!' she sniffs. Giving her further encouraging words, she slowly warms up to you, then leans in against your chest, prompting you to put a hand on her shoulder. This must have been some sort of signal to her, as she suddenly pulls you even closer and kisses your mouth firmly, her slender snout up against your face for a long moment. 'I'm Susan,' the young woman says with a hopeful tone, for the first time daring to believe that someone could want her even as she is now.";
+	say "     As you explain that there's actually someone working on understanding and fixing this whole mess, Susan looks around at the overgrown park, then up at the colossal form of a wyvern circling high in the sky. Finally she shrugs her furred shoulders. 'I really doubt that will work, but I guess I'll come. For you. I hope it'll help,' she says quietly, then nods for you to lead the way.";
+	say "[SusanLabArrival]"; [this is found in the file Main Storyline.i7x]
 	now deerconsent is 1;
 	now Unusual Creature is resolved;
-	move Susan to primary lab;
-	move player to primary lab;
 	now Resolution of Unusual Creature is 3; [Consoled Susan]
 
 to say Unsualfuck:
 	project the Figure of Susan_face_icon;
-	say "     Unsure what to do, you obey the urgings of your [cock of player] cock. You grab her and push her to the ground, belly up. Your hands grab at her generous breasts as you slip into her wet, grasping, cunt. She squeals, at first with surprise, then increasingly with pleasure, rising her hips to meet your powerful thrusts. Your bodies dance together, her own cock grinding against your belly each time you plunge deep into her. Her cunt tightens like a vice around you before she arches her back and bleats in delight. You can feel your balls clenching in response, and you fill her belly with hot gushes of seed.";
-	WaitLineBreak;
-	say "     Sated, she hugs tightly to you, and agrees to accompany you to the lab, blushing and satisfied looking the whole way.";
+	say "     Just going ahead and pulling your [cock of player] cock out, you lunge forward and grab hold of the long-limbed doe. She doesn't have time to do much more than let out a frightened squeal before she is pushed down to the ground, falling onto the leaves with her belly up. It doesn't look like there is any aggressive bone at all in her body, as she doesn't try to defend herself even in this situation, allowing you to spread her legs wide with ease. 'No, wait! I- oooohhhhHH!' she starts to say, then gasps out loud as you hammer into her wet, receptive pussy. The hermaphrodite doe feels amazing around your cock, both her nether lips as well as her furry balls stroking the sides of your shaft as it slides in and out. The shocked squeals of your first entry into her soon give way to sounds of pleasure as she adapts, raising her hips to meet your powerful thrusts before much longer. Your bodies dance together, her own cock grinding against your belly each time you plunge deep into her.";
+	say "     As the climax of a quick, wild romp on the forest floor, the doe's cunt suddenly tightens like a vice around you. With a bleat of delight, she writhes under you, hands digging grooves into the ground left and right as her cock fountains thick spurts of cum to splatter all over her chest and breasts. You can feel your balls clenching in response, with the muscle contractions of her twitching pussy driving you over the edge right along with the anthro herm. Grunting out loud, you fill her belly with hot gushes of seed while grinding against her crotch. As the pleasure of your shared orgasms eventually ebbs off, you smile down at the sexy woman you've claimed for yourself by right of breeding. 'I guess I'm your woman now. I'm Susan, by the way,' she says in a somewhat star-struck tone. Postponing any reply about that, you clear your throat and explain that you didn't originally come here just to fuck her and say that someone important wants to meet her. 'Oh, okay then. I'll come, just lead the way,' she says with a nod, and indeed does so after you pull out and guide her from the park.";
+	say "[SusanLabArrival]"; [this is found in the file Main Storyline.i7x]
 	now deerconsent is 1;
 	now Unusual Creature is resolved;
-	move Susan to primary lab;
-	move player to primary lab;
 	now Resolution of Unusual Creature is 4; [Fucked Susan]
-
 
 Section 2 - NPC Basics
 

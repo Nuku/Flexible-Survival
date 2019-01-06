@@ -177,7 +177,12 @@ A person has a number called Cunt width.
 A person has a number called armor.
 A person has a number called capacity.
 A person has a number called libido.
+A person has a text called MainInfection. MainInfection is usually "Human". [just to have something valid in this, the variable should be overwritten for every npc]
 A person has a text called linkaction.
+A person has a text called FirstAnalPartner.
+A person has a text called FirstVaginalPartner.
+A person has a text called FirstOralPartner.
+A person has a text called FirstPenilePartner.
 A person has a number called SleepRhythm. [day/night bias]
 
 A person has text called Cock Size Desc.
@@ -4651,6 +4656,7 @@ Include Astroslide Field Locker-room by Kernog.
 Include Astroslide Field Showers by Kernog.
 Include Astroslide Football Field by Kernog.
 Include Atlantis by Rikaeus.
+Include Avalon by Taelyn.
 Include Azrael by Rikaeus.
 Include Beach by Speedlover.
 Include Bargain Bin by Wahn.
@@ -4909,6 +4915,7 @@ Include Feral Mutt by CrimsonAsh.
 Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
 Include Feral Shaft Beast by Guest Writers.
+Include Feral Unicorn by Taelyn.
 Include Feral Wolf by Stripes.
 Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
@@ -5110,6 +5117,7 @@ Include Zebra by Vervaine.
 
 [NPCs]
 Include Alex by Stripes.
+Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
 Include Alexandra Cuckolding by Wahn.
 Include Alpha Fang Scenes by Nuku Valente.

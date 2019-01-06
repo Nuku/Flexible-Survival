@@ -81,6 +81,7 @@ Virgin of Carl is true.
 AnalVirgin of Carl is false.
 PenileVirgin of Carl is false.
 SexuallyExperienced of Carl is true.
+MainInfection of Carl is "Alpha Husky".
 The icon of Carl is Figure of Carl_clothed_icon.
 The description of Carl is "[CarlDesc]".
 The conversation of Carl is { "Woof." }.

@@ -14,6 +14,10 @@ Version 1 of Stella by Stripes begins here.
 
 Section 0 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Eager Dal	"Eager Dal"
+
 Eager Dal is a situation.
 The sarea of Eager Dal is "Red".
 when play begins:

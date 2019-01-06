@@ -42,9 +42,9 @@ Version 1 of Good Alexandra by Wahn begins here.
 [ libido of Alexandra                               ]
 [ number of offspring                               ]
 
-[   hunger of Alexandra   - Whether at library or not             ]
-[   0:     Good Alexandra at Police Station     ]
-[   1:     Good Alexandra at Library            ]
+[ hunger of Alexandra   - Whether at library or not ]
+[ 0:     Good Alexandra at Police Station           ]
+[ 1:     Good Alexandra at Library                  ]
 
 [ level of Alexandra                                ]
 [ Alexandra + Fang                                  ]
@@ -94,10 +94,10 @@ Version 1 of Good Alexandra by Wahn begins here.
 [ 5 = completed doors                               ]
 [ 6 = miscellaneous                                 ]
 
-[ PoliceStationTwelvePopulation                      ]
+[ PoliceStationTwelvePopulation                     ]
 [ generic population count                          ]
 
-[ PoliceStationTwelveInfpop                          ]
+[ PoliceStationTwelveInfpop                         ]
 [ infected population count                         ]
 [ (subset of population)                            ]
 
