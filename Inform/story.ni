@@ -4677,7 +4677,7 @@ Include Hitching Post by SgtPepper234.
 Include Hospital by Stripes.
 Include Hyena Hideout by Stripes.
 Include Junkyard and Warehouse by Wahn.
-Include Kitsune Hide Away by Kaleem mcintyre.
+Include Kitsune Hide Away by Shadowwolf94.
 Include Mall Community Center by Wahn.
 Include Mall Residents by Rikaeus.
 Include Medical Checkups by Stripes.
@@ -4759,8 +4759,8 @@ Include Inner Mall Events by Wahn.
 Include Inventory Management Enhancements by Core Mechanics.
 Include Ironscale Items by Taelyn.
 Include Junkyard Events by Stripes.
-Include Kitsune by Kaleem mcintyre.
-Include Kitsune Expansion by Dys.
+Include Kitsune by Shadowwolf94.
+Include Kitsune Expansion by Shadowwolf94.
 Include Latex Quad Husky by Stripes.
 Include Leonard Events by Stripes.
 Include Little Old Woman by Kaleem mcintyre.
@@ -4909,7 +4909,7 @@ Include Ewe by Sarokcat.
 Include Feline Gymnast by Guest Writers.
 Include Female Husky by Nuku Valente.
 Include Fennec by Stripes.
-Include Feral Cheetah by Hellerhound.
+Include Feral Cheetah by Shadowwolf94.
 Include Feral Gryphon by UrsaOmega.
 Include Feral Mutt by CrimsonAsh.
 Include Feral Sea Dragon by Blue Bishop.
