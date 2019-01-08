@@ -1,4 +1,5 @@
-Kitsune by Kaleem mcintyre begins here.
+Kitsune by Shadowwolf94 begins here.
+[Original by Kaleem Mcintyre]
 
 "Adds a series of events revolving around a kitsune to Flexible Survival."
 

@@ -110,6 +110,7 @@ Virgin of Amy is true.
 AnalVirgin of Amy is true.
 PenileVirgin of Amy is true.
 SexuallyExperienced of Amy is false.
+MainInfection of Amy is "Female Husky".
 
 The icon of Amy is Figure of Amy_icon.
 The description of Amy is "[AmyDesc]".
@@ -311,9 +312,8 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				let AmyPregchance be a random number from 1 to 20;
 				if AmyPregchance > 13:
 					now Lust of Amy is 24;
-			now lastfuck of Amy is turns;
-			now lastfuck of Xerxes is turns;
 			now thirst of Amy is 1;
+			NPCSexAftermath Amy receives "PussyFuck" from Xerxes;
 		else:[Xerxes forbidden]
 			LineBreak;
 			say "     Shaking your head to the dog in the body of a human teenager, you take Xerxes to his cot, some distance away from Amy. After having him sit on it, you continue to tell him that he should stay away from Amy. Your pet gives a somewhat sad yip as he looks over at the naked husky again, then accepts his master's orders and lies down.";
@@ -336,7 +336,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				let AmyPregchance be a random number from 1 to 20;
 				if AmyPregchance > 13:
 					now Lust of Amy is 24; [24 turns till birth]
-			now lastfuck of Amy is turns;
+			NPCSexAftermath Amy receives "PussyFuck" from Klauz;
 			now level of Amy is 1;
 		else: [stop this]
 			LineBreak;
@@ -359,6 +359,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 						LineBreak;
 						say "     Quickly pulling off your clothes and moving in behind Fang, you get your throbbing cock lined up with his tailhole, then push it into his tight pucker. Fang releases a soft whimper, but takes your cock easily enough in his experienced hole and doesn't let up at with his own thrusts into the wet pussy under him. Amy, meanwhile, moans loudly as your pounding against Fang's ass presses the wolf's shaft even deeper into her body. She rubs her hand-paws over his neck and ears, pulling his head down to trade licks, muzzle to muzzle.";
 						say "     Fang licks her face and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling your husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking your pet wolf's seed. On his back-end, you feel the wolf's insides twitch around your manhood with each burst of his cum into Amy, quickly driving you towards your own orgasm. As his muscles almost jerk you off as he spurts another and another blast of his seed, you can hold back no longer and blow your load deep into the wolf's bowels, claiming him once more as your own.";
+						NPCSexAftermath Fang receives "AssFuck" from Player;
 					else: [just watch and touch]
 						LineBreak;
 						say "     Being content to just watch and touch them a bit for now, you stay right beside Fang and Amy on the mattress, caressing her breasts and body as well as his balls. He pounds into her hard and fast while the young husky's needy cunt grips and squeezes around that feral wolf cock. She moans about how strong your pet wolf is, how virile, to breed her like the bitch she is. Clearly pleased by those words, Fang licks her face and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling your husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking his canine seed. When his knot goes down, he pops his cock from her, letting his excess semen flow out to soak into the mattress, leaving the scent of it upon Amy and her bedding as a reminder to you and others that he bred her.";
@@ -368,7 +369,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					let AmyPregchance be a random number from 1 to 20;
 					if AmyPregchance > 13:
 						now Lust of Amy is 24; [24 turns till birth]
-				now lastfuck of Amy is turns;
+				NPCSexAftermath Amy receives "PussyFuck" from Fang;
 				now XP of Amy is 1; [he fucked her and may do it again]
 			else:[stop Fang]
 				LineBreak;
@@ -383,7 +384,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 						let AmyPregchance be a random number from 1 to 20;
 						if AmyPregchance > 13:
 							now Lust of Amy is 24; [24 turns till birth]
-					now lastfuck of Amy is turns;
+					NPCSexAftermath Amy receives "PussyFuck" from Player;
 					now XP of Amy is 99; [no Amy-pussy for Fang]
 				else:
 					WaitLineBreak;
@@ -391,7 +392,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					say "     Grinning, you hold out the dildo to Fang to have him lick it, then send him off to his usual spot with a wave of your hand. He's only a pet after all, something he clearly needs a reminder of. Bringing the dildo to Amy's crotch next, you rub its head over her pussy lips and push it in between them, going deeper and deeper. She moans loudly as you sink the whole rubber shaft into her, up till the balls as its base touch her crotch. Taking hold of the sex toy there, you pull it out halfway again, then thrust it back into her, fucking Amy with it and rubbing her inner walls with the hard rubber shaft. Fucking the husky woman is a lot of fun, though a bit tiring for your arm, so you switch off your left and right hands as you take care of the insatiably horny husky. Accompanied by moans and gasps to go harder and faster, Amy's libido builds up higher and higher and her arousal finally culminates in a pretty noisy orgasm. Giving a lust-filled howl as she comes, Amy writhes on her mattress, her femcum glistening wetly on the rubber shaft of the dildo you're fucking her with.";
 					LineBreak;
 					say "     Satisfied in having taken care of her, you leave the dildo buried in her pussy and lie down with Amy on her mattress. Spooning her, you run a hand through her soft belly fur, circling her nipples with your finger, then just hold her.";
-					now lastfuck of Amy is turns;
+					NPCSexAftermath Amy receives "PussyDildoFuck" from Player;
 					now XP of Amy is 99; [no Amy-pussy for Fang]
 		else: [Alpha Fang fucks her for sure]
 			say "     You stand there and watch as Fang mounts Amy, as is his right as Alpha over you - and now her as well. He pounds into her hard and fast while the young husky's needy cunt grips and squeezes around that feral wolf cock. She moans about how strong your big alpha is, how virile, to breed her like the bitch she is. Clearly pleased by those words, Fang licks her face and fucks her even harder, slamming his swollen knot against Amy's sore pussy until it stretches open enough to let that oversized knot pop in and tie with her. The black wolf howls triumphantly when this happens, unleashing a hot rush of semen into Amy, filling your husky girl with his ample load as he drains his large, virile balls into her. She writhes beneath him in ecstasy, cumming hard as well from taking your master's seed. When his knot goes down, he pops his cock from her, letting his excess semen flow out to soak into the mattress, leaving the scent of it upon Amy and her bedding as a reminder to you and others that she belongs to him now.";
@@ -399,8 +400,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				let AmyPregchance be a random number from 1 to 20;
 				if AmyPregchance > 13:
 					now Lust of Amy is 24; [24 turns till birth]
-			now lastfuck of Fang is turns;
-			now lastfuck of Amy is turns;
+			NPCSexAftermath Amy receives "PussyFuck" from Fang;
 			now XP of Amy is 1;
 	else if HP of Amy > 10 and Elijah is bunkered and HP of Elijah > 3 and HP of Elijah < 100 and Dexterity of Amy is 0:[first interest of Elijah in her]
 		if HP of Elijah is 99: [evil Elijah]
@@ -420,8 +420,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					let AmyPregchance be a random number from 1 to 20;
 					if AmyPregchance > 13:
 						now Lust of Amy is 24;
-				now lastfuck of Amy is turns;
-				now lastfuck of Elijah is turns;
+				NPCSexAftermath Amy receives "PussyFuck" from Elijah;
 				now Dexterity of Amy is 51;
 			else:[Evil Elijah forbidden]
 				LineBreak;
@@ -447,8 +446,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					let AmyPregchance be a random number from 1 to 20;
 					if AmyPregchance > 13:
 						now Lust of Amy is 24;
-				now lastfuck of Amy is turns;
-				now lastfuck of Elijah is turns;
+				NPCSexAftermath Amy receives "PussyFuck" from Elijah;
 				now Dexterity of Amy is 1;
 			else:
 				LineBreak;
@@ -474,8 +472,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				let AmyPregchance be a random number from 1 to 20;
 				if AmyPregchance > 13:
 					now Lust of Amy is 24;
-			now lastfuck of Amy is turns;
-			now lastfuck of Sven is turns;
+			NPCSexAftermath Amy receives "PussyFuck" from Sven;
 			now SvenAmySex is 1;
 		else:
 			say "     Telling Sven that while he's right in saving himself for your pleasure, it still doesn't excuse him being rude to Amy by not even talking to her. With the admonition that he should jerk off a few times before each time he wants to come up here so he can meet her without springing a hard-on every time, you send him back down into the bunker.";
@@ -502,7 +499,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					let AmyPregchance be a random number from 1 to 20;
 					if AmyPregchance > 13:
 						now Lust of Amy is 24;
-				now lastfuck of Amy is turns;
+				NPCSexAftermath Amy receives "PussyFuck" from demon brute;
 				now BrutusAmySex is 51;
 			else: [Brutus forbidden]
 				LineBreak;
@@ -529,7 +526,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					let AmyPregchance be a random number from 1 to 20;
 					if AmyPregchance > 13:
 						now Lust of Amy is 24;
-				now lastfuck of Amy is turns;
+				NPCSexAftermath Amy receives "PussyFuck" from demon brute;
 				now BrutusAmySex is 1;
 			else:
 				LineBreak;
@@ -556,8 +553,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				let AmyPregchance be a random number from 1 to 20;
 				if AmyPregchance > 13:
 					now Lust of Amy is 24;
-			now lastfuck of Amy is turns;
-			now lastfuck of Snow is turns;
+			NPCSexAftermath Amy receives "PussyFuck" from Snow;
 			now SnowAmySex is 1;
 		else:
 			LineBreak;
@@ -580,6 +576,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 					let AmyPregchance be a random number from 1 to 20;
 					if AmyPregchance > 13:
 						now Lust of Amy is 24;
+				[-----WIP-----]
 				now lastfuck of Amy is turns;
 				now lastfuck of Icarus is turns;
 				now IcarusAmySex is 50; [dom Icarus + Amy sex will come up in the future]

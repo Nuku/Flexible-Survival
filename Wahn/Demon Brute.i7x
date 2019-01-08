@@ -556,6 +556,29 @@ demon brute	"demon brute"
 
 demon brute is a pet. demon brute is a part of the player.
 understand "Brutus" as demon brute.
+ScaleValue of demon brute is 4. [larger than human]
+Cocks of demon brute is 1.
+Cock Length of demon brute is 18.
+Cock Width of demon brute is 14. [golfball sized balls]
+Testes of demon brute is 2.
+Cunts of demon brute is 0.
+Cunt Length of demon brute is 0.
+Cunt Width of demon brute is 0.
+Breasts of demon brute is 2.
+Breast Size of demon brute is 0.
+[Basic Interaction states as of game start]
+PlayerMet of demon brute is false.
+PlayerRomanced of demon brute is false.
+PlayerFriended of demon brute is false.
+PlayerControlled of demon brute is false.
+PlayerFucked of demon brute is false.
+OralVirgin of demon brute is false.
+Virgin of demon brute is true.
+AnalVirgin of demon brute is false.
+PenileVirgin of demon brute is false.
+SexuallyExperienced of demon brute is true.
+MainInfection of demon brute is "Demon Brute".
+
 The description of demon brute is "[DemonBrutePetDesc]".
 The icon of demon brute is Figure of DemonBrute_icon.
 The weapon damage of demon brute is 8.
@@ -1472,7 +1495,7 @@ When Play begins:
 	now area entry is "Mall";
 	now cocks entry is 1;
 	now cock length entry is 18;
-	now cock width entry is 8;
+	now cock width entry is 14;
 	now breasts entry is 0;
 	now breast size entry is 0;
 	now male breast size entry is 0;

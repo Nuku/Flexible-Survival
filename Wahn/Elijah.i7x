@@ -148,6 +148,29 @@ object	name
 Elijah	"Elijah"
 
 Elijah is a man. The HP of Elijah is usually 0.
+ScaleValue of Elijah is 3. [human sized]
+Cocks of Elijah is 1.
+Cock Length of Elijah is 12.
+Cock Width of Elijah is 5. [golfball sized balls]
+Testes of Elijah is 2.
+Cunts of Elijah is 0.
+Cunt Length of Elijah is 0.
+Cunt Width of Elijah is 0.
+Breasts of Elijah is 2.
+Breast Size of Elijah is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Elijah is false.
+PlayerRomanced of Elijah is false.
+PlayerFriended of Elijah is false.
+PlayerControlled of Elijah is false.
+PlayerFucked of Elijah is false.
+OralVirgin of Elijah is true.
+Virgin of Elijah is true.
+AnalVirgin of Elijah is true.
+PenileVirgin of Elijah is true.
+SexuallyExperienced of Elijah is false.
+MainInfection of Elijah is "Seraphim".
+
 The description of Elijah is "[Elijahdesc]".
 The conversation of Elijah is { "Mew!" }.
 NPCintCounter is a number that varies. NPCintCounter is normally 555.

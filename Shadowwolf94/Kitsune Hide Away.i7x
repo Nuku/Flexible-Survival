@@ -1,4 +1,5 @@
-Kitsune Hide Away by Kaleem mcintyre begins here.
+Kitsune Hide Away by Shadowwolf94 begins here.
+[original by Kaleem Mcintyre]
 
 "Adds a Foxy Hideaway"
 
@@ -157,7 +158,7 @@ Instead of fucking Kitsune:
 to kitsuneinfect:
 	[puts Kitsune as lead monster]
 	setmonster "Kitsune";
-[	now non-infectious entry is false;] [No monster is selected here]
+[	now non-infectious entry is false;] [No monster is selected  here]
 	infect "Kitsune";
 [	now non-infectious entry is true;]
 

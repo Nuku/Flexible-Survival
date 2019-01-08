@@ -116,6 +116,29 @@ object	name
 Sandra	"Sandra"
 
 Sandra is a woman.
+ScaleValue of Sandra is 3. [roughly human sized]
+Cocks of Sandra is 0.
+Cock Length of Sandra is 0.
+Cock Width of Sandra is 0.
+Testes of Sandra is 0.
+Cunts of Sandra is 1.
+Cunt Length of Sandra is 12.
+Cunt Width of Sandra is 6.
+Breasts of Sandra is 2.
+Breast Size of Sandra is 4.
+[Basic Interaction states as of game start]
+PlayerMet of Sandra is false.
+PlayerRomanced of Sandra is false.
+PlayerFriended of Sandra is false.
+PlayerControlled of Sandra is false.
+PlayerFucked of Sandra is false.
+OralVirgin of Sandra is false.
+Virgin of Sandra is false.
+AnalVirgin of Sandra is true.
+PenileVirgin of Sandra is true.
+SexuallyExperienced of Sandra is true.
+MainInfection of Sandra is "Anthro Rabbit".
+
 The icon of Sandra is Figure of sandy_icon.
 The description of Sandra is "     A mostly human female, if you don't count the rabbit ears, six breasts, and that cute little white tail that sways behind her. She is usually wearing a yellow blouse, jean jacket, and a long red skirt. Her feet are clad in sneakers, well worn.".
 Sandra is in Rabbit Den.
