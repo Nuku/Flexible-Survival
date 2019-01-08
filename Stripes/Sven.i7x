@@ -53,6 +53,29 @@ object	name
 Sven	"Sven"
 
 Sven is a man. Sven is in Sven's Place. The HP of Sven is normally 0.
+ScaleValue of Sven is 3. [human sized]
+Cocks of Sven is 1.
+Cock Length of Sven is 8.
+Cock Width of Sven is 5. [golfball sized balls]
+Testes of Sven is 2.
+Cunts of Sven is 0.
+Cunt Length of Sven is 0.
+Cunt Width of Sven is 0.
+Breasts of Sven is 2.
+Breast Size of Sven is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Sven is false.
+PlayerRomanced of Sven is false.
+PlayerFriended of Sven is false.
+PlayerControlled of Sven is false.
+PlayerFucked of Sven is false.
+OralVirgin of Sven is true.
+Virgin of Sven is true.
+AnalVirgin of Sven is true.
+PenileVirgin of Sven is false.
+SexuallyExperienced of Sven is true.
+MainInfection of Sven is "Snow Leopard".
+
 The description of Sven is "[SvenDesc]".
 The conversation of Sven is { "Mew!" }.
 lastSvendrink is a number that varies. lastSvendrink is usually 555.
