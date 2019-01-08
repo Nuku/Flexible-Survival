@@ -135,7 +135,7 @@ Instead of Resolving a union break:
 		challenge "Opossum Sailor";
 		now Resolution of Union Break is 2; [Fought Opossum]
 	else if T is 7:
-		say "     After everyone else has drifted past, one of the stretched-out otter looking fellows hangs back. He nudges your side, gesturing for you to lean in so he can whisper conspiratorially. 'Hey mate, you look like you have a minute. Can you give me a hand with my uh...swordfish?' He grins wickedly, letting his coat swing open to reveal his hardening cock. At least he asked first.";
+		say "     After everyone else has drifted past, one of the stretched-out otter looking fellows hangs back. He nudges your side, gesturing for you to lean in so he can whisper conspiratorially. 'Hey mate, you look like you have a minute. Can you give me a hand with my uh... swordfish?' He grins wickedly, letting his coat swing open to reveal his hardening cock. At least he asked first.";
 		challenge "Tenrec";
 		now Resolution of Union Break is 3; [Fought Tenrec]
 	[else if T is 8:

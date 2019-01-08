@@ -50,8 +50,7 @@ to say CynthiaDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [hp of Cynthia] <- DEBUG[line break]";
 	else:
-		say "     The sniper's face looks human, her neck-length, pale blonde hair hiding her ears from view. It is a pretty face, though not overly beautiful, the strain of constant vigilance showing. She is dressed in a form fitting, but not overly tight, gray uniform, a black beret on her head, black leather gloves on her hands, and has a modified rifle on her back. Deep-blue eyes glance cautiously around, making sure that little surprises her.  ";
-		LineBreak;
+		say "     The sniper's face looks human, her neck-length, pale blonde hair hiding her ears from view. It is a pretty face, though not overly beautiful, the strain of constant vigilance showing. She is dressed in a form fitting, but not overly tight, gray uniform, a black beret on her head, black leather gloves on her hands, and has a modified rifle on her back. Deep-blue eyes glance cautiously around, making sure that little surprises her.";
 		say "     Though she seems relatively cheerful, there is a darkness behind her eyes, a remnant of her actions in the past. She seems to genuinely care about the infected in the city, but equally dislike the governmental forces attempting to quarantine everyone. Her usual unwillingness to kill seems strange for a mercenary, but who are you to judge. She sees you studying her and starts to fiddle shyly with a half gas mask that is hooked on her belt, not meeting your eyes.";
 
 Section 3 - Talking
