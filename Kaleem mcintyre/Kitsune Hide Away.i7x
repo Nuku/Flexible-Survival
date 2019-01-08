@@ -157,7 +157,7 @@ Instead of fucking Kitsune:
 to kitsuneinfect:
 	[puts Kitsune as lead monster]
 	setmonster "Kitsune";
-[	now non-infectious entry is false;] [No monster is selected  here]
+[	now non-infectious entry is false;] [No monster is selected here]
 	infect "Kitsune";
 [	now non-infectious entry is true;]
 

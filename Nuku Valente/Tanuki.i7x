@@ -52,12 +52,12 @@ The sarea of Tanukibell is "Nowhere".
 check ringing:
 	if the player is not in Shinto Shrine, say "I see nothing to ring here." instead;
 	if SatisfiedTanuki < 1, try resolving tanukibell instead;
-	
+
 
 Instead of resolving tanukibell:
 	if Tanukigender is -1:
-		say "[']You want to keep talking to me?[']";
-		say "The voice seems to be coming just beside your ear, familiar from before. [']Well, you are my child now, so I suppose you are due some time with your parent. Would you prefer your parent be a mother or a father?";
+		say "'You want to keep talking to me?'";
+		say "The voice seems to be coming just beside your ear, familiar from before. 'Well, you are my child now, so I suppose you are due some time with your parent. Would you prefer your parent be a mother or a father?'";
 		say "1) Father, 2) Mother>";
 		get typed command as playerinput;
 		if playerinput matches "f" or playerinput matches "1":
@@ -69,18 +69,18 @@ Instead of resolving tanukibell:
 [			now tanukigender is 2;
 			now Tanuki Mom is in shinto shrine;]
 		else:
-			say "[']I don't quite understand. Go on, think about it. I'll still be here.[']";
+			say "'I don't quite understand. Go on, think about it. I'll still be here.'";
 			continue the action;
-		say "The pitch of the voice shifts subtly to match your choice. 'Well, there we are,' speaks the [if tanukigender is 2]female[otherwise]male[end if] voice. 'Now then, go ahead and ring that little bell if you need more parental advice. I'll go get the book. This is going to be so much fun!' Though you see no form, you can hear the sound of padded feet dashing away.";
+		say "The pitch of the voice shifts subtly to match your choice. 'Well, there we are,' speaks the [if tanukigender is 2]female[else]male[end if] voice. 'Now then, go ahead and ring that little bell if you need more parental advice. I'll go get the book. This is going to be so much fun!' Though you see no form, you can hear the sound of padded feet dashing away.";
 		wait for any key;
-		say "There is a rushing noise and a loud pop, a [if tanukigender is 2]female[otherwise]male[end if] figure appears with a bright smile. The tanuki bows towards you.  'There we are! Now, I hope you are ready for grade A parenting. I have so much to teach you! First lesson, don't ring the bell anymore.'";
+		say "There is a rushing noise and a loud pop, a [if tanukigender is 2]female[else]male[end if] figure appears with a bright smile. The tanuki bows towards you. 'There we are! Now, I hope you are ready for grade A parenting. I have so much to teach you! First lesson, don't ring the bell anymore.'";
 		stop the action;
 	if TanukiGender > 0:
-		say "'Didn't I tell you not to ring that?' They wave a finger at you admonoshingly. 'What am I going to do with you? Go to your room!' With a flurry of leaves, your vision is lost a moment before you find yourself somewhere else.";
+		say "'Didn't I tell you not to ring that?' They wave a finger at you admonishingly. 'What am I going to do with you? Go to your room!' With a flurry of leaves, your vision is lost a moment before you find yourself somewhere else.";
 		now the player is in bunker;
-	
-		
-		
+
+
+
 
 Carry out ringing:
 	say "You strike the bell, and it rings out like a gong, echoing through the shrine quite loudly!";
@@ -337,7 +337,7 @@ to say usetancoin:
 		else:
 			say ". You feel a strange, tingling sensation in your groin. Checking yourself, it appears your balls have disappeared, receding once more in compliance with your internal infection!";
 		now internalbypass is false;
-		
+
 Section 4 - Tanuki Dad
 
 Tanuki Dad is a male person.
@@ -352,7 +352,7 @@ The description of Tanuki Dad is "[TanukiDadDesc]".
 [The icon of Tanuki Dad is Figure of Jason_clothed_icon.]
 
 to say TanukiDadDesc:
-	say "     The tanuki spirit here has taken on the form of a father. You can tell, with the sharp blazer he's wearing with that big bold tie. He has his hands on either side of it, grinning at you proudly, his child. His belly is considerable, bulging in his clothing. Competing for the bulging contest, his great balls resist even the thought of trying to fit into any pants, so they are allowed to hang free, furry and virile. Compared to them, his furry sheath is actualy comparatively small, not that he seems to care much.";
+	say "     The tanuki spirit here has taken on the form of a father. You can tell, with the sharp blazer he's wearing with that big bold tie. He has his hands on either side of it, grinning at you proudly, his child. His belly is considerable, bulging in his clothing. Competing for the bulging contest, his great balls resist even the thought of trying to fit into any pants, so they are allowed to hang free, furry and virile. Compared to them, his furry sheath is actually comparatively small, not that he seems to care much.";
 	add "Tanuki Balls" to TanukiTopics.
 
 
@@ -424,23 +424,23 @@ instead of conversing the Tanuki Dad:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-	
+
 To say TanukiSurvivalTalk:
 	now the humanity of the player is 20;
-	say "'It[']s a tough world out there.' He nods appreciatively. 'The most important part is that you keep your chin up.'";
+	say "'It's a tough world out there.' He nods appreciatively. 'The most important part is that you keep your chin up.'";
 	If humanity of player < 40:
 		say "His wet nose twitches softly. 'Looks like you're letting things get to you. I know how to relax you. Go on, play a few notes.' He gestures broadly to his expansive, if clothed, belly. 'Beat a few bars and you'll be right as rain.'";
 		if the player consents:
 			say "You reach your [if scalevalue of player is 3]normal-size[else if scalevalue of player is 4]large[else]massive[end if] [bodyname of player] hands out and pat lightly at his belly. He reaches with his furry paws and pats at your hands in return. 'Go on, harder, and faster. Think of a song!' You play all the harder, thinking up a [one of]lively[or]rhythmic[or]random[at random] song to play with his belly serving as the drum. He manages to somehow hum along with the song in your head despite you not sharing it. Time passes without you noticing. By the time the drum session is over, you feel more grounded and together.";
 			increase the humanity of the player by 50;
 			follow turnpass rule;
-		otherwise:
+		else:
 			say "'Aw, be that way, but the offer's open, champ!' When he thinks you aren't looking at him directly, he speaks more quietly to himself, 'nailed it, I'm a great dad.'";
 	if scalevalue of player < 4:
-		say "He tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original dad, and that's alright. My biologicals are all off that way.' He points to the East. 'I invited them to come along, but they said this place was too far. Maybe I[']ll find another place that[']s closer to them? Nevermind me, this is about you!' He pats your shoulders softly. 'Now let's see...'";
-	otherwise:
-		say "He cranes his head back a little to look up at you. 'I[']ve never had such a large child before. It's kind of exciting, to tell you the truth. Don[']t worry about it though. A good father is a good father, no matter how big or small he might be.' He wags a finger as he talks, nodding to himself. 'Now as for advice...'";
-	
+		say "He tucks a furry finger under your chin, lifting it slightly. 'Now, I know I'm not your, you know, original dad, and that's alright. My biologicals are all off that way.' He points to the East. 'I invited them to come along, but they said this place was too far. Maybe I'll find another place that's closer to them? Nevermind me, this is about you!' He pats your shoulders softly. 'Now let's see...'";
+	else:
+		say "He cranes his head back a little to look up at you. 'I've never had such a large child before. It's kind of exciting, to tell you the truth. Don't worry about it though. A good father is a good father, no matter how big or small he might be.' He wags a finger as he talks, nodding to himself. 'Now as for advice...'";
+
 
 
 to say TanukiRomanceTalk:

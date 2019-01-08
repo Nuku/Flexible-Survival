@@ -190,7 +190,7 @@ carry out supersponsor:
 			Now tail of player is "Human";
 			Now body of player is "Human";
 			Now bodyname of player is "Human";
-			Now facename  of player is "Human";
+			Now facename of player is "Human";
 			Now skinname of player is "Human";
 			Now Cockname of player is "Human";
 			Now Tailname of player is "Human";
