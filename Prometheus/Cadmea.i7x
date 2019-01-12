@@ -28,6 +28,7 @@ object	name
 Cadmea	"Cadmea"
 
 Cadmea is a woman. The hp of Cadmea is usually 0.
+[Physical details as of game start]
 ScaleValue of Cadmea is 3. [human sized]
 SleepRhythm of Cadmea is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Cadmea is 0. [no cock]
@@ -39,6 +40,18 @@ Cunt Length of Cadmea is 10. [Considerable Capacity]
 Cunt Width of Cadmea is 5. [Considerable Capacity]
 Breasts of Cadmea is 2. [2 nipples]
 Breast Size of Cadmea is 2. [B cup at the start]
+[Basic Interaction states as of game start]
+PlayerMet of Cadmea is false.
+PlayerRomanced of Cadmea is false.
+PlayerFriended of Cadmea is false.
+PlayerControlled of Cadmea is false.
+PlayerFucked of Cadmea is false.
+OralVirgin of Cadmea is false.
+Virgin of Cadmea is false.
+AnalVirgin of Cadmea is false.
+PenileVirgin of Cadmea is false.
+SexuallyExperienced of Cadmea is true.
+MainInfection of Cadmea is "Kitsune".
 The description of Cadmea is "[CadmeaDesc]".
 The conversation of Cadmea is { "Interesting" }.
 The scent of Cadmea is "     The sleek kitsune smells of an amalgamation of floral scents, none of which you can place as being recognisable.".
@@ -62,6 +75,7 @@ Section 5 - Events
 
 Dual Leadership is a situation.
 Prereq1 of Dual Leadership is Den of the Pack.
+Prereq1Resolution of Dual Leadership is { 1 }.
 The level of Dual Leadership is 0.
 The sarea of Dual Leadership is "Nowhere".
 
@@ -88,7 +102,7 @@ to DualLeadershipEvent:
 	say "     ([link]Y[as]y[end link]) - Yes. It was just a joke, wasn't it?";
 	say "     ([link]N[as]n[end link]) - No. You wouldn't want to upset the Alpha if he was being serious, would you?";
 	if player consents: [Take cake]
-		say "     Quickly glancing around to make sure that no one is watching, you grab a disposable coffee cup from a desk and stuff a slice of cake into it before putting it into your bag. Ready to go, you walk out of the conference room, closing the door behind you, and return to the lobby. You'll just have to wait and see whether there are any consequences for stealing Sirius[']s cake.";
+		say "     Quickly glancing around to make sure that no one is watching, you grab a disposable coffee cup from a desk and stuff a slice of cake into it before putting it into your bag. Ready to go, you walk out of the conference room, closing the door behind you, and return to the lobby. You'll just have to wait and see whether there are any consequences for stealing Sirius['] cake.";
 		now Resolution of Dual Leadership is 1; [Stole cake. You Monster]
 	else: [Be good]
 		say "     You don't want to make a bad impression on them when they barely know you. With Cadmea capable of magic, and Sirius able to walk away from hand to hand combat with a wyvern, making them your enemy seems like a poor life choice. You return to the lobby without succumbing to temptation.";

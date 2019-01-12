@@ -31,6 +31,7 @@ object	name
 Cynthia	"Cynthia"
 
 Cynthia is a woman. The hp of Cynthia is usually 0.
+[Physical details as of game start]
 ScaleValue of Cynthia is 3. [human sized]
 SleepRhythm of Cynthia is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Cynthia is 0. [no cock]
@@ -42,6 +43,18 @@ Cunt Length of Cynthia is 8. [gets stretched a bit by an alpha husky]
 Cunt Width of Cynthia is 3. [gets stretched a bit by an alpha husky]
 Breasts of Cynthia is 2. [2 nipples]
 Breast Size of Cynthia is 2. [B cup at the start]
+[Basic Interaction states as of game start]
+PlayerMet of Cynthia is false.
+PlayerRomanced of Cynthia is false.
+PlayerFriended of Cynthia is false.
+PlayerControlled of Cynthia is false.
+PlayerFucked of Cynthia is false.
+OralVirgin of Cynthia is false.
+Virgin of Cynthia is false.
+AnalVirgin of Cynthia is false.
+PenileVirgin of Cynthia is true.
+SexuallyExperienced of Cynthia is true.
+MainInfection of Cynthia is "Human".
 The description of Cynthia is "[CynthiaDesc]".
 The conversation of Cynthia is { "Interesting" }.
 The scent of Cynthia is "     Cynthia smells very strongly of wolves, which is not surprising considering how much time she spends around them".
@@ -69,6 +82,7 @@ Den of the Pack	"Den of the Pack"
 
 Den of the Pack is a situation.
 Prereq1 of Den of the Pack is Suppressant Supply Run.
+Prereq1Resolution of Den of the Pack is { 1 }.
 The level of Den of the Pack is 0.
 The sarea of Den of the Pack is "Outside".
 
@@ -100,6 +114,7 @@ to DenofthePackEvent:
 	say "     You and Cynthia stand up and return the kitsune's goodbye, the vulpine woman bowing in acknowledgement. The door opens, and Sirius enters, the large wolf giving you a nod in passing as you leave. Perhaps the two leaders have important matters to discuss, though the concerned look he gives Cadmea suggest that there is more to it than the hotel's everyday management. 'So what did you think of the Den Mother?' Cynthia asks you as you approach the stairs down again. She continues without waiting for your response, 'She and the Pack Alpha try and protect those that they can, but many don't want to put their trust in otherworldly beings. Having people that are from Earth, or native agents as she calls us, like myself and Argos[']s pack helps to convince people to give her a chance. Though it does seem strange that a talking fox from another world would be trusted less than a talking wolf that used to be a sight at the zoo. Humans are weird. My employer would have so liked to meet her.'";
 	say "     You follow her back to the side door with its grizzled doorman, the mercenary giving the feline a smile as he lets you leave again. From the filth and griminess of the alleyway you exit into, you wouldn't know how decadent the inside of the hotel was. Cynthia beckons for you to come with her, and you walk together in silence until you are back where she greeted you earlier. 'Sorry that I have to leave you here, but I need to get back to spying on people in the city from the rooftops, and you should be getting back to that library you love so much. I'll have to come and visit you at some point and withdraw a book now that there are unlikely to be late fees,' she jokes. 'I might even test your security just so you know how lucky you are that no one has attacked you there. Be well, and I'll be seeing you, even if you don't see me'. The sniper fastens her gas mask on again and climbs up the ladder, leaving you to decide what to do next.";
 	now hp of Cadmea is 1;
+	now resolution of Den of the Pack is 1;
 	now Den of the Pack is resolved;
 	now Sanctuary Alleyway is known;
 

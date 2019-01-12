@@ -132,6 +132,7 @@ object	name
 Sylvia	"Sylvia"
 
 Sylvia is a woman. The hp of Sylvia is usually 0.
+[Physical details as of game start]
 ScaleValue of Sylvia is 3. [human sized]
 SleepRhythm of Sylvia is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Sylvia is 0. [no cock]
@@ -143,6 +144,19 @@ Cunt Length of Sylvia is 8. [gets stretched a bit by an alpha husky]
 Cunt Width of Sylvia is 3. [gets stretched a bit by an alpha husky]
 Breasts of Sylvia is 2. [2 nipples]
 Breast Size of Sylvia is 3. [C cup at the start]
+[Basic Interaction states as of game start]
+PlayerMet of Sylvia is false.
+PlayerRomanced of Sylvia is false.
+PlayerFriended of Sylvia is false.
+PlayerControlled of Sylvia is false.
+PlayerFucked of Sylvia is false.
+OralVirgin of Sylvia is false.
+Virgin of Sylvia is false.
+AnalVirgin of Sylvia is false.
+PenileVirgin of Sylvia is true.
+SexuallyExperienced of Sylvia is true.
+MainInfection of Sylvia is "Border Collie".
+[Custom Variables]
 hpM of Sylvia is a number that varies. hpM of Sylvia is usually 0.
 hpF of Sylvia is a number that varies. hpF of Sylvia is usually 0.
 SylviaConv is a number that varies. SylviaConv is usually 0.
@@ -373,14 +387,13 @@ to say AngieSample: [Sylvia X Angie]
 	increase carried of water bottle by 1;
 
 [to say BlancheSample: [Julian X Blanche]
-	if Resolution of BlancheSample is not > 0:
-		say "     You remember the mature white wolf that you saved in the Capitol District and are about to suggest her as a potential sample donor when Julian enters the room behind you. 'Fancy seeing you here[if player is not defaultnamed] [name of player][end if]. Helping Sylvia with her research?' he asks as the collie walks over and gives him a loving hug. 'They're indispensable, I don't know what I would do without either of you. But I believe [if player is herm]they [else if player is male]he [else]she [end if]was about to say something before you came in,' Sylvia says, and expectant look directed at you. You tell them about Blanche and how you saved her from Drakes and helped her back to her den. 'She sounds nice. I think I'll come along too,' the dark-furred wolf responds. 'Nice, Julian. Expressing interest in another woman in front of your girlfriend,' the collie dryly replies. 'I didn't mean it exactly like that, and anyway, I thought we were polyamorous?' the lupine says, ears flat against his head in embarrassment.";
-		say "     'Don't worry, we are. I just like teasing you about it. Not many people were open about such relationships before the outbreak and I like to feel that I was ahead of the trend. But we should go and meet this wolf woman before our friend here decides we need some privacy.' They don't take long to pack the necessary equipment and soon you are walking across the campus and towards the gate. 'Would you like to take point on this expedition Julian. Because I wouldn't want you to miss out on experiencing how [']nice['] Blanche is. You might sulk,' Sylvia asks, smiling like a coal-scuttle. 'I graciously accept your offer, feel free to observe,' the wolf replies, bowing extravagently, causing a few passersby to look on curiously. The collie snorts and pushes him forward. 'Well then, lead dear alpha.' You escort them as you trudge through the city, ensuring that you aren't taken by surprise, the two of them remaining relaxed and looking around as you travel. Before long, you are outside Blanche's makeshift den and you knock before entering, the scientists following you inside.";
-		WaitLineBreak;
-		say "     Blanche looks up as you descent the stairs into the basement, her tail wagging slowly behind her as she sees that it is you, though it slows for a moment as she sees that you have company. 'Who are they?,' she cautiously asks while eying them warily. [if hp of Blanche > 6]'And please keep your voices down. The children are sleeping.' [end if]Before you can reply, Sylvia steps forward, hands held up in an unthreatening manner. 'Hello, my name is Sylvia, and this is my friend Julian. We met [if player is not defaultnamed][name of player] [else]your rescuer [end if]at the college. I'm a biologist doing research on the forms that the nanite plague has changed people into. And I was wondering whether you would be willing to provide a sample of biological material for study?' Blanche waves for her to lower her hands, but still looks wary of the two students.";
-		say "     'Where are our manners? Would you like something to eat or drink?' Julian interjects. 'I would be interested in talking to you for a bit if you don't mind, even if you would prefer not to take part in our research, and you can never have too much food or drink when the outside can be so dangerous.' Blanche reacts with a small smile at the black wolf's offer, eyeing him up, though you are unsure whether it is to gauge whether he is a threat or a potential lover. 'That sounds very civilized. I don't see why I can't at least allow you to convince me of the merits of your proposal, and you seem an interesting couple so I would be lying if I said I wasn't interested in knowing more about you. Come. I'll clear one of the desks and share what food you can spare,' the white wolf replies. She brushes some papers from a table while you collect some chairs and the two students lay out the selection of sandwiches and cans of drink from a backpack.";
-		WaitLineBreak;
-		say "     As you seat yourselves, Sylvia apologizes to Blanche. 'I'm sorry for behaving like I was more concerned about the science than I was about you. I haven't met too many people in the city who thought of me as a person as opposed to a potential recepticle for breeding, so I try and explain what I want before they try and jump me. I'm glad that Julian appears to remember proper etiquette when I can't.'";]
+	say "     You remember the mature white wolf that you saved in the Capitol District and are about to suggest her as a potential sample donor when Julian enters the room behind you. 'Fancy seeing you here[if player is not defaultnamed] [name of player][end if]. Helping Sylvia with her research?' he asks as the collie walks over and gives him a loving hug. 'They're indispensable, I don't know what I would do without either of you. But I believe [if player is herm]they [else if player is male]he [else]she [end if]was about to say something before you came in,' Sylvia says, and expectant look directed at you. You tell them about Blanche and how you saved her from Drakes and helped her back to her den. 'She sounds nice. I think I'll come along too,' the dark-furred wolf responds. 'Nice, Julian. Expressing interest in another woman in front of your girlfriend,' the collie dryly replies. 'I didn't mean it exactly like that, and anyway, I thought we were polyamorous?' the lupine says, ears flat against his head in embarrassment.";
+	say "     'Don't worry, we are. I just like teasing you about it. Not many people were open about such relationships before the outbreak and I like to feel that I was ahead of the trend. But we should go and meet this wolf woman before our friend here decides we need some privacy.' They don't take long to pack the necessary equipment and soon you are walking across the campus and towards the gate. 'Would you like to take point on this expedition Julian. Because I wouldn't want you to miss out on experiencing how [']nice['] Blanche is. You might sulk,' Sylvia asks, smiling like a coal-scuttle. 'I graciously accept your offer, feel free to observe,' the wolf replies, bowing extravagently, causing a few passersby to look on curiously. The collie snorts and pushes him forward. 'Well then, lead dear alpha.' You escort them as you trudge through the city, ensuring that you aren't taken by surprise, the two of them remaining relaxed and looking around as you travel. Before long, you are outside Blanche's makeshift den and you knock before entering, the scientists following you inside.";
+	WaitLineBreak;
+	say "     Blanche looks up as you descent the stairs into the basement, her tail wagging slowly behind her as she sees that it is you, though it slows for a moment as she sees that you have company. 'Who are they?,' she cautiously asks while eying them warily. [if hp of Blanche > 6]'And please keep your voices down. The children are sleeping.' [end if]Before you can reply, Sylvia steps forward, hands held up in an unthreatening manner. 'Hello, my name is Sylvia, and this is my friend Julian. We met [if player is not defaultnamed][name of player] [else]your rescuer [end if]at the college. I'm a biologist doing research on the forms that the nanite plague has changed people into. And I was wondering whether you would be willing to provide a sample of biological material for study?' Blanche waves for her to lower her hands, but still looks wary of the two students.";
+	say "     'Where are our manners? Would you like something to eat or drink?' Julian interjects. 'I would be interested in talking to you for a bit if you don't mind, even if you would prefer not to take part in our research, and you can never have too much food or drink when the outside can be so dangerous.' Blanche reacts with a small smile at the black wolf's offer, eyeing him up, though you are unsure whether it is to gauge whether he is a threat or a potential lover. 'That sounds very civilized. I don't see why I can't at least allow you to convince me of the merits of your proposal, and you seem an interesting couple so I would be lying if I said I wasn't interested in knowing more about you. Come. I'll clear one of the desks and share what food you can spare,' the white wolf replies. She brushes some papers from a table while you collect some chairs and the two students lay out the selection of sandwiches and cans of drink from a backpack.";
+	WaitLineBreak;
+	say "     As you seat yourselves, Sylvia apologizes to Blanche. 'I'm sorry for behaving like I was more concerned about the science than I was about you. I haven't met too many people in the city who thought of me as a person as opposed to a potential recepticle for breeding, so I try and explain what I want before they try and jump me. I'm glad that Julian appears to remember proper etiquette when I can't.'";]
 
 to say BubbleSample: [Take sample from Bubble. Sylvia X Latex Vixen]
 	say "     Wondering whether Sylvia would be interested in meeting Bubble, you inform her of the latex vixen living on the upper floors of the library. The collie happily collects her equipment in a bag and follows you through the city. Luckily, there are no attacks, and you arrive at the library safely. 'I do like the smell of books,' the canine confesses as you walk over to the stairs. Upon reaching the second floor, you are greeted by Bubble, whom is lounging around on a chair, her legs spread and a paw rubbing over her gash. She looks up, but doesn't stop masturbating. 'Oh, hi. I didn't realize we were having anyone new here today. Where'd they find you?' The two women look at each other, though Sylvia doing so with more scrutiny as she makes mental notes of interesting features and qualities. 'Your friend here,' the collie gestures at you, 'has agreed to help me with my research into the infection of the city. Would you be willing to provide a sample, perhaps some of the lubrication that seems to be pouring from your vagina?'";
@@ -584,6 +597,7 @@ to DespairingBiologistEvent: [Meet Sylvia]
 			say "     Feeling slightly embarrassed at the willingness of the pair to let you watch, you mutter something about needing to be somewhere before walking hurriedly back the way you came, the collie giggling behind you.";
 			now Resolution of Despairing Biologist is 99; [disinterest]
 			now hp of Sylvia is 100; [event refused, no further contact with her]
+	add "Sylvia Quest" to OpenQuests of player;
 	now Despairing Biologist is resolved; [It won't happen again]
 	now LastCampusWalkin is turns;
 
@@ -593,7 +607,7 @@ Prereq1Resolution of Room 059 is { 1, 2, 3 }.
 The level of Room 059 is 0.
 The sarea of Room 059 is "Nowhere".
 
-instead of going northeast from Tenvale College Female Dorms while (Room 059 is active and Room 059 is not resolved and (hp of Sylvia is 1 or hp of Sylvia is 2) or (hpM of Sylvia is 1) or (hpF of Sylvia is 1)):
+instead of going northeast from Tenvale College Female Dorms while (Room 059 is active and Room 059 is PrereqComplete and Room 059 is not resolved and (hp of Sylvia is 1 or hp of Sylvia is 2) or (hpM of Sylvia is 1) or (hpF of Sylvia is 1)):
 	move player to Tenvale College Female Dorms;
 	Room059Event;
 
@@ -632,7 +646,7 @@ Prereq1Resolution of Unnatural Heat is { 1, 2 }.
 The level of Unnatural Heat is 0.
 The sarea of Unnatural Heat is "Nowhere".
 
-instead of going northeast from Tenvale College Female Dorms while (Unnatural Heat is active and Unnatural Heat is not resolved and SylviaConv is 5 and (hp of Sylvia is 3 or hpM of Sylvia is 2 or hpF of Sylvia is 2) and a random chance of 1 in 4 succeeds):
+instead of going northeast from Tenvale College Female Dorms while (Unnatural Heat is active and Unnatural Heat is PrereqComplete and Unnatural Heat is not resolved and SylviaConv is 5 and (hp of Sylvia is 3 or hpM of Sylvia is 2 or hpF of Sylvia is 2) and a random chance of 1 in 4 succeeds):
 	move player to Tenvale College Female Dorms;
 	UnnaturalHeatEvent;
 
@@ -779,7 +793,7 @@ Prereq1Resolution of Beach Field Research is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
 The level of Beach Field Research is 0.
 The sarea of Beach Field Research is "Beach".
 
-after going to Public Beach while (Beach Field Research is active and Beach Field Research is not resolved and daytimer is day and hp of Julian is 3 and a random chance of 1 in 2 succeeds):
+after going to Public Beach while (Beach Field Research is active and Beach Field Research is PrereqComplete and Beach Field Research is not resolved and daytimer is day and hp of Julian is 3 and a random chance of 1 in 2 succeeds):
 	move player to Public Beach;
 	BeachFieldResearchEvent;
 
@@ -833,7 +847,7 @@ Prereq1Resolution of Sylvia's Reward is { 1, 2 }.
 The level of Sylvia's Reward is 0.
 The sarea of Sylvia's Reward is "Nowhere".
 
-instead of going northeast from Tenvale College Female Dorms while (Sylvia's Reward is active and Sylvia's Reward is not resolved and (hp of Sylvia is 6 or hpF of Sylvia is 5) and a random chance of 1 in 2 succeeds):
+instead of going northeast from Tenvale College Female Dorms while (Sylvia's Reward is active and Sylvia's Reward is PrereqComplete and Sylvia's Reward is not resolved and (hp of Sylvia is 6 or hpF of Sylvia is 5) and a random chance of 1 in 2 succeeds):
 	move player to Tenvale College Female Dorms;
 	SylviasReward;
 
@@ -922,13 +936,14 @@ to SylviasReward: [Sylvia willing to allow you to mate with her]
 		say "     You softly shake your head, stepping away from the shocked collie. You don't really think about her in that way. After all, you have a considerable amount to do in the city and may not have the time to spend with her in future. 'Well then. This is surprising. Could I have some time alone please?' You feel slightly guilty doing this to the student, but when you aren't attracted to her, sex just wouldn't do it for you. You leave, quietly closing the door, but not quite quick enough to avoid hearing a sniffle.";
 		now Resolution of Sylvia's Reward is 7; [Refused]
 	now hp of Sylvia is 7;
+	now Sylvia's Reward is resolved;
 
 Bad Breakup is a situation.
 Prereq1 of Bad Breakup is Beach Field Research.
 Prereq1Resolution of Bad Breakup is { 1, 2 }.
 The sarea of Bad Breakup is "Nowhere".
 
-instead of going north from Dorm Street while (Bad Breakup is active and Bad Breakup is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
+instead of going north from Dorm Street while (Bad Breakup is active and Bad Breakup is PrereqComplete and Bad Breakup is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 0):
 	move player to Tenvale College Female Dorms;
 	BadBreakupEvent;
 
@@ -944,7 +959,7 @@ to BadBreakupEvent: [Cheating Boyfriend]
 	WaitLineBreak;
 	say "     Now that the ex-boyfriend has left, Sylvia unlocks the fox girl's door and guides her inside with you following behind. The miserable student collapses into her bed weeping, Sylvia only leaving her for a moment to re-lock the door. 'You barely know me. Why are you doing this?' the fennec asks the collie. The canine sits beside her and hugs the fox's head to her chest. 'Because I care enough and because you deserve to be loved,' is the reply. 'I would like to be your friend, but I would understand if you don't want anything to do with me at the moment. I can get Rose to come and sit with you while you recover.' Hiccuping between sobs, the fennec clings to Sylvia, managing to utter, 'No, I want you here. No one else cared about me out there.' The collie looks pained at witnessing such desperation and kisses the top of the fox's head. 'I'll stay, dear, but I'll warn you now. Ethan will face retribution for this, Nemesis as my witness.'";
 	say "     You agree with the sentiment, even if you find the oath strange, and ask whether there is anything she would like you to help with. Sylvia looks at you darkly. 'Oh no. This one's personal. I'll get the materials myself and make him feel pain equivalent to what he has inflicted on Chloe here. I might even try some new contraptions out.' The tone in which she says this makes you uncomfortable, and you almost feel some fear for the unfaithful ex-boyfriend. 'Don't kill him. Please. I'm not worth that,' Chloe pleads. 'I won't kill him, but don't think yourself so worthless. You're smart, pretty, and kind-hearted,' the collie reassures her as she strokes her hair. Glancing at you, she adds, '[if player is not defaultnamed][name of player], you[end if] can go if you want. I'll stay with Chloe for now. As you turn and leave, she mutters,' He will pay for this,' and you hope the fennec didn't hear that. Despite the heartbreak Ethan has caused her, the fox is drowning in misery too much to want revenge at the moment.";
-	now Resolution of Bad Breakup is 1;
+	now resolution of Bad Breakup is 1;
 	now Bad Breakup is resolved;
 	now LastCampusWalkin is turns;
 
@@ -953,7 +968,7 @@ Prereq1 of Cheat's Retribution is Bad Breakup.
 Prereq1Resolution of Cheat's Retribution is { 1 }.
 The sarea of Cheat's Retribution is "Campus".
 
-instead of going to College Walkway East while (Cheat's Retribution is active and Cheat's Retribution is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 8):
+instead of going to College Walkway East while (Cheat's Retribution is active and Cheat's Retribution is PrereqComplete and Cheat's Retribution is not resolved and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 8):
 	move player to Tenvale College Female Dorms;
 	CheatsRetributionEvent;
 
@@ -997,7 +1012,7 @@ Prereq1Resolution of Charming Picnic is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
 The level of Charming Picnic is 0.
 The sarea of Charming Picnic is "Campus".
 
-instead of going to College Walkway East while (Charming Picnic is active and Charming Picnic is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (Charming Picnic is active and Charming Picnic is PrereqComplete and Charming Picnic is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	CharmingPicnicEvent;
 
@@ -1016,7 +1031,7 @@ Prereq1Resolution of Badminton One is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 1
 The level of Badminton One is 0.
 The sarea of Badminton One is "Campus".
 
-instead of going to College Walkway East while (Badminton One is active and Badminton One is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (Badminton One is active and Badminton One is PrereqComplete and Badminton One is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 4 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	BadmintonOneEvent;
 
