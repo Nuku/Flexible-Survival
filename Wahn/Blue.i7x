@@ -48,6 +48,27 @@ object	name
 Blue Speaker	"Blue Speaker"
 
 Blue Speaker is a man. Blue Speaker is in Goo Refuge.
+ScaleValue of Blue Speaker is 3. [human sized]
+Cocks of Blue Speaker is 1.
+Cock Length of Blue Speaker is 8.
+Cock Width of Blue Speaker is 2.
+Testes of Blue Speaker is 2.
+Cunts of Blue Speaker is 0.
+Cunt Length of Blue Speaker is 9.
+Cunt Width of Blue Speaker is 2.
+Breasts of Blue Speaker is 2. [2 nipples]
+Breast Size of Blue Speaker is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Blue Speaker is false.
+PlayerRomanced of Blue Speaker is false.
+PlayerFriended of Blue Speaker is false.
+PlayerControlled of Blue Speaker is false.
+PlayerFucked of Blue Speaker is false.
+OralVirgin of Blue Speaker is false.
+Virgin of Blue Speaker is false.
+AnalVirgin of Blue Speaker is false.
+PenileVirgin of Blue Speaker is false.
+SexuallyExperienced of Blue Speaker is true.
 The description of Blue Speaker is "[Blue SpeakerDesc]".
 The conversation of Blue Speaker is { "<This is nothing but a placeholder!>" }.
 The scent of Blue Speaker is "     The aquamarine goo person smells somewhat fruity, making you wonder if the goo would taste that way too.".

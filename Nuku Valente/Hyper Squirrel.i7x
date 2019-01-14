@@ -88,6 +88,29 @@ object	name
 Snow	"Snow"
 
 Snow is a person.
+ScaleValue of Snow is 3. [human sized]
+Cocks of Snow is 1.
+Cock Length of Snow is 18.
+Cock Width of Snow is 16. [golfball sized balls]
+Testes of Snow is 2.
+Cunts of Snow is 0.
+Cunt Length of Snow is 0.
+Cunt Width of Snow is 0.
+Breasts of Snow is 2.
+Breast Size of Snow is 10.
+[Basic Interaction states as of game start]
+PlayerMet of Snow is false.
+PlayerRomanced of Snow is false.
+PlayerFriended of Snow is false.
+PlayerControlled of Snow is false.
+PlayerFucked of Snow is false.
+OralVirgin of Snow is true.
+Virgin of Snow is true.
+AnalVirgin of Snow is true.
+PenileVirgin of Snow is true.
+SexuallyExperienced of Snow is false.
+MainInfection of Snow is "Hyper Squirrel".
+
 The description of Snow is "[SnowDesc]";
 
 to say SnowDesc:
@@ -512,6 +535,63 @@ Instead of resolving a Wild Squirrels:
 	now SleepRhythm of player is 0;
 	now Wild Squirrels is inactive;
 
+
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now name entry is "Hyper Squirrel"; [Name of your new Monster]
+	now enemy title entry is "Hyper Squirrel";
+	now enemy name entry is "Snow";
+	now enemy type entry is 1; [unique enemy]
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[NonCombatError]"; [ Description of the creature when you encounter it.]
+	now face entry is "topped by a set of two long white squirrel ears twitching above your head, while a long rodent snout with bucked teeth juts out at the front of your head"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "curved but athletic looking, a dancer's body perhaps. Your legs are thick and powerful, built for swift climbing and terminating in paws that have sharp grasping claws"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "white furred"; [ skin Description, format as "your body is covered in (your text) skin."]
+	now tail entry is "You have a short white squirrel's tail above a shapely ass. It twitches when you're excited, wagging back and forth."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "bright pink"; [ Cock Description, format as you have a 'size' (your text) cock.]
+	now face change entry is "WIP"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "WIP"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "WIP"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "WIP"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "WIP"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 10;
+	now dex entry is 14;
+	now sta entry is 12;
+	now per entry is 10;
+	now int entry is 14;
+	now cha entry is 16;
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 28;
+	now lev entry is 2; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
+	now wdam entry is 4; [Amount of Damage monster Does when attacking.]
+	now area entry is "Nowhere"; [ Location of monster, in this case the City Hospital]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 6; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 0; [ Number of Breasts infection will give you. ]
+	now breast size entry is 0; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
+	now loot entry is ""; [ Dropped item. Key will be used later ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]athletic[or]curvy[or]agile[at random]";
+	now type entry is "[one of]rodent[or]squirrel-like[at random]";
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 When play ends:
 	if Snow is in Grey Abbey Library:

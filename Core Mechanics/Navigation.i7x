@@ -242,7 +242,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Phi Iota Gamma[close bracket][as]nav Phi Iota Gamma[end link] ";
 		LineBreak;
 	[start of the forest area]
-	if Urban Forest is known or Bunny House is known or Deep Forest is known or Happy Puppy Kennel is known or Ironscale Hollow is known:
+	if Urban Forest is known or Bunny House is known or Deep Forest is known or Happy Puppy Kennel is known or Ironscale Hollow is known or Avalon-Crossroads is known:
 		say "[bold type]Urban Forest[roman type]: ";
 		if Urban Forest is known:
 			say "[link][bracket]Urban Forest[close bracket][as]nav Urban Forest[end link] ";
@@ -254,6 +254,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Happy Puppy Kennel[close bracket][as]nav Happy Puppy Kennel[end link] ";
 		if Ironscale Hollow is known:
 			say "| [link][bracket]Ironscale Hollow[close bracket][as]nav Ironscale Hollow[end link] ";
+		if Avalon-Crossroads is known:
+			say "| [link][bracket]Avalon-Crossroads[close bracket][as]nav Avalon-Crossroads[end link] ";
 		LineBreak;
 	[start of the warehouse area]
 	if Warehouse District is known or Hyena Hideout is known or Mike's Home is known or Spider's Web is known or Wolfman Lair is known:

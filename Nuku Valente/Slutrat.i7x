@@ -47,7 +47,7 @@ When Play begins:
 	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
 	now cunt length entry is 12; [ Length of female sex infection will attempt to give you. ]
 	now cunt width entry is 7; [ Width of female sex infection will try and give you ]
-	now libido entry is 1000; [ Amount player Libido will go up if defeated ]
+	now libido entry is 50; [ Amount player Libido will go up if defeated ]
 	now loot entry is "soda";
 	now lootchance entry is 20; [ Chance of loot dropping 0-100 ]
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]

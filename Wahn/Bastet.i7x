@@ -270,6 +270,27 @@ object	name
 Bastet	"Bastet"
 
 Bastet is a woman.
+ScaleValue of Bastet is 3. [human sized]
+Cocks of Bastet is 0.
+Cock Length of Bastet is 9.
+Cock Width of Bastet is 2.
+Testes of Bastet is 0.
+Cunts of Bastet is 1.
+Cunt Length of Bastet is 9.
+Cunt Width of Bastet is 3.
+Breasts of Bastet is 2. [2 nipples]
+Breast Size of Bastet is 3.
+[Basic Interaction states as of game start]
+PlayerMet of Bastet is false.
+PlayerRomanced of Bastet is false.
+PlayerFriended of Bastet is false.
+PlayerControlled of Bastet is false.
+PlayerFucked of Bastet is false.
+OralVirgin of Bastet is false.
+Virgin of Bastet is false.
+AnalVirgin of Bastet is true.
+PenileVirgin of Bastet is true.
+SexuallyExperienced of Bastet is true.
 The description of Bastet is "[BastetDesc]".
 The conversation of Bastet is { "Mew!" }.
 

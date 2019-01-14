@@ -273,6 +273,29 @@ object	name
 Mike	"Mike"
 
 Mike is a man. Mike is in Mike's Office.
+ScaleValue of Mike is 3. [human sized]
+Cocks of Mike is 1.
+Cock Length of Mike is 10.
+Cock Width of Mike is 5. [golfball sized balls]
+Testes of Mike is 2.
+Cunts of Mike is 0.
+Cunt Length of Mike is 0.
+Cunt Width of Mike is 0.
+Breasts of Mike is 2.
+Breast Size of Mike is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Mike is false.
+PlayerRomanced of Mike is false.
+PlayerFriended of Mike is false.
+PlayerControlled of Mike is false.
+PlayerFucked of Mike is false.
+OralVirgin of Mike is false.
+Virgin of Mike is true.
+AnalVirgin of Mike is true.
+PenileVirgin of Mike is false.
+SexuallyExperienced of Mike is true.
+MainInfection of Mike is "Stag".
+
 The description of Mike is "[MikeDesc]".
 The conversation of Mike is { "Oh, hello." }.
 The icon of Mike is Figure of Mike_icon.
@@ -562,6 +585,30 @@ object	name
 Xerxes	"Xerxes"
 
 Xerxes is a man.
+[physical details as of game start]
+ScaleValue of Xerxes is 3. [human sized]
+Cocks of Xerxes is 1.
+Cock Length of Xerxes is 9.
+Cock Width of Xerxes is 5.
+Testes of Xerxes is 2.
+Cunts of Xerxes is 0.
+Cunt Length of Xerxes is 0.
+Cunt Width of Xerxes is 0.
+Breasts of Xerxes is 2.
+Breast Size of Xerxes is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Xerxes is false.
+PlayerRomanced of Xerxes is false.
+PlayerFriended of Xerxes is false.
+PlayerControlled of Xerxes is false.
+PlayerFucked of Xerxes is false.
+OralVirgin of Xerxes is true.
+Virgin of Xerxes is true.
+AnalVirgin of Xerxes is true.
+PenileVirgin of Xerxes is true.
+SexuallyExperienced of Xerxes is false.
+MainInfection of Xerxes is "Human".
+
 The description of Xerxes is "[XerxesDesc]".
 The conversation of Xerxes is { "Woof." }.
 LastXerxesTalk is a number that varies. LastXerxesTalk is usually 555.
@@ -1161,6 +1208,29 @@ object	name
 Helen	"Helen"
 
 Helen is a woman.
+ScaleValue of Helen is 3. [human sized]
+Cocks of Helen is 0.
+Cock Length of Helen is 0.
+Cock Width of Helen is 0.
+Testes of Helen is 0.
+Cunts of Helen is 1.
+Cunt Length of Helen is 9.
+Cunt Width of Helen is 4.
+Breasts of Helen is 2.
+Breast Size of Helen is 3.
+[Basic Interaction states as of game start]
+PlayerMet of Helen is false.
+PlayerRomanced of Helen is false.
+PlayerFriended of Helen is false.
+PlayerControlled of Helen is false.
+PlayerFucked of Helen is false.
+OralVirgin of Helen is true.
+Virgin of Helen is true.
+AnalVirgin of Helen is true.
+PenileVirgin of Helen is true.
+SexuallyExperienced of Helen is false.
+MainInfection of Helen is "Human".
+
 The description of Helen is "[HelenDesc]".
 The conversation of Helen is { "Woof." }.
 LastHelenTalk is a number that varies. LastHelenTalk is usually 555.

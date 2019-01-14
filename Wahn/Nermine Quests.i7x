@@ -31,6 +31,7 @@ Instead of resolving a Strange Shop:
 		WaitLineBreak;
 		say "     With that said, she twists the ornate door-handle, opening the wooden door into what clearly is a mid-sized storage room, overstuffed with more strange items. She smirks mysteriously as she walks in on slender paws, then pulls a small wooden box out of one of the shelves, carrying it with her as she walks back out into the store and closes the door once more. Opening what she is carrying and revealing leaves inside, the jackaless asks, 'Should Nermine make two cups of tea? It might provide some relaxiation for overstressed nerves.' Once more baffled by the strangeness that is her and her store, you accept, drinking a cup of admittedly excellent tea with the storekeeper before you eventually step out into the mall.";
 	move player to Mall West Wing;
+	now Smith Haven Mall Lot South is known;
 	now Strange Shop is resolved;
 
 Section 2 - Quest Events
@@ -509,7 +510,7 @@ the scent of Rare Counter is "You smell the items on the counter and a shiver ru
 RareQuesting is a number that varies.
 
 instead of conversing the rare counter:
-	say "     Crouching down in front of the wooden counter with its glass plates that protect precious treasures, you try your best to strike up a conversation with it. Sadly, the piece of furniture < responsive, so all this does is earn you a strange look from Nermine. Maybe you should talk to her instead if you want to know something about the rare items.";
+	say "     Crouching down in front of the wooden counter with its glass plates that protect precious treasures, you try your best to strike up a conversation with it. Sadly, the piece of furniture is not responsive, so all this does is earn you a strange look from Nermine. Maybe you should talk to her instead if you want to know something about the rare items.";
 
 to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk menu now]
 	if JackalBoyTF > 0: [already locked into Jackalboy shape]

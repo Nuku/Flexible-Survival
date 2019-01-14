@@ -24,6 +24,7 @@ object	name
 Sirius	"Sirius"
 
 Sirius is a man. The hp of Sirius is usually 0.
+[Physical details as of game start]
 ScaleValue of Sirius is 4. [Larger than human]
 SleepRhythm of Sirius is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Sirius is 1. [no cock]
@@ -35,6 +36,18 @@ Cunt Length of Sirius is 0. [No pussy]
 Cunt Width of Sirius is 0. [No pussy]
 Breasts of Sirius is 2. [2 nipples]
 Breast Size of Sirius is 0. [Flat at the start]
+[Basic Interaction states as of game start]
+PlayerMet of Sirius is false.
+PlayerRomanced of Sirius is false.
+PlayerFriended of Sirius is false.
+PlayerControlled of Sirius is false.
+PlayerFucked of Sirius is false.
+OralVirgin of Sirius is false.
+Virgin of Sirius is true.
+AnalVirgin of Sirius is false.
+PenileVirgin of Sirius is false.
+SexuallyExperienced of Sirius is true.
+MainInfection of Sirius is "Alpha Wolf".
 The description of Sirius is "[SiriusDesc]".
 The conversation of Sirius is { "Informative" }.
 The scent of Sirius is "     The towering wolf smells like a forest, a mixture of earthy scents. How he has managed to do this in the city, you do not know. Probably magic".

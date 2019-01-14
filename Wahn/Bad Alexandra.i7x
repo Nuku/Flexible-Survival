@@ -90,6 +90,27 @@ object	name
 Alexandra	"Alexandra"
 
 Alexandra is a woman. Alexandra is in Police Station Twelve.
+ScaleValue of Alexandra is 3. [human sized]
+Cocks of Alexandra is 0.
+Cock Length of Alexandra is 9.
+Cock Width of Alexandra is 2.
+Testes of Alexandra is 0.
+Cunts of Alexandra is 1.
+Cunt Length of Alexandra is 10.
+Cunt Width of Alexandra is 3.
+Breasts of Alexandra is 2. [2 nipples]
+Breast Size of Alexandra is 3.
+[Basic Interaction states as of game start]
+PlayerMet of Alexandra is false.
+PlayerRomanced of Alexandra is false.
+PlayerFriended of Alexandra is false.
+PlayerControlled of Alexandra is false.
+PlayerFucked of Alexandra is false.
+OralVirgin of Alexandra is false.
+Virgin of Alexandra is false.
+AnalVirgin of Alexandra is true.
+PenileVirgin of Alexandra is true.
+SexuallyExperienced of Alexandra is true.
 AlexandraCreampieCount is a number that varies.
 AlexandraPregCount is a number that varies.
 AlexandraGrowingPups is a number that varies.
@@ -1089,6 +1110,18 @@ an everyturn rule:
 					else if AlexandraPupDaddy is 5: [Brutus pups]
 						say "     Now that the little dogs have grown a little, you do recognize a bit of Brutus in them. They are definitely still dobermen through and through, but there's just something about the way they look and act that makes it more than clear in your mind that the demon brute fathered them. You could swear one of the puppies['] eyes glowed purple for a moment, and their teeth and claws do seem oddly sharp. Soon having finished with their drinking from Alexandra, first one, then another of the little ones decides to investigate the person who greeted them into the world. You find yourself beset by curious canines, sticking their noses and licking you everywhere they can reach. Even though they are not yours, they seem to have inherited part of the bond between their father and yourself, making them happily pad your way without fear.";
 						increase AlexandraBrutusPups by AlexandraGrowingPups;
+				if libido of Alexandra is 0: [Spike's dad]
+					if AlexandraPupDaddy is:
+						-- 1:
+							now MaxHP of Spike is 1; [player Spike]
+						-- 2:
+							now MaxHP of Spike is 2; [Fang Spike]
+						-- 3:
+							now MaxHP of Spike is 3; [Korvin Spike]
+						-- 4:
+							now MaxHP of Spike is 4; [Carl Spike]
+						-- 5:
+							now MaxHP of Spike is 5; [Brutus Spike]
 				increase libido of Alexandra by AlexandraGrowingPups;
 				increase AlexandraPregCount by 1; [number of previous pregnancies]
 				now AlexandraGrowingPups is 0; [no pups in her now]

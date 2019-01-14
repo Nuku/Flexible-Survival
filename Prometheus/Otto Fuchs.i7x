@@ -41,6 +41,7 @@ object	name
 Otto	"Otto"
 
 Otto is a man. The hp of Otto is usually 0.
+[Physical details as of game start]
 ScaleValue of Otto is 3. [human sized]
 SleepRhythm of Otto is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Otto is 1. [One cock]
@@ -52,6 +53,19 @@ Cunt Length of Otto is 0. [No Cunt]
 Cunt Width of Otto is 0. [No Cunt]
 Breasts of Otto is 2. [2 nipples]
 Breast Size of Otto is 0. [Flat at the start]
+[Basic Interaction states as of game start]
+PlayerMet of Otto is false.
+PlayerRomanced of Otto is false.
+PlayerFriended of Otto is false.
+PlayerControlled of Otto is false.
+PlayerFucked of Otto is false.
+OralVirgin of Otto is true.
+Virgin of Otto is true.
+AnalVirgin of Otto is true.
+PenileVirgin of Otto is false.
+SexuallyExperienced of Otto is true.
+MainInfection of Otto is "Human".
+[Custom Variables]
 OttoForm is a number that varies. OttoForm is usually 0.
 The description of Otto is "[OttoDesc]".
 The conversation of Otto is { "Interesting" }.

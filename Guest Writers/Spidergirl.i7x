@@ -66,7 +66,7 @@ to say spidergirl_female:
 			increase cunt width of player by 1;
 
 to say spidergirl_neuter:
-	say "The spider creature pushes you down onto your back and strips off your clothes...then she gasps as she sees your sexless groin. Staring at you in astonishment, she hesitates for a moment. Then she leans down and starts to lick between your legs. The sensation is odd, but pleasant, and then you feel a tingling in your lower body. Without warning your flesh stretches upward, forming a small but definitely masculine organ. The spider girl coos happily and kisses your cock, then she flashes you a smile and turns to scuttle off.";
+	say "The spider creature pushes you down onto your back and strips off your clothes... then she gasps as she sees your sexless groin. Staring at you in astonishment, she hesitates for a moment. Then she leans down and starts to lick between your legs. The sensation is odd, but pleasant, and then you feel a tingling in your lower body. Without warning your flesh stretches upward, forming a small but definitely masculine organ. The spider girl coos happily and kisses your cock, then she flashes you a smile and turns to scuttle off.";
 	now cocks of player is 1;
 	now cock length of player is 2;
 	now cock width of player is 3;

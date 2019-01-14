@@ -77,7 +77,6 @@ to say JoeyTalkMenu:
 					say "[JoeyTalk1]";
 				if (nam is "Training"):
 					say "[JoeyTalk2]";
-				WaitLineBreak;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the Joey, shaking your head slightly as he gives a questioning look.";

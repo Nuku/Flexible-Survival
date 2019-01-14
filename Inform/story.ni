@@ -177,7 +177,12 @@ A person has a number called Cunt width.
 A person has a number called armor.
 A person has a number called capacity.
 A person has a number called libido.
+A person has a text called MainInfection. MainInfection is usually "Human". [just to have something valid in this, the variable should be overwritten for every npc]
 A person has a text called linkaction.
+A person has a text called FirstAnalPartner.
+A person has a text called FirstVaginalPartner.
+A person has a text called FirstOralPartner.
+A person has a text called FirstPenilePartner.
 A person has a number called SleepRhythm. [day/night bias]
 
 A person has text called Cock Size Desc.
@@ -194,6 +199,11 @@ A person has a truth state called Virgin. Virgin is usually true.
 A person has a truth state called AnalVirgin. AnalVirgin is usually true.
 A person has a truth state called PenileVirgin. PenileVirgin is usually true. [not saved till new infection system update]
 A person has a truth state called SexuallyExperienced. SexuallyExperienced is usually false. [not saved till new infection system update]
+A person has a text called Originalgender. Originalgender is usually "Undefined". [original gender of the pre-transform person]
+A person has a text called PlayerOriginalgender. PlayerOriginalGender is usually "Undefined". [first meeting gender with the player]
+A person has a text called PlayerLastGender. PlayerLastGender is usually "Undefined". [gender of the player during the last meeting]
+A person has a text called PlayerLastBodytype. PlayerLastBodytype is usually "Undefined". [bodytype of the player during the last meeting]
+A person has a number called PlayerLastSize. PlayerLastSize is usually 3. [size of the player during the last meeting]
 
 The player has a text called bodydesc. The bodydesc is usually "[one of]average[or]normal[or]unchanged[at random]".	[adjective for body type/appearance]
 The player has a text called bodytype. The bodytype is usually "Human".						[broad adjective for species]
@@ -3099,7 +3109,7 @@ To level up:
 	say "You have gained level [level of player]! Congratulations!";
 	if remainder after dividing level of player by 2 is 0:
 		say "Current stats:[line break]";
-		say "Strength: [strength of player], Dexterity: [dexterity of player], Stamina: [stamina of player], Charisma: [Charisma of player], Perception: [perception of player], Intelligence: [intelligence of player].";
+		say "Strength: [strength of player], Dexterity: [dexterity of player], Stamina: [stamina of player], Charisma: [Charisma of player], Intelligence: [intelligence of player], Perception: [perception of player].";
 		say "Pick a stat to increase.";
 		say "[link]1 - Strength[as]1[end link][line break]";
 		say "[link]2 - Dexterity[as]2[end link][line break]";
@@ -3220,6 +3230,7 @@ check resting:
 				say "...and you thankfully complete your nap in peace.";
 		else if roughing is true:
 			say "You are thankfully able to complete your nap in peace.";
+
 to Rest:
 	let num1 be maxHP of the player divided by 4;
 	let num2 be ( ( stamina of the player * 3 ) / 2 ) + level of the player;
@@ -3261,6 +3272,7 @@ carry out resting:
 		else:
 			increase HP of player by (level of rubber tigress) / 2; [grants additional rest]
 	Rest;
+	follow the turnpass rule;
 	follow the turnpass rule;
 	follow the player injury rule;
 	say "You are [descr]([HP of player]/[maxHP of player]).";
@@ -3885,6 +3897,10 @@ This is the self examine rule:
 	[ Infection Descriptions Below   ]
 	say "Looking at yourself, your body is covered in [skin of player] skin. Your face is [face of player]. ";
 	say "Your body is [body of player]. ";
+	if tail of player is empty:
+		say "";
+	else:
+		say " [tail of player] ";
 	follow the breast descr rule;
 	if breasts of player > 0:
 		if breast size of player is 0:
@@ -3917,10 +3933,6 @@ This is the self examine rule:
 		say "Two small scars from Boghrim's tusks mark your shoulder, a reminder of the first time the big orc fucked you. ";
 	if "Top Dog" is listed in feats of player:
 		say "Your back still bears the scars left by Alexandra's claws during a bout of intense mating, a reminder of your dominance over her and your status as 'Top Dog'. ";
-	if tail of player is empty:
-		say "";
-	else:
-		say " [tail of player] ";
 	[ ^^ Infection Descriptions Done ]
 	[ Genital Descriptions Below     ]
 	let cocktext be "";
@@ -4644,6 +4656,7 @@ Include Astroslide Field Locker-room by Kernog.
 Include Astroslide Field Showers by Kernog.
 Include Astroslide Football Field by Kernog.
 Include Atlantis by Rikaeus.
+Include Avalon by Taelyn.
 Include Azrael by Rikaeus.
 Include Beach by Speedlover.
 Include Bargain Bin by Wahn.
@@ -4664,7 +4677,7 @@ Include Hitching Post by SgtPepper234.
 Include Hospital by Stripes.
 Include Hyena Hideout by Stripes.
 Include Junkyard and Warehouse by Wahn.
-Include Kitsune Hide Away by Kaleem mcintyre.
+Include Kitsune Hide Away by Shadowwolf94.
 Include Mall Community Center by Wahn.
 Include Mall Residents by Rikaeus.
 Include Medical Checkups by Stripes.
@@ -4703,6 +4716,7 @@ Include Campus Lovers by CloserHenry.
 Include Campus Couple NPC by CloserHenry.
 Include CandyShop by Stripes.
 Include Capitol Events by Blue Bishop.
+Include Carrypacks by Indigo Eclipse.
 Include Catapult Encounter by Hellerhound.
 Include Central Library by Stripes.
 Include Consolidated Outside Events by Song.
@@ -4745,8 +4759,8 @@ Include Inner Mall Events by Wahn.
 Include Inventory Management Enhancements by Core Mechanics.
 Include Ironscale Items by Taelyn.
 Include Junkyard Events by Stripes.
-Include Kitsune by Kaleem mcintyre.
-Include Kitsune Expansion by Dys.
+Include Kitsune by Shadowwolf94.
+Include Kitsune Expansion by Shadowwolf94.
 Include Latex Quad Husky by Stripes.
 Include Leonard Events by Stripes.
 Include Little Old Woman by Kaleem mcintyre.
@@ -4862,6 +4876,7 @@ Include Cerberus by Stripes.
 Include Cheetah by Sarokcat.
 Include Chocolate Lab by Stripes.
 Include Clockwork Fox by Stripes.
+Include Copper Dragoness by Kurainyx.
 Include Corota by Stripes.
 Include Corrupted Spawner by Stripes.
 Include Cougar by Stripes.
@@ -4894,12 +4909,13 @@ Include Ewe by Sarokcat.
 Include Feline Gymnast by Guest Writers.
 Include Female Husky by Nuku Valente.
 Include Fennec by Stripes.
-Include Feral Cheetah by Hellerhound.
+Include Feral Cheetah by Shadowwolf94.
 Include Feral Gryphon by UrsaOmega.
 Include Feral Mutt by CrimsonAsh.
 Include Feral Sea Dragon by Blue Bishop.
 Include Feral Sea Dragoness by Blue Bishop.
 Include Feral Shaft Beast by Guest Writers.
+Include Feral Unicorn by Taelyn.
 Include Feral Wolf by Stripes.
 Include Fire Elemental by Stripes.
 Include Fire Sprite by AGentlemanCalledB.
@@ -5036,6 +5052,7 @@ Include Robed Cultist by Wahn.
 Include Rodeo Clown by Stripes.
 Include Rubber Drake by Song.
 Include Rubber Tigress by Sarokcat.
+Include Ruby by CrimsonAsh.
 Include Saber Kitty by Blaydrex.
 Include Sabretooth by Sarokcat.
 Include Salamander by Stripes.
@@ -5100,6 +5117,7 @@ Include Zebra by Vervaine.
 
 [NPCs]
 Include Alex by Stripes.
+Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
 Include Alexandra Cuckolding by Wahn.
 Include Alpha Fang Scenes by Nuku Valente.
@@ -5110,6 +5128,7 @@ Include Angie by Sarokcat.
 Include Anthony by Wahn.
 Include Ares by Wahn.
 Include Anastasia by Stripes.
+Include Aster by Qazarar.
 Include Azari by Dys.
 Include Bastet by Wahn.
 Include Bjorn by Rikaeus.
@@ -5129,6 +5148,7 @@ Include Cadmea by Prometheus.
 Include Carl by Wahn.
 Include Chris by Wahn.
 Include Cindy by Stripes.
+Include College Guards by Rikaeus.
 Include Colleen by Sarokcat.
 Include Corbin by Wahn.
 Include Coura by Wahn.
@@ -5182,6 +5202,7 @@ Include Inflatable Orca by Song.
 Include Inflatable Otter Suit by Song.
 Include Informant by Kaleem mcintyre.
 Include Janice by Sarokcat.
+Include Jake by Rikaeus.
 Include Jay by Wahn.
 Include Jenna by Rikaeus.
 Include Jimmy by Stripes.
@@ -5238,6 +5259,7 @@ Include Richard by Rikaeus.
 Include RodAndRonda by Stripes.
 Include Roman by Kernog.
 Include Sally by Stripes.
+Include Sakura Sato by Rikaeus.
 Include Sam by Stripes.
 Include Santa Claws by Wahn.
 Include Sarah by Wahn.
@@ -5270,6 +5292,7 @@ Include Val by Wahn.
 Include Vanessa by Stripes.
 Include Velos by Blue Bishop.
 Include Vent Fox by Dys.
+Include Wally by Rikaeus.
 Include Wendy by Wahn.
 Include Wild Mustang by Wahn.
 Include Yolanda by Stripes.

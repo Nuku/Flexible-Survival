@@ -47,6 +47,8 @@ Team Captain Roman is a man. Understand "Roman" as Team Captain Roman.
 The description of Team Captain Roman is "[RomanDesc]";
 
 to say RomanDesc:
+	if debugactive is 1:
+		say "     DEBUG: HP of Roman [HP of Roman][line break]";
 	if Roman is in Astroslide Field Locker-room:
 		say "You look at the former team captain. Roman is tied on his back to one of the benches. Old jerseys are pinning his arms under the bench, and pulling his legs up against his chest, exposing his pussy to everyone. Someone has covered his entire body in writings with a red marker. Dirty names, like [']bitch['], [']whore['], or [']team pet['], an arrow pointing down to his crotch, with the mention [']For public use['], and another on his head, pointing at his mouth, saying [']Feed the monkey[']. Roman's eyes meet yours, but he looks absent. He tries to mumble something, but his mouth has been filled with socks, and only a muffled whisper escapes his lips.";
 	else:
@@ -77,14 +79,14 @@ instead of conversing the Team Captain Roman:
 		choose a blank row in table of fucking options;
 		now title entry is "Join";
 		now sortorder entry is 2;
-		now description entry is "Tell Roman that you want to join the team.";
+		now description entry is "Tell Roman that you want to join the team";
 	[]
 	if Roman is in Astroslide Football Field:
 		if (GorillasMember is 2):
 			choose a blank row in table of fucking options;
 			now title entry is "Results";
 			now sortorder entry is 2;
-			now description entry is "Ask Roman about the results of the tryouts.";
+			now description entry is "Ask Roman about the results of the tryouts";
 		[]
 		if (GorillasMember is 3):
 			choose a blank row in table of fucking options;
@@ -95,7 +97,7 @@ instead of conversing the Team Captain Roman:
 			choose a blank row in table of fucking options;
 			now title entry is "Water-boy";
 			now sortorder entry is 4;
-			now description entry is "Take your shift as a water boy.";
+			now description entry is "Take your shift as a water boy";
 			[]
 			if (GorillasRep > 3):
 				choose a blank row in table of fucking options;
@@ -107,19 +109,19 @@ instead of conversing the Team Captain Roman:
 				choose a blank row in table of fucking options;
 				now title entry is "Match";
 				now sortorder entry is 6;
-				now description entry is "Play a match.";
+				now description entry is "Play a match";
 			[]
 	if (HP of Roman is 1 ):
 		choose a blank row in table of fucking options;
 		now title entry is "Confront";
 		now sortorder entry is 7;
-		now description entry is "Confront Roman about his secret.";
+		now description entry is "Confront Roman about his secret";
 	[]
 	if (HP of Roman is 2):
 		choose a blank row in table of fucking options;
 		now title entry is "Convince";
 		now sortorder entry is 8;
-		now description entry is "Try to earn Roman's trust.";
+		now description entry is "Try to earn Roman's trust";
 	[]
 	if (HP of Roman is 3):
 		choose a blank row in table of fucking options;
@@ -322,25 +324,25 @@ to say RomanFuck1:
 		choose a blank row in table of fucking options;
 		now title entry is "Vaginal fuck";
 		now sortorder entry is 1;
-		now description entry is "That's all he is good for, is he not?";
+		now description entry is "That's all he is good for, is he not";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Face-fuck";
 		now sortorder entry is 2;
-		now description entry is "Assert Roman's progress in his gag suppression training.";
+		now description entry is "Assert Roman's progress in his gag suppression training";
 	[]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Strap-on";
 		now sortorder entry is 3;
-		now description entry is "Someone has left a strap-on next to the bench.";
+		now description entry is "Someone has left a strap-on next to the bench";
 	[]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now sortorder entry is 4;
-		now description entry is "Have him work his tongue on your cunt.";
+		now description entry is "Have him work his tongue on your cunt";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -435,25 +437,25 @@ to say RomanFuck2:
 		choose a blank row in table of fucking options;
 		now title entry is "Vaginal fuck";
 		now sortorder entry is 1;
-		now description entry is "Show Roman the pleasures of being a woman.";
+		now description entry is "Show Roman the pleasures of being a woman";
 	[]
 	if player is not neuter:
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 2;
-		now description entry is "Everything is in the name.";
+		now description entry is "Everything is in the name";
 	[]
 	if (player is female and Breast Size of player > 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Tribadism";
 		now sortorder entry is 3;
-		now description entry is "Have some [']girl time['] with Roman.";
+		now description entry is "Have some [']girl time['] with Roman";
 	[]
 	if (player is female and Breast Size of player is 0):
 		choose a blank row in table of fucking options;
 		now title entry is "Cunt-boy special";
 		now sortorder entry is 4;
-		now description entry is "Let us have fun together in the campus.";
+		now description entry is "Let us have fun together in the campus";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

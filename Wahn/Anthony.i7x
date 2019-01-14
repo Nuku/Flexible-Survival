@@ -70,6 +70,27 @@ object	name
 Anthony	"Anthony"
 
 Anthony is a man. The HP of Anthony is normally 0. Anthony is in Farmhouse Main Room.
+ScaleValue of Anthony is 3. [human sized]
+Cocks of Anthony is 1.
+Cock Length of Anthony is 10.
+Cock Width of Anthony is 2.
+Testes of Anthony is 2.
+Cunts of Anthony is 0.
+Cunt Length of Anthony is 10.
+Cunt Width of Anthony is 2.
+Breasts of Anthony is 2. [2 nipples]
+Breast Size of Anthony is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Anthony is false.
+PlayerRomanced of Anthony is false.
+PlayerFriended of Anthony is false.
+PlayerControlled of Anthony is false.
+PlayerFucked of Anthony is false.
+OralVirgin of Anthony is false.
+Virgin of Anthony is true.
+AnalVirgin of Anthony is true.
+PenileVirgin of Anthony is false.
+SexuallyExperienced of Anthony is true.
 The description of Anthony is "[AnthonyDesc]".
 The conversation of Anthony is { "Mew!" }.
 The icon of Anthony is Figure of Anthony_clothed_icon.

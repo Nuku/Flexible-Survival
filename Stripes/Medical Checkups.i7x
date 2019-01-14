@@ -59,12 +59,18 @@ ovipregMedeatalk is a truth state that varies. ovipregMedeatalk is usually false
 Medeapanda is a truth state that varies. Medeapanda is usually false.
 Medeapill is a truth state that varies. Medeapill is usually false.
 
-The description of Doctor Medea is "Doctor Medea is a relatively human lizard. She's wearing a professional-looking light brown blouse and skirt combo with a doctor's white coat overtop[if Park Entrance is known]. She looks like she had a run-in with one of those lizards at the park[end if][if HP of doctor Medea >= 5 and lust of doctor Medea >= 3]. The doctor's had to loosen her blouse and skirt to make room for the rounded bulge in her belly from an advancing pregnancy of her own[else if Medeaget > 0]. There is now a darker line running down her skirt to where some whitish cum is dripping. It almost looks like she came in herself, since the door was dust covered except for your recent marks[end if].".
+The description of Doctor Medea is "[MedeaDesc]".
+
+to say MedeaDesc:
+	project the figure of Medea_face_icon;
+	say "     Doctor Medea is a relatively human lizard, with her scaly skin having shades of ochre and yellow. Two spiky ridges run along the sides of her head and down her back, starting at the eyes and vanishing beneath the collar of a professional-looking light green blouse and skirt combo with a doctor's white coat overtop[if Park Entrance is known]. She looks like she had a run-in with one of those lizards at the park[end if][if HP of doctor Medea >= 5 and lust of doctor Medea >= 3]. The doctor's had to loosen her blouse and skirt to make room for the rounded bulge in her belly from an advancing pregnancy of her own[else if Medeaget > 0]. There is now a darker line running down her skirt to where some whitish cum is dripping. It almost looks like she came in herself, since the door was dust covered except for your recent marks[end if].";
+
 The conversation of Doctor Medea is { "Babies!" }.
 
 instead of conversing the Doctor Medea:
+	project the figure of Medea_face_icon;
 	if PlayerMet of Medea is false: [never talked before]
-		say "     Doctor Medea is a relatively human lizard, clothed, with multicolored scales[if park entrance is known]. You suspect she got caught in the park initially[else]. You wonder where she got such an interesting infection[end if]. 'Hello. I am Doctor Medea. I used to work here, and am only still here because the monster that broke in was too dumb to read the [']Pull['] sign on the doors and just tried to ram its way in. The condition of the lobby keeps the other monsters away, thinking this place has already been looted. Perhaps I could help you with something?' she asks with a helpful smile.";
+		say "     Doctor Medea is a relatively human lizard, clothed, with scales in shades of ochre and yellow[if park entrance is known]. You suspect she got caught in the park initially[else]. You wonder where she got such an interesting infection[end if]. 'Hello. I am Doctor Medea. I used to work here, and am only still here because the monster that broke in was too dumb to read the [']Pull['] sign on the doors and just tried to ram its way in. The condition of the lobby keeps the other monsters away, thinking this place has already been looted. Perhaps I could help you with something?' she asks with a helpful smile.";
 		now PlayerMet of Medea is true; [met and talked to the character]
 	else:
 		say "     You approach Doctor Medea again. All that is different is there is now a darker line running down her skirt to where some whitish cum is dripping. It looks like she came in herself, since the door is still dust covered except for your marks. 'Have you come looking for some help with your pregnancy needs?' she asks with more interest than a doctor perhaps should.";
@@ -177,6 +183,7 @@ instead of conversing the Doctor Medea:
 Section 3 - Medical Adjustments
 
 to say Medeaadjustments:
+	project the figure of Medea_face_icon;
 	now sextablerun is 0;
 	if Medeaget is 0:
 		say "     'I could determine if you are pregnant. For anything past that, I'm going to need your assistance in obtaining the necessary supplies. With those, I could make you more fertile, or sterilize you. With even more equipment, I might be able to do even more than that,' she says with an odd eagerness in her tone.";
