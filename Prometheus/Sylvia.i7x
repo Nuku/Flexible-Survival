@@ -790,6 +790,7 @@ Beach Field Research is a situation.
 Prereq1 of Beach Field Research is Unnatural Heat.
 Prereq2 of Beach Field Research is Julian's Room Event.
 Prereq1Resolution of Beach Field Research is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 }.
+Prereq2Resolution of Beach Field Research is { 0, 1 }.
 The level of Beach Field Research is 0.
 The sarea of Beach Field Research is "Beach".
 
