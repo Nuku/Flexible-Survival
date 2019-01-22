@@ -51,6 +51,51 @@ Instead of conversing the Doctor Matt:
 	else:
 		say "[DrMattTalkMenu]";
 
+to say DrMattNaniteInfoMenu:
+	LineBreak;
+	project the figure of DrMatt_face_icon;
+	say "     What detail of the nanites do you want to talk about with Dr. Matt?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Nanite Basics";
+	now sortorder entry is 0;
+	now description entry is "Get an explanation of what the nanites are on the basic level";
+	[]
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Nanite Basics"):
+					say "[DrMattNaniteTalk1]";
+				wait for any key;
+				say "[DrMattNaniteInfoMenu]";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You say goodbye to the suited man for now and he turns back to his research instruments with a nod.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say DrMattNaniteTalk1:
+	say "     As you ask Dr. Matt to explain the basics of nanite functionality to you, he gives an eager nod, waving you to follow him to a nearby terminal. Sitting down in front of the screen, he types a few quick commands, then pulls up a folder containing what seems to be a lecture or presentation. 'As you might know, nanites are one of the most promising future technologies that scientists are trying to develop. Imagine being able to inject a payload of them and just eliminating any and all bacteria or viruses of the targeted type.' After a click, you can see an animation of cells on the screen, intermixed with red objects that are then attacked by microscopic machines and destroyed. 'From what I and everyone else knew, nanite systems like this are still years away from perfection, with exhaustive medical studies to do first. No one even imagined doing things like we're experiencing now.'";
+	say "     'The central issue is control, you know. One can do only so much on the miniscule scale, and shoehorning any kind of memory and transmission capability leaves no room at all for anything else,' Dr. Matt explains, then pulls up recorded images from what must be one of the insanely expensive apparatuses in his lab here. On them, you see tiny metallic specs, some showing a basic hexagonal shape that are clustered together, others in a myriad of shapes slowly moving around, armed with grippers and feelers. The latter kind are spreading out to start working on an introduced sample of cells. 'Whoever thought up this nanite infection was a genius, if a criminally short-sighted one. You see, we're not dealing with one type of nanites, much rather dozens of them. Manipulators mainly, and shepherding them, the control units. This way each nanite doesn't need everything in it, but specialization and swarming allows astonishingly complex behavior!'";
+	WaitLineBreak;
+	say "     Dr. Matt goes through numerous short vids of the hexagonal nanites, linking together in a linear pattern initially, then splitting apart again and clumping in more random ways. Pointing at the first structure, he adds, 'From what I can tell, this is a receiver. They're the first thing that newly formed control nanites assemble to, but either there is no signal coming, or the first and only command these nanites are getting sets them to independent control. They recycle the structure soon after, and anything beyond this point is quite chaotic in its structure as the nanites grow and learn on their own. I need more data before I can give details on that.'";
+	say "     Waving his hand in a casual way and indicating yourself, he adds, 'By the way, understanding these structures is how I can do my little adjustments to help you if you [bold type]volunteer[roman type]. I make use of what receivers there are at that moment, inserting a few of my own commands. Sadly, the remaining nanites seem to recognize the intrusion and quickly hunt down any clusters that hold foreign code, disassembling them. So the amount of change possible is quite limited. No easy cure for the nanite plague that way, I'm afraid.'";
+
 to say DrMattTalkMenu:
 	LineBreak;
 	project the figure of DrMatt_face_icon;
@@ -62,20 +107,26 @@ to say DrMattTalkMenu:
 	now title entry is "Helping him";
 	now sortorder entry is 0;
 	now description entry is "Offer your assistance to his efforts";
-	[
+	[]
+	if HP of Doctor Matt is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Delivering the samples he needs";
+		now sortorder entry is 2;
+		now description entry is "Tell him you got some samples for him";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "The Nanite Infection";
-	now sortorder entry is 1;
+	now sortorder entry is 3;
 	now description entry is "Ask him what he knows about the outbreak";
-	]
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "How he ended up here";
-	now sortorder entry is 2;
+	now sortorder entry is 4;
 	now description entry is "Find out how he got here";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Communicating with the outside world";
-	now sortorder entry is 3;
+	now sortorder entry is 4;
 	now description entry is "Ask about his connection to the military";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -94,6 +145,8 @@ to say DrMattTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Helping him"):
 					say "[DrMattQuestTalk]";
+				if (nam is "Delivering the samples he needs"):
+					DrMattSampleDelivery;
 				if (nam is "The Nanite Infection"):
 					say "[DrMattTalk1]";
 				if (nam is "How he ended up here"):
@@ -111,7 +164,7 @@ to say DrMattTalkMenu:
 	clear the screen and hyperlink list;
 
 to say DrMattTalk1:
-	say "...";
+	say "[DrMattNaniteInfoMenu]";
 
 to say DrMattTalk2:
 	say "     Dr. Matt takes a deep breath, then turns the visor of his helmet your way and waves at the lab around you both. 'I was here when it started actually. With critical deadlines to meet for one of my projects, I was doing an all-nighter. Then morning came and... I heard an alarmingly loud crash from downstairs, followed by other noises. Of course I couldn't simply go and check it out since I was in the class 4 isolation lab. It became obvious that a fight was going on when I heard the gunshots during my airlock procedure, but by the time the outer door finally opened, all was quiet again. I feared the worst and ran towards the lobby while still in my suit, only to find a wholly different scene than I had imagined. Oh, the room was thrashed thoroughly to be sure, but the huge draconic creature that was pinning our night security guard to the floor wasn't interested in actually harming him at all.'";
@@ -124,60 +177,209 @@ to say DrMattTalk3:
 	say "     The suited man looks up at you as you bring up connecting with the world outside of the city, glancing at you through his glasses and nodding. 'Yes, I do still have contact with a colleague in the CDC, Dr. Sutton. As luck will have it, the Trevor Labs facility is part of the shielded communications network that connects a number of selected sites of bio-safety level 4 in case of emergencies. If only Greg and I could have convinced the authorities that they have to delay the planned surge of troops into the city!' He distractedly moves to stroke through his grey hair, only to have his gloved fingers bump against the Plexiglas screen of the helmet. Lowering his hand with an annoyed grunt, Dr. Matt makes a frustrated throwing-away gesture.";
 	say "     'They just won't listen! Sending more troops will only expand the ranks of the infected unless they're properly prepared. And for that, we need more research!' The man focuses on yourself with an intense expression that speaks of his desperate need for progress, and the frustration of a scientist at being rushed. He adds in a grumbling tone, 'The infighting out there is almost as bad as the beasts out on the streets here. Politicians screaming for something to be done yesterday, generals drawing in what local forces they can and preparing for a Hail-Mary push to 'overwhelm the beasts', with those who understand anything about the situation in the middle and ignored by both. Please, help me get some results so we can make them listen.'";
 
-to say DrMattQuestTalk:
-	if HP of Doctor Matt is 1:
-		say "'Alright, we have a limited amount of time. I have been doing my best to delay the military, but without something concrete to report, they will be here soon, and they will pave this thing as hard as they can, leaving all mysteries unsolved. Now that you are here, we can get to work and keep them off our backs,' explains the hazmat suited man as he pushes his chair towards another terminal and starts typing.";
+Section 2 - Quests
+
+to DrMattSampleQuestStart:
+	say "     As you offer your help, Dr. Matt looks at you through the clear screen of his suit helmet and smiles eagerly. 'Splendid! I had hoped you might be willing to assist. To get a handle on this hole situation here, I need more data - and fast, otherwise the military might just move in unprepared in their usual impatience. Can you imagine the scale of what a desaster that would be? Chaos and casualties in the thousands, that's for sure.' The doctor's expression darkens as he says those words, telling you that he's genuinely concerned about the outcome. From what you've learned of the nanite infection so far, you can't help but agree about his worries, as even trained soldiers would surely succumb quickly if they went up against the infected without any protection from transformation. Close quarters fighting against infected who just shrug off most wounds after a few seconds isn't to be taken lightly.";
+	say "     Raising one hand as if to nervously brush over his greying hair, Matt stops himself before he hits the helmet, letting his gloved fingers drop with a frown. 'Anyways, since we only have this limited amount of time, I would suggest you move quickly. I have been trying to delay convince the military to delay its [']surge['], but without data to support my warnings, they're easily ignored. Please come over here for a moment with me,' he says, then walks to a nearby terminal and sits down in front of it. He opens up a folder named 'observed specimens', which contains a whole row of still images from surveillance cams. 'Thankfully the exterior security system's cameras do have battery backup, so they've captured footage of some interesting creatures since the outbreak. Here, this is something that I earmarked being of special interest.'";
+	WaitLineBreak;
+	if hermaphrodite is not banned and furry is not banned:
+		if bodyname of player is "Hermaphrodite Blue Gryphon":
+			say "     After a double-click, you see the image of a flying creature with blue wings and blue fur appear on the screen. You know the shape well, as it is what your body currently looks like. Clearing his throat and falling back into an almost lecture-like tone, Dr. Matt points out details of the gryphon depicted. 'As you can see, this being has characteristics of members in the Accipitridae family, namely this beak, wings and the typical curved claws. Yet at the same time, it also is quite similar to a feline of the Panthera genus.' This time the suited man taps the overall leonine body, paws and tail with tail tuft. 'Most creatures that roam the streets are anthropomorphized versions of specific animals, but this appears to be some sort of hybrid. I must have samples to find out how this is possible.' Turning his attention to you, he adds, 'It is... fortunate, to have you here as a live subject, so please, have a seat on the examination table. This will only take a little while.'";
+			say "     Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
+			DrMattGryphonExam;
+			now Strength of Doctor Matt is 1; [Gryphon Samples Delivered]
+		else: [non-grpyhons must get the milk]
+			say "     After a double-click, you see the image of a flying creature with blue wings and blue fur appear on the screen. Clearing his throat and falling back into an almost lecture-like tone, Dr. Matt points out details of the gryphon depicted. 'As you can see, this being has characteristics of members in the Accipitridae family, namely this beak, wings and the typical curved claws. Yet at the same time, it also is quite similar to a feline of the Panthera genus.' This time the suited man taps the overall leonine body, paws and tail with tail tuft. 'Most creatures that roam the streets are anthropomorphized versions of specific animals, but this appears to be some sort of hybrid. I must have samples to find out how this is possible. Bodily fluids like milk or cum should serve well in that regard, please see if you can acquire a suitably large sample.' That said, he turns back to his workstation.";
+	else:
+		say "     After a double-click, you see the image of a flying creature with blue wings and blue fur appear on the screen. Clearing his throat and falling back into an almost lecture-like tone, Dr. Matt points out details of the gryphon depicted. 'As you can see, this type of creature seems to be a hybrid of two distinct species, as well as being blue, and dual gendered. Sadly, it appears that they're quite rare, as no specimens have appeared on any of the tapes since those early examples. A pity, as it would have been fascinating to study them.'";
+		say "     (Note: This quest stage was skipped due to your ban settings)[line break]";
+		now Strength of Doctor Matt is 1; [Gryphon stage skipped]
+	WaitLineBreak;
+	if bodyname of player is "Goo Girl" or bodyname of player is "Blue Gel" or bodyname of player is "Pink Gel" or bodyname of player is "Purple Gel":
+		say "     The next image that he pulls up shows a humanoid figure walking, or maybe gliding, along the sidewalk down the road from the Trevor Labs building, only seen for a moment. It is a bit grainy from being zoomed in to. 'This here is another specimen that had me guessing since it was captured on tape. Vaguely humanoid and semitransparent, yet with no recognizable internal organs. I must admit that I do not know how it can exist and be capable of any greater intelligence than an amoeba, but as you can see, it moves with focused intent and mimics the external shape of a human quite well.' Turning his attention to you, he adds, 'It is... fortunate, to have you here as a live subject, so please, have a seat on the examination table. This will only take a little while.''";
+		DrMattGooExam;
+		if Strength of Doctor Matt is 0: [nothing delivered yet]
+			now Strength of Doctor Matt is 2; [goo delivered]
+		else if Strength of Doctor Matt is 1: [gryphon stage already finished (ban or shape)]
+			now Strength of Doctor Matt is 3; [milk + goo delivered]
+	else: [normal people have to gather samples]
+		say "     The next image that he pulls up shows a humanoid figure walking, or maybe gliding, along the sidewalk down the road from the Trevor Labs building, only seen for a moment. It is a bit grainy from being zoomed in to. 'This here is another specimen that had me guessing since it was captured on tape. Vaguely humanoid and semitransparent, yet with no recognizable internal organs. I must admit that I do not know how it can exist and be capable of any greater intelligence than an amoeba, but as you can see, it moves with focused intent and mimics the external shape of a human quite well.' Turning his attention to you, he adds, 'The type of creature doesn't seem to be too prevalent close by to the Trevor Labs, as we don't have any encounters besides this on the tapes. You might need to expand your search radius to other parts of the city to find them, but I'm sure you'll manage. Once you find one, please scoop up a small amount of its mass into these sampling cups.'";
+		say "     You're handed small screw-top plastic containers by the suited scientist and he explains how to properly label them once filled. 'Thank you for your willingness to advance the effort in understanding the infection. Good luck,' Dr. Matt adds with a smile, then turns back to the workstation he's doing most of his research on. Seems you've been dismissed.";
+	if Strength of Doctor Matt is 3: [already everything delivered]
 		WaitLineBreak;
-		say "'The first problem is a lack of test subjects. I can't send Orthas out to collect samples, that would leave me unprotected. You, on the other hand, are not so limited. Go to the mall and get some samples from the amorphous transformatives there, and some nutritive secretions from one of those raptor slash panthera leo transformatives. I would prefer two of each, enough to be able to experiment without risking the whole of the subject matter,' he explains, turning to face you.";
-		WaitLineBreak;
-		say "'Once you have them, just come back here and we will be that much closer to solving this.'";
-		say "You get the idea you've been dismissed, as he goes quiet, and eventually turns back to his work. Not much of a socialite.";
-		now HP of Doctor Matt is 2;
-		now level of Doctor Matt is 0;
-		now hobo-grmilkhelp is turns;
-	if HP of Doctor Matt is 2:
-		let milkfound be the carried of gryphon milk;
-		let goofound be the carried of glob of goo;
-		if girl is banned:
-			now goofound is 2;
-		if hermaphrodite is banned or furry is banned:
-			now milkfound is 2;
-		if milkfound < 2:
-			say "'You do not have enough nutritive secretions,' he chastises.";
-			stop the action;
-		if goofound < 2:
-			say "'You do not have enough amorphous samples,' he chastises.";
-			stop the action;
-		extend game by 5;
-		let num be 0;
-		delete glob of goo;
-		delete glob of goo;
-		delete gryphon milk;
-		delete gryphon milk;
-		say "'Ah, exemplary work,' he murmurs, already taking your goo and milk and quickly getting them into a deep freeze box that glows ominous blue. Chill white mist escapes for the moment he pops it open to place the precious objects inside, 'Now then, we shall see what can be seen. Come back tomorrow.'";
+		say "     Clearing his throat, the doctor adds, 'Well, it seems I got everything I need for right now then. Thank you for the assistance. I will start analyzing the samples and hopefully get a lot of useful data from them.'";
+		now HP of Doctor Matt is 3; [post-gather quest]
 		now level of Doctor Matt is turns;
 		increase score by 20;
+	else: [still need to gather stuff]
+		now HP of Doctor Matt is 2; [gather quest given]
+		now level of Doctor Matt is 0;
+		now hobo-grmilkhelp is turns;
+
+to DrMattGooDelivery:
+	if carried of glob of goo > 1:
+		LineBreak;
+		say "     [bold type]You lose 2 globs of goo![roman type][line break]";
+		decrease carried of glob of goo by 2;
+	else if carried of blue gel > 1:
+		LineBreak;
+		say "     [bold type]You lose 2 blue gel![roman type][line break]";
+		decrease carried of blue gel by 2;
+	else if carried of pink gel > 1:
+		LineBreak;
+		say "     [bold type]You lose 2 pink gel![roman type][line break]";
+		decrease carried of pink gel by 2;
+	else if carried of purple gel > 1:
+		LineBreak;
+		say "     [bold type]You lose 2 purple gel![roman type][line break]";
+		decrease carried of purple gel by 2;
+
+to DrMattGooExam:
+	say "     Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then pokes and prods your partially liquid body experimentally and makes some notes with observations, one of which is that you do not really feel pain when part of your mass is displaced from its previous location. Finally, he pulls out a sampling cup and labels it, then directs you to scoop a little bit of material from your torso into it and screw on the lid. Raising the plastic cup and looking with interest at the sample that sloshes back and forth on its own inside, the doctor then places it in a laboratory fridge for later examination. 'Thank you for your willingness to advance the effort in understanding the infection,' Dr. Matt adds with a smile, then turns back to the workstation he's doing most of his research on.";
+
+to DrMattGryphonExam:
+	if player is male: [male + herm]
+		say "He clears his throat and requests a sample of your sexual fluids too, but is less hands-on in gathering that, simply providing you a sample cup to jerk off into instead. Watching unashamedly as you stroke your dick and fill it with throbs of cum, the suited scientist accepts the screw-top cup eagerly and labels it, then stashes a small box with all of your samples in a laboratory fridge. ";
+	else if player is female:
+		say "He clears his throat and requests a sample of your sexual fluids too, but is less hands-on in gathering that, simply providing you a swab-stick with cotton end. Watching unashamedly as you rub yourself, then brush the swab along the inside of your wet nether lips, he accepts the sample eagerly and puts it in a labeled screw-top cup, then stashes a small box with all of your samples in a laboratory fridge. ";
+	else:
+		say "He clears his throat and asks a few questions about your genderlessness, then takes a cotton swab and moistens it with a few drips of distilled water, brushing it over your flat crotch a few times before putting that in a screw-top sample cup and labeling it. Afterwards, he stashes a small box with all of your samples in the laboratory fridge. ";
+	say "'Thank you for your willingness to advance the effort in understanding the infection,' Dr. Matt adds with a smile, then turns back to his workstation.";
+
+to DrMattSampleDelivery:
+	say "     As you approach Dr. Matt and tell him that you have got what he wanted, the suited scientist bids you to unpack what you have brought him. Looking over your items, he ";
+	if Strength of Doctor Matt is 0: [nothing delivered yet]
+		if carried of gryphon milk > 1 and (carried of glob of goo > 1 or carried of blue gel > 1 or carried of pink gel > 1 or carried of purple gel > 1): [got everything]
+			say "gives a satisfied nod, then starts to sort your samples into a little box and stashes it in a laboratory fridge. 'Splendid. Thank you for the assistance. I will start analzying the samples and hopefully get a lot of useful data from them.'";
+			LineBreak;
+			say "     [bold type]You lose 2 gryphon milk![roman type][line break]";
+			decrease carried of gryphon milk by 2;
+			DrMattGooDelivery;
+			now Strength of Doctor Matt is 3; [everything delivered]
+		else if carried of gryphon milk is 1 and (carried of glob of goo > 1 or carried of blue gel > 1 or carried of pink gel > 1 or carried of purple gel > 1): [not enough milk, but enough goo]
+			if bodyname of player is "Hermaphrodite Blue Gryphon":
+				say "gives a thoughtful nod, then puts some of the samples into a little box. 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
+				DrMattGryphonExam;
+				now Strength of Doctor Matt is 3; [everything delivered]
+			else:
+				say "gives a thoughtful nod, then puts some of the samples into a little box and stashes it in a laboratory fridge. 'Sadly, you do not have enough of the gryphon milk for a full analysis. Please gather some more and bring it to me.'";
+				now Strength of Doctor Matt is 2; [goo delivered]
+			DrMattGooDelivery;
+		else if carried of gryphon milk is 0 and (carried of glob of goo > 1 or carried of blue gel > 1 or carried of pink gel > 1 or carried of purple gel > 1): [no milk, but enough goo]
+			if bodyname of player is "Hermaphrodite Blue Gryphon":
+				say "gives a thoughtful nod, then puts some of the samples into a little box. 'Sadly, you do not have any gryphon samples for analysis. But then, since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
+				DrMattGryphonExam;
+				now Strength of Doctor Matt is 3; [everything delivered]
+			else:
+				say "gives a thoughtful nod, then puts your samples into a little box and stashes it in a laboratory fridge. 'That is the fluidic creature's samples taken care of, but I still require some fluids from a gryphon. Pleas see if you can aquire some and bring it to me.'";
+				now Strength of Doctor Matt is 2; [goo delivered]
+			DrMattGooDelivery;
+		else if carried of gryphon milk > 1 and (carried of glob of goo < 2 and carried of blue gel < 2 and carried of pink gel < 2 and carried of purple gel < 2): [got milk, not enough goo]
+			if bodyname of player is "Goo Girl" or bodyname of player is "Blue Gel" or bodyname of player is "Pink Gel" or bodyname of player is "Purple Gel":
+				say "gives a thoughtful nod, then puts some of the samples into a little box and stashes it in a laboratory fridge. 'Sadly, you do not have enough samples of fluidic creatures for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.'";
+				LineBreak;
+				say "     [bold type]You lose 2 gryphon milk![roman type][line break]";
+				decrease carried of gryphon milk by 2;
+				DrMattGooExam;
+				now Strength of Doctor Matt is 3; [all delivered]
+			else:
+				say "gives a thoughtful nod, then puts some of the samples into a little box and stashes it in a laboratory fridge. 'Sadly, you do not have enough samples of fluidic creatures for a full analysis. Please gather some more and bring them to me.'";
+				LineBreak;
+				say "     [bold type]You lose 2 gryphon milk![roman type][line break]";
+				decrease carried of gryphon milk by 2;
+				now Strength of Doctor Matt is 1; [milk delivered]
+		else if carried of gryphon milk is 0 and (carried of glob of goo is 0 and carried of blue gel is 0 and carried of pink gel is 0 and carried of purple gel is 0): [neither enough milk nor goo]
+			if bodyname of player is "Hermaphrodite Blue Gryphon":
+				say "gives a slight frown, then shakes his head. 'Sadly, you do not have either the gryphon or the fluidic samples that I requested. But since you appear to be a carrier of the hybrid gryphon infection right now, at least one of those issues is no problem. Please, have a seat on the examination table. This will only take a little while.'";
+				say "     Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
+				DrMattGryphonExam;
+				now Strength of Doctor Matt is 1; [Gryphon Samples Delivered]
+			else if bodyname of player is "Goo Girl" or bodyname of player is "Blue Gel" or bodyname of player is "Pink Gel" or bodyname of player is "Purple Gel":
+				say "gives a slight frown, then shakes his head. 'Sadly, you do not have either the gryphon or the fluidic samples that I requested. But since you appear to be a carrier of a fluidic infection right now, at least one of those issues is no problem. Please, have a seat on the examination table. This will only take a little while.'";
+				DrMattGooExam;
+				now Strength of Doctor Matt is 2; [goo delivered]
+			else:
+				say "gives a slight frown, then shakes his head. 'Sadly, you do not have either the gryphon or the fluidic samples that I requested. Please, gather them with the suitable haste.'";
+	else if Strength of Doctor Matt is 1: [milk delivered]
+		if (carried of glob of goo > 1 or carried of blue gel > 1 or carried of pink gel > 1 or carried of purple gel > 1): [got goo]
+			say "gives a satisfied nod, then adds your samples to the little box holding the previous batch and puts it back in a laboratory fridge. 'Splendid. Thank you for the assistance. I will start analzying the samples and hopefully get a lot of useful data from them.'";
+			DrMattGooDelivery;
+			now Strength of Doctor Matt is 3; [everything delivered]
+		else: [not enough goo]
+			if bodyname of player is "Goo Girl" or bodyname of player is "Blue Gel" or bodyname of player is "Pink Gel" or bodyname of player is "Purple Gel":
+				say "gives a slight frown, then shakes his head. 'Sadly, you do not have enough samples of fluidic creatures for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.'";
+				DrMattGooExam;
+				now Strength of Doctor Matt is 3; [everything delivered]
+			else:
+				say "gives a slight frown, then shakes his head. 'Sadly, you do not have the fluidic samples that I requested. Please, gather them with the suitable haste.'";
+	else if Strength of Doctor Matt is 2: [goo delivered]
+		if carried of gryphon milk > 1:
+			say "gives a satisfied nod, then adds your samples to the little box holding the previous batch and puts it back in a laboratory fridge. 'Splendid. Thank you for the assistance. I will start analzying the samples and hopefully get a lot of useful data from them.'";
+			LineBreak;
+			say "     [bold type]You lose 2 gryphon milk![roman type][line break]";
+			decrease carried of gryphon milk by 2;
+			now Strength of Doctor Matt is 3; [everything delivered]
+		else if carried of gryphon milk is 1: [not enough milk]
+			if bodyname of player is "Hermaphrodite Blue Gryphon":
+				say "gives a thoughtful nod, then says. 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
+				DrMattGryphonExam;
+				now Strength of Doctor Matt is 3; [everything delivered]
+			else:
+				say "gives a slight frown, then shakes his head. 'Sadly, you do not have enough of the gryphon milk for a full analysis. Please, gather them with the suitable haste.'";
+		else if carried of gryphon milk is 0:
+			if bodyname of player is "Hermaphrodite Blue Gryphon":
+				say "gives a slight frown nod, then says. 'Sadly, you do not have any gryphon samples. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
+				DrMattGryphonExam;
+				now Strength of Doctor Matt is 3; [everything delivered]
+			else:
+				say "gives a slight frown, then shakes his head. 'Sadly, you do not have the gryphon samples that I requested. Please, gather them with the suitable haste.'";
+	if Strength of Doctor Matt is 3: [all delivered]
+		WaitLineBreak;
+		say "     Clearing his throat, the doctor adds, 'Well, it seems I got everything I need for right now then. Thank you for the assistance. I will start analyzing the samples and hopefully get a lot of useful data from them.'";
 		now HP of Doctor Matt is 3;
-	if HP of Doctor Matt is 3:
-		if level of Doctor Matt minus turns < 8:
-			say "'Still working on those samples you brought, come back later.'";
-			stop the action;
-		extend game by 24;
-		increase score by 5;
-		say "'Simply amazing. There is no other word for it,' says Doctor Matt, looking excited through his hazmat faceplate, 'The adaptability of the nanites is simply... I would have said it was impossible if I hadn't laid my own eyes on it. I sent out my results and the military have grudgingly agreed to a three day extension on their plans.'";
-		WaitLineBreak;
-		say "'The nanites seem to come in a few varieties that cooperate. The most important ones, the ones that allow the miracle work, are the... brain... nanites, for lack of better word. They link with neighboring brain nanites like nerve endings and seem capable of forming neural patterns of astonishing complexity! The nanites stopped receiving directives a long time ago, but they can adjust and make up their own choices independently. It is little wonder this is causing so much trouble,' he gushes with bubbling enthusiasm, like a young boy having caught a creepy looking insect.";
-		WaitLineBreak;
-		now HP of Doctor Matt is 4;
-	if HP of Doctor Matt is 4:
-		say "'Oh, one thing of more immediate use. I discovered how to neutralize the nanites. A limited area of them at least. They do not like being microwaved. I have one in the corner there, feel free to [bold type]microwave[roman type] anything you want to bake the infection out.'";
+		now level of Doctor Matt is turns;
+		increase score by 20;
+
+to DrMattFirstResults:
+	if level of Doctor Matt - turns < 8:
+		say "     As you approach the suited man and offer him more help, he smiles but shakes his head. 'My thanks, but I'm still working on those samples you brought. Before I have results from them, I wouldn't be able to tell you what to focus on next. I would recommend that you concentrate on gathering supplies for now.' With that said, Dr. Matt turns back to his lab gear and proceeds to study the data scrolling across his screen with interested eyes.";
+		stop the action;
+	extend game by 32;
+	increase score by 5;
+	say "     Dr. Matt turns his head to you and blinks as if to clear his mind as you ask about how his research is going. 'Oh, I - I didn't tell you, did I? My apologies. It is simply amazing! There is no other word for it,' he cheerfully says, looking excited through his hazmat faceplate. 'The adaptability of the nanites is simply... I would have said it was impossible if I hadn't laid my own eyes on it. I sent out my results and the military have grudgingly agreed to a 96 hour delay of their plans while the ramifications are checked over and tactics adjusted.' Pointing towards an information terminal on a nearby desk, he adds, 'If you want, I can show you the results of my analysis in detail.' The man in the hazmat suit starts to turn towards his computer, fingers itching to lay out his findings to you, but then stops himself and looks at you past the rim of his glasses.";
+	say "     'Oh wait, you might be more interested in a fact of immediate use beneficial to your survival: I discovered how to neutralize the nanites. Well, a limited area of them at least. No matter how miraculous the devices are, there is only a limited amount of energy they can absorb before burning out. Applying such energy, for example in the form of microwave radiation, will destroy them with a high degree of certainty. There is a microwave in the corner over there, so you can feel free to [bold type]microwave[roman type] anything you want to bake the infection out of. We can dispense with the need for saving power in this case.' Looking over to the microwave, then back at you, the doctor raises an eyebrow and clears his throat. 'In order to avoid any unforunate incidents, I would like to remind you that inserting a living being or metallic objects into any microwave is strongly discouraged. Please only use it for food items.'";
+	now HP of Doctor Matt is 5;
+
+to say SusanLabArrival:
+	WaitLineBreak;
+	say "     As you lead the deer hermaphrodite through the streets torward the Trevor Labs buildings, you explain to Susan about the dragoness security guard of the lab complex and also Dr. Matt's research. Soon reaching the building, you escort your companion inside and introduce her to Orthas. 'Urr, nice to meet you,' the black dragon tells the deer in a doubting tone, and a certain level of wariness never leaves her gaze. 'Please just let the doctor just do his thing and don't try start any funny business, alright? He's our only hope, you know, and absolutely must stay in his suit.' Susan frowns at those words and squeals, 'Hey! I'm not an animal! Looked in the mirror lately, lady?!' You quickly step in and smooth things over between them, ensuring Orthas that Susan will be on her best behavior and putting an arm on the doe's arm to lead her to the stairs. 'She'd better be,' the dragoness mutters behind you as you continue on your way towards Dr. Matt's lab.";
+	say "     It takes only another minute or two before you're at the entrance to Dr. Matt's lab, where you give a knock on the door to warn him of your arrival. Then you shepherd Susan inside, where the hazmat-suited scientist is waiting. He nods to you, then addresses your companion with a professional smile on his face. 'Welcome to the Trevor Labs, young lady. I am Doctor Matthew Burnell, but most just call me Doctor Matt. Hopefully your trip here wasn't too stressful?' Susan gapes at him, with something about being presented with a fully human, older male making her shyness about her form bubble up again. She moves her hands to cover herself and haltingly replies, 'I - um - it was okay. So - you're a real doctor?' 'Certainly, my dear. You don't need to be shy. Now, as I'm sure my assistant here has already told you, I aim to understand the nanite infection and find ways to treat it. This is where you could be of great assistance...'";
+	WaitLineBreak;
+	say "     The friendly, if somethimes a bit clinical, way in which Dr. Matt talks serves well to calm Susan's nerves down again, and she soon lets herself be led off towards the examination table deeper in the lab. Over the next hour or so, the doctor interviews her about her memories from before the infection (which are spotty at the best of times), then gives her a physical, complete with some samples being taken. Finally, he gives her some fresh food and water, then comes back to you as Susan is busy eating. 'She is a quite remarkable specimen that could help me understand many details about the nanites that are still a mystery. You have my thanks for bringing Susan in. Now, the number of tests that will need to be performed with her are quite exensive, so I have offered her a place to stay here for the intermediate duration. Could you please go and tell Orthas that we need a bed for the young woman?'";
+	say "     Agreeing to his request, you set out towards the building's lobby, where you meet Orthas and tell her that Susan is moving in for the forseeable future. 'Really? I'm still a bit worried about her instincts flaring up you know. That girl is hung like a donkey and a cock like that sometimes has a mind of its own,' the dragoness says, then shrugs. 'Fine, I guess the doc knows what he's doing. Please hold my post for a little while, I'll go grab one of the emergency cots. The company bought a bunch of those when we had that audit last year and everyone was working overtime around the clock.' With that said, she unlocks the stairwell and vanishes upstairs, then returns some minutes later with a portable cot that she carries to the lab. Finally coming back to you a little while later, Orthas gives you a thumbs up. 'There, that's taken care of. And thanks for keeping lookout.'";
+	wait for any key;
+	move Susan to Primary Lab;
+	move player to Trevor Labs Lobby;
+
+to say DrMattQuestTalk:
+	if HP of Doctor Matt is 1:
+		DrMattSampleQuestStart;
+	else if HP of Doctor Matt is 2:
+		DrMattSampleDelivery;
+	else if HP of Doctor Matt is 3:
+		DrMattFirstResults;
+	else if HP of Doctor Matt is 4: [no longer used state]
 		now HP of Doctor Matt is 5;
-	if HP of Doctor Matt is 5:
-		say "'Up for another task? Good. Orthas spotted something interesting while hunting. A singular creature. You must understand, one of the standard impulses the infection seems to give on its infectees is the desire to spread the infection. To see just one is unusual. A trait I have only seen in Orthas so far. Go to the park and find this creature, bring it to me for study.'";
-		now unusual creature is active;
+	else if HP of Doctor Matt is 5:
+		say "     As you step forward and offer your help again, Dr. Matt smiles at you through the faceplate of his hazmat suit. 'You're up for another task? Good, this will be quite useful in my further research. You see, during the infrequent lulls in creature activity out on the streets, Orthas sometimes goes out hunting to gather supplies we need. During one such excursion, she spotted something interesting: A singular creature, an anthro cervine by her description, which showed a divergence of the usual behavior pattern seen in most infected. You must understand, one of the standard impulses of any carrier is the drive to spread the infection, but this 'deer woman' neither had any further members of her species around, nor did she approach Orthas or try to turn her. I can't help but wonder why that may have been. An incomplete or recent transformation possibly, or this person is at least somewhat resisting the infection's mental impact.'";
+		say "     Dr. Matt's eyes are filled with a far-away expression as his mind goes through more possibilities of what might be going on. He shakes himself out of that a moment later, then focuses on you again, 'No matter which, I would like to interview and study her. Could you please try to find this creature and bring her here? If safely archievable, of course.' With that said, the man pulls a printout of a city map from his stacks of research papers and lays it out on the table in front of you. Glancing at the piece of paper, you find yourself reminded of just how much the nanite outbreak has changed in the city, as you know that many of the streets, buildings and landmarks do not exist anymore in their old states. 'Orthas said she was about here, two blocks east, when she saw the deer, followed by the woman fleeing to the north.' Waving a red marker over the map, Dr. Matt marks down the location and adds a little arrow to indicate where the creature went.";
+		WaitLineBreak;
+		say "     'Given that she appeared to be a woodland creature, I would hazard the guess that our mystery woman might be found here, in this large [bold type]city park[roman type]. You might want to check this high probability area first before hunting for the [bold type]unusual creature[roman type] anywhere else.' Circling a green area that extends for several blocks in either direction, the doctor then caps his pen and hands you the map. 'I also wanted to commend you for your willingness to assist. Science and understanding will be the way out of this dire situation, that you can be certain of. We need good people like you to make progress.'";
+		now Unusual Creature is active;
 		now HP of Doctor Matt is 6;
 	else if HP of Doctor Matt is 6 and unusual creature is unresolved:
-		say "'Did you forget already?' asks Matt, 'Go to the park, find the unusual creature. Bring it here. Orthas said it was intersexed, if that helps.'";
+		say "     As you step forward and offer to help him again, Dr. Matt raises an eyebrow and gives you a curious look. 'Did you forget already? There is an [bold type]unusual creature[roman type] out on the streets that I would like you to bring in for an examination. With a high probability, she'll be living somewhere in or around the [bold type]city park[roman type], not too far off from the Trevor Labs building.' With that said, he turns his computer screen a little bit your way, pointing at a map of the city and tracing a street towards a well-sized urban park only a little distance away. 'With the wide-reaching effects the nanite outbreak had on everything in this city, I know these old maps aren't too much help anymore, but this should at least tell you the right direction in which to go. Oh, and there is one more thing - Orthas said the creature was intersexed, if that helps. Now please go and find her. Time is of the essence, as you know.'";
 	else if HP of Doctor Matt is 6:
 		say "'Ah ha, yes, she is an interesting creature, is she not?' he says, looking at the deer through his face plate. 'She says her name is Susan, just so you know.";
 		if deerconsent is 1:
@@ -186,7 +388,7 @@ to say DrMattQuestTalk:
 		now HP of Doctor Matt is 7;
 		increase score by 20;
 		extend game by 24;
-	if HP of Doctor Matt is 7 and deerconsent is not 2:
+	else if HP of Doctor Matt is 7 and deerconsent is not 2:
 		say "'Go on, talk to her.'";
 	else if HP of Doctor Matt is 7:
 		if susan is visible:
@@ -202,14 +404,14 @@ to say DrMattQuestTalk:
 					break;
 			now area entry is "Park";
 		now HP of Doctor Matt is 8;
-	if HP of Doctor Matt is 9 and hospquest < 8:
+	else if HP of Doctor Matt is 9 and hospquest < 8:
 		say "'Please continue to assist Dr Mouse. And let me know what you find out.' Dr Matt then turns back to his work, intent on continuing his research.";
-	if HP of Doctor Matt is 8 and hospquest is 8:
+	else if HP of Doctor Matt is 8 and hospquest is 8:
 		say "     You decide to tell Dr Matt about what you've been doing for Dr Mouse. You leave out what really happened to the scientific device he gave you and he doesn't seem to notice, instead focusing on the fact that he has a competitor. And one that you've been helping.";
 		say "     'I had been wondering what you'd been up to for the last few days in the city while I had nothing for you to do. Idle hands, as they say. This is quite unexpected. You have found another person in the city searching into the mysteries of the nanite infection, but through a different avenue of research. And using the infected as test subjected is...' he coughs as he notices the stern look you [if susan is visible]and Susan [end if]give him. 'That is, possibly using them as unwilling test subjects in such surgical experiments. Most disturbing and unethical, even in such a crisis.'";
 		say "     'I suggest you continue to assist this Dr Mouse individual. It will further ingratiate you to him and allow you to find out more about what's going on with his research. Hopefully, I am wrong about my concerns and this doctor may be of help to us. As well, we do need to know if his concerns about the nanites are valid.";
 		now HP of Doctor Matt is 9;
-	if HP of Doctor Matt is 9 and hospquest > 7 and mattcollection is 0:
+	else if HP of Doctor Matt is 9 and hospquest > 7 and mattcollection is 0:
 		say "     'Now, you say that Dr Mouse has been having you collect samples from the city? And from more and more powerful creatures? This is worrisome. I wonder what secrets he may be uncovering. May I see what he's asked you to collect?' he asks.";
 		if triclamped is 0 and triclampedmatt is 0:
 			let tricllfound be 0;
@@ -279,11 +481,11 @@ to say DrMattQuestTalk:
 				increase score by 10;
 			else:
 				now mattcollection is 2;
-	if mattcollection > 0 and HP of Doctor Matt < 10:
+	else if mattcollection > 0 and HP of Doctor Matt < 10:
 		say "     'I suggest you continue to assist Dr Mouse. It will further ingratiate you to him and allow you to monitor his activities. I want you to keep me informed on what he's receiving and please bring a sample for me as well. Nor do I wish to fall behind in my research to this little upstart.";
-	if HP of Doctor Matt is 10:
+	else if HP of Doctor Matt is 10:
 		say "     'A mind like Dr Mouse's cannot be allowed to continue to exploit the nanite infection unhindered. I will need you to take care of him. And be sure to bring back what research materials you can.'";
-	if HP of Doctor Matt is 8 and hospquest is 13:		[Doc completely unawares, hospital finished]
+	else if HP of Doctor Matt is 8 and hospquest is 13:		[Doc completely unawares, hospital finished]
 		say "     Having much to tell Dr Matt, you begin with your discovery of the unusual activity at the hospital and then the lab within. You go on to talk about the strange doctor you found there, working away at solving the nanite mystery. This gets his attention and he becomes much more interested in your tale. As you continue, you summarize what the mouse related to you about his findings and hypotheses about the infection. You tell him these were what prompted you to assist him with the tasks he asked you to perform.";
 		say "     You describe the apparent control he had over the creatures of the hospital. You relate to him how the research coming from the samples you were collecting began to manifest as changes and increased power in the hospital denizens. Dr Matt is perturbed to hear about this news, both that such experiments were happening and that he was not made aware of another potential source of information on the nanites.";
 		say "     But you do not dwell on that, instead moving on to the most recent incident and the doctor's offer. Dr Matt is quite stunned by it and stammers some thanks for your decision to side with him over the mouse doctor.";
@@ -311,7 +513,7 @@ to say DrMattQuestTalk:
 			say "     'It is unfortunate that this mad doctor was not stopped, but given the resources at his disposal, it is not surprising that you alone could not defeat him. I shall inform the military of these events, as well as the increased threat level at the hospital. They may attempt something to deal with him when the final push is made, but I suspect Dr Mouse will escape in the confusion. He seems too intelligent to not have an exit strategy already formulated.'";
 		now HP of Doctor Matt is 12;
 		now level of Doctor Matt is turns;
-	if HP of Doctor Matt is 11:
+	else if HP of Doctor Matt is 11:
 		if susan is visible:
 			say "     Susan moves up beside you as you talk about what happened at the hospital, putting her arms around you and hugging you tightly. She doesn't say anything, only listening and being there for her chosen mate.";
 		if HP of doctor mouse is 2:
@@ -323,7 +525,7 @@ to say DrMattQuestTalk:
 			say "     'It is unfortunate that this mad doctor was not stopped, but given the resources at his disposal, it is not surprising that you alone could not defeat him. I shall inform the military of these events, as well as the increased threat level at the hospital. They may attempt something to deal with him when the final push is made, but I suspect Dr Mouse will escape in the confusion. He seems too intelligent to not have an exit strategy already formulated.'";
 		now HP of Doctor Matt is 12;
 		now level of Doctor Matt is turns;
-	if hospquest is 13 and "Mental Booster" is not listed in feats of player:
+	else if hospquest is 13 and "Mental Booster" is not listed in feats of player:
 		say "     As thanks for your willingness to side with me over this impudent upstart mouse, I shall provide you with something I have been working on. Trying to deal with the infected city can be mentally harrowing as well as physically harrowing. It is easy to neglect the need to be intellectually able to deal with this crisis over the more obvious need for physical prowess. As such, I have found a way to stimulate the mind, increasing one's reasoning abilities to make them better able to notice significant events, interpret that information and then relate it to others. This treatment will also strive to keep these mental faculties strong after mentally debilitating infections.'";
 		say "     The doctor injects you with the nanite adjustment. At first you feel little, but as you start to consider what may be happening, you notice that you're interpreting stimuli faster and drawing conclusions about them more readily. You don't suddenly know more information, but you can better process all that you have learned to make more out of it. You also feel a little more confident in dealing with the world because of it.";
 		add "Mental Booster" to the feats of player;
@@ -335,7 +537,7 @@ to say DrMattQuestTalk:
 [	if HP of Doctor Matt is 12 and "Automatic Survival" is listed in feats of player:
 		now HP of Doctor Matt is 14; [Supply Run skipped entirely]
 		WaitLineBreak;]
-	if HP of Doctor Matt is 12 and level of Doctor Matt minus turns < 16:
+	else if HP of Doctor Matt is 12 and level of Doctor Matt minus turns < 16:
 		say "     'I don't currently have any tasks for you,' the doctor states. 'Please check back later after I've had a chance to take stock of our situation.'";
 	else if HP of Doctor Matt is 12:
 		say "     'Given the situation in the city escalating from the recent interference, the military's final move has been delayed much more than anticipated. While this gives me more time to hopefully give them the tools they'll need, this does mean our supplies will run dangerously low before the end if more cannot be obtained.'";
@@ -373,13 +575,13 @@ to say DrMattQuestTalk:
 		else if tempnum2 is waterneed and tempnum is foodneed:		[no change]
 			say "     'Please don't forget about those supplies I mentioned,' the doctor says.";
 			say "     [bracket][foodneed] food and [waterneed] water bottle(s) still needed.[close bracket][line break]";
-	if HP of Doctor Matt is 14:
+	else if HP of Doctor Matt is 14:
 		say "     'While you were off taking care of that, I have heard back from the military command center. Things are still rather chaotic, but they're managing to hold on. They insist that this situation can and will be contained. I'm uncertain of their ability to do so, but the longer they work to contain the nanite infection here, the better chance we have of understanding the mysteries of the nanites before it becomes completely unmanageable,' the doctor says.";
 		say "     But they are having difficulties of their own and they want more information on key locations throughout the city. It seems many of their recon teams have not fared well against the infected hazards of the city. They feel that someone already infected would have an easier time gathering this intel. They are looking for safe paths of travel through the city for their forces to start from, allowing them to expand their rescue operations from these key points. You should begin exploring the city, finding as many points that you can navigate between as you can. Being aware of these and knowing routes to travel between them will help keep the soldiers safer while trying to help those who can still be rescued. They are requesting a report on at least 50% of the city.'";
 		WaitLineBreak;
 [		NanofabRewardScanner; [places piece for nanofab in room. move this line if/when a better place is found]	]
 		now HP of Doctor Matt is 15;
-	if HP of Doctor Matt is 15:
+	else if HP of Doctor Matt is 15:
 		if number of fasttravel rooms > ( number of known fasttravel rooms * 2 ):
 			say "     You fill Dr Matt in on what you've been able to learn about the city and the safer paths to travel through it. 'Based on the information you've been able to provide me, you only have about [ ( number of known fasttravel rooms * 100 ) / ( number of fasttravel rooms )]% of the city covered. The military is requesting information on at least 50% of these locations.'";
 		else:
@@ -477,8 +679,10 @@ to say DrMattQuestTalk:
 		say "((Main storyline ends here for now.))[line break]";
 		now HP of Doctor Matt is 23;
 		increase score by 50;
-	say "He looks kind of busy right now.";
-
+	else:
+		say "He looks kind of busy right now.";
+		if debugactive is 1:
+			say "DEBUG -> Doctor Matt HP: [HP of Doctor Matt] <- DEBUG[line break]";
 [
 		say "     Returning to check in with Doctor Matt, you find him talking on a phone you'd not seen in here before. It's an old, rotary-style phone, but it is attached atop a metal box with blinking LEDs, a UHF antenna and standing on mechanical spider legs.";
 ]

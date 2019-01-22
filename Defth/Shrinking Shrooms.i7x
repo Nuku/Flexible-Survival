@@ -214,7 +214,7 @@ to say LittleExplorer:
 	wait for any key;
 	challenge "Alpha Husky";
 	if fightoutcome >= 20 and fightoutcome <= 29:[lost]
-		say "     Now satisfied, the beast throws you out of the room and into the restaurant You rest for a bit in the cold, uneven ground as you strength slowly comes back to your being. When you finally get on your feet again, you limp to the entrance and go back to the bunker, hoping that the next adventure will be better.";
+		say "     Now satisfied, the beast throws you out of the room and into the restaurant. You rest for a bit on the cold, uneven ground as you strength slowly comes back to your being. When you finally get on your feet again, you limp to the entrance and go back to the bunker, hoping that the next adventure will be better.";
 		now Resolution of Little Trouble is 2; [fought, lost]
 	else if fightoutcome >= 30:[fled]
 		say "     You run back the way you came, accidentally slamming into one of the pillars on your way out. The beast shouts profanities during your retreat, but you quickly lose him, leaving the place for good as you run directly to the bunker.";

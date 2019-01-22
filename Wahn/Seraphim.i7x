@@ -35,6 +35,8 @@ to say SeraphDefeated:
 				say "     The sensations of Gabriel's anal muscles flexing around your cock, in addition to the satisfaction of picking his cherry, push you over the edge too in short notice and you thrust in deep one last time until your crotch meets his cheeks with a satisfying slap. Balls-deep in the no-longer virgin angel, you unload everything that you have from your balls, blasting your thick, creamy cum into him. Spurt after spurt fills Gabriel up as he moans and pants like a good bottom-boy should.";
 				WaitLineBreak;
 				say "     When your orgasm finally winds down, you pull out of the angel and wipe the last bit of cum sticking to your prick off on his buttcheeks, then pull up your pants and grab all the gear that you put down before having sex. With a spring in your step - from having fucked such a hottie, and a virgin no less - you walk down the street, leaving the cum-dripping angel to pick himself up on his own.";
+				if AnalVirgin of Gabriel is true:
+					now AnalVirgin of Gabriel is false;
 			else:
 				say "     Even without genitals on his own body, there are lots of possibilities for fun with this pretty hunk - a whole lot more than the innocent virgin could even imagine. [if player is female]Your pussy gets wet from the thought of having him licking you down there [else]You get pretty excited from the thought of him licking your sensitive skin on the crotch [end if]- but no, to break him in to sex for good, you'll concentrate on something else right now... with it between the two shapely buns of Gabriel's ass. Also, how often does the opportunity of popping an angel's cherry present itself? You continue unwrapping your beaten opponent some more until he's almost completely naked, just his white pants still pooled at his knees and covering the lower legs, then get a grip on the back of his head and pull him in for a surprise kiss that makes his eyes go round.";
 				WaitLineBreak;
@@ -46,6 +48,9 @@ to say SeraphDefeated:
 				WaitLineBreak;
 				say "     Standing up, you go and grab all the gear that you put down before deciding to have fun with Gabriel, then walk away, leaving the worn out and still panting angel to pick himself up on his own.";
 			now HP of Gabriel is 4;
+			now Cocks of Gabriel is 1;
+			now Cock Length of Gabriel is 9;
+			now Cock Width of Gabriel is 3;
 		else if HP of Gabriel is 4: [had sex before]
 			say "     Excited by the opportunity of having this magnificent creature at your mercy, you lean over him and start pulling off his armor piece by piece, then soon move on to undo the fastenings of his robe. 'Again?', Gabriel asks as you pull open his clothes and bare his muscled chest, then as you are undoing a golden belt-buckle, he adds, 'I've been feeling... different, since last time. My body... changed.' And it's true - pulling down the soft white fabric of his pants, you reveal that where previously there was only sexless smoothness, now a respectably sized manhood dangles between his legs. Gabriel looks down at his cock a bit sheepishly, then says, 'The tiny machines that infuse everything around here added this to me. It is... irregular. I wasn't created for -' Before he can add another word, you put a finger on his lips and shush him, all the while giving the angel a salacious grin.";
 			if player is male: [males and herms]
@@ -59,6 +64,8 @@ to say SeraphDefeated:
 				say "     Coming more or less at the same time, you sink your manhood deep and blast the first spurt of your creamy cum into Gabriel, while he grips the fabric of his clothes on the ground tightly with both hands and sprays a quite respectable load into the air to splat down all over his chest and neck. It's pretty cute how he moans and pants as you fill him up - just like a good bottom-boy should. You can't help but think how awesome it would be to just... keep him, having an eager little slut to breed whenever you want to. Though you guess you'd have to break him in a bit more before that.";
 				WaitLineBreak;
 				say "     When your orgasm finally winds down, you pull out of the angel and wipe the last bit of cum sticking to your prick off on his buttcheeks, then go and grab your clothes and gear, putting it all back on. With a spring in your step - from having fucked such a hottie - you walk down the street, leaving the cum-dripping angel to pick himself up on his own.";
+				if AnalVirgin of Gabriel is true:
+					now AnalVirgin of Gabriel is false;
 			else: [females and neuter]
 				say "     Continuing to strip Gabriel all the way until he's bare-ass naked, you lay out his clothes on top of each other, then gently press against the angel's chest, pushing him to lie back on the soft layer of fabric. He looks pretty amazing, stretched out on the ground before you in his well-built beauty and with white wings stretched to the sides - so much so that you can't help but want to feel his lips on yours. Leaning over the naked male, you put your hands on his upper arms to brace yourself and pin him down, then give him a deep and hungry kiss. And... quite interestingly, Gabriel replies in kind, the feelings you've just awoken leading him to actively participate in a very nice making-out session.";
 				say "     You'd love to continue snogging with the handsome male for quite a while - but at one point, a sudden feeling of being poked in the stomach distracts you from him. Looking down, you see that it's Gabriel's cock, by now fully hard and ready for action. Reaching out to take hold of his manhood, you stroke the angel, making him arch his back and moan loudly from all the novel sensations he is going through. The youthful male's breathing soon comes faster and faster and a clear drop of pre forms at the slit of his cockhead, glistening in the light - which is exactly when you suddenly stop and pull your hand away.";
@@ -92,6 +99,8 @@ to say SeraphDefeated:
 				else:
 					LineBreak;
 					say "     No, now isn't the time for that. Maybe another time. When your orgasm finally winds down, you pull out of the angel and wipe the last bit of cum sticking to your prick off on his buttcheeks, then go and grab your clothes and gear, putting it all back on. With a spring in your step - from having fucked such a hottie - you walk down the street, leaving the cum-dripping angel to pick himself up on his own.";
+				if AnalVirgin of Gabriel is true:
+					now AnalVirgin of Gabriel is false;
 			else: [females and neuter]
 				say "     Continuing to strip Gabriel all the way until he's bare-ass naked, you lay out his clothes on top of each other, then gently press against the angel's chest, pushing him to lie back on the soft layer of fabric. He looks pretty amazing, stretched out on the ground before you in his well-built beauty and with white wings stretched to the sides - so much so that you can't help but want to feel his lips on yours. Leaning over the naked male, you put your hands on his upper arms to brace yourself and pin him down, then give him a deep and hungry kiss. And Gabriel replies in kind, the feelings your previous interactions have awoken leading him to actively participate in a very nice making-out session.";
 				say "     You'd love to continue snogging with the handsome male for quite a while - but at one point, a sudden feeling of being poked in the stomach distracts you from him. Looking down, you see that it's Gabriel's cock, by now fully hard and ready for action. Reaching out to take hold of his manhood, you stroke the angel, making him arch his back and moan loudly from all the novel sensations he is going through. The youthful male's breathing soon comes faster and faster and a clear drop of pre forms at the slit of his cockhead, glistening in the light - which is exactly when you suddenly stop and pull your hand away.";
@@ -158,12 +167,15 @@ to say SeraphDefeated:
 				say "     Elijah's pointed stare at the cum and femcum staining Gabriel's crotch makes the angel flush bright red, looking down over himself in shame. Then he stammers, 'I - I... yes. I like it. I need it. My [if player is female]mistress said she'd[else]master said he'd[end if] fuck me all the time from now on.' The other angel just gives you an approving nod, 'Nice work training the little slut. Seems you've got Gabe turned into a subby pet, don't you. I'll have to tap that ass myself too sometime...' Before you can reply anything, Elijah then saunters out of the room, going up, most likely to hunt down something to fuck outside.";
 			move Gabriel to bunker;
 			move player to bunker;
+			now PlayerControlled of Gabriel is true;
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
 				if name entry is "Seraphim":
 					now monster is y;
 					now area entry is "Nowhere";
 					break;
+		if PlayerFucked of Gabriel is false:
+			now PlayerFucked of Gabriel is true;
 	else:
 		LineBreak;
 		say "     You decide to just go, leaving Gabriel to pick himself up on his own.";
@@ -178,6 +190,7 @@ to say SeraphDesc:
 	if HP of Gabriel is 2:
 		setmongender 1;
 		say "     Turning around a street corner, you suddenly find yourself face to face with the angel you saw search for Elijah earlier - and hacking apart or interrogating demons while doing that. The divine warrior's handsome face turns to you and his eyes widen as he recognizes you from the incubus's description, then he says, 'Hello Mortal, you may call me Gabriel. I heard you have had a hand in the disappearance of my brother in arms Elijah. Explain yourself!'";
+		now PlayerMet of Gabriel is true;
 		LineBreak;
 		say "     [link](1)[as]1[end link] - Just tell him what you did.[line break]";
 		say "     [link](2)[as]2[end link] - Make up a convincing lie.[line break]";
@@ -278,7 +291,30 @@ object	name
 Gabriel	"Gabriel"
 
 Gabriel is a man.
-The HP of Gabriel is usually 0.
+[physical details as of game start]
+ScaleValue of Gabriel is 3. [human sized]
+Cocks of Gabriel is 0.
+Cock Length of Gabriel is 0.
+Cock Width of Gabriel is 0.
+Testes of Gabriel is 0.
+Cunts of Gabriel is 0.
+Cunt Length of Gabriel is 0.
+Cunt Width of Gabriel is 0.
+Breasts of Gabriel is 2.
+Breast Size of Gabriel is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Gabriel is false.
+PlayerRomanced of Gabriel is false.
+PlayerFriended of Gabriel is false.
+PlayerControlled of Gabriel is false.
+PlayerFucked of Gabriel is false.
+OralVirgin of Gabriel is true.
+Virgin of Gabriel is true.
+AnalVirgin of Gabriel is true.
+PenileVirgin of Gabriel is true.
+SexuallyExperienced of Gabriel is false.
+
+
 The description of Gabriel is "[Gabrieldesc]".
 The icon of Gabriel is Figure of Gabriel_icon.
 The conversation of Gabriel is { "Mew!" }.
@@ -295,12 +331,12 @@ instead of fucking Gabriel:
 	else:
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
-		[
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Suck Gabriel's cock";
 		now sortorder entry is 1;
 		now description entry is "Give him a blow-job";
-		]
+		[]
 		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Have him suck your cock";

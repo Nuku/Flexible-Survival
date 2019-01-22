@@ -57,6 +57,7 @@ object	name
 Julian	"Julian"
 
 Julian is a man. The hp of Julian is usually 0.
+[Physical details as of game start]
 ScaleValue of Julian is 3. [human sized]
 SleepRhythm of Julian is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Julian is 1. [One cock]
@@ -68,6 +69,18 @@ Cunt Length of Julian is 0. [No Cunt]
 Cunt Width of Julian is 0. [No Cunt]
 Breasts of Julian is 2. [2 nipples]
 Breast Size of Julian is 0. [Flat at the start]
+[Basic Interaction states as of game start]
+PlayerMet of Julian is false.
+PlayerRomanced of Julian is false.
+PlayerFriended of Julian is false.
+PlayerControlled of Julian is false.
+PlayerFucked of Julian is false.
+OralVirgin of Julian is false.
+Virgin of Julian is true.
+AnalVirgin of Julian is false.
+PenileVirgin of Julian is false.
+SexuallyExperienced of Julian is true.
+MainInfection of Julian is "Alpha Wolf".
 The description of Julian is "[JulianDesc]".
 The conversation of Julian is { "Woof grrr" }.
 The scent of Julian is "     Julian, unsurprisingly smells like a wolf. Though there are different undertones...".
@@ -236,7 +249,7 @@ Prereq1Resolution of Wolf's Invitation is { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 1
 The level of Wolf's Invitation is 0.
 The sarea of Wolf's Invitation is "Campus".
 
-instead of going to College Walkway East while (Wolf's Invitation is active and Wolf's Invitation is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
+instead of going to College Walkway East while (Wolf's Invitation is active and Wolf's Invitation is PrereqComplete and Wolf's Invitation is not resolved and (hp of Sylvia > 3 or hpM of Sylvia > 2 or hpF of Sylvia > 2) and a random chance of 1 in 2 succeeds and LastCampusWalkin - turns > 2):
 	move player to College Walkway East;
 	WolfsInvitationEvent;
 
@@ -269,23 +282,25 @@ Prereq1Resolution of Julian's Room Event is { 1 }.
 The level of Julian's Room Event is 0.
 The sarea of Julian's Room Event is "Nowhere".
 
-instead of going northeast from Tenvale College Male Dorms while (Julian's Room Event is active and Julian's Room Event is not resolved and hp of Julian is 2):
+instead of going northeast from Tenvale College Male Dorms while (Julian's Room Event is active and Julian's Room Event is PrereqComplete and Julian's Room Event is not resolved and hp of Julian is 2):
 	JuliansRoomEvent;
 
 to JuliansRoomEvent: [First Time to Julian's Room]
 	say "     As you walk down the corridor, the merriment of the students reverberates off the walls. You reach Julian's room and knock on his door, his voice from within telling you to enter. You close the door behind you as you step into a disorderly room, clutter on the table that the wolf is sitting at, who is seemingly copying passages from a textbook. He turns to face you, a smile breaking across his face at your decision to come and see him despite his nervous invitation. 'I'm glad that you came. Would you like a seat?' He offers the desk chair that he was just sitting in as he perches on the edge of the fur-covered bed. You do so, swiveling so that you are facing him, and wait for him to begin a conversation.";
 	say "     'Considering so far every time that you've seen me, it has been in some connection with Sylvia to put it lightly. I thought that I should probably tell you a bit more about myself. As you know, my name is Julian, and I am from Canada. I'm studying biophysics, though being part of Sylvia's research team means that I do other things too as she is more focused on biology,' the wolf explains, scratching his arm nervously. You quickly introduce yourself, shaking his hand to show that you don't mind his social ineptitude. He beams at you and continues, 'I don't have many friends, Sylvia and the twins being the only people I really socialize with, though I'm hoping that you would be willing to spend time with us too. Who knows, you might be able to help our research progress, but you'd have to talk to Sylvia about it. We're going to the beach at some point. Perhaps you could join us and meet the whole group? But unfortunately, you've caught me at a bad moment. I have an assignment due tomorrow, and I've barely started. You seem nice, so please come back again. I really do want to get to know you better,' he says suggestively, glancing at your form.";
 	now hp of Julian is 3; [Met him in his room]
+	now resolution of Julian's Room Event is 1;
 	now Julian's Room Event is resolved;
 
 Suppressant Supply Run is a situation.
 Prereq1 of Suppressant Supply Run is Julian's Room Event.
+Prereq1Resolution of Suppressant Supply Run is { 1 }.
 Prereq2 of Suppressant Supply Run is Beach Field Research.
 Prereq2Resolution of Suppressant Supply Run is { 1, 2 }.
 The level of Suppressant Supply Run is 0.
 The sarea of Suppressant Supply Run is "Nowhere".
 
-instead of going northeast from Tenvale College Male Dorms while (Suppressant Supply Run is active and Suppressant Supply Run is not resolved and hp of Julian is 4 and a random chance of 1 in 2 succeeds):
+instead of going northeast from Tenvale College Male Dorms while (Suppressant Supply Run is active and Suppressant Supply Run is PrereqComplete and Suppressant Supply Run is not resolved and hp of Julian is 4 and a random chance of 1 in 2 succeeds):
 	SuppressantSupplyRunEvent;
 
 to SuppressantSupplyRunEvent: [Trip to Hospital for Libido Suppressants. Meet Cynthia]
@@ -362,6 +377,7 @@ to SuppressantSupplyRunEvent: [Trip to Hospital for Libido Suppressants. Meet Cy
 		increase carried of libido suppressant by 1;
 		now hp of Julian is 5;
 		now hp of Cynthia is 1;
+		now resolution of Suppressant Supply Run is 1;
 		now Suppressant Supply Run is resolved;
 	else: [Wait]
 		say "     You apologize, saying that now isn't a good time and that you'll probably be able to help him at another point. 'Fair enough. As I said, we have enough to manage for a bit, and we can scrounge off of others if necessary.' Relieved that he isn't upset, you sit down on the corner of his bed and try and remember what it is you came here for.";

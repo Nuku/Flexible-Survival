@@ -1,4 +1,5 @@
-Kitsune Hide Away by Kaleem mcintyre begins here.
+Kitsune Hide Away by Shadowwolf94 begins here.
+[original by Kaleem Mcintyre]
 
 "Adds a Foxy Hideaway"
 

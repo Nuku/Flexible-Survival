@@ -1,5 +1,10 @@
 Version 1 of Feral Pets by Luneth begins here.
 
+an everyturn rule: [error fix]
+	if Mournful Dog is resolved and Resolution of Mournful Dog is 1 and helper dog is not tamed: [adopted the dog]
+		now helper dog is tamed;
+		add "Tamed" to Traits of helper dog;
+
 the linkaction of Snips is "[snipslinkaction]".
 the linkaction of Dinah is "[dinahlinkaction]".
 the linkaction of Chirpy is "[chirpylinkaction]".
@@ -712,6 +717,7 @@ Instead of resolving a Mournful Dog:
 				if total > 21:
 					say "     You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head. Reaching over, you pull the sheets over his former master's body, then you both leave together.";
 					now helper dog is tamed;
+					add "Tamed" to Traits of helper dog;
 					say "(The helper dog is now tamed! You can make it your active pet by typing [bold type]pet helper dog[roman type]. You can see all of the pets that you have tamed with the [bold type]pet[roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])";
 					now lastfuck of helper dog is turns;
 					increase score by 10;

@@ -16,6 +16,8 @@ an everyturn rule:
 		change the northeast exit of Path of Ashes to Ashen Cliff;
 		change the southwest exit of Ashen Cliff to Path of Ashes;
 		now RubyRoomConnection is 1; [room connected]
+	if Urban Cliff is resolved and Ruby is not in Ruby's Cave: [bugfix]
+		now Ruby is in Ruby's Cave;
 
 Section 1 - Events
 
@@ -245,6 +247,7 @@ object	name
 Ruby	"Ruby"
 
 Ruby is a woman.
+Ruby is in Ruby's Cave.
 [physical details as of game start]
 ScaleValue of Ruby is 4. [human sized]
 Cocks of Ruby is 0. [no cock]

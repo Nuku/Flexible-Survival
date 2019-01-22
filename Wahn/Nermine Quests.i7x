@@ -510,7 +510,7 @@ the scent of Rare Counter is "You smell the items on the counter and a shiver ru
 RareQuesting is a number that varies.
 
 instead of conversing the rare counter:
-	say "     Crouching down in front of the wooden counter with its glass plates that protect precious treasures, you try your best to strike up a conversation with it. Sadly, the piece of furniture < responsive, so all this does is earn you a strange look from Nermine. Maybe you should talk to her instead if you want to know something about the rare items.";
+	say "     Crouching down in front of the wooden counter with its glass plates that protect precious treasures, you try your best to strike up a conversation with it. Sadly, the piece of furniture is not responsive, so all this does is earn you a strange look from Nermine. Maybe you should talk to her instead if you want to know something about the rare items.";
 
 to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk menu now]
 	if JackalBoyTF > 0: [already locked into Jackalboy shape]

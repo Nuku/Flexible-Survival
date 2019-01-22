@@ -123,7 +123,7 @@ Object	Name
 Looted Shops	"Looted Shops"
 
 Looted Shops is west of Main & 7th Street.
-The earea of Looted Shops  is "Outside".
+The earea of Looted Shops is "Outside".
 The description of Looted Shops is "[LootedShopsDesc]".
 
 to say LootedShopsDesc:

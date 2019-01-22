@@ -489,7 +489,7 @@ The AC of zephyr armored lab coat is 50.
 The effectiveness of zephyr armored lab coat is 35.
 The placement of zephyr armored lab coat is "body".
 The descmod of zephyr armored lab coat is "A white and black lab coat rests upon your shoulders with the zephyr logo embroidered over your shoulder blades.".
-The slot of zephyr armored lab coat is "body".
+The slot of zephyr armored lab coat is "chest".
 the scent of zephyr armored lab coat is "The lab coat smells of chemicals and synthetic fibers.".
 
 Part 6 - Zephyr Armored Lab Gloves
@@ -506,9 +506,9 @@ The taur-compatible of zephyr armored lab gloves is true.
 The size of zephyr armored lab gloves is 3.
 The AC of zephyr armored lab gloves is 20.
 The effectiveness of zephyr armored lab gloves is 15.
-The placement of zephyr armored lab gloves is "arms".
+The placement of zephyr armored lab gloves is "hands".
 The descmod of zephyr armored lab gloves is "A pair of white rubber lab gloves are fitted over your hands with the zephyr logo patched over the back of your hand.".
-The slot of zephyr armored lab gloves is "arms".
+The slot of zephyr armored lab gloves is "hands".
 the scent of zephyr armored lab gloves is "The lab gloves smells of chemicals and rubber.".
 
 Part 7 - Zephyr Armored Lab Boots
@@ -525,9 +525,9 @@ The taur-compatible of zephyr armored lab boots is true.
 The size of zephyr armored lab boots is 3.
 The AC of zephyr armored lab boots is 20.
 The effectiveness of zephyr armored lab boots is 15.
-The placement of zephyr armored lab boots is "legs".
+The placement of zephyr armored lab boots is "feet".
 The descmod of zephyr armored lab boots is "A pair of black rubber lab boots are fitted over your feet with the zephyr logo patched over the toes.".
-The slot of zephyr armored lab boots is "legs".
+The slot of zephyr armored lab boots is "feet".
 the scent of zephyr armored lab boots is "The lab boots smells of chemicals and rubber.".
 
 Part 8 - Zephyr Riot Shield

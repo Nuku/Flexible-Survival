@@ -136,8 +136,8 @@ to say EricTalk21:
 		else: [he trusts you]
 			say "     'Are you serious[if player is not defaultnamed], [name of player][end if]?' With a nod of your head, Eric looks deep into your eyes, apparently attempting to figure out your reasoning. Finally with a shake of his head, he once again graces you with one of his sweet smiles. 'Alright, so I might believe that you're being serious. I have to ask though, why are you asking me if I would like to take one? I know that you could just be offering... but most people consider an offering to be something simple like a pack of gum, not some magical pills that can make a guy become pregnant haha.' The question catches you off guard at first. Truth be told, you weren't expecting Eric to be quite so blunt. Then again, the two of you have been becoming closer, so maybe it's just a sign that he's comfortable around you now.";
 			LineBreak;
-			say "     [bold type]How should you handle this this though?[roman type][line break]";
-			say "     ([link]Y[as]y[end link]) - Attempt to be romantic. -Warning Long Scene-";
+			say "     [bold type]How should you handle this though?[roman type][line break]";
+			say "     ([link]Y[as]y[end link]) - Attempt to be romantic. -Warning: Long Scene-";
 			say "     ([link]N[as]n[end link]) - Let's keep everything casual.";
 			if player consents: [romantic]
 				LineBreak;

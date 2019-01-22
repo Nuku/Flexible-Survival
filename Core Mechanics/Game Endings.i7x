@@ -25,7 +25,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "Autumn" as supersponsor.
+understand "New Year" as supersponsor.
 
 When play ends:
 	clear the screen;
