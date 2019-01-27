@@ -39,7 +39,8 @@ object	name
 Retriever Girl	"Retriever Girl"
 
 Retriever Girl is a pet. Retriever Girl is a part of the player.
-understand "Karen" as Retriever Girl.[Physical details as of game start]
+understand "Karen" as Retriever Girl.
+[Physical details as of game start]
 ScaleValue of Retriever Girl is 3. [human sized]
 SleepRhythm of Retriever Girl is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Retriever Girl is 0. [No cock]
