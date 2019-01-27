@@ -5173,7 +5173,7 @@ Include Eric Loyalty by Luneth.
 Include Erica by Wahn.
 Include Exploration Events by Kurainyx.
 Include Fancy by Sarokcat n Verath.
-Include Fang by Stripes.
+Include Fang by Prometheus.
 Include Farmhands by Wahn.
 Include Felix by Wahn.
 Include Finn by Wahn.
@@ -5223,6 +5223,7 @@ Include Leonard by Stripes.
 Include Lilith by Wahn.
 Include Lindsey by Sarokcat.
 Include Lucy by Stripes.
+Include Lux & Umbra by Prometheus.
 Include Mack by Stripes.
 Include Mark by Wahn.
 Include Master Mind by Stripes.

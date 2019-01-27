@@ -39,7 +39,30 @@ object	name
 Retriever Girl	"Retriever Girl"
 
 Retriever Girl is a pet. Retriever Girl is a part of the player.
-understand "Karen" as Retriever Girl.
+understand "Karen" as Retriever Girl.[Physical details as of game start]
+ScaleValue of Retriever Girl is 3. [human sized]
+SleepRhythm of Retriever Girl is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Retriever Girl is 0. [No cock]
+Cock Length of Retriever Girl is 0. [ ]
+Cock Width of Retriever Girl is 0. [  ]
+Testes of Retriever Girl is 0. [No balls]
+Cunts of Retriever Girl is 1. [No pussy]
+Cunt Length of Retriever Girl is 10. [No Cunt]
+Cunt Width of Retriever Girl is 2. [No Cunt]
+Breasts of Retriever Girl is 4. [4 nipples]
+Breast Size of Retriever Girl is 2. [B Cup at the start]
+[Basic Interaction states as of game start]
+PlayerMet of Retriever Girl is false.
+PlayerRomanced of Retriever Girl is false.
+PlayerFriended of Retriever Girl is false.
+PlayerControlled of Retriever Girl is false.
+PlayerFucked of Retriever Girl is false.
+OralVirgin of Retriever Girl is false.
+Virgin of Retriever Girl is false.
+AnalVirgin of Retriever Girl is true.
+PenileVirgin of Retriever Girl is true.
+SexuallyExperienced of Retriever Girl is true.
+MainInfection of Retriever Girl is "Retriever".
 The description of Retriever Girl is "[KarenDesc]".
 The weapon damage of Retriever Girl is 7.
 The level of Retriever Girl is 5.
