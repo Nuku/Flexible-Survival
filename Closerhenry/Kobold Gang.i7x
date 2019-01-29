@@ -156,7 +156,7 @@ to say losetokoboldgang:
 				say "     You eventually wake up, but find yourself not to be in the middle of the street. You are in an empty living room that has been cleared of furniture. You are still naked, and covered in slightly warm cum at every inch of your body. In the corner of the room are your clothes, gear, and a note. You quickly attempt to brush off the cum, but know the damage has already been done. You finally are mostly dry, and grab your clothes, gear, and the note. You read the note to yourself, and find it addressed to you from the apparent leader of the kobolds. He tells you that you are now marked as one of them, and that your calling is with them. He commands you to seek them out once again and to submit to their whims. You crumple up the note, thinking about how the next time you see them, you'll give them a pummeling.[movichance]";
 
 to say beatthekoboldgang:
-	if bodyname of player is "Kobold" and player is pure and player is male:
+	if player is male:
 		say "     The last kobold, the leader with the blue scales, shakes as he falls to the ground on his back. 'This is... inconceivable! We were all beaten by a whelp like... you,' he groans. An idea comes to your head, that maybe you could show their 'leader' his place by taking him right here and now.";
 		say "     [bold type]Do you want to have some fun with the Kobold Gang?[roman type][line break]";
 		LineBreak;
@@ -172,15 +172,16 @@ to say beatthekoboldgang:
 		say "     You sigh in relief as the last kobold falls to the ground defeated. Hopefully, this might teach the little bastards not to mess with you, but you feel as though this might only drive them to fight harder. You take care not to accidentlly step on any of them as you leave the area, leaving the reptiles behind.";
 
 to say KoboldGangSexMenu:
-	say "     What shall you do with them?";[Which Fuck]
+	say "     What shall you do with them?";
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Fuck the Leader";
-	now sortorder entry is 1;
-	now description entry is "Rim and fuck the Leader";
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck the Leader";
+		now sortorder entry is 1;
+		now description entry is "Rim and fuck the Leader";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
@@ -231,7 +232,8 @@ to say KoboldGangOrgy:
 	say "     You beckon a bronze-scaled [']bold with a finger, leading him closer towards you until he is near enough to run your hand along his cheek, feeling his smooth scales before pushing his head slowly towards your awaiting cock. He is all too eager to open up and take your length fully into his warm, moist mouth. His tongue gets to work right away, sliding along the sensitive flesh. The blue groans as he bucks his hips up into you, while the bronze works over your shaft, slurping and licking against the most sensitive areas along your length with practiced skill. You can't hold back a moan as the two work you over, your hand sloppily stroking the copper lizard's tapered length.";
 	WaitLineBreak;
 	say "     The combination of stimuli begins to overwhelm you - pressure building, muscles tightening, before the dazzling feeling of release fills your body. Your cum gushes into the mouth of the eagerly slurping bronze, and not long after, the blue cums as well, painting the inside of your ass with his own seed. Soon after, you find yourself being [']encouraged['] by the others to keep going, pulling you off of the blue and onto your back. The copper, not having cum just yet, aligns himself up with your [if player is female]so far unused pussy[else]slickened rear entrance[end if] before sinking inside of you and drawing a moan from your lips. Another bronze colored kobold, this one with curved horns, crawls over your face, his reptilian meat just asking to be sucked.";
-	say "     The copper holds tightly to your waist as he begins to hump excitedly into [if player is female]your needy sex[else]your asshole[end if]. You open your mouth to moan, though once you do, the one with the curved horns takes it as an invitation and gags you with his cock. Despite getting reamed from both ends, you still haven't forgotten the blue, who you gesture to, ordering him to suck your dick while the others work. It isn't long before the two eagerly cum inside of you, though yours holes aren't empty for long before they are switched out for another group. The orgy continued for well over another hour, leaving you feeling bloated by the end while the kobolds lay scattered across the ground, exhausted. You stand up, wipe off some of the cum clinging to your body, and pick up your equipment before slipping away from the resting kobolds. You aren't sure if it is all the kobold jizz inside you, but you can't help but how fun it would be to you become one of them.";
+	say "     The copper holds tightly to your waist as he begins to hump excitedly into [if player is female]your needy sex[else]your asshole[end if]. You open your mouth to moan, though once you do, the one with the curved horns takes it as an invitation and gags you with his cock. Despite getting reamed from both ends, you still haven't forgotten the blue, who you gesture to, ordering him to suck your dick while the others work. It isn't long before the two eagerly cum inside of you, though your holes aren't empty for long before they are switched out for another group. The orgy continued for well over another hour, leaving you feeling bloated by the end while the kobolds lay scattered across the ground, exhausted. You stand up, wipe off some of the cum clinging to your body, and pick up your equipment before slipping away from the resting kobolds. You aren't sure if it is all the kobold jizz inside you, but you can't help but think how much fun it would be to become one of them.";
+	ovichance; [female or mpreg]
 
 Section 2 - Monster Insertion
 
