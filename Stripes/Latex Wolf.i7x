@@ -79,10 +79,11 @@ to say LatexWolfSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Butt Fuck";
-	now sortorder entry is 1;
-	now description entry is "Fuck the Latex Wolf in the ass";
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Butt Fuck";
+		now sortorder entry is 1;
+		now description entry is "Fuck the Latex Wolf in the ass";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -111,23 +112,16 @@ to say LatexWolfSexMenu:
 	clear the screen and hyperlink list;
 
 to say ButtFuckLatexWolf:
-	say "     The wolf lets out a needy whimper as you approach, his body squeaking as he lowers his head and lifts his ass towards you invitingly. You have no intention of letting such a nice ass go to waste either, and you remove your equipment as you step forward.";
-	say "     You grab hold of his hips, his cool skin stretching between your fingers. Using your firm grip on him to your advantage, you easily align yourself with his pucker, placing the tip of your [cock of player] cock teasingly at the wolf's entrance. The canine whimpers, squeaks and pushes back towards you needily, but your firm grip keeps you in control.";
+	say "     The wolf lets out a needy whimper as you approach, his body squeaking as he lowers his head and lifts his ass towards you invitingly. You have no intention of letting such a nice ass go to waste either, and you remove your equipment as you step forward. You grab hold of his hips, his cool skin stretching between your fingers. Using your firm grip on him to your advantage, you easily align yourself with his pucker, placing the tip of your [cock of player] cock teasingly at the wolf's entrance. The canine whimpers, squeaks and pushes back towards you needily, but your firm grip keeps you in control.";
+	say "     You lean over the wolf and thrust forward, sinking deep into his tight tailhole as it stretches around you with a squeak. The lupine lets out a low, pleased rumble at the feeling of your hard length within him and pushes back against your hips with a needful whine. Your pre lubricates his insides, the wolf's hole becoming slick and slidy, making it ease it easy for you to slip out of him, only to force yourself back in. You continue to hammer into the wolf, drawing pleasured groans from both of you as you increase your pace. Resting more of your weight on his back, feeling the sleek smoothness of his latex form against your chest, you reach around his body with one arm and feel around until you manage to grasp the wolven shaft. His length has an unnaturally smooth texture, slickened by a coat of lube-like as you pound against his prostate.";
 	WaitLineBreak;
-	say "     You lean over the wolf and thrust forward, sinking deep into his tight tailhole as it stretches around you with a squeak. The lupine lets out a low, pleased rumble at the feeling of your hard length within him and pushes back against your hips with a needful whine. Your pre lubricates his insides, the wolf's hole becoming slick and slidy, making it ease it easy for you to slip out of him, only to force yourself back in.";
-	say "     You continue to hammer into the wolf, drawing pleasured groans from both of you as you increase your pace. Resting more of your weight on his back, feeling the sleek smoothness of his latex form against your chest, you reach around his body with one arm and feel around until you manage to grasp the wolven shaft. His length has an unnaturally smooth texture, slickened by a coat of lube-like as you pound against his prostate.";
-	WaitLineBreak;
-	say "     You stroke the creature's cock in time with your thrusts, fucking him hard enough to rock him forward, causing him to squeak with the movement. The pleasure for you both starts to build, and among the squeaking and heavy breathing, you can hear the wolf whimper, followed by a pleasured howl as he cums.";
-	say "     You pull your hand away from his cock as black liquid-latex cum gushes onto the ground. You pause for a moment as the wolf's ears fold and appear to begin melting. He looks back towards you, a happy grin on the canine's face as his whole body starts to soften and melt.";
-	WaitLineBreak;
+	say "     You stroke the creature's cock in time with your thrusts, fucking him hard enough to rock him forward, causing him to squeak with the movement. The pleasure for you both starts to build, and among the squeaking and heavy breathing, you can hear the wolf whimper, followed by a pleasured howl as he cums. You pull your hand away from his cock as black liquid-latex cum gushes onto the ground. You pause for a moment as the wolf's ears fold and appear to begin melting. He looks back towards you, a happy grin on the canine's face as his whole body starts to soften and melt.";
 	say "     You're so close to finishing. Do you pull out and cum safely on him, or do you stay inside and risk getting some of the melting latex on you?";
-	say "[link]Yes[as]y[end link] - Cum Inside";
-	say "[link]No[as]n[end link] - Pull Out";
+	say "     [link]Yes[as]y[end link] - Cum Inside";
+	say "     [link]No[as]n[end link] - Pull Out";
 	if player consents:
 		LineBreak;
-		say "     You are determined to finish fucking the wolf, holding onto his hips and gripping tightly as you slam into him with reckless abandon. Your pleasure builds as you use the melting wolf's ass like a sex toy, the pressure building until you can't hold it in any longer. With a final thrust, you hilt in him, releasing your seed deep into his rear as it starts to melt and collapse around you.";
-		say "     Pulling out, you manage to free yourself from his now-gooey depths, but some of the liquid latex still clings to your spent shaft. It moves like a creature of its own, slowly spreading [If cock width of player > 0]to encapsulate your balls[else]across your crotch[end if]. You try pulling it off of you, but your efforts prove in vain, the ebon latex clinging to your fingers and spreading over more of your body.";
-		WaitLineBreak;
+		say "     You are determined to finish fucking the wolf, holding onto his hips and gripping tightly as you slam into him with reckless abandon. Your pleasure builds as you use the melting wolf's ass like a sex toy, the pressure building until you can't hold it in any longer. With a final thrust, you hilt in him, releasing your seed deep into his rear as it starts to melt and collapse around you. Pulling out, you manage to free yourself from his now-gooey depths, but some of the liquid latex still clings to your spent shaft. It moves like a creature of its own, slowly spreading [If cock width of player > 0]to encapsulate your balls[else]across your crotch[end if]. You try pulling it off of you, but your efforts prove in vain, the ebon latex clinging to your fingers and spreading over more of your body.";
 		say "     Helpless to it's attack, it continues to slide across your body, the latex cool to the touch as it slithers across your flesh like a living bodysuit. By the time it covers you completely, it starts to absorb into your skin, merging with you. Whatever damage has been done, has been done, so you reclaim your gear before returning to your goals, wondering if you have made a terrible mistake.";
 	else:
 		LineBreak;
