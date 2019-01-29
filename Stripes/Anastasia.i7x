@@ -18,6 +18,28 @@ Version 5 of Anastasia by Stripes begins here.
 [ 11 = been in the volcano 2+		]
 [ 12 = salamander raid completed ]
 
+
+ScaleValue of Anastasia is 3. [human sized]
+SleepRhythm of Anastasia is 0. [0 = awake at all times, 1 = awake in the day, 2 = awake at night]
+Cocks of Anastasia is 0. [cock]
+Cock Length of Anastasia is 0. [cock length]
+Cock Width of Anastasia is 0. [ball size]
+Testes of Anastasia is 0. [no balls]
+Cunts of Anastasia is 1. [no pussy]
+Cunt Length of Anastasia is 0. []
+Cunt Width of Anastasia is 0. []
+Breasts of Anastasia is 0. [2 nipples]
+Breast Size of Anastasia is 0. [flat]
+Humanity of Anastasia is 60.
+PlayerMet of Anastasia is false.
+PlayerRomanced of Anastasia is false.
+PlayerFriended of Anastasia is false.
+PlayerControlled of Anastasia is false.
+PlayerFucked of Anastasia is false.
+OralVirgin of Anastasia is false.
+Virgin of Anastasia is true.
+AnalVirgin of Anastasia is true.
+
 Section 1 - Events
 
 Table of GameEventIDs (continued)
@@ -137,7 +159,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Volcanic Cave	"Volcanic Cave"
 
-Volcanic Cave is a room. "     Partway down the volcanic crater, this cave is filled with heat from the lava further down[if HP of Anastasia >= 6]. The cave is just as hot as before, but with Anastasia here it seems more bearable and only a mild inconvenience[else]. You are hot and sweating, but managing to cope for the moment[end if]. It seems the passage this cave leads into goes much deeper, but the eruption has blocked it off. The cave contains a few open pools of magma, though the air is a little clearer of noxious gasses.".
+Volcanic Cave is a room. "     The volcanic cave is a fairly large atrium-like formation with seemingly three linked passages. Besides the way you came, there is a passage that leads deeper down, but the erruption appears to have collasped the passage, making it inaccsessible.  The final passage seems to be a vent shaft, likly leading outside and preventing the dangerous volcanic gasses from building up.  Most of the cave floor looks rippled due to the cooled lava that at one time flowed through here.  The remaining portions are still active pools of magma, boiling and radiating with intense heat.[if HP of Anastasia is 6] Anastasia is perching on a rock, looking over the cave thoughtfully. [else if HP of Anastasia > 6] Anastasia seems to have created a nest for herself made of various volcanic stones, charred wood, and a few colorful baubles here and there. The proud phoenix herself is perched on a nearby rock, her golden eyes focused on you.[end if]".
 down of A Volcanic Crater is Volcanic Cave.
 
 the scent of Volcanic Cave is "The smell of smoke, soot and volcanic gasses is particularly strong here.".
@@ -199,10 +221,10 @@ The description of Anastasia is "[Anastasiadesc]".
 The conversation of Anastasia is { "Burninate!" }.
 The icon of Anastasia is Figure of Anastasia_icon.
 
-the scent of the Anastasia is "The phoenix smells of woodsmoke.".
+the scent of the Anastasia is "The phoenix has a pleasent scent of woodsmoke.".
 
 to say Anastasiadesc:
-	say "     The phoenix reborn looks much as she did in her last incarnation, fully avian in form and as tall as a normal human being when upright. She has rich red and golden plumage over her hawk-like body. The edges of her wings and the end of tail ripple like the tongue of a flame, but do not harm you as you touch them. Her golden eyes shine with intelligence and warmth for you and while her sharp, raptor beak looks dangerous, it nuzzles tenderly against your side. Between her legs is a wet slit, something between a woman's pussy and a bird's cloacal vent.";
+	say "     The phoenix reborn looks much as she did in her last incarnation, fully avian in form and as tall as a normal human being when upright. She has rich red and golden plumage over her hawk-like body. The edges of her wings tail feathers dance with a softly glowing flame. Her golden eyes look towards you[if loyalty of Anastasia is 2], happy to see you.[else if loyalty of Anastasia is 3]lovingly.[else] with curiostity.[end if].";
 
 Instead of conversing the Anastasia:
 	if HP of Anastasia < 5:
@@ -214,7 +236,7 @@ Instead of conversing the Anastasia:
 	else if HP of Anastasia is 11 and a random chance of 2 in 5 succeeds:
 		say "[salamanderraid]";
 	else:
-		say "     [one of]Anastasia smiles and nuzzles her golden beak against you. 'I want to thank you again for helping me. I don't know if I would have ever woken up without your help.'[or]'At first I didn't understand what all this sex was for aside from fun, but once I laid my first egg, I knew it was something much more.'[or]'I can hardly wait to return with my new clutch so we can share this new gift with the others.'[or]'I was here before, a long time ago. It was much different back then, but now that I've adapted to it, this is much better,' she says with a smile and a brush of her wingtip across her pussy.[or]'I can feel my strength returning slowly now.'[or]'This strange infection was draining my strength, but now that I've been reborn and let it change me, I feel better than ever,' she says with a soft moan as she runs a wingtip across her wet slit.[or]'Having sex is such a wonderfully new delight for me. My many chicks and I will certainly have fun introducing the others to it.'[or]'There were so few of us left, but this gift you've given me will change all that.'[at random]";
+		say "     [one of]Anastasia smiles and nuzzles her golden beak against you. 'I want to thank you again for helping me. I don't know if I would have ever woken up without your help.'[or]'At first I didn't understand what all this sex was for aside from fun, but once I laid my first egg, I knew it was something much more.'[or]'I can hardly wait to return with my new clutch so we can share this new gift with the others.'[or]'I was here before, a long time ago. It was much different back then, but now that I've adapted to it, this is much better,' she says with a smile and a brush of her wingtip across her pussy.[or]'I can feel my strength returning slowly now.'[or]'This strange infection was draining my strength, but now that I've been reborn and let it change me, I feel better than ever,' she says with a soft moan as she runs a wingtip across her wet slit.[or]'Having sex is such a wonderfully new delight for me. My many chicks and I will certainly have fun introducing the others to it.'[or]'There were so few of us left, but this gift you've given me will change all that.'[at random]";[Remove once new diolgue is in]
 
 
 Section 5 - Sexy Times
