@@ -4709,6 +4709,7 @@ Include Additional Tome Scenes by Dys.
 Include Apartment 319 by Kaleem Mcintyre.
 Include Assorted Events by Stripes.
 Include Beach Events by Sarokcat.
+Include Black Pearl by Lone Wanderer.
 Include Bouncy Castle by Stripes.
 Include Brookstone Books by Guest Writers.
 Include Campus Events by Wahn.
