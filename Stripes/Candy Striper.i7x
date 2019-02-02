@@ -86,7 +86,6 @@ Table of Random Critters (continued)
 name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
 --	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
-[ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
 	Choose a blank row from Table of Random Critters;
 	now name entry is "Raccoon"; [Name of your new Monster]
@@ -293,6 +292,29 @@ object	name
 Candy	"Candy"
 
 Candy is a man.
+ScaleValue of Candy is 3. [human sized]
+Cocks of Candy is 1.
+Cock Length of Candy is 8.
+Cock Width of Candy is 5. [golfball sized balls]
+Testes of Candy is 2.
+Cunts of Candy is 0.
+Cunt Length of Candy is 0.
+Cunt Width of Candy is 0.
+Breasts of Candy is 2.
+Breast Size of Candy is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Candy is false.
+PlayerRomanced of Candy is false.
+PlayerFriended of Candy is false.
+PlayerControlled of Candy is false.
+PlayerFucked of Candy is false.
+OralVirgin of Candy is false.
+Virgin of Candy is true.
+AnalVirgin of Candy is false.
+PenileVirgin of Candy is false.
+SexuallyExperienced of Candy is true.
+MainInfection of Candy is "Candy Striper".
+
 The description of Candy is "[coondesc]".
 The conversation of Candy is { "Cock!" }.
 The icon of Candy is figure of Candy_icon.

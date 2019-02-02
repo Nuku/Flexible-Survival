@@ -149,6 +149,28 @@ object	name
 Klauz	"Klauz"
 
 Klauz is a man.
+ScaleValue of Klauz is 3. [roughly human sized]
+Cocks of Klauz is 1.
+Cock Length of Klauz is 14.
+Cock Width of Klauz is 10. [lemon sized balls]
+Testes of Klauz is 2.
+Cunts of Klauz is 0.
+Cunt Length of Klauz is 0.
+Cunt Width of Klauz is 0.
+Breasts of Klauz is 2.
+Breast Size of Klauz is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Klauz is false.
+PlayerRomanced of Klauz is false.
+PlayerFriended of Klauz is false.
+PlayerControlled of Klauz is false.
+PlayerFucked of Klauz is false.
+OralVirgin of Klauz is false.
+Virgin of Klauz is true.
+AnalVirgin of Klauz is true.
+PenileVirgin of Klauz is false.
+SexuallyExperienced of Klauz is true.
+MainInfection of Klauz is "Felinoid".
 The description of Klauz is "[Klauzdesc]".
 
 instead of sniffing the Felinoid companion:

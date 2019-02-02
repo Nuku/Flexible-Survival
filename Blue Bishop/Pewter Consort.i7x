@@ -312,18 +312,18 @@ to pewterlustsate:
 	say ". Your own orgasm quickly sparks a cascade of cries and hisses, rippling outward until, in mere seconds, the rest of them begin to fire off. Your surroundings becoming rigid and firm, met with a hot rush of cum ";
 	if pewterheadvar2 > 0:
 		if pewtercuntvar2 > 0 and pewterassvar2 > 0:
-			say "flooding your gullet, cunt[if cunts of player > 1 and pewtercuntvar2 > 1]s[end if], and ass, all at once until it sputters from your beleagured holes";
+			say "flooding your gullet, cunt[if cunts of player > 1 and pewtercuntvar2 > 1]s[end if], and ass, all at once until it sputters from your beleaguered holes";
 		else if pewtercuntvar2 > 0:
-			say "flooding your gullet and cunt[if cunts of player > 1 and pewtercuntvar2 > 1]s[end if] all at once until it sputters from your beleagured holes";
+			say "flooding your gullet and cunt[if cunts of player > 1 and pewtercuntvar2 > 1]s[end if] all at once until it sputters from your beleaguered holes";
 		else if pewterassvar2 > 0:
-			say "flooding your gullet and ass all at once until it sputters from your beleagured holes";
+			say "flooding your gullet and ass all at once until it sputters from your beleaguered holes";
 		else:
-			say "flooding your gullet[if pewterheadvar2 > 1] all at once until it sputters from your beleagured hole[end if]";
+			say "flooding your gullet[if pewterheadvar2 > 1] all at once until it sputters from your beleaguered hole[end if]";
 	else if pewtercuntvar2 > 0:
 		if pewterassvar2 > 0:
-			say "flooding your ass and cunt[if cunts of player > 1 and pewtercuntvar2 > 1]s[end if] all at once until it sputters from your beleagured holes";
+			say "flooding your ass and cunt[if cunts of player > 1 and pewtercuntvar2 > 1]s[end if] all at once until it sputters from your beleaguered holes";
 		else:
-			say "flooding your cunt[if cunts of player > 1 and pewtercuntvar2 > 1]s[end if][if pewtercuntvar2 > 1] all at once until it sputters from your beleagured hole[end if][if cunts of player > 1 and pewtercuntvar2 > 1]s[end if]";
+			say "flooding your cunt[if cunts of player > 1 and pewtercuntvar2 > 1]s[end if][if pewtercuntvar2 > 1] all at once until it sputters from your beleaguered hole[end if][if cunts of player > 1 and pewtercuntvar2 > 1]s[end if]";
 	else if pewterassvar2 > 0:
 		say "flooding your bowels[if pewterassvar2 > 1] all at once until it sputters from your beleaguered hole[end if]";
 	if pewterheadvar2 > 0 or pewtercuntvar2 > 0 or pewterassvar2 > 0:
@@ -810,7 +810,7 @@ when play ends:
 				say "     After playing this game with them a number of times, they grow inclined to join you on your little adventure, eager to find others to play with as much as you...";
 		else:
 			say "     Your feral, slender body doesn't seem to be regarded very highly by the uninfected, once the military finds and processes you. Once you're inevitably let free back into civilized society, it's a bit hard to maneuver in a world that only ever looks down upon you - both figuratively and literally - but you eventually manage to get by.";
-	if facename of player is "Pewter Consort" and humanity of player > 9:
-		say "     People are particularly disturbed by your seemingly alien, eyeless head, but it eventually proves itself to be somewhat advantageous once you become more accustomed to it and what certain colors mean. You gain a fair measure of coin on the side acting as a lie detector, and it certainly makes your more wanton misadventures all the more exciting.";
+			if facename of player is "Pewter Consort":
+				say "     People are particularly disturbed by your seemingly alien, eyeless head, but it eventually proves itself to be somewhat advantageous once you become more accustomed to it and what certain colors mean. You gain a fair measure of coin on the side acting as a lie detector, and it certainly makes your more wanton misadventures all the more exciting.";
 
 Pewter Consort ends here.

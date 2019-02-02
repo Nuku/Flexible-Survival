@@ -15,11 +15,45 @@ Version 1 of Chris by Wahn begins here.
 [   0: nothing yet                                 ]
 [   1: fucked the guy                              ]
 
+[ Hunger of Chris - interaction with Urik          ]
+[   0: never met                                   ]
+[   1: normal Chris and Urik met                   ]
+[   2: discussion about visiting Val               ]
+[  11: warrior Chris and Urik met                  ]
+[  12: warrior Chris and Urik got into talking     ]
+[  21: breeder Chris and Urik met                  ]
+[  22: breeder Chris and Urik got into talking     ]
+[  99: Urik warned away from breeder Chris         ]
+
+
 Table of GameCharacterIDs (continued)
 object	name
 Chris	"Chris"
 
-Chris is a man. The HP of Chris is normally 0.
+Chris is a man.
+[physical details as of game start]
+ScaleValue of Chris is 3. [human sized]
+Cocks of Chris is 1.
+Cock Length of Chris is 9.
+Cock Width of Chris is 3.
+Testes of Chris is 2.
+Cunts of Chris is 0.
+Cunt Length of Chris is 0.
+Cunt Width of Chris is 0.
+Breasts of Chris is 2. [2 nipples]
+Breast Size of Chris is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Chris is false.
+PlayerRomanced of Chris is false.
+PlayerFriended of Chris is false.
+PlayerControlled of Chris is false.
+PlayerFucked of Chris is false.
+OralVirgin of Chris is true.
+Virgin of Chris is true.
+AnalVirgin of Chris is true.
+PenileVirgin of Chris is true.
+SexuallyExperienced of Chris is false.
+
 The description of Chris is "[ChrisDesc]".
 The conversation of Chris is { "Mew!" }.
 The icon of Chris is Figure of Chris_clothed_icon.
@@ -626,6 +660,161 @@ instead of going up from Grey Abbey Library while (Chris is in Sitting Area and 
 			add "MPreg" to feats of player;
 		increase WarriorChrisPlayerFucked by 1;
 		now lastfuck of Chris is turns;
+
+after going to Sitting Area while (Chris is in Sitting Area and Urik is in Sitting Area and Hunger of Chris is 0): [first interaction between Urik and Chris]
+	say "     As you enter the area, your gaze falls upon an interesting sight: Urik is stretched out on the ground near the back wall, doing lifting excercises with an obviously self-built weightlifting set. The long steel pole in his hands seems to have been a traffic sign at some point, with two manhole covers speared onto each end. Urik is pumping his training tool up and down in a steady rhythm, not quite effortlessly but easily enough and with only a light sheen of sweat covering his green-skinned bulk. Between some grunts as he pushes the weight an arm's length up again and again, you can hear the orc counting his reps, which currently are at fifty-two.";
+	if libido of Chris is 0: [half orc/normal]
+		say "You're not the only one watching Urik's excercise regime apparently, as Chris moves up to the other orc before much longer, his gaze captivated by the play of Urik's straining muscles. 'Hey there,' the young man says with a hopeful smile and friendly expression. 'Couldn't help but notice your workout here. That's quite a lift.'";
+		say "     Urik gives the noticably more slender and human-like half-orc a casual glance, grunting in something like amusement. He continues to concentrate on his lifting, finally finishing out at sixty reps and then dropping the weights above his head, hard enough to leave dents in the flooring. Wiping sweat off his brow, the large orc gets off the ground and comes to tower more than a full head over Chris. He looks him up and down and lets out a lewd chuckle, followed by the words, 'So this place does have some amenities after all. You can help me work out another muscle, breeder boy! Right down here!' With that said, the orc warrior strokes himself through the fabric of his mesh undies, showing a rapidly growing bulge there. A wide-eyed Chris raises his hands in a warding gesture and takes a step back as he replies, 'Wow, wow - wait a moment here! I'm not one of those cock sluts like they have in the orc lair, you know!'";
+		WaitLineBreak;
+		say "     One hand shooting forward to clamp down on Chris's shoulder and keep him from retreating further, Urik grins as he says, 'Course you're no [italic type]real[roman type] breeder! Too overdressed and slow in getting my dick between your lips. But you'll do for now and will learn.' As he reaches out to put his other hand on the young man's crotch, Chris slaps it away and then uses both hands to pry Urik's grip off his shoulder. Dancing back out of the larger orc's reach, he keeps his fists raised, ready for an attack, yet he also says, 'Hey, I don't want to fight you - or be your bitch either! How about we start over, hm? I'm Chris and really only wanted to say hello. Looks like we both ended up in this place and I thought we might be friends.' Urik's brows draw together and he rolls his shoulders as if to limber up, yet then he seems to notice you from the corner of his eye and throws you a glance.";
+		say "     After meeting the orc's gaze with a hard stare for a few seconds, Urik blows out his breath in a derisive grunt, then he focuses back on Chris. Grudingly, the green-skinned male extends his huge paw of a hand to the smaller orc and they shake on it. 'Name's Urik. Remember it, little not-breeder.' He turns back towards his weights, apparently trying to give Chris a cold shoulder, but the friendly half-orc isn't discouraged quite that easily. Stepping up next to Urik, Chris starts up a conversation about training plans, coupled with some compliments of Urik's physique and inventiveness in making his own equipment. Despite the big orc's confrontational nature, he can't help but be drawn in by his new acquaintance's eager questions and comments. Soon they're in a proper little discussion, everything else that came before forgotten.";
+		now Hunger of Chris is 1; [Urik met normal Chris]
+	else if libido of Chris is 1: [orc breeder]
+		say "You're not the only one watching Urik's excercise regime apparently, as Chris moves up to the other orc before much longer, his gaze captivated by the play of Urik's straining muscles and the bulge of his cock in the tight shorts around his hips. 'Hey sexy,' the young man says in a seductive tone, moving up to just beside Urik. 'Couldn't help but notice your workout here. That's quite a lift.'";
+		say "     Urik gives the noticably more slender orc breeder a casual glance, grunting in something like amusement. He continues to concentrate on his lifting, finally finishing out at sixty reps and then dropping the weights above his head, hard enough to leave dents in the flooring. Wiping sweat off his brow, the large orc gets off the ground and comes to tower more than a full head over Chris. He looks him up and down and lets out a lewd chuckle, followed by the words, 'So this place does have some amenities after all. You can help me work out another muscle, breeder boy! Right down here!' With that said, the orc warrior strokes himself through the fabric of his mesh undies, showing a rapidly growing bulge there. Openly moaning at the demand, Chris falls to his knees right away, his hands flying up to grasp Urik's undies and pulling them down. After being bent down with the underwear, Urik's hard cock swings up with a vengeance and literally slaps Chris in the face with a smacking noise.";
+		LineBreak;
+		say "     [bold type]How do you want to deal with this?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Allow it and watch Urik facefuck Chris.";
+		say "     [link](2)[as]2[end link] - Step in and interrupt them.";
+		say "     [link](3)[as]3[end link] - Shrug and walk off, letting them continue without watching.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to watch, [link]2[end link] to stop them or [link]3[end link] to leave.";
+		if calcnumber is 1:
+			LineBreak;
+			say "     Chris wraps both his hands around Urik's huge cock, stroking it with rapturous attention, then slides his lips over the head and starts suckling, hungry for a taste of the strong male he's worshiping. The towering orc grunts in satisfaction as he feels the tip of Chris's tongue play over his head, then feel around its rim. 'Yeah! Suck it boy!' echoes throughout the library as Urik calls out in arousal, then clamps his hands on the smaller guy's head and shoves him down on his cock. In a true cumslut's reflex, Chris relaxes his throat right away and basically inhales the thick shaft as it is pushed down his throat. Urik goes ahead to throat-fuck his new buddy, soon filling the library with the sounds of his balls slapping against the other orc's chin. 'Fuuckk YEAH! I missed doing this!' the big brute bellows loudly as he keeps pumping in and out hard.";
+			say "     Urik's hard thrusts build up to the inevitable creshendo, with him ramming himself all the way home and then starting to cum, his dickhead almost halfway to Chris's stomach as it blasts out the first spurt of rich orc seed. Grunting and visibly twitching with each further blast, the huge orc fills his new cockslut with every last drop that his balls can deliver. This goes on for so long that Chris actually seems to become woosy in his lack for air, and by the time Urik finally lets go of his head, the smaller breeder can't do much more but flop back on the ground weakly, taking in great gasps of air. Despite this, he has an ecstatic grin on his face and his rubbing his own crotch, where you can see a wet spot from all the pre-cum he is leaking. Clearly, the aphrodisiac effects of the orc cum are driving the young man wild with lust.";
+			WaitLineBreak;
+			say "     'Sweet little slut,' Urik murmurs under his breath and it seems like he wants to turn back to his weightlifting for a second, but then his nostrils flare a little bit and he looks down at Chris's crotch. Getting over his momentary hesitation, the orc crouches down next to Chris and reaches out to cup his bulge, then moves ahead to just stripping the other man down to reveal his erect cock. While the breeder's head lolls left and right in his blissful, drugged oblivion, thick green fingers wrap around his cock and stroke it in a rapid tempo that soon pushes him over the edge. Urik clamps his other hand over the tip of the throbbing cock, making sure he catches all of the other orc's seed. With a quick glance at Chris's closed eyes and semiconscious state, the big brute then brings his hand to his mouth and licks the cum off it hungrily. Seems that your muscled boytoy can't deny his desire for orc cum, but is a bit ashamed of showing it before another green-skinned male.";
+			now Hunger of Chris is 11; [Urik met breeder Chris and got a BJ]
+		else if calcnumber is 2:
+			LineBreak;
+			say "     Walking up to the two orcs just as the smaller breeder goes down on Urik, you clear your throat loudly. The towering green-skin quickly wrenches Chris's head off his dick with an audible plop and throws you a somewhat sullen look. 'I was just excercising boss. To stay in top shape a man has got to work out every muscle, you know. And it's not like the bitch didn't want it!' Not feeling the need to give any more detailed reply, you just shake your head and nod over to the couch he usually hangs out on. Urik stomps off that way a few seconds later, muttering under his breath, 'Fine, keep that stupid bitch for yourself. I bet he's blown out and a bad sucker anways.' Meanwhile, Chris lets himself be led away in the other direction far more docilely, just accepting any command you're giving him right away.";
+			now Hunger of Chris is 99; [Urik warned away from breeder Chris]
+		else:
+			LineBreak;
+			say "     Shrugging to yourself and finding the words 'Orcs will be orcs' bouncing around in your thoughts all of their own, you simply turn away and walk off, busying yourself with other things. When you return a little while later, whatever the two of them did with one another is over.";
+			now Hunger of Chris is 11; [Urik met breeder Chris and got a BJ]
+	else: [orc warrior]
+		say "You're not the only one watching Urik's excercise regime apparently, as Chris moves up to the other orc before much longer, sizing up the other orc warrior's muscles as he does so. 'Hey bro,' the young man says in a friendly grunt, stopping a pace or two away. 'Couldn't help but notice your workout here. Nice work on making those weights and good lifting.'";
+		say "     Urik gives the younger, muscled orc warrior a casual glance, grunting to acknowledge his presence. He continues to concentrate on his lifting, finally finishing out at sixty reps and then dropping the weights above his head, hard enough to leave dents in the flooring. Wiping sweat off his brow, the large orc gets off the ground and comes to tower about half a head over Chris. He looks him up and down and adds a respectful nod, then holds out his fist expectantly. 'I'm Urik,' he says, getting back a fist-bump and the words, 'Chris. Nice to meet another proper warrior.' There's a second of hesitation as Urik clears his throat and says, 'Yeah, orc warrior. I mean, we're both orc warriors! So... you wanna take a turn with my gear or what did you want? We can share a brew sometime.' Chris smiles back at him and nods. 'Yeah, let me have a go with those weights.' As the younger orc starts to lay down and do lift reps, the two of them start talking about excercise regimens and other guy-talk, at which point you turn your attention to other things.";
+		now Hunger of Chris is 21; [Urik met warrior Chris and they bro'd out]
+
+after going to Sitting Area while (Chris is in Sitting Area and Urik is in Sitting Area and Hunger of Chris is 1 and a random chance of 1 in 2 succeeds): [second interaction between Urik and normal Chris]
+	say "     As you enter the area, your gaze falls upon Urik and Chris, the two orcs standing at the railing overlooking the open interior of the library, eyes roaming over the stacks as they talk with one another. Laughing out loud, Urik tells his smaller buddy in an amused tone, 'Yeah, he might have thought he was big - and he kinda was, for a human - but that's no competition for a proper orc! I took the bitch and bent him over a car hood, then thrust in deep!' He happily mimes doing so with the railing, grinding his large bulge into the air in a demonstration that leaves Chris wide-eyed. 'Man, how many guys did you fuck that day? There was the redhead, the black guy, and...' He starts to count more off his fingers, but Urik just grins at him and says loudly, 'Fourteen!' 'Damn! That's something else! I mean, I get horny all the time too, but more than a dozen in a row? Just how much cum can your balls produce so quickly?' Chris asks, a genuine look of curiosity on his face.";
+	say "     'Want me to demonstrate, little buddy?' Urik says in a gruff, amused tone, stepping up behind Chris and wrapping his arms around him as he grinds his hips forward a little. Chris lets out a bit of a nervous laugh, intercepting the larger male's hand as it tries to slide down to his crotch. 'No thanks, Urik. I - um, my dad told me not to fuck around with orcs.' Shrugging his huge shoulders, Urik gropes around a little bit more before he lets go and says, 'You're missing out kid. I can tell you that every last slut I broke in enjoyed their time impaled on my cock, and they were begging for more after too! The taste of orc cum is nothing short but amazing, and if it's being shot up your ass, you'll go wild with lust.' At that comment, Chris turns around halfway and looks up at the orc's face, then asks, 'Wait - how do you know that?' 'Oh hah, it's... err, what all the breeders say, once they've calmed down enough to speak intelligibly afterwards.'";
+	WaitLineBreak;
+	say "     Chris raises an eyebrow at what you know to be an excuse, but then just shrugs and changes the topic. 'You know, I've been wondering if it'd be possible to, you know... visit the orc lair. See my dad again. I've only known him for half an hour or so, but I still miss him.' Urik clears his throat and looks Chris deep in the eye before shaking his head. 'Listen kid, it's like this: You're a sexy little number that any orc in his right mind wants to bend over and claim as his. Hell, I'd do you in a heartbeat too. But where you and me have become buddies, and I'm just a really nice guy so I won't just take you by force, the other warrior studs... they'd brawl for who gets the first dip in you, then gangbang you till that belly is swollen round with cum! Sluts are there to be used by those strong enough to take em, and only the biggest, baddest orcs won't get challenged if they want to keep some private breeders for no one else to touch. You know, like Boghrim the chief.'";
+	say "     'Or you?' Chris offers up hopefully, reaching out to lay a hand on one of the bulging pecs of Urik's broad-shouldered form. 'Er - nope, not really. I'm a big guy, but there are some who're even stronger. And I'm not exactly in the highest regard in the lair right now. Sorry kid, can't help you with that,' Urik replies in a somewhat glum tone. You can see that Chris is curious about what exactly is up with him, but the young man stops himself from being too pushy, instead just giving Urik's big bicep a squeeze and saying, 'Thanks anyways.' The two of them return to leaning on the railing after that, glancing over the library interior and exchanging some much lighter conversation.";
+	now Hunger of Chris is 2; [had a talk about visiting Chris's parent]
+
+after going to Sitting Area while (Chris is in Sitting Area and Urik is in Sitting Area and Hunger of Chris is 21 and a random chance of 1 in 2 succeeds): [second interaction between Urik and warrior Chris]
+	say "     As you enter the area, your gaze falls upon Urik and Chris, the two orcs sitting leaned back on a broad sofa, each with an orc brew in hand. Taking swigs of the roamy liquid from their mugs, they are obviously having a good time, laughing and sharing lewd stories. Sounds like it's Urik's turn right now, as he loudly proclaims, 'So there I was, holding up Officer Freeman of the ground by his neck! You should have seen the expression on his face when I dipped a finger into his passed out partner's ass and brought it to his lips, white and dripping with my seed. He swallowed alright, with a bit of convincing. Best part of being an orc, I tell you, watching a bastard like him become a whimpering cumslut! He was sucking every last drop off my fingers in a minute!' Chris laughs at the mental image, draining his last of the orc brew and throwing the mug aside. Then the young orc shoves his pants down and whips out the erect shaft of his cock, stroking its length slowly up and down.";
+	LineBreak;
+	say "     [bold type]Do you want to observe and see where this will go?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Sure thing. This should be hot!";
+	say "     ([link]N[as]n[end link]) - Nah, let them have their bonding moment in private.";
+	if player consents: [watch]
+		LineBreak;
+		say "     'Yeah, you like the story? But that's not the end of it yet,' Urik tells his buddy, gaze drawn to the towering pole of Chris's fat prick. He unconsciously licks his lips at the sight, then strips his own mesh undies away and letting his huge cock hang out before lifting it straight up. The two orcs grin at each other as they stroke their cocks side by side, with Urik then going on to say, 'Ah, having the fat puffy lips of a straight cop wrapped around my fingers, sucking off cum! That's a special memory, especially with what came next. I ripped the uniform right off him, telling the slut that he wouldn't need it no more! Then I laid him down, back to back on the other cop. Just imagine it - black hunk on top, freshly bred white breeder below.' Chris is clearly enraptured by the story by now, leaning closer to Urik as he listens and strokes himself faster and faster. Watching closely, you can see a splash of pre being flung off his dick from the furious jerking, landing on the side of Urik's leg.";
+		WaitLineBreak;
+		say "     Urik gestures a little as he explains how the two cops were posed, then casually brushes a hand over his legs, bringing it back to wrap around his erection with Chris's pre. The huge orc grunts in satisfaction as he does so, then clears his throat and continues the story. 'So, I take this bad boy here and ram it into the bred bitch, cum squishing out around my shaft and lubing it up. And right after that, I pop the cherry of the other one, pushing all the way in one go until my balls were against his ass. He was a tight little piggy and whimpered beautifully as he clung to his buddy, hands clamping onto the other guy's sides as he took all of me.' By now, he is rapidly jerking himself off too, the other hand cupping his green-skinned balls and squeezing them lightly while his gaze keeps straying over to Chris's erection.";
+		say "     With a chuckle, Urik adds, 'You know how cops always make a big deal about being almost brothers with their partner? Well, they certainly were much closer after I got done with em - plunging their sweet holes with my shaft back and forth, breeding both of them a few times in a row! In the end, the two of them were totally blissed out and in each other's arms, making out with their swollen bellies rubbing against each other! Knocked em up too, and the orclings were practically twins - not even the sluts themselves can tell who birthed whom!' Hearing the finale of Urik's lewd story, Chris grunts out, 'Oh yeah, that's hot!' and his hand almost blurs as he drives himself over the edge, fingers wrapped tightly around his shaft as he erupts like a cum-volcano.";
+		WaitLineBreak;
+		say "     Leaned towards the other orc as Chris is, the first heavy spurt splashes diagonally across Urik's chest, followed by another and another before the young orc warrior grunts out, 'Oops, sorry bro!' After that he, aims his cock more towards himself, covering his own chest in some more creamy cum. Urik clearly doesn't mind being creamed at all and just continues jerking off, possibly even more frantic than before. Within moments, he joins Chris in orgasm, humping his hips up reflexively as he comes, gushing cum all over his own chest to mingle with Chris's load. The two of them keep clutching and stroking their dicks as their orgasms run their course, further cum-spurts eventually ebbing off and only the sounds of heavy breathing replacing the groans and grunts from before. 'That was one hot tale, bro!' Chris says out loud, giving Urik a friendly punch to the shoulder as the rest of the orc is pretty sticky with cum.";
+		say "     'Sorry about making a bit of a mess on you. Not that most of that isn't your own, hah!' Chris tells his friend in an amused tone and stands up. He looks down at his own chest and wipes a hand through the cum on it, laughing as he wiggles the dripping fingers at Urik before wiping them against the side of his leg. 'Time to get cleaned up I guess. [if library computer is powered]Good thing we got working showers in this place[else]I know a back yard with a little pond not too far from here. Will be cold, but refreshing[end if]. You coming with?' the young orc asks Urik, but the other orc just waves him off. 'Nah, got a cum rag somewhere here, maybe it fell behind the sofa. Once I find that, I think I'll take a nap and wash up later.' Chris readily accepts that explanation, nodding to his buddy and then walking off to go downstairs. He is quite comfortable in his casual nakedness, just grinning as he passes you on the way.";
+		WaitLineBreak;
+		say "     Once Chris is well down the stairs, Urik proceeds to clean himself up - not with a towel or anthing though, but rather by wiping off the cum and licking it off his fingers like the oversized orc breeder that he has become. Seeing your orc boytoy let out his needy and submissive side, you're tempted to step in and join him for some fun.";
+		LineBreak;
+		say "     [bold type]How do you want to deal with this?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Approach Urik and take over feeding him the cum. He should suck it off his [master]'s fingers!";
+		say "     [link](2)[as]2[end link] - Approach Urik and lick his chest clean. You'll share some of it with him while making out.";
+		say "     [link](3)[as]3[end link] - Shrug and walk off, letting the cumslut do his own thing.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to feed Urik cum, [link]2[end link] to lick it off him or [link]3[end link] to leave.";
+		if calcnumber is 1:
+			LineBreak;
+			say "     Stepping forward, you walk towards the sofa that Urik is sitting on, sucking creamy cum off his fingers. He grunts as he sees you approach and says, 'Oh, hey boss. Want anything from me?' You can't help but smile at how plyable the big brute is to his rightful [master], so very different to the proud brute he showed towards Chris. Leaning over him and burying a hand in the long black hair of your orc toy, you pull Urik into a demanding kiss, then let go and sit down next to him. With a playful smile on your face, you inform the big brute that you feel like giving him a treat, then scoop up some of the cum on his abs and hold your fingers in front of his face. Naked hunger flares up in the orc's eyes and he opens his mouth to suck your fingers in without any hesitation, no thought wasted on the embarrassment of being fed sperm by another. Gleefully, you proceed to scoop up more cum and caress your supersized orc breeder as he hungrily consumes everything that you offer.";
+			say "     By the time Urik's chest is as free of cum as it's going to get, with the rest being just enough to massage into his skin, the orc has got a bit of a lust-drunk air around him. Which is quite natural, given that orc cum is so very rich in aphrodisiacs and all. The big brute is grinning at you amusedly, his hands wandering a little to stroke you in return. 'You're one great boss to have, making me feel so good!' comes a joyful exclaimation from him, followed by a sudden grab to pull you close and plant a kiss on your lips. Urik is rather forceful in his uncoordinated current status, so you have little choice but accepting the kiss, as well as his tongue exploring your mouth. It brings with it the taste of orc cum, which fills you with an inkling of the euphoria and lust he must be feeling now. Sinking back against the sofa a few heartbeats later, the large orc smiles broadly, his hand stroking your side.";
+			WaitLineBreak;
+			if player is male:
+				say "     Having gotten a small dose of orc cum yourself, a stirring awakens in your loins and before you know it, your [cock of player] shaft is half-hard and demanding attention.";
+				say "[UrikSofaSexDecision]";
+			else:
+				say "     You gently pat Urik's shoulder and tell him to rest for the next time you want to have fun with him, then stand up and walk away. Before you've taken more than a few steps, you can hear a snore coming from behind you, where the big brute has dozed off.";
+		else if calcnumber is 2:
+			LineBreak;
+			say "     Stepping forward, you walk towards the sofa that Urik is sitting on, sucking creamy cum off his fingers. He grunts as he sees you approach and says, 'Oh, hey boss. Want anything from me?' You can't help but smile at how plyable the big brute is to his rightful [master], so very different to the proud brute he showed towards Chris. Leaning over him and burying a hand in the long black hair of your orc toy, you pull Urik into a demanding kiss, then let go and sit down next to him. With a playful smile on your face, you inform the big brute that you feel generous right now and want to help him clean up, then lean forward and lick one of his pecs, slurping up cum and suckling on his nipple. A pleased groan rumbles through the orc's chest and he lets his head loll backwards while sliding an arm around you to gently hold you while you lick him.";
+			say "     Gleefully, and with not a little hunger for cum yourself, after the first swallow fills you with the most amazing feeling of energy and lust, you proceed to work your tongue over his broad chest, consuming everything he has to offer. By the time Urik's chest is as free of cum as it's going to get, with the rest being just enough to massage into his skin, the orc has moved on to caressing your back and side, giving back a little of the pleasure you caused him. 'You're one great boss to have, making me feel so good!' comes a joyful exclaimation from him, followed by a sudden grab to pull you close and plant a kiss on your lips. Urik is rather forceful in happy embrace, so you have little choice but accepting the kiss, as well as his tongue exploring your mouth. Maybe he's just after more cum, but you don't really mind sharing, not in the blissful state that you arrived in by now.";
+			WaitLineBreak;
+			if player is male:
+				say "     As the two of you make out, swapping cum back and forth, a stirring awakens in your loins and before you know it, your [cock of player] shaft is half-hard and demanding attention.";
+				say "[UrikSofaSexDecision]";
+			else:
+				say "     You make out with Urik for a little while, then eventually extricate yourself from his arms. With a gentle pat on the orc's shoulder, you tell him to rest for the next time you want to have fun with him, then stand up and walk away. Before you've taken more than a few steps, you can hear a snore coming from behind you, where the big brute has dozed off.";
+		else: [leave]
+			say "     With a shrug, you turn your back on the orc and leave him to suck down all that cum in private..";
+	else: [leave]
+		say "     With a shrug, you turn your back on the two orcs and busy yourself with other things for a little while. Some groans, laughs and grunts can be heard echo throughout the library, eventually followed by Chris strolling past you and down the stairs in casual nakedness, his chest covered in a white-ish smear of cum. He's got a big grin on his face.";
+	now Hunger of Chris is 22; [Urik and Chris jerked off together]
+
+to say UrikSofaSexDecision:
+	LineBreak;
+	say "     [bold type]Indulge yourself with some fun involving Urik?[roman type][line break]";
+	say "     [link](1)[as]1[end link] - Face-fuck the large orc!";
+	say "     [link](2)[as]2[end link] - Hammer his asshole!";
+	say "     [link](3)[as]3[end link] - Right now isn't the time.";
+	now calcnumber is 0;
+	while calcnumber < 1 or calcnumber > 3:
+		say "Choice? (1-3)>[run paragraph on]";
+		get a number;
+		if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+			break;
+		else:
+			say "Invalid choice. Type [link]1[end link] to face-fuck Urik, [link]2[end link] to fuck Urik's ass or [link]3[end link] to leave.";
+	if calcnumber is 1: [face-fuck]
+		LineBreak;
+		say "     Quickly stripping down, you swing a leg over Urik's broad chest, coming to stand above the orc on the sofa. This puts your green-skinned boy-toy basically on eye level with the shaft of your cock, at which point all the training Boghrim did with him really pays off. Instantly reacting to an offered dick, the big brute leans forward to lap at the tip of your shaft, then takes it into his mouth to go down on you. Bobbing up and down on your manhood like the cumslut he is, Urik takes great care not to brush against your dick with his teeth, instead playing his broad tongue over it in a very stimulating way. You moan out loud as you grind your crotch against his face, revelling in the tightness of the orc's throat. Running your hands through the long black hair of the supersized orc breeder, you idly wonder what Chris might say or do if he saw the two of you right now. Hearing your tease, the orc's eyes go wide and he grunts something unintelligible due to the cock in his mouth.";
+		say "     A chuckle about the orc wanting to appear manly before his new friend passes your lips and you tighten your grip, holding Urik steady as you proceed to throat-fuck the large male. He's definitively got a nicely warm and tight mouth, making you oh so very glad that you won the competition for becoming Urik's new master. The orc is far from idle as he takes your dick either, with his tongue almost constantly in movement and his neck muscles flexing to squeeze you in just the right way. Feeling a familiar tightness rise in your balls, you grunt to him about getting ready and the orc gives a happy moan as he slurps around your shaft. His adam's apple bounces up and down a little as he swallows, then sucks hard on your length. This is just the little push you needed to drive you over the edge, and you hammer in all the way, then erupt down his throat, throb after heavy throb of cum pumped right into his stomach.";
+		WaitLineBreak;
+		say "     Urik's hands shoot up to grab your buttocks, squeezing and kneading them as you feed him your load, almost as if the strong man wants to make sure he gets it all and you don't suddenly pull out or anything. Not much chance of that happening, with how good his throat feels around you, but then you're too busy grunting and grinding against him to tell the orc that. His caresses and those strong arms holding you tight definitively are a nice little extra in enjoying your time with Urik, prolonging your orgasm and working to draw another shot or two out of your overtaxed balls. When your spurts of seed eventually ebb off and even further sucking by Urik doesn't give him any extra cum, you gingerly pull out of his mouth. He smacks his lips happily, then stretches out his tongue as if to show that it's clean and every drop of cum you gave him ended up in his stomach. 'Thanks boss, just what I needed,' the orc tells you with a grin as he looks up at you.";
+		say "     Climbing off the sofa, you give a gentle pat on the orc's shoulder, then you tell him to rest for the next time you want to have fun with him. After that, you gather up your clothes and gear, getting dressed again. As you start to walk away, you can hear a snore coming from behind you, where the big brute has dozed off.";
+	else if calcnumber is 2: [fuck]
+		LineBreak;
+		say "     Quickly stripping down, you come to stand before the sofa, hands on your hips and erect cock pointing right at your green boy-toy. The big brute watches you with a grin on his face, betraying the eagerness of orcish slut, and he chuckles gruffly as you command him to lift his legs. Shimmying down so that his ass is just at the edge of the sofa, he slides both hands under those solid, muscular legs and pulls them up. Legs spread wide, the breeder slut's light green ring of a pucker winks invitingly at you, a sight that makes the head of your cock throb in anticipation. Unable to hold yourself back for more than a moment, you quickly gather a gob of spit and smear it over your [cock of player] prick as improvised lube, then line yourself up with the receptive bottom. 'Fuckk yeah!' he grunts lustily as you push past his back door, into the warm and gripping passage that the strong man has to offer.";
+		say "     Seeing the muscle-packed hulk of a man moan and pant as he is fucked, you can't help but congratulate yourself at winning Urik in the hunting competition, followed by some sexy flashbacks about what you did to do so. Shaking your head to clear it from the has-been and concentrate on your supersized breeder in the here and now, you pull back for a second, watching with pleased eyes as his ring gapes open for a second before starting to pull closed again. That's exactly the moment when you hammer back into him, driving yourself balls deep and drawing an urgent groat from the orc. Even though his cock and balls aren't quite ready for another go, having come recently, that takes little from Urik's ability to be stimulated by a good ass fuck, and he writhes under you on the sofa. The way in which he humps his hips up to meet your thrusts provides some amazing sensations, especially as he squeezes your dick with his inner muscles just before you pull out.";
+		WaitLineBreak;
+		say "     Urik's legs wrap around your body, pulling you in and pushing against your ass as he gets closer and closer to orgasm, as do you yourself. Humping his tight ass deeply, you plant your hands on his broad chest, bracing against the orc as you lean over him and meet his lips in a demanding kiss. As the two of you make out and he embraces you in those strong arms, you can feel the urge to cum rise quickly in your balls. Then you pass the point of no return, deep in tongue-wrestling with your orc boytoy, and moan right into his mouth as you start to erupt into his inner passage. Throb after heavy throb of cum splashes the orc's inner walls, once more staking your claim on his ass, his body, the whole of the strong man. You stay in this position for a long while, even after your spurts of seed into his ass ebb off, simply enjoying the closeness of being held and making out with the guy who does so. In the end, Urik dozes off peacefully and you extricate yourself from his grasp, then get dressed again.";
+	else:
+		LineBreak;
+		say "     You gently pat Urik's shoulder and tell him to rest for the next time you want to have fun with him, then stand up and walk away. Before you've taken more than a few steps, you can hear a snore coming from behind you, where the big brute has dozed off.";
+
+[
+Hey there, I wanted to ask if there is anything specific you want to see between Urik and Chris...
+
+"normal" Chris would be wary about any offers from Urik to "show him how a real man feels inside him" (since he was warned about orc cum), but might be convinced to do it anyways by the player, leading him into one of the transformation routes
+along the same lines, Urik would be wary about being fucked by such a "tiny" half orc and the player could order him to put out
+though it might be nice to not push things that far, and let the player just calm things a bit, with them becoming friends until Urik gets some cravings...
+Sameer11/03/2018
+For normal Chris, I was think it would mostly be talking scene. Maybe ask about his mom and find a way to safely visit him. I hadn't thought about it being an alternate way to transform Chris, but that could be interesting too with some sexy time or sharing an orc brew together.
+Otherwise, I did think of it more along the lines of bonding and friendship leading to sexytime along all the paths
+Maybe with Urik trying to hide the fact that he's a sort-of breeder now initially with Warrior Chris, and trying to get back into his Warrior mindset with Breeder Chris.
+
+
+]
 
 
 Chris ends here.

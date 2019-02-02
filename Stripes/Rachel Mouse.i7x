@@ -19,11 +19,11 @@ when play begins:
 Instead of resolving a Quiet Apartment Building:
 	say "     Wandering off from the main strip, you come across a small, three story apartment building that seems quiet and relatively untouched. You find yourself looking it over, wondering if you should go in and take a look around. ";
 	if bodyname of player is "Mental Mouse" and humanity of player <= 75:
-		say "     There's just something about the place that seems to be calling to you and before you can even consider else, you head in to search it.";
+		say "There's just something about the place that seems to be calling to you, and before you can even consider else, you head in to search it.";
 		WaitLineBreak;
 		say "[mouseapts]";
 	else:
-		say "     The place seems safe and inviting. You don't see any cum stains or piles of discarded clothes around and there's no noise of creatures rustling about inside. The place isn't that big, it shouldn't take you that long to check it out. Perhaps you'll find something of use or even some survivors. Shall you follow your hunch and go in to search the place?";
+		say "The place seems safe and inviting. You don't see any cum stains or piles of discarded clothes around and there's no noise of creatures rustling about inside. The place isn't that big, it shouldn't take you that long to check it out. Perhaps you'll find something of use or even some survivors. Shall you follow your hunch and go in to search the place?";
 		if player consents:
 			say "[mouseapts]";
 		else:
@@ -44,7 +44,7 @@ to say mouseapts:
 		say "     After breaking the kiss, the lovely mouse, whom you somehow know is called Rachel, slides down over your body, moving her hips to your groin. Your throbbing cock, already hard thanks to the helpful ministrations of another mouse, is held into position by that mouse so Rachel can lower herself down onto it[if cock length of player > 18]. The sexy mouse moans and squeaks as she tries to take your throbbing cock in, slowly stretching her wet cunny open to accept your huge cock. Her belly bulges considerably, stretching her small tummy to accept it, but accept it she does. Her paws rub over her filled belly and she starts riding you as best she can[else if cock length of player > 12]. The sexy mouse moans and squeaks as she tries to take your throbbing cock in, slowly lowering her wet cunny down over your large cock. Her belly bulges somewhat, stretching her small tummy as it fills her. Her paws rub over her filled belly and she starts riding you eagerly[else]. The sexy mouse moans and squeaks as she slides herself onto your throbbing cock. Loving the feel of having you inside her, she starts riding you eagerly[end if].";
 		WaitLineBreak;
 		say "     The other mice around you run their paws over your bodies, seeking to share in welcoming you into their group. With so many of the psychic mice around you, you can feel their pleasure as they have sex all around you. You are surrounded in it, faintly sharing in all of it: sucked cocks, licked nipples, fingered pussies, fucked cunts, throbbing cocks and so much more. And most of all, the joy of fucking your beautiful mate, Rachel. Her small, cute form. Her lovely breasts, which you can't help but fondle. Her hot cunt, which you eagerly thrust into again and again.";
-		say "     Soon enough, it all overwhelms you and you cum hard into her, spurting your rich, hot semen into her. Feeling your orgasm, she cums as well, soaking your crotch in her feminine juices. Her hard cock twitches against your tummy and you can sense her holding back, wanting to share that with you as well. As soon as your orgasm passes, you help her slide off your spent shaft, eager to help your murine mate. ";
+		say "     Soon enough, it all overwhelms you and you cum hard into her, spurting your rich, hot semen into her. Feeling your orgasm, she cums as well, soaking your crotch in her feminine juices. Her hard cock twitches against your tummy and you can sense her holding back, wanting to share that with you as well. As soon as your orgasm passes, you help her slide off your spent shaft, eager to help your murine mate.";
 		if player is female:
 			WaitLineBreak;
 			say "     Shifting onto your side, you rest one leg against the back of the couch and drape the other down, offering up your dripping pussy to her. She smiles as another mouse, sensing your intent, spreads your wet folds for you and third guides Rachel's cock into you. You both squeak in delight as she pumps into you hard and fast, already very close. You pull the other two into your welcoming arms, bringing their cocks to your mouth so you can alternate between sucking each of them off while that mousecock fucks you to another orgasm that all four of you share. You suck down their delicious semen while enjoying the feel of your mate's hot seed flowing into your womb.[impregchance]";
@@ -147,16 +147,16 @@ The icon of mouse girl is Figure of Rachel_icon.
 to say SummonRachel:
 	now Rachel is nowhere;
 	if player is in Pantry and Rachel is in Pantry: [summoning while standing next to her]
-		say "     Rachel stands up from where she was meditating and without a word comes to stand by your side.";
+		say "     Rachel stands up from where she was meditating. Without a word, she comes to stand by your side.";
 	else: [regular summoning]
 		say "     Walking up to join you before you even call out for her, Rachel the mouse girl grins up at you.";
 
 to say DismissRachel:
 	move Rachel to Pantry;
 	if player is not in Pantry: [regular dismiss]
-		say "     Before you can say a word Rachel come up behind you. 'Alright, I'll head back to the library then, seeya soon.' With that she makes her way back.";
+		say "     Before you can say a word, Rachel comes up behind you. 'Alright, I'll head back to the library then. See you soon.' With that, she makes her way back.";
 	else: [dismissing her in the abbey]
-		say "     Rachel goes back to her meditating claiming she will continue to commune with the rest of the collective.";
+		say "     Rachel goes back to her meditating, saying she will continue to commune with the rest of the collective.";
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -250,9 +250,9 @@ to say RachelTalk1:
 	let randomnumber be a random number from 1 to 2;
 	if randomnumber is:
 		-- 1:
-			say "     'Can you feel the others? Even though we are seperated I can feel them everywhere!'";
+			say "     'Can you feel the others? Even though we are separated, I can feel them everywhere!'";
 		-- 2:
-			say "     'I hope that you decide to join the collective soon, everything is just better once you give yourself fully to the hive-mind.'";
+			say "     'I hope that you decide to join the collective soon. Everything is just better once you give yourself fully to the hive-mind.'";
 
 
 Section 3 - Sexxxings

@@ -42,7 +42,7 @@ generationConflictFlag is a number that varies.
 to say Generation Conflict:
 	say "     As you pass the building's entrance, you hear loud barks, followed by Brennan shouting: 'Stop it Remus! Not you too, Romulus!' You hurry further and stumble upon your friend, looking with a distraught expression on his face, as his lupine companions are rushing a pair of giant rats. Wait...";
 	say "     'Aaaaw, they're so cute!' one of them, whom you recognize as Violet, says as she glomps Romulus against her fur.";
-	say "     'Umm, sis, you should be careful around strangers['] dogs,' her twin brother Erin said, trying to keep Remus['] saliva from landing on his prized pants.";
+	say "     'Umm, sis, you should be careful around strangers['] dogs,' her twin brother Erin says, trying to keep Remus['] saliva from landing on his prized pants.";
 	say "     'Hey, who're you calling a stranger?' Brennan asked, crossing his arms. 'You're the most suspicious looking guys, here.";
 	say "     'Who's a good boy? Who's a good boooy?' Violet kept going, oblivious.";
 	say "     It is only now that Brennan and Erin remark your presence. Smiling, you explain to the both of them that you are a common acquaintance, and it seems to defuse the tension between the two.";

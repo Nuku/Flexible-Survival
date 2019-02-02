@@ -92,7 +92,7 @@ When Play begins:
 	now enemy title entry is "";
 	now enemy name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
-	now attack entry is "[one of]Minotaur stomps over and wildly swings at you![or]Charging into your direction the Minotaur smashes its bulky head into your chest![or]Hammering its large fists into you're the bullman strikes with an unforgiving blow to your head![or]Bellowing out a roar the Minotaur gouges at you with his ivory horns![or]Desperately charging in your direction the Minotaur tries to make a critical strike![at random]";
+	now attack entry is "[one of]The minotaur stomps over and wildly swings at you![or]Charging into your direction the Minotaur smashes its bulky head into your chest![or]Hammering its large fists into you're the bullman strikes with an unforgiving blow to your head![or]Bellowing out a roar the Minotaur gouges at you with his ivory horns![or]Desperately charging in your direction the Minotaur tries to make a critical strike![at random]";
 	now defeated entry is "[beatthemino]";
 	now victory entry is "[losetomino]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
 	now desc entry is "[minodesc]";
@@ -129,7 +129,7 @@ When Play begins:
 	now libido entry is 20; [ Amount player Libido will go up if defeated ]
 	now loot entry is "food";
 	now lootchance entry is 25; [ Chance of loot dropping 0-100 ]
-	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]strong[or]bull-like[or]ultra muscular[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "bovine"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;

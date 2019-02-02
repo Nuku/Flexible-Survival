@@ -410,7 +410,7 @@ Rule for setup hyperlink emphasis (this is the setup hyperlink emphasis rule):
 			say "[as the parser]Messages from the parser currently display like this[as normal]." (E);
 		[Print a warning if emphasis is disabled in a game where hyperlinks are required; note that the player is still allowed to disable emphasis, if they choose.]
 		if hyperlinks required is true:
-			if ( object hyperlink highlighting is true and style of object-word is hyperlink-no-style ) or ( direction hyperlink highlighting is true and  style of direction-word is hyperlink-no-style ) or ( topic hyperlink highlighting is true and style of topic-word is hyperlink-no-style ) :
+			if ( object hyperlink highlighting is true and style of object-word is hyperlink-no-style ) or ( direction hyperlink highlighting is true and style of direction-word is hyperlink-no-style ) or ( topic hyperlink highlighting is true and style of topic-word is hyperlink-no-style ) :
 				say "[line break]**A warning: The [emphasiz]ed hyperlinks are integral to [story title]'s design. It may be difficult or impossible to know how to continue if emphasis is not visible.**" (F);
 		[Print a warning if any two active hyperlink styles are the same.]
 		truncate tempstyles to 0 entries;

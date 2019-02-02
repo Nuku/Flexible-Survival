@@ -52,7 +52,7 @@ Leather Vambraces is equipment.
 It is not temporary.
 The plural of Leather Vambraces is false.
 The taur-compatible of Leather Vambraces is true.
-The size of Leather Vambraces is 1.
+The size of Leather Vambraces is 3.
 The AC of Leather Vambraces is 60.
 The effectiveness of Leather Vambraces is 30.
 The placement of Leather Vambraces is "arms".

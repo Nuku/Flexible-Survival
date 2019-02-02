@@ -1,4 +1,7 @@
-Version 1 of Kitsune Expansion by Dys begins here.
+Kitsune Expansion by Shadowwolf94 begins here.
+[Original by Dys]
+[Version 1.0 WIP by Dys]
+[Version 1.1 complete by Shadowwolf94]
 
 Section 0 - Variables
 
@@ -24,6 +27,7 @@ to say Kitsune_NewMaleDomScenes:
 	now title entry is "Let the fox mount you (anal)";
 	now sortorder entry is 2;
 	now description entry is "Have Kitsune shift to his feral form and mount you, aiming for your backdoor";
+	[]
 	if player is female:
 		choose a blank row from table of fucking options;
 		now title entry is "Let the fox mount you (vaginal)";
@@ -35,11 +39,16 @@ to say Kitsune_NewMaleDomScenes:
 	now sortorder entry is 4;
 	now description entry is "Ride the fox's cock, letting him use his tails to his advantage";
 	[New System!!]
-	[choose a blank row from table of fucking options;
-	now title entry is "Let him decide";
+	choose a blank row from table of fucking options;
+	now title entry is "Work him up, then control him (anal)";
 	now sortorder entry is 5;
-	now description entry is "See just how well the fox knows you";]
+	now description entry is "Work him up and order him about from beneath";
 	[]
+	if player is male:
+		choose a blank row from table of fucking options;
+		now title entry is "Have the fox tend to your shaft";
+		now sortorder entry is 6;
+		now description entry is "Have the fox tend to your shaft";
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows from table of fucking options:
 		choose row y from the table of fucking options;
@@ -61,12 +70,14 @@ to say Kitsune_NewMaleDomScenes:
 					-- "Let the fox mount you (anal)":
 						say "[Kitsune_OldAnalDom]";
 					-- "Let the fox mount you (vaginal)":
-						say "[Kitsune_OldVagDom]";
+						say "[Kitsune_OldVaginalDom]";
 					-- "Ride his cock (anal)":
 						say "[Kitsune_RideCockAnal]";
-					-- "Let him decide":
-						say "[Kitsune_Decide]";
-				WaitLineBreak;
+					-- "Work him up, then control him (anal)":
+						say "[Kitsune_PowerBottom]";
+					-- "Have the fox tend to your shaft":
+						say "[Kitsune_OralDom]";
+					WaitLineBreak;
 		else if calcnumber is 0:
 			say "     Kitsune is wagging his tails with a sly smile.";
 			now sextablerun is 1;
@@ -74,7 +85,6 @@ to say Kitsune_NewMaleDomScenes:
 		else:
 			say "Invalid selection made. Please pick an option from 0 to [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
-
 
 Section 2.1 - Individual Scenes
 
@@ -103,14 +113,14 @@ to say Kitsune_ServiceOrally:
 		say "     Another soft growl from the fox urges you on, [if player is FeralBodied]taking a step forward to take another few inches of his shaft into your mouth.[else]wrapping your hands around his shaft just a bit further down, giving it gentle pumps as you take another few inches into your mouth eagerly.[end if] Kitsune let's you continue on your own for a bit, but he seems to be growing a tad bit impatient as his hips suddenly lurch forward, cramming another several inches into you. You can feel his tip press against the back of your throat and you can't help but let out a low moan as he starts thrusting into your mouth at a gentle yet steady pace. As he grows more and more eager, his thrusts get faster and faster until he manages to breach your throat, pressing the final few inches up to the knot inside your mouth. He growls and barks as he redoubles his efforts, his large knot making soft pats as he works to get it past your lips. Harder and harder he presses, until finally, it slips in with a lewd pop. It quickly begins to throb and swell even larger, locking it behind your teeth until he's well and truly finished with you.";
 		WaitLineBreak;
 		say "     You groan lowly around the cock embedded in your mouth and throat, body jolting gently as Kitsune makes his final thrusts to push himself over the edge. You can feel his entire shaft undulate and throb as he reaches his climax, the rush of rich fox seed spilling straight down your throat. You do your best to gulp it down eager, rope of rope of the thick cream quickly filling your stomach. It does stop at that, though, the flow continuing until your belly starts to swell with its volume. Only then does the stream seem to taper off, slowly but surely ending with a final few spurts. You feel a tail gently caressing your belly as Kitsune lets out a content rumble. It seems the two of you will be stuck like this for a fair bit while the fox's afterglow wears off.";
-	PlayerEat 15;
-	PlayerDrink 15; [Values are copy-pasted from Panther Taur oral]
+		PlayerEat 15;
+		PlayerDrink 15;
 	Kitsune_FuckFinish;
 
 
 to say Kitsune_RideCockAnal:
 	setmonster "Kitsune";
-	say "     The silver vulpine smirks and wiggles his tails seductively, eyes running over your [if player is FeralBodied]feral form[else]attractive body[end if], drinking in every detail. He gives a playful growl, walking around you slowly, his tails caressing against your form, making you shiver with desire under their teasing touch. All too soon, the treatment ends, and your left watching as he lies on his back, his body slowly shifting into his quadrupedal form. Once his change is complete, he looks at you with that same look as before, gesturing with his tails, inviting you to climb atop him. [if player is FeralBodied]You do your best to avoid putting too much weight on his, careful footfalls going around the silver fox as you position yourself above his larger body, your chest rubbing against his own fluffy form. [else]Not wanting to keep your lovely companion waiting, you clamber atop his larger form, positioning your rear just above his sheath, feeling his soft fur against you. [end if]";
+	say "     The silver vulpine smirks and wiggles his tails seductively, eyes running over your [if player is FeralBodied]feral form[else]attractive body[end if], drinking in every detail. He gives a playful growl, walking around you slowly, his tails caressing against your form, making you shiver with desire under their teasing touch. All too soo, the treatment ends, and your left watching as he lies on his back, his body slowly shifting into his quadrupedal form. Once his change is complete, he looks at you with that same look as before, gesturing with his tails, inviting you to climb atop him. [if player is FeralBodied]You do your best to avoid putting too much weight on his, careful footfalls going around the silver fox as you position yourself above his larger body, your chest rubbing against his own fluffy form. [else]Not wanting to keep your lovely companion waiting, you clamber atop his larger form, positioning your rear just above his sheath, feeling his soft fur against you. [end if]";
 	LineBreak;
 	say "     The vulpine doesn't let you sit idle for long as you feel a few of his prehensile silver tails wrap themselves around your body. For what they are, the appendages are rather strong, gently lifting you and positioning your rear directly above his sheath, the feeling of that hot fuzzy tube against your hole exciting and enticing, making you wiggle in excitement. [if player is male]Another tail comes around to your already-erecting cock, the soft fur running slowly against sensitive flesh, making you moan quietly as he teases you. [end if][if player is female]At the same time, the fox brings another silver tail-tip to your clit, the bristly-yet-soft fur flicking across that sensitive nub, making you shudder. [end if]With a lustful growl, he gives a gentle buck against you, his sheath bunching up against you, his length eager to come out.";
 	WaitLineBreak;
@@ -120,14 +130,40 @@ to say Kitsune_RideCockAnal:
 	say "     With a low growl, the fox continues to buck and grind against you, not able to get much movement, tied as you are. Still it soon proves to be enough, Kitsune letting out a lustful howl as he climaxes, spilling his rich vulpine spunk into your depths. None of his copious load is able to escape past the firm seal of his knot, so each and every shot of seed into your body makes your belly bloat just a bit, until his climax finally ends, leaving the both of you panting, waiting for his knot to come down. A wave of exhaustion crashes over you, feeling the sudden desire to rest. You lie down, pressing your [if player is MuzzleFaced]muzzle into his chest, nuzzling your foxy companion with a happy sigh[else]face into his fluffy chest, nestling in against him with a contented sigh[end if].[mimpregchance]";
 	Kitsune_FuckFinish;
 
-Section 2.2 - Kitsune Decide
+[to say Kitsune_VaginalMissionary:
+	say "     Shivering as the silver vulpine steps towards you, his paw gently reaches forward to caress your [if player is FeralBodied]feral form[else]needy body[end if], his tail flicking about behind him. With a sudden tug, he pulls you up against his chest, the heavy scent of this powerful male making your head spin. It fills your thoughts as you feel his paws slide down your back and over your ass, suddenly taking hold and hefting you up into his arms. You let out a small whine of need as he carries you over to the bed, your own needy scent mixing with his as your body prepares itself for what it knows comes next. As he lays you down, you spread out for him, baring everything to the stud about to claim you. His paws slide over your hips as your eyes are drawn down towards his crotch, that plump sheath swelling as the tip of his shaft starts to slip out.";
+	LineBreak;
+	say "     Squirming beneath his gaze, you feel his paws exploring your body, carressing your [if breast size of player > 0]supple breasts[else]chest[end if] as he moves ontop of you. A thick drop of pre leaking out of his swelling shaft as he slides his paw down your stomach, slowly making his way down to your crotch. He pauses for a moment to admire your [if player is male]shaft and [end if]pussy, licking his lips and growling possesively. Taking hold of your hips, he presses the tip of his shaft against your folds, letting his pre spread across them as you squirm in his grasp, your needy folds [if player is male]and pulsing shaft [end if]crying out for attention.";
+	WaitLineBreak;
+	say "     ";
+	Kitsune_FuckFinish;]
 
-to say Kitsune_Decide:
-	say "     <super duper placeholder. This will be a very big thing when done.>";
+
+to say Kitsune_PowerBottom:
+	setmonster "Kitsune";
+	say "     Grinning and pressing up against the silver vulpine, you slide your hand down his stomach and across his crotch, taking hold of his balls as you gently roll them about in your palm. The Kitsune lets out a gasp as you tease and play with him, his shaft quickly swelling and leaking pre. Nibbling along his neck, you continue to work him up, taking hold of his shaft as it swells and gently stoking it, his strong scent filling the air. You whisper into his ear about how badly you want his cock, about how good it's going to feel when he's fucking you good and hard. You hear him let out a needy growl as he reaches around you to take hold of your ass, pulling you close.";
+	LineBreak;
+	say "     You stand there, stroking his shaft and winding him up, knowing full well how strong and controlling he can be. You know what will come next, and it'll only take a little more prodding to get him ready. Sliding down to your knees, you run your tongue along his shaft, flicking it against the tip and tasting the dropplets of pre that have formed there. His paw comes to rest at the back of your head as he urges you to start sucking. Giving him a sly wink, you instead wrap one hand around the base of his shaft and cup his balls with the other. Stroking and licking at his shaft, you hear his huffs and growls as you tease him, keeping him on edge. Soon, you gently wrap you lips around the tip of his shaft and suckle on it, lapping up every drop of pre that comes spurting out. His hips buck with need as he tries to force more of his shaft into your maw, but you keep him at back, bringing him closer and closer to climax before suddenly pulling back and letting go, leaving him panting and huffing. You see the primal need in his eyes as you stand back up and spin around and quickly make your way over to the bed. His heavy footsteps and heavy breath tell you all you needy to know as you strip down and ready yourself for what's next.";
+	WaitLineBreak;
+	say "     As the last of your clothes hit the floor his paws come down on your shoulders, gripping them tight and pushing you forward and down onto the bed. Letting out a moan, you sway your hips at him and reach back to spread your cheeks apart. His paws soon take hold of your hips as he climbs up ontop of you, his thick shaft grinding against your pucker and coating it in his pre. 'Aww, what's the matter, did someone leave you unfulfilled' you say with a teasing tone. His responce is a throaty growl and his hips bucking against your, the tip of his vulpine cock pressing against your asshole. Glancing back at him, you smile and buck back, forcing it in and clenching down around it. His grip tightens as he pushes forward, slamming the rest of his length in, his body leaning over you as he starts to pull back. Not wanting to miss out, you roll your hips and squeeze down hard around him, doing your best to drive him wild. His hips slam back against yours as he starts fucking you in earnest, a paw coming up from your hip to wrap around your chest. With each thrust you can feel the beginings of his knot forming, the base of his shaft swelling and stretching you open a little more each time.";
+	say "     Bracing yourself on one arm, you reach back to run your fingers through his fur. You feel your way around till you find his shoulder and suddenly take hold, pulling him down ontop of you as you groan beneath him. 'Is this all you've got? I was expecting something more. Come on already, I came here to get fucked, not lightly massaged. Or are you not the stud you claim to be.' you say as your hips slam back into his. He growls and bites down on the nape of your neck, claiming you as he would a feral bitch. Your hips move in time with his, sliding forward as he pull back, clenching down on the growing knot before it slips out, and then meeting his return thrust with your own. You rolls and twist your hips as you work his shaft inside you, milking out thick spurts of pre that only aid in your endevors. But all good things must come to an end, and as you feel his knot getting harder to fit past your ring, you dig your hand into his fur and grip it tight, pulling hard as you let out a howl and jam your hip against his, clenching down hard and holding him there as his knot swells inside you.";
+	WaitLineBreak;
+	say "     He grinds and presses his body against yours as he ties you, desperately trying to push deeper in as your walls squeeze and hold him still. 'Just, a little longer, I want to feel you squirming ontop of me' you say as he huffs and growls, trying to get that last bit of stimulation he needs to cum. Deciding he's earned his reward, you relax your muscles for a moment before clenching down as hard as you can on his knot. He howls out above you as his knot and shaft suddely swell with cum, his length pulsing and throbbing inside you as you feel the warm tingle of his seed inside you, [if player is male]your own seed staining the sheets beneath you as you reach your own climax.[else if player is female]your feminine juices staining the sheets beneath you as you reach your own climax.[else]your body shaking in pleasure as you reach your own climax.[end if] Collapsing onto the sheets you smile to yourself as you feel his knot still twitching inside, the occasional spurt of cum making you shiver as you both wait for his knot to come down. Closing your eyes you lay there in bliss.[mimpregchance]";
 	Kitsune_FuckFinish;
 
 
-Section 2.4 - Functions
+to say Kitsune_OralDom:
+	say "     You watch as the silver vulpine's gaze wanders down to your crotch, his tongue licking across his lips as he lets out a soft growl. Running his paws over your hips, he leans forward and nibbles at your neck playfully, slowly guiding you back towards the bed. You shiver in anticipation as one of his paws brushes across your [if player is female]moistening folds and [end if]swelling shaft. You let out a whimper as you feel the edge of the bed pressing into the back of your legs, his body pushing up against yours as his paw begins to caress your shaft[if player is female] and tease your pussy[end if]. With a soft push, you fall back onto the bed and watch helplessly as he takes hold of your legs, slowly spreading them apart with a mischievous grin.";
+	LineBreak;
+	say "     With your legs spread wide, he has full access to your [if player is female]dripping folds and [end if]twitching shaft. You wiggle as his paws slide up your thighs and he drops down to his knees, his muzzle hovering above your crotch as he stares it hungrily. His head dips down as he runs a tongue across your length, making it switch and spurt out a dribble of pre, his body and scent driving your wild while his gaze reminds you to stay still and let him take what he wants. A paw comes up to wrap around your shaft as he laps at the tip, those soft paw pads squeezing and stoking your length as you lay there[if player is female] pausing occasionally to slip under your balls and give your button a lick[end if]. Bunching the sheets in your hands, you let out a long low moan as your body responds to his every touch, your shaft now dribbling a steady stream of pre that he eagerly laps up.  Looking down at him, all you can manage is a pleading expression.";
+	WaitLineBreak;
+	say "     His eyes light up as sees your face, and he gives your length one long lick from base to tip, before wrapping his lips around it and beginning to gently suck on your suck, his head bobbing ever so slightly as his tongue continue to slick across the tip. Your hips twitch and buck under his ministrations, your body writhing on the bed as his paws caress your form, playing with your body but also keeping you pressed down into the bed. You can feel him beggining to take more and more of your shaft into his muzzle with each bob of his head, his tongue switching from lapping at the tip to slipping around the sides and rolling across the bottom of your cock. You whine and moan with need as he works you up slowly, as soon as he finds a weak spot, he plays with it to get you close, and then backs off to continue exploring. It's driving you crazy, forced to lay there as he holds your release hostage, always so close but never quite enough.";
+	say "     Your pre is coming out in heavy spurts now, you can feel him greedily swallowing it down as your tip starts to press into the back of his throat, those tight walls rippling across your head as his tongue presses and grinds along the underside of your cock. You hear and feel him letting out a gently growl as he suddenly presses his muzzle down over your shaft, sliding your shaft into his throat and presses his nose into your crotch. He holds it there as his paws grip your hips, holding you still while the rest of you writhes on the bed. His throat milking your length for all the pre it can give before suddenly pulling his muzzle back and sliding your length out to the tip. You're given the briefest of moments to catch your breath before his mouth slams back down on your cock, his head rapidly bobbing up and down your length, his throat clenching and rippling around your shaft each time it's force in. You throw you head back and yell, back arching as he assaults your cock with his mouth.";
+	LineBreak;
+	say "     Unable to hold back, you try to thrust your hips up and into his muzzle, but his strong grip keeps you pinned to the bed. Your shaft swelling and pulsing with your climax as you unload into his maw, thick streams of cum painting the back of his throat white as he once more presses his muzzle down into your crotch and gulps around your cock. His gullet works to squeeze every last drop of cum it can from you. Whimpering and twitching on the bed, you ride out your climax like this, your hips held firmly in place as he drinks his fill of your seed. Not long after you taper out, he pulls back and slips your cock out of his lips, licking them with a smile on his face as he gets to his feet. Giving you a wink as you lay there exhausted on the bed, he turns around and saunters off, stretching his arms out and then giving his throat a gentle rubbing.";
+	Kitsune_FuckFinish;
+
+Section 2.2 - Functions
 
 to Kitsune_FuckFinish:
 	now Kitsunearoused is 2;
@@ -150,7 +186,7 @@ to say Kitsune_OldAnalDom:
 	say "Kitsune is not long in chasing after you in the frantic race towards rapture as the fox lifts his fangs free from your neck and then tips his head up to howl at the ceiling powerfully. A shudder goes through the mythical creature's body just in time for you to feel a blazing heat spill forward into your guts. You have to actually suck air through your teeth as you feel the pressure of the flood going through you so powerfully that it act bursts through into your stomach which subsequently makes you feel dizzy from both the heat and intensity. Because of your position you can't see it, but had you been able to you would have notice a small mound starting to swell up inside of your tummy from the rising tide of fox cum filling you to the brim. Flush with orgasm you can only turn your head to the side to nuzzle Kitsune's snout when the other brings his own head down to pant quietly into your face. This definitely has been an experience that you are looking forward to repeating, you think just before passing out onto the top of Kitsune's bed. You never notice when the other pops himself free from your loosened tunnel an hour later, or to how the vulpine stuffs his tongue underneath your rump to clean his seed from out of you with his playful organ.[mimpregchance]";
 	Kitsune_FuckFinish;
 
-to say Kitsune_OldVagDom:
+to say Kitsune_OldVaginalDom:
 	setmonster "Kitsune";
 	say "Bashfully asking Kitsune to fill your wet cunt, you get a surprise when not only does the Kitsune nod to show his acceptance of your request but then backs himself away from you to get down onto all fours. Your eyes are slightly mesmerized as you watch the form of the silver fox-man melt and then shift until -- once again -- the Kitsune takes on the animal-like form you remember seeing that one time before. Standing as rigid and proud as he had on that day, you blush warmly as you slowly strip off your clothes and then reveal to the Great Dane-sized fox your juicy box. Gaping slightly in readiness for your lover, Kitsune doesn't waste any time as he bumps his canid head into your legs, telling you without words to get down onto your knees. Complying with what your mate wishes, you find yourself getting into the classic doggy position just in time to feel something warm and wet caressing itself onto the sides of your female folds.";
 	say "Turning back to look at the other you can just barely make out the sight of Kitsune's head dipped down into the spread opening of your legs. Blushing somewhat at both the feeling of the fox's thick tongue slipping inside of you and the knowledge of what is going to be stuffing itself into your hot puss soon, you shuffle your thighs open just a little bit more as you silently ask the vulpine to continue preparing you for what's to come. The silver fox seems grateful for your aid because he quickly pushes his cool and moist nose inside of your cunt, well past your clitoris, on close up into the lower area of your cervix. Not knowing how the other is breathing around your honeyed depths, you find yourself not caring much as the fox's tongue is soon cleaning you out and spreading you open into new and unusual dimensions. A few licks later your legs feel like they are about to turn into melted butter and you actually whine like a vixen in heat as you shake your rump for Kitsune to move things forward to the main event. Thankfully Kitsune does just that as he pulls himself out of you to lick his snout just before you can collapse onto the floor. It's a good thing you have some strength remaining to hold yourself up because just as soon as he is done sampling the flavor of your cunt the fox is placing himself up and across your backside.";
