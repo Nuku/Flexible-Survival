@@ -1,24 +1,32 @@
-Version 2 of Hanu by Kernog begins here.
+Version 3 of Hanu by Kernog begins here.
 
-"Rework of Hanu from Misc 9 by Kaleem mcintyre, integration with Zoo Month, sidequest(s) with Monkey King allowing for monkey group enemies to get released into the zoo."
+"V3: Inclusion of Loyalty and PreReq features. Hanu becomes a fully-fledge NPC and is now in the newly built Monkey House"
+"V2: Rework of Hanu from Misc 9 by Kaleem mcintyre, integration with Zoo Month, sidequest(s) with Monkey King allowing for monkey group enemies to get released into the zoo."
 
-acquaintedWithHanu is a number that varies. [0: not met, 1: met and trained with]
+Section 1 - Hanu NPC
 
-This is the monkeyAcquaintancesCheck rule:
-	if acquaintedWithHanu is 1 and acquaintedWithWukong >= 3:
-		now Monkey Duel is active;
+[REPLACE WITH HANU NPC AND MONKEY HOUSE]
 
-Section 1 - Original situation
-
-Table of GameEventIDs (continued)
+Table of GameCharacterIDs (continued)
 Object	Name
 Hanu	"Hanu"
 
-Hanu is a situation. The sarea of Hanu is "Zoo".
+Hanu is a person. Hanu is in Monkey House.
+The description of Hanu is "[hanuDesc]";
 
-Instead of resolving a Hanu:
+to say hanuDesc:
+	if Monkey Duel is inactive:
+		say "Weird monkey";
+	else if Monkey Duel is unresolved:
+		say "Weirder monkey";
+	else if Resolution of Monkey Duel is not 1:
+		say "Poor monkey";
+	else:
+		say "Boss monkey";
+
+Instead of going to Monkey House for the first time:
 	say "Coming to one of the less exposed area of the zoo you find yourself coming across a monkey-shifted man sitting quietly on top of a rock, meditating in the lotus position. 'About time you showed up.' The voice of the simian catches you slightly off guard as you find the other speaking to you while keeping his eyes close. 'Yes, I'm talking to you. Come on over here so we can start training.'";
-	say "You look at him, intrigued, while his long tail slowly curls around the left side of his body. He gives off an aura of calmness, with his groomed dark brown fur ruffled softly by the wind alongside his long, straight hair, and his slow breathing shifting the abdominals of his trained body[if acquaintedWithWukong > 0]. The monkey brings back the memory of Wukong from the Museum in your mind, but this one feels different[end if]. His face beams with a light smirk as he awaits your answer. [bold type]Do you want to train with this strange simian?[roman type][line break]";
+	say "You look at him, intrigued, while his long tail slowly curls around the left side of his body. He gives off an aura of calmness, with his groomed dark brown fur ruffled softly by the wind alongside his long, straight hair, and his slow breathing shifting the abdominals of his trained body[if Monkey is listed in the EncounteredEnemies of player]. The monkey brings back the memory of Wukong from the Museum in your mind, but this one feels different[end if]. His face beams with a light smirk as he awaits your answer. [bold type]Do you want to train with this strange simian?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -32,14 +40,42 @@ Instead of resolving a Hanu:
 		if humanity of player > 100, now humanity of player is 100;
 		Increase maxHP of player by 5;
 		Increase score by 5;
-		now acquaintedWithHanu is 1;
-		follow the monkeyAcquaintancesCheck rule;
-		now Resolution of Hanu is 1; [trained with him]
+		now Monkey Duel is active;
 	else:
 		LineBreak;
-		say "Waving the other off you turn and head about your way without another word spoken.";
-		now Resolution of Hanu is 2; [left him]
-	now Hanu is resolved;
+		say "You politely refuse Hanu's offer, arguing that you have more pressing matters. 'Hmf,' the monkey replies. 'You should take the time to meditate and reflect on your personality. I remain here. Come back and talk to me if you reconsider my offer.";
+
+instead of conversing Hanu:
+	if Monkey Duel is inactive:
+		say "Training offer";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
+		if player consents:
+			LineBreak;
+			say "Deciding what the hey you move over to where the other creature is, hopping over the fence that separates you both as you do, and then step over to the monkey man. What happens next turns out to be something you hadn't been expecting because instead of sex... you wind up finding yourself being asked several strange questions by the other, whose name happens to Hanu, and then being shown several strange yoga positions, which you find yourself going through with some problems. The next hour and a half of your life ends up being spent with Hanu meditating, a strange practice in and of itself, all things considered. However, end up finding yourself very refreshed once the moment is done.";
+			say "'That was fun.' Hanu slowly uncrosses his legs and then uses his tail to lift himself up onto his feet. 'I think that I'm going to go and head back for home now. I hope you take well care of yourself[if player is not defaultnamed], [name of player][end if].' And with that Hanu springs up over your head up onto the concrete wall that divides the zoo from the outside world, turns to wave at you and then disappears out of sight. Not sure what that was about you mildly wonder who that crazy monkey guy was.";
+			decrease libido of player by 10;
+			if libido of player < 0, now libido of player is 0;
+			increase humanity of player by 20;
+			if humanity of player > 100, now humanity of player is 100;
+			Increase maxHP of player by 5;
+			Increase score by 5;
+			now Monkey Duel is active;
+	else if Monkey Duel is unresolved and (Take My Royal Word For Granite is resolved or Hunt Of Mammoth Proportions is resolved):
+		resolve Monkey Duel;
+	else if the resolution of Monkey Duel is not 1:
+		say "Prisoner dialogue";
+	else:
+		say "Am the boss dialogue";
+
+Instead of fucking Hanu:
+	if Monkey Duel is unresolved:
+		say "No";
+	else if Resolution of Monkey Duel is 1:
+		say "Special training";
+	else:
+		say "Royal wand scene";
 
 Section 2 - Monkey Duel
 
@@ -48,8 +84,6 @@ Object	Name
 Monkey Duel	"Monkey Duel"
 
 Monkey Duel is a situation.
-Monkey Duel is inactive.
-The sarea of Monkey Duel is "Zoo".
 
 Instead of resolving Monkey Duel:
 	say "     'About time you showed up[if player is not defaultnamed], [name of player][end if].' a familiar voice calls you out as you pass under a large tree. Hanu, the monkey with whom you meditated with earlier, is sitting leisurely on one of the branches, his long tail waving at you. With surprising agility, Hanu jumps down from his perch and makes a perfect landing just in front of you. 'You seem to have an habit of being late for training, my pupil. But no matter, let us practice our kung fu together.'";
@@ -59,7 +93,7 @@ Instead of resolving Monkey Duel:
 	say "     ([link]N[as]n[end link]) - No more monkey business.";
 	if player consents:
 		LineBreak;
-		say "     'The Monkey King? At the Museum?' Hanu remains silent a short moment, before smiling softly. 'What an interesting story you have, my dear pupil. And worrying too.' He puts a hand to his chin, pensive. 'This [']Wukong['] person seems quite the brash ruffian, and violent too. He is completely misusing his natural talents[if acquaintedWithWukong is 3]. And to top it off, it seems that he encouraged you to follow his ways[else]. And to top it off, it seems that you had to take responsibility for his actions instead of me[end if]. You did good to bring the existence of this person to my attention.'";
+		say "     'The Monkey King? At the Museum?' Hanu remains silent a short moment, before smiling softly. 'What an interesting story you have, my dear pupil. And worrying too.' He puts a hand to his chin, pensive. 'This [']Wukong['] person seems quite the brash ruffian, and violent too. He is completely misusing his natural talents[if Loyalty of Wukong is 2]. And to top it off, it seems that he encouraged you to follow his ways[else]. And to top it off, it seems that you had to take responsibility for his actions instead of me[end if]. You did good to bring the existence of this person to my attention.'";
 		say "     'I need to take responsibility as well, and bring him to reason. It is time for me to go on a journey to the Museum. [bold type]Will you accompany me?[roman type]'[line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
@@ -69,9 +103,7 @@ Instead of resolving Monkey Duel:
 			say "     'Good,' Hanu nods. 'And I have the best tool for the situation at end. Wait for me at the entrance of the Museum.'";
 			say "     A moment later, you arrive at the rendezvous point. Hanu meets you a dozen minutes later. He came with his own martial arts staff, but also with a heavy-looking collar. Noticing your interest for the item, Hanu hands it to you. The collar is mostly leather, albeit you notice a thick metallic thread running around the inner side, and a small block at the back of the collar, with a lightning bolt sticker on it. 'Yes, this is what you think it is,' the monkey says. 'A [']crown['] of some sort, for our brash king, like in the story. Now, let us not waste time.'";
 			WaitLineBreak;
-			say "     You guide Hanu to the Asian exposition, and its tacky decorum. As usual, Wukong is there to welcome you. [if acquaintedWithWukong is 3]'If it is not my most trusted servant. And who are you bringing with you? A new friend?'[else]'You little pile of manure! How dare you show your face to me?! And who did you bring? An imposter?'[end if]";
-			say "     'My name is Hanu,' the other monkey introduces himself. 'And I am here to teach you some manners.'";
-			say "     'Bring it, then, you fart!' Wukong growls as he launches himself on his opponent.";
+			say "     You guide Hanu to the Asian exposition, and its tacky decorum. As usual, Wukong is there to welcome you. [if Loyalty of Wukong is 2]'If it is not my most trusted servant. And who are you bringing with you? A new friend?'[else]'You little pile of manure! How dare you show your face to me?! And who did you bring? An imposter?'[end if][line break]'My name is Hanu,' the other monkey introduces himself. 'And I am here to teach you some manners.'[line break]'We finally meet. It does not matter. I finished breeding my own little court, and I will have them take over this [']Zoo['] place for me. Bring it, you fart!' Wukong growls as he launches himself on his opponent.";
 			say "     The two monkeys engage in a spectacular brawn, filled with acrobatics and intricate martial art moves. You feel as if you have been drawn in a wuxia movie. The fight began with the two warriors evenly matched; Wukong's offensive and powerful strikes meet the fluid moves and the counter-attacks of Hanu. As the battle goes on, Hanu is slowly getting the upper hand, conserving his stamina against his brasher opponent.";
 			say "     Wukong initiates a desperate-looking series of blow, pressuring Hanu backwards. You suddenly realize that it is part of his plan, as Hanu's backwalk leads him closer and closer to a now-empty podium. [bold type]This battle can only have one winner, and it will depend on if you warn Hanu, or stay quiet and let the battle unfold. What do you do?[roman type][line break]";
 			LineBreak;
@@ -82,11 +114,7 @@ Instead of resolving Monkey Duel:
 				say "     For a moment, you fear that Hanu did not hear you. But, just as he was about to bump the furniture, he does a gracious backflip over the object, Wukong's staff missing the target by a hair's breath. Taken by his momentum, Wukong leaves his face open to a counter-strike, an opportunity that Hanu does not wastes. His own weapon bongs loudly against the other monkey's cranium, sending its own flying in the air.";
 				say "     As soon as the monkey king touches the ground, his kin is already on him and clips the heavy shock collar on his neck. 'Wha- what is thi-guuuuh!' A pained and panicked Wukong tries to remove the collar, but the item has been padlocked and his efforts are useless.";
 				WaitLineBreak;
-				say "'All is well that ends well,' Hanu says, playing with the collar's remote in his hands.";
-				say "'Get. This. Thing. Off! Guaaak!' Wukong shouts at him, before another zap shuts him off.";
-				say "'I shall bring you home and teach the manners befitting a [italic type]real[roman type] martial artist,' the monkey king's new master claims. 'I will teach you to control your emotions and your lust.'";
-				say "'You bastard! Put me down. My men will look me for anyway, and you should prey that they do not find you, you-owowOw! Stop! Stop with this colla-arg!'";
-				say "'You should visit us, when you have time. To check on our friend's training. I will have him tamed in no time, you'll see.";
+				say "'All is well that ends well,' Hanu says, playing with the collar's remote in his hands.[line break]'Get. This. Thing. Off! Guaaak!' Wukong shouts at him, before another zap shuts him off.[line break]'I shall bring you home and teach the manners befitting a [italic type]real[roman type] martial artist,' the monkey king's new master claims. 'I will teach you to control your emotions and your lust.'[line break]'You bastard! Put me down. My men will look me for anyway, and you should prey that they do not find you, you-owowOw! Stop! Stop with this colla-arg!'[line break]'You should visit us, when you have time. To check on our friend's training. I will have him tamed in no time, you'll see.";
 				say "     On these words, Hanu leaves you, a bruised and reluctant Wukong on his shoulders. A short moment after, you also make your way to the museum's lobby.";
 				WaitLineBreak;
 				move player to Museum;
@@ -95,16 +123,11 @@ Instead of resolving Monkey Duel:
 			else:
 				LineBreak;
 				say "     'Hanu's back bumps into the podium. Hanu is distracted for a second. Long enough for Wukong to pole-vault in the air with his staff and drop-kick Hanu. You see the older monkey fly in the air, toppling the podium and crashing into an exposition case behind. While Hanu crawls on the ground, knocked out, Wukong notices the shock collar, that Hanu dropped on the floor during his fall. 'Well, that is interesting.'";
-				say "     Hanu gets back on his feet, but is too groggy to prevent Wukong from clipping the collar around his neck. 'What did you put on my... Oh...' Hanu watches Wukong playing with the collar's remote. 'W-wait, please dnnnng!' Hanu falls to his knees, hands grabbing his neck in pain, as electricity run through the restraint.";
-				say "'What an interesting toy, indeed,' Wukong says. 'Did you intend to use this on me, you knave?'";
-				say "'Nnn... Gh. I, I-aaargh!' Another electric discharge makes Hanu writhe on the ground. As he falls on his back, you and Wukong notice something quite embarrassing.";
-				say "'Oh my. Are you having an erection? Is being humiliated so exciting?' Wukong asks.";
-				if acquaintedWithWukong is 3:
-					say "     Finally taking notice of you, Wukong looks in your direction. 'I did not think you were the one to bring gifts, [if player is not defaultnamed][name of player][else]my friend[end if]. And here you are, offering me a new pet, just for me.' The golden-furred monkey runs up to you and steals a kiss from your lips. 'Hee hee. You know, while you were gone, I went out and made a number of followers. I will have them make the home of this pitiful excuse for a monkey mine and move there once it is done.'";
-					say "     Wukong grabs Hanu by the collar. 'Just be careful. I tried to tell them about you, but they hardly listen. Not really quality servant material, unlike you. Take care~.' Once the two monkeys are gone, you also make your way to the museum's lobby.";
+				say "     Hanu gets back on his feet, but is too groggy to prevent Wukong from clipping the collar around his neck. 'What did you put on my... Oh...' Hanu watches Wukong playing with the collar's remote. 'W-wait, please dnnnng!' Hanu falls to his knees, hands grabbing his neck in pain, as electricity run through the restraint.[line break]'What an interesting toy, indeed,' Wukong says. 'Did you intend to use this on me, you knave?'[line break]'Nnn... Gh. I, I-aaargh!' Another electric discharge makes Hanu writhe on the ground. As he falls on his back, you and Wukong notice something quite embarrassing.[line break]'Oh my. Are you having an erection? Is being humiliated so exciting?' Wukong asks.";
+				if Loyalty of Wukong is 2:
+					say "     Finally taking notice of you, Wukong looks in your direction. 'I did not think you were the one to bring gifts, [if player is not defaultnamed][name of player][else]my friend[end if]. And here you are, offering me a new pet, just for me.' The golden-furred monkey runs up to you and steals a kiss from your lips. 'Hee hee. You know, while you were gone, I went out and made a number of followers. I will have them make the home of this pitiful excuse for a monkey mine and move there once it is done.' Wukong grabs Hanu by the collar. 'Just be careful. I tried to tell them about you, but they hardly listen. Not really quality servant material, unlike you. Take care~.' Once the two monkeys are gone, you also make your way to the museum's lobby.";
 				else:
-					say "     Finally taking notice of you, Wukong looks in your direction. '[if player is not defaultnamed][name of player][else]You[end if]... I did not forget the humiliation that you put me through. 'While you were away, I went out and made a number of followers. First, I will have them make the home of this pitiful excuse for a monkey mine and move there once it is done. After that, I will come for [italic type]you[roman type]. Just you wait.'";
-					say "     Wukong grabs Hanu by the collar, and disappear into the museum. Once the two monkeys are gone, you also make your way to the museum's lobby.";
+					say "     Finally taking notice of you, Wukong looks in your direction. '[if player is not defaultnamed][name of player][else]You[end if]... I did not forget the humiliation that you put me through. 'While you were away, I went out and made a number of followers. First, I will have them make the home of this pitiful excuse for a monkey mine and move there once it is done. After that, I will come for [italic type]you[roman type]. Just you wait.' Wukong grabs Hanu by the collar, and disappear into the museum. Once the two monkeys are gone, you also make your way to the museum's lobby.";
 				say "[italic type]Wukong's thugs should be at the Zoo, by the time you go back.[roman type]";
 				WaitLineBreak;
 				move player to Museum;
@@ -112,21 +135,18 @@ Instead of resolving Monkey Duel:
 		else:
 			LineBreak;
 			say "     'Well that was... Blunt,' Hanu reacts. 'But do not worry. I am sure that I can hold my own against our young [']friend[']. Wish me luck, my pupil.' You were about to correct him but Hanu was already on his way to the museum. Shaking your head, you finish your walk, wondering how the whole affair will conclude. A while after, the air fills with monkey noises and people shouting. What happened?";
-			say "     Heading to the entrance, you have barely the time to hide behind a tree as a pair of thuggish-looking monkeys walk by. You eavesdrop their conversation.";
-			say "'So, that's where that asshole came from?'";
-			say "'Yeah. The King wants us to make this place our turf while the other guy has been driven away. Apparently, he will come here in a few days to visit.'";
-			say "'With his new bitch?'";
-			say "'Heh heh. Nothing better than to twist the knife in the wound, right?'";
+			say "     Heading to the entrance, you have barely the time to hide behind a tree as a pair of thuggish-looking monkeys walk by. You eavesdrop their conversation:";
+			say "'So, that's where that asshole came from?'[line break]'Yeah. The King wants us to make this place our turf while the other guy has been driven away. Apparently, he will come here in a few days to visit.'[line break]'With his new bitch?'[line break]'Heh heh. Nothing better than to twist the knife in the wound, right?'";
 			say "The two monkeys snicker and walk away. [italic type]It seems that Hanu lost in your absence, and that Wukong sent some thugs at the Zoo.[roman type]";
 			now Resolution of Monkey Duel is 3; [left the monkeys to fight]
 		now the area corresponding to a name of "Monkey" in the Table of Random Critters is "Nowhere";
 		now the area corresponding to a name of "Wukong Thugs" in the Table of Random Critters is "Zoo";
+		move Wukong to Monkey House;
+		now Monkey Duel is resolved;
 	else:
 		LineBreak;
-		say "     You blurt out the best excuse you can think of and walk away from the awkward situation as fast as you can, while Hanu sighs loudly in your general direction.";
-		now Resolution of Monkey Duel is 99; [disinterest]
-		now acquaintedWithHanu is 0; [locks Monkey Duel from further acquaintance checks]
-	now Monkey Duel is resolved;
+		say "     You blurt out the best excuse you can think of and walk away from the awkward situation as fast as you can, while Hanu sighs loudly in your general direction. 'You are hiding something from me, don't you? It does not matter. Talk to me again once you are ready to divulge your little secret.'";
+
 
 
 Section 3 - Monster infections
@@ -363,5 +383,10 @@ to say losetoWukongThugs:
 			say "     Despite the space getting cramped, other simians still find the place to gnaw on your breasts, kneading them and play-biting your nipples, and enjoying the high-pitched grunts escaping from between the legs of the monkey fucking your face.";
 		WaitLineBreak;
 	say "     Stuck in the middle of the monkey gang-bang, you are forced to endure long minutes of being used sexually in every possible way thinkable. As soon as one of the monkey finish, another takes their place, until everyone in the gang has had a turn with you. Once they are done, they leave your tired, cum-covered body, laughing and hooting about the good time they just had.";
+
+Section 3 - Monkey House
+
+Monkey House is a room.
+The description of Monkey House is "[monkeyHouseDesc]".
 
 Hanu ends here.
