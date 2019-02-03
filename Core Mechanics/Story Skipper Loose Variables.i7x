@@ -343,10 +343,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is AbandonedRoomStatus;
 		-- "absorb":
 			now NumberVarValue entry is absorb;
-		-- "acquaintedWithHanu":
-			now NumberVarValue entry is acquaintedWithHanu;
-		-- "acquaintedWithWukong":
-			now NumberVarValue entry is acquaintedWithWukong;
 		-- "addedlibido":
 			now NumberVarValue entry is addedlibido;
 		-- "afsmread":
@@ -2483,6 +2479,10 @@ to NumberVariableSave:
 			now NumberVarValue entry is SkarnothLibraryEntry;
 		-- "SkarnothMasterSlave":
 			now NumberVarValue entry is SkarnothMasterSlave;
+		-- "SkarnothThongStatus":
+			now NumberVarValue entry is SkarnothThongStatus;
+		-- "SkarnothDrugStatus":
+			now NumberVarValue entry is SkarnothDrugStatus;
 		-- "skipturnblocker":
 			now NumberVarValue entry is skipturnblocker;
 		-- "skrp":
@@ -4047,10 +4047,6 @@ to VariableNumberLoad:
 					now AbandonedRoomStatus is numberVarValue entry;
 				-- "absorb":
 					now absorb is numberVarValue entry;
-				-- "acquaintedWithHanu":
-					now acquaintedWithHanu is numberVarValue entry;
-				-- "acquaintedWithWukong":
-					now acquaintedWithWukong is numberVarValue entry;
 				-- "addedlibido":
 					now addedlibido is numberVarValue entry;
 				-- "afsmread":
@@ -6185,6 +6181,10 @@ to VariableNumberLoad:
 					now SkarnothLibraryEntry is numberVarValue entry;
 				-- "SkarnothMasterSlave":
 					now SkarnothMasterSlave is numberVarValue entry;
+				-- "SkarnothThongStatus":
+					now SkarnothThongStatus is numberVarValue entry;
+				-- "SkarnothDrugStatus":
+					now SkarnothDrugStatus is numberVarValue entry;
 				-- "skipturnblocker":
 					now skipturnblocker is numberVarValue entry;
 				-- "skrp":
