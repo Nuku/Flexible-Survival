@@ -30,7 +30,13 @@ Add first ending, add cock/wing/horns tf to description (for later inclusion), a
 
 
 KyrverthRoomConnection is a number that varies.[@Tag:NotSaved]
-an everyturn rule:
+an everyturn rule: [bugfixing rules for players that import savegames]
+	if KyrverthStage > 0 and SilverToken is 0 and PlayerFriended of Kyrverth is false and Resolution of Jewel Heist is 0 and Jewel Heist is resolved: [player on the quest, hasn't got the token on them and hasn't handed it in either - so Jewel Heist should be unresolved]
+		now Jewel Heist is not resolved;
+	if KyrverthStage > 0 and Jewel Heist is inactive:
+		now Jewel Heist is active;
+	if Resolution of Strange Sighting is 0 and Strange Sighting is active:
+		now Strange Sighting is not resolved;
 	if Strange Sighting is resolved and Resolution of Strange Sighting is 1 and KyrverthRoomConnection is 0: [event resolved the right way, room not connected yet]
 		change the South exit of Overgrown Street to Dragons Den;
 		change the North exit of Dragons Den to Overgrown Street;
@@ -290,17 +296,16 @@ to say KyrverthMainChat:
 	else if randomnumber <= 100: [large chance to see, reminds player about quest]
 		if KyrverthStage is 0:
 			say "     [if KyrverthQuestGiven is 1]'Any luck finding some [bold type]Jewels[roman type]?'[else]'Thanks for agreeing to help me out, it's going to be awesome to have a hoard!'[end if]";
-			now Jewel Heist is not resolved;
+			now Jewel Heist is active;
 		else if KyrverthStage is 1:
 			say "     'Thanks for the help' He grabs the silver token around his neck and shows it to you 'This is [one of]awesome[or]great[at random]!' [if KyrverthQuestGiven is 1]He [one of]glances[or]looks[or]peers[at random] at your backpack 'Have you [one of]found[or]managed to get[at random] any chainmail? I hate those [one of]so-called[or]damned[at random] [']knights['].'[else][end if]";
-			if KyrverthQuestGiven is 1:
-				say "     ";
 		else if KyrverthStage is 2:
 			say "     'Have a look at this hoard! It looks great, and I couldn't have gotten it together without you'";
 			if KyrverthQuestGiven is 1:
 				say "     'Have you fought any eastern dragons? They need taking down a peg...'";
 		else if KyrverthStage >= 3:
 			say "     'This is a great hoard you've given me, I can grow it on my own from now on, but please don't forget that I owe you one.'";
+			EnableKyrverthItemEvents;
 	else:
 		say "BUG - Please report to the Developers on the FS discord channel and quote: [randomnumber]";
 	if KyrverthStage is 3:
@@ -613,10 +618,12 @@ Instead of resolving a Strange Sighting: [Very first meeting with the dragon]
 		move player to Grey Abbey Library;
 		increase score by 2;
 		now KyrverthLockoutTimer is (turns + 4);
+		now Resolution of Strange Sighting is 2; [Player encountered Kyrverth.]
 	else:
 		LineBreak;
 		say "     You decide to take caution in what could possibly be [one of]a trap[or]an ambush[at random] and continue on your way.";
 		now KyrverthEndingTimer is turns;
+		now Resolution of Strange Sighting is 1; [player did not encounter Kyrverth. End things here.]
 	now KyrverthTimer is Turns; [deprecated but leaving in here because it's useful]
 	now Strange Sighting is resolved;  [it won't happen again]
 
@@ -660,6 +667,9 @@ Instead of resolving a Jewel Heist:
 			say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of player] vs 25: [roman type]";
 			say "     The wolverine notices you leaving and chases you down the street, stopping at the end and returning to the store. You get the feeling he will be extra vigilant now he knows the store is a target.";
 			now JewelHeistCaught is 1;
+			now Resolution of Jewel Heist is 2; [Player did not do event and was spotted by the wolverine guard, may re-encounter later]
+		else:
+			now Resolution of Jewel Heist is 1; [Player did not do event, may re-encounter later]
 	now battleground is "void";
 
 to say JewelHeistSneak:
@@ -680,6 +690,7 @@ to say JewelHeistSneak:
 			increase score by 5;
 			now Jewel Heist is resolved;
 			now SilverToken is 1;
+			now Resolution of Jewel Heist is 3; [Player Success, now has SilverToken]
 	else:
 		LineBreak;
 		say "     You didnt want to disarm the door, [bold type]do you want to fight the wolverine or leave?[roman type][line break]";
@@ -697,6 +708,9 @@ to say JewelHeistSneak:
 				say "     [bold type]Rolling [Randomsneakvar] + Dexterity of [dexterity of player] vs 25: [roman type]";
 				say "     The wolverine notices you leaving and chases you down the street, stopping at the end and returning to the store. You get the feeling he will be extra vigilant now he knows the store is a target.";
 				now JewelHeistCaught is 1;
+				now Resolution of Jewel Heist is 2; [Player did not do event and was spotted by the wolverine guard, may re-encounter later]
+			else:
+				now Resolution of Jewel Heist is 1; [Player did not do event, may re-encounter later]
 
 to say JewelHeistFight:
 	now inasituation is true;
@@ -706,15 +720,18 @@ to say JewelHeistFight:
 	if fightoutcome > 19 and fightoutcome <= 30: [lost or fled]
 		say "     The wolverine knocks you to the ground and wraps his hands around your neck. Not long after you black out. You wake up a few blocks down the road and quickly head back to the library. You curse your failure, knowing that he will be extra vigilant now he knows the store is a target.";
 		now JewelHeistCaught is 1;
+		now Resolution of Jewel Heist is 2; [Player did not do event and was spotted by the wolverine guard, may re-encounter later]
 	else if fightoutcome is 30: [fled]
 		say "     The wolverine stands victorious and sends you on your way. You get the feeling he will be extra vigilant now he knows the store is a target.";
 		now JewelHeistCaught is 1;
+		now Resolution of Jewel Heist is 2; [Player did not do event and was spotted by the wolverine guard, may re-encounter later]
 	else if fightoutcome < 20: [player won]
 		say "     With a last blow, the wolverine topples to the ground. You step over him and enter the shop";
 		say "     You walk into the shop, but it's not what you were expecting. The guard went to all that effort to [one of]guard the place[or]stop you getting in[at random] and someone has already looted it. Display cases around the room are smashed and the jewellery missing. You look through the drawers behind the desk and find a silver token, round with a hole in the middle. A tag says it is pure silver, maybe this would do for Kyrverth?";
 		now Jewel Heist is resolved;
 		now SilverToken is 1;
 		increase score by 10;
+		now Resolution of Jewel Heist is 3; [Player Success, now has SilverToken]
 	now inasituation is false;
 
 to say KyrverthItemSay: [A little bit of trickery to have one lot of description for each form, this is called and fills in the missing word(s)]
@@ -733,11 +750,11 @@ to say KyrverthItemSay: [A little bit of trickery to have one lot of description
 
 [Setting up multiple events for Kyrverths final(ish) stage]
 to ResolveKyrverthItemEvents: [One is completed, this will resolve all 4 so players cannot get more than 1 artifact]
-	now Valuable Museum Artifact is resolved;
-	now Valuable Warehouse Artifact is resolved;
-	now Valuable RLD Artifact is resolved;
-	now Valuable Stables Artifact is resolved;
-	now Curious Pearl is resolved;
+	now Valuable Museum Artifact is inactive;
+	now Valuable Warehouse Artifact is inactive;
+	now Valuable RLD Artifact is inactive;
+	now Valuable Stables Artifact is inactive;
+	now Curious Pearl is inactive;
 
 to EnableKyrverthItemEvents: [Enabling events for player to encounter]
 	now Valuable Museum Artifact is active;
@@ -785,8 +802,10 @@ Instead of resolving a Valuable Museum Artifact:
 			say "     You step closer and lift the protective case off the mask. Very very carefully you grab the mask and wrap it for carriage around the city. You should probably give this to Kyrverth as soon as possible, in case it is broken while you explore the city.";
 			now Kyrverthitemget is 1;
 			increase score by 5;
+			now Resolution of Valuable Museum Artifact is 2; [Stolen the artifact]
 		else:
 			say "     Its probably not a good idea to steal priceless artifacts - Valerie would be pretty angry with you. You leave the item where it is and leave, doubtful you will be able to find it again in the maze of exhibits.";
+			now Resolution of Valuable Museum Artifact is 1; [Did not steal the artifact]
 		ResolveKyrverthItemEvents;
 
 Valuable Warehouse Artifact is a situation.
@@ -809,8 +828,10 @@ Instead of resolving a Valuable Warehouse Artifact:
 			say "     You grab one arm, and in surprise the rest of the body. The costume is a lot lighter than you were expecting it to be. You quickly fold it and place it in your backpack, then swiftly leave the building before you are discovered by whoever owns the place.";
 			increase score by 5;
 			now Kyrverthitemget is 4;
+			now Resolution of Valuable Warehouse Artifact is 2; [Stolen the artifact]
 		else:
 			say "     All of this stuff looks expensive and the heavy reinforcement of the building makes you think that whoever made this, they wouldn't be a good group to mess with. You leave the suit where it is and return to exploring the city.";
+			now Resolution of Valuable Warehouse Artifact is 1; [Did not steal the artifact]
 		ResolveKyrverthItemEvents;
 
 Valuable RLD Artifact is a situation.
@@ -832,8 +853,10 @@ Instead of resolving a Valuable RLD Artifact:
 			say "     You step forward and grab the dildo. Its a lot heavier than you were expecting, but you stash it and get on your way before anything comes down the street and discovers you in the store.";
 			increase score by 5;
 			now Kyrverthitemget is 3;
+			now Resolution of Valuable RLD Artifact is 2; [Stolen the artifact]
 		else:
 			say "     It's probably not a good idea to steal this and its probably not actually solid gold anyway. You leave it on its shelf and exit the store, exploring the city to look for things you could use to survive.";
+			now Resolution of Valuable RLD Artifact is 1; [Did not steal the artifact]
 		ResolveKyrverthItemEvents;
 
 Valuable Stables Artifact is a situation.
@@ -854,8 +877,10 @@ Instead of resolving a Valuable Stables Artifact:
 			say "     You creep up to the horseshoe and grab it, stuffing it into your pocket before jogging down the corridor. You run for a good 5 minutes before you begin to think you are safe again, having put a good amount of distance between you and the trophy room.";
 			increase score by 5;
 			now Kyrverthitemget is 2;
+			now Resolution of Valuable Stables Artifact is 2; [Stolen the artifact]
 		else:
 			say "     It's probably not a good idea to steal this, if the horses around the stables found out it probably wouldn't end well for you. You back out of the room and continue on your way.";
+			now Resolution of Valuable Stables Artifact is 1; [Did not steal the artifact]
 		ResolveKyrverthItemEvents;
 
 [KyrverthSecretDebugCheat is an action applying to nothing.

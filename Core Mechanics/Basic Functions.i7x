@@ -220,6 +220,8 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 	if GivingChar is player:
 		if debugactive is 1:
 			say "DEBUG -> Player is the giving partner[line break]";
+		if PlayerFucked of TakingChar is false: [player never had sex with this NPC]
+			now PlayerFucked of TakingChar is true; [player sexed up this NPC]
 		if SexAct is "AssFuck":
 			if PenileVirgin of player is true:
 				now PenileVirgin of player is false;
@@ -259,6 +261,8 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 	else if TakingChar is player:
 		if debugactive is 1:
 			say "DEBUG -> Player is the receiving partner[line break]";
+		if PlayerFucked of GivingChar is false: [player never had sex with this NPC]
+			now PlayerFucked of GivingChar is true; [player sexed up this NPC]
 		if SexAct is "AssFuck":
 			if AnalVirgin of player is true:
 				now AnalVirgin of player is false;

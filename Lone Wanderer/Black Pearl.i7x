@@ -24,8 +24,10 @@ Instead of resolving Curious Pearl:
 			say "     You stash it away nonetheless. Hopefully this will appease the dragon.";
 			increase score by 5;
 			now Kyrverthitemget is 5;
+			now Resolution of Curious Pearl is 2; [Stolen the artifact]
 		else:
 			say "Considering it's effect on you, it's probably best if you leave it here. You drop it and head back to where you started";
+			now Resolution of Curious Pearl is 1; [Player did not steal the artifact]
 	else:
 		say "     While strolling leisurely along the beach you feel something call out to you. You can't quite pin what it is or from where it's coming from, but you know that there is something really valuable here. It seems like hunch but you don't know where to look. After a few minutes of seemingly aimlessly looking around you give up and continue whatever you were doing before.";
 	ResolveKyrverthItemEvents;

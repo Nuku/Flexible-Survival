@@ -4,7 +4,7 @@ Version 5 of Medical Checkups by Stripes begins here.
 [ Version 5.1 - Easier cunt pill access for males - Kurainyx]
 [- Originally Authored By: Hellerhound -]
 
-Section 1 - Pediatrics Office
+Section 1 - Pediatrics Lobby
 
 Pediatrics door is a door. "The city lies out of the huge hole in the roof and south wall, jagged edges making the going difficult, but passable.".
 
@@ -49,7 +49,6 @@ Doctor Medea	"Doctor Medea"
 
 Doctor Medea is a person. "A doctor, by the name on the door label, [']Doctor Medea['], is busily mixing vials here.".
 Doctor Medea is in Doctors Office.
-The icon of Doctor Medea is figure of DrMedea_icon.
 
 the scent of Doctor Medea is "The doctor smells of female lizard, though there's a hint of male musk in there as well.".
 
@@ -128,15 +127,17 @@ instead of conversing the Doctor Medea:
 				now HP of doctor Medea is 2;
 			else if Medeaget is 2 or Medeaget is 3:
 				say "     'I cannot help you. I specialize in childbirth and minor illnesses. As the latter are not occurring with the nanite plague. Maybe I could help if you were a female?'";
-				say "     She pauses and ponders for a moment. 'There is another possibility as well. With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation. I had just started to look into those possibilities. Perhaps you might be interested in becoming my test subject for this. Thankfully, you've already obtained the medical supplies I'd requested earlier. I now just need you to obtain some more specialized equipment. Your best chance of locating it would be at either the [bold type]Pediatrics Ward[roman type] or the [bold type]Obstetrics Department[roman type] of the City Hospital for these supplies I require.'";
+				say "     She pauses and ponders for a moment. 'There is another possibility as well. With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation. I had just started to look into those possibilities. Perhaps you might be interested in becoming my test subject for this. Thankfully, you've already obtained the medical supplies I'd requested earlier. I now just need you to obtain some more specialized equipment. Your best chance of locating it would be at either the [bold type]Maternity Ward[roman type] or the [bold type]Obstetrics Department[roman type] of the City Hospital for these supplies I require.'";
 				now Obstetrics Department is active;
+				now Maternity Ward is not resolved;
 				now HP of doctor Medea is 3;
 				if Medeaget is 2, now Medeaget is 3;
 		else if HP of Doctor Medea is 2:
 			if Medeaget is 2:
-				say "     You present the equipment and supplies to Dr. Medea, who seems quite pleased with your haul. 'Yes, it seems you've obtained everything I'd listed. We're halfway there, now. For the procedure itself, I will also be needing some more specialized equipment. Your best chance of locating it would be at either the [bold type]Pediatrics Ward[roman type] or the [bold type]Obstetrics Department[roman type] of the City Hospital for these supplies I require.' Alternatively, with these supplies you've brought back, I can continue work on some special pills that you might be interested in.";
+				say "     You present the equipment and supplies to Dr. Medea, who seems quite pleased with your haul. 'Yes, it seems you've obtained everything I'd listed. We're halfway there, now. For the procedure itself, I will also be needing some more specialized equipment. Your best chance of locating it would be at either the [bold type]Maternity Ward[roman type] or the [bold type]Obstetrics Department[roman type] of the City Hospital for these supplies I require.' Alternatively, with these supplies you've brought back, I can continue work on some special pills that you might be interested in.";
 				now Obstetrics Department is active;
-				now HP of doctor Medea is 3;
+				now Maternity Ward is not resolved;
+				now HP of Doctor Medea is 3;
 				now Medeaget is 3;
 			else:
 				say "     'I would like you to try to obtain those supplies the clinic was supposed to receive. Without them, there's little I can do to assist you.'";
@@ -213,11 +214,11 @@ to say Medeaadjustments:
 		now Medeaub is true;
 	blank out the whole of table of fucking options;
 	[]
-	if player is female:
+	if player is female or player is mpreg_ok:
 		choose a blank row in table of fucking options;
 		now title entry is "Check for pregnancy";
 		now sortorder entry is 1;
-		now description entry is "check on a potential pregnancy.";
+		now description entry is "Check on a potential pregnancy";
 	[]
 	if HP of Doctor Matt is 21 or hospquest is 21:
 		choose a blank row in table of fucking options;
@@ -226,91 +227,91 @@ to say Medeaadjustments:
 		else:
 			now title entry is "Doctor Mouse's demand";
 		now sortorder entry is -50;
-		now description entry is "discuss obtaining her notes.";
+		now description entry is "Discuss obtaining her notes";
 	[]
 	if Medeaget is 3:
 		if "Selective Mother" is listed in feats of player:
 			choose a blank row in table of fucking options;
 			now title entry is "Remove impregnation control";
 			now sortorder entry is 2;
-			now description entry is "remove your ability to pick if a mate can impregnate you. (-Selective Mother)";
+			now description entry is "Remove your ability to pick if a mate can impregnate you. (-Selective Mother)";
 		[]
 		else if "Fertile" is listed in feats of player:
 			choose a blank row in table of fucking options;
 			now title entry is "Remove excess fertility";
 			now sortorder entry is 2;
-			now description entry is "restore your normal level of fertility. (-Fertile)";
+			now description entry is "Restore your normal level of fertility. (-Fertile)";
 			[]
 			choose a blank row in table of fucking options;
 			now title entry is "Gain impregnation control";
 			now sortorder entry is 3;
-			now description entry is "bestow the ability to pick if a mate can impregnate you. (+Selective Mother)";
+			now description entry is "Bestow the ability to pick if a mate can impregnate you. (+Selective Mother)";
 		[]
 		else if "Sterile" is listed in feats of player:
 			choose a blank row in table of fucking options;
 			now title entry is "Remove sterility";
 			now sortorder entry is 2;
-			now description entry is "restore your normal level of fertility. (-Sterile)";
+			now description entry is "Restore your normal level of fertility. (-Sterile)";
 		[]
 		else:
 			choose a blank row in table of fucking options;
 			now title entry is "Gain increased fertility";
 			now sortorder entry is 2;
-			now description entry is "increase your body's fertility. (+Fertile)";
+			now description entry is "Increase your body's fertility. (+Fertile)";
 			[]
 			choose a blank row in table of fucking options;
 			now title entry is "Become sterile";
 			now sortorder entry is 3;
-			now description entry is "render you sterile. (+Sterile)";
+			now description entry is "Render you sterile. (+Sterile)";
 		[]
 		if "Sterile" is not listed in feats of player and heat enabled is true:
 			if lust of Doctor Medea >= 3 and heatlevel is not 1:
 				choose a blank row in table of fucking options;
 				now title entry is "Heat exam";
 				now sortorder entry is 4;
-				now description entry is "examine the current state of your heat cycle.";
+				now description entry is "Examine the current state of your heat cycle";
 		[]
 		if "Sterile" is not listed in feats of player and heat enabled is true and animal heat is true:
 			if lust of Doctor Medea <= 2:
 				choose a blank row in table of fucking options;
 				now title entry is "Discuss heat control";
 				now sortorder entry is 5;
-				now description entry is "discuss heat control with you.";
+				now description entry is "Discuss heat control with you";
 			[]
 			else if heatlevel is 1:
 				choose a blank row in table of fucking options;
 				now title entry is "Reactivate heats";
 				now sortorder entry is 5;
-				now description entry is "allow you to go into heat again.";
+				now description entry is "Allow you to go into heat again";
 			[]
 			else if heatlevel is 2:
 				choose a blank row in table of fucking options;
 				now title entry is "Block heats";
 				now sortorder entry is 5;
-				now description entry is "prevent you from going into heat.";
+				now description entry is "Prevent you from going into heat";
 				[]
 				choose a blank row in table of fucking options;
 				now title entry is "Intensify heats";
 				now sortorder entry is 6;
-				now description entry is "make your heats even more intense.";
+				now description entry is "Make your heats even more intense";
 			[]
 			else if heatlevel is 3:
 				choose a blank row in table of fucking options;
 				now title entry is "Restore normal heats";
 				now sortorder entry is 5;
-				now description entry is "reduce your heat level to normal.";
+				now description entry is "Reduce your heat level to normal";
 		[]
 		if player is impreg_ok:
 			choose a blank row in table of fucking options;
 			now title entry is "Oviposition";
 			now sortorder entry is 7;
-			now description entry is "talk to you about egg-laying.";
+			now description entry is "Talk to you about egg-laying";
 		[]
 		if Medeaub is true and playercanub is false and gestation of child is 0:
 			choose a blank row in table of fucking options;
 			now title entry is "Gain unbirthing ability";
 			now sortorder entry is 8;
-			now description entry is "allow you to unbirth your foes.";
+			now description entry is "Allow you to unbirth your foes";
 		[]
 		if Medeapill is false:
 			choose a blank row in table of fucking options;
@@ -608,11 +609,11 @@ to say Medeaassistance_plot:
 			say "     'Wonderful! You managed to get the supplies. Thanks! I can now do medical work again!' the lizard doctor says happily.";
 			now Medeaget is 3;
 		else:
-			if lust of Doctor Medea < 3 and HP of Doctor Medea < 5:		[both tasks remain]
+			if lust of Doctor Medea < 3 and HP of Doctor Medea < 5: [both tasks remain]
 				say "     'There are other aspects of the pregnancy process which I need further supplies to delve into. If you want to obtain my completed notes, you'll need to assist me by obtaining the equipment I need to do so. There's two main topics I need to gather more information on, that of the animalistic heats produced by certain infections and the possibility of alternate impregnation and gestation means,' the lizard doctor states with no little excitement.";
-			else if lust of Doctor Medea < 3:		[MPreg remains]
+			else if HP of Doctor Medea < 5: [MPreg remains]
 				say "     'While you've been of assistance in helping me improve the range of care I can provide my patients here, there's still more to be done. There's some additional supplies which will allow me to explore the possibility of alternate impregnation and gestation means,' the lizard doctor states with no little excitement.";
-			else if HP of Doctor Medea < 5:		[heat remains]
+			else if lust of Doctor Medea < 3: [heat remains]
 				say "     'While you've been of assistance in helping me improve the range of care I can provide my patients here, there's still more to be done. There's some additional supplies which will allow me to render assistance in dealing with the animalistic heats produced by certain infections,' the lizard doctor states with no little excitement.";
 			if lust of Doctor Medea is 0:
 				say "     'As you may have already experienced, the infection often produces a cycle of intensified arousal and fertility. This is similar to going into estrus - what is commonly known as being in heat. While most infected are continuously fertile, they are particularly fecund and lustful during this period. I might be able to provide more assistance in this regard through a more detailed examination, but I would need some specialized equipment to do so. It is not the sort of problem that human beings have had to deal with directly, so this clinic doesn't have the necessary tools or materials for testing.'";
@@ -624,8 +625,8 @@ to say Medeaassistance_plot:
 				say "     'As I explained before, I cannot perform procedures or study anything in regards to affecting one's heat unless you get me those items from a [bold type]veterinary hospital[roman type] like the one in the High Rise District. This clinic was for human patients, not animal ones. Well, at least until the people started to become animals, that is,' she adds with a grin.";
 			else if lust of Doctor Medea is 2:
 				say "     Taking out the requested items from the veterinary clinic, you eagerly await her response while she looks it all over. 'Hmmm... yes... yes, this should be enough. I should now be able to perform examinations able to give rough estimates on how long before the patient go into heat or how long they'll remain in their current heat. More importantly, I should also be able influence their heat cycle as well.'";
-				now lust of Doctor Medea is 3;
-			if HP of Doctor Medea < 2:
+				now lust of Doctor Medea is 3; [heat management enabled]
+			if HP of Doctor Medea < 3:
 				if player is mpreg_ok:
 					say "     The lizard doctor flips through an anatomy book, stopping on the page describing the male reproductive system. 'With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation. I have just started to look into those possibilities, but I need some more advanced supplies and specialized equipment to be able to accomplish this'";
 					say "     You cut her off there, informing her that you already possess this adaptation, much to her delight. 'This is very good fortune indeed. You're the first case of this I've been able to study. Please, you must let me examine you!' she says excitedly, taking your hands and rushing you towards the examination table.";
@@ -633,11 +634,14 @@ to say Medeaassistance_plot:
 					say "     Doctor Medea straightens herself up and removes the glove, trying to act professional again, despite the rivulets of white cum you see running down her thighs. 'You are very interesting. This has been most... instructive. I believe I should be able to provide you and other male patients with some assistance as I would my female patients.'";
 					now HP of Doctor Medea is 6;
 				else:
-					say "     The lizard doctor flips through an anatomy book, stopping on the page describing the male reproductive system. 'With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation. I have just started to look into those possibilities, but I need some more advanced supplies and specialized equipment to be able to accomplish this. Your best chance of locating them would be at either the [bold type]Pediatrics Ward[roman type] or the [bold type]Obstetrics Department[roman type] of the City Hospital for these supplies I require.'";
+					say "     The lizard doctor flips through an anatomy book, stopping on the page describing the male reproductive system. 'With the changes the spreading infection can create, it may be possible to allow a male individual to form a surrogate womb for impregnation. I have just started to look into those possibilities, but I need some more advanced supplies and specialized equipment to be able to accomplish this. Your best chance of locating them would be at either the [bold type]Maternity Ward[roman type] or the [bold type]Obstetrics Department[roman type] of the City Hospital for these supplies I require.'";
 					now HP of doctor Medea is 3;
 					now Obstetrics Department is active;
+					now Maternity Ward is not resolved;
 			else if HP of Doctor Medea < 4:
-				say "     The lizard doctor scribbles you a quick note. 'As I've mentioned before, I'm considering the possibilities surrounding the nanites forming a surrogate womb for male individuals, allowing them to become impregnated. Please obtain the listed supplies and equipment for me so I can explore this potential alternative treatment. Your best shots at finding them are to head to the city hospital and check either the [bold type]Pediatrics Ward[roman type] or the [bold type]Obstetrics Department[roman type].";
+				say "     The lizard doctor scribbles you a quick note. 'As I've mentioned before, I'm considering the possibilities surrounding the nanites forming a surrogate womb for male individuals, allowing them to become impregnated. Please obtain the listed supplies and equipment for me so I can explore this potential alternative treatment. Your best shots at finding them are to head to the city hospital and check either the [bold type]Maternity Ward[roman type] or the [bold type]Obstetrics Department[roman type].";
+				now Obstetrics Department is active;
+				now Maternity Ward is not resolved;
 			else if HP of Doctor Medea is 4:
 				say "     When you place the requested equipment from the hospital on the counter for Dr. Medea, she is quite pleased. 'Excellent! Give me a few moments to look this over and prepare, but I should be able to allow patients, even males, to become patient through anal insemination.' Just saying it makes the lizard girl obviously excited, her tail swishing and the scent of reptilian arousal growing stronger in the air.";
 				now HP of Doctor Medea is 6;

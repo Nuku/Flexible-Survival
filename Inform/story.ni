@@ -199,6 +199,7 @@ A person has a truth state called Virgin. Virgin is usually true.
 A person has a truth state called AnalVirgin. AnalVirgin is usually true.
 A person has a truth state called PenileVirgin. PenileVirgin is usually true. [not saved till new infection system update]
 A person has a truth state called SexuallyExperienced. SexuallyExperienced is usually false. [not saved till new infection system update]
+A person has a truth state called TwistedCapacity. TwistedCapacity is usually false. [not saved till new infection system update]
 A person has a text called Originalgender. Originalgender is usually "Undefined". [original gender of the pre-transform person]
 A person has a text called PlayerOriginalgender. PlayerOriginalGender is usually "Undefined". [first meeting gender with the player]
 A person has a text called PlayerLastGender. PlayerLastGender is usually "Undefined". [gender of the player during the last meeting]
@@ -4664,6 +4665,7 @@ Include Black Market by Luneth.
 Include Black Market Items by Luneth.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
+Include Bunker Communal Shower Events by Luneth.
 Include Camp Bravo by Wahn.
 Include Tenvale College Campus by Rikaeus.
 [Include Church Of The Maternal Beast by Guest Writers.]
@@ -4711,6 +4713,7 @@ Include Assorted Events by Stripes.
 Include Beach Events by Sarokcat.
 Include Black Pearl by Lone Wanderer.
 Include Bouncy Castle by Stripes.
+Include Broken Husky Bad-End by Luneth.
 Include Brookstone Books by Guest Writers.
 Include Campus Events by Wahn.
 Include Campus Lovers by CloserHenry.
@@ -5130,6 +5133,7 @@ Include Anthony by Wahn.
 Include Ares by Wahn.
 Include Anastasia by Stripes.
 Include Aster by Qazarar.
+Include Atticus by Wahn.
 Include Azari by Dys.
 Include Bastet by Wahn.
 Include Bjorn by Rikaeus.

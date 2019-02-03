@@ -184,7 +184,6 @@ Figure of DiegoFem_face_icon is the file "DiegoFem_face.jpg".
 Figure of Doran_icon is the file "Doran.jpg".
 Figure of Doran_face_icon is the file "Doran_face.jpg".
 Figure of DrMatt_face_icon is the file "Dr.Matt_face.jpg".
-Figure of DrMedea_icon is the file "DrMedea_ig.jpg".
 Figure of DrMoffatt1_icon is the file "drmoffatt_ig1.jpg".
 Figure of DrMoffatt2_icon is the file "drmoffatt_ig2.jpg".
 Figure of DrMouse_icon is the file "drmouse_ig.jpg".
@@ -621,7 +620,6 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Doran_face"	Figure of Doran_face_icon	"Anymouse1968"	g-white	"normal"
 "Dracovixentaur"	Figure of Dracovixentaur_icon	"Anymouse1968"	g-white	"normal"
 "DrMatt_face"	Figure of DrMatt_face_icon	"SineAlas"	g-white	"normal"
-"DrMedea"	Figure of DrMedea_icon	"Candy"	g-white	"normal"
 "DrMoffatt1"	Figure of DrMoffatt1_icon	"The_Negative"	g-black	"normal"
 "DrMoffatt2"	Figure of DrMoffatt2_icon	"MadTurtle"	g-white	"normal"
 "DrMouse"	Figure of DrMouse_icon	"JaxxBlackFox"	g-white	"normal"

@@ -343,6 +343,10 @@ to NumberVariableSave:
 			now NumberVarValue entry is AbandonedRoomStatus;
 		-- "absorb":
 			now NumberVarValue entry is absorb;
+		-- "acquaintedWithHanu":
+			now NumberVarValue entry is acquaintedWithHanu;
+		-- "acquaintedWithWukong":
+			now NumberVarValue entry is acquaintedWithWukong;
 		-- "addedlibido":
 			now NumberVarValue entry is addedlibido;
 		-- "afsmread":
@@ -441,8 +445,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is artattempt;
 		-- "artleopardfight":
 			now NumberVarValue entry is artleopardfight;
-		-- "AtticusCounter":
-			now NumberVarValue entry is AtticusCounter;
 		-- "auto2entry":
 			now NumberVarValue entry is auto2entry;
 		-- "autoattackmode":
@@ -1331,8 +1333,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is hfgbread;
 		-- "HG_Flashback_Turns":
 			now NumberVarValue entry is HG_Flashback_Turns;
-		-- "HG_Stage":
-			now NumberVarValue entry is HG_Stage;
 		-- "hgryphon_TGcount":
 			now NumberVarValue entry is hgryphon_TGcount;
 		-- "hgryphonwin":
@@ -4047,6 +4047,10 @@ to VariableNumberLoad:
 					now AbandonedRoomStatus is numberVarValue entry;
 				-- "absorb":
 					now absorb is numberVarValue entry;
+				-- "acquaintedWithHanu":
+					now acquaintedWithHanu is numberVarValue entry;
+				-- "acquaintedWithWukong":
+					now acquaintedWithWukong is numberVarValue entry;
 				-- "addedlibido":
 					now addedlibido is numberVarValue entry;
 				-- "afsmread":
@@ -4145,8 +4149,6 @@ to VariableNumberLoad:
 					now artattempt is numberVarValue entry;
 				-- "artleopardfight":
 					now artleopardfight is numberVarValue entry;
-				-- "AtticusCounter":
-					now AtticusCounter is numberVarValue entry;
 				-- "auto2entry":
 					now auto2entry is numberVarValue entry;
 				-- "autoattackmode":
@@ -5035,8 +5037,6 @@ to VariableNumberLoad:
 					now hfgbread is numberVarValue entry;
 				-- "HG_Flashback_Turns":
 					now HG_Flashback_Turns is numberVarValue entry;
-				-- "HG_Stage":
-					now HG_Stage is numberVarValue entry;
 				-- "hgryphon_TGcount":
 					now hgryphon_TGcount is numberVarValue entry;
 				-- "hgryphonwin":

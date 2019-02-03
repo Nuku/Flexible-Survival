@@ -202,10 +202,22 @@ Instead of resolving a Soldier Squad:
 	else if SquadEncounters is 5:
 		say "     Passing through the neighborhood where you last saw Allen, the newly minted alpha husky and his bitch Davies, you decide to check the building out again. Hopefully someone will still be there...";
 		WaitLineBreak;
-		say "     You make your way through the empty streets as covertly as you can, moving from hiding spot to hiding spot and watching your surroundings closely before you move. And it works - you make your way in the direction of the house unnoticed by anyone or anything ready to pick a fight. Then, as you are still several streets away from your destination and hidden in a very narrow gap between two buildings, you suddenly hear barking and the scrape of canine claws running on asphalt, coming closer quickly. A voice that you recognize as Allen the alpha husky calls out 'Come back, you stupid mutt! You're mine!' Seconds later, an anthro husky in a ragged military uniform enters your field of vision, moving in a dash that slows down just a few steps past your hiding spot as he pants and desperately looks around for a way to escape pursuit.";
+		say "     You make your way through the empty streets as covertly as you can, moving from hiding spot to hiding spot and watching your surroundings closely before you move. And it works - you make your way in the direction of the house unnoticed by anyone or anything ready to pick a fight. Then, as you are still several streets away from your destination and hidden in a very narrow gap between two buildings, you suddenly hear barking and the scrape of canine claws running on asphalt, coming closer quickly. A voice that you recognize as Allen the alpha husky calls out 'Come back, you stupid mutt! You're mine!' Seconds later, an anthro husky in a ragged military uniform enters your field of vision, moving in a dash that slows down just a few steps past your hiding spot as he pants and desperately looks around for a way to escape pursuit. It's Carl, the man you saw Allen infect the last time you were here. He's panting heavily and looking in just the wrong direction to miss seeing your own good hiding spot, which makes you think that [bold type]he'll be caught pretty soon[roman type].";
 		project the figure of Carl_clothed_icon;
-		say "     It's Carl, the man you saw Allen infect the last time you were here. He's panting heavily and looking in just the wrong direction to miss seeing your own good hiding spot, which makes you think that he'll be caught pretty soon. Do you want to take the risk to try to help him out?";
-		if player consents: [help Carl]
+		LineBreak;
+		say "     [bold type]How do you want to deal with this situation?[roman type][line break]";
+		say "     [link](1)[as]1[end link] - Pull him into the gap with you to hide him.";
+		say "     [link](2)[as]2[end link] - Stay hidden and observe his fate.";
+		say "     [link](3)[as]3[end link] - Just get out of there, leaving quietly.";
+		now calcnumber is 0;
+		while calcnumber < 1 or calcnumber > 3:
+			say "Choice? (1-3)>[run paragraph on]";
+			get a number;
+			if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
+				break;
+			else:
+				say "Invalid choice. Type [link]1[end link] to save Carl, [link]2[end link] to watch his fate or [link]3[end link] to leave.";
+		if calcnumber is 1:
 			LineBreak;
 			say "     Dashing out of your hiding place, you quickly grab Carl, one hand around his chest and the other holding his muzzle closed. Whispering that you want to help him, you drag him back into the gap between the buildings, moving several steps into the space before you hear running footsteps on the sidewalk outside. Stopping in your tracks not to make any noise, you hold your breath - then the furred shape of Allen the alpha husky runs past your hiding spot. Phew, seems like he didn't notice anything.";
 			say "     The sudden disappearance of his runaway beta, without any clear indication of where he might have gone, leaves Allen angry and annoyed. You can hear the frustration in his voice as a shout reaches your ears a moment later. 'So you think you escaped me, bitch? Pah - your true nature will show itself soon enough. When you come crawling back to me, I'll make you beg for a fuck for days!' His words got quieter in the end, so you conclude that Allen chose one of the streets Carl might have fled into and is now moving away from you.";
@@ -216,30 +228,31 @@ Instead of resolving a Soldier Squad:
 			say "     So what's your reply? Do you want to take this husky soldier with you to the library?";
 			if player consents:
 				LineBreak;
-				say "     As you tell him that he may come with you, Carl's tail wags exuberantly and he pulls you into a hug, licking your face with his long tongue. Realizing what he's doing, he pulls away a moment later and says 'Thank you. Thank you!' ";
+				say "     As you tell him that he may come with you, Carl's tail wags exuberantly and he pulls you into a hug, licking your face with his long tongue. Realizing what he's doing, he pulls away a moment later and says 'Thank you. Thank you!'";
 				now HP of Carl is 2;
 				now CarlLibraryEntry is turns;
 				move Carl to Grey Abbey 2F;
 				move player to Grey Abbey 2F;
 				now Resolution of Soldier Squad is 9; [helped Carl, recruited]
+				now PlayerFriended of Carl is true;
 			else:
 				LineBreak;
 				say "     Shaking your head, you tell Carl that it'd be best if he went his own way. His wagging tail freezes and then dips as he takes in your rejection. After a sad and disappointed nod, he hurries off, jogging along the street before vanishing down a side alley.";
 				now HP of Carl is 50;  [sent away on his own]
 				now Resolution of Soldier Squad is 10; [helped Carl, sent away]
+			now PlayerMet of Carl is true;
+		else if calcnumber is 2:
+			LineBreak;
+			say "     Staying as silent as you can, you just watch as the exhausted husky chooses some spot ahead and starts running again. Just seconds later, his former squad leader Allen dashes around the corner in pursuit. It's only a matter of a few moments for the bigger and stronger male husky to catch up with his prey and give him a shove, making Carl stumble and fall down on his knees. Before the transformed soldier can get up again or do anything, there is the sound of ripping fabric and a pained whine - as Allen tears a hole in the seat of Carl's pants and then rams his shaft into the man's asshole. The alpha husky grips his hips tightly and pounds his manhood into his runaway beta without restraint, filling the street with loud slapping noises and pained grunts.";
+			say "     'Did you think you could escape me, little slut?' Allen shouts, slamming into his captive's ass hard with each word as he continues 'I *thrust* OWN *thrust* ALL *trust* OF *thrust* YOU *thrust* BITCHES *thrust* You're just holes for me to fuck, that's all you're good for! *thrust* Admit it! *thrust*' The rough treatment seems to have broken what resistance Carl had left, as the man moans 'I'm your slut, fuck me, fuck...' and then is reduced to nothing but animal-like grunts and whines to show his arousal at being taken by his alpha. It's not too much longer until the submissive husky orgasms, spraying his load inside his ripped pants. Allen isn't far behind either, burying his hard cock all the way in the tight hole he's fucking and blasting away with a huge amount of his seed. As he does so, his knot swells up inside Carl, tying the two of them together.";
+			WaitLineBreak;
+			say "     Allen gives a laugh as he looks down on his former comrade, then pushes his upper body down while holding his hips with the other hand. 'Does it feel good to have all my cum inside you, with my knot sealing it in? You horny bitches love that, don't you?' he asks, with Carl panting 'Yes, alpha.' in response. You wait a few minutes but there's just more of the alpha husky debasing his newly submissive beta and waiting for his knot to go down so they can separate.";
+			say "     Seems like the show is over, so you leave the street with the two male huskies behind, making your way out of the hiding spot without being seen.";
+			now Resolution of Soldier Squad is 11; [abandoned Carl, watched]
+			now HP of Carl is 90;  [taken by Allen]
 		else:
-			say "     Do you want to watch what happens to him instead? ";
-			if player consents:
-				LineBreak;
-				say "     Staying as silent as you can, you just watch as the exhausted husky chooses some spot ahead and starts running again. Just seconds later, his former squad leader Allen dashes around the corner in pursuit. It's only a matter of a few moments for the bigger and stronger male husky to catch up with his prey and give him a shove, making Carl stumble and fall down on his knees. Before the transformed soldier can get up again or do anything, there is the sound of ripping fabric and a pained whine - as Allen tears a hole in the seat of Carl's pants and then rams his shaft into the man's asshole. The alpha husky grips his hips tightly and pounds his manhood into his runaway beta without restraint, filling the street with loud slapping noises and pained grunts.";
-				say "     'Did you think you could escape me, little slut?' Allen shouts, slamming into his captive's ass hard with each word as he continues 'I *thrust* OWN *thrust* ALL *trust* OF *thrust* YOU *thrust* BITCHES *thrust* You're just holes for me to fuck, that's all you're good for! *thrust* Admit it! *thrust*' The rough treatment seems to have broken what resistance Carl had left, as the man moans 'I'm your slut, fuck me, fuck...' and then is reduced to nothing but animal-like grunts and whines to show his arousal at being taken by his alpha. It's not too much longer until the submissive husky orgasms, spraying his load inside his ripped pants. Allen isn't far behind either, burying his hard cock all the way in the tight hole he's fucking and blasting away with a huge amount of his seed. As he does so, his knot swells up inside Carl, tying the two of them together.";
-				WaitLineBreak;
-				say "     Allen gives a laugh as he looks down on his former comrade, then pushes his upper body down while holding his hips with the other hand. 'Does it feel good to have all my cum inside you, with my knot sealing it in? You horny bitches love that, don't you?' he asks, with Carl panting 'Yes, alpha.' in response. You wait a few minutes but there's just more of the alpha husky debasing his newly submissive beta and waiting for his knot to go down so they can separate.";
-				say "     Seems like the show is over, so you leave the street with the two male huskies behind, making your way out of the hiding spot without being seen.";
-				now Resolution of Soldier Squad is 11; [abandoned Carl, watched]
-			else:
-				say "     As the transformed soldier doesn't concern you too much, you just walk deeper into the space between the two buildings. After a moment, there are some barks and grunts audible from far behind you as you, but you just keep going, soon coming out in a small street on the other side. With a shrug, you vanish back into the city streets, leaving Carl the husky behind to his unknown fate.";
-				now Resolution of Soldier Squad is 12; [abandoned Carl, not watched]
+			say "     As the transformed soldier doesn't concern you too much, you just walk deeper into the space between the two buildings. After a moment, there are some barks and grunts audible from far behind you as you, but you just keep going, soon coming out in a small street on the other side. With a shrug, you vanish back into the city streets, leaving Carl the husky behind to his unknown fate.";
+			now Resolution of Soldier Squad is 12; [abandoned Carl, not watched]
 			now HP of Carl is 90;  [taken by Allen]
 		now SquadEncounters is 6;
 		now battleground is "void";

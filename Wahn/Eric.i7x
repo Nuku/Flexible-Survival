@@ -37,6 +37,11 @@ Version 5 of Eric by Wahn begins here.
 [  42: Smells male + orc musk + heat                                 ]
 [  43: Smells male + orc musk + pregnant                             ]
 
+[ Energy of Eric (see bunker communal shower event file)             ]
+[   0: never showered in the bunker                                  ]
+[  40: orc-cocked Eric came on to the player in the shower           ]
+[  49: orc-cocked Eric got an ice-cold shower                        ]
+
 [ Libido states of Eric (for reactions against a player furling)     ]
 [   0: Eric has never seen the player in Furling shape               ]
 [   1: Eric has seen the player in Furling shape - is not frightened ]
