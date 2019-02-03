@@ -177,7 +177,7 @@ to say KoboldGangSexMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
-	if player is male:
+	if player is male and bodyname of player is "Kobold" and player is pure:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck the Leader";
 		now sortorder entry is 1;
