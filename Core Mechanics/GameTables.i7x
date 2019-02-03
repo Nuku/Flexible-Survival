@@ -95,8 +95,6 @@ Name(text)	Type(text)
 "ndmlist"	"list of text"
 "AbandonedRoomStatus"	"number"
 "absorb"	"number"
-"acquaintedWithHanu"	"number"
-"acquaintedWithWukong"	"number"
 "addedlibido"	"number"
 "afsmread"	"number"
 "aidKenaz"	"number"

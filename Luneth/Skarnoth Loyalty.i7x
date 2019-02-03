@@ -35,6 +35,7 @@ Version 1 of Skarnoth Loyalty by Luneth begins here.
 
 SkarnothMasterSlave is a number that varies.
 SkarnothThongStatus is a number that varies.
+SkarnothDrugStatus is a number that varies.
 
 Section 1 - Skarnoth Loyalty Convos
 
