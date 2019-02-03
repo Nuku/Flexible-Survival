@@ -1,6 +1,7 @@
 Version 3 of Monkey King by Kernog begins here.
 
-"Adds a Monkey (King) creature to Flexible Survival's Wandering Monsters table"
+"Adds a Monkey (King) creature to Flexible Survival's Wandering Monsters table
+V3: Wukong appears in monkey house with Hanu"
 
 [Loyalties of Wukong:
 -1: enemy
@@ -54,7 +55,7 @@ to say losetoMonkeyKing:
 	else:
 		if Resolution of Monkey Duel is 1:
 			say "     Instead of his usual arrogant dance, Wukong looks at your defeated person with anxiety. 'Oh no... Please don't tell master Hanu,' he asks you. 'He will use the collar again.' Before you can say anything else, the monkey runs away from you.";
-		if else:
+		else:
 			say "     The arrogant fighter grins over your defeated body while juggling with his staff. 'I win, as it should be. So now just lay there and let the great Monkey King give you pleasure.' The victorious simian promptly puts down his staff and walks towards you.";
 			if player is not neuter:
 				if a random chance of 1 in 2 succeeds and (player is female or anallevel > 1):
@@ -124,7 +125,7 @@ to say beattheMonkeyKing:
 							say "     Several minutes of uninterrupted face-fucking pass, until you reach your limits. With a gargled cry of surprise, the monkey tries to pull out but it's too late and during long, agonizing seconds he is forced to swallow your entire cock as you empty your gonads in him.";
 							say "     After you made sure every single drop went in his stomach, you let the Monkey King go. He coughs, looking very tired and visibly humiliated. You complete the humiliation by using his pretty face to clean your cock, smearing saliva and spunk all over it. Satisfied, you leave the panting, spent loser and resume your exploration.";
 						else:
-							if acquaintedWithWukong is 2:
+							if Loyalty of Wukong is 2:
 								say "     Without a word, you turn the monkey around and line your cock with his smooth ass. 'Wooh, wait, not so uuung!' The poor chap does not have time to finish his sentence as you push inside of him. His inner walls feel very good, but they are less tight than you thought. This arrogant monkey is quite used to that, isn't he? You make the remark to him, and he blushes, obviously humiliated. 'S... Slow down.' But you do not care. He's no king right now. He's your toy.";
 							else:
 								say "     Without a word, you turn the monkey around and line your cock with his smooth ass. 'Wait... What are you?!' The poor chap does not have time to finish his sentence as you push inside of him. His inner walls feel very good, but they are less tight than you thought. This arrogant monkey is quite used to that, isn't he? You make the remark to him, and he blushes, obviously humiliated. 'S... Stop...' But you do not care. He's no king right now. He's your toy.";
@@ -232,7 +233,7 @@ The sarea of Monkey King Service is "Museum".
 The level of Monkey King Service is 3. [event unlocks at lvl 3]
 
 instead of resolving Monkey King Service:
-	if acquaintedWithWukong is 0:
+	if "Monkey" is not listed in EncounteredEnemies of player:
 		say "     You notice an exposition on imperial China exposition during your exploration of the museum. You decide to give it a look, but there is not much to see. All the art pieces have been looted by someone, and only the fake pagodas and other Chinese decorations remain. 'Good timing!' a booming masculine voice startles you. 'You, peasant! Come over here! I have a mission of upmost importance for you!' Whoever it is, he is thinking very high of himself...";
 		say "     [bold type]Should you follow the voice, and check what he wants?[roman type][line break]";
 	else:
@@ -479,6 +480,118 @@ Table of GameCharacterIDs (continued)
 object	name
 Wukong	"Wukong"
 
-Wukong is a person. Wukong is in Nowhere.
+Wukong is a person. Wukong is in Nowhere. The description of Wukong is "[wukongDesc]".
+
+to say wukongDesc:
+	if Resolution of Monkey Duel is 1:
+		say "You glance at Wukong, sitting in a corner of the Training Hall. He still wears his collar, as well as a complex network of ropes and knots which bites softly into his fur. [if humanity of Wukong < 3]He is rather restless, fidgeting and absent-mindedly pulling at the squeezing ropes here and there, inadvertantely tightening the material's grip elsewhere[else]The formely turbulent simian seems to have calmed down, and gotten used to his shibari. Hanu's training seems to have paid out[end if].";
+	else:
+		say "Wukong sits on a makeshift throne, in the middle of the Monkey House. His position is less than regal, sprawled on his seat, his feet sprawled on both armrests and offered to simian courtisans, and by extension shamelessly exposing the royal crotch to newcomers. The Monkey King returns your gaze, as if to assert you that he owns this place.";
+
+
+instead of conversing Wukong:
+	if Resolution of Monkey Duel is 1:
+		if humanity of Wukong is 0:
+			say "[if Loyalty of Wukong is -1]'You accursed knave! Gnnk!' Wukong pulls at the collar that just sent him a shock. 'Just you wait until I'm out of this bondage.'[else if Loyalty of Wukong is 2]'Is this how you reward me for allowing you in my service? A thousand curses on you!' Wukong says as you enquire about him.[else]'And to say I considered you my friend. Traitor!' the former Monkey King laments, as you attempt to talk to him.[end if]";
+		else if humanity of Wukong is 1:
+			say "[if Loyalty of Wukong is -1]'Such disgrace. I have nothing to say to you.'[else if Loyalty of Wukong is 2]'You are enjoying seeing your former sovereign in this state, admit it.'[else]'W-Would you at least convince this Hanu to remove these ropes. I'm itching!'[end if]";
+		else if humanity of Wukong is 2:
+			say "[if Loyalty of Wukong is -1]'I learned my lesson, alright? Release me.'[else if Loyalty of Wukong is 2]'While I do see the point of this treatement, these ropes are over-doing it.'[else]'This Hanu person is not a bad person, but I cannot stand to stay in this bondage.'[end if]";
+		else:
+			say "[if Loyalty of Wukong is -1]'We do not like each other much, but let's agree to put our past between us.'[else if Loyalty of Wukong is 2]'I realized that I treated my servants badly. I will treat my next ones better!'[else]'This enforced time-out helped clear my mind and realize many things, my friend. Once Hanu releases me, let's walk the Earth, you and I!'[end if]";
+	else:
+		if Loyalty of Wukong is -1:
+			say "'If it isn't the knave who had the nerve to entrap me, in that Museum!' Wukong says, a smirk on his face. [one of]'A lower man would not resist the urge to put you in chains like this baboon over here...' He punctuates his words with a couple of small foot slaps on Hanu's head. 'But I am a higher kind of being. A magnanimous lord. So enjoy your stay at my court!'[or]'Unable to resist the splendor of my new place of stay? Or is it my little pet here that interests you?' He punctuates his words by ruffling Hanu's hair with his foot.[stopping]";
+		else if Loyalty of wukong is 2:
+			say "'My trusted servant,' Wukong says as you beckon him. [one of]'I shall forgive your cowardice against the furry pachyderm, for I have now a new, entire kingdom to rule. You are welcome to stay here as long as you like. You may even amuse yourself with my pet, if you promise me to give me a good show.' He punctuates his words by grabbing Hanu's collar with one foot, and forcing his defeated rival to look at you in the eyes.[or]'Your visit fills me with joy. What news do you bring me from the city?'[stopping]";
+		else:
+			say "'Ah, my friend! My dear friend!' Wukong shouts, over-joyed. [one of]Do you like the look of this new place? It may be a little less furnished than the Museum, but I can really claim it as my own. Make yourself at home, and use my little pet as much you like.' He punctuates his words by grabbing Hanu's collar with one foot, and forcing his defeated rival to look at you in the eyes.[or]'What extraordinary tales do you bring me from your adventures in the city?'[stopping]";
+
+instead of fucking Wukong:
+	if Resolution of Monkey Duel is 1:
+		say "Wukong averts his eyes, after your proposition him for sex. 'I would have [italic type]loved[roman type] too,' he replied sarcastically. 'But if the old man sees us, he'll force me to go through another training of his...'[line break]'A training? Very good idea, my dear pupil,' an amused Hanu says, as he drops from the ceiling.[line break]'Oh no...'[line break][bold type]And maybe our friend desires to participate as well? What do you say?[roman type]";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Train";
+		now sortorder entry is 1;
+		now description entry is "Train alongside Wukong";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Assist";
+		now sortorder entry is 6;
+		now description entry is "Assist Hanu in his training";
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if player consents:
+					let nam be title entry;
+					clear the screen and hyperlink list;
+					now sextablerun is 1;
+					if nam is "Train":
+						say "[WukongTrainingTrain]";
+					if nam is "Assist":
+						say "[WukongTrainingAssist]";
+					increase humanity of Wukong by 1;
+					wait for any key;
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     You shake your head and politely refuse Hanu's offer. 'A shame. We are on the same boat, here,' the monkey replies. 'In order to retain our sanity, mental fortitude is needed. Come back if you reconsider.'";
+				wait for any key;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
+	else:
+		say "     Wukong considers your proposal for a short second, then displays his usual, facetious grin. 'Very well. I cannot refuse an offer for worship, [if Loyalty of Wukong is -1]even if it comes from an unpleasant fellow such as you[else if Loyalty of Wukong < 2]especially if it comes from one my servants[else]especially if it comes from a trusted companion[end if].' The monkey gestures you to kneel in front of his throne, while he extends his leg forward. 'Show me your dedication, my dear.'";
+		say "     [bold type]Do you agree to worship Wukong's body?[roman type][line break]";
+		say "     ([link]Y[as]y[end link]) - Agree.";
+		say "     ([link]N[as]n[end link]) - Out of question.";
+		if player consents:
+			LineBreak;
+			say "     You nod, and place yourself in front of the Monkey King's feet. You grab them, and starts tracing figures with your fingers on his soles. Wukong's feet seem to be sensitive, as you see his toes curl in delight when you press on a good spot. 'Oh yes, that's the thing,' the simian sighs. You turn up a gear, and massage the king's feet until he pushes one of them on your face. The prehensile toes close on your face while he gives a simple order: 'Lick.'";
+			say "     You oblige, and lick Wukong's sole, then the other. At one point, he pushes his toe in your mouth, for you to suck on them and play with your tongue. 'Now, up,' Wukong asks. You look up, and quickly understand what he means when you notice his raging hard-on. You slowly lick and massage your way up to the monkey's crotch. He trembles with pleasure, his cock releasing pre without any intervention. When you arrive at your prize, Wukong presses your nose against his crotch with his leg, allowing you bask in the manly musk of his ballsack. You do not waste time licking it clean, and sucking each of his testes inside your mouth.";
+			say "     'Aaah... Yes...' Wukong groans. After a while, he slowly guides you up his maleness. You start opening your mouth, but he stops you at the last moment. 'No. Take your time. Let me enjoy.' You lick and slobber up and down the Monkey King's length, making sure that every square inch has been tended for. After receiving all sorts of attention for a good half-hour, the simian is ready to explode.";
+			WaitLineBreak;
+			say "     You did not even have to take all of it. You simply wrapped your lips around the kingly member's groin, and rolled your tongue around the exposed, sensitive flesh. This, combined with the continuous kneading of his crotum by your hand, made Wukong suddenly howl loudly and cum hard. 'Aaah! Aaah! Aaaahn! Aaaaah...' Cum pulsated inside your mouth, and you made sure to drink every drop of it, savoring the salty taste on your tongue.";
+			say "     Extenuated, Wukong slumps back on his throne, and closes his eyes. 'Very, very well done. You should consider staying here and becoming part of my court. To spend the days with me here, instead of a wild goose chase.' You politely thanks Wukong for his offer, but feel obliged to refuse for the moment, and take your leave.";
+			infect "Monkey";
+		else:
+			LineBreak;
+			say "     Wukong removes his feet when he hears your refusal. 'Humph! Such an attitude. Did you expect [italic type]me[roman type], the great Monkey King, to debase himself for [italic type]your[roman type] enjoyment? Get out of my sight.'";
+
+to say WukongTrainingTrain:
+	say "     'Good, good,' Hanu says. 'Since it is rare that we have two students, allow me to make this training more, shall we say, competitive. Please undress yourself.' You [SelfStripCrotch], then you [SelfStripChest], while Hanu comes back with a small pot filled with a creamy substance. 'Stay still,' the brown monkey orders you, as he picks a good dose of it, and suddenly [if player is herm]rubs it on your cock[smn], then runs a finger on and in your cunt[sfn]. Your loins instantly feel as if they were on fire. Your cock[smn] harden[smv], and your cunt[sfn] turn[sfv] dripping wet[else if player is male]rubs it on your cock[smn]. Your loins instantly feel as if they were on fire. Your cock[smn] harden[smv][else]Your loins instantly feel as if they were on fire. Your cunt[sfn] turn[sfv] dripping wet[end if] Your crotch is itching. Itching very bad. But Hanu prevents you from touching it. 'No. Calm yourself. Focus.'";
+	say "     Hanu quickly rubs the lotion on Wukong as well, who ends up in the same state as you. 'Both of you, lie down,' he asks, before he sits between the both of you. Then, he presents to each of you a feet. 'This will be our training. Tend to my feet. The first one who reaches for their crotch loses, and the winner will be allowed to rub his sex with the loser's body. Now, do not lose any time. Begin.'";
+	say "     You grab the foot which hovers in front of your face, and starts massaging the soft, dark brown sole. There is a sort of pleasant, soft erotic feeling in playing with someone else's foot, albeit it does not do much to make you forget the itching between your thighs. Trying to use any ressource you can to focus on the master's foot, you start giving it licks. Your tongue becomes bolder and bolder, and you find yourself playing with Hanu's toes. From the grunts he emits, the old monkey seems very satisfied from your job, and probably Wukong's as well, as you see the younger monkey imitating you.";
+	WaitLineBreak;
+	if (humanity of Wukong is 0 and libido of player < 75) or (humanity of Wukong is 1 and libido of player < 50) or (humanity of Wukong >= 2 and libido of player < 25):
+		say "     You take big breaths, basking in the smell and the taste of Hanu's feet in order to forget the rising need to touch yourself rises quickly in you. You manage to hold on, while Wukong breaths more and more heavily, and loses focus on what he is doing. Suddenly, he lets go of Hanu's foot, and hurriedly begins to masturbate furiously.";
+		say "     You raise your head, and see Hanu stop a chronometer. 'You are still behind our friend, Wukong,' you hear Hanu ponder. 'You won our wager, so have your little fun. Remember not to rub yourself where I applied the balm on Wukong.' You definitely need the release, so you decide to grab Wukong's feet. You lewdly grind the oblivious monkey's limbs on your sex, to alleviate the unrelenting urge.";
+		say "     [if player is herm]You make sure to alternate the feet between your cock[smn] and your cunt[sfn][else if player is male]You rub your cock[smn] against Wukong's soft soles[else]You rub your cunt[sfn] against Wukong's soft sole[end if].They are so soft, that your arousal quickly catches up with your training partners. The both of you cum at the same time, and while his cum paints his furry chest, your own fluids cover his soles, and dribble down his legs. Extenuated, you lean back, while a groggy Wukong pants on his back. Near you, Hanu is observing the scene, sitting in the lotus position. 'Ah, two vigorous youngsters. We should redo this sort of training, the next time you are around.'";
+	else:
+		say "     However, the itching and the need to touch yourself rises quickly in you. You attempt to still your breathing, but all you manage to do is pant heavily, and arouse yourself even further. Wukong, while clumsy by himself, manages to hold on longer than you. Feeling as if you are going crazy, you suddenly let go of Hanu's foot, and hurriedly [if player is herm]grab your cock with one hand, while plunging the fingers of your other hand in your pussy[else if player is male]grab your cock with one hand[else]plunge the fingers of your other hand in your pussy[end if] and start masturbating furiously.";
+		say "     You barely notice the beep of a chronometer. 'You held longer than I thought,' you hear Hanu ponder. 'Wukong, you won our wager, so have your little fun. Remember not to rub yourself where I applied the balm on our friend.' [if breast size of player > 0]Wukong litteraly jumps in place, and straddles himself on your chest. His hands grab your [breast size desc of player] breasts and launches his dick in the tight space he created. He pistons his hips fast, as fast as the itching urges him to be. You let him do, too occupied by your own masturbation[else]Wukong grabs your legs, and squeezes your thighs together. Then he humps the tight space fast, , as fast as the itching urges him to be. You let him do, too occupied by your own masturbation[end if].";
+		say "     The both of you cum at the same time, and his sperm quickly joins yours on your body. Extenuated, Wukong rolls on the side, while you are left on your back, gasping for air. Near you, Hanu is observing the scene, sitting in the lotus position. 'Ah, two vigorous youngsters. We should redo this sort of training, the next time you are around.'";
+
+to say WukongTrainingAssist:
+	say "     'Very good. In this case, follow me. You too, Wukong.'[line break]'[if humanity of Wukong is 0]Like Hell I- Gaaargh![else if humanity of Wukong is 1]Not again, come o-Nnnng![else]Hey, I never agreed to let someone el-Gkkk![end if]' A shock from Wukong's collar shuts down the young monkey's protests.[line break]'Hush, you. Stand over here!' Hanu gives you some ropes, and instructs you to tie some knots around Wukong's shibari with them. After you are done, he passes the ropes inside rings on the floor and ceiling, and pulls. Wukong finds himself pulled a couple of inches into the air, in a position which looked like he was stuck mid-flight. His arms were tied behind his back with his tail; one leg was left free, but the other was pulled all the way back, and tied to Wukong's collarbone.";
+	say "     Hanu hands you a pot of lotion. Following his lead, you start to run your hands all over Wukong's body. He makes you focus on the younger simian's feet, while he slowly tugs on his nipples.'O-Ohh...' Wukong wheezed.[line break]'We have worked on this position,' Hanu chastizes. 'Work on your breathing.' After that, Hanu hands you a small pouch, with a rope hanging from it; the pouch feels a little heavy. 'Tie it around his scrotum,' he instructs you.[line break]'N-No, not that,' Wukong pleads.[line break]'Hush, you. Focus,' the older monkey retorts, while his oily hand grabs Wukong's cock and starts massaging it.";
+	say "     You roll the ropes around Wukong ballsack, tie them, and let the pouch fall down. Gravity pulls on the tied monkey's balls. 'Nnnf!' His cock is now rock hard, and his ordeal if far from over. Hanu and you spend the good part of an hour manhandling Wukong, pulling his shaft and his balls,  giving them slaps, and at certain occasions adding weight. And Wukong was not yet granted release. Then, Hanu slips down two fingers inside his student's ass, who immediately loses contenance as the older monkey presses on his prostate.'Aah! Aah... Nnnn!'[line break]'Hold it! Control your breath!'[line break]'P-Please untie these weights. Please, I'm about to... Aah...'[line break]'I said hold it!'";
+	WaitLineBreak;
+	if humanity of Wukong < 2:
+		say "     'Aaah! Aaah!' Wukong's body tenses up, coming hard from the prostate massage. But with his balls stretched and tied, only a few drops of fluid manage to escape from his spasming sex. Wukong grunts of frustration through his ruined orgasm. You can't help but wonder if that was the wall point of the lesson. 'I guess that, at one point, you will learn the lesson. Your breathing was all over the place!'[line break]'D-Damn you, old man,' Wukong replies. For all answer, Hanu grabbed Wukong's cock and stroke him, until the young monkey howled from the over-stimulation.";
+	else:
+		say "     Wukong grits his teeth and takes big breaths. Pre liberally dribbles from his penis, but he manages to hold on, even with Hanu's expert prostate massage. After a moment, the older monkey sighs and, with a smile, asks you remove the weights dragging his student's balls down. You execute yourself, then Hanu inserts a third finger. 'Stroke him. Do not stop until he is done. He is worthy a good reward, this time.' You grab Wukong's cock, and barely makes a few moves before cum erupts out of his member, like a volcano. 'Aaah! AAah! Aaaaaah!' Your hand gets covered with sperm, as well as the floor below, while Wukong's orgasm goes on for long, long seconds.";
+	say "     Eventually, Wukong is let down of his suspension, and slowly walked away, to rest in a corner. 'Thank you for helping me,' Hanu says as he turns towards you. 'Having an assistant do make things easier.'";
 
 Monkey King ends here.

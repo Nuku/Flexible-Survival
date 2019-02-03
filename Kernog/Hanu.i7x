@@ -1,7 +1,7 @@
 Version 3 of Hanu by Kernog begins here.
 
-"V3: Inclusion of Loyalty and PreReq features. Hanu becomes a fully-fledge NPC and is now in the newly built Monkey House"
-"V2: Rework of Hanu from Misc 9 by Kaleem mcintyre, integration with Zoo Month, sidequest(s) with Monkey King allowing for monkey group enemies to get released into the zoo."
+"V3: Inclusion of Loyalty and PreReq features. Hanu becomes a fully-fledge NPC and is now in the newly built Monkey House
+V2: Rework of Hanu from Misc 9 by Kaleem mcintyre, integration with Zoo Month, sidequest(s) with Monkey King allowing for monkey group enemies to get released into the zoo."
 
 Section 1 - Hanu NPC
 
@@ -15,18 +15,16 @@ Hanu is a person. Hanu is in Monkey House.
 The description of Hanu is "[hanuDesc]";
 
 to say hanuDesc:
-	if Monkey Duel is inactive:
-		say "Weird monkey";
-	else if Monkey Duel is unresolved:
-		say "Weirder monkey";
+	if Monkey Duel is unresolved:
+		say "[one of]Hanu stands in the middle of the repurposed Training Hall, performing katas. His graceful moves and calm expression make him look like a ballet dancer[or]Hanu is sitting in the middle of the Monkey House, meditating in a succession of poses showcasing the simian's remarkable flexibility[at random].";
 	else if Resolution of Monkey Duel is not 1:
-		say "Poor monkey";
+		say "Hanu is sitting in front of the throne, naked except for the collar shackled around his neck, linked with a metal chain to the throne. The monkey gives you a defeated look, then lowers his eyes, as Wukong patronizingly pets his slave's head with his prehensile foot.";
 	else:
-		say "Boss monkey";
+		say "[one of]Hanu stands in the middle of the repurposed Training Hall, performing katas. His graceful moves and calm expression make him look like a ballet dancer[or]Hanu is sitting in the middle of the Monkey House, meditating in a succession of poses showcasing the simian's remarkable flexibility[or]Hanu is sitting in front of his more-or-less willing student, as he finishes lecturing him on the importance of mastering one's mind and body. From Wukong's [if humanity of Wukong < 3]exasperated[else]bored[end if] expression, you are not sure if Hanu's message is finding open ears[at random].";
 
 Instead of going to Monkey House for the first time:
 	say "Coming to one of the less exposed area of the zoo you find yourself coming across a monkey-shifted man sitting quietly on top of a rock, meditating in the lotus position. 'About time you showed up.' The voice of the simian catches you slightly off guard as you find the other speaking to you while keeping his eyes close. 'Yes, I'm talking to you. Come on over here so we can start training.'";
-	say "You look at him, intrigued, while his long tail slowly curls around the left side of his body. He gives off an aura of calmness, with his groomed dark brown fur ruffled softly by the wind alongside his long, straight hair, and his slow breathing shifting the abdominals of his trained body[if Monkey is listed in the EncounteredEnemies of player]. The monkey brings back the memory of Wukong from the Museum in your mind, but this one feels different[end if]. His face beams with a light smirk as he awaits your answer. [bold type]Do you want to train with this strange simian?[roman type][line break]";
+	say "You look at him, intrigued, while his long tail slowly curls around the left side of his body. He gives off an aura of calmness, with his groomed dark brown fur ruffled softly by the wind alongside his long, straight hair, and his slow breathing shifting the abdominals of his trained body. His face beams with a light smirk as he awaits your answer. [bold type]Do you want to train with this strange simian?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -47,7 +45,7 @@ Instead of going to Monkey House for the first time:
 
 instead of conversing Hanu:
 	if Monkey Duel is inactive:
-		say "Training offer";
+		say "'Are you reconsidering my offer?' Hanu asks in return of your greetings. 'Do you wish to train with me?'";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -63,19 +61,74 @@ instead of conversing Hanu:
 			Increase score by 5;
 			now Monkey Duel is active;
 	else if Monkey Duel is unresolved and (Take My Royal Word For Granite is resolved or Hunt Of Mammoth Proportions is resolved):
-		resolve Monkey Duel;
+		monkeyDuel;
 	else if the resolution of Monkey Duel is not 1:
-		say "Prisoner dialogue";
+		say "[one of]'P-Please, help me,' the monkey whispers, before Wukong pulls on his leash.[line break]'What was that?' the younger simian asks, as Hanu gasps then looks at the ground once more. 'That's what I thought. You're my pet, so I expect of you to talk like one.'[line break]'E-Eeek. Eek,' Hanu makes in a resignated tone.[line break]'Better.'[or]'Ook,' Hanu replies plaintively.[line break]'My pet is well-behaved, is he not?' Wukong asks mockingly.[stopping]";
 	else:
-		say "Am the boss dialogue";
+		say "'Hello, my friend. I hope that you are well,' Hanu greets you. '[if humanity of Wukong < 1]Our simian friend is a turbulent student, and I had to use the shocking collar a fair number of times. But he will learn, eventually[else if humanity of Wukong < 3]Our common friend is showing admirable progress. I only need to discipline him once a day, now[else]I am very proud of Wukong; he is ready to become a proper student. Although I think I will keep his current outfit for, um, reasons. Humour an old monkey, will you[end if].'";
 
-Instead of fucking Hanu:
+instead of fucking Hanu:
 	if Monkey Duel is unresolved:
-		say "No";
+		say "The monkey chuckled. 'I am flatted by your proposal, my friend, but I must refuse. My mind fights with the urges that came with this body, and I cannot allow any laspe.'";
 	else if Resolution of Monkey Duel is 1:
-		say "Special training";
+		say "Hanu smiles. 'I must once again deny your request. However, if lust stirrs your loins, you can train with me and Wukong, and work these out.'[bold type]What do you say?[roman type]";
+		now sextablerun is 0;
+		blank out the whole of table of fucking options;
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Train";
+		now sortorder entry is 1;
+		now description entry is "Train alongside Wukong";
+		[]
+		choose a blank row in table of fucking options;
+		now title entry is "Assist";
+		now sortorder entry is 6;
+		now description entry is "Assist Hanu in his training";
+		sort the table of fucking options in sortorder order;
+		repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+			say "[link][y] - [title entry][as][y][end link][line break]";
+		say "[link]0 - Nevermind[as]0[end link][line break]";
+		while sextablerun is 0:
+			say "Pick the corresponding number> [run paragraph on]";
+			get a number;
+			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+				now current menu selection is calcnumber;
+				choose row calcnumber in table of fucking options;
+				say "[title entry]: [description entry]?";
+				if player consents:
+					let nam be title entry;
+					clear the screen and hyperlink list;
+					now sextablerun is 1;
+					if nam is "Train":
+						say "[WukongTrainingTrain]";
+					if nam is "Assist":
+						say "[WukongTrainingAssist]";
+					wait for any key;
+			else if calcnumber is 0:
+				now sextablerun is 1;
+				say "     You shake your head and politely refuse Hanu's offer. 'A shame. We are on the same boat, here,' the monkey replies. 'In order to retain our anity, mental fortitude is needed. Come back if you reconsider.'";
+				wait for any key;
+			else:
+				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+		clear the screen and hyperlink list;
 	else:
-		say "Royal wand scene";
+		say "     'You wish to use my pet?' Wukong asks, grinning. 'He is mine to use as I see fit, so I cannot let you have him. However, you can assist me, for my amusement.' The monkey fetches a vibrating wand from behind his cushion, then throws it at you.[line break]'Keep him busy until I say so. Don't mind him, even if he cums.'[line break]You ready the wand, and kneel [if player is dominant]excitedly[else]hesitantly[end if] in front of Hanu. The old monkey wiggles, and attempts to plead silently, but you ignore him, and press the wand against his crotch. Then, you turn on the toy.";
+		say "     [italic type]Bzzzzz![roman type] 'Oooh! Nnnnf!' Hanu groaned loudly, while the vibrations stirr his cock to life.[line break] In the meantime, Wukong slides forward, and turns his rival's face towards his growing cock. 'I won't have my assistant stop until I get one off. So work diligently.'[line break]'Nnnf! Aaah...' Hanu's body jerks as you hit one of his good spots. Then, he slips the tip of Wukong's dick inside his mouth and begins sucking it. Holding the old monkey's head flat against the throne's seat, Wukong lets gravity push his shaft down Hanu's throat. 'Gmmmrf!'";
+		say "     Hanu has a lot of trouble focusing, with you running the wand up and down his member. Wukong is simply content watching the show, while he lets his sex slave handle the slab of meat in his throat. You notice Hanu's body tense up, and his fingers and toes curl, as he approaches the edge of climax. [bold type]How should you proceed?[roman type][line break]";
+		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Edge him.";
+		say "     ([link]N[as]n[end link]) - Milk him.";
+		if player consents:
+			LineBreak;
+			say "     You remove the wand at the last second. Hanu, who is unable to see what's going down, with his face teabagged by Wukong, sighs with relief. His cry of distress when you press the wand on his cock once more amuses the monkey king greatly. 'Oh, yes. Keep screaming around my cock,' he sighs. Hanu desperately attempts to keep the wand out of reach, but Wukong quickly grabs his arms and pull them up. Once again, Hanu's breathing accelerates. Once again, you deny him release, and the cycle plays again.";
+			say "     Eventually, it is Wukong's turn to grunt. 'Raah! Nnnf... Rrrraaah!' The visible and audible gulps of Hanu's throat turn you on immensely. 'Turn it off,' the monkey king asks you, as he pulls out of Hanu's mouth. Hanu moans loudly in protest, then when his mouth is finally free. 'P-Please end this torment! Pleas-Urk!'[line break]'Language,' Wukong growls, while pulling on Hanu's collar.[line break]'Oo... Oook. Oook?'";
+			say "     Wukong laughed, and grabbed Hanu's cock with his feet. 'That's it! That's what you are: a little monkey pet. Now, cum! Make sure the whole city hears you howl like an animal!'[line break]'Oook! Oookoooh! Ooooh!' You wisely move out of the way, in time for Wukong's stroking feet to coax an eruption of cum exploding from Hanu's cock, and splashing a long line in front of the throne. 'Aaaahuuuu!' the monkey kept screaming, eyes closed.";
+		else:
+			say "     You keep the wand, until Hanu moans loudly around Wukong's cock. Ropes of cum launch out of his own member, and drop down on his body. Hanu's moans of pleasure progressively turn into cries of distress, as he realizes that the wand is still not stopping. Hanu desperately attempts to keep the wand out of reach, but Wukong quickly grabs his arms and pull them up. 'Hands off, pet! You can only blame yourself for this.'[line break]'Nnnmf!' Hanu wiggles and struggles, but the wand is still there, harassing him, steadily building a second orgasm.";
+			say "     Said orgasm comes only a few minutes after. Hanu lets out raspy moans, as more cum flows up, but less in quantity and in a less spectacular fashion. Wukong obliviously keeps riding Hanu's mouth. 'Mmmm! Coming soon. Can't believe you can cum more than twice while I only get one. What a naughty pet.' Hanu whimpers, but his struggles have become not much more than exhausted shudders.";
+			say "     Just as Wukong cums inside Hanu's throat, Hanu lets out a pathetic whimpers, as his sex lets out only a few drops of sperm. A panting Wukong chuckles at the spectacle, and his feet leisurely play with his sex pet's cum-coated fur.";
+		say "     Satisfied by the outcome, Wukong releases Hanu, and lets the exhausted simian slump down on the floor, completely exhausted. 'Well, that was fun,' Wukong says, as he plays with Hanu's cum on his feet, then negligently rub it off his prisoner's fur. 'We should do it again later.'";
 
 Section 2 - Monkey Duel
 
@@ -85,7 +138,7 @@ Monkey Duel	"Monkey Duel"
 
 Monkey Duel is a situation.
 
-Instead of resolving Monkey Duel:
+to monkeyDuel:
 	say "     'About time you showed up[if player is not defaultnamed], [name of player][end if].' a familiar voice calls you out as you pass under a large tree. Hanu, the monkey with whom you meditated with earlier, is sitting leisurely on one of the branches, his long tail waving at you. With surprising agility, Hanu jumps down from his perch and makes a perfect landing just in front of you. 'You seem to have an habit of being late for training, my pupil. But no matter, let us practice our kung fu together.'";
 	say "     The monkey's words make you remember about your (mis)adventures with the only other monkey you know. [bold type]Should you bring up Wukong's existence to Hanu?[roman type][line break]";
 	LineBreak;
@@ -386,7 +439,18 @@ to say losetoWukongThugs:
 
 Section 3 - Monkey House
 
-Monkey House is a room.
+Table of GameRoomIDs (continued)
+Object	Name
+Monkey House	"Monkey House"
+
+Monkey house is south of Main Path 2.
+The earea of Main Path 2 is "Zoo".
 The description of Monkey House is "[monkeyHouseDesc]".
+
+to say monkeyHouseDesc:
+	if Resolution of Monkey Duel is 2 or Resolution of Monkey Duel is 3:
+		say "     The zoo's monkey house was originally an exhibit for monkeys and apes, and formerly a makeshift dojo. Now that Wukong has taken over, the house turned into a throne room, with the golden monkey sitting on his cushioned sit, in the middle. His thugs occasionaly come to give him reports, and leave with new orders.";
+	else:
+		say "     The zoo's monkey house seems to have been repurposed. The glass panels have been removed, and one of the exhibits have been repurposed into a makeshift dojo. A suspended tire is the only artifact of the original place; judging by the cot installed in it, it is Hanu's resting place.";
 
 Hanu ends here.
