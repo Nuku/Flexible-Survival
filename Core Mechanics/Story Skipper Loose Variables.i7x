@@ -343,10 +343,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is AbandonedRoomStatus;
 		-- "absorb":
 			now NumberVarValue entry is absorb;
-		-- "acquaintedWithHanu":
-			now NumberVarValue entry is acquaintedWithHanu;
-		-- "acquaintedWithWukong":
-			now NumberVarValue entry is acquaintedWithWukong;
 		-- "addedlibido":
 			now NumberVarValue entry is addedlibido;
 		-- "afsmread":
@@ -4051,10 +4047,6 @@ to VariableNumberLoad:
 					now AbandonedRoomStatus is numberVarValue entry;
 				-- "absorb":
 					now absorb is numberVarValue entry;
-				-- "acquaintedWithHanu":
-					now acquaintedWithHanu is numberVarValue entry;
-				-- "acquaintedWithWukong":
-					now acquaintedWithWukong is numberVarValue entry;
 				-- "addedlibido":
 					now addedlibido is numberVarValue entry;
 				-- "afsmread":
