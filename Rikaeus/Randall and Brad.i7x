@@ -287,66 +287,62 @@ instead of fucking Randall:
 		now BunnySexChoice is 1; [Has Talked To Randall]
 		say "[BunnyCoupleSexMenu]";
 
-		to say BunnyCoupleSexMenu:
-			LineBreak;
-			now sextablerun is 0;
-			blank out the whole of table of fucking options;
-			[]
-			if player is male:
-				choose a blank row in table of fucking options;
-				now title entry is "Fuck Randall's Ass";
-				now sortorder entry is 1;
-				now description entry is "Take the bun's hole for a ride.";
-			[]
-			if player is male:
-				choose a blank row in table of fucking options;
-					now title entry is "Chain Fuck";
-					now sortorder entry is 2;
-					now description entry is "Fuck the bun while Brad takes your hole.";
-			[]
-			choose a blank row in table of fucking options;
-			now title entry is "Tease The Jock";
-			now sortorder entry is 3;
-			now description entry is "Suck on Brad's Cock";
-			[]
-			Sort the table of fucking options in sortorder order;
-			repeat with y running from 1 to number of filled rows in table of fucking options:
-				choose row y from the table of fucking options;
-				say "[link][y] - [title entry][as][y][end link][line break]";
-			say "[link]100 - Nevermind[as]100[end link][line break]";
-			while sextablerun is 0:
-				say "Pick the corresponding number> [run paragraph on]";
-				get a number;
-				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-					now current menu selection is calcnumber;
-					choose row calcnumber in table of fucking options;
-					say "[title entry]: [description entry]?";
-					if player consents:
-						let nam be title entry;
-						now sextablerun is 1;
-						if (nam is "Fuck Randall's Ass"):
-							say "[BunnyCoupleSex1]";
-						if (nam is "Chain Fuck"):
-							say "[BunnyCoupleSex2]";
-						if (nam is "Tease The Jock"):
-							say "[BunnyCoupleSex3]";
-						wait for any key;
-				else if calcnumber is 100:
-					say "Break off the conversation?";
-					if the player consents:
-						now sextablerun is 1;
-						if BunnySexChoice is 1:
-							say "     You think about your options before shaking your head and apoligizing to the bun. He gives you a slightly frustrated look that's made obvious why with his hard-on but he's clearly okay with it.";
-							now BunnySexChoice is 0;
-						if BunnySexChoice is 2:
-							say "     You look up and down at the bunny jock and then over at his boyfriend before sighing and shaking your head and telling Brad that you're not actually interested at the moment. Understandably this frustrates him sexually but he sighs and says okay.";
-							now BunnySexChoice is 0;
-						wait for any key;
-					else:
-						say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-				else:
-					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-			clear the screen and hyperlink list;
+to say BunnyCoupleSexMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck Randall's Ass";
+		now sortorder entry is 1;
+		now description entry is "Take the bun's hole for a ride.";
+	if player is male:
+		choose a blank row in table of fucking options;
+			now title entry is "Chain Fuck";
+			now sortorder entry is 2;
+			now description entry is "Fuck the bun while Brad takes your hole.";
+	choose a blank row in table of fucking options;
+	now title entry is "Tease The Jock";
+	now sortorder entry is 3;
+	now description entry is "Suck on Brad's Cock";
+	Sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+			choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Fuck Randall's Ass"):
+					say "[BunnyCoupleSex1]";
+				if (nam is "Chain Fuck"):
+					say "[BunnyCoupleSex2]";
+				if (nam is "Tease The Jock"):
+					say "[BunnyCoupleSex3]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				if BunnySexChoice is 1:
+					say "     You think about your options before shaking your head and apoligizing to the bun. He gives you a slightly frustrated look that's made obvious why with his hard-on but he's clearly okay with it.";
+					now BunnySexChoice is 0;
+				if BunnySexChoice is 2:
+					say "     You look up and down at the bunny jock and then over at his boyfriend before sighing and shaking your head and telling Brad that you're not actually interested at the moment. Understandably this frustrates him sexually but he sighs and says okay.";
+					now BunnySexChoice is 0;
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
 
 to say BunnyCoupleSex1:
 	if BunnySexChoice is 1:
