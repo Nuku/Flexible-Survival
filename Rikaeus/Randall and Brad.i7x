@@ -47,7 +47,7 @@ to FirstRandallEvent:
 	now RandallBradRelationship is 1;
 	now Hanging out on the Green is resolved;
 	now Bunny Eavesdropper is active;
-	PlayerMet of Randall is now true;
+	now PlayerMet of Randall is true;
 
 Table of GameEventIDs (continued)
 Object	Name
@@ -175,7 +175,6 @@ to FourthRandallEvent:
 
 Table of GameRoomIDs (continued)
 Object	Name
-
 Randall's Room	"Randall's Room"
 
 Randall's Room is a room.
@@ -276,7 +275,7 @@ to say RandallRelationship:
 	say "     You're a tad bit curious as to how the two's relationship is going at the moment. The bun quirks his head in your direction and lets out a happy hum. 'Well the sex is amazing and I have a wonderful person to share my life with and learn about.' Randall says, looking in Brad's direction, chuckling when he sees an embarrassed look on the bunny jock's face. You smile at the male, happy that everything's going good. Though your friend does frown a second later. 'There are a few issues with his ex girlfriend but you'd do better asking Brad about that than me,' he says with a shrug. You give him a slightly worried look but then stop, figuring that it was bound to happen since Randall did more or less take the jock from the lizard woman. Figuring you've exhausted this line of conversation you let the guy return to work.";
 
 instead of fucking Randall:
-	if (lastfuck of BunnyCouple - turns < 2): [You sexed the couple in the last 6 hours]
+	if (lastfuck of Randall - turns < 2): [You sexed the couple in the last 6 hours]
 		say "     As you approach Randall with the intent on sexing him, he turns to you and chuckles. '[if cocks of player < 1]As fun as it is watching you two,[else]As much as I am a cockslut,[end if] me and Brad are both exhausted from last time,' the bun says this with a smile and a brow wag. His boyfriend on the other hand blushes, clearly not used to the male's openess yet.";
 	if cocks of player < 1:
 		say "     When you walk up to the bunny and proposition him for sex he gives you an odd look before chuckling. 'You do realize I'm a cockhound right my friend?' He asks with a deadpan stare after he finishes laughing. However before you can get your hopes up he continues. 'Of course, that doesn't mean that Brad over there can't play with you and I watch,' the bun says with a smirk. You do like where this idea is going.";
@@ -287,66 +286,66 @@ instead of fucking Randall:
 		now BunnySexChoice is 1; [Has Talked To Randall]
 		say "[BunnyCoupleSexMenu]";
 
-		to say BunnyCoupleSexMenu:
-			LineBreak;
-			now sextablerun is 0;
-			blank out the whole of table of fucking options;
-			[]
-			if player is male:
-				choose a blank row in table of fucking options;
-				now title entry is "Fuck Randall's Ass";
-				now sortorder entry is 1;
-				now description entry is "Take the bun's hole for a ride.";
-			[]
-			if player is male:
-				choose a blank row in table of fucking options;
-					now title entry is "Chain Fuck";
-					now sortorder entry is 2;
-					now description entry is "Fuck the bun while Brad takes your hole.";
-			[]
-			choose a blank row in table of fucking options;
-			now title entry is "Tease The Jock";
-			now sortorder entry is 3;
-			now description entry is "Suck on Brad's Cock";
-			[]
-			Sort the table of fucking options in sortorder order;
-			repeat with y running from 1 to number of filled rows in table of fucking options:
-				choose row y from the table of fucking options;
-				say "[link][y] - [title entry][as][y][end link][line break]";
-			say "[link]100 - Nevermind[as]100[end link][line break]";
-			while sextablerun is 0:
-				say "Pick the corresponding number> [run paragraph on]";
-				get a number;
-				if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
-					now current menu selection is calcnumber;
-					choose row calcnumber in table of fucking options;
-					say "[title entry]: [description entry]?";
-					if player consents:
-						let nam be title entry;
-						now sextablerun is 1;
-						if (nam is "Fuck Randall's Ass"):
-							say "[BunnyCoupleSex1]";
-						if (nam is "Chain Fuck"):
-							say "[BunnyCoupleSex2]";
-						if (nam is "Tease The Jock"):
-							say "[BunnyCoupleSex3]";
-						wait for any key;
-				else if calcnumber is 100:
-					say "Break off the conversation?";
-					if the player consents:
-						now sextablerun is 1;
-						if BunnySexChoice is 1:
-							say "     You think about your options before shaking your head and apoligizing to the bun. He gives you a slightly frustrated look that's made obvious why with his hard-on but he's clearly okay with it.";
-							now BunnySexChoice is 0;
-						if BunnySexChoice is 2:
-							say "     You look up and down at the bunny jock and then over at his boyfriend before sighing and shaking your head and telling Brad that you're not actually interested at the moment. Understandably this frustrates him sexually but he sighs and says okay.";
-							now BunnySexChoice is 0;
-						wait for any key;
-					else:
-						say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-				else:
-					say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
-			clear the screen and hyperlink list;
+to say BunnyCoupleSexMenu:
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Fuck Randall's Ass";
+		now sortorder entry is 1;
+		now description entry is "Take the bun's hole for a ride.";
+	[]
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Chain Fuck";
+		now sortorder entry is 2;
+		now description entry is "Fuck the bun while Brad takes your hole.";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Tease The Jock";
+	now sortorder entry is 3;
+	now description entry is "Suck on Brad's Cock";
+	[]
+	Sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]100 - Nevermind[as]100[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Fuck Randall's Ass"):
+					say "[BunnyCoupleSex1]";
+				if (nam is "Chain Fuck"):
+					say "[BunnyCoupleSex2]";
+				if (nam is "Tease The Jock"):
+					say "[BunnyCoupleSex3]";
+				wait for any key;
+		else if calcnumber is 100:
+			say "Break off the conversation?";
+			if the player consents:
+				now sextablerun is 1;
+				if BunnySexChoice is 1:
+					say "     You think about your options before shaking your head and apoligizing to the bun. He gives you a slightly frustrated look that's made obvious why with his hard-on but he's clearly okay with it.";
+					now BunnySexChoice is 0;
+				if BunnySexChoice is 2:
+					say "     You look up and down at the bunny jock and then over at his boyfriend before sighing and shaking your head and telling Brad that you're not actually interested at the moment. Understandably this frustrates him sexually but he sighs and says okay.";
+					now BunnySexChoice is 0;
+				wait for any key;
+			else:
+				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 100 to exit.";
+	clear the screen and hyperlink list;
 
 to say BunnyCoupleSex1:
 	if BunnySexChoice is 1:
@@ -362,8 +361,8 @@ to say BunnyCoupleSex1:
 	say "     With the tightness you don't believe you'll last long, and it's very true. What doesn't help your ability to hold on is when minutes later, after managing to hit his prostrate, Randall groans and spills his seed all over the back of the chair. This causes his hole to tighten even further and grip at your cock, making you moan loudly before slamming into him one more time, releasing your load into him and slumping over his back. You're not the final one to reach their climax however though, you hear a 'Fuck!' from behind you as what's clearly Brad sprays his cum all over his hand, chest and face. If you were looking you'd be rather surprised at the amount he came.";
 	WaitLineBreak;
 	say "     The three of you recover for a few seconds before Randall eases your cock out of him and clambers on over to where Brad is, happily licking all the cum he spilled off of him before promptly kissing him, the two of them moaning. Realizing that the two are probably about to go at it again, with them having the stamina of bunnies, you get yourself cleaned up and presentable. After that you decide that it'd be best to leave the couple alone, as you yourself are exhausted after your go, so you make your way out of the room, as the sounds of moans and groans start to fill the area.";
-	move player to Tenvale College Male Dorms
-	now lastfuck of BunnyCouple is turns;
+	move player to Tenvale College Male Dorms;
+	now lastfuck of Randall is turns;
 	now BunnySexChoice is 0;
 
 to say BunnyCoupleSex2:
@@ -384,7 +383,7 @@ to say BunnyCoupleSex2:
 	WaitLineBreak;
 	say "     With one last strong thrust, Brad buries himself balls deep into you, causing you to be sheated all the way into Randall and all three of you moan lewdly and loudly as you guys reach your orgasms. Your hole instantly starts filling up with copious amounts of warm, hot, cum, courtesy of the bunny jock who just thoroughly fucked you. You on the other hand breed the bun your cock is lodged in and dump your load in him, letting him enjoy the sensation of containing your seed. Randall however, since he was being masturbated by you ends up shooting his jizz all over your hand and the wall that he was pushed up against, as well as his own chest, which leaves a massive mess.";
 	say "     That just causes Brad to chuckle as the three of you collapse onto the bed in each others' arms. 'Welp looks like we need to launder our sheets again and wash the wall,' he says with a dopey smile. Randall just rolls him eyes and leans into your side to look at the bunny jock. 'Yeah well, I'm pretty sure that slime likes cleaning everything for everyone. As for the walls, you act like it'd take forever,' the bun says as if this is a common occurence. 'Well, when you seem to cum on the walls every day it does seem like that,' his boyfriend says, causing Randall to playfully smack the other before returning to just laying there. The three of you then just rest until the two of them deem it time to get up, especially the bun as he comments he does have homework to finish. That shocks though you quickly recover and make a comment about him being not all sex before standing up.";
-	now lastfuck of BunnyCouple is turns;
+	now lastfuck of Randall is turns;
 	now BunnySexChoice is 0;
 
 to say BunnyCoupleSex3:
@@ -399,7 +398,7 @@ to say BunnyCoupleSex3:
 	WaitLineBreak;
 	say "     Thankfully though it appears that your teasing had drawn Brad halfway to his orgasm so it you don't have to lay there that long. Rather, a minute or so later of being practically used like a sex doll, the bunny jock slams into your mouth one last time, holding your mouth firmly against his crotch. Seconds afterwards, massive amounts of cum starts to fill your throat, giving you a necessity to constantly swallow. Behind you, you can hear Randall swear, which brings you to the assumption that he managed to reach orgasm as well by just watching his boyfriend get off and masturbating. Soon enough on your end, Brad finishes filling your stomach with his seed, which allows him to pull out and slump against the wall. 'Fuck, that was great,' he says with a mumble.";
 	say "     'Glad you enjoyed that my studly bunny, I'm actually surprised our friend survived that long teasing you.' Randall said from over by the computer as you stand up. You start to clean yourself up as Brad begins to mumble something back to his boyfriend. 'Well, I didn't want to be too rude, and you did say I need to learn control my little bun,' he says tiredly, causing your friend to chuckle. You raise a brow at that, the bunny jock thinks that was control? But then again, he did manage to hold off until you got to the head of his cock, so instead you just shrug your shoulders. 'Thanks again for that, I do really appreciate it.' Brad says lazily as he pulls up his shorts. You wave it off and say it's alright and that you enjoyed it as well before letting the two get back to what they were doing.";
-	now lastfuck of BunnyCouple is turns;
+	now lastfuck of Randall is turns;
 	now BunnySexChoice is 0;
 
 Table of GameCharacterIDs (continued)
@@ -435,7 +434,7 @@ The conversation of Brad is { "<This is nothing but a placeholder!>" }.
 The scent of Brad is "     Brad gives off the scent of rubber and sweat with the underlying smell of sex. For a basketball player the first two kinda make sense and the last one you attribute to his boyfriend Randall.".
 
 to say BradDesc:
-	say "     The bunny jock is pretty well built, which is to be expected considering the fact he's on the basketball team. Standing at six foot six compared to his five foot four boyfriend the bunny [if scalevalue of player < 4]towers over you making you feel rather small. [else if scalevalure of player is 4]is roughly about your size, making you see eye to eye with him. [else]is rather short himself if you do a size comparison between the two of you. [end if]Appearance wise, he has fluffy looking white fur that covers him nicely and two floppy looking ears. Hiding his stomach muscles and his impressive length is a black wife beater and a pair of basketball shorts. Soon enough though Brad notices you staring in his direction and he smiles and waves in the middle of one of his tosses, somehow managing to catch the ball after doing so.";
+	say "     The bunny jock is pretty well built, which is to be expected considering the fact he's on the basketball team. Standing at six foot six compared to his five foot four boyfriend the bunny [if scalevalue of player < 4]towers over you making you feel rather small. [else if scalevalue of player is 4]is roughly about your size, making you see eye to eye with him. [else]is rather short himself if you do a size comparison between the two of you. [end if]Appearance wise, he has fluffy looking white fur that covers him nicely and two floppy looking ears. Hiding his stomach muscles and his impressive length is a black wife beater and a pair of basketball shorts. Soon enough though Brad notices you staring in his direction and he smiles and waves in the middle of one of his tosses, somehow managing to catch the ball after doing so.";
 
 instead of conversing the Brad:
 	if RandallBradRelationship < 5: [should not be here yet]
@@ -494,7 +493,7 @@ to say BradJennifer:
 	say "     As soon as you mention the jock's ex's name he frowns. 'Yeah, we've been having a few issues with her, partially because she can't seem to take the hint that she's been dumped.' Brad says with a roll of his eyes. Though the next part is said with a half-smile, half smirk. 'Thankfully the track team, the basketball team, and Coco have been helping run interference against her,' he says. You ask him to give an example, which causes him to chuckle. 'Well, when she tried interrupting a conversation between me and Randall, Coco's boyfriend tripped her into the fountain which allowed us to get away and continue talking,' he said with a grin. That prompts you yourself to laugh and say that they do seem to have it handled, leaving the bunny to his basketball throwing.";
 
 instead of fucking Brad:
-	if (lastfuck of BunnyCouple - turns < 2): [You sexed the couple in the last 6 hours]
+	if (lastfuck of Randall - turns < 2): [You sexed the couple in the last 6 hours]
 		say "     As you walk up to Brad, with clear intent on seducing him, he stumbles and grabs the basketball before it can fall. 'Um, [if cocks of player < 1]as much as I'd love to enjoy your company with Randall watching,[else]as much as I'd love to enjoy your company with Randall over there,[end if] we're still a bit exhausted from last time,' the bunny jock says with a blush on his face. You nod and back away, letting the nervous male get back to playing with his ball.";
 	else if cocks of player < 1:
 		say "     As you approach the bunny jock you run your hand down his thigh which makes him let out of a yelp of shock mixed with a moan. This causes him to drop his basketball and Randall to turn towards you guys and chuckle. 'Looks like our friend wants to have some fun. Of course, the cockhound that I am, I'll just be watching,' the bun says, giving you a wink. 'Well... what do you want to do?' Brad asks tentatively with a blush on his face now that he has approval from his boyfriend.";
