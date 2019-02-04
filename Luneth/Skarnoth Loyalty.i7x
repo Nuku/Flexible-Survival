@@ -108,6 +108,7 @@ after going to Half-Renovated Room while (Skarnoth is in Half-Renovated Room and
 	increase Loyalty of Skarnoth by 1;
 
 Section 3 - Skarnoth Master/Slave Events
+
 Part 1 - First Event
 
 after going to Grey Abbey Library while (Skarnoth is booked and Loyalty of Skarnoth is 10 and (the number of bunkered people + the number of booked people > 5) and "Unchained" is listed in Traits of Skarnoth):
