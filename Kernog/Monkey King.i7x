@@ -409,6 +409,8 @@ instead of resolving Hunt Of Mammoth Proportions:
 		say "     'How dare you?!' Wukong replies, when you say to his face that he is alone on this. 'Very well, then. I shall vanquish this beast alone. Begone, you spineless commoner!'";
 		say "     You sigh, then leave without further ado. As you quit the prehistory wing, you can hear the noise of battle behind you. Then, very quickly, the defeated whines of Wukong: 'No, don't put me in [italic type]there[roman type]! Don't! Do-mmmmf!' It sounds like you will not see him for a while.";
 		now Resolution of Hunt Of Mammoth Proportions is 4; [insulted Wukong]
+	if PlayerMet of Hanu is true:
+		say "As you come back to the lobby, Wukong's tribulations make you remember Hanu, the other monkey currently inhabiting the City Zoo. You consider paying him a visit.";
 	now Hunt Of Mammoth Proportions is resolved;
 
 [Event 3b - evil path]
@@ -462,6 +464,8 @@ instead of resolving Take My Royal Word For Granite:
 		LineBreak;
 		say "Valerie is understandably disappointed by your decision. 'Very well. I guess that I cannot force our problems on you. I will find a way, eventually...'";
 		now Resolution of Take My Royal Word For Granite is 99; [disinterest]
+	if PlayerMet of Hanu is true:
+		say "As you come back to the lobby, Wukong's tribulations make you remember Hanu, the other monkey currently inhabiting the City Zoo. You consider paying him a visit.";
 	now Take My Royal Word For Granite is resolved;
 
 Section 5 - Specific Items

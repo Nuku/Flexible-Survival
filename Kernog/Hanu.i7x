@@ -136,7 +136,7 @@ Table of GameEventIDs (continued)
 Object	Name
 Monkey Duel	"Monkey Duel"
 
-Monkey Duel is a situation.
+Monkey Duel is a situation. The sarea of Monkey Duel is "Nowhere".
 
 to monkeyDuel:
 	say "     'About time you showed up[if player is not defaultnamed], [name of player][end if].' a familiar voice calls you out as you pass under a large tree. Hanu, the monkey with whom you meditated with earlier, is sitting leisurely on one of the branches, his long tail waving at you. With surprising agility, Hanu jumps down from his perch and makes a perfect landing just in front of you. 'You seem to have an habit of being late for training, my pupil. But no matter, let us practice our kung fu together.'";
