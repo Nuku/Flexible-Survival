@@ -138,6 +138,8 @@ instead of resolving Divine Twins:
 	else:
 		say "     Attempting to be as silent as possible, you begin to make your way out of this section of the museum. Whatever the issue is between them, it's none of your concern.";
 
+
+[
 Section 2 - Artemis Disciple Bad Ends
 
 Part 1 - Broken Husky Slut
@@ -158,5 +160,7 @@ to say BrokenHuskySlutBadend:
 	WaitLineBreak;
 	say "     End of day 1";
 	say "     To be continued...";
+
+]
 
 TFTG Feats ends here.

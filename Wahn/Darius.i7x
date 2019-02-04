@@ -393,8 +393,9 @@ to say DariusTalk2: [red light district]
 to say DariusTalk3: [drugs]
 	say "     As you quietly ask him about the stuff he sells, Darius grins at you and says, 'The regular kinds of pick-me-ups are kinda hard to get, what with the chaos and the quarantine, but I can offer you all new products. Great stuff, definitively. You'll be surprised what people can cook up out of some of the things that grow or wander the streets these days. [']Bliss['] will really get your blood boiling, and the [']PowerUp['] tablets make you feel like you're a rhino or something. As for the baggies of [']Pixie Dust['] - they're not for snorting, no. Actual magic I got from a special little dude. Or not so little, if he wants to be. That's the effect the dust has.'";
 	say "     'I also got something for people who wanna join the best breed of dogs there is. Fur from yours truly that can make a man of anyone, or cum for the ladies. And believe me, the person who drinks it will be a slutty bitch before long, no matter what they start out with.' Darius grins at you as he says this, followed by a boastful addition of, 'Of course, pretty girls can get that for free too, right from the tap.' He grabs his crotch demonstratively as he says this.";
+	LineBreak;
 	if Darius is in Entrance to the Red Light District:
-		say "     'Just come to my place if you wanna buy shit. I'll be back there shortly,' Darius says and points to the east, explaining that he lives in an apartment building there.";
+		say "     [bold type]'Just come to my place if you wanna buy shit. I'll be back there shortly,'[roman type] Darius says and points to the east, explaining that he lives in an apartment building there.";
 
 Section 4 - Fucking
 

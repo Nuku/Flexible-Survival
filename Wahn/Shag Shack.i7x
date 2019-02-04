@@ -289,7 +289,7 @@ to say ShagShackSexMenu:
 	now sortorder entry is 9;
 	now description entry is "Time to blow off a furry hunk";
 	[]
-	if player is male and Azari_Met is false:
+	if player is male and PlayerMet of Azari is false:
 		choose a blank row in table of fucking options;
 		now title entry is "Spend time with the caged feral fox";
 		now sortorder entry is 10;

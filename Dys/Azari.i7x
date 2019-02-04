@@ -4,8 +4,7 @@ Azari by Dys begins here.
 
 Section 0 - Variables
 
-Azari_Met is a truth state that varies. Azari_Met is usually false.
-Azari_Corruption is a number that varies. Azari_Corruption is usually 0.
+[ Libido of Azari (Corruption Rating of the player)                         ]
 [ 0: Not corrupted yet                                                      ]
 [ 1: Corruption started. Player finds themselves desiring to be bred by the ]
 [    fox                                                                    ]
@@ -42,7 +41,7 @@ to say Azari_Scent:
 	say "<placeholder>.";
 
 to say ShagShackAlley_Desc:
-	if Azari_Met is false:
+	if PlayerMet of Azari is false:
 		say "     Stepping around the corner, you take in your new surroundings. It's clear that the alley hasn't been touched since the start of all of this mayhem, the dumpster nearly completely empty and the ground surprisingly clutter-free. Despite all this, you can't help but feel slightly unnerved by being here. Something about the dim, narrow space makes you tense up, expecting something to come at you at any moment, despite this being well within the safe area around the mall.";
 	else:
 		say "     <Description you get when Azari is here.>";
@@ -55,10 +54,10 @@ Section 2 - Scenes
 to say Azari_Start:
 	setmonster "Latex Fox";
 	choose row monster from the Table of Random Critters;
-	if Azari_Met is false:
+	if PlayerMet of Azari is false:
 		say "[Azari_Intro]";
 [	else:
-		if Azari_Corruption is:
+		if libido of Azari is:
 			--0: [Not corrupted yet. Just sex with the fox.]
 			--1: [Corruption has started. Will likely progress at this point.]
 			--2: [Corruption grows stronger.]
@@ -76,14 +75,12 @@ to say Azari_Intro:
 	say "     ([link]N[as]n[end link]) - No";
 	LineBreak;
 	if player consents:
-		now Azari_Met is true;
+		[now PlayerMet of Azari is true;] [commented out for now, as the further content does not exist]
 		say "     You shake your head, resolving to stick with your original course of action. With a tug, the door swings open, and you step over the threshold into what appears to be some kind of old storeroom. Boxes are stacked in one corner, seemingly untouched for months. Hazy light filters in through a dust-covered window on the far wall. You take a few more steps, allowing the door to swing closed behind you as you look around for the fox. Nothing really seems to be here.";
 		say "     [bold type]Surely you're not going to go down this easily. Do you struggle against the fox?[roman type]";
 		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Yes";
-		LineBreak;
-		say "     ([link]N[as]n[end link]) - No";
-		LineBreak;
+		say "     ([link]Y[as]y[end link]) - Yes.";
+		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			LineBreak;
 			if scalevalue of player < 3:
@@ -101,6 +98,8 @@ to say Azari_Intro:
 				say "     You decide that it's probably best to submit to the feral; after all, you did come here for sex. Sensing your submission to him, the fox gives you a quick nuzzle before he decides to get started. [Azari_Sex_AveragePlayer]";
 			else if scalevalue of player > 3:
 				say "     Even though you could likely overpower the smaller creature, you decide to submit instead, relaxing your muscles and letting out a deep breath. However, the fox doesn't seem to care about that. He growls and swipes across your chest, leaving three bleeding scratches before hopping off of you and returning to his sitting position. It seems the fox has no interest in you after all.";
+		LineBreak;
+		say "     <Note: Further stages of content do not currently exist for Azari, therefore his scene will repeat for now. If you like the character, he is available for expansion through commissions.>";
 	else:
 		say "     You nod at the shark, heeding his warning. Entering a tiny room with a crazed feral probably isn't the best idea, anyway.";
 		WaitLineBreak;
