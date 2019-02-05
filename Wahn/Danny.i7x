@@ -89,11 +89,11 @@ to say DannyTalkMenu:
 					say "[DannyTalk1]";
 				if (nam is "Ask him about taking photographs"):
 					say "[DannyTalk2]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the young mall rat, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -367,11 +367,11 @@ to say DannySexMenu:
 					say "[DannySex6]";
 				else if (nam is "Let Danny fuck your pussy"):
 					say "[DannySex7]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the mall rat, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

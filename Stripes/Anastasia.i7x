@@ -46,7 +46,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Captured Bird	"Captured Bird"
 
-Captured Bird is a situation. The level of Captured Bird is 3.
+Captured Bird is a situation.
+The level of Captured Bird is 3.
 
 when play begins:
 	add Captured Bird to badspots of girl;
@@ -91,7 +92,9 @@ Table of GameEventIDs (continued)
 Object	Name
 A Familiar Feather	"A Familiar Feather"
 
-A Familiar Feather is a situation. It is inactive. The level of A Familiar Feather is 4.
+A Familiar Feather is a situation.
+It is inactive.
+The level of A Familiar Feather is 4.
 
 instead of resolving A Familiar Feather:
 	say "     As you wander, something catches your eye. A single, scarlet feather with a yellow trimmed edge lays on the ground before you. It seems familiar, bringing up memories of the firebird you rescued some time ago. Picking it up, you turn the feather over a few times between your fingers before a hauntingly beautiful and feminine voice shakes you from your memories.";
@@ -107,7 +110,9 @@ Table of GameEventIDs (continued)
 Object	Name
 FireAndIce	"FireAndIce"
 
-FireAndIce is a situation. It is inactive. The level of FireAndIce is 6.
+FireAndIce is a situation.
+It is inactive.
+The level of FireAndIce is 6.
 
 instead of resolving FireAndIce:
 	say "     As you walk the empty streets, a crumpled up newspaper rolls past you like some pathetic urban tumbleweed, but the breeze that carried it is surprisingly chilly. You look back, cautiously, but see nothing out of place. You turn back, beginning your trek once again, only for the air around you to suddenly drop in temperature. Your muscles tense up as the frost starts to form on the asphalt.";

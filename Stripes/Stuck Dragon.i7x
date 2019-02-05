@@ -1320,8 +1320,123 @@ to say mchristy_cv1:
 	now tempnum is 0;
 	follow the turnpass rule;
 
+Section 14 - Placeholder infections
 
-Section 14 - Heat Table
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now name entry is "Horny Dragon"; [Name of your new Monster]
+	now enemy title entry is "Horny Dragon";
+	now enemy name entry is "";
+	now enemy type entry is 1; [unique enemy]
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[NonCombatError]"; [ Description of the creature when you encounter it.]
+	now face entry is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "blue colored dragon scales covering your"; [ skin Description, format as "your body is covered in (your text) skin."]
+	now tail entry is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]draconic[or]azure[or]blue dragon[at random]"; [ Cock Description, format as you have a 'size' (your text) cock.]
+	now face change entry is "WIP"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "WIP"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "WIP"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "WIP"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "WIP"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 10;
+	now dex entry is 14;
+	now sta entry is 12;
+	now per entry is 10;
+	now int entry is 14;
+	now cha entry is 16;
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 28;
+	now lev entry is 2; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
+	now wdam entry is 4; [Amount of Damage monster Does when attacking.]
+	now area entry is "Nowhere"; [ Location of monster, in this case the City Hospital]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 24; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 16; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 0; [ Number of Breasts infection will give you. ]
+	now breast size entry is 0; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
+	now loot entry is ""; [ Dropped item. Key will be used later ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "bestial";
+	now type entry is "[one of]draconic[or]reptilian[at random]";
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
+
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now name entry is "Slutty Dragoness"; [Name of your new Monster]
+	now enemy title entry is "Slutty Dragoness";
+	now enemy name entry is "";
+	now enemy type entry is 1; [unique enemy]
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[NonCombatError]"; [ Description of the creature when you encounter it.]
+	now face entry is "reptilian shape with a long snout. Your mouth is full of sharp teeth that peek out past your thin lips. Your head is bald except for two backwards facing horns"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "huge and draconic. You're over six feet tall and nine feet long from your head to the tip of your tail. You have four muscular and reptilian legs supporting your body. There are large bat-like wings on your back"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "blue colored dragon scales covering your"; [ skin Description, format as "your body is covered in (your text) skin."]
+	now tail entry is "You have a long, thick, and scaly dragon tail with your ass[if player is herm], gaping pussy lips and pendulous balls[else if player is female] and gaping pussy lips[else if player is male] and pendulous balls[end if] beneath it."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "[one of]draconic[or]azure[or]blue dragon[at random]"; [ Cock Description, format as you have a 'size' (your text) cock.]
+	now face change entry is "WIP"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "WIP"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "WIP"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "WIP"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "WIP"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 10;
+	now dex entry is 14;
+	now sta entry is 12;
+	now per entry is 10;
+	now int entry is 14;
+	now cha entry is 16;
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 28;
+	now lev entry is 2; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
+	now wdam entry is 4; [Amount of Damage monster Does when attacking.]
+	now area entry is "Nowhere"; [ Location of monster, in this case the City Hospital]
+	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 0; [ Number of Breasts infection will give you. ]
+	now breast size entry is 0; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 1; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 20;
+	now cunt width entry is 15;
+	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
+	now loot entry is ""; [ Dropped item. Key will be used later ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 5; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]fecund[or]bestial[at random]";
+	now type entry is "[one of]draconic[or]reptilian[at random]";
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
+
+Section 15 - Heat Table
 
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
@@ -1430,7 +1545,7 @@ to say randomdragoncolor:
 	say "[one of]black[or]blue[or]red[or]crimson[or]golden[or]white[or]azure[or]fiery[or]green[or]emerald[purely at random]";
 
 
-Section 15 - Guide to Christy Stats
+Section 16 - Guide to Christy Stats
 
 [ NoIntroduction ]
 [ 0 = Not introduced self ]
@@ -1491,7 +1606,7 @@ Section 15 - Guide to Christy Stats
 [ 2 = Fucked (M) the dragoness ]
 
 
-Section 16 - Endings
+Section 17 - Endings
 
 When play ends:
 	say "[dragonessupdate]"; [making sure dragoness/Christy's egg status is up to date]

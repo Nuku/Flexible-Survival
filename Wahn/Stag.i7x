@@ -172,6 +172,7 @@ to say Stag loses:
 							now non-infectious entry is false;
 							break;
 					stop the action;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the stag, shaking your head slightly as he gives a questioning look.";

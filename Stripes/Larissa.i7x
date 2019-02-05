@@ -417,6 +417,7 @@ check Larissatfing:
 
 carry out Larissatfing:
 	now calcnumber is -1;
+	follow the larissa_tfoption rule;
 	if HP of Larissa is 1:
 		say "     'I've been noticing all the interesting new creatures and forms out there that our various agents and researchers have been documenting. It's had me wondering if I might want to try out a new look. You know, a bit of a test drive before I settle on the new me,' she says quietly. Liking where this is going, you lean in a little closer. 'While a lot of samples come through here, I can't really snag them for myself. They're all logged in the inventory. But you've proven to be quite helpful and I thought you might want help me out,' she says with a sexy smile.";
 		say "     'So to pull this off, I'd need you to snag some vial samples. ";
@@ -429,7 +430,6 @@ carry out Larissatfing:
 		else:
 			say "?'";
 		WaitLineBreak;
-		follow the larissa_tfoption rule;
 		now HP of Larissa is 2;
 	else if HP is 2:
 		say "     'I'm still looking forward to changing into some sexy creatures so we can have even more fun together. I'll need a vial for the creature and [LarissTFcost] credits to cover the various expenses and to make sure someone will cover my shift while we put the new me through the paces,' she says with a wink.";

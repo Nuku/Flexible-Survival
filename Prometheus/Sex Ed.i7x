@@ -121,11 +121,11 @@ to LectureChoiceEvent: [Choose Lecture to attend]
 					say "[KinksLecturesEnrollment]";
 				if (nam is "Get current directions to the Kinks and Fetishes"):
 					say "[KinksLectures]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You excuse yourself and leave after earning a disapproving glance for wasting the registrar's time.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

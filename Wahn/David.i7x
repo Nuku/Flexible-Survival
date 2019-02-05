@@ -415,11 +415,11 @@ Instead of fucking David:
 						say "[DavidSex10]";
 					else if (nam is "Threesome with Brutus & David (DP Brutus)"):
 						say "[DavidSex11]";
-					WaitLineBreak;
+					wait for any key;
 			else if calcnumber is 0:
 				now sextablerun is 1;
 				say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -508,12 +508,12 @@ instead of conversing David:
 						say "[DavidTalk6]";
 					if nam is "Tell him about Brutus's inner turmoil":
 						say "[DavidTalk7]";
-					WaitLineBreak;
+					wait for any key;
 					now lastfuck of David is turns;
 			else if calcnumber is 0:
 				now sextablerun is 1;
 				say "     You step back from the young soldier, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;

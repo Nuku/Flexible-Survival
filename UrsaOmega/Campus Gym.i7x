@@ -124,22 +124,27 @@ to say randysex:
 		setmonster "Rhino";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Naked wrestling";
 		now sortorder entry is 1;
 		now description entry is "Wrestle and fuck Randy.";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Shower sex";
 		now sortorder entry is 2;
 		now description entry is "Take a shower with Randy.";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Endurance sex";
 		now sortorder entry is 3;
 		now description entry is "Practice your sexual stamina with Randy.";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Leave";
 		now sortorder entry is 4;
 		now description entry is "Forget about fucking Randy for now.";
+		[]
 		sort the table of fucking options in sortorder order;
 		while sextablerun is 0:
 			repeat with y running from 1 to number of filled rows in table of fucking options:

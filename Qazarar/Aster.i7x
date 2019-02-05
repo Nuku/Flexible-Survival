@@ -171,6 +171,8 @@ to say AsterTalkMenu:
 					say "[AsterTalk3]";
 				else if (nam is "Amulet"):
 					say "[AsterTalk4]";
+				wait for any key;
+				say "[AsterTalkMenu]"; [looping back into the menu]
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the minotaur, shaking your head slightly as he gives a questioning look.";

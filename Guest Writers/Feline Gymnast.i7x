@@ -181,6 +181,7 @@ to say beatthefelinegymnast:
 					say "[felinewinvagride]";
 				else if title entry is "Fuck her":
 					say "[felinewinvagfuck]";
+				wait for any key;
 		else:
 			say "Invalid Option.";
 

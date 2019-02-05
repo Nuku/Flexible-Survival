@@ -172,11 +172,11 @@ instead of conversing the Boghrim:
 					say "[BoghrimTalk3]";
 				if (nam is "Fighting"):
 					say "[BoghrimTalk4]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the large orc, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -447,11 +447,11 @@ instead of fucking Boghrim:
 						say "[BoghrimSex5]";
 					if (nam is "Double-team Mul with Boghrim"):
 						say "[BoghrimSex6]";
-					WaitLineBreak;
+					wait for any key;
 			else if calcnumber is 0:
 				now sextablerun is 1;
 				say "     You step back from the orc boss, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 		clear the screen and hyperlink list;

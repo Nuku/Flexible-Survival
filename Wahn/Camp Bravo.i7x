@@ -114,11 +114,11 @@ Instead of resolving a Back at the Camp:
 					say "[GuardBeg]";
 				if (nam is "Leave the camp for now."):
 					say "[GuardLeave]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the soldier, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -376,11 +376,11 @@ instead of conversing Major Padgett:
 					say "[MajorBriefing]";
 				if (nam is "Excuse yourself and break off the conversation."):
 					say "[MajorLeave]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the human soldier, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -582,11 +582,11 @@ to say CampBravoElaineTalk:
 					say "[ElaineFucking]";
 				if (nam is "Do nothing, turn away"):
 					say "     You wave Elaine Scott off as she looks at you inquisitively and turn away";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the soldier, shaking your head slightly as she gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -809,11 +809,11 @@ to say AdamSexMenu:
 				else if (nam is "Take Adam's ass"):
 					say "[AdamSex5]";
 				now lastfuck of Adam is turns;
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the half-minotaur, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -988,11 +988,11 @@ instead of conversing Sergeant Alexander:
 					say "[AlexanderFucking]";
 				if (nam is "Do nothing, turn away."):
 					say "     You wave Sergeant Alexander off as he looks at you inquisitively and turn away.";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the soldier, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

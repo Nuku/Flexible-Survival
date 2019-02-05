@@ -141,11 +141,11 @@ to say JulianTalkMenu:
 				if (nam is "Friends"):
 					say "[JulianTalk3]";
 				say "     Julian watches you patiently, waiting to see whether you wish to continue the conversation";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You stand up, indicating an end to the conversation. Julian bids you farewell, before looking out the window.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -217,11 +217,11 @@ to say JulianSexMenu:
 					say "[JulianSex2]";
 				if (nam is "Give Fellatio"):
 					say "[JulianSex3]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the wolf, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

@@ -640,6 +640,6 @@ Instead of resolving a Wild Kingdom:
 		say "     You mill around briefly with the others there, but things are quite hectic. They're certainly friendly enough, if rather odd. Still, it turns out to be a pleasant break from being attacked or hit on.";
 		increase morale of player by 1;
 	increase score by 1;
-
+	now Wild Kingdom is resolved;
 
 High Rise Events ends here.

@@ -284,11 +284,11 @@ to say BlueSpeakerSexMenu:
 					say "[BlueSex5]";
 				else if (nam is "Let Blue fuck your pussy"):
 					say "[BlueSex6]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the aquamarine goo person, shaking your head slightly as [SubjectPro of Blue Speaker] gives you a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

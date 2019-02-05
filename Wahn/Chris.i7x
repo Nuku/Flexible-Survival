@@ -176,11 +176,11 @@ to say ChrisTalkMenu:
 					say "[ChrisTalk1]";
 				if nam is "Sex":
 					say "[ChrisTalk2]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the orc, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -271,12 +271,12 @@ Instead of fucking the Chris:
 						say "[ChrisSex4]";
 					else if nam is "Milk him for some orc cum":
 						say "[ChrisSex5]";
-					WaitLineBreak;
+					wait for any key;
 					now lastfuck of Chris is turns;
 			else if calcnumber is 0:
 				now sextablerun is 1;
 				say "     You step back from the orc, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;

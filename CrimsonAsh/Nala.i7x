@@ -205,10 +205,11 @@ to say NalaSexMenu:
 		now sortorder entry is 1;
 		now description entry is "Let Nala suck you off";
 	[]
-	choose a blank row in table of fucking options;
-	now title entry is "Eat Nala out";
-	now sortorder entry is 2;
-	now description entry is "Lap at the imp's pussy";
+	if player is female:
+		choose a blank row in table of fucking options;
+		now title entry is "Eat Nala out";
+		now sortorder entry is 2;
+		now description entry is "Lap at the imp's pussy";
 	[]
 	if player is male: [possibly add on a "and cock length of player < X" if you wanna cap her capacity somewhere]
 		choose a blank row in table of fucking options;
@@ -257,7 +258,7 @@ to say NalaSex2: [oral on Nala]
 	say "     You stride up to the bubbly imp girl and ask if she's in the mood for some fun. She gives you a giggle and places a hand over her mouth. 'Feeling a little randy so you come to little ol' me huh? Well lucky for you I'm always down for a little randiness.' She flaps her wings and darts in your direction, slamming like a heavy pillow into your head locking lips with you and throwing her arms around your head. She thrusts her tongue into your mouth, her long demonic tongue wrapping with your own. Her stinger-tipped tail wraps around your midriff as her small yet surprisingly strong body pushes your willing form against a nearby wall. After a few moments of making out with the little she-devil she pulls back and smiles brightly. 'Mmm, you're going to take care of me aren't you lover?' She slowly pushes you down unto the floor below and straddles your head.";
 	say "     Gazing down at you she removes her lacy panties and fingers her sex above your face. She smells very sweet, a bit like apples with an intense heat that warms your face. She fumbles with her tail, pulling it to her face to give it a kiss. Before your eyes her tail stinger shifts into a red phallic shape. 'There we go, get to licking lover! I'll do the rest!' She exclaims as she drops the rest of her weight down onto your face. You thrust your tongue upward into her steaming hot cauldron sex, slathering her crotch in your saliva. She lets out a sweet little yelp and grips at your breasts to keep herself steady. She twists your nipples and humps downward at your thrusting tongue. Gaining a steady rhythm of her humping downward and you licking at her tasty juices you can feel her long tail caress lower down your body.";
 	WaitLineBreak;
-	say "     It moves across your thighs and the large nearly ten inch phallus rubs against your womanhood. Rubbing her tail penis into your damp lips she coat it in your excitement before pressing into your tunnel. Moaning into her humping thighs as you lick, Nala suddenly thrusts her tail phallus, fully engulfing it in your folds. You moan your pleasure into her burning sex as she continues to thrust into your own. You can feel yourself swiftly approaching climax as you feel the imp speedy her thrusts up. Trying to keep up, you redouble your efforts and suck on her clit, fingering her soaked crotch as you do. Finally Nala hilts her tail cock in your womanhood and you feel yourself explode in climatic bliss.";
+	say "     It moves across your thighs and the large nearly ten inch phallus rubs against your womanhood. Rubbing her tail penis into your damp lips she coats it in your excitement before pressing into your tunnel. Moaning into her humping thighs as you lick, Nala suddenly thrusts her tail phallus, fully engulfing it in your folds. You moan your pleasure into her burning sex as she continues to thrust into your own. You can feel yourself swiftly approaching climax as you feel the imp speedy her thrusts up. Trying to keep up, you redouble your efforts and suck on her clit, fingering her soaked crotch as you do. Finally Nala hilts her tail cock in your womanhood and you feel yourself explode in climatic bliss.";
 	say "     Your mind goes foggy but you manage to stay latched onto Nala's crotch as you ride out your orgasm, her tail doesn't let up and continues to thrust in and out of your spasming crotch. The little imp follows shortly after, clamping down around your tongue, her pink lips shoot forth a torrent of tasty climax to cover your face. Nala continues to hump against you and you can hear her giggle, it vibrating through her body. She slows her movement staring down at your soaked mouth before speaking. 'Hehe, good job you pussy licker you,' she says, patting the top of your head. She gets off your torso and lifts her clawed hand to help you up. You take it and get to your wobbly feet, trickles of girl-cum still running down your legs. Nala gives you a slap on the bottom and flies back over to her little bed leaving you to your own devices.";
 
 to say NalaSex3: [Nala fucked]

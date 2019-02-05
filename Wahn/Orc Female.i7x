@@ -244,6 +244,7 @@ to say KatyaBeatenSexMenu:
 				if KatyaResistance > 0:
 					decrease KatyaResistance by 1;
 				increase libido of Katya by 1;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the groaning orc woman, having decided against violating her as she is vulnerable after all.";

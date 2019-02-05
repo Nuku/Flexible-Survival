@@ -415,7 +415,7 @@ to say JenniferTalkMenu:
 					say "[CheerleaderPractice]";
 				else if (nam is "Suggest you become team manager"):
 					say "[WolfTeamManager]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from Jennifer, shaking your head slightly as she gives a questioning look.";
@@ -601,6 +601,7 @@ to say JenniferSexMenu:
 				else if (nam is "Share Jennifer with Septus"):
 					say "[JenniferSex6]";
 				now lastfuck of Jennifer is turns;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from Jennifer, shaking your head slightly as she gives a questioning look.";
@@ -620,7 +621,6 @@ to say JenniferSex1: [cock sucked by Jennifer]
 		say "     With your hands resting on her shoulders, you release a long, low moan of pleasure as you cum hard, pumping your [cum load size of player] load into your personal cheerleader for all watching to see. Jennifer swallows it all down while her tongue plays across your spurting shaft with practiced ease, her time as the team's favorite breeder having trained her well. After the last jet of cum, Jennifer sucks on your cock a bit more till it gets soft, then smiles up at you and sticks out her tongue to show you the last of your load. Then she closes her mouth and demonstratively swallows it all with a loud 'Mmmm.'";
 		say "     After such a sexy show, the other wolfmen around have gotten quite aroused. Jennifer makes a teasing show of stretching as she gets up. She gives you a kiss during which you squeeze her ass and finger her juicy pussy. After you release her, she goes over to two of the horny wolves and, taking their cocks in hand, leads them off with a giggle towards two [one of]free[or]available[or]other[or]naked[at random] cheerleaders [one of]they can mount[or]eager for a fuck[or]who start to suck them off while Jennifer coaches them on her technique[at random].";
 	increase lust of Jennifer by 1;
-	wait for any key;
 
 to say JenniferSex2: [cunt licked by Jennifer]
 	say "     Quickly stripping off your clothing, you give Jennifer a deep kiss, then push softly on her shoulders. She kneels down in front of you, smiling up at you and licking her lips[if HP of Septus >= 7 and HP of Septus < 50]. 'Mmm... let's deal with this juicy problem of yours, my sexy manager,' she purrs with a grin[end if].";
@@ -629,7 +629,6 @@ to say JenniferSex2: [cunt licked by Jennifer]
 	else: [team manager]
 		say "     She starts by running her tongue over the sensitive folds of your pussy, then inserts two fingers to rub your insides, creating a tingly pleasant feeling inside you. As a woman, she really knows what she's doing, rubbing just the right spots and softly sucking on your clit. Having had a lot of practice on the other cheerleaders as well as being flexible enough to do it to herself, her expert tongue and fingers have you moaning within moments. She plays her tongue across your sensitive folds and rubs at your clit, causing shivers of delight to run through your entire body[if anallevel is 3] as she pushes a finger slick with her own pussy juices into your ass as well[end if].";
 		say "     As Jennifer continues to pleasure you, the wolfmen and cheerleaders around grow louder with whistles, cat-calls and cheers of their own as your gasps and moans get louder and louder until you finally reach the peak of your arousal and have a messy orgasm, squirting femcum over Jennifer's hand and face. She eagerly licks your thighs clean, lapping away your juices and even pushing you to a second climax before moving back. Around, you can see that many of those watching have paired off and are enjoying some fun of their own, inspired by the team's star couple.";
-	wait for any key;
 
 to say JenniferSex3: [Jennifer's cunt licked/fingered]
 	say "     Quickly stripping off your clothing, you give Jennifer a deep kiss, then lead her over to a nearby bench and have her lie down on it with her legs hanging off one end. Kneeling down in front of her, you pull her legs apart, revealing her moist pussy between them[if HP of Septus >= 7 and HP of Septus < 50]. Running your eyes over her beautiful cunt, you can't help but smile at the fact that it's all yours... and you intend to enjoy it right now[end if].";
@@ -638,7 +637,6 @@ to say JenniferSex3: [Jennifer's cunt licked/fingered]
 	else:
 		say "     You start by running your tongue over the sensitive folds of your pussy, then insert two fingers to rub her insides, making Jennifer pant in lust. You pump your fingers into her wet hole, lapping up the juices at leak from it and flicking across her clit. The scent and taste of it is very arousing, making you look forward to [if player is not male]getting a cock so you can fuck her and breed her again soon[else]fucking her and breeding her again soon[end if].";
 		say "     Cat-calls and whistles start up from the wolves and girls around you as they step closer to watch the team's top couple go at it. They cheer you on as Jennifer's gasps and moans get louder and louder until she finally reaches the peak of her arousal and has a messy orgasm, squirting femcum over your hand and onto your face. You lick some of it off yourself, then hold out your hand to the sexy girl, which she makes a show of sucking off your fingers while you lick her thighs clean. This whole show gets several of the wolves around quite hard and the girls quite wet, resulting in some lustful fucking breaking out, making for an arousing show as you enjoy a playful snuggle with your special girl as she basks in the afterglow.";
-	wait for any key;
 
 to say JenniferSex4: [Jennifer's pussy fucked by player]
 	if thirst of Jennifer is 2: [pregnant version]
@@ -663,7 +661,6 @@ to say JenniferSex4: [Jennifer's pussy fucked by player]
 				FindHighestPlayerStat;
 				now JenniferFirstKidSpecialStat is HighestPlayerStat;
 	increase lust of Jennifer by 1;
-	wait for any key;
 
 to say JenniferSex5: [fucking Jennifer's ass]
 	if thirst of Jennifer is 2: [pregnant version]
@@ -681,7 +678,6 @@ to say JenniferSex5: [fucking Jennifer's ass]
 		say "     Fucking the hot little cheerleader in the midst of her cheering friends and wolfmen offspring, you quickly feel a rising pressure in your balls. As you gasp that you're close to blowing your load, she answers, 'Ok, hold my legs tight then.' You grasp her slender thighs as Jennifer leans back, back and further back until she's basically doing a handstand, only connected to you through your cock in her now upside-down ass and your hands holding her legs. With this new position, both of you get different feelings from the fucking, making you moan loudly and prompting you to fuck her harder and harder.";
 		say "     Soon, you reach the point of no return, gasping loudly as your seed shoots into Jennifer's body. Your forceful spurts and the helping force of gravity make sure all of your [cum load size of player] load ends up deep inside her body, although your little swimmers of course search in vain for an egg in her ass. The crowd around you cheers and you can hear moans and lustful growls echo through the warehouse as many of them decide to follow [if HP of Septus < 7]your[else]the team's top couple's[end if] lead, both in the private section and right around you in the training area. Meanwhile, you slowly go down to your knees, lowering Jennifer to lie on her back with your cock still deep inside her and lean over her to make out some more while keeping your hot, sticky load buried inside her.";
 	increase lust of Jennifer by 1;
-	wait for any key;
 
 to say JenniferSex6: [sharing Jennifer with Septus][***]
 	if HP of Septus < 7:
@@ -742,7 +738,6 @@ to say JenniferSex6: [sharing Jennifer with Septus][***]
 			say "     Standing up, you walk around Septus and Jennifer, your eyes roaming over their somewhat sweaty bodies. Pulling the wolfman's tail up, you run your hands through the soft fur on his behind, groping and squeezing his buns before pulling them apart to have a look at his pucker. As you stroke a finger over it and poke a finger in, he gasps 'Please be gentle[if HP of Septus >= 7 and HP of Septus < 50], manager[end if], we usually don't fuck each other.' Reaching around to stroke his chest, you whisper in his ear 'Of course' then aim your cock and push forward, sinking your hard shaft into his hole. It's amazingly tight an warm, gripping you like a vice and allowing only slow progress deeper inside. It takes a moment for Septus to get used to your intruding member, but soon he's silently moaning at the feelings it brings him.";
 			say "     Already pretty close to blowing your load through Jennifer's oral attention, it doesn't take long at all until Septus tight hole gives you the rest. With a lustful groan, you grind your crotch against his ass, pushing your member deep inside him as it starts shooting long strands of your seed. After you finish coming, you stay inside him for a while longer, then pull out and keep the two of them company until they can disengage from each other[if HP of Septus >= 7 and HP of Septus < 50]. Jennifer, once off the knot, snuggles up to you, running her hands over your body while you squeeze your special girl's ass[end if].";
 			increase lust of Jennifer by 1;
-	wait for any key;
 
 Jenniferpregnant is a number that varies.
 Jenniferwolves is a number that varies.

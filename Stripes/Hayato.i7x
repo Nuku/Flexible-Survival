@@ -341,7 +341,7 @@ to say hayatosexmenu:
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	now lastfuck of Hayato is turns;
-	WaitLineBreak;
+	wait for any key;
 	clear the screen and hyperlink list;
 
 

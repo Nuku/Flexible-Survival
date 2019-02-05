@@ -172,11 +172,11 @@ to say LuxTalkMenu:
 					say "[LuxTalk1]";
 				if (nam is "Family"):
 					say "[LuxTalk2]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You shake your head, indicating an end to the conversation. Lux lets out a slight whine before returning to what she was doing before.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

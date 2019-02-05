@@ -170,12 +170,12 @@ to xenoLoot:
 	say "     ([link]N[as]n[end link]) - Water.";
 	if player consents:
 		LineBreak;
-		add "Food" to the invent of player;
-		say " You put a pack of food into your bag.";
+		say "[bold type]You gain 1 food![roman type][line break]";
+		increase carried of water bottle by 2;
 	else:
-		add "Water Bottle" to the invent of player;
 		LineBreak;
-		say "You put a bottle of mineral water into your bag.";
+		say "[bold type]You gain 1 water bottle![roman type][line break]";
+		increase carried of water bottle by 2;
 
 Section 3 - Bound State
 

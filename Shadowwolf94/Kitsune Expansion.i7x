@@ -77,11 +77,11 @@ to say Kitsune_NewMaleDomScenes:
 						say "[Kitsune_PowerBottom]";
 					-- "Have the fox tend to your shaft":
 						say "[Kitsune_OralDom]";
-					WaitLineBreak;
+					wait for any key;
 		else if calcnumber is 0:
 			say "     Kitsune is wagging his tails with a sly smile.";
 			now sextablerun is 1;
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid selection made. Please pick an option from 0 to [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

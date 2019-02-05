@@ -149,10 +149,10 @@ to say CarlTalkMenu:
 		now sortorder entry is 4;
 		now description entry is "Rekindle the husky's interest with his fellow soldier";
 	[]
-		choose a blank row in table of fucking options;
-		now title entry is "Join him in some fitness training";
-		now sortorder entry is 5;
-		now description entry is "Spend some time getting sweaty with Carl";
+	choose a blank row in table of fucking options;
+	now title entry is "Join him in some fitness training";
+	now sortorder entry is 5;
+	now description entry is "Spend some time getting sweaty with Carl";
 	[]
 	if Loyalty of Carl is 10:
 		choose a blank row in table of fucking options;
@@ -202,12 +202,12 @@ to say CarlTalkMenu:
 					say "[CarlTalk7]";
 				else if (nam is "Talk about the military presence"):
 					say "[CarlTalk8]";
-				WaitLineBreak;
+				wait for any key;
 				say "[CarlTalkMenu]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the husky soldier, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -544,11 +544,11 @@ to say CarlSexMenu:
 				else if (nam is "Threesome with Eric and Carl"):
 					say "[CarlSex7]";
 				now lastfuck of Carl is turns;
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the anthro husky, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -1167,6 +1167,14 @@ when play ends:
 			say "     An eye-blink later, you find yourself embraced by Carl, his strong arms wrapping around your chest as he buries his nose against the crook of your neck and takes a deep breath of your scent. He says that he did his best, cautiously waving his tail as he hopes for praise. Stroking him and telling him what a good dog he is, you pull the soldier into a side room and have your way with him as a bit of a reward, enjoying the pleasure of his touch and giving him the affection of his [master] that he craves. After drawing the attractive canine's muzzle up and meeting it in a deep kiss, you stroke Carl's fur and tell him that you're fine with him serving during the crisis, but that you want him all to yourself afterwards. He accepts this order without complaint, licking your face happily. Sadly, the intimate moment is broken by more people rushing past you into the medical wing. Letting go of you, Carl steps back and says he should check on how his comrades are doing.";
 			LineBreak;
 			say "     Watching your husky hunk leave, you let your thoughts stray ahead to the future, meeting Carl for companionship and sex when the man has some time off from his duty and then eventually claiming him as your live-in sex pet. It'll be worth the wait in the end, when you'll have the dutiful canine soldier all for yourself to enjoy.";
+
+[
+TODO:
+- gaining stats through training with Carl
+- shower after training (with sex menu)
+- attack on the library event
+
+]
 
 
 Carl ends here.

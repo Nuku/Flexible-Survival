@@ -463,11 +463,11 @@ to say DiegoSexMenu:
 					say "[DiegoSex9]";
 				else if (nam is "Take Diego's ass - From behind, against the wall"):
 					say "[DiegoSex10]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the anthro coyote, shaking your head slightly as [if DiegoChanged > 0]she[else]he[end if] gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

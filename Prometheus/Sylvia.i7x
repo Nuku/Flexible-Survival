@@ -368,11 +368,11 @@ to say SylviaTalk6: [Samples from friends]
 					say "[DashSample]";
 				if (nam is "Denise"):
 					say "[DeniseSample]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You stand up, indicating an end to the conversation. Sylvia smiles at you, before looking out her window.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -495,11 +495,11 @@ to say SylviaSexMenu:
 					say "[SylviaSex4]";
 				if (nam is "Tribadism"):
 					say "[SylviaSex5]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the collie girl, shaking your head slightly as she gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

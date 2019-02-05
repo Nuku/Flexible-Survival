@@ -240,13 +240,13 @@ to say Doran_Beat:
 							say "[DoranVictory_Vaginal]";
 						-- "Ride the dragon anally":
 							say "[DoranVictory_Anal]";
-					WaitLineBreak;
+					wait for any key;
 			else if calcnumber is 0:
 				say "     Turn down the dragon's offer?";
 				if player consents:
 					now sextablerun is 1;
 					say "[DoranVictory_TurnDown]";
-					WaitLineBreak;
+					wait for any key;
 				else:
 					say "Pick an option.";
 			else:

@@ -121,6 +121,7 @@ to say beatFireSpriteguy:
 					say "[FireSpriteCunnilingus]";
 				else if title entry is "Blow job":
 					say "[FireSpriteBlowJob]";
+				wait for any key;
 		else:
 			say "Invalid Option.";
 
@@ -174,6 +175,7 @@ to say beatFireSpritegirl:
 					say "[FireSpriteCunnilingus]";
 				else if title entry is "Blow job":
 					say "[FireSpriteBlowJob]";
+				wait for any key;
 		else:
 			say "Invalid Option.";
 

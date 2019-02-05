@@ -256,13 +256,13 @@ to say VentFoxMenu:[Menu for interacting with Vent.]
 						say "[VentFoxSexMenu]";
 					-- "Request some things of the fox":
 						say "[VentFoxPrefsMenu]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			say "     Change your mind and do something else?";
 			if player consents:
 				now sextablerun is 1;
 				say "     Opting to leave for now, you wave goodbye to the fox. He lets out a disappointed whine as you go.";
-				WaitLineBreak;
+				wait for any key;
 			else:
 				say "Pick an option.";
 		else:
@@ -420,13 +420,13 @@ to say VentFoxSexMenu:[Pretty self explanatory.]
 							say "[SuckVentFoxCock]";
 						-- "Get Vent to suck your dick":
 							say "[VentFoxSuckCock]";
-					WaitLineBreak;
+					wait for any key;
 			else if calcnumber is 0:
 				say "     Change your mind and do something else?";
 				if player consents:
 					now sextablerun is 1;
 					say "     Opting to leave for now, you wave goodbye to the fox. He lets out a disappointed whine as you leave.";
-					WaitLineBreak;
+					wait for any key;
 				else:
 					say "Pick an option.";
 			else:

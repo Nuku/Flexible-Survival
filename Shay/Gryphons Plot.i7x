@@ -385,10 +385,10 @@ to say PlayerHelpsGryphonPlot1: [player helped the gryphons]
 			else if calcnumber is 0:
 				now sextablerun is 1;
 				say "     Deciding that despite being a part of what led to the soldiers being transformed into their new gryphon state, you don't wish to take advantage of the already thoroughly broken men. Distancing yourself from the scene, you leave the gryphons to clean themselves up and potentially explore their new shapes as you continue along on your merry way.";
-				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
-				clear the screen and hyperlink list;
+		wait for any key;
+		clear the screen and hyperlink list;
 	else: [player is a gryphon himself]
 		say "     Stepping up and making it clear with just who you stand with, you watch as the soldiers become increasingly desperate, the odds now stacked even higher against them. In this situation, your gryphon appearance comes in handy, the assailants gladly accepting your help. Soon, with the combined efforts of you and your new allies, the uninfected men are converged upon. They climb into the stuck car in a last ditch attempt to save themselves from the fate that will befall them. Rushing forward in aggressive maneuvers, you and the other gryphons make quick work of the soldiers['] final effort to protect themselves. Ripping the metal doors off of the jeep as they reach in and pull the soldiers out, they roughly strip them of their clothes with an obvious lustful intent, their cocks dripping pre-cum as they bend the still struggling soldiers over and thrust in balls-deep. Ignoring you, they fuck the men ravenously as they begin to change, their once fully human forms gaining a feral look, as their feet shift into sharp talons, and their tanned skin turns into the gryphon's blue. The soldiers are fully transformed by the time the gryphons turn back to you, a contemplative look on their faces. Then they gesture to the newly transformed soldiers, most specifically the cum leaking from their every hole. Seems like that you're being offered their sloppy seconds. With that, the gryphons fly away, satisfied looks upon their blue, furred faces. Now the only thing that is left to do, is to decide whether or not you want to take them up on the offer...";
 		LineBreak;

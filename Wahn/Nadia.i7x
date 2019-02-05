@@ -536,6 +536,10 @@ to say NadiaSex5: [flying and fucking]
 
 Section 3 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Bird Troubles	"Bird Troubles"
+
 Bird Troubles is a situation. The level of Bird Troubles is 5. [meeting event in which you can take her home]
 The sarea of Bird Troubles is "Campus".
 when play begins:

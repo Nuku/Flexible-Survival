@@ -82,7 +82,6 @@ Instead of resolving Unusual Creature:
 					say "[Unsualconsole]";
 				if (nam is "Jump the woman and fuck her"):
 					say "[Unsualfuck]";
-				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     Unsure what to do, you just stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' the anthro deer asks, shifting her weight from one hoof to the other. 'I - I'm Susan. But... aren't you horrified by this freaky body of mine? I mean, you don't seem to be one of the rape-y ones, so what's your deal hanging out with the ugly mutant?' Calmly stating that she's far from that, you smile at her and explain that there's actually someone working on understanding and fixing this whole mess. Susan looks around at the overgrown park, then up at the colossal form of a wyvern circling high in the sky. Finally she shrugs her furred shoulders. 'I really doubt that will work, but I guess I don't have anything better to do,' she muses, then nods for you to lead the way.";
@@ -91,6 +90,7 @@ Instead of resolving Unusual Creature:
 			now Resolution of Unusual Creature is 1; [Told Susan to follow you]
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say Unsualgrab:

@@ -65,13 +65,13 @@ to say TomeSexMenu:
 						say "[TentacleSex]";
 					-- "Summon a demon fox":
 						say "[DemonFoxSummon]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			say "     Change your mind and do something else?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head, banishing the tempting thoughts. You can't afford to give in to it.";
-				WaitLineBreak;
+				wait for any key;
 			else:
 				say "Pick an option.";
 		else:

@@ -107,9 +107,11 @@ to say beatthelamia:
 					say "[mlamiavsex03]";
 				else if nam is "Breastfeeding":
 					say "[mlamiavsex04]";
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     Not wanting to get involved any further, you let the lamia depart and return to your own business.";
+			wait for any key;
 	increase mlamiabeaten by 1;
 
 to say mlamiavsex01:

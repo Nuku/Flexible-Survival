@@ -416,11 +416,11 @@ instead of conversing the Tanuki Dad:
 					say "[TanukiHuntingTalk]";
 				if (nam is "Balls"):
 					say "[TanukiBallsTalk]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     The tanuki gives you a rather big grin, patting his round belly.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

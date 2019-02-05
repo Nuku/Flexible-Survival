@@ -181,11 +181,11 @@ to say KyleTalkMenu:
 				if (nam is "Threesome"):
 					say "[KyleTalk8]";
 				say "     Kyle gets up and heads for the door out of the back room, and you follow. 'Well, it was nice talking to you. Come back soon when you have some time, and we can chat some more.'";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from Kyle, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -379,11 +379,11 @@ to say KyleSexMenu:
 					say "[KyleSex3]";
 				if (nam is "Take Kyle's shaft in your ass"):
 					say "[KyleSex4]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -534,7 +534,7 @@ to say KyleDateMenu:
 					say "[KyleDate3]";
 				if (nam is "The Beach"):
 					say "[KyleDate4]";
-				WaitLineBreak;
+				wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options]";
 	clear the screen and hyperlink list;

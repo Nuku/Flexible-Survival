@@ -146,6 +146,7 @@ to say LilithTalkMenu:
 					say "[LilithTalk4]";
 				if (nam is "Brutus and David"):
 					say "[LilithTalk5]";
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the succubus, shaking your head slightly as she gives a questioning look.";
