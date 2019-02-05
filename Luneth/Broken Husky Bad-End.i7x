@@ -307,6 +307,8 @@ to say BrokenHuskySlutBadend:
 			say "     With the enhanced hearing of your ears, you can make out movement on the other side of the door. Your head quickly whips up and you catch sight of something in the mirror in the dark room: your eyes... they are glowing! Luminescent violet orbs look back at you from your reflection, that is before the door flies open, blinding you with light. 'Well, well, what do ya know? It looks like I was right to choose ya for my plan after all, my lil['] pet!'";
 			now Brokenhuskydelta is 3; [bimbo delta husky]
 	say "     <<End of Week 1>>  ";
+	now bodyname of player is "Broken Husky Slut";
+	end the story saying "You'll never escape your fate!";
 
 Section 2 - Rough Roadmap
 

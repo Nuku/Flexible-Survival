@@ -215,7 +215,7 @@ after going to Breakroom while (Skarnoth is booked and Loyalty of Skarnoth is 11
 			say "Invalid choice. Type [link]1[end link] to punish, [link]2[end link] to submit or [link]3[end link] to leave.";
 	if calcnumber is 1:
 		LineBreak;
-		say "     Watching your slave make a mess of what is currently [']your['] home pisses you off. You didn't bring him here to make friends or to do whatever he pleases within your base. Deciding that you are done with his nonsense you storm over towards him.[line break]";
+		say "     Watching your slave make a mess of what is currently [']your['] home pisses you off. You didn't bring him here to make friends or to do whatever he pleases within your base. Deciding that you are done with his nonsense you storm over towards him.";
 		if SkarnothMasterSlave is 1:
 			say "     Noticing your approach suddenly, Skarnoth whirls around with a bit of a nervous expression on his face, in the process of which he actually knocks the rest of the cake onto the ground, creating an even bigger mess. His wide eyes let you know that he remembers the punishment you dished out before, making a dark part of your mind relish the fear that this adonis of a demon has of you, his previous conversation forgotten. Looking deep into the fiery glow of his eyes and seeing terror dance in them, you almost have to stop yourself from acting on your desire. 'What's up [master]?' Simply pointing at the ground is enough to make your royal slave sweat, 'I'm sorry [master], I'll clean it up after I'm done, ok?' Even though the demon is slightly more submissive, you can still hear a hint of arrogance in his voice and that just won't do.";
 		else if SkarnothMasterSlave is -1:

@@ -18,6 +18,8 @@ understand "Left Behind Recording of Doctor Matt " as Doctor Matt.
 the icon of Doctor Matt is figure of DrMatt_face_icon.
 
 to say DrMattDesc:
+	if debugactive is 1:
+		say "DEBUG -> HP: [HP of Doctor Matt] <- DEBUG[line break]";
 	if HP of Doctor Matt is 100:
 		say "     There is a small tape recorder with a sticky note on it, labeled as [']Doctor Matt['] on one of the lab tables.";
 	else:
@@ -481,7 +483,7 @@ to say DrMattQuestTalk:
 				increase score by 10;
 			else:
 				now mattcollection is 2;
-	else if mattcollection > 0 and HP of Doctor Matt < 10:
+	else if mattcollection > 0 and HP of Doctor Matt < 10 and hospquest < 11:
 		say "     'I suggest you continue to assist Dr Mouse. It will further ingratiate you to him and allow you to monitor his activities. I want you to keep me informed on what he's receiving and please bring a sample for me as well. Nor do I wish to fall behind in my research to this little upstart.";
 	else if HP of Doctor Matt is 10:
 		say "     'A mind like Dr Mouse's cannot be allowed to continue to exploit the nanite infection unhindered. I will need you to take care of him. And be sure to bring back what research materials you can.'";
