@@ -603,7 +603,7 @@ to say FrancoisBakingMenu:
 						decrease carried of distilled milk by 1;
 						increase carried of crème abondante by 1;
 					else:
-						say "You do not have the required ingredients. pink gel and distilled milk.";
+						say "You do not have the required ingredients: pink gel and distilled milk.";
 				else if title entry is "bleuettonne":
 					if blue gel is owned and chocolate milk is owned:
 						now sextablerun is 1;
@@ -612,7 +612,7 @@ to say FrancoisBakingMenu:
 						decrease carried of chocolate milk by 1;
 						increase carried of bleuettonne by 1;
 					else:
-						say "You do not have the required ingredients. blue gel and chocolate milk.";
+						say "You do not have the required ingredients: blue gel and chocolate milk.";
 				else if title entry is "boysenberry blossom":
 					if blue gel is owned and Awesome Fruit is owned:
 						now sextablerun is 1;
@@ -621,7 +621,7 @@ to say FrancoisBakingMenu:
 						decrease carried of Awesome Fruit by 1;
 						increase carried of boysenberry blossom by 1;
 					else:
-						say "You do not have the required ingredients. blue gel and Awesomer Fruit.";
+						say "You do not have the required ingredients: blue gel and Awesomer Fruit.";
 				else if title entry is "Muffin muffin":
 					if pink gel is owned and Awesomer Fruit is owned:
 						now sextablerun is 1;
@@ -630,7 +630,7 @@ to say FrancoisBakingMenu:
 						decrease carried of Awesomer Fruit by 1;
 						increase carried of Muffin muffin by 1;
 					else:
-						say "You do not have the required ingredients. pink gel and Awesome Fruit.";
+						say "You do not have the required ingredients: pink gel and Awesome Fruit.";
 				else if title entry is "lollicock":
 					if honeycomb is owned and musky cock flower is owned:
 						now sextablerun is 1;
@@ -639,7 +639,7 @@ to say FrancoisBakingMenu:
 						decrease carried of musky cock flower by 1;
 						increase carried of lollicock by 1;
 					else:
-						say "You do not have the required ingredients. honeycomb and musky cock flower.";
+						say "You do not have the required ingredients: honeycomb and musky cock flower.";
 				else if title entry is "dragon moelleux":
 					if ebonflame scale is owned and glowing ember is owned and chocolate milk is owned:
 						now sextablerun is 1;
@@ -649,7 +649,7 @@ to say FrancoisBakingMenu:
 						decrease carried of chocolate milk by 1;
 						increase carried of dragon moelleux by 1;
 					else:
-						say "You do not have the required ingredients. ebonflame scale, glowing ember and chocolate milk.";
+						say "You do not have the required ingredients: ebonflame scale, glowing ember and chocolate milk.";
 				else if title entry is "fizz-aux-pommes":
 					if pony cider is owned and soda is owned and crushed candies is owned:
 						now sextablerun is 1;
@@ -659,7 +659,7 @@ to say FrancoisBakingMenu:
 						decrease carried of crushed candies by 1;
 						increase carried of fizz-aux-pommes by 1;
 					else:
-						say "You do not have the required ingredients. pony cider, soda and crushed candies.";
+						say "You do not have the required ingredients: pony cider, soda and crushed candies.";
 				else if title entry is "vin-coeur":
 					if wyvern goop is owned and Satyr wine is owned and crushed candies is owned:
 						now sextablerun is 1;
@@ -669,7 +669,7 @@ to say FrancoisBakingMenu:
 						decrease carried of Satyr wine by 1;
 						increase carried of vin-coeur by 1;
 					else:
-						say "You do not have the required ingredients. crushed candies, Satyr wine and wyvern goop.";
+						say "You do not have the required ingredients: crushed candies, Satyr wine and wyvern goop.";
 				else if title entry is "gingerbread": [gingerbread - egg nog + pixie dust + blue gel]
 					if egg nog is owned and pixie dust is owned and blue gel is owned:
 						now sextablerun is 1;
@@ -1028,7 +1028,7 @@ to say lollicock Use:
 	decrease hunger of player by 5;
 	if hunger of player < 0, now hunger of player is 0;
 
-dragon moelleux is a grab object. It is a part of the player. it is not temporary. it is fast.
+dragon moelleux is a grab object. It is a part of the player. It is not temporary. It is fast.
 The usedesc of dragon moelleux is "[dragonmoelleuxuse]".
 the scent of dragon moelleux is "     The small chocolate cake smells rich and sweet, as well as a little spicy.".
 
@@ -1065,7 +1065,7 @@ to say dragonmoelleuxuse:
 	else:
 		say "     That's probably not a good idea right now.";
 
-fizz-aux-pommes is a grab object. It is a part of the player. it is not temporary. it is fast.
+fizz-aux-pommes is a grab object. It is a part of the player. It is not temporary. It is fast.
 The usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]".
 the scent of fizz-aux-pommes is "     The bubbling drink smells of overwhelmingly sweet apple.".
 
@@ -1081,7 +1081,7 @@ to say fizz-aux-pommesuse:
 	else:
 		say "That's probably not a good idea right now.";
 
-vin-coeur is a grab object. It is a part of the player. it is not temporary. it is fast.
+vin-coeur is a grab object. It is a part of the player. It is not temporary. It is fast.
 The usedesc of vin-coeur is "[vin-coeuruse]".
 the scent of vin-coeur is "     rich and heavy (temporary desc!)".
 
@@ -1117,7 +1117,7 @@ to gingerbreadinfect:
 	infect "Gingerbread";
 	now non-infectious entry is true;
 
-cheesecake is a grab object. It is a part of the player. it is not temporary.
+cheesecake is a grab object. It is a part of the player. It is not temporary.
 cheesecake has a usedesc "[cheesecake Use]".
 the scent of cheesecake is "The cheesecake has a rich, sweet scent of strawberry.".
 

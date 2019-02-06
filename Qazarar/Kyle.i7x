@@ -1,5 +1,5 @@
 Version 1 of Kyle by Qazarar begins here.
-[Version 1 - new npc]
+[Version 1 - new NPC]
 
 [ KyleRelationship                                           ]
 [   0: not met                                               ]

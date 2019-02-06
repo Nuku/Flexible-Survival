@@ -31,7 +31,7 @@ Zephyr Storeroom is west of Zephyr Lobby.
 Zephyr Storeroom is a room. The description of Zephyr Storeroom is "[zephyrstoreroom desc]".
 
 to say zephyrstoreroom desc:
-	say "     Entering the storeroom you can see boxes going all the way up to the ceiling. Along the walls in black paint someone has also done measurements, going by those, the room tops out at around twenty feet. The containers are grey and massive, obviously they must have a forklift stashed away somewhere in here as well. Color wise the room is a mixture of grey, white, and... off white, a very drab look to be sure. Off to the side in the back is a single desk with mountains of paperwork covering it, you can only assume that this mess belongs to Barret.";
+	say "     Entering the storeroom you can see boxes going all the way up to the ceiling. Along the walls in black paint someone has also done measurements, going by those, the room tops out at around twenty feet. The containers are gray and massive, obviously they must have a forklift stashed away somewhere in here as well. Color wise the room is a mixture of gray, white, and... off white, a very drab look to be sure. Off to the side in the back is a single desk with mountains of paperwork covering it, you can only assume that this mess belongs to Barret.";
 
 Section 2 - NPC
 

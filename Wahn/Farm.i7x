@@ -6,9 +6,9 @@ Version 1 of Farm by Wahn begins here.
 [                                                           ]
 [ Further Plans:                                            ]
 [ Mustang NPC+Infection + Quest                             ]
-[ Wendy the cow npc + her offspring with the gryphon        ]
+[ Wendy the cow NPC + her offspring with the gryphon        ]
 
-"Adds a farm and npc, or alternatively a Cowboy to Flexible Survival's Wandering Monsters table."
+"Adds a farm and NPC, or alternatively a Cowboy to Flexible Survival's Wandering Monsters table."
 
 
 Section 1 - Farm Rooms

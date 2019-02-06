@@ -118,7 +118,7 @@ to say Luxdesc:
 		-- 1: [ Pup ]
 			say "     Lux looks like a small ball of pale-gray fur, not being particularly mobile. She is most often next to her father, Fang, who is making sure that his newborn daughter is safe even while protecting the library. Occasionally, you may see her open her eyes, the irises a dark-gray as they absorb her surroundings. Her rare cries for attention bring a smile to your face.";
 		-- 2: [ Child ]
-			say "     Lux has grown since you last saw her, now about the size of a shetland sheepdog and her lush fur a pale-gray. She is surprisingly fearless for her size, rushing around after her brother, Umbra, as he explores the library more thoroughly, though Fang prevents them from leaving the building. She meets your gaze, and you can see an intelligence in her dark-gray eyes. You have seen her practice a few unstable steps on her hind legs, though she doesn't keep her balance for very long. Her vocalisations sound like attempts at words, though not recognizable to you unfortunately.";
+			say "     Lux has grown since you last saw her, now about the size of a shetland sheepdog and her lush fur a pale-gray. She is surprisingly fearless for her size, rushing around after her brother, Umbra, as he explores the library more thoroughly, though Fang prevents them from leaving the building. She meets your gaze, and you can see an intelligence in her dark-gray eyes. You have seen her practice a few unstable steps on her hind legs, though she doesn't keep her balance for very long. Her vocalizations sound like attempts at words, though not recognizable to you unfortunately.";
 		-- 3: [ Teen ]
 			say "     Lux is now slightly larger than a border collie, her pale-gray fur helping her blend in among the shadows between the bookshelves. Fang seems to think her and her brother are old enough to explore the area just outside of the library, simultaneously keeping an eye on his pups while standing vigil. She looks at you curiously with her dark-gray eyes as you inspect her, tilting her head in an adorable fashion. You have seen her walking on her hind legs when she doesn't think many people are watching, perhaps shy about her attempts. Her ability to talk is limited to single words at a time, easily recognizable if a bit simple.";
 		-- 4: [ Young Adult ]
@@ -231,9 +231,9 @@ to say Umbradesc:
 		say "     DEBUG -> HP: [HP of Umbra] <- DEBUG[line break]";
 	if hp of Lux is:
 	-- 1: [ Pup ]
-		say "     Umbra looks like a small fluffy ball of dark-gray fur, not being particularly mobile. He is usually stumbling blindly around on the floor near his father, Fang making sure that his newborn son is safe even while protecting the library. Occasionally, you may see him open his eyes, the green orbs taking in whatever obstacle has impeded his exploration. His rare vocalisations bring a smile to your face.";
+		say "     Umbra looks like a small fluffy ball of dark-gray fur, not being particularly mobile. He is usually stumbling blindly around on the floor near his father, Fang making sure that his newborn son is safe even while protecting the library. Occasionally, you may see him open his eyes, the green orbs taking in whatever obstacle has impeded his exploration. His rare vocalizations bring a smile to your face.";
 	-- 2: [ Child ]
-		say "     Umbra has grown since you last saw him, now slightly larger than a shetland sheepdog and covered in thick, dark-gray fur. He is surprisingly fearless for his size, rushing around the library while being pursued by his sister, Lux, as they explore, though Fang prevents them from leaving the building. He meets your gaze, and you can see how much he cares about you, and probably the rest of his family, in his bright-green eyes. You have seen him sizing up creatures he spies while keeping his father company despite how young he is, gauging how much of a threat that they might pose. His vocalisations sound like attempts at words, though not recognizable to you unfortunately.";
+		say "     Umbra has grown since you last saw him, now slightly larger than a shetland sheepdog and covered in thick, dark-gray fur. He is surprisingly fearless for his size, rushing around the library while being pursued by his sister, Lux, as they explore, though Fang prevents them from leaving the building. He meets your gaze, and you can see how much he cares about you, and probably the rest of his family, in his bright-green eyes. You have seen him sizing up creatures he spies while keeping his father company despite how young he is, gauging how much of a threat that they might pose. His vocalizations sound like attempts at words, though not recognizable to you unfortunately.";
 	-- 3: [ Teen ]
 		say "     Umbra is now similar in height to Fang, and you doubt that he has finished growing, his dark-gray fur helping him stalk among the shadows between the bookshelves. Fang seems to think he and his sister are old enough to explore the area just outside the library, simultaneously keeping an eye on his pups while standing vigil. He looks at you caringly with his green eyes as you inspect him, tilting his head in an adorable fashion and licking his nose. You have seen him get into the occasional fight with creatures that get too close to the library, the young wolf rather nimble for his size. His ability to talk is limited to single words at a time, easily recognizable if a bit simple.";
 	-- 4: [ Young Adult ]
@@ -262,7 +262,7 @@ Section 3 - Growing Up Events
 
 [Puppy]
 an everyturn rule:
-	if  hp of Lux is 1 and hp of Umbra is 1 and Fang is visible and Lux is visible and Umbra is visible:
+	if hp of Lux is 1 and hp of Umbra is 1 and Fang is visible and Lux is visible and Umbra is visible:
 		if a random chance of 1 in 2 succeeds:
 			if a random number between 1 and 4 is:
 				-- 1: [ Fang keeping Klauz away from puppies ] [or Lux and Umbra playing]
@@ -283,7 +283,7 @@ an everyturn rule:
 
 [Child]
 an everyturn rule:
-	if  hp of Lux is 2 and hp of Umbra is 2 and Fang is booked and Fang is visible and Lux is visible and Umbra is visible:
+	if hp of Lux is 2 and hp of Umbra is 2 and Fang is booked and Fang is visible and Lux is visible and Umbra is visible:
 		if a random chance of 1 in 2 succeeds:
 			if a random number between 1 and 4 is:
 				-- 1: [ Fang keeping the children in the library ]
@@ -309,7 +309,7 @@ an everyturn rule:
 
 [Teen]
 an everyturn rule:
-	if  hp of Lux is 3 and hp of Umbra is 3 and Fang is booked and Fang is visible and Lux is visible and Umbra is visible:
+	if hp of Lux is 3 and hp of Umbra is 3 and Fang is booked and Fang is visible and Lux is visible and Umbra is visible:
 		if a random chance of 1 in 3 succeeds:
 			if a random number between 1 and 4 is:
 				-- 1: [ Fang and the children 'hunting' just outside the library ]
@@ -327,4 +327,4 @@ an everyturn rule:
 					say "     The sound of thumping and the occasional growl or bark draws you towards the entrance of the library to see what the commotion is. You are met by Lux and Umbra eyeing each other, chests low to the ground and hindquarters raised, tails waving back and forth. Fang looks on with interest, and you walk over to stand beside him, stroking his head as you watch your children together. Umbra bounces forward, Lux tucking her tail for a moment as she leaps back to evade her brother's lunge before pouncing forward herself. Umbra doesn't retreat, instead tucking his head beneath her chest and using his superior size to flip her on her side and letting out a snort as though to say, 'Really? That was simple.' She recovers quickly, rolling over and regaining her feet while thinking through what to try next, her brother watching her intently as he waits patiently, shifting his paws in response to her changes in posture. There is little doubt in your mind that Umbra is the more physically capable of the two of them, his larger size and time spent watching the monsters outside lending him an edge that Lux hasn't gained from her more intellectual pursuits.";
 					say "     To your surprise, Lux feints to the left before striking from the right, catching her larger brother off guard and gripping the scruff of his neck lightly between her teeth. Fang seems intrigued too, neglecting keeping watch to observe the play fight between your shared children. Umbra's reaction astonishes you even more, the dark-furred wolf slumping sideways on top of his sister, trapping her underneath him as she emits a startled yip. She desperately scrabbles to get out from beneath him, managing to escape the unorthodox tactic in a few seconds. She seems a bit muted at being so easily countered by her brother, her tail drooping slowly. Everyone present seems to realize that in straight combat, Umbra will likely come out on top over his sister. Seeing the paler wolf's expression, Umbra rolls on his back in front of her, licking her throat and muzzle submissively, demonstrating that despite his success in their play, he still loves her and views her as above him in the pack. This seems to break her moment of somberness, her tail wagging steadily as she licks her brother in return to demonstrate no malice towards him. The two young wolves look up at you and Fang watching them approvingly, pleased with the strength of their bond. They rush over to you, enthusiastically sharing licks and affectionate vocalizations with you both, a gesture that you return equally lovingly. You relax and enjoy this family moment, luxuriating in a sea of soft wolf fur. Whatever you were meant to be doing can wait.";
 
-Lux & Umbra end here.
+Lux & Umbra ends here.

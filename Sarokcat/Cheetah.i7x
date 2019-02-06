@@ -43,7 +43,7 @@ to say CheetahWomanDesc:
 	if inasituation is true:
 		say ""; [dealt with in the origin event]
 	else: [standard descripton]
-		say "     As you wander around the deserted paths of the zoo, you spot a blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral-like cheetah woman, her long lean body resting on narrow paws and a long cheetah tail lashing behind her as she focuses her gaze directly on you. '[one of]Why don't you run? I love the chase,[or]Hmmm, not a gazelle, but you look almost as fun,[or]Oooo something to chase![or]Oh good, I was feeling bored,[or]I was feeling kind of lonely here. Maybe you can help?[or]Finally someone to pounce![at random]' she says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation and slips into a runners stance, her eyes locked on her newest prey... you.";
+		say "     As you wander around the deserted paths of the zoo, you spot a blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral-like cheetah woman, her long lean body resting on narrow paws and a long cheetah tail lashing behind her as she focuses her gaze directly on you. '[one of]Why don't you run? I love the chase,[or]Hmmm, not a gazelle, but you look almost as fun,[or]Oooo, something to chase![or]Oh good, I was feeling bored,[or]I was feeling kind of lonely here. Maybe you can help?[or]Finally someone to pounce![at random]' she says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation and slips into a runner's stance, her eyes locked on her newest prey... you.";
 
 
 Section 2 - Monster Insertion
@@ -110,7 +110,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "cheetah milk"	"The creamy milk collected from a Cheetah. It has a potent smell to it yet it's slightly intising."	1	cheetah milk
 
-cheetah milk is a grab object. It is a part of the player. it is milky. it is temporary. Understand "milk" as cheetah milk. cheetah milk is infectious. The strain of cheetah milk is "Cheetah Woman".
+cheetah milk is a grab object. It is a part of the player. It is milky. It is temporary. Understand "milk" as cheetah milk. cheetah milk is infectious. The strain of cheetah milk is "Cheetah Woman".
 
 The usedesc of cheetah milk is "[drinkcheetahmilk]";
 

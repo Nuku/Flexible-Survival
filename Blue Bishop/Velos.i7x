@@ -84,7 +84,7 @@ Instead of resolving Strange Serpent:
 					say "     'My apologies for the deception, it was quite necessary, I'm afraid.' You can determine a subtle frown from him under this faint light. 'My name is Velos, and I do hope you don't take this too personally, I'm as much a prisoner here as you are.' There's a slight sour tinge to that last statement, though at this point you're not sure if that's just another ruse on his part.";
 					increase libido of player by 10;
 					if libido of player > 100, now libido of player is 100;
-				say "     'I doubt I will prove as much a burden as you would worry yourself over, but whilst you're running around it only seems fair to show me some of the sights. If you run into others, perhaps you should let me [link]muse[as]muselist[end link] over them? But otherwise, I'll mind my own business in here. And with that...' He retreats once more into your bowels, leaving you to your own devices and the occasional irreverent twitching of your occupant. You slowly gather your thoughts as you return from whence you came.";
+				say "     'I doubt I will prove as much a burden as you would worry yourself over, but while you're running around it only seems fair to show me some of the sights. If you run into others, perhaps you should let me [link]muse[as]muselist[end link] over them? But otherwise, I'll mind my own business in here. And with that...' He retreats once more into your bowels, leaving you to your own devices and the occasional irreverent twitching of your occupant. You slowly gather your thoughts as you return from whence you came.";
 				now level of Velos is 1;
 				now HP of Velos is 3;
 				now mpreghijack is true;
@@ -478,14 +478,14 @@ fangvelos1 is a truth state that varies. fangvelos1 is usually false.
 to say fangmusing:
 	if HP of Fang is 1 or HP of Fang is 2:		[Beta-Fang message]
 		say "     Calling Velos before your lupine watchdog, Fang can't help but lower his head in apparent bafflement at the scene which transpires before him, exacerbated when your passenger speaks.";
-		say "     'Oh hello, pooch.' The serpent is a bit distant from the wolf, perhaps not sure what sort of discourse he might engage with him. Fang, meanwhilst, is actually rather intimidated by the creature and gives quite the sullen look, his form set low and defensive.";
+		say "     'Oh hello, pooch.' The serpent is a bit distant from the wolf, perhaps not sure what sort of discourse he might engage with him. Fang, meanwhile, is actually rather intimidated by the creature and gives quite the sullen look, his form set low and defensive.";
 		say "     'Huh, okay, so you're scared by me? That's... Quite reasonable, to be honest. I'd scratch you behind the ears and tell you to the contrary, but as you can tell I have none for which to do so.' Velos's attempt to put the lupine at ease does seem to work a bit, and when it's clear that the serpent isn't planning anything, he does seem to calm down a bit. 'That's better. I doubt you can offer much in terms of dialogue, I wager?'";
 		say "     Fang howls briefly in response, and the snake concedes that such is about the sum of what he's going to get out of him, saying his farewell and returning from whence he came. The wolf tilts his head at you, no doubt a little confused about what has just transpired here.";
 		now Fangvelos1 is true;
 	else:
 		say "     [if fangvelos1 is true]Once more[else]Reluctantly[end if], you conjure up Velos from his confines, Fang snorting a little at his appearance[if fangvelos1 is false], strange that he would be so fine with his presence, perhaps he already knew the snake was in there, or maybe he's just keeping his composure[end if].";
 		say "     'Oh, hello[if fangvelos1 is true] again[end if], little doggie. Who's a cute pooch? You are!' Velos's attempt at condescension is met with a low growl in discontent.";
-		say "     '[if fangvelos1 is true]Oh, what's this? You were frightened by me a whilst ago. Have you undergone some manner of change when I wasn't looking[else]Oh, you're just scared I might bite you when you're having your fun, is that it[end if]?'";
+		say "     '[if fangvelos1 is true]Oh, what's this? You were frightened by me a while ago. Have you undergone some manner of change when I wasn't looking[else]Oh, you're just scared I might bite you when you're having your fun, is that it[end if]?'";
 		say "     'Talk too much.' Velos is a bit at odds with the wolf's curt response, but ultimately attempt to coax more out of him.";
 		say "     'Oh, that's right rude! Surely you could offer me a more elaborate response? I wouldn't want to make you too uncomfortable, and we're all frie--what is that you're doing? Cut it out!' By this point Fang has chosen to make a whining sort of howl-noise, head bouncing slightly in faux discussion, his tone a clear illustration that he seeks to parody Velos's voice in a rather juvenile fashion. When the lupine is done, Velos looks a bit cross.";
 		say "     '...You won't get the luxury of knowing when I'll strike.' Fang makes a sound akin to what you assume is a chuckle as Velos retreats. You're not rightly sure if Velos is actually offended by your lupine companion's mocking or if he's just playing the part, though the wolf seems plenty happy with himself, letting you go off to your own matters.";
@@ -542,7 +542,7 @@ the vmusings of Philip is "[philipmusing]";
 
 to say philipmusing:
 	say "     Conjuring Velos from his confines, he immediate seems to regard the situation with a measure of disdain.";
-	say "     'Uegh, what is that smell[if vmusedone of Doctor Moffatt is true]? I joked about that so-called doctor's scent but this is outright offensive to my senses.' [else]?' [end if]The pig snorts, mostly oblivious whilst he stuffs his face, which is enough to elicit a sigh from the serpent. 'Really? Is this the company you keep? Nothing good can come of this.'";
+	say "     'Uegh, what is that smell[if vmusedone of Doctor Moffatt is true]? I joked about that so-called doctor's scent but this is outright offensive to my senses.' [else]?' [end if]The pig snorts, mostly oblivious while he stuffs his face, which is enough to elicit a sigh from the serpent. 'Really? Is this the company you keep? Nothing good can come of this.'";
 	say "     'Who are you?' The swine finally realizes the snake's there, oinking quizzically at him.";
 	say "     'Someone wishing he was the fare of snake that could hypnotize people, because right about now I'd be ordering you to take a bath!'";
 	say "     '*Snort* You just wish you could have as much fun as I am having.'";
@@ -847,7 +847,7 @@ to say Anastasiamusing:
 	say "     'Would a snake not prefer the heat?'";
 	say "     'If my current residence is to be any indication, I'd rather avoid this sort of exposure.'";
 	say "     'But your home--twisted though it is--must be warmer than the outside.'";
-	say "     'Your assessment, whilst reasonably astute, lacks perspective; you're ultimately trying to draw a similarity between body temperature and molten rock.'";
+	say "     'Your assessment, while reasonably astute, lacks perspective; you're ultimately trying to draw a similarity between body temperature and molten rock.'";
 	say "     'My apologies, I am not quite as troubled by the heat as others would be.'";
 	say "     'Without a doubt. Admittedly, I don't get out much, but I don't think I've ever seen or heard of an infected like yourself before.'";
 	say "     'What makes you assume that I am such?'";

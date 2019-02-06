@@ -1,10 +1,10 @@
 Version 4 of Harold by Sarokcat begins here.
 [ Version 4 - Drinking contest M/M sex ]
 
-"Adds an NPC to Flexible Survival with a well stocked bar and a problem..."
+"Adds an NPC to Flexible Survival with a well-stocked bar and a problem..."
 
 
-section 1 - Harold
+Section 1 - Harold
 
 Haroldtalk is a number that varies.
 Haroldaroused is a number that varies.[not a needed number, but used to set different arousal states if they aren't automatically willing to just hop into bed.]
@@ -28,7 +28,7 @@ the scent of Harold is "Harold has an equine scent laced faintly with that of se
 Section 2 - Conversation
 
 instead of conversing the Harold:
-	if Haroldtalk is 0:[first time you encounter the npc text]
+	if Haroldtalk is 0: [first time you encounter the NPC text]
 		say "     'Hey there, newcomer, the name's Harold,' the large unicorn says with a smile on his equine muzzle as he leans forward on the bar and stretches out a hand to welcome you. 'Good to see another friendly face around here, especially one that isn't [']too friendly['], if you know what I mean,' Harold says with a chuckling nicker of laughter. 'I'm sure you have bumped into plenty of [']too friendly['] beasts out there already.' He nods knowingly at you as you shake his rather large hoof-like hand. 'Had my own encounter with one, as I'm sure you can tell already. Though strangely enough, it was a horse and not a unicorn that played 'hide the horn' with me.' Harold winks at you as he says this, resting his arms easily on the bar as a fond grin crosses his equine muzzle. 'Dunno why I ended up like this instead of a horse myself, but it does have some benefits - main one of which is that I seem to have kept my sanity while a buncha the others lost it,' the unicorn says with a shrug, before leaning close and saying in a lower tone of voice. 'The secondary benefit, of course, is what I ended up [']hung like['], if ya get what I'm saying,' Harold whispers teasingly for your ears only. His ribald statement makes you smile with amusement, even as you find yourself growing slightly aroused.";
 		increase Haroldtalk by 1;
 	else if level of player >= 9 and HP of Joanna is 92 and joannaharoldtalk is 0:
@@ -167,7 +167,7 @@ to say haroldmalesex:
 	if libido of harold is 0:
 		say "     'Heh, sorry there man. While I may not necessarily need virgins or anything, I am still a bit more comfortable with something with a pussy, if ya get my meaning. Though since you did me a favor and seem interested, here's a drink on me... or of me...' the unicorn stallion says with a grin as he sets a glass in front of you. The strangely enticing aroma of the unusual liquor goes right to your head even as you toss it back. The spicy-sweet taste and the kick of the alcohol makes you gasp, even as a happy, lust-filled fog suffuses your brain. You find yourself staring happily at the play of light across the stallion's handsome horn even as you set your drink down.";
 	else if libido of harold is 1:
-		say "     'Hmm... back for more, are you?' the unicorn asks with a grin. 'I'm guessing that you're looking for another drink. And I take it you want it from the tap this time,' he says with a chuckle and a shimmer of his irridescent horn. 'Well, I can't say I'm too surprised. With all these hot and horny guys around, it'd certainly give a man some ideas.' He moves around to the front of the bar, showing he's already become mostly erect from the prospect of some action with you. 'Even though I was given a rather enjoyable horsie ride to end up like this, I still do much prefer being with a woman. But I'm certainly willing to make an exception for a few friends who've helped me out,' he adds, running a hand along your side, then to the back of your head.";
+		say "     'Hmm... back for more, are you?' the unicorn asks with a grin. 'I'm guessing that you're looking for another drink. And I take it you want it from the tap this time,' he says with a chuckle and a shimmer of his iridescent horn. 'Well, I can't say I'm too surprised. With all these hot and horny guys around, it'd certainly give a man some ideas.' He moves around to the front of the bar, showing he's already become mostly erect from the prospect of some action with you. 'Even though I was given a rather enjoyable horsie ride to end up like this, I still do much prefer being with a woman. But I'm certainly willing to make an exception for a few friends who've helped me out,' he adds, running a hand along your side, then to the back of your head.";
 		say "     Deciding to get to work, you lower yourself onto your knees in front of the unicorn stallion's bar, his cock in your hand. Stroking him slowly, you make a show of licking his cock and nuzzling his balls before taking it into your mouth. His taste is wonderful, rich and enticing, like his personal drink. It makes you all the hungrier to taste his seed. He rubs his hands over your head, moaning softly for you to keep it up. You lavish attention upon his cock, eager to show him how good a man can make another feel.";
 		say "     As you bob your head up and down, you can hear the activity immediately around you settle down. The music and dancing continues, but right around you grows quiet. You suspect they're probably more than a little surprised to see a male going down on the unicorn. Chuckling to yourself, you wouldn't be surprised if most of them have already struck out with him. This only encourages you further, reveling in the fact that you're getting something the rest of them can't.";
 		say "     And when the unicorn cums, how rich and delicious it is, flowing wonderfully down your throat. It has an indescribable taste that fills you with energy, making you tremble as you cum as well. It's much like the drink he gave you before, but purer and with such a virile flavor as well. Despite his sizable output, you somehow manage to swallow it all down, much to the surprise and envy of those watching around you.";

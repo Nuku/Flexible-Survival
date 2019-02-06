@@ -53,7 +53,7 @@ to say Yamato Dragoness vic:
 				now FYDTBMM is 1;
 			else:
 				say "     The way she looks as you, it's made very clear what twisted fate this massive beast has planned for you. [if HP of player < 1 and player is not submissive]Not wanting to subject yourself to that ordeal all over again, you try to get up and run, but you're too weak to flee her and, doubtlessly amused by your struggle, follows you in tow[else]Tainted hunger-streaked grin emerging from her lips, you feel somewhat sheepish regarding the dragoness's devious plans, who's clearly excited for it to go underway[end if].";
-				say "     '[one of]Yes, yes[or]Oh, yes[or]Good[at random], [one of]ALL of you will be mine[or]your body will suffice[or]you will know my embrace[or]I beg you to squirm, whelp[or]there is no escape now[at random]!' Wanton need twisted by an insane desperation, she plucks you from the ground,";
+				say "     '[one of]Yes, yes[or]Oh, yes[or]Good[at random], [one of]ALL of you will be mine[or]your body will suffice[or]you will know my embrace[or]I beg you to squirm, whelp[or]there is no escape now[at random]!' Wanton need twisted by an insane desperation, she plucks you from the ground, ";
 				if bodyname of player is "Yamato Dragon" or bodyname of player is "Yamato Dragoness":
 					say "similarly serpentine form exposed before her";
 				else:

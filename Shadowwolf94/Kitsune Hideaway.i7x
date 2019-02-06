@@ -1,4 +1,4 @@
-Kitsune Hide Away by Shadowwolf94 begins here.
+Kitsune Hideaway by Shadowwolf94 begins here.
 [original by Kaleem Mcintyre]
 
 "Adds a Foxy Hideaway"
@@ -39,7 +39,7 @@ instead of sniffing Kitsune:
 	say "Kitsune smells somewhat otherworldly and both sweetly masculine and yet dangerous at the same time. The odor makes you wonder about the other's true nature.";
 
 instead of conversing the Kitsune:
-	if Kitsunetalk is 0:[first time you encounter the npc text]
+	if Kitsunetalk is 0: [first time you encounter the NPC text]
 		say "'I've been waiting for you, little mortal. I'm so glad you've finally decided to come and claim your reward. The question next, however, is what will you claim exactly?' Kitsune looks at you with a predatory smile before winking knowingly in your direction. You swallow thickly as you wonder that yourself.";
 		say "'You've done such a wonderful job at entertaining me that I think I'll stick around on this world to enjoy it some more. If you just so happen to come by every once in a while to visit, then that would make things all the better for both of us, don't you think?' Kitsune winks at you before licking his lips playfully.";
 		increase Kitsunetalk by 1;
@@ -158,7 +158,7 @@ Instead of fucking Kitsune:
 to kitsuneinfect:
 	[puts Kitsune as lead monster]
 	setmonster "Kitsune";
-[	now non-infectious entry is false;] [No monster is selected  here]
+[	now non-infectious entry is false;] [No monster is selected here]
 	infect "Kitsune";
 [	now non-infectious entry is true;]
 
@@ -238,4 +238,4 @@ when play ends:
 			say "By the time the military comes in to clean up the city, you and Kitsune have gotten close enough to each other than you decide not to part. The silver fox-man is amused with the human's attempts to study him, but only because he spends nine-tenths of the time confusing their machines on the who/how/what of what he is. In the end they scientist who had examined the two of you end up releasing you after Kitsune's strain finally makes them surrender to their own ignorance. Of course this matters little to you because once you and Kitsune have stepped out into the free world you both spend the next hundred or so years getting to know each other even better than before, while at the same time you receive lessons on how to be a proper kitsune from the other male. As the years roll by more and more tails slip out from your backside, beautifully fluffy as well as luxuriously soft, the flowing appendages become the key sight for others to know you by as the title Many-Tales soon follows you around like a restless spirit. One reason why others call you this is because of your numerous tails, which you almost never seem to conceal with your powers, and two because of the stories you tell others when asked by them to retell some of your past during your more idle hours. Kitsune spends a lot of time teasing you about this when you two are alone together, but you return his jibes by calling him Old Man whenever he does. This results in a lot of fights between you two, though most of them good natured one, but it also ends with a lot of passionate make up sex with your long time friend.";
 
 
-Kitsune Hide Away ends here.
+Kitsune Hideaway ends here.

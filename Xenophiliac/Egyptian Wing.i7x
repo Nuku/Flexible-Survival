@@ -44,7 +44,7 @@ an everyturn rule:
 		now Finding Winged Orb is active;
 
 instead of resolving Finding Winged Orb:
-	say "     Walking through what used to be the city park, you're struck by how much the park has changed. The trees haven't been trimmed in forever, grass is now overrunning the sidewalks; the park is not in a good state. An unfamiliar gling catches your eye as you contemplate the park, however, glimmering out from a nearby tree. Carefully looking around, you check to make sure no one is nearby; seeing no creatures present, you carefully approach the tree, wondering what could be shining so brightly.";
+	say "     Walking through what used to be the city park, you're struck by how much the park has changed. The trees haven't been trimmed in forever, grass is now overrunning the sidewalks; the park is not in a good state. An unfamiliar glint catches your eye as you contemplate the park, however, glimmering out from a nearby tree. Carefully looking around, you check to make sure no one is nearby; seeing no creatures present, you carefully approach the tree, wondering what could be shining so brightly.";
 	say "     You eventually come to the tree that's so brightly shining, still on the lookout for any sex-crazed creatures. Finally glimpsing the object stuck in the tree, surprise soon overwhelms you at what lies buried within it. An elegant, ornate emblem protrudes from the majestic tree, somehow partially buried in the trunk. From the glances you can see, it looks as if the emblem resembles the carving on Amuran's sarcophagus; a circle with two majestic wings protruding from its sides. This has to be one of Amuran's sigils, somehow buried partially within the tree. Taking a large breath and steeling yourself for what you have to do, you grab onto a thick branch and begin to climb the tree; the artifact is only a few feet up.";
 	let bonus be ((dexterity of player minus 10) divided by 2);
 	let dice be ( a random number from 1 to 20);
@@ -69,7 +69,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Egypt Wing Entrance	"Egypt Wing Entrance"
 
-Egypt Wing Entrance is a room. it is fasttravel. it is private.
+Egypt Wing Entrance is a room. It is fasttravel. It is private.
 
 Table of GameRoomIDs (continued)
 Object	Name

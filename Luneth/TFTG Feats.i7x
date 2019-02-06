@@ -46,7 +46,7 @@ instead of resolving Divine Twins:
 					if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 						break;
 					else:
-						say "Invalid choice. Type [link]1[end link] apollo, [link]2[end link] artemis or [link]3[end link] no.";
+						say "Invalid choice. Type [link]1[end link] for Apollo, [link]2[end link] for Artemis or [link]3[end link] to decline.";
 				if calcnumber is 1:
 					LineBreak;
 					say "     You decide to accept Apollo's boon. 'I knew that I liked you, mortal! Now come closer to the statue and wrap your hand around one of the strings of my lyre.' Walking up to his effigy, you slowly wrap your hand around the lyre. 'Now, I will warn you, this will hurt a bit. Slide your hand down the string.' Doing as you are instructed, you let out a hiss as the string cuts into your palm. Pulling your hand back, you inspect it, only to find no blood, but instead a golden glow. The rest of your body begins to change slightly as well, some of your features starting to take on a more masculine appearance. 'The pact is made. You are now my disciple, [if player is not defaultnamed][name of player][else]boy[end if]. May my gift serve you well, and don't forget that the gods remember those that serve them.'";
@@ -82,7 +82,7 @@ instead of resolving Divine Twins:
 					if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 						break;
 					else:
-						say "Invalid choice. Type [link]1[end link] apollo, [link]2[end link] artemis or [link]3[end link] no.";
+						say "Invalid choice. Type [link]1[end link] for Apollo, [link]2[end link] for Artemis or [link]3[end link] to decline.";
 				if calcnumber is 1:
 					LineBreak;
 					say "     You decide to accept Apollo's boon. 'I knew that I liked you, mortal! Now come closer to the statue and wrap your hand around one of the strings of my lyre.' Walking up to his effigy, you slowly wrap your hand around the lyre. 'Now, I will warn you, this will hurt a bit. Slide your hand down the string.' Doing as you are instructed, you let out a hiss as the string cuts into your palm. Pulling your hand back, you inspect it, only to find no blood, but instead a golden glow. The rest of your body begins to change slightly as well, some of your features starting to take on a more masculine appearance. 'The pact is made. You are now my disciple, [if player is not defaultnamed][name of player][else]girl[end if]. May my gift serve you well, and don't forget that the gods remember those that serve them.'";
@@ -118,7 +118,7 @@ instead of resolving Divine Twins:
 					if calcnumber is 1 or calcnumber is 2 or calcnumber is 3:
 						break;
 					else:
-						say "Invalid choice. Type [link]1[end link] apollo, [link]2[end link] artemis or [link]3[end link] no.";
+						say "Invalid choice. Type [link]1[end link] for Apollo, [link]2[end link] for Artemis or [link]3[end link] to decline.";
 				if calcnumber is 1:
 					LineBreak;
 					say "     You decide to accept Apollo's boon. 'I knew that I liked you, mortal! Now come closer to the statue and wrap your hand around one of the strings of my lyre.' Walking up to his effigy, you slowly wrap your hand around the lyre. 'Now, I will warn you, this will hurt a bit. Slide your hand down the string.' Doing as you are instructed, you let out a hiss as the string cuts into your palm. Pulling your hand back, you inspect it, only to find no blood, but instead a golden glow. The rest of your body begins to change slightly as well, some of your features starting to take on a more masculine appearance. 'The pact is made. You are now my disciple, [if player is not defaultnamed][name of player][else]hybrid[end if]. May my gift serve you well, and don't forget that the gods remember those that serve them.'";
@@ -134,14 +134,14 @@ instead of resolving Divine Twins:
 					say "     You can't help but feel worried about this situation. Thinking back to your youth, you remember how the gods used to play tricks on humanity, offering gifts that came with a heavy price. Rather than make a choice, you instead ask another question. If things were as bad as they are, why didn't the divine beings help everyone? Apollo is the one that answers. 'The divine only help those that help themselves.' You comment on how that sounds like a fancy way to say that they couldn't be bothered. 'Hardly, it means to help yourself with the tools we have left you with. The plants, animals, metals, water, all of it. Those are a part of us, use them to survive.' Still not happy with the answer, you turn your back to the statues and leave, telling them that you don't want a boon. You will do what has to be done all on your own.";
 		else:
 			LineBreak;
-			say "     Something is wrong about all of this, you can feel it in your bones. Quickly your flight or fight instincts begin to kick in, seeing as there is nothing to fight however you start to walk backwards out of the room, making sure to watch for any movement. Moving further away from the statues makes it easier for you to relax, whether from being away from the sculptures, or that strange vibrating sound your not sure. Once you are the entrance of the hall you spare a glance backwards towards the statues, only to see they are no longer there. In place of them are completely different busts, while this confuses you, it also makes you feel even more confident in the choice you made to avoid them.";
+			say "     Something is wrong about all of this, you can feel it in your bones. Quickly your flight or fight instincts begin to kick in, seeing as there is nothing to fight however you start to walk backwards out of the room, making sure to watch for any movement. Moving further away from the statues makes it easier for you to relax, whether from being away from the sculptures or that strange vibrating sound, you're not sure. Once you are the entrance of the hall you spare a glance backwards towards the statues, only to see they are no longer there. In place of them are completely different busts, while this confuses you, it also makes you feel even more confident in the choice you made to avoid them.";
 	else:
 		say "     Attempting to be as silent as possible, you begin to make your way out of this section of the museum. Whatever the issue is between them, it's none of your concern.";
 
 Section 2 - Artemis Disciple Bad Ends
 
 Part 1 - Broken Husky Slut
-[This bad end will trigger if you have the artemis disciple feat and are fully male genital wise. You must also lose to the alpha that has captured sarah, it will not activate if you lose to the regular female huskies though since the alpha will then view you as a worthless addition to his pack. WARNING: this will also overwrite the male preferred feat.]
+[This bad end will trigger if you have the Artemis disciple feat and are fully male genital wise. You must also lose to the alpha that has captured Sarah, it will not activate if you lose to the regular female huskies though since the alpha will then view you as a worthless addition to his pack. WARNING: this will also overwrite the male preferred feat.]
 
 [For the actual content see the Broken Husky Bad-End file in Luneth's author folder.]
 

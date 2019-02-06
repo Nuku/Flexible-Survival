@@ -1,5 +1,5 @@
 Version 1 of Jenna by Rikaeus begins here.
-[Version 1 - new npc]
+[Version 1 - new NPC]
 
 [ JennaRelationship (leader of Wolverine Security          ]
 [   0: not met                                             ]

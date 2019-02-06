@@ -8,7 +8,7 @@ NPC Nexus	"nothing"
 NPC Nexus	"nowhere"
 
 NPC Nexus is a room.
-The description of NPC Nexus is "This is the extradimensional storage room for unused npcs. If you somehow ended up here during an import, please include your 'FSCharacterSave.glkdata' file in a bug report on the FS Discord.".
+The description of NPC Nexus is "This is the extradimensional storage room for unused NPCs. If you somehow ended up here during an import, please include your 'FSCharacterSave.glkdata' file in a bug report on the FS Discord.".
 
 Table of GameRoomIDs (continued)
 Object	Name

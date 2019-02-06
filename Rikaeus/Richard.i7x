@@ -1,5 +1,5 @@
 Version 1 of Richard by Rikaeus begins here.
-[Version 1 - Creation of Richard the npc]
+[Version 1 - Creation of Richard the NPC]
 
 RichardRoomConnection is a number that varies.[@Tag:NotSaved]
 

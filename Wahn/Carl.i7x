@@ -1,7 +1,7 @@
 Version 1 of Carl by Wahn begins here.
 [Version 1.1 - Small Fix]
 
-"Adds a husky npc to Flexible Survival, entering the game as an aftermath of the soldier squad events"
+"Adds a husky NPC to Flexible Survival, entering the game as an aftermath of the soldier squad events"
 
 [ Carl, the husky                                                                      ]
 [                                                                                      ]

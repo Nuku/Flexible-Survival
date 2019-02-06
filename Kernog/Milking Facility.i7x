@@ -309,7 +309,7 @@ to milkingCowSuitBind:
 			say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
 			say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break][run paragraph on]";
 			say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break][run paragraph on]";
-			say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Struggle:  :ᘌꇤ⁐ꃳ[line break][run paragraph on]";
+			say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Struggle: :ᘌꇤ⁐ꃳ[line break][run paragraph on]";
 			if humanity of player < 1: [Lost all sanity. Instant game over.]
 				if milkingCowSuitBindStage is 1:
 					say "     Your already weakened sanity is unable to resist the mind-crushing orgasm, which gets you [if player is male]to empty your balls inside the milker[smn][else if player is female]to spray the inner-layer of the suit with fem-cum[else]to cum[end if] while letting out an almost inhuman bellow. The suit promptly engulfs you and seals your head inside an air-tight mask, muffling your sounds and turning them into lascivious moos. Taking advantage of your state of shock, the suit slowly hisses around you, isolating you from the outside world in a bubble of air. An anal plug and a thick rubber gag joins the other implements invading your body. The machine learning algorithm slowly adapts to your physiology, while you aimlessly wiggle inside your vinyl prison. Your mask is fitted with a video screen, which shows you an endless scenery of grassy field, seen from the eyes of a cow. The virtual cow reacts to each of your movements, and your already damaged mind slowly identifies itself as the animal.";

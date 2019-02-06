@@ -209,8 +209,7 @@ Instead of asking Ammy about "pony/ponies":
 	say "     'What? PONIES?! I am a strong HORSE, you know!' she tells you with a slightly annoyed look in her face. 'Or... a sparklingly colorful unicorn... but still more of a horse than a pony!'";
 
 Instead of asking Ammy about "Rarity":
-	say "     Ammy looks from side to side as you ask her,";
-	say "     Rarity? Who's that? Should I know her? I mean, if that character I don't know is female. Or a character. Or [']someone[']...";
+	say "     Ammy looks from side to side as you ask her. 'Rarity? Who's that? Should I know her? I mean, if that character I don't know is female. Or a character. Or [']someone[']...'";
 
 
 

@@ -434,10 +434,10 @@ to say mrevent09:
 	say "     'Oh, lovely Valerie. Muse to our souls and protector of our grand party hall. We are well into our cups, but shall you and your companion join us for a drink?'";
 	say "join in?";
 	if player consents:
-		say "***party - valerie continues on";
+		say "***party - Valerie continues on";
 		say "***if on quest, nick a little wine.";
 	else:
-		say "***continue on, leaving revellers behind.";
+		say "***continue on, leaving revelers behind.";
 	remove 9 from mrevents;
 
 

@@ -188,10 +188,10 @@ to say ThomasDesc:
 	else:
 		say "     Thomas is a good-looking black man with a muscular chest - which leads over to a strong equine body below his belly button. His lower half has a beautiful black coat shining in the [if daytimer is day]sunlight[else]moonlight[end if], while his goatee, shoulder-long dreadlocks, and tail are blond[if HP of Thomas is 52][else], below which, as you know, lies a mare's pussy in addition to his stallion cock and balls[end if][if HP of Thomas is 5]. The belly of his equine body seems a bit fuller than before. He's carrying a foal[end if].";
 		if libido of Thomas > 0 and libido of Thomas is not 20:
-			if HP of Felix is 0:[Felix among the additional centaurs]
+			if HP of Felix is 0: [Felix among the additional centaurs]
 				LineBreak;
 				say "     Nearby but still a bit off, you see [if (libido of Thomas is 1 or libido of Thomas is 10 or libido of Thomas is 21)]another centaur[else if (libido of Thomas is 2 or libido of Thomas is 11 or libido of Thomas is 22)]two more centaurs[else if libido of Thomas is 12]three centaurs[end if] keeping lookout over the surrounding plain. Looks like Thomas small herd is security-conscious and ready for other infectees. Probably wise, with what you've seen in the city...";
-			else if libido of Thomas is not 10:[Felix standing in the room as an npc]
+			else if libido of Thomas is not 10: [Felix standing in the room as an NPC]
 				LineBreak;
 				say "     Nearby but still a bit off, you see [if (libido of Thomas is 1 or libido of Thomas is 21)]another centaur[else if (libido of Thomas is 2 or libido of Thomas is 12 or libido of Thomas is 22)]two more centaurs[end if] keeping lookout over the surrounding plain. Looks like Thomas small herd is security-conscious and ready for other infectees. Probably wise, with what you've seen in the city...";
 

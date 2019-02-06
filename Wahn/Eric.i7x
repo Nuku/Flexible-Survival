@@ -2139,7 +2139,7 @@ instead of going down from the Grey Abbey Library while (Eric is in Bunker and (
 			else: [not a virgin]
 				say "making him moan as his insides stretch around the thick blue shaft.";
 				if HP of Eric is 14:
-					now HP of Eric is 15; [Eric got fucked by another npc and the player and Rane]
+					now HP of Eric is 15; [Eric got fucked by another NPC and the player and Rane]
 				else:
 					now HP of Eric is 13; [Eric got fucked by both the player and Rane]
 			WaitLineBreak;

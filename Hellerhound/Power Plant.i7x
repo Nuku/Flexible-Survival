@@ -79,7 +79,7 @@ Control Room	"Control Room"
 Control Room is a room. "The Control Room overlooks the plant's generators. Surprisingly, this room is intact, and you wonder why no monsters ever got in. The walls are covered with control panels and there is a whole bank of control stations in front of the windows. A door in the west wall leads out on a catwalk going from generator to generator. There is power here, and the panels glow softly. Looking out into the main hall of the power plant, you see that the generators are in miserable condition, most are smashed, and several are half-melted and covered in what looks like lava. However, one appears to be in working condition, near the middle.".
 Control Room is above Plant Lobby.
 
-control panels is a thing. a control panels is in Control Room.
+control panels is a thing. A control panels is in Control Room.
 The description of control panels is "[ControlPanelDesc]".
 
 to say ControlPanelDesc:

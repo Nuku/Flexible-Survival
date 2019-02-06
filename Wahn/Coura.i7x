@@ -565,8 +565,8 @@ Explain that clearly, something wants her to have it. She shouldn't worry too mu
 
 
 Wahn - Today at 6:31 PM
-if I put up an npc
-that npc can be placed in the midmorning turn
+if I put up an NPC
+that NPC can be placed in the midmorning turn
 be gone in the noon turn (at work)
 also gone in the mid-afternoon turn (at work)
 and as the mid-afternoon turn is ended, I can show messages about her emerging, then place her somewhere for the evening turn

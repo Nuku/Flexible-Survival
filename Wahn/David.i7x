@@ -1,7 +1,7 @@
 Version 1 of David by Wahn begins here.
 [Version 1 - Put into its own file]
 
-[ David, the npc                                                        ]
+[ David, the NPC                                                        ]
 [                                                                       ]
 [ HP states of David - Location                                         ]
 [   0: on patrol                                                        ]

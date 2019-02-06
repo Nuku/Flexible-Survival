@@ -1,5 +1,5 @@
 Version 1 of Seraphis by Vinickus begins here.
-[Version 1 - new npc]
+[Version 1 - new NPC]
 
 [ SeraphisRelationship                                       ]
 [   0: not met                                               ]

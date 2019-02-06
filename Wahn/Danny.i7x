@@ -1,7 +1,7 @@
 Version 1 of Danny by Wahn begins here.
 [Version 1 - New NPC]
 
-"Adds a mall rat npc to Flexible Survival"
+"Adds a mall rat NPC to Flexible Survival"
 
 [ Danny, the mall rat                                                                  ]
 [                                                                                      ]

@@ -160,25 +160,25 @@ an everyturn rule:
 		if Resolution of HypnoGeeks is 70: [player got zapped]
 			say "     ...You remember something... <choice point: suppress the memory and put it behind you >escape clause<, try to recall>";
 			if player consents: [remember it]
-				say "     first scene, detail the original situation with hypno ray, zapped victim, you geting blasted too and them starting to strip the player down, some groping, then command him to bend over and grab their ankles <end of memory> play up the player's insecurity about what happened 'maybe you'll remember something more in a little while. It'll likely come back to you eventually.'";
+				say "     First scene, detail the original situation with hypno ray, zapped victim, you getting blasted too and them starting to strip the player down, some groping, then command him to bend over and grab their ankles <end of memory> play up the player's insecurity about what happened 'maybe you'll remember something more in a little while. It'll likely come back to you eventually.'";
 				now Resolution of HypnoGeeks is 71; [first flashback remembered]
 				now HG_Flashback_Turns is a random number between 5 and 10;
 			else: [suppress it]
 				say "bla";
 				now Resolution of HypnoGeeks is 99; [something happened, player doesn't want to know, break off for the chain]
 		else if Resolution of HypnoGeeks is 71: [second flashback time]
-			say "     small flash of Arthur's face, telling the player to relax their hole <choice point: suppress/recall>"; [last chance]
+			say "     Small flash of Arthur's face, telling the player to relax their hole <choice point: suppress/recall>"; [last chance]
 			if player consents: [remember it]
-				say "     second scene, fucking of the player by both mice taking turns, eventually finishing and leaving the player sticky and on the grass";
+				say "     Second scene, fucking of the player by both mice taking turns, eventually finishing and leaving the player sticky and on the grass";
 				now Resolution of HypnoGeeks is 72; [second flashback remembered]
 				now HG_Flashback_Turns is a random number between 5 and 10;
 			else: [suppress it]
 				say "bla";
 				now Resolution of HypnoGeeks is 99; [something happened, player doesn't want to know, break off for the chain]
 		else if Resolution of HypnoGeeks is 72: [third time]
-			say "     player remembers the aftermath of their fuck, which is the indoctrination part of the mice's hypno episode - command word and orders to come to their dorm room";
+			say "     Player remembers the aftermath of their fuck, which is the indoctrination part of the mice's hypno episode - command word and orders to come to their dorm room";
 			move Player to Tenvale College Male Dorms;
-			say "     as the memory fades, you actually find yourself in the college dormatory without any memory how you got here, your hand raised to knock on one of the doors. shaking your head to clear it, you can't help but stare at the room with the number 23 and feel the urge to knock and go in. the draw to do so is almost irresistible.";
+			say "     as the memory fades, you actually find yourself in the college dormitory without any memory how you got here, your hand raised to knock on one of the doors. Shaking your head to clear it, you can't help but stare at the room with the number 23 and feel the urge to knock and go in. The draw to do so is almost irresistible.";
 			SanLoss 15;
 
 

@@ -68,11 +68,11 @@ Instead of resolving a Circle of Life:
 			WaitLineBreak;
 			say "     Silence stretches out between them for a few seconds more after that, then he offers her his paw-hand and says, 'Sorry about driving away your herd. They're long gone now, so it'd be dangerous to go out and search for them alone. How about you stay with me instead?' She looks at his large paw and the claws on it with big eyes, then hesitantly takes it, sliding her own hand into his. The two of them start walking out of the dead end after that, immediately noticing you as you kinda drifted closer and closer when you watched them have sex. Hannah is rather shameful at having been observed, while Gavin just grins and says, 'Hope you liked the show.'";
 			say "     With that they stroll past you, hand in hand, and soon are out of sight. Despite the rather unconventional start of their relationship, and the fact that they're totally different species, it seems the two of them are actually a good fit. What will come out of their mating is anyone's guess though - a litter of lion cubs, or gazelles, or something in between. No matter what, you have a feeling their mother will care for them lovingly, and be more than ready to spread her folds again for the proud lion that fathered her children.";
-			now Resolution of Circle of Life is 1; [watched em fuck]
+			now Resolution of Circle of Life is 1; [watched them fuck]
 		else: [leave]
 			LineBreak;
 			say "     Trying to tune out the moans and aroused whimpers from the gazelle, as well as her lion captor's growls, you turn around and walk away. Even so, the nose you hear behind you makes it quite clear that the two of them are having quite a good time. You can't help but wonder what might result from their mating - a litter of lion cubs, or gazelles, or something in between. No matter what, you have a feeling their mother will care for them lovingly, and be more than ready to spread her folds again for the proud lion that is fathering her children right as you think those very thoughts.";
-			now Resolution of Circle of Life is 2; [didn't watch em fuck]
+			now Resolution of Circle of Life is 2; [didn't watch them fuck]
 	else: [make a getaway]
 		LineBreak;
 		say "     Trying not to listen to the frightened shouts, roars and growls coming from the direction both of the beast-people ran off in, you quickly walk the other way. One redeeming fact (maybe?) is that the noise goes on and on, so you don't think the predator went after the gazelles for food. Flashes of what might be going on between them instead dominate your imagination until you finally are out of earshot.";
@@ -335,7 +335,7 @@ Instead of resolving a Zookeepers at Play:
 		WaitLineBreak;
 		say "     Seeing the unequal lovers reach their shared orgasms, you do your best to finish yourself up quickly too, moving your hand with frantic haste now. The stimulation allows you to reach where you're going very quickly, and with a suppressed moan, [if player is male]your cock starts shooting long strings of cum to splatter the railing separating you from the enclosure[else if player is female]your pussy gushes femcum over your hand, enough to trickle over your finger and drip down to the ground[else]you feel pleasant little trembles and twitches all over your body[end if]. Meanwhile, the panther and his boy start coming down from the high of their urgent mating bit by bit as the further spurts of cum slowly ebb off. Even so, they go on to share more affectionate kisses and caresses, showing that this is more than just a quick fling to get off.";
 		say "     As the intense action is over now and the two of them start talking in lover's whispers now, you decide to move on after a few more moments. Quickly setting your clothes in order again, you leave just as Barnabas starts licking his boy's sweaty chest, about to introduce him to a wholly different - and much more intimate - way of getting washed.";
-		now Resolution of Zookeepers at Play is 1; [watched em fuck]
+		now Resolution of Zookeepers at Play is 1; [watched them fuck]
 	else:
 		LineBreak;
 		say "     With a shrug, you turn from the pair as they start making out and touching further, then walk along the zoo pathways until you eventually reach the rest area again.";

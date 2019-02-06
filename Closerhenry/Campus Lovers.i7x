@@ -64,11 +64,11 @@ to CampusLoversEvent:
 			WaitLineBreak;
 			say "     Coach Weber keeps speeding up his movements, until finally he grits his teeth as he shoves the waiting feline all the way down, popping his knot into him. This pushes Jadako over the edge, and he lets out a wanton moan as his feline cock begins ejecting ropes of thick, white jizz. His entire body quakes as the burly canine lets out a loud growl as his balls quiver and churn. The coach's cock spasms inside the feline, painting Jadako's insides white with his load. The cat's body isn't able to contain all of it, and his teacher's cum slowly begins to drip out of his hole. The young man remains seated on his coach's cock, until he turns his head to face the his lover once again. The two caress each other and kiss sloppily as the horny teen's cock again begins to rise. Seeing they are going to go for another round, you take your opportunity and sneak away, worried that the commotion might attract other infected.";
 			now CampusLoversTrackingVariable is 1;
-			now Resolution of Campus Lovers is 1; [watched em #1]
+			now Resolution of Campus Lovers is 1; [watched them #1]
 		else if calcnumber is 2:
 			LineBreak;
 			say "     Not wanting to risk these two unknown morphs, you slowly back away. After you get far enough away and it seems they haven't notice you, you take a slight jog to put a greater distance between you and them. As you look back to make sure they aren't following you, you see the two against the wall, the cat slowly sliding onto the dog's cock. At least they aren't after you.";
-			now Resolution of Campus Lovers is 2; [didn't watch em #1]
+			now Resolution of Campus Lovers is 2; [didn't watch them #1]
 		else:
 			LineBreak;
 			say "     Something just doesn't sit right with you about these two. You make sure to get away without being detected, before making a mental note to avoid all further contact with the two.";

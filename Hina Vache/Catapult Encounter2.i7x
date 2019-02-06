@@ -50,7 +50,7 @@ instead of resolving Loaded Catapult:
 			say "     ([link]N[as]n[end link]) - Hell no!";
 			if player consents:
 				LineBreak;
-				say "     An evil grin crosses your face. It's the apocalypse! Who cares if something like this gets flung through the air? People have been going through much worse lately than a bag of monster cum splashing around them. Surely. Well, probably anways. You <...>";
+				say "     An evil grin crosses your face. It's the apocalypse! Who cares if something like this gets flung through the air? People have been going through much worse lately than a bag of monster cum splashing around them. Surely. Well, probably anyways. You <...>";
 			else:
 				LineBreak;
 				say "     <...>";
