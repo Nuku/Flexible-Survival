@@ -1,8 +1,9 @@
 Version 3 of Serenity by Kurainyx begins here.
-[Version 1 - Created Serenity]
-[Version 2 - Added two new sex scenes, one variation for end of sex scenes, and a hint to pacify Serenity after the first encounter]
-[Version 3 - Added a series of non-fatal vore scenes]
-[Version 3.1 - Added an intro variant to vore bound state scene]
+[ Version 1.0 - Created Serenity - Kurainyx ]
+[ Version 2.0 - Added two new sex scenes, one variation for end of sex scenes, and a hint to pacify Serenity after the first encounter - Kurainyx ]
+[ Version 3.0 - Added a series of non-fatal vore scenes - Kurainyx ]
+[ Version 3.1 - Added an intro variant to vore bound state scene - Kurainyx ]
+
 "Adds a female naga NPC to Flexible Survival"
 
 [  HP of Serenity                                            ]

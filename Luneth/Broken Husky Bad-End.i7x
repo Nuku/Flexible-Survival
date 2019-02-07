@@ -312,30 +312,30 @@ to say BrokenHuskySlutBadend:
 
 Section 2 - Rough Roadmap
 
-[week 1- base training content. the alpha will continue breaking the players mind and training him to be a good girl. part of the training will also involve blowjobs and anal sex, these will begin the husky changes as well starting breast development. breast size growth will be set to a B cup in this week, as far as the husky transformation they will become a husky hybrid, so mostly husky but not completely.]
+[Week 1: Base training content. The alpha will continue breaking the player's mind and training him to be a good girl. Part of the training will also involve blowjobs and anal sex. These will begin the husky changes as well as starting breast development. Breast size growth will be set to a B cup in this week. As far as the husky transformation goes, they will become a husky hybrid, so mostly husky but not completely.]
 
-[week 2- stockholm, jealousy and mind-break content. the alpha will offer the player the chance to be free, but only if they join him in attempting to catch someone else to take their place. decent length scene involving capture and players mindset, but after the capture the player will not be happy with how the alpha treats the new recruit thus a fight will break out between the player and the new husky bitch. this will push the player growing their pussy, upon finally making the player orgasm during anal the player will shoot his load while his cock will shrink dramatically becoming a very large clit, and breast size will be pushed up to D cups.]
+[Week 2: Stockholm, jealousy and mind-break content. The alpha will offer the player the chance to be free, but only if they join him in attempting to catch someone else to take their place. Decent length scene involving capture and player's mindset, but after the capture the player will not be happy with how the alpha treats the new recruit, thus a fight will break out between the player and the new husky bitch. This will push the player growing their pussy, upon finally making the player orgasm during anal. The player will shoot his load while his cock will shrink dramatically, becoming a very large clit, and breast size will be pushed up to D cups.]
 
-[week 3- Orgy, gangbang, pregnancy and slight drug content in the form on sleepy time and contraception. the alpha summit will begin, at the summit alphas across the city will come together to exchange their bitches for breeding. the point of this is to keep the bloodlines pure without inbreeding, however if the player allows incest content the alpha will give them a drug to make it so the other alphas can't knock them up, after the event the alpha will knock you up with his own pups. whichever choice is used the players breasts will increase in size to a F cup and this is where they will remain.]
+[Week 3: Orgy, gangbang, pregnancy and slight drug content in the form on sleepy time and contraception. The alpha summit will begin. At the summit, alphas across the city will come together to exchange their bitches for breeding. The point of this is to keep the bloodlines pure without inbreeding; however, if the player allows incest content, the alpha will give them a drug to make it so the other alphas can't knock them up. After the event, the alpha will knock you up with his own pups. Whichever choice is used, the player's breasts will increase in size to a F cup and this is where they will remain.]
 
-[conclusion- this will involve you becoming the alphas number 1 bitch and the player finally giving themselves over to him. this will show the pups that you had no matter the father being used by the alpha after you present them to him. the conclusion will involve sarah coming back to try and save the player but sadly since the player has already succumbed the player will capture her as an offering for their master.]
+[Conclusion: This will involve you becoming the alpha's #1 bitch and the player finally giving themselves over to him. This will show the pups that you had no matter the father being used by the alpha after you present them to him. The conclusion will involve Sarah coming back to try and save the player, but sadly since the player has already succumbed, the player will capture her as an offering for their master.]
 
 [father-travis: princess, slut, whore, bitch, cunt, pet]
 [son-keith: darlin, pretty girl, lady, sweet thing, baby]
 
 Section 3 - Expansion Ideas
 
-[Locations: option of creating new location and possibly more in the future where the player can explore this exclusive area around them and the alphas actions will be set up with a timer. This would allow the player to learn more about the content that by normal means they would not.]
-[Submissive & Dominant Feat Repercussions: either have doms and subs have more limited options or have small flavors added to their content]
-[Kinky Feat Repercussions: more than likely will effect more content later on, but like in week 1 rather than not really being interested in consuming the alphas cum kibble a kinky player would really want to consume it]
-[Cut-off Bad End: making it so certain choices could actually lead to an early bad end, for example starvation or having the players mind become completely shattered.]
-[New Delta Breeds: no real info has been added yet but you can at least see potential types at the bottom of section 4s delta log]
-[Added Dream: player has a dream where artemis condemns them for being weak and not embracing the power of a "real woman"]
-[Repercussions: Add more flavor text to each scene depending on which "route" is in the lead]
+[Locations: Option of creating new location and possibly more in the future where the player can explore this exclusive area around them and the alpha's actions will be set up with a timer. This would allow the player to learn more about the content that by normal means they would not.]
+[Submissive & Dominant Feat Repercussions: Either have doms and subs have more limited options or have small flavors added to their content.]
+[Kinky Feat Repercussions: More than likely will effect more content later on, but like in week 1 rather than not really being interested in consuming the alpha's cum kibble a kinky player would really want to consume it.]
+[Cut-off Bad End: Making it so certain choices could actually lead to an early bad end, for example starvation or having the players mind become completely shattered.]
+[New Delta Breeds: No real info has been added yet, but you can at least see potential types at the bottom of section 4's delta log.]
+[Added Dream: Player has a dream where Artemis condemns them for being weak and not embracing the power of a "real woman".]
+[Repercussions: Add more flavor text to each scene depending on which "route" is in the lead.]
 
 Section 4 - Delta's AKA Husky Queens
 
-[A delta is a alphas equal within the pack however in a very different way. A simple way to look at the difference is to look at the stereotype between a mother and a father of a family. Most delta's are kept hidden away since the alphas that control them are also the ones that are viewed as the most powerful. A delta form infection is actually very rare to gain, however it is believed that the easiest way to become a delta husky is that while you are being made a regular female husky how your mind handles the situation.]
+[A delta is a alpha's equal within the pack, however in a very different way. A simple way to look at the difference is to look at the stereotype between a mother and a father of a family. Most deltas are kept hidden away since the alphas that control them are also the ones that are viewed as the most powerful. A delta form infection is actually very rare to gain; however, it is believed that the easiest way to become a delta husky is how your mind handles the situation while you are being made a regular female husky.]
 
 [Special Stats Explanation
 
@@ -372,7 +372,7 @@ Level of Compulsion Over Non-alpha Huskies: 2 [low]
 
 Part 2 - Amazon AKA The Wild Bloodlust
 
-[Standing at a height of 7 feet and filled with tight compact muscles the amazon delta is built to fight. By nature these deltas are incredibly dominant and it take either a powerful alpha to keep them in line or at the least a very manipulative one. The main special ability of this variant is its bloodlust, this can either be a hindrance for their alpha or used to their advantage. With the bloodlust they go insane desiring nothing more than combat, if the warning signs are showing she could be placed in an enemy location and blindly raze them, otherwise she could do the same to her own pack.]
+[Standing at a height of seven feet and filled with tight compact muscles the amazon delta is built to fight. By nature these deltas are incredibly dominant and it take either a powerful alpha to keep them in line or at the least a very manipulative one. The main special ability of this variant is its bloodlust, this can either be a hindrance for their alpha or used to their advantage. With the bloodlust they go insane desiring nothing more than combat, if the warning signs are showing she could be placed in an enemy location and blindly raze them, otherwise she could do the same to her own pack.]
 
 [Average Amazon Delta
 
@@ -397,7 +397,7 @@ Level of Compulsion Over Non-alpha Huskies: 1 [very low]
 
 Part 3 - Bimbo AKA The Pleasure Princess
 
-[At about 4 feet tall this is the smallest of the delta types. While she has the typical bimbo type body, she also has her own strengths. Her breast milk is extremely addictive and once consumed any husky will do whatever she asks for their next fix, even if they are from a rival pack. She also has two pussies by nature, while some alpha enjoy having two to play with the actual reason for them is so that she can breed as rapidly as possible, while gestating one litter she can also be knocked up with another.]
+[At about four feet tall this is the smallest of the delta types. While she has the typical bimbo type body, she also has her own strengths. Her breast milk is extremely addictive and once consumed any husky will do whatever she asks for their next fix, even if they are from a rival pack. She also has two pussies by nature, while some alpha enjoy having two to play with the actual reason for them is so that she can breed as rapidly as possible, while gestating one litter she can also be knocked up with another.]
 
 [Average Bimbo Delta
 

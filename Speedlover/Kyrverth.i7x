@@ -20,12 +20,12 @@ Add first ending, add cock/wing/horns tf to description (for later inclusion), a
 [	4: High-tech tiger suit		5: Black pearl (Not written by me, not yet available)	]
 []
 [Reference/Inspiration]
-[Ref pic - MAIN. Closest match I have found to the dragon. Kyrverth's cock is as shown but with 3 ridges along the length. http://d.facdn.net/art/justmegabenewell/1456722931/1456722931.justmegabenewell_yurii2.png	]
+[Ref pic - MAIN. Closest match I have found to the dragon. Kyrverth's cock is as shown but with three ridges along the length. https://d.facdn.net/art/justmegabenewell/1456722931/1456722931.justmegabenewell_yurii2.png	]
 [Ref pic 2 - https://d.facdn.net/art/incorgnito/1506117821/1506117821.incorgnito_forces1websize.png ]
-[Ref pic for stage 2 http://d.facdn.net/art/raventhan/1483134073/1483134073.raventhan_raventhan_refsheet2017_web_by_xuansirius.jpg]
-[Ref pic - player dominating Kyrverth stage 3 http://d.facdn.net/art/fasttrack37d/1364350303/1364350303.fasttrack37d_sonicfoxcommission.png]
+[Ref pic for stage 2 https://d.facdn.net/art/raventhan/1483134073/1483134073.raventhan_raventhan_refsheet2017_web_by_xuansirius.jpg]
+[Ref pic - player dominating Kyrverth stage 3 https://d.facdn.net/art/fasttrack37d/1364350303/1364350303.fasttrack37d_sonicfoxcommission.png]
 [Ref pic for size comparison, stage 3/5 and player https://www.sofurryfiles.com/std/content?page=758483&filename=tsaiwolf+-+Hold+You+Close+-+small.jpg]
-[Ref pic for stage 3/5 (maybe slightly bigger) size and sex. http://d.facdn.net/art/spottyjaguar/1490309953/1490309953.spottyjaguar_shaytalis_commission_small.png]
+[Ref pic for stage 3/5 (maybe slightly bigger) size and sex. https://d.facdn.net/art/spottyjaguar/1490309953/1490309953.spottyjaguar_shaytalis_commission_small.png]
 [Don't use any of these refs, they are not owned by FS.]
 
 

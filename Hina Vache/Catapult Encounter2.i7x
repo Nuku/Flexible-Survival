@@ -16,8 +16,8 @@ instead of resolving Loaded Catapult:
 	if the Bait of Diego is journal:
 		now demandIndex is a random number from 1 to the number of entries in BaitList;
 		now the Bait of Diego is entry demandIndex of BaitList;
-	say "     As you walk down the street you find something you had only seen illustrated in old history textbooks: a catapult. Looking around and deciding it is safe to check it out you approach the medieval siege weapon. The design is proper but rather simple compared to what most illustrations had depicted of one, seeming to be made of spare parts and somewhat worn 2x4 boards the creator must have scavenged somewhere. But the biggest surprise has to be what is in the spoon of the contraption. A massive, industrial grade bag lays in wait, ready to be tossed far and high by whomever decides to fire the weapon. At first you think nothing of the bag, but your curiosity gets the better of you and you soon find yourself carefully opening the bag to see what is inside.";
-	say "     [if level of player > 4]To no surprise[else]Shockingly[end if] the bag is filled with gallons of seed. Far too much to be from a single source. You quickly close the bag, careful to not get any of the nanite infused baby batter on you. As you continue to inspect the machine you notice ";
+	say "     As you walk down the street, you find something you had only seen illustrated in old history textbooks: a catapult. Looking around and deciding it is safe to check it out, you approach the medieval siege weapon. The design is proper but rather simple compared to what most illustrations had depicted of one, seeming to be made of spare parts and somewhat worn 2x4 boards the creator must have scavenged somewhere. But the biggest surprise has to be what is in the spoon of the contraption. A massive, industrial grade bag lies in wait, ready to be tossed far and high by whomever decides to fire the weapon. At first you think nothing of the bag, but your curiosity gets the better of you and you soon find yourself carefully opening the bag to see what is inside.";
+	say "     [if level of player > 4]To no surprise[else]Shockingly[end if], the bag is filled with gallons of seed, far too much to be from a single source. You quickly close the bag, careful to not get any of the nanite-infused baby batter on you. As you continue to inspect the machine, you notice ";
 	if Bait of Diego is medkit:
 		say "a medkit ";
 	else if Bait of Diego is water bottle:
@@ -32,7 +32,7 @@ instead of resolving Loaded Catapult:
 	say "     [bold type]Will you try to obtain the supplies?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, it'll be useful for you!";
-	say "     ([link]N[as]n[end link]) - Better not - who knows what this thing is aimed at!";
+	say "     ([link]N[as]n[end link]) - Better not - who knows what this thing is aimed at?";
 	if player consents:
 		LineBreak;
 		let bonus be (( dexterity of player minus 10 ) divided by 2);

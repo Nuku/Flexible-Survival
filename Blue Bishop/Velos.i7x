@@ -839,7 +839,7 @@ Part 23 - Anastasia
 the vmusings of Anastasia is "[Anastasiamusing]";
 
 to say Anastasiamusing:
-	say "     'Where have you brought me? This place is sweltering! Is... Is that lava? Why are we even here?' Velos line of enquiry elicited by his summoning, he seems a little more distressed by the apparent scenery, and is doubtlessly a bit surprised when Anastasia approaches.";
+	say "     'Where have you brought me? This place is sweltering! Is... Is that lava? Why are we even here?' Velos's line of enquiry elicited by his summoning, he seems a little more distressed by the apparent scenery and is doubtlessly a bit surprised when Anastasia approaches.";
 	say "     'Hello... What strange creature have you brought here?'";
 	say "     'Ah, that would explain it, and I could easily reflect that question back at you, bird who also appears to be on fire.'";
 	say "     'You are one of few manners. I can tell.'";
