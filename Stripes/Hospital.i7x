@@ -1583,7 +1583,7 @@ Instead of conversing the Nermine while nerminepackage is 1 and Nerminetalk > 0:
 	now nerminepackage is 2;
 	now Viking Longboat is active;
 
-[  -- Moved to their dialog sets
+[  - Moved to their dialog sets
 Instead of conversing Rod Mallrat while nerminepackage > 0 and rodhosp is 0:
 	say "     'Those big, spotted hairballs that rolled in here the other day? That was a bad scene, dude. They started to get fresh with some of the girls in the atrium and tried to drag them off. Well, we wouldn't put up with that. Never try to force a mall rat from their mall, man. We don't want none of them goons and their friends in here again.'";
 	now rodhosp is 1;

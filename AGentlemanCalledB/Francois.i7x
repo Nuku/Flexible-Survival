@@ -210,7 +210,7 @@ to say Francoisdesc:
 Instead of conversing the Francois:
 	if HP of Karen is 6 and companion of player is Retriever Girl:
 		say "     Francois greets you with a smile as you approach. 'Ah, mon ami[if player is not male and player is female]e[end if], good to see you again! And who is this you've brought with you?'";
-		say "     'It's me, Karen,' she responds. 'We were hoping you could help me out with --'[line break]";
+		say "     'It's me, Karen,' she responds. 'We were hoping you could help me out with-'[line break]";
 		say "     'Karen! Mon Dieu, I had feared the worst mon amie,' Francois interrupts, stepping around the counter and placing a small kiss on each side of her muzzle before pulling her into a hug. After breaking off, Francois motions towards one of the tables near the front of the store. The three of you sit and chat for a while, regaling the mutt with the tale of your escape from Rex before Karen finally asks him about her past. 'Ah, désolé mon amie, we never spoke much of our personal lives, only of our shared interest, les animaux. I recall you mentioning being a student at the college, but I am afraid that's all I know.'";
 		say "     'Well, it's more than I knew before,' Karen responds. 'Thank you, Francois, for everything. I might not even be here if not for you helping our friend here escape from Rex,' she says, smiling at you before leaning in and giving him a timid kiss on the cheek. Soon after the conversation draws to a close, you and Karen gather your things and prepare to head back out into the city as Francois returns to his work behind the counter.";
 		now HP of Karen is 7;

@@ -1,12 +1,12 @@
 Version 3 of DrMoffatt by Stripes begins here.
 [Version 2.2 - More Wereraptor responses]
-[Version 3 - Hypnosis path]
+[Version 3.0 - Hypnosis path]
 "Adds a Skunk Shemale NPC named Doctor Moffatt to the Flexible Survival game"
 
 Section 0 - Hypnosis variables
 
 [XP of doctor Moffatt chooses questline
-0 - not commited
+0 - not committed
 1 - skunk TF
 2 - hypnosis
 ]

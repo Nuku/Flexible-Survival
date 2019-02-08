@@ -626,7 +626,7 @@ an everyturn rule:
 		else if Joanna is in the PALOMINO:
 			move Joanna to Flower Garden;
 
-[  -- moved to Harold's conversation tree --
+[  - moved to Harold's conversation tree -
 instead of conversing the Harold while level of player >= 9 and HP of Joanna is 92 and joannaharoldtalk is 0:
 	say "     Going over to Harold, you inquire about Joanna, whom you haven't seen around of late. 'It's been a while, hasn't it?' he says. 'I think she mentioned something about going downtown to check out some overgrown flower gardens she'd spotted. I'm starting to get a little worried. You might want to head down to the high rise district and see if she's in an [bold type]overrun garden[roman type] around there. Just be careful if you do.";
 	now joannaharoldtalk is 1;

@@ -155,7 +155,7 @@ to say SarahRescue:
 		now Sarah is in the bunker;
 		now Resolution of Husky Pack is 6; [player rescued Sarah]
 	else if fightoutcome > 19 and fightoutcome < 30: [lost]
-		say "     Even as your strength gives out and you succumb to the fatigue from combat, furry bodies pile onto you, pinning you down. The heat from their bodies envelopes you, and the air is rich with the scents of exertion and heat.";
+		say "     Even as your strength gives out and you succumb to the fatigue from combat, furry bodies pile onto you, pinning you down. The heat from their bodies envelops you, and the air is rich with the scents of exertion and heat.";
 		if GroupFightCounter < 1: [Total Loss]
 			LineBreak;
 			say "[HuskyGangbang]";

@@ -27,7 +27,7 @@ Definition: A person (called x) is impreg_able: [Can the player be impregnated R
 	if player is fpreg_able or player is mpreg_able, yes;
 	no;
 
-Definition: A person (called x) is impreg_now: [Is the player currently pregnant. Male and/or Female] [impreg_now and its variants should only be used for technical reasons -- if an NPC is observing that the player might be pregnant (unless they know absolutely for sure that it's not a hijack) consider the vacant defintions instead]
+Definition: A person (called x) is impreg_now: [Is the player currently pregnant. Male and/or Female] [impreg_now and its variants should only be used for technical reasons - if an NPC is observing that the player might be pregnant (unless they know absolutely for sure that it's not a hijack) consider the vacant definitions instead]
 	if player is fpreg_now or player is mpreg_now, yes;
 	no;
 

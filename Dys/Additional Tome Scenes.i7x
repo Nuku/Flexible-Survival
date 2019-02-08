@@ -1,11 +1,11 @@
 Version 2 of Additional Tome Scenes by Dys begins here.
-[v1 - Adds tentacles and demon fox                                         ]
-[v2 - Breaks up the file into more abstract pieces                         ]
+[v1 - Adds tentacles and demon fox                                          ]
+[v2 - Breaks up the file into more abstract pieces                          ]
 
 "Adds additional content to the Ancient Tome item."
 
-[ TENTACLE CODE -- Dys/Ancient Tentacles.i7x                                ]
-[ DEMON FOX CODE -- Dys/Demon Fox.i7x                                       ]
+[ TENTACLE CODE - Dys/Ancient Tentacles.i7x                                 ]
+[ DEMON FOX CODE - Dys/Demon Fox.i7x                                        ]
 
 [ TomeTimer tracks how long it's been since the player has been             ]
 [ influenced by the tome                                                    ]

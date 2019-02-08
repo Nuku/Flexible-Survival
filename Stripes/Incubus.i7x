@@ -152,7 +152,7 @@ When Play begins:
 	now body change entry is "it is reshaped into a more attractive form, though you are soon distracted from this change by the strange feeling of your skin stretching and pressing out from your back. Looking over your shoulder, you stare in wonder as two small bulges of flesh push out of your back, before popping open in an almost orgasmic release. Unfurling further and further after that, you soon have a pair of large dark red bat wings on your back";
 	now skin change entry is "your skin seems to soften and smooth out, any blemishes and unwanted hair wiped away with a wonderfully pleasant sensation that leaves you with perfect skin";
 	now ass change entry is "it tightens up into a perfect, sexy ass, forming a wonderfully fuckable bubble butt. Then a long and thin tail grows out of your back just above it, sporting a spaded tip at the end";
-	now cock change entry is "it seems to grow partially erect and twitch eagerly, almost like it has a mind of it's own, eagerly hunting for the next chance to be put to use";
+	now cock change entry is "it seems to grow partially erect and twitch eagerly, almost like it has a mind of its own, eagerly hunting for the next chance to be put to use";
 	now str entry is 16;
 	now dex entry is 20;
 	now sta entry is 12;

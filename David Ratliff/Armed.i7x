@@ -338,7 +338,7 @@ This extension adds the actions shooting something with something and stabbing s
 
 Shooting a non-person thing is allowed, but has no real affect on the thing without additional rules. It is possible to make a game where the player has to shoot bottles to win a prize, or even to stop an enemy in a vehicle by shooting the tires.
 
-Stabbing a non-person thing is also allowed, but again does nothing on it's own. Again, the uses for this would depend on what the author had need to do with it.
+Stabbing a non-person thing is also allowed, but again does nothing on its own. Again, the uses for this would depend on what the author had need to do with it.
 
 Another thing this extension does is add a few kinds: weapon (kind of thing), projectile (kind of weapon), blade (kind of weapon), fire arm (kind of projectile), bow (kind of projectile), knife (kind of blade) and sword (kind of blade). An author can create most any weapon they want using fire arm, bow, knife or sword, and they should behave properly.
 

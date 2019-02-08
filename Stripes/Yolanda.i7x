@@ -373,7 +373,7 @@ to say yolandasex04:
 			say "[yolandasex04_A]";
 		else:
 			say "[yolandasex04_default]";
-	else if cocks of player is 1 and a random chance of 1 in 3 succeeds:	[cockring + pussy toy -- one cock only]
+	else if cocks of player is 1 and a random chance of 1 in 3 succeeds:	[cockring + pussy toy - one cock only]
 		say "a leather band and a false vagina toy. The leather strip proves to be a cockring with several snaps so it can be adjusted to suit its wearer's girth. The other is made of a stretchy, jellylike plastic with inner bumps and ridges to stimulate the member slide into it.";
 		say "     [bold type]Shall you let her use these kinky toys on you or shall you ask for something more her usual speed.[roman type][line break]";
 		LineBreak;

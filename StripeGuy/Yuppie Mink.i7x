@@ -127,7 +127,7 @@ When Play begins:
 	now body change entry is "your frame slims down and extends, the elongation making your body seem all the more slender. Your arms and legs shorter and thin out to become more dainty and attractive, for fast and lithe movements. Your limbs end in smallish paws that are soft and pink, obviously never used for a day of manual labor";
 	now skin change entry is "you feel your whole body fluff up as nearly iridescent fur begins to grow, so white as to be nearly transparent and softer than the finest silk or velvet";
 	now ass change entry is "pain and aches flare up as a soft, fluffy white mink tail uncurls from your ass";
-	now cock change entry is "you feel electric sensations as nanites reform your cock, pink hues blossoming as your meat thickens to the sculpted curves of what looks like a cock designed for royalty, subtle textures and elegant curves which downplay its intimidating size. Beneath your newly shaped cock, white fuzz envelopes your nuts as they swell and bloat into an oversized purse brimming with cum";
+	now cock change entry is "you feel electric sensations as nanites reform your cock, pink hues blossoming as your meat thickens to the sculpted curves of what looks like a cock designed for royalty, subtle textures and elegant curves which downplay its intimidating size. Beneath your newly shaped cock, white fuzz envelops your nuts as they swell and bloat into an oversized purse brimming with cum";
 	now str entry is 12;
 	now dex entry is 16;
 	now sta entry is 10;

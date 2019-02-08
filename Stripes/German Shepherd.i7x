@@ -417,7 +417,7 @@ to say beatthegsd:
 			increase gsd_pet by 1;
 
 
-[ -- Generic Player Victory Scenes -- ]
+[ - Generic Player Victory Scenes - ]
 
 to say gsd_generic_vsex_00:
 	say "     As the German Shepherd lets out a pained and injured whine, he sinks to the ground with his ears folding down, beaten. You feel a desire to turn the tables on this over-confident dog.";
@@ -510,7 +510,7 @@ to say gsd_generic_vsex_04:
 	say "     Longing for more, you press his muzzle in close and he slips his tongue into your cunt, diving up inside you to lap at your flowing juices. His long, doggy tongue dives into you again and again, making you moan with pleasure until finally you cum hard, soaking his muzzle in your juices. He laps up as much as he can and licks your thighs and pussy clean as your climax ebbs. When he's done cleaning you, you push his muzzle back and pat his head before sending him on his way, tail wagging happily after the tasty treat he's received.";
 
 
-[ -- Special Player Victory Scenes -- ]
+[ - Special Player Victory Scenes - ]
 
 to say gsd_special_vsex_00:
 	say "     As the scarred German Shepherd lets out a pained and injured whine, he sinks to the ground with his ears folding down, beaten. You feel a desire to turn the tables on this arrogant male[if gsd_pet > 1] who's continued harassing you[end if] and make use of him as you'd see fit.";
@@ -617,7 +617,7 @@ to say gsd_special_vsex_05:
 		say "     Keeping him pinned in this awkward position, you pump at his meat while he dribbles a sticky mess onto the ground just inches from his nose. Needy whimpers escape his muzzle as his orgasm approaches, which only encourages you. When he finally blows, his dick's aimed squarely at his face and his semen splatters all over his scarred muzzle. When you hear him licking and lapping at the mess of cum he's making on himself, you laugh a little at his humiliation. Once he's spent, you wipe your hand across his fluffy rear with a few slaps before driving him off. He gets up and slinks off, sticky and humiliated.";
 
 
-[ -- Special Final Scenes -- ]
+[ - Special Final Scenes - ]
 
 to say gsd_special_final_00:
 	say "     As the scarred German Shepherd lets out a pained and injured whine, he sinks to the ground with his ears folding down, beaten. You can see that a lot of the fight has gone of out his eyes and he hangs his head in shame when you look into them. It seems like you've finally proven yourself his better. And now you need to decide what you want to do with him.";

@@ -1,5 +1,5 @@
 Version 2 of Latex Fox by Nuku Valente begins here.
-[Version 2 -- Overhaul - Blue Bishop]
+[Version 2 - Overhaul - Blue Bishop]
 
 "Adds a Latex Fox creature to Flexible Survival's Wandering Monsters table"
 

@@ -281,7 +281,7 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			now VentFoxLastFed is turns;
 		else if VentFoxContentLevel is 1:
 			say "     You suggest to your rubber friend that you could go find some food together. He yips to show his approval before he shrinks down once more. However, he isn't quite able to become as small as he was last time, so he elects to simply walk in your shadow as you cross the parking lot, heading to a shed you can see in the distance. Your vulpine companion trots behind you, squeaking quietly every so often. As you come closer to the freestanding structure, you notice that the door still has a padlock barring entry. That could be a bit of a problem.";
-			say "     [bold type]Should you try to find another way in? Else, you'll just try to pry the lock off the door.[roman type][line break]";
+			say "     [bold type]Should you try to find another way in? Otherwise, you'll just try to pry the lock off the door.[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Find another entrance.";
 			say "     ([link]N[as]n[end link]) - Break the lock off.";
@@ -631,7 +631,7 @@ to say VentFoxScavengeFood:[Player helps the fox find some rubber to eat.]
 			now VentFoxLastFed is turns;
 		else if VentFoxContentLevel is 1:
 			say "     You suggest to your rubber friend that you could go find some food together. He yips to show his approval before he shrinks down once more. However, he isn't quite able to become as small as he was last time, so he elects to simply walk in your shadow as you cross the parking lot, heading to a shed you can see in the distance. Your vulpine companion trots behind you, squeaking quietly every so often. As you come closer to the freestanding structure, you notice that the door still has a padlock barring entry. That could be a bit of a problem.";
-			say "     [bold type]Should you try to find another way in? Else, you'll just try to pry the lock off the door.[roman type][line break]";
+			say "     [bold type]Should you try to find another way in? Otherwise, you'll just try to pry the lock off the door.[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Find another entrance.";
 			say "     ([link]N[as]n[end link]) - Break the lock off.";

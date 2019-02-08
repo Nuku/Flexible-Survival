@@ -21,7 +21,7 @@ pfpbmlist is a list of numbers that varies.[@Tag:NotSaved]
 [ 2 = pegasus	]
 [ 3 = unicorn	]
 
-[  -- simplified to decrease strain on memory --
+[  - simplified to decrease strain on memory -
 [ color list 1: body ]
 rfpclist1 is a list of text that varies.[@Tag:NotSaved] rfpclist1 is usually { "sky blue", "sapphire blue", "powder blue", "periwinkle", "light yellow", "jasmine", "yellow", "citrine", "teal", "soft pink", "salmon", "fuchsia", "light green", "honeydew", "forest green", "grass green", "celadon", "orange", "pumpkin", "light brown", "tan", "brown", "lilac", "amethyst", "thistle", "red", "russet", "ruby red", "burgundy", "white", "gray", "cream" }.
 

@@ -88,12 +88,12 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Mannequin":
 		if humanity of player < 10:
-			say "As you succumb to the infection, you drift aimlessly through the city and go for anyone crossing your path, overpowering them and absorbing how they look. Being in the form for an unfortunate soldier whose shape you stole earlier almost gets you out of the city when the military finally moves in, but following your unrestrained urges you try assimilating a medic who wants to check you out. Tasered till you collapse, you end up in a small cell and later get shipped to a research lab, where scientists study how you constantly shift and change. As a quite valuable asset for espionage developments, you never leave that facility again...";
+			say "     As you succumb to the infection, you drift aimlessly through the city and go for anyone crossing your path, overpowering them and absorbing how they look. Being in the form for an unfortunate soldier whose shape you stole earlier almost gets you out of the city when the military finally moves in, but following your unrestrained urges you try assimilating a medic who wants to check you out. Tasered till you collapse, you end up in a small cell and later get shipped to a research lab, where scientists study how you constantly shift and change. As a quite valuable asset for espionage developments, you never leave that facility again...";
 			stop the action; [no other endings - player removed from the city]
 		else:
-			say "Remaining in control of the urges to acquire the shapes of others and become them, you experiment a bit and learn that with some concentration you can shift without leaving others as identity-less infected mannequins. When the military finally moves in, you're taken to a holding facility, where doctors poke and prod you for days on end. Overhearing two doctors talk, you catch '...ites active and in constant flux. The subject wasn't exposed to a one-time change, but something else. That makes [if player is male]him[else if player is female]her[else]it[end if] far too dangerous to be released. I recommend perm...' Since you don't think you'd get out of there alive - if at all, you use the next chance you get with an orderly and overpower him to flee the facility after absorbing his shape.";
-			say "There's quite a bit of panic when people realize you're gone and soldiers swarm out to create roadblocks and hunt for you. It's touch and go for a while, but you manage to avoid capture. A week later and several hundred miles distant, with you laying low in a small town, you think you're home free - until you walk into your motel room and find a man in a suit waiting for you. 'Quite impressive, your escape. We need people like you. A bit of training and you'd make a fine addition to the agency...'";
-			say "Recognizing a deal you can't decline, you let yourself be recruited and end up a spy, traveling all over the world. Your ability to become anyone you want to be creates a rumor, then a legend of the super-spy 'The Chameleon'. Eventually movie-directors get a hold of the story and bring out an award-winning series of films about you. You make a game out of appearing as a minor role in every last one of them - never in the same shape twice though.";
+			say "     Remaining in control of the urges to acquire the shapes of others and become them, you experiment a bit and learn that with some concentration you can shift without leaving others as identity-less infected mannequins. When the military finally moves in, you're taken to a holding facility, where doctors poke and prod you for days on end. Overhearing two doctors talk, you catch '...ites active and in constant flux. The subject wasn't exposed to a one-time change, but something else. That makes [if player is male]him[else if player is female]her[else]it[end if] far too dangerous to be released. I recommend perm...' Since you don't think you'd get out of there alive - if at all, you use the next chance you get with an orderly and overpower him to flee the facility after absorbing his shape.";
+			say "     There's quite a bit of panic when people realize you're gone and soldiers swarm out to create roadblocks and hunt for you. It's touch and go for a while, but you manage to avoid capture. A week later and several hundred miles distant, with you laying low in a small town, you think you're home free - until you walk into your motel room and find a man in a suit waiting for you. 'Quite impressive, your escape. We need people like you. A bit of training and you'd make a fine addition to the agency...'";
+			say "     Recognizing a deal you can't decline, you let yourself be recruited and end up a spy, traveling all over the world. Your ability to become anyone you want to be creates a rumor, then a legend of the super-spy 'The Chameleon'. Eventually movie-directors get a hold of the story and bring out an award-winning series of films about you. You make a game out of appearing as a minor role in every last one of them - never in the same shape twice though.";
 
 Section 4 - Item drop
 
@@ -146,7 +146,7 @@ to say nullpowderuse:
 						say "     You apply the powder to your rods. After a while, they shrink down to the point where they're now [cock size desc of player] in size.";
 				else if cock length of player < 4:
 					if cocks of player > 1:
-						say "     Given how small they are, you could probably remove ALL of them. Shall you? Else you'll only remove one.";
+						say "     Given how small they are, you could probably remove ALL of them. Shall you? Otherwise, you'll only remove one.";
 						if player consents:
 							if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player:
 								now cocks of player is 1;
@@ -218,7 +218,7 @@ to say nullpowderuse:
 						say "     You apply the powder to your portals. After a while, they shrink down to the point where they're now [cunt size desc of player] in size.";
 				else if cunt length of player < 5 and cunt width of player < 5:
 					if cunts of player > 1:
-						say "     Given how small they are, you could probably remove ALL of them. Shall you? Else you'll only remove one.";
+						say "     Given how small they are, you could probably remove ALL of them. Shall you? Otherwise, you'll only remove one.";
 						if player consents:
 							if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player:
 								now cunts of player is 1;
@@ -269,7 +269,7 @@ to say nullpowderuse:
 						say "     You apply the powder to your racks. After a while, they shrink down to the point where they're now [breast size desc of player] in size.";
 				else if breast size of player < 4:
 					if breasts of player > 2:
-						say "     Given how small they are, you could probably flatten ALL of them. Shall you? Else you'll remove one entirely, nipples and all.";
+						say "     Given how small they are, you could probably flatten ALL of them. Shall you? Otherwise, you'll remove one entirely, nipples and all.";
 						if player consents:
 							now breast size of player is 0;
 							follow the breast descr rule;
@@ -294,7 +294,7 @@ to say nullpowderuse:
 				now Trixieexit is 1;
 			else:
 				if breasts of player > 2:
-					say "     Your chest is completely flat. You could, however, remove your nipples. Shall you remove one set? Else you'll remove all of them.";
+					say "     Your chest is completely flat. You could, however, remove your nipples. Shall you remove one set? Otherwise, you'll remove all of them.";
 					if player consents:
 						decrease breasts of player by 2;
 						say "     After a bit of work you manage to remove a set, leaving you with [if breasts of player < 3]a single pair[else][breasts of player] pairs[end if].";

@@ -1,11 +1,11 @@
 Version 1 of Feral Unicorn by Taelyn begins here.
-[Others can add to Feral Unicorn if keeping with the genreal theme set]
-[Possible scenes for others to add are size and body shape varient scenes.]
+[Others can add to Feral Unicorn if keeping with the general theme set]
+[Possible scenes for others to add are size and body shape variant scenes.]
 [A Special scene should be written for Twisted Capacity for smaller bodies.]
 
 "Adds a Feral Unicorn creature to Flexible Survival's Wandering Monsters table"
 
-Section 1 - Monster descripton
+Section 1 - Monster description
 
 when play begins:
 	add { "Feral Unicorn" } to infections of guy;

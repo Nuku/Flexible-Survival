@@ -253,7 +253,7 @@ to say sidney_otteress_cap:
 				now Resolution of Meeting Sidney is 3; [became a otter, left]
 				now Meeting Sidney is resolved;
 		else:
-			say "     As you draw nearer, you start to explain what you want, the otteress listening. 'Get away you're crazy wierdos!' she exclaims suddenly, turning and running off. You try to pursue her, but it's too late. She's got a small scooter stashed nearby that she uses to make her escape. You'll not get another chance to approach her now.";
+			say "     As you draw nearer, you start to explain what you want, the otteress listening. 'Get away you're crazy weirdos!' she exclaims suddenly, turning and running off. You try to pursue her, but it's too late. She's got a small scooter stashed nearby that she uses to make her escape. You'll not get another chance to approach her now.";
 			now sa_otteress is true;
 	else:
 		let bonus be ( strength of player - 10 ) / 2;

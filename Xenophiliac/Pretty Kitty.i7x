@@ -618,11 +618,11 @@ instead of using the girl's jacket:
 
 Section 6 - Comments and Variables
 
-[HP of Andromeda -- Variable for player-triggered talking scenes]
-[XP of Andromeda -- variable used to work the sex menu]
-[libido of Andromeda -- Variable for sex count, used to trigger some scenes]
-[lust of Andromeda -- Variable for talk scene regarding collars]
-[thirst of Andromeda -- Used for store description]
+[HP of Andromeda - Variable for player-triggered talking scenes]
+[XP of Andromeda - variable used to work the sex menu]
+[libido of Andromeda - Variable for sex count, used to trigger some scenes]
+[lust of Andromeda - Variable for talk scene regarding collars]
+[thirst of Andromeda - Used for store description]
 
 
 Pretty Kitty ends here.

@@ -5362,9 +5362,9 @@ to genderlockmenu:
 		say "(4) [link]Female[as]4[end link] - You reject all male mutations.";
 		say "[line break]";
 		say "[bold type]Hybrid:[roman type][line break]";
-		say "(5) [link]Shemale[as]5[end link] - You will trend to the configuration of a herm -- however lacking female genitalia.";
-		say "(6) [link]Cuntboy[as]6[end link] - You will trend to the configuration of a female -- however lacking any breasts.";
-		say "(7) [link]Male Herm[as]7[end link] - You will trend to the configuration of a herm -- however lacking any breasts.";
+		say "(5) [link]Shemale[as]5[end link] - You will trend to the configuration of a herm - however lacking female genitalia.";
+		say "(6) [link]Cuntboy[as]6[end link] - You will trend to the configuration of a female - however lacking any breasts.";
+		say "(7) [link]Male Herm[as]7[end link] - You will trend to the configuration of a herm - however lacking any breasts.";
 		say "(8) [link]Herm[as]8[end link] - You take on the configuration of a full herm.";
 		say "[line break]";
 		say "[bold type]Loose:[roman type][line break]";

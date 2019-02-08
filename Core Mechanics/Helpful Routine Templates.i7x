@@ -17,7 +17,7 @@ to malemonstersex: [This is the most basic version of player loss routines for m
 		say "     One thing to be mindful of is cock-particular references in your scene. If you wrote the anal first, you might make a passing reference to player genitalia. Obviously, the female genital references have to be tweaked to account for the penetration (or partial penetration, if they have multiple), but you may want male anatomy to take priority, to further qualify hermaphrodite players.";
 		say "     Similarly, end this with a standard pregnancy command.[impregchance]";
 	else:
-		say "     This is usually reserved for scenes where the player orally attends the monster. Really, it can be anything, so long as it doesn't require any sort of player genital configuration -- though you may references them, just be sure to have something for neuters. It's also a nice source of scene variation.";
+		say "     This is usually reserved for scenes where the player orally attends the monster. Really, it can be anything, so long as it doesn't require any sort of player genital configuration - though you may references them, just be sure to have something for neuters. It's also a nice source of scene variation.";
 
 to malebreedersex: [This is a variation of be above, for monsters who are strictly into reproduction]
 	if player is female:

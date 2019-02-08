@@ -1,6 +1,6 @@
 Version 2 of Cheetah by Sarokcat begins here.
 [ Version 2.1 - Updated to extended heat table - Stripes ]
-[Version 2.2 - added more variation to the apperance of the Cheetah Woman, rewrites the posative ending and adds a new milking secen]
+[ Version 2.2 - Added more variation to the appearance of the Cheetah Woman, rewrote the positive ending and added a new milking scene ]
 "Adds a cheetah woman to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
@@ -42,7 +42,7 @@ to say CheetahWomanDesc:
 	setmongender 4;
 	if inasituation is true:
 		say ""; [dealt with in the origin event]
-	else: [standard descripton]
+	else: [standard description]
 		say "     As you wander around the deserted paths of the zoo, you spot a blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral-like cheetah woman, her long lean body resting on narrow paws and a long cheetah tail lashing behind her as she focuses her gaze directly on you. '[one of]Why don't you run? I love the chase,[or]Hmmm, not a gazelle, but you look almost as fun,[or]Oooo, something to chase![or]Oh good, I was feeling bored,[or]I was feeling kind of lonely here. Maybe you can help?[or]Finally someone to pounce![at random]' she says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation and slips into a runner's stance, her eyes locked on her newest prey... you.";
 
 
@@ -108,7 +108,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"cheetah milk"	"The creamy milk collected from a Cheetah. It has a potent smell to it yet it's slightly intising."	1	cheetah milk
+"cheetah milk"	"The creamy milk collected from a Cheetah. It has a potent smell to it yet it's slightly enticing."	1	cheetah milk
 
 cheetah milk is a grab object. It is a part of the player. It is milky. It is temporary. Understand "milk" as cheetah milk. cheetah milk is infectious. The strain of cheetah milk is "Cheetah Woman".
 

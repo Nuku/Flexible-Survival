@@ -75,7 +75,7 @@ to FindPornStore:
 				say "Invalid choice. Type [link]1[end link] to A, [link]2[end link] to B or [link]3[end link] to C.";
 		if calcnumber is 1:
 			LineBreak;
-			say "     Putting on a determined expression, you back up and get ready to ram the door. Yet just as you dash forward, it swings open a little to allow a large mouse taur to look out. Unable to slow down in time you ram into the door, smacking it against the shoulder and side of the taur, sending you both crashing to the floor right behind the doorstep. A little dizzy drom the impact, you stand up and lean against a wall to recover, still blinking away stars as you hear the mouse taur get up. Shaking her head clear she glares at you. 'What the hell were you thinking, you idiot? Do you know how long it took me to properly secure that door? Then you come along and just plan to smash it down! Who the hell are you?' You blink and splutter in response, trying to explain that you were simply looking for supplies, but it appears that she'll have none of your excuses abd you start out in an angry argument.";
+			say "     Putting on a determined expression, you back up and get ready to ram the door. Yet just as you dash forward, it swings open a little to allow a large mouse taur to look out. Unable to slow down in time you ram into the door, smacking it against the shoulder and side of the taur, sending you both crashing to the floor right behind the doorstep. A little dizzy from the impact, you stand up and lean against a wall to recover, still blinking away stars as you hear the mouse taur get up. Shaking her head clear she glares at you. 'What the hell were you thinking, you idiot? Do you know how long it took me to properly secure that door? Then you come along and just plan to smash it down! Who the hell are you?' You blink and splutter in response, trying to explain that you were simply looking for supplies, but it appears that she'll have none of your excuses and you start out in an angry argument.";
 			say "     [bold type]Sadly, all the noise attracts the attention of one of the more hands-on locals.[roman type]";
 			challenge "Tigress Hooker";
 			if fightoutcome < 20: [player won]
@@ -114,7 +114,7 @@ to FindPornStore:
 			LineBreak;
 			say "     You shrug and turn away for now, making a mental note that you should return here sometime and check it out.";
 	else if mtrp is 1:
-		say "     Recognizing the location that Lisa the moustaur described, you walk up to the door and knock. It doesn't take long before you can hear some movement on the inside. After several locks click open one by one, the door is opened a crack to reveal the woman looking out warily. As she recognizes you, a smile spreads over her face and she waves you inside.";
+		say "     Recognizing the location that Lisa the mousetaur described, you walk up to the door and knock. It doesn't take long before you can hear some movement on the inside. After several locks click open one by one, the door is opened a crack to reveal the woman looking out warily. As she recognizes you, a smile spreads over her face and she waves you inside.";
 		move player to the Porn Store;
 		now mtrp is 2; [player knows Lisa, was in the store]
 		now Porn Store is known;

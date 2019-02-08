@@ -27,7 +27,7 @@ When Play begins:
 	now enemy title entry is "";
 	now enemy name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
-	now attack entry is "[one of]With the grace of a track runner the lithe girl dashes to you and launches into a kick![or]Turning her eyes torwards one of the desks she suddenly throws it in your direction![or]The artistic girl quickly moves into a handspring and lands feet first onto your face.[or]Grabbing one of her paint brushes she uses it as a makeshift shank and slams it into your side for maximum pain![at random]";
+	now attack entry is "[one of]With the grace of a track runner the lithe girl dashes to you and launches into a kick![or]Turning her eyes towards one of the desks she suddenly throws it in your direction![or]The artistic girl quickly moves into a handspring and lands feet first onto your face.[or]Grabbing one of her paint brushes she uses it as a makeshift shank and slams it into your side for maximum pain![at random]";
 	now defeated entry is "[SakuraSatoLoses]";
 	now victory entry is "[SakuraSatoWins]";
 	now desc entry is "[SakuraSatoDesc]";

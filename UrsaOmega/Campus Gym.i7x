@@ -185,7 +185,7 @@ to say strtraining:
 	now lastworkout is turns;
 	follow the turnpass rule;
 	WaitLineBreak;
-	say "     Randy looks over your worked-out body with a different light in his eyes. 'You know, yer not half bad lookin['] after a workout... Pretty sexy, if you don't mind me sayin[']. Actually, if yer not too tuckered out, would you be interested in some, uh... Naked wrestling? It's kind of a popular pasttime around here...' The rhino-man is blushing through his thick gray skin. Do you want to try some [']naked wrestling['] with him?";
+	say "     Randy looks over your worked-out body with a different light in his eyes. 'You know, yer not half bad lookin['] after a workout... Pretty sexy, if you don't mind me sayin[']. Actually, if yer not too tuckered out, would you be interested in some, uh... Naked wrestling? It's kind of a popular pastime around here...' The rhino-man is blushing through his thick gray skin. Do you want to try some [']naked wrestling['] with him?";
 	if player consents:
 		say "[wrestlesex]";
 		if HP of Randy < 2, now HP of Randy is 2;

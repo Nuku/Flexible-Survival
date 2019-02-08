@@ -594,7 +594,7 @@ to say onilairassault:
 [		***beat them, adventure continues.";]
 		WaitLineBreak;
 		say "     When you and Hayato venture inside, you find that the two guards were indeed telling the truth. It seems the rest of the oni aren't here right now. There's the remains of sandwich fixing, open packets of drink mix and the plastic wrapper for a picnic basket. You're strangely disappointed at having missed them, but relieved as well. Certainly Hayato's seeming much more confident for having gone face to face with his infection. You gather up the remaining supplies you can salvage from the mess and head back to the bunker together.";
-		say "     Upon your return, Hayato pulls you into his arms and gives you another forceful kiss. 'Mmm... I'm feeling so much better after all that. That felt so good to take charge like that and take what I wanted.' He gives your ass a firm squeeze and grinds his crotch against your side, throbbing with growing need. 'How about from occasion we[']ll do things my way?' he asks with a lustful growl. From the look on your face you clearly have no objection with this train of thought.";
+		say "     Upon your return, Hayato pulls you into his arms and gives you another forceful kiss. 'Mmm... I'm feeling so much better after all that. That felt so good to take charge like that and take what I wanted.' He gives your ass a firm squeeze and grinds his crotch against your side, throbbing with growing need. 'How about we do things my way on occasion?' he asks with a lustful growl. From the look on your face you clearly have no objection with this train of thought.";
 		increase carried of food by 2;
 		increase score by 20;
 		now lastfuck of Hayato is turns + 8;

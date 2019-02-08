@@ -62,7 +62,7 @@ to ratetheplayer:
 	else if the score < 2500:
 		say "Baude Warrior!";
 	else if score > 9000:
-		say "Th -- What, 9000?!";
+		say "Th- What, 9000?!";
 	else:
 		say "The Lord Humungus!";
 	say "[roman type]";

@@ -1,6 +1,6 @@
 Version 3 of Bottlenose Toy by Stripes begins here.
-[Version 3.7 - Bound State Addition -- Blue Bishop]
-[Version 3.8 - Changed 'HP of Bubble' checks to 'dolphinmode' ones. This guarantees the BC scene only occurs there, and it's necessary now that players can return to the castle after saving/losing the vixen -- Song]
+[Version 3.7 - Bound State Addition - Blue Bishop]
+[Version 3.8 - Changed 'HP of Bubble' checks to 'dolphinmode' ones. This guarantees the BC scene only occurs there, and it's necessary now that players can return to the castle after saving/losing the vixen - Song]
 "Adds an Inflatable Dolphin creature to Flexible Survival's Wandering Monsters table"
 
 

@@ -1585,7 +1585,7 @@ to dolboundstate:
 			now partialengulf is 1; [player is partially engulfed]
 		now enduring is false;
 		if boundmod > 2 and humanity of player > 0:
-			say "     After [if dolphinbundle is 0]a very brief[else if dolphinbundle is 1]a brief[else]some[end if] while [if dolphinbundle < 2]you're ejected from the suit, perhaps not able to handle your form on it's own -- for now, at least -- but you imagine if you get caught in there too often that will no longer be the case[else]you manage to pry yourself free of the suit, its overwhelming influence still addling your lust-filled mind[end if]...";
+			say "     After [if dolphinbundle is 0]a very brief[else if dolphinbundle is 1]a brief[else]some[end if] while [if dolphinbundle < 2]you're ejected from the suit, perhaps not able to handle your form on its own - for now, at least - but you imagine if you get caught in there too often that will no longer be the case[else]you manage to pry yourself free of the suit, its overwhelming influence still addling your lust-filled mind[end if]...";
 			if dolphinbundle < 2, increase dolphinbundle by 1;
 			cleanboundmemory;
 			now Trixieexit is 1;
@@ -1674,7 +1674,7 @@ to dolboundstate:
 							decrease humanity of player by 4 + psycheadjust;
 							increase lustatt by 35 + (lustadjust * 5);
 						else:
-							say "     After [if dolphinbundle is 0]a very brief[else if dolphinbundle is 1]a brief[else]some[end if] while [if dolphinbundle < 2]you're ejected from the suit, perhaps not able to handle your form on it's own -- for now, at least -- but you imagine if you get caught in there too often that will no longer be the case[else]you manage to pry yourself free of the suit, its overwhelming influence still addling your lust-filled mind[end if]...";
+							say "     After [if dolphinbundle is 0]a very brief[else if dolphinbundle is 1]a brief[else]some[end if] while [if dolphinbundle < 2]you're ejected from the suit, perhaps not able to handle your form on its own - for now, at least - but you imagine if you get caught in there too often that will no longer be the case[else]you manage to pry yourself free of the suit, its overwhelming influence still addling your lust-filled mind[end if]...";
 							LineBreak;
 							if dolphinbundle < 2, increase dolphinbundle by 1;
 							cleanboundmemory;
@@ -1949,7 +1949,7 @@ to say dolcheckE:		[vixen]
 
 Chapter 1 - Western Chair Escape
 
-to say bcchairfinal1: [FLOT -- Check?]
+to say bcchairfinal1: [FLOT - Check?]
 	let compnumber be ( number of entries in childrenfaces / 3 );
 	if companion of player is not nullpet, increase compnumber by 1;
 	let bcchairescape be 0;
