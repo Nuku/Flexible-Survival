@@ -549,7 +549,10 @@ to say strangeIsland:
 	move player to Restaurant;
 	if level of Erin is 0:
 		say "     As soon as you enter the restaurant, you see Erin and Violet wave at you with big gestures. 'Great timing,' the sister said. 'Get over here.' Intrigued, you follow her and, after greeting Erin, take a seat. 'Hear this,' the female rat said, visibly excited. 'Do you know about Vohr Island?'";
-		say "     After jogging your memory a little, you remember that Vohr Island is, like its name implies, a small patch of land, a mile or so from the sea shore. You remember the pamphlets of the city's tourist office describing it as a mostly wild place, as a small military base is set there.";
+		if Inner Predator is resolved:
+			say "     You disclose to the twins your own discoveries about Vohr Island. 'So you found the same clues than us,' Violet says. 'Who would have guessed that the military base was used for such things.'";
+		else:
+			say "     After jogging your memory a little, you remember that Vohr Island is, like its name implies, a small patch of land, a mile or so from the sea shore. You remember the pamphlets of the city's tourist office describing it as a mostly wild place, as a small military base is set there.";
 		say "     'With all the mayhem going on, we totally forgot about the place as well,' Erin said. 'But then, now that we had time to settle a little, we remembered the rumors about this place.'";
 		say "     'You remember them too, right?' Violet asks. 'That place is basically the local Zone 51. And with this infection apocalypse going on, me and Bro wonder if the place had something to do with it.'";
 		say "'We won't ask much of you,' Erin said in reassurance. 'We would feel safer with you going forward and scouting the area, but for now, we would simply ask if you had found a boat during your exploring.'";
@@ -562,9 +565,8 @@ to say strangeIsland:
 	else if boatfound is 2 or boatfound is 3:
 		say "     You mention your boat to the twins. 'Yay, you got us a boat! Awesome!' the sister says loudly, before hugging you tight against her furry body. 'Okay. Now that step 1 is a-go, we can start collecting some supplies for the trip. A tent, some food... You know, the essentials.'";
 		say "     'For now, could you just make a short trip there and see if there's a safe place we could stay? I don't mind if you want to explore further, but don't go into the military base without us, yet. 'Remember to [bold type]save your position[roman type] on your phone. Just in case,' Erin warns.";
-		say "     A relatively short journey in boat later, you find a pier where you can land your small boat on. After securing your mean of transportation to one of the posts, you begin to look around.";
+		say "[bold type]You can now navigate to Vohr Island[roman type]";
 		now Island Pier is known;
-		move player to Island Pier;
 		now Strange Island is resolved;
 	now level of Erin is 1;
 

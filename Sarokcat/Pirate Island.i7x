@@ -263,6 +263,8 @@ Instead of resolving Findingboat:
 		now boatfound is 2;
 	else if boatfound is 4:
 		say "     You find a small rowboat that's been dragged up into the short strip of woods along this section of beach. It seems to have been here for a while, but still looks serviceable. You certainly wouldn't be able to take any long trips with it, but it should be capable of the trip out to Vohr Island.";
+		say "[bold type]You can now navigate to Vohr Island[roman type]";
+		now Island Pier is known;
 		now boatfound is 2;
 	else:
 		say "     Traveling along the beach, you come across a large, jumbled mess made up of several different abandoned boats from the marina that have all washed up ashore here. Glancing through the tangle of boats shows you that one or two of them might still work, but they probably wouldn't be able to take you very far, so you end up continuing on your way, forced to look for another method of getting out of the city.";
