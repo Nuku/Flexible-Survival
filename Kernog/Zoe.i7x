@@ -279,12 +279,8 @@ to say ZoeGoodFuckMenu:
 					PCSexAftermath Zoe receives "PussyFuck" from player;
 				if nam is "Anal":
 					say "[ZoeSexAnal]";
-<<<<<<< HEAD
 					PCSexAftermath Zoe receives "AssFuck" from player;
-				if nam is "Strap-on":
-=======
 				if nam is "Pegging":
->>>>>>> upstream/master
 					say "[ZoeSexPeg]";
 				if nam is "Roleplay (sub)":
 					say "[ZoeSexRPSub]";

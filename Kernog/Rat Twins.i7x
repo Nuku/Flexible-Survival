@@ -116,12 +116,7 @@ to say ErinSexMenu:
 					PCSexAftermath Erin receives "AssFuck" from player;
 				if (nam is "Bottom for Erin"):
 					say "[ErinFuckBottom]";
-<<<<<<< HEAD
 				WaitLineBreak;
-=======
-				wait for any key;
-			infect "Slut Rat";
->>>>>>> upstream/master
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You inform Erin of your second thoughts. The rat shrugs, then turns around to check on what his sister is doing.";
