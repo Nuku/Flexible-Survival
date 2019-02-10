@@ -276,8 +276,10 @@ to say ZoeGoodFuckMenu:
 				now sextablerun is 1;
 				if nam is "Vanilla":
 					say "[ZoeSexZoeChoice]";
+					PCSexAftermath Zoe receives "PussyFuck" from player;
 				if nam is "Anal":
 					say "[ZoeSexAnal]";
+					PCSexAftermath Zoe receives "AssFuck" from player;
 				if nam is "Strap-on":
 					say "[ZoeSexPeg]";
 				if nam is "Roleplay (sub)":
