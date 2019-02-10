@@ -171,7 +171,7 @@ to say LilianaInfectiousFuck: [Runs whenever Liliana is the active pet and the p
 	say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your [bodytype of player] body. 'We need to get you looking like a proper equinoid again.' She nickers softly as she takes her cock in hand and starts stroking it, rubbing it against you. Precum leaves slick trails across your body as she does this.";
 	if a random chance of 1 in 3 succeeds:
 		say "     You find yourself growing excited and take over stroking her, leaving her free to run her hands over your [bodydesc of player] body";
-		if breast size of player > 0:
+		if player is breasted:
 			say ". She starts by rubbing over your bosom, playing with your breasts and teasing your nipples";
 		if cocks of player > 1:
 			say ". Her hands drift down to your cocks, taking one in each and stroking them";

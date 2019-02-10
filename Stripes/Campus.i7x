@@ -160,7 +160,7 @@ Athletic Street is southwest of College Walkway West.
 The description of Athletic Street is "[athleticstreetdesc]".
 
 to say athleticstreetdesc:
-	say "     The street that holds the athletic departments has multiple groups of people excercising from the archery club to the football team to the soccer team. There are multiple buildings all over the place but you're not entirely sure where to go. It may be best to look around the campus for members of the various teams and see if you can gain information about the various members that way. After all you don't think you'd want to accidentally walk into an area while people are practicing and possibly get tackled to the ground.";
+	say "     The street that holds the athletic departments has multiple groups of people exercising from the archery club to the football team to the soccer team. There are multiple buildings all over the place but you're not entirely sure where to go. It may be best to look around the campus for members of the various teams and see if you can gain information about the various members that way. After all you don't think you'd want to accidentally walk into an area while people are practicing and possibly get tackled to the ground.";
 
 [Room Declaration]
 Lecture Street is northwest of College Walkway West.

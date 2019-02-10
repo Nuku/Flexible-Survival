@@ -352,7 +352,7 @@ to hardwarefortphase5:
 	if diceroll > 16:
 		say "Making lots of noise to draw their attention, you lead the creatures on a merry chase around this part of the city. You finally manage to lose the last of them near the library itself. Panting with exertion and actually feeling rather hopeful, you duck into the library, eager both for a bit of rest after your long day[if recoveredhardware < 2], and to take a look at the new sledgehammer the horseman handed you[end if].";
 	else:
-		say "You lead the creatures away from the hardware store for a while, but it isn't long before you are outmaneuverd in the narrow streets, and brought to bay as several of the horny creatures close in on you!";
+		say "You lead the creatures away from the hardware store for a while, but it isn't long before you are outmaneuvered in the narrow streets, and brought to bay as several of the horny creatures close in on you!";
 		let xyzlost be 0;
 		let xyzfled be 0;
 		fight;

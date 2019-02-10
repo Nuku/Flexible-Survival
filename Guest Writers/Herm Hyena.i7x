@@ -2,7 +2,7 @@ Version 10 of Herm Hyena by Guest Writers begins here.
 [ Version 10 - Player victory menu w/new scenes ]
 [- Originally Authored By: Anony Mouse -]
 
-"Adds a Herm Hyena to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Herm Hyena to Flexible Survival's Wandering Monsters table, with impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses

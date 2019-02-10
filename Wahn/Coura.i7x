@@ -248,7 +248,6 @@ to say MTFRatSexMenu:
 					now libido of Danny is 6; [first transformation done]
 				else if libido of Danny < 12:
 					increase libido of Danny by 1; [counting up on the transformations]
-				WaitLineBreak;
 		else if calcnumber is 0: [cancel sex menu]
 			now sextablerun is 1;
 			if libido of Danny < 16: [regular Cole is transformed back and let go]
@@ -259,6 +258,7 @@ to say MTFRatSexMenu:
 				say "     As you proclaim that you're not in the mood for anything right now after all, Nermine looks quite disappointed, yet she suppresses her frown after a few seconds and forces herself to say, 'Of course, [master].' Turning her attention back to the mall rat standing ready before you, she barks out, 'The slut should get back to work now. Nermine wants [one of]to see the great gong polished to a mirror's shine[or]all of her canopic jars dusted[or]the third shelf sorted alphabetically[or]her living inventory fed[at random] before the mall rat leaves today.' As the jackaless goes to pull the door open once more and shoo Coura through, the mall rat rolls her eyes as soon as Nermine's back is turned, then gives you a little wave as she says goodbye and hurries after Nermine.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 to say CouraSex1: [oral for Nermine]
@@ -565,8 +565,8 @@ Explain that clearly, something wants her to have it. She shouldn't worry too mu
 
 
 Wahn - Today at 6:31 PM
-if I put up an npc
-that npc can be placed in the midmorning turn
+if I put up an NPC
+that NPC can be placed in the midmorning turn
 be gone in the noon turn (at work)
 also gone in the mid-afternoon turn (at work)
 and as the mid-afternoon turn is ended, I can show messages about her emerging, then place her somewhere for the evening turn

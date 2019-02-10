@@ -1,7 +1,7 @@
 Version 3 of Janice by Sarokcat begins here.
 [ Version 3.1 - Kristen tie-in tweaks ]
 
-"Adds a npc to Flexible Survival with a variety of responses and goals..."
+"Adds a NPC to Flexible Survival with a variety of responses and goals..."
 
 Section 1 - private rooms
 
@@ -22,8 +22,8 @@ the scent of Private club room is "This back room smells of sex, heat and lust a
 Section 2 - Janice
 
 Janicetalk is a number that varies.
-Janicearoused is a number that varies.[not a needed number, but used to set different arousal states if they aren't automatically willing to just hop into bed.]
-Janicequest is a number that varies.[often used for quests or renamed to Janicequest, see boris for some good examples of this, totally unneeded if the npc doesn't have an associated quest.]
+Janicearoused is a number that varies. [not a needed number, but used to set different arousal states if they aren't automatically willing to just hop into bed.]
+Janicequest is a number that varies. [often used for quests or renamed to Janicequest, see Boris for some good examples of this, totally unneeded if the NPC doesn't have an associated quest.]
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -50,7 +50,7 @@ instead of conversing the Janice:
 	if debugactive is 1:
 		say "DEBUG -> Talk: [janicetalk], Aroused: [janicearoused], Quest: [janicequest] <- DEBUG[line break]";
 		say "DEBUG (Kristen) -> HP: [HP of Kristen], Libido: [libido of Kristen], Msg 1: [if kristenmsg1 is true]Y[else]N[end if], Msg 2: [if kristenmsg2 is true]Y[else]N[end if], Msg 3: [if kristenmsg3 is true]Y[else]N[end if], Msg 4: [if kristenmsg4 is true]Y[else]N[end if] <- DEBUG[line break]";
-	if Janicetalk is 0:[first time you encounter the npc text]
+	if Janicetalk is 0: [first time you encounter the NPC text]
 		say "     'Well hello there,' the vixen says in a sensually tempting voice, as you approach her to introduce yourself. 'It's nice to see another new face around here. This place does seem to attract all kinds, now doesn't it?' she says with amusement as she sits up and stretches out one of her rather dainty looking paws to shake your hand, before lying back on the divan and adjusting her position slightly, giving you a very tempting view of her perky breasts. 'The name is Janice, and well, unlike most of the others, I didn't get attacked by one of those creatures. Well, not right away anyway,' Janice says with a small smirk forming on the side of her muzzle, 'And by then, I already had claws of my own to fight them off with.' She grins at you with amusement, her muzzle full of sharp pointy teeth quite evident as the vixen flexes her claws to make a point.";
 		say "     'No,' Janice continues after a minute with a soft sigh, 'I ended up this way out of vanity mainly,' she says with a shake of her head before shooting you a teasing smile. 'I always liked fur, especially if it was soft and stylish, and when I finally got an arctic fox fur sash, I just couldn't put it down... Of course now I have a full pelt of beautiful fox fur of my own to run my hands through,' Janice adds, her tail flicking with amusement as she suits her words to actions, running her dainty clawed hands through her soft white fur teasingly. 'I have to admit, while this isn't the way I would have necessarily chosen to wear fur from now on, I certainly am loving the experience,' she says this with obvious enjoyment of her new condition as she winks at you teasingly. 'Of course, since I wasn't infected the [']usual['] way by one of those creatures out there, there happens to be a shortage of other arctic foxes around for me to play with around here,' Janice says with a soft frown on her muzzle, before grinning at you again. 'Of course since it doesn't look like you have settled on a final form yet, maybe you could help me out with remedying that situation sometime. It would be nice to have another fox like me around to stroke and pet...' the vixen says teasingly, as she rubs her paw-like hands along her inner thighs, giving you a glimpse of her damp wetness as she continues. 'If you wanted to show me you were interested in being a pretty fox like me anyways...";
 		increase Janicetalk by 1;
@@ -157,7 +157,7 @@ instead of conversing the Janice:
 		else:
 			say "[one of]Shouldn't you be off somewhere trying to impress me?[or]Don't you have something to look for?' she says pointedly.[or]I rather like it here at the club, though I could use some companionship from someone who understands what being a fox is all about,' she says, running her paws over her lush tail.[or]Don't let me keep you from your search, hon.[or]I look forward to seeing what you come up with, my hopeful suitor.[or]I am rather glad the club has nice private little nooks like this to relax in, aren't you?[or]Have you seen Tristian out there? Maybe he is more your style if you aren't interested in foxes.[or]So, have you been studying your foxes? Would you like a little... [']hands on['] study time with me?[or]Isn't this fur simply divine? If you can prove you like foxes, I'll let you stroke it,' she adds with a coy grin.[at random]";
 	else if janicetalk is 2:
-		say "[one of]'How are you enjoying the Palomino?'[or]'The club is nice enough for me, and I do enjoy dancing occasionally, but it is just to loud for my sensitive ears sometimes...'[or]'I am rather glad the club has nice private little nooks like this to relax in, aren't you?'[or]'Have you seen Tristian out there? Maybe he is more your style if you aren't interested in foxes.'[or]'That Harold at the bar certainly is an interesting looking fellow, if he weren't so busy all the time I might even have invited him back here with me...'[or]'I used to do some modeling you know, I might even try doing some again if we ever get out of here... after all, who wouldn't love to look at this lovely new body of mine?'[or]'Are you still here? How interesting.'[or]'If you are going to hang around here all the time, could you go get me a drink or a snack or something to make yourself useful?'[or]'I could always pose with the best of them, now though, it feels even better than ever.'[or]'I wonder how hard it will be to deal with things like bank accounts after all this is over...'[or]'Did you see some of the creatures out there? it's insane out there!'[or]'I'm actually very grateful to Tristian and the others for finding me and letting me stay here. I hate to think what might have happened if I had been out there much longer by myself.'[at random]";
+		say "[one of]'How are you enjoying the Palomino?'[or]'The club is nice enough for me, and I do enjoy dancing occasionally, but it is just to loud for my sensitive ears sometimes...'[or]'I am rather glad the club has nice private little nooks like this to relax in, aren't you?'[or]'Have you seen Tristian out there? Maybe he is more your style if you aren't interested in foxes.'[or]'That Harold at the bar certainly is an interesting looking fellow, if he weren't so busy all the time I might even have invited him back here with me...'[or]'I used to do some modeling you know, I might even try doing some again if we ever get out of here... after all, who wouldn't love to look at this lovely new body of mine?'[or]'Are you still here? How interesting.'[or]'If you are going to hang around here all the time, could you go get me a drink or a snack or something to make yourself useful?'[or]'I could always pose with the best of them, now though, it feels even better than ever.'[or]'I wonder how hard it will be to deal with things like bank accounts after all this is over...'[or]'Did you see some of the creatures out there? It's insane out there!'[or]'I'm actually very grateful to Tristian and the others for finding me and letting me stay here. I hate to think what might have happened if I had been out there much longer by myself.'[at random]";
 
 
 
@@ -169,7 +169,7 @@ to say sexwithjanice:
 	if debugactive is 1:
 		say "DEBUG -> Talk: [janicetalk], Aroused: [janicearoused], Quest: [janicequest] <- DEBUG[line break]";
 	if lastfuck of Janice - turns < 6:
-		say "     'Sorry, but even us lusty little vixens need a bit of time to recover after such a lovely bit of fun,' Janice says teasingly as she plants a soft kiss on the side of your face before lying back on the wide couch and stretching theatrically. 'And besides my lovely little soon to be fox, haven't you heard that anticipation makes everything better? And I am certainly already anticipating our next little romp eagerly...' she purrs sensually as she gives you a vulpine grin and a soft wink before sending you on your way.";
+		say "     'Sorry, but even us lusty little vixens need a bit of time to recover after such a lovely bit of fun,' Janice says teasingly as she plants a soft kiss on the side of your face before lying back on the wide couch and stretching theatrically. 'And besides my lovely little soon-to-be fox, haven't you heard that anticipation makes everything better? And I am certainly already anticipating our next little romp eagerly...' she purrs sensually as she gives you a vulpine grin and a soft wink before sending you on your way.";
 	else if Janicearoused > 0:
 		if player is male:
 			if cockname of player is "Arctic fox":

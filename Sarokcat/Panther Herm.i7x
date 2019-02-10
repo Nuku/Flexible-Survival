@@ -2,7 +2,7 @@ Version 2 of Panther Herm by Sarokcat begins here.
 [ Version 2 - Sven specific endings added ]
 
 
-"Adds a Pantherherm to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Pantherherm to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses
@@ -46,8 +46,8 @@ When Play begins:
 	now face change entry is "your muscles shift and crack, your jaw stretching out slightly as your teeth take on a sharper more feline form, your face pushing out slightly into a small muzzle as all your senses seem to sharpen, the world coming into a bright new focus through your slit pupiled golden feline eyes"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it seems to stretch and lengthen, your spine cracking slightly as you stretch instinctively with the changes, your body becoming more lithe and flexible even as your hands and feet seem to shift slightly, your legs shifting so that you now can balance easily on the pads of your new hindpaws, and soft velvety pads covering your palms even as sharp claws push out of your slightly thicker fingers. Finished stretching, you smile as you realize you seem to have put on several inches of height, and a decent amount of extra muscle as well"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "a strange comforting warmth spreads over your body, soft black fur pushing out of your skin and settling into place all over your body, covering you completely with its silken softness"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "a your spine seems to extend outwards, a long feline tail quickly forming behind you, and lashing happily from side to side"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
-	now cock change entry is "it narrows down, soft feline barbs forming along its slightly more pointed length as it draws up between your legs, a soft panther-like sheath forming around it and holding it up closer to your body, leaving just the tip of your cock poking out teasingly"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now ass change entry is "your spine seems to extend outwards, a long feline tail quickly forming behind you and lashing happily from side to side"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "it narrows down, soft feline barbs forming along its slightly more pointed length as it draws up between your legs. A soft, panther-like sheath forms around it and holds it up closer to your body, leaving just the tip of your cock poking out teasingly"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 18;
 	now dex entry is 24;
 	now sta entry is 18;

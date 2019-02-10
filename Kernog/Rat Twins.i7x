@@ -116,11 +116,16 @@ to say ErinSexMenu:
 					PCSexAftermath Erin receives "AssFuck" from player;
 				if (nam is "Bottom for Erin"):
 					say "[ErinFuckBottom]";
+<<<<<<< HEAD
 				WaitLineBreak;
+=======
+				wait for any key;
+			infect "Slut Rat";
+>>>>>>> upstream/master
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You inform Erin of your second thoughts. The rat shrugs, then turns around to check on what his sister is doing.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -138,7 +143,7 @@ to say ErinFuckTop:
 		LineBreak;
 		say "[ErinVoyeurKo]";
 	WaitLineBreak;
-	say "     Erin and you take your time peeling each other clothes, exploring each other's body[if isTwinHere is 1] while Violet, true to her word, sits in a corner, and watches the show eagerly[end if]. He lets you pass your fingers on his soft, gray-white fur while his own limbs run down your [body of player] back. Your two heads slowly lock with each other in a long and passionate French kiss. [if isTwinHere is 1]You can hear Violet's breath accelerate as her sibling and you get lost in your passions. When you take the time to give her a peripheral look, you notice her hands are already cupping her breasts and her crotch in an absent-minded manner. [end if]The feeling of Erin's member brushing against your [if cocks of player is 1]own [cock of player] erection[else]pack of erected penises[end if] fills you with arousal and anticipation. 'Help me get ready?' he asks softly. You nod[if isTwinHere is 1]; Violet nods as well[end if].";
+	say "     Erin and you take your time peeling each other clothes, exploring each other's body[if isTwinHere is 1] while Violet, true to her word, sits in a corner, and watches the show eagerly[end if]. He sighs in pleasure as you pass your fingers on his soft, gray-white fur while his own limbs run down your [bodyname of player in lower case] back. Your two heads slowly lock with each other in a long and passionate French kiss. [if isTwinHere is 1]You can hear Violet's breath accelerate as her sibling and you get lost in your passions. When you take the time to give her a peripheral look, you notice her hands are already cupping her breasts and her crotch in an absent-minded manner. [end if]The feeling of Erin's member brushing against your [if cocks of player is 1]own [cock of player] erection[else]pack of erected penises[end if] fills you with arousal and anticipation. 'Help me get ready?' he asks softly. You nod[if isTwinHere is 1]; Violet nods as well[end if].";
 	say "     Erin gets on his four limbs on the old cot in the middle of the room and lifts his tail for you, revealing his pink rosette.  [if isTwinHere is 1]As you realize that you do not have lube, you hear Violet tell you 'Catch.' and a plastic tube of the stuff lands in your hands. You thank her, which she waves off before putting her hand back in her panties[else]Realizing that you forgot the lubrication, you fumble through the small mess to find one, before finding a tube[end if]. You apply some on your fingers and tell Erin to relax. You push one finger inside. Erin gasps[first time]; you know from the tightness that it is really his first time, and take extra care[only]. 'Cold...' he moans. While his hand goes to stroke his own cock, you begin to pump your finger in his smooth butt. Once the squeeze of his anal ring relents, you slip a second digit. [if isTwinHere is 1]Mirroring your actions, Violet slips her index inside her pussy. [end if]A third one comes quickly and Erin gasps again, this time in pleasure. 'O-okay. I think I'm good[if player is not defaultnamed], [name of player][end if],' he says.";
 	WaitLineBreak;
 	say "     You quickly apply the remaining lube on your fingers onto your still hard cock, and stroke your [cockname of player] member[smn] a little. Once you deem yourself ready, you press yourself against Erin's rump for a moment. [if cocks of player > 1]You let your [cocks of player] cocks grind against the plump behind, tainting the clear fur with your pre, before grabbing one and lining it with the rat's hole[else]You let your [cock size desc of player] grind against the plump behind, tainting the clear fur with your pre, before grabbing it and lining it with the rat's hole[end if]. You push, slowly. [first time]Erin whines from having his sphincter stretched for the first time. You go in progressively, pushing in then pulling out, until the male is relaxed enough to let your glans slip past his anal ring without protest. [only]Erin lets out a long moan as you slowly dig in his hole and bottom out.[if isTwinHere is 1] Violet startles you as well, letting out a loud shrill as she came from watching her brother being taken. 'S-Sorry,' she pants. 'It-it was too much. So hot.' 'F-fuck, sis...' her twin groans, visibly excited as well.[end if]";
@@ -161,7 +166,7 @@ to say ErinFuckBottom:
 		LineBreak;
 		say "[ErinVoyeurKo]";
 	WaitLineBreak;
-	say "     Erin and you take your time peeling each other clothes, exploring each other's body[if isTwinHere is 1] while Violet, true to her word, sits in a corner, and watches the show eagerly[end if]. He lets you pass your fingers on his soft, gray-white fur while his own limbs run down your [body of player] back. Your two heads slowly lock with each other in a long and passionate French kiss. [if isTwinHere is 1]You can hear Violet's breath accelerate as her sibling and you get lost into your passions. When you take the time to give her a peripheral look, you notice her hands are already cupping her breasts and her crotch in an absent-minded manner. [end if]The feeling of Erin's member brushing against your [if cocks of player is 1]own [cockname of player] erection[else if cocks of player > 1]pack of erected penises[else]stomach[end if] fills you with arousal and anticipation. 'Should I help you get ready?' he asks softly. You nod[if isTwinHere is 1]; Violet nods as well[end if].";
+	say "     Erin and you take your time peeling each other clothes, exploring each other's body[if isTwinHere is 1] while Violet, true to her word, sits in a corner, and watches the show eagerly[end if]. He lets you pass your fingers on his soft, gray-white fur while his own limbs run down your [bodyname of player in lower case] back. Your two heads slowly lock with each other in a long and passionate French kiss. [if isTwinHere is 1]You can hear Violet's breath accelerate as her sibling and you get lost into your passions. When you take the time to give her a peripheral look, you notice her hands are already cupping her breasts and her crotch in an absent-minded manner. [end if]The feeling of Erin's member brushing against your [if cocks of player is 1]own [cockname of player] erection[else if cocks of player > 1]pack of erected penises[else]stomach[end if] fills you with arousal and anticipation. 'Should I help you get ready?' he asks softly. You nod[if isTwinHere is 1]; Violet nods as well[end if].";
 	say "     Erin helps you get on all fours, and spread your legs apart. He deftly slides under you, placing his erect cock at your level. Just as you were about to make a comment about his flexibility, Erin cuts you off by burying his muzzle into your buttcrack and giving your [if player is male or anallevel is 3]anal ring[else]cleft[end if] a long lash of the tongue. Shivering, you bury your [face of player] head into his crotch and take his the boy's average cock into your mouth. A heated 69 unfolds[if isTwinHere is 1] under the pleased gaze of Violet[end if]. Erin goes to town on your crotch, and you return the favor in kind. [if isTwinHere is 1 and player is not male]You can hear Violet give her brother some advice: 'Don't forget her clit.' 'Bite it a little, she'll love it.' 'Not so fast, bro. You'll make her cum already!' [end if]Eventually, the both of you agree that you should take it up a notch. You roll off on your back and spread your legs, and Erin gets on top of you. You can feel his cock, now wet with your saliva, grinding against your [if player is male or anallevel is 3]ass[else]pussy[end if]. [if isTwinHere is 1]'How's the view, sis?' he asks. You realize that Violet has a full view on your and Erin's crotches. 'A fucking plus,' she answers.[end if]";
 	WaitLineBreak;
 	say "     The pendulum movement of Erin's hips has him eventually point the tip of his cock against your [if player is male or anallevel is 3]ass[else][cunt size desc of player] pussy[end if]. Like a ram it pushes forward, parting your inner walls in one fluid movement. Erin groans in pleasure on top of you, and wastes no time pumping his pelvis into you. The room fills with the loud and rhythmic slaps of your two bodies slamming together; first distanced and wet, then rapid and dry as you wrap your legs around the rat's torso and squeeze him against your [breast size desc of player] bosom[if isTwinHere is 1]. Violet pumps her finger inside her pussy, trying to follow the more and more frantic pace of her sibling. You cannot see her from your position, but her loud moans are a testimony to her current state of arousal[end if].";
@@ -302,12 +307,12 @@ to say VioletSexMenu:
 					say "[VioletStrapOn]";
 				[if (nam is "Threesome"):
 					say "[ThreesomeViolet]";]
-				WaitLineBreak;
+				wait for any key;
 			infect "Slut Rat";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You inform Violet of your second thoughts. The rat shrugs, then turns around to check on what his sister is doing.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

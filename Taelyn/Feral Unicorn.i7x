@@ -1,11 +1,11 @@
 Version 1 of Feral Unicorn by Taelyn begins here.
-[Others can add to Feral Unicorn if keeping with the genreal theme set]
-[Possible scenes for others to add are size and body shape varient scenes.]
+[Others can add to Feral Unicorn if keeping with the general theme set]
+[Possible scenes for others to add are size and body shape variant scenes.]
 [A Special scene should be written for Twisted Capacity for smaller bodies.]
 
 "Adds a Feral Unicorn creature to Flexible Survival's Wandering Monsters table"
 
-Section 1 - Monster descripton
+Section 1 - Monster description
 
 when play begins:
 	add { "Feral Unicorn" } to infections of guy;
@@ -13,7 +13,7 @@ when play begins:
 
 to say FeralUnicornDesc:
 	setmongender 3;
-	say "     You hear the rustle of leaves and branches as a large equine pushes it's way past them and into the open. This is no normal horse though. It is as big as a daft horse. From hoof to shoulder it is almost as tall as a human. A long spiral horn grows proudly out of its forehead, and its long, elegant mane hangs down, unkept and wild. A tuft of hair hangs from its chin, almost like a beard, and its lower legs are [']feathered['] like a Clydesdale. Its tail, however, is different than a normal horse. It stretches out behind the mystical creature, only lightly furred until the end where the hair tufted out like a weird mix of a horse and lion's tail. This was a true unicorn, and if its huge equine cock and balls had anything to tell you, a very horny male unicorn. One that was now charging towards you with lewd intent!";[encounter text]
+	say "     You hear the rustle of leaves and branches as a large equine pushes its way past them and into the open. This is no normal horse though. It is as big as a daft horse. From hoof to shoulder it is almost as tall as a human. A long spiral horn grows proudly out of its forehead, and its long, elegant mane hangs down, unkept and wild. A tuft of hair hangs from its chin, almost like a beard, and its lower legs are [']feathered['] like a Clydesdale. Its tail, however, is different than a normal horse. It stretches out behind the mystical creature, only lightly furred until the end where the hair tufted out like a weird mix of a horse and lion's tail. This was a true unicorn, and if its huge equine cock and balls had anything to tell you, a very horny male unicorn. One that was now charging towards you with lewd intent!"; [encounter text]
 
 Section 2 - Monster Responses
 

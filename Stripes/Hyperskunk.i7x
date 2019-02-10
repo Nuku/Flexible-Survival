@@ -1,6 +1,6 @@
 Version 1 of Hyperskunk by Stripes begins here.
 
-"Adds a Hyperskunk creature to Flexible Survival's Wandering Monsters table with impregchance"
+"Adds a Hyperskunk creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

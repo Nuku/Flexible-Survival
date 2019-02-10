@@ -1,7 +1,7 @@
 Version 2 of Wolftaur by Sarokcat begins here.
 [ Version 2.1.1 - Lindsey tweaks ]
 
-"Adds a Wolftaur to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Wolftaur to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

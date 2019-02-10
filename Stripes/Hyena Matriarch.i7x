@@ -2,7 +2,7 @@ Hyena Matriarch by Stripes begins here.
 [- Originally Authored By: Sarokcat -]
 [Version 2 - Adds Vore Scenes and Ending]
 
-"Adds a matriarch to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a matriarch to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

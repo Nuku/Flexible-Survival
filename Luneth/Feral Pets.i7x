@@ -52,7 +52,7 @@ to say DismissSnips:
 	if player is not in Computer Lab: [regular dismiss]
 		say "     Looking at you for a long moment, he finally relents and burrows under the ground.";
 	else: [dismissing him in the Computer Lab]
-		say "     Snips quickly scuttles back to the home it has made out of one of the cubicles, cleary more than happy to be able to rest.";
+		say "     Snips quickly scuttles back to the home it has made out of one of the cubicles, clearly more than happy to be able to rest.";
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -177,7 +177,7 @@ Instead of resolving Lost Crab:
 		if the player consents:
 			delete food;
 			say "     The crab munches quite happily at the food, blowing a few bubbles in between bites to show its appreciation. Laying down next to the crab, you can't help but laugh a little bit at how happy it looks just nibbling away at its food. Without a second thought you reach out and stroke the smooth shell, causing the crab to stop eating and just stare at you with its abnormally huge eyes. From somewhere further down the beach, you can hear a loud roar echo out. The little crab doesn't hesitate to scuttle closer to you, seeking shelter. Wrapping an arm around the frightened crustacean, you continue to play protector while it finishes its meal. Once it is finished eating you get up to carry on with your exploration of the area, glancing back down at the crab to say goodbye. You are met with those huge eyes that almost look back at you imploringly.";
-			say "     The crab raises its pincers in an act that on a human would almost look like it's asking to be picked up. A little leary of the sharp claws, you lean down scooping up the crab. Thankfully, you had interpreted the action correctly as the crab seems content to now come with you. Deciding that if this little guy... errr girl... whatever it is, is going to join you it needs a name. Thinking to yourself a bit, your eyes immediately are drawn to the sizable claws that its sporting. A name pops into your head: Snips! The name goes with the claws while at the same time is perfect for a cute little crab. Informing your companion of their new name all that you receive in response is a few bubbles blown at you. That decided, you go back to the exploration of the beach.";
+			say "     The crab raises its pincers in an act that on a human would almost look like it's asking to be picked up. A little leery of the sharp claws, you lean down scooping up the crab. Thankfully, you had interpreted the action correctly as the crab seems content to now come with you. Deciding that if this little guy... errr girl... whatever it is, is going to join you it needs a name. Thinking to yourself a bit, your eyes immediately are drawn to the sizable claws that it's sporting. A name pops into your head: Snips! The name goes with the claws while at the same time is perfect for a cute little crab. Informing your companion of their new name all that you receive in response is a few bubbles blown at you. That decided, you go back to the exploration of the beach.";
 			now cute crab is tamed;
 			add "Tamed" to Traits of cute crab;
 			move Snips to Computer Lab;

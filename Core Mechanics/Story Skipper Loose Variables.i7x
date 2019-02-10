@@ -467,8 +467,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is AxelLastBJ;
 		-- "AxelRelationship":
 			now NumberVarValue entry is AxelRelationship;
-		-- "Azari_Corruption":
-			now NumberVarValue entry is Azari_Corruption;
 		-- "AzraelRelationship":
 			now NumberVarValue entry is AzraelRelationship;
 		-- "balloversize":
@@ -3094,8 +3092,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is AT_Sven;
 		-- "autofeatloading":
 			now TruthVarValue entry is autofeatloading;
-		-- "Azari_Met":
-			now TruthVarValue entry is Azari_Met;
 		-- "BastetSexOrTalk":
 			now TruthVarValue entry is BastetSexOrTalk;
 		-- "bcduofightfled":
@@ -4171,8 +4167,6 @@ to VariableNumberLoad:
 					now AxelLastBJ is numberVarValue entry;
 				-- "AxelRelationship":
 					now AxelRelationship is numberVarValue entry;
-				-- "Azari_Corruption":
-					now Azari_Corruption is numberVarValue entry;
 				-- "AzraelRelationship":
 					now AzraelRelationship is numberVarValue entry;
 				-- "balloversize":
@@ -6803,8 +6797,6 @@ to VariableTruthLoad:
 					now AT_Sven is TruthVarValue entry;
 				-- "autofeatloading":
 					now autofeatloading is TruthVarValue entry;
-				-- "Azari_Met":
-					now Azari_Met is TruthVarValue entry;
 				-- "BastetSexOrTalk":
 					now BastetSexOrTalk is TruthVarValue entry;
 				-- "bcduofightfled":

@@ -114,7 +114,7 @@ The sarea of Ambulance Dock is "Hospital".
 
 Instead of resolving a Ambulance Dock:
 	say "     Most of the ambulances are out of the special parking entrance. The only one here has been crashed into the dock. Stepping over to it, you look in the open back. Unsurprisingly, there is a huge, sticky mess in there. Presumably the last patient they picked up jumped the response team for sex as they were returning to the hospital. You consider searching in there for something that could still be usable, but it seems like a risky venture.";
-	say "     [bold type] Do you proceed?[roman type][line break]";
+	say "     [bold type]Do you proceed?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -432,8 +432,7 @@ instead of resolving Missing Powder:
 	say "     You manage to find a small, currently unoccupied patient room. It's unremarkable, save for a small bag with a note laying near it. Picking up the item, you read the note.";
 	say "     [italic type]'Bring this shipment we got from the Warehouse District to the doctor. We figure he'll find it useful. If you screw this up again the only packages you'll be handling will be on the far end of some nameless horror's dick!'[roman type] The note appears to be slightly ruined, partially covered in the dry stain of some dubious fluid...";
 	say "     Checking the bag, it appears to have a couple smaller bags containing a strange, white powder. Very carefully inspecting the contents, it doesn't appear to be anything illicit or infectious, though it does tingle slightly against your touch. You decide to take the bags along with you, for now.";
-	add "nullifying powder" to invent of player;
-	add "nullifying powder" to invent of player;
+	increase carried of nullifying powder by 2;
 	now Missing Powder is resolved;
 
 Section 3 - Helper Dog Event & Pet
@@ -948,7 +947,7 @@ instead of going to Primary Lab while hospquest is 11:		[heading to the main lab
 		say "[posttlscene]";
 	else:									[Dr Matt physically there]
 		say "     You enter the lab and take stock of the enhancement device you've been sent to collect. Dr. Matt does not appear to have noticed you quite yet, buried in more work. You slip the syringe from your pocket and look at it, considering what to do next.";
-		say "     [bold type] Shall you inject Dr Matt?[roman type][line break]";
+		say "     [bold type]Shall you inject Dr Matt?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Inject.";
 		say "     ([link]N[as]n[end link]) - Talk.";
@@ -967,9 +966,7 @@ instead of going to Primary Lab while hospquest is 11:		[heading to the main lab
 			if Susan is visible:
 				waitlinebreak;
 				say "     Susan comes up to your side and holds your left in hers, clutching it tightly. Her loving brown eyes look up at her mate. 'Please be careful, my brave buck.' She leans in and gives your cheek a kiss before releasing you.";
-			increase humanity of player by 5;
-			if humanity of player > 100:
-				now humanity of player is 100;
+			SanBoost 5;
 			increase score by 20;
 			now HP of Doctor Matt is 10;
 			now hospquest is 12;
@@ -1045,7 +1042,7 @@ to say hospranaway:
 			say "     Hiding in a nearby building, you pant to catch your breath. The pink coon thanks you for getting him out, but starts to fret about where he can now go. You decide, on impulse, to tell him about the bunker under the abbey library and give him directions[if HP of Doctor Matt is not 100]. You feel that perhaps you should go talk to Dr Matt before doing anything else[else]. Now without scientific help, you wonder what to do next[end if].";
 	else:
 		say "     Panting for breath, you slam against the main entrance doors and stumble out into the [if remainder after dividing turns by 8 > 4]darkness[else]light[end if]. You continue to run down the steps and across the large parking lot, afraid of pursuit by the hospital's horde. You cut down a side street and eventually come to a stop in a nearby building to catch your breath[if HP of Doctor Matt is not 100]. You feel that perhaps you should go talk to Dr Matt before doing anything else[else]. Now without scientific help, you wonder what to do next[end if].";
-	now HP of doctor mouse is 1;
+	now HP of Doctor Mouse is 1;
 	now locked stairwell is locked;
 	now hospquest is 13;
 
@@ -1099,7 +1096,7 @@ to say hosploss:
 			say "     You don't go far, just to a nearby building to finish recovering and take stock of your situation. The pink coon looks you over with tears in the corners of his eyes, so sad that his savior should be so treated. This gets him to start fretting about where he can now go, as he definitely wants nothing to do with the hospital any more. You decide, on impulse, to tell him about the bunker under the abbey library and give him directions[if HP of Doctor Matt is not 100]. You feel that perhaps you should go talk to Dr Matt before doing anything else[else]. Now without scientific help, you wonder what to do next[end if].";
 	else:
 		say "     You groan, still in some pain from the rough handling as you try to get up. You eventually make it to your feet and pick up your pack. You look back at the hospital and consider your options[if HP of Doctor Matt is not 100]. You feel that perhaps you should go talk to Dr Matt before doing anything else[else]. Now without scientific help, you wonder what to do next[end if].";
-	now HP of doctor mouse is 1;
+	now HP of Doctor Mouse is 1;
 	now locked stairwell is locked;
 	now hospquest is 13;
 	follow the turnpass rule;
@@ -1227,12 +1224,12 @@ to say hospvictory:
 	else:
 		say "     Outside, you go down the steps and walk across the large parking lot quietly but quickly. You try not to draw attention to yourself, but want to flee the area as soon as possible, lest the events upstairs are discovered sooner rather than later. As you walk off down a side street, you [if HP of Doctor Matt is not 100]know that you need to go see Dr Matt right away, wanting to turn over the research material to him before doing anything else[else]wonder what to do next now that you are without scientific help[end if].";
 	wait for any key;
-	now HP of doctor mouse is 2;
+	now HP of Doctor Mouse is 2;
 	now Locked stairwell is locked;
 	now hospquest is 13;
 	increase the score by 50;
 	if HP of Doctor Matt is not 100:
-		now the player is in Primary Lab;
+		now player is in Primary Lab;
 
 
 fightstatus is a number that varies.
@@ -1403,7 +1400,7 @@ instead of going to Trevor Labs Lobby while hospquest > 11:		[Lab unenterable af
 		else:
 			move player to Loading Dock;
 	else:
-		now the player is in Trevor Labs Lobby;
+		now player is in Trevor Labs Lobby;
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -1540,7 +1537,7 @@ the scent of the lava lamp is "[smellingthelavalamp]".
 to say smellingthelavalamp:
 	if lavalamplick is 0:
 		say "     You sniff the improvised lava lamp dildo. It smells strongly of the triceratops woman's arousing scent. You find yourself tempted to lick it.";
-		say "     [bold type] Do you follow your urges?[roman type][line break]";
+		say "     [bold type]Do you follow your urges?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -1560,7 +1557,7 @@ to say smellingthelavalamp:
 instead of using lava lamp:
 	if lavalamplick is 0:
 		say "     You look at the improvised lava lamp dildo. It smells strongly of the triceratops woman's arousing scent. You find yourself tempted to lick it.";
-		say "     [bold type] Do you follow your urges?[roman type][line break]";
+		say "     [bold type]Do you follow your urges?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -1586,7 +1583,7 @@ Instead of conversing the Nermine while nerminepackage is 1 and Nerminetalk > 0:
 	now nerminepackage is 2;
 	now Viking Longboat is active;
 
-[  -- Moved to their dialog sets
+[  - Moved to their dialog sets
 Instead of conversing Rod Mallrat while nerminepackage > 0 and rodhosp is 0:
 	say "     'Those big, spotted hairballs that rolled in here the other day? That was a bad scene, dude. They started to get fresh with some of the girls in the atrium and tried to drag them off. Well, we wouldn't put up with that. Never try to force a mall rat from their mall, man. We don't want none of them goons and their friends in here again.'";
 	now rodhosp is 1;
@@ -1828,9 +1825,9 @@ Section 9 - Endings
 
 when play ends:
 	if hospquest is 13 and humanity of player > 9:			[helped Dr Matt]
-		if HP of doctor mouse is 1:					[Dr Mouse not defeated]
+		if HP of Doctor Mouse is 1:					[Dr Mouse not defeated]
 			say "When the military comes into the city, they are helped by Dr Matt's findings. This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes. Over the years, you do hear rumors of a bizarre mouse scientist working in distant countries, selling nanite-based technology and weapons to foreign governments or guerrilla factions of the infected.";
-		if HP of doctor mouse is 2:					[Dr Mouse defeated]
+		if HP of Doctor Mouse is 2:					[Dr Mouse defeated]
 			say "When the military comes into the city, they are helped by Dr Matt's findings. This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes. You are quietly awarded a medal at a small ceremony for your services. Over the years, the doctor's research helps many, stemming the tide of anarchy across the nation, and even the world.";
 	else if hospquest > 13 and humanity of player > 9:	[helped Dr Mouse]
 		if bodyname of player is not "Wolverine Guard":

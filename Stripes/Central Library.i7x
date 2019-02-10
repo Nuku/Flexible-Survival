@@ -132,6 +132,7 @@ to say libraryentrance:
 				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 99/100 to exit.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	wait for any key;
 	clear the screen and hyperlink list;
 
 

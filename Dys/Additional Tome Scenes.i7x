@@ -1,11 +1,11 @@
 Version 2 of Additional Tome Scenes by Dys begins here.
-[v1 - Adds tentacles and demon fox                                         ]
-[v2 - Breaks up the file into more abstract pieces                         ]
+[v1 - Adds tentacles and demon fox                                          ]
+[v2 - Breaks up the file into more abstract pieces                          ]
 
 "Adds additional content to the Ancient Tome item."
 
-[ TENTACLE CODE -- Dys/Ancient Tentacles.i7x                                ]
-[ DEMON FOX CODE -- Dys/Demon Fox.i7x                                       ]
+[ TENTACLE CODE - Dys/Ancient Tentacles.i7x                                 ]
+[ DEMON FOX CODE - Dys/Demon Fox.i7x                                        ]
 
 [ TomeTimer tracks how long it's been since the player has been             ]
 [ influenced by the tome                                                    ]
@@ -65,13 +65,13 @@ to say TomeSexMenu:
 						say "[TentacleSex]";
 					-- "Summon a demon fox":
 						say "[DemonFoxSummon]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			say "     Change your mind and do something else?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head, banishing the tempting thoughts. You can't afford to give in to it.";
-				WaitLineBreak;
+				wait for any key;
 			else:
 				say "Pick an option.";
 		else:

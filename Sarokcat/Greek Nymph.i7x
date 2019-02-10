@@ -1,7 +1,7 @@
 Version 2 of Greek Nymph by Sarokcat begins here.
 [Version 2 - Victory Sex - Stripes]
 
-"Adds a Greek Nymph to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Greek Nymph to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

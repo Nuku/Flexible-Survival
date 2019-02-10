@@ -1,7 +1,7 @@
 Version 1 of Herm Dolphin by Hellerhound begins here.
 [Version 1.1 - Alt attack tweaked - Stripes]
 
-"Adds a dolphin to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a dolphin to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 when play begins:
 	add {"Hermaphrodite Dolphin"} to infections of furry;
@@ -253,7 +253,7 @@ name	desc	weight	object
 "dolphin milk"	"Thick and nutritious milk from a dolphinoid."	1	dolphin milk
 
 
-dolphin milk is a grab object. It is a part of the player. it is milky. Understand "milk" as dolphin milk. dolphin milk is infectious. The strain of dolphin milk is "Hermaphrodite Dolphin". The purified of dolphin milk is "distilled milk".
+dolphin milk is a grab object. It is a part of the player. It is milky. Understand "milk" as dolphin milk. dolphin milk is infectious. The strain of dolphin milk is "Hermaphrodite Dolphin". The purified of dolphin milk is "distilled milk".
 
 the scent of dolphin milk is "The dolphin milk smells like milk with an odd, fishy scent mixed in.".
 

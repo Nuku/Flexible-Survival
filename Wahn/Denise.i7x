@@ -67,11 +67,11 @@ instead of conversing the Denise:
 					say "[DeniseTalk1]";
 				if nam is "Being a gryphon":
 					say "[DeniseTalk2]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the gryphoness, shaking your head slightly as she gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -171,12 +171,12 @@ Instead of fucking the Denise:
 						say "[DeniseSex5]";
 					if nam is "Let Denise fuck your pussy":
 						say "[DeniseSex6]";
-					WaitLineBreak;
+					wait for any key;
 					now lastfuck of Denise is turns;
 			else if calcnumber is 0:
 				now sextablerun is 1;
 				say "     You step back from the gryphoness, shaking your head slightly as she gives a questioning look.";
-				WaitLineBreak;
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;

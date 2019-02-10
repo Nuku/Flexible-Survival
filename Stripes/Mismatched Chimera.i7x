@@ -1,7 +1,7 @@
 Version 2 of Mismatched Chimera by Stripes begins here.
 [Version 2.4 - Player loss scene tree tweaked]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-"Adds a Mismatched Chimera creature to Flexible Survival's Wandering Monsters table with impreg chance"
+"Adds a Mismatched Chimera creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

@@ -322,7 +322,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 		say "     Entering the library, you see Amy walking towards her bedding with a book in hand, reading intently. Then suddenly, Klauz moves into her way, giving a welcoming growl as he circles the young husky, rubbing his flank against her hips. Amy gives a pleased giggle at his presence and reaches down to pet him, rubbing behind his ears and down over his back, making the large feline purr almost as loud as an idling motor. He luxuriates in her touch, stretching so she can get to the best spots and brushing against her as often as he can. You can see Amy take a deep breath through her nose, giving a soft moan as she does so. Before long, the young husky is crouched down beside the big cat, her book lying forgotten on the ground while she strokes under his chin, her other hand on her crotch, caressing her open and quickly swelling pussy lips.";
 		LineBreak;
 		say "     Having been close to the felinoid and been in the influence of his stimulating musk yourself, you can see where this is going from a mile away.";
-		say "     [bold type] Do you let Amy get her first sexual experience with the large cat, or should you move in and put a stop to this?[roman type][line break]";
+		say "     [bold type]Do you let Amy get her first sexual experience with the large cat, or should you move in and put a stop to this?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Allow this.";
 		say "     ([link]N[as]n[end link]) - Stop it.";
@@ -1049,6 +1049,7 @@ to say AmyFirstFuck:
 		say "     Wanting to distract her from the pain of losing her virginity, you give her another deep kiss, move your hands to cup her top two breasts - and then make a quick downward thrust, only stopping as your crotch touches hers. There is only a short yip from Amy as her hymen is broken by your invading member, the moment of pain drowned out almost instantly by the pleasurable sensations of being kissed, touched and fucked. She starts moaning again as you move inside her, rubbing her inner walls with your hard shaft. Fucking the husky woman feels great, with the warm and tight vagina around your cock and her soft-furred female body in your arms. Being her first time having sex, and your first time in her, it's not too much longer until your coupling culminates in two pretty noisy orgasms. Amy is the first to reach her goal, giving a lust-filled howl as she comes, her femcum making your shaft even wetter than before. After a few more deep thrusts, you follow her to the other side, body shuddering as your balls release burst after burst of cum to splash into the husky's womb.";
 		WaitLineBreak;
 		say "     Satisfied, you stay like that with Amy for a while, listening to her comparing what you just did to the books she read, mostly in terms of '...soo much better than I had imagined, even after reading about Lady Catherine and Lord Malcomb...' Running your hands through her soft belly fur, circling a nipple with your finger, you soon start making out with your canine mate, telling her she doesn't need those books now as there's lots more interesting stuff to do with you in reality.";
+		NPCSexAftermath Amy receives "PussyFuck" from Player;
 		let AmyPregchance be a random number from 1 to 20;
 		if AmyPregchance > 7:
 			now Lust of Amy is 24;
@@ -1060,6 +1061,8 @@ to say AmyFirstFuck:
 		say "     Wanting to distract her from the pain of losing her virginity, you give her another deep kiss, move a hand to cup one of her upper breasts - and then make a quick downward thrust with the dildo, only stopping as the rubber balls at its base touch her crotch. There is only a short yip from Amy as her hymen is broken by the invading member, the moment of pain drowned out almost instantly by the pleasurable sensations of being kissed, touched and fucked. She starts moaning again as you move the toy inside her, rubbing her inner walls with the hard rubber shaft. Fucking the husky woman is a lot of fun, though you ache for some release of your own, so you get on top of her in 69 position. Without any prompting, Amy starts licking you again, driving you to higher and higher arousal. Being her first time having sex, and you already aroused from taking care of Amy, it's not too much longer until your coupling culminates in two pretty noisy orgasms. Amy is the first to reach her goal, giving a lust-filled howl as she comes, her femcum glistening wetly on the rubber shaft of the dildo you're fucking her with. Just moments later, you experience your own climax, the young husky's talented tongue driving you over the edge.";
 		WaitLineBreak;
 		say "     Satisfied, you stay like that with Amy for a while, listening to her comparing what you just did to the books she read, mostly in terms of '...soo much better than I had imagined, even after reading about Lady Catherine and Lord Malcomb...' Running your hands through her soft belly fur, circling a nipple with your finger, you soon start making out with your canine mate, telling her she doesn't need those books now as there's lots more interesting stuff to do with you in reality.";
+		NPCSexAftermath Amy receives "OralPussy" from Player;
+		NPCSexAftermath Player receives "OralPussy" from Amy;
 	else: [neuter]
 		say "     After quickly stripping off your clothes, you let your gaze wander over Amy's naked form, a shiver of excitement going through you as you look at her female curves. The husky knowingly smiles, arching her back a bit to present her four breasts to you, sensually stroking over them. 'I'm waiting for you,' she coos, giving you her best 'come hither' look. Kneeling down beside her, you bring your mouth to hers and kiss her, your hands roaming over her body, then holding her to lower her onto her back. Lying on top of her, you make out with the hot little husky, bringing her arousal she hasn't felt before. Then you move lower, cupping her breasts and playfully sucking on her nipples before going even further down her body and arriving at her pussy. Carefully spreading the husky's sensitive pussy lips, you put your tongue to it and lick, paying close attention to her clit. Amy gasps loudly as she experiences oral sex for the first time.";
 		WaitLineBreak;
@@ -1068,6 +1071,7 @@ to say AmyFirstFuck:
 		say "     Wanting to distract her from the pain of losing her virginity, you give her another deep kiss, move a hand to cup one of her upper breasts - and then make a quick downward thrust with the dildo, only stopping as the rubber balls at its base touch her crotch. There is only a short yip from Amy as her hymen is broken by the invading member, the moment of pain drowned out almost instantly by the pleasurable sensations of being kissed, touched and fucked. She starts moaning again as you move the toy inside her, rubbing her inner walls with the hard rubber shaft. Fucking the husky woman is a lot of fun, though with it being her first time having sex, it's not too much longer until you drive the husky girl to a pretty noisy orgasm. As Amy reaches her goal, she gives a lust-filled howl and comes, her femcum glistening wetly on the rubber shaft of the dildo you're fucking her with.";
 		WaitLineBreak;
 		say "     Satisfied, you stay like that with Amy for a while, listening to her comparing what you just did to the books she read, mostly in terms of '...soo much better than I had imagined, even after reading about Lady Catherine and Lord Malcomb...' Running your hands through her soft belly fur, circling a nipple with your finger, you soon start making out with your canine mate, telling her she doesn't need those books now as there's lots more interesting stuff to do with you in reality.";
+		NPCSexAftermath Amy receives "PussyDildoFuck" from Player;
 
 to say AmySexMenu:
 	LineBreak;
@@ -1154,11 +1158,11 @@ to say AmySexMenu:
 				else if (nam is "Have a threesome with Amy and Fang"):
 					say "[AmySex8]";
 				now lastfuck of Amy is turns;
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the female husky, shaking your head slightly as she gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -1219,7 +1223,7 @@ to say AmySex6: [Xerxes+Amy+Player Threesome]
 	say "     Your human dog sniffs the air, taking in Amy's female scent, and is quite obviously rock hard and almost trembling with the desire to mount her right now. Nevertheless, he obediently waits on all fours beside you, his training overcoming his natural urges even now. Though he does give you an incredibly hard to resist pleading puppy dog look[if lust of Xerxes >= 4] as he says 'Me fuck Amy?'[end if] - amazing that still works, even though he's in the body of a teenage human.";
 	LineBreak;
 	say "     So - do you allow Xerxes to mount Amy, or take that position yourself?";
-	say "     [bold type] Who shall fuck her?[roman type][line break]";
+	say "     [bold type]Who shall fuck her?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You.";
 	say "     ([link]N[as]n[end link]) - Xerxes.";
@@ -1324,7 +1328,7 @@ to say AmySex8: [Fang+Amy+Player Threesome]
 		say "     Getting blown as you watch Fang mounting your anthro husky housemate, the need to cum quickly rises inside you and you have to grab hold of Amy's head to stop from losing it right then and there. Cock resting for a moment in her throat, you take a deep breath, then slowly pull out and scooch back. Now having her mouth free, Amy gives lustful pants and yips as Fang drives his shaft into her. Watching the black wolf mate her, you walk around them slowly taking in the full glory of the powerful wolf on top of his more human-like partner.";
 		LineBreak;
 		say "     What do you want to do now?";
-		say "     [bold type] Get blown by Amy and feed her your load, or fuck and come in Fang's ass?[roman type][line break]";
+		say "     [bold type]Get blown by Amy and feed her your load, or fuck and come in Fang's ass?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Get blown by Amy.";
 		say "     ([link]N[as]n[end link]) - Fuck and come in Fang's ass.";

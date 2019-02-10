@@ -47,6 +47,8 @@ Instead of Resolving a Strange Fox:
 		say "Instantly your stomach starts to growl as you notice the big furry male chewing on his meal while looking in your direction. You become so hungry all of a sudden that you almost feel like begging for a third of the BLT, but before you can the fox-man is chuckling and then reaching behind his back for something, drawing your attention away from the food. 'Here you are, my friend.' In his hand you notice some food and blinking you find yourself wondering why the other would be offering something so valuable, especially given that he could use it himself. 'Because it's mine to give as I like and you've amused me enough that I feel like offering this small tidbit to you. Also, I technically don't need to eat so doing this is just a leisure pursuit of mine to indulge in as I like. I assure you it's quite safe, too. Scout's honor,' he adds, putting on a serious face and holding up his paw to make the sign. Again you find yourself alert as you wonder how the other could have known you were thinking that. A hungry growl of your stomach silences such thoughts though as you nod at the other before taking the food graciously.";
 		WaitLineBreak;
 		say "Kitsune smile cheerily at you before walking away down the street, still munching on his BLT while his numerous tails bounce up and down behind the nearly naked male's backside. You shake your head while smiling somewhat respectfully to the generous fox-man. Turning to look at the restaurant you find yourself lifting an eyebrow in confusion as you notice that all the lights in the building are off. Turning to look at the disappearing vulpine you idly wonder how the other managed to cook anything if the power to the restaurant was off, right before your stomach growls again. Shrugging, you realize that it doesn't matter.";
+		LineBreak;
+		say "[bold type]You gain 2 food![roman type][line break]";
 		increase carried of food by 2;
 		if hunger of player < 75:
 			increase hunger of player by 25;
@@ -85,8 +87,12 @@ Instead of Resolving a Strange Fox:
 		else:
 			say "Turning to run as fast as you can you accidentally manage to slip on your own feet! Cursing your own klutziness you duck your head just in time as you see the figure of Kitsune shooting past over the top of your head. However, you don't have time to worry about this as several seconds later you are surrounded by a myriad of panting and drooling forms. The sickly stench of musk and pheromones sours the air around you as your nose inhales everything from unwashed bodies to lust drunk males to slightly pregnant females to even a few other assorted scents you don't want to place. Shivering when hot breath oozes too close to your neck for your comfort you send out a prayer for help, as though hoping something will come to save you. When a large form sails above you and then crashes into the mix of mutants behind you find yourself whimpering gratefully up at the sky. Who says that wishes can't come true even in this hellhole? The sounds of fighting take precedence in your ears and lower your head to look you spy a silver feral fox the size of a small pony ripping the mutants behind your limb from limb. Not knowing where this beautiful creature has come from all you can do is stare mystified as it gracefully rips your would-be rapists apart piece by bloody piece.";
 			say "Not really understanding why or how this majestic creature has come to your rescue you don't have to wonder long as once the last mutant is either dead or running for its life the silver vulpine comes over and then licks you onto the face. Piercing azure eyes gaze at you and the only thing you can whisper is [italic type]Kitsune[roman type] as you stare back at the other. The vulpine winks your way and then curls its head behind its back to pull something from its nine flowing tails. Again you find yourself somewhat bewildered when the quadruped fox comes up with a bottle of water and a medkit, both hanging limply from between its powerful, but bloodstained jaws. Setting the items down Kitsune licks you onto the face and then pads his way down the road like nothing even happened. The blood and other substances that littered the creature's fur flowing down like water to leave Kitsune's shimmering fur luxurious once again.";
-			increase carried of medkit by 1;
+			LineBreak;
+			say "[bold type]You gain 1 water bottle![roman type][line break]";
 			increase carried of water bottle by 1;
+			LineBreak;
+			say "[bold type]You gain 1 medkit![roman type][line break]";
+			increase carried of medkit by 1;
 		now KitsuneEventStage is 5;
 	else if KitsuneEventStage is 5:
 		say "You find yourself somewhat bewildered when you see Kitsune standing by the side of a building looking for all the world as though he's annoyed with something. Looking both left and right to make sure that no mutants are coming, you head on over to your [italic type]friend[roman type] to see if the vulpine is alright. 'Oh, hello...' Kitsune doesn't seem to be his normal chipper self as he raises his head to look at you with his glowing azure eyes. 'Sorry, but I don't feel like talking right now. Nothing personal, you see. It's just that I'm in a bit of a bind here and need to be by myself in order to think.' You try and offer up some form of an offer to help, but Kitsune has his head down and his ears flat atop his head, giving you the impression that you've just been ignored.";
@@ -131,6 +137,8 @@ instead of resolving a strange bell:
 		say "You come across a star bell glowing dimly along the bushes of the ground. A feeling of both elation and wonder comes across you as you kneel next to the softly tinkling item. Shall you take it?";
 		if player consents:
 			say "You pick up the unusual bell, tucking it away in your pack.";
+			LineBreak;
+			say "[bold type]You gain a star bell![roman type][line break]";
 			increase carried of star bell by 1;
 			now Strange Bell is resolved;
 			now Strange Fox is active;

@@ -177,7 +177,7 @@ A person has a number called Cunt width.
 A person has a number called armor.
 A person has a number called capacity.
 A person has a number called libido.
-A person has a text called MainInfection. MainInfection is usually "Human". [just to have something valid in this, the variable should be overwritten for every npc]
+A person has a text called MainInfection. MainInfection is usually "Human". [just to have something valid in this, the variable should be overwritten for every NPC]
 A person has a text called linkaction.
 A person has a text called FirstAnalPartner.
 A person has a text called FirstVaginalPartner.
@@ -458,19 +458,19 @@ Definition: A person (called x) is internal:
 	if cockname of x is listed in infections of internallist and internalbypass is false, yes;
 	no;
 
-a person can be knotted. a person is usually not knotted.
+A person can be knotted. A person is usually not knotted.
 
 Definition: A person (called x) is knotted:
 	if cockname of player is listed in infections of knotlist, yes;
 	no;
 
-a person can be barbed. a person is usually not barbed.
+A person can be barbed. A person is usually not barbed.
 
 Definition: A person (called x) is barbed:
 	if cockname of player is listed in infections of BarbedCocklist, yes;
 	no;
 
-a person can be flared. a person is usually not flared.
+A person can be flared. A person is usually not flared.
 
 Definition: A person (called x) is flared:
 	if cockname of player is listed in infections of Bluntlist, yes;
@@ -846,7 +846,7 @@ water bottle is a grab object. It is a part of the player. The trade of water bo
 Does the player mean using the dirty water: it is unlikely.
 Does the player mean stashing the dirty water: it is unlikely.
 Does the player mean retrieving the dirty water: it is unlikely.
-dog milk is a grab object. It is a part of the player. it is milky.
+dog milk is a grab object. It is a part of the player. It is milky.
 soda is a grab object. It is a part of the player.
 chips is a grab object. It is a part of the player.
 glob of goo is a grab object. It is a part of the player. glob of Goo is infectious. The strain of glob of goo is "Goo Girl".
@@ -856,7 +856,7 @@ understand "knife" as pocketknife.
 chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary. the objsize of chair is 4.
 understand "seat" as chair.
 gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon". The trade of Gryphon Milk is "distilled milk". gryphon milk is milky.
-distilled milk is a grab object. It is a part of the player. it is not milky.
+distilled milk is a grab object. It is a part of the player. It is not milky.
 
 
 The invent of the player is { "journal" }.
@@ -4679,7 +4679,7 @@ Include Hitching Post by SgtPepper234.
 Include Hospital by Stripes.
 Include Hyena Hideout by Stripes.
 Include Junkyard and Warehouse by Wahn.
-Include Kitsune Hide Away by Shadowwolf94.
+Include Kitsune Hideaway by Shadowwolf94.
 Include Mall Community Center by Wahn.
 Include Mall Residents by Rikaeus.
 Include Medical Checkups by Stripes.
@@ -5362,9 +5362,9 @@ to genderlockmenu:
 		say "(4) [link]Female[as]4[end link] - You reject all male mutations.";
 		say "[line break]";
 		say "[bold type]Hybrid:[roman type][line break]";
-		say "(5) [link]Shemale[as]5[end link] - You will trend to the configuration of a herm -- however lacking female genitalia.";
-		say "(6) [link]Cuntboy[as]6[end link] - You will trend to the configuration of a female -- however lacking any breasts.";
-		say "(7) [link]Male Herm[as]7[end link] - You will trend to the configuration of a herm -- however lacking any breasts.";
+		say "(5) [link]Shemale[as]5[end link] - You will trend to the configuration of a herm - however lacking female genitalia.";
+		say "(6) [link]Cuntboy[as]6[end link] - You will trend to the configuration of a female - however lacking any breasts.";
+		say "(7) [link]Male Herm[as]7[end link] - You will trend to the configuration of a herm - however lacking any breasts.";
 		say "(8) [link]Herm[as]8[end link] - You take on the configuration of a full herm.";
 		say "[line break]";
 		say "[bold type]Loose:[roman type][line break]";
@@ -5443,7 +5443,7 @@ To startgenderlockshift:
 	now glshiftstart is 1;
 	if gsgl < 2 and glstart is 1:
 		say "You chose to start as your gender lock option, but have not selected one. Would you like to do so now?";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Choose a gender lock.";
 		say "     ([link]N[as]n[end link]) - Start game without lock.";
 		if player consents:

@@ -11,22 +11,29 @@ Bunker Shower Knob is an object.
 It is in the Communal Shower.
 It is fixed in place.
 Understand "knob" as Bunker Shower Knob.
-the description of Bunker Shower Knob is  "[BunkerShowerKnobDesc]".
-
-to say BunkerShowerKnoblinkaction:
-	say "Possible Actions: [link]use[as]use bunker shower knob[end link], [link]smell[as]smell bunker shower knob[end link][line break]";
-
+the description of Bunker Shower Knob is "[BunkerShowerKnobDesc]".
 
 to say BunkerShowerKnobScent:
 	say "     Other than it having a slightly metallic scent, you can also pick up a hint of stale water.";
 
 to say BunkerShowerKnobDesc:
-	say "     A simple metal shower knob that can be pulled outward to [link]turn the shower on[as]use bunker shower knob[end link]. In the center of the valve, you can see a piece of plastic that has swirls of blue and red, showing which direction to turn the knob to get your desired temperature.";
+	say "     A simple metal shower knob that can be pulled outward to [link]shower yourself[as]shower yourself[end link]. In the center of the valve, you can see a piece of plastic that has swirls of blue and red, showing which direction to turn the knob to get your desired temperature.";
 
 instead of sniffing the Bunker Shower Knob:
 	say "[BunkerShowerKnobScent]";
 
-instead of using the Bunker Shower Knob:
+Showering is an action applying to nothing.
+
+understand "shower yourself" as Showering.
+understand "shower myself" as Showering.
+understand "shower off" as Showering.
+understand "shower me" as Showering.
+
+Check Showering:
+	if Bunker Shower Knob is not visible, say "Now how do you want to shower here?" instead;
+	if player is in Communal Shower and findwires is not 2 and fixedgens is not 2, say "No water is coming from the shower heads. Seems like the power for the pumps isn't on." instead;
+
+Carry out Showering:
 	if Eric is in bunker and (HP of Eric > 41 and HP of Eric < 99) and (TimekeepingVar is 0 or TimekeepingVar is 1 or TimekeepingVar is -7 or TimekeepingVar is -8) and Energy of Eric < 49 and a random chance of 2 in 4 succeeds: [Eric present, orc cocked and non virgin, midnight or early morning, not driven away before, 33% chance]
 		say "[EricShower_OrcCock]";
 	else: [default shower scene]

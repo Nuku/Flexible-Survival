@@ -1,9 +1,10 @@
 Version 3 of Serenity by Kurainyx begins here.
-[Version 1 - Created Serenity]
-[Version 2 - Added two new sex scenes, one variation for end of sex scenes, and a hint to pacify Serenity after the first encounter]
-[Version 3 - Added a series of non-fatal vore scenes]
-[Version 3.1 - Added an intro variant to vore bound state scene]
-"Adds a female naga npc to Flexible Survival"
+[ Version 1.0 - Created Serenity - Kurainyx ]
+[ Version 2.0 - Added two new sex scenes, one variation for end of sex scenes, and a hint to pacify Serenity after the first encounter - Kurainyx ]
+[ Version 3.0 - Added a series of non-fatal vore scenes - Kurainyx ]
+[ Version 3.1 - Added an intro variant to vore bound state scene - Kurainyx ]
+
+"Adds a female naga NPC to Flexible Survival"
 
 [  HP of Serenity                                            ]
 [  0: Never met                                              ]
@@ -205,7 +206,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "Lockbox"	"     It's a simple lockbox, and on its cover is a picture of a silver heart with a snake coiled around it. You don't have the key to unlock it."	5	Lockbox
 
-Lockbox is a grab object. it is part of the player. It is not temporary.
+Lockbox is a grab object. It is part of the player. It is not temporary.
 
 instead of using Lockbox:
 	say "     You try and pry the lockbox open, but it refuses to open.";
@@ -421,7 +422,7 @@ to say SerenitySexOutro:		[Outros after sex scene]
 to say SerenityFeeds:		[Vore Scenes]
 	if SerenityHunger is 0:
 		say "     Serenity's eyes light up with delight when you tell her that it's alright for her to eat you, but she quickly regains her composure and asks with concern, 'I'm so glad to hear that, but are you absolutely sure? You are under no obligation to do this for me.' You tell her that you want to help with her urges and that you trust her to keep things safe. This puts a wide smile on the snake's face as she slithers forward and gives you a hug with her arms. 'Thank you[if player is not defaultnamed], [name of player][end if]. You really do spoil me, and I'll do my best to take care of you. Shall we begin?' With your serpentine friend's help, you shed all of your gear until you are standing naked before the naga. You shiver slightly from the cool air hitting your exposed body, but Serenity swiftly fixes that by drawing you into another hug with her arms, sharing her warmth with you.";
-		say "     Your scaly friend then moves her head to your eye level, a soft smile upon her face, and she begins nuzzling you, her smooth scales sensually rubbing your face. During her ministrations, her tongue also occasionally flicks out, tickling your cheeks and giving her a small taste before the main course. 'No coils or hypnosis, at least for this time,' she explains while she continues to caress you. 'I want your mind to be clear for this. If at any point you feel that you are in danger, just shout, and I will stop everything.' Any trepidation that you have about being a soon to be meal is swept away by her loving touch and reassuring words, and you soon find yourself nuzzling the snake right back. Eventually, the cuddling stops when Serenity pulls her head back and gives you a meaningful stare. Knowing what she's silently asking, you nod, putting another smile on the naga's face as she whispers one more 'Thank you'.";
+		say "     Your scaly friend then moves her head to your eye level, a soft smile upon her face, and she begins nuzzling you, her smooth scales sensually rubbing your face. During her ministrations, her tongue also occasionally flicks out, tickling your cheeks and giving her a small taste before the main course. 'No coils or hypnosis, at least for this time,' she explains while she continues to caress you. 'I want your mind to be clear for this. If at any point you feel that you are in danger, just shout, and I will stop everything.' Any trepidation that you have about being a soon-to-be meal is swept away by her loving touch and reassuring words, and you soon find yourself nuzzling the snake right back. Eventually, the cuddling stops when Serenity pulls her head back and gives you a meaningful stare. Knowing what she's silently asking, you nod, putting another smile on the naga's face as she whispers one more 'Thank you'.";
 		WaitLineBreak;
 		say "     Serenity's jaw makes a series of clicking sounds as it unhinges, and her mouth moves right above you. Looking up, you can see the wet tunnel that you will soon be going through as the hungry reptile slowly lowers her maw toward you. Her fangs retract when your head slips inside of her, her tongue teasingly flicking across your face as you're surrounded by undulating, pink walls. Another series of clicks is heard as the predator widens her mouth, allowing her to take in your shoulders and arms with little difficulty. Suddenly, you are lurched upwards, your lower half now pointing straight up so that gravity can assist your descent into the belly of the beast. Inch by inch, you disappear into the ravenous serpent's maw and through her throat, the pulsing walls squeezing you and carrying you deeper. The light grows dimmer as you travel deeper, and when the last of you finally slips past the naga's lips, you feel one last lick on your legs before darkness takes over.";
 		say "     Unable to see anything and with your limbs barely able to push back against the encompassing powerful muscles, you cannot do much except let the naga's body continue to drag you into the abyss. All around you, constant squelches and gurgles come from your fleshy surroundings, occasionally interspersed with Serenity's faint moans of satisfaction. Your journey eventually comes to a halt, but you barely notice it as the snake's insides continues to shift and turn, kneading every inch of your body in an oddly soothing manner. Despite the cramped environment, it is actually quite comfortable inside of the serpent's stomach, and it's made all the better when you feel a section of the walls gently press into your back, which you soon realize is coming from Serenity rubbing the bulge that you are making in her body.";

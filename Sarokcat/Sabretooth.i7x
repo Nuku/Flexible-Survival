@@ -1,7 +1,7 @@
 Version 1 of Sabretooth by Sarokcat begins here.
 [ Version 1.1 - Added an M/M player loss scene ]
 
-"Adds a Sabretooth to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Sabretooth to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 

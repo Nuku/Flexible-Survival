@@ -1,5 +1,5 @@
 Version 1 of Felix by Wahn begins here.
-[Version 1: Initial Setup, quest, two npcs]
+[Version 1: Initial Setup, quest, two NPCs]
 
 "Adds an NPC named Felix to the Flexible Survival game"
 

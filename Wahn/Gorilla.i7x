@@ -1,7 +1,7 @@
 Version 1 of Gorilla by Wahn begins here.
 [ Version 1 - Now on the College Campus]
 
-"Adds a team of football gorillas to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a team of football gorillas to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses & Infection
 

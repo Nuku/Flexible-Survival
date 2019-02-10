@@ -1,5 +1,5 @@
 Version 3 of Spidertaur Male by Wahn begins here.
-[Version 3 - Aelias npc and lair]
+[Version 3 - Aelias NPC and lair]
 
 "Adds a Spidertaur to Flexible Survival's Wandering Monsters table, with impregnation chance."
 
@@ -97,7 +97,7 @@ to say SpidertaurSlingSex:
 		LineBreak;
 		say "     'You'll get off when I fuck you. Do you want me inside you?' he says, putting the tip of his shaft against your pucker and rubbing it up and down over it, then teasingly pressing against it. His touch makes you moan in answer, calling on him to take you and fuck you deeply, which puts a very satisfied grin on the spidertaur's face. He immediately takes hold of your legs and thrusts forward, sinking his manhood deep into your tight hole. As he bottoms out, his cock resting deep inside your ass, he leans forward and makes out with you to give you some time to get used to having him inside you. After a while, he straightens his humanoid upper body again, giving you a smile as he starts to thrust in and out, fucking you with deep strokes.";
 		WaitLineBreak;
-		say "     Pulling out unttil only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. Soon this stimulation overwhelms your ability to hold back and as he bottoms out inside you again, your own cock starts to throb as spurt after spurt of cum jet from its tip, splattering on your own chest.";
+		say "     Pulling out until only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. Soon this stimulation overwhelms your ability to hold back and as he bottoms out inside you again, your own cock starts to throb as spurt after spurt of cum jet from its tip, splattering on your own chest.";
 		say "     The spidertaur stops for a moment, leaning forward to put his face close to yours. 'Admit it - you love to get fucked by me.' As he thrusts forward again in just that moment, you can only moan in pleasure as an answer. He proceeds to take up some of your cum from your chest with his fingers, then licks it off. 'Mmmmh, you're just an amazing catch,' he says, leaning forward to kiss you deeply, allowing you to taste your own cum on his lips.";
 		say "     Getting back to fucking you hot and hard, it's not too much longer until he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum deep inside your ass.[mimpregchance]";
 	else:

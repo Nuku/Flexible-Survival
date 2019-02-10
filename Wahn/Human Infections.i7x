@@ -75,7 +75,7 @@ When Play begins:
 	now attack entry is "[one of]The hermaphrodite human slaps you.[or]You get hit by a balled fist.[at random]";
 	now defeated entry is " ";
 	now victory entry is " ";
-	now desc entry is "     This isn't supposed to be an actual infection, just a standin - please report how you saw this.";
+	now desc entry is "     This isn't supposed to be an actual infection, just a stand-in - please report how you saw this.";
 	now face entry is "completely human";  [ Face description, format as "Your face is (your text)."]
 	now body entry is "human-looking";     [ Body Description, format as "Your Body is (your text)."]
 	now skin entry is "human";             [ format as "You have (your text) skin."]

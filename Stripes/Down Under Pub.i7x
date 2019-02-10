@@ -206,7 +206,7 @@ to say roopubsex1:
 
 to say roopubsex2:
 	say "     The slender, girly joey rubs his body against yours, letting his paws wander down to your cock and stroking it, eagerness in his eyes as he looks over your [cock size desc of player] [cock of player] penis. You stroke his cute body and soft fur as you consider what you'd like to do with this eager young guy. He licks his lips and moans softly as you give his rear a squeeze.";
-	say "     [bold type] He seems ready to suck you off, though you could probably bend him over the table and fuck him as well, if you'd prefer.[roman type][line break]";
+	say "     [bold type]He seems ready to suck you off, though you could probably bend him over the table and fuck him as well, if you'd prefer.[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Oral.";
 	say "     ([link]N[as]n[end link]) - Anal.";
@@ -218,7 +218,7 @@ to say roopubsex2:
 
 to say roopubsex3:
 	say "     The big-breasted jill in your arms giggles sweetly and takes your cock in her paws. Rubbing at your stiff meat, she presses her ample bosom to your chest.";
-	say "     [bold type] Her breasts, you feel, would give a fine titty-fuck, though a ride in your lap may be more what you're in the mood for this time.[roman type][line break]";
+	say "     [bold type]Her breasts, you feel, would give a fine titty-fuck, though a ride in your lap may be more what you're in the mood for this time.[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Tit-fuck.";
 	say "     ([link]N[as]n[end link]) - Sex.";

@@ -1,7 +1,7 @@
 Version 2 of Wolverine Guard by Stripes begins here.
 [Version 2.1.1 - Player loss fixed]
 
-"Adds a Wolverine Guard creature to Flexible Survival's Wandering Monsters table, with Impreg chance"
+"Adds a Wolverine Guard creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 

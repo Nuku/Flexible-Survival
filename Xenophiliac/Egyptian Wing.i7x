@@ -44,7 +44,7 @@ an everyturn rule:
 		now Finding Winged Orb is active;
 
 instead of resolving Finding Winged Orb:
-	say "     Walking through what used to be the city park, you're struck by how much the park has changed. The trees haven't been trimmed in forever, grass is now overrunning the sidewalks; the park is not in a good state. An unfamiliar gling catches your eye as you contemplate the park, however, glimmering out from a nearby tree. Carefully looking around, you check to make sure no one is nearby; seeing no creatures present, you carefully approach the tree, wondering what could be shining so brightly.";
+	say "     Walking through what used to be the city park, you're struck by how much the park has changed. The trees haven't been trimmed in forever, grass is now overrunning the sidewalks; the park is not in a good state. An unfamiliar glint catches your eye as you contemplate the park, however, glimmering out from a nearby tree. Carefully looking around, you check to make sure no one is nearby; seeing no creatures present, you carefully approach the tree, wondering what could be shining so brightly.";
 	say "     You eventually come to the tree that's so brightly shining, still on the lookout for any sex-crazed creatures. Finally glimpsing the object stuck in the tree, surprise soon overwhelms you at what lies buried within it. An elegant, ornate emblem protrudes from the majestic tree, somehow partially buried in the trunk. From the glances you can see, it looks as if the emblem resembles the carving on Amuran's sarcophagus; a circle with two majestic wings protruding from its sides. This has to be one of Amuran's sigils, somehow buried partially within the tree. Taking a large breath and steeling yourself for what you have to do, you grab onto a thick branch and begin to climb the tree; the artifact is only a few feet up.";
 	let bonus be ((dexterity of player minus 10) divided by 2);
 	let dice be ( a random number from 1 to 20);
@@ -69,7 +69,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Egypt Wing Entrance	"Egypt Wing Entrance"
 
-Egypt Wing Entrance is a room. it is fasttravel. it is private.
+Egypt Wing Entrance is a room. It is fasttravel. It is private.
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -490,7 +490,7 @@ instead of fucking Amuran:
 	else if AmuranAwoken < 5:
 		say "     Considering the tasks that Amuran is faced with, it's probably not the best time to broach the idea of sex to Amuran. Maybe once he's completed his divine duties you could propose it to him.";
 	else if AmuranAwoken is 5:
-		say "     Finally deciding to proposition Amuran for some [']extracurricular['] fun, you put a sensuous swagger into your step as you approach the sitting insect-man. Noticing you immediately, Amuran cocks his bug-eyed head at you; you're unsure if he's picked up on your subtle hint. Rising to his impressive stature as you slowly walk up to him, he patiently waits for you to speak, as he usually does. Curling your finger in a [']come here['] gesture, Amuran looks all the more confused, but lowers himself down to you, placing his chitinous head next to yours. Whispering into (presumably) ears, you quietly ask him if he would like to engage in [']A favored mortal pasttime['].";
+		say "     Finally deciding to proposition Amuran for some [']extracurricular['] fun, you put a sensuous swagger into your step as you approach the sitting insect-man. Noticing you immediately, Amuran cocks his bug-eyed head at you; you're unsure if he's picked up on your subtle hint. Rising to his impressive stature as you slowly walk up to him, he patiently waits for you to speak, as he usually does. Curling your finger in a [']come here['] gesture, Amuran looks all the more confused, but lowers himself down to you, placing his chitinous head next to yours. Whispering into (presumably) ears, you quietly ask him if he would like to engage in [']A favored mortal pastime['].";
 		say "     The celestial insect-man stands still for a moment, a quizzical look on his face. Rising back up, you're unsure of whether or not Amuran understands you. Moments later, however, a [']smile['] crosses his face, just as his form shudders as he begins to chuckle quietly.";
 		say "     'So, the young one is not untouched by the plague that ravishes this city; I was beginning to think you were all but immune.' Still standing there, you feel somewhat embarrassed by Amuran's humor; that is, until his plated arms engulf you in a strong hug. Lifting you up off your feet, you once again find your face equal with his, his mouth close to yours.";
 		WaitLineBreak;
@@ -574,7 +574,7 @@ to say FinalQuestConclusion:
 	WaitLineBreak;
 	say "     All and all, the entire ordeal only lasted roughly 15 seconds, by your count. Your eyes slowly readjust to the light within the sanctum, and taking a quick stock of the room, everything seems to be alright. Amuran slowly rises to his feet, stretching out languidly in the warm, sunny air; he also releases his wings, the massive appendages waving haphazardly. Finally, he finishes his happy, contented stretching, leisurely making his way out of the pool, dripping water onto the floor.";
 	say "     Approaching you, it's easy to tell that he's rather happy, if the display a moment ago wasn't enough. Again giving you that odd, bugman [']smile['], he begins to speak, the tone of his voice conveying the pleased state he's in.";
-	say "     'My lord Horus is extremely pleased with this turn of events. His ankh has been returned, once lost for millennia. Having finished my task, I have been told that my abilities will not be needed for many years; likely millennia. I believe I wish to use this time to explore your mortal world; it's been many an aeon since I've had the pleasure. Once again, young one, I remain indebted to you; should you need assistance, do not hesitate to request it.' It seems that Amuran, having finished his task, is going to remain here for (definitely) the forseeable future.";
+	say "     'My lord Horus is extremely pleased with this turn of events. His ankh has been returned, once lost for millennia. Having finished my task, I have been told that my abilities will not be needed for many years; likely millennia. I believe I wish to use this time to explore your mortal world; it's been many an aeon since I've had the pleasure. Once again, young one, I remain indebted to you; should you need assistance, do not hesitate to request it.' It seems that Amuran, having finished his task, is going to remain here for (definitely) the foreseeable future.";
 	now AmuranAwoken is 5;
 
 to say AmuranSexMenu:

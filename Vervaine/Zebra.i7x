@@ -3,7 +3,7 @@ Version 5 of Zebra by Vervaine begins here.
 [ Version 4 - Submissive and Dominant scenes and endings]
 [ Version 5 - Thorough overhaul and expansion by Vervaine]
 
-"Adds a Zebra to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Zebra to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 

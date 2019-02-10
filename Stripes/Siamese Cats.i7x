@@ -205,7 +205,7 @@ to say losetosiamesecat:
 
 
 to say beatthesiamesecat:
-	say "     As you manage to finish off your [siamesegender] opponent, the other one grows woozy and collapses as well. ";
+	say "     As you manage to finish off your [siamesegender] opponent, the other one grows woozy and collapses as well.";
 	if (libido of player > 29 or "Dominant" is listed in feats of player) and player is not neuter:
 		say "     They mewl softly, beaten now. Looking them over, you consider playing with one of them.";
 		say "     [bold type]Do you want to have some fun with one of the Siamese twins?[roman type][line break]";
@@ -214,44 +214,51 @@ to say beatthesiamesecat:
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			decrease libido of player by 10;
-			say "[line break]     Deciding to have some quick fun, you start to pull off your clothes.";
-			say "     [bold type] Now which one would you like, the male or the female?[roman type][line break]";
+			LineBreak;
+			say "     Deciding to have some quick fun, you start to pull off your clothes.";
+			say "     [bold type]Now which one would you like, the male or the female?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Male.";
 			say "     ([link]N[as]n[end link]) - Female.";
 			if player consents:								[CHOSE MALE KITTY]
+				LineBreak;
 				if player is purefemale:		[FEMALE PLAYER]
-					say "[line break][siamsex1]";
+					say "[siamsex1]";
 				else if player is puremale:	[MALE PLAYER]
-					say "[line break][siamsex2]";
+					say "[siamsex2]";
 				else:	[HERM PLAYER]
-					say "[line break]     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?[line break]";
+					say "     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?[line break]";
 					say "     [bold type]Would you like to ride the kitty's cock or fill that sweet ass of his?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Get fucked.";
 					say "     ([link]N[as]n[end link]) - Fuck the kitty.";
 					if player consents:
-						say "[line break][siamsex1]";
+						LineBreak;
+						say "[siamsex1]";
 					else:
-						say "[line break][siamsex2]";
+						LineBreak;
+						say "[siamsex2]";
 			else:										[CHOSE FEMALE KITTY]
 				LineBreak;
 				if player is purefemale:		[FEMALE PLAYER]
-					say "[line break][siamsex3]";
+					say "[siamsex3]";
 				else if player is puremale:	[MALE PLAYER]
-					say "[line break][siamsex4]";
+					say "[siamsex4]";
 				else:	[HERM PLAYER]
-					say "[line break]     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?";
+					say "     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?";
 					say "     [bold type]Would you like to fill the kitty's hot pussy or have her eat you out?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Fuck the kitty.";
 					say "     ([link]N[as]n[end link]) - Oral.";
 					if player consents:
-						say "[line break][siamsex4]";
+						LineBreak;
+						say "[siamsex4]";
 					else:
-						say "[line break][siamsex3]";
+						LineBreak;
+						say "[siamsex3]";
 		else:
-			say "[line break]     You decide it would probably be for the best if you didn't play with the kitties and leave them there.";
+			LineBreak;
+			say "     You decide it would probably be for the best if you didn't play with the kitties and leave them there.";
 	else:
 		say "     You turn away to depart, leaving the kitties there.";
 

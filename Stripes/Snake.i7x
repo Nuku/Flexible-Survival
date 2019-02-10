@@ -106,7 +106,7 @@ to say losetosnake:
 		increase hunger of player by 10;
 	else if player is not neuter:
 		if breast size of player > 0: [Breast-particular Prelude]
-			say "     Forked tongue meeting with your [if HP of player > 0]offered[else]vulnerable[end if], [bodydesc of player] form, its inquisitive caress teases one of your exposed, [breast size desc of player] breasts. Satisfied with what you might offer it, the serpent [if scalevalue of player > 4]partially [end if]entwines itself around you, [if scalevalue of player < 4]its heavy weight keeping you pinned to dissuade protest[else]it ensuring that you can't struggle against its endeavors[end if] -- not that you [if HP of player > 0]are of any immediate desire to do so[else]could even if you wanted to, given the venom's effect[end if] -- before its scaled lips meet your supple teat.";
+			say "     Forked tongue meeting with your [if HP of player > 0]offered[else]vulnerable[end if], [bodydesc of player] form, its inquisitive caress teases one of your exposed, [breast size desc of player] breasts. Satisfied with what you might offer it, the serpent [if scalevalue of player > 4]partially [end if]entwines itself around you, [if scalevalue of player < 4]its heavy weight keeping you pinned to dissuade protest[else]it ensuring that you can't struggle against its endeavors[end if] - not that you [if HP of player > 0]are of any immediate desire to do so[else]could even if you wanted to, given the venom's effect[end if] - before its scaled lips meet your supple teat.";
 			say "     Tainted body feeding the snake as it forcibly nurses from you, its grip on you tightens, inch by inch, as though it thinks it can do this to squeeze every last drop of your cream from you. Once finished with the first, he moves onto the second[if breasts of player > 2], repeating this ritual for all the others[end if], until there is naught you might offer it.";
 			if (breast size of player / 2) * breasts of player > 10:
 				say "     Given the sheer, substantive measure of milk you provision it with, the bloated creature eventually slumps off you, no doubt a fair bit dizzy with its contents. Having reaped its share, it slowly slithers off into the distance, content and off to find some rest. [if HP of player > 0]You eventually recover from the whole ordeal[else]The venom eventually wears off[end if], allowing you to get back to your feet and go about your business freely, a fair bit aroused and addled by the whole affair.";
@@ -116,12 +116,12 @@ to say losetosnake:
 				say "     Satisfied thought it might be from this particular offering, it doesn't seem quite finished with its[if HP of player > 0] willing[end if] victim just yet. Head shifting around you, its coils following suit, before you're met with that same forked tongue against your";
 				snakecoresex;
 		else:
-			say "     Eyeing its [if HP of player > 0]potential offering[else]new victim[end if] up for a moment, the serpent [if scalevalue of player > 4]partially [end if]wraps around you, [if scalevalue of player < 4]its heavy weight keeping you pinned to dissuade protest[else]it ensuring that you can't struggle against its endeavors[end if] -- not that you [if HP of player > 0]are of any immediate desire to do so[else]could even if you wanted to, given the venom's effect[end if] -- before its curious, forked tongue tastes your ";
+			say "     Eyeing its [if HP of player > 0]potential offering[else]new victim[end if] up for a moment, the serpent [if scalevalue of player > 4]partially [end if]wraps around you, [if scalevalue of player < 4]its heavy weight keeping you pinned to dissuade protest[else]it ensuring that you can't struggle against its endeavors[end if] - not that you [if HP of player > 0]are of any immediate desire to do so[else]could even if you wanted to, given the venom's effect[end if] - before its curious, forked tongue tastes your ";
 			snakecoresex;
 
 to snakecoresex:
 	if player is male: [Always goes for male genitalia first]
-		say "[cock size desc of player] dick[smn], [if breast size of player > 0]already quite hard after its prior ritual[else if HP of player > 0]inclined to oblige the beast's affection with your arousal[else]the beast's tainted infection having aroused you[end if]. Satisfied, and with almost no restraint, its abyssal maw envelopes ";
+		say "[cock size desc of player] dick[smn], [if breast size of player > 0]already quite hard after its prior ritual[else if HP of player > 0]inclined to oblige the beast's affection with your arousal[else]the beast's tainted infection having aroused you[end if]. Satisfied, and with almost no restraint, its abyssal maw envelops ";
 		if cock length of player < 21:
 			say "[if cocks of player > 2]two of them[else if cocks of player is 2]both of them[else]the tool[end if] with little restraint or difficulty";
 		else:
@@ -190,13 +190,13 @@ to theserpentchecks: [Invocation of validation for TBM scene]
 to say beatthesnake:
 	if snakesubm is 0:
 		say "     The snake's down for the count, too weak to contend your will.";
-		say "     [bold type] It's a curious thing, should you inspect it more closely?[roman type][line break]";
+		say "     [bold type]It's a curious thing, should you inspect it more closely?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			LineBreak;
-			say "     Curiously fondling around it, the serpent can only hiss in impotent protest. After a fair bit of examination, it would appear that the creature is completely genderless! Strange that you encounter a beast such as this... You imagine it can only satisfy you orally, but given the way it regards you -- even after it's apparent to it that you're the stronger one here -- it's clear that it won't oblige such a task. Satisfied with your little investigation, you choose to depart, since there's nothing more the serpent can offer you.";
+			say "     Curiously fondling around it, the serpent can only hiss in impotent protest. After a fair bit of examination, it would appear that the creature is completely genderless! Strange that you encounter a beast such as this... You imagine it can only satisfy you orally, but given the way it regards you - even after it's apparent to it that you're the stronger one here - it's clear that it won't oblige such a task. Satisfied with your little investigation, you choose to depart, since there's nothing more the serpent can offer you.";
 		else:
 			LineBreak;
 			say "     You choose against such an act. Clearly, even if the serpent had anything to offer you, its persisting protests dissuade from such an endeavor.";

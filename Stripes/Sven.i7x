@@ -189,7 +189,7 @@ instead of conversing the Sven:
 		say "     You grab your weapon and press yourself against the door to help barricade it as whatever is outside charges down the steps again and again to batter against it. The beast's pounding and claw slashes soon weaken the flimsy door too much and it starts to break in. Through the cracks, you can see it is a snow leopard like Sven, but fully transformed and wild, and probably drawn by your friend's scent. The next time it moves back for another charge, you whip open the door and charge it first, pushing it out of the stairwell and into the street.";
 		WaitLineBreak;
 		say "     Finding yourself about to face off against the angry feline, you ready for battle. As the fight is about to begin, you have a moment to size the creature up.";
-		say "     [bold type] Do you feel you can handle this fight on your own or shall you try to convince Sven to fight back?[roman type][line break]";
+		say "     [bold type]Do you feel you can handle this fight on your own or shall you try to convince Sven to fight back?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Fight on your own.";
 		say "     ([link]N[as]n[end link]) - Convince Sven to fight back.";
@@ -213,7 +213,7 @@ instead of conversing the Sven:
 				let xx be 0;
 				if player is not neuter:
 					say "     Hearing the cat beneath you give a pleasant rumble, you look down at him. With his head right there between your legs, it would be easy to join in on the fun.";
-					say "     [bold type] Shall you get the pinned kitty to [if player is male]suck you off[else]eat you out[end if] or just watch the show behind you?[roman type][line break]";
+					say "     [bold type]Shall you get the pinned kitty to [if player is male]suck you off[else]eat you out[end if] or just watch the show behind you?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Get the pinned kitty to [if player is male]suck you off[else]eat you out[end if].";
 					say "     ([link]N[as]n[end link]) - Watch the show.";
@@ -439,7 +439,7 @@ to say SexWithSven:
 		say "     As you approach Sven this time, he seems to notice something in how you approach him and mewls softly, stretching out on his cot like a lounging feline. Sitting beside him, you rub his tummy and smile as he purrs happily. 'I have something special for you, kitty,' you say softly as you pull out the collar. His eyes lock onto the baby blue strap and he releases a soft mew, almost unheard. He nibbles at his lip a little as you lean in to stroke along the soft fur of his neck.";
 		if player is herm:
 			say "     As you prepare to give the sexy snowmeow his new collar, you try to decide if you'd prefer to top him or ride him in celebration.";
-			say "     [bold type] You look forward to using your feline in any way you can, but what special reward to give your virgin kitty for his first time?[roman type][line break]";
+			say "     [bold type]You look forward to using your feline in any way you can, but what special reward to give your virgin kitty for his first time?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Top him.";
 			say "     ([link]N[as]n[end link]) - Ride him.";
@@ -682,7 +682,7 @@ to say SvenTrio:
 	else:													[results cycle - Sex B]
 		if player is herm:
 			say "     You snuggle with the two pretty play-toys as run your fingers through their soft fur, nuzzling them each in turn. With such willing partners, you try to decide what you'd like to do with them this time. You slide your hands down to their bottoms, wondering if you'd like to fuck both their adorable asses.";
-			say "     [bold type] Letting your fingers drift around to grab their stiff cocks and stroke them, there's also the possibility of getting some coon cock in you with your pet's help.[roman type][line break]";
+			say "     [bold type]Letting your fingers drift around to grab their stiff cocks and stroke them, there's also the possibility of getting some coon cock in you with your pet's help.[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck them both.";
 			say "     ([link]N[as]n[end link]) - Coon sex.";

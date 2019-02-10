@@ -88,11 +88,11 @@ to say BeatenElkBullSexMenu:
 					say "[BeatenElkBullSex3]";
 				if (nam is "DDD"):
 					say "[BeatenElkBullSex4]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You just walk away after checking him over for loot.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -288,11 +288,11 @@ to say BeatenElkCowSexMenu:
 					say "[BeatenElkCowSex3]";
 				if (nam is "DDD"):
 					say "[BeatenElkCowSex4]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You just walk away after checking her over for loot.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -486,11 +486,11 @@ to say BeatenElkHermSexMenu:
 					say "[BeatenElkHermSex3]";
 				if (nam is "DDD"):
 					say "[BeatenElkHermSex4]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You just walk away after checking her over for loot.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -683,11 +683,11 @@ to say BeatenElkTransBullSexMenu:
 					say "[BeatenElkTransBullSex3]";
 				if (nam is "DDD"):
 					say "[BeatenElkTransBullSex4]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You just walk away after checking him over for loot.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -883,11 +883,11 @@ to say BeatenElkTransCowSexMenu:
 					say "[BeatenElkTransCowSex3]";
 				if (nam is "DDD"):
 					say "[BeatenElkTransCowSex4]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You just walk away after checking her over for loot.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

@@ -148,7 +148,7 @@ to say losetoocelot_ld:
 		say "     Beaten by the large, powerful feline, you are grabbed rather roughly in his arms and pulled into his lap as he sits down. He runs his paws over your [bodytype of player] body. He nuzzles at your neck and licks your throat softly.";
 	if ocelotchoice is 0:
 		say "     'Mmm... what kind of a kitty are you, deep down?' he purrs, rubbing a paw over your crotch and groping your ass with the other. 'Are you going to be another big, dom kitty like me or a sexy little toy for me to play with?' He nips at your shoulder and gropes you some more. 'Which will it be?'.";
-		say "     [bold type] It seems you have some kind of choice to make.[roman type][line break]";
+		say "     [bold type]It seems you have some kind of choice to make.[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Big kitty.";
 		say "     ([link]N[as]n[end link]) - Little kitty.";

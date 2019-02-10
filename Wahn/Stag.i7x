@@ -1,7 +1,7 @@
 Version 6 of Stag by Wahn begins here.
 [Version 6.1 - Ares moved to his own file]
 
-"Adds a Male Stag to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Male Stag to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Dog-Walking Event
 
@@ -172,6 +172,7 @@ to say Stag loses:
 							now non-infectious entry is false;
 							break;
 					stop the action;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the stag, shaking your head slightly as he gives a questioning look.";
@@ -560,14 +561,14 @@ object	name
 Lea	"Lea"
 
 Lea is a woman. Lea is in Mike's Office.
-The description of Lea is "     Originally one of Mike's dogs, Lea is now a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with her pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication. [if HP of Mike < 5]A deep gash from a leopardman's claw marks her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon.[else if HP of Mike > 4]A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again.[end if]".
+The description of Lea is "     Originally one of Mike's dogs, Lea is now a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with her pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication[if HP of Mike < 5]. A deep gash from a leopardman's claw marks her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon[else if HP of Mike > 4]. A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again[end if].".
 The conversation of Lea is { "Woof." }.
 
 instead of fucking Lea:
 	if HP of Mike < 5:
 		say "     Mike roughly shoves you aside as you try to fondle Lea. 'Get a hold of yourself - can't you see she's hurt?'";
 	else if HP of Mike > 4:
-		say "     Mike puts a hand on your shoulder and pulls you aside. 'Lea is still recovering. She needs some rest, ok? beside... she's mine - who did you think put those puppies in her belly?'";
+		say "     Mike puts a hand on your shoulder and pulls you aside. 'Lea is still recovering. She needs some rest, ok? Besides... she's mine - who did you think put those puppies in her belly?'";
 
 instead of conversing Lea:
 	if HP of Mike < 5:

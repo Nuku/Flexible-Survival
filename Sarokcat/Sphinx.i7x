@@ -1,6 +1,6 @@
 Sphinx by Sarokcat begins here.
 
-"Adds a sphinx to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a sphinx to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses
@@ -27,7 +27,7 @@ When Play begins:
 	now attack entry is "[one of]She riddles you this and that till your head spins.[or]the sphinx lashes out at you with he powerful leonine paws![or]Valerie barrels into you, sending you both crashing to the ground![or]the enraged sphinx leaps at you and rakes you with her claws![or]You duck out of the way of Valerie's leonine claws only to be sent flying as one of her powerful wings smashes into your side.[or]Catching your eyes, Valerie stares at you intimidatingly, and your head starts to swim for a minute before you manage to pull yourself back together.[at random]";
 	now defeated entry is "[Sphinx Loses]";
 	now victory entry is "[Sphinx Wins]";
-	now desc entry is "[mongendernum 4]     Valerie comes charging down the halls of the museum, her wings half spread and a look of rage on her face as she charges forward on her powerful and sharply clawed leonine paws. 'You put that back you thief!' She cries out with a roar as she leaps at you!";
+	now desc entry is "[mongendernum 4]     Valerie comes charging down the halls of the museum, her wings half spread and a look of rage on her face as she charges forward on her powerful and sharply clawed leonine paws. 'You put that back, you thief!' she cries out with a roar as she leaps at you!";
 	now face entry is "Mostly human face, with slitted cat pupiled eyes and several slight feline features lending a feral cast to your face"; [You have a (your text) face."]
 	now body entry is "long and lean, you have a feral lions body starting just below the shoulders, your hips and lower legs almost indistinguishable from those of a great cat, though your arms are still more human than beast, with clawed fingers instead of paws. Along your back rest a pair of soft feathered wings, the powerful muscles in them still not quite strong enough to let you use them to fly"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[one of]soft leonine furred[or]tan furred[or]soft lion furred[at random]"; [ skin Description, format as "You have (your text) skin"]

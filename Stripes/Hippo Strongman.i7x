@@ -1,7 +1,7 @@
 Version 1 of Hippo Strongman by Stripes begins here.
 [ Version 1.1 - Added vaginal/anal player loss scenes for Hippo players. ]
 
-"Adds a Hippo Strongman creature to Flexible Survival's Wandering Monsters table with impregchance"
+"Adds a Hippo Strongman creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

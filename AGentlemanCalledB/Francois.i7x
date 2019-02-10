@@ -23,7 +23,7 @@ Instead of Resolving a Gourmet Treats:
 		say "     While traveling through the high rise district, you come across a rather unusual-looking building. While the boarded-up windows prevent you from seeing inside, the large sign above the door proclaims the place to be some sort of pet bakery. The weathered sign reads Bone-Appetit and features a rather plump cartoon canine in a chef's uniform. With the exception of the boarded-up windows, the exterior of the building appears relatively undamaged; thinking there may still be some useful supplies within, you decide to step inside.";
 	WaitLineBreak;
 	let T be a random number between 1 and 4;
-	say "     A bell above the door jingles loudly as you step inside, [if HP of Karen is 1]and the creatures in the back quickly turn their attention to the unexpected intruder[else]and you curse yourself as you spot a group of creatures near the back of the store turning to investigate the source of the noise[end if]. Surveying the scene, you quickly realize you've walked in on a [if T is 1]small pack of huskies[else if T is 2]group of german shepherds[else if T is 3]small pack of Chocolate Labs[else if T is 4]pair of Retrievers[end if] who have captured another creature and are having some fun with their prize in the secluded bakery. As the canines move towards you, there is a weak cry for help from their prisoner, a survivor? Realizing there is more at stake here than you originally expected, you drop your pack and prepare yourself for the approaching [if T is 1]huskies[else if T is 2]german shepherds[else if T is 3]Labs[else if T is 4]Retrievers[end if].";
+	say "     A bell above the door jingles loudly as you step inside, [if HP of Karen is 1]and the creatures in the back quickly turn their attention to the unexpected intruder[else]and you curse yourself as you spot a group of creatures near the back of the store turning to investigate the source of the noise[end if]. Surveying the scene, you quickly realize you've walked in on a [if T is 1]small pack of huskies[else if T is 2]group of German Shepherds[else if T is 3]small pack of Chocolate Labs[else if T is 4]pair of Retrievers[end if] who have captured another creature and are having some fun with their prize in the secluded bakery. As the canines move towards you, there is a weak cry for help from their prisoner, a survivor? Realizing there is more at stake here than you originally expected, you drop your pack and prepare yourself for the approaching [if T is 1]huskies[else if T is 2]German Shepherds[else if T is 3]Labs[else if T is 4]Retrievers[end if].";
 	WaitLineBreak;
 	if T is 1:
 		say "[BakeryHusky]";
@@ -36,7 +36,7 @@ Instead of Resolving a Gourmet Treats:
 	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     Having dealt with the intruder, the canines return to the other survivor, and as you lay beaten on the floor, you hear the poor fellow begin moaning. The longer you listen, the more his cries begin to shift to submission. The last thing you hear before slipping from consciousness is his cry of ecstasy mingled with his captor's howl of pleasure.";
 		WaitLineBreak;
-		say "     You eventually awaken some time later, and you are surprised to find yourself on a makeshift bed made from several smaller pieces of furniture and blankets. As you rise to a sitting position, you glance around nervously, looking for the [if T is 1]huskies[else if T is 2]german shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if] who bested you, expecting them to try and keep you captive as they did the other survivor. Surprisingly, although perhaps for the best, there is no sign of them.";
+		say "     You eventually awaken some time later, and you are surprised to find yourself on a makeshift bed made from several smaller pieces of furniture and blankets. As you rise to a sitting position, you glance around nervously, looking for the [if T is 1]huskies[else if T is 2]German Shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if] who bested you, expecting them to try and keep you captive as they did the other survivor. Surprisingly, although perhaps for the best, there is no sign of them.";
 		say "     'Do not worry, mon ami[if player is purefemale]e[end if]. They left after having their fun; you're safe here now,' says a voice with a thick French accent. You turn towards the voice, seeing a figure step out of a nearby doorway. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'I appreciate your attempts to save me from those canine ruffians, and I'm sorry it ended the way it did,' he continues. 'I am Francois, master chef, at your service.'";
 		now Gourmet Treats is resolved;
@@ -44,7 +44,7 @@ Instead of Resolving a Gourmet Treats:
 		now Resolution of Gourmet Treats is 2; [fought, lost]
 		move player to Bone-Appetit;
 	else if fightoutcome >= 10 and fightoutcome <= 19:
-		say "     Having finally dealt with the [if T is 1]huskies[else if T is 2]german shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if], you chase the last stragglers out the door and block it up behind them, propping up a table and a few chairs against it to keep any others out. Satisfied with the security of the building, you approach the canines['] captive, looking him over before kneeling down to help him to a sitting position. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
+		say "     Having finally dealt with the [if T is 1]huskies[else if T is 2]German Shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if], you chase the last stragglers out the door and block it up behind them, propping up a table and a few chairs against it to keep any others out. Satisfied with the security of the building, you approach the canines['] captive, looking him over before kneeling down to help him to a sitting position. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'Thank you, mon ami[if player is purefemale]e[end if],' the man says with a strong French accent. 'I shudder to imagine where I'd be had you not come along. I am Francois, master chef, at your service.'";
 		now Gourmet Treats is resolved;
 		now Bone-Appetit is known;
@@ -210,7 +210,7 @@ to say Francoisdesc:
 Instead of conversing the Francois:
 	if HP of Karen is 6 and companion of player is Retriever Girl:
 		say "     Francois greets you with a smile as you approach. 'Ah, mon ami[if player is not male and player is female]e[end if], good to see you again! And who is this you've brought with you?'";
-		say "     'It's me, Karen,' she responds. 'We were hoping you could help me out with --'[line break]";
+		say "     'It's me, Karen,' she responds. 'We were hoping you could help me out with-'[line break]";
 		say "     'Karen! Mon Dieu, I had feared the worst mon amie,' Francois interrupts, stepping around the counter and placing a small kiss on each side of her muzzle before pulling her into a hug. After breaking off, Francois motions towards one of the tables near the front of the store. The three of you sit and chat for a while, regaling the mutt with the tale of your escape from Rex before Karen finally asks him about her past. 'Ah, désolé mon amie, we never spoke much of our personal lives, only of our shared interest, les animaux. I recall you mentioning being a student at the college, but I am afraid that's all I know.'";
 		say "     'Well, it's more than I knew before,' Karen responds. 'Thank you, Francois, for everything. I might not even be here if not for you helping our friend here escape from Rex,' she says, smiling at you before leaning in and giving him a timid kiss on the cheek. Soon after the conversation draws to a close, you and Karen gather your things and prepare to head back out into the city as Francois returns to his work behind the counter.";
 		now HP of Karen is 7;
@@ -603,7 +603,7 @@ to say FrancoisBakingMenu:
 						decrease carried of distilled milk by 1;
 						increase carried of crème abondante by 1;
 					else:
-						say "You do not have the required ingredients. pink gel and distilled milk.";
+						say "You do not have the required ingredients: pink gel and distilled milk.";
 				else if title entry is "bleuettonne":
 					if blue gel is owned and chocolate milk is owned:
 						now sextablerun is 1;
@@ -612,7 +612,7 @@ to say FrancoisBakingMenu:
 						decrease carried of chocolate milk by 1;
 						increase carried of bleuettonne by 1;
 					else:
-						say "You do not have the required ingredients. blue gel and chocolate milk.";
+						say "You do not have the required ingredients: blue gel and chocolate milk.";
 				else if title entry is "boysenberry blossom":
 					if blue gel is owned and Awesome Fruit is owned:
 						now sextablerun is 1;
@@ -621,7 +621,7 @@ to say FrancoisBakingMenu:
 						decrease carried of Awesome Fruit by 1;
 						increase carried of boysenberry blossom by 1;
 					else:
-						say "You do not have the required ingredients. blue gel and Awesomer Fruit.";
+						say "You do not have the required ingredients: blue gel and Awesomer Fruit.";
 				else if title entry is "Muffin muffin":
 					if pink gel is owned and Awesomer Fruit is owned:
 						now sextablerun is 1;
@@ -630,7 +630,7 @@ to say FrancoisBakingMenu:
 						decrease carried of Awesomer Fruit by 1;
 						increase carried of Muffin muffin by 1;
 					else:
-						say "You do not have the required ingredients. pink gel and Awesome Fruit.";
+						say "You do not have the required ingredients: pink gel and Awesome Fruit.";
 				else if title entry is "lollicock":
 					if honeycomb is owned and musky cock flower is owned:
 						now sextablerun is 1;
@@ -639,7 +639,7 @@ to say FrancoisBakingMenu:
 						decrease carried of musky cock flower by 1;
 						increase carried of lollicock by 1;
 					else:
-						say "You do not have the required ingredients. honeycomb and musky cock flower.";
+						say "You do not have the required ingredients: honeycomb and musky cock flower.";
 				else if title entry is "dragon moelleux":
 					if ebonflame scale is owned and glowing ember is owned and chocolate milk is owned:
 						now sextablerun is 1;
@@ -649,7 +649,7 @@ to say FrancoisBakingMenu:
 						decrease carried of chocolate milk by 1;
 						increase carried of dragon moelleux by 1;
 					else:
-						say "You do not have the required ingredients. ebonflame scale, glowing ember and chocolate milk.";
+						say "You do not have the required ingredients: ebonflame scale, glowing ember and chocolate milk.";
 				else if title entry is "fizz-aux-pommes":
 					if pony cider is owned and soda is owned and crushed candies is owned:
 						now sextablerun is 1;
@@ -659,7 +659,7 @@ to say FrancoisBakingMenu:
 						decrease carried of crushed candies by 1;
 						increase carried of fizz-aux-pommes by 1;
 					else:
-						say "You do not have the required ingredients. pony cider, soda and crushed candies.";
+						say "You do not have the required ingredients: pony cider, soda and crushed candies.";
 				else if title entry is "vin-coeur":
 					if wyvern goop is owned and Satyr wine is owned and crushed candies is owned:
 						now sextablerun is 1;
@@ -669,7 +669,7 @@ to say FrancoisBakingMenu:
 						decrease carried of Satyr wine by 1;
 						increase carried of vin-coeur by 1;
 					else:
-						say "You do not have the required ingredients. crushed candies, Satyr wine and wyvern goop.";
+						say "You do not have the required ingredients: crushed candies, Satyr wine and wyvern goop.";
 				else if title entry is "gingerbread": [gingerbread - egg nog + pixie dust + blue gel]
 					if egg nog is owned and pixie dust is owned and blue gel is owned:
 						now sextablerun is 1;
@@ -1028,7 +1028,7 @@ to say lollicock Use:
 	decrease hunger of player by 5;
 	if hunger of player < 0, now hunger of player is 0;
 
-dragon moelleux is a grab object. It is a part of the player. it is not temporary. it is fast.
+dragon moelleux is a grab object. It is a part of the player. It is not temporary. It is fast.
 The usedesc of dragon moelleux is "[dragonmoelleuxuse]".
 the scent of dragon moelleux is "     The small chocolate cake smells rich and sweet, as well as a little spicy.".
 
@@ -1065,7 +1065,7 @@ to say dragonmoelleuxuse:
 	else:
 		say "     That's probably not a good idea right now.";
 
-fizz-aux-pommes is a grab object. It is a part of the player. it is not temporary. it is fast.
+fizz-aux-pommes is a grab object. It is a part of the player. It is not temporary. It is fast.
 The usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]".
 the scent of fizz-aux-pommes is "     The bubbling drink smells of overwhelmingly sweet apple.".
 
@@ -1081,7 +1081,7 @@ to say fizz-aux-pommesuse:
 	else:
 		say "That's probably not a good idea right now.";
 
-vin-coeur is a grab object. It is a part of the player. it is not temporary. it is fast.
+vin-coeur is a grab object. It is a part of the player. It is not temporary. It is fast.
 The usedesc of vin-coeur is "[vin-coeuruse]".
 the scent of vin-coeur is "     rich and heavy (temporary desc!)".
 
@@ -1117,7 +1117,7 @@ to gingerbreadinfect:
 	infect "Gingerbread";
 	now non-infectious entry is true;
 
-cheesecake is a grab object. It is a part of the player. it is not temporary.
+cheesecake is a grab object. It is a part of the player. It is not temporary.
 cheesecake has a usedesc "[cheesecake Use]".
 the scent of cheesecake is "The cheesecake has a rich, sweet scent of strawberry.".
 

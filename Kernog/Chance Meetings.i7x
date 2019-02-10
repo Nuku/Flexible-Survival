@@ -15,7 +15,7 @@ Chance Meeting is a situation.
 The sarea of Chance Meeting is "Outside".
 
 Instead of resolving Chance Meeting:
-	say "     As you pass by [one of]a derelict[or]an abandoned[or]an unhabited[or]a deserted[or]a ransacked[at random] [one of]bar[or]school[or]warehouse[or]book store[or]liquor store[or]supermarket[or]kindergarten[or]small house[or]arcade[or]electronic store[at random], you hear voices and rumbling coming from inside.";
+	say "     As you pass by [one of]a derelict[or]an abandoned[or]an uninhabited[or]a deserted[or]a ransacked[at random] [one of]bar[or]school[or]warehouse[or]book store[or]liquor store[or]supermarket[or]kindergarten[or]small house[or]arcade[or]electronics store[at random], you hear voices and rumbling coming from inside.";
 	say "     It may be someone you know. [bold type]Do you wish to investigate?[roman type][line break]";
 	say "[link]Y[as]y[end link] You should check. Who knows?";
 	say "[link]N[as]n[end link] Curiosity killed the cat.";

@@ -271,12 +271,12 @@ else: [regular sex]
 	say "     ...";
 ```
 
-These variables should be used to track the npc's status and interactions with the player:
+These variables should be used to track the NPC's status and interactions with the player:
 ```
-Loyalty(number) [how much the npc likes you - increase if you recruited them and do nice things]
-Humanity(number) [is your npc about to go nuts?]
-PlayerMet(truth state) [has the npc met the player?]
-PlayerRomanced(truth state) [has the player shown romantic interest in the npc?]
+Loyalty(number) [how much the NPC likes you - increase if you recruited them and do nice things]
+Humanity(number) [is your NPC about to go nuts?]
+PlayerMet(truth state) [has the NPC met the player?]
+PlayerRomanced(truth state) [has the player shown romantic interest in the NPC?]
 PlayerFucked(truth state) [ever had sex with the player?]
 OralVirgin(truth state)
 Virgin(truth state)
@@ -291,7 +291,7 @@ else: [regular repeat sex]
 	say "...";
 ```
 
-These variables are used by _pets_ (Note: "Cute Crab" pet object is NOT the same as "Snips" the cute crab npc - so you do not have to worry about overwriting combat relevant values. The 'pet' objects are invisible and glued to the player, you'll not really interact with them)
+These variables are used by _pets_ (Note: "Cute Crab" pet object is NOT the same as "Snips" the cute crab NPC - so you do not have to worry about overwriting combat relevant values. The 'pet' objects are invisible and glued to the player, you'll not really interact with them)
 ```
 HP(number)
 XP(number)
@@ -299,7 +299,7 @@ Level(number)
 Weapon Damage(number)
 ```
 
-And _these_ variables are unused by npcs, so please make use of them. They're easier to save than if you declare new variables for things:
+And _these_ variables are unused by NPCs, so please make use of them. They're easier to save than if you declare new variables for things:
 ```
 Energy(number)
 HP(number)
@@ -385,7 +385,7 @@ To be added later.
 ### Events and situations
 * An event is framed within a "situation". A situation has four main properties:
   ** Resolved/Unresolved: Only things the player actually has _done_ are resolved now.
-  ** Active/Inactive: Banned events, or events that are activated by talking to an npc for example are inactive.
+  ** Active/Inactive: Banned events, or events that are activated by talking to an NPC for example are inactive.
  	** Sarea: give your event a Sarea if you want it to be triggered when exploring in this zone
   ** Level: the event will only trigger if the player is at or above the given level (default: 0)
 

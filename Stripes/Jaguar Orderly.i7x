@@ -1,7 +1,7 @@
 Version 3 of Jaguar Orderly by Stripes begins here.
 [Version 3 - Player Victory Sex]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-"Adds a Jaguar Orderly creature to Flexible Survival's Wandering Monsters table with impreg chance"
+"Adds a Jaguar Orderly creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses
@@ -99,7 +99,7 @@ to say jagfuck:
 
 to say jagride:
 	say "     Pulling down the front of the orderly's scrubs, you roll the big kitty onto his back and stroke his sheath, coaxing out his feline erection. As you run your hand over it, spreading his precum over it, you decide to grab a quick taste before getting onto the main event. You lick slowly up those thick nine inches of manmeat before plunging your mouth down over it, getting the unconscious jaguar to moan softly. Bobbing your head over it, you find his taste strong, but pleasant and you're tempted to finish him off like that.";
-	say "     [bold type] Shall you continue with your original plan or switch to sucking him off?[roman type][line break]";
+	say "     [bold type]Shall you continue with your original plan or switch to sucking him off?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Get fucked.";
 	say "     ([link]N[as]n[end link]) - Suck him off.";

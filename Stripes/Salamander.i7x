@@ -104,7 +104,7 @@ When Play begins:
 	now BannedStatus entry is false;
 
 Section 3 - Bound State
-[ -- Blue Bishop]
+[ - Blue Bishop]
 
 to salabind:
 	now lustatt is libido of player;
@@ -152,7 +152,7 @@ to salabind:
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [salastrugglebar]";
 		if humanity of player < 1:
 			LineBreak;
-			say "     Eventually you become so drained -- both mentally and physically -- that you wholly give in to your captor, ";
+			say "     Eventually you become so drained - both mentally and physically - that you wholly give in to your captor, ";
 			if bodyname of player is "Salamander" and player is pure:
 				say "compelled by your strain to obey her every whim";
 			else:
@@ -213,7 +213,7 @@ to salabind:
 						wait for any key;
 					else:
 						say "     Body churning loudly, finally unable to contain you any longer, your tight prison squeezes your body back up the hole you came before you're blinded by the bright light and dry air of the outside world. Regurgitated on the ground in a puddle of saliva, you weakly pull yourself to your feet, finding yourself someplace near where you were first captured.";
-						say "     You make a dash to escape but the salamander -- previously dazed by being forced to expel you -- lashes you with her tongue, nearly sending you flat on your ass as she tries reeling you back in. You may've gotten a head start, but the amphibian has no intention of letting you go that easily...";
+						say "     You make a dash to escape but the salamander - previously dazed by being forced to expel you - lashes you with her tongue, nearly sending you flat on your ass as she tries reeling you back in. You may've gotten a head start, but the amphibian has no intention of letting you go that easily...";
 						now tempnum2 is 1;
 						wait for any key;
 						now boundsegment is 0;

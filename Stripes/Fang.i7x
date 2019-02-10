@@ -253,7 +253,7 @@ instead of going up from Bunker while ( lastfuck of Sandra - turns > 15 and Sand
 				say "[fangsandrasuck]";
 		else if player is female:
 			say "     Your pussy quivers with excitement as you watch the two going at it.";
-			say "     [bold type] Wanting to take part, would you prefer to lick at their cock and snatch or have the horny wolf lick your needy pussy (N)?[roman type][line break]";
+			say "     [bold type]Wanting to take part, would you prefer to lick at their cock and snatch or have the horny wolf lick your needy pussy (N)?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Lick at their cock and snatch.";
 			say "     ([link]N[as]n[end link]) - Get licked.";
@@ -350,7 +350,7 @@ to say fangsandrasex:
 		say "     After playing with the wolf's cock for a bit, she takes a seat in one of the chairs with her legs apart. Showing off her large snatch, the bunny girl holds her wet folds open, offering herself to the wolf's long tongue. 'Come on, you big beast, eat the poor bunny up!' Needing no further invitation, the feral wolf's muzzle is nosing at her dripping cunt right away. You move to Fang's side, stroking his back and taking over tending to his cock while you watch the show. After a few playful sniffs and teasing brushes of his tongue-tip, he dives right in, slathering his long tongue all over it. Soon the licking over those ample folds turn into dives inside her vagina to lap up her juices, exciting the bunny further[if libido of fang is 3]. 'Oh yes! Good boy! I wish I'd thought of this sooner[else]. 'Oh yes! Nice and deep, you animal[end if]!' she moans and cries out lustfully, gripping the arms of the chair tightly to steady herself.";
 		say "     Still pumping at the wolf's cock, you scritch his ears, telling him what a fine job he's doing. Now that they're going at it rather strong, it's time for you to join in this threesome.";
 		if player is male:
-			say "     [bold type] Shall you mount the wolf or give the horny bunny some cock to suck?[roman type][line break]";
+			say "     [bold type]Shall you mount the wolf or give the horny bunny some cock to suck?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Mount the wolf.";
 			say "     ([link]N[as]n[end link]) - Give the horny bunny some cock to suck.";

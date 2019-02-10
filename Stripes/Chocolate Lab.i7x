@@ -2,7 +2,7 @@ Version 2 of Chocolate Lab by Stripes begins here.
 [Version 2 - Piggybacking Labs added by GentlemanB]
 [Version 2.1 - Removed forced sex on victory with high libido]
 
-"Adds a Chocolate Lab creature to Flexible Survival's Wandering Monsters table, with Impreg chance"
+"Adds a Chocolate Lab creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 labhost is a number that varies. [Tracks number of piggybacking labs/selects modified endings]
 labtimerA is a number that varies. labtimerA is usually 0. [tracks how long oldest lab has been piggybacking]

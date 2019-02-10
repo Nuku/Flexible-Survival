@@ -102,6 +102,7 @@ to say BryonyTalkMenu: [Runs only if the player is fully black equinoid. Otherwi
 					say "[BryonyGuard2]";
 				if (nam is "Offer to help stand guard again"):
 					say "[BryonyGuard3]";
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You excuse yourself and step back from Bryony.";

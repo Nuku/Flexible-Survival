@@ -1,7 +1,7 @@
 Version 2 of Pirate Shark by Sarokcat begins here.
 [Version 2.1 - Optional male player victory ]
 
-"Adds a shark to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a shark to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

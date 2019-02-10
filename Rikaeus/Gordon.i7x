@@ -1,5 +1,5 @@
 Version 1 of Gordon by Rikaeus begins here.
-[Version 1 - new npc]
+[Version 1 - new NPC]
 
 [   HP of Gordon                                           ]
 [   0: Not Placed                                          ]

@@ -1,6 +1,6 @@
 Nightmare by Sarokcat begins here.
 
-"Adds a Nightmare to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Nightmare to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses
@@ -39,7 +39,7 @@ When Play begins:
 	now face change entry is "you feel a strange yet familiar burning pressure in your head, and cry out slightly as your face pushes forward and reshapes itself again, your forehead flattening out and your eyes burning with an inner flame as your dark equine muzzle finishes reshaping itself, your dark blood red mane once more shimmering like fire as it trails down the back of your fully equine face once more"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "you can feel that strange energy from the vials you drank building up within you again, and causing your body to burn with energy as it begins to twist and reshape itself as it changes back into your now familiar and comfortable equine form. Flexing your hands and stomping your hooves on the ground, you find yourself grinning with amusement as you throw off the weak and pathetic infection that tried to mar your Nightmarish equine beauty"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "your body once more burns with that strange inner fire, as it seems to crackle over and under your skin, the strange power within you sweeping over your form until once again you are completely covered in a shadowy midnight black coating of fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear, its soft sexy strands feel rather comforting as they overwhelm your more recent infection"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now ass change entry is "your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear. Its soft, sexy strands feel rather comforting as they overwhelm your more recent infection"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "power seems to flow into it and it becomes equine in form"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 28;
 	now dex entry is 26;

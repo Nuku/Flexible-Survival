@@ -162,13 +162,13 @@ carry out browsebooks:
 			Follow the turnpass rule;
 	else if X is 6:
 		If "Weak Psyche" is listed in feats of player:
-			say "     You come across a self-esteem book whilst browsing a shelf. Your curiosity getting the best of you, you pull it out and scan through it real quick before putting it back, deciding that it won't help you the way you are now and don't need any advice the book might give.";
+			say "     You come across a self-esteem book while browsing a shelf. Your curiosity getting the best of you, you pull it out and scan through it real quick before putting it back, deciding that it won't help you the way you are now and don't need any advice the book might give.";
 			Stop the action;
 		If "Strong Psyche" is listed in feats of player:
 			If purfeat is 1:
 				say "     While browsing through the self-improvement shelves for any other books that might help, you happen across [bold type]Maintaining your Self-esteem[roman type]. Feeling that you've gotten as much advice as you could out of it, you continue to look over the titles of the other books.";
 			else:
-				say "     You come across a self-esteem book whilst browsing through the self-improvement shelves. Pulling it out, you scan through it real quick before putting it back, deciding that you already feel pretty good about yourself and your inner peace of mind.";
+				say "     You come across a self-esteem book while browsing through the self-improvement shelves. Pulling it out, you scan through it real quick before putting it back, deciding that you already feel pretty good about yourself and your inner peace of mind.";
 		else:
 			say "[myse]";
 	else if X is 7:

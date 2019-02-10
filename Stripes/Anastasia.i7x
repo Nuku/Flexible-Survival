@@ -46,7 +46,8 @@ Table of GameEventIDs (continued)
 Object	Name
 Captured Bird	"Captured Bird"
 
-Captured Bird is a situation. The level of Captured Bird is 3.
+Captured Bird is a situation.
+The level of Captured Bird is 3.
 
 when play begins:
 	add Captured Bird to badspots of girl;
@@ -91,7 +92,9 @@ Table of GameEventIDs (continued)
 Object	Name
 A Familiar Feather	"A Familiar Feather"
 
-A Familiar Feather is a situation. It is inactive. The level of A Familiar Feather is 4.
+A Familiar Feather is a situation.
+It is inactive.
+The level of A Familiar Feather is 4.
 
 instead of resolving A Familiar Feather:
 	say "     As you wander, something catches your eye. A single, scarlet feather with a yellow trimmed edge lays on the ground before you. It seems familiar, bringing up memories of the firebird you rescued some time ago. Picking it up, you turn the feather over a few times between your fingers before a hauntingly beautiful and feminine voice shakes you from your memories.";
@@ -107,14 +110,16 @@ Table of GameEventIDs (continued)
 Object	Name
 FireAndIce	"FireAndIce"
 
-FireAndIce is a situation. It is inactive. The level of FireAndIce is 6.
+FireAndIce is a situation.
+It is inactive.
+The level of FireAndIce is 6.
 
 instead of resolving FireAndIce:
 	say "     As you walk the empty streets, a crumpled up newspaper rolls past you like some pathetic urban tumbleweed, but the breeze that carried it is surprisingly chilly. You look back, cautiously, but see nothing out of place. You turn back, beginning your trek once again, only for the air around you to suddenly drop in temperature. Your muscles tense up as the frost starts to form on the asphalt.";
 	say "     A deep bestial growl echoes off the pavement filling you with dread. You try to prepare to fight but your reflexes are slowed by the cold, and before you can react, a massive lizard-like creature lands in front of you, opening its toothy maw and letting out a blast of cold directly into you, knocking you to the ground. You try to get up only to find that the frost has started creep over your body, freezing it in place in a compromising position. Unable to move, you look to the creature who now stalks towards you.";
 	WaitLineBreak;
 	say "     The giant lizard is more like a wingless dragon. Ground to shoulder, it was as tall as a man, even while on all fours. Its claws dig into the street with each step as it's glowing yellow eyes look towards you with an animalistic hunger. Between the creature's legs, as you would expect by now, is a fully erect, foot-long draconic cock, dripping with desire. His white and blue scaled body moves with grace and power as he looks over you. 'I had hoped... you would be... more of a challenge, my prey,' the frost drake speaks softly as it places a claw gently against your chest, making you feel a new surge of that unnatural cold.";
-	say "     An ball of fire suddenly fills your vision as the drake is knocked off of you and sent crashing into the storefront. Before you stands the great phoenix you had seen twice now, her feathers wreathed in flame. She gives you a glance, seemingly making sure you're okay, before returning her attention to drake who has already pushed himself to his feet. 'The mortal is under my protection.' she said, to which the drake responds with a furious growl, then lunges towards her, only for the bird to swiftly launch herself into the air.";
+	say "     A ball of fire suddenly fills your vision as the drake is knocked off of you and sent crashing into the storefront. Before you stands the great phoenix you had seen twice now, her feathers wreathed in flame. She gives you a glance, seemingly making sure you're okay, before returning her attention to drake who has already pushed himself to his feet. 'The mortal is under my protection,' she says, to which the drake responds with a furious growl, then lunges towards her, only for the bird to swiftly launch herself into the air.";
 	LineBreak;
 	say "     The Drake reacts, sinking his claws into the ground as a pivot, twisting back around and leaping towards the bird. She had little time to react as the creature's jaws latch onto her chest and drag her to the ground with a pained screech. The phoenix's fire burst outwards, scorching the drake and freeing her from his maw, but the battle has just begin. As the bird steps back, her fire ignites the ground beneath her, and ice forms at the drake's feet. With a deep breath, just as he had with you, the frost drake unleashes a vaporous stream of freezing breath. The firebird dodges out of the way, then using her wings, dashes towards the drake, striking at him with flaming talons. Fire and ice collide, and with each strike, steam billows up, obscuring your view other than the bursts of orange and blue light from within the mist.";
 	say "     A huge explosion of fire disperses the steam at last, sending the drake flying back until it hits the ground hard, rolling a few times. You wonder for a moment if it has been slain before it slowly pushes to its feet, looks once more towards the phoenix, and then flees into the shadows of the alleyways.";
@@ -137,7 +142,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "phoenix egg"	"     It has a golden shell and is roughly the size of a man's head."	10	phoenix egg
 
-phoenix egg is a grab object. it is part of the player. It is not temporary.
+phoenix egg is a grab object. It is part of the player. It is not temporary.
 
 instead of using phoenix egg:
 	say "     You look over the egg, trying to think of a hot place for it to hatch.";
@@ -159,7 +164,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Volcanic Cave	"Volcanic Cave"
 
-Volcanic Cave is a room. "     The volcanic cave is a fairly large atrium-like formation with seemingly three linked passages. Besides the way you came, there is a passage that leads deeper down, but the erruption appears to have collasped the passage, making it inaccsessible.  The final passage seems to be a vent shaft, likly leading outside and preventing the dangerous volcanic gasses from building up.  Most of the cave floor looks rippled due to the cooled lava that at one time flowed through here.  The remaining portions are still active pools of magma, boiling and radiating with intense heat.[if HP of Anastasia is 6] Anastasia is perching on a rock, looking over the cave thoughtfully. [else if HP of Anastasia > 6] Anastasia seems to have created a nest for herself made of various volcanic stones, charred wood, and a few colorful baubles here and there. The proud phoenix herself is perched on a nearby rock, her golden eyes focused on you.[end if]".
+Volcanic Cave is a room. "     The volcanic cave is a fairly large atrium-like formation with seemingly three linked passages. Besides the way you came, there is a passage that leads deeper down, but the eruption appears to have collapsed the passage, making it inaccessible. The final passage seems to be a vent shaft, likely leading outside and preventing the dangerous volcanic gasses from building up. Most of the cave floor looks rippled due to the cooled lava that at one time flowed through here. The remaining portions are still active pools of magma, boiling and radiating with intense heat[if HP of Anastasia is 6]. Anastasia is perching on a rock, looking over the cave thoughtfully[else if HP of Anastasia > 6]. Anastasia seems to have created a nest for herself made of various volcanic stones, charred wood, and a few colorful baubles here and there. The proud phoenix herself is perched on a nearby rock, her golden eyes focused on you[end if].".
 down of A Volcanic Crater is Volcanic Cave.
 
 the scent of Volcanic Cave is "The smell of smoke, soot and volcanic gasses is particularly strong here.".
@@ -191,7 +196,7 @@ instead of going down from Volcanic Crater:
 		move player to Volcanic Cave;
 		say "     Inside the cave, you find the broken remains of the phoenix egg blackened and crumbling scattered around the lava pool. Fearing the worst, you start calling out Anastasia's name while searching the alcoves and crevices of the cavern. You find nothing and are about to give up hope when there is a loud, triumphant and hawk-like scream from outside the cave. Running to the cave entrance, you see a large, fiery plume of lava boil up before unfolding a pair of wide wings. The lava pours off the reborn phoenix like water as it comes swooping down to perch before you.";
 		project the figure of Anastasia_icon;
-		say "     Still aflame, the firebird wraps its wings tightly around you. You can feel the fire as it licks across your [skin of player] skin, but it doesn't burn. Her flames only feel warm and soothing like some strange etherial blanket. Anastasia nuzzles her beak against you until she realized what she was doing. The bird quickly let go of you and cleared her throat as she tried to regain her regal composure. 'It seems I am once again in your debt.' she said, then paused. Anastasia's crest flared as she turned around, showing off her new youthful body. 'It feels wonderful to be reborn,' she cooed. 'Though unlike my other lives, being reborn here, in this world... It seems to have changed me.'";
+		say "     Still aflame, the firebird wraps its wings tightly around you. You can feel the fire as it licks across your [skin of player] skin, but it doesn't burn. Her flames only feel warm and soothing like some strange, ethereal blanket. Anastasia nuzzles her beak against you until she realizes what she was doing. The bird quickly lets go of you and clears her throat as she tries to regain her regal composure. 'It seems I am once again in your debt,' she says, then pauses. Anastasia's crest flares as she turned around, showing off her new youthful body. 'It feels wonderful to be reborn,' she coos. 'Though unlike my other lives, being reborn here, in this world... It seems to have changed me.'";
 		LineBreak;
 		say "     The phoenix looks into the distance thoughtfully. 'I feel... different... But, my cycle has continued, and you...' she turns to look at you with hope in her brilliant eyes. 'I have no right to ask anything more of you, but I must learn of this new world and this new life I have been given, and I would very much like for you to help me, to guide and teach me.' Anastasia walks past you, her feathers gently touching you as she does. 'I will remain here, eagerly awaiting your return.' Anastasia continues into the cave; her tail feathers lifted and flared proudly as the flames dance across them. You are unsure if it is on purpose or not, but it did give you a wonderful view of her cloaca, and you could swear that it seems to glisten with moisture in the light of her flames.";
 		now HP of Anastasia is 6;
@@ -519,7 +524,7 @@ to say salamanderraid:
 			challenge "Salamander";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     Having fought as long as possible to ensure her comrades have a chance to escape, this last salamander has passed out. Anastasia, having driven off the others from the lava pool, lands beside you. She looks over the salamander girl with a far colder gaze than any you've seen in the firebird's eyes. Despite the phoenix's obvious scorn, you can't help but find this brave girl strangely cute.";
-				say "     [bold type] Shall you bring her inside the cave or toss her over the rim of the crater for her people to reclaim?[roman type][line break]";
+				say "     [bold type]Shall you bring her inside the cave or toss her over the rim of the crater for her people to reclaim?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Bring her inside.";
 				say "     ([link]N[as]n[end link]) - Toss her over the rim.";

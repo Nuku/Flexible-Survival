@@ -57,7 +57,7 @@ name	desc	weight	object
 "ZPC"	"[zpcdesc]"	5	zpc
 
 to say zpcdesc:
-	say "     The Zephyr Personal Communicator is essentially a slightly oversized smartphone. It is a suprisingly sleek piece of technology that almost feels out of place considering the environment around you, no doubt a display of Zephyr's dominance and power. Flipping the device over, you notice that its white rubber back is lined with solar panels, it seems that you don't have to worry about charging the device. The onyx black front display is smooth and glossy save for the Zephyr company logo on the top. You see an small orange button on the side of the device, perhaps you could try to [bold type]use the zpc[roman type]";
+	say "     The Zephyr Personal Communicator is essentially a slightly oversized smartphone. It is a surprisingly sleek piece of technology that almost feels out of place considering the environment around you, no doubt a display of Zephyr's dominance and power. Flipping the device over, you notice that its white rubber back is lined with solar panels, it seems that you don't have to worry about charging the device. The onyx black front display is smooth and glossy save for the Zephyr company logo on the top. You see an small orange button on the side of the device, perhaps you could try to [bold type]use the zpc[roman type]";
 
 
 zpc is a grab object. zpc is not temporary.

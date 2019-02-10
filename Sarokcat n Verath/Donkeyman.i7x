@@ -1,7 +1,7 @@
 Version 1 of Donkeyman by Sarokcat n Verath begins here.
 [ Version 1.3 - Touch-ups and cross-contamination w/Donkeywoman if Dominant feat ]
 
-"Adds a Donkeyman to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Donkeyman to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 

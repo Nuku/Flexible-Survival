@@ -1,5 +1,5 @@
 Version 1 of Ice Fox by Wahn begins here.
-[Version 1 - new npc/infection]
+[Version 1 - new NPC/infection]
 
 "Adds an Ice Fox NPC to Flexible Survival's urban forest"
 

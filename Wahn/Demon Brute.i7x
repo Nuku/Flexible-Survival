@@ -4,7 +4,7 @@ Version 6 of Demon Brute by Wahn begins here.
 [- Originally Authored By: Leo X -]
 [Todo: Endings]
 
-"Adds a Monster name to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Monster name to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 DBCaptureQuestVar is a number that varies. DBCaptureQuestVar is usually 0.
 DemonBruteStatus is a number that varies. DemonBruteStatus is usually 0.
@@ -171,7 +171,7 @@ to say DemonBruteCumBathScene:
 	else if player is submissive:
 		say "     Your eyes gawk wide at the swollen cock-head above you as you watch his urethra dilate to the size of an old quarter coin. The last thing you see as you open your mouth to eagerly accept his corrupted demon batter, is a torrent of semen as it spews forth with an incredible force into your face, turning your vision white. The demon jizz is hot and sticky, but the taste is practically ambrosia to your submissive mind, and you enthusiastically gulp down as much of his cum as you can. The sensation of being covered in hot cum and drinking his corrupted seed is too much for you and you reach an intense climax,[if player is male] spraying a thick load of your own jizz to join the pool of semen you're practically swimming in[else if player is female] gushing your liquid pleasure with a forceful intensity into the pool of semen you're practically swimming in[else] shaking with such intensity that you almost forget to come up for air as your limp form becomes submerged in the ever-growing pool of demon cum[end if].";
 	else:
-		say "     Your eyes gawk wide at the swollen cock-head above you as you watch his urethra dilate to the size of an old quarter coin. The last thing you see as before you shut your eyes tightly, is a torrent of semen as it spews forth with an incredible force at your face. You gasp in surprise, unintentionally receiving a mouthful demon cum into your mouth. The taste is salty and it's heat intense, causing you to splutter and cough as you are hosed down. The jizz is hot and sticky on your prone form, and the sensation of being covered in his cum sends you over the edge as well. You [if player is male]spray a thick load of your own liquid lust to join the pool of semen you're practically swimming in[else if player is female]shudder and start squirting your own femcum into the pool of semen you're practically swimming in[else]shake from the intensity of the orgasm as your limp body becomes submerged in the ever-growing pool of demon cum[end if].";
+		say "     Your eyes gawk wide at the swollen cock-head above you as you watch his urethra dilate to the size of an old quarter coin. The last thing you see as before you shut your eyes tightly, is a torrent of semen as it spews forth with an incredible force at your face. You gasp in surprise, unintentionally receiving a mouthful demon cum into your mouth. The taste is salty and its heat intense, causing you to splutter and cough as you are hosed down. The jizz is hot and sticky on your prone form, and the sensation of being covered in his cum sends you over the edge as well. You [if player is male]spray a thick load of your own liquid lust to join the pool of semen you're practically swimming in[else if player is female]shudder and start squirting your own femcum into the pool of semen you're practically swimming in[else]shake from the intensity of the orgasm as your limp body becomes submerged in the ever-growing pool of demon cum[end if].";
 	WaitLineBreak;
 	say "     As you lie there panting and covered in steaming demon cum, the brute leers down at you. 'Remember that this is all you're good for.' He laughs maliciously before disappearing in a puff of smoke, back to whatever hole he crawled out of. Sticky and broken, you weakly get to your feet, attempt to wipe the excess globules of cum from your body, and continue on your journey.";
 
@@ -243,55 +243,67 @@ to say Brutus_DBCapture:
 	say "     Defeated and now captured, the demon is pinned under a panting and obviously aroused Brutus, leaving it open for your amusements. Your demonic companion turns to you, silently awaiting your [if DBCaptureQuestVar is 5]orders[else]instructions[end if], but obviously eager for this opportunity to sate its [if DBCaptureQuestVar is 5]carnal and violent lusts[else]carnal lust[end if].";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if demonbrutestatus < 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Brutus fucks";
 		now sortorder entry is 5;
 		now description entry is "watch while Brutus fucks the other demon";
+	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck it";
 		now sortorder entry is 1;
 		now description entry is "fuck the demon while Brutus holds it down";
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now description entry is "make it suck you off";
 		now sortorder entry is 6;
+	[]
 	if player is male and demonbrutestatus < 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Spit-roast";
 		now sortorder entry is 2;
 		now description entry is "fuck the demon while Brutus takes its mouth";
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Double penetration";
 		now sortorder entry is 3;
 		now description entry is "have both of you to fuck the demon";
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Tag team fuck";
 		now sortorder entry is 4;
 		now description entry is "take turns fucking the demon";
+	[]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride it (vaginal)";
 		now sortorder entry is 8;
 		now description entry is "ride the captured demon's cock";
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now description entry is "make it eat out your pussy";
 		now sortorder entry is 7;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ride it (anal)";
 	now sortorder entry is 9;
 	now description entry is "stuff your ass with the demon's cock";
+	[]
 	if demonbrutestatus > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Brutus receives vaginal";
 		now sortorder entry is 10;
 		now description entry is "watch while Brutus rides the other demon's cock";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Brutus receives anal";
 	now sortorder entry is 11;
 	now description entry is "watch while Brutus takes the other demon's cock up his ass";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -331,6 +343,7 @@ to say Brutus_DBCapture:
 					say "[dbcapturesex_10]";  [Brutus rides - vag]
 				else if num is 11:
 					say "[dbcapturesex_11]";  [Brutus rides - anal]
+				wait for any key;
 		else:
 			say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
 
@@ -741,14 +754,14 @@ to say DBRelationshipTalkMenu:
 					say "[DemonBruteSexMenu]";
 				else if (nam is "Talk about David"):
 					say "[DBTalk2]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			if companion of player is demon brute:
 				say "     You step back from the purple demon, shaking your head slightly as he gives a questioning look.";
 			else:
 				say "     You murmur the magic words Nermine told you. With a shrug, the demon brute turns into purple mist and is absorbed by the amulet.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

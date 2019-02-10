@@ -1,7 +1,7 @@
 Version 1 of Carl by Wahn begins here.
 [Version 1.1 - Small Fix]
 
-"Adds a husky npc to Flexible Survival, entering the game as an aftermath of the soldier squad events"
+"Adds a husky NPC to Flexible Survival, entering the game as an aftermath of the soldier squad events"
 
 [ Carl, the husky                                                                      ]
 [                                                                                      ]
@@ -149,10 +149,10 @@ to say CarlTalkMenu:
 		now sortorder entry is 4;
 		now description entry is "Rekindle the husky's interest with his fellow soldier";
 	[]
-		choose a blank row in table of fucking options;
-		now title entry is "Join him in some fitness training";
-		now sortorder entry is 5;
-		now description entry is "Spend some time getting sweaty with Carl";
+	choose a blank row in table of fucking options;
+	now title entry is "Join him in some fitness training";
+	now sortorder entry is 5;
+	now description entry is "Spend some time getting sweaty with Carl";
 	[]
 	if Loyalty of Carl is 10:
 		choose a blank row in table of fucking options;
@@ -202,12 +202,12 @@ to say CarlTalkMenu:
 					say "[CarlTalk7]";
 				else if (nam is "Talk about the military presence"):
 					say "[CarlTalk8]";
-				WaitLineBreak;
+				wait for any key;
 				say "[CarlTalkMenu]";
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the husky soldier, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -544,11 +544,11 @@ to say CarlSexMenu:
 				else if (nam is "Threesome with Eric and Carl"):
 					say "[CarlSex7]";
 				now lastfuck of Carl is turns;
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the anthro husky, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -1031,7 +1031,7 @@ instead of navigating Grey Abbey Library while (HP of Carl > 3 and HP of Carl < 
 		say "     DEBUG: CARL & DAVID - WALK-IN - HP OF CARL: [HP of Carl], THIRST OF CARL: [thirst of Carl][line break]";
 	say "     Coming into the library, you walk in on David just finishing a conversation with Carl, then saluting him and starting back towards the stairs down into the bunker. The husky soldier watches his human compatriot walk off, eyes lingering on David's shapely butt for a moment before he notices your presence. Turning to face you, Carl says, 'Hello, my friend. Had a little talk with David and he told me about everything you did for him. Thank you for that. The demon sounded like a nasty customer...' He looks over to watch David walk through the cellar door, then puts a hand-paw on your arm and continues in a low tone. 'I have to admit that - well - some of my canine urges kicked in hard when I met David. He's a damned handsome guy - and just a private, while I'm a corporal, you know. Under me in the pack - err, the military. Half my mind was busy imagining bending him over and pounding his ass while we were talking.'";
 	say "     Carl shrugs and says 'I wasn't sure how he'd take it if I suggested anything, so I kept silent for now. Wouldn't want such a nice guy think I'm feral and just want to get in his pants... even though I really, really do.' He wags his tail subconsciously at that thought, then focuses on you again with a hopeful expression 'Say, you've spent some time with David - what do you think his reaction would be?";
-	say "     [bold type] Think I've got a shot for some no-strings-attached fun with him, or should I better suppress those urges and keep things on a just friendly level?'[roman type][line break]";
+	say "     [bold type]Think I've got a shot for some no-strings-attached fun with him, or should I better suppress those urges and keep things on a just friendly level?'[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - No strings fun.";
 	say "     ([link]N[as]n[end link]) - Suppress.";
@@ -1167,6 +1167,14 @@ when play ends:
 			say "     An eye-blink later, you find yourself embraced by Carl, his strong arms wrapping around your chest as he buries his nose against the crook of your neck and takes a deep breath of your scent. He says that he did his best, cautiously waving his tail as he hopes for praise. Stroking him and telling him what a good dog he is, you pull the soldier into a side room and have your way with him as a bit of a reward, enjoying the pleasure of his touch and giving him the affection of his [master] that he craves. After drawing the attractive canine's muzzle up and meeting it in a deep kiss, you stroke Carl's fur and tell him that you're fine with him serving during the crisis, but that you want him all to yourself afterwards. He accepts this order without complaint, licking your face happily. Sadly, the intimate moment is broken by more people rushing past you into the medical wing. Letting go of you, Carl steps back and says he should check on how his comrades are doing.";
 			LineBreak;
 			say "     Watching your husky hunk leave, you let your thoughts stray ahead to the future, meeting Carl for companionship and sex when the man has some time off from his duty and then eventually claiming him as your live-in sex pet. It'll be worth the wait in the end, when you'll have the dutiful canine soldier all for yourself to enjoy.";
+
+[
+TODO:
+- gaining stats through training with Carl
+- shower after training (with sex menu)
+- attack on the library event
+
+]
 
 
 Carl ends here.

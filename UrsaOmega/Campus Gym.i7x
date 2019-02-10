@@ -124,22 +124,27 @@ to say randysex:
 		setmonster "Rhino";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Naked wrestling";
 		now sortorder entry is 1;
 		now description entry is "Wrestle and fuck Randy.";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Shower sex";
 		now sortorder entry is 2;
 		now description entry is "Take a shower with Randy.";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Endurance sex";
 		now sortorder entry is 3;
 		now description entry is "Practice your sexual stamina with Randy.";
+		[]
 		choose a blank row in table of fucking options;
 		now title entry is "Leave";
 		now sortorder entry is 4;
 		now description entry is "Forget about fucking Randy for now.";
+		[]
 		sort the table of fucking options in sortorder order;
 		while sextablerun is 0:
 			repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -180,7 +185,7 @@ to say strtraining:
 	now lastworkout is turns;
 	follow the turnpass rule;
 	WaitLineBreak;
-	say "     Randy looks over your worked-out body with a different light in his eyes. 'You know, yer not half bad lookin['] after a workout... Pretty sexy, if you don't mind me sayin[']. Actually, if yer not too tuckered out, would you be interested in some, uh... Naked wrestling? It's kind of a popular pasttime around here...' The rhino-man is blushing through his thick gray skin. Do you want to try some [']naked wrestling['] with him?";
+	say "     Randy looks over your worked-out body with a different light in his eyes. 'You know, yer not half bad lookin['] after a workout... Pretty sexy, if you don't mind me sayin[']. Actually, if yer not too tuckered out, would you be interested in some, uh... Naked wrestling? It's kind of a popular pastime around here...' The rhino-man is blushing through his thick gray skin. Do you want to try some [']naked wrestling['] with him?";
 	if player consents:
 		say "[wrestlesex]";
 		if HP of Randy < 2, now HP of Randy is 2;

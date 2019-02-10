@@ -458,11 +458,11 @@ to say sandrasex2: [become bunny siblings]
 	else if rabbitsibling is 4:
 		say "     Presenting the carrot-shaped toy to Sandra, the rabbit girl quickly goes wide-eyed and flush.";
 		say "     'Oh my, it's... Perfect!' Grinning widely and still blushing, she takes it from you and wobbles it around enthusiastically. 'I sent you off to find something fun, but I didn't expect a treat like this!' After looking it over in greater detail, she begins to ponder for a moment before returning her attention to you.";
-		say "     'This is the best gift, but, hm, I wonder... Is it for me, or for you, [sangr]?' Grinning slyly at you, you imagine she'd greatly enjoy being rammed by the thing, but you could just as well be on the receiving end of it. Shall you be pitching the toy? Else you'll be catching it.";
+		say "     'This is the best gift, but, hm, I wonder... Is it for me, or for you, [sangr]?' Grinning slyly at you, you imagine she'd greatly enjoy being rammed by the thing, but you could just as well be on the receiving end of it. Shall you be pitching the toy? Otherwise, you'll be catching it.";
 		if player consents:
 			now rabbitsibling is 5;
 			say "     You make you intent clear by taking the oversized rod from Sandra, gesturing for her to lay down. Eagerly, she obliges, laying down to expose the excited, already-slick lips of her oversized cunt.";
-			say "     'Don't hold back, [sangr]. I can take it!' Considering your options, you could take the most obvious point of entry. Shall you? Else you'll surprise the rabbit girl by forcing it down her ass.";
+			say "     'Don't hold back, [sangr]. I can take it!' Considering your options, you could take the most obvious point of entry. Shall you? Otherwise, you'll surprise the rabbit girl by forcing it down her ass.";
 			if player consents:
 				say "     Carefully, you press the toy's orange, pointed tip between her supple folds, quickly slicked by her heady honey. The lady moans out softly as you begin, gently fondling her many tits as she's made to take each successive, ridged inch of the twisted carrot's substantive girth.";
 				say "     Throbbing pussy tightening around the intrusion, it nonetheless greedily obliges being so readily flooded by its increasingly wide girth. Watching her getting off as you begin to force the majority of its length in and out of her slick hole is more that enough to arouse yourself as well[if player is male], [cock size desc of player] cock[smn] standing hard, exposed to the open air[else if player is female], [cunt size desc of player] cunt[sfn] oozing down to stain the floor along with hers[else] in spite of your lack of outlet[end if].";
@@ -572,7 +572,7 @@ to say sandrasex5: [Post-transformation toy sex]
 	say "     '[one of]Oh boy[or]Mmm[or]Yes[or]Great[at random], [one of]let's get to planting this thing[or]time for some fun[or]time to bury the carrot[at random],[if rabbitsibling > 5] little[end if] [sangr]!' Giddy with anticipation, she ";
 	if rabbitsibling is 5:
 		say "hands you the thing before laying down to expose the excited, already-slick lips of her oversized cunt before you.";
-		say "     '[one of]Don't hold back[or]Ram it down[or]I can take it[at random]!' Considering your options, you could take the most obvious point of entry. Shall you? Else you'll surprise the rabbit girl by forcing it down her ass.";
+		say "     '[one of]Don't hold back[or]Ram it down[or]I can take it[at random]!' Considering your options, you could take the most obvious point of entry. Shall you? Otherwise, you'll surprise the rabbit girl by forcing it down her ass.";
 		if player consents:
 			say "     Carefully, you press the toy's orange, pointed tip between her supple folds, quickly slicked by her heady honey. The lady moans out softly as you begin, gently fondling her many tits as she's made to take each successive, ridged inch of the twisted carrot's substantive girth.";
 			say "     Throbbing pussy tightening around the intrusion, it nonetheless greedily obliges being so readily flooded by its increasingly wide girth. Watching her getting off as you begin to force the majority of its length in and out of her slick hole is more that enough to arouse yourself as well[if player is male], [cock size desc of player] cock[smn] standing hard, exposed to the open air[else if player is female], [cunt size desc of player] cunt[sfn] oozing down to stain the floor along with hers[else] in spite your lack of outlet[end if].";

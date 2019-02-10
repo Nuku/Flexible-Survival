@@ -121,6 +121,7 @@ to say beatFireSpriteguy:
 					say "[FireSpriteCunnilingus]";
 				else if title entry is "Blow job":
 					say "[FireSpriteBlowJob]";
+				wait for any key;
 		else:
 			say "Invalid Option.";
 
@@ -174,6 +175,7 @@ to say beatFireSpritegirl:
 					say "[FireSpriteCunnilingus]";
 				else if title entry is "Blow job":
 					say "[FireSpriteBlowJob]";
+				wait for any key;
 		else:
 			say "Invalid Option.";
 
@@ -190,7 +192,7 @@ to say FireSpriteMasturbate:
 		say "     Deciding to make use of the beaten sprite, you remove your gear and prepare for some fun. After sizing the little creature up, you decide your massive member is just too much for his tiny form. Endeavoring to make use of your little plaything, you press his entire body against your throbbing cock, stroking its entire length with his small, warm form. Soon the sprite has his arms wrapped around you, grinding his body against you as you use him to stroke yourself off. Through your combined efforts, your balls are soon tensing up in anticipation as you quickly approach climax, blowing your [cum load size of player] load into the air. As your cum showers down atop the sprite, you finally release him, basking in your afterglow as he scampers off while doing his best to shake off your sticky mess.";
 
 to say RideFireSpriteCock:
-	say "     Deciding to make use of the beaten sprite, you remove your gear and take a seat out on the ground. Pulling the little sprite towards your groin, you position his already firm prick in front of your hungry pussy and wrap your legs around his [if scalevalue of player > 1]small [end if]form, pulling his entire body against your crotch as you press his length into your slick slit. Your body fills with warmth as you envelope his orange flesh, and soon you begin rocking his entire body against your groin as you do your best to ride his [if scalevalue of player > 1]smaller [end if]form to climax, your spasming cunt gripping his warm member as his own climax sends powerful spurts of his warm seed deep within you. Releasing the sprite, you relax on the ground in the afterglow of your climax as he pulls out with a wet slurp, allowing some of his glowing orange semen and your own femcum to drool from your pussy as he scampers off.";
+	say "     Deciding to make use of the beaten sprite, you remove your gear and take a seat out on the ground. Pulling the little sprite towards your groin, you position his already firm prick in front of your hungry pussy and wrap your legs around his [if scalevalue of player > 1]small [end if]form, pulling his entire body against your crotch as you press his length into your slick slit. Your body fills with warmth as you envelop his orange flesh, and soon you begin rocking his entire body against your groin as you do your best to ride his [if scalevalue of player > 1]smaller [end if]form to climax, your spasming cunt gripping his warm member as his own climax sends powerful spurts of his warm seed deep within you. Releasing the sprite, you relax on the ground in the afterglow of your climax as he pulls out with a wet slurp, allowing some of his glowing orange semen and your own femcum to drool from your pussy as he scampers off.";
 
 to say FireSpriteCunnilingus:
 	if FireSpritemode is 0:

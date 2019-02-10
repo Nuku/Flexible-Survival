@@ -47,7 +47,7 @@ when play begins:
 
 Instead of resolving a Raiding Party:
 	say "     As you search through the junkyard, you can hear some cackling laughter coming closer as well as the sounds of an angry feline. There is a smack and the feline sounds are silenced with a whimper, but the cackling laughter gets louder. You can tell there are several people laughing and they're getting closer.";
-	say "     [bold type] Shall you stay and wait for them to see what's going on or shall you make your escape while you can?[roman type][line break]";
+	say "     [bold type]Shall you stay and wait for them to see what's going on or shall you make your escape while you can?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stay.";
 	say "     ([link]N[as]n[end link]) - Flee.";

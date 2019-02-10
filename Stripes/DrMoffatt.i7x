@@ -1,12 +1,12 @@
 Version 3 of DrMoffatt by Stripes begins here.
 [Version 2.2 - More Wereraptor responses]
-[Version 3 - Hypnosis path]
+[Version 3.0 - Hypnosis path]
 "Adds a Skunk Shemale NPC named Doctor Moffatt to the Flexible Survival game"
 
 Section 0 - Hypnosis variables
 
 [XP of doctor Moffatt chooses questline
-0 - not commited
+0 - not committed
 1 - skunk TF
 2 - hypnosis
 ]
@@ -147,7 +147,7 @@ to say drmoffattdesc:
 		say "     But as things go, those aren't the most striking features on the grayscale skunk. Her breasts are quite huge, each the size of a small watermelon. They have large, oversized nipples with areolae about three inches across. And to match their size are the huge globes of her balls, each roughly just as big as her breasts and with a giant missile of a cock to go along with them. While she wears a doctor's coat and a short skirt, they can do nothing to contain or conceal this skunk woman's hyper-sexualized body. She also has a pair of white gloves she wears over her hand-like paws.";
 		say "     Seeing you looking at her, she playfully [one of]leans across her desk, pushing her breasts out with her arms[or]runs a paw casually around one nipple[or]rubs her gloved paws down her very wide hips[or]gives her fluffy tail a swish[or]bends down to pick something up, flashing her rear and exposing her lack of pussy behind those huge balls[or]slowly runs a fingertip along the gray flesh of her cock[at random].";
 	else if level of Doctor Moffatt >= 1 and level of Doctor Moffatt <= 3:
-		say "     Doctor Moffatt, your new friend, has a very striking appearance. Her pretty face has a slightly masculine look to it, but her lips are full, luscious and black in color like her nose and hair. Her fur is a mix of grays, dark and light, instead of the starker contrast of black and white you'd expect on a skunk. She has a huge, fluffy tail, as long as she is tall and as wide as her hips. You feel the odd urge to pet and plunge your face into it. And those hips are quite wide indeed. The skunk's hips and ass are quite wide and womanly, continuing down to her thick thighs. They would feel so right against your [if male]hips[else]crotch[end if].";
+		say "     Doctor Moffatt, your new friend, has a very striking appearance. Her pretty face has a slightly masculine look to it, but her lips are full, luscious and black in color like her nose and hair. Her fur is a mix of grays, dark and light, instead of the starker contrast of black and white you'd expect on a skunk. She has a huge, fluffy tail, as long as she is tall and as wide as her hips. You feel the odd urge to pet and plunge your face into it. And those hips are quite wide indeed. The skunk's hips and ass are quite wide and womanly, continuing down to her thick thighs. They would feel so right against your [if player is male]hips[else]crotch[end if].";
 		say "     But as things go, those aren't the sexiest features on the grayscale skunk. Her breasts are quite huge, each the size of a small watermelon. They have large, oversized nipples with areolae about three inches across, inviting you to play with them. And to match their size are the huge globes of her balls, each roughly just as big as her breasts and with a giant missile of a cock to go along with them; your mouth waters at the sight. While she wears a doctor's coat and a short skirt, they can do nothing to contain or conceal this skunk woman's hyper-sexualized body. She also has a pair of white gloves she wears over her hand-like paws.";
 		say "     Seeing you looking at her, she playfully [one of]leans across her desk, pushing her breasts out with her arms[or]runs a paw casually around one nipple[or]rubs her gloved paws down her very wide hips[or]gives her fluffy tail a swish[or]bends down to pick something up, flashing her rear and exposing her lack of pussy behind those huge balls[or]slowly runs a fingertip along the gray flesh of her cock[at random]. You give back a smile, the display having quite the effect on you.";
 		increase libido of player by 5;

@@ -1,7 +1,7 @@
 Version 1 of Satyress by Wahn begins here.
 [Version 1 - New Creature]
 
-"Adds a Satyress to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Satyress to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 

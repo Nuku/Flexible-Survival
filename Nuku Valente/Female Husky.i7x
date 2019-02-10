@@ -109,6 +109,7 @@ to say fhuskybeaten:
 					say "[fhuskybeaten_03]";
 				else if nam is "Lick her cunt":
 					say "[fhuskybeaten_04]";
+				wait for any key;
 		else if calcnumber is 0:
 			if libido of player > humanity of player:
 				say "     You want to let her go, but your aroused body and nanite-addled mind are far too gone to allow it!";
