@@ -215,7 +215,7 @@ the sarea of Dropped Handbag is "Allzones".
 
 Instead of resolving a Dropped Handbag:
 	say "     Passing through the city, you find a dropped handbag with torn scraps of clothes around it. Given the messy stains on the torn dress, it seems whoever owned the bag met a rather sticky fate.";
-	say "     [bold type] Do you want to search it? It doesn't seem like they'll be needing it anymore.[roman type][line break]";
+	say "     [bold type]Do you want to search it? It doesn't seem like they'll be needing it anymore.[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";

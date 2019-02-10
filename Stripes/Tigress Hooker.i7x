@@ -91,7 +91,7 @@ to say losetotigress:
 			let diceroll be a random number from 1 to 125; [lust check vs 125]
 			if diceroll < libido of player:
 				say "     As the tigress finally moves hir head back, shi smiles up at you. You smile back at hir dazedly, still woozy in the blissful haze of the afterglow, but still feeling quite horny.";
-				say "     [bold type] Eyeing hir lustfully, your gaze flips back and forth between hir penis and hir vagina as you struggle to choose which you want most.[roman type][line break]";
+				say "     [bold type]Eyeing hir lustfully, your gaze flips back and forth between hir penis and hir vagina as you struggle to choose which you want most.[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Penis.";
 				say "     ([link]N[as]n[end link]) - Vagina.";
@@ -315,7 +315,7 @@ to say beattigress:
 			let diceroll be a random number from 1 to 125; [lust check vs 125]
 			if diceroll < libido of player:
 				say "     Having gotten good and wound up after that, you feel you're still ready for more. As you look over the tigress, you try to decide what you want to use hir for next.";
-				say "     [bold type] Eyeing hir lustfully, your gaze flips back and forth between hir penis and hir vagina as you struggle to choose which you want most.[roman type][line break]";
+				say "     [bold type]Eyeing hir lustfully, your gaze flips back and forth between hir penis and hir vagina as you struggle to choose which you want most.[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Penis.";
 				say "     ([link]N[as]n[end link]) - Vagina.";

@@ -221,7 +221,7 @@ to say ZoeGoodFuckMenu:
 		now description entry is "Tell Zoe you want her to use her strap-on";
 	else if Loyalty of Zoe >= 8:
 		choose a blank row in table of fucking options;
-		now title entry is "*Strap-on - Locked*";
+		now title entry is "*Pegging - Locked*";
 		now sortorder entry is 3;
 		now description entry is "You do not fill the conditions: having a vagina, and allowing anal content";
 	[]
@@ -278,7 +278,7 @@ to say ZoeGoodFuckMenu:
 					say "[ZoeSexZoeChoice]";
 				if nam is "Anal":
 					say "[ZoeSexAnal]";
-				if nam is "Strap-on":
+				if nam is "Pegging":
 					say "[ZoeSexPeg]";
 				if nam is "Roleplay (sub)":
 					say "[ZoeSexRPSub]";
@@ -487,7 +487,7 @@ an everyturn rule:
 		if TimekeepingVar is 3 or TimekeepingVar is -5: [evening]
 			move Zoe to Makeshift Rec Room;
 			if player is in Makeshift Rec Room:
-				say "     'You hear the quiet sound of bare, pawed feet slide on the rec room's linoleum, followed by Zoe's girly voice greeting you[if Nala is booked] and Nala[end if].'Hey, there. How was your day?' She puts down her bag in her corner of the room and takes a moment to throw her empty paint cans away, replacing them by new one. After that, she disappears behind her screen, and you hear the [italic type]thump[roman type] of her lithe body fall on her cot.";
+				say "     'You hear the quiet sound of bare, pawed feet slide on the rec room's linoleum, followed by Zoe's girly voice greeting you[if Nala is booked] and Nala[end if]. 'Hey, there. How was your day?' She puts down her bag in her corner of the room and takes a moment to throw her empty paint cans away, replacing them by new one. After that, she disappears behind her screen, and you hear the [italic type]thump[roman type] of her lithe body fall on her cot.";
 		else if TimekeepingVar is 7 or TimekeepingVar is -1: [early morning]
 			move Zoe to Nowhere;
 			now XP of Zoe is 1; [Reset item scavenging]

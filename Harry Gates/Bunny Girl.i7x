@@ -28,7 +28,7 @@ Bunny_Girl_gene is an infection gene. The tf table of Bunny_Girl_gene is Table o
 
 Gene_attack of Bunny_Girl_gene is {lay,claw,bite};
 
-The pdesc of Bunny_Girl_gene is "You are a sexy female anthro rabbit with soft white fur. You have large double-D cup breasts with visible dusty pink nipples. You have wide hips, showcasing your swollen female sex, which is very damp, especially when you are about to lay an egg.[if entry 4 of the body of the player is Bunny_Girl_gene]  Your womb is full of eggs, making you look about four months pregnant.[end if]".
+The pdesc of Bunny_Girl_gene is "You are a sexy female anthro rabbit with soft white fur. You have large double-D cup breasts with visible dusty pink nipples. You have wide hips, showcasing your swollen female sex, which is very damp, especially when you are about to lay an egg.[if entry 4 of the body of the player is Bunny_Girl_gene] Your womb is full of eggs, making you look about four months pregnant.[end if]".
 
 The npcdesc of Bunny_Girl_gene is "This is an anthropomorphic bunny girl, her teeth bared and sharp claws ready to strike, laying eggs to share with all!".
 

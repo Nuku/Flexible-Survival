@@ -76,7 +76,7 @@ Instead of resolving DogHouse:
 			WaitLineBreak;
 			if player consents:
 				say "Feeling rather frisky yourself you make a move closer over to the Dalmatian to settle one seat below her. With hir eyes more focused onto the show happening inside of the cage and everyone's focus more on it than you, you able to move yourself into the necessary position to bury your [facename of player] nose into the wet folds of the Dal herm's snatch. Sniffing over the wet and musky heat of the other you find your own loins tightening as the musky scent of both [']male['] and [']female['] sends your mind for a whirl.";
-				say "     [bold type] Noticing the dripping cock up above your face you slyly smirk as you decide to have your way with the Dal.[roman type][line break]";
+				say "     [bold type]Noticing the dripping cock up above your face you slyly smirk as you decide to have your way with the Dal.[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Cock.";
 				say "     ([link]N[as]n[end link]) - Pussy.";
@@ -252,7 +252,7 @@ to say defeatedbywolf:
 	say "'Having a rough one there, are we?' The Dobie asks while helping you to stand up onto your feet. Shrugging and then grunting from the mess on your body you're not quite prepared for the unnamed Doberman to lick you across the face in a slobbery lick. 'No worries though, I cleared the way for you out in front so if you were going to make a run for it, then now would be a good time.' Asking the other just exactly who he is you find the Dobie giving you another slobbery kiss across the cheek before winking at you suddenly. 'The name's Tyr, and I appreciate what you did for Birch back there. I know you came to rescue him so I let the sodder know that he needs to get his butt back to the firehouse sooner, rather than later, so no worries on that part.";
 	WaitLineBreak;
 	say "Startled by this revelation you ask how the Dobie knew about you. His answer turns out to be... 'Let's just say that Homaru and I go back a ways. Anyway, for being such a good chap my door is open to you. I live on the edge of the high rise, well closer to the park than the high rise, if you want to be persnickety about things, so if you ever feel like getting down and dirty with a Dobie then just let me know. I'll shag you good and proper.' And with that the Doberman takes off back the way to where there was a now a lot of shouting and barking and other assorted verbal commotions going on inside of the warehouse.";
-	say "     [bold type] Looking to the path Tyr had just taken and then turning to note your way out, you wonder which would be better for you to take?[roman type][line break]";
+	say "     [bold type]Looking to the path Tyr had just taken and then turning to note your way out, you wonder which would be better for you to take?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Leave.";
 	say "     ([link]N[as]n[end link]) - Help fight.";

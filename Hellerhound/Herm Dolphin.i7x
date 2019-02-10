@@ -1,7 +1,7 @@
 Version 1 of Herm Dolphin by Hellerhound begins here.
 [Version 1.1 - Alt attack tweaked - Stripes]
 
-"Adds a dolphin to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a dolphin to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 when play begins:
 	add {"Hermaphrodite Dolphin"} to infections of furry;

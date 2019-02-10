@@ -190,7 +190,7 @@ to theserpentchecks: [Invocation of validation for TBM scene]
 to say beatthesnake:
 	if snakesubm is 0:
 		say "     The snake's down for the count, too weak to contend your will.";
-		say "     [bold type] It's a curious thing, should you inspect it more closely?[roman type][line break]";
+		say "     [bold type]It's a curious thing, should you inspect it more closely?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";

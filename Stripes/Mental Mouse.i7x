@@ -1,7 +1,7 @@
 Version 2 of Mental Mouse by Stripes begins here.
 [Version 2.1 - Alt Attack tweaked]
 
-"Adds a Mental Mouse creature to Flexible Survival's Wandering Monsters table with impregchance"
+"Adds a Mental Mouse creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

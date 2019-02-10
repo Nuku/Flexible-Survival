@@ -2,7 +2,7 @@ Version 11 of Small Feline and Lion by Damaged begins here.
 [ Version 11.1 - Matronly Lioness content]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Small Feline and Lion to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Small Feline and Lion to Flexible Survival's Wandering Monsters table, with impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -444,7 +444,7 @@ When Play begins:
 	now trigger text entry is "";  [ This is the text that is written to the screen when the player comes into heat]
 	now description text entry is ""; [ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
 	now heat start entry is ""; [this is a to say block that causes things to happen when the player enters heat. for example: the GSD sex grows wider. Delete entire line if you wish nothing to happen.]
-	now heat end entry is "[feline heat end]"; [this is the same as heat start only it's for ending the cycle. GSD her sex is reduced back to it's previous size. Delete entire line if you wish nothing to happen. ]
+	now heat end entry is "[feline heat end]"; [this is the same as heat start only it's for ending the cycle. GSD her sex is reduced back to its previous size. Delete entire line if you wish nothing to happen. ]
 	now inheat entry is "[feline heat]";
 
 ]

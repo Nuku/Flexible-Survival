@@ -1,7 +1,7 @@
 Version 1 of Orc Researcher by Luneth begins here.
 
 
-Section 1- Orc Researcher
+Section 1 - Orc Researcher
 
 Table of GameEventIDs (continued)
 Object	Name

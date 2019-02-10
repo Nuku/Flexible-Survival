@@ -2,7 +2,7 @@ Version 3 of Random Shemale Smooth Collie by Guest Writers begins here.
 [Version 3.4 - Player loss oral and player victory vaginal/anal ride added - Stripes]
 [- Originally Authored By: Voldine -]
 
-"Adds a Shemale Smooth Collie to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Shemale Smooth Collie to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 when play begins:
 	add { "Shemale Smooth Collie" } to infections of transgender;

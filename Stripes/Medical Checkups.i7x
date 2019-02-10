@@ -150,8 +150,8 @@ instead of conversing the Doctor Medea:
 			say "[Medeaadjustments]";
 		else if HP of Doctor Medea is 6:
 			if player is mpreg_ok:
-				say "     'You are currently able to carry a male pregnancy.";
-				say "     [bold type]Would you like me to remove that ability?' the lizard doctor asks.[roman type][line break]";
+				say "     'You are currently able to carry a male pregnancy.'";
+				say "     [bold type]'Would you like me to remove that ability?' the lizard doctor asks.[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
@@ -166,8 +166,8 @@ instead of conversing the Doctor Medea:
 					LineBreak;
 					say "[Medeaadjustments]";
 			else if player is not mpreg_ok:
-				say "     'You are currently unable to carry a pregnancy as a male.";
-				say "     [bold type] Would you like me to grant you the ability to become pregnant as a male?' she asks.[roman type][line break]";
+				say "     'You are currently unable to carry a pregnancy as a male.'";
+				say "     [bold type]'Would you like me to grant you the ability to become pregnant as a male?' she asks.[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Yes.";
 				say "     ([link]N[as]n[end link]) - No.";
@@ -453,8 +453,8 @@ to say Medeaadjustments:
 							say "     'Oh, have you witnessed or experienced that before? There are indeed several the creatures in the city which have responded to their transformation by becoming egg-layers or impregnating their lovers with eggs. It is especially common in reptiles and birds,' the lizard doctor says with a smile, 'though I wouldn't be surprised to find a few others out there doing it. I've had a few egg-laying patients and have had a chance to examine their alterations. With my added equipment, if you'd like, I'd be able to alter your womb to be like theirs and bear eggs whenever you get pregnant.";
 							now ovipregMedeatalk is true;
 						else:
-							say "     'Oh, have you reconsidered becoming an egg-bearer? I could alter your womb so you lay eggs instead of live young.";
-						say "     [bold type] Doesn't that sound delightful?' she says with an eager smile on her reptilian face.[roman type][line break]";
+							say "     'Oh, have you reconsidered becoming an egg-bearer? I could alter your womb so you lay eggs instead of live young.'";
+						say "     [bold type]'Doesn't that sound delightful?' she says with an eager smile on her reptilian face.[roman type][line break]";
 						LineBreak;
 						say "     ([link]Y[as]y[end link]) - Have your womb altered.";
 						say "     ([link]N[as]n[end link]) - No thanks.";
@@ -680,7 +680,7 @@ to say Medeapandafight:
 	now inasituation is false;
 	if fightoutcome >= 10 and fightoutcome <= 19:
 		say "     Once you've gotten her worn down a little, you maneuver her with a few feints. Once in position, you shove her back into the birthing chair. She gives an indignant groan and makes a grab for you, but then clutches her belly as the baby kicks.";
-		say "     [bold type] With labor fully upon her, it's either time for you to decide if you'll stay and watch the event or wait outside.[roman type][line break]";
+		say "     [bold type]With labor fully upon her, it's either time for you to decide if you'll stay and watch the event or wait outside.[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Stay and watch the event.";
 		say "     ([link]N[as]n[end link]) - Wait outside.";

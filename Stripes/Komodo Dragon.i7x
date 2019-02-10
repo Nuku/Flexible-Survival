@@ -66,7 +66,7 @@ to say losetokomododragon:
 to say beatthekomododragon:
 	if player is male:
 		say "     Having defeated the reptilian brute, you knock him to the ground and leap onto him, keeping him pinned down while you decide what to do with him. He tries to struggle weakly, but you have worn him down enough that he can't push you off. Feeling [if libido of player < 33]a bit[else if libido of player < 67]rather[else]considerably[end if] aroused after the fight, you find yourself tempted to turn the tables on him and use him for some relief. Not wanting that poisonous mouth filled with serrated teeth anywhere near your junk, that leaves you considering fucking him.";
-		say "     [bold type] Shall you mount him or just let him go?[roman type][line break]";
+		say "     [bold type]Shall you mount him or just let him go?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Mount him.";
 		say "     ([link]N[as]n[end link]) - Let him go.";

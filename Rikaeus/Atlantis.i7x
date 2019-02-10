@@ -175,7 +175,7 @@ The description of Royal Palace Entrance is "[RoyalPalace]".
 earea of Royal Palace Entrance is "Atlantis".
 
 to say RoyalPalace:
-	say "     The entrance to the royal palace of Atlantis is, in your opinion, the most beautiful thing in the world. It's appears to be made of dark blue stone and sapphire gems. The gates to the north are guarded by a couple of mermaid and merman guards, though they appear to be unconcerned about you, as if they were allowing you to go ahead. To the south of the palace is the center of the city.";
+	say "     The entrance to the royal palace of Atlantis is, in your opinion, the most beautiful thing in the world. It appears to be made of dark blue stone and sapphire gems. The gates to the north are guarded by a couple of mermaid and merman guards, though they appear to be unconcerned about you, as if they were allowing you to go ahead. To the south of the palace is the center of the city.";
 
 Royal Throne Room is north of Royal Palace Entrance.
 
@@ -218,7 +218,7 @@ instead of going west from Sunken Ship while FirstAtlantisVisit is 0 and Poseido
 
 instead of going to Royal Palace Entrance while PoseidonRelationship is 2:
 	say "     Upon approaching the royal residence of the leader of this city, you are beset upon by two guards. 'Halt! You must be the person that King Poseidon is looking for,' one says, his stance firm, showing that he's going to hold his ground. You tilt your head curiously at them wondering what they're talking about. However, before you can voice your questions, the two step apart and gesture for you to continue on in. Shrugging your shoulders, you continue on into the palace. You soon come to a gorgeous throne room with a sapphire throne whose design could simply pass as a dining chair if the back and armrests weren't so high. Sitting on that seat is a familiar face, the merman you followed to this city, and the king of the place, Poseidon. Upon seeing you the man appears to be rather happy.";
-	say "     'It's you! Perfect,' he says, standing up from his chair. You promptly ask the man why he is so intrigued by you, which causes a laugh to come from him. 'Well, simply put, it's because you past my test,' he says, shrugging his shoulders as if it explained everything. You don't recall taking any kind of exam so you vocally request for him to explain. 'The fake trident, getting it was a trial to see if someone was eligible to be my spouse,' he tells you, making your mouth fall open in shock. Before you can regain your composure the kingly man asks you a question. 'Would you allow me to court you?' he asks. Figuring that you better answer now, you do.";
+	say "     'It's you! Perfect,' he says, standing up from his chair. You promptly ask the man why he is so intrigued by you, which causes a laugh to come from him. 'Well, simply put, it's because you passed my test,' he says, shrugging his shoulders as if it explained everything. You don't recall taking any kind of exam so you vocally request for him to explain. 'The fake trident, getting it was a trial to see if someone was eligible to be my spouse,' he tells you, making your mouth fall open in shock. Before you can regain your composure the kingly man asks you a question. 'Would you allow me to court you?' he asks. Figuring that you better answer now, you do.";
 	say "     [bold type]Do you want to accept the courtship?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Sure, why not, it sounds fun.";

@@ -161,9 +161,9 @@ instead of conversing the Team Captain Roman:
 				if nam is "Laundry":
 					if laundryProgress is 0:
 						say "[GorillaLaundryService1]";
-					else if laundryProgress is 2:
+					else if laundryProgress is 1:
 						say "[GorillaLaundryService2]";
-					else if laundryProgress is 3:
+					else if laundryProgress is 2:
 						say "[GorillaLaundryService3]";
 					else:
 						say "[GorillaLaundryRepeat]";
@@ -261,7 +261,7 @@ to say RomanConvince:
 		say "     Roman sighs. 'Okay. Just... Come here a minute.' The gorilla leads you to the same, isolated place than last time.";
 		say "     'It happened at the start of this whole mess. I had been already turned into an ape by then. I was strolling the city, curious about how it looked like outside and, and I got ambushed. Some crazy husky male ambushed me. Then, he knocked me out, and had me raped by his pack of bitches again, and again, for fun. It was not enough to turn me into a dog, but it was well enough to make my bits shrink, and eventually be replaced by this.' Roman gestures at his padded shorts. 'They mocked me all the way until I turned into a woman down there. It was not pleasant, to say the least. And I just can't confront the guys about it. I... You see them. [if player is female]You see the lewd looks they give you because of your lady parts. [end if]If they learn, they will throw me out; or worse.'";
 		say "     The large primate wipes a tear which was beginning to form in the corner of his left eye. 'So, now you're on the page. You know, it feels kinda good to let it out, to someone you can trust.' Roman gives you a warm smile. 'And, who knows. When there will be enough women and herms in the team, their look will change, and I'll be able to loose the shorts. But for now, I trust you with this. Don't let me down, buddy.'";
-		say "     Roman parts from you, and you feel that you are at a crossroad. You could try to talk more to Rohan, and [bold type]encourage him to come out[roman type] on his own terms, helping him find closure. You could let your inner sadist loose, go to the locker-room, [bold type]divulge the captain's secret with the team[roman type], and enjoy the ensuing torment. The choice is yours.";
+		say "     Roman parts from you, and you feel that you are at a crossroad. You could try to talk more to Roman, and [bold type]encourage him to come out[roman type] on his own terms, helping him find closure. You could let your inner sadist loose, go to the locker-room, [bold type]divulge the captain's secret with the team[roman type], and enjoy the ensuing torment. The choice is yours.";
 		now HP of Roman is 3;
 	else:
 		say "     'We already talked about it: I don't trust you enough to tell you about it. Please let it go,' Roman replies to your query.";

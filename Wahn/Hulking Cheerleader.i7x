@@ -1,7 +1,7 @@
 Version 2 of Hulking Cheerleader by Wahn begins here.
 [Version 2.2 - Endings fixed up]
 
-"Adds a Hulking Cheerleader to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Hulking Cheerleader to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 when play begins:
 	add { "Hulking Cheerleader" } to infections of Transgender; [Futanari]

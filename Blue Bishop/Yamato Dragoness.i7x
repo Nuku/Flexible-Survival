@@ -2,7 +2,7 @@ Version 5 of Yamato Dragoness by Blue Bishop begins here.
 [ Version 5 - Player victory - Blue Bishop]
 [- Originally Authored By: Kohryu -]
 
-"Adds a Yamato Dragoness to Flexible Survival's Wandering Monsters table, with Impreg chance"
+"Adds a Yamato Dragoness to Flexible Survival's Wandering Monsters table, with impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -529,7 +529,7 @@ to say YamatF_3: [oral receiving cock]
 		say "     '[one of]Hmm[or]There[or]It is done[at random], [one of]I am sure you are satisfied[or]there is nothing more I can do for you[or]and now I depart[at random].' Thick tongue licking and remaining trace of your bliss clean of you, the serpent eventually turns to fly off into the distance, leaving you to catch your breath and go about your business once more.";
 
 to say YamatF_4: [oral receiving cunt]
-	say "     Making your decision, the dragoness looms closely over your [if scalevalue of player < 5]significantly[else]slightly[end if] smaller, [bodytype of player] form, carefully helping you to reveal your assets before her until your [cunt size desc of player], partially aroused dick[if cunts of player > 1]s are[else] is[end if] exposed before her piercing gaze.";
+	say "     Making your decision, the dragoness looms closely over your [if scalevalue of player < 5]significantly[else]slightly[end if] smaller, [bodytype of player] form, carefully helping you to reveal your assets before her until your [cunt size desc of player], partially aroused cunt[sfn] [isfv] exposed before her piercing gaze.";
 	say "     '[one of]Hm[or]Yes[or]Very well[at random], [one of]this should be simple[or]such a paltry task[or]I hope this will satisfy you[at random]...' Large, thick tongue escaping her lips as she speaks, the slick, flexible thing has no trouble engulfing your crotch, puss[yfn] completely buried under the writhing, pink flesh.";
 	say "     Her constant, unblinking gaze fixated on you, your [if scalevalue of player < 4]entire body[else]torso[end if] is bathed in her steamy breath, lower half disappearing under her scaled snout as her lips hilt against your crotch. As large as the serpent is, she seems extraordinarily dexterous with her tongue, able to squeeze and worm her way into your hole[sfn] with [if cunt length of player > 19]considerable[else]relative[end if] ease.";
 	if player is male:

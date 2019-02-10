@@ -5443,7 +5443,7 @@ To startgenderlockshift:
 	now glshiftstart is 1;
 	if gsgl < 2 and glstart is 1:
 		say "You chose to start as your gender lock option, but have not selected one. Would you like to do so now?";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Choose a gender lock.";
 		say "     ([link]N[as]n[end link]) - Start game without lock.";
 		if player consents:

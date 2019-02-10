@@ -2,7 +2,7 @@ Version 2 of Hermaphrodite Latex Vixen by Guest Writers begins here.
 [Version 2.0 - Updated player victory to sex table options w/option to fuck her pussy - Stripes]
 [- Originally Authored By: TentaBear -]
 
-"Adds a Hermaphrodite Latex Vixen to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Hermaphrodite Latex Vixen to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 

@@ -23,7 +23,7 @@ Instead of resolving FindingKristen:
 		say "ERROR-Kristen-[HP of Kristen]E: This event should already be resolved!";
 	else:
 		say "     While traveling through the city, you hear a bit of commotion coming from down a side street. At first you're going to just let it go, but you catch sight of a rather human-looking woman rushing past the far end of the alleyway, soon followed by an eager ewe. You wonder if your eyes are playing tricks on you or if she might have an infection that's passably human at first glance.";
-		say "     [bold type] Shall you charge to the rescue and hope for the best?[roman type][line break]";
+		say "     [bold type]Shall you charge to the rescue and hope for the best?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";

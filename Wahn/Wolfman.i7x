@@ -1,7 +1,7 @@
 Version 2 of Wolfman by Wahn begins here.
 [ Version 2.2 - Relocated to College Campus area. ]
 
-"Adds a team of football wolfmen to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a team of football wolfmen to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 [ HP states of Septus                                                ]
 [ 100: Starting State                                                ]
@@ -1045,7 +1045,7 @@ to say CheerleaderTryout2:
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Dexterity-Check)";
 	increase diceroll by bonus;
-	say "     [line break][line break]";
+	LineBreak;
 	if diceroll > 16:
 		say "     Really showing off what you can do, you perform several difficult moves in front of the cheering (and leering, in case of the wolfmen) crowd. When you finish your demonstration some ten minutes later, Jennifer comes up to you and hands you a towel to wipe the sweat off your naked body. 'You've sure got a lot of potential. You're in - provisionally for now - come join me for training sometime and I'll teach you the moves and everything else you need to know.'";
 		now HP of Septus is 50;
@@ -1072,7 +1072,7 @@ to say CheerleaderPractice:
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Charisma-Check)";
 			increase diceroll by bonus;
-			say "     [line break][line break]";
+			LineBreak;
 			if diceroll > 16:
 				say "     Nodding to Jennifer, you saunter over towards the wolfman with the number 10 shown in red fur across his front and back. Donning your most seductive smile and doing some... stretches that show off your body to him, it doesn't take long till the conversation grinds to a halt, with Decimus whole attention riveted to your naked form and his cock quickly growing to full erection. As the horny wolfman gives a distracted excuse to his buddy and starts walking towards you, Jennifer steps up beside you and puts a hand on your shoulder. 'Very well done! I knew you could charm his socks off. Look at how hard you made him.' Giving the approaching wolfman's body a lust-filled look, she says 'You passed - now it's time to deal with the aftermath. Can't let our players get blue-balled, you know. Do you want to relieve him of some pressure, or should I?'";
 				LineBreak;
@@ -1205,7 +1205,7 @@ when play ends:
 	else:
 		if humanity of player > 10:
 			if HP of Septus is 5: [beat the entrance test, was at the lair]
-				say "     Even if you didn't become a wolfman yourself and join the team, Septus, Jennifer and the others are still very impressed with you. When the creation of the 'Shifted American Football League' is announced several months after you leave the city, you get invited to the first game, joining the players in the lockerroom and watching the action right from the side of the field. As a honorary member, you get a free lifetime ticket for their games and are always welcome in the player areas and at celebrations... which usually turn into orgies between the wolfmen and their cheerleaders sooner or later.";
+				say "     Even if you didn't become a wolfman yourself and join the team, Septus, Jennifer and the others are still very impressed with you. When the creation of the 'Shifted American Football League' is announced several months after you leave the city, you get invited to the first game, joining the players in the lockerroom and watching the action right from the side of the field. As an honorary member, you get a free lifetime ticket for their games and are always welcome in the player areas and at celebrations... which usually turn into orgies between the wolfmen and their cheerleaders sooner or later.";
 				if Jenniferwolves > 1:
 					say "     Your sons with Jennifer prove to be excellent players in their own right, making it into the top teams of the new sport. You're very proud every time you see one of them out on the field.";
 				else if Jenniferwolves is 1:

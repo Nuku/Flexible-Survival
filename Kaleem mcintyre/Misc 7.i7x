@@ -83,7 +83,7 @@ Instead of Resolving a Runaway:
 	say "     'I ran away from home and found my way coming here. Why do you ask?' You blink at the freckled youth and then ask him if he has actually noticed what's going on around the city as of late. 'Oh...the stuff with the [']deadly['] outbreak? Yeah everyone on the outside knows about it. That's one of the reasons I came here. Nobody would think to look for me out here.' The young man then lowers his head somewhat to let his long shaggy black mane of hair cover his youthful face. 'My folks found out that I'm gay and got on my case pretty bad about it. Since there's a plague or virus or whatever going on around here I figured that this would be the best place to go to since home has just gotten unbearable. Heh, what better place to come for someone who's [']confused['] about their sexuality, right?' the young man scoffs disdainfully.";
 	WaitLineBreak;
 	say "     It takes you a minute to think about it, but once you do you find yourself shrugging somewhat at the other's cleverness... or insanity. 'Say, what's it like... you know... getting fucked by the mutants running around here?' The youth's question catches you off guard for a second as you really had never thought about it on a personal, introspective level before.";
-	say "     [bold type] But after getting yourself back together mentally, you really come to think about it for a moment.[roman type][line break]";
+	say "     [bold type]But after getting yourself back together mentally, you really come to think about it for a moment.[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Real good.";
 	say "     ([link]N[as]n[end link]) - Bad.";

@@ -1,7 +1,7 @@
 Version 1 of Ares by Wahn begins here.
 [Version 1 - Ares moved to his own file]
 
-"Adds a human dog with sexy scenes Flexible Survival, With Impreg chance"
+"Adds a human dog with sexy scenes Flexible Survival, with impreg chance"
 
 Section 1 - Dog-Walking Event
 

@@ -114,7 +114,7 @@ The sarea of Ambulance Dock is "Hospital".
 
 Instead of resolving a Ambulance Dock:
 	say "     Most of the ambulances are out of the special parking entrance. The only one here has been crashed into the dock. Stepping over to it, you look in the open back. Unsurprisingly, there is a huge, sticky mess in there. Presumably the last patient they picked up jumped the response team for sex as they were returning to the hospital. You consider searching in there for something that could still be usable, but it seems like a risky venture.";
-	say "     [bold type] Do you proceed?[roman type][line break]";
+	say "     [bold type]Do you proceed?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -947,7 +947,7 @@ instead of going to Primary Lab while hospquest is 11:		[heading to the main lab
 		say "[posttlscene]";
 	else:									[Dr Matt physically there]
 		say "     You enter the lab and take stock of the enhancement device you've been sent to collect. Dr. Matt does not appear to have noticed you quite yet, buried in more work. You slip the syringe from your pocket and look at it, considering what to do next.";
-		say "     [bold type] Shall you inject Dr Matt?[roman type][line break]";
+		say "     [bold type]Shall you inject Dr Matt?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Inject.";
 		say "     ([link]N[as]n[end link]) - Talk.";
@@ -1537,7 +1537,7 @@ the scent of the lava lamp is "[smellingthelavalamp]".
 to say smellingthelavalamp:
 	if lavalamplick is 0:
 		say "     You sniff the improvised lava lamp dildo. It smells strongly of the triceratops woman's arousing scent. You find yourself tempted to lick it.";
-		say "     [bold type] Do you follow your urges?[roman type][line break]";
+		say "     [bold type]Do you follow your urges?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -1557,7 +1557,7 @@ to say smellingthelavalamp:
 instead of using lava lamp:
 	if lavalamplick is 0:
 		say "     You look at the improvised lava lamp dildo. It smells strongly of the triceratops woman's arousing scent. You find yourself tempted to lick it.";
-		say "     [bold type] Do you follow your urges?[roman type][line break]";
+		say "     [bold type]Do you follow your urges?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";

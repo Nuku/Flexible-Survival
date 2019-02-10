@@ -1,7 +1,7 @@
 Version 2 of Wildcat by Stripes begins here.
 [Version 2.1 - Tweaks to loss scene probabilities - Stripes]
 
-"Adds a Wildcat creature to Flexible Survival's Wandering Monsters table with impregchance"
+"Adds a Wildcat creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

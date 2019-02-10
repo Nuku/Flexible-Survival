@@ -2,7 +2,7 @@ Version 2 of Goblin by Blue Bishop begins here.
 [Version 2.3 - Commissioned Player Loss Facelift]
 [ - This creature was originally created by Stripes and has since been relocated to Blue Bishop's folder after substantial overhauls - ]
 
-"Adds a Goblin creature to Flexible Survival's Wandering Monsters table with impregchance"
+"Adds a Goblin creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 

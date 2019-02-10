@@ -51,7 +51,7 @@ to say fsdf attack:
 		if HP of player > 0 and FSDOPEN is 0:
 			say "     You immediately throw up your arms and lower your guard, showing you don't wish to fight. [one of]She yields, regarding your demeanor with a soft chirp before advancing towards you. She curiously noses you before giving you a hearty, wet lick.[run paragraph on] The dizzying scent of fish and seawater nearly overwhelms you[or]She's a bit unsure of this turn of events but, eventually, she advances to sniff you over, regarding you with an inquisitive affection[at random]. She uses her teeth to pull any attire from you might have once had, offering some illumination on her plans for you.";
 		else if FSDOPEN is 0:
-			say "     Having enough of this fight, her head lunges towards you, maw agape only to grab a your [bodytype of player] body[if scalevalue of player < 4], engulfing your head and most of your upper torso within her slimy maw.[run paragraph on] You half expect her to swallow you whole before she lifts her head back up and spits you out, throwing your now saliva-soaked form across the beach and knocking you unconscious[else]. Her teeth are at least not biting down strong enough to really hurt you, but she nonetheless starts flailing you around in a display of fierce abandon until she flings you back onto the ground with enough for you knock you right out[end if]. When you come to you can feel the warm sea air across your exposed form, the beast having already relinquished you of your attire. She regards you with a cheerful chirp, now more than happy to treat her victim with affection when they're too weak to fight back.";
+			say "     Having enough of this fight, her head lunges towards you, maw agape, only to grab your [bodytype of player] body[if scalevalue of player < 4], engulfing your head and most of your upper torso within her slimy maw.[run paragraph on] You half expect her to swallow you whole before she lifts her head back up and spits you out, throwing your now saliva-soaked form across the beach and knocking you unconscious[else]. Her teeth are at least not biting down strong enough to really hurt you, but she nonetheless starts flailing you around in a display of fierce abandon until she flings you back onto the ground with enough for you knock you right out[end if]. When you come to you can feel the warm sea air across your exposed form, the beast having already relinquished you of your attire. She regards you with a cheerful chirp, now more than happy to treat her victim with affection when they're too weak to fight back.";
 		if bodyname of player is "Feral Sea Dragon" or bodyname of player is "Feral Sea Dragoness":
 			if player is submissive:
 				if a random chance of fsddom in 9 succeeds:
@@ -663,7 +663,7 @@ to fsdfvore:
 						follow the turnpass rule;
 				else if boundsegment is 1:
 					if struggleatt < 3:
-						say "     [if tempnum2 is 2]Properly righting your orientation, you[else]You[end if] writhe and shimmy your way up the beast's gullet, against er muscle's endeavor. You [if struggleatt is 1]don't seem to be getting anywhere[else]think you might be seeing light[end if]...";
+						say "     [if tempnum2 is 2]Properly righting your orientation, you[else]You[end if] writhe and shimmy your way up the beast's gullet, against her muscle's endeavor. You [if struggleatt is 1]don't seem to be getting anywhere[else]think you might be seeing light[end if]...";
 						increase lustatt by 7 + (lustadjust * 2);
 						if tempnum2 is 2, now tempnum2 is 0;
 						wyvhumanityroll;

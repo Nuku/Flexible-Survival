@@ -166,7 +166,7 @@ Instead of conversing the Hayato:
 		say "     [one of]'My grandmother used to tell me tales of the fearsome oni. To be cursed to become such a creature...'[or]'Do you see this club?' he says, holding up the massive, spiked pillar of iron in one hand. 'I have tried to get rid of it many times, but it is always there again when I awake.'[or]'Most everyone in this city is free to satisfy their needs. Why did I choose this when there are so many fine partners out there?' he says, eyeing you with desire.[or]The chastity device helps keep me from giving into my moments of lust, but the wretched thing also keeps me from getting any relief... or enjoying the company of friends,' he says with a longing, lustful look.[or]'I do not wish to become a monster like the rampaging oni I encountered. Perhaps a little relief would help quell that,' he says, shifting uneasily in his seat.[or]'I must contain my urges, lest I fully become a monster and harm others.'[or]'I am far too big to comfortably live in a house. I must now live in this, my oni cave,' he says with a sad sigh.[or]As you chat with him, the oni gives your body many an appreciative glance as the unfocused arousal he's been trying to contain becomes increasingly focused on you.[or]'The shop where I got the medieval chastity belt was quite mysterious. When I stumbled through the doorway, I was out in the city, but upon leaving it, I was inside a shopping mall filled with cheerful rat people.'[or]'The jackal woman running the mysterious shop was quite strange. All she wanted in payment for the chastity belt was some little trinket.'[at random]";
 	else if HP of Hayato is 21 and player is not neuter and a random chance of 1 in 3 succeeds:
 		say "     As you chat with Hayato, your thoughts return to the problem of the Oni Lair you discovered.";
-		say "     [bold type] Shall you draft him into joining you in dealing with it or shall you wait a while longer before investigating?[roman type][line break]";
+		say "     [bold type]Shall you draft him into joining you in dealing with it or shall you wait a while longer before investigating?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -435,7 +435,7 @@ instead of resolving Noh Mask:
 	if HP of Hayato is 11:
 		say "     Recalling Nermine's mention of the noh mask she wants, you search around some likely possibilities for where it may be. You fortunately find it hanging on the wall of the Japanese Language professor's office. Unfortunately though, that office is busily occupied by a trio of felines in ninja outfits with a humanoid female pinned to the desk beneath them. The woman's clothing is torn, exposing much of her exaggeratedly proportioned body. Her eyes are very large and visible through her overhanging bangs of blue hair. As the ninjas run their greedy paws over her smooth skin and grope her breasts, she moans and squirms. 'Ecchi! No, bad kitties!' she says before breaking down into a long moan as one of them slips a pair of fingers into her wet pussy.";
 		say "     It looks like they'll be here for a while, so you'll have to deal with them if you want to get the mask.";
-		say "     [bold type] Shall you attack the ninjas?[roman type][line break]";
+		say "     [bold type]Shall you attack the ninjas?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";

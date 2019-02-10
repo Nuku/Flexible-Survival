@@ -474,7 +474,7 @@ to say icarussex5_fel:		[uncontrolled feline sex]
 	say "     Your sex up in the secluded attic is harsh and merciless, your feline infection lustful after the hunt. The blue bird chirps in pain and moans in delight as you take him hard. So excited by the chase, you give him bloody bites and scratches as you manhandle his body and use him as your fucktoy. His body shudders from the wounds and the pounding he's receiving, his cock hard and pulsing with excitement as he moans for more and to take him harder.";
 	if HP of Icarus is 5:
 		say "     With your predatory, feline instincts exciting you, you find it difficult to hold back any longer. You have caught your prey and he is at your mercy.";
-		say "     [bold type] Shall you let loose and let your wild impulses do as they will, or will you rein it in to keep yourself from going too far?[roman type][bracket]WARNING: Extreme violence occurs if you accept.[close bracket][line break]";
+		say "     [bold type]Shall you let loose and let your wild impulses do as they will, or will you rein it in to keep yourself from going too far?[roman type] [bracket]WARNING: Extreme violence occurs if you accept.[close bracket][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let your wild impulses do as they will.";
 		say "     ([link]N[as]n[end link]) - Rein in your instincts.";

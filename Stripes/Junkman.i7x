@@ -1,6 +1,6 @@
 Version 1 of Junkman by Stripes begins here.
 
-"Adds a Junkman creature to Flexible Survival's Wandering Monsters table with impregchance"
+"Adds a Junkman creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

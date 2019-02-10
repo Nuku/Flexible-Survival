@@ -1,7 +1,7 @@
 Version 2 of Razorback Boar by Wahn begins here.
 [Version 2 - New Creature]
 
-"Adds an Razorback Boar to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds an Razorback Boar to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 [ RazorbackBoarEvents                                                         ]
 [  0: never met                                                               ]

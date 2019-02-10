@@ -1,7 +1,7 @@
 Version 1 of Bunny Jock by Rikaeus begins here.
 [ Version 1.4 - player loss oral ]
 
-"Adds a Bunny Jock creature to Flexible Survival's Wandering Monsters table with impregchance"
+"Adds a Bunny Jock creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 

@@ -313,7 +313,7 @@ to say beatthefpony:
 			increase nofponysex by 1;
 	else if player is female:
 		say "As you look over her, your eyes wander back to that cute face of her. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
-		say "     [bold type] Shall you grab that pretty [rfponycolor2] hair of hers and make her eat you out?[roman type][line break]";
+		say "     [bold type]Shall you grab that pretty [rfponycolor2] hair of hers and make her eat you out?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";

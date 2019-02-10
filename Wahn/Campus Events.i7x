@@ -80,7 +80,7 @@ Instead of resolving a Wandering the Campus:
 	if guy is banned and 7 is not listed in campuswander, add 7 to campuswander;
 	if guy is banned and girl is banned and hermaphrodite is banned:
 		say "     Traveling across the completely unpopulated campus, you have to wonder why you're even bothering to come here.";
-	if number of entries in campuswander > 6, say "     You have an unevenful passage across the campus.";
+	if number of entries in campuswander > 6, say "     You have an uneventful passage across the campus.";
 	let T be a random number between 1 and 7;
 	let SafetyCounter be 0;
 	while T is listed in campuswander:
@@ -89,12 +89,12 @@ Instead of resolving a Wandering the Campus:
 		if T is 8:
 			now T is 1;
 		if SafetyCounter > 14: [just to avoid an endless loop in case something goes wrong]
-			say "     You have an unevenful passage across the campus.";
+			say "     You have an uneventful passage across the campus.";
 			now Wandering the Campus is resolved;
 			break;
 	now showlocale is false;
 	if T is 1:			[replaced with Fruit Bat]
-		say "     Your wandering across the campus is interrupted by the appearance of a speedo'd bat quickly approaching. Perhaps coming from one of the college's olympic or diving pools, he looks like he's recently gotten out of the water and is now looking for some fun to round out his exercise regimen.";
+		say "     Your wandering across the campus is interrupted by the appearance of a speedo'd bat quickly approaching. Perhaps coming from one of the college's Olympic or diving pools, he looks like he's recently gotten out of the water and is now looking for some fun to round out his exercise regimen.";
 		challenge "Fruit Bat";
 		add 1 to campuswander;
 	else if T is 2:
@@ -112,7 +112,7 @@ Instead of resolving a Wandering the Campus:
 		challenge "Red Kangaroo";
 		add 4 to campuswander;
 	else if T is 5:
-		say "     A large wolf creature leaps out from a broken window on one of the buildings. Shi growls toothily at you as shi rises up from all fours to stand upright, showing off hir herm body to you. Shi looks you over with a hunger that is wholely carnal in nature.";
+		say "     A large wolf creature leaps out from a broken window on one of the buildings. Shi growls toothily at you as shi rises up from all fours to stand upright, showing off hir herm body to you. Shi looks you over with a hunger that is wholly carnal in nature.";
 		challenge "Painted Wolf Herm";
 		add 5 to campuswander;
 	else if T is 6:

@@ -744,7 +744,7 @@ to say Larissaisnow-tighooker:
 	let goahead be 1;
 	if LarissaInfName is "Tigress Hooker":
 		say "[subjpro_Cap of Larissa]'s already got that infection.";
-		say "     [bold type] Do you wish to continue anyway?[roman type][line break]";
+		say "     [bold type]Do you wish to continue anyway?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";

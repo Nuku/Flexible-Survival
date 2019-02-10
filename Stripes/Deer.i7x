@@ -24,7 +24,7 @@ Version 3 of Deer by Stripes begins here.
 [ 0 = regular form                        ]
 [ 1 = doe-buck form                       ]
 
-"Adds a deer to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a deer to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Event
 

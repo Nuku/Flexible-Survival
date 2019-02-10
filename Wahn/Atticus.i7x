@@ -38,7 +38,7 @@ after going to Burned-Out Chapel while (LilithKidCounter > 0 and PlayerMet of At
 	WaitLineBreak;
 	say "     'Aww, just four! So close! Guess I'll have to keep practicing,' the young man says in playfully overacted anger, then glances you up and down hungrily. His gaze is so intense that you almost feel you got groped just by the looks alone. 'You know, you could help me with this. It's your job after all, showing an interest and giving support for the hobbies of your offspring.' A beaming grin spreads over his face as your eyes widen, followed by a confirming nod and a slow, lazy stroke of his cock. ";
 	if Playermet of Atticus is false:
-		say "'Yeah, that's right! Remember knocking up a certain subbubus? I'm the result, daddy! I'm Atticus, by the way. Now why don't you come over here and give your boy a kiss?' Wiggling his eyebrows in a seductive, teasing way, Atticus turns his body to highlight his best features, eager to draw you in.";
+		say "'Yeah, that's right! Remember knocking up a certain succubus? I'm the result, daddy! I'm Atticus, by the way. Now why don't you come over here and give your boy a kiss?' Wiggling his eyebrows in a seductive, teasing way, Atticus turns his body to highlight his best features, eager to draw you in.";
 	else:
 		say "'You don't want to be that kind of dad, do you? Look, you already missed all of the two hours I grew up in, so this is your chance to make up for that! Come play with me! Give your boy a kiss to make it all better, eh?'' Wiggling his eyebrows in a seductive, teasing way, Atticus turns his body to highlight his best features, eager to draw you in.";
 	LineBreak;

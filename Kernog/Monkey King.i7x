@@ -88,19 +88,21 @@ to say beattheMonkeyKing:
 		else if Loyalty of Wukong is 1:
 			say "     Wukong falls on the ground, his staff bouncing away with a few loud, woody noises. 'You caught me by surprise, servant. Don't get any ideas...'";
 		else if Loyalty of Wukong is 2:
-			say "     Wukong falls on the ground, his staff bouncing away with a few loud, woody noises. 'That was some nice workout.'";
+			say "     Wukong falls on the ground, his staff bouncing away with a few loud, woody noises. 'That was a nice workout.'";
 		else:
 			say "     The beaten fighter falls on the ground, his staff bouncing away with a few loud, woody noises. 'Impossible... How could I, the Great Monkey King, be defeated by the likes of you...'";
 		if player is not neuter:
-			say "     He lays on the ground, his ripped clothes exposing his nude body. [bold type]This gives you a few ideas. Are you going to go through with them?[roman type][line break]";
+			say "     He lays on the ground, his ripped clothes exposing his nude body.";
+			say "     [bold type]This gives you a few ideas. Are you going to go through with them?[roman type][line break]";
 			say "     ([link]Y[as]y[end link]) - Time for some monkey business!";
 			say "     ([link]N[as]n[end link]) - He is not worth your time.";
 			if player consents:
 				LineBreak;
 				if Loyalty of Wukong is 1 or Loyalty of Wukong is 2:
-					say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. 'Fair game,' he says, relaxing a little. [bold type] How will you claim him?[roman type][line break]";
+					say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. 'Fair game,' he says, relaxing a little.";
 				else:
-					say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. 'Wh... What are you doing?' he asks, visibly intimidated. [bold type] How will you claim him?[roman type][line break]";
+					say "     With a smirk, you take off your cloth, then rip off what remains of your opponent's. 'Wh... What are you doing?' he asks, visibly intimidated.";
+				say "     [bold type]How will you claim him?[roman type][line break]";
 				say "     ([link]Y[as]Gentle[end link]) - Make peace and love; mostly love.";
 				say "     ([link]N[as]Rough[end link]) - Let us teach him a lesson!";
 				if player consents:
@@ -284,7 +286,7 @@ instead of resolving Crashing the Satyr Party:
 			say "Invalid choice. Type [link]1[end link] to help Wukong, [link]2[end link] to sabotage Wukong's plan or [link]3[end link] to elect to stay out of this.";
 	if calcnumber is 1:
 		LineBreak;
-		say "     Having made your decision, you make your way towards the amphoras holding the party wine. 'Why, look what we have here? the satyr the closest to the containers says when seeing you. 'Too bad you missed the start of the party. But I can give you some consolation, if you want.' You try to tell the goat-man that you are not here for that, but he does not seem to listen. It looks like you have a fight on your hands.'";
+		say "     Having made your decision, you make your way towards the amphoras holding the party wine. 'Why, look what we have here?' the satyr that's closest to the containers says when he sees you. 'Too bad you missed the start of the party. But I can give you some consolation, if you want.' You try to tell the goat-man that you are not here for that, but he does not seem to listen. It looks like you have a fight on your hands.";
 		challenge "Satyr";
 		if fightoutcome >= 10 and fightoutcome <= 19:
 			say "     You look around, checking if your scuffle has attracted unwanted attention. Everyone else is either fucking, drunk, or both. You hurriedly dump the content of your pouch into the amphoras, just an one group approaches to get a refill. You skedaddle to make your report to Wukong. 'Very good,' the monkey says after you returned to the pagoda. 'By the time you came to find me, the drug should have acted. Now, it is time for [italic type]me[roman type] to party.'";

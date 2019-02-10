@@ -1,6 +1,6 @@
 Version 1 of Prairie Dog by Stripes begins here.
 
-"Adds a Prairie Dog creature to Flexible Survival's Wandering Monsters table with impregchance"
+"Adds a Prairie Dog creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

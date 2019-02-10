@@ -2,7 +2,7 @@ Version 1 of Spidergirl by Guest Writers begins here.
 [ Version 1.1 - Modified code, new monster victory oral and minor corrections/adjustments - Stripes ]
 [- Originally Authored By: Tentacle Specialist -]
 
-"Adds a Spidergirl to Flexible Survival's Wandering Monsters table, with impregnation chance."
+"Adds a Spidergirl to Flexible Survival's Wandering Monsters table, with impreg chance."
 
 Section 1 - Monster Responses
 
@@ -155,9 +155,9 @@ When Play begins:
 when play ends:
 	if bodyname of player is "Spidergirl":
 		if humanity of player < 10:
-			say "Your predatory instincts take over and you scurry off into the ruins of the city, drinking the blood of other outcasts and forcing them to bear your eggs. It is a rough existence, but eventually you acquire a sort of 'harem' of lovers who enjoy the rough imprisonment you offer...";
+			say "     Your predatory instincts take over and you scurry off into the ruins of the city, drinking the blood of other outcasts and forcing them to bear your eggs. It is a rough existence, but eventually you acquire a sort of 'harem' of lovers who enjoy the rough imprisonment you offer...";
 		else:
-			say "Your arachnid form proves perfect for exploring ruined buildings. You are immediately recruited into the armed forces, eventually rescuing hundreds of people from disasters, often lowering them from great heights on web ropes. On your off days you help out with construction projects, ultimately becoming known the world over as a hero.";
+			say "     Your arachnid form proves perfect for exploring ruined buildings. You are immediately recruited into the armed forces, eventually rescuing hundreds of people from disasters, often lowering them from great heights on web ropes. On your off days you help out with construction projects, ultimately becoming known the world over as a hero.";
 
 Table of Game Objects (continued)
 name	desc	weight	object

@@ -11,7 +11,7 @@ Bunker Shower Knob is an object.
 It is in the Communal Shower.
 It is fixed in place.
 Understand "knob" as Bunker Shower Knob.
-the description of Bunker Shower Knob is  "[BunkerShowerKnobDesc]".
+the description of Bunker Shower Knob is "[BunkerShowerKnobDesc]".
 
 to say BunkerShowerKnobScent:
 	say "     Other than it having a slightly metallic scent, you can also pick up a hint of stale water.";

@@ -98,7 +98,7 @@ Giant battleaxe is a situation.
 The sarea of Giant battleaxe is "Museum".
 
 Instead of Resolving a Giant battleaxe:
-	say "     Wandering around the roman section of the museum, you come across an area where someone or something has leaned a large battleaxe up against one of the displays. You can't help but gawk at the size of the thing; its haft a good four feet long, and the blade almost another two feet long and two feet wide on each side. You try lifting the large weapon for a second, but can't even manage to budge the massive thing. Leaving it where it lies, you hurry on, hoping not to meet whatever kind of creature uses a weapon like that.";
+	say "     Wandering around the roman section of the museum, you come across an area where someone or something has leaned a large battleaxe up against one of the displays. You can't help but gawk at the size of the thing; its shaft is a good four feet long, the blade almost another two feet long and two feet wide on each side. You try lifting the large weapon for a second, but can't even manage to budge the massive thing. Leaving it where it lies, you hurry on, hoping not to meet whatever kind of creature uses a weapon like that.";
 	now Giant battleaxe is resolved;
 
 

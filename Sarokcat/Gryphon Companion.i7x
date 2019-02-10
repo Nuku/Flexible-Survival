@@ -210,11 +210,11 @@ an everyturn rule:
 					increase dexterity of gryphoness by 1;
 				if T >= 3:
 					say "with another new child. She is cradling the youngest gryphlet in her arms, nursing her from her bosom. Her pregnant belly is already going down, her child delivered while she had slipped away. You both stroke and hug your new child, looking her over. You feel a swell of happiness and love for this new child. Like her mother and siblings, the young herm has blue feathers and tawny, leonine fur. She grows quickly and is soon walking alongside her mother, a cute, younger version of Denise in miniature. As before, the eldest remaining sibling, now almost fully adult, snugs you all tightly and nuzzles before heading off into the city to seek her fortune and a loving mate of her own.";
-				increase libido of gryphoness by 1; [incease to tempnum 4 = 0 -> no birth message for next summon since player saw the kid already]
+				increase libido of gryphoness by 1; [increase to tempnum 4 = 0 -> no birth message for next summon since player saw the kid already]
 				now GryphonessKnowpreg is 0;    [reset, pregnancy over]
 			else if player is in Garden View and Denise is in Garden View: [player and Denise are in the library]
 				say "     Looking around, you notice that Denise is breathing pretty hard, a hand laying on her swollen stomach. Then she meets your gaze with an intense look and gasps, 'It's time - I can feel the egg coming!' Fortunately, she isn't far from her nest, so it is easy to lead her back to it and allow her to lay on the softer cushions with her wings spread, anticipating the egg's arrival. Thankfully, laying the egg isn't too hard on her transformed physique, as Denise's folds are quite... accommodating for something with large girth coming out - or going in. The effort still clearly tires her out, puffing and panting in time with the throbbing of her womb as her body prepares to release the fully-developed egg, but she doesn't look like she's in any serious pain. After about ten minutes of working up to it, the egg is eventually crowning and slides free of her stretched pussy to land on one of the cushions of her nest.";
-				say "     The moment the egg is clear of her body, it starts to rock and shake, a faint tapping coming from within. Denise croons, bending her own head down to tap at the eggshell from the other side with her beak. Soon enough cracks appear and widen before the eggshell finally splits, spilling a small gryphlet into Denise's arms, still damp with egg fluids. Humming happily, your sexy gryphoness cradles the newborn to her breast to nurse, the chick gripping her nipple with a still soft and flexible beak. Fluffy down falls to the floor as the little blue gryphon suckles greedily, growing and gaining an early-teen body, complete with bright blue feathers aand golden fur in a matter of moments. At last, the child pulls off the nipple and Denise gives her a soft pat on the head before setting her down.";
+				say "     The moment the egg is clear of her body, it starts to rock and shake, a faint tapping coming from within. Denise croons, bending her own head down to tap at the eggshell from the other side with her beak. Soon enough cracks appear and widen before the eggshell finally splits, spilling a small gryphlet into Denise's arms, still damp with egg fluids. Humming happily, your sexy gryphoness cradles the newborn to her breast to nurse, the chick gripping her nipple with a still soft and flexible beak. Fluffy down falls to the floor as the little blue gryphon suckles greedily, growing and gaining an early-teen body, complete with bright blue feathers and golden fur in a matter of moments. At last, the child pulls off the nipple and Denise gives her a soft pat on the head before setting her down.";
 				if T is 0:
 					LineBreak;
 					say "     The cute, younger version of Denise in miniature that is your first child with the sexy gryphoness settles into the nest with her mother, eager to learn everything she can from her. Your little gryphlet is even already talking just minutes after her own birth, giving you a good feeling about having brought a smart and so very cute being into this world. Seems like they'll stay together for some time now.";
@@ -230,8 +230,8 @@ an everyturn rule:
 				if T >= 3:
 					LineBreak;
 					say "     The cute, younger version of Denise in miniature that is yet another child you fathered with the sexy gryphoness settles into the nest with her mother, eager to learn everything she can from her and to play with the two older siblings in the nest. Your little gryphlet is even already talking just minutes after her own birth, giving you a good feeling about having brought a smart and so very cute being into this world. Seems like Denise will have three little nest-mates for some time now - or not, as the eldest sibling, by now almost fully grown to adulthood, decides to use the moment to announce that she's moving out. With a snuggle and nuzzle for all her gathered family members, the gryphon heads off into the city, using an open window to launch herself into the air. Denise calls after her, wishing her all the best in finding her fortune and a loving mate of her own.";
-					say "     As her offspring flies out of view, Denise steps up next to you and rubs her feathered cheek against the side of your head. 'I know I can't keep them forever, but it always seems strange to say goodbye to my little gryphlets. Its so much nicer to be in a nest if there's a whole family, you know.' She looks out over the city again, then back to the small gryphons still in her nest, before adding, 'How about... we make another egg? I love giving you all the children you'll ever want.'";
-				increase libido of gryphoness by 1; [incease to tempnum 4 = 0 -> no birth message for next summon since player saw the kid already]
+					say "     As her offspring flies out of view, Denise steps up next to you and rubs her feathered cheek against the side of your head. 'I know I can't keep them forever, but it always seems strange to say goodbye to my little gryphlets. It's so much nicer to be in a nest if there's a whole family, you know.' She looks out over the city again, then back to the small gryphons still in her nest, before adding, 'How about... we make another egg? I love giving you all the children you'll ever want.'";
+				increase libido of gryphoness by 1; [increase to tempnum 4 = 0 -> no birth message for next summon since player saw the kid already]
 				now GryphonessKnowpreg is 0;   [reset, pregnancy over]
 			else: [player isn't present for her egg-birth -> tempnum stays 3 -> primed for birth message on next summon]
 				say "You find your mind wandering to Denise, thinking about her and [if GryphonessKnowpreg is 1]her pregnancy[else]missing her for some reason[end if]. Perhaps you should check on her.";
@@ -272,7 +272,7 @@ Instead of resolving Lonely Gryphoness:
 			say "Looking down at your own gryphon-like body, the singing gryphon seems almost embarrassed for a minute, though when you open your mouth to speak, she darts towards you instead. Blinking in anticipation of a fight, you find her arms going around you in a soft hug, and hear her sweet voice whisper 'You're very cute,' in your ear. Before you can actually respond to this, the gryphon lets you go and turns and launches herself from the rooftop, shooting occasional wistful glances back at you as [bold type]she vanishes in the direction of the beach[roman type].";
 			infect "Hermaphrodite Gryphon";
 			now gryphoncomforted is 1;
-			now Resolution of Lonely Gryphoness is 1; [met denise as a gryphon]
+			now Resolution of Lonely Gryphoness is 1; [met Denise as a gryphon]
 			now Lonely Gryphoness is resolved;
 			now Gryphoness nest is active;
 		else:
@@ -288,7 +288,7 @@ Instead of resolving Lonely Gryphoness:
 					say "     The gryphon stops to listen for a minute, as you try to convince her of your peaceful intentions. While she doesn't actually say anything in response, you take the willingness to listen as a good sign and explain that you were only trying to find the source of that strangely beautiful music you heard. Hearing this, you can see the gryphon's beak pulling up into a small smile, 'You really liked it?' you can hear her say in a soft tone, her sweet voice filling your ears even as she seems to flush in embarrassment.";
 					say "     When you nod, the gryphon seems even more flustered, seeming uncomfortable with your praise, and beginning to back up towards the edge of the rooftop again. 'You seem kind of nice...' she says as she turns away from you, before looking back over her shoulder at you as she spreads her feathered wings. 'Maybe I can sing again for you sometime... I think I might like that...' the gryphon says as she launches herself out into the city, leaving you to stare after her as [bold type]she vanishes in the direction of the beach[roman type], wondering just why this gryphon is so different from all the others you have encountered so far.";
 					now gryphoncomforted is 1;
-					now Resolution of Lonely Gryphoness is 2; [met denise with charisma check]
+					now Resolution of Lonely Gryphoness is 2; [met Denise with charisma check]
 					now Lonely Gryphoness is resolved;
 					now Gryphoness nest is active;
 				else:
@@ -298,7 +298,7 @@ Instead of resolving Lonely Gryphoness:
 				say "     You just watch as the gryphon turns and hurls themselves off the rooftops, wondering idly just why this particular one was acting so much differently than the rest. Shrugging you begin the long climb down from the rooftop, and make your way back out into the city.";
 	else:
 		say "     Deciding to just stop and enjoy the beautiful music while you can, you pause for a while in the street as the sweet notes wash over you. The sad song causing you to blink back tears more than once as the soft notes wash over you. Eventually the music stops rather abruptly, and you wonder just what might have happened to the singer that would cause them to break off mid note. Sighing, you figure you probably won't be hearing that particular song again, as you continue on out into the city...";
-		now Resolution of Lonely Gryphoness is 3; [denise was taken by something]
+		now Resolution of Lonely Gryphoness is 3; [Denise was taken by something]
 		now Lonely Gryphoness is resolved;
 
 Table of GameEventIDs (continued)
@@ -335,7 +335,7 @@ Instead of resolving Gryphoness nest:
 				now Resolution of Gryphoness nest is 3; [fled]
 		else:
 			say "     You hesitate for a minute, trying to decide if you should risk jumping into the water to try to save the singing gryphon, and possibly ending up sharing whatever fate the beasts have for her. Sadly your hesitation takes the decision out of your hands, as with several splashes, both the beasts and the strange gryphoness have vanished. Scanning the waters, you realize sadly that you will likely not be seeing that particular gryphon again in any recognizable form, or hearing her sing anymore. Sighing you continue along your way down the beach, wondering what else could go wrong today.";
-			now Resolution of Gryphoness nest is 4; [denise lost]
+			now Resolution of Gryphoness nest is 4; [Denise lost]
 			now Gryphoness nest is resolved;
 	else if gryphoncomforted is 2:
 		[puts Hermaphrodite Gryphon as lead monster in case of impregnation]
@@ -463,7 +463,7 @@ Instead of resolving Gryphoness nest:
 						now Gryphoness nest is resolved;
 				else:
 					say "     Denise sighs as you shake your head, 'It's ok...' she says sadly as she inches away from you and hangs her head down, 'I understand that no one really wants to take the risk of being around something like me now anyways, I might as well just go try to find the other gryphons and see if they at least still want me.' She sighs as she buries her face down in the soft cushions of her bed, ignoring your further attempts to talk to her. You sigh as you eventually work your way down the narrow path outside, wondering if perhaps you shouldn't have handled that differently after all...";
-					now Resolution of Gryphoness nest is 11; [told denise no]
+					now Resolution of Gryphoness nest is 11; [told Denise no]
 					now Gryphoness nest is resolved;
 		else: [charisma check fail]
 			say "     Denise shifts uncomfortably as you brush up against her blue furred side, and you notice she seems to be getting aroused by your mere presence. She stammers slightly, before trying to steer the conversation to safer topics such as the strange situation the city is currently in, as well as what strange things you have each seen happen recently. Eventually she gets so distracted and aroused by your presence she asks you timidly to leave for a while, and deciding not to push things too hard right now, you do so. Working your way back down the narrow path, you wonder if you might have better luck stopping by again sometime later, since while you definitely feel a little closer to the strange gryphoness, you have a feeling you could get a lot closer still if you tried...";

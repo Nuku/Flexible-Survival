@@ -1,7 +1,7 @@
 Version 2 of Alpha Wolf by Sarokcat begins here.
 [ Version 2.2 - Relocated to Urban Forest area. ]
 
-"Adds a Alpha Wolf to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Alpha Wolf to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

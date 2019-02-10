@@ -71,7 +71,7 @@ to say beatthegunbunny:
 		increase nogunbunnysex by 1;
 	else if player is male:
 		say "     Your last blow knocks her [if gb_gun > 3]gun[else]guns[end if] skittering away and sends the bunny girl to the ground. She struggles once or twice to get up, but is too weakened. You're tired from the near-constant [if gb_gun is 6]blaster fire[else]gunfire[end if] you were trying to avoid, but looking at her makes you want to get a little payback on her sexy bunny butt.";
-		say "     [bold type] Shall you take advantage of the situation and fuck the gunbunny senseless?[roman type][line break]";
+		say "     [bold type]Shall you take advantage of the situation and fuck the gunbunny senseless?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -85,7 +85,7 @@ to say beatthegunbunny:
 			increase nogunbunnysex by 1;
 	else:
 		say "     Your last blow knocks her [if gb_gun > 3]gun[else]guns[end if] skittering away and sends the bunny girl to the ground. She struggles once or twice to get up, but is too weakened. You're tired from the near-constant [if gb_gun is 6]blaster fire[else]gunfire[end if] you were trying to avoid, but looking at her gives you the idea to have her make it up to you a little.";
-		say "     [bold type] Shall you take advantage of the situation and get the gunbunny to eat you out?[roman type][line break]";
+		say "     [bold type]Shall you take advantage of the situation and get the gunbunny to eat you out?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";

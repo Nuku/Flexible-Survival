@@ -345,12 +345,12 @@ To say nightmaremagic:
 An everyturn rule:
 	if nightmaretf is 1:
 		if tailname of player is not "Nightmare":
-			say "Your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear, its soft sexy strands feel rather comforting as they overwhelm your more recent infection.";
+			say "Your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear. Its soft, sexy strands feel rather comforting as they overwhelm your more recent infection.";
 			now tailname of player is "Nightmare";
 			now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
 	if nightmaretf is 2:
 		if tailname of player is not "Nightmare":
-			say "Your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear, its soft sexy strands feel rather comforting as they overwhelm your more recent infection.";
+			say "Your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear. Its soft, sexy strands feel rather comforting as they overwhelm your more recent infection.";
 			now tailname of player is "Nightmare";
 			now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
 		if facename of player is not "Nightmare":
@@ -359,7 +359,7 @@ An everyturn rule:
 			now face of player is "rather sexy coal black equine muzzle stretching forward from your face, your broad forehead and mobile black equine ears sitting atop your new countenance are rather sexy as well. Although the most striking features of your new face have to be your eyes, which burn from within with an inner fire that is almost mesmerizing to look at, and the dark black and red mane of hair which spills down the back and sides of your head, the iridescent strands of black and red hair seeming to almost burn with your every movement as they frame your new face";
 	if nightmaretf is 3:
 		if tailname of player is not "Nightmare":
-			say "Your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear, its soft sexy strands feel rather comforting as they overwhelm your more recent infection.";
+			say "Your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear. Its soft, sexy strands feel rather comforting as they overwhelm your more recent infection.";
 			now tailname of player is "Nightmare";
 			now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
 		if facename of player is not "Nightmare":
@@ -372,7 +372,7 @@ An everyturn rule:
 			now skin of player is "[one of]dark black[or]shimmering black furred[or]Nightmare[or]Coal black[or]midnight black furred[or]shadowy furred[at random]";
 	if nightmaretf is 4:
 		if tailname of player is not "Nightmare":
-			say "Your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear, its soft sexy strands feel rather comforting as they overwhelm your more recent infection.";
+			say "Your spine cracks and shifts, and your rear shifts and changes slightly as your lovely red and black equine tail once more grows out of your rear. Its soft, sexy strands feel rather comforting as they overwhelm your more recent infection.";
 			now tailname of player is "Nightmare";
 			now tail of player is "You have a long sexy shimmering equine tail swaying teasingly behind you, its silken black and deep red colored strands seeming to catch and bend the light slightly around themselves until they almost appear to burn with an inner dark fire with every step you take.";
 		if facename of player is not "Nightmare":

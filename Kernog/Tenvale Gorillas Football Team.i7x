@@ -212,7 +212,7 @@ to say GorillaLaundryService3:
 [Expansion idea: develop this character]
 to say GorillaLaundryRepeat:
 	say "     You start your new laundry shift. You pickup the dirty jockstraps and shorts one by one, and throw them in your basket. 'What's up?' a familiar voice asks from the entrance. As you give him a resentful look, the jock raises his hands in the air. [one of]'Sorry, sorry. Who knew we'd get so much into things, last time, huh?' he sort-of apologized. 'Anyway, I'm just here to chat for now. And to help. Coach asked me to do laundry work for a week or face expulsion from the team.'[or]'We're on the same shift again, huh? Let me help you.'[stopping]";
-	say "With the two of you picking up clothes, things go very fast, and there is still twenty minutes until the end of the training. You take the opportunity to chat with your teammate.";
+	say "     With the two of you picking up clothes, things go very fast, and there is still twenty minutes until the end of the training. You take the opportunity to chat with your teammate.";
 	LineBreak;
 	let randomnumber be a random number from 1 to 3;
 	if randomnumber is 1:
@@ -221,9 +221,9 @@ to say GorillaLaundryRepeat:
 		say "     'I'm screwing a lot of guys, and girls too. All you need is roam the campus and pick up the first one you fancy. Most of the time they can't resist if you [']insist['] a little, heh heh. By the way... Have we met elsewhere?'";
 	if randomnumber is 3 :
 		if HP of Roman is 5:
-			say "     'So captain Rohan is a girl down there? Who could have guessed! No wonder he was so prude. I've never screwed a trans guy before, maybe you could put a word for me to the cap, eh?'";
+			say "     'So captain Roman is a girl down there? Who could have guessed! No wonder he was so prude. I've never screwed a trans guy before, maybe you could put a word for me to the cap, eh?'";
 		else:
-			say "     'Captain Rohan is a strange guy. For the leader of a pack of hornballs, he is surprisingly prude. He's never fucked anybody, and he's always changing in his own room. You should open your eye for him, next time you come here.'";
+			say "     'Captain Roman is a strange guy. For the leader of a pack of hornballs, he is surprisingly prude. He's never fucked anybody, and he's always changing in his own room. You should open your eye for him, next time you come here.'";
 	increase GorillasRep by 2; [Since there's nothing else for now, I give the player a little "help" to unlock the next stage, if needed]
 
 

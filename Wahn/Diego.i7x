@@ -313,7 +313,7 @@ carry out Diegotricking:
 		increase CoyoteTricks by 2;
 		extend game by 18;
 		if CoyoteTricks > 4 and DiegoChanged is 0 and DiegoButtSlut is 0:
-			say "     [line break][line break]";
+			LineBreak;
 			say "     Turning his attention back to you, the anthro canine licks his lips and then says, 'Damn, playing so many tricks on the man is making a dishonest coyote mighty thirsty. You wouldn't happen to have anything to help a fellow out now would you?' He gives you a hopeful look, glancing over to your gear.";
 			say "     ([bold type]Diego trusts you enough to accept something to drink from you now. Maybe give him some water, or other liquids that could have fun effects on the guy.[roman type])[line break]";
 		if CoyoteTricks > 3 and PrankEvent is 0:
@@ -324,7 +324,7 @@ carry out Diegotricking:
 		extend game by 6;
 		increase CoyoteTricks by 1;
 		if CoyoteTricks > 4 and DiegoChanged is 0 and DiegoButtSlut is 0:
-			say "     [line break][line break]";
+			LineBreak;
 			say "     Turning his attention back to you, the anthro canine licks his lips and then says, 'Damn, playing so many tricks on the man is making a dishonest coyote mighty thirsty. You wouldn't happen to have anything to help a fellow out now would you?' He gives you a hopeful look, glancing over to your gear.";
 			say "     ([bold type]Diego trusts you enough to accept something to drink from you now. Maybe give him some water, or other liquids that could have fun effects on the guy.[roman type])[line break]";
 		if CoyoteTricks > 3 and PrankEvent is 0:

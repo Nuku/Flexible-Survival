@@ -1,7 +1,7 @@
 Version 3 of Succubus by Sarokcat begins here.
 [Version 3.2 - Added libido pill as drop item]
 
-"Adds a Succubus to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Succubus to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 

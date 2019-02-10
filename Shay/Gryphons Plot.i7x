@@ -163,8 +163,8 @@ instead of resolving a Gryphon's Plot:
 		else:
 			say "     Do you want to approach them and have a chat?";
 			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes, it would be nice to talk to someone sane for once";
-			say "     ([link]N[as]n[end link]) - No, it's not worth the risk";
+			say "     ([link]Y[as]y[end link]) - Yes, it would be nice to talk to someone sane for once.";
+			say "     ([link]N[as]n[end link]) - No, it's not worth the risk.";
 			if player consents:
 				LineBreak;
 				if player is bodily human:
@@ -201,7 +201,7 @@ instead of resolving a Gryphon's Plot:
 			say "     ([link]N[as]n[end link]) - No way in hell!";
 			if player consents:
 				LineBreak;
-				say "     Putting your hands in front of you in a peaceful gesture, you drop to your knees and convey to the soldiers that they can do anything they please with you. Smirking, the gryphons strip off the tattered remnants of their clothing before the one who looks like the leader steps forth, stroking his cock to full erect before shoving it into your waiting mouth. Meanwhile, the other two approach you from behind, and you feel one cock make its way [if player is male]into your ass, burying himself balls-deep inside, [else if player is female]into your soaking wet pussy, burying himself balls-deep inside, [else]against the underside of your sexless crotch, rubbing his cock where it feels good, [end if]while, the other makes use of one of your free hands. Locked into a mess of sex and sweat, it isn't long before you lose consciousness, the gryphons making thorough use of all of your holes. You wake three hours later, drenched in buckets load of cum, the gryphons and their fire nowhere to be found. Cleaning yourself off as best you can, you gather your pack and continue upon your way. What a wild time...";
+				say "     Putting your hands in front of you in a peaceful gesture, you drop to your knees and convey to the soldiers that they can do anything they please with you. Smirking, the gryphons strip off the tattered remnants of their clothing before the one who looks like the leader steps forth, stroking his cock to full erect before shoving it into your waiting mouth. Meanwhile, the other two approach you from behind, and you feel one cock make its way [if player is male]into your ass, burying himself balls-deep inside[else if player is female]into your soaking wet pussy, burying himself balls-deep inside[else]against the underside of your sexless crotch, rubbing his cock where it feels good[end if] while the other makes use of one of your free hands. Locked into a mess of sex and sweat, it isn't long before you lose consciousness, the gryphons making thorough use of all of your holes. You wake three hours later, drenched in buckets load of cum, the gryphons and their fire nowhere to be found. Cleaning yourself off as best you can, you gather your pack and continue upon your way. What a wild time...";
 				now Resolution of Gryphon's Plot is 41; [player submitted to the vengeful soldier gryphons]
 			else:
 				LineBreak;

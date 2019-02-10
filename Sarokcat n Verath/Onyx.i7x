@@ -227,7 +227,7 @@ To say onyxappearance:[his description at each stage, comments on what each stag
 	else if XP of Onyx >= 30 and XP of Onyx <= 49:		[Onyx has become convinced to visit the palomino, where she is learning to be a female stripper.]
 		say "     Onyx seems quite happy as she bobs her head to the beat of the bouncy music, the former teenage boy has obviously adapted well to her new role as a sexy mare. Her lush black equine pelt is draped in a leather harness with shiny silver buckles, and she has is wearing a tight red thong and bra that barely contain her obviously damp and needy mare pussy, and her pert and sexy breasts. You can tell just by the looks that several of the club goers are giving her that she is going to be quite a popular little stripper here at the club, and from the teasing glances she sends you from time to time, she certainly appears grateful for all your help in getting her here.";
 	else if XP of Onyx >= 60 and XP of Onyx <= 79:		[Onyx staying as stallion - wants player as replacement mare]
-		say "     The formerly weak teenage boy has been replaced by a large and powerful black stallion, his proud muzzle and the wicked glint in his equine eyes promise a lot of fun as he eyes you with anticipation. He still hangs out in the hallway here, though at some point his name has been removed from the room he is standing in front of, and someone has hung the name 'Obsidian' in it's place. Looking at where the powerful stallion shifts his weight teasingly as he gestures you closer, you can't tell whether or not you feel sorry for the next captive they put in the room with him, or envious...";
+		say "     The formerly weak teenage boy has been replaced by a large and powerful black stallion, his proud muzzle and the wicked glint in his equine eyes promise a lot of fun as he eyes you with anticipation. He still hangs out in the hallway here, though at some point his name has been removed from the room he is standing in front of, and someone has hung the name 'Obsidian' in its place. Looking at where the powerful stallion shifts his weight teasingly as he gestures you closer, you can't tell whether or not you feel sorry for the next captive they put in the room with him, or envious...";
 	else if XP of Onyx >= 80 and XP of Onyx <= 99:		[Onyx staying as mare]
 		say "     The transforming boy has finally become a proper mare, and certainly lives up to her new name now. Onyx has become a pure black mare, her lithe equine body seems perfectly proportioned for pleasure as she shifts her weight from hoof to hoof teasingly. She seems to have stopped worrying about anything other than being a properly slutty mare now, and from the looks she is shooting you from time to time, she is more than interested in letting you take her for a ride...";
 
@@ -705,7 +705,7 @@ to say onyxbanal:
 			If libido of player > 69:
 				say "     You find yourself more influenced by the smaller individual than you'd want to admit, though you're soon betrayed by your own lust when you cry out, ";
 				if player is male:
-					say "[if cocks of player > 1]cocks exploding with their[else if player is male]cock exploding with its[end if] [if cock width of player > 24]massive[end if] load over your naked, [bodydesc of player] torso, much to Onyx's amusement.";
+					say "[if cocks of player > 1]cocks exploding with their[else if player is male]cock exploding with its[end if] [if cock width of player > 24]massive [end if]load over your naked, [bodydesc of player] torso, much to Onyx's amusement.";
 					say "     [one of]'Aw, you're just one big softy, aren't you?'[or]'Ha, looks like you're not big enough to resist me!'[at random] His taunts stinging you with lust-twisted embarrassment as he continues to ride you.";
 				else:
 					say "writhing visibly in blissful release. You move to offer up your neglected [if cunts of player > 1]pussies[else if player is female]pussy[end if] your own affection when you're forced to contend with Onyx's refusal to let you do so.";
@@ -741,7 +741,7 @@ to say onyxbanal:
 			If libido of player > 69:
 				say "     Driven by your overwhelming lust, you're soon forced to cry out, ";
 				if player is male:
-					say "[if cocks of player > 1]cocks exploding with their[else if player is male]cock exploding with its[end if] [if cock width of player > 24]massive[end if] load over your naked, [bodydesc of player] torso, much to Onyx's amusement.";
+					say "[if cocks of player > 1]cocks exploding with their[else if player is male]cock exploding with its[end if] [if cock width of player > 24]massive [end if]load over your naked, [bodydesc of player] torso, much to Onyx's amusement.";
 					say "     '[one of]Aw, you're just one big softy, aren't you?[or]Ha, looks like you're not big enough to resist me![at random]' His taunts stinging you with lust-twisted shame as he continues to ride you.";
 				else if player is female:
 					say "writhing visibly in blissful release. You move to offer up your neglected [if cunts of player > 1]pussies[else if player is female]pussy[end if] your own affection when you're forced to contend with Onyx's refusal to let you do so.";

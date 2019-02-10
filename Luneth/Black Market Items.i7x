@@ -439,7 +439,7 @@ Part 3 - Zephyr Riot Arm Guards
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"zephyr riot arm guards"	"A set of arm guards that cover the back of your hands all the way up to your shoulders, zephyr has its security team use these when dealing with emergencies."	3	zephyr riot arm guards
+"zephyr riot arm guards"	"A set of arm guards that cover the back of your hands all the way up to your shoulders. Zephyr has its security team use these when dealing with emergencies."	3	zephyr riot arm guards
 
 zephyr riot arm guards is a grab object.
 zephyr riot arm guards is equipment.
@@ -458,7 +458,7 @@ Part 4 - Zephyr Riot Shin Guards
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"zephyr riot shin guards"	"A set of shin guards that cover your legs from your feet up to your thighs, zephyr has its security team use these when dealing with emergencies."	4	zephyr riot shin guards
+"zephyr riot shin guards"	"A set of shin guards that cover your legs from your feet up to your thighs. Zephyr has its security team use these when dealing with emergencies."	4	zephyr riot shin guards
 
 zephyr riot shin guards is a grab object.
 zephyr riot shin guards is equipment.

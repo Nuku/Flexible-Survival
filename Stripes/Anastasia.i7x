@@ -524,7 +524,7 @@ to say salamanderraid:
 			challenge "Salamander";
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     Having fought as long as possible to ensure her comrades have a chance to escape, this last salamander has passed out. Anastasia, having driven off the others from the lava pool, lands beside you. She looks over the salamander girl with a far colder gaze than any you've seen in the firebird's eyes. Despite the phoenix's obvious scorn, you can't help but find this brave girl strangely cute.";
-				say "     [bold type] Shall you bring her inside the cave or toss her over the rim of the crater for her people to reclaim?[roman type][line break]";
+				say "     [bold type]Shall you bring her inside the cave or toss her over the rim of the crater for her people to reclaim?[roman type][line break]";
 				LineBreak;
 				say "     ([link]Y[as]y[end link]) - Bring her inside.";
 				say "     ([link]N[as]n[end link]) - Toss her over the rim.";
