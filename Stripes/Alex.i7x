@@ -192,7 +192,7 @@ instead of conversing the Diego while AlexProgress is 4 and alexdiego is 0 and d
 
 
 instead of conversing the Alex while gettinglee > 4 and alexleeinfo is 0:
-	say "     Normally, I shouldn't divulge information about a client's case, but this is an emergency and you can be considered part of my staff.' He slips a paper from one of the case files on his table. This memo that Lee found discusses under the table deals between members of the governor's staff and the city councillors of several cities in the area. If that's really Lee in there, mention that I want to talk with him about these names here and he should realize that you could only get that info from me. If it's not him, it won't mean anything to that person and the information is still safe until brought to court.";
+	say "     Normally, I shouldn't divulge information about a client's case, but this is an emergency and you can be considered part of my staff.' He slips a paper from one of the case files on his table. This memo that Lee found discusses under the table deals between members of the governor's staff and the city councilors of several cities in the area. If that's really Lee in there, mention that I want to talk with him about these names here and he should realize that you could only get that info from me. If it's not him, it won't mean anything to that person and the information is still safe until brought to court.";
 	now alexleeinfo is 5;
 
 Table of GameRoomIDs (continued)

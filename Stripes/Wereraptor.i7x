@@ -613,7 +613,7 @@ to wrtailsave:
 	now wrtail is tail of player;
 	now tailname of player is "Wereraptor";
 	now tail of player is tail entry;
-	say ". Your hindquarters stiffens with a harsh pop as [ass change entry]";
+	say ". Your hindquarters stiffen with a harsh pop as [ass change entry]";
 
 to wrcocksave:
 	choose row monster from the Table of Random Critters;

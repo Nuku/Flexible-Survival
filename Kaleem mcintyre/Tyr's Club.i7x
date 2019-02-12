@@ -572,7 +572,7 @@ to say ArenaFightCheck:
 		choose a blank row in table of fucking options;
 		now title entry is "Minotaur";
 		now sortorder entry is 3;
-		now description entry is "a mythological monstrocity";
+		now description entry is "a mythological monstrosity";
 	if furry is not banned and girl is not banned:
 		choose a blank row in table of fucking options;
 		now title entry is "Great Dane";

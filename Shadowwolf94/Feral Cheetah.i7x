@@ -27,7 +27,7 @@ to say cheetahdesc:
 		else: [player was surprised by the cheetah]
 			say "you freeze solid as something brushes up behind you and a spotted tail flicks at the corner of your vision, turning around very slowly you see ";
 			[physical details]
-		say "a rather unusual cheetah, with clusters of darker spots running down it's back. ";
+		say "a rather unusual cheetah, with clusters of darker spots running down its back. ";
 	else: [standard description]
 		say "     As you move through the ruined zoo, ";
 		[appearance of the cheetah]

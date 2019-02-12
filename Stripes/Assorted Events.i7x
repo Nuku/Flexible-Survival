@@ -826,7 +826,7 @@ Instead of resolving a Beach Party:
 		now dolphinflatablefight is 3;
 		challenge "Bottlenose Toy";
 		if dolphinflatablefight is 1:
-			say "     As the second is returning to the water, the one you believe was sprayed with the soda comes towards you. You don't really know how you can tell the identical dolphin girls apart, but you're fairly certain its her coming towards you with a big smile on her bottlenose snout.";
+			say "     As the second is returning to the water, the one you believe was sprayed with the soda comes towards you. You don't really know how you can tell the identical dolphin girls apart, but you're fairly certain it's her coming towards you with a big smile on her bottlenose snout.";
 			now dolphinflatablefight is 3;
 			challenge "Bottlenose Toy";
 			if dolphinflatablefight is 1:

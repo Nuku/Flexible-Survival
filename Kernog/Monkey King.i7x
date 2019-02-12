@@ -476,7 +476,7 @@ wukongStaff is an armament. It is part of the player. It has a weapon "[one of]y
 
 Section 6 - NPC/Pet
 
-[Temporary ally for now, but could be developped into a full-fledge companion?]
+[Temporary ally for now, but could be developed into a full-fledge companion?]
 
 Table of GameCharacterIDs (continued)
 object	name

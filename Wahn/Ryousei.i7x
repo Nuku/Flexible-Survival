@@ -75,7 +75,7 @@ to say RTiger loses:
 			move Ryousei to Grey Abbey Library;
 
 to say RTigerDesc:
-	say "     Walking along one of the overgrown paths of the park, you meet Ryousei the tiger general, coming the other way. The muscled being gives you a nod in greeting, then says, 'You again. Good, good - I was been getting bored with the pretty lacking challenge of the creatures roaming this forest.' He unsheathes his claws and makes a ritualistic-seeming gesture, then relaxes his fingers again to let the pointy sickles slide into resting positions. 'There - a friendly duel has been declared. But no worries - I will just knock you around a bit - no claws, see!' Giving a wiggle of his fingers in front of his confidently smiling face, the tiger then rushes at you to attack.";
+	say "     Walking along one of the overgrown paths of the park, you meet Ryousei the tiger general, coming the other way. The muscled being gives you a nod in greeting, then says, 'You again. Good, good - I have been getting bored with the pretty lacking challenge of the creatures roaming this forest.' He unsheathes his claws and makes a ritualistic-seeming gesture, then relaxes his fingers again to let the pointy sickles slide into resting positions. 'There - a friendly duel has been declared. But no worries - I will just knock you around a bit - no claws, see!' Giving a wiggle of his fingers in front of his confidently smiling face, the tiger then rushes at you to attack.";
 
 Section 3 - Monster Insertion
 

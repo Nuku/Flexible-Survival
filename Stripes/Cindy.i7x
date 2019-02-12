@@ -46,7 +46,7 @@ instead of conversing Cindy:
 	else if HP of Cindy is 2 and a random chance of 1 in 3 succeeds:
 		say "     Decide to ask Cindy if she knows why she's not become infected like the others, but she shushes you[if player is male] sharply[end if]. Leaning over the counter to get a better look, she gazes down at the beach where an cat-eared guy's been lured onto a sun-bathing pantheress's blanket. What starts out friendly enough with talking and light touches, soon goes from a seemingly innocent kiss to the dark female petting and then groping the reluctant male as she strips his clothes off.";
 		say "     Knowing where this is going, Cindy slips her right hand into her bikini and the left under her shirt. She moans as she starts fingering herself to the scene playing out[if player is male]. Noticing you ogling at her, she gives you a disdainful look before shifting her attention back to the beach[end if]. 'Mmm... yeah... let's see it,' she half-whispers as she stares down at the couple. 'Do it, kitty.'";
-		say "     Events continue to play out, the feline's pulls the guy's cock out and climbs atop him. Pinning him down, she bounces on his pole. Black fur starts creeping up his belly as her starts spreading to him. 'Yeah.. That's the stuff...' Cindy moans as the victim's transformation continues, changing his body and eventually his head. By the time it's run his course and the guy's become a matching male panther, the waitress has to stifle a moaning orgasm from what she's witnessed.";
+		say "     Events continue to play out, the feline's pulls the guy's cock out and climbs atop him. Pinning him down, she bounces on his pole. Black fur starts creeping up his belly as her starts spreading to him. 'Yeah.. That's the stuff...' Cindy moans as the victim's transformation continues, changing his body and eventually his head. By the time it's run its course and the guy's become a matching male panther, the waitress has to stifle a moaning orgasm from what she's witnessed.";
 		say "     'Ahhhhh. Damn! That's always soooo hot to see happen.' She pants to recover her breath and wipes her hands on a dish towel. 'As inconvenient as having gotten stuck here is, the entertainment more than makes up for it. Speaking of, I could go for some private entertainment,' she says with a grin.";
 		say "     For a moment, you [if player is male]allow yourself to hope that[else]think[end if] she might mean with you, but she whistles over to the lifeguard and gives him a signal. The buff orca is down the ladder in a flash, sending a familiar-looking otter up to take his post. For such a big guy, he dashes up the steps very quickly and joins her in the back for what sounds like a very energetic round of fucking. Again when she emerges, she's left unchanged despite the heavy scent of orca sex lingering about her.";
 		increase HP of Cindy by 1;
@@ -66,13 +66,13 @@ to say nosexwithcindy:
 			say "     You go up to the human woman and start putting the moves on her, saying you'll to rock her world. She gives you a snort and tosses her half-finished soda in your face. 'What kind of a pig comes up and asks a woman for sex without even introducing themselves? Why I should...' she pauses, glancing at the other customers watching the confrontation and takes a deep breath. 'Look. I'm feeling generous, but you better watch your step.'";
 			now HP of Cindy is 1;
 		else:
-			say "     [one of]Cindy does not seem particularly impressed at your suggestion of going into the back for sex. She probably gets a lot of offers like that.[or]You try to chat up the restauranteure, but she rebukes your attentions rather harshly. 'Don't go getting any funny ideas. I'm not in the mood right now, you pig. Besides - I'm way out of your league,' she says curtly.[at random]";
+			say "     [one of]Cindy does not seem particularly impressed at your suggestion of going into the back for sex. She probably gets a lot of offers like that.[or]You try to chat up the restauranteur, but she rebukes your attentions rather harshly. 'Don't go getting any funny ideas. I'm not in the mood right now, you pig. Besides - I'm way out of your league,' she says curtly.[at random]";
 	else:
 		if HP of Cindy is 0:
 			say "     You go up to the human woman and start putting the moves on her, saying you'll to rock her world. She just laughs. 'I think [']my world['] is more than you can handle. You're cute, but it's rude to make such an offer to someone you've not even met.'";
 			now HP of Cindy is 1;
 		else:
-			say "     You try to chat up the restauranteure, but she rebukes your attentions rather harshly. 'Look. You're kinda cute, but I've got plenty of [']friends['] out there on the beach for that already. Besides - I'm way out of your league,' she adds.";
+			say "     You try to chat up the restauranteur, but she rebukes your attentions rather harshly. 'Look. You're kinda cute, but I've got plenty of [']friends['] out there on the beach for that already. Besides - I'm way out of your league,' she adds.";
 
 
 Section 3 - Vending
@@ -166,7 +166,7 @@ Section 4 - Unwanted Trouble
 instead of going west from Beach Plaza when ( HP of Cindy is 4 and a random chance of 2 in 3 succeeds ) and player is not neuter:
 	say "     As you start down the steps to the beach, there's an obvious commotion going on. A large squad of muscular men in naught but sandals, red cloaks and Grecian helmets are attacking the peaceful beachgoers. Some of the latter being dragged off, though some are being assaulted right then and there. A half-dozen of these soldiers are storming up the stairs to the Sunny Snacks patio, pushing past the mutants trying to flee down the stairs. You can see Cindy, the only one left up there, about to be cornered and outnumbered by the attackers.";
 	say "     If you're going to do something, you'd best do it soon.";
-	say "     [bold type]Shall you rush up to try to help the restauranteure or clear out like the other beachgoers are trying to do?[roman type][line break]";
+	say "     [bold type]Shall you rush up to try to help the restauranteur or clear out like the other beachgoers are trying to do?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Try to help.";
 	say "     ([link]N[as]n[end link]) - Clear out.";

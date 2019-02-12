@@ -735,7 +735,7 @@ to say goodAlexandrasex3:
 			say "     Soon licking is not enough for the horny hound and she takes your [cock of player] cock into her muzzle. She fellates you eagerly, her long canine tongue and muzzle feeling wonderful on your throbbing member. Between her tonguework and your built-up arousal from eating her out, it isn't much longer before it is your turn to cum. Alexandra slurps up [if cock width of player >= 25]as much of your [cum load size of player] load as she can manage[else]every last drop of your seed she can get[end if] with obvious relish, happy to please her partner.";
 		else:
 			say "     Soon licking is not enough for the horny hound and she wriggles that long tongue of hers into your cunny. She works her tongue in and out of you eagerly, delving into your depths with obvious relish. She gets your moaning and panting with how she works that tongue and her furry muzzle across and into your pussy and clit. Between her tonguework and your built-up arousal from eating her out, it isn't much longer before it is your turn to cum. Alexandra laps up your flowing juices, drinking down every drop she can get as you orgasm, happy to please her partner.";
-		say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses (and thereby sharing the lingering traces of each others flavor with your partner). Eventually though, this private moment must come to a close. Getting dressed, the two of you exit the office and return to your duties.";
+		say "     Having satisfied one another, the two of you snuggle together, sharing a few more kisses (and thereby sharing the lingering traces of each other's flavor with your partner). Eventually though, this private moment must come to a close. Getting dressed, the two of you exit the office and return to your duties.";
 	else:
 		say "     Still panting from her orgasm, Alexandra welcomes her loving partner into her arms for more kisses and snuggling. She strokes and caresses your [bodytype of player] body, soothing your unfocused arousal. Eventually though, this private moment must come to a close. Getting dressed, the two of you exit the office and return to your duties.";
 
@@ -958,7 +958,7 @@ to say A_Task50:	[See Jimmy.i7x for event and NPC content]
 		now Automaton Activity is active;
 		now HP of Jimmy is 1;
 	else if HP of Jimmy is 1:
-		say "     'Have you had a chance to look into the [bold type]automaton activity[roman type] around the Capitol Building? Hopefully you'll have better luck at it than I did. I can smell that they're up to something,' adds says, tapping her muzzle.";
+		say "     'Have you had a chance to look into the [bold type]automaton activity[roman type] around the Capitol Building? Hopefully you'll have better luck at it than I did. I can smell that they're up to something,' she says, tapping her muzzle.";
 		now sextablerun is 0; [continued talking allowed]
 	else if HP of Jimmy is 2:
 		say "     Having told Alexandra about what happened with the automatons and the corgi, she's concerned for the little fellow. 'A small guy like that won't be able to stand up to the monsters roaming around there. You should go back there and look for him as soon as you get the chance.'";

@@ -26,7 +26,7 @@ to say losetocentaurstallion:
 			if HP of player > 0:
 				say "     As you throw up your hands to submit";
 			else:
-				say "     As you lower your defences";
+				say "     As you lower your defenses";
 			say ", the male centaur gets a more twisted look on his face as he paces around you. Finally, he pushes you down to your knees and moves to press his cock to your face. Believing it to be a mere blowjob, you are surprised when he thrusts forwards, his tip sliding over your face and expanding to take your shoulders in. He moves you to a nearby rock, and he happily moans as his flesh tugs on you, pulling your face deeper into the musky tube half your length and bulging with your body as it pushes over your form.";
 			say "     Soon, the centaur has you in up to your waist, and he decides to torture you a bit, the male going for a canter and a slow gallop. Your legs smack against the underside of that gut over and over as he runs, each upwards jerk of his cock pulling more and more of you in. Eventually, all that is left is your feet, and even they disappear from view, the bulge you make going down into a tight chamber filled with musky fluid, straining and stretching with your form. Aroused beyond belief now, the stallion gallops, looking for a mate. The swaying isn't as rocky in here, and you can feel the warm cum starting to help you nod off...";
 			WaitLineBreak;

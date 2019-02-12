@@ -144,7 +144,7 @@ College Belltower is northwest of College Walkway Northwest.
 The description of College Belltower is "[belltowerdesc]".
 
 to say belltowerdesc:
-	say "     The belltower seems to be the oldest building on the campus. Judging by the people hanging around, it seems to be the prime location for winged college students. On the ground, there is a mix of various species, but as metioned earlier it's primarily the location for people with flight. If you look upward you can see some of the students flying up high to a location that you have no idea of. Perhaps you can look around campus for information on what's up there, although you might know someone who has an idea of what is, maybe someone who is kind enough to tell you.";
+	say "     The belltower seems to be the oldest building on the campus. Judging by the people hanging around, it seems to be the prime location for winged college students. On the ground, there is a mix of various species, but as mentioned earlier it's primarily the location for people with flight. If you look upward you can see some of the students flying up high to a location that you have no idea of. Perhaps you can look around campus for information on what's up there, although you might know someone who has an idea of what is, maybe someone who is kind enough to tell you.";
 
 [Room Declaration]
 College Walkway West is west of College Campus Entrance.

@@ -351,7 +351,7 @@ Section 4 - Endings
 when play ends:
 	if bodyname of player is "Shemale Smooth Collie":
 		if humanity of player < 10:
-			say "     As your collie instincts take over, you find yourself with increasingly strong urges to mate and make more strong, beautiful collie pups. Leaving all else behind, you strike out into the city to satisfy your new instincts. Your search comes to an end when you encounter a large and powerfully built shemale collie, drawn towards each others['] scent";
+			say "     As your collie instincts take over, you find yourself with increasingly strong urges to mate and make more strong, beautiful collie pups. Leaving all else behind, you strike out into the city to satisfy your new instincts. Your search comes to an end when you encounter a large and powerfully built shemale collie, drawn towards each other's scent";
 			if player is female:
 				say ". She seems like an ideal mate to you and you submit yourself to her, much to her delight. You find yourself repeatedly bred by her, your womb growing full with her many pups. She is particularly pleased, loving you for giving her an ever-growing litter of puppies. And in time, those pups grow up and spread out into the city and beyond in search of mates of their own.";
 				if player is male and beauceronmet is true:
@@ -361,7 +361,7 @@ when play ends:
 				if player is male and beauceronmet is true:
 					say "     Shortly after you meet up with her, an equally well-built beauceron comes along, but this canine is a cuntboy. He seems familiar somehow, though your memories from before are getting increasingly fuzzy, so it's hard to know exactly when that was. While it seems to think your mate is his cousin, you cannot be certain, but do smell the scent of heat coming from between his legs. You exchange doggy kisses with this muscled hunk of a cuntboy and fuck him as well, breeding puppies in him to satisfy his growing need to breed as well. You make an odd family with you mate to both of them in opposite capacities, but the numerous puppies bred from your trio of horny hounds make you all so happy.";
 			else if player is male:
-				say ". Knowing your predicament is much like her own, you spend some time together, relieving each others['] needs while searching for true mates.";
+				say ". Knowing your predicament is much like her own, you spend some time together, relieving each other's needs while searching for true mates.";
 				if beauceronmet is true:
 					say "     Shortly after you meet up with her, an equally well-built beauceron comes along, but this canine is a cuntboy. He seems familiar somehow, though your memories from before are getting increasingly fuzzy, so it's hard to know exactly when that was. While it seems to think your mate is his cousin, you cannot be certain, but do smell the scent of heat coming from between his legs. You exchange doggy kisses with this muscled hunk of a cuntboy and fuck him, breeding puppies in him to satisfy his growing need to breed as well.";
 					say "     With the help of your new mate, the three of you are able to surround and capture a lone soldier. With some canine milk and plenty of canine encouragement (sex), you turn him into a sexy herm collie to be the willing mate of the shemale collie. Together, your family of four (soon to be much more) happily finds a warm den to breed numerous litters of big, strong puppies. And in time, those pups grow up and spread out into the city and beyond in search of mates of their own.";
