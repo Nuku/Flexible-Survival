@@ -60,7 +60,7 @@ FangWS is a number that varies.
 FangToy is a truth state that varies. FangToy is usually false.
 [See Feral Wolf file for collecting Fang.]
 
-the scent of the Fang is "[if HP of Fang is 3 or HP of Fang is 4]The scent of your alpha wolf is strong and exciting.[else]The scarred wolf has an arousing male scent.[end if]".
+the scent of the Fang is "[if HP of Fang is 3 or HP of Fang is 4]The scent of your alpha wolf is strong and exciting[else]The scarred wolf has an arousing male scent[end if].".
 
 to say fangdesc:
 	project the Figure of Fang_face_icon;

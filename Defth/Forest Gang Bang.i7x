@@ -17,8 +17,8 @@ Instead of resolving a Pack Bang:
 	now inasituation is true;
 	now FeralWolfSpecialFightNumber is 1; [pack members]
 	say "     You feel your heart beating faster. Quick, you need to make a choice: Do you run away, or stay and confront your enemies?";
-	say "     ([link]Y[as]y[end link]) – Run away.";
-	say "     ([link]N[as]n[end link]) – Stay and fight.";
+	say "     ([link]Y[as]y[end link]) - Run away.";
+	say "     ([link]N[as]n[end link]) - Stay and fight.";
 	if player consents:
 		LineBreak;
 		say "     You turn tail and run as fast as you can, but the wolves notice and hunt you down. Your muscles burn and scream as branches hit your face, making small cuts on it, but you don't dare to slow down. Your hunters are left behind except for one, probably the leader of the pack. He stays close to you, his bestial stamina gaining on you, and a root in your way gives him the chance he needs to catch you, tackling you as you stumble over it. Sprawled on the ground, the wolf overtakes you easily and positions himself in the direction you had been running into, intent on driving you back towards his pack. You will need to deal with him quick, or the rest of them will catch up.";

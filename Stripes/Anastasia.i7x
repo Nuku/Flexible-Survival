@@ -229,7 +229,7 @@ The icon of Anastasia is Figure of Anastasia_icon.
 the scent of the Anastasia is "The phoenix has a pleasent scent of woodsmoke.".
 
 to say Anastasiadesc:
-	say "     The phoenix reborn looks much as she did in her last incarnation, fully avian in form and as tall as a normal human being when upright. She has rich red and golden plumage over her hawk-like body. The edges of her wings tail feathers dance with a softly glowing flame. Her golden eyes look towards you[if loyalty of Anastasia is 2], happy to see you.[else if loyalty of Anastasia is 3]lovingly.[else] with curiostity.[end if].";
+	say "     The phoenix reborn looks much as she did in her last incarnation, fully avian in form and as tall as a normal human being when upright. She has rich red and golden plumage over her hawk-like body. The edges of her wings tail feathers dance with a softly glowing flame. Her golden eyes look towards you[if loyalty of Anastasia is 2], happy to see you[else if loyalty of Anastasia is 3] lovingly[else] with curiosity[end if].";
 
 Instead of conversing the Anastasia:
 	if HP of Anastasia < 5:
@@ -241,7 +241,7 @@ Instead of conversing the Anastasia:
 	else if HP of Anastasia is 11 and a random chance of 2 in 5 succeeds:
 		say "[salamanderraid]";
 	else:
-		say "     [one of]Anastasia smiles and nuzzles her golden beak against you. 'I want to thank you again for helping me. I don't know if I would have ever woken up without your help.'[or]'At first I didn't understand what all this sex was for aside from fun, but once I laid my first egg, I knew it was something much more.'[or]'I can hardly wait to return with my new clutch so we can share this new gift with the others.'[or]'I was here before, a long time ago. It was much different back then, but now that I've adapted to it, this is much better,' she says with a smile and a brush of her wingtip across her pussy.[or]'I can feel my strength returning slowly now.'[or]'This strange infection was draining my strength, but now that I've been reborn and let it change me, I feel better than ever,' she says with a soft moan as she runs a wingtip across her wet slit.[or]'Having sex is such a wonderfully new delight for me. My many chicks and I will certainly have fun introducing the others to it.'[or]'There were so few of us left, but this gift you've given me will change all that.'[at random]";[Remove once new diolgue is in]
+		say "     [one of]Anastasia smiles and nuzzles her golden beak against you. 'I want to thank you again for helping me. I don't know if I would have ever woken up without your help.'[or]'At first I didn't understand what all this sex was for aside from fun, but once I laid my first egg, I knew it was something much more.'[or]'I can hardly wait to return with my new clutch so we can share this new gift with the others.'[or]'I was here before, a long time ago. It was much different back then, but now that I've adapted to it, this is much better,' she says with a smile and a brush of her wingtip across her pussy.[or]'I can feel my strength returning slowly now.'[or]'This strange infection was draining my strength, but now that I've been reborn and let it change me, I feel better than ever,' she says with a soft moan as she runs a wingtip across her wet slit.[or]'Having sex is such a wonderfully new delight for me. My many chicks and I will certainly have fun introducing the others to it.'[or]'There were so few of us left, but this gift you've given me will change all that.'[at random]"; [Remove once new dialogue is in]
 
 
 Section 5 - Sexy Times

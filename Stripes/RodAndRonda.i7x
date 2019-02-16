@@ -20,7 +20,7 @@ to say roddesc:
 	else:
 		say "     Rod has become a sexy slut rat. She has curvy hips, a tight waist and large bosom. She has a black leather outfit like most of the other slut rats, though hers is certainly much skimpier, showing off her new breasts, cute ass and bulging crotch. She has a very feminine face, though you can still pick out a few traces that remind you of the old Rod to help you identify her. She has black fur and a long, naked rat tail. She's managed to keep some of her personality thanks to Ronda, but is thoroughly a horny slut rat now.";
 
-the scent of Rod is "[if HP of Ronda is not 100]Rod smells of rats and his mall home.[else]Rod smells of slutty rats and sex. Lots of sex.[end if]".
+the scent of Rod is "[if HP of Ronda is not 100]Rod smells of rats and his mall home[else]Rod smells of slutty rats and sex. Lots of sex[end if].".
 
 instead of conversing Rod Mallrat:
 	if tmapfound is 1:		[***needs Slut Rat version?]
@@ -114,7 +114,7 @@ Table of GameCharacterIDs (continued)
 object	name
 Ronda Mallrat	"Ronda Mallrat"
 
-Ronda Mallrat is a person. "[if HP of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note.[else if HP of Ronda is 10]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random].[else if HP of Ronda is 100]Ronda [one of]sits with several slut rats fawning over her[or]is stretched out across some cushions, enjoying some expensive chocolates[or]idly rubs her crotch[or]runs her paws over Rod[at random].[end if]".
+Ronda Mallrat is a person. "[if HP of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note[else if HP of Ronda is 10]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random][else if HP of Ronda is 100]Ronda [one of]sits with several slut rats fawning over her[or]is stretched out across some cushions, enjoying some expensive chocolates[or]idly rubs her crotch[or]runs her paws over Rod[at random][end if].".
 The description of Ronda Mallrat is "[rondadesc]".
 The conversation of Ronda is { "empty" }.
 Ronda Mallrat is in Mall Atrium.
@@ -129,7 +129,7 @@ to say rondadesc:
 	else:
 		say "ERROR-Ronda-[HP of Ronda]L: You should not be able to converse with Ronda at this point.";
 
-the scent of Ronda is "[if HP of Ronda is not 100]Ronda smells of cheap perfume, rats and her mall home.[else]Ronda smells of slutty rats, cheap perfume and lots of sex.[end if]".
+the scent of Ronda is "[if HP of Ronda is not 100]Ronda smells of cheap perfume, rats and her mall home[else]Ronda smells of slutty rats, cheap perfume and lots of sex[end if].".
 
 instead of conversing Ronda Mallrat:
 	if HP of Ronda is not 100 and hospquest is 8 and nerminepackage > 0 and rondahosp is 0:
@@ -141,7 +141,7 @@ instead of conversing Ronda Mallrat:
 	else if HP of Ronda > 0 and HP of Ronda < 10:
 		say "ERROR-Ronda-[HP of Ronda]T: You should not be able to converse with Ronda at this point.";
 	else if HP of Ronda is 10:
-		say "[one of]'Those clothes are out of date, hon. You should update your wardrobe.'[or]'Being a mall rat is way better than being a human, no offense or anything to humans.'[or]'We can find anything we need here in the mall; it is our Eden.'[or]'Thanks again for the assist,' she says.[or]'Me and the girls are getting along really well since I got back. [']Really['] well,' she says with a wink and a grin.[or][if HP of Lucy is 0]'Have you met Lucy?' she asks, hugging one of the rat girls nearby. 'We've become good friends since I got back.' Lucy smiles and discreetly runs her paw over Ronda's lap.[else]'I hope you and Lucy are getting along well. And don't worry, I'll keep an eye on her while you're away,' she says with a wink.[end if][or]'Rod's such a good boy. Knows his place.'[at random]";
+		say "[one of]'Those clothes are out of date, hon. You should update your wardrobe.'[or]'Being a mall rat is way better than being a human, no offense or anything to humans.'[or]'We can find anything we need here in the mall; it is our Eden.'[or]'Thanks again for the assist,' she says.[or]'Me and the girls are getting along really well since I got back. [']Really['] well,' she says with a wink and a grin.[or][if HP of Lucy is 0]'Have you met Lucy?' she asks, hugging one of the rat girls nearby. 'We've become good friends since I got back.' Lucy smiles and discreetly runs her paw over Ronda's lap[else]'I hope you and Lucy are getting along well. And don't worry, I'll keep an eye on her while you're away,' she says with a wink[end if].[or]'Rod's such a good boy. Knows his place.'[at random]";
 	else if HP of Ronda is 100:
 		say "[one of]'I feel so much better now that I have my sweet Rod to play with.'[or]'Feel free to play with Rod whenever I'm not using her.'[or]'I love living here with my slutty Rob and all my sexy friends. This is paradise.'[or]'Thanks again for your help with Rod. Having her here makes everything so much better.'[or]'Rod's such a good slut. Knows her place.'[at random]";
 

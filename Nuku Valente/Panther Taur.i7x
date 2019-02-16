@@ -265,7 +265,7 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Panther Taur":
 		if humanity of player < 10:
-			say "     You get the sudden urge to prowl, and begin seeking an ideal mate. Something within you does not allow you to accept any but the strongest.[if cocks of player > 1] Oddly enough, exposed and vulnerable females seem to always be acceptable. Just the thought of pinning a female down and shoving your [cock size desc of player] [cock of player] rod into their depths is enough to give you a raging hard on.[end if]";
+			say "     You get the sudden urge to prowl, and begin seeking an ideal mate. Something within you does not allow you to accept any but the strongest[if cocks of player > 1]. Oddly enough, exposed and vulnerable females seem to always be acceptable. Just the thought of pinning a female down and shoving your [cock size desc of player] [cock of player] rod into their depths is enough to give you a raging hard on[end if].";
 		else:
 			say "     Your feline body draws stares, mixed between envy and disgust. You eventually gather a bit of a following, all too eager to see to your needs as they worship you as some kind of strange new god - not that you mind much. It's nice to be waited on.";
 			if player is male:

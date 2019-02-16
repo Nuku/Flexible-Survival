@@ -528,7 +528,7 @@ to say SpikePlayerNameKingpin:
 	if thirst of Spike is 0 or (thirst of Spike > 10 and thirst of Spike < 15) or (thirst of Spike > 20 and thirst of Spike < 25):
 		say "     'Of course. Will do, Kingpin! And I'll keep an eye out for red devils, eh?' Spike replies, taking care to appear upbeat about it even though you're taking a little bit of familiarity between the two of you away from him. No matter what, the young doberman keeps giving you hopeful and admiring looks whenever he thinks that you are not watching. Clearly, he is eager to reclaim your good graces any way he can.";
 	else:
-		say "     'Of course. Will do, Kingpin! And I'll keep an eye out for red devils, eh?'' Spike replies, giving you a respectful nod. The young doberman keeps giving you hopeful and admiring looks whenever he thinks that you are not watching, apparently wishing for more than just being a follower to you.";
+		say "     'Of course. Will do, Kingpin! And I'll keep an eye out for red devils, eh?' Spike replies, giving you a respectful nod. The young doberman keeps giving you hopeful and admiring looks whenever he thinks that you are not watching, apparently wishing for more than just being a follower to you.";
 	now thirst of Spike is 4;
 
 to say SpikePlayerNameOyabun:

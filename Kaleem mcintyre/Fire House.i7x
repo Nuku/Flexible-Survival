@@ -694,20 +694,20 @@ Understand "scale up" as Firepolescaling.
 
 Check Firepolescaling:
 	If LowerFirepole is not visible:
-		say "[if PALOMINO is known and a random chance of 1 in 2 succeeds]If you want to play around on a pole, try the PALOMINO.[else]Thinking about monkeying around on a fire pole are we?[end if]";
+		say "[if PALOMINO is known and a random chance of 1 in 2 succeeds]If you want to play around on a pole, try the PALOMINO.[else]Thinking about monkeying around on a fire pole, are we?[end if]";
 
 carry out Firepolescaling:
-	say "     Figuring that you could do with a light workout you decide to climb the fire pole.";
+	say "     Figuring that you could do with a light workout, you decide to climb the fire pole.";
 	let bonus be (( the strength of the player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
 	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
 	if diceroll > 14:
-		say "     Managing to climb the golden pole you make your way up to the sleeping area of the fire house.";
+		say "Managing to climb the golden pole, you make your way up to the sleeping area of the fire house.";
 		Move player to Sleeping Quarters;
 		increase score by 2;
 	else:
-		say "     Not being able to grip the slick pole to pull yourself up correctly you end up sliding back down in dismay.";
+		say "Not being able to grip the slick pole to pull yourself up correctly, you end up sliding back down in dismay.";
 
 
 Section 7 - Upstairs

@@ -12,7 +12,7 @@ V3: Wukong appears in monkey house with Hanu"
 
 [
 Humanities of Wukong:
-50: independant
+50: independent
 
 ]
 
@@ -402,8 +402,10 @@ instead of resolving Hunt Of Mammoth Proportions:
 			infect "Mammoth";
 			now Resolution of Hunt Of Mammoth Proportions is 2; [fought + lost]
 		else:
-			say "     You run away as fast as your legs can carry you. 'Wait! Where are you-mmmf!' Wukong's outraged protest is cut short as he is grabbed by the mammoth and bear-hugged against her huge breasts. 'Hng... S-stop.'[line break]'You little scamp. Let me take care of you.'[line break]'Mmmg! C-can't breath...'";
-			say " Eventually, the voices fade away as you leave the prehistory wing. Hopefully Wukong will not be mad at you for this. Well, not madder at least.";
+			say "     You run away as fast as your legs can carry you. 'Wait! Where are you-mmmf!' Wukong's outraged protest is cut short as he is grabbed by the mammoth and bear-hugged against her huge breasts. 'Hng... S-stop.'";
+			say "     'You little scamp. Let me take care of you.'";
+			say "     'Mmmg! C-can't breathe...'";
+			say "     Eventually, the voices fade away as you leave the prehistory wing. Hopefully Wukong will not be mad at you for this. Well, not madder at least.";
 			now Loyalty of Wukong is -1;
 			now Resolution of Hunt Of Mammoth Proportions is 3; [fought + ran]
 	else:
@@ -452,7 +454,7 @@ instead of resolving Take My Royal Word For Granite:
 			WaitLineBreak;
 			say "     Time flows slowly in your stone prison. The hands of Wukong are quickly back on the offense, torturing your defenseless genitals with caresses and strokes. At one point, you even feel his tail [if cocks of player is 1]wrap around your cock and squeeze it[else if cocks of player > 1]wrap around all your cocks and squeeze them together[else if cunts of player is 1]grind against your pussy[else]grind against your row of pussies[end if]. After some time, you feel like the size of the hands change constantly, as if several other people took their turn playing with you. Your mind sinks into a permanently sex-addled state, and you drift in and out of consciousness regularly.";
 			say "     Time flows slowly in your stone prison. The hands of Wukong are quickly back on the offense, torturing your defenseless genitals with caresses and strokes. At one point, you even feel his tail [if cocks of player is 1]wrap around your cock and squeeze it[else if cocks of player > 1]wrap around all your cocks and squeeze them together[else if cunts of player is 1]grind against your pussy[else]grind against your row of pussies[end if]. After some time, you feel like the size of the hands change constantly, as if several other people took their turn playing with you. Your mind sinks into a permanently sex-addled state, and you drift in and out of consciousness regularly.";
-			say "     You eventually wake up some time later, with Valerie overlooking your knocked out body. You rise your head with great difficulty, every muscle in your body feeling sore. 'Thank goodness, you are back to your senses,' Valerie says when she notices you have awaken. 'It is fortunate that the effects were only temporary. Still, it must have been quite an ordeal. Are you feeling alright?' You shake your head, not feeling that good. 'Being turned into a living statue has some effects on the body, I guess,' the sphinx replies. 'I am sorry that we dragged you into this. At the very least, eat and drink this, it will make up for all the energy you had to spend.' On these words, she brings you a sandwitch and a bottle of water, that you down without second thought. It will not make up for the time lost at being a statue, but it is better than anything.";
+			say "     You eventually wake up some time later, with Valerie overlooking your knocked out body. You rise your head with great difficulty, every muscle in your body feeling sore. 'Thank goodness, you are back to your senses,' Valerie says when she notices you have awaken. 'It is fortunate that the effects were only temporary. Still, it must have been quite an ordeal. Are you feeling alright?' You shake your head, not feeling that good. 'Being turned into a living statue has some effects on the body, I guess,' the sphinx replies. 'I am sorry that we dragged you into this. At the very least, eat and drink this, it will make up for all the energy you had to spend.' On these words, she brings you a sandwich and a bottle of water, that you down without second thought. It will not make up for the time lost at being a statue, but it is better than anything.";
 			say "[bold type]Looking outside, you realize that you spent nearly half a day, stuck as a statue[roman type]";
 			decrease turns by 4;
 			now Resolution of Take My Royal Word For Granite is 2; [fought + lost]
@@ -488,7 +490,7 @@ to say wukongDesc:
 	if Resolution of Monkey Duel is 1:
 		say "You glance at Wukong, sitting in a corner of the Training Hall. He still wears his collar, as well as a complex network of ropes and knots which bites softly into his fur. [if humanity of Wukong < 3]He is rather restless, fidgeting and absent-mindedly pulling at the squeezing ropes here and there, inadvertently tightening the material's grip elsewhere[else]The formerly turbulent simian seems to have calmed down, and gotten used to his shibari. Hanu's training seems to have paid out[end if].";
 	else:
-		say "Wukong sits on a makeshift throne, in the middle of the Monkey House. His position is less than regal, sprawled on his seat, his feet sprawled on both armrests and offered to simian courtisans, and by extension shamelessly exposing the royal crotch to newcomers. The Monkey King returns your gaze, as if to assert you that he owns this place.";
+		say "Wukong sits on a makeshift throne, in the middle of the Monkey House. His position is less than regal, sprawled on his seat, his feet sprawled on both armrests and offered to simian courtesans, and by extension shamelessly exposing the royal crotch to newcomers. The Monkey King returns your gaze, as if to assert you that he owns this place.";
 
 
 instead of conversing Wukong:
@@ -498,7 +500,7 @@ instead of conversing Wukong:
 		else if humanity of Wukong is 1:
 			say "[if Loyalty of Wukong is -1]'Such disgrace. I have nothing to say to you.'[else if Loyalty of Wukong is 2]'You are enjoying seeing your former sovereign in this state, admit it.'[else]'W-Would you at least convince this Hanu to remove these ropes. I'm itching!'[end if]";
 		else if humanity of Wukong is 2:
-			say "[if Loyalty of Wukong is -1]'I learned my lesson, alright? Release me.'[else if Loyalty of Wukong is 2]'While I do see the point of this treatement, these ropes are over-doing it.'[else]'This Hanu person is not a bad person, but I cannot stand to stay in this bondage.'[end if]";
+			say "[if Loyalty of Wukong is -1]'I learned my lesson, alright? Release me.'[else if Loyalty of Wukong is 2]'While I do see the point of this treatment, these ropes are over-doing it.'[else]'This Hanu person is not a bad person, but I cannot stand to stay in this bondage.'[end if]";
 		else:
 			say "[if Loyalty of Wukong is -1]'We do not like each other much, but let's agree to put our past between us.'[else if Loyalty of Wukong is 2]'I realized that I treated my servants badly. I will treat my next ones better!'[else]'This enforced time-out helped clear my mind and realize many things, my friend. Once Hanu releases me, let's walk the Earth, you and I!'[end if]";
 	else:
@@ -574,10 +576,10 @@ instead of fucking Wukong:
 to say WukongTrainingTrain:
 	say "     'Good, good,' Hanu says. 'Since it is rare that we have two students, allow me to make this training more, shall we say, competitive. Please undress yourself.' You [SelfStripCrotch], then you [SelfStripChest], while Hanu comes back with a small pot filled with a creamy substance. 'Stay still,' the brown monkey orders you, as he picks a good dose of it, and suddenly [if player is herm]rubs it on your cock[smn], then runs a finger on and in your cunt[sfn]. Your loins instantly feel as if they were on fire. Your cock[smn] harden[smv], and your cunt[sfn] turn[sfv] dripping wet[else if player is male]rubs it on your cock[smn]. Your loins instantly feel as if they were on fire. Your cock[smn] harden[smv][else]Your loins instantly feel as if they were on fire. Your cunt[sfn] turn[sfv] dripping wet[end if] Your crotch is itching. Itching very bad. But Hanu prevents you from touching it. 'No. Calm yourself. Focus.'";
 	say "     Hanu quickly rubs the lotion on Wukong as well, who ends up in the same state as you. 'Both of you, lie down,' he asks, before he sits between the both of you. Then, he presents to each of you a feet. 'This will be our training. Tend to my feet. The first one who reaches for their crotch loses, and the winner will be allowed to rub his sex with the loser's body. Now, do not lose any time. Begin.'";
-	say "     You grab the foot which hovers in front of your face, and starts massaging the soft, dark brown sole. There is a sort of pleasant, soft erotic feeling in playing with someone else's foot, albeit it does not do much to make you forget the itching between your thighs. Trying to use any ressource you can to focus on the master's foot, you start giving it licks. Your tongue becomes bolder and bolder, and you find yourself playing with Hanu's toes. From the grunts he emits, the old monkey seems very satisfied from your job, and probably Wukong's as well, as you see the younger monkey imitating you.";
+	say "     You grab the foot which hovers in front of your face, and starts massaging the soft, dark brown sole. There is a sort of pleasant, soft erotic feeling in playing with someone else's foot, albeit it does not do much to make you forget the itching between your thighs. Trying to use any resource you can to focus on the master's foot, you start giving it licks. Your tongue becomes bolder and bolder, and you find yourself playing with Hanu's toes. From the grunts he emits, the old monkey seems very satisfied with your job, and probably Wukong's as well, as you see the younger monkey imitating you.";
 	WaitLineBreak;
 	if (humanity of Wukong is 0 and libido of player < 75) or (humanity of Wukong is 1 and libido of player < 50) or (humanity of Wukong >= 2 and libido of player < 25):
-		say "     You take big breaths, basking in the smell and the taste of Hanu's feet in order to forget the rising need to touch yourself rises quickly in you. You manage to hold on, while Wukong breaths more and more heavily, and loses focus on what he is doing. Suddenly, he lets go of Hanu's foot, and hurriedly begins to masturbate furiously.";
+		say "     You take big breaths, basking in the smell and the taste of Hanu's feet in order to forget the rising need to touch yourself rises quickly in you. You manage to hold on, while Wukong breathes more and more heavily, and loses focus on what he is doing. Suddenly, he lets go of Hanu's foot, and hurriedly begins to masturbate furiously.";
 		say "     You raise your head, and see Hanu stop a chronometer. 'You are still behind our friend, Wukong,' you hear Hanu ponder. 'You won our wager, so have your little fun. Remember not to rub yourself where I applied the balm on Wukong.' You definitely need the release, so you decide to grab Wukong's feet. You lewdly grind the oblivious monkey's limbs on your sex, to alleviate the unrelenting urge.";
 		say "     [if player is herm]You make sure to alternate the feet between your cock[smn] and your cunt[sfn][else if player is male]You rub your cock[smn] against Wukong's soft soles[else]You rub your cunt[sfn] against Wukong's soft sole[end if].They are so soft, that your arousal quickly catches up with your training partners. The both of you cum at the same time, and while his cum paints his furry chest, your own fluids cover his soles, and dribble down his legs. Extenuated, you lean back, while a groggy Wukong pants on his back. Near you, Hanu is observing the scene, sitting in the lotus position. 'Ah, two vigorous youngsters. We should redo this sort of training, the next time you are around.'";
 	else:
@@ -586,7 +588,8 @@ to say WukongTrainingTrain:
 		say "     The both of you cum at the same time, and his sperm quickly joins yours on your body. Extenuated, Wukong rolls on the side, while you are left on your back, gasping for air. Near you, Hanu is observing the scene, sitting in the lotus position. 'Ah, two vigorous youngsters. We should redo this sort of training, the next time you are around.'";
 
 to say WukongTrainingAssist:
-	say "     'Very good. In this case, follow me. You too, Wukong.'[line break]'[if humanity of Wukong is 0]Like Hell I- Gaaargh![else if humanity of Wukong is 1]Not again, come o-Nnnng![else]Hey, I never agreed to let someone el-Gkkk![end if]' A shock from Wukong's collar shuts down the young monkey's protests.";
+	say "     'Very good. In this case, follow me. You too, Wukong.'";
+	say "     '[if humanity of Wukong is 0]Like Hell I- Gaaargh[else if humanity of Wukong is 1]Not again, come o-Nnnng[else]Hey, I never agreed to let someone el-Gkkk[end if]!' A shock from Wukong's collar shuts down the young monkey's protests.";
 	say "     'Hush, you. Stand over here!' Hanu gives you some ropes, and instructs you to tie some knots around Wukong's shibari with them. After you are done, he passes the ropes inside rings on the floor and ceiling, and pulls. Wukong finds himself pulled a couple of inches into the air, in a position which looked like he was stuck mid-flight. His arms were tied behind his back with his tail; one leg was left free, but the other was pulled all the way back, and tied to Wukong's collarbone.";
 	say "     Hanu hands you a pot of lotion. Following his lead, you start to run your hands all over Wukong's body. He makes you focus on the younger simian's feet, while he slowly tugs on his nipples. 'O-Ohh...' Wukong wheezes.";
 	say "     'We have worked on this position,' Hanu chastises. 'Work on your breathing.' After that, Hanu hands you a small pouch, with a rope hanging from it; the pouch feels a little heavy. 'Tie it around his scrotum,' he instructs you.";

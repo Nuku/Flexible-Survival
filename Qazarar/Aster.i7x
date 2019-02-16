@@ -54,7 +54,7 @@ an everyturn rule:
 		now Aster is nowhere;
 	else if TimekeepingVar is 6 or TimekeepingVar is -2:
 		if player is in Museum Foyer and PlayerMet of Aster is true:
-			say "     As you stand in the foyer, you notice the door open, and a familiar minotaur comes walking through. He pauses to wave at you as he passes by. 'Good morning! Nice to see you here. If you want to speak with me, I'll be over at my desk, working.''";
+			say "     As you stand in the foyer, you notice the door open, and a familiar minotaur comes walking through. He pauses to wave at you as he passes by. 'Good morning! Nice to see you here. If you want to speak with me, I'll be over at my desk, working.'";
 		if PlayerMet of Aster is true:
 			now Aster is in Museum Foyer;
 

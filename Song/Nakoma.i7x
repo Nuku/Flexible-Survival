@@ -109,7 +109,7 @@ to say NakomaTalk5:
 		else:
 			say "     Getting second thoughts, you shake your equine head, much to the tribe leader's amusement. 'Now, now. Not everyone has what it takes for the role. Perhaps you'd be better suited for hunting, or maybe you'd enjoy something more intimate instead?' the gorgeous herm teases, her words making you squirm.";
 	else:
-		say "     'We are not accepting assistance from those who do not look the part,' Nakoma explains. You open your mouth to ask why, but the horse is quick to press a hoof-tipped finger to your lips. The leader leans in close to speak softly into your ear, 'If it appear like we're accepting help from outsiders, then we risk demoralizing our own. This also tells slaving parties and rival tribes that we're too weak to fend for ourselves, inviting attacks. Best not to risk such a thing,' she explains. You give a gentle nod and drop the subject, reminding yourself to talk to her again later.";
+		say "     'We are not accepting assistance from those who do not look the part,' Nakoma explains. You open your mouth to ask why, but the horse is quick to press a hoof-tipped finger to your lips. The leader leans in close to speak softly into your ear, 'If it appears like we're accepting help from outsiders, then we risk demoralizing our own. This also signals to slaving parties and rival tribes that we're too weak to fend for ourselves, inviting attacks. Best not to risk such a thing,' she explains. You give a gentle nod and drop the subject, reminding yourself to talk to her again later.";
 
 Instead of fucking Nakoma:
 	if player is blequinoidbodied:

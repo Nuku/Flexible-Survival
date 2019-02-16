@@ -850,7 +850,7 @@ to say A_Task01:
 to say A_Task02:
 	if debugactive is 1:
 		say "DEBUG (Activated Task) -> Dr. Mouse - AT_Mouse <- DEBUG[line break]";
-	say "     'I spotted some activity on the upper level of the city hospital. Something's definitely going on there, though I can't really get in to find out what. I'd hoped my being a police officer would be able to convince them to let me in, but the orderlies just attacked. You might want to go check it out, but be careful of the creatures roaming the halls[if City Hospital is unknown]. Getting to the hospital can be a little tricky, but this path is fairly clear. I'd recommend you take the following route to get there..[end if].'";
+	say "     'I spotted some activity on the upper level of the city hospital. Something's definitely going on there, though I can't really get in to find out what. I'd hoped my being a police officer would be able to convince them to let me in, but the orderlies just attacked. You might want to go check it out, but be careful of the creatures roaming the halls[if City Hospital is unknown]. Getting to the hospital can be a little tricky, but this path is fairly clear. I'd recommend you take the following route to get there[end if].'";
 	now City Hospital is known;
 	now AT_Mouse is true;
 	now sextablerun is 0; [continued talking allowed]

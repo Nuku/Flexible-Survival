@@ -139,7 +139,7 @@ The conversation of Doctor Moffatt is { "..." }.
 The icon of Doctor Moffatt is figure of DrMoffatt2_icon.
 wrcurseMoffatt is a number that varies.
 
-the scent of Doctor Moffatt is "[if level of Doctor Moffatt <= 4]She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger. She also has a pleasant, perfumed scent beneath that.[else]The mistress smells heavenly, as usual. Her perfumed scent fills the room, and makes you smile blissfully.[end if]".
+the scent of Doctor Moffatt is "[if level of Doctor Moffatt <= 4]She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger. She also has a pleasant, perfumed scent beneath that[else]The mistress smells heavenly, as usual. Her perfumed scent fills the room, and makes you smile blissfully[end if].".
 
 to say drmoffattdesc:
 	if level of Doctor Moffatt is 0:

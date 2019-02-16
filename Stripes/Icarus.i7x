@@ -62,7 +62,7 @@ icarusrim is a truth state that varies. icarusrim is usually false.
 
 [See Blue Chaffinch file for collecting Icarus.]
 
-the scent of Icarus is "[if HP of Icarus >= 50]Breathing in the soft, pleasant scent of the confident songbird makes you feel submissive and aroused.[else if facename of player is listed in infections of Avianpredlist or facename of player is listed in infections of Felinelist]The blue songbird smells like prey.[else]The blue songbird has a soft, pleasant scent.[end if]".
+the scent of Icarus is "[if HP of Icarus >= 50]Breathing in the soft, pleasant scent of the confident songbird makes you feel submissive and aroused[else if facename of player is listed in infections of Avianpredlist or facename of player is listed in infections of Felinelist]The blue songbird smells like prey[else]The blue songbird has a soft, pleasant scent[end if].".
 
 
 to say Icarusdesc:

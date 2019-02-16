@@ -125,6 +125,7 @@ Figure of Alexandra_naked_frown_icon is the file "Alexandra_naked_frown.jpg".
 Figure of Alex_icon is the file "Alex_ig.jpg".
 Figure of Amy_icon is the file "Amy.jpg".
 Figure of Amy_face_icon is the file "Amy_face.jpg".
+Figure of Anastasia_icon is the file "Anastasia_ig.jpg".
 Figure of Andre_icon is the file "Andre.jpg".
 Figure of Andre_face_icon is the file "Andre_face.jpg".
 Figure of Andrew_icon is the file "andrew_ig.jpg".
@@ -133,7 +134,6 @@ Figure of Anthony_naked_icon is the file "Anthony_naked.jpg".
 Figure of Anthony_clothed_icon is the file "Anthony_clothed.jpg".
 Figure of Anthony_face_icon is the file "Anthony_face.jpg".
 Figure of Artemis_icon is the file "artemisengulf_ig.jpg".
-Figure of Anastasia_icon is the file "Athanasia_ig.jpg".
 Figure of Blanche1_icon is the file "blanche_ig1.jpg".
 Figure of Blanche2_icon is the file "Blanche_ig2.jpg".
 Figure of Blot_icon is the file "FSTF_blot.jpg".

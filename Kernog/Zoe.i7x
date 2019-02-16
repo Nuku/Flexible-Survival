@@ -179,7 +179,7 @@ to say ZoeSecondTime:
 	LibidoLoss 50;
 	SanBoost 10;
 
-[Introductory text, dependant of Loyalty score, then choices
+[Introductory text, dependent of Loyalty score, then choices
 < 7: classic sex scene, where Zoe takes the lead
 7: adding sodomy to the menu (plan first time and second time versions)
 8: unlocks pegging and normal DP

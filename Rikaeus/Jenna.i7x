@@ -163,7 +163,7 @@ to say JennaTalk3: [Solve the Murder]
 			WaitLineBreak;
 		if TawnyaFurSuspicion > 1:
 			LineBreak;
-			say "     You proceed to face the lizard girl, who looks a bit concerned that you're going to accuse her. Instead, you ask her what she proved to you, gesturing to the fur. 'Oh! That! Well, I showed you I have no fur,' she says, possibly overwhelmed by the entire situation. Nodding, you then turn to everyone else. You tell them that the piece of testimony given to you by Tawnya was helpful, believe it or not as it cut down on how many suspects you had. 'What do you mean?' Jenna asks, trying to get more information. Simply put you ask them, if the lizard girl doesn't have fur then what does that mean? They shortly realize it meant that she could not have murdered Tyler.[if CaneFurSuspicion is 1] Jenna turns and glares at the only remaining two suspects, Barry and Gordon.[end if]";
+			say "     You proceed to face the lizard girl, who looks a bit concerned that you're going to accuse her. Instead, you ask her what she proved to you, gesturing to the fur. 'Oh! That! Well, I showed you I have no fur,' she says, possibly overwhelmed by the entire situation. Nodding, you then turn to everyone else. You tell them that the piece of testimony given to you by Tawnya was helpful, believe it or not as it cut down on how many suspects you had. 'What do you mean?' Jenna asks, trying to get more information. Simply put you ask them, if the lizard girl doesn't have fur then what does that mean? They shortly realize it meant that she could not have murdered Tyler[if CaneFurSuspicion is 1]. Jenna turns and glares at the only remaining two suspects, Barry and Gordon[end if].";
 			WaitLineBreak;
 		if GordonFurSuspicion > 1:
 			LineBreak;

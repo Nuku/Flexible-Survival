@@ -302,17 +302,17 @@ instead of fucking Team Captain Roman:
 			say "[RomanFuck1]";
 			LibidoLoss 50;
 		else:
-			say "     Poor Roman is currently [one of]already taken by a couple of visitors[or]spitroasted by two horny wolfmen footballers[or]forced to rim one of his former teammates['] ass[or]having his pussy toyed with by a pair of cheerleaders.[at random] You will have to try again later.";
+			say "     Poor Roman is currently [one of]already taken by a couple of visitors[or]spitroasted by two horny wolfmen footballers[or]forced to rim one of his former teammates['] ass[or]having his pussy toyed with by a pair of cheerleaders[at random]. You will have to try again later.";
 	else if HP of Roman is 5:
 		if (lastFuck of Roman - turns > 8):
 			say "[RomanFuck2]";
 			LibidoLoss 50;
 		else:
-			say "     'Already?' Roman asks. 'Sorry, [if player is not defaultnamed][name of player], [else]pal, [end if]but I have some team business to take care of. Can it wait a little?'";
+			say "     'Already?' Roman asks. 'Sorry, [if player is not defaultnamed][name of player][else]pal[end if], but I have some team business to take care of. Can it wait a little?'";
 	else if HP of Roman > 1:
 		say "     'Look, don't get the wrong idea,' Roman sighs. 'You're nice and all that, but I don't feel like having sex after what happened. And with you-know-what. People aren't as [']fluid['] as you, you know?'";
 	else:
-		say "     'Oh. Well... Um...' Roman scratches the back of his head with his big fingers. 'Would have been nice but, er, I have to take care of some business. Boys being rowdy at the locker-room. You know them.' Roman gives you a small laugh before taking his leave abruptly. [if HP of Roman is 0]What's up with him?[else]Is he embarrassed about his sex?[end if]";
+		say "     'Oh. Well... Um...' Roman scratches the back of his head with his big fingers. 'Would have been nice but, er, I have to take care of some business. Boys being rowdy at the locker-room. You know them.' Roman gives you a small laugh before taking his leave abruptly. [if HP of Roman is 0]What's up with him[else]Is he embarrassed about his sex[end if]?";
 
 [1 - Roman bad ending]
 to say RomanFuck1:
@@ -642,7 +642,7 @@ Instead of resolving a Husky Gang:
 			now Husky Gang is resolved;
 		else if fightoutcome >= 20 and fightoutcome <= 29:
 			say "     The Alpha Husky smirks, as he looks down on you. 'Poor shmuck. He's yours, girl. Help yourself!' With a collective squeal, the Female Huskies rush and pile on you, smothering you under ten furry bodies. They [StripChest], and your bottom clothes quickly follow. They use your [bodyname of player] body to pleasure themselves, grinding against your mouth and other parts of your body to get off.";
-			say "     Two of them play with your [breasts of player] breasts, pulling your nipples and kneeding your [breast size desc of player] chest. There is no intent to please you. Instead, they try to entice the most reactions out of you, to the collective amusement.[if player is male] The Huskies play with your cock[smn]. They pinch, squeeze and nibble your shaft[smn], making sure to keep you on your toes. They quickly start the game of polishing your [cock size desc of player] dickhead[smn], and puffing in amusement as you moan and write under them from the overstimulation.[end if][if player is female]The oldest in the band pushes a finger. 'Watch me spread that bitch. She's gonna wish she had jumped our man's cock instead of putting up a fight!' After that, she rams in a second finger, and quickly after, two more. Once she deems you stretched enough, she balls her hand in a fist, and slowly forces it inside your vagina. She pushes in as much of her arm as she can, while the other Huskies holler and whistle at the scene, and rub the bump traveling up and down your lower belly. 'How's my fist in your puss, bitch?' the dog asks in a vicious tone. You cannot answer her, as your mouth is busy being grinded by another female. Your only response is to squeeze around the fist filling your pussy and cover it in your juices. 'That's what I thought, bitch.'[end if]";
+			say "     Two of them play with your [breasts of player] breasts, pulling your nipples and kneading your [breast size desc of player] chest. There is no intent to please you. Instead, they try to entice the most reactions out of you, to the collective amusement[if player is male]. The Huskies play with your cock[smn]. They pinch, squeeze and nibble your shaft[smn], making sure to keep you on your toes. They quickly start the game of polishing your [cock size desc of player] dickhead[smn], puffing in amusement as you moan and writhe under them from the overstimulation[end if][if player is female]. The oldest in the band pushes a finger. 'Watch me spread that bitch. She's gonna wish she had jumped our man's cock instead of putting up a fight!' After that, she rams in a second finger, and quickly after, two more. Once she deems you stretched enough, she balls her hand in a fist, and slowly forces it inside your vagina. She pushes in as much of her arm as she can, while the other Huskies holler and whistle at the scene, and rub the bump traveling up and down your lower belly. 'How's my fist in your puss, bitch?' the dog asks in a vicious tone. You cannot answer her, as your mouth is busy being grinded by another female. Your only response is to squeeze around the fist filling your pussy and cover it in your juices. 'That's what I thought, bitch.'[else].[end if]";
 			say "     Once every Female Husky has had her way with you, the gang discards your tired body on the side of the street. Your last sight of them before the nanite infection starts ramping up in your body is the Alpha leaning over you. 'Hope you learned your lesson this time. You're welcome.'";
 			infect "Female Husky";
 			infect "Female Husky";

@@ -88,7 +88,7 @@ to say slimeCubeVoreScene:
 		say "     Like a giant die, the slime rolls on the ground until it reaches your knocked-out force, and slams down on you. Your body pops into the gelatinous body, and slowly floats towards its center. The inside of the slime feels hot on your skin, and you understand that the creature aims to digest you slowly, after making sure that you oppose no more resistance.";
 	if fightoutcome is 22:
 		say "     You welcome the slime as it rolls in a die-like fashion upon you, and slams down on your waiting body. Your body pops into the gelatinous body, and slowly floats towards its center. The inside of the slime feels hot on your skin, and you understand that the creature aims to digest you slowly, after making sure that you oppose no more resistance.";
-	say "     The slime washes around your body as it attempts to keep you stimulated and placated.[if player is female and cunts of player > 1] It slowly pushes past each of your pussy lips, then suddenly stretches inside, forming thick slimy limbs relentlessly pounding each of your wombs.[else if player is female] It slowly pushes past your pussy lips, then suddenly stretches inside, forming a thick slimy limb relentlessly pounding your womb.[end if][if the player is male and cocks of player > 1] An ever-changing flow wraps around each of your [cockname of player] shafts, keeping them hard and massaged, experimentally focusing their efforts on your [cocks of player] glans.[else if player is male] An ever-changing flow wraps around your [cockname of player] shaft, keeping it hard and massaged, experimentally focusing their efforts on your glans.[end if]. The slime does not forget to relentlessly tease every part of your body, including your nipples and your [breasts of player] [bodyname of player] breasts[if anallevel is not 1], and flowing into your ass[end if].";
+	say "     The slime washes around your body as it attempts to keep you stimulated and placated. [if cunts of player > 1]It slowly pushes past each of your pussy lips, then suddenly stretches inside, forming thick, slimy limbs before relentlessly pound each of your wombs. [else if player is female]It slowly pushes past your pussy lips, then suddenly stretches inside, forming a thick, slimy limb before relentlessly pounding your womb. [end if][if cocks of player > 1]An ever-changing flow wraps around each of your [cockname of player] shafts, keeping them hard and massaged, experimentally focusing their efforts on your [cocks of player] glans. [else if player is male]An ever-changing flow wraps around your [cockname of player] shaft, keeping it hard and massaged, experimentally focusing their efforts on your glans. [end if]The slime does not forget to relentlessly tease every part of your body, including your nipples and your [breasts of player] [bodyname of player] breasts[if anallevel > 1], and flowing into your ass[end if].";
 	say "     Time is on the essence. If you do not struggle out in time, these intense sensations may be the last you will ever experience.";
 	WaitLineBreak;
 	slimeCubeVore;
@@ -141,7 +141,7 @@ to slimeCubeVore:
 				LineBreak;
 				increase struggleatt by 1;
 				if struggleatt < 3:
-					say "     You desperately wiggle your limbs, and eventally make some progress towards the slime's surface.";
+					say "     You desperately wiggle your limbs and eventually make some progress towards the slime's surface.";
 					increase lustatt by 7 + (lustadjust * 2);
 					wyvhumanityroll; [aka humanity loss]
 					wait for any key;

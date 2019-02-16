@@ -40,7 +40,7 @@ after going to Burned-Out Chapel while (LilithKidCounter > 0 and PlayerMet of At
 	if Playermet of Atticus is false:
 		say "'Yeah, that's right! Remember knocking up a certain succubus? I'm the result, daddy! I'm Atticus, by the way. Now why don't you come over here and give your boy a kiss?' Wiggling his eyebrows in a seductive, teasing way, Atticus turns his body to highlight his best features, eager to draw you in.";
 	else:
-		say "'You don't want to be that kind of dad, do you? Look, you already missed all of the two hours I grew up in, so this is your chance to make up for that! Come play with me! Give your boy a kiss to make it all better, eh?'' Wiggling his eyebrows in a seductive, teasing way, Atticus turns his body to highlight his best features, eager to draw you in.";
+		say "'You don't want to be that kind of dad, do you? Look, you already missed all of the two hours I grew up in, so this is your chance to make up for that! Come play with me! Give your boy a kiss to make it all better, eh?' Wiggling his eyebrows in a seductive, teasing way, Atticus turns his body to highlight his best features, eager to draw you in.";
 	LineBreak;
 	say "     [bold type]How do you want to deal with him?[roman type][line break]";
 	LineBreak;

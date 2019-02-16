@@ -87,8 +87,8 @@ Instead of resolving a Small Cave:
 			LineBreak;
 			say "     Going around the forest, never letting the rock wall out of your sights, you explore for a new opening. Finally, you find what appears to be a cave big enough for you to enter, but somebody might be living inside there. Do you still wish to go inside?";
 			LineBreak;
-			say "     ([link]Y[as]y[end link]) – Go inside the place.";
-			say "     ([link]N[as]n[end link]) – Give up and go home.";
+			say "     ([link]Y[as]y[end link]) - Go inside the place.";
+			say "     ([link]N[as]n[end link]) - Give up and go home.";
 			if player consents:
 				LineBreak;
 				say "     Going inside of the place, it looks like a nest for a feline. Some small bones litter the place, showing that whoever lives in there is a carnivore, so you better be on your toes. There is a stench in the air. The resident of this place probably did that to mark the place. A low growling and the sound of dry leaves cracking make you turn in a flash, and you find the one that lives in here. A big feline with yellow-brown fur is looking at you. The cat looks more feral than human, but she still has some characteristics that show she was a human before, specifically, her short, pixie-blonde hair. Outside of that, all that you can see is a beast ready to attack you. The fight is on.";
@@ -113,8 +113,8 @@ Instead of resolving a Small Cave:
 	else:
 		say "     Walking around the forest, you find what appears to be a hole in a rock. It does have sound coming from the other side, so it might be worth exploring. Unfortunately, the hole is too small for you size, so you would need to shrink before going in there. Going around the forest, never letting the rock wall out of your sights, you explore for a new opening. Finally, you find what appears to be a cave big enough for you to enter, but somebody might be living inside there. Do you still wish to go inside?";
 		LineBreak;
-		say "     ([link]Y[as]y[end link]) – Go inside the place.";
-		say "     ([link]N[as]n[end link]) – Give up and go home.";
+		say "     ([link]Y[as]y[end link]) - Go inside the place.";
+		say "     ([link]N[as]n[end link]) - Give up and go home.";
 		if player consents:
 			LineBreak;
 			say "     Going inside of the place, it looks like a nest for a feline. Some small bones litter the place, showing that whoever lives in there is a carnivore, so you better be on your toes. There is a stench in the air. The resident of this place probably did that to mark the place. A low growling and the sound of dry leaves cracking make you turn in a flash, and you find the one that lives in here. A big feline with yellow-brown fur is looking at you. The cat looks more feral than human, but she still has some characteristics that show she was a human before, specifically her short, pixie-blonde hair. Outside of that, all that you can see is a beast ready to attack you. The fight is on.";

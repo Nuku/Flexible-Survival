@@ -549,7 +549,7 @@ to say philipmusing:
 	say "     'Yeah, sure. I wager setting oneself on fire would elicit all sorts of dazzling awe if one were numb to any sort of pain.'";
 	say "     'You're not very smart; I'm rolling in mud, not setting myself on fire.' This gives Velos pause, and he's appears to be sizing up Philip, perhaps determining if he's being challenged.";
 	say "     '...Okay. Would you agree that the escapist's digression into the surreal has merit only in the realm of simulacrum? This is under the impression that such digressions, when attempted in the real world, would be unhealthy at its best and morally reprehensible at its worst.'";
-	say "     'I'm hungry, [if philip is not bunkered]maybe you could get me something to eat?[else]I think I'll go find some food.[end if]'";
+	say "     'I'm hungry. [if philip is not bunkered]Maybe you could get me something to eat?'[else]I think I'll go find some food.'[end if]";
 	say "     'That question was asked completely straight!'";
 	say "     'You asked me something?'";
 	say "     'Oooh, you're good. You may have won this time, fiend, but you haven't heard the last of me!'";

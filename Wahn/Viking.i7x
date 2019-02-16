@@ -1216,7 +1216,7 @@ to say SonyaSexMenu:
 	now sortorder entry is 1;
 	now description entry is "Have sex with your Viking wife";
 	[]
-	if player is male and cockname of player is listed in infections of Knotlist:
+	if player is male and player is knotted:
 		choose a blank row in table of fucking options;
 		now title entry is "Mount her doggy style";
 		now sortorder entry is 2;

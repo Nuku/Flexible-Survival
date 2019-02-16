@@ -132,7 +132,7 @@ instead of conversing the Amy:
 to say AmyDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Amy], LUST: [lust of Amy], LIBIDO: [libido of Amy], THIRST: [thirst of Amy], LEVEL: [level of Amy], XP: [XP of AMY], DEXTERITY: [dexterity of Amy], SVENAMYSEX: [SvenAmySex], BRUTUSAMYSEX: [BrutusAmySex], SNOWAMYSEX: [SnowAmySex]  <- DEBUG[line break]";
-	say "     Amy is a young and beautiful anthro canine, her body covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. [if HP of Amy < 12]Her chest bears two firm and grope-able B cup breasts along with two smaller A cup pairs of breasts underneath them. [else]Her chest bears two firm and grope-able C cup breasts along with two smaller B cup pairs of breasts underneath them. They all ooze small droplets of milk. [end if][if Lust of Amy > 12]There is a kind of special glow to her, and she seems to be very happy and fulfilled right now. [else if Lust of Amy > 0]Her belly bulges in obvious pregnancy, making her a very content and happy husky.[end if][line break]";
+	say "     Amy is a young and beautiful anthro canine, her body covered in soft, snowy fur. She has a slim, feminine muzzle and perky, overly large ears along with a large, fluffy husky tail. [if HP of Amy < 12]Her chest bears two firm and grope-able B cup breasts along with two smaller A cup pairs of breasts underneath them[else]Her chest bears two firm and grope-able C cup breasts along with two smaller B cup pairs of breasts underneath them. They all ooze small droplets of milk[end if][if Lust of Amy > 12]. There is a kind of special glow to her, and she seems to be very happy and fulfilled right now[else if Lust of Amy > 0]. Her belly bulges in obvious pregnancy, making her a very content and happy husky[end if].";
 	if HP of Amy is 1:
 		say "     Her character is rather child-like, which might have something to do with having been born not all that long ago. She doesn't wear any clothing and usually moves around on all fours like a real dog.";
 	else:
@@ -141,7 +141,7 @@ to say AmyDesc:
 		if Libido of Amy is 1:
 			say "     On and around the mattress that serves as Amy's bedding, her firstborn puppy capers about, playfully exploring and looking for new interesting things. His mother[if Lust of Amy > 0 and Lust of Amy < 13], already pregnant with a new litter,[end if] is busy watching over him, but also immensely happy at having a child.";
 		else if Libido of Amy > 1:
-			say "     On and around the mattress that serves as Amy's bedding, her [Libido of Amy] puppies caper about, playing with each other and exploring for new interesting things. Their mother[if Lust of Amy > 0 and Lust of Amy < 13], already pregnant with the next litter[end if] is quite busy riding herd on them all, but also immensely happy at having these children.";
+			say "     On and around the mattress that serves as Amy's bedding, her [Libido of Amy] puppies caper about, playing with each other and exploring for new interesting things. Their mother[if Lust of Amy > 0 and Lust of Amy < 13], already pregnant with the next litter,[end if] is quite busy riding herd on them all, but also immensely happy at having these children.";
 
 The scent of Amy is "     Amy smells a bit of husky - and a ready and fertile one at that. The scent makes you pretty horny - especially after she licks your face when you come close to smell her.".
 
@@ -179,7 +179,7 @@ instead of going up from Bunker while (HP of Amy is 1 and lastAmySpotted - turns
 	if AmyMaturityCounter > 16: [child-like]
 		say "     As you come out of the bunker, you spot Amy standing on all fours over a book lying on the floor, just flipping a page with one of her paw-hands. It's a children's book, with many colorful pictures, but from the looks of it she's actually reading the descriptions too...";
 	else if AmyMaturityCounter > 8:
-		say "     As you come out of the bunker, you see Amy sitting on her mattress, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a [one of]detective story for younger teenagers, judging from the picture of a group of adolescents on it, one of whom brandishes a large magnifying glass.[or]book about fairy tales, containing collected stories from all kinds of places.[at random]";
+		say "     As you come out of the bunker, you see Amy sitting on her mattress, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a [one of]detective story for younger teenagers, judging from the picture of a group of adolescents on it, one of whom brandishes a large magnifying glass[or]book about fairy tales, containing collected stories from all kinds of places[at random].";
 	else if AmyMaturityCounter > 1:
 		say "     As you come out of the bunker, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";
 
@@ -193,7 +193,7 @@ instead of navigating Grey Abbey Library while (HP of Amy is 1 and lastAmySpotte
 	if AmyMaturityCounter > 16: [child-like]
 		say "     As you enter the library, you spot Amy standing on all fours over a book lying on the floor, just flipping a page with one of her paw-hands. It's a children's book, with many colorful pictures, but from the looks of it she's actually reading the descriptions too...";
 	else if AmyMaturityCounter > 8:
-		say "     As you enter the library, you see Amy sitting on her mattress, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a [one of]detective story for younger teenagers, judging from the picture of a group of adolescents on it, one of whom brandishes a large magnifying glass.[or]book about fairy tales, containing collected stories from all kinds of places.[at random]";
+		say "     As you enter the library, you see Amy sitting on her mattress, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a [one of]detective story for younger teenagers, judging from the picture of a group of adolescents on it, one of whom brandishes a large magnifying glass[or]book about fairy tales, containing collected stories from all kinds of places[at random].";
 	else if AmyMaturityCounter > 1:
 		say "     As you enter the library, you see Amy sitting at one of the tables in the library, reading a book. Stepping a bit closer, you catch a glimpse of its cover - it's a schoolbook. High school from the looks of, specifically [one of]a history[or]a biology[or]a chemistry[or]a physics[at random] book.";
 
@@ -230,7 +230,7 @@ instead of navigating Grey Abbey Library while (lastNadiaSpotted - turns > 12 an
 	move player to Grey Abbey Library;
 	now lastNadiaSpotted is turns;
 	if debugactive is 1:
-		say "     DEBUG: AMY/NADIA PREG WALKIN [line break]";
+		say "     DEBUG: AMY/NADIA PREG WALKIN[line break]";
 	say "     Nadia's left her nest and come to the library's second floor, where she's fussing with Amy. The latter seems a little nervous, like a young woman being fitted for a particularly fine dress, and as it turns out, that's not too far from the truth.";
 	say "     The two of them are standing a little way away from Amy's mattress, half-hidden by some shelves, and as you draw closer you realize what their secret little meeting is all about. Both of them are far along enough in their pregnancies that they're showing quite well. Nadia is obviously quite happy to have found another breeder as good-natured as she is, and hums happily to herself measuring the size of Amy's baby bump with a measuring tape she's found somewhere in the library. The husky fidgets nervously as Nadia fits the tape snugly about her waist, blushing when Nadia tells her how big she is around now.";
 	WaitLineBreak;
@@ -293,7 +293,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 		say "     As you enter the library, you see Amy sitting on her mattress, reading one of those romance novels with a pirate and a half-dressed woman on the front. She's slowly rubbing her breasts, moaning silently - which makes you remember her coming to talk to you about losing her virginity. The young husky woman is clearly aching to be fucked - you should probably just follow her invitation and take care of her - sometime soon.";
 	else if HP of Amy > 10 and Xerxes is in Grey Abbey Library and thirst of Amy is 0:[first interest of Xerxes in her]
 		say "     Entering the library, you see Amy on her bedding, legs spread and a hand stroking her own pussy lips. Looks like she's pretty horny, aching for a fuck. A fact that hasn't gone unnoticed by someone else... you can see Xerxes standing on all fours not too far from the young husky, his eyes riveted on her naked form. The erection visible under his toned body shows that he's very interested indeed. Nevertheless, your well-behaved and trained dog doesn't act on his desires, just watching her intently.";
-		say "     As you walk up beside him, the human dog gives you an exuberant greeting and licks your hand, then gives a little pleading whine[if lust of Xerxes > 2] followed by the question 'Master's Friend - Sex?'[end if] and another hungry look over at Amy. It seems pretty obvious that he'd love to be the one to fulfill Amy's current need.";
+		say "     As you walk up beside him, the human dog gives you an exuberant greeting and licks your hand, then gives a little pleading whine [if lust of Xerxes > 2]followed by the question 'Master's Friend - Sex?' [end if]and another hungry look over at Amy. It seems pretty obvious that he'd love to be the one to fulfill Amy's current need.";
 		LineBreak;
 		say "     [bold type]Do you allow it and go ask Amy if she'd like to spend some time with your pet, or forbid Xerxes to get close to her?[roman type][line break]";
 		LineBreak;
