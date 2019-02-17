@@ -30,7 +30,7 @@ to say dolphinflatabledesc:
 		now dolphinmode is 2;
 	else if dolcastlefight is 3:
 		now dolphinmode is 3;
-	else if ( hardmode is false and level of player < ( 5 ) ) or a random chance of 3 in 4 succeeds:	[girl only at low level]
+	else if (hardmode is false and level of player < 5) or a random chance of 3 in 4 succeeds:	[girl only at low level]
 		now dolphinmode is 1;
 	else:																			[25% of toy mode]
 		now dolphinmode is 2;
