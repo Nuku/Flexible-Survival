@@ -60,19 +60,19 @@ to say AlexandraBreedingMenu:
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	say "     So, which partner do you want to pound Alexandra's pussy and breed her?";
-	[]
+	[
 	if "Feral Mutt" is listed in EncounteredEnemies of Player or "Feral Mutt Pack" is listed in EncounteredEnemies of Player: [Player knows the feral dogs]
 		choose a blank row in table of fucking options;
 		now title entry is "A feral mutt";
 		now sortorder entry is 1;
 		now description entry is "Let Alexandra get mounted by a street dog";
-	[]
+	]
 	if demon brute is tamed and DBCaptureQuestVar is 5: [evil Brutus]
 		choose a blank row in table of fucking options;
 		now title entry is "Your demon slave Brutus";
 		now sortorder entry is 2;
 		now description entry is "Let Brutus ravage Alexandra's pussy";
-	[]
+	[
 	if PlayerMet of Farmhand Horsemen is true and FriesianRelationship is 0: [saw them, no interaction]
 		choose a blank row in table of fucking options;
 		now title entry is "That pair of black stallion twins you saw at the McDermott Farm";
@@ -90,7 +90,7 @@ to say AlexandraBreedingMenu:
 		now title entry is "Karel and Isaac, the black stallion twins";
 		now sortorder entry is 5;
 		now description entry is "Let the Friesian farmhands double-team Alexandra";
-	[]
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -150,7 +150,7 @@ to say AlexandraBreeding_EvilBrutus:
 		say "     The large balls of your demon slave churn and twitch as he pumps a deluge of cum into his play-toy, making her belly swell visibly as it fills up more and more. Before long, it looks like she's already pregnant and ready to pop out a whole litter of pups, and further demon seed starts to squelch out around the purple shaft stretching open her pussy. Brutus keeps holding, pawing and almost biting Alexandra while he rides out his orgasm, but as soon as he's shot his last spurt, he unceremoniously pulls her off his erection. As his thick purple shaft slips out of the stretched hole, a gush of cum accompanies it, splattering onto the floor and starting to trickle down the insides of her legs. Looking at the canine in his hand, hanging limply as he fucked her into a semi-conscious state, Brutus chuckles and then swings her over to you, letting go so she crumples at your feet. 'More pussy! This one is used up,' the demon then demands in a challenging tone.";
 		now lastdobiemess is 89; [Brutus creamed her pussy]
 		impregAlexandraChance with "Brutus"; [chance to knock her up]
-		NPCSexAftermath Alexandra receives "PussyFuck" from Brutus;
+		NPCSexAftermath Alexandra receives "PussyFuck" from Demon Brute; [Brutus's pet object is called Demon Brute]
 		if player is female:
 			say "     [bold type]What's your reply?[roman type][line break]";
 			LineBreak;
@@ -169,7 +169,7 @@ to say AlexandraBreeding_EvilBrutus:
 					say "     Satisfied, you sink to the floor and tell your captive demon to resume guarding you.";
 				else: [back into the amulet]
 					say "     Satisfied, you sink to the floor and moan the magic words to banish the demon again. Your well-hung fucker turns into a cloud of purple mist and vanishes into the amulet.";
-				NPCSexAftermath Player receives "PussyFuck" from Brutus;
+				NPCSexAftermath Player receives "PussyFuck" from Demon Brute; [Brutus's pet object is called Demon Brute]
 			else: [chosen to banish him]
 				say "     Giving Brutus an unimpressed look, you raise the demontooth amulet with one hand, then intone the magic words that Nermine taught you. He scowls and makes one step forward as if to attack you even as he already is turning into purple smoke that swirls towards the amulet in the air. Letting out a final aggressive roar that speaks of his desire for unrestrained rampage, the demon fully dematerializes a second or two later, then vanishes as he is drawn in by the magic.";
 		else: [just banish him]
@@ -206,7 +206,7 @@ to say AlexandraBreeding_EvilBrutus:
 				LineBreak;
 				say "[AlexandraBrutusBreedingThreesome]";
 		else: [male + neuter can only have her rough fucked or cancel]
-			say "     [bold type]Given that you're not actually equipped with female parts right now, how do you want to deal with this?[roman type[line break]";
+			say "     [bold type]Given that you're not actually equipped with female parts right now, how do you want to deal with this?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Remind her of her place, then give her to Brutus for a hard fuck.";
 			say "     ([link]N[as]n[end link]) - Tell her that you changed her mind.";
@@ -253,7 +253,7 @@ to say AlexandraBrutusBreedingWarmup:
 	now lastdobiemess is 89; [Brutus creamed her pussy]
 	now AlexandraBrutusInteraction is 50; [last fuck for her was a rough one]
 	impregAlexandraChance with "Brutus"; [chance to knock her up]
-	NPCSexAftermath Alexandra receives "PussyFuck" from Brutus;
+	NPCSexAftermath Alexandra receives "PussyFuck" from Demon Brute; [Brutus's pet object is called Demon Brute]
 
 to say AlexandraBrutusBreedingThreesome:
 	project the figure of Alexandra_clothed_icon;
@@ -305,10 +305,10 @@ to say AlexandraBrutusBreedingThreesome:
 	now lastdobiemess is 89; [Brutus creamed her pussy]
 	now AlexandraBrutusInteraction is 51; [last fuck for her was a shared, if rough one]
 	impregAlexandraChance with "Brutus"; [chance to knock her up]
-	NPCSexAftermath Alexandra receives "PussyFuck" from Brutus;
-	NPCSexAftermath Player receives "PussyFuck" from Brutus;
+	NPCSexAftermath Alexandra receives "PussyFuck" from Demon Brute; [Brutus's pet object is called Demon Brute]
+	NPCSexAftermath Player receives "PussyFuck" from Demon Brute; [Brutus's pet object is called Demon Brute]
 
 to say AlexandraBreeding_Karel_Isaac:
 	say "...";
 
-Alexandra Cuckolding ends here.
+Alexandra Breeding ends here.
