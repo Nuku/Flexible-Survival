@@ -34,7 +34,7 @@ To fight:
 				say "DEBUG -> Can't fight with creature [name entry] because it has Banned: [BannedStatus entry][line break]";
 			next;
 		if there is a lev entry:
-			if lev entry > level of player plus levelwindow and hardmode is false:
+			if lev entry > level of player + 1 and hardmode is false:
 				next;
 		else:
 			next;

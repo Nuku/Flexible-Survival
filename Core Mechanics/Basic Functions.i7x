@@ -216,6 +216,8 @@ carry out NPCSexAftermathAction:
 	say "Testing: Player fucks Carl:";
 	NPCSexAftermath Carl receives "AssFuck" from Player;
 
+[ Note: Add Handjob, PussyFingering, AssFingering, Rimming to SexActs]
+
 to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (GivingChar - a person):
 	if GivingChar is player:
 		if debugactive is 1:
@@ -268,15 +270,17 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now AnalVirgin of player is false;
 				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
 				now FirstAnalPartner of player is printed name of GivingChar;
-			setmonster MainInfection of GivingChar;
-			mimpregchance;
+			if Sterile of GivingChar is false: [fertile]
+				setmonster MainInfection of GivingChar;
+				mimpregchance;
 		else if SexAct is "PussyFuck":
 			if Virgin of player is true:
 				now Virgin of player is false;
 				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";
 				now FirstVaginalPartner of player is printed name of GivingChar;
-			setmonster MainInfection of GivingChar;
-			fimpregchance;
+			if Sterile of GivingChar is false: [fertile]
+				setmonster MainInfection of GivingChar;
+				fimpregchance;
 		else if SexAct is "AssDildoFuck":
 			if AnalVirgin of player is true:
 				now AnalVirgin of player is false;

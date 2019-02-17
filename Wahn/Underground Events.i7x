@@ -162,7 +162,7 @@ when play begins:
 	add Trashed Refuge to badspots of girl;
 	add Trashed Refuge to badspots of guy;
 
-AbandonedRoomStatus is a number that varies. AbandonedRoomStatus usually is 0.
+[Resolution of Trashed Refuge]
 [0 - not seen, not searched]
 [1 - seen, not searched]
 [2 - seen, searched once]
@@ -170,7 +170,7 @@ AbandonedRoomStatus is a number that varies. AbandonedRoomStatus usually is 0.
 [4 - seen, searched three times]
 
 Instead of resolving a Trashed Refuge:
-	if AbandonedRoomStatus is 0:
+	if Resolution of Trashed Refuge is 0:
 		say "     You come upon a room in the uppermost level of the underground complex that looks like it was used by people seeking refuge from the things going on out in the city. Sadly, that doesn't seem to have worked out for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
 		say "     [bold type]Do you want to want to search through the room? (With - whatever it was - splattering its bodily fluids far and wide, there's a high risk of getting exposed to some of it.)[roman type][line break]";
@@ -188,12 +188,11 @@ Instead of resolving a Trashed Refuge:
 				increase carried of food by 1;
 			if a random chance of 6 in 8 succeeds:
 				infect "Tentacle Horror";
-			increase AbandonedRoomStatus by 1;
-		else:
+			now Resolution of Trashed Refuge is 1; [1st visit done]
+		else: [do not go in]
 			LineBreak;
 			say "     Better not to risk touching any of those cum-stains accidentally. You leave the room and make your way back to the surface.";
-		now Resolution of Trashed Refuge is 1; [1st visit]
-	else if AbandonedRoomStatus is 1:
+	else if Resolution of Trashed Refuge is 1: [2nd visit after ransacking it once]
 		say "     Roaming through the underground complex you come again to the room some hapless refugees took shelter in before. It's easy to see that didn't work out too well for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
 		say "     [bold type]Do you want to want to search through the room? (With - whatever it was - splattering its bodily fluids far and wide, there's a high risk of getting exposed to some of it.)[roman type][line break]";
@@ -212,12 +211,11 @@ Instead of resolving a Trashed Refuge:
 				increase carried of food by 1;
 			if a random chance of 6 in 8 succeeds:
 				infect "Tentacle Horror";
-			increase AbandonedRoomStatus by 1;
+			now Resolution of Trashed Refuge is 2; [2nd visit]
 		else:
 			LineBreak;
 			say "     Better not to risk touching any of those cum-stains accidentally. You leave the room and make your way back to the surface.";
-		now Resolution of Trashed Refuge is 2; [2nd visit]
-	else if AbandonedRoomStatus is 2:
+	else if Resolution of Trashed Refuge is 2:
 		say "     Roaming through the underground complex you come again to the room some hapless refugees took shelter in before. It's easy to see that didn't work out too well for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
 		say "     [bold type]Do you want to want to give the stuff in the room another going-over? You just might have missed something. (With - whatever it was - splattering its bodily fluids far and wide, there's a high risk of getting exposed to some of it.)[roman type][line break]";
@@ -234,18 +232,17 @@ Instead of resolving a Trashed Refuge:
 				increase carried of chips by 1;
 			if a random chance of 6 in 8 succeeds:
 				infect "Tentacle Horror";
-			increase AbandonedRoomStatus by 1;
+			now Resolution of Trashed Refuge is 3; [3rd visit]
 		else:
 			LineBreak;
 			say "     Better not to risk touching any of those cum-stains accidentally. Most likely there isn't anything more in here anyways. You leave the room and make your way back to the surface.";
-		now Resolution of Trashed Refuge is 3; [3rd visit]
-	else if AbandonedRoomStatus is 3:
+	else if Resolution of Trashed Refuge is 3:
 		say "     Roaming through the underground complex you come again to the room some hapless refugees took shelter in before. It's easy to see that didn't work out too well for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
 		say "     As your thoughts wander to maybe searching in here a third time, you suddenly hear a noise behind you. Whirling around, you find yourself face to face with a many-tentacled creature. Looks like you're not the only one returning to this room to pick up some more goodies. With outstretched tentacles, the creature attacks.";
 		challenge "Tentacle Horror";
 		say "     Time to get out of here before more of those things appear. You leave the room and make your way back to the surface.";
-		now Resolution of Trashed Refuge is 4; [4th visit]
+		now Resolution of Trashed Refuge is 3; [3rd visit]
 		now Trashed Refuge is resolved;
 
 Table of GameEventIDs (continued)

@@ -339,8 +339,6 @@ to NumberVariableSave:
 	choose blank row in Table of GameNumbers;
 	now NumberVarName entry is CurrentVariableName;
 	if CurrentVariableName is:
-		-- "AbandonedRoomStatus":
-			now NumberVarValue entry is AbandonedRoomStatus;
 		-- "absorb":
 			now NumberVarValue entry is absorb;
 		-- "addedlibido":
@@ -1799,8 +1797,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is leosupplies;
 		-- "lessontime":
 			now NumberVarValue entry is lessontime;
-		-- "Levelwindow":
-			now NumberVarValue entry is Levelwindow;
 		-- "lgnumber":
 			now NumberVarValue entry is lgnumber;
 		-- "libfight":
@@ -4039,8 +4035,6 @@ to VariableNumberLoad:
 			if debugactive is 1:
 				say "Restoring Number [NumberVarName entry].";
 			if NumberVarName entry is:
-				-- "AbandonedRoomStatus":
-					now AbandonedRoomStatus is numberVarValue entry;
 				-- "absorb":
 					now absorb is numberVarValue entry;
 				-- "addedlibido":
@@ -5499,8 +5493,6 @@ to VariableNumberLoad:
 					now leosupplies is numberVarValue entry;
 				-- "lessontime":
 					now lessontime is numberVarValue entry;
-				-- "Levelwindow":
-					now Levelwindow is numberVarValue entry;
 				-- "lgnumber":
 					now lgnumber is numberVarValue entry;
 				-- "libfight":

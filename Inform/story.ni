@@ -291,7 +291,6 @@ Turns is a number that varies. Turns is 240.
 Hardmode is a truth state that varies. Hardmode is usually false.
 nohealmode is a truth state that varies. nohealmode is usually false.
 blindmode is a truth state that varies. blindmode is usually false.
-Levelwindow is a number that varies. Levelwindow is 3.
 Lastjournaluse is a number that varies. Lastjournaluse is 248.
 Targetturns is a number that varies.
 Started is a number that varies.
@@ -357,7 +356,7 @@ Definition: A situation (called x) is available:
 			no;
 		else if hardmode is true:
 			yes;
-		else if the level of x < (the level of the player plus levelwindow plus 1):
+		else if the level of x < (level of player + 1):
 			yes;
 	no;
 
@@ -383,7 +382,7 @@ Definition: A scavevent (called x) is scavable:
 			no;
 		else if hardmode is true:
 			yes;
-		else if the level of x < (the level of the player plus levelwindow plus 1):
+		else if the level of x < (level of player + 1):
 			yes;
 	no;
 
@@ -4112,12 +4111,10 @@ This is the location choice rule:
 			increase score by 900;
 			extend game by 240;
 			now hardmode is true;
-			now levelwindow is 99999;
 		if hardmode is false:
 			say "Would you like to play hard mode?";
 			if player consents:
 				now hardmode is true;
-				now levelwindow is 99999;
 				say "Hardmode activated!";
 	now scenario is title entry;
 	now the menu depth is 0;
@@ -6151,7 +6148,6 @@ to say gsopt_start:
 	if gshm is true: [Hard mode alteration]
 		increase score by 300;
 		now hardmode is true;
-		now levelwindow is 99999;
 	if gsnhm is true: [No-heal mode alteration]
 		increase score by 150;
 		now nohealmode is true;
@@ -6317,7 +6313,6 @@ to say silent_start:
 	if gshm is true: [Hard mode alteration]
 		increase score by 300;
 		now hardmode is true;
-		now levelwindow is 99999;
 	if gsnhm is true: [No-heal mode alteration]
 		increase score by 150;
 		now nohealmode is true;

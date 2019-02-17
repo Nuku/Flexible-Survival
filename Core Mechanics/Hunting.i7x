@@ -280,7 +280,7 @@ carry out HuntAction:
 								add name entry to PossibleEncounters;
 				if "Unerring Hunter" is not listed in feats of player and (area entry exactly matches the text battleground, case insensitively or area entry is "Everywhere"): [only adds random monsters if the player isn't an unerring hunter, and the area matches]
 					if there is a lev entry:
-						if lev entry > level of player plus levelwindow, next;
+						if lev entry > level of player + 1, next;
 					else:
 						next;
 					if (DayCycle entry is 1 and daytimer is day) or (DayCycle entry is 2 and daytimer is night), next; [wrong time of day for that creature]

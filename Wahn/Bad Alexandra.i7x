@@ -90,10 +90,11 @@ object	name
 Alexandra	"Alexandra"
 
 Alexandra is a woman. Alexandra is in Police Station Twelve.
+[physical details as of game start]
 ScaleValue of Alexandra is 3. [human sized]
 Cocks of Alexandra is 0.
-Cock Length of Alexandra is 9.
-Cock Width of Alexandra is 2.
+Cock Length of Alexandra is 0.
+Cock Width of Alexandra is 0.
 Testes of Alexandra is 0.
 Cunts of Alexandra is 1.
 Cunt Length of Alexandra is 10.
@@ -111,9 +112,14 @@ Virgin of Alexandra is false.
 AnalVirgin of Alexandra is true.
 PenileVirgin of Alexandra is true.
 SexuallyExperienced of Alexandra is true.
+TwistedCapacity of Alexandra is false.
+Sterile of Alexandra is false.
+MainInfection of Alexandra is "Doberman".
+
 AlexandraCreampieCount is a number that varies.
 AlexandraPregCount is a number that varies.
 AlexandraGrowingPups is a number that varies.
+
 The description of Alexandra is "[if HP of Alexandra < 50][alexandradesc_bg][else][alexandradesc_gg][end if]".
 The conversation of Alexandra is { "Yes Boss!" }.
 AlexandraBackstory is a number that varies.
@@ -294,6 +300,12 @@ to say BadAlexandraTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Bring up that you want to go to the pediatrics clinic with her";
 	[]
+	if HP of Alexandra is 2 or HP of Alexandra is 4 and (demon brute is tamed and DBCaptureQuestVar is 5 or PlayerMet of Farmhand Horsemen is true or ("Feral Mutt" is listed in EncounteredEnemies of Player or "Feral Mutt Pack" is listed in EncounteredEnemies of Player)): [not pregnant right now; possible candidates available]
+		choose a blank row in table of fucking options;
+		now title entry is "Breeding her (with others)";
+		now sortorder entry is 3;
+		now description entry is "Tell Alexandra that you want to get her knocked up by partners you choose";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Her family";
 	now sortorder entry is 10;
@@ -334,15 +346,17 @@ to say BadAlexandraTalkMenu:
 				now sextablerun is 1;
 				if (nam is "Contraception"):
 					say "[AlexandraContraceptionTalk]";
-				if (nam is "Fertility Treatments"):
+				else if (nam is "Fertility Treatments"):
 					say "[AlexandraFertilityTrip]";
-				if (nam is "Her family"):
+				else if (nam is "Breeding her (with others)"):
+					say "[AlexandraBreedingMenu]"; [See file Alexandra Breeding.i7x in Wahn's folder]
+				else if (nam is "Her family"):
 					say "[AlexandraBackstory1]";
-				if (nam is "Growing up and her adult life"):
+				else if (nam is "Growing up and her adult life"):
 					say "[AlexandraBackstory2]";
-				if (nam is "Others in the library"):
+				else if (nam is "Others in the library"):
 					say "[AlexandraNPCChat]";
-				if (nam is "Sarah the husky"):
+				else if (nam is "Sarah the husky"):
 					say "[A_SarahTalk]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -543,6 +557,93 @@ to say A_SarahTalk:	[Sarah]
 	wait for any key;
 	say "[BadAlexandraTalkMenu]"; [looping back for more talk]
 
+
+to say BadAlexandraTalkMenu:
+	UpdateAlexandraNPCChat;
+	LineBreak;
+	say "     What do you want to talk with Alexandra about?";
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	if HP of Alexandra is 2 or HP of Alexandra is 4: [not pregnant right now]
+		choose a blank row in table of fucking options;
+		now title entry is "Contraception";
+		now sortorder entry is 1;
+		now description entry is "Precautions against pregnancy";
+	[]
+	if "Fertility Treatment Option" is listed in Traits of Alexandra:
+		choose a blank row in table of fucking options;
+		now title entry is "Fertility Treatments";
+		now sortorder entry is 2;
+		now description entry is "Bring up that you want to go to the pediatrics clinic with her";
+	[]
+	if HP of Alexandra is 2 or HP of Alexandra is 4 and (demon brute is tamed or PlayerMet of Farmhand Horsemen is true): [not pregnant right now; possible candidates available]
+		choose a blank row in table of fucking options;
+		now title entry is "Breeding her (with others)";
+		now sortorder entry is 3;
+		now description entry is "Tell Alexandra that you want to get her knocked up by partners you choose";
+	[]
+	choose a blank row in table of fucking options;
+	now title entry is "Her family";
+	now sortorder entry is 10;
+	now description entry is "Ask about Alexandra's family";
+	[]
+	if AlexandraBackstory > 0:
+		choose a blank row in table of fucking options;
+		now title entry is "Growing up and her adult life";
+		now sortorder entry is 11;
+		now description entry is "Ask about Alexandra's life";
+	[]
+	if AlexandraNPC is not empty:
+		choose a blank row in table of fucking options;
+		now title entry is "Others in the library";
+		now sortorder entry is 20;
+		now description entry is "Ask what Alexandra thinks of other inhabitants of the Grey Abbey Library";
+	[]
+	if Sarah is bunkered:
+		choose a blank row in table of fucking options;
+		now title entry is "Sarah the husky";
+		now sortorder entry is 21;
+		now description entry is "Chat about the other anthro canine";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Contraception"):
+					say "[AlexandraContraceptionTalk]";
+				else if (nam is "Fertility Treatments"):
+					say "[AlexandraFertilityTrip]";
+				else if (nam is "Breeding her (with others)"):
+					say "[AlexandraBreedingMenu]";
+				else if (nam is "Her family"):
+					say "[AlexandraBackstory1]";
+				else if (nam is "Growing up and her adult life"):
+					say "[AlexandraBackstory2]";
+				else if (nam is "Others in the library"):
+					say "[AlexandraNPCChat]";
+				else if (nam is "Sarah the husky"):
+					say "[A_SarahTalk]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the doberwoman bitch and tell her that you'll have to continue your conversation at another time. She nods and turns her attention back to guarding the entrance.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
 Section 2 - Bad Girl Sexxxings
 
 Part 1 - Bad Alexandra Sex Selection
@@ -721,6 +822,7 @@ to say badAlexandraSex3: [All fours]
 		say "     Keeping a firm grip on that sexy ass of hers, you pound into the doberwoman with your [cock size desc of player] [cock of player] cock. She pants [one of]and moans about how great it feels[or]and drools onto the floor with her tongue hanging out[or]as her plump[if lastdobiemess is 6], cum-streaked[end if] breasts sway with every thrust[at random]. Your [cock size desc of player] cock [if cock length of player > 30]stretches her juicy cunt wide and adds a bit of a phallic bulge to your bad doggy bitch's already rounded belly[else if cock length of player > 20]stretches her juicy cunt open and plumps up your bad doggy bitch's already rounded belly a little further[else if cock length of player > 10]stuffs your bad doggy bitch's cunt such that she feels wonderfully tight and juicy around your shaft[else]fucks your bad doggy bitch's juicy hole[end if]. Her cunt squeezes and clenches around your shaft[if player is knotted] as your knot grinds against her juicy lips[end if], her body responding to the much-needed fucking.";
 		say "     Alexandra moans beneath you, tongue hanging out and drool puddling on the floor as she pants like the needy bitch she is. You release that delicious bottom of hers and let your hands slide over her body, petting her like a dog at first while calling her your good, bad girl before reaching around to rub her pregnant belly with a big grin at how well you've trained the once stuffy cop and have even knocked her up. She pants at all this attention and moans softly as you reach a little further to grab her swollen, milk-laden breasts. Playing with her nipples even gets some to leak out, showing she'll soon be ready to [if HP of Alexandra is 5]add another little of pups to her kennel of Doberman children[else]drop her first litter of Doberman children[end if]. Feeling you've teased her enough, you lean back up and start drilling your pulsing cock into her with renewed vigor, flush with the sense of your own strength and virility.";
 		if player is knotted:
+		if cockname of player is listed in infections of Knotlist:
 			say "     With a final, hard thrust, you drive your knot into her and lock your hips together. She throws her head back and gives a barking cry of ecstasy, her pussy squeezing and milking at your [cock of player] cock as she cums. Now tied with her, you can only bash your hips against her sexy rear as you spurt your thick load into her as you cum in the knocked-up doggy. Feeling your semen shooting into her, she cries out even louder as a second rush of canine juices soak your crotch[if cock width of player > 40]. With your knot keeping it all inside her, your massive load causes the dobie bitch's already full belly to swell more and more until it's rounded like a ball and she can barely touch the ground to hold herself steady. When your knot finally goes down enough for you to pull out, she rolls over and can only lie there, rubbing her overfull tummy while moaning in pleasure as your semen slowly leaks out of her[else if cock width of player > 20]. With your knot keeping it all inside her, your large load causes the dobie bitch's already full belly to swell a few more inches. When your knot finally goes down enough for you to pull out, she rolls onto her side and chooses to stay there for a while, rubbing her bloated belly while your semen slowly leaks out of her[else]. With your knot stuffing her, your hot load is kept locked inside her. Once your knot finally goes down enough, you pull out and get her to lick you clean before she lies down to rest[end if].";
 		else:
 			say "     With a final, hard thrust, you drive your pulsing rod hard into her and cum. This sends the sexy canine over the edge and she releases a barking cry of ecstasy, her pussy squeezing and milking at your [cock of player] cock as she cums. Keeping a firm grip on her ass, you pound your hips against her sexy rear as you spurt your thick load into her as you cum in the knocked-up doggy while canine juices soak your crotch[if cock width of player > 40]. With much of it overflowing around your cock, your massive load causes the dobie bitch's already full belly to swell more and more until it's rounded like a ball and she can barely touch the ground to hold herself steady. Once you're, she rolls over and can only lie there, rubbing her overfull tummy while moaning in pleasure as your semen slowly leaks out of her[else if cock width of player > 20]With much of it overflowing around your cock, your large load causes the dobie bitch's already full belly to swell a few more inches. Once you're done, she rolls onto her side and chooses to stay there for a while, rubbing her bloated belly while your semen slowly leaks out of her[else]. You fuck her until your balls are drained into the dobie bitch before withdrawing. After pulling out, you get her to lick you clean[end if].";

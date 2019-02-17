@@ -550,7 +550,7 @@ name	desc	weight	object
 "stylish sunglasses"	"A set of Lu-Beam sunglasses with a very stylish shape. Those are sure to make anyone look like a star."	0	stylish sunglasses
 "basic sunglasses"	"A set of fairly basic sunglasses with a black plastic frame. Nothing special, but they'll protect your eyes."	0	basic sunglasses
 "horn-rimmed glasses"	"A pair of dignified horn-rimmed glasses with slightly curved lenses."	0	horn-rimmed glasses
-"aviator goggles"	"A set of aviator goggles with a strap to keep them tightly pressed to someone's face. Perfect for situations like being in strong winds, or being in danger of getting cum-facials by lots of horny monster."	0	aviator goggles
+"aviator goggles"	"A set of aviator goggles with a strap to keep them tightly pressed to someone's face. Perfect for situations like being in strong winds, or being in danger of getting cum-facials by lots of horny monsters."	0	aviator goggles
 "lab goggles"	"A pair of clear plastic goggles that closely fit to someone's face. They're perfect to keep harmful chemicals (and spurting cum) out of your eyes."	0	lab goggles
 "prop glasses"	"A pair of stylish glasses with clear glass lenses in their frames. These are what you'd see on stage or in a movie, creating the right appearance without giving people headaches from wearing glasses even if they are not needed."	0	prop glasses
 "rose-tinted glasses"	"A pair of rose-tinted glasses with frilly edges. There even are some glass gemstones with reflective backing glued to them."	0	rose-tinted glasses

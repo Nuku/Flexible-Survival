@@ -572,7 +572,7 @@ understand "Brutus" as demon brute.
 ScaleValue of demon brute is 4. [larger than human]
 Cocks of demon brute is 1.
 Cock Length of demon brute is 18.
-Cock Width of demon brute is 14. [golfball sized balls]
+Cock Width of demon brute is 15. [baseball sized balls]
 Testes of demon brute is 2.
 Cunts of demon brute is 0.
 Cunt Length of demon brute is 0.
