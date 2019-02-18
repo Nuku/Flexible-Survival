@@ -202,7 +202,7 @@ instead of conversing the Colleen:
 			else:
 				say "     [one of]'Thanks again for all your help!'[or]'I hope we can all make it out of here safely.'[or]'I'm enjoying the company here,' she says as she nods at Sarah.[or]'Let me know if you find any other members of my team out there.'[or]'It surprised me a lot how much fun many of the infected seemed to be having.'[or]'Sarah seems to still be holding in there, don't worry!'[or]'I wonder what being a husky is like...'[or]'Found any other strays to take in?' she says with a grin.[at random]";
 		else:
-			say "     '[one of]Thanks for all the help![or]Glad to see you back again[or]Be careful out there, it would be pretty lonely here without you.[or]Damn, I found some fun books here to read![or]Let me know if you find any other members of my squad out there[or]Try to be careful out there, this place is much more dangerous than they warned us.[or]It surprised me a lot how much fun many of the infected seemed to be having.[or]Sometimes I find myself wondering what it would be like to just wander outside and find one of infected to fuck...[at random]'";
+			say "     [one of]'Thanks for all the help!'[or]'Glad to see you back again.'[or]'Be careful out there. It would be pretty lonely here without you.'[or]'Damn, I found some fun books here to read!'[or]'Let me know if you find any other members of my squad out there.'[or]'Try to be careful out there. This place is much more dangerous than they warned us.'[or]'It surprised me a lot how much fun many of the infected seemed to be having.'[or]'Sometimes I find myself wondering what it would be like to just wander outside and find one of infected to fuck...'[at random]";
 
 
 to say Colleen_Vanessa_msg:

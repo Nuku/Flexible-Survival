@@ -143,7 +143,7 @@ to say Otter attack:
 
 [ [Otter loss] ]
 To say Otter loss:
-	say "     Defeated, the group of otters backs away from you with sad expressions. '[one of]We just wanted to play.[or]Don't be so stuck up. We could have so much fun together![or]Come back when you change your mind, we'll save you some fish![at random]'";
+	say "     Defeated, the group of otters backs away from you with sad expressions. '[one of]We just wanted to play.'[or]Don't be so stuck up. We could have so much fun together!'[or]Come back when you change your mind, we'll save you some fish!'[at random]";
 
 
 Section 2 - Monster Insertion

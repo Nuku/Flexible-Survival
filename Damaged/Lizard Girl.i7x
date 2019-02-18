@@ -63,7 +63,7 @@ to say lizgirl attack:
 				say "     Looking to your thigh, the recognizable Lizard Girl smiles. 'Always wonderful to see my pets blossoming and ready.' She pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock size desc of player] rod, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now it's my turn,' she purrs, snapping your attention away from her assault on your reproductive system. All of a sudden, you feel a pressure build all down the length of your shaft as her own seed pours into your body, leaving your balls swollen and tingling.";
 				say "     'Now be a good dear, and don't fight it anymore,' she says over her shoulder as she sashays away.[lizgirl female][lizgirl impreg]";
 			else:
-				say "     'Oh, who gave you this?' she says, running one claw over your [cock of player] penis delightfully. 'Oh well, it matters not - it simply must go,' she says matter of factly and lowers her snout over your member. She begins to take it all into her, sucking, licking and sometimes biting. Your bliss is soon to come and when it does you only feel a dribble actually pass down your rod. With a start you realize your love tunnel is now awash with seed... your seed.[lizgirl female][ovichance]";
+				say "     'Oh, who gave you this?' she says, running one claw over your [cock of player] penis delightfully. 'Oh well, it matters not - it simply must go,' she says matter-of-factly and lowers her snout over your member. She begins to take it all into her, sucking, licking and sometimes biting. Your bliss is soon to come and when it does you only feel a dribble actually pass down your rod. With a start you realize your love tunnel is now awash with seed... your seed.[lizgirl female][ovichance]";
 	infect;
 
 to say lizgirl defeat:
@@ -185,7 +185,7 @@ When Play begins:
 	now heat end entry is "The heat, the ache, all fades slowly, leaving you relieved.[toggle heat flag]";
 	now trigger text entry is "";
 	now description text entry is "";
-	now inheat entry is "[liz impreg]"; [The lizard girls seed effectively internalised the male organs, leaving the poor character impregnating themselves every heat cycle. This will be much more 'fun' once repeated births are in :3 ]
+	now inheat entry is "[liz impreg]"; [The lizard girl's seed effectively internalized the male organs, leaving the poor character impregnating themselves every heat cycle. This will be much more 'fun' once repeated births are in :3 ]
 	now fheat entry is true;
 	now mpregheat entry is false;
 	now mpregtrigger entry is "";

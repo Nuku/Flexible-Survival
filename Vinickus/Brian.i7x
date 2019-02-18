@@ -73,10 +73,10 @@ Instead of conversing the Brian:
 		WaitLineBreak;
 		say "     'I'm sure a person of your ";
 		if bodyname of player is "Human" and player is pure:
-			say "resistance, ";
+			say "resistance,' ";
 		else:
-			say "curiosity, ";
-		say "' he begins as he gestures at his large, rhino-like form, 'has seen things like this, and it's a big change no matter who you are. I mean, I wasn't a small guy before all of this, but now. I mean damn, right?' Brian chuckles out with a bit of tainted amusement. 'Some parts of it can be a bit distractin['], if ya know what I mean... but hey, at least I'm ripped,' he says while flexing.";
+			say "curiosity,' ";
+		say "he begins as he gestures at his large, rhino-like form, 'has seen things like this, and it's a big change no matter who you are. I mean, I wasn't a small guy before all of this, but now. I mean damn, right?' Brian chuckles out with a bit of tainted amusement. 'Some parts of it can be a bit distractin['], if ya know what I mean... but hey, at least I'm ripped,' he says while flexing.";
 		say "     'I should be able to get us out of here right quick with this much muscle!' The excited rhino man shouts, 'I mean, ya know the military is watchin['] all the regular ways out of the city, but way I figures it, they won't be watchin['] this concrete bit. So once I crush this concrete bit into smaller bits, it'll be clear sailing from there!' Brian yells excitedly, pumping himself up to charge. He then turns back to the wall, lowers his head, and rams it again. The impact sends him reeling back from the wall, but beyond that the impact does little more than make him shake his head. You give one more glance to the wall, and can almost swear the cracks are thicker now, but that seems unlikely.";
 		now BrianRelationship is 2; [The player has talked to him at least once]
 	[else if BrianRelationship is 2:

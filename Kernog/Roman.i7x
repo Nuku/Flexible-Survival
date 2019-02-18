@@ -211,7 +211,7 @@ to say RomanTalk4: [Team recruits Quest start]
 		if Husky Gang is resolved:
 			now Husky Gang is not resolved;
 	else:
-		say "     'Hey, if it isn't my best friend! Come here for a hug, buddy! [one of]You should show me your place, one of these days.[or]We should hang around, one of these days.[or]As you can see, I'm not using padding anymore. The cotton was always tickling me, anyway![at random]'";
+		say "     'Hey, if it isn't my best friend! Come here for a hug, buddy! [one of]You should show me your place, one of these days.'[or]We should hang around, one of these days.'[or]As you can see, I'm not using padding anymore. The cotton was always tickling me, anyway!'[at random]";
 
 to say JoiningTheTeam:
 	if GorillasMember is 0:

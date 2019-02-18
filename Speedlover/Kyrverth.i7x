@@ -295,7 +295,7 @@ to say KyrverthMainChat:
 		if KyrverthStage is not 3:
 			say "     'I wonder what my hoard is worth? And in what currency? Ever since the outbreak money has become a bit useless...'";
 		else:
-			say "     'So as my hoard grows so do I, and the more valuable it is, the more I grow... [one of]What would happen if I had something in my hoard that was priceless?[or]Who determines how valuable it is? Is it the value other people would pay for it, or the value that I place on it?[at random]'";
+			say "     'So as my hoard grows so do I, and the more valuable it is, the more I grow... [one of]What would happen if I had something in my hoard that was priceless[or]Who determines how valuable it is? Is it the value other people would pay for it, or the value that I place on it[at random]?'";
 	else if randomnumber <= 55:
 		say "     'Kyrverth? It's not my birth name obviously, but I thought it might fit a little better now that I'm a dragon.'";
 	else if randomnumber <= 100: [large chance to see, reminds player about quest]
@@ -359,23 +359,23 @@ to say KyrverthS6Chat:
 	else if randomnumber <= 25:
 		say "     'Have you seen anything interesting in the city? Anything valuable?'";
 	else if randomnumber <= 30:
-		say "     Kyrverth smiles at you 'I had a pretty good find today, brought back a pretty decent amount of supplies'";
+		say "     Kyrverth smiles at you. 'I had a pretty good find today, brought back a pretty decent amount of supplies'";
 	else if randomnumber <= 35:
-		say "     'All my life I've had four limbs. Now I have four limbs [bold type]and[roman type] a tail [bold type]and[roman type] wings, it can be strange sometimes... I use the limbs almost without thinking, but when I try to use them consciously I'm a lot more clumsy with them.'";
+		say "     'All my life I've had four limbs. Now I have four limbs [bold type]and[roman type] a tail [bold type]and[roman type] wings. It can be strange sometimes... I use the limbs almost without thinking, but when I try to use them consciously I'm a lot more clumsy with them.'";
 	else if randomnumber <= 40:
 		say "     'I wonder what my hoard is worth? And in what currency? Ever since the outbreak money has become a bit useless...'";
 	else if randomnumber <= 45:
-		say "     'So as my hoard grows so do I, and the more valuable it is, the more I grow... [one of]What would happen if I had something in my hoard that was literally priceless?[or]Who determines how valuable it is? Is it the value other people would pay for it, or the value that I place on it?[or]Do I even need a hoard? Could I buy stocks or digital goods? If I did buy stocks would I change size throughout the day or only when I saw the changed value?[or]Is there a limit to my possible size? Could I become the head of some big corporation and be as big as a city?[or]So how is the value determined? Something that's worth $10 might only be worth $5 somewhere else. Is it judged by value or currency?[at random]'";
+		say "     'So as my hoard grows, so do I, and the more valuable it is, the more I grow... [one of]What would happen if I had something in my hoard that was literally priceless[or]Who determines how valuable it is? Is it the value other people would pay for it, or the value that I place on it[or]Do I even need a hoard? Could I buy stocks or digital goods? If I did buy stocks would I change size throughout the day or only when I saw the changed value[or]Is there a limit to my possible size? Could I become the head of some big corporation and be as big as a city[or]So how is the value determined? Something that's worth $10 might only be worth $5 somewhere else. Is it judged by value or currency[at random]?'";
 	else if randomnumber <= 50:
-		say "     'Kyrverth? It's not my birth name obviously, [one of]but it suits me, don't you think?[or]but I felt like it fit my new body.[at random]'";
+		say "     'Kyrverth? It's not my birth name obviously, [one of]but it suits me, don't you think?'[or]but I felt like it fit my new body.'[at random]";
 	else if randomnumber <= 55:
-		say "     'So I'm a dragon now, does that mean I have encountered dragon traits? [one of]Will I live for a normal lifespan or much longer than the average person?[or]Will I feel the urge to kidnap every time I see royalty on TV?[at random]'";
+		say "     'So I'm a dragon now, does that mean I have encountered dragon traits? [one of]Will I live for a normal lifespan or much longer than the average person[or]Will I feel the urge to kidnap every time I see royalty on TV[at random]?'";
 	else if randomnumber <= 60:
 		say "     'You taking that artifact back was probably good for me, I did go a little crazy didn't I!'";
 	else if randomnumber <= 65:
 		say "     'Seen any dragonesses around? I was thinking about it earlier and we might have to share hoards otherwise one of us might be a whole lot bigger than the other.'";
 	else if randomnumber <= 70:
-		say "     'Do you think what is happening here is an isolated incident? [one of]What if there are other outbreaks all around the world, will things ever go back to normal again?[or]I'm the only one of my kind in the city - as far as I know, could I be the only one in the world?[at random]'";
+		say "     'Do you think what is happening here is an isolated incident? [one of]What if there are other outbreaks all around the world, will things ever go back to normal again[or]I'm the only one of my kind in the city - as far as I know, could I be the only one in the world[at random]?'";
 	else:
 		say "BUG - Please report to Speedlover or Wahn on the FS discord channel and quote: [randomnumber].";
 

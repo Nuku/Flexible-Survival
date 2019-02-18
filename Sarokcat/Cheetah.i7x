@@ -32,7 +32,7 @@ to say CheetahWomanWins:
 
 
 To say CheetahWomanLoses:
-	say "     Moving to restrain her before she can get away you force her down onto the ground her [one of]muzzle[or]face[or]snout[at random]to the ground. You [one of]pick up a glass bottle from the ground.[or]pull a glass bottle from your bag.[or]puck up a plastic bottle from the ground.[or] pull a plastic bottle from your bag. [at random] you place the container under her [one of]right breast[or]left breast[at random]and begin to stimulate her nipples. Her breathing starts to get heavy as the stimulation to her tits intensifies. Soon she is moaning and purring as milk shoots out her tits and into the container. After you are done with her you move her slump body to the side and put a cap on the bottle of cheetah milk, then go on your marry way.";
+	say "     Moving to restrain her before she can get away, you force her down onto the ground with her [one of]muzzle[or]face[or]snout[at random] pressed against the earth. You [one of]pick up a glass bottle from the ground[or]pull a glass bottle from your bag[or]pick up a plastic bottle from the ground[or]pull a plastic bottle from your bag[at random] and place the container under her [one of]right breast[or]left breast[at random], then begin to stimulate her nipples. Her breathing starts to get heavy as the stimulation to her tits intensifies. Soon she is moaning and purring as milk shoots out her tits and into the container. After you are done with her, you move her slumping body to the side and put a cap on the bottle of cheetah milk, then go on your merry way.";
 
 
 
@@ -43,7 +43,7 @@ to say CheetahWomanDesc:
 	if inasituation is true:
 		say ""; [dealt with in the origin event]
 	else: [standard description]
-		say "     As you wander around the deserted paths of the zoo, you spot a blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral-like cheetah woman, her long lean body resting on narrow paws and a long cheetah tail lashing behind her as she focuses her gaze directly on you. '[one of]Why don't you run? I love the chase,[or]Hmmm, not a gazelle, but you look almost as fun,[or]Oooo, something to chase![or]Oh good, I was feeling bored,[or]I was feeling kind of lonely here. Maybe you can help?[or]Finally someone to pounce![at random]' she says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation and slips into a runner's stance, her eyes locked on her newest prey... you.";
+		say "     As you wander around the deserted paths of the zoo, you spot a blur for a second, and turning towards it you find yourself staring straight into the eyes of an almost feral-like cheetah woman, her long lean body resting on narrow paws and a long cheetah tail lashing behind her as she focuses her gaze directly on you. [one of]'Why don't you run? I love the chase,' [or]'Hmmm, not a gazelle, but you look almost as fun,' [or]'Oooo, something to chase!' [or]'Oh good, I was feeling bored,' [or]'I was feeling kind of lonely here. Maybe you can help?' [or]'Finally someone to pounce!' [at random]she says with a soft grin, her pert breasts standing out from her body as she takes a deep breath in anticipation and slips into a runner's stance, her eyes locked on her newest prey... you.";
 
 
 Section 2 - Monster Insertion
@@ -108,7 +108,7 @@ When Play begins:
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"cheetah milk"	"The creamy milk collected from a Cheetah. It has a potent smell to it yet it's slightly enticing."	1	cheetah milk
+"cheetah milk"	"The creamy milk collected from a Cheetah. It has a potent smell to it, yet it's slightly enticing."	1	cheetah milk
 
 cheetah milk is a grab object. It is a part of the player. It is milky. It is temporary. Understand "milk" as cheetah milk. cheetah milk is infectious. The strain of cheetah milk is "Cheetah Woman".
 

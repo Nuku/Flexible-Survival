@@ -4776,7 +4776,7 @@ Include Misc 3 by Kaleem mcintyre.
 Include Misc 4 by Kaleem mcintyre.
 Include Misc 6 by Kaleem mcintyre.
 Include Misc 7 by Kaleem mcintyre.
-Include Misc 8 by Kaleem mcintyre.[***content temporarily closed for space]
+Include Misc 8 by Kaleem mcintyre.
 Include Misc 9 by Kaleem mcintyre.
 Include Misc Scene 5 by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.

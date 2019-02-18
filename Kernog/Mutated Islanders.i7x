@@ -11,7 +11,7 @@ to say mutatedIslanderDesc:
 	if inasituation is true:
 		say "";
 	else:
-		say "     The nearby bushes crack and bristle, as a muscular man rushes out at you. He is massive in more than one regard. Not only do you [if scalevalue of player is 5]get easily matched in height[else if scalevalue of player is 4]barely reach his neck[else if scalevalue is 3]barely reach his chest[else if scalevalue is 2]barely reach his belly[else]barely reach his groin[end if], his massive girth bouncing with each of his steps on his tanned thighs. '[one of]There you are![or]Found you![or]Fill me, Stranger![or]My balls feel so empty...[at random]'";
+		say "     The nearby bushes crack and bristle as a muscular man rushes out at you. He is massive in more than one regard. Not only do you [if scalevalue of player is 5]get easily matched in height[else if scalevalue of player is 4]barely reach his neck[else if scalevalue is 3]barely reach his chest[else if scalevalue is 2]barely reach his belly[else]barely reach his groin[end if], his massive girth bounces with each of his steps on his tanned thighs. [one of]'There you are!'[or]'Found you!'[or]'Fill me, Stranger!'[or]'My balls feel so empty...'[at random]";
 
 
 [ Player is forcefully cock-vored. No bonus ]

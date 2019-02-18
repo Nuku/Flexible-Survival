@@ -105,7 +105,7 @@ When Play begins:
 	now defeated entry is "I am Error! - You should not be able to encounter this creature, please report how you did this."; [ Text when monster loses. Change 'Gingerbread' as above. ]
 	now victory entry is "I am Error! - You should not be able to encounter this creature, please report how you did this."; [ Text when monster wins. Change 'Gingerbread' as above. ]
 	now desc entry is "I am Error! - You should not be able to encounter this creature, please report how you did this."; [ Description of the creature when you encounter it. ]
-	now face entry is "devoid of any human features save for your nose and eyes, which seem to be fully functional despite appearing to be drawn on with [if player is not male and player is female]pink[else]blue[end if] icing"; [ Face. Format as Your face is [face of player]. ]
+	now face entry is "devoid of any human features save for your nose and eyes, which seem to be fully functional despite appearing to be drawn on with [if player is purefemale]pink[else]blue[end if] icing"; [ Face. Format as Your face is [face of player]. ]
 	now body entry is "that of a gingerbread [if player is male]man[else if player is female]woman[else]person[end if]. Your entire form is strangely flat, with no discernible joints, though you are still able to move around normally, if a little stiffly"; [ Body. Format as "Your body is [body of player]." ]
 	now skin entry is "dry, crusty gingerbread"; [ Skin. Format as "Looking at yourself, your body is covered in [skin of player] skin." ]
 	now tail entry is ""; [ Ass/Tail. Write as a full sentence (with period) or leave blank for none. ]

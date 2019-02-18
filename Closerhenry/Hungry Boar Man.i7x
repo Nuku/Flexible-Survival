@@ -251,9 +251,9 @@ To Mudwrestle:
 				say "     Taking off your gear and clothing, you stack it far enough away so it doesn't get dirty, then step into the slippery mud with Philip. The boar man directs you to take position opposite himself, then calls out 'Go!' and wades towards you.";
 			say "     What do you do as the boar approaches you?";
 			LineBreak;
-			say "     [link](1)[as]1[end link] - Charge right at Philip to knock him down[line break]";
-			say "     [link](2)[as]2[end link] - Wait for Philip to come to you and counter.[line break]";
-			say "     [link](3)[as]3[end link] - Kite him around the ring to wear him out![line break]";
+			say "     [link](1)[as]1[end link] - Charge right at Philip to knock him down.";
+			say "     [link](2)[as]2[end link] - Wait for Philip to come to you and counter.";
+			say "     [link](3)[as]3[end link] - Kite him around the ring to wear him out!";
 			now calcnumber is 0;
 			while calcnumber < 1 or calcnumber > 3:
 				say "Choice? (1-3)>[run paragraph on]";

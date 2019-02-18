@@ -71,9 +71,9 @@ to say losetosugarferret:
 to say beatthesugarferret:
 	if sugarferretfight is 3:
 		now sugarferretfight is 1;
-		say "     Over the course of your fight with them, you manage to temporarily daze several of the crazed ferrets attacking you and toss several others over to the others having lustful sex, where they're grabbed and pulled into playing with those couples. When the last of them dealt with, you have a brief moment to take in what's happening.";
+		say "     Over the course of your fight with them, you manage to temporarily daze several of the crazed ferrets attacking you and toss several others over to the others having lustful sex, where they're grabbed and pulled into playing with those couples. Once the last of them is dealt with, you have a brief moment to take in what's happening.";
 	else:
-		say "     Managing to daze several of the ferrets, the others retreat with their fallen comrades, yelling '[one of]Meanie[or]Stingy[or]Come on, let's try over here[or][if player is female]She[else]He[end if] plays too rough![at random]' as they leave. Victorious over the manic tube-rats, you are free to get on with your plans. ";
+		say "     Managing to daze several of the ferrets, the others retreat with their fallen comrades, yelling '[one of]Meanie[or]Stingy[or]Come on, let's try over here[or][if player is female]She[else]He[end if] plays too rough[at random]!' as they leave. Victorious over the manic tube-rats, you are free to get on with your plans. ";
 
 
 to say sugarferretdesc:

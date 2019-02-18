@@ -502,7 +502,7 @@ to say StuffedOtterSuitDesc:
 Instead of fucking Stuffed Otter Suit:
 	say "     You take a moment to consider having fun with the suit and its perpetually pleasured prisoner. While your rational mind has some serious reservations, your libido is starting to get the better of you. Do you follow through on your urges as use the suit to get yourself off?";
 	if player consents:
-		if (player is pure female) or (player is herm and a random chance of 1 in 2 succeeds): [female (100%) and herm (50%)]
+		if (player is purefemale) or (player is herm and a random chance of 1 in 2 succeeds): [female (100%) and herm (50%)]
 			say "[StuffedOtterSuitSexVaginalRide]";
 		else if player is male: [male (100%) and herm (50%)]
 			if anallevel > 1 and a random chance of 1 in 2 succeeds:
