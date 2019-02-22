@@ -415,7 +415,7 @@ to LibrarySexEvent:
 		say "     Taking advantage of being on campus, you stop by the library and browse a little. ";
 		if randomnumber is:
 			-- 1:
-				say "     As you wander between the rows of bookshelves, you hear feminine giggles coming from the alley on the other side of the shelf.";
+				say "As you wander between the rows of bookshelves, you hear feminine giggles coming from the alley on the other side of the shelf.";
 				say "     'Ha ha... S-stop, the-the librarian w-will hear us,' one of them whispers.";
 				say "     'She will hear [italic type]you[roman type]. Keep these legs spread.'";
 				say "     [bold type]Do you wish to investigate?[roman type][line break]";
@@ -431,7 +431,7 @@ to LibrarySexEvent:
 					LineBreak;
 					say "     You resume your perusing, doing your best to ignore the noises.";
 			-- 2:
-				say "     As you wander between the rows of bookshelves, you hear a pair of female moans coming from the alley on the other side of the shelf.";
+				say "As you wander between the rows of bookshelves, you hear a pair of female moans coming from the alley on the other side of the shelf.";
 				say "     'F-fuck. It feels s-so good.'";
 				say "     'Y-yeah. Keep going.'";
 				say "     [bold type]Do you wish to investigate?[roman type][line break]";

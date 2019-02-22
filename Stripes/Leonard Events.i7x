@@ -343,7 +343,7 @@ to say leosupplyscene:
 		say "to his plush chair. You follow them, eager to show your thanks as well.";
 		say "     After Leonard's taken his seat, you and he lift the eager little feline into his lap. She mewls happily and grinds her cute ass down onto his stiffening cock, sharing kisses with both of you. ";
 		if scalevalue of player >= 3 and ( player is not neuter):
-			say "     Given her position, you could either choose to be on the receiving end or the giving side of some oral fun with the hard-working kitty.";
+			say "Given her position, you could either choose to be on the receiving end or the giving side of some oral fun with the hard-working kitty.";
 			say "     [bold type]Which would you prefer?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Receive oral.";
@@ -353,7 +353,7 @@ to say leosupplyscene:
 			else:
 				say "[leosupplyoral2]";
 		else:
-			say ". Given your [if scalevalue of player < 3]smaller size[else]present lack of gender[end if], you decide to give the hard-working kitty some added oral attention.";
+			say "Given your [if scalevalue of player < 3]smaller size[else]present lack of gender[end if], you decide to give the hard-working kitty some added oral attention.";
 			say "[leosupplyoral2]";
 		say "     As you're all basking in the afterglow, the satiated feline gives you both several hugs and kisses, mewing happily about how much she loves you both. After she's had a chance to recover, she pulls herself off Leonard's lap and hops back on the floor. She straightens her cap, grabs her empty pack and rushes back out with a quick wave, cum still running down her furry thighs.";
 		increase carried of water bottle by 1;
@@ -572,9 +572,9 @@ Instead of resolving PridePark:
 		else if T is 4:			[wandering kitty 3]
 			say "     While exploring in the park, you are met by [one of]one of the Feline girls from your pride[or]a little lioness from your pride[or]one of Leonard's kitty girls[or]one of your smaller pride sisters[purely at random]. You recognize her [one of]from the inter-pride battle[or]from the recital[or]as being at the den before[or]by the strong scent of Leonard upon her[purely at random] and welcome her into your arms. She purrs happily and snuggles with you, running her paws affectionately across her matron's body. ";
 			if player is felinebodied:
-				say "     She nuzzles your chest and wraps her lips around your nipple so she might nurse from it while you hold her close. As she does, a paw slides down your side and moves between your legs.";
+				say "She nuzzles your chest and wraps her lips around your nipple so she might nurse from it while you hold her close. As she does, a paw slides down your side and moves between your legs.";
 			else:
-				say "     She nuzzles at your chest and kneads her paws over your [bodytype of player] torso until your matronly figure is restored and she can begin nursing upon your breast. You hold her close as her cute muzzle plays with your nipple while her paw slides down between your legs.";
+				say "She nuzzles at your chest and kneads her paws over your [bodytype of player] torso until your matronly figure is restored and she can begin nursing upon your breast. You hold her close as her cute muzzle plays with your nipple while her paw slides down between your legs.";
 				felinebodyshift;
 			if player is male and a random chance of 2 in 5 succeeds:
 				say "     Taking your cock in paw, she strokes and caresses it, gradually working you up to full erection while grinning around your leaking nipple. She doesn't let up, continuing to nurse even as you bring her hips over your cock and lower her down onto your [cock size desc of player] [cock of player] penis[if cock length of player > 20]. She gives a soft mewl of discomfort initially as you work to press your impressive manhood into the little feline, but her cunt and belly stretch to accommodate you. From the way she's squirming in delight upon your shaft and purring up a storm, it's clear that the extra effort is well worth it to her[else if cock length of player > 12]. She gives a soft mewl as you work to press your enlarged manhood into the little feline, but her cunt stretched to accommodate you. From the way she's squeezing down around you and purring loudly, it's clear she's enjoying herself as well[else]. She mewls in pleasure as you slide your manhood into the little feline, stuffing that cute cunt of hers. From the way she's squeezing down around you and purring, it's clear she's enjoying herself as well[end if]. Keeping hold of her hips, you gently thrust into the cute kitty, fucking her even as she nurses from you. After she's been well fed and well fucked, you drive your cock deep inside her and cum hard, adding your semen to her already full belly[if cock width of player > 15] until she's so full she's sloshing with fluid[else if cock width of player > 8] to make it visibly plumped with fluid[end if]. You ease her off your shaft and back down onto the ground, letting her head on her way with another hug and a reminder to visit the den again soon.";

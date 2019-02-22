@@ -102,35 +102,35 @@ to say Stag loses:
 		choose a blank row in table of fucking options;
 		now title entry is "Demand that he sets free the woman he's brainwashed to act as a dog.";
 		now sortorder entry is 1;
-		now description entry is "Free Lea.";
+		now description entry is "Free Lea";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck him off.";
 	now sortorder entry is 2;
-	now description entry is "Blow him.";
+	now description entry is "Blow him";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him suck you off.";
 		now sortorder entry is 3;
-		now description entry is "Get a blow-job.";
+		now description entry is "Get a blow-job";
 	[]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride his cock with your pussy.";
 		now sortorder entry is 4;
-		now description entry is "Let the stag breed you.";
+		now description entry is "Let the stag breed you";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Get his cock in your ass.";
 	now sortorder entry is 5;
-	now description entry is "Let the stag fill your ass with his seed.";
+	now description entry is "Let the stag fill your ass with his seed";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take the stag's ass.";
 		now sortorder entry is 6;
-		now description entry is "Fill him with your cock.";
+		now description entry is "Fill him with your cock";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -515,7 +515,7 @@ instead of conversing Mike:
 	else if HP of Mike is 4:
 		say "     Mike looks up hopefully. 'Have you got a medkit?'";
 		if medkit is owned:
-			say "     Aware that you have one in your backpack, you answer... ";
+			say "     Aware that you have one in your backpack, you answer...";
 			if player consents:
 				say "     You pull the medkit out and start to patch Lea up while Mike holds her tight as she struggles, whining pitifully as you do the painful but necessary steps of cleaning and disinfecting her wound. It's not an easy task, but soon she's well taken care of, with a fresh white bandage around her upper torso.";
 				say "     Overjoyed at Lea being better now, Mike says 'Thank you, my friend. I don't know what I would have done without you. I'm in your debt.'";
@@ -527,7 +527,7 @@ instead of conversing Mike:
 			say "     You just silently shake your head.";
 	else if HP of Mike is 5:
 		say "     Mike says 'I don't have anything I could give you as thanks, except... would you maybe want one of my human dogs for your own? They were well trained as dogs and are very obedient - and since they changed, I taught them a few extra tricks too...' he winks and gives a small nod to Lea and her pregnant belly.";
-		say "     Do you accept one of the human form dogs from Mike as a reward? ";
+		say "     Do you accept one of the human form dogs from Mike as a reward?";
 		if player consents:
 			say "     [bold type]What gender do you want your new 'dog' to be?[roman type][line break]";
 			LineBreak;

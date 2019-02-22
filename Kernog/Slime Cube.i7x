@@ -117,7 +117,7 @@ to slimeCubeVore:
 			increase thirst of player by 2;
 		else if enduring is false or (enduring is true and a random chance of 2 in 3 succeeds):
 			increase thirst of player by 1;
-		say "     You float in the middle of a translucent slime. The gelatinous material slowly flows around your body, relentlessly penetrating and stimulating you. Despite its viscosity, you are certain that, with some effort, you may 'swim' your way out. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.[line break]";
+		say "     You float in the middle of a translucent slime. The gelatinous material slowly flows around your body, relentlessly penetrating and stimulating you. Despite its viscosity, you are certain that, with some effort, you may 'swim' your way out. You imagine your only active option is to [bold type]S[roman type]truggle enough until they let you go, else you can [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] them, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 		now enduring is false;
 		say "[bold type]1[roman type] - [link]Struggle[as]1[end link][line break][run paragraph on]";
 		say "[bold type]2[roman type] - [link][if obliging is true]Oblige[else]Abide[end if][as]2[end link][line break][run paragraph on]";

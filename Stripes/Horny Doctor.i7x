@@ -318,10 +318,10 @@ when play ends:
 				else:
 					say "     During one of these trips to accompany a team, wanting to hand-pick the next set of test subjects for a crucial experiment, the team gets stormed by a pack of huskies. While the females keep the team occupied, their alpha male leader - tired of having his girls snatched up by the hospital raids - assaults you from behind and captures you. You get added to his little pack of fucktoy bitches as a samoyed plaything to add some spice to his breeding bitches.";
 			else if hospquest is 13 and HP of doctor mouse is 1:
-				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr Mouse. While you only vaguely remember him, he somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement. ";
+				say "     Drawn by your instincts as a member of the hospital staff, you report back to Dr Mouse. While you only vaguely remember him, he somehow recognizes you readily and is cruelly pleased with your fate. Fully subservient to him now, he takes delight in ordering you around and using you for any twisted experiment he wants. Your body is changed over and over again in countless ways over the years and you are often used to mate with any new test subjects he captures for his amusement";
 				if "Sterile" is not listed in feats of player and player is female:
-					say "     You birth many bizarre, hybrid creatures from these matings";
-				say "     You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower.";
+					say ". You birth many bizarre, hybrid creatures from these matings";
+				say ". You do all this for him gladly, though never understanding why he is so mean to you, his loyal follower.";
 			else if hospquest is 13 and HP of doctor mouse is 2:
 				say "     The hospital is in disarray when you arrive, more like a bunch of seagulls squabbling over scraps than the orderly flock of birds flying in formation it once resembled. The various factions strike out at each other at times, but cooperate at others. Some sections, such as the doctors['] offices, are calm enough, but the cafeteria and other locations are frequent homes to squabbles over mates.";
 				if intelligence of player >= 20 and charisma of player >= 15 and "Expert Medic" is listed in feats of player:

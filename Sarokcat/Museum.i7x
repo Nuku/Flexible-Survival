@@ -90,10 +90,10 @@ carry out riddlesphinxing:
 	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
 	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
 	if diceroll > 15:
-		say "     'Oh my, that's right!' Valerie exclaims, obviously impressed at your mental prowess. 'You are a smart one aren't you?' she continues, giving you a speculative glance as she purrs. 'We should definitely do this again sometime soon. Oh, and I did mention a prize, didn't I? Here, I suppose you earned this...' she says as she pushes an item towards you. 'I found it lying around here somewhere. Maybe you can make better use of it. Of course, if you keep answering my riddles properly, maybe we can see about a proper reward for us both?' the sphinx says with a smug look on her face, leaving no doubt as to what she is talking about.";
+		say "'Oh my, that's right!' Valerie exclaims, obviously impressed at your mental prowess. 'You are a smart one aren't you?' she continues, giving you a speculative glance as she purrs. 'We should definitely do this again sometime soon. Oh, and I did mention a prize, didn't I? Here, I suppose you earned this...' she says as she pushes an item towards you. 'I found it lying around here somewhere. Maybe you can make better use of it. Of course, if you keep answering my riddles properly, maybe we can see about a proper reward for us both?' the sphinx says with a smug look on her face, leaving no doubt as to what she is talking about.";
 		increase riddlewin by 1;
 		if riddlewin > 2:
 			say "     'I'll also be going around the museum to do some of my rounds soon. I wouldn't mind a little companionship on these trips. If you'd like to tag along, perhaps we might even find something interesting to do,' she says with an coy smile and a swish of her tail.";
@@ -108,7 +108,7 @@ carry out riddlesphinxing:
 				say "You acquired some dirty water!";
 		infect "Sphinx";
 	else:
-		say "     'That's completely wrong!' Valerie says as she shoots you a smug look. 'Maybe you'll have better luck next time, but I'm not impressed so far,' the sphinx says with a derisive swish of her tail as she dismisses you. You feel somewhat humiliated by your loss, and strangely even feel as if you have lost a little bit of your humanity to the sphinx's wiles.";
+		say "'That's completely wrong!' Valerie says as she shoots you a smug look. 'Maybe you'll have better luck next time, but I'm not impressed so far,' the sphinx says with a derisive swish of her tail as she dismisses you. You feel somewhat humiliated by your loss, and strangely even feel as if you have lost a little bit of your humanity to the sphinx's wiles.";
 		decrease humanity of player by 10;
 		infect "Sphinx";
 

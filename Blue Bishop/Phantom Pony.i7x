@@ -80,7 +80,7 @@ to say blotfuck:
 					say ", you [if scalevalue of player < 4]climb onto the pony's back[else]crawl on top of the pony[end if], carefully aiming[if cocks of player > 1] one of[end if] your [cock size desc of player], half-erect dick[smn] for the entrance before forcing its way in. The toy [if cock length of player > 11]seems to easily take your cock, in spite of its impressive size; it takes a bit of work, but the pliable material stretches to handle its substantive girth[else]takes your cock without any difficulty, easily burying the organ into its pliable depths[end if].";
 				else:
 					say "     Its smooth, near-featureless behind eagerly invites you to ride upon it. Gently running your hand across its surface, it's clear that any mess of the object you might've made prior is gone.";
-					say "     Briefly preparing yourself, [if scalevalue of player < 4]you climb onto the pony's back[else]you crawl on top of the pony[end if], grinding your exposed, eager cunt[sfn] against the smooth, pliable vinyl of the toy's hindquarters. ";
+					say "     Briefly preparing yourself, [if scalevalue of player < 4]you climb onto the pony's back[else]you crawl on top of the pony[end if], grinding your exposed, eager cunt[sfn] against the smooth, pliable vinyl of the toy's hindquarters.";
 				say "     Inflatable object loudly creaking under your[if scalevalue of player > 3] substantive[end if] weight as you start to build up an earnest, the thing quickly heats up against your touch, soon sweat-slicked, [bodydesc of player] form writhing against the slippery toy[if scalevalue of player > 3]. You're slightly concerned that the toy might crumple under your impressive size, but it seems to slowly grow in size to accommodate its larger rider[end if]. Its otherworldly power ignited by your influence, your [bodytype of player] body begins to stick to its surface, weakly trying to cling to you, but otherwise having little power over its rider, for now...";
 			else if blotintense < 5:
 				say "     As you approach the curious toy, it subtly quivers in response to your mere presence. You make your way around to the rear of the inflatable pony.";
@@ -320,23 +320,23 @@ to say blotbinddesc:
 	else if blotintense < 8:
 		say "     Riding the inflatable pony, [one of]it creaks softly against your touch[or]it squeaks against your motion[or]it softly buckles under the weight of your motions[at random], ";
 		if player is male:
-			say "having engulfed your cock[smn] [if player is female and anallevel > 1]while pounding your cunt[sfn] and ass with large and distinctly moulded implements[else if player is female]while pounding your cunt[sfn] with large and distinctly moulded implements[else if anallevel > 1]while pounding your ass with large and distinctly moulded implements[else]within its tainted, vinyl grasp[end if]";
+			say "having engulfed your cock[smn] [if player is female and anallevel > 1]while pounding your cunt[sfn] and ass with large and distinctly molded implements[else if player is female]while pounding your cunt[sfn] with large and distinctly molded implements[else if anallevel > 1]while pounding your ass with large and distinctly molded implements[else]within its tainted, vinyl grasp[end if]";
 		else:
-			say "pounding your cunt[sfn][if anallevel > 1] and ass[end if] with large and distinctly moulded implements";
+			say "pounding your cunt[sfn][if anallevel > 1] and ass[end if] with large and distinctly molded implements";
 		say ". Limbs stuck firmly against the tainted object's surface, it's clear that the thing is reaching dangerous levels of power. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 	else if blotintense < 10:
 		say "     [one of]Now f[or]F[stopping]orced to ride the inflatable pony, [one of]it creaks loudly against you[or]it squeaks against your hard motion[or]it buckles under the weight of your constant motions[at random], ";
 		if player is male:
-			say "having engulfed your cock[smn] [if player is female and anallevel > 1]while relentlessly pounding your cunt[sfn] and ass with large and distinctly moulded implements[else if player is female]while relentlessly pounding your cunt[sfn] with large and distinctly moulded implements[else if anallevel > 1]while relentlessly pounding your ass with large and distinctly moulded implements[else]within its powerful, vinyl grasp[end if]";
+			say "having engulfed your cock[smn] [if player is female and anallevel > 1]while relentlessly pounding your cunt[sfn] and ass with large and distinctly molded implements[else if player is female]while relentlessly pounding your cunt[sfn] with large and distinctly molded implements[else if anallevel > 1]while relentlessly pounding your ass with large and distinctly molded implements[else]within its powerful, vinyl grasp[end if]";
 		else:
-			say "relentlessly pounding your cunt[sfn][if anallevel > 1] and ass[end if] with large and distinctly moulded implements";
+			say "relentlessly pounding your cunt[sfn][if anallevel > 1] and ass[end if] with large and distinctly molded implements";
 		say ". Limbs stuck firmly against the tainted object's surface as you're forced to fellate a large and intoxicating tendril, its power has reached dizzying proportions. You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 	else:
 		say "     Trapped within the confines of the inflatable pony, [one of]it creaks loudly all around you[or]it squeaks against your hard motion[or]its surface yields to your touch, but isn't inclined to let your escape[at random], ";
 		if player is male:
-			say "having engulfed your cock[smn] [if player is female and anallevel > 1]while relentlessly pounding your cunt[sfn] and ass with large and distinctly moulded implements[else if player is female]while relentlessly pounding your cunt[sfn] with large and distinctly moulded implements[else if anallevel > 1]while relentlessly pounding your ass with large and distinctly moulded implements[else]within its overwhelming, vinyl grasp[end if]";
+			say "having engulfed your cock[smn] [if player is female and anallevel > 1]while relentlessly pounding your cunt[sfn] and ass with large and distinctly molded implements[else if player is female]while relentlessly pounding your cunt[sfn] with large and distinctly molded implements[else if anallevel > 1]while relentlessly pounding your ass with large and distinctly molded implements[else]within its overwhelming, vinyl grasp[end if]";
 		else:
-			say "relentlessly pounding your cunt[sfn][if anallevel > 1] and ass[end if] with large and distinctly moulded implements";
+			say "relentlessly pounding your cunt[sfn][if anallevel > 1] and ass[end if] with large and distinctly molded implements";
 		say ". Barely able to see anything through the eyes of the thing as you're forced to fellate a large and intoxicating tendril, it's clearly reached the apex of its power! You imagine your only active option is to [bold type]S[roman type]truggle enough until you can pull yourself completely free, else you can [bold type]O[roman type]blige, or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] these questionable circumstances.";
 
 to blotbindorgasm:

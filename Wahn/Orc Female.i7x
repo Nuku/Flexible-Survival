@@ -630,9 +630,9 @@ to say KatyaDominancePath:
 
 to say KatyaResistanceMessage:
 	if KatyaResistance is 6: [never lost to the player]
-		say "'Now how the hell did you think that coming back to my camp uninvited was a good idea? I told you to fuck off!' the green-skinned woman snarls at you before adding, 'You're not one of them masochists, are you? Getting off on being roughed up.' ";
+		say "'Now how the hell did you think that coming back to my camp uninvited was a good idea? I told you to fuck off!' the green-skinned woman snarls at you before adding, 'You're not one of them masochists, are you? Getting off on being roughed up.'";
 	else if KatyaResistance is 4 or KatyaResistance is 4: [lost 1/2 times]
-		say "'You again?!' she growls, her face drawing into a snarl that shows off her sharp tusks. 'Guess I won't have to go find you after all to give you some payback!' ";
+		say "'You again?!' she growls, her face drawing into a snarl that shows off her sharp tusks. 'Guess I won't have to go find you after all to give you some payback!'";
 	else if KatyaResistance is 3 or KatyaResistance is 2: [lost 3/4 times]
 		say "'You just won't leave me alone, will you?!' she growls, her face marked by annoyance. The orc takes on a more defensive posture overall this time, no doubt remembering all of the times you whupped her ass before.";
 	else if KatyaResistance is 1: [lost 5 or more times]

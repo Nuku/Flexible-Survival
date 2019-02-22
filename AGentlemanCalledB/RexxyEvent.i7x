@@ -47,7 +47,7 @@ Instead of Resolving a Forced Adoption:
 		now HP of Rex is 1;
 	else if HP of Rex is 4:
 		if Dog Bone is owned:
-			say "     As you once again find yourself passing through a familiar neighborhood you are suddenly stuck with concern for your favorite toy. Pulling it from your bag you hold it tightly to your chest. In a moment of clarity you realize this is the very same place you first acquired the toy... and saw its previous owner captured by a large male retriever. ";
+			say "     As you once again find yourself passing through a familiar neighborhood you are suddenly stuck with concern for your favorite toy. Pulling it from your bag you hold it tightly to your chest. In a moment of clarity you realize this is the very same place you first acquired the toy... and saw its previous owner captured by a large male retriever.";
 			say "     You ponder just how similar a position you are in to hers when you are suddenly grabbed from behind. You are spun around to see the large, sexy, male canine face to face before he presses his muzzle to your face, drawing you into a deep kiss. Your mind is flooded with the thoughts and desires of the retriever bitch you have been becoming, your infection driven to new a new lust fueled high by his deep kiss and powerful male scent.";
 			WaitLineBreak;
 			say "     The large male breaks off the kiss and starts to introduce himself. You try to reign in your mind, struggling to control the growing urges of the retriever bitch clawing at your thoughts, but in doing so you barely managed to hear any of what he says, other than his name, Rex. While he looks you over, a smile crosses his muzzle as he spots the doggie dildo clenched in both hands against your chest.";

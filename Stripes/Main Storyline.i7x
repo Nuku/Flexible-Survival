@@ -188,7 +188,7 @@ to DrMattSampleQuestStart:
 	if hermaphrodite is not banned and furry is not banned:
 		if bodyname of player is "Hermaphrodite Blue Gryphon":
 			say "     After a double-click, you see the image of a flying creature with blue wings and blue fur appear on the screen. You know the shape well, as it is what your body currently looks like. Clearing his throat and falling back into an almost lecture-like tone, Dr. Matt points out details of the gryphon depicted. 'As you can see, this being has characteristics of members in the Accipitridae family, namely this beak, wings and the typical curved claws. Yet at the same time, it also is quite similar to a feline of the Panthera genus.' This time the suited man taps the overall leonine body, paws and tail with tail tuft. 'Most creatures that roam the streets are anthropomorphized versions of specific animals, but this appears to be some sort of hybrid. I must have samples to find out how this is possible.' Turning his attention to you, he adds, 'It is... fortunate, to have you here as a live subject, so please, have a seat on the examination table. This will only take a little while.'";
-			say "     Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
+			say "     Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor.";
 			DrMattGryphonExam;
 			now Strength of Doctor Matt is 1; [Gryphon Samples Delivered]
 		else: [non-grpyhons must get the milk]
@@ -324,14 +324,14 @@ to DrMattSampleDelivery:
 			now Strength of Doctor Matt is 3; [everything delivered]
 		else if carried of gryphon milk is 1: [not enough milk]
 			if bodyname of player is "Hermaphrodite Blue Gryphon":
-				say "gives a thoughtful nod, then says. 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
+				say "gives a thoughtful nod, then says, 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
 			else:
 				say "gives a slight frown, then shakes his head. 'Sadly, you do not have enough of the gryphon milk for a full analysis. Please, gather them with the suitable haste.'";
 		else if carried of gryphon milk is 0:
 			if bodyname of player is "Hermaphrodite Blue Gryphon":
-				say "gives a slight frown nod, then says. 'Sadly, you do not have any gryphon samples. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
+				say "gives a slight frown, then says, 'Sadly, you do not have any gryphon samples. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
 				DrMattGryphonExam;
 				now Strength of Doctor Matt is 3; [everything delivered]
 			else:

@@ -154,7 +154,7 @@ to xenoNestFailure:
 
 to xenoNestWin:
 	WaitLineBreak;
-	say "     You reach the building's last floor and walk in an abandoned IT company office. You patrol the different desks, until you find a storage room filled with food and water supplies. Either you have found the developers' secret stash, or someone had assembled these supplies in the first days of the nanite plague. In any case, these are yours to pick, and there are entire cardboxes of each of them.";
+	say "     You reach the building's last floor and walk in an abandoned IT company office. You patrol the different desks, until you find a storage room filled with food and water supplies. Either you have found the developers['] secret stash, or someone had assembled these supplies in the first days of the nanite plague. In any case, these are yours to pick, and there are entire cardboxes of each of them.";
 	xenoLoot;
 	if xenoNestisCautious is 0:
 		now Resolution of Xeno Nest is 2;

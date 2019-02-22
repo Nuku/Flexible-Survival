@@ -33,7 +33,7 @@ AmmyLastEvent usually is 666.
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"black bra"	"The fine black lacy bra you received from Ammy. It's made of silk and feels soft to the touch, looking rather expensive. However, the fact that the sexy equine dancer wore it makes it even more valuable to you. You can almost smell her scent emerging from the bra."	1	black bra
+"black bra"	"The fine black lacy bra you received from Ammy. It's made of silk and feels soft to the touch, looking rather expensive. However, the fact that the sexy equine dancer wore it makes it even more valuable to you. You can almost smell her scent emanating from the bra."	1	black bra
 
 black bra is a grab object. It is part of the player. It is not temporary. [it is infectious.]
 

@@ -228,9 +228,9 @@ to say sidney_otteress_cap:
 			increase bonus by 2;
 		let targetnum be 15;
 		let dice be a random number between 1 and 20;
-		say "Charisma - You roll 1d20([dice])+[bonus]: [dice + bonus] vs [targetnum]: ";
+		say "     Charisma - You roll 1d20([dice])+[bonus]: [dice + bonus] vs [targetnum]: ";
 		if bonus + dice >= targetnum:
-			say "     As you draw nearer, you start to explain what you want, the otteress listening. You know it sounds kind of crazy, so you try your best to reassure her that you aren't trying to hurt her or fuck her. At first, she seems skeptical, but you do manage to keep her listening long enough that Sidney can have his say. As he told you, he explains how he's always wanted to be a woman and goes on to say how pretty she is and that he'd like to be just like her. It won't hurt or change her, you add, just that it'll make Sidney identical to her.";
+			say "As you draw nearer, you start to explain what you want, the otteress listening. You know it sounds kind of crazy, so you try your best to reassure her that you aren't trying to hurt her or fuck her. At first, she seems skeptical, but you do manage to keep her listening long enough that Sidney can have his say. As he told you, he explains how he's always wanted to be a woman and goes on to say how pretty she is and that he'd like to be just like her. It won't hurt or change her, you add, just that it'll make Sidney identical to her.";
 			WaitLineBreak;
 			say "     'So you'd be like my twin or something?' she asks. 'I... I always wanted a sister. You promise this won't hurt?' she asks nervously. 'I don't like needles.'";
 			say "     'Just a little pinch and it'll be over. Then we'll be sisters,' Sidney says tenderly, smiling as he holds the device out. The otteress nods and closes her eyes tightly as the soldier pushes the short needle into her side and hold it there for a few moments. She gives a little eep and shivers, but holds herself steady. With a pull of the trigger, a whirring sound and a flutter of indicator lights, it is done.";
@@ -253,7 +253,7 @@ to say sidney_otteress_cap:
 				now Resolution of Meeting Sidney is 3; [became a otter, left]
 				now Meeting Sidney is resolved;
 		else:
-			say "     As you draw nearer, you start to explain what you want, the otteress listening. 'Get away you're crazy weirdos!' she exclaims suddenly, turning and running off. You try to pursue her, but it's too late. She's got a small scooter stashed nearby that she uses to make her escape. You'll not get another chance to approach her now.";
+			say "As you draw nearer, you start to explain what you want, the otteress listening. 'Get away you crazy weirdos!' she exclaims suddenly, turning and running off. You try to pursue her, but it's too late. She's got a small scooter stashed nearby that she uses to make her escape. You'll not get another chance to approach her now.";
 			now sa_otteress is true;
 	else:
 		let bonus be ( strength of player - 10 ) / 2;
@@ -266,9 +266,9 @@ to say sidney_otteress_cap:
 		if hardmode is true:
 			increase targetnum by level of player / 3;
 		let dice be a random number between 1 and 20;
-		say "Strength - You roll 1d20([dice])+[bonus]: [dice + bonus] vs [targetnum]: ";
+		say "     Strength - You roll 1d20([dice])+[bonus]: [dice + bonus] vs [targetnum]: ";
 		if bonus + dice >= targetnum:
-			say "     Continuing to talk reassuringly, you draw closer to your target. 'Grab her!' you yell to Sidney and the two of you tackle her. It is hard to get a grip on her; the female otter is super-flexible, bending and squirming like a fur-covered slinky. She almost manages to slip away a few times, but your strength [if level of player > 10]and experience [end if]wins out and you pin the otter girl down long enough for Sidney to use his device.";
+			say "Continuing to talk reassuringly, you draw closer to your target. 'Grab her!' you yell to Sidney and the two of you tackle her. It is hard to get a grip on her; the female otter is super-flexible, bending and squirming like a fur-covered slinky. She almost manages to slip away a few times, but your strength [if level of player > 10]and experience [end if]wins out and you pin the otter girl down long enough for Sidney to use his device.";
 			say "     Thankfully the nanite copying device is quick. All he has to do is jab the short needle into her side and hold it there for a few moments. With a pull of the trigger, a whirring sound and a flutter of indicator lights, it is done. Once he's confirmed he's got the copy, Sidney nods to you and you release the otter. She gives the two of you a hard slap across the face. 'Mashers!' She then climbs onto a hidden scooter and zips away.";
 			WaitLineBreak;
 			say "     He looks at the silvery jar and pauses only for a moment before jabbing himself with the needle and pulling the trigger again. He groans as the metallic fluid is injected into him. The effects are sudden, causing him to stumble to his knees as rapid and full-bodied transformation ensues. He quickly starts pulling off his clothes to watch. Brown fur spreads out from the point of injection. His figure changes to that of the flexible otter, losing bulk as he becomes streamlined for swimming. And for breasts, the petite globes of mammaries swell up under the waterproof coat of fur. As his head changes, gaining a muzzle and rounded ears first, he releases a long, feminine moan and pulls down the front of his pants to reveal a wet and juicy otter muff between now her legs. Long, flowing hair grows from the top of her head, rich brown like her counterpart's. The changes continue with her long, muscular tail growing out as the whole of her shifts until you're left looking at an identical copy of the sexy otteress who was here just moments ago.";
@@ -280,7 +280,7 @@ to say sidney_otteress_cap:
 			now Resolution of Meeting Sidney is 2; [became a otter, stayed]
 			now Meeting Sidney is resolved;
 		else:
-			say "     Continuing to talk reassuringly, you draw closer to your target. 'Grab her!' you yell to Sidney and the two of you tackle her. You try your best to get a grip, but the female otter is super-flexible, bending and squirming like a fur-covered slinky. Slipping free of your grip, the two of you stumble over each other as she rushes away. You try to pursue her, but it's too late. She's got a small scooter stashed nearby that she uses to make her escape. You'll not get another chance to approach her now.";
+			say "Continuing to talk reassuringly, you draw closer to your target. 'Grab her!' you yell to Sidney and the two of you tackle her. You try your best to get a grip, but the female otter is super-flexible, bending and squirming like a fur-covered slinky. Slipping free of your grip, the two of you stumble over each other as she rushes away. You try to pursue her, but it's too late. She's got a small scooter stashed nearby that she uses to make her escape. You'll not get another chance to approach her now.";
 			now sa_otteress is true;
 
 Part 3 - Feral Wusky

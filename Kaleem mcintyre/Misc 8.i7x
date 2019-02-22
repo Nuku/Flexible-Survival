@@ -118,7 +118,7 @@ When play begins:
 
 Instead of resolving a Controversy:
 	say "     Walking down the street you find yourself coming across a boarded up mini mart with a fat black bear wearing a long overcoat and a skinny weasel with long dirty blonde hair draped down off the side of his head bobbing their heads in time with music playing on an old fashioned boombox in between them. From what you can see the weasel is smoking on something that looks like a cigarette, but from the smell that's lingering in the air you can tell that what he's trippin['] on isn't tobacco. Finding yourself getting slightly lightheaded you walk over to the others without really knowing why.";
-	say "     As the weasel hands off the joint he's puffin' on to the black bear you find your head nodding in time to the music that's playing on the bulky looking jam machine. The rhythm of the music is an 80's remix and for some reason you find yourself really getting into it. 'Yo little homie, what's up?' The weasel asks all of a sudden and you can only shake your head at him. 'S'ok. Wanna hit this one time?'";
+	say "     As the weasel hands off the joint he's puffin['] on to the black bear you find your head nodding in time to the music that's playing on the bulky looking jam machine. The rhythm of the music is an 80's remix and for some reason you find yourself really getting into it. 'Yo little homie, what's up?' The weasel asks all of a sudden and you can only shake your head at him. 'S'ok. Wanna hit this one time?'";
 	say "     [bold type]Looking at the roach the bear is taking a hit of, you wonder if you should.[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Hit it.";

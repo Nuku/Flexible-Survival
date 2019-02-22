@@ -49,17 +49,17 @@ Instead of resolving Corrupt Kennel:			[Meet Dominick, your friendly Husky dom! 
 		say "     You follow Dominick inside, eager to show him who's boss.";
 		let bonus be (( the Strength of the player minus 5 ) divided by 2);
 		let diceroll be a random number from 1 to 30;
-		say "You roll 1d30([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "     You roll 1d30([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 22:
-			say "     As the door closes behind you, Dominick turns around to face you; just in time to catch your fist in his gut. Completely unprepared for your assault, he staggers backwards breathlessly clutching his stomach, leaving his face vulnerable to your next punch. Your blow knocks him to the ground and he moans in agony. He tries to crawl away from you, but a few swift kicks stops even that feeble attempt to escape. You survey the kennels that now belong to you, whimpering sluts and all, with a grin on your face. You announce that you're in charge now, getting a nod from the two canine girls and a nod from Dominick after you stare him down.";
+			say "As the door closes behind you, Dominick turns around to face you; just in time to catch your fist in his gut. Completely unprepared for your assault, he staggers backwards breathlessly clutching his stomach, leaving his face vulnerable to your next punch. Your blow knocks him to the ground and he moans in agony. He tries to crawl away from you, but a few swift kicks stops even that feeble attempt to escape. You survey the kennels that now belong to you, whimpering sluts and all, with a grin on your face. You announce that you're in charge now, getting a nod from the two canine girls and a nod from Dominick after you stare him down.";
 			now HP of Dominick is 60;
 			now Happy Puppy Kennel is known;
 			move player to Happy Puppy Kennel;
 			now battleground is "void";
 			now Resolution of Corrupt Kennel is 2; [Entered Kennel as Foe]
 		else:
-			say "     As the door closes behind you, Dominick turns around to face you; just in time to block your fist with his arm. His eyes narrow and he growls, 'Wrong move, asshole.' He knees you in the groin, and as you double over in pain, he pushes you hard. You topple to the ground, knocking the wind out of your lungs, but you barely have time to register this new misery before Dominick begins kicking you viciously. Unable even to cry out, you tighten into a ball and try to endure. Your battered body now feeling like a giant bruise, you hear Dominick from somewhere above you, 'I warned you once and you ignored it. Now you'll get what [if player is female]bitches[else]fuckers[end if] like you deserve.";
+			say "As the door closes behind you, Dominick turns around to face you; just in time to block your fist with his arm. His eyes narrow and he growls, 'Wrong move, asshole.' He knees you in the groin, and as you double over in pain, he pushes you hard. You topple to the ground, knocking the wind out of your lungs, but you barely have time to register this new misery before Dominick begins kicking you viciously. Unable even to cry out, you tighten into a ball and try to endure. Your battered body now feeling like a giant bruise, you hear Dominick from somewhere above you, 'I warned you once and you ignored it. Now you'll get what [if player is female]bitches[else]fuckers[end if] like you deserve.";
 			say "[ForcedSubmissionToDom]";
 	else:
 		WaitLineBreak;

@@ -1067,15 +1067,14 @@ to say SonyaDesc:
 	else if (VikingRelationship > 99):
 		say "ERROR-Sonya-100A: She should no longer be in the game, the player having refused her father's challenge.";
 	else:
-		say "     Sonya Frithjofsdotter is a very attractive blond woman with shoulder-long golden-blond hair. She is dressed in fur-rimmed boots, a comfortable set of leather pants and a woolen tunic pulled tight with a belt. Everything about her screams warrior, from her lithe and muscled shape to simply the way she stands, a confident look in her eyes that says she can take anyone in a fight - well, except you, the [if player is purefemale]wife[else]husband[end if] she adores. ";
+		say "     Sonya Frithjofsdotter is a very attractive blond woman with shoulder-long golden-blond hair. She is dressed in fur-rimmed boots, a comfortable set of leather pants and a woolen tunic pulled tight with a belt. Everything about her screams warrior, from her lithe and muscled shape to simply the way she stands, a confident look in her eyes that says she can take anyone in a fight - well, except you, the [if player is purefemale]wife[else]husband[end if] she adores";
 		if VikingPregnancy is 1:
-			say "There is a kind of special glow about her that tells you she's expecting a child, thanks to your sperm's virility.";
+			say ". There is a kind of special glow about her that tells you she's expecting a child, thanks to your sperm's virility";
 		else if VikingPregnancy is 2:
-			say "A slight bulge of her stomach shows the first visible proof of her pregnancy and tells you that your child is developing well.";
+			say ". A slight bulge of her stomach shows the first visible proof of her pregnancy and tells you that your child is developing well";
 		else if VikingPregnancy is 3:
-			say "She is quite obviously pregnant, with a bulging belly showing proof of your sperm's virility.";
-		else:
-			LineBreak;
+			say ". She is quite obviously pregnant, with a bulging belly showing proof of your sperm's virility";
+		say ".";
 		say "     As Sonya notices your intense gaze upon her, she walks up to you and playfully pulls you close, meeting your lips to share a loving kiss.";
 
 instead of conversing the Sonya:

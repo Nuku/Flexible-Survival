@@ -143,11 +143,10 @@ to say panthertaur rape: [panthertaur wins or player gets mounted]
 
 to say mount panthertaur:
 	say "     As if bowing to her superior, the cat turns away from you, flipping up her tail to expose her large feral sex to your hungry eyes. You can feel your [cock size desc of player] [cock of player] equipment rising to readiness as you approach, quickly shedding anything that would keep you from this graceful, claimed, being. Your hands seize at her powerful rear hips as you press up against her, running the tip of your [cock of player] tool up and down against her sex, covering it in the hot, wet dew that she is leaking for you. The smell of it makes your [ball size] ache with need. Her soft mewl snaps you back into focus. You give the majestic beast what she desires, pressing the firm head of your tool to her sex, then easing it in slowly.";
-	say "     She looks over her back, almost frowning at your slowness. You pull her back and lunge forward. Her yowl echoes as she screams her approval, and there is nothing to hold either of you back. You rock against her, and she grinds against you, bodies meeting in violent passion. Her honey splatters against the ground as you slam home into her as if every movement were your last, [ball size] rocking under you as you plunge into that hot tight channel. ";
+	say "     She looks over her back, almost frowning at your slowness. You pull her back and lunge forward. Her yowl echoes as she screams her approval, and there is nothing to hold either of you back. You rock against her, and she grinds against you, bodies meeting in violent passion. Her honey splatters against the ground as you slam home into her as if every movement were your last, [ball size] rocking under you as you plunge into that hot, tight channel";
 	if cock length of player > 15:
-		say "Her cunt is spread lewdly wide around your mammoth cock, but she appears to be in heaven; despite the girth, or perhaps because of it, every wet slap makes her mewl and tremble.";
-	else:
-		LineBreak;
+		say ". Her cunt is spread lewdly wide around your mammoth cock, but she appears to be in heaven; despite the girth, or perhaps because of it, every wet slap makes her mewl and tremble";
+	say ".";
 	say "     At last, you cannot hold back the tide any longer. Your cry mixes with hers, filling her with seed, making her wet cunt go into spasms around your shaft. She presses back into you powerfully, holding you tight as you release, looking at you over her shoulder as if daring you to not fill her all the way. ";
 	if cock width of player < 5:
 		say "Your insufficient deposit angers the cat; she gives a displeased growl, then surges forward, leaving your cock glistening as she flees off, disappointed.";
@@ -178,12 +177,12 @@ to say panthertaur ride cowgirl:
 	if cunt length of player < 10 or cunt width of player < 8:
 		say "     You let out a grunt as that length proves a bit of a challenge to fit inside your [cunt size desc of player] pussy. Undeterred however, you wiggle and brace yourself, slowly rocking and grinding yourself down on that length bit by bit. Gradually, you do manage to stretch yourself out more around that thick spire, but you're still not able to take it all. Once you've fit as much of that length as it seems you're going to be able to take for now, you grip onto her breasts for support and start riding that cock more properly, though you're forced to keep your riding of her somewhat slow for the time being. She still seems to be enjoying it however, and the soft flesh barbs slowly dragging along your walls are sending thrills of pleasure up your spine.";
 		WaitLineBreak;
-		say "     With the tightness of your [cunt size desc of player] cunt and the thickness of her cock as well as those barbs teasing your walls and your clit, it doesn't look like either of you are going to be lasting long. So it's not too much longer until she shudders and arches under you, cock throbbing powerfully and blasting thick feline scene into your ready depths. Your belly feels slightly bloated for a second before much of it washes back out along her exposed length, splattering her breasts, balls, and your thighs. The sensations of it all is enough to set you off as well, your walls gripping and squeezing around her shaft ";
+		say "     With the tightness of your [cunt size desc of player] cunt and the thickness of her cock as well as those barbs teasing your walls and your clit, it doesn't look like either of you are going to be lasting long. So it's not too much longer until she shudders and arches under you, cock throbbing powerfully and blasting thick feline scene into your ready depths. Your belly feels slightly bloated for a second before much of it washes back out along her exposed length, splattering her breasts, balls, and your thighs. The sensations of it all is enough to set you off as well, your walls gripping and squeezing around her shaft while ";
 		if player is male:
-			say "while your own length[smn] twitch[esmv] and spray[smv] your seed across her plentiful breasts. ";
+			say "your own length[smn] twitch[esmv] and spray[smv] your seed across her plentiful breasts";
 		else:
-			say "while you moan and tremble over her. ";
-		say "Once you've both recovered enough, you pull off of her (with a small gush of those fluids that hadn't already spilled out), and get cleaned up before continuing on your way.[impregchance]";
+			say "you moan and tremble over her";
+		say ". Once you've both recovered enough, you pull off of her with a small gush of those fluids that hadn't already spilled out, then get cleaned up before continuing on your way.[impregchance]";
 		increase cunt length of player by 2;
 		increase cunt width of player by 1;
 		now libido of player is (libido of player + libido of player + 40) / 3;

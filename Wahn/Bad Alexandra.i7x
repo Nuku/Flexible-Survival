@@ -379,11 +379,11 @@ to say AlexandraContraceptionTalk:
 			if libido of Alexandra > 7: [7+ pups]
 				say "'What? Another litter more than you can handle?' ";
 			else if libido of Alexandra is 6:
-				say "'Half a dozen, eh? That enough of a pack for your taste?'";
+				say "'Half a dozen, eh? That enough of a pack for your taste?' ";
 			else if libido of Alexandra > 2:
-				say "'Not even half a dozen. Do you really want to let the pups grow up without enough playmates?'";
+				say "'Not even half a dozen. Do you really want to let the pups grow up without enough playmates?' ";
 			else if libido of Alexandra is 2:
-				say "'Only two? Boss, canines are pack animals. Are you trying to make my kids loners?'";
+				say "'Only two? Boss, canines are pack animals. Are you trying to make my kids loners?' ";
 			say "she asks, one eyebrow raised as she looks at you. The anthro canine keeps her muzzle shut, but judging from her expression, she's inferring that she's the one who has all the work with the puppies - bearing, suckling and parenting them. Being the tough bitch that she is, she seems to be almost daring you to allow letting her get pregnant. After a little moment of silence, Alexandra then shrugs and adds in a neutral tone, 'But hey, you're the boss of this bad-ass bitch. If you don't want any further puppies, that's your decision.'";
 			say "     Crossing her arms in front of her chest, the former cop goes on to say, 'I hope you realize that the usual stuff isn't gonna work on someone like me, and [if cock length of player > 11]I don't think anyone even made condoms in your size! What would they even have marketed them as? Bitchbreakers? [else]condoms aren't really my thing, even if we could find [']em. [end if]But hey, I know someone who can fix me up. A doctor, holed up in the pediatrics clinic not too far from here. Her name's Medea and she'll surely be able to cook something up. Want me to pay her a visit? I'll find my own way there and back, no need for you to come along.'";
 			say "     [bold type]Send Alexandra to get contraception?[roman type][line break]";
@@ -1057,15 +1057,15 @@ to say badAlexandraFang4: [repeat mounting for Alexandra by Fang]
 	say "     ([link]N[as]n[end link]) - Turn around and walk away.";
 	if player consents: [watch]
 		say "     Right before your eyes, the feral wolf pounces on the canine woman, driving his pointy cock into her with a lustful growl. She moans and pants as he shifts position and starts fucking away at your prize bitch, sharing in your spoils and renewing his own claim on, and in, her. Alexandra pants and moans like a bitch in heat as the wild wolf pounds into her. But it isn't just animal noises that she makes, as you can hear her call out, 'Yeah, take me you wild beast! ";
-		if player is not male: [female or neuter player]
-			say "Give me that hard cock, like a real alpha male would!' It is clear that she means this as a barb towards yourself - and your gender right now - from the way Alexandra stresses the word 'male'. Apparently your dobie bitch doesn't quite like that the person who broke her down from being a good canine cop doesn't even have a dick. ";
-		else if player is male: [male + herm player]
+		if player is male: [male + herm player]
 			if cock length of player < 6: [cock up to 5 inch - Fang has 15]
 				say "Give me that hard cock, like a real alpha male would! At least your shaft isn't a little toothpick!' It is clear that she means this as a barb towards yourself - and the admittedly small size of your cock - from the way Alexandra stresses the word 'your'. Your dobie bitch is mocking the current size of your manhood! ";
 			else if cock length of player < 12: [cock up to 11 inch- Fang has 15]
 				say "Give me that hard cock, like a real alpha male would! You're so much bigger than him, I love it!' It is clear that she means this as a barb towards yourself - and the size of your masculinity - from the way Alexandra stresses the word 'him', and the volume of her shout. ";
 			else: [cock 12 inch and up, so not that much smaller or even bigger than Fang's 15]
 				say "Give me that hard cock, like a real alpha male would! At least you know how to use your prick to properly fuck a bitch!' It is clear that she means this as a barb towards yourself - and your skill at fucking her - from the way Alexandra stresses the word 'you', and the volume of her shout. ";
+		else: [female or neuter player]
+			say "Give me that hard cock, like a real alpha male would!' It is clear that she means this as a barb towards yourself - and your gender right now - from the way Alexandra stresses the word 'male'. Apparently your dobie bitch doesn't quite like that the person who broke her down from being a good canine cop doesn't even have a dick. ";
 		say "Fang doesn't really care what she says one way or another, just that she's an available slut to sink his bone into. So she wasn't talking to the wolf rutting her, that's for sure.";
 		say "     As you watch, his throbbing red cock drives into her juicy canine cunt over and over again, her puffy lips stretched around that thick rod. Her breasts sway and she pants, drooling onto the ground as she gets a rough pounding like the kind she's been trained to enjoy. Between her raw cries of lust, she moans about being a bitch, a slut and an animal, and the wolf is more than happy to treat her as such. Continuing to fuck, Fang's pace grows faster still and the wet, slick sounds of them going at it grow louder. Watching this, you become increasingly aroused, the sight of the policewoman so debased as to give herself willingly to an animal to be fucked and bred is very exciting[if player is male]. Taking a hold of your throbbing cock[smn], you start playing with yourself. You work your hand over your hard shaft, stroking in time to the wolf's frantic thrusts[else if player is female]. Slipping a hand between your legs to your wet folds, you start playing with yourself. You pump a few fingers into your cunt, working in time to the wolf's frantic thrusts[else]. Lacking a proper gender of your own, you run your hands all over your body, rubbing your bare groin and teasing yourself as best you can[end if]. The show is very exciting and you find yourself longing for a chance to share the needy bitch with the wolf in the future.";
 		WaitLineBreak;
@@ -1169,12 +1169,14 @@ an everyturn rule:
 				else: [player is next to Alexandra]
 					say "     From one moment to the next, the expression on your doberwoman bitch's face changes, and she brings a hand to her bulging stomach. 'Nnghh! Someone's definitively getting unruly in there. That was quite a kick!' The former cop opens her muzzle to say something else, but the next thing that comes out of it is just a strangled groan. A glance down makes it fairly obvious what's going on, as Alexandra's jeans suddenly develop a large wet patch that keeps spreading down the insides of her legs: Her water just broke! ";
 					if libido of Alexandra is 0: [first time puppies]
-						say "'Damn! I guess this is happening. Right here, right now!' she curses between panted breaths, and ";
+						say "'Damn! I guess this is happening. Right here, right now!' she curses between panted breaths, and you ";
 					else if libido of Alexandra > 10:
-						say "'My pups are coming! Time for the pack to grow even more,' she calls out between panted breaths, and ";
+						say "'My pups are coming! Time for the pack to grow even more,' she calls out between panted breaths, and you ";
 					else if libido of Alexandra > 4:
-						say "'Here we go again! Gah, it feels weird to be leaking this much,' she grunts out between panted breaths, and ";
-					say "you quickly rush to her side and help the canine woman lie down in a halfway comfortable position. Her pants aren't buttoned, not with the bulge of her belly in the way for that, so you thankfully don't have too hard of a time peeling them off her resting form.";
+						say "'Here we go again! Gah, it feels weird to be leaking this much,' she grunts out between panted breaths, and you ";
+					else:
+						say "You ";
+					say "quickly rush to her side and help the canine woman lie down in a halfway comfortable position. Her pants aren't buttoned, not with the bulge of her belly in the way for that, so you thankfully don't have too hard of a time peeling them off her resting form.";
 					say "     Flinging the soaked garment aside, you turn back to Alexandra a second later. She is panting rapidly by now, her hands clawing at the ground as a fairly strong contraction hits. While pregnancy and birth may be a lot quicker these days, it doesn't look like they are all that much easier than before. The curve of your pregnant bitch's belly heaves with another contraction, followed by a breathless groan from her, and you can see her netherlips spread a little in preparation for what is to come. In the heat of the moment, you don't spare a second thought before rushing forward to take position between her legs, hands outstretched. Then the next contraction hits, this time bringing with it a curled-up bundle of wet puppy, looking terribly cute in its demi-human form, even though it may be dripping with Alexandra's fluids.";
 					WaitLineBreak;
 					say "     The tiny humanoid dog lets out a whimper at finding itself in a strange new world outside of the fluid-filled home it came from, then starts to weakly move its limbs as if to try them out for the first time. Focused on the miracle of life in your hands, you are only shaken out of watching the first pup when Alexandra lets out a shout of '[one of]Goddamn!' [or]Motherfucker!' [or]Fuuuck!' [at random]as another really strong contraction hits. She mutters something about punching [']the next bastard who wants to fuck her['] in the balls, then takes a deep gasp of air. You barely have time to gently lower the first pup to catch number two, who is no less cute and innocent than the first. The two of them stretch their tiny limbs and sniff blindly at each other as you put number two down next to its sibling.";

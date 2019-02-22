@@ -76,7 +76,7 @@ Instead of resolving a The Magic Cap:
 		say "     Not knowing why, you tug the statue tight against your chest and then chuckle nervously up at the three-headed guard dog before darting out the back side of the room.";
 		let bonus be (( the Dexterity of the player minus 5 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 14:
 			say "Running as fast as your [bodyname of player] feet can take you, you rush through the narrow twist and turns of the Museum's hallways and then out of the rear entrance of the building, leaving your three-headed pursuer confusedly trying to follow after your scent. Moving down the alleyway and then on your way back to the bunker you accidentally [one of]trip over the side of the curb[or]slip on a can[or]slip over something hard[or]get your feet tangled over a discarded pair of pants[at random] and end up accidentally dropping the statue you're holding onto.";
@@ -145,12 +145,12 @@ Instead of resolving a Fashion Statement:
 				now battleground is "Campus";
 				fight;
 			now battleground is "Campus";
-			say "With that little pest out of the way you return to searching for your possible treasures in peace...";
+			say "     With that little pest out of the way, you return to searching for your possible treasures in peace...";
 			let dice be a random number from 1 to 20;
 			let the bonus be (( the perception of the player minus 8 ) divided by 2);
 			if "Scavenger" is listed in feats of player:
 				increase bonus by 4;
-			say "You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
+			say "     You roll 1d20([dice])+[bonus] = [dice + bonus]: ";
 			if dice + bonus > 15:
 				say "Scrounging up whatever you could you finally manage to find something worth wearing from the leftover inventory back here. Giving the apparel a quick a sniff, just to make sure it's not tainted, you smile approvingly before stuffing the items in question into your backpack. Time to head for home!";
 				now carried of muscle shirt is 1;

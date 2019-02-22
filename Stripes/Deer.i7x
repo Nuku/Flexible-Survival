@@ -399,7 +399,7 @@ to say SusanSex5: [Susan Sucks the player]
 	say "     Your horny lover finally lets your rod free. Looking at her to look for an answer on why she would suddenly stop, you can see only a smile and those breasts being pressed against your cock. The deer presses your cock, now fully lubed with her saliva, between her orbs. Her eyes keep staring at you amusedly as those breasts are massaging you.";
 	say "     When she is satisfied with your face, she goes back to sucking you. The feeling of both her mouth and the slick press of her breasts around your [cock of player] length get you so close to cumming that you close your eyes for a moment. Feeling some vibrations running in your cock, you know that she is amused with this	occurrence. You feel her saliva pooling between her breasts and your cock, exciting you to a point of only pleasure. The doe hungers more and more for your seed, and you intend to give it her.";
 	WaitLineBreak;
-	say "     You push her head against your groin, penetrating her throat fully. She struggles with the sudden push and invasion but is quick to get used to it. You wait no time and feed her a huge dose of your semen. Rope after long, thick rope of seed you fill her tummy with gusto. When you finally release her head she pulls back with a string of semen still connected to your penis which she cleans quickly. 'Thanks for the meal' you hear her say with a wink before you get ready for your adventures.";
+	say "     You push her head against your groin, penetrating her throat fully. She struggles with the sudden push and invasion but is quick to get used to it. You wait no time and feed her a huge dose of your semen. Rope after long, thick rope of seed you fill her tummy with gusto. When you finally release her head she pulls back with a string of semen still connected to your penis which she cleans quickly. 'Thanks for the meal,' you hear her say with a wink before you get ready for your adventures.";
 	deerfy;
 	if HP of Susan is 2:
 		now HP of Susan is 4;
@@ -426,9 +426,9 @@ to say Susanlabcoatscene:
 	choose row monster from the Table of Random Critters;
 	say "     What do you think, hon?' Susan asks, posing in the new lab coat she's wearing. It is a typical one, clean and white, though the back's been adjusted to let her puff of deer tail poke out. 'After a little incident, the doc thought it best I have something on while helping him. Lab chemicals can be dangerous.'";
 	say "     She moves in closer to you, rubbing her body against yours. 'I was hoping you'd come by to play. I've been feeling pretty randy,' she whispers throatily in your ear. She grinds the hard bulge of her covered erection against your [if scalevalue of player < 3]side[else if scalevalue of player > 3]thigh[else]hip[end if]. 'Come on. Let's have some fun,' she says, pulling you off to her bunk in the corner. Dr Mouse notices this, but quietly smiles and says nothing.";
-	say "     Susan gives you a powerful kiss, tongue diving into your mouth as her hands run over you with aggressive need. They slip off your gear, stripping you down before pushing you back onto her cot. Opening her new coat, she reveals that hard black cock you felt earlier. You're unsure, but it seems larger than before, though that may simply be that you've never seen it this full and hard before either. She moves between your legs and aims that pulsing rod at you; it seems your timid doe's ready to be the buck instead. ";
+	say "     Susan gives you a powerful kiss, tongue diving into your mouth as her hands run over you with aggressive need. They slip off your gear, stripping you down before pushing you back onto her cot. Opening her new coat, she reveals that hard black cock you felt earlier. You're unsure, but it seems larger than before, though that may simply be that you've never seen it this full and hard before either. She moves between your legs and aims that pulsing rod at you; it seems your timid doe's ready to be the buck instead.";
 	if player is male:
-		say "     ";
+		LineBreak;
 		say "     [bold type]Shall you let her take you or shall you take your rightful place as the buck in this relationship?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let her take you.";
@@ -655,20 +655,20 @@ when play ends:
 			if Susan is in primary lab:
 				say "     Susan happily joins you when you move north, sharing your home. At first, she merely tolerates your collection of holiday kitsch. But she loves you deeply all the same, and you her. ";
 				if player is not male and "Sterile" is not listed in feats of player:
-					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight. Every year, come Christmas Day, you give birth to a new fawn";
+					say "She's a reluctant buck at first, but is soon rutting you every night, much to your delight. Every year, come Christmas Day, you give birth to a new fawn.";
 				else if player is not male:
-					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight.";
+					say "She's a reluctant buck at first, but is soon rutting you every night, much to your delight.";
 				else:
-					say "     You rut her often and she ends up giving you a new fawn every year for Christmas.";
+					say "You rut her often and she ends up giving you a new fawn every year for Christmas.";
 				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the egg nog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if player is male] while you rut her from behind[end if].";
 			if Susan is in Hidden Lab:
 				say "     Susan happily joins you when you move north, sharing your home. Dr Mouse is a little upset about losing his assistant, but you find him a bit grinchy and always keep your dealings with him brief. At first, she merely tolerates your collection of holiday kitsch. But she loves you deeply all the same, and you her. ";
 				if player is not male and "Sterile" is not listed in feats of player:
-					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight. Every year, come Christmas day, you give birth to a new fawn";
+					say "She's a reluctant buck at first, but is soon rutting you every night, much to your delight. Every year, come Christmas day, you give birth to a new fawn.";
 				else if player is not male:
-					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight.";
+					say "She's a reluctant buck at first, but is soon rutting you every night, much to your delight.";
 				else:
-					say "     You rut her often and she ends up giving you a new fawn every year for Christmas.";
+					say "You rut her often and she ends up giving you a new fawn every year for Christmas.";
 				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the egg nog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if player is male] while you rut her from behind[end if].";
 
 Deer ends here.

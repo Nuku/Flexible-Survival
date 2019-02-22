@@ -879,7 +879,7 @@ to say NermineStoreFuck_Jaguar:
 	say "     ([link]N[as]n[end link]) - Nope, she's yours!";
 	if player consents:
 		LineBreak;
-		say "     In a generous mood after having gotten off in your prize bitch once already, you wave the jaguarman closer. ";
+		say "     In a generous mood after having gotten off in your prize bitch once already, you wave the jaguarman closer.";
 		say "[NermineStorefuck_JaguarSuck]";
 	else:
 		LineBreak;
@@ -896,7 +896,6 @@ to say NermineStoreFuck_Jaguar:
 			say "[bold type]You gain 1 water bottle![roman type][line break]";
 			increase carried of water bottle by 1;
 			say "     Agreeing to take payment for Nermine's services, you let the jaguarman put both items on a small table in the store, then wave him closer.";
-			LineBreak;
 			say "[NermineStorefuck_JaguarSuck]";
 		else:
 			LineBreak;

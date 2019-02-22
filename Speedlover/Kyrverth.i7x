@@ -181,7 +181,7 @@ to say KyrverthTalk: [Quest turnin check]
 			LineBreak;
 			decrease carried of stray links by 3;
 			increase carried of food by 5;
-			say "     'You did it!' Kyrverth rushes over and looks at the chainmail you brought back, eyes wide. 'That looks great! Here, let me get you a reward' He goes to a box and grabs five packets of food. 'My hoard is going to be awesome!' he says as he swaps the chainmail for the food. You almost drop the food as this time he definitely grows as he puts the bits of chainmail in his hoard.";
+			say "     'You did it!' Kyrverth rushes over and looks at the chainmail you brought back, eyes wide. 'That looks great! Here, let me get you a reward.' He goes to a box and grabs five packets of food. 'My hoard is going to be awesome!' he says as he swaps the chainmail for the food. You almost drop the food as this time he definitely grows as he puts the bits of chainmail in his hoard.";
 			say "     Kyrverth doesn't even seem to notice as his body quickly swells to gain an intimidating [one of]figure[or]size[at random], a little bit taller than you. His wings flap and stretch further and further out from his back, becoming capable of flight. Horns grow through his skin, changing from defensive tools to rather dangerous offensive weapons. While you think about offensive weapons, his claws catch your eye. They twitch and sprout from his hand, now looking like they could rip logs to bits. Kyrverth shivers then gives out a massive roar, revealing a deadly maw.";
 			LineBreak;
 			say "     As the roar echoes in the distance and slowly fades into the eerie silence of the old city, Kyrverth lets out a yawn and curls up in his nest to nap, apparently worn out by his growth. You pick up your things and quietly leave, treading carefully so you don't wake him up.";
@@ -303,7 +303,7 @@ to say KyrverthMainChat:
 			say "     [if KyrverthQuestGiven is 1]'Any luck finding some [bold type]Jewels[roman type]?'[else]'Thanks for agreeing to help me out, it's going to be awesome to have a hoard!'[end if]";
 			now Jewel Heist is active;
 		else if KyrverthStage is 1:
-			say "     'Thanks for the help' He grabs the silver token around his neck and shows it to you 'This is [one of]awesome[or]great[at random]!' [if KyrverthQuestGiven is 1]He [one of]glances[or]looks[or]peers[at random] at your backpack 'Have you [one of]found[or]managed to get[at random] any chainmail? I hate those [one of]so-called[or]damned[at random] [']knights['].'[else][end if]";
+			say "     'Thanks for the help.' He grabs the silver token around his neck and shows it to you 'This is [one of]awesome[or]great[at random]!' [if KyrverthQuestGiven is 1]He [one of]glances[or]looks[or]peers[at random] at your backpack 'Have you [one of]found[or]managed to get[at random] any chainmail? I hate those [one of]so-called[or]damned[at random] [']knights['].'[else][end if]";
 		else if KyrverthStage is 2:
 			say "     'Have a look at this hoard! It looks great, and I couldn't have gotten it together without you'";
 			if KyrverthQuestGiven is 1:

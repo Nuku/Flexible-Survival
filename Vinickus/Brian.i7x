@@ -267,11 +267,11 @@ to say sexwithBrian05_prelim:		[anal on Brian preliminary - not been fucked befo
 	now playernum is a random number between 1 and playernum;
 	say "     [special-style-1][playernum][roman type] vs [special-style-2][briannum][roman type]: ";
 	if playernum > briannum:
-		say "     It is a tough match against your burly opponent, but you eventually manage to get him to the ground beneath you. Pinning him down, he's forced to concede to you. 'Nice going,' he pants. 'I guess that's that, then.' Being a good sport (and quite aroused after the exciting tussle), he seems quite ready to let you claim your victory prize. Quite turned on yourself, you're ready and raring to get to it as well.";
+		say "It is a tough match against your burly opponent, but you eventually manage to get him to the ground beneath you. Pinning him down, he's forced to concede to you. 'Nice going,' he pants. 'I guess that's that, then.' Being a good sport (and quite aroused after the exciting tussle), he seems quite ready to let you claim your victory prize. Quite turned on yourself, you're ready and raring to get to it as well.";
 		WaitLineBreak;
 		say "[sexwithBrian05]";
 	else:
-		say "     Try as you might, you end up pinned beneath the muscly rhino as he uses his great strength against you. With you in such a position and the burly male hard after the exciting tussle, he seems quite ready now to claim his victory prize. And you're too turned on by this point to be that upset about how things turned out. You raise your ass, offering your [if player is female]juicy pussy[else]crinkled hole [end if]to him.";
+		say "Try as you might, you end up pinned beneath the muscly rhino as he uses his great strength against you. With you in such a position and the burly male hard after the exciting tussle, he seems quite ready now to claim his victory prize. And you're too turned on by this point to be that upset about how things turned out. You raise your ass, offering your [if player is female]juicy pussy[else]crinkled hole [end if]to him.";
 		WaitLineBreak;
 		if player is female:
 			say "[sexwithBrian03]";

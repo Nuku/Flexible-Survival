@@ -20,7 +20,7 @@ to say corruptedvicdesc:
 	else:
 		now sex entry is "Female";
 	say "     Before you is a mostly human woman showing signs of corruption by the infection. She's wearing [one of]a sticky labcoat[or]a torn business suit[or]scraps of clothes[or]a messy blouse that hangs open[at random], leaving much of her body exposed. Her sexy body has lovely curves, sexy legs and a grabbable bottom. Her breasts are plump and beautiful. Her tummy is somewhat rounded, showing she's pregnant with the spawn of some creature down here.";
-	say "     Her body is not untouched by the infection though, there being signs of non-human corruption to her body as well. The most notably are ";
+	say "     Her body is not untouched by the infection, though; there being signs of non-human corruption to her body as well. The most notable are ";
 	now corrvicchange1 is a random number between 1 and 20;
 	if corrvicchange1 is 1:
 		say "the lizard-like tail growing from her ass";
@@ -65,46 +65,46 @@ to say corruptedvicdesc:
 	say " and ";
 	now corrvicchange2 is a random number between 1 and 20;
 	if corrvicchange2 is 1:
-		say "the patches of scales at her shoulders. ";
+		say "the patches of scales at her shoulders";
 	else if corrvicchange2 is 2:
-		say "the patches of black fur at her shoulders. ";
+		say "the patches of black fur at her shoulders";
 	else if corrvicchange2 is 3:
-		say "the unblinking eyes on her shoulders. ";
+		say "the unblinking eyes on her shoulders";
 	else if corrvicchange2 is 4:
-		say "the spikes extending from her shoulders. ";
+		say "the spikes extending from her shoulders";
 	else if corrvicchange2 is 5:
-		say "the patches of green moss at her shoulders. ";
+		say "the patches of green moss at her shoulders";
 	else if corrvicchange2 is 6:
-		say "her pale blue complexion. ";
+		say "her pale blue complexion";
 	else if corrvicchange2 is 7:
-		say "the green skin tone. ";
+		say "the green skin tone";
 	else if corrvicchange2 is 8:
-		say "the white, featureless skin. ";
+		say "the white, featureless skin";
 	else if corrvicchange2 is 9:
-		say "the twin rows of horns atop her head. ";
+		say "the twin rows of horns atop her head";
 	else if corrvicchange2 is 10:
-		say "the additional eye in her brow. ";
+		say "the additional eye in her brow";
 	else if corrvicchange2 is 11:
-		say "the leaking cunt in her brow. ";
+		say "the leaking cunt in her brow";
 	else if corrvicchange2 is 12:
-		say "the additional mouth at her brow. ";
+		say "the additional mouth at her brow";
 	else if corrvicchange2 is 13:
-		say "the short, slimy tentacles she has instead of hair. ";
+		say "the short, slimy tentacles she has instead of hair";
 	else if corrvicchange2 is 14:
-		say "her feline ears. ";
+		say "her feline ears";
 	else if corrvicchange2 is 15:
-		say "her canine ears. ";
+		say "her canine ears";
 	else if corrvicchange2 is 16:
-		say "her two foot long, slimy tendril of a tongue. ";
+		say "her two foot long, slimy tendril of a tongue";
 	else if corrvicchange2 is 17:
-		say "her solidly black eyeballs. ";
+		say "her solidly black eyeballs";
 	else if corrvicchange2 is 18:
-		say "her stretched maw filled with sharp teeth. ";
+		say "her stretched maw filled with sharp teeth";
 	else if corrvicchange2 is 19:
-		say "the gray fur running down her thighs. ";
+		say "the gray fur running down her thighs";
 	else:
-		say "the chitinous plates at her thighs.";
-	say "     From the glassy look in her eyes and the drippings running down her thighs from her juicy cunt, you can tell there's little if any reason left in her and prepare to fight. As if your movement triggers her reaction, she says '[one of]Fuck me[or]Breed me[or]Do me[or]Sexxxxx[or]So horny[or]More[at random]!' with a moan and charges.";
+		say "the chitinous plates at her thighs";
+	say ". From the glassy look in her eyes and the drippings running down her thighs from her juicy cunt, you can tell there's little if any reason left in her and prepare to fight. As if your movement triggers her reaction, she says '[one of]Fuck me[or]Breed me[or]Do me[or]Sexxxxx[or]So horny[or]More[at random]!' with a moan and charges.";
 
 [	corrvicchange1	]
 [ 1-5 tail			]
@@ -126,10 +126,10 @@ to say losetocorruptedvic:
 	else:
 		say "     You try to resist the infected woman, but are worn down by her wild advances until you finally relent and are knocked to the ground. ";
 	if player is male:
-		say "     Moving atop you, she runs her hands over your chest while grinding her ass down onto your cock[if corrvicchange1 < 6]. Her tail thrashes excitedly as[else]. With a cry of relief,[end if] she sinks down over your erection, her [if cock length of player < 12]well-used cunt taking your [cock size desc of player] shaft easily[else if cock length of player < 24]stretched cunt able to take your [cock size desc of player] shaft readily[else]excessively-bred cunt taking your [cock size desc of player] shaft with only a little resistance[end if]. Once properly seated on your [cock of player] cock, she starts to ride you with heavy pants and moans while her [if corrvicchange1 is 18 or corrvicchange1 is 19]altered [end if]hands roam over your body[if corrvicchange1 is 5] while French kissing her mawed tail[else if corrvicchange1 is 9] while her tentacles grope her breasts[else if corrvicchange1 is 11] while her wings buzz excitedly[else if corrvicchange1 is 14] while her robotic arms fondle herself[else if corrvicchange2 is 16] while licking and groping her breasts with her long, slimy tongue[end if].";
+		say "Moving atop you, she runs her hands over your chest while grinding her ass down onto your cock. [if corrvicchange1 < 6]Her tail thrashes excitedly as[else]With a cry of relief,[end if] she sinks down over your erection, her [if cock length of player < 12]well-used cunt taking your [cock size desc of player] shaft easily[else if cock length of player < 24]stretched cunt able to take your [cock size desc of player] shaft readily[else]excessively-bred cunt taking your [cock size desc of player] shaft with only a little resistance[end if]. Once properly seated on your [cock of player] cock, she starts to ride you with heavy pants and moans while her [if corrvicchange1 is 18 or corrvicchange1 is 19]altered [end if]hands roam over your body[if corrvicchange1 is 5] while French kissing her mawed tail[else if corrvicchange1 is 9] while her tentacles grope her breasts[else if corrvicchange1 is 11] while her wings buzz excitedly[else if corrvicchange1 is 14] while her robotic arms fondle herself[else if corrvicchange2 is 16] while licking and groping her breasts with her long, slimy tongue[end if].";
 		say "     You can't help but respond, grabbing her hips and thrusting up into her, watching that pregnant bulge in her tummy sway a little as you pound her harder and harder. Losing yourself in lustful excitement, you can't help but feel a little disappointed that she's already got some other creature's spawn in her, preventing you from fully claiming her womb. Still, you do your best to pound her senseless, cumming hard in moaning release as you shoot your [cum load size of player] load into her. With you drained and her lust temporarily satisfied, she slides off you and stumbles off into the dark, dripping cum as she goes.";
 	else:
-		say "     Moving overtop you, she presses her well-used, dripping cunt over your face and grinds down. With the musky scent of her juices filling your senses, you dive in, tongue lapping over her wet folds before sliding into her stretched hole. As you eat her out, she moans in excitement and gropes her breasts[if corrvicchange1 is 5] while French kissing her mawed tail[else if corrvicchange1 is 9] with both her hands and her tentacles[else if corrvicchange1 is 11] while her wings buzz excitedly[else if corrvicchange1 is 14] with both her human hands and her robotic ones[else if corrvicchange1 is 18 or corrvicchange1 is 19] with her altered hands[else if corrvicchange1 is 20] and their phallic nipples[else if corrvicchange2 is 16] and her long, slimy tongue[end if]. Her cum soaks your face as she cries out in delight, arching her back as tainted milk drips from her breasts as she climaxes. When her convulsions of delight abate, she staggers to her feet and stumbles off into the dark, her lusts temporarily satisfied.";
+		say "Moving overtop you, she presses her well-used, dripping cunt over your face and grinds down. With the musky scent of her juices filling your senses, you dive in, tongue lapping over her wet folds before sliding into her stretched hole. As you eat her out, she moans in excitement and gropes her breasts[if corrvicchange1 is 5] while French kissing her mawed tail[else if corrvicchange1 is 9] with both her hands and her tentacles[else if corrvicchange1 is 11] while her wings buzz excitedly[else if corrvicchange1 is 14] with both her human hands and her robotic ones[else if corrvicchange1 is 18 or corrvicchange1 is 19] with her altered hands[else if corrvicchange1 is 20] and their phallic nipples[else if corrvicchange2 is 16] and her long, slimy tongue[end if]. Her cum soaks your face as she cries out in delight, arching her back as tainted milk drips from her breasts as she climaxes. When her convulsions of delight abate, she staggers to her feet and stumbles off into the dark, her lusts temporarily satisfied.";
 
 
 to say beatthecorruptedvic:

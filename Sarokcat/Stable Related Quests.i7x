@@ -58,14 +58,14 @@ Instead of Resolving a Stablestoreroom:
 		say "     Carefully exploring the Stables interior leads you to a room near the front of the area which is almost hidden in a small alcove. Peeking inside cautiously, you find the small room is packed with all sorts of strange items, though most of it appears to be clothing of various sizes. Looking around at the large, unorganized piles of random stuff, you figure this must be where they toss the personal items from their captives when they search them. You sigh slightly as you realize that the necklace Daisy sent you after is probably buried somewhere in the large amount of clutter stacked up in the small room. Figuring you had better get started looking, you shake your head slightly as you begin sorting through the room looking for the necklace the changing mare described.";
 		let bonus be ( the Perception of the player minus 10 ) divided by 2;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 15:
-			say "     Sifting through the disorganized piles of junk, you find yourself growing frustrated at the seemingly unending supply of debris and geegaws stacked around the room. You are about to give up the search, when you spot a small silver glint which appears to have recently been unearthed due to your poking around in the piles. Pulling the item out, you find it is a rather intricately patterned necklace in the shape of several interlocking leaves. The inscription on the back reads [']To Diana From Oscar[']. Smiling at your good fortune, you tuck the small necklace away in your pack, sure that this is the item that Daisy sent you to retrieve and, still smiling softly, you slip out of the room and head back to the entranceway, sure that Onyx will want to see your recent find.";
+			say "Sifting through the disorganized piles of junk, you find yourself growing frustrated at the seemingly unending supply of debris and geegaws stacked around the room. You are about to give up the search, when you spot a small silver glint which appears to have recently been unearthed due to your poking around in the piles. Pulling the item out, you find it is a rather intricately patterned necklace in the shape of several interlocking leaves. The inscription on the back reads [']To Diana From Oscar[']. Smiling at your good fortune, you tuck the small necklace away in your pack, sure that this is the item that Daisy sent you to retrieve and, still smiling softly, you slip out of the room and head back to the entranceway, sure that Onyx will want to see your recent find.";
 			now XP of Onyx is 5;
 			now Stablestoreroom is resolved;
 		else:
-			say "     You grow increasingly frustrated as you sift through the disorganized piles of junk, and you feel increasingly exposed the longer you spend hunting through the small room. Eventually you get a bit careless, and shove a pile of junk the wrong way, and barely manage to leap out of the way as it and several other nearby heaps tip over. You stumble out the open door as a growing cascade of junk and memorabilia nearly trips you, the loud noise of cell phones, jewelry and other items banging into each other as the room rearranges itself making you wince at your clumsiness. Looking around quickly, you sigh as you realize you aren't the only one who noticed the noise, as you see one of the equine stablebeasts heading down the corridor right towards you!";
+			say "You grow increasingly frustrated as you sift through the disorganized piles of junk, and you feel increasingly exposed the longer you spend hunting through the small room. Eventually you get a bit careless, and shove a pile of junk the wrong way, and barely manage to leap out of the way as it and several other nearby heaps tip over. You stumble out the open door as a growing cascade of junk and memorabilia nearly trips you, the loud noise of cell phones, jewelry and other items banging into each other as the room rearranges itself making you wince at your clumsiness. Looking around quickly, you sigh as you realize you aren't the only one who noticed the noise, as you see one of the equine stablebeasts heading down the corridor right towards you!";
 			fight;
 			say "     Looking back at the room after the fight is over, you see that all the activity has shifted the already disturbed piles around even more, and you groan as you realize that you will have to start all over again in your search for the necklace. Sighing you pull yourself up and resolve to come back again later to continue the search, as you are sure the noise of your recent encounter is sure to draw more of the equine beasts to this location soon enough, and you have no desire to deal with a large group of the beasts right now...";
 	else:
@@ -116,12 +116,12 @@ Instead of Resolving a Hardware Fort:
 			say "     Moving cautiously into the makeshift fortress, you note that it has been inexpertly propped up with beams and items from within the store, and tools are strewn around the area haphazardly as well, which while good in that it indicates there is plenty here to loot, is bad for you in that it is nearly impossible to navigate the twisty maze silently, or safely. And even as you think that, you can see one of the cars nearby start to slide towards you as you bump one of the beams supporting it!";
 			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+			say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
 			if diceroll > 16:
-				say "     You nimbly dodge the falling car, but the loud crash certainly alerts anyone nearby to the fact that they definitely have a visitor, and you groan as you see several wolverine guards heading your way at speed.";
+				say "You nimbly dodge the falling car, but the loud crash certainly alerts anyone nearby to the fact that they definitely have a visitor, and you groan as you see several wolverine guards heading your way at speed.";
 			else:
-				say "     You twist and dodge as best you can, and the car only manages to clip you on the way down, but it still hurts like hell, and the loud crashing noise has probably alerted whoever lives here to the fact that they now have a visitor. Looking around, you sigh as you see several wolverine guards heading your way, obviously this is just not your day.";
+				say "You twist and dodge as best you can, and the car only manages to clip you on the way down, but it still hurts like hell, and the loud crashing noise has probably alerted whoever lives here to the fact that they now have a visitor. Looking around, you sigh as you see several wolverine guards heading your way, obviously this is just not your day.";
 				decrease HP of player by 25;
 			hardwarefortphase1;
 		else if Recoveredhardware is 1:
@@ -347,7 +347,7 @@ to hardwarefortphase5:
 		increase carried of medkit by 1;
 	let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
 	if diceroll > 16:
 		say "Making lots of noise to draw their attention, you lead the creatures on a merry chase around this part of the city. You finally manage to lose the last of them near the library itself. Panting with exertion and actually feeling rather hopeful, you duck into the library, eager both for a bit of rest after your long day[if recoveredhardware < 2], and to take a look at the new sledgehammer the horseman handed you[end if].";

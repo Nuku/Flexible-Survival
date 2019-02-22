@@ -18,7 +18,7 @@ to say cheetahdesc:
 	setmongender 3;
 	choose row monster in Table of Random Critters;
 	now specialcheetah is false;
-	if ( a random chance of 1 in 3 succeeds ):[Special Cheetah]
+	if ( a random chance of 1 in 3 succeeds ): [Special Cheetah]
 		now specialcheetah is true;
 		say "     As you move through the ruined zoo, ";
 		[appearance of the cheetah]
@@ -27,25 +27,25 @@ to say cheetahdesc:
 		else: [player was surprised by the cheetah]
 			say "you freeze solid as something brushes up behind you and a spotted tail flicks at the corner of your vision, turning around very slowly you see ";
 			[physical details]
-		say "a rather unusual cheetah, with clusters of darker spots running down its back. ";
+		say "a rather unusual cheetah, with clusters of darker spots running down its back.";
 	else: [standard description]
 		say "     As you move through the ruined zoo, ";
 		[appearance of the cheetah]
 		if ( a random chance of 1 in 3 succeeds ): [spotted the cheetah]
 			say "[one of]you round a corner and see[or]you spot just ahead of you[at random] ";
 		else: [player was surprised by the cheetah]
-			say "[one of]something starts to feel wrong, you spin around and spot[or]A soft rumble makes you jump in surprise as you glance over your shoulder and see[at random] ";
-			[physical details]
+			say "[one of]something starts to feel wrong. You spin around and spot[or]a soft rumble makes you jump in surprise as you glance over your shoulder and see[at random] ";
+		[physical details]
 		say "[one of]a sleek[or]a muscular[or]a powerful[or]a lithe[at random] ";
 		say "cheetah, who slinks out from behind a building. The large feral feline ";
-					[clothing]
+		[clothing]
 		say "[one of]has scraps of a t-shirt hanging off his form[or]wears a loose fitting collar, a small bell jingling with each step[or]wears some kind of loose fitting outfit[or]has an array of jewelry hanging off its pelt[at random]. ";
 		say "The rest of his body is ";
 		[fur]
-		say "covered in [one of]thick matted fur caked in mud[or]heavy scars and fresh blood[or]a well groomed coat of silky fur[or]a strange rainbow patterned set of dots[or]a hypnotic pattern of blots and dots[or]a sleek coat of a classic cheetah[at random].";
+		say "covered in [one of]thick matted fur caked in mud[or]heavy scars and fresh blood[or]a well groomed coat of silky fur[or]a strange rainbow patterned set of dots[or]a hypnotic pattern of blots and dots[or]the sleek coat of a classic cheetah[at random].";
 		if cheetahmate > 0: [Mated To Special Cheetah]
-			say "     The cheetah looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
-							[comment]
+			say "     The cheetah looks you up and down with [one of]an unimpressed[or]a haughty[or]a challenging[or]a curious[or]a surprised[at random] look on his face. ";
+			[comment]
 			say "[one of]'Wandering so far away from your mate, guess it's my lucky day[or]'I wonder what your mate would say if he saw you out here all alone[or]'I can smell him on you, but don't worry, I can help you get rid of his scent[at random].' Licking his lips, the cheetah stalks forward to sate his desires in you, with or without your permission.";
 		else:
 			say "Licking his lips, the cheetah stalks forward to sate his desires in you, with or without your permission.";

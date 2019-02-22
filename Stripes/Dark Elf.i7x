@@ -27,7 +27,7 @@ to say losetodarkelf:
 			else:
 				say "     Still holding your neck with one hand, she begins to massage your breasts, building an unwanted and terrifying arousal within you. Soon, however, you find the lust eating into your thoughts, causing you to lose your desire to resist, your desire to flee. Eventually, the Dark Elf releases your neck, and uses her other hand to fondle her own massive mammary. Soon, a massive orgasm, from only breast stimulation, floods through your mind, robbing your legs of strength, and you fall to the ground.";
 		else:
-			say "     Your blood runs cold as you see an evil grin spread over the face of the dark elf. You blanch as she slips out of her dress and reveals her huge, throbbing cock. ";
+			say "     Your blood runs cold as you see an evil grin spread over the face of the dark elf. You blanch as she slips out of her dress and reveals her huge, throbbing cock.";
 			if breast size of player > 2:
 				say "     She kneels over you, stilling your struggles with his thighs, as she thrusts her forearm length cock between your [if Breast Size of player < 6]breasts, barely large enough to surround her massive cock[else if Breast Size of player < 9][breast size desc of player] breasts, mashing them together as she thrusts into the soft valley of your love pillows[else][breast size desc of player] tits, her hands roving over their sides as she smiles with malicious delight[end if]. She begins to thrust, the head of her cock thrusting up over your chest and into your chin. Her strong hands rove over your breasts, bringing you to [if HP of player > 0]overpowering[else]unwilling[end if] arousal. The night skinned elf notices this, and seems to take great pleasure in your uncontrolled enjoyment of her pleasuring of herself. It's not long before she cums, splattering her fluids over your chest and face, with some of the bitter fluid landing in your nose and mouth, making you thrash and sputter on the ground.";
 			else:
@@ -70,7 +70,7 @@ to say darkelfF:
 to say beatthedarkelf:
 	if player is male and libido of player > 20:
 		say "     Defeated, the dark elf collapses to the ground. She struggles to rise, but is unable to do so and can only glare up at you angrily. Her dress is torn and you can see her large bosom, hefty cock and oversized cunt. Looking her over, you find yourself tempted to celebrate your victory and fuck the dark elf.";
-		say "     [bold type]Shall you give into this impulse?[roman type][line break]";
+		say "     [bold type]Shall you give in to this impulse?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";

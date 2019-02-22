@@ -354,7 +354,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				LineBreak;
 				say "     Walking up to them, you pat the wolf's back and lean down to rub his furry balls as he thrusts into her again and again, feeling them lie heavy in your hand, full of the load he's got prepared for Amy's womb. 'Mmm... yes,' the aroused husky girl cries out as the wolf keeps pounding into her like a wild animal, 'Harder! Faster!' You slip your fingers to Amy's wet folds, caressing them as Fang's hard canine cock slides in and out.";
 				if player is male and anallevel > 1: [male/herm and anal sex allowed]
-					say "     Being so close to the hot action of their mating, your own lust rears its head, giving you an almost painfully hard cock tenting your pants. The urge to bury it into the gripping embrace of Fang's tight asshole rises inside you. Do you do so? ";
+					say "     Being so close to the hot action of their mating, your own lust rears its head, giving you an almost painfully hard cock tenting your pants. The urge to bury it into the gripping embrace of Fang's tight asshole rises inside you. Do you do so?";
 					if player consents: [player fucks Fang]
 						LineBreak;
 						say "     Quickly pulling off your clothes and moving in behind Fang, you get your throbbing cock lined up with his tailhole, then push it into his tight pucker. Fang releases a soft whimper, but takes your cock easily enough in his experienced hole and doesn't let up at with his own thrusts into the wet pussy under him. Amy, meanwhile, moans loudly as your pounding against Fang's ass presses the wolf's shaft even deeper into her body. She rubs her hand-paws over his neck and ears, pulling his head down to trade licks, muzzle to muzzle.";
@@ -597,7 +597,7 @@ instead of navigating Grey Abbey Library while ((HP of Amy > 1 and HP of Amy < 9
 				say "     With a satisfied chirp, Icarus smoothly moves forward on top of Amy, lining his stiff cock up with her pussy. His taloned hangs grip her hips tightly, then he thrusts into her with his avian rod. The slick, tapered cock pushes into Amy easily, causing her to moan loudly at being filled by his manhood. Soon the feathered fellow is drilling her hard, chirping occasionally as he does.";
 				WaitLineBreak;
 				if player is male:
-					say "     Watching your little birdy fuck Amy, his tight butt moving up and down as he pounds her, your own member gets quite hard and ready for some action too. Maybe you should... join them, taking Icarus ass to remind him of his place. ";
+					say "     Watching your little birdy fuck Amy, his tight butt moving up and down as he pounds her, your own member gets quite hard and ready for some action too. Maybe you should... join them, taking Icarus ass to remind him of his place.";
 					say "     [bold type]Do you do so?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Yes.";
@@ -1359,7 +1359,7 @@ to say AmySex8: [Fang+Amy+Player Threesome]
 		WaitLineBreak;
 		say "     Amy gets on all fours to sniff and be sniffed by Fang, softly panting in rising arousal. Already knowing what's expected of her, she then turns her backside to the wolf, taking a secure stance and spreads her legs a bit further. With a satisfied growl Fang moves up behind her and sniffs Amy crotch, then jumps up and mounts her more human-like body, front legs around her chest and hips thrusting forward. His hard manhood hits its target at once and plunges deep into the husky's ready pussy. Driven by his feral lust, Fang ruts the young woman mercilessly, growling and panting as he thrusts in and out.";
 		WaitLineBreak;
-		say "     Seeing your Alpha penetrate Amy makes you quite hard as well and you quickly strip off your clothes. Pulling out your [cock of player] manhood, you pump your hand up and down its length a few times, then step up to the front of the mating couple and present your erection. Amy eagerly licks your balls and cock a bit before taking it into her mouth. ";
+		say "     Seeing your Alpha penetrate Amy makes you quite hard as well and you quickly strip off your clothes. Pulling out your [cock of player] manhood, you pump your hand up and down its length a few times, then step up to the front of the mating couple and present your erection. Amy eagerly licks your balls and cock a bit before taking it into her mouth.";
 		say "     Getting blown as you watch Fang mounting your anthro husky housemate, the need to cum quickly rises inside you and you have to grab hold of Amy's head to stop from losing it right then and there. Cock resting for a moment in her throat, you take a deep breath, then slowly pull out and scooch back. Now having her mouth free, Amy gives lustful pants and yips as Fang drives his shaft into her. Watching the black wolf mate her, you walk around them slowly taking in the full glory of the powerful wolf on top of his more human-like partner.";
 		LineBreak;
 		say "     What do you want to do now?";

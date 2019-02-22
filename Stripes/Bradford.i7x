@@ -168,7 +168,7 @@ Instead of conversing the Bradford:
 		now bradfordstory1 is true;
 		say "     'This body of mine is like them cows on my da's ranch. Big, dumb Bradfords. Named after [']em and everything. I always hated them and that place. Left as soon as I could. Must be someone's idea of a sick joke, me lookin['] like this.'";
 	else:
-		say "     Walking up to the bull you ask if you could talk to him about something. 'Sure', he grunts, never taking his eyes away from the window. 'What'dya need?' ";
+		say "     Walking up to the bull you ask if you could talk to him about something. 'Sure', he grunts, never taking his eyes away from the window. 'What'dya need?'";
 		WaitLineBreak;
 		say "[BradfordTalkMenu]";
 
@@ -228,7 +228,7 @@ to say chitchatwithBradford: [smalltalk with Bradford]
 
 to say bountyBoardBradford: [bounties with Bradford]
 	if bradfordbounty > 0 and bradfordBountyNum > 0:
-		say "     How's that bounty sheet comin['] along? Says you've got to deal with another [bold type][bradfordbounty] [if bradfordBountyNum is 1]Demon Brute(s)[else if bradfordBountyNum is 2]Twisted Punk(s)[else if bradfordBountyNum is 3]Saber Kitt(y|ies)[else if bradfordBountyNum is 4]Alpha Husk(y|ies)[else if bradfordBountyNum is 5]Latex Ermine(s)[else if bradfordBountyNum is 6]Spider Girl(s)[end if][roman type].' ";
+		say "     How's that bounty sheet comin['] along? Says you've got to deal with another [bold type][bradfordbounty] [if bradfordBountyNum is 1]Demon Brute(s)[else if bradfordBountyNum is 2]Twisted Punk(s)[else if bradfordBountyNum is 3]Saber Kitt(y|ies)[else if bradfordBountyNum is 4]Alpha Husk(y|ies)[else if bradfordBountyNum is 5]Latex Ermine(s)[else if bradfordBountyNum is 6]Spider Girl(s)[end if][roman type].'";
 	else if bradfordbounty <= 0 and bradfordBountyNum > 0:
 		now bradfordBountyNum is 0;
 		say "     'Good goin['] with those [if bradfordBountyNum is 1]Demon Brutes[else if bradfordBountyNum is 2]Twisted Punks[else if bradfordBountyNum is 3]Saber Kitties[else if bradfordBountyNum is 4]Alpha Huskies[else if bradfordBountyNum is 5]Latex Ermines[else if bradfordBountyNum is 6]Spider Girls[end if][roman type]. Got sent a message when you finished it up. I hope they weren't too much of a hassle. Here's your cut,' he says, tossing you a credit voucher. Checking it, you find it only worth 125 freecred.";

@@ -804,9 +804,9 @@ when play ends:
 					say "     Candy never seems to warm up to Philip and is catty with him whenever the two end up together. You have to take care to wash the boar's strong scent from you after sex, lest it upset the gay coonboi. Aside from holiday get-togethers with all your new, transformed family of friends, you make sure they are kept apart.";
 		else if coonstatus is 101:				[coon pet]
 			if player is male:
-				say "     Your little pink pet remains a loyal slut under your care after your release from the military. He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you. He seems to show a preference for a French maid dress, and dutifully keeps house whenever you are out. ";
+				say "     Your little pink pet remains a loyal slut under your care after your release from the military. He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you. He seems to show a preference for a French maid dress, and dutifully keeps house whenever you are out.";
 			else:
-				say "     Your little pink pet remains a loyal slut under your care after your release from the military. He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you. He seems to show a preference for a French maid's dress, and dutifully keeps house whenever you are out. You make sure to pass him off to your male and herm friends from time to time, to appease his lust for cock. ";
+				say "     Your little pink pet remains a loyal slut under your care after your release from the military. He serves and services you with absolute devotion and keeps a variety of cute dresses and frilly outfits to tease and excite you. He seems to show a preference for a French maid's dress, and dutifully keeps house whenever you are out. You make sure to pass him off to your male and herm friends from time to time, to appease his lust for cock.";
 			if bodyname of player is "Ferret":
 				say "     Lorenda and Lee take particular enjoyment out of their fellow [']maid's['] companionship and are often found playing with him in their outfits.";
 			if bodyname of player is "Siren":

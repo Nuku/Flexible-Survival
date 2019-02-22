@@ -186,7 +186,7 @@ Instead of resolving a Pit Trap:
 	else:
 		say "     Quickly digging out the rope, you start securing it to a large rock nearby. The soldier keeps babbling his thanks to you. But as you try to warn him to be quiet, it is too late. Emerging from hidden holes in the ground come numerous three foot prairie dog creatures. One of them waves her shovel at you. 'Hey now! You leave that alone. We caught it fair and square! That one's ours,' she says, crossing her fluffy arms over her large breasts. ";
 		if bodyname of player is "Prairie Dog" and facename of player is "Prairie Dog" and skinname of player is "Prairie Dog":
-			say "     Looking you over, the rodent herm grins. 'But you know what, you're a fine looking burrower. How about we share him?' The soldier, just having finished coming up the rope, whimpers at this suggestion.";
+			say "Looking you over, the rodent herm grins. 'But you know what, you're a fine looking burrower. How about we share him?' The soldier, just having finished coming up the rope, whimpers at this suggestion.";
 			say "     [bold type]Shall you take her up on her offer?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
@@ -197,7 +197,7 @@ Instead of resolving a Pit Trap:
 				say "     'Well, that's just too bad. We'll just have to take what's ours then,' she growls, raising her shovel.";
 				say "[prairiedogfight]";
 		else:
-			say "     'And maybe we'll have some fun with you as well,' she says with a growl. 'Get [']em, girls,' she says, raising her shovel and charging. The poor soldier, having just managed to get himself up the rope, finds himself swarmed with a pack of horny prairie dogs.";
+			say "'And maybe we'll have some fun with you as well,' she says with a growl. 'Get [']em, girls,' she says, raising her shovel and charging. The poor soldier, having just managed to get himself up the rope, finds himself swarmed with a pack of horny prairie dogs.";
 			say "[prairiedogfight]";
 	now Pit Trap is resolved;
 

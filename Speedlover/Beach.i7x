@@ -100,8 +100,8 @@ to say RatTwinsTapeGet:
 		if Lost Camera is unresolved:
 			say "You notice a video tape sitting on a corner of the pile of stuff. You pick it up and examine it. It is labelled '1st day together in our new bodies'. If you find a compatible camera, this could prove an interesting watch.";
 		else:
-			say "You notice a video tape sitting on a corner of the pile of stuff. You pick it up and examine it. It is labelled '1st day together in our new bodies'. It seems compatible with the camera that you[if carried of video camera is 1]carry[else]put somewhere[end if].";
-		say "[if HP of Erin >= 2]You grab the tape while the twins are distracted by one of the patrons of the restaurant coming to chat with them[else]You grab the type while no one is here to watch you[end if].";
+			say "You notice a video tape sitting on a corner of the pile of stuff. You pick it up and examine it. It is labelled '1st day together in our new bodies'. It seems compatible with the camera that you [if carried of video camera is 1]carry[else]put somewhere[end if].";
+		say "[if HP of Erin >= 2]You grab the tape while the twins are distracted by one of the patrons of the restaurant coming to chat with them[else]You grab the tape while no one is here to watch you[end if].";
 		say "[bold type]Rat Twin Tape has been added to your tape inventory![roman type][line break]";
 		add "Rat Twin Tape" to tapes of player;
 

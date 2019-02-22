@@ -76,14 +76,14 @@ instead of conversing the Doctor Medea:
 	if HP of Doctor Matt is 20:
 		say "     Speaking with the lizard doctor, you tell her about [if HP of Doctor Matt is 20]Dr. Matt[else]Dr. Mouse[end if] and his research. She seems only mildly interested at first until you bring up the fact that he'd like access to what she's discovered about the effects of the infection in regards to pregnancy. 'As you've likely witnessed, the nanites have numerous effects on pregnancy and reproduction in general. ";
 		if Medeaget < 3:
-			say "     I'm terribly under-supplied at the moment and thus have only be able to learn a little while assisting the rare patient seeking my help. Were you able to assist me in improving conditions here, I might be able to do and learn more,' she says with a grin.";
+			say "I'm terribly under-supplied at the moment and thus have only be able to learn a little while assisting the rare patient seeking my help. Were you able to assist me in improving conditions here, I might be able to do and learn more,' she says with a grin.";
 			now HP of Doctor Matt is 21;
 		else if HP of doctor Medea >= 5 and lust of Doctor Medea >= 3:
-			say "     You have been of considerable assistance, both in gathering supplies and as a patient. Thanks to your help, there's much I've been able to learn about the nanites and their manipulations of the reproductive process.";
+			say "You have been of considerable assistance, both in gathering supplies and as a patient. Thanks to your help, there's much I've been able to learn about the nanites and their manipulations of the reproductive process.";
 			say "[Medeamattcomplete]";
 			now HP of Doctor Matt is 22;
 		else:
-			say "     There are more supplies I need to be able to expand the range of services I can provide to my patients. With those, I'll also be able to learn more about the nanites and their manipulations of the reproductive process,' she says with a grin. Clearly she knows she's got you over a barrel, leaving you stuck fetching whatever she wants.";
+			say "There are more supplies I need to be able to expand the range of services I can provide to my patients. With those, I'll also be able to learn more about the nanites and their manipulations of the reproductive process,' she says with a grin. Clearly she knows she's got you over a barrel, leaving you stuck fetching whatever she wants.";
 			now HP of Doctor Matt is 21;
 	else if hospquest is 20:
 		say "     Speaking with the lizard doctor, you inform her that Dr. Mouse has sent you to obtain her case files and notes. You do your best to be intimidating, letting her know that this is not a request while still couching it in terms of medical cooperation and such. While clearly at a disadvantage, the weak lizard seems only mildly interested in what you're saying at first. It's only when you make it clear that you want access to everything she's discovered about the effects of the infection in regards to pregnancy does she give you her full attention. 'Oh. Now why didn't you just say so? I get threatened by every other patient that comes in here, but rarely do they take an interest in my work beyond their immediate needs.";
@@ -391,15 +391,15 @@ to say Medeaadjustments:
 					else if inheat is true:
 						say "     'Well, you're currently in a heightened period of estrus. It is marked by increase arousal and a higher fertility rate[if defaultheat is false]. In your particular case, you are going through a [cockname of player] heat[else]. In your particular case, you are going through a fairly common version of the heat cycle the infected go through[end if]. ";
 						if heat cycle entry is heat duration entry:
-							say "     This particular heat is ongoing and so will not end until you become pregnant.'";
+							say "This particular heat is ongoing and so will not end until you become pregnant.'";
 						else if turns in heat >= heat cycle entry or turns in heat < (heat cycle entry - heat duration entry) * 8:
-							say "     This particular round of heat is set to end at any moment.'";
+							say "This particular round of heat is set to end at any moment.'";
 						else if turns in heat >= ( heat cycle entry - heat duration entry ) * 8:
 							let num be heat cycle entry * 8;
 							now num is num - turns in heat;
 							if heatlevel is 3:
 								now num is num + ( num / 4 );
-							say "     I'd estimate this particular round of heat will [if heatlevel is 3]roughly [end if]last ";
+							say "I'd estimate this particular round of heat will [if heatlevel is 3]roughly [end if]last ";
 							guesstimate time at num;
 							say ".'";
 					else:
@@ -670,9 +670,10 @@ to say Medeapandafight:
 	say "     You get into a fighting stance as your inner ear quickly regains balance and the room stops turning around you. Dr. Medea pushes you back firmly, trying to explain that she's just one of her regular patients. 'She can just be a little... excitable by this point in her pregnancy. Don't startle her,' she warns, moving to unlock the door. In steps through a very pregnant panda. She wears little more than a torn and stretched t-shirt over her rounded belly, doing nothing to conceal with dilated pussy and soaking thighs. Despite the doctor's assurances, she seems as wild-eyed and crazy as any other mutant who's gone over the edge and you take up a defensive posture.";
 	say "     Seeing you, the panda growls again, this time with an edge of excitement. ";
 	if player is impreg_now and gestation of child < 20:
-		say "     'Is this another patient of yours? Perhaps [if player is female]she'd[else]he'd[end if] like to help me take my mind off the cub";
+		say "'Is this another patient of yours? Perhaps [if player is female]she'd[else]he'd[end if] like to help me take my mind off the cub?' ";
 	else:
-		say "     'Is this a new assistant? A plaything to keep my mind off the cub?' Despite her gravid state, the horny female moves quickly and makes a grab for you.";
+		say "'Is this a new assistant? A plaything to keep my mind off the cub?' ";
+	say "Despite her gravid state, the horny female moves quickly and makes a grab for you.";
 	now Medeapanda is true;
 	now inasituation is true;
 	challenge "Panda";

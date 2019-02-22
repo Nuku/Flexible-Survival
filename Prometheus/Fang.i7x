@@ -224,7 +224,7 @@ to say fangsex5:		[assfuck Fang]
 		say "and your added skunk girl head chirrs happily. She directs the beta wolf to lick and suck your [cock size desc of player] cock and balls[if HP of Fang is 2], which he does obediently[else], which he obeys reluctantly[end if].";
 	else:
 		say ", allowing the beta wolf to lick and suck your [cock size desc of player] cock and balls.";
-	say "     Once you're good and slick with his saliva, you pull your throbbing back and press the wolf down beneath you. Your strong, mephit body is able to stand over him and you press your pulsing rod against him. Knowing what's coming, the wolf's ears dip and he gives a soft whimper, but keeps his tail raised for his beastly alpha. He releases a soft growl as you push your ebon rod into him, spreading his tight pucker [if cock length of player > 20]very wide[else if cock length of player > 10]wide[else]open[end if] as you fuck him. Your first few thrusts are restrained, giving the wolf a chance to adjust, but you don't hold back after that, letting your bestial urges set a fast and rough pace. ";
+	say "     Once you're good and slick with his saliva, you pull your throbbing back and press the wolf down beneath you. Your strong, mephit body is able to stand over him and you press your pulsing rod against him. Knowing what's coming, the wolf's ears dip and he gives a soft whimper, but keeps his tail raised for his beastly alpha. He releases a soft growl as you push your ebon rod into him, spreading his tight pucker [if cock length of player > 20]very wide[else if cock length of player > 10]wide[else]open[end if] as you fuck him. Your first few thrusts are restrained, giving the wolf a chance to adjust, but you don't hold back after that, letting your bestial urges set a fast and rough pace.";
 	if skrp is 1:
 		say "     That animalistic corner of your mind is quite pleased to be, as your co-inhabitor teases Fang, 'fucking one of the forest wolves' and 'staking territory for the skunks'. Fang can only give a soft whimper at this and dips his ears lower even as he keeps his tail raised and feet planted firmly so his strange alpha can keep pounding him.";
 	else:
@@ -322,7 +322,7 @@ to say fangsandrasex:
 			if thirst of player > 50, decrease thirst of player by 10;
 	else if ( lust of Fang is 4 or lust of Fang is 0 ) and HP of Fang is 2 and FangToy is false:
 		say "     As Sandra strokes the wolf's cock with one bunny paw, she pulls out a large dildo out of a small bag she's brought this time. 'Mmm... I was thinking about what you'd said before and thought it might be nice to give the big wolf here a toy to play with,' she says with a grin as she passes it to you. You look over the rather canid-looking sextoy made of red latex with a knot and pointed tip like that of a dog or wolf. After looking it over and then back to Sandra, the bunny girl blushes a little. 'It's... ah... from my personal collection. It was one of my personal favorites before I became a rabbit. But Fang can have it now since I've got the real thing to play with.' And with that, Sandra rolls onto her back under the wolf and stuffs his large, lupine cock into her eager muzzle.";
-		say "     Looking between the wolf and the bunny, you find yourself presented with a few options. ";
+		say "     Looking between the wolf and the bunny, you find yourself presented with a few options.";
 		if player is male:
 			say "     [bold type]Shall you use the toy on Fang while fucking Sandra or would you prefer to use the toy on Sandra while Fang licks you?[roman type][line break]";
 			LineBreak;
@@ -335,7 +335,7 @@ to say fangsandrasex:
 		else:
 			say "     [bold type]Shall you use the toy on Fang while playing with Sandra's pussy or would you prefer to use the toy on Sandra while you get Fang to you?[roman type][line break]";
 			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Use the toy on Fang, play with Sanra's pussy.";
+			say "     ([link]Y[as]y[end link]) - Use the toy on Fang, play with Sandra's pussy.";
 			say "     ([link]N[as]n[end link]) - Use the toy on Sandra, get Fang to lick you.";
 			if player consents:
 				say "[fangsandratoy3]";
@@ -514,11 +514,11 @@ to say fangalphatrio:
 	WaitLineBreak;
 	say "     After it's all over, Fang steps back from his two playmates and rolls onto his side, putting his slick, hard cock on display for you both. Still sticky with his cum after the recent fun, you and Sandra lick your lips at the sight of it and move in to lavish attention upon it. Together, you stroke and caress his balls and knot as your tongue play over his throbbing member. You lick the lupine cum from every square centimeter of it, not wanting to let that strong, virile tasting fluid go to waste. As you finish up with licking it, you and the bunny girl take turns sucking on it while rubbing those throbbing orbs. ";
 	if the remainder after dividing libido of Fang by 3 is 2:
-		say "     Having already guzzled down a big load of the wolf's cum, you let Sandra finish him off, filling her belly as well with Fang's virile seed as he howls in pleasure.";
+		say "Having already guzzled down a big load of the wolf's cum, you let Sandra finish him off, filling her belly as well with Fang's virile seed as he howls in pleasure.";
 	else if a random chance of 1 in 2 succeeds:
-		say "     You and Sandra playfully fight over the wolf's cock, pulling out all the stops while his rod is in your mouth to be the one to get his seed. In the end, you're rewarded with hot pulses of lupine seed down your throat, filling your belly with your alpha's delicious, virile cum as he howls in pleasure.";
+		say "You and Sandra playfully fight over the wolf's cock, pulling out all the stops while his rod is in your mouth to be the one to get his seed. In the end, you're rewarded with hot pulses of lupine seed down your throat, filling your belly with your alpha's delicious, virile cum as he howls in pleasure.";
 	else:
-		say "     You and Sandra playfully fight over the wolf's cock, pulling out all the stops while his rod is in your mouth to be the one to get his seed. In the end, she's the winner, sucking down his hot load and filling her belly with it as Fang howls in pleasure.";
+		say "You and Sandra playfully fight over the wolf's cock, pulling out all the stops while his rod is in your mouth to be the one to get his seed. In the end, she's the winner, sucking down his hot load and filling her belly with it as Fang howls in pleasure.";
 	WaitLineBreak;
 	say "     You cuddle with Sandra in your arms, playfully talking about how much you both enjoy letting the big wolf have his way with you and how sexy it is to see one of you under the wild beast. While you talk, you both stroke the wolf's thick fur and kiss one another, enjoying your time together. Eventually, Sandra has to head back and you need to get back to your other tasks, so you both are given slobbery kisses from Fang before heading out of the reading room.";
 	increase libido of fang by 1;
@@ -761,10 +761,10 @@ when play ends:
 					else if lust of Fang < ( level of Felinoid companion - 6 ):	[felinoid victor]
 						say "     After your release from the military, you settle into your new life with the two of them coming along. They snap and growl at one another, but things remain civil enough at first. In public, Fang's passed off as your guard wolf, but privately he remains your alpha and fucks you like his sexy bitch whenever it pleases him to do so. You accept your role readily, having become the wolf's fucktoy. But one day, Klauz takes exception to this and the two have a great fight that devastates your living room. In the end, your felinoid companion is victorious and forces the big wolf to submit to him as well.";
 						say "     Klauz celebrates his victory by mounting you while the wolf is left to watch, breeding you with a powerful roar. Once finished with you, he forces himself onto the defeated wolf, fucking him as well. ";
-						if hermaphrodite is not banned:
-							say "     As you watch, Fang gains a wet, bitch pussy to go along with his cock and balls and is then bred by the victorious Klauz. The felinoid trains the wolf well, breeding cubs in both your bellies. Fang may still be your alpha wolf, but Klauz owns you both now.";
+						if hermaphrodite is banned:
+							say "As you watch, Fang is fucked repeatedly until he's made submissive to the stronger cat. Klauz trains the wolf well, always making sure the wolf knows his place beneath him. Fang may still be your alpha wolf, but Klauz owns you both now.";
 						else:
-							say "     As you watch, Fang is fucked repeatedly until he's made submissive to the stronger cat. Klauz trains the wolf well, always making sure the wolf knows his place beneath him. Fang may still be your alpha wolf, but Klauz owns you both now.";
+							say "As you watch, Fang gains a wet, bitch pussy to go along with his cock and balls and is then bred by the victorious Klauz. The felinoid trains the wolf well, breeding cubs in both your bellies. Fang may still be your alpha wolf, but Klauz owns you both now.";
 						say "     The strong musk of the powerful cat lingers on you, making you very alluring to others, man and woman alike, allowing you to bring them back to your place. There, the big feline has his way with them, turning them into lustful female felinoids for him to breed. You are forced to move a couple of times before you finally settle down someplace to stay for good, you and your companion settling in happily, while a strange explosion of pregnant female felinoids hits the area.";
 					else:		[evenly matched]
 						say "     After your release from the military, you settle into your new life with the two of them coming along. They snap and growl at one another, but things remain civil enough at first. In public, Fang's passed off as your guard wolf, but privately he remains your alpha and fucks you like his sexy bitch whenever it pleases him to do so. You accept your role readily, having become the wolf's fucktoy. But one day, Klauz takes exception to this and the two have a great fight that devastates your living room. In the end, your two are evenly matched and must eventually relent in their conflict and share you.";

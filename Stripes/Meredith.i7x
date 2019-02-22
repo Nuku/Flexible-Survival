@@ -137,10 +137,10 @@ to say Meredithrescue_succeed:
 to say Meredithrescue_fail:
 	say "     Beaten by the kangaroos, you are distracted with sex for quite some time. By the time you recover your senses and go looking for the others, all you find are some torn scraps of cloth and the signs of a struggle. You make your way back to the bunker to recover. ";
 	if Colleen is bunkered:
-		say "     About a half-hour later, Colleen manages to make it back to the bunker, looking quite battleworn and exhausted as she stumbles inside[if sarah is bunkered]. She gives you a brief hug before staggering over to Sarah to be comforted[else]. She gives you a brief hug before staggering over to her bunk to pass out[end if]";
+		say "About a half-hour later, Colleen manages to make it back to the bunker, looking quite battleworn and exhausted as she stumbles inside. She gives you a brief hug before staggering over to [if sarah is bunkered]Sarah to be comforted[else]her bunk to pass out[end if]";
 	else:
-		say "     You wait for quite some time for any sign of either the centaur woman or her teammate, but neither show";
-	say "     It's painfully clear to you that Vanessa will not be returning at all.";
+		say "You wait for quite some time for any sign of either the centaur woman or her teammate, but neither show";
+	say ". It's painfully clear to you that Vanessa will not be returning at all.";
 	now HP of Meredith is 100;
 	now HP of Vanessa is 51;
 	now Vanessa is nowhere;
@@ -148,10 +148,10 @@ to say Meredithrescue_fail:
 to say Meredithrescue_flee:
 	say "     Making your escape from the kangaroos, you have to withdraw and hope the others will be alright. You make your way back to the library to wait and recover. ";
 	if Colleen is bunkered:
-		say "     About a half-hour later, Colleen manages to make it back to the bunker, looking quite battleworn and exhausted as she stumbles inside[if sarah is bunkered]. She gives you a brief hug before staggering over to Sarah to be comforted[else]. She gives you a brief hug before staggering over to her bunk to pass out[end if]";
+		say "About a half-hour later, Colleen manages to make it back to the bunker, looking quite battleworn and exhausted as she stumbles inside. She gives you a brief hug before staggering over to [if sarah is bunkered]Sarah to be comforted[else]her bunk to pass out[end if]";
 	else:
-		say "     You wait for quite some time for any sign of either the centaur woman or her teammate, but neither show";
-	say "     It's painfully clear to you that Vanessa will not be returning at all.";
+		say "You wait for quite some time for any sign of either the centaur woman or her teammate, but neither show";
+	say ". It's painfully clear to you that Vanessa will not be returning at all.";
 	now HP of Meredith is 100;
 	now HP of Vanessa is 51;
 	now Vanessa is nowhere;

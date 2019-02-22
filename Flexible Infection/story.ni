@@ -3244,7 +3244,7 @@ instead of kissing a catty person:
 	if pregnant of the noun is not 0:
 		say "She is not in the mood to mate, and turns you away.";
 		stop the action;
-	say "     The cat girl is all too eager to be affectionate with you, accepting your advance and taking you into her furry embrace with a loud purr." ;
+	say "     The cat girl is all too eager to be affectionate with you, accepting your advance and taking you into her furry embrace with a loud purr.";
 	if pelvis is secret:
 		say "     The cat girl notices you have pants on as she grinds lustfully against you. Her paws roam over your crotch, but she is unable to toy further with you.";
 		if the tf table of pelvis is not table 20:
@@ -3326,7 +3326,7 @@ instead of kissing a squirrely person:
 	if pregnant of the noun is not 0:
 		say "She is already heavily pregnant, but your advances are welcome anyway. Wrapping her paws around your hips, she seats you on the huge shelf of her breasts, swallowing your cock in her soft mouth. She sucks and gulps until you cum, her belly and breasts both swelling a little larger with your seed, then she lets you go, looking sated.";
 		stop the action;
-	say "     Delighted by your approach, the herm squirrel wraps her arms around you and presses her face and yours firmly together, kissing very passionately! Her breasts and cock grind against you, the girl horny from the encounter, and her soft big belly swells a little bit in her happiness." ;
+	say "     Delighted by your approach, the herm squirrel wraps her arms around you and presses her face and yours firmly together, kissing very passionately! Her breasts and cock grind against you, the girl horny from the encounter, and her soft big belly swells a little bit in her happiness.";
 	if pelvis is secret:
 		say "     The herm squirrel notices you have pants on as she grinds lustfully against you. Her paws roam over your crotch, but she is unable to toy further with you.";
 		if the tf table of pelvis is not table 55:
@@ -5526,7 +5526,7 @@ when play ends:
 			if tf table of head is table minotaur:
 				let u be the number of compatible npc on-stage persons;
 				if player is femme and player is not butch and u is less than 10:
-					say "You ran away toward the farm side, where you have hidden. Some would say that you could feel lonely as the only one of Your kind, yet the silent and secluded farmstead soon become famous for very welcoming owner, which took care of guests' needs in every possible way.";
+					say "You ran away toward the farm side, where you have hidden. Some would say that you could feel lonely as the only one of Your kind, yet the silent and secluded farmstead soon become famous for very welcoming owner, which took care of guests[apostrophe] needs in every possible way.";
 				if the player is femme and u is greater than 9:
 					say "You flee the city with your herd mates, and become one of the herd, bearing children and milk for the good of your people. New members of the tribe come from breeding and the occasional human convert, though your infectiousness seems much lower than it was in those intense first hours.";
 				if the player is butch and u is less than 10:

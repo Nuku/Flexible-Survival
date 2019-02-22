@@ -33,7 +33,7 @@ to say Imp wins:
 to say Imp loses:
 	if graphics is true:
 		project the figure of Imp_face_icon;
-	say "     With a screech and an aborted flutter of wings, the imp crashes down, face-planting onto the ground. A groan comes from his throat as the little demon lets his wings slacken, then pushes himself up enough to focus on you with his big, expressive eyes. 'Look, er... fighting you wasn't such a great idea, and... how about we call a do-over, hm? I'll just... be on my way, and you can do whatever you were doing before. No hard feelings, right?' he says and gives a somewhat desperate smile, showing a surprisingly wide mouthful of sharp, little teeth. Snorting at the new tone coming from the formerly so boisterous creature, you pluck him off the floor with one hand and start thinking about what to do with him. ";
+	say "     With a screech and an aborted flutter of wings, the imp crashes down, face-planting onto the ground. A groan comes from his throat as the little demon lets his wings slacken, then pushes himself up enough to focus on you with his big, expressive eyes. 'Look, er... fighting you wasn't such a great idea, and... how about we call a do-over, hm? I'll just... be on my way, and you can do whatever you were doing before. No hard feelings, right?' he says and gives a somewhat desperate smile, showing a surprisingly wide mouthful of sharp, little teeth. Snorting at the new tone coming from the formerly so boisterous creature, you pluck him off the floor with one hand and start thinking about what to do with him.";
 	LineBreak;
 	say "[Imp Sex Menu]";
 

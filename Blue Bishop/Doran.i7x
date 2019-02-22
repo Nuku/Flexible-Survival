@@ -1052,9 +1052,9 @@ to say DoranDom_Vaginal: [Cunt Sex] [BODY MODDED]
 				say "[if scalevalue of player < 3]belly visibly bloating to abide [ghis] load[else]quickly leaking from your stuffed hole when you can't contain any more[end if]";
 			say ". It's enough to make you cry out in your own climax, ";
 			if player is male:
-				say "cock[if cocks of player > 1]s'[else]'s[end if] sputtering forcibly erratic against the [if cunt length of player > 13]somewhat[else]immensely[end if] straining intrusion, staining the ground with your seed [cum load size of player] load";
+				say "cock[if cocks of player > 1]s'[else]'s[end if] sputtering forcibly erratic against the [if cunt length of player > 13]somewhat[else]immensely[end if] straining intrusion, staining the ground with your seed [cum load size of player] load.";
 			else:
-				say "puss[if cunts of player > 1]ies'[else]y's[end if] gushing forcibly strained against the immense intrusion, staining you and the ground your sexual fluids";
+				say "puss[if cunts of player > 1]ies'[else]y's[end if] gushing forcibly strained against the immense intrusion, staining you and the ground your sexual fluids.";
 		say "     Panting atop you for a moment as [ghe] recovers from the ordeal, [ghe] slowly attends to the matter of pulling you free of [ghis] dick, knot audibly popping from your stretched hole before planting you on the ground once more, soon followed by [if DoranBallModStatus > 0]an excessive[else]a[end if] flood of the beast's thick, heady ejaculate thereafter";
 		if DoranRoleIntensity is 0:
 			say ". Feeling particularly devious, [ghe] revels in your pitiful state, aiming [ghis] [if DoranBallModStatus > 0]perpetually[else]still[end if] cum-oozing dick at your[if scalevalue of player < 4] head and upper[end if] torso to [if DoranBallModStatus > 0]drench[else]sully[end if] them as well.";
@@ -1172,7 +1172,7 @@ to say DoranDom_CockHandjob: [Cock-Focused Handjob] [BODY MODDED]
 		if cocks of player > 1:
 			say "[if cock length of player > 17]frequently commenting on how impressive your assets are[else if cock length of player < 6 and DoranRoleIntensity is 0]often teasing you over how inadequate your assets are[else]offering cooing approval of your assets[end if] as [ghe] proceeds to milk them, fueled by a twisted determination.";
 		else if player is female:
-			say "[if cock length of player > 17]frequently praising you for the size of your dick[else]offering cooing approval to your assets[end if] as [ghe] proceeds to support [ghis] endeavors by sinking [ghis] digit past the supple folds of your flesh, [if cunt length of player < 7]slight, strained grunts escaping [ghis] lips as [ghe] contends with your tight hole[else]meeting only brief resistance as you envelop the irreverent intrusion[end if]";
+			say "[if cock length of player > 17]frequently praising you for the size of your dick[else]offering cooing approval to your assets[end if] as [ghe] proceeds to support [ghis] endeavors by sinking [ghis] digit past the supple folds of your flesh, [if cunt length of player < 7]slight, strained grunts escaping [ghis] lips as [ghe] contends with your tight hole[else]meeting only brief resistance as you envelop the irreverent intrusion[end if].";
 		else:
 			say "[if cock length of player > 17]frequently commenting on how impressive your asset is[else if cock length of player < 6 and DoranRoleIntensity is 0]often teasing you over how inadequate your asset is[else]offering cooing approval of your asset[end if] as";
 			if anallevel > 1:

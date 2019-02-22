@@ -78,11 +78,11 @@ to say beatthebeaver:
 	say "     You knock the pudgy beaver over, sending him falling onto his rather padded backside. 'Ooof! [one of]Whatcha do that for, you hoser?' he groans[or]I'll call the Mounties on you!' he says indignantly[or]Why're all you Americans so rude?' he grumbles[or]Well, we still beat you in 1812!' he yells[or]Câlice de tarbernacle, mon ostie! That hurt!' he cusses colorfully[or]I think I sprained my Molson muscle,' he complains, rubbing his pudgy belly[or]Did you get the license plate of that transport?' he moans, rubbing his head[or]You knob!' he growls[at random] as he struggles to get back up. ";
 	if nobeaversex > 2:
 		if bodyname of player is "Beaver":
-			say "     As with the others of his kind, you resist the urge for sex and help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
+			say "As with the others of his kind, you resist the urge for sex and help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
 		else:
-			say "     As you've done in the past with his kind, you resist the urge to give into your lusts and instead move to continue on your way, leaving the injured and tipsy beaver to eventually get back on his own feet and stagger off in search of fun or drink elsewhere.";
+			say "As you've done in the past with his kind, you resist the urge to give in to your lusts and instead move to continue on your way, leaving the injured and tipsy beaver to eventually get back on his own feet and stagger off in search of fun or drink elsewhere.";
 	else if player is not neuter:
-		say "     You find yourself feeling [if libido of player < 33]a bit[else if libido of player < 67]somewhat[else]rather[end if] aroused after all that, your eyes drawn to the pudgy beaver. You find yourself considering having some fun with him before moving on";
+		say "     You find yourself feeling [if libido of player < 33]a bit[else if libido of player < 67]somewhat[else]rather[end if] aroused after all that, your eyes drawn to the pudgy beaver. You find yourself considering having some fun with him before moving on.";
 		if player is male:
 			say "     Would you like to [link]fuck the rotund rodent (1)[as]1[end link], get him to [link]suck your cock (2)[as]2[end link] or just [link]let him go (0)[as]0[end link]?";
 			now calcnumber is -1;
@@ -94,27 +94,27 @@ to say beatthebeaver:
 			else if calcnumber is 2:
 				say "[beaver_pvsex2]"; [m-oral]
 			else if bodyname of player is "Beaver":	[no sex - Beaver]
-				say "     Resisting the urge to give into your baser instincts, you help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
+				say "     Resisting the urge to give in to your baser instincts, you help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
 				increase nobeaversex by 1;
 			else:							[no sex]
-				say "     Resisting the urge to give into your baser instincts, you decide to continue on your way, leaving the injured and tipsy beaver to eventually get back on his own feet and stagger off in search of fun or drink elsewhere.";
+				say "     Resisting the urge to give in to your baser instincts, you decide to continue on your way, leaving the injured and tipsy beaver to eventually get back on his own feet and stagger off in search of fun or drink elsewhere.";
 				increase nobeaversex by 1;
 		else:
 			say "     Would you like to have him [link]eat you out (Y)[as]y[end link] or just [link]let him go (N)[as]n[end link]?";
 			if player consents:
 				say "[beaver_pvsex3]"; [f-oral]
 			else if bodyname of player is "Beaver":	[no sex - Beaver]
-				say "     Resisting the urge to give into your baser instincts, you help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
+				say "     Resisting the urge to give in to your baser instincts, you help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
 				increase nobeaversex by 1;
 			else:							[no sex]
-				say "     Resisting the urge to give into your baser instincts, you decide to continue on your way, leaving the injured and tipsy beaver to eventually get back on his own feet and stagger off in search of fun or drink elsewhere.";
+				say "     Resisting the urge to give in to your baser instincts, you decide to continue on your way, leaving the injured and tipsy beaver to eventually get back on his own feet and stagger off in search of fun or drink elsewhere.";
 				increase nobeaversex by 1;
 	else:
 		say "     Feeling [if libido of player < 33]a bit[else if libido of player < 67]a little[else]kinda[end if] turned, but lacking any gender of your own, you pass on having fun with your defeated foe. ";
 		if bodyname of player is "Beaver":			[neuter - Beaver]
-			say "     You instead help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
+			say "You instead help your fellow beaver to his feet, apologizing for having to knock him aboot before sending him on his way. After returning your apology with one of his own, he goes off in search of fun or drink elsewhere.";
 		else:							[neuter]
-			say "     You decide to continue on your way, leaving the injured and tipsy beaver to eventually get back on his own feet and stagger off in search of fun or drink elsewhere.";
+			say "You decide to continue on your way, leaving the injured and tipsy beaver to eventually get back on his own feet and stagger off in search of fun or drink elsewhere.";
 
 
 to say beaver_pvsex1:	[anal]

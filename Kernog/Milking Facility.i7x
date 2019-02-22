@@ -88,7 +88,7 @@ to say milkingFacilityFactoryDesc:
 		say "     You stand in the factory of the Milking Facility. To your left and right, a dozen of [if milkingFactorySuitUpgraded is 0]plastic-like[else]metal-like[end if] vinyl cows are lined up. Tubes are hooked to their various private parts, and extract cum and milk at a [if milkingFactoryProductivityUp is 0]leisurely[else]frantic[end if] space, filling large metallic tanks behind them. North of the factory is a control room. Over the control room's door hangs a clock, indicating that the next pause of the [']workers['] will not be before a while.";
 
 to say vinylCowsScene:
-	say "     You report your attention to the dozen of vinyl cows lined up on each side of the room. The bovines have now a slick and shiny body, with a black-and-white metallic surface, which feels like it comes straight out of an high-tech factory. [if milkingFactorySuitUpgraded is 1]Thanks to the upgrade you authorized, it looks bulkier and sturdier than the previous model, without any useless addition; would you not hear raspy moos escape from the filter, you would have confused the vinyl cow for a statue. The fan has disappeared, and it seems that the person inside is forced to breathe the recycled air. It must be hot as hell inside[else]Their featureless face ends with an integrated fan which brings fresh, but filtered air in and out the inside of the suit, probably directly the lungs of the person inside. The rotund bovine constantly wobbles, following its prisoner's various squirmings[end if]. Various additional, transparent tubes are hooked on the cows' surfaces. You can tell, from each tube's position, the gender of each prisoner. [if milkingFactoryProductivityUp is 0]The milkers go at a leisurely pace on their recipient. The ones working on female and herm breasts emit a constant, modest stream of human dairy. Every ten minutes or so, a groan here and there signal that one of the cock milkers extracted a new dose of cum from a cow[else]Since you activated the full productivity mode, the room is a concert of groans and moos. Breast milkers keep pumping and pumping, filling the tubes to full capacity, and the male cows seems to cum one after the other, continuously[end if]. The breast milk, and the other kind of [']milk['] is collected by the tubes, and stored in big, metallic containers sitting behind the cows. Next to each cow is a monitor, but they seem to be locked on a screensaver, a endless scenery of grassy hills.";
+	say "     You report your attention to the dozen of vinyl cows lined up on each side of the room. The bovines have now a slick and shiny body, with a black-and-white metallic surface, which feels like it comes straight out of an high-tech factory. [if milkingFactorySuitUpgraded is 1]Thanks to the upgrade you authorized, it looks bulkier and sturdier than the previous model, without any useless addition; would you not hear raspy moos escape from the filter, you would have confused the vinyl cow for a statue. The fan has disappeared, and it seems that the person inside is forced to breathe the recycled air. It must be hot as hell inside[else]Their featureless face ends with an integrated fan which brings fresh, but filtered air in and out the inside of the suit, probably directly the lungs of the person inside. The rotund bovine constantly wobbles, following its prisoner's various squirmings[end if]. Various additional, transparent tubes are hooked on the cows['] surfaces. You can tell, from each tube's position, the gender of each prisoner. [if milkingFactoryProductivityUp is 0]The milkers go at a leisurely pace on their recipient. The ones working on female and herm breasts emit a constant, modest stream of human dairy. Every ten minutes or so, a groan here and there signal that one of the cock milkers extracted a new dose of cum from a cow[else]Since you activated the full productivity mode, the room is a concert of groans and moos. Breast milkers keep pumping and pumping, filling the tubes to full capacity, and the male cows seems to cum one after the other, continuously[end if]. The breast milk, and the other kind of [']milk['] is collected by the tubes, and stored in big, metallic containers sitting behind the cows. Next to each cow is a monitor, but they seem to be locked on a screensaver, a endless scenery of grassy hills.";
 
 Section 4 - Control Room
 
@@ -138,7 +138,11 @@ milking facility console is a thing. It is in Milking Facility Operations Room.
 The description of milking facility console is "[milkingFacilityConsoleDesc]".
 
 to say milkingFacilityConsoleDesc:
-	say "     A large computer screen and its console awaits your input. You do not see the tower unit anywhere, which means that it must be somewhere deeper within the complex or somewhere else entirely, out of your reach. A webcam follows your movements constantly. Whenever you come within a couple of meters from the screen, it displays a series of reports: [line break]Next extract [if milkingFacilityLastProduction - turns < 8]dispensed in: [(8 - milkingFacilityLastProduction - turns) * 3] hours[else][bold type]available[roman type][end if].[line break]Suit upgrades: [bold type][if milkingFactorySuitUpgraded is 1]effective[else]pending approval[end if][roman type][line break]Productivity optimizations: [bold type][if milkingFactoryProductivityUp is 1]committed[else]awaiting commit[end if][line break]Storage augmentation: [bold type][if milkingFactoryPlayerTrap is 1]ready[else]confirmation needed[end if][roman type]";
+	say "     A large computer screen and its console awaits your input. You do not see the tower unit anywhere, which means that it must be somewhere deeper within the complex or somewhere else entirely, out of your reach. A webcam follows your movements constantly. Whenever you come within a couple of meters from the screen, it displays a series of reports:[line break]";
+	say "     Next extract [if milkingFacilityLastProduction - turns < 8]dispensed in: [(8 - milkingFacilityLastProduction - turns) * 3] hours[else][bold type]available[roman type][end if][line break]";
+	say "     Suit upgrades: [bold type][if milkingFactorySuitUpgraded is 1]effective[else]pending approval[end if][roman type][line break]";
+	say "     Productivity optimizations: [bold type][if milkingFactoryProductivityUp is 1]committed[else]awaiting commit[end if][line break]";
+	say "     Storage augmentation: [bold type][if milkingFactoryPlayerTrap is 1]ready[else]confirmation needed[end if][roman type][line break]";
 
 [Milk dispenser counter. Works in the same way than lastFuck]
 milkingFacilityLastProduction is a number that varies. When play begins, now milkingFacilityLastProduction is turns.
@@ -216,32 +220,32 @@ carry out milkingFactoryManagement:
 					say "     ([link]N[as]n[end link]) - Cancel.";
 					if player consents:
 						LineBreak;
-						say "     [italic type]Thank you, administrator,[roman type] MOO answers. You hear the factory stir to life outside. Large tubes are suspended over each vinyl cow, and pours down a shiny black melasse on them. The melasse sticks to the cows' body, and integrates with it. The shiny black-and-white motif reforms on the surface. The cows look bulkier and do not move an inch anymore, as if they have turned into statues.";
+						say "     [italic type]Thank you, administrator,[roman type] MOO answers. You hear the factory stir to life outside. Large tubes are suspended over each vinyl cow and pour down a shiny black molasses on them. The molasses sticks to the cows['] bodies and integrates with them. The shiny black-and-white motif reforms on the surface. The cows look bulkier and do not move an inch anymore, as if they have turned into statues.";
 						now milkingFactorySuitUpgraded is 1;
 						now manufactured milk is not infectious;
 					else:
 						LineBreak;
 						say "     [italic type]Regrettable,[roman type] the AI replies cryptically.";
 				else if nam is "Commit productivity optimizations":
-					say "     A pop-up appears on the screen: [italic type]Productivity optimizations will allow us to gain around 100% in daily productivity, by removing non-essential biological limiters. Commit cannot be rolled back. Do you confirm?[roman type][line break]";
+					say "     A pop-up appears on the screen: [italic type]Productivity optimizations will allow us to gain around 100% in daily productivity by removing non-essential biological limiters. Commit cannot be rolled back. Do you confirm?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Confirm.";
 					say "     ([link]N[as]n[end link]) - Cancel.";
 					if player consents:
 						LineBreak;
-						say "     [italic type]Thank you, administrator,[roman type] the computer tells you. The cows start mooing frantically outside of the control room, as the milking machine gears up their ministrations.";
+						say "     [italic type]Thank you, administrator,[roman type] the computer tells you. The cows start mooing frantically outside of the control room as the milking machine gears up its ministrations.";
 						now milkingFactoryProductivityUp is 1;
 					else:
 						LineBreak;
 						say "     [italic type]Regrettable,[roman type] the AI replies cryptically.";
 				else if nam is "Augment storage space":
-					say "     A pop-up appears on the screen: [italic type]Creation of empty storage will allow us to gain around 100% in daily productivity, by adding new production units. Search for viable subjects will begin as soon as approval is given. Do you confirm?[roman type][line break]";
+					say "     A pop-up appears on the screen: [italic type]Creation of empty storage will allow us to gain around 100% in daily productivity by adding new production units. Search for viable subjects will begin as soon as approval is given. Do you confirm?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Confirm.";
 					say "     ([link]N[as]n[end link]) - Cancel.";
 					if player consents:
 						LineBreak;
-						say "     [italic type]Thank you, administrator. And good bye,[roman type] the screen displays. Nothing seems to have changed in the factory. A sense of dread overcomes you, like you have been tricked somehow.";
+						say "     [italic type]Thank you, administrator, and goodbye,[roman type] the screen displays. Nothing seems to have changed in the factory. A sense of dread overcomes you, like you have been tricked somehow.";
 						now milkingFactoryPlayerTrap is 1;
 					else:
 						LineBreak;

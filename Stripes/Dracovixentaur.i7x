@@ -84,9 +84,9 @@ to say beattheDVtaur:
 	if HP of Sam is 15:
 		say "     You manage to knock Sam down, having beaten the fight out of him.";
 	else if a random number between 1 and 100 < DVtaurcatch and ( player is not neuter):
-		say "     The beaten dracovixentaur backs away from you, stumbling somewhat from her injuries. Like the others, she prepares to release a blast of flame to allow her escape, but you rush forward and clamp her muzzle shut in an arm lock. She thrashes briefly before exhaling a cloud of smoke as the flames fail. You press her to the ground and pin down her wings. With her caught, you consider having some fun with her. ";
+		say "     The beaten dracovixentaur backs away from you, stumbling somewhat from her injuries. Like the others, she prepares to release a blast of flame to allow her escape, but you rush forward and clamp her muzzle shut in an arm lock. She thrashes briefly before exhaling a cloud of smoke as the flames fail. You press her to the ground and pin down her wings. With her caught, you consider having some fun with her.";
 		if player is male:
-			say "     You could [link]fuck her (1)[as]1[end link], [link]ride her (2}[as]2[end link], get a [link]blow job (3)[as]3[end link] or just [link]let her go (0)[as]0[end link].";
+			say "     You could [link]fuck her (1)[as]1[end link], [link]ride her (2)[as]2[end link], get a [link]blow job (3)[as]3[end link] or just [link]let her go (0)[as]0[end link].";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 3:
 				say "Choice? (0-3)>";
@@ -100,7 +100,7 @@ to say beattheDVtaur:
 			else:
 				say "[beatDVtaur0]";
 		else:
-			say "     You could [link]ride her (1}[as]1[end link], get [link]eaten out (2)[as]2[end link] or just [link]let her go (0)[as]0[end link].";
+			say "     You could [link]ride her (1)[as]1[end link], get [link]eaten out (2)[as]2[end link] or just [link]let her go (0)[as]0[end link].";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 2:
 				say "Choice? (0-2)>";

@@ -240,7 +240,7 @@ instead of conversing Violet:
 		-- 1:
 			say "     'What about my clothes? What's the point anyway: as soon as I find something neat to wear, I get pounced on, and they get destroyed. Do you believe me if I tell you that these ones were originally a barely-used pair of yoga pants?'";
 		-- 2:
-			say "     'Daaamn, I'm bored. Nothing to do here except ogle at the beach goers. Then again, this orca lifeguard is one gorgeous piece of fish meat... Why are you looking at me? Did I say something stupid?' ";
+			say "     'Daaamn, I'm bored. Nothing to do here except ogle at the beach goers. Then again, this orca lifeguard is one gorgeous piece of fish meat... Why are you looking at me? Did I say something stupid?'";
 		-- 3:
 			say "     'Before you ask: no, this is not [']emo[']. I'm going for the punk rat look!'";
 		-- 4:

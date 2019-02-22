@@ -40,17 +40,17 @@ to say knightdesc:
 	say "     Sizing you up, he reaches for the sword at his side. ";
 	if kpstatus is 1:				[player is Knight]
 		if player is herm:
-			say "     'Greetings. [']Tis surprising to see a noble knight and beautiful lady in one, but these are strange times. Come, let us cross swords and test our mettle against one another. To the victor go the spoils,' he adds, fondling the bulging crotch of his breeches.";
+			say "'Greetings. [']Tis surprising to see a noble knight and beautiful lady in one, but these are strange times. Come, let us cross swords and test our mettle against one another. To the victor go the spoils,' he adds, fondling the bulging crotch of his breeches.";
 		else if player is female:
-			say "     'Greetings, lady knight. It seems even the beautiful maidens may become knights in these strange times. Come, let us cross swords and test our mettle against one another. To the victor go the spoils,' he adds, fondling the bulging crotch of his breeches.";
+			say "'Greetings, lady knight. It seems even the beautiful maidens may become knights in these strange times. Come, let us cross swords and test our mettle against one another. To the victor go the spoils,' he adds, fondling the bulging crotch of his breeches.";
 		else:
-			say "     'Greetings, sir knight. It does my heart good to see another noble knight in these strange times. Let us cross swords and test our mettle against one another. To the victor go the spoils,' he adds, fondling the bulging crotch of his breeches.";
+			say "'Greetings, sir knight. It does my heart good to see another noble knight in these strange times. Let us cross swords and test our mettle against one another. To the victor go the spoils,' he adds, fondling the bulging crotch of his breeches.";
 	else if kpstatus is 2:		[player is Squire]
-		say "     '[if player is purefemale]Lass[else]Lad[end if]. You have taken the colors of another. Come, let me prove myself the better knight and you may follow me. O, the adventures we shall have. Let the training begin,' he says, fondling the bulging crotch of his breeches.";
+		say "'[if player is purefemale]Lass[else]Lad[end if]. You have taken the colors of another. Come, let me prove myself the better knight and you may follow me. O, the adventures we shall have. Let the training begin,' he says, fondling the bulging crotch of his breeches.";
 	else if kpstatus is 3:		[player is human-like]
-		say " as he sees you looking at him. 'I saw your expression, peasant. A noble knight such as I cannot abide such insolence from a lowly churl such as you. I shall teach you a lesson you won't soon forget,' he says, fondling the bulging crotch of his breeches.";
+		say "'I saw your expression, peasant. A noble knight such as I cannot abide such insolence from a lowly churl such as you. I shall teach you a lesson you won't soon forget,' he says, fondling the bulging crotch of his breeches.";
 	else:						[player is somehow non-human = monster!]
-		say " as he looks over your transformed state. 'Lo[if showlocale is true]! I have come to these dark woods to find fearsome beasts with which to do battle - and here one approaches[else]! A fearsome beast approaches[end if]! I shall do battle with yon creature to prove my worth as a noble knight! I shall defeat you, monster... and then I shall drive my [']sword['] into you,' he adds, fondling the bulging crotch of his breeches.";
+		say "'Lo[if showlocale is true]! I have come to these dark woods to find fearsome beasts with which to do battle - and here one approaches[else]! A fearsome beast approaches[end if]! I shall do battle with yon creature to prove my worth as a noble knight! I shall defeat you, monster... and then I shall drive my [']sword['] into you,' he adds, fondling the bulging crotch of his breeches.";
 
 to say stateknightcrest:
 	if knightcrestnum is 1:
@@ -190,13 +190,13 @@ to say beattheknight:
 		stop the action; [text taken care of at the source]
 	say "     You are victorious over the knight, forcing him to yield and withdraw. ";
 	if kpstatus is 1:
-		say "     'You are indeed a brave and powerful knight. I salute you,' he declares with a flourish of his sword before leaving.";
+		say "'You are indeed a brave and powerful knight. I salute you,' he declares with a flourish of his sword before leaving.";
 	else if kpstatus is 2:
-		say "     'You are quite strong for a squire. Perhaps it is time you became a knight in your own right? Regardless, I salute you,' he declares with a flourish of his sword before leaving.";
+		say "'You are quite strong for a squire. Perhaps it is time you became a knight in your own right? Regardless, I salute you,' he declares with a flourish of his sword before leaving.";
 	else if kpstatus is 3:
-		say "     'You are surprisingly strong and well-trained for a peasant. You might make a good knight if you took up a noble cause. Regardless, I must declare you the victor,' he says with a nod while sheathing his sword before leaving.";
+		say "'You are surprisingly strong and well-trained for a peasant. You might make a good knight if you took up a noble cause. Regardless, I must declare you the victor,' he says with a nod while sheathing his sword before leaving.";
 	else:
-		say "     'You are a powerful one, O beast, to have bested a knight such as I. Perhaps one day we will do epic battle again, but for now, you are the victor,' he declares, withdrawing with his sword still drawn.";
+		say "'You are a powerful one, O beast, to have bested a knight such as I. Perhaps one day we will do epic battle again, but for now, you are the victor,' he declares, withdrawing with his sword still drawn.";
 
 to say playercrestzeroed:
 	now playercrestnum is 0;

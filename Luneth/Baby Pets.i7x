@@ -234,7 +234,7 @@ the fuckscene of skunk kit is "The little skunk kit you've rescued is too young 
 to say SummonPeppy:
 	now Peppy is nowhere;
 	if player is in Computer Lab and Peppy is in Computer Lab: [summoning while standing next to him]
-		say "     Walking up and lightly scratching behind Peppy's ears, causing a loud churring sound from within. Giving a nod towards the door, the little skunk is quick to wobble outside. Apparently deciding that if he's going on this journey, then he is going to be the one leading it. ";
+		say "     Walking up and lightly scratching behind Peppy's ears, causing a loud churring sound from within. Giving a nod towards the door, the little skunk is quick to wobble outside. Apparently deciding that if he's going on this journey, then he is going to be the one leading it.";
 	else: [regular summoning]
 		say "     You call out for the little skunk you rescued to come help you out, and it comes trotting up from where it was following you, ready and eager to assist his friend, the smell of skunk filling the area around you.";
 

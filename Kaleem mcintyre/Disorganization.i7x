@@ -95,7 +95,7 @@ Instead of resolving Disorganization:
 			say "     A thick gulp makes and a shudder later you nervously you take a few steps closer to the creature. What you see, as you again had feared is that around the critter's throat there are silver dog tags hanging limply down onto the mutant's chest. Looking to the thing and then seeing that it is staring at you with confused, yet intelligent eyes you chance going over to try and grab the things from off of the other's neck. A part of you hoping desperately that the mutant doesn't try to attack you.";
 			let bonus be (( the Dexterity of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+			say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
 			if diceroll > 12:
 				say "Quickly you snatch the tags before the latex critter can do anything to counter you. A sad look overcomes the mutant's muzzle, as though it was seeing something that was breaking its spirit, but soon it is replace by a dopey look filled with lust as the rubber vulpine begins to steadily hump the air in front of it. Not wanting to see what you are sure is going to happen next you beat feet away from the other just in time to hear subtle squeaks come from the toy-like vulpine.";
@@ -103,7 +103,7 @@ Instead of resolving Disorganization:
 				increase score by 5;
 			else:
 				say "You find yourself somewhat discouraged when your hand reaches out to touch the rubbery fox's smooth neck instead of grabbing the chain holding the dog tags. Smirking nervously at the other you watch somberly as the intelligence behind those latex eyes quickly disappears in the face of oncoming lust. And yet, before the brilliant light is gone complete a slim hand reaches up and snatches the tags off from the creature's neck. Swiftly the tags are pushed into your palm and you find yourself clenching a fist around them without thought.";
-				say "Backing away from the other as slowly as you can so as not to startle the creature you don't wait to see what will happen next with the fallen soldier. Whatever humanity might have been in him gave you a piece of the man and now you quickly turn on your heels to dart away before all of the once-human creature is swallowed up by instinctual lust. A good thing to because the predatory look in the vulpine's shifting eyes would have told you that your ass would have been forfeit had you stayed around.";
+				say "     Backing away from the other as slowly as you can so as not to startle the creature you don't wait to see what will happen next with the fallen soldier. Whatever humanity might have been in him gave you a piece of the man and now you quickly turn on your heels to dart away before all of the once-human creature is swallowed up by instinctual lust. A good thing to because the predatory look in the vulpine's shifting eyes would have told you that your ass would have been forfeit had you stayed around.";
 				now drs is 4;
 				increase score by 1;
 		else:

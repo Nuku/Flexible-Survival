@@ -85,11 +85,11 @@ to say sexwithRod:
 		say "     Rod smiles happily at your offer and pops the few catches on her outfit, getting nude in record time. The slutty rat moans lustfully and drops to her knees in front of you. With her paws on your groin, she starts licking your crotch. ";
 		if player is male:
 			let x be 1;
-			say "     She runs her tongue over your throbbing penis, then sinks her muzzle down over it, licking and sucking hungrily. Her paws tease your nuts and work the shaft as you start fucking the slutty rat's face. You run your hands through her dark hair and rub her ears, telling her what a good, slutty rat she is. Pleased by your words, her tongue and lips work all the harder to please you.";
+			say "She runs her tongue over your throbbing penis, then sinks her muzzle down over it, licking and sucking hungrily. Her paws tease your nuts and work the shaft as you start fucking the slutty rat's face. You run your hands through her dark hair and rub her ears, telling her what a good, slutty rat she is. Pleased by your words, her tongue and lips work all the harder to please you.";
 		else if player is female:
-			say "     She runs her tongue over your wet labia, then dives her tongue into your cunt, licking and lapping zealously. Her paws tease your clit and folds as you grind your pussy against her face. You run your hands through her dark hair and rub her ears, telling her what a good, slutty rat she is. Pleased by your words, her tongue and lips work all the harder to please you.";
+			say "She runs her tongue over your wet labia, then dives her tongue into your cunt, licking and lapping zealously. Her paws tease your clit and folds as you grind your pussy against her face. You run your hands through her dark hair and rub her ears, telling her what a good, slutty rat she is. Pleased by your words, her tongue and lips work all the harder to please you.";
 		else:
-			say "     Saddened to see your bare groin, she nips and licks at it while running her paws along your thighs. She pulls you down to snuggle in her arms, guiding your lips to one of her nipples and coaxing you to nurse milk from her breast. As you drink down the ratty milk, Rod strokes a paw over your head, whispering that she'll help you get better while her other paw plays with your asshole, granting you a little sexual relief even as you start to feel the effects of her milk.";
+			say "Saddened to see your bare groin, she nips and licks at it while running her paws along your thighs. She pulls you down to snuggle in her arms, guiding your lips to one of her nipples and coaxing you to nurse milk from her breast. As you drink down the ratty milk, Rod strokes a paw over your head, whispering that she'll help you get better while her other paw plays with your asshole, granting you a little sexual relief even as you start to feel the effects of her milk.";
 			say "[slut rat growth]";
 		if player is male:
 			if x is 1 and a random chance of 1 in 5 succeeds:

@@ -329,7 +329,7 @@ to say drmoffattmusing:
 	say "     'I suppose I shouldn't be surprised, the way things are. I assume you're looking for a way to remove him?' A query by the voluptuous skunk easily eliciting a scoff from the serpent, who was - up to this point - relegated to curiously looking over this particular environment.";
 	say "     'To what end, that I might be in you instead?' It is here that he gives her his proper attention.";
 	say "     'What makes you assume I want you?'";
-	say "     'Fair enough...' Velos gravitates towards the desk, his slick frame twisting around one of her skunk statues. 'Given your decor, I wager you would prefer I dip myself in a bucket of black paint first, yes? No, that'd be silly, I suppose I'd not be the same thing. Shall I dip myself into a vat of rotten eggs then? I assume that might rightly approximate the odor for you.'";
+	say "     'Fair enough...' Velos gravitates towards the desk, his slick frame twisting around one of her skunk statues. 'Given your décor, I wager you would prefer I dip myself in a bucket of black paint first, yes? No, that'd be silly, I suppose I'd not be the same thing. Shall I dip myself into a vat of rotten eggs then? I assume that might rightly approximate the odor for you.'";
 	say "     Scowling, and with some disdain, she carefully pulls the statue from him, finding some cloth to clean it before she places it on the other side of the desk, offering up her retort.";
 	say "     'That's quite a taunt from someone relegating themselves to the inside of another person's ass.'";
 	say "     'Who wouldn't hide in someone's ass around here, the way this room smells?'";
@@ -376,7 +376,7 @@ to say brianmusing:
 	say "     'But what would you even do out there? Are you just going to assume that people will take a rhino-man walking around in stride? I can imagine you'd get quite the irreverent glances at the nearest coffee shop.'";
 	say "     'But, I don't drink coffee.' By this point Brian looks right confused.";
 	say "     'And what makes you think the guards haven't noticed the growing crack from the other side of the wall, and the constant thumping of your thick head?'";
-	say "     'I wish my head was a bit thicker...' Velos could probably revel in that statement, but he's just too fixated on illuminating the ludicracy of his endeavors.";
+	say "     'I wish my head was a bit thicker...' Velos could probably revel in that statement, but he's just too fixated on illuminating the ludicrousness of his endeavors.";
 	say "     'What I'm trying to say is that you have no plan and no goals, you're just hitting a wall and hoping that resolves all your problems for you.' This finally does sink into the rhino, who stops and is stricken with a rare instance of contemplation. His increasingly troubled expression seems to infer that he's on the cusp of an existential breakdown before he yells out in blind rage, charging the wall once more, so hard that he bounces back a few feet and falls right over. Possibly blacking out for a few seconds, he eventually does crawl back up on his feet, before looking at Velos with abject confusion.";
 	say "     'What... What are you doing in... there?' It would seem Brian completely lost his memory of the last minute, doubtlessly annoying the serpent to no end.";
 	say "     'Ugh, you know what? Never mind me, that wall isn't going to topple itself.' The rhino slowly nods in agreement before he returns to charging the wall, Velos mumbling to himself, 'Sometimes I wonder why I even bother...' before retreating once more inside you.";
@@ -639,7 +639,7 @@ to say Leonardmusing:
 		say "     'Oh. These ladies are certainly better off in your hands, their prior captors far less equipped to care for them as you would. Though they are still slaves, and not simply by virtue of their infection commanding it.'";
 		say "     'What are you insinuating, 'sir'?' Fur transparently ruffled, he hands his glass to the feline and lets her off, standing up from his comfortable seat.";
 	else:
-		say "     'But enough of me. Stranger though my circumstances, I wager you're - quite substantially - more interesting an individual.' Buttering up Leo, he seems to take this regard quite well, Velos continuing. 'I'm very curious as to how you've acquired all this impressive decor.'";
+		say "     'But enough of me. Stranger though my circumstances, I wager you're - quite substantially - more interesting an individual.' Buttering up Leo, he seems to take this regard quite well, Velos continuing, 'I'm very curious as to how you've acquired all this impressive décor.'";
 		say "     'You have a good eye! I have a fair number of consorts - none of which are present right now[if HP of Leonard >= 4], save for my love here[end if] - who are more than happy to offer up these gifts as thanks for my... company.'";
 		say "     'Oh? Such a company as yours must be quite exceptional for these consorts to brave this wasteland in obtaining all these niceties.'";
 		say "     'Oh, it would be rude of me to brag, now...'";
@@ -818,7 +818,7 @@ to say borismusing:
 	say "     'Stuck in the same way you're stuck in your own skin.'";
 	say "     'Must be a bit embarrassing, wouldn't you think?'";
 	say "     'No less embarrassing than being a snake inside a person's ass.'";
-	say "     'Touche. What's your plans for dealing with this?'";
+	say "     'Touché. What's your plans for dealing with this?'";
 	say "     'What do you mean? Where would I even go?'";
 	say "     'Well, staying here can't be any good for you.'";
 	say "     'I don't know. Sometimes I try to leave, but then my mind starts to wander and back here I am.' Boris shrugs, a little dismissively. 'What's your excuse?'";

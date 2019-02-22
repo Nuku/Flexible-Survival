@@ -71,12 +71,12 @@ to say BakeryHusky:
 			if "Bad Luck" is listed in feats of player, decrease bonus by 2;
 			if bonus > 12, now bonus is 12;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+			say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 			WaitLineBreak;
 			if bonus + dice > 15:
-				say "     You narrowly manage to avoid the surprise attack, rolling out of the way as the husky tumbles into a nearby table and chairs. The large canine slowly raises to his feet, shaking his head clear before turning to face you.";
+				say "You narrowly manage to avoid the surprise attack, rolling out of the way as the husky tumbles into a nearby table and chairs. The large canine slowly raises to his feet, shaking his head clear before turning to face you.";
 			else:
-				say "     The husky's attack takes you by surprise, bowling you over as he sends you both tumbling into a nearby table and chairs. The large male pins you to the ground for a moment, barking in your face as he grinds his stiff cock against your body. Fortunately you manage to grasp a nearby piece of the crushed table. After smashing it against the back of his head, you push the stunned canine off you, scrambling to your feet as he shakes his head clear before turning to face you. (15 dmg taken)[line break]";
+				say "The husky's attack takes you by surprise, bowling you over as he sends you both tumbling into a nearby table and chairs. The large male pins you to the ground for a moment, barking in your face as he grinds his stiff cock against your body. Fortunately you manage to grasp a nearby piece of the crushed table. After smashing it against the back of his head, you push the stunned canine off you, scrambling to your feet as he shakes his head clear before turning to face you. (15 dmg taken)[line break]";
 				decrease HP of player by 15;
 			challenge "Alpha Husky";
 
@@ -1072,7 +1072,7 @@ the scent of fizz-aux-pommes is "     The bubbling drink smells of overwhelmingl
 to say fizz-aux-pommesuse:
 	if inafight is 1:
 		say "     Slamming back the bubbling drink, you feel a rush of energy surge though you, making you light on your feet and slightly aroused.";
-		say "+3 dodge bonus, +3 hit bonus, +15 libido! ";
+		say "+3 dodge bonus, +3 hit bonus, +15 libido!";
 		increase plhitbonus by 3;
 		increase pldodgebonus by 3;
 		increase libido of player by 15;

@@ -127,10 +127,10 @@ to say GuardLie: [lie to get into the camp]
 	let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
 	if diceroll > 16:
-		say "     You walk up to them quite confidently and totally wrap Private Cooper around your finger with some quick talking. In the end, he salutes you before ordering the second guy - a blond man whose nametag reads Private Orwell - to lead you to their commanding officer's tent. You pass the hitching post you saw being used before, and also the huge minotaur sitting beside it right now munching on some food.";
+		say "You walk up to them quite confidently and totally wrap Private Cooper around your finger with some quick talking. In the end, he salutes you before ordering the second guy - a blond man whose nametag reads Private Orwell - to lead you to their commanding officer's tent. You pass the hitching post you saw being used before, and also the huge minotaur sitting beside it right now munching on some food.";
 		WaitLineBreak;
 		say "     The commandant of the camp is Major Padgett, who stands up from his field desk to shake your hand before offering you a seat.";
 		say "     'So you're the special agent sent to check out the situation? Welcome to Camp Bravo. Let me brief you about what's been happening. We were lucky enough to have a top scientist in the city when the outbreak started - a doctor Diego Garcia who contacted scouting parties I sent out. [if Diegochanged is 0]He's been infected himself so he's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, he's been gathering data and looking into the infection himself. He pointed out Patient Zero for us - that large minotaur thing out in the camp - and explained the procedures necessary to gather and transport samples...' [else]She's been infected herself so she's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, she's been gathering data and looking into the infection herself. She pointed out patient zero for us and explained the procedures necessary to gather and transport samples...' [end if]He looks a bit embarrassed as he continues, saying 'You see, the samples can only be used if they're kept at human body temperature. So I've had to order the men to... carry the material inside their bodies to keep it valid.";
@@ -142,7 +142,7 @@ to say GuardLie: [lie to get into the camp]
 		now Back at the Camp is resolved;
 		now Resolution of Back at the Camp is 1; [lied your way in]
 	else:
-		say "     'Yeah, right - listen buddy, your story doesn't ring even remotely true in my ears. Get lost,' one of the soldiers scoffs at you. Can't be helped, you won't be getting any further here right now. Although there might be some hope of getting someone else on guard duty next time you come along here...";
+		say "'Yeah, right - listen buddy, your story doesn't ring even remotely true in my ears. Get lost,' one of the soldiers scoffs at you. Can't be helped, you won't be getting any further here right now. Although there might be some hope of getting someone else on guard duty next time you come along here...";
 		now Resolution of Back at the Camp is 2; [failed to convince]
 
 to say GuardBeg: [mooch some food from a guard]
@@ -405,15 +405,15 @@ to say MajorBreeding:
 		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 		if 2 is listed in bookcollection, increase bonus by 2;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 6:
-			say "     He nods at your explanation, clearly accepting it for the truth. 'I see your point. Spreading out the duty of obtaining and transporting research samples to all soldiers under my command would alleviate the shortage of people I can send off. I'll pass along orders to that effect. Thank you for bringing this to my attention.'";
+			say "He nods at your explanation, clearly accepting it for the truth. 'I see your point. Spreading out the duty of obtaining and transporting research samples to all soldiers under my command would alleviate the shortage of people I can send off. I'll pass along orders to that effect. Thank you for bringing this to my attention.'";
 			now CampBravoWomenAllowed is 1;
 			now HP of Adam is 4; [female breeding allowed]
 			now ElainePregnant is 48; [48h till birth]
 		else:
-			say "     He looks doubtful at your explanation, unconvinced that sending his female soldiers to be impregnated by the huge minotaur outside is such a great idea. Maybe you should work at getting better at Ly- err, convincing him of the truth and try this again later.";
+			say "He looks doubtful at your explanation, unconvinced that sending his female soldiers to be impregnated by the huge minotaur outside is such a great idea. Maybe you should work at getting better at Ly- err, convincing him of the truth and try this again later.";
 		now thirst of Major Padgett is turns;
 
 to say MajorDavid:

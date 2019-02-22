@@ -45,14 +45,14 @@ Instead of going to Monkey House for the first time:
 
 instead of conversing Hanu:
 	if Monkey Duel is inactive:
-		say "'Are you reconsidering my offer?' Hanu asks in return of your greetings. 'Do you wish to train with me?'";
+		say "     'Are you reconsidering my offer?' Hanu asks in return of your greetings. 'Do you wish to train with me?'";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			LineBreak;
-			say "Deciding what the hey you move over to where the other creature is, hopping over the fence that separates you both as you do, and then step over to the monkey man. What happens next turns out to be something you hadn't been expecting because instead of sex... you wind up finding yourself being asked several strange questions by the other, whose name happens to Hanu, and then being shown several strange yoga positions, which you find yourself going through with some problems. The next hour and a half of your life ends up being spent with Hanu meditating, a strange practice in and of itself, all things considered. However, end up finding yourself very refreshed once the moment is done.";
-			say "'That was fun.' Hanu slowly uncrosses his legs and then uses his tail to lift himself up onto his feet. 'I think that I'm going to go and head back for home now. I hope you take well care of yourself[if player is not defaultnamed], [name of player][end if].' And with that Hanu springs up over your head up onto the concrete wall that divides the zoo from the outside world, turns to wave at you and then disappears out of sight. Not sure what that was about you mildly wonder who that crazy monkey guy was.";
+			say "     Deciding what the hey, you move over to where the other creature is, hopping over the fence that separates you both as you do, and then step over to the monkey man. What happens next turns out to be something you hadn't been expecting, because instead of sex, you wind up finding yourself being asked several strange questions by the other, whose name happens to Hanu, and then being shown several strange yoga positions, which you find yourself going through with some problems. The next hour and a half of your life end up being spent with Hanu meditating, a strange practice in and of itself, all things considered. However, you end up finding yourself very refreshed once the moment is done.";
+			say "     'That was fun.' Hanu slowly uncrosses his legs and then uses his tail to lift himself up onto his feet. 'I think that I'm going to go and head back for home now. I hope you take well care of yourself[if player is not defaultnamed], [name of player][end if].' And with that, Hanu springs up over your head up onto the concrete wall that divides the zoo from the outside world, turns to wave at you, and then disappears out of sight. Not sure what that was about, you idly wonder who that crazy monkey guy was.";
 			decrease libido of player by 10;
 			if libido of player < 0, now libido of player is 0;
 			increase humanity of player by 20;
@@ -63,15 +63,15 @@ instead of conversing Hanu:
 	else if Monkey Duel is unresolved and (Take My Royal Word For Granite is resolved or Hunt Of Mammoth Proportions is resolved):
 		monkeyDuel;
 	else if the resolution of Monkey Duel is not 1:
-		say "[one of]'P-Please, help me,' the monkey whispers, before Wukong pulls on his leash.[line break]'What was that?' the younger simian asks as Hanu gasps, then looks at the ground once more. 'That's what I thought. You're my pet, so I expect of you to talk like one.'[line break]'E-Eeek. Eek,' Hanu makes in a resigned tone.[line break]'Better.'[or]'Ook,' Hanu replies plaintively.[line break]'My pet is well-behaved, is he not?' Wukong asks mockingly.[stopping]";
+		say "[one of]     'P-Please, help me,' the monkey whispers, before Wukong pulls on his leash.[line break]     'What was that?' the younger simian asks as Hanu gasps, then looks at the ground once more. 'That's what I thought. You're my pet, so I expect of you to talk like one.'[line break]     'E-Eeek. Eek,' Hanu makes in a resigned tone.[line break]     'Better.'[or]     'Ook,' Hanu replies plaintively.[line break]     'My pet is well-behaved, is he not?' Wukong asks mockingly.[stopping]";
 	else:
-		say "'Hello, my friend. I hope that you are well,' Hanu greets you. '[if humanity of Wukong < 1]Our simian friend is a turbulent student, and I had to use the shocking collar a fair number of times. But he will learn, eventually[else if humanity of Wukong < 3]Our common friend is showing admirable progress. I only need to discipline him once a day, now[else]I am very proud of Wukong; he is ready to become a proper student. Although I think I will keep his current outfit for, um, reasons. Humor an old monkey, will you[end if].'";
+		say "     'Hello, my friend. I hope that you are well,' Hanu greets you. '[if humanity of Wukong < 1]Our simian friend is a turbulent student, and I had to use the shocking collar a fair number of times. But he will learn, eventually[else if humanity of Wukong < 3]Our common friend is showing admirable progress. I only need to discipline him once a day, now[else]I am very proud of Wukong; he is ready to become a proper student. Although I think I will keep his current outfit for, um, reasons. Humor an old monkey, will you[end if].'";
 
 instead of fucking Hanu:
 	if Monkey Duel is unresolved:
-		say "The monkey chuckled. 'I am flatted by your proposal, my friend, but I must refuse. My mind fights with the urges that came with this body, and I cannot allow any lapse.'";
+		say "     The monkey chuckles. 'I am flatted by your proposal, my friend, but I must refuse. My mind fights with the urges that came with this body, and I cannot allow any lapse.'";
 	else if Resolution of Monkey Duel is 1:
-		say "Hanu smiles. 'I must once again deny your request. However, if lust stirs your loins, you can train with me and Wukong, and work these out.' [bold type]What do you say?[roman type]";
+		say "     Hanu smiles. 'I must once again deny your request. However, if lust stirs your loins, you can train with me and Wukong to work it out.' [bold type]What do you say?[roman type]";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]

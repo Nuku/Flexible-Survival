@@ -158,7 +158,7 @@ to say horror victory:
 			if tentsubmit is 1:
 				say "As you lie down in a clear sign of submission, the creature approaches you excitedly, extending its many tentacles towards you as it does so.";
 			else:
-				say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime-coated appendages before you hit the ground. ";
+				say "You've lost the will to continue your struggle against the horror. Collapsing to your knees on the cold concrete floor, you start to tilt forward. The creature catches you in its slime-coated appendages before you hit the ground.";
 			if player is not female:
 				say "It starts searching your body for certain characteristics. Rubbing across your groin and finding no useful genitals for its purpose, it drops you unceremoniously and starts to drag itself away from you, back into the shadows. All alone, and sexually charged with no easy way of experiencing the release of orgasm, you whimper into the darkness. Hours later, you finally regain enough strength to stand and trudge your aching body out of the basement.";
 				if tentsubmit is 1:

@@ -356,7 +356,7 @@ this is the leoninelust rule:		[continuous lustful weakening of player]
 				decrease libido of player by a random number between 0 and 1;
 			say "     [one of]Something inside you makes you long to give in to the sexy lion, draining your resolve[or]Just looking at the sexy lion makes your pussy quiver with need[or]You can't help but imagine yourself underneath this handsome feline, taking his throbbing cock[or]Affected by buried, feline urges, you find it hard to focus on the battle in the face of the strong, male cat[or]Some part of you pushes you to just give in so your aching cunt can get stuffed full of lion meat[at random][if HP of Leonard >= 7], though your loyalty to [one of]Leonard[or]your leonine master[or]your handsome lion[purely at random] does help you resist[end if]. You take [special-style-2][dam][roman type] damage";
 			if HP of player <= 0 or libido of player >= 110:
-				say "! You mewl and stagger, about to give into those urges as the feline comes in for a final strike.";
+				say "! You mewl and stagger, about to give in to those urges as the feline comes in for a final strike.";
 				now fightoutcome is 20;
 			else if ( ( HP of player * 100 ) / maxHP of player ) < 25:
 				say "! With your will to fight fading fast, you'd best end this soon.";

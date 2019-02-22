@@ -64,7 +64,7 @@ Instead of resolving tanukibell:
 			now tanukigender is 1;
 			now Tanuki Dad is in shinto shrine;
 		else if playerinput matches "m" or playerinput matches "2":
-			say "'I'm not sure I'm in the mood for that' (This option is not coded!)";
+			say "'I'm not sure I'm in the mood for that.' (This option is not coded!)";
 			stop the action;
 [			now tanukigender is 2;
 			now Tanuki Mom is in shinto shrine;]

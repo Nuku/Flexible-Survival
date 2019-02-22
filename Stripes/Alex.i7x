@@ -30,7 +30,7 @@ Object	Name
 Alex's Condo	"Alex's Condo"
 
 Alex's Condo is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Alex's Condo is "     Near the top of the high rise condo building, Alex's home has an good view of the area, if partially blocked by several of the other surrounding high rises. His place is fairly well-maintained, the mustelid tidying up occasionally. It does have the faint, tangy smell of mustelid musk, but it's not too strong. It is well-furnished, with expensive, trendy-looking furniture and decor. The big screen television and large stereo are silent, but fill a sizable portion of one wall. Several pieces of classy art adorn the others, all matching nicely with each other and the room decor as a whole. There are several legal briefs and law books open on the coffee table in the living room. Scattered around the floor are several colorful rubber objects, clearly outlets for any ferrety urges[if alexbrunch > 3]. There has been an increase in the number of rubber toys and shiny things scattered around the condo as the lawyer's gotten more ferrety[end if]. A glance in the kitchen shows that it's not as tidy, and is equally ultra-modern, if now useless. He's set up a small camper stove on his stove top and is using that for cooking. Between bouts of manic ferretness, the mustelid lawyer is sitting on his couch, focusing on his papers.".
+The description of Alex's Condo is "     Near the top of the high rise condo building, Alex's home has an good view of the area, if partially blocked by several of the other surrounding high rises. His place is fairly well-maintained, the mustelid tidying up occasionally. It does have the faint, tangy smell of mustelid musk, but it's not too strong. It is well-furnished, with expensive, trendy-looking furniture and décor. The big screen television and large stereo are silent, but fill a sizable portion of one wall. Several pieces of classy art adorn the others, all matching nicely with each other and the room décor as a whole. There are several legal briefs and law books open on the coffee table in the living room. Scattered around the floor are several colorful rubber objects, clearly outlets for any ferrety urges[if alexbrunch > 3]. There has been an increase in the number of rubber toys and shiny things scattered around the condo as the lawyer's gotten more ferrety[end if]. A glance in the kitchen shows that it's not as tidy, and is equally ultra-modern, if now useless. He's set up a small camper stove on his stove top and is using that for cooking. Between bouts of manic ferretness, the mustelid lawyer is sitting on his couch, focusing on his papers.".
 
 the scent of Alex's Condo is "[alexcondoscent]".
 
@@ -128,7 +128,7 @@ Instead of resolving Find Lorenda:
 	if lisacheat is 1:
 		let bonus be (( perception of player minus 10 ) divided by 2 ) + 5;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 16:
 			say "With the help of Lisa's information, you manage to find her trail!";
 			now found is 1;
@@ -137,12 +137,12 @@ Instead of resolving Find Lorenda:
 	if lisacheat is 0:
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 16:
-			say "     You manage to find her trail!";
+			say "You manage to find her trail!";
 			now found is 1;
 		else:
-			say "     Despite your search, you fail to find her. She has to be around here somewhere.";
+			say "Despite your search, you fail to find her. She has to be around here somewhere.";
 	if found is 1:
 		if humorous is banned or guy is banned:
 			say "     You follow a hopeful trail and you suddenly realize there are other tracks following the same trail. You rush forward and arrive to find a pair of creatures bearing down on a woman screaming frantically down one of the alleyways. She is pinned to the wall, between the pair of them. Thinking quickly, you rush to her aid!";
@@ -219,12 +219,12 @@ Instead of going west from dirty sheds:
 		if player consents:
 			let bonus be (( charisma of player minus 10 ) divided by 2) + alexleeinfo;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
+			say "     You roll 1d20([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
 			if dice + bonus > 19:
-				say "[line break]     'Oh... he really did send you, didn't he?' You hear things being shoved aside, and the door opens a crack, a cat's eye peering out, trying to gauge if the coast is clear. Seeing that it is, Lee steps out, and he isn't a he anymore. In fact, he seems to have more in common with the gryphons and hyenas running around the city as far as her new gender at this point. 'C-come on, let's hurry. I don't want anyone to see me!' she says. She throws her coat over her head to cover her feline ears, holding it down with paw-like hands.";
+				say "'Oh... he really did send you, didn't he?' You hear things being shoved aside, and the door opens a crack, a cat's eye peering out, trying to gauge if the coast is clear. Seeing that it is, Lee steps out, and he isn't a he anymore. In fact, he seems to have more in common with the gryphons and hyenas running around the city as far as her new gender at this point. 'C-come on, let's hurry. I don't want anyone to see me!' she says. She throws her coat over her head to cover her feline ears, holding it down with paw-like hands.";
 				now success is 1;
 			else:
-				say "[line break]     'Ha! As if I'd believe that!' He starts rambling on about lying monsters in his city, no longer listening to you. You get the feeling you'll have to try again later to convince him to come out once he's calmed down.";
+				say "'Ha! As if I'd believe that!' He starts rambling on about lying monsters in his city, no longer listening to you. You get the feeling you'll have to try again later to convince him to come out once he's calmed down.";
 		if success is 0:
 			say "     [bold type]Do you attempt to break down the door?[roman type][line break]";
 			LineBreak;
@@ -233,12 +233,12 @@ Instead of going west from dirty sheds:
 			if player consents:
 				let bonus be ( Strength of player minus 10 ) divided by 2;
 				let dice be a random number from 1 to 20;
-				say "You roll 1d20([dice])+[bonus] vs 22 and score [dice plus bonus]: ";
+				say "     You roll 1d20([dice])+[bonus] vs 22 and score [dice plus bonus]: ";
 				if dice + bonus > 21:
-					say "[line break]     'Ahhhh!!!' Upon breaking inside, you see for the first time that 'he' may not have been the correct way to call him. She has fainted on the floor, and her body is obviously feminine, though bulged in the crotch of her now too-tight pants. She has cute cat ears and paw-like hands. You gingerly pick her up, and hurry to the High Rise district, before she wakes up.";
+					say "'Ahhhh!!!' Upon breaking inside, you see for the first time that 'he' may not have been the correct way to call him. She has fainted on the floor, and her body is obviously feminine, though bulged in the crotch of her now too-tight pants. She has cute cat ears and paw-like hands. You gingerly pick her up, and hurry to the High Rise district, before she wakes up.";
 					now success is 1;
 				else:
-					say "[line break]     You throw your body against the door, but it seems too tough for you. Maybe you could try again later.";
+					say "You throw your body against the door, but it seems too tough for you. Maybe you could try again later.";
 		follow the turnpass rule;
 		if success is 1:
 			now AlexProgress is 5;
@@ -440,7 +440,7 @@ to say alexbodyreset:
 	if alexbrunch > 0 and tailname of player is not "Ferret":
 		say ". Seeing your changed tail, his hands move down to your rear, stroking and squeezing it until your ferret tail is restored";
 		now tailname of player is "Ferret";
-		now tail of player is "Emerging from the base of your spine is a slender tail covered in ivory fur. ";
+		now tail of player is "Emerging from the base of your spine is a slender tail covered in ivory fur.";
 	if alexbrunch > 1 and skinname of player is not "Ferret":
 		say ". His playful hands caress all over you, dooking happily as your soft, white fur is restored";
 		now skinname of player is "Ferret";
