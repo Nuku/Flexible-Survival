@@ -24,7 +24,7 @@ to say Batcubus attack:
 		say "     'Oh, you poor thing. Perhaps I can help with that,' she says, rising back up. Grabbing your head, she mashes your face between her giant tits and squeezing them around your head. Left woozy and vaguely aroused from the experience, your lips wrap around one of her nipples when it's offered to you. You suckle hungrily from her breast, getting fed a meal of the bat woman's warm milk. By the time the bat creature has finished feeding you and heads off, you're left feeling warm and sleepy even as tingles of infection spread through you.";
 
 to say beatthebatcubus:
-	say "     The batcubus falls down to the ground, fingering herself, trying to get some form of relief. The sight of her like this is enticing, tempting you to do something naughty with her to celebrate your victory. Shall you give into these urges?";
+	say "     The batcubus falls down to the ground, fingering herself, trying to get some form of relief. The sight of her like this is enticing, tempting you to do something naughty with her to celebrate your victory. Shall you give in to these urges?";
 	if player consents:
 		if player is male:
 			say "     The scent of her arousal fills your nose and you feel your cock rapidly stiffening. Your lust brings you to turn around and look at her, unable to do anything other than start jerking off while watching her masturbate. She notices your actions and smiles warmly before spreading her legs and presenting her needy cunt to you.";

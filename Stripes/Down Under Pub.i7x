@@ -206,7 +206,7 @@ to say roopubsex1:
 
 to say roopubsex2:
 	say "     The slender, girly joey rubs his body against yours, letting his paws wander down to your cock and stroking it, eagerness in his eyes as he looks over your [cock size desc of player] [cock of player] penis. You stroke his cute body and soft fur as you consider what you'd like to do with this eager young guy. He licks his lips and moans softly as you give his rear a squeeze.";
-	say "     [bold type] He seems ready to suck you off, though you could probably bend him over the table and fuck him as well, if you'd prefer.[roman type][line break]";
+	say "     [bold type]He seems ready to suck you off, though you could probably bend him over the table and fuck him as well, if you'd prefer.[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Oral.";
 	say "     ([link]N[as]n[end link]) - Anal.";
@@ -218,7 +218,7 @@ to say roopubsex2:
 
 to say roopubsex3:
 	say "     The big-breasted jill in your arms giggles sweetly and takes your cock in her paws. Rubbing at your stiff meat, she presses her ample bosom to your chest.";
-	say "     [bold type] Her breasts, you feel, would give a fine titty-fuck, though a ride in your lap may be more what you're in the mood for this time.[roman type][line break]";
+	say "     [bold type]Her breasts, you feel, would give a fine titty-fuck, though a ride in your lap may be more what you're in the mood for this time.[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Tit-fuck.";
 	say "     ([link]N[as]n[end link]) - Sex.";
@@ -229,7 +229,7 @@ to say roopubsex3:
 
 
 to say roopubsex4:
-	say "     The sexy jill in your arms has smaller breasts compared to the other roos girls around and wears her hair short. Her paw moves quickly [if player is male]past your cock [end if]to your wet snatch, teasing your sensitive folds. Pulling you up from your seat, she gives the [if HP of Gillian < 4]the serving girl's[else]Gillian's[end if] ass a swat, eliciting a giggling moan as she clears the table quickly. Your lover of the moment pushes you up to lay back on the sturdy table before climbing atop it as well. Bringing her groin to your face, she presents her pussy to you even as she dives in and starts licking at yours lustfully. You decide to slip a pair of fingers into her and start licking and kissing her clit. Clearly enjoying what you're doing, she works your snatch all the more eagerly[if player is male]. She even gingerly takes hold of your cock and gives it a few light strokes, but her focus is clearly on your womanly parts[end if]. The others around the table watch the show happily, holding their drinks as you two roll around on the table for a while, swapping positions a few times before finishing as you started, with her hot juices flowing down over your paw and face as she laps up yours as your both cum loudly.";
+	say "     The sexy jill in your arms has smaller breasts compared to the other roos girls around and wears her hair short. Her paw moves quickly [if player is male]past your cock [end if]to your wet snatch, teasing your sensitive folds. Pulling you up from your seat, she gives the [if HP of Gillian < 4]the serving girl's[else]Gillian's[end if] ass a swat, eliciting a giggling moan as she clears the table quickly. Your lover of the moment pushes you up to lay back on the sturdy table before climbing atop it as well. Bringing her groin to your face, she presents her pussy to you even as she dives in and starts licking at yours lustfully. You decide to slip a pair of fingers into her and start licking and kissing her clit. Clearly enjoying what you're doing, she works your snatch all the more eagerly[if player is male]. She even gingerly takes hold of your cock and gives it a few light strokes, but her focus is clearly on your womanly parts[end if]. The others around the table watch the show happily, holding their drinks as you two roll around on the table for a while, swapping positions a few times before finishing as you started, with her hot juices flowing down over your paw and face as she laps up yours as you both cum loudly.";
 
 
 to say roopubsex5:
@@ -371,7 +371,7 @@ to say gilliansex01:	[give cunnilingus]
 	say "     As you're about to slip a pair of fingers into her, she pushes your hand back. 'Not so fast. I want to savor this.' Heeding her request, you work at pleasuring her steadily, making for a long, drawn out session. Your tongue and fingertips lavish attention upon her pussy and clit. You only are given permission to stuff those waiting digits into her after she's had several smaller orgasms. That final round of vigorous finger-fucking brings her to a crashing climax that has her cry out loudly and soak your face in her juices.";
 
 to say gilliansex02:	[69]
-	say "bed. Pushing you down onto it, she moves atop you, face to crotch. Provided with an eyeful of her succulent pussy, you dive right in. She moans happily at your eagerness and soon has her muzzle pressed to your loins. ";
+	say "bed. Pushing you down onto it, she moves atop you, face to crotch. Provided with an eyeful of her succulent pussy, you dive right in. She moans happily at your eagerness and soon has her muzzle pressed to your loins.";
 	if player is male:
 		say "     She starts by nuzzling and kissing at your manhood before licking from your [if player is female]pussy[else if cockname of player is not listed in infections of internallist]balls[else]taint[end if] to your glans. She swirls her tonguetip around it a few times before lowering her muzzle down over your shaft. [if cock length of player > 30]With considerable effort to deal with your exceptional manhood[else if cock length of player > 20]With some effort to deal with your enlarged manhood[else]Taking it slow to savor it[end if], she works her muzzle and throat down over the whole of your [cock size desc of player] cock.";
 		say "     When she feels that the pleasure of this is distracting you too much from your own task, she grinds her meaty hips down onto you, pressing her pussy down onto your face. Grabbing that rounded roo ass of hers, you dive in with renewed zeal. Your tongue brushes across her folds and licks across her firm clit. After a few rounds of this, you wriggle it into her cunny, wetly caressing her inner walls and lapping up her juices. She moans in appreciation around your shaft, rewarding you with extra vigor of her own.";

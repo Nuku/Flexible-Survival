@@ -107,7 +107,7 @@ A g-element is usually scenery.
 
 Section - Revealing elements for debugging (not for release)
 
-A g-element is publically-named.
+A g-element is publicly-named.
 A g-element is scenery.
 
 
@@ -1552,7 +1552,7 @@ Chapter - Dumping image-map data (not for release)
 
 Dumping imap is an action out of world applying to one visible thing. Understand "image-map [any image-map]" or "[any image-map]" or "image map [any image-map]" as dumping imap.
 
-Understand "image-map [text]" or "image map [text]" as a mistake ("That image-map could not be found. If this is not a typo, you may need to assign it the 'publically-named' property.").
+Understand "image-map [text]" or "image map [text]" as a mistake ("That image-map could not be found. If this is not a typo, you may need to assign it the 'publicly-named' property.").
 
 Carry out dumping imap:
 	let rules-altered be false;
@@ -1957,13 +1957,13 @@ Now any image-map tile that has an individual hyperlink (see above) will be outl
 
 If the graphlink preview color is set to null (that is, g-PlaceNullCol), no box will be visible.
 
-We can "dump" the data in an image-map to the screen by typing "image-map <the name of the image-map to dump>" in-game. If we are running the game in the IDE, this will print the tile-array or figure-array of the image-map to the main window. Note that if the command indicates that there is no such thing as the image-map you're trying to dump, you will need to declare your image-map to be "publically-named". (GCD automatically tries to mark all g-elements as publically-named for a debugging build, but it is possible to evade this control.) Example:
+We can "dump" the data in an image-map to the screen by typing "image-map <the name of the image-map to dump>" in-game. If we are running the game in the IDE, this will print the tile-array or figure-array of the image-map to the main window. Note that if the command indicates that there is no such thing as the image-map you're trying to dump, you will need to declare your image-map to be "publicly-named". (GCD automatically tries to mark all g-elements as publicly-named for a debugging build, but it is possible to evade this control.) Example:
 
 	My image-map is a tileset image-map. The origin is {10, 10}. The tile-array is {1, 2, 1, 2}.
 
 	Section - Debugging (not for release)
 
-	My image-map is publically-named.
+	My image-map is publicly-named.
 
 Note that image-maps may run particularly slowly in the IDE. Test them in an outside interpreter to gauge true performance.
 
@@ -1997,7 +1997,7 @@ Up to this point, we have talked about element scaling factors as if they were u
 
 	Use asymmetrical scaling
 
-Now we can scale elements—most usefully, sprites—asymmetrically, meaning we can stretch or squeeze the element along one axis more than along the other. This will often be less than pleasing aesthetically, but in some cases it can be quite useful.
+Now we can scale elements - most usefully, sprites - asymmetrically, meaning we can stretch or squeeze the element along one axis more than along the other. This will often be less than pleasing aesthetically, but in some cases it can be quite useful.
 
 Note that when this option is set, we can no longer use the "scaling factor" property for elements. Instead, we must now specify the "x-scaling factor" and the "y-scaling factor" separately. We must do this for all elements:
 
@@ -2045,7 +2045,7 @@ We now know how to ensure that our element is accepting mouse input, but we have
 
 And now, as long as the Mario sprite appears in the window, clicking on it with our mouse will result in the command "JUMP" being entered at the command prompt. All of the types of graphic element can be hyperlinked in this way. The entire area of the element, including transparent zones, is hyperlinked, and the hyperlink zone for any element is a single rectangle. This is most notable in the case of line primitives, because the hyperlink zone will be the smallest rectangular area that can completely enclose the line; a 45-degree line will therefore have a square hyperlinked area with the line running from one corner to its opposite.
 
-A graphlink-active element that overlaps another in the display layering system will supercede the lower element. That is, if Mario, on display-layer 4, partially overlaps a hyperlinked mushroom sprite on display-layer 3, clicking within the boundaries of the rectangle that defines Mario will cause Mario's, rather than the mushroom's, linked replacement-command to be invoked.
+A graphlink-active element that overlaps another in the display layering system will supersede the lower element. That is, if Mario, on display-layer 4, partially overlaps a hyperlinked mushroom sprite on display-layer 3, clicking within the boundaries of the rectangle that defines Mario will cause Mario's, rather than the mushroom's, linked replacement-command to be invoked.
 
 The background of a canvas cannot be hyperlinked. We can, however, imitate a clickable background by including a fully transparent sprite image of the same dimensions as the background and placing it on the lowest display-layer (usually display-layer 1).
 
@@ -2173,11 +2173,11 @@ Since elements are objects, like any other entity of Inform's "thing" kind, we c
 
 We could also potentially use other aspects of g-elements--particularly their relationships with one another--as means of organizing their display. I leave users to think about whether this kind of thing might have advantages for them.
 
-If for some reason we actually want players to be able to see, pick up, and refer to some elements as if they were objects in the game world, we can declare those elements to be "publically-named":
+If for some reason we actually want players to be able to see, pick up, and refer to some elements as if they were objects in the game world, we can declare those elements to be "publicly-named":
 
-	Mario is publically-named.
+	Mario is publicly-named.
 
-If we want to elements to be publically-named by default, we can replace the section of the extension's code that conceals them from the player, like this:
+If we want to elements to be publicly-named by default, we can replace the section of the extension's code that conceals them from the player, like this:
 
 	Section - Revealing elements (in place of Section - Concealing elements in Glimmr Canvas-Based Drawing by Erik Temple)
 

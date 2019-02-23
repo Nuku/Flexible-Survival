@@ -2,7 +2,7 @@ Version 2 of Gator by Nuku Valente begins here.
 [ Version 2.0 - Grammar/code cleanup. Added victory facesitting scenes and vore scenes - Kurainyx    ]
 [ Version 2.1 - Add being able to trigger vore scene from her den - Kurainyx                         ]
 [ Version 2.2 - Additional twistcapped scene, multi-genital support, code and writing cleanup - Song ]
-[ Version 2.3 - Victory facesitting scene can be viewed in Gator Den. Made Gator into an actual npc so player no longer automatically goes back to Grey Abbey from Gator Den - Kurainyx]
+[ Version 2.3 - Victory facesitting scene can be viewed in Gator Den. Made Gator into an actual NPC so player no longer automatically goes back to Grey Abbey from Gator Den - Kurainyx]
 
 "Adds a gator to Flexible Survival's Wandering Monsters table, with impreg chance"
 

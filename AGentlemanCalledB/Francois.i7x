@@ -23,7 +23,7 @@ Instead of Resolving a Gourmet Treats:
 		say "     While traveling through the high rise district, you come across a rather unusual-looking building. While the boarded-up windows prevent you from seeing inside, the large sign above the door proclaims the place to be some sort of pet bakery. The weathered sign reads Bone-Appetit and features a rather plump cartoon canine in a chef's uniform. With the exception of the boarded-up windows, the exterior of the building appears relatively undamaged; thinking there may still be some useful supplies within, you decide to step inside.";
 	WaitLineBreak;
 	let T be a random number between 1 and 4;
-	say "     A bell above the door jingles loudly as you step inside, [if HP of Karen is 1]and the creatures in the back quickly turn their attention to the unexpected intruder[else]and you curse yourself as you spot a group of creatures near the back of the store turning to investigate the source of the noise[end if]. Surveying the scene, you quickly realize you've walked in on a [if T is 1]small pack of huskies[else if T is 2]group of german shepherds[else if T is 3]small pack of Chocolate Labs[else if T is 4]pair of Retrievers[end if] who have captured another creature and are having some fun with their prize in the secluded bakery. As the canines move towards you, there is a weak cry for help from their prisoner, a survivor? Realizing there is more at stake here than you originally expected, you drop your pack and prepare yourself for the approaching [if T is 1]huskies[else if T is 2]german shepherds[else if T is 3]Labs[else if T is 4]Retrievers[end if].";
+	say "     A bell above the door jingles loudly as you step inside, [if HP of Karen is 1]and the creatures in the back quickly turn their attention to the unexpected intruder[else]and you curse yourself as you spot a group of creatures near the back of the store turning to investigate the source of the noise[end if]. Surveying the scene, you quickly realize you've walked in on a [if T is 1]small pack of huskies[else if T is 2]group of German Shepherds[else if T is 3]small pack of Chocolate Labs[else if T is 4]pair of Retrievers[end if] who have captured another creature and are having some fun with their prize in the secluded bakery. As the canines move towards you, there is a weak cry for help from their prisoner, a survivor? Realizing there is more at stake here than you originally expected, you drop your pack and prepare yourself for the approaching [if T is 1]huskies[else if T is 2]German Shepherds[else if T is 3]Labs[else if T is 4]Retrievers[end if].";
 	WaitLineBreak;
 	if T is 1:
 		say "[BakeryHusky]";
@@ -36,7 +36,7 @@ Instead of Resolving a Gourmet Treats:
 	if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     Having dealt with the intruder, the canines return to the other survivor, and as you lay beaten on the floor, you hear the poor fellow begin moaning. The longer you listen, the more his cries begin to shift to submission. The last thing you hear before slipping from consciousness is his cry of ecstasy mingled with his captor's howl of pleasure.";
 		WaitLineBreak;
-		say "     You eventually awaken some time later, and you are surprised to find yourself on a makeshift bed made from several smaller pieces of furniture and blankets. As you rise to a sitting position, you glance around nervously, looking for the [if T is 1]huskies[else if T is 2]german shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if] who bested you, expecting them to try and keep you captive as they did the other survivor. Surprisingly, although perhaps for the best, there is no sign of them.";
+		say "     You eventually awaken some time later, and you are surprised to find yourself on a makeshift bed made from several smaller pieces of furniture and blankets. As you rise to a sitting position, you glance around nervously, looking for the [if T is 1]huskies[else if T is 2]German Shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if] who bested you, expecting them to try and keep you captive as they did the other survivor. Surprisingly, although perhaps for the best, there is no sign of them.";
 		say "     'Do not worry, mon ami[if player is purefemale]e[end if]. They left after having their fun; you're safe here now,' says a voice with a thick French accent. You turn towards the voice, seeing a figure step out of a nearby doorway. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'I appreciate your attempts to save me from those canine ruffians, and I'm sorry it ended the way it did,' he continues. 'I am Francois, master chef, at your service.'";
 		now Gourmet Treats is resolved;
@@ -44,7 +44,7 @@ Instead of Resolving a Gourmet Treats:
 		now Resolution of Gourmet Treats is 2; [fought, lost]
 		move player to Bone-Appetit;
 	else if fightoutcome >= 10 and fightoutcome <= 19:
-		say "     Having finally dealt with the [if T is 1]huskies[else if T is 2]german shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if], you chase the last stragglers out the door and block it up behind them, propping up a table and a few chairs against it to keep any others out. Satisfied with the security of the building, you approach the canines['] captive, looking him over before kneeling down to help him to a sitting position. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
+		say "     Having finally dealt with the [if T is 1]huskies[else if T is 2]German Shepherds[else if T is 3]Chocolate Labs[else if T is 4]Retrievers[end if], you chase the last stragglers out the door and block it up behind them, propping up a table and a few chairs against it to keep any others out. Satisfied with the security of the building, you approach the canines['] captive, looking him over before kneeling down to help him to a sitting position. He appears to have the features of several species and breeds of domestic animals, a short, stocky canine body and face, covered with a thick coat of fur in many different colors and patterns. There even appear to be feathers poking out from his pelt in several places. Finally, feline ears and tail complete the rather unusual appearance of the hybrid before you.";
 		say "     'Thank you, mon ami[if player is purefemale]e[end if],' the man says with a strong French accent. 'I shudder to imagine where I'd be had you not come along. I am Francois, master chef, at your service.'";
 		now Gourmet Treats is resolved;
 		now Bone-Appetit is known;
@@ -71,12 +71,12 @@ to say BakeryHusky:
 			if "Bad Luck" is listed in feats of player, decrease bonus by 2;
 			if bonus > 12, now bonus is 12;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+			say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 			WaitLineBreak;
 			if bonus + dice > 15:
-				say "     You narrowly manage to avoid the surprise attack, rolling out of the way as the husky tumbles into a nearby table and chairs. The large canine slowly raises to his feet, shaking his head clear before turning to face you.";
+				say "You narrowly manage to avoid the surprise attack, rolling out of the way as the husky tumbles into a nearby table and chairs. The large canine slowly raises to his feet, shaking his head clear before turning to face you.";
 			else:
-				say "     The husky's attack takes you by surprise, bowling you over as he sends you both tumbling into a nearby table and chairs. The large male pins you to the ground for a moment, barking in your face as he grinds his stiff cock against your body. Fortunately you manage to grasp a nearby piece of the crushed table. After smashing it against the back of his head, you push the stunned canine off you, scrambling to your feet as he shakes his head clear before turning to face you. (15 dmg taken)[line break]";
+				say "The husky's attack takes you by surprise, bowling you over as he sends you both tumbling into a nearby table and chairs. The large male pins you to the ground for a moment, barking in your face as he grinds his stiff cock against your body. Fortunately you manage to grasp a nearby piece of the crushed table. After smashing it against the back of his head, you push the stunned canine off you, scrambling to your feet as he shakes his head clear before turning to face you. (15 dmg taken)[line break]";
 				decrease HP of player by 15;
 			challenge "Alpha Husky";
 
@@ -169,6 +169,30 @@ object	name
 Francois	"Francois"
 
 Francois is a man. Francois is in Bone-Appetit.
+[Physical details as of game start]
+ScaleValue of Francois is 3. [human sized]
+SleepRhythm of Francois is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Francois is 1. [One cock]
+Cock Length of Francois is 6. [Eight Inches]
+Cock Width of Francois is 2. [Each testicle 1 inch across]
+Testes of Francois is 2. [Two balls]
+Cunts of Francois is 0. [No pussy]
+Cunt Length of Francois is 0. [No Cunt]
+Cunt Width of Francois is 0. [No Cunt]
+Breasts of Francois is 2. [2 nipples]
+Breast Size of Francois is 0. [Flat at the start]
+[Basic Interaction states as of game start]
+PlayerMet of Francois is false.
+PlayerRomanced of Francois is false.
+PlayerFriended of Francois is false.
+PlayerControlled of Francois is false.
+PlayerFucked of Francois is false.
+OralVirgin of Francois is true.
+Virgin of Francois is true.
+AnalVirgin of Francois is true.
+PenileVirgin of Francois is true.
+SexuallyExperienced of Francois is false.
+MainInfection of Francois is "None".
 The description of Francois is "[Francoisdesc]".
 The conversation of Francois is { "Numnum!" }.
 The icon of Francois is Figure of Francois_icon.
@@ -185,8 +209,8 @@ to say Francoisdesc:
 
 Instead of conversing the Francois:
 	if HP of Karen is 6 and companion of player is Retriever Girl:
-		say "     Francois greets you with a smile as you approach. 'Ah, mon ami[if player is not male and player is female]e[end if], good to see you again! And who is this you've brought with you?'";
-		say "     'It's me, Karen,' she responds. 'We were hoping you could help me out with --'[line break]";
+		say "     Francois greets you with a smile as you approach. 'Ah, mon ami[if player is purefemale]e[end if], good to see you again! And who is this you've brought with you?'";
+		say "     'It's me, Karen,' she responds. 'We were hoping you could help me out with-'[line break]";
 		say "     'Karen! Mon Dieu, I had feared the worst mon amie,' Francois interrupts, stepping around the counter and placing a small kiss on each side of her muzzle before pulling her into a hug. After breaking off, Francois motions towards one of the tables near the front of the store. The three of you sit and chat for a while, regaling the mutt with the tale of your escape from Rex before Karen finally asks him about her past. 'Ah, désolé mon amie, we never spoke much of our personal lives, only of our shared interest, les animaux. I recall you mentioning being a student at the college, but I am afraid that's all I know.'";
 		say "     'Well, it's more than I knew before,' Karen responds. 'Thank you, Francois, for everything. I might not even be here if not for you helping our friend here escape from Rex,' she says, smiling at you before leaning in and giving him a timid kiss on the cheek. Soon after the conversation draws to a close, you and Karen gather your things and prepare to head back out into the city as Francois returns to his work behind the counter.";
 		now HP of Karen is 7;
@@ -199,7 +223,7 @@ Instead of conversing the Francois:
 		now HP of Karen is 3;
 		now carried of Dog Treats is 1;
 	else if HP of Francois is 0:
-		say "     'I must thank you again, mon ami[if player is not male and player is female]e[end if],' Francois says as he steps around the counter, 'but perhaps I could ask another favor of you? I have a desire to create, to expand my art, and there must be so many exotic and interesting new flavors out in this city now. Oh how I would love to experiment with them, but sadly, I am no fighter. I fear I cannot go out there to gather these new ingredients myself, but you, mon [if player is not male and player is female]héroïne[else]héro[end if], seem more than capable of surviving out there. If you bring back any potential ingredients you find, I would love to bake something for you[if player is male], and perhaps I could 'reward' you in other ways as well,' he says, licking his lips as his eyes stray to your groin. 'Just[else]. Just[end if] bring back anything you find and let me know you would like me to [link]bake[as]bake Francois[end link] for you.";
+		say "     'I must thank you again, mon ami[if player is purefemale]e[end if],' Francois says as he steps around the counter, 'but perhaps I could ask another favor of you? I have a desire to create, to expand my art, and there must be so many exotic and interesting new flavors out in this city now. Oh how I would love to experiment with them, but sadly, I am no fighter. I fear I cannot go out there to gather these new ingredients myself, but you, mon [if player is purefemale]héroïne[else]héro[end if], seem more than capable of surviving out there. If you bring back any potential ingredients you find, I would love to bake something for you[if player is male], and perhaps I could 'reward' you in other ways as well,' he says, licking his lips as his eyes stray to your groin. 'Just[else]. Just[end if] bring back anything you find and let me know you would like me to [link]bake[as]bake Francois[end link] for you.";
 		now HP of Francois is 1;
 		say "[FrancoisListCompile]";
 	else if libido of Francois >= 3 and Francoistalk1 is false and a random chance of 2 in 5 succeeds:
@@ -320,7 +344,7 @@ to say Francoissex2:		[mounting Francois]
 			say "heading over to one of the shorter tables and laying down overtop of it. He grins back at you and swishes his tail while spreading his legs, offering himself up to you. Taking your achingly hard cock in hand, you move into position and rub your slick, dribbling glans across his tailhole.";
 		say "     Francois moans something sensual, and probably quite dirty from the sounds of it, in French, gripping his support and rubbing his rear back against you. You take your time easing into him, finding his tailhole spreading open with [if cock length of player > 24]a little[else if cock length of player > 12]a bit of[else]no real[end if] effort. Whether it's from the various creatures who've been having their way with him, a property of his mixture of infections or just practice from before the outbreak doesn't really matter much to you right now, your [cock size desc of player] [cock of player] shaft just excited to have a hot, tight hole to fill after all that talented tonguework. Not that his rear is lacking in any expertise, the plump guy rocking his hips and squeezing down on you as you fuck him.";
 		say "     As you pump into the cute hybrid, you run your hands over his unique body, feeling his altered form and how it all seems to somehow come together into an adorable whole. You lean overtop of the stocky guy and nuzzle at his head, giving his ears a nibble and getting something akin to a purr in return. Reaching around, you take his cock in hand[if libido of Francois is 2] for the first time and start stroking him off while you pound into him. Having kept it hidden under his apron, he's fairly well hung, a good 8 inches. It has a growing knot at its base and tapers to a feline shape at the top. You can feel a mix of kitteny soft fur and downy feathers covering his ballsack[else] and start stroking his hybrid canine-feline cock and playing with his softly furred and feathered ballsack[end if].";
-		say "     'Ah oui! Comme-çà,' he moans as you rub your fingers along his cock. Taking that as a good sign, you keep stroking him in that manner and pound into him all the faster. 'Fourrez-moi! Plus dur! Au, que c'est bon!' Lost in the excitement, he goes on in French, but clearly wants more and you're more than happy to give it to your gay lover, driving into his ass again and again until you groan loudly and cum hard. Shot after shot of your [cum load size of player] load pumps into him, his own seed splattering onto the floor moments later[if cock width of player > 24]. As you send more and more semen into the small hybrid's belly, it grows rounder and fuller until he's nice and plump with your cum[else if cock width of player > 16]. As you send more and more semen into the small hybrid's belly, it gradually gains a couple more inches from your cum stuffing him[end if]. Only once you're done[if cockname of player is listed in infections of Knotlist] and your knot has gone down[end if] do you pull out of his creamy ass[if cock width of player > 24]. A sticky mess of cum comes flowing out[else if cock width of player > 16]. Quite a bit of cum comes flowing out[else]. A small amount of cum leaks out[end if] of his creamy hole before he reaches back to wipe it up with his paw and lick it from his fingers.";
+		say "     'Ah oui! Comme-çà,' he moans as you rub your fingers along his cock. Taking that as a good sign, you keep stroking him in that manner and pound into him all the faster. 'Fourrez-moi! Plus dur! Au, que c'est bon!' Lost in the excitement, he goes on in French, but clearly wants more and you're more than happy to give it to your gay lover, driving into his ass again and again until you groan loudly and cum hard. Shot after shot of your [cum load size of player] load pumps into him, his own seed splattering onto the floor moments later[if cock width of player > 24]. As you send more and more semen into the small hybrid's belly, it grows rounder and fuller until he's nice and plump with your cum[else if cock width of player > 16]. As you send more and more semen into the small hybrid's belly, it gradually gains a couple more inches from your cum stuffing him[end if]. Only once you're done[if player is knotted] and your knot has gone down[end if] do you pull out of his creamy ass[if cock width of player > 24]. A sticky mess of cum comes flowing out[else if cock width of player > 16]. Quite a bit of cum comes flowing out[else]. A small amount of cum leaks out[end if] of his creamy hole before he reaches back to wipe it up with his paw and lick it from his fingers.";
 		say "     'That was exquisite, mon ami. We shall definitely have to do that again... and again... and again...' he says sensually in his beautiful accent while running his paw over your body. He adjusts his groin and straightens his crumpled apron with a grin before making his way slowly back to what he was doing, clearly moving with care to keep your [cum load size of player] load inside him a little longer.";
 	else:
 		say "stretching out on his back across [if scalevalue of player < 3]one of the low tables[else if scalevalue of player is 3 or scalevalue of player is 4]one of the tables[else]the counter with your help[end if]. With his legs apart and his paws spreading his cheeks in a wanton display, he moans for you to take him now. With such an offer after his expert tonguework has gotten you worked up, you move into position quickly, kissing your slick glans against his waiting pucker.";
@@ -579,7 +603,7 @@ to say FrancoisBakingMenu:
 						decrease carried of distilled milk by 1;
 						increase carried of crème abondante by 1;
 					else:
-						say "You do not have the required ingredients. pink gel and distilled milk.";
+						say "You do not have the required ingredients: pink gel and distilled milk.";
 				else if title entry is "bleuettonne":
 					if blue gel is owned and chocolate milk is owned:
 						now sextablerun is 1;
@@ -588,7 +612,7 @@ to say FrancoisBakingMenu:
 						decrease carried of chocolate milk by 1;
 						increase carried of bleuettonne by 1;
 					else:
-						say "You do not have the required ingredients. blue gel and chocolate milk.";
+						say "You do not have the required ingredients: blue gel and chocolate milk.";
 				else if title entry is "boysenberry blossom":
 					if blue gel is owned and Awesome Fruit is owned:
 						now sextablerun is 1;
@@ -597,7 +621,7 @@ to say FrancoisBakingMenu:
 						decrease carried of Awesome Fruit by 1;
 						increase carried of boysenberry blossom by 1;
 					else:
-						say "You do not have the required ingredients. blue gel and Awesomer Fruit.";
+						say "You do not have the required ingredients: blue gel and Awesomer Fruit.";
 				else if title entry is "Muffin muffin":
 					if pink gel is owned and Awesomer Fruit is owned:
 						now sextablerun is 1;
@@ -606,7 +630,7 @@ to say FrancoisBakingMenu:
 						decrease carried of Awesomer Fruit by 1;
 						increase carried of Muffin muffin by 1;
 					else:
-						say "You do not have the required ingredients. pink gel and Awesome Fruit.";
+						say "You do not have the required ingredients: pink gel and Awesome Fruit.";
 				else if title entry is "lollicock":
 					if honeycomb is owned and musky cock flower is owned:
 						now sextablerun is 1;
@@ -615,7 +639,7 @@ to say FrancoisBakingMenu:
 						decrease carried of musky cock flower by 1;
 						increase carried of lollicock by 1;
 					else:
-						say "You do not have the required ingredients. honeycomb and musky cock flower.";
+						say "You do not have the required ingredients: honeycomb and musky cock flower.";
 				else if title entry is "dragon moelleux":
 					if ebonflame scale is owned and glowing ember is owned and chocolate milk is owned:
 						now sextablerun is 1;
@@ -625,7 +649,7 @@ to say FrancoisBakingMenu:
 						decrease carried of chocolate milk by 1;
 						increase carried of dragon moelleux by 1;
 					else:
-						say "You do not have the required ingredients. ebonflame scale, glowing ember and chocolate milk.";
+						say "You do not have the required ingredients: ebonflame scale, glowing ember and chocolate milk.";
 				else if title entry is "fizz-aux-pommes":
 					if pony cider is owned and soda is owned and crushed candies is owned:
 						now sextablerun is 1;
@@ -635,7 +659,7 @@ to say FrancoisBakingMenu:
 						decrease carried of crushed candies by 1;
 						increase carried of fizz-aux-pommes by 1;
 					else:
-						say "You do not have the required ingredients. pony cider, soda and crushed candies.";
+						say "You do not have the required ingredients: pony cider, soda and crushed candies.";
 				else if title entry is "vin-coeur":
 					if wyvern goop is owned and Satyr wine is owned and crushed candies is owned:
 						now sextablerun is 1;
@@ -645,7 +669,7 @@ to say FrancoisBakingMenu:
 						decrease carried of Satyr wine by 1;
 						increase carried of vin-coeur by 1;
 					else:
-						say "You do not have the required ingredients. crushed candies, Satyr wine and wyvern goop.";
+						say "You do not have the required ingredients: crushed candies, Satyr wine and wyvern goop.";
 				else if title entry is "gingerbread": [gingerbread - egg nog + pixie dust + blue gel]
 					if egg nog is owned and pixie dust is owned and blue gel is owned:
 						now sextablerun is 1;
@@ -1004,7 +1028,7 @@ to say lollicock Use:
 	decrease hunger of player by 5;
 	if hunger of player < 0, now hunger of player is 0;
 
-dragon moelleux is a grab object. It is a part of the player. it is not temporary. it is fast.
+dragon moelleux is a grab object. It is a part of the player. It is not temporary. It is fast.
 The usedesc of dragon moelleux is "[dragonmoelleuxuse]".
 the scent of dragon moelleux is "     The small chocolate cake smells rich and sweet, as well as a little spicy.".
 
@@ -1041,14 +1065,14 @@ to say dragonmoelleuxuse:
 	else:
 		say "     That's probably not a good idea right now.";
 
-fizz-aux-pommes is a grab object. It is a part of the player. it is not temporary. it is fast.
+fizz-aux-pommes is a grab object. It is a part of the player. It is not temporary. It is fast.
 The usedesc of fizz-aux-pommes is "[fizz-aux-pommesuse]".
 the scent of fizz-aux-pommes is "     The bubbling drink smells of overwhelmingly sweet apple.".
 
 to say fizz-aux-pommesuse:
 	if inafight is 1:
 		say "     Slamming back the bubbling drink, you feel a rush of energy surge though you, making you light on your feet and slightly aroused.";
-		say "+3 dodge bonus, +3 hit bonus, +15 libido! ";
+		say "+3 dodge bonus, +3 hit bonus, +15 libido!";
 		increase plhitbonus by 3;
 		increase pldodgebonus by 3;
 		increase libido of player by 15;
@@ -1057,7 +1081,7 @@ to say fizz-aux-pommesuse:
 	else:
 		say "That's probably not a good idea right now.";
 
-vin-coeur is a grab object. It is a part of the player. it is not temporary. it is fast.
+vin-coeur is a grab object. It is a part of the player. It is not temporary. It is fast.
 The usedesc of vin-coeur is "[vin-coeuruse]".
 the scent of vin-coeur is "     rich and heavy (temporary desc!)".
 
@@ -1093,7 +1117,7 @@ to gingerbreadinfect:
 	infect "Gingerbread";
 	now non-infectious entry is true;
 
-cheesecake is a grab object. It is a part of the player. it is not temporary.
+cheesecake is a grab object. It is a part of the player. It is not temporary.
 cheesecake has a usedesc "[cheesecake Use]".
 the scent of cheesecake is "The cheesecake has a rich, sweet scent of strawberry.".
 

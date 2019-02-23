@@ -16,7 +16,7 @@ This will let you record your changes and send it up to the Github repository fo
 https://desktop.github.com/
 
 ## 4. Clone your fork of the Flexible-Survival repository
-Click `Clone a repository` and it will show you a list of your forked repositories--click on Flexible-Survival and click `Clone`.
+Click `Clone a repository` and it will show you a list of your forked repositories - click on Flexible-Survival and click `Clone`.
 
 ## 5. Download Atom
 Atom is a text editor that you can use to edit files. There are a couple of useful packages you can install to make life easier!

@@ -28,11 +28,11 @@ to say losetomonstercostume:
 
 
 to say beatthemonstercostume:
-	say "     Your final blow knocks the stuffing out of the costume creature, as it were, and it collapses to the ground in a heap. ";
+	say "     Your final blow knocks the stuffing out of the costume creature, as it were, and it collapses to the ground in a heap";
 	if werewolfcostumenosex > 2:
-		say "     As with the others of its kind, you leave it alone now that you've taken the fight out of it.";
+		say ". As with the others of its kind, you leave it alone now that you've taken the fight out of it.";
 	else if player is male and libido of player > 25 and werewolfcostumenosex < 3:
-		say "     Feeling a little worked up after your fight, you glance down at the costume creature. It moans softly, struggling to rise again. Despite its costume nature, that head of its does have a mouth you might be able to make use of, if you were so inclined. Shall you go ahead with this plan?";
+		say ". Feeling a little worked up after your fight, you glance down at the costume creature. It moans softly, struggling to rise again. Despite its costume nature, that head of its does have a mouth you might be able to make use of, if you were so inclined. Shall you go ahead with this plan?";
 		if player consents:
 			now werewolfcostumenosex is 0;
 			say "     Grabbing the costume creature by the head, you press its muzzle to your groin and thrust your hard cock into is open mouth. It goes a weak moan and flops its limp arms, but is too weak to stop you from taking advantage of it. You pound your hips against its padded muzzle, grinning as it starts to respond by licking and sucking at your [cock of player] manmeat. As you continue, you can feel its soft paws slide up your legs, but they're no longer struggling, instead rubbing your thighs and gripping your ass so it can better pull its head into your thrusts.";
@@ -43,6 +43,8 @@ to say beatthemonstercostume:
 		else:
 			increase werewolfcostumenosex by 1;
 			say "     Certain you can find a better way to sate your lusts in this wacky city, you leave the strange beast behind.";
+	else:
+		say ".";
 
 
 
@@ -55,7 +57,7 @@ to say monstercostumedesc:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
-	say "     A strange, wobbly creature approaches you. It seems like the werewolf from a cheap horror movie or a haunted house, but deflated and empty inside. It is like an empty costume moving on its own. The limbs flop around some as it moves, the padded, oversized feet dragging against the ground. The sculpted werewolf face is well-moulded and would be quite frightening if it leaped out at you. But having more life than a mere costume, the expression changes as it snarls at you, moving in to strike at you.";
+	say "     A strange, wobbly creature approaches you. It seems like the werewolf from a cheap horror movie or a haunted house, but deflated and empty inside. It is like an empty costume moving on its own. The limbs flop around some as it moves, the padded, oversized feet dragging against the ground. The sculpted werewolf face is well-molded and would be quite frightening if it leaped out at you. But having more life than a mere costume, the expression changes as it snarls at you, moving in to strike at you.";
 
 
 Section 2 - Monster Insertion

@@ -172,7 +172,7 @@ Check shooting something (called the target) with something (called the boomstic
 
 Check shooting something (called the target) with something (called the boomstick) (this is the suicide rule):
 	if the target is the player:
-		end the story finally saying "You have commited suicide!".
+		end the story finally saying "You have committed suicide!".
 
 Carry out an actor shooting something (called the target) with something (this is the standard carry out shooting rule):
 	if the target is a person begin;
@@ -272,7 +272,7 @@ Check stabbing something (called the target) with something (called the pigstick
 
 Check stabbing something (called the target) with something (called the pigsticker) (this is the harikari rule):
 	if the target is the player:
-		end the story finally saying "You have commited suicide!".
+		end the story finally saying "You have committed suicide!".
 
 Carry out an actor stabbing something (called the target) with something (this is the standard carry out stabbing rule):
 	if the target is a person begin;
@@ -372,7 +372,7 @@ Check clubbing something (called the target) with something (called the cudgel) 
 
 Check clubbing something (called the target) with something (called the cudgel) (this is the smashing self rule):
 	if the target is the player:
-		end the story finally saying "You have commited suicide!".
+		end the story finally saying "You have committed suicide!".
 
 Carry out an actor clubbing something (called the target) with something (this is the standard carry out clubbing rule):
 	if the target is a person begin;
@@ -473,9 +473,9 @@ This extension adds the actions shooting something with something, clubbing some
 
 Shooting a non-person thing is allowed, but has no real affect on the thing without additional rules. It is possible to make a game where the player has to shoot bottles to win a prize, or even to stop an enemy in a vehicle by shooting the tires.
 
-Stabbing a non-person thing is also allowed, but again does nothing on it's own. Again, the uses for this would depend on what the author had need to do with it.
+Stabbing a non-person thing is also allowed, but again does nothing on its own. Again, the uses for this would depend on what the author had need to do with it.
 
-Clubbing a non-person thing is also allowed, but again does nothing on it's own. Again, the uses for this would depend on what the author had need to do with it.
+Clubbing a non-person thing is also allowed, but again does nothing on its own. Again, the uses for this would depend on what the author had need to do with it.
 
 Another thing this extension does is add a few kinds: weapon (kind of thing), projectile (kind of weapon), blade (kind of weapon), bludgeon (kind of weapon), fire arm (kind of projectile), bow (kind of projectile), knife (kind of blade), club (kind of bludgeon) and sword (kind of blade). An author can create most any weapon they want using bludgeon, club, fire arm, bow, knife or sword, and they should behave properly.
 

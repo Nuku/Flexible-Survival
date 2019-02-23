@@ -73,10 +73,10 @@ Instead of conversing the Brian:
 		WaitLineBreak;
 		say "     'I'm sure a person of your ";
 		if bodyname of player is "Human" and player is pure:
-			say "resistance, ";
+			say "resistance,' ";
 		else:
-			say "curiosity, ";
-		say "' he begins as he gestures at his large, rhino-like form, 'has seen things like this, and it's a big change no matter who you are. I mean, I wasn't a small guy before all of this, but now. I mean damn, right?' Brian chuckles out with a bit of tainted amusement. 'Some parts of it can be a bit distractin['], if ya know what I mean... but hey, at least I'm ripped,' he says while flexing.";
+			say "curiosity,' ";
+		say "he begins as he gestures at his large, rhino-like form, 'has seen things like this, and it's a big change no matter who you are. I mean, I wasn't a small guy before all of this, but now. I mean damn, right?' Brian chuckles out with a bit of tainted amusement. 'Some parts of it can be a bit distractin['], if ya know what I mean... but hey, at least I'm ripped,' he says while flexing.";
 		say "     'I should be able to get us out of here right quick with this much muscle!' The excited rhino man shouts, 'I mean, ya know the military is watchin['] all the regular ways out of the city, but way I figures it, they won't be watchin['] this concrete bit. So once I crush this concrete bit into smaller bits, it'll be clear sailing from there!' Brian yells excitedly, pumping himself up to charge. He then turns back to the wall, lowers his head, and rams it again. The impact sends him reeling back from the wall, but beyond that the impact does little more than make him shake his head. You give one more glance to the wall, and can almost swear the cracks are thicker now, but that seems unlikely.";
 		now BrianRelationship is 2; [The player has talked to him at least once]
 	[else if BrianRelationship is 2:
@@ -97,7 +97,7 @@ to say attemptsexwithbrian:
 		say "     '[one of]Mmmm... that sounds kinda tempting, but this wall ain't gonna knock itself down[or]Sure. Lemme just finish up with this first. Shouldn't be much longer[or]Not tonight. I've got a headache, honey[or]Just a few more hits first[or]Not today, wall!' he growls, pointing angrily at it and seemingly ignoring you. 'You're goin['] down[in random order],' he says as he lines up for another charge at the wall.";
 	else if BrianRelationship >= 2 and XP of Brian is 0: [He has been talked to at the very least]
 		if player is female and breast size of player > 2:
-			say "     'Oh, hello there pretty lady,' the rhino almost whistles out. After he finishes talking, the big muscled man then turns to drink in your feminine form, one of his hooved feet scraping lightly across the ground. 'I'm glad to see you back, but how I didn't notice how fine you were before, I'll never.' Brian just glares at you as his hoof scrapes across the ground faster and faster, his cock soon joining as another obvious sign of arousal. Content with his displays of need, you walk over to him, his big, meaty hands helping you out of your gear, while his naked form rubs and grinds at your own throughout. With great speed the clothing is thrown off to the side, leaving you grinding into each others['] bodies, both groping and kneading at each other as time goes on. Your eyes meet after several minutes of exploration, his hands gripping at your breasts as you begin to wonder about the main course.";
+			say "     'Oh, hello there pretty lady,' the rhino almost whistles out. After he finishes talking, the big muscled man then turns to drink in your feminine form, one of his hooved feet scraping lightly across the ground. 'I'm glad to see you back, but how I didn't notice how fine you were before, I'll never.' Brian just glares at you as his hoof scrapes across the ground faster and faster, his cock soon joining as another obvious sign of arousal. Content with his displays of need, you walk over to him, his big, meaty hands helping you out of your gear, while his naked form rubs and grinds at your own throughout. With great speed the clothing is thrown off to the side, leaving you grinding into each other's bodies, both groping and kneading at each other as time goes on. Your eyes meet after several minutes of exploration, his hands gripping at your breasts as you begin to wonder about the main course.";
 			say "[briansexmenu]";
 		else:
 			say "     'Sorry dude, but I only like to fuck the ladies. Well... I think anyways, it can be hard to remember sometimes,' Brian says in an absentminded manner as he stares at the wall. Brian hesitates for a moment as he eyes you though, clearly tempting the hard-headed mutant. Even as he moves back into charging position, he glances back at you and is uneven of the mark. Seeing your opportunity, you rush after him. A few paces behind, you end up tackling him down while he's dazed after running into the wall. Pinning him beneath you, you give him an aggressive kiss while getting into position atop him.";
@@ -267,11 +267,11 @@ to say sexwithBrian05_prelim:		[anal on Brian preliminary - not been fucked befo
 	now playernum is a random number between 1 and playernum;
 	say "     [special-style-1][playernum][roman type] vs [special-style-2][briannum][roman type]: ";
 	if playernum > briannum:
-		say "     It is a tough match against your burly opponent, but you eventually manage to get him to the ground beneath you. Pinning him down, he's forced to concede to you. 'Nice going,' he pants. 'I guess that's that, then.' Being a good sport (and quite aroused after the exciting tussle), he seems quite ready to let you claim your victory prize. Quite turned on yourself, you're ready and raring to get to it as well.";
+		say "It is a tough match against your burly opponent, but you eventually manage to get him to the ground beneath you. Pinning him down, he's forced to concede to you. 'Nice going,' he pants. 'I guess that's that, then.' Being a good sport (and quite aroused after the exciting tussle), he seems quite ready to let you claim your victory prize. Quite turned on yourself, you're ready and raring to get to it as well.";
 		WaitLineBreak;
 		say "[sexwithBrian05]";
 	else:
-		say "     Try as you might, you end up pinned beneath the muscly rhino as he uses his great strength against you. With you in such a position and the burly male hard after the exciting tussle, he seems quite ready now to claim his victory prize. And you're too turned on by this point to be that upset about how things turned out. You raise your ass, offering your [if player is female]juicy pussy[else]crinkled hole [end if]to him.";
+		say "Try as you might, you end up pinned beneath the muscly rhino as he uses his great strength against you. With you in such a position and the burly male hard after the exciting tussle, he seems quite ready now to claim his victory prize. And you're too turned on by this point to be that upset about how things turned out. You raise your ass, offering your [if player is female]juicy pussy[else]crinkled hole [end if]to him.";
 		WaitLineBreak;
 		if player is female:
 			say "[sexwithBrian03]";

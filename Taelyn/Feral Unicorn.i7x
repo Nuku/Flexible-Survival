@@ -1,11 +1,11 @@
 Version 1 of Feral Unicorn by Taelyn begins here.
-[Others can add to Feral Unicorn if keeping with the genreal theme set]
-[Possible scenes for others to add are size and body shape varient scenes.]
+[Others can add to Feral Unicorn if keeping with the general theme set]
+[Possible scenes for others to add are size and body shape variant scenes.]
 [A Special scene should be written for Twisted Capacity for smaller bodies.]
 
 "Adds a Feral Unicorn creature to Flexible Survival's Wandering Monsters table"
 
-Section 1 - Monster descripton
+Section 1 - Monster description
 
 when play begins:
 	add { "Feral Unicorn" } to infections of guy;
@@ -13,7 +13,7 @@ when play begins:
 
 to say FeralUnicornDesc:
 	setmongender 3;
-	say "     You hear the rustle of leaves and branches as a large equine pushes it's way past them and into the open. This is no normal horse though. It is as big as a daft horse. From hoof to shoulder it is almost as tall as a human. A long spiral horn grows proudly out of its forehead, and its long, elegant mane hangs down, unkept and wild. A tuft of hair hangs from its chin, almost like a beard, and its lower legs are [']feathered['] like a Clydesdale. Its tail, however, is different than a normal horse. It stretches out behind the mystical creature, only lightly furred until the end where the hair tufted out like a weird mix of a horse and lion's tail. This was a true unicorn, and if its huge equine cock and balls had anything to tell you, a very horny male unicorn. One that was now charging towards you with lewd intent!";[encounter text]
+	say "     You hear the rustle of leaves and branches as a large equine pushes its way past them and into the open. This is no normal horse though. It is as big as a daft horse. From hoof to shoulder it is almost as tall as a human. A long spiral horn grows proudly out of its forehead, and its long, elegant mane hangs down, unkept and wild. A tuft of hair hangs from its chin, almost like a beard, and its lower legs are [']feathered['] like a Clydesdale. Its tail, however, is different than a normal horse. It stretches out behind the mystical creature, only lightly furred until the end where the hair tufted out like a weird mix of a horse and lion's tail. This was a true unicorn, and if its huge equine cock and balls had anything to tell you, a very horny male unicorn. One that was now charging towards you with lewd intent!"; [encounter text]
 
 Section 2 - Monster Responses
 
@@ -31,9 +31,9 @@ to say LoseToFeralUnicorn:
 			say "     Raising your hands, you do your best to try to tell the fantastical beast that you no longer mean to fight. The unicorn stops his charge and pauses as it gives you a thoughtful expression before nudging you with his nose towards the stone table. ";
 		else: [player lost]
 			say "     You collapse in defeat as the unicorn stands proudly over you, looking over your [bodyname of player in lower case] body. With a huff of satisfaction, he forces you towards the stone table against the cliff face, using the prodding of his horn as [']encouragement['] to make you move. ";
-		say "Once standing in front of the stone slab, the unicorn pushes you down against it, leaving you ass up towards him. He slowly mounts you, his body pressing against you while his virile musk invades your senses. As if by magic, any clothing and gear on you is removed and appears in a heap nearby, giving the large equine full access to you. ";
+		say "Once standing in front of the stone slab, the unicorn pushes you down against it, leaving you ass up towards him. He slowly mounts you, his body pressing against you while his virile musk invades your senses. As if by magic, any clothing and gear on you is removed and appears in a heap nearby, giving the large equine full access to you.";
 		if player is herm: 			  [Yes = HERM Identified!]
-			say "The blunt tip of his massive, dripping erection presses against your sex as he adjusts his aim but doesn't enter just yet. The unicorn's horn starts to glow, and you suddenly feel a tingle as your asshole, cunt and cock[smn] as your rear entrance suddenly tightens up and your hymen regrows. [bold type]You're a virgin again![roman type] But not for long.";
+			say "     The blunt tip of his massive, dripping erection presses against your sex as he adjusts his aim but doesn't enter just yet. The unicorn's horn starts to glow, and you suddenly feel a tingle as your asshole, cunt and cock[smn] as your rear entrance suddenly tightens up and your hymen regrows. [bold type]You're a virgin again![roman type] But not for long.";
 			say "     Without giving you a chance to react, the feral male thrusts forwards, making you gasp when his equine shaft sinks deep into you. The magical beast begins in earnest, thrusting relentlessly into you time and time again without pause. His breath feels hot and heavy against you, and each thrust is so powerful that it pushes you hard against the table. You can't help but moan as you are bred like his mare, your virgin cunt begging for more, which he is more than happy to give you. With a few more powerful, thrusts, the unicorn's cock tip flares, sealing you up as best as he can before unleashing rope after rope of pearlescent cum deep into your awaiting womb until you feel almost bloated with his virile seed. The pleasure is too much, and you cum soon after; [if cocks of player > 1]all of your own cocks erupt[else]your own cock erupts[end if] as well, spilling your own fluids against the stone, which it strangely seems to absorb into, leaving the surface clean.";
 			WaitLineBreak;
 			say "     Slowly, the unicorn pulls out of you, leaving your freshly used hole quivering in the afterglow while some of the unicorn jizz leaks out of you, only to be absorbed into the table. You turn around just in time to see the unicorn proudly trotting away into the forest, leaving you to clean yourself up.";
@@ -48,7 +48,7 @@ to say LoseToFeralUnicorn:
 				fimpregchance;
 		else if player is male: [Yes = MALE Identified!]
 			say "     Raising your hands, you do your best to try to tell the fantastical beast that you no longer mean to fight. The unicorn stops his charge and pauses as it gives you a thoughtful expression before nudging you with his nose towards the stone table. Once standing in front of the stone slab, the unicorn pushes you down against it, leaving your ass up towards him. He slowly mounts you, his body pressing against you while his virile musk invades your senses. As if by magic, any clothing and gear on you is removed and appears in a heap nearby, giving the large equine full access to you. The blunt tip of his massive, dripping erection presses against your asshole as he adjusts his aim but doesn't enter just yet. The unicorn's horn starts to glow, and you suddenly feel a tingle in your asshole and cock[smn] as your rear entrance suddenly starts to tighten up. [bold type]You're a virgin again![roman type] But not for long.";
-			say "     Without giving you a chance to react, the feral male thrusts forwards, making you gasp when his equine shaft sinks deep into you. The magical beast begins in earnest, thrusting relentlessly into you time and time again without pause. His breath feels hot and heavy against you, and each thrust is so powerful that it pushes you hard against the table. ";
+			say "     Without giving you a chance to react, the feral male thrusts forwards, making you gasp when his equine shaft sinks deep into you. The magical beast begins in earnest, thrusting relentlessly into you time and time again without pause. His breath feels hot and heavy against you, and each thrust is so powerful that it pushes you hard against the table.";
 			say "     You can't help but moan as you are bred like his mare, your virgin tailhole begging for more, which he is more than happy to give you. With a few more powerful thrusts, the unicorn's cock tip flares, sealing you up as best as he can before unleashing rope after rope of pearlescent cum deep into your ass until you feel almost bloated with his virile seed. The pleasure is too much, and you cum soon after; [if cocks of player > 1]all of your own cocks erupt[else]your own cock erupts[end if] as well, spilling your own fluids against the stone, which it strangely seems to absorb into, leaving the surface clean.";
 			WaitLineBreak;
 			say "     Slowly, the unicorn pulls out of you, leaving your freshly used hole quivering in the afterglow while some of the unicorn jizz leaks out of you, only to be absorbed into the table. You take a moment to catch your breath before turning just in time to see the unicorn proudly trotting away into the forest, leaving you to clean yourself up and collect your gear.";
@@ -82,7 +82,7 @@ to say FeralUnicornFuck:
 			[]
 	else if player is male: [Yes = MALE Identified!]
 		say "     You collapse in defeat as the unicorn stands proudly over you, looking over your [bodyname of player in lower case] body. With a huff of satisfaction, he forces you towards the stone table against the cliff face, using the prodding of his horn as [']encouragement['] to make you move. Once standing in front of the stone slab, the unicorn pushes you down against it, leaving your ass up towards him. He slowly mounts you, his body pressing against you while his virile musk invades your senses. As if by magic, any clothing and gear on you is removed and appears in a heap nearby, giving the large equine full access to you. The blunt tip of his massive, dripping erection presses against your asshole as he adjusts his aim but doesn't enter just yet. The unicorn's horn starts to glow, and you suddenly feel a tingle in your asshole and cock[smn] as your rear entrance suddenly starts to tighten up. [bold type]You're a virgin again![roman type] But not for long.";
-		say "     Without giving you a chance to react, the feral male thrusts forwards, making you gasp when his equine shaft sinks deep into you. The magical beast begins in earnest, thrusting relentlessly into you time and time again without pause. His breath feels hot and heavy against you, and each thrust is so powerful that it pushes you hard against the table. ";
+		say "     Without giving you a chance to react, the feral male thrusts forwards, making you gasp when his equine shaft sinks deep into you. The magical beast begins in earnest, thrusting relentlessly into you time and time again without pause. His breath feels hot and heavy against you, and each thrust is so powerful that it pushes you hard against the table.";
 		say "     You can't help but moan as you are bred like his mare, your virgin tailhole begging for more, which he is more than happy to give you. With a few more powerful thrusts, the unicorn's cock tip flares, sealing you up as best as he can before unleashing rope after rope of pearlescent cum deep into your ass until you feel almost bloated with his virile seed. The pleasure is too much, and you cum soon after; [if cocks of player > 1]all of your own cocks erupt[else]your own cock erupts[end if] as well, spilling your own fluids against the stone, which it strangely seems to absorb into, leaving the surface clean.";
 		WaitLineBreak;
 		say "     Slowly, the unicorn pulls out of you, leaving your freshly used hole quivering in the afterglow while some of the unicorn jizz leaks out of you, only to be absorbed into the table. You take a moment to catch your breath before turning just in time to see the unicorn proudly trotting away into the forest, leaving you to clean yourself up and collect your gear.";
@@ -240,7 +240,7 @@ to say cock remover use:
 		if debugactive is 1:
 			say "DEBUG -> After-Use: Cocks of player: [cocks of player][line break]";
 	else:
-		say "     At first, you don't feel any different, that is until you start to cramp up. The shooting pain in your abdomen is almost crippling, but thankfully, after a few moments, it passes.";
+		say "At first, you don't feel any different, that is until you start to cramp up. The shooting pain in your abdomen is almost crippling, but thankfully, after a few moments, it passes.";
 		LibidoLoss 20;]
 
 Feral Unicorn ends here.

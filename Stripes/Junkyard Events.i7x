@@ -47,7 +47,7 @@ when play begins:
 
 Instead of resolving a Raiding Party:
 	say "     As you search through the junkyard, you can hear some cackling laughter coming closer as well as the sounds of an angry feline. There is a smack and the feline sounds are silenced with a whimper, but the cackling laughter gets louder. You can tell there are several people laughing and they're getting closer.";
-	say "     [bold type] Shall you stay and wait for them to see what's going on or shall you make your escape while you can?[roman type][line break]";
+	say "     [bold type]Shall you stay and wait for them to see what's going on or shall you make your escape while you can?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stay.";
 	say "     ([link]N[as]n[end link]) - Flee.";
@@ -128,13 +128,13 @@ Instead of resolving a Scattered Trash:
 	WaitLineBreak;
 	let bonus be (( perception of player + dexterity of player minus 20 ) divided by 2 );
 	let dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+	say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 	if bonus + dice > 15:
-		say "     You manage to spot a sticky mess as you're stepping around through the trash. It's hard to tell over the scent of the surrounding garbage, but it's clearly the sexual fluids from some kind of creature. Finishing picking around the trash, you do manage to find a container of water. The small jug has enough for a drink of water, but it seems to have been filled after the outbreak and is probably not clean.";
+		say "You manage to spot a sticky mess as you're stepping around through the trash. It's hard to tell over the scent of the surrounding garbage, but it's clearly the sexual fluids from some kind of creature. Finishing picking around the trash, you do manage to find a container of water. The small jug has enough for a drink of water, but it seems to have been filled after the outbreak and is probably not clean.";
 		increase carried of dirty water by 1;
 		increase score by 1;
 	else:
-		say "     As you're trying to maneuver around the scattered trash, you place your foot on something slick just as you're turning to look at something shiny. Your foot comes out from under you and you fall onto your back, landing among the trash in something sticky. Getting up quickly, you notice it is a puddle of sexual fluids from some kind of creature. You try to wipe it off, but it's clearly too late as the tingles and prickles of spreading infection start.";
+		say "As you're trying to maneuver around the scattered trash, you place your foot on something slick just as you're turning to look at something shiny. Your foot comes out from under you and you fall onto your back, landing among the trash in something sticky. Getting up quickly, you notice it is a puddle of sexual fluids from some kind of creature. You try to wipe it off, but it's clearly too late as the tingles and prickles of spreading infection start.";
 		if a random chance of 1 in 2 succeeds:			[Trash Coon]
 			repeat with y running from 1 to number of filled rows in Table of Random Critters:
 				choose row y in Table of Random Critters;
@@ -163,7 +163,7 @@ The sarea of Stray Cat is "Junkyard".
 Instead of resolving a Stray Cat:
 	say "     On a search through the scrapyard, you find your path blocked by a sweaty and panting snow leopard. It seems he wandered in here and has gotten lost. Startled to see you there, he gives a dry mrowl that cracks in his dry throat before stalking towards you quickly. ";
 	if dirty water is owned or water bottle is owned:
-		say "     You have some water in your pack which may satisfy him long enough to make your escape.";
+		say "You have some water in your pack which may satisfy him long enough to make your escape.";
 		say "     [bold type]Shall you toss him some water?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
@@ -190,7 +190,7 @@ Instead of resolving a Stray Cat:
 			challenge "Snow Leopard";
 			now Resolution of Stray Cat is 3; [refused snow leopard, fought]
 	else:
-		say "     You have but a short moment before the feline is upon you and attacking.";
+		say "You have but a short moment before the feline is upon you and attacking.";
 		now Resolution of Stray Cat is 4; [fought snow leopard]
 	now Stray Cat is resolved;
 

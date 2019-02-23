@@ -162,7 +162,7 @@ when play begins:
 	add Trashed Refuge to badspots of girl;
 	add Trashed Refuge to badspots of guy;
 
-AbandonedRoomStatus is a number that varies. AbandonedRoomStatus usually is 0.
+[Resolution of Trashed Refuge]
 [0 - not seen, not searched]
 [1 - seen, not searched]
 [2 - seen, searched once]
@@ -170,7 +170,7 @@ AbandonedRoomStatus is a number that varies. AbandonedRoomStatus usually is 0.
 [4 - seen, searched three times]
 
 Instead of resolving a Trashed Refuge:
-	if AbandonedRoomStatus is 0:
+	if Resolution of Trashed Refuge is 0:
 		say "     You come upon a room in the uppermost level of the underground complex that looks like it was used by people seeking refuge from the things going on out in the city. Sadly, that doesn't seem to have worked out for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
 		say "     [bold type]Do you want to want to search through the room? (With - whatever it was - splattering its bodily fluids far and wide, there's a high risk of getting exposed to some of it.)[roman type][line break]";
@@ -188,12 +188,11 @@ Instead of resolving a Trashed Refuge:
 				increase carried of food by 1;
 			if a random chance of 6 in 8 succeeds:
 				infect "Tentacle Horror";
-			increase AbandonedRoomStatus by 1;
-		else:
+			now Resolution of Trashed Refuge is 1; [1st visit done]
+		else: [do not go in]
 			LineBreak;
 			say "     Better not to risk touching any of those cum-stains accidentally. You leave the room and make your way back to the surface.";
-		now Resolution of Trashed Refuge is 1; [1st visit]
-	else if AbandonedRoomStatus is 1:
+	else if Resolution of Trashed Refuge is 1: [2nd visit after ransacking it once]
 		say "     Roaming through the underground complex you come again to the room some hapless refugees took shelter in before. It's easy to see that didn't work out too well for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
 		say "     [bold type]Do you want to want to search through the room? (With - whatever it was - splattering its bodily fluids far and wide, there's a high risk of getting exposed to some of it.)[roman type][line break]";
@@ -212,12 +211,11 @@ Instead of resolving a Trashed Refuge:
 				increase carried of food by 1;
 			if a random chance of 6 in 8 succeeds:
 				infect "Tentacle Horror";
-			increase AbandonedRoomStatus by 1;
+			now Resolution of Trashed Refuge is 2; [2nd visit]
 		else:
 			LineBreak;
 			say "     Better not to risk touching any of those cum-stains accidentally. You leave the room and make your way back to the surface.";
-		now Resolution of Trashed Refuge is 2; [2nd visit]
-	else if AbandonedRoomStatus is 2:
+	else if Resolution of Trashed Refuge is 2:
 		say "     Roaming through the underground complex you come again to the room some hapless refugees took shelter in before. It's easy to see that didn't work out too well for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
 		say "     [bold type]Do you want to want to give the stuff in the room another going-over? You just might have missed something. (With - whatever it was - splattering its bodily fluids far and wide, there's a high risk of getting exposed to some of it.)[roman type][line break]";
@@ -234,18 +232,17 @@ Instead of resolving a Trashed Refuge:
 				increase carried of chips by 1;
 			if a random chance of 6 in 8 succeeds:
 				infect "Tentacle Horror";
-			increase AbandonedRoomStatus by 1;
+			now Resolution of Trashed Refuge is 3; [3rd visit]
 		else:
 			LineBreak;
 			say "     Better not to risk touching any of those cum-stains accidentally. Most likely there isn't anything more in here anyways. You leave the room and make your way back to the surface.";
-		now Resolution of Trashed Refuge is 3; [3rd visit]
-	else if AbandonedRoomStatus is 3:
+	else if Resolution of Trashed Refuge is 3:
 		say "     Roaming through the underground complex you come again to the room some hapless refugees took shelter in before. It's easy to see that didn't work out too well for them. Haphazardly strewn about are a number of sleeping bags, ripped articles of clothing and all kinds of other items. Splotches of partly dried white goop all over the chaotic mess hint that one of the creatures down here came by for a visit...";
 		LineBreak;
 		say "     As your thoughts wander to maybe searching in here a third time, you suddenly hear a noise behind you. Whirling around, you find yourself face to face with a many-tentacled creature. Looks like you're not the only one returning to this room to pick up some more goodies. With outstretched tentacles, the creature attacks.";
 		challenge "Tentacle Horror";
 		say "     Time to get out of here before more of those things appear. You leave the room and make your way back to the surface.";
-		now Resolution of Trashed Refuge is 4; [4th visit]
+		now Resolution of Trashed Refuge is 3; [3rd visit]
 		now Trashed Refuge is resolved;
 
 Table of GameEventIDs (continued)
@@ -521,7 +518,7 @@ To say CellFour4:
 	say "     Pulling off your clothes and dropping them on the floor as you walk towards the bed in the corner of the room, you lie down on it and spread your legs and pussy lips. Accompanied by pushing two fingers into your cunt, then licking your female juices off them, you tell him to fuck you. From the excited look on his face and the quickness with which he moves over to you, you don't think he gets to have sex in anything but the submissive role with his master. Images of the man's ass speared on his master's cock, then later getting fucked and impregnated after he became a herm dance in front of your mental eye for a moment.";
 	say "     Then you get distracted by the feeling of two hands on your legs, holding them apart as a bearded face rubs against your skin. Your herm partner runs his tongue along the inside of one leg, then the other, before moving on to your pussy and licking your sensitive nether lips. Your eager partner licks and fingers you a while, then he moves up to kneel between your legs. His erect shaft rests hotly against your pubic mound for a moment, then he takes it into his hand and guides it between your folds, sliding into you. Your passage stretches around his manhood as it is halfway in, then three quarters and finally his balls touch your ass as he bottoms out inside you. You can feel the bulge of his pregnant belly against your own as he whispers 'Is this okay?', to which you answer that you're horny and he should get to it already.";
 	WaitLineBreak;
-	say "     Emboldened by your urgent request, the man forgets his training as a submissive fuckpet for a while, pulling back and thrusting back in deep. He's got some nice technique moving his hips a bit between separate thrusts to hit different spots inside you, expertly increasing your arousal more and more. Before the nanite infection and becoming a breeding slave, he must have quite popular with those that caught his eye. With him driving you to the edge of orgasm, then slowing down again to let you cool off a bit before resuming his thrusting, he certainly takes very good care of you. Being in a state of lust-filled bliss for you don't know how long, this is certainly one encounter to remember, crowned by him stimulating you to a breathtaking climax. [if player is male]With your partner's shaft deep inside your pussy as he hammers against you, it's as if he fucks the cum right out of you, your erection spurting another blast of cum all over your chest every time he thrusts in.[else if player is female]With your partner's shaft deep inside your ass as he hammers against you, your pussy starts throbbing and dripping femcum, creating a large wet spot on the sheets between your legs.[end if]";
+	say "     Emboldened by your urgent request, the man forgets his training as a submissive fuckpet for a while, pulling back and thrusting back in deep. He's got some nice technique moving his hips a bit between separate thrusts to hit different spots inside you, expertly increasing your arousal more and more. Before the nanite infection and becoming a breeding slave, he must have quite popular with those that caught his eye. With him driving you to the edge of orgasm, then slowing down again to let you cool off a bit before resuming his thrusting, he certainly takes very good care of you. Being in a state of lust-filled bliss for you don't know how long, this is certainly one encounter to remember, crowned by him stimulating you to a breathtaking climax[if player is male]. With your partner's shaft deep inside your pussy as he hammers against you, it's as if he fucks the cum right out of you, your erection spurting another blast of cum all over your chest every time he thrusts in[else if player is female]. With your partner's shaft deep inside your ass as he hammers against you, your pussy starts throbbing and dripping femcum, creating a large wet spot on the sheets between your legs[end if].";
 	LineBreak;
 	say "     His duty to you fulfilled, the herm guy relaxes any restraint he held on himself, and after just a few more thrusts, he orgasms. You can feel his shaft throb and pulse as he comes, his fertile seed spurting deep into your womb.[fimpregchance]";
 	say "     Pulling out after his last spurts go into you, the man lets himself sink down on the bed, breathing hard. A look of... clarity(?) comes to his face for a moment as he moans 'Thank you.', then it is gone again and he continues with 'Did I please the master's friend? I hope I was good enough and not out of practice. The master doesn't call on me to do... that.' You nod, telling him he did well, then stand up and go to get your clothes. As you dress, the pregnant herm lies on the bed stroking his belly softly, then falls asleep. You leave the cell and make your way back up to the surface through the dark corridors of the underground.";
@@ -532,7 +529,7 @@ To say CellFour5:
 	say "     Pulling off your clothes and dropping them on the floor as you walk towards the bed in the corner of the room, you get on it on all fours and look back at the herm guy over your shoulder. Accompanied by a little shake of your ass, you tell him 'Fuck me - hard.' From the excited look on his face and the quickness with which he moves over to you, you don't think he gets to have sex in anything but the submissive role with his master. Images of the man's ass speared on his master's cock, then later getting fucked and impregnated after he became a herm dance in front of your mental eye for a moment.";
 	say "     Then you get distracted by the feeling of two hands pulling your cheeks apart, followed by a tongue licking your crack and poking against your pucker. Your eager partner licks and fingers you a while, then you feel him move around behind you and something else touches your rear entrance. After rubbing his hard shaft up and down between your cheeks a moment, the man pushes in against your pucker, slowly but steadily spreading it with his cockhead. Soon your passage is stretched around his manhood as it is halfway in, then three quarters and finally his balls touch your ass as he bottoms out inside you. You can feel the bulge of his pregnant belly against your back as he whispers 'Is this okay?', to which you answer that you're horny and he should get to it already.";
 	WaitLineBreak;
-	say "     Emboldened by your urgent request, the man forgets his training as a submissive fuckpet for a while, pulling back and thrusting back in deep. He's got some nice technique moving his hips a bit between separate thrusts to hit different spots inside you, expertly increasing your arousal more and more. Before the nanite infection and becoming a breeding slave, he must have quite popular with those that caught his eye. With him driving you to the edge of orgasm, then slowing down again to let you cool off a bit before resuming his thrusting, he certainly takes very good care of you. Being in a state of lust-filled bliss for you don't know how long, this is certainly one encounter to remember, crowned by him stimulating you to a breathtaking climax. [if player is male]With your partner's shaft deep inside your ass as he hammers against you, it's as if he fucks the cum right out of you, your erection spurting another blast of cum onto the sheets every time he thrusts in.[else if player is female]With your partner's shaft deep inside your ass as he hammers against you, your pussy starts throbbing and dripping femcum, creating a large wet spot on the sheets between your legs.[else]With your partner's shaft deep inside your ass as he hammers against you, a shudder of satisfaction runs through your body, reaching every fiber of you.[end if]";
+	say "     Emboldened by your urgent request, the man forgets his training as a submissive fuckpet for a while, pulling back and thrusting back in deep. He's got some nice technique moving his hips a bit between separate thrusts to hit different spots inside you, expertly increasing your arousal more and more. Before the nanite infection and becoming a breeding slave, he must have quite popular with those that caught his eye. With him driving you to the edge of orgasm, then slowing down again to let you cool off a bit before resuming his thrusting, he certainly takes very good care of you. Being in a state of lust-filled bliss for you don't know how long, this is certainly one encounter to remember, crowned by him stimulating you to a breathtaking climax. [if player is male]With your partner's shaft deep inside your ass as he hammers against you, it's as if he fucks the cum right out of you, your erection spurting another blast of cum onto the sheets every time he thrusts in[else if player is female]With your partner's shaft deep inside your ass as he hammers against you, your pussy starts throbbing and dripping femcum, creating a large wet spot on the sheets between your legs[else]With your partner's shaft deep inside your ass as he hammers against you, a shudder of satisfaction runs through your body, reaching every fiber of you[end if].";
 	LineBreak;
 	say "     His duty to you fulfilled, the herm guy relaxes any restraint he held on himself, and after just a few more thrusts, he orgasms. You can feel his shaft throb and pulse as he comes, his seed spurting deep into your rear passage.[mimpregchance]";
 	say "     Pulling out after his last spurts go into you, the man lets himself sink down on the bed, breathing hard. A look of... clarity(?) comes to his face for a moment as he moans 'Thank you.', then it is gone again and he continues with 'Did I please the master's friend? I hope I was good enough and not out of practice. The master doesn't call on me to do... that.' You nod, telling him he did well, then stand up and go to get your clothes. As you dress, the pregnant herm lies on the bed stroking his belly softly, then falls asleep. You leave the cell and make your way back up to the surface through the dark corridors of the underground.";

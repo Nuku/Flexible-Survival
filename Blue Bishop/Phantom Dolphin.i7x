@@ -1,5 +1,5 @@
 Version 1 of Phantom Dolphin by Blue Bishop begins here.
-[Version 1 -- Commissioned]
+[Version 1 - Commissioned]
 "When in Rome..."
 
 Table of GameCharacterIDs (continued)
@@ -273,12 +273,12 @@ to flotprogress: [passable]
 	else if flotintense is 4:
 		say "     You're forced to realize that your limbs have partially submerged into the inflatable dolphin! You're now completely at the whim of the vinyl construct's influence, of which it seems eager now to exploit";
 		if player is male:
-			say ". The undulating material pumps your [cock size desc of player] dick[smn] with such force that you rock against the toy with each motion, slicked by your own cum and exaggerated by the waves. [if player is female and anallevel > 1]Moreover, you feel something large and hard force its way into your cunt[sfn] and ass, the shape shifting around until it appear satisfied with a tapered, worming tendril to rail you with.[else if player is female]Moreover, you feel something large and hard force its way into your cunt[sfn], the shape shifting around until it appear satisfied with a tapered, worming tendril to rail you with.[else if anallevel > 1]Moreover, you feel something large and hard force its way into your ass, the shape shifting around until it appear satisfied with a tapered, worming tendril to rail you with.[end if]";
+			say ". The undulating material pumps your [cock size desc of player] dick[smn] with such force that you rock against the toy with each motion, slicked by your own cum and exaggerated by the waves[if player is female and anallevel > 1]. Moreover, you feel something large and hard force its way into your cunt[sfn] and ass, the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[else if player is female]. Moreover, you feel something large and hard force its way into your cunt[sfn], the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[else if anallevel > 1]. Moreover, you feel something large and hard force its way into your ass, the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[end if].";
 		else:
-			say ". The undulating material grinds against your [cunt size desc of player] cunt[sfn] with such force that you rock against the toy with each motion, slicked by your own honey and exaggerated by the waves. [if anallevel > 1]Moreover, you feel something large and hard force its way into your holes, the shape shifting around until it appear satisfied with a tapered, worming tendrils to rail you with[else]Moreover, you feel something large and hard force its way into your hole[sfn], the shape shifting around until it appear satisfied with a tapered, worming tendril to rail you with[end if].";
+			say ". The undulating material grinds against your [cunt size desc of player] cunt[sfn] with such force that you rock against the toy with each motion, slicked by your own honey and exaggerated by the waves. [if anallevel > 1]Moreover, you feel something large and hard force its way into your holes, the shape shifting around until it appears satisfied with a tapered, worming tendrils to rail you with[else]Moreover, you feel something large and hard force its way into your hole[sfn], the shape shifting around until it appears satisfied with a tapered, worming tendril to rail you with[end if].";
 		say "     It's becoming extremely difficult to keep a clear head and in control of the situation. If there was any wiser time to get off this crazy thing, it'd be right about now...";
 		if flotmarked is false:
-			say "     ...[bold type]Moreover[italic type], you get the impression that you've been touched in some strange, intangible way -- an extraordinary feat given how distracted your senses are now -- though not in any overtly malevolent sense. You imagine you've gained some lingering benefit from this experience, though you doubt there'll be much more to gain beyond this[roman type].";
+			say "     ...[bold type]Moreover[italic type], you get the impression that you've been touched in some strange, intangible way - an extraordinary feat given how distracted your senses are now - though not in any overtly malevolent sense. You imagine you've gained some lingering benefit from this experience, though you doubt there'll be much more to gain beyond this[roman type].";
 			now flotmarked is true;
 	else if flotintense is 6:
 		say "     Your limbs sink even deeper into the inflatable dolphin's body, making it increasingly difficult to figure out where you begin and the vinyl construct ends! Completely at its mercy as you're perpetually milked, it's difficult to stay focused, which is why the thing manages to surprise you with another tendril when your guard is lowered, forcing its way past your lips and down your throat.";
@@ -438,7 +438,7 @@ to say flotstrugglebar:
 
 when play ends:
 	if bodyname of player is "Flotted":
-		say "     Cool ocean water the only balm against the intense heat of your perpetual enslavement, you're barely able to discern what the dolphin is actually doing, seemingly content to swim around playfully, meeting various creatures and peoples -- all of whom appear wholly unaware of your ultimate fate, even as you moan out loudly with each thrust of the vinyl toy's tendrils.";
+		say "     Cool ocean water the only balm against the intense heat of your perpetual enslavement, you're barely able to discern what the dolphin is actually doing, seemingly content to swim around playfully, meeting various creatures and peoples - all of whom appear wholly unaware of your ultimate fate, even as you moan out loudly with each thrust of the vinyl toy's tendrils.";
 		say "     On occasion, the creature even seems inclined to have fun with some of those it encounters, often [if player is puremale and anallevel < 3]used to ride[else]made to be ridden by[end if] them. You're unsure if inflatable toy particularly enjoys this, or if it likes to surprise you from time to time.";
 		say "     No doubt content to milk you until the end of days, your memories blur into a haze of constant orgasms. Writhing against your tight, slippery prison with each motion against the waters, it's eventually all you can think of...";
 

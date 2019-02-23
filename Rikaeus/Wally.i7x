@@ -233,12 +233,12 @@ to say WallyTalkMenu:
 	if WallyTrust < 1:
 		now title entry is "His Reasons";
 		now sortorder entry is 1;
-		now description entry is "Ask him about his reasons for going to college.";
+		now description entry is "Ask him about his reasons for going to college";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "His Experience";
 	now sortorder entry is 2;
-	now description entry is "Ask him about his time so far at Tenvale,";
+	now description entry is "Ask him about his time so far at Tenvale";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -261,7 +261,7 @@ to say WallyTalkMenu:
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
-			say "     Realizing you don't actually have anything to talk to the otter about you shrug and just lay there for a bit before getting back up, causing the otter to just return to his work.";
+			say "     Realizing that you don't actually have anything to talk to the otter about, you shrug and just lay there for a bit before getting back up, causing the otter to just return to his work.";
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";

@@ -165,15 +165,15 @@ to say losetoblackwasp:
 		say "     Giving into the urges coming from your [if player is female]womb[else]belly[end if] and the parasite within, you moan lustfully and bare yourself to the creature, dropping to your knees. The insect buzzes happily and moves atop you, running its insectile legs over your [bodytype of player] body. Soon, it brings its abdomen into position and drives its stinger-cock into your [if player is female]cunt[else]ass[end if] and starts fucking you wildly. ";
 	else:
 		say "     Battered by the insect until you can no longer resist, your exhausted body is pinned down by it. Its insectile legs run over your [bodydesc of player] form, pulling off your pack and clothes quickly. It does seem to take care in doing so though, perhaps trying not to damage you further, and pushes you onto all fours. Lacking the strength to continue to struggle, you can only wait as it brings its abdomen into position and drives its stinger-cock into your [if player is female]cunt[else]ass[end if] and starts fucking you wildly. ";
-	say "     As it does, it gently nibbles at you with its mandibles before opening them and letting its tongue slide across your [if scalevalue is 4 or scalevalue is 5]back and shoulders[else]neck and cheek[end if]. Despite your lovers strange nature, or perhaps even because of it, you lustfully push back into its thrust and cum loudly as its knot pushes fully into you and blasts its thick seed into you. ";
+	say "As it does, it gently nibbles at you with its mandibles before opening them and letting its tongue slide across your [if scalevalue is 4 or scalevalue is 5]back and shoulders[else]neck and cheek[end if]. Despite your lovers strange nature, or perhaps even because of it, you lustfully push back into its thrust and cum loudly as its knot pushes fully into you and blasts its thick seed into you. ";
 	if larvaegg is 1 and gestation of child is 0:
-		say "     Your [if player is female]womb[else]belly[end if] is filled with a satisfying warmth as its seed flows into you[if larvalaid >= 2], fertilizing the insect eggs deposited inside you[end if].";
+		say "Your [if player is female]womb[else]belly[end if] is filled with a satisfying warmth as its seed flows into you[if larvalaid >= 2], fertilizing the insect eggs deposited inside you[end if].";
 		say "     Its pleasurable duty done once the flow of semen has ended and its knot has gone down, the insect gently releases you and buzzes off into the air. You get up slowly and head off with a strange sense of contentment welling up inside you, centered somewhere in your tummy.";
 		now libido of player is libido of player / 2;
 		now larvacounter is a random number between 0 and 12;
 		now larvaegg is 2;
 	else:
-		say "     Your [if player is female]womb[else]belly[end if] is filled with a satisfying warmth as its seed flows into you, causing the larva inside you to squirm excitedly.";
+		say "Your [if player is female]womb[else]belly[end if] is filled with a satisfying warmth as its seed flows into you, causing the larva inside you to squirm excitedly.";
 		now libido of player is ( libido of player + libidomemory + libidomemory ) / 3;
 
 

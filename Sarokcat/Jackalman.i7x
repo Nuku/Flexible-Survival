@@ -1,6 +1,6 @@
 Jackalman by Sarokcat begins here.
 
-"Adds a jackalman to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a jackalman to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

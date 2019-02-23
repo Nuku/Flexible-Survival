@@ -1,7 +1,7 @@
 Version 2 of Wolftaur by Sarokcat begins here.
 [ Version 2.1.1 - Lindsey tweaks ]
 
-"Adds a Wolftaur to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Wolftaur to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses
@@ -37,13 +37,13 @@ To say Wolftaur loss:
 	increase diceroll by bonus;
 	if diceroll > 15:
 		say "     Proving that you're not only stronger than the wolftaur, but also fast enough to catch him, you dash after the large creature and grab him by the tail. It only takes one sharp tug and pained yowl to bring him to a stand, looking back at you with a beaten expression. 'Okay okay - you win. But no more tail pulling - that hurts like hell!'";
-		say "     Now that you've caught yourself a not so little male wolftaur, what do you do with him? Have some fun with the wolfie (Y), or let him go with a warning (N)? ";
+		say "     Now that you've caught yourself a not so little male wolftaur, what do you do with him? Have some fun with the wolfie (Y), or let him go with a warning (N)?";
 		if player consents:
 			LineBreak;
-			say "     Still loosely holding his tail, you use your other hand to stroke the wolftaur's back, running it through his fur lower and lower at his side. The large creature looks over his shoulders and says 'What are you doing now, are youu-oh-oooh' Whatever he wanted to say, you arriving at his crotch and cupping his sheathed cock totally made him lose focus and switch over to aroused panting. Having a suddenly much more cooperative taur on your hands - or rather in your hands, with one of them massaging his balls - you have him lie down for you and roll over on his back.";
+			say "     Still loosely holding his tail, you use your other hand to stroke the wolftaur's back, running it through his fur lower and lower at his side. The large creature looks over his shoulders and says, 'What are you doing now, are youu-oh-oooh!' Whatever he wanted to say, you arriving at his crotch and cupping his sheathed cock totally makes him lose focus and switch over to aroused panting. Having a suddenly much more cooperative taur on your hands - or rather in your hands, with one of them massaging his balls - you have him lie down for you and roll over on his back.";
 			LineBreak;
 			if player is male: [male + herm]
-				say "     What would you like to do now with this horny wolftaur stretched out before you? You could ride that canine shaft of his (Y), or alternatively take his tight hole yourself (N)? ";
+				say "     What would you like to do now with this horny wolftaur stretched out before you? You could ride that canine shaft of his (Y), or alternatively take his tight hole yourself (N)?";
 				if player consents:
 					LineBreak;
 					if player is herm:
@@ -66,7 +66,7 @@ To say Wolftaur loss:
 					WaitLineBreak;
 					say "     You lie there panting on his chest for a while, your hands instinctively stroking his soft fur as you both try to regain your wits. Eventually you pull out of his hole and watch it flex closed before too much of your cum can run out of it, then stand up on shaky legs. While you're collecting your stuff, the wolftaur says, 'That was... something else. Can't remember when I last came that much. But... no, I didn't like it. You made me. It's not me. I'm a real man, not a gay sissy! You made me...' looking up at you with a somewhat sullen expression. Giving him a meaningful grin and a wink, you walk off, leaving him to think up excuses for himself why he came from getting fucked in the butt.";
 			else if player is female: [female]
-				say "     What would you like to do now with this horny wolftaur stretched out before you? You could ride that canine shaft of his (Y), or make him lick your pussy (N)? ";
+				say "     What would you like to do now with this horny wolftaur stretched out before you? You could ride that canine shaft of his (Y), or make him lick your pussy (N)?";
 				if player consents:
 					LineBreak;
 					say "     [WolftaurRidingPussy]";
@@ -111,7 +111,7 @@ When Play begins:
 	now attack entry is "[one of]He snaps at you with his sharp teeth, leaving marks on your skin[or]He whips his clawed fore-paw out, slapping you down like a submissive wolf.[or]His large erect member catches your eye for a minute, noticing he pauses to spray his musk in the area, the scent making you pant with need.[or]He grabs your arm in his teeth, and wrestles you to the ground.[or]charging forward, the wolftaur snaps and claws at you viciously[or]The masculine wolftaur's strong dominant scent makes you pause for a second, and he takes advantage of that to try to wrestle you down to the ground.[or]He lashes out at you with his clawed hands, leaving small marks on your skin.[or]The large taur charges right at you, knocking you to the ground.[or]The wolf like beast lowers his head and nuzzles you, while his hands play over your body, making you feel aroused and submissive.[at random]";
 	now defeated entry is "[Wolftaur loss]";
 	now victory entry is "[Wolftaur victory]";
-	now desc entry is "[mongendernum 3]     Wandering through the zoo pathways, you begin to get the feeling that something is following you, looking around you in panic, you spot a large Wolftaur following you down the path. The large beast is making little effort to hide, his wolfish lower body moving swiftly down the trail after you, while his fur covered upper body is flexing its clawed hands in anticipation of getting them on you, and there is a rather lusty look on the beasts canine face as it eyes you. [one of]'I don't suppose you are on the way to your grandmas house now, because I see the treat I want...'[or]'Heh heh heh, now the question is, will you submit quietly or struggle? Either way you will be mine,'[or]'I can't wait to see you on all fours underneath me,'[or]'How about I show you what a large cock I have? It's all the better to stick into you, my dear...'[or]'You look like you would make a fine bitch...'[or]'Why don't you come join my pack?'[at random] he says, a lusty canine musk filling the air as he abandons any pretense of stealth and pads forward eagerly, his canine cock bouncing underneath his lower body eagerly.";
+	now desc entry is "[mongendernum 3]     Wandering through the zoo pathways, you begin to get the feeling that something is following you, looking around you in panic, you spot a large Wolftaur following you down the path. The large beast is making little effort to hide, his wolfish lower body moving swiftly down the trail after you, while his fur covered upper body is flexing its clawed hands in anticipation of getting them on you, and there is a rather lusty look on the beasts canine face as it eyes you. [one of]'I don't suppose you are on the way to your grandma's house now, because I see the treat I want...' [or]'Heh heh heh, now the question is, will you submit quietly or struggle? Either way, you will be mine,' [or]'I can't wait to see you on all fours underneath me,' [or]'How about I show you what a large cock I have? It's all the better to stick into you, my dear...' [or]'You look like you would make a fine bitch...' [or]'Why don't you come join my pack?' [at random]he says, a lusty canine musk filling the air as he abandons any pretense of stealth and pads forward eagerly, his canine cock bouncing underneath his lower body eagerly.";
 	now face entry is "a long, wolf-like muzzle, your new yellow eyes gleaming out of your lupine face, while your changed canine ears swivel to pick up the slightest new sounds. At this point, it would be hard to tell the difference between your face and a wolftaur's"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "lean and rather well built. Your lower body is that of a fully canine beast and is standing easily on its four lupine paws, while your rather humanoid torso extends upwards from where a normal wolf would have its head, your claw-tipped hands and lean form giving you a rather lean and sexy appearance"; [ Body Description, format as "Your Body is (your text)."]
 	now skin entry is "[one of]gray furred[or]rough furred[or]thick furred[or]Wolf furred[at random]"; [ skin Description, format as "You have (your text) skin"]

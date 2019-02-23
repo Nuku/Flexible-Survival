@@ -1249,7 +1249,7 @@ Version 11 - 30/10/10
 
 	Updated for 6F95. Now uses no deprecated features.
 
-	To make it easier to assign rock values to windows manually (necessary for CSS styling in Quixe), a slight change was made to FW's automatic rock allocation routine—the author can now set a rock value manually (like this: "The rock-value of the graphics-window is 245"). Flexible Windows now checks for conflicts between manually assigned and automatically assigned rock values, and will throw a warning if it finds any (this code will not run in release versions of the software).
+	To make it easier to assign rock values to windows manually (necessary for CSS styling in Quixe), a slight change was made to FW's automatic rock allocation routine - the author can now set a rock value manually (like this: "The rock-value of the graphics-window is 245"). Flexible Windows now checks for conflicts between manually assigned and automatically assigned rock values, and will throw a warning if it finds any (this code will not run in release versions of the software).
 
 Version 10 - 23/9/10
 

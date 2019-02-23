@@ -167,7 +167,7 @@ An everyturn rule:
 
 To say centaur attack:
 	if cocks of player is not 0:
-		say "The centaur flips you over, and then looks you over as you go limp. he snarls at the sight of your cock. 'Little bastard,' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [cock of player] member. They tighten, slowly at first, then faster until your poor cock is bleeding from every hole, trying to relieve the pressure. [compresscock]The centaur leaves you like that. 'Never come with one of those again.'";
+		say "The centaur flips you over, then looks you over as you go limp. He snarls at the sight of your cock. 'Little bastard,' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [cock of player] member. They tighten, slowly at first, then faster until your poor cock is bleeding from every hole, trying to relieve the pressure. [compresscock]The centaur leaves you like that. 'Never come with one of those again.'";
 		[male fury, centaur wants mate, not a companion!]
 	if player is female:
 		say "[centaur rape female]";

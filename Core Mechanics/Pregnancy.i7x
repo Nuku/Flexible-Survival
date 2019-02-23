@@ -27,7 +27,7 @@ Definition: A person (called x) is impreg_able: [Can the player be impregnated R
 	if player is fpreg_able or player is mpreg_able, yes;
 	no;
 
-Definition: A person (called x) is impreg_now: [Is the player currently pregnant. Male and/or Female] [impreg_now and its variants should only be used for technical reasons -- if an NPC is observing that the player might be pregnant (unless they know absolutely for sure that it's not a hijack) consider the vacant defintions instead]
+Definition: A person (called x) is impreg_now: [Is the player currently pregnant. Male and/or Female] [impreg_now and its variants should only be used for technical reasons - if an NPC is observing that the player might be pregnant (unless they know absolutely for sure that it's not a hijack) consider the vacant definitions instead]
 	if player is fpreg_now or player is mpreg_now, yes;
 	no;
 
@@ -165,6 +165,8 @@ to pregprotocol:
 						now z is 1;
 					if "Chase's Breeder" is listed in feats of player and ChaseOffspring is 0: [override for Chase's first kids]
 						now z is 2;
+					if "Fang's Mate" is listed in feats of player and hunger of Fang is 0:
+						now z is 2;
 					if z is 2:
 						say "Twins![line break]";
 						if pregtype is 2, increase mpregcount by 1; [more mpreg practice]
@@ -224,47 +226,86 @@ to say detailbirth:
 
 to detailbirth:
 	LineBreak;
-	if player is female and pregtype < 2:
-		say "     With a sudden pouring of fluids, [if ovipregnant is true]egglaying[else]birth[end if] is upon you. You settle without much choice, breathing quickly as your body spasms in readiness.";
-	else: [mpreg]
-		say "     There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels. With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.";
-	follow cunt descr rule;
-	if player is female and pregtype < 2:
-		if playercanub is true and ubpreg is not "false":
-			say "     Your altered, stretchable cunt with its powerful muscles quiver in echo to the pleasure you felt when it earlier consumed the [ubpreg] now leaving your womb[if ovipregnant is true] as a large egg[end if]. You recline and concentrate, feeling your mutated [bodytype of player] body easily slipping your new child from it. Again, there is some effort, but it is far easier as they slip along your well-lubricated tunnel to enter your caring embrace.";
-		else if "All-Mother's Blessing" is listed in feats of player:
-			say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All of their own, your arms come up in a holding pose, and as they do, the [if ovipregnant is true]large egg[else]child[end if] that has been growing inside you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
-		else if playercanub is true:
-			say "     Your altered, stretchable cunt with its powerful muscles have little difficulty with the birth, an act that becomes quite pleasurable for you. You simply recline and relax, letting your instincts take over, slipping the [if ovipregnant is true]large egg[else]child[end if] easily free from your [bodytype of player] body. They slip almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
-		else if cunt width of player > 10:
-			say "     Your [descr] sex almost laughs at the idea of birth. You recline and concentrate and can feel your mutated [bodytype of player] body easily slipping the [if ovipregnant is true]large egg[else]child[end if] free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
-			increase morale of player by 5;
-		else if cunt width of player > 3:
-			say "     You begin to realize why labor is called that, huffing and pushing as best as you can, slowly nudging the [if ovipregnant is true]large egg[else]newborn[end if] from your [descr] birthing canal. It is not as painful as the movies make out, and after about twenty minutes, the [if ovipregnant is true]egg[else]child[end if] is ready to be held by you. You feel tired, but whole, and satisfied.";
-			increase morale of player by 5;
+	if "Fang's Mate" is listed in feats of player:
+		if player is female and pregtype < 2:
+			say "     With a sudden pouring of fluids, the time of [if ovipregnant is true]egg laying[else]birth[end if] arrives. You settle down without much choice, breathing quickly as your body spasms in readiness. As if he had sensed the imminent [if ovipregnant is true]egg laying[else]birth[end if], Fang appears beside you, his warm fur comforting in your grasp. You have no idea how he got here so quickly, but now isn't the time to question it.";
+		else: [mpreg]
+			say "     There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels. With the completion of your unusual pregnancy fast approaching, you settle down without much choice, breathing quickly as your body spasms in readiness. As if he had sensed the imminent egg laying, Fang appears beside you, his warm fur comforting in your grasp. You have no idea how he got here so quickly, but now isn't the time to question it.";
+		follow cunt descr rule;
+		if player is female and pregtype < 2:
+			if "All-Mother's Blessing" is listed in feats of player:
+				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All on their own, your arms come up in a holding pose, and as they do, the [if ovipregnant is true]large egg that has[else]two wolf pups that have[end if] been growing inside of you suddenly appear in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
+			else if playercanub is true:
+				say "     The powerful muscles in your altered, stretchable cunt have little difficulty with the birth, an act that becomes quite pleasurable for you. You simply recline and relax, letting your instincts take over as you easily push out the [if ovipregnant is true]large egg[else]two slimy wolf pups[end if] from your [bodytype of player] body. They slip out almost effortlessly along your well-lubricated tunnel, ready to be welcomed in your caring embrace.";
+			else if cunt width of player > 10:
+				say "     Your [descr] sex almost laughs at the idea of birth. You recline and concentrate, and your mutated [bodytype of player] body pushes the [if ovipregnant is true]large egg[else]two slimy wolf pups[end if] almost effortlessly out of your well-lubricated tunnel, ready to be welcomed in your caring embrace.";
+				increase morale of player by 5;
+			else if cunt width of player > 3:
+				say "     You begin to realize why labor is called that. Huffing and pushing as best as you can, you slowly push the [if ovipregnant is true]large egg[else]newborns[end if] from your [descr] birthing canal. It is not as painful as the movies make out, and after about twenty minutes, the [if ovipregnant is true]egg is[else]two slimy wolf pups are[end if] ready to be held. You feel tired, but whole and satisfied.";
+				increase morale of player by 5;
+			else:
+				say "     Horrible pain lances through your body as your [descr] sex disgorges the [if ovipregnant is true]large egg[else]children[end if] only after what feels like hours of struggle. Your [bodydesc of player] body covered in sweat, you are left exhausted and winded, but bearing [if ovipregnant is true]a large egg[else]two slimy wolf pups[end if].";
+				now HP of player is 1;
+				decrease morale of player by 10;
 		else:
-			say "     Horrible pain lances through your body as your [descr] sex disgorges the [if ovipregnant is true]large egg[else]child[end if] only after what feels like hours of struggle. Your [bodydesc of player] body covered in sweat, you are left exhausted and winded, but bearing a newborn.";
-			now HP of player is 1;
-			decrease morale of player by 10;
+			if "All-Mother's Blessing" is listed in feats of player:
+				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All on their own, your arms come up in a holding pose, and as they do, the large egg that had been inside of you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
+				increase mpregcount by 1;
+			else if mpregcount < 3:			[First few times, painful]
+				say "     Shifting the large mass through your lower colon sends horrible pain through your body as it struggles to adapt to this method of birthing. You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg. Your body squeezes and pushes as your [bodydesc of player] body is covered in sweat, and your [facename of player] face grimaces in pain with each painful shift. By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the noticeably big oval of an egg from your ass. Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
+				now HP of player is 1;
+				decrease morale of player by 10;
+				increase mpregcount by 1;
+			else if mpregcount < 6:		[Next few times, struggle]
+				say "     As you struggle with your unusual birthing, you huff and push as best you can, working to nudge the large egg onwards, working to expel it from your anus. It is not nearly as painful as the first few times, your [bodytype of player] body having become more adjusted to the process. After about twenty minutes of pushing and grunting, the egg is pushed free with only a little discomfort and even some pleasure as your body feels a rush of pride at having created new life. You hold the big egg in your arms, cradling it as the shell starts to crack.";
+				increase morale of player by 5;
+				increase mpregcount by 1;
+			else:					[After that, easy]
+				say "     Your well-practiced body has little trouble with the shifting and releasing of the egg. You recline and concentrate, feeling your [bodytype of player] body easily working the large egg along your lower bowels, into your rectum, before spreading your legs wide to pop it free of your anus. The egg pops free with some effort at the last step, but the process actually comes with considerable pleasure. As you pull the rocking, cracking egg into your arms, you [if player is male]can't help but feel considerable pride at what your male body has accomplished[else]can't help but feel considerable pride at what your neuter body has accomplished[end if].";
+				increase morale of player by 5;
+				increase mpregcount by 1;
 	else:
-		let ubpreggers be 0;
-		if playercanub is true and ubpreg is not "false", now ubpreggers is 1;
-		if "All-Mother's Blessing" is listed in feats of player:
-			say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All of their own, your arms come up in a holding pose, and as they do, the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if] that had been inside you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
-			increase mpregcount by 1;
-		else if mpregcount < 3:			[First few times, painful]
-			say "     Shifting the large mass through your lower colon sends horrible pain through your body as it struggles to adapt to this method of birthing. You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if]. Your body squeezes and pushes as your [bodydesc of player] body is covered in sweat and you have a grimace of pain on your [facename of player] face with each painful shifting inside you. By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the noticeably big oval of your egg from your ass. Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
-			now HP of player is 1;
-			decrease morale of player by 10;
-			increase mpregcount by 1;
-		else if mpregcount < 6:		[Next few times, struggle]
-			say "     As you struggle with your unusual birthing, you huff and push as best you can during your unnatural labor, working to nudge the large egg onwards, working to expell it from your anus. It is not nearly as painful as your first few were, your [bodytype of player] body having become more adjusted to the process. After about twenty minutes of pushing and grunting, the egg is pushed free with a little discomfort and even some pleasure as your [if player is male]male[else]neuter[end if] body feels a rush of pride at having [if ubpreggers is 1]turned the captured [ubpreg] into your newest offspring[else]created a new life[end if]. You hold the big egg in your arms, cradling it as the shell starts to crack.";
-			increase morale of player by 5;
-			increase mpregcount by 1;
-		else:					[After that, easy]
-			say "     Your well-practiced body has little trouble with the shifting and releasing of the egg within you. You recline and concentrate, feeling your [bodytype of player] body easily working the large egg along your lower bowels, into your rectum before spreading your legs wide to pop it free of your anus. The egg pops free with some effort at the last step, but the process actually comes with considerable pleasure[if player is male], and you can't help but stroke yourself into cumming as the firm shell grinds and presses against your prostate as it moves[end if]. As you pull the rocking, cracking egg into your arms, you [if ubpreggers is 1]know it contains the [ubpreg] you unbirthed and have now remade into your offspring[else if player is male]can't help but feel considerable pride at what your male body has accomplished[else]can't help but feel considerable pride at what your neuter body has accomplished[end if].";
-			increase morale of player by 5;
-			increase mpregcount by 1;
+		if player is female and pregtype < 2:
+			say "     With a sudden pouring of fluids, [if ovipregnant is true]egglaying[else]birth[end if] is upon you. You settle without much choice, breathing quickly as your body spasms in readiness.";
+		else: [mpreg]
+			say "     There is a shifting in your lower belly as your special incubation chamber opens, releasing something large and heavy into your bowels. With the completion of your unusual pregnancy fast approaching, you settle without much choice, breathing quickly as your body spasms in readiness.";
+		follow cunt descr rule;
+		if player is female and pregtype < 2:
+			if playercanub is true and ubpreg is not "false":
+				say "     Your altered, stretchable cunt with its powerful muscles quiver in echo to the pleasure you felt when it earlier consumed the [ubpreg] now leaving your womb[if ovipregnant is true] as a large egg[end if]. You recline and concentrate, feeling your mutated [bodytype of player] body easily slipping your new child from it. Again, there is some effort, but it is far easier as they slip along your well-lubricated tunnel to enter your caring embrace.";
+			else if "All-Mother's Blessing" is listed in feats of player:
+				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All of their own, your arms come up in a holding pose, and as they do, the [if ovipregnant is true]large egg[else]child[end if] that has been growing inside you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
+			else if playercanub is true:
+				say "     Your altered, stretchable cunt with its powerful muscles have little difficulty with the birth, an act that becomes quite pleasurable for you. You simply recline and relax, letting your instincts take over, slipping the [if ovipregnant is true]large egg[else]child[end if] easily free from your [bodytype of player] body. They slip almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
+			else if cunt width of player > 10:
+				say "     Your [descr] sex almost laughs at the idea of birth. You recline and concentrate and can feel your mutated [bodytype of player] body easily slipping the [if ovipregnant is true]large egg[else]child[end if] free of you, slipping almost effortlessly along your well lubricated tunnel to reach your caring embrace.";
+				increase morale of player by 5;
+			else if cunt width of player > 3:
+				say "     You begin to realize why labor is called that, huffing and pushing as best as you can, slowly nudging the [if ovipregnant is true]large egg[else]newborn[end if] from your [descr] birthing canal. It is not as painful as the movies make out, and after about twenty minutes, the [if ovipregnant is true]egg[else]child[end if] is ready to be held by you. You feel tired, but whole, and satisfied.";
+				increase morale of player by 5;
+			else:
+				say "     Horrible pain lances through your body as your [descr] sex disgorges the [if ovipregnant is true]large egg[else]child[end if] only after what feels like hours of struggle. Your [bodydesc of player] body covered in sweat, you are left exhausted and winded, but bearing a newborn.";
+				now HP of player is 1;
+				decrease morale of player by 10;
+		else:
+			let ubpreggers be 0;
+			if playercanub is true and ubpreg is not "false", now ubpreggers is 1;
+			if "All-Mother's Blessing" is listed in feats of player:
+				say "     A radiant glow starts to spread over your belly, settling into the shape of a five-pointed star. Any sense of discomfort brought on by the impending birth vanishes without a trace as pleasant warmth suffuses your whole being. All of their own, your arms come up in a holding pose, and as they do, the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if] that had been inside you suddenly appears in your grasp. After such an effortless birth, you joyfully hug your offspring in a caring embrace.";
+				increase mpregcount by 1;
+			else if mpregcount < 3:			[First few times, painful]
+				say "     Shifting the large mass through your lower colon sends horrible pain through your body as it struggles to adapt to this method of birthing. You claw at the ground and moan as your tight asshole is stretched and forced to open for the large egg[if ubpreggers is 1] now encapsulating the engulfed [ubpreg][end if]. Your body squeezes and pushes as your [bodydesc of player] body is covered in sweat and you have a grimace of pain on your [facename of player] face with each painful shifting inside you. By the time you manage to push it free, you are left exhausted and winded, but have somehow managed to lay the noticeably big oval of your egg from your ass. Collapsed on your side, you gently caress the rocking egg as the shell which protected your child through this difficult passage starts to crack.";
+				now HP of player is 1;
+				decrease morale of player by 10;
+				increase mpregcount by 1;
+			else if mpregcount < 6:		[Next few times, struggle]
+				say "     As you struggle with your unusual birthing, you huff and push as best you can during your unnatural labor, working to nudge the large egg onwards, working to expell it from your anus. It is not nearly as painful as your first few were, your [bodytype of player] body having become more adjusted to the process. After about twenty minutes of pushing and grunting, the egg is pushed free with a little discomfort and even some pleasure as your [if player is male]male[else]neuter[end if] body feels a rush of pride at having [if ubpreggers is 1]turned the captured [ubpreg] into your newest offspring[else]created a new life[end if]. You hold the big egg in your arms, cradling it as the shell starts to crack.";
+				increase morale of player by 5;
+				increase mpregcount by 1;
+			else:					[After that, easy]
+				say "     Your well-practiced body has little trouble with the shifting and releasing of the egg within you. You recline and concentrate, feeling your [bodytype of player] body easily working the large egg along your lower bowels, into your rectum before spreading your legs wide to pop it free of your anus. The egg pops free with some effort at the last step, but the process actually comes with considerable pleasure[if player is male], and you can't help but stroke yourself into cumming as the firm shell grinds and presses against your prostate as it moves[end if]. As you pull the rocking, cracking egg into your arms, you [if ubpreggers is 1]know it contains the [ubpreg] you unbirthed and have now remade into your offspring[else if player is male]can't help but feel considerable pride at what your male body has accomplished[else]can't help but feel considerable pride at what your neuter body has accomplished[end if].";
+				increase morale of player by 5;
+				increase mpregcount by 1;
 
 To Birth:
 	let infection be "";
@@ -276,6 +317,11 @@ To Birth:
 			now bodyname of child is "Tiger";
 			now tailname of child is "Tiger";
 			now facename of child is "Tiger";
+		else if "Fang's Mate" is listed in feats of player:
+			now skinname of child is "Feral Wolf";
+			now bodyname of child is "Feral Wolf";
+			now tailname of child is "Feral Wolf";
+			now facename of child is "Feral Wolf";
 		else if "Chris's Breeder Slut" is listed in feats of player:
 			now skinname of child is "Orc Warrior";
 			now bodyname of child is "Orc Warrior";
@@ -319,7 +365,7 @@ To Birth:
 		now bodyname of child is infection;
 		now tailname of child is infection;
 		now facename of child is infection;
-	if (playercanub is true and ubpreg is not "false") or snakehijack > 0:
+	if (playercanub is true and ubpreg is not "false") or snakehijack > 0: [Unbirth and Snake Hijack]
 		let wwvar be 0;
 		if "Wild Womb" is listed in feats of player, let wwvar be 1;
 		if player is female and pregtype < 2:
@@ -356,6 +402,29 @@ To Birth:
 		else:
 			say "regulars";
 		increase ChaseOffspring by 1;
+	else if "Fang's Mate" is listed in feats of player: [Special Pregnancy from Fang]
+		if hunger of Fang is 1:
+			if "All-Mother's Blessing" is listed in feats of player: [Appeared in arms]
+				say "You and Fang watch in wonder as [if ovipregnant is true]the egg disintegrates, revealing a pair of wolf pups huddled together, [else]the pair of wolf pups disentangle themselves from each other in your arms, [end if]the two of you sharing a loving glance with each other. [if scalevalue of player > 1]You hold them against your chest, their mouths eagerly searching for a nipple. [else]They appear to still be growing, and you are forced to place them on the ground as they reach a size similar to your own, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
+			else if ovipregnant is true: [Hatched from Egg]
+				say "As the shell of the egg slowly cracks, you and Fang watch in anticipation, occasionally sharing a loving glance at each other. Seemingly reaching a critical point, the egg crumbles, revealing the two infants huddled together inside, their fur coated in viscous fluid. [if scalevalue of player > 1]You lift them from the fragile shell, each fitting easily in your palm and gently hold them against your chest, their mouths eagerly searching for a nipple. [else]You approach your newborns, each only slightly smaller than you, but likely not for long, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. You have no idea how that egg managed to fit inside of you. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
+			else if pregtype is 1: [Normal Birth]
+				say "Fang presses himself against your side as you both gaze adoringly at the two bundles of fur that are held in your hands after sharing a brief but intense kiss. The second one born seems to be grasping the other's tail in his mouth, bringing a small smile to your face. [if scalevalue of player > 1]You hold them against your chest, their mouths eagerly searching for a nipple. [else]They appear to still be growing, and you are forced to place them on the ground as they reach a size similar to your own, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
+			else if pregtype is 2: [Anal Birth]
+				say "     As the shell of the egg slowly cracks, you and Fang watch in anticipation, occasionally sharing a loving glance at each other. Seemingly reaching a critical point, the egg crumbles, revealing the two infants huddled together inside, their fur coated in viscous fluid. [if scalevalue of player > 1]You lift them from the fragile shell, each fitting easily in your palm and gently hold them against your chest, their mouths eagerly searching for a nipple. [else]You approach your newborns, each only slightly than you, but likely not for long, and they nuzzle at you, mouths eagerly searching for a nipple while you pet them. You have no idea how that egg managed to fit inside of you. [end if]Fang nudges your hand aside and begins to wash his children, his tongue clearing the excess slime from them and smearing his scent over their fur, marking them as his children as well as yours. You haven't seen him look at anyone as tenderly and with as much care as he is doing so now to his puppies.";
+			say "     You carefully slump to the ground, exhausted from childbirth, but elated at bringing such adorable puppies into the world. Fang lies down next to you, equally as proud of his children as you are, and you are sure that his bond with you will be even greater than it was before, especially if the heartfelt look that he is giving you is anything to go by. You begin to stroke your children's backs as you look at them for who they are. A quick inspection reveals that one of your puppies is male while the other is female, your son having dark-gray fur and being slightly larger than his pale-gray-furred sister. Their eyes have yet to open, and they don't even seem capable of making any noise, mouthing silently at the air as they try to express something that is not understandable to you. Seeming to know what they want, Fang nudges them against your chest and guides each to an exposed nipple. With gusto, they begin to suckle, gulping down mouthful after mouthful of rich milk. They let out soft sighs as they continue to feed, a steady dribble of milky bubbles spilling from the corners of their mouths.";
+			now hunger of Fang is 2;
+			WaitLineBreak;
+		if hunger of Fang is 2:
+			say "     A feeling of contentment fills you, and you tiredly caress your children's heads while they greedily drink. Fang rests his head on your knees, keenly watching the children with wide eyes as he takes in their shape and movements, committing them to memory. With a final suck, your daughter detaches from your nipple and curls into a ball on your lap, her face pressed against her father's. A few moments later, her brother joins her, curling himself around her side so that his head is beside Fang's too. The view in front of you fills you with such love for both of your children as well as your mate, and you relax to enjoy the moment while listening to the pups small breaths contrasting against the deeper sound of Fang's. You'll have to come up with a name for them, perhaps something to do with the shades of their fur? A memory of some Latin that you had learnt when you were younger comes back to you, remembering the words for light and shadow: Lux and Umbra. They seem good enough names for now, and you doubt that Fang will have much to say either way.";
+			say "     You look up from gazing over your sleeping children to meet the yellow eyes of Fang, staring intently at you over the top of his pups. You can see the struggle he is facing to express everything he wants to say in just a look, not wanting to say anything that might disturb the children, and you're not sure whether he would have the vocabulary anyway. To your surprise, he gently eases his head from between your knee and Lux's face and stands up before approaching you. He tenderly licks your face, showing his appreciation and adoration for bearing his puppies and being his mate. He sits down beside you before speaking, 'Ours.' You earnestly agree with him. They are as much his as yours, two children that you both love, for both of you to raise, though you wonder whether you will have to stay at the library to do so, looking to Fang to see his opinion. He seems to know what you are thinking and shakes his head. 'I feed. I father.' You understand that as him saying that he will look after them while you are away, feeding and protecting them.";
+			WaitLineBreak;
+			say "     You rest there together for several hours, content to idly watch your children breathe and twitch in their sleep while you stroke Fang's side. Eventually they wake though, crawling around on the ground, letting out pitiful whines and squeaks as they blindly explore their surroundings. They seem to be staying together, though as they stray slightly further from you, it is Umbra in the lead, his sister determinedly staying near him but slightly behind. Feeling that they have strayed far enough, Fang walks over to them and lightly grasps them by their scruffs and carries them back to you, placing them on your lap again. You give your children a quick kiss before standing up, deciding that you should get back to doing something. The puppies seem sad, but Fang snuffles at them, settling them down easily. Telling your family that you'll see them soon, Fang escorts Lux and Umbra away. He'll likely keep them near to him in the library, but you should still visit them from time to time as they grow so that you can be part of their lives. They are both your children after all. Dusting yourself off and arranging yourself, you are ready to continue exploring the city.";
+		increase hunger of Fang by 1;
+		remove "Fang's Mate" from feats of player;
+		now hp of Lux is 1;
+		now hp of Umbra is 1;
+		now LuxUmbraMaturityCounter is 120;
 	else if "Wild Womb" is listed in feats of player:
 		if player is female and pregtype < 2:
 			say "     Your child [if ovipregnant is true]pushes free of the flexible shell enclosing it and you gather it into your arms so it may suckle[else]suckles[end if] at your [breast size desc of player] breast. Strange sensations sweep over your [bodytype of player] body as it drinks down its new mother's milk. A dark sense of fulfillment begins to creep though you as your newborn suckles at your teat, drawing not only nutrition but instinct and lust as they rapidly reach maturity. They pop free and stand, a feral look of wanton desire on their [facename of child] face as they inspect their [bodyname of child] form, covered in [skinname of child] skin.";
@@ -374,7 +443,7 @@ To Birth:
 		increase hunger of player by 3;
 		increase thirst of player by 3;
 	if "Wild Womb" is not listed in feats of player:
-		if "Chase's Breeder" is not listed in feats of player:
+		if ("Chase's Breeder" is not listed in feats of player) and ("Fang's Mate" is not listed in feats of player):
 			add facename of child to childrenfaces;
 			add bodyname of child to childrenbodies;
 			add skinname of child to childrenskins;
@@ -422,6 +491,21 @@ To impregnate with (x - text):
 		now bodyname of child is "Tiger";
 		now tailname of child is "Tiger";
 		now facename of child is "Tiger";
+	else if "Fang's Mate" is listed in feats of player:
+		if "Selective Mother" is listed in feats of player:
+			say "Do you wish to be impregnated with Fang's child?";
+			if player consents:
+				increase score by 0;
+			else:
+				say "You choose not to accept the seed.";
+				remove "Fang's Mate" from feats of player;
+				now hunger of Fang is 0;
+				stop the action;
+		now gestation of child is a random number from 24 to 48;
+		now skinname of child is "Feral Wolf";
+		now bodyname of child is "Feral Wolf";
+		now tailname of child is "Feral Wolf";
+		now facename of child is "Feral Wolf";
 	else if "Chris's Breeder Slut" is listed in feats of player:
 		if "Selective Mother" is listed in feats of player:
 			say "Do you wish to be impregnated with an Orc Warrior child?";
@@ -510,6 +594,7 @@ to fimpregchance:		[Female-particular Pregnancy Roll]
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
 		if "Fertile" is listed in feats of player, decrease target by 3;
+		if "Fang's Mate" is listed in feats of player, decrease target by 10;
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if playercanub is true, increase target by 1;
@@ -536,6 +621,7 @@ to mimpregchance:		[MPreg-particular Pregnancy Roll]
 		if insectlarva is true:
 			increase target by 2 + larvaegg;
 		if "Fertile" is listed in feats of player, decrease target by 3;
+		if "Fang's Mate" is listed in feats of player, decrease target by 10;
 		if inheat is true, decrease target by 3;
 		if inheat is true and heatlevel is 3, decrease target by 1;
 		if playercanub is true, increase target by 1;
@@ -590,6 +676,8 @@ to selfimpregnate:
 			increase score by 0;
 		else:
 			say "You choose not to accept the seed.";
+			if "Fang's Mate" is listed in feats of player:
+				remove "Fang's Mate" from feats of player;
 			stop the action;
 	now gestation of child is a random number from 24 to 48;
 	now skinname of child is skinname of player;

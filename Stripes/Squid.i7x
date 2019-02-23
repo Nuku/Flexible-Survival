@@ -54,7 +54,7 @@ to say losetosquid:
 
 
 to say beatthesquid:
-	say "     You strike the aquatic creature down, and--seeing this as a losing fight--she quickly tumbles back into the depths of the waters from whence she came, releasing a cloud of ink to hide her escape.";
+	say "     You strike the aquatic creature down, and - seeing this as a losing fight - she quickly tumbles back into the depths of the waters from whence she came, releasing a cloud of ink to hide her escape.";
 
 
 to say squidskinchange:

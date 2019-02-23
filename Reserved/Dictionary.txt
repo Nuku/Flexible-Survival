@@ -1121,12 +1121,12 @@
 |Stripes|Down Under Pub|pubvisit|value|
 |Stripes|Down Under Pub|slutname|value|
 |Stripes|Down Under Pub|open|adjective|
-|Kaleem Mcintyre|Kitsune Hide Away|20140908213124/8705:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Kitsune Hide Away|Foxy Hideaway|room|
-|Kaleem Mcintyre|Kitsune Hide Away|Kitsune|man|
-|Kaleem Mcintyre|Kitsune Hide Away|Kitsunetalk|value|
-|Kaleem Mcintyre|Kitsune Hide Away|Kitsunearoused|value|
-|Kaleem Mcintyre|Kitsune Hide Away|LastKitsunefucked|value|
+|Kaleem Mcintyre|Kitsune Hideaway|20140908213124/8705:Mon 8 September 2014 21:31|indexing|
+|Kaleem Mcintyre|Kitsune Hideaway|Foxy Hideaway|room|
+|Kaleem Mcintyre|Kitsune Hideaway|Kitsune|man|
+|Kaleem Mcintyre|Kitsune Hideaway|Kitsunetalk|value|
+|Kaleem Mcintyre|Kitsune Hideaway|Kitsunearoused|value|
+|Kaleem Mcintyre|Kitsune Hideaway|LastKitsunefucked|value|
 |Kaleem Mcintyre|Dog House|20140908213124/11489:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Dog House|DogHouse|situation|
 |Kaleem Mcintyre|Dog House|Fin|value|

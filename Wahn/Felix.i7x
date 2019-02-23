@@ -1,5 +1,5 @@
 Version 1 of Felix by Wahn begins here.
-[Version 1: Initial Setup, quest, two npcs]
+[Version 1: Initial Setup, quest, two NPCs]
 
 "Adds an NPC named Felix to the Flexible Survival game"
 
@@ -40,7 +40,7 @@ instead of navigating Dry Plains while (HP of Thomas > 0 and HP of Thomas < 100 
 		if diceroll > 10:
 			say "     Searching around for a while, you find a relatively fresh trail showing footprints of some creature. The marks on the ground look like they were made by something quadrupedal, its hands and feet a bit larger than a human's and armed with claws. Following the trail, you come to a flattened area of grass - looks like the creature lay down here to observe Felix unnoticed from behind the screen of grass. You'd say it's at least as large as a horse, from the size of the flattened imprint...";
 			LineBreak;
-			say "     Coming back to Felix, you tell him what you found. He's both relieved at not imagining things, as well as a bit frightened as you recount the clawed footmarks and the size of his stalker. 'Hm, it might be gone now... but I bet it'll be back. I'll be extra vigilant from now on and keep an eye out. Maybe you could... do something about it? I will tell you when I think it is close.' ";
+			say "     Coming back to Felix, you tell him what you found. He's both relieved at not imagining things, as well as a bit frightened as you recount the clawed footmarks and the size of his stalker. 'Hm, it might be gone now... but I bet it'll be back. I'll be extra vigilant from now on and keep an eye out. Maybe you could... do something about it? I will tell you when I think it is close.'";
 			now Libido of Felix is 3;
 		else:
 			say "     Searching around for a while, you find - grass, dry ground, and nothing much else. Seems like Felix was just imagining things after all...";
@@ -138,9 +138,9 @@ to say AndreEscapedAgain:
 
 to say AndreMeeting:
 	LineBreak;
-	say "     So, what now? Jump him from behind to drive him off ([link]Y[as]y[end link]) (with surprise on your side), or try talking to the big lizard guy ([link]N[as]n[end link])? ";
+	say "     So, what now? Jump him from behind to drive him off ([link]Y[as]y[end link]) (with surprise on your side), or try talking to the big lizard guy ([link]N[as]n[end link])?";
 	if player consents:
-		say "     As you attack the lizard guy from behind, he gives a surprised shout and hisses 'What - who?' Then the pain of your first blow registers and instincts drive him to claw and bite back. ";
+		say "     As you attack the lizard guy from behind, he gives a surprised shout and hisses 'What - who?' Then the pain of your first blow registers and instincts drive him to claw and bite back.";
 		challenge "Plains Lizard";
 		now Libido of Felix is 99;
 	else:
@@ -148,7 +148,7 @@ to say AndreMeeting:
 		say "     Standing behind the horse-sized lizard, you clear your throat. With a shocked expression, he turns his head, then whirls around to fully face you and starts to stutter 'What? B-but you left - I saw - you were -' His head whips around towards the distant centaurs, then back to you. 'I - er - was just - erm -' While looking pretty ferocious with his claws and teeth, the lizard guy seems very flustered at getting caught by you. Finally, you tell him to take a deep breath and explain what he's doing here.";
 		say "     'I'm Andre. I was on a break from college when I changed, and everything around changed.' *he indicates the grassland around you* 'And I was doing my best to survive and I - I saw... Him' *he nods towards the distant centaurs* '...a while ago, and he looked so cute, and I wanted to talk to him - but - but then that behemoth found him and he had to run and I couldn't help against something like that and he lost this.' He shows you a leather pouch with a long carrying leather strap and takes another deep breath. 'I kept it to give it back to him, but then I didn't know if he'd like me and if I should just go to him and...'";
 		LineBreak;
-		say "     Ah - he's taking a breath... now's your chance to get a word in edgewise. Do you tell him to go away and leave the centaurs in peace ([link]Y[as]y[end link]), or offer to introduce him to Felix, if the young centaur wants to meet him ([link]N[as]n[end link])? ";
+		say "     Ah - he's taking a breath... now's your chance to get a word in edgewise. Do you tell him to go away and leave the centaurs in peace ([link]Y[as]y[end link]), or offer to introduce him to Felix, if the young centaur wants to meet him ([link]N[as]n[end link])?";
 		if player consents:
 			say "     'Listen, I think it'd be best if you just left, ok? He wouldn't like someone like you who creeped after him anyways.' With that, you shut him up good. You continue 'Give me that and go.' and take the pouch from his hands, then watch as the lizard runs off with tears in his eyes. Unlikely that he'll be back. With that, you walk back towards the centaurs.";
 			now Libido of Felix is 99;
@@ -283,7 +283,7 @@ to say FelixTalk2:
 	if diceroll > 10:
 		say "     Searching around for a while, you find a relatively fresh trail showing footprints of some creature. The marks on the ground look like they were made by something quadrupedal, its hands and feet a bit larger than a human's and armed with claws. Following the trail, you come to a flattened area of grass - looks like the creature lay down here to observe Felix unnoticed from behind the screen of grass. You'd say it's at least as large as a horse, from the size of the flattened imprint...";
 		LineBreak;
-		say "     Coming back to Felix, you tell him what you found. He's both relieved at not imagining things, as well as a bit frightened as you recount the clawed footmarks and the size of his stalker. 'Hm, it might be gone now... but I bet it'll be back. I'll be extra vigilant from now on and keep an eye out. Maybe you could... do something about it? I will tell you when I think it is close.' ";
+		say "     Coming back to Felix, you tell him what you found. He's both relieved at not imagining things, as well as a bit frightened as you recount the clawed footmarks and the size of his stalker. 'Hm, it might be gone now... but I bet it'll be back. I'll be extra vigilant from now on and keep an eye out. Maybe you could... do something about it? I will tell you when I think it is close.'";
 		now Libido of Felix is 3;
 	else:
 		say "     Searching around for a while, you find - grass, dry ground, and nothing much else. Seems like Felix was just imagining things after all...";

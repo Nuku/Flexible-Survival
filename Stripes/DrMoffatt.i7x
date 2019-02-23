@@ -1,12 +1,12 @@
 Version 3 of DrMoffatt by Stripes begins here.
 [Version 2.2 - More Wereraptor responses]
-[Version 3 - Hypnosis path]
+[Version 3.0 - Hypnosis path]
 "Adds a Skunk Shemale NPC named Doctor Moffatt to the Flexible Survival game"
 
 Section 0 - Hypnosis variables
 
 [XP of doctor Moffatt chooses questline
-0 - not commited
+0 - not committed
 1 - skunk TF
 2 - hypnosis
 ]
@@ -139,7 +139,7 @@ The conversation of Doctor Moffatt is { "..." }.
 The icon of Doctor Moffatt is figure of DrMoffatt2_icon.
 wrcurseMoffatt is a number that varies.
 
-the scent of Doctor Moffatt is "[if level of Doctor Moffatt <= 4]She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger. She also has a pleasant, perfumed scent beneath that.[else]The mistress smells heavenly, as usual. Her perfumed scent fills the room, and makes you smile blissfully.[end if]".
+the scent of Doctor Moffatt is "[if level of Doctor Moffatt <= 4]She smells of skunk, but not in a bad way, mostly of the fur and animal and not anything stronger. She also has a pleasant, perfumed scent beneath that[else]The mistress smells heavenly, as usual. Her perfumed scent fills the room, and makes you smile blissfully[end if].".
 
 to say drmoffattdesc:
 	if level of Doctor Moffatt is 0:
@@ -147,7 +147,7 @@ to say drmoffattdesc:
 		say "     But as things go, those aren't the most striking features on the grayscale skunk. Her breasts are quite huge, each the size of a small watermelon. They have large, oversized nipples with areolae about three inches across. And to match their size are the huge globes of her balls, each roughly just as big as her breasts and with a giant missile of a cock to go along with them. While she wears a doctor's coat and a short skirt, they can do nothing to contain or conceal this skunk woman's hyper-sexualized body. She also has a pair of white gloves she wears over her hand-like paws.";
 		say "     Seeing you looking at her, she playfully [one of]leans across her desk, pushing her breasts out with her arms[or]runs a paw casually around one nipple[or]rubs her gloved paws down her very wide hips[or]gives her fluffy tail a swish[or]bends down to pick something up, flashing her rear and exposing her lack of pussy behind those huge balls[or]slowly runs a fingertip along the gray flesh of her cock[at random].";
 	else if level of Doctor Moffatt >= 1 and level of Doctor Moffatt <= 3:
-		say "     Doctor Moffatt, your new friend, has a very striking appearance. Her pretty face has a slightly masculine look to it, but her lips are full, luscious and black in color like her nose and hair. Her fur is a mix of grays, dark and light, instead of the starker contrast of black and white you'd expect on a skunk. She has a huge, fluffy tail, as long as she is tall and as wide as her hips. You feel the odd urge to pet and plunge your face into it. And those hips are quite wide indeed. The skunk's hips and ass are quite wide and womanly, continuing down to her thick thighs. They would feel so right against your [if male]hips[else]crotch[end if].";
+		say "     Doctor Moffatt, your new friend, has a very striking appearance. Her pretty face has a slightly masculine look to it, but her lips are full, luscious and black in color like her nose and hair. Her fur is a mix of grays, dark and light, instead of the starker contrast of black and white you'd expect on a skunk. She has a huge, fluffy tail, as long as she is tall and as wide as her hips. You feel the odd urge to pet and plunge your face into it. And those hips are quite wide indeed. The skunk's hips and ass are quite wide and womanly, continuing down to her thick thighs. They would feel so right against your [if player is male]hips[else]crotch[end if].";
 		say "     But as things go, those aren't the sexiest features on the grayscale skunk. Her breasts are quite huge, each the size of a small watermelon. They have large, oversized nipples with areolae about three inches across, inviting you to play with them. And to match their size are the huge globes of her balls, each roughly just as big as her breasts and with a giant missile of a cock to go along with them; your mouth waters at the sight. While she wears a doctor's coat and a short skirt, they can do nothing to contain or conceal this skunk woman's hyper-sexualized body. She also has a pair of white gloves she wears over her hand-like paws.";
 		say "     Seeing you looking at her, she playfully [one of]leans across her desk, pushing her breasts out with her arms[or]runs a paw casually around one nipple[or]rubs her gloved paws down her very wide hips[or]gives her fluffy tail a swish[or]bends down to pick something up, flashing her rear and exposing her lack of pussy behind those huge balls[or]slowly runs a fingertip along the gray flesh of her cock[at random]. You give back a smile, the display having quite the effect on you.";
 		increase libido of player by 5;
@@ -218,7 +218,7 @@ to say skunkPathDialogue:
 		say "     While she's out, you take the opportunity to look around the room quickly. You scan her notes, finding a mix of musings about the mental and arousing effects of the infection and notes about some of the weasel patients being cared for in the psych ward. Mixed in with them are some more crayon drawings, presumably by the mental patients. They are a mix of distorted scribbles showing some of the creatures you've seen out in the city and rather lewd pictures of vixens, owls and a rather familiarly big-chested skunk.";
 		say "     With nothing really untowards there, you check out a few of the skunk figurines. There's about ten or so of them set out around the room. Most are tiny things, though there's a couple of larger ones. Picking one up, you look at the rather pudgy, cartoonish skunk with a red bow and a sappy smile. As you're checking the underside of the porcelain figure, you hear a cough behind you. 'If you wanted to check under my skunk's tail,' she says with a grin, 'you just needed to ask.' She takes the figure from you and sets it back down, rubbing her ample bosom against you as she does.";
 		wait for any key;
-		say "     'I got that one from one of my patients after helping her through a particularly difficult time in her life. Her family makes them and she wanted to thank me. I'm not sure why I kept it, but after that other patients started giving me some as well. Being mostly black and white, they didn't seem terribly out of place with my usual simple decor, so I left them around. And I'm so glad I did. I make for a rather sexy skunk, don't you think?' she teases, letting her bushy tail wrap all around you and pulling herself in close.";
+		say "     'I got that one from one of my patients after helping her through a particularly difficult time in her life. Her family makes them and she wanted to thank me. I'm not sure why I kept it, but after that other patients started giving me some as well. Being mostly black and white, they didn't seem terribly out of place with my usual simple décor, so I left them around. And I'm so glad I did. I make for a rather sexy skunk, don't you think?' she teases, letting her bushy tail wrap all around you and pulling herself in close.";
 		say "     'Mmm... cozy. But on to business,' she says, pulling out a small vial of white, milky fluid. 'Here's your first dose. Mixed in a bit of milk to go down easy.' You look at the milk suspiciously. 'Oh, don't be that way. I wouldn't give you any of that common forest-skunk stuff. I only need that junk for the control sample. You deserve better,' she says with a rumble, grinding her warm, soft breasts against you. 'Besides, you promised to help me out, sweetie,' she pouts.";
 		say "     Not wanting to disappoint the skunk woman, though probably a little enamored with those hefty funbags of hers, you take the vial and drink it down quickly, hardly tasting it to avoid any medicinal taste it may have. She smiles and kisses your cheek again before pushing you down roughly onto the couch. 'Mmm... now tell me how you feel, my dear,' she says excitedly, grabbing her notepad and sitting on the edge of her desk. Your position gives you a fine view of her large sexy body and a clear window under her skirt. Her cock throbs and twitches, clearly the skunk's excited in more than just a professional manner.";
 		wait for any key;
@@ -671,7 +671,7 @@ an everyturn rule:
 			else if dexterity of Doctor Moffatt is 3:
 				decrease stamina of player by level of Doctor Moffatt;
 				if stamina of player < 1, now stamina of player is 1;
-				say "     You start panting, and feel the need to take a break. Did the effect of Doctor Moffat's hypnosis end? ";
+				say "     You start panting, and feel the need to take a break. Did the effect of Doctor Moffat's hypnosis end?";
 				say "[bold type]The bonus in stamina brought by your hypnosis session has ended.[roman type]";
 			else if dexterity of Doctor Moffatt is 4:
 				decrease perception of player by level of Doctor Moffatt;

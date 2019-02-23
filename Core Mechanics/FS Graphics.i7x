@@ -86,7 +86,7 @@ Figure of Ram_icon is the file "FS_Ram.jpg".
 Figure of Reindeer_icon is the file "Reindeer_ig.jpg".
 Figure of SandMan_icon is the file "Sand Man.jpg".
 Figure of ShadowBeast_icon is the file "ShadowBeast.jpg".
-Figure of Pewter_Consort_icon is the file "Pewter_Consort_Lined_LR.png".
+Figure of Pewter_Consort_icon is the file "Pewter_Consort.png".
 Figure of PirateShark_icon is the file "sharkpirate.png".
 Figure of SiameseCat_icon is the file "siamesecats_ig.jpg".
 Figure of SnowBat_icon is the file "SnowBat_ig.jpg".
@@ -109,7 +109,7 @@ Figure of YuppieMink_icon is the file "FSTF_YuppieMink_ig.jpg".
 Figure of Zebra_icon is the file "Zebra.jpg".
 Figure of Zebra_face_icon is the file "Zebra_face.jpg".
 
-[npc icons]
+[NPC icons]
 Figure of Adam_icon is the file "Adam.jpg".
 Figure of Alexandra_clothed_icon is the file "Alexandra_clothed.jpg".
 Figure of Alexandra_clothed_preg_icon is the file "Alexandra_clothed_preg.jpg".
@@ -125,6 +125,7 @@ Figure of Alexandra_naked_frown_icon is the file "Alexandra_naked_frown.jpg".
 Figure of Alex_icon is the file "Alex_ig.jpg".
 Figure of Amy_icon is the file "Amy.jpg".
 Figure of Amy_face_icon is the file "Amy_face.jpg".
+Figure of Anastasia_icon is the file "Anastasia_ig.jpg".
 Figure of Andre_icon is the file "Andre.jpg".
 Figure of Andre_face_icon is the file "Andre_face.jpg".
 Figure of Andrew_icon is the file "andrew_ig.jpg".
@@ -133,7 +134,6 @@ Figure of Anthony_naked_icon is the file "Anthony_naked.jpg".
 Figure of Anthony_clothed_icon is the file "Anthony_clothed.jpg".
 Figure of Anthony_face_icon is the file "Anthony_face.jpg".
 Figure of Artemis_icon is the file "artemisengulf_ig.jpg".
-Figure of Anastasia_icon is the file "Athanasia_ig.jpg".
 Figure of Blanche1_icon is the file "blanche_ig1.jpg".
 Figure of Blanche2_icon is the file "Blanche_ig2.jpg".
 Figure of Blot_icon is the file "FSTF_blot.jpg".
@@ -184,7 +184,6 @@ Figure of DiegoFem_face_icon is the file "DiegoFem_face.jpg".
 Figure of Doran_icon is the file "Doran.jpg".
 Figure of Doran_face_icon is the file "Doran_face.jpg".
 Figure of DrMatt_face_icon is the file "Dr.Matt_face.jpg".
-Figure of DrMedea_icon is the file "DrMedea_ig.jpg".
 Figure of DrMoffatt1_icon is the file "drmoffatt_ig1.jpg".
 Figure of DrMoffatt2_icon is the file "drmoffatt_ig2.jpg".
 Figure of DrMouse_icon is the file "drmouse_ig.jpg".
@@ -621,7 +620,6 @@ title	icon(figure name)	artist	backgroundcolor	formatrule
 "Doran_face"	Figure of Doran_face_icon	"Anymouse1968"	g-white	"normal"
 "Dracovixentaur"	Figure of Dracovixentaur_icon	"Anymouse1968"	g-white	"normal"
 "DrMatt_face"	Figure of DrMatt_face_icon	"SineAlas"	g-white	"normal"
-"DrMedea"	Figure of DrMedea_icon	"Candy"	g-white	"normal"
 "DrMoffatt1"	Figure of DrMoffatt1_icon	"The_Negative"	g-black	"normal"
 "DrMoffatt2"	Figure of DrMoffatt2_icon	"MadTurtle"	g-white	"normal"
 "DrMouse"	Figure of DrMouse_icon	"JaxxBlackFox"	g-white	"normal"

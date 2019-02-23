@@ -114,7 +114,9 @@ the scent of Faint Trail is "The scents of the creatures roaming the park are st
 
 the scent of Cola Vending Machine is "The vending machine smells of burnt electronics and is busted. Guess you'll have to hit it to get anything out.".
 
-the scent of Microwave is "The microwave smells a little from the dried stains inside. It seems Dr Matt is too lazy or busy to clean it.".
+the scent of Library Microwave is "Despite lack of upkeep, the microwave smells rather clean.".
+
+the scent of Lab Microwave is "The microwave smells a little from the dried stains inside. It seems Dr Matt is too lazy or busy to clean it.".
 
 the scent of Infection Terminal is "The infection terminal smells like old, vintage electronics from the time of DOS and dinosaurs.".
 

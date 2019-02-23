@@ -91,10 +91,11 @@ to say GertyTalkMenu:
 					say "[GertyTalk3]";
 				if (nam is "His Success"):
 					say "[GertyTalk4]";
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from Gerty, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -182,11 +183,11 @@ to say GertySexMenu:
 					say "[GertySex3]";
 				if (nam is "Take Gerty's shaft in your ass"):
 					say "[GertySex4]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the anthro lizardman, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

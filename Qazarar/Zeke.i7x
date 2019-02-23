@@ -80,11 +80,11 @@ to say ZekeTalkMenu:
 					say "[ZekeTalk2]";
 				if (nam is "Generator"):
 					say "[ZekeTalk3]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the Zeke, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -193,11 +193,11 @@ to say ZekeSexMenu1: [Cooperative]
 					say "[ZekeSex2]";
 				if (nam is "Sixty-nine"):
 					say "[ZekeSex3]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the fox, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -245,11 +245,11 @@ to say ZekeSexMenu2: [Domming Zeke]
 					say "[ZekeSex5]";
 				if (nam is "Pound him"):
 					say "[ZekeSex6]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -288,11 +288,11 @@ to say ZekeSexMenu3: [Dommed by Zeke]
 					say "[ZekeSex7]";
 				if (nam is "Get fucked"):
 					say "[ZekeSex8]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -304,7 +304,7 @@ to say ZekeSex1: [frotting]
 
 to say ZekeSex2: [blowing - casual]
 	say "     When you make your request, the fox quickly strips off his clothing, and then responds. 'If you want to treat me, I don't mind. But anything more serious than this, you'll have to try your luck with some competition. The reward is more fun with a risk.' He follows up his comment by winking at you, before he settles down into one of the beanbags, legs spread, and the slowly hardening cock beginning to stand free. You step over to Zeke, and then fall to your knees in front of him, bringing your eyes level with his vulpine dick. For a moment, you sit there, your eyes following the slight twitches of the shaft before you. Eventually the temptation becomes too much for you to wait any longer, and you lean forward, capturing it in your mouth.";
-	say "     In no time at all, you're bobbing up and down the vulpine member, the tip reaching almost to the top of your throat, and your lips stopping just at the edge of his knot. You glance upwards, and can see Zeke panting in pleasure from your ministrations. A few seconds after, he meets your eyes, and grins at you. 'You're, ah, pretty good at this. You must have played a lot of games when you were younger, gotten a lot of practice at cartridge blowing.' He smiles at his own joke, but you simple keep at work, ignoring his terrible sense of humor. Soon enough, your efforts bear fruit, and you can feel his member pulse in your mouth, and start releasing your reward. You take your head down his shaft and hold it in place with your mouth just meeting his knot, and let his seed fill you. Far too soon, it comes to an end, and you swallow, before licking his cock clean, and leaning back. Your eyes meet his again, and he smiles at you as you stand back up. ";
+	say "     In no time at all, you're bobbing up and down the vulpine member, the tip reaching almost to the top of your throat, and your lips stopping just at the edge of his knot. You glance upwards, and can see Zeke panting in pleasure from your ministrations. A few seconds after, he meets your eyes, and grins at you. 'You're, ah, pretty good at this. You must have played a lot of games when you were younger, gotten a lot of practice at cartridge blowing.' He smiles at his own joke, but you simple keep at work, ignoring his terrible sense of humor. Soon enough, your efforts bear fruit, and you can feel his member pulse in your mouth, and start releasing your reward. You take your head down his shaft and hold it in place with your mouth just meeting his knot, and let his seed fill you. Far too soon, it comes to an end, and you swallow, before licking his cock clean, and leaning back. Your eyes meet his again, and he smiles at you as you stand back up.";
 	now lastfuck of Zeke is turns;
 
 to say ZekeSex3: [sixty-nine]

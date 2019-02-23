@@ -144,7 +144,7 @@ Instead of resolving a Protected Supplies:
 	repeat with tt running from 1 to number of filled rows in Table of Random Critters:
 		choose row tt from the Table of Random Critters;
 		if there is a lev entry:
-			if lev entry > level of player plus levelwindow and hardmode is false:
+			if lev entry > level of player and hardmode is false:
 				next;
 		else:
 			next;

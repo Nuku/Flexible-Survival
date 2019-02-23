@@ -1,7 +1,7 @@
 Version 2 of Gazelle by Sarokcat begins here.
 [Version 2.2 - Victory ride sex adjusted M/H - Stripes]
 
-"Adds a gazelle to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a gazelle to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses

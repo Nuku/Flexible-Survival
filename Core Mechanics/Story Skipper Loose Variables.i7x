@@ -339,14 +339,8 @@ to NumberVariableSave:
 	choose blank row in Table of GameNumbers;
 	now NumberVarName entry is CurrentVariableName;
 	if CurrentVariableName is:
-		-- "AbandonedRoomStatus":
-			now NumberVarValue entry is AbandonedRoomStatus;
 		-- "absorb":
 			now NumberVarValue entry is absorb;
-		-- "acquaintedWithHanu":
-			now NumberVarValue entry is acquaintedWithHanu;
-		-- "acquaintedWithWukong":
-			now NumberVarValue entry is acquaintedWithWukong;
 		-- "addedlibido":
 			now NumberVarValue entry is addedlibido;
 		-- "afsmread":
@@ -445,8 +439,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is artattempt;
 		-- "artleopardfight":
 			now NumberVarValue entry is artleopardfight;
-		-- "AtticusCounter":
-			now NumberVarValue entry is AtticusCounter;
 		-- "auto2entry":
 			now NumberVarValue entry is auto2entry;
 		-- "autoattackmode":
@@ -473,8 +465,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is AxelLastBJ;
 		-- "AxelRelationship":
 			now NumberVarValue entry is AxelRelationship;
-		-- "Azari_Corruption":
-			now NumberVarValue entry is Azari_Corruption;
 		-- "AzraelRelationship":
 			now NumberVarValue entry is AzraelRelationship;
 		-- "balloversize":
@@ -1335,8 +1325,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is hfgbread;
 		-- "HG_Flashback_Turns":
 			now NumberVarValue entry is HG_Flashback_Turns;
-		-- "HG_Stage":
-			now NumberVarValue entry is HG_Stage;
 		-- "hgryphon_TGcount":
 			now NumberVarValue entry is hgryphon_TGcount;
 		-- "hgryphonwin":
@@ -1809,8 +1797,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is leosupplies;
 		-- "lessontime":
 			now NumberVarValue entry is lessontime;
-		-- "Levelwindow":
-			now NumberVarValue entry is Levelwindow;
 		-- "lgnumber":
 			now NumberVarValue entry is lgnumber;
 		-- "libfight":
@@ -2487,6 +2473,10 @@ to NumberVariableSave:
 			now NumberVarValue entry is SkarnothLibraryEntry;
 		-- "SkarnothMasterSlave":
 			now NumberVarValue entry is SkarnothMasterSlave;
+		-- "SkarnothThongStatus":
+			now NumberVarValue entry is SkarnothThongStatus;
+		-- "SkarnothDrugStatus":
+			now NumberVarValue entry is SkarnothDrugStatus;
 		-- "skipturnblocker":
 			now NumberVarValue entry is skipturnblocker;
 		-- "skrp":
@@ -3098,8 +3088,6 @@ to TruthVariableSave:
 			now TruthVarValue entry is AT_Sven;
 		-- "autofeatloading":
 			now TruthVarValue entry is autofeatloading;
-		-- "Azari_Met":
-			now TruthVarValue entry is Azari_Met;
 		-- "BastetSexOrTalk":
 			now TruthVarValue entry is BastetSexOrTalk;
 		-- "bcduofightfled":
@@ -4047,14 +4035,8 @@ to VariableNumberLoad:
 			if debugactive is 1:
 				say "Restoring Number [NumberVarName entry].";
 			if NumberVarName entry is:
-				-- "AbandonedRoomStatus":
-					now AbandonedRoomStatus is numberVarValue entry;
 				-- "absorb":
 					now absorb is numberVarValue entry;
-				-- "acquaintedWithHanu":
-					now acquaintedWithHanu is numberVarValue entry;
-				-- "acquaintedWithWukong":
-					now acquaintedWithWukong is numberVarValue entry;
 				-- "addedlibido":
 					now addedlibido is numberVarValue entry;
 				-- "afsmread":
@@ -4153,8 +4135,6 @@ to VariableNumberLoad:
 					now artattempt is numberVarValue entry;
 				-- "artleopardfight":
 					now artleopardfight is numberVarValue entry;
-				-- "AtticusCounter":
-					now AtticusCounter is numberVarValue entry;
 				-- "auto2entry":
 					now auto2entry is numberVarValue entry;
 				-- "autoattackmode":
@@ -4181,8 +4161,6 @@ to VariableNumberLoad:
 					now AxelLastBJ is numberVarValue entry;
 				-- "AxelRelationship":
 					now AxelRelationship is numberVarValue entry;
-				-- "Azari_Corruption":
-					now Azari_Corruption is numberVarValue entry;
 				-- "AzraelRelationship":
 					now AzraelRelationship is numberVarValue entry;
 				-- "balloversize":
@@ -5043,8 +5021,6 @@ to VariableNumberLoad:
 					now hfgbread is numberVarValue entry;
 				-- "HG_Flashback_Turns":
 					now HG_Flashback_Turns is numberVarValue entry;
-				-- "HG_Stage":
-					now HG_Stage is numberVarValue entry;
 				-- "hgryphon_TGcount":
 					now hgryphon_TGcount is numberVarValue entry;
 				-- "hgryphonwin":
@@ -5517,8 +5493,6 @@ to VariableNumberLoad:
 					now leosupplies is numberVarValue entry;
 				-- "lessontime":
 					now lessontime is numberVarValue entry;
-				-- "Levelwindow":
-					now Levelwindow is numberVarValue entry;
 				-- "lgnumber":
 					now lgnumber is numberVarValue entry;
 				-- "libfight":
@@ -6193,6 +6167,10 @@ to VariableNumberLoad:
 					now SkarnothLibraryEntry is numberVarValue entry;
 				-- "SkarnothMasterSlave":
 					now SkarnothMasterSlave is numberVarValue entry;
+				-- "SkarnothThongStatus":
+					now SkarnothThongStatus is numberVarValue entry;
+				-- "SkarnothDrugStatus":
+					now SkarnothDrugStatus is numberVarValue entry;
 				-- "skipturnblocker":
 					now skipturnblocker is numberVarValue entry;
 				-- "skrp":
@@ -6811,8 +6789,6 @@ to VariableTruthLoad:
 					now AT_Sven is TruthVarValue entry;
 				-- "autofeatloading":
 					now autofeatloading is TruthVarValue entry;
-				-- "Azari_Met":
-					now Azari_Met is TruthVarValue entry;
 				-- "BastetSexOrTalk":
 					now BastetSexOrTalk is TruthVarValue entry;
 				-- "bcduofightfled":

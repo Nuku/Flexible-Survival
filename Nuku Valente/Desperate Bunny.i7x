@@ -44,7 +44,7 @@ Instead of Resolving a Needy Rabbit Girl:
 		say "     You spot that rabbit girl again and duck low so she doesn't see you, hopefully. You creep up closer to have a look at her. She's bent over, picking up something from the ground. From a tear in the seat of her skirt, an upturned rabbit tail flicks back and forth energetically.";
 		let bonus be (( Charisma of player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
-		say "[bold type]You roll 1d20([diceroll])+[bonus]: [diceroll + bonus]/12[roman type], ";
+		say "     [bold type]You roll 1d20([diceroll])+[bonus]: [diceroll + bonus]/12[roman type], ";
 		increase diceroll by bonus;
 		if diceroll > 12:
 			say "You call out gently to the woman and she turns to face you once more. She looks ready to flee, but you hurriedly explain you mean no harm. Cautiously, she begins to relax, but does not approach you.";
@@ -340,14 +340,13 @@ to say sandrasex1: [fuck the bunny]
 		let multicocks be 0;
 		if cocks of player > 1:
 			if rabbitmulticock is 0:
-				now response1 is "     She salivates a little as she eyes your multiple rods. 'I never played with someone like that. I bet it would feel great...' she says, mostly to herself, her thick musk permeating the room as she wriggles her rump. ";
+				now response1 is "     She salivates a little as she eyes your multiple rods. 'I never played with someone like that. I bet it would feel great...' she says, mostly to herself, her thick musk permeating the room as she wriggles her rump.";
 				now rabbitmulticock is 1;
 			else:
-				now response1 is "     She salivates a little as she eyes your multiple rods. 'I am so happy to see those! And they look happy to see me,' she says, mostly to herself, her thick musk permeating the room as she wriggles her rump. ";
+				now response1 is "     She salivates a little as she eyes your multiple rods. 'I am so happy to see those! And they look happy to see me,' she says, mostly to herself, her thick musk permeating the room as she wriggles her rump.";
 			increase lust by 2;
 			now multicocks is 1;
 		let response2 be "";
-		let response3 be "";
 		if cock length of player < 5:
 			say "     She crosses her arms and sighs softly, 'Look, I do have standards, don't let the rabbit thing fool you. You are just too puny for me.' With that, she turns away and snubs you entirely. How rude!";
 		else:
@@ -458,11 +457,11 @@ to say sandrasex2: [become bunny siblings]
 	else if rabbitsibling is 4:
 		say "     Presenting the carrot-shaped toy to Sandra, the rabbit girl quickly goes wide-eyed and flush.";
 		say "     'Oh my, it's... Perfect!' Grinning widely and still blushing, she takes it from you and wobbles it around enthusiastically. 'I sent you off to find something fun, but I didn't expect a treat like this!' After looking it over in greater detail, she begins to ponder for a moment before returning her attention to you.";
-		say "     'This is the best gift, but, hm, I wonder... Is it for me, or for you, [sangr]?' Grinning slyly at you, you imagine she'd greatly enjoy being rammed by the thing, but you could just as well be on the receiving end of it. Shall you be pitching the toy? Else you'll be catching it.";
+		say "     'This is the best gift, but, hm, I wonder... Is it for me, or for you, [sangr]?' Grinning slyly at you, you imagine she'd greatly enjoy being rammed by the thing, but you could just as well be on the receiving end of it. Shall you be pitching the toy? Otherwise, you'll be catching it.";
 		if player consents:
 			now rabbitsibling is 5;
 			say "     You make you intent clear by taking the oversized rod from Sandra, gesturing for her to lay down. Eagerly, she obliges, laying down to expose the excited, already-slick lips of her oversized cunt.";
-			say "     'Don't hold back, [sangr]. I can take it!' Considering your options, you could take the most obvious point of entry. Shall you? Else you'll surprise the rabbit girl by forcing it down her ass.";
+			say "     'Don't hold back, [sangr]. I can take it!' Considering your options, you could take the most obvious point of entry. Shall you? Otherwise, you'll surprise the rabbit girl by forcing it down her ass.";
 			if player consents:
 				say "     Carefully, you press the toy's orange, pointed tip between her supple folds, quickly slicked by her heady honey. The lady moans out softly as you begin, gently fondling her many tits as she's made to take each successive, ridged inch of the twisted carrot's substantive girth.";
 				say "     Throbbing pussy tightening around the intrusion, it nonetheless greedily obliges being so readily flooded by its increasingly wide girth. Watching her getting off as you begin to force the majority of its length in and out of her slick hole is more that enough to arouse yourself as well[if player is male], [cock size desc of player] cock[smn] standing hard, exposed to the open air[else if player is female], [cunt size desc of player] cunt[sfn] oozing down to stain the floor along with hers[else] in spite of your lack of outlet[end if].";
@@ -572,7 +571,7 @@ to say sandrasex5: [Post-transformation toy sex]
 	say "     '[one of]Oh boy[or]Mmm[or]Yes[or]Great[at random], [one of]let's get to planting this thing[or]time for some fun[or]time to bury the carrot[at random],[if rabbitsibling > 5] little[end if] [sangr]!' Giddy with anticipation, she ";
 	if rabbitsibling is 5:
 		say "hands you the thing before laying down to expose the excited, already-slick lips of her oversized cunt before you.";
-		say "     '[one of]Don't hold back[or]Ram it down[or]I can take it[at random]!' Considering your options, you could take the most obvious point of entry. Shall you? Else you'll surprise the rabbit girl by forcing it down her ass.";
+		say "     '[one of]Don't hold back[or]Ram it down[or]I can take it[at random]!' Considering your options, you could take the most obvious point of entry. Shall you? Otherwise, you'll surprise the rabbit girl by forcing it down her ass.";
 		if player consents:
 			say "     Carefully, you press the toy's orange, pointed tip between her supple folds, quickly slicked by her heady honey. The lady moans out softly as you begin, gently fondling her many tits as she's made to take each successive, ridged inch of the twisted carrot's substantive girth.";
 			say "     Throbbing pussy tightening around the intrusion, it nonetheless greedily obliges being so readily flooded by its increasingly wide girth. Watching her getting off as you begin to force the majority of its length in and out of her slick hole is more that enough to arouse yourself as well[if player is male], [cock size desc of player] cock[smn] standing hard, exposed to the open air[else if player is female], [cunt size desc of player] cunt[sfn] oozing down to stain the floor along with hers[else] in spite your lack of outlet[end if].";

@@ -30,7 +30,7 @@ Object	Name
 Alex's Condo	"Alex's Condo"
 
 Alex's Condo is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Alex's Condo is "     Near the top of the high rise condo building, Alex's home has an good view of the area, if partially blocked by several of the other surrounding high rises. His place is fairly well-maintained, the mustelid tidying up occasionally. It does have the faint, tangy smell of mustelid musk, but it's not too strong. It is well-furnished, with expensive, trendy-looking furniture and decor. The big screen television and large stereo are silent, but fill a sizable portion of one wall. Several pieces of classy art adorn the others, all matching nicely with each other and the room decor as a whole. There are several legal briefs and law books open on the coffee table in the living room. Scattered around the floor are several colorful rubber objects, clearly outlets for any ferrety urges[if alexbrunch > 3]. There has been an increase in the number of rubber toys and shiny things scattered around the condo as the lawyer's gotten more ferrety[end if]. A glance in the kitchen shows that it's not as tidy, and is equally ultra-modern, if now useless. He's set up a small camper stove on his stove top and is using that for cooking. Between bouts of manic ferretness, the mustelid lawyer is sitting on his couch, focusing on his papers.".
+The description of Alex's Condo is "     Near the top of the high rise condo building, Alex's home has an good view of the area, if partially blocked by several of the other surrounding high rises. His place is fairly well-maintained, the mustelid tidying up occasionally. It does have the faint, tangy smell of mustelid musk, but it's not too strong. It is well-furnished, with expensive, trendy-looking furniture and décor. The big screen television and large stereo are silent, but fill a sizable portion of one wall. Several pieces of classy art adorn the others, all matching nicely with each other and the room décor as a whole. There are several legal briefs and law books open on the coffee table in the living room. Scattered around the floor are several colorful rubber objects, clearly outlets for any ferrety urges[if alexbrunch > 3]. There has been an increase in the number of rubber toys and shiny things scattered around the condo as the lawyer's gotten more ferrety[end if]. A glance in the kitchen shows that it's not as tidy, and is equally ultra-modern, if now useless. He's set up a small camper stove on his stove top and is using that for cooking. Between bouts of manic ferretness, the mustelid lawyer is sitting on his couch, focusing on his papers.".
 
 the scent of Alex's Condo is "[alexcondoscent]".
 
@@ -128,7 +128,7 @@ Instead of resolving Find Lorenda:
 	if lisacheat is 1:
 		let bonus be (( perception of player minus 10 ) divided by 2 ) + 5;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 16:
 			say "With the help of Lisa's information, you manage to find her trail!";
 			now found is 1;
@@ -137,12 +137,12 @@ Instead of resolving Find Lorenda:
 	if lisacheat is 0:
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 16:
-			say "     You manage to find her trail!";
+			say "You manage to find her trail!";
 			now found is 1;
 		else:
-			say "     Despite your search, you fail to find her. She has to be around here somewhere.";
+			say "Despite your search, you fail to find her. She has to be around here somewhere.";
 	if found is 1:
 		if humorous is banned or guy is banned:
 			say "     You follow a hopeful trail and you suddenly realize there are other tracks following the same trail. You rush forward and arrive to find a pair of creatures bearing down on a woman screaming frantically down one of the alleyways. She is pinned to the wall, between the pair of them. Thinking quickly, you rush to her aid!";
@@ -192,7 +192,7 @@ instead of conversing the Diego while AlexProgress is 4 and alexdiego is 0 and d
 
 
 instead of conversing the Alex while gettinglee > 4 and alexleeinfo is 0:
-	say "     Normally, I shouldn't divulge information about a client's case, but this is an emergency and you can be considered part of my staff.' He slips a paper from one of the case files on his table. This memo that Lee found discusses under the table deals between members of the governor's staff and the city councillors of several cities in the area. If that's really Lee in there, mention that I want to talk with him about these names here and he should realize that you could only get that info from me. If it's not him, it won't mean anything to that person and the information is still safe until brought to court.";
+	say "     Normally, I shouldn't divulge information about a client's case, but this is an emergency and you can be considered part of my staff.' He slips a paper from one of the case files on his table. This memo that Lee found discusses under the table deals between members of the governor's staff and the city councilors of several cities in the area. If that's really Lee in there, mention that I want to talk with him about these names here and he should realize that you could only get that info from me. If it's not him, it won't mean anything to that person and the information is still safe until brought to court.";
 	now alexleeinfo is 5;
 
 Table of GameRoomIDs (continued)
@@ -219,12 +219,12 @@ Instead of going west from dirty sheds:
 		if player consents:
 			let bonus be (( charisma of player minus 10 ) divided by 2) + alexleeinfo;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
+			say "     You roll 1d20([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
 			if dice + bonus > 19:
-				say "[line break]     'Oh... he really did send you, didn't he?' You hear things being shoved aside, and the door opens a crack, a cat's eye peering out, trying to gauge if the coast is clear. Seeing that it is, Lee steps out, and he isn't a he anymore. In fact, he seems to have more in common with the gryphons and hyenas running around the city as far as her new gender at this point. 'C-come on, let's hurry. I don't want anyone to see me!' she says. She throws her coat over her head to cover her feline ears, holding it down with paw-like hands.";
+				say "'Oh... he really did send you, didn't he?' You hear things being shoved aside, and the door opens a crack, a cat's eye peering out, trying to gauge if the coast is clear. Seeing that it is, Lee steps out, and he isn't a he anymore. In fact, he seems to have more in common with the gryphons and hyenas running around the city as far as her new gender at this point. 'C-come on, let's hurry. I don't want anyone to see me!' she says. She throws her coat over her head to cover her feline ears, holding it down with paw-like hands.";
 				now success is 1;
 			else:
-				say "[line break]     'Ha! As if I'd believe that!' He starts rambling on about lying monsters in his city, no longer listening to you. You get the feeling you'll have to try again later to convince him to come out once he's calmed down.";
+				say "'Ha! As if I'd believe that!' He starts rambling on about lying monsters in his city, no longer listening to you. You get the feeling you'll have to try again later to convince him to come out once he's calmed down.";
 		if success is 0:
 			say "     [bold type]Do you attempt to break down the door?[roman type][line break]";
 			LineBreak;
@@ -233,12 +233,12 @@ Instead of going west from dirty sheds:
 			if player consents:
 				let bonus be ( Strength of player minus 10 ) divided by 2;
 				let dice be a random number from 1 to 20;
-				say "You roll 1d20([dice])+[bonus] vs 22 and score [dice plus bonus]: ";
+				say "     You roll 1d20([dice])+[bonus] vs 22 and score [dice plus bonus]: ";
 				if dice + bonus > 21:
-					say "[line break]     'Ahhhh!!!' Upon breaking inside, you see for the first time that 'he' may not have been the correct way to call him. She has fainted on the floor, and her body is obviously feminine, though bulged in the crotch of her now too-tight pants. She has cute cat ears and paw-like hands. You gingerly pick her up, and hurry to the High Rise district, before she wakes up.";
+					say "'Ahhhh!!!' Upon breaking inside, you see for the first time that 'he' may not have been the correct way to call him. She has fainted on the floor, and her body is obviously feminine, though bulged in the crotch of her now too-tight pants. She has cute cat ears and paw-like hands. You gingerly pick her up, and hurry to the High Rise district, before she wakes up.";
 					now success is 1;
 				else:
-					say "[line break]     You throw your body against the door, but it seems too tough for you. Maybe you could try again later.";
+					say "You throw your body against the door, but it seems too tough for you. Maybe you could try again later.";
 		follow the turnpass rule;
 		if success is 1:
 			now AlexProgress is 5;
@@ -292,13 +292,13 @@ to say alexsexytimes1:
 	[WaitLineBreak]
 	say "     Alex runs his hands over your body, stroking it sensually as he nuzzles your cheek. Soon he's moving down to your neck, licking and nibbling as he softly chirrs. His whiskered face moves do to your nipples, teasing them with a few licks before continuing down your body. His tongue plays across your [bodyname of player] body as it goes slowly lower and lower. His tongue eventually reaches your groin and starts licking over your tender, sensitive flesh.";
 	if player is herm:		[HERM]
-		say "     The ferret runs his fingers over your cock[if cocks of player > 1]s, holding them[else], holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of player] cock[smn] slowly, working over every square centimeter of [if cocks of player > 1]them[else]it[end if] and your balls to pleasure you.";
+		say "     The ferret runs his fingers over your cock[if cocks of player > 1]s, holding them[else], holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of player] cock[smn] slowly, working over every square centimeter of [itthemm] and your balls to pleasure you.";
 		say "     After tending to your male genitals, he nuzzles under your balls to give your pussy some attention. The ferret runs is fingers over your wet lips, the spreads them as he teasingly brushes his tongue across them. He works his tongue across your pussy again and again, nibbling your folds from time to time. Once he's tended to every square centimeter of your lips and gotten you dripping wet, he dives his tongue into you and starts licking and lapping with considerable zeal.";
 		say "     Having gotten you quite worked up, when he finally plunges his mouth down over your cock and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [ball size] to slip a finger into your pussy while the other strokes his animalistic member.";
 		[WaitLineBreak]
 		say "     His nimble fingers and artful muzzle tease your [cockname of player] shaft and [cunt size desc of player] pussy until you can hold back no longer and shoot your hot load down the ferrety man's throat. He sucks it all down with soft moans until your balls are drained. His muzzle pulls back and he slides his slinky body up yours to kiss you. As your tongue dives between his lips, you can feel the mustelid's cum spraying across your body.";
 	else if player is male:				[MALE]
-		say "     The ferret runs his fingers over your cock[if cocks of player > 1]s, holding them[else], holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of player] cock[smn] slowly, working over every square centimeter of [if cocks of player > 1]them[else]it[end if] and your balls to pleasure you[if anallevel is 3]. He continues lower, sliding his tongue across your tight pucker in several slow licks. His tongue wriggles against your back entrance and eases its way into your rectum as he eagerly rims you for increased pleasure[end if]. Having gotten you quite worked up, when he finally plunges his mouth down over your [cockname of player] penis and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [short ball size] balls while the other strokes his animalistic member.";
+		say "     The ferret runs his fingers over your cock[smn], holding [itthemm] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of player] cock[smn] slowly, working over every square centimeter of [itthemm] and your balls to pleasure you[if anallevel is 3]. He continues lower, sliding his tongue across your tight pucker in several slow licks. His tongue wriggles against your back entrance and eases its way into your rectum as he eagerly rims you for increased pleasure[end if]. Having gotten you quite worked up, when he finally plunges his mouth down over your [cockname of player] penis and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [short ball size] balls while the other strokes his animalistic member.";
 		[WaitLineBreak]
 		say "     His nimble fingers and artful muzzle tease your [cockname of player] shaft until you can hold back no longer and shoot your hot load down the ferrety man's throat. He sucks it all down with soft moans until your balls are drained. His muzzle pulls back and he slides his slinky body up yours to kiss you. As your tongue dives between his lips, you can feel the mustelid's cum spraying across your body.";
 	else:								[FEMALE]
@@ -440,7 +440,7 @@ to say alexbodyreset:
 	if alexbrunch > 0 and tailname of player is not "Ferret":
 		say ". Seeing your changed tail, his hands move down to your rear, stroking and squeezing it until your ferret tail is restored";
 		now tailname of player is "Ferret";
-		now tail of player is "Emerging from the base of your spine is a slender tail covered in ivory fur. ";
+		now tail of player is "Emerging from the base of your spine is a slender tail covered in ivory fur.";
 	if alexbrunch > 1 and skinname of player is not "Ferret":
 		say ". His playful hands caress all over you, dooking happily as your soft, white fur is restored";
 		now skinname of player is "Ferret";

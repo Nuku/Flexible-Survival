@@ -2,7 +2,7 @@ Version 2 of Hermaphrodite Latex Vixen by Guest Writers begins here.
 [Version 2.0 - Updated player victory to sex table options w/option to fuck her pussy - Stripes]
 [- Originally Authored By: TentaBear -]
 
-"Adds a Hermaphrodite Latex Vixen to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Hermaphrodite Latex Vixen to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 
@@ -84,9 +84,11 @@ to say hermaphrodite latex vixen defeat:
 						say "[hermlatexvix_12]";
 					else if nam is "69":
 						say "[hermlatexvix_13]";
+					wait for any key;
 			else if calcnumber is 0:
 				now sextablerun is 1;
 				say "     Wanting no more to do with the latex vixen, you resist the temptation and walk away. The latex vixen is left on the ground, stroking herself while she whimpers plaintively.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	else:

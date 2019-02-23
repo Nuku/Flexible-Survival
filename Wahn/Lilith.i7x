@@ -3,7 +3,7 @@ Version 1 of Lilith by Wahn begins here.
 
 "Adds an NPC named Lilith to the Flexible Survival game"
 
-[ HP states of Lilith (localisation)                                 ]
+[ HP states of Lilith (localization)                                 ]
 [   0: never met her                                                 ]
 [   1: met her, without demon brute                                  ]
 [   2: met her, with demon brute                                     ]
@@ -35,7 +35,6 @@ lastLilithTalk is a number that varies. lastLilithTalk is usually 555.		[turn-co
 LilithPregnancy is a number that varies.
 LilithKidCounter is a number that varies.
 LilithPregCounter is a number that varies.
-AtticusCounter is a number that varies.
 
 An everyturn rule:
 	if LilithPregCounter is 1:
@@ -147,6 +146,7 @@ to say LilithTalkMenu:
 					say "[LilithTalk4]";
 				if (nam is "Brutus and David"):
 					say "[LilithTalk5]";
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the succubus, shaking your head slightly as she gives a questioning look.";
@@ -175,19 +175,19 @@ to say LilithTalk3:
 	if DBCaptureQuestVar is 5:
 		if DemonBruteStatus is 0:
 			say "     She smiles at you, then gives the demon brute a cruel grin. 'You hear that, big boy? Let's get you a pussy so you're ready to get fucked!' Your companion snarls, his muscles tensing, but the magic holds and he can't do anything.";
-			say "     [LilithPregCheck]";
+			say "[LilithPregCheck]";
 		else if DemonBruteStatus is 1:
 			say "     She smiles at you, then gives the demon brute a cruel grin. 'Let's make your pet fully female then. You hear that, big boy? No more cock for you...' Your companion snarls, his muscles tensing, but the magic holds and he can't do anything.";
-			say "     [LilithPregCheck]";
+			say "[LilithPregCheck]";
 		else if DemonBruteStatus is 2:
 			say "     She looks a bit surprised and says, 'Your pet's already fully female. What do you want to do? Make him grow another vagina? That's not a good idea, believe me...'";
 	else if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99:
 		if DemonBruteStatus is 0:
 			say "     She smiles at you, then gives the demon brute a cruel grin. 'You hear that, big boy? Let's get you a pussy so you're ready to get fucked!' Brutus ignores her, just giving you a small bow of his head.";
-			say "     [LilithPregCheck]";
+			say "[LilithPregCheck]";
 		else if DemonBruteStatus is 1:
 			say "     She smiles at you, then gives the demon brute a cruel grin. 'Let's make your pet fully female then. You hear that, big boy? No more cock for you...' Brutus ignores her, just giving you a small bow of his head.";
-			say "     [LilithPregCheck]";
+			say "[LilithPregCheck]";
 		else if DemonBruteStatus is 2:
 			say "     She looks a bit surprised and says, 'Your pet's already fully female. What do you want to do? Make him grow another vagina? That's not a good idea, believe me...'";
 	wait for any key;
@@ -227,8 +227,8 @@ to say LilithTalk5:
 		if calcnumber is 1: [fuck]
 			LineBreak;
 			project the Figure of BrutusGood_icon;
-			say "     It only takes a little nod from you for Brutus to give into his lust and step forward towards Liam, much to Lilith's amusement. 'Pound him hard, I want that boy broken to a real slut,' the demoness gleefully tells him and moves a hand down to her crotch, rubbing herself. But instead of just throwing down the man and fucking him, your demonic companion puts his large hands almost delicately on his shoulders and says, 'Listen to me, Liam. I'm not gonna hurt you. You'll like it. Believe me.' Still in his spellbound trance, the human replies dreamily, 'Yes of course. I trust you. We're in a church after all. But... what is this all about?' Moving a muscled arm down so he can grab Liam's behind, Brutus picks the man up and grunts, 'This,' as he plants a kiss on his lips. And it is not just a quick peck, but the real deal, with Brutus's tongue invading the human's mouth and him stroking Liam's body. There is only a slight moment of surprised hesitation from the man, then his own instincts make him reply in kind - may they be natural or helped along by magic or nanites, you can't tell.";
-			say "     [BrutusLiamFuck]";
+			say "     It only takes a little nod from you for Brutus to give in to his lust and step forward towards Liam, much to Lilith's amusement. 'Pound him hard, I want that boy broken to a real slut,' the demoness gleefully tells him and moves a hand down to her crotch, rubbing herself. But instead of just throwing down the man and fucking him, your demonic companion puts his large hands almost delicately on his shoulders and says, 'Listen to me, Liam. I'm not gonna hurt you. You'll like it. Believe me.' Still in his spellbound trance, the human replies dreamily, 'Yes of course. I trust you. We're in a church after all. But... what is this all about?' Moving a muscled arm down so he can grab Liam's behind, Brutus picks the man up and grunts, 'This,' as he plants a kiss on his lips. And it is not just a quick peck, but the real deal, with Brutus's tongue invading the human's mouth and him stroking Liam's body. There is only a slight moment of surprised hesitation from the man, then his own instincts make him reply in kind - may they be natural or helped along by magic or nanites, you can't tell.";
+			say "[BrutusLiamFuck]";
 			now libido of David is 66; [Ritual ready]
 		if calcnumber is 2: [refuse]
 			LineBreak;
@@ -263,8 +263,8 @@ to say LilithTalk5:
 				say "Invalid choice. Type [link]1[end link] to let Brutus agree to the fuck, [link]2[end link] to refuse, or [link]3[end link] to free Liam.";
 		if calcnumber is 1: [fuck]
 			LineBreak;
-			say "     It only takes a little nod from you for Brutus to give into his lust and step forward towards Liam, much to Lilith's amusement. 'Pound him hard, I want that boy broken to a real slut,' the demoness gleefully tells him and moves a hand down to her crotch, rubbing herself. But instead of just throwing down the man and fucking him, your demonic companion puts his large hands almost delicately on his shoulders and gives him a tiny shake. As Liam wakes up, he hears the words, 'Listen to me, Liam. I'm not gonna hurt you. You'll like it. Believe me.' Still in his spellbound trance, the human replies dreamily, 'Yes of course. I trust you. We're in a church after all. But... what is this all about?' Moving a muscled arm down so he can grab Liam's behind, Brutus picks the man up and grunts, 'This,' as he plants a kiss on his lips. And it is not just a quick peck, but the real deal, with Brutus's tongue invading the human's mouth and him stroking Liam's body. There is only a slight moment of surprised hesitation from the man, then his own instincts make him reply in kind - may they be natural or helped along by magic or nanites, you can't tell.";
-			say "     [BrutusLiamFuck]";
+			say "     It only takes a little nod from you for Brutus to give in to his lust and step forward towards Liam, much to Lilith's amusement. 'Pound him hard, I want that boy broken to a real slut,' the demoness gleefully tells him and moves a hand down to her crotch, rubbing herself. But instead of just throwing down the man and fucking him, your demonic companion puts his large hands almost delicately on his shoulders and gives him a tiny shake. As Liam wakes up, he hears the words, 'Listen to me, Liam. I'm not gonna hurt you. You'll like it. Believe me.' Still in his spellbound trance, the human replies dreamily, 'Yes of course. I trust you. We're in a church after all. But... what is this all about?' Moving a muscled arm down so he can grab Liam's behind, Brutus picks the man up and grunts, 'This,' as he plants a kiss on his lips. And it is not just a quick peck, but the real deal, with Brutus's tongue invading the human's mouth and him stroking Liam's body. There is only a slight moment of surprised hesitation from the man, then his own instincts make him reply in kind - may they be natural or helped along by magic or nanites, you can't tell.";
+			say "[BrutusLiamFuck]";
 			now libido of David is 66; [Ritual ready]
 		if calcnumber is 2: [refuse]
 			LineBreak;
@@ -320,7 +320,7 @@ to say LilithPregCheck:
 		say "     She strokes the bulge in her stomach, saying 'Your child is growing fast, and I feel my breasts getting ready for it. Not much longer now...'";
 	else if LilithPregnancy is 3:
 		say "     After stroking over her strongly bulging stomach, the succubus moves a hand up to her breast, slightly squeezing it, which results in a small trickle of milk from her nipple. 'Yes, now we're ready,' she says with a grin. 'Could you give me that?' Following her pointing finger, you pick up a, somewhat dented and sticky with cum, golden chalice from the ground and hand it over. She proceeds to milk her own breasts into it, filling the thoroughly desecrated vessel with her milk. Holding it out to you, she continues 'Now just add a drop of blood and dip the amulet in it.'";
-		say "     Your blood in another ritual - do you really want to go through with this? ";
+		say "     Your blood in another ritual - do you really want to go through with this?";
 		if player consents:
 			if DBCaptureQuestVar is 5:
 				say "     Taking the demontooth amulet from around your neck, you prick your finger with its sharp point and squeeze out a drop of blood into the chalice. Then you dip the amulet itself into the while liquid with its swirl of red and listen to Lilith chant something in a long forgotten language. 'There,' she finally says after a while, then nods towards your captive demon brute. You pull the amulet back out and put it around your neck, then take the chalice from her. Walking to the demon, careful not to spill anything, you command the creature to open up and pour the liquid down his throat.";
@@ -505,11 +505,10 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0: [not t
 		setmonster "Incubus";
 		project the Figure of Incubus_naked_icon;
 		say "     As you walk into the sacristy, you're treated with the sight of a young and handsome incubus waiting for you on the bed. He's lying half on his side, propping up his upper body with an elbow on the bed, grinning as he gives you a suggestive wink. Posing like that, he's showing off all of his naked glory, and you can't stop your eyes from wandering over bis slender but beautifully muscled body. Bathed in the light of the many candles, his tan skin shines, dark and perfect. Your gaze catches on his shapely and erect manhood, only moving on after a moment of reluctance, then comes to rest on his face - his very familiar looking face, with a close resemblance to your own.";
-		say "     'Welcome,' he says, in a honeyed voice that makes you all tingly inside. '[if AtticusCounter is 0]I'm Atticus. [end if]Mother isn't here right now, as you can see.' His free arm moves to sensuously stroke his chest. 'It'll be a while till she's back. How about we... have some fun in the meantime?'";
+		say "     'Welcome,' he says, in a honeyed voice that makes you all tingly inside. '[if PlayerMet of Atticus is false]I'm Atticus. [end if]Mother isn't here right now, as you can see.' His free arm moves to sensuously stroke his chest. 'It'll be a while till she's back. How about we... have some fun in the meantime?'";
 		LineBreak;
-		say "     Do you take him up on that offer? ";
+		say "     Do you take him up on that offer?";
 		if player consents:
-			increase AtticusCounter by 1;
 			say "     The urge to be with this young, adonis-like demon has you walking almost in a trance towards the bed. He moves to the edge of the bed on his knees, pulling your head to his for a deep kiss, then his hands start exploring your body, sliding under your clothes to touch and stroke. Pulling off your gear and clothes one by one, the incubus drops them to the floor and pulls you on the bed with him to make out with you.";
 			if player is male:
 				let diceroll be a random number from 1 to 2;
@@ -521,7 +520,7 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0: [not t
 					say "     Atticus gives you an amazing blowjob, instantly reacting to your desires and needs, touching and teasing you in exactly the right spots as only a sex demon can. He holds off on making you reach orgasm, prolonging the intense experience until your balls are almost aching to send forth their stored-up load. Then finally, as he's just got your manhood deep in his throat, he pushes a finger into your asshole, tickling your prostate to push you over the edge. With a loud, lust-filled groan you climax, pumping blast after blast of cum directly into his stomach, then mouth as he pulls back to get a taste of it.";
 					say "     After sucking the last little bit of cum out of your soon softening cock, the incubus sticks out his tongue to show you your load, then demonstratively swallows it. Smacking his lips, he says, 'Delicious, daddy. I can see why mother let you knock her up. Let's do this again - soon.'";
 				else: [fucking]
-					say "     While your lips are pressed together and his tongue explores your mouth, one of Atticus hands strays downward, moving over your [bodytype of player] body until it reaches your crotch. He fondles your balls and jerks your by now rock hard [cock of player] shaft a few times, then slides his hand down between your legs and rubs over your pucker. Pulling back from your mouth, he grins at you and says, 'Ah daddy... I want to fuck you so badly.', then pushes you over on your belly and kneads your buttcheeks with his fingers. Your demon son moves into position behind you and a moment later, you can feel the hot and hard shape of his manhood resting against your crack. Atticus eagerly nudges your pucker with his cock, then pushes against it until the muscle relents and he can sink his shaft into you.";
+					say "     While your lips are pressed together and his tongue explores your mouth, one of Atticus hands strays downward, moving over your [bodytype of player] body until it reaches your crotch. He fondles your balls and jerks your by now rock hard [cock of player] shaft a few times, then slides his hand down between your legs and rubs over your pucker. Pulling back from your mouth, he grins at you and says, 'Ah daddy... I want to fuck you so badly,' then pushes you over on your belly and kneads your buttcheeks with his fingers. Your demon son moves into position behind you and a moment later, you can feel the hot and hard shape of his manhood resting against your crack. Atticus eagerly nudges your pucker with his cock, then pushes against it until the muscle relents and he can sink his shaft into you.";
 					WaitLineBreak;
 					say "     The incubus vigorously fucks you with an amazingly good technique, instantly reacting to your desires and needs, bumping you in exactly the right spots as only a sex demon can. He holds off on making you reach orgasm, prolonging the intense experience until your hands are tightly gripping the sheets under you and you're literally panting with the need to come. Then finally, he himself can't take it anymore and switches to rapid thrusts, hammering into you hard and deep. Though even in his rush to get off, he still manages to make you reach your goal at the same time as he is, and the two of you start blasting your loads just seconds apart. While his cock pluses with spurt after spurt of cum shooting deep into your ass, you splatter your own cum all over Lilith's bedsheets. Leaning forward to nibble on your earlobe while his cock still twitches in you with more and more cum, Atticus says, 'Let's do this often...'[mimpregchance]";
 			else if player is female:
@@ -534,6 +533,7 @@ instead of going northeast from Burned-Out Chapel while HP of Lilith > 0: [not t
 				say "     The incubus vigorously fucks you with an amazingly good technique, instantly reacting to your desires and needs, bumping you in exactly the right spots as only a sex demon can. He holds off on making you reach orgasm, prolonging the intense experience until your hands are tightly gripping the sheets under you and you're literally panting with the need to come. Then finally, he himself can't take it anymore and switches to rapid thrusts, hammering into you hard and deep, and orgasms not long after. The unbelievably handsome demon gives a satisfied grunt as he unloads deep into your asshole, filling you with his fertile seed. Leaning forward to nibble on your earlobe while his cock still twitches in you with more and more cum, Atticus says, 'Let's do this often...'[mimpregchance]";
 		else:
 			say "     Telling your demonic offspring no only has him redouble his efforts, shamelessly lounging on the bed and doing his best to draw your looks to him. Fruitlessly, as you've made up your mind. A while later, he recognizes that and gives up, though not without rubbing his naked body against yours on the way out of Lilith's chamber. Standing at the door, he gives you a lascivious look, gripping his hard cock as he says [if LilithKidCounter > 1 and a random chance of 1 in 2 succeeds]'Guess I'll just have to make do with my little bro. Your son has the most amazingly tight hole.'[else]'Guess I'll have to go out hunting after all. Mother told me an awesome spot to catch humans, you know.' [end if]With a grin and a wink, he's out and away, leaving you alone until Lilith comes back a while later.";
+		now PlayerMet of Atticus is true;
 		move player to Sacristy;
 	else if lastfuck of Lilith - turns > 6 and a random chance of 1 in 3 succeeds:
 		move player to Sacristy;

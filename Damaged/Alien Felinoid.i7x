@@ -1,7 +1,7 @@
 Version 8 of Alien Felinoid by Damaged begins here.
 [Version 8.1 - Updated to extended heat table - Stripes]
 
-"Adds a Alien Felinoid to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Alien Felinoid to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 

@@ -18,7 +18,7 @@ to say cheetahdesc:
 	setmongender 3;
 	choose row monster in Table of Random Critters;
 	now specialcheetah is false;
-	if ( a random chance of 1 in 3 succeeds ):[Special Cheetah]
+	if ( a random chance of 1 in 3 succeeds ): [Special Cheetah]
 		now specialcheetah is true;
 		say "     As you move through the ruined zoo, ";
 		[appearance of the cheetah]
@@ -27,25 +27,25 @@ to say cheetahdesc:
 		else: [player was surprised by the cheetah]
 			say "you freeze solid as something brushes up behind you and a spotted tail flicks at the corner of your vision, turning around very slowly you see ";
 			[physical details]
-		say "a rather unsual cheetah, with clusters of darker spots running down it's back. ";
-	else: [standard descripton]
+		say "a rather unusual cheetah, with clusters of darker spots running down its back.";
+	else: [standard description]
 		say "     As you move through the ruined zoo, ";
 		[appearance of the cheetah]
 		if ( a random chance of 1 in 3 succeeds ): [spotted the cheetah]
 			say "[one of]you round a corner and see[or]you spot just ahead of you[at random] ";
 		else: [player was surprised by the cheetah]
-			say "[one of]something starts to feel wrong, you spin around and spot [or]A soft rumble makes you jump in suprise as you glance over your shoulder and see [at random]";
-			[physical details]
+			say "[one of]something starts to feel wrong. You spin around and spot[or]a soft rumble makes you jump in surprise as you glance over your shoulder and see[at random] ";
+		[physical details]
 		say "[one of]a sleek[or]a muscular[or]a powerful[or]a lithe[at random] ";
 		say "cheetah, who slinks out from behind a building. The large feral feline ";
-					[clothing]
-		say "[one of]has scraps of a tshirt hanging off his form[or]wears a loose fitting collar, a small bell jingling with each step[or]wears some kind of loose fitting outfit[or]has an array of jewlery hanging off its pelt[at random]. ";
+		[clothing]
+		say "[one of]has scraps of a t-shirt hanging off his form[or]wears a loose fitting collar, a small bell jingling with each step[or]wears some kind of loose fitting outfit[or]has an array of jewelry hanging off its pelt[at random]. ";
 		say "The rest of his body is ";
 		[fur]
-		say "covered in [one of]thick matted fur caked in mud[or]heavy scars and fresh blood[or]a well groomed coat of silky fur[or]a strange rainbow patterned set of dots[or]a hypnotic pattern of blots and dots[or]a sleek coat of a classic cheetah[at random].";
+		say "covered in [one of]thick matted fur caked in mud[or]heavy scars and fresh blood[or]a well groomed coat of silky fur[or]a strange rainbow patterned set of dots[or]a hypnotic pattern of blots and dots[or]the sleek coat of a classic cheetah[at random].";
 		if cheetahmate > 0: [Mated To Special Cheetah]
-			say "     The cheetah looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on his face. ";
-							[comment]
+			say "     The cheetah looks you up and down with [one of]an unimpressed[or]a haughty[or]a challenging[or]a curious[or]a surprised[at random] look on his face. ";
+			[comment]
 			say "[one of]'Wandering so far away from your mate, guess it's my lucky day[or]'I wonder what your mate would say if he saw you out here all alone[or]'I can smell him on you, but don't worry, I can help you get rid of his scent[at random].' Licking his lips, the cheetah stalks forward to sate his desires in you, with or without your permission.";
 		else:
 			say "Licking his lips, the cheetah stalks forward to sate his desires in you, with or without your permission.";
@@ -159,7 +159,7 @@ to say beatthecheetah05:	[get cunnilingus]
 	say "     ";
 	infect "Feral Cheetah";
 to say beatthecheetah06:	[give blow job]
-	say "     The sight of the male cat's member makes your [if female]folds wet [else]pucker twitch [end if] in anticipation, and you move forward excitedly, running a hand through the soft fuzz on the cheetah's furred underside and making him moan in pleasant surprise. You rub his cock, wondering at its smooth feel in your hands, until it grows out, a bit smaller than you would have expected. Leaning forward, you proceed to suck him off, the warm flesh of his cock filling your mouth as the little barbs on it run along your tongue.";
+	say "     The sight of the male cat's member makes your [if player is female]folds wet[else]pucker twitch[end if] in anticipation, and you move forward excitedly, running a hand through the soft fuzz on the cheetah's furred underside and making him moan in pleasant surprise. You rub his cock, wondering at its smooth feel in your hands, until it grows out, a bit smaller than you would have expected. Leaning forward, you proceed to suck him off, the warm flesh of his cock filling your mouth as the little barbs on it run along your tongue.";
 ]
 to say beatthecheetah07:	[Make him your mate]
 	say "     The sight of the male cat's member causes your cunt to throb, and you move forward excitedly, sitting on the cheetah's furred underside as he moans in pleasant surprise. You rub his cock, wondering at its smooth feel in your hands, until it grows out, a bit smaller than you would have expected. You lean back, spreading your legs to take him inside, and slide forward. At the feeling of your cunt enclosing his member, the cheetah grasps onto your back, and lurches, driving his shaft home. You thrust against him as he does so, soon finding a rhythm of fucking which makes him hit your most sensitive spots perfectly, the two of you driving each other to higher and higher arousal. Before much longer, you climax, and your wet juices soak your spotted partner's, leaving a dark patch right above where his cock is. Basking in the afterglow, you realize with sadness that he hasn't come yet, and pull out, turning and taking his feline shaft into your hands.";
@@ -196,7 +196,7 @@ To say cheetah victory:
 				say "     You feel the breath through his nose against your balls as the spotted feline sniffs your crotch, then catches a whiff of something intriguing a little higher up. Catching the scent of your hidden womb, he gives a confused sound and takes in another noseful. As if drawn by the scent beyond his control, the cheetah gives your pucker several licks, his raspy tongue playing across your crinkled hole in search of that arousing smell. He starts to purr and rumble, becoming captivated of your unusual nature, which he shows by mounting you.";
 			else:
 				say "     You feel his breath against your backside again, the spotted feline checking your scent again. Catching a whiff of your hidden womb again, his nose is drawn to your pucker and his tongue inexorably to it. He gives it several licks, his raspy tongue playing across your crinkled hole. He starts to purr and rumble as he's captivated once again by that arousing smell and quickly mounts you.";
-			say "     The feline's spiny tip presses against your male breed-hole and pushes into your rectum. You moan and push back against him as he does so, your body responding with a growing need as those stimulating barbs send shivers of pleasure through you. His pace is a little rough and uncertain, still growing used to fucking a tight ass instead of a pussy. But from the loud rumbles you feel from his chest vibrating against your back, you can tell he's still enjoying himself greatly[if player is male]. You can only take his feral pounding for so long before your prostate thrums and your balls boil over in gooey blasts of semen shooting from your cock. Your anus clenches and quivers around that pulsing rod of his as you orgasm[else]. Your anus clenches and quivers around that pulsing rod, milking at it as your body trembles with lustful need[end if]. This spurs the cheetah to drive his feline cock deep inside you and unleash spurt after virile spurt of his animal seed into you. After draining himself[if cheetah_mpreg is false], he hops off of you quickly and backpedals several steps before rushing off[else], he dismounts from you slowly. He seems a little confused by his reaction to you, but gives you a soft nuzzle before padding off in search of a more feminine lover[end if].";
+			say "     The feline's spiny tip presses against your male breed-hole and pushes into your rectum. You moan and push back against him as he does so, your body responding with a growing need as those stimulating barbs send shivers of pleasure through you. His pace is a little rough and uncertain, still growing used to fucking a tight ass instead of a pussy. But from the loud rumbles you feel from his chest vibrating against your back, you can tell he's still enjoying himself greatly. [if player is male]You can only take his feral pounding for so long before your prostate thrums and your balls boil over in gooey blasts of semen shooting from your cock. Your anus clenches and quivers around that pulsing rod of his as you orgasm[else]Your anus clenches and quivers around that pulsing rod, milking at it as your body trembles with lustful need[end if]. This spurs the cheetah to drive his feline cock deep inside you and unleash spurt after virile spurt of his animal seed into you. After draining himself, he [if cheetah_mpreg is false]hops off of you quickly and backpedals several steps before rushing off[else]dismounts from you slowly. He seems a little confused by his reaction to you, but gives you a soft nuzzle before padding off in search of a more feminine lover[end if].";
 			now cheetah_mpreg is true;
 		else if player is male:
 			say "     You feel the breath through his nose against your balls as the cougar sniffs your crotch, then gives a displeased rumble at finding a weaker male in his territory. Seems he wants to show you a lesson next, as he mounts you from behind, pushing you down as he humps against you. He doesn't fuck your ass or anything, just treats you like a female to be fucked and rubs his hard shaft against your crotch, bumping your balls with the spined tip. Before long, he orgasms, blasting away with spurt after spurt of cum to splash wetly against your crotch. Maybe he's hoping this will infect you, making you transform you into a female sooner or later. No matter what, having gotten his rocks off, the cougar pads off to find another female.";
@@ -310,14 +310,14 @@ when play ends:
 		if cheetahmate is 0:
 			if the humanity of player < 10:
 				if player is female:
-					say "You join the growing band of converts and soon take your place as the pack leader's proud mate. Your group manages to keep away the human forces with sheer speed and cunning, maintaining control of the zoo and some of the surrounding area even as the rest of the city is pacified.";
+					say "     You join the growing band of converts and soon take your place as the pack leader's proud mate. Your group manages to keep away the human forces with sheer speed and cunning, maintaining control of the zoo and some of the surrounding area even as the rest of the city is pacified.";
 				else:
-					say "You form the cheetahs of the zoo into a large, spotted band of conquerors and hold the humans off with sheer speed and cunning. One day, as you oversee and participate in the defense, you smell someone sweet, and entice her to choose you as her mate. While the military manages to pacify the rest of the city, the zoo and its surrounding area remains firmly under your pack's control, abandoned as too difficult to reclaim.";
+					say "     You form the cheetahs of the zoo into a large, spotted band of conquerors and hold the humans off with sheer speed and cunning. One day, as you oversee and participate in the defense, you smell someone sweet, and entice her to choose you as her mate. While the military manages to pacify the rest of the city, the zoo and its surrounding area remains firmly under your pack's control, abandoned as too difficult to reclaim.";
 			else:
 				if player is female:
-					say "You choose a mate from the transformed and after escaping those hunting for you in the city bear him many children over the following years. Time goes by quickly with the sweet smell of freedom, love, and your mate to accompany you, until eventually humankind returns its grasp on the world and you prepare to teach them a lesson...";
+					say "     You choose a mate from the transformed and after escaping those hunting for you in the city bear him many children over the following years. Time goes by quickly with the sweet smell of freedom, love, and your mate to accompany you, until eventually humankind returns its grasp on the world and you prepare to teach them a lesson...";
 				else:
-					say "You wait in the zoo, and, in the few days that the humans take to recapture and purify the city, a cheetah chooses you as her mate. The two of you flee the city together, stopping only when you are both on a remote plain, grass stretching as far as the eye can see. She bears you many children in your wild home, and the sweet smell of freedom, love, and your mate carry you outwards.";
+					say "     You wait in the zoo, and, in the few days that the humans take to recapture and purify the city, a cheetah chooses you as her mate. The two of you flee the city together, stopping only when you are both on a remote plain, grass stretching as far as the eye can see. She bears you many children in your wild home, and the sweet smell of freedom, love, and your mate carry you outwards.";
 		else if cheetahmate > 0 and cheetah_mpreg is true and cunts of player is 0:
 			if humanity of player < 10:
 				say "     You are drawn back to the zoo by the images of your cheetah lover imprinted in your confused mind. Finding him, you submit yourself to being mounted by the lustful feline. After a few more wild romps with your stud cat, his trepidation about taking your ass to mate you fades. By the time your belly grows round with his offspring, he's become a passionate lover eager to pound or play with your ass as much as you desire. And being a wild, lustful feline yourself, you desire it very, very often.";
@@ -326,8 +326,8 @@ when play ends:
 				say "     During one particularly strong heat, you drop everything, make some quick preparations and cross into the fallen city once again. While several of creatures you see, especially the feline ones, are quite alluring and make you long to let them douse your heat with their seed, you eschew them and press onwards to the zoo. Once there, it doesn't take long before you're found by your mate. Drawn to the scent of your heat even as you are to his masculine musk, you are reunited. And your reunion is celebrated by a wild romp of feral sex. Having long missed you, your cheetah mate doesn't hold back because of your gender any longer and breeds you over and over again.";
 				say "     Convincing him to leave the zoo and the city takes some work and making your escape from it is a harrowing adventure, but eventually you and your mate make it back to the safety of your home. Given his feral nature, he does not socialize well, but is fine enough within the confines of your home. Having gotten over his trepidation about taking your ass to mate you, he proves to be a passionate lover, eager to pound or play with your ass as much as you desire. Soon your belly grows round with his offspring and he only becomes more lustful, much to your delight.";
 		else if cheetahmate is 1:
-			say "You rejoin your mate after the rescue, pretending to be fully cured, even though your mind is still altered. He gives you children, and you both surreptitiously move to a Savannah cottage, where you can live your lives in peace and prosperity.";
+			say "     You rejoin your mate after the rescue, pretending to be fully cured, even though your mind is still altered. He gives you children, and you both surreptitiously move to a Savannah cottage, where you can live your lives in peace and prosperity.";
 		else if cheetahmate is 2:
-			say "You and your mate continue living together, determined to replace all that the cheetahs have lost to the humans, working hard to buy the lands the cheetahs once occupied, and filling them with your spawn.";
+			say "     You and your mate continue living together, determined to replace all that the cheetahs have lost to the humans, working hard to buy the lands the cheetahs once occupied, and filling them with your spawn.";
 
 Feral Cheetah ends here.

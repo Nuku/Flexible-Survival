@@ -1,7 +1,7 @@
 Version 1 of Danny by Wahn begins here.
 [Version 1 - New NPC]
 
-"Adds a mall rat npc to Flexible Survival"
+"Adds a mall rat NPC to Flexible Survival"
 
 [ Danny, the mall rat                                                                  ]
 [                                                                                      ]
@@ -89,11 +89,11 @@ to say DannyTalkMenu:
 					say "[DannyTalk1]";
 				if (nam is "Ask him about taking photographs"):
 					say "[DannyTalk2]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the young mall rat, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -236,11 +236,11 @@ to say PhotoSafari_Zebra:
 				say "     After a few moments of just slowly jerking his stallion, Danny leans forward and wraps his lips around the zebra's cock. He slides his lips over the proud equine's member, taking a fair bit into his mouth before pulling back to take a deep breath. And then, all of a sudden, the smallish rat does a passable impression of a sword-swallower, taking down the strapping zebra member in one go, right down to the base. Bobbing his head up and down on that comparatively monstrous shaft, your ratty companion reveals his skills at deep-throating, much to the pleasant surprise of the striped hunk he is sucking off. The equine throws his head back and lets out a long moan of 'Fuuuckk, you're good at this, dude!' Grinning at the interaction between the two of them, you slowly circle the pair of males, shooting photo after photo to give Danny something to remember this moment by.";
 				say "     Both Danny as well as the zebra really get into it, totally forgetting that you are even there. The zebra stud places his hands behind Danny's head and roughly holds it in place so that he can fuck his face. You can hear him mumble under his breath, in between grunts, 'Fucking great cocksucker. Better than any of my mares. Need to get this kid for my herd.' His balls swing back and forth, hitting Danny's chin with every new thrust. Given the intensity of pleasure he is getting from this face-fuck, the zebra reaches the height of his arousal not long after that. He buries his cock all the way down Danny's maw and lets out a loud grunt, shooting a deluge of seed down the mall rat's throat. His orgasm lasts for a fairly long while, balls and shaft twitching as they pump out more spurts of cum, and Danny doesn't seem fazed at all by this. He just keeps swallowing down every last drop of the creamy load his partner has to offer.";
 				WaitLineBreak;
-				say "     After a while of further suckling and swallowing by Danny, the panting zebra pulls out his spent cock - looking wet and slick, and without any trace of cum on the shaft at all. 'Damn! That was something else,' the stallion grunts in satisfaction, then glances down to his mall rat cocksucker. 'Now, how about it? Come on, join my herd as a boy-mare. You know that you want to. No one gets that good at sucking unless he loves pleasing real men.' The zebra reaches down to grab Danny's arm arm and lead him off, but you clear your throat to remind him that you're here too. The stallion looks at you a little defiantly, then lets go after a second or two. He trots off, looking to console himself by finding a mare to breed.";
+				say "     After a while of further suckling and swallowing by Danny, the panting zebra pulls out his spent cock - looking wet and slick, and without any trace of cum on the shaft at all. 'Damn! That was something else,' the stallion grunts in satisfaction, then glances down to his mall rat cocksucker. 'Now, how about it? Come on, join my herd as a boy-mare. You know that you want to. No one gets that good at sucking unless he loves pleasing real men.' The zebra reaches down to grab Danny's arm and lead him off, but you clear your throat to remind him that you're here too. The stallion looks at you a little defiantly, then lets go after a second or two. He trots off, looking to console himself by finding a mare to breed.";
 				say "     Panting and seemingly off in a lustful haze for a little while longer, Danny eventually gets to his feet, then wanders over to give you a hug. 'Thank you,' he says wholeheartedly, making you chuckle with his happy grin. Handing the camera back over, the two of you make your way back to the mall right after. The animals that were looking at you before don't seem as interested this time around, probably because they can smell the zebra stallion's scent on Danny. You just ignore them and continue walking back towards the mall, making sure that nothing jumps out and tries to hurt you or your companion. Finally making it back to the Mall, Danny gives you another hug. 'I took so many photos of the zebra,' he says, smiling from ear to ear and patting his magic camera. 'Can't wait to see them developed. Wait - there was half an empty roll still in here, and now it says it is full? Did - did you take pictures of the rest of it too?!' You just laugh as you see how very excited he gets, tousling his hair in response.";
 				now Dexterity of Danny is 3; [successfully got through the zebra scene, Danny was face-fucked]
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
-			say "     You fall to your knees, bested by the virile male. Looking up at the zebra stallion, you see him examine you for a second, then shakes his head before he turns his attention to Danny, and a cocky grin spreads over his muzzle. The slender mall rat is still snapping photos of the two of you, ignorant to the fact that the fight is over, and that his side lost. Standing up straight to his imposing stature, the zebra stallion looks back and forth between Danny and yourself, then says in a suggestive tone, 'You know, fighting me is nothing but a waste of time. Just submit, and you'll soon have a nice time serving as my mares.' Having been defeated and knowing the usual aftermath, you simply nod and prepare yourself while waving your hand to tell Danny that he should hide while the zebra's back is turned. Despite your signal, Danny pays no attention to the intended action and keeps snapping away, capturing more pictures of the strapping stallion. ";
+			say "     You fall to your knees, bested by the virile male. Looking up at the zebra stallion, you see him examine you for a second, then shakes his head before he turns his attention to Danny, and a cocky grin spreads over his muzzle. The slender mall rat is still snapping photos of the two of you, ignorant to the fact that the fight is over, and that his side lost. Standing up straight to his imposing stature, the zebra stallion looks back and forth between Danny and yourself, then says in a suggestive tone, 'You know, fighting me is nothing but a waste of time. Just submit, and you'll soon have a nice time serving as my mares.' Having been defeated and knowing the usual aftermath, you simply nod and prepare yourself while waving your hand to tell Danny that he should hide while the zebra's back is turned. Despite your signal, Danny pays no attention to the intended action and keeps snapping away, capturing more pictures of the strapping stallion.";
 			say "     Chuckling, the zebra addresses you with the teasing words, 'I bet that your little friend over there won't even put up a fight. He looks like he's ready to worship my cock and could make a fine addition to my herd.' With that said, the zebra starts making his way towards Danny. Unphased, the mall rat keeps taking pictures, almost ecstatic as he captures the confident stride of the muscular zebra and the swinging motion of the weighty shaft dangling between his legs. Soon, the zebra stands right in front of your mall rat friend, grinning down at him and saying, 'You won't need that for what comes next, little boy-mare.' Then he reaches out to pull the camera from Danny's hands, laying it down on the ground. You can tell that your slender companion realizes for the first time in just what situation he is in, now that he isn't just thinking of the next picture and a good angle for it. The grinning zebra bends over and whispers something into Danny's ear, causing him to look down at the equine's cock with big eyes.";
 			say "     [bold type]Do you want to watch the zebra make use of Danny's mouth?[roman type][line break]";
 			LineBreak;
@@ -367,11 +367,11 @@ to say DannySexMenu:
 					say "[DannySex6]";
 				else if (nam is "Let Danny fuck your pussy"):
 					say "[DannySex7]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the mall rat, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

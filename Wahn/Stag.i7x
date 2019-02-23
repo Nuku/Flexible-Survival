@@ -1,7 +1,7 @@
 Version 6 of Stag by Wahn begins here.
 [Version 6.1 - Ares moved to his own file]
 
-"Adds a Male Stag to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Male Stag to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Dog-Walking Event
 
@@ -102,35 +102,35 @@ to say Stag loses:
 		choose a blank row in table of fucking options;
 		now title entry is "Demand that he sets free the woman he's brainwashed to act as a dog.";
 		now sortorder entry is 1;
-		now description entry is "Free Lea.";
+		now description entry is "Free Lea";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Suck him off.";
 	now sortorder entry is 2;
-	now description entry is "Blow him.";
+	now description entry is "Blow him";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Have him suck you off.";
 		now sortorder entry is 3;
-		now description entry is "Get a blow-job.";
+		now description entry is "Get a blow-job";
 	[]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride his cock with your pussy.";
 		now sortorder entry is 4;
-		now description entry is "Let the stag breed you.";
+		now description entry is "Let the stag breed you";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Get his cock in your ass.";
 	now sortorder entry is 5;
-	now description entry is "Let the stag fill your ass with his seed.";
+	now description entry is "Let the stag fill your ass with his seed";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take the stag's ass.";
 		now sortorder entry is 6;
-		now description entry is "Fill him with your cock.";
+		now description entry is "Fill him with your cock";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -172,6 +172,7 @@ to say Stag loses:
 							now non-infectious entry is false;
 							break;
 					stop the action;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the stag, shaking your head slightly as he gives a questioning look.";
@@ -320,7 +321,7 @@ Mike's Office	"Mike's Office"
 Mike's Office is a room.
 Mike's Office is north of Mike's Home.
 Mike's Office is sleepsafe.
-The description of Mike's Office is "     You're in Mike's office, a relatively large room. A desk with a computer stands in the back, next to a filing cabinet. Lots of boxes of equipment and sacks of dog food line the walls. Seemingly a new addition to the room is a single bed in the center, its white sheets showing a few stains that are most likely dried cum.[if HP of Mike < 5] Lea, Mike's transformed dog lies on it, whining pitifully.[end if]".
+The description of Mike's Office is "     You're in Mike's office, a relatively large room. A desk with a computer stands in the back, next to a filing cabinet. Lots of boxes of equipment and sacks of dog food line the walls. Seemingly a new addition to the room is a single bed in the center, its white sheets showing a few stains that are most likely dried cum[if HP of Mike < 5]. Lea, Mike's transformed dog, lies on it, whining pitifully[end if].".
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -514,7 +515,7 @@ instead of conversing Mike:
 	else if HP of Mike is 4:
 		say "     Mike looks up hopefully. 'Have you got a medkit?'";
 		if medkit is owned:
-			say "     Aware that you have one in your backpack, you answer... ";
+			say "     Aware that you have one in your backpack, you answer...";
 			if player consents:
 				say "     You pull the medkit out and start to patch Lea up while Mike holds her tight as she struggles, whining pitifully as you do the painful but necessary steps of cleaning and disinfecting her wound. It's not an easy task, but soon she's well taken care of, with a fresh white bandage around her upper torso.";
 				say "     Overjoyed at Lea being better now, Mike says 'Thank you, my friend. I don't know what I would have done without you. I'm in your debt.'";
@@ -526,7 +527,7 @@ instead of conversing Mike:
 			say "     You just silently shake your head.";
 	else if HP of Mike is 5:
 		say "     Mike says 'I don't have anything I could give you as thanks, except... would you maybe want one of my human dogs for your own? They were well trained as dogs and are very obedient - and since they changed, I taught them a few extra tricks too...' he winks and gives a small nod to Lea and her pregnant belly.";
-		say "     Do you accept one of the human form dogs from Mike as a reward? ";
+		say "     Do you accept one of the human form dogs from Mike as a reward?";
 		if player consents:
 			say "     [bold type]What gender do you want your new 'dog' to be?[roman type][line break]";
 			LineBreak;
@@ -560,14 +561,14 @@ object	name
 Lea	"Lea"
 
 Lea is a woman. Lea is in Mike's Office.
-The description of Lea is "     Originally one of Mike's dogs, Lea is now a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with her pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication. [if HP of Mike < 5]A deep gash from a leopardman's claw marks her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon.[else if HP of Mike > 4]A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again.[end if]".
+The description of Lea is "     Originally one of Mike's dogs, Lea is now a young human woman of about nineteen. She has shoulder-length blond hair and a slender physique, although her breasts have obviously filled out quite a bit to go with her pregnant belly. But no matter what she looks like - there's still only a dog's mind behind her eyes, so she walks on all fours and only uses barks and growls as communication[if HP of Mike < 5]. A deep gash from a leopardman's claw marks her side. It doesn't look good - she needs some bandages and most likely antibiotics too. And soon[else if HP of Mike > 4]. A clean white bandage covers most of her upper torso, protecting her healing wound from getting dirty again[end if].".
 The conversation of Lea is { "Woof." }.
 
 instead of fucking Lea:
 	if HP of Mike < 5:
 		say "     Mike roughly shoves you aside as you try to fondle Lea. 'Get a hold of yourself - can't you see she's hurt?'";
 	else if HP of Mike > 4:
-		say "     Mike puts a hand on your shoulder and pulls you aside. 'Lea is still recovering. She needs some rest, ok? beside... she's mine - who did you think put those puppies in her belly?'";
+		say "     Mike puts a hand on your shoulder and pulls you aside. 'Lea is still recovering. She needs some rest, ok? Besides... she's mine - who did you think put those puppies in her belly?'";
 
 instead of conversing Lea:
 	if HP of Mike < 5:
@@ -1292,10 +1293,10 @@ to say HelenDesc:
 			say "You are quite pleased by having such a loyal and obedient pet, but you can't help musing that there might be something you could give the young woman that would make her even [if carried of awesomer fruit > 0][link]awesomer[as]give awesomer fruit to Helen[end link][else]awesomer[end if]";
 		say ".";
 	else if lust of Helen is 3:
-		say "     Originally one of Mike's dogs, Helen is now a young human female of about nineteen. Her beautiful body is fit and toned with a narrow waist and lovely breasts, and her skin possesses a light, even tan. Her attractive face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place. All in all, she's a very attractive woman, but inside she's still a loyal and obedient dog. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling.[else if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang.[else if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with Klauz.[else if thirst of Helen is 2 and libido of Helen is 4]Her belly shows a slight bulge, the result of her mating with Kara during the tattooing session.[else if thirst of Helen is 2 and libido of Helen is 5]Her belly shows a slight bulge, the result of her mating with Ares during your walk in the park.[else if thirst of Helen is 2 and libido of Helen is 6]Her belly shows a slight bulge, the result of her previous mating with Carl here in the library.[end if]";
+		say "     Originally one of Mike's dogs, Helen is now a young human female of about nineteen. Her beautiful body is fit and toned with a narrow waist and lovely breasts, and her skin possesses a light, even tan. Her attractive face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place. All in all, she's a very attractive woman, but inside she's still a loyal and obedient dog. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling[else if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang[else if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with Klauz[else if thirst of Helen is 2 and libido of Helen is 4]Her belly shows a slight bulge, the result of her mating with Kara during the tattooing session[else if thirst of Helen is 2 and libido of Helen is 5]Her belly shows a slight bulge, the result of her mating with Ares during your walk in the park[else if thirst of Helen is 2 and libido of Helen is 6]Her belly shows a slight bulge, the result of her previous mating with Carl here in the library[end if].";
 		say "     She has started to act a little differently since you gave her that strange fruit though. Sometimes, it's as simple as her giving you a more human smile than a canine one when she looks at you. She seems to listen more attentively and her barks aren't as loud and excited. Other times, she's trying to pick up her various dog toys with her hands. You've even spotted her trying to stand on her hind legs as a begging dog would all on her own. When she notices you watching, she barks happily and waits attentively for the commands of her master.";
 	else:
-		say "     Originally one of Mike's dogs, Helen is now a young human female of about nineteen. Her beautiful body is fit and toned with a narrow waist and plump breasts, and her skin possesses a light, even tan. Her lovely face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place. All in all, she's a very attractive woman, but inside she's still a loyal and obedient dog. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling.[else if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang.[else if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with Klauz.[else if thirst of Helen is 2 and libido of Helen is 4]Her belly shows a slight bulge, the result of her mating with Kara during the tattooing session.[else if thirst of Helen is 2 and libido of Helen is 5]Her belly shows a slight bulge, the result of her mating with Ares during your walk in the park.[else if thirst of Helen is 2 and libido of Helen is 6]Her belly shows a slight bulge, the result of her previous mating with Carl here in the library.[end if]";
+		say "     Originally one of Mike's dogs, Helen is now a young human female of about nineteen. Her beautiful body is fit and toned with a narrow waist and plump breasts, and her skin possesses a light, even tan. Her lovely face is framed by long, black hair that goes down past her shoulders in stylish waves that never seems to have a hair out of place. All in all, she's a very attractive woman, but inside she's still a loyal and obedient dog. [if thirst of Helen is 2 and libido of Helen is 1]Her belly shows a slight bulge, the result of your previous coupling[else if thirst of Helen is 2 and libido of Helen is 2]Her belly shows a slight bulge, the result of her mating with Fang[else if thirst of Helen is 2 and libido of Helen is 3]Her belly shows a slight bulge, the result of her mating with Klauz[else if thirst of Helen is 2 and libido of Helen is 4]Her belly shows a slight bulge, the result of her mating with Kara during the tattooing session[else if thirst of Helen is 2 and libido of Helen is 5]Her belly shows a slight bulge, the result of her mating with Ares during your walk in the park[else if thirst of Helen is 2 and libido of Helen is 6]Her belly shows a slight bulge, the result of her previous mating with Carl here in the library[end if].";
 		if lust of Helen is 7:
 			say "     Wearing nothing, the only adornment she has is the detailed tattoo she received when visiting Kara. Starting at her neck is a detailed collar of deep black with red spikes added to it. Attached to the collar is a bone-shaped tag done in golden yellow and with 'Good girl' written on it in cursive writing. Also attached to it is a pink leash that hangs down from her neck, draping across her bosom and hanging down her side. Just a few inches before reaching the handhold, the pink darkens to red before switching into rainbow banding, ending in a purple loop [']resting['] against her left thigh. The whole tattoo is very detailed, looking quite real and seeming to have depth and curving naturally despite only being drawn into her skin.";
 		say "     The unexpected effects of the fruit seem to have largely settled down with her becoming smarter and able to recognize and use her human body. She still has a thoroughly canine mind and is as loyal and obedient as ever, if not more so. While she is able to walk upright a little unsteadily, she still much prefers to go on all fours. Interspersed between her normal, canine antics, she will sometimes flip through some of the books, mainly children's books. She seems to find those with color pictures particularly fascinating. She has a short vocabulary of words, though usually sticks to more canine sounds, especially when she's having fun or having fun having sex. Having a canine perspective on the world, she has no human shame and is as sexually open as ever despite her much more human capacity for reason.";
@@ -1313,7 +1314,7 @@ instead of conversing Helen:
 		now LastHelenTalk is turns;
 
 instead of sniffing Helen:
-	say "     Helen has a nice smell, fresh and feminine. [if thirst of Helen > 0]There's a slight undertone to it, hinting at her being pregnant.[end if]";
+	say "     Helen has a nice smell, fresh and feminine[if thirst of Helen > 0]. There's a slight undertone to it, hinting at her being pregnant[end if].";
 
 
 Chapter 2 - Helen Sex Menu
@@ -1737,7 +1738,7 @@ to say HelenBeachWalk:
 	say "     ([link]N[as]n[end link]) - Knock the guy out and take care of Helen's needs yourself.";
 	if player consents:
 		say "     Your voyeuristic side winning out, you relax your stance and take a few steps to have the best view of the action. Looks pretty hot how the toned male slides his shaft in and out of Helen's cunt! Meanwhile, the human dog turns her head to look at you, a questioning look on her face[if lust of Helen >= 4] as she asks, 'Master like?' [else]. [end if]She stares intently as if seeking your approval for her current state. Patting the young woman on the head, you give her the reassurance she needs to give herself fully to enjoying her new suitor. Letting out a full-throated moan, Helen's pussy starts dripping with a hearty amount of fem-cum, soaking the sandy phallus slides in and out of her.";
-		say "     Grunting in lust, the beach stud slides one hand over Helen's thigh[if lust of Helen >= 7] and runs his fingers along the loop of her leash tattoo[end if], followed by moving on to human canine's clit. Stimulating the clit with some skillful hand movements, the sandy beach lover is able to get your pet to wiggle her hips and yip enthusiastically. A broad smile on his face, the sandman Lothario looks at you and says in between thrusts, 'You're lucky to have a pet like this, her pussy is amazing!' Shifting the angle a little with each new moment of pounding into her, the sandman's shaft finds a sensitive point which sends Helen into a state of ecstatic pleasure. Her tongue hangs out the side of her mouth [if lust of Helen >= 4]and the young woman moans, 'Feels so good...'[else]and the young woman barks happily.[end if]";
+		say "     Grunting in lust, the beach stud slides one hand over Helen's thigh[if lust of Helen >= 7] and runs his fingers along the loop of her leash tattoo[end if], followed by moving on to human canine's clit. Stimulating the clit with some skillful hand movements, the sandy beach lover is able to get your pet to wiggle her hips and yip enthusiastically. A broad smile on his face, the sandman Lothario looks at you and says in between thrusts, 'You're lucky to have a pet like this, her pussy is amazing!' Shifting the angle a little with each new moment of pounding into her, the sandman's shaft finds a sensitive point which sends Helen into a state of ecstatic pleasure. Her tongue hangs out the side of her mouth and the young woman [if lust of Helen >= 4]moans, 'Feels so good...'[else]barks happily.[end if]";
 		WaitLineBreak;
 		say "     Reacting to the sounds of pleasure uttered by Helen, the hunky male increases the tempo of his pounding against her crotch, hammering deep into her again and again. It only takes a little longer of being jack-hammered for the transformed former canine to orgasm - with her barking, pawing at the ground and the inner muscles of your pet squeezing the beach hunk's cock tightly. 'Fuck! I'm gonna come!' the sandman shouts out loud and pulls his magnificent cock out of Helen in a deluge of femcum from between her nether lips. Seeing the shaft before he wraps his fingers around it and starts to jerk frantically, you notice that it is darker than the rest of him - soaked through and through with Helen's juices no doubt.";
 		say "     It takes just a few heartbeats for the guy to finish himself off, grunting loudly as he starts to pump out a significant amount of creamy cum all over your panting pet's buttocks, lower back and even up to her neck with one or two powerful spurts. The two of them ride out their respective orgasms together, with Helen dripping more femcum onto the sand and him creaming her, both of them panting to regain their breaths after such exertions. Meanwhile, you plan ahead a little and go find an abandoned blue beach towel, then start wiping the cum off your human dog as you return. Who knows what would sniff after her if you tried to go back home with her covered in the sandy stud's seed...";

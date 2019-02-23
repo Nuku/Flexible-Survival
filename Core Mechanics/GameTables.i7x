@@ -31,7 +31,7 @@ with 1 blank row
 
 Table of PlayerLists
 ListName(text)	EntryText(text)
-with 2000 blank rows
+with 8000 blank rows
 
 Table of GameBeasts
 Name(text)	Area(text)	non-infectious(truth state)	sex(text)
@@ -95,8 +95,6 @@ Name(text)	Type(text)
 "ndmlist"	"list of text"
 "AbandonedRoomStatus"	"number"
 "absorb"	"number"
-"acquaintedWithHanu"	"number"
-"acquaintedWithWukong"	"number"
 "addedlibido"	"number"
 "afsmread"	"number"
 "aidKenaz"	"number"
@@ -160,7 +158,6 @@ Name(text)	Type(text)
 "Awesome_sex"	"number"
 "AxelLastBJ"	"number"
 "AxelRelationship"	"number"
-"Azari_Corruption"	"number"
 "AzraelRelationship"	"number"
 "balloversize"	"number"
 "bananapeeled"	"number"
@@ -841,7 +838,6 @@ Name(text)	Type(text)
 "Leonardtimer"	"number"
 "leosupplies"	"number"
 "lessontime"	"number"
-"Levelwindow"	"number"
 "lgnumber"	"number"
 "libfight"	"number"
 "libidomemory"	"number"
@@ -1614,7 +1610,6 @@ Name(text)	Type(text)
 "AT_Stella"	"truth state"
 "AT_Sven"	"truth state"
 "autofeatloading"	"truth state"
-"Azari_Met"	"truth state"
 "BastetSexOrTalk"	"truth state"
 "bcduofightfled"	"truth state"
 "bcduofightlost"	"truth state"

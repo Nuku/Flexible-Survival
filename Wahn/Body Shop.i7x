@@ -131,7 +131,7 @@ to say MoreauTalkMenu:
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -215,11 +215,11 @@ to say MoreauPartSale:
 					say "[MoreauAssSale]";
 				-- "Your Genitals":
 					say "[MoreauDickSale]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -438,11 +438,11 @@ to say MoreauPartBuy:
 					say "[MoreauTailBuy]";
 				-- "A crotch":
 					say "[MoreauCrotchBuy]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -528,11 +528,11 @@ to MoreauFaceSelection:
 					setmonster "Snow Leopard";
 				choose row monster from the Table of Random Critters;
 				say "[MoreauFaceBuyPayment]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -640,11 +640,11 @@ to MoreauBodySelection:
 					setmonster "Snow Leopard";
 				choose row monster from the Table of Random Critters;
 				say "[MoreauBodyBuyPayment]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -753,11 +753,11 @@ to MoreauSkinSelection:
 					setmonster "Snow Leopard";
 				choose row monster from the Table of Random Critters;
 				say "[MoreauSkinBuyPayment]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -865,11 +865,11 @@ to MoreauTailSelection:
 					setmonster "Snow Leopard";
 				choose row monster from the Table of Random Critters;
 				say "[MoreauTailBuyPayment]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -977,11 +977,11 @@ to MoreauCockSelection:
 					setmonster "Snow Leopard";
 				choose row monster from the Table of Random Critters;
 				say "[MoreauCrotchBuyPayment]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You step back from the colorful naga, shaking your head slightly as he gives a questioning look.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

@@ -1,9 +1,9 @@
 Version 2 of Debugging Tools by Core Mechanics begins here.
 [Version 1 - By Wahn, moved to Core Mechanics]
 [Version 2 - By Dys, adds more functions, changes npcdebugmode to debugmode]
-"Adds a debug function for npcs to the Flexible Survival game"
+"Adds a debug function for NPCs to the Flexible Survival game"
 
-[ Activating the debug mode show the npc's variables in their description and show when a walk-in event fires]
+[ Activating the debug mode show the NPC's variables in their description and show when a walk-in event fires]
 [ Either turn it on and off here by setting the variable, or use the "npcdebug" command in the game ]
 
 [ debugactive 0 = Debug off]

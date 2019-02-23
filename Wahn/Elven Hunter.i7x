@@ -1,7 +1,7 @@
 Version 1 of Elven Hunter by Wahn begins here.
 [Version 1.1 - Lembas Bread drop item]
 
-"Adds an Elven Hunter to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds an Elven Hunter to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 when play begins:
 	add { "Elven Hunter" } to infections of guy;

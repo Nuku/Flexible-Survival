@@ -195,7 +195,7 @@ Chapter 1 - Getting Started
 
 ndmlist is a list of text that varies. ndmlist is usually {"Beach", "Red Light District", "High Rise District", "Park"}.
 
-[ -- Dr. Matt versions -- ]
+[ - Dr. Matt versions - ]
 
 to say zephyrmatt1:
 	say "     You go up to Larissa at the counter and inform her that you're here on Dr. Matt's behalf to exchange information. She glances up from the electronic game she's playing to pass the time. 'Oh, hey. Head Office said someone would be coming by for that.' She sets her game aside and glances up at you between flipping through the documents. 'If you're going around the city looking for work, we've got a bit of something for you to do. HQ says it needs to be done ASAP, but we don't have the manpower. If you could take care of that, I'll make sure these get a rush on top of paying you for the job. Sound good?'";
@@ -219,7 +219,7 @@ to say zephyrmatt3:
 	increase freecred by 200;
 	now HP of Doctor Matt is 18;
 
-[ -- Dr. Mouse versions -- ]
+[ - Dr. Mouse versions - ]
 
 to say zephyrmouse1:
 	say "     You go up to Larissa at the counter and inform her that you're here to pick up some materials, sliding her the papers as you do. She glances up from the electronic game she's playing to pass the time and looks over the papers. 'Oh. This mess. Yeah, my boss is kinda peeved that some exec's telling him to pass materials onto some third party guy. You're not that guy, are you?' she asks suspiciously. You shake your head and say that you're just the courier. 'Well, it's going to take us a while to put this all together. It's reeeeal busy here,' she says as she picks her game again. 'But if you're going around the city looking for work, we've got a bit of something for you to do. HQ says it needs to be done ASAP, but we don't have the manpower. If you could take care of that, my boss'll be happy and I'll be able to make sure this request get a rush on top of paying you for the job. Sound good?'";
@@ -274,7 +274,7 @@ Instead of resolving a Beach Detector Site:
 			say "     With the creature defeated, you make it to the rocky spire. You now must climb the wet stone to get to the top. While parts of it are fairly easy to scale, there are a few difficult sections that make the climbing treacherous.";
 			let bonus be ( dexterity of player + strength of player minus 20 ) divided by 2;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+			say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 			if bonus + dice > 16:
 				say "You manage to safely make it up to the top!";
 			else:

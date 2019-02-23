@@ -34,7 +34,7 @@ Instead of Resolving a Reaching the College:
 		decrease score by 10;
 		decrease humanity of player by 5;
 		now HP of player is 1;
-		say "     Trying your best to ignore your aches, you lean against one of the buildings and look around again. ";
+		say "     Trying your best to ignore your aches, you lean against one of the buildings and look around again.";
 		now Resolution of Reaching the College is 3; [Did not catch ball]
 	say "     Your travels have lead you to the city's college campus. Built beside a major sporting arena, the college's main focus is its sports program, though there are other programs and classes available, you recall. While you never attended college here, you know they have several teams, including football, baseball, track and field and many others. And if those big gorillas are any indication, it looks like there'll be plenty of powerful creatures running around here.";
 	move player to the College Campus Entrance;
@@ -144,7 +144,7 @@ College Belltower is northwest of College Walkway Northwest.
 The description of College Belltower is "[belltowerdesc]".
 
 to say belltowerdesc:
-	say "     The belltower seems to be the oldest building on the campus. Judging by the people hanging around, it seems to be the prime location for winged college students. On the ground, there is a mix of various species, but as metioned earlier it's primarily the location for people with flight. If you look upward you can see some of the students flying up high to a location that you have no idea of. Perhaps you can look around campus for information on what's up there, although you might know someone who has an idea of what is, maybe someone who is kind enough to tell you.";
+	say "     The belltower seems to be the oldest building on the campus. Judging by the people hanging around, it seems to be the prime location for winged college students. On the ground, there is a mix of various species, but as mentioned earlier it's primarily the location for people with flight. If you look upward you can see some of the students flying up high to a location that you have no idea of. Perhaps you can look around campus for information on what's up there, although you might know someone who has an idea of what is, maybe someone who is kind enough to tell you.";
 
 [Room Declaration]
 College Walkway West is west of College Campus Entrance.
@@ -160,7 +160,7 @@ Athletic Street is southwest of College Walkway West.
 The description of Athletic Street is "[athleticstreetdesc]".
 
 to say athleticstreetdesc:
-	say "     The street that holds the athletic departments has multiple groups of people excercising from the archery club to the football team to the soccer team. There are multiple buildings all over the place but you're not entirely sure where to go. It may be best to look around the campus for members of the various teams and see if you can gain information about the various members that way. After all you don't think you'd want to accidentally walk into an area while people are practicing and possibly get tackled to the ground.";
+	say "     The street that holds the athletic departments has multiple groups of people exercising from the archery club to the football team to the soccer team. There are multiple buildings all over the place but you're not entirely sure where to go. It may be best to look around the campus for members of the various teams and see if you can gain information about the various members that way. After all you don't think you'd want to accidentally walk into an area while people are practicing and possibly get tackled to the ground.";
 
 [Room Declaration]
 Lecture Street is northwest of College Walkway West.

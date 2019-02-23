@@ -177,7 +177,7 @@ A person has a number called Cunt width.
 A person has a number called armor.
 A person has a number called capacity.
 A person has a number called libido.
-A person has a text called MainInfection. MainInfection is usually "Human". [just to have something valid in this, the variable should be overwritten for every npc]
+A person has a text called MainInfection. MainInfection is usually "Human". [just to have something valid in this, the variable should be overwritten for every NPC]
 A person has a text called linkaction.
 A person has a text called FirstAnalPartner.
 A person has a text called FirstVaginalPartner.
@@ -199,6 +199,8 @@ A person has a truth state called Virgin. Virgin is usually true.
 A person has a truth state called AnalVirgin. AnalVirgin is usually true.
 A person has a truth state called PenileVirgin. PenileVirgin is usually true. [not saved till new infection system update]
 A person has a truth state called SexuallyExperienced. SexuallyExperienced is usually false. [not saved till new infection system update]
+A person has a truth state called TwistedCapacity. TwistedCapacity is usually false. [not saved till new infection system update]
+A person has a truth state called Sterile. Sterile is usually false. [not saved till new infection system update]
 A person has a text called Originalgender. Originalgender is usually "Undefined". [original gender of the pre-transform person]
 A person has a text called PlayerOriginalgender. PlayerOriginalGender is usually "Undefined". [first meeting gender with the player]
 A person has a text called PlayerLastGender. PlayerLastGender is usually "Undefined". [gender of the player during the last meeting]
@@ -290,7 +292,6 @@ Turns is a number that varies. Turns is 240.
 Hardmode is a truth state that varies. Hardmode is usually false.
 nohealmode is a truth state that varies. nohealmode is usually false.
 blindmode is a truth state that varies. blindmode is usually false.
-Levelwindow is a number that varies. Levelwindow is 3.
 Lastjournaluse is a number that varies. Lastjournaluse is 248.
 Targetturns is a number that varies.
 Started is a number that varies.
@@ -356,7 +357,7 @@ Definition: A situation (called x) is available:
 			no;
 		else if hardmode is true:
 			yes;
-		else if the level of x < (the level of the player plus levelwindow plus 1):
+		else if the level of x < (level of player + 1):
 			yes;
 	no;
 
@@ -382,7 +383,7 @@ Definition: A scavevent (called x) is scavable:
 			no;
 		else if hardmode is true:
 			yes;
-		else if the level of x < (the level of the player plus levelwindow plus 1):
+		else if the level of x < (level of player + 1):
 			yes;
 	no;
 
@@ -457,19 +458,19 @@ Definition: A person (called x) is internal:
 	if cockname of x is listed in infections of internallist and internalbypass is false, yes;
 	no;
 
-a person can be knotted. a person is usually not knotted.
+A person can be knotted. A person is usually not knotted.
 
 Definition: A person (called x) is knotted:
 	if cockname of player is listed in infections of knotlist, yes;
 	no;
 
-a person can be barbed. a person is usually not barbed.
+A person can be barbed. A person is usually not barbed.
 
 Definition: A person (called x) is barbed:
 	if cockname of player is listed in infections of BarbedCocklist, yes;
 	no;
 
-a person can be flared. a person is usually not flared.
+A person can be flared. A person is usually not flared.
 
 Definition: A person (called x) is flared:
 	if cockname of player is listed in infections of Bluntlist, yes;
@@ -845,7 +846,7 @@ water bottle is a grab object. It is a part of the player. The trade of water bo
 Does the player mean using the dirty water: it is unlikely.
 Does the player mean stashing the dirty water: it is unlikely.
 Does the player mean retrieving the dirty water: it is unlikely.
-dog milk is a grab object. It is a part of the player. it is milky.
+dog milk is a grab object. It is a part of the player. It is milky.
 soda is a grab object. It is a part of the player.
 chips is a grab object. It is a part of the player.
 glob of goo is a grab object. It is a part of the player. glob of Goo is infectious. The strain of glob of goo is "Goo Girl".
@@ -855,7 +856,7 @@ understand "knife" as pocketknife.
 chair is a armament. It is a part of the player. It has a weapon "[one of]a folding chair[or]your improvised weapon[or]that move you saw on WWE[or]a metal chair to the eyes[at random]". The weapon damage of chair is 5. The weapon type of chair is "Melee". It is not temporary. the objsize of chair is 4.
 understand "seat" as chair.
 gryphon milk is a grab object. It is a part of the player. Understand "milk" as gryphon milk. Gryphon milk is infectious. The strain of gryphon milk is "Hermaphrodite Gryphon". The trade of Gryphon Milk is "distilled milk". gryphon milk is milky.
-distilled milk is a grab object. It is a part of the player. it is not milky.
+distilled milk is a grab object. It is a part of the player. It is not milky.
 
 
 The invent of the player is { "journal" }.
@@ -4111,12 +4112,10 @@ This is the location choice rule:
 			increase score by 900;
 			extend game by 240;
 			now hardmode is true;
-			now levelwindow is 99999;
 		if hardmode is false:
 			say "Would you like to play hard mode?";
 			if player consents:
 				now hardmode is true;
-				now levelwindow is 99999;
 				say "Hardmode activated!";
 	now scenario is title entry;
 	now the menu depth is 0;
@@ -4664,6 +4663,7 @@ Include Black Market by Luneth.
 Include Black Market Items by Luneth.
 Include Body Shop by Wahn.
 Include Branson & Partner by Wahn.
+Include Bunker Communal Shower Events by Luneth.
 Include Camp Bravo by Wahn.
 Include Tenvale College Campus by Rikaeus.
 [Include Church Of The Maternal Beast by Guest Writers.]
@@ -4677,7 +4677,7 @@ Include Hitching Post by SgtPepper234.
 Include Hospital by Stripes.
 Include Hyena Hideout by Stripes.
 Include Junkyard and Warehouse by Wahn.
-Include Kitsune Hide Away by Shadowwolf94.
+Include Kitsune Hideaway by Shadowwolf94.
 Include Mall Community Center by Wahn.
 Include Mall Residents by Rikaeus.
 Include Medical Checkups by Stripes.
@@ -4709,7 +4709,9 @@ Include Additional Tome Scenes by Dys.
 Include Apartment 319 by Kaleem Mcintyre.
 Include Assorted Events by Stripes.
 Include Beach Events by Sarokcat.
+Include Black Pearl by Lone Wanderer.
 Include Bouncy Castle by Stripes.
+Include Broken Husky Bad-End by Luneth.
 Include Brookstone Books by Guest Writers.
 Include Campus Events by Wahn.
 Include Campus Lovers by CloserHenry.
@@ -4774,7 +4776,7 @@ Include Misc 3 by Kaleem mcintyre.
 Include Misc 4 by Kaleem mcintyre.
 Include Misc 6 by Kaleem mcintyre.
 Include Misc 7 by Kaleem mcintyre.
-Include Misc 8 by Kaleem mcintyre.[***content temporarily closed for space]
+Include Misc 8 by Kaleem mcintyre.
 Include Misc 9 by Kaleem mcintyre.
 Include Misc Scene 5 by Kaleem mcintyre.
 Include More Misc Events by Kaleem mcintyre.
@@ -5119,6 +5121,7 @@ Include Zebra by Vervaine.
 Include Alex by Stripes.
 Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
+Include Alexandra Breeding by Wahn.
 Include Alexandra Cuckolding by Wahn.
 Include Alpha Fang Scenes by Nuku Valente.
 Include Amaryllis by Song.
@@ -5129,6 +5132,7 @@ Include Anthony by Wahn.
 Include Ares by Wahn.
 Include Anastasia by Stripes.
 Include Aster by Qazarar.
+Include Atticus by Wahn.
 Include Azari by Dys.
 Include Bastet by Wahn.
 Include Bjorn by Rikaeus.
@@ -5173,7 +5177,7 @@ Include Eric Loyalty by Luneth.
 Include Erica by Wahn.
 Include Exploration Events by Kurainyx.
 Include Fancy by Sarokcat n Verath.
-Include Fang by Stripes.
+Include Fang by Prometheus.
 Include Farmhands by Wahn.
 Include Felix by Wahn.
 Include Finn by Wahn.
@@ -5223,6 +5227,7 @@ Include Leonard by Stripes.
 Include Lilith by Wahn.
 Include Lindsey by Sarokcat.
 Include Lucy by Stripes.
+Include Lux & Umbra by Prometheus.
 Include Mack by Stripes.
 Include Mark by Wahn.
 Include Master Mind by Stripes.
@@ -5356,9 +5361,9 @@ to genderlockmenu:
 		say "(4) [link]Female[as]4[end link] - You reject all male mutations.";
 		say "[line break]";
 		say "[bold type]Hybrid:[roman type][line break]";
-		say "(5) [link]Shemale[as]5[end link] - You will trend to the configuration of a herm -- however lacking female genitalia.";
-		say "(6) [link]Cuntboy[as]6[end link] - You will trend to the configuration of a female -- however lacking any breasts.";
-		say "(7) [link]Male Herm[as]7[end link] - You will trend to the configuration of a herm -- however lacking any breasts.";
+		say "(5) [link]Shemale[as]5[end link] - You will trend to the configuration of a herm - however lacking female genitalia.";
+		say "(6) [link]Cuntboy[as]6[end link] - You will trend to the configuration of a female - however lacking any breasts.";
+		say "(7) [link]Male Herm[as]7[end link] - You will trend to the configuration of a herm - however lacking any breasts.";
 		say "(8) [link]Herm[as]8[end link] - You take on the configuration of a full herm.";
 		say "[line break]";
 		say "[bold type]Loose:[roman type][line break]";
@@ -5437,7 +5442,7 @@ To startgenderlockshift:
 	now glshiftstart is 1;
 	if gsgl < 2 and glstart is 1:
 		say "You chose to start as your gender lock option, but have not selected one. Would you like to do so now?";
-		say "     [line break]";
+		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Choose a gender lock.";
 		say "     ([link]N[as]n[end link]) - Start game without lock.";
 		if player consents:
@@ -6145,7 +6150,6 @@ to say gsopt_start:
 	if gshm is true: [Hard mode alteration]
 		increase score by 300;
 		now hardmode is true;
-		now levelwindow is 99999;
 	if gsnhm is true: [No-heal mode alteration]
 		increase score by 150;
 		now nohealmode is true;
@@ -6311,7 +6315,6 @@ to say silent_start:
 	if gshm is true: [Hard mode alteration]
 		increase score by 300;
 		now hardmode is true;
-		now levelwindow is 99999;
 	if gsnhm is true: [No-heal mode alteration]
 		increase score by 150;
 		now nohealmode is true;

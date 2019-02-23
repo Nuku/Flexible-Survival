@@ -64,7 +64,7 @@ Instead of resolving tanukibell:
 			now tanukigender is 1;
 			now Tanuki Dad is in shinto shrine;
 		else if playerinput matches "m" or playerinput matches "2":
-			say "'I'm not sure I'm in the mood for that' (This option is not coded!)";
+			say "'I'm not sure I'm in the mood for that.' (This option is not coded!)";
 			stop the action;
 [			now tanukigender is 2;
 			now Tanuki Mom is in shinto shrine;]
@@ -416,11 +416,11 @@ instead of conversing the Tanuki Dad:
 					say "[TanukiHuntingTalk]";
 				if (nam is "Balls"):
 					say "[TanukiBallsTalk]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     The tanuki gives you a rather big grin, patting his round belly.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

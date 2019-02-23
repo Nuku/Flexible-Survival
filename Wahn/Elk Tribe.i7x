@@ -88,11 +88,11 @@ to say BeatenElkBullSexMenu:
 					say "[BeatenElkBullSex3]";
 				if (nam is "DDD"):
 					say "[BeatenElkBullSex4]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You just walk away after checking him over for loot.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -113,7 +113,7 @@ to say ElkBullDesc:
 	setmongender 3;
 	if inasituation is true:
 		say ""; [dealt with in the origin event]
-	else: [standard descripton]
+	else: [standard description]
 		say "     As you move through the snowy forest, ";
 		[appearance of the tribesman]
 		if a random chance of 1 in 3 succeeds: [spotted the elk]
@@ -288,11 +288,11 @@ to say BeatenElkCowSexMenu:
 					say "[BeatenElkCowSex3]";
 				if (nam is "DDD"):
 					say "[BeatenElkCowSex4]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You just walk away after checking her over for loot.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -328,7 +328,7 @@ to say ElkCowDesc:
 			say "elk tribeswoman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
 		[clothing]
 		say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare[or]wears not a stitch of clothing, her female sex as openly presented as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare[at random]. ";
-		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh. ";
+		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh.";
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
 			say "     The elk cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
 			[comment]
@@ -486,11 +486,11 @@ to say BeatenElkHermSexMenu:
 					say "[BeatenElkHermSex3]";
 				if (nam is "DDD"):
 					say "[BeatenElkHermSex4]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You just walk away after checking her over for loot.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -526,7 +526,7 @@ to say ElkHermDesc:
 			say "elk tribeswoman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
 		[clothing]
 		say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[or]wears not a stitch of clothing, with a male's weighty shaft between her legs as openly presented as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare. A noticeable bulge in the loincloth tells you that this isn't a regular female[at random]. ";
-		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh. ";
+		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh.";
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
 			say "     The elk herm looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
 			[comment]
@@ -683,11 +683,11 @@ to say BeatenElkTransBullSexMenu:
 					say "[BeatenElkTransBullSex3]";
 				if (nam is "DDD"):
 					say "[BeatenElkTransBullSex4]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You just walk away after checking him over for loot.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -722,7 +722,7 @@ to say ElkTransBullDesc:
 			say "[one of]a towering[or]a muscular[or]a powerful[or]an impressive[or]a seven foot tall[at random] ";
 			say "elk tribesman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
 		[clothing]
-		say "[one of]wears just a simple leather loincloth, which hangs strangely flat over his crotch[or]wears not a stitch of clothing, revealing a pussy between his legs[or]wears a brown loincloth with red stripes, which hangs strangely flat over his crotch[or]wears a blue and white striped loincloth, which hangs strangely flat over his crotch[or]wears a simple black loincloth, which hangs strangely flat over his crotch[at random]. This cowsn't seem to be a regular male elk. ";
+		say "[one of]wears just a simple leather loincloth, which hangs strangely flat over his crotch[or]wears not a stitch of clothing, revealing a pussy between his legs[or]wears a brown loincloth with red stripes, which hangs strangely flat over his crotch[or]wears a blue and white striped loincloth, which hangs strangely flat over his crotch[or]wears a simple black loincloth, which hangs strangely flat over his crotch[at random]. This doesn't seem to be a regular male elk. ";
 		say "The rest of his body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up his muzzle to the top of his head and with what you assume is a symbol of rank on his left thigh. ";
 		[antlers]
 		say "A pair of [one of]spike-like antlers on each side of his head marks him as a quite young male[or]spindly four-point antlers on each side of his head marks him as a young male[or]five-point antlers on each side of his head marks him as a young but maturing male[or]proud six-point antlers on each side of his head marks him as a mature male[or]proud seven-point antlers on each side of his head marks him as an experienced male[or]impressive eight-point antlers on each side of his head marks him as a mature male[at random].";
@@ -883,11 +883,11 @@ to say BeatenElkTransCowSexMenu:
 					say "[BeatenElkTransCowSex3]";
 				if (nam is "DDD"):
 					say "[BeatenElkTransCowSex4]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You just walk away after checking her over for loot.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -923,7 +923,7 @@ to say ElkTransCowDesc:
 			say "elk tribeswoman, who steps out from behind one of the thick tree trunks. The large anthro cervine ";
 		[clothing]
 		say "[one of]wears just a simple leather loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears not a stitch of clothing, revealing a thick cock hanging between her legs as openly as her shapely breasts[or]wears a brown loincloth with red stripes and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears a blue and white striped loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[or]wears a simple black loincloth and nothing more, leaving her shapely breasts bare and showing the bulge of a large cock under the fabric[at random]. This is not a regular female elk it seems. ";
-		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh. ";
+		say "The rest of her body is decorated in several places with tribal markings in reddish-brown paint, for example from halfway up her muzzle to the top of her head and with what you assume is a symbol of rank on her left thigh.";
 		if "Elk Tribe Markings" is not listed in feats of player: [not initiated into the tribe]
 			say "     The elk trans cow looks you up and down with [one of]an unimpressed [or]a haughty [or]a challenging [or]a curious [or]a surprised [at random]look on her face. ";
 			[comment]

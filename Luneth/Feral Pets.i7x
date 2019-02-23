@@ -52,7 +52,7 @@ to say DismissSnips:
 	if player is not in Computer Lab: [regular dismiss]
 		say "     Looking at you for a long moment, he finally relents and burrows under the ground.";
 	else: [dismissing him in the Computer Lab]
-		say "     Snips quickly scuttles back to the home it has made out of one of the cubicles, cleary more than happy to be able to rest.";
+		say "     Snips quickly scuttles back to the home it has made out of one of the cubicles, clearly more than happy to be able to rest.";
 
 Table of GameCharacterIDs (continued)
 object	name
@@ -177,7 +177,7 @@ Instead of resolving Lost Crab:
 		if the player consents:
 			delete food;
 			say "     The crab munches quite happily at the food, blowing a few bubbles in between bites to show its appreciation. Laying down next to the crab, you can't help but laugh a little bit at how happy it looks just nibbling away at its food. Without a second thought you reach out and stroke the smooth shell, causing the crab to stop eating and just stare at you with its abnormally huge eyes. From somewhere further down the beach, you can hear a loud roar echo out. The little crab doesn't hesitate to scuttle closer to you, seeking shelter. Wrapping an arm around the frightened crustacean, you continue to play protector while it finishes its meal. Once it is finished eating you get up to carry on with your exploration of the area, glancing back down at the crab to say goodbye. You are met with those huge eyes that almost look back at you imploringly.";
-			say "     The crab raises its pincers in an act that on a human would almost look like it's asking to be picked up. A little leary of the sharp claws, you lean down scooping up the crab. Thankfully, you had interpreted the action correctly as the crab seems content to now come with you. Deciding that if this little guy... errr girl... whatever it is, is going to join you it needs a name. Thinking to yourself a bit, your eyes immediately are drawn to the sizable claws that its sporting. A name pops into your head: Snips! The name goes with the claws while at the same time is perfect for a cute little crab. Informing your companion of their new name all that you receive in response is a few bubbles blown at you. That decided, you go back to the exploration of the beach.";
+			say "     The crab raises its pincers in an act that on a human would almost look like it's asking to be picked up. A little leery of the sharp claws, you lean down scooping up the crab. Thankfully, you had interpreted the action correctly as the crab seems content to now come with you. Deciding that if this little guy... errr girl... whatever it is, is going to join you it needs a name. Thinking to yourself a bit, your eyes immediately are drawn to the sizable claws that it's sporting. A name pops into your head: Snips! The name goes with the claws while at the same time is perfect for a cute little crab. Informing your companion of their new name all that you receive in response is a few bubbles blown at you. That decided, you go back to the exploration of the beach.";
 			now cute crab is tamed;
 			add "Tamed" to Traits of cute crab;
 			move Snips to Computer Lab;
@@ -512,10 +512,10 @@ Instead of resolving Scared Bird:
 			say "Making soft noises at the bird, you attempt to coax it down with a bit of food and friendly words, trying hard to convince it that you want to be its friend.";
 			let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
-			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+			say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
 			if diceroll > 17:
-				say "     Your honeyed words and sweet tones eventually manage to coax the scared bird down out of the tree, where you feed it a bit of food as it begins to get used to your presence. Given a closer look, you are impressed by the bird's wonderfully bright feathers, but you still have no clue exactly what type of bird it is. Sighing, you decide that your knowledge of birds is just too insufficient for what is obviously a rare species of bird, and resolve to try to find out just what kind of bird it is, if you ever manage to get out of this crazy city that is. After several hours of coaxing and calming the bird, it seems quite happy to go along with you as you head back into the city, obviously happy not to be alone any longer.";
+				say "Your honeyed words and sweet tones eventually manage to coax the scared bird down out of the tree, where you feed it a bit of food as it begins to get used to your presence. Given a closer look, you are impressed by the bird's wonderfully bright feathers, but you still have no clue exactly what type of bird it is. Sighing, you decide that your knowledge of birds is just too insufficient for what is obviously a rare species of bird, and resolve to try to find out just what kind of bird it is, if you ever manage to get out of this crazy city that is. After several hours of coaxing and calming the bird, it seems quite happy to go along with you as you head back into the city, obviously happy not to be alone any longer.";
 				say "     Landing on your shoulder, the chipper little bird cuddles up to your neck. You should probably give your new little friend a name. Hmm... a chipper bird name. Chirpy... that sounds like a good name for her. Trying out the name for her, she seems to like it, singing her sweet melody happily.";
 				delete food;
 				now Exotic Bird is tamed;
@@ -525,7 +525,7 @@ Instead of resolving Scared Bird:
 				now Resolution of Scared Bird is 1; [adopted the bird]
 				now Scared bird is resolved;
 			else:
-				say "     Sadly, the bird seems too scared to heed your blandishments, and it stays up in the tree shaking and occasionally letting out a soft piteous cry. You obviously aren't going to convince it to trust you right now. Maybe you should try again later.";
+				say "Sadly, the bird seems too scared to heed your blandishments, and it stays up in the tree shaking and occasionally letting out a soft piteous cry. You obviously aren't going to convince it to trust you right now. Maybe you should try again later.";
 		else:
 			say "     Deciding that you wouldn't have the least idea of how to care for a truly exotic bird yourself, and that you are having enough trouble keeping yourself alive, you decide to leave the bird to its fate. At least it has wings, right?";
 			now Resolution of Scared Bird is 2; [abandoned the bird]
@@ -682,9 +682,9 @@ Instead of resolving a Mournful Dog:
 				if "Ringmaster" is listed in feats of player, increase featbonus by 1;
 				let dice be a random number from 1 to 20;
 				let total be ( dice plus bonus plus dogfoodcount plus featbonus);
-				say "You roll 1d20([dice])+[bonus]+[dogfoodcount + featbonus] vs 22 and score [total]: ";
+				say "     You roll 1d20([dice])+[bonus]+[dogfoodcount + featbonus] vs 22 and score [total]: ";
 				if total > 21:
-					say "     You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head and check its tag, finding only the name 'Hobo'. Reaching over, you pull the sheets over his former master's body, then you both leave together.";
+					say "You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head and check its tag, finding only the name 'Hobo'. Reaching over, you pull the sheets over his former master's body, then you both leave together.";
 					now helper dog is tamed;
 					add "Tamed" to Traits of helper dog;
 					move Hobo to Computer Lab;
@@ -693,7 +693,7 @@ Instead of resolving a Mournful Dog:
 					now Resolution of Mournful Dog is 1; [adopted the dog]
 					now Mournful Dog is resolved;
 				else:
-					say "     The dog accepts the food from you, but won't let you get close. Maybe you should come back and try again another time.";
+					say "The dog accepts the food from you, but won't let you get close. Maybe you should come back and try again another time.";
 			else:
 				say "     Hardening your heart to the mournful dog's needs, you close the door and decide to move on.";
 				now Resolution of Mournful Dog is 2; [abandoned the dog]
@@ -713,9 +713,9 @@ Instead of resolving a Mournful Dog:
 				if "Ringmaster" is listed in feats of player, increase featbonus by 1;
 				let dice be a random number from 1 to 20;
 				let total be ( dice plus bonus plus dogfoodcount plus featbonus);
-				say "You roll 1d20([dice])+[bonus]+[dogfoodcount + featbonus] vs 22 and score [total]: ";
+				say "     You roll 1d20([dice])+[bonus]+[dogfoodcount + featbonus] vs 22 and score [total]: ";
 				if total > 21:
-					say "     You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head. Reaching over, you pull the sheets over his former master's body, then you both leave together.";
+					say "You are able to coax the dog into letting you come close and pet it. It wags its tail as you pat its head. Reaching over, you pull the sheets over his former master's body, then you both leave together.";
 					now helper dog is tamed;
 					add "Tamed" to Traits of helper dog;
 					say "(The helper dog is now tamed! You can make it your active pet by typing [bold type]pet helper dog[roman type]. You can see all of the pets that you have tamed with the [bold type]pet[roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type]pet dismiss[roman type], or just [bold type]dismiss[roman type])";
@@ -724,7 +724,7 @@ Instead of resolving a Mournful Dog:
 					now Resolution of Mournful Dog is 1; [adopted the dog]
 					now Mournful Dog is resolved;
 				else:
-					say "     The dog accepts the food from you, but won't let you get close. Maybe you should come back and try again another time.";
+					say "The dog accepts the food from you, but won't let you get close. Maybe you should come back and try again another time.";
 			else:
 				say "     Hardening your heart to the mournful dog's needs, you decide you can't afford to spare food for the animal and move on.";
 				now Resolution of Mournful Dog is 2; [abandoned the dog]

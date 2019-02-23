@@ -216,10 +216,14 @@ carry out NPCSexAftermathAction:
 	say "Testing: Player fucks Carl:";
 	NPCSexAftermath Carl receives "AssFuck" from Player;
 
+[ Note: Add Handjob, PussyFingering, AssFingering, Rimming to SexActs]
+
 to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (GivingChar - a person):
 	if GivingChar is player:
 		if debugactive is 1:
 			say "DEBUG -> Player is the giving partner[line break]";
+		if PlayerFucked of TakingChar is false: [player never had sex with this NPC]
+			now PlayerFucked of TakingChar is true; [player sexed up this NPC]
 		if SexAct is "AssFuck":
 			if PenileVirgin of player is true:
 				now PenileVirgin of player is false;
@@ -259,20 +263,24 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 	else if TakingChar is player:
 		if debugactive is 1:
 			say "DEBUG -> Player is the receiving partner[line break]";
+		if PlayerFucked of GivingChar is false: [player never had sex with this NPC]
+			now PlayerFucked of GivingChar is true; [player sexed up this NPC]
 		if SexAct is "AssFuck":
 			if AnalVirgin of player is true:
 				now AnalVirgin of player is false;
 				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
 				now FirstAnalPartner of player is printed name of GivingChar;
-			setmonster MainInfection of GivingChar;
-			mimpregchance;
+			if Sterile of GivingChar is false: [fertile]
+				setmonster MainInfection of GivingChar;
+				mimpregchance;
 		else if SexAct is "PussyFuck":
 			if Virgin of player is true:
 				now Virgin of player is false;
 				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";
 				now FirstVaginalPartner of player is printed name of GivingChar;
-			setmonster MainInfection of GivingChar;
-			fimpregchance;
+			if Sterile of GivingChar is false: [fertile]
+				setmonster MainInfection of GivingChar;
+				fimpregchance;
 		else if SexAct is "AssDildoFuck":
 			if AnalVirgin of player is true:
 				now AnalVirgin of player is false;

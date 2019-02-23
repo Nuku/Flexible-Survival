@@ -4,7 +4,7 @@ Version 6 of Demon Brute by Wahn begins here.
 [- Originally Authored By: Leo X -]
 [Todo: Endings]
 
-"Adds a Monster name to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Monster name to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 DBCaptureQuestVar is a number that varies. DBCaptureQuestVar is usually 0.
 DemonBruteStatus is a number that varies. DemonBruteStatus is usually 0.
@@ -171,7 +171,7 @@ to say DemonBruteCumBathScene:
 	else if player is submissive:
 		say "     Your eyes gawk wide at the swollen cock-head above you as you watch his urethra dilate to the size of an old quarter coin. The last thing you see as you open your mouth to eagerly accept his corrupted demon batter, is a torrent of semen as it spews forth with an incredible force into your face, turning your vision white. The demon jizz is hot and sticky, but the taste is practically ambrosia to your submissive mind, and you enthusiastically gulp down as much of his cum as you can. The sensation of being covered in hot cum and drinking his corrupted seed is too much for you and you reach an intense climax,[if player is male] spraying a thick load of your own jizz to join the pool of semen you're practically swimming in[else if player is female] gushing your liquid pleasure with a forceful intensity into the pool of semen you're practically swimming in[else] shaking with such intensity that you almost forget to come up for air as your limp form becomes submerged in the ever-growing pool of demon cum[end if].";
 	else:
-		say "     Your eyes gawk wide at the swollen cock-head above you as you watch his urethra dilate to the size of an old quarter coin. The last thing you see as before you shut your eyes tightly, is a torrent of semen as it spews forth with an incredible force at your face. You gasp in surprise, unintentionally receiving a mouthful demon cum into your mouth. The taste is salty and it's heat intense, causing you to splutter and cough as you are hosed down. The jizz is hot and sticky on your prone form, and the sensation of being covered in his cum sends you over the edge as well. You [if player is male]spray a thick load of your own liquid lust to join the pool of semen you're practically swimming in[else if player is female]shudder and start squirting your own femcum into the pool of semen you're practically swimming in[else]shake from the intensity of the orgasm as your limp body becomes submerged in the ever-growing pool of demon cum[end if].";
+		say "     Your eyes gawk wide at the swollen cock-head above you as you watch his urethra dilate to the size of an old quarter coin. The last thing you see as before you shut your eyes tightly, is a torrent of semen as it spews forth with an incredible force at your face. You gasp in surprise, unintentionally receiving a mouthful demon cum into your mouth. The taste is salty and its heat intense, causing you to splutter and cough as you are hosed down. The jizz is hot and sticky on your prone form, and the sensation of being covered in his cum sends you over the edge as well. You [if player is male]spray a thick load of your own liquid lust to join the pool of semen you're practically swimming in[else if player is female]shudder and start squirting your own femcum into the pool of semen you're practically swimming in[else]shake from the intensity of the orgasm as your limp body becomes submerged in the ever-growing pool of demon cum[end if].";
 	WaitLineBreak;
 	say "     As you lie there panting and covered in steaming demon cum, the brute leers down at you. 'Remember that this is all you're good for.' He laughs maliciously before disappearing in a puff of smoke, back to whatever hole he crawled out of. Sticky and broken, you weakly get to your feet, attempt to wipe the excess globules of cum from your body, and continue on your journey.";
 
@@ -185,11 +185,10 @@ to say DemonBruteFaceFuck:
 	say "     The hell-fiend becomes unrelenting as he approaches his climax, thrusting his cock as hard into your throat as he can, while his tail pushes deep into your over-stimulated body, massaging every sensitive spot inside you. With one final powerful thrust, he buries his cock down your throat and unloads a massive load of hot demon cum directly into your stomach, causing your belly to rapidly swell and expand.";
 	if player is kinky:
 		say "     As he holds himself there, you feel his tail shoot deeper inside your intestines before giving way to an entirely new sensation. The heat seems to be dispersing into your lower bowel. Though still bloated with cum and still feeling him pump hot hell-seed into you, you don't feel your belly expanding any more. It dawns on you that his tail-tip - somehow - has reached your stomach and created a channel into your intestines, causing the cum to flow towards your back end. Hot cum reaches your anal opening and pours out around the thick tail imbedded inside you.";
-	say "     The sensation is just too much for your already-taxed body to handle, and you can only fail to hold back the powerful orgasm racking your over-stimulated form. As your body shakes with pleasure, the demon roars with laughter at your pathetic state, still injecting you with more and more of his corrupted seed. Only after the hellish creature finishes up inside you some while later does he whip his spaded tip from your abused anal opening. ";
+	say "     The sensation is just too much for your already-taxed body to handle, and you can only fail to hold back the powerful orgasm racking your over-stimulated form. As your body shakes with pleasure, the demon roars with laughter at your pathetic state, still injecting you with more and more of his corrupted seed. Only after the hellish creature finishes up inside you some while later does he whip his spaded tip from your abused anal opening";
 	if player is kinky:
-		say "A river of his hot cum continues to gush from your overfilled bowels, causing a number of orgasmic aftershocks to wrack your trembling pucker.";
-	else:
-		say ".";
+		say ". A river of his hot cum continues to gush from your overfilled bowels, causing a number of orgasmic aftershocks to wrack your trembling pucker";
+	say ".";
 	WaitLineBreak;
 	say "     With the demon's cock finally having stopped filling your bloated stomach, he pulls his softening purple dick from your gaping maw. He was right, all you can taste is his cum as you burp and cough up globs of his thick white load from your painfully stretched belly. The terrible brute laughs as he inspects your pathetic, bloated body. 'Not bad as a cum-dump, slave. I'll enjoy taking you again when I catch you next time!' With that he disappears into a cloud of smoke leaving you panting, coughing up hot hell-seed, and nursing your swollen gut. Despite the healing effects of the nanites, you feel that your body is not made to take such violent abuse from hellish creatures.";
 
@@ -243,55 +242,67 @@ to say Brutus_DBCapture:
 	say "     Defeated and now captured, the demon is pinned under a panting and obviously aroused Brutus, leaving it open for your amusements. Your demonic companion turns to you, silently awaiting your [if DBCaptureQuestVar is 5]orders[else]instructions[end if], but obviously eager for this opportunity to sate its [if DBCaptureQuestVar is 5]carnal and violent lusts[else]carnal lust[end if].";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if demonbrutestatus < 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Brutus fucks";
 		now sortorder entry is 5;
 		now description entry is "watch while Brutus fucks the other demon";
+	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck it";
 		now sortorder entry is 1;
 		now description entry is "fuck the demon while Brutus holds it down";
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now description entry is "make it suck you off";
 		now sortorder entry is 6;
+	[]
 	if player is male and demonbrutestatus < 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Spit-roast";
 		now sortorder entry is 2;
 		now description entry is "fuck the demon while Brutus takes its mouth";
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Double penetration";
 		now sortorder entry is 3;
 		now description entry is "have both of you to fuck the demon";
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Tag team fuck";
 		now sortorder entry is 4;
 		now description entry is "take turns fucking the demon";
+	[]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride it (vaginal)";
 		now sortorder entry is 8;
 		now description entry is "ride the captured demon's cock";
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now description entry is "make it eat out your pussy";
 		now sortorder entry is 7;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ride it (anal)";
 	now sortorder entry is 9;
 	now description entry is "stuff your ass with the demon's cock";
+	[]
 	if demonbrutestatus > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Brutus receives vaginal";
 		now sortorder entry is 10;
 		now description entry is "watch while Brutus rides the other demon's cock";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Brutus receives anal";
 	now sortorder entry is 11;
 	now description entry is "watch while Brutus takes the other demon's cock up his ass";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -331,6 +342,7 @@ to say Brutus_DBCapture:
 					say "[dbcapturesex_10]";  [Brutus rides - vag]
 				else if num is 11:
 					say "[dbcapturesex_11]";  [Brutus rides - anal]
+				wait for any key;
 		else:
 			say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
 
@@ -559,7 +571,7 @@ understand "Brutus" as demon brute.
 ScaleValue of demon brute is 4. [larger than human]
 Cocks of demon brute is 1.
 Cock Length of demon brute is 18.
-Cock Width of demon brute is 14. [golfball sized balls]
+Cock Width of demon brute is 15. [baseball sized balls]
 Testes of demon brute is 2.
 Cunts of demon brute is 0.
 Cunt Length of demon brute is 0.
@@ -741,14 +753,14 @@ to say DBRelationshipTalkMenu:
 					say "[DemonBruteSexMenu]";
 				else if (nam is "Talk about David"):
 					say "[DBTalk2]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			if companion of player is demon brute:
 				say "     You step back from the purple demon, shaking your head slightly as he gives a questioning look.";
 			else:
 				say "     You murmur the magic words Nermine told you. With a shrug, the demon brute turns into purple mist and is absorbed by the amulet.";
-			WaitLineBreak;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -827,10 +839,10 @@ to say DBTalk2:
 		say "     Taking Brutus aside so you can talk privately, you ask him what he thinks about David now. The demon groans and a pleading expression fills his eyes. Then he says, 'I care for him, more than I ever have for anyone. More than... for my life. Thank you for ensuring that - he isn't hurt.' There is a slight crunch as the claws on his feet dig into the ground and leave several short furrows in it before Brutus stops himself. Realizing that things are just bubbling away under the surface of his mind, you ask him to tell you how bad it is - and the demon allows himself a howl in frustration. 'It just gets stronger. Always stronger. I feel I should just grab him, hold him down and fuck him. Hard. Rough. Again, and again - all the time! Fill him with my seed! Never let him go. Never!' He huffs and growls as the words burst forth, clenching his fists hard to bring himself under control again. You can see droplets of purple blood drip down from his hands, showing that he is pushing hard enough to let his claws pierce their palms.";
 		say "     Staring at his feet, Brutus adds after a moment, 'Please, master - do not let me loose, ever. I will endure, as long as I can be with him. Unbelievable that he wants to be close, even though he has seen the beast inside. It would... break me, if I did something to him.' It is hard to watch the desperation in his being shine out, now that he doesn't hide it. Almost unbelievable, what one can endure out of love. Just suppressing these issues is clearly not the answer. You should better find a specialist to consult. Someone with a deeper understanding of demons - or maybe interspecies sex - to resolve this in a more healthy way for Brutus...";
 	else if libido of David is 62: [Talked with Nermine about sharing Brutus with David - refused]
-		say "     As you bring your soldier friend up, Brutus's large shaft grows and throbs, showing his uncontrolled desire for the human he cares so much about. Your purple demon groans in lust and a pleading expression fills his eyes. Then he says, 'I care for him, more than I ever have for anyone. More than... for my life. Please, let us find a way to make sure I can be with him forever.' His eyes search out the amulet hanging around your neck and Brutus indicates to it with a large clawed hand, 'Nermine is right, if he was my master too, the desire to dominate him would surely vanish. Understand, if one of my kind has accepted a lord - there is no doubt, no struggle - you obey and live out his will. And... David has my heart, so that is what I want to do.' The tall demon's eyes focus on you with blazing intensity, then he kneels, lowering his head in submission as he says, 'I know it is a lot to ask, to share control, share your power - but please, [if player is not male and player is female]mistress[else]master[end if]... I feel incomplete, without him. I want to be his. Let me fuck Nermine's pet, let us do the ritual. This, I beg you to allow.'";
+		say "     As you bring your soldier friend up, Brutus's large shaft grows and throbs, showing his uncontrolled desire for the human he cares so much about. Your purple demon groans in lust and a pleading expression fills his eyes. Then he says, 'I care for him, more than I ever have for anyone. More than... for my life. Please, let us find a way to make sure I can be with him forever.' His eyes search out the amulet hanging around your neck and Brutus indicates to it with a large clawed hand, 'Nermine is right, if he was my master too, the desire to dominate him would surely vanish. Understand, if one of my kind has accepted a lord - there is no doubt, no struggle - you obey and live out his will. And... David has my heart, so that is what I want to do.' The tall demon's eyes focus on you with blazing intensity, then he kneels, lowering his head in submission as he says, 'I know it is a lot to ask, to share control, share your power - but please, [if player is purefemale]mistress[else]master[end if]... I feel incomplete, without him. I want to be his. Let me fuck Nermine's pet, let us do the ritual. This, I beg you to allow.'";
 		say "     Having made his case, Brutus stands back up and takes his position by your side again, falling back into his task of serving as a bodyguard. Being your demonic companion, bound by magic and sworn to service out of thanks for freeing him from evil, he doesn't expect a discussion or anything - he simply gets back on duty and leaves you to ponder the words on your own. Maybe you should indeed visit Nermine again and let him pay her price. A happy ending for the unlikely lovers would be a nice thing to see...";
 	else if libido of David is 63: [Ritual by Nermine is ready (sharing Brutus with David)]
-		say "     As you bring your soldier friend up, Brutus's large shaft grows and throbs, showing his uncontrolled desire for the human he cares so much about. Although maybe it is mixed a bit right now with lust for someone else right now, as his next words are, 'Thank you for letting me have the elf, [if player is not male and player is female]mistress[else]master[end if]. His kind is desirable for us demons. To fuck one of the ancient enemy...' The purple demon gives an aroused grumble from his broad chest and a glistening drop of pre-cum forms at his cock-slit. 'But even though my lust for that elven boy and with his hole wrapped around my cock, the goal of being with David was always in the forefront of my mind. I can't wait to be with him, to be his, fully and forever. Please let us do the ritual in the bunker. Soon.";
+		say "     As you bring your soldier friend up, Brutus's large shaft grows and throbs, showing his uncontrolled desire for the human he cares so much about. Although maybe it is mixed a bit right now with lust for someone else right now, as his next words are, 'Thank you for letting me have the elf, [if player is purefemale]mistress[else]master[end if]. His kind is desirable for us demons. To fuck one of the ancient enemy...' The purple demon gives an aroused grumble from his broad chest and a glistening drop of pre-cum forms at his cock-slit. 'But even though my lust for that elven boy and with his hole wrapped around my cock, the goal of being with David was always in the forefront of my mind. I can't wait to be with him, to be his, fully and forever. Please let us do the ritual in the bunker. Soon.";
 	else if libido of David is 64: [Talked with Lilith about sharing Brutus with David - refused]
 		say "     As you bring your soldier friend up, Brutus's large shaft grows and throbs, showing his uncontrolled desire for the human he cares so much about. Your purple demon groans in lust and a pleading expression fills his eyes. Then he says, 'I care for him, more than I ever have for anyone. More than... for my life. Please, let us find a way to make sure I can be with him forever.' Raising a large hand and flexing his clawed finger, he continues, 'I - I was almost ready to pay the price of that bitch Lilith - any price, really - to be with David. Thank you for being there with me. It would not... be right... to damn someone as her pet for my own desires. There must be another way, or...' Brutus's brows draw together and a look of intense thought crosses his face. 'Hmm, Lilith thinks I'm just a beast, something to ravage her captive into submission, damn him with my touch. But I'm not that, not anymore. I learned about pleasure, together with David, so... maybe we should go back.'";
 	else if libido of David is 65: [Talked with Lilith about sharing Brutus with David - freed Liam]

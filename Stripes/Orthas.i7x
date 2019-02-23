@@ -159,7 +159,7 @@ after going down from 2F Trevor Labs when the HP of Doctor Matt > 2 and HP of Or
 			say "     ([link]N[as]n[end link]) - You'll pass.";
 			if player consents:
 				LineBreak;
-				say "     Orthas puts on a toothy grin as she reaches up with strong arms and pulls you down onto herself. Her long tongue wraps around yours in an exciting bit of french kissing, while her hands rub your body, making it all tingly in response to her actions. She pulls off the kiss after a moment and rips off the somewhat slimy remnants of her clothes, the sight of which makes you wonder a bit about what happened during her visit to the basement. The dragoness's body is toned and athletic, looking practically amazonian to your own lust-filled eyes. She caresses every part of your body for a little while of pleasurable exploration, before assisting you in taking off any clothes and gear you have with you.";
+				say "     Orthas puts on a toothy grin as she reaches up with strong arms and pulls you down onto herself. Her long tongue wraps around yours in an exciting bit of French kissing, while her hands rub your body, making it all tingly in response to her actions. She pulls off the kiss after a moment and rips off the somewhat slimy remnants of her clothes, the sight of which makes you wonder a bit about what happened during her visit to the basement. The dragoness's body is toned and athletic, looking practically amazonian to your own lust-filled eyes. She caresses every part of your body for a little while of pleasurable exploration, before assisting you in taking off any clothes and gear you have with you.";
 				if player is male: [male or herm player]
 					say "     'Ooooh... you're quite the stud!' she says, getting a good gander at your manhood, already half-erect from the heat of the moment. Leaning back on the cushions, the dragoness spreads her strong, scaled legs, fingers moving to pull open the folds of her sex in eager anticipation of your entry. 'Mmm! Come on big boy, give me some love!' An idle thought passes through your mind about whether dragonesses would lay eggs or have live young, but such worries fade before the escalating lust you feel as you push into Orthas's sweltering depths. 'Fuck yeah!' the dragoness growls in satisfaction, her claws digging into the abused sofa as she bucks her hips against yours to drive your shaft deeper. Doing what comes natural, you thrust in and out of her in a rapid tempo, your [cock of player] manhood stretching the inner walls of your draconic lover. She feels amazing around your dick, quite warm and snug, as her strong muscles flex and contracting to become a perfect fit over your member.";
 					say "     Orthas herself has her tongue lolling out of her mouth in helpless pleasure and her hands squeeze at her hefty bosom while you ride her. Her pussy muscles seem to be working overdrive on your member, and she is definitely a screamer, as the roars of pleasure fill the whole lobby and make the intact windowpanes tremble in their frames. You're certain that Doctor Matt on the floor above can hear your mating loud and clear. Before long, your pleasure nears the point of no return, and a tingly feeling of tightness fills your balls. You start to gasp out that you're close, but before you have said more than a few words, Orthas's pussy walls clamp down on your cock hard! They squeeze your length in a rhythmic fashion, practically milking you for your cum - and with a pleased groan, you are happy to oblige her and erupt into the woman's innermost depths. Spurt after spurt of your seed paint the walls of her pussy white while Orthas's slit gushes her femcum over your throbbing member and balls.";
@@ -191,7 +191,7 @@ after going down from 2F Trevor Labs when the HP of Doctor Matt > 2 and HP of Or
 							say "     The suited man smiles at you in an earnest fashion, glossing over your shocked expression and the wide eyes that sudden revelation created. Orthas squirms a little in embarrassment, looking at you and then down to your belly. She opens her muzzle as if to say something, then snaps it shut again, unsure what to say. Dr. Matt clears his throat and says, 'I'll leave you to talk things over with one another in private.' With that, the man walks to the back of the lab and enters the decontamination airlock to his isolation lab. Silence stretches between Orthas and yourself for a little while, until she eventually lets out her held breath and stands up to come to you. 'So, um. Guess we're gonna be parents together,' she says, waving her hand in the direction of your belly. 'I - I hope you don't hate me for it. Things seemed so simple while I was still under the influence of whatever that thing did. Um, I'll be down at my post, if you want to talk.' With that, she flees from the room.";
 							Impregnate with "Dragon";
 						else:
-							say "But apparently, the eggs didn't take. Your body seems to have absorbed them somehow. I assume that also is a result of the nanites enhancing the energy metabolism of their hosts. Fascinating effect, I hope you will allow me to study it some more.";
+							say "But apparently, the eggs didn't take. Your body seems to have absorbed them somehow. I assume that also is a result of the nanites enhancing the energy metabolism of their hosts. Fascinating effect, I hope you will allow me to study it some more.'";
 							say "     The suited man smiles at you in an earnest fashion, glossing over any shock you might be feeling about his revelations. Orthas squirms a little in embarrassment, looking at you and then down to your belly. She opens her muzzle as if to say something, then snaps it shut again, unsure what to say. Dr. Matt clears his throat and says, 'Ah, maybe I should leave you to talk things over with one another in private.' With that, the man walks to the back of the lab and enters the decontamination airlock to his isolation lab. Silence stretches out between Orthas and yourself for a little while, until she eventually lets out her held breath and stands up to come to you. 'So, um. Guess we're not gonna be parents after all,' she says, raising her hand and then letting it drop suddenly. 'I - I hope you don't hate me for saying this, but I'd hoped we would be. Things seemed so simple while I was still under the influence of whatever that thing did, and the idea stuck. Um, I'll be down at my post, if you want to talk.' With that, she flees from the room.";
 						now HP of Orthas is 4;
 				else if player is female:
@@ -205,7 +205,7 @@ after going down from 2F Trevor Labs when the HP of Doctor Matt > 2 and HP of Or
 					say "     ([link]N[as]n[end link]) - You'll pass.";
 					if player consents:
 						say "     Accompanying Orthas on her way upstairs, you are right with her as the dragoness steps up to the doctor, then slowly tells him about the vaguely remembered encounter she had in the sublevels of the lab, as well as the aftermath sex between you and her. Dr. Matt listens attentively, then nods in understanding. He clears his throat and looks from you to Orthas as he says, 'Well, I think I know what's happened. Orthas, the organ you described is an ovipositor in all likelihood. What that means is, when you are inseminated, you will be able to... implant eggs into willing or unwilling subjects. It's actually something that is most common in insects, but some fish and turtles have them too. As do seahorses.' Brows knitting in concern, Orthas replies sarcastically, 'Oh, that's so much of a relief then. Me being an insect-fish-turtle mutant. But wait - what did I pump out then when we fucked?'";
-						say "     Dr. Matt glances at her over the rims of his glasses, a look you'd guess he keeps in reserve for stupid questions from lab assistants or students and the like. 'That should be obvious. It's lubrication, to make the eggs slide easier. Now, if that is all, I'll get back to the experiment I was just running. But I wouldn't mind studying your changed biology a little more in detail sometime Orthas.' With that said, he goes off to another workstation, leaving you and the dragoness behind. 'So, em... sorry for sliming you up with lube?' she says cautiously to you, then shrugs. 'I was in a weird frame of mind after what happened. Kinda felt right to just pump you hard, and I'm almost sorry that I didn't have any eggs now.' She looks somewhat ashamed at that admission, so much so that she flees with the quickly said words, 'Um, I'll be down at my post, if you want to talk later.'";
+						say "     Dr. Matt glances at her over the rims of his glasses, a look you'd guess he keeps in reserve for stupid questions from lab assistants or students and the like. 'That should be obvious. It's lubrication, to make the eggs slide easier. Now, if that is all, I'll get back to the experiment I was just running. But I wouldn't mind studying your changed biology a little more in detail sometime Orthas.' With that said, he goes off to another workstation, leaving you and the dragoness behind. 'So, erm... sorry for sliming you up with lube?' she says cautiously to you, then shrugs. 'I was in a weird frame of mind after what happened. Kinda felt right to just pump you hard, and I'm almost sorry that I didn't have any eggs now.' She looks somewhat ashamed at that admission, so much so that she flees with the quickly said words, 'Um, I'll be down at my post, if you want to talk later.'";
 						now HP of Orthas is 3;
 					else:
 						say "     As you shake your head and tell her you're out for that, Orthas shows a disappointed expression and sighs. 'Ah. Okay. Well, I'll be off for a bit now then. See you later I guess,' she says, then walks up the stairs to talk to Dr. Matt.";
@@ -227,11 +227,12 @@ Section 3 - Orthas Task 2 - Mementos
 to say Orthas_task2_start:
 	project the Figure of Orthas_face_icon;
 	say "     'Look, I was wondering if you could give me a hand again. It shouldn't be as much trouble as my last favor turned out to be - how was I to know those beasts were waiting for me to leave my post? It's lucky I wasn't just going go to the washroom or something and had actually gotten a replacement guard,' she says with a grin.";
-	say "     From your glare at her for having to be that replacement to be attacked, she coughs and gets back to the original matter. 'Well, as I was saying, this means I can't really be leaving my post to go running around in the city. Now as I've said, I'm not too attached to my old life, but there is a few things I'd like to hold onto. I'd really appreciate it if you could go to my old place and pick up a few of my things for me,' she says, putting added emphasis on her appreciation with a rumbling purr and a teasing talon stroke. Her tail winds around you, pulling you in close to her. 'You'll do that for me, won't you?' she says, licking your cheek and nibbling your ear. You moan and nod, hardly thinking about it and just wanting to get the dragon's favor.";
-	say "     Orthas smiles and gives you a quick kiss. 'Thanks, hon. Now, my place is off near the red light district of town. Hey - don't give me that look! It wasn't that kind of neighborhood when I first moved there and... well, there wasn't much point in moving away after- Look, nevermind that! Here's the address. ";
+	say "     From your glare at her for having to be that replacement to be attacked, she coughs and gets back to the original matter. 'Well, as I was saying, this means I can't really be leaving my post to go running around in the city. Now as I've said, I'm not too attached to my old life, but there are a few things I'd like to hold onto. I'd really appreciate it if you could go to my old place and pick up a few of my things for me,' she says, putting added emphasis on her appreciation with a rumbling purr and a teasing talon stroke. Her tail winds around you, pulling you in close to her. 'You'll do that for me, won't you?' she says, licking your cheek and nibbling your ear. You moan and nod, hardly thinking about it and just wanting to get the dragon's favor.";
+	say "     Orthas smiles and gives you a quick kiss. 'Thanks, hon. Now, my place is off near the red light district of town. Hey - don't give me that look! It wasn't that kind of neighborhood when I first moved there and... well, there wasn't much point in moving away after- Look, nevermind that! Here's the address";
 	if Entrance to the Red Light District is unknown:
-		say "     And from the info I've gathered from some of the others scavengers who've been in through here, this route should at least get you into the area.'";
+		say ". From the info I've gathered from some of the others scavengers who've been in through here, this route should at least get you into the area";
 		now Entrance to the Red Light District is known;
+	say ".'";
 	say "     Having given you the address on a slip of paper, the dragoness stomps back to her post. Well, it sounds like a trip to find [bold type]Orthas's house[roman type] is in your future.";
 	now Orthas's House is active;
 
@@ -270,7 +271,7 @@ to say Orthas_task2_done:
 		say "     Orthas nips along your neck and grinds her hips against your ass. A hand wanders down to your [cock size desc of player] cock as her touches become more erotic. After fondling you to erection, she nuzzles down your side and gets you to turn back around so she can sink your [cock of player] manhood into her muzzle. Her maw is hot and her long tongue twines around your shaft, getting you to moan as pre drools from your cumslit. She works her mouth over you, careful of her teeth, and gives you quite the blow job.";
 		say "     Once she's gotten you good and horny, she lays herself back across her security desk, wantonly spreading her legs. With a tantalizing grin, she fingers her dripping snatch before spreading her folds invitingly. 'Come on, lover,' she purrs sensually and you can hardly resist such an invitation. Tossing aside your gear and moving into position, you grab her legs and drive your throbbing cock into her cunny, causing the dragoness to cry out lustfully. You pound away at her, giving her the thorough breeding she desires.";
 		say "     The dragoness's strong inner muscles, capable of dealing with pushing out her eggs, squeeze and massage around your thrusting member, increasing the pleasure for both of you. The thought of dumping your load in her and there being an egg produced right away makes you feel like a virile stud, eager to knock up this fecund scaled beauty. Nuzzling her bosom, you lick and kiss her nipples, telling her how sexy she looks and how you're looking forward to putting an egg in her. To this she grins and licks your cheek with her draconic tongue, rumbling how she's looking forward to putting her egg in you.";
-		say "     Before you can respond to this, the squeezing and milking of her vaginal walls intensifies as her orgasm begins with a roar. Under the powerful stimulation her quivering cunny provides, you don't hold out much longer and are soon blasting your gooey seed into her womb. By the time you're done emptying your load into her, she's already sitting up and rolling you over onto your back. Pulling off your spent shaft, she lets her emerging ovipositor slap wetly against it with a lustful grin. ";
+		say "     Before you can respond to this, the squeezing and milking of her vaginal walls intensifies as her orgasm begins with a roar. Under the powerful stimulation her quivering cunny provides, you don't hold out much longer and are soon blasting your gooey seed into her womb. By the time you're done emptying your load into her, she's already sitting up and rolling you over onto your back. Pulling off your spent shaft, she lets her emerging ovipositor slap wetly against it with a lustful grin.";
 		now calcnumber is 0;
 		if player is female:
 			say "     Knowing what she's after, shall you let her pop that egg [link]into your womb (1)[as]1[end link], [link]into your ass (2)[as]2[end link] or [link]onto your belly (3)[as]3[end link]?";
@@ -287,7 +288,7 @@ to say Orthas_task2_done:
 				decrease gestation of child by a random number from 5 to 10;
 				if gestation of child < 1, now gestation of child is 1;
 			else if player is impreg_able:
-				say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come... ";
+				say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come...";
 				impregnate with "Dragon";
 				now pregtype is 1;
 			else:
@@ -301,7 +302,7 @@ to say Orthas_task2_done:
 					decrease gestation of child by a random number from 5 to 10;
 					if gestation of child < 1, now gestation of child is 1;
 				else:
-					say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come... ";
+					say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come...";
 					impregnate with "Dragon";
 					now pregtype is 2;
 			else:
@@ -371,7 +372,7 @@ to say Orthasfuck:
 							decrease gestation of child by a random number from 5 to 10;
 							if gestation of child < 1, now gestation of child is 1;
 						else:
-							say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come... ";
+							say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come...";
 							impregnate with "Dragon";
 							now pregtype is 2;
 							if HP of Orthas < 4, now HP of Orthas is 4;
@@ -445,7 +446,7 @@ to say Orthasfuck:
 					decrease gestation of child by a random number from 5 to 10;
 					if gestation of child < 1, now gestation of child is 1;
 				else:
-					say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come... ";
+					say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come...";
 					impregnate with "Dragon";
 					now pregtype is 1;
 					if HP of Orthas < 4, now HP of Orthas is 4;
@@ -475,7 +476,7 @@ to say Orthasfuck:
 					decrease gestation of child by a random number from 5 to 10;
 					if gestation of child < 1, now gestation of child is 1;
 				else:
-					say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come... ";
+					say "     You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come...";
 					impregnate with "Dragon";
 					now pregtype is 1;
 					if HP of Orthas < 4, now HP of Orthas is 4;
@@ -490,7 +491,7 @@ to say Orthasfuck:
 					decrease gestation of child by a random number from 5 to 10;
 					if gestation of child < 1, now gestation of child is 1;
 				else:
-					say "You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come... ";
+					say "You can feel the egg deposit itself in your womb, and you're quite sure you'll be carrying the egg's resident for a few days to come...";
 					impregnate with "Dragon";
 					now pregtype is 2;
 					if HP of Orthas < 4, now HP of Orthas is 4;

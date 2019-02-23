@@ -14,12 +14,12 @@ to say mannequin loses:
 to say mannequinDesc:
 	setmongender 0;
 	if "Mannequin" is not listed in EncounteredEnemies of player: [first encounter]
-		say "     Passing by a loading-dock in the warehouse district, you spot two humanoid dogs cutting a hole in the fence and slip through. Curious what the bulldog and german shepherd are doing in there, you inconspicuously follow them between the long rows and stacks of shipping containers.";
+		say "     Passing by a loading-dock in the warehouse district, you spot two humanoid dogs cutting a hole in the fence and slip through. Curious what the bulldog and German Shepherd are doing in there, you inconspicuously follow them between the long rows and stacks of shipping containers.";
 		WaitLineBreak;
 		say "     'Which one did the coyote say the food was in?' the shepherd asks gruffly, to which the bulldog replies 'A red one, with Transglobal on the side.' Looking up and down the lines of containers, the shepherd wails 'But almost all of them are red!' The bulldog shrugs and walks over to the nearest container and opens it up. 'Oh hey, seventy flatsceen TVs - how... useless, without electricity. Let's check the next one.'";
 		say "     The two of them open up several more containers, but find nothing of use in this post-apocalyptic city. 'I'm beginning to think Diego sent us on a wild goose chase,' the shepherd growls. 'Ok, ok... let's just open up this last one, then go back to the park and have some words with that coyote...' his buddy replies, then pulls open another container and yelps in surprise. 'Now that's freaky - for a moment I thought this container was full of people.'";
 		WaitLineBreak;
-		say "     The german shepherd steps in front of the door and looks in too. 'Nah, those are just those dress dummies they use in stores. Normal lifeless puppets, see...' and pokes the first mannequin in the container in the chest - which promptly grabs him by the arm. Within moments, dozens of mannequins pour out of the container and wrestle both dogs to the ground. They jostle against each other with a desperate tenacity, each trying to touch one of their captives. Then you see them change, taking on characteristics of the dogs - one growing out a muzzle, another suddenly sprouting fur, etc.";
+		say "     The German Shepherd steps in front of the door and looks in too. 'Nah, those are just those dress dummies they use in stores. Normal lifeless puppets, see...' and pokes the first mannequin in the container in the chest - which promptly grabs him by the arm. Within moments, dozens of mannequins pour out of the container and wrestle both dogs to the ground. They jostle against each other with a desperate tenacity, each trying to touch one of their captives. Then you see them change, taking on characteristics of the dogs - one growing out a muzzle, another suddenly sprouting fur, etc.";
 		say "     After the changes stabilize, all of the mannequins lose interest in their captives and start to disperse, each striking out on its own. Left behind on the ground are two more mannequins - those must be the two former dogs, their essence drained away. As they start to get up too, you decide it's time to leave and make your way back to the hole in the fence. One of the mannequins got there before you, though. It might have absorbed the knowledge of its location from the dogs, or just have been lucky. Now it turns to you, eager to make your shape its own.";
 	else:
 		say "     You cross paths with an animated mannequin which looks like an idealized male in his mid-twenties, with muscled arms, legs and chest and a featureless crotch. It has a pale flesh-colored skin-tone and a chiseled-looking face including sculpted wavy hair. As the mannequin notices you, an almost desperate, needful look crosses its face and it rushes at you.";
@@ -88,12 +88,12 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Mannequin":
 		if humanity of player < 10:
-			say "As you succumb to the infection, you drift aimlessly through the city and go for anyone crossing your path, overpowering them and absorbing how they look. Being in the form for an unfortunate soldier whose shape you stole earlier almost gets you out of the city when the military finally moves in, but following your unrestrained urges you try assimilating a medic who wants to check you out. Tasered till you collapse, you end up in a small cell and later get shipped to a research lab, where scientists study how you constantly shift and change. As a quite valuable asset for espionage developments, you never leave that facility again...";
+			say "     As you succumb to the infection, you drift aimlessly through the city and go for anyone crossing your path, overpowering them and absorbing how they look. Being in the form for an unfortunate soldier whose shape you stole earlier almost gets you out of the city when the military finally moves in, but following your unrestrained urges you try assimilating a medic who wants to check you out. Tasered till you collapse, you end up in a small cell and later get shipped to a research lab, where scientists study how you constantly shift and change. As a quite valuable asset for espionage developments, you never leave that facility again...";
 			stop the action; [no other endings - player removed from the city]
 		else:
-			say "Remaining in control of the urges to acquire the shapes of others and become them, you experiment a bit and learn that with some concentration you can shift without leaving others as identity-less infected mannequins. When the military finally moves in, you're taken to a holding facility, where doctors poke and prod you for days on end. Overhearing two doctors talk, you catch '...ites active and in constant flux. The subject wasn't exposed to a one-time change, but something else. That makes [if player is male]him[else if player is female]her[else]it[end if] far too dangerous to be released. I recommend perm...' Since you don't think you'd get out of there alive - if at all, you use the next chance you get with an orderly and overpower him to flee the facility after absorbing his shape.";
-			say "There's quite a bit of panic when people realize you're gone and soldiers swarm out to create roadblocks and hunt for you. It's touch and go for a while, but you manage to avoid capture. A week later and several hundred miles distant, with you laying low in a small town, you think you're home free - until you walk into your motel room and find a man in a suit waiting for you. 'Quite impressive, your escape. We need people like you. A bit of training and you'd make a fine addition to the agency...'";
-			say "Recognizing a deal you can't decline, you let yourself be recruited and end up a spy, traveling all over the world. Your ability to become anyone you want to be creates a rumor, then a legend of the super-spy 'The Chameleon'. Eventually movie-directors get a hold of the story and bring out an award-winning series of films about you. You make a game out of appearing as a minor role in every last one of them - never in the same shape twice though.";
+			say "     Remaining in control of the urges to acquire the shapes of others and become them, you experiment a bit and learn that with some concentration you can shift without leaving others as identity-less infected mannequins. When the military finally moves in, you're taken to a holding facility, where doctors poke and prod you for days on end. Overhearing two doctors talk, you catch '...ites active and in constant flux. The subject wasn't exposed to a one-time change, but something else. That makes [if player is male]him[else if player is female]her[else]it[end if] far too dangerous to be released. I recommend perm...' Since you don't think you'd get out of there alive - if at all, you use the next chance you get with an orderly and overpower him to flee the facility after absorbing his shape.";
+			say "     There's quite a bit of panic when people realize you're gone and soldiers swarm out to create roadblocks and hunt for you. It's touch and go for a while, but you manage to avoid capture. A week later and several hundred miles distant, with you laying low in a small town, you think you're home free - until you walk into your motel room and find a man in a suit waiting for you. 'Quite impressive, your escape. We need people like you. A bit of training and you'd make a fine addition to the agency...'";
+			say "     Recognizing a deal you can't decline, you let yourself be recruited and end up a spy, traveling all over the world. Your ability to become anyone you want to be creates a rumor, then a legend of the super-spy 'The Chameleon'. Eventually movie-directors get a hold of the story and bring out an award-winning series of films about you. You make a game out of appearing as a minor role in every last one of them - never in the same shape twice though.";
 
 Section 4 - Item drop
 
@@ -146,7 +146,7 @@ to say nullpowderuse:
 						say "     You apply the powder to your rods. After a while, they shrink down to the point where they're now [cock size desc of player] in size.";
 				else if cock length of player < 4:
 					if cocks of player > 1:
-						say "     Given how small they are, you could probably remove ALL of them. Shall you? Else you'll only remove one.";
+						say "     Given how small they are, you could probably remove ALL of them. Shall you? Otherwise, you'll only remove one.";
 						if player consents:
 							if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player:
 								now cocks of player is 1;
@@ -218,7 +218,7 @@ to say nullpowderuse:
 						say "     You apply the powder to your portals. After a while, they shrink down to the point where they're now [cunt size desc of player] in size.";
 				else if cunt length of player < 5 and cunt width of player < 5:
 					if cunts of player > 1:
-						say "     Given how small they are, you could probably remove ALL of them. Shall you? Else you'll only remove one.";
+						say "     Given how small they are, you could probably remove ALL of them. Shall you? Otherwise, you'll only remove one.";
 						if player consents:
 							if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player or "Single Sexed" is listed in feats of player:
 								now cunts of player is 1;
@@ -269,7 +269,7 @@ to say nullpowderuse:
 						say "     You apply the powder to your racks. After a while, they shrink down to the point where they're now [breast size desc of player] in size.";
 				else if breast size of player < 4:
 					if breasts of player > 2:
-						say "     Given how small they are, you could probably flatten ALL of them. Shall you? Else you'll remove one entirely, nipples and all.";
+						say "     Given how small they are, you could probably flatten ALL of them. Shall you? Otherwise, you'll remove one entirely, nipples and all.";
 						if player consents:
 							now breast size of player is 0;
 							follow the breast descr rule;
@@ -294,7 +294,7 @@ to say nullpowderuse:
 				now Trixieexit is 1;
 			else:
 				if breasts of player > 2:
-					say "     Your chest is completely flat. You could, however, remove your nipples. Shall you remove one set? Else you'll remove all of them.";
+					say "     Your chest is completely flat. You could, however, remove your nipples. Shall you remove one set? Otherwise, you'll remove all of them.";
 					if player consents:
 						decrease breasts of player by 2;
 						say "     After a bit of work you manage to remove a set, leaving you with [if breasts of player < 3]a single pair[else][breasts of player] pairs[end if].";
@@ -308,6 +308,6 @@ to say nullpowderuse:
 		else:
 			say "     You decide against using the item right now and stow it away.";
 			now Trixieexit is 1;
-			add "nullifying powder" to invent of player;
+			increase carried of nullifying powder by 1;
 
 Mannequin ends here.

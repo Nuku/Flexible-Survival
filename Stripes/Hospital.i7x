@@ -114,7 +114,7 @@ The sarea of Ambulance Dock is "Hospital".
 
 Instead of resolving a Ambulance Dock:
 	say "     Most of the ambulances are out of the special parking entrance. The only one here has been crashed into the dock. Stepping over to it, you look in the open back. Unsurprisingly, there is a huge, sticky mess in there. Presumably the last patient they picked up jumped the response team for sex as they were returning to the hospital. You consider searching in there for something that could still be usable, but it seems like a risky venture.";
-	say "     [bold type] Do you proceed?[roman type][line break]";
+	say "     [bold type]Do you proceed?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
@@ -364,7 +364,7 @@ Chaplaincy is a situation.
 The sarea of Chaplaincy is "Hospital".
 
 instead of resolving Chaplaincy:
-	say "     You find yourself in front of the hospital's Chaplaincy, there for the spiritual well-being of patients and family members. Glancing around, you decide to slip inside and have a look around, briefly hoping things will be a little better in here. Sadly, that is not the case and there are signs of several lustful outbursts in here just as everywhere else. You even spot the torn remains of the clergyman's suit and clerical collar, as messy as the other piles of cum-laden clothes. You spot several small vials nearby labelled [']libido suppressant['], most of them empty, though one still remains unused. In the end, he must have decided to give into his urges rather than keep denying them. You pick it up and store it away. Perhaps it will be useful for you in a moment of need.";
+	say "     You find yourself in front of the hospital's Chaplaincy, there for the spiritual well-being of patients and family members. Glancing around, you decide to slip inside and have a look around, briefly hoping things will be a little better in here. Sadly, that is not the case and there are signs of several lustful outbursts in here just as everywhere else. You even spot the torn remains of the clergyman's suit and clerical collar, as messy as the other piles of cum-laden clothes. You spot several small vials nearby labelled [']libido suppressant['], most of them empty, though one still remains unused. In the end, he must have decided to give in to his urges rather than keep denying them. You pick it up and store it away. Perhaps it will be useful for you in a moment of need.";
 	increase carried of libido suppressant by 1;
 	increase score by 5;
 	now Chaplaincy is resolved;
@@ -432,8 +432,7 @@ instead of resolving Missing Powder:
 	say "     You manage to find a small, currently unoccupied patient room. It's unremarkable, save for a small bag with a note laying near it. Picking up the item, you read the note.";
 	say "     [italic type]'Bring this shipment we got from the Warehouse District to the doctor. We figure he'll find it useful. If you screw this up again the only packages you'll be handling will be on the far end of some nameless horror's dick!'[roman type] The note appears to be slightly ruined, partially covered in the dry stain of some dubious fluid...";
 	say "     Checking the bag, it appears to have a couple smaller bags containing a strange, white powder. Very carefully inspecting the contents, it doesn't appear to be anything illicit or infectious, though it does tingle slightly against your touch. You decide to take the bags along with you, for now.";
-	add "nullifying powder" to invent of player;
-	add "nullifying powder" to invent of player;
+	increase carried of nullifying powder by 2;
 	now Missing Powder is resolved;
 
 Section 3 - Helper Dog Event & Pet
@@ -948,7 +947,7 @@ instead of going to Primary Lab while hospquest is 11:		[heading to the main lab
 		say "[posttlscene]";
 	else:									[Dr Matt physically there]
 		say "     You enter the lab and take stock of the enhancement device you've been sent to collect. Dr. Matt does not appear to have noticed you quite yet, buried in more work. You slip the syringe from your pocket and look at it, considering what to do next.";
-		say "     [bold type] Shall you inject Dr Matt?[roman type][line break]";
+		say "     [bold type]Shall you inject Dr Matt?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Inject.";
 		say "     ([link]N[as]n[end link]) - Talk.";
@@ -967,9 +966,7 @@ instead of going to Primary Lab while hospquest is 11:		[heading to the main lab
 			if Susan is visible:
 				waitlinebreak;
 				say "     Susan comes up to your side and holds your left in hers, clutching it tightly. Her loving brown eyes look up at her mate. 'Please be careful, my brave buck.' She leans in and gives your cheek a kiss before releasing you.";
-			increase humanity of player by 5;
-			if humanity of player > 100:
-				now humanity of player is 100;
+			SanBoost 5;
 			increase score by 20;
 			now HP of Doctor Matt is 10;
 			now hospquest is 12;
@@ -1045,7 +1042,7 @@ to say hospranaway:
 			say "     Hiding in a nearby building, you pant to catch your breath. The pink coon thanks you for getting him out, but starts to fret about where he can now go. You decide, on impulse, to tell him about the bunker under the abbey library and give him directions[if HP of Doctor Matt is not 100]. You feel that perhaps you should go talk to Dr Matt before doing anything else[else]. Now without scientific help, you wonder what to do next[end if].";
 	else:
 		say "     Panting for breath, you slam against the main entrance doors and stumble out into the [if remainder after dividing turns by 8 > 4]darkness[else]light[end if]. You continue to run down the steps and across the large parking lot, afraid of pursuit by the hospital's horde. You cut down a side street and eventually come to a stop in a nearby building to catch your breath[if HP of Doctor Matt is not 100]. You feel that perhaps you should go talk to Dr Matt before doing anything else[else]. Now without scientific help, you wonder what to do next[end if].";
-	now HP of doctor mouse is 1;
+	now HP of Doctor Mouse is 1;
 	now locked stairwell is locked;
 	now hospquest is 13;
 
@@ -1099,7 +1096,7 @@ to say hosploss:
 			say "     You don't go far, just to a nearby building to finish recovering and take stock of your situation. The pink coon looks you over with tears in the corners of his eyes, so sad that his savior should be so treated. This gets him to start fretting about where he can now go, as he definitely wants nothing to do with the hospital any more. You decide, on impulse, to tell him about the bunker under the abbey library and give him directions[if HP of Doctor Matt is not 100]. You feel that perhaps you should go talk to Dr Matt before doing anything else[else]. Now without scientific help, you wonder what to do next[end if].";
 	else:
 		say "     You groan, still in some pain from the rough handling as you try to get up. You eventually make it to your feet and pick up your pack. You look back at the hospital and consider your options[if HP of Doctor Matt is not 100]. You feel that perhaps you should go talk to Dr Matt before doing anything else[else]. Now without scientific help, you wonder what to do next[end if].";
-	now HP of doctor mouse is 1;
+	now HP of Doctor Mouse is 1;
 	now locked stairwell is locked;
 	now hospquest is 13;
 	follow the turnpass rule;
@@ -1227,12 +1224,12 @@ to say hospvictory:
 	else:
 		say "     Outside, you go down the steps and walk across the large parking lot quietly but quickly. You try not to draw attention to yourself, but want to flee the area as soon as possible, lest the events upstairs are discovered sooner rather than later. As you walk off down a side street, you [if HP of Doctor Matt is not 100]know that you need to go see Dr Matt right away, wanting to turn over the research material to him before doing anything else[else]wonder what to do next now that you are without scientific help[end if].";
 	wait for any key;
-	now HP of doctor mouse is 2;
+	now HP of Doctor Mouse is 2;
 	now Locked stairwell is locked;
 	now hospquest is 13;
 	increase the score by 50;
 	if HP of Doctor Matt is not 100:
-		now the player is in Primary Lab;
+		now player is in Primary Lab;
 
 
 fightstatus is a number that varies.
@@ -1403,7 +1400,7 @@ instead of going to Trevor Labs Lobby while hospquest > 11:		[Lab unenterable af
 		else:
 			move player to Loading Dock;
 	else:
-		now the player is in Trevor Labs Lobby;
+		now player is in Trevor Labs Lobby;
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -1503,12 +1500,12 @@ Instead of resolving a Dinosaur Nest:
 		say "     Your search of the museum brings you to the dinosaur wing. There the great thunderlizards are on display. You try to move quietly between the displays, trying to fulfill, perhaps foolishly, Dr Mouse's request for dinosaur hunting. You move around, eventually find a large pile of junk in one corner that may be what you're looking for. A mound of debris, tacky cushions, kitschy knick-knacks and old clothes have been build into a large nest. You head over to it and start poking through it in the hopes of finding something.";
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 11:
-			say "     As you shift aside some leisure suits and send a pile of mood rings scattering, you hear the steps of a large someone trying to move up on you quietly. You jump aside just in time to avoid a swing from the angry triceratops woman. 'Now, honey, don't you know better than to invite yourself over to a lady's pad before dancin['] with her?' she asks as she strikes a pose before attacking again.";
+			say "As you shift aside some leisure suits and send a pile of mood rings scattering, you hear the steps of a large someone trying to move up on you quietly. You jump aside just in time to avoid a swing from the angry triceratops woman. 'Now, honey, don't you know better than to invite yourself over to a lady's pad before dancin['] with her?' she asks as she strikes a pose before attacking again.";
 		else:
 			decrease HP of player by 15;
-			say "     As you shift aside some leisure suits and send a pile of mood rings scattering, you are struck firmly from behind and sent tumbling over into bean bag chair, taking 15 dmg! As you pull yourself up, you find yourself looking at a large, angry triceratops woman. 'Now, honey, don't you know better than to invite yourself over to a lady's pad before dancin['] with her?' she asks as she strikes a pose before attacking again.";
+			say "As you shift aside some leisure suits and send a pile of mood rings scattering, you are struck firmly from behind and sent tumbling over into bean bag chair, taking 15 dmg! As you pull yourself up, you find yourself looking at a large, angry triceratops woman. 'Now, honey, don't you know better than to invite yourself over to a lady's pad before dancin['] with her?' she asks as she strikes a pose before attacking again.";
 	else:
 		say "     You make your way back to the dinosaur's nest to try and investigate it again. Being more watchful, you notice her coming up as you move aside a box of Abba 8-tracks to find some yo-yos. You turn away from her nest and prepare to fight the disco dino again. 'Lookin['] for another dance lesson, honey?' she asks.";
 	now dinonest is 1;
@@ -1540,7 +1537,7 @@ the scent of the lava lamp is "[smellingthelavalamp]".
 to say smellingthelavalamp:
 	if lavalamplick is 0:
 		say "     You sniff the improvised lava lamp dildo. It smells strongly of the triceratops woman's arousing scent. You find yourself tempted to lick it.";
-		say "     [bold type] Do you follow your urges?[roman type][line break]";
+		say "     [bold type]Do you follow your urges?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -1560,7 +1557,7 @@ to say smellingthelavalamp:
 instead of using lava lamp:
 	if lavalamplick is 0:
 		say "     You look at the improvised lava lamp dildo. It smells strongly of the triceratops woman's arousing scent. You find yourself tempted to lick it.";
-		say "     [bold type] Do you follow your urges?[roman type][line break]";
+		say "     [bold type]Do you follow your urges?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -1586,7 +1583,7 @@ Instead of conversing the Nermine while nerminepackage is 1 and Nerminetalk > 0:
 	now nerminepackage is 2;
 	now Viking Longboat is active;
 
-[  -- Moved to their dialog sets
+[  - Moved to their dialog sets
 Instead of conversing Rod Mallrat while nerminepackage > 0 and rodhosp is 0:
 	say "     'Those big, spotted hairballs that rolled in here the other day? That was a bad scene, dude. They started to get fresh with some of the girls in the atrium and tried to drag them off. Well, we wouldn't put up with that. Never try to force a mall rat from their mall, man. We don't want none of them goons and their friends in here again.'";
 	now rodhosp is 1;
@@ -1629,15 +1626,15 @@ Instead of resolving a Viking Longboat:
 		say "     Reaching the bow of the ship, you are glad to find handholds in it, perhaps for a sailor to act as lookout. It seems sturdier as well, thankfully. You climb up carefully and manage to eventually pry out the green gems from the wooden dragon's eyes. You climb back down and step back onto the deck just as the wooden masthead groans loudly and breaks from the ship. The deck starts to crumble away as well even as you try to run for the ladder.";
 		let bonus be ( dexterity of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 18:
-			say "     Nimbly dashing across the collapsing ship, you manage to make it to the ladder and slide down it, barely touching the rungs at all. You drop the last five feet onto all fours as more ancient lumber rains down and the ladder sways. You scramble back quickly away from the devastated relic until the dust settles. You pull out the two green gems from your pack and look at them before tucking them away again. You look over the heap and decide to grab a souvenir for yourself, swiping one of the spears from the ruined display to add to your arsenal.";
+			say "Nimbly dashing across the collapsing ship, you manage to make it to the ladder and slide down it, barely touching the rungs at all. You drop the last five feet onto all fours as more ancient lumber rains down and the ladder sways. You scramble back quickly away from the devastated relic until the dust settles. You pull out the two green gems from your pack and look at them before tucking them away again. You look over the heap and decide to grab a souvenir for yourself, swiping one of the spears from the ruined display to add to your arsenal.";
 			say "     Spear added to inventory. Stabby-stabby!";
 			increase carried of spear by 1;
 			increase score by 20;
 			now Resolution of Viking Longboat is 1; [stole the spear]
 		else:
-			say "     You try to make it back to the ladder, but part of the floor gives out beneath you. You fall through the deck, crashing through the bottom of the ship and falling to the ground. Terrified of getting buried under the rain of ancient lumber that continues, you scramble away as fast as you can manage. You fall panting in a heap, entangled by the velvet ropes as the last of it comes crashing down with a cloud of dust. You get up unsteadily and pull out the green gems, hoping they're worth the many aches and bruises you now have. (20 Dmg taken)";
+			say "You try to make it back to the ladder, but part of the floor gives out beneath you. You fall through the deck, crashing through the bottom of the ship and falling to the ground. Terrified of getting buried under the rain of ancient lumber that continues, you scramble away as fast as you can manage. You fall panting in a heap, entangled by the velvet ropes as the last of it comes crashing down with a cloud of dust. You get up unsteadily and pull out the green gems, hoping they're worth the many aches and bruises you now have. (20 Dmg taken)";
 			now Resolution of Viking Longboat is 2; [crashed the ship]
 			decrease HP of player by 20;
 			increase score by 10;
@@ -1828,9 +1825,9 @@ Section 9 - Endings
 
 when play ends:
 	if hospquest is 13 and humanity of player > 9:			[helped Dr Matt]
-		if HP of doctor mouse is 1:					[Dr Mouse not defeated]
+		if HP of Doctor Mouse is 1:					[Dr Mouse not defeated]
 			say "When the military comes into the city, they are helped by Dr Matt's findings. This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes. Over the years, you do hear rumors of a bizarre mouse scientist working in distant countries, selling nanite-based technology and weapons to foreign governments or guerrilla factions of the infected.";
-		if HP of doctor mouse is 2:					[Dr Mouse defeated]
+		if HP of Doctor Mouse is 2:					[Dr Mouse defeated]
 			say "When the military comes into the city, they are helped by Dr Matt's findings. This research keeps more of the soldiers safe and helps them rescue and treat more borderline infection cases, saving many more lives from succumbing to instinctual changes. You are quietly awarded a medal at a small ceremony for your services. Over the years, the doctor's research helps many, stemming the tide of anarchy across the nation, and even the world.";
 	else if hospquest > 13 and humanity of player > 9:	[helped Dr Mouse]
 		if bodyname of player is not "Wolverine Guard":

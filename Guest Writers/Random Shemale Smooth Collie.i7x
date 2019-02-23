@@ -2,7 +2,7 @@ Version 3 of Random Shemale Smooth Collie by Guest Writers begins here.
 [Version 3.4 - Player loss oral and player victory vaginal/anal ride added - Stripes]
 [- Originally Authored By: Voldine -]
 
-"Adds a Shemale Smooth Collie to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Shemale Smooth Collie to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 when play begins:
 	add { "Shemale Smooth Collie" } to infections of transgender;
@@ -213,7 +213,7 @@ When Play begins:
 		now body change entry is "the change begins, bones crack and snap painlessly as they reshape. You can feel your waist drawing in somewhat and your shoulders broadening slightly, your body fat begins to melt away as your muscles bulk up and become more defined, making you look like a bodybuilder... though with a more feminine figure than you'd like. Your spine curves in a way that leaves your chest thrust out and displayed more prominently. Your legs gain digitigrade form and thick pads form on your feet as they are altered into paws. Your palms burn a bit as thinner pads form there when your hands begin reshaping, leaving you with slender fingers tipped with nails that look slightly more claw-like than a human's"; [ body change text. format as "Your body feels funny as (your text)." ]
 	else:
 		now body change entry is "the change begins, bones crack and snap painlessly as they reshape. You can feel your waist drawing in and your shoulder broadening slightly, leaving you with a voluptuous figure that many women would kill to have. Your spine curves in a way that leaves your chest thrust out and displayed more prominently. Your legs gain digitigrade form and thick pads form on your feet as they are altered into paws. Your palms burn a bit as thinner pads form there when your hands begin reshaping, leaving you with slender fingers tipped with nails that look slightly more claw-like than a human's";
-	now skin change entry is "fur grows in a wave radiating out from the center of your abdomen. The pelt is dense enough to obscure any hint of your flesh on a good 99% of your body, seemingly leaving only your anus and lips bare. "; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now skin change entry is "fur grows in a wave radiating out from the center of your abdomen. The pelt is dense enough to obscure any hint of your flesh on a good 99% of your body, seemingly leaving only your anus and lips bare"; [ skin change text. format as "Your skin feels funny as (your text)." ]
 	now ass change entry is "it begins ballooning out as if being pumped full of air. A quick brush across it as it continues expanding leaves you gasping at how sensitive it feels. Baby got back, the only problem is it's YOUR back"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "its flesh is reshaped, a slight itching feeling permeates your balls as well as your entire groin is altered, pulling your prick up close against your stomach in a protective sheath as it is reshaped into something between a canine and a human one. The flesh is a bright red with a slight taper, but you still have a nice mushroom head. A small swelling at the base that pushes your new sheath down reveals that you have a knot as well"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 18;
@@ -351,7 +351,7 @@ Section 4 - Endings
 when play ends:
 	if bodyname of player is "Shemale Smooth Collie":
 		if humanity of player < 10:
-			say "     As your collie instincts take over, you find yourself with increasingly strong urges to mate and make more strong, beautiful collie pups. Leaving all else behind, you strike out into the city to satisfy your new instincts. Your search comes to an end when you encounter a large and powerfully built shemale collie, drawn towards each others['] scent";
+			say "     As your collie instincts take over, you find yourself with increasingly strong urges to mate and make more strong, beautiful collie pups. Leaving all else behind, you strike out into the city to satisfy your new instincts. Your search comes to an end when you encounter a large and powerfully built shemale collie, drawn towards each other's scent";
 			if player is female:
 				say ". She seems like an ideal mate to you and you submit yourself to her, much to her delight. You find yourself repeatedly bred by her, your womb growing full with her many pups. She is particularly pleased, loving you for giving her an ever-growing litter of puppies. And in time, those pups grow up and spread out into the city and beyond in search of mates of their own.";
 				if player is male and beauceronmet is true:
@@ -361,7 +361,7 @@ when play ends:
 				if player is male and beauceronmet is true:
 					say "     Shortly after you meet up with her, an equally well-built beauceron comes along, but this canine is a cuntboy. He seems familiar somehow, though your memories from before are getting increasingly fuzzy, so it's hard to know exactly when that was. While it seems to think your mate is his cousin, you cannot be certain, but do smell the scent of heat coming from between his legs. You exchange doggy kisses with this muscled hunk of a cuntboy and fuck him as well, breeding puppies in him to satisfy his growing need to breed as well. You make an odd family with you mate to both of them in opposite capacities, but the numerous puppies bred from your trio of horny hounds make you all so happy.";
 			else if player is male:
-				say ". Knowing your predicament is much like her own, you spend some time together, relieving each others['] needs while searching for true mates.";
+				say ". Knowing your predicament is much like her own, you spend some time together, relieving each other's needs while searching for true mates.";
 				if beauceronmet is true:
 					say "     Shortly after you meet up with her, an equally well-built beauceron comes along, but this canine is a cuntboy. He seems familiar somehow, though your memories from before are getting increasingly fuzzy, so it's hard to know exactly when that was. While it seems to think your mate is his cousin, you cannot be certain, but do smell the scent of heat coming from between his legs. You exchange doggy kisses with this muscled hunk of a cuntboy and fuck him, breeding puppies in him to satisfy his growing need to breed as well.";
 					say "     With the help of your new mate, the three of you are able to surround and capture a lone soldier. With some canine milk and plenty of canine encouragement (sex), you turn him into a sexy herm collie to be the willing mate of the shemale collie. Together, your family of four (soon to be much more) happily finds a warm den to breed numerous litters of big, strong puppies. And in time, those pups grow up and spread out into the city and beyond in search of mates of their own.";

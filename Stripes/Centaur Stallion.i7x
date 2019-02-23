@@ -26,13 +26,13 @@ to say losetocentaurstallion:
 			if HP of player > 0:
 				say "     As you throw up your hands to submit";
 			else:
-				say "     As you lower your defences";
+				say "     As you lower your defenses";
 			say ", the male centaur gets a more twisted look on his face as he paces around you. Finally, he pushes you down to your knees and moves to press his cock to your face. Believing it to be a mere blowjob, you are surprised when he thrusts forwards, his tip sliding over your face and expanding to take your shoulders in. He moves you to a nearby rock, and he happily moans as his flesh tugs on you, pulling your face deeper into the musky tube half your length and bulging with your body as it pushes over your form.";
 			say "     Soon, the centaur has you in up to your waist, and he decides to torture you a bit, the male going for a canter and a slow gallop. Your legs smack against the underside of that gut over and over as he runs, each upwards jerk of his cock pulling more and more of you in. Eventually, all that is left is your feet, and even they disappear from view, the bulge you make going down into a tight chamber filled with musky fluid, straining and stretching with your form. Aroused beyond belief now, the stallion gallops, looking for a mate. The swaying isn't as rocky in here, and you can feel the warm cum starting to help you nod off...";
 			WaitLineBreak;
 			say "     You're abruptly awoken as gravity shifts, and you can hear the sound of a female moaning. Putting two and two together, you realize that the stallion is fucking a mare, and likely plans to get you out of him that way! You push about, trying to get him to stop, but all that does is make him more aroused. Time goes on, the noise of sex muffled, but the ball you're in shakes with each thrust. Thankfully, you don't have to endure that for long as it feels like the tube above your head sucks on you and pulls up into the main part of his cock. Inch by inch, you slide deeper into the mare before you are shot out into her womb, coated in his spunk and desperate to try and avoid a possible scenario where you become the mare's child due to this. The centaur keeps his cock in though, and try as you might, you can feel something prick your belly button, and sleep overwhelms you...";
 			if ublevel < 3:
-				say "     You awaken sometime later to feel contractions around your body before you spill out onto the dry grounds of the Plains, the mare you had become child to giving birth to you. The nanites in your head scream as you fight the urge to give into the infection, and with shaky newborn legs, you gallop away.";
+				say "     You awaken sometime later to feel contractions around your body before you spill out onto the dry grounds of the Plains, the mare you had become child to giving birth to you. The nanites in your head scream as you fight the urge to give in to the infection, and with shaky newborn legs, you gallop away.";
 			else:	[Goes into womb loop scene in Centaur Mare file]
 				say "[CentaurMareWomb]";
 		else if player is female:
@@ -214,13 +214,14 @@ Section 5 - Endings
 when play ends:
 	if bodyname of player is "Centaur Stallion" or bodyname of player is "Centaur Mare":
 		if humanity of player < 10:
-			say "     As your infection spreads within you, you find yourself drawn back to the open plains at the edge of the city. There, you seek out the other centaurs and join their herd. ";
+			say "     As your infection spreads within you, you find yourself drawn back to the open plains at the edge of the city. There, you seek out the other centaurs and join their herd";
 			if player is herm:
-				say "     As a herm centaur, you are popular among the other members of the herd and are often mounted by the stallions and sought out by the mares in heat. You happily have sex with them all, whinnying lustfully as you mate with them.";
+				say ". As a herm centaur, you are popular among the other members of the herd and are often mounted by the stallions and sought out by the mares in heat. You happily have sex with them all, whinnying lustfully as you mate with them";
 			else if player is male:
-				say "     As a male centaur, you help to guard the territory. When they come into season, you are sought out by several of the mares in heat looking for you to give them a foal.";
+				say ". As a male centaur, you help to guard the territory. When they come into season, you are sought out by several of the mares in heat looking for you to give them a foal";
 			else:
-				say "     As a female centaur, you help gather food and tend to the young foals. When the time comes and you go into heat, you are mounted often by the stallions, ensuring you bear the herd a foal.";
+				say ". As a female centaur, you help gather food and tend to the young foals. When the time comes and you go into heat, you are mounted often by the stallions, ensuring you bear the herd a foal";
+			say ".";
 			if centaurmate is 1 or centaurmate is 2:
 				say "     Your people are locked in a constant conflict with the tainted, mutant centaurs. You are careful not to tell them that you accidentally let the first of these escape the corrupted tree, but you do inform them of the apple tree and its sinister fruits. Your people eradicate these trees whenever they are found with fiery arrows. Without the apples, the mutant centaurs are more easily contained if never fully purged from your lands. The military, having erected a barricade around the plains, strive to contain the centaur menace in their own way. But the pure centaurs don't see it that way and instead are happy that it keeps the soldiers off their lands.";
 		else:

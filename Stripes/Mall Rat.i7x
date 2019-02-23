@@ -104,15 +104,15 @@ when play ends:
 				if Smith Haven Mall Lot South is known:
 					say "     Your life of roaming and wandering slowly becomes less and less attractive to you. With thoughts of the sweet mall growing more frequent, you make your way back there to join the rats in their happy life of coolness and relaxing. You have a happy life there with all those other cool dudes and pretty girls relaxing around the shopping center. You do make the occasional excursion out into the city. Usually, you only do these when one of the rats really needs something done out in the city";
 					if HP of Ronda > 0:
-						say ". The slut rats lurking below are occasionally a problem, but with an awesome [if player is herm]mall rat[else if player is female]gal[else]dude[end if] like you around to help, their uncoolness is kept from harshing everyone's good vibes.";
-					else:
-						say ".";
+						say ". The slut rats lurking below are occasionally a problem, but with an awesome [if player is herm]mall rat[else if player is female]gal[else]dude[end if] like you around to help, their uncoolness is kept from harshing everyone's good vibes";
+					say ".";
 				else:
 					say "     Your life of roaming and wandering slowly becomes less and less attractive to you. With thoughts of finding someplace to settle down that'd be cooler than a dingy old bunker, your wanderings bring you to a large mall. Entering the shopping plaza, you are pleased to find other rats already living there. They turn out to be a great bunch of cool dudes and pretty girls for you to hang around with and you soon settle in there to stay, having found a new home for an awesome mall rat like you.";
 			else:
-				say "     Your life of roaming and wandering slowly becomes less and less attractive to you. With thoughts of the sweet mall and your even sweeter girlfriend waiting for you there, you make your way back there to join the rats in their happy life of coolness and relaxing. You and Lucy get along wonderfully, making what everyone agrees is a cute couple. But that doesn't stop either of you from continuing your horny habits of sleeping around, Lucy with many of the other mall rats and you with many of the mall's visitors and those you meet on your new much-rarer excursions out into the city. Usually, you only do these when one of the rats really needs something done out in the city. ";
+				say "     Your life of roaming and wandering slowly becomes less and less attractive to you. With thoughts of the sweet mall and your even sweeter girlfriend waiting for you there, you make your way back there to join the rats in their happy life of coolness and relaxing. You and Lucy get along wonderfully, making what everyone agrees is a cute couple. But that doesn't stop either of you from continuing your horny habits of sleeping around, Lucy with many of the other mall rats and you with many of the mall's visitors and those you meet on your new much-rarer excursions out into the city. Usually, you only do these when one of the rats really needs something done out in the city";
 				if HP of Ronda > 0:
-					say "     The slut rats lurking below are occasionally a problem, but with an awesome [if player is herm]rat[else if player is female]gal[else]dude[end if] like you around to help, their uncoolness is kept from harshing everyone's good vibes.";
+					say ". The slut rats lurking below are occasionally a problem, but with an awesome [if player is herm]rat[else if player is female]gal[else]dude[end if] like you around to help, their uncoolness is kept from harshing everyone's good vibes";
+				say ".";
 		else:
 			if HP of Lucy <= 1:
 				say "     You thankfully survive your time in the city until you're picked up and transported safely to the military processing camp. While there is a slight interest in examining you as one of the few with the mall rat infection able to resist the pull to remain at the mall, the mall rats are known to be a peaceful and safe strain so you draw little scrutiny for it. You are eventually processed and released. You travel away from the city and find a new city to call your home.";

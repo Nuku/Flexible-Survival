@@ -291,7 +291,7 @@ Instead of conversing the Sam:
 	else if HP of Sam is 35:
 		say "     Looking over at Sam (now as Samantha), you can't help but wonder if you made the right choice. She's becomes such a lustful, sex-loving creature and is happy to get fucked and bred by pretty much any creature she can out there. She's probably start making more vixentaurs out there already. Given her large size and eagerness for sex, they could end up becoming a menace out there.";
 		say "     Your thoughts have you recall that you hung onto that other vial. You pull it out from a pocket of your pack and look it over. The label is marked as [']#143 - Dragon - Male[']. Perhaps that might curb her slutty nature by making her less willing to submit to everything she sees before she goes over the edge and becomes feral. That'd be especially bad if she did it while in the library.";
-		say "     [bold type] Shall you try slipping it to her or leave well enough alone?[roman type][line break]";
+		say "     [bold type]Shall you try slipping it to her or leave well enough alone?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Slip it to her.";
 		say "     ([link]N[as]n[end link]) - Leave well enough alone.";
@@ -378,7 +378,7 @@ to assaultonminilab:
 		say "     'Rick! No, don't do this!' he cries as the powerful creature and ex-partner grabs him, her lustful intent clearly visible hanging between the herm's legs. She pushes him down onto the table, tearing at his clothes with her claws. What shall you do?";
 	else:
 		say "     As you're approaching Sam's hidden research lab, you notice some noise coming from the building. Knowing something is amiss since Sam avoids any excess noise to prevent detection, you run around back to find the basement hatch broken open. You cautiously head down the stairs, ready for a fight. There you find Sam being manhandled by one of those feline tigertaurs from the Zoo. The herm's got him pressed down onto the table and is tearing at his clothes with her claws. Her lustful intent is clearly visible hanging between her legs. 'Rick! No, don't do this!' Sam cries as his ex-partner prepares to mount him. What shall you do?";
-	say "[link]Help Sam (1)[as]1[end link], [link]watch the show (2)[as]2[end link], [link]steal supplies (3)[as]3[end link] or just [link]leave (4)[as]4[end link]? ";
+	say "     [link]Help Sam (1)[as]1[end link], [link]watch the show (2)[as]2[end link], [link]steal supplies (3)[as]3[end link] or just [link]leave (4)[as]4[end link]?";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
 		say "Choose 1-4> ";
@@ -444,13 +444,13 @@ to assaultonminilab:
 		WaitLineBreak;
 		project the figure of SamBadEnd_icon;
 		if player is not neuter:
-			say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if player is male]. You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [short ball size] balls[end if][if cunts of player is 1]. With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[else if cunts of player > 1]. With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if]. As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hyper-sexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. ";
+			say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if player is male]. You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [short ball size] balls[end if][if cunts of player is 1]. With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[else if cunts of player > 1]. With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if]. As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hyper-sexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath.";
 		else:
-			say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hyper-sexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. ";
+			say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hyper-sexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath.";
 		let surrender be 0;
 		if humanity of player < 50 or libido of player > 50 or player is kinky or player is submissive:
-			say "     Watching as the beautiful tauric feline that had once been Sam rumbles a pleased growl from out of her throat while looking adoringly at her new mistress. ";
-			say "     [bold type]You wonder if maybe you should give into the tigertaur and have her claim you as a pet as well?[roman type][line break]";
+			say "     You watch the beautiful tauric feline that had once been Sam rumble a pleased growl from out of her throat while looking adoringly at her new mistress.";
+			say "     [bold type]Should give in to the tigertaur and have her claim you as a pet as well?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Surrender.";
 			say "     ([link]N[as]n[end link]) - Retreat.";

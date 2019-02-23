@@ -87,7 +87,7 @@ Instead of resolving a Wandering the Campus:
 		if T is 7, now T is 1;
 	now showlocale is false;
 	if T is 1:			[replaced with Fruit Bat]
-		say "     Your wandering across the campus is interrupted by the appearance of a speedo'd bat quickly approaching. Perhaps coming from one of the college's olympic or diving pools, he looks like he's recently gotten out of the water and is now looking for some fun to round out his exercise regimen.";
+		say "     Your wandering across the campus is interrupted by the appearance of a speedo'd bat quickly approaching. Perhaps coming from one of the college's Olympic or diving pools, he looks like he's recently gotten out of the water and is now looking for some fun to round out his exercise regimen.";
 		challenge "Fruit Bat";
 		add 1 to campuswander;
 	if T is 1:
@@ -105,7 +105,7 @@ Instead of resolving a Wandering the Campus:
 		challenge "Red Kangaroo";
 		add 3 to campuswander;
 	if T is 4:
-		say "     A large wolf creature leaps out from a broken window on one of the buildings. Shi growls toothily at you as shi rises up from all fours to stand upright, showing off hir herm body to you. Shi looks you over with a hunger that is wholely carnal in nature.";
+		say "     A large wolf creature leaps out from a broken window on one of the buildings. Shi growls toothily at you as shi rises up from all fours to stand upright, showing off hir herm body to you. Shi looks you over with a hunger that is wholly carnal in nature.";
 		challenge "Painted Wolf Herm";
 		add 4 to campuswander;
 	if T is 5:

@@ -38,7 +38,7 @@ the scent of South Sewer Tunnel is "This area smells strongly of waste and drain
 
 the scent of North Sewer Tunnel is "This area smells strongly of waste and drainage water. It's hard to tell, but there may be trace odors from the infected down here as well.".
 
-Red Grate is a door. Entrance to the Red Light District is above Red Grate. "[if the player is in North Sewer Tunnel]This grate is just a hole in the ceiling. From the red light filtering down, it seems to lead to the red light district.[else]There is an open grate underneath one of the red lamps near here. The cover is just lifted out of the way carefully, as if whoever moved it intended to replace it as soon as they returned.[end if]".
+Red Grate is a door. Entrance to the Red Light District is above Red Grate. "[if the player is in North Sewer Tunnel]This grate is just a hole in the ceiling. From the red light filtering down, it seems to lead to the red light district[else]There is an open grate underneath one of the red lamps near here. The cover is just lifted out of the way carefully, as if whoever moved it intended to replace it as soon as they returned[end if].".
 Red Grate is open.
 
 Table of GameRoomIDs (continued)

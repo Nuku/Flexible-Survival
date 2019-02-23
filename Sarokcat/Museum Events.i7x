@@ -28,7 +28,7 @@ Moving painting is a situation.
 The sarea of Moving painting is "Museum".
 
 Instead of Resolving a Moving painting:
-	say "     Wandering the museum hallways, you stop for a minute as a painting seems to catch your eye; the characters within the painting being chased by some sort of wild hunt. After admiring the painting for a minute, you turn to leave, only to catch a glimpse of movement out of the corner of your eye. Looking around, you don't see anything that could have made the movement; as your eyes fall on the painting, however, you swear the huntsmen are closer to catching the runners; and was the master huntsman staring right at you with his glowing red eyes before? Deciding it might be better not to think about that, you continue quickly on your way, feeling like you're being hunted.";
+	say "     Wandering the museum hallways, you stop for a minute as a painting seems to catch your eye; the characters within the painting are being chased by some sort of wild hunt. After admiring the painting for a minute, you turn to leave, only to catch a glimpse of movement out of the corner of your eye. Looking around, you don't see anything that could have made the movement. As your eyes fall on the painting, however, you swear the huntsmen are closer to catching the runners, and was the master huntsman staring right at you with his glowing red eyes before? Deciding it might be better not to think about that, you continue quickly on your way, feeling like you're being hunted.";
 	now Moving painting is resolved;
 
 
@@ -98,7 +98,7 @@ Giant battleaxe is a situation.
 The sarea of Giant battleaxe is "Museum".
 
 Instead of Resolving a Giant battleaxe:
-	say "     Wandering around the roman section of the museum, you come across an area where someone or something has leaned a large battleaxe up against one of the displays. You can't help but gawk at the size of the thing; its haft a good four feet long, and the blade almost another two feet long and two feet wide on each side. You try lifting the large weapon for a second, but can't even manage to budge the massive thing. Leaving it where it lies, you hurry on, hoping not to meet whatever kind of creature uses a weapon like that.";
+	say "     Wandering around the roman section of the museum, you come across an area where someone or something has leaned a large battleaxe up against one of the displays. You can't help but gawk at the size of the thing; its shaft is a good four feet long, the blade almost another two feet long and two feet wide on each side. You try lifting the large weapon for a second, but can't even manage to budge the massive thing. Leaving it where it lies, you hurry on, hoping not to meet whatever kind of creature uses a weapon like that.";
 	now Giant battleaxe is resolved;
 
 
@@ -124,7 +124,7 @@ Instead of Resolving a Missing lamp:
 			now Missing lamp is resolved;
 			increase carried of jade scarab by 1;
 		else:
-			say "     Seeing as there is nothing you can salvage, you move past the broken display case and continue on your way. ";
+			say "     Seeing as there is nothing you can salvage, you move past the broken display case and continue on your way.";
 			now Resolution of Missing Lamp is 2; [lamp not found]
 			now LampVariable is 1;
 	else:

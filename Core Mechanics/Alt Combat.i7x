@@ -1173,7 +1173,7 @@ to win:
 				now ubprompted is true; [player will be prompted for ub]
 	if voreprompted is true and ubprompted is true:				[both vore and ub are possible]
 		if vorechoice is 0 and ubchoice is 0:					[player has full choice]
-			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself, tempted to fill that emptiness you're feeling inside with the [name entry]. Shall you give into your desire to [link]consume (1)[as]1[end link] them, [link]unbirth (2)[as]2[end link] them or [link]suppress (0)[as]0[end link] the urge?";
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself, tempted to fill that emptiness you're feeling inside with the [name entry]. Shall you give in to your desire to [link]consume (1)[as]1[end link] them, [link]unbirth (2)[as]2[end link] them or [link]suppress (0)[as]0[end link] the urge?";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 2:
 				say "Choice? (0-2)>[run paragraph on]";
@@ -1189,7 +1189,7 @@ to win:
 			else:
 				now ok is 1;
 		else if vorechoice is 1 and ubchoice is 1:				[player has choice ub/vore]
-			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself. You don't hold back the urge to be filled, but are torn between which emptiness you're feeling to fill with the [name entry]. Shall you give into your desire to [link]consume (1)[as]1[end link] them or to [link]unbirth (2)[as]2[end link] them?";
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly and in your womb, your twin hungers welling up inside you. Looking down at your fallen foe, you lick your lips and finger yourself. You don't hold back the urge to be filled, but are torn between which emptiness you're feeling to fill with the [name entry]. Shall you give in to your desire to [link]consume (1)[as]1[end link] them or to [link]unbirth (2)[as]2[end link] them?";
 			now calcnumber is -1;
 			while calcnumber < 1 or calcnumber > 2:
 				say "Choice? (1 or 2)>[run paragraph on]";
@@ -1214,7 +1214,7 @@ to win:
 			now fightoutcome is 14; [player ub'ed foe]
 	else if voreprompted is true:
 		if vorechoice is 0:
-			say "     As your battle is coming to a close, you feel a primal rumbling in your belly, your hunger welling up inside you. Looking down at your fallen foe, you lick your lips, tempted to sate your body's hunger with the [name entry]. Shall you give into this desire to [link]consume[as]y[end link] them?";
+			say "     As your battle is coming to a close, you feel a primal rumbling in your belly, your hunger welling up inside you. Looking down at your fallen foe, you lick your lips, tempted to sate your body's hunger with the [name entry]. Shall you give in to this desire to [link]consume[as]y[end link] them?";
 			if player consents:
 				now ok is 0;
 				vorebyplayer; [See Alt Vore file]
@@ -1228,7 +1228,7 @@ to win:
 			now fightoutcome is 13; [player vored foe]
 	else if ubprompted is true:
 		if ubchoice is 0:
-			say "     As your battle is coming to a close, you become intensely aware of the emptiness of your womb. Looking down at your foe, you finger yourself, longing to use the [name entry] to fill it right away. Shall you give into this desire and [link]unbirth[as]y[end link] them?";
+			say "     As your battle is coming to a close, you become intensely aware of the emptiness of your womb. Looking down at your foe, you finger yourself, longing to use the [name entry] to fill it right away. Shall you give in to this desire and [link]unbirth[as]y[end link] them?";
 			if player consents:
 				now ok is 0;
 				ubbyplayer; [See Alt Vore file]
