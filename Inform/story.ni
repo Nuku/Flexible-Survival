@@ -4896,6 +4896,7 @@ Include Donkeyman by Sarokcat n Verath.
 Include Donkeywoman by Sarokcat n Verath.
 Include Dracovixentaur by Stripes.
 Include Dragontaur by Stripes.
+Include Dragon Pool Toy by Hina Vache.
 Include Drone Wasp by Nuku Valente.
 Include Dryad by Hellerhound.
 Include Easter Bunny by Stripes.
