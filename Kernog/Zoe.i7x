@@ -120,7 +120,7 @@ instead of fucking Zoe:
 				say "[ZoeFirstTime]";
 			else:
 				say "[ZoeSecondTime]";
-			[PCSexAftermath Zoe receives "PussyFuck" from player;][what is this?]
+			NPCSexAftermath Zoe receives "PussyFuck" from player;
 		else:
 			if lastfuck of Zoe < 6:
 				say "     'What? Again?' Zoe asks. She seems amused by your request, but denies it with a small shake of her white-furred head. 'Sorry, [if player is female]miss Pussycat[else]mister Stallion[end if], but I'm still tired from before. Can we wait until tomorrow?'";
@@ -276,22 +276,22 @@ to say ZoeGoodFuckMenu:
 				now sextablerun is 1;
 				if nam is "Vanilla":
 					say "[ZoeSexZoeChoice]";
-					PCSexAftermath Zoe receives "PussyFuck" from player;
+					NPCSexAftermath Zoe receives "PussyFuck" from player;
 				if nam is "Anal":
 					say "[ZoeSexAnal]";
-					PCSexAftermath Zoe receives "AssFuck" from player;
+					NPCSexAftermath Zoe receives "AssFuck" from player;
 				if nam is "Pegging":
 					say "[ZoeSexPeg]";
 				if nam is "Roleplay (sub)":
 					say "[ZoeSexRPSub]";
-					PCSexAftermath Zoe receives "PussyFuck" from player;
+					NPCSexAftermath Zoe receives "PussyFuck" from player;
 				if nam is "Roleplay (dom)":
 					say "[ZoeSexRPDom]";
-					PCSexAftermath Zoe receives "PussyFuck" from player;
+					NPCSexAftermath Zoe receives "PussyFuck" from player;
 				if nam is "Multi-cock fun":
 					say "[ZoeSexDP]";
-					PCSexAftermath Zoe receives "PussyFuck" from player;
-					PCSexAftermath Zoe receives "AssFuck" from player;
+					NPCSexAftermath Zoe receives "PussyFuck" from player;
+					NPCSexAftermath Zoe receives "AssFuck" from player;
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -337,10 +337,10 @@ to say ZoeSexPeg:
 	WaitLineBreak;
 	if player is not female or anallevel is 3:
 		say "     [if anallevel is 3 and player is female]As you turn around and present your bare butt to the bunny, you ask her to use your ass. 'In the ass? Well, sure, if that's your kink.' [else]You turn around and present your bare butt to the bunny 'Only one way to go, but here,' she says as she pats your [skin of player] butt. [end if]Zoe starts pushing in. You let out a long moan as the rubbery strap-on slowly advances into your ass. 'You okay, [if player is defaultnamed]sugar[else][name of player][end if]?' You nod and take her wrist, encouraging her to go further. Once she bottoms out, the bunny girl seems a little lost. She begins giving little pumps, only to be surprised by the resistance she encounters, which reverberates on her own end. 'Oh, damn.' She picks up in rhythm and intensity little by little while you [if player is male]jerk off[else if player is female]finger yourself[end if]. You eventually cum and splatter the carpet with your sexual fluids. Looking back and seeing Zoe's elated face, you can tell that she reached her own climax not long after you.";
-		PCSexAftermath player receives "DildoAssFuck" from zoe;
+		NPCSexAftermath player receives "DildoAssFuck" from zoe;
 	else:
 		say "     Zoe starts pushing in. You let out a long moan as the rubbery strap-on slowly advances into your [cunt size desc of player] pussy. 'You okay, [if player is defaultnamed]sugar[else][name of player][end if]?' You nod and take her wrist, encouraging her to go further. Once she bottoms out, the bunny girl seems a little lost. She begins giving little pumps, only to be surprised by the resistance she encounters, which reverberates on her own end. 'Oh, damn.' She picks up in rhythm and intensity little by little while you [if player is male]jerk off[else if player is female]play with your clit[end if]. You eventually cum and splatter the carpet with your sexual fluids. Looking back and seeing Zoe's elated face, you can tell that she reached her own climax not long after you.";
-		PCSexAftermath player receives "DildoPussyFuck" from zoe;
+		NPCSexAftermath player receives "DildoPussyFuck" from zoe;
 	say "     Zoe grins while she pulls out of you. 'This was fun. We should do this more often.' You help Zoe clean her toy and the mess you made, then head back with her Zoe to the library.";
 
 to say ZoeSexRPSub:
@@ -430,17 +430,17 @@ to say ZoeMolest:
 				now sextablerun is 1;
 				if nam is "Mouth":
 					say "[ZoeMolestMouth]";
-					PCSexAftermath Zoe receives "OralFuck" from player;
+					NPCSexAftermath Zoe receives "OralFuck" from player;
 				if nam is "Pussy":
 					say "[ZoeMolestVag]";
-					PCSexAftermath Zoe receives "PussyFuck" from player;
+					NPCSexAftermath Zoe receives "PussyFuck" from player;
 				if nam is "Ass":
 					say "[ZoeMolestAnal]";
-					PCSexAftermath Zoe receives "AssFuck" from player;
+					NPCSexAftermath Zoe receives "AssFuck" from player;
 				if nam is "Double penetration":
 					say "[ZoeMolestDP]";
-					PCSexAftermath Zoe receives "PussyFuck" from player;
-					PCSexAftermath Zoe receives "AssFuck" from player;
+					NPCSexAftermath Zoe receives "PussyFuck" from player;
+					NPCSexAftermath Zoe receives "AssFuck" from player;
 				wait for any key;
 				now Suspicious Van is closed;
 				follow the turnpass rule;
