@@ -44,7 +44,8 @@ Team Captain Roman	"Team Captain Roman"
 
 Team Captain Roman is a man. Understand "Roman" as Team Captain Roman.
 
-The description of Team Captain Roman is "[RomanDesc]";
+The description of Team Captain Roman is "[RomanDesc]".
+The MainInfection of Roman is "Football Gorilla".
 
 to say RomanDesc:
 	if debugactive is 1:
@@ -362,12 +363,16 @@ to say RomanFuck1:
 				now sextablerun is 1;
 				if nam is "Vaginal fuck":
 					say "[RomanFuck1Vag]";
+					PCSexAftermath Roman receives "PussyFuck" from player;
 				if nam is "Face-fuck":
 					say "[RomanFuck1Blow]";
+					PCSexAftermath Roman receives "OralCock" from player;
 				if nam is "Strap-on":
 					say "[RomanFuck1Strap]";
+					PCSexAftermath Roman receives "PussyDildoFuck" from player;
 				if nam is "Cunnilingus":
 					say "[RomanFuck1Cuni]";
+					PCSexAftermath Roman receives "OralPussy" from player;
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -475,12 +480,19 @@ to say RomanFuck2:
 				now sextablerun is 1;
 				if nam is "Vaginal fuck":
 					say "[RomanFuck2Vag]";
+					PCSexAftermath Roman receives "PussyFuck" from player;
 				if nam is "69":
 					say "[RomanFuck269]";
+					PCSexAftermath Player receives "OralCock" from Roman;
+					PCSexAftermath Roman receives "OralCock" from player;
 				if nam is "Tribadism":
 					say "[RomanFuck2Trib]";
+					PCSexAftermath Player receives "PussyFuck" from Roman;
+					PCSexAftermath Roman receives "PussyFuck" from player;
 				if nam is "Cunt-boy special":
 					say "[RomanFuck2Cunt]";
+					PCSexAftermath Player receives "PussyFuck" from Roman;
+					PCSexAftermath Roman receives "PussyFuck" from player;
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
