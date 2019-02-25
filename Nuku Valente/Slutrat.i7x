@@ -250,8 +250,8 @@ To Say slutratdenscene:
 Section 2 - Slut Rat Welcome
 
 To Say ratslutwelcome:
-	if breasts of player > 0 and breast size of player > 0:
-		say "     Her slender fingers brush up across your [skin of player] breasts, squeezing lightly even as the sharp claws at the end slowly trail across delicate flesh. 'We're not always sharing,' she whispers as she gazes into your eyes with her own vibrantly violet ones. 'Such a good little bitch,' she croons, trailing claws down over your nipples as she looks downwards.";
+	if breast size of player > 0:
+		say "     Her slender fingers brush up across your [skin of player] breasts, squeezing lightly even as the sharp claws at the end slowly trail across delicate flesh. 'We're not always sharing,' she whispers as she gazes into your eyes with her own vibrantly violet ones. 'Such a good little bitch,' she croons[if breasts of player > 0], trailing claws down over your nipples[end if] as she looks downwards.";
 	[Male scene, 50% chance if herm]
 	if (player is puremale) or ( player is herm and a random chance of 1 in 2 succeeds):
 		say "     She crouches down and reaches to cup your groin, fingers seeking out your [cock size desc of player] [cock of player] tool and give it a few soft pulls, stroking it ever so slowly to erection as she looks up at you, 'And just how big is our little man?' she coos, long tongue flicking out across it in a flicker";
@@ -309,10 +309,10 @@ To Say ratslutwelcome:
 			say "     She smiles as she manages to stuff her whole paw into you and starts pumping it in and out, making you moan and quiver as she fists you. 'Mmm... nice and roomy,' she rumbles. 'Just like a nice bitch should be,' she adds while wiggling her fingertips to tease inside you before slipping her paw free. She licks her dripping paw as her other one gives your ass a swat. 'Good little bitch,' she says with a chuckle. 'Go have a fun, slut.'";
 			infect "Slut Rat";
 	else:
-		if breasts of player > 0 and breast size of player > 0:
-			say "     The rat arrives at the junction of your thighs and seems surprised at what she finds, or does not find. Her teeth are felt, nipping twice at your [skin of player] skin before she looks back up, 'How do you live like that?' she says in an almost accusing tone. She rises to her feet and kisses your cheek, 'Poor thing. We will just have to fix that.'";
+		if breast size of player > 0:
+			say "     The rat arrives at the junction of your thighs and seems surprised at what she finds, or does not find. Her teeth are felt, nipping twice at your [skin of player] skin before she looks back up, 'How do you live like that?' she says in an almost accusing tone. She rises to her feet and kisses your cheek. 'Poor thing. We will just have to fix that.'";
 		else:
-			say "     She brushes up alongside you, nose twitching lightly as she takes your scent, 'Mmm, something is wrong,' she murmurs, reaching for your flat chest, then grasping your featureless groin openly, 'You have nothing.' She moves around behind you and presses against your back, 'That won't work at all...'";
+			say "     She brushes up alongside you, nose twitching lightly as she takes your scent. 'Mmm, something is wrong,' she murmurs, reaching for your flat chest, then grasping your featureless groin openly. 'You have nothing.' She moves around behind you and presses against your back. 'That won't work at all...'";
 		if "Female Preferred" is not listed in feats of player:
 			say "     She draws out a bottle of strange purple fluid and holds it up to you, 'Drink, as quickly as you can.'";
 			ratslutchug;

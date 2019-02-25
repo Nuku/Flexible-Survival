@@ -244,13 +244,13 @@ to say sidney_otteress_cap:
 				now level of Sidney is 22;
 				move Sidney to Breakroom;
 				move player to Breakroom;
-				now Resolution of Meeting Sidney is 2; [became a otter, stayed]
+				now Resolution of Meeting Sidney is 2; [became an otter, stayed]
 				now Meeting Sidney is resolved;
 			else:
 				say "     Suggesting that Sidney go with her, she smiles happily and gives her a big hug. 'Oh, that's right! You're family now. Come, you need to meet everyone else. They'll [bold type]love[roman type] you,' she gushes as they share more hugs and kisses, some of which get pretty heated. Bidding you a fond farewell, the two of them climb onto a small scooter the otteress had hidden and zip off towards the shore.";
 				now HP of Sidney is 99;
 				now level of Sidney is 22;
-				now Resolution of Meeting Sidney is 3; [became a otter, left]
+				now Resolution of Meeting Sidney is 3; [became an otter, left]
 				now Meeting Sidney is resolved;
 		else:
 			say "As you draw nearer, you start to explain what you want, the otteress listening. 'Get away you crazy weirdos!' she exclaims suddenly, turning and running off. You try to pursue her, but it's too late. She's got a small scooter stashed nearby that she uses to make her escape. You'll not get another chance to approach her now.";
@@ -277,7 +277,7 @@ to say sidney_otteress_cap:
 			now level of Sidney is 23;
 			move Sidney to Breakroom;
 			move player to Breakroom;
-			now Resolution of Meeting Sidney is 2; [became a otter, stayed]
+			now Resolution of Meeting Sidney is 2; [became an otter, stayed]
 			now Meeting Sidney is resolved;
 		else:
 			say "Continuing to talk reassuringly, you draw closer to your target. 'Grab her!' you yell to Sidney and the two of you tackle her. You try your best to get a grip, but the female otter is super-flexible, bending and squirming like a fur-covered slinky. Slipping free of your grip, the two of you stumble over each other as she rushes away. You try to pursue her, but it's too late. She's got a small scooter stashed nearby that she uses to make her escape. You'll not get another chance to approach her now.";

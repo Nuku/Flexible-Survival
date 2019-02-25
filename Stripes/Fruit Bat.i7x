@@ -154,7 +154,7 @@ When Play begins:
 	now enemy title entry is "";
 	now enemy name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
-	now attack entry is "The [one of]bat[or]fruit bat[or]blue bat[as decreasingly likely outcomes] [one of]buffets you with his wings[or]claws at you with his taloned fingers[or]claws at you with his taloned feet[or]wraps his wings round you tightly and gropes your [if player is breasted and a random chance of 1 in 4 succeeds]tits[else]groin[end if][at random].";
+	now attack entry is "The [one of]bat[or]fruit bat[or]blue bat[as decreasingly likely outcomes] [one of]buffets you with his wings[or]claws at you with his taloned fingers[or]claws at you with his taloned feet[or]wraps his wings round you tightly and gropes your [if breast size of player > 0 and a random chance of 1 in 4 succeeds]tits[else]groin[end if][at random].";
 	now defeated entry is "[beatthefruitbat]"; [ Text when monster loses. ]
 	now victory entry is "[losetofruitbat]"; [ Text when monster wins. ]
 	now desc entry is "[fruitbatdesc]"; [ Description of the creature when you encounter it. ]

@@ -1042,7 +1042,7 @@ to say icarussex6b_dom:		[Repeatable rough scene B]
 to say icarussex6c_dom_ap:		[Repeatable rough scene C - avian pred only]
 	setmonster "Blue Chaffinch";
 	choose row monster from the Table of Random Critters;
-	say "     Having attracted your bird master with your wanton display, you are grabbed and pushed towards the basement door. It must be an unusual sight to see an powerful avian predator such as yourself cowed by the little passerine, but you know your place and go through the door. Once the door is shut, he shoves you even as you're descending the dark stairs. Again, you stumble and half-fall down the stairs before hitting the wall ahead.";
+	say "     Having attracted your bird master with your wanton display, you are grabbed and pushed towards the basement door. It must be an unusual sight to see a powerful avian predator such as yourself cowed by the little passerine, but you know your place and go through the door. Once the door is shut, he shoves you even as you're descending the dark stairs. Again, you stumble and half-fall down the stairs before hitting the wall ahead.";
 	say "     Before you can recover your footing, Icarus grabs you by the back of the neck and yanks you towards the middle of the floor. 'How pathetic. What kind of a bird are you if you can't even fly?' he says, grabbing one of your wings and twisting on it. You groan in pain only to have him laugh and shove you back to the ground. He instead grabs your ass and grinds his stiff cock against it.";
 	WaitLineBreak;
 	if player is female:

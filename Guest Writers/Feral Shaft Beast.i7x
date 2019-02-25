@@ -1,7 +1,7 @@
 Feral Shaft Beast by Guest Writers begins here.
 [- Originally Authored By: DragonFlayer -]
 
-"Adds an Feral Shaft Beast to Flexible Survival's Sewer Monsters table"
+"Adds a Feral Shaft Beast to Flexible Survival's Sewer Monsters table"
 
 Section 1 - Monster Responses
 

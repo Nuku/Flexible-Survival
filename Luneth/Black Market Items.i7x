@@ -167,7 +167,7 @@ Part 7 - Cock Holster Upgrade
 
 Table of Game Objects(continued)
 name	desc	weight	object
-"cock holster upgrade"	"A small cylinder that is meant to be placed inside of your vagina. The label says that once inserted, the device will release a expanding gel that, after filling your pussy to capacity, will begin to stretch it even deeper."	0	cock holster upgrade
+"cock holster upgrade"	"A small cylinder that is meant to be placed inside of your vagina. The label says that once inserted, the device will release an expanding gel that, after filling your pussy to capacity, will begin to stretch it even deeper."	0	cock holster upgrade
 
 cock holster upgrade is a grab object. It is temporary. It is a part of the player.
 

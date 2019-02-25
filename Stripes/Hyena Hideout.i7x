@@ -3,7 +3,7 @@ Version 1 of Hyena Hideout by Stripes begins here.
 [Version 2 - Small adjustment to Gina for Matriarch Vore scenes]
 [- Originally Authored By: Sarokcat -]
 
-"Adds an Hyena den to Flexible Survival with a dominance challenge and some smexing."
+"Adds a Hyena den to Flexible Survival with a dominance challenge and some smexing."
 
 Section 1- Hyena Hideout
 

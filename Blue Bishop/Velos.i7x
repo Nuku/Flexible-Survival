@@ -901,7 +901,7 @@ to postmuse (x - a number ):
 		say "     'You can - no doubt - imagine that I find it hard to trust a doctor whose desk is redundant to their chest. I don't know, maybe she has good intent, but this blight has a habit of perverting even the best of intents.'";
 		remove 3 from velospostmusings;
 	else if x is 4:		[Dr. Mouse]
-		say "     'I find it hard to trust anyone who's first question in the face of such a blight as this is [']How might I make use of this?['] I'd exercise caution around that mouse fellow.'";
+		say "     'I find it hard to trust anyone whose first question in the face of such a blight as this is [']How might I make use of this?['] I'd exercise caution around that mouse fellow.'";
 		remove 4 from velospostmusings;
 	else if x is 10:		[Harold]
 		say "     'We should go to that bar more often! Though I hate to admit it, the music feels kinda nice from the inside...' You can see a slight tinge of embarrassment across the serpent's face when he asks that.";

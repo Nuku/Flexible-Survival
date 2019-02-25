@@ -282,7 +282,7 @@ when play begins:
 Instead of Resolving a Feeding time:
 	say "     Traveling through the twisting paths of the zoo, you come across a rather strange sight. Someone has left several cans of food and a bottle of water out in one of the animal feeding areas. Looking around, you can't see any reason for someone to have done so, and the food and water could be pretty useful. Still, it is rather suspicious. Do you try to take it?";
 	if player consents:
-		say "     You can't resist the temptation to snag some fresh supplies and cautiously move forward to take the food and water. Just as you are bending over to stuff them in your backpack, you hear a sound behind you and whirl around to see a Tigertaur charge at you out of the bushes, obviously glad someone has taken the bait and walked into its trap!";
+		say "     You can't resist the temptation to snag some fresh supplies and cautiously move forward to take the food and water. Just as you are bending over to stuff them in your backpack, you hear a sound behind you and whirl around to see a tigertaur charge at you out of the bushes, obviously glad someone has taken the bait and walked into its trap!";
 		decrease HP of player by 15;
 		challenge "Tigertaur";
 		if lost is 0:

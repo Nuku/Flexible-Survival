@@ -91,7 +91,7 @@ name	desc	weight	object
 
 Tiger patch is a grab object. It is part of the player. Understand "patch"  as Tiger patch. Tiger patch is infectious. The strain of Tiger patch is "Rubber tigress".
 
-The usedesc of Tiger patch is "Taking out the small piece of tiger-striped material, you note it could be useful as either a patch or a stylish accessory or even a bandage. Holding it up to your skin for a minute you smile at how natural it seems to look, almost like part of your body. You blink as you try to pull it away only to realize that it has actually become part of you! You tug futily on the soft striped rubber, even as you can feel the infection spreading through your body.";
+The usedesc of Tiger patch is "Taking out the small piece of tiger-striped material, you note it could be useful as either a patch or a stylish accessory or even a bandage. Holding it up to your skin for a minute you smile at how natural it seems to look, almost like part of your body. You blink as you try to pull it away only to realize that it has actually become part of you! You tug futilely on the soft striped rubber, even as you can feel the infection spreading through your body.";
 
 instead of sniffing Tiger patch:
 	say "The stuff smells of rubber and felines.";

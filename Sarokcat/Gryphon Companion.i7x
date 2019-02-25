@@ -90,7 +90,7 @@ to say summongryphoness:
 			if T >= 2:
 				say "     Just moments after Denise comes to stand beside you, a pair of gryphlets land by her side. Your two children pipe in their high voices that they want to come along as well. They are a cute version of Denise in miniature, blue gryphon herms with pretty faces and happy smiles. All of you share a family hug, then the little ones flap their wings and bounce around in eager anticipation of an excursion into the city, then also rub their taloned paws over Denise's maturing pregnancy, happy about another sibling coming.";
 		else if tempnum is 3: [in an 'absent birth' state - which shouldn't happen, as the player walking into the room or waiting in the room with Denise should have dealt with it]
-			say "     ERROR-Denise-3S: You should not able able to smell her right now.";
+			say "     ERROR-Denise-3S: You should not be able to smell her right now.";
 
 to say dismissgryphoness:
 	move Denise to Garden View;
@@ -111,7 +111,7 @@ instead of sniffing Gryphoness:
 	else if the remainder after dividing libido of gryphoness by 4 is 2:
 		say "Denise smells like a pregnant herm gryphoness.";
 	else if the remainder after dividing libido of gryphoness by 4 is 3:
-		say "ERROR-Denise-3S: You should not able able to smell her right now.";
+		say "ERROR-Denise-3S: You should not be able to smell her right now.";
 
 An everyturn rule:
 	if companion of player is Gryphoness and skipturnblocker is 0:

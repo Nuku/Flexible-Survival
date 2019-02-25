@@ -555,7 +555,7 @@ The level of helper dog is 5.
 The Dexterity of helper dog is 15.
 The summondesc of helper dog is "[SummonHobo]".
 The dismissdesc of helper dog is "[DismissHobo]".
-The assault of helper dog is "[one of]The helper dog jogs between your enemy's legs, snapping at them![or]Growling menacingly, Hobo snaps at your foe, allowing you to score another glancing blow![or]Barking loudly, your loyal dog charges and bites the enemy![or]Your faithful companion bites your opponent's ankle, growling deep in its throat until the leg finally pulls free![or]With a loud bark, the helper dog leaps at your enemy and bites their arm![or]Moving around behind them, Hobo grabs their arm and pulls back, knocking them off balance for you to score a quick hit![or]In an surprising piece of cleverness, your helper dog pulls a rope he's found across your enemy's path, causing them to stumble briefly![at random]".
+The assault of helper dog is "[one of]The helper dog jogs between your enemy's legs, snapping at them![or]Growling menacingly, Hobo snaps at your foe, allowing you to score another glancing blow![or]Barking loudly, your loyal dog charges and bites the enemy![or]Your faithful companion bites your opponent's ankle, growling deep in its throat until the leg finally pulls free![or]With a loud bark, the helper dog leaps at your enemy and bites their arm![or]Moving around behind them, Hobo grabs their arm and pulls back, knocking them off balance for you to score a quick hit![or]In a surprising display of cleverness, your helper dog pulls a rope he's found across your enemy's path, causing them to stumble briefly![at random]".
 the fuckscene of helper dog is "You make the offer to your canine companion, but he is uninterested.".
 
 to say SummonHobo:

@@ -61,7 +61,7 @@ to say losetotigress:
 	now tempnum is 0; [Reset payment flag]
 	if HP of player > 0:									[DID THE PLAYER SUBMIT? - YES]
 		if junknum is 0:									[Normal encounter]
-			say "     As you accept hir offer, shi moves up to you with a lustful smile. Rumbling and purring as shi rubs hir body against yours, shi guides you into a shadowy alleyway as shi starts releasing the easy straps on hir street clothes. There's an old mattress in there and from the smell, shi's used it for hir clients before. As shi guides you towards it, shi nuzzles along your neck and slides your backpack's straps off your shoulders. As shi helps you with your remaining clothes with one paw and a smile, hir other dips into your pack, searching for something to take as payment.";
+			say "     As you accept hir offer, shi moves up to you with a lustful smile. Rumbling and purring as shi rubs hir body against yours, shi guides you into a shadowy alleyway as shi starts releasing the easy straps on hir street clothes. There's an old mattress in there, and judging from the smell, shi's used it for hir clients before. As shi guides you towards it, shi nuzzles along your neck and slides your backpack's straps off your shoulders. As shi helps you with your remaining clothes with one paw and a smile, hir other dips into your pack, searching for something to take as payment.";
 			say "[paymentcheck][line break]"; [Put forth a payment]
 			if tempnum is 1:
 				stop the action;

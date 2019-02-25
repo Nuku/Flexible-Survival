@@ -9,7 +9,7 @@ The sarea of Tidepool Treasure is "Beach".
 
 Instead of resolving a Tidepool Treasure:
 	say "     You come across a large tide-pool, easily several feet across and probably about a foot deep in the center. It's full of small coral and shellfish, with starfish latched onto the half-buried rocks and kelp curling under the shallow surface. In the middle of it rests a small object covered in some sort of undersea moss, but it doesn't look natural. Circling the pool for a better view, it's clear that it's a bottle of some kind, perhaps soda or water, and maybe even unopened!";
-	say "     [bold type]Do you want to try an take the bottle?[roman type][line break]";
+	say "     [bold type]Do you want to try and take the bottle?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Go for it!";
 	say "     ([link]N[as]n[end link]) - Nope!";

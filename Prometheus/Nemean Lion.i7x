@@ -1,6 +1,6 @@
 Version 1 of Nemean Lion by Prometheus begins here.
 
-"Adds a Nemean Lion creature to Flexible Survivals Wandering Monsters table"
+"Adds a Nemean Lion creature to Flexible Survival's Wandering Monsters table"
 
 Section 1 - Monster Responses
 
@@ -20,7 +20,7 @@ to say beattheNemeanLion:
 
 
 to say NemeanLiondesc:
-	say "     The giant feline glares at you in an appraising manner, possibly judging how much difficulty it is likely to face in defeating you. It's fur is a dull gold, undamaged by the centaurs['] arrows. An impressive dark brown mane surrounds its fierce face, long white fangs visible as it snarls at you. Deciding you are easy enough prey, the Nemean Lion pounces at you, dagger-like claws extended and fast approaching your face.";
+	say "     The giant feline glares at you in an appraising manner, possibly judging how much difficulty it is likely to face in defeating you. Its fur is a dull gold, undamaged by the centaurs['] arrows. An impressive dark brown mane surrounds its fierce face, long white fangs visible as it snarls at you. Deciding you are easy enough prey, the Nemean Lion pounces at you, dagger-like claws extended and fast approaching your face.";
 
 
 Section 2 - Monster Insertion
