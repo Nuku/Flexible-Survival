@@ -1,6 +1,6 @@
 Version 1 of Rhino by Stripes begins here.
 
-"Adds a Rhino creature to Flexible Survival's Wandering Monsters table with impreg chance"
+"Adds a Rhino creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 
@@ -13,7 +13,7 @@ to say rhinodesc:
 	say "     The large, gray rhinoman spots you and charges. You only have a moment to take stock of him before he's upon you to fight. He's seems rather strongly built, a very tough hide of gray skin and a large horn rising from his pointed face. A second, even larger horn is equally hard between his legs.";
 
 to say losetorhino:
-	say "     The rhino man bowls you over and snorts angrily at you. Pinning you down, he tears at your clothes and pack, tossing them aside. His strong arms pin you down and he climbs atop you without any foreplay and grinds his throbbing horn against your ass. Precum flows down from his cock and gets smeared between your cheeks. ";
+	say "     The rhino man bowls you over and snorts angrily at you. Pinning you down, he tears at your clothes and pack, tossing them aside. His strong arms pin you down and he climbs atop you without any foreplay and grinds his throbbing horn against your ass. Precum flows down from his cock and gets smeared between your cheeks.";
 	if player is female:
 		say "     After a few strokes while he forces you into the right position, he pulls back and lines his cock with your dripping pussy and drives it hard into you. You moan and gasp as the big rod pushes its way into you. Keeping you pinned down, he pumps and thrusts his pulsing cock into you repeatedly as he grunts and snorts until he finally cums hard, blasting his thick semen into you. His prodigious output fills your womb and swells your tummy before he's finally done. Sated for now, he gets up and pushes you over, then walks off with a final grunt.[impregchance]";
 	else:
@@ -25,12 +25,12 @@ to say beattherhino:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Rhino"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -78,8 +78,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Table of Game Objects (continued)
@@ -91,11 +92,12 @@ rhino cum is a grab object. It is a part of the player. rhino cum is infectious.
 The usedesc of rhino cum is "[drinkrhinocum]";
 
 to say drinkrhinocum:
-	say "     Following the strange urge you have, you slam back the bottle of rhino cum you found. It has a strong taste to it, but you find it very exciting despite its salty flavor. ";
-	increase libido of player by 5;
+	say "     Following the strange urge you have, you slam back the bottle of rhino cum you found. It has a strong taste to it, but you find it very exciting despite its salty flavor";
 	if player is male and cock length of player < 12:
-		say "     You feel a throbbing in your groin as your cock[smn] expand[smv] another inch almost immediately after you finish your drink.";
+		say ". You feel a throbbing in your groin as your cock[smn] expand[smv] another inch almost immediately after you finish your drink";
 		increase cock length of player by 1;
+	say ".";
+	increase libido of player by 5;
 
 the scent of rhino cum is "The contents of the jar of rhino cum smell strong and musky.".
 

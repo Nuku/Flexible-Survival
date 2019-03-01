@@ -15,7 +15,7 @@ when play begins:
 
 to say ninjadesc:
 	setmongender 3; [creature is male]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let bonus be ( perception of player + dexterity of player - 20 ) divided by 2;
 	let featbonus be 0;
 	if "Experienced Scout" is listed in feats of player, increase featbonus by 1;
@@ -50,7 +50,7 @@ to say losetoninja:
 		say "     You press your hands to the wall and push your hips back into each thrust the feline makes. It seems he's quite adept at the art of lovemaking as well as the art of ninjutsu. Your back passage quivers around his cock as he moves and thrusts to stimulate you to greater and greater heights while saving your orgasm for the highest point of all. As you come to the point that you're moaning and mewling beneath him for his seed, he pushes his cock deep inside you and unleashes a hot blast of feline cum. The press of his glans against your prostate as his semen blasts against it is when he chooses to stimulate you far past your peak, sending you into a powerful orgasm that splatters the wall with your seed. It finally ends with you stretched out on the floor with your balls drained and feline cum leaking from your overfilled ass.[impregchance]";
 		say "     As silently as he came, the feline ninja disappears back into the shadows and is gone.";
 	else if a random chance of 1 in 2 succeeds:
-		say "     The ninja grabs you by the arm as you stop fighting him. With a quick motion, he pulls a cord from his robe and bind your wrists behind your back while pressing you against the wall. He gropes your ass with an excited purr before getting you on your knees facing him. He's slipped his stiff member from his robes and presses it to your face. With little choice in the matter, you open your mouth and accept the feline's rod past your lips and over your tongue.";
+		say "     The ninja grabs you by the arm as you stop fighting him. With a quick motion, he pulls a cord from his robe and binds your wrists behind your back while pressing you against the wall. He gropes your ass with an excited purr before getting you on your knees, facing him. He slips his stiff member from his robes and presses it to your face. With little choice in the matter, you open your mouth and accept the feline's rod past your lips and over your tongue.";
 		say "     You lick and suck at the mysterious cat's throbbing rod. Growing more excited as you pleasure the ninja, you become more enthusiastic in your efforts. Your lover of the moment remains largely silent save for his soft purring. When his climax arrives, he holds your head in place while spraying shot after shot of gooey semen onto your lapping tongue.";
 		say "     Once spent, he slips behind you, releases the cord just as quickly as it went on and disappears back into the shadows as silently as he appeared.";
 	else:
@@ -62,7 +62,7 @@ to say beattheninja:
 
 
 to say ninjaattack:
-[	choose row monster from the table of random critters;
+[	choose row monster from the Table of Random Critters;
 	if a random chance of 3 in 10 succeeds:
 		say "While making another acrobatic set of leaps and dodges, the ninja slips a shuriken from his robe and tosses it at you. The bladed star stabs into your [one of]shoulder[or]hip[or]side[or]thigh[or]leg[at random]. There is a stab of pain from the strike, followed from a warm heat that flows into you from the wound, causing a surge of lustful desires in you. As these thoughts momentarily distract you, the feline ninja moves in to make his attack.";
 		increase libido of player by a random number between 2 and 5;
@@ -90,12 +90,12 @@ to say ninjaattack:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Ninja Cat"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -143,8 +143,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "ninjastar"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Ninja Star Alt-Attack		[Pre-attack 30% of the time]
@@ -155,7 +156,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 this is the ninjastar rule:
 	if a random chance of 3 in 10 succeeds and inafight is 1:
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now monsterhit is false;
 		increase dex entry by 4;
 		standardstrike;
@@ -198,14 +199,14 @@ when play ends:
 				say "     As your lover and mate, she is wonderful and fills your nights with excitement. On the nights when you don't feel like wild sex, you both instead disappear into the night to beat up those who would prey on others within your territory. Your foes are dealt with swiftly and silently with a variety of ninjutsu tricks. And when you get home after a night's prowl, then you both are always in the mood for a wild, feline romp. Once she becomes too advanced in her pregnancy, she can't join you, but you're happy to know that in a few years you'll have your kittens joining you in your nightly excursions.";
 			else:
 				say "     While those in your group are still confused and wondering what to do next after being released and dropped off unprepared, you keep your eyes on one in particular. Among them is a man with black fur, a gray muzzle and a feline tail whom you find very handsome. Leading him off, your skilled paws soon have him hard and filling you. As you make love to him with increasing passion, he is converted more fully into a graceful feline. He gains feline ears and his black fur spreads down over the rest of his body, leaving only his muzzle gray.";
-				say "     As your lover and mate, he is wonderful and fills your nights with excitement. On the nights when you don't feel like wild sex, you both instead disappear into the night to beat up those who would prey on others within your territory. Your foes are dealt with swiftly and silently with a variety of ninjutsu tricks. And when you get home after a night's prowl, then you both are always in the mood for a wild, feline romp. ";
+				say "     As your lover and mate, he is wonderful and fills your nights with excitement. On the nights when you don't feel like wild sex, you both instead disappear into the night to beat up those who would prey on others within your territory. Your foes are dealt with swiftly and silently with a variety of ninjutsu tricks. And when you get home after a night's prowl, then you both are always in the mood for a wild, feline romp.";
 				if "Sterile" is not listed in feats of player:
 					say "     Once you become too advanced in your pregnancy, you can't join him out on the town, but you're happy to know that in a few years you'll have your kittens along for your nightly excursions.";
 				else:
-					if hermaphrodite is not banned:
-						say "     While on a patrol alone a few years later, you spot a feline cat burglar while on your own. Unable to leave such a cliche alone, you test your skill against him, stalking him for a short time before he notices. After a brief fight, you pounce the gray tabby and pin him down on the jewelry store floor. When your mate rejoins you, seeking you after you didn't make your usual rendezvous with him, you are already well on your way to converting the would-be thief into a sexy herm ninja by your still-active nanites. Your mate smiles and mounts the gender-shifted male, filling her with his seed and breeding her. After a few nights of sex, she is made into a loyal member of your family and is kept at home to breed more ninja kittens to add to family as well as for your own amusement.";
+					if hermaphrodite is banned:
+						say "     While on a patrol alone a few years later, you spot a feline cat burglar while on your own. Unable to leave such a cliché alone, you test your skill against him, stalking him for a short time before he notices. After a brief fight, you pounce the gray tabby and pin him down on the jewelry store floor. When your mate rejoins you, seeking you after you didn't make your usual rendezvous with him, you are already well on your way to converting the would-be thief into a sexy female ninja by your still-active nanites. Your mate smiles and mounts the gender-shifted male, filling her with his seed and breeding her. After a few nights of sex, she is made into a loyal member of your family and is kept at home to breed more ninja kittens to add to family.";
 					else:
-						say "     While on a patrol alone a few years later, you spot a feline cat burglar while on your own. Unable to leave such a cliche alone, you test your skill against him, stalking him for a short time before he notices. After a brief fight, you pounce the gray tabby and pin him down on the jewelry store floor. When your mate rejoins you, seeking you after you didn't make your usual rendezvous with him, you are already well on your way to converting the would-be thief into a sexy female ninja by your still-active nanites. Your mate smiles and mounts the gender-shifted male, filling her with his seed and breeding her. After a few nights of sex, she is made into a loyal member of your family and is kept at home to breed more ninja kittens to add to family.";
+						say "     While on a patrol alone a few years later, you spot a feline cat burglar while on your own. Unable to leave such a cliché alone, you test your skill against him, stalking him for a short time before he notices. After a brief fight, you pounce the gray tabby and pin him down on the jewelry store floor. When your mate rejoins you, seeking you after you didn't make your usual rendezvous with him, you are already well on your way to converting the would-be thief into a sexy herm ninja by your still-active nanites. Your mate smiles and mounts the gender-shifted male, filling her with his seed and breeding her. After a few nights of sex, she is made into a loyal member of your family and is kept at home to breed more ninja kittens to add to family as well as for your own amusement.";
 		else:
 			say "     While those in your group are still confused and wondering what to do next after being released and dropped off unprepared, you take advantage of the situation and convince several of the felines and those with minimal infection to go off with you. With a few ninja tricks and skilled paws, you coax them one by one into being lovers, converting them into feline ninjas like yourself. The females are bred and filled with kittens while the males add to your growing forces. Soon you have a small clan of your own that lurks in the darkness, doing tasks for organizations willing to pay for your shadowy services.";
 

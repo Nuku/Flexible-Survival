@@ -3,9 +3,13 @@ Version 1 of Hyena Hideout by Stripes begins here.
 [Version 2 - Small adjustment to Gina for Matriarch Vore scenes]
 [- Originally Authored By: Sarokcat -]
 
-"Adds an Hyena den to Flexible Survival with a dominance challenge and some smexing."
+"Adds a Hyena den to Flexible Survival with a dominance challenge and some smexing."
 
 Section 1- Hyena Hideout
+
+Table of GameRoomIDs (continued)
+Object	Name
+Hyena Hideout	"Hyena Hideout"
 
 Hyena Hideout is a room. It is fasttravel. It is private.
 earea of Hyena Hideout is "Outside".
@@ -14,6 +18,10 @@ The description of Hyena Hideout is "This large open building was obviously once
 
 instead of sniffing Hyena Hideout:
 	say "     This place smells strongly of hyenas. There have been many through here, much more than those you can see here right now.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Gang members	"Gang members"
 
 Gang members is a man.
 The description of Gang members is "A number of hyena gang members are lounging around the large open area, some of them lounging on the couches or the mattresses, while others move around chatting or showing off their hyena fur patterns. Several of the gang members have obviously gone mostly feral though, and their cackling laughter from the other rooms provides an almost comforting background to the noise of the area.".
@@ -111,7 +119,9 @@ instead of fucking the gang members:
 	else:
 		say "     While several of the hyenas seem interested in your hot body and taking what you're so eagerly offering, a swift glare or two from Gina has them moving on to play with each other instead. After a few minutes you are left relatively alone as one of the few gang members not rolling around on the floor enjoying themselves.";
 
-
+Table of GameCharacterIDs (continued)
+object	name
+Gina	"Gina"
 
 Gina is a woman.
 The description of Gina is "The hyena who recruited you into the gang is lounging around on a pile of cushions nearby, you think her name was Gina.".
@@ -128,7 +138,7 @@ instead of conversing the Gina:
 		add "cot" to invent of Hyena hideout;
 		increase ginatalk by 1;
 	else if matriarchowned is 1:
-		say "     [one of]'Hey hun, who'd have imagined things turning out this well for ya, eh?'[or]'Aren't you glad you joined up now?'[or]'Got any orders for me matriarch?' Gina says as she wiggles her rear in your direction.[or]'That was one of the best dominance fights I've ever seen.'[or]'So what do you have planned for the gang now?'[or]'Have you given any thought to picking lieutenants yet?'[or]'You should have some fun with the rest of the gang members sometimes, don't want them to feel neglected.'[or]'I saw the old matriarch earlier, looks like she's adapted well to being a breeder.'[or]'Our numbers have been growing steadily ever since you took over, things are looking up!'[or]'Several of the other hyenas found some military guys poking around the edges of the city... they apparently make great breeders,' she says with a smug look.[or]'The old matriarch had us finding lots of back ways out of the city just in case we needed them, we should be able to duck out of here pretty quick if we have to.'[or]'Feel good to be at the top of the best gang in the city?'[or]'We've managed to round up some more new recruits recently, they hardly put up a fight at all.[at random]'";
+		say "     [one of]'Hey hun, who'd have imagined things turning out this well for ya, eh?'[or]'Aren't you glad you joined up now?'[or]'Got any orders for me, matriarch?' Gina says as she wiggles her rear in your direction.[or]'That was one of the best dominance fights I've ever seen.'[or]'So what do you have planned for the gang now?'[or]'Have you given any thought to picking lieutenants yet?'[or]'You should have some fun with the rest of the gang members sometimes - don't want them to feel neglected.'[or]'I saw the old matriarch earlier. Looks like she's adapted well to being a breeder.'[or]'Our numbers have been growing steadily ever since you took over. Things are looking up!'[or]'Several of the other hyenas found some military guys poking around the edges of the city... They apparently make great breeders,' she says with a smug look.[or]'The old matriarch had us finding lots of back ways out of the city just in case we needed them. We should be able to duck out of here pretty quick if we have to.'[or]'Feel good to be at the top of the best gang in the city?'[or]'We've managed to round up some more new recruits recently. They hardly put up a fight at all.'[at random]";
 	else if matriarchdefeated is 1:
 		say "     'Things are going pretty well under the new matriarch,' Gina says as you settle down to chat, 'There are still few mutters, but most of us think we got a pretty good thing going on right now, even heard she has some kind of plan to deal with the military when they come.' Gina grins at that thought. 'They won't know what hit [']em,' she says, her grin turning positively feral. '[']Course the matriarch is still accepting challengers if anyone wants to give it a shot, but after what happened with you, it doesn't look like anyone else is eager to step up,' she says, shooting you a sidelong look. 'Still looks like anyone can step up and try, even you could try taking her on again if you really wanted. But you wouldn't be crazy enough to try challenging her again, now would ya?' Gina says with a smirk.";
 		if player consents:
@@ -161,11 +171,11 @@ instead of conversing the Gina:
 				else:
 					say "     Gina comes over to you as you recover from your exhausting ordeal, cum and other fluids covering you and leaking out of you as she drags you over to help clean you off. 'Can't say I didn't warn you,' Gina mutters as she helps you settle down for a much-needed rest. 'Things will be a bit different around her now that the matriarch has made you one of the gang sluts, I won't be able to keep you to myself anymore that's for sure. And it's definitely going to be harder for you to get much respect around here, plenty of fucking though if that's any consolation,' she finishes with a leer, causing you to blush as you recall your recent encounter, the thought of it making your loins heat up again almost against your will.";
 			else:
-				say "     'Sorry hun' Gina says as she gestures at your crotch, 'You kind of lack the equipment for that sort of challenge right now, maybe you should hang out with us hyenas a bit more hmm?'";
+				say "     'Sorry hun,' Gina says as she gestures at your crotch, 'you kind of lack the equipment for that sort of challenge right now. Maybe you should hang out with us hyenas a bit more, hmm?'";
 		else:
-			say "     'That's probably for the best hun,' Gina says with a nod of her furry head, 'Things are a bit touchy right now with the new matriarch and all, and if you lost she would probably end up making an example out of you.'";
+			say "     'That's probably for the best, hun,' Gina says with a nod of her furry head. 'Things are a bit touchy right now with the new matriarch and all, and if you lost, she would probably end up making an example out of you.'";
 	else:
-		say "     [one of]'If ya need any help around here, just let me know,' she says with a wink.[or]'Better steer clear of the capitol building if ya head back out there. Even we aren't crazy enough to get involved in whatever is going on over there.'[or]'Wonder what's going on with people outside the city, I'd love to get my old family in the gang.'[or]'Saw a couple deer over near the park earlier, I know they used to be people to, but damn it made me hungry watching [']em prance around.'[or]'Did ya know regular hyenas aren't fully functional with both sets of equipment?' Gina says as she strokes herself slowly, 'Dunno why we're different, but I sure ain't complaining.'[or]'Their still fighting it out over who's more dominant, should have a matriarch soon though.'[or]'Careful if you go near the Trevor labs building, there's a dragoness in there that's pretty tough. Won't let anyone in to loot the place, kinda makes you wonder what she's hidin['].'[or]'Life as a hyena is just so much better than anything else, don't you agree?'[or]'There are some crazy things wandering around out there,' Gina says with a thoughtful look. 'I've seen latex dolls, giant cocks, and some of the others have even reported living stuffed animals out there. Makes me glad I ended up a hyena,' she finishes with a cackling laugh, 'We at least know how to have fun.'[at random]";
+		say "     [one of]'If ya need any help around here, just let me know,' she says with a wink.[or]'Better steer clear of the capitol building if ya head back out there. Even we aren't crazy enough to get involved in whatever is going on over there.'[or]'Wonder what's going on with people outside the city, I'd love to get my old family in the gang.'[or]'Saw a couple deer over near the park earlier, I know they used to be people to, but damn it made me hungry watching [']em prance around.'[or]'Did ya know regular hyenas aren't fully functional with both sets of equipment?' Gina says as she strokes herself slowly, 'Dunno why we're different, but I sure ain't complaining.'[or]'Their still fighting it out over who's more dominant, should have a matriarch soon though.'[or]'Careful if you go near the Trevor labs building, there's a dragoness in there that's pretty tough. Won't let anyone in to loot the place, kinda makes you wonder what she's hidin['].'[or]'Life as a hyena is just so much better than anything else, don't you agree?'[or]'There are some crazy things wandering around out there,' Gina says with a thoughtful look. 'I've seen latex dolls, giant cocks, and some of the others have even reported living stuffed animals out there. Makes me glad I ended up a hyena,' she finishes with a cackling laugh. 'We at least know how to have fun.'[at random]";
 
 Ginatalk is a number that varies.
 Ginaslut is a number that varies.
@@ -254,7 +264,7 @@ to say hyenamat_challenge:
 
 to say hyenamat_victorytf:
 	setmonster "Herm Hyena";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     As the hyena orgy goes on, you feel a growing sense of confidence and empowerment. Looking over yourself, you can see that the victory has not left you unchanged. Your hyena body's gotten larger and stronger with an improved physique. You gain several inches of height as well, making you all the more impressive for leading the gang. You've become a powerful figure suitable for your new role as the gang's matriarch.";
 	now tailname of player is "Herm Hyena";
 	now facename of player is "Herm Hyena";

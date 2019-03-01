@@ -17,55 +17,59 @@ to say xenodesc:
 
 
 to say losetoxeno:
-	choose row monster from the table of random critters;
-	say "     You are knocked down by the powerful creature and pinned beneath it. It hisses at you, extending its inner mouth and dripping thick slime onto your cheek as it stares down at you, small nasal holes flaring as it takes in your scent. ";
-	if player is female:
-		say "     The xenomorphic creature, as if scenting what it wants, pushes your legs apart with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe into you, pushing into your pussy and sliding up to your womb. The black flesh pulses and shoots a thick, green goo into your cunt, making it slick and easy to penetrate. At your cervix, its tendrils squirm and rub, working your cervix until it opens and allows it entry. Once inside your womb, you feel a much thicker bulge pressing into you as an egg starts to travel up the ovipositor and into you to be deposited into your womb. More eggs follow after the first as your belly is stuffed with as many of the fleshy orbs as you can take[if player is male]. As these push past your clit, you can't help but cum, moaning loudly as the alien creature violates you[end if].";
-		say "     After the ovipositor is withdrawn and you're released, you stumble away as best you can being so laden down with eggs. Feeling your belly squirm and seeing the eggs already writhing and shifting inside you, you find somewhere secluded and deposit them, hoping you've managed to get them all out.[ovichance]";
-	else:
-		let mchance be 4;
-		if player is submissive, increase mchance by 2;
-		if anallevel is 3, increase mchance by 2;
-		if player is mpreg_ok, increase mchance by 2;
-		if anallevel is 1, now mchance is 0;
-		if player is not male or a random chance of mchance in 12 succeeds:
-			say "     The xenomorphic creature, as if scenting what it wants, pushes onto all fours with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe into you, pushing into your ass and sliding into your bowels. The black flesh pulses and shoots a thick, green goo into your ass, making it slick and easy to penetrate. Its tendrils squirm and rub, teasing your [if player is male]prostate[else]inner walls[end if] and exciting you despite the horrifying situation. But it doesn't thrust into you, instead staying buried deep inside you and stimulating you from within. As it does so, you feel a much thicker bulge pressing into you as an egg starts to travel up the ovipositor and into you to be deposited into your belly. More eggs follow after the first as your belly is stuffed with as many of the fleshy orbs as you can take[if player is male]. As these push past your prostate, you can't help but cum, moaning loudly as the alien creature violates you[end if].";
-			say "     After the ovipositor is withdrawn and you're released, you stumble away as best you can being so laden down with eggs. Feeling your belly squirm and seeing the eggs already writhing and shifting inside you, you find somewhere secluded and deposit them, hoping you've managed to get them all out.[movichance]";
+	choose row monster from the Table of Random Critters;
+	if inasituation is false:
+		say "     You are knocked down by the powerful creature and pinned beneath it. It hisses at you, extending its inner mouth and dripping thick slime onto your cheek as it stares down at you, small nasal holes flaring as it takes in your scent.";
+		if player is kinky and a random chance of 1 in 3 succeeds: [Link with Xenomorph Nest (bound inside nest)]
+			say "     Instead of having its way with you, the creature violently bashes your head on the floor, knocking you out on the spot. As your consciousness fades, you feel the monster grab your leg and drag you to an unknown place.";
+			xenoNestFailure;
+		else if player is female:
+			say "     The xenomorphic creature, as if scenting what it wants, pushes your legs apart with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe into you, pushing into your pussy and sliding up to your womb. The black flesh pulses and shoots a thick, green goo into your cunt, making it slick and easy to penetrate. At your cervix, its tendrils squirm and rub, working your cervix until it opens and allows it entry. Once inside your womb, you feel a much thicker bulge pressing into you as an egg starts to travel up the ovipositor and into you to be deposited into your womb. More eggs follow after the first as your belly is stuffed with as many of the fleshy orbs as you can take[if player is male]. As these push past your clit, you can't help but cum, moaning loudly as the alien creature violates you[end if].";
+			say "     After the ovipositor is withdrawn and you're released, you stumble away as best you can being so laden down with eggs. Feeling your belly squirm and seeing the eggs already writhing and shifting inside you, you find somewhere secluded and deposit them, hoping you've managed to get them all out.[ovichance]";
 		else:
-			say "     The xenomorphic creature, as if scenting what it wants, pushes you onto your back with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe to your cock. Gripping your glans with the short tendrils, these pull your cock into the vaginal opening and start feeding your meat into its throbbing, pulsing hole. It squeezes and sucks at your shaft, stretching to fully cover your length until those tendrils are squeezing and massaging at your balls. You moan loudly and cum repeatedly until your balls are fully drained into the alien creature. Not sated, but having gotten all it can from you, it releases your cock with a wet, sticky slurp and a splatter of thick, green slime. It runs its sharp claws across your flesh almost tenderly, drooling over your face before rising and driving you from its territory.";
-	infect;
+			let mchance be 4;
+			if player is submissive, increase mchance by 2;
+			if anallevel is 3, increase mchance by 2;
+			if player is mpreg_ok, increase mchance by 2;
+			if anallevel is 1, now mchance is 0;
+			if player is not male or a random chance of mchance in 12 succeeds:
+				say "     The xenomorphic creature, as if scenting what it wants, pushes onto all fours with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe into you, pushing into your ass and sliding into your bowels. The black flesh pulses and shoots a thick, green goo into your ass, making it slick and easy to penetrate. Its tendrils squirm and rub, teasing your [if player is male]prostate[else]inner walls[end if] and exciting you despite the horrifying situation. But it doesn't thrust into you, instead staying buried deep inside you and stimulating you from within. As it does so, you feel a much thicker bulge pressing into you as an egg starts to travel up the ovipositor and into you to be deposited into your belly. More eggs follow after the first as your belly is stuffed with as many of the fleshy orbs as you can take[if player is male]. As these push past your prostate, you can't help but cum, moaning loudly as the alien creature violates you[end if].";
+				say "     After the ovipositor is withdrawn and you're released, you stumble away as best you can being so laden down with eggs. Feeling your belly squirm and seeing the eggs already writhing and shifting inside you, you find somewhere secluded and deposit them, hoping you've managed to get them all out.[movichance]";
+			else:
+				say "     The xenomorphic creature, as if scenting what it wants, pushes you onto your back with its strong arms and lowers itself down onto you. Hissing again, it slides its strange, phallic probe to your cock. Gripping your glans with the short tendrils, these pull your cock into the vaginal opening and start feeding your meat into its throbbing, pulsing hole. It squeezes and sucks at your shaft, stretching to fully cover your length until those tendrils are squeezing and massaging at your balls. You moan loudly and cum repeatedly until your balls are fully drained into the alien creature. Not sated, but having gotten all it can from you, it releases your cock with a wet, sticky slurp and a splatter of thick, green slime. It runs its sharp claws across your flesh almost tenderly, drooling over your face before rising and driving you from its territory.";
+		infect;
 
 
 to say beatthexeno:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Victorious over the alien creature, you knock the hissing black creature to the ground. Its tail thrashes and green goo leaks from its phallic probe. ";
 	if cockname of player is "Xeno" and player is herm:
-		say "     Seeing your prey fallen before you, your alien cock throbs and its tendrils squirm. Following your infected cock's compulsion to mate, you pin the xenomorph beneath you and press your strange cock to its. Your tendrils entwine with one another briefly before your cock is able to pull its into your wet, vaginal hole. Your ovipositor squeeze and sucks at the cock inside it, milking at the black creature until it cums again and again, draining its internal balls into you to feed and fertilize the Xeno eggs inside you.";
+		say "Seeing your prey fallen before you, your alien cock throbs and its tendrils squirm. Following your infected cock's compulsion to mate, you pin the xenomorph beneath you and press your strange cock to its. Your tendrils entwine with one another briefly before your cock is able to pull its into your wet, vaginal hole. Your ovipositor squeeze and sucks at the cock inside it, milking at the black creature until it cums again and again, draining its internal balls into you to feed and fertilize the Xeno eggs inside you.";
 		say "     Overcome with instinct, you keep the Xeno pinned down, hissing in pleasure as these eggs start to travel out of your ovipositor. You have what feels like climax after climax as you release these eggs into the alien creature below, stuffing its egg chamber with your offspring until its carapace is stretched and bloated with your many swollen eggs added to her own. With a twisted sense of pride and accomplishment, you release the creature's ovipositor cock and send it off to find somewhere else to deposit the many eggs it now bears inside it.";
 		infect;
 	else if cockname of player is "Xeno" and player is male and player is mpreg_ok:
-		say "     Seeing your prey fallen before you, your alien cock throbs and its tendrils squirm. You also feel a shifting inside your hidden male womb. Following your infected cock's compulsion to mate, you pin the xenomorph beneath you and press your strange cock to its. Your tendrils entwine with one another briefly before your cock is able to push its way into the creature's vaginal opening, intent on fertilizing its eggs with your tainted seed. Its ovipositor squeezes and sucks at your cock inside it, milking you for all the slimy cum you can give it. This is pumped deep inside the creature's egg chamber, fertilizing her young and starting them to swell.";
+		say "Seeing your prey fallen before you, your alien cock throbs and its tendrils squirm. You also feel a shifting inside your hidden male womb. Following your infected cock's compulsion to mate, you pin the xenomorph beneath you and press your strange cock to its. Your tendrils entwine with one another briefly before your cock is able to push its way into the creature's vaginal opening, intent on fertilizing its eggs with your tainted seed. Its ovipositor squeezes and sucks at your cock inside it, milking you for all the slimy cum you can give it. This is pumped deep inside the creature's egg chamber, fertilizing her young and starting them to swell.";
 		say "     Once you're done, you pull out and shift your hips, bringing your black ring to its ovipositor. The creature hisses beneath you, but you feel its tendrils pry open your anal ring and the ovipositor push into your anus. There it presses against your prostate and massages at it before moving further back. Squeezing and milking at it, you get it to spurt its thick, gooey slime into you, preparing you for the coming eggs.";
 		say "     Finding the hidden entrance to your male womb, the tendrils tease open this passage and press into it, bringing you considerable pleasure even before its eggs start to push your back passage open and make their way into your hidden womb. You hiss in pleasure as these start sliding into you, each one moving past your prostate sending you to orgasm before it presses its way into your waiting egg chamber. You take as many of the creature's eggs into you as you can until your belly is full and bloated with the growing, swelling, squirming ovoids. Having what your body wants from the creature, you release it and drive it off while you look around for someone suitable to deposit your eggs. As each one slides out of you, you cum again in ecstasy. Once they're lain, you find yourself wondering, even hoping, that one or a few may still remain inside you.[ovichance]";
 		infect;
 	else if cockname of player is "Xeno" and player is male:
-		say "     Seeing your prey fallen before you, your alien cock throbs and its tendrils squirm. Following your infected cock's compulsion to mate, you pin the xenomorph beneath you and press your strange cock to its. Your tendrils entwine with one another briefly before your cock pushes its way into the creature's vaginal opening, intent on fertilizing its eggs with your tainted seed. Its ovipositor squeezes and sucks at your cock inside it, milking you for all the slimy cum you can give it. This is pumped deep inside the creature's egg chamber, fertilizing her young and starting them to swell. Once you're done, you pull out and send it off to find somewhere else to deposit the many eggs you've sired inside it.";
+		say "Seeing your prey fallen before you, your alien cock throbs and its tendrils squirm. Following your infected cock's compulsion to mate, you pin the xenomorph beneath you and press your strange cock to its. Your tendrils entwine with one another briefly before your cock pushes its way into the creature's vaginal opening, intent on fertilizing its eggs with your tainted seed. Its ovipositor squeezes and sucks at your cock inside it, milking you for all the slimy cum you can give it. This is pumped deep inside the creature's egg chamber, fertilizing her young and starting them to swell. Once you're done, you pull out and send it off to find somewhere else to deposit the many eggs you've sired inside it.";
 		infect;
 	else if player is female and cockname of player is "Xeno":
-		say "     Seeing your prey fallen before you, your alien pussy pulses with need and its tendrils squirm. Following your infected cunt's compulsion to mate, you pin the xenomorph beneath you and press your needy pussy to its cock-like protrusion. Your tendrils entwine with one another briefly before pulling its ovipositor into your juicy hole. Squeezing and milking at it, you get it to spurt its thick, gooey slime into you, preparing you for the coming eggs. You hiss in pleasure as these start sliding into you, each one moving past your clit sending you to orgasm before it presses its way into your waiting egg chamber. You take as many of the creature's eggs into you as you can until your belly is full and bloated with the growing, swelling, squirming ovoids. Having what your body wants from the creature, you release it and drive it off while you look around for someone suitable to deposit your eggs. As each one slides out of you, you cum again in ecstasy. Once they're lain, you find yourself wondering, even hoping, that one or a few may still remain inside you.[ovichance]";
+		say "Seeing your prey fallen before you, your alien pussy pulses with need and its tendrils squirm. Following your infected cunt's compulsion to mate, you pin the xenomorph beneath you and press your needy pussy to its cock-like protrusion. Your tendrils entwine with one another briefly before pulling its ovipositor into your juicy hole. Squeezing and milking at it, you get it to spurt its thick, gooey slime into you, preparing you for the coming eggs. You hiss in pleasure as these start sliding into you, each one moving past your clit sending you to orgasm before it presses its way into your waiting egg chamber. You take as many of the creature's eggs into you as you can until your belly is full and bloated with the growing, swelling, squirming ovoids. Having what your body wants from the creature, you release it and drive it off while you look around for someone suitable to deposit your eggs. As each one slides out of you, you cum again in ecstasy. Once they're lain, you find yourself wondering, even hoping, that one or a few may still remain inside you.[ovichance]";
 		infect;
 	else:
-		say "     Being very mindful of its slashing tail, you drive the fallen creature off, hoping you won't see it again anytime soon.";
+		say "Being very mindful of its slashing tail, you drive the fallen creature off, hoping you won't see it again anytime soon.";
 
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Xeno"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -113,8 +117,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Acid Milk
 
@@ -122,20 +127,20 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "acid milk"	"The green, acidic milk of a xeno slowly eating away at its container."	1	acid milk
 
-acid milk is a grab object. It is a part of the player. it is milky. it is temporary. acid milk is infectious. The strain of acid milk is "Xeno".
+acid milk is a grab object. It is a part of the player. It is milky. It is temporary. acid milk is infectious. The strain of acid milk is "Xeno".
 
 The usedesc of acid milk is "[drinkacidmilk]";
 
 to say drinkacidmilk:
 	say "     Foolishly, you take a gulp of the acid milk. ";
 	if facename of player is not "Xeno":
-		say "     The caustic acid eats away at your flesh and you're forced to spit it up, but not before it does terrible things to the inside of your mouth and throat.";
+		say "The caustic acid eats away at your flesh and you're forced to spit it up, but not before it does terrible things to the inside of your mouth and throat.";
 		now HP of player is HP of player / 3;
 	else if bodyname of player is not "Xeno":
-		say "     You are able to swallow down the acidic milk thanks to your altered head and mouth, but this only allows it access to your body where it starts to eat away at your internals instead. You writhe in pain as it burns inside you for several minutes until it's spread out enough for the nanites to start dealing with cleaning it up.";
+		say "You are able to swallow down the acidic milk thanks to your altered head and mouth, but this only allows it access to your body where it starts to eat away at your internals instead. You writhe in pain as it burns inside you for several minutes until it's spread out enough for the nanites to start dealing with cleaning it up.";
 		now HP of player is HP of player / 4;
 	else:
-		say "     You are able to drink down the acidic milk thanks to your altered mouth and your infected body is able to deal with it. It still stings and burns inside you, but does restore a small amount of thirst in return.";
+		say "You are able to drink down the acidic milk thanks to your altered mouth and your infected body is able to deal with it. It still stings and burns inside you, but does restore a small amount of thirst in return.";
 		decrease HP of player by level of player;
 		PlayerDrink 3;
 
@@ -171,13 +176,13 @@ when play ends:
 		if humanity of player < 10:
 			say "     You succumb to your horrific infection, feeling its silent power and reveling in it. You head out into the city to seek your prey, eager to breed and spread your kind to satisfy your lustful instincts. ";
 			if player is herm:
-				say "     Finding others of your kind, you breed with them. But unlike before, you are no longer restrained by your humanity and seek out victims to mount and fill with your eggs, corrupting them even as you turn them into incubators and carriers for your offspring.";
+				say "Finding others of your kind, you breed with them. But unlike before, you are no longer restrained by your humanity and seek out victims to mount and fill with your eggs, corrupting them even as you turn them into incubators and carriers for your offspring.";
 			else if player is male and player is mpreg_ok:
-				say "     Finding others of your kind, you breed with them. You sire eggs in them, often taking those eggs into yourself and carrying them. No longer restrained by your humanity, you seek out places near other potential victims for your offspring so they might find hosts and incubators of their own to use, breed and corrupt into more of your kind.";
+				say "Finding others of your kind, you breed with them. You sire eggs in them, often taking those eggs into yourself and carrying them. No longer restrained by your humanity, you seek out places near other potential victims for your offspring so they might find hosts and incubators of their own to use, breed and corrupt into more of your kind.";
 			else if player is male:
-				say "     Finding others of your kind, you breed with them. You sire eggs in them. No longer restrained by your humanity, you also seek out other potential victims so they might be brought before your mates and then implanted with those eggs to be incubators and carriers for your offspring even as they are themselves corrupted.";
+				say "Finding others of your kind, you breed with them. You sire eggs in them. No longer restrained by your humanity, you also seek out other potential victims so they might be brought before your mates and then implanted with those eggs to be incubators and carriers for your offspring even as they are themselves corrupted.";
 			else:
-				say "     Lacking any true gender of your own, you instead act as a hunter for the others. No longer restrained by your humanity, you seek out other potential victims so they might be brought before your xenomorphic brethren and then implanted with their eggs to be incubators and carriers for the offspring even as they are themselves corrupted.";
+				say "Lacking any true gender of your own, you instead act as a hunter for the others. No longer restrained by your humanity, you seek out other potential victims so they might be brought before your xenomorphic brethren and then implanted with their eggs to be incubators and carriers for the offspring even as they are themselves corrupted.";
 		else:
 			say "     You survive to rescue, but the military forces that come are very wary of you. At first, they refuse to extract you at all, fearful of what they've seen in the movies. You do your best to convince them and eventually a team of armored soldiers come and take you out under very high security. You restrain your monstrous instincts and come peacefully.";
 			say "     Their scientists have a field day with you, putting you through batteries of tests trying to understand your incredibly changed form and its alterations. Your acidic venom does considerable damage to their equipment and interferes with a lot of their testing, eventually forcing them to give up and take what little they've been able to discover. It is deemed that your body, following movie logic helped along by the nanites, is not one that functions under normal science and so cannot be replicated or weaponized as they might like.";

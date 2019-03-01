@@ -6,13 +6,13 @@ Version 1 of Bjorn by Rikaeus begins here.
 [   1: Has rescued from the Spartans                            ]
 [   2: Has sufficiently proven their strength to top him        ]
 [   3: Manage to convince him to apologize to Pericles          ]
-[   4: Failed to Defend the Campus Completely,Dissapointing him ]
+[   4: Failed to Defend the Campus Completely, Disappointing him]
 [   5: Player Helped Defend the Campus in the War Completely    ]
 [   6: Seen player best Pericles in Combat, redeeming self (WIP)]
 [  99: Decided against rescuing him                             ]
 
 [ PericlesRelationship                                          ]
-[   0: Hasnt met                                                ]
+[   0: Hasn't met                                               ]
 [   1: Has met via Bjorn Event                                  ]
 [   2: Has seen his second event                                ]
 [   3: Has seen his third event                                 ]
@@ -47,7 +47,7 @@ instead of going North from College Campus Entrance while BjornRelationship is 0
 		now PericlesRelationship is 1;
 		now BjornRelationship is 99;
 		move player to College Fountain;
-	now Daily Training Session is not resolved;
+	now Daily Training Session is active;
 
 An everyturn rule:
 	if BjornRelationship > 0 and BjornRelationship < 3:
@@ -59,6 +59,10 @@ An everyturn rule:
 
 
 Section 2 - Declaring Bjorn
+
+Table of GameCharacterIDs (continued)
+object	name
+Bjorn	"Bjorn"
 
 Bjorn is a man.
 The description of Bjorn is "[BjornDesc]".
@@ -137,13 +141,9 @@ to say BjornTalkMenu:
 					say "[BjornPericles]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head, which creates a confused look on Bjorn's face before he shrugs.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head, which creates a confused look on Bjorn's face before he shrugs.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -271,13 +271,9 @@ to say BjornSexMenu:
 					say "[BjornSex2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step away from the viking who gives you a disappointed and frustrated look. It appears he really wanted sex.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step away from the viking who gives you a disappointed and frustrated look. It appears he really wanted sex.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

@@ -28,11 +28,11 @@ to say losetomonstercostume:
 
 
 to say beatthemonstercostume:
-	say "     Your final blow knocks the stuffing out of the costume creature, as it were, and it collapses to the ground in a heap. ";
+	say "     Your final blow knocks the stuffing out of the costume creature, as it were, and it collapses to the ground in a heap";
 	if werewolfcostumenosex > 2:
-		say "     As with the others of its kind, you leave it alone now that you've taken the fight out of it.";
+		say ". As with the others of its kind, you leave it alone now that you've taken the fight out of it.";
 	else if player is male and libido of player > 25 and werewolfcostumenosex < 3:
-		say "     Feeling a little worked up after your fight, you glance down at the costume creature. It moans softly, struggling to rise again. Despite its costume nature, that head of its does have a mouth you might be able to make use of, if you were so inclined. Shall you go ahead with this plan?";
+		say ". Feeling a little worked up after your fight, you glance down at the costume creature. It moans softly, struggling to rise again. Despite its costume nature, that head of its does have a mouth you might be able to make use of, if you were so inclined. Shall you go ahead with this plan?";
 		if player consents:
 			now werewolfcostumenosex is 0;
 			say "     Grabbing the costume creature by the head, you press its muzzle to your groin and thrust your hard cock into is open mouth. It goes a weak moan and flops its limp arms, but is too weak to stop you from taking advantage of it. You pound your hips against its padded muzzle, grinning as it starts to respond by licking and sucking at your [cock of player] manmeat. As you continue, you can feel its soft paws slide up your legs, but they're no longer struggling, instead rubbing your thighs and gripping your ass so it can better pull its head into your thrusts.";
@@ -43,29 +43,31 @@ to say beatthemonstercostume:
 		else:
 			increase werewolfcostumenosex by 1;
 			say "     Certain you can find a better way to sate your lusts in this wacky city, you leave the strange beast behind.";
+	else:
+		say ".";
 
 
 
 to say monstercostumedesc:
 	setmongender 3; [creature is male]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
-	say "     A strange, wobbly creature approaches you. It seems like the werewolf from a cheap horror movie or a haunted house, but deflated and empty inside. It is like an empty costume moving on its own. The limbs flop around some as it moves, the padded, oversized feet dragging against the ground. The sculpted werewolf face is well-moulded and would be quite frightening if it leaped out at you. But having more life than a mere costume, the expression changes as it snarls at you, moving in to strike at you.";
+	say "     A strange, wobbly creature approaches you. It seems like the werewolf from a cheap horror movie or a haunted house, but deflated and empty inside. It is like an empty costume moving on its own. The limbs flop around some as it moves, the padded, oversized feet dragging against the ground. The sculpted werewolf face is well-molded and would be quite frightening if it leaped out at you. But having more life than a mere costume, the expression changes as it snarls at you, moving in to strike at you.";
 
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Werewolf Costume"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -94,7 +96,7 @@ When Play begins:
 	now HP entry is 30; [ The monster's starting HP. ]
 	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
-	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Fair"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
@@ -113,8 +115,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings
@@ -122,7 +125,7 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Werewolf Costume":
 		if humanity of player < 10:
-			say "     With the infection leaving your mind nearly as empty as your head now is, you wander off into the city and find your way back to the State Fair. You find your way to one of the many haunted houses and join the other varied costume monsters shambling around within. There are monsters, werewolves, ghosts, zombies and many other varieties of costume creatures there. You have an great time living with them, roaming the park and hijacking the bodies of the other creatures of the midway to allow you to sate your needs.";
+			say "     With the infection leaving your mind nearly as empty as your head now is, you wander off into the city and find your way back to the State Fair. You find your way to one of the many haunted houses and join the other varied costume monsters shambling around within. There are monsters, werewolves, ghosts, zombies and many other varieties of costume creatures there. You have a great time living with them, roaming the park and hijacking the bodies of the other creatures of the midway to allow you to sate your needs.";
 			say "     Coming back from one of these, you run into a soldier and can hear many others coming up. He stiffens and glances back, then whips off his backpack and tosses it to you. 'Quick! Get in!' he whispers. You catch a hint of gasoline and smoke in the air and you can see several black columns of smoke rising from the way you were headed. Scared, but knowing your thin, costume-like body would not survive a flamethrower, you nod. After dumping the contents behind a booth, you crawl into the pack and deflate yourself as much as you can. It is a little cramped, but you manage it.";
 			say "     When he rejoins the others, you can hear several of them laughing about how easy this detail is, nothing but stuffed bears and toys to deal with. You seethe in anger, but remain quiet, and your rescuer only gives a token chuckle before getting back to guarding the flamers. Once he gets you back to base, he gets a short moment to whisper to you that he couldn't stand seeing them burning down those creatures and just had to help you. Besides, you're just a cute costume; there are much more dangerous things out there than you. He manages to slip you some rations and a few treats from time to time, keeping you hidden in a footlocker until he can be discharged. He, like many others, are released from service after the disturbing events in the city.";
 			say "     You live with him in his small home, taking care not to be seen. He tries to be nice to you, but is rather nervous and ill at ease. But eventually one cool autumn night, while resting on the couch in front of the TV, you slide over to drape your soft body atop him. He stiffens for a moment, then relaxes and strokes his hand over you. Soon, you're cuddling and taking him into you. You wrap your beloved rescuer up in your body and hold him close. Your time together is very passionate and more fulfilling than any of the times at the fairgrounds.";

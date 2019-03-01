@@ -1084,10 +1084,10 @@ To image-map (IMG_MAP - a list of lists of numbers) at (COORD1 - a list of numbe
 Chapter - Global variables
 [The global variables support a very brief form of drawing command; they are not used for the standard length commands.]
 
-The current graphics window is a g-window that varies.
-The current foreground-color is a number that varies. The current foreground-color is usually 0.
-The current background-color is a number that varies. The current background-color is usually 0.
-The current font is a font that varies.
+The current graphics window is a g-window that varies.[@Tag:NotSaved]
+The current foreground-color is a number that varies.[@Tag:NotSaved] The current foreground-color is usually 0.
+The current background-color is a number that varies.[@Tag:NotSaved] The current background-color is usually 0.
+The current font is a font that varies.[@Tag:NotSaved]
 
 [These are here only to overcome I7's limitation on the number of local variables that can be present in a single routine. They are not user-modifiable, since they will be set within the drawing routines.]
 The g-imgwidth is a number variable. The g-imgwidth is 0.

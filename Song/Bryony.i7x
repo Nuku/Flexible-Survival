@@ -1,6 +1,10 @@
 Version 1 of Bryony by Song begins here.
 [ Version 1.0 - Initial talk options and events - Song                          ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Bryony	"Bryony"
+
 Bryony is a woman. Bryony is in Equinoid Camp.
 The description of Bryony is "[BryonyDesc]".
 The conversation of Bryony is { "Watch yourself." }.
@@ -98,14 +102,11 @@ to say BryonyTalkMenu: [Runs only if the player is fully black equinoid. Otherwi
 					say "[BryonyGuard2]";
 				if (nam is "Offer to help stand guard again"):
 					say "[BryonyGuard3]";
-		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You excuse yourself and step back from Bryony.";
 				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You excuse yourself and step back from Bryony.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -433,13 +434,9 @@ to say BryonyTalkMenuImpure: [Runs when the player is not fully black equinoid]
 				wait for any key;
 				say "[BryonyTalkMenuImpure]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from Bryony, shaking your head slightly as she narrows her eyes at you.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from Bryony, shaking your head slightly as she narrows her eyes at you.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

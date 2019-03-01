@@ -3,6 +3,10 @@ Version 2 of Toy Store by Song begins here.
 [ Version 2 - Full rewrite of event. Dys contributed heavily, writing up most of the sex scene on defeat/submission ]
 [ - This creature was originally created by Hellerhound and has since been relocated to Song's folder after substantial overhauls - ]
 
+Table of GameEventIDs (continued)
+Object	Name
+Toy Store	"Toy Store"
+
 Toy Store is a situation. The level of Toy Store is 1.
 when play begins:
 	add Toy Store to badspots of guy;
@@ -13,9 +17,9 @@ toystoreoverride is a truth state that varies. toystoreoverride is usually false
 
 instead of resolving a toy store:
 	setmonster "Latex Fox";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now non-infectious entry is true;
-	say "     During your travels, you come across [if toystoreseen is true]the abandoned toy store again[else]an old-fashioned toy store[end if]. The building is surprisingly intact, standing in stark contrast to the ruins that surround it. A pair of curtains has been drawn together behind the windows, making it difficult to see what's inside. [if toystoreseen is true]Unfortunately, you still see some movement inside the store, suggesting that whoever was here last has made it their home[else]As you approach, you catch a flash of a orange through a gap in the fabric, and you immediately stop yourself to think this through[end if].";
+	say "     During your travels, you come across [if toystoreseen is true]the abandoned toy store again[else]an old-fashioned toy store[end if]. The building is surprisingly intact, standing in stark contrast to the ruins that surround it. A pair of curtains has been drawn together behind the windows, making it difficult to see what's inside. [if toystoreseen is true]Unfortunately, you still see some movement inside the store, suggesting that whoever was here last has made it their home[else]As you approach, you catch a flash of orange through a gap in the fabric, and you immediately stop yourself to think this through[end if].";
 	say "     [bold type]Do you still wish to enter now that you know that someone - or something - is waiting inside the store?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You're confident that you can handle whatever is inside there. If you're lucky, you might even find something of use to you.";
@@ -42,6 +46,7 @@ instead of resolving a toy store:
 	else: [Leave the toy store. Allows returning to investigate again later]
 		say "     You're hesitant to enter given the movement inside and the way the curtains have been suspiciously drawn shut. What if the occupants are just waiting to ambush an unsuspecting visitor? Erring on the side of caution, you decide to leave the store alone - for now.";
 		now toystoreseen is true;
+		now Resolution of Toy Store is 99; [Saw Store, May Return Later]
 	now non-infectious entry is false; [Redundant check to clear prop for players who don't lose/submit]
 	WaitLineBreak; [Pause to ensure all content is fully seen before moving back to previous nav point]
 
@@ -59,17 +64,21 @@ to say toystorefight:
 	now inasituation is false; [reset]
 	if fightoutcome < 20: [player won]
 		say "[toystorewin]";
+		now Resolution of Toy Store is 1; [Won, Got Loot]
 	else if fightoutcome is 20: [health loss]
 		say "     While harmless individually, the sheer number of these twisted beings proves too much for your body to bear. You collapse on your knees, battered and bruised, the pungent scent of virility that suffuses the area infecting your mind. Groaning weakly, you're unable to protest when one of the rubbery canids laps at your face, then presses his long and shiny tongue into your mouth, curling around your own slick muscle before stuffing itself down your throat. Held in place by more of the smooth-skinned creatures, your feeble squirms of resistance gradually fade as your lungs are filled with a potent aphrodisiac that leaves you lightheaded and aroused. The heady aroma makes it difficult to focus on anything but the pleasure of their smooth, featureless paws and bestial red cocks rubbing against you. Eventually succumbing to your fate, you're pressed onto all fours by the eagerly awaiting foxes, the influence of their tainted breath leaving you aching to be filled.";
 		WaitLineBreak;
 		say "[toystoreloss]";
+		now Resolution of Toy Store is 2; [Lost Fight]
 	else if fightoutcome is 21 or fightoutcome is 22: [libido or submission loss]
 		say "     Your libido getting the better of you, you [if weapon object of player is journal]lower your fists[else]lay down your arms[end if] and kneel between the fray of horny vulpines. You pull one of them close to share a deep and hungry kiss, his tongue entwining with your own before sliding down your throat. His breath fills your lungs with a potent aphrodisiac that leaves you lightheaded and aroused, the heady aroma making it difficult to focus on anything but the pleasure of their smooth, featureless paws and bestial red cocks rubbing against you. Your own desires are only amplified by the chemicals lacing your breath, and you're panting hotly by the time the fox pulls away again. With the last thought of resistance erased from your mind, you lower yourself onto all fours, eager to be used.";
 		WaitLineBreak;
 		say "[toystoreloss]";
+		now Resolution of Toy Store is 3; [Submitted to Latex Foxes]
 	else if fightoutcome is 30: [fled]
 		say "     Swarmed by the creatures, you see no other option but to flee before they beat you down. You shake the fox gnawing on your leg off and turn tail, weaving past their quadrupedal bodies as you run out of the store. Several of them continue to pursue you for nearly half a block before skidding to an abrupt halt, not wishing to stray too far from the safety of their territory. Shiny tails swishing with agitation, the cartoony critters yap their contempt for you and return to the toy shop.";
 		say "     Once you've set some more distance between yourself and the den, you bend over to catch your breath, your lungs still filled with lingering scent of rubbery sex. While the encounter could have gone better, you've at least managed to escape with your mind and body intact. You make a mental note to avoid this area in the future and continue on your way.";
+		now Resolution of Toy Store is 4; [Fled]
 	now Toy Store is resolved;
 	now toystoreoverride is false; [resumes normal win/loss scenes after the event]
 
@@ -111,7 +120,7 @@ to say toystoreloss:
 		say "     Eventually, his knot shrinks enough for him to pull out, his cum-slick cocks prying free with a loud squelch while a cascade of cool, rubbery semen flows down your chin. The rest of the males in the room don't give you much of a chance to recover, another soon stuffing your mouth. You're subjected to this ritual over and over again, countless canids using you for their pleasure, [if player is male]bringing you to myriad mind-rending climaxes and [end if]slightly bloating your form with their seed. Eventually, you feel your consciousness slipping away, and everything fades to black.";
 		say "     When you come to, the twisted creatures are gone, leaving you lying alone in a pool of their cum, your stomach still swollen from all the latex seed they pumped into you. You can't help but lick your lips, your body still trembling in the aftershocks of pleasure.";
 	setmonster "Latex Fox"; [Redundant code here because Inform throws a fit otherwise!]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now non-infectious entry is false; [Allows the fox to infect again]
 	infect "Latex Fox";
 	infect "Latex Fox";

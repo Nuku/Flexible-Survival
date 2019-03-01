@@ -91,7 +91,7 @@ Section - Processing hyperlinks
 
 The hyperlink processing rules are a rulebook.
 
-The current hyperlink ID is a number that varies.
+The current hyperlink ID is a number that varies.[@Tag:NotSaved]
 
 
 Section - Selecting replacement command

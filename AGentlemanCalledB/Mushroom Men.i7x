@@ -5,7 +5,7 @@ Section 1 - Monster Responses
 
 MMC is a number that varies.
 MMP is a number that varies.
-SporeCloud is a number that varies. SporeCloud is usually 0.
+SporeCloud is a number that varies.[@Tag:NotSaved] SporeCloud is usually 0.
 
 when play begins:
 	add { "Mushroom Men" } to infections of guy;
@@ -37,18 +37,18 @@ to say MushroomMenFaceTF:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Mushroom Man"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "Mushroom Men";
 	now enemy name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
-	now attack entry is "[one of]The group cheers as several of their members run out towards you, shouting lewd comments and offers as they strikes at your lower body.[or]Several of the larger mushrooms grab one of their smaller brethren and toss him at you. [']How [']bout a kiss hun?['] shouts the flying mushroom man, just before he bounces off your face.[or]Several of the larger mushrooms grab one of the smaller members of their group and fling him at you, much to his disapproval. He makes several rude comments and gestures at his brethren as he flies through the air before bouncing off the top of your head.[or][']Why don't you let us show you a good time hot stuff?['] one of the mushrooms asks with a smirk, before several of them leap out of the pack and grab onto your legs, pinching and squeezing you wherever they can.[or]There is a sharp wolf whistle behind you, and you realize some of the group have split off to flank you. Before you have a chance to react several fungi from each group are launched into the air towards you. While most of them miss their target, one lands safely on your shoulder, grabbing your face and pulling you into a rough kiss before you can shake him off.[at random]"; [ Successful attack message ]
+	now attack entry is "[one of]The group cheers as several of their members run out towards you, shouting lewd comments and offers as they strikes at your lower body.[or]Several of the larger mushrooms grab one of their smaller brethren and toss him at you. 'How [']bout a kiss, hun?' shouts the flying mushroom man, just before he bounces off your face.[or]Several of the larger mushrooms grab one of the smaller members of their group and fling him at you, much to his disapproval. He makes several rude comments and gestures at his brethren as he flies through the air before bouncing off the top of your head.[or]'Why don't you let us show you a good time, hot stuff?' one of the mushrooms asks with a smirk, before several of them leap out of the pack and grab onto your legs, pinching and squeezing you wherever they can.[or]There is a sharp wolf whistle behind you, and you realize some of the group have split off to flank you. Before you have a chance to react several fungi from each group are launched into the air towards you. While most of them miss their target, one lands safely on your shoulder, grabbing your face and pulling you into a rough kiss before you can shake him off.[at random]"; [ Successful attack message ]
 	now defeated entry is "[beattheMushroomMen]"; [ Text when monster loses. ]
 	now victory entry is "[losetoMushroomMen]"; [ Text when monster wins. ]
 	now desc entry is "[MushroomMendesc]"; [ Description of the creature when you encounter it. ]
@@ -91,8 +91,9 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "MushroomMen"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Section 3 - Alt Combat
 
@@ -101,7 +102,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "MushroomMen"	retaliation rule	--	--	swarmattack rule	15	--	--	--	sporecloud rule	--
 
 this is the swarmattack rule:		[damage bonus based on remaining health]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let basicdam be ( wdam entry * a random number between ( 80 - ( peppereyes * 4 ) ) and 120 ) / 100;
 	let dam be basicdam;
 	let basicdam be ( basicdam * monsterHP ) / HP entry;
@@ -121,8 +122,8 @@ this is the swarmattack rule:		[damage bonus based on remaining health]
 	follow the player injury rule;
 	say "You are [descr].";
 
-this is the sporecloud rule:      [Spore aura following spore blast attack]
-	choose row monster from table of random critters;
+this is the sporecloud rule: [Spore aura following spore blast attack]
+	choose row monster from Table of Random Critters;
 	if SporeCloud is 0 and a random chance of 1 in 5 succeeds:
 		say "     As the [name entry] continue fighting their excited movements begin releasing fungal spores into the air!";
 		increase SporeCloud by a random number between 1 and 3;

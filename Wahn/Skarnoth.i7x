@@ -1,7 +1,7 @@
 Version 1 of Skarnoth by Wahn begins here.
 [Version 1 - New Creature]
 
-"Adds a demon npc to Flexible Survival, entering the game as an aftermath of freeing Elijah and a quest line"
+"Adds a demon NPC to Flexible Survival, entering the game as an aftermath of freeing Elijah and a quest line"
 
 [ Skarnoth, the demon                                                                      ]
 [                                                                                          ]
@@ -23,9 +23,11 @@ Version 1 of Skarnoth by Wahn begins here.
 
 Section 1 - Description
 
+Table of GameCharacterIDs (continued)
+object	name
+Skarnoth	"Skarnoth"
+
 Skarnoth is a man. The HP of Skarnoth is usually 0.
-Skarnoth has a list of text called Traits.
-Skarnoth has a number called Loyalty.
 The description of Skarnoth is "[SkarnothDesc]".
 The conversation of Skarnoth is { "Woof." }.
 SkarnothLibraryEntry is a number that varies. [when he was brought in]
@@ -33,8 +35,11 @@ SkarnothLibraryEntry is a number that varies. [when he was brought in]
 to say SkarnothDesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Skarnoth], LEVEL: [level of Skarnoth], LIBIDO: [libido of Skarnoth], LIBRARY ENTRY TURN: [SkarnothLibraryEntry] <- DEBUG[line break]";
-	project the figure of Skarnoth_undies_icon;
-	say "     Skarnoth the demon prince is a magnificent specimen of masculinity, with a strikingly handsome face framed by blood-red hair. His firm pecs and six-pack abs would fit an underwear model - which he kind of is, as you stripped him of his regalia, taking off anything but a skin-tight black thong. The strip of fabric does more to show off the bulge of his package than to conceal anything.";
+	if SkarnothThongStatus is 1:
+		project the figure of Skarnoth_naked_icon;
+	else:
+		project the figure of Skarnoth_undies_icon;
+	say "     Skarnoth the demon prince is a magnificent specimen of masculinity, with a strikingly handsome face framed by blood-red hair. His firm pecs and six-pack abs would fit an underwear model - which he kind of is, as you stripped him of his regalia, [if SkarnothThongStatus is 1]as well as destroying his trademark black thong. The sight of the demon's thick uncut cock swaying back and forth, with his full balls hanging underneath, is a definite improvement in your book[else]taking off anything but a skin-tight black thong. The strip of fabric does more to show off the bulge of his package than to conceal anything[end if].";
 	say "     Letting your gaze stray from the flawless, reddish skin of the demon's torso, his similarity to the perfection a Greek statue does diminish a bit - as Skarnoth's otherworldly nature shows clearly on the rest of his body. Starting with a few small scales on the sides of his upper body, then larger and more solid ones on his hips and down the legs, the infernal being has overlapping, flexible scales. His feet bear sharp claws, as do the hands (if a bit smaller ones), and further scale-plates make it appear like he is wearing elaborate bracers as well as pauldrons to cover his shoulders. Also, he has a long tail with a ridge of scales running down the backside, ending in a spaded tip. A pair of large horns curving up from his head completes the image of a handsome and dangerous predator.";
 
 The scent of Skarnoth is "     Skarnoth has an almost entrancing, sexy scent. A pleasant tingle runs down your spine as you take a deep sniff, breathing in the masculine aroma and pheromones, underlain with a little bit of brimstone".
@@ -45,7 +50,7 @@ instead of conversing the Skarnoth:
 	if (HP of Skarnoth > 0):
 		say "[SkarnothTalkMenu]";
 	else:
-		say "ERROR-Skarnoth-[HP of Skarnoth]C: He isn't in one of the states she should be in! Please report how you got to this message.";
+		say "ERROR-Skarnoth-[HP of Skarnoth]C: He isn't in one of the states he should be in! Please report how you got to this message.";
 
 to say SkarnothTalkMenu:
 	say "     What do you want to talk to Skarnoth about?";
@@ -84,13 +89,9 @@ to say SkarnothTalkMenu:
 					say "[SkarnothTalk20]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if the player consents:
-				now sextablerun is 1;
-				say "     You step back from the demonic prince, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the demonic prince, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -102,14 +103,14 @@ Section 3 - Sex
 
 Instead of fucking the Skarnoth:
 	say "     As you approach the handsome demon, he [one of]leans back in his high-backed chair and hooks a leg over one of its armrests, pushing up his crotch for you to look at[or]gives you a lewd grin and runs a finger along his rippling chest muscles, all the way down to his navel[or]smiles at you lewdly and pushes his tongue out, demonstrating quite a range of flexibility with it[or]beckons you closer with slow, sensual motions of his tail[or]raises both arms and hooks his fingers together behind his head, stretching his muscles in an enticing show of masculinity[at random]. 'What brings you here master,' Skarnoth greets you with a teasing tone, 'Do you want to teach this evil-doer to be a productive member of society, happy to be introduced to a better way? No... I don't think so - not with that lusty gleam in your eyes. So - punishment it is then, eh? Show me what a bad, bad boy I've been!'";
-	say "     Laughing in amusement, he proceeds to lightly slap a hand against one of his rock-hard pecs, then abs, followed by sliding it down to the black thong barely concealing his sizable manhood. Stretching the flexible fabric to hook it under his balls, the demon prince reveals his thick and throbbing cock and strokes it slowly up and down. With a wink to you, he adds, 'And if you feel like getting a little taste of the forbidden fruit, I'm definitively your man. Come on - you won, so live a little. No one's gonna hold it against you if you crave a nice thick demon cock. I won't tell anyone, I promise.' Skarnoth's sharp canines almost seem to gleam as he smiles broadly after saying that, wiggling his eyebrows at you.";
+	say "     Laughing in amusement, he proceeds to lightly slap a hand against one of his rock-hard pecs, then abs, followed by sliding it down [if SkarnothThongStatus is 1]and eventually rubbing his bare cock and balls, making an enticing show of it for your viewing. The demon begins to get hard and plays with[else]to the black thong barely concealing his sizable manhood. Stretching the flexible fabric to hook it under his balls, the demon prince reveals[end if] his thick and throbbing cock and strokes it slowly up and down. With a wink to you, he adds, 'And if you feel like getting a little taste of the forbidden fruit, I'm definitively your man. Come on - you won, so live a little. No one's gonna hold it against you if you crave a nice thick demon cock. I won't tell anyone, I promise.' Skarnoth's sharp canines almost seem to gleam as he smiles broadly after saying that, wiggling his eyebrows at you.";
 	wait for any key;
 	say "[SkarnothSexMenu]";
 
 to say SkarnothSexMenu:
 	project the figure of Skarnoth_naked_icon;
 	setmonster "Demon Prince";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -147,6 +148,12 @@ to say SkarnothSexMenu:
 		now sortorder entry is 6;
 		now description entry is "Fill the demon's ass with your cock";
 	[]
+	if SkarnothMasterSlave is 2:
+		choose a blank row in table of fucking options;
+		now title entry is "Spank Skarnoth's ass";
+		now sortorder entry is 7;
+		now description entry is "Spank your demonic slut";
+	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -174,15 +181,13 @@ to say SkarnothSexMenu:
 					say "[SkarnothSex5]";
 				else if (nam is "Take Skarnoth's ass"):
 					say "[SkarnothSex6]";
+				else if (nam is "Spank Skarnoth's ass"):
+					say "[SkarnothSex7]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the chained demon, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the chained demon, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -269,6 +274,26 @@ to say SkarnothSex6: [Skarnoth's ass fucked]
 		if Loyalty of Skarnoth > 1 and Loyalty of Skarnoth < 10:
 			decrease Loyalty of Skarnoth by 1;
 
+to say SkarnothSex7: [Spank Skarnoth's ass]
+	say "     Note: Once Skarnoth's Master/Slave chain is completed this sex option will be added to sub slave Skarnoth's sex menu instead of default slave Skarnoth.";
+	say "     Walking up to the demon prince's chair, you grab ahold of one of Skarnoth's massive horns, using it to pull him out of his seat and toss him to the ground. Looking down at the once proud hell lord that has since been reduced to a [if SkarnothDrugStatus is 2]lust-drugged[else]meek, submissive[end if] slut, you can't help the [if SkarnothDrugStatus is 2]cruel[else]proud[end if] smile that stretches across your face at the thought that you not only enslaved, but also [if SkarnothDrugStatus is 2]shattered the mind of[else]broke[end if] such a powerful being. You take in the demon's form laying across the floor, his [if SkarnothDrugStatus is 2]sweaty chest and crazed eyes[else]chest heaving and pleading eyes[end if] looking up into your own, not exactly sure of what you have planned for him. You take a seat on his [']throne['] and make yourself comfortable. Beckoning your slave closer, you are pleased to see him start to crawl over to you seductively, his tan bubbly ass high in the air and his head low, all while his body sways side to side.";
+	say "     Once Skarnoth is directly in front of you, you glance down between your spread legs to see the demon's brimstone-colored eyes looking up at you in [if SkarnothDrugStatus is 2]heat[else]need[end if], his long lashes and crimson mane accentuating his dark features. A soft pat on your leg is all it takes to get the large man to [if SkarnothDrugStatus is 2]scurry with haste[else]gently climb[end if] across your lap. Finally in place, you allow your hands to caress the soft skin of his back and rump, feeling his powerful muscles flex under your fingertips. [if SkarnothThongStatus is 1]Kneading his large ass makes you thankful that you had decided to destroy that worthless bit of cloth that he had covered himself with. A proper slave should always be at the whims of his [master] after all[else]Kneading his large ass, you hike his thong up even higher between his cheeks, allowing you even more access to the flesh of his meaty behind[end if]. Skarnoth's whole body is [if SkarnothDrugStatus is 2]shaking with desire, whether from just being this close to you or purely his need to fuck you're not sure which[else]practically vibrating with energy, whether from not knowing what you will do next or from the simple fact that you're paying attention to him you're not sure which[end if].";
+	WaitLineBreak;
+	if SkarnothDrugStatus is 2:
+		say "     While petting your horny fucktoy, you take hold of one of his horns and ask him if he was a good slut today. 'I'm always a good slut, [master]! I just wish that I could fuck everything that I could get my hands on, but I know better than to touch anyone without your permission, [master].' Reaching up, you take hold of his fiery mane, pulling it back towards you, not enough to hurt the greedy little slut, but definitely enough to let him know that you're in charge. You explain to the lust-addicted demon that it's good for him to know his place, but also comment on the fact that he makes it sound like you aren't enough to satisfy his urges. Skarnoth's whole body goes rigid with what you can only assume is fear at displeasing his [master].";
+		say "     'No, [master], you take care of my slutty needs perfectly. I'm not worthy of the attention that you place on me!' With a cruel smile forming on your lips, you tell your slave that he's right, he isn't worthy of you. Your hand comes down quickly, spanking the demonic slut's [if SkarnothThongStatus is 1]bare ass[else]thong-covered ass[end if] full force. Where most would be howling in pain, your pet instead simply moans and shakes with each hit. Even from the angle you are at, you can see that his eyes have rolled up inside of his head, and a thin line of drool is leaking from his mouth. Deciding to take a short break, you check your handiwork only to find that the demon's bubbly tan ass is completely red with marks in the shape of your hand.";
+		WaitLineBreak;
+		say "     While your pet pants like a bitch in heat, his whole body spasms in an attempt to deal with the overload of pleasure that he is experiencing. An idea enters your mind while looking down at the sweaty back of the man across your lap. Reaching up, you caress his huge horns, which sort of remind you of a bull's. Feeling a bit playful, you squeeze your hand in-between his pecs, feeling the firm yet soft flesh under your fingers as you begin to massage his chest with earnest. This brings further groans from Skarnoth's mouth, '[master], that feels so good and relaxing. Please, don't stop!' In all honesty, you hadn't planned on stopping, but you can't have your fucktoy thinking that he is calling the shots around here.";
+		say "     Rather than the gentle manhandling from before, you instead begin to pinch his nipples, causing them to harden, and making squeals erupt from your slave. You can't tell if that means that he is enjoying it or not, but you certainly are. Leaning closer to the lust-drugged slut's ear, you whisper to him, asking him if he's sure that he was a [']demonic prince['] because his actions make him seem more like he is just a big [']demonic bull[']. His face turns red either from shame or excitement. '[master], I will be whatever you want me to! I could be a good cow for you. I can't make milk for you, but I can act like livestock if you want me to.' You can already feel the dampness from his cock on your lap, and you mention to him that it seems he can be milked after all.";
+		WaitLineBreak;
+		say "     Pushing the demon off of you, he limply rolls onto the ground, leaving you sitting in his chair with your lap completely soaked in his own special version of [']milk[']. Standing up, you attempt to clean yourself up as best you can and make your way to leave, however before you get more than a few steps, you look back towards the moaning demon. While you do enjoy milking the slut through his cock, it could be fun to also milk his muscled man-tits. You would just have to figure out a way to get that to work. On the plus side, if you could do it, then your little cumdump could also be a source of sustenance for yourself and possibly your allies. A surge of desire shoots through your body as you continue to make your way out of the room and back out into the city.";
+	else:
+		say "     While petting him, you ask whether he's been a good boy or a bad one lately. 'I always try to be good for you, [master], I really do, but sometimes I can't help but break the rules.' Your hand slows its ministrations, and you tell him to explain himself. 'Well, I know that I belong to you, and I'm thankful that you're the one that owns me, but sometimes, my darkest desires get the better of me. Now that I can leave my room, I see the others that you have recruited, and I can't help but want to push them to the edge, making them fantasize about me. Sometimes, I will purposely show off my [if SkarnothThongStatus is 1]naked body[else]body[end if] just to make them look, to see that heat in their eyes. [master], I think that your other slaves like what they see and wanna consume my sin, does that please you?'";
+		say "     You squeeze his muscled ass and explain to him that it's only natural for a slut to wanna show off. He just has to remember that [']you're['] the one that decides who or what he fucks and when. You finish your thought with a quick but playful smack to his behind. 'Oh, [master]! More! I need more!' You can't help but snicker at your slave's enthusiasm and deliver a few more well-placed swats to his ass. You demand that he explains exactly what he would do if he could. 'I would turn this entire building into a place of lustful worship for you. [master], you wouldn't believe it, but some of your other fuck slaves don't even realize that you own them! I would change that. I would get inside of their heads and corrupt them, shatter their minds until they understand what their true purpose is!'";
+		WaitLineBreak;
+		say "     You can feel yourself becoming excited by the prospect of using your slave to corrupt and dominate the other residents of the library, and judging by the erection that you can feel digging into your thigh, so does your pet. You begin to spank Skarnoth with more intensity, pushing him closer to the edge as a reward for being such a good toy. '[master], please, just give the order, and I will break them all. Screw their feelings and emotions! I will make them all into your own living fuck dolls!' Bending the demon over further causes his ass to spread open a bit, allowing your hits to nail him right on his [if SkarnothThongStatus is 1]hole[else]cloth-covered hole[end if], tearing a shriek of ecstasy from his throat.";
+		say "     The demon's whole body goes rigid, and you can feel the wet spot from his release spreading over your lap. Moving to get up, the demon at this point is acting very similar to a large puppy and gets off of you lazily before reclaiming his seat to rest and recharge his energy. As you get ready to head out, you hear a mumbled, 'I will conquer this world for you, [master].' A smile makes its way to your mouth as you take your leave, allowing your slave to get some rest.";
+
 Section 4 - Events
 
 instead of going northwest from Grey Abbey Library while (HP of Skarnoth > 1):
@@ -279,12 +304,12 @@ instead of going northwest from Grey Abbey Library while (HP of Skarnoth > 1):
 
 Section 5 - Infection for combat purposes
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Demon Prince";
 	now enemy title entry is "";
 	now enemy name entry is "Skarnoth";
@@ -313,7 +338,7 @@ When Play begins:
 	now HP entry is 275;
 	now lev entry is 20;               [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 35;              [ Monster's average damage when attacking. ]
-	now area entry is "nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere";       [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1;              [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16;       [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 9;         [ Cock width, more commonly used for ball size. ]
@@ -332,8 +357,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Demon Slave":

@@ -23,17 +23,47 @@ Karen by AGentlemanCalledB begins here.
 [ 7 = Met Francois, locker event opened                                         ]
 [ 8 = Completed locker event                                                    ]
 
+[ Libido of Karen - last turn fucked by Rex                                     ]
+
 Section 1 - Karen as a pet/NPC
 
-KarenTimer is a number that Varies.
+Libido of Karen is usually 10000.
 
 the linkaction of Karen is "[Karenlinkaction]".
 
 to say Karenlinkaction:
 	say "Possible Actions: [link]talk[as]talk Karen[end link], [link]smell[as]smell Karen[end link], [link]fuck[as]fuck Karen[end link][line break]";
 
+Table of GameCharacterIDs (continued)
+object	name
+Retriever Girl	"Retriever Girl"
+
 Retriever Girl is a pet. Retriever Girl is a part of the player.
 understand "Karen" as Retriever Girl.
+[Physical details as of game start]
+ScaleValue of Retriever Girl is 3. [human sized]
+SleepRhythm of Retriever Girl is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Retriever Girl is 0. [No cock]
+Cock Length of Retriever Girl is 0. [ ]
+Cock Width of Retriever Girl is 0. [  ]
+Testes of Retriever Girl is 0. [No balls]
+Cunts of Retriever Girl is 1. [No pussy]
+Cunt Length of Retriever Girl is 10. [No Cunt]
+Cunt Width of Retriever Girl is 2. [No Cunt]
+Breasts of Retriever Girl is 4. [4 nipples]
+Breast Size of Retriever Girl is 2. [B Cup at the start]
+[Basic Interaction states as of game start]
+PlayerMet of Retriever Girl is false.
+PlayerRomanced of Retriever Girl is false.
+PlayerFriended of Retriever Girl is false.
+PlayerControlled of Retriever Girl is false.
+PlayerFucked of Retriever Girl is false.
+OralVirgin of Retriever Girl is false.
+Virgin of Retriever Girl is false.
+AnalVirgin of Retriever Girl is true.
+PenileVirgin of Retriever Girl is true.
+SexuallyExperienced of Retriever Girl is true.
+MainInfection of Retriever Girl is "Retriever".
 The description of Retriever Girl is "[KarenDesc]".
 The weapon damage of Retriever Girl is 7.
 The level of Retriever Girl is 5.
@@ -44,7 +74,7 @@ The assault of Retriever Girl is "[one of]Stepping forward quickly, [or]Circling
 the fuckscene of Retriever Girl is "[SexWithKaren]".
 
 to say SummonKaren:
-	remove Karen from play;
+	now Karen is nowhere;
 	if player is in Breakroom and Karen is in Breakroom: [summoning while standing next to her]
 		say "     ...";
 	else: [regular summoning]
@@ -56,6 +86,10 @@ to say DismissKaren:
 		say "     Telling Karen that you're going to go forward solo she quickly nods and starts to run back towards the library on all fours.";
 	else: [dismissing her in the abbey]
 		say "     ...";
+
+Table of GameCharacterIDs (continued)
+object	name
+Karen	"Karen"
 
 Karen is a woman.
 The description of Karen is "[KarenDesc]".
@@ -128,13 +162,9 @@ to say KarenTalkMenu:
 					say "[KarenTalk1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the Retriever Girl, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the Retriever Girl, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -149,8 +179,8 @@ to say KarenTalk1:
 		else:
 			say "     [one of]Karen is far too busy playing with Rex on the floor to talk right now.[or]Karen is sitting on the floor in front of Rex, begging for the treat he has suspended above her head, clearly she's far too focused on Rex and the cookie to talk right now.[or]'I'm so glad that bone brought me back here to Rex, and you're pretty lucky it brought you here to him too!' Karen says with a smile.[or]'Are you sure you don't want to stay here with us?' Karen asks with a cute pout.[or]Karen barely acknowledges you as you approach, apparently not interested in conversation while cleaning herself up after her latest escapade with Rex.[or]Karen smiles up at you as she eats from a small pink dog bowl, offering you a taste before she digs back in.[at random]";
 	else if companion of player is Retriever Girl or Karen is in Breakroom:
-		if HP of Karen is 5 and ( KarenTimer - turns > 8 ):
-			say "     Noticing Karen looking a little down, you ask her what's on her mind. 'It's been a while now since we got away from Rex, but I still can't remember much of who I was before I met him. It's a little bit frightening, not knowing who you are,' she says, clearly struggling to keep her emotions in check. Recalling that François seemed to remember her from before the outbreak, you suggest going to see him. Karen perks up a little at the suggestion. 'Really? Do you think he would help? I suppose it couldn't hurt,' she replies with a weak smile. 'It'll be nice to see another friendly face, at least.'";
+		if HP of Karen is 5 and ( Libido of Karen - turns > 8 ):
+			say "     Noticing Karen looking a little down, you ask her what's on her mind. 'It's been a while now since we got away from Rex, but I still can't remember much of who I was before I met him. It's a little bit frightening, not knowing who you are,' she says, clearly struggling to keep her emotions in check. Recalling that Francois seemed to remember her from before the outbreak, you suggest going to see him. Karen perks up a little at the suggestion. 'Really? Do you think he would help? I suppose it couldn't hurt,' she replies with a weak smile. 'It'll be nice to see another friendly face, at least.'";
 			now HP of Karen is 6;
 		else:
 			say " 	 [one of]'Thanks again for bringing me with you. I feel so much safer with you around.'[or]'It's nice to be able to think clearly again, but I'm still having trouble remembering much of my old life.'[or]'I hope Rex isn't out causing trouble for someone else now that he doesn't have me keeping him occupied.'[or]'I still feel that need welling up inside me occasionally... promise me you won't let me give in to it again, ok?'[at random]";
@@ -178,8 +208,17 @@ to say SexWithKaren:
 
 Section 2- Karen Quest
 
-Forgotten Past is a situation. Forgotten Past is Resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Forgotten Past	"Forgotten Past"
+
+Forgotten Past is a situation.
+Forgotten Past is inactive. [Disabled for reactivation after the player talked to Francois]
 The sarea of Forgotten Past is "Campus".
+
+an everyturn rule:
+	if Forgotten Past is inactive and HP of Karen > 6 and HP of Karen < 100:
+		now Forgotten Past is active;
 
 Instead of resolving a Forgotten Past:
 	if HP of Karen is 7 and companion of player is Retriever Girl:

@@ -4,26 +4,35 @@ Version 2 of Power Plant by Hellerhound begins here.
 
 [Include Computers by Hellerhound.]
 
+Table of GameEventIDs (continued)
+Object	Name
+Ravaged Power Plant	"Ravaged Power Plant"
 
-Ravaged power plant is a situation.
+Ravaged Power Plant is a situation.
 
 instead of resolving a Ravaged Power Plant:
-	say "On your walk, you pass a building that was the power station for the city. Now it is dark and silent, and a large hole is smashed through one of the generators. Claw marks cover the floor and walls, and liquids of every kind litter the floor. The fence is also damaged, a large chunk flattened by some large creature that passed by.";
+	say "     On your walk, you pass a building that was the power station for the city. Now it is dark and silent, and a large hole is smashed through one of the generators. Claw marks cover the floor and walls, and liquids of every kind litter the floor. The fence is also damaged, a large chunk flattened by some large creature that passed by.";
 	now Plant Overview is known;
-	say "The power plant lobby is nearby, maybe you could return?";
-	now ravaged power plant is resolved;
+	say "     The power plant lobby is nearby, maybe you could return?";
+	now Ravaged Power Plant is resolved;
 
 foundparts is a number that varies.
+
+Table of GameEventIDs (continued)
+Object	Name
+Generator Parts	"Generator Parts"
 
 Generator Parts is a situation.
 
 instead of resolving a Generator Parts:
 	if foundparts is 0:
-		say "A pile of metal lies in your way. It looks useful, maybe there is a generator that these could fix?";
+		say "     You find a small pile of what looks to be parts of a machine. Or quite a few machines actually. There are dozens and dozens of spark plugs in it, as well as some small circuit boards and various other bits that are harder to identify. Some parts have US Army Part ID numbers engraved on their sides, so they were removed from military equipment. It seems that someone is going around ripping essential parts out of any motor and generator they can find. This must be hindering recovery efforts quite a bit, with how dependent civilization is on electricity. Sadly, you have no idea where this all came from, so even if you took some bits, there is little chance it would be of any use.";
 		now foundparts is 1;
+		now Resolution of Generator Parts is 1; [found the pile]
 	else if foundparts is 1:
-		say "You find the pile again, but with new additions. They look essential for operation. You take them, and wonder where the generator is that these were stolen from?";
-		now generator parts is resolved;
+		say "     You find the pile of gear again and see that it has grown further. Inspecting the collection of spark plugs, metal parts and electronic components, you spot some circuit boards that are ochre in color and seem fairly old. A closer look reveals the inscription 'West Hills Power Plant' on them, which tells you where these belong at least. Just in case they could provide useful if your path brings you to the power plant, you pack the small pieces of electronics in your backpack.";
+		now Generator Parts is resolved;
+		now Resolution of Generator Parts is 2; [grabbed the power plant chips]
 		now foundparts is 2;
 		now fixedgens is 1;
 
@@ -37,21 +46,40 @@ the scent of Plant Overview is "There is a faint scent of smoke coming from the 
 the scent of Cat Walk is "The sulfurous scent of the lava rises up to mix with the scent of ozone and machinery up here.".
 
 Broken Fence is a door. "Though the shattered remnants of the main entrance, you see a flattened fence and gate to the east, allowing easy access to and from the inner city.".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Plant Lobby	"Plant Lobby"
+
 Plant Lobby is a room. "Claw marks cover the floor here, and small puddles of what seem to be seed litter the floor. The receptionist desk is upturned, and smashed into small splinters. The whole area is also blackened, like a fire ran through here. An intact, but blackened, flight of stairs in the back leads up to the control room.".
 The earea of Plant Lobby is "Outside".
 Plant Lobby is west of Broken Fence.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Wandering Around	"Wandering Around"
+
+Wandering Around is a room.
 Broken Fence is west of Wandering Around.
 Broken Fence is dangerous.
 The marea of Broken Fence is "Outside".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Plant Overview	"Plant Overview"
 
 Plant Overview is a room. It is fasttravel. "The city's main power plant rises before you, a great accomplishment of geothermal engineering. Though it seems that someone - or rather something - went on a rampage here. The outside walls of the huge structure are burnt and blackened in arcs and spots, as if someone spent a while going at it with a flamethrower. On the long side of the building, a massive rend in the wall allows entry to the inside - for those who have no problem walking through the bubbling pit of lava in front of it at least. You on the other hand will have to use the side entrance of the administration annex to the north if you want to explore the power plant.".
 Plant Overview is south of Plant Lobby.
 the earea of Plant Overview is "Outside".
 
-control room is a room. "The control room overlooks the plant's generators. Surprisingly, this room is intact, and you wonder why no monsters ever got in. The walls are covered with control panels and there is a whole bank of control stations in front of the windows. A door in the west wall leads out on a catwalk going from generator to generator. There is power here, and the panels glow softly. Looking out into the main hall of the power plant, you see that the generators are in miserable condition, most are smashed, and several are half-melted and covered in what looks like lava. However, one appears to be in working condition, near the middle.".
-control room is up from Plant Lobby.
+Table of GameRoomIDs (continued)
+Object	Name
+Control Room	"Control Room"
 
-control panels is a thing. a control panels is in Control Room.
+Control Room is a room. "The Control Room overlooks the plant's generators. Surprisingly, this room is intact, and you wonder why no monsters ever got in. The walls are covered with control panels and there is a whole bank of control stations in front of the windows. A door in the west wall leads out on a catwalk going from generator to generator. There is power here, and the panels glow softly. Looking out into the main hall of the power plant, you see that the generators are in miserable condition, most are smashed, and several are half-melted and covered in what looks like lava. However, one appears to be in working condition, near the middle.".
+Control Room is above Plant Lobby.
+
+control panels is a thing. A control panels is in Control Room.
 The description of control panels is "[ControlPanelDesc]".
 
 to say ControlPanelDesc:
@@ -79,6 +107,10 @@ The effectiveness of yellow helmet is 55.
 The placement of yellow helmet is "face".
 The descmod of yellow helmet is "A yellow protective helmet rests atop them, bearing the word 'Supervisor' on the front.".
 The slot of yellow helmet is "head".
+
+Table of GameRoomIDs (continued)
+Object	Name
+Administration Offices	"Administration Offices"
 
 Administration Offices is a room. Administration Offices is north of Plant Lobby.
 The description of Administration Offices is "There isn't much left of the corridor and adjoining offices that formed the administration of the power plant. Looks like some sort of pyromaniac scattered papers and trashed furniture all throughout and set them ablaze. Thankfully the automatic sprinklers seem to have worked and stopped the whole building from burning down.".
@@ -110,8 +142,13 @@ before opening Catwalk Door:
 		now Catwalk Door is unlocked;
 		say "The cat key unlocks the door. Seems like the manager here had a sense of humor.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Cat Walk	"Cat Walk"
+
 Cat Walk is a room. "The catwalk rises high above the floor next to the rows of large generators, allowing access to them for maintenance. It's pretty warm in here - no wonder, with all the patches of lava still glowing red hot besides and on top of the busted generators. The floor is a metal grate, and thin metal pipes form the handrails. A nearby metal sign reads: Danger, electrocution hazard. You can reach the intact generator from here.[catwalkstuff]".
-West of Catwalk Door is Cat Walk.
+Cat Walk is west of Catwalk Door.
+
 to say catwalkstuff:
 	if fixedgens is 1:
 		say "The parts you found match this generator perfectly. You fix the generator, and the malfunction light on the generator turns green to show the generator could work. You wait with bated breath for it to work.";
@@ -152,9 +189,11 @@ carry out activating:
 	else if fixedgens is 1:
 		say "The malfunction light is on, and you have the missing parts. You'll have to go out on the catwalk to fix it.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Power Lines	"Power Lines"
 
-
-Power Lines is a room. "A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. Looking down the line of other still standing towers, you see the city's powerplant not too far away in one direction, and a part of the city you know pretty well in the other. The library is over there, and the mall as well. Maybe you could restore power to them if you [bold type]fixed[roman type] this tower.[else if fixedgens is 2]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. A red light is glows at its uppermost tip, signaling that there is power and it's flowing towards the closest part of the city - which should include the library as well as the mall.[else]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. The now unbroken lines should allow electricity to reach the nearby part of the city again, though you see that the red light at the uppermost tip of the tower is still off, showing that there is no power. Maybe you should check out the power plant again.[end if]".
+Power Lines is a room. "A large power line tower stands here[if findwires is not 2], but the top is broken off and on the ground. The surrounding fence is melted and charred, like something spat magma at it, and the bottom of the tower is scorched, but it still looks serviceable. Looking down the line of other still standing towers, you see the city's powerplant not too far away in one direction, and a part of the city you know pretty well in the other. The library is over there, and the mall as well. Maybe you could restore power to them if you [bold type]fixed[roman type] this tower[else if fixedgens is 2]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. A red light is glows at its uppermost tip, signaling that there is power and it's flowing towards the closest part of the city - which should include the library as well as the mall[else]. The perimeter fence is melted and the ground is blackened, but thankfully the tower is just as you left it, with the fixed top where it belongs. The now unbroken lines should allow electricity to reach the nearby part of the city again, though you see that the red light at the uppermost tip of the tower is still off, showing that there is no power. Maybe you should check out the power plant again[end if].".
 Power Lines is fasttravel.
 the earea of Power Lines is "Outside".
 

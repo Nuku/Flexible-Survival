@@ -11,7 +11,7 @@ Version 1 of Mall Community Center by Wahn begins here.
 [   0: not talked about it yet                               ]
 [   1: player knows about the 'other' projects               ]
 
-[ XP of FLorence (helping quests)                            ]
+[ XP of Florence (helping quests)                            ]
 [   0: never helped                                          ]
 [   1: helped once                                           ]
 [   2: helped twice                                          ]
@@ -22,13 +22,17 @@ Version 1 of Mall Community Center by Wahn begins here.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Free Handouts	"Free Handouts"
+
 Free Handouts is a situation.
 The sarea of Free Handouts is "Smith Haven".
 
 Instead of resolving a Free Handouts:
 	FreeHandoutsEvent;
 
-after going to Mall West Wing while (Free Handouts is not resolved):
+after going to Mall West Wing while (Free Handouts is active and Free Handouts is not resolved):
 	FreeHandoutsEvent;
 
 to FreeHandoutsEvent:
@@ -43,14 +47,23 @@ to FreeHandoutsEvent:
 
 Section 2 - Locations
 
-West of Mall West Wing is Haven Community Center.
+Table of GameRoomIDs (continued)
+Object	Name
+Haven Community Center	"Haven Community Center"
+
+Haven Community Center is a room.
+Haven Community Center is west of Mall West Wing.
 The description of Haven Community Center is "[HavenCCRoomDesc]".
 Haven Community Center is sleepsafe.
 
 to say HavenCCRoomDesc:
-	say "     The Haven Community Center fills the rooms of a former travel agency, its original purpose still recognizable by the many large and colorful pictures of tropical beaches, serene mountains, and vibrant cities. Yet where travel agents once sold their customers expensive trips all over the world, there are now groups of people, hanging out together, chatting, playing games, and also organizing supplies. One corner of the large office floor is sectioned off with a couple sheets, a sign reading 'Clinic' hung up next to it. Towards the north, you can see an open door with a sign on the wall that says, 'Accounting'. A large goo-person stands in it, blocking the way to a room beyond. Others of the aquanarine humanoids from time to time walk right through him, coming out to have a quiet word with one of the antelope sisters before returning into the back room. All of the goo people keep a respectful distance from anyone else in the center and even retreat when approached.";
+	say "     The Haven Community Center fills the rooms of a former travel agency, its original purpose still recognizable by the many large and colorful pictures of tropical beaches, serene mountains, and vibrant cities. Yet where travel agents once sold their customers expensive trips all over the world, there are now groups of people, hanging out together, chatting, playing games, and also organizing supplies. One corner of the large office floor is sectioned off with a couple sheets, a sign reading 'Clinic' hung up next to it. Towards the north, you can see an open door with a sign on the wall that says, 'Accounting'. A large goo-person stands in it, blocking the way to a room beyond. Others of the aquamarine humanoids from time to time walk right through him, coming out to have a quiet word with one of the antelope sisters before returning into the back room. All of the goo people keep a respectful distance from anyone else in the center and even retreat when approached.";
 
 Section 3 - Florence
+
+Table of GameCharacterIDs (continued)
+object	name
+Florence	"Florence"
 
 Florence is a woman. Florence is in Haven Community Center.
 The description of Florence is "[FlorenceDesc]".
@@ -148,13 +161,9 @@ to FlorenceTalkMenu:
 					say "[FlorenceTalk_ClinicVolunteer]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the petite antelope, shaking your head slightly as she gives you a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the petite antelope, shaking your head slightly as she gives you a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -224,14 +233,14 @@ to say FlorenceTalk_FluidDonation:
 			say "Invalid choice. Type [link]1[end link] to jerk into a condom, [link]2[end link] to ask her to jerk you off into a condom, [link]3[end link] to fuck her with a condom on, or [link]3[end link] to take things directly to the goo people.";
 	if calcnumber is 1:
 		LineBreak;
-		say "     As you tell her what you need, Florence gives you an evaluating look, then quickly collects a condom of suitable size from one of the storage tubs. Handing it to you with a smile, she guides you to the 'clinic' set up in one corner of the former travel agency. Drawing the flimsy curtains shut after you step into one of the examination areas, she leaves you to do your thing. Quickly sliding off your clothes, you pull out your [cock of player] shaft and unroll the condom over its length, then concentrate on an especially sexy image in your mind to jerk off to. Chuckling a little about pleasuring yourself for a good cause, you stroke and squeeze your manhood, quickly building up your arousal. It doesn't take all that long before some skillful self-pleasure brings the familiar feeling of tightness settling into your balls. Finishing yourself off with a burst of speed at the end, you let out a satisfied grund as your balls start to unload into the condom.";
-		say "     You watch in satisfaction as the reservoir section of the condom is filled with spurt after spurt of creamy cum, bulging out a little as more sprays into the receptable. Milking your cock to make sure as much cum as possible ends up in the condom, you eventually pull the flexible sheath off your erection and put a knot on it. After getting dressed again, you deliver your packaged load to the cooler that Florence and her sisters have set up. The antelopes smile at you and give their thanks for your donation[if HP of Florence is 0], then turn back to dealing with the people standing in line[end if].";
+		say "     As you tell her what you need, Florence gives you an evaluating look, then quickly collects a condom of suitable size from one of the storage tubs. Handing it to you with a smile, she guides you to the 'clinic' set up in one corner of the former travel agency. Drawing the flimsy curtains shut after you step into one of the examination areas, she leaves you to do your thing. Quickly sliding off your clothes, you pull out your [cock of player] shaft and unroll the condom over its length, then concentrate on an especially sexy image in your mind to jerk off to. Chuckling a little about pleasuring yourself for a good cause, you stroke and squeeze your manhood, quickly building up your arousal. It doesn't take all that long before some skillful self-pleasure brings the familiar feeling of tightness settling into your balls. Finishing yourself off with a burst of speed at the end, you let out a satisfied grunt as your balls start to unload into the condom.";
+		say "     You watch in satisfaction as the reservoir section of the condom is filled with spurt after spurt of creamy cum, bulging out a little as more sprays into the receptible. Milking your cock to make sure as much cum as possible ends up in the condom, you eventually pull the flexible sheath off your erection and put a knot on it. After getting dressed again, you deliver your packaged load to the cooler that Florence and her sisters have set up. The antelopes smile at you and give their thanks for your donation[if HP of Florence is 0], then turn back to dealing with the people standing in line[end if].";
 	else if calcnumber is 2:
 		LineBreak;
 		say "     As you tell her what you need, Florence gives you an evaluating look, then quickly collects a condom of suitable size from one of the storage tubs. Handing it to you with a smile, she guides you to the 'clinic' set up in one corner of the former travel agency. ";
 		if XP of Florence < 6: [player doesn't know her well enough]
 			say "You step into one of the sections divided off by flimsy curtains, thinking that she will follow you, but the antelope just stays behind and gives you an amused expression and shake of her head. 'I'll leave you to it then. A big [boygirl] like you surely can handle [ReflexPro of player],' Florence says in a good-natured tease, then pulls the curtain to give you some privacy. Even though you're a little disappointed that she didn't go for your offer after all, you shrug to yourself and guess that you maybe need to get to know the young woman better to have some fun together. For now, jerking off on your own will have to do.";
-			say "     Quickly sliding off your clothes, you pull out your [cock of player] shaft and unroll the condom over its length, then concentrate on an especially sexy image in your mind to jerk off to. Chuckling a little about pleasuring yourself for a good cause, you stroke and squeeze your manhood, quickly building up your arousal. It doesn't take all that long before some skillful self-pleasure brings the familiar feeling of tightness settling into your balls. Finishing yourself off with a burst of speed at the end, you let out a satisfied grund as your balls start to unload into the concom. You watch in satisfaction as the reservoir section of the condom is filled with spurt after spurt of creamy cum, bulging out a little as more sprays into the receptable. Milking your cock to make sure as much cum as possible ends up in the condom, you eventually pull the flexible sheath off your erection and put a knot on it. After getting dressed again, you deliver your packaged load to the cooler that Florence and her sisters have set up. The antelopes smile at you and give their thanks for your donation[if HP of Florence is 0], then turn back to dealing with the people standing in line[end if].";
+			say "     Quickly sliding off your clothes, you pull out your [cock of player] shaft and unroll the condom over its length, then concentrate on an especially sexy image in your mind to jerk off to. Chuckling a little about pleasuring yourself for a good cause, you stroke and squeeze your manhood, quickly building up your arousal. It doesn't take all that long before some skillful self-pleasure brings the familiar feeling of tightness settling into your balls. Finishing yourself off with a burst of speed at the end, you let out a satisfied grunt as your balls start to unload into the condom. You watch in satisfaction as the reservoir section of the condom is filled with spurt after spurt of creamy cum, bulging out a little as more sprays into the receptible. Milking your cock to make sure as much cum as possible ends up in the condom, you eventually pull the flexible sheath off your erection and put a knot on it. After getting dressed again, you deliver your packaged load to the cooler that Florence and her sisters have set up. The antelopes smile at you and give their thanks for your donation[if HP of Florence is 0], then turn back to dealing with the people standing in line[end if].";
 		else:
 			say "     WIP";
 	else if calcnumber is 3:

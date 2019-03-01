@@ -42,7 +42,7 @@ to say beatpwh:
 	if equinoidstatus >= 6 and equinoidstatus < 9, increase equinoidstatus by 1;
 	let diceroll be a random number between 33 and 125;
 	if diceroll < libido of player:
-		say "     Looking over the wild wolf herm's painted body, you feel a lustful urge to have sex with hir. As your eyes roam over hir sexy body, hir arousing scent makes you eye hir cock and pussy longingly. Shall you give into those urges completely and have sex with the lupine herm or hold back and sate your lusts orally? (Y=sex, N=oral)";
+		say "     Looking over the wild wolf herm's painted body, you feel a lustful urge to have sex with hir. As your eyes roam over hir sexy body, hir arousing scent makes you eye hir cock and pussy longingly. Shall you give in to those urges completely and have sex with the lupine herm or hold back and sate your lusts orally? (Y=sex, N=oral)";
 		if player consents:
 			if player is male:
 				say "     You press hir onto hir back and slide your hard cock under hir balls, getting it lined up with hir wet slit. The shi-wolf howls in delight as you sink your [cock size desc of player] cock into hir wet cunt. Shi does not resist your mounting hir and squeezes hir paws over your hands as you start fondling hir four large breasts. Hir black nipples are plump and hard and you find yourself playing with them eagerly. As your arousal builds as hir scent gets thicker, you are drawn to lean in and licks those nipples, then start nursing from them. You taste hir milk leaking onto your tongue and you drink it down thirstily, feeling it warm your [bodytype of player] belly. The mottled wolf moves hir paws, bringing one to stroke your head as you nurse from hir as the other grabs your rear. Hir paws urge you to keep nursing and thrusting, not that you need any encouragement for either. As you satisfy your thirst on hir milk, you drive your [cock of player] cock into hir and blast your thick cum into hir ready womb.";
@@ -78,12 +78,12 @@ to say beatpwh:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Painted Wolf Herm"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -131,8 +131,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Painted Wolf Herm":

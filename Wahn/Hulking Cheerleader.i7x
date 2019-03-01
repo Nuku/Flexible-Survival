@@ -1,12 +1,12 @@
 Version 2 of Hulking Cheerleader by Wahn begins here.
 [Version 2.2 - Endings fixed up]
 
-"Adds a Hulking Cheerleader to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Hulking Cheerleader to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 when play begins:
 	add { "Hulking Cheerleader" } to infections of Transgender; [Futanari]
 
-CheerleaderFirstEncounter is a number that varies. CheerleaderFirstEncounter is normally 0.
+CheerleaderFirstEncounter is a number that varies. CheerleaderFirstEncounter is usually 0.
 
 Section 1 - Monster Responses
 
@@ -22,13 +22,13 @@ to say Cheerleader wins:
 			say "     'I beat you fair and square, so just hold still and let's see what's what,' the hulking cheerleader says, then lays you down on the ground and quickly exposes your crotch.";
 		if player is female: [what the pussy hunt is all about...]
 			if (gestation of child > 0): [already pregnant]
-				say "     She rubs her hand over your pussy lips, then sniffs it. With a bit of a disappointed tone she then says, 'Aww, you're already pregnant - oh, I mean... congratulations! Hope all goes well with the birth. And if it's a girl, why don't you come back here once she's grown.' As the hulking cheerleader moves off, you hear her mumbling to herself '[one of]A virgin and her MILF would be quite a catch and put me in front of even [randomgirlname] on the list...'[or]At least with a MILF you know she's fertile and worth the seed...'[or]Haven't managed to snag a virgin in ages.'[at random]";
+				say "     She rubs her hand over your pussy lips, then sniffs it. With a bit of a disappointed tone she then says, 'Aww, you're already pregnant - oh, I mean... congratulations! Hope all goes well with the birth. And if it's a girl, why don't you come back here once she's grown.' As the hulking cheerleader moves off, you hear her mumbling to herself, [one of]'A virgin and her MILF would be quite a catch and put me in front of even [randomgirlname] on the list...'[or]'At least with a MILF you know she's fertile and worth the seed...'[or]'Haven't managed to snag a virgin in ages.'[at random]";
 			else:
 				if (cunt length of player < 4): [far too small]
 					say "     She spreads the folds of your pussy, rubbing a finger up and down on the outside, then pushes it into you. 'What's this? I can't even get my finger all the way into you! No way a cock would fit in there.' With a rather disappointed expression she pulls you to your feet, saying 'I'm not a monster and don't want to hurt you. So move along little girl, and come back when you're fully grown.'";
 				else:
 					say "     She spreads the folds of your pussy, rubbing a finger up and down on the outside, then pushes it into you. 'Yeah, looks good and ready to plant some seed.' Fondling your pussy with one hand, her other one moves over your [bodytype of player] body, caressing you and stroking your nipples. With you soon gasping in need from her treatment and getting very wet around her fingers inside you, you're ready in the cheerleader's eyes and she moves to kneel between your legs. She slaps her massive green cock a few times on your stomach, rubbing it against your skin, then guides its head to your entrance. With a slow but steady push, it pops into your body, spreading your lips wide around its girth.";
-					say "     'Nice tight pussy you have there - now let's see how deep it is,' the green giant grunts, then pushes deeper and deeper into you, spearing you on her shaft. [if cunt length of player < 16]Soon she bumps into your cervix and stops, slightly disappointed that you couldn't take all of her length.[else]She bottoms out inside you and you can feel her balls rubbing against your crotch as she groans 'So deep.'[end if] Then your large partner grabs your body, holding on to you tightly as she starts thrusting in and out of you. Your mind almost explodes at the sensations of her rubbing against your insides, expertly finding your G-spot and bumping it repeatedly. Seems like she's got an advantage there as a former female herself.";
+					say "     'Nice tight pussy you have there - now let's see how deep it is,' the green giant grunts, then pushes deeper and deeper into you, spearing you on her shaft. [if cunt length of player < 16]Soon she bumps into your cervix and stops, slightly disappointed that you couldn't take all of her length. [else]She bottoms out inside you and you can feel her balls rubbing against your crotch as she groans 'So deep.' [end if]Then your large partner grabs your body, holding on to you tightly as she starts thrusting in and out of you. Your mind almost explodes at the sensations of her rubbing against your insides, expertly finding your G-spot and bumping it repeatedly. Seems like she's got an advantage there as a former female herself.";
 					WaitLineBreak;
 					say "     Over the next twenty minutes or so, you're treated with one hell of a fuck, taking you to levels of pleasure you didn't even know existed and orgasming several times. You wish it'd last forever, but the reproductive imperative of your hulking partner soon gets its due. She gets faster and faster with her thrusts, moaning and grunting, until finally she buries her hard cock as far as it will go inside you and fills you with spurt after spurt of her seed.[fimpregchance]";
 					say "     When she pulls out of you a while later, she says 'You liked that, didn't you? No quick cumming and then just fucking off with us. I hated it when guys did that with me. Let me know if it takes, ok? We get extra points for that... and if it doesn't, let's do another round soon!'";
@@ -55,7 +55,7 @@ To say Cheerleader loses:
 
 to say cheerleaderDesc:
 	setmongender 6; [dickgirl]
-	if CheerleaderFirstEncounter is 0:
+	if "Hulking Cheerleader" is not listed in EncounteredEnemies of player: [first encounter]
 		say "     Walking over the campus, you hear some high-pitched moaning from behind one of the buildings and decide to check it out. Peeking around a corner, you see a very tall green-skinned humanoid holding and fucking a twenty-ish human woman. The green creature has ample breasts stuffed into her small shirt and looks mostly female, but has a very large frame and is massively muscled. And she/he? also has one big whopper of a cock under her short skirt that she's busy driving into the Asian woman held in her arms. Their coupling soon builds to a loud climax, with the green giant giving satisfied grunts as she fills the woman's pussy with her seed.";
 		say "     Then the woman's body starts to change and she's quickly pulled off the still-twitching cock and lowered to the ground by her large partner. You see her skin turn green, muscles filling out rapidly and the whole body stretch and reshape itself until there are two green giants behind the building. The woman is completely stunned by what has happened to her, looking down on her new body and trying to make sense of it all. Her fucker steps closer and grins down at her. 'Ah, a convert. I still wonder why some people turn but most don't. Hey, I know you - you're Haruko and were on the gymnastics team, weren't you?'";
 		WaitLineBreak;
@@ -73,12 +73,12 @@ to say cheerleaderDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Hulking Cheerleader";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -126,8 +126,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;          [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;          [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings

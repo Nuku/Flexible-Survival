@@ -121,6 +121,7 @@ to say beatFireSpriteguy:
 					say "[FireSpriteCunnilingus]";
 				else if title entry is "Blow job":
 					say "[FireSpriteBlowJob]";
+				wait for any key;
 		else:
 			say "Invalid Option.";
 
@@ -174,6 +175,7 @@ to say beatFireSpritegirl:
 					say "[FireSpriteCunnilingus]";
 				else if title entry is "Blow job":
 					say "[FireSpriteBlowJob]";
+				wait for any key;
 		else:
 			say "Invalid Option.";
 
@@ -190,7 +192,7 @@ to say FireSpriteMasturbate:
 		say "     Deciding to make use of the beaten sprite, you remove your gear and prepare for some fun. After sizing the little creature up, you decide your massive member is just too much for his tiny form. Endeavoring to make use of your little plaything, you press his entire body against your throbbing cock, stroking its entire length with his small, warm form. Soon the sprite has his arms wrapped around you, grinding his body against you as you use him to stroke yourself off. Through your combined efforts, your balls are soon tensing up in anticipation as you quickly approach climax, blowing your [cum load size of player] load into the air. As your cum showers down atop the sprite, you finally release him, basking in your afterglow as he scampers off while doing his best to shake off your sticky mess.";
 
 to say RideFireSpriteCock:
-	say "     Deciding to make use of the beaten sprite, you remove your gear and take a seat out on the ground. Pulling the little sprite towards your groin, you position his already firm prick in front of your hungry pussy and wrap your legs around his [if scalevalue of player > 1]small [end if]form, pulling his entire body against your crotch as you press his length into your slick slit. Your body fills with warmth as you envelope his orange flesh, and soon you begin rocking his entire body against your groin as you do your best to ride his [if scalevalue of player > 1]smaller [end if]form to climax, your spasming cunt gripping his warm member as his own climax sends powerful spurts of his warm seed deep within you. Releasing the sprite, you relax on the ground in the afterglow of your climax as he pulls out with a wet slurp, allowing some of his glowing orange semen and your own femcum to drool from your pussy as he scampers off.";
+	say "     Deciding to make use of the beaten sprite, you remove your gear and take a seat out on the ground. Pulling the little sprite towards your groin, you position his already firm prick in front of your hungry pussy and wrap your legs around his [if scalevalue of player > 1]small [end if]form, pulling his entire body against your crotch as you press his length into your slick slit. Your body fills with warmth as you envelop his orange flesh, and soon you begin rocking his entire body against your groin as you do your best to ride his [if scalevalue of player > 1]smaller [end if]form to climax, your spasming cunt gripping his warm member as his own climax sends powerful spurts of his warm seed deep within you. Releasing the sprite, you relax on the ground in the afterglow of your climax as he pulls out with a wet slurp, allowing some of his glowing orange semen and your own femcum to drool from your pussy as he scampers off.";
 
 to say FireSpriteCunnilingus:
 	if FireSpritemode is 0:
@@ -211,11 +213,11 @@ to say FireSpriteInsertion:
 		say "     Deciding to make use of the beaten sprite, you remove your gear and stretch out on the ground. After sizing the little creature up, you decide he is just the right size for some... special fun. His eyes go wide as you push his head towards your gaping pussy, pressing his face against you wanton folds. Pinning the squirming sprite's arms against his waist, you grab hold of his body and press his deeper into your drooling cunt. With an audible slurp, the sprite's entire head slips inside you, sending waves of pleasure through you as you climax powerfully, soaking your little plaything's body in your feminine juices. With the afterglow of your first climax still rolling through you, you begin working the warm sprite deeper into your cunt, fresh waves of pleasure rolling through you with every inch of the little creature that disappears inside you. When you feel the squirming sprite's head pressing against your cervix, you finally stop pushing and begin pulling the creature's tiny form back out, working him back and forth inside your quivering tunnel like a living dildo. After using the poor creature to pleasure yourself to several more powerful climaxes, you finally pull him out with a long, wet slurp. Laying back on the ground to recover from your multiple orgasms, you watch the little guy stumble away, coughing and sputtering up your feminine juices as he goes.";
 
 to say FireSpritedesc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now FireSpritemode is a random number between 0 and 1;
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You meet a fire sprite, but it runs away.";
-		blank out the whole row;
+		now BannedStatus entry is true;
 		now fightoutcome is 19;
 		now combat abort is 1;
 		now FireSpritemode is 2;
@@ -251,12 +253,12 @@ to say FireSpritedesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Fire Sprite"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -304,8 +306,9 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "FireSprite"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Alt Combat
@@ -320,7 +323,7 @@ this is the FireBallBarrage rule:		[Multiple low damage hits]
 	let P be 0;
 	say "     The sprite winds up, preparing to launch a barrage of fireballs!";
 	while N is 0:
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		let dam be ( wdam entry * a random number between ( 45 - ( peppereyes * 4 ) ) and 85 ) / 100;
 		if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
 			now dam is (dam * 150) divided by 100;

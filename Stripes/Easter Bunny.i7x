@@ -30,12 +30,12 @@ to say beateasterbunny:
 
 Section 4 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Easter Bunny";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -64,7 +64,7 @@ When Play begins:
 	now HP entry is 29;
 	now lev entry is 3; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
 	now wdam entry is 4; [Amount of Damage monster Does when attacking.]
-	now area entry is "nowhere"; [ Location of monster, in this case nowhere]
+	now area entry is "Nowhere"; [ Location of monster, in this case nowhere]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 9; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 10; [ Size of balls apparently ;) sneaky Nuku]
@@ -83,8 +83,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;
+	now DayCycle entry is 0;
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 8 - Heat
@@ -128,12 +129,12 @@ to say ebheat:
 		now ebheat_msg is true;
 	else if ebheat_egg > 9 and ebheat_msg is true and Micaela is visible and ( lastfuck of Micaela - turns ) >= 9 and a random chance of libido of player in 150 succeeds:
 		setmonster "Easter Bunny";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		LineBreak;
 		say "     There's a small shifting of weight in your lower belly that feels so nice you have to stifle a moan. Looking over at Micaela, your [if player is female]cunt grows wet and quivers with a need to be filled[else]asshole feels empty and in need of filling[end if]. The colorful bunny's nose twitches and she grins at you, as if able to smell your arousal. You also see a bulge forming under her skirt and, knowing what lies beneath, your insides flutter again with heated desire. Unable to resist, you head over to her, tossing aside your clothing and gear as you go.";
 		say "     Seeing that lustful look in your eyes, Micaela flips up the front of her skirt, revealing her erection and plump balls. 'Mmm... come on, honeybunny. I know what you need,' she says, stroking her tantalizing manhood. 'Let's give that [if player is female]heated bunny-cunny[else]heated boi-bunny butt[end if] of yours the fucking it deserves.' You climb eagerly into the sexy Easter bunny's lap, grinding down on that throbbing shaft[if player is female]. Grabbing your hips, she lowers you down onto her cock. You moan long and with satisfaction as you feel that pulsing rod slide into your juicy cunt[else]. Spreading your cheeks, she lowers you down onto her cock. You moan long and with satisfaction as you feel that pulsing rod slide into your welcoming pucker[end if].";
 		WaitLineBreak;
-		say "     Micaela gives you a passionate kiss, her tongue playing in your mouth as she starts bouncing you in her lap. That weight you've been feeling in your belly shifts and rolls about in an oddly pleasant manner. And part of you know that feeling's only going to get better now that the bunny's going to pump her hot seed into you and breed you. Breaking the kiss, she moves to nuzzle [if breast size of player > 1]at your breasts[else]and nibble along your neck[end if] while rubbing a hand-paw over your belly.";
+		say "     Micaela gives you a passionate kiss, her tongue playing in your mouth as she starts bouncing you in her lap. That weight you've been feeling in your belly shifts and rolls about in an oddly pleasant manner. And part of you know that feeling's only going to get better now that the bunny's going to pump her hot seed into you and breed you. Breaking the kiss, she moves to nuzzle [if breast size of player > 0]at your breasts[else]and nibble along your neck[end if] while rubbing a hand-paw over your belly.";
 		say "     'Don't worry, sweetie. I know that feeling all too well. Don't worry, Micaela's going to cream that egg of yours. Mmm... going knock you up and make that into a nice, big egg full of life for you[one of]. You'll be so cute with a big eggy-belly[or]. Laying an egg like that will feel wooonderful[or]. A proper bunny egg for my honeybunny[at random],' she says as she nuzzles you tenderly while fucking you wildly.";
 		WaitLineBreak;
 		say "     When Micaela's climax comes, it is a powerful and prolific, even for her. The gushes of cum seem to go on and on, filling your insides and more. The egg inside you is bathed in the virile bunny's semen as your womb is bloated and your belly rounds[if scalevalue of player < 3] excessively[else if scalevalue of player is 3] considerably[end if]. A gooey mess of the excess cum leaks out around her still-pulsing shaft and yet she continues cumming for several more blasts, guaranteeing you'll have an egg-filled belly in no time. In you heat-addled state, you can't help but sigh in satisfaction at the thought of that. Sliding you from her lap, she lets you rest on the floor, reaching out to rub her dainty footpaws over your cum-filled egg-belly.";

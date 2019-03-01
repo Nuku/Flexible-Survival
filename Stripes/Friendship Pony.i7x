@@ -5,31 +5,31 @@ Version 2 of Friendship Pony by Stripes begins here.
 
 Section 1 - Monster Responses
 
-rfponytype is a number that varies. rfponytype is normally 0.
-rfponycolor1 is a text that varies. rfponycolor1 is normally "pink".
-rfponycolor2 is a text that varies. rfponycolor2 is normally "lavender".
-rfponybm is a text that varies. rfponybm is normally "a cock".
+rfponytype is a number that varies.[@Tag:NotSaved] rfponytype is normally 0.
+rfponycolor1 is a text that varies.[@Tag:NotSaved] rfponycolor1 is normally "pink".
+rfponycolor2 is a text that varies.[@Tag:NotSaved] rfponycolor2 is normally "lavender".
+rfponybm is a text that varies.[@Tag:NotSaved] rfponybm is normally "a cock".
 nofponysex is a number that varies.
-rfpc1 is a number that varies.	[color 1]
-rfpc2 is a number that varies.	[color 2]
-rfpbm is a number that varies.	[booty mark]
+rfpc1 is a number that varies.[@Tag:NotSaved]	[color 1]
+rfpc2 is a number that varies.[@Tag:NotSaved]	[color 2]
+rfpbm is a number that varies.[@Tag:NotSaved]	[booty mark]
 
-pfpbmlist is a list of numbers that varies.
+pfpbmlist is a list of numbers that varies.[@Tag:NotSaved]
 
 [	rfponytype	]
 [ 1 = earth pony	]
 [ 2 = pegasus	]
 [ 3 = unicorn	]
 
-[  -- simplified to decrease strain on memory --
+[  - simplified to decrease strain on memory -
 [ color list 1: body ]
-rfpclist1 is a list of text that varies. rfpclist1 is usually { "sky blue", "sapphire blue", "powder blue", "periwinkle", "light yellow", "jasmine", "yellow", "citrine", "teal", "soft pink", "salmon", "fuchsia", "light green", "honeydew", "forest green", "grass green", "celadon", "orange", "pumpkin", "light brown", "tan", "brown", "lilac", "amethyst", "thistle", "red", "russet", "ruby red", "burgundy", "white", "gray", "cream" }.
+rfpclist1 is a list of text that varies.[@Tag:NotSaved] rfpclist1 is usually { "sky blue", "sapphire blue", "powder blue", "periwinkle", "light yellow", "jasmine", "yellow", "citrine", "teal", "soft pink", "salmon", "fuchsia", "light green", "honeydew", "forest green", "grass green", "celadon", "orange", "pumpkin", "light brown", "tan", "brown", "lilac", "amethyst", "thistle", "red", "russet", "ruby red", "burgundy", "white", "gray", "cream" }.
 
 [ color list 2: hair ]
-rfpclist2 is a list of text that varies. rfpclist2 is usually { "blue", "cobalt blue", "cyan", "azure", "turquoise", "black", "golden yellow", "neon yellow", "sunglow", "maroon", "pink", "hot pink", "carnation", "cerise", "green", "emerald green", "neon green", "light orange", "apricot", "peach", "royal purple", "deep purple", "indigo", "carmine", "flame red", "candy apple red" }.
+rfpclist2 is a list of text that varies.[@Tag:NotSaved] rfpclist2 is usually { "blue", "cobalt blue", "cyan", "azure", "turquoise", "black", "golden yellow", "neon yellow", "sunglow", "maroon", "pink", "hot pink", "carnation", "cerise", "green", "emerald green", "neon green", "light orange", "apricot", "peach", "royal purple", "deep purple", "indigo", "carmine", "flame red", "candy apple red" }.
 
 [ booty mark list ]
-rfpbmlist is a list of text that varies. rfpbmlist is usually { "a dildo", "a vibrator", "an egg vibrator", "a horsecock", "a mare's pussy", "a horsecock being licked", "a pussy being licked", "a cum-slick cock", "an overflowing pussy", "an ejaculating cock", "a cock stuffing an anus", "two humping dogs", "a necklace of pearls", "a pair of tits", "a pair of cum-coated tits", "a pony head sucking cock", "a swallow", "a raised tail", "a leather whip", "a broken bed", "a set of furred handcuffs", "a pair of cocks rubbing together", "an extra-thick dildo", "a pair of nipple clamps", "a burst condom", "a strap-on", "a gimp mask", "the shocker handsign", "a finger-stuffed pussy", "a butt plug", "a ball gag", "a dripping candle", "a leather harness", "anal beads" }.
+rfpbmlist is a list of text that varies.[@Tag:NotSaved] rfpbmlist is usually { "a dildo", "a vibrator", "an egg vibrator", "a horsecock", "a mare's pussy", "a horsecock being licked", "a pussy being licked", "a cum-slick cock", "an overflowing pussy", "an ejaculating cock", "a cock stuffing an anus", "two humping dogs", "a necklace of pearls", "a pair of tits", "a pair of cum-coated tits", "a pony head sucking cock", "a swallow", "a raised tail", "a leather whip", "a broken bed", "a set of furred handcuffs", "a pair of cocks rubbing together", "an extra-thick dildo", "a pair of nipple clamps", "a burst condom", "a strap-on", "a gimp mask", "the shocker handsign", "a finger-stuffed pussy", "a butt plug", "a ball gag", "a dripping candle", "a leather harness", "anal beads" }.
 ]
 
 
@@ -42,7 +42,7 @@ when play begins:
 
 to say fponydesc:
 	setmongender 4; [creature is female]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of player:
@@ -313,7 +313,7 @@ to say beatthefpony:
 			increase nofponysex by 1;
 	else if player is female:
 		say "As you look over her, your eyes wander back to that cute face of her. You find yourself tempted to get [']friendly['] with the pony, but on your own terms.";
-		say "     [bold type] Shall you grab that pretty [rfponycolor2] hair of hers and make her eat you out?[roman type][line break]";
+		say "     [bold type]Shall you grab that pretty [rfponycolor2] hair of hers and make her eat you out?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -331,12 +331,12 @@ to say beatthefpony:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 [	sort rfpclist1 in random order;
 	sort rfpclist2 in random order;]
 	sort pfpclist in random order;
@@ -369,7 +369,7 @@ When Play begins:
 	now HP entry is 26; [ The monster's starting HP. ]
 	now lev entry is 3; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
-	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Fair"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 6; [ Cock width, more commonly used for ball size. ]
@@ -388,8 +388,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "fpony"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Section 3 - Alt Combat
 
@@ -398,7 +399,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "fpony"	retaliation rule	--	fpony rule	--	--	--	--	--	--	--
 
 this is the fpony rule:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if a random chance of 2 in 5 succeeds:
 		decrease HP of player by wdam entry / 2;
 		let libgrowth be wdam entry / 2;
@@ -437,10 +438,10 @@ to say fptailchange:
 
 pfpclist is a list of numbers that varies. pfpclist is usually { 1, 2, 3, 4, 5, 6, 7, 8 }.
 pfptype is a number that varies. pfptype is usually 1.
-pfpskin is a text that varies. pfpskin is normally "baby blue".
-pfpcock is a text that varies. pfpcock is normally "blue".
-pfphair is a text that varies. pfphair is normally "turquoise".
-pfpbootymark is a text that varies. pfpbootymark is normally "a jar of cum".
+pfpskin is a text that varies. pfpskin is usually "baby blue".
+pfpcock is a text that varies. pfpcock is usually "blue".
+pfphair is a text that varies. pfphair is usually "turquoise".
+pfpbootymark is a text that varies. pfpbootymark is usually "a jar of cum".
 
 to ponystatuscheck:
 	if player is not fponybodied and player is not fponyfaced:
@@ -654,7 +655,7 @@ pony cider is a grab object. It is a part of the player. pony cider is infectiou
 The usedesc of pony cider is "[drinkponycider]";
 
 to say drinkponycider:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		setmonster "Friendship Pony";
 		now sex entry is "Male";

@@ -6,6 +6,10 @@ Version 2 of High Rise Events by Stripes begins here.
 
 Section 1- Rabid Lawyers
 
+Table of GameEventIDs (continued)
+Object	Name
+Rabid Lawyers	"Rabid Lawyers"
+
 Rabid Lawyers is a situation.
 The sarea of Rabid Lawyers is "High".
 when play begins:
@@ -15,11 +19,15 @@ when play begins:
 Instead of resolving a Rabid Lawyers:
 	say "     While searching the city, you encounter a large pack of wolves in front of a law firm. They are partially dressed in suits, mainly the jackets and ties, though some have the torn-open remains of pants. They are growling and slavering as they snap at each other or swinging their briefcases around. Mixed among the pack are several smaller wolves in skirts or shirts, clutching reports, pouring coffee or helping the larger ones. Much of the helping seems to take the form of the interns sucking them off or getting pounded good and hard by one of the bigger males. Unwilling to face the legal teeth of a pack of rabid lawyers, you slink off as quietly and as quickly as you can.";
 	increase score by 1;
-	Now Rabid Lawyers is resolved;
+	now Rabid Lawyers is resolved;
 
 
 
 Section 2- Pigging Out
+
+Table of GameEventIDs (continued)
+Object	Name
+Pigging Out	"Pigging Out"
 
 Pigging Out is a situation. The level of Pigging Out is 3.
 The sarea of Pigging Out is "High".
@@ -61,6 +69,7 @@ Instead of resolving a Pigging Out:
 			SanLoss 10;
 			increase score by 25;
 			now restaurantpig is 1;
+			now Resolution of Pigging Out is 1; [ate with the pig]
 		else:
 			say "     You resist the urge to join her in the messy feast, but you would still like to opportunity to search the place for supplies.";
 			say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";
@@ -74,15 +83,18 @@ Instead of resolving a Pigging Out:
 					infect "Messy Pig"; [extra infection]
 					decrease score by 5;
 					now restaurantpig is 1;
+					now Resolution of Pigging Out is 3; [fought the pig for food, lost]
 				else:
 					say "     After defeating the pig and sending it on its way, you pick carefully through the ruined restaurant. The food in the main dining area and kitchen is all clearly tainted, but you do manage to find a little in the back of the walk-in cooler that is clean and undamaged by the gorging pig. You get enough for two meals packed away using some of the kitchenware to pack it up. While doing so, you also find a big kitchen knife that you decide to bring along.";
 					say "     Food x 2 and cleaver added to inventory.";
 					increase carried of food by 2;
 					increase carried of cleaver by 1;
 					increase score by 5;
+					now Resolution of Pigging Out is 2; [fought the pig for food, won]
 			else:
 				say "     Looking around the messy restaurant and the scattered food around the pig, you're not so sure they'll be anything salvageable left and decide it may not be worth the risk to try.";
 				increase score by 1;
+				now Resolution of Pigging Out is 4; [didn't fight the pig for food]
 	else:
 		say "     You look at the disgusting mess that she's already made of the place and feel your hopes of some fine dining dashed. You would still like to opportunity to search the place for supplies.";
 		say "     [bold type]Shall you enter the restaurant and confront her before she eats it all?[roman type][line break]";
@@ -96,16 +108,19 @@ Instead of resolving a Pigging Out:
 				infect "Messy Pig"; [extra infection]
 				decrease score by 5;
 				now restaurantpig is 1;
+				now Resolution of Pigging Out is 3; [fought the pig for food, lost]
 			else:
 				say "     After defeating the pig and sending it on its way, you pick carefully through the ruined restaurant. The food in the main dining area and kitchen is all clearly tainted, but you do manage to find a little in the back of the walk-in cooler that is clean and undamaged by the gorging pig. You get enough for two meals packed away using some of the kitchenware to pack it up. While doing so, you also find a big kitchen knife that you decide to bring along.";
 				say "     Food x 2 and cleaver added to inventory.";
 				increase carried of food by 2;
 				increase carried of cleaver by 1;
 				increase score by 5;
+				now Resolution of Pigging Out is 2; [fought the pig for food, won]
 		else:
 			say "     Looking around the messy restaurant and the scattered food around the pig, you're not so sure they'll be anything salvageable left and decide it may not be worth the risk to try.";
 			increase score by 1;
-	Now Pigging Out is resolved;
+			now Resolution of Pigging Out is 4; [didn't fight the pig for food]
+	now Pigging Out is resolved;
 
 to say piggycheck:	[to check if player has a pig-like head or body]
 	now tempnum is 0;
@@ -128,6 +143,10 @@ the scent of the cleaver is "The heavy blade smells faintly of blood."
 
 Section 3- Small Park
 
+Table of GameEventIDs (continued)
+Object	Name
+Small Park	"Small Park"
+
 Small Park is a situation.
 The sarea of Small Park is "High".
 when play begins:
@@ -145,10 +164,12 @@ Instead of resolving a Small Park:
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		say "[dogparksearch]";
+		now Resolution of Small Park is 1; [searched the dog park]
 	else:
 		say "     You go off, deciding to find a safer place to search.";
 		increase score by 1;
-	Now Small Park is resolved;
+		now Resolution of Small Park is 99; [disinterest]
+	now Small Park is resolved;
 
 
 to say dogparksearch:
@@ -242,6 +263,10 @@ to say doggyinfect:
 
 Section 4- Corporate Fat Cats
 
+Table of GameEventIDs (continued)
+Object	Name
+Corporate Fat Cats	"Corporate Fat Cats"
+
 Corporate Fat Cats is a situation.
 The sarea of Corporate Fat Cats is "High".
 when play begins:
@@ -251,10 +276,14 @@ when play begins:
 Instead of resolving a Corporate Fat Cats:
 	say "     You come across a pair of hefty felines on the steps of one of the many high-rise buildings. Their business suits have mostly been removed and scattered around them. One is a male black cat with white paws and a splash of white on his wide belly. The other is a chubby Maine Coon tom with the thick, fluffy fur of the breed. They are rolling around against one another, groping each other. While stroking the black cat's cock, the other cat goes on about looking forward to some asset growth. The black cat nibbles at the portly Maine Coon's ear, telling him how he wants to set up this merger and come out on top. They continue to go on like this, bantering in corporate lingo while the black cat mounts the other while you walk off, leaving the fat cats to their [']merger['].";
 	increase score by 1;
-	Now Corporate Fat Cats is resolved;
+	now Corporate Fat Cats is resolved;
 
 
 Section 5- Veterinary Hospital
+
+Table of GameEventIDs (continued)
+Object	Name
+Veterinary Hospital	"Veterinary Hospital"
 
 Veterinary Hospital is a situation.
 The sarea of Veterinary Hospital is "High".
@@ -280,10 +309,11 @@ Instead of resolving a Veterinary Hospital:
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     After dealing with the panther taur, you find it quite tempting to stay and continue to have fun with the sexy feline herm. Surely she'd be able to satisfy that lustful itch of your for animal sex, some part of you suggests. It takes some effort of will, but you're able to rein yourself in and leave the place before it gets any stronger. Once outside, you breathe in the (relatively) fresher air outside to try and clear your head. Trying to recover your self-control, you leave the immediate area and ponder your next course of action. Despite the close call, finding a sexy beast to fuck you remains high on your list.";
 				now lust of medea is 2;
+				now Resolution of Veterinary Hospital is 2; [won and got medea's supplies]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     After the panther taur's had her way with you, she pushes you back inside her veterinary clinic home. Lost in a daze of animal lust, you don't resist as she secures you with a collar and leash to the wall before mounting you. You're fucked over and over again in numerous positions, fed on a diet of her cum and milk until you're nothing but another lust-crazed panther taur by the time she releases you out into the city[if player is impreg_ok] with a belly full of her cubs[end if].";
 				setmonster "Panther Taur";
-				choose row monster from the table of random critters;
+				choose row monster from the Table of Random Critters;
 				now humanity of player is 0;
 				if libido of player < 90, now libido of player is 90;
 				now tailname of player is "Panther Taur";
@@ -301,16 +331,17 @@ Instead of resolving a Veterinary Hospital:
 				follow the sex change rule;
 				wait for any key;
 				end the story saying "There are no thoughts left in your air-filled head but that of playing at the beach.";
-				now battleground is "void";
 				wait for any key;
 				follow the turnpass rule;
 				stop the action;
 			else:
 				say "     Not feeling it would be wise to stay and fight given the circumstances, you clutch your pack full of stolen veterinary supplies all the tighter and dodge your way past the big feline. Still running to put some distance between her in case she chooses to pursue you, you breathe in the (relatively) fresher air outside to try and clear your head. Trying to recover your self-control, you leave the immediate area and ponder your next course of action. Despite the close call, finding a sexy beast to fuck you remains high on your list.";
+				now Resolution of Veterinary Hospital is 3; [fled]
 		else:
 			say " as quickly as you can, breathing in the (relatively) fresher air outside to try and clear your head. Trying to recover your self-control, you leave the immediate area and ponder your next course of action. Finding a sexy beast to fuck you remains high on your list.";
 			now libido of player is ( 100 + libido of player + libido of player ) / 3;
 			decrease humanity of player by 5;
+			now Resolution of Veterinary Hospital is 4; [fight banned, so the player just ran out with the supplies]
 		now lust of Medea is 2;
 	else:
 		say "     You find a veterinary hospital at the ground level of one of the high rises. You don't hear any monsters within and consider entering. There could be some useful supplies within, but it is an animal hospital, so it does seem a somewhat risky venture.";
@@ -320,10 +351,12 @@ Instead of resolving a Veterinary Hospital:
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			say "[vetsearch]";
+			now Resolution of Veterinary Hospital is 1; [searched the place]
 		else:
 			say "     You go off, deciding to find a safer place to search.";
 			increase score by 1;
-	Now Veterinary Hospital is resolved;
+			now Resolution of Veterinary Hospital is 99; [disinterest]
+	now Veterinary Hospital is resolved;
 
 
 to say vetsearch:
@@ -409,7 +442,7 @@ to say randomvetfight:				[more suitable pets can be added]
 	if tempnum is 5:
 		challenge "German Shepherd";
 	if tempnum is 6:
-		challenge "Rabbit";
+		challenge "Anthro Rabbit";
 	if tempnum is 7:
 		challenge "Feline";
 	if tempnum is 7:
@@ -426,6 +459,10 @@ to say randomvetfight:				[more suitable pets can be added]
 
 Section 6- Golf Store
 
+Table of GameEventIDs (continued)
+Object	Name
+Golf Store	"Golf Store"
+
 Golf Store is a situation.
 The sarea of Golf Store is "High".
 when play begins:
@@ -436,7 +473,7 @@ Instead of resolving a Golf Store:
 	say "     Golf club obtained.";
 	increase carried of golf club by 1;
 	increase score by 5;
-	Now Golf Store is resolved;
+	now Golf Store is resolved;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -449,6 +486,10 @@ the scent of the golf club is "The golf club smells faintly of grass, bad slices
 
 Section 7- Electronics Store
 
+Table of GameEventIDs (continued)
+Object	Name
+Electronics Store	"Electronics Store"
+
 Electronics Store is a situation.
 The sarea of Electronics Store is "High".
 when play begins:
@@ -459,10 +500,14 @@ Instead of resolving a Electronics Store:
 	say "     As you watch, the darker one twitches and shudders for a moment while trying to swallow down a big mouthful. His eyes blink, then turn a solid blue. He smacks his chest a few times to reboot himself. Once that is settled, he opens his jacket, accesses a panel on himself and pulls out a video card, swapping it for a newer model from one of the shelves.";
 	say "     With this impromptu upgrade completed, they get back to squabbling over the various electronic phones, mp3 players and doodads, babbling marketing buzzwords all the while.";
 	increase score by 1;
-	Now Electronics Store is resolved;
+	now Electronics Store is resolved;
 
 
 Section 8 - Cameo
+
+Table of GameEventIDs (continued)
+Object	Name
+Cameo	"Cameo"
 
 Cameo is a situation. The level of Cameo is 4.
 The sarea of Cameo is "High".
@@ -487,11 +532,11 @@ Instead of resolving a Cameo:
 			if "Bad Luck" is listed in feats of player, decrease bonus by 2;
 			if bonus > 12, now bonus is 12;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+			say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 			if bonus + dice > 15:
-				say "     You manage to avoid the sneak attack, as the dog leaps past you and into the company logo, mashing its whole head into a slobbery kiss on the face of the store's namesake heroine. It flows and reshapes itself quickly, forming its tail into a new head and swapping its front and back legs around. This startling change shocks you long enough for it to complete the reversal and start snapping at you before you can take flight.";
+				say "You manage to avoid the sneak attack, as the dog leaps past you and into the company logo, mashing its whole head into a slobbery kiss on the face of the store's namesake heroine. It flows and reshapes itself quickly, forming its tail into a new head and swapping its front and back legs around. This startling change shocks you long enough for it to complete the reversal and start snapping at you before you can take flight.";
 			else:
-				say "     The chocolate dog slams itself into you, flowing itself across your body. It squeezes around your chest, pushing out your breath even as its flowing body starts teasing at your nipples and groin. As you are forced to exhale, the chocolate canine presses its gooey face to yours, pushing its chocolatey tongue into your mouth and humping against your body. As its arousing taste fills your mouth, you moan softly and find yourself giving in before you snap back control of yourself and push the semi-solid dog back and off of you. It growls in frustration at you denying its lustful urges and charges to attack. But its assault on you has weakened you further as well as gotten you more aroused. (15 dmg taken)[line break]";
+				say "The chocolate dog slams itself into you, flowing itself across your body. It squeezes around your chest, pushing out your breath even as its flowing body starts teasing at your nipples and groin. As you are forced to exhale, the chocolate canine presses its gooey face to yours, pushing its chocolatey tongue into your mouth and humping against your body. As its arousing taste fills your mouth, you moan softly and find yourself giving in before you snap back control of yourself and push the semi-solid dog back and off of you. It growls in frustration at you denying its lustful urges and charges to attack. But its assault on you has weakened you further as well as gotten you more aroused. (15 dmg taken)[line break]";
 				decrease HP of player by 15;
 				increase libido of player by 12;
 			now choclabfight is 0;
@@ -538,8 +583,8 @@ Instead of resolving a Cameo:
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 5 and 10;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 5;
 		[puts Chocolate Lab as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Chocolate Lab":
 				now monster is y;
 				break;
@@ -575,6 +620,10 @@ Instead of resolving a Cameo:
 
 Section 9 - Raul's Wild Kingdom
 
+Table of GameEventIDs (continued)
+Object	Name
+Wild Kingdom	"Wild Kingdom"
+
 Wild Kingdom is a situation.
 The sarea of Wild Kingdom is "High".
 
@@ -591,6 +640,6 @@ Instead of resolving a Wild Kingdom:
 		say "     You mill around briefly with the others there, but things are quite hectic. They're certainly friendly enough, if rather odd. Still, it turns out to be a pleasant break from being attacked or hit on.";
 		increase morale of player by 1;
 	increase score by 1;
-
+	now Wild Kingdom is resolved;
 
 High Rise Events ends here.

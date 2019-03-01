@@ -36,16 +36,15 @@ to say losetomargay:
 		say "     The female margay looms over you, purring happily at her new prize. You are grabbed by the ample feline and your face pressed to her bosom. With your lips at her large nipple, you can't help but taste the dribbles of milk coming from it and that first taste is enough to set you to nursing. As you drink it down, it becomes all you can focus on.";
 		say "     'Oh, such a good [if player is female]girl[else]boy[end if]. Drink it all down for your new mama,' she purrs while running her paws over your [bodydesc of player] body.";
 		say "     She holds you even closer and runs her paws down your legs, guiding your feet to her gaping pussy before sliding them in with a happy moan. This goes largely unnoticed by you as you nurse past the increasingly warm and pleasurable feelings spreading up your legs and then to your hips. Her wet folds ripple over your [if cocks of player > 1]throbbing [cock size desc of player] [cock of player] cocks[else if cocks of player is 1]throbbing [cock size desc of player] [cock of player] cock[else if player is female]juicy [cunt size desc of player] petals[else]bare groin[end if].";
-		say "     Holding your arms to your sides, she takes your hands in as well. But it's only when you're pulled away from that dribbling nipple by the constant peristaltic motion of her vaginal walls that you realize what's happening. Though your main reaction to this is to mewl in disappointment and smack your lips for more of that tasty milk. The Rubenesque feline only chuckles at this and rubs her paws over your head, pushing you further into her swollen body. ";
+		say "     Holding your arms to your sides, she takes your hands in as well. But it's only when you're pulled away from that dribbling nipple by the constant peristaltic motion of her vaginal walls that you realize what's happening. Though your main reaction to this is to mewl in disappointment and smack your lips for more of that tasty milk. The Rubenesque feline only chuckles at this and rubs her paws over your head, pushing you further into her swollen body.";
 		if UBlevel > 1 and margaymet > 2 and MKunleashed is false:
 			let tempmon be monster;
 			setmonster "Megakitty";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			if name entry is "Megakitty":
 				now MKunleashed is true;
-				now area entry is "Midway";
-			say "     'I can't wait to tell Big Momma about you. The Megakitty so loves to meet the new kitties in our family,' she purrs, caressing your head tenderly before pushing you in further.";
-			say "     While not quite understanding her meaning, her words do please you and you wriggle gently in her rippling cunny, adding to her pleasure";
+				now area entry is "Fair";
+			say "     'I can't wait to tell Big Momma about you. The Megakitty so loves to meet the new kitties in our family,' she purrs, caressing your head tenderly before pushing you in further. While not quite understanding her meaning, her words do please you and you wriggle gently in her rippling cunny, adding to her pleasure.";
 		say "     Soon enough, you're fully encapsulated in her womb, feeling content and sleepy from the warmth and the milk. You feel quite happy as her uterine wall forms a placenta and an umbilical cord snakes its way down to connect to your navel, bonding you to your beautiful and loving feline mother. Feeling her paws rubbing over her full belly, you drift into a peaceful slumber, knowing she'll take care of you.";
 		say "     When you come to, you're curled up [one of]in a large, open-topped box left in a secluded corner behind some rides[or]under a shut down ride[or]in the corner of a looted concession stand[or]on some torn costumes behind the carnival sideshow[at random]. And you feel different too, changed a little by your unusual experience. You stagger to your feet and leave the private spot where your feline mother left you safely hidden while you napped and soon find your way back to where you were.";
 		increase margayubed by 1;
@@ -69,16 +68,15 @@ to say beatthemargay:
 		say "     ([link]Y[as]y[end link]) - Eat her out.";
 		say "     ([link]N[as]n[end link]) - Leave.";
 		if player consents:
-			say "     You crawl between her legs and start nuzzling and licking at your large, luscious lips. Her pussies are quite huge, easily able to take much more than your arm with ease, as you prove by soon fisting her to get her mewling and even more. Your tongue travels all along those plump lips before diving into lick deeper. As you continue licking, you are urged to push deeper and delve further with your tongue, pressing your head into her to lick along those deliciously wet vaginal walls. ";
+			say "     You crawl between her legs and start nuzzling and licking at your large, luscious lips. Her pussies are quite huge, easily able to take much more than your arm with ease, as you prove by soon fisting her to get her mewling and even more. Your tongue travels all along those plump lips before diving into lick deeper. As you continue licking, you are urged to push deeper and delve further with your tongue, pressing your head into her to lick along those deliciously wet vaginal walls.";
 			if UBlevel > 1 and margaymet > 2 and MKunleashed is false:
 				let tempmon be monster;
 				setmonster "Megakitty";
-				choose row monster from the table of random critters;
+				choose row monster from the Table of Random Critters;
 				if name entry is "Megakitty":
 					now MKunleashed is true;
-					now area entry is "Midway";
-				say "     As you're starting to push your way into her welcoming cunny, she caresses you tenderly. 'Mmm... you'll make a fine, loving kitty. I can't wait to let Big Momma know. The Megakitty will be looking forward to meeting you.'";
-				say "     With your head sliding into her, you find it difficult to focus on her words, but feel quite pleased to have made her happy";
+					now area entry is "Fair";
+				say "     As you're starting to push your way into her welcoming cunny, she caresses you tenderly. 'Mmm... you'll make a fine, loving kitty. I can't wait to let Big Momma know. The Megakitty will be looking forward to meeting you.' With your head sliding into her, you find it difficult to focus on her words, but feel quite pleased to have made her happy.";
 			say "     As this continues, you soon have your whole head into her and you're being drawn even deeper, your altered instincts urge you to accept this and you barely struggle. Your body slides further and further into her as her vagina and belly stretch with ease to accommodate you. As your hips are slid over, [if player is male]your rock-hard cock[smn] [ismv] pressed[else]your dripping puss[yfn] slide[sfv][end if] against those warm, rippling walls and you cum hard, much to the feline's delight.";
 			say "     You slide fully into her warm, welcoming womb and curl up into a fetal ball, purring softly as the warmth of your new mother surrounds you. Her uterine wall grows a placenta which attaches an umbilical cord to your belly with a pleasant sensation of union. Feeling her paws rubbing over her full belly, you drift off into a happy slumber, dreaming of full-figured felines with full, pregnant bellies snuggled all around you.";
 			say "     When you awaken, you find yourself hidden [one of]in a bundle of rags in an abandoned shop[or]in a large, cardboard box on a pile of plush margay toys[or]under a ride undergoing maintenance[or]behind the changing room for a haunted house attraction[at random]. And you feel different too, changed by your enjoyable, if unusual, experience. You stagger to your feet and leave the private spot where your feline mother left you safely hidden and soon find your way back to known territory.";
@@ -99,21 +97,21 @@ to say margayoral:
 	if UBlevel > 1 and margaymet > 2 and MKunleashed is false:
 		let tempmon be monster;
 		setmonster "Megakitty";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if name entry is "Megakitty":
 			now MKunleashed is true;
-			now area entry is "Midway";
+			now area entry is "Fair";
 		say "     'If you're not going to be a good little kitty and play with me properly, I think we'll need to send Big Momma after you. The Megakitty will make sure you're brought up right as a sexy kitty,' she calls out at you as you walk off. You're not quite sure what all that means, but it could be trouble.";
 
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Margay"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -142,7 +140,7 @@ When Play begins:
 	now HP entry is 55; [ How many HP has the monster got? She's not too hard- she doesn't want to win so much as not lose]
 	now lev entry is 7; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 7; [Amount of Damage monster Does when attacking. Claws and massive strength]
-	now area entry is "Midway"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now area entry is "Fair"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 0; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 0; [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
@@ -161,8 +159,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "margay"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Alt Combat - Sensual Dance
@@ -172,7 +171,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "margay"	margaydance rule	--	--	--	--	--	--	--	--	--
 
 this is the margaydance rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	increase margaydancecount by 1;
 	if margaydancecount is even and a random chance of 2 in 5 succeeds and peppereyes is 0:	[40% of the time on any even round]
 		say "The big kitty performs an erotic dance that is quite tantalizing, seeking to entice you into giving into her rough advances. She runs her paws over her ample figure, her numerous breasts and then down to her wet cunts, fingering them with a moan of desire.";
@@ -251,7 +250,7 @@ when play ends:
 			say "     After your rescue by the soldiers and treatment at the camp, you are released into the world. You have a difficult time initially, as an infected person and a rather plump person, your appearance makes it hard to find work for a while. But in time, you get a temporary placement through an agency for infected people and get employment doing office work. You settle into your work easily enough, with everyone soon becoming used to your unusual appearance. You do well enough there, able to get by on the mediocre income.";
 			if player is female:							[FEMALE/HERM]
 				say "     A cute delivery boy catches your eye, having picked up a partial feline infection when a leopard-like creature escaped the city and ran through his home town before being caught. You start to create opportunities to see the young man, arranging for deliveries and shipments to bring him in. You eye him appreciatively, smiling as you continue to sweet talk to the young man, enjoying how his feline urges increasingly respond to you. And then one day, you smear some of your pussy juices onto his nose and lick his ear, telling him to come back after hours to see you. He can't help but agree as your heat-laced scent fires up his feline instincts.";
-				say "     You make up an excuse as the others leave, feigning having work to catch up on, then let the young man in when he returns. Soon enough, your kissing and groping one another as you pull off each other's clothes. He is an inexperienced lover, but you adore even that about him, for he is so earnest and eager. ";
+				say "     You make up an excuse as the others leave, feigning having work to catch up on, then let the young man in when he returns. Soon enough, your kissing and groping one another as you pull off each other's clothes. He is an inexperienced lover, but you adore even that about him, for he is so earnest and eager.";
 				if humanity of player < 33:
 					say "     From somewhere deep inside, you feel a longing to be filled, needing more from your young lover. You guide him down to your wet, dripping puss[yfn], which he quickly buries his face into. As he licks and kisses at your dripping folds, your pussy spreads wider and wider, soon pulling him into you. He never struggles or resists, only licking along your vaginal walls all the more eagerly. After a series of orgasms around his disappearing body, you feel him curl up in your overstuffed womb.";
 					say "     After a long nap right there on the floor, your womb quivers and after a few pleasant minutes, the process reverses itself and you release your lover from your womb. He snuggles up to you, nursing from your breast and running his furry hands over his new mother's body. The process has made him a little more feline and added a little more. Tucked under his ballsack is a wet and waiting pussy that grows and matures further each time you take him over the next several months. With your infection only partially active, he gradually becomes more of a margay than a leopard, though few would recognize the differences. He doesn't gain breasts or the added weight, letting him hide his new gender to surprise unsuspecting playmates. You are always his favorite though and eagerly returns to your womb again and again.";

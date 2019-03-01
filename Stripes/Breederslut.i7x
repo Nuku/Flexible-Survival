@@ -22,12 +22,12 @@ to say beatthebreederslut:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Breederslut";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -42,7 +42,7 @@ When Play begins:
 	now tail entry is "You have a short, fluffy tail that curls up cutely.";
 	now cock entry is "[one of]canine[or]knotted[or]doggy[at random]";
 	now face change entry is "pleasant tingles spread across your face. Your mouth distorts, forming a cute little muzzle with a happy doggy smile on it. Your eyes shift position and your ears become short and pointed. By the time the transition is over, you're left with the head of a very cute Shiba Inu atop your shoulders";
-	now body change entry is "you start to transform. Shivers of pleasure run through you as your body is changed, becoming small and canine. By the time it's done, you've become an cute and feminine Shiba Inu anthro. After a momentary pause, fresh pinpricks can be felt just above your crotch. Looking down, you can see a tattoo-like marking saying [']fucktoy['] appear there";
+	now body change entry is "you start to transform. Shivers of pleasure run through you as your body is changed, becoming small and canine. By the time it's done, you've become a cute and feminine Shiba Inu anthro. After a momentary pause, fresh pinpricks can be felt just above your crotch. Looking down, you can see a tattoo-like marking saying [']fucktoy['] appear there";
 	now skin change entry is "pinpricks spread across your skin. From these points, a fluffy coat of fur forms. It's a lovely shade of golden brown across your limbs, shoulders and back, and a snowy white across your chest and neck and chin";
 	now ass change entry is "your lower spine tingles. A short, fluffy tail forms above your ass, curling up cutely so as to never hide your cute tush";
 	now cock change entry is "takes on a markedly canine shape. It keeps a soft, pinkish flesh tone while gaining a sheath as well. And while it strangely appealing to you, you feel no immediate desire to put your new doggy dong to the test";
@@ -56,7 +56,7 @@ When Play begins:
 	now HP entry is 15; [ The monster's starting HP. ]
 	now lev entry is 1; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 3; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
@@ -75,8 +75,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Heat
@@ -102,7 +103,7 @@ to say bsheat:
 	increase libido of player by 3;
 	if Dominick is visible and ( lastfuck of Dominick - turns ) >= 8 and a random chance of libido of player in 150 succeeds:
 		setmonster "Breederslut";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		LineBreak;
 		say "     Looking over at Dominick, you feel another tremble of excitement strike your loins. You start to pant, suddenly feeling very hot - especially between your legs. The sexy husky's nose sniffs the air, turning towards you with a confident grin. His cock twitches and dribbles a strand of pre onto the floor. With your eyes drawn to that meaty red pole, your insides flutter again with heated desire.";
 		say "     'Come here, you horny thing,' Dom says, getting up from his seat. 'I know you want it.' His canine shaft, now fully erect, stands proud and ready for you. With the heat only growing stronger in your loins, you obey and head over to him. Moving onto all fours, you present yourself to him with a needy whine.";

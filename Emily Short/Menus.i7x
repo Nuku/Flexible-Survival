@@ -8,19 +8,19 @@ Include Basic Screen Effects by Emily Short.
 
 Section 1
 
-Menu depth is a number that varies. Menu depth is 0.
+Menu depth is a number that varies.[@Tag:NotSaved] Menu depth is 0.
 
-The endnode flag is a number that varies. The endnode flag is 0.
+The endnode flag is a number that varies.[@Tag:NotSaved] The endnode flag is 0.
 
-The current menu title is text that varies. The current menu title is "Instructions".
+The current menu title is a text that varies.[@Tag:NotSaved] The current menu title is "Instructions".
 
 Table of Sample Options
 title	subtable	description	toggle
 "foo"	a table-name	"bar"	a rule
 
-Current menu is a table-name that varies. The current menu is the Table of Sample Options.
+Current menu is a table-name that varies.[@Tag:NotSaved] The current menu is the Table of Sample Options.
 
-Current menu selection is a number that varies. Current menu selection is 1.
+Current menu selection is a number that varies.[@Tag:NotSaved] Current menu selection is 1.
 
 Table of Menu Commands
 number	effect

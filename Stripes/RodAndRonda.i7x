@@ -3,7 +3,11 @@ Version 1 of RodAndRonda by Stripes begins here.
 
 Section 1 - Rod
 
-Rod Mallrat is a person. "[if HP of Ronda is not 100]A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDonalds[or]one of the tables[or]the guarded bathroom area[at random][else]Rod the slut rat is [one of]stretched out on some cushions[or]curled up for a quick nap[or]wiping some stray globs of cum from her fur and then licking them from her fingers[or]tinkering with some odd and ends she's found among the slut rats['] collected junk[at random][end if].".
+Table of GameCharacterIDs (continued)
+object	name
+Rod Mallrat	"Rod Mallrat"
+
+Rod Mallrat is a person. "[if HP of Ronda is not 100]A relatively harmless looking mallrat named Rod is lounging around [one of]the pizza place[or]McDaniels[or]one of the tables[or]the guarded bathroom area[at random][else]Rod the slut rat is [one of]stretched out on some cushions[or]curled up for a quick nap[or]wiping some stray globs of cum from her fur and then licking them from her fingers[or]tinkering with some odd and ends she's found among the slut rats['] collected junk[at random][end if].".
 The description of rod mallrat is "[roddesc]".
 The icon of Rod Mallrat is figure of Rod_icon.
 Rod is a trader.
@@ -16,16 +20,16 @@ to say roddesc:
 	else:
 		say "     Rod has become a sexy slut rat. She has curvy hips, a tight waist and large bosom. She has a black leather outfit like most of the other slut rats, though hers is certainly much skimpier, showing off her new breasts, cute ass and bulging crotch. She has a very feminine face, though you can still pick out a few traces that remind you of the old Rod to help you identify her. She has black fur and a long, naked rat tail. She's managed to keep some of her personality thanks to Ronda, but is thoroughly a horny slut rat now.";
 
-the scent of Rod is "[if HP of Ronda is not 100]Rod smells of rats and his mall home.[else]Rod smells of slutty rats and sex. Lots of sex.[end if]".
+the scent of Rod is "[if HP of Ronda is not 100]Rod smells of rats and his mall home[else]Rod smells of slutty rats and sex. Lots of sex[end if].".
 
 instead of conversing Rod Mallrat:
 	if tmapfound is 1:		[***needs Slut Rat version?]
-		say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I'll be right back, dude. I wanna show this to the others!' The well-dressed mall rat calls back over his shoulder. You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' he says as he hands you the two pieces of paper. 'Turns out that's some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that ain't too far away actually. No clue what's on the island though, but the scratchings on the front part are definitely a warning about pirates[if level of player < (7 - levelwindow)]! You'd best toughen yourself up before trying to find a way over there[else]! Best be careful[end if].' Rod says with a shrug, then grins. 'Turns out one of our guys left and ran into some sea rats out there somewhere, too. Some of the other mall rats are thinking about hitting the beach sometime to find [']em. Not me though, but hey whatever you're doing, it sounds kinda exciting. Let us know how it all turns out, ok? And if ya see any sea rats, say hi for us,' Rod finishes, before he goes back to his being cool and hanging around the food court. You look down at your original map, and the translated map with a small speck of land not far off the coast circled - with this you might be able to find the pirates! And maybe some treasure too!";
+		say "'Oh hey that scratching looks kinda familiar!' Rod says when you show him the map, snatching it out of your hands he looks at it from several angles, before heading off to the north. 'I'll be right back, dude. I wanna show this to the others!' The well-dressed mall rat calls back over his shoulder. You spend some time wandering around the food court poking into places for a bit before Rod returns, your original message and map with him, and another piece of paper as well. 'Hey sorry about the delay, took a bunch of us to puzzle this stuff out,' he says as he hands you the two pieces of paper. 'Turns out that's some kinda map as ya figured, found a map store here in the mall and managed to match it up to the coast here for ya, leads to some island that ain't too far away actually. No clue what's on the island though, but the scratchings on the front part are definitely a warning about pirates[if level of player < (7)]! You'd best toughen yourself up before trying to find a way over there[else]! Best be careful[end if].' Rod says with a shrug, then grins. 'Turns out one of our guys left and ran into some sea rats out there somewhere, too. Some of the other mall rats are thinking about hitting the beach sometime to find [']em. Not me though, but hey whatever you're doing, it sounds kinda exciting. Let us know how it all turns out, ok? And if ya see any sea rats, say hi for us,' Rod finishes, before he goes back to his being cool and hanging around the food court. You look down at your original map, and the translated map with a small speck of land not far off the coast circled - with this you might be able to find the pirates! And maybe some treasure too!";
 		increase tmapfound by 1;
 	else if hospquest is 8 and nerminepackage > 0 and rodhosp is not 0 and HP of Ronda is not 100:
 		say "     'Those big, spotted hairballs that rolled in here the other day? That was a bad scene, dude. They started to get fresh with some of the girls in the atrium and tried to drag them off. Well, we wouldn't put up with that. Never try to force a mall rat from their mall, man. We don't want none of them goons and their friends in here again.'";
 		now rodhosp is 1;
-	else if progress of alex is 2 and HP of Ronda is not 100:
+	else if AlexProgress is 2 and HP of Ronda is not 100:
 		say "     'Darrell? Yeah, he was here when it all went down. But... you might be a little surprised[if HP of ronda is 0 or HP of Ronda is 10]. Go talk to my girl, she knows where he is.'[else].' He shrugs, and points to the north. 'Go ask the others. They might know where he is.' He seems a little bummed.[end if]";
 	else if HP of Ronda is 0:
 		say "     [one of]'Did I introduce myself yet? I'm Rod, Rod Mallrat.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, you see those nagas? They hunt us mall rats, you know. Scary shit, no joke.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[at random]";
@@ -43,13 +47,13 @@ instead of conversing Rod Mallrat:
 		if Slut Rat Den is unknown:
 			say "     'Now comes the tough part, dude. You'll need to find the nest of those infected rats and all like black-ops infiltrate the place. They drag off anyone they beat, so the best way would be to let them catch you and see if you can learn the way there. I'd totally do it myself, but no rat they take ever makes it back.'";
 		else:
-			say "     'Well, since you know how to find them, now we need to figure out which one of them is Ronda. That'll be trickier. She's got a tattoo of a red heart on her thigh right by her... you know. She did it back when we started going out, before we became professional mall rats instead of just human ones. But the tattoo's still there, giving her a red patch of fur[if pooltable of Slut Rat Den is 3].' Having gotten well acquainted with both Eight-Ball and Skeeball, you know neither of them have a mark like that. Nor have any of the others you've spotted. But that's only a handful of slut rats out of a few dozen who come and go[else].' Having spent some time with several of the slut rats, you've not spotted any of them with a mark like that yet. But that's only a handful out of a few dozen who come and go[end if].";
+			say "     'Well, since you know how to find them, now we need to figure out which one of them is Ronda. That'll be trickier. She's got a tattoo of a red heart on her thigh right by her... you know. She did it back when we started going out, before we became professional mall rats instead of just human ones. But the tattoo's still there, giving her a red patch of fur[if SlutRatDenPoolTable is 3].' Having gotten well acquainted with both Eight-Ball and Skeeball, you know neither of them have a mark like that. Nor have any of the others you've spotted. But that's only a handful of slut rats out of a few dozen who come and go[else].' Having spent some time with several of the slut rats, you've not spotted any of them with a mark like that yet. But that's only a handful out of a few dozen who come and go[end if].";
 			say "     'You'll need to cozy up to the rats until you find Ronda,' he continues. 'Once you find her, get her somewhere alone and give her the stuff. Use these chocolates, bud. They're her fave. Just be careful. We'll only get one shot at this.'";
 			now HP of Ronda is 9;
 	else if HP of Ronda is 9:
 		say "     'Please keep looking for my dear, sweet Ronda. She's got a heart-shaped mark right here,' he says, tapping at his inner thigh.";
 	else if HP of Ronda is 10:
-		say "     [one of]'Thanks for helping out with Ronda.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, keep an eye on those rats. They're still down there.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[or]'It's good to have Ronda back, but man! does she ever play rough now,' he says, rubbing his backside.[or]'Ronda and I really appreciate all your help getting us back together.'[or]'It's so nice having Ronda back. Though her new... ummm... you know... Got to get used to that.'[or]'I'm so happy that Ronda's back safe and sound.'[at random]";
+		say "     [one of]'Thanks for helping out with Ronda.'[or]'You got stuff to trade? I love tinkering with stuff. Just give it to me and watch me in action.'[or]'Dude, keep an eye on those rats. They're still down there.'[or]'Like the threads? My girl picked them out for me.'[or]'Dude, just chillin['].'[or]'Sup?'[or]'It's good to have Ronda back, but man, does she ever play rough now,' he says, rubbing his backside.[or]'Ronda and I really appreciate all your help getting us back together.'[or]'It's so nice having Ronda back. Though her new... ummm... you know... Got to get used to that.'[or]'I'm so happy that Ronda's back safe and sound.'[at random]";
 	else if HP of Ronda is 99:
 		say "[one of]'Oh, hey there.'[or]'You got stuff to trade? I could use something to tinker with to take my mind off things.'[or]'I miss my sweet Ronda.'[or]'Oh, hey there,' he says with a sigh.[or]'Please be careful. We don't want to lose you too.'[or]'Sup?'[at random]";
 	else if HP of Ronda is 100:
@@ -61,8 +65,8 @@ the fuckscene of Rod Mallrat is "[sexwithRod]".
 
 to say sexwithRod:
 	[puts Slut Rat as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Slut Rat":
 			now monster is y;
 			break;
@@ -81,11 +85,11 @@ to say sexwithRod:
 		say "     Rod smiles happily at your offer and pops the few catches on her outfit, getting nude in record time. The slutty rat moans lustfully and drops to her knees in front of you. With her paws on your groin, she starts licking your crotch. ";
 		if player is male:
 			let x be 1;
-			say "     She runs her tongue over your throbbing penis, then sinks her muzzle down over it, licking and sucking hungrily. Her paws tease your nuts and work the shaft as you start fucking the slutty rat's face. You run your hands through her dark hair and rub her ears, telling her what a good, slutty rat she is. Pleased by your words, her tongue and lips work all the harder to please you.";
+			say "She runs her tongue over your throbbing penis, then sinks her muzzle down over it, licking and sucking hungrily. Her paws tease your nuts and work the shaft as you start fucking the slutty rat's face. You run your hands through her dark hair and rub her ears, telling her what a good, slutty rat she is. Pleased by your words, her tongue and lips work all the harder to please you.";
 		else if player is female:
-			say "     She runs her tongue over your wet labia, then dives her tongue into your cunt, licking and lapping zealously. Her paws tease your clit and folds as you grind your pussy against her face. You run your hands through her dark hair and rub her ears, telling her what a good, slutty rat she is. Pleased by your words, her tongue and lips work all the harder to please you.";
+			say "She runs her tongue over your wet labia, then dives her tongue into your cunt, licking and lapping zealously. Her paws tease your clit and folds as you grind your pussy against her face. You run your hands through her dark hair and rub her ears, telling her what a good, slutty rat she is. Pleased by your words, her tongue and lips work all the harder to please you.";
 		else:
-			say "     Saddened to see your bare groin, she nips and licks at it while running her paws along your thighs. She pulls you down to snuggle in her arms, guiding your lips to one of her nipples and coaxing you to nurse milk from her breast. As you drink down the ratty milk, Rod strokes a paw over your head, whispering that she'll help you get better while her other paw plays with your asshole, granting you a little sexual relief even as you start to feel the effects of her milk.";
+			say "Saddened to see your bare groin, she nips and licks at it while running her paws along your thighs. She pulls you down to snuggle in her arms, guiding your lips to one of her nipples and coaxing you to nurse milk from her breast. As you drink down the ratty milk, Rod strokes a paw over your head, whispering that she'll help you get better while her other paw plays with your asshole, granting you a little sexual relief even as you start to feel the effects of her milk.";
 			say "[slut rat growth]";
 		if player is male:
 			if x is 1 and a random chance of 1 in 5 succeeds:
@@ -106,7 +110,11 @@ to say sexwithRod:
 
 Section 2 - Ronda
 
-Ronda Mallrat is a person. "[if HP of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note.[else if HP of Ronda is 10]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random].[else if HP of Ronda is 100]Ronda [one of]sits with several slut rats fawning over her[or]is stretched out across some cushions, enjoying some expensive chocolates[or]idly rubs her crotch[or]runs her paws over Rod[at random].[end if]".
+Table of GameCharacterIDs (continued)
+object	name
+Ronda Mallrat	"Ronda Mallrat"
+
+Ronda Mallrat is a person. "[if HP of Ronda is 0]A shapely mallrat female is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random]. Ronda is her name, or so the other mallrats helpfully note[else if HP of Ronda is 10]Ronda is reclining on [one of]one of the benches[or]a box in front of a Hot Topic[or]her back on the rim of the fountain[or]a wall, preening her long tail[at random][else if HP of Ronda is 100]Ronda [one of]sits with several slut rats fawning over her[or]is stretched out across some cushions, enjoying some expensive chocolates[or]idly rubs her crotch[or]runs her paws over Rod[at random][end if].".
 The description of Ronda Mallrat is "[rondadesc]".
 The conversation of Ronda is { "empty" }.
 Ronda Mallrat is in Mall Atrium.
@@ -121,7 +129,7 @@ to say rondadesc:
 	else:
 		say "ERROR-Ronda-[HP of Ronda]L: You should not be able to converse with Ronda at this point.";
 
-the scent of Ronda is "[if HP of Ronda is not 100]Ronda smells of cheap perfume, rats and her mall home.[else]Ronda smells of slutty rats, cheap perfume and lots of sex.[end if]".
+the scent of Ronda is "[if HP of Ronda is not 100]Ronda smells of cheap perfume, rats and her mall home[else]Ronda smells of slutty rats, cheap perfume and lots of sex[end if].".
 
 instead of conversing Ronda Mallrat:
 	if HP of Ronda is not 100 and hospquest is 8 and nerminepackage > 0 and rondahosp is 0:
@@ -133,7 +141,7 @@ instead of conversing Ronda Mallrat:
 	else if HP of Ronda > 0 and HP of Ronda < 10:
 		say "ERROR-Ronda-[HP of Ronda]T: You should not be able to converse with Ronda at this point.";
 	else if HP of Ronda is 10:
-		say "[one of]'Those clothes are out of date, hon. You should update your wardrobe.'[or]'Being a mall rat is way better than being a human, no offense or anything to humans.'[or]'We can find anything we need here in the mall; it is our Eden.'[or]'Thanks again for the assist,' she says.[or]'Me and the girls are getting along really well since I got back. [']Really['] well,' she says with a wink and a grin.[or][if HP of Lucy is 0]'Have you met Lucy?' she asks, hugging one of the rat girls nearby. 'We've become good friends since I got back.' Lucy smiles and discreetly runs her paw over Ronda's lap.[else]'I hope you and Lucy are getting along well. And don't worry, I'll keep an eye on her while you're away,' she says with a wink.[end if][or]'Rod's such a good boy. Knows his place.'[at random]";
+		say "[one of]'Those clothes are out of date, hon. You should update your wardrobe.'[or]'Being a mall rat is way better than being a human, no offense or anything to humans.'[or]'We can find anything we need here in the mall; it is our Eden.'[or]'Thanks again for the assist,' she says.[or]'Me and the girls are getting along really well since I got back. [']Really['] well,' she says with a wink and a grin.[or][if HP of Lucy is 0]'Have you met Lucy?' she asks, hugging one of the rat girls nearby. 'We've become good friends since I got back.' Lucy smiles and discreetly runs her paw over Ronda's lap[else]'I hope you and Lucy are getting along well. And don't worry, I'll keep an eye on her while you're away,' she says with a wink[end if].[or]'Rod's such a good boy. Knows his place.'[at random]";
 	else if HP of Ronda is 100:
 		say "[one of]'I feel so much better now that I have my sweet Rod to play with.'[or]'Feel free to play with Rod whenever I'm not using her.'[or]'I love living here with my slutty Rob and all my sexy friends. This is paradise.'[or]'Thanks again for your help with Rod. Having her here makes everything so much better.'[or]'Rod's such a good slut. Knows her place.'[at random]";
 
@@ -158,12 +166,13 @@ Section 3 - Unleashing the Slut Rats
 instead of trading the demon seed when the current action involves the ronda:
 	if HP of Ronda is 0:
 		project the figure of RondaSR_icon;
-		say "     Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.[line break][line break]The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with new found virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
+		say "     Ronda looks confused at the gift, 'What the heck is this gunk?' she asks, sniffing at it, then flicking a tongue out to taste it. The moment her tongue caresses the surface, she tenses, then lets out a long, airy groan. Other rats nearby come to investigate the noise, and she is soon sharing with about half a dozen of them, licking and lapping until there's none left.";
+		say "     The six rats are all panting loudly now as their breasts starts to swell up dramatically and their pants bulge with newfound virility. A sudden shout breaks their reverie. The other mall rats have noticed the goings on, and converge to drive off the infected, Ronda included, forcing the changed rats off into the sewers.";
 		delete demon seed;
-		remove ronda from play;
+		now Ronda is nowhere;
 		now HP of ronda is 1;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Slut Rat":
 				now area entry is "Mall";
 				break;
@@ -201,7 +210,7 @@ before conversing the Nermine while HP of Ronda is 5:
 to say rondaitems:
 	say "     Pulling out the items Nermine needed to help Ronda, you place them on the counter. She smiles happily and takes them. 'And now it is time to be talking about Nermine's payment for this. The last items Nermine is needing complete the cure are to be found in a private collection in the city. Downtown, there is high rise condo of private art collector. He is keeping veil and staff in his penthouse suite. Nermine is wanting you to be collecting them for her. Veil needed to complete cure, staff is payment. One trip for both. Easy for one working so hard to make amends.";
 	now HP of Ronda is 6;
-	now Art Collector is unresolved;
+	now Art Collector is active;
 	increase score by 10;
 	delete lizard juice;
 	delete awesomest fruit;
@@ -230,8 +239,12 @@ the scent of lizard juice is "The creamy white fluid has a thick, musky scent.".
 
 Chapter 2 - The Art Collector Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Art Collector	"Art Collector"
+
 Art Collector is a situation. The level of Art Collector is 9.
-Art Collector is resolved.
+Art Collector is inactive.
 The sarea of Art Collector is "High".
 
 artleopardfight is a number that varies.
@@ -252,6 +265,7 @@ Instead of resolving a Art Collector:
 	if artleopardfight is 3:		[fled]
 		say "     You manage to feint past the enraged, aroused feline and charge out of the suite. You rush for the stairs with him in hot pursuit, but the lustful moans of the heat-ridden females draw him back inside, letting you escape. You run down as quick as you can for the first several flights, just in case, then slow to a more reasonable pace for your long defeated descent. You'll have to recover and try coming back another time.";
 		now artattempt is 1;
+		now Resolution of Art Collector is 3; [fled]
 	else if artleopardfight is 2:	[lost]
 		say "     The powerful leopard grabs you and runs his paws over you, as if trying to decide what to do with the thief he's caught. But before he can come to a decision, the heat-ridden females on his bed start to yowl in lustful need, longing for the strong male to rejoin them. The muscled feline grabs you roughly and drags you out onto his large patio. While the impressive view of the skyline would normally draw your attention, it is the ground that soon fills your view as he hurls you over the side of the building. You scream as you plummet quickly, spreading yourself out as best you can to slow your fall, but with little effect as the pavement seems to rush up at you. As you are about to strike the ground, everything mercifully goes black.";
 		now artattempt is 1;
@@ -275,10 +289,12 @@ Instead of resolving a Art Collector:
 		decrease morale of player by 20;
 		decrease humanity of player by 8;
 		say "     When you finally awaken, sore and aching all over but somehow alive, you give thanks to the powerful healing abilities of the infection. You slowly struggle to rise, the healing process having taken much out of you. You have left a noticeable dent and several cracks in the pavement where you landed, as well as a sizable red stain. Looking at it as you struggle to get up, you notice that something else is off - the lighting very different now. Looking up, you see that it's [short time of day] now, many hours since your ill-fated fight with the leopardman. After what feels like a Herculean effort, you make it to your feet and stagger off to find someplace to heal in peace.";
+		now Resolution of Art Collector is 2; [lost]
 	else if artleopardfight is 1:	[victory]
 		say "     With the leopardman driven off, you can hear the lustful yowls of the felines get louder as they start to climb off the bed. Unwilling to face down a pack of heat-ridden females, you quickly smash the case, grab the items and make a run for it. You dash to the antechamber and into the stairwell, rushing down the first couple of flights. When you don't hear any pursuit, you relax a little and cautiously slow down, hoping they decided to coax the defeated male from the other room to satisfy them. You look over the strange, unassuming items and hope they are worth the effort as you stow them away carefully and make your way back outside.";
 		increase score by 20;
 		now HP of Ronda is 7;
+		now Resolution of Art Collector is 1; [won]
 		now Art Collector is resolved;
 
 Chapter 3 - The Rescue Attempt
@@ -287,8 +303,8 @@ rondafight is a number that varies.
 
 to say rondarescue:
 	[puts Slut Rat as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Slut Rat":
 			now monster is y;
 			break;
@@ -301,7 +317,7 @@ to say rondarescue:
 		say "     Looking around the various rats in the den at the moment, you aren't able to spot one with Ronda's red heart on their fur. You try to keep a mental list of who you've already checked, though it's hard to tell the slutty rats apart at times.";
 	else:
 		say "     You are about to give up when you spot a flash of red on one of the large rats. This well-endowed herm has another rat's muzzle buried under her hefty balls and licking her snatch. You'd almost missed it because her big testes were covering the little red heart. You're tempted to join in right away, but you won't be able to tempt her somewhere secluded until she's done with her current playtoy anyhow. You snuggle back with one of the other rats and sit back to enjoy the show.";
-		if pooltable of Slut Rat Den is 3:
+		if SlutRatDenPoolTable is 3:
 			if slutratsub > 5 or cocks of player is 0:	[bottom]
 				say "     Finding yourself in Eight-ball's arms, you moan in pleasure as the rat starts playfully teasing you. You giggle happily and wiggle back against her cock, soon rewarded with the pleasant joy of having her cock slide up into your [if player is female]hot pussy[else]tight ass[end if]. You bounce in his lap as you both enjoy the show, watching as Ronda rolls the other rat onto all fours and fucks her good and hard until she's full of overflowing semen, and so are you.[impregchance]";
 			else:			[top]
@@ -432,8 +448,8 @@ to say helpingrod:
 				if libido of player > 50, now libido of player is 50;
 			else if player is female:
 				[puts Mall Rat as lead monster in case of impregnation]
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Mall Rat":
 						now monster is y;
 						break;

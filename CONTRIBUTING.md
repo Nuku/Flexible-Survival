@@ -16,7 +16,7 @@ This will let you record your changes and send it up to the Github repository fo
 https://desktop.github.com/
 
 ## 4. Clone your fork of the Flexible-Survival repository
-Click `Clone a repository` and it will show you a list of your forked repositories--click on Flexible-Survival and click `Clone`.
+Click `Clone a repository` and it will show you a list of your forked repositories - click on Flexible-Survival and click `Clone`.
 
 ## 5. Download Atom
 Atom is a text editor that you can use to edit files. There are a couple of useful packages you can install to make life easier!
@@ -31,13 +31,13 @@ This will give you syntax highlighting, so you can tell which parts are text tha
 
 Install packages by going to: File -> Settings -> Install
 
-### c. install the Atom package `symbol-gen`
+### c. install the Atom package `atom-ctags`
 This package lets you index the Flexible Survival definitions to make searching easier. Ever wonder what `player is male` is actually defined as? `CTRL+SHIFT+R` and type `male` to find out!
 
-You will have to copy the `.ctags` file in the Flexible-Survival folder into your `Users` folder for this package to work. How do you get to that? Press `WIN+R` (WIN is the windows key) and type `%HOMEPATH%`. Then copy the Flexible-Survival file called `.ctags` into that folder. In Atom, press `CTRL+ALT+G` and the bottom right corner should say `Generating symbols`.
+You will have to copy the `.ctags` file in the Flexible-Survival folder into your `Users` folder for this package to work. How do you get to that? Press `WIN+R` (WIN is the windows key) and type `%HOMEPATH%`. Then copy the Flexible-Survival file called `.ctags` into that folder. If you want to do this automatically, run the `sync.bat` script (described below) and you can ignore this part.
 
 Package Keyboard Shortcuts:
-`CTRL+ALT+G`: Regenerate the definitions list. This should happen automatically every time you save a file but you will have to do this when you first install this package and every time you pull changes from the repository that you didn't make in Atom.
+`CTRL+SHIFT+P`: and type `Atom Ctags: Rebuild` to rebuild the symbols for your project. You will have to do this periodically to update the list (if you cannot find a symbol, try this first)
 `CTRL+R`: Search definitions within the currently opened file
 `CTRL+SHIFT+R`: Search definitions within the entire Flexible Survival repository
 
@@ -48,7 +48,7 @@ Package Keyboard Shortcuts:
 `CTRL+ALT+O`: Toggle whether the panel appears.
 
 ### e. install the Atom packages `linter`, `linter-flexible-survival` and their dependencies
-Start by adding the linter plugin. It'll ask you to install some dependencies as well, so go ahead and click yes on all of them that come up. Then install the linter specifically for Flexible Survival. This will help you make sure your code and writing is stylistically correct and it will catch a good number of common coding errors. 
+Start by adding the linter plugin. It'll ask you to install some dependencies as well, so go ahead and click yes on all of them that come up. Then install the linter specifically for Flexible Survival. This will help you make sure your code and writing is stylistically correct and it will catch a good number of common coding errors.
 
 ## 6. Install Inform 7
 Install Inform 7! Flexible Survival runs on this game engine.
@@ -67,7 +67,7 @@ Start Inform and set up "Flexible Survival" as a new project with that exact nam
 ## 8. Install the Flexible Survival game
 Install the Flexible Survival game so you have an interpreter that can read the game files without a lot of hassle.
 
-http://blog.flexiblesurvival.com/p/links.html
+https://blog.flexiblesurvival.com/p/links.html
 
 ## 9. Run the `sync.bat` script
 You will have to do this step every time a new folder is introduced (either pulled from Github or if you add a new folder yourself).

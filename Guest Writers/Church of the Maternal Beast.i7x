@@ -4,25 +4,21 @@ Version 4 of Church of the Maternal Beast by Guest Writers begins here.
 
 "This is a complete interaction scene, including monsters, rooms, a few scripted encounters and maybe even an item or two."
 
-[
-the Beach Area is a situation.
-
-After resolving the Beach Area, try looking;
-
-Instead of Resolving the Beach Area:
-	say "After far too many dead ends, and impassible roads, you finally manage to find your way Back to the Beach on one side of the city.";
-	now The Beach Plaza is known;
-	move player to Beach Plaza;
-	now the Beach Area is resolved;
-]
-
 Book 1 - Rooms
+
+Table of GameRoomIDs (continued)
+Object	Name
+Beach Plaza	"Beach Plaza"
 
 Beach Plaza is a Room. "     As you step out of the dirty, ill-kempt street you are met surprised by the sunny scene spread out in front of you, an open and relatively clean plaza with steps leading down to a small stretch of public beach. There are various infected cavorting around in the sand and water, laughing and enjoying themselves. To the north is a church, its wide double doors open and inviting, and to the west is a set of stairs down onto the beach proper.".
 The Beach Plaza is fasttravel.
 The Beach Plaza is not known.
-Beach Exit is a door. Beach Exit is dangerous. The marea of Beach Exit is "Outside". Beach Exit is undescribed. Beach Exit is east of Beach Plaza. East of Beach Exit is Outside Exploration.
+Beach Exit is a door. Beach Exit is dangerous. The marea of Beach Exit is "Outside". Beach Exit is undescribed. Beach Exit is east of Beach Plaza. Outside Exploration is east of Beach Exit.
 [The Beach Plaza is private.]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Public Beach	"Public Beach"
 
 Public Beach is a Room. "[publicbeachdesc]".
 
@@ -31,13 +27,13 @@ to say publicbeachdesc:
 	say "     A few changed faces glance up at you, and a few smile friendlily, but otherwise you're left alone. There seem to be [if daytimer is day]a lot of aquatic infected here[else]quite a few aquatic infected here even at night[end if], otters & dolphins mainly, though one big hunk of an orca does stand out. He's got a whistle around his meaty neck and seems to be acting as the lifeguard here. He looks occupied right now however.";
 	say "     Thanks to the lifeguard, the immediate area on the beach seems peaceful enough, but things seem less supervised (and civilized) should you follow the sandy shoreline [link]southwards[as]south[end link]. Should you rather stay here and perhaps even get a snack, there's a small beach-side restaurant you can go [link]inside[as]in[end link]. The [link]west[end link] leads out onto some sand bars before the water gets too deep and choppy for the casual swimmer as those rocky outcroppings start to appear. To your [link]north[end link] is set of dirty dingy sheds. Should you wish to leave the beach, it is backed by a short block wall to the [link]east[end link] with stairs leading back up to the plaza.";
 
-West of Beach Plaza is Public Beach.
+Public Beach is west of Beach Plaza.
 
 Unsupervised Beach is a door. "The beach continues along to the south, but is unsupervised. Unlike here, you see few people around... perhaps for good reason." Unsupervised Beach is dangerous.
 The marea of Unsupervised Beach is "Beach".
 
-South of Public Beach is Unsupervised Beach.
-South of Unsupervised Beach is UnsupBeach. [Check]
+Unsupervised Beach is south of Public Beach.
+UnsupBeach is south of Unsupervised Beach. [Check]
 
 instead of sniffing the beach plaza:
 	say "The seashore is near. There is salt in the air.";
@@ -45,9 +41,12 @@ instead of sniffing the beach plaza:
 instead of sniffing Public Beach:
 	say "The salt in the air is reminiscent of high tide at the beach.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Church Hall	"Church Hall"
 
 Church Hall is a room. "     The inside of the Church is dim but not dark - relaxing, one could say. It seems all terribly normal, wooden pews filling much of the long hall, a smattering of heads sitting here and there. There's definitely no lack of space. There are some signs that whatever religion is practiced here, it's not anything you recognize. There are no crosses or other recognizable religious symbols. There are several freshly painted motifs however and they all seem to depict some great stylized beast offering protection and shelter to those near it. At the far end of the church, there seems to be a recessed door that, based on the outside of the building, must lead down some stairs.".
-North of Beach Plaza is Church Hall.
+Church Hall is north of Beach Plaza.
 There is a Notice Board in the Church Hall. It is rooted in place.
 There is a Confession Booth in the Church Hall. "Standing against one wall, the dark wood of the large confession booth catches the eye. It has been modified to allow even a large creature such of those Panther Taurs to fit inside.". It is Rooted in place.
 The invent of Church Hall is { "nullifying powder" }.
@@ -64,12 +63,19 @@ instead of sniffing the Overgrown Block:
 	else:
 		say "This deserted spot smells faintly of the seaside air.";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Dirty Sheds	"Dirty Sheds"
 
 Dirty Sheds is a room. "     Set a way back from the beach, the row of dilapidated sheds were used to store things like lifesaving equipment and other stuff. Now the overlong grass makes it nearly impossible to open the doors, and that is if you could do something about the big rusted padlocks on most of the doors. One seems to have been broken into already however, the door hanging off its hinges and ransacked interior barely visible. Between two of the sheds there is one oddity, a path north has been worn into the overlong grass.".
-north of public beach is Dirty Sheds.
+Dirty Sheds is north of public beach.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Overgrown Block	"Overgrown Block"
 
 Overgrown Block is a room. "[block description]".
-North of Dirty Sheds is overgrown block.
+Overgrown Block is north of Dirty Sheds.
 
 to say block description:
 	if daytimer is night:	[night]
@@ -183,7 +189,7 @@ to say meetHellhound:
 		say "     'Oooh, what have we here? A mortal? How delicious!'"; [Gender detect line Removed]
 		say "     He licks his lips as he regards you, seeming to peer straight into your mind, if not deeper, weighing your thoughts, desires, and lusts. 'You seem like the opportunistic type. I do believe I could offer you something you'd like, a great deal even, for it is something you can obtain no other way!'";
 		say "     As the beast shifts a waft of sulfur threatens to choke you, and simply being close to the creature is making your stomach churn and feel nauseous, forcing you to clutch at it as you sink to your knees while trying to avoid throwing up. The movement means that your face is level with the infernal hounds muzzle as it reaches you.";
-		say "     'I can make you immune to this strange little plague that is flowing about. I must admit, it is a WONDERFUL piece of work. But I don't think most of the victims would agree with my opinion.' He seems to muse on this fact of a moment as you start to get dizzy and lightheaded. 'A shame, but no matter. I can make you immune to it. Oh! and as a side effect, you'll probably be better able to tolerate my presence. In time, perhaps even come to enjoy it.'";
+		say "     'I can make you immune to this strange little plague that is flowing about. I must admit, it is a WONDERFUL piece of work. But I don't think most of the victims would agree with my opinion.' He seems to muse on this fact of a moment as you start to get dizzy and lightheaded. 'A shame, but no matter. I can make you immune to it. Oh, and as a side effect, you'll probably be better able to tolerate my presence. In time, perhaps even come to enjoy it.'";
 		say "     'So, will you let me change you, mortal? I do promise I don't want anything foolish or incorporeal like your soul. I am just a gate keeper after all. I have no use for such things.'";
 		say "     Shall you accept the Hellhound's dark offer?";
 		if player consents:
@@ -228,9 +234,9 @@ to say meetHellhound:
 to Hellhound infect female:
 	clear the screen;
 	say "     As you weakly nod your head, agreeing to the offer made by the foul beast, it lets out an unholy howl. The sound sends shivers throughout your body and echoes through your mind causing disgust and fear, making it impossible to stand. The hound lick his lips and paces around you, it doesn't take him long to make good on his offer however, letting out an eager growl and rearing onto its hind legs to push you back onto the ground with its huge paws.";
-	say "     As you choke on the stench of sulfur, the beast takes the opportunity to press its muzzle against your lips, its tongue delving in. Your body spasms as it exhales... something intangible... yet somehow also fills your mouth completely. The strange yellow cloud flows down your throat, entering your lungs and your stomach. It soaks through your flesh and worms its way up into your mind, causing an agonising pain that suddenly just... stops.";
+	say "     As you choke on the stench of sulfur, the beast takes the opportunity to press its muzzle against your lips, its tongue delving in. Your body spasms as it exhales... something intangible... yet somehow also fills your mouth completely. The strange yellow cloud flows down your throat, entering your lungs and your stomach. It soaks through your flesh and worms its way up into your mind, causing an agonizing pain that suddenly just... stops.";
 	say "     The hellhound steps off you, taking a few steps back as you cough and splutter shaking your head as everything starts to... brighten? The shadows of the block no longer seem to hide anything. The stench is gone to as well as the urge to throw up. You look at your benefactor and can see the glint of your own eyes glowing yellow reflected in his. He just pants happily, pleased with his handiwork, dragging a slimy tongue over your cheek before beginning to tug clothing. He pushes with his paws and large head, maneuvering you onto your hands and knees so that he can continue his work. You no longer have any intention or ability to object, even if you had intended to originally. Even as you hear the tearing of fabric and cool air wash between your legs as he rips out the crotch of your pants deftly and moves to cover you, you accept it and wait. The canine's dirty fur drags against your cloths and his wet, piss-soaked sheath jerks and rubs over your exposed sex.";
-	say "     'Give yourself to me, bitch. Seal your fate as one of my children and sluts.' You shiver as he pants hotly in your ear, mockingly issuing the order. And even as your mind babbles that you can't really mean to give into the demonic being, you feel your hips twitch back, your cunt lips spreading and pushing the beast's sheath back. The dirty, foul length starting to enter your passage.";
+	say "     'Give yourself to me, bitch. Seal your fate as one of my children and sluts.' You shiver as he pants hotly in your ear, mockingly issuing the order. And even as your mind babbles that you can't really mean to give in to the demonic being, you feel your hips twitch back, your cunt lips spreading and pushing the beast's sheath back. The dirty, foul length starting to enter your passage.";
 	say "     'Stop!' he orders, grasping your hips with his forelimbs and panting happily. A soft grunt then a happy whine heard from the infernal canine and then a flood of hot, liquid foulness starts to run down into you. The demon dog's paws shifting and pushing on your shoulders, making you lower your chest into the ground as his piss flows into you. Burning horribly, destroying your mortal flesh and leaving an unholy taint as he as he lets out a hiss of pleasure. 'Oh YESSSSSS!' His head tilts back, tongue lolling out of his muzzle and you feel a strange tightness start to form around your neck, growing firmer the longer you submit to this infernal hound. You don't get a chance to determine what it is however before the beast snarls and drives his cock home. His foul urine gushing out from around his cock, soaking your legs and forcing you to kneel in the growing puddle even as you feel his cock engorge and swell, filling your sex completely. With a final howl, he grinds his shaft into your cunt, rubbing the bunched up sheath against your cunt lips. With the length spasming inside you, you get a single rush of unimaginable, painful heat before blacking out.";
 	wait for any key;
 	clear the screen;
@@ -250,7 +256,7 @@ to Hellhound infect female:
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
 	now bodytype of player is "human";
-	now daycycle of player is 0;
+	now SleepRhythm of player is 0;
 	now cunts of player is 1;
 	now cunt length of player is 6;
 	now cunt width of player is 4;
@@ -264,7 +270,7 @@ to Hellhound infect female:
 to Hellhound infect male:
 	clear the screen;
 	say "     As you weakly nod your head, agreeing to the offer made by the foul beast, it lets out an unholy howl. It sends shivers throughout your body and echoes through your mind causing disgust and fear, making it impossible to stand. The hound lick his lips and paces around you. It doesn't take him long to come to a rather surprising decision. 'Hrm... I think this will work better if I look like... this.' The hellhound's form ripples and seems to blur in front of you, its shoulders becoming rounder, lines softer as it shifts to become a she as you watch.";
-	say "     'Yes, I think this will work MUCH better for dealing with you.' She seems to smirk as she saunters over, rearing up on her hind legs and resting the large, wickedly clawed paws on your shoulders, touching her nose against yours as her foul, sulfurous breath washes over your face, making you choke and gag. As soon as your mouth opens she pushes her bestial lips against your, forcing your mouth open wider and sliding her tongue in. Something else enters you at the same time, locking your jaw open as what seems to be yellow mist fills your mouth, then slides down your throat and into your lungs. It seeps up into your mind, the last causing agonising pain for a brief moment before it... stops? You fall onto your back, gasping and spluttering as an unnatural heat seeming to wash over your entire body, burning out the infectious nanites and seeming to meld your flesh back into a human form. Eventually it all comes to an end, giving you the opportunity to sit back up with a pained groan and to blink away the tears.";
+	say "     'Yes, I think this will work MUCH better for dealing with you.' She seems to smirk as she saunters over, rearing up on her hind legs and resting the large, wickedly clawed paws on your shoulders, touching her nose against yours as her foul, sulfurous breath washes over your face, making you choke and gag. As soon as your mouth opens she pushes her bestial lips against your, forcing your mouth open wider and sliding her tongue in. Something else enters you at the same time, locking your jaw open as what seems to be yellow mist fills your mouth, then slides down your throat and into your lungs. It seeps up into your mind, the last causing agonizing pain for a brief moment before it... stops? You fall onto your back, gasping and spluttering as an unnatural heat seeming to wash over your entire body, burning out the infectious nanites and seeming to meld your flesh back into a human form. Eventually it all comes to an end, giving you the opportunity to sit back up with a pained groan and to blink away the tears.";
 	say "     A happy rumble draws your attention, lying on her side, in the puddle of piss made back when she was a he, the hellhound bitch lounges. With a coy wink, she lifts a hind leg, rolling onto her back and exposing her sickeningly dirty, swollen, and leaking sex. The sight of it makes your member feel tight... wait tight? Glancing into your pants you find that between your legs you are NOT human. You possess a hellhound's sheath tight around the swelling, canine cock, yellowish seed leaking from your cock tip as the bitch talks seductively.";
 	say "     'Now then handsome, how about you make good use of that wonderful length of yours, hrrm?' Lust surges through you, crawling on your hands and knees you ignore your jabbering mind as it tries to stop you, coming to kneel over the infernal bitch as she coyly licks your face. You reach back and grab your foul canine cock, pulling the sheath back and pushing your tip just inside the bitch, rubbing it back and forth as she lets out a lusty growl and tries to wriggle back onto the member. While keeping yourself from sliding any deeper, you slip both hands behind her head and hold her ears, squeezing and stroking them. You let out a feral growl from your human throat, then begin to flood her with your piss. The flow seems to come from a bottomless pit inside you, washing down and filling her, making her arch and whine in ecstatic pleasure as it floods in, then gushes back out from around your cock tip.";
 	say "     After a few moments, you take her in earnest, pushing your cock right up in, feeling her tense then howl. Her sex spasming as her cum and her piss mix with your as you feel the unnatural canine lock around your knot. From nowhere you feel your own climax building, and a tightness around your neck start to constrict. Before you can move a hand to check what the tightness is, the hell bitch howls and jerks, leaning up and burying her fangs into your neck as you let out a startled howl of climax as well. Everything blurs in a haze of pain and pleasure before you black out as your knot swells and ties inside the fel hound.";
@@ -286,7 +292,7 @@ to Hellhound infect male:
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
 	now bodytype of player is "human";
-	now daycycle of player is 0;
+	now SleepRhythm of player is 0;
 	now cocks of player is 1;
 	now cock length of player is 6;
 	now the cock width of the player is 4;
@@ -373,13 +379,13 @@ every turn (This is the check Hellhound rule):
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
 					now bodytype of player is "human";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 				else:
 					now body of player is "appears perfectly human at first. But on your belly there are six nipples, and between your legs rests a swollen, permanently in-heat Hellhound twat";
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]average[or]normal[or]unchanged[at random]";
 					now bodytype of player is "human";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 				say "     Your body doubles over, not in pain, but simply as muscles spasm and reshape. Your form returns to the human body you were born with, plus the additions you sport due to the Hellhound's [']gift['].";
 			if maleHound is True:
 				if player is female:
@@ -433,13 +439,13 @@ every turn (This is the check Hellhound rule):
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]bipedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of player is "[one of]canine[or]dog-like[at random]";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 				else:
 					now body of player is "that of a bipedal dog, paw-like feet, and stubby-fingered hands with pawpads and dull black claws.";
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]bipedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of player is "[one of]canine[or]dog-like[at random]";
-					now daycycle of player is 0;
+					now SleepRhythm of player is 0;
 				say "     Your body doubles over, not in pain but simply because you can't remain upright as muscles spasm and reshape, your body reforming into a bipedal version of the infernal mutt you submitted to.";
 			if maleHound is True:
 				if player is female:
@@ -491,13 +497,13 @@ every turn (This is the check Hellhound rule):
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]quadrapedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of player is "[one of]canine[or]dog-like[at random]";
-					now daycycle of player is 2;
+					now SleepRhythm of player is 2;
 				else:
 					now body of player is "that of an uncommon mutt, four paw-like feet with wicked black claws, and no hands";
 					now scalevalue of player is 3;
 					now bodydesc of player is "[one of]quadrapedal[or]altered[or]twisted[or]animalistic[at random]";
 					now bodytype of player is "[one of]canine[or]dog-like[at random]";
-					now daycycle of player is 2;
+					now SleepRhythm of player is 2;
 				say "     Your bones seem to heat and grow soft, the action making you collapse onto the ground as they no longer seem to be able to bear your weight. You are forced to lie there for a few minutes as muscles shift and joints pop. Eventually, the changes seem to complete and you're able to pull yourself to your feet, all four feet. You now wear the form of the foul demonic hound that tainted you.";
 			if maleHound is True:
 				if player is female:
@@ -544,7 +550,7 @@ When Play begins:
 Book 4 - Return to the Church
 
 churchenter is a number that varies.
-lastchurchattempt is a number that varies. lastchurchattempt is normally 248.
+lastchurchattempt is a number that varies. lastchurchattempt is usually 248.
 
 instead of going north from the Beach Plaza while hellhoundlevel > 0:
 	if churchenter is 0:
@@ -577,21 +583,21 @@ When play ends:
 		else if bodyname of player is "Wolverine Guard" and facename of player is "Wolverine Guard" and cockname of player is "Wolverine Guard" and skinname of player is "Wolverine Guard" and tailname of player is "Wolverine Guard":		[succumbed to wolverine sex]
 			say "     Your bond as guardian to the Central Library and to your new mate is too strong for the Hellhound's curse, breaking it and allowing you to become a new protector for the library.";
 		else if bodyname of player is "Tigress Hooker" and facename of player is "Tigress Hooker" and cockname of player is "Tigress Hooker" and skinname of player is "Tigress Hooker" and tailname of player is "Tigress Hooker":			[claimed at the tigress motel]
-			Now T is 0; [do nothing statement]
+			now T is 0; [do nothing statement]
 		else if bodyname of player is "Big Tiger" and facename of player is "Big Tiger" and cockname of player is "Big Tiger" and skinname of player is "Big Tiger" and tailname of player is "Big Tiger":							[victory at tigress motel]
-			Now T is 0; [do nothing statement]
+			now T is 0; [do nothing statement]
 		else if bodyname of player is "Big Tigress" and facename of player is "Big Tigress" and cockname of player is "Big Tigress" and skinname of player is "Big Tigress" and tailname of player is "Big Tigress":					[victory at tigress motel]
-			Now T is 0; [do nothing statement]
+			now T is 0; [do nothing statement]
 		else if bodyname of player is "Chocolate Lab" and facename of player is "Chocolate Lab" and cockname of player is "Chocolate Lab" and skinname of player is "Chocolate Lab" and tailname of player is "Chocolate Lab":				[made into Chocolate Lab]
-			Now T is 0; [do nothing statement]
+			now T is 0; [do nothing statement]
 		else if vinetrapped is 1 or vinetrapped is 2:							[full plant TF]
-			Now T is 0; [do nothing statement]
+			now T is 0; [do nothing statement]
 		else if foodvendor is 4:											[food vendor's sex slave]
-			Now T is 0; [do nothing statement]
+			now T is 0; [do nothing statement]
 		else if centrallib is 7:											[captured by librarian harpies]
-			Now T is 0; [do nothing statement]
+			now T is 0; [do nothing statement]
 		else if skunkbeaststatus is 2:										[lost to Skunkbeast Lord]
-			Now T is 0; [do nothing statement]
+			now T is 0; [do nothing statement]
 		else if mousecurse is 1:											[chosen by the mouse-collective]
 			say "     As your mind fades, more and more of your infernal taint comes to the fore, hands becoming paws, face stretching out into a muzzle, coarse dirty fur spreading all over your body. But then Rachel is there, holding you tightly in her small arms, somehow her weak arms able to hold back the powerful force of your infernal pact. As your mate clutches to you, you can feel her mind pushing against that dark power. Soon you can feel somewhere above her mind, greater than it, the collective hive-mind of all the mice, focused on this. Your body starts changing again, becoming more mouse-like this time until you are fully a mouse like your loving mate and the other mice of the collective, though of the same gender as you were before. The darkness fades as the bond of the dark pact is shattered by their mental might, freeing you to become fully one of them instead.";
 			say "[fullmousification]";

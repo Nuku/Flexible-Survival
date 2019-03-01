@@ -26,7 +26,7 @@ Version 1 of Corbin by Wahn begins here.
 [   2: felinoid fucked Corbin                                           ]
 
 [ CorbinPregnancy - pregnancy progress variable                         ]
-[  0: not preggers                                                      ]
+[  0: not pregnant                                                      ]
 [  1: male player knocked him up (invisible)                            ]
 [  2: male player knocked him up (slightly visible)                     ]
 [  3: male player knocked him up (bulging belly)                        ]
@@ -34,6 +34,10 @@ Version 1 of Corbin by Wahn begins here.
 
 [ CorbinKidCounter - number of children with the player                 ]
 [ CorbinPregCounter - timer for the next birth (48h from start)         ]
+
+Table of GameCharacterIDs (continued)
+object	name
+Corbin	"Corbin"
 
 Corbin is a man. The HP of Corbin is normally 0. Corbin is in Worker Barracks.
 The description of Corbin is "[CorbinDesc]".
@@ -47,6 +51,7 @@ instead of sniffing Corbin:
 	say "Corbin has a pleasant animalistic smell. Mostly male, like a stallion - but there's an undertone of a mare's musk.";
 
 to say CorbinDesc:
+	project the Figure of Corbin_face_icon;
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Corbin], THIRST: [thirst of Corbin], LIBIDO: [libido of Corbin], CORBINPREGNANCY: [CorbinPregnancy], CORBINKIDCOUNTER: [CorbinKidCounter], PREGCOUNTER [CorbinPregCounter] <- DEBUG[line break]";
 	if HP of Corbin > 1 and HP of Corbin < 100:
@@ -64,6 +69,7 @@ to say CorbinDesc:
 		say "     Corbin James wears a cowboy hat and a nice pair of jeans with an interesting bulge in the crotch area. His chest is bare, showing off a well-built upper body with washboard abs. He doesn't seem to mind at all that he isn't human anymore, now having the shape of a humanoid horse, with black and white dappled fur that looks pretty similar to the cows in the barn.";
 
 instead of conversing the Corbin:
+	project the Figure of Corbin_face_icon;
 	if HP of Corbin < 4:
 		say "     [one of]'Did anyone tell you yet that I'm the resident cocksucker here?' He gives a resigned shrug and adds, 'I'm good at it too - although it sometimes can get a bit annoying when everyone just thinks they can walk up and whip it out at any time. Blow one guy in the barn and suddenly there's a line... good that I like the like the taste.' He winks to you at that last bit.[or]'The farm is a nice place to be, with all that's going on. Not that we don't have our share of problems, but it's a far cry from what I've seen out there...'[at random]";
 	else if HP of Corbin is 4:
@@ -75,6 +81,7 @@ instead of conversing the Corbin:
 
 instead of going east from Central Farm Square while (HP of Corbin < 2 and daytimer is night):
 	move player to Milking Shed Main Room;
+	project the Figure of Corbin_face_icon;
 	say "     As you walk into the milking shed, you notice that even though it's night and the lights are off, the generator in the back is running. A chugging sound of working machinery comes from somewhere ahead. Curious, you walk along the long row of milking stalls, finding all of them empty - until you come to the next to last one, that is. Your cowboy friend Corbin is in there, his back turned to you and with his body in a bent-forward position, holding on to the metal railing at the back of the stall with one hand. A lantern resting on the floor illuminates his naked body in a dim light, revealing his shapely legs, well-rounded ass and muscular back.";
 	say "     Taking in those attractive sights, you only notice a moment later that tubes of the milking apparatus dangle in the air on the front side of his body, twitching as something is sucked through them. Is he using that thing as a cock pump? You can't stop yourself from stepping forward to have a look. As you move up beside Corbin, you see that things aren't quite what you expected. He isn't a stallion at all, but has a rather wet mare's pussy between his legs into which he's thrusting a rubber dildo - and the two suction cups of the machine are attached to small but perky breasts just a bit above his genitals in the crotch area.";
 	WaitLineBreak;
@@ -170,7 +177,7 @@ instead of going to Central Farm Square while (companion of player is Felinoid c
 
 instead of going southwest from Central Farm Square while (HP of Corbin is 4 and daytimer is day and thirst of Corbin is 1):
 	move player to Worker Barracks;
-	say "     As you walk into the barracks, you notice a group of horsemen standing around Corbin in the back, blocking him in with his back to one of the bunk beds. Their leader is saying '...keeping your pussy from us. You've even been fucking around with that stranger instead of one of us[if CorbinPregnancy > 1] and even let him knock you up[end if].' Corbin replies with 'Yes, but -', only to be interrupted by the horseman farmhand almost immediately. 'What, do you think we're not good enough for you? I guess we'll have to show show this little slut what he's been missing, don't we guys?' There is a general murmur of agreement and you hear the sound of a zipper or two being pulled down.";
+	say "     As you walk into the barracks, you notice a group of horsemen standing around Corbin in the back, blocking him in with his back to one of the bunk beds. Their leader is saying '...keeping your pussy from us. You've even been fucking around with that stranger instead of one of us[if CorbinPregnancy > 1] and even let him knock you up[end if].' Corbin replies with 'Yes, but -', only to be interrupted by the horseman farmhand almost immediately. 'What, do you think we're not good enough for you? I guess we'll have to show =this little slut what he's been missing, don't we guys?' There is a general murmur of agreement and you hear the sound of a zipper or two being pulled down.";
 	say "     [bold type]Do you just want to stand back and let this unfold as it's about to, or do you step in and show those horsemen how to treat Corbin right if they don't want a beating?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Stand Back and let it happen.";
@@ -208,6 +215,7 @@ instead of going southwest from Central Farm Square while (HP of Corbin is 4 and
 		now horsefight is 0;
 
 instead of going southwest from Central Farm Square while (CorbinPregnancy is 4	and daytimer is day):
+	project the Figure of Corbin_face_icon;
 	if libido of Corbin is 1: [player was the father]
 		say "     As you enter the barracks, Corbin quickly comes up to you and gives you a hug. 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he waves over a little boy in his early teens and introduces you to your child, who looks like a [CorbinImpregnatingCock].";
 	else: [a horseman was the father]
@@ -215,6 +223,7 @@ instead of going southwest from Central Farm Square while (CorbinPregnancy is 4	
 	now CorbinPregnancy is 0;
 
 instead of going east from Central Farm Square while (CorbinPregnancy is 4	and daytimer is night):
+	project the Figure of Corbin_face_icon;
 	if libido of Corbin is 1: [player was the father]
 		say "     As you enter the milking shed, Corbin quickly comes up to you and gives you a hug. 'I gave birth while you were gone... and I have to say - being a mother is amazing. Carrying a new life inside yourself and then bringing it into the world.' Smiling, he tells you that your child is in the barracks, a sweet little boy in his early teens who looks like a [CorbinImpregnatingCock].";
 	else: [a horseman was the father]
@@ -235,6 +244,7 @@ to say RunFromBarracksfight:
 An everyturn rule:
 	if CorbinPregCounter is 1:
 		if Corbin is in Worker Barracks and player is in Worker Barracks:
+			project the Figure of Corbin_face_icon;
 			say "     Suddenly, there is a gasp from Corbin and he yells 'It's coming!' Rushing over to the cuntboy who's panting and holding his pregnant belly, you can see a large patch of wetness on the crotch of his jeans - amniotic fluid from his womb that shows that this isn't a false alarm. Quickly guiding him over to the nearest bed, you help him get out of his clothes and sit beside him, holding his hand as he spreads his legs.";
 			if libido of Corbin is 2: [horseman child]
 				say "     Soon, the contractions come quicker and quicker, and then a little horseman foal slides out of Corbin's stretched vagina. You quickly grab Corbin's shirt from the floor and wipe the newborn down, then put it up against the transgendered cowboy's breasts to drink. Hungrily sucking up milk, the little one quickly grows, arriving at early teen development before slowing down again.";
@@ -242,6 +252,7 @@ An everyturn rule:
 				say "     Soon, the contractions come quicker and quicker, and then a little [CorbinImpregnatingCock] baby slides out of Corbin's stretched vagina. You quickly grab Corbin's shirt from the floor and wipe the newborn down, then put it up against the transgendered cowboy's breasts to drink. Hungrily sucking up milk, the little one quickly grows, arriving at early teen development before slowing down again.";
 			now CorbinPregnancy is 0; [reset]
 		else if Corbin is in Milking Shed and player is in Milking Shed:
+			project the Figure of Corbin_face_icon;
 			say "     Suddenly, there is a gasp from Corbin and he yells 'It's coming!' Rushing over to the cuntboy who's panting and holding his pregnant belly, you can see a large patch of wetness on the crotch of his jeans - amniotic fluid from his womb that shows that this isn't a false alarm. Quickly guiding him over a pile of straw to lie down on, you help him get out of his clothes and sit beside him, holding his hand as he spreads his legs.";
 			if libido of Corbin is 2: [horseman child]
 				say "     Soon, the contractions come quicker and quicker, and then a little horseman foal slides out of Corbin's stretched vagina. You quickly grab Corbin's shirt from the floor and wipe the newborn down, then put it up against the transgendered cowboy's breasts to drink. Hungrily sucking up milk, the little one quickly grows, arriving at early teen development before slowing down again.";
@@ -271,6 +282,7 @@ An everyturn rule:
 		now thirst of Corbin is 1;
 
 instead of fucking the Corbin:
+	project the Figure of Corbin_face_icon;
 	if lastfuck of Corbin - turns < 6:
 		say "     As you approach Corbin, he immediately sees the lust-filled twinkle in your eyes. He smiles at you, but gives a quick shake of his head. 'Sorry, I need a break for now... later, ok?'";
 	else:
@@ -354,15 +366,11 @@ to say CorbinSexMenu:
 					say "[CorbinSex6]";
 				else if (nam is "Let Corbin mount Klauz"):
 					say "[CorbinSex7]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the equine cowboy, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the equine cowboy, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

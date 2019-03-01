@@ -2,7 +2,7 @@ Version 2 of Hermaphrodite Latex Vixen by Guest Writers begins here.
 [Version 2.0 - Updated player victory to sex table options w/option to fuck her pussy - Stripes]
 [- Originally Authored By: TentaBear -]
 
-"Adds a Hermaphrodite Latex Vixen to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Hermaphrodite Latex Vixen to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 
@@ -84,9 +84,11 @@ to say hermaphrodite latex vixen defeat:
 						say "[hermlatexvix_12]";
 					else if nam is "69":
 						say "[hermlatexvix_13]";
+					wait for any key;
 			else if calcnumber is 0:
 				now sextablerun is 1;
 				say "     Wanting no more to do with the latex vixen, you resist the temptation and walk away. The latex vixen is left on the ground, stroking herself while she whimpers plaintively.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	else:
@@ -163,14 +165,14 @@ to say hermaphrodite latex vixen victory:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	add "Hermaphrodite Latex Vixen" to infections of hermaphrodite;
 	add "Hermaphrodite Latex Vixen" to infections of furry;
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Hermaphrodite Latex Vixen";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -218,8 +220,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname is "Hermaphrodite Latex Vixen":

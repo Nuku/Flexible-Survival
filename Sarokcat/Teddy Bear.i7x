@@ -13,7 +13,7 @@ when play begins:
 	add { "Teddy Bear" } to infections of furry;
 
 to say teddy bear attack:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if scalevalue of player <= 3 and a random chance of 2 in 5 succeeds:
 		if HP of player > 0:
 			say "     You are pulled into a soft hug by the stuffed bear";
@@ -86,7 +86,7 @@ to say teddybear69:
 		now libido of player is ( 2 * libido of player ) / 3;
 
 to teddybearvored:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now fightoutcome is 23;
 	increase teddyvored by 1;
 	decrease humanity of player by 6;
@@ -124,12 +124,12 @@ to teddybearvored:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Teddy Bear";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -137,7 +137,7 @@ When Play begins:
 	now attack entry is "[one of]The bear windmills its arms and crashes into you, knocking you down.[or]The strange plush bear takes a moment out of combat to give you a big fuzzy hug, causing you to feel vaguely unsettled.[or]Its large plush hands come down hard on your head, making you wonder through the ringing in your ears just what the heck it's stuffed with, lead?[or]Jumping up as it charges, the big fluffy bear knocks you flat as it crashes to the ground.[or]Singing along with the fair music, the fluffy bear prances around seemingly at random, until it ends up ramming into you.[or]Charging forward with its oversized head lowered, the giant bear rams right into you, knocking you both down.[at random]";
 	now defeated entry is "[teddy bear loss]";
 	now victory entry is "[teddy bear attack]";
-	now desc entry is "[mongendernum 4]     A giant teddy bear, covered in soft pink fur toddles down the midway towards you, moving surprisingly fast on its round plush legs '[one of]Oh good, I was looking for someone to play with![or]Don't you want a prize?[or]Take me home with you![or]Don't you want a cuddle?[or]You would look great if you were fluffy like me![or]You will be my carnival prize![at random]' she says as she charges towards you, her large roundish arms windmilling dangerously.";
+	now desc entry is "[mongendernum 4]     A giant teddy bear, covered in soft pink fur toddles down the midway towards you, moving surprisingly fast on its round plush legs. [one of]'Oh good, I was looking for someone to play with!' [or]'Don't you want a prize?' [or]'Take me home with you!' [or]'Don't you want a cuddle?' [or]'You would look great if you were fluffy like me!' [or]'You will be my carnival prize!' [at random]she says as she charges towards you, her large roundish arms windmilling dangerously.";
 	now face entry is "large teddy bear like face, with a short muzzle and rosy cheeks. Your big black eyes seem comical and cute, and your mouth is pulled upwards by your muzzle, so it seems as if you are always smiling goofily"; [ Face description, format as "Your face is (your text)."]
 	now body entry is "rounded in the middle with somewhat round arms and legs, and plump, plush, paw-like hands, your body almost feels like it is full of some sort of strange stuffing that moves around as you walk, poking yourself you can see your clawed paw sink deeply into your stuffed side with almost no pain whatsoever"; [ Body Description, format as "Your Body is (your text)"]
 	now skin entry is "[one of]brown furred[or]softly furred[or]fake furred[or]strangely plush[at random]"; [ skin Description, format as "You have (your text) skin"]
@@ -158,7 +158,7 @@ When Play begins:
 	now HP entry is 50;
 	now lev entry is 5;  [ Level of the Monster, you get this much HP if you win, or this much HP halved if you loose ]
 	now wdam entry is 7;  [ Amount of Damage monster Does when attacking. ]
-	now area entry is "Midway";  [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now area entry is "Fair";  [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 0;  [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 0;  [ Length infection will make cock grow to if cocks]
 	now cock width entry is 0;  [ Size of balls ]
@@ -177,8 +177,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;  [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "bearhugger";  [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Teddy Bear":

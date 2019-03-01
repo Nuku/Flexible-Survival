@@ -76,7 +76,7 @@ to say sbdoggy style:
 	WaitLineBreak;
 	say "     The creature leaps onto your back, its lithe and muscular form draping itself over yours. The soft fur almost feels nice on your back, but you're quickly reminded of what's going on when the beast's forelimbs hook themselves around your hips. A hunch of its own hips brings something rough and wet to slide up your thigh; with some shuffling the creature brings the head of its erection to your [if player is female]moist slit[else]quivering pucker[end if]. A pair of fearsome jaws lock themselves around your shoulder, reminding you of the price of resistance[if player is submissive]. You moan as you feel your bestial master take complete control of you, and you push yourself back against his length, silently begging him to take you[end if]. The beast pushes its length into you, hilting itself in one smooth thrust; the sudden penetration first makes you cry out in pleasure, then in pain as the creature's cruel barbs scrape along your insides.";
 	WaitLineBreak;
-	say "     The cat pumps in and out of your [if player is female]cunt[else]ass[end if] mercilessly, breeding you hard and deep. Soon, the sensation of the cat's barbs becomes almost pleasant as they rub your [if player is female]vaginal[else]rectal[end if] walls[if player is impreg_able]. They start to kindle a warmth around your womb, and you wonder how much the strange physiology is effecting your reproductive system; unbidden, thoughts of your belly swelling with the dark beast's spawn swirl in your head[end if]. The thing's tentacles descend under your body, stroking your [if cocks of player > 1][cock of player] cocks[else if player is male][cock of player] cock[else if breast size of player > 0]your [breast size desc of player] breasts[else]your bare skin[end if] as it drives its cock into you over and over again. [if player is male]A tentacle wraps itself around your cock[smn], stroking in time with the pounding thrusts. Between this new stimulation and the battering your prostate is receiving, it doesn't take long for you to reach climax, blowing your [cum load size of player] load uselessly on the floor. Your orgasm causes you to clench around the malehood invading you, drawing a lusty purr from your bestial captor[end if]. ";
+	say "     The cat pumps in and out of your [if player is female]cunt[else]ass[end if] mercilessly, breeding you hard and deep. Soon, the sensation of the cat's barbs becomes almost pleasant as they rub your [if player is female]vaginal[else]rectal[end if] walls[if player is impreg_able]. They start to kindle a warmth around your womb, and you wonder how much the strange physiology is effecting your reproductive system; unbidden, thoughts of your belly swelling with the dark beast's spawn swirl in your head[end if]. The thing's tentacles descend under your body, stroking your [if cocks of player > 1][cock of player] cocks[else if player is male][cock of player] cock[else if breast size of player > 0]your [breast size desc of player] breasts[else]your bare skin[end if] as it drives its cock into you over and over again. [if player is male]A tentacle wraps itself around your cock[smn], stroking in time with the pounding thrusts. Between this new stimulation and the battering your prostate is receiving, it doesn't take long for you to reach climax, blowing your [cum load size of player] load uselessly on the floor. Your orgasm causes you to clench around the malehood invading you, drawing a lusty purr from your bestial captor[end if].";
 	WaitLineBreak;
 	say "     The beast's thrusting grows faster and deeper, and you push yourself back into the thrusts, [if player is submissive]eager to feel the beast cum inside you[else]eager to end this before it goes on any longer[end if]. The creature tightens its grip around your waist and the mating bite on your shoulder as it hilts itself inside you with one powerful thrust. You feel hot ropes of cum coat your [if player is female]womb[else]rectum[end if] as the creature growls out its climax. It keeps thrusting, pushing its fertile seed deeper into your receptive body. It lays on top of you while its orgasm subsides, [if player is impreg_able]stroking your belly with its tentacles; you shudder and hope its seed didn't take[else]purring contentedly at its latest conquest[end if]. Finally, it dismounts, withdrawing its cock with a wet pop and a dribble of cum from your abused [if player is female]snatch[else]asshole[end if]. As it slinks back into the shadows, you wonder if [if player is submissive]you'll get another chance to play with the cat soon[else]submitting to the beast was worth it[end if].[impregchance]";
 
@@ -84,12 +84,12 @@ ShadowBeastEventState is a number that varies.
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Shadow Beast";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -137,12 +137,18 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";     [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;     [ Row used to designate any special combat features, "default" for standard combat. ]
 
 Section 3 - Events
 
 [ Event by Wahn]
+
+Table of GameEventIDs (continued)
+Object	Name
+Hunted Survivor	"Hunted Survivor"
+
 Hunted Survivor is a situation.
 The sarea of Hunted Survivor is "Sealed".
 
@@ -155,20 +161,24 @@ Instead of resolving a Hunted Survivor:
 		say "     As he sees your inhuman form, the man gives a panicked scream, scrambling to stop his movement towards you, followed by a mad dash down a side corridor before you can say or do anything. Moments later, a shimmer runs through the darkness where he came from, and for a second you think you can make out a black feline shape, its head turning towards you as it gives a low growl, as if warning you off. Then it is gone again, twisting the shadows around it somehow in an eye-wrenching effect that makes you lose it from view. Further growls echoing along the halls, each one quieter than the one before indicate that it resumed its hunt.";
 	else:
 		say "     As he sees you, the man shouts 'Run!', just as a long tentacle whips through the air from the darkness behind him and wraps around his left leg. With a panicked scream, the man goes down as his leg is pulled out from under him, hands scratching over the floor as he tries to hold on to something - anything, really.";
-		say "     Uh-oh - what now? Maybe try to help this man (Y)? Or would you rather get out of here before you're the next target of a hungry - or horny - monstrosity (N)? ";
+		say "     Uh-oh - what now? Maybe try to help this man (Y)? Or would you rather get out of here before you're the next target of a hungry - or horny - monstrosity (N)?";
 		if player consents:
 			now ShadowBeastEventState is 1; [special event description instead of the normal one]
 			challenge "Shadow Beast";
 			if fightoutcome >= 20 and fightoutcome <= 29: [lost/submitted]
 				say "     With the tentacled panther back into darkness, you're left alone in the hallway, sticky with its cum leaking out of your [if player is female]pussy[else]ass[end if]. Collecting your gear, you clean up as good as you can and go back to the surface exit, relieved as you leave behind the dark corridors. Of the man you helped escape, there is no trace. He must have kept running, vanishing out into the city. Who knows what already has or will happen to him out there - naked and exhausted as he is. On the other hand... he might just get lucky and you could run into him again.";
+				now Resolution of Hunted Survivor is 2; [player lost, man escaped]
 			else if fightoutcome >= 30:	                            [fled]
 				say "     Ducking under grasping tentacles and evading slashing claws, you run along the corridor. The panther creature is literally just one or two steps behind and at times you can feel its hot breath on your neck, but you manage to get to through the access door and slam it closed behind you. Holding it closed as the shadow beast slams against it several times, you listen to its frustrated roars and snarls. Then everything gets quiet, and just as you think you can let go another heavy bump from the inside almost throws the door open. There is a snarl, then again silence. With the creature clever enough to try to trick you into thinking it's gone, you end up holding tight on the door for half an hour at least before you relax. Seems like it's gone after all, this time...";
 				say "     Of the man you helped escape, there is no trace. He must have kept running, vanishing out into the city. Who knows what already has or will happen to him out there - naked and exhausted as he is. On the other hand... he might just get lucky and you could run into him again.";
+				now Resolution of Hunted Survivor is 3; [player fled, man escaped]
 			else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 				say "     After having fought of the tentacled shadow beast, you decide to postpone further underground adventures to another time and walk back towards the access door. Stepping out and closing it behind you gives you relief of the constant tension that there might be something in the darkness, watching you.";
 				say "     Of the man you helped escape, there is no trace. He must have kept running, vanishing out into the city. Who knows what already has or will happen to him out there - naked and exhausted as he is. On the other hand... he might just get lucky and you could run into him again.";
+				now Resolution of Hunted Survivor is 1; [player won, man escaped]
 		else:
 			say "     Whirling around, you run as fast as you can back to the exit and don't look back. The sounds of what's happening behind you follow you though, even though you wish you wouldn't hear the man's panicked struggling, followed by a satisfied-sounding roar and painful scream. Rhythmic grunts and growls interspersed with whimpering indicate that the creature at least didn't hunt the man to eat him, though leaving him to 'just be raped' by some monstrosity from the depths of the underground complex is a bit of a weak excuse. A shudder runs down your spine as you throw the door closed behind you and you do your best to scrub what's happened from your mind.";
+			now Resolution of Hunted Survivor is 4; [man fled from player, was captured by the beasts]
 	now Hunted Survivor is resolved;
 
 Section 4 - Endings
@@ -190,10 +200,10 @@ when play ends:
 				say "     Once your mind becomes lost to the infection's heavy grasp, you quickly return to the darkness of the underground passages under laboratory, where your knowing mate waits for your arrival. The male wastes little time in looking at your lithe feline form before he pulls himself over your back, impatient to begin cementing your place underneath his power as his spiny feline cock embeds itself within your throbbing feminine folds. Rocking and grunting with bestial ferocity, with no time for idle pleasantries, he curls his tentacles around your belly to pull you tightly against his thrusting feline form.";
 				if "Sterile" is not listed in feats of player:	[F-BREEDABLE]
 					say "     Minutes turn to hours as the larger male above you ruts his hips into your backside, drenching your thighs with his seed as more than one of his ample loads gush from your twat in hot sticky torrents. It's only when the male can rut no more than he pulls himself off of you, his tentacles uncurling almost regretfully as they slip from around your quivering form. When the larger beast moves around to sniff at your leaking folds you turn to see him purring in delight as he scents his seed having borne fruit.";
-					say "     When the military comes in to clean up the city you and your mate take to the shadows to depart his former home as you and happily make your way to parts unknown to prepare for the cubs growing inside your womb.";
+					say "     When the military comes in to clean up the city, you and your mate take to the shadows to depart his former home as you and happily make your way to parts unknown to prepare for the cubs growing inside your womb.";
 				else:
 					say "     Minutes turn to hours as the larger male above you ruts his hips into your backside, drenching your thighs with his seed as more than one of his ample loads gush from your twat in hot sticky torrents. It's only when the male can rut no more than he pulls himself off of you, his tentacles uncurling almost regretfully as they slip from around your quivering form. When the larger beast sniffs at your nethers you turn to see a look of disappointment straining his muzzle as he shakes his head almost angrily up at you.";
-					say "     When the military comes in to clean up the city you and the male go your separate ways, his disdain at your inability to bear his cubs forcing him to push you away with vicious snaps and snarls.";
+					say "     When the military comes in to clean up the city, you and the male go your separate ways, his disdain at your inability to bear his cubs forcing him to push you away with vicious snaps and snarls.";
 			else: [neuter]
 				say "     Once your mind becomes lost to the infection's heavy grasp, you find yourself stalking along the streets of the ruined city with a strange eagerness as you go on the lookout for prey to catch. Hunting down a female husky in the night, your tentacles pull her legs out from under her, allowing you to mount her - only to have your animal mind get rather confused as your genderless body doesn't have an outlet for your inbred urges. With a snarl, you leave a clearly disappointed husky lying on the street and vanish into the darkness again.";
 				say "     After repeating similar scenes with other prey, becoming increasingly frustrated in the process, you return to the darkness of the underground passages under the laboratory. The male that originally infected you quickly appears out of the shadows, tentacles raised in the air. Debilitatingly horny as you are, you present your hindquarters to him, ready to be mounted. The large feline sniffs you, clearly getting aroused from your body's pose and the pheromones it sends out in its need, though he does seem a bit baffled at your lack of a pussy.";

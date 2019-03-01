@@ -9,6 +9,10 @@ FoxMasterEncounters is a number that varies.
 
 Section 1- Unorthodox Sight
 
+Table of GameEventIDs (continued)
+Object	Name
+Unorthodox Sight	"Unorthodox Sight"
+
 Unorthodox Sight is a situation.
 The sarea of Unorthodox Sight is "Red".
 when play begins:
@@ -29,9 +33,11 @@ Instead of resolving a Unorthodox Sight:
 		say "     A moment later, you can see proof that the fox really is in control. He tugs the leash as they near a wrecked motorcycle in their path and the wolf obeys right away, moving over and walking around it - a weird relationship, but it seems to work for them. Silently studying the canines a little more openly, you see that the gray-furred wolfman is fully nude except for a red backpack strapped to his muscular back, with straps almost too small for his bulk. He is apparently large in all areas too, as you catch glimpses of a prodigious sheath and weighty balls that swing between his legs as he walks. At the same time, the fox seems utterly average in almost every regard, with nothing to differentiate him from a normal animal except the obvious intelligence he is demonstrating. The fur of the gray wolf's buttocks is matted and seems wet, which you quickly realize is due to the fresh cum oozing out of his asshole with every step as he is led along.";
 		say "     Soon, the fox gives another tug on the leash and stops walking for a second, making his pet react by crouching down next to him and petting him in all of those hard to reach places. With a satisfied yip, the vulpine returns the affection of his companion, licking his muzzle and enjoying further grooming. He eventually leads the wolf onwards, soon vanishing from your sight around a corner. Once they are safely out of range, you get up from your hiding spot and stretch as you reflect on the unorthodox scene you witnessed.";
 		increase FoxMasterEncounters by 1;
+		now Resolution of Unorthodox Sight is 1; [hid and observed]
 	else:
 		LineBreak;
 		say "     With the old saying [']Better safe than sorry['] in the forefront of your mind, you decide not to risk it and just dash the other way, quickly turning a corner. The swift escape avoids any contact at all between yourself and the unknown stranger, which is just fine in your book.";
+		now Resolution of Unorthodox Sight is 99; [disinterest]
 	now Unorthodox Sight is resolved;
 
 Section 2 - Desperation
@@ -40,6 +46,10 @@ Section 2 - Desperation
 
 
 Section 3 - Family Fun
+
+Table of GameEventIDs (continued)
+Object	Name
+Family Fun	"Family Fun"
 
 Family Fun is a situation.
 The sarea of Family Fun is "Beach".
@@ -56,6 +66,10 @@ Instead of resolving a Family Fun:
 
 Section 4 - Magic
 
+Table of GameEventIDs (continued)
+Object	Name
+Ritual Location	"Ritual Location"
+
 Ritual Location is a situation.
 The sarea of Ritual Location is "Mall".
 
@@ -70,6 +84,10 @@ Instead of resolving a Ritual Location:
 
 Section 5 - Auto Shop
 
+Table of GameEventIDs (continued)
+Object	Name
+Auto Shop	"Auto Shop"
+
 Auto Shop is a situation.
 The sarea of Auto Shop is "Red".
 when play begins:
@@ -78,7 +96,7 @@ when play begins:
 
 Instead of resolving a Auto Shop:
 	say "     As you carefully make your way through the city's most notorious district, your ears twitch at the sound of a car revving. Pausing briefly to figure out where it is coming from, you move towards the source. As you get closer you find yourself slowing, wary of the possibility that although it may be a sane person or persons, it could just as easily be just a sex focused monster screwing around with a car. You continue regardless of your disquiet and soon find yourself looking at the entrance to an auto shop. With surprise, you see that the lights inside are on and quickly realize that it must be running off a generator.";
-	say "     Peering in the open garage door you see an erotic sight. In pairs and trios around the garage various mutants are having very raunchy and open sex. Given that they are mostly wearing pieces of mechanics outfits you figure that they must be sane but horny enough to have an orgy, perhaps having recently been changed. If so, they've certainly not wasted much time in getting it on, as you can literally see whole puddles of cum on the ground in there. The majority of those within the garage appear to be one type or another of canines, but a few felines are scattered about having some fun too. The garage is filled with wet slaps, loud moans, and growls as the group helps each other get off. The smell of musk and jizz is almost overwhelming to your senses as you watch. In the center of the garage is a relatively intact Jeep that you notice to be the source of the revving. ";
+	say "     Peering in the open garage door you see an erotic sight. In pairs and trios around the garage various mutants are having very raunchy and open sex. Given that they are mostly wearing pieces of mechanics outfits you figure that they must be sane but horny enough to have an orgy, perhaps having recently been changed. If so, they've certainly not wasted much time in getting it on, as you can literally see whole puddles of cum on the ground in there. The majority of those within the garage appear to be one type or another of canines, but a few felines are scattered about having some fun too. The garage is filled with wet slaps, loud moans, and growls as the group helps each other get off. The smell of musk and jizz is almost overwhelming to your senses as you watch. In the center of the garage is a relatively intact Jeep that you notice to be the source of the revving.";
 	WaitLineBreak;
 	say "     As you turn your focus on the Jeep you realize that the revving is being caused by the occupants having raunchy fun of their own. Inside are a rather large, barely clothed donkey hunk and a fully nude doberman twink. With each thrust into the twinky doberman the donkey man's hoof hits the Jeep's gas pedal. The doberman moans as he spears himself full of donk meat, eagerly taking the donkey cock down to the balls. As you watch around the corner you find that you cannot help but be aroused by the sight, its level of sheer eroticism almost mind blowing. The interspecies pair in the Jeep quickly reach orgasm together, the belly of the doberman swelling as he is over-filled with cum.";
 	say "     Unsure if those inside are actually sane or not, and guessing that no matter which, they might just draw you into their orgy given their current mood, you decide to gain some distance for now. Maybe returning here at another time could allow for a safer first contact...";

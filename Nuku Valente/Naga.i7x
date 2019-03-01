@@ -1,6 +1,6 @@
 Version 2 of Naga by Nuku Valente begins here.
 [Version 2.2 - Added vore and constriction player loss scenes. Re-added human warning loss w/enhancement and one-time limit. - Stripes]
-[Original commissioned by AsureaSkie.]
+[Originally commissioned by AsureaSkie.]
 
 "Adds a Naga creature to Flexible Survival's Wandering Monsters table"
 
@@ -12,7 +12,7 @@ when play begins:
 
 to say NagaDesc:
 	setmongender 3; [creature is male]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Female Preferred" is listed in feats of player:
@@ -24,7 +24,7 @@ to say NagaDesc:
 	say "     A creature consisting of human and snake blended together in an intimidating mixture slithers into sight ahead of you. It is a naga - a male one, judging from what you see as he raises his human-like upper body to have a good look at you in turn. He has [one of]brown and black[or]bright-red and yellow[or]gray and tan[at random] scales, fine and soft looking. Two muscular arms are his only limbs, if one discounts the great tail that makes up most of the male naga's long body. Clenched in his right hand is a pipe, a crude, but likely effective, makeshift weapon. Of course, he also has great jaws that likely contain sharp, possibly venomous, fangs. His human torso is well-muscled, sleek, and lacking any blemish. The naga's head and face are entirely that of a huge snake, staring unblinkingly and tasting the air with a flickering forked tongue. The moment of mutual examination ends as the naga hisses. 'SSsssubmit - or don't... it will sssatisfy me either way, prey.' With that, he rushes towards you, sliding over the ground quickly with sinuous twists of his snake-body.";
 
 to say LoseToNaga:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let xx be vorelevel * vorelevel;
 	if player is purehuman and nagawarning is false:
 		say "     Your opponent makes a dry hiss, almost as if he was laughing, as he moves over your defeated form, his tongue flicking. Grabbed roughly by the serpentine creature, your arm is twisted behind your back, and you are held tightly from behind. That forked tongue flicks across your cheek as he hisses in your ear. 'You ssshould leave thisss place, human. Your kind is finished in thisss city. Remember it - or you will be punissshed fresh.' He bares his fangs as an added warning before shoving you away, laughing as you stumble off."; [Keeping for thematic value]
@@ -93,8 +93,8 @@ to say LoseToNaga:
 
 
 to say WinOverNaga:
-	say "     [one of]The naga staggers from his many wounds and collapses to the ground. [or]Your last blow draws a shuddering hiss before the naga falls to the ground and ceases fighting. [at random]Even though you can literally see his body mend rapidly as the nanites infused within him do their work, he won't be ready for another fight for a while";
-	say "[bold type]... this is your chance to have some fun with the snake-creature. Do you want to?[roman type][line break]";
+	say "     [one of]The naga staggers from his many wounds and collapses to the ground. [or]Your last blow draws a shuddering hiss before the naga falls to the ground and ceases fighting. [at random]Even though you can literally see his body mend rapidly as the nanites infused within him do their work, he won't be ready for another fight for a while.";
+	say "[bold type]This is your chance to have some fun with the snake-creature. Do you want to?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Get the naga to use his long, dexterous tongue.";
 	say "     ([link]N[as]n[end link]) - No, not right now.";
@@ -107,7 +107,7 @@ to say WinOverNaga:
 			say "     After a while of just licking and squeezing your manhood, the naga moves on to giving you a more regular blowjob and slides his lips over your pole, taking it into his broad, seemingly toothless maw. Thankfully, his fangs are folded away into their pockets in the roof of his mouth so you don't have to worry about them. Bobbing up and down in the great blowjob he's giving you, the naga male also strokes his long body against you, with the tip of his tail brushing softly against your sides and back. Arousal quickly mounting higher and higher from your partner's oral attention and his gentle touch, it doesn't take all that much longer until your pants get quicker, and the need to cum rises in your balls. You moan that you're close, which only has the snake-person speed up more, lips still tightly wrapped around your shaft as you blow your [cum load size of player] load. He eagerly swallows spurt after spurt of your cum, even milking the very last drops from your softening cock. 'That was - sssatisfactory,' he says, then slithers away without looking back";
 		else if player is female:
 			say "     Dropping your gear and sliding off all of clothing as you go along, you step up to stand over the naga and present your crotch to him. After hesitating a moment more and giving a low hiss, the snake-creature says 'You defeated me, so I will ssserve for your pleasssure - just thisss once. Do not think thisss meansss anything if we meet again.' That said, he gives a little shrug and reaches out, gently pulling apart [if cunts of player > 1]the nether lips of one of your cunts[else]your nether lips[end if] while his tongue plays over its folds in a feathery-light touch. Seems like he brushed your whole fight and any resentment at losing aside as 'in the past' and now is totally concentrated on trying to have a somewhat nice time with you.";
-			say "     He spends some time just licking your outermost lips, [if anallevel > 1]even snakes it down between your legs to brush against your back door, [end if]then moves his attention to your clit and inner labia. It's a strange but very pleasant feeling to have him play his long but thin tongue over your privates, then dip into your vagina and explore inside. Overwhelmed in the sensations of having this snake-person tease and lick the inner walls of your pussy, you moan and lean your head backwards, savoring the pleasure he gives you.";
+			say "     He spends some time just licking your outermost lips, [if anallevel > 1]even snaking it down between your legs to brush against your back door, [end if]then moves his attention to your clit and inner labia. It's a strange but very pleasant feeling to have him play his long but thin tongue over your privates, then dip into your vagina and explore inside. Overwhelmed in the sensations of having this snake-person tease and lick the inner walls of your pussy, you moan and lean your head backwards, savoring the pleasure he gives you.";
 			WaitLineBreak;
 			say "     After a while of gentle licking and soft poking, the male naga pulls back a bit, then puts his lips to your clitoris and really concentrates on that, nibbling and brushing over it with the tip of his tongue. Head against your crotch in the great cunnilingus he's giving you, the naga male also strokes his long body against you, with the tip of his tail brushing softly against your sides and back. Arousal quickly mounting higher and higher from your partner's oral attention and his gentle touch, it doesn't take all that much longer until your pants get quicker, and the need to come becomes almost unbearable. You moan that you're close, which only has the snake-person speed up more, pushing his long tongue even deeper into your vagina than before and finding all new spots to caress and tease. Moments later, you moan loudly, orgasming from the continued stimulation, femcum squirting from your pussy and hitting the naga's scaled face. He eagerly puts his lips to your sex, catching and swallowing it all after the first splash, then licks his maw clean with his long tongue. 'That was - sssatisfactory,' he says, then slithers away without looking back";
 		else:
@@ -121,12 +121,12 @@ to say WinOverNaga:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Naga";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -168,14 +168,15 @@ When Play begins:
 	now libido entry is 20; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]serpentine[or]legless[or]altered[at random]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]serpentine[or]reptilian[at random]"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "snakenaga"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Section 3 - Endings
 
@@ -184,11 +185,11 @@ when play ends:
 		if bodyname of player is "Naga":
 			say "     Losing your mind to the infection, you find yourself slithering down the ruined streets of the city until you make your way to a dilapidated building that's more intact than it first seems. Making the undamaged basement into your new den, you spend the next few weeks gathering as much food as you can before going out and taking captive one of the soldiers who just so happened to have been prowling around your den.";
 			if player is male:
-				say "     Curling around the other with your long serpentine form, you inject your venom into the struggling male - his whimpers and pleas annoying you to no end - and then breed your increasingly complacent victim for days to come. Flushing out his humanity with your continuous mating, you find your efforts bearing fruit as, almost a week later, the former soldier's skin begins to harden as his incoming scales push out from his once flabby skin.";
+				say "     Curling around the other with your long, serpentine form, you inject your venom into the struggling male - his whimpers and pleas annoying you to no end - and then breed your increasingly complacent victim for days to come. Flushing out his humanity with your continuous mating, you find your efforts bearing fruit as, almost a week later, the former soldier's skin begins to harden as his incoming scales push out from his once flabby skin.";
 			else if player is female:
-				say "     It takes a few injections of your venom to subdue the other, but once the soldier had become complacent, you spend the next few weeks getting yourself stuffed full by the punch-drunk male as you constantly force him to fill up your achingly empty vent[if the player is impreg_ok]. It takes time, but soon you find yourself heavy with a large clutch of eggs, but by that time your new naga mate doesn't need any coercion to continue filling you with his seed[else]The soldier's seed never takes, but soon, it doesn't matter as you and your new naga mate spend hours into the day curled around each other as he stuffs you full with his thick, serpentine seed[end if].";
+				say "     It takes a few injections of your venom to subdue the other, but once the soldier had become complacent, you spend the next few weeks getting yourself stuffed full by the punch-drunk male as you constantly force him to fill up your achingly empty vent[if player is impreg_ok]. It takes time, but soon you find yourself heavy with a large clutch of eggs, but by that time your new naga mate doesn't need any coercion to continue filling you with his seed[else]. The soldier's seed never takes, but soon, it doesn't matter as you and your new naga mate spend hours into the day curled around each other as he stuffs you full with his thick, serpentine seed[end if].";
 			else:
-				say "     Curling around the other with your long serpentine form, you inject your venom into the struggling male - his whimpers and pleas annoying you to no end - and then have your increasingly complacent victim breed your anal vent for days to come. Flushing out his humanity with your continuous contact, you find your efforts bearing fruit as, almost a week later, the former soldier's skin begins to harden as his incoming scales push out from his once flabby skin.";
+				say "     Curling around the other with your long, serpentine form, you inject your venom into the struggling male - his whimpers and pleas annoying you to no end - and then have your increasingly complacent victim breed your anal vent for days to come. Flushing out his humanity with your continuous contact, you find your efforts bearing fruit as, almost a week later, the former soldier's skin begins to harden as his incoming scales push out from his once flabby skin.";
 			say "     Once the rest of the military comes through the city to clean up, you and your fellow naga make your way from your home to wait for soldiers to leave and then return to reclaim your rightful den once they do[if a random chance of 1 in 2 succeeds]. During your period of hiding, your mate manages to snag a confused soldier left behind by his unit for the two of you to play with, making a delightful prize to celebrate the return to your den[end if].";
 
 Naga ends here.

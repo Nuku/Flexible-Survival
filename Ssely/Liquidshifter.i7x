@@ -43,17 +43,17 @@ to say beattheLiquidshifter:
 		say "     You walk away from the whimpering creature.";
 
 to say Liquidshifterdesc:
-	say "     Before you stands a tall, wide, semi-liquid form. A golden, shiny goo drips constantly from its sides, falling to the floor in a pool of fluid. Its skin is like rubber, shining in the light as it approaches, grinning at you menacingly, almost taunting you closer. The various dripping parts of the creature's barely cohesive body fall to the floor as he walks closer, leaving a trail of slime. You look up at those eyes, enjoying their peaceful, relaxing gaze... No, wait! You look away, but can't help but go back to the thought of submission to this creature. It seems he wants to fight, though... Suddenly, it shifts, changing into a the form of draconic solid, the goo solidifying into large fists, claws, and some wings on his back. The shininess of his form is really shown off as his new snout grins at you, the menacing creature's clawed paws rubbing over his cock.";
+	say "     Before you stands a tall, wide, semi-liquid form. A golden, shiny goo drips constantly from its sides, falling to the floor in a pool of fluid. Its skin is like rubber, shining in the light as it approaches, grinning at you menacingly, almost taunting you closer. The various dripping parts of the creature's barely cohesive body fall to the floor as he walks closer, leaving a trail of slime. You look up at those eyes, enjoying their peaceful, relaxing gaze... No, wait! You look away, but can't help but go back to the thought of submission to this creature. It seems he wants to fight, though... Suddenly, it shifts, changing into a solid draconic form, the goo solidifying into large fists, claws, and some wings on his back. The shininess of his form is really shown off as his new snout grins at you, the menacing creature's clawed paws rubbing over his cock.";
 
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	-- 	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Liquidshifter";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -101,8 +101,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings

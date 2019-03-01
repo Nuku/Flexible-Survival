@@ -40,7 +40,7 @@ to AnthonyQuestlog:
 			if HP of Duke < 2:
 				say "[bold type]Farm Quests: [roman type]I've found Wendy the missing cow and returned her to the farm, getting a reward from Anthony for the trouble. Maybe there are other things he needs help with besides this...";
 			else if HP of Duke < 10:
-				say "[bold type]Farm Quests: [roman type]Duke, one of the shepherds on the farm, needs my help. He wants to turn his lover Shawn back from the feral ram he has become. Collecting a few clumps of tained wool from other anthro sheep in the city might help with that.";
+				say "[bold type]Farm Quests: [roman type]Duke, one of the shepherds on the farm, needs my help. He wants to turn his lover Shawn back from the feral ram he has become. Collecting a few clumps of tainted wool from other anthro sheep in the city might help with that.";
 			else if HP of Duke > 9:
 				say "[bold type]Farm Quests: [roman type]I've helped reunite the shepherds in anthro form, earning their thanks. Anthony will want to learn about these good news too.";
 		-- 5:
@@ -65,7 +65,32 @@ to AnthonyQuestlog:
 		-- 8:
 			say "     ";
 
+Table of GameCharacterIDs (continued)
+object	name
+Anthony	"Anthony"
+
 Anthony is a man. The HP of Anthony is normally 0. Anthony is in Farmhouse Main Room.
+ScaleValue of Anthony is 3. [human sized]
+Cocks of Anthony is 1.
+Cock Length of Anthony is 10.
+Cock Width of Anthony is 2.
+Testes of Anthony is 2.
+Cunts of Anthony is 0.
+Cunt Length of Anthony is 10.
+Cunt Width of Anthony is 2.
+Breasts of Anthony is 2. [2 nipples]
+Breast Size of Anthony is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Anthony is false.
+PlayerRomanced of Anthony is false.
+PlayerFriended of Anthony is false.
+PlayerControlled of Anthony is false.
+PlayerFucked of Anthony is false.
+OralVirgin of Anthony is false.
+Virgin of Anthony is true.
+AnalVirgin of Anthony is true.
+PenileVirgin of Anthony is false.
+SexuallyExperienced of Anthony is true.
 The description of Anthony is "[AnthonyDesc]".
 The conversation of Anthony is { "Mew!" }.
 The icon of Anthony is Figure of Anthony_clothed_icon.
@@ -75,7 +100,7 @@ instead of sniffing Anthony:
 
 to say AnthonyDesc:
 	if debugactive is 1:
-		say "DEBUG -> HP: [HP of Anthony] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Anthony], FinnTrackingProgress: [FinnTrackingProgress]<- DEBUG[line break]";
 	say "     Anthony McDermott is a tall anthro anteater in a kilt, with a light and slender build and the characteristic elongated head and narrow snout of a giant anteater. He has large brown eyes and expressive, flexible ears on top of his head, plus a beautiful mane of brown hair down to the midst of his back. One lock of his mane hangs down over his brow, giving him a somewhat dashing appearance.";
 	say "     The young man's body is covered in lustrous and silky fur, with most of it light brown to blond and pretty short, showing off the fit shape and light muscles of his upper body, abs, legs and (you assume) crotch. Meanwhile, his forearms and lower legs have longer, almost purely blond hair covering them, and the very long prehensile tail behind him looks pretty big with the thick and darker brown fur along its length.";
 	say "     Another thing of note are the long and curved claws on his hands and feet, longer than the fingers themselves. Looking at them makes you recall something you once read about a regular giant anteater being able to kill a jaguar in a stand-up fight...";
@@ -121,7 +146,7 @@ instead of conversing the Anthony:
 			say "     Anthony scrapes his claws against each other in a move that betrays his anxiousness, then adds, 'Just the thought of one of my workers, out there all alone with a slobbering beast wanting to gnaw his bones, or something...' Falling silent, he stops the hand-movements a second later, then gives a sigh. 'Everyone here is my responsibility as the owner of this farm. I'm half-minded to go out with you, but then I would be abandoning the rest to look for one man. Who knows what might happen if I'm not here to lead them. I don't think the farm would last long without coordination. Just days ago, we had a behemoth deciding he wanted to move in...'";
 			LineBreak;
 			say "     He looks to you with a hopeful expression, then continues with 'There's a reward too. If you bring Finn back, I can give you a bag of food - farm-fresh and guaranteed infection free[if libido of Anthony > 0] - or... something more intimate, if you prefer[end if]. Just find our [bold type]missing farm hand[roman type] quickly please!'";
-			now Missing Farm Hand is not resolved;
+			now Missing Farm Hand is active;
 			now HP of Anthony is 6; [player got told about Finn]
 		else if HP of Anthony is 6:
 			say "     Anthony scrapes his claws against each other in a move that betrays his anxiousness, then asks, 'Thanks again for the offer. Have you found a trace of Finn yet? Please, you have to find our [bold type]missing farm hand[roman type]!'";
@@ -134,7 +159,7 @@ instead of fucking the Anthony:
 	project the figure of Anthony_face_icon;
 	say "     Anthony looks at you with interest as you make him your amorous offer, then sighs and shakes his head. 'I'd love to take you up on that, but right now isn't such a good time, sorry. With all the things that I have to worry about, sudden emergencies coming up and so on, I... can't just take time off right now. People on the farm count on me and grandfather would spin in his grave if I started fucking around with someone before sorting out the problems we have.'";
 
-instead of going northwest from Central Farm Square while (HP of Anthony is 0 or HP of Anthony is 1 or HP of Anthony is 3 or HP of Anthony is 4 or HP of Anthony is 5):
+instead of going northwest from Central Farm Square while (HP of Anthony is 0 or HP of Anthony is 1 or HP of Anthony is 3 or HP of Anthony is 4 or HP of Anthony is 5 or HP of Anthony is 6):
 	move player to Farmhouse Main Room;
 	if graphics is true:
 		project the figure of Anthony_face_icon;
@@ -304,15 +329,11 @@ to say AnthonySexMenu:
 					say "[AnthonySex4]";
 				if (nam is "Fuck Anthony"):
 					say "[AnthonySex5]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the tall anteater, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the tall anteater, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -340,12 +361,12 @@ to say AnthonySex2: [oral on Anthony]
 
 to say AnthonySex3: [player ass fucked]
 	setmonster "Giant Anteater";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Smiling at your eagerness to be taken care of by him, Anthony brings his long muzzle to your mouth and kisses you, sliding his tongue inside for a playful bit of tongue-wrestling. Then the giant anteater starts to strip you naked in a swift but gentle manner. While he slides his long claws under the fabric to pull each piece of clothing off, he guides you step by step towards the nearest couch. Soon, you're completely naked and find yourself softly pushed to sit down and lean back, with the slender male crouching down between your legs. 'Just relax and enjoy,' he says in a seductive voice, winking at you as he sticks out his long, long tongue and leans forward.";
 	say "     The soft, luscious fur on Anthony's forearms brushes the insides of your legs as the anteater moves to hook his claws under your thighs, then lifts them up, baring your ass with spread buttocks. Then he lowers his head and rubs the long curve of his muzzle up and down between your cheeks, giving your pucker a playful lick each time he passes it. The teasing touches and stroking have you moaning in no time, prompting the young man to look up at you and give a beaming smile, followed by, 'You like that, don't you? Wait till you see what's next...' With that said, Anthony moves to kneel and lowers his upper body some more, bringing his muzzle against your back door in an all new angle.";
 	WaitLineBreak;
 	say "     His long, thin tongue slips out between the anteater's lips and pushes in against the ring of your pucker, wiggling inside with ease. And it doesn't stop there, going deeper and deeper until he does the unbelievable - Anthony actually LICKS your prostate - making you throw your head back in a lust-filled gasp as you melt into the sofa. With the tip of your partner's very talented tongue flicking over your most sensitive spot inside, you at first barely register the next trick up Anthony's sleeve - at least until he presses the tip of his muzzle forward more strongly and nudges apart the pretty relaxed ring of your pucker. You can't help but moan loudly at the fact that his muzzle is thin enough to 'fuck' you with, sliding in and out a few inches while he keeps lapping your prostate.";
-	say "     Anthony does his very best to please you, only pulling out from time to time to catch his breath, then getting right back to this unconventional way of having sex. After a quite pleasant little while of doing so, he takes things to an all new level by starting to hum loudly with his muzzle inside you. With all the stimulation already having put you very close to an orgasm, the vibration of Anthony's muzzle is enough to push you over the edge for good. Bucking your hips towards the anteater, you shout out in climax while [if player is herm]your cock sends spurts of cum spraying over your chest and your pussy starts gushing femcum, which plasters Anthony's forelock against his muzzle and trickles down all over it[else if player is male]your cock sends spurts of cum spraying over your chest, painting it in white streaks[end if].";
+	say "     Anthony does his very best to please you, only pulling out from time to time to catch his breath, then getting right back to this unconventional way of having sex. After a quite pleasant little while of doing so, he takes things to an all new level by starting to hum loudly with his muzzle inside you. With all the stimulation already having put you very close to an orgasm, the vibration of Anthony's muzzle is enough to push you over the edge for good. Bucking your hips towards the anteater, you shout out in climax while your cock sends spurts of cum spraying over your chest[if player is female] and your pussy starts gushing femcum, which plasters Anthony's forelock against his muzzle and trickles down all over it[else], painting it in white streaks[end if].";
 	WaitLineBreak;
 	say "     Showing dedication to his task, Anthony keeps stimulating your prostate all the way through your orgasm and even after, making sure that your arousal never dips too low even after your spurts of cum slowly ebb off. Then eventually, he raises his head and flicks that amazing tongue forward to lick up some of the cum sticking to your chest, smiling as he brings it to his mouth and tastes your essence. 'Ready for round two?' the slender male asks next and you give a nod and happy moan as your reply, which prompts Anthony to raise himself up on his knees, then lean over your relaxed form. Looking down at what bumps hotly against your buttocks at that move, you see that his tongue isn't the only thing quite long on this tall anteater - Anthony is hung with a very respectable piece of man-meat, its length standing proudly erect under a small bush of blond pubic hair.";
 	say "     Your partner doesn't mince any more words, instead bringing his cock to your still slightly gaping opening right away and lining himself up with it. Then he thrusts into you in a smooth movement, filling the void left by his tongue earlier with something much thicker and harder this time. The young man expertly keeps going until he bumps your prostate with his tip, then gives some quick little jabs against it. The sensations drive you wild, bucking into the cushions of the sofa and wrapping your legs around him. Pleased with this reaction, Anthony leans forward and kisses you on the mouth, making out with you while his dick slowly sinks even deeper, brushing past the prostate and burying itself inside you until his balls bump against your buttocks. 'You feel great to be in,' the anteater says in a husky tone in between kisses, then begins to slide in and out in a fast tempo.";
@@ -358,7 +379,7 @@ to say AnthonySex3: [player ass fucked]
 
 to say AnthonySex4: [player pussy fucked]
 	setmonster "Giant Anteater";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Smiling at your eagerness to be taken care of by him, Anthony brings his long muzzle to your mouth and kisses you, sliding his tongue inside for a playful bit of tongue-wrestling. Then the giant anteater starts to strip you naked in a swift but gentle manner. While he slides his long claws under the fabric to pull each piece of clothing off, he guides you step by step towards the nearest couch. Soon, you're completely naked and find yourself softly pushed to sit down and lean back, with the slender male crouching down between your legs. 'Just relax and enjoy,' he says in a seductive voice, winking at you as he sticks out his long, long tongue and leans forward.";
 	say "     The soft, luscious fur on Anthony's forearms brushes the insides of your legs as the anteater moves to hook his claws under your thighs, then spreads and lifts them, baring your wet pussy. Then he lowers his head and rubs the long curve of his muzzle up and down between your nether lips, giving your sensitive clit a playful lick each time he passes it. The teasing touches and stroking have you moaning in no time, prompting the young man to look up at you and give a beaming smile, followed by, 'You like that, don't you? Wait till you see what's next...' With that said, Anthony moves to kneel on the ground and lowers his upper body some more, bringing his muzzle against your pussy in an all new angle.";
 	WaitLineBreak;
@@ -369,7 +390,7 @@ to say AnthonySex4: [player pussy fucked]
 	say "     Your partner doesn't mince any more words, instead bringing his cock to your still slightly gaping opening right away and lining himself up with it. Then he thrusts into you in a smooth movement, filling the void left by his tongue earlier with something much thicker and harder this time. The young man expertly keeps going until he bumps your g-spot with his tip, then gives some quick little jabs against it. The sensations drive you wild, bucking into the cushions of the sofa and wrapping your legs around him. Pleased with this reaction, Anthony leans forward and kisses you on the mouth, making out with you while his dick slowly sinks even deeper, burying itself inside you until his balls bump against your buttocks and the soft fuzz of his pubes brushes against your clit. 'You feel great to be in,' the anteater says in a husky tone in between kisses, then begins to slide in and out in a fast tempo.";
 	WaitLineBreak;
 	say "     Anthony gives you an impressive demonstration that he's got experience with more than just oral pleasure and also really knows what to do with that long cock of his. While making out with you, the anteater fucks you with long strokes, pumping his manhood into your eager hole. Meanwhile, he strokes your body, letting his hands and long claws brush softly over your skin and teasing you with gentle strokes of the fluffy fur covering his forearms. All in all, you're putty in his hands, very well taken care of by the soft-spoken, skillful lover. The young man who inherited this farm fucks you with relish on a sofa in his living-room, not even registering a horseman coming to the door at some point, looking in on the two of you and giving an amused snort. The man leaves after watching for a short while, his issue seemingly not important enough to disturb the boss.";
-	say "     Being fucked by the thin yet surprisingly strong anteater, moaning in lust with every solid thrust of his large cock, you're once again pushed to higher and higher levels of arousal, filling the farmhouse with the lewd sounds of loud sex. Soon, you're wrapping your legs around his hips and pull your anthro partner deeper inside you to scratch the steadily rising itch only he can fill, then shout in completion as a sharp thrust nudges your cervix, making you see stars and cum explosively! [if player is male]With your balls churning, yet another load of fresh cum splatters all over your chest, soaking your skin in wet streaks.[else]With your whole body trembling, another load of femcum covers Anthony's shaft in slick wetness. As your inner muscles twitch with each further moment of joy, tightening around your partner's rock-hard manhood, Anthony follows you into sweet oblivion just a few heart-beats later, grunting as his load is deposited deep in your stretched passage, splashing directly on the opening of your womb.";
+	say "     Being fucked by the thin yet surprisingly strong anteater, moaning in lust with every solid thrust of his large cock, you're once again pushed to higher and higher levels of arousal, filling the farmhouse with the lewd sounds of loud sex. Soon, you're wrapping your legs around his hips and pull your anthro partner deeper inside you to scratch the steadily rising itch only he can fill, then shout in completion as a sharp thrust nudges your cervix, making you see stars and cum explosively! [if player is male]With your balls churning, yet another load of fresh cum splatters all over your chest, soaking your skin in wet streaks[else]With your whole body trembling, another load of femcum covers Anthony's shaft in slick wetness[end if]. As your inner muscles twitch with each further moment of joy, tightening around your partner's rock-hard manhood, Anthony follows you into sweet oblivion just a few heart-beats later, grunting as his load is deposited deep in your stretched passage, splashing directly on the opening of your womb.";
 	say "     [fimpregchance]";
 	WaitLineBreak;
 	say "     The thin and lanky anteater sinks down on top of you, exhaustion reducing him to just holding on to you and panting for a few moments as the build-up of sexual energy abates with his orgasm. When he catches his breath a short while later and pushes himself up on bony elbows, the young man gives you a pleased smile, then rubs the side of his elongated muzzle against your neck in an affectionate gesture. 'I trust that this was a proper reward for such a selfless hero as yourself,' he quips good-heartedly, then kisses your mouth before slowly withdrawing from your cum-filled pussy. With a last caress over your stretched-out body, so very gentle despite the long claws on his hands, Anthony then stands up and goes to grab his kilt. Fixing it up around his hips, the anteater says, 'That was a lot of fun! How I wish we could just keep going, but... duty calls.'";
@@ -379,12 +400,12 @@ to say AnthonySex5: [fuck Anthony]
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Giant Anteater";
 	now enemy title entry is "";
 	now enemy name entry is "Anthony";
@@ -432,7 +453,8 @@ When Play begins:
 	now magic entry is false;        [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;    [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;   [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "";       [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0;   [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";       [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Anthony ends here.

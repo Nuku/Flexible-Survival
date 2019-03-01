@@ -1,5 +1,9 @@
 Tree Ascension by Hyliad begins here.
+[Note: Not Resolution flagged, since this isn't completed or in the game yet]
 
+Table of GameEventIDs (continued)
+Object	Name
+Giant Tree Ascension	"Giant Tree Ascension"
 
 Giant Tree Ascension is a situation.
 The sarea of Giant Tree Ascension is "Forest".

@@ -1,13 +1,23 @@
 Version 1 of Blake by Ssely begins here.
 
-East of Smith Haven Mall Lot East is Dirty Alley.
+Table of GameRoomIDs (continued)
+Object	Name
+Dirty Alley	"Dirty Alley"
+
+Dirty Alley is a room.
+Dirty Alley is east of Smith Haven Mall Lot East.
 The description of Dirty Alley is "[DirtyAlleyDesc]".
 
 to say DirtyAlleyDesc:
 	say "     Dumpsters and trash bags litter the floor, the back-alley of the brothel is coated in a thick layer of grime - the darkness from the corrugated metal overhead shrouds the scene in a thick fog. Before you sits a leather-clad rat - this alleyway seeming to be his home. He doesn't notice you for the meanwhile, your eyes darting around his living quarters. The rat's bed is made up of a couple layers - trash bags being used as the mattress, a few salvaged blankets covering the mattress, and a dirty, unkempt duvet over-top that. Despite his disgusting living conditions, his bed was surprisingly well made - blankets tucked underneath their neighboring bags.";
 	WaitLineBreak;
 
-Blake is a man. Blake is in Dirty Alley. The HP of Blake is normally 0.
+Table of GameCharacterIDs (continued)
+object	name
+Blake	"Blake"
+
+Blake is a man.
+Blake is in Dirty Alley.
 The description of Blake is "[BlakeDesc]".
 The conversation of Blake is { "Mew!" }.
 
@@ -77,21 +87,21 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 100):
 			-- 3:
 				say "     'Oh for gods sake, kid. I've already messed with you recently. Give me a while, I've got shit to do other than humiliate you, ahhaha!' You walk away, whining in submission.";
 	else if HP of Blake is 3: [returning again after one rejection]
-		say "     'Hah, there you are,' the trashy rat chuckles out. 'I've been waiting to use you for a while, kid.' Grinning, he lures you closer, his finger twitching in response to your presence. Of course, you came closer - your past introduction to his methods of forcing you into subservience carrying along - your mind already littered with thoughts of serving the big, dominant leather-clad rat. Instantly, you fall to your knees.";
+		say "     'Hah, there you are,' the trashy rat chuckles out. 'I've been waiting to use you for a while, kid.' Grinning, he lures you closer, his finger twitching in response to your presence. Of course, you came closer - your past introduction to his methods of forcing you into subservience carrying along - your mind already littered with thoughts of serving the big, dominant, leather-clad rat. Instantly, you fall to your knees.";
 		let randomnumber be a random number from 1 to 3;
 		if randomnumber is:
 			-- 1:
-				say "     As if you could read his mind, you grab over his cock obediently. It was already slick with his always-present filth - the smelly, slight covering of dirt lubricating your endeavor. Your expert hands squirm in place over his twitching member, before he lies back into his disgusting bed. You follow suit, his wagging finger tugging on your mind, much like a mental collar. Your grip never halts though - a lonesome digit teasing over his head, the rest simply gripping over that erect member and stroking up and down - the soft moans of the dominant rat in front of you constantly providing a source of motivation.";
+				say "     As if you could read his mind, you grab his cock obediently. It was already slick with his always-present filth - the smelly, slight covering of dirt lubricating your endeavor. Your expert hands squirm in place over his twitching member, before he lies back into his disgusting bed. You follow suit, his wagging finger tugging on your mind, much like a mental collar. Your grip never halts though - a lonesome digit teasing over his head, the rest simply gripping over that erect member and stroking up and down - the soft moans of the dominant rat in front of you providing a constant source of motivation.";
 				WaitLineBreak;
-				say "     Your teasing fingers make sure to grip and rub against his cock constantly, never letting up their complete arousal-gifting action. Your grip was tight, like a vice - yet gentle like a massage, the gentle-tightness of your grasp growing Blake closer. With time, plenty of grunts and moans, and some humping, you feel his member twitch in your hands, before Blake spurts his sticky white seed onto his chest and your hands.";
+				say "     Your teasing fingers make sure to grip and rub against his cock constantly, never letting up their complete arousal-gifting action. Your grip is tight, like a vise - yet gentle like a massage, the gentle-tightness of your grasp growing Blake closer. With time, plenty of grunts and moans, and some humping, you feel his member twitch in your hands, before Blake spurts his sticky white seed onto his chest and your hands.";
 			-- 2:
-				say "     Blake notions with a wriggling finger. You knew what he was suggesting instantly - in fact, seconds after, you were already ass-in-air, awaiting his member. He lets out a soft, raspy cackle - the dominant rat sending shivers of absolute pleasure down your spine. Again, his leather outfit creaks against your skin, every touch - every tactile feeling of his body over you... Pure arousal. It surges through you, like a heat - endlessly forcing its way into your veins, your senses, your thoughts. You need him. Now. With that, Blake pushes into you - your hole seeming to be lubricated enough from the various sexual acts he just knew you had been a part of before.";
+				say "     Blake motions with a wriggling finger. You knew what he was suggesting instantly - in fact, seconds after, you were already ass-in-air, awaiting his member. He lets out a soft, raspy cackle - the dominant rat sending shivers of absolute pleasure down your spine. Again, his leather outfit creaks against your skin, every touch - every tactile feeling of his body over you... Pure arousal. It surges through you, like a heat - endlessly forcing its way into your veins, your senses, your thoughts. You need him. Now. With that, Blake pushes into you - your hole seeming to be lubricated enough from the various sexual acts he just knew you had been a part of before.";
 				WaitLineBreak;
 				say "     Oh god was his member absolutely amazing - it twitches... pulses... thrusts - the feeling of having something so filthy inside of your corrupted form would've been absolutely horrifying to you pre-infection, but now you couldn't get enough of that filthy trash-rat behind you right now. You lean back into his thrusts, the rat's arousal being quite high already from the looks of things - his humps getting faster and faster, more pre escaping his tip, adding to the disgusting slickness of your loose hole. You try thinking about running, try thinking about escaping this arousing... No, wait! Your mind was awash in pleasure - so much so that you didn't even realize when Blake came, his seed cleaning your insides out with whitewash.";
 			-- 3:
-				say "     His filthy digit just points towards his cock, you know what to do. It's as if he had a deep control of your thoughts, forcing subservience through your veins, the sensation of suggestion flowing through your mind, senses awash with need for his member. You didn't know if he was hypnotic or not, but his scent seems to do wonders do your mind. Of course, even with helpless struggling you eventually reach his length, the situation now reminding you of when you first met the rat. This time though, the taste of his filthy cock seems to be more enjoyable to your now-changed mind - the filth and dirt around you pushing you towards thorough enjoyment of sharing Blake's dirt. If someone were to oversee the two of you, they would run away, fast.";
+				say "     His filthy digit just points towards his cock, you know what to do. It's as if he had a deep control of your thoughts, forcing subservience through your veins, the sensation of suggestion flowing through your mind, senses awash with need for his member. You didn't know if he was hypnotic or not, but his scent seems to do wonders to your mind. Of course, even with helpless struggling you eventually reach his length, the situation now reminding you of when you first met the rat. This time though, the taste of his filthy cock seems to be more enjoyable to your now-changed mind - the filth and dirt around you pushing you towards thorough enjoyment of sharing Blake's dirt. If someone were to oversee the two of you, they would run away, fast.";
 				WaitLineBreak;
-				say "     The scent was overpowering to anyone who was unlucky enough to focus in on it - otherwise mixed together with the various scents of sex that emanates from the hut beside you. The strange rat infects your mind with his enjoyment of living in his own trash - changing your thoughts as you suck on his cock. Before long, you're met with a splash of seed, the rank taste of his cum matching that of his cock. Due to your lust-addled mind however, that disgusting taste seems to be ultimately pleasurable to you.";
+				say "     The scent was overpowering to anyone who was unlucky enough to focus in on it - otherwise mixed together with the various scents of sex that emanates from the hut beside you. The strange rat infects your mind with his enjoyment of living in his own trash - changing your thoughts as you suck on his cock. Before long, you're met with a splash of seed, the rank taste of his cum matching that of his cock. Due to your lust-addled mind, however, that disgusting taste seems to be ultimately pleasurable to you.";
 		WaitLineBreak;
 		say "     'Hah, that was fun, wasn't it, bitch? Bet you're starting to enjoy me more and more - just craving that scent, that musk, aren't you?' he teases, grinning as you eagerly lap up the excess cum on your surroundings. Before long though, Blake lays back onto his bed, closing his eyes for a while. Perhaps you should come back another time.";
 	move player to Smith Haven Mall Lot East; [player is thrown out after each scene]

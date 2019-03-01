@@ -4,7 +4,11 @@ Version 2 of Alex by Stripes begins here.
 
 Section 1 - Alex & Alex's Condo
 
-Alex is a person. Alex is in Alex's Condo.
+Table of GameCharacterIDs (continued)
+object	name
+Alex	"Alex"
+
+Alex is a man. Alex is in Alex's Condo.
 The conversation of alex is { "Poing!" }.
 alexbrunch is a number that varies.
 alexdiego is a number that varies.
@@ -21,8 +25,12 @@ to say alexscent:
 
 The description of Alex is "[if alexbrunch < 4]A mostly humanoid male with ferret-like ears and a long, sinuous tail. He has a twitchy animal nose with whiskers around it. He has a slightly rumpled suit on, still looking good despite his changes. He is a pleasant enough looking person who looks even better in those moments when he's not stressed or worried by his clients[else]Alex is a sexy ferret male, with a cute mustelid head. His twitchy animal nose has an array of whiskers around it. He has a slightly rumpled suit on, still looking good despite his changes. You find his new look quite pleasing to the eyes and he certainly seems much happier and friendlier of late. It seems the changes he's undergone are for the better[end if].".
 
+Table of GameRoomIDs (continued)
+Object	Name
+Alex's Condo	"Alex's Condo"
+
 Alex's Condo is a room. It is fasttravel. It is private. It is sleepsafe.
-The description of Alex's Condo is "     Near the top of the high rise condo building, Alex's home has an good view of the area, if partially blocked by several of the other surrounding high rises. His place is fairly well-maintained, the mustelid tidying up occasionally. It does have the faint, tangy smell of mustelid musk, but it's not too strong. It is well-furnished, with expensive, trendy-looking furniture and decor. The big screen television and large stereo are silent, but fill a sizable portion of one wall. Several pieces of classy art adorn the others, all matching nicely with each other and the room decor as a whole. There are several legal briefs and law books open on the coffee table in the living room. Scattered around the floor are several colorful rubber objects, clearly outlets for any ferrety urges[if alexbrunch > 3]. There has been an increase in the number of rubber toys and shiny things scattered around the condo as the lawyer's gotten more ferrety[end if]. A glance in the kitchen shows that it's not as tidy, and is equally ultra-modern, if now useless. He's set up a small camper stove on his stove top and is using that for cooking. Between bouts of manic ferretness, the mustelid lawyer is sitting on his couch, focusing on his papers.".
+The description of Alex's Condo is "     Near the top of the high rise condo building, Alex's home has a good view of the area, if partially blocked by several of the other surrounding high rises. His place is fairly well-maintained, the mustelid tidying up occasionally. It does have the faint, tangy smell of mustelid musk, but it's not too strong. It is well-furnished, with expensive, trendy-looking furniture and décor. The big screen television and large stereo are silent, but fill a sizable portion of one wall. Several pieces of classy art adorn the others, all matching nicely with each other and the room décor as a whole. There are several legal briefs and law books open on the coffee table in the living room. Scattered around the floor are several colorful rubber objects, clearly outlets for any ferrety urges[if alexbrunch > 3]. There has been an increase in the number of rubber toys and shiny things scattered around the condo as the lawyer's gotten more ferrety[end if]. A glance in the kitchen shows that it's not as tidy, and is equally ultra-modern, if now useless. He's set up a small camper stove on his stove top and is using that for cooking. Between bouts of manic ferretness, the mustelid lawyer is sitting on his couch, focusing on his papers.".
 
 the scent of Alex's Condo is "[alexcondoscent]".
 
@@ -32,35 +40,35 @@ to say alexcondoscent:
 Section 2 - Conversing with Alex
 
 Instead of conversing the Alex:
-	if progress of alex is 0:
+	if AlexProgress is 0:
 		say "     'Have you come back to reconsider my offer? I could certainly use your help on this. And remember, I'm willing to get you supplies for your assistance,' the mustelid lawyer says with a smile.";
-		say "     [bold type]  Do you agree to help him?[roman type][line break]";
+		say "     [bold type]Do you agree to help him?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			say "     'Oh, fantastic! Trust me on this, I'm definitely going to make it worth your while. My first client is named Lorenda. She lives in the red light district.' You are about to ask why she lives there, when he can see the question in your eyes before you even ask it, and sighs. 'Lorenda is a landlady there, who owns the buildings where many of the shops are set up. She prefers to live there so she can keep a close eye on her tenants. Now, would you go get her?' He seems impatient. Of course, being a high-level lawyer brings a sizable ego.";
-			now progress of alex is 1;
-			now find lorenda is unresolved;
+			now AlexProgress is 1;
+			now find lorenda is active;
 		else:
 			say "     His smile falters a little, but he tries to remain positive. 'Please continue to consider my proposal. I think we'll both benefit from it.'";
-	else if progress of alex is 3:
+	else if AlexProgress is 3:
 		say "     Alex, just coming off a bout of ferretness, puts down the chew toy and looks up at you as you try to tell him you found Darrell. He looks side to side for the missing sports star, then at you in with a mix of confusion and anger on his face. 'Where's Darrell? I thought you were saying that you'd found him.' This is where you have to explain to Alex that Darrell survived the incident, but not in the same way he started it. Upon hearing that Darrell was still sane and relatively secure mentally, Alex is pleased enough, anyway. 'He can still pay me,' says Alex, 'and that's good enough. Here's your next installment.' He hands you another bit of food and water as payment.";
 		increase carried of food by 1;
 		increase carried of water bottle by 1;
 		increase score by 20;
 		extend game by 2;
 		say "[line break]     'Alright, there's only one client left, and this one's gonna be a doozy, I'll wager. This last client of mine is an aide to a City Council Member - well, possibly ex-city council at this point. He doesn't have a whole lot of money, but his case'll be pretty big news if I can get a court to listen to him. So as far as publicity, this is a huge case for me. I need you to find him and bring him here.' He sighs a bit, and his nose wiggles, almost cutely, you think to yourself. 'I'm not sure where he is, honestly. He was a bit of an outdoorsman, so you might be able to find him at the park or the beach. Other than that, I can't offer you anything else, besides his name, which is Lee.'";
-		now progress of alex is 4;
-	else if alextalk is 0 and progress of alex < 5:
+		now AlexProgress is 4;
+	else if alextalk is 0 and AlexProgress < 5:
 		say "     Alex's whiskers twitch as he looks at you sternly. 'I need you back out there,' he grumbles before relaxing. 'Sorry, I'm just on edge lately. My clients may need your help out there, too. I'm worried about them.'[line break]     He points to his body. 'Besides, look at me. Once we get out of this mess, out there in the real world, I'll be a joke if I don't have some big clients to get me started again. I know there'll be a lot of legal ramifications from all this and I want to be poised to represent those who want a normal life despite their changes. And [if humanity of player < 100]from the looks of you[else]if something goes wrong out there before you're rescued[end if], you may even end up wanting my services. If you can come through, I'll even give you a big discount.";
 		now alextalk is 1;
-	else if progress of alex is 1 and a random chance of 3 in 5 succeeds:
+	else if AlexProgress is 1 and a random chance of 3 in 5 succeeds:
 		say "     'Please continue looking for Lorenda. She's in the red light district. Given what's happening in the city, I think she needs your help first,' he says meaningfully. You nod in understanding, as that part of town would be particularly vulnerable to this outbreak.";
-	else if progress of alex is 2 and a random chance of 3 in 5 succeeds:
+	else if AlexProgress is 2 and a random chance of 3 in 5 succeeds:
 		say "     'I need you to track down Darrell,' the weaselly lawyer says. 'Being a pro sports star, his case could be worth a lot to me. He should be at the Smith Haven Mall.' He points out his window, indicating the large shopping center in the distance and the main route leading to it.";
-		Now Smith Haven Mall Lot is known;
-	else if progress of alex is 4 and a random chance of 3 in 5 succeeds:
+		now Smith Haven Mall Lot is known;
+	else if AlexProgress is 4 and a random chance of 3 in 5 succeeds:
 		say "     The mustelid fiddles with a shiny ball as he looks over his papers. 'Have you found Lee? He should be at the park or the beach.'";
 	else:
 		say "[alexrandomtalk]";
@@ -71,10 +79,14 @@ to say alexrandomtalk:
 
 Section 3 - The Search (Quests)
 
-Meet Alex is an situation.
+Table of GameEventIDs (continued)
+Object	Name
+Meet Alex	"Meet Alex"
+
+Meet Alex is a situation.
 The sarea of meet alex is "High".
-Alex has a number called progress.
-Alex has a number called alextalk.
+AlexProgress is a number that varies.
+AlexTalk is a number that varies.
 
 Instead of resolving Meet Alex:
 	say "((Quest arc written by Khabi - update & post-quest by Stripes))[line break]";
@@ -91,19 +103,22 @@ Instead of resolving Meet Alex:
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		say "     'Oh, fantastic! Trust me on this, I'm definitely going to make it worth your while. My first client is named Lorenda. She lives in the red light district.' You are about to ask why she lives there, when he can see the question in your eyes before you even ask it, and sighs. 'Lorenda is a landlady there, who owns the buildings where many of the shops are set up. She prefers to live there so she can keep a close eye on her tenants. Now, would you go get her?' He seems impatient. Of course, being a high-level lawyer brings a sizable ego.";
-		now progress of alex is 1;
-		now find lorenda is unresolved;
+		now AlexProgress is 1;
+		now find lorenda is active;
 	else:
 		say "     'Ah. Well then, if you change your mind, here's my address.' You now have access to Alex's Condo!";
 	now Meet Alex is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Find Lorenda	"Find Lorenda"
 
 Find Lorenda is a situation.
 The sarea of Find Lorenda is "Red".
-Find Lorenda is resolved.
+Find Lorenda is inactive.
 Lisacheat is a number that varies.
 
-Instead of conversing the Lisa while progress of alex is 1 and lisacheat is 0:
+Instead of conversing the Lisa while AlexProgress is 1 and lisacheat is 0:
 	say "     You decide to talk to Lisa about your search for Lorenda. She nods and tells you that she may have seen her recently. 'I can't be certain, hon. I used to just work here, so I've only seen her once or twice. But I think it was her that I spotted go by outside. She seemed a little frantic, and ran around a corner before I could call out to her.' She points you in the direction she was heading. That should help narrow down your search.";
 	now lisacheat is 1;
 
@@ -113,7 +128,7 @@ Instead of resolving Find Lorenda:
 	if lisacheat is 1:
 		let bonus be (( perception of player minus 10 ) divided by 2 ) + 5;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 16:
 			say "With the help of Lisa's information, you manage to find her trail!";
 			now found is 1;
@@ -122,12 +137,12 @@ Instead of resolving Find Lorenda:
 	if lisacheat is 0:
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 16:
-			say "     You manage to find her trail!";
+			say "You manage to find her trail!";
 			now found is 1;
 		else:
-			say "     Despite your search, you fail to find her. She has to be around here somewhere.";
+			say "Despite your search, you fail to find her. She has to be around here somewhere.";
 	if found is 1:
 		if humorous is banned or guy is banned:
 			say "     You follow a hopeful trail and you suddenly realize there are other tracks following the same trail. You rush forward and arrive to find a pair of creatures bearing down on a woman screaming frantically down one of the alleyways. She is pinned to the wall, between the pair of them. Thinking quickly, you rush to her aid!";
@@ -148,45 +163,54 @@ Instead of resolving Find Lorenda:
 		increase carried of water bottle by 2;
 		increase score by 50;
 		extend game by 8;
-		now progress of alex is 2;
+		now AlexProgress is 2;
 		now battleground is "void";
 		now find lorenda is resolved;
 
 [
-Instead of conversing the Rod while progress of alex is 2:
+Instead of conversing the Rod while AlexProgress is 2:
 	say "     'Darrell? Yeah, he was here when it all went down. But... you might be a little surprised.[if HP of ronda is 0] Go talk to my girl, she knows where he is.'[else]' He shrugs, and points to the north. 'Go ask the others. They might know where he is.' He seems a little bummed.[end if]";
 ]
 
-instead of going to Mall Atrium while progress of alex is 2:		[now works for getting there either from Nermine's shop or the food court]
+instead of going to Mall Atrium while AlexProgress is 2:		[now works for getting there either from Nermine's shop or the food court]
 	now the player is in Mall Atrium;
 	if Ronda is in Mall Atrium:
 		say "     You arrive in the atrium of the mall and approach Ronda, Rod's girlfriend. 'Yeah, I know where he is. Darrell, c'mere!' Another mall rat approaches, and it shortly becomes clear that the city's star point guard is now a good deal furrier and rattier. He arrives and asks her 'What's up?' She explains the situation, and he nods, facing you. After some brief explanation, the white rat nods. 'You can go tell Alex I appreciate his concern, but I'm pretty good here at this point.' You try to convince him, but he stands firm on it. 'Nah, I'm good here, man.' Darrell waves and heads back to talk to some of the other rats, putting his arms around a pair of the girls. You sigh a bit, and you have some mixed news for Alex the next time you see him.";
 	else:
 		say "     You arrive in the atrium of the mall and approach one of the various mall rats there. After going back and forth between a few of them, eventually you come to Darrell. It shortly becomes clear that the city's star point guard is now a good deal furrier and rattier. 'What's up?' the white rat asks. After some brief explanation, he nods. 'You can go tell Alex I appreciate his concern, but I'm pretty good here at this point.' You try to convince him, but he stands firm on it. 'Nah, I'm good here, man.' Darrell waves and heads back to talk to some of the other rats, putting his arms around a pair of the girls. You sigh a bit, and you have some mixed news for Alex the next time you see him.";
-	now progress of alex is 3;
+	now AlexProgress is 3;
 
 
-instead of entering the Confession Booth while progress of alex is 4:
+instead of entering the Confession Booth while AlexProgress is 4:
 	say "You ask the priest if she's seen anyone.";
 	say "'Oh! Yes, I believe I know something that might help you. A man has barricaded himself inside one of the storage sheds to the north of the beach. There's a chance that he may be the one you're looking for.' You profusely thank the priestess, who waves off the praise. 'Thank the Goddess for your good fortune, not me. Stay safe and explore a newness of yourself through change, my child.'";
 
 
-instead of conversing the Diego while progress of alex is 4 and alexdiego is 0 and diegotalk is 1:
+instead of conversing the Diego while AlexProgress is 4 and alexdiego is 0 and diegotalk is 1:
 	say "You ask Diego if he's happened to have seen anyone hiding out in the park that meets Lee's description. He shakes his head, saying he's not seen anyone like that, though you can never be certain if they changed too much.";
 	now alexdiego is 1;
 
 
 instead of conversing the Alex while gettinglee > 4 and alexleeinfo is 0:
-	say "     Normally, I shouldn't divulge information about a client's case, but this is an emergency and you can be considered part of my staff.' He slips a paper from one of the case files on his table. This memo that Lee found discusses under the table deals between members of the governor's staff and the city councillors of several cities in the area. If that's really Lee in there, mention that I want to talk with him about these names here and he should realize that you could only get that info from me. If it's not him, it won't mean anything to that person and the information is still safe until brought to court.";
+	say "     Normally, I shouldn't divulge information about a client's case, but this is an emergency and you can be considered part of my staff.' He slips a paper from one of the case files on his table. This memo that Lee found discusses under the table deals between members of the governor's staff and the city councilors of several cities in the area. If that's really Lee in there, mention that I want to talk with him about these names here and he should realize that you could only get that info from me. If it's not him, it won't mean anything to that person and the information is still safe until brought to court.";
 	now alexleeinfo is 5;
 
+Table of GameRoomIDs (continued)
+Object	Name
+Lee's Shed	"Lee's Shed"
 
 Lee's Shed is a room.
-West of Dirty Sheds is Lee's Room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Lee's Room	"Lee's Room"
+
+Lee's Room is a room.
+Lee's Room is west of Dirty Sheds.
 
 Instead of going west from dirty sheds:
-	if progress of alex is 4:
-		say "     You come to a shed that has been barricaded shut. 'Stay away! I don't want any of you freaks coming in here!' You ask if the person inside is Lee, and you hear what might be a grunt in the affirmative, before he shouts again. 'Who's asking? Who sent you!?' You tell him that Alex sent you, but it appears that, with all the madness going on, it's something he's reluctant to believe. He starts mumbling that it's all some kind of setup.";
+	if AlexProgress is 4:
+		say "     You come to a shed that has been barricaded shut. 'Stay away! I don't want any of you freaks coming in here!' You ask if the person inside is Lee, and you hear what might be a grunt in the affirmative, before he shouts again. 'Who's asking? Who sent you?!' You tell him that Alex sent you, but it appears that, with all the madness going on, it's something he's reluctant to believe. He starts mumbling that it's all some kind of setup.";
 		let success be 0;
 		say "     [bold type]Do you attempt to persuade him to come with you?[roman type][line break]";
 		LineBreak;
@@ -195,12 +219,12 @@ Instead of going west from dirty sheds:
 		if player consents:
 			let bonus be (( charisma of player minus 10 ) divided by 2) + alexleeinfo;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
+			say "     You roll 1d20([dice])+[bonus] vs 20 and score [dice plus bonus]: ";
 			if dice + bonus > 19:
-				say "[line break]     'Oh... he really did send you, didn't he?' You hear things being shoved aside, and the door opens a crack, a cat's eye peering out, trying to gauge if the coast is clear. Seeing that it is, Lee steps out, and he isn't a he anymore. In fact, he seems to have more in common with the gryphons and hyenas running around the city as far as her new gender at this point. 'C-come on, let's hurry. I don't want anyone to see me!' she says. She throws her coat over her head to cover her feline ears, holding it down with paw-like hands.";
+				say "'Oh... he really did send you, didn't he?' You hear things being shoved aside, and the door opens a crack, a cat's eye peering out, trying to gauge if the coast is clear. Seeing that it is, Lee steps out, and he isn't a he anymore. In fact, he seems to have more in common with the gryphons and hyenas running around the city as far as her new gender at this point. 'C-come on, let's hurry. I don't want anyone to see me!' she says. She throws her coat over her head to cover her feline ears, holding it down with paw-like hands.";
 				now success is 1;
 			else:
-				say "[line break]     'Ha! As if I'd believe that!' He starts rambling on about lying monsters in his city, no longer listening to you. You get the feeling you'll have to try again later to convince him to come out once he's calmed down.";
+				say "'Ha! As if I'd believe that!' He starts rambling on about lying monsters in his city, no longer listening to you. You get the feeling you'll have to try again later to convince him to come out once he's calmed down.";
 		if success is 0:
 			say "     [bold type]Do you attempt to break down the door?[roman type][line break]";
 			LineBreak;
@@ -209,15 +233,15 @@ Instead of going west from dirty sheds:
 			if player consents:
 				let bonus be ( Strength of player minus 10 ) divided by 2;
 				let dice be a random number from 1 to 20;
-				say "You roll 1d20([dice])+[bonus] vs 22 and score [dice plus bonus]: ";
+				say "     You roll 1d20([dice])+[bonus] vs 22 and score [dice plus bonus]: ";
 				if dice + bonus > 21:
-					say "[line break]     'Ahhhh!!!' Upon breaking inside, you see for the first time that 'he' may not have been the correct way to call him. She has fainted on the floor, and her body is obviously feminine, though bulged in the crotch of her now too-tight pants. She has cute cat ears and paw-like hands. You gingerly pick her up, and hurry to the High Rise district, before she wakes up.";
+					say "'Ahhhh!!!' Upon breaking inside, you see for the first time that 'he' may not have been the correct way to call him. She has fainted on the floor, and her body is obviously feminine, though bulged in the crotch of her now too-tight pants. She has cute cat ears and paw-like hands. You gingerly pick her up, and hurry to the High Rise district, before she wakes up.";
 					now success is 1;
 				else:
-					say "[line break]     You throw your body against the door, but it seems too tough for you. Maybe you could try again later.";
+					say "You throw your body against the door, but it seems too tough for you. Maybe you could try again later.";
 		follow the turnpass rule;
 		if success is 1:
-			now progress of alex is 5;
+			now AlexProgress is 5;
 			move player to Alex's Condo;
 			say "     Arriving back at the High Rise district, Alex is bemused to see that this latest client has made a rather serious reassignment in gender, but he is pleased to see that Lee at least seems to have her faculties in order. 'Alright,' he says. 'Here's your reward for the last bit.' You receive one more food and one more water.";
 			increase carried of food by 1;
@@ -238,7 +262,7 @@ Instead of going west from dirty sheds:
 Section 4 - Sexy Times!
 
 Instead of fucking the Alex:
-	if progress of Alex < 5:
+	if AlexProgress < 5:
 		say "     The mustelid lawyer rubs his cute, ferrety ears and shakes his head. 'Look! Right now I think you should focus more on finding my clients than on my changed body's hormone levels.'";
 		stop the action;
 	if alexbrunch < 4:		[Had 0 to 3 brunches]
@@ -268,13 +292,13 @@ to say alexsexytimes1:
 	[WaitLineBreak]
 	say "     Alex runs his hands over your body, stroking it sensually as he nuzzles your cheek. Soon he's moving down to your neck, licking and nibbling as he softly chirrs. His whiskered face moves do to your nipples, teasing them with a few licks before continuing down your body. His tongue plays across your [bodyname of player] body as it goes slowly lower and lower. His tongue eventually reaches your groin and starts licking over your tender, sensitive flesh.";
 	if player is herm:		[HERM]
-		say "     The ferret runs his fingers over your cock[if cocks of player > 1]s, holding them[else], holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of player] cock[smn] slowly, working over every square centimeter of [if cocks of player > 1]them[else]it[end if] and your balls to pleasure you.";
+		say "     The ferret runs his fingers over your cock[if cocks of player > 1]s, holding them[else], holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of player] cock[smn] slowly, working over every square centimeter of [itthemm] and your balls to pleasure you.";
 		say "     After tending to your male genitals, he nuzzles under your balls to give your pussy some attention. The ferret runs is fingers over your wet lips, the spreads them as he teasingly brushes his tongue across them. He works his tongue across your pussy again and again, nibbling your folds from time to time. Once he's tended to every square centimeter of your lips and gotten you dripping wet, he dives his tongue into you and starts licking and lapping with considerable zeal.";
 		say "     Having gotten you quite worked up, when he finally plunges his mouth down over your cock and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [ball size] to slip a finger into your pussy while the other strokes his animalistic member.";
 		[WaitLineBreak]
 		say "     His nimble fingers and artful muzzle tease your [cockname of player] shaft and [cunt size desc of player] pussy until you can hold back no longer and shoot your hot load down the ferrety man's throat. He sucks it all down with soft moans until your balls are drained. His muzzle pulls back and he slides his slinky body up yours to kiss you. As your tongue dives between his lips, you can feel the mustelid's cum spraying across your body.";
 	else if player is male:				[MALE]
-		say "     The ferret runs his fingers over your cock[if cocks of player > 1]s, holding them[else], holding it[end if] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of player] cock[smn] slowly, working over every square centimeter of [if cocks of player > 1]them[else]it[end if] and your balls to pleasure you[if anallevel is 3]. He continues lower, sliding his tongue across your tight pucker in several slow licks. His tongue wriggles against your back entrance and eases its way into your rectum as he eagerly rims you for increased pleasure[end if]. Having gotten you quite worked up, when he finally plunges his mouth down over your [cockname of player] penis and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [short ball size] balls while the other strokes his animalistic member.";
+		say "     The ferret runs his fingers over your cock[smn], holding [itthemm] up as he buries his muzzle against your hard meat, taking in your scent with a moan of pleasure. His tongue glides over your [cock size desc of player] cock[smn] slowly, working over every square centimeter of [itthemm] and your balls to pleasure you[if anallevel is 3]. He continues lower, sliding his tongue across your tight pucker in several slow licks. His tongue wriggles against your back entrance and eases its way into your rectum as he eagerly rims you for increased pleasure[end if]. Having gotten you quite worked up, when he finally plunges his mouth down over your [cockname of player] penis and starts sucking it firmly, you moan loudly. He smiles up at you and rubs one hand over your [short ball size] balls while the other strokes his animalistic member.";
 		[WaitLineBreak]
 		say "     His nimble fingers and artful muzzle tease your [cockname of player] shaft until you can hold back no longer and shoot your hot load down the ferrety man's throat. He sucks it all down with soft moans until your balls are drained. His muzzle pulls back and he slides his slinky body up yours to kiss you. As your tongue dives between his lips, you can feel the mustelid's cum spraying across your body.";
 	else:								[FEMALE]
@@ -403,7 +427,7 @@ to say brunchtimechange:
 		now scalevalue of player is 3;
 		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 [
 		say "[bold type]Your dexterity has increased by 2![roman type][line break]";
 		say "[bold type]Your stamina has dropped by 1![roman type][line break]";
@@ -416,7 +440,7 @@ to say alexbodyreset:
 	if alexbrunch > 0 and tailname of player is not "Ferret":
 		say ". Seeing your changed tail, his hands move down to your rear, stroking and squeezing it until your ferret tail is restored";
 		now tailname of player is "Ferret";
-		now tail of player is "Emerging from the base of your spine is a slender tail covered in ivory fur. ";
+		now tail of player is "Emerging from the base of your spine is a slender tail covered in ivory fur.";
 	if alexbrunch > 1 and skinname of player is not "Ferret":
 		say ". His playful hands caress all over you, dooking happily as your soft, white fur is restored";
 		now skinname of player is "Ferret";
@@ -432,7 +456,7 @@ to say alexbodyreset:
 		now scalevalue of player is 3;
 		now bodydesc of player is "[one of]flexible[or]slinky[or]slender[or]bouncy[at random]";
 		now bodytype of player is "[one of]mustelid[or]ferret-like[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 	if alexbrunch > 3 and cockname of player is not "Ferret":
 		say ". Rubbing his stiff cock against your loins, his precum leaks onto you. You can feel pleasant tingles as they are restored to their mustelid nature";
 		now cockname of player is "Ferret";

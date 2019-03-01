@@ -28,6 +28,10 @@ UtahGender is a number that varies.
 
 Section 1 - Paleontology Office
 
+Table of GameRoomIDs (continued)
+Object	Name
+Paleontology Office	"Paleontology Office"
+
 Paleontology Office is a room. It is fasttravel. It is private.
 The description of Paleontology Office is "[paleodesc]".
 
@@ -41,6 +45,10 @@ to say paleodesc:
 
 
 Section 2 - Dr Utah the Wereraptor
+
+Table of GameCharacterIDs (continued)
+object	name
+Doctor Utah	"Doctor Utah"
 
 Doctor Utah is a person. Doctor Utah is in Paleontology Office.
 The description of Doctor Utah is "[utahdesc]".

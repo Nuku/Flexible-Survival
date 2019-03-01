@@ -42,6 +42,10 @@ Version 3 of Hadiya by Stripes begins here.
 
 Section 1 - The Situation
 
+Table of GameEventIDs (continued)
+Object	Name
+Annoyed Hyena	"Annoyed Hyena"
+
 Annoyed Hyena is a situation.
 The sarea of Annoyed Hyena is "Junkyard".
 when play begins:
@@ -62,6 +66,10 @@ Instead of Resolving a Annoyed Hyena:
 
 Section 2 - Hyena Shack
 
+Table of GameRoomIDs (continued)
+Object	Name
+Hyena Shack	"Hyena Shack"
+
 Hyena Shack is a room. It is fasttravel. It is private.
 
 The description of Hyena Shack is "[hyenashackdesc]".
@@ -76,6 +84,10 @@ the scent of Hyena Shack is "[if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and H
 
 
 Section 3 - Hadiya
+
+Table of GameCharacterIDs (continued)
+object	name
+Hadiya	"Hadiya"
 
 Hadiya is a person. Hadiya is in Hyena Shack.
 The description of Hadiya is "[hadiyadesc]".
@@ -110,19 +122,19 @@ instead of conversing Hadiya:
 	else if ( HP of Hadiya is 7 or HP of Hadiya is 57 ) and guy is not banned:
 		say "     'Hey, butt-boy! I've got a job for you. You've probably been wondering why I'm living here. Thing is, I'm trying to find my guitar. It was really bitchin['] - an all black flying-V with a flaming skull on it. My last boyfriend didn't like my playing and threw it out with a bunch of other junk... so I threw the dumb bitch out. I was so pissed,' she growls. 'Now, I've been looking all over the junkyard for it, but it hasn't turned up yet. It's been taking so long that I've been able to build this shack for myself with other stuff I've found. I want you to keep an eye out for it,' she says, giving your butt a firm squeeze.";
 		increase HP of Hadiya by 1;
-		now Goblin Thief is unresolved;
+		now Goblin Thief is active;
 	else if ( HP of Hadiya > 7 and HP of Hadiya < 13 ) or ( HP of Hadiya > 57 and HP of Hadiya < 63 ) and a random chance of 2 in 5 succeeds:
 		say "     '[one of]Have you found my guitar yet?'[or]Don't forget about my guitar.'[or]I've been all over this place looking for my guitar. Some [bold type]thief[roman type] must've swiped it.'[or]I found the rest of the junk that was thrown out, but my guitar wasn't there. Some [bold type]thief[roman type] must've swiped it.'[or]Those goblins have tunnels all through the junk piles. Dirty little thieves. Try finding a ['][bold type]goblin thief[roman type]['] and see if one of them has stashed it somewhere.'[in random order]";
 	else if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and HP of Hadiya < 63 ):
-		say "     [one of][if lastfuck of hadiya - turns < 4]'Why are you bothering to stick around when I'm already done with you for now?'[else if lastfuck of hadiya - turns < 12]'How about you come back later and I'll give you what I know you need,' she rumbles, rubbing her crotch.[else]'How about you bring that sexy ass of yours over here and maybe I'll give you what I know you need,' she rumbles, rubbing her crotch.[end if][or]'This pussy and cunt of mine feel nice,' she says, almost teasing you with her touches to them, 'but this new cock of mine is so much better.'[or]'You're turning out to be a fine little fucktoy, aren't you? Such a good slut.'[or]'You need a good dose of hyena in you, don't you, bitch?' she asks, rubbing her crotch before flopping back onto a padded chair, laughing.[or]She pulls out a bottle of liquor from under a chair and slams down half of it with a satisfied 'Ahhh.'[or]'Turn around and let me see that bitch ass of yours.'[at random]";
+		say "     [one of][if lastfuck of hadiya - turns < 4]'Why are you bothering to stick around when I'm already done with you for now?'[else if lastfuck of hadiya - turns < 12]'How about you come back later and I'll give you what I know you need,' [else]'How about you bring that sexy ass of yours over here and maybe I'll give you what I know you need,' [end if]she rumbles, rubbing her crotch.[or]'This pussy and cunt of mine feel nice,' she says, almost teasing you with her touches to them, 'but this new cock of mine is so much better.'[or]'You're turning out to be a fine little fucktoy, aren't you? Such a good slut.'[or]'You need a good dose of hyena in you, don't you, bitch?' she asks, rubbing her crotch before flopping back onto a padded chair, laughing.[or]She pulls out a bottle of liquor from under a chair and slams down half of it with a satisfied 'Ahhh.'[or]'Turn around and let me see that bitch ass of yours.'[at random]";
 	else:
-		say "     [one of][if lastfuck of hadiya - turns < 2]'Why are you bothering to stick around when I'm already done with you for now?'[else if lastfuck of hadiya - turns < 6]'How about you come back later and I'll give you what I know you need,' she rumbles, rubbing her crotch.[else]'How about you bring that sexy ass of yours over here and maybe I'll give you what I know you need,' she rumbles, rubbing her crotch.[end if][or]'This pussy and cunt of mine feel nice,' she says, almost teasing you with her touches to them, 'but this new cock of mine is so much better.'[or]'You're turning out to be a fine little fucktoy, aren't you? Such a good slut.'[or]'You need a good dose of hyena in you, don't you, bitch?' she asks, rubbing her crotch before flopping back onto a padded chair, laughing.[or]She pulls out a bottle of liquor from under a chair and slams down half of it with a satisfied 'Ahhh.'[or]'Turn around and let me see that bitch ass of yours.'[or]Hadiya picks away at her guitar for a bit, playing it tunelessly[if findwires is 2 and fixedgens is 2] with the power off[end if].[or]You try to chat with Hadiya for a bit, but she's not really paying attention to you. She's more interested in having her goblin plaything lick her sheath and balls.[or]'This place sure beats living in a dump. I knew you'd be good for something,' she laughs.[at random]";
+		say "     [one of][if lastfuck of hadiya - turns < 2]'Why are you bothering to stick around when I'm already done with you for now?'[else if lastfuck of hadiya - turns < 6]'How about you come back later and I'll give you what I know you need,' [else]'How about you bring that sexy ass of yours over here and maybe I'll give you what I know you need,' [end if]she rumbles, rubbing her crotch.[or]'This pussy and cunt of mine feel nice,' she says, almost teasing you with her touches to them, 'but this new cock of mine is so much better.'[or]'You're turning out to be a fine little fucktoy, aren't you? Such a good slut.'[or]'You need a good dose of hyena in you, don't you, bitch?' she asks, rubbing her crotch before flopping back onto a padded chair, laughing.[or]She pulls out a bottle of liquor from under a chair and slams down half of it with a satisfied 'Ahhh.'[or]'Turn around and let me see that bitch ass of yours.'[or]Hadiya picks away at her guitar for a bit, playing it tunelessly[if findwires is 2 and fixedgens is 2] with the power off[end if].[or]You try to chat with Hadiya for a bit, but she's not really paying attention to you. She's more interested in having her goblin plaything lick her sheath and balls.[or]'This place sure beats living in a dump. I knew you'd be good for something,' she laughs.[at random]";
 
 
 Section 4 - Sex with Hadiya
 
 hadiyafucked is a number that varies. hadiyafucked is usually 0.
-hadiyahyg is a truth state that varies. hadiyahyg is normally false.
+hadiyahyg is a truth state that varies. hadiyahyg is usually false.
 
 to say sexwithHadiya:
 	setmonster "Herm Hyena";
@@ -151,7 +163,7 @@ to say sexwithHadiya:
 		WaitLineBreak;
 		if HP of Hadiya is 6 and player is female and "One Way" is not listed in feats of player and "Herm Preferred" is not listed in feats of player and "Female Preferred" is not listed in feats of player and "Always A Pussy" is not listed in feats of player:
 			say "     After pounding away at you in this position for a long, long time, she flips you over, putting you on all fours and mounting you like an animal. You grind your ass back against her, sore and tired, but still needing that hot, gooey reward inside you. As she's sinking her shaft into you, her paw strays to your pussy, completely forgotten in the excitement, and brushes over it lightly. 'Here you are, such a needy bitch taking it up the ass. You don't need this pussy at all, do you? When you get fucked, you just want it in your ass, so it's just getting in the way. Your mistress doesn't want it, so you don't need it, do you?' she rumbles in your ear, moving her paw to play with your cock and your balls.";
-			say "     [bold type] Do you agree with your mistress, no longer wanting and needing your pussy?[roman type][line break]";
+			say "     [bold type]Do you agree with your mistress, no longer wanting and needing your pussy?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
 			say "     ([link]N[as]n[end link]) - No.";
@@ -215,8 +227,8 @@ to say sexwithHadiya:
 		hadiyahyenaify;
 		now lastfuck of Hadiya is turns;
 	else:
-		say "     'There you are, now... it's time for you to help serve your Mistress.' The obviously worked up hyena doesn't waste any time with disrobing. Unbuttoning her pants and tugging them down just enough that you can see the thick, red-fleshed and canine cock already pushing it's way out of her sheath. Her heavy, furry orbs obviously quite full and needing someone to help empty them. '[if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and HP of Hadiya < 63)]It's been quite a long time since I've had regular company. I might need you around quite a bit after this[else]Being here certainly has its advantages. It's nice to have my slutty bitch handy when I need a change of pace[end if].' She lets out a growl, sinking her paw down to wrap around the emerging tip, stroking it steadily while you watch, getting herself nice and firm. 'Now, I'm going to get myself off, but I wouldn't want to do anything without your full consent,' she taunts, obviously teasing you.";
-		say "     [bold type] 'So, want to get fucked?' she asks bluntly.[roman type][line break]";
+		say "     'There you are, now... it's time for you to help serve your Mistress.' The obviously worked up hyena doesn't waste any time with disrobing. Unbuttoning her pants and tugging them down just enough that you can see the thick, red-fleshed and canine cock already pushing its way out of her sheath. Her heavy, furry orbs obviously quite full and needing someone to help empty them. '[if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and HP of Hadiya < 63)]It's been quite a long time since I've had regular company. I might need you around quite a bit after this[else]Being here certainly has its advantages. It's nice to have my slutty bitch handy when I need a change of pace[end if].' She lets out a growl, sinking her paw down to wrap around the emerging tip, stroking it steadily while you watch, getting herself nice and firm. 'Now, I'm going to get myself off, but I wouldn't want to do anything without your full consent,' she taunts, obviously teasing you.";
+		say "     [bold type]'So, want to get fucked?' she asks bluntly.[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -224,7 +236,7 @@ to say sexwithHadiya:
 			LineBreak;
 			say "     'That's exactly what I was hoping you'd say.' Immediately, she grabs you and forces your body up against the wall[if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and HP of Hadiya < 63)] of her shack[end if]. Just ramming it there, using her [if scalevalue of player < 4]greater weight[else]not inconsiderable weight[end if] to keep you pinned just in case you change your mind. Soon enough, you start to feel the warm bulge of her arousal grinding up against your rear, pushing and kneading against it while using the pressure to help get her aroused and ready. 'Not much one for foreplay, but I know what I want. And what I want happens to be that tight ass of yours. I'm going to make you my personal little bitch. I want you to come crawling back every time you feel the urge to get fucked. To crave me pounding that tight little rump of yours. To make it fit me like a glove...'";
 			WaitLineBreak;
-			say "     'Soon enough she tires of teasing you, and prods the thick head of her cock right up against your pucker. Far too big for your body, she doesn't really seem to care much about that. Not even bothering to use any kind of lubrication. Just starting to thrust, applying a steady pressure up against the pucker while she keeps you pinned against the wall, unable to get away from her. She just takes you. The steady pressure against your entrance ever so slowly forcing it to stretch, just barely managing to wedge her cockhead inside you and pierce your body with the pulsing heat of her hyena shaft. Once the initial penetration is done, she quickly takes advantage of it - the rest of her cock just ramming it's way inside your body with a single feral thrust, the loud slap of her furry balls against your rear letting you know that she's fully inside. The pain from her careless entry is unbelievable, like someone just shoved their arm inside of you without warning. Your body screams with pain, aching from the sheer amount that it's been forced to stretch to take the horny hyena woman but unable to push her out no matter how hard you clench.'";
+			say "     'Soon enough she tires of teasing you, and prods the thick head of her cock right up against your pucker. Far too big for your body, she doesn't really seem to care much about that. Not even bothering to use any kind of lubrication. Just starting to thrust, applying a steady pressure up against the pucker while she keeps you pinned against the wall, unable to get away from her. She just takes you. The steady pressure against your entrance ever so slowly forcing it to stretch, just barely managing to wedge her cockhead inside you and pierce your body with the pulsing heat of her hyena shaft. Once the initial penetration is done, she quickly takes advantage of it - the rest of her cock just ramming its way inside your body with a single feral thrust, the loud slap of her furry balls against your rear letting you know that she's fully inside. The pain from her careless entry is unbelievable, like someone just shoved their arm inside of you without warning. Your body screams with pain, aching from the sheer amount that it's been forced to stretch to take the horny hyena woman but unable to push her out no matter how hard you clench.'";
 			WaitLineBreak;
 			say "     She groans in pleasure. 'You have no idea how badly I've been needing a good fuck,' she whispers into your ear just before she sinks her teeth into it. She bites down ferally while starting to roll her hips, adding some more stimulation to her eager lust. Though it's not long at all before she starts to tug back, forcing her cock right back out of your resisting body only to swiftly reverse her course and just plunge right back inside. Making your body stretch to take her once again, she resumes her lusty movements, starting to fuck you right up against the wall. Each thrust just ramming your chest into it, your own stiff hardness pinned up against the wall, aching with need as she completely ignores your own pleasure in favor of her own. But despite the rough treatment... or maybe because of it, you can't help but feel incredibly aroused. The pain slowly fades to a dull ache after long minutes of her pounding. And eventually you even start to enjoy yourself, though the hyena doesn't seem to care the slightest bit about all that.";
 			WaitLineBreak;
@@ -268,7 +280,11 @@ to say hadiya_gobby_3somes:
 
 Section 5 - Hadiya's Guitar
 
-Goblin Thief is a situation. Goblin Thief is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Goblin Thief	"Goblin Thief"
+
+Goblin Thief is a situation. Goblin Thief is inactive.
 The sarea of Goblin Thief is "Junkyard".
 
 Instead of resolving Goblin Thief:
@@ -293,10 +309,10 @@ Instead of resolving Goblin Thief:
 		say "     'Deal!'";
 		say "     And thus with your bargain struck, the two of you go your separate ways for now. Hmmm... where'll you even find a leather jacket small enough to fit a goblin?";
 		increase HP of Hadiya by 1;
-		now Goblin Thief is resolved;
+		now Goblin Thief is inactive;
 	else if HP of Hadiya is 9 or HP of Hadiya is 59:
 		say "ERROR-Hadiya-[HP of Hadiya]E: You should not be able to get this result. Event should be closed at this time.";
-		now Goblin Thief is resolved;
+		now Goblin Thief is inactive;
 	else if girl's jacket is not owned:
 		say "     As you approach the spot where you'd met Gobby, you're about to go there to meet with him when you remember that you dropped that leather jacket he wants somewhere. You'd best go back and get it if you want to make the deal with him.";
 	else if (HP of Hadiya is 10 or HP of Hadiya is 60):
@@ -348,12 +364,15 @@ Instead of resolving Goblin Thief:
 		now lastfuck of Hadiya is 255;
 		now carried of girl's jacket is 0;
 		now Goblin Thief is resolved;
-		now battleground is "void";
 	else:
 		say "ERROR-Hadiya-[HP of Hadiya]E: You should not be able to get this result. Event should be closed at this time.";
 		now Goblin Thief is resolved;
 
 Section 6 - Gobby
+
+Table of GameCharacterIDs (continued)
+object	name
+Gobby	"Gobby"
 
 Gobby is a man.
 The description of Gobby is "[gobbydesc]".
@@ -415,8 +434,8 @@ Section 8 - Infection by Hadiya
 to hadiyahyenaify:
 	if HP of Hadiya >= 50:
 		[puts Herm Hyena as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Herm Hyena":
 				now monster is y;
 				now sex entry is "Male";

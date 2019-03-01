@@ -2,6 +2,10 @@ Version 1 of Shrinking Shrooms by Defth begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Mushroom cave	"Mushroom cave"
+
 Mushroom cave is a situation.
 The sarea of Mushroom cave is "Outside".
 
@@ -9,7 +13,7 @@ MushroomCaveVisited is a number that varies. MushroomCaveVisited is usually 0
 
 Instead of resolving a Mushroom cave:
 	if MushroomCaveVisited is 0: [first visit]
-		say "     Stepping inside the dark alley, you find yourself drawn to a green glow at the end of it, a peculiar scene, even for the place that you are in. There is an opening in the side of one of the buildings flanking the alley. Looking through the hole in the wall, you realize that the rest of the building has mostly collapsed and is nothing more but rubble, and you're standing at the entrance of a small 'cave' in the pile. Entering this 'cave', you find something like a mini-forest in there. Some, if not all, of the plants there are miniature versions of the same ones that you would find outside. Even some inanimate items like garbage dumpsters and trash cans lying outside of the cave and in the alley have shrunk. Right through the middle of this whole ecosystem, a river flows, feeding the amazing sight with life. It is but a trickle of goop to you, but it's a mighty flow to the tiny forest. Glowing with an otherworldly-green color, it slowly flows from an opening in the rubble and unloads down a sewer drain a short while later. It is possible that this is some kind of radioactive leak from inside the destroyed building, and with the touch of the nanites, it was made into a shrinking concoction. Looking at the green river, you spot some mushrooms growing near the sewer that don't appear to be tiny like all of the other stuff, but they still glow faintly with that green color. The shrooms probably absorbed the features of both the radioactive stuff and the nanites.";
+		say "     Stepping inside the dark alley, you find yourself drawn to a green glow at the end of it, a peculiar scene, even for the place that you are in. There is an opening in the side of one of the buildings flanking the alley. Looking through the hole in the wall, you realize that the rest of the building has mostly collapsed and is nothing more but rubble, and you're standing at the entrance of a small 'cave' in the pile. Entering this 'cave', you find something like a mini-forest in there. Some, if not all, of the plants there are miniature versions of the same ones that you would find outside. Even some inanimate items like garbage dumpsters and trash cans lying outside of the cave and in the alley have shrunk. Right through the middle of this whole ecosystem, a river flows, feeding the amazing sight with life. It is but a trickle of goop to you, but it's a mighty flow to the tiny forest. Glowing with an otherworldly green color, it slowly flows from an opening in the rubble and unloads down a sewer drain a short while later. It is possible that this is some kind of radioactive leak from inside the destroyed building, and with the touch of the nanites, it was made into a shrinking concoction. Looking at the green river, you spot some mushrooms growing near the sewer that don't appear to be tiny like all of the other stuff, but they still glow faintly with that green color. The shrooms probably absorbed the features of both the radioactive stuff and the nanites.";
 		say "     [bold type]Do you pick some of the mushrooms?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You grab some of the mushrooms. They might prove useful in the future.";
@@ -17,12 +21,13 @@ Instead of resolving a Mushroom cave:
 		if player consents:
 			say "     You carefully pick some of the mushrooms and put them into your backpack, sighing happily that you didn't shrink while doing so.";
 			increase carried of glowing mushroom by 3;
-			now MushroomCaveVisited is 1;
+			now Resolution of Mushroom Cave is 1; [picked shrooms #1]
 		else:
 			say "     There is no need to pick them right now. You leave this place behind (for now) and continue exploring the city.";
-			now MushroomCaveVisited is 1;
+			now Resolution of Mushroom Cave is 2; [didn't pick any shrooms #1]
+		now MushroomCaveVisited is 1;
 	else:
-		say "     Returning to the dark alley, you pay a visit to the little cave in the ruined building again. Stepping up to the hole in the wall, you are struck once again by the otherworldly-beauty of the miniature land spreading out in front of you. Some of the trees appear to have grown a bit, but no more than a dandelion. Meanwhile, the goop still flows silently and slowly to the sewer, although it does seem to be smaller than the first time you saw it. Maybe someday, this whole scene will grow back to normal, and nothing that you see here will be witnessed by someone else.";
+		say "     Returning to the dark alley, you pay a visit to the little cave in the ruined building again. Stepping up to the hole in the wall, you are struck once again by the otherworldly beauty of the miniature land spreading out in front of you. Some of the trees appear to have grown a bit, but no more than a dandelion. Meanwhile, the goop still flows silently and slowly to the sewer, although it does seem to be smaller than the first time you saw it. Maybe someday, this whole scene will grow back to normal, and nothing that you see here will be witnessed by someone else.";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - You grab some of the mushrooms. They might prove useful in the future.";
 		say "     ([link]N[as]n[end link]) - Nah, eating stuff growing next to glowing sludge might be a bad idea, and besides, you won't need them anyway.";
@@ -30,9 +35,11 @@ Instead of resolving a Mushroom cave:
 			LineBreak;
 			say "     You carefully pick some of the mushrooms and put them into your backpack, sighing happily that you didn't shrink while doing so.";
 			increase carried of Glowing mushroom by 3;
+			now Resolution of Mushroom Cave is 3; [picked shrooms]
 		else:
 			LineBreak;
 			say "     There is no need to pick them right now. You leave this place behind (for now) and continue exploring the city.";
+			now Resolution of Mushroom Cave is 4; [didn't pick any shrooms]
 
 Section 2 - Item
 
@@ -53,6 +60,10 @@ Understand "shrooms" as glowing mushroom.
 Understand "glowing shrooms" as glowing mushroom.
 
 Section 3 - Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Hungry dog	"Hungry dog"
 
 Hungry dog is a situation.
 The sarea of Hungry dog is "Outside".
@@ -104,6 +115,7 @@ Instead of resolving a Hungry dog:
 						end the story saying "You were eaten alive!";
 					else:
 						say "     You can see his uvula while he is trying to swallow you, giving you a final idea to escape. You hold on to the dog's uvula, making him choke and gag. Soon enough, you feel yourself being pushed up and out his mouth. You run as much as you can while the beast is dizzy with your method of escape. You eventually lose sight of the monster, and it isn't much longer before you return to your normal size. Cleaning yourself as much as you can, you guess that you still probably will need a bath.";
+						now Resolution of Hungry Dog is 1; [was shrunk & eaten but escaped the hungry dog]
 			else:
 				say "     Coming from inside the dark alley, the German Shepherd finally steps into the light, giving you a better view. He is monstrously large, quite a bit bigger than the ones you found to this day. He has some darker stains in his fur from what appear to be dried blood. A complete lack of clothing gives him an almost fully feral feel. Between the dog's legs, there is a huge sheath, and from the looks of it, an even bigger knotted penis. Even without it leaving the sheath, you can see it pressing against the skin, making it bulge, especially where the knot should be. Right below there are two orbs the size of tennis balls that appear to be full of the monster's seed.";
 				say "     The bloodthirsty dog jumps in your direction, putting his arms to the ground and running like a feral monster with a dark smile. He rams into you, making you lose your breath from the strength of the impact. You are knocked over onto the floor, falling on your butt, making you clench your teeth with the impact with the deserted road. You are left without breath as the hunter stands tall beside you, never letting you out of his sight. Licking his lips, he holds you by the neck and says, 'Looks like I found my next meal.'";
@@ -122,6 +134,7 @@ Instead of resolving a Hungry dog:
 					end the story saying "You were eaten alive!";
 				else:
 					say "     Thrashing around in his grip, you end up punching his muzzle with enough force to daze the dog, giving you an opening to escape with your life intact.";
+					now Resolution of Hungry Dog is 2; [was eaten but escaped the hungry dog]
 		else:
 			say "     You quickly get back on your feet and run away from the hungry dog.";
 	else:
@@ -129,7 +142,12 @@ Instead of resolving a Hungry dog:
 		say "     Oh god! Your legs tremble with the sudden realization, and you almost lose your breath. It can't be! He is eating someone!? Almost as if sniffing your fear the beast puts his muzzle to the air, starting to turn around, but you run as fast as you can from the scene.";
 		LineBreak;
 		say "     (Further options for this scene are locked for players who did not select 'more vore'. You can change your settings with the help of Trixie in the library, if you really want to see the rest.)";
+		now Resolution of Hungry Dog is 3; [vore-disabled resolution]
 		now Hungry Dog is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Little trouble	"Little trouble"
 
 Little trouble is a situation.
 The sarea of Little trouble is "Outside".
@@ -178,20 +196,16 @@ Instead of resolving Little trouble:
 					say "[LittleShroom]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Just give up on that";
-			if player consents:
-				now sextablerun is 1;
-				say "     Giving up on the idea of exploring this weird place, you go on your merry way";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Giving up on the idea of exploring this weird place, you go on your merry way";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
 to say LittleExplorer:
 	say "     Going around the block, you keep looking for any opening or way you could use to enter the place. Reaching the front of the building, you find out that it doesn't actually have a door anymore - or most of the front wall. A pickup truck is sticking halfway through the wall, dented by the bricks that showered down upon it. Seems like the driver lost control of the vehicle... possibly because he was turning, or another passenger was. A glance through the passenger side window reveals a dried, cummy mess and ripped clothing all over the seats inside. There was barely any blood, thankfully, so it seems like both of the occupants walked away from the crash - in whatever form they may have been by then.";
-	say "     The wrecked car blocks most of the hole it made, but there is still an opening large enough to duck into if you crouch. You do so, careful not to dislodge any more bricks or hit your head. The place is dark inside, but you can make out some oriental decor, mostly in shades of red. There are a lot of chairs and tables in here, all tossed around from the impact that destroyed the place. This was probably a Chinese restaurant, and a nice one at that. There is a statue of a golden dragon on the side of a half-destroyed pillar and quite a bit of broken glass scattered on the floor hints at a large aquarium next to the entrance.";
+	say "     The wrecked car blocks most of the hole it made, but there is still an opening large enough to duck into if you crouch. You do so, careful not to dislodge any more bricks or hit your head. The place is dark inside, but you can make out some oriental décor, mostly in shades of red. There are a lot of chairs and tables in here, all tossed around from the impact that destroyed the place. This was probably a Chinese restaurant, and a nice one at that. There is a statue of a golden dragon on the side of a half-destroyed pillar and quite a bit of broken glass scattered on the floor hints at a large aquarium next to the entrance.";
 	WaitLineBreak;
 	say "     Looking around a bit more, you finally discover what that noise was you heard earlier. Right at the end of a hallway, there is a collapsed wall opening into what must have been a motel room next door. It looks more pink than red, and there is quite a scene unfolding on the bed inside. A male husky is pounding away at a smaller husky like there is no tomorrow, his toned muscles rippling every time he pounds into the little bitch. Sometimes, she almost is pushed off of the bed by the sheer power in his thrusts, but the dominant dog quickly grabs her anyway he can before that happens, even gripping her neck and momentarily choking her.";
 	say "     No matter how harshly she is treated, the horny girl under the rutting husky enjoys the treatment, her tongue hanging out of her mouth as she pants loudly. She is drooling at being fucked like this too, making her fur glisten wetly and creating spots on the mattress. The anthro canine's small body shivers and trembles with every pounce, and as much as her hips want to keep that nice, red rod inside of her, the male has other ideas as he gives in to his instincts. Even his knot is not enough to anchor the little husky to his crotch, and you can see her vagina bulging and gaping every time he pulls it out of her, his seed being splattered all over her belly, crotch, and legs.";
@@ -200,14 +214,15 @@ to say LittleExplorer:
 	wait for any key;
 	challenge "Alpha Husky";
 	if fightoutcome >= 20 and fightoutcome <= 29:[lost]
-		say "     Now satisfied, the beast throws you out of the room and into the restaurant You rest for a bit in the cold, uneven ground as you strength slowly comes back to your being. When you finally get on your feet again, you limp to the entrance and go back to the bunker, hoping that the next adventure will be better.";
-		move player to bunker;
+		say "     Now satisfied, the beast throws you out of the room and into the restaurant. You rest for a bit on the cold, uneven ground as you strength slowly comes back to your being. When you finally get on your feet again, you limp to the entrance and go back to the bunker, hoping that the next adventure will be better.";
+		now Resolution of Little Trouble is 2; [fought, lost]
 	else if fightoutcome >= 30:[fled]
 		say "     You run back the way you came, accidentally slamming into one of the pillars on your way out. The beast shouts profanities during your retreat, but you quickly lose him, leaving the place for good as you run directly to the bunker.";
-		move player to bunker;
+		now Resolution of Little Trouble is 3; [fought, fled]
 	else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 		say "     Sending the husky running with a kick in the pants, you laugh as he flees with his tail tucked low. Still, it might not be a good idea to go back into the restaurant... There is at least one more member of his pack in there and who knows how many others. Leaving this place through the front door, you can finally go back to the bunker.";
-		move player to bunker;
+		now Resolution of Little Trouble is 1; [fought, won]
+	move player to bunker;
 	now little trouble is resolved;
 
 to say LittleShroom:
@@ -229,19 +244,19 @@ to say LittleShroom:
 	choose a blank row in table of fucking options;
 	now title entry is "Grab the supplies and run";
 	now sortorder entry is 1;
-	now description entry is "Try to grab as many cans as you can. You need food right now";
+	now description entry is "Try to grab as many cans as you can. You need food right now.";
 	[]
 	if ublevel > 2: [more unbirthing selected]
 		choose a blank row in table of fucking options;
 		now title entry is "Have fun with the sleeping husky";
 		now sortorder entry is 2;
-		now description entry is "Go over to the sleeping bitch and see what you can do with her";
+		now description entry is "Go over to the sleeping bitch and see what you can do with her.";
 	[]
 	if vorelevel > 2: [more vore selected]
 		choose a blank row in table of fucking options;
 		now title entry is "Go find where the sound is coming from";
 		now sortorder entry is 3;
-		now description entry is "Keep going until you find where the noise is coming from";
+		now description entry is "Keep going until you find where the noise is coming from.";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -254,7 +269,7 @@ to say LittleShroom:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
+			say "[title entry]: [description entry]";
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
@@ -266,25 +281,22 @@ to say LittleShroom:
 					say "[ChineseTrouble]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "You give up on your curiosity and go back home";
-			if player consents:
-				now sextablerun is 1;
-				say "     You give up and go back the way you came. It's not worth it";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You give up and go back the way you came. It's not worth it";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
 
 to say ChineseSupplies:
-	say "     You dash over to the other side of the kitchen, not really caring about the decor around you while still doing your best to not wake up the sleeping dog. Soon, you get to the pile of food cans - a small mountain from your viewpoint - next to what appears to be a pantry that was forced open and ransacked. The outbreak of the nanite apocalypse sure left this building and its interior in a shambles. Inside the pantry, there are various pieces of food tossed to the floor, mostly vegetables and some bread, all of it spoiled and stale. Whoever did this was in a hurry or just didn't care about anything not to their taste, a shortsighted view, given the food shortage for survivors these days.";
+	say "     You dash over to the other side of the kitchen, not really caring about the décor around you while still doing your best to not wake up the sleeping dog. Soon, you get to the pile of food cans - a small mountain from your viewpoint - next to what appears to be a pantry that was forced open and ransacked. The outbreak of the nanite apocalypse sure left this building and its interior in a shambles. Inside the pantry, there are various pieces of food tossed to the floor, mostly vegetables and some bread, all of it spoiled and stale. Whoever did this was in a hurry or just didn't care about anything not to their taste, a shortsighted view, given the food shortage for survivors these days.";
 	say "     Dragging two of the cans that are free of dents and damage out of the pile, you turn them on their side, careful to not let them hit the floor and make noise, and then roll them towards the hole you used as your entrance. This voyage would be done in a heartbeat at your normal size, but at this miniature scale, it almost seems like a pilgrimage. Cracks in the floor and pieces of the ceiling that fell down and litter the floor create hazards which you have to be mindful of. But as cautious as you were, the can on the right bounces on a rock in your way at some point, creating a clatter of noise.";
 	WaitLineBreak;
 	say "     Wary about the sleeping husky on her mattress, you are quick to run and find a cupboard to hide behind. From there, you lock your gaze on the husky at the other end of the room. The dog squirms a little and opens her eyes just a bit, yawning. Her large mouth is big enough to swallow you up in one gulp, and it shows an impressive array of sharp, intimidating teeth, as well as a very long tongue curling down a bit at the end. Her gaze roams over the room and seeing nothing out of the ordinary due to the already-present mess, she soon gives in to her tiredness again. Stretching out on the mattress this time, which puts her colossal boobies in a very nice display for your miniature self, she goes back to sleep.";
 	say "     Breathing a sigh of relief, you go back to your cans, rolling them on towards the exit and getting there without any further trouble. After pushing them out of the hole to add to your pile of gear, you wait a while until you finally feel yourself growing. Quickly getting dressed again, you put the two cans into your backpack and get ready for more adventures out in the city.";
 	say "[bold type]You gain 2 food![roman type][line break]";
 	increase carried of food by 2;
+	now Resolution of Little Trouble is 4; [shrunk, stole supplies]
 
 to say ChineseUB:
 	say "     Those lips are calling you, and it's not her mouth. You carefully walk up to the sleeping husky girl, making sure not to make noise so she won't wake until you finish your business with her. Soon standing between her strong digitigrade legs with their gray fur, you can't help but think that they look especially beautiful from this viewpoint and size. Such a strong woman makes you even hornier about what you are gonna do next. Impatiently dashing forward into the narrow canyon between her spread legs, you finally reach your destination a moment later.";
@@ -292,10 +304,10 @@ to say ChineseUB:
 	WaitLineBreak;
 	say "     Slowly pulling her nether lips apart, you can see two holes that you could penetrate if you wanted to right now. ";
 	if wslevel > 2: [more WS selected]
-		say "     Grinning from ear to ear, you touch her urethra, just prodding to see how the dame reacts to the stimuli. She squirms for a bit, but it doesn't look like this will wake her up either - so it's time to have some fun. Pushing your arm inside her urethra, you gently prod and even lightly pinch her insides, making the anthro dog squirm and tremble, giving you a hint on what is to come.";
+		say "Grinning from ear to ear, you touch her urethra, just prodding to see how the dame reacts to the stimuli. She squirms for a bit, but it doesn't look like this will wake her up either - so it's time to have some fun. Pushing your arm inside her urethra, you gently prod and even lightly pinch her insides, making the anthro dog squirm and tremble, giving you a hint on what is to come.";
 		say "     You feel the liquid starting to push your arm out of the hole, the golden flow almost scalding hot at your size and making your arm burn for a bit before you are flung out of her pee hole with a spurt of the liquid. Soon, your whole body is drenched in her urine, the acrid taste spilling in your mouth and the pungent smell filling your lungs. The golden rain goes on for a bit, showering your prone form in her piss. When it finally stops and you start to wipe the liquid from your eyes, you realize that the girl is not sleeping anymore. She stares down at you in the pool of her urine, then reaches out to snatch you up in her paw.";
 	else: [going for the pussy]
-		say "     You go right to her snatch, pushing your whole arm inside of her once more, this time on purpose. If you were your normal size, this fisting would be hard on her, but at this scale, she barely reacts to it a second time, even as you wiggle your arm around a bit inside her. Defiant about not being able to affect her that much after all, you step up to the challenge and start to climb up, wanting to enter her pussy with your whole naked body. But it isn't actually that easy to do. Surrounded by her slick, fleshy folds, you barely have anything to hold onto to pull yourself in. After a futile try or two, you eventually end up taking a running leap to jump into her opening head first, then work your way deeper, wiggling against her inner walls.";
+		say "You go right to her snatch, pushing your whole arm inside of her once more, this time on purpose. If you were your normal size, this fisting would be hard on her, but at this scale, she barely reacts to it a second time, even as you wiggle your arm around a bit inside her. Defiant about not being able to affect her that much after all, you step up to the challenge and start to climb up, wanting to enter her pussy with your whole naked body. But it isn't actually that easy to do. Surrounded by her slick, fleshy folds, you barely have anything to hold onto to pull yourself in. After a futile attempt or two, you eventually end up taking a running leap to jump into her opening head first, then work your way deeper, wiggling against her inner walls.";
 		say "     This is actually quite a bit of fun, slippery warmth rubbing against your naked body from all sides. Soon, your front half is in what feels like a little bit of a larger space. Blinking a few times, you realize that you can actually see a little bit in here too. Do those shrooms have a side effect of enabling you to see in the dark? No matter what or how, you are able to make out the enclosed space of her vagina around you with the inner ring of her cervix further up and back. That'll be a difficult, but definitely fun, climb. While you are already mapping out the best route to take, your legs, which are still sticking out between the husky's folds, are suddenly grasped and pulled upon. In one quick pull, you're out of the comfy enclosure once more and in the anthro canine's paw.";
 	WaitLineBreak;
 	say "     Locked in her paw now and with the size and strength of a mouse, you probably won't escape her easily. 'So cute,' your husky captor says as she keeps looking at you. 'Aren't you a pleasant surprise to find?' She giggles as she touches, prods, and squeezes you in every way possible. Then eventually, a meaningful smile spreads over her muzzle. 'You should finish what you started.' Opening her legs again and spreading her feminine folds apart with two fingers, she pushes you against them with some urgency. 'Go on. Make me cum, or else you will be my snack!'";
@@ -310,6 +322,7 @@ to say ChineseUB:
 	infect "Female Husky";
 	say "     But despite what you may have wanted, at one point, the walls suddenly tremble and contract in a concerted way, sending you on a slippery slide towards her cervix, which opens just far enough to allow your exceptionally well-lubed body to slip through. Following the incline of her pussy, you arrive at the husky's folds a few heartbeats later and find yourself 'birthed', flopping wetly onto the mattress in the cruel outside world. Panting hard, you breathe in the fresh air of the room, and the all-encompassing aroma of her heat starts to leave you, not that you actually want that in this moment as you stagger to your feet and try to plunge into her depths once more.";
 	say "     But no, the satisfied husky blocks your path with her hand, nudging you away with a firm push. 'That was fun, but you gotta let mommy rest,' she sighs out in a somewhat sleepy tone, sinking back to lean against the wall once more. A moment later, you come back to your senses more or less and start to dash towards the entrance hole to get back to your normal life after this extraordinary experience. With one last glance over your shoulder, you see the husky waving her 'child' goodbye, then doze off again. Breathing a sigh of relief as you step outside of the building and see your pile of gear still undisturbed, you wait a while until you finally feel yourself growing. Quickly getting dressed again, you get ready for more adventures out in the city.";
+	now Resolution of Little Trouble is 5; [shrunk, UB'd]
 
 to say ChineseTrouble:
 	say "     Looking around, you soon discover the source of that noise when you slip through the five inch gap between the leaned-to door and its frame. Now, you're in the main room of what must have been some sort of restaurant before, filled with lots of tables and chairs. The wall that separated this place from the house next door has partially collapsed, creating a crude connection between the buildings. The other room looks like it belongs to a love hotel, with a pinkish pattern on the furniture and wallpaper. Above a round bed in the middle of the room, an intact mirror is attached to the ceiling, completing the impression of having stumbled into a porn movie. The scene on top of that bed right now fits very well too.";
@@ -374,20 +387,16 @@ to say ChineseTrouble:
 						say "[AlphaDive]";
 					wait for any key;
 			else if calcnumber is 0:
-				say "Wait for your timely demise.";
-				if player consents:
-					now sextablerun is 1;
-					say "     Giving up on the idea of leaving this, you wait for your death, which comes in due time.";
-					now battleground is "void";
-					now tailname of player is "dead";
-					now facename of player is "dead";
-					now skinname of player is "dead";
-					now bodyname of player is "dead";
-					now cockname of player is "dead";
-					end the story saying "You were eaten alive!";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     Giving up on the idea of leaving this, you wait for your death, which comes in due time.";
+				now battleground is "void";
+				now tailname of player is "dead";
+				now facename of player is "dead";
+				now skinname of player is "dead";
+				now bodyname of player is "dead";
+				now cockname of player is "dead";
+				end the story saying "You were eaten alive!";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -430,20 +439,16 @@ to say ChineseTrouble:
 						say "[BitchDive]";
 					wait for any key;
 			else if calcnumber is 0:
-				say "It's hopeless anyway, just wait for your end.";
-				if player consents:
-					now sextablerun is 1;
-					say "     Giving up on any hope of survival, you sit down, breathing the polluted air and being squished by her muscles from the inside of her stomach. The end will take just a few more moments...";
-					now battleground is "void";
-					now tailname of player is "dead";
-					now facename of player is "dead";
-					now skinname of player is "dead";
-					now bodyname of player is "dead";
-					now cockname of player is "dead";
-					end the story saying "You were eaten alive!";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     Giving up on any hope of survival, you sit down, breathing the polluted air and being squished by her muscles from the inside of her stomach. The end will take just a few more moments...";
+				now battleground is "void";
+				now tailname of player is "dead";
+				now facename of player is "dead";
+				now skinname of player is "dead";
+				now bodyname of player is "dead";
+				now cockname of player is "dead";
+				end the story saying "You were eaten alive!";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -462,6 +467,7 @@ to say AlphaKick:
 	else:
 		say "     With a huge windup, you kick him with all the strength you have left, making your surroundings shake a bit, then a lot! Suddenly, everything shifts on its side, and you are thrown about, then violently ejected back the way you came in. After another voyage through the gullet of the husky, you fall onto the ground in a wash of vomit. Looks like your well-aimed hit made him throw up! With the predator on all fours, retching violently, you have just enough time to get your own bearings and run into the other room.";
 		say "     It doesn't take long before he comes hunting for you in a wild rage, but the chaos in the ransacked kitchen and his impatience allows you to hide in between the rubble, trash, and cracks in the floor, eventually making it safely to the hole you entered the building through. With the beastly husky still shouting angrily to his bitches to find his escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Best not to remain here for too much longer, as he might find the hole and come around the building, so you quickly snatch up your stuff and run away naked, only stopping to get dressed when you're several blocks away.";
+		now Resolution of Little Trouble is 6; [shrunk, eaten by alpha, kicked the way out]
 		now little trouble is resolved;
 
 to say AlphaClimb:
@@ -479,6 +485,7 @@ to say AlphaClimb:
 	else:
 		say "     Well, it's worth a try at least. You try your best to hang onto something, anything. The dog's stomach starts compressing, heralding the beginning of digestion. You scream in desperation, and you finally manage to hold on to something and pull yourself a bit further up. With newfound determination after that first success, you work at pulling yourself up, just in time before the rising level of acid burns the soles of your feet. It is hard work, but you are getting out of here! Feeling something crawling up his gullet can't be comfortable for the husky either, and before long, the tickling sensation in his insides makes him throw up! Being violently ejected on a tide of rising vomit, you fall onto the ground in a foul-smelling wash of his stomach contents. With the predator on all fours, retching violently, you have just enough time to get your own bearings and run into the other room.";
 		say "     It doesn't take long before he comes hunting for you in a wild rage, but the chaos in the ransacked kitchen and his impatience allows you to hide in between the rubble, trash, and cracks in the floor, eventually making it safely to the hole you entered the building through. With the beastly husky still shouting angrily to his bitches to find his escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Best not to remain here for too much longer, as he might find the hole and come around the building, so you quickly snatch up your stuff and run away naked, only stopping to get dressed when you're several blocks away.";
+		now Resolution of Little Trouble is 7; [shrunk, eaten by alpha, climbed the way out]
 		now little trouble is resolved;
 
 to say AlphaDive:
@@ -494,6 +501,7 @@ to say AlphaDive:
 		end the story saying "You were eaten alive!";
 	else:
 		say "     You jump in the acid, ignoring all the warnings in your brain saying otherwise. It burns a lot, but you continue doing your best to speed up your passage through his digestive system until you are finally 'birthed' through his tight asshole. When you fall down, you have a small window to escape your 'parent' before he realizes what is going on. Luckily, he is busy fucking his bitch again, and so, you are able to reach your point of entrance before being caught once more. With the beastly husky still shouting angrily to his bitches to find his escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Soon, you're back to your original size and get dressed again, then get out of the area at a run.";
+		now Resolution of Little Trouble is 8; [shrunk, eaten by alpha, anal way out]
 		now little trouble is resolved;
 
 to say BitchClimb:
@@ -511,6 +519,7 @@ to say BitchClimb:
 	else:
 		say "     Looking at the hole you just went through, the realization strikes your mind. There are only two places connected to where you are now, up and down. And you don't think you will survive the rest of the way down anyway, so your only option is trying to go back from where you came. Getting back on your feet, you throw your hands up, trying you best to grab at anything at all. Your first attempt is met with failure, but on the second try, you manage to hold onto something. No time to figure out how you are climbing. If you want to survive this you have to continue. Pushing aside her flesh to make your way proves harder than any place you climbed combined with any hole you crawled inside.";
 		say "     Your body is still slippery with the cum and the fluids from the bitch, causing you to slide. Until you feel her muscles pushing you up with extreme strength. Soon, you are met with some of her digestive fluids and thrown out of her mouth while she gasps for air from the way you escaped. The male dog sees you in the pile of bile, but you quickly get back on your feet and run into a crack in the wall next to you. The male husky chases you for a while, almost hitting the wall as you enter the hole. Hearing growls and shouts, you keep running where you can. His arm is pushed inside the gap in the wall with you, but it's slow enough that you can outrun it with ease. Finally on the other side of the way you took, luck smiles upon you as you can see the sky again and near you is your stuff. Now, you just need to wait for the effects of the shrinking shrooms to end, and you can go back to your life on the city.";
+		now Resolution of Little Trouble is 9; [shrunk, eaten by bitch, climbed out]
 		now little trouble is resolved;
 
 to say BitchDive:
@@ -526,6 +535,7 @@ to say BitchDive:
 		end the story saying "You were eaten alive!";
 	else:
 		say "     You jump in the acid, ignoring all of the warnings in your brain saying otherwise. It burns a lot, but you continue doing your best to speed up your passage through her digestive system until you are finally 'birthed' through her tight asshole. When you fall down, you have a small window to escape your 'parent' before she realizes what is going on. Luckily, she is busy being pounded by her master, and so, you are able to reach your point of entrance before being caught once more. With the beastly husky still shouting angrily to his bitches to find the escaped snack, you lean against the outer wall in exhaustion and wait for the shrinking mushroom to wear off. Soon, you're back to your original size and get dressed again, then get out of the area at a run.";
+		now Resolution of Little Trouble is 10; [shrunk, eaten by bitch, anal way out]
 		now little trouble is resolved;
 
 Shrinking Shrooms ends here.

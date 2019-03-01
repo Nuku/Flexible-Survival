@@ -18,7 +18,7 @@ Section 1 - Monster Description
 
 to say bluechaffinchdesc:
 	setmongender 3; [creature is male]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of player:
@@ -32,9 +32,9 @@ to say bluechaffinchdesc:
 Section 2 - Player Loss
 
 to say losetobluechaffinch:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now nobluechaffinchsex is 0;
-	say "     [if HP of player > 0]Giving in[else]Having lost[end if] to the blue songbird, you drop to your knees in front of him. He struts around arrogantly and chirps a happy song before moving towards you with an obvious swagger. ";
+	say "     [if HP of player > 0]Giving in[else]Having lost[end if] to the blue songbird, you drop to your knees in front of him. He struts around arrogantly and chirps a happy song before moving towards you with an obvious swagger.";
 	if player is female:
 		say "     The victorious male pushes you over roughly and gets his stiff cock lined up with your pussy with little preamble. His taloned hangs grip your [if scalevalue of player > 4]hips[else if scalevalue of player is 4]sides[else]shoulders[end if] and pulls you back onto his avian rod. The slick, tapered cock pushes into you easily, causing you to moan in pleasure despite yourself. Soon the feathered fellow is drilling into you, chirping occasionally as he does.";
 		say "     You grow increasingly aroused as the mating continues, his soft feathers rubbing against your hips, thighs and pussy lips as he thrusts into you[if HP of player > 0]. As you're not resisting his advances[else]. As you're no longer resisting his advances[end if], he lets his taloned hands roam over your [bodytype of player] body and leans gently overtop you, letting his fluffy chest rub against your back. Between the soft feathers rubbing against you and the hard cock pumping inside you until finally you both cum loudly[if facename of player is name entry], your mating song joining in with his[else] with him chirping and moaning[end if] as his hot seed pumps into your cunt and flows into your womb.[ovichance]";
@@ -55,7 +55,7 @@ to say beatthebluechaffinch:
 		now formcheck is 1;
 	else if bodyname of player is listed in infections of Felinelist and facename of player is listed in infections of Felinelist:
 		now formcheck is 2;
-	say "     Your final blow sends the blue chaffinch stumbling backwards. '[one of]You haven't seen the last of me, buddy[or]Oh, I'm so going to kick your ass next time, bub[or]I'm just tired from all this flying. Just wait until I find you next time[at random],' he chirps [if player is male and formcheck > 0 and bluechaffrape is 3 and inasituation is false]while raising his tail and shaking his rear quickly, as if to tantalize you with that ass you've fucked and filled before[else]angrily before turning and running[end if]. After his first couple of steps, he unfurls his wings and starts flapping to make his escape. ";
+	say "     Your final blow sends the blue chaffinch stumbling backwards. '[one of]You haven't seen the last of me, buddy[or]Oh, I'm so going to kick your ass next time, bub[or]I'm just tired from all this flying. Just wait until I find you next time[at random],' he chirps [if player is male and formcheck > 0 and bluechaffrape is 3 and inasituation is false]while raising his tail and shaking his rear quickly, as if to tantalize you with that ass you've fucked and filled before[else]angrily before turning and running[end if]. After his first couple of steps, he unfurls his wings and starts flapping to make his escape.";
 	if player is male and formcheck is 1:	[avian pred]
 		if nobluechaffinchsex > 2:
 			if facename of player is "Fluffy Owl":
@@ -94,7 +94,7 @@ to say beatthebluechaffinch:
 Part 2 - Avian Pred Victory
 
 to say bluecf_catching:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Letting your anger and instincts take control, you continue the pursuit. Noticing you coming, the blue songbird runs and flaps all the harder, staring to take to the air. Unwilling to let him get away, you flap as well, your predatory instincts driving you to fly after him.";
 	let bonus be ( dexterity of player / 2 ) + level of player + bluechaffrape - 5;
 	if bluechaffrape is 3, increase bonus by 3;
@@ -132,7 +132,7 @@ to say bluecf_ap_sex:
 		increase morale of player by 1;
 
 to say bluechaffcaught:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "This time catching the escaping passerine seems easier than before, your prey not flying off as quickly as he previously has and you're able to grab him by both legs. He flaps as hard as he can to support you both, but your added weight carries him back down to ground. Holding onto him tightly, you grin down at your pretty blue prize.";
 	say "     Keeping your grip on both legs, you spread them apart and put his feathery backside on display for you. Spindly legs and ivory ass in the air and shoulders and head on the ground, he makes a very inviting sight. He blushes and squirms a little as you pull him inexorably closer to your hard cock, which his eyes remain locked onto. Grinning, you press your [cock size desc of player] [cock of player] shaft against his now loosened hole and tease against it. 'I know you want it, little morsel. Beg for it and I'll give it to you,' you say firmly.";
 	WaitLineBreak;
@@ -150,13 +150,13 @@ to say bluechaffcaught:
 		now icarus_lastpred is 1;
 	else:
 		say "     Laughing, you give his ass a slap. Why would you want to keep him now that the fun of breaking him is over, you ask. He blushes at this and clutches at your leg, but you push him away, telling him that surely one of the big felines around would love to sink their claws into the songbird, if that's all he wants. His shoulders sag and he struggles to his feet, limping away slowly. You smile to yourself; it seems that's finally over with.";
-	now area entry is "nowhere";
+	now area entry is "Nowhere";
 
 
 Part 3 - Feline Victory
 
 to say bluecf_pouncing:	[feline]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Letting your anger and instincts take control, you continue the pursuit, running after him on all fours. Noticing you coming, the blue songbird runs and flaps all the harder, staring to take to the air. Unwilling to let him get away, you leap onto a nearby [one of]bench[or]building[or]tree[at random], your feline instincts driving you to pounce the bird.";
 	let bonus be ( dexterity of player / 2 ) + level of player + bluechaffrape - 5;
 	if bluechaffrape is 3, increase bonus by 3;
@@ -172,8 +172,8 @@ to say bluecf_pouncing:	[feline]
 		say "You don't quite manage to grab him, your outstretched paw barely brushing the tip of his tail. Having missed your grab, you drop down onto the ground on all fours. He gives a quick croaking song and chuckles as he makes a slow loop in the sky, mocking you a little longer before flying off.";
 
 to say bluecf_fel_sex:
-	say "You don't quite manage to pounce him, but your outstretched paw grabs onto a handful of tailfeathers. The passarine gives a pained cry as his feathers are pulled sharply. They manage to hold and, unable to support your added weight, you both drop back to the ground. He flaps wildly, but it's too late, you've got him [if bluechaffrape > 0]again [end if]and you intend to have some fun with your pretty prize.";
-	say "     Pinning the songbird down, you give a harsh snarl that sends a shiver through your prey that excites you. Quite hard from the chase, you push aside his crumpled tailfeathers and shove your cock underneath it. Taking the nape of his neck in your jaws, you grip him roughly and drive your [cock size desc of player] [cock of player] shaft into him. He gives a very refreshing warble at being roughly taken, making the corners of your muzzlek turn up in a smile[if cock length of player > 30]. Your pulsing rod throbs inside the little guy, stuffing him so delightfully full that you can see a big bulge of ruffled feathers from your oversized phallus plowing into him[else if cock length of player > 20]. Your pulsing rod throbs inside the little guy, stuffing him so full that you can see a small bulge of puffed feathers from your enlarged phallus inside him[end if].";
+	say "You don't quite manage to pounce him, but your outstretched paw grabs onto a handful of tailfeathers. The passerine gives a pained cry as his feathers are pulled sharply. They manage to hold and, unable to support your added weight, you both drop back to the ground. He flaps wildly, but it's too late, you've got him [if bluechaffrape > 0]again [end if]and you intend to have some fun with your pretty prize.";
+	say "     Pinning the songbird down, you give a harsh snarl that sends a shiver through your prey that excites you. Quite hard from the chase, you push aside his crumpled tailfeathers and shove your cock underneath it. Taking the nape of his neck in your jaws, you grip him roughly and drive your [cock size desc of player] [cock of player] shaft into him. He gives a very refreshing warble at being roughly taken, making the corners of your muzzle turn up in a smile[if cock length of player > 30]. Your pulsing rod throbs inside the little guy, stuffing him so delightfully full that you can see a big bulge of ruffled feathers from your oversized phallus plowing into him[else if cock length of player > 20]. Your pulsing rod throbs inside the little guy, stuffing him so full that you can see a small bulge of puffed feathers from your enlarged phallus inside him[end if].";
 	WaitLineBreak;
 	if bluechaffrape < 2:
 		say "     He moans and squirms, though half in resistance and half in submission to the powerful predator atop him. Reaching around, you find his stiff cock and chuckle, rubbing lightly over it. He blushes and claws at the ground, but his hips press back into your thrusts all the more, some part of him very excited by you fucking him. The feel of his tight, squeezing body around your shaft as well as his conflicted response is all very exciting for the instincts you've unleashed. Eventually it all becomes too much and you grip him tightly with your hands and give a snarling cry as you cum hard into your prey. He groans loudly and his ass clenches down around you, cock throbbing and spurting his seed onto the ground even as you're filling him[if cock width of player > 35]. Your [cum load size of player] load leaves the poor songbird so bloated and full of your cum that some leaks out of his beak. His body left amusingly rounded like a feathery balloon, making you chuckle as you pull out. He gives a weak chirp as your hot cum pours of his stretched and stuffed ass, slowly deflating[else if cock width of player > 25]. Your [cum load size of player] load leaves the poor songbird amusingly rounded like a feathery balloon. When you pull out, he gives a weak chirp as hot cum pours of his stretched and stuffed ass, slowly deflating[else if cock width of player > 15]. Your [cum load size of player] load leaves the poor songbird somewhat chubbier looking than before, his belly stuffed quite full with your seed. When you pull out, he gives a weak chirp as hot cum leaks from his stretched and stuffed ass[else]. He gives a weak chirp when you pull out, hot cum leaking from his stretched and creamy ass[end if]. He weakly mumbles something about getting you next time, but you just push his beak shut with your paw, your claws tapping across his cheek as an added reminder of who's predator and who's prey before striding off. You can't help but feel stronger for your conquest.";
@@ -194,7 +194,7 @@ to say bluecf_fel_sex:
 		increase morale of player by 1;
 
 to say bluechaffpounced:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "This time catching the escaping passerine seems easier than before, your prey not flying off as quickly as he previously has and you're able to land right atop him. With you on his back, he can't even flap his wings and your added weight pulls the two of you down as he glides to a rough landing. Holding onto him tightly, you grin down at your pretty blue prize.";
 	say "     Grabbing him by both legs, you spread them apart and put his feathery backside on display for you. Spindly legs and ivory ass in the air and shoulders and head on the ground, he makes a very inviting sight. He blushes and squirms a little as you pull him inexorably closer to your hard cock, which his eyes remain locked onto. Grinning, you press your [cock size desc of player] [cock of player] shaft against his now loosened hole and tease against it. 'I know you want it, little morsel. Beg for it and I'll give it to you,' you growl firmly.";
 	WaitLineBreak;
@@ -212,17 +212,17 @@ to say bluechaffpounced:
 		now icarus_lastpred is 2;
 	else:
 		say "     Laughing, you give his ass a slap. Why would you want to keep him now that the fun of breaking him is over, you ask. He blushes at this and clutches at your leg, but you push him away, telling him that surely one of other the big felines around would love to sink their claws into the songbird, if that's all he wants. His shoulders sag and he struggles to his feet, limping away slowly. You smile to yourself; it seems that's finally over with.";
-	now area entry is "nowhere";
+	now area entry is "Nowhere";
 
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Blue Chaffinch"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -270,8 +270,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings

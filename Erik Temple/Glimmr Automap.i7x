@@ -110,7 +110,7 @@ Chapter - The map-display window kind
 
 A map-display window is a kind of graphlink g-window.
 
-The map viewport is a g-window that varies. [if the author doesn't explicitly name the map viewport, we will automatically select a map-display window to be the viewport when play begins. In most cases, this will be the only existing map-display window.]
+The map viewport is a g-window that varies.[@Tag:NotSaved] [if the author doesn't explicitly name the map viewport, we will automatically select a map-display window to be the viewport when play begins. In most cases, this will be the only existing map-display window.]
 
 [The author may provide a maximum map size to use. This refers to the number of *tiles* to be displayed, not the maximum number of pixels, and can be used to restrict the size of the map for either performance or aesthetic reasons. For example, a fixed map size combined with a restricted number of available zoom levels can make it easier to predict the output size of the map.]
 A map-display window has a number called the maximum map width. The maximum map width of a map-display window is usually 0.
@@ -564,7 +564,7 @@ Chapter - Debugging (not for release)
 Dumping automap data is an action out of world applying to nothing. Understand "automap dump" or "dump map" or "dump automap" as dumping automap data. Understand "map dump" as dumping automap data when glulx graphics is supported.
 
 Carry out dumping automap data:
-	say "Map measures [map width] by [map height], totalling [map height * map width] tiles.[line break]Window measures [width of the assigned window of the map-renderer] x [height of the assigned window of the map-renderer] px.[line break]Scaled tile measures [tile-width of associated tileset of the map-renderer * arbitrary scaling factor of the assigned window of the map-renderer] x [tile-height of associated tileset of the map-renderer * arbitrary scaling factor of the assigned window of the map-renderer] px.[line break]Canvas measures [canvas-width of the associated canvas of the map-renderer] x [canvas-height of the associated canvas of the map-renderer] canvas units.";
+	say "Map measures [map width] by [map height], totaling [map height * map width] tiles.[line break]Window measures [width of the assigned window of the map-renderer] x [height of the assigned window of the map-renderer] px.[line break]Scaled tile measures [tile-width of associated tileset of the map-renderer * arbitrary scaling factor of the assigned window of the map-renderer] x [tile-height of associated tileset of the map-renderer * arbitrary scaling factor of the assigned window of the map-renderer] px.[line break]Canvas measures [canvas-width of the associated canvas of the map-renderer] x [canvas-height of the associated canvas of the map-renderer] canvas units.";
 	say "Dump of automap data:[paragraph break][fixed letter spacing]";
 	let scan be 0;
 	repeat with count running from 1 to (map width * map height):
@@ -585,7 +585,7 @@ Carry out dumping automap data:
 Dumping automap links is an action out of world applying to nothing. Understand "automap link/links dump" or "dump links" or "dump map links" or "dump automap links" as dumping automap links. Understand "map link dump" as dumping automap links when glulx graphics is supported.
 
 Carry out dumping automap links:
-	say "Map measures [map width] by [map height], totalling [map height * map width] tiles.[line break]Window measures [width of the assigned window of the map-renderer] x [height of the assigned window of the map-renderer] px.[line break]Scaled tile measures [tile-width of associated tileset of the map-renderer * arbitrary scaling factor of the assigned window of the map-renderer] x [tile-height of associated tileset of the map-renderer * arbitrary scaling factor of the assigned window of the map-renderer] px.[line break]Canvas measures [canvas-width of the associated canvas of the map-renderer] x [canvas-height of the associated canvas of the map-renderer] canvas units.";
+	say "Map measures [map width] by [map height], totaling [map height * map width] tiles.[line break]Window measures [width of the assigned window of the map-renderer] x [height of the assigned window of the map-renderer] px.[line break]Scaled tile measures [tile-width of associated tileset of the map-renderer * arbitrary scaling factor of the assigned window of the map-renderer] x [tile-height of associated tileset of the map-renderer * arbitrary scaling factor of the assigned window of the map-renderer] px.[line break]Canvas measures [canvas-width of the associated canvas of the map-renderer] x [canvas-height of the associated canvas of the map-renderer] canvas units.";
 	say "Dump of automap hyperlink data:[paragraph break][fixed letter spacing]";
 	let scan be 0;
 	repeat with count running from 1 to (map width * map height):
@@ -638,7 +638,7 @@ Some UI-buttons are defined by the Table of Map Buttons.
 
 [The UI-layer is a global variable holding the layer number on which the buttons should be placed. It should generally be at least 2 layers higher than the map layer. If no display-layer is explicitly set for the UI-frame, it will be placed one level beneath the UI-layer.]
 
-The UI-layer is a number that varies. The UI-layer is usually 4.
+The UI-layer is a number that varies.[@Tag:NotSaved] The UI-layer is usually 4.
 
 
 Table of Map Buttons

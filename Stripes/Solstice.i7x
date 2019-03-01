@@ -13,16 +13,19 @@ Version 2 of Solstice by Stripes begins here.
 
 Section 1 - Treasure Hunting
 
-Adventurer is a situation. The level of Adventurer is 5.
-The sarea of Adventurer is "Outside".
-Adventurer is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Fox Adventurer	"Fox Adventurer"
+
+Fox Adventurer is a situation. The level of Fox Adventurer is 5.
+The sarea of Fox Adventurer is "Outside".
 
 when play begins:
-	add Adventurer to badspots of girl;
-	add Adventurer to badspots of hermaphrodite;
-	add Adventurer to badspots of furry;
+	add Fox Adventurer to badspots of girl;
+	add Fox Adventurer to badspots of hermaphrodite;
+	add Fox Adventurer to badspots of furry;
 
-Instead of resolving Adventurer:
+Instead of resolving Fox Adventurer:
 	if HP of Solstice is 0:
 		say "     Traveling the city streets, you take a moment to glance behind you and, as you return your eyes to your path, you find it blocked by another figure. Before you is a female silver fox with several fluffy tails. She's dressed rather more unusually than most others you've met. Her red, sleeveless top is tight over her breasts and she has a pair of khaki shorts with some pouches belted to it. She has a pair of goggles on her head, worn resting above her brow. Slung over her back is a backpack. Her appearance, save for her sexy, vulpine nature would lead you to imagine her as a character in an adventure movie or video game, perhaps raiding tombs or hunting relics. Aside from her paw resting on the machete strapped to her hip, she doesn't seem aggressive.";
 		WaitLineBreak;
@@ -31,10 +34,9 @@ Instead of resolving Adventurer:
 		WaitLineBreak;
 		say "     You find yourself wondering what she would have done had the outbreak not occurred, but have no time to ask as she presses onwards. 'And that's where you come in. You seem chummy enough with her that she'll let you roam around the museum. I want you to go in and get the Onyx Crow's head for me. It's incorrectly housed in the Greek Artifacts wing, though it's actually of Scythian origin.' Seeing your lack of recognition in your eyes, she just rolls hers. 'Look, it's a carved crow's head made of black stone with some gold on it. It's about the size of baseball. Simple enough?";
 		say "     'Once you've got it, just find your way back here and I'll trade you some supplies for it.' With a swish of her hips and numerous tails, she grins. 'And maybe throw in a special reward, too.' With that, she runs off into an alley, disappearing and quickly as she came. You find yourself thinking about her offer, wondering if it's time to make a trip back to the museum.";
-		now Adventurer is resolved;
-		now Onyx Crow is unresolved;
+		now Resolution of Fox Adventurer is 1; [first meeting done]
 		now HP of Solstice is 1;
-	else if HP of Solstice is 2:
+	else:
 		say "     Managing to find your way through the chaos of the city, you make your way back to the intersection where you first met the vulpine adventurer. True to her word, she steps out from one of the alleyways as you arrive. 'Did you get it?' she asks quickly";
 		if Crow Artifact is owned:
 			say ". Nodding, you slip off your pack and remove the carving. She smiles happily and snatches it out of your hand, looking it over with a critical eye. 'Yes! I've got it all. I've finally struck it big this time!' she says with elation in her voice. She puts a paw over her mouth, suddenly wary that her raised voice will call undo attention. Grabbing your wrist, she leads you between a few buildings. 'You can call me Solstice by the way. I've been in the treasure hunting biz for a while, but this'll be my best find yet, thanks to you.' She slips into a small, vacant shop and shuts the boarded up door behind you. It looks like it was closed down long before the outbreak, making it a fairly safe place to hide out.";
@@ -64,7 +66,8 @@ Instead of resolving Adventurer:
 				WaitLineBreak;
 				say "     After some pleasant snuggling, you both get off the bedroll and carefully pack up the separate pieces of the statuary in bundles of cloth. While Solstice doesn't have plans to put it back together, you both certainly agree that you can't just leave it lying around for someone else to find and reassemble. Before you head out, she gives you another kiss and a pat on the behind, saying she'll see you again soon. It's not until you're well on your way that you remember that you never got those supplies from her. Though you can't say that you were displeased with the reward you ended up receiving instead even as you feel her infection starting to spread into you.";
 				vulpogryphinfect;
-				now Adventurer is resolved;
+				now Resolution of Adventurer is 2; [had sex with Solstice]
+				now Fox Adventurer is resolved;
 				now HP of Solstice is 4;
 				now lastfuck of Solstice is turns;
 				increase score by 25;
@@ -78,19 +81,22 @@ Instead of resolving Adventurer:
 				WaitLineBreak;
 				say "     Before you head out, she gives you a big hug, folding her feathery wings around you. She runs her paws along your back, scritching under your backpack while kissing you. As she lets you go, she gives you a little nip with her beak on your neck. Solstice adds a pat on your behind, saying that she'll see you again soon. Walking off, you go a short distance before you feel a tingle start to spread through you. Feeling the encroaching change, you run your hands over your face and neck, looking for some fluid or break where the nanites might be affecting you, but can't find one. It's not until after the change has run its course that you find it, one of the vulpogryph's feathers having gotten stuck under your backpack.";
 				vulpogryphinfect;
-				now Adventurer is resolved;
+				now Resolution of Fox Adventurer is 3; [refused sex with Solstice]
+				now Fox Adventurer is resolved;
 				now HP of Solstice is 3;
 				now lastfuck of Solstice is turns;
 		else:
 			say ", but frowns as you shake your head, telling her you had to leave it somewhere. 'Look, there's no deal until you bring it to me.' She growls a little and grinds her teeth before disappearing back between the buildings.";
-	else:
-		say "     As you wander through the city, you spot the flash of silver tails at the edge of a rooftop. You rush up the building's fire escape, but by the time you make it there, the roof is empty.";
-		now Adventurer is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Onyx Crow	"Onyx Crow"
 
 Onyx Crow is a situation. The level of Onyx Crow is 5.
+Prereq1 of Onyx Crow is Fox Adventurer.
+Prereq1Resolution of Onyx Crow is { 1 }.
+Prereq1ResolvedMandatory of Onyx Crow is false.
 The sarea of Onyx Crow is "Museum".
-Onyx Crow is resolved.
 
 when play begins:
 	add Onyx Crow to badspots of girl;
@@ -110,8 +116,10 @@ Instead of resolving Onyx Crow:
 		challenge "Cerberus";
 		if cerbfight is 3:
 			say "     Fleeing the three-headed dog, you run from the wing and try to make your way back to the lobby. You'll have to recover and try coming back later. Maybe the dog will be gone by then, but you don't think you'll be that lucky.";
+			now Resolution of Onyx Crow is 3; [fled the cerberus]
 		else if cerbfight is 2:
 			say "     Having passed out after the lustful creature has had its way with you, you awake to find yourself ejected from the room. You are wet and sticky with canine slobber and the herm's juices, which you try your best to wipe off to remove the evidence of your fight with the guard before returning to the lobby. You'll have to recover and try returning there later. Perhaps you'll fare better next time, though part of you certainly enjoyed losing. You find yourself thinking it might just be more fun to keep losing to the creature.";
+			now Resolution of Onyx Crow is 2; [lost to cerberus]
 		else if cerbfight is 1:
 			say "     Having beaten the guard, you are now free to advance upon the case. Looking it over, you can see that it does indeed hold the Onyx Crow. It is a crow's head carved from a glossy, black stone. The detail is a little rough, but there is an ornate band of gold around its base as well as golden eyes. There are also thin traces of gold that run down the back of its had, forming a stylized pattern. It looks expensive enough, but there must be much more valuable pieces than this one.";
 			WaitLineBreak;
@@ -120,8 +128,8 @@ Instead of resolving Onyx Crow:
 			increase carried of Crow Artifact by 1;
 			increase score by 10;
 			now HP of Solstice is 2;
+			now Resolution of Onyx Crow is 1; [won and got the artifact]
 			now Onyx Crow is resolved;
-			now Adventurer is unresolved;
 
 
 Table of Game Objects (continued)
@@ -154,6 +162,10 @@ an everyturn rule:
 
 Section 2 - Solstice the Vulpogryph		[coming soon]
 
+Table of GameCharacterIDs (continued)
+object	name
+Solstice	"Solstice"
+
 Solstice is a woman.
 The description of Solstice is "[solsticedesc]".
 The conversation of Solstice is { "Treasure!" }.
@@ -166,7 +178,7 @@ the linkaction of Solstice is "Possible Actions: [link]talk[as]talk Solstice[end
 the scent of Solstice is "Solstice smells of dusty tombs and ancient secrets under a thick layer of arousal.".
 
 Instead of conversing Solstice:
-	say "[one of]'It's so nice being here with you, my sweety,' she rumbles, running a paw across your chest.[or]'We should spend more time together, hon.[or]'I'd love to tell you about my adventures. We could make a sexy [link]lesson[as]lesson Solstice[end link] out of them,' she says, nibbling your ear.[or][if player is fullyvg]'You make such a sexy vulpogryph, my dear. I knew you'd make a wonderful mate,' she purrs sensually as she runs her taloned paws over you.[else if player is partvg]'You will be such a sexy vulpogryph when I'm done, my dear. You'll be my perfect mate,' she purrs sensually as she runs her taloned paws over you.[else]'I think you'd look much better as a sexy vulpogryph like me, hon,' she purrs sensually as she runs her taloned paws over you.[end if][or]'Mmm... you should stay here with me, sexy. We could so much fun together.'[or]'I think I'd prefer to stay out here than in the bunker, if it's all the same with you.'[in random order]";
+	say "[one of]'It's so nice being here with you, my sweety,' she rumbles, running a paw across your chest.[or]'We should spend more time together, hon.[or]'I'd love to tell you about my adventures. We could make a sexy [link]lesson[as]lesson Solstice[end link] out of them,' she says, nibbling your ear.[or][if player is fullyvg]'You make such a sexy vulpogryph, my dear. I knew you'd make a wonderful mate,' [else if player is partvg]'You will be such a sexy vulpogryph when I'm done, my dear. You'll be my perfect mate,' [else]'I think you'd look much better as a sexy vulpogryph like me, hon,' [end if]she purrs sensually as she runs her taloned paws over you.[or]'Mmm... you should stay here with me, sexy. We could so much fun together.'[or]'I think I'd prefer to stay out here than in the bunker, if it's all the same with you.'[in random order]";
 
 
 Section 3 - Lesson Time

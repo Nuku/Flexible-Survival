@@ -16,9 +16,9 @@ gsd_slut is usually false.
 gsd_fled is a truth state that varies.		[tracks if player fled previous encounter w/special GSD.]
 gsd_fled is usually false.
 gsd_var is a number that varies.			[temporary variable for tracking between scenes.]
-gsd_attack is truth state that varies.		[registers if the player fought back or not against the special GSD.]
+gsd_attack is a truth state that varies.		[registers if the player fought back or not against the special GSD.]
 gsd_attack is usually false.
-gsd_male is truth state that varies.		[registers if the player is being trained to be a male packmate.]
+gsd_male is a truth state that varies.		[registers if the player is being trained to be a male packmate.]
 gsd_male is usually false.
 KorvinSubmitCounter is a number that varies.
 
@@ -38,7 +38,7 @@ Section 1 - Monster Description
 
 to say gsd_desc:
 	setmongender 3; [male]
-	choose row monster in Table of random critters;
+	choose row monster in Table of Random Critters;
 	now gsd_attack is false;
 	if gsd_male is true:
 		gsd_set_male;
@@ -90,12 +90,12 @@ to say gsd_desc:
 		if gsd_encounters < 3, now gsd_encounters is 3;
 		now gsd_fled is true; [marked as having fled, will clear on win/loss]
 	else:
-		say "     You're faced with a large, bipedal canine creature. Standing on digitigrade legs, the large canine sports the [one of]traditional brown and tan[or]subtle blue and tan[or]striking black and silver[at random] fur patterns. It's completely unclothed, which makes it QUITE clear that this is a [']He[']. He's got a furry canine sheath resting against his belly and a pair of golf ball-sized balls dangling beneath. He looks you over for a moment, tail starting to wag with increasing enthusiasm as he does. His cock also starts to poke free of its sheath as well, a warning as to what's on his doggified mind. The crazed canine [one of]lets out an rough growl. 'MMmmm... playtime.'[or][if player is female]swaggers towards you. 'Good. I was hoping to find a cunt to be my bitch[else]growls aggressively. 'I'm top dog around here. And I'll prove it[end if].'[or]pants with his tongue lolling out. 'Play!' he barks repeatedly as he rushes at you, fists raised and teeth bared - clearly willing to play rough.[or]cracks his knuckles before charging at you.[or]barks a few times before leaping at you.[or]growls aggressively as he stalks towards you.[at random]";
+		say "     You're faced with a large, bipedal canine creature. Standing on digitigrade legs, the large canine sports the [one of]traditional brown and tan[or]subtle blue and tan[or]striking black and silver[at random] fur patterns. It's completely unclothed, which makes it QUITE clear that this is a [']He[']. He's got a furry canine sheath resting against his belly and a pair of golf ball-sized balls dangling beneath. He looks you over for a moment, tail starting to wag with increasing enthusiasm as he does. His cock also starts to poke free of its sheath as well, a warning as to what's on his doggified mind. The crazed canine [one of]lets out a rough growl. 'Mmmmm... playtime.'[or][if player is female]swaggers towards you. 'Good. I was hoping to find a cunt to be my bitch[else]growls aggressively. 'I'm top dog around here. And I'll prove it[end if].'[or]pants with his tongue lolling out. 'Play!' he barks repeatedly as he rushes at you, fists raised and teeth bared - clearly willing to play rough.[or]cracks his knuckles before charging at you.[or]barks a few times before leaping at you.[or]growls aggressively as he stalks towards you.[at random]";
 		increase gsd_encounters by 1;
 		if gsd_encounters > 6, now gsd_encounters is 6;
 
 to say KorvinOrcFight:
-	say "     During your exploration you once more run across your Alpha, the [bold type]scarred[roman type] German Shepard. Quite instantly you drop onto all fours, an action that appears to please the male very much so. When he reaches you he places his paw to your head and rubs it, a feeling that you relish very much so. 'My good little [if player is female]bitch[else]pup[end if] is rather eager to see me, aren't you?' he says, you bobbing your head eagerly. He smiles at you before speaking once more. 'I have something special for you this time. If you do good, then I'll give you a reward,' the dog tells you.";
+	say "     During your exploration you once more run across your Alpha, the [bold type]scarred[roman type] German Shepherd. Quite instantly you drop onto all fours, an action that appears to please the male very much so. When he reaches you he places his paw to your head and rubs it, a feeling that you relish very much so. 'My good little [if player is female]bitch[else]pup[end if] is rather eager to see me, aren't you?' he says, you bobbing your head eagerly. He smiles at you before speaking once more. 'I have something special for you this time. If you do good, then I'll give you a reward,' the dog tells you.";
 	now combat abort is 1; [stops the fight]
 	now fightoutcome is 22; [player submitted]
 	if "Korvin's Pet - Pink Collar" is listed in feats of player:
@@ -114,7 +114,7 @@ to say KorvinOrcFight:
 		if "Korvin's Pet - Pink Collar" is listed in feats of player:
 			say "     Your Alpha looks around and points out a black spiked collar on the racks. 'If you had won, then you would've gotten that collar. However, you didn't, and instead you're stuck with that pink one for now,' he says. You hang your head in shame at failing your master again. Seeing this he sighs at you before patting your head. 'Like last time, I'm not angry at you. I just wish you'd try harder,' he says. He leads you away, back to where the two of you met this time. He unleashes you and gestures for you to go. As you're leaving your Alpha vow to yourself that you'll make him proud. After all, you are his pet, it is your job to make him happy.";
 		else if "Korvin's Pet - Spiked Collar" is listed in the feats of player:
-			say "     The german shepard quickly picks up a glittering pink collar with the word 'Bitch' on it. You whimper when he unclips your spiked collar that you proudly won and replaces it with the humiliating neck accessory. On top of that he puts up the black leash and instead brings out your old one and attaches that to the collar. Seeing your sad face he gives out a sigh. 'I'm not angry, pet, just disappointed. But don't worry. If you win next time, you'll get your collar and leash back,' the dog promises, making you nod your head eagerly. The male then leads you back to where the two of you met before unleashing you. As he shoos you off and asks to visit soon, you vow to do better next time to win back your spiked collar.";
+			say "     The German Shepherd quickly picks up a glittering pink collar with the word 'Bitch' on it. You whimper when he unclips your spiked collar that you proudly won and replaces it with the humiliating neck accessory. On top of that he puts up the black leash and instead brings out your old one and attaches that to the collar. Seeing your sad face he gives out a sigh. 'I'm not angry, pet, just disappointed. But don't worry. If you win next time, you'll get your collar and leash back,' the dog promises, making you nod your head eagerly. The male then leads you back to where the two of you met before unleashing you. As he shoos you off and asks to visit soon, you vow to do better next time to win back your spiked collar.";
 			remove "Korvin's Pet - Spiked Collar" from feats of player;
 			add "Korvin's Pet - Pink Collar" to feats of player;
 		else:
@@ -143,9 +143,9 @@ to say KorvinTenrecFight:
 	if "Korvin's Pet - Spiked Collar" is listed in feats of player:
 		say "     Wandering around for a while you soon come across a familiar face that causes you to drop to your knees and proudly present your spiked collar, for it is none other than your Alpha. He smiles at you, walks up to you, and scritches your ears. You nuzzle his hand before he sneaks up. 'Pet, I have a special task for you today. If you do good, then I'll reward you again. Are you up for it?' he asks you. You nod your head eagerly at him, wanting to prove yourself to your master. The enthusiasm ends up making him chuckle.";
 	else if "Korvin's Pet - Pink Collar" is listed in feats of player:
-		say "     After looking around for a while you soon spot somebody that makes you drop to your knees and shamefully present your pink collar to him. It's none other than your master, the scarred german shepard. He walks up to you and pets your head before pulling away, talking to you. 'I have a task for you, if you're up for it. If you do well, then you won't have that collar anymore, perhaps something better,' he says, you looking up at him eagerly. He chuckles at your enthusiasm before heading off with you.";
+		say "     After looking around for a while you soon spot somebody that makes you drop to your knees and shamefully present your pink collar to him. It's none other than your master, the scarred German Shepherd. He walks up to you and pets your head before pulling away, talking to you. 'I have a task for you, if you're up for it. If you do well, then you won't have that collar anymore, perhaps something better,' he says, you looking up at him eagerly. He chuckles at your enthusiasm before heading off with you.";
 	else:
-		say "     You wander around looking for a fight when you suddenly notice a familiar face that makes you instantly drop to your knees. It's none other than your Alpha, the buff male german shepard with a scar on his face. Upon seeing you on the ground he smiles at you and walks up to your before scritching your ears, causing you to beam at him. 'My pet, I have a special task for you. If you do good, then I'll reward you well. Are you up for it?' he asks. You nod your head eagerly, your master chuckling at your enthusiasm.";
+		say "     You wander around looking for a fight when you suddenly notice a familiar face that makes you instantly drop to your knees. It's none other than your Alpha, the buff male German Shepherd with a scar on his face. Upon seeing you on the ground, he smiles at you and walks up to you before scritching your ears, causing you to beam at him. 'My pet, I have a special task for you. If you do good, then I'll reward you well. Are you up for it?' he asks. You nod your head eagerly, your master chuckling at your enthusiasm.";
 	now combat abort is 1; [stops the fight]
 	now fightoutcome is 22; [player submitted]
 	say "     The two of you seem to walk for a while, you walking on all fours and your Alpha walking on two. Sure, there's jeers from other people at you playing the role of the pet, but you don't care, no you relish in the feeling. Nevertheless, you are a bit confused at the long distance that is covered. Your questions aren't answered until you two reach the warehouse district, more specifically the port. It is there that your master walks up to a tenrec who appears to recognize your Alpha. The otter-shrew leers at you, causing a shiver of interest to pass through you. 'So that's my temporary prize if I win?' the male says, groping at his crotch in excitement. Your master nods but speaks up. 'Yes, but don't forget, if my pet wins then I get the supply of fish [italic type]and[roman type] we get to have fun with you. The tenrec shrugs it off before turning to you, getting ready to fight. Your Alpha steps aside, clearly making you fight alone.";
@@ -159,7 +159,7 @@ to say KorvinTenrecFight:
 		if "Korvin's Pet - Pink Collar" is listed in feats of player:
 			say "     Your Alpha looks around and points out a black spiked collar on the racks. 'If you had won then you would've gotten that collar. However, you didn't and instead you're stuck with that pink one for now,' he says. You hang your head in shame at failing your master again. Seeing this he sighs at you before patting your head. 'Like last time, I'm not angry at you, just like last time. I just wish you'd try harder,' he says. He leads you away, back to where the two of you met this time. He unleashes you and gestures for you to go. As you're leaving your Alpha vow to yourself that you'll make him proud. After all, you are his pet, it is your job to make him happy.";
 		else if "Korvin's Pet - Spiked Collar" is listed in the feats of player:
-			say "     The german shepard quickly picks up a glittering pink collar with the word 'Bitch' on it. You whimper when he unclips your spiked collar that you proudly won and replaces it with the humiliating neck accessory. On top of that he puts up the black leash and instead brings out your old one and attaches that to the collar. Seeing your sad face he gives out a sigh. 'I'm not angry pet, just disappointed. But don't worry. If you win next time, you'll get your collar and leash back,' the dog promises, making you nod your head eagerly. The male then leads you back to where the two of you met before unleashing you. As he shoos you off and asks to visit soon, you vow to do better next time to win back your spiked collar.";
+			say "     The German Shepherd quickly picks up a glittering pink collar with the word 'Bitch' on it. You whimper when he unclips your spiked collar that you proudly won and replaces it with the humiliating neck accessory. On top of that he puts up the black leash and instead brings out your old one and attaches that to the collar. Seeing your sad face he gives out a sigh. 'I'm not angry pet, just disappointed. But don't worry. If you win next time, you'll get your collar and leash back,' the dog promises, making you nod your head eagerly. The male then leads you back to where the two of you met before unleashing you. As he shoos you off and asks to visit soon, you vow to do better next time to win back your spiked collar.";
 			remove "Korvin's Pet - Spiked Collar" from feats of player;
 			add "Korvin's Pet - Pink Collar" to feats of player;
 		else:
@@ -184,7 +184,7 @@ to say KorvinTenrecFight:
 	now battleground is "void";
 	now inasituation is false;
 to say KorvinCentaurFight:
-	say "     After looking around for a while, you quickly come upon a person who you're very excited to see. You're so excited that you immediately drop to your knees. Why wouldn't you? After all, it is your Alpha, a sexy scarred german shepard. Upon seeing you on the ground, he smiles, walks up to you, and scritches your head. 'Are you happy to see me, my pet?' he asks. You nod your head eagerly, nuzzling his hand. 'That's great, I have something for you to do this time,' he says, you looking up at him in interest.";
+	say "     After looking around for a while, you quickly come upon a person who you're very excited to see. You're so excited that you immediately drop to your knees. Why wouldn't you? After all, it is your Alpha, a sexy scarred German Shepherd. Upon seeing you on the ground, he smiles, walks up to you, and scritches your head. 'Are you happy to see me, my pet?' he asks. You nod your head eagerly, nuzzling his hand. 'That's great, I have something for you to do this time,' he says, you looking up at him in interest.";
 	now combat abort is 1; [stops the fight]
 	now fightoutcome is 22; [player submitted]
 	if "Korvin's Pet - Spiked Collar" is listed in feats of player:
@@ -196,14 +196,14 @@ to say KorvinCentaurFight:
 	now inasituation is true;
 	challenge "Centaur Stallion";
 	if fightoutcome >= 20 and fightoutcome <= 29:[lost]
-		say "     Quickly you fall to the ground in pain before you feel a hard, long cock hot-dogging your cheeks. Looking up from under the centaur you see your Alpha looking at you disappointedly. Your focus on your master only exists for so long before suddenly you feel the equine cock breach your backdoor. You groan in a mix of pain and pleasure as he slowly pushes into you, inch by inch. It takes a minute before the horse-man actually bottoms out, his heavy, cum-filled balls resting against your cheeks. Not long after that does the stallion set a fast pace, fucking you quick and hard. Somehow he knows just where to thrust as seconds after he begins, you're letting out whorish moans.[if player is female] Your pussy is already dripping from the fucking that the horse-man is giving you.[else if player is male] Your cock is hard as a rock and dripping tons of precum.[end if]";
-		say "     Your Alpha appears to delight in your fucking, running his paw up and down his cock, masturbating to the sounds of balls slapping against your ass. Despite being pushed into the ground as you're being fucked hard by the hung dick you're enjoying the feeling of it thrusting in and out of your anal passage. You're in utter bliss as this is happening, getting high off of the pleasure and the fact that your Alpha is hard because of your position. Were anyone to find the three of you it'd be an interesting sight. With a centaur plowing into someone as a german shepard watches on, masturbating rather heavily. During one of the thrusts you can feel the centaur's balls start to tighten and it appears your Alpha is getting close if the fact he's walking up to you says anything.";
+		say "     Quickly you fall to the ground in pain before you feel a hard, long cock hot-dogging your cheeks. Looking up from under the centaur you see your Alpha looking at you disappointedly. Your focus on your master only exists for so long before suddenly you feel the equine cock breach your backdoor. You groan in a mix of pain and pleasure as he slowly pushes into you, inch by inch. It takes a minute before the horse-man actually bottoms out, his heavy, cum-filled balls resting against your cheeks. Not long after that does the stallion set a fast pace, fucking you quick and hard. Somehow he knows just where to thrust as seconds after he begins, you're letting out whorish moans[if player is female]. Your pussy is already dripping from the fucking that the horse-man is giving you[else if player is male]. Your cock is hard as a rock and dripping tons of precum[end if].";
+		say "     Your Alpha appears to delight in your fucking, running his paw up and down his cock, masturbating to the sounds of balls slapping against your ass. Despite being pushed into the ground as you're being fucked hard by the hung dick you're enjoying the feeling of it thrusting in and out of your anal passage. You're in utter bliss as this is happening, getting high off of the pleasure and the fact that your Alpha is hard because of your position. Were anyone to find the three of you it'd be an interesting sight. With a centaur plowing into someone as a German Shepherd watches on, masturbating rather heavily. During one of the thrusts you can feel the centaur's balls start to tighten and it appears your Alpha is getting close if the fact he's walking up to you says anything.";
 		WaitLineBreak;
 		say "     With a roar of pleasure, your Alpha lets loose his load all over your face, which is quickly followed by the centaur slamming into your ass and cumming hard into your hole. It's so much cum that it inflates your stomach a bit. [if player is female]The sensation of being filled so much as well as your Alpha's cum on your face makes you orgasm, your pussy spilling fluids. [else if player is male]The feeling of being filled with cum so much makes your cock spew its cum onto the ground, the fact that you're on the ground causing it to smear against your stomach. [end if]With the three of you having cummed, all of you just lay or stand there in utter bliss. Minutes later the centaur removes his cock from your ass and allows you to stand up, When you do, the cum starts pouring out of your hole, coating your legs in it. The centaur thanks your Alpha for the fun before leaving the two of you alone where he grabs you by the leash and leads you away.";
 		if "Korvin's Pet - Pink Collar" is listed in feats of player:
 			say "     He doesn't let you clean up at all, leaving you covered in sperm. It's an embarrassing walk as everyone who sees the two of you laughs and wolf-whistles at you. Soon enough though you reach a familiar pet store where he take you to the collar section. Your Alpha looks around and points out a black spiked collar on the racks. 'If you had won, then you would've gotten that collar. However, you didn't, and instead you're stuck with that pink one for now,' he says. You hang your head in shame at failing your master again. Seeing this he sighs at you before patting your head. 'Like last time, I'm not angry at you. I just wish you'd try harder,' he says. He leads you away, back to where the two of you met this time. He unleashes you and gestures for you to go. As you're leaving your Alpha vow to yourself that you'll make him proud. After all, you are his pet, it is your job to make him happy.";
 		else if "Korvin's Pet - Spiked Collar" is listed in the feats of player:
-			say "     Your master doesn't let you clean up, leaving you covered in sperm. It's an embarrassing walk as everyone who sees the two of you laughs and wolf-whistles at you. Soon enough though you reach a familiar pet store where he take you to the collar section. The german shepard quickly picks up a glittering pink collar with the word 'Bitch' on it. You whimper when he unclips your spiked collar that you proudly won and replaces it with the humiliating neck accessory. On top of that he puts up the black leash and instead brings out your old one and attaches that to the collar. Seeing your sad face he gives out a sigh. 'I'm not angry, pet, just disappointed. But don't worry. If you win next time, you'll get your collar and leash back,' the dog promises, making you nod your head eagerly. The male then leads you back to where the two of you met before unleashing you. As he shoos you off and asks to visit soon, you vow to do better next time to win back your spiked collar.";
+			say "     Your master doesn't let you clean up, leaving you covered in sperm. It's an embarrassing walk as everyone who sees the two of you laughs and wolf-whistles at you. Soon enough though you reach a familiar pet store where he take you to the collar section. The German Shepherd quickly picks up a glittering pink collar with the word 'Bitch' on it. You whimper when he unclips your spiked collar that you proudly won and replaces it with the humiliating neck accessory. On top of that he puts up the black leash and instead brings out your old one and attaches that to the collar. Seeing your sad face he gives out a sigh. 'I'm not angry, pet, just disappointed. But don't worry. If you win next time, you'll get your collar and leash back,' the dog promises, making you nod your head eagerly. The male then leads you back to where the two of you met before unleashing you. As he shoos you off and asks to visit soon, you vow to do better next time to win back your spiked collar.";
 			remove "Korvin's Pet - Spiked Collar" from feats of player;
 			add "Korvin's Pet - Pink Collar" to feats of player;
 		else:
@@ -213,9 +213,9 @@ to say KorvinCentaurFight:
 		say "     Terrified, you turn tail and run. Mentally you realize it was a bad idea as your Alpha starts chasing after you, yelling for you to get back. When your master does corner you, he slaps you for fleeing. 'I knew you were a bitch, but I didn't know you were a coward too,' he says darkly, the tone causing you to flinch. With a shake of his head, the dog yanks you by your leash and leads you back to where the two of you ran into each other. When you get there he sees your hurt look, causing him to sigh and pat your head. 'You ran, so you aren't getting anything this time. Next time actually fight. I won't be mad if you lose. Disappointed, yes, but not mad,' he says. That causes you to smile happily at him before he unleashes you and tells you to visit him again soon.";
 	else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 		say "     To your excitement after your last attack, the centaur stumbles back and falls to his front legs, exhausted. Your Alpha is grinning in your direction at your victory. He gestures to the horse-man practically encouraging you to have your fun. You get down on all fours, face to the male's endowed dick, making sure to get at it from the side, rather than under. Following that, you bring your tongue to the flared head, licking at it rather eagerly. The stallion appears to enjoy what you're doing, the frustrated look on his face from losing disappearing, replaced with a look of enjoyment. Interested to get further, you open your mouth wide and let the cock into your mouth. The centaur tries to thrust deep into your throat but your Alpha growls at him, stopping the horse-man in his tracks. Shortly after that your can feel your master's cock hot-dogging your ass cheeks, appearing to want your pucker.";
-		say "     With his hard dick rubbing against your ass, you go into a frenzy, beginning to deepthroat the horse-prick in front of you. As soon as you do this, your Alpha breaches your hole with his manhood, causing you to moan as you push your face onto the centaur's own cock. If anyone came upon the threw of you, they'd be more than likely turned on by the sight of someone being plowed by a buff male dog while sucking a horse-man off. You revel in the feeling of your master's hard doggy-dick in your ass, grinding your cheeks against his crotch as the knot starts forming against your pucker. On top of that, you can feel your Alpha's balls tightening when they slap against your backdoor, as well as the centaur's when your face touches his own balls. It's not long after you feel that, suddenly the german shepard's knot pops into your fuckhole making you groan out loud.";
+		say "     With his hard dick rubbing against your ass, you go into a frenzy, beginning to deepthroat the horse-prick in front of you. As soon as you do this, your Alpha breaches your hole with his manhood, causing you to moan as you push your face onto the centaur's own cock. If anyone came upon the threw of you, they'd be more than likely turned on by the sight of someone being plowed by a buff male dog while sucking a horse-man off. You revel in the feeling of your master's hard doggy-dick in your ass, grinding your cheeks against his crotch as the knot starts forming against your pucker. On top of that, you can feel your Alpha's balls tightening when they slap against your backdoor, as well as the centaur's when your face touches his own balls. It's not long after you feel that, suddenly the German Shepherd's knot pops into your fuckhole making you groan out loud.";
 		WaitLineBreak;
-		say "     Shortly following your Alpha knotting you do all three of you reach your climax. [if player is female]You orgasm real hard, your pussy spilling its juices, you moaning due to the pleasure. [else if player is male]You end up cumming hard, your load spilling onto the ground below you. [end if]The german shepard lets loose his own load deep in your bowels while the centaur dumps his cum into your throat. You gulp it down eagerly, not wanting any of it to spill onto your face. While the horse-man finishes unleashing their sperm after maybe half a minute and your master after a minute, it takes about ten minutes for your Alpha's knot to deflate and pop out of your ass. He then shoos off the centaur, dutifully cleaning you up after the male is gone. When your ass isn't leaking cum anymore, the german shepard takes you by the leash and walks away.";
+		say "     Shortly following your Alpha knotting you do all three of you reach your climax. [if player is female]You orgasm real hard, your pussy spilling its juices, you moaning due to the pleasure. [else if player is male]You end up cumming hard, your load spilling onto the ground below you. [end if]The German Shepherd lets loose his own load deep in your bowels while the centaur dumps his cum into your throat. You gulp it down eagerly, not wanting any of it to spill onto your face. While the horse-man finishes unleashing their sperm after maybe half a minute and your master after a minute, it takes about ten minutes for your Alpha's knot to deflate and pop out of your ass. He then shoos off the centaur, dutifully cleaning you up after the male is gone. When your ass isn't leaking cum anymore, the German Shepherd takes you by the leash and walks away.";
 		if "Korvin's Pet - Pink Collar" is listed in feats of player:
 			say "     To your happy surprise, your Alpha leads you back to the pet store and its collar section. Once there he unclips the pink collar from your neck and pulls a black spiked one off the shelf before putting it on you. Not only that, he also takes a black leash and attaches it to your new prize. You proudly show off the collar. He pats you on the head before speaking with a smile. 'I am proud of you, my pet. You did perfect in that fight. But be warned, if you lose next time, you'll be getting a different collar,' he says. You smile happily at him, nuzzling his paw. Shortly after that he takes you back to where you met, where he tells you to visit soon so he could have you fight once more.";
 			remove "Korvin's Pet - Pink Collar" from feats of player;
@@ -223,7 +223,7 @@ to say KorvinCentaurFight:
 		else if "Korvin's Pet - Spiked Collar" is listed in feats of player:
 			say "     You're rather confused when your Alpha leads you to the pet store. However, instead of leading you to the collar section, he leads you to the toy area. Once there he brings out a few of the shelved toys and plays with you. He throws a ball to have you catch, which you happily do, bringing it proudly back to your Alpha. When you present it to him in your mouth, he pats you on the head, scritching your ears. To your surprise he removes it and kisses you on the mouth before pulling back. 'I'm really proud of you, pet,' he says, smiling at you. After half an hour of playing he leads you back to the place the two of you ran into each other this time. Once there he reminds you of his warning last time. You nod eagerly before he unleashes you and says to visit soon.";
 		else:
-			say "     You're surprised when he leads you not to where you guys ran into each other, but to a pet store. Once inside, you are taken to an aisle filled with collars and leashes. Your Alpha looks around at the selection of neck accessories before smiling and grabbing a specific one. He presents it to you, showing it to be a black collar with metal studded spikes. The german shepard then unleashes you and clips it onto your neck before grabbing a brand new black leash and attaching that to it. You feel rather proud of the new accessory and it appears that your master is proud of you too, as he smiles and pats you on your head, scritching your ears after. He then takes you back to where the two of you met this time before speaking to you. 'That collar is a reward for doing so well. However, you can lose it if you do bad in the next one I set up for you, got it?' he asks. You nod eagerly, understanding what he's saying. Your Alpha smiles before unleashing you, telling you to visit soon.";
+			say "     You're surprised when he leads you not to where you guys ran into each other, but to a pet store. Once inside, you are taken to an aisle filled with collars and leashes. Your Alpha looks around at the selection of neck accessories before smiling and grabbing a specific one. He presents it to you, showing it to be a black collar with metal studded spikes. The German Shepherd then unleashes you and clips it onto your neck before grabbing a brand new black leash and attaching that to it. You feel rather proud of the new accessory and it appears that your master is proud of you too, as he smiles and pats you on your head, scritching your ears after. He then takes you back to where the two of you met this time before speaking to you. 'That collar is a reward for doing so well. However, you can lose it if you do bad in the next one I set up for you, got it?' he asks. You nod eagerly, understanding what he's saying. Your Alpha smiles before unleashing you, telling you to visit soon.";
 			add "Korvin's Pet - Spiked Collar" to feats of player;
 	now battleground is "void";
 	now inasituation is false;
@@ -232,7 +232,7 @@ to say KorvinCentaurFight:
 Section 2 - Monster Victory
 
 to say losetogsd:
-	choose row monster in Table of random critters;
+	choose row monster in Table of Random Critters;
 	if gsd_special is false:
 		now gsd_var is 0;
 		if a random chance of 1 in 3 succeeds:
@@ -287,9 +287,9 @@ to say losetogsd:
 			else:
 				say "     The confident canine grins down at you and pushes you to the ground beneath him. He pins you beneath him and nips at your neck and shoulders, asserting his dominance over you. You do not resist your alpha and submit to him without resistance. 'That's a good pup,' he growls while groping you, making you more aroused.";
 				if a random chance of anallevel in 4 succeeds:
-					say "     The big German Shepherd grabs you by the scruff of the neck and grinds his cock against your rear. 'Rrrr! You may not have a cunt for your alpha, but you'll still be my bitch.' Knowing your place, you keep your ass raised[run paragraph on]";
+					say "     The big German Shepherd grabs you by the scruff of the neck and grinds his cock against your rear. 'Rrrr! You may not have a cunt for your alpha, but you'll still be my bitch.' Knowing your place, you keep your ass raised ";
 					if tail of player is not "":
-						say " and lift your tail[run paragraph on]";
+						say "and lift your tail ";
 					say "as he grinds his canine cock between your cheeks and dribbles precum across your pucker. He drives the first few inches into your yielding asshole, your mind and body accepting your alpha's dominant shaft with a soft whimper that seems to excite him further.";
 					say "     The German Shepherd's dick pushes hard and deep into you with only a few thrusts, giving your butt little chance to adjust to the penetration. Grabbing the scruff of your neck in his teeth, he keeps a firm grip on you as he starts humping you wildly. You can feel the frequent slams of his knot against your pucker and he bangs you hard and fast. You whimper and moan at this rough treatment, but your body loves it anyhow, craving having your alpha inside you. Being used and abused like this is just another delicious reminder that you belong right where you are - underneath him, getting your ass stuffed by this stud of a male. At this moment, you're nothing but his fucktoy bitch and you desire nothing more than that.";
 					say "     As the humping goes on, the repeated pushes of his knot causes your sphincter to stretch open until finally giving out. That thick bulb pushes into you, tying to you him and leaving him only able to make short, fast thrusts that leave you quivering in delight by the time he's blasting his hot load into your clutching bowels. You orgasm with him, your body delighting in receiving the canine's seed and also having enjoyed satisfying your alpha. You remain flopped out beneath him in a happy daze, enjoying the warmth of the afterglow and of his virile seed inside your rear. Once his knot comes free, he pushes you away and you sprawl out on the ground with canine cum leaking from your abused hole and a silly grin on your face.[mimpregchance]";
@@ -384,12 +384,12 @@ to say gsd_special_lsex_00:
 			say "     'Next time, submit to your elder without me having to beat you, bitch,' he calls over his shoulder as he vanishes into a dark, dingy alleyway.";
 
 To gsd_set_male:
-	choose row monster in Table of random critters;
+	choose row monster in Table of Random Critters;
 	now sex entry is "Male";
 	now breasts entry is 2;
 
 To gsd_unset_male:
-	choose row monster in Table of random critters;
+	choose row monster in Table of Random Critters;
 	now sex entry is "Female";
 	now breasts entry is 8;
 
@@ -399,7 +399,7 @@ Section 3 - Player Victory
 to say beatthegsd:
 	if zephyrtask is 2, increase zephyrpests by 1;
 	now gsd_attack is false; [Encounter over, reset for the next time!]
-	choose row monster in Table of random critters;
+	choose row monster in Table of Random Critters;
 	if gsd_special is false:
 		if player is not neuter:
 			say "[gsd_generic_vsex_00]";
@@ -417,7 +417,7 @@ to say beatthegsd:
 			increase gsd_pet by 1;
 
 
-[ -- Generic Player Victory Scenes -- ]
+[ - Generic Player Victory Scenes - ]
 
 to say gsd_generic_vsex_00:
 	say "     As the German Shepherd lets out a pained and injured whine, he sinks to the ground with his ears folding down, beaten. You feel a desire to turn the tables on this over-confident dog.";
@@ -510,7 +510,7 @@ to say gsd_generic_vsex_04:
 	say "     Longing for more, you press his muzzle in close and he slips his tongue into your cunt, diving up inside you to lap at your flowing juices. His long, doggy tongue dives into you again and again, making you moan with pleasure until finally you cum hard, soaking his muzzle in your juices. He laps up as much as he can and licks your thighs and pussy clean as your climax ebbs. When he's done cleaning you, you push his muzzle back and pat his head before sending him on his way, tail wagging happily after the tasty treat he's received.";
 
 
-[ -- Special Player Victory Scenes -- ]
+[ - Special Player Victory Scenes - ]
 
 to say gsd_special_vsex_00:
 	say "     As the scarred German Shepherd lets out a pained and injured whine, he sinks to the ground with his ears folding down, beaten. You feel a desire to turn the tables on this arrogant male[if gsd_pet > 1] who's continued harassing you[end if] and make use of him as you'd see fit.";
@@ -617,7 +617,7 @@ to say gsd_special_vsex_05:
 		say "     Keeping him pinned in this awkward position, you pump at his meat while he dribbles a sticky mess onto the ground just inches from his nose. Needy whimpers escape his muzzle as his orgasm approaches, which only encourages you. When he finally blows, his dick's aimed squarely at his face and his semen splatters all over his scarred muzzle. When you hear him licking and lapping at the mess of cum he's making on himself, you laugh a little at his humiliation. Once he's spent, you wipe your hand across his fluffy rear with a few slaps before driving him off. He gets up and slinks off, sticky and humiliated.";
 
 
-[ -- Special Final Scenes -- ]
+[ - Special Final Scenes - ]
 
 to say gsd_special_final_00:
 	say "     As the scarred German Shepherd lets out a pained and injured whine, he sinks to the ground with his ears folding down, beaten. You can see that a lot of the fight has gone of out his eyes and he hangs his head in shame when you look into them. It seems like you've finally proven yourself his better. And now you need to decide what you want to do with him.";
@@ -726,9 +726,10 @@ to say gsd_special_final_05:
 to say gsd_recruited:
 	increase score by 20;
 	now gshep is tamed;
+	add "Tamed" to Traits of gshep;
 	move Korvin to Makeshift Rec Room;
 	now HP of gshep is 1;
-	now lastscene of gshep is turns;
+	now GShepLastScene is turns;
 	say "     Looking around, you find some heavy rope and use that to make a temporary leash for the muzzle-scarred German Shepherd. He tugs at it a few times, but leaves it alone when you tell him to stop pawing at it. You ask him if he's got a name he can remember, which throws him for a loop. 'What a stupid question? Of course I remember... my... name...' He ends up bemused for a time, scratching his ear with one paw as he tries to think. 'K-... Ka-? Ko-? Korvin? I think it was, I mean, it is Korvin.' He seems a little more self-assured again now that he's got a name.";
 	say "     (The gshep is now tamed! You can make it your active pet by typing [bold type][link]pet gshep[as]pet gshep[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck gshep[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type])";
 
@@ -739,12 +740,12 @@ to say attk gsd:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "German Shepherd"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -792,8 +793,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "gsd"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Alt Combat Rules

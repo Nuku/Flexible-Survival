@@ -1,7 +1,7 @@
 Version 2 of Wolfman by Wahn begins here.
 [ Version 2.2 - Relocated to College Campus area. ]
 
-"Adds a team of football wolfmen to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a team of football wolfmen to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 [ HP states of Septus                                                ]
 [ 100: Starting State                                                ]
@@ -73,23 +73,22 @@ To say Septus loses:
 		say "     [if (HP of Septus is 0 or HP of Septus is 1 or HP of Septus is 2)]'Keep this up, and you'll have a place in the team soon.' He gives your shoulder a squeeze, then walks off to find more candidates out in the city.[else if (HP of Septus is 3 or HP of Septus is 4)]'You've shown your strength and skill. Why don't you join us in our base camp? It's in a warehouse over near 11th street. Just look for the [bold type]entrance[roman type] of our wolfman [bold type]lair[roman type] - there's a large wolf's head painted on the front wall too, you can barely miss it.'[else if HP of Septus is 5]'See you later at the lair. I'm off to find some new candidates.'[end if]";
 		if HP of Septus < 4:
 			increase HP of Septus by 1;
-		if HP of Septus is 4:
-			now Entrance to the Lair is unresolved;
-
+		if Entrance to the Lair is inactive and Entrance to the Lair is not resolved and HP of Septus > 3 and HP of Septus < 99:
+			now Entrance to the Lair is active;
 
 to say Wolfmandesc:
 	setmongender 3;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of Septus is 100:
 		say "     As you explore the ruined city, a tall figure suddenly steps into sight in front of you and gives you a calculating look. It's a well-toned male wolf-morph, standing on two digitigrade legs. His fur is almost completely black, except for a blood red section on his chest that forms the number 7.";
 		say "     He nods his lupine head at you, saying 'I'm Septus, the talent scout of the Fairhaven Wolves. You don't look half bad - but are you worth joining the best football team of this changed world?' He gives you a toothy grin, then pounces at you.";
 		now HP of Septus is 0;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Football Wolfman":
 				now monster is y;
 				break;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now enemy type entry is 2; [name known]
 	else if HP of Septus is 6:
 		let debit be 0;
@@ -100,7 +99,7 @@ to say Wolfmandesc:
 		now lev entry is 12 + debit;
 		now wdam entry is 14 + ( ( debit * 3 ) / 10 );
 		now lootchance entry is 0;
-		now area entry is "nowhere";
+		now area entry is "Nowhere";
 		say "     Septus and several of the nearest wolves move in to fight out, growling angrily and intent on throwing you out for good. The others clear the area and start cheering and howling in excitement like a rowdy crowd of football fans. At this point, the wolfmen aren't going to hold back like they have been during the recruitment and training, rushing at you like an offensive line. You growl back and flex your powerful, lupine body and charge as well, your wild instincts pumping adrenaline into your blood while a small corner of your mind hopes you haven't gotten in over your head.";
 		if jenniferwolves is 1:
 			say "     At least you do have at least one supporter out among the wolves encircling the fight and awaiting its outcome. The wolfman son you had with Jennifer is cheering you on from the edge of the area cleared from the match. A few of the other spectators push and growl at him, eventually a fight breaking out between him and another";
@@ -118,12 +117,12 @@ to say Wolfmandesc:
 				increase HP of player by jenniferwolves * 3;
 	else if HP of Septus is 99:
 		say "ERROR-FW99: This creature should no longer be randomly encountered.";
-		now area entry is "nowhere";
+		now area entry is "Nowhere";
 		now fightoutcome is 19;
 		now combat abort is 1;
 	else if HP of Septus >= 7:
 		say "ERROR-FW[HP of Septus]: This creature should no longer be randomly encountered.";
-		now area entry is "nowhere";
+		now area entry is "Nowhere";
 		now fightoutcome is 19;
 		now combat abort is 1;
 	else:
@@ -138,12 +137,12 @@ to say fw_attack:
 
 Section A - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Football Wolfman";
 	now enemy title entry is "Football Wolfman Recruiter";
 	now enemy name entry is "Septus";
@@ -191,8 +190,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 2 - Sports Drink
 
@@ -214,8 +214,8 @@ instead of sniffing sports drink:
 	say "The drink smells of sugar end electrolytes - perfect to give you some quick energy.";
 
 to wolfmaninfect:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Football Wolfman":
 			now monster is y;
 			break;
@@ -225,7 +225,11 @@ to wolfmaninfect:
 
 Section 3 - Event and Wolfman Lair
 
-Entrance to the Lair is a situation. The level of Entrance to the Lair is 5. Entrance to the Lair is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Entrance to the Lair	"Entrance to the Lair"
+
+Entrance to the Lair is a situation. The level of Entrance to the Lair is 5. Entrance to the Lair is inactive.
 The sarea of Entrance to the Lair is "Outside".
 
 Instead of resolving a Entrance to the Lair:
@@ -241,6 +245,10 @@ Instead of resolving a Entrance to the Lair:
 	now Wolfman Lair is known;
 	now Entrance to the Lair is resolved;
 	move player to Wolfman Lair;
+
+Table of GameRoomIDs (continued)
+Object	Name
+Wolfman Lair	"Wolfman Lair"
 
 Wolfman Lair is a room. It is fasttravel. It is private.
 The description of Wolfman Lair is "[lairdesc]".
@@ -295,6 +303,10 @@ Section 4 - Jennifer, the Cheerleader
 
 [Smells, Description, Conversation and NPC Interaction]
 
+Table of GameCharacterIDs (continued)
+object	name
+Jennifer	"Jennifer"
+
 Jennifer is a woman. Jennifer is in Wolfman Lair. The HP of Jennifer is normally 0.
 The description of Jennifer is "[Jenniferdesc]".
 The conversation of Jennifer is { "Grrr!" }.
@@ -308,7 +320,7 @@ to say Jenniferdesc:
 		say "DEBUG -> THIRST: [thirst of Jennifer], LUST: [lust of Jennifer], JENNIFERFUCKED: [Jenniferfucked], PREG TIMER: [Jenniferpregnant], OFFSPRING: [Jenniferwolves]<- DEBUG[line break]";
 	if (thirst of Jennifer is 0 or thirst of Jennifer is 1): [starting state]
 		say "     Jennifer is a petite and beautiful young woman with a friendly expression and shoulder-length blond hair. With her being naked, you got a full view of her lithe and limber human body, trained from long hours of gymnastics and cheer-leading practice[if HP of Septus >= 7 and HP of Septus < 50]. As team leader, she's your personal cheerleader breeder, a privilege you only share with Septus. You will extend that to other players who show real heart in the game, wanting to ensure that she breeds only the strongest and best players for the team[end if]. Her pussy is a bit red and swollen and the nipples of her perky little breasts point hard into the air, indicating her arousal at being watched by you. [Jenniferoffspring]";
-	if (thirst of Jennifer is 2):                   [visibly pregnant by the player]
+	if (thirst of Jennifer is 2): [visibly pregnant by the player]
 		say "     Jennifer is a petite and beautiful young woman with a friendly expression and shoulder-length blond hair. With her being naked, you got a full view of her lithe and limber human body, trained from long hours of gymnastics and cheer-leading practice[if HP of Septus >= 7 and HP of Septus < 50]. As team leader, she's your personal cheerleader breeder, a privilege you only share with Septus. You will extend that to other players who show real heart in the game, wanting to ensure that she breeds only the strongest and best players for the team[end if]. Her belly is currently bulging outwards quite a bit, showing the result of your recent coupling growing inside her. The nipples of her perky little breasts point hard into the air, indicating her arousal at being watched by you. [Jenniferoffspring]";
 
 instead of conversing the Jennifer:
@@ -403,15 +415,11 @@ to say JenniferTalkMenu:
 					say "[CheerleaderPractice]";
 				else if (nam is "Suggest you become team manager"):
 					say "[WolfTeamManager]";
-				WaitLineBreak;
-		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from Jennifer, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from Jennifer, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -474,7 +482,7 @@ to say JenniferOffspringTalk:
 			say "most effective strategists we have ever had. With his sharp mind, he can instantly recognize where the strengths and weaknesses of any opposing lineup are!' ";
 		-- "perception":
 			say "best quarterbacks we have ever had. He'll spot any opening and weakness and know where to run, carrying the ball to victory!' ";
-	say "It is quite clear just how proud Jennifer is about your offspring as the young woman continues to tell you several antics about his latest victories. By the time she winds down a bit, you know a number of interesting stories about your kid, and have the warm feeling of having put someone special into the world.[if Jenniferwolves > 1] Yet things do not end there, as you have fathered further children with the young woman, whom she points out to you one by one, explaining their virtues in detail too.[end if]";
+	say "It is quite clear just how proud Jennifer is about your offspring as the young woman continues to tell you several antics about his latest victories. By the time she winds down a bit, you know a number of interesting stories about your kid, and have the warm feeling of having put someone special into the world[if Jenniferwolves > 1]. Yet things do not end there, as you have fathered further children with the young woman, whom she points out to you one by one, explaining their virtues in detail too[end if].";
 
 to say JenniferMartialSkillTalk:
 	say "     Jennifer smiles and brushes some strands of long blonde hair out of her face, then explains, 'Oh, you want to know why I was able to take down Keefer? Well, a few things come into play there. For one, coach Martens always was a firm believer in self defense classes. She didn't want any of her girls fall victim to groping or worse, especially with us accompanying the team to all those games in other cities. Unfamiliar places, drunk football fans, and all that - you can imagine that it can quickly get out of hand.' The young woman's expression darkens a little, with Jennifer pressing her lips together for a second, then letting out a sigh. 'I wish we knew what happened to her - our coach. She was with us when the bus crashed, and the beast was still rutting her when just about everyone else fell unconscious in exhaustion.'";
@@ -593,14 +601,11 @@ to say JenniferSexMenu:
 				else if (nam is "Share Jennifer with Septus"):
 					say "[JenniferSex6]";
 				now lastfuck of Jennifer is turns;
-		else if calcnumber is 0:
-			say "Change your mind?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from Jennifer, shaking your head slightly as she gives a questioning look.";
 				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from Jennifer, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -616,7 +621,6 @@ to say JenniferSex1: [cock sucked by Jennifer]
 		say "     With your hands resting on her shoulders, you release a long, low moan of pleasure as you cum hard, pumping your [cum load size of player] load into your personal cheerleader for all watching to see. Jennifer swallows it all down while her tongue plays across your spurting shaft with practiced ease, her time as the team's favorite breeder having trained her well. After the last jet of cum, Jennifer sucks on your cock a bit more till it gets soft, then smiles up at you and sticks out her tongue to show you the last of your load. Then she closes her mouth and demonstratively swallows it all with a loud 'Mmmm.'";
 		say "     After such a sexy show, the other wolfmen around have gotten quite aroused. Jennifer makes a teasing show of stretching as she gets up. She gives you a kiss during which you squeeze her ass and finger her juicy pussy. After you release her, she goes over to two of the horny wolves and, taking their cocks in hand, leads them off with a giggle towards two [one of]free[or]available[or]other[or]naked[at random] cheerleaders [one of]they can mount[or]eager for a fuck[or]who start to suck them off while Jennifer coaches them on her technique[at random].";
 	increase lust of Jennifer by 1;
-	wait for any key;
 
 to say JenniferSex2: [cunt licked by Jennifer]
 	say "     Quickly stripping off your clothing, you give Jennifer a deep kiss, then push softly on her shoulders. She kneels down in front of you, smiling up at you and licking her lips[if HP of Septus >= 7 and HP of Septus < 50]. 'Mmm... let's deal with this juicy problem of yours, my sexy manager,' she purrs with a grin[end if].";
@@ -625,7 +629,6 @@ to say JenniferSex2: [cunt licked by Jennifer]
 	else: [team manager]
 		say "     She starts by running her tongue over the sensitive folds of your pussy, then inserts two fingers to rub your insides, creating a tingly pleasant feeling inside you. As a woman, she really knows what she's doing, rubbing just the right spots and softly sucking on your clit. Having had a lot of practice on the other cheerleaders as well as being flexible enough to do it to herself, her expert tongue and fingers have you moaning within moments. She plays her tongue across your sensitive folds and rubs at your clit, causing shivers of delight to run through your entire body[if anallevel is 3] as she pushes a finger slick with her own pussy juices into your ass as well[end if].";
 		say "     As Jennifer continues to pleasure you, the wolfmen and cheerleaders around grow louder with whistles, cat-calls and cheers of their own as your gasps and moans get louder and louder until you finally reach the peak of your arousal and have a messy orgasm, squirting femcum over Jennifer's hand and face. She eagerly licks your thighs clean, lapping away your juices and even pushing you to a second climax before moving back. Around, you can see that many of those watching have paired off and are enjoying some fun of their own, inspired by the team's star couple.";
-	wait for any key;
 
 to say JenniferSex3: [Jennifer's cunt licked/fingered]
 	say "     Quickly stripping off your clothing, you give Jennifer a deep kiss, then lead her over to a nearby bench and have her lie down on it with her legs hanging off one end. Kneeling down in front of her, you pull her legs apart, revealing her moist pussy between them[if HP of Septus >= 7 and HP of Septus < 50]. Running your eyes over her beautiful cunt, you can't help but smile at the fact that it's all yours... and you intend to enjoy it right now[end if].";
@@ -634,7 +637,6 @@ to say JenniferSex3: [Jennifer's cunt licked/fingered]
 	else:
 		say "     You start by running your tongue over the sensitive folds of your pussy, then insert two fingers to rub her insides, making Jennifer pant in lust. You pump your fingers into her wet hole, lapping up the juices at leak from it and flicking across her clit. The scent and taste of it is very arousing, making you look forward to [if player is not male]getting a cock so you can fuck her and breed her again soon[else]fucking her and breeding her again soon[end if].";
 		say "     Cat-calls and whistles start up from the wolves and girls around you as they step closer to watch the team's top couple go at it. They cheer you on as Jennifer's gasps and moans get louder and louder until she finally reaches the peak of her arousal and has a messy orgasm, squirting femcum over your hand and onto your face. You lick some of it off yourself, then hold out your hand to the sexy girl, which she makes a show of sucking off your fingers while you lick her thighs clean. This whole show gets several of the wolves around quite hard and the girls quite wet, resulting in some lustful fucking breaking out, making for an arousing show as you enjoy a playful snuggle with your special girl as she basks in the afterglow.";
-	wait for any key;
 
 to say JenniferSex4: [Jennifer's pussy fucked by player]
 	if thirst of Jennifer is 2: [pregnant version]
@@ -659,7 +661,6 @@ to say JenniferSex4: [Jennifer's pussy fucked by player]
 				FindHighestPlayerStat;
 				now JenniferFirstKidSpecialStat is HighestPlayerStat;
 	increase lust of Jennifer by 1;
-	wait for any key;
 
 to say JenniferSex5: [fucking Jennifer's ass]
 	if thirst of Jennifer is 2: [pregnant version]
@@ -677,7 +678,6 @@ to say JenniferSex5: [fucking Jennifer's ass]
 		say "     Fucking the hot little cheerleader in the midst of her cheering friends and wolfmen offspring, you quickly feel a rising pressure in your balls. As you gasp that you're close to blowing your load, she answers, 'Ok, hold my legs tight then.' You grasp her slender thighs as Jennifer leans back, back and further back until she's basically doing a handstand, only connected to you through your cock in her now upside-down ass and your hands holding her legs. With this new position, both of you get different feelings from the fucking, making you moan loudly and prompting you to fuck her harder and harder.";
 		say "     Soon, you reach the point of no return, gasping loudly as your seed shoots into Jennifer's body. Your forceful spurts and the helping force of gravity make sure all of your [cum load size of player] load ends up deep inside her body, although your little swimmers of course search in vain for an egg in her ass. The crowd around you cheers and you can hear moans and lustful growls echo through the warehouse as many of them decide to follow [if HP of Septus < 7]your[else]the team's top couple's[end if] lead, both in the private section and right around you in the training area. Meanwhile, you slowly go down to your knees, lowering Jennifer to lie on her back with your cock still deep inside her and lean over her to make out some more while keeping your hot, sticky load buried inside her.";
 	increase lust of Jennifer by 1;
-	wait for any key;
 
 to say JenniferSex6: [sharing Jennifer with Septus][***]
 	if HP of Septus < 7:
@@ -709,7 +709,7 @@ to say JenniferSex6: [sharing Jennifer with Septus][***]
 			say "     Eager to get off, you take hold of the cheerleaders head and face-fuck her, pumping your manmeat in and out between her warm lips and into her throat. Soon, you feel the urgent need to cum rise inside you and pull back a bit until just the tip of your cock is inside her mouth. Spurt after spurt of your cum shoot onto Jennifer's tongue and after you're done, she sticks it out to show it to you, then swallows your seed demonstratively.";
 		else:
 			LineBreak;
-			say "     Standing up, you walk around Septus and Jennifer, your eyes roaming over their somewhat sweaty bodies. Pulling the wolfman's tail up, you run your hands through the soft fur on his behind, groping and squeezing his buns before pulling them apart to have a look at his pucker. As you stroke a finger over it and poke a finger in, he gasps 'Please be gentle[if HP of Septus >= 7 and HP of Septus < 50], manager[end if], we usually don't fuck each other.' Reaching around to stroke his chest, you whisper in his ear 'Of course' then aim your cock and push forward, sinking your hard shaft into his hole. It's amazingly tight an warm, gripping you like a vice and allowing only slow progress deeper inside. It takes a moment for Septus to get used to your intruding member, but soon he's silently moaning at the feelings it brings him.";
+			say "     Standing up, you walk around Septus and Jennifer, your eyes roaming over their somewhat sweaty bodies. Pulling the wolfman's tail up, you run your hands through the soft fur on his behind, groping and squeezing his buns before pulling them apart to have a look at his pucker. As you stroke a finger over it and poke a finger in, he gasps 'Please be gentle[if HP of Septus >= 7 and HP of Septus < 50], manager[end if], we usually don't fuck each other.' Reaching around to stroke his chest, you whisper in his ear 'Of course' then aim your cock and push forward, sinking your hard shaft into his hole. It's amazingly tight and warm, gripping you like a vice and allowing only slow progress deeper inside. It takes a moment for Septus to get used to your intruding member, but soon he's silently moaning at the feelings it brings him.";
 			say "     Already pretty close to blowing your load through Jennifer's oral attention, it doesn't take long at all until Septus tight hole gives you the rest. With a lustful groan, you grind your crotch against his ass, pushing your member deep inside him as it starts shooting long strands of your seed. After you finish coming, you stay inside him for a while longer, then pull out and keep the two of them company until they can disengage from each other[if HP of Septus >= 7 and HP of Septus < 50]. Jennifer, once off the knot, snuggles up to you, running her hands over your body while you squeeze your special girl's ass[end if].";
 	else: [regular version]
 		say "     The two of you walk over to Jennifer together, your cocks getting just a bit harder as you watch her naked body from close up. Seeing the erections pointing at her, she smiles and remarks 'I see you boys want to have some fun. Good... I'm horny as fuck. I need a cock - or two - inside me.'";
@@ -735,10 +735,9 @@ to say JenniferSex6: [sharing Jennifer with Septus][***]
 			increase lust of Jennifer by 1;
 		else:
 			LineBreak;
-			say "     Standing up, you walk around Septus and Jennifer, your eyes roaming over their somewhat sweaty bodies. Pulling the wolfman's tail up, you run your hands through the soft fur on his behind, groping and squeezing his buns before pulling them apart to have a look at his pucker. As you stroke a finger over it and poke a finger in, he gasps 'Please be gentle[if HP of Septus >= 7 and HP of Septus < 50], manager[end if], we usually don't fuck each other.' Reaching around to stroke his chest, you whisper in his ear 'Of course' then aim your cock and push forward, sinking your hard shaft into his hole. It's amazingly tight an warm, gripping you like a vice and allowing only slow progress deeper inside. It takes a moment for Septus to get used to your intruding member, but soon he's silently moaning at the feelings it brings him.";
+			say "     Standing up, you walk around Septus and Jennifer, your eyes roaming over their somewhat sweaty bodies. Pulling the wolfman's tail up, you run your hands through the soft fur on his behind, groping and squeezing his buns before pulling them apart to have a look at his pucker. As you stroke a finger over it and poke a finger in, he gasps 'Please be gentle[if HP of Septus >= 7 and HP of Septus < 50], manager[end if], we usually don't fuck each other.' Reaching around to stroke his chest, you whisper in his ear 'Of course' then aim your cock and push forward, sinking your hard shaft into his hole. It's amazingly tight and warm, gripping you like a vice and allowing only slow progress deeper inside. It takes a moment for Septus to get used to your intruding member, but soon he's silently moaning at the feelings it brings him.";
 			say "     Already pretty close to blowing your load through Jennifer's oral attention, it doesn't take long at all until Septus tight hole gives you the rest. With a lustful groan, you grind your crotch against his ass, pushing your member deep inside him as it starts shooting long strands of your seed. After you finish coming, you stay inside him for a while longer, then pull out and keep the two of them company until they can disengage from each other[if HP of Septus >= 7 and HP of Septus < 50]. Jennifer, once off the knot, snuggles up to you, running her hands over your body while you squeeze your special girl's ass[end if].";
 			increase lust of Jennifer by 1;
-	wait for any key;
 
 Jenniferpregnant is a number that varies.
 Jenniferwolves is a number that varies.
@@ -765,6 +764,9 @@ An everyturn rule:
 Section 5 - Septus, the wolfman talent scout
 
 
+Table of GameCharacterIDs (continued)
+object	name
+Septus	"Septus"
 
 Septus is a man. Septus is in Wolfman Lair. The HP of Septus is normally 100.
 The description of Septus is "[Septusdesc]".
@@ -788,8 +790,8 @@ instead of conversing Septus:
 
 Instead of fucking Septus:
 	[puts Football Wolfman as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Football Wolfman":
 			now monster is y;
 			break;
@@ -861,13 +863,9 @@ Instead of fucking Septus:
 					wait for any key;
 					now lastfuck of Septus is turns;
 			else if calcnumber is 0:
-				say "Break off the conversation?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the wolfman, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the wolfman, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -904,7 +902,7 @@ to say SeptusSex5:[Septus ass fucked]
 	say "     Stepping up close to the powerful wolfman, you pull his head towards you and meet his muzzle in a deep kiss. While you're still doing some tongue-wrestling with him, one of your hands runs down his ripped body to his crotch. Taking hold of the two furry orbs you soon encounter, you fondle them with your fingers, making Septus moan and pant in growing arousal. Before much longer, his cock pushes out of his sheath as it grows hard and comes to rest hotly against your arm. Giving the horny wolf one last kiss on the muzzle, you take hold of his hard canine manhood and lead him by it to a nearby free bunk, accompanied by wolf-whistles and interested looks from the closer teammates. Quickly removing your clothes, you press your naked body against Septus for another deep kiss and moan 'I want to fuck you' to him. He answers 'Sure, baby - but be gentle, we usually fuck the cheerleaders, not each other...' then gets on the bunk, lying on his back and pulling his legs up to bare his hole for you.";
 	say "     Aroused by this muscular wolfman lying before you, waiting, you quickly climb on the bunk with him. Running your hands through the warm fur on his chest, you feel the strong muscles below, then move your hands to his legs and run them down his thighs towards the crotch. Putting a finger into your mouth to get it wet first, you slowly push it against Septus pucker until it yields and allows you entry. Yup, he's pretty tight - must not have been fucked all that often. Taking your time to prepare him for your cock, you spread his hole with one, then two fingers and massage his insides to loosen him up. After a bit longer, you think he's ready - and also, your own cock is aching to get into his tight wolfman ass, so you don't delay any more.";
 	WaitLineBreak;
-	say "     Leaning over Septus, you feel his chest-fur against you as you kiss his muzzle, meanwhile moving your hips into position. Then it's time to fuck - you thrust forward, sinking your hard shaft into his hole. It's amazingly tight an warm, gripping you like a vice and allowing only slow progress deeper inside. It takes a moment for Septus to get used to your intruding member, but soon he's silently moaning at the feelings it brings him. Your partner now finally ready to get fucked, you pull out of him most of the way, then slide your manhood back into his tight passage, starting up slow thrusts in and out. Guided by rising moans in lust, you speed up bit by bit and before too much longer, the two of you are enthusiastically coupling with each other on the bunk. Septus even says 'Deeper. Deeper.' in between satisfied moans and you eagerly comply.";
+	say "     Leaning over Septus, you feel his chest-fur against you as you kiss his muzzle, meanwhile moving your hips into position. Then it's time to fuck - you thrust forward, sinking your hard shaft into his hole. It's amazingly tight and warm, gripping you like a vice and allowing only slow progress deeper inside. It takes a moment for Septus to get used to your intruding member, but soon he's silently moaning at the feelings it brings him. Your partner now finally ready to get fucked, you pull out of him most of the way, then slide your manhood back into his tight passage, starting up slow thrusts in and out. Guided by rising moans in lust, you speed up bit by bit and before too much longer, the two of you are enthusiastically coupling with each other on the bunk. Septus even says 'Deeper. Deeper.' in between satisfied moans and you eagerly comply.";
 	say "     Given the wild ride you're giving Septus, it's no big wonder that he soon moans 'Almost ready *pant* to cum'. Reaching down to grab his hard cock, you stroke it a few times until it starts jerking in your hand, shooting long strings of cum all over his chest. Septus anal muscles twitching around your cock with each of his shots gives you the rest too. As you feel the orgasm rapidly approaching, you drive into the wolfman's deliciously tight asshole one last time, grinding your hips against his as you fill him with your seed. After your shaft shoots its last sting of cum into Septus, you slowly pull out of him and lie back on the bunk to rest for a moment. Turning on your side, you move closer to Septus cuddling up against his furry back and put an arm around him. 'That was... different. But quite nice once one gets into it. We should do it again sometime...'";
 
 
@@ -919,13 +917,13 @@ to say WolfTeamManager:
 	now HP of Septus is 6;
 	challenge "Football Wolfman";
 	if fightoutcome >= 10 and fightoutcome < 19:
-		say "     After parading you around for a while, the wolves drop you off with Jennifer atop a platform of crates. You pull her to your lupine chest and kiss her wildly, groping her ass as you do. This prompts a fresh wave of cheering, howling and wolf whistles from the crowd. With some effort, you get them to settle down so you can give a victory speech. During this, you tell them that you're the team manager now and that you're going to lead them to the top. It is chock full of trite and cliche sayings about giving 110%, their being the best team you've ever seen and the like, but in the heat of the moment, it all sounds very inspiring to you and to the team. You feel tougher after your victory and are truly eager to lead your team to greatness.";
+		say "     After parading you around for a while, the wolves drop you off with Jennifer atop a platform of crates. You pull her to your lupine chest and kiss her wildly, groping her ass as you do. This prompts a fresh wave of cheering, howling and wolf whistles from the crowd. With some effort, you get them to settle down so you can give a victory speech. During this, you tell them that you're the team manager now and that you're going to lead them to the top. It is chock full of trite and cliché sayings about giving 110%, their being the best team you've ever seen and the like, but in the heat of the moment, it all sounds very inspiring to you and to the team. You feel tougher after your victory and are truly eager to lead your team to greatness.";
 		say "     Partway through your speech, you call out to have Septus brought over and he's pushed forward by the others. Looking rather worse for the wear for his loss and clearly worried about his future on the team, you put your arm around him, giving him a tight hug. Telling the gathered wolfmen and cheerleaders that he put up a great fight for the team, you announce that you'll be making Septus the team captain. You add that while Jennifer will now be your number one girl for breeding new star players, you'll not break up their winning combination and will generously be letting their new team captain fuck her from time to time to show there are no hard feelings. This surprising announcement sends fresh howls and cheers through the group as well as perking the wolfman back up considerably. To show his thanks, he gives you a crushing hug that rapidly leads into groping and fondling as well.";
 		WaitLineBreak;
 		say "     With the rush of excitement from having watched a great fight as well as your rousing speech, things quickly devolve among the crowd as they start to break off into groups of threes and fours. The wolfmen and cheerleaders are soon going at it hot and heavy, licking, sucking, kissing and fucking like wild beasts. Not wanting to be left out of the fun, you grab Jennifer's ass and pull her onto your erection. After the first few thrusts have her moaning and squirming, you motion for Septus to come up and take his mom from the front while you get her from behind. He grins and pushes into her, the [if thirst of Jennifer is 2]pregnant [end if]cheerleader's cunny stuffed extra-full by having both of you in there together. Once he's fully thrust inside her, he gives you a big high-five and bounces the horny girl on both your rods.";
 		say "     It is a bit of a tight fit inside Jennifer's cunt along Septus's rod, much more than she normally gets, not that she seems to be minding the extra meat at all. If anything, it's making her all the more horny. You grin as she moans and squirms atop you both, her juicy cunny squeezing your two against one another as you both fuck her at once, manager and captain sharing the hot lead cheerleader. The three of you share many a wild, prolonged kiss as you fuck until can't hold back any longer and flood her [if thirst of Jennifer is 0]womb[else]very depths[end if] with virile seed from the team's two top wolves. It is very arousing for you to feel every pulse and throb of Septus's cock as he spurts his load into her alongside you.";
 		WaitLineBreak;
-		say "     It is some time before [if cockname of player is listed in infections of knotlist]both your knots go[else]Septus's knot goes[end if] down enough to allow you to pop free, lowering the thoroughly stuffed and creamed woman down onto her knees. Despite the powerful pounding and orgasms she's had, she's eager for more and grabs the two cum-soaked cocks in front of her, pulling them to her mouth. She starts with you as team manager, licking and sucking the mix of semen from you before turning to the team captain and doing the same. After that, it's back and forth between you both, working hard to suck you off. The sight of the lovely[if thirst of Jennifer is 2], pregnant[end if] cheerleader swapping back and forth as she sits in the growing pool of cum leaking out of her, is very arousing and has you both hard and ready for more in no time.";
+		say "     It is some time before [if player is knotted]both your knots go[else]Septus's knot goes[end if] down enough to allow you to pop free, lowering the thoroughly stuffed and creamed woman down onto her knees. Despite the powerful pounding and orgasms she's had, she's eager for more and grabs the two cum-soaked cocks in front of her, pulling them to her mouth. She starts with you as team manager, licking and sucking the mix of semen from you before turning to the team captain and doing the same. After that, it's back and forth between you both, working hard to suck you off. The sight of the lovely[if thirst of Jennifer is 2], pregnant[end if] cheerleader swapping back and forth as she sits in the growing pool of cum leaking out of her, is very arousing and has you both hard and ready for more in no time.";
 		say "     Taking new positions with Jennifer on all fours, you sink back into her creamy cunt for sloppy seconds while she continues sucking off Septus. While you're just as horny as before, your needs as team manager have you turn your attention to the others around the room for a bit as you leisurely thrust for a few minutes. You can't help but smile at the sight of the team getting along so well and everyone trying so hard to breed more powerful players for your growing team. You spot several groups who've decided to follow your lead and are sharing a cheerleader between a pair of them. And while those girls are struggling a little more at it than top cheerleader and breeder Jennifer could, their cries are those of ecstasy. Others are paired up spitroasting the girls or taking them in their pussy and ass at once. The others who are waiting for their chance with the girls are quite happy to strengthen their ties with their male teammates, stroking, sucking and fucking each other until they're called into the game to fuck one of the girls as soon as a teammate has drained his balls and stepped back.";
 		WaitLineBreak;
 		say "     Both proud and aroused by the sight of the orgy of team fucking going on, you smile and nod to Septus before setting yourself to the most enjoyable task of pounding the sexy cheerleader the two of you are sharing. The wolfman, already holding her head, starts thrusting harder and faster as well, grinning at the sounds of pleasure coming from her as the two wild wolves have their way with her breeder body. You howl as you cum, adding fresh semen to the hot load already inside her while Septus feeds her the contents of his balls.";
@@ -955,7 +953,7 @@ to say WolfTeamManager:
 		now Wolfman Lair is unknown;
 		now HP of septus is 99;
 	else:
-		say "     Turning tail from the pack of football wolfmen, you charge through a gap of the spectators, trying to make your way to the door. The crowd, angry and turning on you like a crowd of rugby hooligans, tackle you to the floor, crushing you under the weight of their numbers. The last of your strength is crushed out of you, leaving you exhausted while the crowd around boos and hisses at your cowardlyness.";
+		say "     Turning tail from the pack of football wolfmen, you charge through a gap of the spectators, trying to make your way to the door. The crowd, angry and turning on you like a crowd of rugby hooligans, tackle you to the floor, crushing you under the weight of their numbers. The last of your strength is crushed out of you, leaving you exhausted while the crowd around boos and hisses at your cowardliness.";
 		say "     When the wolves finally climb off of you and Septus pulls you to your feet, you can only groan weakly. 'And here I thought you might turn out to be a star player, but no, you had to be greedy. Mom's told us that a lot of the best guys who sign big contracts just stop trying, dragging the whole team down. To be on this team, you've got to be a team player. This is the end of your career, hot shot.' With a final growl, he tosses you out the door, throwing your gear out after you. As the door is slammed shut, you can hear the start of a team victory orgy. You stagger to your feet and limp back to the library with the knowledge you'll never be welcomed back by the team.";
 		now HP of player is 0;
 		move player to Grey Abbey Library;
@@ -964,12 +962,12 @@ to say WolfTeamManager:
 
 Section 7 - Cheerleading
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Wolfman Cheerleader";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -998,7 +996,7 @@ When Play begins:
 	now HP entry is 1;
 	now lev entry is 1;                 [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 1;                [ Monster's average damage when attacking. ]
-	now area entry is "nowhere";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere";        [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0;               [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0;         [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 0;          [ Cock width, more commonly used for ball size. ]
@@ -1017,8 +1015,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;            [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;            [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 to say CheerleaderTryout1:
@@ -1046,7 +1045,7 @@ to say CheerleaderTryout2:
 	let diceroll be a random number from 1 to 20;
 	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Dexterity-Check)";
 	increase diceroll by bonus;
-	say "     [line break][line break]";
+	LineBreak;
 	if diceroll > 16:
 		say "     Really showing off what you can do, you perform several difficult moves in front of the cheering (and leering, in case of the wolfmen) crowd. When you finish your demonstration some ten minutes later, Jennifer comes up to you and hands you a towel to wipe the sweat off your naked body. 'You've sure got a lot of potential. You're in - provisionally for now - come join me for training sometime and I'll teach you the moves and everything else you need to know.'";
 		now HP of Septus is 50;
@@ -1073,7 +1072,7 @@ to say CheerleaderPractice:
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], (Charisma-Check)";
 			increase diceroll by bonus;
-			say "     [line break][line break]";
+			LineBreak;
 			if diceroll > 16:
 				say "     Nodding to Jennifer, you saunter over towards the wolfman with the number 10 shown in red fur across his front and back. Donning your most seductive smile and doing some... stretches that show off your body to him, it doesn't take long till the conversation grinds to a halt, with Decimus whole attention riveted to your naked form and his cock quickly growing to full erection. As the horny wolfman gives a distracted excuse to his buddy and starts walking towards you, Jennifer steps up beside you and puts a hand on your shoulder. 'Very well done! I knew you could charm his socks off. Look at how hard you made him.' Giving the approaching wolfman's body a lust-filled look, she says 'You passed - now it's time to deal with the aftermath. Can't let our players get blue-balled, you know. Do you want to relieve him of some pressure, or should I?'";
 				LineBreak;
@@ -1206,7 +1205,7 @@ when play ends:
 	else:
 		if humanity of player > 10:
 			if HP of Septus is 5: [beat the entrance test, was at the lair]
-				say "     Even if you didn't become a wolfman yourself and join the team, Septus, Jennifer and the others are still very impressed with you. When the creation of the 'Shifted American Football League' is announced several months after you leave the city, you get invited to the first game, joining the players in the lockerroom and watching the action right from the side of the field. As a honorary member, you get a free lifetime ticket for their games and are always welcome in the player areas and at celebrations... which usually turn into orgies between the wolfmen and their cheerleaders sooner or later.";
+				say "     Even if you didn't become a wolfman yourself and join the team, Septus, Jennifer and the others are still very impressed with you. When the creation of the 'Shifted American Football League' is announced several months after you leave the city, you get invited to the first game, joining the players in the lockerroom and watching the action right from the side of the field. As an honorary member, you get a free lifetime ticket for their games and are always welcome in the player areas and at celebrations... which usually turn into orgies between the wolfmen and their cheerleaders sooner or later.";
 				if Jenniferwolves > 1:
 					say "     Your sons with Jennifer prove to be excellent players in their own right, making it into the top teams of the new sport. You're very proud every time you see one of them out on the field.";
 				else if Jenniferwolves is 1:

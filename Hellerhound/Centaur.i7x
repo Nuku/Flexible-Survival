@@ -1,18 +1,17 @@
 Version 2 of Centaur by Hellerhound begins here.
 [Version 2.3 - Updated to extended heat table - no MPreg heat - Stripes]
 
-[converted from FI]
-[ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-
 "Adds a mutant centaur to Flexible Survival's Wandering Monsters table"
-
-[Description text for this Extension.]
 
 Section 1 - Dry Plains
 
 [transplanted to Core Mechanics/Basic Rooms.i7x]
 
 Section 2 - Tainted Centaur Event
+
+Table of GameEventIDs (continued)
+Object	Name
+Apple Tree	"Apple Tree"
 
 Apple Tree is a situation. The level of Apple Tree is 6.
 The sarea of Apple Tree is "Plains".
@@ -24,12 +23,12 @@ Instead of resolving a Apple Tree:
 	say "     Wandering across the plains, you come to one of the few trees scattered throughout it. As you approach, you can see a centaur stallion plucking the apples from the tree and stuffing them into his pack and his mouth. A little wary, but hopeful at the prospect of food, you continue forward cautiously and approach from behind. As you get nearer, you can see that the centaur has become strange and twisted by the apples he's gathering and eating. Each time he gobbles one down, fresh green tentacles under his equine belly writhe and his large cock and balls become greener. Some roots from the tree have started to slide up his legs, moving to further corrupt him.";
 	say "     Shall you call out and continue to approach this tainted centaur?";
 	if player consents:
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Mutant Centaur":
 				now monster is y;
 				break;
-		choose row monster in table of random critters;
+		choose row monster in Table of Random Critters;
 		now area entry is "Plains";
 		now non-infectious entry is false;
 		say "     Noticing you, the centaur whinnies excitedly and pulls away from the tree roots with some effort. The roots writhe on the ground, as if searching for their prey, before finally slipping back under the earth to await another hungry victim. The centaur, not noticing what was starting to happen to him, trots over to you, cock swelling and tentacles writhing beside that throbbing, leaf-green meat. His sheath and ballsack are a dark green in color. He looks you over and, with a booming voice, asks: 'Are you going to submit to me?' You have a feeling that if you don't agree, he'll try to take what he wants by force.";
@@ -38,6 +37,7 @@ Instead of resolving a Apple Tree:
 			now centaurmate is 1;
 			say "[centaur attack]";
 			increase score by 20;
+			now Resolution of Apple Tree is 1; [fought the apple tree mutant centaur]
 		else:
 			say "The centaur roars 'Fine then, be unwilling, but by the end you will want to be mine anyway!'";
 			now centaurmate is 2;
@@ -48,11 +48,13 @@ Instead of resolving a Apple Tree:
 			else:
 				say "     'If you're going to be so mule-headed about accepting my gifts, I will go find others to be my mare. There are plenty of other centaurs to fill with my tainted seed,' he laughs as he gallops off. It seems you've unleashed a new blight upon the plains.";
 				increase score by 1;
+			now Resolution of Apple Tree is 2; [submitted to the apple tree mutant centaur]
 		extend game by 8;
 	else:
 		say "     Deciding not to risk the attention of this corrupted creature, you move back quietly. As you do, the tree roots sink into his flesh and entwine with his own forming tentacles. The mutant centaur moans and whinnies in pleasure as tendrils grow and sprout from his back and torso. When he finally climaxes, it is a thick, sap-like fluid that stains the ground green. When the tree roots withdraw from him, he staggers off slowly, hooves slowly changing into roots that cling at the ground as he steps. The growing tendrils reach up and branch out, starting to grow leaves and apple blossoms. Quite certain that the tainted centaur will take root soon and become another of these strange apple trees, you resolve to stay away from any more of these trees you find.";
+		now Resolution of Apple Tree is 99; [disinterest]
 		increase score by 1;
-	Now Apple Tree is resolved;
+	now Apple Tree is resolved;
 
 
 Section 3 - Fresh Apple
@@ -165,7 +167,7 @@ An everyturn rule:
 
 To say centaur attack:
 	if cocks of player is not 0:
-		say "The centaur flips you over, and then looks you over as you go limp. he snarls at the sight of your cock. 'Little bastard,' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [cock of player] member. They tighten, slowly at first, then faster until your poor cock is bleeding from every hole, trying to relieve the pressure. [compresscock]The centaur leaves you like that. 'Never come with one of those again.'";
+		say "The centaur flips you over, then looks you over as you go limp. He snarls at the sight of your cock. 'Little bastard,' he growls, twin green tentacles from his underside reaching out and wrapping around the base of your [cock of player] member. They tighten, slowly at first, then faster until your poor cock is bleeding from every hole, trying to relieve the pressure. [compresscock]The centaur leaves you like that. 'Never come with one of those again.'";
 		[male fury, centaur wants mate, not a companion!]
 	if player is female:
 		say "[centaur rape female]";
@@ -198,14 +200,14 @@ to say centaurmeet:
 
 Section 5 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 
 When Play begins:
 	add "Mutant Centaur" to infections of guy;
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Mutant Centaur"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -234,7 +236,7 @@ When Play begins:
 	now HP entry is 45;
 	now lev entry is 6; [ Level of the Monster, you get this much HP if you win, or this much HP halved if you lose ]
 	now wdam entry is 8; [Amount of Damage monster Does when attacking.]
-	now area entry is "nowhere"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
+	now area entry is "Nowhere"; [ Current options are 'Outside' and 'Mall'. Case sensitive]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 24; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 24; [ Size of balls apparently ;) sneaky Nuku]
@@ -253,16 +255,18 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 	now scale entry is 4; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[one of]muscular[or]centaur[or]corrupted[at random]";
 	now type entry is "centaur"; [ one-word creature type. Ex: feline, canine, lupine, robotic, human... Use [one of] to vary ]
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is true; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hoofstomp"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 6 - Centaur Heat
@@ -294,6 +298,5 @@ when play ends:
 			say "     The military, having cordoned off the section of the plains nearest the city, try to keep the corrupted centaurs contained. The electric fence they initially erected at the edge of their lines does not hold out for long once your people make a concerted effort to cross it. Many manage to fight through the military barricade and soldiers, escaping to create herds of their own elsewhere. Eventually, the military manages to contain the rest of your people by using heavy equipment to dig a large trench and build a tall, concrete wall on the other side. Your people still have the large section of plains inside this wall and can make forays into the city to find more new members to be inducted into the herd.";
 		else:
 			say "     Your odd body attracts some attention from the military scientists when you and the others the soldiers can find are rescued. Your differences from the standard centaurs are noted and tested briefly, but you are categorized as an anomaly and given little further scrutiny, as there are more important and dangerous things to focus on than a centaur with green genitals. The other centaurs don't speak to you, always glaring at you or eying you suspiciously. With your altered body, you have little option of a regular life and take up a life as a farm hand. You do gardening and normal farm chores as well as give rides and perform pulling services. Your employer is understanding of your needs and allows you to mate with the horses there when the need arises[if player is female]. You bear a few foals over the years, centaurs like yourself with green genitals, but no sign of the tentacles or any further corruption, thankfully[end if].";
-
 
 Centaur ends here.

@@ -1,6 +1,10 @@
 Version 1 of Amaryllis by Song begins here.
 [ Version 1.0 - Initial talk options and sex scenes - Song                      ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Amaryllis	"Amaryllis"
+
 Amaryllis is a woman. Amaryllis is in Equinoid Camp.
 The description of Amaryllis is "[AmaryllisDesc]".
 The conversation of Amaryllis is { "I choose you, playerchu!" }.
@@ -71,13 +75,9 @@ to say AmaryllisTalkMenu:
 				wait for any key;
 				say "[AmaryllisTalkMenu]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You excuse yourself and step back from Amaryllis.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You excuse yourself and step back from Amaryllis.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -151,12 +151,8 @@ to say AmaryllisSexMenu:
 				if (nam is "Anal ride"):
 					say "[AmaryllisSex3]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from Amaryllis, shaking your head slightly as she gives a questioning look.";
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from Amaryllis, shaking your head slightly as she gives a questioning look.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	wait for any key;
@@ -176,7 +172,7 @@ to say AmaryllisSex2: [Vaginal ride]
 	say "     You tell Amaryllis that you've been eyeing her lovely endowments, and you were wondering if she would be willing to indulge you. The herm creases a sultry smile at this and reaches below to tease a finger along her medial ring. Your gaze is drawn to her impressive endowments, and you unthinkingly reach out to wrap your hands around her cockflesh, squeezing and stroking that mesmerizing pillar. Your fingers brush over the equinoid's length as it pulses and drips onto the ground before you, the scent of her virility suffusing the air in a thick, heady miasma. 'Mmph. You really want this, don't you?' she teases, her hands slipping down to your rear for a lustful squeeze. 'You want to carry my strong, brave foals and spread our wonderful gift.' You give a rapid nod at the equinoid's words, too aroused by her scent and dominant tone to think of anything but the bliss of being bred.";
 	say "     With an affectionate smile, the dual-sexed warrior instructs you to turn around for a moment. Made to face the rest of the camp, you realize with a start that you've already drawn some onlookers, the equines stroking themselves openly as they watch with lecherous intent. Distracted as you are by their enticing display, you fail to notice the movement behind you until you're hoisted into the air in one smooth motion, Amaryllis holding you aloft with almost alarming ease. Her breasts lend support as those large, soft hands roam over your body, teasing you sensually and skillfully while her warm breath beats across your nape. In this new, compromising position, her flare is free to brush along your slavering equine pussy, the tantalizing contact making you moan and beg for the powerful stallion to fuck you.";
 	WaitLineBreak;
-	say "     As if on cue, the equinoid's grip relents, letting gravity pull you down and spear you on her hard and throbbing cock. The sheer volume of equine meat stuffing your sable-fleshed folds makes you groan in absent ecstasy, distended cunt drooling around her deliciously twitching tool. You try to push down against the equinoid's crotch, but your angled approach makes hilting yourself nigh impossible. 'So eager,' Amaryllis teases slyly[if breast size of player > 0] while you drool across your own breasts[else if player is male] while you drool across your own cock[smn][end if], debilitating pleasure spreading like wildfire. When her strong hands begin to lift you off her length again, it's as if a great chasm is opening within your quivering folds, a yawning divide that yearns to be filled again. In one harsh thrust, your mind goes blank again, losing yourself in the primal bliss of being spread around your partner.";
+	say "     As if on cue, the equinoid's grip relents, letting gravity pull you down and spear you on her hard and throbbing cock. The sheer volume of equine meat stuffing your sable-fleshed folds makes you groan in absent ecstasy, distended cunt drooling around her deliciously twitching tool. You try to push down against the equinoid's crotch, but your angled approach makes hilting yourself nigh impossible. 'So eager,' Amaryllis teases slyly[if breast size of player > 0] while you drool across your own breasts[else if player is male] while you drool across your own cock[smn][end if], debilitating pleasure spreading like wildfire. When her strong hands begin to lift you off her length again, it's as if a great chasm is opening within your quivering folds, a yawning divide that yearns to be filled. In one harsh thrust, your mind goes blank again, losing yourself in the primal bliss of being spread around your partner.";
 	say "     The sex that follows is acutely felt, yet hazy in details. Every buck into your sordid snatch erodes your thoughts and inhibitions further until you're whinnying like a mare in heat. At points, Amaryllis pounds into your hungry tunnel with such animalistic zeal that it feels like you're being ravaged by a feral horse, slickened squelches sounding out on every rugged impact. The herm pauses at just the right moments to edge and let your lusts simmer, keeping you constantly aroused, soon begging to be filled with her seed. The rough, bestial mating is almost overwhelming, reducing your already hazy thoughts to fantasies of being a slutty, well-fucked breeding mare for the herd's powerful warriors.";
 	WaitLineBreak;
 	say "     At last, Amaryllis can't hold back any longer. The horse-hung warrior cinches you firm to her curvaceous form, fingers splaying to grip into your hide. Her head cranes to the [if daytimer is day]sky[else]starry sky above[end if] as she unleashes thick, heavy ropes of seed into your waiting womb, filling you with powerful blasts of cum that swell your dark-furred stomach. Groaning with need, you clamp down hard around her cock as orgasm takes hold, squirting messily around that twitching, pulsing pillar[if player is male] while your own, neglected length[smn] spurt[smv] all over the ground before you[end if]. Your lucky voyeurs are pushed past their limits as well, adding to the pervasive scent of sex and arousal that permeates the area.";

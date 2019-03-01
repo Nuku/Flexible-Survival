@@ -45,7 +45,7 @@ to say Alpha Husky attack:
 				if humanity of player < 10:
 					end the story saying "[alpha husky bitch]";
 		else:
-			choose row monster from table of random critters;
+			choose row monster from Table of Random Critters;
 			if HP of player > 1 and sex entry is "Male":
 				say "     The alpha stands over you as you cower before him. 'Giving up?' he asks. 'You're not suited to be a bitch, but then again...' He moves about you and grabs your hips, lifting you up onto all fours, then leaving you there as he stares for a moment, perhaps considering the possibilities. As the tension grows, he crouches in front of you, and his thick canine shaft dangles from its sheath, half-full with promise of what is to come. 'Be a good doll,' he huffs. He thrusts his hips forward, and the shaft bobs in motion, tapping against your face. You hesitate a moment, and his paws seize your ears, pulling you into the half-firmed flesh. You take the slick, red pecker in your mouth and taste its saltiness, your tongue flicking over the tip to his immediate growl of approval.";
 				say "     'Deeper,' he commands, grinding his furry groin to your face as the shaft slides across your tongue, growing firmer by the moment. Your eagerness builds as his scent fills your nose. You draw back and plunge down along the shaft as he rocks up against you, fucking your mouth with an increasingly fast tempo. You can feel the start of his knot swelling with each motion. He shudders and pushes you back roughly, 'Not yet.'";
@@ -71,14 +71,18 @@ to say Alpha Husky attack:
 			else:
 				say "     'You think someone like you can stand up to an alpha?' The victorious husky growls at you, snapping his teeth in your face and making you cringe backwards in submission. 'Better you know your place as the lowly little bitch you should be,' he says with a grin full of canine amusement as he pounces you, pinning you down with his teeth on your neck until he is satisfied with your increasingly nervous body's surrender. Backing off, he sniffs in your direction several times, before stalking off with his tail held high in the air behind him. 'Come back and see me when you are ready to be a proper bitch,' the taunting male calls over his shoulder as you lie there, panting, feeling like you just survived a narrow escape.";
 			infect "Female Husky";
-		if husky gathering is resolved and fertile pill is owned:
+		if Husky Gathering is inactive and Husky Gathering is not resolved and fertile pill is owned:
 			say "     You notice that one of your pills seems to be missing. A fertile pill. What would the alpha want with one of those? The mystery has no immediate answers, and you proceed back to safer grounds.";
 			delete fertile pill;
-			now husky gathering is unresolved;
+			now Husky Gathering is active;
 
-husky gathering is a situation. It is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Husky Gathering	"Husky Gathering"
 
-Instead of resolving husky gathering:
+Husky Gathering is a situation. It is inactive.
+
+Instead of resolving Husky Gathering:
 	say "     A sudden chorus of barks and shouts catches your attention. Just emerging from around the bend is a group, no, pack of huskies. Most appear male, and those males catch sight of you. Approaching with a joyous war cry, they move to try and cut off your escape.";
 	Challenge "Alpha Husky";
 	if fightoutcome >= 20 and fightoutcome <= 29:
@@ -115,7 +119,7 @@ to say alpha huskypack lost:
 
 
 to say alpha huskypack victory:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if player is not submissive:
 		say "     You stand victorious as the huskies whimper in defeat. They know who the one in charge is, for now at least. One of the downed dogs rolls over in front of you, paws in the air and wagging his tail. The others join in with soft yelps and whines, endeavoring to win your favor.";
 		if humanity of player > 60 or libido of player < 50:
@@ -283,12 +287,12 @@ to say alphahuskyreleased:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	add "Alpha Husky" to infections of guy;
 	add "Alpha Husky" to infections of furry;
 	now name entry is "Alpha Husky";
@@ -338,7 +342,8 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;  [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;
-	blank out the nocturnal entry;  [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;  [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hump";  [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Alpha Husky ends here.

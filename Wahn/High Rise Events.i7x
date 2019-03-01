@@ -1,6 +1,10 @@
 Version 1 of High Rise Events by Wahn begins here.
 [ Version 1 - First Event ]
 
+Table of GameEventIDs (continued)
+Object	Name
+Road Fuck Aftermath	"Road Fuck Aftermath"
+
 Road Fuck Aftermath is a situation.
 The sarea of Road Fuck Aftermath is "High".
 
@@ -16,9 +20,11 @@ Instead of resolving a Road Fuck Aftermath:
 		say "     It takes some effort not to come into contact with the drying goop on the car seat, but eventually, you manage to pry the shoes out of the windshield and add them to your pack.";
 		LineBreak;
 		increase carried of stiletto heels by 1;
+		now Resolution of Road Fuck Aftermath is 1; [grabbed the shoes]
 	else:
 		LineBreak;
 		say "     With a shrug, you turn your back on the car and leave.";
+		now Resolution of Road Fuck Aftermath is 2; [left the shoes]
 	now Road Fuck Aftermath is resolved;
 
 High Rise Events ends here.

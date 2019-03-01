@@ -51,7 +51,7 @@ To set the/-- status window to open above the/-- main window:
 To set the/-- status window to open below the/-- main window:
 	(- statuswin_pos = 19; -);
 
-The status window position is a number that varies. The status window position variable translates into I6 as "statuswin_pos". [The initial/default value of statuswin_pos is set within the I6 VM_Initialise routine below.]
+The status window position is a number that varies.[@Tag:NotSaved] The status window position variable translates into I6 as "statuswin_pos". [The initial/default value of statuswin_pos is set within the I6 VM_Initialise routine below.]
 
 Include (-
 
@@ -64,7 +64,7 @@ Section - Phrases to set color of text grid windows
 
 [The background color must be set before the window is opened.]
 
-The status window background reversed is a truth state that varies. Status window background reversed is true.
+The status window background reversed is a truth state that varies.[@Tag:NotSaved] Status window background reversed is true.
 
 To set the background of the status window to be/-- reversed-out:
 	now status window background reversed is true;

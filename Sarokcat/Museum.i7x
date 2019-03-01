@@ -3,7 +3,11 @@ Version 2 of Museum by Sarokcat begins here.
 
 "Adds an adventuring area to Flexible Survival with a Sphinx and some searching."
 
-Section 1- Museum environment
+Section 1 - Museum environment
+
+Table of GameRoomIDs (continued)
+Object	Name
+Museum Foyer	"Museum Foyer"
 
 Museum Foyer is a room. It is fasttravel.
 The earea of Museum Foyer is "Museum".
@@ -11,21 +15,31 @@ The earea of Museum Foyer is "Museum".
 The description of Museum Foyer is "[museumdesc]".
 
 to say museumdesc:
-	if HP of Solstice is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned, now Adventurer is unresolved;  [Solstice's quest available after visiting the Museum]
-	say "You find yourself standing in the foyer of a large museum, apparently one equipped with an emergency generator of some sort as the electric lighting while dim, still appears to be functioning. The dim lighting casts shadows throughout the large area, evoking a sense of danger and mystery. Along the walls near you are several paintings and small bits of history that would probably be priceless if you had time to worry about such things right now. More disturbing perhaps is the empty pedestal in the center of the entryway, its name plaque proudly proclaiming a preserved woolly mammoth cub to be displayed in the empty spot. Looking further into the area you can see a circular desk marked 'Information'.";
+	if HP of Solstice is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned, now Adventurer is active;  [Solstice's quest available after visiting the Museum]
+	say "     You find yourself standing in the foyer of a large museum, apparently one equipped with an emergency generator of some sort as the electric lighting, while dim, still appears to be functioning. The dim lighting casts shadows throughout the large area, evoking a sense of danger and mystery. Along the walls near you are several paintings and small bits of history that would probably be priceless if you had time to worry about such things right now. More disturbing perhaps is the empty pedestal in the center of the entryway, its name plaque proudly proclaiming a preserved woolly mammoth cub to be displayed in the empty spot. Looking further into the area you can see a circular desk marked 'Information'.";
 
 instead of sniffing Museum Foyer:
 	say "The museum smells of ancient things come to life once more.";
 
 Museum entry is a door. "The museum halls stretch off towards the east.". It is dangerous.
 
-East of Museum foyer is Museum entry.
-East of Museum entry is Museum interior.
+Museum entry is east of Museum foyer.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Museum interior	"Museum interior"
+
+Museum interior is a room.
+Museum interior is east of Museum entry.
 
 The marea of Museum entry is "Museum".
 
+Table of GameCharacterIDs (continued)
+object	name
+Valerie	"Valerie"
+
 Valerie is a woman.
-The description of Valerie is "Lying on part of the information desk is what at first appears to be a large lioness, as you move closer it turns its head towards you revealing the pretty face of a woman with slight feline features atop the long leonine body. You realize she is actually a sphinx of some sort, with the lower legs of a lioness, the front paws (and breasts) of an anthro lion, the head of a beautiful woman, and soft wings gracing her back tightly tucked up to her sides, and if the name tag on the counter next to her is any indication, her name is Valerie.".
+The description of Valerie is "Lying on part of the information desk is what at first appears to be a large lioness. As you move closer, it turns its head towards you, revealing the pretty face of a woman with slight feline features atop the long leonine body. You realize she is actually a sphinx of some sort, with the lower legs of a lioness, the front paws (and breasts) of an anthro lion, the head of a beautiful woman, and soft wings gracing her back, tightly tucked up to her sides. If the name tag on the counter next to her is any indication, her name is Valerie.".
 The conversation of Valerie is { "Riddle me this!" }.
 The icon of Valerie is Figure of Valerie_icon.
 Valerie is in Museum Foyer.
@@ -39,15 +53,15 @@ instead of sniffing valerie:
 
 instead of conversing the Valerie:
 	if valtalk is 0:
-		say "     'Oh hey, a visitor,' the sphinx says as she focuses her attention on you. 'Haven't had many of those since this all started,' she says gesturing out at the chaos outside. 'Well, in case you haven't figured it out by now, my name is Valerie and I'm one of the few museum workers left.' She pauses for a second, then continues. 'Well, one of the few I know about. Some of the strange creatures around here might also have been museum workers, but it would be kind of hard to tell at this point. Not that I can really comment myself,' Valerie adds as she gestures at her long leonine form.";
+		say "     'Oh hey, a visitor,' the sphinx says as she focuses her attention on you. 'Haven't had many of those since this all started,' she says, gesturing out at the chaos outside. 'Well, in case you haven't figured it out by now, my name is Valerie and I'm one of the few museum workers left.' She pauses for a second, then continues. 'Well, one of the few I know about. Some of the strange creatures around here might also have been museum workers, but it would be kind of hard to tell at this point. Not that I can really comment myself,' Valerie adds as she gestures at her long leonine form.";
 		say "     'I was in the Egypt exhibit readying for opening when this all started, and I found myself changing. I find I don't really mind the changes though,' the sphinx says with an enigmatic smile. 'You wouldn't believe how comfortable it is just to relax and be a sphinx. Definitely better than most of the creatures I've seen wandering the halls. Course it can be rather lonely sometimes being the only sphinx,' she says as she shoots you a contemplative look. 'And I have the strangest compulsion to ask riddles of people, not that there have been any of those around either,' Valerie comments. 'Hmm, I do hope you will be staying around here a bit more, and just let me know if you have any questions about the museum itself.'";
 		increase valtalk by 1;
 	else if Dexterity of Erica is 1:
-		say "     Walking up to Valerie, you explain Eric's plight - being stuck between male and female, with the nanite infection being unable to finish what it started. As you ask her if she might know some relic or artifact that might help, the sphinx blows out her breath and answers with a chuckle, 'Magic? Who believes in magic these days - says the greek sphinx sitting on the front desk of a strangely large museum. Ha! Yeah, I guess there could be something around that might help. Let me think.' The female sphinx pauses to mull things over, murmuring things like '...the bowl of Ham- nah, that's got a hole. Maybe Osiris...' Eventually, she clicks her fingers and calls out, 'Ah, I think I got something. There's the story of the young man Tiresias, a priest of Zeus, who encountered two snakes mating. He hit them with a stick and as punishment for that got transformed into a woman by Hera. Afterwards, Tiresias became a priestess of Hera, married and had children, including Manto. So, since it's in the mythology... I'd try to find the greek wing. There is an exhibit somewhere in there about the [bold type]Temple of Hera[roman type]. Good luck, you'll need it - Greek Gods are notoriously short-tempered.";
-		now Temple of Hera is not resolved;
+		say "     Walking up to Valerie, you explain Eric's plight - being stuck between male and female, with the nanite infection being unable to finish what it started. As you ask her if she might know some relic or artifact that might help, the sphinx blows out her breath and answers with a chuckle, 'Magic? Who believes in magic these days - says the Greek sphinx sitting on the front desk of a strangely large museum. Ha! Yeah, I guess there could be something around that might help. Let me think.' The female sphinx pauses to mull things over, murmuring things like '...the bowl of Ham- nah, that's got a hole. Maybe Osiris...' Eventually, she clicks her fingers and calls out, 'Ah, I think I got something. There's the story of the young man Tiresias, a priest of Zeus, who encountered two snakes mating. He hit them with a stick and as punishment for that got transformed into a woman by Hera. Afterwards, Tiresias became a priestess of Hera, married and had children, including Manto. So, since it's in the mythology... I'd try to find the Greek wing. There is an exhibit somewhere in there about the [bold type]Temple of Hera[roman type]. Good luck, you'll need it - Greek Gods are notoriously short-tempered.";
+		now Temple of Hera is active;
 		now Dexterity of Erica is 2;
 	else:
-		say "     [one of]'There are some satyrs running wild in the halls, I think they are from the greek wing. Did you know there were sphinx legends in Greece too?'[or]'Those damn nymphs get into everything! And they won't stop giggling!'[or]'Hey if you see the minotaur wandering around while your out there, let him know he left his battleaxe over in the Roman wing will you? Thanks!'[or]'History is a fascinating subject, don't you agree?'[or]'What goes on three legs at morning... no no no, that ones already been done.'[or]'What's black and white and, no, wait, I don't think dirty jokes count....'[or]'Several of the old stuffed displays seem to have wandered off on their own, if you see them would you remind them they are only supposed to do that after visiting hours?'[or]'I think the sabretooth lion was eyeing me speculatively the other day, hmm he does have such handsome flanks and tusks, still I DO prefer a bit of intellectual stimulation first...'[or]'I swear, what kind of museum is it where none of the exhibits will hold still! I mean it wouldn't be so bad if they actually took their name plaques with them, but noooo!'[or]'If you think it's crazy out here, you should see back in the museum archives! You wouldn't believe how nuts it is back there.'[or]'Hmm, I wonder what's going to happen to some of the exhibits after all this, some of the artifacts and artwork here is historically priceless!'[or]'When I was leaving the Egyptology area, I swear I saw some jackal-headed beasts. I was probably seeing things, but then again in this place, who knows?'[or]'Don't go near the modern art wing, trust me on this. I locked that area up for a reason.' She shudders at some remembered horror.[or]'I swear I saw one of the robot mockups walking around, though I don't know how that could be possible. I'm not really sure how any of the rest of this is possible either.'[or]'Can I help you with something?'[or]'Did you want to try a riddle?'[or]'I wonder what's going on in the dinosaur wing...[at random]";
+		say "     [one of]'There are some satyrs running wild in the halls, I think they are from the Greek wing. Did you know there were sphinx legends in Greece too?'[or]'Those damn nymphs get into everything! And they won't stop giggling!'[or]'Hey if you see the minotaur wandering around while your out there, let him know he left his battleaxe over in the Roman wing will you? Thanks!'[or]'History is a fascinating subject, don't you agree?'[or]'What goes on three legs at morning... no no no, that ones already been done.'[or]'What's black and white and, no, wait, I don't think dirty jokes count....'[or]'Several of the old stuffed displays seem to have wandered off on their own, if you see them would you remind them they are only supposed to do that after visiting hours?'[or]'I think the sabretooth lion was eyeing me speculatively the other day, hmm he does have such handsome flanks and tusks, still I DO prefer a bit of intellectual stimulation first...'[or]'I swear, what kind of museum is it where none of the exhibits will hold still! I mean it wouldn't be so bad if they actually took their name plaques with them, but noooo!'[or]'If you think it's crazy out here, you should see back in the museum archives! You wouldn't believe how nuts it is back there.'[or]'Hmm, I wonder what's going to happen to some of the exhibits after all this, some of the artifacts and artwork here is historically priceless!'[or]'When I was leaving the Egyptology area, I swear I saw some jackal-headed beasts. I was probably seeing things, but then again in this place, who knows?'[or]'Don't go near the modern art wing, trust me on this. I locked that area up for a reason.' She shudders at some remembered horror.[or]'I swear I saw one of the robot mockups walking around, though I don't know how that could be possible. I'm not really sure how any of the rest of this is possible either.'[or]'Can I help you with something?'[or]'Did you want to try a riddle?'[or]'I wonder what's going on in the dinosaur wing...[at random]";
 
 Valtalk is a number that varies.
 Riddlewin is a number that varies.
@@ -72,19 +86,19 @@ carry out riddlesphinxing:
 		say "     Valerie smiles enigmatically as you try to engage her in another riddle contest. 'I'm sorry, but even I can't think of a truly challenging new riddle that quickly. I am still new to this whole sphinx thing after all. Why don't you come back and try again later,' she says with a dismissive flick of her tail as she goes back to what she was doing.";
 		stop the action;
 	now lastriddlesphinx is turns;
-	say "     Ooooh, you think you can beat me in a riddle contest? Let's find out shall we? I might even have a prize for you if you win. Of course, if you lose....";
+	say "     'Ooooh, you think you can beat me in a riddle contest? Let's find out, shall we? I might even have a prize for you if you win. Of course, if you lose...'";
 	let bonus be (( the Intelligence of the player minus 10 ) divided by 2);
 	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
 	if diceroll > 15:
-		say "     'Oh my, that's right!' Valerie exclaims, obviously impressed at your mental prowess. 'You are a smart one aren't you?' she continues, giving you a speculative glance as she purrs. 'We should definitely do this again sometime soon. Oh, and I did mention a prize, didn't I? Here, I suppose you earned this...' she says as she pushes an item towards you. 'I found it lying around here somewhere. Maybe you can make better use of it. Of course, if you keep answering my riddles properly, maybe we can see about a proper reward for us both?' the sphinx says with a smug look on her face, leaving no doubt as to what she is talking about.";
+		say "'Oh my, that's right!' Valerie exclaims, obviously impressed at your mental prowess. 'You are a smart one aren't you?' she continues, giving you a speculative glance as she purrs. 'We should definitely do this again sometime soon. Oh, and I did mention a prize, didn't I? Here, I suppose you earned this...' she says as she pushes an item towards you. 'I found it lying around here somewhere. Maybe you can make better use of it. Of course, if you keep answering my riddles properly, maybe we can see about a proper reward for us both?' the sphinx says with a smug look on her face, leaving no doubt as to what she is talking about.";
 		increase riddlewin by 1;
 		if riddlewin > 2:
-			say "     'I'll also be going around the museum to do some of my rounds soon. I wouldn't mind a little companionship on these trips. If you'd like to tag along, perhaps we might even find something interesting to do,' she says with an coy smile and a swish of her tail.";
-		let prizegift be a random number from 1 to number of filled rows in the table of random critters;
-		choose row prizegift from the table of random critters;
+			say "     'I'll also be going around the museum to do some of my rounds soon. I wouldn't mind a little companionship on these trips. If you'd like to tag along, perhaps we might even find something interesting to do,' she says with a coy smile and a swish of her tail.";
+		let prizegift be a random number from 1 to number of filled rows in the Table of Random Critters;
+		choose row prizegift from the Table of Random Critters;
 		if there is a loot entry:
 			if loot entry is not "" and loot entry is not " ":
 				add loot entry to invent of player;
@@ -94,7 +108,7 @@ carry out riddlesphinxing:
 				say "You acquired some dirty water!";
 		infect "Sphinx";
 	else:
-		say "     'That's completely wrong!' Valerie says as she shoots you a smug look. 'Maybe you'll have better luck next time, but I'm not impressed so far,' the sphinx says with a derisive swish of her tail as she dismisses you. You feel somewhat humiliated by your loss, and strangely even feel as if you have lost a little bit of your humanity to the sphinx's wiles.";
+		say "'That's completely wrong!' Valerie says as she shoots you a smug look. 'Maybe you'll have better luck next time, but I'm not impressed so far,' the sphinx says with a derisive swish of her tail as she dismisses you. You feel somewhat humiliated by your loss, and strangely even feel as if you have lost a little bit of your humanity to the sphinx's wiles.";
 		decrease humanity of player by 10;
 		infect "Sphinx";
 
@@ -128,7 +142,7 @@ instead of fucking Valerie:
 				say "     Once she has you on the ground, she lets out a rumbling purr as she stalks around you, seemingly contemplating her next action, before sprawling on the ground next to you, her rear near your face as her feline hands rub along your legs. She lowers her face to nuzzle your nether regions, causing you to gasp. The amused sphinx looks back at you and then lifts one of her leonine legs up a bit, causing you to turn and look at her eagerly exposed sex, resting between those feline hind legs, its puffy lips obviously wet and needing your attention. Having initiated the situation, you can hardly deny her needs, especially when she draws her slightly rough tongue across your already excited lips, and you find yourself cautiously moving between those strong feline legs to tease her feline opening with your hands and tongue.";
 				say "     Valerie moans needfully as you rub and lick her, her body obviously desperate for this kind of attention, her soft fur tickling your face as she rubs herself against you. Then it is your turn to moan in pleasure as she applies her creative intellect to teasing and pleasuring your own female passage, tracing her soft claws around the sensitive edges, while she probes deeper into you with her slightly feline tongue. Soon the two of you are both making rough, needy, bestial moans and panting as you pleasure each other on the floor of the museum, bringing each other to orgasm again and again in a contest of carnal creativity and stamina. Eventually your exhausted body can take no more, and Valerie gives off her rumbling purr as she strokes her feline like hand along your inner thighs for a minute or two, before slowly hauling herself up, and jumping back up to the information desk for some rest of her own.";
 			else:
-				say "     Once she has you on the ground, she pounces atop you with a playful rumble and grinds her feline body against you. She starts by nuzzling and kissing you, adding in the occasional nibble on your ear and neck, but slowly drifts lower[if breast size of player > 0]. She runs her lightly raspy tongue across your nipples, much to your delight. Grinning at your reaction, she continues licking while one of her feline paws rubs and kneads one of your [breast size desc of player] breasts. She's quite careful, using only just enough of her claws to intensify the sensation, but not to scratch your lovely bosom[else]. She runs her lightly raspy tongue across your [skinname of player] skin as she licks your flat chest[end if]. As she continues to drift downwards, her lips and tongue play across your belly and hips before finally coming to your groin.";
+				say "     Once she has you on the ground, she pounces atop you with a playful rumble and grinds her feline body against you. She starts by nuzzling and kissing you, adding in the occasional nibble on your ear and neck, but slowly drifts lower[if breasts of player > 0 and breast size of player > 0]. She runs her lightly raspy tongue across your nipples, much to your delight. Grinning at your reaction, she continues licking while one of her feline paws rubs and kneads one of your [breast size desc of player] breasts. She's quite careful, using only just enough of her claws to intensify the sensation, but not to scratch your lovely bosom[else]. She runs her lightly raspy tongue across your [skinname of player] skin as she licks your flat chest[end if]. As she continues to drift downwards, her lips and tongue play across your belly and hips before finally coming to your groin.";
 				say "     Quite worked up now after all the teasing, you moan in delight as that feline tongue of hers slides across your already excited folds. She takes several more licks across your pussy before pushing it right into your needy cunt, lapping into you to get your feminine juices. You run your hands over the sphinx's head, moaning in pleasure and encouraging her to continue. She turns out to be a very clever lover, using her mouth and paws in many interesting and pleasurable ways. She is also very teasing about it, drawing you back from the edge of your peak several times, leaving you almost begging for her for more before she finally drives you to a crashing orgasm with some particularly artful tonguework. You are left exhausted and panting on the floor as the grinning sphinx climbs back onto the information desk. She grins smugly as she rests atop it, licking her lips and grooming her paws clean of your juices.";
 			infect "Sphinx";
 	else:

@@ -18,7 +18,7 @@ when play begins:
 
 to say latexerminedesc:
 	setmongender 4; [creature is female]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
@@ -52,7 +52,7 @@ to say losetolatexermine:
 		say "     Pleased that you've finally relented, she pulls you into a kiss, pressing her soft, smooth body against yours. ";
 	else:
 		say "     Eventually, the temptation she represents become too much for you and you stop resisting. She pulls you into a kiss with a happy giggle, pressing her soft, smooth body against yours. ";
-	say "     The latex female runs her hands over you, reaching back to grab your ass firmly and give it a squeeze while pushing her tongue into your mouth. You respond by sucking down on the slick intruder and groping her in return. Soon enough, you're rolling around on the ground together, fondling each other with growing lust.";
+	say "The latex female runs her hands over you, reaching back to grab your ass firmly and give it a squeeze while pushing her tongue into your mouth. You respond by sucking down on the slick intruder and groping her in return. Soon enough, you're rolling around on the ground together, fondling each other with growing lust.";
 	if bodyname of player is "Latex Ermine" and player is pure and player is not neuter:
 		if player is male:
 			say "     Finding your latex mustelid body to be just what she's looking for, she eventually ends up stretched out on the ground beneath you with her legs spread and her fingers holding her wet folds open. With such a clear invitation, you grin and line up your [cock size desc of player] [cock of player] cock with her pussy and thrust into her. You both release happy moans as her [if cock length of player > 12]latex cunt is stretched wide around your large manhood[else]slick hole takes you easily[end if]. As you pump your [cock of player] penis into her, you are treated to the sexy sight of her [one of]playing with her plump breasts[or]sucking at one of her lovely nipples[or]slowly teasing her clit[at random]. The feel of her slick, squeezing, latex hole around your cock, made for fucking lovely ermines like her, is wonderful.";
@@ -85,9 +85,9 @@ to say beatthelatexermine:
 				if a random chance of 2 in 3 succeeds:
 					say "     In the mood for some fun after the fight, you pounce onto the ermine girl, pinning her to the ground. She giggles happily and squirms beneath you, rubbing her smooth, ivory skin against you. Between groping her lovely body, you push off your gear and get your cock into position. ";
 					if bodyname of player is "Latex Ermine" and player is pure:
-						say "     She welcomes your ermine cock into her eagerly, moaning in pleasure as you thrust into her.";
+						say "She welcomes your ermine cock into her eagerly, moaning in pleasure as you thrust into her.";
 					else:
-						say "     She struggles briefly as you move in to mount her, but moans in pleasure and ceases her resistance when you penetrate her needy cunt.";
+						say "She struggles briefly as you move in to mount her, but moans in pleasure and ceases her resistance when you penetrate her needy cunt.";
 					say "     Sinking your [cock size desc of player] [cock of player] cock into the latex woman's stretchable hole, you grab her breasts and start playing with them as you fuck her[if cock length of player > 12]. Her ivory pussy is stretched wide around your large manhood[end if]. You pinch and tease her [if erminecolor is 1]blue[else if erminecolor is 2]teal[else if erminecolor is 3]green[else if erminecolor is 4]red[else]pink[end if] nipples, enjoying the cute squeaks and moans she makes as you do. As you pump your [cock of player] penis into her, you are treated to the sexy sight of her [one of]slowly teasing her clit[or]sensually licking the colored tip of her thick tail as she hugs it tightly[or]sensually licking her fingers and then running them down her neck and shoulder before giving her nipples a tease as well[at random]. The feel of her slick, squeezing, latex hole around your cock";
 					if bodyname of player is "Latex Ermine" and player is pure:
 						say ", made for fucking lovely ermines like her,";
@@ -98,7 +98,7 @@ to say beatthelatexermine:
 					else:
 						say "[if cock width of player > 30]. Her cunt relaxes its grip around your [cock size desc of player] cock, letting your excessive output flow out around your pulsing shaft. In the end, both your lower bodies are drenched by the copious contents of your huge balls[else if cock width of player > 20]. Her cunt relaxes its grip around your [cock size desc of player] cock, letting your large output flow out around your pulsing shaft. In the end, both your groins are sticky with the considerable contents of your bloated balls[else]. Her cunt relaxes its grip around your [cock size desc of player] cock, letting your sticky load flow out around your pulsing shaft and run down her thighs[end if]. Having had your fun with the latex female, you pull out and let her up. You can see the glistening streaks of your cum running down her ivory thighs as she giggles and heads off.";
 				else:
-					say "     In the mood to blow off a little steam after the fight, you stride over to the cute ermine and press her face to your loins. Faced with your [cock size desc of player] [cock of player] cock, she ooos in appreciation and starts licking at it. Her smooth hands stroke your thighs and rub at your ballsack as she takes your [if cock length of player > 24]huge [else if cock length of player > 12]enlarged [end if]shaft into her muzzle[if cock length of player > 12] with ease[end if]. Her slick latex tongue and mouth are a delight as they slide across your [cock of player] manhood, working it with enthusiasm. She grins happily around your meat, sucking you hard while [one of]fingering her juicy cunt[or]playing with her plump breasts[or]teasing her [if erminecolor is 1]blue[else if erminecolor is 2]teal[else if erminecolor is 3]green[else if erminecolor is 4]red[else]pink[end if] nipples[at random].";
+					say "     In the mood to blow off a little steam after the fight, you stride over to the cute ermine and press her face to your loins. Faced with your [cock size desc of player] [cock of player] cock, she ooos in appreciation and starts licking at it. Her smooth hands stroke your thighs and rub at your ballsack as she takes your [if cock length of player > 24]huge [else if cock length of player > 12]enlarged [end if]shaft into her muzzle[if cock length of player < 13] with ease[end if]. Her slick latex tongue and mouth are a delight as they slide across your [cock of player] manhood, working it with enthusiasm. She grins happily around your meat, sucking you hard while [one of]fingering her juicy cunt[or]playing with her plump breasts[or]teasing her [if erminecolor is 1]blue[else if erminecolor is 2]teal[else if erminecolor is 3]green[else if erminecolor is 4]red[else]pink[end if] nipples[at random].";
 					say "     The ivory beauty provides a wonderful blow job, her latex mouth feeling so nice around your shaft that you have trouble holding out for long. You grit your teeth and try to resist, but soon groan in pleasure as you can't hold back any longer and blast your [cum load size of player] load down her throat. She happily gulps it all down, not letting a single drop go to waste[if cock width of player > 30], her tummy bloating from your excessive output[else if cock width of player > 20], her tummy visibly rounded by your considerable output[end if]. Only once your balls are drained does she release the vacuum grip her muzzle's been keeping on your shaft and lets it slide free. She licks her latex muzzle as she gets up and heads off with a happy giggle[if cock width of player > 30], bloated tummy sloshing with swallowed cum[else if cock width of player > 20], stuffed belly swishing with swallowed cum[end if].";
 			else:
 				say "     In the mood to blow off a little steam after the fight, you stride over to the cute ermine and press her face to your loins. Faced with your [cunt size desc of player] pussy, she ooos in appreciation and starts licking at it. Her smooth hands stroke your thighs and knead your ass as she slides her slick, flexible tongue into your vagina. The latex appendage [one of]alternates between wriggling inside you as she laps at your sensitive spots and thrusting into your dripping hole like a sex toy[or]takes turns with a pair of fingers that she thrusts into your dripping hole[or]alternates between wriggling inside you as she laps at your sensitive spots and slathering across your outer folds and clit[at random]. She [if anallevel is 3 and a random chance of 1 in 3 succeeds]slips a slick finger between your ass cheeks and teases at your back door, sliding it smoothly into your rear to further stimulate you[else]presses a hand between her own legs and you can her the slick sounds of her quickly pumping a few digits into her needy cunt[end if]. Subject to such talented tonguework, you can only hold out for so long before you moan loudly and cry out in lustful release. Gripping her cushiony head, you pull her to your loins to get her to lick as deeply as she can while your pussy quivers around her tongue until your long, drawn out orgasm passes. Having had your fun with the beautiful female, you release her and she heads off, licking her muzzle and rubbing your excess juices over her smooth, alabaster skin.";
@@ -115,12 +115,12 @@ to say beatthelatexermine:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Latex Ermine";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -168,8 +168,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings

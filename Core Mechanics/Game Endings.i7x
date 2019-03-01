@@ -25,7 +25,7 @@ carry out vetcheat:
 			level up;
 	decrease score by 400;
 
-understand "Study" as supersponsor.
+understand "Tulip" as supersponsor.
 
 When play ends:
 	clear the screen;
@@ -62,7 +62,7 @@ to ratetheplayer:
 	else if the score < 2500:
 		say "Baude Warrior!";
 	else if score > 9000:
-		say "Th -- What, 9000?!";
+		say "Th- What, 9000?!";
 	else:
 		say "The Lord Humungus!";
 	say "[roman type]";
@@ -96,6 +96,9 @@ when play ends:
 	else if bodyname of player is "Tigertaur Sex Toy":
 		say "     Even though you try a few times, you never manage to escape the clutches of your tigertuar masters, and servicing them eventually becomes the only reason for your existence, supplanting all other thoughts you might once have had.";
 		stop the action;
+	else if bodyname of player is "Broken Husky Slut":
+		say "     The alpha husky that captured you, continued to break down both your mind and body. Eventually, he was able to build you into his perfect submissive partner and the fact that you ended up turning into one of the few precious deltas, well that certainly made his bid to rule the husky packs much more assured..";
+		stop the action;
 	else if bodyname of player is "DBrute Slave":
 		say "     Your new reality in hell focuses on satisfying the relentless lusts of your demon brute masters, as well as being shared around for any other hellspawn he feels like allowing a ride...";
 		stop the action;
@@ -117,7 +120,7 @@ when play ends:
 	else if bodyname of player is "dead":
 		stop the action;
 	else if humanity of player < 10 and HP of the player > 0:
-		if bodyname of player is "Dragoness" and HP of doctor matt <= 100:
+		if bodyname of player is "Dragoness" and HP of Doctor Matt <= 100:
 			say "Following some unknown instinct, you seek out another of your own, and home in on Orthas, the dragon that was guarding the lab. She pets you gently along your neck and makes soothing sounds that has you almost purring. She proves to be a loving and kind mistress and you protect her fiercely for the remainder of your long life.";
 	else:
 		say "You emerge from your harrowing experience with your mind intact, with your [bodyname of player] form and [facename of player] face.";

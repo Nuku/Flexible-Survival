@@ -16,6 +16,10 @@ Version 1 of Joey by Qazarar begins here.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Joey	"Joey"
+
 Joey is a man. The hp of Joey is usually 3.
 The libido of Joey is usually 0.
 The description of Joey is "[JoeyDesc]".
@@ -73,15 +77,11 @@ to say JoeyTalkMenu:
 					say "[JoeyTalk1]";
 				if (nam is "Training"):
 					say "[JoeyTalk2]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the Joey, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the Joey, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -154,15 +154,11 @@ to say JoeySexMenu:
 					say "[JoeySex2]";
 				if (nam is "Fuck the catboy"):
 					say "[JoeySex3]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the catboy, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the catboy, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -177,6 +173,10 @@ to say JoeySex3: [Joey fucked]
 	say "     Text";
 
 Section 4 - Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Stray Catboy	"Stray Catboy"
 
 Stray Catboy is a situation.
 The level of Stray Catboy is 5.
@@ -200,18 +200,23 @@ instead of resolving a Stray Catboy:
 				now hp of Joey is 1;
 				move Joey to Grey Abbey 2F;
 				move Player to Grey Abbey Library;
+				now Resolution of Stray Catboy is 1; [won, training J]
 				now Stray Catboy is resolved;
 			else: [Denying training]
 				say "     You shake your head and tell the catboy that you're too busy handling other things right now, and won't be able to train him. He looks crestfallen, and you think you see a glimmer of tears in the corners of his eyes, but he turns away before you can be sure. After that, he goes running off into the city. You doubt you'll be seeing him again soon.";
+				now Resolution of Stray Catboy is 2; [won, not training J]
 				now Stray Catboy is resolved;
 		else if fightoutcome > 19 and fightoutcome < 30: [Losing]
 			say "     When you come to after failing to defeat your foe, you are alone. It seems the feline took the opportunity left when the wolf was distracted, and fled. Perhaps you'll see them again.";
+			now Resolution of Stray Catboy is 3; [lost]
 		else if fightoutcome > 29: [Fleeing]
 			say "     You decide to cut your losses and flee from the wolf, unable to defeat it. As you run away, you take one glance back over your shoulder, and see the wolf advancing on the prone feline once more, this time with nobody to stop him. Maybe another day you'll see that feline again, but for now, you try not to think about what you've done, and continue fleeing.";
+			now Resolution of Stray Catboy is 4; [fled]
 	else: [Watching]
 		LineBreak;
 		say "     You decide not to interfere, and instead to simple watch what is about to happen. The feline on the ground begins to come to fully as the wolf paws at him, and starts to look somewhat panicked. His reaction shifts instead towards embarrassment when the wolf tears the shorts he was wearing, demonstrating that he is certainly a male, and leaving his average endowment in the open. Once the cat is naked, the wolf advances forward until it is standing on top of him. The large canine shaft hangs briefly in the air, dwarfing the feline member beneath it, before the tip traces its way down along that member, eventually settling just outside the cat's rear hole.";
 		say "     The cat seems about to say something, perhaps an object, but instead lets out a gasp of shock as the canine cock enters him in a single swift stroke, stopping only when his ass meets the knot. For a few moments, he is impaled on the knotted shaft, breathlessly waiting for something else to happen. The wolf then breaks that silence by starting to move, thrusting in and out, the knot repeatedly slapping against the feline's flesh as the dick spreads him open. The expression on his face has become one of almost unwilling bliss as he is continually hammered by the feral beast above him. Eventually it comes to an end, and the wolf slams fully into the catboy, locking the knot into him, and finishing. He lets out a mewling moan as he is filled by the canine seed. The two remain in that position, enjoying the sensations, and you decide it's time for you to go.";
+		now Resolution of Stray Catboy is 5; [watched]
 		now Stray Catboy is resolved;
 	now inasituation is false;
 
@@ -269,13 +274,9 @@ to say JoeyTraining: [Training Joey] [{]
 					say "[MinotaurTraining]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You tell Joey that you aren't going to be able to train him right now. He looks disappointed, but says he understands.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You tell Joey that you aren't going to be able to train him right now. He looks disappointed, but says he understands.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

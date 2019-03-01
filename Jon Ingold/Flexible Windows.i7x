@@ -237,7 +237,7 @@ Section - I6 for making a window
 
 Constructing something is an activity.
 
-The pending g-window is a g-window that varies.
+The pending g-window is a g-window that varies.[@Tag:NotSaved]
 
 To g-make (g - a g-window):
 	now g is g-present;
@@ -480,7 +480,7 @@ Section - Shifting and knowing where we are
 
 [ Updated code by Erik Temple. ]
 
-The current g-window is a g-window that varies. The current g-window is the main-window.
+The current g-window is a g-window that varies.[@Tag:NotSaved] The current g-window is the main-window.
 
 To set/move/shift the/-- focus to (g - a g-window), clearing the window:
     if g is g-present
@@ -899,7 +899,7 @@ Section - Processing hyperlinks
 
 The hyperlink processing rules are a rulebook.
 
-The current hyperlink ID is a number that varies.
+The current hyperlink ID is a number that varies.[@Tag:NotSaved]
 
 
 Section - Selecting the replacement command
@@ -1249,7 +1249,7 @@ Version 11 - 30/10/10
 
 	Updated for 6F95. Now uses no deprecated features.
 
-	To make it easier to assign rock values to windows manually (necessary for CSS styling in Quixe), a slight change was made to FW's automatic rock allocation routine—the author can now set a rock value manually (like this: "The rock-value of the graphics-window is 245"). Flexible Windows now checks for conflicts between manually assigned and automatically assigned rock values, and will throw a warning if it finds any (this code will not run in release versions of the software).
+	To make it easier to assign rock values to windows manually (necessary for CSS styling in Quixe), a slight change was made to FW's automatic rock allocation routine - the author can now set a rock value manually (like this: "The rock-value of the graphics-window is 245"). Flexible Windows now checks for conflicts between manually assigned and automatically assigned rock values, and will throw a warning if it finds any (this code will not run in release versions of the software).
 
 Version 10 - 23/9/10
 
@@ -1272,7 +1272,7 @@ Version 8 - 26/6/09
 
 
 
-Example: * Inventory Window - A simple example showing how to place an side window displaying the player's inventory.
+Example: * Inventory Window - A simple example showing how to place a side window displaying the player's inventory.
 
 	*: "Inventory Window"
 
@@ -1329,7 +1329,7 @@ Now we set up and open the graphics-window. Note that we don't need to open the 
 
 This is enough to set up the graphics panel. Now let's give it some images.
 
-	*: The current image is a figure-name that varies.
+	*: The current image is a figure-name that varies.[@Tag:NotSaved]
 
 	Figure 1 is the file "letter.jpg". Figure 2 is the file "scraps.jpg".
 

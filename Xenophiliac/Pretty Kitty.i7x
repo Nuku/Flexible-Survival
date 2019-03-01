@@ -6,9 +6,14 @@ Pretty Kitty by Xenophiliac begins here.
 Section 1 - The Pretty Kitty
 
 [Defining the store itself]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Pretty Kitty	"Pretty Kitty"
+
 The Pretty Kitty is a room. The Pretty Kitty entrance is a door. It is south of Mall West Wing and north of The Pretty Kitty. The The Pretty Kitty entrance is open.
 Instead of examining the The Pretty Kitty entrance:
-	say "Through the multiple clothing displays and stoic mannequins, the lights of [the other side of the The Pretty Kitty entrance] are [if findwires is 2 and fixedgens is 2]on, displaying bright light throughout the store.[else]off, not surprising considering that there is no power. Candles and the occasional lantern are providing some light in the store.";
+	say "Through the multiple clothing displays and stoic mannequins, the lights of [the other side of the The Pretty Kitty entrance] are [if findwires is 2 and fixedgens is 2]on, displaying bright light throughout the store[else]off, not surprising considering that there is no power. Candles and the occasional lantern are providing some light in the store[end if].";
 
 [Describing the store & NPC beginning descriptions]
 The description of The Pretty Kitty is "[PKDesc]".
@@ -36,9 +41,10 @@ Collar Rack is in The Pretty Kitty.
 
 Section 2 - Andromeda
 
-calcnumber is a number that varies. [Used for player-entered variables for sex menu]
+Table of GameCharacterIDs (continued)
+object	name
+Andromeda	"Andromeda"
 
-[Defining NPC]
 Andromeda is a woman.
 The description of Andromeda is "     The bubbly owner of the store stands behind the checkout counter, looking around with a curious, innocent look in her eyes. Her tall, fuzzy ears swivel around constantly, taking in every sound echoing throughout her establishment and keeping a lookout for trouble. Wide green eyes peer out from her face, with her slightly-protruding muzzle graced by a constant bubbly smile. Night-black hair flows down to her shoulders, a dark contrast to the rest of her face. Roving your eyes down from her face, you see that her body is covered in short, dark-orange fur, with occasional splotches of gray interrupting the constant orange flow. Contrary to many of the denizens of this city, Andromeda is not at all voluptuous, the ripped shirt she's wearing barely showing her breasts while her slim stomach does nothing to dissuade her lean look. Her thin legs and hips are covered by a pair of denim jeans, faded and worn with years of use. Her long, furry tail flicks back and forth excitedly, almost knocking loose knick-knacks on the floor. Her (probably) pawed feet are currently inside a pair of tennis shoes, old and worn, with one missing a lace. Finally noting your roving eyes, she says 'Hey, eyes up here you!' all while giving you a good-natured smile and sticking her tongue out at you.";
 
@@ -61,7 +67,7 @@ instead of conversing Andromeda:
 		say "     After checking through the racks and not seeing one, you ask Andromeda if she's got a small leather jacket. 'No, my leather items were bou- Oh! Wait a sec,' she says, cutting herself off as she rushes to the back. The catgirl returns shortly with a small leather jacket with red and pink trim and a high waistline. 'I got this in with a shipment of other stuff, but didn't have a chance to send it back. Something with a bare midriff like that is too trashy for me to sell to a little girl. A larger version might look pretty sexy on the right woman though,' she adds with a soft sigh as her eyes glaze over. You wait awkwardly for a bit, but it soon becomes clear she's lost in her imagination. With a shrug, you take the unwanted jacket, hoping Gobby will be satisfied with it.";
 		increase HP of Hadiya by 1;
 		now carried of girl's jacket is 1;
-		now Goblin Thief is unresolved;
+		now Goblin Thief is active;
 	else if HP of Andromeda is 1:
 		say "     Walking up to the lithe catgirl, you find that she's hopped up on the counter, sitting comfortably on the checkout line. Waving her feet back and forth casually, her ever-constant smile grows even wider when you approach her.";
 		say "     'Hey! Nice to have you back here!' Andromeda says to you as you approach her. She smiles happily as you lean on the counter and start small talking with her. Chatting a bit about everything that's going on, you can't help but have your mood lightened from the girl's constant bubbly mood. Having exhausted most of the small topics you've thought of, you eventually broach the subject of how she got her shop, and she thinks to herself a bit before responding.";
@@ -129,7 +135,7 @@ instead of fucking Andromeda:
 				say "     Quickly slipping out of your own lower garments and putting them aside, you keep one of your hands gently stimulating Andromeda's seizing cunt, reveling in how you've made the catgirl's eyes roll completely into her head. She's not as unresponsive as you thought, however, if her paw groping at your cunt is any indication. Unable to restrain yourself, you let out a groan of pleasure, involuntarily seizing yourself up. Her deft paws, obviously skilled at pleasuring a woman, quickly reduce you to a panting, dripping mess with a combination of rubs, gropes, and massaging. Not wanting to be outdone, you stop caressing her gripping womanhood, and line up a few digits to start finger-fucking your quivering catgirl lover.";
 				WaitLineBreak;
 				say "     Andromeda must've had the same idea you had, as you soon feel a furry digit bury itself completely into your throbbing cunt. Sagging forward into her, Andromeda supports you up as your head is flooded with pleasure. A knowing smirk crosses Andromeda's face as she hits every nerve in your slit, reducing you to a pile of quivers and moans. Recovering yourself enough to remember what's going on, you push two of your fingers into Andromeda's twitching cunt, with her response obvious as a loud yelp echoes through the storage room. While one of Andromeda's furry claws explores every inch of your cunt and reaching places you didn't even know were there, another one begins to caress your outer lips, drawing gently across the entrance to your pussy. This digit soon buries itself into your cunt, joining its twin in their exploration of your cunt. You do the exact same thing, adding a third digit to the two thrusting in and out of Andromeda's now dripping cunt.";
-				say "     Feeling your orgasm not far off, you pull Andromeda into an affectionate, sloppy kiss. She responds readily, the two of you making out while your fingers are buried in each others cunts. Confirming your suspicion, you're soon wracked with an orgasm, brought on by Andromeda's skilled fingers. You moan heavily into her mouth as you cum, your feminine juices drenching her hand and the floor below. Lost in a sea of pleasure, you continually jackhammer your fingers into her spasming cunt, mindlessly trying to make her cum. Your wish is soon granted, with the feeling of her cunt gripping your fingers and a river of fluid drenching your hand. Mewing loudly as she cums, she breaks the kiss and pants heavily and sags into your grip. You do the same to her, both of you holding onto each other as you recover. Both of you recovering after a few minutes of rest, you withdraw from each other; your hands are covered in each others fluids. Licking herself clean, Andromeda takes your hand and cleans it, watching you lustfully as you gather your things. Cleaned up and ready to leave, you're pulled into an aggressive kiss by the normally-bubbly catgirl, her tongue catching yours in a sensual embrace. Breaking off the kiss, she gives your ass a playful slap and tells you to 'Come back soon', the sentence punctuated by a throaty purr. You do your best to remember to visit again as you walk contentedly out of the shop, prepared for whatever is ahead.";
+				say "     Feeling your orgasm not far off, you pull Andromeda into an affectionate, sloppy kiss. She responds readily, the two of you making out while your fingers are buried in each other's cunts. Confirming your suspicion, you're soon wracked with an orgasm, brought on by Andromeda's skilled fingers. You moan heavily into her mouth as you cum, your feminine juices drenching her hand and the floor below. Lost in a sea of pleasure, you continually jackhammer your fingers into her spasming cunt, mindlessly trying to make her cum. Your wish is soon granted, with the feeling of her cunt gripping your fingers and a river of fluid drenching your hand. Mewing loudly as she cums, she breaks the kiss and pants heavily and sags into your grip. You do the same to her, both of you holding onto each other as you recover. Both of you recovering after a few minutes of rest, you withdraw from each other; your hands are covered in each other's fluids. Licking herself clean, Andromeda takes your hand and cleans it, watching you lustfully as you gather your things. Cleaned up and ready to leave, you're pulled into an aggressive kiss by the normally-bubbly catgirl, her tongue catching yours in a sensual embrace. Breaking off the kiss, she gives your ass a playful slap and tells you to 'Come back soon', the sentence punctuated by a throaty purr. You do your best to remember to visit again as you walk contentedly out of the shop, prepared for whatever is ahead.";
 				now libido of player is 0;
 				now XP of Andromeda is 1;
 				if libido of Andromeda < 3, increase libido of Andromeda by 1;
@@ -148,7 +154,10 @@ instead of fucking Andromeda:
 
 Section 3 - Clothes
 
-[Defining Clothing Shelf]
+Table of GameCharacterIDs (continued)
+object	name
+Clothing Shelf	"Clothing Shelf"
+
 Clothing Shelf is a man.
 The description of Clothing Shelf is "This nearby rack of clothes holds many pieces of clothing and individual outfits, some of which catch your eye. Price tags on each of the articles of clothing have been darkened with a black marker, with the new price listed as '1 food or 1 milk'. The outfits that stick out to you include a simple [bold type]T-shirt and Blue Jeans[roman type] combo, a lovely black [bold type]Blouse Set[roman type] that's combined with a knee-length skirt, a slim [bold type]Tuxedo set[roman type] and tie on a mannequin nearby, and a baggy, comfortable [bold type]Summer Set[roman type], consisting of a no-sleeved shirt and baggy shorts. You'd just have to have payment and ask to [bold type]procure[roman type] the outfit you want.";
 
@@ -353,6 +362,10 @@ carry out SummerObtain:
 			say "     'Well then why'd you bring them up here you big dolt?' Andromeda says to you, doing her best to put on a serious impression, and then failing horribly. 'I'm just teasing you! Feel free to keep looking around, and only get something if you want to!";
 
 Section 4 - Collars
+
+Table of GameCharacterIDs (continued)
+object	name
+Collar Rack	"Collar Rack"
 
 [Defining Collar Rack]
 Collar Rack is a man.
@@ -605,11 +618,11 @@ instead of using the girl's jacket:
 
 Section 6 - Comments and Variables
 
-[HP of Andromeda -- Variable for player-triggered talking scenes]
-[XP of Andromeda -- variable used to work the sex menu]
-[libido of Andromeda -- Variable for sex count, used to trigger some scenes]
-[lust of Andromeda -- Variable for talk scene regarding collars]
-[thirst of Andromeda -- Used for store description]
+[HP of Andromeda - Variable for player-triggered talking scenes]
+[XP of Andromeda - variable used to work the sex menu]
+[libido of Andromeda - Variable for sex count, used to trigger some scenes]
+[lust of Andromeda - Variable for talk scene regarding collars]
+[thirst of Andromeda - Used for store description]
 
 
 Pretty Kitty ends here.

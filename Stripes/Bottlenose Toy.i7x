@@ -1,6 +1,6 @@
 Version 3 of Bottlenose Toy by Stripes begins here.
-[Version 3.7 - Bound State Addition -- Blue Bishop]
-[Version 3.8 - Changed 'HP of Bubble' checks to 'dolphinmode' ones. This guarantees the BC scene only occurs there, and it's necessary now that players can return to the castle after saving/losing the vixen -- Song]
+[Version 3.7 - Bound State Addition - Blue Bishop]
+[Version 3.8 - Changed 'HP of Bubble' checks to 'dolphinmode' ones. This guarantees the BC scene only occurs there, and it's necessary now that players can return to the castle after saving/losing the vixen - Song]
 "Adds an Inflatable Dolphin creature to Flexible Survival's Wandering Monsters table"
 
 
@@ -17,7 +17,7 @@ when play begins:
 
 to say dolphinflatabledesc:
 	setmongender 4; [creature is female]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of player:
@@ -30,7 +30,7 @@ to say dolphinflatabledesc:
 		now dolphinmode is 2;
 	else if dolcastlefight is 3:
 		now dolphinmode is 3;
-	else if ( hardmode is false and level of player < ( 5 - levelwindow ) ) or a random chance of 3 in 4 succeeds:	[girl only at low level]
+	else if ( hardmode is false and level of player < ( 5 ) ) or a random chance of 3 in 4 succeeds:	[girl only at low level]
 		now dolphinmode is 1;
 	else:																			[25% of toy mode]
 		now dolphinmode is 2;
@@ -65,15 +65,15 @@ to say dolphinflatabledesc:
 		say "     As you struggle to keep your footing on the wobbly floor of the bouncy castle, you catch sight of the now empty and partially deflated dolphin suit skulking around the edge of your fight. You get the feeling that it's waiting to ensnare you and give you the same treatment which created your opponent.";
 
 to say losetodolphinflatable:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	now dolphinflatablefight is 2;
 	increase dolinfloss by 1;
 	if dolphinmode is 1:			[lose to girl form]
-		say "     The bottlenose girl giggles again as she wraps her towel around your neck and wrists. It squeezes around your forearms, binding them tightly behind your back. Pushing you to the sandy ground, she climbs atop you, always keeping in contact with the towel, which rebonds to her wherever she's holding it so she always knows where her towel is. ";
+		say "     The bottlenose girl giggles again as she wraps her towel around your neck and wrists. It squeezes around your forearms, binding them tightly behind your back. Pushing you to the sandy ground, she climbs atop you, always keeping in contact with the towel, which rebonds to her wherever she's holding it so she always knows where her towel is";
 		if inasituation is false and dolinfloss > 2: [BluB]
 			now dolinfloss is 0; [resets, attempted every 3 losses]
 			let dolescape be 0;
-			say "     Once on the ground, she stretches her towel further, almost painfully so to partially bind your legs as well.";
+			say ". Once on the ground, she stretches her towel further, almost painfully so to partially bind your legs as well.";
 			say "     Reaching over to a [one of]sand castle next to you[or]small picnic basket you'd not noticed before[or]small cooler beside where she pushed you down[or]sand mound shaped roughly like a dolphin[at random], she pulls out an uninflated dolphin toy. At first it seems like most any other dolphin toy, but as she starts pushing it overtop of you, you realize that it's actually some kind of inflatable suit shaped like a dolphin. As she fits a breathing tube to your mouth and starts sliding the PVC mask over your face, you realize that she intends to seal you up in it.";
 			say "     [bold type]Shall you try to resist? You could probably escape afterwards, but you imagine it won't be easy...[roman type][line break]";
 			LineBreak;
@@ -86,10 +86,10 @@ to say losetodolphinflatable:
 					let playernum be a random number between 1 and charisma of player;
 					let dolphinnum be a random number between 1 and cha entry;
 					if playernum >= dolphinnum:
-						say "     The dolphin girl giggles squeakily as you compliment her beautiful form and beg her for a kiss before she puts the mask on. Lured in by your pretty words, she takes your head in her hands and kisses you passionately. Her bottlenose face presses against your lips and a rubber tongue peeks out to slip into your mouth. You moan into the kiss but manage to stay focused. While holding your head like this, she's distracted by your tonguework and can only keep her tail on the towel to bind it. This lets you squirm your arms and legs, partially working free of your bonds.";
+						say "The dolphin girl giggles squeakily as you compliment her beautiful form and beg her for a kiss before she puts the mask on. Lured in by your pretty words, she takes your head in her hands and kisses you passionately. Her bottlenose face presses against your lips and a rubber tongue peeks out to slip into your mouth. You moan into the kiss but manage to stay focused. While holding your head like this, she's distracted by your tonguework and can only keep her tail on the towel to bind it. This lets you squirm your arms and legs, partially working free of your bonds.";
 						increase dolescape by 1;
 					else:
-						say "     The dolphin girl giggles squeakily, but isn't tempted by your fumbling attempts to entice her.";
+						say "The dolphin girl giggles squeakily, but isn't tempted by your fumbling attempts to entice her.";
 				else if x is 2:
 					say "     As she tries to move the head portion overtop of your face, you twist and squirm your head around, trying to keep the mask off. But your main goal while doing this isn't to get your head out, but instead to try and squirm your arms free of their bonds.";
 					let playernum be a random number between 1 and dexterity of player;
@@ -104,47 +104,47 @@ to say losetodolphinflatable:
 					let playernum be a random number between 1 and strength of player;
 					let dolphinnum be a random number between 1 and str entry;
 					if playernum >= dolphinnum:
-						say "     The weak dolphin girl struggles to hold you down, even bound as you are. As you flex your muscles, you can feel the rubbery towel stretch and start to give way. By the time she manages to get you down again, you can feel that you've made some headway in getting out of this predicament.";
+						say "The weak dolphin girl struggles to hold you down, even bound as you are. As you flex your muscles, you can feel the rubbery towel stretch and start to give way. By the time she manages to get you down again, you can feel that you've made some headway in getting out of this predicament.";
 						increase dolescape by 1;
 					else:
-						say "     The dolphin girl fights against your attempt to break free and ends up gripping the towel for support. This seems to keep its grip taut around your limbs and prevents you from forcing your way free.";
+						say "The dolphin girl fights against your attempt to break free and ends up gripping the towel for support. This seems to keep its grip taut around your limbs and prevents you from forcing your way free.";
 				say "     The inflatable toy girl continues her work after that delay, making sure the breathing tube is properly seated and pulling the mask down over your head. It starts to inflate itself, molding around your flesh and growing out to form a bottlenose nose. As the head seats itself properly over your face, you find you can see out of its eyes, though everything has a soft, green tone to it.";
 				say "     She runs her fin-like hands down your body and gropes you while she reaches to slide the rest of it over you. As the material is stretched over you, it feels very good and quite arousing, seeming to squeeze and rub against you almost with a life of its own. ";
 				let playernum be ( 150 + humanity of player - libido of player + ( level of player * 2 ) );
 				let playernum be a random number between 1 and playernum;
 				let dolphinnum be a random number between 1 and ( 160 + ( lev entry * 2 ) );
 				if playernum >= dolphinnum:
-					say "     You manage to block out the pleasure that comes from the rubbery material rubbing and sliding against you and remain focused on trying to free yourself.";
+					say "You manage to block out the pleasure that comes from the rubbery material rubbing and sliding against you and remain focused on trying to free yourself.";
 					increase dolescape by 1;
 				else:
-					say "     The pleasure you feel as the rubbery material rubs and slides against you becomes quite distracting and you can't help but weakly moan in pleasure, momentarily lost in the sensation.";
+					say "The pleasure you feel as the rubbery material rubs and slides against you becomes quite distracting and you can't help but weakly moan in pleasure, momentarily lost in the sensation.";
 				if dolescape is 2:
 					say "     Managing to keep focused on freeing yourself, you get an arm free of the towel binding you and push the dolphin girl away. She giggles at this even as the binding towel unravels, as if even this is all part of the fun. Before she can recover and make another grab for you, you grab your fallen pack and make a run for it, leaving her and the strange, inflatable suit behind.";
 				else:
 					say "     As she's putting it on, it seems to stretch and adjust itself to be just the right shape and size to contain you. You can feel a slick lubricant coating its inside, letting it slide easily over your flesh. ";
 					let x be a random number between 1 and 2;
 					if x is 1:
-						say "     You continue to try and squirm free, using your remaining strength to try and stretch the vinyl towel with a final burst of strength. ";
+						say "You continue to try and squirm free, using your remaining strength to try and stretch the vinyl towel with a final burst of strength. ";
 						let playernum be a random number between 1 and strength of player;
 						let dolphinnum be a random number between 1 and str entry;
 						if playernum >= dolphinnum:
-							say "     Feeling that material stretch, you squirm and pull, working yourself closer to freedom.";
+							say "Feeling that material stretch, you squirm and pull, working yourself closer to freedom.";
 							increase dolescape by 1;
 						else:
-							say "     You flex and try to move your bound arms against your bonds, but fail to make any headway, too worn out from your struggle.";
+							say "You flex and try to move your bound arms against your bonds, but fail to make any headway, too worn out from your struggle.";
 					else if x is 2:
-						say "     You continue to try and pull free, shifting your position and trying to push against the material as long as you can to by you the time to free yourself";
+						say "You continue to try and pull free, shifting your position and trying to push against the material as long as you can to by you the time to free yourself. ";
 						let playernum be a random number between 1 and stamina of player;
 						let dolphinnum be a random number between 1 and sta entry;
 						if playernum >= dolphinnum:
-							say "     Holding out as long as you can, you push against the stretchy material, trying to keep the girl from pulling it onto you. You twist and pull your arms while struggling and eventually she's forced to grab your legs in both arms, leaving only her tail to [']hold['] the red towel, weakening its ability to hold you for a few moments.";
+							say "Holding out as long as you can, you push against the stretchy material, trying to keep the girl from pulling it onto you. You twist and pull your arms while struggling and eventually she's forced to grab your legs in both arms, leaving only her tail to [']hold['] the red towel, weakening its ability to hold you for a few moments.";
 							increase dolescape by 1;
 						else:
-							say "     You hold out for a little while, but eventually you tire and can't keep the material from sliding further over you.";
+							say "You hold out for a little while, but eventually you tire and can't keep the material from sliding further over you.";
 					if dolescape is 2:
-						say "     Your struggling allows you to pull an arm free of the towel binding you and push the dolphin girl away. She giggles at this even as the binding towel unravels, as if even this is all part of the fun. Before she can recover and make another grab for you, you pull yourself out of the squirming inflatable, grab your fallen pack and make a run for it, leaving her and the strange, inflatable suit behind.";
+						say "Your struggling allows you to pull an arm free of the towel binding you and push the dolphin girl away. She giggles at this even as the binding towel unravels, as if even this is all part of the fun. Before she can recover and make another grab for you, you pull yourself out of the squirming inflatable, grab your fallen pack and make a run for it, leaving her and the strange, inflatable suit behind.";
 					else:
-						say "     Guiding your legs in, the giggling dolphin girl presses your feet into the bottom tail section. It squeezes itself down around your legs, binding them together and molding its insides to grip around your feet. Your joints bend and stretch as needed to make you painlessly fit into the oversized dolphin suit. As she starts sealing up the front zipper, you can feel the whole of this strange, inflatable suit swelling and pressing in around you. As she's closing up the inflatable dolphin around you, she pulls her towel free. It is your final chance to escape.";
+						say "Guiding your legs in, the giggling dolphin girl presses your feet into the bottom tail section. It squeezes itself down around your legs, binding them together and molding its insides to grip around your feet. Your joints bend and stretch as needed to make you painlessly fit into the oversized dolphin suit. As she starts sealing up the front zipper, you can feel the whole of this strange, inflatable suit swelling and pressing in around you. As she's closing up the inflatable dolphin around you, she pulls her towel free. It is your final chance to escape.";
 						let playernum be 150 + humanity of player - libido of player + ( level of player * 2 );
 						if dolescape is 0, now playernum is playernum / 2; [penalty for no success in first three trials]
 						let playernum be a random number between 1 and playernum;
@@ -203,7 +203,7 @@ to say losetodolphinflatable:
 				now scalevalue of player is 3;
 				now bodydesc of player is "inflatable";
 				now bodytype of player is "dolphin";
-				now daycycle of player is 0;
+				now SleepRhythm of player is 0;
 				now breasts of player is 2;
 				now breast size of player is 0;
 				if hellHoundLevel is 0:
@@ -219,15 +219,17 @@ to say losetodolphinflatable:
 ]
 		[END SCENE]
 		else if ( sex entry is not "Male" or "Breasts" is listed in feats of player ) and "Passing Grade Chest" is not listed in feats of player and "Flat Chested" is not listed in feats of player and bodyname of player is "Bottlenose Toy" and breasts of player > 0 and ( breast size of player < 6 or "One Way" is listed in feats of player ) and a random chance of 2 in 5 succeeds:
-			say "     She settles herself atop you and runs her decal eyes over your cetacean body, and soon has them focused on your nipples and their plastic air valves.";
-			say "     The dolphin girl smirks down at you slyly while her fin-like hands drift across your [bodytype of player] form, squeaking lightly as the stroke and tease your PVC imitation of [skinname of player] flesh. A sharp gasp escapes your lips as one hand finds it's way to your chest, [if breast size of player > 0] giving your breast a quick squeeze before[end if] she pinches your inflation nozzle nipple with a giggle. With your arms bound and the giggling dolphin girl atop you, all you can do is squirm and moan in pleasure as your altered nipples are teased and tweaked endlessly. Eventually the pinching comes to an end and you are given a moment to catch your breath before the inflatable leans forward to take your altered nipple into her mouth with a mischievous squeak.";
-			say "     Taking a deep breath before wrapping her snout tightly around your inflation nozzle, the dolphin girl begins blowing into your breast, filling your chest with a sudden tightness. Your PVC flesh creaks and groans as the bottlenose girl continues forcing air into your body, stretching your bosom to new limits. The sudden influx of air makes you lightheaded and giggly, and by the time she stops to take another breath you've given up resisting completely. After a quick kiss, the dolphin girl resumes at your other breast, plumping it up to match the first. ";
+			say ". She settles herself atop you and runs her decal eyes over your cetacean body, and soon has them focused on your nipples and their plastic air valves.";
+			say "     The dolphin girl smirks down at you slyly while her fin-like hands drift across your [bodytype of player] form, squeaking lightly as the stroke and tease your PVC imitation of [skinname of player] flesh. A sharp gasp escapes your lips as one hand finds its way to your chest[if breast size of player > 0], giving your breast a quick squeeze before she[else] and[end if] pinches your inflation nozzle nipple with a giggle. With your arms bound and the giggling dolphin girl atop you, all you can do is squirm and moan in pleasure as your altered nipples are teased and tweaked endlessly. Eventually the pinching comes to an end and you are given a moment to catch your breath before the inflatable leans forward to take your altered nipple into her mouth with a mischievous squeak.";
+			say "     Taking a deep breath before wrapping her snout tightly around your inflation nozzle, the dolphin girl begins blowing into your breast, filling your chest with a sudden tightness. Your PVC flesh creaks and groans as the bottlenose girl continues forcing air into your body, stretching your bosom to new limits. The sudden influx of air makes you lightheaded and giggly, and by the time she stops to take another breath you've given up resisting completely. After a quick kiss, the dolphin girl resumes at your other breast, plumping it up to match the first";
 			if breasts of player > 2 and "Bouncy Bouncy" is listed in feats of player:
-				say "     Your additional breasts are also given the same treatment once your upper pair's been expanded up a cup size";
+				say ". Your additional breasts are also given the same treatment once your upper pair's been expanded up a cup size";
+			say ".";
 			say "     With her work done, the inflatable girl pauses to grope and play with your newly swollen breasts briefly before she springs up off you. She deftly slips her towel out from underneath you and wraps it back around herself before running into the water to play and splash around some more. You are left to explore your new chest and regain clear your head.";
 			increase breast size of player by 1;
 			if ( breast size entry is 4 or breast size entry is 5 ) and breast size of player > breast size entry, increase breast size entry by 1;
 		else if player is male:
+			say ".";
 			if dolinfloss is 2:	[oral]
 				say "     She settles herself over your head, pressing her damp slit to your face. There is an arousing scent to her juices beyond the faint plasticky smell. Bound as you are, you cannot really get away, not that you're really thinking about that at this point. You start licking and kissing at her wet pussy, making her giggle merrily. You slide your tongue into her, teasing her smooth inner walls and lapping up her strangely arousing juices. Despite being a PVC pussy, it is quite warm, slick and tasty, gripping around your tongue.";
 				say "     Once you've gotten into the moment and are eating her out eagerly, she leans forward and takes your [cock size desc of player] [cock of player] shaft into her cetacean head, giggling cutely before stuffing it in[if cock length of player > 36]. Her latex mouth stretches tightly around your huge member as she takes it all in happily despite the excessive stretching necessary to accomplish this[else if cock length of player > 24]. Her latex mouth stretches around your large member as she takes it all in with ease, seeming quite pleased to have it stretch her mouth open[else]. Her latex mouth engulfs your member as she takes it all in with ease[end if]. Her smooth, slick mouth and throat squeeze and slide across your pulsing meat, working you until you cum with a load groan and pump your load into the inflatable girl[if cock width of player > 40]. Despite your massive output, the dolphin girl swallows it all down, ending up considerably more inflated from your added semen filling her[else if cock width of player > 20]. Despite your considerable output, the dolphin girl swallows it all down, ending up visibly more inflated from your added semen inside her[end if][if daytimer is day]. With the sunlight shining through her, you can see the slightly shaded streaks where your cum has landed on the inside of her vinyl skin[end if][if daytimer is day and cock width of player > 20] and the pool it's forming in her belly[end if]. As she's drinking down your load, she cums with a trill of squeaky delight, spilling her slick juices across your face. Finished, the smiling inflatable slides off you, her towel unraveling on its own. She dons it like a bright red cape and dashes back into the water to frolic again.";
@@ -236,16 +238,18 @@ to say losetodolphinflatable:
 		else:
 			say "     She settles herself over your head, pressing her damp slit to your face. There is an arousing scent to her juices beyond the faint plasticky smell. Bound as you are, you cannot really get away, not that you're really thinking about that at this point. You start licking and kissing at her wet pussy, making her giggle merrily. You slide your tongue into her, teasing her smooth inner walls and lapping up her strangely arousing juices. Despite being a PVC pussy, it is quite warm, slick and tasty, gripping around your tongue. As she rides your face, there's just something about her cute, innocent nature that really drives you to please her until finally she cums with a trill of squeaky delight, spilling her slick juices across your face. Finished, the smiling inflatable slides off you, her towel unraveling on its own. She dons it like a bright red cape and dashes back into the water to splash and play.";
 	else if dolphinmode is 2:	[lose to toy form - normal]
+		say ".";
 		if player is male:
 			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pulls you into the water with it. Floating on its back, it bobs in the water with you on top of it. Bound tightly as you are and with your bonds attached to its fins, you cannot do much to get away. And as the waves press its wet slit against your groin, you end up not really thinking about getting away at all. The rubbing teases your cock until you can't help but get hard and slide into its cunt. It trills happily and bobs on the water with your thrusts as you grow more excited, fucking with the motion of the ocean. The PVC pussy is pleasantly warm and slick, gripping your cock nicely as it resizes itself to take your [cock size desc of player] [cock of player] cock perfectly. As you ride the beach toy, there's just something about its soft, pliable body and smooth skin that excites you more the longer you touch it. It giggles in squeaky delight as you drive your cock hard into it while riding a large wave, pumping your hot seed into it. Finished, you pant atop the buoyant toy as the waves slowly take you back both to shore. With a little flick of its fins, the dark green towel releases you from its rubbery grip. The creature rises upright, splashing backwards over the water on its tail like a dolphin in a show, giving you a show of its creamy cunt leaking your seed[if daytimer is day]. The sunlight through its plastic body lets you see the sticky ropes of cum you've left on the inside of its air-filled body[end if]. It dons its towel once more like a scarf and dives into the water to frolic.";
 		else:
-			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pulls you to the edge of the water with it. Laying on your back at the edge of the ocean, it lays itself over your body, pressing its inflated form down over you. It settles itself over your head, pressing that damp slit to your face. There is an arousing scent of its juices beyond the faint, plasticky smell. Bound as you are, you cannot really get away, not that you're really thinking about that once the bottlenose's snout finds your cunt and its tongue sets to work at your pussy. You start licking and kissing at those rubbery petals, making it trill happily. You slide your tongue into her, teasing her smooth inner walls and lapping up her strangely arousing juices. Despite being a PVC pussy, it is quite warm, slick and tasty, gripping around your tongue. It's tongue, meanwhile, is returning the favor to you. You shiver a little each time a wave splashes a little higher, sending cool water around your hot pussy, but the beach toy's tongue feels all the warmer and more pleasant after these splashes. As it rubs down onto your face, there's just something about this cute, playful toy that really drives you to please it until finally it cums with a trill of squeaky delight, spilling her slick juices across your face, pushing its bottlenose snout into your cunt to make you cum as well. After cumming hard, another big wave hits, making you cum again. Finished, the smiling inflatable slides off you, its towel unraveling on its own. It re-dons it like a dark green scarf and dives into the water to splash and play, leaving you panting at the water's edge in the afterglow of the strangely erotic toy's visit.";
+			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pulls you to the edge of the water with it. Laying on your back at the edge of the ocean, it lays itself over your body, pressing its inflated form down over you. It settles itself over your head, pressing that damp slit to your face. There is an arousing scent of its juices beyond the faint, plasticky smell. Bound as you are, you cannot really get away, not that you're really thinking about that once the bottlenose's snout finds your cunt and its tongue sets to work at your pussy. You start licking and kissing at those rubbery petals, making it trill happily. You slide your tongue into her, teasing her smooth inner walls and lapping up her strangely arousing juices. Despite being a PVC pussy, it is quite warm, slick and tasty, gripping around your tongue. Its tongue, meanwhile, is returning the favor to you. You shiver a little each time a wave splashes a little higher, sending cool water around your hot pussy, but the beach toy's tongue feels all the warmer and more pleasant after these splashes. As it rubs down onto your face, there's just something about this cute, playful toy that really drives you to please it until finally it cums with a trill of squeaky delight, spilling her slick juices across your face, pushing its bottlenose snout into your cunt to make you cum as well. After cumming hard, another big wave hits, making you cum again. Finished, the smiling inflatable slides off you, its towel unraveling on its own. It re-dons it like a dark green scarf and dives into the water to splash and play, leaving you panting at the water's edge in the afterglow of the strangely erotic toy's visit.";
 	else if dolphinmode is 3:	[lose to toy mode - castle]
 		now dolcastlefight is 2;
+		say ".";
 		if player is male:
 			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pulls you to the floor with it. Resting on its back, it bobs in the sway of the rubbery floor with you on top of it. Bound tightly as you are and with your bonds attached to its fins, you cannot do much to get away. And as its motion press its wet slit against your groin, you end up not really thinking about getting away at all. The rubbing teases your cock until you can't help but get hard and slide into its cunt. It trills happily and rocks on the padded floor with your thrusts as you grow more excited, fucking with the motion of the ocean. The PVC pussy is pleasantly warm and slick, gripping your cock nicely as it resizes itself to take your [cock size desc of player] [cock of player] cock perfectly. As you ride the beach toy, there's just something about its soft, pliable body and smooth skin that excites you more the longer you touch it. It giggles in squeaky delight as you drive your cock hard into it while riding a large sway of the castle, pumping your hot seed into it. Finished, you pant atop the buoyant toy as the waves slowly rock you both. With a little flick of its fins, the dark green towel releases you from its rubbery grip. The creature rises upright and flicks its tail like a dolphin in a show, giving you a show of its creamy cunt leaking your seed[if daytimer is day]. The sunlight through its plastic body lets you see the sticky ropes of cum you've left on the inside of its air-filled body[end if]. It dons its towel once more like a scarf and dives out one of the doorways and makes its way into the water. You are left panting on the inflated castle's floor, bouncing and giggling in the afterglow of the strangely erotic toy's playfulness.";
 		else:
-			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pushing you onto the soft floor of the bouncy castle. Laying on your back on its bouncy surface, the dolphin lays itself over your body, pressing its inflated form down over you. It settles itself over your head, pressing that damp slit to your face. There is an arousing scent of its juices beyond the faint, plasticky smell. Bound as you are, you cannot really get away, not that you're really thinking about that once the bottlenose's snout finds your cunt and its tongue sets to work at your pussy. You start licking and kissing at those rubbery petals, making it trill happily. You slide your tongue into her, teasing her smooth inner walls and lapping up her strangely arousing juices. Despite being a PVC pussy, it is quite warm, slick and tasty, gripping around your tongue. It's tongue, meanwhile, is returning the favor to you. You moan and sway on the soft floor you're rocked by the waves of the ocean and the waves of pleasure running through your hot pussy. As it rubs down onto your face, there's just something about this cute, playful toy that really drives you to please it until finally it cums with a trill of squeaky delight, spilling her slick juices across your face, pushing its bottlenose snout into your cunt to make you cum as well. Finished, the smiling inflatable slides off you, its towel unraveling on its own. It re-dons it like a dark green scarf and dives out one of the doorways and makes its way into the water. You are left panting on the inflated castle's floor, bouncing and giggling in the afterglow of the strangely erotic toy's playfulness.";
+			say "     The green dolphin giggles again as it wraps its vinyl towel around you, binding your arms to your sides and pushing you onto the soft floor of the bouncy castle. Laying on your back on its bouncy surface, the dolphin lays itself over your body, pressing its inflated form down over you. It settles itself over your head, pressing that damp slit to your face. There is an arousing scent of its juices beyond the faint, plasticky smell. Bound as you are, you cannot really get away, not that you're really thinking about that once the bottlenose's snout finds your cunt and its tongue sets to work at your pussy. You start licking and kissing at those rubbery petals, making it trill happily. You slide your tongue into her, teasing her smooth inner walls and lapping up her strangely arousing juices. Despite being a PVC pussy, it is quite warm, slick and tasty, gripping around your tongue. Its tongue, meanwhile, is returning the favor to you. You moan and sway on the soft floor you're rocked by the waves of the ocean and the waves of pleasure running through your hot pussy. As it rubs down onto your face, there's just something about this cute, playful toy that really drives you to please it until finally it cums with a trill of squeaky delight, spilling her slick juices across your face, pushing its bottlenose snout into your cunt to make you cum as well. Finished, the smiling inflatable slides off you, its towel unraveling on its own. It re-dons it like a dark green scarf and dives out one of the doorways and makes its way into the water. You are left panting on the inflated castle's floor, bouncing and giggling in the afterglow of the strangely erotic toy's playfulness.";
 
 
 to say beatthedolphinflatable:
@@ -279,15 +283,15 @@ to say beatthedolphinflatable:
 
 to bottleboundstate:
 	let partialengulf be 0;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Bottlenose Toy":
 			now monster is y;
 			break;
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if clearnomore is 0, clear the screen;
 		if tempnum2 is 5 or humanity of player < 50:
 			now obliging is true;
@@ -295,9 +299,9 @@ to bottleboundstate:
 		if lustatt > 99:
 			say "     Finding yourself quickly overtaken by lust, the tight vinyl clinging to your [if player is male]dick[smn], squeezing your bliss out of you, the warm, wet feel of your [cum load size of player] load quickly drenching your groin until it's absorbed by[else if player is female]crotch, squeezing your bliss out of you, the warm, wet feel of your honey quickly drenching your groin until it's absorbed by[else]genderless crotch, forcing you to writhe in insatiable need against[end if] the twisted material. ";
 			if partialengulf is 1:
-				say "     Exploiting you moment of weakness, the dolphin suit pulls you back within its embrace, forcing you to struggle free of its hold once more.";
+				say "Exploiting you moment of weakness, the dolphin suit pulls you back within its embrace, forcing you to struggle free of its hold once more.";
 			else:
-				say "     Panting against the vinyl prison, its grip on you tightens ever further, eager to keep you within its twisted embrace.";
+				say "Panting against the vinyl prison, its grip on you tightens ever further, eager to keep you within its twisted embrace.";
 			now partialengulf is 0;
 			now lustatt is libido of player;
 			if enduring is true:
@@ -343,7 +347,7 @@ to bottleboundstate:
 			now scalevalue of player is 3;
 			now bodydesc of player is "inflatable";
 			now bodytype of player is "dolphin";
-			now daycycle of player is 0;
+			now SleepRhythm of player is 0;
 			now breasts of player is 2;
 			now breast size of player is 0;
 			if hellHoundLevel is 0:
@@ -354,7 +358,7 @@ to bottleboundstate:
 			now battleground is "void";
 			now combat abort is 1;
 			WaitLineBreak;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "Trapped in the inflatable dolphin suit, your mind slowly fades away until there are no thoughts left in your air-filled head but that of playing at the beach.";
 		else:
 			let k be 0;
@@ -371,7 +375,7 @@ to bottleboundstate:
 					increase struggleatt by 1;
 					say "     You struggle to pull yourself free, [one of]creaking loudly against your writhing protests[or]the suit groaning as you try to wrench it from you[or]the suit desperately trying to keep you within its grasp[at random]. ";
 					if struggleatt is 3:
-						say "     You finally manage to wrench the suit free of you, but it still manages to partially cling to your form, hellbent on keeping a hold on you and maintaining its toxic influence. [one of]The dolphin lady appears to have run off, ensuring this situation doesn't become even more difficult for you.[or][stopping]";
+						say "You finally manage to wrench the suit free of you, but it still manages to partially cling to your form, hellbent on keeping a hold on you and maintaining its toxic influence[one of]. The dolphin lady appears to have run off, ensuring this situation doesn't become even more difficult for you[or][stopping].";
 					LineBreak;
 					if bodyname of player is "Bottlenose Toy":
 						if a random chance of 1 in 3 succeeds:
@@ -401,7 +405,7 @@ to bottleboundstate:
 						LineBreak;
 						cleanboundmemory;
 						wait for any key;
-						now trixieexit is 1;
+						now Trixieexit is 1;
 				wait for any key;
 				next;
 			else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2":
@@ -475,12 +479,12 @@ to say dolphinflatableattack:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Bottlenose Toy"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -528,8 +532,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
@@ -546,9 +551,9 @@ when play ends:
 		else if humanity of player < 10:
 			say "     As your infection progresses, you become nothing but an inflatable creature, inside and out. With nothing more than thoughts of playing in the water, you bounce your way back to the waterfront. There you join several other inflatable dolphins and frolic in the water and play on the beach. While most are dolphin girls, there are a few shaped like regular dolphins as well to play with the pink girls. ";
 			if player is male:
-				say "     Having a cock to play with as well, the girls have a lot of fun rubbing their squeaky bodies against yours. Fucking is nothing more than another of the many games you play, mindlessly whiling away the time without a care in the world or a thought in your empty head past your eternal playtime.";
+				say "Having a cock to play with as well, the girls have a lot of fun rubbing their squeaky bodies against yours. Fucking is nothing more than another of the many games you play, mindlessly whiling away the time without a care in the world or a thought in your empty head past your eternal playtime.";
 			else:
-				say "     You and the other pink girls have plenty of fun together rubbing your squeaky bodies together or licking at the pleasant slit between your legs. You have many a pleasant ride on the dolphin toys as well. But when a blue male toy joins your group, having him fuck you with his cock is a whole new game to play. You and the others mindlessly while away the time without a care in the world or a thought in your empty heads past your eternal playtime.";
+				say "You and the other pink girls have plenty of fun together rubbing your squeaky bodies together or licking at the pleasant slit between your legs. You have many a pleasant ride on the dolphin toys as well. But when a blue male toy joins your group, having him fuck you with his cock is a whole new game to play. You and the others mindlessly while away the time without a care in the world or a thought in your empty heads past your eternal playtime.";
 		else:
 			say "     Your unusual body causes quite a bit of consternation for the scientists analyzing the various strains found in the infected city. Being an inflatable creature with no internal structure at all, they don't understand how you can be alive at all. They have some theories and ideas, but you can hardly follow it. Something about your transformation has made you not care about such complicated thoughts, preferring to live in the moment. While some would call you an airhead, you have retained enough of your humanity to still think. You just don't bother most of the time.";
 			say "     Because of your body's strange nature, you decide to get a job as a lifeguard and swimming instructor at a local pool. The kids particularly like your cute, inflatable body and merry antics in the water. And there are always a student or two from your older classes who enjoys your pooltoy form in another way.";

@@ -1,6 +1,7 @@
 Version 4 of Wereraptor by Stripes begins here.
 [Version 4.3 - Tweak to loss scene probabilities - Stripes]
 [Version 4.4 - removal of banning content - Luneth]
+[Note: not Resolution flagged yet - use existing variables for now]
 "Adds a special wereraptor creature/curse to Flexible Survival's Wandering Monsters table"
 
 [ wrcursestatus                                                                ]
@@ -15,6 +16,10 @@ Version 4 of Wereraptor by Stripes begins here.
 [ 100: curse purged                                                            ]
 
 Section 0 - Event Activation
+
+Table of GameEventIDs (continued)
+Object	Name
+Paleontology Professor	"Paleontology Professor"
 
 Paleontology Professor is a situation. The level of Paleontology Professor is 7.
 The sarea of Paleontology Professor is "Campus".
@@ -154,8 +159,8 @@ Instead of resolving a Paleontology Professor:
 
 to raptorrelease:
 	[puts Wereraptor as lead monster]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Wereraptor":
 			now monster is y;
 			now area entry is "Campus";
@@ -167,7 +172,7 @@ Section 1 - Monster Responses
 
 wrmode is a number that varies.
 wrcursestatus is a number that varies.
-wrcursestart is a number that varies.
+wrcursestart is a number that varies. wrcursestart is usually 10000.
 wrcurseactivity is a truth state that varies. wrcurseactivity is normally false.
 
 when play begins:
@@ -176,7 +181,7 @@ when play begins:
 	add { "Wereraptor" } to infections of Reptilelist;
 
 to say wereraptordesc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	now dex entry is 19;
 	now HP entry is 45;
@@ -191,7 +196,7 @@ to say wereraptordesc:
 	if guy is banned and girl is banned:		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     You spot a raptor-like creature looking at you from the distance. It stares at you long with its amber eyes, twitches its claws. 'Clever girl,' it hisses before turning away, leaving you be.";
 		say "(Currently requires at least one of Guy or Girl content to be available.)[line break]";
-		blank out the whole row;
+		now BannedStatus entry is true;
 		now fightoutcome is 19;
 		now combat abort is 1;
 		now wrmode is 0;
@@ -259,7 +264,7 @@ to say beatthewereraptor:
 		say "     You manage to defeat and drive off Dr. Utah, the first wereraptor.";
 	else if bodyname of player is "Wereraptor" and player is not neuter:
 		say "     As the wereraptor stumbles back, weak and beaten, your primitive urges drive you to pounce upon [if wrmode is 1]her[else]him[end if] instinctively. You bear [if wrmode is 1]her[else]him[end if] to the ground and pin them.";
-		say "     [bold type]Shall you give into your primitive, lustful instincts and mate with your fallen foe?[roman type][line break]";
+		say "     [bold type]Shall you give in to your primitive, lustful instincts and mate with your fallen foe?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -325,12 +330,12 @@ to say wrvict3:		[69 w/male]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Wereraptor"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -359,7 +364,7 @@ When Play begins:
 	now HP entry is 45; [ The monster's starting HP. ]
 	now lev entry is 8; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 14; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
@@ -378,8 +383,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	now nocturnal entry is true; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 2; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
@@ -512,8 +518,8 @@ this is the wereraptor curse rule:
 
 to wrcursesave:
 	[puts Wereraptor as lead monster]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Wereraptor":
 			now monster is y;
 			break;
@@ -543,10 +549,10 @@ to wrcursesave:
 
 to wrcurserestore:
 	[puts Wereraptor as lead monster]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if name entry is not "Wereraptor":
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Wereraptor":
 				now monster is y;
 				break;
@@ -573,20 +579,20 @@ to wrcurserestore:
 
 
 to wrbodysave:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now wrbodyname is bodyname of player;
 	now wrbody is body of player;
 	now wrscalevalue is scalevalue of player;
 	now wrbodydesc is bodydesc of player;
 	now wrbodytype is bodytype of player;
-	now wrdaycycle is daycycle of player;
+	now wrdaycycle is SleepRhythm of player;
 	now bodyname of player is "Wereraptor";
 	now body of player is body entry;
 	attributeinfect;
 	say ". Your body contorts painfully as [body change entry]";
 
 to wrfacesave:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now wrfacename is facename of player;
 	now wrface is face of player;
 	now facename of player is "Wereraptor";
@@ -594,7 +600,7 @@ to wrfacesave:
 	say ". Your face cracks and pops as [face change entry]";
 
 to wrskinsave:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now wrskinname is skinname of player;
 	now wrskin is skin of player;
 	now skinname of player is "Wereraptor";
@@ -602,15 +608,15 @@ to wrskinsave:
 	say ". Your skin feels tight and raw as [skin change entry]";
 
 to wrtailsave:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now wrtailname is tailname of player;
 	now wrtail is tail of player;
 	now tailname of player is "Wereraptor";
 	now tail of player is tail entry;
-	say ". Your hindquarters stiffens with a harsh pop as [ass change entry]";
+	say ". Your hindquarters stiffen with a harsh pop as [ass change entry]";
 
 to wrcocksave:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now wrcockname is cockname of player;
 	now wrcock is cock of player;
 	now cockname of player is "Wereraptor";
@@ -627,7 +633,7 @@ to wrcurserecede:
 		now scalevalue of player is wrscalevalue;
 		now bodydesc of player is wrbodydesc;
 		now bodytype of player is wrbodytype;
-		now daycycle of player is wrdaycycle;
+		now SleepRhythm of player is wrdaycycle;
 	if facename of player is "Wereraptor":
 		now facename of player is wrfacename;
 		now face of player is wrface;
@@ -685,7 +691,11 @@ Section 4 - Cure Events
 
 Part 1 - Greenhouse and Wolfsbane
 
-Greenhouse is a situation. The level of Greenhouse is 7. Greenhouse is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Greenhouse	"Greenhouse"
+
+Greenhouse is a situation. The level of Greenhouse is 7. Greenhouse is inactive.
 The sarea of Greenhouse is "Campus".
 
 grhouse is a truth state that varies. grhouse is usually false.
@@ -750,7 +760,11 @@ the scent of wolfsbane is "     The wolfsbane has a strong scent that makes you 
 
 Part 2 - Getting the Knife
 
-Getting the Knife is a situation. The level of Getting the Knife is 7. Getting the Knife is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Getting the Knife	"Getting the Knife"
+
+Getting the Knife is a situation. The level of Getting the Knife is 7. Getting the Knife is inactive.
 The sarea of Getting the Knife is "Warehouse".
 
 wrknifefight is a truth state that varies. wrknifefight is usually false.
@@ -805,7 +819,11 @@ the scent of chainmail vest is "     There is little scent to the chainmail itse
 
 Part 3 - Dinosaur Skeleton
 
-Dinosaur Skeleton is a situation. The level of Dinosaur Skeleton is 9. Dinosaur Skeleton is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Dinosaur Skeleton	"Dinosaur Skeleton"
+
+Dinosaur Skeleton is a situation. The level of Dinosaur Skeleton is 9. Dinosaur Skeleton is inactive.
 The sarea of Dinosaur Skeleton is "Museum".
 
 wrdinoskel is a truth state that varies. wrdinoskel is usually false.
@@ -939,7 +957,7 @@ when play ends:
 					say "     When the eggs Dr. Utah left in the city hatch, they seems like other ferals and go largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers. ";
 				else:
 					say "     Seeming at first like other ferals, the spread of wereraptors goes largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers. ";
-				say "     As the numbers of attacks from these 'night lizards' grow, you and Dr. Utah are pulled in as experts on prehistory and saurian creatures. But despite the many efforts and seemingly reasonable precautions you implement, the numbers continue to grow. With you both leading both sides, it is easy to ensure that your people rise in strength, pulling more people into your order and creating more sexy saurians to populate what will soon be your world.";
+				say "As the numbers of attacks from these 'night lizards' grow, you and Dr. Utah are pulled in as experts on prehistory and saurian creatures. But despite the many efforts and seemingly reasonable precautions you implement, the numbers continue to grow. With you both leading both sides, it is easy to ensure that your people rise in strength, pulling more people into your order and creating more sexy saurians to populate what will soon be your world.";
 		else:
 			if humanity of player < 10:
 				say "     As your infection takes hold, it tries to force out the ancient wereraptor curse, but cannot do so entirely. You spend much of your existence unaware of your dual identity, but every full moon, the hidden monster from the id rises and you transform into the Wereraptor to stalk the night. Often at these times, you meet with Dr. Utah in [if UtahGender is 1]his[else]her[end if] impressive night form and enjoy a lustful hunt together, adding others to your numbers.";
@@ -950,6 +968,6 @@ when play ends:
 					say "     When the eggs Dr. Utah left in the city hatch, they seems like other ferals and go largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers. ";
 				else:
 					say "     Seeming at first like other ferals, the spread of wereraptors goes largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers. ";
-				say "     As the numbers of attacks from these 'night lizards' grow, you and Dr. Utah are pulled in as experts on prehistory and saurian creatures. But despite the many efforts and seemingly reasonable precautions you implement, the numbers continue to grow. With you both leading both sides, it is easy to ensure that your people rise in strength, pulling more people into your order and creating more sexy saurians to populate what will soon be your world.";
+				say "As the numbers of attacks from these 'night lizards' grow, you and Dr. Utah are pulled in as experts on prehistory and saurian creatures. But despite the many efforts and seemingly reasonable precautions you implement, the numbers continue to grow. With you both leading both sides, it is easy to ensure that your people rise in strength, pulling more people into your order and creating more sexy saurians to populate what will soon be your world.";
 
 Wereraptor ends here.

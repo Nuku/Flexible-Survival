@@ -12,10 +12,10 @@ Section 1 - Monster Responses
 ymgmode is a number that varies. ymgmode is usually 1.
 
 to say ymgdesc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if (guy is banned or guy is warded) and (girl is banned or girl is warded):		[if both types are banned, the fight is aborted and removed from critter table]
 		say "     Your wandering feet bring you close enough to see an aristocratic mink, albino or just royal white, puttering around the deck of their yacht. With a haughty sniff, they turn their nose up at you and vanish belowdecks.";
-		blank out the whole row;
+		now BannedStatus entry is true;
 		now fightoutcome is 19;
 		now combat abort is 1;
 		now ymgmode is 0;
@@ -58,7 +58,7 @@ to say losetoymgirl:
 		say "     Beaten senseless by the yachting mink, you collapse to the wooden slats of the dock. At the snap of her fingers, deckhands yank your gear and clothes of without ceremony, leaving you bare to her. 'You locals are so unfriendly! This is worse than that trip to Peru!'";
 	if player is male:
 		say "     With a soft little self-amused hum the mink stands beside you, swinging one short leg across your body to straddle your prone form. 'At least you've got something I can amuse myself with.' She hikes her skirt up to expose the dripping slit of her needy cunt, rubbing it idly with her paws. Her eyes close, head tilting back as she teases herself with her fingers and you with the sight of her lips opening. Honey-like juices dribble down, splattering on your belly and crotch. The warmth and scent is enough to get your prick stiff and ready for her, but things are outside your control! Your dick is aching with need by the time she is ready, smoothly crouching down and aligning her cunt with the tip of your cock. 'There we go.' She churrs with satisfaction as she sits down in a single motion, her cunt swallowing you to the base!";
-		say "     She feels so good around you, her tight cunt expertly massaging and milking your length as she begins to bounce. Her pert tits wobble in the high-dollar sports bra she wears, out of your reach. Every time you extend a hand toward them, she slaps it away. The mink girl is running the show, but you are lucky enough to be along for the ride. Eventually you have to lay back and enjoy it, but are only halfway to your own orgasm before she is barking and trembling in delight! With a gush of femjuices, she has her delightful orgasm, eyes rolling back in her head. She stands up suddenly, leaving you blueballed and in sexual agony. 'Not terrible.' Daintily, she flicks the tip of your still thrumming cock with a toe. That is enough for you to finally limp to orgasm, the mink laughing as you splatter yourself. Still laughing, she returns to her yacht! ";
+		say "     She feels so good around you, her tight cunt expertly massaging and milking your length as she begins to bounce. Her pert tits wobble in the high-dollar sports bra she wears, out of your reach. Every time you extend a hand toward them, she slaps it away. The mink girl is running the show, but you are lucky enough to be along for the ride. Eventually you have to lay back and enjoy it, but are only halfway to your own orgasm before she is barking and trembling in delight! With a gush of femjuices, she has her delightful orgasm, eyes rolling back in her head. She stands up suddenly, leaving you blueballed and in sexual agony. 'Not terrible.' Daintily, she flicks the tip of your still thrumming cock with a toe. That is enough for you to finally limp to orgasm, the mink laughing as you splatter yourself. Still laughing, she returns to her yacht.";
 	else:
 		say "     Finding only a wet pussy between your legs, the mink clicks her tongue in disappointment. 'Unfortunate,' she chides you gently, but hikes her skirt up to expose the dripping slit of her needy cunt, rubbing it idly with her paws. Her eyes close, head tilting back as she teases herself with her fingers and you with the sight of her lips opening. With a huff she steps forward, gripping your head firmly and bringing up to her needy cunt. Its lick or die, and you have little choice but to worship that hot slit! Time loses meaning as you slurp and lick, teasing her swollen clit until at last the mink gushes femjuices and soaks your face! Satisfied, she allows you to collapse, climbing back aboard her yacht.";
 
@@ -84,7 +84,7 @@ to say beattheymg:
 			say "[beattheymguy]";
 
 to say beattheymgirl:
-	say "     The uppity mink lady looks positively confused as she is beaten into submission. 'This is preposterous! I am too important and rich for this!' Before she can continue, you deftly slap her down to reinforce your control. ";
+	say "     The uppity mink lady looks positively confused as she is beaten into submission. 'This is preposterous! I am too important and rich for this!' Before she can continue, you deftly slap her down to reinforce your control.";
 	if player is male: [male or herm]
 		say "     The shocked mink is made speechless by the rough treatment, too startled to struggle even weakly as her skirt is flipped up. Despite the beatdown, her cunt is inflamed with arousal and dripping with femmy juices, beckoning to your hard cock! You descend on her like a severe market correction, pinning her down against the rough planks of the dock. She yelps, her tits bouncing up and out of the sportsbra to jiggle in the salty air. They look so delectable, but you cannot resist the siren song of that hot snatch! There is a deep pleasure to be had from putting the bratty mustelid in her place, roughly fucking her like some low-class bimbo until at last you spurt your hot cum deep inside! You snicker at the thought of impregnating her with a scandalous mixed-breed litter as you draw back out, admiring how her cunt bubbles with your cum.";
 	else if player is female: [female]
@@ -104,12 +104,12 @@ to say beattheymguy:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Yuppie Mink";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -127,7 +127,7 @@ When Play begins:
 	now body change entry is "your frame slims down and extends, the elongation making your body seem all the more slender. Your arms and legs shorter and thin out to become more dainty and attractive, for fast and lithe movements. Your limbs end in smallish paws that are soft and pink, obviously never used for a day of manual labor";
 	now skin change entry is "you feel your whole body fluff up as nearly iridescent fur begins to grow, so white as to be nearly transparent and softer than the finest silk or velvet";
 	now ass change entry is "pain and aches flare up as a soft, fluffy white mink tail uncurls from your ass";
-	now cock change entry is "you feel electric sensations as nanites reform your cock, pink hues blossoming as your meat thickens to the sculpted curves of what looks like a cock designed for royalty, subtle textures and elegant curves which downplay its intimidating size. Beneath your newly shaped cock, white fuzz envelopes your nuts as they swell and bloat into an oversized purse brimming with cum";
+	now cock change entry is "you feel electric sensations as nanites reform your cock, pink hues blossoming as your meat thickens to the sculpted curves of what looks like a cock designed for royalty, subtle textures and elegant curves which downplay its intimidating size. Beneath your newly shaped cock, white fuzz envelops your nuts as they swell and bloat into an oversized purse brimming with cum";
 	now str entry is 12;
 	now dex entry is 16;
 	now sta entry is 10;
@@ -157,8 +157,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings

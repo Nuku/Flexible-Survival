@@ -146,7 +146,7 @@ Coregionality relates rooms to each other in groups. The verb to be coregional w
 
 Map zoomedness is a kind of value. The Map zoomednesses are map zoomed out, map zoomed in, and map absent.
 
-Current zoom is a map zoomedness that varies. [The current zoom is map zoomed in.] [The current zoom is map absent.]
+Current zoom is a map zoomedness that varies.[@Tag:NotSaved] [The current zoom is map zoomed in.] [The current zoom is map absent.]
 
 To report dynamic allocation conflict:
 	say "[bracket]Your interpreter does not support dynamic allocation, so the automap will not function.[close bracket][line break]";
@@ -176,7 +176,7 @@ Carry out zoomingmisc:
 	end if.
 
 
-Map displayness is a kind of value. The map displaynesses are map display ascii, map display automatic, map display fancy, map display unicode. Current displayness is a map displayness that varies.
+Map displayness is a kind of value. The map displaynesses are map display ascii, map display automatic, map display fancy, map display unicode. Current displayness is a map displayness that varies.[@Tag:NotSaved]
 
 Map displaying unicode is an action out of world applying to nothing. Understand "map unicode" as map displaying unicode. Carry out map displaying unicode: now current displayness is map display unicode; say "Displaying map with unicode character set.".
 
@@ -392,8 +392,8 @@ To decide what number is the character at (sq - a number):
 
 To decide what number is room size: if current zoom is map zoomed in, decide on 4; decide on 2.
 
-[Map drawn room is a mappable room that varies. Map drawn direction is a direction that varies.]
-Map drawn room is a room that varies. Map drawn direction is a direction that varies.
+[Map drawn room is a mappable room that varies.[@Tag:NotSaved] Map drawn direction is a direction that varies.[@Tag:NotSaved]]
+Map drawn room is a room that varies.[@Tag:NotSaved] Map drawn direction is a direction that varies.[@Tag:NotSaved]
 
 [ Draw Path ]
 To draw a path from (room x - a number) and (room y - a number) to (dir - a direction) for (dist - a number) with (ch - a number):
@@ -886,7 +886,7 @@ Array Automap_Font_3_Conv -> 0 38 40 96 96 96 126 126 126 96 126 11 12 13 14 15 
 -);
 
 
-The automap size is a number that varies. The automap size is usually 9. When play begins: if automap size is at least 1, reserve automap memory of automap size rows.
+The automap size is a number that varies.[@Tag:NotSaved] The automap size is usually 9. When play begins: if automap size is at least 1, reserve automap memory of automap size rows.
 
 To say (n - a number) blank lines:
 	while n > 0:
@@ -1207,7 +1207,7 @@ Example: ** The Demonstration - A simple demonstration.
 
 	Section 98 (for use with Basic Hyperlinks by Emily Short)
 
-	Current autowalk destination is a room that varies. Autowalk destination set is a truth state that varies.
+	Current autowalk destination is a room that varies.[@Tag:NotSaved] Autowalk destination set is a truth state that varies.[@Tag:NotSaved]
 
 	autowalking is an action applying to one topic. Understand "autowalk to [text]" as autowalking.
 

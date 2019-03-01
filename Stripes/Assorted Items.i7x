@@ -10,7 +10,7 @@ Section 1 - Nullo Wafers
 [
 Table of Game Objects (continued)
 name	desc	weight	object
-"nullo wafers"	"A box of bland, dry cookies. It's packaging proclaims [']Now with less flavor![']"	1	nullo wafers
+"nullo wafers"	"A box of bland, dry cookies. Its packaging proclaims [']Now with less flavor![']"	1	nullo wafers
 
 nullo wafers is a grab object. It is temporary. It is a part of the player.
 
@@ -109,7 +109,7 @@ check pillgiving someone (called x):
 		say "     Doctor Matt looks suspiciously at the pill you offer him. He takes a few steps towards the back wall of the room, hovering his hand over the intercom. 'You can't expect me to open my suit and take such a thing? You're not going feral on me, are you? Control yourself, or I'll have to call Orthas!'";
 	else if x is Elijah and HP of Elijah < 4:
 		say "     Now is probably not a good time for that.";
-	else if x is Athanasia and HP of Athanasia < 5:
+	else if x is Anastasia and HP of Anastasia < 5:
 		say "     Now is probably not a good time for that.";
 	else if x is Solstice and HP of Solstice < 5:
 		say "     Now is probably not a good time for that.";

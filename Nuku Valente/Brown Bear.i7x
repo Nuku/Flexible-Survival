@@ -19,7 +19,7 @@ to say UrsineDesc:
 	if HP of bee girl is 3:
 		say "     You are faced with a towering figure. While her head and body are much like that of a wild bear, her legs are somewhat longer and she's gotten quite pudgy from eating the stolen honey. The plain red t-shirt she wears is barely able to fit her enlarged body as it is, her six busty breasts pressed tightly against the taut fabric such that there's a clear impression of her hard nipples. She is no cute teddy bear, though. Her muzzle is filled with sharp teeth, and her powerful limbs end in paws equipped with claws. The big bruin, eager to defend her ill-gotten gains, is ready to attack.";
 	else:
-		say "     A towering figure comes into view. At first you assume it's a wild bear standing on its hind legs, but on closer inspection, you realize that its legs are somewhat long and its black claws are painted with nail polish. The infected woman has bright [one of]brown[or]blue[or]green[at random] eyes and huge, pointed teeth. A dense coat of shaggy fur covers her tall and wide body completely. Her muscular chest is padded with three rows of flattish breasts, and long nipples peek out through her fur. On seeing you, she exposes more of her teeth and speaks, '[one of]Run! I don't want to break another one![or]Not now, you idiot![or]Are you stalking me?[at random]'";
+		say "     A towering figure comes into view. At first you assume it's a wild bear standing on its hind legs, but on closer inspection, you realize that its legs are somewhat long and its black claws are painted with nail polish. The infected woman has bright [one of]brown[or]blue[or]green[at random] eyes and huge, pointed teeth. A dense coat of shaggy fur covers her tall and wide body completely. Her muscular chest is padded with three rows of flattish breasts, and long nipples peek out through her fur. On seeing you, she exposes more of her teeth and speaks, [one of]'Run! I don't want to break another one!'[or]'Not now, you idiot!'[or]'Are you stalking me?'[at random]";
 
 
 to say UrsineAttack:
@@ -107,12 +107,12 @@ to say UrsineLoses:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Bear"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -161,8 +161,9 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? True/False (should almost invariably be false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "bearhugger"; [ Uses the 'bearhugger' entry from the Table of Critter Combat ]
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname is "Bear":

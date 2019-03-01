@@ -21,7 +21,11 @@ This is the zephyrad rule:
 	say "- Wrestling Wolf threat level reassessed to level 15."; ]
 	now Zephyr Lobby is known;
 
-Zephyr Lobby is a room. "[zephyrlobbydesc]". It is fasttravel. It is private.
+Table of GameRoomIDs (continued)
+Object	Name
+Zephyr Lobby	"Zephyr Lobby"
+
+Zephyr Lobby is a room. "[zephyrlobbydesc]". It is fasttravel.
 earea of Zephyr Lobby is "High".
 
 sblzephyr is a truth state that varies. sblzephyr is usually false.
@@ -96,17 +100,17 @@ Carry out vialselling:
 			if found > 4:
 				say ", but she shakes her head. 'We have no interest in further samples of that kind. Try hunting for different game.'";
 				continue the action;
-	[locates target within the table of random critters]
+	[locates target within the Table of Random Critters]
 	now monster is 0;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is target:
 			now monster is y;
 			break;
 	if monster is 0:
 		say ", but she shakes her head. 'I'm not really sure where you got that, but it's not on our acquisition list so we can't take it.'";
 		continue the action;
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	now basevalue is ( ( lev entry * 7 ) / 4 );
 	if found is 1:
 		now basevalue is ( basevalue * 2 ) / 3;
@@ -168,8 +172,8 @@ name	price	object	allowed
 "pepperspray"	320	pepperspray	pepper rule
 "water bottle"	100	water bottle	true rule
 
-nanitemeter is a number that varies. nanitemeter is normally 0.	[marks if player bought a nanite collector]
-pepped is a number that varies. pepped is normally 0.	[marks how many pepperspray a player's bought]
+nanitemeter is a number that varies. nanitemeter is usually 0.	[marks if player bought a nanite collector]
+pepped is a number that varies. pepped is usually 0.	[marks how many pepperspray a player's bought]
 
 This is the true rule:
 	rule succeeds;
@@ -191,7 +195,7 @@ Chapter 1 - Getting Started
 
 ndmlist is a list of text that varies. ndmlist is usually {"Beach", "Red Light District", "High Rise District", "Park"}.
 
-[ -- Dr. Matt versions -- ]
+[ - Dr. Matt versions - ]
 
 to say zephyrmatt1:
 	say "     You go up to Larissa at the counter and inform her that you're here on Dr. Matt's behalf to exchange information. She glances up from the electronic game she's playing to pass the time. 'Oh, hey. Head Office said someone would be coming by for that.' She sets her game aside and glances up at you between flipping through the documents. 'If you're going around the city looking for work, we've got a bit of something for you to do. HQ says it needs to be done ASAP, but we don't have the manpower. If you could take care of that, I'll make sure these get a rush on top of paying you for the job. Sound good?'";
@@ -199,11 +203,11 @@ to say zephyrmatt1:
 	say "     'Now, what we need you to do is place a few of these nanite density monitors at a few key locations in the city. They'll help us detect the prop-' she stops herself short. 'Well, a temp doesn't need to know the details. They measure some stuff about the nanites. Perfectly safe,' she adds reassuringly. 'We've set a few up already nearby, but HQ wants them placed at four other key locations across the city: The downtown high rise district, the city park, the beachfront area and the seedy red light district. They should be placed in open, elevated locations where they won't be disturbed. Once you get to an area, try hunting around for a ['][bold type]detector site[roman type]['] to find an appropriate place to set it up.'";
 	say "     She heaves a small suitcase onto the counter and pops it open. She takes a moment to demonstrate how to activate them, then closes it up and slides the case to you. 'They come equipped with a GPS transponder, so we'll be able to know if they've been properly installed or not, so don't get any funny ideas about just dumping them somewhere or sticking them in a few alleys. They've got to be outside in the open and somewhere high up.' Grabbing the heavy case, you sigh and head off, hoping this job will be as easy as she claims, but knowing it won't be somehow.";
 	increase carried of nanite density monitor by 1;
-	now beach detector site is unresolved;
-	now red light detector site is unresolved;
-	now high rise detector site is unresolved;
-	now park detector site is unresolved;
-	now HP of doctor matt is 17;
+	now beach detector site is active;
+	now red light detector site is active;
+	now high rise detector site is active;
+	now park detector site is active;
+	now HP of Doctor Matt is 17;
 
 to say zephyrmatt2:
 	say "     'Don't forget about taking care of those nanite detection monitors. Our system shows that there [if number of entries in ndmlist is 1]is still one[else if number of entries in ndmlist is 2]are still two[else if number of entries in ndmlist is 3]are still three[else]are still four[end if] left to be placed. We won't be able to pay you for the work until the whole job is completed. Remember, if you get this done, I'll put a rush on that request from Dr. Matt for you,' she says with a bureaucratic smile that tells you that you have no real choice in the matter.";
@@ -213,9 +217,9 @@ to say zephyrmatt3:
 	say "     'I'll inform head office that Dr. Matt's completed his end of the bargain,' she adds, sliding you a CD-ROM. 'The data's encrypted and Dr. Matt - what an odd name - will be sent the key electronically.' You take the disk and tuck it away somewhere safe.";
 	say "     The woman slides you a credit voucher. 'There you go. That's two hundred free credits, good for any place that accepts the new currency of the new world,' she says with a smile. Again, you have to bite your tongue from saying that this is just about the only place around that takes them right now. You should at least be able to get some supplies or some gear from these guys.";
 	increase freecred by 200;
-	now HP of doctor matt is 18;
+	now HP of Doctor Matt is 18;
 
-[ -- Dr. Mouse versions -- ]
+[ - Dr. Mouse versions - ]
 
 to say zephyrmouse1:
 	say "     You go up to Larissa at the counter and inform her that you're here to pick up some materials, sliding her the papers as you do. She glances up from the electronic game she's playing to pass the time and looks over the papers. 'Oh. This mess. Yeah, my boss is kinda peeved that some exec's telling him to pass materials onto some third party guy. You're not that guy, are you?' she asks suspiciously. You shake your head and say that you're just the courier. 'Well, it's going to take us a while to put this all together. It's reeeeal busy here,' she says as she picks her game again. 'But if you're going around the city looking for work, we've got a bit of something for you to do. HQ says it needs to be done ASAP, but we don't have the manpower. If you could take care of that, my boss'll be happy and I'll be able to make sure this request get a rush on top of paying you for the job. Sound good?'";
@@ -223,10 +227,10 @@ to say zephyrmouse1:
 	say "     'Now, what we need you to do is place a few of these nanite density monitors at a few key locations in the city. They'll help us detect the prop-' she stops herself short. 'Well, a temp doesn't need to know the details. They measure some stuff about the nanites. Perfectly safe,' she adds unreassuringly. 'We've set a few up already nearby, but HQ wants them placed at four other key locations across the city: The downtown high rise district, the city park, the beachfront area and the seedy red light district. They should be placed in open, elevated locations where they won't be disturbed. Once you get to an area, try hunting around for a ['][bold type]detector site[roman type]['] to find an appropriate place to set it up.'";
 	say "     She heaves a small suitcase onto the counter and pops it open. She takes a moment to demonstrate how to activate them, then closes it up and slides the case to you. 'They come equipped with a GPS transponder, so we'll be able to know if they've been properly installed or not, so don't get any funny ideas about just dumping them somewhere or sticking them in a few alleys. They've got to be outside in the open and somewhere high up.' Grabbing the heavy case, you sigh and head off, hoping this job will be as easy as she claims, but knowing it won't be somehow.";
 	increase carried of nanite density monitor by 1;
-	now beach detector site is unresolved;
-	now red light detector site is unresolved;
-	now high rise detector site is unresolved;
-	now park detector site is unresolved;
+	now beach detector site is active;
+	now red light detector site is active;
+	now high rise detector site is active;
+	now park detector site is active;
 	now hospquest is 17;
 
 to say zephyrmouse2:
@@ -244,7 +248,11 @@ Chapter 2 - The Situations
 
 Book 1 - Beach
 
-Beach Detector Site is a situation. It is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Beach Detector Site	"Beach Detector Site"
+
+Beach Detector Site is a situation. It is inactive.
 The sarea of Beach Detector Site is "Beach".
 
 Instead of resolving a Beach Detector Site:
@@ -261,11 +269,12 @@ Instead of resolving a Beach Detector Site:
 			challenge "feral sea dragoness";
 		if lost is 1:
 			say "     Defeated, you are forced back to the beach. You'll have to try again later and hope the creature has moved on.";
+			now Resolution of Beach Detector Site is 2; [detector not placed yet, lost fight]
 		else:
 			say "     With the creature defeated, you make it to the rocky spire. You now must climb the wet stone to get to the top. While parts of it are fairly easy to scale, there are a few difficult sections that make the climbing treacherous.";
 			let bonus be ( dexterity of player + strength of player minus 20 ) divided by 2;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+			say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 			if bonus + dice > 16:
 				say "You manage to safely make it up to the top!";
 			else:
@@ -273,13 +282,18 @@ Instead of resolving a Beach Detector Site:
 				decrease HP of player by 20;
 			say "     Tearing open the bags, you pull out the device and place it on a smooth surface at the top of the spire. Activating it, there is a whirring accompanied by a grinding sound as the screw bolts dig into the rock, locking it into place. Given the height and the fresh sea breeze, you're quite confident the detector will get unobstructed readings of... whatever for Zephyr. Your descent is thankfully easier, choosing to make an exhilarating dive from the fifty foot spire into the water and swimming back to shore.";
 			remove "Beach" from ndmlist;
+			now Resolution of Beach Detector Site is 1; [detector placed]
 			now Beach Detector Site is resolved;
 			say "[onelessndm]";
 
 
 Book 2 - Red Light District
 
-Red Light Detector Site is a situation. It is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Red Light Detector Site	"Red Light Detector Site"
+
+Red Light Detector Site is a situation. It is inactive.
 The sarea of Red Light Detector Site is "Red".
 
 Instead of resolving a Red Light Detector Site:
@@ -296,16 +310,22 @@ Instead of resolving a Red Light Detector Site:
 		challenge "Hermaphrodite Latex Vixen";
 		if lost is 1:
 			say "     Defeated, the hermaphrodite vixen banishes you from her rooftop, forcing you to return another time to try and place the detector after you've recovered.";
+			now Resolution of Red Light Detector Site is 2; [detector not placed, lost fight]
 		else:
 			say "     Having dealt with the cherry red vixen, you let her flee down the fire escape and head over to the sign. Looking it over, you are happy to find there's a few sets of maintenance rungs installed on the back so it can be scaled. Climbing up carefully, you find a good spot near the top of the sign, affixing the device against the black back of the sign, helping to hide it. When you turn it on, there is a whirr as the screws drill themselves into the surface, locking the box securely in place. Pleased with your accomplishment, you head back down and get some distance between you and the highly active group of creatures around here.";
 			remove "Red Light District" from ndmlist;
+			now Resolution of Red Light Detector Site is 1; [detector placed]
 			now Red Light Detector Site is resolved;
 			say "[onelessndm]";
 
 
 Book 3 - High Rise District
 
-High Rise Detector Site is a situation. It is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+High Rise Detector Site	"High Rise Detector Site"
+
+High Rise Detector Site is a situation. It is inactive.
 The sarea of High Rise Detector Site is "High".
 ndmhigh is a number that varies.
 
@@ -319,14 +339,14 @@ Instead of resolving a High Rise Detector Site:
 		let T be a random number between 1 and 4;
 		if T is 1:
 			say ", but are met a few floors later by a pack of bunnies who open the stairwell door as you walk past.";
-			challenge "Rabbit";
+			challenge "Anthro Rabbit";
 		else if T is 2:
 			say ", but run into a pair of cougars descending the stairs quietly on their padded paws.";
 			challenge "Cougar";
 			if lost is 0:
 				challenge "Cougar";
 		else if T is 3:
-			say ", but are surprised as a creature leaps out from behind a partially open door. Having heard you coming, it must have lain in wait until you moved past. His surprise blow is uncoordinated, but does make you stumble on the steps. You take [special-style-2]8[roman type]  damage.";
+			say ", but are surprised as a creature leaps out from behind a partially open door. Having heard you coming, it must have lain in wait until you moved past. His surprise blow is uncoordinated, but does make you stumble on the steps. You take [special-style-2]8[roman type] damage.";
 			now ndmhigh is 1;
 			challenge "Zebra";
 			now ndmhigh is 0;
@@ -334,6 +354,7 @@ Instead of resolving a High Rise Detector Site:
 			say ", but manage to make it to the top without incident.";
 		if lost is 1:
 			say "     Having been bested, you are forced to descend back down to the street. You'll have to rest and recover before coming back to try again.";
+			now Resolution of High Rise Detector Site is 2; [detector not placed, lost fight]
 		else:
 			say "     Making it to the top floor, you search around quietly, eventually finding the service entrance to the roof and make your way up there. It is rather windy at the top of the tower, a pleasant change after your long, hot climb up the building. The ascent has left you tired, hungry and thirsty, but you still have work to do before you can rest and head back down.";
 			increase thirst of player by 12;
@@ -343,17 +364,22 @@ Instead of resolving a High Rise Detector Site:
 			challenge "Gargoyle";
 			say "     Your battle the with creature completed, you stagger back down to the street level, sore, tired and exhausted, but one step of this job completed at least.";
 			remove "High Rise District" from ndmlist;
+			now Resolution of High Rise Detector Site is 1; [detector placed]
 			now High Rise Detector Site is resolved;
 			say "[onelessndm]";
 
 
 Book 4 - Park
 
-Park Detector Site is a situation. It is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Park Detector Site	"Park Detector Site"
+
+Park Detector Site is a situation. It is inactive.
 The sarea of Park Detector Site is "Park".
 
 Instead of resolving a Park Detector Site:
-	say "     Unsure where in the park you could place the device which would be suitable for Zephyr's requirements. You somehow doubt sticking it in a tree will quite be enough to satisfy them. As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park. Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area";
+	say "     You're unsure where in the park you could place the device which would be suitable for Zephyr's requirements. You somehow doubt sticking it in a tree will quite be enough to satisfy them. As you travel the park, trying to find a worthwhile place, you spot the old, disused observatory on the hill at one end of the park. Pretty much forgotten by the city as the light pollution made it largely unusable, it is still the highest point in the area";
 	if nanite density monitor is not owned:
 		say ". Clearly the best spot around, you'll have to come back here with the device so you can install it.";
 	else:
@@ -362,10 +388,12 @@ Instead of resolving a Park Detector Site:
 		challenge "Yamato Dragon";
 		if lost is 1:
 			say "     The victorious dragon drops you off far from its home, leaving you to stagger back to the main path to recover before perhaps trying again.";
+			now Resolution of Park Detector Site is 2; [detector not placed, lost]
 		else:
 			say "     Having beaten the dragon, you drive it off for the moment, but you decide it would be best not to tarry too long. It may have friends and given how fast those creatures fly, they could be here soon. You enter the observatory, most of the building being taken up by the one, large dome housing the telescope. From the torn suit and the excessive amounts of dragon cum around, you wonder if perhaps one of the people working here became that creature.";
 			say "     Setting such musings aside, you look around and quickly find a set of ladder rungs leading up to the shutter for the dome as well as an old manual crank for opening it. With some effort, you manage to get the gate over the telescope, letting the [if daytimer is day]sunlight[else]starlight[end if] in and climb up to the dome. Taking an uncomfortable seat at the edge, you take a quick moment to scan around for any sign of the returning dragon before placing the device against the dome's outer wall and turning it on. There is a sharp whine from the screws as the work to dig into the thick metal, eventually boring their way in and securing the device. You climb back down, close the shutter to hide what you've done and make a run for it back down the hill, taking cover in the trees as you spot more of those dragons flying back to the observatory. Finding you gone, the dragons quickly descend into lustfully mating to vent their frustrations at your escape.";
 			remove "Park" from ndmlist;
+			now Resolution of Park Detector Site is 1; [detector placed]
 			now Park Detector Site is resolved;
 			say "[onelessndm]";
 
@@ -376,33 +404,33 @@ instead of entering the Confession Booth while "Beach" is listed in ndmlist and 
 	say "     Stepping into the confessional, you ask the priestess if you may place one of the nanite density monitors atop the belltop.";
 	say "     'Ah, those who cling to science are always seeking to explain that which is miraculous. They, always able to find answers to their questions, never stop to truly appreciate the fact that it is still a miracle. This is because they seek answers to the wrong questions in life,' she says serenely. 'But we will allow you to place your device, in thanks to the science which first brought about the nanites. While some of the elements of this miracle were man-made, everything was put into place for a grander purpose - this great rebirth of the world. You and those at Zephyr would do best to accept this truth rather than to seek greed from it.'";
 	WaitLineBreak;
-	say "     She signals for an altar boy to come and assist you with your task, escorting you up the bell tower. As you climb the tower behind him, you chat with red panda altar [']boy['], learning that his name is Peter. With his fluffy tail raised to keep it out of the dust, you are able to get a good peak under his short robe the whole way up if you like. Peter, despite his shorter, five foot height is clearly an adult with a mature body with a slight pudge. He does have a tight little ass and an ample sheath and balls which you can plainly see under the white cloth. You talk with him, discussing what it's been like for each of you since the outbreak (though you edit your own version considerably).";
+	say "     She signals for an altar boy to come and assist you with your task, escorting you up the bell tower. As you climb the tower behind him, you chat with red panda altar [']boy['], learning that his name is Peter. With his fluffy tail raised to keep it out of the dust, you are able to get a good peek under his short robe the whole way up if you like. Peter, despite his shorter, five foot height, is clearly an adult with a mature body with a slight pudge. He does have a tight little ass and an ample sheath and balls which you can plainly see under the white cloth. You talk with him, discussing what it's been like for each of you since the outbreak (though you edit your own version considerably).";
 	say "     Once at the top, it takes a few knocks to get the warped hatch to the bell chamber open. You can't help to snag a final peek under the red panda's robe before you both enter the top of the tower, noting that his cock's begun to poke free of its sheath. The bell chamber is dusty and the bell system is in disrepair, clearly having fallen out of use even before the outbreak. Peter explains that the church was unable to pay to maintain the bells for the last few years, so no one ever comes up here and that your device should be safe enough. Opening one of the outer windows, you place the black box on the wooden ledge with the Zephyr logo turned to the wall to further hide it and turn it on. After a brief pause, there is a whirring sound as the screw bolts dig into the wood, locking it firmly into place.";
 	WaitLineBreak;
 	say "     With that chore done, you pause for a moment, wondering if you want to thank Peter in a more personal way for his help. Shall you try to sex up the red panda?";
 	if player consents:
 		setmonster "Red Panda";
-		say "     As he moves to head back down the hatch, you move in close to the red panda and slide your arms around his waist, running your hands over his tummy and down to his groin. You whisper in his ear that you'd like to really thank him for all his help. He moans softly and mumbles something about not giving into the base urges, so you slip up the front of his robe and fondle his sheath directly, pleased to see that his cock's slipped further from it. You tell him that you think he's very cute and that you only want to show how much you appreciate his help, all while sliding your fingertips across his stiffening member. He releases a soft [']wah['] of pleasure and pulls his robe up further, blushing redder under his fur.";
+		say "     As he moves to head back down the hatch, you move in close to the red panda and slide your arms around his waist, running your hands over his tummy and down to his groin. You whisper in his ear that you'd like to really thank him for all his help. He moans softly and mumbles something about not giving into baser urges, so you slip up the front of his robe and fondle his sheath directly, pleased to see that his cock's slipped further from it. You tell him that you think he's very cute and that you only want to show how much you appreciate his help, all while sliding your fingertips across his stiffening member. He releases a soft [']wah['] of pleasure and pulls his robe up further, blushing redder under his fur.";
 		if player is female:
 			let baby be 0;
 			if child is born or gestation of child is not 0, now baby is 1;
-			say "     Eager to get that cock into you, you guide him to lay back on the dusty floor and climb atop him. His paws run over your body as you hold his penis in position and sink your pussy down around it. The wah releases a wah of pleasure as your cunt envelops his maleness and you start riding up and down it. Despite his small stature, he's got an impressive eight inch cock that pulse and throbs inside you as you fuck. His nimble paws caress your breasts and tease your nipples as the russet furred fellow squirms in delight beneath you. You moan in pleasure as he releases another, louder wah as he cums hard, blasting his thick seed into your pussy and up into your womb.[impregchance]";
+			say "     Eager to get that cock inside you, you guide him to lay back on the dusty floor and climb atop him. His paws run over your body as you hold his penis in position and sink your pussy down around it. The red panda releases a wah of pleasure as your cunt envelops his maleness and you start riding up and down it. Despite his small stature, he's got an impressive eight inch cock that pulses and throbs inside of you as you fuck. His nimble paws caress your breasts and tease your nipples as the russet furred fellow squirms in delight beneath you. You moan in pleasure as he releases another, louder wah and cums hard, blasting his thick seed into your pussy and up into your womb.[impregchance]";
 			if baby is 0 and gestation of child is not 0:
 				now facename of child is "Red Panda";
 				now bodyname of child is "Red Panda";
 				now skinname of child is "Red Panda";
 		else if player is male and scalevalue of player > 1:
-			say "     Being [if scalevalue of player is 2]the same size as him[else]larger than him[end if], you decide to mount the sexy male. Without removing your hand from his cock, you guide the red panda onto all fours, smiling at how his tail arches up and twitches as he presents himself. Deciding not to tarry too long in case someone comes to check on you both, you line up your cock with his tight pucker and sink slowly into him[if cock length of player > 16]. He slaps both paws over his muzzle as he releases a long, muffled wah as you slowly push your massive meat into him, bulging his furry tummy outwards to accommodate it[else if cock length of player > 8]. He slaps a paw over his muzzle as he releases a muffled wah as you slowly push your large meat into him, stuffing the little fellow full[else]. He releases another wah of pleasure as you slowly push your meat into him[end if]. Peter's shaft throbs in your hand, dribbling precum onto the dusty floor as you fuck him before eventually leaving a large, messy stain of red panda cum there as you blast your own load into him.";
+			say "     Being [if scalevalue of player is 2]the same size as him[else]larger than him[end if], you decide to mount the sexy male. Without removing your hand from his cock, you guide the red panda onto all fours, smiling at how his tail arches up and twitches as he presents himself. Deciding not to tarry too long in case someone comes to check on you both, you line up your cock with his tight pucker and slowly sink into him[if cock length of player > 16]. He slaps both paws over his muzzle to muffle a long, pleasured wah as you slowly push your massive meat into him, bulging his furry tummy outwards to accommodate it[else if cock length of player > 8]. He slaps a paw over his muzzle to muffle a pleasured wah as you slowly push your large meat into him, stuffing the little fellow full[else], the red panda releasing another wah of pleasure as you slowly push your meat into him[end if]. Peter's shaft throbs in your hand, dribbling precum onto the dusty floor while you fuck him. You pound his gripping ass until you can't hold back any longer and blast your [cum load size of player] load into his depths, your release driving him to a shuddering orgasm that stains the ground with his seed.";
 		else if player is male and scalevalue of player is 1:
 			let baby be 0;
 			if child is born or gestation of child is not 0, now baby is 1;
-			say "     Being smaller than the red panda, he guides you down onto all fours and climbs atop you. You stifle a moan as he moves his cock into position at your back door, sinking himself slowly into your tight rear. His stiff cock spreads you open gently as he starts thrusting while a paw moves around to stroke your shaft[smn]. His soft fur rubs against your back as his pudgy belly rests atop you and his plump balls slap against you with each thrust. You go at this for several minutes until the red panda presses his muzzle against your neck and releases a muffled wah of pleasure, cumming hard inside you. You can feel his hot seed filling your ass and your climax hits as well, blasting your hot seed across the dusty floor.[mimpregchance]";
+			say "     Being smaller than the red panda, he guides you down onto all fours and climbs atop you. You stifle a moan as he moves his cock into position at your back door, sinking himself slowly into your tight rear. His stiff cock spreads you open gently, and he starts to thrust while a paw moves around to stroke your shaft[smn]. His soft fur rubs against your back as his pudgy belly rests atop you and his plump balls slap against you with each thrust. You go at this for several minutes until the red panda presses his muzzle against your neck and releases a muffled wah of pleasure, cumming hard inside you. You can feel his hot seed filling your ass and your climax hits as well, blasting your hot seed across the dusty floor.[mimpregchance]";
 			if baby is 0 and gestation of child is not 0:
 				now facename of child is "Red Panda";
 				now bodyname of child is "Red Panda";
 				now skinname of child is "Red Panda";
 		else:
-			say "     Lacking any sexual organs of your own, you drop to your knees in front of the red panda and stuff his cock into your mouth. You tease your tongue across his leaking shaft and eagerly start sucking him off. He rubs a paw over your head as the other covers his muzzle to muffle a wah of pleasure. You work his penis with your mouth, tongue and lips until finally he can't take any more and Peter releases another muffled wah as he cums hard, flooding your mouth with his tasty load.";
+			say "     Lacking any sexual organs of your own, you drop to your knees in front of the red panda and stuff his cock into your mouth. You tease your tongue across his leaking shaft and eagerly start sucking him off. He rubs a paw over your head as the other covers his muzzle to muffle a wah of pleasure. You work his penis with your mouth, tongue, and lips until he finally can't take any more and releases another muffled wah as he cums hard, flooding your mouth with his tasty load.";
 		say "     Your quick fun over, he gives you a kiss and nuzzles you before leading you back down into the church. As he descends, he tries his best to wipe his dusty robe clean. Once downstairs, he gives you another quick kiss before dashing off to the confessional.";
 	else:
 		say "     You decide to just speak your thanks to the red panda and follow him back down the steps, pleased with yourself at your ingenuity in placing it here.";
@@ -410,7 +438,7 @@ instead of entering the Confession Booth while "Beach" is listed in ndmlist and 
 	now Beach Detector Site is resolved;
 	say "[onelessndm]";
 
-ndmLisa is a truth state that varies. ndmLisa is normally false.
+ndmLisa is a truth state that varies. ndmLisa is usually false.
 
 instead of conversing the Lisa while "Red Light District" is listed in ndmlist and nanite density monitor is owned and ndmLisa is false:
 	say "     You decide to ask Lisa if it would be okay to put the detector on top of her porn store. It might be as tall as some of the other buildings, but it would certainly be a safer spot, so you're willing to give it a try. As you start to bring up the topic, the mousetaur gets very upset. 'Zephyr? You're helping those greedy bastards? I've been hearing stuff about them and you shouldn't get involved with them. They're bad news and it's going to get messy when the infected people around here have had enough of their money-grubbing scientists.'";

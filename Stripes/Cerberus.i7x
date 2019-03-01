@@ -1,5 +1,5 @@
 Version 1 of Cerberus by Stripes begins here.
-[ Version 1.2 - Alt attack and Anime Babe vulnerability tweaked]
+[ Version 1.2 - Alt attack and Anime Babe vulnerability tweaked ]
 [Adaptation for Flexible Survival by Stripes]
 [This monster was translated from the multiplayer game automatically by Nuku Valente, but may, most likely, have been written by someone else.]
 [This monster was updated and converted to a more readable format by Stripes. All sexual encounters from MP MUD have been rewritten to fit the game better, all credit to creature idea goes to original author!]
@@ -49,11 +49,11 @@ to say losetocerberus:
 		follow the sex change rule;
 
 to say beatthecerberus:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now cerberusarousal is 0;
 	let godoggygo be 0;
 	now cerbfight is 1;
-	say "     After your hard-fought battle, you manage to knock the triple-headed herm to the ground. Shi moans and pants, tailcock leaking precum and pussy dripping juices from hir pent-up and unsatisfied arousal. You look hir over, trying to decide what to do with hir now that you've knocked the fight out of hir. ";
+	say "     After your hard-fought battle, you manage to knock the triple-headed herm to the ground. Shi moans and pants, tailcock leaking precum and pussy dripping juices from hir pent-up and unsatisfied arousal. You look hir over, trying to decide what to do with hir now that you've knocked the fight out of hir.";
 	if facename of player is "Cerberus":
 		say "     Your other two heads end up making the decision for you, wresting control of your body from you and pushing you into hir arms. You share slobbery, canine kisses with hir, quickly losing yourself in the pleasure as you somehow share in the sense of them all. You soon give in as your three brains of you become of like mind and seek to sate your collective lusts with this attractive herm.";
 		if libido of player < libido entry:
@@ -61,7 +61,7 @@ to say beatthecerberus:
 			increase libido of player by (libido entry - libido of player ) / 3;
 		now godoggygo is 1;
 	else if a random number between 25 and 125 < libido of player:
-		say "     You find yourself oddly attracted to the lustful herm beast and the many possibilities for enjoyment hir body offers. ";
+		say "     You find yourself oddly attracted to the lustful herm beast and the many possibilities for enjoyment hir body offers.";
 		say "     [bold type]Shall you satisfy your lusts on hir wondrous body?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
@@ -73,7 +73,7 @@ to say beatthecerberus:
 	if godoggygo is 1:
 		say "     Giving into your unnatural attraction to this mythic beast's body, you run your hands over hir while kissing hir. Hir slobbery, canine tongue plays in your mouth as you run your fingers across hir breasts, then down hir rough-furred sides to hir tail and its cock. You stroke hir large meat, then move a hand down that tail to tease hir wet slit. You dive a pair of fingers into her hot cunt and pump them into hir while you ponder what you'd like to do to hir.";
 		if cocks of player > 2 and cock length of player > 5:		[3+ COCKS ORAL]
-			say "     As your many cocks throb, you ponder hir three muzzles. This would certainly be a rare opportunity to orally satisfy several of them at once. ";
+			say "     As your many cocks throb, you ponder hir three muzzles. This would certainly be a rare opportunity to orally satisfy several of them at once.";
 			say "     [bold type]Shall you have your three-headed bitch service your cocks with hir many muzzles?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
@@ -84,8 +84,7 @@ to say beatthecerberus:
 			else:
 				say "     Not in the mood for oral pleasures, you consider your other options for how to use your prize";
 		if player is herm:			[HERM]
-			say "     Being dual-equipped yourself, would you prefer to slake your urges by fucking hir or riding that hard cock between hir legs? ";
-			say "     [bold type]Would you like to fuck hir or ride that hard cock between hir legs?[roman type][line break]";
+			say "     [bold type]Being dual-equipped yourself, would you prefer to slake your urges by fucking hir or riding that hard cock between hir legs?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck hir.";
 			say "     ([link]N[as]n[end link]) - Ride hir cock.";
@@ -94,7 +93,7 @@ to say beatthecerberus:
 			else:
 				say "[cerberusride]";
 		else if player is male:					[MALE]
-			say "     As you continue to stroke hir cock and finger hir pussy, enjoying listening to hir moan lustfully, you try to decide which of them you'd prefer. ";
+			say "     As you continue to stroke hir cock and finger hir pussy, enjoying listening to hir moan lustfully, you try to decide which of them you'd prefer.";
 			say "     [bold type]Do you want to slake your urges by fucking hir or riding that hard cock between hir legs?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Fuck hir.";
@@ -104,8 +103,8 @@ to say beatthecerberus:
 			else:
 				say "[cerberusride]";
 		else:									[FEMALE]
-			say "     As you continue to stroke hir tailcock while kissing hir, enjoying listening to hir moan lustfully, you try to decide which of them you'd prefer. Do you want to slake your urges by having those slobbery dog tongues in your [if cunts of player is 1]cunt[else]cunts[end if] or do you want hir meatier cock to fill you?";
-			say "     [bold type]Do you want to get licked or fucked?[roman type][line break]";
+			say "     As you continue to stroke hir tailcock while kissing hir, enjoying listening to hir moan lustfully, you try to decide which of them you'd prefer.";
+			say "     [bold type]Do you want to slake your urges by having those slobbery dog tongues in your cunt[sfn] or do you want hir meatier cock to fill you?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Get licked.";
 			say "     ([link]N[as]n[end link]) - Get fucked.";
@@ -171,7 +170,7 @@ to say cerberusbodytf:
 
 to say cerberustailtf:
 	if player is male:
-		say "your ass suddenly emits a sharp, painful CRACK as the bones spontaneously and painlessly break. Your hips quiver a little, but you else manage to hold your position as more cracks occur as a new tail forms behind you. It shifts and grows into a thick, demonic tail. At the same time, your groin burns with pain as does the end of your new tail as a small slit appears on the very end of it. You look down and realize that your penis[if cocks of player > 1]es[end if] as well as your testicles have vanished from your crotch, leaving a smooth surface behind. You look at your tail again just in time to see your penis[if cocks of player > 1]es[end if] emerge from the slit at the end of your tail, spurting virile seed excitedly onto the ground as [if cocks of player is 1]it[else]they[end if] settles into place. [if cocks of player is 1]It is[else]They are[end if] exactly the same size and form as before the shift in position. You can feel your balls spreading out in the tail's tissue as well, equal in size as before, but spread out across the whole of your tail to hide them while keeping them ready to perform their duty when needed. But you have a feeling that your dick[smn] will go back where [if cocks of player is 1]it[else]they[end if] belongs if your ass gets mutated again. On the other hand, you could get used to having [if cocks of player is 1]a tailcock[else]a set of tailcocks[end if]";
+		say "your ass suddenly emits a sharp, painful CRACK as the bones spontaneously and painlessly break. Your hips quiver a little, but you else manage to hold your position as more cracks occur as a new tail forms behind you. It shifts and grows into a thick, demonic tail. At the same time, your groin burns with pain as does the end of your new tail as a small slit appears on the very end of it. You look down and realize that your penis[esmn] as well as your testicles have vanished from your crotch, leaving a smooth surface behind. You look at your tail again just in time to see your penis[esmn] emerge from the slit at the end of your tail, spurting virile seed excitedly onto the ground as [if cocks of player is 1]it settles[else]they settle[end if] into place. [if cocks of player is 1]It is[else]They are[end if] exactly the same size and form as before the shift in position. You can feel your balls spreading out in the tail's tissue as well, equal in size as before, but spread out across the whole of your tail to hide them while keeping them ready to perform their duty when needed. But you have a feeling that your dick[smn] will go back where [if cocks of player is 1]it belongs[else]they belong[end if] if your ass gets mutated again. On the other hand, you could get used to having a [if cocks of player is 1]tailcock[else]set of tailcocks[end if]";
 	else:
 		say "your ass emits a loud but painless CRACK as the bones shift, a new growth emerging in the form of a very thick tail with a slit at the very end of it. You don't know yet what that slit is for, but it feels sensitive like an erogenous zone. You get the feeling that something is supposed to be coming out of that slit, but another thought tells you that it will vanish completely if your tail is mutated again by something else";
 
@@ -181,12 +180,12 @@ to say cerberuscocktf:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Cerberus"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -234,8 +233,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "cerberus"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Alt Attack
@@ -245,7 +245,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "cerberus"	cerberus rule	--	--	--	--	--	--	--	--	--
 
 this is the cerberus rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	increase cerbmaulcount by 1;
 	if cerbmaulcount is 3:				[tries special attack every third time]
 		now cerbmaulcount is 0;
@@ -254,7 +254,7 @@ this is the cerberus rule:
 		let cmdmgtotal be 0;
 		standardstrike; [head 1]
 		if monsterhit is true:
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			let rangenum be ( 80 - ( peppereyes * 4 ) );
 			now cmdmg is 0;
 			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 ); [dmg/hit at 75%]
@@ -267,7 +267,7 @@ this is the cerberus rule:
 			say "The [one of]first[or]right[at random] head misses!";
 		standardstrike; [head 2]
 		if monsterhit is true:
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			let rangenum be ( 80 - ( peppereyes * 4 ) );
 			now cmdmg is 0;
 			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 ); [dmg/hit at 75%]
@@ -280,7 +280,7 @@ this is the cerberus rule:
 			say "The [one of]second[or]middle[or]central[at random] head misses!";
 		standardstrike; [head 3]
 		if monsterhit is true:
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			let rangenum be ( 80 - ( peppereyes * 4 ) );
 			now cmdmg is 0;
 			now cmdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 133 ); [dmg/hit at 75%]
@@ -320,15 +320,15 @@ Section 4 - Endings
 when play ends:
 	if bodyname of player is "Cerberus":
 		if humanity of player < 10:
-			say "     As your mind unravels, you start to give in to your body's instinctual urges and wander off into the city as your humanity fades away into the background of your mind. ";
+			say "     As your mind unravels, you start to give in to your body's instinctual urges and wander off into the city as your humanity fades away into the background of your mind.";
 			if facename of player is "Cerberus":
-				say "     With the help of your two other heads, you make your way back to the Museum and follow the scents down the halls to find a service door down into the basement. Tracking those scents easily with your three noses, you made your way down and find the Cerberus den, joining the others of your kind. You receive a very lustful welcome from the other three-headed dog people, who share triple-kisses with you. Soon enough, you are rolling around with them, mating one another";
+				say "     With the help of your two other heads, you make your way back to the Museum and follow the scents down the halls to find a service door down into the basement. Tracking those scents easily with your three noses, you made your way down and find the Cerberus den, joining the others of your kind. You receive a very lustful welcome from the other three-headed dog people, who share triple-kisses with you. Soon enough, you are rolling around with them, mating one another. ";
 				if player is herm:
-					say "     You take turns mounting them and being mounted, sometimes enjoying one bitch's pussy while another takes you as hir bitch with hir tailcock";
+					say "You take turns mounting them and being mounted, sometimes enjoying one bitch's pussy while another takes you as hir bitch with hir tailcock.";
 				else if player is male:
-					say "     You take turns mounting several of them, filling their hot pussies. You don't seem as popular as the fully herm Cerberuses that make up the bulk of the pack, but you still have plenty of sex";
+					say "You take turns mounting several of them, filling their hot pussies. You don't seem as popular as the fully herm Cerberuses that make up the bulk of the pack, but you still have plenty of sex.";
 				else:
-					say "     You are taken as a bitch by most of the pack, filling your hot puss[yfn] over and over again. You don't seem as popular as the fully herm Cerberuses that make up the bulk of the pack, but you are still bred often";
+					say "You are taken as a bitch by most of the pack, filling your hot puss[yfn] over and over again. You don't seem as popular as the fully herm Cerberuses that make up the bulk of the pack, but you are still bred often.";
 				say "     The lustful, animalistic orgy goes on for a few hours before things calm down into a more regular routine of sex and searching the Museum and surrounding area. When the military moves into the city, your pack is on guard to defend the Museum from any who would seek to disturb it. Several soldiers are overpowered by you and your powerful pack-mates, brought back to the basement den and mounted until they are more Cerberus herms to breed and be bred by.";
 			else if player is herm:
 				say "     You feel as if something is missing, but you know not what nor where to find it. You wander out into the city and find your way into the park. Your powerful, canine body pounces upon one of the Painted Wolf Herms you find. After a bit of a scuffle, you two are rutting wildly, swapping places until you've both been thoroughly filled with cum. You head off together to her den and make plans for the future of the pack growing in both your wombs.";
@@ -336,13 +336,13 @@ when play ends:
 				say "     As you roam the city, feeling as if something is missing by not quite able to figure out what, you are found by a mostly-unchanged human. She has four enlarged breasts and featureless golden eyes, but no other visible changes. You approach her eagerly, hoping to satisfy your animal lusts upon her, but there is something about her gaze and her stance that makes you come up short. Clearly experienced at handling dogs, she soon has you obediently taking treats and is calling you by pet names. Your canine body quickly submits to her training during the remaining time in the city; teaching you to be a good dog and rewarding you with treats or hand jobs. Your mind slips further and further away during this time until you're nothing be an obedient and powerful guardian for your mistress.";
 				say "     When the military comes through, she is extracted along with you. At first, they have some concern about taking you along, but she's quite persuasive and has you demonstrate what a good doggy you are. Eventually released, she sets up a new life for herself with you as her loyal pet and guardian. Somewhere in your instincts, you are a powerful protector and defend your mistress and her home with your muscled body. Having been treated to prevent infection, she now happily takes you into her bed, letting you rut your mistress. These matings eventually bear fruit as she becomes pregnant with Cerberus puppies with six lovely, alluring, golden eyes.";
 			else:
-				say "     As you roam the city in search of something, though you know not what, you go into heat. With your dripping pussy leaking pheromones, you are found by one of the German Shepherd males, you mounts you and pounds his knotted cock into you repeatedly. Despite your larger size, you submit to him readily, allowing him to take you as one of his many mates, breeding you full of large, strong puppies to add to his pack. Your instincts as a guardian make you a perfect guard for the pack's den while they are searching the city for potential mates to add to the pack.";
+				say "     As you roam the city in search of something, though you know not what, you go into heat. With your dripping pussy leaking pheromones, you are found by one of the German Shepherd males, who mounts you and pounds his knotted cock into you repeatedly. Despite your larger size, you submit to him readily, allowing him to take you as one of his many mates, breeding you full of large, strong puppies to add to his pack. Your instincts as a guardian make you a perfect guard for the pack's den while they are searching the city for potential mates to add to the pack.";
 		else:
 			if facename of player is "Cerberus":
 				say "     Your trio of heads and altered anatomy draw some interest from the scientists who are working with the army. You are put through a series of physical, psychological and awareness tests, as well as discussions between the three of you and psychoanalysts. As different minds sharing the same body, it is quite an intriguing situation to study, but the military personnel stop the research when they notice that it has ceased to be of worthwhile military application. It does have the benefit of helping you come to a greater understanding with your companion heads, increasing your cooperation. Better able to share your Cerberus body with the other two, you become a team working to make a life together after your release.";
 				say "     Your right head is very forward and honest, especially about its sexual desires. But it is your left, the quieter one who really runs the show in that regard. It doesn't speak often and seems quite shy, but is by far the kinkiest of all, whispering such wantonly sexual and slutty things in your ear. There is almost no perversion that it won't try and none that it tries it doesn't want to do again and again. It is responsible for getting you into many kinky situation through its whispered desires.";
 				say "     You go through a couple of small jobs as a secretary team fielding calls, as a trio of telemarketers and some any other work you can find to pay the bills. It is only once you land a job as a night watchman that you really feel that you've found something that you all enjoy. Given your size and strength, as well as your intimidating body and snarling heads, you have little trouble with anyone trying to break into the museum where you work. And whenever an Ancient Greek or Roman exhibit is on display, you get to join the display in an interactive role.";
-				say "     You and your other heads have a happy life together, finding a collection of lovers over the years who're willing to have sex with someone as radically transformed as you three. Your favorite mate is a psychologist you started to see after your release, having decided together it would be best to continue the work which was started at the holding facility. ";
+				say "     You and your other heads have a happy life together, finding a collection of lovers over the years who're willing to have sex with someone as radically transformed as you three. Your favorite mate is a psychologist you started to see after your release, having decided together it would be best to continue the work which was started at the holding facility.";
 				if player is male:
 					say "     After visiting her several times, your left head whispered to you that it could smell her becoming aroused as you spoke about the events you witnessed in the city. Told to keep it up, you continued talking, getting into more graphic detail about the events and do indeed notice her shifting in her seat and crossing and recrossing her legs as her arousal built. When your right head clued in and made a pass at her, she gave in rather readily and you had a long and lustful session with her. Over the years, you became mates as well as lovers and she gave you several litters of Cerberus puppies. They all grow up into strong and powerful lovers and guardians for their mates, much like yourself.";
 				else:

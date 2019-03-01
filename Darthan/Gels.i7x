@@ -28,20 +28,20 @@ to say losetopinkgel: [Loss to Pink Gel.]
 		else: [Neuter Player]
 			say "     As the Pink Gel approaches you can see the look of disappointment on her face as she stares at your featureless groin. Undaunted she pushes you onto your back and shoves her pussy into your face. As you begin to lick her juicy nethers your mouth is filled with the taste of strawberry jello. This only serves to increase your pace as the gel girl begins to moan. Looking up you can see that she has started fondling her massive tits while you continue to eat her out. After what seems like hours the pink girl lets out a final moan and arches her back. As she reaches her climax she coats your face in her sweet pink fluids. Once she is finished she gets up and leaves, but not before giving you a final kiss, licking most of her fluids up in the process.";
 		if "Female Preferred" is listed in feats of player and girl is not banned: [Changes target to Pink Gel for infection.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Pink Gel":
 					now monster is y;
 					break;
 		if "Herm Preferred" is listed in feats of player and hermaphrodite is not banned: [Changes target to Purple Gel for infection.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Purple Gel":
 					now monster is y;
 					break;
 		else if guy is not banned: [Changes target to Blue Gel for infection. Cross infect, Pink Gel infects with Blue Gel if no gender preferred feat or if male preferred.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Blue Gel":
 					now monster is y;
 					break;
@@ -101,20 +101,20 @@ to say losetobluegel: [Loss to Blue Gel.]
 		else: [Neuter Player]
 			say "     Seeming displeased that you have no gender, the Blue Gel grabs you by the back of the head an impales your throat on his member. Unable to muster the strength to fight back you are forced to allow the gel to brutally facefuck you. After some time he slams himself fully in your mouth and begins pumping his seed down your throat. When he finally finishes and pulls out you are relieved that the ordeal is over. The gel man has other plans though. Forcing you onto your stomach the blue man lines himself up and pushes into your rear entrance. Eventually, with one final thrust, he fills your bowels with his blue seed. Once he has finished he pulls out dropping you to the ground as his goo leaks from your ass and leaves.";
 		if "Male Preferred" is listed in feats of player and guy is not banned: [Changes target to Blue Gel for infection.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Blue Gel":
 					now monster is y;
 					break;
 		else if "Herm Preferred" is listed in feats of player and hermaphrodite is not banned: [Changes target to Purple Gel for infection.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Purple Gel":
 					now monster is y;
 					break;
 		else if girl is not banned: [Changes target to Pink Gel for infection. Cross infect, Blue Gel infects with Pink Gel if no gender preferred feat or if female preferred.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Pink Gel":
 					now monster is y;
 					break;
@@ -136,7 +136,7 @@ to say beatthebluegel: [Victory over Blue Gel.]
 				else if player is male: [Male Character]
 					say "     Not one to pass up an opportunity to satisfy you needs you shove your [cock size desc of player] [cockname of player] cock down the Blue gel's throat. Grabbing the gel man by the back of the head you begin using his throat like a cocksleeve. The feeling of his jello-like throat flexing so you have a snug fit is amazing. Soon enough you reach your limit and begin filling him with your seed. As you unload into the gel you notice that your seed seems to be defusing though his body giving him a slightly cloudy appearance. Once you finish you pull out, making sure that he licks you clean, redress, and continue on your way. You can't help but smile as you hear the moans of the gel man due to his unfulfilled lust.";
 				else: [Neuter Character]
-					say "     Lacking any sexual organs of your own you slide the Blue Gel's member [if breast size of player > 0]between your breasts before taking it into your mouth. Sucking his cock while you stroke him with your [breast size desc of player] tits you quickly bring him to orgasm[else]in your mouth. Sucking him for all he's worth you quickly bring him to orgasm[end if]. Spraying his blue seed across your face [if breast size of player > 0]and tits [end if]you feel much better. Giving the blue man a playful swat on the ass you clean yourself up and continue on your way.";
+					say "     Lacking any sexual organs of your own, you slide the Blue Gel's member [if breast size of player > 0]between your breasts before taking it into your mouth. Sucking his cock while you stroke him with your [breast size desc of player] tits, you quickly bring him to orgasm[else]in your mouth. Sucking him for all he's worth, you quickly bring him to orgasm[end if]. Spraying his blue seed across your face[if breast size of player > 0] and tits[end if], you feel much better. Giving the blue man a playful swat on the ass, you clean yourself up and continue on your way.";
 			else:
 				say "     Controlling your desires you turn and walk away. You can't help but get a little turned on as you hear the man's moans as he pleasures himself.";
 				increase libido of player by 5;
@@ -166,20 +166,20 @@ to say losetopurplegel: [Loss to Purple Gel.]
 			if player is female: [Herm Player]
 				say "     Spreading your legs the Purple Gel rubs her hardened member across you [cockname of player] slit. After a few minutes of teasing she pushes forward until she has fully entered you. As she begins to slide in and out, she reaches down and grabs your [cock size desc of player] [cockname of player] cock and begins stroking it while her other hand massages her breasts. Lost in the pleasure your hand move to your [breast size desc of player] [skinname of player] breasts and start playing with them. When the gel reaches her peak and fills you with her purple goo you feel your own climax as your vaginal walls clamp down on the invading member. You cry out when a sudden tightness at the base of your cock prevents you from releasing your seed. Looking down you see the purple girl's hand has clamped down on the base of your cock like a ring preventing you from achieving your release. Still weak from the fight and enduring the waves up pain as you are backed up you can do nothing but beg the girl to let you cum. Finally the girl finishes filling you and pulls out with a loud pop. She quickly moves over you and drops downs, fully impaling her dripping pussy on your throbbing cock as her blue seed leaks from your abused cunt. As the pressure on your member releases you begin to spasm and shoot load after load of your seed into the gel's waiting pussy. When you finally regain some control of your body you look down as watch in amazement and you watch your seed fill the gel girl giving her a cloudy purple color. As your empty the last of your seed into the now cloudy purple gel she slides of your member and gives to a peck on the cheek before leaving you in a now rather large pool of purple seed that has leaked from your pussy.[impregchance]";
 			else: [Male Player]
-				say "     The Purple Gel reaches between your legs and strokes your [cock size desc of player] [cockname of player] rod until it is hard. Going down, she begins sucking your member as she strokes you. As you feel you orgasm approaching the purple girls suddenly slides you out of her mouth and stops her stroking. Glancing down you see that she has repositioned herself so that her dripping slit hangs over your raging member. Thrusting upward you desperately try to bury yourself in her waiting pussy but she keeps herself just out of your reach. As you beg her to fuck you she simply smiles down at you as she strokes her own hard member. After what seems like an eternity the purple girl drops down, fully impaling herself on you. You can't help but let out a cry of pleasure as her tight warm tunnel envelopes your member. As she begins bouncing up and down she strokes herself with one hand while the other plays with her massive bouncing breasts. As your peak once again approaches you reach down a grab the girl's hips and pull her down so that she cannot deny you your release again. As you fill the girl with your seed you watch as globs of it float through the girl's body. Reaching her own peak the gel's already tight passage tightens even more on your cock as her purple seed erupts from her member coating your face and chest in her sticky goo. Extracting herself from your flagging member the girl turns and blows you a sloppy kiss before wobbling away.";
+				say "     The Purple Gel reaches between your legs and strokes your [cock size desc of player] [cockname of player] rod until it is hard. Going down, she begins sucking your member as she strokes you. As you feel you orgasm approaching the purple girls suddenly slides you out of her mouth and stops her stroking. Glancing down you see that she has repositioned herself so that her dripping slit hangs over your raging member. Thrusting upward you desperately try to bury yourself in her waiting pussy but she keeps herself just out of your reach. As you beg her to fuck you she simply smiles down at you as she strokes her own hard member. After what seems like an eternity the purple girl drops down, fully impaling herself on you. You can't help but let out a cry of pleasure as her tight warm tunnel envelops your member. As she begins bouncing up and down she strokes herself with one hand while the other plays with her massive bouncing breasts. As your peak once again approaches you reach down a grab the girl's hips and pull her down so that she cannot deny you your release again. As you fill the girl with your seed you watch as globs of it float through the girl's body. Reaching her own peak the gel's already tight passage tightens even more on your cock as her purple seed erupts from her member coating your face and chest in her sticky goo. Extracting herself from your flagging member the girl turns and blows you a sloppy kiss before wobbling away.";
 		else if player is female: [Female Player]
 			say "     Spreading your legs the Purple Gel the tip of her member across your [cockname of player] pussy. After a few minutes of teasing she easily slides into your now soaked slit. Grabbing your hips for extra leverage she begins to piston in and out of you. Leaning over the gel girl embraces you in a deep and passionate kiss. When she finally pulls away you feel slightly empty but are soon to distracted by the waves of pleasure running through your body as the purple girl picks up her pace. Reaching down you give your [breast size desc of player] [skinname of player] tits a squeeze which is enough to set off your orgasm causing your vaginal walls to clamp down on the girl's member. This in turn causes her to peak and fill you with her purple seed as a gush of juices spray from her pussy onto the ground. Pulling out the gel leans over and gives you another kiss before leaving you in a growing puddle of her juices and seed.[impregchance]";
 		else: [Neuter Player]
 			say "     Disappointed that you have no sexual organs for her to enjoy the Purple Gel turns and shoves her pussy in your face while [if breast size of player > 0]sliding her member between your [breast size desc of player] [skinname of player] breasts[else]stoking her member[end if]. You begin licking the girl's waiting pussy as she grinds it against your face. Soon you bring her to her peak and she covers your face with a gush of her juices as her purple seed covers your [if breast size of player > 0]tits[else]chest[end if] and stomach. After finishing the gel girl turns around and gives you a kiss and begins licking her juices off your face. Once she is done she moves down and licks her goo off your [if breast size of player > 0]breasts[else]chest[end if] and stomach. Once she has licked you clean she gives you a final kiss, allowing you to taste the mixed flavors of her fluids, before turning and walking away.";
 		if "Female Preferred" is listed in feats of player and girl is not banned: [Changes target to Pink Gel for infection.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Pink Gel":
 					now monster is y;
 					break;
 		else if "Male Preferred" is listed in feats of player and guy is not banned: [Changes target to Blue Gel for infection.]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Blue Gel":
 					now monster is y;
 					break;
@@ -195,16 +195,16 @@ to say beatthepurplegel: [Victory over Purple Gel.]
 				say "     Unable to contain your lust, you strip off your clothing and approach the prone girl.";
 				if player is female:
 					if player is male: [Herm Character]
-						say "     Turning yourself around you get down on all fours and position yourself over the prone girl. Reaching down, with one hand your position her jello-like member against your slit while you use your other hand to put your [cockname of player] member at her entrance. Rubbing back and forth you quickly get yourself and the gel girl wet. Pushing down you easily slide into her tight warm hole as she slides easily into your own. Resting your weight on one arm you begin to bounce up and down, fucking and being fucked by the gel girl, as your other hand starts massaging your [breast size desc of player] tits. Moaning as you increase the speed of your actions you quickly reach your peak. Holding on as long as you can so that the two of you can cum together you let loose as you feel the first glob of the gel girl's purple goo hit your cervix. As the two of you fill each other with your seed the waves of pleasure cause your arm to give out causing you to drop squishing your [breast size desc of player] boobs on the ground. Once the two of you have finished filling each other you lift yourself up causing you to separate from the purple girl as globs of her purple seed begin leaking from your hole. Turning around you give the girl a passionate kiss as thanks for the good fuck as you notice gobs of your seed floating through her body. Cleaning yourself up and redressing you continue on your way, hoping that you might encounter another Purple Gel for some more fun.[impregchance]";
+						say "     Turning yourself around, you get down on all fours and position yourself over the prone girl. Reaching down, with one hand your position her jello-like member against your slit while you use your other hand to put your [cockname of player] member at her entrance. Rubbing back and forth you quickly get yourself and the gel girl wet. Pushing down you easily slide into her tight warm hole as she slides easily into your own. Resting your weight on one arm you begin to bounce up and down, fucking and being fucked by the gel girl, as your other hand starts massaging your [breast size desc of player] tits. Moaning as you increase the speed of your actions you quickly reach your peak. Holding on as long as you can so that the two of you can cum together you let loose as you feel the first glob of the gel girl's purple goo hit your cervix. As the two of you fill each other with your seed the waves of pleasure cause your arm to give out causing you to drop squishing your [breast size desc of player] boobs on the ground. Once the two of you have finished filling each other you lift yourself up causing you to separate from the purple girl as globs of her purple seed begin leaking from your hole. Turning around you give the girl a passionate kiss as thanks for the good fuck as you notice gobs of your seed floating through her body. Cleaning yourself up and redressing you continue on your way, hoping that you might encounter another Purple Gel for some more fun.[impregchance]";
 						increase libido of player by 5; [Small libido increase since thinking about having more fun with another Purple Gel excites you]
 						if libido of player > 100: [Shouldn't happen but just in case]
 							now libido of player is 100;
 					else: [Female Character]
-						say "     Straddling the Purple Gel you rub her tip across your [cockname of player] pussy until you are nice and wet. Pushing down you easily slide her member into your dripping slit. When you bottom out you lean over and give the purple girl a kiss before you move your head down and start sucking on her massive breasts. Sucking on her jello-like mounds you begin bouncing up and down on the gel's member. Soon the girl begins thrusting into you in rhythm with your own movements increasing your pleasure even more. Soon enough you arch you back and cry out as your orgasm crashes over you like a wave. The purple girl give one final thrust and unloads her seed into you. As your orgasm finishes you collapse onto the Purple Gel, her plump breasts acting like pillows to cushion your fall. Stroking your head the gel continues to fill you with her goo as you loose consciousness. When you wake you are wrapped in the sleeping girls arms, your head resting on her massive pillows, as her purple seed leaks from your pussy. Careful not to wake her, you untangle yourself from the gel girl's arms, clean yourself up, redress and continue on your way.[impregchance]";
+						say "     Straddling the Purple Gel, you rub her tip across your [cockname of player] pussy until you are nice and wet. Pushing down you easily slide her member into your dripping slit. When you bottom out you lean over and give the purple girl a kiss before you move your head down and start sucking on her massive breasts. Sucking on her jello-like mounds you begin bouncing up and down on the gel's member. Soon the girl begins thrusting into you in rhythm with your own movements increasing your pleasure even more. Soon enough you arch your back and cry out as your orgasm crashes over you like a wave. The purple girl give one final thrust and unloads her seed into you. As your orgasm finishes you collapse onto the Purple Gel, her plump breasts acting like pillows to cushion your fall. Stroking your head the gel continues to fill you with her goo as you loose consciousness. When you wake you are wrapped in the sleeping girls arms, your head resting on her massive pillows, as her purple seed leaks from your pussy. Careful not to wake her, you untangle yourself from the gel girl's arms, clean yourself up, redress and continue on your way.[impregchance]";
 				else if player is male: [Male Character]
-					say "     Spreading the Purple Gel's legs you place your [cock size desc of player] [cockname of player] at her waiting passage. Pushing forward you easily slide into her tight, wet, and warm tunnel. Grabbing her hips you begin to piston in and out of the purple girl as she reaches down and starts stroking her own member with both hands. Soon enough you give one final thrush as you blow your load in the gel girl's pussy. You watch as jet after jet of your cum shoots through her semi-transparent body until her pussy tightens on your member causing you to loose focus as streams of her purple goo spray across her belly and breasts. Pulling out of the girl you give her ass a playful swat before getting redressed and continuing on your way.";
+					say "     Spreading the Purple Gel's legs, you place your [cock size desc of player] [cockname of player] at her waiting passage. Pushing forward you easily slide into her tight, wet, and warm tunnel. Grabbing her hips you begin to piston in and out of the purple girl as she reaches down and starts stroking her own member with both hands. Soon enough you give one final thrush as you blow your load in the gel girl's pussy. You watch as jet after jet of your cum shoots through her semi-transparent body until her pussy tightens on your member causing you to loose focus as streams of her purple goo spray across her belly and breasts. Pulling out of the girl you give her ass a playful swat before getting redressed and continuing on your way.";
 				else: [Neuter Character]
-					say "     Having no sexual organs of your own you get down and embrace the Purple Gel in an deep passionate kiss. Pulling away you move down and begin sucking on the girls giant tits. While you stimulate her breasts the gel's hands move down and start stroking her cock. Once you are satisfied with sucking her breasts you move further down to the gel girl's groin. Pulling her hands away you [if breast size of player > 0]place her member between your breasts as you begin to suck it[else]you engulf her member with your mouth and begin sucking on it[end if]. You continue this until she can't hold back anymore and fills your mouth with her purple seed. Feeling that you cannot hold anymore you pull her out of your mouth as she continues to spray her seed across your face and [if breast size of player > 0]breasts[else]chest[end if]. When she finally finished your upper body is covered in her sticky purple goo. [if water bottle is owned]Pulling a water bottle out of your pack you use it to rinse yourself off[else if dirty water is owned]Pulling out a bottle of dirty water you use it to rinse yourself off[else]Having nothing to rinse off with you try to clean as much of the goo as you can but don't have much luck[end if], redress, and continue on your way.";
+					say "     Having no sexual organs of your own, you get down and embrace the Purple Gel in a deep, passionate kiss. Pulling away you move down and begin sucking on the girls giant tits. While you stimulate her breasts the gel's hands move down and start stroking her cock. Once you are satisfied with sucking her breasts you move further down to the gel girl's groin. Pulling her hands away, you [if breast size of player > 0]place her member between your breasts as you begin to suck it[else]you engulf her member with your mouth and begin sucking on it[end if]. You continue this until she can't hold back anymore and fills your mouth with her purple seed. Feeling that you cannot hold anymore you pull her out of your mouth as she continues to spray her seed across your face and [if breast size of player > 0]breasts[else]chest[end if]. When she finally finishes, your upper body is covered in her sticky purple goo. [if water bottle is owned]Pulling a water bottle out of your pack, you use it to rinse yourself off[else if dirty water is owned]Pulling out a bottle of dirty water, you use it to rinse yourself off[else]Having nothing to rinse off with, you try to clean as much of the goo as you can but don't have much luck[end if], redress, and continue on your way.";
 					if water bottle is owned: [if you used water bottle to clean yourself]
 						delete water bottle;
 					else if dirty water is owned: [if you used dirty water to clean yourself]
@@ -215,12 +215,12 @@ to say beatthepurplegel: [Victory over Purple Gel.]
 						if libido of player > 100:
 							now libido of player is 100;
 			else:
-				say "     Controlling your desires you turn and walk away. You can't help but get a little turned on as you hear the girl's moans as she pleasures herself.";
+				say "     Controlling your desires, you turn and walk away. You can't help but get a little turned on as you hear the girl's moans as she pleasures herself.";
 				increase libido of player by 5;
 				if libido of player > 100:
 					now libido of player is 100;
 		else:
-			say "     Walking away you can't help but get a little turned on as you hear the girl's moans as she pleasures herself.";
+			say "     Walking away, you can't help but get a little turned on as you hear the girl's moans as she pleasures herself.";
 			increase libido of player by 5;
 
 to say purplegeldesc: [Purple Gel Description.]
@@ -233,12 +233,12 @@ to say purplegeldesc: [Purple Gel Description.]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Pink Gel"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -286,16 +286,17 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Blue Gel"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -343,16 +344,17 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Purple Gel"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -400,8 +402,9 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings

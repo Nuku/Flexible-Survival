@@ -23,7 +23,7 @@ to say losetogiraffe:
 		say "     Unwilling to continue to resist the giraffe's advances, you are pulled into a French kiss that dives her long, blue tongue down your throat. ";
 	else:
 		say "     Unable to continue to resist the giraffe's advances, you are pulled into a French kiss that dives her long, blue tongue down your throat. ";
-	say "     You can't help but moan into this kiss as her agile tongue squirms inside you, sending shivers of delight through your body. In a daze after the kiss, she pushes you down into a nearby room, onto a bed and leaps atop you.";
+	say "You can't help but moan into this kiss as her agile tongue squirms inside you, sending shivers of delight through your body. In a daze after the kiss, she pushes you down into a nearby room, onto a bed and leaps atop you.";
 	let raffesex be 0;
 	let mchance be 4;
 	if player is submissive, increase mchance by 2;
@@ -46,29 +46,29 @@ to say losetogiraffe:
 to say beatthegiraffe:
 	say "     Having beaten the giraffe, you knock the herm to the ground. She moans softly, blue tongue hanging out as she pants for breath. ";
 	if nogiraffesex > 2:
-		say "     You resist taking advantage of the fallen herm like the others before her and instead send her packing with a boot to her rear. She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
+		say "You resist taking advantage of the fallen herm like the others before her and instead send her packing with a boot to her rear. She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
 	else if player is not neuter:
-		say "     You find yourself tempted to make use of that agile tongue to get a little relief for yourself. Shall you do so?";
+		say "You find yourself tempted to make use of that agile tongue to get a little relief for yourself. Shall you do so?";
 		if player consents:
 			if player is female:
 				say "     [if player is male]While you're tempted to use her muzzle for your cock, you really want that tongue of hers in your cunny. [end if]Pressing her muzzle to your juicy slit, you grip her head by her short, knobby horns and grind your pussy against her lips. Her tongue slides out, diving into your pussy and writhes around inside you. You moan in pleasure and force her (though little forcing is actually needed once she's started) to eat you out with her agile tongue until you've had several powerful climaxes that leave you quite satisfied. When you're finally done with her, you push her head back, her tongue popping out with a wet slurp. She smiles up at you, licks her muzzle with a long, slow swipe of her tongue and bounds off, looking for someone else to play with now that you've gotten her so very hard. You almost feel bad for the poor, unfortunate soul who'll end up speared on that thick cock of hers... almost.";
 			else:
 				say "     Pressing her muzzle to your cock, you grip her head by her short, knobby horns and grind your throbbing cock against her lips. Her tongue slides out and wraps around your shaft, working itself all over it as she starts to suck you off with soft moans of delight. You groan in pleasure and for her (though little forcing is actually needed once she's started) to lick and suck you until you blow your load down that long throat of hers, feeding her your thick semen, which she licks all up. When you're finally done with her, you push her head back, her tongue popping off a wet slurp. She smiles up at you, licks her muzzle with a long, slow swipe of her tongue and bounds off, looking for someone else to play with now that you've gotten her so very hard. You almost feel bad for the poor, unfortunate soul who'll end up speared on that thick cock of hers... almost.";
 		else:
-			say "     Resisting the urge to give into your baser instincts, you push the horny herm away and send her packing with a boot to her rear. She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
+			say "     Resisting the urge to give in to your baser instincts, you push the horny herm away and send her packing with a boot to her rear. She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
 			increase nogiraffesex by 1;
 	else:
-		say "     Having little interest in sex at the moment, you send her packing with a boot to her rear. She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
+		say "Having little interest in sex at the moment, you send her packing with a boot to her rear. She whimpers and rubs her sore ass as she goes off looking for someone to kiss it and make it better.";
 
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Giraffe"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -116,8 +116,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 [
 when play ends:

@@ -1,5 +1,8 @@
 Version 2 of Bald Eagle by Stripes begins here.
-[Version 2.1 - impregnation for M/F sex]
+[ Version 1.0 - Original content - Stripes                  ]
+[ Version 2.0 - Victory sex - Stripes                       ]
+[ Version 2.1 - Impregnation for M/F sex - Wahn             ]
+[ Version 2.2 - Watering Hole event bad end addition - Song ]
 
 "Adds a Bald Eagle creature to Flexible Survival's Wandering Monsters table"
 
@@ -15,14 +18,14 @@ when play begins:
 
 to say eagledesc:
 	setmongender 3;
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
 		now sex entry is "Both";
 	else:
 		now sex entry is "Male";
-	say "     Your searching is interrupted by a sharp screech from overhead and you spot a large avian swooping down at you, talons grabbing for you. You barely dodge this first swipe as the eagle man screeches in again, this time in anger at missing. '[one of]I'll get you,' he cries[or]You won't get away,' he cries[or]You'll be mine, prey,' he snaps[at random] as he swoops around for another pass at you. This humanoid avian has a bald eagle, with dark brown feathers over his body and wings and a bright white over his head and neck. His wings are long and broad, formed into part of his arms. His small, taloned hands are at the midpoint of his wings['] leading edge, able to be used when the not fully extended. His feet end in the bird feet with sharp claws. His beak also looks quite sharp and dangerous.";
+	say "     Your searching is interrupted by a sharp screech from overhead and you spot a large avian swooping down at you, talons grabbing for you. You barely dodge this first swipe as the eagle man screeches in again, this time in anger at missing. [one of]'I'll get you,' he cries[or]'You won't get away,' he cries[or]'You'll be mine, prey,' he snaps[at random] as he swoops around for another pass at you. This humanoid avian has a bald eagle, with dark brown feathers over his body and wings and a bright white over his head and neck. His wings are long and broad, formed into part of his arms. His small, taloned hands are at the midpoint of his wings['] leading edge, able to be used when the not fully extended. His feet end in the bird feet with sharp claws. His beak also looks quite sharp and dangerous.";
 
 to say losetoeagle:
 	now noeaglesex is 0;
@@ -31,7 +34,7 @@ to say losetoeagle:
 	if player is mpreg_ok, increase T by 1;
 	if anallevel is 3, increase T by 1;
 	if anallevel is 1, now T is 0;
-	say "     Having defeated you, the eagle releases a triumph call and pushes you down. His cock, poking from his soft feathers, is dripping with pre and eager for use on his captured prey. ";
+	say "     Having defeated you, the eagle releases a call of triumph and pushes you down. His cock, poking from his soft feathers, is dripping with pre and eager for use on his captured prey.";
 	if player is female and a random chance of 2 in 3 succeeds:
 		if player is impreg_able and a random chance of 2 in 3 succeeds:
 			say "     He roughly turns you over onto all fours and climbs atop you. As he grinds his slick cock against your pussy's wet lips, you can't help but moan a little, your needy cunt suddenly feeling empty. He nips at your shoulder and chuckles. 'Mmm... it sounds like someone's in need of a clutch in her,' he says, rubbing a taloned hand across your tummy. Before you can respond, he shifts his position enough to get his penis lined up and drives his foot-long erection into you, drawing another moan from your trembling body.";
@@ -64,12 +67,12 @@ to say beattheeagle:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Bald Eagle"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -117,8 +120,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Table of Game Objects (continued)
@@ -135,12 +139,16 @@ to say useeaglefeather:
 
 when play ends:
 	if bodyname of player is "Bald Eagle":
-		if humanity of player < 10:
+		if WateringHoleBadEnd is 1:
+			say "     Giving yourself over to your insatiable avian mate, you are reduced to nothing more than his lusty, [if player is impreg_ok]egg-bearing[else]well-fucked[end if] [if player is puremale]he-hen[else]hen[end if], a mindless toy and nest warmer who welcomes his presence with worshipful attention. The studly male sustains your lifestyle with frequent hunting flights, spending long hours scavenging supplies for his favorite sedentary fucktoy. At times it feels like an eternity before he returns, and once he does, your libido drives you to beg for him to claim you, all other needs secondary to your altered body's demands. You fuck, then feast, then fuck again, losing yourself in a blur of pleasure as you writhe against each other in the makeshift, cum-soaked bedding.";
+			say "     Over time, the details of your past life grow hazier, then disappear altogether. After one session, you find that you can't even remember your name - not that you'd need to, what with this handsome hunk to do all the thinking for you. You shiver at the thought of others sharing this simple-minded bliss, and you eagerly accompany your partner when he violates those unlucky few who enter your hunting territory, sharing the ecstasy of the infection by transforming them into sexy little eagle-morphs like you. Though he spends long hours grooming them as he did you on that fateful day, you take solace in the fact that soon you'll be entwined again, reunited with your mate in a mindless fucking frenzy.";
+			say "     When the military arrives, your safe distance from the city provides you with a distant vantage to observe their operations. By then, you have only dim awareness of their actions, much preferring devoting every waking second to wrapping your tongue around your mate's hard avian cock or pushing back against his waist as he bucks into your [if player is female]needy, gripping folds[else]horny, cum-sullied asshole[end if]. The sweltering heat of sex eventually becomes your whole world, little more than a hollow shell of a conscience whose simple sapience is limited to chirping and moaning for more cock[if player is impreg_ok], more cum, and more eggs for your ever-growing brood[else] and more cum, his horny buttslut to pin and ravage to his infectious, corrupted content[end if], soon knowing nothing more than the instinct-driven bliss that permeates you to your core.";
+		else if humanity of player < 10:
 			say "     As your infection progresses beyond the point of return, your human mind fails as your transformation progresses further. Your body alters and your wings become strong enough to carry yourself in flight. Finding a high point to soar from on your first flight, you take the air and soon learn to catch the wind and fly out to the plains at the edge of the city. You set up a small aerie in a tall building overlooking much of it, allowing you to hunt for food or prey for your lusts. While it is a nice spot, you find yourself dissatisfied when the soldiers start moving through the city below, stirring up the prey to battle or into hiding. Sick of their meddling, you fly off over their lines one evening. Your new aerie is set up in the mountains by a river with delicious fish for food and hikers to satisfy your other hungers.";
 		else:
 			if facename of player is "Bald Eagle" and skinname of player is "Bald Eagle":
 				say "     After being rescued from the city, you do the only sensible thing for someone in your position - politics. As an eaglemorph, the nation's pride in the bald eagle holds great sway over the voters. You become one of the first infected to be elected to office because of this and rise quickly. You have strong backing from many key demographics, especially the infected masses and the elderly. The upper class also backs you as your appearance and demeanor speaks of authority, strength and determination in the face of the adversity striking the nation. And a strong, stable country is good for steady business. Your predatory nature makes you tough on crime and international policy, but tempered by your understanding of the needs of those transformed and a changing nation's needs in this new world. While never rising to leading the nation, you are a strong figure in politics over a long and illustrious career, ending in a cushy ambassador position overseas in your twilight years.";
 			else:
-				say "     After being saved by the military from the infected city, you enlist with the Air Force. Despite your wings never quite enabling you to fly, despite many risky tries on your part, you long to soar above the clouds. Feeling a strong affinity for flight, you become a skilled fighter pilot and earn several commendations for missions against some of the giant wyverns and dragons that occasionally appear to reek havoc in the skies.";
+				say "     After being saved by the military from the infected city, you enlist with the Air Force. Despite your wings never quite enabling you to fly, despite many risky tries on your part, you long to soar above the clouds. Feeling a strong affinity for flight, you become a skilled fighter pilot and earn several commendations for missions against some of the giant wyverns and dragons that occasionally appear to wreak havoc in the skies.";
 
 Bald Eagle ends here.

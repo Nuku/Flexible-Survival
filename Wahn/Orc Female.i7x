@@ -1,5 +1,5 @@
 Version 1 of Orc Female by Wahn begins here.
-[Version 1 - new npc/infection]
+[Version 1 - new NPC/infection]
 
 "Adds an Orc Female creature to Flexible Survival's Wandering Monsters table"
 
@@ -27,8 +27,19 @@ OrcFemSpecialFightNumber is a number that varies.
 KatyaResistance is a number that varies. KatyaResistance is usually 6.
 KatyaRelationship is a number that varies. KatyaRelationship is usually 0.
 KatyaDildoTaken is a number that varies.
+KatyaRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if Noteworthy Ruin is resolved and Resolution of Noteworthy Ruin is 1 and KatyaRoomConnection is 0:
+		change the north exit of Dry Plains to Inconspicuous Trail; [connecting the location to the travel room]
+		change the south exit of Inconspicuous Trail to Dry Plains; [connecting the location to the travel room]
+		now KatyaRoomConnection is 1; [room connected]
 
 Section 1 - Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Noteworthy Ruin	"Noteworthy Ruin"
 
 Noteworthy Ruin is a situation. The level of Noteworthy Ruin is 8.
 The sarea of Noteworthy Ruin is "Plains".
@@ -53,10 +64,12 @@ Instead of resolving a Noteworthy Ruin:
 			challenge "Orc Female";
 			change the north exit of Dry Plains to Inconspicuous Trail; [connecting the location to the travel room]
 			change the south exit of Inconspicuous Trail to Dry Plains; [connecting the location to the travel room]
+			now Resolution of Noteworthy Ruin is 1; [met Katya]
 			now Noteworthy Ruin is resolved;
 		else:
 			LineBreak;
 			say "     Deciding against exploring the camp, you do turn away from it and keep going. You do make a note of where it was though, in case you want to return to the [bold type]noteworthy ruin[roman type] sometime in the future.";
+			now Resolution of Noteworthy Ruin is 2; [didn't meet Katya]
 			now HP of Katya is 1; [declined to investigate]
 	else if HP of Katya is 1: [didn't investigate before]
 		say "     Roaming through the plains, you come upon the section of ruins again where you made your observation about someone possibly living inside. There are basically just a few sections of roofless wall still standing, as well as a field of scattered stones and high mounds of rubble. This time there is nothing obvious to draw your attention to it, but you remember it from the last time...";
@@ -75,10 +88,12 @@ Instead of resolving a Noteworthy Ruin:
 			challenge "Orc Female";
 			change the north exit of Dry Plains to Inconspicuous Trail; [connecting the location to the travel room]
 			change the south exit of Inconspicuous Trail to Dry Plains; [connecting the location to the travel room]
+			now Resolution of Noteworthy Ruin is 1; [met Katya]
 			now Noteworthy Ruin is resolved;
 		else:
 			LineBreak;
 			say "     Deciding against exploring the camp, you do turn away from it and keep going. You do make a note of where it was though, in case you want to return to the [bold type]noteworthy ruin[roman type] sometime in the future.";
+			now Resolution of Noteworthy Ruin is 2; [didn't meet Katya]
 			now HP of Katya is 1; [declined to investigate]
 
 Section 2 - Monster Responses
@@ -124,7 +139,7 @@ to say OrcFemBeaten:
 					now RandomGenNumber is a random number from 1 to 6;
 				if RandomGenNumber is:
 					-- 1:
-						say "two cans of soda and an chocolate and nut energy bar. ";
+						say "two cans of soda and a chocolate and nut energy bar. ";
 						say "(You gain two bottles of soda.)";
 						say "(You gain food.)";
 						increase carried of soda by 2;
@@ -229,14 +244,11 @@ to say KatyaBeatenSexMenu:
 				if KatyaResistance > 0:
 					decrease KatyaResistance by 1;
 				increase libido of Katya by 1;
-		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the groaning orc woman, having decided against violating her as she is vulnerable after all.";
 				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You step back from the groaning orc woman, having decided against violating her as she is vulnerable after all.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -378,12 +390,12 @@ to say OrcFemDesc:
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Orc Female";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -431,8 +443,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Table of Game Objects (continued)
@@ -506,19 +519,28 @@ to say KatyasDildoAssFuck:
 
 Section 4 - Location
 
+Table of GameRoomIDs (continued)
+Object	Name
+Inconspicuous Trail	"Inconspicuous Trail"
+
 Inconspicuous Trail is a room.
 The description of Inconspicuous Trail is "     You're on a fairly seldom-used trail through the expansive grassland of the dry plains. If you hadn't known exactly what to look for, there would be little chance you'd even have noticed this trail. Just a little distance further to the northeast is Katya's hidden camp.".
 earea of Inconspicuous Trail is "Plains".
 
-Northeast of Inconspicuous Trail is Hidden Camp. Hidden Camp is sleepsafe.
+Table of GameRoomIDs (continued)
+Object	Name
+Hidden Camp	"Hidden Camp"
+
+Hidden Camp is a room.
+Hidden Camp is northeast of Inconspicuous Trail. Hidden Camp is sleepsafe.
 The description of Hidden Camp is "[KatyasCampDesc]".
 earea of Hidden Camp is "Plains".
 
 to say KatyasCampDesc:
 	if daytimer is day: [daytime text]
-		say "     You're in a small, hidden camp between the ruined walls left over from several buildings. Sheets of mottled fabric have been hung up to conceal what is going on in here, making it appear just another lifeless remnant of civilization crumbling away in this part of the city. Katya's hideout is surprisingly well equipped for an improvised accommodation in the middle of the nanite apocalypse, with a triangular tarp stretches out over part of the enclosed space, providing shade and protection from rain. Underneath lies her sleeping bag, placed upon a thick layer of dried grass for additional comfort, and a sturdy plastic box with a lid holds the orc's private possessions. A small fire pit and an inverted umbrella with a connected plastic bottle to collect rainwater completes the image of a survivalist's camp.";
+		say "     You're in a small, hidden camp between the ruined walls left over from several buildings. Sheets of mottled fabric have been hung up to conceal what is going on in here, making it appear like just another lifeless remnant of civilization crumbling away in this part of the city. Katya's hideout is surprisingly well equipped for an improvised accommodation in the middle of the nanite apocalypse, with a triangular tarp stretches out over part of the enclosed space, providing shade and protection from rain. Underneath lies her sleeping bag, placed upon a thick layer of dried grass for additional comfort, and a sturdy plastic box with a lid holds the orc's private possessions. A small fire pit and an inverted umbrella with a connected plastic bottle to collect rainwater completes the image of a survivalist's camp.";
 	else: [night text]
-		say "     You're in a small, hidden camp between the ruined walls left over from several buildings. Sheets of mottled fabric have been hung up to conceal what is going on in here, making it appear just another lifeless remnant of civilization crumbling away in this part of the city. Katya's hideout is surprisingly well equipped for an improvised accommodation in the middle of the nanite apocalypse, with a triangular tarp stretches out over part of the enclosed space, providing shade and protection from rain. Underneath lies her sleeping bag, placed upon a thick layer of dried grass for additional comfort, and a sturdy plastic box with a lid holds the orc's private possessions. A small fire pit filled with a merrily burning campfire and an inverted umbrella with a connected plastic bottle to collect rainwater completes the image of a survivalist's camp.";
+		say "     You're in a small, hidden camp between the ruined walls left over from several buildings. Sheets of mottled fabric have been hung up to conceal what is going on in here, making it appear like just another lifeless remnant of civilization crumbling away in this part of the city. Katya's hideout is surprisingly well equipped for an improvised accommodation in the middle of the nanite apocalypse, with a triangular tarp stretches out over part of the enclosed space, providing shade and protection from rain. Underneath lies her sleeping bag, placed upon a thick layer of dried grass for additional comfort, and a sturdy plastic box with a lid holds the orc's private possessions. A small fire pit filled with a merrily burning campfire and an inverted umbrella with a connected plastic bottle to collect rainwater completes the image of a survivalist's camp.";
 
 Section 5 - Events
 
@@ -608,9 +630,9 @@ to say KatyaDominancePath:
 
 to say KatyaResistanceMessage:
 	if KatyaResistance is 6: [never lost to the player]
-		say "'Now how the hell did you think that coming back to my camp uninvited was a good idea? I told you to fuck off!' the green-skinned woman snarls at you before adding, 'You're not one of them masochists, are you? Getting off on being roughed up.' ";
+		say "'Now how the hell did you think that coming back to my camp uninvited was a good idea? I told you to fuck off!' the green-skinned woman snarls at you before adding, 'You're not one of them masochists, are you? Getting off on being roughed up.'";
 	else if KatyaResistance is 4 or KatyaResistance is 4: [lost 1/2 times]
-		say "'You again?!' she growls, her face drawing into a snarl that shows off her sharp tusks. 'Guess I won't have to go find you after all to give you some payback!' ";
+		say "'You again?!' she growls, her face drawing into a snarl that shows off her sharp tusks. 'Guess I won't have to go find you after all to give you some payback!'";
 	else if KatyaResistance is 3 or KatyaResistance is 2: [lost 3/4 times]
 		say "'You just won't leave me alone, will you?!' she growls, her face marked by annoyance. The orc takes on a more defensive posture overall this time, no doubt remembering all of the times you whupped her ass before.";
 	else if KatyaResistance is 1: [lost 5 or more times]
@@ -698,7 +720,7 @@ to say KatyaTrailFightFlee:
 	say "     Something tells you that you won't be seeing Katya again after this...";
 	wait for any key;
 	move player to Dry Plains;
-	remove Katya from play;
+	now Katya is nowhere;
 
 to say KatyaTrailFightVictory:
 	say "     Overpowering the large cat - tentacles or none, you kick its butt - you eventually get a good grip of its neck-fur, holding the large cat as you land a heavy punch between its eyes. With a groan, its eyes cross and flutter closed, followed by the creature sinking down into unconsciousness. With your own opponent dealt with, you stand up straight and look for Katya - who is standing over two other vanquished shadow beasts. They were no match for her, even two on one. 'Thanks for distracting him,' she calls out to you, nodding towards your own opponent, then strolling over to you and giving you a friendly punch on the shoulder. 'Let's get out of here,' Katya tells you and the two of you hurry back to her camp. After disarming some pretty well-hidden traps, she takes you inside.";
@@ -708,6 +730,10 @@ to say KatyaTrailFightVictory:
 	move player to Hidden Camp;
 
 Section 6 - NPC
+
+Table of GameCharacterIDs (continued)
+object	name
+Katya	"Katya"
 
 Katya is a woman. Katya is in Hidden Camp.
 The description of Katya is "[KatyaDesc]".
@@ -759,13 +785,9 @@ instead of conversing the Katya:
 					say "[KatyaTalk2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the towering orc, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the towering orc, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -781,7 +803,7 @@ to say KatyaTalk1: [talk about her]
 		say "     'I was poked and prodded by them among jeered comments about me being weak - fuck those assholes, I was still growing into this body! And those 'weird bumps' on my chest were strangely soft when being pinched...' she indicates her breasts with a scornful grunt. 'I screamed when one of them rammed a finger up my pussy, just to see what would happen. Hell of a way to lose your virginity, I can tell you that. The noise brought someone else into the room before long - the big kahuna, gold chain and all on that frigging big brute of an orc. He gave the snot-nosed warriors a stare and they let go of me, then sent them out of the room.";
 		say "     Katya crosses her arms over her chest. 'Tried to punch him when he reached for me. Of course he caught that easily, squeezing my fist till I was wincing in pain. So there I was, alone with daddy and the orc chief, naked and dripping with orc brew. He inspected me - not like them, just looking - then let go.' Turning the police badge over in her hands a few more times, she tugs it away once more. 'Daddy held me in his arms and pleaded, 'Boghrim, please. She's y-' But the big bad orc just waved him off and said, 'No. She can't stay. Half of the tribe has never even seen a woman. They'd never accept her. You saw what the brothers just did.'";
 		WaitLineBreak;
-		say "     Silence stretches out for a few seconds, then the orc goes on to say, 'With that said, he left, kicking the door shut behind him. I was in my daddy's arms crying until Boghrim came back, throwing a bundle of ragged fabric to the ground next to me. 'Take that and go,' he said gruffly, barely leaving me time to say goodbye and for dad to give me his badge. A few minutes later, I was outside the police station and a block away, with him stopping at a crossroad and pointing down the road - away. 'You're strong. You'll make it. Just stay away from the tribe's territory,' he said and gave me a push to start walking. Katya frowns and adds, 'Fucking great parenting, eh? Makes me wanna punch him - then punch him some more... At least he gave me some clothes and food, but still. Well, and another orc brew - that bulked me up some more too. Shoving an hour-old girl into the streets is still a shitty thing to do...' She shrugs and balls one fist, then hits the inside of her open palm on the other side. 'But yeah, fuck him. I don't need anyone. And you should have seen the state of the few orc assholes I met on the streets - after I punched them out, that is...'";
+		say "     Silence stretches out for a few seconds, then the orc goes on to say, 'With that said, he left, kicking the door shut behind him. I was in my daddy's arms crying until Boghrim came back, throwing a bundle of ragged fabric to the ground next to me. [']Take that and go,['] he said gruffly, barely leaving me time to say goodbye and for dad to give me his badge. A few minutes later, I was outside the police station and a block away, with him stopping at a crossroad and pointing down the road - away. [']You're strong. You'll make it. Just stay away from the tribe's territory,['] he said and gave me a push to start walking.' Katya frowns and adds, 'Fucking great parenting, eh? Makes me wanna punch him - then punch him some more... At least he gave me some clothes and food, but still. Well, and another orc brew - that bulked me up some more too. Shoving an hour-old girl into the streets is still a shitty thing to do...' She shrugs and balls one fist, then hits the inside of her open palm on the other side. 'But yeah, fuck him. I don't need anyone. And you should have seen the state of the few orc assholes I met on the streets - after I punched them out, that is...'";
 	else if KatyaRelationship is 4: [friend]
 		say "     'Curious, aren't you?' the muscular orc says gruffly, her mouth drawing into a little frown as she crosses her arms and looks at you. For a moment, you think she'll just leave it at that, then she gives a shrug and makes a throwing-away gesture with one muscular arm. 'Fine, I'll tell you about it.' With that said, she strides over to her fire pit and sits down next to it after throwing in a few fresh pieces of wood. The orc stares a moment into the flames, just watching them start to consume what they touch, then glances at you once more as you sit down not far from her. 'So. Bet you're curious where a female orc came from. Strange freak of nature and all that!' Katya begins her tale, then lifts a hand to her improvised bra and pulls out something shiny that she had tucked away under it.";
 		say "     She turns it over in her hands, gleaming in the firelight - it is a police badge, polished to a mirror's sheen. 'Here, this was dad's. I loved how shiny it was from the start. There I was... barely born, suckling on his nipples and with my little green hands closing around this pretty shiny bauble. Hhmf - best thirty minutes of my life, I can tell you that.' She looks down at the badge and seems lost in thought for a moment... then suddenly speaks up and says, 'He told me he was proud to see me grow up so quickly. His little girl, becoming so strong and big. Hell, I wasn't even done growing then - just a narrow beanpole without real strength yet.' Katya goes on to tell you, then raises her arm to flex it and let her gaze wander over the muscles rippling under her green skin.";
@@ -914,13 +936,9 @@ to say KatyaSexMenu:
 				increase libido of Katya by 1;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the proud orc woman, shrugging your shoulders as she gives you a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the proud orc woman, shrugging your shoulders as she gives you a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -961,7 +979,7 @@ to say KatyaSex2: [fuck her mouth]
 		if KatyaRelationship is 5: [first time]
 			say "     Pulling back from her after some little while of making out with one another, you more moan than say that you want her to go down on you, something the aroused orc accepts with a wide grin. Planting another kiss right on your lips, she steps back a little and immediately begins to strip down, pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes [if player is male]your cock twitch in arousal [else if player is female]your pussy get wet in arousal [else]your arousal spike sharply [end if]and you hastily shrug off your own clothes and gear, then step up to Katya and plant a kiss on her lips.";
 		else: [repeat scene]
-			say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and ask her if she wants to go down on you, a broad grin on your face. She glances at the trail of garments and equipment you left behind you, chuckling at your eagerness to be with her. 'Well, how could I say no to that!' she replies with an smile, sliding a hand around your bare midriff to pull you close and kiss you deeply. The two of you make out for a few moments, then she steps back a little and immediately begins to strip down herself - pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained, her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes [if player is male]your cock twitch in arousal.[else if player is female]your pussy get wet in arousal.[else]your arousal spike sharply.[end if]";
+			say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and ask her if she wants to go down on you, a broad grin on your face. She glances at the trail of garments and equipment you left behind you, chuckling at your eagerness to be with her. 'Well, how could I say no to that!' she replies with a smile, sliding a hand around your bare midriff to pull you close and kiss you deeply. The two of you make out for a few moments, then she steps back a little and immediately begins to strip down herself - pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained, her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes [if player is male]your cock twitch in arousal[else if player is female]your pussy get wet in arousal[else]your arousal spike sharply[end if].";
 		say "     The now naked orc kneels down in front of you and puts a hand on your thigh. With her other hand, Katya reaches out to hold your cock up to inspect it, then starts to stroke along its length. Looking down upon the strong orc-woman, you take the time to study her while she gives you a slow jerk. Her features are too strong to be called pretty, but have their own inherent beauty, and combined with the wild mane of her hair she truly is a sight to behold. The twin tusks jutting out of her lower mandible can be called cute, especially when she gives you one of those steaming hot smiles. As for the rest of the orc... her body is a female body-builder's dream - shapely yet powerful, and even has a very generous pair of breasts.";
 		WaitLineBreak;
 		say "     With a grin on your face, you take hold of your erection and pull Katya's head closer. Stroking your cock in slow movements up and down, you brush it against her lips, reveling in their softness. The orc chuckles and slides her tongue out for just a second, flicking it over your dick-head to draw a pleased grunt from you. As a reply, you brush your hand through her mane of hair and grab a good handful of it, taking direct control over the muscular woman. A little grunt at being man-handled leads over to a fairly aroused-sounding, 'So that's how it's gonna go, eh?!' Orcs do love it rough, at times - and Katya clearly is no exception. With a grin she spreads her lips a little and you push in immediately, sliding your manhood into her mouth.";
@@ -989,7 +1007,7 @@ to say KatyaSex3: [lick her pussy]
 		if KatyaRelationship is 5: [first time]
 			say "     Pulling back from her after some little while of making out with one another, you more moan than say that you want to go down on her, something the aroused orc accepts with a wide grin. Planting another kiss right on your lips, she steps back a little and immediately begins to strip down, pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes [if player is male]your cock twitch in arousal [else if player is female]your pussy get wet in arousal [else]your arousal spike sharply [end if]and you hastily shrug off your own clothes and gear, then follow Katya as she walks over to her bedding and lies down.";
 		else: [repeat scene]
-			say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and ask her if she wants you to go down on her, a broad grin on your face. She glances at the trail of garments and equipment you left behind you, chuckling at your eagerness to be with her. 'Who could say no to that!' she replies with an smile, sliding a hand around your bare midriff to pull you close and kiss you deeply. The two of you make out for a few moments, then she steps back a little and immediately begins to strip down herself - pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained, her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes [if player is male]your cock twitch in arousal.[else if player is female]your pussy get wet in arousal.[else]your arousal spike sharply.[end if]";
+			say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and ask her if she wants you to go down on her, a broad grin on your face. She glances at the trail of garments and equipment you left behind you, chuckling at your eagerness to be with her. 'Who could say no to that!' she replies with a smile, sliding a hand around your bare midriff to pull you close and kiss you deeply. The two of you make out for a few moments, then she steps back a little and immediately begins to strip down herself - pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained, her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes [if player is male]your cock twitch in arousal[else if player is female]your pussy get wet in arousal[else]your arousal spike sharply[end if].";
 		say "     You kneel between the legs of your green-skinned friend and check out her beautiful shape. Katya's pussy is green like the rest of her skin, if a bit lighter in shade, and has a little bush of pubic hair above it. The nether lips of the sexy woman are slightly swollen and parted, glistening with wetness. Putting a hand on her crotch, you rub over the folds of the orc's sex, drawing a lustful groan from the horny woman. Fuck yeah - such a sexy and strong amazon laid out before you, trembling in lust as she waits for you to take her. The eager expression on her face is a glorious thing to behold, making you so very glad that you managed to befriend her, despite the rocky beginnings. Then a half-moaned request pulls you out of your reverie, as Katya tells you, 'Come on! I'm waiting!'";
 		WaitLineBreak;
 		say "     Sliding your hands under the muscular thighs of the stretched-out orc, you lift and spread them some more, opening her up for you to really get in close to her pussy. Lowering your head between her thighs, you then pull her folds apart with two fingers and catch a glimpse of pink in between them - looks like orcs are just green on the outside. You move forward a little bit more and press your nose against her crotch, taking a good long whiff of her scent. Besides the obvious (a bit of sweat, due to the heat baking the plains during the day) there is a subdued note of a male scent dominated by the overlying female one. It is almost as if her body contradicted the plan for her to be born a regular male orc at some point in its development, deciding to go its own way instead. 'Kinky, aren't you - sniffing around at my crotch,' Katya says in a playful tone, stroking your head as you look up at her, then pushing you face-first against her crotch with a laugh.";
@@ -1021,7 +1039,7 @@ to say KatyaSex4: [fuck her pussy]
 		if KatyaRelationship is 5: [first time]
 			say "     Pulling back from her after some little while of making out with one another, you more moan than say that you want to fuck her, something the aroused orc accepts with a wide grin. Planting another kiss right on your lips, she steps back a little and immediately begins to strip down, pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes your cock twitch in arousal and you hastily shrug off your own clothes and gear, then follow Katya as she walks over to her bedding and lies down.";
 		else: [repeat scene]
-			say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and ask her if she wants to fuck, a broad grin on your face. She glances at the trail of garments and equipment you left behind you, chuckling at your eagerness to be with - and in - her. 'Who could say no to that!' she replies with an smile, sliding a hand around your bare midriff to pull you close and kiss you deeply. The two of you make out for a few moments, then she steps back a little and immediately begins to strip down herself - pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained, her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes your cock twitch in arousal.";
+			say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and ask her if she wants to fuck, a broad grin on your face. She glances at the trail of garments and equipment you left behind you, chuckling at your eagerness to be with - and in - her. 'Who could say no to that!' she replies with a smile, sliding a hand around your bare midriff to pull you close and kiss you deeply. The two of you make out for a few moments, then she steps back a little and immediately begins to strip down herself - pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained, her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes your cock twitch in arousal.";
 		say "     You kneel between the legs of your green-skinned friend and check out her beautiful shape. Katya's pussy is green like the rest of her skin, if a bit lighter in shade, and has a little bush of pubic hair above it. The nether lips of the sexy woman are slightly swollen and parted, glistening with wetness. Putting a hand on her crotch, you rub over the folds of the orc's sex, drawing a lustful groan from the horny woman. Fuck yeah - such a sexy and strong amazon laid out before you, trembling in lust as she waits for you to take her. The eager expression on her face is a glorious thing to behold, making you so very glad that you managed to befriend her, despite the rocky beginnings. Then a half-moaned request pulls you out of your reverie, as Katya tells you, 'Come on! I'm waiting!'";
 		WaitLineBreak;
 		say "     Sliding your hands under the muscular thighs of the stretched-out orc, you stroke their insides in a caress that winds your friend up a little further, then push her legs apart, opening her up for you to fuck. You catch a glimpse of pink in the depth between her pussy lips - looks like orcs are just green on the outside. Then you're guiding your [cock of player] prick up against her, rubbing the glans of your erection up and down between the glistening folds and getting it wet with the slickness of her arousal. 'Damn! Take me already!' she groans impatiently, sliding her legs around your hips and giving them a little push. Chuckling at her antics, you contemplate teasing her some more - but no, Katya might actually just wrestle you to the ground and ride your dick if you do that. Finally going ahead and nudging her nether lips apart with the tip of your dick, you slide it into the orc's receptive body, grunting in satisfaction as her inner passage snugly enfolds your cock. God, she feels good around your manhood - soft and warm, and so very wet!";
@@ -1057,7 +1075,7 @@ to say KatyaSex5: [fuck her ass]
 		if KatyaRelationship is 5: [first time]
 			say "     Pulling back from her after some little while of making out with one another, you more moan than say that you want to fuck her, something the aroused orc accepts with a wide grin. Planting another kiss right on your lips, she steps back a little and immediately begins to strip down, pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes your cock twitch in arousal and you hastily shrug off your own clothes and gear, then follow Katya as she walks over to her bedding and lies down.";
 		else: [repeat scene]
-			say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and ask her if she wants to fuck, a broad grin on your face. She glances at the trail of garments and equipment you left behind you, chuckling at your eagerness to be with - and in - her. 'Who could say no to that!' she replies with an smile, sliding a hand around your bare midriff to pull you close and kiss you deeply. The two of you make out for a few moments, then she steps back a little and immediately begins to strip down herself - pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained, her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes your cock twitch in arousal.";
+			say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and ask her if she wants to fuck, a broad grin on your face. She glances at the trail of garments and equipment you left behind you, chuckling at your eagerness to be with - and in - her. 'Who could say no to that!' she replies with a smile, sliding a hand around your bare midriff to pull you close and kiss you deeply. The two of you make out for a few moments, then she steps back a little and immediately begins to strip down herself - pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained, her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes your cock twitch in arousal.";
 		WaitLineBreak;
 		say "     Sliding your hands under the muscular thighs of the stretched-out orc, you lift them up and up, hooking the hollows of her knees over your shoulders. Pulling on Katya, you soon have her in a partial handstand - the half about being mostly upside-down in body even if she's not lifted off the ground on her hands. Still, this puts you in just the right position to press your face in between her buttocks, taking a deep huff of the orc's scent. She smells slightly sweaty, but beside that there is a subdued note of a male scent dominated by the overlying female one - as if her body contradicted the plan for her to be born a regular male orc at some point in its development, deciding to go its own way instead. 'Kinky [if player is female]girl[else]dude[end if] - sniffing around at my crotch and bum,' Katya says in a playful tone, wiggling her hips a little.";
 		say "     Spreading the orc's buttocks after a good long moment of exploration and groping, you inspect Katya's asshole - it is somewhat lighter green than the rest of her, a puckered ring that promises great pleasure for anyone in the position to fuck it - something you're definitively looking forward to. Then suddenly the muscle flexes a little - winking open and shut - and Katya says loudly, 'You sure are eager to get up close with my butt, aren't you?! Want to feel one of those amazing orc holes around your shaft, hah! Go on then - I'm looking forward to it!' Eager to try out Katya's rear end, you open your mouth and extend your tongue, feeling the yielding flesh of her body a second later.";
@@ -1080,7 +1098,7 @@ to say KatyaSex6: [69 and scissoring]
 		if KatyaRelationship is 5: [first time]
 			say "     Pulling back from her after some little while of making out with one another, you more moan than say that you want to go down on her, something the aroused orc accepts with a wide grin. Planting another kiss right on your lips, she steps back a little and immediately begins to strip down, pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes [if player is male]your cock twitch in arousal [else if player is female]your pussy get wet in arousal [else]your arousal spike sharply [end if]and you hastily shrug off your own clothes and gear, then follow Katya as she walks over to her bedding and lies down.";
 		else: [repeat scene]
-			say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and ask her if she wants you to go down on her, a broad grin on your face. She glances at the trail of garments and equipment you left behind you, chuckling at your eagerness to be with her. 'Who could say no to that!' she replies with an smile, sliding a hand around your bare midriff to pull you close and kiss you deeply. The two of you make out for a few moments, then she steps back a little and immediately begins to strip down herself - pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained, her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes [if player is male]your cock twitch in arousal and [end if]your pussy get wet.";
+			say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and ask her if she wants you to go down on her, a broad grin on your face. She glances at the trail of garments and equipment you left behind you, chuckling at your eagerness to be with her. 'Who could say no to that!' she replies with a smile, sliding a hand around your bare midriff to pull you close and kiss you deeply. The two of you make out for a few moments, then she steps back a little and immediately begins to strip down herself - pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained, her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes [if player is male]your cock twitch in arousal and [end if]your pussy get wet.";
 		say "     You kneel between the legs of your green-skinned friend and check out her beautiful shape. Katya's pussy is green like the rest of her skin, if a bit lighter in shade, and has a little bush of pubic hair above it. The nether lips of the sexy woman are slightly swollen and parted, glistening with wetness. Putting a hand on her crotch, you rub over the folds of the orc's sex, drawing a lustful groan from the horny woman. Fuck yeah - such a sexy and strong amazon laid out before you, trembling in lust as she waits for you to take her. The eager expression on her face is a glorious thing to behold, making you so very glad that you managed to befriend her, despite the rocky beginnings. Then a half-moaned request pulls you out of your reverie, as Katya tells you, 'Come on! I'm waiting!'";
 		WaitLineBreak;
 		say "     With a smile on your face, you crawl up beside the sexy orc on all fours, then lean forward and kiss her on the lips and moan that you want her to lay back fully. Katya looks at you with an eager glint in her eyes and replies, 'Sure thing babe!' After sliding a hand down your naked flank to give you a grope or two, she lets herself sink back, now completely stretched out on the sleeping bag. You take in her beautiful and strong form for a few more seconds, arousal flaring hard in you, then turn around and swing a leg over her to mount the orc in classic 69 fashion. With your crotch now situated right above her face, you can feel the warm breath of your green-skinned lover on your skin, quickly followed by the soft brush of her lips as she gives you an intimate kiss. One hand moving up to caress your thigh, Katya pants out, 'Let's see how you like this...'";
@@ -1104,7 +1122,7 @@ to say KatyaSex7: [Katya straddles the player's face]
 		if KatyaRelationship is 5: [first time]
 			say "     Pulling back from her after some little while of making out with one another, you more moan than say that you want to worship and please her, something the aroused orc accepts with a wide grin. Planting another kiss right on your lips, she steps back a little and immediately begins to strip down, pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes [if player is male]your cock twitch in arousal [else if player is female]your pussy get wet in arousal [else]your arousal spike sharply [end if]and you hastily shrug off your own clothes and gear, then follow Katya as she walks over to her bedding and gestures for you to lie down.";
 		else: [repeat scene]
-			say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and tell her in an lusty voice that you want to worship and please her, a broad grin on your face. She glances at the trail of garments and equipment you left behind you, chuckling at your eagerness to be with her. 'Who could say no to that!' she replies with an smile, sliding a hand around your bare midriff to pull you close and kiss you deeply. The two of you make out for a few moments, then she steps back a little and immediately begins to strip down herself - pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained, her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes [if player is male]your cock twitch in arousal and [end if]your pussy get wet. Then you follow Katya as she walks over to her bedding and gestures for you to lie down.";
+			say "     After quickly stripping off your gear and clothes, you stroll up to the female orc and tell her in a lusty voice that you want to worship and please her, a broad grin on your face. She glances at the trail of garments and equipment you left behind you, chuckling at your eagerness to be with her. 'Who could say no to that!' she replies with a smile, sliding a hand around your bare midriff to pull you close and kiss you deeply. The two of you make out for a few moments, then she steps back a little and immediately begins to strip down herself - pulling the chest-wrap up over her head before throwing it casually aside. Now that they are no longer quite as constrained, her shapely breasts hang freely, drawing your attention with every little sway and wiggle of the glorious green orbs. Katya's loincloth is soon to follow, putting the proud warrioress naked before you. The sight of her muscular and toned body makes [if player is male]your cock twitch in arousal and [end if]your pussy get wet. Then you follow Katya as she walks over to her bedding and gestures for you to lie down.";
 		say "     'So! I hear someone wants to really please their orc mistress...' Katya says in a firm yet playful tone, stepping up over you with her feet planted left and right of your hips. This gives you an awe-inspiring view-point of the sexy green-skinned woman, and you can't help but moan softly as your gaze wanders up those long, strong legs to her crotch, then further over the hard abs and full breasts on this proud amazon. She looks down at you, a smirk on her face as she says the words, 'Well then - show me how much you want this - and this - and this...' Katya runs a hand down over her naked form, stroking different spots on the glorious body she is presenting you and driving you wild with the show. You start to raise a hand to brush it up the side of her leg, but she just raises a finger and wiggles it, then chuckles, 'Ah ah! No touching - at least not me...'";
 		WaitLineBreak;
 		say "     Taking your orcish lover's hint, you stroke over your own body, panting out how much you'd love to pinch her nipples, caress Katya's skin and feel her warmth under your fingers. Moving further and further down, you soon reach your crotch, [if player is male]taking hold of your cock and stroking its shaft as you tell her of your desire to sink it into her. [else if player is female]rubbing your clit as you tell her that you wish it was hers. [else]rubbing your sensitive skin there as you tell her hat you wish it was her you were pleasing. [end if]Katya enjoys watching you squirm a little, teasing you with the sight of her body but never letting you touch her, then eventually even crouching down between your legs and doing a slow crawl on all fours over you. She gives fleeting touches that drive you wild - especially as she lowers her chest to let her breasts brush against your naked chest, then pushes herself up again and wiggles the glorious orbs in your face.";
@@ -1123,7 +1141,7 @@ to say KatyaSex7: [Katya straddles the player's face]
 			say "     Raising your head, you stick out your tongue and lap the crack of her ass, seeking out the wrinkled pucker of your orc lover. 'Oooh, someone knows how to please an orc,' comes the moaned reply and Katya spreads her legs a little bit further, lowering herself and allowing you better access. Brushing over Katya's butt-crack, you lick her dutifully, drawing pleased groans from the strong orc. Interestingly, her pucker trembles at the slightest touch, even expands a little as you press your tongue-tip in experimentally at one point. Something about her orcish physiology seems almost tailor-made for anal sex. Gleefully pushing deeper, you wiggle your tongue into the middle of the ring of her pucker and stretch it as far as it will go. Her back door readily accepts the slick invasion, giving back almost gentle squeezes around your tongue. Katya moans out loud as you start to eat her ass out enthusiastically, reacting to the sensations of having a tongue wigging against one of her pleasure spots.";
 			say "     'Fuck yeah! Deeper!' comes the urgent request of the green-skinned beauty, followed by a satisfied grunt when you comply, shoving your wriggling tongue as deep as it will go. Teasing her inner walls for a sweet little while, you drive the orc wild, panting and moaning in reaction to every twitch of your tongue. It is fun to see what you can make her say and the noises in reply to the right stimulation. Then you turn the fun up another notch and slide both hands up to her crotch, feeling around for her clit and rubbing it. This clearly pleases your lover immensely, and she relents on the 'harsh mistress' play she had going, now actually leaning forward to take care of your needs too. Her strong hands touch your [if player is male]proudly standing erection[else if player is female]wet pussy[else]sensitive crotch[end if], caressing you and making your arousal soar.";
 		WaitLineBreak;
-		say "     Eating out and fingering your lover while she returns the favor, the two rapidly barrel past any hope of holding back on the breathtaking orgasms you have building, instead pushing one another along to greater and greater heights of lust. It does not take all that much longer before you reach the finish-line together, bucking against each other hard as you orgasm. Katya squirts femcum and gives a climactic shout, with it trickling over the skin between her legs and right into your mouth, letting you taste the ambrosia that is orc (fem)cum. Meanwhile [if player is male]your cock throbs hard in her grasp, sending long spurts of cum flying to splat against Katya's breasts, as well as her chest and your own.[else if player is female]your own pussy throbs under her caresses, soaking Katya's stroking fingers.[else]you buck hard against her stroking fingers, trembling in orgasm yourself.[end if]";
+		say "     Eating out and fingering your lover while she returns the favor, the two rapidly barrel past any hope of holding back on the breathtaking orgasms you have building, instead pushing one another along to greater and greater heights of lust. It does not take all that much longer before you reach the finish-line together, bucking against each other hard as you orgasm. Katya squirts femcum and gives a climactic shout, with it trickling over the skin between her legs and right into your mouth, letting you taste the ambrosia that is orc (fem)cum. Meanwhile [if player is male]your cock throbs hard in her grasp, sending long spurts of cum flying to splat against Katya's breasts, as well as her chest and your own[else if player is female]your own pussy throbs under her caresses, soaking Katya's stroking fingers[else]you buck hard against her stroking fingers, trembling in orgasm yourself[end if].";
 		say "     By the time both of you have wound down from your respective orgasms, Katya pulls you up into a sitting position and strokes your cheek lovingly. 'That was fun!' she gushes out, a pleased gleam in her eyes. 'I'm so glad I met you, hope you know that.' With a satisfied sigh, she lies down to rest for a while afterwards, and you snuggle up against her side to do the same.";
 
 Orc Female ends here.

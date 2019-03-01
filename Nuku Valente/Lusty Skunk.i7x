@@ -6,6 +6,10 @@ Version 2 of Lusty Skunk by Nuku Valente begins here.
 
 Section 1 - The Situation
 
+Table of GameEventIDs (continued)
+Object	Name
+Lusty Skunk	"Lusty Skunk"
+
 Lusty Skunk is a situation.
 The sarea of Lusty Skunk is "Forest".
 
@@ -24,8 +28,8 @@ Skunkform is an action applying to nothing.
 To Skunkform:
 	if skunkbeaststatus is 1:
 		[puts Skunkbeast Lord as lead monster]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Skunkbeast Lord":
 				now monster is y;
 				break;
@@ -42,7 +46,7 @@ To Skunkform:
 		now scalevalue of player is 4;
 		now bodydesc of player is "tauric";
 		now bodytype of player is "[one of]mephit[or]skunk-like[or]mustelid[at random]";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 
 
 Instead of Resolving a Lusty Skunk:
@@ -99,7 +103,7 @@ to say doubleskunk:		[separated to edit and remove 'stop the action']
 			if cocks of player > 1:
 				say "Your cocks know what they want. You line them up against her and push forward, sinking one achingly hard member into the tight pucker of her ass while another slips deeply into her welcoming cunt, lubricant squirting out as you shove in, running down your [skin of player] thighs. [if cocks of player > 2]Your other [cock of player] cocks slip up along her front, rubbing against fur as they go, caressed by her warm pelt and one of her hands, straying down to tease and pull at them. [end if]You draw back, her entire body shivering in tune to your movements like a violin's strings. You can feel her body clenching, desperate for your cocks, which you give, plunging deep into her willing, wailing, form. As you start to develop a steady thumping pattern, her tail raises, brushing against your chest with every thrust. [if cocks of player > 2]Her hand teases and pulls incessantly at your exposed meat, making you tremble with extra pleasure as she works you higher and higher with skilled strokes. [end if]You can feel your [short ball size] balls tensing, ready to release, and you redouble your efforts to please this creature under you.";
 			else:
-				say "Following your increasingly strong instincts, you plunge your [cock of player] dick into her waiting passage. With a wet squelch, her honey pot overflows with her expectant fluids, gushing back against you even as you thrust as deep as you can into her tight warmth. Your hands grip into her fleshy hips, pressing against her in sharp, deep, motions, making her body quake and jiggle with every forceful meeting. She looks you in the eyes, filled with an expression between utter lust and some deep affection. Her furry legs wrap around your hips as best she can, drawing you in against her as you rut with her so eagerly, filling her with your desperate virility. Suddenly, she pushes at you, and twists. Athletically, she spins about, drawing free from your now glistening member just long enough to get into a bestial position and raise her tail.[line break] [line break]You are quick to slam home into that welcoming tunnel, reaching around to grab at her luscious breasts as your [short ball size] balls sway under you with each powerful union of your pleasured bodies, your voices rising together as climax rushes close.";
+				say "Following your increasingly strong instincts, you plunge your [cock of player] dick into her waiting passage. With a wet squelch, her honey pot overflows with her expectant fluids, gushing back against you even as you thrust as deep as you can into her tight warmth. Your hands grip into her fleshy hips, pressing against her in sharp, deep, motions, making her body quake and jiggle with every forceful meeting. She looks you in the eyes, filled with an expression between utter lust and some deep affection. Her furry legs wrap around your hips as best she can, drawing you in against her as you rut with her so eagerly, filling her with your desperate virility. Suddenly, she pushes at you, and twists. Athletically, she spins about, drawing free from your now glistening member just long enough to get into a bestial position and raise her tail.[line break][line break]You are quick to slam home into that welcoming tunnel, reaching around to grab at her luscious breasts as your [short ball size] balls sway under you with each powerful union of your pleasured bodies, your voices rising together as climax rushes close.";
 			WaitLineBreak;
 			say "Just as your muscles contract in climax, a wet warmth splatters across your front. She sprayed you! Revulsion barely registers as your body locks in climactic pleasure, filling her greedy womb with your seed even as the warmth spreads. She presses back firmly, and abruptly sharp tingles run through everywhere that your bodies meet. With a sudden spasm, you feel her try to pull away, but get drawn back. She moans whorishly as she writhes back against you. Your man meat throbs powerfully as where you end and she begins starts to become blurred, flowing into one another, cock flesh leaving nothing but bulged flesh against her. In a fit of panic, you push against her, trying to get away, but she doesn't budge, your hands coming off of her sticky. Fearing of losing them, you wrench them away even as a second climax ripples through your tingling lower body. You can feel your [short ball size] orbs clenching, filling her with seed as your forms twine and flow together. Her rump pushes back into yours, through it. Instead of pain, only an increasing, dizzying, euphoria, breath short as you change.";
 			WaitLineBreak;
@@ -114,8 +118,8 @@ to say doubleskunk:		[separated to edit and remove 'stop the action']
 				now skrp is 1;
 				add "Skunkbeast Lord" to infections of Taurlist;
 				[scale up the Skunkbeast Lord by 1]
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Skunkbeast Lord":
 						increase scale entry by 1;
 						break;
@@ -138,8 +142,8 @@ to say doubleskunk:		[separated to edit and remove 'stop the action']
 				now skrp is 1;
 				add "Skunkbeast Lord" to infections of Taurlist;
 				[scale up the Skunkbeast Lord by 1]
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Skunkbeast Lord":
 						increase scale entry by 1;
 						break;

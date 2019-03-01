@@ -2,38 +2,64 @@ Version 3 of Deer by Stripes begins here.
 [Version 3.6 - Updated code and new scenes - Defth]
 [- Originally Authored By: Nuku Valente -]
 
-"Adds a deer to Flexible Survival's Wandering Monsters table, With Impreg chance"
+[ HP of Susan                             ]
+[ 0 = not active                          ]
+[ 1 = angry - creature                    ]
+[ 3 = stag with Dr. Matt                  ]
+[ 4 = happy - NPC w/Dr. Matt              ]
+[ 50+ = NPC w/Dr. Mouse                   ]
+[ 50 = Moved, nothing new                 ]
+[- 12 turn delay from arrival -           ]
+[ 51 = Requested food/water               ]
+[ 52 = Received food/water                ]
+[- 16 turn delay & hospquest 18+ -        ]
+[ 53 = Lab coat                           ]
+[ 54 = Returned extra supplies            ]
+[ 73+ Doe-buck w/Dr. Mouse                ]
+[ 73 = Doe-buck Susan                     ]
+[ 74 = Returned extra supplies            ]
+
+
+[ libido of Susan                         ]
+[ 0 = regular form                        ]
+[ 1 = doe-buck form                       ]
+
+"Adds a deer to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Event
 
-Unusual Creature is a situation. It is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Unusual Creature	"Unusual Creature"
+
+Unusual Creature is a situation. It is inactive.
 The sarea of Unusual Creature is "Park".
 
 After resolving a Unusual Creature, try looking;
 
 Instead of resolving Unusual Creature:
-	say "     Your ears pick up a faint sound in your searchings and you approach carefully. Peeking through the bushes, you see a deer, bipedal, female if not for the thick black shaft that dangles between her legs. She is crying quietly, face buried in her palms, body curled against a tree. She doesn't react as you slip in closer, not even noticing you until you're almost on top of you. She gasps loudly when she does notice you, throwing herself back against the tree with wide eyes.";
-	say "     'Don't look at me!' she cries, falling in against herself, hugging herself to hide her alien form.";
+	say "     Wandering through the wildly overgrown park, your ears pick up a faint sound and you decide to check it out. Carefully bending aside a branch, you peer into the bushes and see a bipedal deer woman not too far away in the underbrush. She doesn't appear to be wearing clothing and has only the fur on her body to protect her from the elements, which allows you to realize that she's not quite completely female, instead having a thick black shaft dangling between her legs. The hermaphrodite is crying quietly, face buried in her palms and her body curled against a tree. She doesn't react as you slip in closer, not even noticing you until you're almost on top of her. She gasps loudly when she does notice you, throwing herself back against the tree with wide eyes.";
+	say "     'Don't look at me! I'm a monster,' the anthro deer cries out, trying futilely to cover her nonhuman form with arms and hands. Clearly, she's retained a much more human self-image than most infected in the city. Tension and stress is visible in everything from her stance to the somewhat shrill tone of her voice. You can see the muscles in her legs tremble, possibly preparing for all out flight from you.";
 	LineBreak;
-	say "What do you want to do with the deer?";
+	say "     [bold type]Quick! What do you want to do with the deer?[roman type][line break]";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Do you grab her?";
+	now title entry is "Grab her before she runs off";
 	now sortorder entry is 1;
-	now description entry is "Forcefully grab her and bring her to doctor Matt";
+	now description entry is "You were asked to bring her in by Dr. Matt and she's freaking out right now. Sometimes one has to be a little forceful with people";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Do you console her?";
+	now title entry is "Try to calm her down and console her";
 	now sortorder entry is 2;
-	now description entry is "Try to console her and help her feel better about herself before taking her to doctor Matt";
+	now description entry is "A calm voice and a smile sometimes can work wonders with desperate and distraught people. You can take her to Dr. Matt once she's more relaxed";
 	[]
 	if libido of player > 50 and player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Do you follow your instincts and fuck her?";
+		now title entry is "Jump the woman and fuck her";
 		now sortorder entry is 3;
-		now description entry is "Fuck her before taking the doe to doctor Matt. Having a little fun with her before he examines her should be no problem, right";
+		now description entry is "Dominate the doe and then take her to Doctor Matt. Having a little fun with before he examines her should be no problem, right";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -50,54 +76,47 @@ Instead of resolving Unusual Creature:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Do you grab her?"):
-					say "[Unsualgrab]";
-				if (nam is "Do you console her?"):
-					say "[Unsualconsole]";
-				if (nam is "Do you follow your instincts and fuck her?"):
-					say "[Unsualfuck]";
-				wait for any key;
+				if (nam is "Grab her before she runs off"):
+					say "[Unusualgrab]";
+				if (nam is "Try to calm her down and console her"):
+					say "[Unusualconsole]";
+				if (nam is "Jump the woman and fuck her"):
+					say "[Unusualfuck]";
 		else if calcnumber is 0:
-			say "Just tell her to follow you.";
-			if player consents:
-				now sextablerun is 1;
-				say "     Unsure what to do, you stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' she asks, making her way to her hooves. You explain that you'd like her to come with you and she looks around a moment before shrugging, 'I have nothing better to do,' she admits, and follows you, a little sullen.";
-				now battleground is "void";
-				now Unusual Creature is resolved;
-				move Susan to primary lab;
-				move player to primary lab;
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Unsure what to do, you just stand and wait. She eventually stops her crying and looks up at you with a confused expression. 'What do you want?' the anthro deer asks, shifting her weight from one hoof to the other. 'I - I'm Susan. But... aren't you horrified by this freaky body of mine? I mean, you don't seem to be one of the rape-y ones, so what's your deal hanging out with the ugly mutant?' Calmly stating that she's far from that, you smile at her and explain that there's actually someone working on understanding and fixing this whole mess. Susan looks around at the overgrown park, then up at the colossal form of a wyvern circling high in the sky. Finally she shrugs her furred shoulders. 'I really doubt that will work, but I guess I don't have anything better to do,' she muses, then nods for you to lead the way.";
+			say "[SusanLabArrival]"; [this is found in the file Main Storyline.i7x]
+			now Unusual Creature is resolved;
+			now Resolution of Unusual Creature is 1; [Told Susan to follow you]
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
+	wait for any key;
 	clear the screen and hyperlink list;
 
-to say Unsualgrab:
-	say "     You lunge for her and grab a long-limbed arm. Her brown fur is soft to the touch, warm as well. She's wrenched to her feet with a cry, and struggles, but is unable to escape your grip as you haul her back through the city directly for the lab. Sometimes the direct answer is the best one.";
-	now battleground is "void";
+to say Unusualgrab:
+	say "     With a quick lunge forward, you grab hold of one arm of the long-limbed doe. Her brown fur is soft to the touch under your fingers and pleasantly warm, creating a counterpoint to the woman's shrill squeal of terror and her trying to pull away from you. 'NoNoNoNo! Let me go!' she whimpers while struggling to escape, her whole attention on simply getting away. Not making any aggressive move even in a situation like this, you don't have too hard a time curtailing all attempts of escape and soon pin her against the tree, arms held down against her sides. She seems to resign herself to being your prisoner after another moment or two, then finally says, 'I - I give up. P-please be gentle, alright? I'm Susan.' Clearing your throat, you explain that you're not actually here for any sort of sex and instead just want to bring her to someone who's working on understanding and fixing this whole mess.";
+	say "     Susan looks left and right at the overgrown park, then up at the colossal form of a wyvern circling high in the sky. Finally she shrugs her furred shoulders. 'I really doubt that will work. Or maybe it will work, if the guy has his own goon squad.' The last sentence is said sullenly, with her gaze resting straight on yourself, prompting you to soften your grasp a little and apologizing for being a little rough. But of course, who knows what trouble she may have run into if you had let her go. This argument mollifies the anthro doe a little, until she finally says, 'Fine. Okay. Maybe you are right. I'll meet your scientist buddy.' Then she nods for you to lead the way.";
+	say "[SusanLabArrival]"; [this is found in the file Main Storyline.i7x]
 	now Unusual Creature is resolved;
-	move Susan to primary lab;
-	move player to primary lab;
+	now Resolution of Unusual Creature is 2; [Grabbed Susan]
 
-to say Unsualconsole:
-	say "     You kneel beside her and take a hand. Rubbing gently, you tell her that she's not ugly at all. She refuses your word at first, but slowly warms as you coo soft encouragements. She suddenly pulls you close and kisses firmly, her slender snout against your face for a moment. She quickly agrees to come back with you to the lab, smiling as she goes.";
+to say Unusualconsole:
+	project the Figure of Susan_face_icon;
+	say "     Raising your hands in a consoling gesture and smiling at her, you tell the anthro doe that she has nothing to fear from you and is far from being a monster. There is a slight pause in her sobbing and she looks doubtfully past her hands, really focusing on you for the first time. Slowly reaching out, you hold an open hand for her to take, which she does with some hesitation. Rubbing your thumb gently over the soft fur of her hand, you tell her that she's not ugly at all. 'B-but I'm a freak. A creature just like all of those... those feral beasts!' she sniffs. Giving her further encouraging words, she slowly warms up to you, then leans in against your chest, prompting you to put a hand on her shoulder. This must have been some sort of signal to her, as she suddenly pulls you even closer and kisses your mouth firmly, her slender snout up against your face for a long moment. 'I'm Susan,' the young woman says with a hopeful tone, for the first time daring to believe that someone could want her even as she is now.";
+	say "     As you explain that there's actually someone working on understanding and fixing this whole mess, Susan looks around at the overgrown park, then up at the colossal form of a wyvern circling high in the sky. Finally she shrugs her furred shoulders. 'I really doubt that will work, but I guess I'll come. For you. I hope it'll help,' she says quietly, then nods for you to lead the way.";
+	say "[SusanLabArrival]"; [this is found in the file Main Storyline.i7x]
 	now deerconsent is 1;
-	now battleground is "void";
 	now Unusual Creature is resolved;
-	move Susan to primary lab;
-	move player to primary lab;
+	now Resolution of Unusual Creature is 3; [Consoled Susan]
 
-to say Unsualfuck:
-	say "     Unsure what to do, you obey the urgings of your [cock of player] cock. You grab her and push her to the ground, belly up. Your hands grab at her generous breasts as you slip into her wet, grasping, cunt. She squeals, at first with surprise, then increasingly with pleasure, rising her hips to meet your powerful thrusts. Your bodies dance together, her own cock grinding against your belly each time you plunge deep into her. Her cunt tightens like a vice around you before she arches her back and bleats in delight. You can feel your balls clenching in response, and you fill her belly with hot gushes of seed.";
-	WaitLineBreak;
-	say "     Sated, she hugs tightly to you, and agrees to accompany you to the lab, blushing and satisfied looking the whole way.";
+to say Unusualfuck:
+	project the Figure of Susan_face_icon;
+	say "     Just going ahead and pulling your [cock of player] cock out, you lunge forward and grab hold of the long-limbed doe. She doesn't have time to do much more than let out a frightened squeal before she is pushed down to the ground, falling onto the leaves with her belly up. It doesn't look like there is any aggressive bone at all in her body, as she doesn't try to defend herself even in this situation, allowing you to spread her legs wide with ease. 'No, wait! I- oooohhhhHH!' she starts to say, then gasps out loud as you hammer into her wet, receptive pussy. The hermaphrodite doe feels amazing around your cock, both her nether lips as well as her furry balls stroking the sides of your shaft as it slides in and out. The shocked squeals of your first entry into her soon give way to sounds of pleasure as she adapts, raising her hips to meet your powerful thrusts before much longer. Your bodies dance together, her own cock grinding against your belly each time you plunge deep into her.";
+	say "     As the climax of a quick, wild romp on the forest floor, the doe's cunt suddenly tightens like a vice around you. With a bleat of delight, she writhes under you, hands digging grooves into the ground left and right as her cock fountains thick spurts of cum to splatter all over her chest and breasts. You can feel your balls clenching in response, with the muscle contractions of her twitching pussy driving you over the edge right along with the anthro herm. Grunting out loud, you fill her belly with hot gushes of seed while grinding against her crotch. As the pleasure of your shared orgasms eventually ebbs off, you smile down at the sexy woman you've claimed for yourself by right of breeding. 'I guess I'm your woman now. I'm Susan, by the way,' she says in a somewhat star-struck tone. Postponing any reply about that, you clear your throat and explain that you didn't originally come here just to fuck her and say that someone important wants to meet her. 'Oh, okay then. I'll come, just lead the way,' she says with a nod, and indeed does so after you pull out and guide her from the park.";
+	say "[SusanLabArrival]"; [this is found in the file Main Storyline.i7x]
 	now deerconsent is 1;
-	now battleground is "void";
 	now Unusual Creature is resolved;
-	move Susan to primary lab;
-	move player to primary lab;
-
+	now Resolution of Unusual Creature is 4; [Fucked Susan]
 
 Section 2 - NPC Basics
 
@@ -105,11 +124,16 @@ deerconsent is a number that varies.
 Susanoversize is a truth state that varies. Susanoversize is usually false.
 Susanfirsttime is a number that varies. Susanfirsttime is usually 0
 
+Table of GameCharacterIDs (continued)
+object	name
+Susan	"Susan"
+
 Susan is a person. "Susan, a bipedal deer.". The description of Susan is "[Susandesc]".
 The conversation of Susan is { "Bleat!" }.
 The fuckscene of Susan is "[sexwithSusan]".
 
 to say Susandesc:
+	project the Figure of Susan_face_icon;
 	if debugactive is 1:
 		say "DEBUG ->  HP: [HP of Susan], deerconsent: [deerconsent], Susanoversize: [if Susanoversize is true]True[else]False[end if]  <- DEBUG[line break]";
 	if HP of Susan is 52 and hospcountdown - turns >= 16 and hospquest >= 18 and lastfuck of Susan - turns < 4:
@@ -129,6 +153,7 @@ instead of sniffing Susan:
 	say "The herm deer has a mix of doe and buck scents, heavy with arousal and longing.";
 
 instead of conversing the Susan:
+	project the Figure of Susan_face_icon;
 	let doecheck be false;
 	let ec_check be false;
 	if bodyname of player is "Deer":
@@ -139,7 +164,7 @@ instead of conversing the Susan:
 	if HP of Susan < 2:
 		if deerconsent is 0:
 			say "     Rather than talk to you, she avoids you entirely. Eventually you give up in trying to approach her at all as she storms off to another part of the building.";
-			remove Susan from play;
+			now Susan is nowhere;
 			now deerconsent is 2;
 		else if deerconsent is 1:
 			say "     She smiles as you approach her, and reaches to take one of your hands. 'Ignore the creep in the hazmat,' she says. 'This is just about us. I want a mate, a partner. Will you be it?' she asks as she leans in and licks your hand once. Her eyes roam hopefully over your [bodydesc of player] form with perked ears and a twitching tail.";
@@ -158,8 +183,7 @@ instead of conversing the Susan:
 					now deerconsent is 2;
 			else:
 				say "     She looked crushed at your refusal, but instead of arguing the case further, just sulks and wanders off.";
-				move Susan to dark basement;
-				remove Susan from play;
+				now Susan is nowhere;
 				now deerconsent is 2;
 		else if deerconsent is 2:
 			say "     'You should go talk to the doctor first. I will wait for you.'";
@@ -226,9 +250,10 @@ instead of conversing the Susan:
 Section 3 - Sex with Susan
 
 to say sexwithSusan:
+	project the Figure of Susan_face_icon;
 	if lastfuck of Susan - turns < 4:
 		say "     'As fun as it is, I do need a little break every now and again, my sweet.'";
-	else if HP of doctor matt < 8:
+	else if HP of Doctor Matt < 8:
 		say "     She blushes and nudges you, 'You should talk to the Doctor first.'";
 	else if HP of Susan is 52 and hospcountdown - turns >= 16 and hospquest >= 18:
 		say "[Susanlabcoatscene]";
@@ -239,8 +264,9 @@ to say sexwithSusan:
 		say "[SusanSexMenu]";
 
 to say SusanSexMenu:
+	project the Figure of Susan_face_icon;
 	setmonster "Deer";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -317,16 +343,9 @@ to say SusanSexMenu:
 					say "[SusanSex7]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "     [bold type]Break off the conversation?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the deer making her sigh with neediness.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the deer making her sigh with neediness.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -380,7 +399,7 @@ to say SusanSex5: [Susan Sucks the player]
 	say "     Your horny lover finally lets your rod free. Looking at her to look for an answer on why she would suddenly stop, you can see only a smile and those breasts being pressed against your cock. The deer presses your cock, now fully lubed with her saliva, between her orbs. Her eyes keep staring at you amusedly as those breasts are massaging you.";
 	say "     When she is satisfied with your face, she goes back to sucking you. The feeling of both her mouth and the slick press of her breasts around your [cock of player] length get you so close to cumming that you close your eyes for a moment. Feeling some vibrations running in your cock, you know that she is amused with this	occurrence. You feel her saliva pooling between her breasts and your cock, exciting you to a point of only pleasure. The doe hungers more and more for your seed, and you intend to give it her.";
 	WaitLineBreak;
-	say "     You push her head against your groin, penetrating her throat fully. She struggles with the sudden push and invasion but is quick to get used to it. You wait no time and feed her a huge dose of your semen. Rope after long, thick rope of seed you fill her tummy with gusto. When you finally release her head she pulls back with a string of semen still connected to your penis which she cleans quickly. 'Thanks for the meal' you hear her say with a wink before you get ready for your adventures.";
+	say "     You push her head against your groin, penetrating her throat fully. She struggles with the sudden push and invasion but is quick to get used to it. You wait no time and feed her a huge dose of your semen. Rope after long, thick rope of seed you fill her tummy with gusto. When you finally release her head she pulls back with a string of semen still connected to your penis which she cleans quickly. 'Thanks for the meal,' you hear her say with a wink before you get ready for your adventures.";
 	deerfy;
 	if HP of Susan is 2:
 		now HP of Susan is 4;
@@ -389,7 +408,7 @@ to say SusanSex6: [Susan fucks Pussy]
 	say "     You kiss the little doe lips, putting your hand on that ebony cock and pulling your lover to her cot. You keep pulling the doe by her cock until you start lining it up with your pussy. [if Susanfirsttime is 0]First you feel the head of her cock, pushing your lips open, and right after she penetrates you completely without warming. You wince from the pain of the sudden invasion, but she doesn't stop. Susan keeps fucking you with eagerness and without experience. As she does so, her body suddenly shifts a little, bulking up - especially at the chest and shoulders. She transitions into a strong and sexy doe-buck that is an attractive mix of the feminine and the masculine. [end if]With ease, she slides that dark cock in your tight pussy. Now used to you and to your body, she keeps pushing while hitting all the right spots, making you almost cum time and time again. Her thrusts get faster as she lets you get more used to her new size, stretching your inner walls until her cock is all the way in and hitting the entrance of your womb.";
 	WaitLineBreak;
 	say "     Trying to hold on something to keep yourself stable you end up hugging her neck and hearing her long breaths in your ear. Now hearing her grunts and sexy noises makes you happy and connected with your deer lover. Feeling your [skin of player] skin against her fur and her now strong musk. Letting yourself get lost in her body. Feeling the doe cock slamming into you making you almost jump from her arms. Her balls heavy with a need to be emptied inside you. Now all you can do is let her do what she wants to do with you.";
-	say "     The horny deer keeps trusting into your needy pussy. You can feel her whole cock, all her veins pulsating and sending her heartbeat to your body. you feel yourself orgasming first, your mind goes blank and your body holds her closer. her balls move and compact as the climax is coming to her, your own orgasm grips the black rod that is inside you now. Begging to be bred by that delicious cock. Your pussy's calls are answered as she finally penetrates your womb filling it with her potent seed. Painting everything inside your womb her color and doing her best to make you pregnant.[impregchance]";
+	say "     The horny deer keeps trusting into your needy pussy. You can feel her whole cock, all her veins pulsating and sending her heartbeat to your body. You feel yourself orgasming first, your mind goes blank and your body holds her closer. Her balls move and compact as the climax is coming to her, your own orgasm grips the black rod that is inside you now. Begging to be bred by that delicious cock. Your pussy's calls are answered as she finally penetrates your womb filling it with her potent seed. Painting everything inside your womb her color and doing her best to make you pregnant.[impregchance]";
 	WaitLineBreak;
 	say "     When both of you come back from ecstasy you two find each other hugging and heavily breathing. She kisses you and lets you go back to your adventures.";
 	deerfy;
@@ -404,12 +423,12 @@ to say SusanSex7: [Susan fucks ass]
 to say Susanlabcoatscene:
 	let x be 1; [default = accept]
 	setmonster "Deer";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     What do you think, hon?' Susan asks, posing in the new lab coat she's wearing. It is a typical one, clean and white, though the back's been adjusted to let her puff of deer tail poke out. 'After a little incident, the doc thought it best I have something on while helping him. Lab chemicals can be dangerous.'";
 	say "     She moves in closer to you, rubbing her body against yours. 'I was hoping you'd come by to play. I've been feeling pretty randy,' she whispers throatily in your ear. She grinds the hard bulge of her covered erection against your [if scalevalue of player < 3]side[else if scalevalue of player > 3]thigh[else]hip[end if]. 'Come on. Let's have some fun,' she says, pulling you off to her bunk in the corner. Dr Mouse notices this, but quietly smiles and says nothing.";
-	say "     Susan gives you a powerful kiss, tongue diving into your mouth as her hands run over you with aggressive need. They slip off your gear, stripping you down before pushing you back onto her cot. Opening her new coat, she reveals that hard black cock you felt earlier. You're unsure, but it seems larger than before, though that may simply be that you've never seen it this full and hard before either. She moves between your legs and aims that pulsing rod at you; it seems your timid doe's ready to be the buck instead. ";
+	say "     Susan gives you a powerful kiss, tongue diving into your mouth as her hands run over you with aggressive need. They slip off your gear, stripping you down before pushing you back onto her cot. Opening her new coat, she reveals that hard black cock you felt earlier. You're unsure, but it seems larger than before, though that may simply be that you've never seen it this full and hard before either. She moves between your legs and aims that pulsing rod at you; it seems your timid doe's ready to be the buck instead.";
 	if player is male:
-		say "     ";
+		LineBreak;
 		say "     [bold type]Shall you let her take you or shall you take your rightful place as the buck in this relationship?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let her take you.";
@@ -458,18 +477,18 @@ to say Susanlabcoatscene:
 
 Section 4 - Monster Table Data
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Deer"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "Susan";
 	now enemy type entry is 1; [unique enemy]
 	now attack entry is "[if level of player > 5][one of]One of her helpers grabs you from behind as she lands a solid punch in your gut.[or]Just as you dodge past one of her strikes, you feel soft hands pawing at your groin, one of her helpers manhandling you with eager roughness.[or]To the cheer of her herd, she headbutts you, sharp antlers stinging powerfully where they strike.[at random][else][one of]She mashes you against the ground, heavy breasts pressed to you.[or]Her thick cock slaps against you as she roughly shoves at you.[or]Thick horns prove to be quite sharp as they poke you.[or]A sudden kick lands in your midsection as she lands a hoof on you.[at random][end if]";
-	now defeated entry is "[if level of player > 5]Her allies array in front of her suddenly, guarding her as they all start to back away. The fight seems to be over, for now.[else]She gives a loud bleat of pain and scowls at you before she takes flight. Her graceful body carries her long and fast away.[end if]";
+	now defeated entry is "[if level of player > 5]Her allies array in front of her suddenly, guarding her as they all start to back away. The fight seems to be over, for now[else]She gives a loud bleat of pain and scowls at you before she takes flight. Her graceful body carries her long and fast away[end if].";
 	now victory entry is "[deer attack]";
 	now desc entry is "[mongendernum 5]     A bipedal deer with soft brown fur and creamy off-white belly and undertail. Her nose, eartips and hands are dark hues. Atop her head is a large rack of antlers, proud and powerful. She has large cream covered breasts capped with thick black teats. She has a hungry, lustful look in her eyes, one hand usually straying to her cock, stroking it almost absentmindedly. It is disturbingly human in appearance, ebon-black fleshed with a cream sheath at the base. She has large, plum-sized balls contained in a creamy colored, softly furred sac. Despite her animalistic appearances, she has hair like a human, running down to a little past her shoulders, a little darker than the brown fur of the majority of her form.[if level of player > 5] [doestats][end if]"; [ Description of the creature when you encounter it.]
 	now face entry is "that of a furry, [if Susan is in primary lab or Susan is in Hidden Lab]feminine[else]antlered[end if], head of an enchanting stag-doe. Your eyes burn with a smoldering lust as they look about from the end of your muzzled face";
@@ -511,17 +530,18 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 To say doestats:
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Deer":
 			now monster is y;
 			break;
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	now lev entry is level of player minus 1;
 	if lev entry < 15:
 		now dex entry is lev entry + 6; [quick dex and HP growth early on]
@@ -538,30 +558,27 @@ To say doestats:
 Section 5 - Monster Victory
 
 to say deer attack:
-	say "She approaches your fallen form with a smile on her cervine face. 'Little doe, this is where you belong, as part of my herd. You had your chance to be the stag,' she says, tongue rolling across her snout as she reaches to rub over your [skin of player] [breast size desc of player] chest.";
+	say "     She approaches your fallen form with a smile on her cervine face. 'Little doe, this is where you belong, as part of my herd. You had your chance to be the stag,' she says, tongue rolling across her snout as she reaches to rub over your [skin of player] [breast size desc of player] chest.";
 	WaitLineBreak;
 	if player is female:
-		say "Wrestling your hips up into position, she pinches your bottom with her hard fingertips, 'Naughty doe, playing so hard to get. See what you're missing.' She sinks into you with a wet squelch, your mutinous body already warm and set for her arrival as she sinks deeply into your grasping cunt, thick plug snugly held within you a moment before she draws back. Her motions are sharp and powerful, thick balls slapping up against your ass with each movement.";
-		if breasts of player > 0:
-			say "Her hands wrap around you and she softly teases at your nipples, flicking and pinching at them as she rocks against you. As she adjusts her angle of entry, she makes to grab at your [breast size desc of player] breasts, massaging into the sensitive flesh eagerly, kneading at you as her groin grinds up against your ass, pushing that black cock as deep as it can go.";
-		say "With a triumphant bleat, she unleashes into your waiting cunt, powerful squirts of virile seed splashing into your belly.[impregchance] You groan with unasked for pleasure, body trembling as climax overtakes you. You clench powerfully around her tool, coating it with your own arousal. [if player is male]Your [cock size desc of player] dick lurches, then begins to spray against the ground as it abruptly reaches peak as well, emptying your [short ball size] balls in waves of bliss. [end if]You slump to the ground and the deer slips off of you, stroking herself a few last times as she eyes you hungrily. 'Later!' she says, turning to leave.";
+		say "     Wrestling your hips up into position, she pinches your bottom with her hard fingertips. 'Naughty doe, playing so hard to get. See what you're missing.' She sinks into you with a wet squelch, your mutinous body already warm and set for her arrival as she sinks deeply into your grasping cunt, thick plug snugly held within you a moment before she draws back. Her motions are sharp and powerful, thick balls slapping up against your ass with each movement.";
+		if breasts of player > 0 and breast size of player > 0:
+			say "     Her hands wrap around you and she softly teases at your nipples, flicking and pinching at them as she rocks against you. As she adjusts her angle of entry, she makes to grab at your [breast size desc of player] breasts, massaging into the sensitive flesh eagerly, kneading at you as her groin grinds up against your ass, pushing that black cock as deep as it can go.";
+		say "     With a triumphant bleat, she unleashes into your waiting cunt, powerful squirts of virile seed splashing into your belly. You groan with unasked for pleasure, body trembling as climax overtakes you. You clench powerfully around her tool, coating it with your own arousal. [if player is male]Your [cock size desc of player] dick lurches, then begins to spray against the ground as it abruptly reaches peak as well, emptying your [short ball size] balls in waves of bliss. [end if]You slump to the ground and the deer slips off of you, stroking herself a few last times as she eyes you hungrily. 'Later!' she says, turning to leave.[impregchance]";
 	else:
-		say "She scowls, 'You are missing something, doe.' She reaches between your legs, rubbing slowly, the soft fur tickling delightfully at sensitive flesh as she caresses you. Warm tingles of nanite change creep through you.";
+		say "     She scowls. 'You are missing something, doe.' She reaches between your legs, rubbing slowly, the soft fur tickling delightfully at sensitive flesh as she caresses you. Warm tingles of nanite change creep through you.";
 		follow the sex change rule;
 		if player is female:
-			say "Wrestling your hips up into position, she pinches your bottom with her hard fingertips, 'Naughty doe, playing so hard to get. See what you're missing.' She sinks into you with a wet squelch, your mutinous body already warm and set for her arrival as she sinks deeply into your grasping cunt, thick plug snugly held within you a moment before she draws back. Her motions are sharp and powerful, thick balls slapping up against your ass with each movement.";
-			if breasts of player > 0:
-				say "Her hands wrap around you and she softly teases at your nipples, flicking and pinching at them as she rocks against you. As she adjusts her angle of entry, she makes to grab at your [breast size desc of player] breasts, massaging into the sensitive flesh eagerly, kneading at you as her groin grinds up against your ass, pushing that black cock as deep as it can go.";
-			say "With a triumphant bleat, she unleashes into your waiting cunt, powerful squirts of virile seed splashing into your belly.[impregchance] You groan with unasked for pleasure, body trembling as climax overtakes you. You clench powerfully around her tool, coating it with your own honies. [if player is male]Your [cock size desc of player] dick lurches, then begins to spray against the ground as it abruptly reaches peak as well, emptying your [short ball size] balls in waves of bliss. [end if]You slump to the ground and the deer slips off of you, stroking herself a few last times as she eyes you hungrily. 'Later!' she says, turning to leave.";
+			say "     Wrestling your hips up into position, she pinches your bottom with her hard fingertips. 'Naughty doe, playing so hard to get. See what you're missing.' She sinks into you with a wet squelch, your mutinous body already warm and set for her arrival as she sinks deeply into your grasping cunt, thick plug snugly held within you a moment before she draws back. Her motions are sharp and powerful, thick balls slapping up against your ass with each movement.";
+			if breasts of player > 0 and breast size of player > 0:
+				say "     Her hands wrap around you and she softly teases at your nipples, flicking and pinching at them as she rocks against you. As she adjusts her angle of entry, she makes to grab at your [breast size desc of player] breasts, massaging into the sensitive flesh eagerly, kneading at you as her groin grinds up against your ass, pushing that black cock as deep as it can go.";
+			say "     With a triumphant bleat, she unleashes into your waiting cunt, powerful squirts of virile seed splashing into your belly. You groan with unasked for pleasure, body trembling as climax overtakes you. You clench powerfully around her tool, coating it with your own honeys. [if player is male]Your [cock size desc of player] dick lurches, then begins to spray against the ground as it abruptly reaches peak as well, emptying your [short ball size] balls in waves of bliss. [end if]You slump to the ground and the deer slips off of you, stroking herself a few last times as she eyes you hungrily. 'Later!' she says, turning to leave.[impregchance]";
 		else:
-			say "She grunts in frustration, 'You refuse to be a proper doe for me,' she complains darkly before rolling you onto your belly, 'No matter, even a man can be made a doe,' she says with a disturbing smile as she hikes your ass up and aligns her heavy block cock to you. She roughly mounts, plunging the thick plug of a member into your poor ass, showing her dominance with her punishing motions. Her hands show her softer side, caressing your front in slow circular rubs, promise of a better future, if you can get past the searing pain and humiliation you are suffering.";
+			say "     She grunts in frustration. 'You refuse to be a proper doe for me,' she complains darkly before rolling you onto your belly. 'No matter, even a man can be made a doe,' she says with a disturbing smile as she hikes your ass up and aligns her heavy black cock to you. She roughly mounts, plunging the thick plug of a member into your poor ass, showing her dominance with her punishing motions. Her hands show her softer side, caressing your front in slow, circular motions, promise of a better future if you can get past the searing pain and humiliation you are suffering.";
 			if player is male:
-				say "Her soft palm brushes against your [cock of player] member, starting to stroke it in time with her deep pushes into your body. Possible despite yourself, pleasure builds in your loins and spreads through you. You want to release so badly all of a sudden, [cock size desc of player] pole throbbing needfully as she strokes it faster and faster.";
+				say "     Her soft palm brushes against your [cock of player] member, starting to stroke it in time with her deep pushes into your body. Possibly despite yourself, pleasure builds in your loins and spreads through you. You want to release so badly all of a sudden, [cock size desc of player] pole throbbing needfully as she strokes it faster and faster.";
 			WaitLineBreak;
-			say "She pulls you back suddenly, body rigid as heat begins to spread inside of you from her twitching member.[mimpregchance]";
-			if player is male:
-				say "Your [short ball size] balls lurch and you spray into the air, coaxed on by gentle squeezes of her hand, milking you even as she fills you with her thick seed.";
-			say "Her tongue licks over an ear, 'Good doe. You will be welcome in the herd when you learn your place,' she whispers as she draws free and leaves you, bruised but sated. As she goes, you see her scratching lightly at her heavy balls, scheming lustfully of her next conquest.";
+			say "     She pulls you back suddenly, body rigid as heat begins to spread inside of you from her twitching member. [if player is male]Your [short ball size] balls lurch and you spray into the air, coaxed on by gentle squeezes of her hand, milking you even as she fills you with her thick seed. [end if]Her tongue licks over an ear. 'Good doe. You will be welcome in the herd when you learn your place,' she whispers as she draws free and leaves you, bruised but sated. As she goes, you see her scratching lightly at her heavy balls, scheming lustfully of her next conquest.[mimpregchance]";
 
 
 Section 6 - Additional Mechanics
@@ -635,47 +652,20 @@ when play ends:
 			if Susan is in primary lab:
 				say "     Susan happily joins you when you move north, sharing your home. At first, she merely tolerates your collection of holiday kitsch. But she loves you deeply all the same, and you her. ";
 				if player is not male and "Sterile" is not listed in feats of player:
-					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight. Every year, come Christmas Day, you give birth to a new fawn";
+					say "She's a reluctant buck at first, but is soon rutting you every night, much to your delight. Every year, come Christmas Day, you give birth to a new fawn.";
 				else if player is not male:
-					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight.";
+					say "She's a reluctant buck at first, but is soon rutting you every night, much to your delight.";
 				else:
-					say "     You rut her often and she ends up giving you a new fawn every year for Christmas.";
+					say "You rut her often and she ends up giving you a new fawn every year for Christmas.";
 				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the egg nog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if player is male] while you rut her from behind[end if].";
 			if Susan is in Hidden Lab:
 				say "     Susan happily joins you when you move north, sharing your home. Dr Mouse is a little upset about losing his assistant, but you find him a bit grinchy and always keep your dealings with him brief. At first, she merely tolerates your collection of holiday kitsch. But she loves you deeply all the same, and you her. ";
 				if player is not male and "Sterile" is not listed in feats of player:
-					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight. Every year, come Christmas day, you give birth to a new fawn";
+					say "She's a reluctant buck at first, but is soon rutting you every night, much to your delight. Every year, come Christmas day, you give birth to a new fawn.";
 				else if player is not male:
-					say "     She's a reluctant buck at first, but is soon rutting you every night, much to your delight.";
+					say "She's a reluctant buck at first, but is soon rutting you every night, much to your delight.";
 				else:
-					say "     You rut her often and she ends up giving you a new fawn every year for Christmas.";
+					say "You rut her often and she ends up giving you a new fawn every year for Christmas.";
 				say "     As the holiday season starts to come around, she begins to get more and more into the spirit of things, helping you decorate and even adding to your collection. Subtly at first, but more quickly as that special day gets nearer and nearer, she grows more beautiful and caribou-like. Soon enough, she's helping you 'make' the egg nog for the office Christmas party with a sexy Mrs. Claus outfit on her fully reindeer body[if player is male] while you rut her from behind[end if].";
-
-Section X - Notes
-
-[ HP of Susan ]
-[ 0 = not active ]
-[ 1 = angry - creature ]
-[ 3 = stag with Dr. Matt ]
-[ 4 = happy - NPC w/Dr. Matt ]
-[ 50+ = NPC w/Dr. Mouse ]
-[ 50 = Moved, nothing new ]
-[-- 12 turn delay from arrival --]
-[ 51 = Requested food/water ]
-[ 52 = Received food/water ]
-[-- 16 turn delay & hospquest 18+ --]
-[ 53 = Lab coat ]
-[ 54 = Returned extra supplies ]
-[ 73+ Doe-buck w/Dr. Mouse ]
-[ 73 = Doe-buck Susan ]
-[ 74 = Returned extra supplies ]
-
-
-[ libido of Susan ]
-[ 0 = regular form ]
-[ 1 = doe-buck form ]
-
-
-
 
 Deer ends here.

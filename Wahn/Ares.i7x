@@ -1,7 +1,7 @@
 Version 1 of Ares by Wahn begins here.
 [Version 1 - Ares moved to his own file]
 
-"Adds a human dog with sexy scenes Flexible Survival, With Impreg chance"
+"Adds a human dog with sexy scenes Flexible Survival, with impreg chance"
 
 Section 1 - Dog-Walking Event
 
@@ -16,7 +16,32 @@ Section 1 - Dog-Walking Event
 
 Chapter 1 - Ares Basics
 
+Table of GameCharacterIDs (continued)
+object	name
+Ares	"Ares"
+
 Ares is a man. HP of Ares is usually 0.
+ScaleValue of Ares is 3. [human sized]
+Cocks of Ares is 1.
+Cock Length of Ares is 9.
+Cock Width of Ares is 2.
+Testes of Ares is 2.
+Cunts of Ares is 0.
+Cunt Length of Ares is 9.
+Cunt Width of Ares is 2.
+Breasts of Ares is 2. [2 nipples]
+Breast Size of Ares is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Ares is false.
+PlayerRomanced of Ares is false.
+PlayerFriended of Ares is false.
+PlayerControlled of Ares is false.
+PlayerFucked of Ares is false.
+OralVirgin of Ares is false.
+Virgin of Ares is true.
+AnalVirgin of Ares is true.
+PenileVirgin of Ares is false.
+SexuallyExperienced of Ares is true.
 The description of Ares is "[AresDesc]".
 The conversation of Ares is { "Woof." }.
 AresDannyEncounters is a number that varies.
@@ -106,19 +131,12 @@ to say AresWalkMenu:
 					say "[AresWalk_Park]";
 				if (nam is "To the mall"):
 					say "[AresWalk_Mall]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
-			say "[bold type]Break off the conversation?[roman type][line break]";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				say "     Changing your mind, you turn around right away and go back to Mike, telling him that something urgent came up. Quickly handing over the leash, you leave the surprised stag and a very disappointed human dog behind, then make your way back to the library.";
-				move player to Grey Abbey Library;
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     Changing your mind, you turn around right away and go back to Mike, telling him that something urgent came up. Quickly handing over the leash, you leave the surprised stag and a very disappointed human dog behind, then make your way back to the library.";
+			move player to Grey Abbey Library;
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -145,7 +163,7 @@ to say AresWalk_Park:
 
 to say AresParkMounting:
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of Ares < 3: [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around on you, proving that this was just what he planned - by mounting you from the back and starting to hump against you. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, though obviously the concept of clothing being in the way did escape Ares.";
 		LineBreak;
@@ -228,7 +246,7 @@ to say AresHelenWalk:
 
 to say AresHelenParkMounting:
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of Ares < 3: [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Helen from behind, his hard cock easily finding her pussy in the typical 'doggie style' position. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young woman under him.";
 		LineBreak;
@@ -280,7 +298,7 @@ to say AresHelenParkMounting:
 
 to say AresHelenParkFuck:
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     [if player is male]Seeing Ares thrust into Helen's welcoming pussy has your own cock hard as a rock. [else if player is female]Seeing Ares thrust into Helen's welcoming pussy has your own sex swollen and dripping wet. [else]Seeing Ares thrust into Helen's welcoming pussy has you all tingly inside. [end if][bold type]Thoughts of joining in for some fun rise to the forefront of your mind. Do you do so?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
@@ -412,7 +430,7 @@ to say AresXerxesWalk:
 
 to say AresXerxesParkMounting:
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of Ares < 3: [no sex before]
 		say "     His business there done, your charge now wants to tour through the park, pulling you along at the end of the leash and leading the way along a winding pathway. As you go along, you find yourself walking on a thick rustling layer of dry leaves around one of the trees next to the path - at which point Ares gives an especially strong tug on the leash, making you slip and fall on the thankfully cushioned ground. Before you can do anything or even start getting up again, he then circles around you and uses your distraction to quickly mount Xerxes from behind, his hard cock easily finding Xerxes['] asshole and penetrating it. The thought 'pretty cunning for a dog' shoots through your head seemingly out of nowhere, and by the time you're on your feet again, Ares is already pretty busy thrusting balls deep into the moaning young man under him.";
 		LineBreak;
@@ -464,7 +482,7 @@ to say AresXerxesParkMounting:
 
 to say AresXerxesParkFuck:
 	setmonster "Human";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     [if player is male]Seeing Ares thrust into Xerxes['] welcoming hole has your own cock hard as a rock. [else if player is female]Seeing Ares thrust into Xerxes['] welcoming hole has your own sex swollen and dripping wet. [else]Seeing Ares thrust into Xerxes['] welcoming hole has you all tingly inside. [end if][bold type]Thoughts of joining in for some fun rise to the forefront of your mind. Do you do so?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
@@ -584,7 +602,7 @@ to say AresWalk_Mall:
 					say "     ([link]N[as]n[end link]) - No.";
 					if player consents: [get Danny involved]
 						LineBreak;
-						say "     Calling out to Danny, you have to repeat yourself as he is too entranced to really register the first shout, only focusing on your face a few seconds later. The slender rodent's eyes go wide as you tell him that he doesn't have to just film, seeing as Ares has another hole he could use. Horny as he is, there isn't really any hesitation before Danny undoes his belt and lets his pants drop, quickly followed by his coat and t-shirt, leaving him standing naked before you. As a teenage mall-rat he has quite an slender build, with a long tail starting at his tailbone - and an impressive rod of man-meat at the front. Pink in color and standing proudly erect, his cock seems eager to get into action and Danny readily follows where his urges lead him. With a low scritch of his nails on the floor, he hurries forward, stepping up close to Ares front end and is happily received by the human dog. Giving a pleased yip, Ares licks at Danny's crotch, then catches his swinging erection with his lips and goes down on the young man.";
+						say "     Calling out to Danny, you have to repeat yourself as he is too entranced to really register the first shout, only focusing on your face a few seconds later. The slender rodent's eyes go wide as you tell him that he doesn't have to just film, seeing as Ares has another hole he could use. Horny as he is, there isn't really any hesitation before Danny undoes his belt and lets his pants drop, quickly followed by his coat and t-shirt, leaving him standing naked before you. As a teenage mall-rat he has quite a slender build, with a long tail starting at his tailbone - and an impressive rod of man-meat at the front. Pink in color and standing proudly erect, his cock seems eager to get into action and Danny readily follows where his urges lead him. With a low scritch of his nails on the floor, he hurries forward, stepping up close to Ares front end and is happily received by the human dog. Giving a pleased yip, Ares licks at Danny's crotch, then catches his swinging erection with his lips and goes down on the young man.";
 						say "     Seeing the blissful expression on Danny's face, you pose the playful question of how he likes Ares. There isn't really a verbal response, but the panting rodent does look up and give you a very broad grin accompanied by a lewd moan. Well, if that's not a happy verdict, what is? The two of you spit-roast Ares ecstatically in the side corridor, not even bothering to try and keep the noise down, so it's not much of a surprise when another mall rat or two come into the semi-public hideaway, eager to watch. Excited murmuring starts up between them and several other mall-rats that come along soon after, and you hear some comments about wanting to ask Danny for a copy of the video later. A female mall-dweller notes in a giggling tone, 'But we'll have to do something about the angle right now - it is too static with Danny holding the mobile while he stands still.' She light-footedly paws her way over to the three of you, then plucks the smartphone out of Danny's unresisting hands and takes over as camera-woman.";
 						WaitLineBreak;
 						say "     Now having acquired an audience, the coupling between Ares, Danny and yourself gets more and more intense as the three of you are cheered on by the spectators, making your shared lust take off like a wildfire. It sounds like the sight of this little threesome is an instant hit if the way the mall inhabitants gleefully watch and call out to their friends to join the 'free sex show' is anything to go off of. It doesn't take much longer in such a sexually charged atmosphere before the arousal builds to an explosive climax, with Danny being the first to give in to his need. Grasping Ares's shoulders tightly, the teen moans in lewd intensity and starts blasting a creamy load all over Ares tongue, to be eagerly swallowed by the truly exceptional pet you borrowed. Happy at getting such a tasty treat, Ares follows suit no more than a few heartbeats later, grunting in lust as he reaches his high. A pleasant shudder runs through his whole body as the human dog's balls start to twitch rhythmically, sending forth burst after burst of rich cum to splatter the floor of the mall corridor. With Ares's inner muscles squeezing your [cock of player] cock with every shot, you aren't far behind yourself. In mere moments, you begin filling your loaned pet with your seed.";
@@ -698,6 +716,10 @@ to say DannyFucksAresRepeat:
 
 
 Chapter 3 - Pet Ares
+
+Table of GameCharacterIDs (continued)
+object	name
+human dog	"human dog"
 
 human dog is a pet. human dog is a part of the player.
 understand "ares" as human dog.

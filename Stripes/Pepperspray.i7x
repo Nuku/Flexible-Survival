@@ -32,7 +32,7 @@ title	subtable	description	toggle
 this is the peppersprayflee rule:
 	[Perform an attempt to flee from the weakened enemy]
 	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "Using the pepperspray to briefly disable the [name entry], you make your escape attempt.";
 	increase plfleebonus by 3;
 	decrease mondodgebonus by 5;
@@ -50,7 +50,7 @@ this is the peppersprayflee rule:
 this is the peppersprayattack rule:
 	[Perform enhanced double-attack with creature penalized by 5!]
 	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "You spray the creature with your pepperspray, then quickly press your advantage as it disables them briefly. You attack twice while they have difficulty defending themselves.[line break]";
 	say "[pepperspraydrain]";
 	decrease mondodgebonus by 5;
@@ -83,7 +83,7 @@ this is the peppersprayattack rule:
 [
 	[Perform an attempt to flee at +4 from the weakened enemy & +5 to dodge (if needed)]
 	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let the attack bonus be (( the dexterity of the player plus the intelligence of the player minus 12 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 	let the combat bonus be attack bonus minus defense bonus;
@@ -109,7 +109,7 @@ this is the peppersprayattack rule:
 this is the peppersprayattack rule:
 	[Perform enhanced double-attack +3 to hit & dodge!]
 	now battleitem is 1; [combat item chosen - retaliate to be handled internally]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "You spray the creature with your pepperspray, then quickly press your advantage as it disables them briefly. You attack twice while they have difficulty defending themselves.[line break]";
 	say "[pepperspraydrain]";
 	say "[enhancedattack]";
@@ -127,7 +127,7 @@ this is the peppersprayattack rule:
 
 
 to say enhancedattack:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	[Improves players attack chance by 3 for these attack actions]
 	let the attack bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player;
 	let the defense bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
@@ -151,21 +151,21 @@ to say enhancedattack:
 			if "Black Belt" is listed in feats of player:
 				now dam is ( dam times a random number from 105 to 125 ) divided by 100;
 			if "Natural Armaments" is listed in feats of player and bodyname of player is not "Human":
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is bodyname of player:
 						now z is y;
 						break;
-				choose row z in table of random critters;
+				choose row z in Table of Random Critters;
 				if z is 0:		[creature not listed - give a low default boost]
 					increase dam by a random number between 0 and 2;
 				else:
-					choose row z in table of random critters;
+					choose row z in Table of Random Critters;
 					let dammy be 2;
 					if wdam entry > 3:					[nerfed for very high damage critters]
 						now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
 					increase dam by a random number between 1 and dammy;
-				choose row monster from table of random critters;
+				choose row monster from Table of Random Critters;
 		if "Weaponsmaster" is listed in feats of player and weapon object of player is not journal:	[Weaponsmaster and armed]
 			now wmstrike is 1;
 			let numnum be level of player + ( (intelligence of player - 10 ) / 2 ) + 105;
@@ -194,18 +194,18 @@ to say enhancedattack:
 		if a random chance of 5 in 20 succeeds and "Tail Strike" is listed in feats of player:		[+5% of tail attack w/pepperspray]
 			if tailname of player is listed in infections of Tailweapon:
 				let z be 0;
-				repeat with y running from 1 to number of rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is tailname of player:
 						now z is y;
 						break;
-				choose row z in table of random critters;
+				choose row z in Table of Random Critters;
 				let dammy be 2;
 				if wdam entry > 3:					[nerfed for very high damage critters]
 					now dammy is ( square root of ( wdam entry - 1 ) ) + 2;
 				say "[line break]You make an additional attack using your [tailname of player] tail's natural abilities for [special-style-2][dammy][roman type] damage!";
 				increase dam by dammy;
-				choose row monster from table of random critters;
+				choose row monster from Table of Random Critters;
 		if a random chance of 5 in 20 succeeds and "Cock Slap" is listed in feats of player and cock length of player >= 12:
 			follow the cock descr rule;
 			let dammy be 0;
@@ -284,7 +284,7 @@ to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Co
 	if avoidance is 1:
 		say "";
 	else:
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		let the defense bonus be (( the dexterity of the player minus 4 ) divided by 2) plus level of the player; [+3 greater chance to dodge]
 		let the attack bonus be (( the dex entry minus 10 ) divided by 2) plus lev entry;
 		let the combat bonus be attack bonus minus defense bonus;
@@ -316,7 +316,7 @@ to say weakretaliate:			[no longer used, incorporated into standardhit in Alt Co
 	rule succeeds;
 
 to say enhancedavoidance:		[no longer used, incorporated into avoidance in Alt Combat]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if "Dazzle" is listed in feats of player and a random chance of 2 in 20 succeeds:
 		say "You bring forth a dazzling pattern of lights, momentarily entrancing your enemy and causing their attack to falter.";
 		say "[Name Entry] misses!";

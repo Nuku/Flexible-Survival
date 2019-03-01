@@ -49,13 +49,13 @@ to say Donkeywoman wins:
 
 
 To say Donkeywoman loses:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	increase donkeywomanbeaten by 1;
 	if ( cocks of player is 0 ) or ( nodonkeywomansex > 2 and the remainder after dividing nodonkeywomansex by 5 is not 0 ) or ( donkeywomanbeaten < 3 ):
 		say "     The powerful-looking mistress seems somewhat less sure of herself as you drive her back[if donkeywomanbeaten > 1] again[end if] with your blows. 'I think you might just be a bit too stubborn for me to train right now,' she says with a sigh as she back off down the passageway carefully. 'Though you certainly would make a good jenny from the looks of things. Don't worry though, I'm sure we will bump into each other again soon, and then I can give you that lesson I promised,' she adds with a smirk as she vanishes down the dimly lit corridors, leaving you standing victorious in the middle of the hallway.";
 		if player is male and donkeywomanbeaten > 2, increase nodonkeywomansex by 1;
 	else:
-		say "     Having been beaten, the powerful-looking mistress seems somewhat less sure of herself as you drive her back with your blows. She starts to complain about your stubbornness as the others have, but you're tired of hearing it from these creatures. Grabbing her, you toss her to the floor roughly. Seeing the donkey female like that is strangely exciting and you're tempted to try teaching her a hard lesson with your hard cock. Shall you give into this urge and fuck her?";
+		say "     Having been beaten, the powerful-looking mistress seems somewhat less sure of herself as you drive her back with your blows. She starts to complain about your stubbornness as the others have, but you're tired of hearing it from these creatures. Grabbing her, you toss her to the floor roughly. Seeing the donkey female like that is strangely exciting and you're tempted to try teaching her a hard lesson with your hard cock. Shall you give in to this urge and fuck her?";
 		if player consents:
 			say "     Grabbing the dominant donkeywoman roughly, you pin her to the ground and climb atop her. She struggles and spits in your face, but you've had more than enough of her attitude. Unzipping her leather corset from the bottom, you uncover the dark folds of her pussy and brush a finger teasingly across them. She bites her lip, holding back a whimper even though her hips rock up to press against your touch.";
 			say "     Rolling the jenny onto her side, you hold one of her legs over your should while pushing your [cock size desc of player] cock into her juicy cunt. This time she does moan, which brings an even bigger grin to your face. Seeing little reason to restrain yourself against the aggressive and domineering donkey, you start thrusting right away rather than giving her [if cock length of player > 24]a much needed[else]an[end if] opportunity to adjust to having your [cock of player] shaft thrusting into her juicy cunt.";
@@ -71,18 +71,18 @@ To say Donkeywoman loses:
 			now nodonkeywomansex is 0;
 			increase donkeywomanfucked by 1;
 		else:
-			say "     Rather than give into the temptation, you give the donkeywoman a rough shove with your heel even as she tries to rise. She bites back a whimper and forces herself to her feet defiantly. 'You would make for a fine jenny. Clearly you're in no mood for that lesson right now. But don't worry, I'll try again when you're in a less obstinate mood, my recalcitrant plaything.' With that, she staggers off down the dimly lit corridor, doing her best to maintain her authoritative poise despite her defeat.";
+			say "     Rather than give in to the temptation, you give the donkeywoman a rough shove with your heel even as she tries to rise. She bites back a whimper and forces herself to her feet defiantly. 'You would make for a fine jenny. Clearly you're in no mood for that lesson right now. But don't worry, I'll try again when you're in a less obstinate mood, my recalcitrant plaything.' With that, she staggers off down the dimly lit corridor, doing her best to maintain her authoritative poise despite her defeat.";
 			increase nodonkeywomansex by 1;
 
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Donkeywoman";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -130,8 +130,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 when play ends:

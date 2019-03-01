@@ -2,7 +2,7 @@ Version 11 of Small Feline and Lion by Damaged begins here.
 [ Version 11.1 - Matronly Lioness content]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
 
-"Adds a Small Feline and Lion to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Small Feline and Lion to Flexible Survival's Wandering Monsters table, with impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -16,7 +16,7 @@ Feline_encountered is a number that varies.
 
 
 to say feline desc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if Feline_type is 3:			[forced hunting pride fight]
 		setmongender 14; [creatures are female]
@@ -140,7 +140,7 @@ to say huntpride att:
 	say "[one of]The small felines launch an attack, clawing and biting at you![or]The diminutive lionesses attack you in a mix of clawing, grabbing and groping![or]The girly lionesses grope you with their feline hands![or]One of the kitty girls grabs onto you and rubs her body sensually against yours![or]The hunting pride tries to tackle you to the ground so they can lick and pet you into submission![at random]";
 
 to say cat def:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let z be 0;
 	if libido of player >= 40:
 		if player is male:
@@ -206,7 +206,7 @@ to say finallion def:
 	say "     You are victorious is your hard-fought battle against this would-be usurper. You growl triumphantly as you give him a final kick, sending him tumbling down the hill.";
 
 to say cat vict:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	increase Feline_meow by 1;
 	if Feline_attached is 1:
 		say "     The small, curvy feline approaches you and mewls imploringly. As you kneel down, the previous feline comes over, mewling as well, but is kicked away as the new one climbs up onto you, taking her place on your chest. She leans in and begins to eagerly suckle at your chest, leaving the ousted feline to go off in search of a new surrogate";
@@ -252,7 +252,7 @@ to say finallion vict:
 
 
 to say feline cleanup: [post-battle reset of stats to catgirl values]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if hardmode is true and level of player > 3, let debit be level of player - 3;
 	if hardmode is false and Feline_type is 2 and monsterHP <= 0, increase XP of player by 22; [XP difference for beating the male]
@@ -271,13 +271,13 @@ to say feline cleanup: [post-battle reset of stats to catgirl values]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Feline"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -325,9 +325,9 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "park_feline"; [ Row used to designate any special combat features, "default" for standard combat. ]
-
+	now BannedStatus entry is false;
 
 Section 3 - Alt Combat
 
@@ -337,7 +337,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 this is the leoninelust rule:		[continuous lustful weakening of player]
 	if Feline_type is 2 or Feline_type is 4:		[lion man only]
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		let dam be ( Feline_meow * ( lev entry + ( a random number from 60 to ( 90 + lev entry ) ) ) ) divided by 100; [damage based on built-up feline urges]
 		if HP of Leonard >= 7 and HP of Leonard <= 13:
 			now dam is ( dam * 2 ) / 3;
@@ -356,7 +356,7 @@ this is the leoninelust rule:		[continuous lustful weakening of player]
 				decrease libido of player by a random number between 0 and 1;
 			say "     [one of]Something inside you makes you long to give in to the sexy lion, draining your resolve[or]Just looking at the sexy lion makes your pussy quiver with need[or]You can't help but imagine yourself underneath this handsome feline, taking his throbbing cock[or]Affected by buried, feline urges, you find it hard to focus on the battle in the face of the strong, male cat[or]Some part of you pushes you to just give in so your aching cunt can get stuffed full of lion meat[at random][if HP of Leonard >= 7], though your loyalty to [one of]Leonard[or]your leonine master[or]your handsome lion[purely at random] does help you resist[end if]. You take [special-style-2][dam][roman type] damage";
 			if HP of player <= 0 or libido of player >= 110:
-				say "! You mewl and stagger, about to give into those urges as the feline comes in for a final strike.";
+				say "! You mewl and stagger, about to give in to those urges as the feline comes in for a final strike.";
 				now fightoutcome is 20;
 			else if ( ( HP of player * 100 ) / maxHP of player ) < 25:
 				say "! With your will to fight fading fast, you'd best end this soon.";
@@ -444,7 +444,7 @@ When Play begins:
 	now trigger text entry is "";  [ This is the text that is written to the screen when the player comes into heat]
 	now description text entry is ""; [ This text is used to describe the monster female anatomy in heat. delete entire line if you don't wish to enter one.]
 	now heat start entry is ""; [this is a to say block that causes things to happen when the player enters heat. for example: the GSD sex grows wider. Delete entire line if you wish nothing to happen.]
-	now heat end entry is "[feline heat end]"; [this is the same as heat start only it's for ending the cycle. GSD her sex is reduced back to it's previous size. Delete entire line if you wish nothing to happen. ]
+	now heat end entry is "[feline heat end]"; [this is the same as heat start only it's for ending the cycle. GSD her sex is reduced back to its previous size. Delete entire line if you wish nothing to happen. ]
 	now inheat entry is "[feline heat]";
 
 ]
@@ -464,7 +464,7 @@ when play ends:
 						say ".";
 						say "     Being equipped with a cock as well, you become the alpha female of the pride. When others of your pride disobey you, you work out your frustration and deepen familial bonds by fucking them until they submit in a puddle of pleasured fluids. You end up siring several cubs of your own.";
 				else if player is male:
-					say ". Coming across one of the small cat girls, you mewl and coax her into approaching you. Once she's drawn in, you pounce her, revealing that you're not quite a cat [']girl['] like her. She submits soon enough, mrowling in need for your cock. As you fuck her, you start to change, growing larger and most masculine. Soon you're an strong and sexy lion man pounding into what is the first of many feline girls you'll have in your pride.";
+					say ". Coming across one of the small cat girls, you mewl and coax her into approaching you. Once she's drawn in, you pounce her, revealing that you're not quite a cat [']girl['] like her. She submits soon enough, mrowling in need for your cock. As you fuck her, you start to change, growing larger and most masculine. Soon you're a strong and sexy lion man pounding into what is the first of many feline girls you'll have in your pride.";
 				else:
 					say ". You are treated in a friendly manner by the felines of the park. The lions allow you to visit and play with their prides and service any members who want it. But lacking any distinct gender of your own, you're never allowed to join a pride of your own. You have an enjoyable life though, sharing in the company of the sexy lions and lovely lionesses, preferring your life as a free-roaming plaything for them all.";
 			else if HP of Leonard >= 3 and HP of Leonard < 10:	[w/Leonard]

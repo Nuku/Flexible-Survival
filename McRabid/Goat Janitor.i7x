@@ -23,7 +23,7 @@ to say LoseToGoatJanitor:
 		say "     At some point you realize in your haze of lust from his musky scent and taste you've started to stroke your own cock, causing you to whimper and blush even more in embarrassment. 'HRRG!' the goat grunts before bleating out and flooding your mouth with his thick seed forcing you to swallow or choke all over again. The old goat chuckles and backs away splattering the last few ropes of his cum across your face before he starts getting dressed. Once finished he goes back to his cart and throws a roll of paper towels at you, 'Better clean up after yourself, boy.' He smirks before leaving. A glance down causes you to realize you came as you pleasured yourself to being used by the dirty old janitor.";
 	else if player is female: [female]
 		say "     The goat janitor grins as he looks down at you on your knees. 'I must say. It's nice to at least see a proper girl around here. Not like that silly [']coon or those messed up boy-girl things I see running around. Is that the sort of thing you young people are into these days? Downright deplorable,' he grumbles as he grabs you and pushes you down onto the floor. 'Why, in my day, it just took a man and a woman and that was it.' As the goat continues to go on, he opens the crotch to his coveralls pushes aside your clothes as well. 'Just like this,' he adds as he thrusts his stiff cock into you with a bleat.";
-		say "     [if HP of player > 0]A little resistant at first, the[else]The[end if] pleasure of the spry old fellow thrusting into you soon as you moaning. Grinning, he rubs your shoulder and picks up the pace. 'Now, ain't that so much better.' [if breasts of player > 0 and breast size of player > 1]Leaning down, he wraps his wide lips around your nipple and starts sucking on it[else]He lets his free hand roam over your body as you stop struggling and gives your ass a squeeze[end if] while thrusting all the harder. For an old guy, he's certainly got plenty of energy. And experience too, certainly no stranger at making a woman feel good.";
+		say "     [if HP of player > 0]A little resistant at first, the[else]The[end if] pleasure of the spry old fellow thrusting into you soon as you moaning. Grinning, he rubs your shoulder and picks up the pace. 'Now, ain't that so much better.' [if breasts of player > 0 and breast size of player > 0]Leaning down, he wraps his wide lips around your nipple and starts sucking on it[else]He lets his free hand roam over your body as you stop struggling and gives your ass a squeeze[end if] while thrusting all the harder. For an old guy, he's certainly got plenty of energy. And experience too, certainly no stranger at making a woman feel good.";
 		say "     With a heavy slap from his large balls against your thighs, he drives deep inside you and bleats again. You can feel the hot rush of cum from the old goat's enlarged balls. His sticky seed splashes against the bottom of your cunt and overflowing back out[if cunt length of player < 25] in messy spurts[end if]. Once he's finished, he pulls out and has you suck him clean, which you do readily in your lust-dazed state. That done, he zips up and goes back to his cart. Before moving on, he tosses you a roll of paper towels. 'You'd best clean up after yourself, missy.' He smirks and gets ready to move on. Looking down, you notice the sticky puddle of goat cum and your juices that're pooling between your spread thighs after being used by the old janitor.[impregchance]";
 	else: [neuter]
 		say "     The goat janitor snorts as he looks down at you on your knees, 'You some kinda dandy, like that silly [']coon? Got to yer knees awful fast,' he sneers down at you, grabbing the back of your head and shoves it forward into the crotch of his dirty coveralls. 'This what you want?' Your answer is muted by the bulge in your face. You can't help but whimper again as you hear the sound of the goat lowering the zipper of his coveralls.";
@@ -63,12 +63,12 @@ to say BeatTheGoatJanitor:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Anthro Goat";
 	now enemy title entry is "Goat Janitor";
 	now enemy name entry is "William";
@@ -116,8 +116,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;
+	now DayCycle entry is 0;
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Anthro Goat":

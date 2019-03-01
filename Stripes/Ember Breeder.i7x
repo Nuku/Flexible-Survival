@@ -41,16 +41,16 @@ to say beattheemberbreeder:
 	if player is male:
 		let diceroll be a random number between 40 and 125;
 		if cockname of player is listed in infections of Caninelist and diceroll < libido of player:
-			say "     Something about hir needy display arouses you and you feel an uncontrollable urge to mate with this strange beast welling up in your canine loins. Before you can suppress it, you push hir down onto all fours. Shi releases a series of pleasured chirps at this and raises hir ass, offering up hir juicy pussy. You drive your [cock size desc of player] cock into hir easily, making the vaguely canine creature squirm in delight";
+			say "Something about hir needy display arouses you and you feel an uncontrollable urge to mate with this strange beast welling up in your canine loins. Before you can suppress it, you push hir down onto all fours. Shi releases a series of pleasured chirps at this and raises hir ass, offering up hir juicy pussy. You drive your [cock size desc of player] cock into hir easily, making the vaguely canine creature squirm in delight";
 			if embervicsex is odd:
 				say "[emberbreedersex01]";
 			else:
 				say "[emberbreedersex02]";
 			increase embervicsex by 1;
 		else:
-			say "     Something about hir needy display arouses you and you feel a growing urge to mate with this strange beast. Shall you give into this desire?";
+			say "Something about hir needy display arouses you and you feel a growing urge to mate with this strange beast. Shall you give in to this desire?";
 			if player consents:
-				say "     Rather than resist this urge, you give into your lustful desire and approach the horny herm breeder. You push hir down onto all fours and shi releases a series of pleasured chirps, raising hir ass in the air. You drive your [cock size desc of player] cock into hir easily, making the vaguely canine creature squirm in delight. ";
+				say "     Rather than resist this urge, you give in to your lustful desire and approach the horny herm breeder. You push hir down onto all fours and shi releases a series of pleasured chirps, raising hir ass in the air. You drive your [cock size desc of player] cock into hir easily, making the vaguely canine creature squirm in delight";
 				if embervicsex is odd:
 					say "[emberbreedersex01]";
 				else:
@@ -59,30 +59,30 @@ to say beattheemberbreeder:
 			else:
 				say "     Resisting the temptation, you take a few steps back to distance yourself from the whining herm's needy display. Shi gropes hirself briefly, then hir paws drop to hir sides, too weak to continue. With a sad look in hir eyes, shi falls to the ground and slips unconscious, milk still leaking steadily from hir swollen tits.";
 	else:
-		say "     Shi gropes hirself briefly, then hir paws drop to hir sides, too weak to continue. With a sad look in hir eyes, shi falls to the ground and slips unconscious, milk still leaking steadily from hir swollen tits.";
+		say "Shi gropes hirself briefly, then hir paws drop to hir sides, too weak to continue. With a sad look in hir eyes, shi falls to the ground and slips unconscious, milk still leaking steadily from hir swollen tits.";
 
 
 to say emberbreedersex01:
 	if cock length of player > 18:
-		say "     Hir pussy stretches open to accommodate your massive shaft, bulging at the belly to fit you in. Shi brings a paw to the bulge, rubbing over it with happy chirps, glad to be taken by such a virile and well-hung male";
-	say "     You bring your hands to hir breasts, squeezing them, causing large spurts of milk to shoot from hir nipples onto the ground. You work at milking hir the whole time you breed hir, soaking the tunnel floor in a growing puddle of breast milk.";
+		say ". Hir pussy stretches open to accommodate your massive shaft, bulging at the belly to fit you in. Shi brings a paw to the bulge, rubbing over it with happy chirps, glad to be taken by such a virile and well-hung male";
+	say ". You bring your hands to hir breasts, squeezing them, causing large spurts of milk to shoot from hir nipples onto the ground. You work at milking hir the whole time you breed hir, soaking the tunnel floor in a growing puddle of breast milk.";
 	say "     When you feel your orgasm about to arrive, you drive yourself fully into hir, pushing your cock into hir accommodating womb and releasing your thick seed to breed hir. Shi moans in delight, clamping down firmly on your cock and milking it for all you'll give[if cock width of player > 20]. Your large balls drain into hir, making hir belly swell with your semen, almost certain to impregnate the needy, breeding bitch[end if]. Hir penis twitches and hir balls pull up, spraying hir own seed into the puddle of hir milk, adding to the messy white stain. When you withdraw your cock, the breeding slut passes out in the puddle of hir own fluids with a dazed expression of happiness on hir muzzled face.";
 
 to say emberbreedersex02:
 	if cock length of player > 18:
-		say "     Your [cock size desc of player] shaft stretches hir pussy open with ease, hir breeder body readily adjusting to accommodate you. Shi rubs a paw over the bulge you make in hir belly with happy chirps, pleased to have such a virile and well-hung stud atop hir.";
-	say "     You briefly manhandle hir leaking breasts, drawing spurts of hir milk before moving to hir hips to grab them so you can fuck hir all the harder.";
+		say ", Your [cock size desc of player] shaft stretches hir pussy open with ease, hir breeder body readily adjusting to accommodate you. Shi rubs a paw over the bulge you make in hir belly with happy chirps, pleased to have such a virile and well-hung stud atop hir";
+	say ". You briefly manhandle hir leaking breasts, drawing spurts of hir milk before moving to hir hips to grab them so you can fuck hir all the harder.";
 	say "     You drive your [cock of player] cock into hir needy pussy over and over again, losing yourself in the lustful breeding. And no matter how rough you get, the horny herm only chirps and pants in hir need for more, hir body longing for your seed. You give hir plump bottom a few slaps which cause hir cunt to squeeze down around you with each blow. After a short set of these, you're ready to blow in a different manner and drive yourself fully into hir, pushing your cock into hir accommodating womb and unleashing your [cum load size of player] load. Shi moans in delight and hir vagina clamps down firmly on your cock, milking it for all you'll give[if cock width of player > 20]. Your large balls drain into hir, making hir belly swell with your semen, almost certain to impregnate the needy, breeding bitch[end if]. Hir penis twitches and hir balls pull up, spraying hir own seed onto the ground beneath hir. When you withdraw your cock, the breeding slut passes out in the puddle of hir own fluids with a dazed expression of happiness on hir muzzled face.";
 
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Ember Breeder"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -130,8 +130,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings

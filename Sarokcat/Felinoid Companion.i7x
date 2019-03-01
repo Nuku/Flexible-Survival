@@ -19,6 +19,10 @@ to say klauzlinkaction:
 
 Section 1 - Situation
 
+Table of GameEventIDs (continued)
+Object	Name
+Injured Felinoid	"Injured Felinoid"
+
 Injured Felinoid is a situation. The level of Injured Felinoid is 6.
 The sarea of Injured Felinoid is "Park".
 when play begins:
@@ -29,6 +33,7 @@ Instead of resolving Injured Felinoid:
 	if felinoidrescued is 2:
 		say "     Traveling through the park trails, keeping a wary eye out for any more strange glades, you notice a small damp red spot on the ground ahead. Moving forward carefully to look at it, you realize with some surprise that it is somethings blood! Looking around you see several other spots of blood leaving a trail heading deeper into the underbrush, whatever went that way was definitely injured pretty badly and might need some help... Do you investigate?";
 		if player consents:
+			project the Figure of Klauz_face_icon;
 			say "     Your curiosity getting the better of you, you slowly follow the trail of blood through the trees, the sound of soft trickling water beginning to fill your ears as the trail grows fresher. Eventually you emerge into a small secluded glade, a small natural spring surrounded by large flat rocks trickling happily away in the center of the glade. Your attention is immediately drawn however, to the wounded felinoid hauling itself to its feet painfully as you approach, the wounded beast obviously still willing to put up a fight as it limps forward to attack.";
 			challenge "Felinoid";
 			if lost is 0:
@@ -38,9 +43,11 @@ Instead of resolving Injured Felinoid:
 					if player consents:
 						say "     Sighing, you are unable to turn away from a patient in need, especially seeing as the patient was injured while you benefited from his help. Pulling out your personal medical supplies, you quickly get to work tending to the felinoid, after almost an hour of hard work, you sit back with a sigh, content that the large cat is no longer in any immediate danger, and relatively sure that almost all of his wounds will heal in time. The beast even seems to feel better as he hauls himself up onto his paws, seeming to stare at you curiously for a minute as if wondering why you helped him, before turning and limping off into the park. Picking up your equipment, you turn and head off into the park as well, wondering if you will be seeing your felinoid patient again soon, his musk still filling your head teasingly even as you leave the glade behind.";
 						infect "Felinoid";
+						now Resolution of Injured Felinoid is 1; [Helped him]
 						now felinoidrescued is 3;
 					else:
 						say "     Sighing you stand up, and turn your back on the injured cat, and begin to walk away. Hardening your heart as you hear the feline beast whimpering softly in agony behind you, knowing that it won't last long in the state it's in as you put the glade with the dying felinoid behind you and head back out into the park itself.";
+						now Resolution of Injured Felinoid is 99;
 						now Injured Felinoid is resolved;
 				else if medkit is owned:
 					say "     Looking down at the injured beast and feeling even guiltier now that you recognize it, you blink as you realize you have something in your pack that might actually help. Pulling out a medkit, you look down at the beast as it shudders and whimpers in pain, and realize that its wounds are so serious it would likely use up an entire kits worth of supplies to even begin to treat the large cat. Staring at the valuable medkit in your hand, you wonder if it is really worth using it on the felinoid bleeding on the ground in front of you, sure the beast helped you before, but if you heal it you or someone else will likely only end up fighting it again in the future... still you do feel rather bad about fighting it when it was already so grievously injured... Do you help the felinoid anyways?";
@@ -48,15 +55,18 @@ Instead of resolving Injured Felinoid:
 						say "     Sighing, you find you are unable to turn away from injured felinoid in need, especially seeing as you benefited from or were responsible for most of his injuries... Opening the medkit up, you quickly get to work tending to the felinoid, and after almost an hour of hard work, you sit back with a sigh, content that the large cat is no longer in any immediate danger, and relatively sure that almost all of his wounds will heal in time. The beast even seems to feel better as he hauls himself up onto his paws, seeming to stare at you curiously for a minute as if wondering why you helped him, before turning and limping off into the park. Picking up the remains of your medkit, you turn and head off into the park as well, wondering if you will be seeing your felinoid patient again soon, his musk still filling your head teasingly even as you leave the glade behind.";
 						infect "Felinoid";
 						delete medkit;
+						now Resolution of Injured Felinoid is 1; [Helped him]
 						now felinoidrescued is 3;
 					else:
 						say "     Sighing you stand up, and tuck the medkit back into your pack as you turn your back on the injured cat, and begin to walk away. Hardening your heart as you hear the feline beast whimpering softly in agony behind you, knowing that at least its pain won't last long in as bad a state as the beast is in. You put the glade with the dying felinoid behind you as you head back out into the park proper.";
+						now Resolution of Injured Felinoid is 99;
 						now Injured Felinoid is resolved;
 				else:
 					say "     Sighing as you look down at the injured felinoid, you realize that even if you wanted to help the beast, you have no way of actually doing so. You take the time to reach out and pet the injured felinoid's soft, bloodied fur for a second, and you bring it over some water from the spring before heading back out into the park, hoping that it will manage to survive its most recent fight and wishing you had some way of helping it.";
 			else:
 				say "     Defeated even by the wounded beast, you slowly stagger back off into the park, sighing as you realize that the combat certainly hasn't helped either of you feel any better.";
 	else if felinoidrescued is 3:
+		project the Figure of Klauz_face_icon;
 		say "     Traveling through the trails of the park yet again, you pause as you hear something moving behind you, turning around carefully you see what is by now a rather familiar-looking felinoid stalking toward you purposefully, intent on proving his dominance. You realize that while his wounds are obviously mostly healed, a fresh combat certainly won't help his situation any... do you prepare to fight anyways?";
 		if player consents:
 			challenge "Felinoid";
@@ -67,18 +77,23 @@ Instead of resolving Injured Felinoid:
 					say "     Well that answers that at least. With him having at least a decent amount of intelligence, it does seem kinda weird to keep call him [italic type]felinoid[roman type]. Asking him his name rewards you with a something between a growl and a chuckle. You decide to try a different approach, instead now you ask what he would like to be called? Fully prepared to get another growly laugh, you are surprised when he once again stops and turns back to you, one eyebrow raised in a very human way. Quickly he swipes his paw at you with his claws extended, afterwards baring his teeth at you in what could be seen as a smile.";
 					WaitLineBreak;
 					say "     Thinking on what just happened you attempt to think of a name that might match up with him. Claws... attempting to feel out a name with that in mind lead you to the idea of maybe claus, but that doesn't seem to fit either. Then it hits you, what about Klauz? It has a feral feel to it, while still sounding like an actual name. Asking the felinoid how he feels about the name only leads to another growl and a shrug of his shoulders.";
-					now Felinoid companion is tamed;
+					now Felinoid Companion is tamed;
+					add "Tamed" to Traits of Felinoid Companion;
 					move Klauz to Back Of The Library;
 					infect "Felinoid";
 					say "(The Felinoid companion is now tamed! You can make it your active pet by typing [bold type][link]pet Felinoid companion[end link][roman type]and initiate sex with him while active by typing [bold type][link]fuck Felinoid companion[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+					now Resolution of Injured Felinoid is 2; [Fought, won, and recruited]
 					now Injured Felinoid is resolved;
 				else:
 					say "     Deciding that having one of the large felines follow you around would be far too dangerous, in spite of any help it might be in surviving in the city, you pet the golden furred felines head for a minute, before leaving it behind, the felinoid trying to stagger after you as you leave, but its injuries leaving it unable to actually catch up. You idly find yourself wondering if you will encounter that particular felinoid again, as it certainly seems to have fixated on you somehow.";
+					now Resolution of Injured Felinoid is 3; [Fought, won, and did not recruit]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     The large beast sniffs haughtily at your defeated form, obviously feeling somewhat satisfied at having proved itself to still be a dominant predator even with its injuries. It turns to stalk off, only to turn back and nuzzle you almost affectionately for a minute, as if thanking you for your earlier help, before vanishing into the park, though somehow you still have the feeling you will be seeing the beast again soon.";
+				now Resolution of Injured Felinoid is 4; [Fought and lost]
 				infect "Felinoid";
 			else:
 				say "     The large beast sniffs haughtily at your fleeing form, obviously feeling somewhat satisfied at having proved itself to still be a dominant predator even with its injuries. It turns to stalk off, only to turn back and mrowl at you almost affectionately for a minute, as if thanking you for your earlier help, before vanishing into the park, though somehow you still have the feeling you will be seeing the beast again soon.";
+				now Resolution of Injured Felinoid is 5; [Fought, fled]
 				infect "Felinoid";
 		else:
 			say "     Declining to fight the large felinoid, you carefully back off, your posture deliberately nonthreatening as the large predator stalks you teasingly. The beast rumbles in confusion as you refuse to fight it, butting you with its large feline head and rubbing its body against you as it tries to work out what to do about the strange situation, seeming unwilling to actually attack someone who helped it earlier. Finally the beast seems to be satisfied that it has proved its dominance over you, and panting sprawls out next to you companionably, now that you can get a closer look, it seems the beast's wounds are still hindering it more than you suspected, the injured felinoid obviously having a hard time surviving out here all alone with its injuries. Sighing you reach down and stroke his soft fur for a while, his soft rumbling purr and spicy musk filling your head as you pet the felinoid for a while, before standing up to continue on your way.";
@@ -86,9 +101,11 @@ Instead of resolving Injured Felinoid:
 			WaitLineBreak;
 			say "     Purely out of curiosity, you ask the large predatory cat if he is able to understand what you say? The felinoid stops and just stares at you for a moment, before he quickly nods his head before continuing on his way. Well that answers that at least. With him having at least a decent amount of intelligence, it does seem kinda weird to keep call him [italic type]felinoid[roman type]. Asking him his name rewards you with a something between a growl and a chuckle. You decide to try a different approach, instead now you ask what he would like to be called? Fully prepared to get another growly laugh, you are surprised when he once again stops and turns back to you, one eyebrow raised in a very human way.";
 			say "     Quickly he swipes his paw at you with his claws extended, afterwards baring his teeth at you in what could be seen as a smile. Thinking on what just happened you attempt to think of a name that might match up with him. Claws... attempting to feel out a name with that in mind lead you to the idea of maybe claus, but that doesn't seem to fit either. Then it hits you, what about Klauz? It has a feral feel to it, while still sounding like an actual name. Asking the felinoid how he feels about the name only leads to another growl and a shrug of his shoulders.";
-			now Felinoid companion is tamed;
+			now Felinoid Companion is tamed;
+			add "Tamed" to Traits of Felinoid Companion;
 			infect "Felinoid";
 			say "(The Felinoid companion is now tamed! You can make it your active pet by typing [bold type][link]pet Felinoid companion[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
+			now Resolution of Injured Felinoid is 6; [Felinoid's bitch]
 			now Injured Felinoid is resolved;
 	else:
 		say "     Traveling through the twisting trails of the park, you notice the soft sound of water trickling over rocks from nearby, and leave the path to investigate. Pushing through the undergrowth, you blink as you come across a small spring in a rather nice-looking glade, moving into the small glade, you notice that it looks like an excellent secluded place to rest, and begin to set your pack down. As you begin to set your pack down, you notice the numerous tracks in the soft earth at your feet, and blink as you look around and realize the glade is full of other similar tracks. Kneeling down you look closer you see that most of the tracks are those of the large felinoids wandering the park, and some of them even have soft spots of blood resting next to them. Sighing you realize the large feline creatures found this nice pristine glade first, and are likely using it as a place to rest and lick their wounds. Not wanting to be here in case one of the feline beasts shows up, you pick your pack up and head back out into the park, feeling a little sad at not being able to rest near the nice spring.";
@@ -96,20 +113,25 @@ Instead of resolving Injured Felinoid:
 
 Section 2 - Felinoid companion
 
-Felinoid companion is a pet. Felinoid companion is a part of the player.
-understand "Klauz" as Felinoid companion.
-The description of Felinoid companion is "[Klauzdesc]".
-The weapon damage of Felinoid companion is 9.
-The level of Felinoid companion is 6.
-The Dexterity of Felinoid companion is 15.
-The summondesc of Felinoid companion is "[SummonKlauz]".
-The dismissdesc of Felinoid companion is "[DismissKlauz]".
-The assault of Felinoid companion is "[one of]Your felinoid companion rakes your attacker with his claws![or]Klauz rubs up against your opponent, distracting them greatly![or]Klauz's musk distracts your target, allowing you to get in another strike![or]Taking advantage of your foe's distraction, your companion strikes out with his claws.[or]Your ally manages to grab onto your opponent, providing you with an opening![or]Klauz charges into the melee to protect you, and your opponent seems so startled at the ferocious appearance of this new combat, they leave themselves open to attack.[or]Bracing himself against the pain, your injured companion leaps forward into the combat, knocking your opponent flat.[or]The felinoid you helped returns the favor by running in and tripping your opponent up![or]Klauz pounces on your opponent, trying to wrestle them to the ground.[at random]".
-the fuckscene of felinoid companion is "[sexwithfelinoidpet]".
+Table of GameCharacterIDs (continued)
+object	name
+Felinoid Companion	"Felinoid Companion"
+
+Felinoid Companion is a pet. Felinoid Companion is a part of the player.
+understand "Klauz" as Felinoid Companion.
+The description of Felinoid Companion is "[Klauzdesc]".
+The weapon damage of Felinoid Companion is 9.
+The level of Felinoid Companion is 6.
+The Dexterity of Felinoid Companion is 15.
+The summondesc of Felinoid Companion is "[SummonKlauz]".
+The dismissdesc of Felinoid Companion is "[DismissKlauz]".
+The assault of Felinoid Companion is "[one of]Your felinoid companion rakes your attacker with his claws![or]Klauz rubs up against your opponent, distracting them greatly![or]Klauz's musk distracts your target, allowing you to get in another strike![or]Taking advantage of your foe's distraction, your companion strikes out with his claws.[or]Your ally manages to grab onto your opponent, providing you with an opening![or]Klauz charges into the melee to protect you, and your opponent seems so startled at the ferocious appearance of this new combat, they leave themselves open to attack.[or]Bracing himself against the pain, your injured companion leaps forward into the combat, knocking your opponent flat.[or]The felinoid you helped returns the favor by running in and tripping your opponent up![or]Klauz pounces on your opponent, trying to wrestle them to the ground.[at random]".
+the fuckscene of felinoid Companion is "[sexwithfelinoidpet]".
 
 
 to say SummonKlauz:
-	remove Klauz from play;
+	now Klauz is nowhere;
+	project the Figure of Klauz_face_icon;
 	if player is in Back Of The Library and Klauz is in Back Of The Library: [summoning while standing next to him]
 		say "     ...";
 	else: [regular summoning]
@@ -122,7 +144,33 @@ to say DismissKlauz:
 	else: [dismissing him in Back Of The Library]
 		say "     ...";
 
+Table of GameCharacterIDs (continued)
+object	name
+Klauz	"Klauz"
+
 Klauz is a man.
+ScaleValue of Klauz is 3. [roughly human sized]
+Cocks of Klauz is 1.
+Cock Length of Klauz is 14.
+Cock Width of Klauz is 10. [lemon sized balls]
+Testes of Klauz is 2.
+Cunts of Klauz is 0.
+Cunt Length of Klauz is 0.
+Cunt Width of Klauz is 0.
+Breasts of Klauz is 2.
+Breast Size of Klauz is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Klauz is false.
+PlayerRomanced of Klauz is false.
+PlayerFriended of Klauz is false.
+PlayerControlled of Klauz is false.
+PlayerFucked of Klauz is false.
+OralVirgin of Klauz is false.
+Virgin of Klauz is true.
+AnalVirgin of Klauz is true.
+PenileVirgin of Klauz is false.
+SexuallyExperienced of Klauz is true.
+MainInfection of Klauz is "Felinoid".
 The description of Klauz is "[Klauzdesc]".
 
 instead of sniffing the Felinoid companion:
@@ -138,9 +186,11 @@ to say KlauzScent:
 	say "     Klauz smells strong and masculine[if player is female or player is mpreg_ok]. It is quite arousing[end if].";
 
 to say Klauzdesc:
-	say "     Klauz, the golden felinoid that you rescued, is lean and powerful as he stalks along besides you eagerly, obviously one of the most powerful allies you could have as you try to survive in the city. Of course he still doesn't seem to have recovered completely from his ordeal, and is thus more than content to let you take the lead in combat and in your travels around the city. You can't help but wonder just how the large cat sees you and why he bothers following you around - whether he sees you more as a friend, a companion, or as a potential mate...";
+	project the Figure of Klauz_face_icon;
+	say "     Klauz, the white-golden felinoid that you rescued, is lean and powerful as he stalks along besides you eagerly, obviously one of the most powerful allies you could have as you try to survive in the city. Of course he still doesn't seem to have recovered completely from his ordeal, and is thus more than content to let you take the lead in combat and in your travels around the city. You can't help but wonder just how the large cat sees you and why he bothers following you around - whether he sees you more as a friend, a companion, or as a potential mate...";
 
 instead of conversing the Klauz:
+	project the Figure of Klauz_face_icon;
 	if player is in Back Of The Library and Klauz is in Back Of The Library:
 		say "[KlauzTalkMenu]";
 	else if companion of player is Felinoid companion:
@@ -152,6 +202,7 @@ instead of conversing Felinoid companion:
 	if Felinoid companion is not tamed:
 		say "     Who?";
 	else:
+		project the Figure of Klauz_face_icon;
 		if player is in Back Of The Library and Klauz is in Back Of The Library:
 			say "[KlauzTalkMenu]";
 		else if companion of player is Felinoid companion:
@@ -187,13 +238,9 @@ to say KlauzTalkMenu:
 					say "[KlauzTalk1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You back away from the Klauz, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You back away from the Klauz, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -294,12 +341,12 @@ to say sexwithfelinoidpet:
 
 
 to say felinoidpet_puref:
-	say "     Klauz gives a delighted mrowl and rears up to knock you forward onto all fours, then circles hungrily. [run paragraph on]";
-	if breast size of player > 0 and breasts of player > 0:
-		say "     The feline nuzzles up underneath you, burying snout against your soft [breast size desc of player] breasts, nuzzling slowly from one to the next before he traps a firm teat in his mouth and begins to nurse hungrily at you. Loud slurping sounds fill the area as he bites lightly and pulls at your firm teat, coaxing all the milk that you can produce.";
+	say "     Klauz gives a delighted mrowl and rears up to knock you forward onto all fours, then circles hungrily. ";
+	if breasts of player > 0 and breast size of player > 0:
+		say "The feline nuzzles up underneath you, burying snout against your soft [breast size desc of player] breasts, nuzzling slowly from one to the next before he traps a firm teat in his mouth and begins to nurse hungrily at you. Loud slurping sounds fill the area as he bites lightly and pulls at your firm teat, coaxing all the milk that you can produce.";
 		now lastmilking is turns;
 	else:
-		say "     He moves around to your front and presses lips to lips, kissing you firmly as rough tongue extends to dance against your own. He gazes into your eyes with unhidden lust and something that could be easily confused for love as he holds you captive in the exchange.";
+		say "He moves around to your front and presses lips to lips, kissing you firmly as rough tongue extends to dance against your own. He gazes into your eyes with unhidden lust and something that could be easily confused for love as he holds you captive in the exchange.";
 	say "     He draws away, licking his lips, and moves swiftly behind you, but you are faster. Soft fingers grab at his erect shaft and give it a tug, holding him in place for a moment. He looks at you questioningly, but you continue teasing sensitive flesh with the fur of your fingers, making his hips rock out against you. The sensitive flesh of your fingertips can feel the faint feline barbs near the tip of his alien member, and your cunt spasms with desire for it.";
 	say "     Willing to wait no longer, he gently extracts himself from you and circles to grab at your hips, biting at your back and sides a moment as he shuffles into position. His feline cock nudges against your [cunt size desc of player] pussy before easing into its heat. The barbs pull lightly as he withdraws, sending sparks of fire through your form. The rocking begins in earnest, driving deep into your fertile form and slamming his cock against your cervix. You aren't sure how, but it seems he's just large enough, filling you so perfectly with every motion.";
 	say "     Pawhands close about your chest, rubbing across and below to your belly, petting and stroking in time with his manic shoves into your prone body. His teeth nip at your ears with every twitch they make when his rough tongue isn't teasing the sensitive flaps. Something wraps around your leg, squeezing at it in sharp tight constrictions in the same, rapid, tempo of his love making. You can barely concentrate enough to look back and see his tail lashed about you, squeezing and pulling as he goes.";
@@ -319,7 +366,7 @@ to say felinoidpet_purem:
 		say "     When he's done, the big cat quickly dismounts and pushes you over with a paw. Weak and lost in a haze of lust, you flop onto the ground, welcoming the more dominant cat's cock into your mouth so you can suck it clean of the last traces of semen. Only once you're done cleaning him and he's padded off does the musk-fueled lust gradually leave and you come back to your senses enough to get up and continue on.";
 		now the libido of player is libido of player / 2;
 	else if the remainder after dividing lust of felinoid companion by 3 is 2:
-		if breast size of player > 0 and breasts of player > 0:
+		if breasts of player > 0 and breast size of player > 0:
 			say "     The feline rears up and nuzzles at your chest, burying snout against your soft [breast size desc of player] breasts, nuzzling slowly from one to the next before he traps a firm teat in his mouth and begins to nurse hungrily at you. Loud slurping sounds fill the area as he bites lightly and pulls at your firm teat, coaxing all the milk that you can produce.";
 			now lastmilking is turns;
 		say "     He pushes you back to a seated position with strong nuzzlings against your groin. He never leaves your crotch. Rough tongue lashes across your thighs, down across your taint and up across your [short ball size] balls before returning to that [cock size desc of player] feline cock of yours. His tongue curls around it at the base and runs slowly up towards the tip, purrs sending soft bits of pleasure through the delighted flesh.";
@@ -355,7 +402,7 @@ when play ends:
 				if player is female:
 					say "     Finally giving in to your needs as Klauz must have known you would, you crouch down submissively before him finally, realizing what a good and patient mate he has been. You yowl happily as he covers your body, his teeth gripping your scruff as he finally takes you properly, his cock sinking into you as he makes you his pet instead of playing at being yours. Your new felinoid muzzle drops open in a happy grin as you can feel each thrust of his wonderful cock inside you chipping away at what remains of your humanity, your memories of your old life as a human completely useless to you now. As the wonderful male cat mates you properly, you realize now that this is why you saved him, and stayed with him so much, you needed a nice strong mate to take you and make you his, to fill your heat-filled belly up with his handsome feline cubs while you serve his every need. You roar in pleasure as you feel him shoot his fertile sperm into you, locking you into your new form permanently, and sealing his claim on your body. You pant happily as your new mate licks your own new coat of soft golden fur tenderly, and you moan as after a short rest, he begins to mount you again. Roaring in pleasure, you vow to be a good pet for your handsome and caring mate, eagerly moving underneath him, as he works hard to plant his seed in you again, knowing that soon you will be expanding your little family with some of his handsome cubs to care for, the very thought of the handsome little felines growing in your belly making you roar again in pleasure, looking forward to a long and very full life, and a very full belly.";
 				else:
-					say "     Finally giving in to your needs, you roar in frustration as you prowl the streets, Klauz keeping you company as you finally give in and join him in the hunt for suitable mates. Even though he is fully healed soon, the two of you stay together as you hunt, your earlier companionship setting the tone for your new relationship, as you stalk the city streets. Most of the appropriate mates have already been taken by others though, leaving the two of you frustrated until the military begin to move in, at which point your cunning and your ability comes into play. The two of you easily isolate one of the soldiers, and under the strength of your combined musk she is soon panting eagerly on all fours, and tells you happily about their plans before you finish changing her and mounting her properly. Leaving your new female well seeded by the both of you, you take advantage of your new knowledge to slip into one of their vehicles at night, the two of you hiding inside until it loads up fully in the morning. Your feline grin as the people in the APC begin to moan and change matches that of your hunting companions, and you stalk out of hiding while the needy soldiers begin to strip. By the time the APC reaches the city and the driver comes back to open the doors, every male soldier is now a female cat, with at least one load of seed from you or your friend in their bellies. The driver's panicked look before he too succumbs to the scent of sex and feline musk, as your new mates hold him down while you rub your bodies over him, is priceless. Soon you have a lovely large group of soon to be pregnant felinoids all your own, and are definitely making plans for returning the APC to the military - properly scent marked, of course. You wouldn't want the next group of soldiers to arrive in the city unprepared to be mated, now would you?[line break]";
+					say "     Finally giving in to your needs, you roar in frustration as you prowl the streets, Klauz keeping you company as you finally give in and join him in the hunt for suitable mates. Even though he is fully healed soon, the two of you stay together as you hunt, your earlier companionship setting the tone for your new relationship, as you stalk the city streets. Most of the appropriate mates have already been taken by others though, leaving the two of you frustrated until the military begin to move in, at which point your cunning and your ability comes into play. The two of you easily isolate one of the soldiers, and under the strength of your combined musk she is soon panting eagerly on all fours, and tells you happily about their plans before you finish changing her and mounting her properly. Leaving your new female well seeded by the both of you, you take advantage of your new knowledge to slip into one of their vehicles at night, the two of you hiding inside until it loads up fully in the morning. Your feline grin as the people in the APC begin to moan and change matches that of your hunting companions, and you stalk out of hiding while the needy soldiers begin to strip. By the time the APC reaches the city and the driver comes back to open the doors, every male soldier is now a female cat, with at least one load of seed from you or your friend in their bellies. The driver's panicked look before he too succumbs to the scent of sex and feline musk, as your new mates hold him down while you rub your bodies over him, is priceless. Soon you have a lovely large group of soon-to-be pregnant felinoids all your own, and are definitely making plans for returning the APC to the military - properly scent marked, of course. You wouldn't want the next group of soldiers to arrive in the city unprepared to be mated, now would you?";
 				if HP of Sven > 7 and HP of Sven < 29:			[fucktoy Sven]
 					if hermaphrodite is not banned:
 						say "     You make sure to bring your snowmeow pet along with you as you head off into the city with Klauz. After an evening of lustful attention from you both, he becomes a snow leopard herm and succumbs to his infection, becoming a lustful feline thirsty for [if player is not male]your companion's cock[else]you and your companion's cocks[end if]. She is bred long and repeatedly until she is filled with submissive snowmeow kittens. These grow to become subservient, lustful fucktoys to the dominant felinoids that you create and breed.";

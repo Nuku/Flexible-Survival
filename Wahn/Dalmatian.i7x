@@ -22,12 +22,12 @@ when play begins:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Dalmatian Male"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -75,16 +75,17 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Dalmatian Bitch"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -132,15 +133,16 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Dalmatian Herm"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -188,16 +190,17 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Dalmatian Transman"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -245,16 +248,17 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Dalmatian Transbitch"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -302,8 +306,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Definition: a person is DalSkinned:
 	if skinname of player is "Dalmatian Male" or skinname of player is "Dalmatian Bitch" or skinname of player is "Dalmatian Herm" or skinname of player is "Dalmatian Transman" or skinname of player is "Dalmatian Transbitch", yes;
@@ -385,7 +390,7 @@ when play ends:
 				say "     A faint ringing in your mind has you pulling out the firefighting coat Kenaz had given you and then tossing the heavy jacket over your furry white form.";
 				say "     Ten minutes of searching leads you to finding several older people in the basement, two teenagers hiding in the back rooms of suite 108, and a single shy cougar female almost scared to death from the flames licking at the area surrounding her inside of room 309. Using your dexterity and strength to herd the others out of the building, your sense of smell being invaluable to help you to find the safest routes back out after some of the building's roof collapses in on your previous pathway, as well as your basic knowledge of fire safety, you manage to get everyone out of the building just as the local firefighting department is speeding its way down the side of the street.";
 				LineBreak;
-				say "     Working with the other Dalmatians of fire station 86 you and the rest of the team hook up hoses and then spray down the burning building with as much water as you can in order to make the laughing flames receded back into the edifice. All of you are silently thankful that the water to the city is now working again, though no one makes a comment on this as you are all busy working to get the thrashing flames battling against you under some kind of control.[if waterworks is 1] You don't spend time gloating about how you were the one who fought to get the water to the city back on as you literally have bigger fish to fry at the moment.[end if]";
+				say "     Working with the other Dalmatians of fire station 86 you and the rest of the team hook up hoses and then spray down the burning building with as much water as you can in order to make the laughing flames receded back into the edifice. All of you are silently thankful that the water to the city is now working again, though no one makes a comment on this as you are all busy working to get the thrashing flames battling against you under some kind of control[if waterworks is 1]. You don't spend time gloating about how you were the one who fought to get the water to the city back on as you literally have bigger fish to fry at the moment[end if].";
 				say "     [if kto is 2]Humorously you find yourself chuckling into the back of your heads as you watch how Kenaz literally takes command of the situation as he barks out orders. You do the other Dalmatian proud by standing your ground and helping them finish up spraying down the building until at last, some thirty minutes later, the fire has finally died out[else]Watching as Othala and Kenaz work together to try and control this situation you chuckle mirthfully as you notice how all of the other Dalmatians follow the leadership of the former female without question. Othala wastes no time as she barks out orders amongst the pack while having Kenaz stand beside you to help shoulder some of the burden of having you hold onto the gushing hose in between your padded hands. The other male says nothing to you as you and he work together to put out the fire, however, you don't fail to notice the twinkle of pride shining in Kenaz's green orbs as he glances at you when he thinks you're not looking[end if]. Once the hungry flames of the fire have been completely drowned out the Dalmatians quickly turn to those around you, asking everyone the standard questions that go along with having survived an ordeal like this and giving medical aid to those that they can while waiting for the ambulance to get there.";
 				LineBreak;
 				if kto is 2:
@@ -397,7 +402,7 @@ when play ends:
 					say "The offer is very tempting, considering that Kenaz and the others have decided to all buy a large condo together to make into their new den. However, you have a lot to think over first...";
 			else:
 				say "     Ten minutes of searching leads you to finding several older people in the basement, two teenagers hiding in the back rooms of suite 108, and a single shy cougar female almost scared to death from the flames licking at the area surrounding her inside of room 309. Using your dexterity and strength to herd the others out of the building, your sense of smell being invaluable to help you to find the safest routes back out after some of the building's roof collapses in on your previous pathway, as well as your basic knowledge of fire safety, you manage to get everyone out of the building just as the local firefighting department is speeding its way down the side of the street.";
-				say "     Working with the other Dalmatians of fire station 86 you and the rest of the team hook up hoses and then spray down the burning building with as much water as you can in order to make the laughing flames receded back into the edifice. All of you are silently thankful that the water to the city is now working again, though no one makes a comment on this as you are all busy working to get the thrashing flames battling against you under some kind of control.[if waterworks is 1] You don't spend time gloating about how you were the one who fought to get the water to the city back on as you literally have bigger fish to fry at the moment.[end if]";
+				say "     Working with the other Dalmatians of fire station 86 you and the rest of the team hook up hoses and then spray down the burning building with as much water as you can in order to make the laughing flames receded back into the edifice. All of you are silently thankful that the water to the city is now working again, though no one makes a comment on this as you are all busy working to get the thrashing flames battling against you under some kind of control[if waterworks is 1]. You don't spend time gloating about how you were the one who fought to get the water to the city back on as you literally have bigger fish to fry at the moment[end if].";
 				say "     [if kto is 2]Humorously you find yourself chuckling into the back of your heads as you watch how Kenaz literally takes command of the situation as he barks out orders. You do the other Dalmatian proud by standing your ground and helping them finish up spraying down the building until at last, some thirty minutes later, the fire has finally died out[else]Watching as Othala and Kenaz work together to try and control this situation you chuckle mirthfully as you notice how all of the other Dalmatians follow the leadership of the former female without question. Othala wastes no time as she barks out orders amongst the pack while having Kenaz stand beside you to help shoulder some of the burden of having you hold onto the gushing hose in between your padded hands. The other male says nothing to you as you and he work together to put out the fire, however, you don't fail to notice the twinkle of pride shining in Kenaz's green orbs as he glances at you when he thinks you're not looking[end if]. Once the hungry flames of the fire have been completely drowned out the Dalmatians quickly turn to those around you, asking everyone the standard questions that go along with having survived an ordeal like this and giving medical aid to those that they can while waiting for the ambulance to get there.";
 				LineBreak;
 				if kto is 2:

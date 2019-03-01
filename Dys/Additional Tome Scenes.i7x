@@ -1,11 +1,11 @@
 Version 2 of Additional Tome Scenes by Dys begins here.
-[v1 - Adds tentacles and demon fox                                         ]
-[v2 - Breaks up the file into more abstract pieces                         ]
+[v1 - Adds tentacles and demon fox                                          ]
+[v2 - Breaks up the file into more abstract pieces                          ]
 
 "Adds additional content to the Ancient Tome item."
 
-[ TENTACLE CODE -- Dys/Ancient Tentacles.i7x                                ]
-[ DEMON FOX CODE -- Dys/Demon Fox.i7x                                       ]
+[ TENTACLE CODE - Dys/Ancient Tentacles.i7x                                 ]
+[ DEMON FOX CODE - Dys/Demon Fox.i7x                                        ]
 
 [ TomeTimer tracks how long it's been since the player has been             ]
 [ influenced by the tome                                                    ]
@@ -65,13 +65,13 @@ to say TomeSexMenu:
 						say "[TentacleSex]";
 					-- "Summon a demon fox":
 						say "[DemonFoxSummon]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
 			say "     Change your mind and do something else?";
 			if player consents:
 				now sextablerun is 1;
 				say "     You shake your head, banishing the tempting thoughts. You can't afford to give in to it.";
-				WaitLineBreak;
+				wait for any key;
 			else:
 				say "Pick an option.";
 		else:
@@ -116,8 +116,8 @@ to say TomeReadMenu:
 	say "     Opening the book to the portion you've yet to read, you are greeted with a few options. The page on the left depicts a sort of mass of tentacles[if TomeFound is 4], though these are different than the ones that assaulted Eric[else if TomeFound is 20], though these are different than the ones that nearly took Eric[end if]. Each of the tendrils is a sort of bluish-purple, and they all seem to be covered in some sort of clear slime. The adjacent page depicts a demonic looking feral fox. It stands larger than a horse with jet black and yellow fur. Two curved horns poke out of the top of its skull, and it has a series of spikes along its back, almost like a dragon. It has three long tails, each of which appear to be burning with a yellow flame. Underneath its hulking form, you see a massive cock, an interesting mixture of both vulpine and draconic, featuring a tapered tip and a wide knot, as well as several protruding ridges along its underside. The shaft itself fades from a dark metallic gold at the base to a bright yellow near the tip. It's leaking a stream of what almost looks like lava.";
 	say "     [bold type]Seeing your two options, which of them do you read about[roman type]?";
 	LineBreak;
-	say "     [if TentacleRead is false][link](1)[as]1[end link] - Read about the tentacle monster.[else](1) - You've already read about the tentacle monster.[end if]";
-	say "     [if DemonFoxRead is false][link](2)[as]2[end link] - Read about the demon fox.[else](2) - You've already read about the fox.[end if]";
+	say "     [if TentacleRead is false][link](1)[as]1[end link] - Read about the tentacle monster[else](1) - You've already read about the tentacle monster[end if].";
+	say "     [if DemonFoxRead is false][link](2)[as]2[end link] - Read about the demon fox[else](2) - You've already read about the fox[end if].";
 	LineBreak;
 	say "     [link](0)[as]0[end link] - Change your mind.";
 	now calcnumber is -1;

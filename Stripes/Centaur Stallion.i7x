@@ -22,17 +22,17 @@ to say losetocentaurstallion:
 			say "     You are bowled over by the powerful centaur, landing in a heap in the dirt. He chuckles darkly at you as he straddles you, slapping his hefty cock across your [bodytype of player] body a few times. He then gives a soft, exaggerated sigh as he starts to piss on you, his equine urine covering you with its impressive flow. You end up with a mouthful of it as the stream splashes across your face before finally coming to a halt with a few last squirts.";
 			say "     Humiliated at being so used, his abuse of you does not end as his wet horsecock slaps against you a few more times. 'Start licking, you messy mare,' he orders. When you don't comply immediately, he stomps his hooves around you threateningly. Given no other option, you take his equine rod in your hands and guide it to your mouth. You lick and suck at it while your hands play along it, stroking along its impressive length. Still tasting his piss on it as the last drops of it leak out, that is soon replaced by drops of precum instead. You keep it up, forcing yourself to take more and more of his two feet of stallion meat into your mouth and throat. When he cums, he ends up pumping the bulk of his heavy load right into your belly, leaving you feeling full from his semen.";
 			say "     Having sated himself, he steps back and pops his cock free of your throat and mouth. In the end, you are left wet and smelling strongly of a stable.";
-		else if vorelevel is 3 and a random chance of 1 in 5 succeeds and scalevalue of player < 4:
+		else if vorelevel is 3 and a random chance of 1 in 3 succeeds and scalevalue of player < 4:
 			if HP of player > 0:
 				say "     As you throw up your hands to submit";
 			else:
-				say "     As you lower your defences";
+				say "     As you lower your defenses";
 			say ", the male centaur gets a more twisted look on his face as he paces around you. Finally, he pushes you down to your knees and moves to press his cock to your face. Believing it to be a mere blowjob, you are surprised when he thrusts forwards, his tip sliding over your face and expanding to take your shoulders in. He moves you to a nearby rock, and he happily moans as his flesh tugs on you, pulling your face deeper into the musky tube half your length and bulging with your body as it pushes over your form.";
 			say "     Soon, the centaur has you in up to your waist, and he decides to torture you a bit, the male going for a canter and a slow gallop. Your legs smack against the underside of that gut over and over as he runs, each upwards jerk of his cock pulling more and more of you in. Eventually, all that is left is your feet, and even they disappear from view, the bulge you make going down into a tight chamber filled with musky fluid, straining and stretching with your form. Aroused beyond belief now, the stallion gallops, looking for a mate. The swaying isn't as rocky in here, and you can feel the warm cum starting to help you nod off...";
 			WaitLineBreak;
 			say "     You're abruptly awoken as gravity shifts, and you can hear the sound of a female moaning. Putting two and two together, you realize that the stallion is fucking a mare, and likely plans to get you out of him that way! You push about, trying to get him to stop, but all that does is make him more aroused. Time goes on, the noise of sex muffled, but the ball you're in shakes with each thrust. Thankfully, you don't have to endure that for long as it feels like the tube above your head sucks on you and pulls up into the main part of his cock. Inch by inch, you slide deeper into the mare before you are shot out into her womb, coated in his spunk and desperate to try and avoid a possible scenario where you become the mare's child due to this. The centaur keeps his cock in though, and try as you might, you can feel something prick your belly button, and sleep overwhelms you...";
 			if ublevel < 3:
-				say "     You awaken sometime later to feel contractions around your body before you spill out onto the dry grounds of the Plains, the mare you had become child to giving birth to you. The nanites in your head scream as you fight the urge to give into the infection, and with shaky newborn legs, you gallop away.";
+				say "     You awaken sometime later to feel contractions around your body before you spill out onto the dry grounds of the Plains, the mare you had become child to giving birth to you. The nanites in your head scream as you fight the urge to give in to the infection, and with shaky newborn legs, you gallop away.";
 			else:	[Goes into womb loop scene in Centaur Mare file]
 				say "[CentaurMareWomb]";
 		else if player is female:
@@ -44,8 +44,8 @@ to say losetocentaurstallion:
 			say "     The centaur stallion snorts in frustration at your lack of a pussy for him to fill and presses you to the ground. He steps overtop you and pounds his hoofs on the hard ground again and again. As you cringe to avoid them, his huge cock slaps against his equine belly again and again, growing fully and harder. His pre dribbles down onto you as a warning of what comes soon after. With a loud whinny, his glans flares and blast after blast of centaur cum splatters onto you, leaving you soaked in his semen. He snorts again and trots off, frustrated and only a little satisfied.";
 			decrease HP of player by 10;
 		if "Female Preferred" is listed in feats of player and girl is not banned:		[change target to Mare for infection]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Centaur Mare":
 					now monster is y;
 					break;
@@ -84,12 +84,12 @@ to say beatthecentaurstallion:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Centaur Stallion"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -137,8 +137,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hoofstomp"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Hoof Stomp
@@ -149,7 +150,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 
 this is the hoofstomp rule:		[double-damage hoof stomping]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 ); [Double damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
@@ -213,13 +214,14 @@ Section 5 - Endings
 when play ends:
 	if bodyname of player is "Centaur Stallion" or bodyname of player is "Centaur Mare":
 		if humanity of player < 10:
-			say "     As your infection spreads within you, you find yourself drawn back to the open plains at the edge of the city. There, you seek out the other centaurs and join their herd. ";
+			say "     As your infection spreads within you, you find yourself drawn back to the open plains at the edge of the city. There, you seek out the other centaurs and join their herd";
 			if player is herm:
-				say "     As a herm centaur, you are popular among the other members of the herd and are often mounted by the stallions and sought out by the mares in heat. You happily have sex with them all, whinnying lustfully as you mate with them.";
+				say ". As a herm centaur, you are popular among the other members of the herd and are often mounted by the stallions and sought out by the mares in heat. You happily have sex with them all, whinnying lustfully as you mate with them";
 			else if player is male:
-				say "     As a male centaur, you help to guard the territory. When they come into season, you are sought out by several of the mares in heat looking for you to give them a foal.";
+				say ". As a male centaur, you help to guard the territory. When they come into season, you are sought out by several of the mares in heat looking for you to give them a foal";
 			else:
-				say "     As a female centaur, you help gather food and tend to the young foals. When the time comes and you go into heat, you are mounted often by the stallions, ensuring you bear the herd a foal.";
+				say ". As a female centaur, you help gather food and tend to the young foals. When the time comes and you go into heat, you are mounted often by the stallions, ensuring you bear the herd a foal";
+			say ".";
 			if centaurmate is 1 or centaurmate is 2:
 				say "     Your people are locked in a constant conflict with the tainted, mutant centaurs. You are careful not to tell them that you accidentally let the first of these escape the corrupted tree, but you do inform them of the apple tree and its sinister fruits. Your people eradicate these trees whenever they are found with fiery arrows. Without the apples, the mutant centaurs are more easily contained if never fully purged from your lands. The military, having erected a barricade around the plains, strive to contain the centaur menace in their own way. But the pure centaurs don't see it that way and instead are happy that it keeps the soldiers off their lands.";
 		else:

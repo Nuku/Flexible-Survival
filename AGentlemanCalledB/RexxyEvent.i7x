@@ -25,15 +25,19 @@ Version 3 of RexxyEvent by AGentlemanCalledB begins here.
 
 Section 1 - Event
 
-ForcedAdoption is a situation.
+Table of GameEventIDs (continued)
+Object	Name
+Forced Adoption	"Forced Adoption"
 
-The sarea of ForcedAdoption is "High".
+Forced Adoption is a situation.
+
+The sarea of Forced Adoption is "High".
 when play begins:
-	add ForcedAdoption to badspots of guy;
-	add ForcedAdoption to badspots of girl;
-	add ForcedAdoption to badspots of furry;
+	add Forced Adoption to badspots of guy;
+	add Forced Adoption to badspots of girl;
+	add Forced Adoption to badspots of furry;
 
-Instead of Resolving a ForcedAdoption:
+Instead of Resolving a Forced Adoption:
 	if HP of Rex is 0:
 		say "     As you walk down the street of what remains of an upscale neighborhood on the outskirts of the high rise district, you spot a figure up ahead and duck out of sight before they spot you. As the figure gets closer you see that she is an attractive female canine with a thick coat of golden fur, much like the other retriever girls you've seen around the district. From your hiding place you can see she is clutching something against her ample chest with both hands.";
 		say "     She glances around nervously as she walks, when suddenly another figure, a large powerful looking male retriever, steps out of a nearby alley into her path, cutting her off. The retriever girl runs into him and stumbles backward, falling to the ground and dropping whatever she was carrying. Without even acknowledging the male's presence, she begins scrambling around on all fours, looking for her prize, until she comes face to face with his erect canine cock. Slowly she looks up over his body until she is staring lustfully into his eyes. The large male then reaches down and picks up the entranced girl, carrying her back down the alley he emerged from as she whimpers needfully.";
@@ -43,7 +47,7 @@ Instead of Resolving a ForcedAdoption:
 		now HP of Rex is 1;
 	else if HP of Rex is 4:
 		if Dog Bone is owned:
-			say "     As you once again find yourself passing through a familiar neighborhood you are suddenly stuck with concern for your favorite toy. Pulling it from your bag you hold it tightly to your chest. In a moment of clarity you realize this is the very same place you first acquired the toy... and saw its previous owner captured by a large male retriever. ";
+			say "     As you once again find yourself passing through a familiar neighborhood you are suddenly stuck with concern for your favorite toy. Pulling it from your bag you hold it tightly to your chest. In a moment of clarity you realize this is the very same place you first acquired the toy... and saw its previous owner captured by a large male retriever.";
 			say "     You ponder just how similar a position you are in to hers when you are suddenly grabbed from behind. You are spun around to see the large, sexy, male canine face to face before he presses his muzzle to your face, drawing you into a deep kiss. Your mind is flooded with the thoughts and desires of the retriever bitch you have been becoming, your infection driven to new a new lust fueled high by his deep kiss and powerful male scent.";
 			WaitLineBreak;
 			say "     The large male breaks off the kiss and starts to introduce himself. You try to reign in your mind, struggling to control the growing urges of the retriever bitch clawing at your thoughts, but in doing so you barely managed to hear any of what he says, other than his name, Rex. While he looks you over, a smile crosses his muzzle as he spots the doggie dildo clenched in both hands against your chest.";
@@ -52,7 +56,8 @@ Instead of Resolving a ForcedAdoption:
 			now Rex's Place is known;
 			now HP of Rex is 5;
 			say "[bold type]Rex's Place is now known.[roman type]";
-			now ForcedAdoption is resolved;
+			now Resolution of Forced Adoption is 1; [met Rex]
+			now Forced Adoption is resolved;
 		else:
 			say "     Once again, you find yourself in the neighborhood where you saw the golden retriever girl being abducted by the large male. As you walk by nervously you find your thoughts once again drawn to your beloved doggie sex toy, feeling an overwhelming urge to return to where you left it and play with it again.";
 			increase bonelust by 1;
@@ -64,7 +69,7 @@ Section 2 - Doggy Bone
 Table of Game Objects (continued)
 name	desc	weight	object
 "Dog Bone"	"An unusual looking sex toy with a pointed canine cock on one end, and a bone-shaped handle on the other."	1	Dog Bone
-"Dog Treats"	"A brown paper bag, emblazoned with the logo of François['] bakery, full of delicious, meaty smelling dog treats."	1	Dog Treats
+"Dog Treats"	"A brown paper bag, emblazoned with the logo of Francois['] bakery, full of delicious, meaty smelling dog treats."	1	Dog Treats
 
 Dog Treats is a grab object. It is not temporary.
 Dog Treats has a usedesc "[GourmetDogTreatsUse]".
@@ -139,6 +144,10 @@ An everyturn rule:
 
 Section 3 - Rex's Place
 
+Table of GameRoomIDs (continued)
+Object	Name
+Rex's Place	"Rex's Place"
+
 Rex's Place is a room. It is fasttravel. It is private.
 
 The description of Rex's Place is "     Crawling on all fours through the doggy door, you find yourself in a small but surprisingly tidy single room home. There are even a few pictures still hanging from the walls, mostly featuring an attractive blonde woman and her large Golden Retriever. As you spot Rex sitting in the back with his happy retriever sexpet, there is little doubt in your mind as to what became of the woman in the pictures.".
@@ -175,7 +184,35 @@ the linkaction of Rex is "[rexlinkaction]".
 to say rexlinkaction:
 	say "Possible Actions: [link]talk[as]talk Rex[end link], [link]smell[as]smell Rex[end link], [link]fuck[as]fuck Rex[end link], [link]beg for treat[end link][line break]";
 
+Table of GameCharacterIDs (continued)
+object	name
+Rex	"Rex"
+
 Rex is a man.
+[Physical details as of game start]
+ScaleValue of Rex is 3. [human sized]
+SleepRhythm of Rex is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Rex is 1. [One cock]
+Cock Length of Rex is 7. [Seven Inches]
+Cock Width of Rex is 3. [Each testicle 1.5 inches across]
+Testes of Rex is 2. [Two balls]
+Cunts of Rex is 0. [No pussy]
+Cunt Length of Rex is 0. [No Cunt]
+Cunt Width of Rex is 0. [No Cunt]
+Breasts of Rex is 2. [2 nipples]
+Breast Size of Rex is 0. [Flat at the start]
+[Basic Interaction states as of game start]
+PlayerMet of Rex is false.
+PlayerRomanced of Rex is false.
+PlayerFriended of Rex is false.
+PlayerControlled of Rex is false.
+PlayerFucked of Rex is false.
+OralVirgin of Rex is true.
+Virgin of Rex is true.
+AnalVirgin of Rex is true.
+PenileVirgin of Rex is false.
+SexuallyExperienced of Rex is true.
+MainInfection of Rex is "Retriever".
 The description of Rex is "[Rexdescribing]".
 The conversation of Rex is { "rextalk" }.
 
@@ -189,7 +226,7 @@ instead of conversing the Rex:
 		say "     You slowly approach Rex, sliding your bag off your shoulders as you step towards him. As you get close, Rex's ears suddenly perk up and he begins sniffing the air around you. 'Is that wonderful scent what I think it is?' Rex asks, eagerly trying to peer into your bag.";
 		say "     You hesitate a moment before reaching into your sack for the treats. You may only get one shot at this. Are you sure you are ready? (Y-make your escape attempt now! N-hide the cookies from Rex, you're not ready to escape just yet.)";
 		if player consents:
-			say "     With a knowing grin you reach into you backpack, digging out the bag of treats you retrieved from the bakery. Rex begins panting heavily as you pull the brown paper bag out, even drooling a bit from the corner of his mouth. 'My lovely stray bringing ME a treat? And how did you know these were my favorite?' Rex asks happily as you drop the bag into his waiting paws. With a sharp whistle he calls Karen over before digging into the bag. He divides the treats up into a few small piles, pushing one towards Karen, who barks happily in response before digging in. Next he offers one pile to you, which you politely refuse, despite a strong desire to enjoy the share he's offering you. With a confused smirk and a shrug, Rex combines your pile with his own before he begins eating. With the two retrievers seemingly distracted by your gift, you slowly begin creeping around the room, carefully approaching your prize sitting on a side table near Rex's favorite seat. Soon the bone is within your grasp again, and you reach out to take it, only to stop just short when you hear a low growl behind you. Slowly turning around, you find yourself face to face with Rex. Apparently your little distraction wasn't enough to occupy him long. You glance towards the door on the other side of the room, then back to Rex, realizing that it's unlikely you'll be able to get past with him blocking your escape. Trying to flee this situation is probably not an option.";
+			say "     With a knowing grin you reach into your backpack, digging out the bag of treats you retrieved from the bakery. Rex begins panting heavily as you pull the brown paper bag out, even drooling a bit from the corner of his mouth. 'My lovely stray bringing ME a treat? And how did you know these were my favorite?' Rex asks happily as you drop the bag into his waiting paws. With a sharp whistle he calls Karen over before digging into the bag. He divides the treats up into a few small piles, pushing one towards Karen, who barks happily in response before digging in. Next he offers one pile to you, which you politely refuse, despite a strong desire to enjoy the share he's offering you. With a confused smirk and a shrug, Rex combines your pile with his own before he begins eating. With the two retrievers seemingly distracted by your gift, you slowly begin creeping around the room, carefully approaching your prize sitting on a side table near Rex's favorite seat. Soon the bone is within your grasp again, and you reach out to take it, only to stop just short when you hear a low growl behind you. Slowly turning around, you find yourself face to face with Rex. Apparently your little distraction wasn't enough to occupy him long. You glance towards the door on the other side of the room, then back to Rex, realizing that it's unlikely you'll be able to get past with him blocking your escape. Trying to flee this situation is probably not an option.";
 			now HP of Karen is 4;
 			now inasituation is true;
 			challenge "Retriever";
@@ -198,7 +235,7 @@ instead of conversing the Rex:
 				say "     You jump back and grab the bone off the nearby table, deciding to try and make a break for it. Unfortunately your earlier assessment was quite correct and as you try to weave past Rex he steps back to block your escape, catching you by the throat as you collide with him. Before you have a chance to react, he lifts you into the air and throws you to the ground, knocking the wind out of you and sending the bone flying out of your grasp.";
 				now fightoutcome is 20;
 			if fightoutcome >= 10 and fightoutcome <= 19:
-				say "     Looking over Rex's beaten form, you feel a familiar need welling up inside you, but this time there's something different. Deep inside you a new desire is rapidly growing, a need to take what you want from the beaten canine, rather then the submissive desire to have it given to you.";
+				say "     Looking over Rex's beaten form, you feel a familiar need welling up inside you, but this time there's something different. Deep inside you a new desire is rapidly growing, a need to take what you want from the beaten canine, rather than the submissive desire to have it given to you.";
 				if player is male:
 					say "     Unable to resist these powerful new urges long, you're soon reaching for the limp canine, propping his furred ass in the air as best as you can before moving into position behind him. Softly stroking your would-be master's furred ass with one hand, you stroke your [cock size desc of player] [cock of player] shaft to full attention with the other before driving it into the canine below you. Rex whimpers beneath you at your sudden entrance. However, despite his clear displeasure at the situation, you notice Rex bracing himself against the floor as you pull back and prepare to sink into his pucker again, some small part of him apparently accepting this outcome. Before long Rex has all four paws firmly planted on the floor, pushing his arse backwards to meet each of your thrusts while groaning wantonly beneath you. Your fucking grows increasingly powerful with each push, being fueled by the swelling dominant desires washing through you. You howl in pleasure as you reach climax, driving yourself into Rex one last time as you drain your balls into his bowels. Rex groans in frustration beneath you, clearly on the verge of his own orgasm as your fucking comes to a stop, denying him of the release. Collapsing on top of Rex, your body is filled with a pleasant cooling sensation, soothing the overwhelming lust and clearing your mind of his taint. Even as your twitching member gives its last few spurts of cum, you begin to drift from consciousness as the squirming canine beneath you tries to pull himself free with a weak whine.";
 				else:
@@ -212,10 +249,11 @@ instead of conversing the Rex:
 				say "     Reaching out to wipe away the tear welling in her eye, you do your best to comfort the poor girl. Leaning into your hand, a smile creeps across Karen's face. 'Thank you,' she says again quietly. 'Do you think... I could come with you? I can't stay here in case Rex comes back, but I don't know if I would fare any better against the other monsters out there. Please?' Wiping the fresh tear from her face, you consider her request for a moment and come to the same conclusion, she's far too vulnerable right now to leave alone, and so you agree to bring her with you.";
 				say "     With an excited squeal, she pulls you in for another quick hug before dashing around the house to collect a small bag of supplies. After gathering your own things and preparing to head out, you pause for a moment, considering finding and bringing that strange bone with you, but when a quick glance around the room doesn't reveal it, you decide it's probably best to leave it behind anyway.'";
 				now Retriever Girl is tamed;
+				add "Tamed" to Traits of Retriever Girl;
 				move Karen to Breakroom;
 				say "     (The Retriever Girl is now tamed! You can make her your active pet by typing [bold type][link]pet Retriever Girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck Retriever Girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])[line break]";
 				now carried of Dog Treats is 0;
-				now KarenTimer is turns;
+				now Libido of Karen is turns;
 				now HP of Rex is 50;
 				now HP of Karen is 5;
 				now Rex's Place is unknown;
@@ -269,12 +307,12 @@ instead of conversing the Rex:
 				now HP of Karen is 1;
 			say ".";
 	else:
-		say "     [one of]'Karen is so much happier now that she's become my pet rather than the other way around. You really should give in and join her.'[or]'Would you like a treat?' Rex says, gesturing to the large jar of cookies beside him.[or]'Why don't you come over here and let me show you how nice life as a retriever sexpet can be?'[or]'It must be difficult finding relief without that dog bone sex toy, huh?' the large male says with a mischievous grin.[or]Rex doesn't seem to notice you as he twirls a small blue collar in his pawlike hand. Looking up, he spots you and waves the collar towards you, trying to entice you to put it on.[or]'Are you sure you don't want to stay here with me and Karen? Life as a pet is so much easier, and I'll even be sure to give you some lovely pups to play with.'[or]Rex doesn't seem to be interesting in talking as he rolls around on the floor, playing with Karen.[or]Rex lies sleeping on the couch with Karen in his arms. She smiles at you vacantly, almost making you jealous of the simple, happy life she now must lead.[or]'Why don't you just stay a while with us? I'm sure you'll come to enjoy your time here.'[at random]";
+		say "     [one of]'Karen is so much happier now that she's become my pet rather than the other way around. You really should give in and join her.'[or]'Would you like a treat?' Rex says, gesturing to the large jar of cookies beside him.[or]'Why don't you come over here and let me show you how nice life as a retriever sexpet can be?'[or]'It must be difficult finding relief without that dog bone sex toy, huh?' the large male says with a mischievous grin.[or]Rex doesn't seem to notice you as he twirls a small blue collar in his pawlike hand. Looking up, he spots you and waves the collar towards you, trying to entice you to put it on.[or]'Are you sure you don't want to stay here with me and Karen? Life as a pet is so much easier, and I'll even be sure to give you some lovely pups to play with.'[or]Rex doesn't seem to be interested in talking as he rolls around on the floor, playing with Karen.[or]Rex lies sleeping on the couch with Karen in his arms. She smiles at you vacantly, almost making you jealous of the simple, happy life she now must lead.[or]'Why don't you just stay a while with us? I'm sure you'll come to enjoy your time here.'[at random]";
 
 Instead of fucking the Rex:
 	[puts Retriever as lead monster for possible impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Retriever":
 			now monster is y;
 			break;
@@ -365,8 +403,8 @@ Section 7 - ALL the scenes
 
 to say fullRetrieverTF:
 	[puts Retriever as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Retriever":
 			now monster is y;
 			break;
@@ -471,13 +509,13 @@ to say RexPetMedLustScene:
 to say RexPetLowLustScene:
 	say "     Rex smiles as you approach. 'Mmm, aren't you an eager little pet, back again already?' he says with a smile, motioning you to come close, the tip of his shaft beginning to poke out of its sheath. You're soon kneeling on the ground between his thighs, face to face with his knotted rod, panting eagerly. Rex begins scratching behind your ears as he guides your head towards his pointed canine cock. You eagerly begin licking and sucking at his shaft, soon taking most of its length into your mouth, your head bobbing merrily as you suck and tease him, all the while Rex continues petting and scratching the back of your head while guiding you. Meanwhile your hands have wandered to your own [if player is female]dripping cunt[else if player is male]slick cock[else]featureless groin[end if], rubbing and stroking yourself furiously while you enjoy your master's cock.";
 	WaitLineBreak;
-	say "     Soon Rex begins moaning out loud as his grip on your head tightens and he forces his entire shaft down your throat. You feel his knot swelling in your mouth, the entire shaft throbbing and twitching as it begins spurting cum down your throat. Rex howls in pleasure, draining his balls into you, filling your tummy with his warm seed.[if player is female] You moan around his rod as he fills you with his seed, the combination of Rex's powerful orgasm and your fingers furiously fucking your own cunt driving you to orgasm as well, soaking your hand and thighs with cum before you set to work cleaning the last of Rex's seed from your lips and his still twitching cock.[else if player is male] You moan around his rod as he fills you with his seed, the combination of Rex's powerful orgasm and your furiously stroking driving you to orgasm as well, your semen spurting powerfully from your spasming tool before you set to work cleaning the last of Rex's seed from your lips and his still twitching cock.[end if]";
+	say "     Soon Rex begins moaning out loud as his grip on your head tightens and he forces his entire shaft down your throat. You feel his knot swelling in your mouth, the entire shaft throbbing and twitching as it begins spurting cum down your throat. Rex howls in pleasure, draining his balls into you, filling your tummy with his warm seed[if player is female]. You moan around his rod as he fills you with his seed, the combination of Rex's powerful orgasm and your fingers furiously fucking your own cunt driving you to orgasm as well, soaking your hand and thighs with cum before you set to work cleaning the last of Rex's seed from your lips and his still twitching cock[else if player is male]. You moan around his rod as he fills you with his seed, the combination of Rex's powerful orgasm and your furiously stroking driving you to orgasm as well, your semen spurting powerfully from your spasming tool before you set to work cleaning the last of Rex's seed from your lips and his still twitching cock[end if].";
 	WaitLineBreak;
 	say "     Rex releases your head and lays back against his seat, panting happily in the afterglow of his orgasm. You climb up alongside your master, resting your head on his shoulder, rubbing your full belly contently as you drift off to sleep.";
 
 to say RexTrainHighLustScene:
 	if player is female:
-		say "     Wanting to maintain some semblance of yourself you struggle to control your bodies urges at you approach Rex. The mental battle to control the overpowering urges is a difficult one, requiring all your willpower just to keep yourself from leaping into his arms, begging him to fuck you senseless.";
+		say "     Wanting to maintain some semblance of yourself, you struggle to control your body's urges at you approach Rex. The mental battle to control the overpowering urges is a difficult one, requiring all your willpower just to keep yourself from leaping into his arms, begging him to fuck you senseless.";
 		say "     Apparently recognizing your struggle Rex watches intently, a smug smirk across his muzzle, obviously amused by your losing battle against powerful need caused by the retriever infection and that strange bone.";
 		say "     Finally you can take no more, falling to your hands and knees, giving in to your bodies desires once again. You crawl forward to Rex, begging him to help sate the fiery desire consuming you. He draws his response out for what seems like a lifetime, clearly still enjoying watching you squirm under the influence of the infection. Your already trying to take the edge off yourself, two fingers working deep into your dripping cunt with no avail by the time Rex finally agrees.";
 		WaitLineBreak;
@@ -498,10 +536,10 @@ to say RexTrainMedLustScene:
 		say "     As you approach Rex you become keenly aware of the powerful need burning inside you, and Rex's powerful male musk only serves to increase the desire to submit to him. You know giving in to these urges is exactly what Rex wants you to do, but at the same time the need only seems to becomes more unbearable the longer you resist.";
 		say "     As if sensing your internal struggle Rex steps forward, placing his pawlike hand on your shoulders he leans in close to whisper in your ear, his soft touch sending shivers through your body. 'It's alright,' he whispers. 'You don't need to resist these feelings.' His overwhelming scent is almost intoxicating to your lust-addled mind at this proximity, you barely manage a weak nod before falling into his embrace.";
 		WaitLineBreak;
-		say "     After a few moments, Rex breaks the hug and bends down to pick you up, carrying you to the back room where his bed awaits while you bury your face in the soft fur of his powerful chest, bathing yourself in his arousing scent. By the time you've reached the bed the last of your resistance has long since slipped away and your bodies urges have taken full control, leaving you panting in anticipation as Rex gently lays you on the bed.";
-		say "     Slowly at first, he begins petting and stroking your body, each touch sending electric shivers through your already aroused body. He progresses slowly up your body, rubbing, petting and even scratching in all the right places, eventually reaching your head. He reaches back and begins scratching behind your ears softly as he leans in close once again and licks you cheek.";
+		say "     After a few moments, Rex breaks the hug and bends down to pick you up, carrying you to the back room where his bed awaits while you bury your face in the soft fur of his powerful chest, bathing yourself in his arousing scent. By the time you've reached the bed the last of your resistance has long since slipped away and your body's urges have taken full control, leaving you panting in anticipation as Rex gently lays you on the bed.";
+		say "     Slowly at first, he begins petting and stroking your body, each touch sending electric shivers through your already aroused body. He progresses slowly up your body, rubbing, petting and even scratching in all the right places, eventually reaching your head. He reaches back and begins scratching behind your ears softly as he leans in close once again and licks your cheek.";
 		say "     By this point you realize he's laying almost completely on top of you and without stopping the delicious doggy kisses he reaches down and begins guiding his rod to tease the outer folds of your feminine passage. You can't help but moan in delight as he begins to slowly push himself deeper into you, your legs wrapping around his body trying to speed up his slow, deliberate thrusting. As his pace quickens your body begin to match his rhythm, matching each of his thrusts, trying to force as much of him into you as possible.";
-		say "     With each push you feel more and more of his canine knot pushing into you, only to be pulled back again teasingly. Finally Rex's pace begins to reach its peak and with one final powerful thrust and your bucking back to meet him the entirety of his knot is forced into you, sealing you together as you both howl in pleasure.";
+		say "     With each push you feel more and more of his canine knot pushing into you, only to be pulled back again teasingly. Finally Rex's pace begins to reach its peak, and with one final powerful thrust and you bucking back to meet him, the entirety of his knot is forced into you, sealing you together as you both howl in pleasure.";
 		say "     You both lay there, locked together for some time, your passage still convulsing around his rod, milking him for all he's worth. As the afterglow finally begins to fade Rex gives you a few final licks on the cheek as he pulls his softening manhood from you, letting your combined juices overflow out onto the bed. He pats you on the head a few times, telling you what a good girl you are before getting up and leaving you to recover on your own.[impregchance]";
 	else:
 		say "     Slowly you approach Rex, still struggling your decision to have him help you sate the need burning in your body. Rex smiles broadly as you finally give in to the urges and ask for his 'help' in the matter. 'I'd love to show you more of what it's like to be a proper pet. You seem to be lacking the proper equipment, but I suppose we make due though,' he says as he smacks your ass firmly before heading off to the back bedroom.";
@@ -519,13 +557,13 @@ to say RexTrainLowLustScene:
 to say RexPetLongWait:
 	say "     Rex approaches you purposefully, with a look in his eyes you could easily mistake for hunger, 'It's been quite some time since we've spent any [']special['] time together,' Rex says, eyeing your body up and down as he slowly moves behind you. 'Don't you want to be a good pet and show your master how thankful you are?' he asks, placing a paw on each of your shoulders. You feel a familiar burning need welling up inside you as Rex gently massages your shoulders, and it rapidly grows worse as he starts grinding his firm cock against your backside. With your lust fogged mind finding no reason to disagree with him you are soon nodding vacantly, allowing yourself to be gently steered towards the nearby bed.";
 	if player is female:
-		say "     Upon reaching the foot of the bed Rex turns you around slowly, giving you a quick doggy kiss on the cheek before pushing you onto the bed. Wasting no time with foreplay he eagerly pounces on your needy body, only taking a moment to drive two wriggling fingers into your cunt to ensure your good and wet before he begins positioning his throbbing maleness. Gone is Rex's usual slow tender lovemaking, replaced by an almost feral dominance. Rex releases a low groan as he pounds into you, his already swollen knot teasing your netherlips within the first few thrusts. This long powerful fucking has you cum several times before Rex finally manages to force his knot into you, leaving you howling in both pleasure and pain as you stretch around the seemingly larger than usual mass of flesh. Rex pauses for a moment, panting heavily above you as he stares int your eyes. After a few moments you can't help but look away, and when you do Rex resumes his eager humping, tugging and teasing the knot inside your body as he thrusts his hips against yours. Finally you feel his entire body tense up above your, a low growl quickly grows into a sharp howl as his twitching cock unleashes a torrent of thick, hot semen, draining his swollen balls into your womb.";
+		say "     Upon reaching the foot of the bed, Rex turns you around slowly, giving you a quick doggy kiss on the cheek before pushing you onto the bed. Wasting no time with foreplay, he eagerly pounces on your needy body, only taking a moment to drive two wriggling fingers into your cunt to ensure you're good and wet before he begins positioning his throbbing maleness. Gone is Rex's usual slow, tender lovemaking, replaced by an almost feral dominance. Rex releases a low groan as he pounds into you, his already swollen knot teasing your netherlips within the first few thrusts. This long powerful fucking has you cum several times before Rex finally manages to force his knot into you, leaving you howling in both pleasure and pain as you stretch around the seemingly larger than usual mass of flesh. Rex pauses for a moment, panting heavily above you as he stares into your eyes. After a few moments you can't help but look away, and when you do Rex resumes his eager humping, tugging and teasing the knot inside your body as he thrusts his hips against yours. Finally you feel his entire body tense up above your, a low growl quickly grows into a sharp howl as his twitching cock unleashes a torrent of thick, hot semen, draining his swollen balls into your womb.";
 		WaitLineBreak;
-		say "     Finally spent Rex collapses on top of you, sighing contently. He lays there from some time waiting for his knot to soften enough to free himself, and as he does he seems to return to his usual tender loving self, licking and nuzzling you affectionately while he waits. When he is finally able to pull himself from your well used cunt he does so with an audible pop, leaving you whimpering at the sudden void as he takes his leave. You lay there alone for some time, a mixture of Rex's seed and your own cum dribbling from your overflowing cunt, as you ponder this previously unseen dominant side of your canine owner, uncertain whether or not you want to keep him waiting again.[impregchance]";
+		say "     Finally spent, Rex collapses on top of you, sighing contently. He lays there from some time waiting for his knot to soften enough to free himself, and as he does he seems to return to his usual tender loving self, licking and nuzzling you affectionately while he waits. When he is finally able to pull himself from your well used cunt he does so with an audible pop, leaving you whimpering at the sudden void as he takes his leave. You lay there alone for some time, a mixture of Rex's seed and your own cum dribbling from your overflowing cunt, as you ponder this previously unseen dominant side of your canine owner, uncertain whether or not you want to keep him waiting again.[impregchance]";
 	else:
-		say "     Upon reaching the foot of the bed Rex nuzzles the side of your face from behind, grinding his erection against your back one last time before he pushes you onto the bed. Wasting no time with foreplay he eagerly pounces on your prone body, only taking a few moments to wet two fingers with his dribbling pre, working them in and around your tight hole to ensure your well lubed before positioning his throbbing maleness. Gone is Rex's usual slow tender lovemaking, replaced by an almost feral dominance. Rex releases a low groan as he pounds into you, his already swollen knot pressing against your cheeks within the first few thrusts. This long powerful fucking has you moaning lewdly beneath him for some time before Rex finally manages to force his knot into you, leaving you howling in both pleasure and pain as you stretch around the seemingly larger than usual mass of flesh. Rex pauses for a moment, panting heavily above you as he gently strokes the back of your head. Eventually he resumes his eager humping, tugging and teasing the knot inside your body as he thrusts his hips against yours. Finally you feel his entire body tense up above your, a low growl quickly grows into a sharp howl as his twitching cock unleashes a torrent of thick, hot semen, draining his swollen balls into your body.[mimpregchance]";
+		say "     Upon reaching the foot of the bed, Rex nuzzles the side of your face from behind, grinding his erection against your back one last time before he pushes you onto the bed. Wasting no time with foreplay, he eagerly pounces on your prone body, only taking a few moments to wet two fingers with his dribbling pre, working them in and around your tight hole to ensure you're well lubed before positioning his throbbing maleness. Gone is Rex's usual slow, tender lovemaking, replaced by an almost feral dominance. Rex releases a low groan as he pounds into you, his already swollen knot pressing against your cheeks within the first few thrusts. This long powerful fucking has you moaning lewdly beneath him for some time before Rex finally manages to force his knot into you, leaving you howling in both pleasure and pain as you stretch around the seemingly larger than usual mass of flesh. Rex pauses for a moment, panting heavily above you as he gently strokes the back of your head. Eventually he resumes his eager humping, tugging and teasing the knot inside your body as he thrusts his hips against yours. Finally you feel his entire body tense up above your, a low growl quickly grows into a sharp howl as his twitching cock unleashes a torrent of thick, hot semen, draining his swollen balls into your body.[mimpregchance]";
 		WaitLineBreak;
-		say "     Finally spent Rex collapses on top of you, sighing contently He lays there from some time waiting for his knot to soften enough to free himself, and as he does he seems to return to his usual tender loving self, licking and nuzzling you affectionately while he waits. When he is finally able to pull himself from your tender pucker he does so with an audible pop, leaving you whimpering at the sudden void as he takes his leave. You lay there alone for some time, Rex's overflowing seed slowly leaking from your ass, as you ponder this previously unseen dominant side of your canine owner, uncertain whether or not you want to keep him waiting again.";
+		say "     Finally spent, Rex collapses on top of you, sighing contently. He lays there from some time waiting for his knot to soften enough to free himself, and as he does he seems to return to his usual tender loving self, licking and nuzzling you affectionately while he waits. When he is finally able to pull himself from your tender pucker he does so with an audible pop, leaving you whimpering at the sudden void as he takes his leave. You lay there alone for some time, Rex's overflowing seed slowly leaking from your ass, as you ponder this previously unseen dominant side of your canine owner, uncertain whether or not you want to keep him waiting again.";
 
 to say RexPetMedWait1:
 	say "     You can't help but notice Rex trying to subtly call Karen over. As you watch out of the corner of your eye you see Rex whispering something into Karen's ear, both of them glancing over at you frequently. With each word Karen becomes noticeably more excited, her expression brightening rapidly and her ears perking up in anticipation.";

@@ -57,7 +57,7 @@ to say BeatTheFrostDrake:
 	say "     Knocking back the big drake he stumbles forward toward you before collapsing and sliding forward a few feet before stopping in front of you. He tried to get to his feet but is too dazed to at. You do however notice his member his still hard, it throbs in need slightly, leaving you with a choice on what to do next.";
 	say "     [bold type]Should you show this apex predator who's in charge?[roman type][line break]";
 	LineBreak;
-	say "     ([link]Y[as]y[end link]) - Yes, show him whose boss.";
+	say "     ([link]Y[as]y[end link]) - Yes, show him who's boss.";
 	say "     ([link]N[as]n[end link]) - No, not gonna happen.";
 	if player consents: [Decides to fuck Frost Drake]
 		LineBreak;
@@ -111,13 +111,9 @@ to say FrostDrakeSexMenu:
 					say "[FuckFrostDrake]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You back away and shake your head.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You back away and shake your head.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -129,13 +125,13 @@ to say SuckFrostDrake:
 to say OralFrostDrake:
 	if player is herm: 			  [Yes = HERM Identified!]
 		say "     Grabbing ahold of the frost drake's head you stand victorious before the creature and bare your hard member to him. You pointedly remind him of the pain he's in for if he bites, and surprisingly he nods to you. You grin down at him and push his maw toward your crotch. His tongue lashes out and coats your cock in a thin layer of saliva before wrapping it tightly around your throbbing member. Your legs buckle and you struggle briefly to stay standing as the drake eagerly sucks you off with nothing but an incredibly flexible tongue and pushes forward against your crotch. Your pushed back a foot before stopping yourself and holding his head back firmly, ordering him to go slower, he complies, unwrapping nearly half his tongue and starts to gently flick his tongue around your tip, tickling your glands with his slippery muscle and causing you to thrust forward. You then order him to go faster, then to push harder with his nose.";
-		say "     For nearly twenty minutes you have this drake at your beck and call. Having him service your spit soaked member any and every which-way you like. Staring down at the burning embers of lust that is the drake's eyes, you smile and begin to push and hump the fuck-drake's face. You then throw your head back and allow yourself release. Your reptilian lover tightens his tongue-grip on your phallus until its nearly painfully tight and your jism is squirting out like a small fountain. Your cum spurts out and around his slick tongue and across his draconic snout as you climax, your toes curling and your fingers clenched tightly. Coming down from your high you smile affectionately down at the big lizard with the impressive tongue and cum covered face before patting him on the head, gathering your stuff and moving on with your apocalypse.";
+		say "     For nearly twenty minutes you have this drake at your beck and call. Having him service your spit soaked member any and every which-way you like. Staring down at the burning embers of lust that is the drake's eyes, you smile and begin to push and hump the fuck-drake's face. You then throw your head back and allow yourself release. Your reptilian lover tightens his tongue-grip on your phallus until it's nearly painfully tight and your jism is squirting out like a small fountain. Your cum spurts out and around his slick tongue and across his draconic snout as you climax, your toes curling and your fingers clenched tightly. Coming down from your high you smile affectionately down at the big lizard with the impressive tongue and cum covered face before patting him on the head, gathering your stuff and moving on with your apocalypse.";
 	else if player is female: 	  [Yes = FEMALE Identified!]
 		say "     Grabbing ahold of the frost drake's head you stand victorious before the creature and bare your damp sex to him. You pointedly remind him of the pain he's in for if he bites, and surprisingly he nods to you. You grin down at him and push his maw toward your crotch. His tongue lashes out and coats your cunt in a thin layer of saliva before pushing into your lips. Your legs buckle and you struggle briefly to stay standing as the drake eagerly pushes further into your legs. Your pushed back a foot before stopping yourself and holding his head back firmly, ordering him to go slower, he complies, lapping at your sensitive lips gently and with great precision against your soft spots. You then order him to go faster, then to push harder with his nose.";
 		say "     For nearly twenty minutes you have this drake at your beck and call. Having him service your spit soaked cunt any and every which-way you like. Staring down at the burning embers of lust that is the drake's eyes, you smile and begin to push and hump the fuck-drake's face. You then throw your head back and allow yourself release. Your reptilian lover thrusts up hitting your most sensitive places in rapid succession and you clamp down around his slick tongue. Your juices squirt out and around his tooth-filled maw as you climax, your toes curling and your fingers clenched tightly. Coming down from your high you smile affectionately down at the big lizard with the impressive tongue before patting him on the head, gathering your stuff and moving on with your apocalypse.";
 	else if player is male: 	  [Yes = MALE Identified!]
 		say "     Grabbing ahold of the frost drake's head you stand victorious before the creature and bare your hard member to him. You pointedly remind him of the pain he's in for if he bites, and surprisingly he nods to you. You grin down at him and push his maw toward your crotch. His tongue lashes out and coats your cock in a thin layer of saliva before wrapping it tightly around your throbbing member. Your legs buckle and you struggle briefly to stay standing as the drake eagerly sucks you off with nothing but an incredibly flexible tongue and pushes forward against your crotch. Your pushed back a foot before stopping yourself and holding his head back firmly, ordering him to go slower, he complies, unwrapping nearly half his tongue and starts to gently flick his tongue around your tip, tickling your glands with his slippery muscle and causing you to thrust forward. You then order him to go faster, then to push harder with his nose.";
-		say "     For nearly twenty minutes you have this drake at your beck and call. Having him service your spit soaked member any and every which-way you like. Staring down at the burning embers of lust that is the drake's eyes, you smile and begin to push and hump the fuck-drake's face. You then throw your head back and allow yourself release. Your reptilian lover tightens his tongue-grip on your phallus until its nearly painfully tight and your jism is squirting out like a small fountain. Your cum spurts out and around his slick tongue and across his draconic snout as you climax, your toes curling and your fingers clenched tightly. Coming down from your high you smile affectionately down at the big lizard with the impressive tongue and cum covered face before patting him on the head, gathering your stuff and moving on with your apocalypse.";
+		say "     For nearly twenty minutes you have this drake at your beck and call. Having him service your spit soaked member any and every which-way you like. Staring down at the burning embers of lust that is the drake's eyes, you smile and begin to push and hump the fuck-drake's face. You then throw your head back and allow yourself release. Your reptilian lover tightens his tongue-grip on your phallus until it's nearly painfully tight and your jism is squirting out like a small fountain. Your cum spurts out and around his slick tongue and across his draconic snout as you climax, your toes curling and your fingers clenched tightly. Coming down from your high you smile affectionately down at the big lizard with the impressive tongue and cum covered face before patting him on the head, gathering your stuff and moving on with your apocalypse.";
 
 To say FuckFrostDrake:
 	if player is herm: 			  [Yes = HERM Identified!]
@@ -145,12 +141,12 @@ To say FuckFrostDrake:
 		say "     You shove your large prey unto his scaly stomach and slap his muscled draconic ass. The drake lets out an undignified hiss, but after another slap to his ass, he quiets down. You caress the pale white scales of his ass before feeling under his tail for his clenching asshole. You finger and diddle his anal passage, fishing out your member while you do. You lick your finger and stick it deep into the drake's anal walls, and the drake lets out a groan as you stroke yourself to readiness. You withdraw your finger from his tight confines and align your cock with his pronounced anus. Without any delay, you thrust into the draconic drake. Your drake prey lets out another hiss, this one in raw delight.";
 		say "     Pushing as far as you can go into his tight cavity, you pull back until just the tip remains before slamming back into the warm confines of the drake's ass. You hammer back and forth, holding the tail of the drake as an anchor while your hips slam into his. You squeeze at the shaking muscled asscheeks you're currently pounding into and feel an unnatural warmth flow over yourself. With a jolt of energy, you speed up, and before you realize it, you're bottoming out in the drake's tight stretched ass and emptying your entire load into his gut. He lets out a squeal and collapses downward, clenching around your thrusting member, you hear the dribble of seed spilling onto to ground as the drake lets out a few last humps before he stops moving. You smile down at your unconscious drake before withdrawing your meat from the dragon ass and tucking your slimy member away. You watch as you cum leaks from the drake's dominated ass before you turn and walk off.";
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Frost Drake";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -198,7 +194,8 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Frost Drake ends here.

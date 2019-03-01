@@ -20,7 +20,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right thigh"	"Your right leg bends as your thigh becomes well built and furry."	"Your right thigh is covered with tan fur and looks stronger."	"The tan fur on your right thigh sheds as it shifts."
 "right shin"	"Your leg assumes a digitigrade stance as the fur spreads over your lower right leg."	"Your right shin looks feline."	"Your masculine feline right shin sheds as it shifts."
 "right foot" 	"The brown fur flows down over your right foot, leaving a paw in its place."	"You have a lion's paw for a right foot."	"Your large lion's right paw changes."
-"rear" 	"Fur flows smoothly over your now well built ass."	"Your rear end is coated in tan fur."	"Your rear softens and sheds it's fur as it changes."
+"rear" 	"Fur flows smoothly over your now well built ass."	"Your rear end is coated in tan fur."	"Your rear softens and sheds its fur as it changes."
 
 Alpha_Lion_gene is an infection gene. The tf table of Alpha_Lion_gene is Table of Lion Shifts.
 
@@ -97,7 +97,7 @@ Alpha Lion ends here.
 
 Alpha Lion infection tables and monster based on Flexible Infection v3, for inclusion in Infection based games.
 
-Example:  * Simba the Alpha Lion - Adds Simba to Your Apartment.
+Example: * Simba the Alpha Lion - Adds Simba to Your Apartment.
 
 	*: "Simba the Alpha Lion"
 

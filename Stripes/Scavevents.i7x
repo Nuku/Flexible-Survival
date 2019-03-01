@@ -6,6 +6,9 @@ Version 3 of Scavevents by Stripes begins here.
 
 "Adds a batch of random events which can occur while scavenging around the city."
 
+Table of GameEventIDs (continued)
+Object	Name
+Tight Fit	"Tight Fit"
 
 Section 1 - Tight Fit
 
@@ -95,6 +98,10 @@ Instead of resolving a Tight Fit:
 
 Section 2 - Protected Supplies
 
+Table of GameEventIDs (continued)
+Object	Name
+Protected Supplies	"Protected Supplies"
+
 Protected Supplies is a scavevent.
 The sarea of Protected Supplies is "Allzones".
 
@@ -132,19 +139,18 @@ Instead of resolving a Protected Supplies:
 				if scavengetarget is "soda":
 					now y is "soda";
 				say "Your specific hunting leads you towards your target.";
-	now monster is a random number from 1 to number of filled rows in the table of random critters;
+	now monster is a random number from 1 to number of filled rows in the Table of Random Critters;
 	let Q be a list of numbers;
-	repeat with tt running from 1 to number of filled rows in table of random critters:
-		choose row tt from the table of random critters;
+	repeat with tt running from 1 to number of filled rows in Table of Random Critters:
+		choose row tt from the Table of Random Critters;
 		if there is a lev entry:
-			if lev entry > level of player plus levelwindow and hardmode is false:
+			if lev entry > level of player and hardmode is false:
 				next;
 		else:
 			next;
 		if area entry matches the text battleground:
-			if there is a nocturnal in row tt of table of random critters:
-				if (nocturnal entry is true and daytimer is day) or (nocturnal entry is false and daytimer is night):
-					next; [skips if day/night doesn't match]
+			if (DayCycle entry is 2 and daytimer is day) or (DayCycle entry is 1 and daytimer is night):
+				next; [skips if day/night doesn't match]
 			add tt to q;
 			if "Like Attracts Like" is listed in the feats of player and skinname of player is name entry and a random chance of 1 in 2 succeeds:
 				add tt to q;
@@ -159,7 +165,7 @@ Instead of resolving a Protected Supplies:
 		repeat with Z running through q:
 			now monster is Z;
 			break;
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if lev entry < level of player and hardmode is true:
 			hardmodeboost;
 		say "In your searching through the city, you come across some [y] and move to get it.";
@@ -200,6 +206,10 @@ Instead of resolving a Protected Supplies:
 
 Section 3 - Dropped Handbag
 
+Table of GameEventIDs (continued)
+Object	Name
+Dropped Handbag	"Dropped Handbag"
+
 Dropped Handbag is a scavevent.
 the sarea of Dropped Handbag is "Allzones".
 
@@ -226,13 +236,13 @@ Instead of resolving a Dropped Handbag:
 		else:
 			say "     You open the bag and put your hand in to rummage through its contents, but are met with a sticky surprise. Pulling it out, you find your hand covered in wet, sticky cum. You can feel the tingles from the infected cum on your hand. Someone, possibly the bag's original owner, filled it with their cum and left it for someone like you to find.";
 			LineBreak;
-			sort table of random critters in random order;
-			repeat with X running from 1 to number of filled rows in table of random critters:
-				choose row X from the table of random critters;
-				if area entry matches the text battleground and ( there is no non-infectious in row monster of table of random critters or non-infectious entry is false ):
+			sort Table of Random Critters in random order;
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:
+				choose row X from the Table of Random Critters;
+				if area entry matches the text battleground and ( there is no non-infectious in row monster of Table of Random Critters or non-infectious entry is false ):
 					now monster is X;
 					break;
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			infect;
 			decrease humanity of player by 5;
 	else:
@@ -242,6 +252,10 @@ Instead of resolving a Dropped Handbag:
 
 
 Section 4 - Dented Bike (by Wahn)
+
+Table of GameEventIDs (continued)
+Object	Name
+Dented Bike	"Dented Bike"
 
 Dented Bike is a scavevent.
 The sarea of Dented Bike is "Allzones".
@@ -272,6 +286,10 @@ Instead of resolving a Dented Bike:
 
 
 Section 5 - Looted Supermarket (by Wahn)
+
+Table of GameEventIDs (continued)
+Object	Name
+Looted Supermarket	"Looted Supermarket"
 
 Looted Supermarket is a scavevent.
 The sarea of Looted Supermarket is "Allzones".
@@ -337,6 +355,10 @@ Instead of resolving a Looted Supermarket:
 
 Section 6 - Abandoned Cars (by Wahn)
 
+Table of GameEventIDs (continued)
+Object	Name
+Abandoned Cars	"Abandoned Cars"
+
 Abandoned Cars is a scavevent.
 The sarea of Abandoned Cars is "Allzones".
 
@@ -373,6 +395,10 @@ Section 8 - Free Milk (by Wahn)
 
 Section 9 - Manna from Heaven (by Wahn)
 
+Table of GameEventIDs (continued)
+Object	Name
+Manna from Heaven	"Manna from Heaven"
+
 Manna from Heaven is a scavevent.
 The sarea of Manna from Heaven is "Outside".
 
@@ -383,6 +409,10 @@ Instead of resolving a Manna from Heaven:
 
 
 Section 10 - Plains Scavenging (by Kaleem)
+
+Table of GameEventIDs (continued)
+Object	Name
+Plains Scavenging	"Plains Scavenging"
 
 Plains Scavenging is a scavevent.
 The sarea of Plains Scavenging is "Plains"
@@ -504,11 +534,15 @@ Instead of resolving a Plains Scavenging:
 
 Section 11 - Garden Veggies
 
+Table of GameEventIDs (continued)
+Object	Name
+Garden Veggies	"Garden Veggies"
+
 Garden Veggies is a scavevent.
 The sarea of Garden Veggies is "Outside".
 veggiegardenfight is a number that varies.
 gardenveg is a number that varies.
-lastgardenveg is a number that varies. lastgardenveg is normally 255.
+lastgardenveg is a number that varies. lastgardenveg is usually 255.
 when play begins:
 	add Garden Veggies to badspots of furry;
 
@@ -550,6 +584,10 @@ Instead of resolving a Garden Veggies:
 
 
 Section 12 - Free Drink
+
+Table of GameEventIDs (continued)
+Object	Name
+Free Drink	"Free Drink"
 
 Free Drink is a scavevent.
 The sarea of Free Drink is "Campus".
@@ -609,6 +647,10 @@ Instead of resolving a Free Drink:
 
 Section 13 - Liefeld's Disease
 
+Table of GameEventIDs (continued)
+Object	Name
+DbLD	"DbLD"
+
 DbLD is a scavevent.
 The sarea of DbLD is "Allzones".
 
@@ -623,6 +665,10 @@ Instead of resolving a DbLD:
 
 
 Section 14 - Hospital Scavenging
+
+Table of GameEventIDs (continued)
+Object	Name
+Patient Rooms	"Patient Rooms"
 
 Patient Rooms is a scavevent.
 The sarea of Patient Rooms is "Hospital".
@@ -702,6 +748,10 @@ Instead of resolving a Patient Rooms:
 
 Section 15 - Shattered House
 
+Table of GameEventIDs (continued)
+Object	Name
+Shattered House	"Shattered House"
+
 Shattered House is a scavevent.
 The sarea of Shattered House is "Allzones".
 
@@ -766,6 +816,10 @@ Section 17 - Scattered Clothing
 
 RandomItemPick is a number that varies.
 
+Table of GameEventIDs (continued)
+Object	Name
+Scattered Clothing	"Scattered Clothing"
+
 Scattered Clothing is a scavevent.
 The sarea of Scattered Clothing is "Allzones".
 
@@ -783,7 +837,7 @@ Instead of resolving a Scattered Clothing:
 		-- 4: [Feet Item]
 			say "[GiveRandomFeetItem]";
 
-WaistItemsList is a list of objects that varies.
+WaistItemsList is a list of objects that varies.[@Tag:NotSaved]
 the WaistItemsList is {ripped jeans, black jeans, sturdy jeans, skinny jeans, hot pants, gray pants, camo pants, jogging pants, bermuda shorts, black miniskirt, pencil skirt, floral skirt}.
 
 to say GiveRandomWaistItem:
@@ -791,7 +845,7 @@ to say GiveRandomWaistItem:
 	increase carried of entry RandomItemPick of WaistItemsList by 1;
 	say "[bold type]You gain [if plural of entry RandomItemPick of WaistItemsList is true][entry RandomItemPick of WaistItemsList][else]a [entry RandomItemPick of WaistItemsList][end if]![roman type][line break]";
 
-ChestItemsList is a list of objects that varies.
+ChestItemsList is a list of objects that varies.[@Tag:NotSaved]
 the ChestItemsList is {black t-shirt, white t-shirt, maroon pullover, zephyr shirt, camo shirt, sleeveless shirt, mesh shirt}.
 
 to say GiveRandomChestItem:
@@ -799,7 +853,7 @@ to say GiveRandomChestItem:
 	increase carried of entry RandomItemPick of ChestItemsList by 1;
 	say "[bold type]You gain [if plural of entry RandomItemPick of ChestItemsList is true][entry RandomItemPick of ChestItemsList][else]a [entry RandomItemPick of ChestItemsList][end if]![roman type][line break]";
 
-FeetItemsList is a list of objects that varies.
+FeetItemsList is a list of objects that varies.[@Tag:NotSaved]
 the FeetItemsList is {combat boots, brown loafers, leather sandals, high heels, stiletto heels, jogging shoes, cowboy boots}.
 
 to say GiveRandomFeetItem:
@@ -807,7 +861,7 @@ to say GiveRandomFeetItem:
 	increase carried of entry RandomItemPick of FeetItemsList by 1;
 	say "[bold type]You gain [if plural of entry RandomItemPick of FeetItemsList is true][entry RandomItemPick of FeetItemsList][else]a [entry RandomItemPick of FeetItemsList][end if]![roman type][line break]";
 
-CrotchItemsList is a list of objects that varies.
+CrotchItemsList is a list of objects that varies.[@Tag:NotSaved]
 the CrotchItemsList is {ragged loincloth, simple loincloth, boxer briefs, white briefs, orange jockstrap, mesh undies, pink panties}.
 
 to say GiveRandomCrotchItem:

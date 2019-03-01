@@ -36,19 +36,27 @@ Version 1 of Sidney by Stripes begins here.
 
 Section 0 - Basic NPC Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Sidney	"Sidney"
+
 Sidney is a woman.
 The description of Sidney is "[sidneydesc]".
 The conversation of Sidney is { "Thanks." }.
 the scent of Sidney is "[sidneyscent]".
-sidneyformtalk is a truth state that varies. sidneyformtalk is normally false.
-sidneyanal is a truth state that varies. sidneyanal is normally false.
-sidneytalk1 is a truth state that varies. sidneytalk1 is normally false.
-sidneytalk2 is a truth state that varies. sidneytalk2 is normally false.
-sidneytalk3 is a truth state that varies. sidneytalk3 is normally false.
-sidneytalk4 is a truth state that varies. sidneytalk4 is normally false.
+sidneyformtalk is a truth state that varies. sidneyformtalk is usually false.
+sidneyanal is a truth state that varies. sidneyanal is usually false.
+sidneytalk1 is a truth state that varies. sidneytalk1 is usually false.
+sidneytalk2 is a truth state that varies. sidneytalk2 is usually false.
+sidneytalk3 is a truth state that varies. sidneytalk3 is usually false.
+sidneytalk4 is a truth state that varies. sidneytalk4 is usually false.
 fangsidney is a truth state that varies. fangsidney is usually false.
 
 Section 1 - Event
+
+Table of GameEventIDs (continued)
+Object	Name
+Meeting Sidney	"Meeting Sidney"
 
 Meeting Sidney is a situation.
 The sarea of Meeting Sidney is "Outside".
@@ -201,7 +209,7 @@ to say sidney_rfv_cap:
 		now level of Sidney is 21;
 		move Sidney to Breakroom;
 		move player to Breakroom;
-		now battleground is "void";
+		now Resolution of Meeting Sidney is 1; [became a vixen]
 		now Meeting Sidney is resolved;
 	else:
 		say "     You give chase, doing your best to follow her up the ladder and race along the rooftops. You go from rooftop to rooftop, going up or down as needed as the two of you go on a zigzagging chase. You're able to keep her in sight for a while, but she's too agile and you fall further and further behind as she takes surprising turns or crosses obstacles you must circumvent. Eventually, she loses you entirely and you have to head back to Sidney with the bad news. The two of you doubt you'll get another chance at her, as she'll be on the lookout for you now and won't let you get close again.";
@@ -220,9 +228,9 @@ to say sidney_otteress_cap:
 			increase bonus by 2;
 		let targetnum be 15;
 		let dice be a random number between 1 and 20;
-		say "Charisma - You roll 1d20([dice])+[bonus]: [dice + bonus] vs [targetnum]: ";
+		say "     Charisma - You roll 1d20([dice])+[bonus]: [dice + bonus] vs [targetnum]: ";
 		if bonus + dice >= targetnum:
-			say "     As you draw nearer, you start to explain what you want, the otteress listening. You know it sounds kind of crazy, so you try your best to reassure her that you aren't trying to hurt her or fuck her. At first, she seems skeptical, but you do manage to keep her listening long enough that Sidney can have his say. As he told you, he explains how he's always wanted to be a woman and goes on to say how pretty she is and that he'd like to be just like her. It won't hurt or change her, you add, just that it'll make Sidney identical to her.";
+			say "As you draw nearer, you start to explain what you want, the otteress listening. You know it sounds kind of crazy, so you try your best to reassure her that you aren't trying to hurt her or fuck her. At first, she seems skeptical, but you do manage to keep her listening long enough that Sidney can have his say. As he told you, he explains how he's always wanted to be a woman and goes on to say how pretty she is and that he'd like to be just like her. It won't hurt or change her, you add, just that it'll make Sidney identical to her.";
 			WaitLineBreak;
 			say "     'So you'd be like my twin or something?' she asks. 'I... I always wanted a sister. You promise this won't hurt?' she asks nervously. 'I don't like needles.'";
 			say "     'Just a little pinch and it'll be over. Then we'll be sisters,' Sidney says tenderly, smiling as he holds the device out. The otteress nods and closes her eyes tightly as the soldier pushes the short needle into her side and hold it there for a few moments. She gives a little eep and shivers, but holds herself steady. With a pull of the trigger, a whirring sound and a flutter of indicator lights, it is done.";
@@ -236,15 +244,16 @@ to say sidney_otteress_cap:
 				now level of Sidney is 22;
 				move Sidney to Breakroom;
 				move player to Breakroom;
-				now battleground is "void";
+				now Resolution of Meeting Sidney is 2; [became an otter, stayed]
 				now Meeting Sidney is resolved;
 			else:
 				say "     Suggesting that Sidney go with her, she smiles happily and gives her a big hug. 'Oh, that's right! You're family now. Come, you need to meet everyone else. They'll [bold type]love[roman type] you,' she gushes as they share more hugs and kisses, some of which get pretty heated. Bidding you a fond farewell, the two of them climb onto a small scooter the otteress had hidden and zip off towards the shore.";
 				now HP of Sidney is 99;
 				now level of Sidney is 22;
+				now Resolution of Meeting Sidney is 3; [became an otter, left]
 				now Meeting Sidney is resolved;
 		else:
-			say "     As you draw nearer, you start to explain what you want, the otteress listening. 'Get away you're crazy wierdos!' she exclaims suddenly, turning and running off. You try to pursue her, but it's too late. She's got a small scooter stashed nearby that she uses to make her escape. You'll not get another chance to approach her now.";
+			say "As you draw nearer, you start to explain what you want, the otteress listening. 'Get away you crazy weirdos!' she exclaims suddenly, turning and running off. You try to pursue her, but it's too late. She's got a small scooter stashed nearby that she uses to make her escape. You'll not get another chance to approach her now.";
 			now sa_otteress is true;
 	else:
 		let bonus be ( strength of player - 10 ) / 2;
@@ -257,9 +266,9 @@ to say sidney_otteress_cap:
 		if hardmode is true:
 			increase targetnum by level of player / 3;
 		let dice be a random number between 1 and 20;
-		say "Strength - You roll 1d20([dice])+[bonus]: [dice + bonus] vs [targetnum]: ";
+		say "     Strength - You roll 1d20([dice])+[bonus]: [dice + bonus] vs [targetnum]: ";
 		if bonus + dice >= targetnum:
-			say "     Continuing to talk reassuringly, you draw closer to your target. 'Grab her!' you yell to Sidney and the two of you tackle her. It is hard to get a grip on her; the female otter is super-flexible, bending and squirming like a fur-covered slinky. She almost manages to slip away a few times, but your strength [if level of player > 10]and experience [end if]wins out and you pin the otter girl down long enough for Sidney to use his device.";
+			say "Continuing to talk reassuringly, you draw closer to your target. 'Grab her!' you yell to Sidney and the two of you tackle her. It is hard to get a grip on her; the female otter is super-flexible, bending and squirming like a fur-covered slinky. She almost manages to slip away a few times, but your strength [if level of player > 10]and experience [end if]wins out and you pin the otter girl down long enough for Sidney to use his device.";
 			say "     Thankfully the nanite copying device is quick. All he has to do is jab the short needle into her side and hold it there for a few moments. With a pull of the trigger, a whirring sound and a flutter of indicator lights, it is done. Once he's confirmed he's got the copy, Sidney nods to you and you release the otter. She gives the two of you a hard slap across the face. 'Mashers!' She then climbs onto a hidden scooter and zips away.";
 			WaitLineBreak;
 			say "     He looks at the silvery jar and pauses only for a moment before jabbing himself with the needle and pulling the trigger again. He groans as the metallic fluid is injected into him. The effects are sudden, causing him to stumble to his knees as rapid and full-bodied transformation ensues. He quickly starts pulling off his clothes to watch. Brown fur spreads out from the point of injection. His figure changes to that of the flexible otter, losing bulk as he becomes streamlined for swimming. And for breasts, the petite globes of mammaries swell up under the waterproof coat of fur. As his head changes, gaining a muzzle and rounded ears first, he releases a long, feminine moan and pulls down the front of his pants to reveal a wet and juicy otter muff between now her legs. Long, flowing hair grows from the top of her head, rich brown like her counterpart's. The changes continue with her long, muscular tail growing out as the whole of her shifts until you're left looking at an identical copy of the sexy otteress who was here just moments ago.";
@@ -268,10 +277,10 @@ to say sidney_otteress_cap:
 			now level of Sidney is 23;
 			move Sidney to Breakroom;
 			move player to Breakroom;
-			now battleground is "void";
+			now Resolution of Meeting Sidney is 2; [became an otter, stayed]
 			now Meeting Sidney is resolved;
 		else:
-			say "     Continuing to talk reassuringly, you draw closer to your target. 'Grab her!' you yell to Sidney and the two of you tackle her. You try your best to get a grip, but the female otter is super-flexible, bending and squirming like a fur-covered slinky. Slipping free of your grip, the two of you stumble over each other as she rushes away. You try to pursue her, but it's too late. She's got a small scooter stashed nearby that she uses to make her escape. You'll not get another chance to approach her now.";
+			say "Continuing to talk reassuringly, you draw closer to your target. 'Grab her!' you yell to Sidney and the two of you tackle her. You try your best to get a grip, but the female otter is super-flexible, bending and squirming like a fur-covered slinky. Slipping free of your grip, the two of you stumble over each other as she rushes away. You try to pursue her, but it's too late. She's got a small scooter stashed nearby that she uses to make her escape. You'll not get another chance to approach her now.";
 			now sa_otteress is true;
 
 Part 3 - Feral Wusky
@@ -290,7 +299,7 @@ to say sidney_wusky_cap:
 		now level of Sidney is 71;
 		move Sidney to Breakroom;
 		move player to Breakroom;
-		now battleground is "void";
+		now Resolution of Meeting Sidney is 4; [became a wusky, stayed]
 		now Meeting Sidney is resolved;
 	else if fightoutcome >= 20 and fightoutcome <= 29:
 		say "     After your humiliating defeat and the subsequent abuse, you crawl your way out of the shop as the wolf turns his attention back to his original prize. As Sidney helps you leave, you can hear the snarls of the victorious wolf celebrating by screwing the trapped female. From the sounds of it, there won't be much left of the old wusky by the time he's done.";
@@ -377,8 +386,8 @@ to say sexwithSidney:
 	if HP of Sidney < 3:
 		say "ERROR-Sidney-[HP of Sidney]F: You should not be able to find me yet. Resetting.";
 		now HP of Sidney is 0;
-		remove Sidney from play;
-		if girl is not banned and furry is not banned, now Meeting Sidney is unresolved;
+		now Sidney is nowhere;
+		if girl is not banned and furry is not banned, now Meeting Sidney is active;
 	else if player is neuter:
 		say "     You should settle on a gender of your own before trying to sex up the gender-shifted soldier.";
 	else if lastfuck of Sidney - turns < 6:

@@ -4,6 +4,10 @@ Version 2 of Tristian by Verath begins here.
 
 Section 1 - Tristian Basics
 
+Table of GameCharacterIDs (continued)
+object	name
+Tristian	"Tristian"
+
 Tristian is a man.
 The description of Tristian is "     Approaching one of the dim booths a rather cute stallion boy turns to look at you. His shoulder length dark hair is cut into an emo style covering his left eye. You see that he is wearing tight black leather pants with modified boots that come up to his knees that fit his digitigrade legs. He's also wearing a tight shirt that does nothing to hide his tight swimmer's build, you notice the hints of pierced nipples pushing at the fabric of his shirt. On his wrists are spiked cuffs and a few shiny bracelets. As you continue to look him over you notice the multiple rings in his ears pierced right eyebrow and his pierced lower lip. Around his neck is a necklace that incorporates an ankh and a horseshoe.".
 The conversation of Tristian is { "Neigh!" }.
@@ -32,7 +36,7 @@ the scent of Tristian is "The stallion boy smells of leather and lust. The scent
 
 
 instead of conversing the Tristian:
-	if HP of Tristian is 0:[first time you encounter the npc text]
+	if HP of Tristian is 0: [first time you encounter the NPC text]
 		say "     'Hey there, it's nice to see a new face around here! Welcome to the Palomino nightclub!' the goth-like stallion says with a welcoming smile on his equine face as he looks over your [bodytype of player] form. 'The name's Tristian. It's a real pleasure to meet you,' he says as he looks you up and down appreciatively, before sitting back down in the well-padded booth and gesturing for you to join him. Once you settle yourself into the large comfortable booth, the fairly handsome horse continues. 'I suppose you are wondering a bit about how such a diverse group of people ended up here?' the palomino stud says with a slightly amused tilt to his head as he gestures to the dance floor filled with various different species of dancers, as well as the stripper poles where a black swan is demonstrating their new body's flexibility as they twine around the pole erotically.";
 		say "     'Well, it was different for a lot of people, but for me, well... I was headed down here to the red light district so I could get a new outfit for clubbing and dancing in,' Tristian says with an amused smile, as he gestures to his black leather and spiked cuffs. 'That's what I was doing when things started going crazy around here. Of course, I never thought about the fact that the zoo was so close to this area until I saw some animals starting to run around.' Tristian gives a soft nickering chuckle. 'Of course, some of them weren't quite so animal-like anymore. I tried to grab one of the nice-looking ponies that was running around so I could ride off. And well...' the palomino's voice trails off slightly as a smile tugs at the edges of his muzzle.";
 		say "     'Given what I'm sure you have seen so far around the city, I am sure you know in general what happened next,' he says teasingly, his hand rubbing up against yours slightly as he continues. 'I got away pretty quickly once I realized what was happening, but by then,' Tristian smiles as he gestures to his amazing looking outfit which fits him perfectly, emphasizing his handsome palomino studlike features, and giving the goth horse boy a rather erotic look. 'As you can see, I REALLY needed to go outfit shopping then.' He nickers in amusement again. 'I headed to one of the few safe places I knew in the area, and since I wasn't the only person looking for a safe place down here... well...' Tristian says with a soft smile as he gestures broadly at the busy nightclub again. 'I think we all adapted to things pretty well, don't you?' he says as he moves a little closer to you across the booth, a teasing look in his equine eyes as he leans forward.";
@@ -69,7 +73,7 @@ instead of conversing the Tristian:
 			say "     'Well, I would be,' he admits, 'except his apartment is pretty much right in the territory the hyena gang has been claiming lately. And when I asked around, I found out there have been a lot of them sniffing around over there, like way more than anyone here can take,' he says with a sad sigh. 'I even wanted to go myself, but some of the strippers here talked me out of it. So basically, if he isn't a hyena yet... he will be soon.'";
 			say "     He looks at you with his slightly sad eyes. 'I was just kind of missing him before, but now I'm really worried. And I know it would be better if he were here with me than as part of some gang... Lance is a good guy and not at all into the kinds of rough stuff those hyenas are into, so there won't be anything of my brother left by the time they're done with him.'";
 			say "     Feeling sympathy for your gothy playmate, you offer to go take a look yourself. 'Oh would you?' he says, seeming surprised and happy at your offer. 'I mean, I couldn't ask you to go, but if you do go and see anything. Even if it's just that hyenas were there, could you let me know?' the palomino asks you earnestly, and you readily agree.";
-			now Tristbrother is unresolved;
+			now Tristbrother is active;
 			now HP of Tristian is 8;
 	else if HP of Tristian > 4 and a random chance of 1 in 3 succeeds:
 		say "     Still no word back on my brother,' Tristian says with a sigh as you approach. 'I keep getting more worried about the guy as time goes on too,' he says, before smiling and looking up at you. 'But enough about that. How about a drink?' the large stallion says, and you do your best to smile and take his mind off his brother for a while as you drink and chat with him.";
@@ -146,7 +150,7 @@ to say sexwithtristian:
 
 
 to palominoinfect:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	setmonster "Palomino";
 	now non-infectious entry is false;
 	infect;
@@ -155,7 +159,11 @@ to palominoinfect:
 
 Section 3 - Tristian's Quest
 
-Tristbrother is an situation. Tristbrother is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Tristbrother	"Tristbrother"
+
+Tristbrother is a situation. Tristbrother is inactive.
 when play begins:
 	add Tristbrother to badspots of hermaphrodite;
 	add Tristbrother to badspots of guy;

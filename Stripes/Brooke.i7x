@@ -6,6 +6,10 @@ Version 1 of Brooke by Stripes begins here.
 
 Section 1 - Brooke
 
+Table of GameCharacterIDs (continued)
+object	name
+Brooke	"Brooke"
+
 Brooke is a man. Brooke is in The Palomino.
 The description of Brooke is "[brookedesc]".
 The conversation of Brooke is { "Sneak off with me?" }.
@@ -49,8 +53,8 @@ the fuckscene of Brooke is "[sexwithBrooke]".
 
 to say sexwithBrooke:
 	[puts sea otter as lead monster for possible impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Sea Otter":
 			now monster is y;
 			break;

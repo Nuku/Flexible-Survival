@@ -11,7 +11,7 @@ lizgirlinheat is a number that varies.
 lizgirlangry is a number that varies.
 
 to say lizgirl herm:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sex entry is "Both";
 	now cocks entry is 1;
 	now cock length entry is 8;
@@ -19,7 +19,7 @@ to say lizgirl herm:
 	infect;
 
 to say lizgirl female:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sex entry is "Female";
 	now cocks entry is 0;
 	now cock length entry is 0;
@@ -63,7 +63,7 @@ to say lizgirl attack:
 				say "     Looking to your thigh, the recognizable Lizard Girl smiles. 'Always wonderful to see my pets blossoming and ready.' She pins you to the ground on your back, leaving you unable to move in your weakened condition. Slowly at first she lowers down onto your [cock size desc of player] rod, working herself up and down your rigid length. Just as your release is unavoidable she presses down tightly, engulfing your [cock length of player] inch member deep inside herself. Just as the flow of your seed starts to taper off you feel an incessant pressing at the opening in your rod. Deeper and deeper her tentacle member pushes, down inside you, coming to rest at your balls. 'Now it's my turn,' she purrs, snapping your attention away from her assault on your reproductive system. All of a sudden, you feel a pressure build all down the length of your shaft as her own seed pours into your body, leaving your balls swollen and tingling.";
 				say "     'Now be a good dear, and don't fight it anymore,' she says over her shoulder as she sashays away.[lizgirl female][lizgirl impreg]";
 			else:
-				say "     'Oh, who gave you this?' she says, running one claw over your [cock of player] penis delightfully. 'Oh well, it matters not - it simply must go,' she says matter of factly and lowers her snout over your member. She begins to take it all into her, sucking, licking and sometimes biting. Your bliss is soon to come and when it does you only feel a dribble actually pass down your rod. With a start you realize your love tunnel is now awash with seed... your seed.[lizgirl female][ovichance]";
+				say "     'Oh, who gave you this?' she says, running one claw over your [cock of player] penis delightfully. 'Oh well, it matters not - it simply must go,' she says matter-of-factly and lowers her snout over your member. She begins to take it all into her, sucking, licking and sometimes biting. Your bliss is soon to come and when it does you only feel a dribble actually pass down your rod. With a start you realize your love tunnel is now awash with seed... your seed.[lizgirl female][ovichance]";
 	infect;
 
 to say lizgirl defeat:
@@ -93,7 +93,7 @@ to say lizdefmale:
 	say "     You look down upon the defeated lizard girl's body, your arousal growing as you decide to sate your lust on this creature. You stride over to her and undress, your cock growing erect with thoughts of what you're about to do to her. You kneel down beside her and push her onto her stomach, causing her to groan. You position yourself behind her, taking hold of her hips with one hand while the other lifts up her reptilian tail to reveal her wet folds. You grin and lick your lips pulling her up to meet you as you press the tip of your [cock of player] length against her sex and slide it in.";
 	say "     You moan out in pleasure, her reptilian cunt instinctively gripping and pulling on your shaft, urging you to fuck her. Not wasting any time, you begin to buck into her tight depths, both arms rapped around her tail for support. The lizard girl beneath your gasps and groans at this treatment, her tail wrapping around you as much as it can, trying to pull you closer to her.";
 	WaitLineBreak;
-	say "     You grit your teeth and buck into her harder, trying your best to hold off the impending orgasm you feel coming. You can barely hold on any longer when the girl beneath you cries out as she climaxes, her cunt spasming along your length and sending you over the edge. Your cries of joy mix with hers as you empty your balls into her depths, her cunt milking your [cock size desc of player] shaft for your cum.[line break]You pant and groan as you come down from your climax, slipping your length out of her cunt and letting your cum leak out from her hole. You stand up and give the lizard girl's ass a soft slap, making her shiver and groan, before you grab your gear and head out.";
+	say "     You grit your teeth and buck into her harder, trying your best to hold off the impending orgasm you feel coming. You can barely hold on any longer when the girl beneath you cries out as she climaxes, her cunt spasming along your length and sending you over the edge. Your cries of joy mix with hers as you empty your balls into her depths, her cunt milking your [cock size desc of player] shaft for your cum. You pant and groan as you come down from your climax, slipping your length out of her cunt and letting your cum leak out from her hole. You stand up and give the lizard girl's ass a soft slap, making her shiver and groan, before you grab your gear and head out.";
 
 to say lizdeffemale:
 	say "     You look down upon the defeated lizard girl's body, your arousal growing as you decide to sate your lusts on this creature. You stride over to her and undress, your pussy getting nice and wet thinking about what you're going to do to her. You kneel down beside her and roll her onto her back, taking hold of her legs and spreading them open to show her sexy cunt. You grin, licking your lips and move yourself between her legs and slide your folds up against her own. She moan, involuntarily pressing back against you as you begin to grind your sex against her. Holding one leg of hers up with a hand, you take hold of one of your breasts with the other and gently begin groping it and playing with the nipple. You look down at the female beneath you and notice that she's begun fondling her own breasts too, tweaking her nipples, and rubbing them together.";
@@ -115,12 +115,12 @@ to say lizgirl desc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Lizard Girl"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -168,8 +168,9 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Table of infection heat (continued)
 infect name	heat cycle	heat duration	trigger text	description text	heat start	heat end	inheat	fheat (truth state)	mpregheat (truth state)	mpregtrigger
@@ -184,15 +185,15 @@ When Play begins:
 	now heat end entry is "The heat, the ache, all fades slowly, leaving you relieved.[toggle heat flag]";
 	now trigger text entry is "";
 	now description text entry is "";
-	now inheat entry is "[liz impreg]"; [The lizard girls seed effectively internalised the male organs, leaving the poor character impregnating themselves every heat cycle. This will be much more 'fun' once repeated births are in :3 ]
+	now inheat entry is "[liz impreg]"; [The lizard girl's seed effectively internalized the male organs, leaving the poor character impregnating themselves every heat cycle. This will be much more 'fun' once repeated births are in :3 ]
 	now fheat entry is true;
 	now mpregheat entry is false;
 	now mpregtrigger entry is "";
 
 to say liz impreg:
 	let found be 0;
-	repeat with Z running from 1 to number of rows in table of random critters:
-		choose row Z from the table of random critters;
+	repeat with Z running from 1 to number of rows in Table of Random Critters:
+		choose row Z from the Table of Random Critters;
 		if name entry matches the text "Lizard Girl":
 			now monster is z;
 			now found is 1;

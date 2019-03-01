@@ -1,5 +1,5 @@
 Version 3 of Spidertaur Male by Wahn begins here.
-[Version 3 - Aelias npc and lair]
+[Version 3 - Aelias NPC and lair]
 
 "Adds a Spidertaur to Flexible Survival's Wandering Monsters table, with impregnation chance."
 
@@ -97,7 +97,7 @@ to say SpidertaurSlingSex:
 		LineBreak;
 		say "     'You'll get off when I fuck you. Do you want me inside you?' he says, putting the tip of his shaft against your pucker and rubbing it up and down over it, then teasingly pressing against it. His touch makes you moan in answer, calling on him to take you and fuck you deeply, which puts a very satisfied grin on the spidertaur's face. He immediately takes hold of your legs and thrusts forward, sinking his manhood deep into your tight hole. As he bottoms out, his cock resting deep inside your ass, he leans forward and makes out with you to give you some time to get used to having him inside you. After a while, he straightens his humanoid upper body again, giving you a smile as he starts to thrust in and out, fucking you with deep strokes.";
 		WaitLineBreak;
-		say "     Pulling out unttil only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. Soon this stimulation overwhelms your ability to hold back and as he bottoms out inside you again, your own cock starts to throb as spurt after spurt of cum jet from its tip, splattering on your own chest.";
+		say "     Pulling out until only the tip of his cock remains inside you, then slamming it all the way in again, he has you gasping in lust and squirming in your silken bonds in no time. He takes great pleasure in dominating you, his cock twitching every time you give him an involuntary moan after one of his sudden thrusts. Soon this stimulation overwhelms your ability to hold back and as he bottoms out inside you again, your own cock starts to throb as spurt after spurt of cum jet from its tip, splattering on your own chest.";
 		say "     The spidertaur stops for a moment, leaning forward to put his face close to yours. 'Admit it - you love to get fucked by me.' As he thrusts forward again in just that moment, you can only moan in pleasure as an answer. He proceeds to take up some of your cum from your chest with his fingers, then licks it off. 'Mmmmh, you're just an amazing catch,' he says, leaning forward to kiss you deeply, allowing you to taste your own cum on his lips.";
 		say "     Getting back to fucking you hot and hard, it's not too much longer until he pushes all of his shaft into you one last time and gives a satisfied grunt as he shoots a big load of cum deep inside your ass.[mimpregchance]";
 	else:
@@ -201,12 +201,12 @@ to say Spidertaur_Desc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Spidertaur";
 	now enemy title entry is "";
 	now enemy name entry is "Aelias";
@@ -254,8 +254,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Items
 
@@ -275,8 +276,8 @@ to say spidertaur hair use:
 	SpidertaurInfect;
 
 to SpidertaurInfect:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Spidertaur":
 			now monster is y;
 			break;
@@ -294,6 +295,9 @@ understand "use hammock" as resting.
 
 Section 4 - NPC
 
+Table of GameRoomIDs (continued)
+Object	Name
+Spider's Web	"Spider's Web"
 
 Spider's Web is a room. It is a fasttravel. Spider's Web is private. Spider's Web is sleepsafe.
 The description of Spider's Web is "[WebDesc]".
@@ -303,6 +307,10 @@ to say WebDesc:
 
 Instead of sniffing Spider's Web:
 	say "     The air smells fresh, with a slight undertone of wood and wax. Seems like Aelias from time to time puts in the work to maintain the polished surface of his home's hardwood floor.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Aelias	"Aelias"
 
 Aelias is a man.
 Aelias is in Spider's Web.
@@ -321,7 +329,7 @@ instead of sniffing Aelias:
 
 Instead of fucking Aelias:
 	setmonster "Spidertaur";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if (lastfuck of Aelias - turns < 5):
 		say "     Aelias chuckles and says 'Just give me a moment to catch my breath, little fly...'";
 	else:
@@ -391,13 +399,9 @@ Instead of fucking Aelias:
 					wait for any key;
 					now lastfuck of Aelias is turns;
 			else if calcnumber is 0:
-				say "Break off?";
-				if player consents:
-					now sextablerun is 1;
-					say "     You step back from the spidertaur, shaking your head slightly as he gives a questioning look.";
-					wait for any key;
-				else:
-					say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				now sextablerun is 1;
+				say "     You step back from the spidertaur, shaking your head slightly as he gives a questioning look.";
+				wait for any key;
 			else:
 				say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 		clear the screen and hyperlink list;
@@ -484,7 +488,7 @@ to say AeliasSex3: [player gets tied/fucked on the floor]
 
 to say AeliasSex4: [Aelias gets fucked]
 	say "     Deciding that you want to be the one calling the shots this time, you stealthily walk over to where Aelias keeps a number of coiled up silk ropes and grab one of them. Putting a slip-knot noose on the lightweight rope's end while the spidertaur isn't looking, you hold the bundle behind your back and walk towards him. As he sees you come closer with lust gleaming in your eyes, Aelias says 'Wanna play in my net, my lovely little fly?' He eagerly scuttles closer on his eight legs and you pull his head to yours to share a kiss. Then, while having him distracted with a very pleasurable bit of tongue-wrestling, you bring out the rope and slip it over his wrists, pulling the noose tight with a quick movement.";
-	say "     The black-skinned man's white eyebrows rise and a whimsical expression spreads over his face at finding himself tied up like this. He doesn't struggle but simply observes as you then throw the rope over one of the wooden ceiling beams, catching the end and tying it to one of the pipes leading to the bank of radiators under the windows. Stepping back from doing so, you turn to look at the handsome spidertaur, now standing with his human arms pulled above his head. Lightly pulling on the strand holding his wrists and finding it securely anchored, Aelias laughs `Trapping a spider in his own web? Ha, I like how you think my little fly. Let's see what you do now that you've got me.' His legs clack on the hardwood floor as he takes a relaxed stance, just waiting for you to take your next step.";
+	say "     The black-skinned man's white eyebrows rise and a whimsical expression spreads over his face at finding himself tied up like this. He doesn't struggle but simply observes as you then throw the rope over one of the wooden ceiling beams, catching the end and tying it to one of the pipes leading to the bank of radiators under the windows. Stepping back from doing so, you turn to look at the handsome spidertaur, now standing with his human arms pulled above his head. Lightly pulling on the strand holding his wrists and finding it securely anchored, Aelias laughs. 'Trapping a spider in his own web? Ha, I like how you think my little fly. Let's see what you do now that you've got me.' His legs clack on the hardwood floor as he takes a relaxed stance, just waiting for you to take your next step.";
 	WaitLineBreak;
 	say "     You go and give Aelias a hungry kiss, your tongues exploring each other's mouths. Making out with him is great and you almost forget what you were planning to do, only reluctantly pulling back from the spidertaur's lips. Running your hands down over his muscular human chest, then lower and lower, you cup Aelias's balls and give his hard cock a few slow strokes, then move further back along his body. Smooth skin gives way to even smoother chitin plates, their hard black surfaces shining in the light. Running your hand along his flank, you feel the overlapping plates of his bulging abdomen, moving against each other as he breathes. Finally, you arrive at Aelias's hind end, where you find two soft-looking areas revealing themselves as the protective plates over them are pulled back. The tied-up spidertaur gives you a grin over his shoulder, then theatrically intones in a high-pitched falsetto 'Oh no - someone help me! I'm bound and totally helpless against him! No doubt he'll rub his cock against my spinnerets, knowing how very - very - sensitive they are, then stick his hard cock up my ass! Help!'";
 	say "     Following Aelias's playfully delivered instructions, you take your erection in hand and push it against the lower opening in his armor plates, where six small bumps form the silk-producing organ of the spidertaur. They're very soft and sensitive, feeling quite nice against your cock, and Aelias starts to pant and moan the moment you first touch them. Small drops of clear liquid form at the tops of each bump, creating a slippery film on your shaft as you rub up against him. While you grind your crotch against the spidertaur's abdomen, your hands search out the hole a bit further up and push against his pucker, soon sliding in as he relaxes his muscle a bit. You revel in his initial 'Oh? Oh!' and the gasps that follow as you finger his asshole, rising in pitch and urgency until he groans 'I'm soo horny - please, stick it in already!'";
@@ -496,7 +500,7 @@ to say AeliasSex4: [Aelias gets fucked]
 
 to say AeliasSex5: [player ties Aelias up and jumps his cock]
 	say "     Deciding that you want to be the one calling the shots this time, you stealthily walk over to where Aelias keeps a number of coiled up silk ropes and grab one of them. Putting a slip-knot noose on the lightweight rope's end while the spidertaur isn't looking, you hold the bundle behind your back and walk towards him. As he sees you come closer with lust gleaming in your eyes, Aelias says 'Wanna play in my net, my lovely little fly?' He eagerly scuttles closer on his eight legs and you pull his head to yours to share a kiss. Then, while having him distracted with a very pleasurable bit of tongue-wrestling, you bring out the rope and slip it over his wrists, pulling the noose tight with a quick movement.";
-	say "     The black-skinned man's white eyebrows rise and a whimsical expression spreads over his face at finding himself tied up like this. He doesn't struggle but simply observes as you then throw the rope over one of the wooden ceiling beams, catching the end and tying it to one of the pipes leading to the bank of radiators under the windows. Stepping back from doing so, you turn to look at the handsome spidertaur, now standing with his human arms pulled above his head. Lightly pulling on the strand holding his wrists and finding it securely anchored, Aelias laughs `Trapping a spider in his own web? Ha, I like how you think my little fly. Let's see what you do now that you've got me.' His legs clack on the hardwood floor as he takes a relaxed stance, just waiting for you to take your next step.";
+	say "     The black-skinned man's white eyebrows rise and a whimsical expression spreads over his face at finding himself tied up like this. He doesn't struggle but simply observes as you then throw the rope over one of the wooden ceiling beams, catching the end and tying it to one of the pipes leading to the bank of radiators under the windows. Stepping back from doing so, you turn to look at the handsome spidertaur, now standing with his human arms pulled above his head. Lightly pulling on the strand holding his wrists and finding it securely anchored, Aelias laughs. 'Trapping a spider in his own web? Ha, I like how you think my little fly. Let's see what you do now that you've got me.' His legs clack on the hardwood floor as he takes a relaxed stance, just waiting for you to take your next step.";
 	WaitLineBreak;
 	say "     You go and give Aelias a hungry kiss, your tongues exploring each other's mouths. Making out with him is great and you almost forget what you were planning to do, only reluctantly pulling back from the spidertaur's lips. Running your hands down over his muscular human chest, then lower and lower, you cup Aelias's balls and give his hard cock a few slow strokes. Next, you take a step back and quickly strip before quite literally jumping the handsome man, wrapping your arms and legs around him in a tight embrace against his chest. It feels great to be this close together with him - from the muscled shape of his body pressing against yours, the enticing masculine scent, up to the hot and hard presence of his erection poking your crotch. The spidertaur looks down with a grin, then says 'Let me help you with that.' In almost the same moment, you can feel something cool and hard press against your back and buttocks - it's the spider-hybrid's two front legs, carefully working to support you.";
 	say "     Aelias holding you like that allows you to lean back against his supporting limbs, freeing up a hand to reach down and take hold of his hard cock. Aligning it with your opening, you slide down on his long shaft, gasping as it spreads the swollen lips of your pussy. 'Yeah, take my dick deep,' the spidertaur moans, eagerly thrusting with his hips to drive his erection all the way into you. After taking a moment to get used to the delightfully full feeling you're getting from having his cock inside to the hilt, you start to rock back and forth, lifting your hips and then grinding them tightly against his crotch again. Riding Aelias's manhood like this makes you both pant and moan in lusty unison, mumbling and gasping how good it feels to be coupled like this. His cock hotly pokes the entrance to your womb in the deeper thrusts and you can feel the chitinous plates of his lower body rubbing against your crotch, always reminding you that it's not just any handsome human you're fucking.";
@@ -506,13 +510,13 @@ to say AeliasSex5: [player ties Aelias up and jumps his cock]
 
 to say AeliasSex6: [player ties Aelias up and jerks him off]
 	say "     Deciding that you want to be the one calling the shots this time, you stealthily walk over to where Aelias keeps a number of coiled up silk ropes and grab one of them. Putting a slip-knot noose on the lightweight rope's end while the spidertaur isn't looking, you hold the bundle behind your back and walk towards him. As he sees you come closer with lust gleaming in your eyes, Aelias says 'Wanna play in my net, my lovely little fly?' He eagerly scuttles closer on his eight legs and you pull his head to yours to share a kiss. Then, while having him distracted with a very pleasurable bit of tongue-wrestling, you bring out the rope and slip it over his wrists, pulling the noose tight with a quick movement.";
-	say "     The black-skinned man's white eyebrows rise and a whimsical expression spreads over his face at finding himself tied up like this. He doesn't struggle but simply observes as you then throw the rope over one of the wooden ceiling beams, catching the end and tying it to one of the pipes leading to the bank of radiators under the windows. Stepping back from doing so, you turn to look at the handsome spidertaur, now standing with his human arms pulled above his head. Lightly pulling on the strand holding his wrists and finding it securely anchored, Aelias laughs `Trapping a spider in his own web? Ha, I like how you think my little fly. Let's see what you do now that you've got me.' His legs clack on the hardwood floor as he takes a relaxed stance, just waiting for you to take your next step.";
+	say "     The black-skinned man's white eyebrows rise and a whimsical expression spreads over his face at finding himself tied up like this. He doesn't struggle but simply observes as you then throw the rope over one of the wooden ceiling beams, catching the end and tying it to one of the pipes leading to the bank of radiators under the windows. Stepping back from doing so, you turn to look at the handsome spidertaur, now standing with his human arms pulled above his head. Lightly pulling on the strand holding his wrists and finding it securely anchored, Aelias laughs. 'Trapping a spider in his own web? Ha, I like how you think my little fly. Let's see what you do now that you've got me.' His legs clack on the hardwood floor as he takes a relaxed stance, just waiting for you to take your next step.";
 	WaitLineBreak;
 	say "     Stepping in front of him, you do a slow and teasing striptease that leaves the spider-hybrid hot and horny, with a small bead of precum forming at the tip of his shaft and then dripping down on the wooden floor. Confident in your nakedness from the feeling of power it gives you to have the big male panting after you and tied up, you walk towards him with a spring in your step. Putting a hand on his balls, you give them a quick fondle, then move on up to his nipples, which you stroke and softly pitch till they're standing out as hard little nibs on his chest. It's fun to be able to play with him like this, seeing the usually dominant man stretch and squirm as you're pulling back from each little teasing touch and caress, needy for more.";
 	say "     As you've tamed yourself a taur (at least in play), you decide to use Aelias as a mount. Grinning widely, you pull yourself up against one of his arachnid legs, then swing up to sit on his back, coming to rest in the natural little dent between his humanoid chest and the bulging abdomen of his rear end. The chitin plates you're sitting on are even relatively comfortable, with a certain flexibility in them, even if they're somewhat cool to the touch. Settling into your position as spidertaur-rider, you stroke your hands down Aelias's muscled back, then slide them around his chest, embracing him from behind.";
 	WaitLineBreak;
-	say "     Getting back to the light, teasing touches, you pinch your arachnid lover's nipples and caress his muscles, then slowly work your way further down his front. His washboard abs feel pretty nice under your fingers, hard and taut, soon followed by the quite hard and warm pole of his erection as you brush against it and wrap your hand around. You can literally feel a tremble go through Aelias's whole body as you start to jerk him off, tense muscles softening a bit as relief from all his pent-up lust comes into sight. 'Get me off, my lovely prey. I need it,' the spidertaur moans, giving you yourself a nice little tingle of arousal at being in control for once. While your hand grips and moves over his erection, [if player is male]you grind your own against his lower back, reveling in the silky smooth feeling of his hairless skin.[else if player is female]you start rubbing your pussy with the other hand.[else]you grind your genderless crotch against his lower back, reveling in the silky smooth feeling of his hairless skin.[end if]";
-	say "     It doesn't take much longer before you drive Aelias over the point of no return, gasping and shaking as his cock starts to blast away with thick spurt after spurt of creamy cum, which land with audible splats on the hardwood floor. Just moments after him, you reach your own climax, [if player is male]your hand gripping your manhood tightly as you spurt your creamy load against Aelias's back, the white cum showing a sexy contrast to his almost black skin. [else if player is female]fingers still deep inside you as you spurt and drip femcum all over his armor-plated back. [else]trembling in the grip of lust. [end if]While you're still panting, leaning against the spidertaur's human back as you catch your breath, Aelias raises one long arachnid leg and effortlessly slashes the strand holding his arms, freeing himself. Then he turns his upper body to hook and arm around you, pulling you off his back and around, to hold you against his chest for a deep kiss, which escalates into a small make-out session. In between hungry kisses, he pants, 'A fun game, my cunning little fly. You're welcome to 'trick' and tie me up again soon...'";
+	say "     Getting back to the light, teasing touches, you pinch your arachnid lover's nipples and caress his muscles, then slowly work your way further down his front. His washboard abs feel pretty nice under your fingers, hard and taut, soon followed by the quite hard and warm pole of his erection as you brush against it and wrap your hand around. You can literally feel a tremble go through Aelias's whole body as you start to jerk him off, tense muscles softening a bit as relief from all his pent-up lust comes into sight. 'Get me off, my lovely prey. I need it,' the spidertaur moans, giving you yourself a nice little tingle of arousal at being in control for once. While your hand grips and moves over his erection, [if player is male]you grind your own against his lower back, reveling in the silky smooth feeling of his hairless skin[else if player is female]you start rubbing your pussy with the other hand[else]you grind your genderless crotch against his lower back, reveling in the silky smooth feeling of his hairless skin[end if].";
+	say "     It doesn't take much longer before you drive Aelias over the point of no return, gasping and shaking as his cock starts to blast away with thick spurt after spurt of creamy cum, which land with audible splats on the hardwood floor. Just moments after him, you reach your own climax, [if player is male]your hand gripping your manhood tightly as you spurt your creamy load against Aelias's back, the white cum showing a sexy contrast to his almost black skin[else if player is female]fingers still deep inside you as you spurt and drip femcum all over his armor-plated back[else]trembling in the grip of lust[end if]. While you're still panting, leaning against the spidertaur's human back as you catch your breath, Aelias raises one long arachnid leg and effortlessly slashes the strand holding his arms, freeing himself. Then he turns his upper body to hook and arm around you, pulling you off his back and around, to hold you against his chest for a deep kiss, which escalates into a small make-out session. In between hungry kisses, he pants, 'A fun game, my cunning little fly. You're welcome to 'trick' and tie me up again soon...'";
 
 Section 5 - Endings
 
@@ -520,13 +524,13 @@ when play ends:
 	if bodyname of player is "Spidertaur":
 		if humanity of player < 10:
 			if player is male:
-				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Females and some choicy males you keep to impregnate and have some fun with, the rest just serve as stored food for when you get hungry.";
+				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Keeping some females and choice males to impregnate and have some fun with, the rest just serve as stored food for when you get hungry.";
 			else if player is female and "Sterile" is not listed in feats of player:
-				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Keeping some choicy males to impregnate you and help grow your brood of little spiderlings, the rest just serve as stored food for when you get hungry.";
+				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Keeping some choice males to impregnate you and help grow your brood of little spiderlings, the rest just serve as stored food for when you get hungry.";
 			else:
-				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Keeping some choicy males and females to have fun with, the rest just serve as stored food for when you get hungry.";
+				say "Your predatory instincts take over and you make your lair in one of the many empty buildings in the city. Capturing creatures out on the streets, you drag them into your web, proudly hanging them up in cocoons of sticky silk strands. Keeping some choice males and females to have fun with, the rest just serve as stored food for when you get hungry.";
 		else:
-			say "When the military moves in, you're brought to a holding facility where you get checked out and they give you a shot to make you non-infectious. As your arachnid form's abilities are perfect for exploring ruined buildings and you know your way around, you volunteer to accompany a squad of soldiers back into the city. After several weeks of helping rescue quite a few people and using your webs to subdue others so they can be treated, you're awarded a civilian service medal. Joining a group specialized in disaster rescue afterwards, your heroic deeds all over the world do a lot to improve the reputation of spiders in general, away from the 'creepy-crawley to be squished' image.";
+			say "When the military moves in, you're brought to a holding facility where you get checked out and they give you a shot to make you non-infectious. As your arachnid form's abilities are perfect for exploring ruined buildings and you know your way around, you volunteer to accompany a squad of soldiers back into the city. After several weeks of helping rescue quite a few people and using your webs to subdue others so they can be treated, you're awarded a civilian service medal. Joining a group specialized in disaster rescue afterwards, your heroic deeds all over the world do a lot to improve the reputation of spiders in general, away from the 'creepy-crawly to be squished' image.";
 	if humanity of player > 10:
 		if SpidertaurRelationship is 2:
 			say "     Sometimes at night in your dreams, your thoughts stray back to the encounter you had with the spidertaur in the city. Reliving him fucking you in an incredibly erotic dream, you awaken breathless and horny, the memory of his silken strands against your skin fresh in your mind, incredibly soft yet holding you tightly. You almost wish you could meet him again...";

@@ -4,7 +4,7 @@ Version 1 of Nadia by Wahn begins here.
 
 "Adds an NPC named Nadia to the Flexible Survival game"
 
-[ HP states of Nadia (localisation)                                                 ]
+[ HP states of Nadia (localization)                                                 ]
 [   0: never met her                                                                ]
 [   1: met her, brought her into the library                                        ]
 [   2: Nadia in the library, Lost Chick quest given                                 ]
@@ -36,47 +36,51 @@ Version 1 of Nadia by Wahn begins here.
 [  5: one egg ready to lay, two more on the way                                     ]
 
 [ npcNadiaint (npc-Nadia-interaction state) = ABCDEFGHIJKLMN                        ]
-[ Character A - Denise Interaction: (Char-A of Nadia)                               ]
+[ Character A - Denise Interaction: (NadiaChar-A)                                   ]
 [   0: Nothing happened                                                             ]
 [   1: met and talked with Denise                                                   ]
-[ Character B - Icarus Interaction: (Char-B of Nadia)                               ]
+[ Character B - Icarus Interaction: (NadiaChar-B)                                   ]
 [   0: Nothing happened                                                             ]
 [   1: nursed subby Icarus                                                          ]
-[ Character C - Amy Interaction: (Char-C of Nadia)                                  ]
+[ Character C - Amy Interaction: (NadiaChar-C)                                      ]
 [   0: Nothing happened                                                             ]
 [   1: had a play-date with Amy                                                     ]
-[ Character D - Tehuantl Interaction: (Char-D of Nadia)                             ]
+[ Character D - Tehuantl Interaction: (NadiaChar-D)                                 ]
 [   0: Nothing happened                                                             ]
-[ Character E - Felinoid Interaction: (Char-E of Nadia)                             ]
+[ Character E - Felinoid Interaction: (NadiaChar-E)                                 ]
 [   0: Nothing happened                                                             ]
-[ Character F - Fang Interaction: (Char-F of Nadia)                                 ]
+[ Character F - Fang Interaction: (NadiaChar-F)                                     ]
 [   0: Nothing happened                                                             ]
-[ Character G - Elijah Interaction: (Char-G of Nadia)                               ]
+[ Character G - Elijah Interaction: (NadiaChar-G)                                   ]
 [   0: Nothing happened                                                             ]
-[ Character H - Exotic Bird Interaction: (Char-H of Nadia)                          ]
+[ Character H - Exotic Bird Interaction: (NadiaChar-H)                              ]
 [   0: Nothing happened                                                             ]
 [   1: met the bird and sang with him                                               ]
-[ Character I - Player in AvianPred Form Interaction: (Char-I of Nadia)             ]
+[ Character I - Player in AvianPred Form Interaction: (NadiaChar-I)                 ]
 [   0: Nothing happened                                                             ]
 [   1: Player had sex with Nadia as an avian predator                               ]
-[ Character J - Chick Interaction: (Char-J of Nadia)                                ]
+[ Character J - Chick Interaction: (NadiaChar-J)                                    ]
 [   0: Nothing happened                                                             ]
 [   1: Green Thumb Event (2 chicks)                                                 ]
 [   2: Green Thumb Event II                                                         ]
 [   3: Beauty Treatment Event (>10 chicks)                                          ]
-[ Character K - Unassigned Interaction: (Char-K of Nadia)                           ]
-[ Character L - Unassigned Interaction: (Char-L of Nadia)                           ]
-[ Character M - Unassigned Interaction: (Char-M of Nadia)                           ]
+[ Character K - Unassigned Interaction: (NadiaChar-K)                               ]
+[ Character L - Unassigned Interaction: (NadiaChar-L)                               ]
+[ Character M - Unassigned Interaction: (NadiaChar-M)                               ]
 
 Section 1 - Nadia, the bird of paradise
+
+Table of GameCharacterIDs (continued)
+object	name
+Nadia	"Nadia"
 
 Nadia is a woman. The HP of Nadia is normally 0.
 The description of Nadia is "[NadiaDesc]".
 The conversation of Nadia is { "Mew!" }.
 
-NadiaDescription is a number that varies. NadiaDescription is normally 1.
-NadiaFertilityCounter is a number that varies. NadiaFertilityCounter is normally 0.
-NadiaChickCounter is a number that varies. NadiaChickCounter is normally 0.
+NadiaDescription is a number that varies. NadiaDescription is usually 1.
+NadiaFertilityCounter is a number that varies. NadiaFertilityCounter is usually 0.
+NadiaChickCounter is a number that varies. NadiaChickCounter is usually 0.
 NadiaPregCounter1 is a number that varies.
 NadiaPregCounter2 is a number that varies.
 NadiaPregCounter3 is a number that varies.
@@ -85,25 +89,24 @@ GreenTumbTurn is a number that varies.
 NadiaintCounter is a number that varies.
 lastNadiaSpotted is a number that varies. lastNadiaSpotted is normally 500.
 
-npcNadiaint is an indexed text that varies. npcNadiaint is normally "0000000000000B". [SAVING]
-Nadia has a text called Char-A. Char-A of Nadia is normally "0". [Denise]
-Nadia has a text called Char-B. Char-B of Nadia is normally "0". [Icarus]
-Nadia has a text called Char-C. Char-C of Nadia is normally "0". [Amy]
-Nadia has a text called Char-D. Char-D of Nadia is normally "0". [Tehuantl]
-Nadia has a text called Char-E. Char-E of Nadia is normally "0". [Felinoid]
-Nadia has a text called Char-F. Char-F of Nadia is normally "0". [Fang]
-Nadia has a text called Char-G. Char-G of Nadia is normally "0". [Elijah]
-Nadia has a text called Char-H. Char-H of Nadia is normally "0". [Exotic Bird]
-Nadia has a text called Char-I. Char-I of Nadia is normally "0". [Avian Player]
-Nadia has a text called Char-J. Char-J of Nadia is normally "0". [Chicks]
-Nadia has a text called Char-K. Char-K of Nadia is normally "0". [unassigned]
-Nadia has a text called Char-L. Char-L of Nadia is normally "0". [unassigned]
-Nadia has a text called Char-M. Char-M of Nadia is normally "0". [unassigned]
+NadiaChar-A is a text that varies. NadiaChar-A is normally "0". [Denise]
+NadiaChar-B is a text that varies. NadiaChar-B is normally "0". [Icarus]
+NadiaChar-C is a text that varies. NadiaChar-C is normally "0". [Amy]
+NadiaChar-D is a text that varies. NadiaChar-D is normally "0". [Tehuantl]
+NadiaChar-E is a text that varies. NadiaChar-E is normally "0". [Felinoid]
+NadiaChar-F is a text that varies. NadiaChar-F is normally "0". [Fang]
+NadiaChar-G is a text that varies. NadiaChar-G is normally "0". [Elijah]
+NadiaChar-H is a text that varies. NadiaChar-H is normally "0". [Exotic Bird]
+NadiaChar-I is a text that varies. NadiaChar-I is normally "0". [Avian Player]
+NadiaChar-J is a text that varies. NadiaChar-J is normally "0". [Chicks]
+NadiaChar-K is a text that varies. NadiaChar-K is normally "0". [unassigned]
+NadiaChar-L is a text that varies. NadiaChar-L is normally "0". [unassigned]
+NadiaChar-M is a text that varies. NadiaChar-M is normally "0". [unassigned]
 
 An everyturn rule: [pregnancy progress every turn]
-	if NadiaPregCounter1 is 1:  [time to give birth]
+	if NadiaPregCounter1 is 1: [time to give birth]
 		say "[NadiaEggBirth]";
-	if NadiaPregCounter1 > 0:   [she's pregnant, so let's recalculate her looks]
+	if NadiaPregCounter1 > 0: [she's pregnant, so let's recalculate her looks]
 		say "[NadiaPregVisibilityUpdate]";
 	if NadiaPregCounter1 > 1:
 		decrease NadiaPregCounter1 by 1;
@@ -112,26 +115,8 @@ An everyturn rule: [pregnancy progress every turn]
 	if NadiaPregCounter3 > 1:
 		decrease NadiaPregCounter3 by 1;
 
-To npcNadiaintAlter (N - number) with (L - text):
-	replace character number N in npcNadiaint with L.
-
-to say npcNadiaintUpdate:
-	npcNadiaintAlter 1 with Char-A of Nadia;
-	npcNadiaintAlter 2 with Char-B of Nadia;
-	npcNadiaintAlter 3 with Char-C of Nadia;
-	npcNadiaintAlter 4 with Char-D of Nadia;
-	npcNadiaintAlter 5 with Char-E of Nadia;
-	npcNadiaintAlter 6 with Char-F of Nadia;
-	npcNadiaintAlter 7 with Char-G of Nadia;
-	npcNadiaintAlter 8 with Char-H of Nadia;
-	npcNadiaintAlter 9 with Char-I of Nadia;
-	npcNadiaintAlter 10 with Char-J of Nadia;
-	npcNadiaintAlter 11 with Char-K of Nadia;
-	npcNadiaintAlter 12 with Char-L of Nadia;
-	npcNadiaintAlter 13 with Char-M of Nadia;
-
 to say NadiaEggBirth: [time to give birth]
-	now NadiaPregCounter1 is 0;          [empty place for an egg]
+	now NadiaPregCounter1 is 0; [empty place for an egg]
 	if player is in Garden View:
 		if NadiaPregCounter2 is 0:
 			if NadiaDescription is 1 or NadiaDescription is 2:
@@ -166,9 +151,9 @@ to say NadiaEggBirth: [time to give birth]
 			now NadiaPregCounter3 is 0; [clearing the variable]
 	increase NadiaChickCounter by 1;
 	increase NadiaFertilityCounter by 1;
-	if NadiaDescription < 6:  [she's not reached Goddess stage yet]
-		say "[NadiaDescriptionUpdate]";    [checks progression to the next stage]
-	say "[NadiaPregVisibilityUpdate]";   [to give her non-pregnant looks]
+	if NadiaDescription < 6: [she's not reached Goddess stage yet]
+		say "[NadiaDescriptionUpdate]"; [checks progression to the next stage]
+	say "[NadiaPregVisibilityUpdate]"; [to give her non-pregnant looks]
 
 to say NadiaMaidenBirthingText:
 	say "     'It's time,' Nadia says between gasps. 'I can feel the shell hardening!' Fortunately, since Nadia never strays too far from her nest, it's easy to lead her back to it and she lies down on one of the softer cushions with her wings spread, anticipating the egg's arrival.";
@@ -205,8 +190,8 @@ to say NadiaDescriptionUpdate: [basic description update]
 		now NadiaDescription is 1;
 
 to say NadiaPregVisibilityUpdate: [pregnancy description update]
-	now NadiaPregVisibility is 0;          [variable reset]
-	if NadiaPregCounter1 > 0:   [has to be pregnant for anything to be visible]
+	now NadiaPregVisibility is 0; [variable reset]
+	if NadiaPregCounter1 > 0: [has to be pregnant for anything to be visible]
 		if NadiaPregCounter1 < 13: [1st pregnancy egg ready to pop out]
 			increase NadiaPregVisibility by 3;
 		else if NadiaPregCounter1 < 25: [1st pregnancy egg getting bigger]
@@ -237,7 +222,7 @@ instead of sniffing Nadia: [how she smells]
 
 to say NadiaDesc: [how she looks]
 	if debugactive is 1:
-		say "DEBUG -> HP: [HP of Nadia], NADIADESCRIPTION: [NadiaDescription], NADIAFERTILITYCOUNTER: [NadiaFertilityCounter], NADIACHICKCOUNTER: [NadiaChickCounter], PREG1COUNTER: [NadiaPregCounter1], PREG2COUNTER: [NadiaPregCounter2], PREG3COUNTER: [NadiaPregCounter3], NADIAPREGVISIBILITY: [NadiaPregVisibility], NPCNADIAINT: [npcNadiaint] <- DEBUG[line break]";
+		say "DEBUG -> HP: [HP of Nadia], NADIADESCRIPTION: [NadiaDescription], NADIAFERTILITYCOUNTER: [NadiaFertilityCounter], NADIACHICKCOUNTER: [NadiaChickCounter], PREG1COUNTER: [NadiaPregCounter1], PREG2COUNTER: [NadiaPregCounter2], PREG3COUNTER: [NadiaPregCounter3], NADIAPREGVISIBILITY: [NadiaPregVisibility] <- DEBUG[line break]";
 	if (HP of Nadia is 0 or HP of Nadia is 99): [not yet met or refused]
 		say "ERROR-Nadia-001L: She should not be around yet anywhere where players can see her.";
 	else:
@@ -245,7 +230,7 @@ to say NadiaDesc: [how she looks]
 			say "     Nadia is now a veritable goddess, a wellspring of life. Having exceeded all expectations, even her own, it's quite impossible to imagine how she can appear any more fecund than she already is. With how readily and enthusiastically her body has adapted to the immense number of impregnations and births she's gone through despite her petite form - resulting in lush, fertile hips and sumptuous, firm breasts beyond imagination - she looks practically fit to be worshipped, her entire body swaying erotically with every step she takes. The crimson, wavy waterfall of her hair cascades freely down to the back of her knees, and each and every one of her feathers are brilliant and beautiful, glowing with their own inner radiance.";
 			say "     Despite spending much of her time in and around her nest, Nadia's limbs and thighs are toned, and her wings have grown broader and more powerful, draped about her like a cloak of many colors when they're folded about her back. Her generous, tantalizing nipples are now constantly stiff, and her slick, sensitive cunt is swollen with heat and fertility even when she's pregnant. Nadia looks absolutely blissful and croons maternally as she rubs her belly, suggestive of the hypertrophied womb and ovaries that lie beneath, ever ready to be bred with more eggs.";
 			say "     Nadia's mere presence in the library is a ray of light in this broken world, a blossom in a garden choked with weeds. Just looking at her in the little world of her nest makes you feel warm and peaceful inside.";
-		else if NadiaDescription is 5:    [basic appearance]
+		else if NadiaDescription is 5: [basic appearance]
 			say "     Finally in full blossom, the exquisite flower that is Nadia is practically unrecognizable from the frightened, washed-out creature you brought back to the library. Her feathers resplendent in color, her flowing crimson hair and tail-feathers working together to reach the floor in one unbroken line, she manages to add a splash of color to the library all by herself - and her blissful face doesn't hurt, either. Full, firm breasts promise adequate nursing for the next generation she easily ushers into the world by virtue of her massive hips that force wide her stance, and her pussy has finally joined her nipples in exposing themselves, puffy, wet and eager to be bred over and over again.";
 			say "     Truly a mother in every sense of the word now, Nadia seems to exude an aura of calm and peace when she ventures from her nest, even when she's not crooning or singing. Perhaps when all this is over, there will be hope for the future in a nanite-torn world, but for now, you must struggle in your own way, and Nadia in hers.";
 		else if NadiaDescription is 4:
@@ -273,7 +258,7 @@ to say NadiaDesc: [how she looks]
 			say "     Currently, she's resting in her nest, looking pleased with herself and her talons clasped over her lower belly. Would that you have such peace, or trust in the bunker to defend you as securely as she trusts in her nest.";
 		if NadiaChickCounter > 29:
 			say "     Nadia's massive brood of [NadiaChickCounter] chicks brings her immense joy. The eldest of the little horde have already moved out from the library and have begun reclaiming nearby buildings and rooftops for their own, remaining in close contact with their mother, while the rest remain under Nadia's wing to help her care for the steady stream of new additions to their huge family. The broody bird herself has little need to do anything personally anymore, with her numerous chicks serving as her hands, eyes and ears, and when not caring for her brood is more than content to focus on the important job of being pregnant and laying...over and over and over again, with no end in sight.";
-		else if NadiaChickCounter > 10:    [chick appearance]
+		else if NadiaChickCounter > 10: [chick appearance]
 			say "     Nadia's [NadiaChickCounter] chicks are a colorful, cheerful lot in their bright plumage, an even mix of boys and girls. The older ones are now mature enough to run errands like keeping the nest clean, running out into the city for whatever their mother desires, and caring for their younger siblings, taking a load off her hands. Nadia herself keeps everything in her little world well-organized, while tending to, playing with and reading to the younger chicks from the many books in the library.";
 		else if NadiaChickCounter > 1:
 			say "     Nadia's [NadiaChickCounter] chicks are a colorful, cheerful lot in their bright plumage, an even mix of boys and girls. Despite their constant vying for her attention, she has boundless energy when it comes to dealing with them all, tirelessly keeping them fed, watered, disciplined and entertained.";
@@ -288,7 +273,7 @@ instead of conversing the Nadia: [talking to her]
 			if NadiaPregCounter1 > 0:
 				say "     [one of]Nadia giggles. 'Even I'm a little surprised at how many little ones I've been able to be a mother to. I just keep on popping them out, don't I?'[or]'I feel like one of those fertility goddesses now,' Nadia says happily. 'I've proved myself more than capable for the part, don't you think?'[or]'Of course I love all my children. There's more than enough to go around. How do I remember all their names? I just do, don't ask.'[or]Nadia closes her eyes and chirps longingly as she rubs her pregnant belly. 'I don't even need to think about it now. It just keeps happening, feels so natural - and I love it that way.'[or]'I love you all, my little ones,' Nadia murmurs to herself in her sleep, her wings draped protectively about the next in line for her growing brood. 'You are the light of my world.'[at random]";
 			else:
-				say "     [one of]Nadia giggles. 'Even I'm a little surprised at how many little ones I've been able to be a mother to. I just keep on popping them out, don't I?'[or]'I feel like one of those fertility goddesses now,' Nadia says happily. 'I've proved myself more than capable for the part, don't you think?'[or]'Of course I love all my children. There's more than enough to go around. How do I remember all their names? I just do, don't ask.'[or]Nadia cosies herself up to you, her familiar need clear in the subtle shifts of her scent and her faint panting.[or]'Ooh...' Nadia whimpers. 'Just plant your seed in your garden already, please...I always feel so horribly empty when not growing another life in me...'[at random]";
+				say "     [one of]Nadia giggles. 'Even I'm a little surprised at how many little ones I've been able to be a mother to. I just keep on popping them out, don't I?'[or]'I feel like one of those fertility goddesses now,' Nadia says happily. 'I've proved myself more than capable for the part, don't you think?'[or]'Of course I love all my children. There's more than enough to go around. How do I remember all their names? I just do, don't ask.'[or]Nadia cozies herself up to you, her familiar need clear in the subtle shifts of her scent and her faint panting.[or]'Ooh...' Nadia whimpers. 'Just plant your seed in your garden already, please...I always feel so horribly empty when not growing another life in me...'[at random]";
 		else if NadiaDescription is 5: [Matriarch]
 			if NadiaPregCounter1 > 0:
 				say "     [one of]Nadia says 'I don't regret bringing so many lives into this world, ruined as it is. If things are ever going to be better, then we have to try instead of giving up hope.'[or]Nadia chirps 'Looking at my brood, I think there's hope for the future. Aren't they all so adorable?'[or]Nadia says nothing and nuzzles you with her beak, leaning in to drape her brilliantly colored wings about you.[or]Nadia closes her eyes and sighs blissfully. 'No matter how many lives I bring into this world, each one is always a new experience.'[or]'Don't worry about me,' Nadia says, cradling her belly. 'They come so easily now. I feel like this is my destiny.'[at random]";
@@ -357,7 +342,7 @@ to say NadiaSexMenu:
 		now sortorder entry is 4;
 		now description entry is "Fill the beautiful bird's pussy with your cock.";
 		now toggle entry is NadiaSex rule;
-	if (player is male and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and Char-I of Nadia is "1"):
+	if (player is male and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaChar-I is "1"):
 		choose a blank row in table of fucking options;
 		now title entry is "Fly with her (and fuck her)";
 		now sortorder entry is 5;
@@ -390,9 +375,9 @@ This is the NadiaSex rule:
 		else if (nam is "Eat Nadia out"):
 			say "[NadiaSex3]";
 		else if (nam is "Fuck her pussy"):
-			if (Char-I of Nadia is "0" and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaPregCounter1 is 0):
+			if (NadiaChar-I is "0" and bodyname of player is listed in infections of Avianpredlist and NadiaDescription > 3 and NadiaPregCounter1 is 0):
 				say "[NadiaSex5]";
-				now Char-I of Nadia is "1";
+				now NadiaChar-I is "1";
 			else:
 				say "[NadiaSex4]";
 		else if (nam is "Fly with her (and fuck her)"):
@@ -400,7 +385,7 @@ This is the NadiaSex rule:
 		else if (nam is "TESTING: Add 10 chicks to her counter"):
 			increase NadiaChickCounter by 10;
 			increase NadiaFertilityCounter by 10;
-			say "[NadiaDescriptionUpdate]";    [checks progression to the next stage]
+			say "[NadiaDescriptionUpdate]"; [checks progression to the next stage]
 		wait for any key;
 	now lastfuck of Nadia is turns;
 
@@ -438,7 +423,7 @@ to say NadiaSex4: [Fuck her pussy]
 				say "     Being visibly pregnant already, Nadia no longer bothers with her mating song as you step up and embrace her, but makes up for it by nipping and cooing at you as the two of you make out. The heat of her body beneath her feathers is arousing and calming all at once, and the warmth is only more intense about her swollen womb - growing even more so as you lean into her amidst light touches and caresses, pushing the beautiful, broody bird further and further back into her nest until she collapses onto all fours under your dominance, panting and chirping as she begs to be bred and stuffed, both with your cock and even more eggs than she's already carrying.";
 				say "     Taking things slowly, you let your hands roam all over Nadia's changed body, eliciting soft, pleasured whimpers from her as your hands travel over her breasts and the swell of her womb, feeling the gentle shifting of your offspring beneath her skin and feathers. Unable to wait any longer, she pushes away your hands, making pitiful, urgent noises in the back of her throat, a desperately needy and off-key song in her soprano voice.";
 				WaitLineBreak;
-				say "     Still, you make her wait agonisingly long, teasing her as you take your time savoring her warm, gentle scent, her pitiful singing becoming louder and more urgent until you finally shove your meat deep into her, shutting her up by way of slamming her from behind. Nadia rocks back and forth under you with her eyes closed, her pregnant belly and heavy breasts swaying pendulously under her, her femcum drenching the feathers about her crotch and thighs in streams and spurts. Her insides quiver as her body readies itself to receive your seed, which eventually comes by way of an enormous spray, and her belly fills out a little more as you drain your balls into her, hopefully seeding yet another egg within her fecund confines.";
+				say "     Still, you make her wait agonizingly long, teasing her as you take your time savoring her warm, gentle scent, her pitiful singing becoming louder and more urgent until you finally shove your meat deep into her, shutting her up by way of slamming her from behind. Nadia rocks back and forth under you with her eyes closed, her pregnant belly and heavy breasts swaying pendulously under her, her femcum drenching the feathers about her crotch and thighs in streams and spurts. Her insides quiver as her body readies itself to receive your seed, which eventually comes by way of an enormous spray, and her belly fills out a little more as you drain your balls into her, hopefully seeding yet another egg within her fecund confines.";
 				say "     Spent and sated, Nadia falls forward off you, landing on the cushions on her side, her feathers damp and glistening with sexual fluids. She lies there for a good long while even after you've gotten back on your feet, staring into space and panting with her tongue hanging out of her beak, and you feel it'd probably be best if you left her alone to recover.";
 		else: [pregnant matriarch/goddess sex]
 			if NadiaPregVisibility is 5 or NadiaPregVisibility is 4:
@@ -453,7 +438,7 @@ to say NadiaSex4: [Fuck her pussy]
 				say "     At last, you've enough presence of mind to remove yourself from Nadia, the beautiful bird falling into the mound of cushions with a dazed look on her face. She stares at you, her eyes glassy for a good minute or so before they snap back into focus, and she begins to croon and coo wordlessly, rubbing her belly with her talons as her chicks squirm and kick within her. She smiles up at you, feebly fluttering her wings, and you smile back at your beautiful, fruitful garden of children before turning to leave and get dressed.";
 			else if NadiaPregVisibility is 3 or NadiaPregVisibility is 2:
 				say "     Seeing you approach with a twinkle in your eye, Nadia's scent changes from one reminiscent of spring and sunshine...to one of fertility and fucking, coming thick and heady from between her legs. The broody bird presses her long wings close to her body and eagerly falls to all fours, looking up at you pleadingly while you remove your clothes. Being already pregnant, she doesn't sing her mating song, but instead coos and chirps deliriously, her mind fogged by the thought of more eggs growing within her.";
-				say "     Taking things slowly, you kneel by Nadia's side and let your hands roam all over her curvaceous form, marvelling at her brilliant, colorful beauty and how excellently she's adapted to motherhood. Nadia chirps, finding your gentle touch keenly pleasurable as you trace your fingers across her engorged breasts and the warm, fertile garden of her womb, your chicks growing strong and healthy inside her, and the beautiful bird shivers as the palm of your hand runs back and forth across her baby bump, the sheer pleasure that simple motion commands cumulating in a messy outpouring of sexual fluids from her cunt even before you've entered her. You do this a couple more times, Nadia's cries becoming more impassioned with each orgasm that shakes through her body, her usually well-preened feathers absolutely ruined by the slick puddle of femcum she's kneeling in.";
+				say "     Taking things slowly, you kneel by Nadia's side and let your hands roam all over her curvaceous form, marveling at her brilliant, colorful beauty and how excellently she's adapted to motherhood. Nadia chirps, finding your gentle touch keenly pleasurable as you trace your fingers across her engorged breasts and the warm, fertile garden of her womb, your chicks growing strong and healthy inside her, and the beautiful bird shivers as the palm of your hand runs back and forth across her baby bump, the sheer pleasure that simple motion commands cumulating in a messy outpouring of sexual fluids from her cunt even before you've entered her. You do this a couple more times, Nadia's cries becoming more impassioned with each orgasm that shakes through her body, her usually well-preened feathers absolutely ruined by the slick puddle of femcum she's kneeling in.";
 				WaitLineBreak;
 				say "     At last, you decide to grant Nadia's desire to be bred, and grabbing her hips to steady yourself, you sink yourself into her warm, elastic depths. Tears run down her face, but they're not ones of pain as her well-lubricated passage reacts instantly to your presence, a faint sucking sensation gripping your shaft as you're rapidly coaxed to climax whether you like it or not. You don't need that much effort on your part - a thrust here, a grope of her tender breasts there, and with a final clench of her insides she sends you over the edge, blasting your cum into her. Nadia moans at the sensation of being filled even further, her head low between her arms, and climaxes once more before sinking onto her side straight into the mess the both of you've created on the ground.";
 				say "     'You always make me feel so warm and good inside...I'm sure this'll take,' she pants, her breasts heaving in and out. 'Still, I've got to clean up later...'";
@@ -464,7 +449,7 @@ to say NadiaSex4: [Fuck her pussy]
 			say "     'I'm ready,' she says shyly, leaning back on the cushions and waiting for you to remove your clothes before reaching up gripping your shoulders for support.";
 			WaitLineBreak;
 			say "     Nadia's passage is tight for all the wrong reasons, and she cries in equal parts pain and pleasure as you take her in her nest, her wings flapping and fluttering as you thrust deep into her and force her resisting body to adapt to your presence. Tears well up in her eyes as you continue to fuck her, her body confused at how something it desperately desires can also hurt so much - in a bid to take her mind off the painful part of being bred, you caress her breasts and dig in her feathers for her nipples, finding them easily enough. Teasing them between thumb and finger, you feel them swell and stiffen, Nadia gasping and squirming under you as she feels it too, now whimpering less and groaning more.";
-			say "     At last, you can't hold back any further. Balls churning, you thrust as far as you can into Nadia and paint her insides with your hot seed. She squawks as she climaxes too, her talons digging into your collarbone, her belly swelling a little with your load. Panting, she lets go of your shoulders and collapses back onto the cushions while you withdraw, patting her bloated womb and marvelling at the sensation of your cum within her.";
+			say "     At last, you can't hold back any further. Balls churning, you thrust as far as you can into Nadia and paint her insides with your hot seed. She squawks as she climaxes too, her talons digging into your collarbone, her belly swelling a little with your load. Panting, she lets go of your shoulders and collapses back onto the cushions while you withdraw, patting her bloated womb and marveling at the sensation of your cum within her.";
 		else if NadiaDescription is 3 or NadiaDescription is 4:
 			say "     Eager to be able to finally fill the aching emptiness within her, Nadia beckons you to her nest with a talon, the calming character of the faint floral scent that surrounds her changing to... something else as she squirms in her nest, rocking her hips suggestively at you. Whatever it is, it's certainly making your member stiffen and throb as you draw closer - and the expectant look in her eyes grows as she opens her beak and begins to sing, perhaps partly driven by her surfacing avian instincts. Her voice doesn't quite sound like anything you've ever heard before, alluring and mesmerizing, and she reaches up and pulls you down onto her shapely figure and generous breasts, your cock already painfully stiff by the time her song ends.";
 			say "     'I've been practicing,' Nadia says with a giggle as you circle her nipples with a finger. 'I'll perfect my mating song, just for you. Now... fill me with plenty of chicks, pretty please? I want... I need to feel their lives growing within me...'";
@@ -481,21 +466,21 @@ to say NadiaSex4: [Fuck her pussy]
 			WaitLineBreak;
 			say "     After it's all over, the two of you lie in her nest for a long while to recover from your orgasms, Nadia gently nuzzling at you with her beak. 'Wait for the harvest,' she says. 'I promise it'll be good.'";
 	if NadiaPregCounter1 is 0: [not already preggers]
-		now NadiaPregCounter1 is 38;  [she gets knocked up for sure - 38 turns till birth]
+		now NadiaPregCounter1 is 38; [she gets knocked up for sure - 38 turns till birth]
 	else if NadiaFertilityCounter > 4 and NadiaPregCounter2 is 0 or NadiaPregCounter3 is 0: [allowing multiple pregnancies after her 4th egg/pill + a slot free as 2nd or 3rd pregnancy]
 		let NadiaPregChance be a random number from 1 to 20;
 		if NadiaFertilityCounter > 17: [matron stage]
-			if NadiaPregChance > 5:    [75% chance]
+			if NadiaPregChance > 5: [75% chance]
 				if NadiaPregCounter2 is 0:
-					now NadiaPregCounter2 is 38;      [38 turns till birth as 2nd pregnancy]
+					now NadiaPregCounter2 is 38; [38 turns till birth as 2nd pregnancy]
 				else:
-					now NadiaPregCounter3 is 38;      [38 turns till birth as 3rd pregnancy]
-		else:           [mother stage]
-			if NadiaPregChance > 10:   [50% chance]
+					now NadiaPregCounter3 is 38; [38 turns till birth as 3rd pregnancy]
+		else: [mother stage]
+			if NadiaPregChance > 10: [50% chance]
 				if NadiaPregCounter2 is 0:
-					now NadiaPregCounter2 is 38;      [38 turns till birth as 2nd pregnancy]
+					now NadiaPregCounter2 is 38; [38 turns till birth as 2nd pregnancy]
 				else:
-					now NadiaPregCounter3 is 38;      [38 turns till birth as 3rd pregnancy]
+					now NadiaPregCounter3 is 38; [38 turns till birth as 3rd pregnancy]
 
 to say NadiaSex5: [flying and fucking]
 	if NadiaPregVisibility < 2:
@@ -508,21 +493,21 @@ to say NadiaSex5: [flying and fucking]
 		say "     Finally, you can't take it any longer. The heat of the chase has soundly worked its way into the base of your shaft and it explodes into Nadia, her cunt clenching tight to ensure that not one drop is wasted when it could go towards growing another child in her. Moaning and chirping, she pushes herself off the ground with her hands, perhaps vaguely aware of the fact that she should be back in her nest to brood and lay the life that's no doubt taken root inside her, but falls back with a whimper. You gently coax Nadia into your embrace, reassuring the broody bird that you'll protect her out here and that nothing will happen to her nest and brood while she's away and also taking the opportunity to suck at her nipples.";
 		say "     'Bad!' she says halfheartedly. 'That's for the children...mmm...oh...' Soothed, she chirps happily and snuggles up against you, her feathers still slick in spots from your recent exertions.";
 		if NadiaPregCounter1 is 0: [not already preggers]
-			now NadiaPregCounter1 is 38;  [she gets knocked up for sure - 38 turns till birth]
+			now NadiaPregCounter1 is 38; [she gets knocked up for sure - 38 turns till birth]
 		else if NadiaFertilityCounter > 4 and NadiaPregCounter2 is 0 or NadiaPregCounter3 is 0: [allowing multiple pregnancies after her 4th egg/pill + a slot free as 2nd or 3rd pregnancy]
 			let NadiaPregChance be a random number from 1 to 20;
 			if NadiaFertilityCounter > 17: [matron stage]
-				if NadiaPregChance > 5:    [75% chance]
+				if NadiaPregChance > 5: [75% chance]
 					if NadiaPregCounter2 is 0:
-						now NadiaPregCounter2 is 38;      [38 turns till birth as 2nd pregnancy]
+						now NadiaPregCounter2 is 38; [38 turns till birth as 2nd pregnancy]
 					else:
-						now NadiaPregCounter3 is 38;      [38 turns till birth as 3rd pregnancy]
-			else:           [mother stage]
-				if NadiaPregChance > 10:   [50% chance]
+						now NadiaPregCounter3 is 38; [38 turns till birth as 3rd pregnancy]
+			else: [mother stage]
+				if NadiaPregChance > 10: [50% chance]
 					if NadiaPregCounter2 is 0:
-						now NadiaPregCounter2 is 38;      [38 turns till birth as 2nd pregnancy]
+						now NadiaPregCounter2 is 38; [38 turns till birth as 2nd pregnancy]
 					else:
-						now NadiaPregCounter3 is 38;      [38 turns till birth as 3rd pregnancy]
+						now NadiaPregCounter3 is 38; [38 turns till birth as 3rd pregnancy]
 	else if NadiaPregVisibility < 4:
 		say "     Nadia looks a little uncertain at your suggestion. With the way her eyes are glinting and her breath quickening, it's not hard to see that she's finding your avian form quite attractive, but at the same time she's getting a little too gravid to be cavorting around the city. At last, the impasse is broken by a kick from within Nadia's pregnant belly, making her smile. Seems like someone's called the tiebreaker vote.";
 		say "     'I don't think I can fly right now,' she says as she waddles over and carefully leans into you, snuggling the firm mounds of her baby bump and milk-filled breasts against your warmth. Nadia's breath comes in quick, deep gouts as she inhales your scent, her pulse quickening beneath her skin and most prominent about her womb. Her own scent deepens, becoming thick with arousal, and your swelling, throbbing meat brushes against the inside of her thighs, causing her to whimper with arousal. It's a little while before she has enough sense to form words again, 'but I think something can be arranged.'";
@@ -535,21 +520,25 @@ to say NadiaSex5: [flying and fucking]
 		if NadiaFertilityCounter > 4 and NadiaPregCounter2 is 0 or NadiaPregCounter3 is 0: [allowing multiple pregnancies after her 4th egg/pill + a slot free as 2nd or 3rd pregnancy]
 			let NadiaPregChance be a random number from 1 to 20;
 			if NadiaFertilityCounter > 17: [matron stage]
-				if NadiaPregChance > 5:    [75% chance]
+				if NadiaPregChance > 5: [75% chance]
 					if NadiaPregCounter2 is 0:
-						now NadiaPregCounter2 is 38;      [38 turns till birth as 2nd pregnancy]
+						now NadiaPregCounter2 is 38; [38 turns till birth as 2nd pregnancy]
 					else:
-						now NadiaPregCounter3 is 38;      [38 turns till birth as 3rd pregnancy]
-			else:           [mother stage]
-				if NadiaPregChance > 10:   [50% chance]
+						now NadiaPregCounter3 is 38; [38 turns till birth as 3rd pregnancy]
+			else: [mother stage]
+				if NadiaPregChance > 10: [50% chance]
 					if NadiaPregCounter2 is 0:
-						now NadiaPregCounter2 is 38;      [38 turns till birth as 2nd pregnancy]
+						now NadiaPregCounter2 is 38; [38 turns till birth as 2nd pregnancy]
 					else:
-						now NadiaPregCounter3 is 38;      [38 turns till birth as 3rd pregnancy]
+						now NadiaPregCounter3 is 38; [38 turns till birth as 3rd pregnancy]
 	else:
 		say "     Nadia appears quite nervous at the prospect, patting her monstrously swollen belly. 'I'm sorry,' she says. 'I just don't feel like leaving my nest right now...why don't we stay in here and cuddle a bit?' She spreads her wings invitingly, looking quite hopeful, and you get the distinct feeling that she intends to do more than cuddle, if you accept. It seems like her nesting instincts are demanding that she stay confined and grounded - it's probably not best to push her at the moment.";
 
 Section 3 - Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Bird Troubles	"Bird Troubles"
 
 Bird Troubles is a situation. The level of Bird Troubles is 5. [meeting event in which you can take her home]
 The sarea of Bird Troubles is "Campus".
@@ -564,10 +553,10 @@ Instead of resolving a Bird Troubles:
 	say "     Face-down on the ground is a bird-woman, her figure thin and scrawny, her hands and feet now talons. Her feathers are a dull, muted shade of various colors, her crimson hair is messy and unkempt, and her tail-feathers are long and sweeping, reaching down to her calves. The wings that jut from between her shoulder blades are bent at entirely unnatural angles, much like pictures of pigeon roadkill you've seen. Perhaps in a different time and place she could have been truly beautiful, but right now that beauty is just broken, not unlike a cracked mirror.";
 	WaitLineBreak;
 	say "     Roused by your footsteps as you approach, she raises her head and scrambles to her feet, whimpering and shielding herself with her hands until she realizes you're not a threat - and you're equally relieved that she isn't one, either.";
-	say "     'Someone came,' the bird-woman says, slumping her shoulders. 'Someone finally came. Who knows how long I spent trying to break down that door, that and the front entrance - I was beginning to wonder this was how I would die, trapped and alone...I watched the animals die one by one from hunger in their cages, but I didn't dare to let them go...wondering if I would end up like them...'";
+	say "     'Someone came,' the bird-woman says, slumping her shoulders. 'Someone finally came. Who knows how long I spent trying to break down that door, that and the front entrance - I was beginning to wonder if this was how I would die, trapped and alone...I watched the animals die one by one from hunger in their cages, but I didn't dare to let them go...wondering if I would end up like them...'";
 	WaitLineBreak;
 	say "     Well, at least she's not going to be dying now. You ask for her name, and she nods. 'My name is Nadia. I'm...' she looks down at her talons, seeming fit to burst into tears at any time. '...I was a student here. Are those things still out there? I've lost count of how many days I've spent trapped in these laboratories.";
-	say "'Do you have somewhere I could go?' she asks hopefully. 'I...I can't stay here anymore, and I don't think there's anywhere that's safe on campus, not after hearing some of the noises that go on outside all day and night.' ";
+	say "     'Do you have somewhere I could go?' she asks hopefully. 'I...I can't stay here anymore, and I don't think there's anywhere that's safe on campus, not after hearing some of the noises that go on outside all day and night.'";
 	if player consents:
 		LineBreak;
 		say "     'My full name is Nadia Sokolova,' the bird-woman explains as she limps after you through the city and back to the library. 'But just call me Nadia, if you will. I'm an education major, or at least, I was before all this started. I was hoping... well, there's no harm in saying it if I'm going to be staying with you, am I? We have to trust each other.";
@@ -581,34 +570,35 @@ Instead of resolving a Bird Troubles:
 		move Nadia to Garden View;
 		move player to Garden View;
 		now HP of Nadia is 1;
-		now npcNadiaint is "0000000000000B";
-		now Char-A of Nadia is "0";
-		now Char-B of Nadia is "0";
-		now Char-C of Nadia is "0";
-		now Char-D of Nadia is "0";
-		now Char-E of Nadia is "0";
-		now Char-F of Nadia is "0";
-		now Char-G of Nadia is "0";
-		now Char-H of Nadia is "0";
-		now Char-I of Nadia is "0";
-		now Char-J of Nadia is "0";
-		now Char-K of Nadia is "0";
-		now Char-L of Nadia is "0";
-		now Char-M of Nadia is "0";
+		now NadiaChar-A is "0";
+		now NadiaChar-B is "0";
+		now NadiaChar-C is "0";
+		now NadiaChar-D is "0";
+		now NadiaChar-E is "0";
+		now NadiaChar-F is "0";
+		now NadiaChar-G is "0";
+		now NadiaChar-H is "0";
+		now NadiaChar-I is "0";
+		now NadiaChar-J is "0";
+		now NadiaChar-K is "0";
+		now NadiaChar-L is "0";
+		now NadiaChar-M is "0";
 		[Testing Fertile Pills]
 		[increase carried of fertile pill by 50;]
+		now Resolution of Bird Troubles is 1; [recruited Nadia]
 	else:
 		LineBreak;
 		say "     Tears begin to well up in Nadia's eyes. 'I'm sorry,' she says. 'I shouldn't have asked - of course you don't have anywhere to go, let alone let me stay. They're everywhere now, aren't they? I suspected as much, after all these days alone. There's nothing left to hope for. Thank you for saving my life, but goodbye.' With that, she speeds away from you. You shout and give chase, but she's gone by the time you round the corner to the now-opened door, with not even a feather left in sight.";
-		now HP of Nadia is 99;  [refused her]
-		remove Nadia from play;
+		now HP of Nadia is 99; [refused her]
+		now Nadia is nowhere;
+		now Resolution of Bird Troubles is 99; [refused Nadia]
 	now Bird Troubles is resolved;
 
-Lost Chick is a situation. The level of Lost Chick is 5. Lost Chick is Resolved.
+Lost Chick is a situation. The level of Lost Chick is 5. Lost Chick is inactive.
 The sarea of Lost Chick is "Campus".
 
 when play begins:
-	add Lost Chick to badspots of girl;     [female gymnasts]
+	add Lost Chick to badspots of girl; [female gymnasts]
 
 Instead of resolving a Lost Chick:
 	if HP of Nadia is 2: [first attempt]
@@ -651,9 +641,11 @@ to say LostChickFight:
 				say "     This looks like it's going to go on for a while, but Nadia shoots a pleading look at you, clearly asking you to stay. It's a little while before the lecture's over, though, and the broody bird finishes the little stretch of mother-daughter time with a stern '...and you may think you're smart, dear, but what you're lacking in is wisdom. There's a reason I ask you to do things in certain ways. Now, you may not agree with the reason, but there's one nonetheless. Now, I have a few things to discuss with your father, so leave us be for the moment.'";
 				say "     After Vera's left, Nadia urges you to sit down beside her and explain your side of the story, rubbing her feathery body against yours as you recount driving off the feline gymnasts. Her scent changes as you tell your tale, gaining an edge of arousal, and she lets out a sound that's halfway between a chirp and a chuckle. 'Oh, I knew those three. Tryhards, always thinking that if they made the team they'd be popular just like that. Can't say I cared much for them...but I can say I care a lot more for you.' She runs her talons across your body, her fingers trembling as she does so. 'A quality father, a quality mate...' she giggles. '...And quality seed. Since you're so good with children, why don't you go rest a little, and then we can make some more? Don't keep me waiting too long, okay?' With that, she rubs up against you one last time, humming pleasantly in the back of her throat, then turns to other matters.";
 				now Lost Chick is resolved;
+				now Resolution of Lost Chick is 1; [rescuted her]
 				now HP of Nadia is 4;
 
 to say LostChickLose:
+	now Resolution of Lost Chick is 2; [lost]
 	say "     Having being driven off by the trio of felines, you look up once more to find the situation having reverted to being as much as it was when you'd arrived - what some might call an impasse. You'll probably need to take a little time to catch your breath and regroup before trying again.";
 
 instead of trading the fertile pill when the current action involves the Nadia: [giving her fertility pills]
@@ -668,9 +660,9 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 			say "     Slowly, Nadia begins to moan softly as a gentle warmth gathers in her lower belly and begins to spread out to the rest of her body. Unable to control herself, the bird of paradise rubs her breasts as they grow bigger and firmer, milk glands and ducts within developing to better feed future chicks she will bear. The rest of her body is not forgotten - her hips widen a little, the bone structure shifting to better allow eggs through. Not to be left out, her pussy grows wet as it becomes more prominent, her thickening lips advertising her newfound boost in fertility.";
 			say "     The transformation complete, Nadia sinks back into her nest with a contented sigh with her wings splayed out. She looks happier, her body more motherly and elegant, the myriad colors on her body more vibrant. A good time for her to be bred, in fact, and she looks eager enough.";
 			increase NadiaFertilityCounter by 1;
-			if NadiaDescription < 6:  [she's not reached goddess stage yet]
-				say "[NadiaDescriptionUpdate]";    [checks progression to the next stage]
-		else:                           [pregnant]
+			if NadiaDescription < 6: [she's not reached goddess stage yet]
+				say "[NadiaDescriptionUpdate]"; [checks progression to the next stage]
+		else: [pregnant]
 			if NadiaPregCounter2 > 0:
 				if NadiaPregCounter2 > 12:
 					decrease NadiaPregCounter2 by 12;
@@ -681,7 +673,7 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 					decrease NadiaPregCounter3 by 12;
 				else:
 					now NadiaPregCounter3 is 2;
-			if NadiaPregCounter1 > 12:         [not yet ready to lay the egg]
+			if NadiaPregCounter1 > 12: [not yet ready to lay the egg]
 				if NadiaPregVisibility is 4:
 					say "     With a faint gurgle, Nadia's womb expands once more, her chicks squirming within her as the drug-fueled nanites force them to grow and mature. The broody bird's belly is massive at this point, but doesn't stop growing until it fills most of her lap, her skin stretched thin and taut.";
 					say "     Engorged to their fullest, Nadia's breasts rub heavily against her belly as they grow further out and down, the dripping milk from her now dark-brown nipples turning into trickles, seeping into her feathers as she cries out in orgasm again, feminine juices bursting from her cunt and soaking her nest as the effects of the pill fade.";
@@ -697,47 +689,44 @@ instead of trading the fertile pill when the current action involves the Nadia: 
 				else if NadiaPregVisibility is 1:
 					say "     Humming to herself, Nadia places her talons on her flat belly and begins to massage herself, looking up every now and then to make sure you're watching. Her efforts are rewarded as her waist grows into a small baby bump, curving gently outwards, and her eyes brighten as her breasts swell slightly to match the life within her womb. Eventually, the pill's effects wear off, and she beckons you forward to nibble at your cheek with her beak. 'Thank you. That's for letting me skip all the boring parts and get to the good stuff,' she says with a chirp of pleasure.";
 				decrease NadiaPregCounter1 by 12;
-			else:                         [ready to lay the egg]
+			else: [ready to lay the egg]
 				if NadiaPregCounter2 is 0:
 					say "     Humming a lullaby to herself, Nadia cradles her expanding belly with both hands as the pill's effects cause her third trimester to pass in a matter of minutes. Tilting her head as she catches your eye, she coos gently and winks, keeping her pleasant demeanor - up to the point where her belly suddenly stops growing and her expression turns to one of shock. A damp patch on her feathers is spreading outwards from her pussy, and it isn't cum.";
 				else:
 					say "     You wait to see if Nadia can actually get any bigger than the monstrous size she already is - and she does, if only a little as one of her chicks finally grows to full term within her, rounding her out beautifully. Suddenly, though, her addled expression turns to one of alarm, and she struggles to push herself upright.";
 					say "     'Hurry!' she calls out to you. 'I-I felt the shell harden, I'm going to lay now!'";
 				say "[NadiaEggBirth]";
-			say "[NadiaPregVisibilityUpdate]";   [after pregnancy progression or birth]
+			say "[NadiaPregVisibilityUpdate]"; [after pregnancy progression or birth]
 	else:
 		say "     Nadia whimpers, tears gathering in her large, black eyes, but sinks back into the soft confines of her nest. It's a little hard not to feel a twinge of pity for her, but you do have your reasons.";
 
-instead of going up from Grey Abbey Library while (Nadia is in Garden View and Exotic Bird is tamed and companion of player is Exotic Bird and Char-H of Nadia is "0"):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Exotic Bird is tamed and companion of player is Exotic Bird and NadiaChar-H is "0"):
 	move player to Garden View;
 	say "     Seeing the exotic bird on your shoulder, Nadia lets out a girlish trill of sheer delight. 'It's so pretty!' She warbles a few notes and the bird obediently flaps over to her, landing on her wrist, and she takes it back into her nest to fuss over it as if it were her very own child. Chirpy is only more than happy to be in Nadia's presence, cozying up to the bird-woman and preening her feathers. As Nadia pets and coos at the exotic bird, you notice the similarity in their colorful plumage and can't help but wonder if the birds that she'd been caring for while trapped were similar, if not of the same species as the one that's now your pet. She did say they'd been on loan from the zoo, after all...";
 	say "     It's a while before Nadia is done with her little affectionate display, and she sings another few notes before throwing Chirpy off her wrist, your pet flapping through the air to return to your shoulder. Thoroughly content and a lot happier than she was a few moments ago, Nadia gives you a small, shy smile before retreating back into the confines of her nest.";
-	now Char-H of Nadia is "1";
-	say "[npcNadiaintUpdate]";
+	now NadiaChar-H is "1";
 
-instead of going up from Grey Abbey Library while (Nadia is in Garden View and Gryphoness is tamed and companion of player is Gryphoness) and (Char-A of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Gryphoness is tamed and companion of player is Gryphoness) and (NadiaChar-A is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
 	move player to Garden View;
 	say "     As you enter the library's second floor, you leave Denise a little way away as you go and check in with Nadia to make sure she's all right, while the gryphoness passes the time by leaning against one of the second story railings and singing to herself.";
 	say "     At the sound of Denise's singing, Nadia perks up from within her nest and eyes the gryphoness, her interest clearly sparked by the gryphoness's talents. Seeing that introductions are in order, you invite Denise over and introduce the two of them. The two quickly launch into an animated discussion over music and singing in particular, with the two of them comparing their tastes in music. The two are quite similar, although Nadia prefers soothing or upbeat tunes as opposed to Denise's lonely, haunting songs, and dislikes much of contemporary music, finding much of it too jarring for her tastes.";
 	say "     The conversation mostly stays on topic at first, although you catch Nadia giving Denise's cock the occasional embarrassed glance as they discuss the possibility of a recital and perhaps singing a duet some time in the future. Inevitably, though, the discussion slowly turns from music to their experiences of being fucked and bred by you. As with their vocal talents, although the two avians are in general consensus, they don't quite agree on the finer points, with Denise preferring the former and Nadia favoring the latter. Still, with all the talk on the details of your exploits with each of them and the two avian breeders giggling as they compare notes, you decide it's probably best to leave them be for now and come back a little later when they're done.";
-	now Char-A of Nadia is "1";
-	say "[npcNadiaintUpdate]";
+	now NadiaChar-A is "1";
 
-instead of going up from Grey Abbey Library while (Nadia is in Garden View and Icarus is in Grey Abbey Library and HP of Icarus < 50 and HP of Icarus > 0 and NadiaDescription > 3 and Char-B of Nadia is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
+instead of going up from Grey Abbey Library while (Nadia is in Garden View and Icarus is in Grey Abbey Library and HP of Icarus < 50 and HP of Icarus > 0 and NadiaDescription > 3 and NadiaChar-B is "0") and (NadiaChickCounter > 0 or NadiaPregCounter1 > 0):
 	move player to Garden View;
 	say "     As you walk up to the library's second floor, you're treated to a curious sight. Icarus isn't in his usual place in the rafters - instead, your little bird-slut is in Nadia's nest, a spot of blue amongst red, and he's suckling from her, the sight of a full-grown adult doing just that a little odd even in these times, especially when Nadia usually reserves her generous bounty for her own. Nadia, on the other hand, doesn't seem to mind, mothering the chaffinch and cradling him in her lap as if he were just a big baby. Neither of them seem to notice you as you step closer, and it's not until you're close enough to hear Nadia's soft murmurings that you realize what this is all about.";
 	say "     'Pain is not necessarily bad,' she whispers to Icarus as the chaffinch continues to nurse from her ample breasts. 'Each and every one of my brood was brought into the world with pain... and I love them all. At first, there was pain in the breeding, pain in the birthing, and now...I don't regret a single moment of it. Suffering changes us... sometimes for the better.'";
 	say "     Swallowing hard, you wonder if she knows how he got some of his scars, and if she'd be so calm if she did. It seems like you're not going to get much out of them for the moment, and you decide to leave them be until they're done.";
-	now Char-B of Nadia is "1";
-	say "[npcNadiaintUpdate]";
+	now NadiaChar-B is "1";
 
 instead of going up from Grey Abbey Library while (Nadia is in Garden View and HP of Nadia is 1 and NadiaChickCounter > 9):
 	move player to Garden View;
 	say "     Stepping up to the library's second floor, you're greeted by the familiar sight of Nadia's nest - and the unfamiliar sight of her not in it. Instead, she's leaning against one of the open windows, singing a few notes every now and then into the city, her voice carrying out amongst the buildings. It's as if she's looking for something, but although she hurriedly waves you over the moment she sees you, you're clearly not the source of her agitation.";
 	say "     'Have you seen Vera while out in the city?' she asks you worriedly. 'Silly girl went out to check one of the older stores down by the campus, and hasn't come back yet. I told her not to go, especially all on her own, but I suppose she was curious about how her mother used to live. Her wings aren't strong enough for her to fly very much yet, so I'm worried that she can't make it back safely and may be stuck out there...'";
 	say "     Admittedly, it's a little hard to remember just which of Nadia's chicks is which, especially when the broody bird keeps on adding to their number, but it shouldn't be too hard to find one of them when avians, especially ones as colorful as birds of paradise, aren't exactly a common sight on the campus. You agree to keep an eye out for her lost chick when you're in the area; Nadia nods and turns back to the window, calling out every now and then in the hope that her lost daughter will return to her.";
-	now Lost Chick is unresolved; [event open now]
-	now HP of Nadia is 2;   [quest given]
+	now Lost Chick is active; [event open now]
+	now HP of Nadia is 2; [quest given]
 
 instead of going up from Grey Abbey Library while (Nadia is in Garden View and NadiaDescription is 6 and NadiaPregVisibility is 5 and NadiaChickCounter > 19 and HP of Nadia is 4):
 	move player to Garden View;
@@ -755,18 +744,17 @@ instead of going up from Grey Abbey Library while (Nadia is in Garden View and N
 	increase carried of feathered cloak by 1;
 	now HP of Nadia is 5;
 
-instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaChickCounter > 1 and Char-J of Nadia is "0"):
+instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaChickCounter > 1 and NadiaChar-J is "0"):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	say "     Upon your return to the library, you notice that someone's added a couple of potted plants next to the doorway and across from the stairwell - you quickly step back, but relax when you realize that they aren't horrible mutants, but just plain ordinary plants, as far as their outward appearance goes. There are a couple of more common veggies - tomatoes and various peppers on stakes, as well as a few leafy greens, but about a third of the pots are filled with colorful flowers. It's over one of these tropical blossoms that you find Nadia kneeling, humming softly to herself as she tends to its wilted leaves and petals, her chicks watching on interestedly.";
 	say "     'Oh, hello!' she chirps, seeing you arrive. 'I was taking the chicks out for a walk some time ago when I came across some of these in a backyard. They were in pretty bad shape when I took them in, but at least they've perked up some now. A little water, a little mulch and care, and they'll just be as good as new. It's a pity the library doesn't have any planters for them to have a proper home, though. I looked up what some of them were in the library books, and they're apparently called birds of paradise, just like me. I can only hope they turn out even prettier than they are.'";
 	say "     Right now, it would be sensible for Nadia to plant just veggies considering the apocalypse and all, but she seems so happy tending to all the plants... and beside, if she's as good a gardener as she claims to be, then the harvest should be good enough to spare her a few indulgences, right?";
-	now Char-J of Nadia is "1";
-	say "[npcNadiaintUpdate]";
+	now NadiaChar-J is "1";
 	now	GreenTumbTurn is turns;
 
-instead of navigating Grey Abbey Library while (Char-J of Nadia is "1" and (GreenTumbTurn - turns > 12)):
+instead of navigating Grey Abbey Library while (NadiaChar-J is "1" and (GreenTumbTurn - turns > 12)):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
@@ -774,23 +762,21 @@ instead of navigating Grey Abbey Library while (Char-J of Nadia is "1" and (Gree
 	say "     The results of Nadia's care have indeed been quite drastic. Most of the rescued plants have perked up magnificently, saved from the verge of drying out, and although most of them are growing at a far faster rate than they ought to be, that's the only thing off about the otherwise harmless plants. The veggies are green, the flowers are more colorful now, and Nadia's tending to a particularly bright blossom, taking a moment to savor its fragrance.";
 	WaitLineBreak;
 	say "     'I've been trying to teach the children proper gardening,' Nadia says, turning to you as you approach. She's got a trowel in her grasp - you wonder if it's been scavenged from somewhere - but appears prefer digging in the dirt with her hands by far, her avian talons quite suited to the job. 'They aren't as good at it as I am, but they're getting there.'";
-	say "     Gently, you urge Nadia to set down the trowel and gather up her petite form in a warm hug. Nadia cheeps as she snuggles against you, enjoying the warmth and feel of your body, then reluctantly pulls away. 'Mm, that felt nice. It's odd,' Nadia says, fluffing her feathers. 'Ever since becoming a pretty bird, I can't taste anything spicy. Just tried a few of the chilli peppers, and they just tasted sweet. Strange, right? But I suppose it's nothing to get too worried about - if I started worrying about that, I'd have to start worrying about this.' She runs her talons over the firm curves of her avian body. 'But enough about me. Let me help you with that...'";
+	say "     Gently, you urge Nadia to set down the trowel and gather up her petite form in a warm hug. Nadia cheeps as she snuggles against you, enjoying the warmth and feel of your body, then reluctantly pulls away. 'Mm, that felt nice. It's odd,' Nadia says, fluffing her feathers. 'Ever since becoming a pretty bird, I can't taste anything spicy. Just tried a few of the chili peppers, and they just tasted sweet. Strange, right? But I suppose it's nothing to get too worried about - if I started worrying about that, I'd have to start worrying about this.' She runs her talons over the firm curves of her avian body. 'But enough about me. Let me help you with that...'";
 	WaitLineBreak;
 	say "     That said, Nadia calls over one of her chicks and presses an armful of fresh veggies into your hands. 'I'm not exactly a big fan of raw vegetables, but it's not as if there's a stove in here, is there? In any case, do enjoy the fruits of the harvest. There's more than enough for everyone.' She giggles a little at some private joke, then gives you a wave before turning back to her work.";
 	say "     ([bold type]3 food gained[roman type])";
 	increase carried of food by 3;
-	now Char-J of Nadia is "2";
-	say "[npcNadiaintUpdate]";
+	now NadiaChar-J is "2";
 
-instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaDescription > 3 and NadiaChickCounter > 9 and Char-J of Nadia is "2"):
+instead of navigating Grey Abbey Library while (Nadia is in Garden View and NadiaDescription > 3 and NadiaChickCounter > 9 and NadiaChar-J is "2"):
 	say "[NavCheck Grey Abbey Library]";
 	if NavCheckReturn is false, stop the action;
 	move player to Grey Abbey Library;
 	say "     As you enter the library, you notice birdsong wafting down from the second floor; it seems that Nadia's particularly pleased about something today. Stepping upstairs to investigate, you're greeted by the sight of Nadia snuggled in her nest as she's being pampered. Two of Nadia's daughters are brushing her hair and wings, easing out tangles and ruffled feathers, while she herself preens her colorful plumage in a particularly birdlike manner. Nadia makes happy, contented noises in the back of her throat as her daughters preen and pamper her, and they only grow more so as she opens her eyes and notices you staring at her.";
 	say "     'Oh! Welcome back. Say hello to your father, girls,' she says with a giggle, and shakes bits of fluff from her beak. 'Don't mind us - I'm just trying to look my best for you, after all. I'd ask you to join in, if you'd like, but that would ruin the surprise. Please come back later when we're finished and I'll show you just how prettied up I can be, okay?'";
-	say "     It certainly looks like it takes a lot of work for Nadia to look as good as she does all the time now, especially considering the state she's often left in after you're bred her. Thinking about it, it must certainly be quite some effort to get her all cleaned up after each session...";
-	now Char-J of Nadia is "3";
-	say "[npcNadiaintUpdate]";
+	say "     It certainly looks like it takes a lot of work for Nadia to look as good as she does all the time now, especially considering the state she's often left in after you've bred her. Thinking about it, it must certainly be quite some effort to get her all cleaned up after each session...";
+	now NadiaChar-J is "3";
 
 
 Table of Game Objects (continued)
@@ -818,14 +804,14 @@ when play ends:
 				say "     When the military evacuates the city, Nadia parts amicably with you, thanking you once more for letting her stay in the library until the rescue arrived.";
 				say "     Her reason for doing so soon becomes clear. Settling down in a large country house with a fellow avian mutant who's far more willing to indulge her breeding and nesting urges than you were, Nadia proceeds to pop out a steady stream of children over the coming years. Her ever-growing brood spreads out across the countryside, reclaiming and working much of the damaged land left in the wake of the nanite outbreak and putting it to good use. Mutants willing to put in a honest day's work are afforded food and shelter at any one of her many offspring's farms, and this saves a good number of them from starvation in the lean times that follow the outbreak.";
 				say "     The two of you still keep in touch, and she invites you over for dinner every so often, referring to the grand country home she and her husband have restored as her 'nest', a distinct improvement from the ring of cushions and furniture she'd occupied back at the library. It's at one of these dinners that you look at Nadia - with her body filled out and motherly from repeated pregnancies and with more on the way, surrounded by those she loves and who love her - and can't help but agree she was right to hold out hope till the end.";
-			else:[at least some sex went on]
+			else: [at least some sex went on]
 				if NadiaDescription is 1 or NadiaDescription is 2:
 					say "     When the military evacuates the city, Nadia decides to stick with you, unwilling to part with such a fine mate.";
 					say "     Nadia's vocal talents draws much interest amongst lovers of the classical scene. While her tendency to be constantly pregnant limits the scope of her public performances, many drop by for a private one, or even just to hear her sing lullabies to her chicks.";
 					say "     Although Nadia's often willing to sing to calm others, she reserves the soft, arousing tones of her mating song only for you. Her body gradually adapts itself more fully to motherhood, growing more beautiful with each egg laid, and this only pleases the crowds more, paying great sums to have the exquisite bird sing for them. Yet at the height of her fame, Nadia chooses to quit the scene and settle down with you more firmly and concentrate on growing her brood. Her loss is keenly felt by the community of classical singers, but in the end they agree it's her decision to do so.";
 				else if NadiaDescription is 3 or NadiaDescription is 4:
 					say "     When the military evacuates the city, Nadia decides to stick with you, unwilling to part with such a fine mate or leave her chicks fatherless.";
-					say "     Banking on her love of flowers, Nadia and her chicks start up a family business growing a wide variety of beautiful blossoms for sale, either as-is or distilled into wonderful floral scents. The latter proves to be highly popular with mutants who wish to hide their musks and heats, avoiding social upsets and aiding in one's concentration, and there is no shortage of prospective customers. rumors abound that she reserves the best of her perfume recipes for her own personal use, but no one has ever actually seen her using any, even though her signature floral scent is unmistakable the moment she steps into the room.";
+					say "     Banking on her love of flowers, Nadia and her chicks start up a family business growing a wide variety of beautiful blossoms for sale, either as-is or distilled into wonderful floral scents. The latter proves to be highly popular with mutants who wish to hide their musks and heats, avoiding social upsets and aiding in one's concentration, and there is no shortage of prospective customers. Rumors abound that she reserves the best of her perfume recipes for her own personal use, but no one has ever actually seen her using any, even though her signature floral scent is unmistakable the moment she steps into the room.";
 					say "     However, Nadia's greatest love is always for her brood. Once the business is off the ground, Nadia leaves its day-to-day running to her children, and instead focuses her effort on giving them more brothers and sisters. You, on your part, are more than willing to regularly plant your seed within the fertile confines of her womb and keep her well-stuffed with plenty of eggs, ensuring that she will never have to feel empty inside ever again.";
 				else if NadiaDescription is 5:
 					say "     When the military evacuates the city, Nadia decides to stick with you, unwilling to part with such a fine mate or leave her chicks fatherless. Her impressively fertile and motherly features draw comment from some of the soldiers, clearly awestruck by the sheer vibrancy of her colorful beauty, but she makes it clear she's only going to be breeding with you.";

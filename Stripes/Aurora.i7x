@@ -1,9 +1,14 @@
 Version 1 of Aurora by Stripes begins here.
 [Version 1.0 - Sex w/Aurora]
+[Version 1.1 - Added unbirth scene - Written by Rizzy, Coded by Kurainyx]
 
 "Adds a frost giantess companion."
 
 Section 1 - Encounter
+
+Table of GameEventIDs (continued)
+Object	Name
+Giant's Frozen Yogurt	"Giant's Frozen Yogurt"
 
 Giant's Frozen Yogurt is a situation.
 The sarea of Giant's Frozen Yogurt is "Capitol".
@@ -25,6 +30,7 @@ Instead of resolving a Giant's Frozen Yogurt:
 			say "[freeing_aurora]";
 		else:
 			say "     You take a few steps back from the moat of lava and tell her that you don't know how to get her across. You tell her to go back into the yogurt shop and wait for the military rescue. She nods, seeming a little cheered to hear that a rescue will come. She thanks you for trying and staggers her way back inside. You wipe your sweaty brow, glad you've managed to avoid possible trouble.";
+			now Resolution of Giant's Frozen Yogurt is 99;	[Did not help Aurora]
 			now Giant's Frozen Yogurt is resolved;
 	else:
 		say "     You manage to make your way back to the molten moat encircling Aurora and the trendy yogurt shop she's been trapped in. Calling out to her, she emerges and waves happily to you. You head back over to the broken section of wall to make another attempt at knocking it over to make a bridge.";
@@ -58,12 +64,13 @@ to say freeing_aurora:
 			say "You quickly examine the fractured wall, trying to find a way to topple it across the lava flow[if toolbonus > 0]. Assessing your available tools and equipment, you get started[end if][if claw hammer is owned]. You start with your hammer, trying to continue the breaks along the bottom, chipping away where you can, helping a little[end if][if crowbar is owned]. Jamming your crowbar into one of the cracks, you pry at the wall, further destabilizing it[else if bo staff is owned]. Jamming your bo staff into one of the cracks, you use it for added leverage[else if trident is owned]. Jamming the shaft of your trident into one of the cracks, you use it for added leverage[else if spear is owned]. Jamming the shaft of your spear into one of the cracks, you use it for added leverage[end if][if sizebonus > 0]. Your [body size of player] body is of added advantage, adding greater weight to your push against it[else if sizebonus < 0]. Your [body size of player] body doesn't help, but you throw what weight you can behind it[end if][if stbackbonus > 0]. You throw your strong back into it as it starts to lean over, your mighty legs, shoulders and back muscles all pushing hard as it starts to go down[end if]. In the end, you put all your might into it with a final attempt that sets it falling.";
 			now aurorafreed is true;
 		else:
-			say "You quickly examine the fractured wall, trying to find a way to topple it across the lava flow[if sizebonus > 0]. Your [body size of player] body is of added advantage, adding greater weight to your push against it[else if sizebonus < 0]. Your [body size of player] body doesn't help though, your decreased weight making the task more difficult for you[end if]. ";
+			say "You quickly examine the fractured wall, trying to find a way to topple it across the lava flow[if sizebonus > 0]. Your [body size of player] body is of added advantage, adding greater weight to your push against it[else if sizebonus < 0]. Your [body size of player] body doesn't help though, your decreased weight making the task more difficult for you[end if]. Unfortunately, ";
 			if toolbonus > 0:
-				say "     Unfortunately, even with the tools and equipment you have available, you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to help her.";
+				say "even with the tools and equipment you have available, you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to help her.";
 			else:
-				say "     Unfortunately, you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to free her.";
+				say "you are unable to topple the wall before the heat and fumes become too much for you and you have to withdraw for now. Aurora thanks you for the attempt and asks you to keep looking for a way to free her.";
 			now HP of frost giantess is 1;
+			now Resolution of Giant's Frozen Yogurt is 2;	[Tried and failed to help Aurora]
 		if aurorafreed is true:
 			say "     Thanks to your efforts, a section of the concrete wall collapses, falling across the lava stream. It cracks in a few spots, but manages to largely hold together. Worried that it won't stay together for long, you hop across to help the giant woman. She heaves a small chest freezer onto her back like a backpack and rushes to join you by the lava's edge. Being so close to the lava makes her a little wobbly, but you're able to support her enough to help her across. The two of you put some distance between the magma flow and soon you're both feeling much better.";
 			WaitLineBreak;
@@ -71,9 +78,11 @@ to say freeing_aurora:
 			say "     She pauses for a moment, looking around the devastated city. 'Look. Things seem really crazy out here and I want to repay you for saving me. Now, I've never really been much of a fighter, but just look at me,' she says, flexing an arm to make her bicep bulge. 'I can come with you and help keep you safe, if you'd like. Besides,' she adds, looking you up and down with an appreciative grin, 'maybe we can think of some other ways I can repay you, too.'";
 			now HP of frost giantess is 2;
 			now frost giantess is tamed;
+			add "Tamed" to Traits of frost giantess;
 			move Aurora to Breakroom;
 			say "     (The frost giantess is now tamed! You can make her your active pet by typing [bold type][link]pet frost giantess[as]pet frost giantess[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to get rid of a pet? Use [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link].[roman type])[line break]";
 			increase score by 10;
+			now Resolution of Giant's Frozen Yogurt is 1;	[Recruited Aurora]
 			now Giant's Frozen Yogurt is resolved;
 
 
@@ -83,6 +92,10 @@ the linkaction of Aurora is "[auroralinkaction]".
 
 to say auroralinkaction:
 	say "Possible Actions: [link]talk[as]talk Aurora[end link], [link]smell[as]smell Aurora[end link], [link]fuck[as]fuck Aurora[end link][line break]";
+
+Table of GameCharacterIDs (continued)
+object	name
+frost giantess	"frost giantess"
 
 frost giantess is a pet. frost giantess is a part of the player.
 understand "Aurora" as frost giantess.
@@ -97,7 +110,7 @@ the fuckscene of frost giantess is "[SexWithAurora]".
 
 
 to say SummonAurora:
-	remove Aurora from play;
+	now Aurora is nowhere;
 	if player is in Breakroom and Aurora is in Breakroom: [summoning while standing next to her]
 		say "     ...";
 	else: [regular summoning]
@@ -109,6 +122,10 @@ to say DismissAurora:
 		say "     ...";
 	else: [dismissing her in the abbey]
 		say "     ...";
+
+Table of GameCharacterIDs (continued)
+object	name
+Aurora	"Aurora"
 
 Aurora is a woman.
 The description of Aurora is "[AuroraDesc]".
@@ -130,7 +147,7 @@ to say AuroraDesc:
 	say "     She's friendly and eager to help you, willing to even come along and fight by your side. While no trained warrior, her punches hit like a ton of bricks. The heat of the city does wear on her, which is why she's carries a small retail ice cream freezer like a backpack. It's full of frozen yogurt and somehow is always cold despite not even being plugged in. Fighting will eventually tire her out and overheat her, but she'll keep fighting as long as you do out of loyalty.";
 
 to say aurora_attack:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "[one of]Grabbing a large chunk of rubble, the giantess hurls it into your opponent[or]One of the giantess's wild blows strikes your foe, knocking them back[or]Aurora [if scale entry < 3]stomps on the much smaller foe[else]gives your opponent kick with her massive foot[end if][or]The giantess's meaty fist bashes into your opponent[or]Balling both fists together, Aurora swings them down onto the [name entry][at random]![run paragraph on]";
 
 instead of conversing frost giantess:
@@ -172,13 +189,9 @@ to say AuroraTalkMenu:
 					say "[AuroraTalk1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the frost giantess, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the frost giantess, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -197,6 +210,10 @@ Section 3 - Sex w/Aurora
 to say SexWithAurora:
 	if lastfuck of frost giantess - turns < 8:
 		say "     'Mmm... tempting, very tempting, but how about we wait for a bit first?' she says with a happy smile.";
+	else if ublevel is 3 and a random chance of 1 in 3 succeeds:
+		say "     Aurora smiles at your offer of sex, but she has a little lewd smile on her lips. 'Well, I have an idea. You're so small, and you may not be enough for me...' she says, gently reaching to pick you up, and you wiggle in confusion when she brings you close to her cunt. 'But I have an idea. Are you okay with this?' she asks, and you nod, having an inkling of what she has in store. Soon, her icy folds press to your face, and you can feel the lips spreading as she pushes you inside of her body, the oppressive walls gripping you with some form of strength only a gal the giant's size would have. Aurora sighs, and gripping your feet, she uses your smaller form as a sex aid, and you can only breathe in when she pulls you all the way out, breaking [']water['] while [']swimming['] in her sex.";
+		say "     After a good couple of minutes of this, she finally starts to clench harder. Her fingers slip, and her palm presses you to the cervix, and a loud moan leaves the giant. 'O-oH! Y-yes, m-more!' the gal cries out, pushing on you as best she can as the closed barrier opens, and you spill out into her womb just as the giant screams in pleasure. You ride out the orgasm inside of Aurora, and soon, after what sounds like a heavy session of gushing over the floor, Aurora pokes at your bulge in her belly. 'A-are you really in there?' Affirming that you are, she moans a little at the thought. 'O-oh my... well, I guess that you can stay, b-but [']momma['] needs to rest for a bit.' she says, and your giant friend reclines. You can feel sleep coming on, the slow beat of her heart, the warmth, and the circumstances making you all drowsy enough that you pass out quickly.";
+		say "     Coming to later, you find Aurora has still kept you inside and is walking somewhere. You push about as you wake up, and Aurora moans. 'O-oh... time to let you out~' She squats, pushing as you slowly breach her cervix again, sliding out bit by bit till your face is outside of her body, and you can feel yourself drop out, thankfully into her waiting hand as she dries you off with some towels that she found. 'T-there we go.'";
 	else:
 		say "     Aurora smiles broadly at the offer and grabs you into a powerful hug. 'That'd be great! Let's do it, [if player is male and scalevalue of player < 5]little guy[else if player is male]big guy[else if player is female and scalevalue of player < 5]little lady[else if player is female]big girl[else]hon[end if],' she says happily. She grunts a little as she wrestles her way out of those tight, stretched pants and shirt of hers, baring herself before you.";
 		if player is male and cock length of player >= 8:
@@ -210,7 +227,7 @@ to say SexWithAurora:
 			else:
 				say "     The blue-skinned giantess lays back on the ground and spreads her legs. She then parts her labial lips with her fingers, putting herself on tantalizing display for you. 'How about you come on down her and give me a lick?' You move up between those powerful thighs, your eyes focused on the giantess's wet pussy. Her folds and cunny are the same soft purple as her lips and nipples, matching nicely with the powder blue color of her skin. The sight of that big pussy makes you all the more excited and you lick your lips eagerly.";
 			say "     Aurora smiles up at you as you get into position, kneeling between her powerful thighs. You start by running [if scalevalue of player < 3]a hand[else]your fingers[end if] across those wet petals. Her flesh is cool to the touch, pleasantly soothing without being cold or clammy. As your fingers start to explore across and then into her large cunt, you lean forward and give her a lick. Her juices have a soft, sweet taste to them that has you coming back for more.";
-			say "     '[if scalevalue of player < 3]Come on, squirt. Let's see what you've got,' she teases with a friendly smile. She puts a big hand on the back of your head, easily grabbing the whole of it in its surprisingly gently grip. You're dwarfed by the massive woman, but there's something exciting about being able to please such a large lover[else if scalevalue of player < 5]That's it, hon. Keep it up,' she moans with a friendly smile. She rubs a giant hand at the back of your head, grabbing you gently with its large grip. The larger woman is impressive in her size and strength, but shows more gentleness than she usual displays[else]Ah yeah! It's nice to have big lover more my own size,' she moans happily. She places a meaty hand at the back of your head, gently caressing you[end if].";
+			say "     '[if scalevalue of player < 3]Come on, squirt. Let's see what you've got,' she teases with a friendly smile. She puts a big hand on the back of your head, easily grabbing the whole of it in its surprisingly gentle grip. You're dwarfed by the massive woman, but there's something exciting about being able to please such a large lover[else if scalevalue of player < 5]That's it, hon. Keep it up,' she moans with a friendly smile. She rubs a giant hand at the back of your head, grabbing you gently with its large grip. The larger woman is impressive in her size and strength, but shows more gentleness than she usual displays[else]Ah yeah! It's nice to have big lover more my own size,' she moans happily. She places a meaty hand at the back of your head, gently caressing you[end if].";
 			say "     As you eat the giant pussy out, your [if scalevalue of player < 3]whole hand pumps[else]fingers pump[end if] into her wide tunnel. Your free hand finds that enlarged button of her clit and rubs at it. This draws delightful moans and panting from your excited lover. You savor these sounds of delight as you tantalize her with licks, nibbles, kisses and fingering. In the end, you drive her to a loud orgasm, causing her mighty pussy to clamp down around your [if scalevalue of player < 3]hand[else]fingers[end if] with the same strength the giantess always displays. You tug and push as best you can in this tight, wet grip as if thrusting into the delighted female. You lap up her cool juices [if scalevalue of player < 3]as they soak your face and flood your mouth[else if scalevalue of player < 5]as they wet your face and flow across your tongue[else]as they wet your lips and tongue[end if], finding them sweet and refreshing. As her orgasm is waning, pull your digits free and [if player is male]grab your [cock size desc of player] cock and pump at it eagerly. After a quick bout of masturbating to finish yourself off, you fire your [cum load size of player] load across the giant woman's soaked crotch and still-quivering pussy[else if player is female]stuff them into your needy cunt, fingering yourself frantically. Soon you're crying out in your own orgasmic release while the giant woman watches on[else]bring them to your mouth. You make a sensual display of licking and sucking on them while the giant woman watches on[end if].";
 		now lastfuck of frost giantess is turns;
 
@@ -223,7 +240,6 @@ when play ends:
 			say "     With you losing it to the infection, Aurora is reluctantly forced to leave you. She strikes out on her own into the city, hoping for rescue before she too loses her remaining humanity.";
 		else:
 			say "     When rescue does finally come, Aurora is the subject of some concern due to her massive size. This makes her more difficult for the military to remove from the city. But she is clearly a survivor and sane, despite her transformation, so a military transport truck is requested. She's kept in a holding era that's been equipped for larger evacuees. There's heavier guard here, so you don't get to see much of her during the period at the base.";
-			say "     She is eventually released and, after turning down a recruitment offer, tries to find a new life for herself. Having managed to make a few friends among the larger transformation victims, she stays with them for a while. ";
-			say "     But she finds the heat in the area too uncomfortable and eventually moves further north, taking a position with RSX in Western Canada. The cooler climate there is much more to her liking and she enjoys the snowy winters up in the Rocky Mountains. She's a big hit among the ski resorts, making appearances at several of them over the course of the winter. She remains in contact with you through the intermittent correspondence she's able to send through her employer.";
+			say "     She is eventually released and, after turning down a recruitment offer, tries to find a new life for herself. Having managed to make a few friends among the larger transformation victims, she stays with them for a while. However, she finds the heat in the area too uncomfortable and eventually moves further north, taking a position with RSX in Western Canada. The cooler climate there is much more to her liking and she enjoys the snowy winters up in the Rocky Mountains. She's a big hit among the ski resorts, making appearances at several of them over the course of the winter. She remains in contact with you through the intermittent correspondence she's able to send through her employer.";
 
 Aurora ends here.

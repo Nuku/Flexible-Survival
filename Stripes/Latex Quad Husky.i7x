@@ -5,6 +5,10 @@ Version 1 of Latex Quad Husky by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Shipping Container	"Shipping Container"
+
 Shipping Container is a situation.
 The sarea of Shipping Container is "Outside".
 latexhuskymode is a truth state that varies. latexhuskymode is usually false.
@@ -22,6 +26,7 @@ Instead of resolving a Shipping Container:
 	if player consents:
 		if guy is banned and girl is banned:
 			say "     You pull and pry at the handles to the steel container, but you can't get it to open. Frustrated, you bang the clipboard against the door a few times. You then notice a note written on next page of the shipping manifest stating: [']Contents locked by simultaneous use of both guy and girl flags.['] You're not quite sure what that means, but it seems the container's locked. Maybe some other time.";
+			now Resolution of Shipping Container is 98; [banned]
 		else:
 			now latexhuskymode is true;
 			say "     It takes a bit of effort to push open the latches locking the overturned container, but eventually manage to do so by banging noisily to force the last one. When you do so, the doors flap open and several cardboard boxes tumble out onto you. Thankfully the boxes aren't that heavy, but the contents spill out. Hundreds of little, rubber, dog figurines pour out, inundating you in little latex huskies in various poses. Realizing too late what the contents are and that the manifest meant 160 boxes of them, you grumble in frustration, trying to pull yourself free of the shifting mass of two inch figurines and half-empty boxes. It is a struggle to find footing when every move you make seems to send another box of them over you.";
@@ -36,8 +41,8 @@ Instead of resolving a Shipping Container:
 			let monm be 1;
 			if girl is not banned:		[Adjust Female Husky]
 				[puts Female Husky as lead monster for infection and impregnation]
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Female Husky":
 						now monster is y;
 						break;
@@ -48,8 +53,8 @@ Instead of resolving a Shipping Container:
 				now monf is monster;
 			if guy is not banned:		[Adjust Alpha Husky]
 				[puts Alpha Husky as lead monster for infection and impregnation]
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Alpha Husky":
 						now monster is y;
 						break;
@@ -62,7 +67,7 @@ Instead of resolving a Shipping Container:
 				now libido entry is 90;
 				now monm is monster;
 			if ( "Female Preferred" is listed in feats of player and girl is not banned ) or guy is banned:
-				choose row monf from table of random critters;
+				choose row monf from Table of Random Critters;
 				now tailname of player is "Female Husky";
 				now facename of player is "Female Husky";
 				now skinname of player is "Female Husky";
@@ -79,7 +84,7 @@ Instead of resolving a Shipping Container:
 					follow the sex change rule;
 					follow the sex change rule;
 			else:
-				choose row monm from table of random critters;
+				choose row monm from Table of Random Critters;
 				now tailname of player is "Alpha Husky";
 				now facename of player is "Alpha Husky";
 				now skinname of player is "Alpha Husky";
@@ -97,7 +102,10 @@ Instead of resolving a Shipping Container:
 					follow the sex change rule;
 			say "     But that is not all that has changed. Rolling onto your side, your latex tongue hangs from your muzzle as you look between your hind legs, examining your altered groin[if cocks of player > 1]. Your cocks are delicious looking rods of canine meat formed from latex-like flesh. It makes your mouth water just to look at them as thick pre dribbles from them[else if cocks of player is 1]. Your cock is a delicious looking rod of canine meat formed from latex-like flesh. It makes your mouth water just to look at it as pre dribbles from it[end if][if cunts of player > 1]. Your pussies are puffy, rubbery mounds made for fucking, leaking an arousing lubricant that tempts you to dive your canine tongue in them[else if cunts of player is 1]. Your pussy is a puffy, rubbery mound made for fucking, leaking an arousing lubricant that tempts you to dive your canine tongue into it[end if]. You can feel that the latex has bonded to you deep inside, ensuring you'll stay a sexy latex husky trotting around on all fours if you are any kind of husky at all. Deeply aroused by the changes and the new instincts trying to take hold, you can't but be pleased by this new development.";
 			add { "Female Husky", "Alpha Husky" } to infections of Latexlist;
-	Now Shipping Container is resolved;
+			now Resolution of Shipping Container is 1; [latex huskies freed]
+	else:
+		now Resolution of Shipping Container is 99; [disinterest]
+	now Shipping Container is resolved;
 
 
 

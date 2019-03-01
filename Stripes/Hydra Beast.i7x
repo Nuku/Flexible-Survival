@@ -11,16 +11,16 @@ when play begins:
 	add { "Hydra Beast" } to infections of Reptilelist; [list of reptile infections]
 	add { "Hydra Beast" } to infections of VoreExclusion; [list of critters not to be vored]
 
-hydraheadcount is a number that varies. hydraheadcount is normally 6.
-hydraheadcheck1 is a truth state that varies. hydraheadcheck1 is normally false.
-hydraheadcheck2 is a truth state that varies. hydraheadcheck2 is normally false.
-hydraheadcheck3 is a truth state that varies. hydraheadcheck3 is normally false.
-hydraheadregrowth is a truth state that varies. hydraheadregrowth is normally true.
+hydraheadcount is a number that varies. hydraheadcount is usually 6.
+hydraheadcheck1 is a truth state that varies. hydraheadcheck1 is usually false.
+hydraheadcheck2 is a truth state that varies. hydraheadcheck2 is usually false.
+hydraheadcheck3 is a truth state that varies. hydraheadcheck3 is usually false.
+hydraheadregrowth is a truth state that varies. hydraheadregrowth is usually true.
 hydramaulcount is a number that varies.
 
 to say hydrabeastdesc:
 	setmongender 3; [creature is male]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if hardmode is true and level of player > 12, let debit be level of player - 12;
 	now lev entry is 12 + debit;
@@ -140,20 +140,20 @@ to say beatthehydrabeast:
 to say beathydrabeast1:	[oral]
 	say "     Pulling the beast's primary head up to yours, you give it a kiss. It makes a surprised rumble, but makes no attempt to resist, even sliding its slick tongue into your mouth. After you break the kiss, the creature seems more at ease and compliant. You guide its head down to your crotch, ordering it to start licking. ";
 	if cocks of player + cunts of player > 1:
-		say "     Faced with your multiple loins, it rumbles softly and licks across them before you [if cocks of player > 1]sliding its muzzle over one of your cocks[else if cocks of player is 1]sliding its muzzle over your cock[else]press its muzzle to one of your pussies[end if]. ";
+		say "Faced with your multiple loins, it rumbles softly and licks across them before you [if cocks of player > 1]sliding its muzzle over one of your cocks[else if cocks of player is 1]sliding its muzzle over your cock[else]press its muzzle to one of your pussies[end if]. ";
 	else if cocks of player is 1:
-		say "     Faced with your throbbing manhood, it rumbles softly and licks across it before sliding its muzzle over it. ";
+		say "Faced with your throbbing manhood, it rumbles softly and licks across it before sliding its muzzle over it. ";
 	else:
-		say "     Faced with your dripping snatch, it rumbles softly and licks across it before pressing its muzzle to it. ";
-	say "     It works its tongue adeptly, playing across your sensitive flesh and increasing your arousal quickly[if player is male]. The creature shows considerable skill while sucking your cock, likely having lots of practice on itself and others[else]. The creature's wriggling tongue shows considerable skill while lapping into your hot, needy cunt[end if].";
+		say "Faced with your dripping snatch, it rumbles softly and licks across it before pressing its muzzle to it. ";
+	say "It works its tongue adeptly, playing across your sensitive flesh and increasing your arousal quickly[if player is male]. The creature shows considerable skill while sucking your cock, likely having lots of practice on itself and others[else]. The creature's wriggling tongue shows considerable skill while lapping into your hot, needy cunt[end if].";
 	say "     As the creature works to orally pleasure you, you grab its other heads and pull them into the fun. You kiss them all in turn, sucking on their long, tapered tongues. After being released from your eager lips, you guide each head into position, letting them pleasure your [bodydesc of player] body, moving them to new spots from time to time[if breast size of player > 0]. They lick and suck on your nipples, sending shivers of delight through you[end if][if cocks of player > 2]. You make sure your other cocks receive attention as well, swapping hydra heads onto them as well[else if cocks of player is 2]. You make sure your other cock receives attention as well, swapping hydra heads onto it as well[end if][if player is male and cunts of player > 1]. Those deft tongues are also put to use in your [cunt size desc of player] cunts, licking and thrusting into them to fill their aching need[else if player is male and cunts of player is 1]. Those deft tongues are also put to use in your [cunt size desc of player] cunt, licking and thrusting into it to fill its aching need[else if cunts of player > 2]. Those deft tongues are also put to use in your remaining cunts, licking and thrusting into them to fill their aching need[else if cunts of player is 2]. Those deft tongues are also put to use in your remaining cunt, licking and thrusting into it to fill its aching need[end if][if anallevel is 3 and hydraheadcount > 4]. One of those heads even sneaks around to your ass when you're otherwise distracted by its numerous licking tongues and laps at your asshole. After a few teasing licks, it squirms the slick, meaty flesh past your relaxing muscles and into you, causing you to moan at the pleasant intrusion[end if]. This wide array of oral pleasure is kept up until you can hold back no longer and cum with a long, loud moan[if cocks of player > 1], pumping your hot seed down the creature's throats[else if cocks of player is 1], pumping your hot seed down the creature's throat[else if cunts of player > 1], soaking the creature's scaly muzzles with your juices[else]soaking the creature's scaly muzzle with your juices[end if]. After giving you such a fulfilling orgasm, you give the creature another kiss, this one having lingering traces of your [if player is male]semen[else]honey[end if] to flavor it, before sending it on its away[if hydraheadcount > 6]. As it departs, you can see its extra heads already decaying away, dropping off and melting into fleshy goop until it's down to its original half-dozen[else if hydraheadcount < 6]. As it departs, you can see the bulges of new heads starting to form at the severed stumps, the creature soon to be back up to a half-dozen[end if].";
 
 to say beathydrabeast2:	[fuck it]
 	say "     Pulling the beast's primary head up to yours, you give it a kiss. It makes a surprised rumble, but makes no attempt to resist, even sliding its slick tongue into your mouth. After you break the kiss, the creature seems more at ease and compliant. You order it to keep that ass raised and move around behind it. It holds its position and raises its tail, willingly granting you access to its ass now that you've defeated it. You run your hands over its meaty backside, feeling the firm muscles under its scaly hide. And between those is the dark green ring that is your target.";
 	if anallevel is 3 and a random chance of libido of player in 125 succeeds:
-		say "     Leaning in close, you lick your lips before pressing your slick tongue to that dark ring. You slather your tongue across it a few times before starting to prod at the creature's hole. The great beast rumbles in pleasure as you knead its rear and work your slick, meaty flesh into his back passage, opening him up and getting him ready for what's to come. Though you certainly keep going at it longer than is necessary, having switched a hand to his huge, heavy ballsack. Each nut feels like an cluster of testes clumped together to provide enough cum for the creature's many cocks. Only after you've had your fun playing with its balls and hearing it moan and rumble as you do are you ready to get to the main event.";
+		say "     Leaning in close, you lick your lips before pressing your slick tongue to that dark ring. You slather your tongue across it a few times before starting to prod at the creature's hole. The great beast rumbles in pleasure as you knead its rear and work your slick, meaty flesh into his back passage, opening him up and getting him ready for what's to come. Though you certainly keep going at it longer than is necessary, having switched a hand to his huge, heavy ballsack. Each nut feels like a cluster of testes clumped together to provide enough cum for the creature's many cocks. Only after you've had your fun playing with its balls and hearing it moan and rumble as you do are you ready to get to the main event.";
 	else if anallevel is 3:
-		say "     You suck down on a pair of your fingers, getting them wet before pressing them to that dark ring. You rub and tease across it a few times before starting to prod at the creature's hole. The great beast rumbles in pleasure as you knead its rear with your free hand while working your slick digits into his back passage, opening him up and getting him ready for what's to come. Though you certainly keep going at it longer than is necessary, having switched your hand to his huge, heavy ballsack. Each nut feels like an cluster of testes clumped together to provide enough cum for the creature's many cocks. Only after you've had your fun playing with its balls and hearing it moan and rumble as you do are you ready to get to the main event.";
+		say "     You suck down on a pair of your fingers, getting them wet before pressing them to that dark ring. You rub and tease across it a few times before starting to prod at the creature's hole. The great beast rumbles in pleasure as you knead its rear with your free hand while working your slick digits into his back passage, opening him up and getting him ready for what's to come. Though you certainly keep going at it longer than is necessary, having switched your hand to his huge, heavy ballsack. Each nut feels like a cluster of testes clumped together to provide enough cum for the creature's many cocks. Only after you've had your fun playing with its balls and hearing it moan and rumble as you do are you ready to get to the main event.";
 	say "     [if anallevel is 3]Having gotten its back entrance ready, you[else]You[end if] move into position, lining up your cock with its [if anallevel is 3]slick [end if]hole and push your [cock size desc of player] shaft into the beast. It releases rumbling moans from its many heads and grinds itself back onto your cock. Putting an arm around its thick tail, you starts thrusting into it. As you fuck the monster, its primary head twists back around, coming in to kiss you. Its long tongue dives into your mouth and down your throat, and you suck on it happily, thrusting all the harder as you do. Its other heads twist around as well, some of them coming to [if breast size of player > 0]suck on your nipples and [end if]lick across your [bodydesc of player] body while others move underneath so the creature can suck itself off while getting pounded by you.";
 	say "     After giving the monster a good, hard pounding, you bury your [cock size desc of player] cock into it and moan in release. You shoot your [cum load size of player] load into its clenching asshole[if player is male] and across its meaty backside[end if]. This causes the creature's many heads to growl lustfully as it climaxes, spraying gushers of cum from each of its [hydraheadcount] penises. Much of its load is sucked up by its additional heads, but plenty ends up leaving a sticky mess on the ground. When you're done and pull out, the hydra's many heads set themselves to licking you clean before you give it another long, tongue-filled kiss before sending it on its way[if hydraheadcount > 6]. As it departs, you can see its extra heads already decaying away, dropping off and melting into fleshy goop until it's down to its original half-dozen[else if hydraheadcount < 6]. As it departs, you can see the bulges of new heads starting to form at the severed stumps, the creature soon to be back up to a half-dozen[end if].";
 
@@ -216,12 +216,12 @@ to say beathydrabeast99:	[no sex - leave]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Hydra Beast"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -239,7 +239,7 @@ When Play begins:
 	now body change entry is "pressure grips your body and it becomes difficult to breathe. Your chest feels thick and full, growing very heavy even as your shoulders become broader and your chest expands. Your limbs also become thickly muscled and end in clawed digits, four on your hands and three on your feet. Just as you start to think it might be done, there's a sudden surge at your shoulders as large bulges of flesh swell up. You can feel something pressing outwards from beneath your skin, finally pushing its way through as first one and then the other release additional the reptilian heads you've grown. This added pair of hydra heads hiss as they come to life, scanning around predatorily";
 	now skin change entry is "as your flesh ripples and turns a vivid green. It goes temporarily stretchy and soft before tightening and hardening into tough scales";
 	now ass change entry is "there is a growing pain at the base of your spine. You've been infected, and something is happening. You can feel the pressure building... and building... and building... until finally it surges outwards in a rush of growth and transformation, leaving you with a thick, reptilian tail. It is quite large and has small, hard ridges running down the length of the top of it";
-	now cock change entry is "your manhood[smn] turn[smv] a dark green in color, warning of the oncoming transformation[if cocks of player is 1]. It pulses and throbs[else]. They pulse and throb[end if], spraying out your old semen as your balls rush into overdrive to replace it with a fresh load. Each spurt brings further change to your cock, gaining subtle ridges with which to stimulate your loves and a tapered, pointed tip to penetrate more unwilling mates[if cocks of player > 1]. Your balls change as well, each feeling like they're an agglomeration of several lumped together to fuel increased production[end if]. Eventually, your cock[smn] still[smv] and you're left with [if cocks of player is 1]it[else]them[end if] looking decidedly reptilian, but also somewhat prehensile even when fully erect";
+	now cock change entry is "your manhood[smn] turn[smv] a dark green in color, warning of the oncoming transformation. [if cocks of player is 1]It pulses and throbs[else]They pulse and throb[end if], spraying out your old semen as your balls rush into overdrive to replace it with a fresh load. Each spurt brings further change to your cock, gaining subtle ridges with which to stimulate your loves and a tapered, pointed tip to penetrate more unwilling mates[if cocks of player > 1]. Your balls change as well, each feeling like they're an agglomeration of several lumped together to fuel increased production[end if]. Eventually, your cock[smn] still[smv] and you're left with [itthemm] looking decidedly reptilian, but also somewhat prehensile even when fully erect";
 	now str entry is 24; [ These are now the creature's stats... ]
 	now dex entry is 16; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
 	now sta entry is 16; [ These values may be used as part of alternate combat.]
@@ -269,8 +269,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hydrabeast"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Alt Attack
@@ -280,7 +281,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "hydrabeast"	hydrabeast rule	--	--	--	--	--	--	--	hydrahead rule	--
 
 this is the hydrahead rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if ( monsterHP * 4 ) <= HP entry and hydraheadcheck3 is false:
 		if hydraheadregrowth is true:
 			increase hydraheadcount by 1;
@@ -332,7 +333,7 @@ this is the hydrahead rule:
 	now hydraheadregrowth is true;
 
 this is the hydrabeast rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	increase hydramaulcount by 1;
 	if hydramaulcount is 4:				[tries special attack every fourth time]
 		now hydramaulcount is 0;
@@ -343,7 +344,7 @@ this is the hydrabeast rule:
 			standardstrike;
 			say "Head [x]: ";
 			if monsterhit is true:
-				choose row monster from the table of random critters;
+				choose row monster from the Table of Random Critters;
 				let rangenum be ( 80 - ( peppereyes * 4 ) );
 				now hbdmg is 0;
 				now hbdmg is ( ( wdam entry times a random number from rangenum to 120 ) / 166 ); [dmg/hit at 60%]
@@ -390,7 +391,7 @@ Section 4 - Endings
 when play ends:
 	if bodyname of player is "Hydra Beast":
 		if humanity of player < 10:
-			say "     As your grip on your mind fades, the instinctual urges and impulses coming from your extra hydra heads become clearer and the edges blur in your mind. The thoughts grow louder and more insistent still as three additional heads form over the next few hours. Similar thoughts grow in your mind until you're left thinking like them, overcome with bestial impulses. ";
+			say "     As your grip on your mind fades, the instinctual urges and impulses coming from your extra hydra heads become clearer and the edges blur in your mind. The thoughts grow louder and more insistent still as three additional heads form over the next few hours. Similar thoughts grow in your mind until you're left thinking like them, overcome with bestial impulses.";
 			if facename of player is "Hydra Beast":
 				say "     Your original hydra head is the dominant one, but reduced to the mind of a beast. The other heads, their minds portions of your fractured id and reptilian instincts, are largely independent of you, but still work cooperatively to satisfy your united body's lusts. Like minded to them, you follow these hydra drives in search of lustful satisfaction";
 			else if facename of player is "Cerberus":
@@ -399,7 +400,7 @@ when play ends:
 				say "     Your original [facename of player] head is the dominant one, but largely reduced to the mind of a beast. The other heads, their minds portions of your fractured id and reptilian instincts, are largely independent of you, but still work cooperatively to satisfy your united body's lusts. At times, their desires are at odds with those of your main head and their superior numbers often win out.";
 			say "     You establish some territory for yourself not far from the familiar library, hunting there for prey. Your powerful body and many heads make you a formidable foe and there are none who can drive you off. You have a particularly enjoyable time when the military enter the city, often taking down whole squads of them at once and [if player is male]ravaging them with your cock[smn] while [end if]sucking them off simultaneously with your many heads. By the time you're done with them, they all show signs of infection in the form of additional heads, reptilian scales and sexy, ridged tails. A particular lustful and fetching one, once a young black man, you keep to turn into your dark-scaled hydra mate. Together you're able to expand your territory further and take down larger groups of soldiers for grander orgies of reptilian, hydra sex.";
 		else:
-			say "     Your fearsome body and additional heads make the rescue soldiers wary of you, but you're able to demonstrate that you're still sane and keep the hydra heads in check. You do get fleeting impulses from them as they eye the soldiers, but these are confined to them checking them out, as if understanding the need for restraint or simply biding their time. At the camp, several of the scientists there are quite eager to have a chance to examine you, putting you and your heads through a series of tests, both physiological as well as psychological. While they're not able to give much in the way of definitive answers, it seems that they have minds of their own that were formed from your psyche's id with additional instincts imposed on them by the nanite infection. ";
+			say "     Your fearsome body and additional heads make the rescue soldiers wary of you, but you're able to demonstrate that you're still sane and keep the hydra heads in check. You do get fleeting impulses from them as they eye the soldiers, but these are confined to them checking them out, as if understanding the need for restraint or simply biding their time. At the camp, several of the scientists there are quite eager to have a chance to examine you, putting you and your heads through a series of tests, both physiological as well as psychological. While they're not able to give much in the way of definitive answers, it seems that they have minds of their own that were formed from your psyche's id with additional instincts imposed on them by the nanite infection.";
 			if facename of player is "Hydra Beast":
 				say "     Your central head has dominant control over your body. Sharing their lustful instincts, but having more self-control than they do, you can accept their desires and know what to usually expect from them. You learn to [']chastise['] the other two into compliance with the occasional nip or placate them with a tongue-throating kiss to keep them out of trouble most of the time.";
 			else if facename of player is "Cerberus":

@@ -1,16 +1,16 @@
 Version 2 of Debugging Tools by Core Mechanics begins here.
 [Version 1 - By Wahn, moved to Core Mechanics]
 [Version 2 - By Dys, adds more functions, changes npcdebugmode to debugmode]
-"Adds a debug function for npcs to the Flexible Survival game"
+"Adds a debug function for NPCs to the Flexible Survival game"
 
-[ Activating the debug mode show the npc's variables in their description and show when a walk-in event fires]
+[ Activating the debug mode show the NPC's variables in their description and show when a walk-in event fires]
 [ Either turn it on and off here by setting the variable, or use the "npcdebug" command in the game ]
 
 [ debugactive 0 = Debug off]
 [ debugactive 1 = Debug on]
 
-debugactive is a number that varies. debugactive is 0.
-RandomGenNumber is a number that varies.
+debugactive is a number that varies.[@Tag:NotSaved] debugactive is 0.
+RandomGenNumber is a number that varies.[@Tag:NotSaved]
 
 debugmode is an action applying to nothing.
 understand "npcdebug" as debugmode.
@@ -22,9 +22,13 @@ understand "debug" as debugmode.
 carry out debugmode:
 	if debugactive is 0:
 		say "NPC DEBUG MODE ACTIVATED.";
+		if "Debugger" is not listed in Traits of player:
+			add "Debugger" to Traits of player;
 		now debugactive is 1;
 	else:
 		say "NPC DEBUG MODE DISABLED.";
+		if "Debugger" is listed in Traits of player:
+			remove "Debugger" from Traits of player;
 		now debugactive is 0;
 
 turncountdisplay is an action applying to nothing.
@@ -37,7 +41,7 @@ carry out turncountdisplay:
 	say "DEBUG: CURRENT TURN IS [turns]";
 
 TestMode is an action applying to nothing.
-TestingActive is a truth state that varies.
+TestingActive is a truth state that varies.[@Tag:NotSaved]
 understand "iwannatest" as TestMode.
 
 check TestMode:
@@ -111,7 +115,9 @@ carry out TestMode:
 	increase carried of glob of goo by 5;
 	increase carried of honeycomb by 5;
 	increase carried of healing booster by 5;
+	increase freecred by 5000;
 	sort feats of player;
+	now Terminatorsleep is true;
 	now TestingActive is true;
 
 SubDomFlip is an action applying to nothing.
@@ -294,8 +300,8 @@ check impregwith:
 	if debugactive is 0, say "You aren't currently debugging." instead;
 
 carry out impregwith:
-	repeat with X running from 1 to number of filled rows in table of random critters:
-		choose row X from the table of random critters;
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
 		if name entry exactly matches the text topic understood, case insensitively:
 			impregnate with name entry;
 			break;
@@ -308,8 +314,8 @@ check infectwith:
 	if debugactive is 0, say "You aren't currently debugging.";
 
 carry out infectwith:
-	repeat with X running from 1 to number of filled rows in table of random critters:
-		choose row X from the table of random critters;
+	repeat with X running from 1 to number of filled rows in Table of Random Critters:
+		choose row X from the Table of Random Critters;
 		if name entry exactly matches the text topic understood, case insensitively:
 			infect name entry;
 			break;
@@ -344,8 +350,8 @@ InfectionOverview is an action applying to nothing.
 understand "infectionoverview" as InfectionOverview.
 
 carry out InfectionOverview:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		now cocks of player is 1;
 		now cunts of player is 1;
 		now cock length of player is 10;
@@ -444,5 +450,104 @@ to DescriptionDisplay:
 			say "Your tainted womb is not troubling you unduly at the moment, though you're unsure when your next intensified heat may strike you.";
 	now looknow is 0;
 	rule succeeds;
+
+DebugCritterRow is an action applying to one topic.
+
+understand "DebugCritterRow [text]" as DebugCritterRow.
+
+carry out DebugCritterRow:
+	let NumericalValue be 0;
+	now NumericalValue is numerical value of topic understood;
+	say "Text Given: [topic understood]; Number understood: [NumericalValue][line break]";
+	if NumericalValue < the number of rows in the Table of Random Critters:
+		choose row NumericalValue in the Table of Random Critters;
+		say "Creature Entry: [name entry][line break]";
+		say "Enemy Title: [enemy title entry][line break]";
+		say "Enemy Name: [enemy name entry][line break]";
+		say "Enemy Type: [enemy type entry][line break]";
+	else:
+		say "Row Number outside of the table!";
+
+DebugPrintCritterRow is an action applying to one topic.
+
+understand "DebugPrintCritterRow [text]" as DebugPrintCritterRow.
+
+carry out DebugPrintCritterRow:
+	let NumericalValue be 0;
+	now NumericalValue is numerical value of topic understood;
+	say "Text Given: [topic understood]; Number understood: [NumericalValue][line break]";
+	if NumericalValue < the number of rows in the Table of Random Critters:
+		choose row NumericalValue in the Table of Random Critters;
+		say "[current table row]";
+	else:
+		say "Row Number outside of the table!";
+
+to PrereqAnalyze (X - situation):
+	if PrereqCompanion of X is not nothing:
+		say "PrereqCompanion: [PrereqCompanion of X][line break]";
+		LineBreak;
+	if Prereq1 of X is not nothing:
+		say "Prereq1: [Prereq1 of X] - ";
+		if Prereq1 of X is resolved:
+			say "resolved";
+		else:
+			say "unresolved";
+		LineBreak;
+		LineBreak;
+		say "Prereq1Resolution: [Prereq1Resolution of X][line break]";
+		say "Resolution of Prereq1: [Resolution of Prereq1 of X][line break]";
+		if Resolution of Prereq1 of X is not listed in Prereq1Resolution of X:
+			say "[Resolution of Prereq1 of X] not listed in [Prereq1Resolution of X][line break]";
+		else:
+			say "[Resolution of Prereq1 of X] is listed in [Prereq1Resolution of X][line break]";
+		LineBreak;
+	if Prereq2 of X is not nothing:
+		say "Prereq2: [Prereq2 of X] - ";
+		if Prereq2 of X is resolved:
+			say "resolved";
+		else:
+			say "unresolved";
+		LineBreak;
+		LineBreak;
+		say "Prereq2Resolution: [Prereq2Resolution of X][line break]";
+		say "Resolution of Prereq2: [Resolution of Prereq2 of X][line break]";
+		if Resolution of Prereq2 of X is not listed in Prereq2Resolution of X:
+			say "[Resolution of Prereq2 of X] not listed in [Prereq2Resolution of X][line break]";
+		else:
+			say "[Resolution of Prereq2 of X] is listed in [Prereq2Resolution of X][line break]";
+		LineBreak;
+	if Prereq2 of X is not nothing:
+		say "Prereq3: [Prereq3 of X] - ";
+		if Prereq3 of X is resolved:
+			say "resolved";
+		else:
+			say "unresolved";
+		LineBreak;
+		LineBreak;
+		say "Prereq3Resolution: [Prereq3Resolution of X][line break]";
+		say "Resolution of Prereq3: [Resolution of Prereq3 of X][line break]";
+		if Resolution of Prereq3 of X is not listed in Prereq3Resolution of X:
+			say "[Resolution of Prereq3 of X] not listed in [Prereq3Resolution of X][line break]";
+		else:
+			say "[Resolution of Prereq3 of X] is listed in [Prereq3Resolution of X][line break]";
+
+
+RoomEmptying is an action applying to nothing.
+understand "NukeRoomInvents" as RoomEmptying.
+
+carry out RoomEmptying:
+	repeat with x running through rooms:
+		truncate Invent of x to 0 entries; [cleaning out the old data]
+
+
+RemoveFeat is an action applying to one topic.
+
+understand "RemoveFeat [text]" as RemoveFeat.
+
+carry out RemoveFeat:
+	if topic understood is listed in feats of player:
+		remove topic understood from feats of player;
+	else:
+		say "[topic understood] is not in Feats of Player!";
 
 Debugging Tools ends here.

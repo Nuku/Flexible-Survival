@@ -36,7 +36,8 @@ to say beatthetric:
 	if player is male and libido of player > 24 and cockname of player is "Triceratops":
 		say "     After the struggle with the powerful female, you look down at her, feeling a stirring in your loins. It feels as if you haven't had sex in 65 million years and it's time to get funky! Your balls start to ache for it and soon you are atop her with a growl, lining up your shaft with her dripping pussy. She is quite aroused, excited by the rich scent of a mate to breed her, and has pulled open her dress, unveiling her scaled body for you.";
 		follow the sex change rule;
-		say "[line break]     You bury your [cock size desc of player] saurian shaft into the funky lady, intent on showing her your moves now. She moans beneath you as you set the beat and drive your shaft into her again and again, having her moan the tempo. You tease her nipples as you dance the oldest dance with her. You can feel her inner walls squeeze and tug at your cock, while your hearts pound like base drums. In time, the passionate thump of your bodies against one another becomes too much and you drive deep inside her, shooting your hot load into her eager body, making her moan loudly and writhe beneath you. You both pant as you catch your breath, then kiss before parting, your mating dance over.";
+		LineBreak;
+		say "     You bury your [cock size desc of player] saurian shaft into the funky lady, intent on showing her your moves now. She moans beneath you as you set the beat and drive your shaft into her again and again, having her moan the tempo. You tease her nipples as you dance the oldest dance with her. You can feel her inner walls squeeze and tug at your cock, while your hearts pound like base drums. In time, the passionate thump of your bodies against one another becomes too much and you drive deep inside her, shooting your hot load into her eager body, making her moan loudly and writhe beneath you. You both pant as you catch your breath, then kiss before parting, your mating dance over.";
 		decrease libido of player by 25;
 		if libido of player < 0:
 			now libido of player is 0;
@@ -59,12 +60,12 @@ to say beatthetric:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Triceratops"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -112,8 +113,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Triceratops":
@@ -121,7 +123,7 @@ when play ends:
 			say "     You can feel a growing rhythm in your mind, almost like music. You start to follow that funky beat, drawing you through the city. As you travel, you spot a clothing store display and break into it, wanting the clothes on display. With your change in attire, you continue on, eventually coming to the museum, striding in with confidence. You snap your fingers and stride to the beat playing in your mind. Your platform shoes echo in the antechamber as you start to dance. The sphinx at the front desk watches you with an inscrutable expression, but it is not for her you are dancing. When the rhythm of your steps is matched by that of another, the female triceratops striding into the room from one of the museum halls, then your dance can begin in earnest with your partner.";
 			say "     You stride meaningfully across the room towards her, stepping to the rhythm. She dances tantalizingly as you come over to her. With your arms around her, you both start to dance with energy, kissing and touching each other between the moves of your passionate mating dance[if player is male]. Your funky, lime-green bellbottoms rock to the motion of your hips while your tail sways behind you. Half-open over your chest is a large-collared shirt, resplendent in colors and patterns to draw the female's eye and she is clearly pleased with your bright, vibrant plumage. You strike a pose, swaying your hips and pointing, indicating to head further into the museum. With a grin, she strides off, her shoes still tapping out the beat while you move in time after her, following her to her nest, soon to be the love nest of you both[else]. Resplendent in your lime-green wrap dress, you sway your hips and while your tail moves behind you. You have sets of hoop earrings that you've turned into golden rings to adorn your upper horns. You strike a pose and the other female moves up beside you, without exchanging a glance, you both dance and stride down the museum halls in search of dance partners so you may fill your shared nest with eggs[end if].";
 		else:
-			say "     After leaving military custody, you settle into a rather boring daytime life of office work. It fills your day and earns your money, but you have no passion for it. You continue like this for a time, until one evening you hear music faintly from the corner of your ear. You follow it, coming to a small club off the beaten path. You would have completely missed it had not someone exited at that moment to free the sound. You go in and are met with music, lights and sights that breath life into you, filling you with energy. Your style, always seeming outdated to the rest of the world, fits right in here. You stride out onto the flashing dance floor under the disco ball and take center stage, stealing the show with your moves and rhythm. Despite your altered appearance, your disco dancing breaks down all barriers and you are a star. ";
+			say "     After leaving military custody, you settle into a rather boring daytime life of office work. It fills your day and earns your money, but you have no passion for it. You continue like this for a time, until one evening you hear music faintly from the corner of your ear. You follow it, coming to a small club off the beaten path. You would have completely missed it had not someone exited at that moment to free the sound. You go in and are met with music, lights and sights that breath life into you, filling you with energy. Your style, always seeming outdated to the rest of the world, fits right in here. You stride out onto the flashing dance floor under the disco ball and take center stage, stealing the show with your moves and rhythm. Despite your altered appearance, your disco dancing breaks down all barriers and you are a star.";
 			if player is male: [MALE/HERM]
 				say "     You dance with lady after lady that night, and every night after that, always having boundless energy to return every evening. The retro disco hall is your mating grounds and the women are always captivated by your dance, giving you countless lovers. When a few grow heavy and eventually bear eggs, despite not being saurian, you can only smile and dance all the more, filled with the dance of life.";
 			else if "Sterile" is not listed in feats of player: [F-BREEDABLE]

@@ -1,7 +1,7 @@
 Version 1 of Satyress by Wahn begins here.
 [Version 1 - New Creature]
 
-"Adds a Satyress to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Satyress to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 
@@ -88,13 +88,9 @@ to say SatyressSexSelection:
 					say "[SatyressFuck4]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the bare-breasted young woman, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the bare-breasted young woman, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -131,12 +127,12 @@ to say SatyressDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Satyress";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -184,8 +180,9 @@ When Play begins:
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -208,6 +205,6 @@ when play ends:
 			say "     Finally giving in to your base desires, you make your way back to the college campus where you know there is a party going on. Running into several students, male and female, you entice them to come with you and soon arrive at the Phi Alpha Nu frat-house with a small entourage. Bringing more fun to the party, you're eagerly welcomes by Kerr and Talov, the two satyr bartenders. As you join the revels, with alcohol flowing freely and sex just a question away, time loses most of its meaning for you. Days and nights are danced away, but as neither you nor the satyrs and nymphs around you ever seem to get any older, who cares?";
 			say "     At one point several people with guns come around to try to get you to leave, but as they don't have any booze of their own, you helpfully offer them some of yours, and soon enough they come around to your way of thinking as they join the party. Strangely enough, the rest of them seem to avoid your party after that, one could almost think they didn't know how to have fun, not that you could really bring yourself to care through the happy fog of alcohol and sex that you pass the carefree days in.";
 		else:
-			say "     Rescued by the military, you wander around a bit, people giving you odd looks due to your goat-like lower body, still most of the changes are easy enough to hide when viewed from the waist up. This leads you to find your true calling in life, as a bartender, your nimble hands and your ingrained reverence for the booze serving you well. Soon you earn enough to buy your own bar, which you call 'The Satyress's Revel', amused by the ironic name. It doesn't take long for your bar to become one of the hottest in the city, your parties always seeming to have that extra something others lack. While most of the people who get a good look at you in your new bar think your merely in a costume, you are happy to let many of the more attractive guests find out just how real you are for themselves.";
+			say "     Rescued by the military, you wander around a bit, people giving you odd looks due to your goat-like lower body. Still, most of the changes are easy enough to hide when viewed from the waist up. This leads you to find your true calling in life as a bartender, your nimble hands and your ingrained reverence for the booze serving you well. Soon you earn enough to buy your own bar, which you call 'The Satyress's Revel', amused by the ironic name. It doesn't take long for your bar to become one of the hottest in the city, your parties always seeming to have that extra something others lack. While most of the people who get a good look at you in your new bar think you're merely in a costume, you are happy to let many of the more attractive guests find out just how real you are for themselves.";
 
 Satyress ends here.

@@ -171,12 +171,12 @@ to say SpartanDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Spartan";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -224,10 +224,15 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;
+	now DayCycle entry is 0;
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Events
+
+Table of GameEventIDs (continued)
+Object	Name
+History Lecture	"History Lecture"
 
 History Lecture is a situation.			[repeatable event infecting with Spartan/Helot strains - source of it all]
 The sarea of History Lecture is "Campus".
@@ -272,7 +277,7 @@ to HistoryLectureVisit:
 						if player is male: [males]
 							say "     Imagining what you can do with this handsome servant has your cock hard and ready to go in no time at all, and you quickly remove any clothing you might have had, then lean back on the seat and hold your erect shaft straight up for him. Being used to such things, there is no need to order the Helot, he just kneels down between your legs and starts licking up and down your shaft, then takes it into his mouth and starts bobbing up and down. His soft lips feel amazing on your manhood and he's also very talented with that tongue of his.";
 							LineBreak;
-							say "     Do you just want him to keep going until you cum ([link]Y[as]y[end link]), or would you rather fuck his ass next ([link]N[as]n[end link])? ";
+							say "     Do you just want him to keep going until you cum ([link]Y[as]y[end link]), or would you rather fuck his ass next ([link]N[as]n[end link])?";
 							if player consents: [get blown and cum in his mouth]
 								say "     Running your hands through the Helot's shaggy shoulder-length hair, you take hold of him and pull his head right against your crotch and hold it there a moment, then let him pull back and take a breath. Fucking his face with quick thrusts that make your balls slap against his chin, from time to time holding him tight with your erection all the way in, you're having an amazing time with the young slave. The urge to cum rapidly rises in your balls, and when you finally can't hold back any longer, you pull back until the tip of your cock is between his lips, then blast spurt after spurt of your seed in his mouth. As your orgasm winds down, you tell him to stick out his tongue - covered in your white cum - and then to swallow it all, which he does without hesitation.";
 								infect "Spartan";
@@ -289,7 +294,7 @@ to HistoryLectureVisit:
 						else if player is female:[females]
 							say "     Imagining what you can do with this handsome servant has your pussy moist and dripping in no time at all, and you quickly remove any clothing you might have had, then lean back on the seat and spread your legs for him. The Helot's eyes widen for a moment when he sees you're female, then he gives a little shrug and knells down between your legs. Bringing his head to your crotch, he starts licking over your sensitive pussy lips, then runs his tongue over your clit and pushes a finger inside your body, stroking your inner walls.";
 							LineBreak;
-							say "     Do you just want him to keep going until you orgasm ([link]Y[as]y[end link]), or would you rather have him fuck you ([link]N[as]n[end link])? ";
+							say "     Do you just want him to keep going until you orgasm ([link]Y[as]y[end link]), or would you rather have him fuck you ([link]N[as]n[end link])?";
 							if player consents:[let him get you off orally]
 								say "     Running your hands through the Helot's shaggy shoulder-length hair, you take hold of him and pull his head right against your crotch and hold it there a moment, so he can get really deep into your opening with his tongue. Feeling him wriggle inside you sends shivers of pleasure up your spine and you moan deeply. He gets back to fingering and licking after that, driving you into a lustful haze where you don't care about much more than him touching you. After who knows how long in blissed out contentment, he drives you over the edge with his talented fingers, screaming in satisfaction as femcum squirts out of your pussy to run over the Helot's fingers. He just keeps going, fingering and licking until your orgasm finally winds down. You sigh your thanks, then leave him to get back to his other duties.";
 								infect "Spartan";
@@ -297,16 +302,19 @@ to HistoryLectureVisit:
 								say "     Your own urges satisfied for now, you look back to the front of the lecture hall where the professor is by now looking through some notes of his and several of the Spartans are having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy almost gets you ready to go again, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave, hurrying a bit not to be entranced again when the old man starts his next lecture.";
 							else:[let him fuck you]
 								setmonster "Helot";
-								choose row monster from the table of random critters;
+								choose row monster from the Table of Random Critters;
 								say "     Running your hands through the Helot's shaggy shoulder-length hair, you pull him away from your nether lips with a sigh and look into his eyes as you tell him 'I want you fuck me. Pound my pussy with your hard cock...' Eagerly, the Helot stands up again, his shaft erect and ready to go. Without delay, he moves forward to put its head between your pussy lips, then sinks into your body. You can feel his manhood spreading your inner passage around it, pleasure tingling through you from the touch of his hard rod against the walls of your vagina. Driving into you with a quick stroke, the slave servant starts fucking you deeply, obviously very horny and happy to be the active partner during sex for once.";
 								say "     Being penetrated by the Helot, his balls slapping against your hips as he thrusts in and out, you give yourself to the feeling of having him inside you. A lustful haze rises in your mind and you lose track of time for a while, not caring for much else except getting fucked. After you don't know how long, you orgasm messily, lots of femcum dripping from your pussy and squirting out around the slave's cock as it thrusts in and out. Grunting urgently, the Helot isn't far behind, grinding his hips against yours as he blasts his fertile seed deep into you. A very satisfied grin on his face as he waits for his cock to finish shooting, the servant then pulls out and goes back to his other duties, leaving you leaning back on your seat with his cum dripping your of your pussy.[impregchance]";
 								infect "Spartan";
 								WaitLineBreak;
 								say "     Your own urges satisfied for now, you look back to the front of the lecture hall where the professor is by now looking through some notes of his and several of the Spartans are having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy almost gets you ready to go again, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave, hurrying a bit not to be entranced again when the old man starts his next lecture.";
-					else: [neuters get no sex :/]
-						say "     You just thank the young man, then look back to the front of the lecture hall where the professor is still getting his blowjob and several of the Spartans are now having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy pushes your arousal up quite a bit, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave. ";
+						now Resolution of History Lecture is 1; [had sex with the servant]
+					else: [no sex :/]
+						say "     You just thank the young man, then look back to the front of the lecture hall where the professor is still getting his blowjob and several of the Spartans are now having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy pushes your arousal up quite a bit, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave.";
+						now Resolution of History Lecture is 2; [no sex with the servant]
 				else: [neuters get no sex :/]
-					say "     You just thank the young man, then look back to the front of the lecture hall where the professor is still getting his blowjob and several of the Spartans are now having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy pushes your arousal up quite a bit, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave. ";
+					say "     You just thank the young man, then look back to the front of the lecture hall where the professor is still getting his blowjob and several of the Spartans are now having sex with the Helots, often taking them from the front and back at the same time. Seeing the spontaneous little orgy pushes your arousal up quite a bit, but you also are reminded of the nanite infection spread through the city making those affected pretty sex-crazy. Suddenly realizing that you almost spent three hours here already and really should be out and about gathering supplies and doing what you need to survive, you make your way to the exit and leave.";
+					now Resolution of History Lecture is 2; [no sex with the servant]
 				decrease humanity of player by a random number between 10 and 20;
 			else:[treated as a slave]
 				say "     'Err, no - I'm not one of your students. I was just-' you start out saying, only to be interrupted by the old man. 'So you're a Helot then. Why are you disturbing your betters, slave? Well, no matter - if you're so eager to serve that you interrupt my lecture, you shall have your wish.' He opens up his white tunic at the front, pulling out his cock. 'Get to work, Helot.'";
@@ -319,19 +327,23 @@ to HistoryLectureVisit:
 						say "     Doing your best to please your current master, your oral attention soon drives his lust to the inevitable conclusion, with spurts of his cum blasting into your mouth. When he finally pulls out, you proudly stick out your tongue to show him his load, then demonstratively swallow it.";
 						say "     'There, that's that,' the professor says, then continues, 'Now leave us, these young men have a lot to learn about strategy and tactics.' He turns back to the group of Spartans sitting in the first rows of the lecture hall, leaving you to walk to the exit and quietly slip out of the room.";
 						infect "Helot";
+						now Resolution of History Lecture is 3; [subby BJ with a spartan]
 					else:[grudging blowjob]
 						say "     Not having much other choice, with all those Spartans in here, you walk to the front of the lecture hall and kneel down in front of the professor and take his shaft in your mouth. Starting out hesitantly, you earn a cuff on the head from him and only then put your mind to really sucking him off. It's interesting how hard he gets for a man of his age, and when you reach up to fondle his balls, you find them full and heavy with cum. The old man's virility seems to be another effect of the nanite infection - he certainly doesn't need any help to fuck your face and push his cock down your throat.";
 						LineBreak;
 						say "     Trying to get the professor off quickly to get this over with, your oral attention soon drives his lust to the inevitable conclusion, with spurts of his cum blasting into your mouth. Putting his hands on your head and holding you tightly, he looks down at you and says 'Stick your tongue out and show it to me. And don't you dare spit out my cum.' Grudgingly, when he lets go of your head, you show him your tongue, covered in his creamy load. He nods, then continues with 'Now swallow it.' and watches as you do so, demanding to see you open your mouth to prove it.";
 						say "     Finally satisfied, he says 'There, that's that', then continues 'Now leave us, these young men have a lot to learn about strategy and tactics. He turns back to the group of Spartans sitting in the first rows of the lecture hall, leaving you to walk to the exit and quietly slip out of the room.";
 						infect "Helot";
+						now Resolution of History Lecture is 4; [gruding BJ with a spartan]
 				else:[forced blowjob]
 					say "     Shaking your head, you turn to get out of there, only to be brought down by several of the young Spartans sprinting after you. Your struggling against their grip is quickly brought to an end by a blow to the chest that drives the air out of your lungs and you're dragged to the front of the lecture theater. With a Spartan at your left and right holding your arms bent backwards, you find yourself on your knees in front of the professor. 'Open up, or I'll have you beaten,' he says and roughly shoves his manhood into your mouth. Fucking your face in a harsh and fast pace, he sometimes pushes his cock into your throat and keeps it there until you start seeing stars from lack of air and have to gasp for breath.";
 					say "     After far too long of this ordeal, the old man finally moans and blasts his cum directly down your throat. The two younger Spartans let you go as he pulls out, and you collapse on the floor, rubbing your hurting joints. 'I'm in half a mind to let all of my pupils have a go at your sorry ass, but we've wasted enough time on the likes of you. Leave, now!' As fast as you can, you limp up to the exit and slip out through the door.";
 					infect "Helot";
 					infect "Helot";
+					now Resolution of History Lecture is 5; [forced BJ with a spartan]
 		else:[leave]
 			say " Who knows where joining them would have led... better safe than sorry, you murmur an apology for the interruption and leave.";
+			now Resolution of History Lecture is 6; [didn't go in (yet?)]
 
 Section 4 - Endings
 
@@ -369,7 +381,7 @@ when play ends:
 					say "The deep-seated urges to breed more Spartans and the belief that any female should spread her legs and allow you to do so make some problems, with orgy- and gangbang-like incidents with female base personnel. With the tenacity of all the young men and the potency of their seed, within a month every woman on base is pregnant and the Spartans start asking for leave to visit surrounding towns. Being an exceptionally good unit otherwise, the military decides to makes special arrangements, and soon several dozen female huskies from the city are added to your roster to 'help with morale' and keep the men busy.";
 		else:[sane]
 			say "When the military finally moves in, you're brought into a medical holding facility. There a doctor checks you out, then gives you a shot to neutralize the remaining nanites in your system before you're released. Since you were only changed into a fit male human form by the nanites, you have a lot fewer problems rejoining society than other, more bestial, infectees.";
-			say "Even though you managed to fight off the delusion that you're an actual Spartan warrior, your experience left you with an inner need to compete and excel in what you're doing. Joining a sports team seems the right choice to you, especially after your innate skill at discus and spear throwing becomes obvious during a tryout. Thus you rapidly rise in the world of professional athletics and soon there's even some talk about sending you to the next interregional Multispecies Olympics... ";
+			say "Even though you managed to fight off the delusion that you're an actual Spartan warrior, your experience left you with an inner need to compete and excel in what you're doing. Joining a sports team seems the right choice to you, especially after your innate skill at discus and spear throwing becomes obvious during a tryout. Thus you rapidly rise in the world of professional athletics and soon there's even some talk about sending you to the next interregional Multispecies Olympics...";
 
 Section 5 - Drop Item
 

@@ -7,6 +7,10 @@ Version 1 of Egyptian Wing by Xenophiliac begins here.
 
 Section 1 - Events
 
+Table of GameEventIDs (continued)
+Object	Name
+Egyptian Wing	"Egyptian Wing"
+
 Egyptian Wing is a situation. The level of Egyptian Wing is 10.
 The sarea of Egyptian Wing is "Museum".
 
@@ -27,38 +31,74 @@ Instead of Resolving a Egyptian Wing:
 
 [Jade Scarab event located in Sarokcat's Consolidated Museum file]
 
-Finding Winged Orb is a situation. Finding Winged Orb is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Finding Winged Orb	"Finding Winged Orb"
+
+Finding Winged Orb is a situation.
+Finding Winged Orb is inactive. [activated by accepting Amuran's quest]
 The sarea of Finding Winged Orb is "Park".
 
+an everyturn rule:
+	if Finding Winged Orb is inactive and (AmuranAwoken is 2 or AmuranAwoken > 3):
+		now Finding Winged Orb is active;
+
 instead of resolving Finding Winged Orb:
-	say "     Walking through what used to be the city park, you're struck by how much the park has changed. The trees haven't been trimmed in forever, grass is now overrunning the sidewalks; the park is not in a good state. An unfamiliar gling catches your eye as you contemplate the park, however, glimmering out from a nearby tree. Carefully looking around, you check to make sure no one is nearby; seeing no creatures present, you carefully approach the tree, wondering what could be shining so brightly.";
+	say "     Walking through what used to be the city park, you're struck by how much the park has changed. The trees haven't been trimmed in forever, grass is now overrunning the sidewalks; the park is not in a good state. An unfamiliar glint catches your eye as you contemplate the park, however, glimmering out from a nearby tree. Carefully looking around, you check to make sure no one is nearby; seeing no creatures present, you carefully approach the tree, wondering what could be shining so brightly.";
 	say "     You eventually come to the tree that's so brightly shining, still on the lookout for any sex-crazed creatures. Finally glimpsing the object stuck in the tree, surprise soon overwhelms you at what lies buried within it. An elegant, ornate emblem protrudes from the majestic tree, somehow partially buried in the trunk. From the glances you can see, it looks as if the emblem resembles the carving on Amuran's sarcophagus; a circle with two majestic wings protruding from its sides. This has to be one of Amuran's sigils, somehow buried partially within the tree. Taking a large breath and steeling yourself for what you have to do, you grab onto a thick branch and begin to climb the tree; the artifact is only a few feet up.";
 	let bonus be ((dexterity of player minus 10) divided by 2);
 	let dice be ( a random number from 1 to 20);
 	say "     You roll 1d20 ([dice]) + ([bonus]) versus 14 - You scored [dice plus bonus] in a dexterity check.";
 	if dice + bonus >= 14:
 		say "     Easily able to shimmy yourself up the tree, you find yourself faced with the shining emblem, still buried within the tree. Gripping the emblem with both of your hands and giving the emblem a hard pull, your strength wins out and without a sound, the sigil comes free, shining brightly in the [if daytimer is day]daytime air[else]nighttime air[end if]. Getting a much better look at the sigil, it's definitely an exact representation of the carving on Amuran's sarcophagus; a circle, most likely a representation of the sun, flanked on both sides by large feathered wings. Holding this emblem in your hands, you soon feel raw [']Power['] running through you; if this is any indication as to what power Amuran has, it must be incredible. Storing the sigil in your backpack, you quickly climb down, preparing to continue on your way.";
-		increase carried of winged sun by 1;
-		now Finding Winged Orb is resolved;
+		now Resolution of Finding Winged Orb is 1; [climbed up and grabbed it]
 	else:
 		say "     Doing your best to climb up, you find yourself having trouble scaling the massive tree. Eventually, however, you're able to drag yourself to where the emblem is, still sticking out from the trunk of the tree. Resting on the thick branch you climbed up to, you grab the emblem and pull with all your might. With a quick release, you yank out the sigil; however, the sudden movements unbalance you, and you tumble swiftly to the earth below. A loud [']THUD['] signifies you hitting the ground, a low, pained groan escaping you as you lay there, recovering yourself. You push yourself up after a few moments, your entire body sore after the fall you've just experienced. Glancing up, it seems that your fall has also attracted a local creature!";
 		fight;
 		if lost is 1:
 			say "     Exhausted, sticky, and lying on the ground after your recent defeat, you're at least content that you were able to keep the emblem hidden. Heaving yourself up, you do your best to recover and head out, reminding yourself to give the emblem to Amuran.";
-			increase carried of winged sun by 1;
-			now Finding Winged Orb is resolved;
 		else:
 			say "     Exhausted after your battle, you're still happy that you were able to find one of the sigils that Amuran needs. Hoisting yourself up, you ready yourself to continue, remembering to deliver the emblem to the divine servant.";
-			increase carried of winged sun by 1;
-			now Finding Winged Orb is resolved;
+		now Resolution of Finding Winged Orb is 2; [fell out of the tree]
+	increase carried of winged sun by 1;
+	now Finding Winged Orb is resolved;
 
 Section 2 - Areas and Rooms
 
-Egypt Wing Entrance is a room. it is fasttravel. it is private.
+Table of GameRoomIDs (continued)
+Object	Name
+Egypt Wing Entrance	"Egypt Wing Entrance"
+
+Egypt Wing Entrance is a room. It is fasttravel. It is private.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Egyptian Wing Foyer	"Egyptian Wing Foyer"
+
 Egyptian Wing Foyer is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Mythical Murals	"Mythical Murals"
+
 Mythical Murals is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Golden Doors	"Golden Doors"
+
 Golden Doors is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Temple of Set	"Temple of Set"
+
 Temple of Set is a room.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Sanctum of Horus	"Sanctum of Horus"
+
 Sanctum of Horus is a room.
 
 [Egypt Wing Entrance]
@@ -69,7 +109,7 @@ to say EgyptWingEntrDesc:
 instead of sniffing Egypt Wing Entrance:
 	say "     The scent of the museum has not changed much, but you do detect a faint hint of dry desert air.";
 
-North of Egypt Wing Entrance is Egyptian Wing Foyer.
+Egyptian Wing Foyer is north of Egypt Wing Entrance.
 
 [Egyptian Wing Foyer]
 The description of Egyptian Wing Foyer is "[EgyptWingFoyerDesc]".
@@ -80,9 +120,9 @@ to say EgyptWingFoyerDesc: [East passage left for possible further expansions]
 instead of sniffing Egyptian Wing Foyer:
 	say "     The smell of dry, barren air is much stronger here, having rapidly replaced the smell of the museum behind you.";
 
-North of Egyptian Wing Foyer is Golden Doors.
-South of Egyptian Wing Foyer is Egypt Wing Entrance.
-East of Egyptian Wing Foyer is Mythical Murals.
+Golden Doors is north of Egyptian Wing Foyer.
+Egypt Wing Entrance is south of Egyptian Wing Foyer.
+Mythical Murals is east of Egyptian Wing Foyer.
 
 [Mythical Mural]
 The description of Mythical Murals is "[MythicalMuralDesc]".
@@ -93,7 +133,7 @@ to say MythicalMuralDesc:
 instead of sniffing Mythical Murals:
 	say "     This room smells overwhelmingly of dust and aged paper, bringing your thoughts back to old paperbacks you used to have.";
 
-West of Mythical Murals is Egyptian Wing Foyer.
+Egyptian Wing Foyer is west of Mythical Murals.
 
 EgyptMuralExamine is an action applying to nothing.
 
@@ -124,7 +164,6 @@ The description of Golden Doors is "[GoldenDoorsDesc]".
 
 EgyptianRiddle is a number that varies.
 MenuRiddleNumber is a number that varies.
-calcnumber is a number that varies.
 LastRiddle is a number that varies.
 
 to say GoldenDoorsDesc:
@@ -132,9 +171,9 @@ to say GoldenDoorsDesc:
 instead of sniffing Golden Doors:
 	say "     This room smells quite similar to the rest of the Egyptian Wing, albeit with a tinge of metal to it.";
 
-North of Golden Doors is Sanctum of Horus.
-South of Golden Doors is Egyptian Wing Foyer.
-West of Golden Doors is Temple of Set.
+Sanctum of Horus is north of Golden Doors.
+Egyptian Wing Foyer is south of Golden Doors.
+Temple of Set is west of Golden Doors.
 
 instead of going north from Golden Doors while EgyptianRiddle is 0: [add cycling riddles?]
 	say "     Approaching the solid metal doors in front of you, you look around for some sort of way to open the doors. Even with all of your detective prowess, however, there seems to be no way to open the gigantic doors. No levers, no buttons; not even a door handle. These doors seem to be standing here permanently, keeping everything out; or keeping something in. Deciding as one last-ditch effort to try and push the doors, you put all your might forward to open these great doors. Your efforts prove fruitless, however; even though you thought nothing would happen, you figure it was worth a shot. Stepping back and taking a discouraged look at the imposing portals, you're quite shocked when [']something['] begins to appear on the golden doorways, rapidly etching itself into the solid metal slabs.";
@@ -257,13 +296,13 @@ instead of going west from Golden Doors while SethTempleNumber is 1:
 The description of Temple of Set is "[TempleOfSetDesc]".
 
 to say TempleOfSetDesc:
-	say "     Walking into the inky shadow of this room, you squint your eyes as you examine the room, trying your best to work out what's in here. The only light you have are from lit torches along the wall, shining low light throughout the strange alcove. As your eyes slowly adjust to the darkness, a large statue exposes itself to you, standing watchfully in the back of the room. [if intelligence of player > 15]You immediately recognize this as a statue of Set, Egyptian lord of chaos[else]You don't know the significance of the statue, but you feel very intimidated by it[end if]. Build in front of the imposing statue is a simple stone altar, a few lines of heiroglyphics lining the sides of the table. On each side of the altar lie sizable stone statues. Jackal-headed guards watch over the shrine, holding deadly metal blades.";
+	say "     Walking into the inky shadow of this room, you squint your eyes as you examine the room, trying your best to work out what's in here. The only light you have are from lit torches along the wall, shining low light throughout the strange alcove. As your eyes slowly adjust to the darkness, a large statue exposes itself to you, standing watchfully in the back of the room. [if intelligence of player > 15]You immediately recognize this as a statue of Set, Egyptian lord of chaos[else]You don't know the significance of the statue, but you feel very intimidated by it[end if]. Build in front of the imposing statue is a simple stone altar, a few lines of hieroglyphics lining the sides of the table. On each side of the altar lie sizable stone statues. Jackal-headed guards watch over the shrine, holding deadly metal blades.";
 	say "     Finally drawing your eyes to what lies on the altar, you barely contain a gasp as the item lying there. An exquisite golden sword lies on the altar, torchlight glinting off of the exquisite blade. It would take almost no effort to [bold type]pick up[roman type] the[bold type] antique sword[roman type] off of the altar.";
 
 instead of sniffing Temple of Set:
 	say "     You're unable to pin down the smell of this room; you think it's constantly changing.";
 
-East of Temple of Set is Golden Doors.
+Golden Doors is east of Temple of Set.
 
 SethTempleNumber is a number that varies.
 SwordOfSeth is an action applying to nothing.
@@ -311,7 +350,7 @@ to say SanctumofHorusDesc:
 instead of sniffing Sanctum of Horus:
 	say "     While this room smells just like the rest of the Egyptian Wing, every whiff of the warm air reminds you of bright, sunny days.";
 
-South of Sanctum of Horus is Golden Doors.
+Golden Doors is south of Sanctum of Horus.
 
 RevealAmuran is an action applying to nothing.
 
@@ -354,11 +393,11 @@ instead of conversing Amuran:
 		say "     A deep, reverberating sound echoes throughout the chamber at your inquiries; it takes a moment for you to register that the thing known as Amuran is laughing. 'No, young one. I am no celestial; merely a servant of one. Under the benevolent light of the lord Horus do I serve, the right hand of the Sun God. Nor would I choose not to; it is honor incarnate to serve Him.' Your question answered, albeit cryptically, you subsequently inquire as to why Amuran is here? Surely (if what he claims to be true is true) a godly servant has more important things to do than sit around in a nanite-infected city?";
 		WaitLineBreak;
 		say "     A deep, sorrowful sigh meets your questioning. 'My duty within this plagued city, ordained by my lord Horus, is to... locate an object that was... misplaced. An object that, luckily, was revealed by the chaos caused the scourge now rampaging throughout your homestead. That, in and of itself, would not be a difficult task; but the complexity of my order has deepened considerably. We divine servants, along with our natural abilities, are afforded conduits of energy, through which we channel our deities['] will; the same conduits which I falsely accused you of plundering. Mine, however, were displaced in my expedition to this place.' Amuran once again sighs deeply, visibly distressed at the situation. 'Without them, I am not within my full powers; I cannot leave this mystic sanctuary, either. The doors you so easily crossed keep me locked within, and without divine interference, I am trapped here.'";
-		say "     'And that, young one, is both who I am and what my task is. How long my undertaking shall last, I do not know. Intervention from my lord is needed for me to continue, but' Amuran pauses for a moment 'the gods are... flighty. Beseeching my lord will take time, but so do all things.' Taking a more postured and regal stance, Amuran crosses his arms across his chest and bows to you, apparently thanking you. 'I am grateful to you for the conversation, young one. As simple and self-pitying as it was, millennia have elapsed since I last spoke to a mortal. It has been invigorating.' Seemingly done speaking for now, Amuran ambles over to a spot in front of the glimmering pool, subsequently sitting down and assuming a meditative stance; if you had to guess, he's trying to talk to someone high up. Mulling the entire situation over in your head, you consider offering your help to the divine servant. Do you?";
+		say "     'And that, young one, is both who I am and what my task is. How long my undertaking shall last, I do not know. Intervention from my lord is needed for me to continue, but,' Amuran pauses for a moment, 'the gods are... flighty. Beseeching my lord will take time, but so do all things.' Taking a more postured and regal stance, Amuran crosses his arms across his chest and bows to you, apparently thanking you. 'I am grateful to you for the conversation, young one. As simple and self-pitying as it was, millennia have elapsed since I last spoke to a mortal. It has been invigorating.' Seemingly done speaking for now, Amuran ambles over to a spot in front of the glimmering pool, subsequently sitting down and assuming a meditative stance; if you had to guess, he's trying to talk to someone high up. Mulling the entire situation over in your head, you consider offering your help to the divine servant. Do you?";
 		if player consents:
 			say "[AmuranQuestAccept]";
 			now AmuranAwoken is 2;
-			now Finding Winged Orb is unresolved;
+			now Finding Winged Orb is active;
 		else:
 			say "[AmuranQuestReject]";
 			now AmuranAwoken is 3;
@@ -428,11 +467,16 @@ instead of conversing Amuran:
 		say "     After a few days away, it seems that Amuran has returned. In the familiar position of calm meditation, it seems that Amuran has completed his assignment, and seems quite satisfied with the situation. Leisurely ambling up to the stoic beetle-man, you're quite curious as to the conclusion of his quest. Sensing your approach, Amuran casually stands up, visibly content, and dare you say, happy. Asking him how his search went, he leisurely responds, more relaxed than you've ever seen him.";
 		say "     'Well, young one. It took some nights, but I was able to locate the ashen ruins where the lost relic lay. Recovering Horus's ankh was simple enough, though the inhabitants of the heated world proved partly a nuisance; but they could not stand against Horus's light. The lost piece of Horus has been returned, and my lord is quite pleased with the situation; which, of course, pleases me to no end. I have been informed that my services will not be required for as long as Horus's foresight can see; as such, I am free for now. I believe I shall take many seasons to explore and investigate this world again; it has been aeons since I've done so. For manyith a time, young one, I must extend my gratitude for your assistance in recovering the lost sigils; without that, my task would not be done.' Crossing his arms and bowing to you, it seems that Amuran will remain on Earth for a long, long time (most likely for millennia after your death).";
 		now AmuranAwoken is 5;
+		now Sky Tower is active;
 		now HP of Amuran is 6;
 	else if AmuranAwoken is 2:
 		say "     'Have you made progress in your search?' Amuran says to you, his black eyes staring at you questioningly. Informing him that you've yet to find both conduits, Amuran gives you a nod before returning to his meditations.";
 	else:
 		say "     [one of]Amuran looks to be, as usual, meditating in front of the pool of water.[or]'Greetings, young one. Your explorations go well, I hope.'[or]Surprisingly enough, Amuran looks to be reading a thick tome. From what you can see, the book is a treatise on [']modern['] history; modern to Amuran, at least. Where he got the book from, you're not entirely sure. Did he find the library?[or]A low humming permeates the room, the source of which you soon see; Amuran's wings are out, buzzing periodically in the warm air. Even an immortal insect's wings get tired of being confined all the time.[or]'My appreciation for your assistance cannot be overstated, mortal; many thanks to you, once again.'[or]'Have you encountered anything of note in this diseased city, young one?'[or]Amuran can be seen cleaning one of the many priceless relics that are scattered amongst the room; keeping this room clean is obviously a point of pride to him.[at random]";
+
+Table of GameCharacterIDs (continued)
+object	name
+Amuran	"Amuran"
 
 Amuran is a man.
 The description of Amuran is "[AmuranDescription]";
@@ -446,7 +490,7 @@ instead of fucking Amuran:
 	else if AmuranAwoken < 5:
 		say "     Considering the tasks that Amuran is faced with, it's probably not the best time to broach the idea of sex to Amuran. Maybe once he's completed his divine duties you could propose it to him.";
 	else if AmuranAwoken is 5:
-		say "     Finally deciding to proposition Amuran for some [']extracurricular['] fun, you put a sensuous swagger into your step as you approach the sitting insect-man. Noticing you immediately, Amuran cocks his bug-eyed head at you; you're unsure if he's picked up on your subtle hint. Rising to his impressive stature as you slowly walk up to him, he patiently waits for you to speak, as he usually does. Curling your finger in a [']come here['] gesture, Amuran looks all the more confused, but lowers himself down to you, placing his chitinous head next to yours. Whispering into (presumably) ears, you quietly ask him if he would like to engage in [']A favored mortal pasttime['].";
+		say "     Finally deciding to proposition Amuran for some [']extracurricular['] fun, you put a sensuous swagger into your step as you approach the sitting insect-man. Noticing you immediately, Amuran cocks his bug-eyed head at you; you're unsure if he's picked up on your subtle hint. Rising to his impressive stature as you slowly walk up to him, he patiently waits for you to speak, as he usually does. Curling your finger in a [']come here['] gesture, Amuran looks all the more confused, but lowers himself down to you, placing his chitinous head next to yours. Whispering into (presumably) ears, you quietly ask him if he would like to engage in [']A favored mortal pastime['].";
 		say "     The celestial insect-man stands still for a moment, a quizzical look on his face. Rising back up, you're unsure of whether or not Amuran understands you. Moments later, however, a [']smile['] crosses his face, just as his form shudders as he begins to chuckle quietly.";
 		say "     'So, the young one is not untouched by the plague that ravishes this city; I was beginning to think you were all but immune.' Still standing there, you feel somewhat embarrassed by Amuran's humor; that is, until his plated arms engulf you in a strong hug. Lifting you up off your feet, you once again find your face equal with his, his mouth close to yours.";
 		WaitLineBreak;
@@ -480,7 +524,7 @@ to say AmuranQuestAccept:
 	say "     Thinking over it for a few more moments and ultimately deciding to offer your assistance to him, you approach the sitting beetle-man and patiently wait for him to notice you. As the minutes tick by, however, it seems that he's too deep in meditation to notice you standing next to him. Politely, you tap him on his chitinous shoulder, trying to get his attention; and with a heavy shift, you do. He swivels his head to look at you, antennae twitching systematically in the sunlight of the sanctuary. A few moments of uncomfortable silence later, you speak up, informing him that you're willing to help him with his predicament.";
 	say "     You let loose a yelp and step back as Amuran reveals his wings, opening up the massive appendages to the cool air. Twitching them rapidly and wildly, he stares ahead a few seconds before folding his wings back against him. 'It appears that I may be indebted to you, young one, if your offer is genuine. It will likely prove the quicker solution, if you truly do wish to help.' Looking at you, it takes a minute for you to realize that Amuran is waiting for an affirmative answer. Confirming that you do, in fact, wish to assist, he bows his head to you as a sign of thanks. 'Your help is quite welcome, and your offer is accepted. One conduit calls from nearby, a place of ancients and living history; another sings from a cultivated wild, soon to be reclaimed by nature; I cannot get a clearer impression as limited as I am. If you are able to find them, please return them to me forthwith; then I shall be able to complete my task.' Having said his piece, Amuran returns to his meditations. Your task now set before you, there are a few places within the city that sound like what he described...";
 	now AmuranAwoken is 2;
-	now Finding Winged Orb is unresolved;
+	now Finding Winged Orb is active;
 
 to say AmuranQuestReject:
 	say "     Deciding against offering Amuran help for now, you leave the insect-man to his meditating and consider coming back later to help.";
@@ -530,10 +574,8 @@ to say FinalQuestConclusion:
 	WaitLineBreak;
 	say "     All and all, the entire ordeal only lasted roughly 15 seconds, by your count. Your eyes slowly readjust to the light within the sanctum, and taking a quick stock of the room, everything seems to be alright. Amuran slowly rises to his feet, stretching out languidly in the warm, sunny air; he also releases his wings, the massive appendages waving haphazardly. Finally, he finishes his happy, contented stretching, leisurely making his way out of the pool, dripping water onto the floor.";
 	say "     Approaching you, it's easy to tell that he's rather happy, if the display a moment ago wasn't enough. Again giving you that odd, bugman [']smile['], he begins to speak, the tone of his voice conveying the pleased state he's in.";
-	say "     'My lord Horus is extremely pleased with this turn of events. His ankh has been returned, once lost for millennia. Having finished my task, I have been told that my abilities will not be needed for many years; likely millennia. I believe I wish to use this time to explore your mortal world; it's been many an aeon since I've had the pleasure. Once again, young one, I remain indebted to you; should you need assistance, do not hesitate to request it.' It seems that Amuran, having finished his task, is going to remain here for (definitely) the forseeable future.";
+	say "     'My lord Horus is extremely pleased with this turn of events. His ankh has been returned, once lost for millennia. Having finished my task, I have been told that my abilities will not be needed for many years; likely millennia. I believe I wish to use this time to explore your mortal world; it's been many an aeon since I've had the pleasure. Once again, young one, I remain indebted to you; should you need assistance, do not hesitate to request it.' It seems that Amuran, having finished his task, is going to remain here for (definitely) the foreseeable future.";
 	now AmuranAwoken is 5;
-
-calcnumber is a number that varies.
 
 to say AmuranSexMenu:
 	now calcnumber is -1;
@@ -593,7 +635,7 @@ to say AmuranBlown:
 	say "     It's quite a strange sensation, having the insect's cock stuffed in your mouth; with his cock being made of the same hard, plated material covering his form, the chitin is definitely a unique feeling. It's not at all unpleasant, however, and the pleasured sounds coming from your scarab beetle partner continue to goad you on, wanting to give the bug as best a climax as you can. Taking more and more of Amuran's segmented cock down your throat as you bob your head, you soon find that you've taken his entire length down your throat, your face level with a chitin plate at his groin. Finally taking a part in the activities, the bug-man above you brings two of his plated claws to your head, beginning to rub and knead gently, obviously quite worked up from your ministrations.";
 	WaitLineBreak;
 	say "     Surprisingly enough, Amuran's stamina is much greater than you thought, especially for someone who (likely) hasn't engaged in sex in a very, very long time. After a while, you figure it's been long enough, and use all of your talents to get the chittering scarab off. Licking over whatever exposed dick you can while sucking along his entire length finally brings him to the edge. Releasing a low groan while buzzing his wings wildly, Amuran shoots glob after glob of dense bug-sap down your throat, still caressing your head gently as he does. Eventually, after you've swallowed what feels like gallons of bug-juice, his flow of seed finally slows, just as he settles himself down. Languorously withdrawing his chitinous cock from your throat, you take deep gasps of air as a few weak spurts of insect-cream hit your face and mouth.";
-	say "     After a few moments of recovery, you unsteadily stand up, your stomach thoroughly full of savory seed and face covered with it. With a low, contented sigh, Amuran sags down, apparently somewhat exhausted. [one of]'Mm, thanks to you, young one. It looks as though you've learned some things from your stay here.'[or]'You mortals always seem to be experts in the art of pleasure, if my judgment is to be trusted. Thanks to you, mortal.'[or]Not saying anything, he scratches across your head lovingly, silently thanking you for your gift of bliss.[at random] Stepping up, [if scalevalue of player > 2]you give him a rough kiss on his cheek, returning his affections.[else]you find yourself unable to reach his height; he, instead, crouches down, allowing you to give him a rough kiss on his cheek, showing your own passions.[end if]";
+	say "     After a few moments of recovery, you unsteadily stand up, your stomach thoroughly full of savory seed and face covered with it. With a low, contented sigh, Amuran sags down, apparently somewhat exhausted. [one of]'Mm, thanks to you, young one. It looks as though you've learned some things from your stay here.' [or]'You mortals always seem to be experts in the art of pleasure, if my judgment is to be trusted. Thanks to you, mortal.' [or]Not saying anything, he scratches across your head lovingly, silently thanking you for your gift of bliss. [at random]Stepping up, [if scalevalue of player > 2]you give him a rough kiss on his cheek, returning his affections[else]you find yourself unable to reach his height; he, instead, crouches down, allowing you to give him a rough kiss on his cheek, showing your own passions[end if].";
 	if player is kinky:
 		say "     Gathering up your things, you lavishly gather up all of his seed splattered across your face, letting it dribble off your hand straight into your waiting mouth. Making absolutely sure he saw that, you give him a sensuous wave and a wink, telling him that you'll soon be back.";
 	else:
@@ -621,7 +663,7 @@ to say AmuranAnal:
 		say "[if cunts of player > 1]feminine slits[else]cunt[end if]";
 	else:
 		say "[bodydesc of player] thighs and ass";
-	say " to the lascivious celestial. [if player is neuter][else]You have no intention of using your equipment, however; you have a different plan in mind. [end if]His pitch-black eyes roving over your prone form, you give Amuran a [']come hither['] expression as he eyes you; he quickly obliges, each step bobbing his cock in the warm air. Stopping just short of running you over, Amuran seems to be on the same train of thought as you; slowly lining his plated cock up with your rear, he grips your legs with his chitinous hands, steadying you against the ridged member pressing at your back entrance. Doing your best to relax, you reach out and stroke Amuran's chitinous chest, your touch wordlessly edging him on.";
+	say " to the lascivious celestial. [if player is not neuter]You have no intention of using your equipment, however; you have a different plan in mind. [end if]His pitch-black eyes roving over your prone form, you give Amuran a [']come hither['] expression as he eyes you; he quickly obliges, each step bobbing his cock in the warm air. Stopping just short of running you over, Amuran seems to be on the same train of thought as you; slowly lining his plated cock up with your rear, he grips your legs with his chitinous hands, steadying you against the ridged member pressing at your back entrance. Doing your best to relax, you reach out and stroke Amuran's chitinous chest, your touch wordlessly edging him on.";
 	say "     With a suddenness you're not used to seeing from the cautious, deliberate bug, you abruptly feel your rear filled with the first few inches of insect cock; you're unable to do anything but moan in pleasure at the sudden intrusion. Amuran churrs lowly as he enters you, your rear clenching down on his cock, gripping it ever so pleasurably. Stopping his advance into your back end, his solid cock throbbing sensually as he breathes; you're able to feel every one, all of them sending blasts of pleasure through your [bodydesc of player] self. You stay like that for a few moments, locked to the bug by the ridged dick spearing your rear";
 	if player is herm:
 		say ". [if cocks of player > 1]Your cocks standing rigid[else]Your cock rock-hard[end if] and [if cunts of player > 1]cunts already dripping[else]your slit already waiting to be filled[end if]";
@@ -663,7 +705,7 @@ Section X - Items
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"ancient blade"	"An ancient sword of Egyptian make, the blade looks as if it was forged yesterday. Heiroglyphics are carved into the blade, telling stories that are long forgotten."	6	ancient blade
+"ancient blade"	"An ancient sword of Egyptian make, the blade looks as if it was forged yesterday. Hieroglyphics are carved into the blade, telling stories that are long forgotten."	6	ancient blade
 
 ancient blade is an armament.
 It is part of the player.

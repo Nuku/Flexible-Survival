@@ -516,7 +516,7 @@
 |Nuku Valente|Fs Graphics|Figure of Andrew_icon|value|
 |Nuku Valente|Fs Graphics|Figure of Anthony_icon|value|
 |Nuku Valente|Fs Graphics|Figure of Artemis_icon|value|
-|Nuku Valente|Fs Graphics|Figure of Athanasia_icon|value|
+|Nuku Valente|Fs Graphics|Figure of Anastasia_icon|value|
 |Nuku Valente|Fs Graphics|Figure of Blanche1_icon|value|
 |Nuku Valente|Fs Graphics|Figure of Blanche2_icon|value|
 |Nuku Valente|Fs Graphics|Figure of Brooke_icon|value|
@@ -524,7 +524,7 @@
 |Nuku Valente|Fs Graphics|Figure of Candy_icon|value|
 |Nuku Valente|Fs Graphics|Figure of CarlClothed_icon|value|
 |Nuku Valente|Fs Graphics|Figure of David_icon|value|
-|Nuku Valente|Fs Graphics|Figure of DrMatt_icon|value|
+|Nuku Valente|Fs Graphics|Figure of DrMatt_face_icon|value|
 |Nuku Valente|Fs Graphics|Figure of DrMoffatt1_icon|value|
 |Nuku Valente|Fs Graphics|Figure of DrMoffatt2_icon|value|
 |Nuku Valente|Fs Graphics|Figure of DrMouse_icon|value|
@@ -1121,12 +1121,12 @@
 |Stripes|Down Under Pub|pubvisit|value|
 |Stripes|Down Under Pub|slutname|value|
 |Stripes|Down Under Pub|open|adjective|
-|Kaleem Mcintyre|Kitsune Hide Away|20140908213124/8705:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Kitsune Hide Away|Foxy Hideaway|room|
-|Kaleem Mcintyre|Kitsune Hide Away|Kitsune|man|
-|Kaleem Mcintyre|Kitsune Hide Away|Kitsunetalk|value|
-|Kaleem Mcintyre|Kitsune Hide Away|Kitsunearoused|value|
-|Kaleem Mcintyre|Kitsune Hide Away|LastKitsunefucked|value|
+|Kaleem Mcintyre|Kitsune Hideaway|20140908213124/8705:Mon 8 September 2014 21:31|indexing|
+|Kaleem Mcintyre|Kitsune Hideaway|Foxy Hideaway|room|
+|Kaleem Mcintyre|Kitsune Hideaway|Kitsune|man|
+|Kaleem Mcintyre|Kitsune Hideaway|Kitsunetalk|value|
+|Kaleem Mcintyre|Kitsune Hideaway|Kitsunearoused|value|
+|Kaleem Mcintyre|Kitsune Hideaway|LastKitsunefucked|value|
 |Kaleem Mcintyre|Dog House|20140908213124/11489:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Dog House|DogHouse|situation|
 |Kaleem Mcintyre|Dog House|Fin|value|
@@ -1223,29 +1223,6 @@
 |Kaleem Mcintyre|Warehouse District|Gloomy Warehouse|room|
 |Kaleem Mcintyre|Warehouse District|Gloomy Warehouses|room|
 |Kaleem Mcintyre|Warehouse District|S Harbor|room|
-|Kaleem Mcintyre|Pursuit Of Science|20140908213124/16111:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Pursuit Of Science|Dream of a Unicorn|situation|
-|Kaleem Mcintyre|Pursuit Of Science|leopard suit|Equipment|
-|Kaleem Mcintyre|Pursuit Of Science|lumpy box|Grab Object|
-|Kaleem Mcintyre|Pursuit Of Science|medallion|Grab Object|
-|Kaleem Mcintyre|Pursuit Of Science|undisclosed case|Grab Object|
-|Kaleem Mcintyre|Pursuit Of Science|Organi Rod|armament|
-|Kaleem Mcintyre|Pursuit Of Science|gatherwolfcum|value|
-|Kaleem Mcintyre|Pursuit Of Science|gatherdemonseed|value|
-|Kaleem Mcintyre|Pursuit Of Science|gatherdogmilk|value|
-|Kaleem Mcintyre|Pursuit Of Science|wolfcumfound|value|
-|Kaleem Mcintyre|Pursuit Of Science|demonseedfound|value|
-|Kaleem Mcintyre|Pursuit Of Science|dogmilkfound|value|
-|Kaleem Mcintyre|Pursuit Of Science|Dre|value|
-|Kaleem Mcintyre|Pursuit Of Science|opcl|value|
-|Kaleem Mcintyre|Pursuit Of Science|mdl|value|
-|Kaleem Mcintyre|Pursuit Of Science|gathertaintedwool|value|
-|Kaleem Mcintyre|Pursuit Of Science|gatherspottedfur|value|
-|Kaleem Mcintyre|Pursuit Of Science|taintedwoolfound|value|
-|Kaleem Mcintyre|Pursuit Of Science|spottedfurfound|value|
-|Kaleem Mcintyre|Pursuit Of Science|Bch|value|
-|Kaleem Mcintyre|Pursuit Of Science|Ointerrogate|value|
-|Kaleem Mcintyre|Pursuit Of Science|omioquesting|action|
 |Kaleem Mcintyre|Save The Dame|20140908213124/5966:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Save The Dame|Save the Dame|situation|
 |Kaleem Mcintyre|Save The Dame|Kenaztalk|value|
@@ -1290,12 +1267,6 @@
 |Kaleem Mcintyre|Apartment 319|20140908213124/7053:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Apartment 319|Apartment 319|situation|
 |Kaleem Mcintyre|Apartment 319|AptAid|value|
-|Kaleem Mcintyre|Important Research Quests|20140908213124/12959:Mon 8 September 2014 21:31|indexing|
-|Kaleem Mcintyre|Important Research Quests|Important Treasure|situation|
-|Kaleem Mcintyre|Important Research Quests|Friendship's Proof|situation|
-|Kaleem Mcintyre|Important Research Quests|Ouroboros|situation|
-|Kaleem Mcintyre|Important Research Quests|Special Delivery|situation|
-|Kaleem Mcintyre|Important Research Quests|Tpfs|value|
 |Kaleem Mcintyre|Reservoir|20140908213124/8279:Mon 8 September 2014 21:31|indexing|
 |Kaleem Mcintyre|Reservoir|Reservoir|room|
 |Kaleem Mcintyre|Reservoir|Reservoir Main Pathway|room|
@@ -1344,19 +1315,19 @@
 |Stripes|Main Storyline|ndmhigh|value|
 |Stripes|Main Storyline|ndmLisa|value|
 |Stripes|Main Storyline|monitoring|action|
-|Stripes|Candy Shop|20140908213124/8329:Mon 8 September 2014 21:31|indexing|
-|Stripes|Candy Shop|CandyShop|situation|
-|Stripes|Candy Shop|Sweet Tooth|room|
-|Stripes|Candy Shop|sugarferretfight|value|
-|Stripes|Candy Shop|randomferret|value|
-|Stripes|Candy Shop|ferretvisit|value|
-|Stripes|Candy Shop|sugarfaced|adjective|
-|Stripes|Candy Shop|sugarskinned|adjective|
-|Stripes|Candy Shop|sugarbodied|adjective|
-|Stripes|Candy Shop|sugarcocked|adjective|
-|Stripes|Candy Shop|sugartailed|adjective|
-|Stripes|Candy Shop|lastcaffeine|property|
-|Stripes|Candy Shop|caffeinehigh|property|
+|Stripes|CandyShop|20140908213124/8329:Mon 8 September 2014 21:31|indexing|
+|Stripes|CandyShop|CandyShop|situation|
+|Stripes|CandyShop|Sweet Tooth|room|
+|Stripes|CandyShop|sugarferretfight|value|
+|Stripes|CandyShop|randomferret|value|
+|Stripes|CandyShop|ferretvisit|value|
+|Stripes|CandyShop|sugarfaced|adjective|
+|Stripes|CandyShop|sugarskinned|adjective|
+|Stripes|CandyShop|sugarbodied|adjective|
+|Stripes|CandyShop|sugarcocked|adjective|
+|Stripes|CandyShop|sugartailed|adjective|
+|Stripes|CandyShop|lastcaffeine|property|
+|Stripes|CandyShop|caffeinehigh|property|
 |Stripes|Bouncy Castle|20140908213124/42200:Mon 8 September 2014 21:31|indexing|
 |Stripes|Bouncy Castle|Snared Vixen|situation|
 |Stripes|Bouncy Castle|Bouncy Castle|room|
@@ -1510,11 +1481,6 @@
 |Stripes|Latex Quad Husky|20140908213124/1554:Mon 8 September 2014 21:31|indexing|
 |Stripes|Latex Quad Husky|Shipping Container|situation|
 |Stripes|Latex Quad Husky|latexhuskymode|value|
-|Stripes|Cepark|20140908213124/3172:Mon 8 September 2014 21:31|indexing|
-|Stripes|Cepark|Consolidated Events Park CEP1|situation|
-|Stripes|Cepark|Consolidated Events Park CEP2|situation|
-|Stripes|Cepark|cepark1list|value|
-|Stripes|Cepark|cepark2list|value|
 |Sarokcat|New Events|20140908213124/6229:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|New Events|Military presence|situation|
 |Sarokcat|New Events|Abandonedplayer|situation|
@@ -1533,7 +1499,6 @@
 |Sarokcat|New Events|ruined supplies|situation|
 |Sarokcat|New Events|MTP|value|
 |Sarokcat|New Events|HYG|value|
-|Sarokcat|New Events|LURM|value|
 |Sarokcat|New Events|libvis|value|
 |Sarokcat|Fair Events|20140908213124/4062:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Fair Events|floating balloons|situation|
@@ -1574,7 +1539,6 @@
 |Sarokcat|Beach Events|otter view|situation|
 |Sarokcat|Beach Events|Cream stand|situation|
 |Sarokcat|Beach Events|Lucky seashell|situation|
-|Sarokcat|Beach Events|bbum|value|
 |Sarokcat|Park Events|20140908213124/2101:Mon 8 September 2014 21:31|indexing|
 |Sarokcat|Park Events|Poppies field|situation|
 |Sarokcat|Park Events|Felinoid lair|situation|
@@ -1642,7 +1606,7 @@
 |Stripeguy|Warehouse Events|dock team|situation|
 |Stripeguy|Warehouse Events|Hidden Fucknest|scavevent|
 |Stripeguy|Warehouse Events|belaying pin|armament|
-|Stripeguy|Warehouse Events|FreshFish|situation|
+|Stripeguy|Warehouse Events|Fresh Fish|situation|
 |Stripeguy|Warehouse Events|union break|situation|
 |Stripeguy|Warehouse Events|hot stepping|situation|
 |Stripeguy|Warehouse Events|crate shuffle|situation|
@@ -1767,7 +1731,7 @@
 |Nuku Valente|Story Skipper|Reciting|action|
 |Stripes|Settings Menus|20140908213124/4130:Mon 8 September 2014 21:31|indexing|
 |Stripes|Settings Menus|weakwilled|value|
-|Stripes|Settings Menus|trixiecheating|action|
+|Stripes|Settings Menus|Trixiecheating|action|
 |Stripes|Settings Menus|analadjusting|action|
 |Stripes|Settings Menus|WSadjusting|action|
 |Stripes|Settings Menus|voremenuing|action|
@@ -2057,7 +2021,7 @@
 |Xeylef|Parasitic Plant|keepbody|value|
 |Xeylef|Parasitic Plant|keepcock|value|
 |Sarokcat|Alpha Husky|20140908213124/7722:Mon 8 September 2014 21:31|indexing|
-|Sarokcat|Alpha Husky|husky gathering|situation|
+|Sarokcat|Alpha Husky|Husky Gathering|situation|
 |Sarokcat|Alpha Husky|Alphahuskypet|value|
 |Sarokcat|Alpha Husky|losttoalphahusky|value|
 |Sarokcat|Hyena Matriarch|20140908213124/6690:Mon 8 September 2014 21:31|indexing|
@@ -2102,7 +2066,7 @@
 |Stripes|Bottlenose Toy|dolphinflatablefight|value|
 |Stripes|Bottlenose Toy|dolinfloss|value|
 |Nuku Valente|Otter|20140908213124/4232:Mon 8 September 2014 21:31|indexing|
-|Nuku Valente|Otter|Fish|Grab Object|
+|Nuku Valente|Otter|Tasty Fish|Grab Object|
 |Nuku Valente|Otter|Otterdefeat|value|
 |Nuku Valente|Otter|Otterconsent|value|
 |Agentlemancalledb|Sugar Glider|20140908213124/5384:Mon 8 September 2014 21:31|indexing|
@@ -2790,7 +2754,7 @@
 |Blue Bishop|Velos|Sven|man|
 |Blue Bishop|Velos|Christy|woman|
 |Blue Bishop|Velos|Nermine|woman|
-|Blue Bishop|Velos|Athanasia|woman|
+|Blue Bishop|Velos|Anastasia|woman|
 |Blue Bishop|Velos|velospostmusings|value|
 |Blue Bishop|Velos|vpostmusenum|value|
 |Blue Bishop|Velos|velosfleepenalty|value|
@@ -3202,7 +3166,7 @@
 |Stripes|Sally|lastSallyfucked|value|
 |Stripes|Alexandra|20140908213124/41721:Mon 8 September 2014 21:31|indexing|
 |Stripes|Alexandra|Alexandra|person|
-|Stripes|Alexandra|Police Station|room|
+|Stripes|Alexandra|Police Station Twelve|room|
 |Stripes|Alexandra|PSdoor|door|
 |Stripes|Alexandra|Police Lockerroom|room|
 |Stripes|Alexandra|Cell Block A|room|
@@ -3225,7 +3189,7 @@
 |Stripes|Alexandra|A_Sally|value|
 |Stripes|Alexandra|A_Sarah|value|
 |Stripes|Alexandra|A_Sarah2|value|
-|Stripes|Alexandra|A_Coleen|value|
+|Stripes|Alexandra|A_Colleen|value|
 |Stripes|Alexandra|A_Solstice|value|
 |Stripes|Alexandra|A_David|value|
 |Stripes|Alexandra|A_Elijah|value|
@@ -3363,12 +3327,12 @@
 |Stripes|Leonard|felinebodied|adjective|
 |Stripes|Leonard|felinecocked|adjective|
 |Stripes|Leonard|felinetailed|adjective|
-|Stripes|Athanasia|20140908213124/12738:Mon 8 September 2014 21:31|indexing|
-|Stripes|Athanasia|Captured Bird|situation|
-|Stripes|Athanasia|FireAndIce|situation|
-|Stripes|Athanasia|phoenix egg|Grab Object|
-|Stripes|Athanasia|Volcanic Cave|room|
-|Stripes|Athanasia|shownermine|property|
+|Stripes|Anastasia|20140908213124/12738:Mon 8 September 2014 21:31|indexing|
+|Stripes|Anastasia|Captured Bird|situation|
+|Stripes|Anastasia|FireAndIce|situation|
+|Stripes|Anastasia|phoenix egg|Grab Object|
+|Stripes|Anastasia|Volcanic Cave|room|
+|Stripes|Anastasia|shownermine|property|
 |Stripes|Newt|20140908213124/5271:Mon 8 September 2014 21:31|indexing|
 |Stripes|Newt|Newt|woman|
 |Stripes|Andrew|20140908213124/9517:Mon 8 September 2014 21:31|indexing|
@@ -3393,7 +3357,7 @@
 |Stripes|Mack|roasted nuts|Grab Object|
 |Stripes|Meredith|20140908213124/22011:Mon 8 September 2014 21:31|indexing|
 |Stripes|Meredith|Meredith|woman|
-|Stripes|Meredith|Meredith_Coleen_fun1|value|
+|Stripes|Meredith|Meredith_Colleen_fun1|value|
 |Stripes|Meredith|Meredith_anal|value|
 |Stripes|Meredith|Meredith_Vanessa_fun1|value|
 |Stripes|Meredith|Meredith_Vanessa_fun2|value|
@@ -3410,7 +3374,6 @@
 |Stripes|G-Shep Squad|K9 Vans|room|
 |Stripes|G-Shep Squad|Buster|person|
 |Stripes|G-Shep Squad|gshepsquad|value|
-|Stripes|G-Shep Squad|gshepmood|value|
 |Stripes|G-Shep Squad|busterstory1|value|
 |Stripes|G-Shep Squad|busterstory2|value|
 |Nuku Valente|Alpha Fang Scenes|20140908213124/2497:Mon 8 September 2014 21:31|indexing|
@@ -3466,7 +3429,7 @@
 |Wahn|Thomas|ThomasQuestVar|value|
 |Wahn|Thomas|ThomasPregnancy|value|
 |Agentlemancalledb|Rexxyevent|20140908213124/15088:Mon 8 September 2014 21:31|indexing|
-|Agentlemancalledb|Rexxyevent|ForcedAdoption|situation|
+|Agentlemancalledb|Rexxyevent|Forced Adoption|situation|
 |Agentlemancalledb|Rexxyevent|Dog Treats|Grab Object|
 |Agentlemancalledb|Rexxyevent|Dog Bone|Grab Object|
 |Agentlemancalledb|Rexxyevent|Rex's Place|room|
@@ -3479,7 +3442,7 @@
 |Agentlemancalledb|Francois|20140908213124/19401:Mon 8 September 2014 21:31|indexing|
 |Agentlemancalledb|Francois|Gourmet Treats|situation|
 |Agentlemancalledb|Francois|Bone-Appetit|room|
-|Agentlemancalledb|Francois|François|man|
+|Agentlemancalledb|Francois|Francois|man|
 |Agentlemancalledb|Francois|Boysenberry Blossom|Grab Object|
 |Agentlemancalledb|Francois|Bleuettonne|Grab Object|
 |Agentlemancalledb|Francois|Crème Abondante|Grab Object|
@@ -3491,15 +3454,15 @@
 |Agentlemancalledb|Francois|Gingerbread|Grab Object|
 |Agentlemancalledb|Francois|Cheesecake|Grab Object|
 |Agentlemancalledb|Francois|Francoismix|marker|
-|Agentlemancalledb|Francois|Françoistalk1|value|
+|Agentlemancalledb|Francois|Francoistalk1|value|
 |Agentlemancalledb|Francois|Francois_Undiscovered|value|
 |Agentlemancalledb|Francois|Francois_Discovered|value|
 |Agentlemancalledb|Francois|Francoismixcleaned|value|
-|Agentlemancalledb|Francois|françoisbaking|action|
+|Agentlemancalledb|Francois|Francoisbaking|action|
 |Agentlemancalledb|Karen|20140908213124/1730:Mon 8 September 2014 21:31|indexing|
 |Agentlemancalledb|Karen|Retriever Girl|Pet|
 |Agentlemancalledb|Karen|Forgotten Past|situation|
-|Agentlemancalledb|Karen|KarenTimer|value|
+|Agentlemancalledb|Karen|Libido of Karen|value|
 |Agentlemancalledb|Karen|KarenTalking|action|
 |Agentlemancalledb|Karen|KarenFucking|action|
 |Wahn|Felix|20140908213124/10919:Mon 8 September 2014 21:31|indexing|
@@ -3521,17 +3484,16 @@
 |Wahn|Lilith|LilithKidCounter|value|
 |Wahn|Lilith|LilithPregCounter|value|
 |Wahn|Lilith|AtticusCounter|value|
-|Sarokcat|Coleen|20140908213124/29857:Mon 8 September 2014 21:31|indexing|
-|Sarokcat|Coleen|Womanfruittree|situation|
-|Sarokcat|Coleen|Coleen|woman|
-|Sarokcat|Coleen|Coleendeclined|value|
-|Sarokcat|Coleen|ColeenTalk|value|
-|Sarokcat|Coleen|ColeenFound|value|
-|Sarokcat|Coleen|ColeenCollared|value|
-|Sarokcat|Coleen|ColeenAlpha|value|
-|Sarokcat|Coleen|ColeenSlut|value|
-|Sarokcat|Coleen|ColeenSpray|value|
-|Sarokcat|Coleen|ColeenSpraying|action|
+|Sarokcat|Colleen|20140908213124/29857:Mon 8 September 2014 21:31|indexing|
+|Sarokcat|Colleen|Womanfruittree|situation|
+|Sarokcat|Colleen|Colleen|woman|
+|Sarokcat|Colleen|ColleenTalk|value|
+|Sarokcat|Colleen|ColleenFound|value|
+|Sarokcat|Colleen|ColleenCollared|value|
+|Sarokcat|Colleen|ColleenAlpha|value|
+|Sarokcat|Colleen|ColleenSlut|value|
+|Sarokcat|Colleen|ColleenSpray|value|
+|Sarokcat|Colleen|ColleenSpraying|action|
 |Stripes|Vanessa|20140908213124/13747:Mon 8 September 2014 21:31|indexing|
 |Stripes|Vanessa|Paratrooper|situation|
 |Stripes|Vanessa|Vanessa|woman|

@@ -33,12 +33,12 @@ To say Opossum Sailor loses:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Opossum Sailor";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -55,7 +55,7 @@ When Play begins:
 	now face change entry is "you feel it stretch forward into a proper opossum-like muzzle, your jaw reshaping to make room for a swiss-army grade collection of teeth suitable for any purpose, more or less. Your ears swell and darken, shifting to lurk above your equally dark eyes. White and pink erupt in your vision as your new muzzle turns white, sprouting new whiskers"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "your chest just sort of evens out, growing in some places and compacting in others until your shoulders and hips are nearly equal in width. Your limbs follow suit, feeling pained as proportions equalize. The sudden agony in your abdomen is unexpected, but it heralds the formation of a vestigial pouch which will function as another erogenous zone"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "muddled shades of gray fur begin to sprout from your skin, black and white splotches of guard hairs weaving in like smudges";
-	now ass change entry is "your hips widen subtly, making room for new glands on either side of your puckered asshole. Your muscles ache as they spread out slightly, to distribute power more equally to your legs, torso, and tail. Yes, your tail - its the long pink hairless appendage that uncoils with a mind of its own, sort of";
+	now ass change entry is "your hips widen subtly, making room for new glands on either side of your puckered asshole. Your muscles ache as they spread out slightly, to distribute power more equally to your legs, torso, and tail. Yes, your tail - it's the long, pink, hairless appendage that uncoils with a mind of its own, sort of";
 	now cock change entry is "it turns vibrant pink, almost like bubble gum, and acquires a very mild curve to it. Without warning, it retracts into a dapper opossum sheath"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 17;
 	now dex entry is 21;
@@ -86,8 +86,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Opossum Sailor":

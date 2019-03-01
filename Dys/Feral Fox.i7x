@@ -40,13 +40,13 @@ to say FeralFoxDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 when play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Feral Fox";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -61,10 +61,10 @@ when play begins:
 	now tail entry is "You have a long, fluffy fox tail sticking out of your rear, swaying gently.";
 	now cock entry is "[one of]vulpine[or]knotted[or]fox[at random]";
 	now face change entry is "as you feel a muzzle pushing out of it. Your ears shift to the top of your head, becoming triangular in shape and growing a bit larger.";
-	now body change entry is "your body shifts, forcing you onto all fours. Your arms shorten to match the length of your legs, which also change, becoming digitigrade. Your hands and feet become that of a fox's paws, and your nails turn into sharp cla";
-	now skin change entry is "fur begins to sprout all over your body, with differing colors on different parts. Your chest and lower chin grow a cream colored fur, while the rest of your body grows a deep orange instead. The tips of your ears and all of your limbs grow black fur.";
+	now body change entry is "your body shifts, forcing you onto all fours. Your arms shorten to match the length of your legs, which also change, becoming digitigrade. Your hands and feet become that of a fox's paws, and your nails turn into sharp claws";
+	now skin change entry is "fur begins to sprout all over your body, with differing colors on different parts. Your chest and lower chin grow a cream colored fur, while the rest of your body grows a deep orange instead. The tips of your ears and all of your limbs grow black fur";
 	now ass change entry is "a long and fluffy tail suddenly grows. It sways gently behind you";
-	now cock change entry is "its tip tapers out, becoming distinctly vuline. The shaft smooths out, taking on a distinct red color, and a large knot forms at the base. After its change completes, it recedes into a new sheath";
+	now cock change entry is "its tip tapers out, becoming distinctly vulpine. The shaft smooths out, taking on a distinct red color, and a large knot forms at the base. After its change completes, it recedes into a new sheath";
 	now str entry is 22;
 	now dex entry is 25;
 	now sta entry is 19;
@@ -94,8 +94,9 @@ when play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;
+	now DayCycle entry is 0;
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Item

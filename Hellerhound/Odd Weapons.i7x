@@ -16,6 +16,10 @@ The slot of garbage can shield is "shield".
 
 the scent of garbage can shield is "Despite everything that you try to do about it, a slight scent of garbage seems to be an inescapable part of this makeshift shield. But hey... one makes use of what you get.".
 
+Table of GameEventIDs (continued)
+Object	Name
+Fallen Survivor	"Fallen Survivor"
+
 Fallen Survivor is a scavevent. The sarea of Fallen Survivor is "Allzones".
 
 instead of resolving a Fallen Survivor:
@@ -43,21 +47,24 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "infected sword"	"A sword with cloudy metal found in a sea of slime. It is infectious, and keeps changing you."	10	infected sword
 
-infected sword is a armament. It is a part of the player. It has a weapon "[one of]your cloudy sword[or]your sword[or]your infected sword[or]your glowing sword[at random][hydraharming]". The weapon damage of infected sword is 16. The weapon type of infected sword is "Melee". It is not temporary. the purified of infected sword is "Nothing". the objsize of infected sword is 4.
+infected sword is a armament. It is a part of the player. It has a weapon "[one of]your cloudy sword[or]your sword[or]your infected sword[or]your glowing sword[at random][hydraharming]". The weapon damage of infected sword is 16. The weapon type of infected sword is "Melee". It is not temporary. The purified of infected sword is "Nothing". The objsize of infected sword is 4.
 
 the scent of infected sword is "The infected sword smells of a myriad of musky scents, all shifting and changing. You can never seem to identify a scent before a new one appears.".
 
 instead of purifying an infected sword:
-	say "The sword sets the sides of the microwave on fire, and Matt rushes over and sprays it with the fire extinguisher. 'What are you doing?' he exclaims, 'Don't you know what happens when you put metal in the microwave?";
-	say "I have fixed the damage, but next time it might not be so. Do not do it again!";
+	say "That doesn't even fit in the microwave. Also, putting metal in one is a really bad idea.";
 	stop the action;
+
+Table of GameEventIDs (continued)
+Object	Name
+Sword Nest	"Sword Nest"
 
 Sword Nest is a situation.
 gotsword is a number that varies.
 washerenest is a number that varies.
 fellforward is a number that varies.
 
-instead of resolving sword nest:
+instead of resolving Sword Nest:
 	say "     You come across the remains of a giant nest [if washerenest is 1]again[end if], probably belonging to gryphons. It is scattered, and sexual fluids of all kinds, not all from gryphons, cover the ground. It looks as if several gangs of different species fought here.. or maybe 'played' as well. The ground is so thoroughly coated with it that you cannot enter without touching it.";
 	now washerenest is 1;
 	if the humanity of player < 60: [falling to the nanites]
@@ -140,12 +147,15 @@ instead of resolving sword nest:
 				say "     The infected slime changes you.";
 				wait for any key;
 			increase carried of infected sword by 1;
-			now sword nest is resolved;
+			now Sword Nest is resolved;
+			now Resolution of Sword Nest is 1; [player waded in to get the sword]
 		else:
 			say "     You leave the mess and its sword there without touching it.";
-			now sword nest is resolved;
+			now Sword Nest is resolved;
+			now Resolution of Sword Nest is 2; [player left the sword]
 	else:
 		say "     You leave the mess behind, pondering the reason why this occurred here and nowhere else.";
+		now Resolution of Sword Nest is 3; [didn't spot the sword]
 
 An everyturn rule:
 	if the infected sword is wielded:
@@ -169,7 +179,7 @@ Does the player mean grabbing the dirty whip when the dirty whip is visible: it 
 Does the player mean grabbing the clean whip when the clean whip is visible: it is very likely.
 ]
 
-dirty whip is an armament. it is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your messy whip[or]white streak[at random]". The weapon damage of dirty whip is 11. The weapon type of dirty whip is "Melee". It is not temporary.
+dirty whip is an armament. It is part of the player. It has a weapon "[one of]your whip[or]your cum-soaked whip[or]your messy whip[or]white streak[at random]". The weapon damage of dirty whip is 11. The weapon type of dirty whip is "Melee". It is not temporary.
 
 the scent of dirty whip is "The sticky whip smells of equine cum.".
 
@@ -177,12 +187,16 @@ horse whip is an armament. It is part of the player. It has a weapon "[one of]yo
 
 the scent of horse whip is "The horse whip smells of leather and oils.".
 
+Table of GameEventIDs (continued)
+Object	Name
+Destroyed Bushes	"Destroyed Bushes"
+
 Destroyed Bushes is a situation.
-the sarea of destroyed bushes is "Park".
+the sarea of Destroyed Bushes is "Park".
 numwater is a number that varies.
 gotwhip is a number that varies.
 
-instead of resolving Destroyed bushes:
+instead of resolving Destroyed Bushes:
 	say "     You come across a circle of bushes crushed flat against the ground, large pools of cum and juices in the revealed space. Horse hoof prints over the ground as well, and the imprint of a human body in one spot testifies to the fact that someone was overtaken by one of the equines.";
 	if the humanity of player < 50:
 		say "     Do you want to drink from the puddles?";
@@ -205,7 +219,8 @@ instead of resolving Destroyed bushes:
 					say "     You pick up the now clean whip, and place it in your backpack. It looks like a good weapon.";
 					decrease carried of water bottle by 3;
 					increase carried of horse whip by 1;
-					now destroyed bushes is resolved;
+					now Resolution of Destroyed Bushes is 1; [cleaned the whip]
+					now Destroyed Bushes is resolved;
 					now gotwhip is 1;
 				else:
 					say "     You don't have enough water. Maybe you could come back when you find more?";
@@ -218,12 +233,14 @@ instead of resolving Destroyed bushes:
 					infect "Black Equinoid";
 					increase carried of dirty whip by 1;
 					now gotwhip is 2;
-					now the destroyed bushes is resolved;
+					now Resolution of Destroyed Bushes is 2; [grabbed the dirty whip]
+					now the Destroyed Bushes is resolved;
 				else:
 					say "     You leave the whip where it is.";
 	else:
-		say "     You leave the scene, avoiding the puddles.";
-		now destroyed bushes is resolved;
+		say "     You leave the scene, avoiding the puddles, and make a mental note to not come back here again.";
+		now Resolution of Destroyed Bushes is 3; [didn't investigate the bushes / whip]
+		now Destroyed Bushes is resolved;
 
 An everyturn rule:
 	if the dirty whip is wielded:

@@ -16,7 +16,7 @@ when play begins:
 
 to say corotadesc:
 	setmongender 4; [creature is female]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of player:
@@ -28,7 +28,7 @@ to say corotadesc:
 
 
 to say losetocorota:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if a random chance of 3 in 5 succeeds:
 		if player is male:
 			say "     The corota brings you to the ground with a rough sweep of their tail, staring down at your broken and bruised form. Sniffing at the air with nose and tongue, the serpent creature smiles down at you in a way only a feral can. 'Yes, strong mate. Deserving mate,' she hisses, going between your legs and working your length with her forked tongue. Whether it turns you on or you merely struggle, suddenly there is a painful sensation in the base of your cock as the corota appears to have bitten into you with their fangs. Bringing their head up to smile at you, again with that feral look, you can see a venom of a different color than normal dripping from their fangs.";
@@ -61,12 +61,12 @@ to say beatthecorota:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Corota"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -114,8 +114,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "corota"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Section 3 - Alt Attack - Corota Dust
 
@@ -124,7 +125,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "corota"	retaliation rule	--	--	--	--	--	--	--	corotadust rule	--
 
 this is the corotadust rule:		[draining cloud]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	say "     The corota's dust hangs in the air, a constant irritation. ";
 	let playernum be 12 + ( stamina of player * 2 ) + level of player;
 	if face mask is equipped, increase playernum by 12;

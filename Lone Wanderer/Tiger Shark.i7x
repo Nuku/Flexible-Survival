@@ -27,7 +27,7 @@ when play begins:
 	add { "Tiger Shark" } to infections of guy;
 	add { "Tiger Shark" } to infections of furry;
 
-ts_warrior is truth state that varies.		[registers if the player is fighting the shark warrior or not.]
+ts_warrior is a truth state that varies.		[registers if the player is fighting the shark warrior or not.]
 ts_warrior is usually false.
 tsw_victory is a truth state that varies.	[registers whether Tiger Shark Warrior won or not.]
 tsw_victory is usually false.
@@ -37,12 +37,16 @@ tsw_relationship is a number that varies.	[The standing of the shark warrior tow
 
 to TigerSharkInfect:	[Function to infect the player. By default the Tiger Shark is non-infective because of the Tiger Shark Warrior]
 	Setmonster "Tiger Shark";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now non-infectious entry is false;
 	infect "Tiger Shark";
 	now non-infectious entry is true;
 
 Section 1 - Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Shark Warrior	"Shark Warrior"
 
 Shark Warrior is a situation.
 The sarea of Shark Warrior is "Beach".
@@ -109,7 +113,7 @@ Section 2 - Monster Responses
 
 to say TigerSharkDesc:
 	setmongender 3; [male]
-	choose row monster in Table of random critters;
+	choose row monster in Table of Random Critters;
 	if ts_warrior is true:
 		if bodyname of player is "Feral Sea Dragon":	[Check body of player]
 			now tsw_fsd is 1;
@@ -152,11 +156,11 @@ to say Tiger Shark wins:
 			say "that he sports two erections that poke out of his genital slit. The muscular fish jerks one of his girthy cocks, making you gulp, all the while his other hand is kept on your anus. When the tiger shark feels satisfied with the preparations, he aligns his twin dicks and ";
 			if player is female: [female and herm]
 				say "pushes them into your pussy and asshole at the same time.";
-				say "     The sensation of both of your openings being distended by these thick cocks causes you to claw at the sand. Your invaded holes clench down on his cocks, your inner walls trying to embrace and explore them. These sensations within make you content to just lie there with these twin dicks resting inside you; their pulsing making you practically feel his heartbeat inside you. In your idle state you take note that the shark sits on your tail with his own splayed on top of yours. The rough skin on his hard butt and tail slightly grazes your scales when he shifts around. Thankfully, he mostly stays in place, supporting himself with his hands on your [if scalevalue of player > 3]midriff[else ]chest[end if]. Convinced that you are ready, the tiger shark moves his hands to your hips and withdraws, making his cocks retreat from your cunt and asshole. Before you could beg him not to stop, he lunges at your holes with his cocks again, his intention clear; he wants to hump you in earnest.";
+				say "     The sensation of both of your openings being distended by these thick cocks causes you to claw at the sand. Your invaded holes clench down on his cocks, your inner walls trying to embrace and explore them. These sensations within make you content to just lie there with these twin dicks resting inside you; their pulsing making you practically feel his heartbeat inside you. In your idle state you take note that the shark sits on your tail with his own splayed on top of yours. The rough skin on his hard butt and tail slightly grazes your scales when he shifts around. Thankfully, he mostly stays in place, supporting himself with his hands on your [if scalevalue of player > 3]midriff[else]chest[end if]. Convinced that you are ready, the tiger shark moves his hands to your hips and withdraws, making his cocks retreat from your cunt and asshole. Before you could beg him not to stop, he lunges at your holes with his cocks again, his intention clear; he wants to hump you in earnest.";
 				say "     Looking over your belly, you take a look at your conqueror who's focused on fucking you. The victor's chest heaves from arousal and previous exertion; making you feel a tinge of pride that you have been deemed worthy enough to be under this mountain of a man. With several grunts, the shark starts a routine of pistoning his twin shafts in and out of you, making you loll out your tongue. Basking in the [if daytimer is day]warm sun rays[else]cool night air[end if], you enjoy all of your insides being rubbed by the warm and slimy cocks. With every shove of his twin dicks, you sink a bit further into the [if daytimer is day]dry[else]wet[end if] sand. It doesn't take long for you to reach your climax, roaring and bucking your hips. Satisfied with driving his partner towards a climax, the tiger shark picks up his pace. You gasp when you feel his dicks twitching inside you, delivering throb after heavy throb of fertile seed to fill both your anus and your pussy.";
 				impregchance;
 			else if player is male: [male]
-				say "pushes one of them into your asshole. The tiger shark waits a moment for you to adjust. Your tailhole feels stuffed with his thick length pulsing inside you. Not sure whether it's voluntary or not, you find yourself clenching down on that cock, your walls eager to get to know the intruder. In your idle state, you take note that the fish-man sits on your tail with his own splayed on top of yours. The rough skin on his hard butt and tail slightly graze your scales when he shifts around. Thankfully he mostly stays in place, supporting himself with his hands on your [if scalevalue of player > 3]midriff[else ]chest[end if]. Convinced that you are ready, the brawler starts to hump away at you, leaving you a lust-addled wreck on the sand. The firm love-making feels wonderful and you feel like you were made for this exact moment; to be fucked into the coarse sand by this shark hunk.";
+				say "pushes one of them into your asshole. The tiger shark waits a moment for you to adjust. Your tailhole feels stuffed with his thick length pulsing inside you. Not sure whether it's voluntary or not, you find yourself clenching down on that cock, your walls eager to get to know the intruder. In your idle state, you take note that the fish-man sits on your tail with his own splayed on top of yours. The rough skin on his hard butt and tail slightly graze your scales when he shifts around. Thankfully he mostly stays in place, supporting himself with his hands on your [if scalevalue of player > 3]midriff[else]chest[end if]. Convinced that you are ready, the brawler starts to hump away at you, leaving you a lust-addled wreck on the sand. The firm love-making feels wonderful and you feel like you were made for this exact moment; to be fucked into the coarse sand by this shark hunk.";
 				say "     The fish-man has your legs locked around his shoulders, your toes curling up in your pleasured state. Your unattended cock bobs up and down as the warrior is driving his shaft in and out of you. Precum keeps drooling out of your cock liberally, getting fucked out of your prostate. The continuous prodding inside eventually sends you over the edge, making your [cockname of player in lower case] cock shoot your load at your chest and face. Satisfied with driving his partner towards a climax, the shark picks up his pace. You gasp when you feel his dick twitching inside you, delivering throb after heavy throb of fertile seed to fill your ass, at the same time as creaming your body from the outside with his other cock.";
 			else: [neuter]
 				say "pushes one of them into your asshole.";
@@ -165,11 +169,11 @@ to say Tiger Shark wins:
 		else: ["less anal" players]
 			say "You meekly let out a protesting squeal as he pushes your legs apart. When he probes your asshole, you growl angrily at the shark, not wanting him to touch you there. With a little shrug of his muscular shoulders, your victor moves on to knead your inner thighs in response, a little further away from where you didn't want him to go. 'Don't worry, I won't hurt you. I think you'll enjoy this.'";
 			if player is male:
-				say "     The shark moves on to grab your [cockname of player in lower case] cock, lifting it up. For a second, you are worried as he gets his teeth-filled mouth closer and closer - but he only licks along your tip";
+				say "     The shark moves on to grab your [cockname of player in lower case] cock, lifting it up. For a second, you are worried as he gets his teeth-filled mouth closer and closer - but he only licks along your tip. ";
 				if cockname of player is "Feral Sea Dragon" or cockname of player is "Feral Sea Dragoness":
-					say ". Your captor almost seems obsessed with your length, as he keeps worshipping it. Then he encases your spade-like tip within his maw, ";
+					say "Your captor almost seems obsessed with your length, as he keeps worshipping it. He then encases your spade-like tip within his maw, ";
 				else:
-					say "then he encases your tip within his maw, ";
+					say "He then encases your tip within his maw, ";
 				say "licking your erection some more. The brawler drives the tip of his tongue into your urethra, wanting to get more of your precum. You claw at the sand at this intrusion. While it doesn't feel entirely unpleasant, the stretching sensation makes you a bit strained. Thankfully, the shark slips the agile organ from your insides soon after, moving on to engulf your entire cock within his maw. His tongue now rests on the underside of your dick, as he drives his head back and forth, fucking his own mouth on your cock. You shift, and move your hands to hold his head. He doesn't seem to like that, ever so slightly nipping your cock. This warning is enough to make you take your hands away and instead you just use them to keep yourself upright.";
 				say "     You hear the beat of the waves on the shore, almost drowning out the slurps of your aquatic partner as he sucks you off, and a small gust of wind carries the smell of the sea to your nose. What a place to be sucked off by a man-like shark! Not being able to hold back much longer, you groan out to signal that you are getting really close. Your captor just continues to suck, hard and fast - but as you buck your hips forward and cry out in your imminent orgasm, the muscular brawler pulls your cock out of his large mouth and directs the twitching length up, aiming right for your face. Gasping out loud at the first heavy throb of cum being sent flying, you actually hit yourself in the open mouth thanks to his intervention, followed by further splashes of cum over your chin, neck and chest. Soon you are dripping with creamy cum, a shameful display of being covered in your [cum load size of player] load.";
 				WaitLineBreak;
@@ -236,13 +240,9 @@ to say TSWSexSelection:	[The Sex menu that shows up]
 					say "[tsw_ride]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You give the shark a cold glare and even kick some sand onto him, as you turn around to leave.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You give the shark a cold glare and even kick some sand onto him, as you turn around to leave.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -255,7 +255,7 @@ To say tsw_oral:
 		say "     Kneeling down, you kiss the shark's body, running your tongue over his slightly rough and salty-tasting skin as you go along. Anticipating your attention, his arms are all over you, caressing and groping you in turn. Finally they come to rest on your head when you are in position. Licking your lips, you take full hold of one of his cocks and stroke up and down along their length, spreading the pre that has been leaking. Wanting to get a taste, you kiss the tip of the shaft, sucking his precum drooling head between your lips and slurping up what you can. The tiger shark grabs your head a little tighter as you do, the strength of his grip indicating that he likes the treatment more than a little bit.";
 		WaitLineBreak;
 		say "     As you keep the head in your mouth, you stroke the long shafts up and down, your hands gliding along their slimy surface. Ready for the next step, you lower your head, getting more and more of his shark-dick into your mouth until his length pokes your throat, making you gag slightly. The fish-like man exhales deeply, enjoying your ministrations. You delve down deeper, trying to swallow more of the tapering dick until his anal fins cover your face to both sides. Getting an idea, you squeeze one of them with your free hand. The warrior arches over you in response, pushing your head into his crotch unwittingly. You feel devious, as you take your hand away from his other shaft, and instead, begin stroking his anal fins.";
-		say "     The shark practically yells out in pleasure as you lightly squeeze his fins, while bobbing up and down on his dick. You take turns, with both hands stroking his fins or his other cock. The shark doesn't last long under your attentions; he suddenly grabs onto your head tightly. The hunk drives the currently serviced cock deep into your throat one last time. Both of shafts pulse; one filling you, while the other one covers your face shot after shot with his gooey spunk. The shark keeps holding you for a bit, marvelling at his climax. You swallow down his load, while you feel the cum on your face slowly dripping down as he seems content to just keep you to your knees for a bit.";
+		say "     The shark practically yells out in pleasure as you lightly squeeze his fins, while bobbing up and down on his dick. You take turns, with both hands stroking his fins or his other cock. The shark doesn't last long under your attentions; he suddenly grabs onto your head tightly. The hunk drives the currently serviced cock deep into your throat one last time. Both of shafts pulse; one filling you, while the other one covers your face shot after shot with his gooey spunk. The shark keeps holding you for a bit, marveling at his climax. You swallow down his load, while you feel the cum on your face slowly dripping down as he seems content to just keep you to your knees for a bit.";
 	else:
 		say "     Getting down on all fours, you reach down with your long neck and give the tips, which poke ever so slightly out of his slit, an experimental lick. They are slimy and leak precum already. The smell permeates your senses and remind you of these wonderful sea dragons; this mere shark has a good taste in his partners at least! Driving you almost mad, you keep licking and sucking on his slit. Getting an idea, you adjust your snout and instead try to dive with the tip of your tongue into him. The tiger shark groans out, 'Ahhh, I'm not a female, you stupid dragon!' He dares to reprimand you like that? You get to dictate how you'll treat him and to remind him of his position, you push hard into his stuffed slit. The fish man yells out in a mix of discomfort and pleasure with your tongue cramped inside him. Eventually, both of his dicks snake their way past your tongue into the open, taking position next to your snout.";
 		say "     Withdrawing, you take a moment to linger and enjoy the taste of his insides on your tongue. Content with the little break, you drop your head again and make him gasp when your chin brushes over one of his anal fins. Interesting, it didn't occur to you before how sensitive an aquatic creature's extremities might be. Wanting to find out just how much you can make him squirm, you reach out to his right fin with your tongue. The flappy appendage feels slightly rough on your tongue and tastes salty, but you also believe you catch the bitter note of some leftover cum. The brawler arches his hips, as you get to know his anal fin, suckling the triangular shape.";
@@ -304,12 +304,12 @@ To say tsw_ride:
 
 Section 4 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Tiger Shark";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -357,8 +357,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Tiger Shark":

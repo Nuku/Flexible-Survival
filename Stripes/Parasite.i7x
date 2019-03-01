@@ -2,7 +2,7 @@ Version 1 of Parasite by Stripes begins here.
 
 "Adds an event to gain the larva parasite and unlock the Black Wasp breeder insects."
 
-insectlarva is a truth state that varies. insectlarva is normally false.
+insectlarva is a truth state that varies. insectlarva is usually false.
 larvacounter is a number that varies.	[counts time for the various stages]
 larvaegg is a number that varies.		[0 = no eggs, 1 = unfertilized, 2 = fertilized]
 larvalaid is a number that varies.		[how many times a player's laid eggs]
@@ -10,6 +10,10 @@ larvaexpel is a number that varies.		[how many times a player's expelled unferti
 libidomemory is a number that varies.	[remembers pre-fight libido]
 
 Section 1 - Insect Hive Event
+
+Table of GameEventIDs (continued)
+Object	Name
+Insect Hive	"Insect Hive"
 
 Insect Hive is a situation.
 The sarea of Insect Hive is "High".
@@ -41,15 +45,17 @@ Instead of resolving a Insect Hive:
 		now insectlarva is true;
 		now preghijack is true;
 		now mpreghijack is true;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Black Wasp":
 				now area entry is "High";
 				now non-infectious entry is false; [Wasps unlocked]
+		now Resolution of Insect Hive is 1; [wasps unlocked]
 	else:
 		LineBreak;
 		say "     Deciding discretion is the better part of valor, you exit the alley. Making note of this area, you decide to keep some distance between you and it in the future.";
-	Now Insect Hive is resolved;
+		now Resolution of Insect Hive is 99; [disinterest]
+	now Insect Hive is resolved;
 
 
 Section 2 - Parasite
@@ -93,10 +99,10 @@ an everyturn rule:
 						increase humanity of player by 10;
 						if humanity of player > 100, now humanity of player is 100;
 						now libido of player is libido of player / 2;
-						repeat with y running from 1 to number of filled rows in table of random critters:
-							choose row y in table of random critters;
+						repeat with y running from 1 to number of filled rows in Table of Random Critters:
+							choose row y in Table of Random Critters;
 							if name entry is "Black Wasp":
-								now area entry is "nowhere";
+								now area entry is "Nowhere";
 								now non-infectious entry is true; [Wasps locked again]
 								break;
 				else:
@@ -159,15 +165,15 @@ to say losetoblackwasp:
 		say "     Giving into the urges coming from your [if player is female]womb[else]belly[end if] and the parasite within, you moan lustfully and bare yourself to the creature, dropping to your knees. The insect buzzes happily and moves atop you, running its insectile legs over your [bodytype of player] body. Soon, it brings its abdomen into position and drives its stinger-cock into your [if player is female]cunt[else]ass[end if] and starts fucking you wildly. ";
 	else:
 		say "     Battered by the insect until you can no longer resist, your exhausted body is pinned down by it. Its insectile legs run over your [bodydesc of player] form, pulling off your pack and clothes quickly. It does seem to take care in doing so though, perhaps trying not to damage you further, and pushes you onto all fours. Lacking the strength to continue to struggle, you can only wait as it brings its abdomen into position and drives its stinger-cock into your [if player is female]cunt[else]ass[end if] and starts fucking you wildly. ";
-	say "     As it does, it gently nibbles at you with its mandibles before opening them and letting its tongue slide across your [if scalevalue is 4 or scalevalue is 5]back and shoulders[else]neck and cheek[end if]. Despite your lovers strange nature, or perhaps even because of it, you lustfully push back into its thrust and cum loudly as its knot pushes fully into you and blasts its thick seed into you. ";
+	say "As it does, it gently nibbles at you with its mandibles before opening them and letting its tongue slide across your [if scalevalue is 4 or scalevalue is 5]back and shoulders[else]neck and cheek[end if]. Despite your lovers strange nature, or perhaps even because of it, you lustfully push back into its thrust and cum loudly as its knot pushes fully into you and blasts its thick seed into you. ";
 	if larvaegg is 1 and gestation of child is 0:
-		say "     Your [if player is female]womb[else]belly[end if] is filled with a satisfying warmth as its seed flows into you[if larvalaid >= 2], fertilizing the insect eggs deposited inside you[end if].";
+		say "Your [if player is female]womb[else]belly[end if] is filled with a satisfying warmth as its seed flows into you[if larvalaid >= 2], fertilizing the insect eggs deposited inside you[end if].";
 		say "     Its pleasurable duty done once the flow of semen has ended and its knot has gone down, the insect gently releases you and buzzes off into the air. You get up slowly and head off with a strange sense of contentment welling up inside you, centered somewhere in your tummy.";
 		now libido of player is libido of player / 2;
 		now larvacounter is a random number between 0 and 12;
 		now larvaegg is 2;
 	else:
-		say "     Your [if player is female]womb[else]belly[end if] is filled with a satisfying warmth as its seed flows into you, causing the larva inside you to squirm excitedly.";
+		say "Your [if player is female]womb[else]belly[end if] is filled with a satisfying warmth as its seed flows into you, causing the larva inside you to squirm excitedly.";
 		now libido of player is ( libido of player + libidomemory + libidomemory ) / 3;
 
 
@@ -178,12 +184,12 @@ to say beattheblackwasp:
 
 Chapter 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Black Wasp"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -212,7 +218,7 @@ When Play begins:
 	now HP entry is 40; [ The monster's starting HP. ]
 	now lev entry is 4; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 12; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 8; [ Cock width, more commonly used for ball size. ]
@@ -231,8 +237,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "blackwasp"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Table of Critter Combat (continued)
 name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chance (number)	altattack2 (rule)	alt2chance (number)	monmiss (rule)	continuous (rule)	altstrike (rule)

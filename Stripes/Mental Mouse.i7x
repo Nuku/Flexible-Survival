@@ -1,7 +1,7 @@
 Version 2 of Mental Mouse by Stripes begins here.
 [Version 2.1 - Alt Attack tweaked]
 
-"Adds a Mental Mouse creature to Flexible Survival's Wandering Monsters table with impregchance"
+"Adds a Mental Mouse creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses
@@ -17,12 +17,12 @@ when play begins:
 
 to say mousedesc:
 	setmongender 15; [creatures are herm]
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Mental Mouse":
 			now monster is y;
 			break;
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	say "     As you are traveling along, you find your path cut off by a trio of small mice. Well, short mice would be more accurate, as these herms are quite well endowed, despite being only three feet tall. They have large breasts with perky nipples poking from their gray fur. Between their legs, they have a set of male organs that would be good size on a normal man. The mice have lovely, feminine bodies with slender waists and curvy hips. Their nipples and cocks are a soft pink and their ballsacks are covered in soft, gray fur like their bodies. The small rodents grin happily and start to move towards you, speaking in unison. '[one of]Join us!'[or]Come join us in mousedom.'[or]You shall be one of us.'[or]The mouse-lective has chosen you.'[or]Come, be a beautiful mousie with us.'[or]It is wonderful to be a mouse. As you will see.'[or]We shall welcome you into mousehood with us.'[at random]";
 	if level of player > 4:
 		say "[mousebuff]";
@@ -31,7 +31,7 @@ to say mousedesc:
 		say "     Rachel moves in close beside you. 'I told you all that I'll bring this one in on my own,' she says to the other mice, clearly speaking aloud for your benefit. 'We should not wait any longer. This one is meant to be with us,' they others respond, moving in. It seems that your mate is more independent than most of the other mice in the collective, but is unable to sway the mouse hive-mind into waiting now that they've stumbled across you again.";
 
 to say mousebuff:
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	now lev entry is level of player minus 1;
 	if battleground is "Red" and ( bodyname of player is "Mental Mouse" or mousecurse is 1 ):
 		increase lev entry by ( ( a random number between 0 and 250 ) / 100 ); [ +0-2 lvls in Red, lower chance of +2 ]
@@ -87,7 +87,7 @@ to say losetomouse:
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	else:
-		say "     When this is all over, the mice back off, stroking your exhausted body. 'We look forward to you coming and joining with us permanently. Be a mouse with us, of one mind, of one pleasure. You will not regret it, we promise,' they say softly. 'We will come find you again,' they add ominously before heading off, confident that you'll be among their number soon enough. You do feel a pull to pursue them, to give into mousedom along with them and to enjoy their shapely bodies again and it takes you some effort to clear your head and move on.";
+		say "     When this is all over, the mice back off, stroking your exhausted body. 'We look forward to you coming and joining with us permanently. Be a mouse with us, of one mind, of one pleasure. You will not regret it, we promise,' they say softly. 'We will come find you again,' they add ominously before heading off, confident that you'll be among their number soon enough. You do feel a pull to pursue them, to give in to mousedom along with them and to enjoy their shapely bodies again and it takes you some effort to clear your head and move on.";
 		decrease humanity of player by a random number between 1 and 2;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
@@ -98,9 +98,9 @@ to say beatthemouse:
 	say "     You manage to defeat and drive off the mice. As they leave, they squeak, 'You should not resist us. You have been chosen to be among the mouse collective. None will ever love you as we can.' You rub your aching head, the proximity to these strange mice leaving you a little worn. ";
 	if mousevic > 2 and a random chance of 1 in 3 succeeds:
 		if mouse girl is the companion of player:
-			say "     You do spot a stray mouse dazed from the battle and left behind. Her short, sexy body spread out across the ground, on display for you. Rachel, moving up beside you, runs her paw over your body. You feel excited at the prospect of playing with the prone mouse and move in to take advantage of the opportunity.";
+			say "You do spot a stray mouse dazed from the battle and left behind. Her short, sexy body is spread out across the ground, on display for you. Rachel, moving up beside you, runs her paw over your body. You feel excited at the prospect of playing with the prone mouse and move in to take advantage of the opportunity.";
 		else:
-			say "     You do spot a stray mouse dazed from the battle and left behind. Her short, sexy body spread out across the ground, on display for you.";
+			say "You do spot a stray mouse dazed from the battle and left behind. Her short, sexy body is spread out across the ground, on display for you.";
 			say "     [bold type]Shall you take advantage of this opportunity?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
@@ -110,22 +110,22 @@ to say beatthemouse:
 			else:
 				say "     Deciding against sticking around, you get your mind back on what you were doing and prepare to get moving.";
 	else if bodyname of player is "Mental Mouse" or mousecurse is 1:
-		say "     Trying to shield your mind as best you can from the scurrying thoughts of the mice, you head quickly on your way.";
+		say "Trying to shield your mind as best you can from the scurrying thoughts of the mice, you head quickly on your way.";
 	else:
-		say "     You gather your thoughts and head quickly on your way.";
+		say "You gather your thoughts and head quickly on your way.";
 
 
 to say mouseyvicsex:
 	if player is male:
 		say "     You move up to the defeated mouse and spread her legs, finding her soft pussy hiding beneath her ballsack. You run your fingers over those wet folds, eliciting a soft moan from her. You grin and move in closer, lining up your cock with her snatch and thrust. ";
 		if cock length of player > 18:
-			say "     Your huge glans presses at her much small entrance and slowly spreads her open. She squeaks and squirms as your oversized meat stretches her pussy wide. It is slow going pushing your huge cock into her small body, which eventually starts to stretch around it and becomes bloated with your manmeat. You run your hands over her distended belly and up to her breasts, stroking them and teasing her nipples. Thrusting in earnest now, her body wriggles over your large shaft as best it can with as much of your cock stuffed into it as you can get. The mouse, overwhelmed by so much cock inside her, can only moan and squeak in pleasure, her eyes unfocused and her breathing in hard pants.";
+			say "Your huge glans presses at her much small entrance and slowly spreads her open. She squeaks and squirms as your oversized meat stretches her pussy wide. It is slow going pushing your huge cock into her small body, which eventually starts to stretch around it and becomes bloated with your manmeat. You run your hands over her distended belly and up to her breasts, stroking them and teasing her nipples. Thrusting in earnest now, her body wriggles over your large shaft as best it can with as much of your cock stuffed into it as you can get. The mouse, overwhelmed by so much cock inside her, can only moan and squeak in pleasure, her eyes unfocused and her breathing in hard pants.";
 			WaitLineBreak;
 			if mouse girl is companion of player:
 				say "     Rachel is there beside you as you fuck the overstuffed mousegirl, running her paws over your body, stroking her bulging tummy. She smiles and squeaks happily, glad to see you enjoying one of the sexy mice. Her own cock, quite stiff, is brought to your mouth and you wrap your lips around it, licking and sucking eagerly while you thrust.";
 			say "     You continue fucking the mouse beneath you, pounding your oversized cock into her small body until finally you can take no more and groan loudly. The mouse arches her back and squeaks in pleasure as your hot cum blasts into her, bloating her belly even further. Her cock throbs and pulses, blasting her seed across her gray fur[if mouse girl is companion of player]. Rachel cums as well in time with you both, sharing in the pleasure of sex with you both. You gulp down her semen, enjoying your mate's rich flavor[end if]. When you're finally drained and you withdraw, you rub your hand over the bloated mousie's belly. She smiles up at you in a bit of haze. '[one of]Oh, you should come join us. I'd really love to have you do that to me again[or]I can see why you were chosen to be among us. I look forward to that wonderful day[or]You would make a wonderful mouse lover for us all[or]You should come join us soon[at random],' she squeaks before drifting back into a lustful haze, stroking her stuffed tummy. You decide it best to move on before the others come back for her.";
 		else if cock length of player > 12:
-			say "     Your large glans presses at her smaller entrance and spreads her open. She squeaks and moans as your big meat is stuffed into her, making a noticeable bump in her tummy. You run your hands over her soft bellyfur, pressing lightly down on the bulge to feel your own cock throb in her before continuing on to her large breasts. You fondle her lovely tits and tease her nipples while thrusting into her eagerly. The mouse beneath you moans in pleasure and runs her small paws over your hips, then move to start stroking herself.";
+			say "Your large glans presses at her smaller entrance and spreads her open. She squeaks and moans as your big meat is stuffed into her, making a noticeable bump in her tummy. You run your hands over her soft bellyfur, pressing lightly down on the bulge to feel your own cock throb in her before continuing on to her large breasts. You fondle her lovely tits and tease her nipples while thrusting into her eagerly. The mouse beneath you moans in pleasure and runs her small paws over your hips, then move to start stroking herself.";
 			WaitLineBreak;
 			if mouse girl is companion of player:
 				say "     Rachel is there beside you as you fuck the mouse girl, running her paws over your body and stroking the other mouse's stuffed tummy. She smiles and squeaks happily, glad to see you enjoying one of the sexy mice. Her own cock, quite stiff, is brought to your mouth and you wrap your lips around it, licking and sucking eagerly while you thrust.";
@@ -136,7 +136,7 @@ to say mouseyvicsex:
 			if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 		else:
-			say ". Your glans presses at her smaller entrance and spreads her open. She squeaks softly as meat is stuffed into her. You run your hands over her soft bellyfur before continuing on to her large breasts. You fondle her lovely tits and tease her nipples while thrusting into her eagerly. The mouse beneath you moans in pleasure and runs her small paws over your hips, then move to start stroking herself.";
+			say "Your glans presses at her smaller entrance and spreads her open. She squeaks softly as meat is stuffed into her. You run your hands over her soft bellyfur before continuing on to her large breasts. You fondle her lovely tits and tease her nipples while thrusting into her eagerly. The mouse beneath you moans in pleasure and runs her small paws over your hips, then move to start stroking herself.";
 			WaitLineBreak;
 			if mouse girl is companion of player:
 				say "     Rachel is there beside you as you fuck the mouse girl, running her paws over your body and stroking the other mouse's tummy. She smiles and squeaks happily, glad to see you enjoying one of the sexy mice. Her own cock, quite stiff, is brought to your mouth and you wrap your lips around it, licking and sucking eagerly while you thrust.";
@@ -167,12 +167,12 @@ to say mouseyvicsex:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Mental Mouse"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "One";
@@ -186,7 +186,7 @@ When Play begins:
 	now skin entry is "soft, gray fur over your";
 	now tail entry is "You have a long, thin tail like that of a mouse.";
 	now cock entry is "[one of]pink[or]human-like[at random]";
-	now face change entry is "your ears start to change, rising up on your head they stretch and grow round, turning into wide cups. They are quite sensitive and twitch at every sound. Your face stretches and reforms, remoulding itself into that of a cute mouse to match your round ears";
+	now face change entry is "your ears start to change, rising up on your head they stretch and grow round, turning into wide cups. They are quite sensitive and twitch at every sound. Your face stretches and reforms, remolding itself into that of a cute mouse to match your round ears";
 	now body change entry is "you shrink and change, becoming shorter and shorter. Your body becomes slender and feminine, like a sexy model in miniature, but also mouse-like. Your hands become nimble paws with slender fingers ending in small claws[mousereset]";
 	now skin change entry is "soft, gray fur spreads across your body";
 	now ass change entry is "a long, slender tail grows in";
@@ -220,8 +220,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "mmouse"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Alt Combat
@@ -232,7 +233,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 
 
 this is the mentalmouse rule:
-	choose row monster from table of Random Critters;
+	choose row monster from Table of Random Critters;
 	if a random chance of 5 in 8 succeeds:	[normal]
 		retaliate;
 	else:						[mental whammy]

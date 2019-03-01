@@ -15,19 +15,22 @@ boosterfeats is a number that varies. boosterfeats is usually 0.
 muggerison is a truth state that varies. muggerison is usually true.
 FeralBirths is a number that varies. FeralBirths is usually 0.
 vampiric is a truth state that varies. vampiric is usually false.
-
 The player has a number called featgained.
 
 Featgetting is an action applying to nothing.
 understand "volunteer" as featgetting.
 
 Check featgetting:
-	if HP of doctor matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
-	if featgained of player > ( ( level of player divided by 3 ) + foodwaterbonus + nerminefeat + boosterfeats ), say "You do not yet qualify for more feats." instead;
-	if HP of doctor matt <= 100:
-		if doctor matt is not visible, say "Only Doctor Matt knows how to do this." instead;
+	if HP of Doctor Matt is 0, say "Volunteer for what now? You are a strange person. Considering what game this is, that says a lot!" instead;
+	if featgained of player > ( ( level of player divided by 3 ) + foodwaterbonus + nerminefeat + boosterfeats ): [not ready for more feats]
+		if Doctor Matt is present:
+			say "     As you step up to him and volunteer for testing, Dr. Matt picks up a little scanner and circles it over your torso, then shakes his head. 'I'm sorry, you're not yet ready for further procedures. You see, the nanite structures that are receptive to adjustment and reprogramming aren't all that prevalent and get deconstructed by the rest after I send a signal that seems to be lacking the right codes. It'll take some time before I can experiment on you again.'" instead;
+		else:
+			say "You do not yet qualify for more feats." instead;
+	if HP of Doctor Matt <= 100:
+		if Doctor Matt is not visible, say "Only Doctor Matt knows how to do this." instead;
 	else:
-		if doctor mouse is not visible, say "You should see Dr Mouse about that." instead;
+		if doctor mouse is not visible, say "You should see Dr. Mouse about that." instead;
 
 carry out featgetting:
 	featget;
@@ -299,7 +302,7 @@ instead of addfeating the basic feats:
 	if level of player > 1:
 		addfeat "More Time" with "You have some more precious time. Though who'd want to stay around here longer? Weirdo!";
 [	addfeat "Automatic Survival" with "You forage a little here, a little there. This is a mildly cheating feat, taking it will impact your score negatively, but will remove food and water as a concern."; ]
-	if HP of doctor matt > 4 or scenario is "Forgotten":
+	if HP of Doctor Matt > 4 or scenario is "Forgotten":
 		addfeat "Microwaved" with "Thanks to the good advice, you have a great idea! If you can clean water, why not yourself? Genius. Gives you a very potent resistance to species reassignment.";
 	if featunlock is 1:	[available after hospital quest]
 		if "Mutable" is not listed in feats of player:
@@ -351,21 +354,21 @@ This is the gainfeat rule:
 to say bestowcitymapfeat:
 	now Beach Plaza is known;
 	now Outside Trevor Labs is known;
-	Now Smith Haven Mall Lot South is known;
+	now Smith Haven Mall Lot South is known;
 	now Park Entrance is known;
 	now City Hospital is known;
-	Now State fair is known;
-	Now Approaching the Capitol Building is known;
-	Now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
-	Now Plant Overview is known;
+	now State fair is known;
+	now Approaching the Capitol Building is known;
+	now Government Assistance is resolved; [removes the random event for discovering the Capitol Bldg]
+	now Plant Overview is known;
 	now Ravaged Power Plant is resolved; [removes the random event for discovering the power plant]
 	now College Campus is known;
 	now Reaching the College is resolved; [removes the random event for discovering the College Campus]
-	Now Entrance to the Red Light District is known;
-	Now Entrance to the High Rise District is known;
-	Now Zoo entrance is known;
-	Now Dry Plains is known;
-	Now Museum Foyer is known;
+	now Entrance to the Red Light District is known;
+	now Entrance to the High Rise District is known;
+	now Zoo entrance is known;
+	now Dry Plains is known;
+	now Museum Foyer is known;
 	now Warehouse District is known;
 	now Urban Forest is known;
 

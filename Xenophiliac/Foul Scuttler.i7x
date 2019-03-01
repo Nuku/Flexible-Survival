@@ -1,6 +1,6 @@
 Foul Scuttler by Xenophiliac begins here.
 
-"Adds an Foul Scuttler to Flexible Survival's Sealed table"
+"Adds a Foul Scuttler to Flexible Survival's Sealed table"
 
 Section 1 - Monster Responses
 
@@ -11,7 +11,7 @@ FirstDescOuter is a number that varies. [Don't know if monsters have something I
 
 to say FoulS_Desc:
 	setmongender 3; [creature is male]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of player:
@@ -140,12 +140,12 @@ to say OuterSuck:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Foul Scuttler";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -193,8 +193,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;
+	now DayCycle entry is 0;
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Endings
 
@@ -217,7 +218,7 @@ when play ends:
 				else:
 					say "     Unable to cope with the outside world any longer, you descend into the winding depths of the Trevor Lab Complex, intent on finding your brethren. Following the thickening scent of your species, you soon find one of the many nests lying in the depths of the labs. You're quickly found to be unable to bear children, and while unable to be a leading member of your species, you're still treated quite well. Finding yourself to be quickly learning the ways of the Foul Scuttlers, you show an unusual intelligence amongst the Scuttlers, able to think and understand in ways most of them cannot. Organizing most of the hunts against the outside world, and quickly grasping human tactics and thought, you're able to overwhelm the humans defenses time and time again. Deciding that the labs are lost, the military seals the lab entrances, preventing any escape in a hope to starve you out. You, however, are too smart for that. Scouring the labs for certain volatile chemicals, you quickly gather them at the entrances that were sealed. Preparing your species for an invasion of the outside world, you trigger the bombs, blowing open the entrances and flooding out in a wave of otherworldly beasts. Overwhelming the small military detachments quickly, you start to plan for your continued takeover, intending to take the world by storm.";
 			else:
-				say "     Drawn to the broken labs where you first became an Scuttler, you do not have the will to resist the silent call that hounds you. Descending into the dark halls, you leave your previous life behind, embracing the inhuman nature seeking to overwhelm your mind. Hunting through the dark halls of Trevor Labs, you make your way to a nest of your new brethren. Falling in amongst the rest of your species, you live amongst your new brethren, hunting the desolate labs. You suddenly found yourself thrust into the position of caretaker when a military team killed a large hunting party, leaving many of the smaller young without parents. You take the orphans in, and teach them how to hunt and live as part of the Scuttlers. The young that you raise grow, and due to your caring guidance, become strong and intelligent Scuttlers, guaranteed to play a part in your species['] survival. You become revered among your nesting partners, subconsciously known as a teacher amongst your species. You continue to teach younglings how to be Scuttlers, with your students expertly hunting through the labs, their screams echoing through the corridors and sending shivers down the spines of those smart enough to know what they mean.";
+				say "     Drawn to the broken labs where you first became a Scuttler, you do not have the will to resist the silent call that hounds you. Descending into the dark halls, you leave your previous life behind, embracing the inhuman nature seeking to overwhelm your mind. Hunting through the dark halls of Trevor Labs, you make your way to a nest of your new brethren. Falling in amongst the rest of your species, you live amongst your new brethren, hunting the desolate labs. You suddenly found yourself thrust into the position of caretaker when a military team killed a large hunting party, leaving many of the smaller young without parents. You take the orphans in, and teach them how to hunt and live as part of the Scuttlers. The young that you raise grow, and due to your caring guidance, become strong and intelligent Scuttlers, guaranteed to play a part in your species['] survival. You become revered among your nesting partners, subconsciously known as a teacher amongst your species. You continue to teach younglings how to be Scuttlers, with your students expertly hunting through the labs, their screams echoing through the corridors and sending shivers down the spines of those smart enough to know what they mean.";
 		else:
 			say "     After what feels like eons, the military finally rolls through, doing their best to contain the nanite infection and rescue those people that are still sane. Your unusual form was first met with fear and threats, but you're able to prove your sanity, with the military taking you to quarantine. You spend an extended amount of time in quarantine, the scientists present wanting to study your magic-warped form. Figuring that your freedom depends on your cooperation, you allow the scientists to study your form, on the promise that you'll be allowed to leave. Many weeks later, the researchers monitoring you have learned all they can from you, and you're released into the civilized world. Finding work wherever you can, you change jobs often, your coworkers unnerved by your strange appearance. Always catching odd stares or hushed whispers as people spot you, you eventually come to realize that city life may not be for you. Taking the money you had saved from the odd jobs you've had over the last few years, you search around for a home away from most civilizations, looking to live a peaceful life. Finally finding yourself a place away from people, you quickly move, and you're able to find a job doing online work, able to live peacefully.";
 			if player is female or cocks of player is 0:
@@ -229,7 +230,7 @@ Section 4 - Item
 
 Table of Game Objects (continued)
 name	desc	weight	object
-"foul scuttler spit"	"A jar of viscous spit you gathered from an Foul Scuttler. Why you did, no one knows."	1	foul scuttler spit
+"foul scuttler spit"	"A jar of viscous spit you gathered from a Foul Scuttler. Why you did, no one knows."	1	foul scuttler spit
 
 foul scuttler spit is a grab object.
 It is temporary.
@@ -239,7 +240,7 @@ the usedesc of foul scuttler spit is "[FoulScuttlerUse]".
 to say FoulScuttlerUse:
 	say "     You look disgustingly at the goopy liquid in the jar, wondering if you're insane for doing this. Steeling yourself, you bring the jar to your lips, quickly drinking the Foul Scuttler saliva. Contrary to your belief, the fluid does not taste horrendous, but it's not exactly tasty, either. Soon enough, you've drained the jar, putting it back into your pack for later use.";
 	setmonster "Foul Scuttler";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of player:

@@ -1,14 +1,18 @@
 Misc 3 by Kaleem mcintyre begins here.
-[Several events transferred to Consolidated Outside Events in Song's folder and CEPark in Stripes' folder.]
+[Several events transferred to Consolidated Outside Events and Consolidated Park Events in Song's folder]
 
 "Adds a series of random events to Flexible Survival."
 
-Section 1- Mysterious Girl
+Section 1 - Mysterious Girl
 
-[Moved to CEPark file.]
+[Moved to Consolidated Park Events]
 
 
 Section 2 - Jam Session
+
+Table of GameEventIDs (continued)
+Object	Name
+Jam Session	"Jam Session"
 
 Jam Session is a situation.
 The sarea of Jam Session is "Junkyard".
@@ -27,6 +31,10 @@ Instead of resolving Jam Session:
 	now Jam Session is resolved;
 
 Section 3 - Blind Boy's Love
+
+Table of GameEventIDs (continued)
+Object	Name
+Blind Boy's Love	"Blind Boy's Love"
 
 Blind Boy's Love is a situation.
 The sarea of Blind Boy's Love is "Junkyard".
@@ -49,13 +57,19 @@ Instead of resolving Blind Boy's Love:
 		say "     This new information makes you somewhat curious about this little affair happening before your eyes as you watch the bigger Rottweiler whimper and croon while nuzzling his cold nose into the furry nape of his former owner. However, before you can think about it too hard the youth starts talking again. 'Or rather [italic type]you[roman type] will once I introduce you as my boyfriend. I've always wished I could be like you ever since we first did this together. How cool is it that this all happens right when you're supposed to taken away from me?' The boy growls as his hard cock becomes thick and tapered while the skin around his groin bunches to become his new sheath. From what you can surmise there seems to be a lot going on here, some of which you're totally not sure about, but you can only shrug as you realize that it doesn't matter in the face of this strange, but beautiful form of friendship taking on a new level. The rottie doesn't seem to take much care in what its new bitch is saying, you think, before the canine starts to speak up out of the blue. 'Let's hope that this makes your eyes better Gareth,' the Rottweiler says in a much more mature voice than what you would have expected a canine to be able to muster as he hunches forward into his new mate twice more before ceasing all motion. Resting comfortably onto Gareth's developing back you watch with wide eyes as the dominant canine's balls begin to pull up close into his lower body just as the rottie makes himself ready fully inseminate his master. A yelp from both males later and you can only watch in awe as quart after quart of rottie cum literally floods out the back of the smaller Rottweiler's forming tailhole. The small stub of a tail wags pulling up behind the boy's backside gives a happy wag before its liberally covered in canine spooge.";
 		WaitLineBreak;
 		say "     Griping the filthy ground with strong paws while filling his former master up to the brim you listen as the taller canine continues to speak into his new mate's twitching ears. 'I want you to be able to see me for all that I am before deciding that you want me as anything more, ok?' The full canine pants before slobbery licking across the now almost fully changed youth. Down below the other mutant canine a look-alike Rottweiler stands, not quite as big as the one on top, but close enough to be comparable in strength, as the boy-dog whimpers and then barks before shuffling his legs to spread them outwards. A few huffs later you figure out why the former human is doing this as Gareth gives a sharp bark and then erupts all along the dirty, oil slick ground underneath him and his lover with the last of his human cum. 'I...I love you Scout!' The new Rottweiler shouts while at the same time shivering in climax. Eyes closed tight you can't see Gareth's eyes to know if the process has worked or not, but you decide that it doesn't matter as the bigger stud canine licks his newly mutated master onto the side of cheek suddenly. The kind of intensity that the bigger male shows for the small lets you know all that you need about the future of the two cano-mutants. Deicing that now would be a good time to take your leave you don't bother to stick around to see anymore. You've already spied on this sacred moment for a minute too long anyway.";
+		now Resolution of Blind Boy's Love is 1; [checked them out]
 	else:
 		LineBreak;
 		say "     Deciding to err on the side of good common sense you make your way from the area you're in just as two howls fill out into the air behind you. Before you exit the vicinity completely you could have sworn that you heard someone shout 'I love you!' sometime after those twin howls tapered off into low croons, but that couldn't be right, could it?";
+		now Resolution of Blind Boy's Love is 99; [avoided them]
 	now Blind Boy's Love is resolved;
 
 
 Section 4 - Dragonian Trial
+
+Table of GameEventIDs (continued)
+Object	Name
+Dragonian Trial	"Dragonian Trial"
 
 Dragonian Trial is a situation.
 The sarea of Dragonian Trial is "Beach".
@@ -65,18 +79,20 @@ when play begins:
 
 Instead of resolving Dragonian Trial:
 	say "     Upon making your way to the beach you end up stumbling across a young man with green hair standing in the middle of an empty area of the beach while looking out at the lapping waters. Thinking little of this, as this is the seaside after all and some people do come here to think, you find yourself almost passing the other without a second thought before you notice something bizarre about the youth. The fact the other is almost completely human seems to be the highlight of your befuddlement as you wonder how the other hasn't been changed into one of the numerous mutants that now all but dominant the city. Watching ivy green hair dance in the wind, a long pony tail swaying in time with the motions of the incoming salty sea air, you find yourself almost captivated by the young man as you notice all of the perfectly cut lines framing the youth's long body as he stands with his arms cross while gazing out at the ocean. The white tunic that he has on, draped down all the way pass the middle of his thighs, combine with the tight fitting black leggings give the other somewhat of a medieval feeling as you note an actually sword sheathed alongside the youth's belt.";
-	say "     Not really sure what's up with the other you find yourself curious to know more about the young man as you take a few cautious steps over to the green haired one. Yet, before you can get too close, you find that the other has sensed you as he quickly whips his head around into your direction -- one hand being placed carefully onto the hilt of his weapon. Reaching up to wave your hands defensively you try and tell the other that you don't mean in any harm, but the gleaming red eyes of the other seem not to believe you. Taking a step back to show your true intent you watch as the young man springs backwards into the air and then begins to hover slightly. Eyes nearly widening into the size of saucers you watch as the other curls in on himself until he's in a fetal ball-like position before spreading himself outwards with both of his arms spread wide into the air while his legs point straight down towards the ground.";
+	say "     Not really sure what's up with the other you find yourself curious to know more about the young man as you take a few cautious steps over to the green haired one. Yet, before you can get too close, you find that the other has sensed you as he quickly whips his head around into your direction - one hand being placed carefully onto the hilt of his weapon. Reaching up to wave your hands defensively you try and tell the other that you don't mean in any harm, but the gleaming red eyes of the other seem not to believe you. Taking a step back to show your true intent you watch as the young man springs backwards into the air and then begins to hover slightly. Eyes nearly widening into the size of saucers you watch as the other curls in on himself until he's in a fetal ball-like position before spreading himself outwards with both of his arms spread wide into the air while his legs point straight down towards the ground.";
 	WaitLineBreak;
-	say "     Not understanding exactly what is going on all you can do is watch as the green haired youth's form soon shifts and then melts only to reform into that of a long serpentine dragon of the eastern countries. Golden scales glean brightly as the dragon floats into the air while letting his long clawed hands, of which there are four (stemming from proportionally sized scaled arms), curl together into tight fists while he shakes his head as though having been caught in a daze. The whiskered serpent soon looks down at you with glaring golden eyes and suddenly you know how a bug feels as your life slowly starts to flash before your eyes. You're kinda sad to find that you still haven't gotten to eat that hidden stash of junk food you have placed securely underneath one of the beds of the bunker you're holding up in. At almost forty feet long the eastern dragon holds your life almost literally into its clawed hands as it growls and bares fangs down at you. Unbridled fear rips through your soul as you see nothing short of imminent death looking your way.";
+	say "     Not understanding exactly what is going on, all you can do is watch as the green haired youth's form soon shifts and then melts, only to reform into that of a long, serpentine dragon of the eastern countries. Golden scales glean brightly as the dragon floats into the air while letting his long clawed hands, of which there are four (stemming from proportionally sized scaled arms), curl together into tight fists while he shakes his head as though having been caught in a daze. The whiskered serpent soon looks down at you with glaring golden eyes and suddenly you know how a bug feels as your life slowly starts to flash before your eyes. You're kinda sad to find that you still haven't gotten to eat that hidden stash of junk food you have placed securely underneath one of the beds of the bunker you're holding up in. At almost forty feet long the eastern dragon holds your life almost literally into its clawed hands as it growls and bares fangs down at you. Unbridled fear rips through your soul as you see nothing short of imminent death looking your way.";
 	say "     [bold type]Running seems like a good idea right now, but at the same time where would you run to?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Run.";
 	say "     ([link]N[as]n[end link]) - Wait.";
 	if player consents:
 		say "     Turning to run you bolt as though the hounds of hell themselves are after you. Damn it being a good idea or not, it's now time to go! You don't think as the need to...escape...flee...run...screams through your veins as your blood rushes rapidly throughout your body. You don't stop to take notice of how the dragon is looking at you with a contemptible look in its golden eyes, or how the creature's clawed hands are slacking open as a sense of ire rises within the beast. The elegantly scaled creature seems to narrow its eyes as it watches your departure before huffing and then flying away, back probably to some place you could only ever dream about.";
+		now Resolution of Dragonian Trial is 1; [ran]
 	else:
 		say "     Knowing that this is it, you decide to do the only thing you can. Sticking out your chest and standing straight in front of the reptilian creature you await its judgment without fail. There's really nothing else you can do since the beach is too wide open to find cover to run at. And strangely enough you have a feeling the thing can swim rather well with that serpentine body it possesses so diving into the ocean is out. Standing up and giving the dragon your most ferocious stare you let the other make the next move.";
 		say "     Astonishingly enough, the dragon seems to approve of your bravado as it smirks at you with a mouth full of one too many sharp fangs and then clasps its forearms together to give you a small bow. Blinking in awe you watch as the magnificently frightening creature slowly turns away from you, after rising back up, and then flies away, off to somewhere you'll probably never be privy to in this life. A sense of awe comes over you as you sigh and then deflate as your knees slowly weaken and then collapse, sending you down onto the sandy floor.";
+		now Resolution of Dragonian Trial is 2; [waited]
 	now Dragonian Trial is resolved;
 
 

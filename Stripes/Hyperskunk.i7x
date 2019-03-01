@@ -1,6 +1,6 @@
 Version 1 of Hyperskunk by Stripes begins here.
 
-"Adds a Hyperskunk creature to Flexible Survival's Wandering Monsters table with impregchance"
+"Adds a Hyperskunk creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses
@@ -22,12 +22,12 @@ to say hyperskunkdesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Hyperskunk"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -56,7 +56,7 @@ When Play begins:
 	now HP entry is 50; [ The monster's starting HP. ]
 	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 30; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 36; [ Cock width, more commonly used for ball size. ]
@@ -75,8 +75,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is true;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 [A sample structure for succumbing/surviving messages at the end of the game.]
 [Numerous other examples can be found in existing creature files.]
@@ -84,7 +85,7 @@ When Play begins:
 when play ends:
 	if bodyname of player is "Hyperskunk":
 		if humanity of player < 10:		[succumb]
-			say "     As you continue to lose yourself to the infection, you give into the instinctual lusts of your body. You are drawn back to the psych department of the hospital with a desire to see the sexy skunk there again. She welcomes you a smile and is more than happy to continue your sessions by going even more 'in-depth' with them until you're nothing but her lusty pet: another ornamental skunk and sex toy, but a living one this time. She keeps you in her office most of the time, using you as she sees fit. And when she finds new test subjects to experiment with, she is more than happy to showcase you to them as well. You have fun tempting these people into playing with you, your sexy mistress always happy to monitor their responses.";
+			say "     As you continue to lose yourself to the infection, you give in to the instinctual lusts of your body. You are drawn back to the psych department of the hospital with a desire to see the sexy skunk there again. She welcomes you a smile and is more than happy to continue your sessions by going even more 'in-depth' with them until you're nothing but her lusty pet: another ornamental skunk and sex toy, but a living one this time. She keeps you in her office most of the time, using you as she sees fit. And when she finds new test subjects to experiment with, she is more than happy to showcase you to them as well. You have fun tempting these people into playing with you, your sexy mistress always happy to monitor their responses.";
 			if hospquest < 2:
 				now hospquest is hospquest; [do-nothing action]
 			else if hospquest < 13:

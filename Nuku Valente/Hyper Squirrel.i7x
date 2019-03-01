@@ -5,6 +5,10 @@ Version 2 of Hyper Squirrel by Nuku Valente begins here.
 
 Section 1 - Hyper Squirrel Girl Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Hyper Squirrel Girl	"Hyper Squirrel Girl"
+
 Hyper Squirrel Girl is a situation.
 hsrp is a number that varies.
 squirrelfucked is a number that varies. squirrelfucked is usually 0.
@@ -19,61 +23,94 @@ After resolving a Hyper Squirrel Girl, try looking;
 Instead of Resolving a Hyper Squirrel Girl:
 	project the figure of Snow_icon;
 	if hsrp is 0:
-		say "As you wander around, you get the feeling that you're being watched. Catching a few brief glances of red fur, you realize your pursuer is playing with you. Growing tired of this, you sit down, and wait. A few minutes pass, when you hear a giggle to you left. You whip your head around, and there stands a squirrel girl, wearing the tattered remains of a buttoned shirt, buttons long gone. Squirrel herm, you correct yourself, as you notice the large bulge in her pants. Before you can call out to her, she takes off... but you have a feeling she'll be back.";
+		say "     As you wander around, you get the feeling that you're being watched. Catching a few brief glances of red fur, you realize your pursuer is playing with you. Growing tired of this, you sit down, and wait. A few minutes pass, when you hear a giggle to you left. You whip your head around, and there stands a squirrel girl, wearing the tattered remains of a buttoned shirt, buttons long gone. Squirrel herm, you correct yourself, as you notice the large bulge in her pants. Before you can call out to her, she takes off... but you have a feeling she'll be back.";
 		increase hsrp by 1;
 	else if hsrp is 1:
-		say "You once again feel someone's eyes on you, probably that squirrel herm again. Attempting to catch her off guard, you bolt to the nearest building, trying catch her before she runs again.";
+		say "     You once again feel someone's eyes on you, probably that squirrel herm again. Attempting to catch her off guard, you bolt to the nearest building, trying catch her before she runs again.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 20:
-			say "You find a great hiding place and hurry to it as quietly as you can, ";
+			say "You find a great hiding place and hurry to it as quietly as you can.";
 		else if diceroll > 12:
-			say "You spot an acceptable hiding place and creep towards it, ";
+			say "You spot an acceptable hiding place and creep towards it.";
 		else:
-			say "You don't see any good hiding places, so you just try to quietly duck down, ";
+			say "You don't see any good hiding places, so you just try to quietly duck down.";
 		now bonus is ( ( diceroll minus 12 ) divided by 2 ) plus (( the Dexterity of the player minus 10 ) divided by 2);
 		now diceroll is a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 15:
 			say "You find a good spot to hide, and as she tries to locate you, she walks right past your hiding spot. You dive at her, pinning her to the ground... where she giggles again. 'That was fun! It's been far too long since someone's played with me.' Before you can ask her what she means, in the blink of an eye, she's out of your grasp, in front of you.[line break][line break]You get up, in a sitting position, and ask how she became a squirrel. 'Well,' she begins, 'I was on my way to classes, when two squirrel herms that looked kinda like I do now appeared... Anyway, one pinned me down, while the other forced me to suck her off...' Her eyes glaze over as her erection, ever present, seems to grow another inch, forcing her pants ever-tighter. She rubs you with her breasts, arousal showing on your own parts.";
 			increase libido of player by 10;
 			if libido of player < 50:
-				say "'You are cute and all,' she says, sighing, 'But I get the feeling you wouldn't keep up with me. Learn to be half as hungry as I am and we can talk, ok?' She rises up and leans over, kissing your forehead before she departs with a wink.";
+				say "     'You are cute and all,' she says, sighing, 'But I get the feeling you wouldn't keep up with me. Learn to be half as hungry as I am and we can talk, ok?' She rises up and leans over, kissing your forehead before she departs with a wink.";
 				stop the action;
-			say "She sits and talks with you for a short time, explaining who she is, 'I'm Snow. I was a nice normal student before it all went down... Could be worse though. Most of the varmints around here are pretty braindead if you know what I mean. The huskies are kind of fun, but banging pure sluts gets old. Say, you seem like you have something between your ears.' She reaches and rubs the top of your head lightly, 'What say I come with you? I promise to not leave the toilet up and clean up after myself. It will be fun!";
-			say "Do you permit her to come?";
+			say "     She sits and talks with you for a short time, explaining who she is, 'I'm Snow. I was a nice normal student before it all went down... Could be worse though. Most of the varmints around here are pretty braindead if you know what I mean. The huskies are kind of fun, but banging pure sluts gets old. Say, you seem like you have something between your ears.' She reaches and rubs the top of your head lightly, 'What say I come with you? I promise to not leave the toilet up and clean up after myself. It will be fun!";
+			say "     Do you permit her to come?";
 			if player consents:
-				say "'Wait. I need something first. My breasts are too small,' she complains, though you have reason to doubt the truth of this statement, watching her mammaries jiggle about. 'You have something to fix that?'";
-				say "Give her something?";
+				say "     'Wait. I need something first. My breasts are too small,' she complains, though you have reason to doubt the truth of this statement, watching her mammaries jiggle about. 'You have something to fix that?'";
+				say "     Give her something?";
 				if player consents:
 					if the distilled milk is owned:
 						decrease carried of distilled milk by 1;
-						say "'Awesome! Let's go.' She grabs your distilled milk and swallows it down even as she urges you to lead the way. She rises and follows you back to the bunker with a grin. As she walks, her already large, furry, breasts swell several inches. Her paws rub over them encouraging as she walks, eyes half lid and soft moans echoing the pleasure she feels. When you arrive at the bunker, she sets up shop upstairs, in the library.";
+						say "     'Awesome! Let's go.' She grabs your distilled milk and swallows it down even as she urges you to lead the way. She rises and follows you back to the bunker with a grin. As she walks, her already large, furry, breasts swell several inches. Her paws rub over them encouraging as she walks, eyes half lid and soft moans echoing the pleasure she feels. When you arrive at the bunker, she sets up shop upstairs, in the library.";
 						now snow is in Grey Abbey Library;
 						move player to Grey Abbey Library;
 						increase score by 5;
-						now hyper squirrel girl is resolved;
+						now Resolution of Hyper Squirrel Girl is 1; [Snow Recruited]
+						now Hyper Squirrel Girl is resolved;
 					else:
-						say "'Aw, you don't have what I need. You get some, and you got yourself a girl with talents. Trust me, it will be worth it.' She leans over to kiss either of your cheeks, then dances off into the city in a prance.";
+						say "     'Aw, you don't have what I need. You get some, and you got yourself a girl with talents. Trust me, it will be worth it.' She leans over to kiss either of your cheeks, then dances off into the city in a prance.";
 				else:
-					say "'Well fine, play that way. I need a bigger chest. You want me, find me, and bring the goods,' she says, vanishing back into the city.";
+					say "     'Well fine, play that way. I need a bigger chest. You want me, find me, and bring the goods,' she says, vanishing back into the city.";
 			else:
-				say "'Well shoot then, I can do just fine on my own,' she insists, and is gone in a trail of hyperactivity.";
-				now hyper squirrel girl is resolved;
+				say "     'Well shoot then, I can do just fine on my own,' she insists, and is gone in a trail of hyperactivity.";
+				now Resolution of Hyper Squirrel Girl is 2; [Snow rejected]
+				now Hyper Squirrel Girl is resolved;
 		else:
-			say "You think she won'`t be able to find you here, in this dark corridor. You hear her footsteps echoing ever-closer, when they fall silent. Suddenly, she appears behind you, lightly tapping your back. As you curse in surprise, she laughs at your feeble attempt to grab her. 'Too slow again! Come on, catch me...' You follow her giggles outside, as she turns a corner, and vanishes.";
+			say "     You think she won't be able to find you here, in this dark corridor. You hear her footsteps echoing ever-closer, when they fall silent. Suddenly, she appears behind you, lightly tapping your back. As you curse in surprise, she laughs at your feeble attempt to grab her. 'Too slow again! Come on, catch me...' You follow her giggles outside, as she turns a corner, and vanishes.";
 
 
 Section 2 - Snow
+
+Table of GameRoomIDs (continued)
+Object	Name
+Squirrel Den	"Squirrel Den"
 
 Squirrel Den is a room. It is private.	[This is just a holding spot and not a real room]
 
 The description of Squirrel Den is "Not a literal squirrel den, a basement actually. It is warm and dark in here. You can see books piled in messy stacks, and a small cot set to the side. It seems whomever lives here is stocked for the long haul, with small bottles of water and packaged food up on a shelf. There is a soft, musky, scent in the air.".
 
+Table of GameCharacterIDs (continued)
+object	name
+Snow	"Snow"
+
 Snow is a person.
+ScaleValue of Snow is 3. [human sized]
+Cocks of Snow is 1.
+Cock Length of Snow is 18.
+Cock Width of Snow is 16. [golfball sized balls]
+Testes of Snow is 2.
+Cunts of Snow is 0.
+Cunt Length of Snow is 0.
+Cunt Width of Snow is 0.
+Breasts of Snow is 2.
+Breast Size of Snow is 10.
+[Basic Interaction states as of game start]
+PlayerMet of Snow is false.
+PlayerRomanced of Snow is false.
+PlayerFriended of Snow is false.
+PlayerControlled of Snow is false.
+PlayerFucked of Snow is false.
+OralVirgin of Snow is true.
+Virgin of Snow is true.
+AnalVirgin of Snow is true.
+PenileVirgin of Snow is true.
+SexuallyExperienced of Snow is false.
+MainInfection of Snow is "Hyper Squirrel".
+
 The description of Snow is "[SnowDesc]";
 
 to say SnowDesc:
@@ -115,7 +152,7 @@ Check smithing:
 
 Carry out smithing:
 	project the figure of Snow_icon;
-	say "You offer up [the noun] to Snow. Snow smiles and blows you a kiss before moving off with it and tinkering it with a while before offering it back to you, mildly improved.";
+	say "     You offer up [the noun] to Snow. Snow smiles and blows you a kiss before moving off with it and tinkering it with a while before offering it back to you, mildly improved.";
 	if the noun is armament, increase the weapon damage of the noun by 1;
 	if the noun is nanite collector:
 		if nanitemeter is 0:
@@ -173,7 +210,7 @@ Section 4 - Sexing up Snow
 to say sexwithsnow00:
 	project the figure of Snow_icon;
 	if lastfuck of Snow - turns < 8:
-		say "She laughs loudly and gives you a shove, 'Hey, I want to keep it fresh. Go find something else to do huh?'";
+		say "     She laughs loudly and gives you a shove. 'Hey, I want to keep it fresh. Go find something else to do, huh?'";
 	else if skinname of player is "Hyper Squirrel" and HP of Snow > squirrelspot:
 		if HP of Snow is 1:		[Met Wild Squirrels once]
 			now squirrelspot is HP of Snow;
@@ -286,14 +323,14 @@ to say sexwithsnow01:	[Vaginal on Snow]
 			say "     Placing your hands on the squirrel's shoulders, you thrust into the warm confines of her wet cunt. She gives a chittering moan and pushes back onto you, curling that fluffy tail around your back. 'Come on. Let's see what you've got,' she says with a playful little butt wiggle. You grin and give her ass a playful swat along with a firm thrust to make her moan again.";
 			say "     You bang away at the lustful squirrel, drawing more pleasured chitters and moans. Her swollen tits are mashed under her and spill out on either side of her furry body. Those big nuts of hers slap against [if cockname of player is listed in infections of InternalList]your thighs[else]your own[end if] as they rock pendulously. As things heat up further, you start to hear her large shaft slapping against the underside of the table. The hyper-endowed squirrel makes for quite the sexy sight.";
 			say "     When you are about to cum, you push fully into her with a last groan. Your [cock size desc of player] cock pulses inside her squeezing tunnel as you unload shot after shot of semen. By the time you're done, you've emptied a [cum load size of player] load into her cunt and womb. And from her chittering moans, the way her ballsack twitches against [if cockname of player is listed in infections of InternalList]your thighs[else]yours[end if] and the sticky splattering you hear below, you know she's unloading her hefty payload as well. By the time you've pulled out, she seems quite satisfied and remains flopped out on her work table while she recovers[if cock width of player > 16] and while your excess load drains from her gaping vagina[end if].";
-	now wild squirrels is not resolved;
+	now Wild Squirrels is active;
 
 to say sexwithsnow02:	[Anal on Snow]
 	say "     Snow looks you over and gives you a coy grin before turning around and slipping down her pants. She lifts her tail, flashing her ass and pussy at you, giving her rear a wiggle. 'Mmm.. I'm in the mood for something different, hon? How about you take the back door and stuff my tight nut hole?' she asks with a grin. 'What's the problem? Can't a girl-boy want something a little kinkier?' She swishes her tail around again while fingering her wet pussy, then spreading her juices over her pucker, getting it slick and glistening. Will you take her up on her offer?";
 	if player consents:
 		say "     As you move in and grind your stiffening member against her behind, she grins in pleasure and braces herself against the nearby workbench. Pleased as punch, she moans happily as you press your glans to her slick hole and leak precum onto it, getting her even more wet and ready. As you sink your throbbing shaft into her, you grip her hips and press yourself to her back. 'Ohhh... that's so [if cock length of player < 10]nice[else]big[end if]. Do me, baby! Stuff my tight, squirrely ass,' she demands, giving a squeeze around your [cock size desc of player] [cock of player] cock before pushing herself further onto it. Needing no more encouragement, you start pounding away at the eager herm.";
 		say "     With your cock stuffed fully inside her plush rump, you move your hands to her bosom, groping those large tits of hers she enjoys so much. You pinch and tease her nipples, making her whimper and squirm all the more in delight as you fuck her, making the ride even more pleasant as those shivers of pleasure translate into ripples of her inner walls around your [cockname of player] shaft. She releases the table and ends up pressed down atop it as she brings her paws to stroke her neglected cock and finger her pussy at the same time. You ride her good and hard until finally you push deep inside her fuzzy bottom and unleash your hot seed, filling her ass with your creamy cum. She's set off as well, spraying a sizable load of squirrel cum under her worktable and soaking her other paw in her juices. Worn out from the heavy fucking and satisfying finish, you both stay slumped there for a while, enjoying the pleasure of your kinky romp together while you tell her what a sexy squirrel she is.";
-		now wild squirrels is not resolved;
+		now Wild Squirrels is active;
 	else:
 		say "     Snow frowns a little. 'Well, fine, be that way then. It's too bad you don't know a good thing when you see it, but I guess not everyone's into that kind of thing. I'm still up for some fun, hon. Let's see what other trouble we can get into,' she adds with a grin.";
 		WaitLineBreak;
@@ -311,7 +348,7 @@ to say sexwithsnow03:	[Vaginal on player]
 		now facename of child is "Hyper Squirrel";
 		now bodyname of child is "Hyper Squirrel";
 		now skinname of child is "Hyper Squirrel";
-	now wild squirrels is not resolved;
+	now Wild Squirrels is active;
 
 to say sexwithsnow04:	[Anal on player]
 	say "***";
@@ -323,19 +360,19 @@ to say sexwithsnow05:	[Dommed and fucked]
 	say "     Snow grins and moves in on you, grabbing your wrists and pressing you back against one of the stone wooden columns. 'Mmm... now, I can tell you're the kind that likes to let someone else take charge, so I think I'll do just that,' she says with a husky rumble of arousal in her voice. She grinds her throbbing manhood against your hip and looks you over with lustful intent";
 	if player is female and cunt length of player >= 10 and cunt width of player >= 4:
 		say ". She presses a paw between your legs, roughly fingering your pussy as she sizes you up. Finding you adequate for her imposing manhood, she grins all the wider and turns you around, pressing you face first against the pillar.";
-		say "     With your face pressed up against the cool wood, you feel another kind of wood pressed against your ass and then getting lined up with your juicy cunny. Giving your neck an firm nip with her rodent teeth, Snow pushes her pink shaft up and into you, spreading your dripping pussy around her thick rod. Her dominant treatment of you has already gotten your submissive tendencies aroused but even with that, your cunt aches a little from the rapid intrusion of her plump cock. But soon that discomfort fades as her energetic thrusting fills you with a haze of lust-addled pleasure.";
-		say "     Keeping her firm grip on you, the lustful squirrel goes at you hard and fast. You can feel those hefty nuts of hers slapping against your thighs, their rich contents churning as they're readied to fill you. Her breathing grows heavier as she drills deeper into you. '[one of]Mmm... how about I knock you up, you horny thing?[or]I'm going to enjoy stuffing your slutty hole.[or]Time to dump a nice load of my nut butter into you.[or]You're mine to fuck and fill now, slut.[or]I'm going to enjoy hiding my nutty load inside you.[at random]' That proves to be enough to push you over the edge and you cry out in orgasmic release.";
+		say "     With your face pressed up against the cool wood, you feel another kind of wood pressed against your ass and then getting lined up with your juicy cunny. Giving your neck a firm nip with her rodent teeth, Snow pushes her pink shaft up and into you, spreading your dripping pussy around her thick rod. Her dominant treatment of you has already gotten your submissive tendencies aroused but even with that, your cunt aches a little from the rapid intrusion of her plump cock. But soon that discomfort fades as her energetic thrusting fills you with a haze of lust-addled pleasure.";
+		say "     Keeping her firm grip on you, the lustful squirrel goes at you hard and fast. You can feel those hefty nuts of hers slapping against your thighs, their rich contents churning as they're readied to fill you. Her breathing grows heavier as she drills deeper into you. [one of]'Mmm... how about I knock you up, you horny thing?' [or]'I'm going to enjoy stuffing your slutty hole.' [or]'Time to dump a nice load of my nut butter into you.' [or]'You're mine to fuck and fill now, slut.' [or]'I'm going to enjoy hiding my nutty load inside you.' [at random]That proves to be enough to push you over the edge and you cry out in orgasmic release.";
 		say "     Feeling your quivering hole clenching down around her excites the herm all the more and she gives you a few final hard thrusts before burying her rod deep inside you and filling you up with her sticky cum. Blast after blast of her semen is pumped into your womb before she finally pulls out and lets you sag to the floor, your belly rounded and your cunny leaking out the excess. You feel wonderfully used and can't help but finger your sticky hole as you bask in the afterglow.[impregchance]";
 	else:
-		say "[if player is female]. She presses a paw between your legs, roughly fingering your pussy as she sizes you up. Finding you inadequate for her imposing manhood[else]. Noting your lack of juicy pussy for her to use[end if], she still grins and turns you around, pressing you face first against the pillar. 'Well, I guess I'll just have to content myself with your ass.'";
-		say "     With your face pressed up against the cool wood, you feel another kind of wood pressed against your ass and then getting lined up with your tight pucker. Giving your neck an firm nip with her rodent teeth, Snow pushes her pink shaft up and into you, spreading your anal ring around her thick rod. Her dominant treatment of you has already gotten your submissive tendencies aroused but even with that, your ass aches from the rapid intrusion of her plump cock. But soon that discomfort fades as her energetic thrusting fills you with a haze of lust-addled pleasure[if player is male]. The feel of her throbbing meat against your prostate more than makes up for the pain until the burning sensation fades[end if].";
-		say "     Keeping her firm grip on you, the lustful squirrel goes at you hard and fast. You can feel those hefty nuts of hers slapping against your thighs, their rich contents churning as they're readied to fill you. Her breathing grows heavier as she drills deeper into you[one of]. 'Mmm... you like it up the ass, don't you?' [or]. 'I'm going to enjoy stuffing your slutty hole.' [or]. 'Time to dump a nice load of my nut butter into you.' [or]. 'You're mine to fuck and fill now, slut.' [or]. 'I'm going to enjoy hiding my nutty load inside you.' [at random][if player is not neuter]That proves to be enough to push you over the edge and you cry out in orgasmic release[else]This soon proves to be too much for you and your [bodydesc of player] body trembles and quivers with unfocused release[end if].";
+		say ". [if player is female]She presses a paw between your legs, roughly fingering your pussy as she sizes you up. Finding you inadequate for her imposing manhood[else]Noting your lack of juicy pussy for her to use[end if], she still grins and turns you around, pressing you face first against the pillar. 'Well, I guess I'll just have to content myself with your ass.'";
+		say "     With your face pressed up against the cool wood, you feel another kind of wood pressed against your ass and then getting lined up with your tight pucker. Giving your neck a firm nip with her rodent teeth, Snow pushes her pink shaft up and into you, spreading your anal ring around her thick rod. Her dominant treatment of you has already gotten your submissive tendencies aroused but even with that, your ass aches from the rapid intrusion of her plump cock. But soon that discomfort fades as her energetic thrusting fills you with a haze of lust-addled pleasure[if player is male]. The feel of her throbbing meat against your prostate more than makes up for the pain until the burning sensation fades[end if].";
+		say "     Keeping her firm grip on you, the lustful squirrel goes at you hard and fast. You can feel those hefty nuts of hers slapping against your thighs, their rich contents churning as they're readied to fill you. Her breathing grows heavier as she drills deeper into you. [one of]'Mmm... you like it up the ass, don't you?' [or]'I'm going to enjoy stuffing your slutty hole.' [or]'Time to dump a nice load of my nut butter into you.' [or]'You're mine to fuck and fill now, slut.' [or]'I'm going to enjoy hiding my nutty load inside you.' [at random][if player is neuter]This soon proves to be too much for you and your [bodydesc of player] body trembles and quivers with unfocused release[else]That proves to be enough to push you over the edge and you cry out in orgasmic release[end if].";
 		say "     Feeling your anus clenching down around her excites the herm all the more and she gives you a few final hard thrusts before burying her rod completely inside you and filling you up with her sticky cum. Blast after blast of her semen is pumped deep into your bowels before she finally pulls out and lets you sag to the floor. Your belly is left rounded and a steady trickle of creamy while cum leaks out of your sorely stretched asshole. You feel wonderfully used and can't help but finger your sticky hole as you bask in the afterglow.[mimpregchance]";
 	if baby is 0 and gestation of child is not 0:
 		now facename of child is "Hyper Squirrel";
 		now bodyname of child is "Hyper Squirrel";
 		now skinname of child is "Hyper Squirrel";
-	now wild squirrels is not resolved;
+	now Wild Squirrels is active;
 
 to say sexwithsnow06:	[Fellatio]
 	say "     'I feel like these need a work out,' she says, reaching below her legs to slowly rub over her distended balls through her pants. She gives off a soft chittering sigh as soft churning is heard, her cum factories ramping up production even as she leers at you lustfully. 'You are going to pucker up and give me a big ole kiss where it counts,' she insists, undoing her pants and letting her huge pink member bob into the air, demanding attention.";
@@ -389,7 +426,7 @@ to say snowsquirrelgivein:
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]athletic[or]curvy[or]agile[at random]";
 	now bodytype of player is "[one of]rodent[or]squirrel-like[at random]";
-	now daycycle of player is 0;
+	now SleepRhythm of player is 0;
 	now humanity of player is 0;
 	end the story saying "You and Snow have lost your minds to the attentions of the two squirrels, your body becoming covered in thick white fur, face becoming pointed and narrow even as your new muzzle is filled with thick shots of seed. You moan and chitter as your belly swells with the gifts of your lovers, your body blossoming into buxom hermaphroditic squirreltude as your humanity eludes you. You feel at home with these two and take a turn with each, enjoying every combination of cock, cunt and mouth with them and petting their long bushy tails before you all rise, satisfied, and hunt the city together.";
 	WaitLineBreak;
@@ -399,35 +436,39 @@ to say snowsquirrelgivein:
 
 Section 5 - Wild Squirrels
 
-Wild Squirrels is a situation.
-Wild Squirrels is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Wild Squirrels	"Wild Squirrels"
 
-Instead of resolving a wild squirrels:
+Wild Squirrels is a situation.
+Wild Squirrels is inactive.
+
+Instead of resolving a Wild Squirrels:
 	let baby be 0;
 	if child is born or gestation of child is not 0, now baby is 1;
-	say "As you wander, you get the feeling that you are being watched somehow...";
+	say "     As you wander, you get the feeling that you are being watched somehow...";
 	let bonus be (( the Perception of the player minus 10 ) divided by 2);
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
 	if diceroll > 17:
-		say "     You notice some chittering nearby. A moment later, you catch sight of a blur of white movement. Shall you turn and flee or continue on to see how this plays out?";
+		say "You notice some chittering nearby. A moment later, you catch sight of a blur of white movement. Shall you turn and flee or continue on to see how this plays out?";
 		if player consents:
 			say "     Rather than wait for the trap to be sprung, you turn and flee the area. You can hear some loud chitters from behind you as you make your escape.";
 			say "     Phew. Close call.";
 			stop the action;
-	say "     A crushing weight descends on you from behind as a beast tackles you. Its teeth nip at your ear as great soft paws grab at your front and belly, rubbing you quite affectionately. It feels very curvy, with the exception of a very stiff erection that shoves rudely against your backside as it molests you eagerly. Just as you start to struggle against the beast, another grabs you at the face, paws at your cheeks as it guides you up to look at it. It looks like Snow, but isn't, no intelligence in those eyes as it chitters soothingly and leans in to kiss you firmly, bestial lips to yours.";
-	say "Resist?";
+	say "A crushing weight descends on you from behind as a beast tackles you. Its teeth nip at your ear as great soft paws grab at your front and belly, rubbing you quite affectionately. It feels very curvy, with the exception of a very stiff erection that shoves rudely against your backside as it molests you eagerly. Just as you start to struggle against the beast, another grabs you at the face, paws at your cheeks as it guides you up to look at it. It looks like Snow, but isn't, no intelligence in those eyes as it chitters soothingly and leans in to kiss you firmly, bestial lips to yours.";
+	say "     Resist?";
 	if player consents:
 		let bonus be (( the Strength of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 17:
-			say "     You manage to throw off the beast on top of you with a mighty shove! She squeaks in surprise and tumbles away even as the other grabs at you. Her soft white paw closes on your [if cocks of player > 1][cock size desc of player] [cock of player] dick[else]chest[end if] but you're having none of it, pulling away from her and fleeing to safety, their angry chitters echoing behind you as you leave the squirrels in your dust.";
+			say "You manage to throw off the beast on top of you with a mighty shove! She squeaks in surprise and tumbles away even as the other grabs at you. Her soft white paw closes on your [if cocks of player > 1][cock size desc of player] [cock of player] dick[else]chest[end if] but you're having none of it, pulling away from her and fleeing to safety, their angry chitters echoing behind you as you leave the squirrels in your dust.";
 			stop the action;
 		else:
-			say "     Despite your protests and struggles, you find your mouth being guided to a large, pink dick. The squirrel presses it into you as pre splashes across your tongue, and resistance seems to melt from you. As you start to nurse, she fills your mouth with that salty fluid, each gulp draining the will from you as you gulp down a few mouthfuls, now pliant and ready to play with the squirrels.";
+			say "Despite your protests and struggles, you find your mouth being guided to a large, pink dick. The squirrel presses it into you as pre splashes across your tongue, and resistance seems to melt from you. As you start to nurse, she fills your mouth with that salty fluid, each gulp draining the will from you as you gulp down a few mouthfuls, now pliant and ready to play with the squirrels.";
 			decrease the humanity of player by 10 + HP of Snow;
 	if HP of Snow is even:
 		if player is female and cunt length of player > 8:
@@ -491,9 +532,66 @@ Instead of resolving a wild squirrels:
 	now scalevalue of player is 3;
 	now bodydesc of player is "[one of]athletic[or]curvy[or]agile[at random]";
 	now bodytype of player is "[one of]rodent[or]squirrel-like[at random]";
-	now daycycle of player is 0;
-	now wild squirrels is resolved;
+	now SleepRhythm of player is 0;
+	now Wild Squirrels is inactive;
 
+
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+
+When Play begins:
+	Choose a blank row from Table of Random Critters;
+	now name entry is "Hyper Squirrel"; [Name of your new Monster]
+	now enemy title entry is "Hyper Squirrel";
+	now enemy name entry is "Snow";
+	now enemy type entry is 1; [unique enemy]
+	now attack entry is "[NonCombatError]";
+	now defeated entry is "[NonCombatError]";
+	now victory entry is "[NonCombatError]"; [Text used when monster wins, can be directly entered like combat text or description. or if more complex it can be linked to a 'To Say' block as the demonstration text shows.]
+	now desc entry is "[NonCombatError]"; [ Description of the creature when you encounter it.]
+	now face entry is "topped by a set of two long white squirrel ears twitching above your head, while a long rodent snout with bucked teeth juts out at the front of your head"; [ Face description, format as "Your face is (your text)."]
+	now body entry is "curved but athletic looking, a dancer's body perhaps. Your legs are thick and powerful, built for swift climbing and terminating in paws that have sharp grasping claws"; [ Body Description, format as "Your Body is (your text)."]
+	now skin entry is "white furred"; [ skin Description, format as "your body is covered in (your text) skin."]
+	now tail entry is "You have a short white squirrel's tail above a shapely ass. It twitches when you're excited, wagging back and forth."; [ Tail description, write a whole Sentence or leave blank. ]
+	now cock entry is "bright pink"; [ Cock Description, format as you have a 'size' (your text) cock.]
+	now face change entry is "WIP"; [ face change text. format as "Your face feels funny as (your text)." ]
+	now body change entry is "WIP"; [ body change text. format as "Your body feels funny as (your text)." ]
+	now skin change entry is "WIP"; [ skin change text. format as "Your skin feels funny as (your text)." ]
+	now ass change entry is "WIP"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now cock change entry is "WIP"; [ cock change text. format as "Your cock feels funny as (your text)." ]
+	now str entry is 10;
+	now dex entry is 14;
+	now sta entry is 12;
+	now per entry is 10;
+	now int entry is 14;
+	now cha entry is 16;
+	now sex entry is "Both"; [ Defines which sex the infection will try and make you. current options are 'Male' 'Female' 'Both']
+	now HP entry is 28;
+	now lev entry is 2; [ Level of the Monster, you get this much XP if you win, or this much XP halved if you loose ]
+	now wdam entry is 4; [Amount of Damage monster Does when attacking.]
+	now area entry is "Nowhere"; [ Location of monster, in this case the City Hospital]
+	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
+	now cock length entry is 6; [ Length infection will make cock grow to if cocks]
+	now cock width entry is 4; [ Size of balls apparently ;) sneaky Nuku]
+	now breasts entry is 0; [ Number of Breasts infection will give you. ]
+	now breast size entry is 0; [Size of breasts infection will try to attain ]
+	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
+	now cunts entry is 0; [ if sex = "Female or both", indicates the number of female sexes infection will grant you.]
+	now cunt length entry is 0;
+	now cunt width entry is 0;
+	now libido entry is 50; [ Set to zero in this monster to control elsewhere ]
+	now loot entry is ""; [ Dropped item. Key will be used later ]
+	now lootchance entry is 0; [ Chance of loot dropping 0-100 ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
+	now body descriptor entry is "[one of]athletic[or]curvy[or]agile[at random]";
+	now type entry is "[one of]rodent[or]squirrel-like[at random]";
+	now magic entry is false;
+	now resbypass entry is false;
+	now non-infectious entry is false;
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 When play ends:
 	if Snow is in Grey Abbey Library:

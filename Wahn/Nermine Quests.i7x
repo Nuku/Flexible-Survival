@@ -6,6 +6,10 @@ Version 1 of Nermine Quests by Wahn begins here.
 
 Section 1 - Meeting Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Strange Shop	"Strange Shop"
+
 Strange Shop is a situation.
 
 Instead of resolving a Strange Shop:
@@ -18,18 +22,23 @@ Instead of resolving a Strange Shop:
 	else:
 		project the figure of Nermine_clothed_icon;
 	if NermineTalk is 0: [never met Nermine]
-		say "     'Well, that is interesting,' a feminine voice suddenly says close to you, making you flinch in shock at its sudden appearance. Blinking and looking around, for the first time taking in where you actually ended up, you see that it is a... store, maybe? The place is only partially lit, with a number of thick candles bathing the room in a soft glow. All around you, there are high shelves stuffed with all sorts of wondrous items, many of them looking ancient - from books to various masks, statues, and mystic paraphernelia. The person who spoke to you is a woman, an anthro jackaless from the looks of her, standing right in front of you and looking you up and down with interest. 'Welcome to Nermine's store. The friendly jackaless eagerly greets her prospective customer.'";
+		say "     'Well, that is interesting,' a feminine voice suddenly says close to you, making you flinch in shock at its sudden appearance. Blinking and looking around, for the first time taking in where you actually ended up, you see that it is a... store, maybe? The place is only partially lit, with a number of thick candles bathing the room in a soft glow. All around you, there are high shelves stuffed with all sorts of wondrous items, many of them looking ancient - from books to various masks, statues, and mystic paraphernalia. The person who spoke to you is a woman, an anthro jackaless from the looks of her, standing right in front of you and looking you up and down with interest. 'Welcome to Nermine's store. The friendly jackaless eagerly greets her prospective customer.'";
 		WaitLineBreak;
 		say "     Baffled at the sudden change of pace in things, you gape at Nermine for a second, then warn her that a whole throng of creatures might break down the door any second now. She raises one eyebrow in wonderment and gently pulls you away from the door while saying, 'Now why would the concerned guest think that? Nermine can assure her visitor that there is little to fear in her storage room. Certainly nothing that would break out.' And with that, she twists the ornate door-handle, opening the wooden door into what clearly is a mid-sized storage room, overstuffed with more strange items. She smirks mysteriously as she walks in on slender paws, then pulls a small wooden box out of one of the shelves, carrying it with her as she walks back out into the store and closes the door once more.";
 		say "     Things are really, really weird in here - and by the time Nermine opens up her box and starts to ask, 'Would Nermine's visitor also like a cup of t-' ...you've already sprinted through the store and are out through what appears to be the front door of the store, with a dangling 'Open' sign and a large glass window flanking it. As the door falls shut behind you with the sound of a several little bells ringing, you are surprised that you actually are standing in the Smith Haven Mall, of all places. You've been here before, but... this strange store isn't something you remember about the place. Oh well, whatever brought you into it surely saved your bacon. Maybe it's worth to check it out and talk a bit more to Nermine...";
 	else: [met her before]
 		say "     'Well, that is interesting,' a feminine voice suddenly says close to you, making you flinch in shock at its sudden appearance. Blinking and looking around, for the first time taking in where you actually ended up, you see that it is... Nermine's store. The jackaless is standing before you, illuminated by the glow of several nearby candles. 'Nermine welcomes her guest back into her store. The need must have been great, if the back door was taken...' At her nod to the door you are still bracing against, you remember the trail of creatures that were following you and warn Nermine about them possibly breaking through it - but she just pulls you away from the door with a gentle paw-hand. 'Now why would the concerned visitor think that? Nermine can assure her friend that there is little to fear in her storage room. Certainly nothing that would break out.'";
 		WaitLineBreak;
-		say "     With that said, she twists the ornate door-handle, opening the wooden door into what clearly is a mid-sized storage room, overstuffed with more strange items. She smirks mysteriously as she walks in on slender paws, then pulls a small wooden box out of one of the shelves, carrying it with her as she walks back out into the store and closes the door once more. Opening what she is carrying and revealing leaves inside, the jackaless asks, 'Should Nermine make two cups of tea? It might provide some relaxiation for overstressed nerves.' Once more baffled by the strangeness that is her and her store, you accept, drinking a cup of admittedly excellent tea with the storekeeper before you eventually step out into the mall.";
+		say "     With that said, she twists the ornate door-handle, opening the wooden door into what clearly is a mid-sized storage room, overstuffed with more strange items. She smirks mysteriously as she walks in on slender paws, then pulls a small wooden box out of one of the shelves, carrying it with her as she walks back out into the store and closes the door once more. Opening what she is carrying and revealing leaves inside, the jackaless asks, 'Should Nermine make two cups of tea? It might provide some relaxation for overstressed nerves.' Once more baffled by the strangeness that is her and her store, you accept, drinking a cup of admittedly excellent tea with the storekeeper before you eventually step out into the mall.";
 	move player to Mall West Wing;
+	now Smith Haven Mall Lot South is known;
 	now Strange Shop is resolved;
 
 Section 2 - Quest Events
+
+Table of GameEventIDs (continued)
+Object	Name
+Bacchus Wine	"Bacchus Wine"
 
 Bacchus Wine is a situation. The level of Bacchus Wine is 4.
 The Sarea of Bacchus Wine is "Museum".
@@ -67,13 +76,17 @@ Instead of resolving a Bacchus Wine:
 		say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]15[roman type] (Dexterity Check):[line break]";
 		increase diceroll by bonus;
 		if diceroll > 15:
-			say "     Carefully moving through the halls, you have to duck down and hide several times as other creatures pass, but you eventually manage to follow the group of satyrs to a small alcove where they seem to have hidden several large wooden casks. The eager revellers quickly refill their flagons and flasks and leave, giving you the perfect opportunity to sneak into the alcove and look around. There are several more clay flagons scattered around on the floor, so it is easy for you to pick one and step up to the casks. Checking them out, one after another, you see that there is one that seems to be even darker and richer-smelling then the rest.";
+			say "     Carefully moving through the halls, you have to duck down and hide several times as other creatures pass, but you eventually manage to follow the group of satyrs to a small alcove where they seem to have hidden several large wooden casks. The eager revelers quickly refill their flagons and flasks and leave, giving you the perfect opportunity to sneak into the alcove and look around. There are several more clay flagons scattered around on the floor, so it is easy for you to pick one and step up to the casks. Checking them out, one after another, you see that there is one that seems to be even darker and richer-smelling then the rest.";
 			say "     Carefully raising its lid, you dip the flagon into the enticingly-smelling liquid and wait for it to fill, stoppering it when it after pulling the vessel out of the cask. Staring at the clay jug, you realize you now have the item Nermine asked for, and a surge of pleasure at the thought of being such a good little dog for your mistress shoots through you and makes your tail wag softly. After a minute you shake yourself and realize you should probably get out of here before any of the goat-men come back. Quickly heading out into the twisting halls of the museum, you hope you don't encounter too much trouble finding your way back...";
 			now WineFound is 2;
 		else:
 			say "     Sadly your clumsy feet are not up to following the nimble beasts quietly enough, and while the rest continue on, two of them turn back to see what the noise was.";
 			challenge "Satyr";
 			challenge "Satyr";
+
+Table of GameEventIDs (continued)
+Object	Name
+Stolen Jewelry	"Stolen Jewelry"
 
 Stolen Jewelry is a situation.
 The Sarea of Stolen Jewelry is "Museum".
@@ -102,6 +115,10 @@ Instead of conversing the Valerie while HyenaTrailing is 1:
 	say "     She fans out her feathered wings for a moment, as if ready to pounce the next person walking in the door, then folds them back in again and sits down to stare at the entrance. Crossing her forepaws on the information desk, she glances sideways to you and adds, 'I'll hold this post. Meanwhile, you go and find whatever [bold type]alternative entry[roman type]point the thieves took. Give [']em a good thumping if you run into the bastards and please make sure they can't get in that way anymore.";
 	now HyenaTrailing is 2;
 
+Table of GameEventIDs (continued)
+Object	Name
+Alternative Entry	"Alternative Entry"
+
 Alternative Entry is a situation. The level of Alternative Entry is 8.
 The Sarea of Alternative Entry is "Museum".
 when play begins:
@@ -129,19 +146,27 @@ Instead of resolving a Alternative Entry:
 				else: [no contact with the New Ewe Crowd yet]
 					say "     Hm, you wonder for a moment what you should do now, without much success. Tracking in the sewers is hopeless - even a bloodhound would capitulate to the stench, and the darkness and dirt pretty much rule out reading footprints. The only other idea that comes to you would be to find some friendly sewer-dweller who might have seen the hyenas pass through... but that's highly unlikely, right? A bit beaten and distraught, you walk back to the entrance of the museum. Maybe you should take a while off from this task to clear your head. Go out and maybe find a [bold type]store[roman type] that still has supplies to loot or something like that. You've still got your everyday survival to think of after all...";
 				now HyenaTrailing is 3;
+				now Resolution of Alternative Entry is 1; [won]
 				now Alternative Entry is resolved;
 			else if fightoutcome > 19 and fightoutcome < 30: [lost]
 				say "     Feeling much abused as the beast deposits you outside its lair, you slowly pull yourself back together before staggering your way down the halls to try to find your way back to the foyer. Once you finally manage to get there, you groan as you realize you aren't sure exactly where you found the large cat's lair. Seems like you will have to try tracking the thieves back to it all over again...";
 				stop the action;
+				now Resolution of Alternative Entry is 2; [lost]
 			else if fightoutcome is 30: [fled]
 				say "     Running away as fast as you can from the beast, you stumble through numerous rooms before eventually finding your way back to the foyer. Once you calm yourself enough to think about things rationally again, you realize you aren't sure exactly where you found the large cat's lair. Seems like you will have to try tracking the thieves back to it all over again...";
+				now Resolution of Alternative Entry is 3; [fled]
 		else:
 			say "     After several hours wandering the halls, you are forced to admit that you have completely lost the trail of the thieves, and sigh as you set out to try to find your way back to the museum foyer so you can try again.";
 			stop the action;
+			now Resolution of Alternative Entry is 4; [perception check fail]
 	else:
 		say "     Wandering through the halls of the museum, you hear a faint rumbling noise from nearby, looking around you realize it is coming from one of the nearby 'Employees Only' doors. Your curiosity getting the better of you, you slowly open the door a crack and peek inside. You are startled to find yourself peeking right into the face of a large sabretooth cat! After a second of panic, the rumbling noise comes again, and you realize that the sound is the cat's soft snoring, the beast obviously having not gotten a good nights sleep in years, you decide to slowly close the door and let sleeping giant man-eating pussycats lie...";
 
 [ Questioning Mary about the Hyena Thieves has been moved to the file "New Ewe Store.i7x" ]
+
+Table of GameEventIDs (continued)
+Object	Name
+Hyena Challenge	"Hyena Challenge"
 
 Hyena Challenge is a situation. The level of Hyena Challenge is 12.
 when play begins:
@@ -194,10 +219,12 @@ Instead of resolving a Hyena Challenge:
 							say "     Lying there proudly as you enjoy your victory over the formerly proud matriarch, you grin as the hyenas party around you, celebrating your victory as they make you honorary matriarch for a time. You are treated to your pick of everything the gang has, and the hyenas definitely throw one hell of a party. Eventually though, it is time for you to go, the former matriarch handing over the items you wanted easily enough, while the rest of the gang begins to settle down to the rough task of deciding who gets to be the next matriarch. As you walk away down the city streets, you find yourself almost wishing you could go back and claim the matriarch's throne from them on a more permanent basis...";
 							now matriarchowned is 0;
 							now RareQuesting is 9;
+							now Resolution of Hyena Challenge is 1; [won]
 							now Hyena Challenge is resolved;
 						else if fightoutcome > 19: [lost or fled]
 							say "     After several hours of being passed around by the numerous gang members, all eager to get a shot at the person who thought they could challenge the matriarch, you are left alone to recover while the orgy continues without you. Eventually you manage to recover enough from the matriarch's dominant use of your all too willing body, and slowly drag yourself away from the gang's territory. As you stagger down the streets of the city, the cum of many different hyenas matting your thick black fur, you groan as you realize that you certainly don't have a chance of recovering the items Nermine wants from the hyena stronghold now... even as the part of you that the hyena matriarch brought out is wondering if maybe you shouldn't just give up on your silly quest and go back and become a nice little submissive hyena for the much more powerful gang of hyenas...";
 							now matriarchdefeated is 0;
+							now Resolution of Hyena Challenge is 2; [lost/fled against Matriarch]
 							now Hyena Challenge is resolved;
 					else: [female or neuter player]
 						say "     Looking down at the matriarch's defeated guards, you are surprised to hear the crowd of hyenas cheer your victory as loudly as they cheered for their own kind, their praise making you feel slightly more dominant as you straighten up and stretch from your hard-won victory. After several minutes of cheering, and jesting, the crowd grows silent again in anticipation as the matriarch herself steps forward with a grin, and looking around you realize that win or lose, this particular fight is definitely a unique opportunity. If you lose now, you are pretty sure you won't have another chance at getting the items back for Nermine, and so you resolve to fight your hardest to prove your dominance over the powerful matriarch.";
@@ -208,18 +235,26 @@ Instead of resolving a Hyena Challenge:
 							say "     You are treated to your pick of everything the gang has, and the hyenas definitely throw one hell of a party. Eventually though, it is time for you to go, the former matriarch handing over the items you wanted easily enough, while the rest of the gang begins to settle down to the rough task of deciding who gets to be the next matriarch. As you walk away down the city streets, you find yourself almost wishing you could go back and claim the matriarch's throne from them on a more permanent basis...";
 							now matriarchowned is 0;
 							now RareQuesting is 9;
+							now Resolution of Hyena Challenge is 1; [won]
 							now Hyena Challenge is resolved;
 						else if fightoutcome > 19: [lost or fled]
 							say "     After several hours of being passed around by the numerous gang members, you lose track of time as new cocks penetrate your [if player is female]pussy[else]body[end if], everyone being eager to get a shot at the person who thought they could challenge the matriarch and dump a load or two in you. At some point you lose the strapon they gave you, as one of the hyenas rips it off you making you cry out, while the rest laugh at you, since now they know why you came to the fight so ill prepared with a cock of your own. Obviously you are such a submissive slut you don't need one after all!";
 							say "     After even more sex in form of a prolonged gangbang, you are finally left alone to recover while the orgy continues without you, and eventually you manage to recover enough from the matriarch's dominant use of your all too willing body, and slowly drag yourself away from the gang's territory. As you stagger down the streets of the city, the cum of many different hyenas matting your thick black fur, you groan as you realize that you certainly don't have a chance of recovering the items Nermine wants from the hyena stronghold now... even as the part of you that the hyena matriarch brought out is wondering if maybe you shouldn't just give up on your silly quest and go back and become a nice little submissive hyena for the much more powerful gang of hyenas...";
 							now matriarchdefeated is 0;
+							now Resolution of Hyena Challenge is 2; [lost/fled against Matriarch]
 							now Hyena Challenge is resolved;
 				else if fightoutcome > 19: [lost or fled]
 					say "     Defeated and humiliated in front of the laughing gang of hyenas, you are forced to slink away in disgrace from the arena, even as an orgy and several more impromptu challenge matches break out behind you. You are almost safely away when you hear the Hyena matriarch calling out teasingly behind you, inviting you to come back and try again whenever you feel up to it. Her challenge makes you blush with shame, as you resolve to do just that.";
+					now Resolution of Hyena Challenge is 3; [lost/fled]
 			else if fightoutcome > 19: [lost or fled]
 				say "     Defeated by the hyenas, you have no choice but to slink back off down the streets of the city, wondering how you could lose to just a couple hyenas after having come this far successfully... You resolve to try again as soon as you have recovered.";
+				now Resolution of Hyena Challenge is 3; [lost/fled]
 	else:
 		say "     Traveling through the streets of the mostly deserted city, you come across an area completely painted in some kind of strange gang signs placed one on top of the other. Noticing that the paint is still fresh in some places, you decide it might be best to leave the area as quietly and quickly as possible, before one of the strange gang members returns and finds you here.";
+
+Table of GameEventIDs (continued)
+Object	Name
+Anubis Statue	"Anubis Statue"
 
 Anubis Statue is a situation.
 The Sarea of Anubis Statue is "Museum".
@@ -237,12 +272,14 @@ Instead of resolving a Anubis Statue:
 		say "     ([link]N[as]n[end link]) - Err... no. You don't even know this dude!";
 		if player consents:
 			LineBreak;
-			say "     'Excellent! I knew I could count on you to know what is good for you,' the jackal-headed man says as he rubs his claw-tipped hands together in amusement. 'First things first though. I requre a task from you for my help... trust me, it will be well worth the effort,' he says and you listen attentively to what comes next. 'Go to the [bold type]zoo[roman type] here in town, and bring me back these particular [bold type]pheromone[roman type] samples they have stored there. Be sure not to drop any - I know for a fact that you won't find a second set anywhere else.' Tapping the side of his narrow muzzle with a finger in a knowing gesture, the strange man pulls a little scroll of - paper? No actually it's papyrus, from behind his back, handing it to you. 'Oh and If you happen to run into any of those annoying cats while you're at it... give them a good pounding if you don't mind.' With that said, he grins at you and walks through one of the high archways leading out of the room, being gone before you can think of asking any questions.";
+			say "     'Excellent! I knew I could count on you to know what is good for you,' the jackal-headed man says as he rubs his claw-tipped hands together in amusement. 'First things first though. I require a task from you for my help... Trust me, it will be well worth the effort,' he says and you listen attentively to what comes next. 'Go to the [bold type]zoo[roman type] here in town, and bring me back these particular [bold type]pheromone[roman type] samples they have stored there. Be sure not to drop any - I know for a fact that you won't find a second set anywhere else.' Tapping the side of his narrow muzzle with a finger in a knowing gesture, the strange man pulls a little scroll of - paper? No actually it's papyrus, from behind his back, handing it to you. 'Oh and If you happen to run into any of those annoying cats while you're at it... give them a good pounding if you don't mind.' With that said, he grins at you and walks through one of the high archways leading out of the room, being gone before you can think of asking any questions.";
 			now statuequest is 0;
 			now anubisrequest is 1;
+			now Resolution of Anubis Statue is 1; [agreed to the bargain]
 		else:
 			LineBreak;
 			say "     'That's too bad,' the strange man says with a sad look on his face. 'I was so looking forward to watching you play with that lovely little jackaless some more.' With a teasing look on his jackal muzzle, he turns and begins to walk away. Before he vanishes through a tall archway, he looks back over his shoulder, throwing you a casual, 'If you change your mind, you know where to find me.'";
+			now Resolution of Anubis Statue is 2; [refused the bargain]
 	else if statuequest is 2:
 		say "     Returning to the museum with the samples the strange man sent you to retrieve, you luckily manage to retrace your steps to the empty pedestal, and are unsurprised to find the jackal-like man leaning up against it with an amused grin. 'Found them I see?' he says with a smirk as he takes the bundle of vials from you eagerly. 'Trust me, these little beauties will make it more than worth your while,' the jackalman says as he begins to carefully mix the pheromones together, the scent of some strange sort of musk filling your nose as he does so. 'Ah there we go!' he says happily as he takes a whiff of the completed project, seeming satisfied as he pulls out a familiar looking ankh with a jackal embossed on it.";
 		say "     The man gives you a wink as he slowly pours the mixture over the ankh, and the metal seems to almost absorb the liquid into itself. 'There we go now, once you use this little beauty, that little shopkeep won't be able to keep her hands off of you. The jackal musk and enhanced pheromone mix should make sure of that,' the man says with a grin as he hands you the strangely scented ankh. 'I told you this little side trip of yours would be beneficial to both of us now didn't I? I look forward to seeing how it works out,' he says in a voice filled with amusement as he turns and wanders off into the dark museum halls again.";
@@ -250,7 +287,11 @@ Instead of resolving a Anubis Statue:
 		LineBreak;
 		say "[bold type]You gain a strange ankh![roman type][line break]";
 		increase carried of strange ankh by 1;
+		now Resolution of Anubis Statue is 3; [brought back the samples]
 
+Table of GameEventIDs (continued)
+Object	Name
+Bestial Pheromones	"Bestial Pheromones"
 
 Bestial Pheromones is a situation. The level of Bestial Pheromones is 4.
 The Sarea of Bestial Pheromones is "Zoo".
@@ -280,14 +321,19 @@ Instead of resolving a Bestial Pheromones:
 			if diceroll > 16:
 				say "     Quickly determining the filing system, you manage to hunt down all of the pheromones and chemicals on the list, noting with some surprise they seem to be mostly canine and jackal pheromones and some pheromone enhancing chemicals. You wonder idly what the strange man wants with these particular chemicals, but given the way the strong musk in the room is making your head spin with arousal, you decide to worry about that later. Ducking outside you look down at the double handful of vials you have now and wonder if you really should return them to that strange man in the museum. Then again, the thought of being even more powerful and jackal-like is very tempting as well. Tucking the items in your pack, you resolve to decide later, as you head back out into the zoo.";
 				now statuequest is 2;
+				now Resolution of Bestial Pheromones is 1; [got the stuff]
 				now Bestial Pheromones is resolved;
 			else:
 				say "     You search the area as fast as you can, rummaging through the different vials even as your mind grows more and more clouded with lust. The musk of many different species fills your brain as your jackal nose inhales them happily, causing you to be more and more aroused and focused on touching and stroking your sensuous fur instead of searching the area as time goes on. Eventually you are so aroused that you barely can stop yourself from downing a vial or two of obviously recently collected lion seed, your body so sexually needy that you can think of little else. Forcing yourself to put the vials down you stagger back out into the zoo, running through the overgrown pathways in a vain attempt to clear your head and put some distance between you and the tempting musk-filled room. If you stayed there any longer, that would surely have put your remaining humanity at risk. Once your head has cleared slightly, you realize that if you want to find the items the jackal man asked for, you will need to return, hopefully being more careful this time though...";
-				LineBreak;
-				say "[bold type]Your sanity decreases by 15![roman type][line break]";
-				decrease humanity of player by 15;
+				SanLoss 15;
+				now Resolution of Bestial Pheromones is 2; [didn't find the stuff]
 		else if fightoutcome > 19: [lost or fled]
 			say "     Driven back by the sleek powerful felines, you are forced to retrace your steps down the zoo pathways, needing to rest and relax before you can try again... if you try again anyways.";
+			now Resolution of Bestial Pheromones is 3; [lost/fled]
+
+Table of GameEventIDs (continued)
+Object	Name
+Twisted fruit grove	"Twisted fruit grove"
 
 Twisted fruit grove is a situation. The level of twisted fruit grove is 4.
 The Sarea of Twisted fruit grove is "Park".
@@ -379,7 +425,7 @@ Instead of resolving a Twisted fruit grove:
 		say "     Before you know it, you are moving forward as if in a trance, ready to step into the glade - but just before you actually do, a movement from the other side of the warped tree draws your attention and breaks you out of it. The vines forming the boundary back there are being pushed aside as one of the golden-furred felinoids roaming the area slowly stalks into open, his head held high as he sniffs the air, obviously as entranced by the teasing scent as you were. You freeze as you watch the beast slowly cross the glade, your hand poised to draw the vines aside as he approaches the tree. And then the deception is revealed - as all of the plants seem to explode into motion around the startled feline, the vines and tendrils lying across the ground suddenly slithering and reaching out to trap and entwine the feral beast! The felinoid roars as he rips the vines apart even as they try to twist around and cocoon him, trying to push more flowers with their entrancing scent into his face and sink cock-like fruit into any opening they can find.";
 		WaitLineBreak;
 		say "     Blinking, you realize how narrowly you avoided the plant's trap - if you had been as unsuspecting as the large predatory cat was, you probably would already be completely trapped by now. But then of course... you also realize the felinoid has just provided you with a perfect distraction. All of the greenery is busy with him, giving you the best chance you'll ever get to snatch up some of the fruit Nermine desires! Before you can stop to think, you dart through the curtain of hanging vines, which try to cling to and rip at you as you push through them, almost as if sensing your purpose. Quickly charging across the glade at a run, you pull the basked from where you had it strapped to your back, your eyes on the fruit hanging temptingly from the tree. The large plant sways its branches as you near it, its leaves rustling in alarm, followed by what seems to be a commanding creak and crack of the wood.";
-		say "     Reacting to the commotion, part of the more mobile plant creatures focus their attention more on you, with one or two actually letting go of the felinoid and sending their writhing tendrils worming your way. Glancing their way, you feel cautiusly confident that you can make the snatch and grab before they intercept you - and you would have... if the tree hadn't forced a snare-like root through the surface at that moment. Catching your ankle, it tips you up and causes you to sprawl painfully across the ground just a little bit away from your goal. You roll over and prepare for a fight as the vines begins reach you several heartbeats later, intending to entrap you.";
+		say "     Reacting to the commotion, part of the more mobile plant creatures focus their attention more on you, with one or two actually letting go of the felinoid and sending their writhing tendrils worming your way. Glancing their way, you feel cautiously confident that you can make the snatch and grab before they intercept you - and you would have... if the tree hadn't forced a snare-like root through the surface at that moment. Catching your ankle, it tips you up and causes you to sprawl painfully across the ground just a little bit away from your goal. You roll over and prepare for a fight as the vines begins reach you several heartbeats later, intending to entrap you.";
 		LineBreak;
 		say "[bold type]You lose 25 HP![roman type][line break]";
 		decrease HP of player by 15;
@@ -392,14 +438,15 @@ Instead of resolving a Twisted fruit grove:
 		now inasituation is false; [reset]
 		if fightoutcome < 20: [player won]
 			say "     You pant in victory as the last of the green vine-like menaces are defeated, and waste no time closing up to the tree at least. It seems to creak in outrage as you begin filling the basket with strange fruit in a hasty rush to get out of here. Hearing a roar makes you glance over to the large felinoid that gave you this chance, and you see that it is still struggling against the plants - but the inevitable end result is clear as more and more tendrils latch onto it. Soon, they will immobilize the cat and those plants that are just 'helping' their brethren will no doubt turn your way. Realizing you don't have much time left, you quickly close the lid of the basket, hoping you have managed to get enough of the strange fruit to satisfy Nermine, since you certainly don't intend to return to any place this dangerous again if you can help it.";
-			say "     Your muscles tense to start running, but then a pityable mewl draws your attention once more to the felinoid. Vines are levering open its maw while a tendril with a cock-like fruit rears up before it, ready to plunge itself down its throat. No - you can't just leave the feral beast. Unintentional or not, it helped you greatly in your task, so you dash towards the writhing cocoon of vines. Kicking, wrenching and tearing a few of the main trunks where they sprout from the ground, you leave the green menaces injured - gushing clear sap that should have gone to strengthen their vines. Between the fact that the damaged plants partly let go of the felinoid to lash out at you in retaliation and several of the their remaining vines having gone limp, this gives the feline beast another chance to get out.";
+			say "     Your muscles tense to start running, but then a pitiable mewl draws your attention once more to the felinoid. Vines are levering open its maw while a tendril with a cock-like fruit rears up before it, ready to plunge itself down its throat. No - you can't just leave the feral beast. Unintentional or not, it helped you greatly in your task, so you dash towards the writhing cocoon of vines. Kicking, wrenching and tearing a few of the main trunks where they sprout from the ground, you leave the green menaces injured - gushing clear sap that should have gone to strengthen their vines. Between the fact that the damaged plants partly let go of the felinoid to lash out at you in retaliation and several of the their remaining vines having gone limp, this gives the feline beast another chance to get out.";
 			WaitLineBreak;
-			say "     The felinoid clearly realizes what you are doing and wakes his last reserves of energy, roaring out load as it starts to lash out with its claws to shred the unravelling cocoon of vines. You have to gain some distance as not to get trapped yourself the plants do their utmost to punish your intrustion, but even so - the intervention was enough to get the feral cat free. Ripping out of the tangle of greenery, it dashes past your position in full flight and you don't waste any time hanging around either. At a fast sprint, the clingy vine curtain is no real barrier as you forcefully shove through, tearing off some of the tendrils that just didn't want to let you go. Outside the glade, you keep going for a good minute or two, gaining enough distance to feel halfway safe.";
+			say "     The felinoid clearly realizes what you are doing and wakes his last reserves of energy, roaring out load as it starts to lash out with its claws to shred the unravelling cocoon of vines. You have to gain some distance as not to get trapped yourself the plants do their utmost to punish your intrusion, but even so - the intervention was enough to get the feral cat free. Ripping out of the tangle of greenery, it dashes past your position in full flight and you don't waste any time hanging around either. At a fast sprint, the clingy vine curtain is no real barrier as you forcefully shove through, tearing off some of the tendrils that just didn't want to let you go. Outside the glade, you keep going for a good minute or two, gaining enough distance to feel halfway safe.";
 			say "     Resting your hands on your knees as you lean over and pant in exertion, you suddenly feel a strange tingling sensation against the side of your neck and catch a whiff of strange, yet somehow pleasant musk. Looking up, you find yourself eye to eye with the felinoid you rescued, his face merely inches from your own. Must have been the large cat's whiskers you felt, brushing against you as he moved up close. You freeze for a second as the feline beast sniffs you and rubs the side of his furry head against your cheek and shoulder - again giving you a breath of its musky scent. Then he backs off and looks you up and down with strangely intelligent eyes before turning around and stalking off. Before the feral beast vanishes from sight, you see that he is hurt - fur matted with blood in several places and showing a slight limp. Those plants really got nasty in the end, when they knew they were losing their newest captive...";
 			LineBreak;
 			say "     Soon finding yourself all alone, you let out the breath you hadn't realized your were holding, and straighten up before heading back to the park entrance at a run, deciding you have definitely had more than enough excitement for today.";
 			now FelinoidRescued is 2; [player won the fight to save the Felinoid]
 			now RareQuesting is 2;
+			now Resolution of Twisted Fruit Grove is 1; [saved the felinoid]
 			now Twisted fruit grove is resolved;
 			stop the action;
 		else if fightoutcome > 19 and fightoutcome < 30: [lost]
@@ -443,6 +490,9 @@ When play ends:
 
 Section 6- Rare Item case
 
+Table of GameCharacterIDs (continued)
+object	name
+Rare Counter	"Rare Counter"
 
 Rare Counter is a man.
 The description of Rare Counter is "[RareCounterDesc]".
@@ -460,7 +510,7 @@ the scent of Rare Counter is "You smell the items on the counter and a shiver ru
 RareQuesting is a number that varies.
 
 instead of conversing the rare counter:
-	say "     Crouching down in front of the wooden counter with its glass plates that protect precious treasures, you try your best to strike up a conversation with it. Sadly, the piece of furniture < responsive, so all this does is earn you a strange look from Nermine. Maybe you should talk to her instead if you want to know something about the rare items.";
+	say "     Crouching down in front of the wooden counter with its glass plates that protect precious treasures, you try your best to strike up a conversation with it. Sadly, the piece of furniture is not responsive, so all this does is earn you a strange look from Nermine. Maybe you should talk to her instead if you want to know something about the rare items.";
 
 to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk menu now]
 	if JackalBoyTF > 0: [already locked into Jackalboy shape]
@@ -476,7 +526,7 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 		if player consents:
 			LineBreak;
 			if guy is banned or furry is banned or girl is banned:
-				say "     'Oh, Nermine is seeing now that she looks at her visitor that [heshe]will not be able to help her in this regard. Nermine is feeling most sorry for them, restricting their fun so. One should not be so picky, she is thinking.' Nermine shakes her jackal head sadly.";
+				say "     'Oh, Nermine is seeing now that she looks at her visitor that [heshe] will not be able to help her in this regard. Nermine is feeling most sorry for them, restricting their fun so. One should not be so picky, she is thinking.' Nermine shakes her jackal head sadly.";
 				say "(The rare item quest requires hermaphrodite, guy, girl and furry content to be available. Sorry.)";
 			else:
 				say "     'The delightful guest is offering to help Nermine acquire some of these rare items?' the jackal-woman says with surprise, before looking at you appreciatively. 'If [heshe] can help Nermine out like that, the jackaless would certainly have a nice reward waiting when [heshe] does,' Nermine says as she reaches into the case and pulls out a small golden ankh with the image of a jackal man stamped on the base. 'If Nermine is helped, she will pay the favor back with gold. And perhaps if her friend is very helpful, a bit more than gold,' the sexy jackal-woman adds with a wink as she sets the ankh carefully back into the cabinet. 'First though, a little... test. Nermine could use some items from around town, and it should be a good start for her helper to get a feel of the tasks [heshe] would have to do.'";
@@ -489,7 +539,7 @@ to say RareItemQuestTalk: [this is one of Nermine's talk options from her talk m
 		say "     'Has the friendly visitor who offered help still not found the [bold type]grove[roman type]?' Nermine says with a slight frown on her silver-painted face. 'Well, it certainly is not in Nermine's shop. Perhaps searching in the [bold type]park[roman type] would be advisable instead. Or if [heshe] has changed [hisher] mind, the jackaless must regretfully ask for her basket back.' She looks at you speculatively, raising one eyebrow, and you quickly answer that you haven't given up on this little quest for her yet. 'Good,' she purrs, stroking a finger over the glass case and tapping it over the spot where the golden ankh resides.";
 	else if RareQuesting is 2: [player got the fruit]
 		say "     'Ah, Nermine thanks her brave guest gratefully!' the jackal-woman says with bright grin on her silver-painted muzzle as she takes the basket full of strange fruit from you. 'These are very rare fruit indeed, and will certainly fetch a very high price to the right buyer!' she says brightly as she sets the basket down on the counter next to her, before reaching underneath it to produce the shiny golden ankh she showed you earlier. 'And speaking of price, here is the one that was agreed upon as well,' with a purr in her voice, she hands you the golden ankh, its weight feeling surprisingly good in your hands as you hold it up to inspect the gleaming metal in the candlelight. 'It is more than just a golden trinket,' the jackal-woman says teasingly as she gathers up the basket and heads towards the back room.";
-		say "     You are almost entranced by the beauty of the craftsmanship on your new posession, barely registering anything but the ankh until Nermine's eventual return. Stepping up close beside you, she leans forward and whispers into your ear, 'The treasure Nermine's friend is holding is a very special and powerful ankh indeed. Some might just value it for its gold, but this humble shopkeeper is sure that her visitor will go beyond such trivialities. If [heshe] uses its true power, [heshe] will become ready for further helping Nermine out and earn more rewards.' A sly smile on her muzzle, the jackaless strokes a finger gently along your arm, brushing against the side of your hand holding the ankh, then withdrawing. As she moves back behind the counter afterwards, you can't help but be very curious about what she meant...";
+		say "     You are almost entranced by the beauty of the craftsmanship on your new possession, barely registering anything but the ankh until Nermine's eventual return. Stepping up close beside you, she leans forward and whispers into your ear, 'The treasure Nermine's friend is holding is a very special and powerful ankh indeed. Some might just value it for its gold, but this humble shopkeeper is sure that her visitor will go beyond such trivialities. If [heshe] uses its true power, [heshe] will become ready for further helping Nermine out and earn more rewards.' A sly smile on her muzzle, the jackaless strokes a finger gently along your arm, brushing against the side of your hand holding the ankh, then withdrawing. As she moves back behind the counter afterwards, you can't help but be very curious about what she meant...";
 		LineBreak;
 		say "[bold type]You gain a strange ankh![roman type][line break]";
 		now carried of strange ankh is 1;
@@ -678,7 +728,7 @@ An everyturn rule:
 		if JackalManTF >= 3:
 			if facename of player is not "Jackalman":
 				say "You feel a strange discontent building in your head, as your face seems to burn and flex, its external form not matching that of your internal jackal, causing you to snap and snarl even as the bones in your face begin to shift and stretch again, and you let out a loud howl of triumphant pleasure as your face reshape itself back into a proper jackals visage, your grin once more stretching your muzzle as your gold dusted black fur settles in once more over your handsome jackals countenance.";
-				Now facename of player is "Jackalman";
+				now facename of player is "Jackalman";
 				now face of player is "narrow canine face, with a long sleek muzzle and a nicely flattened forehead, your face is painted with a soft shimmering pattern of golden dust, accentuating your deep golden eyes. Your appearance seeming both predatory, and strangely sexy at the same time";
 		if JackalManTF >= 4:
 			if bodyname of player is not "Jackalman":

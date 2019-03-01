@@ -43,15 +43,15 @@ to say losetofireelemental:
 			say "     A little disappointed to find you bare there, she kneels in front of you and takes a hold of your head. She gently pushes it between her thighs, pressing your lips to her cunt while her hands run over your body, spreading her flames with yours. 'Come, taste of me, you fiery beast,' she moans. And, as you lick back, tongue working at the warm, spicy folds of her cleft, your world descends into a warm, fiery bliss...";
 	else if bodyname of player is "Fire Sprite" and the player is fireskinned:
 		say "     The fiery woman moves up to you, smiling warmly now. She kneels beside you, running a flaming hand down your back. 'Come, little spark, let me show you that there is more to the flame then mischief and destruction, let me show you the passion of the true fire.' As you begin to lean against the fiery woman, basking in the warmth of her flame, she scoops your smaller form into her arms, cradling you against her bosom as she carries you to the nearest safe place.";
-		say "     Pressing your lips to her warm nipple, you feel a pleasant liquid heat leaking into your mouth, and she gives a sigh of contentment as you soon begin suckling for more. 'See? Isn't this so much nicer then all that needless destruction? You have the potential to be so much more, my little spark,' she says, idly stroking your head before her hands begin to drift down your body[if breast size of player > 2], pausing to tease your breasts momentarily before moving lower[end if]. Her deft fingers leave a trail of flame across your body which slowly spreads over you, wrapping you in her warmth as [if player is herm]she begins teasing your stiffing cock[smn] and drooling puss[yfn][else if player is male]she begins teasing your stiffing cock[smn][else if player is female]she begins teasing your drooling puss[yfn][else]stroking your barren groin[end if]. ";
+		say "     Pressing your lips to her warm nipple, you feel a pleasant liquid heat leaking into your mouth, and she gives a sigh of contentment as you soon begin suckling for more. 'See? Isn't this so much nicer then all that needless destruction? You have the potential to be so much more, my little spark,' she says, idly stroking your head before her hands begin to drift down your body[if breast size of player > 2], pausing to tease your breasts momentarily before moving lower[end if]. Her deft fingers leave a trail of flame across your body which slowly spreads over you, wrapping you in her warmth as [if player is herm]she begins teasing your stiffing cock[smn] and drooling puss[yfn][else if player is male]she begins teasing your stiffing cock[smn][else if player is female]she begins teasing your drooling puss[yfn][else]stroking your barren groin[end if].";
 		if player is herm:
-			say "     Her warm deft hand is soon alternating between your cock[smn] and puss[yfn], her fiery, cracked flesh oddly soothing as she works them over, sending hot waves of pleasure through you, causing you to moan slightly around her nipple as your world descends into a warm, fiery bliss...";
+			say "     Her warm, deft hand is soon alternating between your cock[smn] and puss[yfn], her fiery, cracked flesh oddly soothing as she works them over, sending hot waves of pleasure through you, causing you to moan slightly around her nipple as your world descends into a warm, fiery bliss...";
 		else if player is male:
-			say "     Her warm deft hand is soon stroking your cock[smn], her fiery, cracked flesh oddly soothing as she works you over, sending hot waves of pleasure through you, causing you to moan slightly around her nipple as your world descends into a warm, fiery bliss...";
+			say "     Her warm, deft hand is soon stroking your cock[smn], her fiery, cracked flesh oddly soothing as she works you over, sending hot waves of pleasure through you, causing you to moan slightly around her nipple as your world descends into a warm, fiery bliss...";
 		else if player is female:
-			say "     Her warm deft fingers are soon sinking into your quivering cunt, her fiery, cracked flesh oddly soothing as she gently fingers you, sending hot waves of pleasure through you, causing you to moan slightly around her nipple as your world descends into a warm, fiery bliss...";
+			say "     Her warm, deft fingers are soon sinking into your quivering cunt, her fiery, cracked flesh oddly soothing as she gently fingers you, sending hot waves of pleasure through you, causing you to moan slightly around her nipple as your world descends into a warm, fiery bliss...";
 		else:
-			say "     As her warm deft hands continue to tease your body and her heat continues to engulf you, hot waves of pleasure roll through you and your world descends into a warm, fiery bliss...";
+			say "     As her warm, deft hands continue to tease your body and her heat continues to engulf you, hot waves of pleasure roll through you and your world descends into a warm, fiery bliss...";
 	else if bodyname of player is "Fire Elemental" or bodyname of player is "Flaming Lynx " or skinname of player is "Fire Sprite":
 		say "     The fiery woman moves up to you, smiling tenderly now. She reaches down, offering you her hand and helping you to your feet. 'You poor ember. You are ready to burn, but have not felt the heat of The True Fire that is in both of us. Let me help you,' she says, rubbing her fiery body sensually against yours as she places a loving kiss on your lips once you're there, wrapping her fiery arms around your [bodytype of player] body.";
 		say "[fireelsex]";
@@ -81,12 +81,12 @@ to say beatthefireelemental:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Fire Elemental"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -134,8 +134,9 @@ When Play begins:
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "firebreath"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Definition: a person is fireskinned:
@@ -164,14 +165,14 @@ When Play begins:
 	now infect name entry is "Fire Elemental";
 	now heat cycle entry is 7;
 	now heat duration entry is 2;
-	now trigger text entry is "     There is a sudden, pulsing heat inside you centered at your loins. This heat builds, growing to an inferno of lust and desire[if cunt width of player < 8 or cunt length of player < 12]. As this fire burns away at you, your pussy deepens, aching for something to fill it and stoke its fires[end if]. You are in heat with an primal, elemental need.";
+	now trigger text entry is "     There is a sudden, pulsing heat inside you centered at your loins. This heat builds, growing to an inferno of lust and desire[if cunt width of player < 8 or cunt length of player < 12]. As this fire burns away at you, your pussy deepens, aching for something to fill it and stoke its fires[end if]. You are in heat with a primal, elemental need.";
 	now description text entry is "pulsing, elemental furnace of lust ";
 	now heat start entry is "[fireelheatstart]"; [Events that trigger at the start of the Heat, in the GSD case it increases the cunt width]
 	now heat end entry is "[fireelheatend]"; [Events that trigger at the end of the Heat, in the GSD case it reduces cunt width]
 	now inheat entry is "[defaultheat]"; [This happens each heat cycle, Default is to increase libido by 5]
 	now fheat entry is true;
 	now mpregheat entry is true;
-	now mpregtrigger entry is "     There is a sudden, pulsing heat inside you centered at your lower belly. This heat builds, growing to an inferno of lust and desire. As this fire burns away at you, your rectum grow heated as well, aching for something to fill it and to stoke its fires. You are in heat with an primal, elemental need.";
+	now mpregtrigger entry is "     There is a sudden, pulsing heat inside you centered at your lower belly. This heat builds, growing to an inferno of lust and desire. As this fire burns away at you, your rectum grow heated as well, aching for something to fill it and to stoke its fires. You are in heat with a primal, elemental need.";
 
 
 Section 4 - Endings

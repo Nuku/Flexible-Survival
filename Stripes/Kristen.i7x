@@ -4,6 +4,14 @@ Version 2 of Kristen by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameCharacterIDs (continued)
+object	name
+Kristen	"Kristen"
+
+Table of GameEventIDs (continued)
+Object	Name
+FindingKristen	"FindingKristen"
+
 FindingKristen is a situation.
 The sarea of FindingKristen is "Outside".
 when play begins:
@@ -15,7 +23,7 @@ Instead of resolving FindingKristen:
 		say "ERROR-Kristen-[HP of Kristen]E: This event should already be resolved!";
 	else:
 		say "     While traveling through the city, you hear a bit of commotion coming from down a side street. At first you're going to just let it go, but you catch sight of a rather human-looking woman rushing past the far end of the alleyway, soon followed by an eager ewe. You wonder if your eyes are playing tricks on you or if she might have an infection that's passably human at first glance.";
-		say "     [bold type] Shall you charge to the rescue and hope for the best?[roman type][line break]";
+		say "     [bold type]Shall you charge to the rescue and hope for the best?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -29,34 +37,40 @@ Instead of resolving FindingKristen:
 				if fightoutcome >= 10 and fightoutcome <= 19:
 					say "     After your victory, you turn to check on the woman only to find the mound of crushed boxes empty. Looking up, you can see her atop the wooden wall, looking down at you. ";
 					if ( bodyname of player is "Human" or bodyname of player is "Herm Human" ) and player is pure and ( breast size of player < 10 and cock length of player < 12 and cock width of player < 16 ) and breasts of player <= 2 and ( breast size of player < 2 or ( cock length of player < 7 and cock width of player < 7 ) ):
-						say "     Without further hesitation, she reaches out to grab your hand to help a fellow human. Helping you up and over the well, you run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
+						say "Without further hesitation, she reaches out to grab your hand to help a fellow human. Helping you up and over the well, you run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
 					else if player is bodily human and player is facially human and player is skintone human and tail of player is "":
-						say "     She hesitates momentarily, you looking human enough at first glance, but your altered sexuality causing her to pause briefly. It lasts only a moment though before she reaches out with her hand to help you up and over the wooden wall to make your escape with her. You run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
+						say "She hesitates momentarily, you looking human enough at first glance, but your altered sexuality causing her to pause briefly. It lasts only a moment though before she reaches out with her hand to help you up and over the wooden wall to make your escape with her. You run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
 					else:
-						say "     She hesitates for a few moments, staring at your mutated body. It is only when the sound of the approaching mob catches her attention does she reach out to take your hand. Helping you up and over the wall, you run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
-					say "     Clearly having a destination in mind, she sneaks through alleys and behind buildings, trying her best to remain out of sight from the more randy creatures around.";
-					say "     'I really want to thank you for helping me out back there. I don't think I would have made it without your help. I'm Kristen, by the way.'";
+						say "She hesitates for a few moments, staring at your mutated body. It is only when the sound of the approaching mob catches her attention does she reach out to take your hand. Helping you up and over the wall, you run off together for several blocks, only slowing your pace as the sound of the mob fades into the distance.";
+					say "     Clearly having a destination in mind, she sneaks through alleys and behind buildings, trying her best to remain out of sight from the more randy creatures around. 'I really want to thank you for helping me out back there. I don't think I would have made it without your help. I'm Kristen, by the way.'";
 					say "     As you introduce yourselves, you're able to take in her appearance. The Caucasian woman stands about five foot ten inches. She has fair skin with only a light tan, leading you to suspect that she's been hiding indoors a lot lately or using quite a bit of sunscreen. She's got shoulder-length dirty blonde hair in a ponytail, which is now partially undone by the rough handling earlier. Her eyes are a very pretty blue and she's got a silver stud earring on each ear.";
 					say "     'We're getting close to the place I've been hiding out. I guess I can trust you, so I'll show you. It's not great, but I've been safe enough. If I hadn't gone out to lo- well, if I'd stayed here, I'd not have gotten into that mess earlier.'";
 					say "     She's leading you along the rear of a stretch of two-story shops. Several of them have been damaged by the rampage of some creature. She slips into the lower floor of a half-ruined travel agency and grabs the extension ladder stashed inside. Carrying it a few buildings over, she uses it to climb up to the second story of one of them and go through an open window. After you follow her up, the pulls the ladder inside, cutting off the means of entry.";
 					now HP of Kristen is 2;
 					move player to Kristen's Hideout;
 					now Kristen's Hideout is known;
-					now battleground is "void";
+					now Resolution of FindingKristen is 1; [Kristen saved]
 					increase score by 20;
 			if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     The ewe's assault leaves you too weak and dazed to prevent her from grabbing onto the woman and dragging her back down the alley. You can hear the lustful cries of mob of sheep get louder when the poor human's dragged into their midst. Still having enough sense to realize that you very well could be next, you struggle your way up and over the wooden fence and make a run for it.";
+				now Resolution of FindingKristen is 98; [player lost, Kristen lost]
 				now HP of Kristen is 1;
 			else if fightoutcome >= 30:
 				say "     Hearing the mob getting closer, you know you need to make your escape before they get here. You sidestep the ewe as she makes a grab for you, sending her crashing right into the woman as she tries to get up. Finding herself atop an unchanged human, the sheep's attention immediately turns to groping and kissing her. With a running start, you use her woolly back as a springboard to hop up onto the wooden wall and climb over it to get away before things get out of hand.";
+				now Resolution of FindingKristen is 99; [player ran off, Kristen lost]
 				now HP of Kristen is 1;
 		else:
 			say "     Counting yourself lucky that it's not you being chased for a change, you slip off in the opposite direction as the sound starts to draw the interest of more infected mutants.";
+			now Resolution of FindingKristen is 99; [player ran off, Kristen lost]
 			now HP of Kristen is 1;
 	now FindingKristen is resolved;
 
 
 Section 2 - Kristen's Hideout
+
+Table of GameRoomIDs (continued)
+Object	Name
+Kristen's Hideout	"Kristen's Hideout"
 
 Kristen's Hideout is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Kristen's Hideout is "[krishideoutdesc]".
@@ -84,9 +98,9 @@ to say krishideoutdesc:
 		now lastfuck of Kristen is turns;
 	else if HP of Kristen < 16 and lastfuck of Kristen - turns < 4:
 		if HP of Kristen < 15:
-			say "     [if libido of Kristen is 2]You promised to give Kristen some time to think. You should give her a little longer before returning.[else if libido of Kristen is 3]As much as you look forward to seducing the transforming woman further, you don't want to rush things. You decide to wait a little longer before returning to see her again.[else]As much as you look forward to enjoying the transforming vixen's body, you should give her some time to allow her infection to progress further. Besides, she'll be hornier if you let her change further.[end if]";
+			say "     [if libido of Kristen is 2]You promised to give Kristen some time to think. You should give her a little longer before returning[else if libido of Kristen is 3]As much as you look forward to seducing the transforming woman further, you don't want to rush things. You decide to wait a little longer before returning to see her again[else]As much as you look forward to enjoying the transforming vixen's body, you should give her some time to allow her infection to progress further. Besides, she'll be hornier if you let her change further[end if].";
 		else:
-			say "     Kristen could use some time to rest and take stock of her situation before you return to see how she's dealing with her changes[if libido of Kristen is 2]. [else if libido of Kristen is 3]. After the excitement last time, you decide to give her a little more time before attempting to seal the deal again[else]. As eager as you are to see if the slutty vixen's completed her transformation, you decide to wait a little longer to be sure[end if].";
+			say "     Kristen could use some time to rest and take stock of her situation before you return to see how she's dealing with her changes[if libido of Kristen is 3]. After the excitement last time, you decide to give her a little more time before attempting to seal the deal again[else if libido of Kristen is not 2]. As eager as you are to see if the slutty vixen's completed her transformation, you decide to wait a little longer to be sure[end if].";
 		WaitLineBreak;
 		move player to Grey Abbey Library;
 	else if HP of Kristen is 13:
@@ -180,11 +194,11 @@ Instead of conversing the Kristen:
 			say "     Deciding against it for now, you keep it tucked away in your pack. Should you change your mind, you'll need to [bold type]give Janice's blouse to Kristen[roman type].";
 			now kristenmsg5 is true;
 	else if HP of Kristen < 12:
-		say "     [one of]'I've been raiding my friend's cupboards and gathered what I can from the nearby shops, so I'm okay for now.'[or]'I'm glad I decided to trust you. It's good to have someone to talk to after all this.'[or]'I'm lucky I've managed to stay human for now, but I've got to be careful.'[or]'You need to be careful about what you come into contact with. From what I've seen, lots of stuff - even random objects - can prompt a mutation. There was one guy while I was trying to get here who turned into a cougar just because that was the kind of car he was driving.'[or]'Ever since this started, I've been really horny. I'm sometimes tempted to just give up on all this hiding and throw myself into the arms of one of those sexy creatures I see from the windows. I'm guessing that's how they get you.'[or]'Thanks again for helping me out back there. I don't think I would have made it out of there without your help. That ewe was cute and all, but I've never been a sheep to just follow the herd.'[or]'Stuck here on my own, I can't help but sometimes think everyone whose lives have been destroyed by this mess. So many dead or driven mad. It's a disaster when you really think about it.'[in random order]";
+		say "     [one of]'I've been raiding my friend's cupboards and gathered what I can from the nearby shops, so I'm okay for now.'[or]'I'm glad I decided to trust you. It's good to have someone to talk to after all this.'[or]'I'm lucky I've managed to stay human for now, but I've got to be careful.'[or]'You need to be careful about what you come into contact with. From what I've seen, lots of stuff - even random objects - can prompt a mutation. There was one guy while I was trying to get here who turned into a cougar just because that was the kind of car he was driving.'[or]'Ever since this started, I've been really horny. I'm sometimes tempted to just give up on all this hiding and throw myself into the arms of one of those sexy creatures I see from the windows. I'm guessing that's how they get you.'[or]'Thanks again for helping me out back there. I don't think I would have made it out of there without your help. That ewe was cute and all, but I've never been a sheep to just follow the herd.'[or]'Stuck here on my own, I can't help but sometimes think of everyone whose lives have been destroyed by this mess. So many dead or driven mad. It's a disaster when you really think about it.'[in random order]";
 	else if HP of Kristen <= 15:
 		say "ERROR-Kristen-[HP of Kristen]T: You should be able to talk to me.";
 	else if HP of Kristen is 16:
-		say "     [one of]'It's nice to be back together with Janice. We're better friends than ever[if libido of Kristen is 2]. Isn't that right?' she asks the other vixen as she pats her bottom[else if libido of Kristen is 3],' she says, demonstrating this with a very sexy kiss with the other vixen[else],' she says, demonstrating this with gropes of the vixen's breasts from behind[end if].'[or]'Janice has been showing me that there are some definite perks to being a [if libido of Kristen is 2]beautiful[else if libido of Kristen is 3]sexy[else]slutty[end if] vixen.'[or]'I've been meeting Janice's other would-be suitors. But don't worry, you're definitely our favorite.'[or]'As nice as it is to be here with Janice, it can be a little too loud at times. Sometimes you just want some quiet time... together.' She runs a paw across your cheek on that final word.[or][if libido of Kristen is 2]'Thanks for all your help, hon.'[else if libido of Kristen is 3]'Why don't you stick around? Janice and I would love to show you our appreciation for our mate,' she says while brushing her tail across your side.[else]'I'm quite popular with many of the club-goers.'[end if][or]'The Palomino's always been a good club, but I think I like this new version even better.'[or][if libido of Kristen is 2]'Do you really think I'm beautiful like this?' she asks with a teasing swish of her tail.[else if libido of kristen is 3]'Tell me again how beautiful I am,' she says as she poses sexily, longing for your approval.[else]'Don't you think I look sexy,' she asks, posing wantonly before you.[end if][or]Kristen takes you out into the club to dance for a while[if libido of Kristen is 2], the two of you having a good time[else if libido of Kristen is 3], sharing a slow dance together[else], bumping and grinding her sexy body against yours[end if].[in random order]";
+		say "     [one of]'It's nice to be back together with Janice. We're better friends than ever[if libido of Kristen is 2]. Isn't that right?' she asks the other vixen as she pats her bottom[else if libido of Kristen is 3],' she says, demonstrating this with a very sexy kiss with the other vixen[else],' she says, demonstrating this with gropes of the vixen's breasts from behind[end if].'[or]'Janice has been showing me that there are some definite perks to being a [if libido of Kristen is 2]beautiful[else if libido of Kristen is 3]sexy[else]slutty[end if] vixen.'[or]'I've been meeting Janice's other would-be suitors. But don't worry, you're definitely our favorite.'[or]'As nice as it is to be here with Janice, it can be a little too loud at times. Sometimes you just want some quiet time... together.' She runs a paw across your cheek on that final word.[or][if libido of Kristen is 2]'Thanks for all your help, hon.'[else if libido of Kristen is 3]'Why don't you stick around? Janice and I would love to show you our appreciation for our mate,' she says while brushing her tail across your side.[else]'I'm quite popular with many of the club-goers.'[end if][or]'The Palomino's always been a good club, but I think I like this new version even better.'[or][if libido of Kristen is 2]'Do you really think I'm beautiful like this?' she asks with a teasing swish of her tail[else if libido of kristen is 3]'Tell me again how beautiful I am,' she says as she poses sexily, longing for your approval[else]'Don't you think I look sexy,' she asks, posing wantonly before you[end if].[or]Kristen takes you out into the club to dance for a while, [if libido of Kristen is 2]the two of you having a good time[else if libido of Kristen is 3]sharing a slow dance together[else]bumping and grinding her sexy body against yours[end if].[in random order]";
 
 
 Section 4 - Kristen TF
@@ -723,8 +737,8 @@ to say kristenjanice3some00:
 	if a random chance of x in 10 succeeds:
 		say "Kristen and cum hard. The vixen cries out in climax and rocks her hips, working her vaginal muscles around your pulsing rod. You pump shot after shot of your [cum load size of player] load into her[if cock width of player < 12], painting her womb with your seed[else if cock width of player < 24], painting her womb with your ample seed[else if cock width of player < 36], painting her womb with your seed to the point of overfilling it with your impressive load[else], stuffing her womb to the point of bloating her belly with your excessive load[end if]. As you're finishing up, you pull out and pump your still spurting shaft, sending your final shots to splatter Janice's body as Kristen fingers her to a final, powerful climax.";
 	else:
-		say "Janice and cum hard. The vixen moans in orgasmic release and presses her hips up to meet your now frantic thrusts. Her inner walls squeeze and milk at your cock, drawing spurt after spurt of your gooey cum from your shaft. Your [cum load size of player] load leaves her [if cock width of player < 12]dribbling your spent semen from her well-fucked pussy[else if cock width of player < 24]drooling your spent semen from her well-fucked pussy[else if cock width of player < 36]drooling your excess semen from her well-fucked and throughly-seeded pussy[else]with a bloated belly and drooling your spent seed from her well-fucked pussy[end if] by the time you pull out of her. Still shooting, you pump your shaft and send your last few spurts of cum across Kristen's body as Janice fingers her to a final, powerful climax.";
-	say "     After your menage a trois, the three of you snuggle together, sticky and reeking of sex, but so wonderfully satisfied for it. Many kisses and affectionate gropes are shared. Each of you is given a tongue bath by the other two, licking the wonderful melange of sexual juices from each other's loins. This results in another set of climaxes that has to be cleaned up as well, though you're all a little too worn out for another go after that. With a sexy vixen in each arm, the three of you take a much-needed rest on the divan to recover after your sexy threesome.";
+		say "Janice and cum hard. The vixen moans in orgasmic release and presses her hips up to meet your now frantic thrusts. Her inner walls squeeze and milk at your cock, drawing spurt after spurt of your gooey cum from your shaft. Your [cum load size of player] load leaves her [if cock width of player < 12]dribbling your spent semen from her well-fucked pussy[else if cock width of player < 24]drooling your spent semen from her well-fucked pussy[else if cock width of player < 36]drooling your excess semen from her well-fucked and thoroughly-seeded pussy[else]with a bloated belly and drooling your spent seed from her well-fucked pussy[end if] by the time you pull out of her. Still shooting, you pump your shaft and send your last few spurts of cum across Kristen's body as Janice fingers her to a final, powerful climax.";
+	say "     After your ménage a trois, the three of you snuggle together, sticky and reeking of sex, but so wonderfully satisfied for it. Many kisses and affectionate gropes are shared. Each of you is given a tongue bath by the other two, licking the wonderful mélange of sexual juices from each other's loins. This results in another set of climaxes that has to be cleaned up as well, though you're all a little too worn out for another go after that. With a sexy vixen in each arm, the three of you take a much-needed rest on the divan to recover after your sexy threesome.";
 	now lastfuck of Janice is turns;
 
 
@@ -744,7 +758,7 @@ Section 8 - Variable Charts
 [ 15 = infected, step 3   ]
 [ 16 = fully tf'd         ]
 
-[     XP of Kirsten       ]  [not currently active, but preparatory]
+[     XP of Kirsten       ] [not currently active, but preparatory]
 [ 0 = no spray            ]
 [ 1 = got spray           ]
 [ 2 = using spray         ]

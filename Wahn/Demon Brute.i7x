@@ -4,7 +4,7 @@ Version 6 of Demon Brute by Wahn begins here.
 [- Originally Authored By: Leo X -]
 [Todo: Endings]
 
-"Adds a Monster name to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Monster name to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 DBCaptureQuestVar is a number that varies. DBCaptureQuestVar is usually 0.
 DemonBruteStatus is a number that varies. DemonBruteStatus is usually 0.
@@ -74,14 +74,14 @@ to say DemonBruteVictoryFuck:
 		say "     The towering demon rubs his throbbing purple cock-head along your pink slit, and without a care for whether or not you're ready, he thrusts forcefully inside your body. The nubs pull at your unprepared vaginal opening and your mouth gapes open as your nether lips are stretched wide around his inhuman member. Laughing at your obvious discomfort, he seems to drink it in as you cry out in both pain and ecstasy. 'I should take you back to the pit with me. Show your pitiful mortal body what it means to be fucked till you're raw!' You whimper once more as the demon slowly pulls his titanic phallus from your gaping tunnel, feeling every nub and vein as it tugs along your sensitive walls.";
 		say "     Your eyes begin to tear up, and you bite your lip to keep from crying out as you feel his hot pre filling you up inside. Though grateful for the lubrication this adds, you feel as if the fire inside you is a sign of the demon's own building desire to wreck your already abused hole. The brute bends low over your form and growls into your ear, 'Let's see how long you last before breaking.' With another lustful roar, the unholy brute batters his way balls deep into your depths, and with ungodly fervor, begins to fuck your writhing form deep and hard.";
 		WaitLineBreak;
-		say "     Your mouth gapes open and you're too breathless to even whimper as you are used as a living fuck-doll by the monster bending over you. Your entire being has become focused on the pillar of demon-flesh that has made your pussy its home. It is as if some invading force is staking its claim on your innermost being, and will do so by any force necessary. Every moment being impaled by him seems to stretch out endlessly in its confusing mixture of pain and pleasure. After what feels like an hour of abuse, your cunt is finally stretched wide enough to allow free movement of the invading prick. Your wrecked hole squelches with the hot demon pre that he's constantly been leaking into you, and every powerful thrust churns your insides as he pounds forward faster and faster. The bumps on his cock provide constant stimulation to your insides, scraping along your g-spot in the most agonisingly pleasurable of ways.";
+		say "     Your mouth gapes open and you're too breathless to even whimper as you are used as a living fuck-doll by the monster bending over you. Your entire being has become focused on the pillar of demon-flesh that has made your pussy its home. It is as if some invading force is staking its claim on your innermost being, and will do so by any force necessary. Every moment being impaled by him seems to stretch out endlessly in its confusing mixture of pain and pleasure. After what feels like an hour of abuse, your cunt is finally stretched wide enough to allow free movement of the invading prick. Your wrecked hole squelches with the hot demon pre that he's constantly been leaking into you, and every powerful thrust churns your insides as he pounds forward faster and faster. The bumps on his cock provide constant stimulation to your insides, scraping along your g-spot in the most agonizingly pleasurable of ways.";
 		say "     The worst thing about this demonic rape is that you can't help but actually let out grunts of pleasure with every powerful thrust - something that amuses the purple fiend to no end as he grins down at you. 'Get ready to feel what you were made for!' he bellows, throwing back his head for an evil laugh. Then the demon leers down at your impotent form and, with a grunt of pleasure and a vicious thrust, he buries himself deep. He roars as his balls push forth a torrent of hot demon seed inside you. The sensation of being filled by this monster is just too much and you begin to cum as well, your abused vaginal tunnel twitching tightly around the pillar inside you[if player is herm], while your cock jumps and squirts its own seed all over the ground[end if]. He begins to thrust and pump his hips once more, the flow of boiling demon lust not abating one bit as he drives his cock in and out of your destroyed snatch. He pumps your pussy full of his fierce seed and it pours into your womb in a deluge of hot liquid. There is so much cum that it begins to bloat your lower abdomen, before the pressure forces it to spurt out around the invading demonic prick. Every thrust pushes a fresh gout of cum into your expanding belly and causes a fresh gush of hot seed to squirt out around the base of his cock.";
 		WaitLineBreak;
 		say "     Panting and grinning over you, the demon holds his cock in place inside your pussy. It feels as if he has lodged his cockhead into your painfully stretched cervix, creating a seal so none of his cum can escape your bloated womb - even as more pulses into you. Just as you begin to think he might continue till you burst, a terrible shudder goes through your limp body and the pressure lessens - as if his hot cum is being suffused throughout your being, making you absorb the demonic corruption.";
 		if DBCaptureQuestVar is 4:
 			say "     The brute stands up, holding you against his broad chest with one massive hand, your pussy still speared on his thick member. As you feel the demon's cum start running out of you, the creature licks you with his long forked tongue. 'I'll just keep fucking you till you're only a whimpering little bitch - and then throw you to the others so they can fill your sloppy holes too! But let's get to more comfortable surroundings first...' With that, your surroundings shimmer and disappear and you find yourself somewhere else. From the fires, screams and horrible scenes you can see all around you, it must be the demon's home in hell - and now yours too. Forever.";
 			now tailname of player is "DBrute Slave";
-			Now facename of player is "DBrute Slave";
+			now facename of player is "DBrute Slave";
 			now skinname of player is "DBrute Slave";
 			now bodyname of player is "DBrute Slave";
 			now cockname of player is "DBrute Slave";
@@ -111,7 +111,7 @@ to say DemonBruteVictoryFuck:
 		say "     The abyssal creature lines his throbbing purple cock-head up with your winking pucker, and without a care for whether or not you're ready, he thrusts forcefully inside your body. The nubs pull at your unprepared anal opening and your mouth gapes open as your ring stretches around his inhuman member. The beast laughs at your obvious discomfort as you cry out in both pain and ecstasy. 'I should take you back to the pit with me. Show your pitiful mortal body what it means to be fucked till you're raw!' You whimper once more as the demon slowly pulls his titanic phallus from your gaping tunnel, feeling every nub and vein as it tugs along your sensitive walls.";
 		say "     Your eyes begin to tear up, and you bite your lip to keep from crying out as you feel his hot pre filling you up inside. Though grateful for the lubrication this adds, you feel as if the fire inside you is a sign of the demon's own building desire to wreck your already abused hole. The brute bends low over your form and growls into your ear, 'Let's see how long you last before breaking.' With another lustful roar, the unholy brute batters his way balls deep into your depths, and with ungodly fervor, begins to fuck your writhing form deep and hard.";
 		WaitLineBreak;
-		say "     Your mouth gapes open and you're too breathless to even whimper as you are used as a living fuck-doll by the monster bending over you. Your entire being has become focused on the pillar of demon-flesh that has made your asshole its home. It is as if some invading force is staking its claim on your innermost being, and will do so by any force necessary. Every moment of being taken by him seems to stretch out endlessly in its confusing mixture of pain and pleasure. After what feels like an hour of anal abuse, your colon is finally stretched wide enough to allow free movement of the invader. Your wrecked hole squelches with the hot demon pre that he has been leaking constantly into you - every powerful thrust churns your insides as he pounds forward faster and faster. The bumps on his cock provide constant stimulation to your insides, scraping along your prostate in the most agonisingly pleasurable of ways.";
+		say "     Your mouth gapes open and you're too breathless to even whimper as you are used as a living fuck-doll by the monster bending over you. Your entire being has become focused on the pillar of demon-flesh that has made your asshole its home. It is as if some invading force is staking its claim on your innermost being, and will do so by any force necessary. Every moment of being taken by him seems to stretch out endlessly in its confusing mixture of pain and pleasure. After what feels like an hour of anal abuse, your colon is finally stretched wide enough to allow free movement of the invader. Your wrecked hole squelches with the hot demon pre that he has been leaking constantly into you - every powerful thrust churns your insides as he pounds forward faster and faster. The bumps on his cock provide constant stimulation to your insides, scraping along your prostate in the most agonizingly pleasurable of ways.";
 		say "     The worst thing about this demonic rape is that you can't help but actually let out grunts of pleasure with every powerful thrust - something that amuses the purple fiend to no end as he grins down at you. 'Get ready to feel what you were made for!' he bellows, throwing back his head for an evil laugh. Then the demon leers down at your impotent form and, with a grunt of pleasure and a vicious thrust, he buries himself deep. He roars as his balls push forth a torrent of hot demon seed inside you. The sensation of being filled by this monster is just too much and you begin to cum as well, your abused anal sphincter twitching tightly around the pillar inside you as your cock empties itself onto the ground beneath you. He begins to thrust and pump his hips once more, the flow of boiling demon lust not abating one bit as he drives his cock in and out of your destroyed asshole. He pumps your bowels so full of his fierce seed that it easily fills your colon and gushes into your stomach. There is so much cum it continues up your throat, spilling out in massive quantities from your panting mouth. Each thrust pushes a fresh gout of cum into your expanding belly and out of your cum-drooling mouth.";
 		WaitLineBreak;
 		if DBCaptureQuestVar is 4:
@@ -147,13 +147,13 @@ to say DemonBruteVictoryFuck:
 		say "     The abyssal creature lines his throbbing purple cock-head up with your winking pucker, and without a care for whether or not you're ready, he thrusts forcefully inside your body. The nubs pull at your unprepared anal opening and your mouth gapes open as your ring stretches around his inhuman member. The beast laughs at your obvious discomfort as you cry out in both pain and ecstasy. 'I should take you back to the pit with me. Show your pitiful mortal body what it means to be fucked till you're raw!' You whimper once more as the demon slowly pulls his titanic phallus from your gaping tunnel, feeling every nub and vein as it tugs along your sensitive walls.";
 		say "     Your eyes begin to tear up, and you bite your lip to keep from crying out as you feel his hot pre filling you up inside. Though grateful for the lubrication this adds, you feel as if the fire inside you is a sign of the demon's own building desire to wreck your already abused hole. The brute bends low over your form and growls into your ear, 'Let's see how long you last before breaking.' With another lustful roar, the unholy brute batters his way balls deep into your depths, and with ungodly fervor, begins to fuck your writhing form deep and hard.";
 		WaitLineBreak;
-		say "     Your mouth gapes open and you're too breathless to even whimper as you are used as a living fuck-doll by the monster bending over you. Your entire being has become focused on the pillar of demon-flesh that has made your asshole its home. It is as if some invading force is staking its claim on your innermost being, and will do so by any force necessary. Every moment of being taken by him seems to stretch out endlessly in its confusing mixture of pain and pleasure. After what feels like an hour of anal abuse, your colon is finally stretched wide enough to allow free movement of the invader. Your wrecked hole squelches with the hot demon pre that he has been leaking constantly into you - every powerful thrust churns your insides as he pounds forward faster and faster. The bumps on his cock provide constant stimulation to your insides, scraping along your sensitive walls in the most agonisingly pleasurable of ways.";
+		say "     Your mouth gapes open and you're too breathless to even whimper as you are used as a living fuck-doll by the monster bending over you. Your entire being has become focused on the pillar of demon-flesh that has made your asshole its home. It is as if some invading force is staking its claim on your innermost being, and will do so by any force necessary. Every moment of being taken by him seems to stretch out endlessly in its confusing mixture of pain and pleasure. After what feels like an hour of anal abuse, your colon is finally stretched wide enough to allow free movement of the invader. Your wrecked hole squelches with the hot demon pre that he has been leaking constantly into you - every powerful thrust churns your insides as he pounds forward faster and faster. The bumps on his cock provide constant stimulation to your insides, scraping along your sensitive walls in the most agonizingly pleasurable of ways.";
 		say "     The worst thing about this demonic rape is that you can't help but actually let out grunts of pleasure with every powerful thrust - something that amuses the purple fiend to no end as he grins down at you. 'Get ready to feel what you were made for!' he bellows, throwing back his head for an evil laugh. Then the demon leers down at your impotent form and, with a grunt of pleasure and a vicious thrust, he buries himself deep. He roars as his balls push forth a torrent of hot demon seed inside you. The sensation of being filled by this monster is just too much and you begin to shudder with an intense full body orgasm as well, your abused anal sphincter twitching tightly around the pillar inside you. He begins to thrust and pump his hips once more, the flow of boiling demon lust not abating one bit as he drives his cock in and out of your destroyed asshole. He pumps your bowels so full of his fierce seed that it easily fills your colon and gushes into your stomach. There is so much cum it continues up your throat, spilling out in massive quantities from your panting mouth. Each thrust pushes a fresh gout of cum into your expanding belly and out of your cum-drooling mouth.";
 		WaitLineBreak;
 		if DBCaptureQuestVar is 4:
 			say "     The brute stands up, holding you against his broad chest with one massive hand and your asshole still speared on his thick member. As you feel the demon's cum start running out of you, the creature licks you with his long forked tongue. 'I'll just keep fucking you till you're only a whimpering little bitch - and then throw you to the others so they can fill your sloppy holes too! But let's get to more comfortable surroundings first...' With that, your surroundings shimmer and disappear and you find yourself somewhere else. From the fires, screams and horrible scenes you can see all around you, it must be the demon's home in hell - and now yours too. Forever.";
 			now tailname of player is "DBrute Slave";
-			Now facename of player is "DBrute Slave";
+			now facename of player is "DBrute Slave";
 			now skinname of player is "DBrute Slave";
 			now bodyname of player is "DBrute Slave";
 			now cockname of player is "DBrute Slave";
@@ -171,7 +171,7 @@ to say DemonBruteCumBathScene:
 	else if player is submissive:
 		say "     Your eyes gawk wide at the swollen cock-head above you as you watch his urethra dilate to the size of an old quarter coin. The last thing you see as you open your mouth to eagerly accept his corrupted demon batter, is a torrent of semen as it spews forth with an incredible force into your face, turning your vision white. The demon jizz is hot and sticky, but the taste is practically ambrosia to your submissive mind, and you enthusiastically gulp down as much of his cum as you can. The sensation of being covered in hot cum and drinking his corrupted seed is too much for you and you reach an intense climax,[if player is male] spraying a thick load of your own jizz to join the pool of semen you're practically swimming in[else if player is female] gushing your liquid pleasure with a forceful intensity into the pool of semen you're practically swimming in[else] shaking with such intensity that you almost forget to come up for air as your limp form becomes submerged in the ever-growing pool of demon cum[end if].";
 	else:
-		say "     Your eyes gawk wide at the swollen cock-head above you as you watch his urethra dilate to the size of an old quarter coin. The last thing you see as before you shut your eyes tightly, is a torrent of semen as it spews forth with an incredible force at your face. You gasp in surprise, unintentionally receiving a mouthful demon cum into your mouth. The taste is salty and it's heat intense, causing you to splutter and cough as you are hosed down. The jizz is hot and sticky on your prone form, and the sensation of being covered in his cum sends you over the edge as well. You [if player is male]spray a thick load of your own liquid lust to join the pool of semen you're practically swimming in[else if player is female]shudder and start squirting your own femcum into the pool of semen you're practically swimming in[else]shake from the intensity of the orgasm as your limp body becomes submerged in the ever-growing pool of demon cum[end if].";
+		say "     Your eyes gawk wide at the swollen cock-head above you as you watch his urethra dilate to the size of an old quarter coin. The last thing you see as before you shut your eyes tightly, is a torrent of semen as it spews forth with an incredible force at your face. You gasp in surprise, unintentionally receiving a mouthful demon cum into your mouth. The taste is salty and its heat intense, causing you to splutter and cough as you are hosed down. The jizz is hot and sticky on your prone form, and the sensation of being covered in his cum sends you over the edge as well. You [if player is male]spray a thick load of your own liquid lust to join the pool of semen you're practically swimming in[else if player is female]shudder and start squirting your own femcum into the pool of semen you're practically swimming in[else]shake from the intensity of the orgasm as your limp body becomes submerged in the ever-growing pool of demon cum[end if].";
 	WaitLineBreak;
 	say "     As you lie there panting and covered in steaming demon cum, the brute leers down at you. 'Remember that this is all you're good for.' He laughs maliciously before disappearing in a puff of smoke, back to whatever hole he crawled out of. Sticky and broken, you weakly get to your feet, attempt to wipe the excess globules of cum from your body, and continue on your journey.";
 
@@ -185,11 +185,10 @@ to say DemonBruteFaceFuck:
 	say "     The hell-fiend becomes unrelenting as he approaches his climax, thrusting his cock as hard into your throat as he can, while his tail pushes deep into your over-stimulated body, massaging every sensitive spot inside you. With one final powerful thrust, he buries his cock down your throat and unloads a massive load of hot demon cum directly into your stomach, causing your belly to rapidly swell and expand.";
 	if player is kinky:
 		say "     As he holds himself there, you feel his tail shoot deeper inside your intestines before giving way to an entirely new sensation. The heat seems to be dispersing into your lower bowel. Though still bloated with cum and still feeling him pump hot hell-seed into you, you don't feel your belly expanding any more. It dawns on you that his tail-tip - somehow - has reached your stomach and created a channel into your intestines, causing the cum to flow towards your back end. Hot cum reaches your anal opening and pours out around the thick tail imbedded inside you.";
-	say "     The sensation is just too much for your already-taxed body to handle, and you can only fail to hold back the powerful orgasm racking your over-stimulated form. As your body shakes with pleasure, the demon roars with laughter at your pathetic state, still injecting you with more and more of his corrupted seed. Only after the hellish creature finishes up inside you some while later does he whip his spaded tip from your abused anal opening. ";
+	say "     The sensation is just too much for your already-taxed body to handle, and you can only fail to hold back the powerful orgasm racking your over-stimulated form. As your body shakes with pleasure, the demon roars with laughter at your pathetic state, still injecting you with more and more of his corrupted seed. Only after the hellish creature finishes up inside you some while later does he whip his spaded tip from your abused anal opening";
 	if player is kinky:
-		say "A river of his hot cum continues to gush from your overfilled bowels, causing a number of orgasmic aftershocks to wrack your trembling pucker.";
-	else:
-		say ".";
+		say ". A river of his hot cum continues to gush from your overfilled bowels, causing a number of orgasmic aftershocks to wrack your trembling pucker";
+	say ".";
 	WaitLineBreak;
 	say "     With the demon's cock finally having stopped filling your bloated stomach, he pulls his softening purple dick from your gaping maw. He was right, all you can taste is his cum as you burp and cough up globs of his thick white load from your painfully stretched belly. The terrible brute laughs as he inspects your pathetic, bloated body. 'Not bad as a cum-dump, slave. I'll enjoy taking you again when I catch you next time!' With that he disappears into a cloud of smoke leaving you panting, coughing up hot hell-seed, and nursing your swollen gut. Despite the healing effects of the nanites, you feel that your body is not made to take such violent abuse from hellish creatures.";
 
@@ -243,55 +242,67 @@ to say Brutus_DBCapture:
 	say "     Defeated and now captured, the demon is pinned under a panting and obviously aroused Brutus, leaving it open for your amusements. Your demonic companion turns to you, silently awaiting your [if DBCaptureQuestVar is 5]orders[else]instructions[end if], but obviously eager for this opportunity to sate its [if DBCaptureQuestVar is 5]carnal and violent lusts[else]carnal lust[end if].";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if demonbrutestatus < 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Brutus fucks";
 		now sortorder entry is 5;
 		now description entry is "watch while Brutus fucks the other demon";
+	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck it";
 		now sortorder entry is 1;
 		now description entry is "fuck the demon while Brutus holds it down";
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Blow job";
 		now description entry is "make it suck you off";
 		now sortorder entry is 6;
+	[]
 	if player is male and demonbrutestatus < 2:
 		choose a blank row in table of fucking options;
 		now title entry is "Spit-roast";
 		now sortorder entry is 2;
 		now description entry is "fuck the demon while Brutus takes its mouth";
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Double penetration";
 		now sortorder entry is 3;
 		now description entry is "have both of you to fuck the demon";
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Tag team fuck";
 		now sortorder entry is 4;
 		now description entry is "take turns fucking the demon";
+	[]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Ride it (vaginal)";
 		now sortorder entry is 8;
 		now description entry is "ride the captured demon's cock";
+	[]
 		choose a blank row in table of fucking options;
 		now title entry is "Cunnilingus";
 		now description entry is "make it eat out your pussy";
 		now sortorder entry is 7;
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Ride it (anal)";
 	now sortorder entry is 9;
 	now description entry is "stuff your ass with the demon's cock";
+	[]
 	if demonbrutestatus > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Brutus receives vaginal";
 		now sortorder entry is 10;
 		now description entry is "watch while Brutus rides the other demon's cock";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Brutus receives anal";
 	now sortorder entry is 11;
 	now description entry is "watch while Brutus takes the other demon's cock up his ass";
+	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
 		say "[link][y] - [title entry][as][y][end link][line break]";
@@ -331,6 +342,7 @@ to say Brutus_DBCapture:
 					say "[dbcapturesex_10]";  [Brutus rides - vag]
 				else if num is 11:
 					say "[dbcapturesex_11]";  [Brutus rides - anal]
+				wait for any key;
 		else:
 			say "Invalid Option. Pick between 0 and [the number of filled rows in the table of fucking options].";
 
@@ -507,6 +519,7 @@ instead of trading the demon tooth when the current action involves the Nermine:
 						say "     With skilled fingers, Nermine clamps the tooth into a small metal socket with a loop on the back and pulls a leather string through that. She hands you your new demontooth amulet and leans close to whisper some magical words you can use to summon the captured demon from within.";
 						now DBCaptureQuestVar is 5;   [captured and controlled]
 						now demon brute is tamed;
+						add "Tamed" to Traits of demon brute;
 						LineBreak;
 						say "     (That demon brute is now controlled! You can make him your active companion by typing [bold type][link]pet demon brute[end link][roman type] and initiate sex with him while active by typing [bold type][link]fuck demon brute[end link][roman type]. You can see all the pets and followers you have with the [bold type][link]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. Want to leave a companion home for a while and go out alone? Use [bold type][link]pet dismiss[end link][roman type], or just [bold type][link]dismiss[end link][roman type])";
 				else:
@@ -536,7 +549,7 @@ to say ChurchDemonCleanse:
 			say "     Then it's time to start. Grasping the demontooth amulet in one hand, you call out the magic words to summon your captive, who materializes in a cloud of purple smoke. Growling at you, as usual, he nevertheless seems a bit distracted, the surroundings seemingly making him itchy. Ordering the large demon to lie down and keep still, you take the first bottle of holy water in hand, pouring some on the washcloth and dab it against his chest. In the instant of contact with the demon's hot skin, the water boils into steam in a violent reaction. The demon chuckles darkly as you pull back your hand. Thankfully there wasn't too much on the washcloth so you didn't burn yourself.";
 			say "     Looks like this requires a bit of a different approach. Taking the plastic water bottle in hand, you gain a few steps distance, then use it to splash the demon. The resulting explosion of steam is about what you'd have expected when aiming a water cannon at molten lava. The bottle is empty pretty soon, and you take another, and another. With all the steam boiling off from the demon, it's getting pretty warm in here and sometimes you can barely see him through the clouds, but it's endurable. You just hope this works and you're not just wasting your time - though you think you noticed some difference, a lessening of the amount of steam, after the sixth bottle. Armed with your next to last one, you step a bit closer, splashing parts of the demon you missed before. Then it's the last bottle, which you upend all over his head and chest, getting only a last little sizzling sound before that too stops.";
 			WaitLineBreak;
-			say "     Looking down on the thoroughly drenched, unconscious demon, you do notice some differences in him. He's a bit lighter purple in the shade of his skin and you could swear that his horns and claws a somewhat smaller and less sharp. Then he sits up, opening his eyes and focuses on you with their now azure blue slitted irises. A curious look comes to his face as he starts to rub his skin, then runs a claw over his arm, leaving a bleeding but shallow scratch. 'That hurts. But why don't I hurt? Inside. I always hurt inside... you made it stop.' Hesitantly, as if he has trouble remembering the expression, he smiles - which still is rather frightening, in light of his many many sharp teeth.";
+			say "     Looking down on the thoroughly drenched, unconscious demon, you do notice some differences in him. He's a bit lighter purple in the shade of his skin and you could swear that his horns and claws a somewhat smaller and less sharp. Then he sits up, opening his eyes and focuses on you with their now azure blue slitted irises. A curious look comes to his face as he starts to rub his skin, then runs a claw over his arm, leaving a bleeding but shallow scratch. 'That hurts. But why don't I hurt? Inside. I always hurt inside... you made it stop.' Hesitantly, as if he has trouble remembering the expression, he smiles - which still is rather frightening, in light of his many, many sharp teeth.";
 			say "     Hey, looks like it worked. Asking the demon what he'd like to do to you if he were free, you get a puzzled expression and a shrug as an answer. Definitively a step forward from threats of dismemberment. With this hopefully leading to a bit nicer a relationship, having a name to talk to him seems appropriate too, so you ask him about it. As it turns out, your captive demon has the unpronounceable name Ba'haz-eu'nizaal't'chha. You decide to just call him [bold type]'Brutus'[roman type], a name he accepts without complaint.";
 			say "     For now, you banish the demon brute back into your amulet with a magical command. Turning towards the door, you see Aaron standing there, smiling as he gives you a thumbs up. Thanking the fox, you follow him as he leads you back out to the main room of the chapel.";
 			now DBCaptureQuestVar is 6;
@@ -549,8 +562,35 @@ to say ChurchDemonCleanse:
 
 Section 2 - Amulet, Pet & Sex
 
+Table of GameCharacterIDs (continued)
+object	name
+demon brute	"demon brute"
+
 demon brute is a pet. demon brute is a part of the player.
 understand "Brutus" as demon brute.
+ScaleValue of demon brute is 4. [larger than human]
+Cocks of demon brute is 1.
+Cock Length of demon brute is 18.
+Cock Width of demon brute is 15. [baseball sized balls]
+Testes of demon brute is 2.
+Cunts of demon brute is 0.
+Cunt Length of demon brute is 0.
+Cunt Width of demon brute is 0.
+Breasts of demon brute is 2.
+Breast Size of demon brute is 0.
+[Basic Interaction states as of game start]
+PlayerMet of demon brute is false.
+PlayerRomanced of demon brute is false.
+PlayerFriended of demon brute is false.
+PlayerControlled of demon brute is false.
+PlayerFucked of demon brute is false.
+OralVirgin of demon brute is false.
+Virgin of demon brute is true.
+AnalVirgin of demon brute is false.
+PenileVirgin of demon brute is false.
+SexuallyExperienced of demon brute is true.
+MainInfection of demon brute is "Demon Brute".
+
 The description of demon brute is "[DemonBrutePetDesc]".
 The icon of demon brute is Figure of DemonBrute_icon.
 The weapon damage of demon brute is 8.
@@ -632,7 +672,7 @@ to say demon brute talk:
 					break;
 				else:
 					say "Invalid choice. Type [link]1[end link] to chat with him, [link]2[end link] to have sex [link]3[end link] to banish him again.";
-			if calcnumber is 1:  [chat]
+			if calcnumber is 1: [chat]
 				say "     Talking with the demon brute about this and that, the conversation eventually drifts to... hell, that being the only thing he's actually knowledgeable about. Stories about an infinite realm of pain and suffering make you shudder, especially as Brutus tells you that demons aren't native to that place either. They're made, corrupted by endless times of despair with the only distraction from their pain the torment of newcomers, just like they lived through themselves.";
 				say "     He can't remember who - or what - he was before, only that he earned a place in the Infernal Legion through violence, betrayal and malice, then was sent here. He concludes '...after that, you made me your slave. And then you took away the burning, the pain inside me.' The big brute turns his head to you, brows wrinkling over his azure blue eyes, as he is seemingly still trying to figure out why anyone would do something like that. Help another.";
 				if companion of player is not demon brute:
@@ -642,7 +682,7 @@ to say demon brute talk:
 		[	else if calcnumber is 3: [make him work - there could be some situations where a strong pet is useful]
 				say "     You say 'I got a task for you, my pet...'";
 				say "[DemonBruteWorkMenu]";]
-			else:           [banish]
+			else: [banish]
 				say "     You say 'I changed my mind. Go back into the amulet and rest, demon.' and dangle the amulet in front of his face and murmur the magic words Nermine told you. With a shrug, the demon brute turns into purple mist and is absorbed by the amulet.";
 				if companion of player is demon brute:
 					now companion of player is nullpet;
@@ -657,7 +697,7 @@ to say demon brute talk:
 				break;
 			else:
 				say "Invalid choice. Type [link]1[end link] to mock him, [link]2[end link] to have sex [link]3[end link] to banish him again.";
-		if calcnumber is 1:  [mock]
+		if calcnumber is 1: [mock]
 			say "     You step up to the creature and run your hand over his bulging muscles, squeezing them, then pull up his arm and look at the long claws at the end of his fingers. 'So strong, such sharp claws - and nevertheless so helpless you are, little demon.' You pat the cheek of his snarling face and dangle your amulet in front of him. 'Not so powerful now, hm? Controlled by this little trinket. You're mine now.'";
 			if companion of player is not demon brute:
 				say "     To show him your power again, you murmur the magic words Nermine told you, banishing him back inside the amulet.";
@@ -666,7 +706,7 @@ to say demon brute talk:
 	[	else if calcnumber is 3: [make him work - there could be some situations where a strong pet is useful]
 			say "     You say 'I got a task for you, my pet...'";
 			say "[DemonBruteWorkMenu]";]
-		else:           [banish]
+		else: [banish]
 			say "     You say 'I changed my mind. Back to your cage, little demon.' and dangle the amulet in front of his face and murmur the magic words Nermine told you. With a snarl, the demon brute turns into purple mist and is absorbed by the amulet.";
 			if companion of player is demon brute:
 				now companion of player is nullpet;
@@ -713,21 +753,14 @@ to say DBRelationshipTalkMenu:
 					say "[DemonBruteSexMenu]";
 				else if (nam is "Talk about David"):
 					say "[DBTalk2]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				if companion of player is demon brute:
-					say "     You step back from the purple demon, shaking your head slightly as he gives a questioning look.";
-				else:
-					say "     You murmur the magic words Nermine told you. With a shrug, the demon brute turns into purple mist and is absorbed by the amulet.";
-				WaitLineBreak;
+			now sextablerun is 1;
+			if companion of player is demon brute:
+				say "     You step back from the purple demon, shaking your head slightly as he gives a questioning look.";
 			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+				say "     You murmur the magic words Nermine told you. With a shrug, the demon brute turns into purple mist and is absorbed by the amulet.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -806,10 +839,10 @@ to say DBTalk2:
 		say "     Taking Brutus aside so you can talk privately, you ask him what he thinks about David now. The demon groans and a pleading expression fills his eyes. Then he says, 'I care for him, more than I ever have for anyone. More than... for my life. Thank you for ensuring that - he isn't hurt.' There is a slight crunch as the claws on his feet dig into the ground and leave several short furrows in it before Brutus stops himself. Realizing that things are just bubbling away under the surface of his mind, you ask him to tell you how bad it is - and the demon allows himself a howl in frustration. 'It just gets stronger. Always stronger. I feel I should just grab him, hold him down and fuck him. Hard. Rough. Again, and again - all the time! Fill him with my seed! Never let him go. Never!' He huffs and growls as the words burst forth, clenching his fists hard to bring himself under control again. You can see droplets of purple blood drip down from his hands, showing that he is pushing hard enough to let his claws pierce their palms.";
 		say "     Staring at his feet, Brutus adds after a moment, 'Please, master - do not let me loose, ever. I will endure, as long as I can be with him. Unbelievable that he wants to be close, even though he has seen the beast inside. It would... break me, if I did something to him.' It is hard to watch the desperation in his being shine out, now that he doesn't hide it. Almost unbelievable, what one can endure out of love. Just suppressing these issues is clearly not the answer. You should better find a specialist to consult. Someone with a deeper understanding of demons - or maybe interspecies sex - to resolve this in a more healthy way for Brutus...";
 	else if libido of David is 62: [Talked with Nermine about sharing Brutus with David - refused]
-		say "     As you bring your soldier friend up, Brutus's large shaft grows and throbs, showing his uncontrolled desire for the human he cares so much about. Your purple demon groans in lust and a pleading expression fills his eyes. Then he says, 'I care for him, more than I ever have for anyone. More than... for my life. Please, let us find a way to make sure I can be with him forever.' His eyes search out the amulet hanging around your neck and Brutus indicates to it with a large clawed hand, 'Nermine is right, if he was my master too, the desire to dominate him would surely vanish. Understand, if one of my kind has accepted a lord - there is no doubt, no struggle - you obey and live out his will. And... David has my heart, so that is what I want to do.' The tall demon's eyes focus on you with blazing intensity, then he kneels, lowering his head in submission as he says, 'I know it is a lot to ask, to share control, share your power - but please, [if player is not male and player is female]mistress[else]master[end if]... I feel incomplete, without him. I want to be his. Let me fuck Nermine's pet, let us do the ritual. This, I beg you to allow.'";
+		say "     As you bring your soldier friend up, Brutus's large shaft grows and throbs, showing his uncontrolled desire for the human he cares so much about. Your purple demon groans in lust and a pleading expression fills his eyes. Then he says, 'I care for him, more than I ever have for anyone. More than... for my life. Please, let us find a way to make sure I can be with him forever.' His eyes search out the amulet hanging around your neck and Brutus indicates to it with a large clawed hand, 'Nermine is right, if he was my master too, the desire to dominate him would surely vanish. Understand, if one of my kind has accepted a lord - there is no doubt, no struggle - you obey and live out his will. And... David has my heart, so that is what I want to do.' The tall demon's eyes focus on you with blazing intensity, then he kneels, lowering his head in submission as he says, 'I know it is a lot to ask, to share control, share your power - but please, [if player is purefemale]mistress[else]master[end if]... I feel incomplete, without him. I want to be his. Let me fuck Nermine's pet, let us do the ritual. This, I beg you to allow.'";
 		say "     Having made his case, Brutus stands back up and takes his position by your side again, falling back into his task of serving as a bodyguard. Being your demonic companion, bound by magic and sworn to service out of thanks for freeing him from evil, he doesn't expect a discussion or anything - he simply gets back on duty and leaves you to ponder the words on your own. Maybe you should indeed visit Nermine again and let him pay her price. A happy ending for the unlikely lovers would be a nice thing to see...";
 	else if libido of David is 63: [Ritual by Nermine is ready (sharing Brutus with David)]
-		say "     As you bring your soldier friend up, Brutus's large shaft grows and throbs, showing his uncontrolled desire for the human he cares so much about. Although maybe it is mixed a bit right now with lust for someone else right now, as his next words are, 'Thank you for letting me have the elf, [if player is not male and player is female]mistress[else]master[end if]. His kind is desirable for us demons. To fuck one of the ancient enemy...' The purple demon gives an aroused grumble from his broad chest and a glistening drop of pre-cum forms at his cock-slit. 'But even though my lust for that elven boy and with his hole wrapped around my cock, the goal of being with David was always in the forefront of my mind. I can't wait to be with him, to be his, fully and forever. Please let us do the ritual in the bunker. Soon.";
+		say "     As you bring your soldier friend up, Brutus's large shaft grows and throbs, showing his uncontrolled desire for the human he cares so much about. Although maybe it is mixed a bit right now with lust for someone else right now, as his next words are, 'Thank you for letting me have the elf, [if player is purefemale]mistress[else]master[end if]. His kind is desirable for us demons. To fuck one of the ancient enemy...' The purple demon gives an aroused grumble from his broad chest and a glistening drop of pre-cum forms at his cock-slit. 'But even though my lust for that elven boy and with his hole wrapped around my cock, the goal of being with David was always in the forefront of my mind. I can't wait to be with him, to be his, fully and forever. Please let us do the ritual in the bunker. Soon.";
 	else if libido of David is 64: [Talked with Lilith about sharing Brutus with David - refused]
 		say "     As you bring your soldier friend up, Brutus's large shaft grows and throbs, showing his uncontrolled desire for the human he cares so much about. Your purple demon groans in lust and a pleading expression fills his eyes. Then he says, 'I care for him, more than I ever have for anyone. More than... for my life. Please, let us find a way to make sure I can be with him forever.' Raising a large hand and flexing his clawed finger, he continues, 'I - I was almost ready to pay the price of that bitch Lilith - any price, really - to be with David. Thank you for being there with me. It would not... be right... to damn someone as her pet for my own desires. There must be another way, or...' Brutus's brows draw together and a look of intense thought crosses his face. 'Hmm, Lilith thinks I'm just a beast, something to ravage her captive into submission, damn him with my touch. But I'm not that, not anymore. I learned about pleasure, together with David, so... maybe we should go back.'";
 	else if libido of David is 65: [Talked with Lilith about sharing Brutus with David - freed Liam]
@@ -883,7 +916,7 @@ to say DBTalk2:
 				WaitLineBreak;
 				say "     Still breathing hard from his orgasm and clutching David to his chest with one strong arm Brutus pats over the bed with his other hand, finding your amulet a moment later and raising it into the air by the leather cord it hangs from. A satisfied grin spreads over the demon's tooth-filled mouth, followed by him intoning a long and insanely tongue-twisting sequence of strange words. As he does so, the magical item starts to hum and glow visibly, the orb of brightness around it at first wavering a little bit, then expanding more and more. Finishing the intonation, the purple demon then continues in English, most likely to David's or your benefit. He says, 'I claim this man as mine, as he bears the mark of my seed deep inside him and has readily surrendered his will to mine,' followed by a kiss on the young man's lips. 'We'll be together forever now, my love, my slut, my David!'";
 				say "     With his words still hanging in the air, the sphere of purple light expands to envelop them both and with a flash of brightness, both of them vanish in a cloud of smoke, with swirls through the air in a small vortex, being absorbed by the amulet as it drops onto the bed. After a moment of silence that fills the bunker after the two male's disappearance, you shake yourself out of your paralysis and walk over to the bed, taking the amulet into your possession again. It is pretty hot at first, having gained a glowing band of metal at the base of the tooth now, but that rapidly cools and soon is safe to touch. With interest, you realize that the upper end of Brutus's knocked-out tooth is now ringed by what must be the re-shaped remnant of David's dog tags, as you can see the stamped-in letters 'DAVID JACKSON' on the thin strip of metal.";
-				remove David from play;
+				now David is nowhere;
 				now HP of David is 100;
 				now libido of David is 86;
 			else:
@@ -1001,7 +1034,7 @@ to say DemonBruteSex1: [cock sucked by demon brute]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Exhausted and pretty sticky as you are now, you lie there on the ground for a while, resting and looking up at Brutus's form, still kneeling obediently beside you. Finally you sit up with a sigh, thank him for his service and tell the large demon to resume guarding you.";
-			else:                   [back into the amulet]
+			else: [back into the amulet]
 				say "     Exhausted and pretty sticky as you are now, you lie there on the ground for a while, resting and looking up at Brutus's form, still kneeling obediently beside you. Finally you sit up with a sigh, thank him for his service and murmur the magic words to send the demon back to his resting place inside your amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "     You step up to the demon, running a hand over his wide chest, tracing his muscles with your fingers. Going lower and lower, you stroke over his hard, defined abs, then rub your fingers over the sensitive folds between his legs. Brutus moans in his deep voice as you touch him, reveling in the feelings it creates.";
@@ -1014,7 +1047,7 @@ to say DemonBruteSex1: [cock sucked by demon brute]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Exhausted and pretty sticky as you are now, you lie there on the ground for a while, resting and looking up at Brutus's form, still kneeling obediently over you. Finally you sit up with a sigh, thank him for his service and tell the large demon to resume guarding you.";
-			else:                   [back into the amulet]
+			else: [back into the amulet]
 				say "     Exhausted and pretty sticky as you are now, you lie there on the ground for a while, resting and looking up at Brutus's form, still kneeling obediently over you. Finally you sit up with a sigh, thank him for his service and murmur the magic words to send the demon back to his resting place inside your amulet.";
 		else:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
@@ -1028,7 +1061,7 @@ to say DemonBruteSex1: [cock sucked by demon brute]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     As hot and riled up as you still are, you can't bring yourself to bother disciplining the demon for getting himself off and creaming you. Oh well - letting your head sink back to rest on the ground, you tell the creature to resume guarding you.";
-			else:                   [back into the amulet]
+			else: [back into the amulet]
 				say "     As hot and riled up as you still are, you can't bring yourself to bother disciplining the demon for getting himself off and creaming you. Oh well - letting your head sink back to rest on the ground, you intone the magic words to banish him again. Your well-hung fucker turns into a cloud of purple mist and vanishes into the amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "     You smile at the demon and say 'I command you to please me - suck my cock - and no teeth!' Grinning, you watch the creature's hand move down to its crotch, as if to grab its cock. A snarl crosses the demon's face as he remembers that you took it from him - at that moment, only the binding spell of the amulet holds him back from throwing you to the ground. Secure in your power over him, you slip your clothes off slowly to tease the demon a bit, then step up to him and push on his shoulders so he kneels down. Stroking your hard shaft, you hold it out for him and say 'Get to work.'";
@@ -1038,7 +1071,7 @@ to say DemonBruteSex1: [cock sucked by demon brute]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     As hot and riled up as you still are, you can't bring yourself to bother disciplining the demon for getting himself off without an order. Oh well - letting your head sink back to rest on the ground, you tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     As hot and riled up as you still are, you can't bring yourself to bother disciplining the demon for getting himself off without an order. Oh well - letting your head sink back to rest on the ground, you intone the magic words to banish him again. Your well-hung fucker turns into a cloud of purple mist and vanishes into the amulet.";
 		else:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
@@ -1056,7 +1089,7 @@ to say DemonBruteSex2: [suck demon cock]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     After luxuriating a while in having the demon's forked tongue lick you all over, you put your thoughts back on other things - like surviving in this destroyed city - and tell Brutus to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     After luxuriating a while in having the demon's forked tongue lick you all over, you put your thoughts back on other things - like surviving in this destroyed city - and intone the magic words to send him away again. Your obedient cum-fountain turns into a cloud of purple mist and vanishes into the amulet.";
 		else if DemonBruteStatus is 1: [herm]
 			say "     You step up to the demon, running a hand over his wide chest, tracing his muscles with your fingers. Going lower and lower, you stroke over his hard, defined abs, then rub your hand along his thick, veiny cock. Brutus moans in his deep voice as you touch him, reveling in the feelings it creates.";
@@ -1069,7 +1102,7 @@ to say DemonBruteSex2: [suck demon cock]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     After luxuriating a while in having the demon's forked tongue lick you all over, you put your thoughts back on other things - like surviving in this destroyed city - and tell Brutus to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     After luxuriating a while in having the demon's forked tongue lick you all over, you put your thoughts back on other things - like surviving in this destroyed city - and intone the magic words to send him away again. Your obedient cum-fountain turns into a cloud of purple mist and vanishes into the amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "ERROR-Demon Brute-[DemonBruteStatus]D: He shouldn't have a cock right now! Please report how you got to this message.";
@@ -1085,7 +1118,7 @@ to say DemonBruteSex2: [suck demon cock]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     After luxuriating a while in having the demon's forked tongue lick you all over, you put your thoughts back on other things - like surviving in this destroyed city, and tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     After luxuriating a while in having the demon's forked tongue lick you all over, you put your thoughts back on other things - like surviving in this destroyed city, and intone the magic words to banish him again. Your obedient cum-fountain turns into a cloud of purple mist and vanishes into the amulet.";
 		else if DemonBruteStatus is 1: [herm]
 			say "     You smile at the demon and say 'I'm in the mood for some cock right now. Stand there while I suck you off.' Grinning, you watch the creature's thick member fill out and come to full hardness, its muscles trembling - aching to just throw you down and rape you, but being held back by the binding spell of the amulet. Secure in your power over him, you slip your clothes off slowly to tease the demon a bit, then step up to him and kneel down.";
@@ -1096,7 +1129,7 @@ to say DemonBruteSex2: [suck demon cock]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     After luxuriating a while in having the demon's forked tongue lick you all over, you put your thoughts back on other things - like surviving in this destroyed city - and tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     After luxuriating a while in having the demon's forked tongue lick you all over, you put your thoughts back on other things - like surviving in this destroyed city - and intone the magic words to banish him again. Your obedient cum-fountain turns into a cloud of purple mist and vanishes into the amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "ERROR-Demon Brute-[DemonBruteStatus]D: He shouldn't have a cock right now! Please report how you got to this message.";
@@ -1116,7 +1149,7 @@ to say DemonBruteSex3: [pussy licked by demon brute]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Exhausted and pretty sticky as you are now, you lie there on the ground for a while, resting and looking up at Brutus's form, still kneeling obediently beside you. Finally you sit up with a sigh, thank him for his service and tell the large demon to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Exhausted and pretty sticky as you are now, you lie there on the ground for a while, resting and looking up at Brutus's form, still kneeling obediently beside you. Finally you sit up with a sigh, thank him for his service and murmur the magic words to send the demon back to his resting place inside your amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "     You step up to the demon, running a hand over his wide chest, tracing his muscles with your fingers. Going lower and lower, you stroke over his hard, defined abs, then rub your fingers over the sensitive folds between his legs. Brutus moans in his deep voice as you touch him, reveling in the feelings it creates.";
@@ -1129,7 +1162,7 @@ to say DemonBruteSex3: [pussy licked by demon brute]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Exhausted and pretty sticky as you are now, you lie there on the ground for a while, resting and looking up at Brutus's form, still kneeling obediently over you. Finally you sit up with a sigh, thank him for his service and tell the large demon to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Exhausted and pretty sticky as you are now, you lie there on the ground for a while, resting and looking up at Brutus's form, still kneeling obediently over you. Finally you sit up with a sigh, thank him for his service and murmur the magic words to send the demon back to his resting place inside your amulet.";
 		else:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
@@ -1143,7 +1176,7 @@ to say DemonBruteSex3: [pussy licked by demon brute]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     As hot and riled up as you still are, you can't bring yourself to bother disciplining the demon for getting himself off and creaming you. Oh well - letting your head sink back to rest on the ground, you tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     As hot and riled up as you still are, you can't bring yourself to bother disciplining the demon for getting himself off and creaming you. Oh well - letting your head sink back to rest on the ground, you intone the magic words to banish him again. Your well-hung fucker turns into a cloud of purple mist and vanishes into the amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "     You smile at the demon and say 'I command you to please me - lick my pussy till I come.' Grinning, you watch the creature's hand move down to its crotch, as if to grab its cock. A snarl crosses the demon's face as he remembers that you took it from him - at that moment, only the binding spell of the amulet holds him back from throwing you to the ground. Secure in your power over him, you slip your clothes off slowly to tease the demon a bit, then get down on your back, spreading your legs invitingly. 'Get to work.'";
@@ -1153,7 +1186,7 @@ to say DemonBruteSex3: [pussy licked by demon brute]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     As hot and riled up as you still are, you can't bring yourself to bother disciplining the demon for getting himself off without an order. Oh well - letting your head sink back to rest on the ground, you tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     As hot and riled up as you still are, you can't bring yourself to bother disciplining the demon for getting himself off without an order. Oh well - letting your head sink back to rest on the ground, you intone the magic words to banish him again. Your well-hung fucker turns into a cloud of purple mist and vanishes into the amulet.";
 		else:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
@@ -1171,7 +1204,7 @@ to say DemonBruteSex4: [finger his pussy]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Wiping your hand off against his leg, you stand up and have a look at your demon companion and the floor behind where you were kneeling. Phew - he really cums out a lot, with both his thick shaft and the pussy. There's a big pattern of white splatters on the ground and the femcum is still running down his legs to form a puddle on the ground. Looking up from the floor, you find Brutus's azure blue eyes focused on you in an intense gaze. 'Thank you, master,' he says, and you can feel he's just a bit baffled - and very pleased - at you getting him off without using him for your own pleasure. Making a few steps back, you take in the picture of your content demon brute, then put your thoughts back to other things with a sigh - like surviving in this destroyed city - and tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Wiping your hand off against his leg, you stand up and have a look at your captive demon. Phew - he really cums out a lot, with both his thick shaft and the pussy. There's a big pattern of white splatters on the ground and the femcum is still running down his legs to form a puddle on the ground. Looking up from the floor, you find Brutus's azure blue eyes focused on you in an intense gaze. 'Thank you, master,' he says, and you can feel he's just a bit baffled - and very pleased - at you getting him off without using him for your own pleasure. Making a few steps back, you take in the picture of your content demon brute, then put your thoughts back to other things with a sigh - like surviving in this destroyed city - and murmur the magic words to send him away for now. Your demon companion turns into a cloud of purple mist and vanishes into the amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "     You step up to the demon, running a hand over his wide chest, tracing his muscles with your fingers. Going lower and lower, you stroke over his hard, defined abs, then rub your fingers over the sensitive folds between his legs. Brutus moans in his deep voice as you touch him, reveling in the feelings it creates.";
@@ -1182,7 +1215,7 @@ to say DemonBruteSex4: [finger his pussy]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Wiping your hand off against his leg, you stand up and have a look at your demon companion. Phew - he really cums out a lot, even femcum from his pussy. It is still running down his legs to form a puddle on the ground. Looking up from the floor, you find Brutus's azure blue eyes focused on you in an intense gaze. 'Thank you, master,' he says, and you can feel he's just a bit baffled - and very pleased - at you getting him off without using him for your own pleasure. Making a few steps back, you take in the picture of your content demon brute, then put your thoughts back to other things with a sigh - like surviving in this destroyed city - and tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Wiping your hand off against his leg, you stand up and have a look at your demon companion. Phew - he really cums out a lot, even femcum from his pussy. It is still running down his legs to form a puddle on the ground. Looking up from the floor, you find Brutus's azure blue eyes focused on you in an intense gaze. 'Thank you, master,' he says, and you can feel he's just a bit baffled - and very pleased - at you getting him off without using him for your own pleasure. Making a few steps back, you take in the picture of your content demon brute, then put your thoughts back to other things with a sigh - like surviving in this destroyed city - and murmur the magic words to send him away for now. Your demon companion turns into a cloud of purple mist and vanishes into the amulet.";
 		else:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
@@ -1197,7 +1230,7 @@ to say DemonBruteSex4: [finger his pussy]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Wiping your hand off against his leg, you stand up and have a look at your captive demon. Phew - he really cums out a lot, with both his thick shaft and the pussy. He splattered his upper body and face with seed and created a large puddle of femcum on the ground. 'Did someone like having a pussy after all?' you tease him, and the demon's face turns into an interesting shade of purple before he shakes his head and starts mumbling about grinding up your bones to himself. Sorting away the delightful fact that you made your little demon cum without touching his cock, you put your thoughts back on other things - like surviving in this destroyed city - and tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Wiping your hand off against his leg, you stand up and have a look at your captive demon. Phew - he really cums out a lot, with both his thick shaft and the pussy. He splattered his upper body and face with seed and created a large puddle of femcum on the ground. 'Did someone like having a pussy after all?' you tease him, and the demon's face turns into an interesting shade of purple before he shakes his head and starts mumbling to himself about grinding up your bones. Sorting away the delightful fact that you made your little demon cum without touching his cock, you put your thoughts back on other things - like surviving in this destroyed city - and speak the magic words to banish the demon again. Your well-fucked pet turns into a cloud of purple mist and vanishes into the amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "     You smile at the demon and say 'I'm in a good mood right now, so I'll get you off.' Grinning, you watch the creature's thick member fill out and come to full hardness, its muscles trembling - aching to just throw you down and rape you, but being held back by the binding spell of the amulet. Then you say 'Ah, but it won't be through that thing. Let's train you to appreciate your female side a bit more...' You slip your clothes off slowly to tease the demon a bit, even turning around and wiggling your ass invitingly, then order 'On your back, pet. And spread your legs a bit.'";
@@ -1207,7 +1240,7 @@ to say DemonBruteSex4: [finger his pussy]
 			LineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Wiping your hand off against his leg, you stand up and have a look at your captive demon. Phew - he really cums out a lot, even as a female, creating a large puddle of femcum. 'Did someone like having a pussy after all?' you tease him, and the demon's face turns into an interesting shade of purple before he shakes his head and starts mumbling about grinding up your bones to himself. Sorting away the delightful fact that you made your little demon cum without touching his cock, you put your thoughts back on other things - like surviving in this destroyed city - and tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Wiping your hand off against his leg, you stand up and have a look at your captive demon. Phew - he really cums out a lot, even as a female, creating a large puddle of femcum. 'Did someone like having a pussy after all?' you tease him, and the demon's face turns into an interesting shade of purple before he shakes his head and starts mumbling to himself about grinding up your bones. Sorting away the delightful fact that you made your little demon cum without touching his cock, you put your thoughts back on other things - like surviving in this destroyed city - and speak the magic words to banish the demon again. Your well-fucked pet turns into a cloud of purple mist and vanishes into the amulet.";
 		else:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
@@ -1228,7 +1261,7 @@ to say DemonBruteSex5: [fuck his pussy]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Some time later, you pull out of him with a sigh, a trickle of your white cum escaping his pussy as you do so, running down between his legs. You stand up and have a look at your demon companion. Phew - he really cums out a lot, with both his thick shaft and the pussy. He splattered his upper body and face with seed and created a large puddle of femcum on the ground. Pleased by the satisfied look on his face, you thank Brutus for his service, then tell him to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Some time later, you pull out of him with a sigh, a trickle of your white cum escaping his pussy as you do so, running down between his legs. You stand up and have a look at your demon companion. Phew - he really cums out a lot, with both his thick shaft and the pussy. He splattered his upper body and face with seed and created a large puddle of femcum on the ground. Pleased by the satisfied look on his face, you thank Brutus for his service, then intone the magic words to send him away. Still lying on the ground, he turns into a cloud of purple smoke, then vanishes into your amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "     You step up to the demon, running a hand over his wide chest, tracing his muscles with your fingers. Going lower and lower, you stroke over his hard, defined abs, then rub your fingers over the sensitive folds between his legs. Brutus moans in his deep voice as you touch him, reveling in the feelings it creates.";
@@ -1242,7 +1275,7 @@ to say DemonBruteSex5: [fuck his pussy]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Some time later, you pull out of him with a sigh, a trickle of your white cum escaping his pussy as you do so, running down between his legs. You stand up and have a look at your demon companion. Phew - he really cums out a lot, even just femcum. It is still dripping out of him, running down over his crotch to join the puddle on the ground between his legs. Pleased by the satisfied look on Brutus's face, you thank him for his service, then tell him to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Some time later, you pull out of him with a sigh, a trickle of your white cum escaping his pussy as you do so, running down between his legs. You stand up and have a look at your demon companion. Phew - he really cums out a lot, even just femcum. It is still dripping out of him, running down over his crotch to join the puddle on the ground between his legs. Pleased by the satisfied look on his face, you thank Brutus for his service, then intone the magic words to send him away. Still lying on the ground, he turns into a cloud of purple smoke, then vanishes into your amulet.";
 		else:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
@@ -1258,7 +1291,7 @@ to say DemonBruteSex5: [fuck his pussy]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Pulling out of him, a trickle of your white cum escapes his pussy, running down between his legs. You stand up and have a look at your captive demon. Phew - he really cums out a lot, with both his thick shaft and the pussy. He splattered his upper body and face with seed and created a large puddle of femcum on the ground. 'Did someone like being fucked after all?' you tease him, and the demon's face turns into an interesting shade of purple before he shakes his head and starts mumbling about grinding up your bones to himself. Sorting away the delightful fact that you made your little demon cum from being fucked, you put your thoughts back on other things - like surviving in this destroyed city - and tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Pulling out of him, a trickle of your white cum escapes his pussy, running down between his legs. You stand up and have a look at your captive demon. Phew - he really cums out a lot, with both his thick shaft and the pussy. He splattered his upper body and face with seed and created a large puddle of femcum on the ground. 'Did someone like being fucked after all?' you tease him, and the demon's face turns into an interesting shade of purple before he shakes his head and starts mumbling to himself about grinding up your bones. Sorting away the delightful fact that you made your little demon cum from being fucked, you put your thoughts back on other things - like surviving in this destroyed city - and tell the creature to resume guarding you.";
 		else if DemonBruteStatus is 2: [female]
 			say "     You smile at the demon and say 'Time for some good hard fucking.' Grinning, you watch the creature's hand move down to its crotch, as if to grab its cock. A snarl crosses the demon's face as he remembers that you took it from him - at that moment, only the binding spell of the amulet holds him back from throwing you to the ground. Secure in your power over him, you say 'Of course, I will be the one fucking YOU.' You slip your clothes off slowly to tease the demon a bit, even turning around and wiggling your ass invitingly, then order 'On your back, pet. I want to see your face when I slide into you.'";
@@ -1269,7 +1302,7 @@ to say DemonBruteSex5: [fuck his pussy]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Pulling out of him, a trickle of your white cum escapes his pussy, running down between his legs. You stand up and have a look at your captive demon. Phew - he really cums out a lot, even as a female, creating a large puddle of femcum. 'Did someone like being fucked after all?' you tease him, and the demon's face turns into an interesting shade of purple before he shakes his head and starts mumbling about grinding up your bones to himself. Sorting away the delightful fact that you made your little demon cum from being fucked, you put your thoughts back on other things - like surviving in this destroyed city - and tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Pulling out of him, a trickle of your white cum escapes his pussy, running down between his legs. You stand up and have a look at your captive demon. Phew - he really cums out a lot, even as a female, creating a large puddle of femcum. 'Did someone like being fucked after all?' you tease him, and the demon's face turns into an interesting shade of purple before he shakes his head and starts mumbling to himself about grinding up your bones. Sorting away the delightful fact that you made your little demon cum from being fucked, you put your thoughts back on other things - like surviving in this destroyed city - and speak the magic words to banish the demon again. Your well-fucked pet turns into a cloud of purple mist and vanishes into the amulet.";
 		else:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
@@ -1289,7 +1322,7 @@ to say DemonBruteSex6: [player pussy fucked]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Exhausted and pretty sticky as you are now, you lie there on the ground for a while, resting and looking up at Brutus's form, still kneeling obediently beside you. Finally you sit up with a sigh, thank him for his service and tell the large demon to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Exhausted and pretty sticky as you are now, you lie there on the ground for a while, resting and looking up at Brutus's form, still kneeling obediently beside you. Finally you sit up with a sigh, thank him for his service and murmur the magic words to send the demon back to his resting place inside your amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "ERROR-Demon Brute-[DemonBruteStatus]D: He shouldn't have a cock right now! Please report how you got to this message.";
@@ -1305,7 +1338,7 @@ to say DemonBruteSex6: [player pussy fucked]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Satisfied, you sink to the floor and tell your captive demon to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Satisfied, you sink to the floor and moan the magic words to banish the demon again. Your well-hung fucker turns into a cloud of purple mist and vanishes into the amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "ERROR-Demon Brute-[DemonBruteStatus]D: He shouldn't have a cock right now! Please report how you got to this message.";
@@ -1322,7 +1355,7 @@ to say DemonBruteSex7: [finger his ass]
 		WaitLineBreak;
 		if companion of player is demon brute: [is the active pet]
 			say "     As the demons orgasm abates, you caress his cheeks, then walk around to his front and put your hand to his shoulder to tell him to sit up. Phew - he really creamed the floor, creating a large puddle of sticky cum. Looking up from the floor, you find Brutus's azure blue eyes focused on you in an intense gaze. 'Thank you, master,' he says, and you can feel he's just a bit baffled - and very pleased - at you getting him off without using him for your own pleasure. Making a few steps back, you take in the picture of your content demon brute, then put your thoughts back to other things with a sigh - like surviving in this destroyed city - and tell the creature to resume guarding you.";
-		else:               [back into the amulet]
+		else: [back into the amulet]
 			say "     As the demons orgasm abates, you caress his cheeks, then walk around to his front and put your hand to his shoulder to tell him to sit up. Phew - he really creamed the floor, creating a large puddle of sticky cum. Looking up from the floor, you find Brutus's azure blue eyes focused on you in an intense gaze. 'Thank you, master,' he says, and you can feel he's just a bit baffled - and very pleased - at you getting him off without using him for your own pleasure. Making a few steps back, you take in the picture of your content demon brute, then put your thoughts back to other things with a sigh - like surviving in this destroyed city - and murmur the magic words to send him away for now. Your demon companion turns into a cloud of purple mist and vanishes into the amulet.";
 	else if DemonBruteStatus is 2: [female]
 		say "     You step up to the demon, running a hand over his wide chest, tracing his muscles with your fingers. Going lower and lower, you stroke over his hard, defined abs, then rub your fingers over the sensitive folds between his legs. Brutus moans in his deep voice as you touch him, reveling in the feelings it creates.";
@@ -1333,7 +1366,7 @@ to say DemonBruteSex7: [finger his ass]
 		WaitLineBreak;
 		if companion of player is demon brute: [is the active pet]
 			say "     As the demons orgasm abates, you caress his asscheeks, then walk around to his front and put your hand to his shoulder to tell him to sit up. Phew - he really cums a lot, even femcum, creating a puddle on the ground. Looking up from the floor, you find Brutus's azure blue eyes focused on you in an intense gaze. 'Thank you, master,' he says, and you can feel he's just a bit baffled - and very pleased - at you getting him off without using him for your own pleasure. Making a few steps back, you take in the picture of your content demon brute, then put your thoughts back to other things with a sigh - like surviving in this destroyed city - and tell the creature to resume guarding you.";
-		else:               [back into the amulet]
+		else: [back into the amulet]
 			say "     As the demons orgasm abates, you caress his asscheeks, then walk around to his front and put your hand to his shoulder to tell him to sit up. Phew - he really cums a lot, even femcum, creating a puddle on the ground. Looking up from the floor, you find Brutus's azure blue eyes focused on you in an intense gaze. 'Thank you, master,' he says, and you can feel he's just a bit baffled - and very pleased - at you getting him off without using him for your own pleasure. Making a few steps back, you take in the picture of your content demon brute, then put your thoughts back to other things with a sigh - like surviving in this destroyed city - and murmur the magic words to send him away for now. Your demon companion turns into a cloud of purple mist and vanishes into the amulet.";
 	else:
 		say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
@@ -1352,7 +1385,7 @@ to say DemonBruteSex8: [fuck his ass]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Pulling out of him, his light purple pucker immediately closing tight to seal your cum inside, you stand up and have a look at your demon companion. Phew - he really creamed the floor, creating a large puddle of sticky cum. Walking around and putting a hand on his shoulder to make him raise his upper body, you give him a kiss on the mouth and ask how he liked it. 'You're the best master I ever had,' the demon replies, turning his azure blue eyes on you in an intense look, then affectionately licking your neck with his forked tongue. Making a few steps back, you take in the picture of your freshly fucked, content demon brute, then put your thoughts back to other things with a sigh - like surviving in this destroyed city - and tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Pulling out of him, his light purple pucker immediately closing tight to seal your cum inside, you stand up and have a look at your demon companion. Phew - he really creamed the floor, creating a large puddle of sticky cum. Walking around and putting a hand on his shoulder to make him raise his upper body, you give him a kiss on the mouth and ask how he liked it. 'You're the best master I ever had,' the demon replies, turning his azure blue eyes on you in an intense look, then affectionately licking your neck with his forked tongue. Making a few steps back, you take in the picture of your freshly fucked, content demon brute, then put your thoughts back to other things with a sigh - like surviving in this destroyed city - and mutter the magic words to send him back into the amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "     You step up to the demon, running a hand over his wide chest, tracing his muscles with your fingers. Going lower and lower, you stroke over his hard, defined abs, then rub your fingers over the sensitive folds between his legs. Brutus moans in his deep voice as you touch him, reveling in the feelings it creates.";
@@ -1366,7 +1399,7 @@ to say DemonBruteSex8: [fuck his ass]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Pulling out of him, his light purple pucker immediately closing tight to seal your cum inside, you stand up and have a look at your demon companion. Phew - he really cums out a lot, even as a female, creating a large puddle of femcum. Walking around and putting a hand on his shoulder to make him raise his upper body, you give him a kiss on the mouth and ask how he liked it. 'You're the best master I ever had,' the demon replies, turning his azure blue eyes on you in an intense look, then affectionately licking your neck with his forked tongue. Making a few steps back, you take in the picture of your freshly fucked, content demon brute, then put your thoughts back to other things with a sigh - like surviving in this destroyed city - and tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Pulling out of him, his light purple pucker immediately closing tight to seal your cum inside, you stand up and have a look at your demon companion. Phew - he really cums out a lot, even as a female, creating a large puddle of femcum. Walking around and putting a hand on his shoulder to make him raise his upper body, you give him a kiss on the mouth and ask how he liked it. 'You're the best master I ever had,' the demon replies, turning his azure blue eyes on you in an intense look, then affectionately licking your neck with his forked tongue. Making a few steps back, you take in the picture of your freshly fucked, content demon brute, then put your thoughts back to other things with a sigh - like surviving in this destroyed city - and mutter the magic words to send him back into the amulet.";
 		else:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
@@ -1380,7 +1413,7 @@ to say DemonBruteSex8: [fuck his ass]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Pulling out of him, his dark purple pucker immediately closing tight to seal your cum inside, you stand up and have a look at your captive demon. Phew - he really creamed the floor, creating a large puddle of sticky cum. 'Did someone like being fucked after all?' you tease him, and the demon's face turns into an interesting shade of purple before he shakes his head and starts mumbling about grinding up your bones to himself. Sorting away the delightful fact that you made your little demon cum from being fucked, you put your thoughts back on other things - like surviving in this destroyed city - and tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Pulling out of him, his dark purple pucker immediately closing tight to seal your cum inside, you stand up and have a look at your captive demon. Phew - he really creamed the floor, creating a large puddle of sticky cum. 'Did someone like being fucked after all?' you tease him, and the demon's face turns into an interesting shade of purple before he shakes his head and starts mumbling to himself about grinding up your bones. Sorting away the delightful fact that you made your little demon cum from being fucked, you put your thoughts back on other things - like surviving in this destroyed city - and tell the creature to resume guarding you.";
 		else if DemonBruteStatus is 2: [female]
 			say "     You smile at the demon and say 'Time for some good hard fucking.' Grinning, you watch the creature's hand move down to its crotch, as if to grab its cock. A snarl crosses the demon's face as he remembers that you took it from him - at that moment, only the binding spell of the amulet holds him back from throwing you to the ground. Secure in your power over him, you say 'Of course, I will be the one fucking YOU.' You slip your clothes off slowly to tease the demon a bit, even turning around and wiggling your ass invitingly, then order 'Get on all fours now - and relax that ass of yours.'";
@@ -1391,7 +1424,7 @@ to say DemonBruteSex8: [fuck his ass]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Pulling out of him, his dark purple pucker immediately closing tight to seal your cum inside, you stand up and have a look at your captive demon. Phew - he really cums out a lot, even as a female, creating a large puddle of femcum. 'Did someone like being fucked after all?' you tease him, and the demon's face turns into an interesting shade of purple before he shakes his head and starts mumbling about grinding up your bones to himself. Sorting away the delightful fact that you made your little demon cum from being fucked, you put your thoughts back on other things - like surviving in this destroyed city - and tell the creature to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Pulling out of him, his dark purple pucker immediately closing tight to seal your cum inside, you stand up and have a look at your captive demon. Phew - he really cums out a lot, even as a female, creating a large puddle of femcum. 'Did someone like being fucked after all?' you tease him, and the demon's face turns into an interesting shade of purple before he shakes his head and starts mumbling to himself about grinding up your bones. Sorting away the delightful fact that you made your little demon cum from being fucked, you put your thoughts back on other things - like surviving in this destroyed city - and speak the magic words to banish the demon again. Your well-fucked pet turns into a cloud of purple mist and vanishes into the amulet.";
 		else:
 			say "ERROR-Demon Brute-[DemonBruteStatus]C: He isn't in one of the states he should be in! Please report how you got to this message.";
@@ -1411,7 +1444,7 @@ to say DemonBruteSex9: [player ass fucked]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Exhausted and pretty sticky as you are now, you lie there on the ground for a while, resting and looking up at Brutus's form, still kneeling obediently beside you. Finally you sit up with a sigh, thank him for his service and tell the large demon to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Exhausted and pretty sticky as you are now, you lie there on the ground for a while, resting and looking up at Brutus's form, still kneeling obediently beside you. Finally you sit up with a sigh, thank him for his service and murmur the magic words to send the demon back to his resting place inside your amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "ERROR-Demon Brute-[DemonBruteStatus]D: He shouldn't have a cock right now! Please report how you got to this message.";
@@ -1427,7 +1460,7 @@ to say DemonBruteSex9: [player ass fucked]
 			WaitLineBreak;
 			if companion of player is demon brute: [is the active pet]
 				say "     Satisfied, you sink to the floor and tell your captive demon to resume guarding you.";
-			else:               [back into the amulet]
+			else: [back into the amulet]
 				say "     Satisfied, you sink to the floor and moan the magic words to banish the demon again. Your well-hung fucker turns into a cloud of purple mist and vanishes into the amulet.";
 		else if DemonBruteStatus is 2: [female]
 			say "ERROR-Demon Brute-[DemonBruteStatus]D: He shouldn't have a cock right now! Please report how you got to this message.";
@@ -1436,13 +1469,13 @@ to say DemonBruteSex9: [player ass fucked]
 
 Section 3 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	add {"Demon Brute"} to infections of hellspawn;
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Demon Brute";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -1474,7 +1507,7 @@ When Play begins:
 	now area entry is "Mall";
 	now cocks entry is 1;
 	now cock length entry is 18;
-	now cock width entry is 8;
+	now cock width entry is 14;
 	now breasts entry is 0;
 	now breast size entry is 0;
 	now male breast size entry is 0;
@@ -1490,8 +1523,9 @@ When Play begins:
 	now magic entry is true;            [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "demonbrute"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Table of Game Objects (continued)
 name	desc	weight	object
@@ -1520,7 +1554,7 @@ this is the brfoinc rule: [increasing likelihood of bruteforce attack]
 this is the bruteforce rule:
 	choose row monstercom from the table of critter combat;
 	now alt1chance entry is 5;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 50 );  [double damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:

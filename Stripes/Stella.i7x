@@ -14,6 +14,10 @@ Version 1 of Stella by Stripes begins here.
 
 Section 0 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Eager Dal	"Eager Dal"
+
 Eager Dal is a situation.
 The sarea of Eager Dal is "Red".
 when play begins:
@@ -36,6 +40,7 @@ Instead of resolving a Eager Dal:
 			say "[convincestella]";
 		else:
 			say "     You decide against it and stay mum. After a few more minutes of chatting, the dalmatian herm gives a chipper farewell and goes off in search of fun elsewhere.";
+			now Resolution of Eager Dal is 99; [disinterest]
 			now Eager Dal is resolved;
 	else:
 		say "     You end up crossing paths with Stella the dalmatian herm again. She strikes up a friendly, if meandering, conversation with you for a while. During your chat, you try to convince her to come with you.";
@@ -46,11 +51,11 @@ to say convincestella:
 	let bonus be ( charisma of player minus 10 ) divided by 2;
 	let bonus2 be ( the number of booked people + the number of bunkered people ) / 2;
 	let dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus]+[bonus2]: [dice + bonus + bonus2]: ";
+	say "     You roll 1d20([dice])+[bonus]+[bonus2]: [dice + bonus + bonus2]: ";
 	if ( dice + bonus + bonus2 ) > 14:
-		say "You tell Stella that you know [if Police Station is known]a couple of safe places[else]a safe place[end if] that she might stay[if number of bunkered people + number of booked people > 2], adding that you've got a few other friends there as well[end if]. It takes a little convincing to get her to trust you given your initial impression, but the prospect of somewhere safe (and maybe some sex as well) convinces her to go with you. ";
-		if Police Station is known and HP of Alexandra >= 52:
-			say "     The Police Station's somewhat closer than the bunker to here.";
+		say "You tell Stella that you know [if Police Station Twelve is known]a couple of safe places[else]a safe place[end if] that she might stay[if number of bunkered people + number of booked people > 2], adding that you've got a few other friends there as well[end if]. It takes a little convincing to get her to trust you given your initial impression, but the prospect of somewhere safe (and maybe some sex as well) convinces her to go with you. ";
+		if Police Station Twelve is known and HP of Alexandra >= 52:
+			say "The Police Station's somewhat closer than the bunker to here.";
 			say "     [bold type]Shall you take her there for now?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";
@@ -72,6 +77,7 @@ to say convincestella:
 		increase score by 20;
 		now HP of Stella is 2;
 		now laststellamove is turns;
+		now Resolution of Eager Dal is 1; [Stella brought in]
 		now Eager Dal is resolved;
 	else:
 		say "You tell Stella that you have just the place in mind, but she's not sure about going with you. 'I mean, what if you lose the plot again? I'm more of a lover than a fighter, you know,' she giggles. 'Anyway, thanks for the offer, but I think I'll keep looking around for now.' And with that, she waves and heads off.";
@@ -79,6 +85,10 @@ to say convincestella:
 
 
 Section 1 - Stella the Dalmatian
+
+Table of GameCharacterIDs (continued)
+object	name
+Stella	"Stella"
 
 Stella is a woman.
 The description of Stella is "[stelladesc]".
@@ -90,7 +100,7 @@ the scent of the Stella is "Stella smells of canine arousal, the scent of sex li
 
 to say stelladesc:
 	say "     Once a female exchange student from England, she's been transformed into a herm dalmatian by the outbreak. Aside from having a nice figure and shapely breasts, the dog-woman's got a cute face with a happy smile on her muzzle. Despite having a refined British accent, it seems like she's always been a bit of a ditzy slut even before coming here. She's got shoulder-length white hair with a splash of black on her bangs. She's wearing a pair of glasses in front of her bright, blue eyes. She's got a somewhat larger than normal cock, canine in form and lacking in sheath or balls. It grows from the top of her pussy, turning her clitoris into this dripping doggy dong she's so proud of.";
-	if Police Station is known and HP of Stella >= 52:
+	if Police Station Twelve is known and HP of Stella >= 52:
 		say "     Being no stranger to roaming the city, you can ask to [bold type]move Stella[roman type] between the police station and the library.";
 
 
@@ -107,12 +117,12 @@ Instead of conversing the Stella:
 		say "     'This place ain't too bad. It'll do fine for a place to take a kip when I need a break. I don't mind staying here for a while, though if you know another safe spot as good as this with some interesting folks, I could go hang there for a while too. Just ask me to [bold type]move[roman type].'";
 		say "     She stretches and rubs a paw over her groin. 'As it is, when I'm not faffing about here, I'll totally be wandering in and out. Places to go, people to see, holes to stuff - you know how it is,' she giggles. 'Oh, speaking of, I don't want you to be getting any funny ideas. If we're going to be banging - and I hope we will - I'm like totally going to be on top. I've been shagged plenty back when I was a girl; it's time to do the shagging!'";
 		now HP of Stella is 3;
-	else if Stella is in the Police Lockerroom and population of Police Station > 0 and stellapsurv is false:
+	else if Stella is in the Police Lockerroom and PoliceStationTwelvePopulation > 0 and stellapsurv is false:
 		say "     'I'm glad to see you've got some other people around here. I'm sure a few'll be up to polishing the silver or even a quick shag, if you get me,' she adds with a wink. 'It's better for [']em to get a spot of relief than to have [']em risk going round the bend, I'd say.'";
-		if infpop of Police Station < population of Police Station, increase infpop of Police Station by 1;
+		if PoliceStationTwelveInfpop < PoliceStationTwelvePopulation, increase PoliceStationTwelveInfpop by 1;
 		now stellapsurv is true;
 	else:
-		say "     [one of]'My name's actually Satellizer, but everyone just calls me Stella.'[or]'I'm an exchange student here from Britain. I got my da to pay for it, though I had to let a couple of profs bang me to get the grades I needed. And I'm chuffed that I did, too - this has been great!' she adds, tail wagging excitedly.[or]'I think I might pop out for a bit soon, see if there's anyone around looking to snog,' she says cheerfully.[or]'Not quite sure why I ended up going to the dogs, but I got a fine todger out of the deal, so everything's tickety-boo in my books,' she giggles.[or]'It was a bit of a surprise the first time I got to try this big guy out,' she says, stroking her half-hard meat. 'When my knot swelled up and tied me to that husky bitch... mmm... wow!'[or][if police station is known and laststellamove - turns >= 16]Do let me know if you find another spot with some fun [']friends['] I can get to [']know better['] and I can [bold type]move[roman type] there for a while.'[else]'I'm really enjoying making friends around here. There's plenty of people out there happy to have a go at this girl's doggy dong.'[end if][or][if location of Stella is Police Lockerroom and population of Police Station > 20]'Quite the crowd you've got here. Nice work helping all these poor people out. Nice, [']friendly['] folks they are too,' she adds with a wink and a rub at her groin.[else if location of Stella is Police Lockerroom and population of Police Station > 12]'You've got a good crowd here. You keep them safe; they're a nice bunch of [']friendly['] folks,' she adds with a wink and a rub at her groin.[else if location of Stella is Police Lockerroom and population of Police Station > 0]'These poor people've had it rough, chum. Do what you can to keep the rest of them safe; they're a nice bunch of [']friendly['] folks,' she adds with a wink and a rub at her groin.[else]'I've got to say, all this is proving to be the dog's bollocks,' she says, laughing at her own joke.[end if][in random order]";
+		say "     [one of]'My name's actually Satellizer, but everyone just calls me Stella.'[or]'I'm an exchange student here from Britain. I got my da to pay for it, though I had to let a couple of profs bang me to get the grades I needed. And I'm chuffed that I did, too - this has been great!' she adds, tail wagging excitedly.[or]'I think I might pop out for a bit soon, see if there's anyone around looking to snog,' she says cheerfully.[or]'Not quite sure why I ended up going to the dogs, but I got a fine todger out of the deal, so everything's tickety-boo in my books,' she giggles.[or]'It was a bit of a surprise the first time I got to try this big guy out,' she says, stroking her half-hard meat. 'When my knot swelled up and tied me to that husky bitch... mmm... wow!'[or][if police station Twelve is known and laststellamove - turns >= 16]Do let me know if you find another spot with some fun [']friends['] I can get to [']know better['] and I can [bold type]move[roman type] there for a while.'[else]'I'm really enjoying making friends around here. There's plenty of people out there happy to have a go at this girl's doggy dong.'[end if][or][if location of Stella is Police Lockerroom and PoliceStationTwelvePopulation > 20]'Quite the crowd you've got here. Nice work helping all these poor people out. Nice, [']friendly['] folks they are too,' she adds with a wink and a rub at her groin[else if location of Stella is Police Lockerroom and PoliceStationTwelvePopulation > 12]'You've got a good crowd here. You keep them safe; they're a nice bunch of [']friendly['] folks,' she adds with a wink and a rub at her groin[else if location of Stella is Police Lockerroom and PoliceStationTwelvePopulation > 0]'These poor people've had it rough, chum. Do what you can to keep the rest of them safe; they're a nice bunch of [']friendly['] folks,' she adds with a wink and a rub at her groin[else]'I've got to say, all this is proving to be the dog's bollocks,' she says, laughing at her own joke[end if].[in random order]";
 
 
 Section 3 - Moving Stella
@@ -126,7 +136,7 @@ Understand "Stella move" as stellamoving.
 
 check stellamoving:
 	If Stella is not visible, say "Who?" instead;
-	if Police Station is not known or HP of Alexandra < 52, say "There's nowhere else to send her." instead;
+	if Police Station Twelve is not known or HP of Alexandra < 52 or hunger of Alexandra is 1, say "There's nowhere else to send her." instead;
 	if laststellamove - turns < 16, say "What? I just got settled in here. Maybe later." instead;
 
 carry out stellamoving:
@@ -266,7 +276,7 @@ to say stellasex6:
 
 to stellainfect:
 	setmonster "Dalmatian Male";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if name entry is "Dalmatian Male":
 		let temptext be " ";
 		now temptext is sex entry;
@@ -289,7 +299,7 @@ Section 4 - Interactions with Stella
 to say stellajimmy01:
 	say "     Passing Stella a grin and a nod toward Jimmy, she smiles and nods in agreement. The two of you approach the little dog from opposite sides, catching him by surprise between you. 'Uh, what's up?' he asks, looking up at both of you. The fact that you're both erect and pointing your dicks at him doesn't go unnoticed either.";
 	say "     '[one of]We've got a hard problem and figured you'd be just the pup to help us both with it,[or]Less talk, more suck, cutey,[or]You looked hungry, so we thought we'd give you a tasty treat,[or]Got another BJ or two in you, pup?[run paragraph on][at random]' Stella says with a grin. She puts a paw on the happy corgi's head, pushing his muzzle to her doggy dick before he has a chance to properly respond. Not that he'd refuse, his muzzle opening and readily taking her erection into it. He bobs his muzzle over her shaft while sliding his canine tongue across it for several licks. Jimmy starts off with just a short slathering before switching over to you rather than leave you hanging.";
-	say "     Jimmy starts off with just a short taste before switching over to you rather than leave you hanging. His cute muzzle slides over your [cock of player] shaft, wrapping it in the warm embrace of his mouth. His floppy tongue slathers across your manhood with an eagerness you can feel in his efforts. He laps up your precum and swallows it down greedily[if population of Police Station > 0]. He's becoming quite good at this, obviously getting plenty of practice with so many around in need of cheering up[end if]. He thorough in his licking, getting every square centimeter of your cock before swapping back to Stella.";
+	say "     Jimmy starts off with just a short taste before switching over to you rather than leave you hanging. His cute muzzle slides over your [cock of player] shaft, wrapping it in the warm embrace of his mouth. His floppy tongue slathers across your manhood with an eagerness you can feel in his efforts. He laps up your precum and swallows it down greedily[if PoliceStationTwelvePopulation > 0]. He's becoming quite good at this, obviously getting plenty of practice with so many around in need of cheering up[end if]. He thorough in his licking, getting every square centimeter of your cock before swapping back to Stella.";
 	say "     While she'd obviously enjoyed the show of Jimmy working over your cock, she's much happier with his muzzle back on her instead of just his paw. While it's her turn to get blown again, the corgi keeps a paw on your cock, stroking your saliva-slick shaft to keep you hard for him. Not that you need much help with the sight of him working the dalmatian's dick in and out of his muzzle.";
 	say "     The playful corgi swaps between you both several times, steadily working your excitement higher with every round[if the remainder after dividing level of Stella by 3 is 0]. Eventually, Stella can't hold back any longer and holds the playful dog's head. She gives a long, happy moan and bucks her hips. From the wet sounds of Jimmy swallowing, you know she's pumping a big load of canine cum into the corgi's belly. Jimmy pumps at your cock all the faster while sucking down the dalmatian's seed, soon driving you to cum messily across his face and muzzle[else if the remainder after dividing level of Stella by 3 is 1]. As you're building towards climax, Jimmy keeps his muzzle on your shaft a little longer, ensuring that you're the one to pop off in his muzzle this time. He moans wetly as you shoot blast after blast of your [cum load size of player] load into his mouth and down his throat. Meanwhile, Stella's been masturbated to her own climax, spraying her semen across the corgi's sucking muzzle[else]. With you both about to blow, Jimmy changes over to rapidly stroking you both off while exchanging licks across the tips of your cocks. It's not long before this results in the two of you cumming messily across the cute corgi's face and muzzle. He aims both spurting dongs towards his open mouth, catching what he can on his tongue and letting the rest spray onto him sloppily[end if]. When it's all over, the smaller dog smiles happily, licking his tongue across his messy muzzle to get the rest of his tasty treat.";
 	increase level of Stella by 1;

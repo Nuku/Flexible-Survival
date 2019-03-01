@@ -2,7 +2,12 @@ Version 1 of Rane Events by KorekaBii begins here.
 
 RaneDeedsTracker is a number that varies.
 
-Rane's Good Deed is a situation. Rane's Good Deed is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Rane's Good Deed	"Rane's Good Deed"
+
+Rane's Good Deed is a situation.
+Rane's Good Deed is inactive.
 the sarea of Rane's Good Deed is "Outside".
 
 instead of resolving Rane's Good Deed:
@@ -20,7 +25,5 @@ instead of resolving Rane's Good Deed:
 		SanBoost 15;
 		now Rane's Good Deed is resolved; [the end, for now]
 		now RaneDeedsTracker is 1; [first good deed completed]
-	else if RaneDeedsTracker is 1: [second time]
-		say "     bla";
 
 Rane Events ends here.

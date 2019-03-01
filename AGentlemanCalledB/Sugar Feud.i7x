@@ -5,8 +5,12 @@ Sugar Feud by AGentlemanCalledB begins here.
 [Events will eventually be compiled into a single consolidated event.
 See also; "Sweet Exchange", "Caught Glider" - Stripes\assorted events]
 
+Table of GameEventIDs (continued)
+Object	Name
+Sugar Shack	"Sugar Shack"
+
 Sugar Shack is a situation.
-The sarea of Sugar Shack is "Midway".
+The sarea of Sugar Shack is "Fair".
 when play begins:
 	add Sugar Shack to badspots of furry;
 	add Sugar Shack to badspots of girl;
@@ -14,7 +18,7 @@ when play begins:
 
 Instead of resolving a Sugar Shack:
 	setmonster "Sugar Glider";
-	choose row monster in table of random critters;
+	choose row monster in Table of Random Critters;
 	say "     Turning a corner you see a rather curious sight ahead down the midway, one of those brightly colored sugar glider girls scampering around a large stall at the end of the row. As you're considering turning back to avoid a confrontation with the excited marsupial, she spots you watching and calls out to you, waving you over eagerly. Finding yourself curious what she's up to you approach slowly, wary of some sort of trap the giggling girl may have set up, but you reach the stall without incident and find it to be, unsurprisingly, a candy stall.";
 	say "     When you step up to the counter there's no sign of the glider who was here moments ago. Peering over the counter, you see the shelves of the stall have been picked clean, but there is a large cotton candy machine in the back that appears mostly undisturbed. 'Isn't it great!?' You whip around to find the source of the voice behind you, finding yourself face to face with the grinning sugar glider. 'And it still works!' she cheers, grabbing your arm and pulling you around to the door at the back of the stall, then inside.";
 	WaitLineBreak;
@@ -59,22 +63,23 @@ Instead of resolving a Sugar Shack:
 				say "     Listening to your sweet tooth, you go back to the machine for more cotton candy. As you're reaching in, swirling your arm around, the Sugar Glider comes over and starts lifting you into the machine. Rather than fight her, you giggle happily and let her boost you in. Tumbling around in the swirling vortex of sweet colors, you feel more and more cotton candy clinging to you, sinking into your body. When the machine's finally shut off and your dizzy self is helped out of the cotton candy machine, your mind has been spun and fluffed until it is filled with nothing but thoughts of sweets and sex, or sweet, sweet sex. Giggling happily, you collapse into the arms of the sugar glider, still quite dizzy, and give her a sugary kiss, eager for more fun.";
 				wait for any key;
 				now humanity of player is 0;
-				now battleground is "void";
 				WaitLineBreak;
 				end the story saying "Having given in to the sweet, sweet desire, there is nothing left in your head but sugary fluff.";
 			else:
 				say "     Deciding you need to get out of this sickly sweet dream while you still have a mind to, you do your best to shake your head clear of the sugary haze and quickly gather your gear to leave before the sugar glider can recover from her afterglow and tempt you with more sweet fun.";
 				decrease hunger of player by 3;
 				if "Junk Food Junky" is listed in feats of player, decrease hunger of player by 3;
+		now Resolution of Sugar Shack is 1; [sugar glider orgy]
 	else:
 		say "     Deciding not to risk spending anymore time with this giggling sugar glider, you push her hand away and make for the exit. As you're leaving the sugar glider blows a long raspberry just before something strikes you sharply in the back of the head. Turning around you see her still sticking her tongue out at you with a cute scowl, having had enough of her silly antics, you pick up the broken pieces of the lollipop she threw at you and leave the stall.";
+		now Resolution of Sugar Shack is 2; [sugar gliders refused]
 		increase carried of crushed candies by 1;
 	now Sugar Shack is resolved;
 
 to say fullSugarGliderTF:
 	[puts Sugar Glider as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Sugar Glider":
 			now monster is y;
 			break;

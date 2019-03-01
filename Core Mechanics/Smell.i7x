@@ -24,6 +24,9 @@ check sniffing:
 		say "It smells strangely existential, like cats, radioisotopes and poison. It gives you a headache. Perhaps you should stick to smelling more concrete, physical things." instead;
 
 before sniffing:
+	if noun is a situation:
+		say "You can't see any such thing.";
+		stop the action;
 	if noun is a grab object:
 		if noun is not owned:
 			say "I don't see any [Noun] around here to sniff.";
@@ -81,7 +84,7 @@ Section 3 - overrides for included places
 
 [this is the stuff from the main story.ni file. Other content is in their files.]
 
-the scent of doctor matt is "[if HP of Doctor Matt is not 100]Safely encapsulated in his environment suit, he cannot be smelled[else]The doctor isn't here, and his tape recorder smells like old plastic[end if].".
+the scent of Doctor Matt is "[if HP of Doctor Matt is not 100]Safely encapsulated in his environment suit, he cannot be smelled[else]The doctor isn't here, and his tape recorder smells like old plastic[end if].".
 
 the scent of Grey Abbey library is "The smell of books permeates the air in the library. Smelling outside the doors, you can smell the scents of the city. You catch numerous scents of lust and arousal on the breeze, including that of [one of]several lupine creatures[or]some sulfurous stink[or]a variety of canines[or]something like latex[or]a feline in heat[at random].".
 
@@ -111,7 +114,9 @@ the scent of Faint Trail is "The scents of the creatures roaming the park are st
 
 the scent of Cola Vending Machine is "The vending machine smells of burnt electronics and is busted. Guess you'll have to hit it to get anything out.".
 
-the scent of Microwave is "The microwave smells a little from the dried stains inside. It seems Dr Matt is too lazy or busy to clean it.".
+the scent of Library Microwave is "Despite lack of upkeep, the microwave smells rather clean.".
+
+the scent of Lab Microwave is "The microwave smells a little from the dried stains inside. It seems Dr Matt is too lazy or busy to clean it.".
 
 the scent of Infection Terminal is "The infection terminal smells like old, vintage electronics from the time of DOS and dinosaurs.".
 

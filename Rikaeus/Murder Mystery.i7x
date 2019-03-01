@@ -113,13 +113,24 @@ BarryMotive is a number that varies.
 BodyRelationship is a number that varies.
 
 [Room Declaration]
-East of the Mall Foyer is Wolverine Guard Station.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Wolverine Guard Station	"Wolverine Guard Station"
+
+Wolverine Guard Station is a room.
+Wolverine Guard Station is east of the Mall Foyer.
 The description of Wolverine Guard Station is "[WolverineGuardStationDesc]".
 
 to say WolverineGuardStationDesc:
 	say "     The guard station is situated within a coffee shop. There are tiny little tables where big wolverines are sat at, working on paperwork their boss more than likely has assigned them. The shop counter has a wolverine sitting there with a lot more work than the others. Although judging by the fact that said male is also the receptionist, he surely must have more patience than the others. All in though, the place seems pretty homey and looks to be where the wolverines have also set up home as you can see a door with a sign that says sleeping quarters.";
 
 [Room Declaration]
+
+Table of GameRoomIDs (continued)
+Object	Name
+Wolverine Lockup	"Wolverine Lockup"
+
 Wolverine Lockup is a room.
 The description of Wolverine Lockup is "[WolverineLockupDesc]".
 
@@ -154,7 +165,11 @@ instead of going East from Mall Foyer while (JennaRelationship is 4 and MurderMy
 	move Barry to Wolverine Lockup;
 	move Cane to Wolverine Lockup;
 
-Dead Body is man.
+Table of GameCharacterIDs (continued)
+object	name
+Dead Body	"Dead Body"
+
+Dead Body is a man.
 The description of Dead Body is "[TylerBodyDesc]".
 The conversation of Dead Body is { "<This is nothing but a placeholder!>" }.
 The scent of Dead Body is "     The body smells like a dead body would, disgusting and like copper. Though you think the last bit is due to all the blood.".
@@ -208,13 +223,9 @@ to say TylerBodyTalkMenu:
 					say "[TylerBody2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the dead body, shaking your head slightly as it gives no response.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the dead body, shaking your head slightly as it gives no response.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -229,10 +240,14 @@ to say TylerBody2:
 	now BodyRelationship is 2;
 	move Jenna to Wolverine Guard Station;
 	now MurderMystery is 2;
-	remove Dead Body from play;
+	now Dead Body is nowhere;
 
 instead of fucking Dead Body:
 	say "     'It's a dead body and you're in public. What are you expecting?";
+
+Table of GameCharacterIDs (continued)
+object	name
+Tawnya	"Tawnya"
 
 Tawnya is a woman.
 The description of Tawnya is "[TawnyaDesc]".
@@ -288,13 +303,9 @@ to say TawnyaTalkMenu:
 					say "[TawnyaMotive]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head and tell the guard at the door that you don't have anything to say to her. He takes both of you back to lockup.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head and tell the guard at the door that you don't have anything to say to her. He takes both of you back to lockup.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -362,7 +373,7 @@ to say TawnyaFurEvidence:
 					say "     'Fuck off! I ain't stripping for you unless there's an incentive for me.' She swears at you, eyes glaring at you. You raise your hands up in surrender before backing off. You then turn to the wolverine guard and tell him that you're done with her for now. He nods and grabs her before leading the two of you back to lockup where you muse on who you should talk to next. Though maybe you should make another attempt at convincing Tawnya";
 					now TawnyaFurSuspicion is 1; [she said she has none]
 	else if TawnyaFurSuspicion is 2: [she showed before she has no fur]
-		say "     'You've already seen that I have no fur so what the hell are you asking about that for?' the lizard-morph asks you. ";
+		say "     'You've already seen that I have no fur, so what the hell are you asking about that for?' the lizard-morph asks you.";
 		say "     [bold type]Get it on with her?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sex with murder suspects is exciting!";
@@ -388,6 +399,10 @@ to say TawnyaMotive:
 
 instead of fucking Tawnya:
 	say "     'Ahaha, no. You can try better than just asking me to fuck,' she says with a roll of her eyes.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Cane	"Cane"
 
 Cane is a man.
 The description of Cane is "[CaneDesc]".
@@ -443,13 +458,9 @@ to say CaneTalkMenu:
 					say "[CaneMotive]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -470,6 +481,10 @@ to say CaneMotive:
 
 instead of fucking Cane:
 	say "     '...Sorry but I have a husband and wife,' he says, shocking you with that statement. You shake your head and step back away from him.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Barry	"Barry"
 
 Barry is a man.
 The description of Barry is "[BarryDesc]".
@@ -525,13 +540,9 @@ to say BarryTalkMenu:
 					say "[BarryMotive]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

@@ -62,7 +62,7 @@ to say wrestlingwolfattack:
 					say "     Unable to stand up against the Wrestling Wolf's might, you collapse to your knees in front of him. 'Tch, I was hoping you'd put up more of a fight. At least make me work for my prize,' the Wrestling Wolf groans as he removes his wrestling briefs. 'You know I think you need to understand just what kind of guy I am,' he says as he bundles up his briefs into a ball. 'I am and always have been a fighter, I enjoy a good fight.'";
 					say "     'So it really ticks me off when I'm forced to fight weaklings. I'd figured you being alone in these times, you would give me a decent fight. But no! Instead I'm forced to beat up on another weakling,' he roars as he stuffs his briefs down your throat. You gag as you get a taste of his masculine musk stained into his briefs. You don't have time to take in the taste as you are grabbed by your throat and hoisted into the air by the Wrestling Wolf with only one arm. 'Just how strong is this guy' you wonder as he begins to finger your [cunt size desc of player] folds with his free paw. 'You're a tight little bitch, aren't ya?' he states as he positions your cunt just above his already erect shaft. You swear that it's somehow grown since the last time you met. 'Now this is gonna hurt,' he says, placing both of his pawed hands on your shoulders. 'A lot.'";
 					say "     And just like that he pushes you down, forcing his entire length into you until you hit the rim of his gigantic knot, your stomach stretching from his [one of]gigantic[or]enormous[at random] length. You start to scream, only to have your shouts muffled by the Wrestling Wolf's balled up briefs that you're still gagging on. 'Oh, I bet that hurt, didn't it? Well, it's only gonna get worse!' he growls as he grabs hold of your waist and slides you up to the tip of his shaft. 'You see, when I get angry, I like to get rough,' he says, bringing you down his entire length, slamming you down onto the rim of his gigantic knot once more. He continues this for several minutes, which to you feels like an eternity. Your eyes swell with tears from the sheer pain of the Wrestling Wolf's treatment. He lifts you the very tip of his rod and tightens his hold on your waist. 'And nothing angers me more than when I fight someone not giving it their all,' he roars as he pulls you down, this time with much greater force and thrusting his hips up, ramming you hard against his swollen knot. Forcing his knot into you, the feeling of hitting home is too much for the Wolf as he explodes incredible waves of his hot seed into you. Your belly expands even farther to its limits from the Wolf's cum now filling your stomach.[impregchance]";
-					say "     Afterwards, the wolf collapses right on top of you as he begins to doze off. Your body still writhing in pain from the assault, you begin to wonder why you're still conscious--probably has something to do with the nanites within you. Thinking that this is your chance to escape, you try to struggle from under the Wrestling Wolf, but the massive form of the Wolf on top of you is too heavy for you to lift, let alone move from under of. Not only that, but his knot is still inflated within, and you can do nothing but wait and hope for it to deflate before the Wrestling Wolf wakes up.";
+					say "     Afterwards, the wolf collapses right on top of you as he begins to doze off. Your body still writhing in pain from the assault, you begin to wonder why you're still conscious - probably has something to do with the nanites within you. Thinking that this is your chance to escape, you try to struggle from under the Wrestling Wolf, but the massive form of the Wolf on top of you is too heavy for you to lift, let alone move from under of. Not only that, but his knot is still inflated within, and you can do nothing but wait and hope for it to deflate before the Wrestling Wolf wakes up.";
 					say "     After a while, not only has the Wolf's knot deflated enough for you to slip off of, but he has shifted in his sleep, easing his massive body off of you. You take this chance to squeeze your way from under the Wolf. After finally freeing yourself, you spit out the Wrestling Wolf's briefs and escape from his makeshift ring, all while thinking that you should put up a better fight next time, lest you deal with another of his anger fueled treatments.";
 			else:
 				now wrestlingwolfdefeat is 2;
@@ -119,12 +119,12 @@ to say wrwolfdesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Wrestling Wolf"; [Name of your new Monster]
 	now enemy title entry is "Wrestling Wolf";
 	now enemy name entry is "Anaranjado";
@@ -172,8 +172,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "wrwolf"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Table of Critter Combat (continued)
@@ -192,7 +193,7 @@ this is the wrestlew rule:
 		retaliate; [follows the advanced model if alternate]
 
 to wwpowerslam:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	increase dex entry by 6; [temporary +3 to hit]
 	standardstrike;
 	decrease dex entry by 6;
@@ -228,7 +229,7 @@ to wwpowerslam:
 
 
 this is the wrwolfpose rule:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if HP entry > ( monsterHP * 5 ) and a random chance of 3 in 5 succeeds and wwheal < 4:
 		say "     After his successful attack, the [one of]big wolf howls for the crowd[or]powerful wolf makes a show of struggling to stay standing, ears perked as if listening to the crowd[or]wrestler finds a shirt from somewhere to tear from his body[or]lupine wrestler's body shakes with the power of the Wolfamaniacs cheering him on in his mind[at random], helping him draw on a hidden reserve of strength.";
 		increase monsterHP by ( HP entry / 12 );

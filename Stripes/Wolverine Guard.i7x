@@ -1,7 +1,7 @@
 Version 2 of Wolverine Guard by Stripes begins here.
 [Version 2.1.1 - Player loss fixed]
 
-"Adds a Wolverine Guard creature to Flexible Survival's Wandering Monsters table, with Impreg chance"
+"Adds a Wolverine Guard creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 Section 1 - Monster Responses
 
@@ -79,7 +79,7 @@ to say losetowolverine:
 	else if wrknifefight is true:		[Getting the Knife - Wereraptor]
 		say "     The obsessed wolverine strikes you down to the floor and growls as he strikes you again and again. His slavering muzzle drips saliva onto you as he snaps those crushing jaws at you. He batters you until he's satisfied that you won't dare return and then finally drives you away from the warehouse he's so vigilantly guarding.";
 		if HP of player > 0, now HP of player is HP of player / 2;
-	else if inasituation is false:
+	else if inasituation is true:
 		say ""; [Dealt with at the event source]
 	else:
 		[Normal encounter]
@@ -133,12 +133,12 @@ to say beatthewolverine:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Wolverine Guard"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -186,8 +186,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 when play ends:
@@ -207,8 +208,8 @@ when play ends:
 					say "a female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, its another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with the female eager to spend time with either of you when off duty. ";
 				else:
 					say "another female wolverine and are stationed to guard a nuclear power plant. You don't have to deal with the general public, only the plant regulars, so your appearance isn't much of an issue. If anything, its another strong deterrent for any unwanted visitors. Your trio makes a fine partnership, with James eager to spend time with either of you when off duty. ";
-				say "     Your wild romps get rather loud and vicious sounding at times, so eventually the guardhouse you all share as home gets soundproofed.";
-			else if HP of doctor matt <= 100:
+				say "Your wild romps get rather loud and vicious sounding at times, so eventually the guardhouse you all share as home gets soundproofed.";
+			else if HP of Doctor Matt <= 100:
 				say "     You hold out until the rescue comes and you are taken in by the military. You wait impatiently for your release, always on edge and feeling that there's something you should be doing. You are eventually moved into the care of Dr. Matt, who has you alternate with Orthas as his personal guard at the research station the military sets him up at to combat the spreading infection. While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";
 			else:
 				say "     You hold out until the rescue comes and you are taken in by the military. With your false identity never questioned, you wait impatiently for your release, always on edge and feeling that there's something you should be doing. One day, you are released and are quickly picked up by a large van. You are quietly taken to where Dr Mouse is hiding, apparently having funneled some bribes through a third party to gain custody of you. He takes you on as his private security guard, watching over him as he conducts his secret research. He works for a variety of foreign countries and infected factions[if susan is in hidden lab]. Susan continues to accompany him as an assistant and a lover for you when off duty[end if]. While on duty, you are tireless in your vigil, protecting your post and feeling a sense of fulfillment from doing so.";

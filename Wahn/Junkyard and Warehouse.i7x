@@ -10,6 +10,10 @@ Chapter 1 - Abandoned Lot into Storage Room
 
 Section 1 - Lot Environment
 
+Table of GameRoomIDs (continued)
+Object	Name
+Abandoned Lot	"Abandoned Lot"
+
 Abandoned Lot is a room.
 Abandoned Lot is fasttravel.
 The earea of Abandoned Lot is "Outside".
@@ -19,10 +23,10 @@ to say LotDesc:
 	say "In the industrial park on the outskirts of town, you find yourself in a vacant lot, filled with weeds and gravel. Even before the nanite outbreak, this place clearly off the beaten path and ill-used. Bordering the lot are a series of broken-down, graffiti-colored warehouses. Old 'Authorized Personnel Only' signs lay on the ground.";
 	say "A road leads east between the buildings. You can make out the entrance to a junkyard there";
 
-Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints -- human footprints, in fact! -- leading up to it[else]There are many doors along the wall, but the only one open to you is the one leading outside[end if].";
+Warehouse Door is a door. "[if the player is in Abandoned Lot]One of the warehouses has an entrance that is cleared of overgrowth. You can see footprints - human footprints, in fact! - leading up to it[else]There are many doors along the wall, but the only one open to you is the one leading outside[end if].";
 
-Lot Exit is a door. Lot Exit is dangerous. The marea of Lot Exit is "Outside". Lot Exit is undescribed. Lot Exit is west of Abandoned Lot. West of Lot Exit is Outside Exploration.
-South of Abandoned Lot is Warehouse Door.
+Lot Exit is a door. Lot Exit is dangerous. The marea of Lot Exit is "Outside". Lot Exit is undescribed. Lot Exit is west of Abandoned Lot. Outside Exploration is west of Lot Exit.
+Warehouse Door is south of Abandoned Lot.
 
 instead of sniffing Abandoned Lot:
 	say "This area smells of dry earth, old machinery and oil.";
@@ -134,7 +138,7 @@ Instead of going south from the Abandoned Lot:
 						say "     Do you give him a bottle of soda?";
 						if player consents:
 							LineBreak;
-							say "     You dig into your backpack and hold the 20 oz bottle up for him to see. The man nods happily and accepts the bottle as you hand it through the slit, having to push a bit to make it fit with some scrapes along the sides. 'Thanks,' he says, then abruptly clloses the opening. A few moments later, he is back, opening the slat and showing you to another man who looks out suspiciously. The two mumble to each other for a moment before the second man speaks up.";
+							say "     You dig into your backpack and hold the 20 oz bottle up for him to see. The man nods happily and accepts the bottle as you hand it through the slit, having to push a bit to make it fit with some scrapes along the sides. 'Thanks,' he says, then abruptly closes the opening. A few moments later, he is back, opening the slat and showing you to another man who looks out suspiciously. The two mumble to each other for a moment before the second man speaks up.";
 							say "     'All right, we will let you in. But if you try anything funny, you'll be out on the streets so fast your head will spin!' You promise you won't be any trouble, and the guards open the door for you, hastily waving you inside. The original guy at the door starts to raise his hand to shake yours, then pauses and puts it back down as he remembers the nanite infection. 'Um. Yeah. So... I'm Steven by the way,' he tells you, then quickly goes to grab a large black raincoat, throwing it over you to conceal your changed body at least a little.";
 							delete soda;
 							move player to Storage Room;
@@ -150,9 +154,13 @@ Chapter 2 - Storage Room and Steven
 
 Section 1 - The environment
 
+Table of GameRoomIDs (continued)
+Object	Name
+storage room	"storage room"
+
 The storage room is a room. "The inside of this warehouse has been converted into a shelter. The large stockpile of packaging and spare parts remains in the center of the room, a remnant of the city's industry. More heavily guarded are the stockpiles of bottled water in the corner. A line of survivors stretches from the water all the way around the wall. Few of them carry any possessions; they sit on blankets as they talk to one another. Every now and then, a glint of color or a patch of fur catches your eye; it seems at least a few of these survivors have already been mutated, and are desperately trying to hide it.";
 
-South of the Warehouse Door is the Storage Room.
+Storage Room is south of the Warehouse Door.
 
 instead of sniffing Storage Room:
 	say "The storage room smells of the human survivors and their supplies. Fear is thick in the air, almost completely masking the faint traces of other non-human scents among the group. It seems a few of them are at least slightly infected and desperately trying to hide it.";
@@ -160,6 +168,10 @@ instead of sniffing Storage Room:
 Section 2 - Steven, chat
 
 StevenSwayed is a number that varies. StevenSwayed is usually 0.
+
+Table of GameCharacterIDs (continued)
+object	name
+Steven	"Steven"
 
 Steven is a person in the Storage Room. "A guard who you recognize as the doorkeeper stands, understandably, by the big steel door. A nametag says 'Steven'."
 The description of Steven is "A man in his thirties, wearing a security outfit. He looks from side to side with a distant look in his eyes. What kind of life did he have before the nanite invasion?".
@@ -285,9 +297,13 @@ Chapter 3 - The Office and StevenFucking
 
 Section 1 - The Office
 
+Table of GameRoomIDs (continued)
+Object	Name
+Steven's Office	"Steven's Office"
+
 Steven's Office is a room. "The office is very sparsely decorated. A desk made from pallets and a chair made from crates sits on one corner of the room. A pallet in another corner functions as a bookshelf, showing a couple of books and a blackened popsicle picture frame, with 'Daddy' crayoned inside. Nothing else is decorated. A door leads back to the warehouse floor.";
 
-Outside of Steven's Office is Storage Room. Inside of Storage Room is nowhere.
+Storage Room is outside of Steven's Office. Nowhere is inside of Storage Room.
 
 instead of sniffing Steven's Office:
 	say "The room smells like Steven, strong and manly.";
@@ -387,8 +403,8 @@ To newStevenconverse:
 
 To Stevenjunkfuck:
 	[puts red horse as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Red Horse":
 			now monster is y;
 			break;
@@ -495,12 +511,12 @@ to say Stevenonbottom:
 		say "     You try to seduce him into letting you fuck him, but he manages to shake off your advances and pushes you back. 'Hey, I said I'm not in the mood.' He gets up and looks around. 'I'm going to go take a walk.'";
 
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Red Horse";
 	now enemy title entry is "";
 	now enemy name entry is "Steven";
@@ -529,7 +545,7 @@ When play begins:
 	now HP entry is 45;
 	now lev entry is 5;
 	now wdam entry is 7;
-	now area entry is "nowhere";
+	now area entry is "Nowhere";
 	now cocks entry is 1;
 	now cock length entry is 15;
 	now cock width entry is 6;
@@ -548,30 +564,46 @@ When play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Chapter 4 - Junkyard
 
 Section 1 - The environment
 
+Table of GameRoomIDs (continued)
+Object	Name
+Junkyard Entrance	"Junkyard Entrance"
+
+Junkyard Entrance is a room.
 Junkyard Entrance is east of the Abandoned Lot. "In this dirty part of the town you stand on the road to an even dirtier place. The smells of the city junkyard, of rotting food and fetid water, reek from the north. The dirt road curves to the west, back to the abandoned warehouse complex."
+The earea of Junkyard Entrance is "Junkyard".
 
 instead of sniffing Junkyard Entrance:
 	say "The junkyard smells predominantly of old machinery and oil, though there's a faint smell of normal trash as well from piles of that scattered around.";
 
 Junkyard Gate is a door. "The junkyard to the north appears threatening and dangerous, but there's probably plenty of loot for the taking." Junkyard Gate is dangerous.
 
-North of Junkyard Gate is Junkyard Interior.
-North of Junkyard Entrance is Junkyard Gate.
+Table of GameRoomIDs (continued)
+Object	Name
+Junkyard Interior	"Junkyard Interior"
+
+Junkyard Interior is a room.
+Junkyard Interior is north of Junkyard Gate.
+Junkyard Gate is north of Junkyard Entrance.
 
 The marea of Junkyard Gate is "Junkyard".
 
 
 Section 2 - Junkyard Digups
 
-Junkyard digups is a situation. The printed name of Junkyard digups is "a pile of garbage".
+Table of GameEventIDs (continued)
+Object	Name
+Junkyard digups	"A pile of garbage"
+
+Junkyard digups is a situation. The printed name of Junkyard digups is "A pile of garbage".
 The sarea of junkyard digups is "Junkyard".
 jdigup is a number that varies.
 
@@ -592,16 +624,31 @@ Instead of resolving junkyard digups:
 
 Section 3 - Steven's Home
 
-Steven's Home is a room. "You are in a more cozy and more private part of the junkyard. All of the hard metal objects have been cleared, and instead the floor is lined with mattress stuffing and foam insulation, topped off with wild grass for a natural feel. It also doesn't smell as bad, thanks to the pine needles and wildflower petals mixed into the floor. You feel safe and protected here." It is fasttravel. It is private. Outside of Steven's Home is Junkyard Entrance. Inside of Junkyard Entrance is nowhere.
+Table of GameRoomIDs (continued)
+Object	Name
+Steven's Home	"Steven's Home"
+
+Steven's Home is a room. "You are in a more cozy and more private part of the junkyard. All of the hard metal objects have been cleared, and instead the floor is lined with mattress stuffing and foam insulation, topped off with wild grass for a natural feel. It also doesn't smell as bad, thanks to the pine needles and wildflower petals mixed into the floor. You feel safe and protected here." It is fasttravel. It is private.
+
+Table of GameRoomIDs (continued)
+Object	Name
+Junkyard Entrance	"Junkyard Entrance"
+
+Junkyard Entrance is a room.
+Junkyard Entrance is outside of Steven's Home. Nowhere is inside of Junkyard Entrance.
 [The sarea of Steven's Home is "Junkyard."]
 
 instead of sniffing Steven's Home:
 	say "This spot in the junkyard smells of Steven and his manly, equine scent. It only partially blocks the pervasive scent of the junkyard though.";
 
-a junkyard home is a situation.
-The sarea of a junkyard home is "Junkyard".
+Table of GameEventIDs (continued)
+Object	Name
+Junkyard Home	"Junkyard Home"
 
-Instead of resolving a junkyard home:
+Junkyard Home is a situation.
+The sarea of Junkyard Home is "Junkyard".
+
+Instead of resolving Junkyard Home:
 	if Stevenremoved is 0:
 		say "You come across what looks like an abandoned habitation, filled with old nesting material and various shiny objects. Is it some kind of bird's nest? You decide to leave it alone... for now.";
 	else:
@@ -614,6 +661,10 @@ Instead of resolving a junkyard home:
 
 
 Section 4 - Finding a tool
+
+Table of GameEventIDs (continued)
+Object	Name
+unused tool	"unused tool"
 
 an unused tool is a situation.
 The sarea of an unused tool is "Junkyard".
@@ -655,6 +706,10 @@ Instead of resolving an unused tool:
 
 Section 5 - Find a random infected object
 
+Table of GameEventIDs (continued)
+Object	Name
+signs of a scuffle	"signs of a scuffle"
+
 signs of a scuffle is a situation.
 The sarea of signs of a scuffle is "Junkyard".
 scufflecount is a number that varies.
@@ -663,15 +718,15 @@ Instead of resolving signs of a scuffle:
 	increase scufflecount by 1;
 	say "It looks like two infected creatures were fighting each other out here. You search the area for any fallen loot:[line break]";
 	let opportunity be 0;
-	let firstbeast be a random number from 1 to number of filled rows in the table of random critters;
-	choose row firstbeast from the table of random critters;
+	let firstbeast be a random number from 1 to number of filled rows in the Table of Random Critters;
+	choose row firstbeast from the Table of Random Critters;
 	if there is a loot entry:
 		if loot entry is not "" and loot entry is not " ":
 			add loot entry to invent of player;
 			say "You found 1 x [loot entry]!";
 			now opportunity is 1;
-	let secondbeast be a random number from 1 to number of filled rows in the table of random critters;
-	choose row secondbeast from the table of random critters;
+	let secondbeast be a random number from 1 to number of filled rows in the Table of Random Critters;
+	choose row secondbeast from the Table of Random Critters;
 	if there is a loot entry:
 		if loot entry is not "" and loot entry is not " ":
 			add loot entry to invent of player;

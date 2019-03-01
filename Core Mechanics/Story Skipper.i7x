@@ -1,3475 +1,704 @@
-Version 223 of Story Skipper by Core Mechanics begins here.
+Version 224 of Story Skipper by Core Mechanics begins here.
 [ New compressed method - 5/17/2015 - Stripes ]
 [ Version 223.1 - Updated w/Enhanced Chimera material ]
-[ Update: Saveword version and serial number now part of saveword #31 (originally unused) ]
+[ Version 224 - Completely rewritten - Wahn]
 
-The File of Trixsave (owned by another project) is called "txsave".
-The File of Trixsave2 (owned by another project) is called "txsave2".
-The File of Trixsave3 (owned by another project) is called "txsave3".
-The File of invsave (owned by another project) is called "invsave".
-The File of storsave (owned by another project) is called "storsave".
-trixsavetext1 is an indexed text that varies. trixsavetext1 is usually "no save file found".
-trixsavetext2 is an indexed text that varies. trixsavetext2 is usually "no save file found".
-trixsavetext3 is an indexed text that varies. trixsavetext3 is usually "no save file found".
-invsavetext is an indexed text that varies. invsavetext is usually "no save file found".
-storsavetext is an indexed text that varies. invsavetext is usually "no save file found".
-SavewordVersion is a number that varies. SavewordVersion is 223. [Saveword version to be outputted in part1. Update this number whenever there's an update to the saveword.]
+The File of EventSave (owned by another project) is called "FSEventSave".
+The File of RoomSave (owned by another project) is called "FSRoomSave".
+The File of RoomInventorySave (owned by another project) is called "FSRoomInventorySave".
+The File of PossessionSave (owned by another project) is called "FSPossessionSave".
+The File of CharacterSave (owned by another project) is called "FSCharacterSave".
+The File of TraitSave (owned by another project) is called "FSTraitSave".
+The File of PlayerSave (owned by another project) is called "FSPlayerSave".
+The File of PlayerListsSave (owned by another project) is called "FSPlayerListsSave".
+The File of BeastSave (owned by another project) is called "FSBeastSave".
 
-To savetrix:
-	write "[trixsavetext1]" to the File of Trixsave;
-	write "[trixsavetext2]" to the File of Trixsave2;
-	write "[trixsavetext3]" to the File of Trixsave3;
-	write "Soda|1}" to the File of invsave;
-	write "Soda|1}" to the File of storsave;
-	repeat with x running from 1 to the number of rows in the table of game objects:
-		choose row x in the table of game objects;
+PetList is a list of text that varies.[@Tag:NotSaved] [for stashing the pet objects in the Character Nexus]
+PetList is { "Nullpet", "Latex Vixen", "strange doll", "pink raccoon", "demon brute", "wukong", "human dog", "Retriever Girl", "rubber tigress", "frost giantess", "Little fox", "skunk kit", "equinoid warrior", "Felinoid Companion", "Cute Crab", "house cat", "Exotic Bird", "helper dog", "Gryphoness", "bee girl", "gshep", "mouse girl", "royal tiger", "doberman companion" };
+
+[----------------------------------------------------------------------------------]
+[ Testing Commands for partial Saving                                              ]
+[----------------------------------------------------------------------------------]
+
+StashEvent is an action applying to nothing.
+
+understand "StashEvent" as StashEvent.
+
+carry out StashEvent:
+	EventSave;
+
+StashRoom is an action applying to nothing.
+
+understand "StashRoom" as StashRoom.
+
+carry out StashRoom:
+	RoomSave;
+
+StashPossession is an action applying to nothing.
+
+understand "StashPossession" as StashPossession.
+
+carry out StashPossession:
+	PossessionSave;
+
+StashCharacter is an action applying to nothing.
+
+understand "StashCharacter" as StashCharacter.
+
+carry out StashCharacter:
+	CharacterSave;
+
+StashPlayer is an action applying to nothing.
+
+understand "StashPlayer" as StashPlayer.
+
+carry out StashPlayer:
+	PlayerSave;
+
+StashBeast is an action applying to nothing.
+
+understand "StashBeast" as StashBeast.
+
+carry out StashBeast:
+	BeastSave;
+
+[----------------------------------------------------------------------------------]
+
+EventRestoration is an action applying to nothing.
+
+understand "EventLoad" as EventRestoration.
+
+carry out EventRestoration:
+	EventRestore;
+
+RoomRestoration is an action applying to nothing.
+
+understand "RoomLoad" as RoomRestoration.
+
+carry out RoomRestoration:
+	RoomRestore;
+
+PossessionRestoration is an action applying to nothing.
+
+understand "PossessionLoad" as PossessionRestoration.
+
+carry out PossessionRestoration:
+	PossessionRestore;
+
+CharacterRestoration is an action applying to nothing.
+
+understand "CharacterLoad" as CharacterRestoration.
+
+carry out CharacterRestoration:
+	CharacterRestore;
+
+PlayerRestoration is an action applying to nothing.
+
+understand "PlayerRestoration" as PlayerRestoration.
+
+carry out PlayerRestoration:
+	PlayerRestore;
+
+BeastRestoration is an action applying to nothing.
+
+understand "BeastRestoration" as BeastRestoration.
+
+carry out BeastRestoration:
+	BeastRestore;
+
+TraitRestoration is an action applying to nothing.
+
+understand "TraitRestoration" as TraitRestoration.
+
+carry out TraitRestoration:
+	TraitRestore;
+
+Section 1 - Functions
+
+to EventSave:
+	say "Saving Events...";
+	blank out the whole of Table of GameEvents; [empty out all old data]
+	if number of situations > number of rows in the table of GameEvents: [making sure we got enough room for all situations]
+		say "Error! Not enough rows to save all events in the table of GameEvents. Please report this on the FS Discord.";
+	repeat with x running through situations: [rebuilds the table of GameEvents with current data]
+		choose a blank row in the table of GameEvents;
+		now name entry is printed name of x;
+		if x is resolved:
+			now ResolveState entry is "Resolved";
+		else:
+			now ResolveState entry is "Unresolved";
+		if x is active:
+			now ActiveState entry is "Active";
+		else:
+			now ActiveState entry is "Inactive";
+		now Resolution entry is Resolution of x;
+		now SituationArea entry is sarea of x;
+	write File of EventSave from the Table of GameEvents; [freshly made table gets saved to file]
+	blank out the whole of Table of GameEvents; [empty it after saving]
+	if debugactive is 1:
+		say "DEBUG -> File of EventSave written.[line break]";
+
+to EventRestore:
+	if the File of EventSave exists:
+		say "Restoring Events...";
+		read File of EventSave into the Table of GameEvents;
+		repeat with x running from 1 to the number of filled rows in the Table of GameEvents:
+			choose row x in the Table of GameEvents;
+			let EventIdName be name entry;
+			if there is a name of EventIdName in the Table of GameEventIDs:
+				let EventObject be the object corresponding to a name of EventIdName in the Table of GameEventIDs;
+				if ResolveState entry is "Resolved":
+					now EventObject is resolved;
+				else:
+					now EventObject is unresolved;
+				if ActiveState entry is "Active":
+					now EventObject is active;
+				else:
+					now EventObject is inactive;
+				now Resolution of EventObject is Resolution entry;
+				now sarea of EventObject is SituationArea entry;
+				[bugfix code after re-naming Midway to Fair]
+				if sarea of EventObject is "Midway":
+					now sarea of EventObject is "Fair";
+				if debugactive is 1:
+					say "DEBUG -> [x]: EventIdName: [EventIdName] found and set to: [ResolveState entry], [ActiveState entry], Resolution: [Resolution entry]";
+			else:
+				if debugactive is 1:
+					say "DEBUG -> [x]: EventIdName: [EventIdName] not found in Table of GameEventIDs!";
+	else:
+		say "No Event Save File Found!";
+	blank out the whole of Table of GameEvents; [empty it after restoring]
+
+to RoomSave:
+	say "Saving Rooms...";
+	blank out the whole of Table of GameRooms; [empty out all old data]
+	blank out the whole of Table of GameRoomInventories; [empty out all old data]
+	if number of rooms > number of rows in the table of GameRooms: [making sure we got enough room for all situations]
+		say "Error! Not enough rows to save all rooms in the table of GameRooms. Please report this on the FS Discord.";
+	repeat with x running through rooms: [rebuilds the table of GameRooms with current data]
+		choose a blank row in the table of GameRooms;
+		now name entry is printed name of x;
+		if x is private:
+			now Reachability entry is "Private";
+		else:
+			now Reachability entry is "Public";
+		if x is known:
+			now ExplorationStatus entry is "Known";
+		else:
+			now ExplorationStatus entry is "Unknown";
+		if x is Sleepsafe:
+			now RestSafety entry is "Safe";
+		else:
+			now RestSafety entry is "Unsafe";
+		if the number of entries in Invent of x is not 0:
+			repeat with y running from 1 to the number of entries in Invent of x: [rebuilds the table of RoomInventory with current data]
+				choose a blank row in the table of GameRoomInventories;
+				now RoomName entry is printed name of x;
+				now ItemName entry is entry y in Invent of x;
+	write File of RoomSave from the Table of GameRooms; [freshly made table gets saved to file]
+	write File of RoomInventorySave from the Table of GameRoomInventories; [freshly made table gets saved to file]
+	blank out the whole of Table of GameRooms; [empty after saving]
+	blank out the whole of Table of GameRoomInventories; [empty after saving]
+	if debugactive is 1:
+		say "DEBUG -> File of RoomSave written.[line break]";
+
+to RoomRestore:
+	if the File of RoomSave exists:
+		say "Restoring Rooms...";
+		read File of RoomSave into the Table of GameRooms;
+		repeat with x running from 1 to the number of filled rows in the Table of GameRooms:
+			choose row x in the Table of GameRooms;
+			let RoomIdName be name entry;
+			if there is a name of RoomIdName in the Table of GameRoomIDs:
+				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
+				if Reachability entry is "Private":
+					now RoomObject is private;
+				else:
+					now RoomObject is not private;
+				if ExplorationStatus entry is "Known":
+					now RoomObject is known;
+				else:
+					now RoomObject is not known;
+				if RestSafety entry is "Safe":
+					now RoomObject is sleepsafe;
+				else:
+					now RoomObject is not sleepsafe;
+				if debugactive is 1:
+					say "DEBUG -> [x]: RoomIdName: [RoomIdName] found and set to: [Reachability entry]; [ExplorationStatus entry]; [RestSafety entry]";
+			else:
+				if debugactive is 1:
+					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
+	if the File of RoomInventorySave exists:
+		repeat with x running through rooms:
+			truncate Invent of x to 0 entries; [cleaning out the old data]
+		say "Restoring RoomInventories...";
+		read File of RoomInventorySave into the Table of GameRoomInventories;
+		repeat with x running from 1 to the number of filled rows in the Table of GameRoomInventories:
+			choose row x in the Table of GameRoomInventories;
+			let RoomIdName be RoomName entry;
+			if there is a name of RoomIdName in the Table of GameRoomIDs:
+				let RoomObject be the object corresponding to a name of RoomIdName in the Table of GameRoomIDs;
+				add ItemName entry to Invent of RoomObject;
+			else:
+				if debugactive is 1:
+					say "DEBUG -> [x]: RoomIdName: [RoomIdName] not found in Table of GameRoomIDs!";
+	else:
+		say "No Room Save File Found!";
+	blank out the whole of Table of GameRooms; [empty out all old data]
+	blank out the whole of Table of GameRoomInventories; [empty out all old data]
+
+to PossessionSave:
+	say "Saving Possessions...";
+	blank out the whole of Table of GamePossessions; [empty out all old data]
+	repeat with x running from 1 to the number of rows in the Table of Game Objects: [rebuilds the table of GamePossessions with current data]
+		choose row x in the Table of Game Objects;
+		let PossessionName be name entry;
+		let PossessionCarriedNumber be 0;
+		let PossessionStoredNumber be 0;
+		let PossessionEquipped be false;
+		let PossesssionCursed be false;
 		if object entry is owned:
-			let num be carried of object entry;
-			append "[name entry]|[num]}" to the File of invsave;
-	repeat with x running from 1 to the number of rows in the table of game objects:
-		choose row x in the table of game objects;
+			now PossessionCarriedNumber is carried of object entry;
 		if object entry is stored:
-			let num be stashed of object entry;
-			append "[name entry]|[num]}" to the File of storsave;
+			now PossessionStoredNumber is stashed of object entry;
+		if object entry is Equipment:
+			if object entry is equipped:
+				now PossessionEquipped is true;
+			if object entry is cursed:
+				now PossesssionCursed is true;
+		if PossessionCarriedNumber > 0 or PossessionStoredNumber > 0: [if the object is indeed in the players possession, it gets written down]
+			choose a blank row in the table of GamePossessions;
+			now name entry is PossessionName;
+			now CarriedNumber entry is PossessionCarriedNumber;
+			now StoredNumber entry is PossessionStoredNumber;
+			now EquippedStatus entry is PossessionEquipped;
+			now CurseStatus entry is PossesssionCursed;
+	write File of PossessionSave from the Table of GamePossessions; [freshly made table gets saved to file]
+	blank out the whole of Table of GamePossessions; [empty after saving to file]
+	if debugactive is 1:
+		say "DEBUG -> File of PossessionSave written.[line break]";
 
+to PossessionRestore:
+	if the File of PossessionSave exists:
+		say "Restoring Possessions...";
+		read File of PossessionSave into the Table of GamePossessions;
+		repeat with x running from 1 to the number of filled rows in the Table of GamePossessions:
+			choose row x in the Table of GamePossessions;
+			let PossessionIdName be name entry;
+			if there is a name of PossessionIdName in the Table of Game Objects:
+				let PossessionObject be the object corresponding to a name of PossessionIdName in the Table of Game Objects;
+				now carried of PossessionObject is CarriedNumber entry;
+				now stashed of PossessionObject is StoredNumber entry;
+				if PossessionObject is Equipment:
+					if EquippedStatus entry is true:
+						now PossessionObject is equipped;
+					else:
+						now PossessionObject is not equipped;
+					if CurseStatus entry is true:
+						now PossessionObject is cursed;
+					else:
+						now PossessionObject is not cursed;
+				if debugactive is 1:
+					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] found and set to: [carried of PossessionObject] carried and [stashed of PossessionObject] stored.";
+			else:
+				if debugactive is 1:
+					say "DEBUG -> [x]: PossessionIdName: [PossessionIdName] not found in Table of Game Objects!";
+	else:
+		say "No Possession Save File Found!";
+	blank out the whole of Table of GamePossessions; [empty out all old data]
+
+to CharacterSave:
+	say "Saving Characters...";
+	blank out the whole of Table of GameCharacters; [empty out all old data]
+	blank out the whole of Table of GameTraits; [empty out all old data]
+	if number of persons > number of rows in the table of GameCharacters: [making sure we got enough room for all situations]
+		say "Error! Not enough rows to save all Characters in the table of GameCharacters. Please report this on the FS Discord.";
+	repeat with x running through persons: [rebuilds the table of GameCharacters with current data]
+		choose a blank row in the Table of GameCharacters;
+		if there is a object of X in the Table of GameCharacterIDs:
+			let CharacterName be the name corresponding to a object of X in the Table of GameCharacterIDs;
+			now name entry is CharacterName;
+			let LocationDesignation be "NPC Nexus"; [standard value = stash room]
+			if location of x is not nothing:
+				let LocationDesignation be printed name of location of x;
+			now LocationName entry is LocationDesignation;
+			now Energy entry is Energy of x;
+			now HP entry is HP of x;
+			now MaxHP entry is MaxHP of x;
+			now XP entry is XP of x;
+			now Level entry is Level of x;
+			now Armor entry is Armor of x;
+			now Weapon Damage entry is Weapon Damage of x;
+			now Capacity entry is Capacity of x;
+			now ScaleValue entry is ScaleValue of x;
+			now Strength entry is Strength of x;
+			now Dexterity entry is Dexterity of x;
+			now Stamina entry is Stamina of x;
+			now Charisma entry is Charisma of x;
+			now Intelligence entry is Intelligence of x;
+			now Perception entry is Perception of x;
+			now Hunger entry is Hunger of x;
+			now Thirst entry is Thirst of x;
+			now SleepRhythm entry is SleepRhythm of x;
+			now Morale entry is Morale of x;
+			now Lust entry is Lust of x;
+			now Libido entry is Libido of x;
+			now Loyalty entry is Loyalty of x;
+			now Humanity entry is Humanity of x;
+			now Cocks entry is Cocks of x;
+			now Cock Length entry is Cock Length of x;
+			now Cock Width entry is Cock Width of x;
+			now Testes entry is Testes of x;
+			now Cunts entry is Cunts of x;
+			now Cunt Length entry is Cunt Length of x;
+			now Cunt Width entry is Cunt Width of x;
+			now Breasts entry is Breasts of x;
+			now Breast Size entry is Breast Size of x;
+			now PlayerMet entry is PlayerMet of x;
+			now PlayerRomanced entry is PlayerRomanced of x;
+			now PlayerFucked entry is PlayerFucked of x;
+			now OralVirgin entry is OralVirgin of x;
+			now Virgin entry is Virgin of x;
+			now AnalVirgin entry is AnalVirgin of x;
+			if the number of entries in Traits of x is not 0:
+				repeat with y running from 1 to the number of entries in Traits of x: [rebuilds the table of GameTraits with current data]
+					choose a blank row in the table of GameTraits;
+					now OwnerName entry is CharacterName;
+					now TraitText entry is entry y of Traits of x;
+		else:
+			say "Error! The character [x] is not listed in the Table of GameCharacterIDs and cannot be saved. Please report this on the FS Discord.";
+	write File of CharacterSave from the Table of GameCharacters; [freshly made table gets saved to file]
+	write File of TraitSave from the Table of GameTraits; [freshly made table gets saved to file]
+	blank out the whole of Table of GameCharacters; [empty after saving]
+	blank out the whole of Table of GameTraits; [empty after saving]
+	if debugactive is 1:
+		say "DEBUG -> File of CharacterSave written.[line break]";
+		say "DEBUG -> File of TraitSave written.[line break]";
+
+to CharacterRestore:
+	if the File of CharacterSave exists:
+		say "Restoring Characters...";
+		read File of CharacterSave into the Table of GameCharacters;
+		repeat with x running from 1 to the number of filled rows in the Table of GameCharacters:
+			choose row x in the Table of GameCharacters;
+			let CharacterIdName be name entry;
+			if there is a name of CharacterIdName in the Table of GameCharacterIDs:
+				let CharacterObject be the object corresponding to a name of CharacterIdName in the Table of GameCharacterIDs;
+				if CharacterIdName is listed in PetList:
+					if debugactive is 1:
+						say "DEBUG -> Pets are part of the player, thus they don't get moved.[line break]";
+				[
+				else if CharacterIdName is "yourself":
+					if debugactive is 1:
+						say "DEBUG -> The player doesn't get moved.[line break]";
+				]
+				else if there is a name of LocationName entry in the Table of GameRoomIDs:
+					let TargetRoom be the object corresponding to a name of LocationName entry in the Table of GameRoomIDs;
+					move CharacterObject to TargetRoom;
+				else:
+					if debugactive is 1:
+						say "DEBUG -> Room [LocationName entry] does not exist. Character moved to NPC Nexus.[line break]";
+					move CharacterObject to NPC Nexus;
+				now Energy of CharacterObject is Energy entry;
+				now HP of CharacterObject is HP entry;
+				now MaxHP of CharacterObject is MaxHP entry;
+				now XP of CharacterObject is XP entry;
+				now Level of CharacterObject is Level entry;
+				now Armor of CharacterObject is Armor entry;
+				now Weapon Damage of CharacterObject is Weapon Damage entry;
+				now Capacity of CharacterObject is Capacity entry;
+				now ScaleValue of CharacterObject is ScaleValue entry;
+				now Strength of CharacterObject is Strength entry;
+				now Dexterity of CharacterObject is Dexterity entry;
+				now Stamina of CharacterObject is Stamina entry;
+				now Charisma of CharacterObject is Charisma entry;
+				now Intelligence of CharacterObject is Intelligence entry;
+				now Perception of CharacterObject is Perception entry;
+				now Hunger of CharacterObject is Hunger entry;
+				now Thirst of CharacterObject is Thirst entry;
+				now SleepRhythm of CharacterObject is SleepRhythm entry;
+				now Morale of CharacterObject is Morale entry;
+				now Lust of CharacterObject is Lust entry;
+				now Libido of CharacterObject is Libido entry;
+				now Loyalty of CharacterObject is Loyalty entry;
+				now Humanity of CharacterObject is Humanity entry;
+				now Cocks of CharacterObject is Cocks entry;
+				now Cock Length of CharacterObject is Cock Length entry;
+				now Cock Width of CharacterObject is Cock Width entry;
+				now Testes of CharacterObject is Testes entry;
+				now Cunts of CharacterObject is Cunts entry;
+				now Cunt Length of CharacterObject is Cunt Length entry;
+				now Cunt Width of CharacterObject is Cunt Width entry;
+				now Breasts of CharacterObject is Breasts entry;
+				now Breast Size of CharacterObject is Breast Size entry;
+				now PlayerMet of CharacterObject is PlayerMet entry;
+				now PlayerRomanced of CharacterObject is PlayerRomanced entry;
+				now PlayerFucked of CharacterObject is PlayerFucked entry;
+				now OralVirgin of CharacterObject is OralVirgin entry;
+				now Virgin of CharacterObject is Virgin entry;
+				now AnalVirgin of CharacterObject is AnalVirgin entry;
+				if debugactive is 1:
+					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] found and values restored.";
+			else:
+				if debugactive is 1:
+					say "DEBUG -> [x]: CharacterIdName: [CharacterIdName] not found in Table of GameCharacterIDs!";
+	else:
+		say "No Character Save File Found!";
+	blank out the whole of Table of GameCharacters; [empty out all old data]
+	blank out the whole of Table of GameTraits; [empty out all old data]
+
+to TraitRestore:
+	if the File of TraitSave exists:
+		say "Restoring Traits...";
+		read File of TraitSave into the Table of GameTraits;
+		truncate Feats of player to 0 entries;
+		repeat with y running through persons:[cleaning out the old data]
+			truncate Traits of y to 0 entries;
+		repeat with x running from 1 to the number of filled rows in the Table of GameTraits:
+			choose row x in the Table of GameTraits;
+			let TraitOwner be OwnerName entry;
+			if there is a name of TraitOwner in the Table of GameCharacterIDs:
+				let CharacterObject be the object corresponding to a name of TraitOwner in the Table of GameCharacterIDs;
+				if TraitText entry is not listed in Traits of CharacterObject:
+					add TraitText entry to Traits of CharacterObject;
+					if TraitText entry is "Tamed": [pets]
+						now CharacterObject is tamed;
+					if debugactive is 1:
+						say "DEBUG -> [x]: Added Trait: '[TraitText entry]' to [TraitOwner].";
+	else:
+		say "No Trait Save File Found!";
+
+to PlayerSave:
+	say "Saving Player Data...";
+	blank out the whole of Table of PlayerData; [empty out all old data]
+	blank out the whole of Table of PlayerLists; [empty out all old data]
+	choose a blank row in the table of PlayerData;
+	now skin entry is skin of player;
+	now skinname entry is skinname of player;
+	now cock entry is cock of player;
+	now cockname entry is cockname of player;
+	now face entry is face of player;
+	now facename entry is facename of player;
+	now tail entry is tail of player;
+	now tailname entry is tailname of player;
+	now body entry is body of player;
+	now bodyname entry is bodyname of player;
+	now scent entry is scent of player;
+	now Cock Size Desc entry is Cock Size Desc of player;
+	now Cunt Size Desc entry is Cunt Size Desc of player;
+	now Breast Size Desc entry is Breast Size Desc of player;
+	now Short Breast Size Desc entry is Short Breast Size Desc of player;
+	now bodydesc entry is bodydesc of player;
+	now bodytype entry is bodytype of player;
+	if the number of entries in Vials of player is not 0:
+		repeat with y running from 1 to the number of entries in Vials of player:
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "Vial";
+			now EntryText entry is entry y of vials of player;
+	if the number of entries in Tapes of player is not 0:
+		repeat with y running from 1 to the number of entries in Tapes of player:
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "Tape";
+			now EntryText entry is entry y of Tapes of player;
+	if the number of entries in Feats of player is not 0:
+		repeat with y running from 1 to the number of entries in Feats of player:
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "Feat";
+			now EntryText entry is entry y of Feats of player;
+	if the number of entries in OpenQuests of player is not 0:
+		repeat with y running from 1 to the number of entries in OpenQuests of player:
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "OpenQuest";
+			now EntryText entry is entry y of OpenQuests of player;
+	if the number of entries in CompletedQuests of player is not 0:
+		repeat with y running from 1 to the number of entries in CompletedQuests of player: [rebuilds the table of GameTraits with current data]
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "CompletedQuest";
+			now EntryText entry is entry y of CompletedQuests of player;
+	if the number of entries in EncounteredEnemies of player is not 0:
+		repeat with y running from 1 to the number of entries in EncounteredEnemies of player: [rebuilds the table of GameTraits with current data]
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "EncounteredEnemy";
+			now EntryText entry is entry y of EncounteredEnemies of player;
+	if the number of entries in BlockList of player is not 0:
+		repeat with y running from 1 to the number of entries in BlockList of player: [rebuilds the table of GameTraits with current data]
+			choose a blank row in the table of PlayerLists;
+			now ListName entry is "BlockList";
+			now EntryText entry is entry y of BlockList of player;
+	write File of PlayerSave from the Table of PlayerData; [freshly made table gets saved to file]
+	write File of PlayerListsSave from the Table of PlayerLists; [freshly made table gets saved to file]
+	blank out the whole of Table of PlayerData; [empty after saving]
+	blank out the whole of Table of PlayerLists; [empty after saving]
+	if debugactive is 1:
+		say "DEBUG -> File of PlayerSave written.[line break]";
+
+to PlayerRestore:
+	if the File of PlayerSave exists:
+		say "Restoring Player Data...";
+		read File of PlayerSave into the Table of PlayerData;
+		choose row 1 in the Table of PlayerData;
+		now skin of player is skin entry;
+		now skinname of player is skinname entry;
+		now cock of player is cock entry;
+		now cockname of player is cockname entry;
+		now face of player is face entry;
+		now facename of player is facename entry;
+		now tail of player is tail entry;
+		now tailname of player is tailname entry;
+		now body of player is body entry;
+		now bodyname of player is bodyname entry;
+		now scent of player is scent entry;
+		now Cock Size Desc of player is Cock Size Desc entry;
+		now Cunt Size Desc of player is Cunt Size Desc entry;
+		now Breast Size Desc of player is Breast Size Desc entry;
+		now Short Breast Size Desc of player is Short Breast Size Desc entry;
+		now bodydesc of player is bodydesc entry;
+		now bodytype of player is bodytype entry;
+		if debugactive is 1:
+			say "DEBUG -> Player Data restored.";
+	else:
+		say "No Player Save File Found!";
+	if the File of PlayerListsSave exists:
+		say "Restoring Player Lists...";
+		read File of PlayerListsSave into the Table of PlayerLists;
+		repeat with y running from 1 to the number of filled rows in the Table of PlayerLists:
+			choose row y in the Table of PlayerLists;
+			if ListName entry is:
+				-- "Vial":
+					add EntryText entry to Vials of player;
+				-- "Tape":
+					if EntryText entry is not listed in Tapes of player:
+						add EntryText entry to Tapes of player;
+				-- "Feat":
+					if EntryText entry is not listed in Feats of player:
+						add EntryText entry to Feats of player;
+				-- "OpenQuest":
+					if EntryText entry is not listed in OpenQuests of player:
+						add EntryText entry to OpenQuests of player;
+				-- "CompletedQuest":
+					if EntryText entry is not listed in CompletedQuests of player:
+						add EntryText entry to CompletedQuests of player;
+				-- "EncounteredEnemy":
+					if EntryText entry is not listed in EncounteredEnemies of player:
+						add EntryText entry to EncounteredEnemies of player;
+				-- "BlockList":
+					if EntryText entry is not listed in BlockList of player:
+						add EntryText entry to BlockList of player;
+	blank out the whole of Table of PlayerData; [empty out all old data]
+	blank out the whole of Table of PlayerLists; [empty out all old data]
+
+to BeastSave:
+	say "Saving Beasts...";
+	blank out the whole of Table of GameBeasts; [empty out all old data]
+	if number of rows in Table of Random Critters > number of rows in the Table of GameBeasts: [making sure we got enough room for all situations]
+		say "Error! Not enough rows to save all Beasts in the Table of GameBeasts. Please report this on the FS Discord.";
+	repeat with x running from 1 to the number of filled rows in the Table of Random Critters: [rebuilds the table of GameBeasts with current data]
+		choose row x in the Table of Random Critters;
+		let BeastName be Name entry;
+		let BeastArea be Area entry;
+		let BeastNonInfect be non-infectious entry;
+		let BeastSex be sex entry;
+		choose a blank row in the table of GameBeasts;
+		now Name entry is BeastName;
+		now Area entry is BeastArea;
+		now non-infectious entry is BeastNonInfect;
+		now sex entry is BeastSex;
+	write File of BeastSave from the Table of GameBeasts; [freshly made table gets saved to file]
+	blank out the whole of Table of GameBeasts; [empty after saving]
+	if debugactive is 1:
+		say "DEBUG -> File of BeastSave written.[line break]";
+
+to BeastRestore:
+	if the File of BeastSave exists:
+		read File of BeastSave into the Table of GameBeasts;
+		repeat with x running from 1 to the number of filled rows in the Table of GameBeasts:
+			choose row x in the Table of GameBeasts;
+			let BeastName be Name entry;
+			let BeastArea be Area entry;
+			let BeastNonInfect be non-infectious entry;
+			let BeastSex be sex entry;
+			if there is a Name of BeastName in the Table of Random Critters:
+				choose row with Name of BeastName in Table of Random Critters;
+				now Area entry is BeastArea;
+				[bugfix code after re-naming Midway to Fair]
+				if Area entry is "Midway":
+					now Area entry is "Fair";
+				now non-infectious entry is BeastNonInfect;
+				now sex entry is BeastSex;
+				if debugactive is 1:
+					say "DEBUG -> [x]: BeastName: [BeastName] Area entry set to [BeastArea]!";
+			else:
+				if debugactive is 1:
+					say "DEBUG -> BeastName: [BeastName] not found in Table of Random Critters!";
+	else:
+		say "No Beast Save File Found!";
+	blank out the whole of Table of GameBeasts; [empty out all old data]
+
+Section 2 - Trixie
+
+understand "export progress" as ProgressExport.
+ProgressExport is an action applying to nothing.
+
+Carry out ProgressExport:
+	say "[ProgressionExport]";
+
+To say ProgressionExport:
+	if wrcursestatus is 5:
+		wrcurserecede; [puts player back to normal form and restores proper stats for saving]
+	LineBreak;
+	say "     Writing save files.";
+	SaveEverything;
+	if wrcursestatus is 5:
+		wrcursesave; [puts player back to complete wereraptor form]
+
+To SaveEverything:
+	EventSave;
+	RoomSave;
+	PossessionSave;
+	CharacterSave;
+	PlayerSave;
+	BeastSave;
+	VariableSave;
+
+understand "Import Progress" as ProgressImport.
+ProgressImport is an action applying to nothing.
+
+Carry out ProgressImport:
+	say "     [bold type]Do you really want to start the import process?[roman type][line break]";
+	LineBreak;
+	say "     ([link]Y[as]y[end link]) - Sure, I'll wait a minute (or ten) to reclaim my progress!";
+	say "     ([link]N[as]n[end link]) - Erh, not right now.";
+	if player consents:
+		LineBreak;
+		say "     <Press any key to start import>";
+		wait for any key;
+		say "[ProgressionImport]";
+
+to say ProgressionImport:
+	EventRestore;
+	RoomRestore;
+	PossessionRestore;
+	CharacterRestore;
+	TraitRestore;
+	PlayerRestore;
+	BeastRestore;
+	VariableLoad;
+
+Table of GameCharacterIDs (continued)
+object	name
+Trixie	"Trixie"
 
 Trixie is a person. Trixie is in Grey Abbey Library.
 
-The scent of trixie is "Trixie smells of broken universes and rewritten fate. How anything can smell like that or how you can even know that smell disturbs you to your very core.".
+The scent of Trixie is "Trixie smells of broken universes and rewritten fate. How anything can smell like that or how you can even know that smell disturbs you to your very core.".
 
-The description of trixie is "[trixiedesc]".
+The description of Trixie is "[Trixiedesc]".
 
-to say trixiedesc:
+to say Trixiedesc:
 	say "     Look, it's Trixie, the story fairy! She's about three inches tall, large for her particular breed. She has bright reddish-purple hair and smooth brown skin. Wielded in her right hand is a relatively large wand of old world oak with a great fancy bauble at the end that looks like a cutely renditioned skunk girl head, grinning at you no matter what angle you view it from. Trixie is well shaped, with, relative to the rest of her mass, B cup breasts and wide hips. Her feet are covered in shimmering gold sandals of sorts. Her chest is covered in a t-shirt that reads 'Support us at: https://www.patreon.com/FS'[line break]";
 	say "     Trixie's got a button on her t-shirt that says 'Cheaters type [link]iwannacheat[end link]' on it, and a second one that says 'Check out the [link]artwork credits[end link]'. Hmmm.";
-	say "     She's also found a ballcap on that says '[link]load game[end link] to activate your last save word. Using [link]saveword[end link] will replace it with a [bold type]new[roman type] magic word.' That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
+	say "     She's also found a ballcap on that says 'Using [link]Export Progress[end link] will save your progress for transfer to a new game version. [link]Import Progress[end link] should restore everything in the new version.' That's a lot to put on a ballcap that small, but for some reason you're able to read it all easily.";
 
-The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [bold type]recite[roman type] the word back to me. I'll also save a copy of your most recent magic word. To access that one, use [link]load game[end link] in this room. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
-
-[
-The conversation of trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after starting a new game and [bold type]recite[roman type] the word back to me. This will let you bend time and probability, returning you to the condition you were in when you first said the words... Mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good! Here's the magic word:[line break][line break][magic word][line break]" }.
-]
-
-To say magic word:
-	if wrcursestatus is 5:
-		wrcurserecede; [puts player back to normal form and restores proper stats for saving]
-	now trixsavetext1 is "[strength of player]}[dexterity of player]}[stamina of player]}[charisma of player]}[perception of player]}[intelligence of player]}[level of player]}[maxHP of player]}[humanity of player]}[score - 50]}[HP of doctor matt]}[bodyname of player]}[facename of player]}[skinname of player]}[tailname of player]}[cockname of player]}[SatisfiedTanuki]}[hospquest]}[cocks of player]}[breasts of player]}[cunts of player]}[breast size of player]}[cock length of player]}[cock width of player]}[cunt length of player]}[cunt width of player]}[weapon object of player]}[franksex]}[frankmalesex]}[if Hyper Squirrel Girl is resolved]1[else]0[end if]}[serial number]_[SavewordVersion]}[location of Coleen]}[ColeenTalk]}[ColeenFound]}[ColeenCollared]}[ColeenAlpha]}[ColeenSlut]}[ColeenSpray]}[HP of doctor mouse]}[coonstatus]}[featunlock]}[butterflymagic]}[catnum]}[mateable]}[gryphoncomforted]}[shiftable]}[medeaget]}[mtp]}[hyg]}[NESProgress]}[mtrp]}[boristalk]}[borisquest]}[progress of alex]}[angiehappy]}[angietalk]}[deerconsent]}[HP of Susan]}[mattcollection]";
-	now trixsavetext2 is "chantpartA}[HP of Orthas]}[fancyquest]}[HP of sven]}[lust of sven]}[SarahSlut]}[sarahtalk]}[SarahPups]}0}[alexbrunch]}[treasurefound]}[tmapfound]}[HP of Sandra]}[libido of Frank]}[HP of Fang]}[libido of Fang]}[pigfed]}[pigfucked]}[if cute crab is tamed]1[else]0[end if]}[if exotic bird is tamed]1[else]0[end if]}[if Felinoid companion is tamed]1[else]0[end if]}[HP of bee girl]}[if house cat is tamed]1[else]0[end if]}[if little fox is tamed]1[else]0[end if]}[if skunk kit is tamed]1[else]0[end if]}[if helper dog is tamed]1[else]0[end if]}[mousecurse]}[HP of Elijah]}[npcEint]}[if latexhuskymode is true]1[else]0[end if]}[if insectlarva is true]1[else]0[end if]}[HP of Leonard]}[HP of Solstice]}[HP of Ronda]}[HP of Athanasia]}[skunkbeaststatus]}[ktp]}[release number]}[tattoohunter]}[tatsave]}[piercesave]}[diegochanged]}[HP of Eric]}[HP of Christy]}[dragontype]}[dragonessfuck]}[HP of Doctor Medea]}[HP of Doctor Moffatt]}[HP of Lucy]}[thirst of david]}[lust of david]}[HP of david]}[HP of Adam]}[HP of Alexandra]}[HP of Larissa]}[HP of Sam]}[wrcursestatus]}[wrcurseNermine]}[HP of Doctor Utah]}[HP of Mike]}[HP of Xerxes]}[HP of Helen]}[libido of Helen]}[HP of Rex]}[HP of Karen]}[HP of François]}[libido of François]}[level of Alexandra]}[HP of Thomas]}[libido of Thomas]}[lust of Thomas]}[ThomasQuestVar]}[HP of rubber tigress]}[HP of Septus]}[lust of Xerxes]}[lust of Helen]}[HP of tristian]}[HP of Icarus]}[HP of Joanna]}[lust of Joanna]}[angiearoused]}[DBCaptureQuestVar]}[DemonBruteStatus]}[HP of Lilith]}[LilithKidCounter]}[HP of Felix]}[Libido of Felix]}[VikingRelationship]}[VikingKidCounter]}[MovingOrwell]}[HP of Jimmy]}[libido of David]}[HP of Amy]}[libido of Amy]}[SquadEncounters]}[thirst of Corbin]}[HP of Corbin]}[CorbinKidCounter]}[HP of Anthony]}[HP of Duke]}[thirst of Duke]}[HP of Zigor]}[thirst of Amy]";
-	now trixsavetext3 is "chantpartB}[HP of Nadia]}[NadiaFertilityCounter]}[NadiaChickCounter]}[npcNadiaint]}[level of Amy]}[Xp of Amy]}[Dexterity of Amy]}[SvenAmySex]}[BrutusAmySex]}[lust of Zephias]}[HP of Ares]}[if HP of hayato is 30]20[else][HP of Hayato][end if]}[HP of Tehuantl]}[HP of Carl]}[level of Carl]}[HP of Kristen]}[libido of Kristen]}[HP of Brooke]}[HP of Bubble]}[HP of Newt]}0}[piginitiation]}[HP of Gillian]}[HP of Stella]}[StellaNPCInt]}[OrcSlaverStatus]}[CellDoorStatus]}[XP of Onyx]}[HP of Val]}[thirst of Val]}[ValPregCounter]}[ValPregnancy]}[SlaveRaidEncounters]}[HP of Chris]}[HP of Vanessa]}[XP of Vanessa]}[HP of Meredith]}[level of Meredith]}[HP of Gwen]}[HP of Rane]}[thirst of Elijah]}[SpidertaurRelationship]}[CatgirlFucked]}[FionaFangStatus]}[FionaCarlStatus]}[HP of Gabriel]}[HP of Erica]}[Thirst of Erica]}[population of Police Station]}[infpop of Police Station]}0}0}[HP of Hadiya]}[HP of Gobby]}[HP of Sidney]}[level of Sidney]}[XP of Sidney]}[HP of Micaela]}[level of Micaela]}[XP of Micaela]}[HP of Macadamia]}[HP of Yolanda]}[SarahCured]}[libido of chris]}[dexterity of chris]";
-	say "[trixsavetext1][line break]";
-	say "[trixsavetext2][line break]";
-	say "[trixsavetext3][line break]";
-	replace the text " " in trixsavetext1 with "`";
-	replace the text " " in trixsavetext2 with "`";
-	replace the text " " in trixsavetext3 with "`";
-	say "[line break]'If you choose to recite it back, you'll need to recite each of the three parts on their own, one after the other, including the chantpartA part in the second and chantpartB in the third. Don't ask me to explain why. It's magic!' she says in a teasing tone with a big grin while waggling her fingers. 'Just be sure to copy and paste that somewhere so you can use it to restore. If you can't seem to copy with your chosen player, try Ctrl-L to see if that will open a scrollback log. And remember, you can also use [bold type]load game[roman type] to restore your most recent magic word. Talking to me will make a new save word every time, so be careful not to overwrite your magic word until you're ready.'";
-[	say "Saved data:[line break][trixsavetext1][line break][trixsavetext2][line break]"; ]
-	savetrix;
-	if wrcursestatus is 5:
-		say "[line break]     Trixie waves her magic wand around and you flash between your normal form and your wereraptor form a few times so she can examine it before leaving you fully as a wereraptor once again.";
-		wrcursesave; [puts player back to complete wereraptor form]
-
-
-To reciting2:
-	choose row monster from table of random critters;
-	say "One moment... processing...";
-[	say "Current restoration string: [trixsavetext1][line break]"; ]
-	replace the text " " in trixsavetext1 with "`";
-[	say "Altered restoration string: [trixsavetext1][line break]"; ]
-	let lev be the level of the player;
-	repeat with z running from 1 to number of words in "[trixsavetext1]":
-		let b be word number z in "[trixsavetext1]";
-		replace the text "`" in b with " ";
-		change the text of the player's command to b;
-		if Z is:
-			-- 1:		[Strength]
-				if the player's command matches "[number]":
-					now the strength of player is the number understood;
-			-- 2:		[Dexterity]
-				if the player's command matches "[number]":
-					now the dexterity of player is the number understood;
-			-- 3:		[Stamina]
-				if the player's command matches "[number]":
-					now the stamina of player is the number understood;
-			-- 4:		[Charisma]
-				if the player's command matches "[number]":
-					now the charisma of player is the number understood;
-			-- 5:		[Perception]
-				if the player's command matches "[number]":
-					now the perception of player is the number understood;
-			-- 6:		[Intelligence]
-				if the player's command matches "[number]":
-					now the Intelligence of player is the number understood;
-			-- 7:		[Level]
-				if the player's command matches "[number]":
-					now the Level of player is the number understood;
-			-- 8:		[HP]
-				if the player's command matches "[number]":
-					now the maxHP of player is the number understood;
-			-- 9:		[Humanity]
-				if the player's command matches "[number]":
-					now the humanity of player is the number understood;
-			-- 10:	[Score]
-				if the player's command matches "[number]":
-					now the score is the score;
-			-- 11:	[Dr Matt]
-				if the player's command matches "[number]":
-					now the HP of doctor matt is the number understood;
-			-- 12:	[Body infection]
-[				say "Searching for body = [b]."; ]
-				repeat with Y running from 1 to number of filled rows in table of random critters:
-					choose row Y from the table of random critters;
-					if name entry matches the text b, case insensitively:
-						let num1 be the number of characters in b;
-						let num2 be the number of characters in name entry;
-						if num1 is num2:
-							now monster is Y;
-							now body of player is body entry;
-							now bodyname of player is name entry;
-							attributeinfect;
-							break;
-			-- 13:	[Face infection]
-[				say "Searching for face = [b]."; ]
-				repeat with Y running from 1 to number of filled rows in table of random critters:
-					choose row Y from the table of random critters;
-					if name entry matches the text b, case insensitively:
-						let num1 be the number of characters in b;
-						let num2 be the number of characters in name entry;
-						if num1 is num2:
-							now face of player is face entry;
-							now facename of player is name entry;
-							break;
-			-- 14:	[Skin infection]
-[				say "Searching for skin = [b]."; ]
-				repeat with Y running from 1 to number of filled rows in table of random critters:
-					choose row Y from the table of random critters;
-					if name entry matches the text b, case insensitively:
-						let num1 be the number of characters in b;
-						let num2 be the number of characters in name entry;
-						if num1 is num2:
-							now skin of player is skin entry;
-							now skinname of player is name entry;
-							break;
-			-- 15:	[Tail infection]
-[				say "Searching for tail = [b]."; ]
-				repeat with Y running from 1 to number of filled rows in table of random critters:
-					choose row Y from the table of random critters;
-					if name entry matches the text b, case insensitively:
-						let num1 be the number of characters in b;
-						let num2 be the number of characters in name entry;
-						if num1 is num2:
-							now tail of player is tail entry;
-							now tailname of player is name entry;
-							break;
-			-- 16:	[Cock infection]
-[				say "Searching for cock = [b]."; ]
-				repeat with Y running from 1 to number of filled rows in table of random critters:
-					choose row Y from the table of random critters;
-					if name entry matches the text b, case insensitively:
-						let num1 be the number of characters in b;
-						let num2 be the number of characters in name entry;
-						if num1 is num2:
-							now cock of player is cock entry;
-							now cockname of player is name entry;
-							break;
-			-- 17:	[Tanuki]
-				if the player's command matches "[number]":
-					now SatisfiedTanuki is the number understood;
-			-- 18:	[Hospital Quest]
-				if the player's command matches "[number]":
-					now hospquest is the number understood;
-			-- 19:	[player cock]
-				if the player's command matches "[number]":
-					now cocks of player is the number understood;
-			-- 20:	[player breasts]
-				if the player's command matches "[number]":
-					now breasts of player is the number understood;
-			-- 21:	[player cunt]
-				if the player's command matches "[number]":
-					now cunts of player is the number understood;
-			-- 22:	[player cock]
-				if the player's command matches "[number]":
-					now breast size of player is the number understood;
-			-- 23:	[player cock]
-				if the player's command matches "[number]":
-					now cock length of player is the number understood;
-			-- 24:	[player cock]
-				if the player's command matches "[number]":
-					now the cock width of player is the number understood;
-			-- 25:	[player cunt]
-				if the player's command matches "[number]":
-					now cunt length of player is the number understood;
-			-- 26:	[player cunt]
-				if the player's command matches "[number]":
-					now cunt width of player is the number understood;
-			-- 27:	[equipped weapon]
-				repeat with y running through armaments:
-					if the printed name of y matches the text b, case insensitively:
-						if y is not owned, now carried of y is 1;
-						now weapon object of player is Y;
-						now weapon of player is weapon of Y;
-						now weapon damage of player is weapon damage of Y;
-						now weapon type of player is weapon type of Y;
-						say "You ready your [Y].";
-						break;
-			-- 28:	[re-purposed: Frank M/F count]
-				if the player's command matches "[number]":
-					now franksex is the number understood;
-			-- 29:	[re-purposed: Frank M/M count]
-				if the player's command matches "[number]":
-					now frankmalesex is the number understood;
-			-- 30:	[Snow]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now hyper squirrel girl is resolved;
-						now Snow is in Grey Abbey Library;
-					else:
-						now hyper squirrel girl is not resolved;
-						remove Snow from play;
-			-- 31:	[Version Reporting - (Dummy, no actions)]
-				now tempnum is 0; [#31 is only exported, not restored.]
-			-- 32:	[Coleen]
-				repeat with Y running through rooms:
-					if the printed name of Y matches the text b, case insensitively:
-						now Coleen is in Y;
-					if Coleen is in Bunker:
-						now Womanfruittree is resolved;
-			-- 33:	[Coleen]
-				if the player's command matches "[number]":
-					now ColeenTalk is the number understood;
-			-- 34:	[Coleen]
-				if the player's command matches "[number]":
-					now ColeenFound is the number understood;
-			-- 35:	[Coleen]
-				if the player's command matches "[number]":
-					now ColeenCollared is the number understood;
-			-- 36:	[Coleen]
-				if the player's command matches "[number]":
-					now ColeenAlpha is the number understood;
-			-- 37:	[Coleen]
-				if the player's command matches "[number]":
-					now ColeenSlut is the number understood;
-			-- 38:	[Coleen]
-				if the player's command matches "[number]":
-					now ColeenSpray is the number understood;
-			-- 39:	[Dr. Mouse]
-				if the player's command matches "[number]":
-					now HP of doctor mouse is the number understood;
-			-- 40:	[Candy / raccoon pet]
-				if the player's command matches "[number]":
-					now coonstatus is the number understood;
-			-- 41:	[Feat unlock]
-				if the player's command matches "[number]":
-					now featunlock is the number understood;
-			-- 42:	[Butterfly]
-				recite butterflymagic "[the player's command]";
-			-- 43:
-				if the player's command matches "[number]":
-					now catnum is the number understood;
-			-- 44:
-				if the player's command matches "[number]":
-					now mateable is the number understood;
-			-- 45:	[Denise]
-				if the player's command matches "[number]":
-					now gryphoncomforted is the number understood;
-			-- 46:	[Shifting]
-				if the player's command matches "[number]":
-					now shiftable is the number understood;
-			-- 47:	[Dr. Medea]
-				if the player's command matches "[number]":
-					now medeaget is the number understood;
-			-- 48:	[Military events]
-				if the player's command matches "[number]":
-					now mtp is the number understood;
-			-- 49:	[Hyena Gang]
-				if the player's command matches "[number]":
-					now hyg is the number understood;
-			-- 50:	[New Ewe Store]
-				if the player's command matches "[number]":
-					now NESProgress is the number understood;
-			-- 51:	[Lisa]
-				if the player's command matches "[number]":
-					now mtrp is the number understood;
-			-- 52:	[Boris]
-				if the player's command matches "[number]":
-					now boristalk is the number understood;
-			-- 53:	[Boris]
-				if the player's command matches "[number]":
-					now borisquest is the number understood;
-			-- 54:	[Alex]
-				if the player's command matches "[number]":
-					now progress of alex is the number understood;
-			-- 55:	[Angie]
-				if the player's command matches "[number]":
-					now angiehappy is the number understood;
-			-- 56:	[Angie]
-				if the player's command matches "[number]":
-					now angietalk is the number understood;
-			-- 57:	[Susan]
-				if the player's command matches "[number]":
-					now deerconsent is the number understood;
-			-- 58:	[Susan]
-				if the player's command matches "[number]":
-					now HP of Susan is the number understood;
-			-- 59:	[Hospital Quest]
-				if the player's command matches "[number]":
-					now mattcollection is the number understood;
-	restorepart1; [adjust based on loaded values above: 1 - 59]
-[	say "One moment... processing stage 2..."; ]
-[	say "Current restoration string: [trixsavetext2][line break]"; ]
-	replace the text " " in trixsavetext2 with "`";
-[	say "Altered restoration string: [trixsavetext2][line break]"; ]
-	repeat with z running from 1 to number of words in "[trixsavetext2]":
-		let b be ( word number z in "[trixsavetext2]" );
-		replace the text "`" in b with " ";
-		replace the text "continuedchant" in b with "chantpartA";
-		if "chantpartA" matches the text b:
-			next;
-		change the text of the player's command to b;
-		let z2 be z + 58;
-		if z2 is:
-			-- 60:	[Orthas]
-				if the player's command matches "[number]":
-					now HP of Orthas is the number understood;
-			-- 61:	[Stables - Fancy Quest]
-				if the player's command matches "[number]":
-					now fancyquest is the number understood;
-			-- 62:	[Sven]
-				if the player's command matches "[number]":
-					now HP of Sven is the number understood;
-			-- 63:	[Sven]
-				if the player's command matches "[number]":
-					now lust of Sven is the number understood;
-			-- 64:	[Sarah]
-				if the player's command matches "[number]":
-					now SarahSlut is the number understood;
-			-- 65:	[Sarah]
-				if the player's command matches "[number]":
-					now sarahtalk is the number understood;
-			-- 66:	[Sarah]
-				if the player's command matches "[number]":
-					now SarahPups is the number understood;
-			-- 67:	[-nothing-]
-				now tempnum is 0; [Duplicate removed]
-			-- 68:	[Brunch w/Alex]
-				if the player's command matches "[number]":
-					now alexbrunch is the number understood;
-			-- 69:	[Treasure found]
-				if the player's command matches "[number]":
-					now treasurefound is the number understood;
-			-- 70:	[Treasure hunt]
-				if the player's command matches "[number]":
-					now tmapfound is the number understood;
-			-- 71:	[Sandra + Coleen]
-				if the player's command matches "[number]":
-					now HP of Sandra is the number understood;
-			-- 72:	[Frank - M/M top/bottom/switch]
-				if the player's command matches "[number]":
-					now libido of Frank is the number understood;
-			-- 73:	[Fang]
-				if the player's command matches "[number]":
-					now HP of Fang is the number understood;
-			-- 74:	[Fang + Sandra]
-				if the player's command matches "[number]":
-					now libido of Fang is the number understood;
-			-- 75:	[Philip]
-				if the player's command matches "[number]":
-					now pigfed is the number understood;
-			-- 76:	[Philip - sex]
-				if the player's command matches "[number]":
-					now pigfucked is the number understood;
-			-- 77:	[cute crab - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Lost Crab is resolved;
-						now cute crab is tamed;
-					else:
-						now Lost Crab is not resolved;
-						now cute crab is not tamed;
-			-- 78:	[exotic bird - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Scared Bird is resolved;
-						now Exotic Bird is tamed;
-					else:
-						now Scared Bird is not resolved;
-						now Exotic Bird is not tamed;
-			-- 79:	[Felinoid companion - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Injured Felinoid is resolved;
-						now Felinoid companion is tamed;
-					else:
-						now Injured Felinoid is not resolved;
-						now Felinoid companion is not tamed;
-			-- 80:	[bee girl - pet]
-				if the player's command matches "[number]":
-					now HP of bee girl is the number understood;
-			-- 81:	[house cat - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Lost house cat is resolved;
-						now house cat is tamed;
-					else:
-						now Lost house cat is not resolved;
-						now house cat is not tamed;
-			-- 82:	[little fox - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Abandoned Fox is resolved;
-						now little fox is tamed;
-					else:
-						now Abandoned Fox is not resolved;
-						now little fox is not tamed;
-			-- 83:	[skunk kit - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Lost Skunk Kit is resolved;
-						now skunk kit is tamed;
-					else:
-						now Lost Skunk Kit is unresolved;
-						now skunk kit is not tamed;
-			-- 84:	[helper dog - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Mournful Dog is resolved;
-						now helper dog is tamed;
-					else:
-						now Mournful Dog is not resolved;
-						now helper dog is not tamed;
-						now hdog is 0;
-						now dogfoodcount is 0;
-			-- 85:	[Rachel Mouse - pet]
-				if the player's command matches "[number]":
-					now mousecurse is the number understood;
-			-- 86:	[Elijah]
-				if the player's command matches "[number]":
-					now HP of Elijah is the number understood;
-			-- 87:	[Elijah's interactions]
-				now npcEint is "[the player's command]";
-			-- 88:	[Latex Husky Mode]
-				if the player's command matches "[number]" and the number understood is 1:
-					now latexhuskymode is true;
-				else:
-					now latexhuskymode is false;
-			-- 89:	[Parasitic Larva]
-				now larvaegg is 0;
-				now larvacounter is 0;
-				if the player's command matches "[number]" and the number understood is 1:
-					now Insect Hive is resolved;
-					now insectlarva is true;
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
-						if name entry is "Black Wasp":
-							now area entry is "High";
-							now non-infectious entry is false; [Wasps unlocked]
-				else:
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
-						if name entry is "Black Wasp":
-							now area entry is "nowhere";
-							now non-infectious entry is true; [Wasps locked]
-					now insectlarva is false;
-			-- 90:	[Leonard]
-				if the player's command matches "[number]":
-					now HP of Leonard is the number understood;
-			-- 91:	[Solstice]
-				if the player's command matches "[number]":
-					now HP of Solstice is the number understood;
-			-- 92:	[Ronda the Slut Rat]
-				if the player's command matches "[number]":
-					now carried of lizard juice is 0;
-			-- 93:	[Athanasia]
-				if the player's command matches "[number]":
-					now HP of Athanasia is the number understood;
-			-- 94:	[Skunkbeast Lord]
-				if the player's command matches "[number]":
-					now skunkbeaststatus is the number understood;
-			-- 95:	[Kitsune]
-				if the player's command matches "[number]":
-					now ktp is the number understood;
-			-- 96:	[Release number]
-				if the player's command matches "[number]":
-					if release number > the number understood:
-						if score < 0, now score is 0;
-			-- 97:	[Kara]
-				if the player's command matches "[number]":
-					now tattoohunter is the number understood;
-			-- 98:	[Kara's tattoos]
-				if the player's command matches "[number]":
-					now tatsave is the number understood;
-			-- 99:	[Kara's piercings]
-				if the player's command matches "[number]":
-					now piercesave is the number understood;
-			-- 100:	[Diego]
-				if the player's command matches "[number]":
-					now diegochanged is the number understood;
-					if diegochanged is 2:
-						now the icon of Diego is Figure of DiegoFem_icon;
-			-- 101:	[Eric]
-				if the player's command matches "[number]":
-					now HP of Eric is the number understood;
-			-- 102:	[Christy the Stuck Dragoness]
-				if the player's command matches "[number]":
-					now HP of Christy is the number understood;
-			-- 103:	[Christy: Slutty Dragoness / Horny Dragon]
-				if the player's command matches "[number]":
-					now dragontype is the number understood;
-			-- 104:	[Christy: fucked while trapped?]
-				if the player's command matches "[number]":
-					now dragonessfuck is the number understood;
-			-- 105:	[Dr. Medea]
-				if the player's command matches "[number]":
-					now HP of Doctor Medea is the number understood;
-			-- 106:	[Dr. Moffatt]
-				if the player's command matches "[number]":
-					now HP of Doctor Moffatt is the number understood;
-			-- 107:	[Lucy the Mall Rat]
-				if the player's command matches "[number]":
-					now HP of Lucy is the number understood;
-			-- 108:	[David's thirst]
-				if the player's command matches "[number]":
-					now thirst of david is the number understood;
-			-- 109:	[David's lust]
-				if the player's command matches "[number]":
-					now lust of david is the number understood;
-			-- 110:	[David's HP]
-				if the player's command matches "[number]":
-					now HP of David is the number understood;
-			-- 111:	[Camp Bravo / Adam]
-				if the player's command matches "[number]":
-					now HP of Adam is the number understood;
-			-- 112:	[Doberman Cop / Alexandra]
-				if the player's command matches "[number]":
-					now HP of Alexandra is the number understood;
-			-- 113:	[Larissa (Multiform NPC)]
-				if the player's command matches "[number]":
-					now HP of Larissa is the number understood;
-			-- 114:	[Sam (Dual-taur NPC)]
-				if the player's command matches "[number]":
-					now HP of Sam is the number understood;
-			-- 115:	[Wereraptor curse]
-				if the player's command matches "[number]":
-					now wrcursestatus is the number understood;
-			-- 116:	[Wereraptor cure quest]
-				if the player's command matches "[number]":
-					now wrcurseNermine is the number understood;
-			-- 117:	[Dr. Utah]
-				if the player's command matches "[number]":
-					now HP of Doctor Utah is the number understood;
-			-- 118:	[Mike]
-				if the player's command matches "[number]":
-					now HP of Mike is the number understood;
-			-- 119:	[Xerxes]
-				if the player's command matches "[number]":
-					now HP of Xerxes is the number understood;
-			-- 120:	[Helen]
-				if the player's command matches "[number]":
-					now HP of Helen is the number understood;
-			-- 121:	[Helen]
-				if the player's command matches "[number]":
-					now libido of Helen is the number understood;
-			-- 122:	[Rex]
-				if the player's command matches "[number]":
-					now HP of Rex is the number understood;
-			-- 123:	[Karen]
-				if the player's command matches "[number]":
-					now HP of Karen is the number understood;
-			-- 124:	[François]
-				if the player's command matches "[number]":
-					now HP of François is the number understood;
-			-- 125:	[François]
-				if the player's command matches "[number]":
-					now libido of François is the number understood; [placeholder for second part to come]
-			-- 126:	[Alexandra + Fang]
-				if the player's command matches "[number]":
-					now level of Alexandra is the number understood;
-			-- 127: [Thomas HP]
-				if the player's command matches "[number]":
-					now HP of Thomas is the number understood;
-			-- 128: [Thomas Libido]
-				if the player's command matches "[number]":
-					now Libido of Thomas is the number understood;
-			-- 129: [Thomas Lust]
-				if the player's command matches "[number]":
-					now Lust of Thomas is the number understood;
-			-- 130: [Thomas Quest]
-				if the player's command matches "[number]":
-					now ThomasQuestVar is the number understood;
-			-- 131: [Artemis]
-				if the player's command matches "[number]":
-					now HP of rubber tigress is the number understood;
-			-- 132: [Septus/Football Wolfman]
-				if the player's command matches "[number]":
-					now HP of Septus is the number understood;
-			-- 133: [Awesome Xerxes]
-				if the player's command matches "[number]":
-					now lust of Xerxes is the number understood;
-			-- 134: [Awesomer Helen]
-				if the player's command matches "[number]":
-					now lust of Helen is the number understood;
-			-- 135: [Tristian]
-				if the player's command matches "[number]":
-					now HP of Tristian is the number understood;
-			-- 136: [Icarus/Blue Chaffinch]
-				if the player's command matches "[number]":
-					now HP of Icarus is the number understood;
-			-- 137: [HP of Joanna]
-				if the player's command matches "[number]":
-					now HP of Joanna is the number understood;
-			-- 138: [lust of Joanna]
-				if the player's command matches "[number]":
-					now lust of Joanna is the number understood;
-			-- 139: [Angie]
-				if the player's command matches "[number]":
-					now angiearoused is the number understood;
-			-- 140:	[demon brute pet]
-				if the player's command matches "[number]":
-					now DBCaptureQuestVar is the number understood;
-			-- 141:	[demon brute pet - gender]
-				if the player's command matches "[number]":
-					now DemonBruteStatus is the number understood;
-			-- 142:	[Lilith - HP]
-				if the player's command matches "[number]":
-					now HP of Lilith is the number understood;
-			-- 143:	[Lilith - incubus offspring]
-				if the player's command matches "[number]":
-					now LilithKidCounter is the number understood;
-			-- 144:	[Felix - HP]
-				if the player's command matches "[number]":
-					now HP of Felix is the number understood;
-			-- 145:	[Felix - libido]
-				if the player's command matches "[number]":
-					now libido of Felix is the number understood;
-			-- 146:	[relationship progress with Sonya the Viking]
-				if the player's command matches "[number]":
-					now VikingRelationship is the number understood;
-			-- 147:	[number of kids with Sonya the Viking]
-				if the player's command matches "[number]":
-					now VikingKidCounter is the number understood;
-			-- 148:	[MovingOrwell - mini quest var for fucking Orwell]
-				if the player's command matches "[number]":
-					now MovingOrwell is the number understood;
-			-- 149:	[HP of Jimmy]
-				if the player's command matches "[number]":
-					now HP of Jimmy is the number understood;
-			-- 150:	[David - libido (interaction with Brutus)]
-				if the player's command matches "[number]":
-					now libido of David is the number understood;
-			-- 151: [HP of Amy]
-				if the player's command matches "[number]":
-					now HP of Amy is the number understood;
-			-- 152: [libido of Amy - puppy counter]
-				if the player's command matches "[number]":
-					now libido of Amy is the number understood;
-			-- 153: [SquadEncounters - progress variable for the Soldier Squad chain event]
-				if the player's command matches "[number]":
-					now SquadEncounters is the number understood;
-			-- 154: [thirst of Corbin - location]
-				if the player's command matches "[number]":
-					now thirst of Corbin is the number understood;
-			-- 155: [HP of Corbin]
-				if the player's command matches "[number]":
-					now HP of Corbin is the number understood;
-			-- 156: [CorbinKidCounter]
-				if the player's command matches "[number]":
-					now CorbinKidCounter is the number understood;
-			-- 157: [HP of Anthony]
-				if the player's command matches "[number]":
-					now HP of Anthony is the number understood;
-			-- 158: [HP of Duke]
-				if the player's command matches "[number]":
-					now HP of Duke is the number understood;
-			-- 159: [thirst of Duke]
-				if the player's command matches "[number]":
-					now thirst of Duke is the number understood;
-			-- 160: [HP of Zigor]
-				if the player's command matches "[number]":
-					now HP of Zigor is the number understood;
-			-- 161: [thirst of Amy]
-				if the player's command matches "[number]":
-					now thirst of Amy is the number understood;
-	restorepart2; [adjust based on loaded values above: 60 - 161]
-[	say "One moment... processing stage 3..."; ]
-[	say "Current restoration string: [trixsavetext3][line break]"; ]
-	replace the text " " in trixsavetext3 with "`";
-[	say "Altered restoration string: [trixsavetext3][line break]"; ]
-	repeat with z running from 1 to number of words in "[trixsavetext3]":
-		let b be ( word number z in "[trixsavetext3]" );
-		replace the text "`" in b with " ";
-		if "chantpartB" matches the text b:
-			next;
-		change the text of the player's command to b;
-		let z3 be z + 160;
-		if z3 is:
-			-- 162:	[HP of Nadia]
-				if the player's command matches "[number]":
-					now HP of Nadia is the number understood;
-			-- 163: [NadiaFertilityCounter]
-				if the player's command matches "[number]":
-					now NadiaFertilityCounter is the number understood;
-			-- 164: [NadiaChickCounter]
-				if the player's command matches "[number]":
-					now NadiaChickCounter is the number understood;
-			-- 165:	[Nadia's interactions]
-				now npcNadiaint is "[the player's command]";
-			-- 166: [level of Amy]
-				if the player's command matches "[number]":
-					now level of Amy is the number understood;
-			-- 167: [Xp of Amy]
-				if the player's command matches "[number]":
-					now XP of Amy is the number understood;
-			-- 168: [Dexterity of Amy]
-				if the player's command matches "[number]":
-					now Dexterity of Amy is the number understood;
-			-- 169: [SvenAmySex]
-				if the player's command matches "[number]":
-					now SvenAmySex is the number understood;
-			-- 170: [BrutusAmySex]
-				if the player's command matches "[number]":
-					now BrutusAmySex is the number understood;
-			-- 171: [lust of Zephias]
-				if the player's command matches "[number]":
-					now lust of Zephias is the number understood;
-			-- 172: [HP of Ares]
-				if the player's command matches "[number]":
-					now HP of Ares is the number understood;
-					if HP of Ares > 0:
-						move Ares to Dog Kennels;
-					else:
-						remove Ares from play;
-			-- 173: [HP of Hayato]
-				if the player's command matches "[number]":
-					now HP of Hayato is the number understood;
-			-- 174: [HP of Tehuantl]
-				if the player's command matches "[number]":
-					now HP of Tehuantl is the number understood;
-			-- 175: [HP of Carl]
-				if the player's command matches "[number]":
-					now HP of Carl is the number understood;
-			-- 176: [level of Carl]
-				if the player's command matches "[number]":
-					now level of Carl is the number understood;
-			-- 177: [HP of Kristen]
-				if the player's command matches "[number]":
-					now HP of Kristen is the number understood;
-			-- 178: [libido of Kristen]
-				if the player's command matches "[number]":
-					now libido of Kristen is the number understood;
-			-- 179: [HP of Brooke]
-				if the player's command matches "[number]":
-					now HP of Brooke is the number understood;
-			-- 180: [HP of Bubble - Bouncy Castle / Bubble]
-				if the player's command matches "[number]":
-					now HP of Bubble is the number understood;
-			-- 181:	[HP of Newt]
-				if the player's command matches "[number]":
-					now HP of Newt is the number understood;
-			-- 182:	[Megakitty]			[temporarily closed for diagnosis]
-				if the player's command matches "[number]":
-					now tempnum is 0; [do-nothing command]
-[					if the number understood is 1 and girl is not banned and furry is not banned:
-						setmonster "Megakitty";
-						choose row monster from the table of random critters;
-						if name entry is "Megakitty":
-							now MKunleashed is true;
-							now area entry is "Midway"; ]
-			-- 183:	[Phi Iota Gamma]
-				if the player's command matches "[number]":
-					now piginitiation is the number understood;
-			-- 184:	[Down Under Pub / Gillian]
-				if the player's command matches "[number]":
-					now HP of Gillian is the number understood;
-			-- 185:	[HP of Stella]
-				if the player's command matches "[number]":
-					now HP of Stella is the number understood;
-			-- 186:	[Stella threesome code - placeholder]
-				now StellaNPCInt is "AAAAAAAAAAAA"; [do nothing]
-			-- 187: [OrcSlaverStatus]
-				if the player's command matches "[number]":
-					now OrcSlaverStatus is the number understood;
-			-- 188: [CellDoorStatus - Orc Lair]
-				if the player's command matches "[number]":
-					now CellDoorStatus is the number understood;
-			-- 189: [Onyx]
-				if the player's command matches "[number]":
-					now XP of Onyx is the number understood;
-			-- 190: [HP of Val]
-				if the player's command matches "[number]":
-					now HP of Val is the number understood;
-			-- 191: [thirst of Val]
-				if the player's command matches "[number]":
-					now thirst of Val is the number understood;
-			-- 192: [ValPregCounter]
-				if the player's command matches "[number]":
-					now ValPregCounter is the number understood;
-			-- 193: [ValPregnancy]
-				if the player's command matches "[number]":
-					now ValPregnancy is the number understood;
-			-- 194: [SlaveRaidEncounters]
-				if the player's command matches "[number]":
-					now SlaveRaidEncounters is the number understood;
-			-- 195: [HP of Chris]
-				if the player's command matches "[number]":
-					now HP of Chris is the number understood;
-					if the HP of Chris > 0 and the HP of Chris < 100, move Chris to Sitting Area;
-			-- 196: [HP of Vanessa - status]
-				if the player's command matches "[number]":
-					now HP of Vanessa is the number understood;
-			-- 197: [XP of Vanessa - # of kids]
-				if the player's command matches "[number]":
-					now XP of Vanessa is the number understood;
-			-- 198: [HP of Meredith - status]
-				if the player's command matches "[number]":
-					now HP of Meredith is the number understood;
-			-- 199: [level of Meredith - # of kids]
-				if the player's command matches "[number]":
-					now level of Meredith is the number understood;
-			-- 200: [HP of Gwen - status & Gwen UB]
-				if the player's command matches "[number]":
-					now HP of Gwen is the number understood;
-			-- 201: [HP of Rane]
-				if the player's command matches "[number]":
-					now HP of Rane is the number understood;
-			-- 202: [thirst of Elijah]
-				if the player's command matches "[number]":
-					now thirst of Elijah is the number understood;
-			-- 203: [SpidertaurRelationship]
-				if the player's command matches "[number]":
-					now SpidertaurRelationship is the number understood;
-			-- 204: [CatgirlFucked]
-				if the player's command matches "[number]":
-					now CatgirlFucked is the number understood;
-			-- 205: [FionaFangStatus]
-				if the player's command matches "[number]":
-					now FionaFangStatus is the number understood;
-			-- 206: [FionaCarlStatus]
-				if the player's command matches "[number]":
-					now FionaCarlStatus is the number understood;
-			-- 207: [HP of Gabriel]
-				if the player's command matches "[number]":
-					now HP of Gabriel is the number understood;
-			-- 208: [HP of Erica]
-				if the player's command matches "[number]":
-					now HP of Erica is the number understood;
-			-- 209: [thirst of Erica]
-				if the player's command matches "[number]":
-					now thirst of Erica is the number understood;
-			-- 210:	[population of Police Station]
-				if the player's command matches "[number]":
-					now population of Police Station is the number understood;
-			-- 211:	[infpop of Police Station]
-				if the player's command matches "[number]":
-					now infpop of Police Station is the number understood;
-			-- 212:	[placeholder for Police Station]
-				now fionacarlstatus is fionacarlstatus;
-			-- 213:	[placeholder for Police Station]
-				now fionacarlstatus is fionacarlstatus;
-			-- 214:	[HP of Hadiya]
-				if the player's command matches "[number]":
-					now HP of Hadiya is the number understood;
-			-- 215:	[HP of Gobby]
-				if the player's command matches "[number]":
-					now HP of Gobby is the number understood;
-			-- 216:	[HP of Sidney - NPC overall status]
-				if the player's command matches "[number]":
-					now HP of Sidney is the number understood;
-			-- 217:	[level of Sidney - forms]
-				if the player's command matches "[number]":
-					now level of Sidney is the number understood;
-			-- 218:	[XP of Sidney - offspring]
-				if the player's command matches "[number]":
-					now XP of Sidney is the number understood;
-			-- 219:	[HP of Micaela]
-				if the player's command matches "[number]":
-					now HP of Micaela is the number understood;
-			-- 220:	[level of Micaela - ovi stuff]
-				if the player's command matches "[number]":
-					now level of Micaela is the number understood;
-			-- 221:	[XP of Micaela - offspring]
-				if the player's command matches "[number]":
-					now XP of Micaela is the number understood;
-			-- 222:	[HP of Macadamia]
-				if the player's command matches "[number]":
-					now HP of Macadamia is the number understood;
-			-- 223:	[HP of Yolanda]
-				if the player's command matches "[number]":
-					now HP of Yolanda is the number understood;
-			-- 224:	[SarahCured]
-				if the player's command matches "[number]":
-					now SarahCured is the number understood;
-			-- 225:	[libido of chris]
-				if the player's command matches "[number]":
-					now libido of chris is the number understood;
-			-- 226:	[dexterity of chris]
-				if the player's command matches "[number]":
-					now dexterity of chris is the number understood;
-	restorepart3; [adjust based on loaded values above: 162 - 224]
-	restorepart-final; [other adjustments based on overall results]
-	repeat with counter running from lev + 1 to level of player:
-		if the remainder after dividing counter by 5 is 0:
-			funfeatget;
-	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
-	wait for any key;
-
-
-
-savetrix2 is an action applying to nothing.
-understand "load game" as savetrix2.
-
-Check savetrix2:
-	if trixie is not visible, say "Your words have no effect. Maybe you should tell them to Trixie in the library instead of just talking to yourself." instead;
-
-Carry out savetrix2:
-	now trixsavetext1 is "[text of the File of Trixsave]";
-	now trixsavetext2 is "[text of the File of Trixsave2]";
-	now trixsavetext3 is "[text of the File of Trixsave3]";
-	reciting2;
-	let storecover be indexed text;
-	now storecover is "[text of the File of storsave]";
-	replace the text " " in storecover with "`";
-	replace the text " " in storecover with "`";
-	replace the text "}" in storecover with " ";
-	say "Recovering storage...";
-	repeat with z running from 1 to number of words in storecover:
-		let curword be word number z in storecover;
-		replace the text "|" in curword with " ";
-		let cur be word number 1 in curword;
-		let amt be 0;
-		let amttext be word number 2 in curword;
-		now amt is numerical value of amttext;
-		replace the text "`" in cur with " ";
-		repeat with Q running through grab objects:
-			let obname be printed name of q;
-			if cur matches the text obname, case insensitively:
-				now stashed of q is amt;
-				break;
-	let invrecover be indexed text;
-	now invrecover is "[text of the File of invsave]";
-	replace the text " " in invrecover with "`";
-	replace the text " " in invrecover with "`";
-	replace the text "}" in invrecover with " ";
-	say "Recovering inventory...";
-	repeat with z running from 1 to number of words in invrecover:
-		let curword be word number z in invrecover;
-		replace the text "|" in curword with " ";
-		let cur be word number 1 in curword;
-		let amt be 0;
-		let amttext be word number 2 in curword;
-		now amt is numerical value of amttext;
-		replace the text "`" in cur with " ";
-		repeat with Q running through grab objects:
-			let obname be printed name of q;
-			if cur matches the text obname, case insensitively:
-				now carried of q is amt;
-				break;
-	if carried of nanite collector > 0:
-		now nanitemeter is 2;
-		repeat with y running from 1 to number of filled rows in table of game objects:
-			choose row y in table of game objects;
-			if name entry is "nanite collector":
-				now weight entry is 25;
-				break;
-	if carried of ancient tome > 1:
-		now carried of ancient tome is 1;
-
-[
-testsven is an action applying to nothing.
-understand "tsven" as testsven;.
-carry out testsven:
-	now HP of Sven is 4;
-	move Sven to Bunker;
-]
-
-Reciting is an action applying to one topic.
-Understand "recite [text]" as reciting.
-
-Check reciting:
-	if trixie is not visible, say "Your words have no effect. Maybe you should tell them to Trixie in the library instead of just talking to yourself." instead;
-
-Carry out reciting:
-	let x be indexed text;
-	let x be the topic understood;
-[	say "Current restoration string: [X][line break]"; ]
-	replace the text " " in X with "`";
-[	say "Current restoration string: [X][line break]"; ]
-	let lev be the level of the player;
-	let upit be 0;
-	let zeta be 0;
-	repeat with z running from 1 to number of words in x:
-		let b be word number z in x;
-		replace the text "`" in b with " ";
-		replace the text "continuedchant" in b with "chantpartA";
-		if "chantpartA" matches the text b:
-			now upit is 1;
-			next;
-		else if "chantpartB" matches the text b:
-			now upit is 2;
-			next;
-		change the text of the player's command to b;
-		if upit is 1:
-			increase zeta by 58;
-		else if upit is 2:
-			increase zeta by 160;
-		let current be 0;
-		increase current by z;
-		increase current by zeta;
-		if current is:
-			-- 1:		[Strength]
-				if the player's command matches "[number]":
-					now the strength of player is the number understood;
-			-- 2:		[Dexterity]
-				if the player's command matches "[number]":
-					now the dexterity of player is the number understood;
-			-- 3:		[Stamina]
-				if the player's command matches "[number]":
-					now the stamina of player is the number understood;
-			-- 4:		[Charisma]
-				if the player's command matches "[number]":
-					now the charisma of player is the number understood;
-			-- 5:		[Perception]
-				if the player's command matches "[number]":
-					now the perception of player is the number understood;
-			-- 6:		[Intelligence]
-				if the player's command matches "[number]":
-					now the Intelligence of player is the number understood;
-			-- 7:		[Level]
-				if the player's command matches "[number]":
-					now the Level of player is the number understood;
-			-- 8:		[HP]
-				if the player's command matches "[number]":
-					now the maxHP of player is the number understood;
-			-- 9:		[Humanity]
-				if the player's command matches "[number]":
-					now the humanity of player is the number understood;
-			-- 10:	[Score]
-				if the player's command matches "[number]":
-					now the score is the score;
-			-- 11:	[Dr Matt]
-				if the player's command matches "[number]":
-					now the HP of doctor matt is the number understood;
-			-- 12:	[Body infection]
-[				say "Searching for body = [b]."; ]
-				repeat with Y running from 1 to number of filled rows in table of random critters:
-					choose row Y from the table of random critters;
-					if name entry matches the text b, case insensitively:
-						let num1 be the number of characters in b;
-						let num2 be the number of characters in name entry;
-						if num1 is num2:
-							now monster is Y;
-							now body of player is body entry;
-							now bodyname of player is name entry;
-							attributeinfect;
-							break;
-			-- 13:	[Face infection]
-[				say "Searching for face = [b]."; ]
-				repeat with Y running from 1 to number of filled rows in table of random critters:
-					choose row Y from the table of random critters;
-					if name entry matches the text b, case insensitively:
-						let num1 be the number of characters in b;
-						let num2 be the number of characters in name entry;
-						if num1 is num2:
-							now face of player is face entry;
-							now facename of player is name entry;
-							break;
-			-- 14:	[Skin infection]
-[				say "Searching for skin = [b]."; ]
-				repeat with Y running from 1 to number of filled rows in table of random critters:
-					choose row Y from the table of random critters;
-					if name entry matches the text b, case insensitively:
-						let num1 be the number of characters in b;
-						let num2 be the number of characters in name entry;
-						if num1 is num2:
-							now skin of player is skin entry;
-							now skinname of player is name entry;
-							break;
-			-- 15:	[Tail infection]
-[				say "Searching for tail = [b]."; ]
-				repeat with Y running from 1 to number of filled rows in table of random critters:
-					choose row Y from the table of random critters;
-					if name entry matches the text b, case insensitively:
-						let num1 be the number of characters in b;
-						let num2 be the number of characters in name entry;
-						if num1 is num2:
-							now tail of player is tail entry;
-							now tailname of player is name entry;
-							break;
-			-- 16:	[Cock infection]
-[				say "Searching for cock = [b]."; ]
-				repeat with Y running from 1 to number of filled rows in table of random critters:
-					choose row Y from the table of random critters;
-					if name entry matches the text b, case insensitively:
-						let num1 be the number of characters in b;
-						let num2 be the number of characters in name entry;
-						if num1 is num2:
-							now cock of player is cock entry;
-							now cockname of player is name entry;
-							break;
-			-- 17:	[Tanuki]
-				if the player's command matches "[number]":
-					now SatisfiedTanuki is the number understood;
-			-- 18:	[Hospital Quest]
-				if the player's command matches "[number]":
-					now hospquest is the number understood;
-			-- 19:	[player cock]
-				if the player's command matches "[number]":
-					now cocks of player is the number understood;
-			-- 20:	[player breasts]
-				if the player's command matches "[number]":
-					now breasts of player is the number understood;
-			-- 21:	[player cunt]
-				if the player's command matches "[number]":
-					now cunts of player is the number understood;
-			-- 22:	[player cock]
-				if the player's command matches "[number]":
-					now breast size of player is the number understood;
-			-- 23:	[player cock]
-				if the player's command matches "[number]":
-					now cock length of player is the number understood;
-			-- 24:	[player cock]
-				if the player's command matches "[number]":
-					now the cock width of player is the number understood;
-			-- 25:	[player cunt]
-				if the player's command matches "[number]":
-					now cunt length of player is the number understood;
-			-- 26:	[player cunt]
-				if the player's command matches "[number]":
-					now cunt width of player is the number understood;
-			-- 27:	[equipped weapon]
-				repeat with y running through armaments:
-					if the printed name of y matches the text b, case insensitively:
-						if y is not owned, now carried of y is 1;
-						now weapon object of player is Y;
-						now weapon of player is weapon of Y;
-						now weapon damage of player is weapon damage of Y;
-						now weapon type of player is weapon type of Y;
-						say "You ready your [Y].";
-						break;
-			-- 28:	[re-purposed: Frank M/F count]
-				if the player's command matches "[number]":
-					now franksex is the number understood;
-			-- 29:	[re-purposed: Frank M/M count]
-				if the player's command matches "[number]":
-					now frankmalesex is the number understood;
-			-- 30:	[Snow]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now hyper squirrel girl is resolved;
-						now Snow is in Grey Abbey Library;
-					else:
-						now hyper squirrel girl is not resolved;
-						remove Snow from play;
-			-- 31:	[redundant - removed]
-				now tempnum is 0; [Duplicate removed]
-			-- 32:	[Coleen]
-				repeat with Y running through rooms:
-					if the printed name of Y matches the text b, case insensitively:
-						now Coleen is in Y;
-					if Coleen is in Bunker:
-						now Womanfruittree is resolved;
-			-- 33:	[Coleen]
-				if the player's command matches "[number]":
-					now ColeenTalk is the number understood;
-			-- 34:	[Coleen]
-				if the player's command matches "[number]":
-					now ColeenFound is the number understood;
-			-- 35:	[Coleen]
-				if the player's command matches "[number]":
-					now ColeenCollared is the number understood;
-			-- 36:	[Coleen]
-				if the player's command matches "[number]":
-					now ColeenAlpha is the number understood;
-			-- 37:	[Coleen]
-				if the player's command matches "[number]":
-					now ColeenSlut is the number understood;
-			-- 38:	[Coleen]
-				if the player's command matches "[number]":
-					now ColeenSpray is the number understood;
-			-- 39:	[Dr. Mouse]
-				if the player's command matches "[number]":
-					now HP of doctor mouse is the number understood;
-			-- 40:	[Candy / raccoon pet]
-				if the player's command matches "[number]":
-					now coonstatus is the number understood;
-			-- 41:	[Feat unlock]
-				if the player's command matches "[number]":
-					now featunlock is the number understood;
-			-- 42:	[Butterfly]
-				recite butterflymagic "[the player's command]";
-			-- 43:
-				if the player's command matches "[number]":
-					now catnum is the number understood;
-			-- 44:
-				if the player's command matches "[number]":
-					now mateable is the number understood;
-			-- 45:	[Denise]
-				if the player's command matches "[number]":
-					now gryphoncomforted is the number understood;
-			-- 46:	[Shifting]
-				if the player's command matches "[number]":
-					now shiftable is the number understood;
-			-- 47:	[Dr. Medea]
-				if the player's command matches "[number]":
-					now medeaget is the number understood;
-			-- 48:	[Military events]
-				if the player's command matches "[number]":
-					now mtp is the number understood;
-			-- 49:	[Hyena Gang]
-				if the player's command matches "[number]":
-					now hyg is the number understood;
-			-- 50:	[New Ewe Store]
-				if the player's command matches "[number]":
-					now NESProgress is the number understood;
-			-- 51:	[Lisa]
-				if the player's command matches "[number]":
-					now mtrp is the number understood;
-			-- 52:	[Boris]
-				if the player's command matches "[number]":
-					now boristalk is the number understood;
-			-- 53:	[Boris]
-				if the player's command matches "[number]":
-					now borisquest is the number understood;
-			-- 54:	[Alex]
-				if the player's command matches "[number]":
-					now progress of alex is the number understood;
-			-- 55:	[Angie]
-				if the player's command matches "[number]":
-					now angiehappy is the number understood;
-			-- 56:	[Angie]
-				if the player's command matches "[number]":
-					now angietalk is the number understood;
-			-- 57:	[Susan]
-				if the player's command matches "[number]":
-					now deerconsent is the number understood;
-			-- 58:	[Susan]
-				if the player's command matches "[number]":
-					now HP of Susan is the number understood;
-			-- 59:	[Hospital Quest]
-				if the player's command matches "[number]":
-					now mattcollection is the number understood;
-			-- 60:	[Orthas]
-				if the player's command matches "[number]":
-					now HP of Orthas is the number understood;
-			-- 61:	[Stables - Fancy Quest]
-				if the player's command matches "[number]":
-					now fancyquest is the number understood;
-			-- 62:	[Sven]
-				if the player's command matches "[number]":
-					now HP of Sven is the number understood;
-			-- 63:	[Sven]
-				if the player's command matches "[number]":
-					now lust of Sven is the number understood;
-			-- 64:	[Sarah]
-				if the player's command matches "[number]":
-					now SarahSlut is the number understood;
-			-- 65:	[Sarah]
-				if the player's command matches "[number]":
-					now sarahtalk is the number understood;
-			-- 66:	[Sarah]
-				if the player's command matches "[number]":
-					now SarahPups is the number understood;
-			-- 67:	[-nothing-]
-				now tempnum is 0; [Duplicate removed]
-			-- 68:	[Brunch w/Alex]
-				if the player's command matches "[number]":
-					now alexbrunch is the number understood;
-			-- 69:	[Treasure found]
-				if the player's command matches "[number]":
-					now treasurefound is the number understood;
-			-- 70:	[Treasure hunt]
-				if the player's command matches "[number]":
-					now tmapfound is the number understood;
-			-- 71:	[Sandra + Coleen]
-				if the player's command matches "[number]":
-					now HP of Sandra is the number understood;
-			-- 72:	[Frank - M/M top/bottom/switch]
-				if the player's command matches "[number]":
-					now libido of Frank is the number understood;
-			-- 73:	[Fang]
-				if the player's command matches "[number]":
-					now HP of Fang is the number understood;
-			-- 74:	[Fang + Sandra]
-				if the player's command matches "[number]":
-					now libido of Fang is the number understood;
-			-- 75:	[Philip]
-				if the player's command matches "[number]":
-					now pigfed is the number understood;
-			-- 76:	[Philip - sex]
-				if the player's command matches "[number]":
-					now pigfucked is the number understood;
-			-- 77:	[cute crab - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Lost Crab is resolved;
-						now cute crab is tamed;
-					else:
-						now Lost Crab is not resolved;
-						now cute crab is not tamed;
-			-- 78:	[exotic bird - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Scared Bird is resolved;
-						now Exotic Bird is tamed;
-					else:
-						now Scared Bird is not resolved;
-						now Exotic Bird is not tamed;
-			-- 79:	[Felinoid companion - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Injured Felinoid is resolved;
-						now Felinoid companion is tamed;
-					else:
-						now Injured Felinoid is not resolved;
-						now Felinoid companion is not tamed;
-			-- 80:	[bee girl - pet]
-				if the player's command matches "[number]":
-					now HP of bee girl is the number understood;
-			-- 81:	[house cat - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Lost house cat is resolved;
-						now house cat is tamed;
-					else:
-						now Lost house cat is not resolved;
-						now house cat is not tamed;
-			-- 82:	[little fox - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Abandoned Fox is resolved;
-						now little fox is tamed;
-					else:
-						now Abandoned Fox is not resolved;
-						now little fox is not tamed;
-			-- 83:	[skunk kit - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Lost Skunk Kit is resolved;
-						now skunk kit is tamed;
-					else:
-						now Lost Skunk Kit is unresolved;
-						now skunk kit is not tamed;
-			-- 84:	[helper dog - pet]
-				if the player's command matches "[number]":
-					if the number understood is 1:
-						now Mournful Dog is resolved;
-						now helper dog is tamed;
-					else:
-						now Mournful Dog is not resolved;
-						now helper dog is not tamed;
-						now hdog is 0;
-						now dogfoodcount is 0;
-			-- 85:	[Rachel Mouse - pet]
-				if the player's command matches "[number]":
-					now mousecurse is the number understood;
-			-- 86:	[Elijah]
-				if the player's command matches "[number]":
-					now HP of Elijah is the number understood;
-			-- 87:	[Elijah's interactions]
-				now npcEint is "[the player's command]";
-			-- 88:	[Latex Husky Mode]
-				if the player's command matches "[number]" and the number understood is 1:
-					now latexhuskymode is true;
-				else:
-					now latexhuskymode is false;
-			-- 89:	[Parasitic Larva]
-				now larvaegg is 0;
-				now larvacounter is 0;
-				if the player's command matches "[number]" and the number understood is 1:
-					now Insect Hive is resolved;
-					now insectlarva is true;
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
-						if name entry is "Black Wasp":
-							now area entry is "High";
-							now non-infectious entry is false; [Wasps unlocked]
-				else:
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
-						if name entry is "Black Wasp":
-							now area entry is "nowhere";
-							now non-infectious entry is true; [Wasps locked]
-					now insectlarva is false;
-			-- 90:	[Leonard]
-				if the player's command matches "[number]":
-					now HP of Leonard is the number understood;
-			-- 91:	[Solstice]
-				if the player's command matches "[number]":
-					now HP of Solstice is the number understood;
-			-- 92:	[Ronda the Slut Rat]
-				if the player's command matches "[number]":
-					now carried of lizard juice is 0;
-			-- 93:	[Athanasia]
-				if the player's command matches "[number]":
-					now HP of Athanasia is the number understood;
-			-- 94:	[Skunkbeast Lord]
-				if the player's command matches "[number]":
-					now skunkbeaststatus is the number understood;
-			-- 95:	[Kitsune]
-				if the player's command matches "[number]":
-					now ktp is the number understood;
-			-- 96:	[Release number]
-				if the player's command matches "[number]":
-					if release number > the number understood:
-						if score < 0, now score is 0;
-			-- 97:	[Kara]
-				if the player's command matches "[number]":
-					now tattoohunter is the number understood;
-			-- 98:	[Kara's tattoos]
-				if the player's command matches "[number]":
-					now tatsave is the number understood;
-			-- 99:	[Kara's piercings]
-				if the player's command matches "[number]":
-					now piercesave is the number understood;
-			-- 100:	[Diego]
-				if the player's command matches "[number]":
-					now diegochanged is the number understood;
-					if diegochanged is 2:
-						now the icon of Diego is Figure of DiegoFem_icon;
-			-- 101:	[Eric]
-				if the player's command matches "[number]":
-					now HP of Eric is the number understood;
-			-- 102:	[Christy the Stuck Dragoness]
-				if the player's command matches "[number]":
-					now HP of Christy is the number understood;
-			-- 103:	[Christy: Slutty Dragoness / Horny Dragon]
-				if the player's command matches "[number]":
-					now dragontype is the number understood;
-			-- 104:	[Christy: fucked while trapped?]
-				if the player's command matches "[number]":
-					now dragonessfuck is the number understood;
-			-- 105:	[Dr. Medea]
-				if the player's command matches "[number]":
-					now HP of Doctor Medea is the number understood;
-			-- 106:	[Dr. Moffatt]
-				if the player's command matches "[number]":
-					now HP of Doctor Moffatt is the number understood;
-			-- 107:	[Lucy the Mall Rat]
-				if the player's command matches "[number]":
-					now HP of Lucy is the number understood;
-			-- 108:	[David's thirst]
-				if the player's command matches "[number]":
-					now thirst of david is the number understood;
-			-- 109:	[David's lust]
-				if the player's command matches "[number]":
-					now lust of david is the number understood;
-			-- 110:	[David's HP]
-				if the player's command matches "[number]":
-					now HP of David is the number understood;
-			-- 111:	[Camp Bravo / Adam]
-				if the player's command matches "[number]":
-					now HP of Adam is the number understood;
-			-- 112:	[Doberman Cop / Alexandra]
-				if the player's command matches "[number]":
-					now HP of Alexandra is the number understood;
-			-- 113:	[Larissa (Multiform NPC)]
-				if the player's command matches "[number]":
-					now HP of Larissa is the number understood;
-			-- 114:	[Sam (Dual-taur NPC)]
-				if the player's command matches "[number]":
-					now HP of Sam is the number understood;
-			-- 115:	[Wereraptor curse]
-				if the player's command matches "[number]":
-					now wrcursestatus is the number understood;
-			-- 116:	[Wereraptor cure quest]
-				if the player's command matches "[number]":
-					now wrcurseNermine is the number understood;
-			-- 117:	[Dr. Utah]
-				if the player's command matches "[number]":
-					now HP of Doctor Utah is the number understood;
-			-- 118:	[Mike]
-				if the player's command matches "[number]":
-					now HP of Mike is the number understood;
-			-- 119:	[Xerxes]
-				if the player's command matches "[number]":
-					now HP of Xerxes is the number understood;
-			-- 120:	[Helen]
-				if the player's command matches "[number]":
-					now HP of Helen is the number understood;
-			-- 121:	[Helen]
-				if the player's command matches "[number]":
-					now libido of Helen is the number understood;
-			-- 122:	[Rex]
-				if the player's command matches "[number]":
-					now HP of Rex is the number understood;
-			-- 123:	[Karen]
-				if the player's command matches "[number]":
-					now HP of Karen is the number understood;
-			-- 124:	[François]
-				if the player's command matches "[number]":
-					now HP of François is the number understood;
-			-- 125:	[François]
-				if the player's command matches "[number]":
-					now libido of François is the number understood; [placeholder for second part to come]
-			-- 126:	[Alexandra + Fang]
-				if the player's command matches "[number]":
-					now level of Alexandra is the number understood;
-			-- 127: [Thomas HP]
-				if the player's command matches "[number]":
-					now HP of Thomas is the number understood;
-			-- 128: [Thomas Libido]
-				if the player's command matches "[number]":
-					now Libido of Thomas is the number understood;
-			-- 129: [Thomas Lust]
-				if the player's command matches "[number]":
-					now Lust of Thomas is the number understood;
-			-- 130: [Thomas Quest]
-				if the player's command matches "[number]":
-					now ThomasQuestVar is the number understood;
-			-- 131: [Artemis]
-				if the player's command matches "[number]":
-					now HP of rubber tigress is the number understood;
-			-- 132: [Septus/Football Wolfman]
-				if the player's command matches "[number]":
-					now HP of Septus is the number understood;
-			-- 133: [Awesome Xerxes]
-				if the player's command matches "[number]":
-					now lust of Xerxes is the number understood;
-			-- 134: [Awesomer Helen]
-				if the player's command matches "[number]":
-					now lust of Helen is the number understood;
-			-- 135: [Tristian]
-				if the player's command matches "[number]":
-					now HP of Tristian is the number understood;
-			-- 136: [Icarus/Blue Chaffinch]
-				if the player's command matches "[number]":
-					now HP of Icarus is the number understood;
-			-- 137: [HP of Joanna]
-				if the player's command matches "[number]":
-					now HP of Joanna is the number understood;
-			-- 138: [lust of Joanna]
-				if the player's command matches "[number]":
-					now lust of Joanna is the number understood;
-			-- 139: [Angie]
-				if the player's command matches "[number]":
-					now angiearoused is the number understood;
-			-- 140:	[demon brute pet]
-				if the player's command matches "[number]":
-					now DBCaptureQuestVar is the number understood;
-			-- 141:	[demon brute pet - gender]
-				if the player's command matches "[number]":
-					now DemonBruteStatus is the number understood;
-			-- 142:	[Lilith - HP]
-				if the player's command matches "[number]":
-					now HP of Lilith is the number understood;
-			-- 143:	[Lilith - incubus offspring]
-				if the player's command matches "[number]":
-					now LilithKidCounter is the number understood;
-			-- 144:	[Felix - HP]
-				if the player's command matches "[number]":
-					now HP of Felix is the number understood;
-			-- 145:	[Felix - libido]
-				if the player's command matches "[number]":
-					now libido of Felix is the number understood;
-			-- 146:	[relationship progress with Sonya the Viking]
-				if the player's command matches "[number]":
-					now VikingRelationship is the number understood;
-			-- 147:	[number of kids with Sonya the Viking]
-				if the player's command matches "[number]":
-					now VikingKidCounter is the number understood;
-			-- 148:	[MovingOrwell - mini quest var for fucking Orwell]
-				if the player's command matches "[number]":
-					now MovingOrwell is the number understood;
-			-- 149:	[HP of Jimmy]
-				if the player's command matches "[number]":
-					now HP of Jimmy is the number understood;
-			-- 150:	[David - libido (interaction with Brutus)]
-				if the player's command matches "[number]":
-					now libido of David is the number understood;
-			-- 151: [HP of Amy]
-				if the player's command matches "[number]":
-					now HP of Amy is the number understood;
-			-- 152: [libido of Amy - puppy counter]
-				if the player's command matches "[number]":
-					now libido of Amy is the number understood;
-			-- 153: [SquadEncounters - progress variable for the Soldier Squad chain event]
-				if the player's command matches "[number]":
-					now SquadEncounters is the number understood;
-			-- 154: [thirst of Corbin - location]
-				if the player's command matches "[number]":
-					now thirst of Corbin is the number understood;
-			-- 155: [HP of Corbin]
-				if the player's command matches "[number]":
-					now HP of Corbin is the number understood;
-			-- 156: [CorbinKidCounter]
-				if the player's command matches "[number]":
-					now CorbinKidCounter is the number understood;
-			-- 157: [HP of Anthony]
-				if the player's command matches "[number]":
-					now HP of Anthony is the number understood;
-			-- 158: [HP of Duke]
-				if the player's command matches "[number]":
-					now HP of Duke is the number understood;
-			-- 159: [thirst of Duke]
-				if the player's command matches "[number]":
-					now thirst of Duke is the number understood;
-			-- 160: [HP of Zigor]
-				if the player's command matches "[number]":
-					now HP of Zigor is the number understood;
-			-- 161: [thirst of Amy]
-				if the player's command matches "[number]":
-					now thirst of Amy is the number understood;
-			-- 162:	[HP of Nadia]
-				if the player's command matches "[number]":
-					now HP of Nadia is the number understood;
-			-- 163: [NadiaFertilityCounter]
-				if the player's command matches "[number]":
-					now NadiaFertilityCounter is the number understood;
-			-- 164: [NadiaChickCounter]
-				if the player's command matches "[number]":
-					now NadiaChickCounter is the number understood;
-			-- 165:	[Nadia's interactions]
-				now npcNadiaint is "[the player's command]";
-			-- 166: [level of Amy]
-				if the player's command matches "[number]":
-					now level of Amy is the number understood;
-			-- 167: [Xp of Amy]
-				if the player's command matches "[number]":
-					now XP of Amy is the number understood;
-			-- 168: [Dexterity of Amy]
-				if the player's command matches "[number]":
-					now Dexterity of Amy is the number understood;
-			-- 169: [SvenAmySex]
-				if the player's command matches "[number]":
-					now SvenAmySex is the number understood;
-			-- 170: [BrutusAmySex]
-				if the player's command matches "[number]":
-					now BrutusAmySex is the number understood;
-			-- 171: [lust of Zephias]
-				if the player's command matches "[number]":
-					now lust of Zephias is the number understood;
-			-- 172: [HP of Ares]
-				if the player's command matches "[number]":
-					now HP of Ares is the number understood;
-					if HP of Ares > 0:
-						move Ares to Dog Kennels;
-					else:
-						remove Ares from play;
-			-- 173: [HP of Hayato]
-				if the player's command matches "[number]":
-					now HP of Hayato is the number understood;
-			-- 174: [HP of Tehuantl]
-				if the player's command matches "[number]":
-					now HP of Tehuantl is the number understood;
-			-- 175: [HP of Carl]
-				if the player's command matches "[number]":
-					now HP of Carl is the number understood;
-			-- 176: [level of Carl]
-				if the player's command matches "[number]":
-					now level of Carl is the number understood;
-			-- 177: [HP of Kristen]
-				if the player's command matches "[number]":
-					now HP of Kristen is the number understood;
-			-- 178: [libido of Kristen]
-				if the player's command matches "[number]":
-					now libido of Kristen is the number understood;
-			-- 179: [HP of Brooke]
-				if the player's command matches "[number]":
-					now HP of Brooke is the number understood;
-			-- 180: [HP of Bubble - Bouncy Castle / Bubble]
-				if the player's command matches "[number]":
-					now HP of Bubble is the number understood;
-			-- 181:	[HP of Newt]
-				if the player's command matches "[number]":
-					now HP of Newt is the number understood;
-			-- 182:	[Megakitty]			[temporarily closed for diagnosis]
-				if the player's command matches "[number]":
-					now tempnum is 0; [do-nothing command]
-[					if the number understood is 1 and girl is not banned and furry is not banned:
-						setmonster "Megakitty";
-						choose row monster from the table of random critters;
-						if name entry is "Megakitty":
-							now MKunleashed is true;
-							now area entry is "Midway"; ]
-			-- 183:	[Phi Iota Gamma]
-				if the player's command matches "[number]":
-					now piginitiation is the number understood;
-			-- 184:	[Down Under Pub / Gillian]
-				if the player's command matches "[number]":
-					now HP of Gillian is the number understood;
-			-- 185:	[HP of Stella]
-				if the player's command matches "[number]":
-					now HP of Stella is the number understood;
-			-- 186:	[Stella threesome code - placeholder]
-				now StellaNPCInt is "AAAAAAAAAAAA"; [do nothing]
-			-- 187: [OrcSlaverStatus]
-				if the player's command matches "[number]":
-					now OrcSlaverStatus is the number understood;
-			-- 188: [CellDoorStatus - Orc Lair]
-				if the player's command matches "[number]":
-					now CellDoorStatus is the number understood;
-			-- 189: [Onyx]
-				if the player's command matches "[number]":
-					now XP of Onyx is the number understood;
-			-- 190: [HP of Val]
-				if the player's command matches "[number]":
-					now HP of Val is the number understood;
-			-- 191: [thirst of Val]
-				if the player's command matches "[number]":
-					now thirst of Val is the number understood;
-			-- 192: [ValPregCounter]
-				if the player's command matches "[number]":
-					now ValPregCounter is the number understood;
-			-- 193: [ValPregnancy]
-				if the player's command matches "[number]":
-					now ValPregnancy is the number understood;
-			-- 194: [SlaveRaidEncounters]
-				if the player's command matches "[number]":
-					now SlaveRaidEncounters is the number understood;
-			-- 195: [HP of Chris]
-				if the player's command matches "[number]":
-					now HP of Chris is the number understood;
-			-- 196: [HP of Vanessa - status]
-				if the player's command matches "[number]":
-					now HP of Vanessa is the number understood;
-			-- 197: [XP of Vanessa - # of kids]
-				if the player's command matches "[number]":
-					now XP of Vanessa is the number understood;
-			-- 198: [HP of Meredith - status]
-				if the player's command matches "[number]":
-					now HP of Meredith is the number understood;
-			-- 199: [level of Meredith - # of kids]
-				if the player's command matches "[number]":
-					now level of Meredith is the number understood;
-			-- 200: [HP of Gwen - status & Gwen UB]
-				if the player's command matches "[number]":
-					now HP of Gwen is the number understood;
-			-- 201: [HP of Rane]
-				if the player's command matches "[number]":
-					now HP of Rane is the number understood;
-			-- 202: [thirst of Elijah]
-				if the player's command matches "[number]":
-					now thirst of Elijah is the number understood;
-			-- 203: [SpidertaurRelationship]
-				if the player's command matches "[number]":
-					now SpidertaurRelationship is the number understood;
-			-- 204: [CatgirlFucked]
-				if the player's command matches "[number]":
-					now CatgirlFucked is the number understood;
-			-- 205: [FionaFangStatus]
-				if the player's command matches "[number]":
-					now FionaFangStatus is the number understood;
-			-- 206: [FionaCarlStatus]
-				if the player's command matches "[number]":
-					now FionaCarlStatus is the number understood;
-			-- 207: [HP of Gabriel]
-				if the player's command matches "[number]":
-					now HP of Gabriel is the number understood;
-			-- 208: [HP of Erica]
-				if the player's command matches "[number]":
-					now HP of Erica is the number understood;
-			-- 209: [thirst of Erica]
-				if the player's command matches "[number]":
-					now thirst of Erica is the number understood;
-			-- 210:	[population of Police Station]
-				if the player's command matches "[number]":
-					now population of Police Station is the number understood;
-			-- 211:	[infpop of Police Station]
-				if the player's command matches "[number]":
-					now infpop of Police Station is the number understood;
-			-- 212:	[placeholder for Police Station]
-				increase score by 0;
-			-- 213:	[placeholder for Police Station]
-				increase score by 0;
-			-- 214:	[HP of Hadiya]
-				if the player's command matches "[number]":
-					now HP of Hadiya is the number understood;
-			-- 215:	[HP of Gobby]
-				if the player's command matches "[number]":
-					now HP of Gobby is the number understood;
-			-- 216:	[HP of Sidney - NPC overall status]
-				if the player's command matches "[number]":
-					now HP of Sidney is the number understood;
-			-- 217:	[level of Sidney - forms]
-				if the player's command matches "[number]":
-					now level of Sidney is the number understood;
-			-- 218:	[XP of Sidney - offspring]
-				if the player's command matches "[number]":
-					now XP of Sidney is the number understood;
-			-- 219:	[HP of Micaela]
-				if the player's command matches "[number]":
-					now HP of Micaela is the number understood;
-			-- 220:	[level of Micaela - ovi stuff]
-				if the player's command matches "[number]":
-					now level of Micaela is the number understood;
-			-- 221:	[XP of Micaela - offspring]
-				if the player's command matches "[number]":
-					now XP of Micaela is the number understood;
-			-- 222:	[HP of Macadamia]
-				if the player's command matches "[number]":
-					now HP of Macadamia is the number understood;
-			-- 223:	[HP of Yolanda]
-				if the player's command matches "[number]":
-					now HP of Yolanda is the number understood;
-			-- 224:	[SarahCured]
-				if the player's command matches "[number]":
-					now SarahCured is the number understood;
-		if upit is 1, decrease zeta by 58;
-		if upit is 2, decrease zeta by 160;
-	restorepart1; [adjust based on loaded values above: 1 - 59]
-	restorepart2; [adjust based on loaded values above: 60 - 161]
-	restorepart3; [adjust based on loaded values above: 162 - 224]
-	restorepart-final; [other adjustments based on overall results]
-	repeat with counter running from lev + 1 to level of player:
-		if the remainder after dividing counter by 5 is 0:
-			funfeatget;
-	say "Your spell washes through the universe. Trixie taps you on your [facename of player] nose lightly. 'All done!'";
-	wait for any key;
-
-[ ---------------------------------------------------------- ]
-
-to restorepart1:	[values 1 - 59]
-[1:		[Strength]]
-	now capacity of player is strength of player * 5;
-[2:		[Dexterity]]
-[3:		[Stamina]]
-[4:		[Charisma]]
-[5:		[Perception]]
-[6:		[Intelligence]]
-[7:		[Level]]
-[8:		[HP]]
-	now the HP of player is the maxHP of player;
-[9:		[Humanity]]
-[10:	[Score]]
-[11:	[Dr Matt - HP of Dr. Matt]]
-	now carried of nanite density monitor is 0;
-	now unusual creature is resolved;
-	now level of doctor matt is turns;
-	if HP of doctor matt > 0 and HP of doctor matt < 100:
-		now Outside Trevor Labs is known;
-	if HP of doctor matt > 4 and HP of doctor matt < 100:
-		move the microwave to the location of doctor matt;
-	if HP of doctor matt is 6:
-		now unusual creature is unresolved;
-	if HP of doctor matt is 7:
-		now susan is in the location of doctor matt;
-	if HP of doctor matt is 13:
-		now foodneed is 6;
-		now waterneed is 6;
-	if HP of doctor matt >= 16 and HP of doctor matt < 100:
-		increase freecred by 100 + ( 2 * number of fasttravel rooms ); [awards to minimum 50%]
-		now Zephyr Lobby is known;
-	if HP of doctor matt is 17:
-		now carried of nanite density monitor is 1;
-		now beach detector site is unresolved;
-		now red light detector site is unresolved;
-		now high rise detector site is unresolved;
-		now park detector site is unresolved;
-		now ndmlist is { "Beach", "Red Light District", "High Rise District", "Park" };
-	if HP of doctor matt >= 18 and HP of doctor matt < 100:
-		now beach detector site is resolved;
-		now red light detector site is resolved;
-		now high rise detector site is resolved;
-		now park detector site is resolved;
-		now ndmlist is { };
-		increase freecred by 200;
-		if HP of Larissa is 0, now HP of Larissa is 1;
-	else if HP of doctor matt is 100:
-		remove orthas from play;
-		now the printed name of Doctor Matt is "Left Behind Recording of Doctor Matt";
-		now the initial appearance of Doctor Matt is "A small recorder labeled 'doctor matt' remains abandoned.";
-[12:	[Body infection]]
-[13:	[Face infection]]
-[14:	[Skin infection]]
-[15:	[Tail infection]]
-[16:	[Cock infection]]
-[17:	[Tanuki]]
-[18:	[Hospital Quest]]
-[19:	[player cock]]
-[20:	[player breasts]]
-[21:	[player cunt]]
-[22:	[player cock]]
-[23:	[player cock]]
-[24:	[player cock]]
-[25:	[player cunt]]
-[26:	[player cunt]]
-[27:	[equipped weapon]]
-[28:	[re-purposed: Frank M/F count]]
-[29:	[re-purposed: Frank M/M count]]
-	if frankmalesex is 0, now libido of Frank is 0;
-	if franksex is 0 and frankmalesex is 0:
-		now Comic Shop is unknown;
-		now Mephitness is unresolved;
-	else:
-		now Comic Shop is known;
-		now Mephitness is resolved;
-[30:	[Snow]]
-[31:	[redundant - removed]]
-[32:	[Coleen]]
-[33:	[Coleen]]
-[34:	[Coleen]]
-[35:	[Coleen]]
-[36:	[Coleen]]
-[37:	[Coleen]]
-[38:	[Coleen]]
-[39:	[Dr. Mouse]]
-[40:	[Candy / raccoon pet]]
-[41:	[Feat unlock]]
-[42:	[Butterfly]]
-[43:	[catnum]]
-[44:	[mateable]]
-[45:	[Denise]]
-	now lonely gryphoness is unresolved;
-	now Gryphoness Nest is resolved;
-	if gryphoncomforted > 0:
-		now lonely gryphoness is resolved;
-		now Gryphoness Nest is unresolved;
-	if gryphoncomforted > 2:
-		now gryphoness is tamed;
-		now Gryphoness Nest is resolved;
-[46:	[Shifting]]
-	now Secure Area is unresolved;
-	now Guard Gryphon is unresolved;
-	if shiftable > 0:
-		now Secure Area is resolved;
-	if shiftable is 2:
-		now Guard Gryphon is resolved;
-		now findablestairs is 1;
-[47:	[Dr. Medea]]
-[48:	[Military events]]
-	if mtp is 4, now Military presence is resolved;
-[49:	[Hyena Gang]]
-	if hyg is 4:
-		now Hyena hideout is known;
-		now hyena gang is resolved;
-[50:	[New Ewe Store]]
-	now New Ewe Store is unresolved;
-	now Little Lost Lamb is resolved;
-	now New Ewe Storeroom is unknown;
-	if NESProgress is 2:
-		now Little Lost Lamb is unresolved;
-	if NESProgress >= 4:
-		now New Ewe Storeroom is known;
-		now New Ewe Store is resolved;
-	if NESProgress is 5:
-		if "Three Bags Full" is not listed in feats of player, add "Three Bags Full" to feats of player;
-[51:	[Lisa]]
-	if mtrp is 1:
-		now Porn Store is known;
-		now mouse taur is resolved;
-		now find porn store is resolved;
-[52:	[Boris]]
-[53:	[Boris]]
-	if borisquest > 4:
-		if christyquest is 0:
-			now christyquest is 1;
-[54:	[Alex]]
-	if progress of alex > 0:
-		now Alex's Condo is known;
-		now meet alex is resolved;
-	if progress of alex > 1:
-		now find lorenda is resolved;
-[55:	[Angie]]
-	if AngieHappy > 0:
-		move Angie to the Zoo Giftshop;
-		now zoo entrance is known;
-	if AngieHappy > 1:
-		Now AngieTrapped is resolved;
-	if AngieHappy is 2:
-		increase carried of catnip by 1;
-	if AngieHappy is 4 and "Angie's Mate" is not listed in feats of player:
-		add "Angie's Mate" to feats of player;
-[56:	[Angie]]
-[57:	[Susan]]
-[58:	[Susan]]
-	move Susan to dark basement;
-	now unusual creature is resolved;
-	if HP of doctor matt is 6:
-		now unusual creature is unresolved;
-		now deerconsent is 0;
-		now HP of Susan is 0;
-	if HP of doctor matt > 6 and HP of doctor matt is not 100 and HP of doctor matt is not 103:
-		now unusual creature is resolved;
-		if HP of Susan > 1 and HP of Susan < 50:
-			move Susan to Primary Lab;
-		else if HP of Susan >= 50:
-			move Susan to Hidden Lab;
-			if HP of Susan >= 73:
-				now libido of Susan is 1;
-		else:
-			remove Susan from play;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
-				if name entry is "Deer":
-					now monster is y;
-					now area entry is "Park";
-					break;
-[59:	[Hospital Quest]]
-
-[ ---------------------------------------------------------- ]
-
-to restorepart2:	[values 60 - 161]
-[60:	[Orthas]]
-	if HP of Orthas >= 2:
-		now the icon of Orthas is figure of Orthas_icon;
-	else:
-		now the icon of Orthas is figure of pixel;
-	if HP of Orthas is 5:
-		now Orthas's House is unresolved;
-	else:
-		now Orthas's House is resolved;
-	if HP of Orthas is 6:
-		now carried of footlocker is 1;
-	else:
-		now carried of footlocker is 0;
-[61:	[Stables - Fancy Quest]]
-	now Ignored Memos is unresolved;
-	now Hardware Fort is resolved;
-	if fancyquest is 4:
-		now Hardware Fort is unresolved;
-	if fancyquest > 0:
-		now Ignored Memos is resolved;
-[62:	[Sven]]
-[63:	[Sven]]
-[64:	[Sarah]]
-[65:	[Sarah]]
-[66:	[Sarah]]
-[67:	[-nothing-]]
-	now tempnum is 0; [Duplicate removed]
-[68:	[Brunch w/Alex]]
-	if alexbrunch >= 4:
-		now the icon of Alex is Figure of Alex_icon;
-	else:
-		now the icon of Alex is figure of pixel;
-[69:	[Treasure found]]
-[70:	[Treasure hunt]]
-	now noteinbottle is unresolved;
-	now findingboat is unresolved;
-	if tmapfound > 0:
-		now noteinbottle is resolved;
-	if tmapfound > 2:
-		now pirate island is known;
-		now findingboat is resolved;
-		now boatfound is 3;
-[71:	[Sandra + Coleen]]
-	now lust of Sandra is turns;
-	if HP of Sandra > 0:
-		now Sandra is in the bunker;
-		now needy rabbit girl is resolved;
-		now rabbit den is known;
-	else:
-		now Sandra is in Rabbit Den;
-		now needy rabbit girl is not resolved;
-		now rabbit den is unknown;
-[72:	[Frank - M/M top/bottom/switch]]
-	if libido of Frank > 3, now libido of Frank is 3; [***temporary fix]
-	if frankmalesex is 0, now libido of Frank is 0;
-[73:	[Fang]]
-	if HP of Fang is 0 or HP of Fang is 100:
-		now Fang is in the dark basement;
-	if HP of Fang > 0 and HP of Fang < 100:
-		now Fang is in the Grey Abbey Library;
-[74:	[Fang + Sandra]]
-	if libido of Fang is 2 and ( HP of Fang is 1 or HP of Fang is 2 ), now libido of Fang is 1;
-	if Fang is not in the Grey Abbey Library and Sandra is not in the Bunker:
-		now libido of Fang is 0;
-[75:	[Philip]]
-	now Philip is in Pig Pen;
-	now Pig Pen is unknown;
-	now HBMR is 0;
-	if pigfed > 0:
-		now Pig Pen is known;
-		now lastpigfed is turns;
-		now Hungry Piggy is resolved;
-		now HBMR is 1;
-	if pigfed is 3:
-		now Philip is in the Large Shed;
-		now Pig Pen is not fasttravel;
-[76:	[Philip - sex]]
-[77:	[cute crab - pet]]
-[78:	[exotic bird - pet]]
-[79:	[Felinoid companion - pet]]
-[80:	[bee girl - pet]]
-	if girl is not banned:
-		now Smashed Hive is unresolved;
-		now bee girl is not tamed;
-		if HP of bee girl > 0 and HP of bee girl < 100:
-			now bee girl is tamed;
-		if HP of bee girl > 1:
-			now Smashed Hive is resolved;
-		if HP of bee girl >= 5:
-			setmonster "Queen Bee";
-			choose row monster from the table of random critters;
-			now non-infectious entry is false;
-[81:	[house cat - pet]]
-[82:	[little fox - pet]]
-[83:	[skunk kit - pet]]
-[84:	[helper dog - pet]]
-[85:	[Rachel Mouse - pet]]
-	if mousecurse is 1:
-		now Quiet Apartment Building is resolved;
-		now mouse girl is tamed;
-		now the companion of the player is mouse girl;
-		say "Rachel smiles as she rejoins you at your side, gently holding your hand in hers.";
-	else:
-		now Quiet Apartment Building is unresolved;
-		now mouse girl is not tamed;
-[86:	[Elijah]]
-	now NPCintCounter is turns;
-	now Angel vs Demons is unresolved;
-	now Burned-Out Chapel is unknown;
-	if HP of Elijah is 1 or HP of Elijah is 2:
-		now the icon of Elijah is Figure of Elijah_good_naked_icon;
-	else if HP of Elijah is 3:
-		now the icon of Elijah is Figure of Elijah_virgin_icon;
-	else if HP of Elijah is 4:
-		now the icon of Elijah is Figure of Elijah_good_icon;
-	else if HP of Elijah is 99:
-		now the icon of Elijah is Figure of Elijah_evil_icon;
-		move Elijah to Bunker;
-	if HP of Elijah > 0 and HP of Elijah < 99:
-		now Angel vs Demons is resolved;
-	if HP of Elijah > 0 and HP of Elijah < 100:
-		move Elijah to Bunker;
-		now Burned-Out Chapel is known;
-	if HP of Elijah is 100:
-		now Angel vs Demons is resolved;
-		remove Elijah from play;
-		now Burned-Out Chapel is known;
-	if HP of Elijah is 2, now Sweet Surprise is unresolved;
-	if HP of Elijah is 2 and furry is not banned, now Examination Room is unresolved;
-[87:	[Elijah's interactions]]
-	npcEint-Restore;
-[88:	[Latex Husky Mode]]
-[89:	[Parasitic Larva]]
-[90:	[Leonard]]
-	now level of Hunting Prides is 8;
-	now Hunting Prides is resolved;
-	now PridePark is resolved;
-	if HP of Leonard is 100, now HP of Leonard is 0;
-	if HP of Leonard >= 6:
-		now the icon of Leonard is the figure of LeonardViolin_icon;
-	else:
-		now the icon of Leonard is the figure of pixel;
-	if HP of Leonard > 0:
-		now Lion's Den is known;
-		now Feline Friend is resolved;
-	else:
-		now Lion's Den is unknown;
-		now Feline Friend is unresolved;
-	if HP of Leonard is 5:
-		now Music Store is unresolved;
-		now Concert Hall is unresolved;
-		now violinfound is 0;
-	if HP of Leonard is 6:
-		now Leonardtimer is turns;
-	if HP of Leonard is 7:
-		now libido of Leonard is 0;
-	if HP of Leonard is 9:
-		now Leonardtimer is turns;
-	if HP of Leonard >= 10:
-		now Hunting Prides is unresolved;
-	if HP of Leonard is 11:
-		now level of Hunting Prides is 10;
-	if HP of Leonard is 12 or HP of Leonard is 13:
-		now level of Hunting Prides is 12;
-	if HP of Leonard >= 14:
-		now Hunting Prides is resolved;
-		now level of Hunting Prides is 12;
-	if HP of Leonard is 15, now HP of Leonard is 16;
-	if HP of Leonard >= 16 and HP of Leonard < 100:
-		if "Male Preferred" is listed in feats of player, remove "Male Preferred" from feats of player;
-		let foundfel be 0;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Feline":
-				now monster is y;
-				now foundfel is 1;
-				break;
-		if foundfel is 1:
-			now scale entry is 3;
-			now breast size entry is 5;
-			if "Herm Preferred" is listed in feats of player or "Always Cocky" is listed in feats of player:
-				now sex entry is "Both";
-				now cocks entry is 1;
-				now cock length entry is 9;
-				now cock width entry is 6;
-		if bodyname of player is "Feline", attributeinfect;
-		now PridePark is unresolved;
-	if HP of Leonard is 20 and carried of bulletproof vest is 0, now carried of bulletproof vest is 1;
-[91:	[Solstice]]
-	remove Solstice from play;
-	now carried of Crow Artifact is 0;
-	now Adventurer is resolved;
-	now Onyx Crow is resolved;
-	if HP of Solstice is 1:
-		now Onyx Crow is unresolved;
-	if HP of Solstice is 2:
-		now carried of Crow Artifact is 1;
-		now Adventurer is unresolved;
-	if HP of Solstice is 3 or HP of Solstice is 4:
-		now lastfuck of Solstice is turns;
-	if HP of Solstice > 4:
-		move Solstice to Makeshift Rec Room;
-[92:	[Ronda the Slut Rat]]
-	now carried of lizard juice is 0;
-	now Art Collector is resolved;
-	if HP of Ronda > 0 and HP of Ronda < 10:
-		remove Ronda Mallrat from play;
-		move Rod Mallrat to Mall FoodCourt;
-		now the icon of Rod Mallrat is figure of Rod_icon;
-		now the icon of Ronda is figure of pixel;
-	if HP of Ronda is 0 or HP of Ronda is 10:
-		move Ronda Mallrat to Mall Atrium;
-		move Rod Mallrat to Mall FoodCourt;
-		now the icon of Rod Mallrat is figure of Rod_icon;
-		now the icon of Ronda is figure of pixel;
-	if HP of Ronda is 100:
-		move Ronda Mallrat to Slut Rat Den;
-		move Rod Mallrat to Slut Rat Den;
-		now the icon of Rod Mallrat is figure of pixel;
-		now the icon of Ronda is figure of RondaSR_icon;
-	if HP of Ronda > 0:
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Slut Rat":
-				now area entry is "Mall";
-				break;
-	if HP of Ronda is 5:
-		now carried of lizard juice is 1;
-	if HP of Ronda is 6:
-		now Art Collector is unresolved;
-	if HP of Ronda >= 8:
-		now Slut Rat Den is known;
-[93:	[Athanasia]]
-	now carried of phoenix egg is 0;
-	remove Athanasia from play;
-	if HP of Athanasia is 0 and girl is not banned and hermaphrodite is not banned and furry is not banned:
-		now Captured Bird is unresolved;
-	else:
-		now Captured Bird is resolved;
-	if HP of Athanasia is 1 and guy is not banned:
-		now FireAndIce is unresolved;
-	else:
-		now FireAndIce is resolved;
-	if HP of Athanasia is 2:
-		now carried of phoenix egg is 1;
-	if HP of Athanasia >= 3:
-		now lastfuck of Athanasia is turns;
-		now Government Assistance is resolved;
-		now Approaching the Capitol Building is known;
-	if HP of Athanasia >= 4:
-		now lastfuck of Athanasia is turns + 8;
-		move Athanasia to Volcanic Cave;
-[94:	[Skunkbeast Lord]]
-	if skunkbeaststatus is 1 and guy is not banned and girl is not banned and furry is not banned:
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Skunk":
-				now monster is y;
-				break;
-		now non-infectious entry is true; [reg. Skunk infection closed]
-		[puts Skunkbeast Lord as lead monster for infection and impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Skunkbeast Lord":
-				now monster is y;
-				break;
-		now non-infectious entry is false; [Skunkbeast Lord infection now open]
-		now the strain of skunk goo is "Skunkbeast Lord";
-		if tailname of player is "Skunk":
-			now tailname of player is "Skunkbeast Lord";
-			now tail of player is tail entry;
-		if facename of player is "Skunk":
-			now facename of player is "Skunkbeast Lord";
-			now face of player is face entry;
-		if skinname of player is "Skunk":
-			now skin of player is skin entry;
-			now skinname of player is "Skunkbeast Lord";
-		if bodyname of player is "Skunk":
-			now bodyname of player is "Skunkbeast Lord";
-			now body of player is body entry;
-			attributeinfect;
-		if cockname of player is "Skunk":
-			now cock of player is cock entry;
-			now cockname of player is "Skunkbeast Lord";
-		now Skunkbeast Battle is resolved;
-	else if guy is banned or girl is banned or furry is banned:
-		now skunkbeaststatus is 0;
-		now Skunkbeast Battle is resolved;
-	else:
-		now skunkbeaststatus is 0;
-		now Skunkbeast Battle is unresolved;
-[95:	[Kitsune]]
-		now carried of star bell is 0;
-		now Strange Fox is unresolved;
-		now Strange Bell is resolved;
-		if ktp is 6:
-			now Strange Fox is resolved;
-			now Strange Bell is unresolved;
-		if ktp is 7:
-			now carried of star bell is 1;
-		if ktp is 8:
-			now Strange Fox is resolved;
-			now Foxy Hideaway is known;
-[96:	[Release number]]
-[97:	[Kara]]
-	if tattoohunter is 1, now tattoohunter is 0;
-	if tattoohunter >= 2:
-		now Tattoo Parlor is known;
-		now tattoonpiercing is resolved;
-		now haroldtalk is 2;
-		now Palomino is known;
-	if tattoohunter >= 4:
-		now Findingkara is resolved;
-		now Kara is in the Tattoo Parlor;
-	if tattoohunter >= 5:
-		now Haroldaroused is 1;
-[98:	[Kara's tattoos]]
-	remove { "Hyena Tattoo", "Dragon Tattoo", "Feline Tattoo", "Wolf Tattoo", "Unicorn Tattoo", "Gryphon Tattoo" } from feats of player, if present;
-	if tatsave is 0:
-		now tatstatus is 0;
-	else:
-		now tatstatus is 1;
-	if tatsave is 1:
-		add "Hyena Tattoo" to feats of player;
-	if tatsave is 2:
-		add "Dragon Tattoo" to feats of player;
-	if tatsave is 3:
-		add "Feline Tattoo" to feats of player;
-	if tatsave is 4:
-		add "Wolf Tattoo" to feats of player;
-	if tatsave is 5:
-		add "Unicorn Tattoo" to feats of player;
-	if tatsave is 6:
-		add "Gryphon Tattoo" to feats of player;
-	else:		[error or unlisted tattoo]
-		now tatstatus is 0;
-		now tatsave is 0;
-[99:	[Kara's piercings]]
-	remove { "NippleandChain Piercing", "Hyenastyle Piercings", "Nipple Piercing", "Matriarch Piercing" } from feats of player, if present;
-	if piercesave is 0:
-		now piercestatus is 0;
-	else:
-		now piercestatus is 1;
-	if piercesave is 1:
-		add "Matriarch Piercing" to feats of player;
-	if piercesave is 2:
-		add "Nipple Piercing" to feats of player;
-	if piercesave is 3:
-		add "NippleandChain Piercing" to feats of player;
-	if piercesave is 4:
-		add "Hyenastyle Piercings" to feats of player;
-[100:	[Diego]]
-	if diegochanged > 0:
-		now diegotalk is 1;
-[101:	[Eric]]
-	move Eric to Sports Arena Lockerroom;
-	if HP of Eric > 0:
-		now Barricaded Lockerroom is resolved;
-		now Sports Arena Lockerroom is known;
-	if HP of Eric is 100:
-		remove Eric from play;
-	else if HP of Eric is 200:
-		remove Eric from play;
-		move Erica to bunker;
-		now Dexterity of Erica is 5;
-	else if HP of Eric > 0:
-		move Eric to Bunker;
-		now thirst of Eric is 1;
-	if HP of Eric is 21 or HP of Eric is 22:
-		now thirst of Eric is 21;
-	if HP of Eric is 31 or HP of Eric is 32:
-		now thirst of Eric is 31;
-	if HP of Eric is 11:
-		now thirst of Eric is 11;
-[102:	[Christy the Stuck Dragoness]]
-	now dragontype is 0;
-	now lust of Christy is 0;
-	now libido of Christy is 0;
-	now thirst of Christy is 0;
-	now dragoness is in Old Building;
-	now Dragon Prey is resolved;
-	if HP of Christy is 0:
-		now Find Building is unresolved;
-		now Another Ladder is unresolved;
-		now Isolated Street is unknown;
-		now Back Alley is unknown;
-		now NoIntroduction is 0;
-	else if HP of Christy > 0:
-		now Find Building is resolved;
-		now Another Ladder is resolved;
-		now Isolated Street is known;
-		now Back Alley is known;
-		now NoIntroduction is 1;
-	if HP of Christy >= 2:
-		remove dragoness from play;
-	if HP of Christy is 90:
-		now Dragon Prey is unresolved;
-	if HP of Christy >= 90:
-		now Isolated Street is unknown;
-		now Back Alley is unknown;
-[103:	[Christy: Slutty Dragoness / Horny Dragon]]
-[104:	[Christy: fucked while trapped?]]
-[105:	[Dr. Medea]]
-	if HP of Doctor medea > 6, now HP of Doctor Medea is 0; [reset for save bug]
-	if HP of Doctor Medea > 0:
-		now Pediatrics Lobby is known;
-	if HP of Doctor Medea is 3:
-		now Obstetrics Department is unresolved;
-	else:
-		now Obstetrics Department is resolved;
-[106:	[Dr. Moffatt]]
-	if HP of Doctor Moffatt is 99 or HP of Doctor Moffatt is 100:
-		now HP of Doctor Moffatt is 0;
-	if guy is banned or girl is banned or hermaphrodite is banned or furry is banned:
-		now Psych Department is unknown;
-		now Another Doctor is resolved;
-		now HP of Doctor Moffatt is 100;
-	else if HP of Doctor Moffatt is 0:
-		now Psych Department is unknown;
-		now Another Doctor is unresolved;
-	else if HP of Doctor Moffatt > 0:
-		now Psych Department is known;
-		now Another Doctor is resolved;
-		now hospnav is 1;
-		now lastfuck of Doctor Moffatt is turns;
-		now lust of Doctor Moffatt is 0;
-[107:	[Lucy the Mall Rat]]
-	if HP of Lucy > 0:
-		move Lucy to Mall Atrium;
-	else:
-		remove Lucy from play;
-[108:	[David's thirst]]
-[109:	[David's lust]]
-[110:	[David's HP]]
-	if HP of David is 0 and ( guy is not banned and hellspawn is not banned ):
-		remove David from play;
-		now Captured Demon is unresolved;
-		now Thankful Soldier is resolved;
-	else:
-		now Captured Demon is resolved;
-		now Thankful Soldier is resolved;
-	if HP of David > 0 and HP of David < 4, move David to Parade Ground;
-	if HP of David is 4:
-		move David to Bunker;
-		now DavidBunkerEntry is turns;
-[111:	[Camp Bravo / Adam]]
-	now Trickster's Masterpiece is resolved;
-	now Back at the Camp is resolved;
-	now Camp Bravo Entrance is unknown;
-	now CampBravoWomenAllowed is 0;
-	now ElainePregnant is 0;
-	now thirst of Elaine is 0;
-	remove Adam from play;
-	if guy is banned or furry is banned:
-		now Red Light Requisition is resolved;
-		now Trickster's Masterpiece is resolved;
-	else if HP of Adam is 0:
-		now Trickster's Masterpiece is unresolved;
-	else if HP of Adam is 1:
-		now Trickster's Masterpiece is unresolved;
-	else if HP of Adam is 2:
-		now Back at the Camp is unresolved;
-	else if HP of Adam is 3:
-		now Camp Bravo Entrance is known;
-	else if HP of Adam is 4:
-		now Camp Bravo Entrance is known;
-		now CampBravoWomenAllowed is 1;
-		now ElainePregnant is 48;
-	else if HP of Adam is 5:
-		now thirst of Elaine is 3;
-		now Camp Bravo Entrance is known;
-		now CampBravoWomenAllowed is 1;
-		move Adam to Quartermaster's Tent;
-[112:	[Doberman Cop / Alexandra]]
-	now lust of Alexandra is 0;
-	now libido of Alexandra is 0;
-	move Alexandra to Police Station;
-	if HP of Alexandra is 59 or HP of Alexandra is 60:
-		now HP of Alexandra is 58;
-		say "[special-style-2]NOTICE:[roman type] Your completion of the Automatons 2 task has been undone due to task order revisions.";
-	if HP of Alexandra > 0:
-		[puts Doberman as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Doberman":
-				now monster is y;
-				now area entry is "nowhere";
-				break;
-		if HP of Alexandra is 100:
-			now Police Station is unknown;
-		else if HP of Alexandra >= 50:
-			now Police Station is known;
-		else:
-			now Police Station is unknown;
-			move Alexandra to Grey Abbey Library;
-		if HP of Alexandra >= 65 and HP of Alexandra < 100:
-			now Master Mind is in Cell Block A;
-		else:
-			remove Master Mind from play;
-		if HP of Alexandra is 61 or HP of Alexandra is 62:
-			now Survivor Group is unresolved;
-		if HP of Alexandra >= 66 and HP of Alexandra < 100:
-			now HP of Master Mind is 1;
-		if HP of Alexandra >= 67 and HP of Alexandra < 100:
-			if "City Map" is not listed in feats of player:
-				add "City Map" to feats of player;
-		if HP of Alexandra is 69:
-			now Microchip Factory is unresolved;
-		else:
-			now Microchip Factory is resolved;
-	if HP of Alexandra is 3 or HP of Alexandra is 5:
-		now lust of Alexandra is 1; [reset to start of pregnancy]
-	if HP of Alexandra is 4 or HP of Alexandra is 5:
-		now libido of Alexandra is a random number between 2 and 4; [minimum children restored]
-[113:	[Larissa (Multiform NPC)]]
-	if HP of Larissa > 3, now HP of Larissa is 3;
-	if HP of Larissa > 1, nanitecoll_discount;
-	follow the larissa_tfoption rule;
-[114:	[Sam (Dual-taur NPC)]]
-	if HP of Sam is 0:
-		now Another Researcher is unresolved;
-		now Mini-Lab is unknown;
-	else:
-		now Another Researcher is resolved;
-		now Mini-Lab is known;
-	if HP of Sam <= 4:
-		now Sam is in Mini-Lab;
-	else if HP of Sam < 70:
-		now Sam is in Large Shed;
-	else:
-		remove Sam from play;
-	if HP of Sam is 16 or HP of Sam is 98, dragontaur_active;
-	if HP of Sam is 36 or HP of Sam is 99, vixentaur_active;
-	if HP of Sam is 55 or HP of Sam is 56, tripletaur_active;
-	if HP of Sam >= 30 and HP of Sam <= 49:
-		now icon of Sam is figure of Vixentaur_icon;
-	else if HP of Sam >= 50 and HP of Sam <= 69:
-		now icon of Sam is figure of Dracovixentaur_icon;
-	else:
-		now icon of Sam is figure of pixel;
-[115:	[Wereraptor curse]]
-[116:	[Wereraptor cure quest]]
-[117:	[Dr. Utah]]
-	now Paleontology Professor is unresolved;
-	now utahmet is false;
-	now Greenhouse is resolved;
-	now carried of wolfsbane is 0;
-	now carried of silver knife is 0;
-	now Dinosaur Skeleton is resolved;
-	now Paleontology Office is unknown;
-	if girl is banned and guy is banned:
-		now wrcursestatus is 0;
-		now Paleontology Professor is resolved;
-		now HP of Doctor Utah is 0;
-	if wrcursestatus > 0:
-		raptorrelease;
-		now Paleontology Professor is resolved;
-	if wrcurseNermine is 1:
-		now wrlastNermine is turns;
-	if wrcurseNermine is 2:
-		now Greenhouse is unresolved;
-	if wrcurseNermine is 3 or wrcurseNermine is 4:
-		now carried of wolfsbane is 1;
-		now wrcurseNermine is 3;
-	if wrcurseNermine is 5:
-		now Warehouse District is known;
-		now Getting the Knife is unresolved;
-	if wrcurseNermine is 6 or wrcurseNermine is 7:
-		now carried of silver knife is 1;
-		now wrcurseNermine is 6;
-	if wrcurseNermine is 8:
-		now carried of silver knife is 1;
-		now Dinosaur Skeleton is unresolved;
-	if wrcurseNermine is not 12 and wrcurseNermine is not 14:
-		now HP of Doctor Utah is 0;
-		now libido of Doctor Utah is 0;
-		now lust of Doctor Utah is 0;
-	if wrcurseNermine is 12 or wrcurseNermine is 14:
-		now Paleontology Office is known;
-		if HP of Doctor Utah > 1:
-			if girl is not banned:
-				if HP of Doctor Utah is odd:
-					now lust of Doctor Utah is 1;
-				else:
-					now lust of Doctor Utah is 0;
-				let iterations be HP of Doctor Utah / 2;
-				now libido of Doctor Utah is 0;
-				repeat with itx running from 1 to iterations:
-					increase libido of Doctor Utah by a random number between 2 and 4;
-			else:
-				now fionacarlstatus is fionacarlstatus; [do nothing action]
-	if weapon object of player is silver knife and silver knife is not owned, now weapon object of player is journal;
-[118:	[Mike]]
-	if HP of Mike is 100 or guy is banned or furry is banned:	[Mike lost]
-		now Mike's Home is unknown;
-		now Dog Walking is resolved;
-	else if HP of Mike is 99:					[Mike enemy]
-		now Mike's Home is unknown;
-		now Dog Walking is resolved;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Stag":
-				now monster is y;
-				now area entry is "Warehouse";
-				now non-infectious entry is false;
-				break;
-	else if HP of Mike > 2 and HP of Mike < 98:
-		now Dog Walking is resolved;
-		now Mike's Home is known;
-	else:
-		now Dog Walking is not resolved;
-		now Mike's Home is unknown;
-[119:	[Xerxes]]
-	if HP of Xerxes is 0, remove Xerxes from play;
-	if HP of Xerxes > 0, move Xerxes to Grey Abbey Library;
-[120:	[Helen]]
-[121:	[Helen]]
-	now HelenPregnant is 0;
-	if HP of Helen is 0:
-		remove Helen from play;
-		now thirst of Helen is 0;
-		now libido of Helen is 0;
-	if HP of Helen > 0:
-		move Helen to Grey Abbey Library;
-		if libido of Helen > 0:
-			now thirst of Helen is 1;
-[122:	[Rex]]
-[123:	[Karen]]
-	now carried of Dog Bone is 0;
-	now ForcedAdoption is unresolved;
-	now Rex's Place is unknown;
-	if guy is banned or girl is banned or furry is banned:
-		now HP of Rex is 0;
-		now HP of Karen is 0;
-		now ForcedAdoption is resolved;
-	if HP of Rex > 0:
-		now Entrance to the High Rise District is known;
-	if HP of Rex > 0 and HP of Rex < 5:
-		now carried of Dog Bone is 1;
-		now ForcedAdoption is unresolved;
-	if HP of Rex > 4:
-		now carried of Dog Bone is 0;
-		now Rex's Place is known;
-		now ForcedAdoption is resolved;
-	if HP of Rex is 50:
-		now Rex's Place is unknown;
-	if HP of Karen >= 5:
-		now Retriever Girl is tamed;
-	else:
-		now Retriever Girl is not tamed;
-[124:	[François]]
-	now Gourmet Treats is unresolved;
-	if girl is banned or guy is banned or furry is banned:
-		now Gourmet Treats is resolved;
-		now HP of François is 0;
-	if HP of François is 0:
-		now Bone-Appetit is unknown;
-	else:
-		now Gourmet Treats is resolved;
-		now Bone-Appetit is known;
-		say "[FrançoisListCompile]";
-[125:	[François]]
-[126:	[Alexandra + Fang]]
-	now XP of Alexandra is 0;
-	if HP of Alexandra is 0 or HP of Alexandra >= 50 or HP of Alexandra is 100:
-		now level of Alexandra is 0;
-	if level of Alexandra is 0:
-		remove "Top Dog" from feats of player, if present;
-		remove "Cuckold" from feats of player, if present;
-	else if level of Alexandra is 1:
-		remove "Cuckold" from feats of player, if present;
-		add "Top Dog" to feats of player, if absent;
-	else if level of Alexandra is 2:
-		add "Cuckold" to feats of player, if absent;
-		remove "Top Dog" from feats of player, if present;
-[127: [Thomas HP]]
-	if HP of Thomas is 0 and guy is not banned or hermaphrodite is not banned:
-		now Centaur Gangbang is unresolved;
-	if HP of Thomas > 0:
-		now Centaur Gangbang is resolved;
-		move Thomas to Dry Plains;
-	if HP of Thomas is 0 or HP of Thomas is 100:
-		remove Thomas from play;
-[128: [Thomas Libido]]
-	now ThomasSaved is turns;
-	now SandySaved is turns;
-	now FelixSaved is turns; [for Felix stalker quest]
-	if HP of Thomas is 0, now libido of Thomas is 0;
-[129: [Thomas Lust]]
-	if HP of Thomas is 0, now lust of Thomas is 0;
-[130: [Thomas Quest]]
-	if HP of Thomas is 0, now ThomasQuestVar is 0;
-[131: [Artemis]]
-	now Poor Kitty is unresolved;
-	if girl is banned or furry is banned:
-		now HP of rubber tigress is 0;
-		now Poor Kitty is resolved;
-	if HP of rubber tigress >= 2:
-		now Poor Kitty is resolved;
-	if HP of rubber tigress >= 3:
-		now rubber tigress is tamed;
-		now libido of rubber tigress is 30;
-		now carried of cup stack is 1;
-	else:
-		if companion of player is rubber tigress, now companion of player is nullpet;
-		now rubber tigress is not tamed;
-		now carried of cup stack is 0;
-	if HP of rubber tigress is 9, now HP of rubber tigress is 8;
-	if HP of rubber tigress is 11 or HP of rubber tigress is 12:
-		now HP of rubber tigress is 10;
-		say "     There is a wet, popping sound as Artemis's sex toys detach themselves, ready to be installed again.";
-	now lust of rubber tigress is 0;
-	now thirst of rubber tigress is 0;
-	now lisaartemiscount1 is 0;
-	now lisaartemiscount2 is 0;
-[132: [Septus/Football Wolfman]]
-	now Wolfman Lair is unknown;
-	now Entrance to the Lair is resolved;
-	if guy is banned or furry is banned:
-		now fionacarlstatus is fionacarlstatus;
-	else:
-		if HP of Septus is 4:
-			now Entrance to the Lair is unresolved;
-		if HP of Septus > 4 and HP of Septus < 99:
-			now Wolfman Lair is known;
-		if HP of Septus is 7 or HP of Septus is 99:
-			setmonster "Football Wolfman";
-			choose row monster from the table of random critters;
-			now area entry is "nowhere";
-[133: [Awesome Xerxes]]
-	if HP of Xerxes is 0, now lust of Xerxes is 0;
-[134: [Awesomer Helen]]
-	if HP of Helen is 0, now lust of Helen is 0;
-[135: [Tristian]]
-	now Tristbrother is resolved;
-	remove Lance from play;
-	if HP of Tristian is 8 and guy is not banned and furry is not banned and hermaphrodite is not banned:
-		now Tristbrother is unresolved;
-	else if HP of Tristian is 8:
-		now HP of Tristian is 7;
-	if HP of Tristian is 10 or HP of Tristian is 12, now HP of Tristian is 7; [***former values]
-	if HP of Tristian is 99 or HP of Tristian is 100, now HP of Tristian is 7;
-	if HP of Tristian is 11:
-		move Lance to Palomino;
-[136: [Icarus/Blue Chaffinch]]
-	if HP of Icarus > 0:
-		if guy is banned or furry is banned:
-			now HP of Icarus is 0;
-		else:
-			setmonster "Blue Chaffinch";
-			choose row monster from the table of random critters;
-			now area entry is "nowhere";
-			now Icarus is in Garden View;
-	if HP of Icarus is 5 or HP of Icarus is 6:
-		now HP of Icarus is 4; [dialed back for sex]
-	if HP of Icarus is 7:
-		remove Icarus from play;
-		now ttIcarus is turns;
-		now tti_scene is 0;
-	if HP of Icarus is 9:
-		now HP of Icarus is 8; [Icarus waiting for more]
-[137: [HP of Joanna]]
-	move Joanna to Flower Garden;
-	now joannatalk is 0;
-	now joannaharoldtalk is 0;
-	now joannaoffernum is 0;
-	if hermaphrodite is banned:
-		now HP of Joanna is 0;
-	if HP of Joanna > 0 and HP of Joanna < 90:
-		now Overrun Garden is resolved;
-		now joannaharoldtalk is 1;
-		now Flower Garden is known;
-	if HP of Joanna > 1 and HP of Joanna < 90:
-		now joannatalk is 1;
-	if HP of Joanna is 6:
-		now HP of Joanna is 5;
-	if HP of Joanna >= 90:
-		now Palomino is known;
-[138: [lust of Joanna]]
-	if HP of Joanna <= 4 or HP of Joanna >= 90:
-		now lust of Joanna is 0;
-	if HP of Joanna >= 7 and HP of Joanna < 90:
-		if lust of Joanna < 3, now lust of Joanna is 3;
-		now plantdefeat is 1;
-[139: [Angie]]
-	if AngieAroused is 50:
-		now FindingMidnight is resolved;
-		move Midnight to Zoo Giftshop;
-[140:	[demon brute pet]]
-	if DBCaptureQuestVar > 4 and DBCaptureQuestVar < 99:
-		now demon brute is tamed;
-	else:
-		now demon brute is not tamed;
-	if DBCaptureQuestVar > 5:
-		now the icon of demon brute is Figure of BrutusGood_icon;
-[141:	[demon brute pet - gender]]
-[142:	[Lilith - HP]]
-	if HP of Lilith > 0:
-		now Burned-Out Chapel is known;
-[143:	[Lilith - incubus offspring]]
-[144:	[Felix - HP]]
-	if HP of Felix > 0 and HP of Felix < 100:
-		move Felix to Dry Plains;
-	else:
-		remove Felix from play;
-	if HP of Felix is 2:
-		move Andre to Dry Plains;
-	else:
-		remove Andre from play;
-[145:	[Felix - libido]]
-[146:	[relationship progress with Sonya the Viking]]
-	if VikingRelationship is 20:
-		now Viking Ship is known;
-	else:
-		now Viking Ship is not known;
-[147:	[number of kids with Sonya the Viking]]
-[148:	[MovingOrwell - mini quest var for fucking Orwell]]
-[149:	[HP of Jimmy]]
-	if guy is banned or HP of Jimmy is 0:
-		now Automaton Activity is resolved;
-		remove Jimmy from play;
-	else if HP of Jimmy > 0 and HP of Jimmy < 3:
-		now Approaching the Capitol Building is known;
-		now Government Assistance is resolved;
-		now Automaton Activity is unresolved;
-		remove Jimmy from play;
-	else if HP of Jimmy >= 3:
-		now Approaching the Capitol Building is known;
-		now Government Assistance is resolved;
-		now Automaton Activity is resolved;
-		move Jimmy to Police Lockerroom;
-[150:	[David - libido (interaction with Brutus)]]
-[151: [HP of Amy]]
-	if HP of Amy > 0 and HP of Amy < 90:
-		move Amy to Grey Abbey Library;
-[152: [libido of Amy - puppy counter]]
-[153: [SquadEncounters - progress variable for the Soldier Squad chain event]]
-	if SquadEncounters is 6:
-		now Soldier Squad is resolved;
-	else:
-		now Soldier Squad is not resolved;
-[154: [thirst of Corbin - location]]
-	if thirst of Corbin is 0:
-		remove Corbin from play;
-		now Cow Hunting is unresolved;
-		now McDermott Farm Entrance is not known;
-	else:
-		now Cow Hunting is resolved;
-		now McDermott Farm Entrance is known;
-		if thirst of Corbin is 1:
-			move Corbin to Worker Barracks;
-		else if thirst of Corbin is 2:
-			move Corbin to Milking Shed;
-[155: [HP of Corbin]]
-	if HP of Corbin is 100:
-		remove Corbin from play;
-		setmonster "Cowboy Cuntboy";
-		choose row monster from the table of random critters;
-		now area entry is "Dry Plains";
-	else:
-		setmonster "Cowboy Cuntboy";
-		choose row monster from the table of random critters;
-		now area entry is "Nowhere";
-[156: [CorbinKidCounter]]
-[157: [HP of Anthony]]
-	if HP of Anthony > 3:
-		now Missing Cow is resolved;
-		move Wendy to McDermott Barn;
-	else:
-		remove Wendy from play;
-[158: [HP of Duke]]
-	if HP of Duke > 9:
-		move Shawn to Sheep Meadow SE;
-[159: [thirst of Duke]]
-	if thirst of Duke is 0:
-		now thirst of Duke is 2;
-	if thirst of Duke is 1:
-		move Duke to Sheep Meadow SW;
-	else if thirst of Duke is 2:
-		move Duke to Sheep Meadow SE;
-[160: [HP of Zigor]]
-	if HP of Zigor > 0:
-		now Cuero Lobo is known;
-		now Leather Wolves is resolved;
-	else:
-		now Cuero Lobo is unknown;
-		if guy is not banned and girl is not banned and furry is not banned:
-			now Leather Wolves is unresolved;
-	if HP of Zigor >= 8:
-		if player is not twistcapped, add "Twisted Capacity" to feats of player;
-[161: [thirst of Amy]]
-
-[ ---------------------------------------------------------- ]
-
-to restorepart3:	[values 162 - 223]
-[162:	[HP of Nadia]]
-	if HP of Nadia > 0:
-		now Bird Troubles is resolved;
-	if HP of Nadia > 0 and HP of Nadia < 99:
-		move Nadia to Garden View;
-	if HP of Nadia is 5:
-		increase carried of feathered cloak by 1;
-[163: [NadiaFertilityCounter]]
-	say "[NadiaDescriptionUpdate]";
-[164: [NadiaChickCounter]]
-[165:	[Nadia's interactions]]
-	npcNadiaint-Restore;
-[166: [level of Amy]]
-[167: [Xp of Amy]]
-[168: [Dexterity of Amy]]
-[169: [SvenAmySex]]
-[170: [BrutusAmySex]]
-[171: [lust of Zephias]]
-[172: [HP of Ares]]
-	if HP of Ares > 0:
-		move Ares to Dog Kennels;
-	else:
-		remove Ares from play;
-[173: [HP of Hayato]]
-	if HP of Hayato > 15:
-		move Hayato to Darkened Alcove;
-	else:
-		move Hayato to Disused Garage;
-	if HP of Hayato > 5:
-		now Garage Demon is resolved;
-	if HP of Hayato > 10 and HP of Hayato < 14:
-		now Noh Mask is unresolved;
-	else:
-		now Noh Mask is resolved;
-	if HP of Hayato >= 90:
-		remove Hayato from play;
-	if HP of Hayato > 15:
-		unleashredoni;
-	if HP of Hayato is 19:
-		now Oni Lair is unresolved;
-	else:
-		now Oni Lair is resolved;
-[174: [HP of Tehuantl]]
-	if HP of Tehuantl > 9 and HP of Tehuantl < 255:
-		move Tehuantl to Grey Abbey 2F;
-		setmonster "Jaguar Warrior";
-		choose row monster from the table of random critters;
-		now area entry is "nowhere";
-		now TehuantlTimer is turns;
-	else:
-		remove Tehuantl from play;
-		setmonster "Jaguar Warrior";
-		choose row monster from the table of random critters;
-		now area entry is "Museum";
-[175: [HP of Carl]]
-	if HP of Carl > 1 and HP of Carl < 50:
-		move Carl to Grey Abbey 2F;
-		now CarlLibraryEntry is turns + 1;
-	else:
-		remove Carl from play;
-[176: [level of Carl]]
-[177: [HP of Kristen]]
-	if HP of Kristen > 0 or girl is banned or furry is banned:
-		now FindingKristen is resolved;
-	else:
-		now FindingKristen is unresolved;
-		now HP of Kristen is 0;
-	if HP of Kristen > 1, now Kristen's Hideout is known;
-	if HP of Kristen is 10:
-		now kristenmsg3 is true;
-		now carried of Janice's blouse is 1;
-	else if HP of Kristen > 10:
-		now kristenmsg3 is true;
-		now carried of Janice's blouse is 0;
-	else:
-		now kristenmsg3 is false;
-		now carried of Janice's blouse is 0;
-	if HP of Kristen < 16:
-		move Kristen to Kristen's Hideout;
-	else:
-		move Kristen to Private club room;
-[178: [libido of Kristen]]
-	if HP of Kristen < 12, now libido of Kristen is 0;
-[179: [HP of Brooke]]
-	if HP of Brooke > 0:
-		now Palomino is known;
-[180: [HP of Bubble - Bouncy Castle / Bubble]]
-	if HP of Bubble > 0 or girl is banned or furry is banned:
-		now Snared Vixen is resolved;
-	else:
-		now Snared Vixen is unresolved;
-	if HP of Bubble is 1 or HP of Bubble is 2:
-		now Beach Plaza is known;
-		now Bouncy Castle is known;
-		now vixcountdown is 29;
-	else:
-		now Bouncy Castle is unknown;
-	if HP of Bubble > 3 and HP of Bubble < 99:
-		move Bubble to Makeshift Rec Room;
-[181:	[HP of Newt]]
-	if HP of Athanasia < 11, now HP of Newt is 0;
-	if HP of Newt >= 4:
-		move Newt to Volcanic Cave;
-[182:	[Megakitty]			[temporarily closed for diagnosis]]
-[183:	[Phi Iota Gamma]]
-	if piginitiation > 0:
-		now Frat House is resolved;
-		now Phi Iota Gamma is known;
-[184:	[Down Under Pub / Gillian]]
-	if girl is banned or guy is banned or hermaphrodite is banned or furry is banned:
-		now HP of Gillian is 0;
-		now Aussie Pub is resolved;
-	else if HP of Gillian > 0:
-		now Aussie Pub is resolved;
-	else:
-		now Aussie Pub is unresolved;
-	if HP of Gillian >= 4:
-		now Gillian's Flat is known;
-	else:
-		now Gillian's Flat is unknown;
-[185:	[HP of Stella]]
-	if HP of Stella >= 2:
-		move Stella to Bunker;
-[186:	[Stella threesome code - placeholder]]
-[187: [OrcSlaverStatus]]
-	if OrcSlaverStatus is 0:
-		now Orc Lair Side Entrance is not known;
-	else:
-		now Orc Lair Side Entrance is known;
-		now OrcSlaverCaptureTime is turns;
-[188: [CellDoorStatus - Orc Lair]]
-	if CellDoorStatus is 1 or CellDoorStatus is 3:
-		now the Cell Door 1 is unlocked;
-	if CellDoorStatus is 2 or CellDoorStatus is 3:
-		now the Cell Door 2 is unlocked;
-[189: [Onyx]]
-	if XP of Onyx >= 6 and XP of Onyx <= 29:
-		move Onyx to Back Of The Library;
-	else if XP of Onyx >= 30 and XP of Onyx <= 49:
-		move Onyx to Palomino;
-	else:
-		move Onyx to Holding Pens;
-	if XP of Onyx is 1:
-		now Equineguardpost is unresolved;
-	else:
-		now Equineguardpost is resolved;
-	if XP of Onyx is 4:
-		now Stablestoreroom is unresolved;
-	else:
-		now Stablestoreroom is resolved;
-	if XP of Onyx is 100, now XP of Onyx is 0;
-	if XP of Onyx > 3, now daisytalk is 1;
-[190: [HP of Val]]
-[191: [thirst of Val]]
-[192: [ValPregCounter]]
-[193: [ValPregnancy]]
-[194: [SlaveRaidEncounters]]
-	if OrcSlaverStatus > 0 and SlaveRaidEncounters is 0: [security clause for those who load an old saveword]
-		now SlaveRaidEncounters is 2; [enslaved]
-		now ValPregnancy is 48; [knocked up]
-		now thirst of Val is 1; [...by an orc]
-	if SlaveRaidEncounters < 2:
-		remove Val from play;
-	else:
-		move Val to Slave Cell 1;
-[195: [HP of Chris]]
-	if HP of Chris is 1:
-		move Chris to Sitting Area;
-	else:
-		remove Chris from play;
-[196: [HP of Vanessa - status]]
-	now Paratrooper is resolved;
-	if HP of Vanessa is 0:
-		remove Vanessa from play;
-		if girl is not banned and mtp >= 3:
-			now Paratrooper is unresolved;
-	else if HP of Vanessa >= 50:
-		remove Vanessa from play;
-	else:
-		move Vanessa to Back Of The Library;
-	now lust of Vanessa is 0;
-[197: [XP of Vanessa - # of kids]]
-	if HP of Vanessa is 0 or HP of Vanessa >= 50, now XP of Vanessa is 0;
-[198: [HP of Meredith - status]]
-	if HP of Vanessa is 0 or HP of Vanessa >= 50, now HP of Meredith is 0;
-	if HP of Meredith is 0 or HP of Meredith >= 100:
-		remove Meredith from play;
-	else:
-		move Meredith to Back Of The Library;
-	if HP of Meredith >= 9 and HP of Meredith < 100, now libido of Meredith is 1;
-	now XP of Meredith is 0;
-[199: [level of Meredith - # of kids]]
-	if HP of Meredith is 0 or HP of Meredith >= 100, now level of Meredith is 0;
-[200: [HP of Gwen - status & Gwen UB]]
-	if Meredith is not bunkered, now HP of Gwen is 0;
-	if HP of Gwen > 2 and HP of Gwen <= 60:
-		move Gwen to Back Of The Library;
-		if HP of Gwen <= 20:
-			now HP of Gwen is 3;
-		else if HP of Gwen <= 35:
-			now HP of Gwen is 21;
-		else if HP of Gwen <= 60:
-			now HP of Gwen is 36;
-	else:
-		remove Gwen from play;
-	if HP of Gwen > 2, now lust of Meredith is 1;
-[201: [HP of Rane]]
-	if HP of Rane > 49 or HP of Rane < 6:
-		remove Rane from play;
-	else if HP of Rane is 6:
-		move Rane to shrine;
-	else if HP of Rane is 7:
-		move Rane to Sitting Area;
-	if HP of Rane is 5:
-		now The blue Oni is unresolved;
-	else:
-		now The blue Oni is resolved;
-	if HP of Rane > 4:
-		now Rooftop Rumble is resolved;
-	else:
-		now Rooftop Rumble is unresolved;
-[202: [thirst of Elijah]]
-[203: [SpidertaurRelationship]]
-	if SpidertaurRelationship > 4 and carried of silk hammock is 0:
-		increase carried of silk hammock by 1;
-	if SpidertaurRelationship > 5:
-		now Spider's Web is known;
-	else:
-		now Spider's Web is not known;
-[204: [CatgirlFucked]]
-[205: [FionaFangStatus]]
-[206: [FionaCarlStatus]]
-[207: [HP of Gabriel]]
-	if HP of Gabriel is 0:
-		if HP of Elijah > 0 and HP of Elijah is not 99:
-			now Angel vs Demons is resolved;
-		else if HP of Elijah is 99:
-			now Angel vs Demons is unresolved;
-			now HP of Gabriel is 1;
-	else if HP of Gabriel is 1:
-		now Angel vs Demons is unresolved;
-	else if HP of Gabriel > 1:
-		repeat with y running from 1 to number of filled rows in Table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Seraphim":
-				now monster is y;
-				now area entry is "Red";
-				break;
-		now Angel vs Demons is resolved;
-[208: [HP of Erica]]
-[209: [thirst of Erica]]
-[210:	[population of Police Station]]
-	if population of Police Station > 50, now population of Police Station is 50;
-	if population of Police Station is not 0 and population of Police Station < 3, now population of Police Station is 3;
-	if HP of Alexandra < 63 or HP of Alexandra is 100:
-		now population of Police Station is 0;
-[211:	[infpop of Police Station]]
-	if infpop of Police Station > population of Police Station, now infpop of Police Station is population of Police Station;
-	if infpop of Police Station < ( ( 2 * population of Police Station ) / 3 ), now infpop of Police Station is ( ( 2 * population of Police Station ) / 3 );
-	if infpop of Police Station is not 0 and infpop of Police Station < 3, now infpop of Police Station is 3;
-[212:	[placeholder for Police Station]]
-[213:	[placeholder for Police Station]]
-[214:	[HP of Hadiya]]
-	if hermaphrodite is banned or furry is banned:
-		now HP of Hadiya is 0;
-		now Annoyed Hyena is resolved;
-	else:
-		now Annoyed Hyena is unresolved;
-	if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and HP of Hadiya < 63 ):
-		move Hadiya to Hyena Shack;
-		now icon of Hadiya is Figure of Hadiya_0_icon;
-	else:
-		move Hadiya to Sitting Area;
-	if HP of Hadiya > 0:
-		now Annoyed Hyena is resolved;
-		now Hyena Shack is known;
-		now icon of Hadiya is Figure of Hadiya_icon;
-	if HP of Hadiya is 8 or ( HP of Hadiya >= 10 and HP of Hadiya <= 12 ) or HP of Hadiya is 58 or ( HP of Hadiya >= 60 and HP of Hadiya <= 62 ):
-		now Goblin Thief is unresolved;
-	else:
-		now Goblin Thief is resolved;
-	if ( HP of Hadiya >= 10 and HP of Hadiya <= 12 ) or ( HP of Hadiya >= 60 and HP of Hadiya <= 62 ):
-		now carried of girl's jacket is 1;
-	else:
-		now carried of girl's jacket is 0;
-[215:	[HP of Gobby]]
-	if HP of Hadiya < 13 or ( HP of Hadiya >= 50 and HP of Hadiya < 63 ):
-		now HP of Gobby is 0;
-		remove Gobby from play;
-	else:
-		move Gobby to Sitting Area;
-[216:	[HP of Sidney - NPC overall status]]
-	now Meeting Sidney is unresolved;
-	remove Sidney from play;
-	now sa_redvixen is false;
-	now sa_otteress is false;
-	now sa_wusky is false;
-	if HP of Sidney >= 3 and HP of Sidney < 99:
-		move Sidney to Breakroom;
-	if HP of Sidney >= 3:
-		now Meeting Sidney is resolved;
-[217:	[level of Sidney - forms]]
-	if HP of Sidney < 3 or HP of Sidney >= 100:
-		now level of Sidney is 0;
-[218:	[XP of Sidney - offspring]]
-	if HP of Sidney < 3 or HP of Sidney >= 100:
-		now XP of Sidney is 0;
-[219:	[HP of Micaela]]
-	if HP of Micaela is 0:
-		now Easter Eggs is unresolved;
-		now Bunny House is unknown;
-	else:
-		now Easter Eggs is resolved;
-		now Bunny House is known;
-[220:	[level of Micaela - ovi stuff]]
-	if HP of Micaela < 4:
-		now level of Micaela is 0;
-[221:	[XP of Micaela - offspring]]
-	if HP of Micaela < 4:
-		now XP of Micaela is 0;
-[222:	[HP of Macadamia]]
-	if HP of Macadamia is 0:
-		if guy is banned or furry is banned:
-			now Finding Mack is resolved;
-		else:
-			now Finding Mack is unresolved;
-			now the sarea of Finding Mack is "Forest";
-		now Nutso Factory is unknown;
-	else if HP of Macadamia < 3:
-		now Finding Mack is unresolved;
-		now the sarea of Finding Mack is "Warehouse";
-		now Nutso Factory is unknown;
-	else:
-		now Finding Mack is resolved;
-		now Nutso Factory is known;
-	if HP of Macadamia < 13:
-		move Macadamia to Nutso Factory;
-	else:
-		move Macadamia to Breakroom;
-[223:	[HP of Yolanda]]
-	if HP of Yolanda < 6:
-		move Yolanda to Raven Nest;
-	else if HP of Yolanda < 100:
-		move Yolanda to Darkened Alcove;
-	else:
-		remove Yolanda from play;
-
-[ ---------------------------------------------------------- ]
-
-to restorepart-final:
-	if hospquest is 3, now hospquest is 2;
-	now progress of Doctor Mouse is turns;
-	if hospquest is 8, now Dinosaur Nest is unresolved;
-	if hospquest is 1:
-		now Finding a Way in is unresolved;
-	else:
-		now Finding a Way in is resolved;
-	if "Physical Booster" is listed in feats of player, remove "Physical Booster" from the feats of player;
-	if "Mental Booster" is listed in feats of player, remove "Mental Booster" from the feats of player;
-	if hospquest is 8, now nerminepackage is 1;
-	if hospquest > 9, add "Rapid Healing" to feats of player;
-	if hospquest > 13:
-		add "Physical Booster" to the feats of player;
-		now infection terminal is in Hidden Lab;
-	if hospquest > 13 and HP of Susan is 2:
-		move Susan to Hidden Lab;
-		now HP of Susan is 50;
-	if hospquest >= 19 or ( HP of Doctor Matt >= 19 and HP of Doctor Matt < 100 ):
-		setmonster "Enhanced Chimera";
-		choose row monster from the table of random critters;
-		if name entry is "Enhanced Chimera":
-			now area entry is "Hospital";
-			if hospquest >= 19:
-				now non-infectious entry is false;
-			else:
-				now non-infectious entry is true;
-		setmonster "Mismatched Chimera";
-		choose row monster from the table of random critters;
-		if name entry is "Mismatched Chimera":
-			now area entry is "nowhere";
-	else:
-		setmonster "Enhanced Chimera";
-		choose row monster from the table of random critters;
-		if name entry is "Enhanced Chimera":
-			now area entry is "nowhere";
-			now non-infectious entry is true;
-		setmonster "Mismatched Chimera";
-		choose row monster from the table of random critters;
-		if name entry is "Mismatched Chimera":
-			now area entry is "Hospital";
-	if HP of doctor matt > 11 and HP of doctor matt < 100, add "Mental Booster" to the feats of player;
-	now Candy is in dark basement;
-	if coonstatus > 100:
-		now pink raccoon is tamed;
-	else if coonstatus > 0:
-		move Candy to Bunker;
-	if coonstatus is not 0:
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
-			if name entry is "Raccoon":
-				now monster is y;
-				now area entry is "Nowhere";
-				break;
-	if hospquest > 1, now locked stairwell is unlocked;
-	if hospquest is 13 or hospquest is 0 or hospquest is 1, now locked stairwell is locked;
-	if mattcollection is 1 or hospquest >= 16 or ( HP of Doctor Matt >= 16 and HP of Doctor Matt < 100 ), now carried of infection monitor is 1;
-	if HP of doctor matt is 104, move Sally to bunker;
-	if HP of doctor matt is not 104, remove Sally from play;
-	now Sven is in Sven's Place;
-	now Svetlana is in dark basement;
-	now Hidden Kitty is unresolved;
-	now Sven's Place is unknown;
-	if HP of Sven > 0:
-		now Hidden Kitty is resolved;
-		now Sven's Place is known;
-	if HP of Sven is 1:
-		now lastSvendrink is turns + 8;
-	if HP of Sven is 2 or HP of Sven is 3:
-		now lastSvendrink is turns;
-	if HP of Sven > 3 and HP of Sven < 50:
-		move Sven to Bunker;
-	if HP of Sven is 50 or HP of Sven is 51:
-		move Sven to Porn Store;
-		now Mouse Taur is resolved;
-		now Porn Store is known;
-	if HP of Sven > 51 and HP of Sven < 98:
-		move Sven to dark basement;
-		move Svetlana to Porn Store;
-		now Mouse Taur is resolved;
-		now Porn Store is known;
-	if HP of Sven > 98:
-		move Sven to dark basement;
-		remove Sven from play;
-	if HP of Sven is 8 and Candy is in the bunker:
-		now lastSvendrink is turns;
-	now Sarah is in dark basement;
-	now SarahPregnant is 0;
-	if SarahTalk is 0 and SarahSlut is 0 and SarahCured is 0:
-		now Husky Pack is unresolved;
-	else:
-		move Sarah to bunker;
-		now Husky Pack is resolved;
-	if SarahPups > 11 and "Proud Parent" is not listed in feats of player, add "Proud Parent" to feats of player;
-	if SarahCured > 3 and "Dog Whisperer" is not listed in feats of player, add "Dog Whisperer" to feats of player;
-
-[ ---------------------------------------------------------- ]
-
-restoreletter is a text that varies. restoreletter is normally "0".
-
-to npcEint-Restore:
-	npcEint-Read 1;
-	now Char-A of Elijah is restoreletter;
-	npcEint-Read 2;
-	now Char-B of Elijah is restoreletter;
-	npcEint-Read 3;
-	now Char-C of Elijah is restoreletter;
-	npcEint-Read 4;
-	now Char-D of Elijah is restoreletter;
-	npcEint-Read 5;
-	now Char-E of Elijah is restoreletter;
-	npcEint-Read 6;
-	now Char-F of Elijah is restoreletter;
-	npcEint-Read 7;
-	now Char-G of Elijah is restoreletter;
-	npcEint-Read 8;
-	now Char-H of Elijah is restoreletter;
-	npcEint-Read 9;
-	now Char-I of Elijah is restoreletter;
-	npcEint-Read 10;
-	now Char-J of Elijah is restoreletter;
-	npcEint-Read 11;
-	now Char-K of Elijah is restoreletter;
-	npcEint-Read 12;
-	now Char-L of Elijah is restoreletter;
-	npcEint-Read 13;
-	now Char-M of Elijah is restoreletter;
-
-to npcEint-Read (c - a number):	[converts the indexed text back to regular text]
-	now restoreletter is "0";
-	if character number c in npcEint is "0", now restoreletter is "0";
-	if character number c in npcEint is "1", now restoreletter is "1";
-	if character number c in npcEint is "2", now restoreletter is "2";
-	if character number c in npcEint is "3", now restoreletter is "3";
-	if character number c in npcEint is "4", now restoreletter is "4";
-	if character number c in npcEint is "5", now restoreletter is "5";
-	if character number c in npcEint is "6", now restoreletter is "6";
-	if character number c in npcEint is "7", now restoreletter is "7";
-	if character number c in npcEint is "8", now restoreletter is "8";
-	if character number c in npcEint is "9", now restoreletter is "9";
-
-to npcNadiaint-Restore:
-	npcNadiaint-Read 1;
-	now Char-A of Nadia is restoreletter;
-	npcNadiaint-Read 2;
-	now Char-B of Nadia is restoreletter;
-	npcNadiaint-Read 3;
-	now Char-C of Nadia is restoreletter;
-	npcNadiaint-Read 4;
-	now Char-D of Nadia is restoreletter;
-	npcNadiaint-Read 5;
-	now Char-E of Nadia is restoreletter;
-	npcNadiaint-Read 6;
-	now Char-F of Nadia is restoreletter;
-	npcNadiaint-Read 7;
-	now Char-G of Nadia is restoreletter;
-	npcNadiaint-Read 8;
-	now Char-H of Nadia is restoreletter;
-	npcNadiaint-Read 9;
-	now Char-I of Nadia is restoreletter;
-	npcNadiaint-Read 10;
-	now Char-J of Nadia is restoreletter;
-	npcNadiaint-Read 11;
-	now Char-K of Nadia is restoreletter;
-	npcNadiaint-Read 12;
-	now Char-L of Nadia is restoreletter;
-	npcNadiaint-Read 13;
-	now Char-M of Nadia is restoreletter;
-
-to npcNadiaint-Read (c - a number):	[converts the indexed text back to regular text]
-	now restoreletter is "0";
-	if character number c in npcNadiaint is "0", now restoreletter is "0";
-	if character number c in npcNadiaint is "1", now restoreletter is "1";
-	if character number c in npcNadiaint is "2", now restoreletter is "2";
-	if character number c in npcNadiaint is "3", now restoreletter is "3";
-	if character number c in npcNadiaint is "4", now restoreletter is "4";
-	if character number c in npcNadiaint is "5", now restoreletter is "5";
-	if character number c in npcNadiaint is "6", now restoreletter is "6";
-	if character number c in npcNadiaint is "7", now restoreletter is "7";
-	if character number c in npcNadiaint is "8", now restoreletter is "8";
-	if character number c in npcNadiaint is "9", now restoreletter is "9";
-
-
-Section X - Debugging - Not for Release
-
-trixiecheck1 is an action applying to nothing.
-trixiecheck2 is an action applying to nothing.
-
-understand "tcheck" as trixiecheck1.
-understand "tcheck1" as trixiecheck1.
-understand "tcheck2" as trixiecheck2.
-
-carry out Trixiecheck1:
-	say "Basic player stats:[line break]";
-	say "STR: [strength of player]   DEX: [dexterity of player]   STM: [stamina of player][line break]";
-	say "CHR: [charisma of player]   PER: [perception of player]   INT: [intelligence of player][line break]";
-	say "LVL: [level of player]   HP: [maxHP of player]   Hum: [humanity of player]   Score: [score][line break]";
-	say "HP of Dr Matt: [HP of doctor matt][line break]";
-	say "Body: [bodyname of player]  Face: [facename of player]  Skin: [skinname of player][line break]";
-	say "Tail: [tailname of player]  Cock: [cockname of player][line break]";
-	say "Tanuki: [SatisfiedTanuki]   Hospquest: [hospquest][line break]";
-	say "Cocks x [cocks of player]   Breasts x [breasts of player]   Cunts x [cunts of player]   Breast size: [breast size of player][line break]";
-	say "COCK: Length: [cock length of player]   Width: [cock width of player][line break]";
-	say "CUNT: Length: [cunt length of player]   Width: [cunt width of player][line break]";
-	say "Weapon: [weapon object of player]   Frank M/F: [franksex]   Frank M/M: [frankmalesex][line break]";
-	say "Hyper Squirrel: [if Hyper Squirrel Girl is resolved]1[else]0[end if]  Needy Bunny: [if Needy Rabbit Girl is resolved]1[else]0[end if][line break]";
-	say "COLEEN: Location: [location of Coleen]   Talk: [ColeenTalk]   Found: [ColeenFound]   Collared: [ColeenCollared]   Alpha: [ColeenAlpha]   Slut: [ColeenSlut]   Spray: [ColeenSpray][line break]";
-	say "HP of Dr Mouse: [HP of doctor mouse]   Candy: [coonstatus]   featunlock: [featunlock]   Butterfly: [butterflymagic][line break]";
-	say "Catnum: [catnum]   Mateable: [mateable]   gryphoncomforted: [gryphoncomforted]   shiftable: [shiftable]   Medea: [medeaget][line break]";
-	say "MTP: [mtp]   HYG: [hyg]   NESProgress: [NESProgress]   MTRP: [mtrp]   Boristalk: [boristalk]   Borisquest: [borisquest]   Alex: [progress of alex][line break]";
-	say "Angiehappy: [angiehappy]   Angietalk: [angietalk]   deerconsent: [deerconsent]   HP of Susan: [HP of Susan][line break]";
-	say "mattcollection: [mattcollection][line break]";
-
-carry out Trixiecheck2:
-	say "Orthas: [HP of Orthas][line break]";
-	say "Fancy: [fancyquest]   HP of Sven: [HP of sven]  Lust of Sven: [lust of sven][line break]";
-	say "SARAH: Slut: [SarahSlut]   Talk: [sarahtalk]   Pups: [SarahPups][line break]";
-	say "VOIDED: 0   Alexbrunch: [alexbrunch]   Treasure found: [treasurefound]   Treasure map: [tmapfound][line break]";
-	say "Sandra: [HP of Sandra]   Frank (libido): [libido of Frank]   Fang: [HP of Fang][line break]";
-	say "Libido of Fang: [libido of Fang]   Pigfed: [pigfed]   Pigfucked: [pigfucked][line break]";
-	say "PETS:[line break]";
-	say "Cute crab: [if cute crab is tamed]1[else]0[end if]   Exotic bird: [if exotic bird is tamed]1[else]0[end if]   Felinoid: [if Felinoid companion is tamed]1[else]0[end if][line break]";
-	say "Bee girl: [HP of bee girl]   House cat: [if house cat is tamed]1[else]0[end if]   Little fox: [if little fox is tamed]1[else]0[end if][line break]";
-	say "Skunk kit: [if skunk kit is tamed]1[else]0[end if]   Helper dog: [if helper dog is tamed]1[else]0[end if]   Rachel: [mousecurse][line break]";
-	say "Rachel: [mousecurse]     Elijah: [HP of Elijah]    Elijah interactions: [npcEint][line break]";
-	say "Latex Husky Mode: [if latexhuskymode is true]ON[else]OFF[end if]     Parasite?: [if insectlarva is true]YES[else]NO[end if][line break]";
-	say "Leonard: [HP of Leonard]     Solstice: [HP of Solstice]     Ronda: [HP of Ronda][line break]";
-	say "Skunkbeast Lord: [if skunkbeaststatus is 1]YES[else]NO[end if]     Kitsune: [ktp][line break]";
-	say "Diego: [if Diegochanged is 0]Male[else if Diegochanged is 1]Herm[else]Female[end if]     Eric: ???[line break]";
+The conversation of Trixie is { "Hello. I will teach you a magic word. To use it, just stand in front of me after [bold type]starting a new game[roman type] and [link]Import Progress[end link]. This will let you bend time and probability, returning you to the condition you were in when made the magic word... mostly. I will do my best, but my powers are not infinite. Also, I'm 'Out of Character', so you really don't see me. Confused yet? Good!" }.
 
 Story Skipper ends here.

@@ -47,7 +47,7 @@ to cleanboundmemory: [Zeroes out all variables used in bound states]
 	now pewterbodycap is 0;
 	now pewtergenitalcap is 0;
 
-to wyvhumanityroll: [Pending a rename -- it's used in all standard vore sanity rolls]
+to wyvhumanityroll: [Pending a rename - it's used in all standard vore sanity rolls]
 	now tempnum is ((hunger of player + thirst of player) / 2) / 10;
 	if tempnum < 1, now tempnum is 1;
 	let endurvariance be 1;

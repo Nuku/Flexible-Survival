@@ -21,7 +21,12 @@ BlueDesignator is a text that varies.
 
 Section 1 - Location
 
-North of Haven Community Center is Goo Refuge.
+Table of GameRoomIDs (continued)
+Object	Name
+Goo Refuge	"Goo Refuge"
+
+Goo Refuge is a room.
+Goo Refuge is north of Haven Community Center.
 The description of Goo Refuge is "[GooRefugeDesc]".
 Goo Refuge is sleepsafe.
 
@@ -38,7 +43,32 @@ instead of going to Goo Refuge:
 
 Section 2 - Blue Speaker
 
+Table of GameCharacterIDs (continued)
+object	name
+Blue Speaker	"Blue Speaker"
+
 Blue Speaker is a man. Blue Speaker is in Goo Refuge.
+ScaleValue of Blue Speaker is 3. [human sized]
+Cocks of Blue Speaker is 1.
+Cock Length of Blue Speaker is 8.
+Cock Width of Blue Speaker is 2.
+Testes of Blue Speaker is 2.
+Cunts of Blue Speaker is 0.
+Cunt Length of Blue Speaker is 9.
+Cunt Width of Blue Speaker is 2.
+Breasts of Blue Speaker is 2. [2 nipples]
+Breast Size of Blue Speaker is 0.
+[Basic Interaction states as of game start]
+PlayerMet of Blue Speaker is false.
+PlayerRomanced of Blue Speaker is false.
+PlayerFriended of Blue Speaker is false.
+PlayerControlled of Blue Speaker is false.
+PlayerFucked of Blue Speaker is false.
+OralVirgin of Blue Speaker is false.
+Virgin of Blue Speaker is false.
+AnalVirgin of Blue Speaker is false.
+PenileVirgin of Blue Speaker is false.
+SexuallyExperienced of Blue Speaker is true.
 The description of Blue Speaker is "[Blue SpeakerDesc]".
 The conversation of Blue Speaker is { "<This is nothing but a placeholder!>" }.
 The scent of Blue Speaker is "     The aquamarine goo person smells somewhat fruity, making you wonder if the goo would taste that way too.".
@@ -137,13 +167,9 @@ to BlueSpeakerTalkMenu:
 					say "[BlueTalk_Cum]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the aquamarine goo person, shaking your head slightly as [SubjectPro of Blue Speaker] gives you a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the aquamarine goo person, shaking your head slightly as [SubjectPro of Blue Speaker] gives you a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -191,7 +217,7 @@ Instead of fucking the Blue Speaker:
 
 to say BlueSpeakerSexMenu:
 	say "     What do you want to do with the goo person?";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
 	[]
@@ -258,15 +284,11 @@ to say BlueSpeakerSexMenu:
 					say "[BlueSex5]";
 				else if (nam is "Let Blue fuck your pussy"):
 					say "[BlueSex6]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the aquamarine goo person, shaking your head slightly as [SubjectPro of Blue Speaker] gives you a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the aquamarine goo person, shaking your head slightly as [SubjectPro of Blue Speaker] gives you a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -396,7 +418,7 @@ to say BlueSex5: [ass fucked by Blue]
 	else if player is male:
 		say "clamps his hand over the head of your hard cock, just in time for the first spurt of cum. It looks kinda funny to see a glob of your seed create a bulge in the back of his hand, the force of its blast barely contained by the relatively thin layer of goo there. Then the milky white fluid is redirected to flow up along the very center of Blue's forearm, making its way towards the main mass of his body.";
 	else if player is female:
-		say "clamps his hand even tighter to your crotch, its fingers wriggling inside your pussy to prolong your orgasm and milk you of your femcum. Squirts of it suffuse the appendage of your nonhuman partner, then are redirected to flow up along the very center of Blue's forearm, making their way towards the main mass of his body. ";
+		say "clamps his hand even tighter to your crotch, its fingers wriggling inside your pussy to prolong your orgasm and milk you of your femcum. Squirts of it suffuse the appendage of your nonhuman partner, then are redirected to flow up along the very center of Blue's forearm, making their way towards the main mass of his body.";
 	say "     As delirious in pleasure as you are right now, your attention is still drawn to the spectacle of your [if player is herm]seed and femcum[else if player is male]seed[else]femcum[end if] spreading through Blue's body, the white and milky substance diffusing like smoke. The blue goo of your friend takes on some of the opaqueness that your fluids bring with it, and he quivers with desire as his body absorbs your [']donation[']. The material eventually becomes fully transparent again, though you could swear that it's also more intensely blue now, his infused form so bright that it almost seems to glow. 'Mmmh, you taste amazing,' Blue says with an ecstatic smile on his masculine face, followed by a primal grunt and an intense look filling his eyes. He doesn't waste any more time on words and instead just hammers into you hard and fast for a few more times, then lets out a burbling growl and explodes into your depths. No longer in any directed shape or anything, it is simply the raw goo of his being that floods your insides, full of desire to bond with you.";
 	WaitLineBreak;
 	say "     Between your own climax and the sudden anal invasion of what feels like quite a lot of Blue's goo, you tremble and thrash on the table, driven past the point of conscious thought. Your whole world is lust and pleasure, plus the weird feelings of having some living other thing gushing into your insides and stimulating who knows what spots. Only when your last spurts of [if player is herm]seed and femcum[else if player is male]seed[else]femcum[end if] ebb off does Blue eventually gain control of himself again, pulling the parts of his mass that invaded your person out again. A sheepish expression crosses his face, and he apologizes, 'Uhm, I... couldn't hold myself back there, if I got to be honest. Hope that it doesn't freak you out that I know you inside and out now.' The last sentence is added with a teasing grin and a wiggle of his eyebrows, making you chuckle.[mimpregchance]";
@@ -426,7 +448,7 @@ to say BlueSex6: [pussy fucked by Blue]
 	if player is male: [herm]
 		say "clamps his hand over the head of your hard cock, just in time for the first spurt of cum. It looks kinda funny to see a glob of your seed create a bulge in the back of his hand, the force of its blast barely contained by the relatively thin layer of goo there. Then the milky-white fluid is redirected to flow up along the very center of Blue's forearm, making its way towards the main mass of his body. Your femcum meanwhile has less distance to go, soaking into his cock and wandering up along its length, creating a visible but fairly transparent flow there.";
 	else: [female]
-		say "clamps his hand even tighter to your crotch, its fingers wriggling against your clit to prolong your orgasm and milk you of your femcum. Squirts of it soak into the length of his cock, then are redirected to flow up along the mid-line of its shaft, making their way towards the main mass of his body. ";
+		say "clamps his hand even tighter to your crotch, its fingers wriggling against your clit to prolong your orgasm and milk you of your femcum. Squirts of it soak into the length of his cock, then are redirected to flow up along the mid-line of its shaft, making their way towards the main mass of his body.";
 	say "     As delirious in pleasure as you are right now, your attention is still drawn to the spectacle of your [if player is herm]seed and femcum[else]femcum[end if] spreading through Blue's body, the white and milky substance diffusing like smoke. The blue goo of your friend takes on some of the opaqueness that your fluids bring with it, and he quivers with desire as his body absorbs your [']donation[']. The material eventually becomes fully transparent again, though you could swear that it's also more intensely blue now, his infused form so bright that it almost seems to glow. 'Mmmh, you taste amazing,' Blue says with an ecstatic smile on his masculine face, followed by a primal grunt and an intense look filling his eyes. He doesn't waste any more time on words and instead just hammers into you hard and fast for a few more times, then lets out a burbling growl and explodes into your depths. No longer in any directed shape or anything, it is simply the raw goo of his being that floods your insides, full of desire to bond with you.";
 	WaitLineBreak;
 	say "     Between your own climax and the sudden invasion of what feels like quite a lot of Blue's goo flowing into your womb, you tremble and thrash on the table, driven past the point of conscious thought. Your whole world is lust and pleasure, plus the weird feelings of having some living other thing gushing into your insides and stimulating who knows what spots. Only when your last spurts of [if player is herm]seed and femcum[else]femcum[end if] ebb off does Blue eventually gain control of himself again, pulling the parts of his mass that invaded your person out again. A sheepish expression crosses his face and he apologizes, 'Uhm, I... couldn't hold myself back there, if I got to be honest. Hope that it doesn't freak you out that I know you inside and out now.' The last sentence is added with a teasing grin and a wiggle of his eyebrows, making you chuckle.[fimpregchance]";
@@ -437,12 +459,12 @@ Section 3 - Infection
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Blue Goo";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -490,8 +512,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Blue ends here.

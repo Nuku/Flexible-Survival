@@ -20,7 +20,7 @@ to say messypigdesc:
 
 to say messypigattack:
 	if anallevel is 3 or (anallevel is 2 and a random chance of 1 in 2 succeeds):
-		say "     The pig girl charges at you, and in your weakened state, you fall backwards, landing painfully on your butt. Before you can get up, the pig turns around and launches her fat ass right into your face, knocking you onto your back as her buttcheeks envelope your senses. Thick rolls of piggy fat squish into your face as she uses her heavy weight to keep you pinned down underneath her. You try to push the porker off, but your struggles are absorbed by the layers of meat, your captor oinking happily as she enjoys your struggles and the unintended rubbing. The repugnant aroma of the pig's sloppy living and her musk is all that you can smell, and the scent only grows stronger when the female swine grinds on your face. After a few moments of the pig mashing her sphincter into your mouth, you figure out what she wants, and with you unable to push the hefty animal away, you slowly stick your tongue into the puckered hole.";
+		say "     The pig girl charges at you, and in your weakened state, you fall backwards, landing painfully on your butt. Before you can get up, the pig turns around and launches her fat ass right into your face, knocking you onto your back as her buttcheeks envelop your senses. Thick rolls of piggy fat squish into your face as she uses her heavy weight to keep you pinned down underneath her. You try to push the porker off, but your struggles are absorbed by the layers of meat, your captor oinking happily as she enjoys your struggles and the unintended rubbing. The repugnant aroma of the pig's sloppy living and her musk is all that you can smell, and the scent only grows stronger when the female swine grinds on your face. After a few moments of the pig mashing her sphincter into your mouth, you figure out what she wants, and with you unable to push the hefty animal away, you slowly stick your tongue into the puckered hole.";
 		say "     The horny female squeals in delight from your penetration, and she soon starts bouncing her thick butt to try and drive your tongue deeper into her. Your face is battered by her plump posterior, but thankfully, her fat ass hardly inflicts any pain and instead feels like being smothered by soft, but smelly, pillows. The unpleasant fragrance of the pig continues to permeate your senses, and although the stench remains unpleasant, her musk grows stronger and stokes your libido. It's hard to tell if her odor is making you horny or if you're getting desperate for fresh air, but you end up grabbing her flabby buttcheeks as you thrust your tongue as far as you can into her rear to try and hasten her release. Eventually, your rimjob brings the sow to her climax, and with a loud squeal, her backdoor squeezes your tongue as she splatters her femcum over your body.";
 	else if player is female:
 		say "     The pig girl charges at you one last time, and in your weakened state you fall backwards, landing painfully on your butt. The pig quickly pins you down with her heavy body. She turns, and your vision is filled with large, fat pig butt. Perhaps due to being lazy, she lies down, drowning your face in her behind, as she hungrily goes about eating you out! Clearly, this creature has an appetite for your sex! She digs her snout deep as she laps at it greedily. You can do nothing but struggle weakly as she pins your head with her huge butt, grinding her ass down onto your face. Her strong scent makes you dizzy and strangely aroused, but you are too heavily pinned under her plump behind to get at that enticing pussy smell. After some time, the pleasure of the pig girl's meal becomes impossible to ignore, and you find your body quivering as you cum.";
@@ -57,14 +57,14 @@ to say beatthepig:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	add "Messy Pig" to infections of girl;
 	add "Messy Pig" to infections of furry;
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Messy Pig"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -112,8 +112,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "messypig"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Alt Combat
@@ -133,7 +134,7 @@ this is the pigpussyinc rule:			[increasing likelihood of alt attack]
 this is the pigpussy rule:
 	choose row monstercom from the table of critter combat;
 	now alt1chance entry is 6;
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	let playernum be 150 + humanity of player - libido of player + ( level of player * 2 ) + charisma of player;
 	say "     [piggycheck]";
 	if tempnum is 1, decrease playernum by 30;
@@ -155,7 +156,7 @@ this is the pigpussy rule:
 		say "     As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late.";
 		now messypigcaught is 0;
 	else if messypigcaught is 1:													[still caught]
-		say "     Enticed by her dripping juices, you bury your face in her cunt and start licking away, making her squeal in pleasure. You fade further, your resistance continuing to wane. ";
+		say "     Enticed by her dripping juices, you bury your face in her cunt and start licking away, making her squeal in pleasure. You fade further, your resistance continuing to wane.";
 	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[still fighting, damaged]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 125; [80% dmg this round]
 		say "     You take [special-style-2][dam][roman type] damage and grow more aroused!";
@@ -174,7 +175,7 @@ this is the pigpussy rule:
 		say "     As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late.";
 		now messypigcaught is 0;
 	else if messypigcaught is 1:													[still caught]
-		say "     You continue to lick the pig woman's wonderful pussy, growing more and more excited as you continue to do so. You happily work your tongue inside of her, growing more and more pleased by her squeals of pleasure. ";
+		say "     You continue to lick the pig woman's wonderful pussy, growing more and more excited as you continue to do so. You happily work your tongue inside of her, growing more and more pleased by her squeals of pleasure.";
 	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[still fighting, damaged]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 100; [100% dmg this round]
 		say "     You take another [special-style-2][dam][roman type] damage as your lustful longing for her grows higher!";
@@ -193,10 +194,10 @@ this is the pigpussy rule:
 		say "     As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late.";
 		now messypigcaught is 0;
 	else if messypigcaught is 1:													[still caught]
-		say "     You dive your tongue in and out of her while rubbing her sticky folds and messy bottom with your hands. Her scent is leaving you reeling, and you're starting to oink and grunt in pleasure as well. ";
+		say "     You dive your tongue in and out of her while rubbing her sticky folds and messy bottom with your hands. Her scent is leaving you reeling, and you're starting to oink and grunt in pleasure as well.";
 	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[still fighting, damaged]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 90; [111% dmg this round]
-		say "     You take another [special-style-2][dam][roman type] damage as your arousal continues to climb as does hers!";
+		say "     You take another [special-style-2][dam][roman type] damage as your arousal continues to climb while hers does!";
 		decrease HP of player by dam;
 		WaitLineBreak;
 	if messypigcaught is 1:															[still caught, aroused]
@@ -215,13 +216,11 @@ this is the pigpussy rule:
 		say "     As enticing as her pussy may be, you manage to come to your senses and push the porcine female off of you before it is too late. She grunts in frustration, you having managed to stop just before her climax.";
 		now messypigcaught is 0;
 	else if messypigcaught is 1:													[still caught]
-		say "     Your efforts finally pay off as you drive the porcine beauty to climax, spraying a fresh wave of her juices across your face and down your throat. You oink and squeal happily, lapping it all up even as it starts to seep into your skin and start changing you";
+		say "     Your efforts finally pay off as you drive the porcine beauty to climax, spraying a fresh wave of her juices across your face and down your throat. You oink and squeal happily, lapping it all up even as it starts to seep into your skin and start changing you.";
 	if messypigcaught is 1 and HP of player > 0 and libido of player < 110:							[still fighting, damaged]
 		let dam be ( wdam entry times a random number from 80 to 120 ) divided by 67; [150% dmg this round]
-		say "     . You take [special-style-2][dam][roman type] damage and are left sexually lustful yourself.";
+		say "     You take [special-style-2][dam][roman type] damage and are left sexually lustful yourself.";
 		decrease HP of player by dam;
-	else if messypigcaught is 1:													[still caught]
-		say "     .";
 	if messypigcaught is 1:															[completely caught, infected]
 		decrease humanity of player by a random number between 2 and 5;
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
@@ -242,8 +241,8 @@ Section 5 - Bound State
 to MessyPigBind:
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if humanity of player < 50:
 			now obliging is true;
 		checkboundrecover;
@@ -267,8 +266,8 @@ to MessyPigBind:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [MessyPigStruggle]";
 		if humanity of player < 1:
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Messy Pig":
 					now monster is y;
 					break;
@@ -283,7 +282,7 @@ to MessyPigBind:
 			now skin of player is skin entry;
 			now body of player is body entry;
 			now cock of player is cock entry;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "A pig pigged out on you";
 		else:
 			let k be 0;
@@ -307,7 +306,7 @@ to MessyPigBind:
 				else:
 					say "     You continue to thrash about from within your hungry captor, and eventually, your efforts are rewarded when you are pushed up and out of her stomach. You travel back through the constricting throat and then get spat out onto the floor, covered in her juices and various food scraps. The irritated piggy snorts angrily as you recover, and after kicking a cloud of dirt at you, she runs away, likely to search for an easier meal.";
 					cleanboundmemory;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					follow the turnpass rule;
 					wait for any key;
 				next;
@@ -351,7 +350,7 @@ to say MessyPigStruggle:
 
 Section 6 - Endings
 
-[See Philip: 'Hungry Boar Man' by hiccup for endings]
+[See Philip: 'Hungry Boar Man' by Hiccup for endings]
 
 [ Edit this to have the correct name as well]
 Messy Pig ends here.

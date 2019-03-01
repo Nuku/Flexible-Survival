@@ -13,7 +13,7 @@ notrashcoonsex is a number that varies.
 
 to say trashcoondesc:
 	setmongender 4; [creature is female]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";
 	else if "Herm Preferred" is listed in feats of player:
@@ -65,12 +65,12 @@ to say beatthetrashcoon:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Trash Coon"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -87,7 +87,7 @@ When Play begins:
 	now face change entry is "your mouth and nose elongate into a narrow, whiskered muzzle with a black nose at the end. A raccoon's dark mask forms around your eyes as your ears move up and reform into cute little cups";
 	now body change entry is "you grow heavy, becoming soft and pudgy. This spreads down your arms and legs, terminating as your hands and feet become dark, nimble paws with little black claws at the end of your digits";
 	now skin change entry is "scruffy gray fur spreads across your body";
-	now ass change entry is "your hips grow wide and your ass becomes and plump and padded booty. There is an pulsing throb from your tailbone as it reshapes itself, growing out into an unkempt raccoon tail"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now ass change entry is "your hips grow wide and your ass becomes and plump and padded booty. There is a pulsing throb from your tailbone as it reshapes itself, growing out into an unkempt raccoon tail"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "it pulses and throbs. The air is filled with a strong, musky scent as your excitement grows until finally you moan loudly and cum hard, spurting your semen as your cock reshapes itself into that of a raccoon";
 	now str entry is 15;
 	now dex entry is 16;
@@ -118,8 +118,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Trash Coon":
@@ -130,6 +131,6 @@ when play ends:
 			if player is female:
 				say "     The cook remains with you and you get a house together, having rough, messy sex all over your home whenever you can. Soon enough, your belly grows full with kits and you have lots of scruffy coons running around the place. You are happy to stay home and raise them while your mate runs a greasy diner.";
 			else:
-				say "     You and the cook remain friends, roommates and occasional lovers to satisfy your lusts. That is, until you meet a big, sexy coon woman. After a few dates, she moves in with you and you have wild, messy sex with her all over your home. When you come home from work at the recycling facility one day, you find your roommate fucking your girlfriend. A loud fistfight ensues that reminds you of your fights back in the city, the three of you collapse into a heap and it devolves into a lustful threesome. From that point on, you have a messy [italic type]menage a trois[roman type], filling her with litters of kits from both of you.";
+				say "     You and the cook remain friends, roommates and occasional lovers to satisfy your lusts. That is, until you meet a big, sexy coon woman. After a few dates, she moves in with you and you have wild, messy sex with her all over your home. When you come home from work at the recycling facility one day, you find your roommate fucking your girlfriend. A loud fistfight ensues that reminds you of your fights back in the city, the three of you collapse into a heap and it devolves into a lustful threesome. From that point on, you have a messy [italic type]ménage a trois[roman type], filling her with litters of kits from both of you.";
 
 Trash Coon ends here.

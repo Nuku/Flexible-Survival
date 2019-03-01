@@ -20,7 +20,21 @@ Version 1 of Branson & Partner by Wahn begins here.
 OfficeGirlsDominance is a number that varies.
 OfficeGirlsFriendship is a number that varies.
 
+BransonRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if HP of Melanie > 3 and HP of Melanie < 100 and BransonRoomConnection is 0:
+		change the north exit of Branson & Partner Reception to B&P Company Offices;
+		change the south exit of B&P Company Offices to Branson & Partner Reception;
+		now BransonRoomConnection is 1; [room connected]
+	if HP of Melanie > 1 and City Hall Offices is inactive:
+		now City Hall Offices is active;
+
 Section 1 - Melanie
+
+Table of GameCharacterIDs (continued)
+object	name
+Melanie	"Melanie"
 
 Melanie is a woman.
 The description of Melanie is "[MelanieDesc]".
@@ -85,18 +99,11 @@ to say MelanieTalkMenu:
 					say "[MelanieTalk2]";
 				if (nam is "Tell her you want to meet her boss"):
 					say "[MelanieTalk3]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			LineBreak;
-			say "     ([link]Y[as]y[end link]) - Yes.";
-			say "     ([link]N[as]n[end link]) - No.";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the pretty deer, shaking your head slightly as she gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the pretty deer, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -151,7 +158,7 @@ to say MelanieTalk3: [ask to meet Mr. B]
 					say "     To get the power back to work, it might be a good idea to check the power plant. Thinking back to a city tour you took some years back, you remember that the scenic [bold type]plant overview[roman type] isn't too far from the library. The other half of Branson's requirements should hopefully only include a quick stop at the [bold type]City Hall Offices[roman type] in the high rise district.";
 				else:
 					say "     Thinking about what to do next, a quick stop at the [bold type]City Hall Offices[roman type] in the [bold type]High Rise District[roman type] might be a good idea. Surely that shouldn't be that dangerous.";
-				now City Hall Offices are not resolved;
+				now City Hall Offices is active;
 				now HP of Melanie is 2; [listened to the plan]
 			else:
 				LineBreak;
@@ -208,8 +215,11 @@ to say MelanieTalk3: [ask to meet Mr. B]
 
 the fuckscene of Melanie is "     As you make an amorous offer to the deer, Melanie gives a little giggle and shakes her head. 'Sorry, but I'm under strict orders to be ready for visitors at all times. Can't disappoint Mr. B,' she says and winks at you.".
 
+Table of GameEventIDs (continued)
+Object	Name
+City Hall Offices	"City Hall Offices"
 
-City Hall Offices is a situation. The level of City Hall Offices is 1. City Hall Offices is resolved.
+City Hall Offices is a situation. The level of City Hall Offices is 1. City Hall Offices is inactive.
 The sarea of City Hall Offices is "High".
 
 Instead of resolving a City Hall Offices:

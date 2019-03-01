@@ -34,7 +34,7 @@ when play begins:
 
 to say siamesecatdesc:
 	setmongender 19; [creatures are mixed/variable]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if hardmode is true and level of player > 5, let debit be level of player - 5;
 	now dex entry is 18 + ( debit / 5 ); [set to midpoint]
@@ -77,7 +77,7 @@ to say siamesecatdesc:
 to say siameseattack:
 	if a random chance of 2 in 7 succeeds:
 		[Dmg calc for first blow]
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		let dammy be ( wdam entry times a random number from 80 to 120 ) divided by 100;
 		if hardmode is true and a random chance of 1 in 10 succeeds:
 			now dammy is (dammy * 150) divided by 100;
@@ -124,7 +124,7 @@ to say siameseattack:
 
 
 to say swaptomale:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now femalecatHP is monsterHP; [current HP saved as female]
 	now monsterHP is malecatHP; [male HP made current]
 	now siamesegender is "male"; [male now current cat]
@@ -135,7 +135,7 @@ to say swaptomale:
 
 
 to say swaptofemale:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now malecatHP is monsterHP; [current HP saved as male]
 	now monsterHP is femalecatHP; [female HP made current]
 	now siamesegender is "female"; [female now current cat]
@@ -205,7 +205,7 @@ to say losetosiamesecat:
 
 
 to say beatthesiamesecat:
-	say "     As you manage to finish off your [siamesegender] opponent, the other one grows woozy and collapses as well. ";
+	say "     As you manage to finish off your [siamesegender] opponent, the other one grows woozy and collapses as well.";
 	if (libido of player > 29 or "Dominant" is listed in feats of player) and player is not neuter:
 		say "     They mewl softly, beaten now. Looking them over, you consider playing with one of them.";
 		say "     [bold type]Do you want to have some fun with one of the Siamese twins?[roman type][line break]";
@@ -214,44 +214,51 @@ to say beatthesiamesecat:
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			decrease libido of player by 10;
-			say "[line break]     Deciding to have some quick fun, you start to pull off your clothes.";
-			say "     [bold type] Now which one would you like, the male or the female?[roman type][line break]";
+			LineBreak;
+			say "     Deciding to have some quick fun, you start to pull off your clothes.";
+			say "     [bold type]Now which one would you like, the male or the female?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Male.";
 			say "     ([link]N[as]n[end link]) - Female.";
 			if player consents:								[CHOSE MALE KITTY]
+				LineBreak;
 				if player is purefemale:		[FEMALE PLAYER]
-					say "[line break][siamsex1]";
+					say "[siamsex1]";
 				else if player is puremale:	[MALE PLAYER]
-					say "[line break][siamsex2]";
+					say "[siamsex2]";
 				else:	[HERM PLAYER]
-					say "[line break]     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?[line break]";
+					say "     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?[line break]";
 					say "     [bold type]Would you like to ride the kitty's cock or fill that sweet ass of his?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Get fucked.";
 					say "     ([link]N[as]n[end link]) - Fuck the kitty.";
 					if player consents:
-						say "[line break][siamsex1]";
+						LineBreak;
+						say "[siamsex1]";
 					else:
-						say "[line break][siamsex2]";
+						LineBreak;
+						say "[siamsex2]";
 			else:										[CHOSE FEMALE KITTY]
 				LineBreak;
 				if player is purefemale:		[FEMALE PLAYER]
-					say "[line break][siamsex3]";
+					say "[siamsex3]";
 				else if player is puremale:	[MALE PLAYER]
-					say "[line break][siamsex4]";
+					say "[siamsex4]";
 				else:	[HERM PLAYER]
-					say "[line break]     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?";
+					say "     Well, with your dual equipment, you find yourself with one last decision. What to do with your feline plaything?";
 					say "     [bold type]Would you like to fill the kitty's hot pussy or have her eat you out?[roman type][line break]";
 					LineBreak;
 					say "     ([link]Y[as]y[end link]) - Fuck the kitty.";
 					say "     ([link]N[as]n[end link]) - Oral.";
 					if player consents:
-						say "[line break][siamsex4]";
+						LineBreak;
+						say "[siamsex4]";
 					else:
-						say "[line break][siamsex3]";
+						LineBreak;
+						say "[siamsex3]";
 		else:
-			say "[line break]     You decide it would probably be for the best if you didn't play with the kitties and leave them there.";
+			LineBreak;
+			say "     You decide it would probably be for the best if you didn't play with the kitties and leave them there.";
 	else:
 		say "     You turn away to depart, leaving the kitties there.";
 
@@ -293,12 +300,12 @@ to say siamsex4:	[fuck pussy]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Siamese Cat"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -346,8 +353,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 when play ends:

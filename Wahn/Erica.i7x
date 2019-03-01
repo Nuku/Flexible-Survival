@@ -82,12 +82,23 @@ instead of going down from the Grey Abbey Library while (Dexterity of Erica is 0
 
 [ Next part of the quest in /Sarokcat/Museum.i7x (talking to Valerie)]
 
+an everyturn rule: [bugfix code to update saves which had the event actually resolved and active from the start]
+	if Dexterity of Erica < 3 and Temple of Hera is resolved:
+		now Temple of Hera is not resolved;
+	if Dexterity of Erica is 2:
+		now Temple of Hera is active;
+
+Table of GameEventIDs (continued)
+Object	Name
+Temple of Hera	"Temple of Hera"
+
 Temple of Hera is a situation.
+Temple of Hera is inactive.
 The sarea of Temple of Hera is "Museum".
+
 when play begins:
 	add Temple of Hera to badspots of guy;       [male soldiers]
 	add Temple of Hera to badspots of furry;     [female husky involved]
-	now Temple of Hera is resolved;
 
 Instead of resolving a Temple of Hera:
 	say "     After walking through the labyrinthine passages of the museum for quite a while, it becomes more and more obvious that something strange and unusual happened to this place when all the craziness started. It's a bit hard to say with hallways seemingly looping around and suddenly having developed new forks when you get to a portion that you went through before, but your guess is that you're about half a mile deep in here. At least the glowing 'EXIT' signs that every room and hallway holds give you confidence that you'll find your way back out, as every time you tried, the museum foyer was just two or three rooms back - if one follows the green arrows...";
@@ -98,10 +109,14 @@ Instead of resolving a Temple of Hera:
 	WaitLineBreak;
 	say "     Hera herself adds in, 'There you have it. Go forth and knock a few heads together - you mortals are good at that, aren't you...' With a slight flick of her wrist, you feel yourself pushed out the door, stumbling right into the museum foyer through it.";
 	now Temple of Hera is resolved;
-	now Biker Hangout is not resolved;
 	now Dexterity of Erica is 3;
 
-Biker Hangout is a situation. Biker Hangout is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+Biker Hangout	"Biker Hangout"
+
+Biker Hangout is a situation.
+The Prereq1 of Biker Hangout is Temple of Hera.
 The sarea of Biker Hangout is "Junkyard".
 when play begins:
 	add Biker Hangout to badspots of guy;
@@ -129,23 +144,28 @@ Instead of resolving a Biker Hangout:
 			say "     Beaten, you fall down before the man's onslaught - but he doesn't stop hitting you, so enraged is he about your interference. 'So you thought you could just come here to our place and make trouble? Big mistake, buddy!' You're kicked and punched again and again, even harder when the biker's friends join him some moments later. Eventually, they drag you some distance away in the junkyard, laughing about leaving you to be devoured by a hydra. After they leave you, basically to die, the nanites infusing everything these days do their work, rebuilding your body and healing you in short order. Therefore you can actually get up and walk away, just minutes later - long before the appearance of their supposed hydra.";
 			say "     With the bikers now forewarned that someone wants to get Joel back from them, you don't think that you'll be able to do so. They are sure to be more vigilant from now on, so there is little choice but to abandon this quest. Making your way back to the library, you tell Eric about what happened. 'Thanks... at least you tried,' he replies, a tone of sadness in his voice as he finally accepts that he'll just have to stay a cuntboy.";
 			now Dexterity of Erica is 100;
+			now Resolution of Biker Hangout is 2; [fought, lost]
 			move player to bunker;
 		else if fightoutcome >= 30:[fled]
 			say "     Running off as quickly as you can, you leave the biker behind. It doesn't seem like he wants to follow you too much and instead gets busy fucking his 'pet' in short order. With the bikers now forewarned that someone wants to get Joel back from them, you don't think that you'll be able to do so. They are sure to be more vigilant from now on, so there is little choice but to abandon this quest. Making your way back to the library, you tell Eric about what happened. 'Thanks... at least you tried,' he replies, a tone of sadness in his voice as he finally accepts that he'll just have to stay a cuntboy.";
 			now Dexterity of Erica is 100;
+			now Resolution of Biker Hangout is 3; [fought, fled]
 			move player to bunker;
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     Punching out the only lightly infected human, you bend down to pick up the key ring that he dropped during your fight and step forward to free the anthro canine. From this close up, you have your first real look at him - Joel has become a saluki, a slender and wiry breed of dog with a long and thin muzzle. With a short golden coat of fur and whitish-blond long hair on his ears and tail, as well as forming feathery fringes to his arms and legs, he looks pretty beautiful - even if the hair on his tail and the sides of his leg is crusted together by dried cum right now. It only takes a moment to free the young man from the collar padlocked to his neck, though he remains as he is, head lowered and shivering slightly. Man, these guys really did a number on him...";
+			now Resolution of Biker Hangout is 1; [fought, won]
 			say "[JoelSaved]";
 	else if calcnumber is 2: [wait and hit]
 		say "     As the human biker drops his pants and crouches down behind his anthro sex pet, then just rams his erection up Joel's abused asshole, you quietly pick up a rusty pipe from the piles of trash all around you. Walking towards the kennel while trying to stay out of sight from the shack windows at all times, you can't avoid stepping on some spots of rough gravel - but thankfully the gang-member doesn't hear you above the pained whining of his victim. And then, you're right behind him... raise the pipe and club the man over the head with a dull thunk. As his body falls forward on Joel's back, the transformed young man gives a frightened whine - at least until you hiss at him to keep quiet and that you're rescuing him.";
 		WaitLineBreak;
 		say "     Pulling the unconscious man off Rebecca's fiancée, you get your first real look at Joel - he has become a saluki, a slender and wiry breed of dog with a long and thin muzzle. With a short golden coat of fur and whitish-blond long hair on his ears and tail, as well as forming feathery fringes to his arms and legs, he looks pretty beautiful - even if the hair on his tail and the sides of his leg is crusted together by dried cum right now. It only takes a moment to free the young man from the collar padlocked to his neck, though he remains as he is, head lowered and shivering slightly. Man, these guys really did a number on him...";
+		now Resolution of Biker Hangout is 4; [sneaked up and hit them]
 		say "[JoelSaved]";
 	else: [distraction]
 		say "     Dashing back towards the front of the shack, you move up next to one of the bikes, their owner's pride and joy - then give it a powerful shove that makes it fall over, crashing down on the gravelly ground with the sounds of splintering glass and dented metal. You do the same for a second bike, then rush towards the shack, pressing yourself against its wall right at the corner - and it works... the scruffy biker who was in the kennel a moment ago comes running to the front of the shack, right past where you're hiding around the corner. It's almost comical - since the man is naked from the waist down, his cock flapping in the wind as he passes you... but then, you remind yourself just what the bastard was doing and the smile vanishes from your lips instantly. He curses loudly as he sees the damage on his bike and looks around (away from the shack) while bending over it to inspect the heavy machine.";
 		WaitLineBreak;
 		say "     Meanwhile, you duck behind the shack and get to the kennel as quickly as you can, pulling the key ring out of the biker's abandoned pants and stepping forward to free the anthro canine. From this close up, you have your first real look at him - Joel has become a saluki, a slender and wiry breed of dog with a long and thin muzzle. With a short golden coat of fur and whitish-blond long hair on his ears and tail, as well as forming feathery fringes to his arms and legs, he looks pretty beautiful - even if the hair on his tail and the sides of his leg is crusted together by dried cum right now. It only takes a moment to free the young man from the collar padlocked to his neck, though he remains as he is, head lowered and shivering slightly. Man, these guys really did a number on him...";
+		now Resolution of Biker Hangout is 5; [distracted them]
 		say "[JoelSaved]";
 	now Biker Hangout is resolved;
 
@@ -176,9 +196,11 @@ to say pomegranate seed use:
 
 Section 1 - Erica the female athlete
 
-[Smells, Description, Conversation and NPC Interaction]
+Table of GameCharacterIDs (continued)
+object	name
+Erica	"Erica"
 
-Erica is a woman. The HP of Erica is normally 0. The Dexterity of Erica is normally 0.
+Erica is a woman. The HP of Erica is usually 0. The Dexterity of Erica is usually 0.
 The description of Erica is "[Ericadesc]".
 The conversation of Erica is { "Mew!" }.
 
@@ -191,7 +213,7 @@ instead of sniffing Erica:
 to say Ericadesc:
 	if debugactive is 1:
 		say "DEBUG -> HP: [HP of Erica], DEXTERITY: [Dexterity of Erica], THIRST: [thirst of Erica], LIBIDO: [libido of Erica], LUST: [lust of Erica], LEVEL: [level of Erica], XP: [XP of Erica] <- DEBUG[line break]";
-	say "     Erica is a college age young woman with ginger hair, light skin and quite a few freckles. Her unlined face has a very cute look to it and she often smiles while talking. She's wearing a black t-shirt that shows off the alluring bumps of her perky B-cup breasts. Under that, the college athlete has red running shorts on, giving you a good look at those long legs that clearly show she's a runner. All in all, a very nice package - nicely muscled, while still being lithe and lean. Her left underarm shows a thin oval line of redness - a fading scar from the bite that started her initial transformation. [if UrikEricInteraction > 6]Erica also bears two small healed puncture marks just above her collarbone on the right - an affectionate mark of being Urik's honorary orc breeder slut.[end if]";
+	say "     Erica is a college age young woman with ginger hair, light skin and quite a few freckles. Her unlined face has a very cute look to it and she often smiles while talking. She's wearing a black t-shirt that shows off the alluring bumps of her perky B-cup breasts. Under that, the college athlete has red running shorts on, giving you a good look at those long legs that clearly show she's a runner. All in all, a very nice package - nicely muscled, while still being lithe and lean. Her left underarm shows a thin oval line of redness - a fading scar from the bite that started her initial transformation[if UrikEricInteraction > 6]. Erica also bears two small healed puncture marks just above her collarbone on the right - an affectionate mark of being Urik's honorary orc breeder slut[end if].";
 	LineBreak;
 	say "     She's lived herself in at the bunker by now, and it looks like she has gone out and brought some more of her stuff in here in the meantime. Beside her camp bed there are several sports bags full of clothing and supplies, and a baseball bat rests against it for when she goes outside. You often see her stretching and working out - like right now for example, as you stop and watch her move her inviting lithe body. Erica notices you standing there, and gives you a shy smile, then goes on with her exercises.";
 
@@ -234,13 +256,9 @@ instead of conversing the Erica:
 					say "[EricaTalk2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -262,7 +280,7 @@ Instead of fucking the Erica:
 			say "     The two of you make out for a moment, holding on to each other. In between playful tongue-wrestling, you let your hands wander all over her, feeling up her slender body, cupping the perky breasts through her t-shirt and giving those nice firm buns of her ass a slight squeeze. While she still has the build of an athlete, it is clearly a female now, with feminine curves in addition to toned muscle. Eager to get to know her more intimately, you grab her by the hand and lead the young woman to your bunk.";
 			say "     Erica quickly takes off her shoes and socks, then pulls off her shirt and throws it aside, revealing a nicely defined chest - and the perfectly shaped mounds of her two B-cup breasts. You follow suit, rapidly sliding off your own clothing, then step close to your waiting partner. Gently cupping her breasts, you use your fingers to rub and brush over her nipples, making the young woman gasp for a second. Seems like your handsome student has gotten quite sensitive there after her transformation. With a smile on your face you lean down and run your tongue over her chest, then circle each of her nipples with its tip and finally suck on them. Making Erica pant in lust is a lot of fun, and with your nose pressed against her warm skin you also take a deep breath of her clearly feminine scent.";
 			WaitLineBreak;
-			say "     Feeling Erica's readiness to move on, you soon push her back softly, making her sit, then lie on your camp bed. After that, you move your hands to the band of her shorts, pulling them down over her long legs as she raises her ass a bit to let the fabric slide over its smooth curve. Under them, a flimsy white tanga comes into view, making Erica show a moment of embarrassment as she says,'I really, really like... soft panties against my skin. Good that I'm a real woman now, ha.' You lean in for a quick kiss, telling her how hot she looks in the skimpy underwear and then slide it off with great satisfaction.";
+			say "     Feeling Erica's readiness to move on, you soon push her back softly, making her sit, then lie on your camp bed. After that, you move your hands to the band of her shorts, pulling them down over her long legs as she raises her ass a bit to let the fabric slide over its smooth curve. Under them, a flimsy white tanga comes into view, making Erica show a moment of embarrassment as she says, 'I really, really like... soft panties against my skin. Good that I'm a real woman now, ha.' You lean in for a quick kiss, telling her how hot she looks in the skimpy underwear and then slide it off with great satisfaction.";
 			say "     Now fully naked, Erica looks up from the bed to you, her eyes inevitably drawn to your by now rock-hard cock. With an inviting smile she spreads her legs for you, the lips of her slightly swollen pussy glistening with female juices. Eagerly, you climb on the bed with her, stroking her smooth legs as you kneel between them. Erica gasps as your dick touches her pussy the first time, followed by rapid panting as you rub up and down against its folds. Then you put your cockhead against her opening and slowly push forward, moaning in lust yourself as her nether lips spread for you, enveloping your shaft in a warm and tight embrace.";
 			say "     Sliding deeper into her, your progress soon meets resistance as your cock pushes against a soft flexible barrier inside her - Erica's hymen. You lean down and put your arms around her then let your lips meet and give her a deep kiss. While distracting her with some playful tongue-wrestling, you push forward with your hips, increasing the pressure until you break through the thin flesh and make a real woman out of her.";
 			WaitLineBreak;
@@ -367,13 +385,9 @@ to say EricaSexMenu:
 				now lastfuck of Erica is turns;
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the young woman, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -1058,13 +1072,9 @@ to say EricaCarlThreesome Sex Menu:
 					say "[EricaCarlThreesome8]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the two of them, saying that you just remembered something important you absolutely have to do. They give you questioning looks, then shrug and look at each other. As you hurry off, the two of them start making out, apparently determined to have fun with or without you.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the two of them, saying that you just remembered something important you absolutely have to do. They give you questioning looks, then shrug and look at each other. As you hurry off, the two of them start making out, apparently determined to have fun with or without you.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;

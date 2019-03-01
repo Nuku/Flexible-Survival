@@ -24,7 +24,7 @@ to say Batcubus attack:
 		say "     'Oh, you poor thing. Perhaps I can help with that,' she says, rising back up. Grabbing your head, she mashes your face between her giant tits and squeezing them around your head. Left woozy and vaguely aroused from the experience, your lips wrap around one of her nipples when it's offered to you. You suckle hungrily from her breast, getting fed a meal of the bat woman's warm milk. By the time the bat creature has finished feeding you and heads off, you're left feeling warm and sleepy even as tingles of infection spread through you.";
 
 to say beatthebatcubus:
-	say "     The batcubus falls down to the ground, fingering herself, trying to get some form of relief. The sight of her like this is enticing, tempting you to do something naughty with her to celebrate your victory. Shall you give into these urges?";
+	say "     The batcubus falls down to the ground, fingering herself, trying to get some form of relief. The sight of her like this is enticing, tempting you to do something naughty with her to celebrate your victory. Shall you give in to these urges?";
 	if player consents:
 		if player is male:
 			say "     The scent of her arousal fills your nose and you feel your cock rapidly stiffening. Your lust brings you to turn around and look at her, unable to do anything other than start jerking off while watching her masturbate. She notices your actions and smiles warmly before spreading her legs and presenting her needy cunt to you.";
@@ -47,13 +47,13 @@ to say beatthebatcubus:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Batcubus"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -101,8 +101,9 @@ When Play begins:
 	now magic entry is true;            [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false;       [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false;  [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";   [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;   [ Row used to designate any special combat features, "default" for standard combat. ]
 
 
 Section 3 - Drop Item

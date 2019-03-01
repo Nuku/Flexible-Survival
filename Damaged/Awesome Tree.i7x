@@ -75,7 +75,7 @@ to say awesome vict:
 to say awesome desc:
 	setmongender 0; [creature is neuter-X]
 	now Awesome_boredom is 0;
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if Awesome_forcesex is 0:
 		if "Male Preferred" is listed in feats of player:
 			now Awesome_sex is 2;
@@ -88,13 +88,13 @@ to say awesome desc:
 			now sex entry is "Both";
 	say "You turn a corner and see it. Looking up you realize due to the shape of the branches you are unable to actually see just how tall this monstrous and truly Awesome Tree is. Its branches are long and you see, among the foliage some fruit that look unbelievably tasty, if you could just shake the tree enough to get one to fall...";
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Awesome tree"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -142,8 +142,9 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Monster Heat
@@ -184,7 +185,7 @@ to say AwesomestFrScent:
 the scent of the awesome bat is "The powerful bat smells faintly of wood and the strange fruits that grew on that giant tree.".
 
 to say awesome bat proc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP entry is 60:
 		if name entry matches the text "Awesome":
 			say "[line break]Your bat resounds against the tree, causing the world itself to shake. The unstoppable force and the immovable object meet, however your strength behind the bat is the deciding factor.";
@@ -205,8 +206,8 @@ To say awesomest fruit use:
 	if "Male Preferred" is listed in feats of player or "Female Preferred" is listed in feats of player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
-		repeat with Z running from 1 to number of rows in table of random critters:
-			choose row Z from the table of random critters;
+		repeat with Z running from 1 to number of rows in Table of Random Critters:
+			choose row Z from the Table of Random Critters;
 			if name entry matches the text "Awesome":
 				now monster is z;
 				break;
@@ -226,8 +227,8 @@ To say awesomer fruit use:
 	if "Male Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
-		repeat with Z running from 1 to number of rows in table of random critters:
-			choose row Z from the table of random critters;
+		repeat with Z running from 1 to number of rows in Table of Random Critters:
+			choose row Z from the Table of Random Critters;
 			if name entry matches the text "Awesome":
 				now monster is z;
 				break;
@@ -247,8 +248,8 @@ To say awesome fruit use:
 	if "Female Preferred" is listed in feats of player or "Herm Preferred" is listed in feats of player:
 		say "You spit out the mouthful of fruit and cast it aside, for some reason it tastes rancid.";
 	else:
-		repeat with Z running from 1 to number of rows in table of random critters:
-			choose row Z from the table of random critters;
+		repeat with Z running from 1 to number of rows in Table of Random Critters:
+			choose row Z from the Table of Random Critters;
 			if name entry matches the text "Awesome":
 				now monster is z;
 				break;

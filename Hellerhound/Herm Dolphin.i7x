@@ -1,7 +1,7 @@
 Version 1 of Herm Dolphin by Hellerhound begins here.
 [Version 1.1 - Alt attack tweaked - Stripes]
 
-"Adds a dolphin to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a dolphin to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 when play begins:
 	add {"Hermaphrodite Dolphin"} to infections of furry;
@@ -27,7 +27,7 @@ to say Dolphin wins:
 			say "She seems put off by your denial and screams, 'You will be brought down'";
 			decrease dolphinwantmate by 1;
 	else if dolphinwantmate is -2:
-		say "She grabs you harshly, fingers biting into your skin, drawing blood. She then flips you over so hard that your head spins. She then reaches into her top slit, dragging her cock out with her hand, and strokes it hard against you back. She then bends back and slams forward, ripping open your ass. You pass out from the pain.";
+		say "She grabs you harshly, fingers biting into your skin, drawing blood. She then flips you over so hard that your head spins. She then reaches into her top slit, dragging her cock out with her hand, and strokes it hard against your back. She then bends back and slams forward, ripping open your ass. You pass out from the pain.";
 		say "When you are conscious again, it seems that the nanites have repaired the damage to your body, but there is still piss floating out of your ass, along with clumps of blood. You can't be her mate any longer. It looks like she is still too pissed to even think in that direction.";
 		decrease HP of player by 40;
 	say "She strokes your entire body, beginning at your head, and moves slowly down your body. The changes begin in the wake of her flipper-like hands.";
@@ -128,12 +128,12 @@ to say dolphin fuck:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Hermaphrodite Dolphin"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -181,8 +181,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hdol"; [ Alternate critter combat row to follow, "default" or "" for standard ]
+	now BannedStatus entry is false;
 
 
 Table of Critter Combat (continued)
@@ -190,7 +191,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "hdol"	retaliation rule	dolattack rule	--	--	--	--	--	--	--	--
 
 this is the dolattack rule:		[possible sonic attack and sets upcoming strike]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if a random chance of 1 in 6 succeeds:
 		say "The dolphin lets off a really loud pulse of high-pitched clicks which weakens you ([ ( 6 + lev entry ) / 2 ] dmg) and stuns you just long enough for her to attack again.";
 		decrease HP of player by ( ( 6 + lev entry ) / 2 );
@@ -240,8 +241,8 @@ when play ends:
 
 
 to dolphinify:
-	repeat with y running from 1 to number of rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Hermaphrodite Dolphin":
 			now monster is y;
 			break;
@@ -252,7 +253,7 @@ name	desc	weight	object
 "dolphin milk"	"Thick and nutritious milk from a dolphinoid."	1	dolphin milk
 
 
-dolphin milk is a grab object. It is a part of the player. it is milky. Understand "milk" as dolphin milk. dolphin milk is infectious. The strain of dolphin milk is "Hermaphrodite Dolphin". The purified of dolphin milk is "distilled milk".
+dolphin milk is a grab object. It is a part of the player. It is milky. Understand "milk" as dolphin milk. dolphin milk is infectious. The strain of dolphin milk is "Hermaphrodite Dolphin". The purified of dolphin milk is "distilled milk".
 
 the scent of dolphin milk is "The dolphin milk smells like milk with an odd, fishy scent mixed in.".
 

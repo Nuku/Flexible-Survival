@@ -21,15 +21,15 @@ to say losetodarkelf:
 	else:
 		say "smiles. It is not a nice smile. 'You'll do, pet.' She leans over and kisses you on the lips, and you feel and unwilling arousal flood through you.";
 		if breast size of player > 0 and a random chance of 1 in 2 succeeds:
-			say "     She wraps the long, elegant fingers of one of her nimble hands about your neck, and hauls you upright. Her other hand moves to your chest, and her eyes rake your breasts[if breast size of player < 3]. 'How... small...' she sniffs in disdain at your, comparably, tiny chest. Her smile grows even nastier. 'But it will do.'[else if breast size of player < 6]. 'Hmmm. Adequate.' She seems satisfied that she is your undisputed superior, at least as far as her tits are concerned.[else if breast size of player < 10]. Looking over your now exposed tits, her smile widens. 'How nice to finally find an outsider with adequate endowment.'[else]. She gasps at the size of your gargantuan udders. 'Oh Goddess. These are divine. Perhaps I should take you back to the Conclave to share with my sisters... But first, I must touch them...'[end if]";
+			say "     She wraps the long, elegant fingers of one of her nimble hands about your neck, and hauls you upright. Her other hand moves to your chest, and her eyes rake your breasts. [if breast size of player < 3]'How... small...' she sniffs in disdain at your, comparably, tiny chest. Her smile grows even nastier. 'But it will do.'[else if breast size of player < 6]'Hmmm. Adequate.' She seems satisfied that she is your undisputed superior, at least as far as her tits are concerned.[else if breast size of player < 10]Looking over your now exposed tits, her smile widens. 'How nice to finally find an outsider with adequate endowment.'[else]She gasps at the size of your gargantuan udders. 'Oh Goddess. These are divine. Perhaps I should take you back to the Conclave to share with my sisters... But first, I must touch them...'[end if]";
 			if HP of player > 0:
-				say "     Still holding your neck with one hand, she begins to massage your breasts, building an unwanted and terrifying arousal within you. Soon, however, you find the lust eating into your thoughts, causing you to lose your desire to resist, your desire to flee. Eventually, the Dark Elf releases your neck, and uses her other hand to fondle her own massive mammary. Soon, a massive orgasm, from only breast stimulation, floods through your mind, robbing your legs of strength, and you fall to the ground.";
-			else:
 				say "     Still holding your neck with one hand, she begins to massage your breasts, building your arousal to unexpected heights. Having submitted to the dark maiden's touch, you moan in pleasure at receiving such unbridled pleasure from her touch. Eventually, the Dark Elf releases your neck, and uses her other hand to fondle her own massive mammary. Soon, a massive orgasm, from only breast stimulation, floods through your mind, robbing your legs of strength, and you fall to the ground.";
+			else:
+				say "     Still holding your neck with one hand, she begins to massage your breasts, building an unwanted and terrifying arousal within you. Soon, however, you find the lust eating into your thoughts, causing you to lose your desire to resist, your desire to flee. Eventually, the Dark Elf releases your neck, and uses her other hand to fondle her own massive mammary. Soon, a massive orgasm, from only breast stimulation, floods through your mind, robbing your legs of strength, and you fall to the ground.";
 		else:
-			say "     Your blood runs cold as you see an evil grin spread over the face of the dark elf. You blanch as she slips out of her dress and reveals her huge, throbbing cock. ";
+			say "     Your blood runs cold as you see an evil grin spread over the face of the dark elf. You blanch as she slips out of her dress and reveals her huge, throbbing cock.";
 			if breast size of player > 2:
-				say "     She kneels over you, stilling your struggles with his thighs, as she thrusts her forearm length cock between your [if Breast Size of player < 6]breasts, barely large enough to surround her massive cock[else if Breast Size of player < 9][breast size desc of player] breasts, mashing them together as she thrusts into the soft valley of your love pillows[else][breast size desc of player] tits, her hands roving over their sides as she smiles with malicious delight[end if]. She begins to thrust, the head of her cock thrusting up over your chest and into your chin. Her strong hands rove over your breasts, bringing you to an [if HP of player > 0]unwilling[else]overpowering[end if] arousal. The night skinned elf notices this, and seems to take great pleasure in your uncontrolled enjoyment of her pleasuring of herself. It's not long before she cums, splattering her fluids over your chest and face, with some of the bitter fluid landing in your nose and mouth, making you thrash and sputter on the ground.";
+				say "     She kneels over you, stilling your struggles with her thighs, and thrusts her forearm length cock between your [if Breast Size of player < 6]breasts, barely large enough to surround her massive cock[else if Breast Size of player < 9][breast size desc of player] breasts, mashing them together as she thrusts into the soft valley of your love pillows[else][breast size desc of player] tits, her hands roving over their sides as she smiles with malicious delight[end if]. She begins to thrust, the head of her cock thrusting up over your chest and into your chin. Her strong hands rove over your breasts, bringing you to [if HP of player > 0]overpowering[else]unwilling[end if] arousal. The night skinned elf notices this, and seems to take great pleasure in your uncontrolled enjoyment of her pleasuring of herself. It's not long before she cums, splattering her fluids over your chest and face, with some of the bitter fluid landing in your nose and mouth, making you thrash and sputter on the ground.";
 			else:
 				say "     She grabs your head around the chin and forces your mouth open. She shoves your mouth over her massive cock and begins to thrust. You gag as she shoves her cock down your throat, and it's all you can do to get enough breath in through your nose. You struggle and gag as she fucks your face, until eventually, after what seems like hours, she reaches climax, her bitter fluid surging into your mouth, down your throat, and out of your overflowing mouth, making you gag and choke on the tidal wave of sticky fluid. You collapse, thrashing, as she releases your head, coughing up excess semen while she laughs.";
 		if player is herm:		[herm]
@@ -70,7 +70,7 @@ to say darkelfF:
 to say beatthedarkelf:
 	if player is male and libido of player > 20:
 		say "     Defeated, the dark elf collapses to the ground. She struggles to rise, but is unable to do so and can only glare up at you angrily. Her dress is torn and you can see her large bosom, hefty cock and oversized cunt. Looking her over, you find yourself tempted to celebrate your victory and fuck the dark elf.";
-		say "     [bold type]Shall you give into this impulse?[roman type][line break]";
+		say "     [bold type]Shall you give in to this impulse?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -85,12 +85,12 @@ to say beatthedarkelf:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Dark Elf"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -138,8 +138,9 @@ When Play begins:
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	now nocturnal entry is true; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 2; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings

@@ -26,6 +26,10 @@ Section 1 - NPC
 [***********************************************************]
 [***********************************************************]
 
+Table of GameCharacterIDs (continued)
+object	name
+Mark	"Mark"
+
 Mark is a man.
 The description of Mark is "[MarkDesc]".
 The conversation of Mark is { "<This is nothing but a placeholder!>" }.
@@ -190,14 +194,11 @@ to say MarkTalkMenu:
 				if (nam is "Talk about the suit for Jay"):
 					say "[MarkSuitQuest]";
 				wait for any key;
+				say "[MarkTalkMenu]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the large polar bear, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the large polar bear, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -290,7 +291,7 @@ to say MarkScavengingTarget1: [pumpkin patch]
 		say "     Abandoning the fight, you run off and are chased for a while by one of the leopards, while his two compatriots focus their attention on Mark. It takes some effort to shake the swift feline, which takes you out of your way quite a distance, so it takes a while to swing back to the Mall. As you approach the large building complex, you run into Mark again, a little worse for wear, but without his pumpkin. He isn't in too great of a mood to see you, grumbling, 'I fought those fuckers off, but without a spotter to keep an eye out, I had to leave that pumpkin back there on the street. By now, something will be feeding on it. You know, you didn't have to [italic type]beat[roman type] those assholes, just hold them off long enough. Gonna have to do better if you want to go scavenging with me again.'";
 
 to say MarkPumpkinpayout:
-	say "     Making a beeline for the food court, the large polar bear puts down his colossal orange load on the counter of a mall rat run restaurant. Some moments of negotiation follow, ending with Mark being told that his food credits just went way up, and a friendly rat with long blond hair bringing a large bag with fresh food from the kitchen, handing it to you. As you start packing the items into your pack, the white-furred bear grins broadly and gives you a friendly slap on the back. 'Nice working with ya. Could use a wing-man for some more trips out into the city. Feel free to join me anytime, but for now, I'm off to spend some time with Jay. My lil['] man must be hungry for a good dicking by now.'";
+	say "     Making a beeline for the food court, the large polar bear puts down his colossal orange load on the counter of a mall rat run restaurant. Some moments of negotiation follow, ending with Mark being told that his food credits just went way up, and a friendly rat with long blond hair bringing a large bag with fresh food from the kitchen, handing it to you. As you start packing the items into your pack, the white-furred bear grins broadly and gives you a friendly slap on the back. 'Nice working with ya. Could use a wing-man for some more trips out into the city. Feel free to join me anytime, but for now, I'm off to spend some time with Jay. My li'l man must be hungry for a good dicking by now.'";
 	LineBreak;
 	say "[bold type]You gain 4 food![roman type][line break]";
 	increase carried of food by 4;
@@ -304,7 +305,7 @@ to say MarkScavengingTarget2: [hawkman nest]
 	now inasituation is false;
 	if fightoutcome < 20: [player won]
 		say "     Knocking down the hawkman that attacked you personally, you glance over at your companion and see him snatch his own opponent out of the air by a clawed foot, then swing him in an arc to smash into the ground with a thud and the crunch of breaking bones. With a last shriek, Mark's hawkman falls unconscious, breathing shallow as his body starts to mend. 'Don't waste a second thinking about this asshole. He'll be up again before you know it,' the polar bear tells you in a gruff tone, then starts to dig around in the piles of loot, stuffing choice pieces that he finds into his backpack. Quickly doing the same, you manage to snag a medkit, some food and two bottles of pure water before a furious screech makes you look up. Four more hawkmen are approaching quickly, gliding through the air on spread wings.";
-		say "     'Time to go. Let's move it!' Mark calls out in a loud voice, shouldering the backpack and waving you to the stairwell. He makes sure to let you go through the door first, even though that exposes him to attack from the first of the hawkmen landing on the roof. He kicks the angry avian back from the door, then slams it shut and runs downstairs after you. Soon arriving on the ground floor, you run out of the building and across the street, vanishing into a side alleyway before the circling hawkmen can spot you. As you are making your way back to the Mall, Mark grins at you and gives a thumbs up. 'Nice working with ya. Could use a wing-man for some more trips out into the city in the future. Feel free to join me anytime. But for now, when we get back I'm off to spend some time with Jay. My lil['] man must be hungry for a good dicking by now.'";
+		say "     'Time to go. Let's move it!' Mark calls out in a loud voice, shouldering the backpack and waving you to the stairwell. He makes sure to let you go through the door first, even though that exposes him to attack from the first of the hawkmen landing on the roof. He kicks the angry avian back from the door, then slams it shut and runs downstairs after you. Soon arriving on the ground floor, you run out of the building and across the street, vanishing into a side alleyway before the circling hawkmen can spot you. As you are making your way back to the Mall, Mark grins at you and gives a thumbs up. 'Nice working with ya. Could use a wing-man for some more trips out into the city in the future. Feel free to join me anytime. But for now, when we get back I'm off to spend some time with Jay. My li'l man must be hungry for a good dicking by now.'";
 		LineBreak;
 		say "[bold type]You gain 1 medkit![roman type][line break]";
 		increase carried of medkit by 1;
@@ -552,14 +553,10 @@ to say TatiHyenaMenu:
 					say "[TatiHyenaFuck]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Change your mind and leave?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back and turn around, intending to leave the restaurant, only to see that several more hyenas have come in behind you. 'Leaving so soon?' one of them says with a lewd grin, rubbing the front of his leather bike pants. Seems like just walking out of here isn't an option...";
-				wait for any key;
-				say "[TatiHyenaMenu]";
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back and turn around, intending to leave the restaurant, only to see that several more hyenas have come in behind you. 'Leaving so soon?' one of them says with a lewd grin, rubbing the front of his leather bike pants. Seems like just walking out of here isn't an option...";
+			wait for any key;
+			say "[TatiHyenaMenu]";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -722,13 +719,9 @@ to say MarkSexMenu:
 					say "[MarkSex2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the slender elf, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the large polar bear, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

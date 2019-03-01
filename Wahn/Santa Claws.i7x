@@ -1,7 +1,7 @@
 Version 1 of Santa Claws by Wahn begins here.
 [Version 1.1 - Small Fix]
 
-"Adds an polar bear Mall Santa to Flexible Survival"
+"Adds a polar bear Mall Santa to Flexible Survival"
 
 [ Santa Claws, the polar bear                                 ]
 [ HP of Santa Claws                                           ]
@@ -11,6 +11,10 @@ Version 1 of Santa Claws by Wahn begins here.
 [ Dexterity of Santa Claws - Last Present Turn                ]
 
 Section 1 - Description
+
+Table of GameCharacterIDs (continued)
+object	name
+Santa Claws	"Santa Claws"
 
 Santa Claws is a man. The HP of Santa Claws is usually 0.
 The description of Santa Claws is "[Santa Claws Desc]".
@@ -39,7 +43,12 @@ instead of going east from Mall East Wing while HP of Santa Claws is 0:
 	else:
 		say "     Nah, you step back from the curtain of snowfall and walk back towards the normal shops in the west.";
 
-East of Mall East Wing is Christmas Village.
+Table of GameRoomIDs (continued)
+Object	Name
+Christmas Village	"Christmas Village"
+
+Christmas Village is a room.
+Christmas Village is east of Mall East Wing.
 The description of Christmas Village is "[CVillageDesc]".
 
 to say CVillageDesc:
@@ -128,13 +137,9 @@ to say SantaTalkMenu:
 				wait for any key;
 				now lastfuck of Santa Claws is turns;
 		else if calcnumber is 0:
-			say "Break off?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the polar bear, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the polar bear, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -143,7 +148,7 @@ to say SantaTalk1:
 	let randomnumber be a random number from 1 to 4;
 	if randomnumber is:
 		-- 1:
-			say "     The polar bear leans back on his throne, then says in his deep voice, 'You want to know know who I am? Why, Santa of course! Just look around - isn't this the perfect little Christmas village? A place where everyone can be jolly.' Letting his gaze roam over the snow-covered trees and the many elves going about their business, he smiles. Then the bear looks back to you, still with the same curious expression on your face, and adds, 'Let's not dwell on the past, okay? I'm happier being Santa Claws now than I ever was as that scared little man, running and hiding from the monsters. It's almost as if this suit called to me after I went into the storeroom, wishing for someone to fill the mantle... and that is what I did.'";
+			say "     The polar bear leans back on his throne, then says in his deep voice, 'You want to know who I am? Why, Santa of course! Just look around - isn't this the perfect little Christmas village? A place where everyone can be jolly.' Letting his gaze roam over the snow-covered trees and the many elves going about their business, he smiles. Then the bear looks back to you, still with the same curious expression on your face, and adds, 'Let's not dwell on the past, okay? I'm happier being Santa Claws now than I ever was as that scared little man, running and hiding from the monsters. It's almost as if this suit called to me after I went into the storeroom, wishing for someone to fill the mantle... and that is what I did.'";
 		-- 2:
 			say "     The polar bear leans back on his throne, then says in his deep voice, 'When I became Santa, the magic just spread all around me. This almost instantly make people feel a little better: seeing something familiar, something safe. We got all of the decorations out, bit by bit, set them up - and they became real, before long.' He moves his clawed hand in an arc to indicate your surroundings, trees and block houses, as well as the snow. 'Isn't it beautiful?' the bear asks. 'Some left because they were afraid of it, but most stayed with me - and why wouldn't they? This place is for them to be happy in, and I keep it safe.'";
 			say "     Looking around at the numerous Christmas Elves going about their business, you tentatively have to agree. This is a pretty nice setup, if one can stand the theme...";
@@ -175,7 +180,7 @@ to say SantaTalk2:
 		if calcnumber is 1:[Naughty]
 			say "     'So... a naughty [if player is female]girl[else]boy[end if] then!' Santa Claws says in a somewhat disappointed tone, pursing his lips as he slowly shakes his head. 'I fear that you have come to the wrong man. There is another whose specialty is dealing with those who don't behave themselves...' Throwing a look at the somewhat foreboding cave entrance to the north, he leans in to whisper, 'It's never too late to turn yourself around and reclaim your place on the nice list. But if you really feel like you've got something to repent, Krampus will be happy to [italic type]have[roman type] you - long and hard, if you know what I mean.'";
 		else if calcnumber is 2:[Nice]
-			say "     'So... a nice [if player is female]girl[else]boy![end if]', Santa Claws booms in a loud voice, chuckling as he squeezes your shoulder affectionately. 'Let's give you something that's good for you then. Reaching down into the opening of a large red sack lying next to his throne, the large ursine then pulls out ";
+			say "     'So... a nice [if player is female]girl[else]boy[end if]!' Santa Claws booms in a loud voice, chuckling as he squeezes your shoulder affectionately. 'Let's give you something that's good for you then.' Reaching down into the opening of a large red sack lying next to his throne, the large ursine pulls out ";
 			let randomnumber be a random number from 1 to 3;
 			if randomnumber is:
 				-- 1:
@@ -183,20 +188,20 @@ to say SantaTalk2:
 					say "[bold type]You gain 1 soda![roman type][line break]";
 					increase carried of soda by 1;
 				-- 2:
-					say "a large gingerbread star, decorated with lots of almonds - still in its clear plastic wrapping.";
+					say "a large gingerbread star, decorated with lots of almonds and still in its clear plastic wrapping.";
 					say "[bold type]You gain 1 food![roman type][line break]";
 					increase carried of food by 1;
 				-- 3:
-					say "a hearty-looking Christmas fruitcake - still in its clear plastic wrapping. It looks relatively small, but when you accept it, you realize how heavy it is. There's quite a bit packed into this thing.";
+					say "a hearty-looking Christmas fruitcake, still in its clear plastic wrapping. It looks relatively small, but when you accept it, you realize how heavy it is. There's quite a bit packed into this thing.";
 					say "[bold type]You gain 2 food![roman type][line break]";
 					increase carried of food by 2;
 		else if calcnumber is 3:[rub him]
 			setmonster "Polar Bear";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			say "     Lowering a hand, you put it right on the powerful ursine's crotch and rub against the respectable bulge you feel through the soft material. As Santa Claws cock starts to get hard, he gives a lusty rumble that reverberates in his broad chest. His clawed hand wandering down to your hips, pulling you closer, the mighty polar bear says, 'So... you want a really [italic type]special[roman type] present today. I'd be more than happy to give it to you.' His voice starts getting a bit deeper and more animal-like as he adds, 'Hard and deep,' a moment later. With that, the bear sets both of his hands on your body, lifting you up as he stands - which makes you feel pretty tiny compared to the muscled bulk of this big creature, pressed tightly against the warm coat on his body. You can feel the deep vibration run through his chest as he gives a low, aroused growl. Clearly, you've woken the beast inside this man, bringing with it strong urges now that it is no longer slumbering beneath the surface.";
 			say "     Lowering his head to take a good, long sniff of your scent, Santa Claws squeezes your butt, then pulls himself back slightly from the aroused growling and grunting. With a grumbled, 'Let's get this stuff off of you,' he lowers you to lie flat on your back on the throne. Strong clawed hands work quickly to pull off your gear and clothing, dropping it all on the ground, and soon you're lying naked before the big bear. 'Good,' he growls, running his fingers down your [bodytype of player] form until he reaches your crotch and [if player is female]brushes over your nether lips[else]pushes your legs apart a little bit to brush over your pucker[end if].";
 			WaitLineBreak;
-			say "     Rising to his impressively tall height before you, Santa Claws impatiently undoes the belt of his suit and the buttons on the red coat. He has it off in a second after that, revealing a wide chest with snow-white fur, which at the same time is well-padded against the cold as well as being pretty muscular. The pants are next to go, being pushed - no almost ripped - off of his legs by the polar bear's clawed hands, which leaves him standing in his full naked glory in the middle of the Christmas Village. One look down at his hips shows you that Santa is more than ready to give you your present. His thick shaft is standing fully erect and pointing at your crotch. A little murmur from the side suddenly makes you realize that the two of you are far from alone. There is a whole crowd of elves gathered all around, watching with eager expressions, many of them murmuring to each other and some stroking themselves.";
+			say "     Rising to his impressively tall height before you, Santa Claws impatiently undoes the belt of his suit and the buttons on the red coat. He has it off in a second after that, revealing a wide chest with snow-white fur, which at the same time is well-padded against the cold as well as being pretty muscular. The pants are next to go, being pushed - no, almost ripped - off of his legs by the polar bear's clawed hands, which leaves him standing in his full naked glory in the middle of the Christmas Village. One look down at his hips shows you that Santa is more than ready to give you your present. His thick shaft is standing fully erect and pointing at your crotch. A little murmur from the side suddenly makes you realize that the two of you are far from alone. There is a whole crowd of elves gathered all around, watching with eager expressions, many of them murmuring to each other and some stroking themselves.";
 			if player is female:
 				say "     Dropping down on all fours, the sexy polar bear pushes his muzzle between your legs, taking great huffs of your aroused scent and lapping at your sex. It feels pretty nice to have that warm, wet tongue brush over your nether lips, then push in between them for a moment before moving further up to stimulate your clit. After a few more moments of oral fun, the snow-white male raises his head and looks at you. His eyes almost glow with lust as untamed feral needs take over the human mind in the same body, and with a roar, the mighty beast rears up and mounts you. Soft, white fur brushes against your naked body as the at least 1500 pound ursine covers you completely, holding himself up with strong arms as his hips position the thick cock between his legs at your opening. Helplessly lying under such a massive partner might frighten others, but you, as horny and wound up as you are, just take it in stride, even eagerly meeting his muzzle in a sloppy kiss as the bear licks your face.";
 				WaitLineBreak;
@@ -241,7 +246,7 @@ to say SantaTalk7: [Suit Quest info]
 		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay leads to the polar bear waving over a nearby elf with fiery red hair and a goatee. 'Okay Walter, please tell our friend here what you will need.' The diminutive man standing before you looks young, in the ageless fashion that all of the elves inherently carry, but the rich tone and confidence in his voice tell a tale of a well-experienced person. He clears his throat and smiles at you, then says, 'Mostly, it is just the proper materials that we need. We elves aren't that big either, so a single bolt of fabric should do. Something nice, you know. Worsted wool, cashmere, maybe even silk. And please watch the thread count. Any good suit needs good fabric. Or, if you have trouble finding finished fabrics out there, we could even do with just thread. A loom isn't hard to put together or use.'";
 		say "     Thanking the elf and watching him get back to what he was doing before, Santa adds, 'I know that something this specific will be hard to find out there, so I asked around among the recent visitors to the Christmas Village. Maybe you could get fabric or thread at a [bold type]swap meet[roman type]. From what I was told, there should be a somewhat regular one in a [bold type]warehouse[roman type] near the harbor. Though if you do go there... take care. Those meetings are meant to be neutral ground, but one never knows exactly what will happen in these uncertain times.";
 		now thirst of Jay is 2; [initial info given]
-		now Harbor Swap Meet is not resolved;
+		now Harbor Swap Meet is active;
 	else if thirst of Jay > 1 and thirst of Jay < 5:
 		say "     Coming back to Santa and bringing up the topic of getting a business suit for Jay again, he asks, 'Have you found a source for fabric or thread yet? As Walter said, they do need at least fabric, or enough thread to make fabric, for that suit. From what I was told, there should be a somewhat regular [bold type]swap meet[roman type] in a [bold type]warehouse[roman type] near the harbor. Though if you do go there... take care. Those meetings are meant to be neutral ground, but one never knows exactly what will happen in these uncertain times.";
 		[Swap meet event in the file Jay.i7x]
@@ -257,12 +262,12 @@ Instead of fucking the Santa Claws:
 
 Section 4 - Infections
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Polar Bear";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -310,15 +315,16 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;        [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;        [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Christmas Elf Female";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -366,16 +372,17 @@ When Play begins:
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Christmas Elf Male";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -423,8 +430,9 @@ When Play begins:
 	now magic entry is true;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;      [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0;      [ 0 = Up at all times; 1 = Nocturnal (night encounters only); 2 = Diurnal (day encounters only) ]
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Santa Claws ends here.

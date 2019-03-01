@@ -13,7 +13,7 @@ when play begins:
 
 to say fennecdesc:
 	setmongender 3; [creature is male]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
@@ -28,7 +28,7 @@ to say losetofennec:
 		say "     The fennec fox yips happily as you stop resisting and let him push you to the ground. ";
 	else:
 		say "     The fennec fox yips triumphantly as he knocks you to the ground and you're too weak to keep resisting him. ";
-	say "     The small fox pounces atop you, running his paws over your body and quickly pulling off your gear. This he intersperses with playful gropes, caresses and pinches that work to get you excited. Slipping a paw between your legs, he ";
+	say "The small fox pounces atop you, running his paws over your body and quickly pulling off your gear. This he intersperses with playful gropes, caresses and pinches that work to get you excited. Slipping a paw between your legs, he ";
 	if player is herm:
 		say "fondles your cock and balls before sliding further to finger your pussy, eliciting a moan in response.";
 		if a random chance of 5 in 7 succeeds:
@@ -61,18 +61,18 @@ to say losetofennec:
 
 to say fennecvag:
 	if a random chance of 1 in 2 succeeds:
-		say "     Once he's satisfied he's gotten you sufficiently worked up, the little guy moves atop you, pressing his vulpine cock to your wet folds. He pushes it into you with a high-pitched yip and starts pumping into you hard and fast[if breast size of player > 0]. He nuzzles and licks at your bosom, playfully nipping at your nipples as he fucks you[end if]. As the eager little fellow pounds away at you, you can't help but grow increasingly eager to have him continue[if cunt width of player < 4], even pushing your hips firmly upwards as he tries to knot with you[else], eagerly pushing your hips upwards to take his knot into your wide cunt[end if]. Once tied with you, the fox works his hips in fast, short strokes as his cock pulses inside you, filling you with spurt after spurt of his virile seed. After his knot goes down, the cute fox gives you a few playful nips and heads off with a happy bounce in his step.[impregchance]";
+		say "     Once he's satisfied he's gotten you sufficiently worked up, the little guy moves atop you, pressing his vulpine cock to your wet folds. He pushes it into you with a high-pitched yip and starts pumping into you hard and fast[if breasts of player > 0 and breast size of player > 0]. He nuzzles and licks at your bosom, playfully nipping at your nipples as he fucks you[end if]. As the eager little fellow pounds away at you, you can't help but grow increasingly eager to have him continue[if cunt width of player < 4], even pushing your hips firmly upwards as he tries to knot with you[else], eagerly pushing your hips upwards to take his knot into your wide cunt[end if]. Once tied with you, the fox works his hips in fast, short strokes as his cock pulses inside you, filling you with spurt after spurt of his virile seed. After his knot goes down, the cute fox gives you a few playful nips and heads off with a happy bounce in his step.[impregchance]";
 	else:
 		say "     After getting you good and worked up, he rolls you over onto all fours. Eager for sex at this point, you don't resist and even wiggle your rear tantalizingly for the desert vulpine. He yips excitedly and mounts you, his cock finding its way into your pussy after a few seeking thrusts. You moan as his shapely fox cock slides into you, hot and throbbing in the slick grip of your folds.";
-		say "     As the lustful fox humps away energetically, he nips at your neck, shoulders and ears[if breast size of player > 0]. A paw finds its way to your breast, groping your tit and tweaking your nipple[end if]. Soon you're moaning and yipping beneath him as he fucks your juicy cunt with that wonderful cock of his. Oh, it's just what your body needs. You grind back into each thrust he makes and he's able to drive his knot into you, tying with you. His hips pound with short, fast strokes even as you orgasm, clenching down all the tighter around that swollen bulge of fox flesh. He doesn't last much longer past that, giving a sharp yip as he climaxes, filling you with spurt after spurt of his virile seed. Once his knot goes down, the cute-eared fox gives you a tongue-filled kiss before heading off with a proud swagger.[impregchance]";
+		say "     As the lustful fox humps away energetically, he nips at your neck, shoulders and ears[if breasts of player > 0 and breast size of player > 0]. A paw finds its way to your breast, groping your tit and tweaking your nipple[end if]. Soon you're moaning and yipping beneath him as he fucks your juicy cunt with that wonderful cock of his. Oh, it's just what your body needs. You grind back into each thrust he makes and he's able to drive his knot into you, tying with you. His hips pound with short, fast strokes even as you orgasm, clenching down all the tighter around that swollen bulge of fox flesh. He doesn't last much longer past that, giving a sharp yip as he climaxes, filling you with spurt after spurt of his virile seed. Once his knot goes down, the cute-eared fox gives you a tongue-filled kiss before heading off with a proud swagger.[impregchance]";
 
 
 to say fennec69:
-	say "     Once he's satisfied he's gotten you sufficiently worked up, the little guy moves himself atop you, bringing his throbbing cock to your face. Feeling the fox's tongue slide across your glans, you moan and respond by guiding his cock into your mouth before you can consider doing otherwise. His vulpine shaft throbs in your mouth, leaking precum onto your tongue. The exciting, exotic taste gets you thirsty for more and you suckle eagerly. His muzzle and tongue tend to you in return, setting you to thrusting gently [if cock length of player < 24]into your impromptu lover's mouth[else]as the smaller fennec tries his best to lick over the entirety of your massive [cock of player] erection[end if]. You do your best to please one another until finally you cannot hold back and you blast your hot load into the fennec's open muzzle[if cock width of player > 40]. Your excessive output is too much for the thirsty fox, eventually overflowing from his mouth after bloating his belly[else if cock width of player > 20]. The thirsty fox gulps down all he can get, accepting it all even to the point that it causes his belly to swell[else]. The thirsty fox gulps down all he can get, eagerly lapping your cock for all the cum you'll give[end if]. After getting his delicious drink, he resumes thrusting into your mouth, returning the favor with a creamy load of fennec cum. savoring its exotic taste, you swallow it down without thinking. The cute fox, feeling much better after his refreshing drink, heads off with a happy bounce in his step.";
+	say "     Once he's satisfied he's gotten you sufficiently worked up, the little guy moves himself atop you, bringing his throbbing cock to your face. Feeling the fox's tongue slide across your glans, you moan and respond by guiding his cock into your mouth before you can consider doing otherwise. His vulpine shaft throbs in your mouth, leaking precum onto your tongue. The exciting, exotic taste gets you thirsty for more and you suckle eagerly. His muzzle and tongue tend to you in return, setting you to thrusting gently [if cock length of player < 24]into your impromptu lover's mouth[else]as the smaller fennec tries his best to lick over the entirety of your massive [cock of player] erection[end if]. You do your best to please one another until finally you cannot hold back and you blast your hot load into the fennec's open muzzle[if cock width of player > 40]. Your excessive output is too much for the thirsty fox, eventually overflowing from his mouth after bloating his belly[else if cock width of player > 20]. The thirsty fox gulps down all he can get, accepting it all even to the point that it causes his belly to swell[else]. The thirsty fox gulps down all he can get, eagerly lapping your cock for all the cum you'll give[end if]. After getting his delicious drink, he resumes thrusting into your mouth, returning the favor with a creamy load of fennec cum. Savoring its exotic taste, you swallow it down without thinking. The cute fox, feeling much better after his refreshing drink, heads off with a happy bounce in his step.";
 
 
 to say fennecoral:
-	if breast size of player > 1 and a random chance of 2 in 5 succeeds:
+	if breast size of player > 0 and a random chance of 2 in 5 succeeds:
 		say "     Once he's satisfied he's gotten you sufficiently worked up, the little guy moves atop you, pressing his cock between your [breast size desc of player] tits. He teases and rubs your nipples as he holds your breasts around his cock, thrusting eagerly between your mounds. His precum dribbles between them, helping to give a smooth, slick passage for his erection. His playful fingers at your nipples has you moaning [if breast size of player < 10]and you lean your head forward to lick at his shaft at the end of each thrust[else]as he plows into the soft embrace of your huge melons[end if]. As he's about to finish up, he releases your breasts and pumps his own cock quickly, spraying his hot load across your bosom and face. Quite worked up by now, you lick up as much of it as you can get, savoring its exotic flavor. As you clean yourself up, the fox heads on his way, seeming quite pleased with himself.";
 	else:
 		say "     Standing beside you, the fennec guides your head to his groin. Pressing his cock to your face, you take in his exotic scent and lick your lips, brushing against his shaft at the same time. After the first lick, you find yourself wanting more and give him another lick, followed by another. Soon, you've got the vulpine penis in your mouth and you're bobbing your head eagerly. He yips happily as you give him a blow job, rubbing his paws over your head. You work your tongue, palate and throat over the pulsing shaft, giving his knot a gentle squeeze in your hand as it swells up. This finally pushes him over the edge and he pumps his hot load into your mouth. Finding your mouth filled with his exotic flavor, you eagerly gulp it down and continue sucking him off to get all you can. Once his balls are drained, he gives your head a friendly pat and heads on his way, leaving you to tend to yourself.";
@@ -80,7 +80,7 @@ to say fennecoral:
 
 to say fennecanal:
 	if a random chance of 1 in 2 succeeds:
-		say "     Once he's satisfied he's gotten you sufficiently worked up, the little guy pushes you over onto all fours and climbs atop you, pressing his vulpine cock to your pucker. He pushes it into you with a high-pitched yip and starts pumping into you hard and fast[if breast size of player > 0]. He reaches around to grope your bosom, playfully teasing your nipples as he fucks your back door[end if]. As the eager little fellow pounds away at you, you can't help but grow increasingly eager to have him continue[if scalevalue of player < 4], even pushing your hips firmly back as he tries to knot with you[else], eagerly pushing your hips back to take his knot into your larger body[end if]. Once tied with you, the fox works his hips in fast, short strokes as his cock pulses inside you, filling you with spurt after spurt of his virile seed. After his knot goes down, the cute fox gives you a few playful nips and heads off with a happy bounce in his step.[mimpregchance]";
+		say "     Once he's satisfied he's gotten you sufficiently worked up, the little guy pushes you over onto all fours and climbs atop you, pressing his vulpine cock to your pucker. He pushes it into you with a high-pitched yip and starts pumping into you hard and fast[if breasts of player > 0 and breast size of player > 0]. He reaches around to grope your bosom, playfully teasing your nipples as he fucks your back door[end if]. As the eager little fellow pounds away at you, you can't help but grow increasingly eager to have him continue[if scalevalue of player < 4], even pushing your hips firmly back as he tries to knot with you[else], eagerly pushing your hips back to take his knot into your larger body[end if]. Once tied with you, the fox works his hips in fast, short strokes as his cock pulses inside you, filling you with spurt after spurt of his virile seed. After his knot goes down, the cute fox gives you a few playful nips and heads off with a happy bounce in his step.[mimpregchance]";
 	else:
 		say "     After getting you good and worked up, he takes your legs and raises them up, raising your rear and putting your waiting pucker on display. Eager for sex at this point, you don't resist and even help hold your hips raised by supporting them with your hands. He yips excitedly and moves into position, his cock finding its way into your exposed anus after a few seeking thrusts. You moan as his shapely fox cock slides into you, hot and throbbing in the snug grip of your asshole.";
 		say "     As the lustful fox humps away energetically, you can't help but get increasingly aroused. The fox creature becomes beautiful to you as you watch him fuck you so well. His slender build, his soft fur, his cute ears, and especially that wonderful cock of his. Oh, it's just what your body needs. Soon you're moaning and yipping beneath him as he fucks your back door, your hips squeezing and wiggling as best you can from your position as he seeks to drive his knot into you. When he manages to tie with you, you cry out [if player is male]in orgasm[else]as a rush of unfocused physical pleasure washes over you[end if], your rectal walls clenching down all the tighter around that swollen bulge of fox flesh. He doesn't last much longer past that, giving a sharp yip as he climaxes, painting your bowels with spurt after spurt of his virile seed. Once his knot goes down, the cute-eared fox gives you a tongue-filled kiss before heading off with a proud swagger.[mimpregchance]";
@@ -139,12 +139,12 @@ to say fennecattack:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Fennec"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -192,8 +192,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Table of Game Objects (continued)
@@ -208,8 +209,8 @@ to say drinkfennecsemen:
 	say "     Following the strange urge you have, you slam back the bottle of fennec semen you've been saving. It has an exotic taste to it that is pleasantly exciting.";
 	increase libido of player by 8;
 	[puts Fennec as lead monster for target gender adjustment]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Fennec":
 			now monster is y;
 			break;

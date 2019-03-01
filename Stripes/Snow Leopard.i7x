@@ -12,7 +12,7 @@ when play begins:
 
 to say snowmeowdesc:
 	setmongender 3; [creature is male]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if "Female Preferred" is listed in feats of player:
 		now sex entry is "Female";
 	else if "Herm Preferred" is listed in feats of player:
@@ -34,7 +34,7 @@ to say losetosnowmeow:
 	else if ( bodyname of player is "Snow Leopard" or bodyname of player is "Panther Taur" ):
 		if breast size of player > 2 and lastmilking - turns > 7:
 			say "     Taking in your desirable, feline form, the sexy snowmeow licks his lips as he gazes upon your lovely bosom. When a few playful pinches to your nipples brings forth some milk, his eyes widen with lustful thirst at them and has his lips around them almost instantly. You moan and start to purr softly as his fingers run over your body and move to tease your pussy. He strokes your wet folds and spreads them before plunging his cock into you, making your body tremble at the sudden but pleasurable intrusion.";
-			say "     He pounds away at your pussy as he nurses from your bosom, drinking down your rich, feline milk to slake his thirst while exciting his lusts further. His raspy tongue and sharp teeth are used, but skillfully, to tease and excite you further. You are lost in a lustful haze of feeding this impressive male all you can give. ";
+			say "     He pounds away at your pussy as he nurses from your bosom, drinking down your rich, feline milk to slake his thirst while exciting his lusts further. His raspy tongue and sharp teeth are used, but skillfully, to tease and excite you further. You are lost in a lustful haze of feeding this impressive male all you can give.";
 			if breast size of player > 8 or breasts of player > 4:
 				say "     Your ample bosom provides much milk to the thirsty feline, and he climaxes several times in you as reward, pumping his thick seed into you again and again. You can feel his hot cum spray inside you and flow up into your waiting womb, causing your belly to swell with the very volume his virile balls yield.[if a random chance of 1 in 2 succeeds][impregchance][end if][impregchance]"; [additional 50% chance of impreg]
 			else:
@@ -156,12 +156,12 @@ to say snowmeow_vsex04:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Snow Leopard"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -209,8 +209,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 An everyturn rule:

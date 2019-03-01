@@ -4,7 +4,7 @@ Version 1 of Dracovixentaur by Stripes begins here.
 
 Section 1 - Monster Responses
 
-DVtaurcatch is a number that varies. DVtaurcatch is normally -40.
+DVtaurcatch is a number that varies. DVtaurcatch is usually -40.
 
 when play begins:
 	add { "Dracovixentaur" } to infections of hermaphrodite;
@@ -18,7 +18,7 @@ when play begins:
 to say DVtaurdesc:
 	setmongender 5; [creature is herm]
 	say "     Before you is a hybrid taur creature, definitely one of Sam's many descendants. The creature's draconic head has a slender, pointed muzzle with a foxish look on it. Its lavender scales change to lilac fur at the back of its head as they approach the base of the ivory horns which jut from the back of its head. Aside from the pair at the top, there are three smaller horns on each side. Behind those are a pair of vulpine ears and flowing hair, both lilac in color. Its upper body is generally human in shape, but covered in more lilac fur over the shoulders and the front and in lavender scales protecting the rest. It is quite curvaceous, with an ample bosom, slender waist and round hips blending into its tauric lower half. But you can also see hidden strength in it as well, toned muscles and abs under those scales and fur.";
-	say "     Its lower body is a similar mix of dragon and fox, a sleek but powerful beast with shapely limbs and a powerful frame to support its weight. Similarly covered in a mix of scales and fur, most of its body is armored in scales with fur at its underside and covering its taloned, vulpine paws. Atop the back of its tauric body are a pair of draconic wings that are folded alongside its sides at the moment. It's fluffy fox tail ends in a spaded tip, warning you there's a powerful, draconic tail lurking beneath that fluff. Beneath that tail is her damp pussy and plump sheath and balls, the arousing scent of which is being wafted around by her fluffy tail. Its ridged cock has started to emerge from that furry sheath, growing hard in anticipation of some lustful fun with its current prey. Along her underbelly, she has three pairs of smaller breasts with perky, lavender nipples.";
+	say "     Its lower body is a similar mix of dragon and fox, a sleek but powerful beast with shapely limbs and a powerful frame to support its weight. Similarly covered in a mix of scales and fur, most of its body is armored in scales with fur at its underside and covering its taloned, vulpine paws. Atop the back of its tauric body are a pair of draconic wings that are folded alongside its sides at the moment. Its fluffy fox tail ends in a spaded tip, warning you there's a powerful, draconic tail lurking beneath that fluff. Beneath that tail is her damp pussy and plump sheath and balls, the arousing scent of which is being wafted around by her fluffy tail. Its ridged cock has started to emerge from that furry sheath, growing hard in anticipation of some lustful fun with its current prey. Along her underbelly, she has three pairs of smaller breasts with perky, lavender nipples.";
 
 
 to say losetoDVtaur0:
@@ -84,9 +84,9 @@ to say beattheDVtaur:
 	if HP of Sam is 15:
 		say "     You manage to knock Sam down, having beaten the fight out of him.";
 	else if a random number between 1 and 100 < DVtaurcatch and ( player is not neuter):
-		say "     The beaten dracovixentaur backs away from you, stumbling somewhat from her injuries. Like the others, she prepares to release a blast of flame to allow her escape, but you rush forward and clamp her muzzle shut in an arm lock. She thrashes briefly before exhaling a cloud of smoke as the flames fail. You press her to the ground and pin down her wings. With her caught, you consider having some fun with her. ";
+		say "     The beaten dracovixentaur backs away from you, stumbling somewhat from her injuries. Like the others, she prepares to release a blast of flame to allow her escape, but you rush forward and clamp her muzzle shut in an arm lock. She thrashes briefly before exhaling a cloud of smoke as the flames fail. You press her to the ground and pin down her wings. With her caught, you consider having some fun with her.";
 		if player is male:
-			say "     You could [link]fuck her (1)[as]1[end link], [link]ride her (2}[as]2[end link], get a [link]blow job (3)[as]3[end link] or just [link]let her go (0)[as]0[end link].";
+			say "     You could [link]fuck her (1)[as]1[end link], [link]ride her (2)[as]2[end link], get a [link]blow job (3)[as]3[end link] or just [link]let her go (0)[as]0[end link].";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 3:
 				say "Choice? (0-3)>";
@@ -100,7 +100,7 @@ to say beattheDVtaur:
 			else:
 				say "[beatDVtaur0]";
 		else:
-			say "     You could [link]ride her (1}[as]1[end link], get [link]eaten out (2)[as]2[end link] or just [link]let her go (0)[as]0[end link].";
+			say "     You could [link]ride her (1)[as]1[end link], get [link]eaten out (2)[as]2[end link] or just [link]let her go (0)[as]0[end link].";
 			now calcnumber is -1;
 			while calcnumber < 0 or calcnumber > 2:
 				say "Choice? (0-2)>";
@@ -130,7 +130,7 @@ to say beatDVtaur3:
 	say "     Her tongue slides along your shaft and out of her sucking mouth to play across your balls[if player is female]. It delves further back to lap across your pussy a few times before returning to the task at hand[end if]. Soon enough she's lapping over your erection and balls, growing more eager to service the victor. She fellates you with considerable skill, her talented muzzle is silky smooth. Her agile tongue, soft palate and gripping throat feel wonderful as well. The whole of her muzzle feels like a hot cunt around your cock with the added pleasure of her delightful tongue. Clearly designed for it by the nanites, these sexy dracovixens give a wonderful blowjob and you eagerly take advantage of the opportunity to enjoy it. And from the wet moans and muffled yips of pleasure from the taur's stuffed muzzle, she's certainly savoring it as well. You thrust into her muzzle, driving your [cock size desc of player] [cock of player] cock into her mouth harder and faster until you finally cum, feeding the horny hybrid taur your cum[if cock width of player > 40] until she's stuffed full and bloated with it[else] and leaving her tummy a little rounded from it all[end if]. The dracovixentaur eagerly licks you clean before releasing your spent shaft. You give her rear a playful swat and send her on her way.";
 
 to say beatDVtaur4:
-	say "     Keeping a grip on the hybrid, you move around in front of her. Grabbing her head by the horns, you push her face between your legs so her muzzle's squarely at your pussy. Finding herself face to cunt with you, she stops resisting and rumbles happily. '[one of]Mmm... to the victor go the spoils![or]Let me take care of that for you,[or]I'm sorry for being such a naughty girl earlier. Let me make it up to you,[or]Ooo! This looks serious! Lemme kiss it and make it aaallllll better,[at random]' she says excitedly. And with that, the purple hybrid sets to work licking and lapping at your cunt.";
+	say "     Keeping a grip on the hybrid, you move around in front of her. Grabbing her head by the horns, you push her face between your legs so her muzzle's squarely at your pussy. Finding herself face to cunt with you, she stops resisting and rumbles happily. [one of]'Mmm... to the victor go the spoils!' [or]'Let me take care of that for you,' [or]'I'm sorry for being such a naughty girl earlier. Let me make it up to you,' [or]'Ooo! This looks serious! Lemme kiss it and make it aaallllll better,' [at random]she says excitedly. And with that, the purple hybrid sets to work licking and lapping at your cunt.";
 	say "     Her tongue is quite adept at the task, working hard to please you and able to reach so many delightfully sensitive spots inside you with ease. Despite your attempts to remain quiet, you can't help but moan and cry out as she expertly eats you out. She eagerly laps up your flowing juices as she works that flexible appendage around inside you. Feeling no need to keep holding her in place, you release her horns and run your hands over her ears and through her hair. After a few small orgasms, she works you up to a large, crashing one that leaves your head spinning as her tongue goes wild inside your spasming vagina. When you finally manage to push the eager dracovixen's muzzle back, her tongue pops out with a wet slurp. She grins at you, licks her muzzle and flies off with a happy giggle.";
 
 to say beatDVtaur0:
@@ -139,12 +139,12 @@ to say beatDVtaur0:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Dracovixentaur"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -159,7 +159,7 @@ When Play begins:
 	now tail entry is "You have a fluffy fox tail that hides a powerfully draconic tail under its thick fur, with only the spaded tip poking out to reveal its hidden nature.";
 	now cock entry is "[one of]ridged[or]draconic[or]pointed[or]tapered[or]knotted[or]sheathed[as decreasingly likely outcomes]";
 	now face change entry is "you feel a powerful pounding at the top of your skull as your face grows flush with heat. As this grows worse, your face pushes outward and changes with several snaps and pops. A draconic muzzle forms as the pain in your skull suddenly fades as large horns push forth from the back of your head. Fox ears and long, lilac hair form behind those";
-	now body change entry is "your body shifts and bends unnaturally into two sections. The upper half reforms into an feminine body with sexy curves and a fit physique. The lower section becomes that of a four-legged creature with a powerful frame and taloned paws for feet. Your hands are a cross between these and normal hands. Finding yourself with a dracovixentaur body like Sam's, your mind quickly adjusts to compensate for your new quadrupedal form";
+	now body change entry is "your body shifts and bends unnaturally into two sections. The upper half reforms into a feminine body with sexy curves and a fit physique. The lower section becomes that of a four-legged creature with a powerful frame and taloned paws for feet. Your hands are a cross between these and normal hands. Finding yourself with a dracovixentaur body like Sam's, your mind quickly adjusts to compensate for your new quadrupedal form";
 	now skin change entry is "your skin grows thick and hard in places, forming heavy blue scales across limbs, back and sides. Across your chest[if bodyname of player is listed in infections of Taurlist], underbelly[end if], shoulders, hands and feet";
 	now ass change entry is "strange twinges run up and down your spine. Each time these tingles run down, they seem to travel further and further down until the growth of your new, dracovulpine tail is complete";
 	now cock change entry is "pulses and throbs with need. As you watch, it changes shape and becomes more tapered and gains a pointed, conical glans for pushing into its prey. Ridges form along the length of your cock for added stimulation as a knot swells at its base. Below your knot, your flesh reshapes itself to form a furry sheath to house your maleness. You find yourself looking forward to putting your new tool to use";
@@ -173,7 +173,7 @@ When Play begins:
 	now HP entry is 84; [ The monster's starting HP. ]
 	now lev entry is 10; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 9; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 16; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 8; [ Cock width, more commonly used for ball size. ]
@@ -192,8 +192,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "DVtaur"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Alt Combat
@@ -203,7 +204,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 "DVtaur"	firebreath rule	--	--	DVtaurpounce rule	20	--	--	--	DVtaurscent rule	--
 
 this is the DVtaurpounce rule:		[double-damage pouncing]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let rangenum be ( 80 - ( peppereyes * 4 ) );
 	let dam be ( ( wdam entry times a random number from rangenum to 120 ) / 57 ); [+75% damage]
 	if hardmode is true and a random chance of 1 in ( 10 + peppereyes ) succeeds:
@@ -226,7 +227,7 @@ this is the DVtaurpounce rule:		[double-damage pouncing]
 
 
 this is the DVtaurscent rule:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let playernum be Stamina of player + level of player + plmindbonus;
 	if face mask is equipped, increase playernum by 4;
 	let vixennum be cha entry + ( lev entry / 2 ) + monmindbonus;
@@ -260,7 +261,7 @@ when play ends:
 				say "***Succumb w/Sam as Vixentaur. Should not be possible.";
 			else if HP of Sam >= 50 and HP of Sam <= 69:
 				if player is herm:
-					say "     As you lose your humanity to your increasingly dracovixentaur nature, you feel your lustful drive to breed grows stronger. You and Sam pair up as a couple of increasingly feral hybrids. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the ibrary into her personal lair. You breed with the dracovixentaur often, swapping roles as top or bottom to ensure you're both well bred. You do make forays with her out into the city often, siring plenty of offspring of your own in the many sexy females and herms you find out there. While the many offspring you both have are a collection of dragontaurs, vixentaurs and dracovixentaurs, the number of dracovixentaurs in the area grow to be the most frequent of the three.";
+					say "     As you lose your humanity to your increasingly dracovixentaur nature, you feel your lustful drive to breed grows stronger. You and Sam pair up as a couple of increasingly feral hybrids. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal lair. You breed with the dracovixentaur often, swapping roles as top or bottom to ensure you're both well bred. You do make forays with her out into the city often, siring plenty of offspring of your own in the many sexy females and herms you find out there. While the many offspring you both have are a collection of dragontaurs, vixentaurs and dracovixentaurs, the number of dracovixentaurs in the area grow to be the most frequent of the three.";
 				else if player is female:
 					say "     As you lose your humanity to your increasingly dracovixentaur nature, you feel your lustful drive to breed grows stronger. You and Sam pair up as a couple of increasingly feral hybrids. While Sam does maintain more of her old self than you do in the end, she's more than happy to stay in the city and turn the library into her personal lair. You are bred by the dracovixentaur often, filling you plump with numerous eggs and/or kits most of the time. You do make forays with her out into the city often, getting mounted by other males while Sam partakes in the females. While the many offspring you both have are a collection of dragontaurs, vixentaurs and dracovixentaurs, the number of dracovixentaurs in the area grow to be the most frequent of the three.";
 				else if player is male:
@@ -270,14 +271,14 @@ when play ends:
 		else:
 			if HP of Sam >= 10 and HP of Sam <= 29:
 				say "***Survive w/Sam as Dragontaur. Should not be possible.";
-				say "     You are able, through the strong connection Sam shares with you, to convince the dragontaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in his time in the city, [if hospquest is 13 and HP of doctor matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of his rather enthusiastic work.";
+				say "     You are able, through the strong connection Sam shares with you, to convince the dragontaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in his time in the city, [if hospquest is 13 and HP of Doctor Matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of his rather enthusiastic work.";
 				say "     You and Sam continue his work, entering other infected hot spots to collect samples and classify the creatures within, all while getting to enjoy their myriad variety. Your collective strength and experience make you able to deal with most anything you find while exploring. And if clutches of dragontaurs, litters of vixentaurs and broods of dracovixentaurs start popping up in those areas as well, then all the better[if player is female]. As Sam's mate, you give birth of many offspring as well, helping the spread of the strong dragontaurs, sexy vixentaurs and herm dracovixentaurs wherever you go[end if].";
 			else if HP of Sam >= 30 and HP of Sam <= 49:
 				say "***Survive w/Sam as Vixentaur. Should not be possible.";
-				say "     You are able, through the strong connection Sam shares with you, to convince the vixentaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in her time in the city, [if hospquest is 13 and HP of doctor matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of her rather enthusiastic work.";
+				say "     You are able, through the strong connection Sam shares with you, to convince the vixentaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in her time in the city, [if hospquest is 13 and HP of Doctor Matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of her rather enthusiastic work.";
 				say "     You and Sam continue her work, entering other infected hot spots to collect samples and classify the creatures within, all while getting to enjoy their myriad variety. Your collective strength and experience make you able to deal with most anything you find while exploring. And if clutches of dragontaurs, litters of vixentaurs and broods of dracovixentaurs start popping up in those areas as well, then all the better[if player is male]. As Sam's mate, you enjoy siring several offspring in her as well, helping the spread of the strong dragontaurs, sexy vixentaurs and herm dracovixentaurs wherever you go[end if].";
 			else if HP of Sam >= 50 and HP of Sam <= 69:
-				say "     You are able, through the strong connection Sam shares with you, to convince the dracovixentaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in her time in the city, [if hospquest is 13 and HP of doctor matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of her rather enthusiastic work.";
+				say "     You are able, through the strong connection Sam shares with you, to convince the dracovixentaur to leave the city with you once the military forces move in to extract the survivors. There is some interest over your unusual forms, but Sam's university's connections to RSX keep you from too much unwanted scrutiny. There is also much interest over the data Sam's managed to collect in her time in the city, [if hospquest is 13 and HP of Doctor Matt >= 12]which you do arrange to quietly share with Dr. Matt to assist in his research efforts[else if hospquest > 13]which you do manage to slip a copy of to Dr. Mouse before departing[else]but RSX's pull is able to keep it from being confiscated[end if]. The reward you earn for this is quite sizable, more than Sam had originally been anticipating, having gained Rick's share and more due to the exceptional success of her rather enthusiastic work.";
 				say "     You and Sam continue her work, entering other infected hot spots to collect samples and classify the creatures within, all while getting to enjoy their myriad variety. Your collective strength and experience make you able to deal with most anything you find while exploring. And if clutches of dragontaurs, litters of vixentaurs and broods of dracovixentaurs start popping up in those areas as well, then all the better[if player is herm]. As Sam's mate, you enjoy siring several offspring in her as well as having her breed you with them, helping the spread of the strong dragontaurs, sexy vixentaurs and herm dracovixentaurs wherever you go[else if player is male]. As Sam's mate, you enjoy siring several clutches and litters in her as well, helping the spread of the strong dragontaurs, sexy vixentaurs and herm dracovixentaurs wherever you go[else if player is female]. As Sam's mate, you enjoy getting bred with many of her offspring as well, helping the spread of the strong dragontaurs, sexy vixentaurs and herm dracovixentaurs wherever you go[end if].";
 
 

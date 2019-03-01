@@ -30,9 +30,9 @@ to say chinvic:
 		say " all over you, the creature eventually forces you onto your back, exposing your [cock size desc of player] dick[smn] into the open air. Squeezing and slowly pumping [if cocks of player > 2]two of them[else if cocks of player is 2]both of them[else]it[end if], her influence eventually [if HP of player < 1]forces[else]drives[end if] you hard before the rodent's eager gaze. Once you're ready for her, she repositions herself over [if cocks of player > 1]one of your throbbing organs[else]your throbbing organ[end if] before slowly sinking its head between her supple folds, squeaking lowly in lewd approval.";
 		say "     '[if chindem is false][one of]Tssk, tcht[or]Tcht, ssk[or]Ksk, tsk[at random][else][one of]A-ah, I needed this[or]O-h, I n-need more[or]F-feel's so good[at random][end if]...' Tightly embracing you, you're left to feel her immensely soft fur's caress against your [bodytype of player] form as she takes her time to acclimate to your tool[if cock length of player > 8], no doubt a fair bit strained by its size[end if]. Ready to proceed, she gradually builds up a motion of riding against your cock, the air quickly filled with the loud sound of her constant squeaking. Powerful hind legs [if scalevalue of player < 4]pinning you down[else]pressing against you[end if], the beast's supple teats grind firmly against you as she rolls ever-closer to ecstasy.";
 		if libido of player > 30:
-			say "     Unable to [if HP of player < 1]resist[else]hold back[end if] any longer, you finally cry out, pumping your [cum load size of player] load into the rodent's tight hole[if cocks of player > 2], your exposed, unattended dicks staining your torso and hers[else if cocks of player is 2], your exposed, unattended dick staining your torso and hers[end if], and she's quick to respond with a gleeful screech, [if cockname of player is listed in infections of knotlist]tieing with[else]hilting[end if] your tool, its squeezing passage milking you of every last drop[if cock width of player > 18]. However, quickly underestimating her capacity, she eventually forced free of your cock, the remaining load spilling all over to make a substantial mess[end if].";
+			say "     Unable to [if HP of player < 1]resist[else]hold back[end if] any longer, you finally cry out, pumping your [cum load size of player] load into the rodent's tight hole[if cocks of player > 2], your exposed, unattended dicks staining your torso and hers[else if cocks of player is 2], your exposed, unattended dick staining your torso and hers[end if], and she's quick to respond with a gleeful screech, [if player is knotted]tieing with[else]hilting[end if] your tool, its squeezing passage milking you of every last drop[if cock width of player > 18]. However, quickly underestimating her capacity, she eventually forced free of your cock, the remaining load spilling all over to make a substantial mess[end if].";
 		else:
-			say "     It's but a few short moments before she cries out in a gleeful screech, [if cockname of player is listed in infections of knotlist]tieing with[else]hilting[end if] your tool, its squeezing passage milking you of every last drop. Unable to [if HP of player < 1]resist[else]hold back[end if] any longer, this act is more than enough to make you cry out, pumping your [cum load size of player] load into the rodent's greedy hole[if cocks of player > 2], your exposed, unattended dicks staining your torso and hers[else if cocks of player is 2], your exposed, unattended dick staining your torso and hers[end if][if cock width of player > 18]. Quickly underestimating her capacity, she eventually forced free of your cock, the remaining load spilling all over to make a substantial mess[end if].";
+			say "     It's but a few short moments before she cries out in a gleeful screech, [if player is knotted]tieing with[else]hilting[end if] your tool, its squeezing passage milking you of every last drop. Unable to [if HP of player < 1]resist[else]hold back[end if] any longer, this act is more than enough to make you cry out, pumping your [cum load size of player] load into the rodent's greedy hole[if cocks of player > 2], your exposed, unattended dicks staining your torso and hers[else if cocks of player is 2], your exposed, unattended dick staining your torso and hers[end if][if cock width of player > 18]. Quickly underestimating her capacity, she eventually forced free of your cock, the remaining load spilling all over to make a substantial mess[end if].";
 		say "     [if chindem is false]Chittering happily, she takes a brief moment to catch[else]'[one of]Ah, I needed that[or]Oh, that felt too good[or]Mm, what a ride[or]Oh, that'll do[at random]...' Taking only a brief moment to catch[end if] her breath before happily hopping off of you, observing her surroundings for a moment before skittering off into the distance. You eventually manage to recover from the [if HP of player < 1]ordeal[else]bout[end if], climbing back to your feet and gathering your things before departing yourself.";
 	else:
 		say "     With little further restraint, she presses the supple, soft-furred lips of her cunt against your face, blatantly expecting you to satisfy her orally. [if HP of player < 1]You're not inclined in the slightest to oblige her, and she pleads constantly for you to, until her infectious influence eventually drives you to comply, gasping in pleasure at the feel of your tongue finally flooding her depths[else]Curiously probing her yielding entrance, you're met with cooing approval, compelling you to plunge your slick organ into her depths, the creature gasping loudly in response[end if]. The stout critter writhes and squeaks against your tongue's influence[if scalevalue of player < 3], its substantial size no doubt quite straining on her[end if], the taste of her bestial sex flooding your senses.";
@@ -69,7 +69,7 @@ to say chinloss: [Placeholder, player victory scenes expected to be added in lat
 
 to say chindesc:
 	setmongender 3; [creature is male]
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	setmonster "Chinchilla";
 	if a random chance of 1 in 2 succeeds:
 		now chindem is true;
@@ -88,12 +88,12 @@ to say chindesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Chinchilla";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -141,8 +141,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname is "Chinchilla":
@@ -163,7 +164,7 @@ instead of sniffing tuft of chin fur:
 the usedesc of tuft of chin fur is "[tuft of chin fur use]";
 
 to say tuft of chin fur use:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	setmonster "Chinchilla";
 	if "Male Preferred" is listed in feats of player:
 		now sex entry is "Male";

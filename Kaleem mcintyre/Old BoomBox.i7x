@@ -20,6 +20,10 @@ Instead of using the old boombox:
 
 Section 1 - Old BoomBox
 
+Table of GameEventIDs (continued)
+Object	Name
+Old Record Store	"Old Record Store"
+
 Old Record Store is a situation.
 The sarea of Old Record Store is "Outside".
 
@@ -35,7 +39,7 @@ Instead of Resolving a Old Record Store:
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
 		LineBreak;
-		say "     'Nothing ventured, nothing gained', someone once told you, and you can't help but think that said person might have been right for once. Taking a deep breath to draw up some confidence, you make your way over to the opened door, pull the barrier open, and then take a few timid steps inside. You instantly find yourself swarmed with the sounds of a weird style of music playing -- a strange mix of bluegrass and acid jazz that somehow seems to work -- as well as whispered words from unseen people having some sort of important discussion. At least you would guess the argument is significant by the tone of the utterances.";
+		say "     'Nothing ventured, nothing gained', someone once told you, and you can't help but think that said person might have been right for once. Taking a deep breath to draw up some confidence, you make your way over to the opened door, pull the barrier open, and then take a few timid steps inside. You instantly find yourself swarmed with the sounds of a weird style of music playing - a strange mix of bluegrass and acid jazz that somehow seems to work - as well as whispered words from unseen people having some sort of important discussion. At least you would guess the argument is significant by the tone of the utterances.";
 		WaitLineBreak;
 		say "     Eyes swiftly tracking the area of the store from left to right and then up to down, you find yourself growing very confused when you don't actually see anybody. The lights are flicking on above you, illuminating the surrounding area, yet this is kinda confusing since it didn't look like this was so from the outside. A trick of the light perhaps?";
 		say "     Despite this, however, the whispers seem to grow somewhat quieter around you, as if your presence has become an inquiry to those unseen. Not believing in ghosts, since no such things could possibly exist, you wonder if this is some kind of strange mutant ploy. That's when the screech of a record needle scratching across a vinyl surface causes you to hiss in pain.";
@@ -46,7 +50,7 @@ Instead of Resolving a Old Record Store:
 		say "     ([link]N[as]n[end link]) - Turn tail and flee.";
 		if player consents:
 			LineBreak;
-			say "     Deciding to bite the bullet just one more time, you go for the backroom to check to see if someone is in there. There's no way this place can be totally empty; that would defy the most basic form of logic there is -- cause and effect -- as somebody had to have opened the front door to the store for you to get in here. Marching forward, with your shoulders pushed out in front of you and your chest puffed up like a preening bird, you convince yourself that you're going to straighten out whatever practical joker is trying to be funny with you! What you find when you shoulder the door to the backroom open is... nothing.";
+			say "     Deciding to bite the bullet just one more time, you go for the backroom to check to see if someone is in there. There's no way this place can be totally empty; that would defy the most basic form of logic there is - cause and effect - as somebody had to have opened the front door to the store for you to get in here. Marching forward, with your shoulders pushed out in front of you and your chest puffed up like a preening bird, you convince yourself that you're going to straighten out whatever practical joker is trying to be funny with you! What you find when you shoulder the door to the backroom open is... nothing.";
 			WaitLineBreak;
 			say "     Well not exactly nothing, per say. Taking a look around the room, your eyes see that the surrounding area is littered with albums and CD's and... lo and behold... tapes! You don't think you've actually seen a cassette tape in the last five or ten years! Your eyes nearly bulge out of your head as you realize the treasure trove that you've stumbled upon. Whoever has left this place unattended is really doing himself a disservice as s/he's got so much to steal in here that it barely makes any sense.";
 			say "     Shutting the door behind you and then walking around in awe, your mind slowly begins to ramble through your somewhat foggy memories as you try and recall all of the hit artists that are collected here in this place. Most have long since faded from stardom, but more than a few continue to shine brightly, even in the dimly lit room with the fifty watt bulb flickering on above you.";
@@ -63,16 +67,18 @@ Instead of Resolving a Old Record Store:
 			WaitLineBreak;
 			say "     Not knowing what's going on, but not liking this craziness anymore, you decide to split while the getting's good. Rushing out of the front door, the old boombox in hand, you make your way down the street and back to the bunker at top speeds. Behind you, the door to the music shops quietly shuts and then locks itself, but only after the figure of an old man walks by the window. Obviously, you've just been become the butt of someone's elaborate prank... right?";
 			now BoomBox is in the Bunker;
-			now battleground is "void";
 			move player to the Bunker;
+			now Resolution of Old Record Store is 1; [found boombox]
 			now Old Record Store is resolved;
 		else:
 			LineBreak;
 			say "     You get the creeps from this place and decide to go back home, or to the bunker at least. The whispers around you seem somewhat saddened by your departure and the music playing in the background slows down until it finally falls silent. You don't notice any of this as you're out the door and down the street before the local mutants can spot your dust trail. Not that you're scared of course. Behind you the door to the music shop closes with an audible click.";
+			now Resolution of Old Record Store is 2; [fled]
 			now Old Record Store is resolved;
 	else:
 		LineBreak;
 		say "     Deciding to err on the side of caution, you spin on your heel and then march straightaway from the creepy music store. And though you don't notice it during your posthaste retreat, another -click- resounds throughout the air, the building's door having shut tight once again.";
+		now Resolution of Old Record Store is 99; [disinterest]
 		now Old Record Store is resolved;
 
 
@@ -162,9 +168,9 @@ This is the musiclisten rule:
 To say jazzfriends:
 	if Sarah is in the bunker:
 		if SarahSlut is 0:
-			say "     Sarah seems to mildly enjoy the music as she snuggles up onto the cot she has claimed while sighing peacefully at nothing in particular[if Coleen is in the bunker]. Coleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";
+			say "     Sarah seems to mildly enjoy the music as she snuggles up onto the cot she has claimed while sighing peacefully at nothing in particular[if Colleen is in the bunker]. Colleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";
 		else:
-			say "     You find Sarah coming up over to you to snuggle up while the jazz music plays softly in the background. The husky female seems to enjoy the music as she starts to pant happily while looking up at you with shining eyes. She almost seems to want to ask you to dance, but is holding back for some reason. Maybe because she would feel awkward in her new form? Regardless, you snuggle up close to her as you both listen to the soft rhythms bouncing through the bunker[if Coleen is in the bunker]. Coleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";
+			say "     You find Sarah coming up over to you to snuggle up while the jazz music plays softly in the background. The husky female seems to enjoy the music as she starts to pant happily while looking up at you with shining eyes. She almost seems to want to ask you to dance, but is holding back for some reason. Maybe because she would feel awkward in her new form? Regardless, you snuggle up close to her as you both listen to the soft rhythms bouncing through the bunker[if Colleen is in the bunker]. Colleen silently moves over to Sarah to snuggle up next to the other husky woman[end if].";
 			if SarahPups > 1:
 				say "     Sarah's pups all come around to bark and yip before making a circle to surround you and Sarah, almost as if they are trying to contain the feelings that both you and her are sharing right now.";
 	If Fang is in the Grey Abbey Library:
@@ -187,8 +193,8 @@ To say jazzfriends:
 	if humanity of player > 100, now humanity of player is 100;
 
 to say tangofriends:
-	if Coleen is in the bunker:
-		say "     Coleen seems to like the music flowing throughout the boombox and as she gets up to dance while flipping and twirling herself around with no small amount of skill.";
+	if Colleen is in the bunker:
+		say "     Colleen seems to like the music flowing throughout the boombox and as she gets up to dance while flipping and twirling herself around with no small amount of skill.";
 	if helper dog is tamed:
 		say "     Hobo moves over to the platform beside the door to the bunker, sitting there and watching as he seems to listen both to the outside and to the music with an air of appreciation.";
 	if cute crab is tamed:
@@ -215,8 +221,8 @@ to say R&Bfriends:
 			say "     Fang pads over to you and then lays his head down onto your lap. The music seems to have gotten to the other in a strange way as you could almost swear that tears are in his eyes. Maybe this canine has more soul than you think as you lay a hand down to stroke him across his rugged mane of fur. Neither of you speak as you just listen to the tunes. You find that words have no place here now.";
 		else:
 			say "     Fang moves over towards you before plopping himself down to listen to the R&B melody wafting from out of the speakers of the boombox. By the slow wag of his tail, you can see that the feral creature likes the music very much.";
-	If Coleen is in the bunker:
-		say "     The rhythm of the melody playing on the boombox puts Coleen to sleep.";
+	If Colleen is in the bunker:
+		say "     The rhythm of the melody playing on the boombox puts Colleen to sleep.";
 	if Sarah is in the bunker:
 		if SarahSlut is 0:
 			say "     When a firm husky arm snakes its way out around your waist to hold you close, you jump a little, before noticing that it is just Sarah snuggling up against you. Smiling down at the medic, you lay your head on top of hers and let the music simply wash away all of your thoughts. There is no here or now, there is only this moment where you are connected to everything around you by invisible threads. Perhaps especially so to the husky woman next to you.";
@@ -253,8 +259,8 @@ to say RockandRollfriends:
 		say "     Brushing up beside her to feel Sarah's furry body rolling against your own, you suddenly wish that both of you were in a normal bar doing this while getting drunk off of shared vodka and rum while dance lights flash around both your bodies. Maybe when all of this is over you and she could have your own private dance session together. Whether that will be with the husky female dancing on your lap or in your bed, well, the jury is out on that one.";
 		if SarahPups > 0:
 			say "     All around you, the puppies seem to be watching their mother curiously as the older female just moves and sways without her usual flustering or timid mannerisms embellishing her actions. Some of the pups try and mimic the older husky's maneuvers, but in the end they mostly seem to just fall over each other cutely.";
-	If Coleen is in the bunker:
-		say "     At hearing the music playing on the boombox, Coleen proceeds to rock the house as she howls and swivels her body while dancing with the beat of the drumset and electric guitars being played.";
+	If Colleen is in the bunker:
+		say "     At hearing the music playing on the boombox, Colleen proceeds to rock the house as she howls and swivels her body while dancing with the beat of the drumset and electric guitars being played.";
 	If Fang is in the Grey Abbey Library:
 		if HP of Fang is 3 or HP of Fang is 4:
 			say "     Fang seems to have woken up from his inopportune nap as the wolf rises onto his feet and then pads over into your direction. Seeing that he's not quite happy about being so rudely interrupted by the annoying sounds, you have to block the other off from the boom box as you can clearly see the other wanting to destroy the machine. It takes some bit of struggling before the lupine relents and then goes off somewhere else to not have to listen to the noise. You sigh softly at this. After all, a win is a win in your book by any accounts.";
@@ -291,8 +297,8 @@ to say Oceanfriends:
 			say "     Fang slowly comes over to where you are and then curls himself up at your head. Panting softly, the big male has no problem whimpering at the sounds of the music and then drifting off to sleep as he listens to the music with you.";
 		else:
 			say "     Fang sleepy pads himself over to you and then curls up to go to sleep. No muss, no fuss. Just a large bundle of sleepy wolf curling himself up next to your head.";
-	If Coleen is in the bunker:
-		say "     Coleen makes her way over to [if sarah is bunkered]where Sarah is and then proceeds to snuggle up with the other husky woman[else]the bunk and sits on the floor beside you, leaning back against the cot[end if].";
+	If Colleen is in the bunker:
+		say "     Colleen makes her way over to [if sarah is bunkered]where Sarah is and then proceeds to snuggle up with the other husky woman[else]the bunk and sits on the floor beside you, leaning back against the cot[end if].";
 	if house cat is tamed:
 		say "     The small feline you rescued earlier meows as she moves into your lap to curl up.";
 	if bee girl is tamed:

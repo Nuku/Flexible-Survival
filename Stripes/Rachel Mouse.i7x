@@ -6,6 +6,10 @@ Version 1 of Rachel Mouse by Stripes begins here.
 
 Section 1 - Encounter
 
+Table of GameEventIDs (continued)
+Object	Name
+Quiet Apartment Building	"Quiet Apartment Building"
+
 Quiet Apartment Building is a situation.
 The sarea of Quiet Apartment Building is "Red".
 when play begins:
@@ -15,19 +19,21 @@ when play begins:
 Instead of resolving a Quiet Apartment Building:
 	say "     Wandering off from the main strip, you come across a small, three story apartment building that seems quiet and relatively untouched. You find yourself looking it over, wondering if you should go in and take a look around. ";
 	if bodyname of player is "Mental Mouse" and humanity of player <= 75:
-		say "     There's just something about the place that seems to be calling to you and before you can even consider else, you head in to search it.";
+		say "There's just something about the place that seems to be calling to you, and before you can even consider else, you head in to search it.";
 		WaitLineBreak;
 		say "[mouseapts]";
 	else:
-		say "     The place seems safe and inviting. You don't see any cum stains or piles of discarded clothes around and there's no noise of creatures rustling about inside. The place isn't that big, it shouldn't take you that long to check it out. Perhaps you'll find something of use or even some survivors. Shall you follow your hunch and go in to search the place?";
+		say "The place seems safe and inviting. You don't see any cum stains or piles of discarded clothes around and there's no noise of creatures rustling about inside. The place isn't that big, so it shouldn't take you that long to check it out. Perhaps you'll find something of use or even some survivors? Shall you follow your hunch and go in to search the place?";
 		if player consents:
 			say "[mouseapts]";
 		else:
 			say "     Deciding against it and suddenly wary of this impulse to enter the building, you back away quickly. You catch sight of some small mice looking from the windows as you back away. Again, you feel that call to go inside and quickly turn and run, wanting to get some distance between you and the strange mice who tried to lure you in.";
+			Now Resolution of Quiet Apartment Building is 99; [avoided the mental mice]
 	Now Quiet Apartment Building is resolved;
 
 
 to say mouseapts:
+	Now Resolution of Quiet Apartment Building is 1; [ran into the mental mice]
 	setmonster "Mental Mouse";
 	say "     You step into the small apartment building and look around, still feeling oddly at ease. The main doors are unlocked and you enter the lobby. There is an apartment door slightly ajar at the back of the hall beside the steps up to the next floor and you head towards it. As you reach out and push it open, you are tackled from behind by someone. No, it's multiple someones. There is a mob of gray mice which slipped quietly from the other rooms to tackle out. More come out from the apartment ahead of you and you are pulled in. You struggle, but there are too many of them on top of you already, weighing you down and overpowering you. While they may only be three feet tall, they are already about a dozen grabbing you and you can sense many more in the hall behind you.";
 	say "     'We called and you have come. You will join us in mousedom. Join us in being of one mind. Accept us and be part of the mouse collective,' they say, speaking in unison. With so many of them around you, your mind throbs under the assault of thoughts that are not your own, hearing those words spoken both in your ears and in your brain. These mice, somehow all of one united mind, are trying to overpower your will. They drew you in here and now these beautiful, busty mice have you. These sexy herms pull you over to the couch, kissing and fondling you as they do. You find yourself growing increasingly aroused by their short, mouse-like bodies and faces. They have such lovely, feminine bodies, large breasts and sizeable cocks as well. Why were you even resisting them, you find yourself wondering.";
@@ -38,7 +44,7 @@ to say mouseapts:
 		say "     After breaking the kiss, the lovely mouse, whom you somehow know is called Rachel, slides down over your body, moving her hips to your groin. Your throbbing cock, already hard thanks to the helpful ministrations of another mouse, is held into position by that mouse so Rachel can lower herself down onto it[if cock length of player > 18]. The sexy mouse moans and squeaks as she tries to take your throbbing cock in, slowly stretching her wet cunny open to accept your huge cock. Her belly bulges considerably, stretching her small tummy to accept it, but accept it she does. Her paws rub over her filled belly and she starts riding you as best she can[else if cock length of player > 12]. The sexy mouse moans and squeaks as she tries to take your throbbing cock in, slowly lowering her wet cunny down over your large cock. Her belly bulges somewhat, stretching her small tummy as it fills her. Her paws rub over her filled belly and she starts riding you eagerly[else]. The sexy mouse moans and squeaks as she slides herself onto your throbbing cock. Loving the feel of having you inside her, she starts riding you eagerly[end if].";
 		WaitLineBreak;
 		say "     The other mice around you run their paws over your bodies, seeking to share in welcoming you into their group. With so many of the psychic mice around you, you can feel their pleasure as they have sex all around you. You are surrounded in it, faintly sharing in all of it: sucked cocks, licked nipples, fingered pussies, fucked cunts, throbbing cocks and so much more. And most of all, the joy of fucking your beautiful mate, Rachel. Her small, cute form. Her lovely breasts, which you can't help but fondle. Her hot cunt, which you eagerly thrust into again and again.";
-		say "     Soon enough, it all overwhelms you and you cum hard into her, spurting your rich, hot semen into her. Feeling your orgasm, she cums as well, soaking your crotch in her feminine juices. Her hard cock twitches against your tummy and you can sense her holding back, wanting to share that with you as well. As soon as your orgasm passes, you help her slide off your spent shaft, eager to help your murine mate. ";
+		say "     Soon enough, it all overwhelms you and you cum hard into her, spurting your rich, hot semen into her. Feeling your orgasm, she cums as well, soaking your crotch in her feminine juices. Her hard cock twitches against your tummy and you can sense her holding back, wanting to share that with you as well. As soon as your orgasm passes, you help her slide off your spent shaft, eager to help your murine mate.";
 		if player is female:
 			WaitLineBreak;
 			say "     Shifting onto your side, you rest one leg against the back of the couch and drape the other down, offering up your dripping pussy to her. She smiles as another mouse, sensing your intent, spreads your wet folds for you and third guides Rachel's cock into you. You both squeak in delight as she pumps into you hard and fast, already very close. You pull the other two into your welcoming arms, bringing their cocks to your mouth so you can alternate between sucking each of them off while that mousecock fucks you to another orgasm that all four of you share. You suck down their delicious semen while enjoying the feel of your mate's hot seed flowing into your womb.[impregchance]";
@@ -87,6 +93,7 @@ to say mouseapts:
 		if the player is not lonely:
 			say "     Rachel stares at your [companion of player], who had been hiding outside since you got here, and it slinks off. She smiles and takes your hand in hers, chirring softly.";
 		now mouse girl is tamed;
+		add "Tamed" to Traits of mouse girl;
 		move Rachel to Pantry;
 		now the companion of the player is mouse girl;
 		say "     (The mouse girl is now [']tamed['] and has made herself your active pet! Should you dismiss her from your side, you can reactivate her as your pet by typing [bold type][link]pet mouse girl[end link][roman type] and initiate sex with her while active by typing [bold type][link]fuck mouse girl[end link][roman type]. You can see all the pets you have tamed with the [bold type][link]pet[as]pet[end link][roman type] command. Pets will lower the XP you gain from battle, but can gain levels themselves to be more useful in a scrap. You may still remove her as your active pet using [bold type][link]pet dismiss[as]pet dismiss[end link][roman type], or just [bold type][link]dismiss[as]dismiss[end link][roman type], but then the mouse collective will be tracking you again.)";
@@ -95,8 +102,8 @@ to say mouseapts:
 
 to say fullmousification:
 	[puts Mental Mouse as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Mental Mouse":
 			now monster is y;
 			break;
@@ -120,6 +127,10 @@ the linkaction of Rachel is "[rachellinkaction]".
 to say rachellinkaction:
 	say "Possible Actions: [link]talk[as]talk Rachel[end link], [link]smell[as]smell Rachel[end link], [link]fuck[as]fuck Rachel[end link][line break]";
 
+Table of GameCharacterIDs (continued)
+object	name
+mouse girl	"mouse girl"
+
 mouse girl is a pet. mouse girl is a part of the player.
 understand "Rachel" as mouse girl.
 The description of mouse girl is "[RachelDesc]".
@@ -134,18 +145,22 @@ rachelfuck is a number that varies.
 The icon of mouse girl is Figure of Rachel_icon.
 
 to say SummonRachel:
-	remove Rachel from play;
+	now Rachel is nowhere;
 	if player is in Pantry and Rachel is in Pantry: [summoning while standing next to her]
-		say "     Rachel stands up from where she was meditating and without a word comes to stand by your side.";
+		say "     Rachel stands up from where she was meditating. Without a word, she comes to stand by your side.";
 	else: [regular summoning]
 		say "     Walking up to join you before you even call out for her, Rachel the mouse girl grins up at you.";
 
 to say DismissRachel:
 	move Rachel to Pantry;
 	if player is not in Pantry: [regular dismiss]
-		say "     Before you can say a word Rachel come up behind you. 'Alright, I'll head back to the library then, seeya soon.' With that she makes her way back.";
+		say "     Before you can say a word, Rachel comes up behind you. 'Alright, I'll head back to the library then. See you soon.' With that, she makes her way back.";
 	else: [dismissing her in the abbey]
-		say "     Rachel goes back to her meditating claiming she will continue to commune with the rest of the collective.";
+		say "     Rachel goes back to her meditating, saying she will continue to commune with the rest of the collective.";
+
+Table of GameCharacterIDs (continued)
+object	name
+Rachel	"Rachel"
 
 Rachel is a woman.
 The description of Rachel is "[RachelDesc]".
@@ -158,7 +173,7 @@ instead of fucking Rachel:
 
 
 to say RachelAttack:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if name entry is "Mental Mouse":
 		say "[one of]The mouse girl glares angrily at one of the mice facing you, causing her to reel back from your mate's mental assault![or]The psychic mouse girl clenches her paw in a squeezing motion and tenses her face in concentration. While not held or hurt by this, one of the mice is slowed momentarily, allowing you to get in a glancing blow![or]Pressing her fingertips to her temples, Rachel focuses hard, causing one of them to groan in mental pain![or]The mouse girl makes firm, grabbing motions with her hands and one of the mice collapses to her knees and cums hard, as if groped from afar![or]Rachel moves up behind one of the mice and pinches her ear. Your enemy becomes glassy-eyed and wobbles as your mate's mind slams into hers![at random]";
 	else:
@@ -224,13 +239,9 @@ to say RachelTalkMenu:
 					say "[RachelTalk1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the mouse girl, shaking your head slightly as she gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the mouse girl, shaking your head slightly as she gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -239,9 +250,9 @@ to say RachelTalk1:
 	let randomnumber be a random number from 1 to 2;
 	if randomnumber is:
 		-- 1:
-			say "     'Can you feel the others? Even though we are seperated I can feel them everywhere!'";
+			say "     'Can you feel the others? Even though we are separated, I can feel them everywhere!'";
 		-- 2:
-			say "     'I hope that you decide to join the collective soon, everything is just better once you give yourself fully to the hive-mind.'";
+			say "     'I hope that you decide to join the collective soon. Everything is just better once you give yourself fully to the hive-mind.'";
 
 
 Section 3 - Sexxxings
@@ -251,8 +262,8 @@ to say sexwithmousegirl:
 		say "     Drawn as you are to the mouse girl and her mental link to you, you're a little worried about losing yourself if you go at it too often. You decide to hold off, at least for the moment.";
 	else:
 		[puts Mental Mouse as lead monster in case of impregnation]
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Mental Mouse":
 				now monster is y;
 				break;

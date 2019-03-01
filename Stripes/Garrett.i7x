@@ -4,6 +4,10 @@ Version 1 of Garrett by Stripes begins here.
 
 Section 0 - Related Scavevents	[Created by Wahn - Transposed from Scavevents]
 
+Table of GameEventIDs (continued)
+Object	Name
+Gryphon Milkman	"Gryphon Milkman"
+
 Gryphon Milkman is a scavevent.
 The sarea of Gryphon Milkman is "Outside".
 when play begins:
@@ -18,6 +22,9 @@ Instead of resolving a Gryphon Milkman:
 	increase carried of gryphon milk by 1;
 	now Gryphon Milkman is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Free Milk	"Free Milk"
 
 Free Milk is a scavevent.
 The sarea of Free Milk is "Outside".
@@ -30,6 +37,9 @@ Instead of resolving a Free Milk:
 	increase carried of gryphon milk by 1;
 	now Free Milk is resolved;
 
+Table of GameEventIDs (continued)
+Object	Name
+Abandoned Milk	"Abandoned Milk"
 
 Abandoned Milk is a scavevent.
 The sarea of Abandoned Milk is "Outside".
@@ -45,6 +55,10 @@ Instead of resolving a Abandoned Milk:
 
 
 Section 1 - Garrett the Gryphon Milkman
+
+Table of GameCharacterIDs (continued)
+object	name
+Garrett	"Garrett"
 
 Garrett is a man. Garrett is in Qytat Plaza.
 The description of Garrett is "[garrettdesc]".
@@ -98,7 +112,7 @@ the fuckscene of Garrett is "[sexwithGarrett]".
 
 to say sexwithGarrett:
 	setmonster "Hermaphrodite Gryphon";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if HP of Garrett is 0:
 		say "     You know those blue gryphons are always ready and willing for sex, but you should probably get to know him a little before making such an offer.";
 	else if lastfuck of Garrett - turns < 6:
@@ -254,7 +268,7 @@ to say garrett_handjob_2:
 
 to say garrett_analtop_1:
 	setmonster "Hermaphrodite Gryphon";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Garrett strokes his own cock as he gives your ass a playful swat. 'Come on. I'm in the mood to showing you just how good having some of my special gryphon milk in you can be,' he says. He nudges you to lean over his wooden chair and grinds his stiff manhood against your rear. Feeling dribbles of his pre wet your ass, you can tell just how he plans on giving you this sample.";
 	say "     [if anallevel is 3 and a random chance of 1 in 2 succeeds]Dipping one of his fingers into a bottle, he splatters the gooey [']milk['] across your asshole before wriggling the digit into it[else]Pouring some of a bottle's contents onto his cock, he gets himself lubed up and ready[end if]. He takes his time thrusting into you initially, letting his oversized cock stretch your [if the player is twistcapped]accommodating [end if]anus slowly. The feel of that ebon member of his pressing its way into you sends shivers of delight through you that make your cock throb and pulse all the harder. The sensation is accompanied by the arousing tingles of the refined semen suffusing into you. After sinking about halfway into you, he reaches around and runs his sticky hand over your [cock size desc of player] penis, spreading that tingly sensation to it as well.";
 	WaitLineBreak;
@@ -264,7 +278,7 @@ to say garrett_analtop_1:
 
 to say garrett_analtop_2:
 	setmonster "Hermaphrodite Gryphon";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     Garrett strokes his own cock as he gives your ass a playful swat. 'Come on. Let's milk a nice, big load out of you,' he says. He nudges you to lean on his wooden chair and places a [if cock width of player >= 24]bucket[else if cock width of player >= 16]jug[else]bowl[end if] on the seat to catch load before moving up behind you. 'And there's nothing better for getting a nice, big load out of someone than proper stimulation.' Grinding his stiff manhood against your rear gets your tail to raise for him as he makes it 100% clear just what kind of stimulation he has in mind for you.";
 	say "     [if anallevel is 3 and a random chance of 1 in 2 succeeds]Taking a moment to lube your asshole with several probing licks[else]Teasing your asshole with his glans for a few soft presses[end if], he draws a needy moan from you. He takes his time thrusting into you initially, letting his oversized cock stretch your [if the player is twistcapped]accommodating [end if]anus slowly. The feel of that ebon member of his pressing its way into you sends shivers of delight through you that make your cock throb and pulse all the harder. After sinking about halfway into you, he reaches around and runs his hand over your [cock size desc of player] penis.";
 	WaitLineBreak;
@@ -357,7 +371,7 @@ to say drinkgryphoncum:
 	PlayerDrink 6;
 	PlayerEat 3;
 	setmonster "Hermaphrodite Gryphon";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if name entry is "Hermaphrodite Gryphon":
 		now sex entry is "Male";
 		infect;
@@ -373,7 +387,7 @@ to say garrettinfect:
 		infect "Feral Gryphon";
 	else:
 		setmonster "Hermaphrodite Gryphon";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		if name entry is "Hermaphrodite Gryphon":
 			now sex entry is "Male";
 			infect;

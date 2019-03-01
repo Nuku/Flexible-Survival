@@ -15,7 +15,7 @@ when play begins:
 
 to say salamanderdesc:
 	setmongender 4; [creature is female]
-	say "     The salamander creature before you is a mix of animal and human body, with a definitively female form. Her body is especially effeminate, with wide hips, thighs, and a thin waist that clamours for attention. Her breasts are quite modest, being pert B-cups. Her arms and legs look quite human, but flex a little more than normal, making her seem sinuous and agile. Her fingers and toes terminate in small, dark claws. She possesses a flat, wide head with a mouth full of diminutive teeth. She has a long, narrow, fleshy tail mounted atop her soft and squishy ass cheeks. Making no effort to hide it, you can also see her moderately large pussy between her legs, wet and waiting.";
+	say "     The salamander creature before you is a mix of animal and human body, with a definitively female form. Her body is especially effeminate, with wide hips, thighs, and a thin waist that clamors for attention. Her breasts are quite modest, being pert B-cups. Her arms and legs look quite human, but flex a little more than normal, making her seem sinuous and agile. Her fingers and toes terminate in small, dark claws. She possesses a flat, wide head with a mouth full of diminutive teeth. She has a long, narrow, fleshy tail mounted atop her soft and squishy ass cheeks. Making no effort to hide it, you can also see her moderately large pussy between her legs, wet and waiting.";
 	say "     Her smooth skin is a rich red color with yellow and black speckling, predominantly across her breasts and extremities. A shimmer of intense heat radiates from it intensely enough to make the air ripple around her. It seems the nanites have jumbled the old myths of salamanders with its amphibian nature, making this creature into one suitable for two environments, on land and in lava.";
 
 to say losetosalamander:
@@ -46,12 +46,12 @@ to say beatthesalamander:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Salamander";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -99,17 +99,18 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "firebreath"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 Section 3 - Bound State
-[ -- Blue Bishop]
+[ - Blue Bishop]
 
 to salabind:
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if HP of player > 0 or humanity of player < 50:
 			now obliging is true;
 		checkboundrecover;
@@ -118,11 +119,11 @@ to salabind:
 			if boundsegment is 1:
 				say "     Finding yourself overtaken by lust, you are given no choice but to furiously [if player is male]jerk yourself off[else]fondle yourself[end if], writhing and twisting in these wet, smoldering confines until you finally find reprieve, [if player is male]unloading your [cum load size of player] load against the supple flesh[else if player is female]cunt throbbing firmly against the supple flesh[else]a particularly trying task given your lack of outlet[end if][if player is male and cock width of player > 20]. This wasn't a particularly wise task, as you're now made to swim in a pool of your own seed, though it thankfully diminishes over time[end if]. Panting to catch your breath, your mental faculties eventually return to you, leaving you to assess the matter at hand.[line break]";
 			else:
-				say "     Finding yourself overtaken by lust you cry out in ecstasy against the salamander's slick, writhing appendage, [if player is male]unloading your [cum load size of player] load against the open air[else if player is female]cunt throbbing firmly against the open air[else]a particularly trying task given your lack of outlet[end if]. ";
+				say "     Finding yourself overtaken by lust you cry out in ecstasy against the salamander's slick, writhing appendage, [if player is male]unloading your [cum load size of player] load against the open air[else if player is female]cunt throbbing firmly against the open air[else]a particularly trying task given your lack of outlet[end if]. Panting to catch your breath, ";
 				if enduring is true and struggleatt > 0:
-					say "     Panting to catch your breath, you manage to fight her off from pulling you any closer, at least for now...";
+					say "you manage to fight her off from pulling you any closer, at least for now...";
 				else:
-					say "     Panting to catch your breath, she immediately exploits you moment of weakness! Grabbing you between your shoulders, she firmly plunges your head[if tempnum2 is 1] back[end if] down her wide maw.";
+					say "she immediately exploits you moment of weakness! Grabbing you between your shoulders, she firmly plunges your head[if tempnum2 is 1] back[end if] down her wide maw.";
 					say "     [if tempnum2 is 1]She seems eager to return her victim back within her heated prison of flesh[else if scalevalue of player is 3]She doesn't seem to care that you're around her size, apparently stretchy enough to accommodate you[else]It becomes quickly apparent that she's stretchy enough to engulf you within her depths without any difficulty[end if]. Though she seems to be reducing her body heat, she's still terribly hot enough to make you sweat, mixing with her saliva in slicking her motion as she shoves you down, foot by foot, gullet bulging considerably with its contents, until only your legs remain.";
 					say "     Forced into the monster's tight, sticky stomach, it's alight with a[if tempnum2 is 1] familiar,[end if] molten glow, radiating an intense against your vulnerable form. As she forces down what little remains of you, you're forced to curl up to fit within these extremely tight confines. Even though she's apparently flexible enough to contain you, these walls nonetheless cling tightly against you, loudly churning as she [if tempnum2 is 1]teases her constantly-struggling meal[else]climbs back to her feet to take her new meal to a safe place[end if].";
 					now struggleatt is 0;
@@ -151,15 +152,15 @@ to salabind:
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [salastrugglebar]";
 		if humanity of player < 1:
 			LineBreak;
-			say "     Eventually you become so drained -- both mentally and physically -- that you wholly give in to your captor, ";
+			say "     Eventually you become so drained - both mentally and physically - that you wholly give in to your captor, ";
 			if bodyname of player is "Salamander" and player is pure:
 				say "compelled by your strain to obey her every whim";
 			else:
 				say "completely transforming into one of her kin, this new strain compelling you to obey her every whim";
 			say ". It's only then that you stop being siphoned off into the salamander, but you nonetheless succumb to a terrible, inevitable fate...";
 			wait for any key;
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Salamander":
 					now monster is y;
 					break;
@@ -174,7 +175,7 @@ to salabind:
 			now body of player is body entry;
 			now cock of player is cock entry;
 			now voreloss is true;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "You lost your mind while bound!";
 		else:
 			let k be 0;
@@ -197,7 +198,7 @@ to salabind:
 						say "     Stretched to her absolute limit, all it takes is a little more effort to send the thing flying back in her face. Flung onto her back with an audible snap, she appears to be stunned, leaving you to turn and make a run for it!";
 						cleanboundmemory;
 						now pewtergenitalcap is 0;
-						now trixieexit is 1;
+						now Trixieexit is 1;
 						follow the turnpass rule;
 				else:
 					if struggleatt < 2:
@@ -212,7 +213,7 @@ to salabind:
 						wait for any key;
 					else:
 						say "     Body churning loudly, finally unable to contain you any longer, your tight prison squeezes your body back up the hole you came before you're blinded by the bright light and dry air of the outside world. Regurgitated on the ground in a puddle of saliva, you weakly pull yourself to your feet, finding yourself someplace near where you were first captured.";
-						say "     You make a dash to escape but the salamander -- previously dazed by being forced to expel you -- lashes you with her tongue, nearly sending you flat on your ass as she tries reeling you back in. You may've gotten a head start, but the amphibian has no intention of letting you go that easily...";
+						say "     You make a dash to escape but the salamander - previously dazed by being forced to expel you - lashes you with her tongue, nearly sending you flat on your ass as she tries reeling you back in. You may've gotten a head start, but the amphibian has no intention of letting you go that easily...";
 						now tempnum2 is 1;
 						wait for any key;
 						now boundsegment is 0;

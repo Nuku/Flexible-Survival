@@ -11,6 +11,10 @@ the linkaction of Liliana is "[LilianaLinkAction]".
 to say LilianaLinkAction:
 	say "Possible Actions: [link]talk[as]talk Liliana[end link], [link]smell[as]smell Liliana[end link], [link]fuck[as]fuck Liliana[end link][line break]";
 
+Table of GameCharacterIDs (continued)
+object	name
+equinoid warrior	"equinoid warrior"
+
 equinoid warrior is a pet. equinoid warrior is a part of the player.
 understand "Liliana" as equinoid warrior.
 The description of equinoid warrior is "[LilianaDesc]".
@@ -22,6 +26,10 @@ The dismissdesc of equinoid warrior is "[DismissLiliana]".
 The assault of equinoid warrior is "[LilianaAttack]".
 The fuckscene of equinoid warrior is "[SexWithLiliana]".
 lilianabathsex is a number that varies.
+
+Table of GameCharacterIDs (continued)
+object	name
+Liliana	"Liliana"
 
 Liliana is a woman.
 The description of Liliana is "[LilianaDesc]".
@@ -47,7 +55,7 @@ to say SummonLiliana:
 		say "     You inform Liliana that it's time to head out. She slams her fist into a hoofed hand, showing that she is ready for a fight.";
 	else: [regular summoning]
 		say "     Liliana strides up to your side with a determined look on her equine face.";
-	remove Liliana from play;
+	now Liliana is nowhere;
 
 to say DismissLiliana:
 	move Liliana to Courtyard;
@@ -105,12 +113,8 @@ to say LilianaTalkMenu:
 				if (nam is "Talk with her"):
 					say "[LilianaTalk1]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the equinoid warrior, shaking your head slightly as she gives a questioning look.";
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the equinoid warrior, shaking your head slightly as she gives a questioning look.";
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	wait for any key;
@@ -167,7 +171,7 @@ to say LilianaInfectiousFuck: [Runs whenever Liliana is the active pet and the p
 	say "     During a free moment, Liliana sidles up to you and runs her hoofed hands over your [bodytype of player] body. 'We need to get you looking like a proper equinoid again.' She nickers softly as she takes her cock in hand and starts stroking it, rubbing it against you. Precum leaves slick trails across your body as she does this.";
 	if a random chance of 1 in 3 succeeds:
 		say "     You find yourself growing excited and take over stroking her, leaving her free to run her hands over your [bodydesc of player] body";
-		if breast size of player > 0:
+		if breasts of player > 0 and breast size of player > 0:
 			say ". She starts by rubbing over your bosom, playing with your breasts and teasing your nipples";
 		if cocks of player > 1:
 			say ". Her hands drift down to your cocks, taking one in each and stroking them";

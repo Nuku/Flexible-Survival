@@ -26,13 +26,13 @@ to say losetoGryphon:
 	if a random chance of 3 in 4 succeeds: [Mounted by gryphon]
 		say "     The gryphon pushes you over onto your belly with a powerful swipe. You push yourself up on all fours to try to get away, but his bulk is over you in an instant. [if scalevalue of player < 4]He puts his forelegs on either side of you, trapping you beneath him,[else]He mounts your [bodydesc of player] rear, wrapping his powerful forelegs around your hips[end if] and hunches his hips. You can feel something hot, wet, and rough probe your backside, looking for your [if player is female]feminine cleft[else]asshole[end if].";
 		say "     Suddenly, you feel his pointed tip lodge between your [if player is female]labia[else]ass cheeks[end if] and you gasp as he thrusts inward, spreading you around the first few inches of his cock. What you suspect to be leonine barbs on the head of his penis add a strange, rough texture to his maleness. Your suspicion is confirmed as he pulls back a bit, and they drag against the walls of your [if player is female]vagina[else]rectum[end if] in a not-altogether-unpleasant scraping sensation. He quickly works his cock into your passage fully, his copious precum lubricating you thoroughly.";
-		WaitLineBreak;
 		if player is impreg_able:
+			WaitLineBreak;
 			say "     The gryphon's barbs are having a strange effect on your body; an unusual warmth forms in your womb and you find yourself clenching down his cock and pushing back into his thrusts. Thoughts of your belly swelling with the male's clutch cross your mind unbidden; you moan as you imagine laying the eggs, stretching you as you push them out one by one.";
 		WaitLineBreak;
-		say "     He breeds you roughly, his cock pistoning in and out of your [if player is female]cunt[else]back passage[end if] with an animalistic ferocity. [if player is male]You can feel your own [cock of player] cock[smn] hardening in response to battering your prostate is receiving; it dribbles precum over the ground as the gryphon's huge ball-sack smacks against your own on each thrust. [end if]The gryphon grips you tighter, giving you long, ferocious thrusts; you feel something else pushing at your [if player is female]vagina[else]asshole[end if]. The gryphon's swollen knot batters your rear, seeking entrance.[run paragraph on]";
+		say "     He breeds you roughly, his cock pistoning in and out of your [if player is female]cunt[else]back passage[end if] with an animalistic ferocity. [if player is male]You can feel your own [cock of player] cock[smn] hardening in response to battering your prostate is receiving; it dribbles precum over the ground as the gryphon's huge ball-sack smacks against your own on each thrust. [end if]The gryphon grips you tighter, giving you long, ferocious thrusts; you feel something else pushing at your [if player is female]vagina[else]asshole[end if]. The gryphon's swollen knot batters your rear, seeking entrance. ";
 		if ( player is female and cunt width of player < 7 ) or ( cunts of player is 0 and scalevalue of player < 3 and player is not twistcapped ):
-			say " He grinds it against your [if player is female]cunt-lips[else]anus[end if], but isn't able to fit it in. He settles for pounding your depths with the rest of his length, before finally pressing his cock deep within you, his knot sitting just outside your straining entrance.";
+			say "He grinds it against your [if player is female]cunt-lips[else]anus[end if], but isn't able to fit it in. He settles for pounding your depths with the rest of his length, before finally pressing his cock deep within you, his knot sitting just outside your straining entrance.";
 		else:
 			say "He grinds it against you with each thrust, and you can feel your entrance slowly give way to its incessant pressure. On one harsh thrust, the knot reaches its widest point, spreading your [if player is female]nether-lips[else]asshole[end if] uncomfortably; on the next, it pops into you fully. After the initial shock of penetration wears off, you relish the feeling of warm fullness as the gryphon finishes himself with quick, rutting thrusts.";
 		say "     He screeches in victory as you feel his cock twitch and the first hot rope of gryphon-cum splash inside you[if player is male]. You reach your own climax, your [cock size desc of player] cock[smn] shooting your own cum over the ground[end if]. The gryphon comes for what feels like minutes; by the time he's finished, his seed is drooling from you, squelching around his cock. He dismounts you, his softening maleness slipping from you with a soft plopping sound. You feel his cum drip from your rear as he spreads his wings and leaves you to clean yourself up.[impregchance]";
@@ -164,12 +164,12 @@ to say feralgryph_milk02:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Feral Gryphon";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -217,8 +217,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;     [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default";  [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0;     [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Endings
 

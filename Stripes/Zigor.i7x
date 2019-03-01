@@ -4,6 +4,10 @@ Version 2 of Zigor by Stripes begins here.
 
 Section 0 - Event	[Transposed from Red Events]
 
+Table of GameEventIDs (continued)
+Object	Name
+Leather Wolves	"Leather Wolves"
+
 Leather Wolves is a situation.
 The sarea of Leather Wolves is "Red".
 when play begins:
@@ -19,10 +23,14 @@ Instead of resolving a Leather Wolves:
 	increase score by 10;
 [	say "     With this pack established here, there's clearly no safe way to search the immediate area further and you quietly backtrack.";
 	increase score by 1;]
-	Now Leather Wolves is resolved;
+	now Leather Wolves is resolved;
 
 
 Section 1 - Leather Store
+
+Table of GameRoomIDs (continued)
+Object	Name
+Cuero Lobo	"Cuero Lobo"
 
 Cuero Lobo is a room. It is fasttravel. It is private.
 The description of Cuero Lobo is "[cuerolobodesc]".
@@ -39,6 +47,10 @@ to say cuerolobodesc:
 
 
 Section 2 - Zigor the Leather Wolf
+
+Table of GameCharacterIDs (continued)
+object	name
+Zigor	"Zigor"
 
 Zigor is a man. Zigor is in Cuero Lobo.
 The description of Zigor is "[zigordesc]".
@@ -122,7 +134,7 @@ Section 4 - Sex w/Zigor - Stage 1
 
 to say zigor_S1_00_MM:	[stage 1 intro - padded bench/riding crop - MM]
 	say "     Deciding to accept Zigor's offer, you tell him you'd like to view his collection. Smiling at this, he flips the open sign to closed and calls out for [randomwolfgimp] to come out and watch the store. A few moments later another leather wolf arrives from the back of the store. He is almost completely covered in leather fetish gear, to the point of even having a lupine gimp mask fused over his face. His amber eyes spare you only a momentary glance before standing silently on watch in the room. Surprised by his appearance, you turn your gaze from him only when Zigor calls for you to follow him through another door and down the stairwell.";
-	say "     Unlocking the basement door, Zigor leads you into a lantern-lit, dungeon-like room outfitted with an array of kinky BDSM gear. You'd suspected you'd find something like this down here, but nowhere near to this extent. Set up around the room is an array of chains, slings and other restraining devices. A rack along one wall has shelves of whips, paddles and other pain-inducing items. A small table next to that has an array of dildos, butt plugs and other sex toys orderly arranged atop it. There are several black cabinets and locked trunks as well, probably holding even more startling gear. Even moreso than upstairs, the whole room smells strongly of leather and lupine sex.";
+	say "     Unlocking the basement door, Zigor leads you into a lantern-lit, dungeon-like room outfitted with an array of kinky BDSM gear. You'd suspected you'd find something like this down here, but nowhere near to this extent. Set up around the room is an array of chains, slings and other restraining devices. A rack along one wall has shelves of whips, paddles and other pain-inducing items. A small table next to that has an array of dildos, butt plugs and other sex toys orderly arranged atop it. There are several black cabinets and locked trunks as well, probably holding even more startling gear. Even more so than upstairs, the whole room smells strongly of leather and lupine sex.";
 	WaitLineBreak;
 	say "     As you're trying to take it all in, Zigor suddenly grabs you and pushes you down overtop of a padded bench. With a speed that must come from considerable practice, he has your wrists snapped into the leather shackles even before the stars clear from your eyes. 'As this is your first time, I thought we'd start with something simple, mi mascota,' he says in that sexy voice of his. He removes anything covering your ass before groping it with a paw. But just as you start to relax, there comes a hard, painful SWAT! as something strikes your butt cheek. Looking back, you see him raise the riding crop again and bring it down on your other cheek.";
 	say "     The throbbing sting of the blows are echoed by the throbbing of your cock, quickly growing hard. After a few more stinging swats, Zigor pauses for a moment to stroke your [cock of player] penis, spreading your leaking precum across it. 'Mmm... I knew you'd like this,' he says with that sensual Iberian accent of his. 'The proper amount of discipline is what people like you need to bring out the best in them.' He brushes the leather flap of the riding crop across your manhood, over your balls and then between your cheeks. He resumes lashing you with the crop as he continues to stroke you off. As he continues, the line between pain and pleasure blurs more and more until you're crying out for him to hit you again the next time he pauses. Grinning toothily, he gives you a hard swat across the balls. You scream loudly, cumming hard as tears run from your eyes. He pumps you for all you'll give, catching [if cock width of player < 25]most of it in a bucket under the bench[else]as much as he can in a bucket under the bench[end if].";
@@ -322,7 +334,7 @@ to say zigor_S2_04_MM:		[ stage 4 - offer of finale - MM ]
 			now scalevalue of player is 3;
 			now bodydesc of player is "strong";
 		now bodytype of player is "lupine";
-		now daycycle of player is 0;
+		now SleepRhythm of player is 0;
 		wait for any key;
 		end the story saying "You have been turned into Zigor's latest leather wolf plaything.";
 		now battleground is "void";

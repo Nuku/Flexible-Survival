@@ -41,6 +41,10 @@ Section 1 - Documentation and Setup
 
 [ Players can find the either version of the suit while any sex due to either transforming before entering the room it or re-encountering it after first contact. The code checks for this in both the vacant and occupied versions and displays alternate content accordingly ]
 
+Table of GameCharacterIDs (continued)
+object	name
+Inflatable Otter Suit	"Inflatable Otter Suit"
+
 Inflatable Otter Suit is a person. [mostly male/herm oriented]
 The description of Inflatable Otter Suit is "[InflatableOtterSuitDesc]".
 The HP of Inflatable Otter Suit is 0.
@@ -192,8 +196,8 @@ to InflatableOtterSuitBind:
 	libidoeval;
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		now boundstate is true;
 		if HP of player > 0 or humanity of player < 50:
 			now obliging is true;
@@ -213,17 +217,11 @@ to InflatableOtterSuitBind:
 				now bodyname of player is "InflatableOtterSuitSexSlave";
 				now humanity of player is 0;
 				end the story saying "Trapped by the inflatable otter suit, its endless stimulation has become your whole word.";
-				now trixieexit is 1;
+				now Trixieexit is 1;
 			if InflatableOtterSuitBindStage < 4: [Hides content to prevent endings colliding]
 				now lustatt is libido of player;
 				InflatableOtterSuitSanityOrgasm; [Calls the function defined later on]
 				InflatableOtterSuitProgress; [Calls the function defined later on]
-		if enduring is true: [Decreases lust gained if the player selects enduring.]
-			increase lustatt by 2 + lustadjust;
-			decrease humanity of player by 1;
-		else:
-			increase lustatt by 4 + (lustadjust * 2);
-			decrease humanity of player by 2 + psycheadjust;
 		now enduring is false;
 		if InflatableOtterSuitBindStage < 4: [Hides content to prevent endings colliding]
 			CheckInflatableOtterSuitSegment;
@@ -247,7 +245,7 @@ to InflatableOtterSuitBind:
 				now bodyname of player is "InflatableOtterSuitSexSlave";
 				now humanity of player is 0;
 				end the story saying "Trapped by the inflatable otter suit, its endless stimulation has become your whole word.";
-				now trixieexit is 1;
+				now Trixieexit is 1;
 			else: [Section of actions possible during the bind.]
 				let k be 0;
 				now keychar is "INVALID";
@@ -269,10 +267,6 @@ to InflatableOtterSuitBind:
 							say "     The suit's tight embrace makes it almost impossible to move your limbs, the constricting pressure of the air hugging your form leaving your hazy thoughts to drift. The pleasure radiating from your groin melts away your will to resist, making you shiver and moan softly as you try to wiggle free. Despite your best efforts, the suit's hold remains firm, denying you even the faintest hope of escape.";
 						else: [Debug failsafe]
 							say "     ERROR <OtterSuitStruggleMessage>: This text should never appear. Please file a bug report on the FS Discord and include the above error message.";
-						now Libido of Inflatable Otter Suit is 0;
-						LineBreak;
-						InflatableOtterSuitSanityPassive;
-						InflatableOtterSuitLust;
 					else if lustatt > 79: [player would escape the bind, but lust is too high]
 						if InflatableOtterSuitBindStage is 1:
 							say "     With some difficulty, you manage to secure a hold on the suit's finnicky zipper and overpower its resistance, pulling it down enough to start squirming free. The suit clings to your arms as you tug them out of the puffy sleeves, reaching up to tear away the hood covering your face with one while fending off its continued efforts to ensnare you with the other. Just as you're about to pry it off, your rising arousal gets the better of you and you squeal into the gag, spraying your [cum load size of player] load into the suit's rippling cocksheath.";
@@ -292,7 +286,7 @@ to InflatableOtterSuitBind:
 							now Libido of Inflatable Otter Suit is 0;
 							LineBreak;
 							cleanboundmemory;
-							now trixieexit is 1;
+							now Trixieexit is 1;
 							now InflatableOtterSuitBindStage is 0;
 						else if InflatableOtterSuitBindStage is 2: [Lowers stage to 1]
 							say "     After a considerable amount of effort, you finally force enough air out of the suit to regain some semblance of control over your limbs. Uncomfortable in your current, quite vulnerable position, you rock back and forth until you gain enough momentum to roll onto your fore, then push yourself up to your knees. The suit attempts to reinflate, but it's been weakened too much by your tenacious resistance to flip you back over. Disaster averted, you reach up to seek out its zipper again, determined not to let the inflatable overpower you.";
@@ -304,10 +298,8 @@ to InflatableOtterSuitBind:
 							now Libido of Inflatable Otter Suit is 0;
 							LineBreak;
 							cleanboundmemory;
-							now trixieexit is 1;
+							now Trixieexit is 1;
 							now InflatableOtterSuitBindStage is 0;
-					WaitLineBreak;
-					next;
 				else if (obliging is true and (keychar in lower case exactly matches the text "o" or keychar in lower case matches the text "oblige")) or (obliging is false and (keychar in lower case exactly matches the text "a" or keychar in lower case matches the text "abide")) or keychar in lower case exactly matches the text "2": [player picked oblige/abide - currently no custom text for each!]
 					LineBreak;
 					if InflatableOtterSuitBindStage is 1:
@@ -333,14 +325,6 @@ to InflatableOtterSuitBind:
 							say "     The euphoria of your unrelenting stimulation plateaus in what feels like one constant, soothing orgasm. Your arms and legs tremble with tension before falling limp inside the tightly inflated vinyl. You hump weakly into the suit's supple sheath, your mind awash in pleasure, and you plead for that building climax with what muffled moans you can muster.";
 						else: [if 2+]
 							say "     You readily give yourself over to the suit's perverted purpose, thrusting up into its squeezing cock-sheath with what little movement your constricting captor permits. You tense with wild need as the suit worships you from every angle, coaxing moans and squeals of pleasure from you that grow more bestial by the moment. Your thoughts fade away under the constant assault on your senses, but you struggle to care anymore. All that matters is bringing yourself to another mind-shattering orgasm, chasing after that drug-like release over and over again in a ceaseless pursuit of bound and gagged bliss.";
-					increase Libido of Inflatable Otter Suit by 1;
-					LineBreak;
-					now obliging is true;
-					InflatableOtterSuitSanityPassive;
-					InflatableOtterSuitLust;
-					now obliging is false;
-					WaitLineBreak;
-					next;
 				else: [player picked endure/recover]
 					now enduring is true;
 					LineBreak;
@@ -353,10 +337,6 @@ to InflatableOtterSuitBind:
 							increase humanity of player by 3;
 						if humanity of player > 100, now humanity of player is 100;
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity, recovering a small portion of your lost humanity.";
-						LineBreak;
-						now Libido of Inflatable Otter Suit is 0;
-						InflatableOtterSuitLust;
-						now boundrecover is false;
 					else: [endure]
 						if InflatableOtterSuitBindStage is 1:
 							let randomnumber be a random number from 1 to 3;
@@ -385,12 +365,18 @@ to InflatableOtterSuitBind:
 									say "     You continue to try and resist, to find any semblance of mental clarity. Your efforts are made null when the shifting suit squeezes tightly around your length, your achingly needy cock forced to twitch and throb as it's caressed by the slickly squelching material. You give a soft, lustful sigh and let your eyes flutter closed, feeling your mind give more and more as the lovely suit stimulates every part of you without stop.";
 								-- 3:
 									say "     You can scarcely move inside the suit, much less hold on to your mental faculties. The material's smooth inner layer pulls flush to your [skin of player] flesh, and the tainted vinyl clenches rhythmically around your pre-spurting cock. You try to resist the suit's teasing, writhing and bucking helplessly, but your thoughts grow muddier as it pleasures you into a drooling stupor.";
+				if Trixieexit is 0:
+					if boundrecover is false, InflatableOtterSuitSanityPassive;
+					InflatableOtterSuitLust;
+					if obliging is true:
+						increase Libido of Inflatable Otter Suit by 1;
+						now obliging is false;
+					else:
 						now Libido of Inflatable Otter Suit is 0;
-						LineBreak;
-						InflatableOtterSuitLust;
-						InflatableOtterSuitSanityPassive;
-					WaitLineBreak;
-					next;
+					if boundrecover is true, now boundrecover is false;
+				WaitLineBreak;
+				next;
+
 
 to CheckInflatableOtterSuitSegment: [Boundsegment is used above to compare to the player's struggle attribute. If lower, continue struggling. If equal to, escape.]
 	if InflatableOtterSuitBindStage is 1:
@@ -477,14 +463,13 @@ to InflatableOtterSuitSanityOrgasm: [Causes sanity to sharply plummet upon orgas
 	let endureadj be 1;
 	if enduring is true:
 		now endureadj is 2; [Value to divide sanity loss by if enduring.]
-	else:
-		if struggleatt > 0, decrease struggleatt by 1;
-		if InflatableOtterSuitBindStage is 1:
-			decrease humanity of player by (3 + psycheadjust) / endureadj;
-		else if InflatableOtterSuitBindStage is 2:
-			decrease humanity of player by (4 + psycheadjust) / endureadj;
-		else if InflatableOtterSuitBindStage is 3:
-			decrease humanity of player by (4 + psycheadjust * 2) / endureadj;
+	if struggleatt > 0, decrease struggleatt by 1;
+	if InflatableOtterSuitBindStage is 1:
+		decrease humanity of player by (3 + psycheadjust) / endureadj;
+	else if InflatableOtterSuitBindStage is 2:
+		decrease humanity of player by (4 + psycheadjust) / endureadj;
+	else if InflatableOtterSuitBindStage is 3:
+		decrease humanity of player by (4 + psycheadjust * 2) / endureadj;
 
 to say InflatableOtterSuitStruggleBar: [Displays struggle bar. The amount of struggle turns necessary to escape is always equal to the bound segment.]
 	if InflatableOtterSuitBindStage is 1:
@@ -496,6 +481,10 @@ to say InflatableOtterSuitStruggleBar: [Displays struggle bar. The amount of str
 
 
 Section 4 - No Cock
+
+Table of GameCharacterIDs (continued)
+object	name
+Stuffed Otter Suit	"Stuffed Otter Suit"
 
 Stuffed Otter Suit is a person. [mostly female/neuter oriented]
 The description of Stuffed Otter Suit is "[StuffedOtterSuitDesc]".
@@ -513,7 +502,7 @@ to say StuffedOtterSuitDesc:
 Instead of fucking Stuffed Otter Suit:
 	say "     You take a moment to consider having fun with the suit and its perpetually pleasured prisoner. While your rational mind has some serious reservations, your libido is starting to get the better of you. Do you follow through on your urges as use the suit to get yourself off?";
 	if player consents:
-		if (player is pure female) or (player is herm and a random chance of 1 in 2 succeeds): [female (100%) and herm (50%)]
+		if (player is purefemale) or (player is herm and a random chance of 1 in 2 succeeds): [female (100%) and herm (50%)]
 			say "[StuffedOtterSuitSexVaginalRide]";
 		else if player is male: [male (100%) and herm (50%)]
 			if anallevel > 1 and a random chance of 1 in 2 succeeds:
@@ -531,7 +520,7 @@ to say StuffedOtterSuitSexVaginalRide:
 	say "     You take off any clothes or gear, then lower yourself down to straddle the otter suit's waist. Squeezing into the pliant vinyl reassuringly, you begin to grind the damp petals of your cunt[sfn] against the curve of its shaft, shuddering with perverse delight as its slickened surface kisses your folds. The heat of its victim's cock and cum permeates the pliant plastic, spurring your arousal and laying to rest any remaining inhibitions. Your hips start to roll on their own accord, slathering the otter suit's meat in feminine honeys, and you take hold of the base of that nectar-slick dick to massage it in your grasp.";
 	say "     Eager for more, you raise your hips and align the crown of that delicious vinyl cock with [if cunts of player > 1]one of your slits, tapered length poised to drive deep into that[else]your entrance, tapered length poised to drive deep into your[end if] dripping passage. In one smooth, needful motion, you sink down on its bestial spire, moaning in rapture as its turgid mass spreads your sensitive walls. You clench and tremble around the meaty dick inside you, knees drawing together as the perfectly smooth plastic twitches and throbs inside you.";
 	WaitLineBreak;
-	say "     Its captive no concern to your pleasure-addled mind, you begin to ride that polished pole with slow, languid rocking[if player is male and player is breasted], a hand reaching back to pump your rigid length[smn] while you palm one of your breasts with the other[else if player is male], a hand reaching back to pump your rigid length[smn][else if player is breasted], a hand reaching up to palm one of your breasts while you keep it pinned with the other[else], a hand reaching back to play with your sensitive clit[sfn][end if]. The suit's moaning prisoner tries to buck into your slit, but their efforts go to waste in the captor's taut embrace. You're too preoccupied to care much about their suffering either way, stuffing your cunt and grinding against the suit's slick crotch, your mind focused entirely on the bliss of riding the toy.";
+	say "     Its captive no concern to your pleasure-addled mind, you begin to ride that polished pole with slow, languid rocking[if player is male and breast size of player > 0], a hand reaching back to pump your rigid length[smn] while you palm one of your breasts with the other[else if player is male], a hand reaching back to pump your rigid length[smn][else if breast size of player > 0], a hand reaching up to palm one of your breasts while you keep it pinned with the other[else], a hand reaching back to play with your sensitive clit[sfn][end if]. The suit's moaning prisoner tries to buck into your slit, but their efforts go to waste in the captor's taut embrace. You're too preoccupied to care much about their suffering either way, stuffing your cunt and grinding against the suit's slick crotch, your mind focused entirely on the bliss of riding the toy.";
 	say "     After several minutes of riding the lutrine toy, you're finally pushed over the edge and cum hard, soaking its crotch in your juices[if player is male] while your cock[smn] spray[smv] thick ropes of seed across its belly[end if]. Your clenching vaginal walls must prove too much for its prisoner, as they writhe and buck from within, their frantic thrashing only serving to prolong your climax. Spent and brutally satisfied, you lean down to peck a kiss to the suit's sealed muzzle, the affectionate gesture met with the loud beating of its tail against the shifting castle floor. You rise on shaky legs, a small waterfall of sticky wetness spilling out from your ravaged cunt[if cunts of player > 2] while the rest drip and clench with unsated need[else if cunts of player > 1] while the other clenches and drips with unsated need[end if], then move away from the twisted inflatable to redress.";
 
 to say StuffedOtterSuitSexAnalRide:

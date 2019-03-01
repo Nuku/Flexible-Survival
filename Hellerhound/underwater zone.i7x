@@ -1,7 +1,11 @@
-Version 2 of underwater zone by Hellerhound begins here.
+Version 2 of Underwater Zone by Hellerhound begins here.
 [Version 2.1 - Adjusted for new Beach layout]
 
 Section 1 - Gill Fruit Tree
+
+Table of GameEventIDs (continued)
+Object	Name
+Gill Fruits Tree	"Gill Fruits Tree"
 
 Gill Fruits Tree is a situation.
 the sarea of Gill Fruits Tree is "Beach".
@@ -12,6 +16,7 @@ Instead of resolving a Gill Fruits Tree:
 	if player consents:
 		increase carried of gill fruit by 1;
 		say "As you pick some of the fruit, the rest falls off into the water, overripe. Odd.";
+		now Resolution of Gill Fruits Tree is 1; [got a fruit]
 		now gill fruits tree is resolved;
 	else:
 		say "You leave the tree alone.";
@@ -118,4 +123,4 @@ to swimmingfight:
 		else:
 			challenge "Siren";
 
-underwater zone ends here.
+Underwater Zone ends here.

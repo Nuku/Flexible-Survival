@@ -5,6 +5,10 @@ Version 4 of Joanna by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Overrun Garden	"Overrun Garden"
+
 Overrun Garden is a situation. The level of Overrun Garden is 10.
 The sarea of Overrun Garden is "High".
 when play begins:
@@ -24,7 +28,7 @@ Instead of resolving a Overrun Garden:
 	say "     Beyond just arousing her, the fluids start to transform her, turning her fur green and her darker face to a bright red like the plant's flowers. The powerful plant and the large volumes of corrupting fluids work to change her quickly, altering her further. As a second and third pussy form between her legs, they are quickly filled with the tentacles as well, adding to her sounds of pleasure. As her three pussies are being filled, a large cock forms, which then splits and grows out into four spurting tentacle cocks with a pair swollen bulbs for balls beneath. More tendrils, as if knowing this change has been induced, move in and engulf them in sucking crimson flowers.";
 	Waitlinebreak;
 	say "     You find yourself growing aroused by the strange assault you're witnessing, too fascinated to consider trying to stop it. That is, until you see the tentacles pulling [if HP of Joanna >= 90]Joanna[else]her[end if] towards a large, vaginal flower. The flower is more than large enough to engulf her entirely, and by the way the little tendrils inside it are waving around in anticipation, that's clearly what is planned. Too lost in the lustful pleasures of the plant's assault on her changing body and numerous genitalia, the transforming woman is unaware of the peril she is being drawn towards. If you're going to do anything to help her, it must be now before she's engulfed in the flower.";
-	say "     [bold type] Shall you charge to her rescue or wait to watch how it ends?[roman type][line break]";
+	say "     [bold type]Shall you charge to her rescue or wait to watch how it ends?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Charge to the rescue.";
 	say "     ([link]N[as]n[end link]) - Wait to watch how it ends.";
@@ -34,7 +38,7 @@ Instead of resolving a Overrun Garden:
 		LineBreak;
 		now inasituation is true;
 		setmonster "Parasitic Plant";
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		let debit be 0;
 		if hardmode is true and level of player > 10, let debit be level of player - 10;
 		now dex entry is 16 + ( debit / 5 );
@@ -51,9 +55,11 @@ Instead of resolving a Overrun Garden:
 		if fightoutcome >= 20 and fightoutcome <= 29: [lost]
 			say "     As your struggles cease, the vines truss you up tightly. Captured, you have become a second victim for this giant plant monster.";
 			say "[losejoannafight]";
+			now Resolution of Overrun Garden is 2; [lost]
 		else if fightoutcome >= 30: [fled]
 			say "     Having had enough, you manage to pull free of the plant, breaking the vine and escaping, leaving [if HP of Joanna >= 90]Joanna[else]the girl[end if] screaming as she's pulled into the large flower. She struggles for a time, but the plant subdues her and encloses her in the rather vaginal flower. You are quite certain there'll be nothing left of her but another of these parasitic plants to set root nearby. Well, at least you tried to help.";
 			now HP of Joanna is 0;
+			now Resolution of Overrun Garden is 3; [fled]
 		else if fightoutcome >= 10 and fightoutcome <= 19: [won]
 			say "     Fighting off the plant's vines, you are able to break off the one buried deep inside you, allowing you to press onwards.";
 			say "     Your struggle with the plant is quite difficult, but you persist, tearing roots and smashing flowers as you struggle to get reach the main body of the plant. During your fight, [if HP of Joanna >= 90]Joanna[else]the kinkajou[end if] is able to break free because you've destroyed enough of the vines and she makes a break for it. For a moment, you think she's left you all alone, but you hear a small engine choking to start. Looking away from the large, torn bags of fertilizer at the plant's base as you make it there, you spot her coming out of a small gardening shed wielding a gas powered hedge trimmer with a wild look in her eyes. You tackle the vines, holding them taut as she slashes through them, splattering their green juices out. She slashes at the plant's base, slowly cutting through it as you keep the last of the vines off her until it's sawed clean through and you both collapse, panting for breath after your life or death fight.";
@@ -66,6 +72,7 @@ Instead of resolving a Overrun Garden:
 			say "     'And I was just getting used to being a kinkajou,' she says with a soft giggle, walking slowly around the garden, smelling the large flowers and diving her tongue into them to enjoy their nectar. 'Mmm... this looks like a lovely garden. The perfect place for a lovely flower like me, don't you think?' she asks with a grin. '[if HP of Joanna >= 90]Be sure to tell Harold and the others at the Palomino that I'm okay[else]My name is Joanna[end if]. You're welcome to visit here again whenever you like, my brave hero,' she adds, running a green finger slowly down your chest and smiling as she sensually runs her foot-long tongue across your neck.";
 			now HP of Joanna is 1;
 			now lust of Joanna is 0;
+			now Resolution of Overrun Garden is 1; [helped and won]
 	else:
 		LineBreak;
 		say "     Deciding not to risk it, you are drawn to continue watching. As she's pulled closer, you watch [if HP of Joanna >= 90]Joanna[else]her[end if] arch her back in climax as the plant creature cums inside her, pumping her full of fluids from all directions. Her belly swells up as more of the sticky white sap is sprayed onto her body while her freshly made balls drain their cum to feed the hungry flowers milking at her new cocks. As she's lowered into the flower, she only starts to realize what's happening as the large tentacles withdraw, but by then, the smaller tendrils are all around her, holding her bloated body inside the flower as it starts closing around her. She tries to hold the petals open, but her strength wanes quickly and soon she's tightly enclosed. There is a brief struggle, then the big flower is still and the tentacles, fruits and flowers move back into their positions, waiting to lure in their next victim. You are quite certain there'll be nothing left of [if HP of Joanna >= 90]Joanna[else]the girl[end if] but another of these parasitic plants to set root nearby. You move on, ";
@@ -80,6 +87,7 @@ Instead of resolving a Overrun Garden:
 			if HP of Joanna >= 90, decrease humanity of player by 10;
 		if libido of player > 100, now libido of player is 100;
 		now HP of Joanna is 0; [resets Joanna]
+		now Resolution of Overrun Garden is 99; [watched]
 	now inasituation is false;
 	now joannaharoldtalk is 1;
 	now Overrun Garden is resolved;
@@ -88,8 +96,8 @@ to say losejoannafight:
 	say "     Held by the steely vines, you can feel them probing at your body. When the vine in your [if player is female]cunt[else]ass[end if] throbs painfully large, you cry out in a mix of pain and pleasure. Your open mouth is quickly filled by one of the bulbous fruits and sticky sap flows into your mouth[if player is not female]. Another finds its way into your ass, spreading you open wide[end if]. It is sticky and sweet and makes you more passive[if cunts of player > 1]. Having more cunts to fill, more vines and bulbous fruits push into you, making you moan in delight[end if]. All your available holes are filled with pumping, thrusting, leaking tendrils that stuff you over and over again. They start pulling you towards one of the large, vaginal flowers. The slender, white tendrils rise up and start waving around, as if in anticipation, but you no longer care about what's coming, too lost in the drugged pleasure as your belly[if player is female] and womb[end if] swells with the plant's sweet sap.";
 	say "     Some motion beside you draws your eyes to the transforming kinkajou woman as the flower is closing around her swollen body. She still tries to struggle a little, foolishly pushing against the closing petals. Why would anyone want to stop this? It just feels so wonderful. Released into the flower, the white tendrils wrap around you and slide all over your body. These are lovely caresses as you start to drift off to sleep while the plant's nectar flows over you and more tendrils slip into your body from every orifice, bonding with you. You cum repeatedly through this experience, even as you're passing out.";
 	[puts Parasitic Plant as lead monster for infection]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Parasitic Plant":
 			now monster is y;
 			break;
@@ -122,9 +130,13 @@ to say losejoannafight:
 
 Section 2 - Flower Garden
 
+Table of GameRoomIDs (continued)
+Object	Name
+Flower Garden	"Flower Garden"
+
 Flower Garden is a room. It is fasttravel. It is private. It is sleepsafe.
 The description of Flower Garden is "     Joanna's garden is lush and beautiful, thriving with large and fragrant flowers under her care. Having cleared away the remains of the monstrous plant, she's taken its place at the center of the garden. She uproots herself from time to time to walk around and tend to her flowers. There is a stone path to walk that weaves through the various beds and bushes.".
-lastflowersmell is a number that varies. lastflowersmell is normally 555.
+lastflowersmell is a number that varies. lastflowersmell is usually 555.
 Skyscrapers2 is a door. "Leaving here to the east heads back into the High Rise District.".
 Skyscrapers2 is west of Financial Sector and east of Flower Garden. It is dangerous.
 the marea of Skyscrapers2 is "High".
@@ -145,10 +157,14 @@ to say flowergardenscent:
 
 Section 3 - Joanna the Kinkajou-Plant
 
+Table of GameCharacterIDs (continued)
+object	name
+Joanna	"Joanna"
+
 Joanna is a woman. Joanna is in Flower Garden.
 The description of Joanna is "[joannadesc]".
 The conversation of Joanna is { "Sunshine!" }.
-lastjoannajuice is a number that varies. lastjoannajuice is normally 555.
+lastjoannajuice is a number that varies. lastjoannajuice is usually 555.
 joannatalk is a number that varies.
 joannaoffernum is a number that varies.
 
@@ -241,7 +257,7 @@ to say plantexam:
 	if HP of Joanna < 5, now HP of Joanna is 5;
 
 to say joannaoffer:
-	say "     As you come up to talk to Joanna, she puts her arms around you and runs her paws over you. 'Mmm... I was hoping you'd stop by, sweetie. I've been really enjoying our time together, but I'm starting to want more. I crave more,' she says, sliding her long tongue across your cheek, making you shiver in delight? fear? anticipation? Her fingers continue over your body, teasing you lightly. 'Will you help me, my lovely hero?[no line break][if plantdefeat > 0]  I may even be able to help you out a little while I'm at it,[end if]' she purrs, sliding her tongue across your ear before nibbling on it. 'It's nothing much. Just a little seed,' she whispers.";
+	say "     As you come up to talk to Joanna, she puts her arms around you and runs her paws over you. 'Mmm... I was hoping you'd stop by, sweetie. I've been really enjoying our time together, but I'm starting to want more. I crave more,' she says, sliding her long tongue across your cheek, making you shiver in delight? fear? anticipation? Her fingers continue over your body, teasing you lightly. 'Will you help me, my lovely hero?[no line break][if plantdefeat > 0] I may even be able to help you out a little while I'm at it,[end if]' she purrs, sliding her tongue across your ear before nibbling on it. 'It's nothing much. Just a little seed,' she whispers.";
 	say "     [bold type]Shall you accept her offer?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes.";
@@ -411,12 +427,12 @@ This is the joannasexy rule:
 		clear the screen;
 		[puts Parasitic Plant as lead monster for sex change]
 		sort the table of fucking options in sortorder order;
-		repeat with y running from 1 to number of filled rows in table of random critters:
-			choose row y in table of random critters;
+		repeat with y running from 1 to number of filled rows in Table of Random Critters:
+			choose row y in Table of Random Critters;
 			if name entry is "Parasitic Plant":
 				now monster is y;
 				break;
-		choose row monster from table of random critters;
+		choose row monster from Table of Random Critters;
 		if nam is "Bukkake":
 			say "[joannasex1]";
 		else if nam is "Fellatio":
@@ -509,7 +525,7 @@ to say joannasex4:
 
 
 to say joannasex5:
-	say "     Reaching down, you stroke Joanna's throbbing cocks, spreading her leaking juices over them until they're nice and slick. Slowly pulling away from the deep-throating kiss, you ask if she'd like to fill you with them. Her response is to give you another kiss with that wild tongue of hers, making you moan. You lay down on the grass with her atop you, laying in a sunny patch. She spreads your legs and brings her numerous cocks into position. ";
+	say "     Reaching down, you stroke Joanna's throbbing cocks, spreading her leaking juices over them until they're nice and slick. Slowly pulling away from the deep-throating kiss, you ask if she'd like to fill you with them. Her response is to give you another kiss with that wild tongue of hers, making you moan. You lay down on the grass with her atop you, laying in a sunny patch. She spreads your legs and brings her numerous cocks into position.";
 	if cunts of player > 2:
 		say "     Having a hole for each of her four cocks, she moans loudly in appreciation as each one of the sinks into your waiting vaginas in turn[if cunts of player is 3 and player is planttailed], pushing the final one into your vaginal-like anal passage[else if cunts of player is 3], pushing the final one into your tight pucker to plow your ass[end if]. The feeling of having four cocks in you at once is grand, making your body shiver and writhe in waves of delight. Kissing you again, her slick tongue pumps down your throat, filling your taste buds with her sweet flavor once again. You run your hands through her soft fur and stroke her breasts, your motions a little ragged and uncoordinated from the overwhelming stimuli, but Joanna is doing little better, clearly enjoying filling you so much she hardly notices your fumbling hands. She keeps her own locked at your hips, gripping you firmly.";
 	else:
@@ -575,8 +591,12 @@ to say joannajuice:
 
 Section 8 - Pre-Plant Joanna
 
-joannadogsaved is a truth state that varies. joannadogsaved is normally false.
+joannadogsaved is a truth state that varies. joannadogsaved is usually false.
 joannaharoldtalk is a number that varies.
+
+Table of GameEventIDs (continued)
+Object	Name
+Dog Chase	"Dog Chase"
 
 Dog Chase is a situation. The level of Dog Chase is 2.
 The sarea of Dog Chase is "Outside".
@@ -593,8 +613,10 @@ Instead of resolving a Dog Chase:
 		now PALOMINO is known;
 		now HP of Joanna is 90;
 		now joannadogsaved is true;
+		now Resolution of Dog Chase is 1; [saved Joanna]
 	else:
 		say "     You catch the sound of barking dogs approaching and put yourself on guard. Moving to an alleyway, you watch as one of those husky girls playfully runs from a German Shepherd male. Their chase is loud and playful, with the husky merrily leading him around, though you're quite certain she'll eventually let the horny male mount her. You wait until they pass and their barking grows distant before emerging and continuing on your way.";
+		now Resolution of Dog Chase is 2; [didn't save Joanna]
 	now Dog Chase is resolved;
 
 an everyturn rule:
@@ -604,14 +626,14 @@ an everyturn rule:
 		else if Joanna is in the PALOMINO:
 			move Joanna to Flower Garden;
 
-[  -- moved to Harold's conversation tree --
+[  - moved to Harold's conversation tree -
 instead of conversing the Harold while level of player >= 9 and HP of Joanna is 92 and joannaharoldtalk is 0:
 	say "     Going over to Harold, you inquire about Joanna, whom you haven't seen around of late. 'It's been a while, hasn't it?' he says. 'I think she mentioned something about going downtown to check out some overgrown flower gardens she'd spotted. I'm starting to get a little worried. You might want to head down to the high rise district and see if she's in an [bold type]overrun garden[roman type] around there. Just be careful if you do.";
 	now joannaharoldtalk is 1;
 ]
 
 to say joannaclubsex:
-	say "     You wait for a moment when the kinkajou's not dancing to approach her. Joanna blushes a little at your offer, but grins and takes your hand in hers. 'Sure, lets have a little fun.' She guides you to one of the back rooms and kisses you as she closes the door. You run your hands over her body, helping her out of her clothes while she strips you.";
+	say "     You wait for a moment when the kinkajou's not dancing to approach her. Joanna blushes a little at your offer, but grins and takes your hand in hers. 'Sure, let's have a little fun.' She guides you to one of the back rooms and kisses you as she closes the door. You run your hands over her body, helping her out of her clothes while she strips you.";
 	if lust of Joanna is even:		[used temporarily to alternate scenes]
 		say "     After breaking the kiss, Joanna moves down onto her knees. Taking your [cock of player] cock in hand, she runs her paws over it, then gives it a slow lick with her long tongue. Quite agile, the slick tongue slides over your manmeat before she leans forward and starts sucking you off. Her paws stroke and caress your thighs, then move to knead your balls. Moaning softly, you run your fingers through her long hair and rub her ears.";
 		say "     Her tongue and muzzle work you eagerly, licking and sucking you until finally you can't hold back any longer. With a groan of pleasure, you cum hard, blasting your thick seed into her mouth and down her throat. As she licks it all up with her long tongue, she pumps her fingers into her snatch, soaking it in her feminine juices. Once you've both recovered from your climax, she wipes her paws and gives you another kiss before heading back onto the dance floor.";
@@ -656,7 +678,7 @@ Definition: a person is planttailed:
 [ 6 = refused her seed on initial offer ] = joannaoffernum = 1  //  lust of joanna is 3+
 [ 7 = accepted her seed ] = lust of joanna is 3+
 
-[ 90 = helped w/dogs          ]  Dog Chase resolved, joannadogsaved is true, Palomino is known
+[ 90 = helped w/dogs          ] Dog Chase resolved, joannadogsaved is true, Palomino is known
 [ 91 = asked Harold about her ]
 [ 92 = chat w/Joanna          ]
 
@@ -675,7 +697,7 @@ when play ends:
 	if vinetrapped is 2:
 		say "     You eventually awaken again as the flower petals open, allowing the morning sun to shine down on you. Drawing strength from its light, you start to rise, helped out of flower by several of the vines. Stretching your arms wide, you bask in the light and sigh in pleasure, feeling the pleasure of feeding all across your body. You don't know how long you stay there, your mind foggy and thinking little at all, but are woken from your reverie by another nearby flower opening. You walk over and help the lovely creature inside, a plant girl much like you, but with an animal face, muzzle and tail. For a moment, there's a passing memory as if you'd seen her before, but it fades away. She has lovely flowers in her green hair, a green plant-like body with red across her kinkajou face. Her long, red, tendril-tongue slides out and dives into your mouth and you can feel her cock tendrils begin to stir.";
 		say "     After a long session of lovemaking on the grass where you put your vines and tendrils into one another while feeding from the sunlight, you finally look up and find the sun high in the sky. Feeling full and sated, you take your lover's hand in yours and follow a growing urge within you both to leave and find another place to set down your roots, this one fully overgrown by the giant plant. Kissing the giant plant's vines and bulbs, you both suck sweet juices from them before going. Again taking her hand in yours, you entwine your viney fingers and, with some effort to uproot yourselves, head on your way.";
-		say "     You travel with your companion across the city. traveling across the paved streets is unpleasant, not being able to feel the earth or dig into the soil, but you do so whenever you can to refresh yourselves. While most of the creatures of the city stay out of your way, you do end up fighting with some on your journey and you make sure to leave them full of sticky nectar and sap, hoping they'll share in the joy of becoming peaceful plants instead of squabbling mammals. And with all the fighting going on at the city's edge, you and your companion are able to slowly creep past the lines of those fighting mammals (humans, was it?) during a conflict. It is slow going and it's very tempting to lay down your roots and stop, but you encourage one another to keep going, wanting only the best of locations for your lover. Having grown some small branches and leaves to look like bushes, you move with the patience of a growing plant and creep inches at a time while they fight around you with the other creatures.";
+		say "     You travel with your companion across the city. Traveling across the paved streets is unpleasant, not being able to feel the earth or dig into the soil, but you do so whenever you can to refresh yourselves. While most of the creatures of the city stay out of your way, you do end up fighting with some on your journey and you make sure to leave them full of sticky nectar and sap, hoping they'll share in the joy of becoming peaceful plants instead of squabbling mammals. And with all the fighting going on at the city's edge, you and your companion are able to slowly creep past the lines of those fighting mammals (humans, was it?) during a conflict. It is slow going and it's very tempting to lay down your roots and stop, but you encourage one another to keep going, wanting only the best of locations for your lover. Having grown some small branches and leaves to look like bushes, you move with the patience of a growing plant and creep inches at a time while they fight around you with the other creatures.";
 		say "     Once you're safely past them, you are able to continue on until you find a lovely riverbank glade and set down your roots permanently, sharing the pleasure of this sensation by entwining your vines with your companion and sharing nectar and sap with her. You would not have made it here without her and now you have this place to share with her and make into a plant paradise together. You grow and spread out your vines across the glade, quite pleased when the occasional human mammal is drawn into your glade by the lovely scent of your flowers. Working together, you easily manage to subdue them, milking them for their nutrients and filling them with a seed of a plant of their own to start changing them. These converts help you grow and spread further, as well as bring you more new converts to spread your plant offspring out from your hidden glade.";
 		if hellHoundLevel > 0:
 			say "     With your mind almost completely erased by your transformation into a plant, you forget about your pact with the hellhound. But he does not forget. Having given into your life as a corrupting plant creature infecting others, your dark contract has only been delayed to prepare you for a new role in the afterlife.";
@@ -684,7 +706,7 @@ when play ends:
 
 when play ends:		[See Parasitic Plant for player specific endings]
 	if HP of Joanna > 0 and HP of Joanna < 90:
-		say "     Joanna remains in the infected city when the military rolls through, happy with her new life in her garden. It becomes a safe rest stop for visitors and explorers of the city. She always welcomes them and makes many friends among them, sharing her beautiful and lustful body with them to satisfy their urges[if HP of Joanna >= 5]. She soon gets the nickname of [']Kinky Jo['], notorious for being up for pretty much any kind of fun imaginable with those who come to share in her garden's beauty[else if HP of Joanna > 2]. Being a lustful plant herm, she's happy to please any guests to her lovely garden in numerous ways[end if]. ";
+		say "     Joanna remains in the infected city when the military rolls through, happy with her new life in her garden. It becomes a safe rest stop for visitors and explorers of the city. She always welcomes them and makes many friends among them, sharing her beautiful and lustful body with them to satisfy their urges[if HP of Joanna >= 5]. She soon gets the nickname of [']Kinky Jo['], notorious for being up for pretty much any kind of fun imaginable with those who come to share in her garden's beauty[else if HP of Joanna > 2]. Being a lustful plant herm, she's happy to please any guests to her lovely garden in numerous ways[end if].";
 		if humanity of player >= 10:
 			say "     These visitors help you keep in touch with her, carrying the occasional letter to her. She writes about her peaceful, happy life and the various visitors and friends she's made, always thankful for your timely rescue and continued friendship[if player is plantbodied and plantdefeat > 0]. She particularly enjoys hearing about your happy life as a lustful plant and sharing the plant seeds with your orgy group[end if].";
 

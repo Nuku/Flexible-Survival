@@ -2,7 +2,7 @@ Version 1 of Pericles by Rikaeus begins here.
 [Version 1 - New NPC, New Events]
 
 [ PericlesRelationship                                     ]
-[   0: Hasnt met                                           ]
+[   0: Hasn't met                                          ]
 [   1: Has met via Bjorn Event                             ]
 [   2: Has seen his second event                           ]
 [   3: Has seen his third event                            ]
@@ -10,14 +10,27 @@ Version 1 of Pericles by Rikaeus begins here.
 [   5: Has seen his fifth event, now available in room     ]
 [   6: Managed to convince Bjorn to apologize, share rooms ]
 
+
+PericlesRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if History Video is resolved and PericlesRoomConnection is 0:
+		change the west exit of Second Floor Male Dorms to Pericles' Room; [connecting the location to the travel room]
+		change the east exit of Pericles' Room to Second Floor Male Dorms; [connecting the location to the travel room]
+		now PericlesRoomConnection is 1; [room connected]
+
+Table of GameEventIDs (continued)
+Object	Name
+Daily Training Session	"Daily Training Session"
+
 Daily Training Session is a situation.
-Daily Training Session is resolved.
+Daily Training Session is inactive.
 The sarea of Daily Training Session is "Campus".
 
 when play begins:
 	add Daily Training Session to badspots of guy;
 
-instead of going to Athletic Street while (Daily Training Session is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 1 and a random chance of 1 in 3 succeeds):
+instead of going to Athletic Street while (Daily Training Session is active and Daily Training Session is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 1 and a random chance of 1 in 3 succeeds):
 	move player to Athletic Street;
 	FirstPericlesEvent;
 
@@ -36,16 +49,20 @@ to FirstPericlesEvent:
 	now PericlesRelationship is 2;
 	now LastCampusWalkin is turns;
 	now Daily Training Session is resolved;
-	now History Class Lesson is not resolved;
+	now History Class Lesson is active;
+
+Table of GameEventIDs (continued)
+Object	Name
+History Class Lesson	"History Class Lesson"
 
 History Class Lesson is a situation.
-History Class Lesson is resolved.
+History Class Lesson is inactive.
 The sarea of History Class Lesson is "Campus".
 
 when play begins:
 	add History Class Lesson to badspots of guy;
 
-instead of going to Lecture Street while (History Class Lesson is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 2 and a random chance of 1 in 3 succeeds):
+instead of going to Lecture Street while (History Class Lesson is active and History Class Lesson is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 2 and a random chance of 1 in 3 succeeds):
 	move player to Lecture Street;
 	SecondPericlesEvent;
 
@@ -61,21 +78,25 @@ to SecondPericlesEvent:
 	say "     Pericles has a thankful look on his face when everyone appears to understand. After that he lets them ask a few questions before it's time for the end of class. When all the students are gone, he notices you and walks over. He tosses an arm around your shoulder and smiles at you. 'Hey! It's nice to see you again friend!' he says happily. You admit it's nice as well, and asks him about this entire thing. He chuckles before replying to give you an answer. 'I've been asked to give this informative lecture to the new history students by the Dean, as for why... I'll tell you that later,' he says winking at you. He looks at the clock and curses. 'Shit, I'm late for my Calculus class,' he swears before apologizing and running off. You shrug your shoulders before you yourself leave the lecture hall.";
 	now PericlesRelationship is 3;
 	now History Class Lesson is resolved;
-	now Masturbation In Private is not resolved;
+	now Private Masturbation is active;
 	now LastCampusWalkin is turns;
 
-Masturbation In Private is a situation.
-Masturbation In Private is resolved.
-The sarea of Masturbation In Private is "Campus".
+Table of GameEventIDs (continued)
+Object	Name
+Private Masturbation	"Private Masturbation"
+
+Private Masturbation is a situation.
+Private Masturbation is inactive.
+The sarea of Private Masturbation is "Campus".
 
 when play begins:
-	add Masturbation In Private to badspots of guy;
+	add Private Masturbation to badspots of guy;
 
-instead of going to Tenvale College Library while (Masturbation In Private is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 3 and a random chance of 1 in 3 succeeds):
+instead of going to Tenvale College Library while (Private Masturbation is active and Private Masturbation is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 3 and a random chance of 1 in 3 succeeds):
 	move player to Tenvale College Library;
 	ThirdPericlesEvent;
 
-instead of resolving Masturbation In Private:
+instead of resolving Private Masturbation:
 	move player to Tenvale College Library;
 	ThirdPericlesEvent;
 
@@ -83,8 +104,9 @@ to ThirdPericlesEvent:
 	say "     Upon entering the library it appears like it's not that crowded. There are a few students dotted sparsely all over the place but that's about it. However, what catches your attention is something that occurs when you wander over to the wall containing the doors to the study rooms that are soundproof unless someone's right by the entrances. Behind one of them you hear grunting and moaning, sounds that intrigue you a lot. Out of curiosity, you turn the knob and open it a smidge. To your shock you find Pericles in the room, furiously masturbating. He's running his hand up and down his cock while he's making sounds that show he's clearly enjoying it. However, you stumble a bit and cause some noise, making him hear you and turn towards you.";
 	if player is female:
 		say "     He frowns a bit at you before giving you a hesitant smile. 'Could... you leave me to uh.. take care of this?' he asks kindly and a bit forcefully. From the tone of his voice, it appears that your body isn't something that he likes. Most likely the fact that you have female anatomy as you did see him stare at only men really. You shrug and oblige his desires and leave him be, closing the door behind you. Deciding loitering around wouldn't do well, you decide to go on your way. Maybe you'll get to see him sometime later. Perhaps if you want to sex him, then you may want to lose what makes you female. You could always find his room too.";
-		now Masturbation In Private is resolved;
-		now History Video is not resolved;
+		now Resolution of Private Masturbation is 99; [player pushed out as a female]
+		now Private Masturbation is resolved;
+		now History Video is active;
 		now PericlesRelationship is 4;
 	else:
 		say "     When he sees you in the doorway he smiles and continues to masturbate, although at a slower pace now. He takes his free hand and runs it through his hair before he speaks up. 'Mmm I was actually hoping you'd show up. Do you want to help me friend? Or you could just watch,' he asks, gesturing to his cock and balls. The spartan's assets are rather amazing. His dick looks to be maybe ten inches long, not as long as some of the weirder ones you see, and about maybe five inches around. His balls are rather large as well, looking full and ready to pump out a huge load of cum. It is very clear that the infection apocalypse did good for him, though he could have looked like this before it. Nonetheless, you think about his offer.";
@@ -108,29 +130,36 @@ to ThirdPericlesEvent:
 			WaitLineBreak;
 			say "     Pericles begins to roughly fuck your throat, sounds of it entering and leaving your mouth filling the room. It is very clear that the male is enjoying using you as he's started to mutter dirty words to you, from calling you a cockslut to even a whore. 'You like this, don't you cumslut?' he grunts, slamming in deep, not letting you control the flow at all. On top of him abusing your oral cavity, his balls are slapping loudly and wetly against your chin, the lewd sound only making the situation hotter. It is also through this position that you're able to tell when your friend is getting close as the ballsack quickly begins to tighten.";
 			say "     'Take my cum you slut!' he roars as he pulls back so that his tip is resting on your tongue. Shortly after that a warm salty fluid starts coating the insides of your mouth. It appears to be a large amount as you are forced to gulp it down so as to not have any spill. Even so, some of the cum leaks out of your mouth. Less than a minute later Pericles finishes cumming. When he does, he pulls out and wipes his jizz coated tip on your lips, covering them with his seed. He then takes a good look at you before smiling. 'That's a good look on you,' he says, chuckling. He then helps you up, pulling you into a sloppy kiss afterwards. 'That was amazing, sorry about whatever I said during that. This infection... makes me rather dominating,' he says, rubbing the back of his head sheepishly. You tell him it was perfectly fine and you enjoyed it. That makes him smile at you happily. The two of you clean up before leaving the room. When you do, as he heads off he tells you to visit his room soon.";
-			now Masturbation In Private is resolved;
-			now History Video is not resolved;
+			now Private Masturbation is resolved;
+			now Resolution of Private Masturbation is 1; [player jerked him]
+			now History Video is active;
 			now PericlesRelationship is 4;
 		else if calcnumber is 2:
 			LineBreak;
 			say "     You shake your head and instead decide to just watch. He shrugs his shoulder and then smirks at you. He raises his free hand to one of his nipples before starting to tweak it as he's masturbating, making him moan out loud. The virile male appears eager to put on a show for you. However, you feel as if the male is rather close already, possibly from you watching him. This is evidenced by the fact that he looks to be rubbing his cock even faster and pinching his nipples even harder. Minutes later he's moaning loudly and humping his hand, rather shortly after that the Spartan starts swearing up a storm, his head thrown back in pleasure.";
 			say "     Quickly after that Pericles['] hand leaves his cock as cum shoots all over his body, practically coating the male with it. Some of it even lands in his mouth to which he eagerly gulps it down. A minute later he comes down from his orgasmic high and begins cleaning up as he'd probably be yelled at by the librarians here, Spartan leader or not. Once he's done he walks up to you and smiles before leading you out of the room. 'If you could, please visit my room sometime later, I have something to show you,' the male tells you. You nod at him and watch him head off on his own before you continue to do whatever you were doing before.";
-			now Masturbation In Private is resolved;
-			now History Video is not resolved;
+			now Private Masturbation is resolved;
+			now Resolution of Private Masturbation is 2; [player watched]
+			now History Video is active;
 			now PericlesRelationship is 4;
 		else:
 			LineBreak;
 			say "     You quietly excuse yourself and just slip out of the room, leaving Pericles to finish himself off on his own.";
+			now Resolution of Private Masturbation is 3; [player didn't watch]
 	now LastCampusWalkin is turns;
 
+Table of GameEventIDs (continued)
+Object	Name
+History Video	"History Video"
+
 History Video is a situation.
-History Video is resolved.
+History Video is inactive.
 The sarea of History Video is "Campus".
 
 when play begins:
 	add History Video to badspots of guy;
 
-instead of going to Tenvale College Male Dorms while (History Video is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 4 and a random chance of 1 in 3 succeeds):
+instead of going to Tenvale College Male Dorms while (History Video is active and History Video is not resolved and LastCampusWalkin - turns > 0 and PericlesRelationship is 4 and a random chance of 1 in 3 succeeds):
 	move player to Tenvale College Male Dorms;
 	FourthPericlesEvent;
 
@@ -154,6 +183,10 @@ to FourthPericlesEvent:
 	change the west exit of Second Floor Male Dorms to Pericles' Room; [connecting the location to the travel room]
 	change the east exit of Pericles' Room to Second Floor Male Dorms; [connecting the location to the travel room]
 
+Table of GameCharacterIDs (continued)
+object	name
+Pericles	"Pericles"
+
 Pericles is a man.
 The description of Pericles is "[PericlesDesc]".
 The conversation of Pericles is { "<This is nothing but a placeholder!>" }.
@@ -173,10 +206,10 @@ instead of conversing the Pericles:
 	if PericlesRelationship < 5: [should be not yet available]
 		say "     ERROR: Pericles shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [PericlesRelationship]";
 	else if PericlesRelationship > 6:
-		say "     When you approach the Spartan-Helot he's currently working on his paperwork. Seeing your shadow hover over his sheets he looks up and smiles. 'Is there anything you need friend?' He asks, speaking in a warm tone.";
+		say "     When you approach the Spartan-Helot he's currently working on his paperwork. Seeing your shadow hover over his sheets he looks up and smiles. 'Is there anything you need friend?' he asks, speaking in a warm tone.";
 		say "[PericlesTalkMenu]";
-	else :
-		say "     As you walk up to Pericles, who has been wandering around his room, he looks up at you and smiles. 'What do you want?' He asks, clearly happy to see you.";
+	else:
+		say "     As you walk up to Pericles, who has been wandering around his room, he looks up at you and smiles. 'What do you want?' he asks, clearly happy to see you.";
 		say "[PericlesTalkMenu]";
 
 to say PericlesTalkMenu:
@@ -215,13 +248,9 @@ to say PericlesTalkMenu:
 					say "[PericlesCollege]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You apologize and tell him you that you don't have anything to say. He raises a brow but gets back to what he was doing.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You apologize and tell him you that you don't have anything to say. He raises a brow but gets back to what he was doing.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -239,7 +268,7 @@ instead of fucking Pericles:
 	if PericlesRelationship is 7:
 		say "     The Spartan gives you a disapproving look before shaking his head. 'I'm sorry friend, but you have to prove yourself again to me somehow after those failures in the war,' he says before returning to what he was doing.";
 	else if BjornRelationship is 3:
-		say "     He shakes his head as he looks towards Bjorn who is standing inside the room. 'I'm sorry friend but I'd rather not do it with the viking here.' Pericles says to you, making you rather dissapointed.";
+		say "     He shakes his head as he looks towards Bjorn who is standing inside the room. 'I'm sorry friend but I'd rather not do it with the viking here,' Pericles says to you, making you rather disappointed.";
 	else if (lastfuck of Pericles - turns < 3): [he got fucked in the last 9 hours = 3 turns]
 		say "     Pericles raises a brow and shakes his head at you. 'Even with my mutation I need some time to rest friend,' he says, chuckling at the end.";
 	else if PericlesRelationship > 7 and cocks of player > 0 and cunts of player < 1:
@@ -293,13 +322,9 @@ to say PericlesSexMenu:
 					say "[PericlesSex2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head and decide against sexing up the buff Spartan leader.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head and decide against sexing up the buff Spartan leader.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -310,10 +335,10 @@ to say PericlesSex1:
 		say "     Pericles gives you a calculating look before he nods to himself with a smirk. 'Slave, strip and lay on my bed, back first. That is a direct order,' the Spartan-Helot orders you, sending shivers down your spine as you promptly obey. You quickly deprive yourself of clothing, letting it pool on the floor, moving onto the bed soon after. Once you're in position, you see the buff male looking up and down at your body in desire. A few seconds later he then too drops everything he's wearing, letting you once more look upon his glory. Pericles['] cock is already rock hard but he pays no mind to it as he walks over to the bedside drawer, which he opens and pulls out a bottle of lube. Popping it open the Spartan-Helot moves on over to you and pours some of it onto his hand before reaching for your hole, slipping a finger in right away, making you let out a gasp at the cool sensation.";
 		WaitLineBreak;
 		say "     'You like that, don't you, Helot?' Pericles asks, pushing another finger in, making you groan out loud. He quickly then proceeds to scissor your hole open, the pleasure causing moans to pour out of your mouth. 'You won't need much preparation, but then again Helots never do,' he says, proving that by slipping in another digit, the action not incurring much pain. About a minute later the Spartan-infection progenitor removes his fingers and promptly orders you hold up your legs, something that you hurriedly do, happy to get onto the sex. While you're doing this Pericles is lubing up his cock so he doesn't have to go in dry, a gesture that you no doubt appreciate. After doing that he climbs on up to the bed and positions himself at your entrance. With one quick thrust he hilts himself fully into you, filling your vision with stars, something that causes you to gasp loudly.";
-		say "     'Fuck, I never really understood why you Helots were always still so tight despite being fucked silly every day,' Pericles grunts, clearly enjoying the velvety feeling of your tight hole. You on the other hand are groaning in pleasure at just being filled by the male's rather large cock. Though, the Spartan-Helot doesn't stay still for long, rather he soon pulls out to just the tip before slamming back into you, his cum-filled balls slapping loudly against you ass-cheeks. This action sends more stars shooting through your vision as you let out a loud moan, but you aren't allowed any respite as he begins to fuck you as rough as he can, grabbing at your legs to hold onto as he does this. The sounds and smells of sex fill the room as Pericles pounds your hole, creating a sight that would arouse anyone that saw.";
+		say "     'Fuck, I never really understood why you Helots were always still so tight despite being fucked silly every day,' Pericles grunts, clearly enjoying the velvety feeling of your tight hole. You on the other hand are groaning in pleasure at just being filled by the male's rather large cock. Though, the Spartan-Helot doesn't stay still for long, rather he soon pulls out to just the tip before slamming back into you, his cum-filled balls slapping loudly against your ass-cheeks. This action sends more stars shooting through your vision as you let out a loud moan, but you aren't allowed any respite as he begins to fuck you as rough as he can, grabbing at your legs to hold onto as he does this. The sounds and smells of sex fill the room as Pericles pounds your hole, creating a sight that would arouse anyone that saw.";
 		WaitLineBreak;
 		say "     It doesn't take him long to find your prostrate, the sheer action putting you out of commission by making you look like somebody fucked your brains out, which is one hundred percent the truth. With your mental leave of absence, Pericles repositions you so that you are now face to face with him as he is slamming his cock in and out of you, though he soon makes a comment about your state of mind. 'You look like you're right where you belong slave, both mentally and physically,' he says with a grunt as his thrusts get more frantic, signifying that he's getting close to orgasm. However, in a sporadic action, the Spartan-Helot bites you on the neck, causing you to let out a moan mixed with a yelp as well as suddenly cumming hard, shooting your load all over the two of you. This causes your hole to tighten around the male fucking you, which appears to cause him to reach his climax as well.";
-		say "     'Fuck!' he roars, slamming into you one last time before spilling his seed into your hole and then promptly slumping over your body, panting hard. The two of you lay there for a good while, just enjoying the orgasmic bliss of your post-coitus. It isn't until about an hour later that you both come to your senses and sit up. This time instead of you, it's Pericles who's blushing. 'I'm sorry about how I acted. The nanites make me react weirdly towards the Helot infection, at least sexually,' he admits. You tell him that it's perfectly fine and that you understand, especially considering that he is the originator of that particular strain of infection and then tell him that you enjoyed it thoroughly. When you say that he gives you a beaming smile before he helps you clean up. Once the both of you are cum free and have your clothes back the two of you return to what you were doing prior to the sex.";
+		say "     'Fuck!' he roars, slamming into you one last time before spilling his seed into your hole and then promptly slumping over your body, panting hard. The two of you lay there for a good while, just enjoying the orgasmic bliss of your post-coitus. It isn't until about an hour later that you both come to your senses and sit up. This time, instead of you, it's Pericles who's blushing. 'I'm sorry about how I acted. The nanites make me react weirdly towards the Helot infection, at least sexually,' he admits. You tell him that it's perfectly fine and that you understand, especially considering that he is the originator of that particular strain of infection and then tell him that you enjoyed it thoroughly. When you say that he gives you a beaming smile before he helps you clean up. Once the both of you are cum free and have your clothes back the two of you return to what you were doing prior to the sex.";
 	else:
 		say "     A few seconds later you finally figure out what you want to do with Pericles, but you end up wondering how you'll go about it. You know that if you offer the Spartan-Helot your ass he'd probably gladly take it but you would rather not be so easy. So, instead you step behind the well-built male and position your head close to his ear, your hot breath coming into contact with it. Promptly after you ask him if he'd like to have a bit of fun, saying this as you snake your hand around to grab at his crotch, his cock responding well to your touch. 'You're quite the eager beaver, I don't mind at all,' he purrs, the sensuality of the way he said it causing you to blush but soldier on, grasping harder at his dick. It appears that Pericles enjoys it, as by now he's fully hard.";
 		say "     The buff male grabs the hand on his crotch and drags you over to the bed where he pushes you onto it. Now on you're back you watch him strip down to absolutely nothing, getting the chance to ogle his naked body, something that you thoroughly enjoy. Of course you know that all these muscles were acquired from the nanites, you do also know that Pericles does maintain them with exercise. All the same, they suit the male, as well as the rather large cock and low hanging balls. When he approaches, you're startled when he reaches for you and starts depriving you of your own clothing, leaving you bare in front of him just like he is for you. You're even more surprised when he yanks you by the legs and pulls your ass to the edge of the bed and then kneels.";

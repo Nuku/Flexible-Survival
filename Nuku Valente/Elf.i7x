@@ -94,14 +94,14 @@ to say ElfDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
 	add "Wood Elf" to infections of girl;
 	add "Wood Elf" to infections of humanoid;
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Wood Elf"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -149,8 +149,9 @@ When Play begins:
 	now magic entry is true;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Wood Elf":
@@ -166,7 +167,7 @@ when play ends:
 				else:
 					say "     You maintain a fairly modest standing in the tribe, pulling your weight where need be. When there isn't the matter of hunting or bringing in new [']Recruits['], you fill the forest with the sounds of sex for many long hours. You couldn't be more content...";
 		else:
-			say "     Once the military picks you up, you get through processing with almost zero issue. You quickly find that society is eager to embrace an infected so conventionally attractive and normal-looking, allowing you to go about your daily life with extreme ease ";
+			say "     Once the military picks you up, you get through processing with almost zero issue. You quickly find that society is eager to embrace an infected so conventionally attractive and normal-looking, allowing you to go about your daily life with extreme ease";
 			if "Horny Bastard" is listed in feats of player:
 				say ". Given your infection's overwhelming influence to sate your lust, you manage to turn this to your benefit by becoming an owner of an upper-class night club. It proves to be quite effective at bringing coin in, and you get the benefit of picking and choosing whomever satisfies your desire at the time.";
 			else:

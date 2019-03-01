@@ -22,7 +22,7 @@ to say flaminglynxattack:
 
 
 to say losetoflaminglynx:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "     The fiery feline growls sends the surging flames from its body across the ground, scorching the slimy tunnel floor into soot. As the flames subside to a faint glow across his fur like lamplight, he gives you a final cuff with one large paw, knocking you down onto the blackened patch. He sniffs at you and nuzzles along your body. For a moment, you think those flames will burn, but they are only pleasantly warm now - a warmth that you begin to find strangely soothing and you run a hand across his side, cautiously petting the wild feline. His fur doesn't quite feel like normal fur, though you'd be hard pressed to express what makes it different, as it is still soft and yielding.";
 	let lynxfun be 0;
 	if player is purefemale:			[Female - unwanted]
@@ -32,7 +32,7 @@ to say losetoflaminglynx:
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 0 and 1;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	else if player is herm:		[Herm - fellatio/unwanted]
-		say "     The flaming lynx sniffs down your [bodydesc of player] body [if player is male]and gives a faint rumble of pleasure as he finds your cock [end if]before growling in disdain upon noticing your cunt moments later. ";
+		say "     The flaming lynx sniffs down your [bodydesc of player] body [if player is male]and gives a faint rumble of pleasure as he finds your cock [end if]before growling in disdain upon noticing your cunt moments later.";
 		let fllynxanal be 0;
 		if anallevel is 3, increase fllynxanal by 2;
 		if player is mpreg_ok, increase fllynxanal by 2;
@@ -78,7 +78,7 @@ to say losetoflaminglynx:
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	if lynxfun is 1:				[anal selected]
 		if ( HP of player > 0 or the player is submissive ) and a random chance of 1 in 2 succeeds:
-			say "     He paws over you, nuzzling along your side with a chuff[if player is submissive]. Your submissive tendencies kick in and you grow increasingly aroused, moaning softly with desire[else]. Already having submitted to him, you see no point in resisting now[end if]. Knowing what he wants, you divest yourself of your gear and move onto all fours. Nuzzling between your cheeks, he [if player is female]steers clear of your feminine entrance and instead [end if]licks across your crinkled hole. An sensual rush of excitement flows into you from that warm tongue and you grind back into his licking.";
+			say "     He paws over you, nuzzling along your side with a chuff[if player is submissive]. Your submissive tendencies kick in and you grow increasingly aroused, moaning softly with desire[else]. Already having submitted to him, you see no point in resisting now[end if]. Knowing what he wants, you divest yourself of your gear and move onto all fours. Nuzzling between your cheeks, he [if player is female]steers clear of your feminine entrance and instead [end if]licks across your crinkled hole. A sensual rush of excitement flows into you from that warm tongue and you grind back into his licking.";
 			say "     After a few more licks, he moves onto the main event and mounts you with an animalistic rumble. Having prepped you, his feline shaft slips into you with ease. You moan as the pleasant warmth of his body that you've been enjoying atop you can now be felt warming your insides as well, filling you with greater pleasure and arousing you greatly. Grinding your hips back into his thrusts entices him to fuck you more zealously. Your [if the player is submissive]submissive desires[else]lustful body[end if] revels in this as his stimulating barbs feel delightful along your sensitive anal passage[if player is male] and the press of his thrusts against your prostate make your cock twitch[end if].";
 			say "     The feline keeps a large paw on your shoulders as he pounds away at your back door. You squeeze your anal muscles and shift your hips, rocking along and gripping around his pulsing meat as he buggers you. You do your best to please the virile beast, longing to feel his release. And when it does come, the enlarged lynx nips down on your shoulder firmly[if the player is submissive], sending another shiver of delight through you[end if] as his deliciously hot seed surges into you. Blast after blast from him fills you with a rush of sexual excitement that culminates in [if player is male]your own orgasm that sends your [cum load size of player] load shooting forth from your twitching rod[else]an unfocused wave of sensual warmth rushing through you[end if]. Once he's finished, he eases himself off you and slides his spent shaft from your sticky and leaking hole. He pads around you, nuzzling and purring like a big pussycat before strutting off. The warm pleasure radiating from your filled rectum lingers inside you for quite some time, a pleasant reminder of your kinky encounter.[mimpregchance]";
 		else:
@@ -143,12 +143,12 @@ to say beattheflaminglynx:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Flaming Lynx"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -196,8 +196,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "firebreath"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings

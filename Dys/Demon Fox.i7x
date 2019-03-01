@@ -50,12 +50,12 @@ to say DemonFoxDesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 when play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Demon Fox";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -103,8 +103,9 @@ when play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry;
+	now DayCycle entry is 0;
 	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Item
@@ -154,11 +155,11 @@ to say DemonFoxSummon:
 to say DemonFoxMenu:
 	say "     You use the incantation to summon Kal['] Ren, bracing for the blinding flash of light by holding the book in front of your eyes. 'Well, hello kit,' you hear him greet in his rumbling voice, opening your eyes and lowering the book to look at him. 'Does my pet desire some companionship?'";
 	if DemonFox_PlayerWon is false or (DemonFox_PlayerWon_Fucked is true and DemonFox_PlayerWon is true):
-		say "     You scowl at him calling you his pet, quickly stating that you don't belong to him, no matter what he thinks. He laughs, though, shaking his head before his body suddenly seems larger than your own, a paw on your chest knocking you to the ground instantly. You look into his leering visage, a bit of searing drool landing on your face. 'Oh, so you don't think you're my pet, then? [if DemonFox_PlayerDefeated is true]Maybe I'll just have to show you your place again. Perhaps you don't realize what that bite I gave you meant, hm?[else if DemonFox_PlayerSubmitted is true]Don't even try to pretend. You want nothing more than to be my pet, serving my every whim... That little bite I gave you is binding, after all.[else if DemonFox_PlayerFled is true]Just because you ran before doesn't mean I can't take you now. You'd make an excellent toy.[else if DemonFox_PlayerWon_Fucked is true]Even after you defeated me, you [italic type]still[roman type] let me fuck you.[end if] As far as I'm concerned, you're mine.'";
+		say "     You scowl at him calling you his pet, quickly stating that you don't belong to him, no matter what he thinks. He laughs, though, shaking his head before his body suddenly seems larger than your own, a paw on your chest knocking you to the ground instantly. You look into his leering visage, a bit of searing drool landing on your face. 'Oh, so you don't think you're my pet, then? [if DemonFox_PlayerDefeated is true]Maybe I'll just have to show you your place again. Perhaps you don't realize what that bite I gave you meant, hm? [else if DemonFox_PlayerSubmitted is true]Don't even try to pretend. You want nothing more than to be my pet, serving my every whim... That little bite I gave you is binding, after all. [else if DemonFox_PlayerFled is true]Just because you ran before doesn't mean I can't take you now. You'd make an excellent toy. [else if DemonFox_PlayerWon_Fucked is true]Even after you defeated me, you [italic type]still[roman type] let me fuck you. [end if]As far as I'm concerned, you're mine.'";
 	else:
 		say "     You scowl at his comment, berating him for calling you his pet. He simply laughs at you, before you're suddenly pinned under a much larger version of him, his paw completely covering your torso. He leers over you, a drop of his searing saliva dripping on to your face. 'Just because you won last time doesn't mean you'd win again. It wouldn't take much for me to mark you as my pet...'";
 	WaitLineBreak;
-	say "     He let's those words sink in for a few seconds before he laughs again, removing his paw as he cackles. Soon enough, he's back to his previous size, lifting you back to your feet with one of his long tails. You blink, slightly bewhildered and somewhat scared as he continues to cackle at you, his muzzle scrunched up in a very vulpine grin. 'You...' he says breathlessly, 'you should've seen the look on your muzzle, kit! It looked like you were going to [italic type]piss yourself![roman type]' You blush as he continues laughing for nearly a minute longer, finally beginning to settle down as his sits on his haunches looking up at you with a smirk.";
+	say "     He let's those words sink in for a few seconds before he laughs again, removing his paw as he cackles. Soon enough, he's back to his previous size, lifting you back to your feet with one of his long tails. You blink, slightly bewildered and somewhat scared as he continues to cackle at you, his muzzle scrunched up in a very vulpine grin. 'You...' he says breathlessly, 'you should've seen the look on your muzzle, kit! It looked like you were going to [italic type]piss yourself![roman type]' You blush as he continues laughing for nearly a minute longer, finally beginning to settle down as his sits on his haunches looking up at you with a smirk.";
 	say "     'Now... You've called me here. Is there anything you want to do?'";
 
 to say DemonFoxFirstEncounter:
@@ -210,7 +211,7 @@ to say DemonFoxFirstSubmit:
 	say "     You're not given a chance to reply as you feel that tongue moving across your neck and down your torso, leaving behind a trail of slick saliva. [if player is male]Eventually, it finds its way to your cock[smn] and balls, caressing them. [end if]You have to stifle a gasp as the slimy organ slips between your ass cheeks. He laps against your hole a few times, coating you in his saliva before he [if anallevel is 3]plunges his tongue inside you, slipping past your tight ring. He gives you a few licks there as well before he [end if]moves on. He raises his head to meet your gaze before he lets out a possessive growl.";
 	WaitLineBreak;
 	say "     'Get on all fours,' he commands. You hastily obey, presenting your hindquarters to him, and he rumbles in approval of what he sees. [if player is mpreg_ok]'I'm gonna enjoy putting my pups in you,'[else]'I'm gonna enjoy taking you,'[end if] he growls. You feel his weight upon you once more as he mounts you, lining his massive cock up with your hole before thrusting nearly all the way in with one harsh movement. You gasp in pain from the sudden intrusion, but that doesn't discourage him. He pulls out of you just as roughly as he entered, the ridges along the underside of his cock wracking you with both pain and pleasure. He thrust back in once more, this time with a little less resistance. This cycle keeps repeating, growing in speed until he's rutting against you, his massive knot slapping against your ring loudly.";
-	say "     With a howl of pleasure, he shoves forward one last time, his knot spreading you painfully wide before it manages to pop in. Once it's inside, it swells even larger, firmly locking the two of you together. [if player is male]The pressure on your prostate is enough to set you off, spilling your load onto the ground beneath you. [end if]He gives one last growl before you feel his sharp teeth on your shoulder. They dig into your flesh as he bites down. You can feel his cock releasing its burning semen inside you, rope after rope of glowing cum erruping into your bowels. By the time he's finished climaxing, your belly is decently rounded out, and you can't help but moan from the heat of the fluids inside of you. With his orgasm over, he releases his hold on you, and harshly yanks his knot out of you. 'That was fun, pet,' he says. 'I hope we're able to do this once more sometime soon.'";
+	say "     With a howl of pleasure, he shoves forward one last time, his knot spreading you painfully wide before it manages to pop in. Once it's inside, it swells even larger, firmly locking the two of you together. [if player is male]The pressure on your prostate is enough to set you off, spilling your load onto the ground beneath you. [end if]He gives one last growl before you feel his sharp teeth on your shoulder. They dig into your flesh as he bites down. You can feel his cock releasing its burning semen inside you, rope after rope of glowing cum erupting into your bowels. By the time he's finished climaxing, your belly is decently rounded out, and you can't help but moan from the heat of the fluids inside of you. With his orgasm over, he releases his hold on you, and harshly yanks his knot out of you. 'That was fun, pet,' he says. 'I hope we're able to do this once more sometime soon.'";
 	say "[mimpregchance]";
 	say "[mimpregchance]";
 	say "[mimpregchance]";

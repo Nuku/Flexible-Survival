@@ -6,7 +6,7 @@ Version 1 of Inflatable Orca by Song begins here.
 Section 1 - Monster Reponses
 
 orcaintense is a number that varies. orcaintense is usually -1.
-lastorcabeat is a number that varies. lastorcabeat is normally 255.
+lastorcabeat is a number that varies. lastorcabeat is usually 255.
 
 [Unlike other bound states, the orca will automatically result in a game over if you orgasm 5 times in one sitting. This is intentionally difficult to do, but not impossible.]
 
@@ -53,8 +53,8 @@ to orcabind:
 	libidoeval;
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		now boundstate is true;
 		if HP of player > 0 or humanity of player < 50:
 			now obliging is true;
@@ -72,7 +72,7 @@ to orcabind:
 				now bodyname of player is "OrcaSexSlave";
 				now humanity of player is 0;
 				end the story saying "You are milked perpetually by the toy.";
-				now trixieexit is 1;
+				now Trixieexit is 1;
 			if orcaintense < 6: [Hides content to prevent endings colliding]
 				now lustatt is libido of player;
 				orcasanityorgasm; [Calls the function defined later on]
@@ -102,7 +102,7 @@ to orcabind:
 				now bodyname of player is "OrcaSexSlave";
 				now humanity of player is 0;
 				end the story saying "You are milked perpetually by the toy.";
-				now trixieexit is 1;
+				now Trixieexit is 1;
 			else: [Section of actions possible during the bind.]
 				let k be 0;
 				now keychar is "INVALID";
@@ -144,7 +144,7 @@ to orcabind:
 						say "     Before you leave, you notice the orca's wounds beginning to mend, rippling rubber melting together as it slowly re-inflates. It might be wise to make your escape before it can recover.";
 						LineBreak;
 						cleanboundmemory;
-						now trixieexit is 1;
+						now Trixieexit is 1;
 						now orcaintense is 0;
 						now lastorcabeat is turns;
 					WaitLineBreak;
@@ -316,10 +316,10 @@ to say orcabinddesc: [Displays at the top of the bound screen after every action
 		say "     In your present state, you can still try to [bold type]S[roman type]truggle to escape the overexcited orca. You could also [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide[end if] or attempt to [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] her sultry ministrations.";
 	else if orcaintense is 3:
 		say "     Still reeling from your last climax, you're now only scarcely cognizant of the inflating bag around you, thoughts growing foggier by the moment. The orca rides your [if player is male]waist without relent, bouncing and bucking atop your still-twitching cock. Her slavering cunt is soaked with cum and juices, its smooth vinyl walls gripping you with dogged determination[else]face without relent, using you as little more than a toy for her wanton self-gratification. The overwhelming scent of arousal suffuses the increasingly enclosed space, further clouding your sex-addled mind[end if].";
-		say "     Straining under her ample form, you imagine now would be a good time to [bold type]S[roman type]truggle and escape these dire circumstances. Else, you could [if obliging is true][bold type]O[roman type]blige the sexy orca and enjoy the moment[else][bold type]A[roman type]bide the orca's whims[end if] or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] her wild lovemaking.";
+		say "     Straining under her ample form, you imagine now would be a good time to [bold type]S[roman type]truggle and escape these dire circumstances. Otherwise, you could [if obliging is true][bold type]O[roman type]blige the sexy orca and enjoy the moment[else][bold type]A[roman type]bide the orca's whims[end if] or [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] her wild lovemaking.";
 	else if orcaintense is 4:
 		say "     Shuddering, you can only moan [if player is male]against the orca's vinyl flesh as she milks you for all you're worth, your motions slicked with a slurry of mixed cum. Her clenching passage sends powerful ripples pleasure through your loins. You feel your mind begin to give as your cock stays perpetually erect within her folds, aching to fill her drenched chalice with another heavy load[else]into the orca's slavering pussy, hungrily lapping at her juices. It's becoming extremely difficult to muster any kind of will to resist, much less pull away from the delectable buffet of heady, musky femcum before you, its intoxicating flavor becoming your whole world[end if]. You dimly realize that the bag has almost fully sealed both of you in, but that fact feels almost inconsequential to you now, the constant barrage of sex eroding all reason.";
-		say "     You can still try to [bold type]S[roman type]truggle to escape the orca's grasp, or you could [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide to[end if] her wishes and enjoy these myriad delights. Else, you could simply try to [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] the increasingly dire situation.";
+		say "     You can still try to [bold type]S[roman type]truggle to escape the orca's grasp, or you could [if obliging is true][bold type]O[roman type]blige[else][bold type]A[roman type]bide to[end if] her wishes and enjoy these myriad delights. Otherwise, you could simply try to [if boundrecover is true][bold type]R[roman type]ecover from[else][bold type]E[roman type]ndure[end if] the increasingly dire situation.";
 	else:
 		say "     You are pinned beneath the orca, her great maw pressed to your lips in a long, enduring kiss that fills your lungs with a mind-altering gas. The intoxicating essence tastes like the sweetest ambrosia in your hyper-aroused state, synthetic and musky and arousing all at once. You can only buck weakly in response, completely enclosed from the rest of the world[if player is male] as you drive again and again into the sexy orca's slit. Every thrust pushes deep into her soaking wet channel, its smooth, hot bliss enveloping your achingly hard cock[end if].";
 		say "     You could try in vain to [bold type]S[roman type]truggle, to [if boundrecover is true][bold type]R[roman type]ecover from this[else][bold type]E[roman type]ndure[end if]... but your altered mind wants to [if obliging is true][bold type]O[roman type]blige the orca[else]simply [bold type]A[roman type]bide[end if] instead, craving the sweet embrace of her smooth, slick body and the constant influx of arousing gas.";
@@ -388,12 +388,12 @@ to say orcastrugglebar: [Displays struggle bar. The amount of struggle turns nec
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Inflatable Orca"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -422,7 +422,7 @@ When Play begins:
 	now HP entry is 120; [ The monster's starting HP. ]
 	now lev entry is 6; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 5; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 0; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 0; [ Length in inches infection will make cock grow to if cocks. ]
 	now cock width entry is 0; [ Cock width, more commonly used for ball size. ]
@@ -441,8 +441,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Endings
 

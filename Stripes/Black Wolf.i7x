@@ -36,12 +36,12 @@ to say blackwolfdesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Black Wolf"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "Andrew";
@@ -58,7 +58,7 @@ When Play begins:
 	now face change entry is "vision blurs and a dark bulge pushes out below your nose. As your altered eyes come back into focus, you can see you've grown a lupine muzzle";
 	now body change entry is "your hands and feet feel like soft clay. They shift, stretch and bulge, remolding themselves to become more paw-like. As this change is subsiding, you notice that your body's changed as well, though less dramatically. You now have a rather normal looking body with an average build";
 	now skin change entry is "it feels like ripples are running over it. As these pass across you, short, dark hairs are pushed out that extend further each time the wave moves across them. In time, you are covered in a thick pelt of black fur, turning to purple at your groin";
-	now ass change entry is "the end of your spine forms into a black, lupine time with a streak of purple along its underside";
+	now ass change entry is "the end of your spine forms into a black, lupine tail with a streak of purple along its underside";
 	now cock change entry is "it twitches and throbs, spurting cum as wonderful sensations pulse through it. It takes on a more lupine shape, forming a sheath for itself and taking on a rich, purple color";
 	now str entry is 12; [ These are now the creature's stats... ]
 	now dex entry is 15; [ ...and are only altered onto the player via Shifting or the Mighty Mutation feat ]
@@ -70,7 +70,7 @@ When Play begins:
 	now HP entry is 27; [ The monster's starting HP. ]
 	now lev entry is 2; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 4; [ Monster's average damage when attacking. ]
-	now area entry is "nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Nowhere"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ How many cocks will the infection try and cause if sex is 'Male' or 'Both']
 	now cock length entry is 10; [ Length infection will make cock grow to if cocks]
 	now cock width entry is 8; [ Size of balls apparently ;) sneaky Nuku]
@@ -89,8 +89,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Endings

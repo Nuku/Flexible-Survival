@@ -8,9 +8,12 @@ understand "nav" as destinationcheck.
 carry out destinationcheck:
 	[ Note: The city areas and locations within are sorted alphabetically. Please put new rooms in the right spots as you add them ]
 	[ Start of primary rooms - Grey Abbey Library and Trevor Labs ]
-	say "[bold type]Primary Rooms[roman type]: [link][bracket]Grey Abbey Library[close bracket][as]nav Grey Abbey Library[end link] ";
-	if Outside Trevor Labs is known:
-		say "| [link][bracket]Trevor Labs[close bracket][as]nav Outside Trevor Labs[end link] ";
+	if Grey Abbey Library is known or Trevor Labs is known:
+		say "[bold type]Primary Rooms[roman type]: ";
+		if Grey Abbey Library is known:
+			say "[link][bracket]Grey Abbey Library[close bracket][as]nav Grey Abbey Library[end link] ";
+		if Outside Trevor Labs is known:
+			say "| [link][bracket]Trevor Labs[close bracket][as]nav Outside Trevor Labs[end link] ";
 	LineBreak;
 	[start of the capitol area]
 	if Approaching the Capitol Building is known or Disused Garage is known or Office Den is known or Orc Lair Side Entrance is known:
@@ -25,7 +28,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Orc Lair[close bracket][as]nav Orc Lair Side Entrance[end link] ";
 		LineBreak;
 	[a subsection of the 'outside' area (named Central City here)]
-	if Camp Bravo Entrance is known or Gaming Den is known or Green Apartment is known or Fire Station 86 is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
+	if Camp Bravo Entrance is known or Gaming Den is known or Green Apartment is known or Fire Station 86 is known or Milking Facility Entrance is known or Mini-Lab is known or Pediatrics Lobby is known or Pig Pen is known or Police Station Twelve is known or Rabbit Den is known or Red Apartment is known or Tyr's Club is known:
 		say "[bold type]Central City[roman type]: ";
 		if Camp Bravo Entrance is known:
 			say "| [link][bracket]Camp Bravo[close bracket][as]nav Camp Bravo Entrance[end link] ";
@@ -35,14 +38,16 @@ carry out destinationcheck:
 			say "| [link][bracket]Green Apartment Building[close bracket][as]nav Green Apartment Building[end link] ";
 		if Fire Station 86 is known:
 			say "| [link][bracket]Fire Station 86[close bracket][as]nav Fire Station 86[end link] ";
+		if Milking Facility Entrance is known:
+			say "| [link][bracket]Milking Facility Entrance[close bracket][as]nav Milking Facility Entrance[end link] ";
 		if Mini-Lab is known:
 			say "| [link][bracket]Mini-Lab[close bracket][as]nav Mini-Lab[end link] ";
 		if Pediatrics Lobby is known:
 			say "| [link][bracket]Pediatrics Lobby[close bracket][as]nav Pediatrics Lobby[end link] ";
 		if Pig Pen is known:
 			say "| [link][bracket]Pig Pen[close bracket][as]nav Pig Pen[end link] ";
-		if Police Station is known:
-			say "| [link][bracket]Police Station[close bracket][as]nav Police Station[end link] ";
+		if Police Station Twelve is known:
+			say "| [link][bracket]Police Station Twelve[close bracket][as]nav Police Station Twelve[end link] ";
 		if Rabbit Den is known:
 			say "| [link][bracket]Rabbit Den[close bracket][as]nav Rabbit Den[end link] ";
 		if Red Apartment is known:
@@ -85,14 +90,12 @@ carry out destinationcheck:
 			say "| [link][bracket]The Palomino[close bracket][as]nav The Palomino[end link] ";
 		LineBreak;
 	[start of the dry plains area]
-	if Dry Plains is known or McDermott Farm Entrance is known or Researcher Studio is known or Rocky Outcropping is known:
+	if Dry Plains is known or McDermott Farm Entrance is known or Rocky Outcropping is known:
 		say "[bold type]Dry Plains[roman type]: ";
 		if Dry Plains is known:
 			say "[link][bracket]Dry Plains[close bracket][as]nav Dry Plains[end link] ";
 		if McDermott Farm Entrance is known:
 			say "| [link][bracket]McDermott Farm Entrance[close bracket][as]nav McDermott Farm Entrance[end link] ";
-		if Researcher Studio is known:
-			say "| [link][bracket]Researcher Studio[close bracket][as]nav Researcher Studio[end link] ";
 		if Rocky Outcropping is known:
 			say "| [link][bracket]Rocky Outcropping[close bracket][as]nav Rocky Outcropping[end link] ";
 		LineBreak;
@@ -175,7 +178,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Egypt Wing Entrance[close bracket][as]nav Egypt Wing Entrance[end link] ";
 		LineBreak;
 	[start of the red light area]
-	if Entrance to the Red Light District is known or Bradford's Camp is known or Bright Alley is known or Burned-Out Chapel is known or Cuero Lobo is known or Down Under Pub is known or Gillian's Flat is known or Police Car is known or Porn Store is known or Sven's Place is known or Tattoo Parlor is known:
+	if Entrance to the Red Light District is known or Bradford's Camp is known or Bright Alley is known or Burned-Out Chapel is known or Cuero Lobo is known or Down Under Pub is known or Gillian's Flat is known or Police Car is known or Porn Store is known or Sanctuary Alleyway is known or Sven's Place is known or Tattoo Parlor is known:
 		say "[bold type]Red Light District[roman type]: ";
 		if Entrance to the Red Light District is known:
 			say "[link][bracket]Entrance to the Red Light District[close bracket][as]nav Entrance to the Red Light District[end link] ";
@@ -195,6 +198,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Police Car[close bracket][as]nav Sven's Place[end link] ";
 		if Porn Store is known:
 			say "| [link][bracket]Porn Store[close bracket][as]nav Porn Store[end link] ";
+		if Sanctuary Alleyway is known:
+			say "| [link][bracket]Sanctuary Alleyway[close bracket][as]nav Sanctuary Alleyway[end link] ";
 		if Sven's Place is known:
 			say "| [link][bracket]Sven's Place[close bracket][as]nav Sven's Place[end link] ";
 		if Tattoo Parlor is known:
@@ -237,7 +242,7 @@ carry out destinationcheck:
 			say "| [link][bracket]Phi Iota Gamma[close bracket][as]nav Phi Iota Gamma[end link] ";
 		LineBreak;
 	[start of the forest area]
-	if Urban Forest is known or Bunny House is known or Deep Forest is known or Happy Puppy Kennel is known:
+	if Urban Forest is known or Bunny House is known or Deep Forest is known or Happy Puppy Kennel is known or Ironscale Hollow is known or Avalon-Crossroads is known:
 		say "[bold type]Urban Forest[roman type]: ";
 		if Urban Forest is known:
 			say "[link][bracket]Urban Forest[close bracket][as]nav Urban Forest[end link] ";
@@ -247,6 +252,10 @@ carry out destinationcheck:
 			say "| [link][bracket]Deep Forest[close bracket][as]nav Deep Forest[end link] ";
 		if Happy Puppy Kennel is known:
 			say "| [link][bracket]Happy Puppy Kennel[close bracket][as]nav Happy Puppy Kennel[end link] ";
+		if Ironscale Hollow is known:
+			say "| [link][bracket]Ironscale Hollow[close bracket][as]nav Ironscale Hollow[end link] ";
+		if Avalon-Crossroads is known:
+			say "| [link][bracket]Avalon-Crossroads[close bracket][as]nav Avalon-Crossroads[end link] ";
 		LineBreak;
 	[start of the warehouse area]
 	if Warehouse District is known or Hyena Hideout is known or Mike's Home is known or Spider's Web is known or Wolfman Lair is known:
@@ -294,7 +303,7 @@ carry out navigating:
 	let the bonus be (( the perception of the player minus 10 ) divided by 2);
 	now battleground is "Outside";
 	if a random number from 1 to 20 < 10 minus bonus and battleground is not "void":
-		if there is a area of Battleground in the table of random critters:
+		if there is a area of Battleground in the Table of Random Critters:
 			Fight;
 			if ( ( hardmode is true and a random chance of 1 in 8 succeeds ) or ( "Bad Luck" is listed in feats of player and a random chance of 1 in 8 succeeds ) ) and battleground is not "void":
 				say "As you are trying to recover from your last encounter, another roving creature finds you.";

@@ -1,7 +1,7 @@
 Version 2 of Mismatched Chimera by Stripes begins here.
 [Version 2.4 - Player loss scene tree tweaked]
 [ Edit the above line, replace monster name with your monster's name, and your name with the name you'd like credited for the mod. ]
-"Adds a Mismatched Chimera creature to Flexible Survival's Wandering Monsters table with impreg chance"
+"Adds a Mismatched Chimera creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses
@@ -27,7 +27,7 @@ to say mischimdesc:
 	setmongender 5; [creature is herm]
 	say "[mixnmatch]     You have seen a variety of strange creatures and hominids in the city, but this is definitely one of the strangest. Somehow, it is a strange, cobbled-together mish-mash of other creatures. The body parts don't match and you can see stitchmarks in several places where they were grafted together. Several other spots have scars from what may have been medical procedures or experiments.";
 	say "     This unfortunate creature has the head of a [headdata] sewn onto its [torsodata] body. Its body has several smaller mismatched patches and scars. The strange chimera's right arm and shoulder are that of a [rarmdata], ending in a clawed human hand while its left forearm has that of a [larmdata] grafted on. Its left leg is fully that of a [llegdata] attached on at the hip while its right leg is that of a [rlegdata] from the knee down. Stitched to its chest are [breastdata] mismatched breasts while a [cockdata] dick hangs between its legs over a large, stitched-up scrotum. It looks at you with its mismatched, animal eyes and growls lustfully before attacking.";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if hardmode is false and ( lev entry is 8 or lev entry is 9 ) and level of player < 10:
 		say "     This particular hybrid seems especially powerful and dangerous. Best be careful.";
 
@@ -49,7 +49,7 @@ to say mixnmatch:
 	now rlegdata is bodyselector;
 	let T be a random number between one and three;
 	now breastdata is ( T times 2 );
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let qq be a random number between 5 and 9;
 	let zz be a random number between 1 and 15;
 	if hardmode is true and level of player > 7:		[Hard Mode Version!]
@@ -107,7 +107,7 @@ to say randombodypart:
 	if T is 15:
 		now bodyselector is "wolf";
 	if T is 16:
-		now bodyselector is "rabbit";
+		now bodyselector is "Anthro Rabbit";
 	if T is 17:
 		now bodyselector is "mouse";
 	if T is 18:
@@ -123,7 +123,7 @@ to say losetomischim:
 		say ""; [dealt with in the source event]
 	else:
 		[reset creature stats for next encounter]
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now dex entry is 15; [ reset dexterity for random infection ]
 		now lev entry is 6; [ reset level for random encounter availability ]
 		if player is female and a random chance of 1 in 2 succeeds:
@@ -143,10 +143,10 @@ to say losetomischim:
 			say "     You moan in delight at the creature growls in climax, pumping a hot, thick medley of cum into your mouth and down your throat. You swallow down as much as you can of its impressive load, then sag to the ground as it releases you. Sated for now, the mismatched hybrid wanders off, leaving you to the infection's changes.";
 		weakrandominfect;
 		increase monster by 1;
-		choose row monster from table of random critters;
-		while there is a non-infectious in row monster of table of random critters and non-infectious entry is true:
+		choose row monster from Table of Random Critters;
+		while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
 			increase monster by 1;
-			choose row monster from table of random critters;
+			choose row monster from Table of Random Critters;
 
 
 to say beatthemischim:
@@ -154,7 +154,7 @@ to say beatthemischim:
 		say ""; [dealt with in the source event]
 	else:
 		[reset creature stats for next encounter]
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now dex entry is 15; [ reset dexterity for random infection ]
 		now lev entry is 6; [ reset level for random encounter availability ]
 		say "     You manage to defeat the strange, hybrid creature, driving it off.";
@@ -162,12 +162,12 @@ to say beatthemischim:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Mismatched Chimera"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -215,8 +215,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 when play ends:

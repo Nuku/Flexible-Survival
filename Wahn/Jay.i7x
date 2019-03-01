@@ -31,6 +31,10 @@ Section 1 - NPC
 [***********************************************************]
 [***********************************************************]
 
+Table of GameCharacterIDs (continued)
+object	name
+Jay	"Jay"
+
 Jay is a man.
 The description of Jay is "[JayDesc]".
 The conversation of Jay is { "<This is nothing but a placeholder!>" }.
@@ -161,14 +165,11 @@ to say JayTalkMenu:
 				if (nam is "Ask him about Krampus"):
 					say "[JayTalk5]";
 				wait for any key;
+				say "[JayTalkMenu]";
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now Sextablerun is 1;
-				say "     You step back from the diminutive elf, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now Sextablerun is 1;
+			say "     You step back from the diminutive elf, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -182,7 +183,7 @@ to say JayTalk1: [talk about him]
 		say "     You continue talking to Jay for a little while longer, learning what made him so successful at his job: a winning personality and the will to just go for what he wants, with little restraint to hold him back. Time will tell if he will be able to reclaim his status once all of you hopefully get out of the city alright. He certainly seems sure that make it, and your mind brings up an image of the elf in his suit, bearing down on pale-faced businessmen as he stands [italic type]on top[roman type] of a conference table and dominates the conversation.";
 
 to say JayTalk2: [talk about Mark]
-	say "     'Mark and I have been partners for five years now. He's everything that I have ever wanted,' Jay says with a somewhat dreamy expression, his right hand moving to the little bump in his clothing just above his breastbone. You remember that this is where he carries his commitment ring, the broad gold band held on a leather strap since it is much too big for his small fingers now. 'Let me tell you how we met. It was at a really fancy downtown restaurant called 'Tati's', with European specialities. There I was with the senior partner of a new client company, a dreadful bore of a man that cost all of my self-control to smile and nod to. And then our waiter, Mark, brings the starters. Black shirt, dark-red apron from the waist down, and the cutest smile that you can imagine. Our eyes met for a second then, and when he brought the main course, he winked at me.'";
+	say "     'Mark and I have been partners for five years now. He's everything that I have ever wanted,' Jay says with a somewhat dreamy expression, his right hand moving to the little bump in his clothing just above his breastbone. You remember that this is where he carries his commitment ring, the broad gold band held on a leather strap since it is much too big for his small fingers now. 'Let me tell you how we met. It was at a really fancy downtown restaurant called 'Tati's', with European specialties. There I was with the senior partner of a new client company, a dreadful bore of a man that cost all of my self-control to smile and nod to. And then our waiter, Mark, brings the starters. Black shirt, dark-red apron from the waist down, and the cutest smile that you can imagine. Our eyes met for a second then, and when he brought the main course, he winked at me.'";
 	say "     A smile crosses Jay's face. 'That was when I knew that I had to have him. And I did. Intercepted his sexy little ass as he was coming out of the kitchen in the back and pulled him into the restrooms. A minute later he was on his knees in the handicap stall and blowing me.' Grabbing his crotch and wiggling his eyebrows, the elf adds, 'Then came dates, more racy moments in public, and eventually I asked him to move in with me and be mine. And now, with all of the changes this strange outbreak has brought with it, I guess that I'm his. It's almost like this body is made to be a bottom; I can't get enough of it. Don't really care, as long as we are together.'";
 
 to say JayTalk3: [talk about the military]
@@ -205,8 +206,12 @@ Section 4 - Events
 [***********************************************************]
 [***********************************************************]
 
+Table of GameEventIDs (continued)
+Object	Name
+Harbor Swap Meet	"Harbor Swap Meet"
+
 Harbor Swap Meet is a situation.
-Harbor Swap Meet is resolved.
+Harbor Swap Meet is inactive.
 The sarea of Harbor Swap Meet is "Warehouse".
 
 Instead of resolving a Harbor Swap Meet:
@@ -229,9 +234,11 @@ Instead of resolving a Harbor Swap Meet:
 			say "[SilkDelivery]";
 			decrease carried of chocolate milk by 5;
 			now Harbor Swap Meet is resolved;
+			now Resolution of Harbor Swap Meet is 2; [player paid for the silk]
 	else if thirst of Jay is 4: [player who is friends with Aelias can pick up the silk easily]
 		say "     Returning to the swap meet, you ring the little bell again and Aelias comes down from his nest. Under his arm, he holds a bulging spindle of silk thread. 'Hello my lovely little fly,' he tells you, leaning forward to plant a kiss on your lips, then hands over the load of silk with a smile. 'I hope that this is exactly what you needed. I can tell you, it was a pain in the ass to keep spinning for hour after hour to make it, but what don't I do for my favorite prey. Have fun with it, and I hope to see you for some more action between us soon.' With a little grope of your ass, the spidertaur then starts to pull himself up the strand he slid down on, effortlessly reaching his home away from home above and vanishing inside.";
 		say "[SilkDelivery]";
+		now Resolution of Harbor Swap Meet is 1; [player who is friends with A got the silk easily]
 		now Harbor Swap Meet is resolved;
 
 to say SilkDelivery:
@@ -304,13 +311,9 @@ to say JaySexMenu:
 					say "[JaySex2]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the slender elf, shaking your head slightly as he gives a questioning look.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the slender elf, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

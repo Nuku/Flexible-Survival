@@ -19,8 +19,12 @@ Definition: A person (called x) is equalsized with player:
 
 [State checks]
 [Does the person have boobs?]
-Definition: A person (called x) is breasted:
-	if breasts of x > 0 and breast size of x > 0, yes;
+Definition: A person (called x) is MuzzleFaced:
+	if facename of x is listed in { "test" }, yes;
+	no;
+
+Definition: A person (called x) is FeralBodied:
+	if bodyname of x is listed in { "test" }, yes;
 	no;
 
 Definitions ends here.

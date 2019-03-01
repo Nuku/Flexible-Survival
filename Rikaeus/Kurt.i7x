@@ -2,12 +2,16 @@ Version 1 of Kurt by Rikaeus begins here.
 [Version 1 - New Rooms, New NPC, New Events]
 
 [ KurtRelationship                                         ]
-[   0: Hasnt seen yet                                      ]
+[   0: Hasn't seen yet                                     ]
 [   1: Has heard him perform                               ]
 [   2: Ran into him in the city center                     ]
 
 KurtRelationship is a number that varies.
 KurtEvent is a number that varies.
+
+Table of GameEventIDs (continued)
+Object	Name
+Surprise Shark Encounter	"Surprise Shark Encounter"
 
 Surprise Shark Encounter is a situation.
 The sarea of Surprise Shark Encounter is "Atlantis".
@@ -16,7 +20,7 @@ when play begins:
 	add Surprise Shark Encounter to badspots of guy;
 	add Surprise Shark Encounter to badspots of furry;
 
-after going to Atlantis City Center while (Surprise Shark Encounter is not resolved and KurtRelationship is 1):
+after going to Atlantis City Center while (Surprise Shark Encounter is active and Surprise Shark Encounter is not resolved and KurtRelationship is 1):
 	FirstKurtEvent;
 
 instead of resolving Surprise Shark Encounter:
@@ -24,25 +28,29 @@ instead of resolving Surprise Shark Encounter:
 	FirstKurtEvent;
 
 to FirstKurtEvent:
-	say "     Humming as you walk about the city you come to a decision to head towards the center of Atlantis. After all, it's where the hub of all activity is, so you may run into something interesting there. Once there you take look around, admiring the architecture of the buildings, musing on whether or not the Greeks got their designs from this city or vice versa. However, before you can contemplate this thought any further, somebody ends up walking right into you, sending you tumbling to the ground. 'Oh! I'm so sorry!' a soft yet gruff voice says as large arms reach down to help you up. Not wanting to really remain on the floor much longer you gladly accept the assistance. The hands belonging to the muscular body pat you down, getting rid of the dust that accumulated from you being on the stone tiles. Curious as to who barreled into you, you look up and inwardly gasp in surprise.";
+	say "     Humming as you walk about the city, you come to a decision to head towards the center of Atlantis. After all, it's where the hub of all activity is, so you may run into something interesting there. Once there you take look around, admiring the architecture of the buildings, musing on whether or not the Greeks got their designs from this city or vice versa. However, before you can contemplate this thought any further, somebody ends up walking right into you, sending you tumbling to the ground. 'Oh! I'm so sorry!' a soft yet gruff voice says as large arms reach down to help you up. Not wanting to really remain on the floor much longer you gladly accept the assistance. The hands belonging to the muscular body pat you down, getting rid of the dust that accumulated from you being on the stone tiles. Curious as to who barreled into you, you look up and inwardly gasp in surprise.";
 	say "     Standing in front of you is none other than Kurt, the shark-morph that you've listened to both play and sing for people in the market. In hindsight you should've recognized the voice but to be fair you were rather scatter brained from being knocked to the ground. The male in front of you however doesn't miss a beat as he holds out a hand. 'The name's Kurt. I apologize for running into you. I should've been looking where I was going,' he says, bowing his head sorrowfully. You shake yours at him and tell him that you actually know of him, having listened to him play at the market and that you shouldn't have been distracted. The shark-morph tilts his head at you in a bit of curiosity, though you have no clue as to why but he then suddenly gets a toothy grin on his face.";
 	WaitLineBreak;
 	say "     'I know how to make it up to you! How about I take you out to lunch sometime soon?' he asks you, his eyes giving you a look that make you feel like he's challenging you to accept. You muse that it wouldn't necessarily hurt to take Kurt's invitation. For one, it's free food, and it'll also let you get to know the man before you. You smile back at him and nod, agreeing to a... lunch date with the shark-morph. You don't know how it's entirely possible but his grin gets toothier and he pats you heavily on the back. 'Perfect! If you can give me at least six hours I'll be ready. Anytime after that meet me in the market!' he says before heading off towards the residential district where you assume he lives. You on the other hand feel as if you're free to do what you want as you don't really need to prepare.";
 	now KurtRelationship is 2;
 	now Surprise Shark Encounter is resolved;
-	now Predator's Lunch is unresolved;
+	now Predator's Lunch is active;
 	now KurtEvent is turns;
 	move player to Atlantis City Center;
 
+Table of GameEventIDs (continued)
+Object	Name
+Predator's Lunch	"Predator's Lunch"
+
 Predator's Lunch is a situation.
-Predator's Lunch is resolved.
+Predator's Lunch is inactive.
 The sarea of Predator's Lunch is "Atlantis".
 
 when play begins:
 	add Predator's Lunch to badspots of guy;
 	add Predator's Lunch to badspots of furry;
 
-after going to Atlantis City Market while (Predator's Lunch is not resolved and KurtRelationship is 2 and KurtEvent - turns > 2): [Event has happened within the last 3 hours]
+after going to Atlantis City Market while (Predator's Lunch is active and Predator's Lunch is not resolved and KurtRelationship is 2 and KurtEvent - turns > 2): [Event has happened within the last 3 hours]
 	SecondKurtEvent;
 
 instead of resolving Predator's Lunch:
@@ -62,6 +70,10 @@ to SecondKurtEvent:
 	change east exit of Kurt's Abode to Atlantis City Residential;
 	move Kurt to Kurt's Abode;
 	move player to Atlantis City Market;
+
+Table of GameCharacterIDs (continued)
+object	name
+Kurt	"Kurt"
 
 Kurt is a man.
 The description of Kurt is "[KurtDesc]".
@@ -116,13 +128,9 @@ to say KurtTalkMenu:
 					say "[KurtMusic]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You apologize and tell him you that you don't have anything to say. He raises a brow but gets back to what he was doing.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You apologize and tell him you that you don't have anything to say. He raises a brow but gets back to what he was doing.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -174,20 +182,16 @@ to say KurtSexMenu:
 					say "[KurtSex1]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You take a second to think and then decide against doing something sexy with your shark friend.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You take a second to think and then decide against doing something sexy with your shark friend.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say KurtSex1:
 	say "     Interested in getting a taste of the shark-morph you move on over to him while he's playing his guitar and kneel down in front of his crotch. This causes the male to raise a brow at you, clearly intrigued by your actions. 'Someone's a little horny, aren't they?' Kurt asks, a toothy grin following that question. You respond in kind by raising a hand to his bulge, and when it touches you realize you can feel two hardening lengths. Though to be completely honest you should have expected this, as your friend is a shark, who have two dicks. 'Why don't you take both of them out to have a better look, help you get more interested,' he says, his grin now a smirk as he takes his own hand and moves it to yours to guide them to the button of his pants.";
-	say "     You quite gladly unbutton the top of his shorts, unzip them, and yank them down, revealing a tight pair of speedos under them. While to others they might be odd, a few thoughts later make you realize that if he leaves the city often he wouldn't want to constantly have soaking underwear. Ignoring them for now you pull those down as well, letting them pool with the shorts and revealing his two large cocks, which emanate a masculine musk that cause you to let out a soft moan. Once more raising a brow in particular interest, Kurt directs his hands to your head before pulling you close to his dicks, bringing you right to the source of the pheromone-intense smell. Brought into a frenzy, you begin licking at both of his lengths, alternating back and forth in intense desire, ";
+	say "     You quite gladly unbutton the top of his shorts, unzip them, and yank them down, revealing a tight pair of speedos under them. While to others they might be odd, a few thoughts later make you realize that if he leaves the city often he wouldn't want to constantly have soaking underwear. Ignoring them for now you pull those down as well, letting them pool with the shorts and revealing his two large cocks, which emanate a masculine musk that cause you to let out a soft moan. Once more raising a brow in particular interest, Kurt directs his hands to your head before pulling you close to his dicks, bringing you right to the source of the pheromone-intense smell. Brought into a frenzy, you begin licking at both of his lengths, alternating back and forth in intense desire.";
 	WaitLineBreak;
 	say "     While you're lavishly paying attention to his cocks, Kurt is leaning back, his guitar safely laying against the couch while he moans loudly, his head tilted toward the ceiling. By now though, you decide to focus on one of his lengths while you masturbate the other with your hands. You move your mouth to the left one and take it into your lips, swirling your tongue around, idle hands moving to the right dick to massage it. The taste of pre blooms into your mouth, making you moan loudly, almost in sync with your shark friend, which spurs you on to take him further into your mouth. This appears to trigger something in Kurt as he grabs a hold of your hair and begins to thrust in and out of your throat, fucking your face as thoroughly as he can.";
 	say "     'Mmm, fuck you're great at this, I'm already so close!' He growled, watching intensely as you take one of his cocks like a champ and as the other slides against your cheek. Sure enough you can feel the large dicks tensing as he gets nearer to his orgasm. As a last ditch interest in making him go wild you take a finger and position it at his hole before pushing it in roughly. That appears to set the male off as he lets out a loud roar before you feel hot salty liquid spill onto your tongue and warmth pool and splash against your cheek and head. You gladly slurp down the cum, enjoying the taste of the shark's seed, making sure to collect the amount that coated your outsides into your mouth. Once Kurt's climax tapers off, you pull off and give him a sperm-filled smile that makes him pull you up into a kiss.";

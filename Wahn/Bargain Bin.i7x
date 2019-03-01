@@ -9,6 +9,10 @@ Section 1 - Bargain Bin
 when play begins:
 	now bargainbinusagetotal is 0;
 
+Table of GameCharacterIDs (continued)
+object	name
+Bargain Bin	"Bargain Bin"
+
 Bargain Bin is a man.
 The description of Bargain Bin is "     This large bin seems filled with a number of small packets, bottles, and charms, boxes, pieces of fabric and who knows what else. You can't even see the bottom of it. Certainly an interesting opportunity to find... something in there. Above the bin someone has posted a recently drawn sign reading, 'Bargain Bin. Pay and draw one item out. Price: One packet of food and one bottle of water. No returns and refunds!' You aren't exactly sure just how much of a bargain this bin really is right now, but you could still find something useful right? Maybe you should try [link]hunt[as]sort Bargain Bin[end link]ing a bargain, or [link]sort[as]sort Bargain Bin[end link]ing through the bin?".
 
@@ -44,7 +48,7 @@ carry out bargainhunting:
 		increase bargainbinusagetotal by 1;
 		let Z be a random number between 1 and 30;
 		if Z is 1: [funeral urn /kiss]
-			say "     You pull out a [bold type]small urn of some sort[roman type], and look at it curiously. Nermine sighs behind you as she sees what you are holding. 'What Nermine's customer found is a funeral urn. It is very old, and very bad luck to posess. Nermine is not sure how it found its way into her bargain bin again, but she will try to find a better place to put it this time.' With that said, the jackaless gently takes the small urn from your hands, and places it down on a shelf somewhere behind the counter. 'The apologetic jackaless hopes bad luck hasn't rubbed off on her dear visitor already. So much so that she will make sure,' Nermine says as she leans over the counter even further, her black muzzle brushing over your mouth even as you open it to respond.";
+			say "     You pull out a [bold type]small urn of some sort[roman type], and look at it curiously. Nermine sighs behind you as she sees what you are holding. 'What Nermine's customer found is a funeral urn. It is very old, and very bad luck to possess. Nermine is not sure how it found its way into her bargain bin again, but she will try to find a better place to put it this time.' With that said, the jackaless gently takes the small urn from your hands, and places it down on a shelf somewhere behind the counter. 'The apologetic jackaless hopes bad luck hasn't rubbed off on her dear visitor already. So much so that she will make sure,' Nermine says as she leans over the counter even further, her black muzzle brushing over your mouth even as you open it to respond.";
 			say "     Before you know it, her tongue is exploring your mouth even as her muzzle rubs up against your face, in what is actually a surprisingly pleasant kiss. After a second, she pulls her tongue out of your mouth, leaving you standing there slightly stunned as she gives you another soft lick across the cheek. 'There. That should counter any bad luck the urn might have caused. Nermine would suggest to let her know immediately if the sneaky urn starts appearing at other places once more,' the sexy jackaless says with a wink as she returns to her normal place at the counter.";
 			LineBreak;
 			say "     After a second, you realize that you now don't have anything to show for your hunt through the bargain bin, but at least you got a nice kiss for your efforts? That's something of a bargain, isn't it?";
@@ -56,12 +60,12 @@ carry out bargainhunting:
 				now hunger of player is 0;
 				increase strangebottledrink by 1;
 			else if "Spartan Diet" is listed in feats of player:
-				say "     Finding another of those vials of liquid tucked away within the bin, you decide to take the small vial of liquid with you, as refreshing as the small vial is it is obviously worth at least two full water bottles when you go to drink it later...";
+				say "     Finding another of those vials of liquid tucked away within the bin, you decide to take the small vial of liquid with you. As refreshing as the small vial is, it is obviously worth at least two full water bottles when you go to drink it later...";
 				LineBreak;
 				say "[bold type]You gain 2 water bottles![roman type][line break]";
 				increase carried of water bottle by 2;
 			else:
-				say "You smile as you once more come across one of those strange and very refreshing vials of liquid. Quickly pulling the small vial out of the bin, you waste no time in taking a small sip of the strangely colored liquid within. To your disappointment the drink seems somewhat less refreshing this time, although you can still feel your body tingling as the liquid obviously does something to you.";
+				say "     You smile as you once more come across one of those strange and very refreshing vials of liquid. Quickly pulling the small vial out of the bin, you waste no time in taking a small sip of the strangely colored liquid within. To your disappointment the drink seems somewhat less refreshing this time, although you can still feel your body tingling as the liquid obviously does something to you.";
 				LineBreak;
 				say "[bold type]'Spartan Diet' has been added to your feats![roman type][line break]";
 				add "Spartan Diet" to feats of player;
@@ -97,13 +101,13 @@ carry out bargainhunting:
 				add "Like Attracts Like" to feats of player;
 		else if Z is 6: [cat charm]
 			if furry is not banned and guy is not banned:
-				say "     Poking absently through the bin, your eye catches on a [bold type]small cat-like charm[bold type] tucked away in the corner. Pulling the little piece of jewelry out you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers. Then suddenly, it seems to slip through your fingers - or rather melt, as you try to catch it and notice that the thing didn't slip but rather is covering part of your fingers now as a silver sheen. Before you have much time to stare at it, the flowing metal seems to be absorbed by your skin, vanishing without a trace. As you scratch your head, puzzled about the strange effect, you realize your body is feeling slightly different...";
+				say "     Poking absently through the bin, your eye catches on a [bold type]small cat-like charm[roman type] tucked away in the corner. Pulling the little piece of jewelry out you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers. Then suddenly, it seems to slip through your fingers - or rather melt, as you try to catch it and notice that the thing didn't slip but rather is covering part of your fingers now as a silver sheen. Before you have much time to stare at it, the flowing metal seems to be absorbed by your skin, vanishing without a trace. As you scratch your head, puzzled about the strange effect, you realize your body is feeling slightly different...";
 				LineBreak;
 				say "[bold type]Your dexterity has increased by 1![roman type][line break]";
 				increase dexterity of player by 1;
 				infect "Felinoid";
 			else:
-				say "     Poking absently through the bin, your eye catches on a [bold type]small cat-like charm[bold type], tucked away in the corner. Pulling the little piece of jewelry out you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers. Then suddenly Nermine snatches the golden charm from your hand with a handkerchief and carefully puts it into a jewelry box. 'Nermine can tell that her customer will not want this item. She is sorry, but the bargain bin can be unpredictable at the best of times. Full of apologies, the jackaless offers her guest the paid items in return, as well as a suggestion. Maybe Nermine's dear customer should be thinking to not be so picky. More fun is to be had that way,' she adds philosophically.";
+				say "     Poking absently through the bin, your eye catches on a [bold type]small cat-like charm[roman type], tucked away in the corner. Pulling the little piece of jewelry out you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers. Then suddenly Nermine snatches the golden charm from your hand with a handkerchief and carefully puts it into a jewelry box. 'Nermine can tell that her customer will not want this item. She is sorry, but the bargain bin can be unpredictable at the best of times. Full of apologies, the jackaless offers her guest the paid items in return, as well as a suggestion. Maybe Nermine's dear customer should be thinking to not be so picky. More fun is to be had that way,' she adds philosophically.";
 				LineBreak;
 				say "[bold type]You gain 1 food![roman type][line break]";
 				increase carried of food by 1;
@@ -191,8 +195,8 @@ carry out bargainhunting:
 						increase carried of dog milk by 1;
 					say "[bold type]You gain 1 honeycomb![roman type][line break]";
 					increase carried of honeycomb by 1;
-					say "[bold type]You gain 1 fish![roman type][line break]";
-					increase carried of fish by 1;
+					say "[bold type]You gain 1 tasty fish![roman type][line break]";
+					increase carried of Tasty Fish by 1;
 		else if Z is 15: [Dr Matt samples]
 			if girl is banned and ( hermaphrodite is banned or furry is banned ):
 				say "     Searching through the bargain bin, you find a [bold type]small travel pouch[roman type] tucked away in the corner. Curious about what may be inside, you pull the container out and open its zipper. Sadly, when you flip the flap at the top open, all you find is a wad of used bubblegum and a bottle of water. Ugh! Oh well, can't win them all and at least you got some water back...";
@@ -200,7 +204,7 @@ carry out bargainhunting:
 				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
 			else:
-				say "     Searching through the bargain bin, you find a [bold type]small travel pouch[roman type] tucked away in the corner. Curious about what may be inside, you pull the container out and open its zipper. Sadly, when you flip the flap at the top open, you blink in surprise as you note it seems to contain a bottle of water along with [if girl is not banned]two nicely labeled samples of goo[else]a wad of used bubblegum[end if], and [if hermaphrodite is not banned and furry is not banned]two small vials of gryphon milk[else]a wad of used bubblegum[end if]. Staring at the items for a moment, you realize that you are obviously not the [if HP of doctor matt is 0 or HP of doctor matt is 100 or HP of doctor matt is 103]only person to consider keeping some of the strange things to be found[else]first person the good doctor Matt sent out in the city to retrieve samples for him[end if]. Emptying the pouch out into your own backpack, you wonder just what happened to the former owner of if, and if they are happier as whatever they are now.";
+				say "     Searching through the bargain bin, you find a [bold type]small travel pouch[roman type] tucked away in the corner. Curious about what may be inside, you pull the container out and open its zipper. Sadly, when you flip the flap at the top open, you blink in surprise as you note it seems to contain a bottle of water along with [if girl is not banned]two nicely labeled samples of goo[else]a wad of used bubblegum[end if], and [if hermaphrodite is not banned and furry is not banned]two small vials of gryphon milk[else]a wad of used bubblegum[end if]. Staring at the items for a moment, you realize that you are obviously not the [if HP of Doctor Matt is 0 or HP of Doctor Matt is 100 or HP of Doctor Matt is 103]only person to consider keeping some of the strange things to be found[else]first person the good Doctor Matt sent out in the city to retrieve samples for him[end if]. Emptying the pouch out into your own backpack, you wonder just what happened to the former owner of if, and if they are happier as whatever they are now.";
 				LineBreak;
 				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
@@ -221,6 +225,7 @@ carry out bargainhunting:
 					LineBreak;
 					say "     Turning the unusual thing over in your hands several times and admiring the fine detail, you nearly drop the doll as it begins to shift and move on its own. The little depiction of yourself stretches and turns its head from side to side as it looks around, before focusing its piercing little gaze on you. Blinking, you put the miniature person carefully down on the ground, where it explores its new surroundings for a minute before returning to sit at your feet, obviously happy to stay with you.";
 					now strange doll is tamed;
+					add "Tamed" to Traits of strange doll;
 					now dollfound is 1;
 				else:
 					LineBreak;
@@ -294,7 +299,7 @@ carry out bargainhunting:
 					now RomanceBooksFound is 1; [books found and returned]
 				else:
 					LineBreak;
-					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescences your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
+					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescing to your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
 					LineBreak;
 					say "[bold type]You gain jackal romance novels![roman type][line break]";
 					increase carried of jackal romance novels by 1;
@@ -313,10 +318,10 @@ carry out bargainhunting:
 					increase carried of food by 2;
 					say "[bold type]You gain 2 water bottles![roman type][line break]";
 					increase carried of water bottle by 2;
-					Now RomanceBooksFound is 1; [books found and returned]
+					now RomanceBooksFound is 1; [books found and returned]
 				else:
 					LineBreak;
-					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescences your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
+					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescing to your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
 					LineBreak;
 					say "[bold type]You gain jackal romance novels![roman type][line break]";
 					increase carried of jackal romance novels by 1;
@@ -335,10 +340,10 @@ carry out bargainhunting:
 					increase carried of food by 2;
 					say "[bold type]You gain 2 water bottles![roman type][line break]";
 					increase carried of water bottle by 2;
-					Now RomanceBooksFound is 1; [books found and returned]
+					now RomanceBooksFound is 1; [books found and returned]
 				else:
 					LineBreak;
-					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescences your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
+					say "     Keeping a tight grip on the books, you shake your head at the jackaless and let her know that you bought them, fair and square. Her gaze narrows and Nermine hesitates for a long moment, before eventually acquiescing to your decision, making an expression as if she had bitten into a rotten fruit. Clearly not happy about the way things turned out, she walks back behind her counter and pointedly does not look at you afterwards.";
 					LineBreak;
 					say "[bold type]You gain jackal romance novels![roman type][line break]";
 					increase carried of jackal romance novels by 1;
@@ -350,7 +355,7 @@ carry out bargainhunting:
 			say "     Tension abates as Nermine smiles, walking over to give you a small peck on the cheek together with a smile before wandering back to her side of the counter. 'Nermine must say, she is not sure how that got in the bin, but she would advise her handsome customer to be more careful about the things they pick out of the bargain bin from now on,' she says with a teasing wink, and you curse slightly as you realize that technically you just purchased the creature that immediately ran off... maybe next time you should try looking for a collar and leash beforehand? Or maybe you should just hope there isn't a next time...";
 		else if Z is 21: [parchment]
 			if "City Map" is listed in feats of player:
-				say "     Looking through the strange bin of bargain items, you come across a rolled parchment, which seems slightly warm to the touch. Curious, you pull the item out of the bin and unroll it to take a closer look. Much to your surprise, the parchment seems to contain [one of]a recipe for chili con carne[or]a discourse on the proper way to amuse a dragon, with a side note at the bottom that failure to properly amuse said dragon may result in being tasty with barbecue sauce[or]a rather strange yet hauntingly pretty drawing of a feline-headed woman[or]the secret to life... actually all the parchment has written on it is the number 42...[or]some rambling intellectual discourse on the nature of reality, and whether or not the writer was or was not in fact part of a computer game... quite boring really[or]some sort of plan for world domination, which apparently came up short in execution due to a lack of readily available 'flying attack porcupines.' Considering the state in which the city is in right now, you certainly hope that lack isn't going to be remedied anytime soon[or]a recipe for excellent sugar cookies, apparently the secret is a dash of orange peel and just the right mix of pure and brown sugar[or]a copy of The Declaration of Independence[']... no wait, apparently it is a copy of [']The Declaration of Enslavement['] instead... after reading a few of the strangely familiar yet altered statements contained within, you find yourself shuddering slightly[or]a rather steamy love letter (or perhaps lust letter) from one unnamed individual to another[or]A oddly scrawled message that says only, 'The cake is a lie! Trust in muffins instead!' Very odd indeed..[run paragraph on][at random]. You stare at the contents for a minute, before rolling the parchment back up and carefully placing it down on the counter, sure that it will prove of little use to you now in the changed city.";
+				say "     Looking through the strange bin of bargain items, you come across a rolled parchment, which seems slightly warm to the touch. Curious, you pull the item out of the bin and unroll it to take a closer look. Much to your surprise, the parchment seems to contain [one of]a recipe for chili con carne[or]a discourse on the proper way to amuse a dragon, with a side note at the bottom that failure to properly amuse said dragon may result in being tasty with barbecue sauce[or]a rather strange yet hauntingly pretty drawing of a feline-headed woman[or]the secret to life... actually all the parchment has written on it is the number 42...[or]some rambling intellectual discourse on the nature of reality, and whether or not the writer was or was not in fact part of a computer game... quite boring really[or]some sort of plan for world domination, which apparently came up short in execution due to a lack of readily available 'flying attack porcupines.' Considering the state in which the city is in right now, you certainly hope that lack isn't going to be remedied anytime soon[or]a recipe for excellent sugar cookies, apparently the secret is a dash of orange peel and just the right mix of pure and brown sugar[or]a copy of [']The Declaration of Independence[']... no wait, apparently it is a copy of [']The Declaration of Enslavement['] instead. After reading a few of the strangely familiar yet altered statements contained within, you find yourself shuddering slightly[or]a rather steamy love letter (or perhaps lust letter) from one unnamed individual to another[or]A oddly scrawled message that says only, 'The cake is a lie! Trust in muffins instead!' Very odd indeed..[run paragraph on][at random]. You stare at the contents for a minute, before rolling the parchment back up and carefully placing it down on the counter, sure that it will prove of little use to you now in the changed city.";
 			else:
 				say "     Looking through the strange bin of bargain items, you come across a piece of rolled parchment, which seems slightly warm to the touch. Curious, you pull the item out of the bin and unroll it to take a closer look. What you find on its inside is some sort of color-coded [bold type]map of the city[roman type], with several rather familiar-looking landmarks clearly noted... although at the same time, something seems subtly off about the layout. Looking closely at the strange map and its hand-drawn depiction of a modern city on so ancient a material, you notice something fascinating. It doesn't actually seem to be depicting the city as it was, but as it actually currently is, with blocked streets noted carefully, as well as several new areas delineated and marked, as well as with several safe routes to those areas clearly noted!";
 				say "     As you watch the parchment map, you catch sight of actual movement in its content! Looks as if someone was drawing on it, right before your eyes, marking another street slowly and declaring it impassible, changing all of the travel routes nearby to allow for that fact. Realizing what a treasure you have found, you grin happily as you tuck your new city map away in your pack safely.";
@@ -495,8 +500,8 @@ carry out bargainhunting:
 		else:
 			say "     Rummaging through all the strange items in the bin, you find yourself pulling out an object you are sure you have seen somewhere else around the city, and sigh despondently as you tuck your new common item back in your backpack.";
 			LineBreak;
-			let minorbargain be a random number from 1 to number of filled rows in the table of random critters;
-			choose row minorbargain from the table of random critters;
+			let minorbargain be a random number from 1 to number of filled rows in the Table of Random Critters;
+			choose row minorbargain from the Table of Random Critters;
 			if there is a loot entry:
 				if loot entry is not " " and loot entry is not "":
 					say "[bold type]You acquired 1 [loot entry]![roman type][line break]";
@@ -535,10 +540,9 @@ carry out bargainhunting:
 				increase carried of dirty water by 1;
 	else:
 		say "     Sorting through your pack, you are ashamed to realize you can't afford to draw something out of the bargain bin right now. You blush under Nermine's curious gaze, as you casually move off to look through the rest of the store instead.";
-	if bargainbinusagetotal > 41: [ie 42 or greater, arbitrary number chosen to limit bin usage. should allow most (possible all) things to be found.]
+	if bargainbinusagetotal > 41: [i.e. 42 or greater, arbitrary number chosen to limit bin usage. should allow most (possible all) things to be found.]
 		say "With the removal of your latest findings, the Bargain Bin appears oddly empty. The few things left in it are ones you have rejected already. Won't be any more bargains from this bin."; [feel free to replace this text with anything that makes more sense]
-		move Bargain Bin to dark basement;
-		remove Bargain Bin from play;
+		now Bargain Bin is nowhere;
 
 [ Plush Lion / rubber tigress / chocolate lab in bin ]
 to say plrtcl:
@@ -561,7 +565,7 @@ to say plrtcl:
 			LineBreak;
 			say "     Now, if only you could find another plush lion to play with you...";
 			setmonster "Plush Lion";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now skinname of player is "Plush Lion";
 			now cockname of player is "Plush Lion";
 			now bodyname of player is "Plush Lion";
@@ -578,7 +582,7 @@ to say plrtcl:
 			LineBreak;
 			say "     Now, if only you could find another rubber kitty to play with you...";
 			setmonster "Rubber tigress";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now skinname of player is "Rubber tigress";
 			now cockname of player is "Rubber tigress";
 			now bodyname of player is "Rubber tigress";
@@ -596,7 +600,7 @@ to say plrtcl:
 			LineBreak;
 			say "     Now, if only you could find another confectionary to play with you...";
 			setmonster "Chocolate Lab";
-			choose row monster from the table of random critters;
+			choose row monster from the Table of Random Critters;
 			now skinname of player is "Chocolate Lab";
 			now cockname of player is "Chocolate Lab";
 			now bodyname of player is "Chocolate Lab";
@@ -636,6 +640,10 @@ instead of trading the jackal romance novels when the current action involves th
 
 Section 2 - Strange Doll Companion
 
+Table of GameCharacterIDs (continued)
+object	name
+strange doll	"strange doll"
+
 strange doll is a pet. "The strange-looking doll that you found in the bargain bin of the unusual shop. The small doll seems to always look exactly like you, changes and all. The most unusual part of the whole thing is how it happily follows along behind you loyally wherever you go, its plush body moving on its own through some unknown method. Still, just looking at the little thing manages to bring a smile to your face.".
 strange doll is a part of the player.
 The weapon damage of strange doll is 7.
@@ -661,6 +669,6 @@ when play ends:
 				say "     Escaping from the city with your sanity, it was easy enough to sneak your little doll through the military as just a toy, the soldier who examined it even commenting on how cute it was. Once in the outside world, you bring the doll with you most places, as sort of a living good luck charm, even letting your little mini you help with your chores and work when no one is looking. You find it easy to confide in and talk to the attentive little doll, and come to enjoy its quiet company in your life, its easy acceptance of your body and your shared experiences in the city making it the perfect listener.";
 			else:
 				say "     Rescued by the military, they seem to have no problem letting you leave the city with your little doll, even thinking it cute how much the little thing looks like you. You grin at how little they realize, and smile and nod as they let you go free. Once safe in the outside world, you take the doll with you until you find a place to stay, enjoying its presence as it keeps you company most nights, at some point you would swear it was actually growing larger as time goes on, but you shrug it off as unimportant. Eventually you are woken up in the night by something on top of you, and you struggle until you realize it is the strange little doll, which now looks exactly like you, and not very doll like at all. You try to talk, but your double just kisses you lewdly, before whispering into your ears that since you have been such a good master for it, it will take care of all those evil chores and work and things for you, so you can relax.";
-				say "     You are nervous at first, but no one seems to tell the difference between you and the doll, and so you can lounge around and relax, finding it strangely easy to do nothing as you stay at home, not even bothering to try to think for long periods of time. Eventually you realize that you are shrinking one day, when your double reaches down to pet you on the head, you try to figure out what you can do about this, but it seems like such hard work to think. Several days later when your former doll picks you up and sets you on a shelf, you realize that you have actually become a doll version of yourself, while the other doll lives your old life! You try to struggle and tell someone what has happened, but your size and cuteness means no one takes you seriously, not that you have much luck even talking to them either... soon though you begin to wonder what the point in trying is, its so much easier to just go with the flow and do what your large master does, like a good little mimicking doll...";
+				say "     You are nervous at first, but no one seems to tell the difference between you and the doll, and so you can lounge around and relax, finding it strangely easy to do nothing as you stay at home, not even bothering to try to think for long periods of time. Eventually you realize that you are shrinking one day, when your double reaches down to pet you on the head, you try to figure out what you can do about this, but it seems like such hard work to think. Several days later when your former doll picks you up and sets you on a shelf, you realize that you have actually become a doll version of yourself, while the other doll lives your old life! You try to struggle and tell someone what has happened, but your size and cuteness means no one takes you seriously, not that you have much luck even talking to them either... soon though you begin to wonder what the point in trying is, it's so much easier to just go with the flow and do what your large master does, like a good little mimicking doll...";
 
 Bargain Bin ends here.

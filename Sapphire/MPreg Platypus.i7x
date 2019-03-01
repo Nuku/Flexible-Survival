@@ -68,7 +68,7 @@ to say beattheplatypus:
 				else:
 					say "     Moving yourself closer to the prone and nude male, you grin, sliding your form over his. Your hands start roaming his belly, feeling the firm eggs shift within, to which the platypus shudders, starting to grow erect, aroused by the feeling of the eggs stretching his belly taut. Squirming underneath of you, his hand starts going to your groin, starting to tease your clit lightly, trying to get you as aroused as he is.";
 					say "     The teasings get more intense, his hands going over your chest, your hands sliding over his hips, until you can't take it any more and you have to ride his cock. You shift your position to straddle him, guiding his tip to your wet cunt. With a moan of satisfaction, you slowly lower yourself around his shaft, squeezing it tightly as you settle into position.";
-					say "     Not wanting to let you do all the work, the platypus puts his hands on your hips and starts to thrust into you as you rock into him, setting a steady pace. The sensation of his rod pumping deep inside you pulls several moans from both you and him as you rub your [if breasts of player > 0 and breast size of player > 0]breasts[else]chest[end if] to heighten the pleasure.";
+					say "     Not wanting to let you do all the work, the platypus puts his hands on your hips and starts to thrust into you as you rock into him, setting a steady pace. The sensation of his rod pumping deep inside you pulls several moans from both you and him as you rub your [if breast size of player > 0]breasts[else]chest[end if] to heighten the pleasure.";
 					say "     The pleasurable tension builds up into a small eternity, until suddenly it comes to a crashing release, forcing you to clamp your pussy down on the delicious cock inside you. Holding onto the platypus tightly, you try your best to keep milking for all he's got, and soon your efforts are rewarded. Hot waves of cum start to fill you up.[fovichance]";
 					say "     A few minutes of holding each other close in the sand, his cum slowly trickling out of your snatch, you eventually regain your wits and stand up. You kiss his cheek as a quick 'Thank you' for the good time, then get your gear packed back up to go. One last look over your shoulder rewards you with the platypus waving at you before returning to the water to wash up.";
 			else:
@@ -80,12 +80,12 @@ to say beattheplatypus:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Platypus";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -133,8 +133,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Endings
 
@@ -147,7 +148,7 @@ when play ends:
 		else:
 			say "     The soldiers arrive in the city, and for a moment you panic, wondering if they're going to believe that you're not one of the sex-crazed beasts around you. As you try to decide whether to run or give yourself up, you hear a call go out over a loudspeaker for any willing victims to present themselves to the medical tent for examination. You eagerly come out of hiding, and hand yourself in for the doctors to pass you as clean and give you a shot to make you non-infectious.";
 			if player is male: [MALE/HERM]
-				say "     The doctors give you all the usual exams: they take some blood for testing, they get the cheek swab for your DNA, and they give your [if player is mpreg_able]male womb[else]prostate[end if] a quick examination. A few hours later, they come back with the results of your test. At first, the doctor doesn't say much of anything, he just reads the papers on his clipboard, when you ask what's wrong, he laughs and shakes his head. 'Nothing my dear boy. I just thought it would be funny to keep you waiting.'";
+				say "     The doctors give you all the usual exams: they take some blood for testing, they get the cheek swab for your DNA, and they give your [if player is mpreg_able]male womb[else]prostate[end if] a quick examination. A few hours later, they come back with the results of your test. At first, the doctor doesn't say much of anything, just reading the papers on his clipboard. When you ask what's wrong, he laughs and shakes his head. 'Nothing my dear boy. I just thought it would be funny to keep you waiting.'";
 				if player is mpreg_able and cunts of player is 0:
 					say "     He wraps an arm around your shoulders and smiles. 'The only news I have is that we can't do anything about your womb without some serious surgery, and we can't promise that any surgery we do would stay, with those nanites in your system. There is a pill we are going to give you to make you non-infectious, but there's nothing we can do about the changes that you've already had.'";
 					say "     The doctor gives your belly a little rub. 'But it's your call if you want to practice safe sex or if you want to become a mother. Either way, you're free to go about your life.' You get handed a small pill and a plastic cup full of water. Once you take it, they hand you your belongings from your time spent bunkered in the city (minus your weapons) and put you on a relocation bus, headed into your new life.";

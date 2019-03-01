@@ -9,15 +9,23 @@ FratPartyRecruiterProgression is a number that varies.
 
 Section 1 - Marching Band
 
+Table of GameEventIDs (continued)
+Object	Name
+Marching Band	"Marching Band"
+
 Marching Band is a situation.
 The sarea of Marching Band is "Campus".
 
 Instead of resolving a Marching Band:
 	say "     While exploring the campus, you are suddenly surprised to hear the sound of music starting up. A welcome change from the normal sounds of sex-crazed creatures and horny mutants, you cautiously head over to investigate. You find a variety of infected creatures stuffed into ill-fitting uniforms and carrying instruments as they try to coalesce into a marching band. They start up and stop several times, distracted by one or more of them deciding to hump another, give a blow job or otherwise give in to their sexual desires. But eventually they do get going as their border collie band leader nips them back into position once everyone's gotten off one last time before they can march off the national anthem as they proceed towards one of the fields.";
 	increase score by 1;
-	Now Marching Band is resolved;
+	now Marching Band is resolved;
 
 Section 2 - Art Department
+
+Table of GameEventIDs (continued)
+Object	Name
+Arts Department	"Arts Department"
 
 Arts Department is a situation. The level of Arts Department is 3.
 The sarea of Arts Department is "Campus".
@@ -37,15 +45,23 @@ Section 3 - Phi Iota Gamma
 
 Section 4 - Languages Department
 
+Table of GameEventIDs (continued)
+Object	Name
+Languages Department	"Languages Department"
+
 Languages Department is a situation.
 The sarea of Languages Department is "Campus".
 
 Instead of resolving a Languages Department:
 	say "     Passing behind one building, you almost bump into a small group of creatures arguing loudly and incomprehensibly. Among the group are a French frog, a Chinese dragon, an Indian elephant, a Russian bear and several other walking stereotypes who can no longer understand each other. You suspect they've all somehow become altered by the infection into forms to suit the language course they taught or studied. You decide to give what is probably the Languages Department a wide berth before you start speaking another language as well to further compound your problems in this city gone mad.";
-	Now Languages Department is resolved;
+	now Languages Department is resolved;
 
 
 Section 5 - Wandering the Campus
+
+Table of GameEventIDs (continued)
+Object	Name
+Wandering the Campus	"Wandering the Campus"
 
 Wandering the Campus is a situation. The level of Wandering the Campus is 9.
 The sarea of Wandering the Campus is "Campus".
@@ -64,7 +80,7 @@ Instead of resolving a Wandering the Campus:
 	if guy is banned and 7 is not listed in campuswander, add 7 to campuswander;
 	if guy is banned and girl is banned and hermaphrodite is banned:
 		say "     Traveling across the completely unpopulated campus, you have to wonder why you're even bothering to come here.";
-	if number of entries in campuswander > 6, say "     You have an unevenful passage across the campus.";
+	if number of entries in campuswander > 6, say "     You have an uneventful passage across the campus.";
 	let T be a random number between 1 and 7;
 	let SafetyCounter be 0;
 	while T is listed in campuswander:
@@ -73,12 +89,12 @@ Instead of resolving a Wandering the Campus:
 		if T is 8:
 			now T is 1;
 		if SafetyCounter > 14: [just to avoid an endless loop in case something goes wrong]
-			say "     You have an unevenful passage across the campus.";
+			say "     You have an uneventful passage across the campus.";
 			now Wandering the Campus is resolved;
 			break;
 	now showlocale is false;
 	if T is 1:			[replaced with Fruit Bat]
-		say "     Your wandering across the campus is interrupted by the appearance of a speedo'd bat quickly approaching. Perhaps coming from one of the college's olympic or diving pools, he looks like he's recently gotten out of the water and is now looking for some fun to round out his exercise regimen.";
+		say "     Your wandering across the campus is interrupted by the appearance of a speedo'd bat quickly approaching. Perhaps coming from one of the college's Olympic or diving pools, he looks like he's recently gotten out of the water and is now looking for some fun to round out his exercise regimen.";
 		challenge "Fruit Bat";
 		add 1 to campuswander;
 	else if T is 2:
@@ -96,7 +112,7 @@ Instead of resolving a Wandering the Campus:
 		challenge "Red Kangaroo";
 		add 4 to campuswander;
 	else if T is 5:
-		say "     A large wolf creature leaps out from a broken window on one of the buildings. Shi growls toothily at you as shi rises up from all fours to stand upright, showing off hir herm body to you. Shi looks you over with a hunger that is wholely carnal in nature.";
+		say "     A large wolf creature leaps out from a broken window on one of the buildings. Shi growls toothily at you as shi rises up from all fours to stand upright, showing off hir herm body to you. Shi looks you over with a hunger that is wholly carnal in nature.";
 		challenge "Painted Wolf Herm";
 		add 5 to campuswander;
 	else if T is 6:
@@ -114,6 +130,10 @@ Instead of resolving a Wandering the Campus:
 
 
 Section 6 - Anime Club
+
+Table of GameEventIDs (continued)
+Object	Name
+Anime Club	"Anime Club"
 
 Anime Club is a situation. the level of Anime Club is 12.
 The sarea of Anime Club is "Campus".
@@ -142,11 +162,14 @@ Instead of resolving a Anime Club:
 			if fightoutcome >= 10 and fightoutcome <= 19:
 				say "     With the tentacle mutant defeated, you drive the two of them from the room and shut off the video. The captured girl looks up at you, blinking her wide eyes. She seems a little disappointed that the anime has stopped showing, but is also starting to regain some focus. With her already well on her way to being transformed, she's become quite confused by you're able to coax her to her feet and flee the strange room together.";
 				say "     She's very grateful to you for having rescued her and gives you a big hug and a kiss before she realizes what she's doing. After making out together in an empty classroom, she thanks you again for your help while handing you some food and water. After some more playful groping, she heads off in search of a new hiding place. You'd offered to house her in the bunker, but she's still holding out hope of finding some of her friends.";
+				LineBreak;
+				say "[bold type]You gain 1 food![roman type][line break]";
 				increase carried of food by 1;
+				say "[bold type]You gain 1 water bottle![roman type][line break]";
 				increase carried of water bottle by 1;
 				increase score by 10;
-				increase humanity of player by 5;
-				if humanity of player > 100, now humanity of player is 100;
+				SanBoost 5;
+				now Resolution of Anime Club is 1; [rescued her]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     The hentai boy pushes you to sit down beside the captured girl, groping and fondling you while you watch the video. A part of you knows you shouldn't, but you're too weary and aroused from fighting to resist any longer. As you watch, you can almost feel the tentacles on the screen grabbing and touching you just like in the animation. It takes you a few moments to realize that the tentacled mutant behind you is imitating the events on screen, adding to your immersion. The fallen anime babe, recovered from her fight, moves over to snuggle with you, showing there's no hard feelings now that you've settled down to watch some hentai with them. You moan in pleasure, your excitement building.";
 				say "[animeclublost]";
@@ -159,6 +182,7 @@ Instead of resolving a Anime Club:
 			say "     Deciding to cut your losses, you dodge your way back to the door and run out of the room. There's a brief pursuit, but it goes no further than the stairs as there's already one new prize to be enjoyed.";
 	else:
 		say "     Deciding it's none of your concern, you creep away before anything else is drawn by the noise or another of those Anime Babes spots you.";
+		now Resolution of Anime Club is 99; [disinterest]
 	now animeclubfight is false;
 	now Anime Club is resolved;
 
@@ -179,8 +203,8 @@ to say animeclublost:
 	say "     Things continue on like this, the four of you having a sexy orgy of tentacular fun. Every available hole is filled repeatedly by tentacle cocks and left overflowing with the hentai fan's tainted seed. Several more videos are watched over the course of this viewing, their sexy contents sinking into your mind even as your body is changed more and more to be like those sexily animated girls getting fucked alongside you";
 	decrease humanity of player by 25;
 	[puts Anime Babe as lead monster for infection and impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Anime Babe":
 			now monster is y;
 			break;
@@ -209,5 +233,6 @@ to say animeclublost:
 		stop the action;
 	else:
 		say ". With your mind muddled by the content of the videos you've been watching, you almost succumb entirely, but somehow manage to hold on to part of yourself. When you're released out onto the campus to search for others to share your new fandom and lust for tentacles with others, your mind gradually pulls itself together enough to shake yourself out of the infection-addled fugue enough to get yourself back on track.";
+	now Resolution of Anime Club is 2; [lost]
 
 Campus Events ends here.

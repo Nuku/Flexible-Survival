@@ -39,6 +39,10 @@ Version 2 of Sam by Stripes begins here.
 
 Section 1 - Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Another Researcher	"Another Researcher"
+
 Another Researcher is a situation.
 The sarea of Another Researcher is "Outside".
 when play begins:
@@ -73,6 +77,10 @@ Instead of resolving Another Researcher:
 
 Section 2 - Mini-Lab
 
+Table of GameRoomIDs (continued)
+Object	Name
+Mini-Lab	"Mini-Lab"
+
 Mini-Lab is a room. It is fasttravel. It is private.
 The description of Mini-Lab is "[minilabdesc]".
 The invent of Mini-Lab is { "cot" }.
@@ -101,11 +109,15 @@ to say minilabdesc:
 
 Section 3 - Sam the Researcher
 
+Table of GameCharacterIDs (continued)
+object	name
+Sam	"Sam"
+
 Sam is a man. Sam is in Mini-Lab.
 The description of Sam is "[samdesc]".
 The conversation of Sam is { "Thanks." }.
 the scent of Sam is "[samscent]".
-samformtalk is a truth state that varies. samformtalk is normally false.
+samformtalk is a truth state that varies. samformtalk is usually false.
 
 to say samscent:
 	if HP of Sam <= 4:
@@ -243,12 +255,12 @@ Instead of conversing the Sam:
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Unable to get up due to your injuries, you cannot stop Sam as he goes on a rampage, roaring angrily. He tosses the bottle you intended for him against a wall, splattering its contents across the concrete. 'You piece of scum. I trusted you, but you're no better than Rick in the end. I don't want to have anything to do with you ever again,' he roars as he shakes you so roughly you black out from the pain. By the time you come to, he's gathered up his remaining supplies and equipment and has left the library for good. It is some time before your body's healed enough for you to get up, leaving you plenty of time to wonder if you made the right decision while you watch a patch of pink fur grow on the wall.";
 				now HP of Sam is 98;
-				remove Sam from play;
+				now Sam is nowhere;
 				dragontaur_active; [activate Dragontaur creature]
 			else:
 				say "     Rather than keep fighting Sam, you begin a tactical retreat, leading Sam out of the library[if the number of booked people + number of bunkered people > 2] while the others cautiously stay out of the way[else if the number of booked people + number of bunkered people is 2] while your other friend there stays out of the way[end if]. Once outside, Sam growls in frustration and takes to the air on his large wings. 'You piece of scum. You're no better than Rick. I don't want to have anything to do with you ever again,' he roars, unleashing a large gout of fire into the air before flying off. With him safely gone, you dump out the vial fluid that's come between you both and wonder if you made the right decision.";
 				now HP of Sam is 98;
-				remove Sam from play;
+				now Sam is nowhere;
 				dragontaur_active; [activate Dragontaur creature]
 		else:
 			LineBreak;
@@ -279,7 +291,7 @@ Instead of conversing the Sam:
 	else if HP of Sam is 35:
 		say "     Looking over at Sam (now as Samantha), you can't help but wonder if you made the right choice. She's becomes such a lustful, sex-loving creature and is happy to get fucked and bred by pretty much any creature she can out there. She's probably start making more vixentaurs out there already. Given her large size and eagerness for sex, they could end up becoming a menace out there.";
 		say "     Your thoughts have you recall that you hung onto that other vial. You pull it out from a pocket of your pack and look it over. The label is marked as [']#143 - Dragon - Male[']. Perhaps that might curb her slutty nature by making her less willing to submit to everything she sees before she goes over the edge and becomes feral. That'd be especially bad if she did it while in the library.";
-		say "     [bold type] Shall you try slipping it to her or leave well enough alone?[roman type][line break]";
+		say "     [bold type]Shall you try slipping it to her or leave well enough alone?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Slip it to her.";
 		say "     ([link]N[as]n[end link]) - Leave well enough alone.";
@@ -314,12 +326,12 @@ Instead of conversing the Sam:
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     Unable to get up due to your injuries, you cannot stop Sam as she goes on a rampage, growling angrily. She tosses the bottle you intended for her against a wall, splattering its contents across the concrete. 'You piece of scum. I trusted you, but you're no better than Rick in the end. I don't want to have anything to do with you ever again,' she snarls as she shakes you so roughly you black out from the pain. By the time you come to, she's gathered up her remaining supplies and equipment and has left the library for good. It is some time before your body's healed enough for you to get up, leaving you plenty of time to wonder if you made the right decision while you watch a patch of blue scales grow on the wall.";
 				now HP of Sam is 99;
-				remove Sam from play;
+				now Sam is nowhere;
 				vixentaur_active; [activate Vixentaur creature]
 			else:
 				say "     Rather than keep fighting Sam, you begin a tactical retreat, leading Sam out of the library[if the number of booked people + number of bunkered people > 2] while the others cautiously stay out of the way[else if the number of booked people + number of bunkered people is 2] while your other friend there stays out of the way[end if]. Once outside, Sam snarls in frustration and quickly bounds down the hill. 'You piece of scum. You're no better than Rick. I don't want to have anything to do with you ever again,' she growls as she's leaving. With her safely gone, you dump out the vial fluid that's come between you both and wonder if you made the right decision.";
 				now HP of Sam is 99;
-				remove Sam from play;
+				now Sam is nowhere;
 				vixentaur_active; [activate Vixentaur creature]
 		else:
 			LineBreak;
@@ -350,7 +362,7 @@ Instead of conversing the Sam:
 Section 4 - Confrontation at the Mini-Lab
 
 minilabfight is a number that varies.
-featherready is a truth state that varies. featherready is normally false.
+featherready is a truth state that varies. featherready is usually false.
 
 instead of navigating Mini-Lab while HP of Sam is 4:
 	if carried of eagle feather >= 2:
@@ -366,7 +378,7 @@ to assaultonminilab:
 		say "     'Rick! No, don't do this!' he cries as the powerful creature and ex-partner grabs him, her lustful intent clearly visible hanging between the herm's legs. She pushes him down onto the table, tearing at his clothes with her claws. What shall you do?";
 	else:
 		say "     As you're approaching Sam's hidden research lab, you notice some noise coming from the building. Knowing something is amiss since Sam avoids any excess noise to prevent detection, you run around back to find the basement hatch broken open. You cautiously head down the stairs, ready for a fight. There you find Sam being manhandled by one of those feline tigertaurs from the Zoo. The herm's got him pressed down onto the table and is tearing at his clothes with her claws. Her lustful intent is clearly visible hanging between her legs. 'Rick! No, don't do this!' Sam cries as his ex-partner prepares to mount him. What shall you do?";
-	say "[link]Help Sam (1)[as]1[end link], [link]watch the show (2)[as]2[end link], [link]steal supplies (3)[as]3[end link] or just [link]leave (4)[as]4[end link]? ";
+	say "     [link]Help Sam (1)[as]1[end link], [link]watch the show (2)[as]2[end link], [link]steal supplies (3)[as]3[end link] or just [link]leave (4)[as]4[end link]?";
 	now calcnumber is 0;
 	while calcnumber < 1 or calcnumber > 4:
 		say "Choose 1-4> ";
@@ -410,14 +422,14 @@ to assaultonminilab:
 			decrease humanity of player by 20;
 			if libido of player > 100, now libido of player is 100;
 			now HP of Sam is 100;
-			remove Sam from play;
+			now Sam is nowhere;
 			now Mini-Lab is unknown;
 			move player to Grey Abbey Library;
 		else:
 			say "     Rather than continue to risk yourself in a losing fight, you make a break for the basement hatch and run away. Leaving Sam to his feline fate, you head back to the library to consider your next course of action.";
 			WaitLineBreak;
 			now HP of Sam is 100;
-			remove Sam from play;
+			now Sam is nowhere;
 			now Mini-Lab is unknown;
 			move player to Grey Abbey Library;
 	else if calcnumber is 2:
@@ -432,13 +444,13 @@ to assaultonminilab:
 		WaitLineBreak;
 		project the figure of SamBadEnd_icon;
 		if player is not neuter:
-			say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if player is male]. You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [short ball size] balls[end if][if cunts of player is 1]. With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[else if cunts of player > 1]. With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if]. As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hyper-sexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. ";
+			say "     You cum several times as well, the wild show and the heady scent of musky sex exciting you greatly[if player is male]. You stroke your pulsing meat, splattering your seed across the dirty floor as you drain your [short ball size] balls[end if][if cunts of player is 1]. With several fingers pumping into your wanton pussy, you finger yourself through repeated climaxes[else if cunts of player > 1]. With several fingers pumping into your wanton pussies, you finger yourself through repeated climaxes[end if]. As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hyper-sexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath.";
 		else:
-			say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hyper-sexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath. ";
+			say "     As you see Rick finally finishing up, she dismounts from Sam, who's already starting to become visibly pregnant as her hyper-sexualized body rushes into action. The tigertaur purrs at this and rubs the swelling belly, turning to give you a rather predatory look as she pants to regain her breath.";
 		let surrender be 0;
 		if humanity of player < 50 or libido of player > 50 or player is kinky or player is submissive:
-			say "     Watching as the beautiful tauric feline that had once been Sam rumbles a pleased growl from out of her throat while looking adoringly at her new mistress. ";
-			say "     [bold type]You wonder if maybe you should give into the tigertaur and have her claim you as a pet as well?[roman type][line break]";
+			say "     You watch the beautiful tauric feline that had once been Sam rumble a pleased growl from out of her throat while looking adoringly at her new mistress.";
+			say "     [bold type]Should give in to the tigertaur and have her claim you as a pet as well?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Surrender.";
 			say "     ([link]N[as]n[end link]) - Retreat.";
@@ -455,7 +467,7 @@ to assaultonminilab:
 				now scalevalue of player is 5;
 				now bodydesc of player is "silky";
 				now bodytype of player is "feline";
-				now daycycle of player is 0;
+				now SleepRhythm of player is 0;
 				end the story saying "Surrendering to Rick the tigertaur you willing become another breeder kitty for the herm.";
 				wait for any key;
 				now battleground is "void";
@@ -479,7 +491,7 @@ to assaultonminilab:
 			decrease humanity of player by 20;
 			if libido of player > 100, now libido of player is 100;
 			now HP of Sam is 100;
-			remove Sam from play;
+			now Sam is nowhere;
 			now Mini-Lab is unknown;
 			move player to Grey Abbey Library;
 	else if calcnumber is 3:
@@ -491,7 +503,7 @@ to assaultonminilab:
 		increase carried of soda by 1;
 		decrease humanity of player by 12;
 		now HP of Sam is 100;
-		remove Sam from play;
+		now Sam is nowhere;
 		now Mini-Lab is unknown;
 		move player to Grey Abbey Library;
 	else if calcnumber is 4:
@@ -501,7 +513,7 @@ to assaultonminilab:
 		decrease morale of player by 3;
 		decrease score by 25;
 		now HP of Sam is 100;
-		remove Sam from play;
+		now Sam is nowhere;
 		now Mini-Lab is unknown;
 		move player to Grey Abbey Library;
 
@@ -762,8 +774,8 @@ Part 2 - Dragon Sex
 
 to say samdragonfirsttime:
 	[puts Dragontaur as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Dragontaur":
 			now monster is y;
 			break;
@@ -782,8 +794,8 @@ to say samdragonoral:
 
 to say samdragonfuck:
 	[puts Dragontaur as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Dragontaur":
 			now monster is y;
 			break;
@@ -797,17 +809,17 @@ to say samdragonfuck:
 
 to say samdragontaurfuck:
 	[puts Dragontaur as lead monster in case of impregnation]
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Dragontaur":
 			now monster is y;
 			break;
 	say "     Sam rumbles lustfully as he looks your [bodytype of player] form over. 'Rrr... now this is a fine body you've got here. A sexy taur just ripe for mounting,' he rumbles appreciatively. 'And now to give that hot [bodyname of player] body of yours what it needs - a good fucking and a hot dose of dragon cum.' His powerful body moves around behind you and climbs atop you, mounting your hindquarters like a beast. His stiff meat rubs against your rump, spitting precum onto you as it moves into position. With his tapered glans lined up with your [if player is female]wet cunt[else]tight pucker[end if], he pushes himself further onto you, sinking it into you with a strong thrust. His cock, made for spreading open his lovers, dribbles precum along your passage as his muscled hips push forward, driving his increasingly thicker shaft into you. You moan beneath him in delight as each of those stimulating ridges pops into you. Soon you're panting and squirming beneath him in ecstasy as he fucks you with that exquisite cock of his in strong, hard thrusts.";
 	WaitLineBreak;
-	say "     With his tauric lower body atop yours, his humanoid top half presses against your back, letting him wrap his arms around you. He hugs you like this and nips at your neck and shoulder he thrusts into you again and again. 'Mmm... you make for such a sexy taur slut. That dragon cock stuffing you feels good, doesn't it?' he rumbles[if player is female]. 'Mmm... let's breed some whelps in that hot taur body of yours, my dear,' he adds[end if][if breast size of player > 1]. His hands move to your bosom, groping your breasts and teasing your nipples, drawing more cries of pleasure from you[end if].";
+	say "     With his tauric lower body atop yours, his humanoid top half presses against your back, letting him wrap his arms around you. He hugs you like this and nips at your neck and shoulder he thrusts into you again and again. 'Mmm... you make for such a sexy taur slut. That dragon cock stuffing you feels good, doesn't it?' he rumbles[if player is female]. 'Mmm... let's breed some whelps in that hot taur body of yours, my dear,' he adds[end if][if breasts of player > 0 and breast size of player > 0]. His hands move to your bosom, groping your breasts and teasing your nipples, drawing more cries of pleasure from you[end if].";
 	say "     Lost in a haze of arousal, you can't help but agree with the dragontaur, your [bodydesc of player] form lusting for the lustful pleasure of having the dragontaur mounting you like some beast[if player is not neuter]. Soon you're grinding your hindquarters back against him as your orgasm washes through you, cumming over and over again as he drives his meat into you[else]. Soon you're grinding your hindquarters back against him in delight, your body aching to feel his release since your genderless body cannot have one of its own[end if][if player is male]. Your spurting cock spreads your seed across the ground beneath you in large, white splotches[end if][if player is female]. Your pussy clenches and tugs at his cock, milking at it in wanton need as you orgasm repeatedly[else]. Your tight hole clenches and tugs at his cock, squeezing firmly around it as you're awash with ecstasy[end if]. Your [bodytype of player] body is sent into pleasure overload as the big taur drives hard into you one last time and releases his hot seed, blasting heavy spurts of thick semen into your [if player is female]womb in an attempt to breed you[else]bowels, bloating your belly with his virile load[end if].[ovichance]";
 	WaitLineBreak;
-	say "     Once he's finished up, he steps back and slides his cock from your tauric body, sending echoes of delight through you as those ridges slip free one another another. It twitches as it pops out, spraying a few last spurts across your hindquarters to mark you as bred by him. Feeling sated for the moment, you slump to the floor and rest on your side, enjoying the warm, full feeling he's left inside your lower belly. 'You look so sexy as a well-fucked taur,' he rumbles with a grin as he runs a paw along your side. 'It is a nice look for you. Maybe you should go out into the city and share it with others. Find a few other taurs to mount you as well. Then you can come back to me to have that new taur body mounted as well,' he rumbles while rubbing a forepaw at your creamy hole, making you shiver in delight. As you rest and recover from the wild mating, you find yourself thinking about finding some taurs to submit to out in the city.";
+	say "     Once he's finished up, he steps back and slides his cock from your tauric body, sending echoes of delight through you as those ridges slip free one after another. It twitches as it pops out, spraying a few last spurts across your hindquarters to mark you as bred by him. Feeling sated for the moment, you slump to the floor and rest on your side, enjoying the warm, full feeling he's left inside your lower belly. 'You look so sexy as a well-fucked taur,' he rumbles with a grin as he runs a paw along your side. 'It is a nice look for you. Maybe you should go out into the city and share it with others. Find a few other taurs to mount you as well. Then you can come back to me to have that new taur body mounted as well,' he rumbles while rubbing a forepaw at your creamy hole, making you shiver in delight. As you rest and recover from the wild mating, you find yourself thinking about finding some taurs to submit to out in the city.";
 	increase libido of player by 20;
 	if libido of player > 99, now libido of player is 99;
 
@@ -913,10 +925,10 @@ to say samDVfuck_bottom:
 to say samDVtaurfuck_top:
 	say "     Sammie rumbles lustfully as she looks your [bodytype of player] form over. 'Mmm... now this is a fine body you've got here. A sexy taur just ripe for mounting,' she rumbles appreciatively. 'I'd say that hot [bodyname of player] body of yours needs a good fucking and a hot dose of dracovixen cum.' Her powerful body moves around behind you and climbs atop you, mounting your hindquarters like a beast. Her stiff meat rubs against your rump, spitting precum onto you as it moves into position. With her tapered glans lined up with your [if player is female]wet cunt[else]tight pucker[end if], she pushes himself further onto you, sinking it into you with a strong thrust. Her cock, made for spreading open her lovers, dribbles precum along your passage as her muscled hips push forward, driving her increasingly thicker shaft into you. You moan beneath her in delight as each of those stimulating ridges pops into you. Soon you're panting and squirming beneath her in ecstasy as she fucks you with that exquisite cock of hers in strong, hard thrusts.";
 	WaitLineBreak;
-	say "     With her tauric lower body atop yours, her humanoid top half presses against your back, letting her wrap his arms around you. She hugs you like this and nips at your neck and shoulder she thrusts into you again and again. 'Mmm... you make for such a sexy taur. That big cock stuffing you feels good, doesn't it? Taurs are made for mounting,' she rumbles as she rubs her breasts against your back[if player is female]. 'Mmm... let's breed some kits in that hot taur body of yours, my dear,' she adds[end if][if breast size of player > 1]. Her hands move to your bosom, groping your breasts and teasing your nipples, drawing more cries of pleasure from you[end if].";
+	say "     With her tauric lower body atop yours, her humanoid top half presses against your back, letting her wrap his arms around you. She hugs you like this and nips at your neck and shoulder she thrusts into you again and again. 'Mmm... you make for such a sexy taur. That big cock stuffing you feels good, doesn't it? Taurs are made for mounting,' she rumbles as she rubs her breasts against your back[if player is female]. 'Mmm... let's breed some kits in that hot taur body of yours, my dear,' she adds[end if][if breasts of player > 0 and breast size of player > 0]. Her hands move to your bosom, groping your breasts and teasing your nipples, drawing more cries of pleasure from you[end if].";
 	say "     Lost in a haze of arousal, you can't help but agree with the dragontaur, your [bodydesc of player] form lusting for the lustful pleasure of having the dragonvixentaur mounting you like some beast[if player is not neuter]. Soon you're grinding your hindquarters back against her as your orgasm washes through you, cumming over and over again as she drives her meat into you[else]. Soon you're grinding your hindquarters back against her in delight, your body aching to feel her release since your genderless body cannot have one of its own[end if][if player is male]. Your spurting cock spreads your seed across the ground beneath you in large, white splotches[end if][if player is female]. Your pussy clenches and tugs at her cock, milking at it in wanton need as you orgasm repeatedly[else]. Your tight hole clenches and tugs at her cock, squeezing firmly around it as you're awash with ecstasy[end if]. Your [bodytype of player] body is sent into pleasure overload as the big taur drives hard into you one last time, tying her knot inside you and releases her hot seed, blasting heavy spurts of thick semen into your [if player is female]womb in an attempt to breed you[else]bowels, bloating your belly with her virile load[end if].[DVimpregchance]";
 	WaitLineBreak;
-	say "     With her knot keeping you tied together, you get to enjoy more snuggling time with the sexy taur atop you. She nuzzles and nips at your neck, then leans around so you two can kiss. Her paws continue to slide over your body[if breast size of player > 1] and play with your bosom[end if]. Once her knot's finally come down enough, she reluctantly dismounts. As she steps back and slides her cock from your tauric body, it sends echoes of delight through you as those ridges slip free one another another. When her spent shaft pops free, the excess cum overflows from your well-stuffed pussy and runs down your inner thighs. Feeling sated for the moment, you slump to the floor and rest on your side, enjoying the warm, full feeling she's left inside your lower belly. 'You look so sexy as a well-fucked taur,' she rumbles with a smile as she runs a paw along your side. 'It is a nice look for you. Maybe you should go out into the city and share it with others. Find a few other taurs to mount you as well. Then you can come back to me to have that new taur body mounted as well,' she rumbles while rubbing a forepaw at your creamy hole, making you shiver in delight. As you rest and recover from the wild mating, you find yourself thinking about finding some taurs to submit to out in the city.";
+	say "     With her knot keeping you tied together, you get to enjoy more snuggling time with the sexy taur atop you. She nuzzles and nips at your neck, then leans around so you two can kiss. Her paws continue to slide over your body[if breast size of player > 0] and play with your bosom[end if]. Once her knot's finally come down enough, she reluctantly dismounts. As she steps back and slides her cock from your tauric body, it sends echoes of delight through you as those ridges slip free one after another. When her spent shaft pops free, the excess cum overflows from your well-stuffed pussy and runs down your inner thighs. Feeling sated for the moment, you slump to the floor and rest on your side, enjoying the warm, full feeling she's left inside your lower belly. 'You look so sexy as a well-fucked taur,' she rumbles with a smile as she runs a paw along your side. 'It is a nice look for you. Maybe you should go out into the city and share it with others. Find a few other taurs to mount you as well. Then you can come back to me to have that new taur body mounted as well,' she rumbles while rubbing a forepaw at your creamy hole, making you shiver in delight. As you rest and recover from the wild mating, you find yourself thinking about finding some taurs to submit to out in the city.";
 	increase libido of player by 15;
 	if libido of player > 99, now libido of player is 99;
 
@@ -966,8 +978,8 @@ to say samDVfuck2_bottom:
 Section 6 - Subroutines and Functions
 
 to vixentaur_active:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Vixentaur":
 			now monster is y;
 			now non-infectious entry is false;
@@ -975,8 +987,8 @@ to vixentaur_active:
 			break;
 
 to dragontaur_active:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Dragontaur":
 			now monster is y;
 			now non-infectious entry is false;
@@ -984,8 +996,8 @@ to dragontaur_active:
 			break;
 
 to DVtaur_active:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Dracovixentaur":
 			now monster is y;
 			now non-infectious entry is false;
@@ -994,8 +1006,8 @@ to DVtaur_active:
 
 to tripletaur_active:
 	let found be 0;
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Vixentaur" or name entry is "Dragontaur" or name entry is "Dracovixentaur":
 			now monster is y;
 			now non-infectious entry is false;
@@ -1028,8 +1040,8 @@ Section 7 - Endings
 
 when play ends:
 	if bodyname of player is "Feline Hexataur": [special surrender ending]
-		say "     Having given yourself over to Rick, you and Sammie are made into love hybrid feline hexataurs for the dominant tigertaur to use and whelp whenever shi chooses to do so, which shi does quite a lot given that shi's made the former lab into hir new den. Very rarely does either your or Sammie's bellies stay flat as the lustful tigertaur spends many a day filling the two of you with hir cubs, all of whom grow up into being exotic hybrid felinetaurs like their [']mothers[']. And having two conjoined taur bodies, each with a womb of its own, you breed and whelp quite the pride of sexy kittens.";
-		say "     When the some of the military happens to stumble over your little den, Rick takes that as a sign to lead both you, Sammie and your cubs through out of the city and into the rest of the world. From what little you remember of that time you recall that some of the soldiers had given chase, but very few could keep up with the small band of felinetaurs and those who did manage to catch up to the lot of you... well currently you find yourself watching as Rick busies hirself with breeding one of them while the others lounge around you and Sammie and the pair of cubs the two of you are currently nursing.";
+		say "     Having given yourself over to Rick, you and Sammie are made into lovely hybrid feline hexataurs for the dominant tigertaur to use and whelp whenever shi chooses to do so, which shi does quite a lot given that shi's made the former lab into hir new den. Very rarely does either your or Sammie's bellies stay flat as the lustful tigertaur spends many a day filling the two of you with hir cubs, all of whom grow up into being exotic hybrid felinetaurs like their [']mothers[']. And having two conjoined taur bodies, each with a womb of its own, you breed and whelp quite the pride of sexy kittens.";
+		say "     When the some of the military happens to stumble over your little den, Rick takes that as a sign to lead you, Sammie, and your cubs out of the city and into the rest of the world. From what little you remember of that time, you recall that some of the soldiers had given chase, but very few could keep up with the small band of felinetaurs, and those who did manage to catch up to the lot of you... well, currently you find yourself watching as Rick busies hirself with breeding one of them while the others lounge around you, Sammie, and the pair of cubs the two of you are currently nursing.";
 		stop the action;
 	else if bodyname of player is not "Vixentaur" and bodyname of player is not "Dragontaur" and bodyname of player is not "Dracovixentaur":
 		if humanity of player < 10:
@@ -1043,14 +1055,14 @@ when play ends:
 			if HP of Sam >= 10 and HP of Sam <= 29: [Dragontaur - survival]
 				say "     Shortly before the military forces arrive to rescue everyone, Sam informs you that he will not be coming, having decided he'd prefer to stay in the city. He thanks you again for your help and makes plans to take over living in the library once you're gone. From there, he continues his work and his sexual enjoyment of the fallen city's diverse pleasures. He breeds many new dragontaur whelps as his powerful body allows him to mount many a lustful creature. He even locates Rick again and takes particular pleasure in breeding several clutches of whelps in her tigertaur body.";
 				if HP of Sam >= 13:
-					say "     Before you depart, Sam imparts his research data and vial collection to you, asking that you provide it to the university which had arranged it. He provides you with his research permits and a letter explaining that you're taking over delivery of his permitted research work. There is some screening involved with getting them out, but [if hospquest is 13 and HP of doctor matt >= 12]you do agree to secretly pass along a copy of it all to Dr. Matt to help with his research[else if hospquest > 13]you do manage to slip a copy of everything to Dr. Mouse before the delivery. He's quite pleased with the gift you've managed to obtain and rewards you greatly for it[else]RSX's involvement in the grant keeps it from being confiscated by the military[end if]. You collect a nice reward for your work, helping you get back on your feet in whatever new life you choose.";
+					say "     Before you depart, Sam imparts his research data and vial collection to you, asking that you provide it to the university which had arranged it. He provides you with his research permits and a letter explaining that you're taking over delivery of his permitted research work. There is some screening involved with getting them out, but [if hospquest is 13 and HP of Doctor Matt >= 12]you do agree to secretly pass along a copy of it all to Dr. Matt to help with his research[else if hospquest > 13]you do manage to slip a copy of everything to Dr. Mouse before the delivery. He's quite pleased with the gift you've managed to obtain and rewards you greatly for it[else]RSX's involvement in the grant keeps it from being confiscated by the military[end if]. You collect a nice reward for your work, helping you get back on your feet in whatever new life you choose.";
 			else if HP of Sam >= 30 and HP of Sam <= 49: [Vixentaur - survival]
 				say "     Shortly before the military forces arrive to rescue everyone, Samantha informs you that she will not be coming, having decided she'd prefer to stay in the city. She thanks you again for your help and makes plans to take over living in the library once you're gone. From there, she continues her work and her sexual enjoyment of the fallen city's diverse pleasures. She births many new vixentaur kits as her lustful body is mounted by many a horny creature. She even locates Rick again and takes particular pleasure in letting the tigertaur sire several of her litters.";
 				if HP of Sam >= 33:
-					say "     Before you depart, Samantha imparts her research data and vial collection to you, asking that you provide it to the university which had arranged it. She provides you with her research permits and a letter explaining that you're taking over delivery of her permitted research work. There is some screening involved with getting them out, but [if hospquest is 13 and HP of doctor matt >= 12]you do agree to secretly pass along a copy of it all to Dr. Matt to help with his research[else if hospquest > 13]you do manage to slip a copy of everything to Dr. Mouse before the delivery. He's quite pleased with the gift you've managed to obtain and rewards you greatly for it[else]RSX's involvement in the grant keeps it from being confiscated by the military[end if]. You collect a nice reward for your work, helping you get back on your feet in whatever new life you choose.";
+					say "     Before you depart, Samantha imparts her research data and vial collection to you, asking that you provide it to the university which had arranged it. She provides you with her research permits and a letter explaining that you're taking over delivery of her permitted research work. There is some screening involved with getting them out, but [if hospquest is 13 and HP of Doctor Matt >= 12]you do agree to secretly pass along a copy of it all to Dr. Matt to help with his research[else if hospquest > 13]you do manage to slip a copy of everything to Dr. Mouse before the delivery. He's quite pleased with the gift you've managed to obtain and rewards you greatly for it[else]RSX's involvement in the grant keeps it from being confiscated by the military[end if]. You collect a nice reward for your work, helping you get back on your feet in whatever new life you choose.";
 			else if HP of Sam >= 50 and HP of Sam <= 69: [Dracovixentaur - survival]
 				say "     Shortly before the military forces arrive to rescue everyone, Sammie informs you that she will not be coming, having decided she'd prefer to stay in the city. She thanks you again for your help and makes plans to take over living in the library once you're gone. From there, she continues her work and her sexual enjoyment of the fallen city's diverse pleasures. She births numerous offspring as her lustful body is mounted by many a horny creature and sires others in those she mounts. She even locates Rick again and takes particular pleasure in letting the tigertaur sire several of her litters as long as she can breed her ex-partner in return. Sammie's children are a collection of male dragontaurs, female vixentaurs and herm dracovixentaurs.";
 				if HP of Sam >= 53:
-					say "     Before you depart, Sammie imparts her research data and vial collection to you, asking that you provide it to the university which had arranged it. She provides you with her research permits and a letter explaining that you're taking over delivery of her permitted research work. There is some screening involved with getting them out, but [if hospquest is 13 and HP of doctor matt >= 12]you do agree to secretly pass along a copy of it all to Dr. Matt to help with his research[else if hospquest > 13]you do manage to slip a copy of everything to Dr. Mouse before the delivery. He's quite pleased with the gift you've managed to obtain and rewards you greatly for it[else]RSX's involvement in the grant keeps it from being confiscated by the military[end if]. You collect a nice reward for your work, helping you get back on your feet in whatever new life you choose.";
+					say "     Before you depart, Sammie imparts her research data and vial collection to you, asking that you provide it to the university which had arranged it. She provides you with her research permits and a letter explaining that you're taking over delivery of her permitted research work. There is some screening involved with getting them out, but [if hospquest is 13 and HP of Doctor Matt >= 12]you do agree to secretly pass along a copy of it all to Dr. Matt to help with his research[else if hospquest > 13]you do manage to slip a copy of everything to Dr. Mouse before the delivery. He's quite pleased with the gift you've managed to obtain and rewards you greatly for it[else]RSX's involvement in the grant keeps it from being confiscated by the military[end if]. You collect a nice reward for your work, helping you get back on your feet in whatever new life you choose.";
 
 Sam ends here.

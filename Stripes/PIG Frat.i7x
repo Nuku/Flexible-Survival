@@ -7,6 +7,10 @@ piginitiation is a number that varies.
 
 Section 1 - Initial Event
 
+Table of GameEventIDs (continued)
+Object	Name
+Frat House	"Frat House"
+
 Frat House is a situation. The level of Frat House is 3.
 The sarea of Frat House is "Campus".
 when play begins:
@@ -23,6 +27,10 @@ Instead of resolving a Frat House:
 
 
 Section 2 - Phi Iota Gamma Frat House
+
+Table of GameRoomIDs (continued)
+Object	Name
+Phi Iota Gamma	"Phi Iota Gamma"
 
 Phi Iota Gamma is a room. It is fasttravel. It is private.
 The description of Phi Iota Gamma is "[phiiotagammadesc]".
@@ -140,7 +148,7 @@ to say pig_fratinitiation:
 	if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 4 and 8;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 4 and 8;
 	setmonster "Piggy";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now tailname of player is "Piggy";
 	now facename of player is "Piggy";
 	now skinname of player is "Piggy";
@@ -178,6 +186,10 @@ to say pig_fratinitiation:
 
 
 Section 4 - Frat Members
+
+Table of GameCharacterIDs (continued)
+object	name
+frat members	"frat members"
 
 frat members is a person.
 The description of frat members is "     There's a varied set of frat members and their sow girlfriends having fun in and around the frat house. Plump and messy pigs, some are drinking or having sex while others are simply lounging about or sleeping off their last bender. Most are nude, though a couple of them have a college jersey or frat sweater stretched over their rounded bodies. Despite, or perhaps because of, their messy and crude behavior, a part of you finds joining in on their fun quite appealing.".
@@ -242,7 +254,7 @@ to say fratmembersex01:
 	say "     Approaching one of the big pigs, you run your hands over his body and down to his groin. Asking him if he'd care to stick his big sausage in you, he heartily agrees. With an oink, he shoves you over and onto all fours, moving to mount you right there. The big, sweaty boar of a man presses his porcine atop of yours and thrusts his stiff cock into your ";
 	if player is female:
 		say "juicy pussy. Grabbing your chest, he gropes you while pounding his thick meat into you. '[one of]Mmm... I love fucking slutty sows like you[or]It's great living here. All the pussy a hog could want[or]Take it, you dirty sow[at random],' he oinks. His throbbing rod feels great inside you and his strong, musky scent is arousing, turning you on all the more.";
-		say "     You and he got at it for quite a while, the big male rutting you with pounding thrusts. His flabby body presses down atop you, warm and slick against you. He snuffles at your ear and fondles your [if player is male]erection[else if breast size of player > 1]tits[else]stuffed pussy[end if] while fucking you. With a loud oink, he drives himself fully into you and unleashes his greasy pig cum deep inside you, seeking to breed you. After fucking you, he pulls out and [one of]staggers off to get some more drink[or]rolls over to pass out[or]belches and heads off to find another sow to screw[in random order].";
+		say "     You and he got at it for quite a while, the big male rutting you with pounding thrusts. His flabby body presses down atop you, warm and slick against you. He snuffles at your ear and fondles your [if player is male]erection[else if breast size of player > 0]tits[else]stuffed pussy[end if] while fucking you. With a loud oink, he drives himself fully into you and unleashes his greasy pig cum deep inside you, seeking to breed you. After fucking you, he pulls out and [one of]staggers off to get some more drink[or]rolls over to pass out[or]belches and heads off to find another sow to screw[in random order].";
 	else:
 		say "tight rectum. Grabbing your sides, he holds you tightly as his thick meat pushes its way into you, violating your back entrance with his greasy flesh. Once he's buried inside you, he lowers himself overtop you and starts rutting you with grunting thrusts. '[one of]Mmm... you're a tight little sow-boy, aren't you?' he chuckles[or]You're quite the slut for pig cock, aren't you?' he teases[or]Ain't quite a juicy pussy, but it's a close second, slut,' he oinks[or]This frat's awesome. Plenty of ass when you can't get no pussy,' he says[or]I've got a big, greasy load just right for a slutty bottom like you,' he oinks[in random order]. His throbbing rod feels great inside you and his strong, musky scent is arousing, turning you on all the more.";
 		say "     You and he go at it for quite a while, the big male rutting you with pounding thrusts. His flabby body presses down atop you, warm and slick against your back. He gives your ass the occasional slap, calling you a dirty sow while he fucks you. After several minutes of wild, sticky rutting, he drives his large shaft deep inside your bowels and unleashes his greasy load of pig cum into your bowels. You can feel his cock throb with each shot of hot semen into you. After fucking you, he pulls out and [one of]staggers off to get some more drink[or]rolls over to pass out[or]belches and heads off to find a proper sow to screw[or]wipes his cock across your ass and flops down in a chair[in random order].";

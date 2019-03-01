@@ -9,6 +9,10 @@ ZekeRelationship is a number that varies. ZekeRelationship is usually 0.
 
 Section 1 - Basic Setup
 
+Table of GameCharacterIDs (continued)
+object	name
+Zeke	"Zeke"
+
 Zeke is a man. The hp of Zeke is usually 0.
 The description of Zeke is "[ZekeDesc]".
 The conversation of Zeke is { "<This is nothing but a placeholder!>" }.
@@ -76,15 +80,11 @@ to say ZekeTalkMenu:
 					say "[ZekeTalk2]";
 				if (nam is "Generator"):
 					say "[ZekeTalk3]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the Zeke, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the Zeke, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -113,7 +113,7 @@ Section 3 - Sex
 
 instead of fucking the Zeke:
 	if (lastfuck of Zeke - turns < 5): [he got fucked in the last 18 hours = 6 turns]
-		say "     'I can only handly so much fucking. I'd dig more, but I need  a rest first.'";
+		say "     'I can only handle so much fucking. I'd dig more, but I need a rest first.'";
 	else if ZekeRelationship < 2: [not talked to enough]
 		say "     'I'm as horny as the next guy, but I'd like to at least talk first.'";
 	else: [ready for sex]
@@ -193,15 +193,11 @@ to say ZekeSexMenu1: [Cooperative]
 					say "[ZekeSex2]";
 				if (nam is "Sixty-nine"):
 					say "[ZekeSex3]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the fox, shaking your head slightly as he gives a questioning look.";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the fox, shaking your head slightly as he gives a questioning look.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -249,15 +245,11 @@ to say ZekeSexMenu2: [Domming Zeke]
 					say "[ZekeSex5]";
 				if (nam is "Pound him"):
 					say "[ZekeSex6]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -296,27 +288,23 @@ to say ZekeSexMenu3: [Dommed by Zeke]
 					say "[ZekeSex7]";
 				if (nam is "Get fucked"):
 					say "[ZekeSex8]";
-				WaitLineBreak;
+				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
-				WaitLineBreak;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step back from the fox, shaking your head slightly as he gives a questioning look. 'If you don't feel like it anymore, that's fine. Maybe another time.'";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
 
 to say ZekeSex1: [frotting]
 	say "     The two of you each prepare, sliding out of any distracting equipment, until you stand naked before each other. You can see Zeke's vulpine shaft standing proudly aroused, coming to a clear point, and with a sizeable knot at the base. You break the stillness first, moving right up against the fox, until you stand a scant few inches away. Slowly, you press up against him, until your cock is pressed up against his shaft. Then Zeke begins to reciprocate your motions, and presses back against you as well, the combined motion causing a slight friction as your dicks start to rub against each other, a sense of warm pleasure beginning to build up.";
-	say "     With the sensations growing, both of you start to shift your motions, changing from pressing to grinding, almost humping. At the same time, your hands drift downward, joining the mess of pleasure below, adding stroking and tugging to the rubbing sensations. You can feel the veins of his knot against your own member, and the feeling of them in contact with you finallly pushes you over the edge. Your cock begins to jerk as you feel the pleasure peaking and flowing, shots of seed splashing over the both of you. Immediately following your own climax, Zeke's dick erupts as well, adding more semen to the mess. The two fo you remain like that for a while, basking in the afterglow, before you muster the will to move again and clean yourselves up.";
+	say "     With the sensations growing, both of you start to shift your motions, changing from pressing to grinding, almost humping. At the same time, your hands drift downward, joining the mess of pleasure below, adding stroking and tugging to the rubbing sensations. You can feel the veins of his knot against your own member, and the feeling of them in contact with you finally pushes you over the edge. Your cock begins to jerk as you feel the pleasure peaking and flowing, shots of seed splashing over the both of you. Immediately following your own climax, Zeke's dick erupts as well, adding more semen to the mess. The two of you remain like that for a while, basking in the afterglow, before you muster the will to move again and clean yourselves up.";
 	now lastfuck of Zeke is turns;
 
 to say ZekeSex2: [blowing - casual]
 	say "     When you make your request, the fox quickly strips off his clothing, and then responds. 'If you want to treat me, I don't mind. But anything more serious than this, you'll have to try your luck with some competition. The reward is more fun with a risk.' He follows up his comment by winking at you, before he settles down into one of the beanbags, legs spread, and the slowly hardening cock beginning to stand free. You step over to Zeke, and then fall to your knees in front of him, bringing your eyes level with his vulpine dick. For a moment, you sit there, your eyes following the slight twitches of the shaft before you. Eventually the temptation becomes too much for you to wait any longer, and you lean forward, capturing it in your mouth.";
-	say "     In no time at all, you're bobbing up and down the vulpine member, the tip reaching almost to the top of your throat, and your lips stopping just at the edge of his knot. You glance upwards, and can see Zeke panting in pleasure from your ministrations. A few seconds after, he meets your eyes, and grins at you. 'You're, ah, pretty good at this. You must have played a lot of games when you were younger, gotten a lot of practice at cartridge blowing.' He smiles at his own joke, but you simple keep at work, ignoring his terrible sense of humor. Soon enough, your efforts bear fruit, and you can feel his member pulse in your mouth, and start releasing your reward. You take your head down his shaft and hold it in place with your mouth just meeting his knot, and let his seed fill you. Far too soon, it comes to an end, and you swallow, before licking his cock clean, and leaning back. Your eyes meet his again, and he smiles at you as you stand back up. ";
+	say "     In no time at all, you're bobbing up and down the vulpine member, the tip reaching almost to the top of your throat, and your lips stopping just at the edge of his knot. You glance upwards, and can see Zeke panting in pleasure from your ministrations. A few seconds after, he meets your eyes, and grins at you. 'You're, ah, pretty good at this. You must have played a lot of games when you were younger, gotten a lot of practice at cartridge blowing.' He smiles at his own joke, but you simple keep at work, ignoring his terrible sense of humor. Soon enough, your efforts bear fruit, and you can feel his member pulse in your mouth, and start releasing your reward. You take your head down his shaft and hold it in place with your mouth just meeting his knot, and let his seed fill you. Far too soon, it comes to an end, and you swallow, before licking his cock clean, and leaning back. Your eyes meet his again, and he smiles at you as you stand back up.";
 	now lastfuck of Zeke is turns;
 
 to say ZekeSex3: [sixty-nine]
@@ -347,8 +335,8 @@ to say ZekeSex7: [being facefucked]
 
 to say ZekeSex8: [being fucked]
 	setmonster "Anthro Fox";
-	say "     You've lost, and that means Zeke gets to do what he wants with you. And after that contest, he makes it very clear what it is he wants to do to you. In no time at all, he has you bent over one side of the couch, with him standing naked behind you. A thrill runs through you at the knowledge of what is about to happen, knowledge that is confirmed further as you feel the vulpine cock come to rest on top of your ass, moving  back and forth ever so slightly. You feel a warmth on your back as the fox leans further over you, his chest pressed against your back. A shift in the position of his member, bringing the tip to a stop right up against your hole, tells you exactly what comes next.";
-	say "     You recieve a sudden shock when Zeke slams forward, the tapered head of his dick making the entry smooth and easy, until he rests about halfway into you. For several moments, he holds that position, his cock stretching you open, but as intense as the sensation flooding through you are, this is only the beginning. The fox starts pumping in and out, his cock ending up deeper inside you on each thrust, stretching you yet further. Once he gets even deeper in you, his thrusts are enough that his knot begins to collide with your ass on each thrust. As the action continues, your attentions focus further and further on the pleasure you're getting from being fucked, and nothing else.";
+	say "     You've lost, and that means Zeke gets to do what he wants with you. And after that contest, he makes it very clear what it is he wants to do to you. In no time at all, he has you bent over one side of the couch, with him standing naked behind you. A thrill runs through you at the knowledge of what is about to happen, knowledge that is confirmed further as you feel the vulpine cock come to rest on top of your ass, moving back and forth ever so slightly. You feel a warmth on your back as the fox leans further over you, his chest pressed against your back. A shift in the position of his member, bringing the tip to a stop right up against your hole, tells you exactly what comes next.";
+	say "     You receive a sudden shock when Zeke slams forward, the tapered head of his dick making the entry smooth and easy, until he rests about halfway into you. For several moments, he holds that position, his cock stretching you open, but as intense as the sensations flooding through you are, this is only the beginning. The fox starts pumping in and out, his cock ending up deeper inside you on each thrust, stretching you yet further. Once he gets even deeper in you, his thrusts are enough that his knot begins to collide with your ass on each thrust. As the action continues, your attentions focus further and further on the pleasure you're getting from being fucked, and nothing else.";
 	WaitLineBreak;
 	say "     It doesn't take very long after that for you to be jarred from your cock-induced reverie, as Zeke pulls back until he is barely staying in you, and holds there. Before you have a chance to wonder why he stopped, you hear him whisper in your ear. 'If you want me to finish fucking you, tell me you want it.' There is no hesitation in your mind, and you immediately begin begging for him to fuck you. The fox doesn't answer you, but his response is still clear, as he resumes his earlier work even more energetically than before. You gasp in shock and pleasure as he immediately begins hammering you, and sinks his entire shaft into you in one swift thrust, only straining for a moment before the knot pops into you as well.";
 	say "     An overwhelming wave of bliss is the only thing on your mind, the wracking pleasure of the dick sheathed inside you right now. Soon a fresh warmth lets you know that Zeke has hit a pleasured peak as well, with his cock pulsing inside you and releasing its payload. That is the final thing to push you over the edge, and the strength of that pleasure is enough that you almost feel about to pass out. In the end, however, you hang on, simply in a pleasurable daze, until finally the two of you have finished. The fox cleans everything up as you lay over the edge of the couch, recovering from the act. When he's finished with that, he comes back over to you. 'You were quite the ride there, weren't you? Maybe next time you'll get the chance to do that to me instead. Looking forward to either possibility.'[mimpregchance]";
@@ -366,12 +354,20 @@ instead of going south from Mall East Wing while ZekeRelationship is 0:
 
 Section 5 - Location
 
+Table of GameRoomIDs (continued)
+Object	Name
+Gaming Den	"Gaming Den"
+
 Gaming Den is a room. It is a fasttravel. It is private.
 The description of Gaming Den is "     The basement is surprisingly spacious, with a large entertainment center set up on one wall. Other walls feature shelves, packed with games, movies, books, and miscellaneous paraphernalia. The center space around the room is taken up by several couches, chairs, and beanbags, set up facing the television.".
 The scent of Gaming Den is "<text>".
 
+Table of GameRoomIDs (continued)
+Object	Name
+Game Store	"Game Store"
+
 Game Store is a room.
 The description of Game Store is "     The store is almost nothing but shelves and shelves full of games and game accessories. There are plenty of places that have been cleaned out on the shelves, but for the most part it all still seems to be there. It seems there have been other priorities to collecting video games.".
-North of Game Store is Mall East Wing.
+Mall East Wing is north of Game Store.
 
 Zeke ends here.

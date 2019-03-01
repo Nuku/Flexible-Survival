@@ -18,15 +18,15 @@ to say plantwin:
 		say ""; [dealt with at the event source]
 
 to say PlantWinRegular:
-	if plantdefeat is 0: [ first time losing to a plant ]
-		if didsubmit is 1: [submited check]
+	if plantdefeat is 0: [first time losing to a plant]
+		if didsubmit is 1: [submitted check]
 			if player is female:
 				say "     The plant seems to sense your willingness to submit to it and lightly pulls on the vine inside your pussy like a leash, inviting you to walk into the dense bush of vines. Your legs are pulled apart and a second cock headed vine pushes against your ass, soon working its way inside your willing body where its tip expands just as the first had, locking itself inside you. Even if you wanted to get away, the size of the cock vines makes it impossible to remove them. A final vine lifts itself to your mouth as it leaks a musky smelling liquid which it presses to your mouth, allowing you to suckle on it to your heart's content. There is no mistaking that the liquid is cum. The hot, musky fluid seems to be absorbed into your body as you drink it. The plant fills you with the stuff, making you addicted to the cum of all creatures, creating a permanent physical need to drink cum that will stay with you forever.";
-				say "     After some time you awaken from your daze due to a sudden pain from your pussy! Looking down, you see a large bulge being forced into you, stretching your pussy out until the seed finally comes to a rest deep in your womb. Your entire body seems to flush with heat as the seed takes root inside of you. The plant lets you go, the vines shrinking in size and finally slipping free from your tender holes. All the cum the plant has fed you seems to have eased your hunger and thirst as well. ";
+				say "     After some time you awaken from your daze due to a sudden pain from your pussy! Looking down, you see a large bulge being forced into you, stretching your pussy out until the seed finally comes to a rest deep in your womb. Your entire body seems to flush with heat as the seed takes root inside of you. The plant lets you go, the vines shrinking in size and finally slipping free from your tender holes. All the cum the plant has fed you seems to have eased your hunger and thirst as well.";
 			else:
 				say "     The plant seems to sense your willingness to submit to it and lightly pulls on the vine inside your ass like a leash, inviting you to walk into the dense bush of vines. Even if you wanted to get away the size of the cock vine makes it impossible to remove. A final vine lifts itself to your mouth as it leaks a musky smelling liquid which it presses to your mouth, allowing you to suckle on it to your heart's content. There is no mistaking that the liquid is cum. The hot, musky fluid seems to be absorbed into your body as you drink it. The plant fills you with the stuff, making you addicted to the cum of all creatures, creating a permanent physical need to drink cum that will stay with you forever.";
 				say "     After some time you awaken from your daze due to a sudden pain from your ass! Looking down, you see a large bulge forcing its way into your stretched ass as the seed comes to rest deep in your bowels. Your entire body seems to flush with heat as the seed takes root inside of you. The plant lets you go, the vine shrinking in size and finally slipping free from your tender ass. All the cum the plant has fed you seems to have eased your hunger and thirst as well.";
-		else:[fought and lost]
+		else: [fought and lost]
 			if player is female:
 				say "     The plant senses you have lost the will to fight and have no choice but to accept your fate. It pulls on the vine inside your pussy like a leash, dragging you into the dense bush of vines. Your legs are forcefully pulled apart and a second cock headed vine thrusts into your ass, working its way deep inside your defeated body where its tip expands painfully large just as the first had, locking itself inside you. Even if you could get away from the bush, the size of the cock vines makes it impossible to remove them. A final vine lifts itself to your mouth as it leaks a foul, musky smelling liquid which it forces into your mouth and then down your throat! There is no mistaking that the liquid is cum. The hot, musky fluid seems to be absorbed into your body as you are forced to drink it. The plant fills you with the stuff, making you addicted to the cum of all creatures, creating a permanent physical need to drink cum that will stay with you forever.";
 				say "     After some time you awaken from your daze due to a sudden pain in your pussy! Looking down, you see a large bulge being forced into you, stretching your pussy out until the seed finally comes to a rest deep in your womb. Your entire body seems to flush with heat as the seed takes root inside of you. The plant lets you go, the vines shrink some in size but are left inside you. It takes some pulling, but you are able to dislodge them from your tender holes. All the cum the plant has fed you seems to have eased your hunger and thirst some.";
@@ -40,7 +40,7 @@ to say PlantWinRegular:
 				say "     You awaken some time later only to find yourself several feet from the bush, leaking cum out of every orifice. Your pussy is still stretched around the vine that grew from inside of you, and to your horror, you discover that you can feel with the vine as if it were actually a part of your body! There is a slight twinge of pain from the vine as it severs itself about a foot from your pussy, followed by a pulling sensation drawing the foot of vine back into your cunt! It seems to be literally living inside of you, ready to force your cunt open and extend itself whenever it wants to reproduce.";
 				say "     All the cum you were forced to drink leaves you less thirsty and less hungry, but also changes you, reinforcing that permanent addiction to drinking cum as well as improving your body so it can obtain more.";
 			else if the remainder after dividing plantdefeat by 3 is 2:
-				say "     The seed rooted deep inside your [bodydesc of player] body sends warm, pleasurable sensations through you as soaks up any cum you have collected in your travels to help it grow faster. The tendrils spread through the ground around you, rooting you down firmly as the plant germinating inside you prepares to reward you for being its warm home and cum collector. Numerous cock ended vines grow out from the ground all around you, wrapping around you and rubbing against you[if cunts of player > 1]. The main tendrils emerging from your cunts pulse and stroke in and out, making you feel as if you're getting thoroughly fucked by them[else]. The main tendril emerging from your cunt pulses and strokes in and out, making you feel as if you're getting thoroughly fucked by it[end if]. Other vines wrap around your hips and spread your legs wide, leaving your ass open for a thick cock vine to push into your anus. You cry out in a mix of surprise and pleasure at this forceful intrusion, but there is little discomfort as the plant's secretions make it all feel wonderfully erotic. Your moans and panting is muffled when another vine finds its way into your mouth. They thrust into you steadily while the other vines rub against your body and leak their cum-like secretions over your [bodytype of player] body. This addictive cum spreads over you and is pumped into you, changing your body to better collect cum from other creatures. Unable to keep up with the plant's unending assault of pleasure, you begin to fade away due to exhaustion.";
+				say "     The seed rooted deep inside your [bodydesc of player] body sends warm, pleasurable sensations through you as soaks up any cum you have collected in your travels to help it grow faster. The tendrils spread through the ground around you, rooting you down firmly as the plant germinating inside you prepares to reward you for being its warm home and cum collector. Numerous cock ended vines grow out from the ground all around you, wrapping around you and rubbing against you. [if cunts of player > 1]tendrils emerging from your cunts pulse and stroke in and out, making you feel as if you're getting thoroughly fucked by them[else]tendril emerging from your cunt pulses and strokes in and out, making you feel as if you're getting thoroughly fucked by it[end if]. Other vines wrap around your hips and spread your legs wide, leaving your ass open for a thick cock vine to push into your anus. You cry out in a mix of surprise and pleasure at this forceful intrusion, but there is little discomfort as the plant's secretions make it all feel wonderfully erotic. Your moans and panting is muffled when another vine finds its way into your mouth. They thrust into you steadily while the other vines rub against your body and leak their cum-like secretions over your [bodytype of player] body. This addictive cum spreads over you and is pumped into you, changing your body to better collect cum from other creatures. Unable to keep up with the plant's unending assault of pleasure, you begin to fade away due to exhaustion.";
 				say "     You awaken some time later only to find yourself several feet from the bush, leaking cum out of every orifice. Your pussy is still stretched around the vine that grew from inside of you, and to your horror, you discover that you can feel with the vine as if it were actually a part of your body! There is a slight twinge of pain from the vine as it severs itself about a foot from your pussy, followed by a pulling sensation drawing the foot of vine back into your cunt! It seems to be literally living inside of you, ready to force your cunt open and extend itself whenever it wants to reproduce.";
 				say "     All the cum you were forced to drink leaves you less thirsty and less hungry, but also changes you, reinforcing that permanent addiction to drinking cum as well as improving your body so it can obtain more.";
 			else:
@@ -50,7 +50,7 @@ to say PlantWinRegular:
 				say "     All the cum you were forced to drink leaves you less thirsty and less hungry, but also changes you, reinforcing that permanent addiction to drinking cum as well as improving your body so it can obtain more.";
 		else:[no cunt]
 			if the remainder after dividing plantdefeat by 3 is 1:
-				say "     The seed rooted deep in your body emits warm pleasureful sensations as its roots spread through you, absorbing any cum you have collected in your travels to help it grow faster. The vine spreads through the ground, sending roots in every direction before growing multiple vines up through the soil all around you. Hundreds of cock ended vines grow out of the ground all around you, curling and twisting around your [bodyname of player] body! A cock vine is forced into your mouth as they explore your body fully, while the bush of cock vines grows up around you. They thrust slowly into your ass, leaking that same addiction inducing cum, changing your body to better collect cum from other creatures. Unable to keep up with the plant's unending assault of pleasure, you begin to fade away due to exhaustion.";
+				say "     The seed rooted deep in your body emits warm, pleasurable sensations as its roots spread through you, absorbing any cum you have collected in your travels to help it grow faster. The vine spreads through the ground, sending roots in every direction before growing multiple vines up through the soil all around you. Hundreds of cock ended vines grow out of the ground all around you, curling and twisting around your [bodyname of player] body! A cock vine is forced into your mouth as they explore your body fully, while the bush of cock vines grows up around you. They thrust slowly into your ass, leaking that same addiction inducing cum, changing your body to better collect cum from other creatures. Unable to keep up with the plant's unending assault of pleasure, you begin to fade away due to exhaustion.";
 				say "     You awaken some time later only to find yourself several feet from the bush, leaking cum out of every orifice. Your ass is still stretched around the vine that grew from inside of you, and to your horror, you discover that you can feel with the vine as if it were actually a part of your body! There is a slight twinge of pain from the vine as it severs itself about a foot from your ass, followed by a pulling sensation drawing the foot of vine back into your bowels! It seems to be literally living inside of you, ready to force your ass open and extend itself whenever it wants to reproduce.";
 				say "     All the cum you were forced to drink leaves you less thirsty and less hungry, but also changes you, reinforcing that permanent addiction to drinking cum as well as improving your body so it can obtain more.";
 			else if the remainder after dividing plantdefeat by 3 is 2:
@@ -81,7 +81,7 @@ to say PlantOrSeed:
 
 to say PlantOrSeedRegular:
 	setmongender 5; [creature is herm]		[***maybe???]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	say "[submitcheck]";
 	let debit be 0;
 	if peachtreefight is 3:
@@ -125,12 +125,12 @@ to say didnotsubmit:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Parasitic Plant"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -178,8 +178,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "parplant"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 Section 3 - Alt Combat
@@ -195,7 +196,7 @@ this is the ppstrike rule: [possible sonic attack and sets upcoming strike]
 		now ppatt is true;
 		standardstrike;
 	else:
-		choose row monster from the table of random critters;
+		choose row monster from the Table of Random Critters;
 		now ppatt is false;
 		let the defense bonus be stamina of the player + ( level of player * 2 ) - 10;
 		if gascloud > 0, decrease gascloud by 1;
@@ -220,7 +221,7 @@ this is the ppstrike rule: [possible sonic attack and sets upcoming strike]
 			now monsterhit is false;
 
 this is the ppattack rule:
-	choose row monster from table of random critters;
+	choose row monster from Table of Random Critters;
 	if ppatt is true:
 		standardhit;
 	else:
@@ -336,8 +337,8 @@ to say parasiticlust:
 			if cockname of player is "Parasitic Plant", now keepcock is 1;
 			now timetillrampage is 0;
 			let hmonlist be a list of numbers;
-			repeat with X running from 1 to number of filled rows in table of random critters:	[ Loop through and select all monsters that appear in the current area or Outside ]
-				choose row X from the table of random critters;
+			repeat with X running from 1 to number of filled rows in Table of Random Critters:	[ Loop through and select all monsters that appear in the current area or Outside ]
+				choose row X from the Table of Random Critters;
 				if there is no area entry, next;
 				if area entry matches the text battleground:
 					add X to hmonlist;
@@ -348,7 +349,7 @@ to say parasiticlust:
 				repeat with Z running through hmonlist:		[Pick one of the monsters at random]
 					now monster is Z;
 					break;
-				choose row monster from the table of random critters;
+				choose row monster from the Table of Random Critters;
 				LineBreak;
 				say "[one of]Your lustful urges lead you to a [name entry]. Immediately upon seeing the infected monster, you offer yourself to it in the hopes of satisfying some of your seed's hunger.[or]An enticing scent leads to a [name entry]. Hoping to slake your thirst for sexual juices, you immediately submit in the hopes of satisfying your body's carnal hungers.[or]A [name entry] encounters you while you wander in your lustful haze. You submit to it with no reservations, needing to satisfy your deep, internal hunger.[or]A [name entry] crosses your wandering path as you seek out the scents to slake your inner needs. You offer yourself to it, lustful for any sexual satisfaction you may get from it.[or]When your lustful meandering leads to a [name entry], you submit and offer yourself to it.[or]Wandering through the city with no aim greater than lustful self-satisfaction, you come across a [name entry] and give in to it immediately.[in random order]";
 				follow the cock descr rule;
@@ -359,12 +360,12 @@ to say parasiticlust:
 				infect;
 			WaitLineBreak;
 			say "The sex rampage finally ends and you regain control of your urges. You are filled with a copious amount of cum, thick streams of cum are oozing from all your fuckable holes. You can feel the seed deep inside you throb as your plant-like infection reasserts itself as it soaks up the sexual juices it so desired. It seeps through your infected body, reclaiming your altered flesh and spreading further.";
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Parasitic Plant":
 					now monster is y;
 					break;
-			choose row monster from table of random critters;
+			choose row monster from Table of Random Critters;
 			if keepskin is 1:
 				now skinname of player is "Parasitic Plant";
 				now skin of player is skin entry;
@@ -406,7 +407,7 @@ when play ends:
 			if humanity of player < 10:			[succumb]
 				if HP of Joanna > 0 and HP of Joanna < 90:			[Joanna saved]
 					say "     As your plant-like urges take the fore, you sink into a passive state. You are a peaceful, bliss-filled plant creature, wandering the city in search of sex. You feel a thirst, a hunger for the sexual fluids of others and give yourself to them whenever you can. Many are quite willing to indulge your needs, sometimes repeatedly, filling you with cum or soaking you in their juices until you are briefly satisfied. You experience a life of varied lust, seeking out as many different creatures as you can.";
-					say "     You are always drawn back to the flowery garden of the kinkajou, who welcomes you with open arms and tendrils[if plantdefeat > 0]. Having removed the plant seed within you on your first visit, the fluids you've been collecting are all hers to enjoy[else]. The collected semen and juices you've been collecting are all hers to enjoy[end if]. Her tongue and fresh vines delve into you, drawing the nourishing fluids from you to help satisfy her cravings. You are her lustful servant plant, going out into the city to gather so many different and delicious delights for her to later lap from you like nectar with her sensual tongue.";
+					say "     You are always drawn back to the flowery garden of the kinkajou, who welcomes you with open arms and tendrils. [if plantdefeat > 0]Having removed the plant seed within you on your first visit, the fluids you've been collecting are all hers to enjoy[else]The collected semen and juices you've been collecting are all hers to enjoy[end if]. Her tongue and fresh vines delve into you, drawing the nourishing fluids from you to help satisfy her cravings. You are her lustful servant plant, going out into the city to gather so many different and delicious delights for her to later lap from you like nectar with her sensual tongue.";
 					if player is female:
 						say "     In time, she plants a special seed of her own within your womb. Aside from doubling your lustful thirst, it grows and matures into a full pregnancy inside you. When finally fully swollen from the juices it's absorbed, you push it out in an orgasmic release and it splits open to reveal another lovely plant kinkajou. She fills you with steadily with seeds, giving you both many lovely green children. As they mature, they head out in teams, wresting parks and gardens from the tendril plants and take them over for themselves, working to spread themselves while pushing back the other group.";
 					else:

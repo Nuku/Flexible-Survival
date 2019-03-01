@@ -2,7 +2,7 @@ Version 10 of Herm Hyena by Guest Writers begins here.
 [ Version 10 - Player victory menu w/new scenes ]
 [- Originally Authored By: Anony Mouse -]
 
-"Adds a Herm Hyena to Flexible Survival's Wandering Monsters table, With Impreg chance"
+"Adds a Herm Hyena to Flexible Survival's Wandering Monsters table, with impreg chance"
 [Description text for this Extension.]
 
 Section 1 - Monster Responses
@@ -87,13 +87,9 @@ to say beatthehyena:
 					say "[beatthehyena06]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You resist the urge to indulge your base urges and leave the hyena passed out.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You resist the urge to indulge your base urges and leave the hyena passed out.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -130,19 +126,19 @@ to say beatthehyena05:	[get cunnilingus]
 	say "";
 
 to say beatthehyena06:	[give blow job]
-	say "     Deciding to give into temptation, you approach the incapacitated herm cautiously. You open her jeans and expose her crotch, taking in the sight of her hard cock, hefty balls and her wet pussy under those furry balls. Taking her black-skinned meat in hand, you examine the canine-like cock while licking your lips. Despite having been stunned, her penis is still mostly hard and even dribbles a bit of pre as you stroke it. It's got a somewhat pointed glans and a bulge at the base of a partially engorged knot. You'd never have thought yourself tempted by such a sight in the past, but presented with it now, you find its exotic shape and virile scent very appealing.";
+	say "     Deciding to give in to temptation, you approach the incapacitated herm cautiously. You open her jeans and expose her crotch, taking in the sight of her hard cock, hefty balls and her wet pussy under those furry balls. Taking her black-skinned meat in hand, you examine the canine-like cock while licking your lips. Despite having been stunned, her penis is still mostly hard and even dribbles a bit of pre as you stroke it. It's got a somewhat pointed glans and a bulge at the base of a partially engorged knot. You'd never have thought yourself tempted by such a sight in the past, but presented with it now, you find its exotic shape and virile scent very appealing.";
 	say "     Cupping the herm's balls in the one hand, you guide her cock past your lips with the other. The strong taste floods your senses, arousing you all the more. So while you go gradually at first, soon you're bobbing your head eagerly up and down that throbbing pole. You lick and suck at the hyena penis, your tongue sliding along its dark flesh and lapping up the precum that dribbles from it.";
 	say "     Rubbing and squeezing the now hard knot at its base, you lick and suck all the harder on the unconscious herm's cock. She releases soft moans of pleasure, especially when you fondle her hefty balls and tweak her clit underneath her sac. This drives her over the edge and she gives a little growl as she cums hard. Gooey shots of hyena cum blast into your mouth and down your throat, though some overflows as well to dribble down your chin. You swallow the semen down hungrily, its taste strong and virile. Once she's spent, you release her floppy dick and leave her passed out with her cock hanging out.";
 
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Herm Hyena"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -190,8 +186,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hump"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 
 When play ends:

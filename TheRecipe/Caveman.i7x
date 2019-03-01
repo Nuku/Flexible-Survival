@@ -20,7 +20,7 @@ to say losetocaveman:
 		say " before bashing you over the head with his club. The blow fills your vision with stars before it all fades to black.";
 		say "     As you gradually start to come back to your senses, you become aware of your pounding headache. It is a steady, rhythm that makes you groan. It takes a few moments to realize that the pounding is in time to other things - a motion of your body, a series of slick sounds and that pleasant fullness inside you that comes and goes. Opening your eyes to look around, your vision is still quite hazy, but it seems you're somewhere else in the museum. After a few moments, you become aware that you're on your side on some soft furs with another figure atop you in some cramped [one of]corner of a display[or]storage space[or]cubby hole[at random].";
 		say "     A grunt from the figure atop you turns your attention to him and you recognize him as the caveman from earlier. Full realization sets in slowly, but you gradually become aware that the rhythmic pounding you're feeling is all coming cromagnon male fucking you with his huge penis. The sound you've been hearing is the wet slurps of sex, the caveman fucking your well-used hole for what must be the third or fourth time to judge from the amount of semen that's already leaked out of you. Your [if player is female]womb[else]belly[end if] feels full and warm with it, a sensation you find quite pleasurable once you realize it.";
-		say "     Despite his rough [']courtship['] and striking appearance, you find yourself quite attracted to the caveman fucking you. Certainly having proven himself quite the stud, you're eager for another load from him. With your nanites on the job, your headache disappears quickly and you're able to become a more active participant in the mating. Pulling him down for some sloppy kisses, you grind yourself onto his pulsing rod[if player is female and cunt length of player < 13], taking as much of it as you can into your well-stuffed cunny[else if player is female], taking the whole of it into your well-stuffed cunny[else], taking the whole of it into your well-stuffed ass[end if]. He grunts and grabs your [if breasts of player > 0 and breast size of player > 0]breast[else]ass[end if] roughly, cumming hard into you, claiming you as his mate once again. Already having drained his balls repeatedly, there's less to give this time, but it is still an impressive amount that fills your [if player is female]cunt[else]rectum[end if] with a fresh blast of warmth[if player is not neuter]. You moan and cry out in your own orgasmic release[end if]. Thoroughly exhausted now, the caveman's cock slips from you as he rolls over onto the furs and passes out.[impregchance][impregchance]";
+		say "     Despite his rough [']courtship['] and striking appearance, you find yourself quite attracted to the caveman fucking you. Certainly having proven himself quite the stud, you're eager for another load from him. With your nanites on the job, your headache disappears quickly and you're able to become a more active participant in the mating. Pulling him down for some sloppy kisses, you grind yourself onto his pulsing rod[if player is female and cunt length of player < 13], taking as much of it as you can into your well-stuffed cunny[else if player is female], taking the whole of it into your well-stuffed cunny[else], taking the whole of it into your well-stuffed ass[end if]. He grunts and grabs your [if breast size of player > 0]breast[else]ass[end if] roughly, cumming hard into you, claiming you as his mate once again. Already having drained his balls repeatedly, there's less to give this time, but it is still an impressive amount that fills your [if player is female]cunt[else]rectum[end if] with a fresh blast of warmth[if player is not neuter]. You moan and cry out in your own orgasmic release[end if]. Thoroughly exhausted now, the caveman's cock slips from you as he rolls over onto the furs and passes out.[impregchance][impregchance]";
 		say "     You lay there for a time, needing to recover your strength after all of this and enjoying basking in the afterglow and the pleasure of having been so thoroughly fucked. Looking over at the caveman, you find yourself quite tempted to just stay with the burly stud. [if humanity of player > 70]Some small[else if humanity of player > 40]A[else]A large[end if] part of you toying with the idea of remaining in this [']cave['] of his and simply giving yourself over to him to be his mate. You stretch out on the animal skins and lay there in well-fucked bliss, only roused from this when the caveman grunts, rolls over in his sleep and [one of]drools messily onto the furs[or]farts noisily[or]picks his nose[or]belches raucously[at random]. That a moment of disgust shocks you into realizing you were about to drift off yourself. You shake the thoughts of staying out of your head long enough to make your escape.";
 	else:
 		say ".";
@@ -55,12 +55,12 @@ to say beatthecaveman:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Caveman";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -108,8 +108,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry;    [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0;    [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Endings
 

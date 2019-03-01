@@ -1,7 +1,11 @@
 Version 1 of Orc Researcher by Luneth begins here.
 
 
-Section 1- Orc Researcher
+Section 1 - Orc Researcher
+
+Table of GameEventIDs (continued)
+Object	Name
+Orc Researcher	"Orc Researcher"
 
 Orc Researcher is a situation.
 The sarea of Orc Researcher is "Warehouse".
@@ -17,10 +21,10 @@ Instead of resolving a Orc Researcher:
 		say "     Despite the fact that something very... large and powerful came through here at some point, you don't let it deter you from your goal, and you cast a glance around to find another point of entry. Circling around to the side of the building you find a broken window. [if scalevalue of player <= 3]You easily just slip inside with no problems thanks to your small size. [else]With some difficulty you are able to get inside, shattering the window in the process, causing part of the wall to collapse as well. [end if]Looking around the room that you are in, you see that it is a disaster with broken furniture and shattered glass littering the floor, and come to the conclusion that this must have been a condemned apartment building, or at the very least it should have been. As you turn down the hallway outside of the main door, you are able to make out the stairwell leading up to the second floor.";
 		say "     Keeping an ear out for any sounds that could mean a potential threat, you finally reach the top of stairs. Directly in front of you is a door with that same flickering light blinking underneath it. As you approach an aroma exudes from within the room. It smells ";
 		if facename of player is "Orc Breeder" or facename of player is "Orc Warrior":
-			say "sweet and makes your mouth begin to water. ";
+			say "sweet and makes your mouth begin to water";
 		else:
-			say "musky. Almost how a locker-room smells. ";
-		say "You push the door open slowly, preparing yourself for an attack from either a survivor or what destroyed the entrance. Your eyes take in the room or what's left of it. Papers are scattered all over the floor, covered in what appears to be mathematical equations, along with what you assume to be many broken beakers. The room also has quite a few computers as well as other technical equipment, the computer monitors seemingly having been shattered by something very powerful throwing them around the room. Just judging from the state of the room you assume that a huge fight took place here.";
+			say "musky, almost how a locker-room smells";
+		say ". You push the door open slowly, preparing yourself for an attack from either a survivor or what destroyed the entrance. Your eyes take in the room or what's left of it. Papers are scattered all over the floor, covered in what appears to be mathematical equations, along with what you assume to be many broken beakers. The room also has quite a few computers as well as other technical equipment, the computer monitors seemingly having been shattered by something very powerful throwing them around the room. Just judging from the state of the room you assume that a huge fight took place here.";
 		WaitLineBreak;
 		say "     Glancing down you see some strange marks left on the floor. Going for a closer inspection, you softly touch the lines, only then realizing they aren't simply marks, but scratches made by someone being dragged away against their will. You close your eyes, thinking what could have done this, at the same time, wondering how terrified this person must have been to leave gashes in the wooden floor. Walking up to what used to be a desk, before it was smashed down the middle, you check its drawers. Maybe there were some snacks hidden away inside or something. Sadly, the only thing that you find is a slender metal case that rattles a bit when picked up. Upon opening it your gaze is met with what must be between one-hundred to two-hundred small pills. Closing the case and setting it down, you notice that one of the computer monitors on the floor still is in working order. You lift it up and place it on a counter.";
 		say "     Among all of the garbage on the floor, you find a working mouse, as long as you didn't need the right button which has been splintered off. Opening file after file, the only thing that really stands out is the fact that this person must have been a scientist of some sort and that they seemed very interested in the orc strain of the infection. Besides all of the files, there is a video clip. Double clicking it you are met with what must have been the poor guy that was dragged out of here, and he begins a rant about how if you are seeing this then he must be dead. Rolling your eyes, you get ready to abandon this venture. Opening the door again to leave, you catch part of what the guy is still saying in the video. 'I found the solution! I have discovered a way to extract what is needed from these freaks without having to become one!' Finally hearing something that may prove interesting you return to the monitor.";
@@ -35,9 +39,11 @@ Instead of resolving a Orc Researcher:
 		say "     [if scalevalue of player <= 3]You walk quickly back downstairs to the window that served as your entryway into the building and hop out, landing softly on the cement outside. [else]Having destroyed the window that you used to get inside, you will need an alternative route out. Looking around the room, you notice that a window and decide that it's better than nothing, making your way over. It's a tight squeeze, but you make it through the window, though unfortunately not before destroying it just like the one downstairs. Huffing, you drop to the street below, causing your feet to sting for a moment after landing, but there is no serious damage done. [end if]Looking back at the building for the last time, you continue on your way. Hearing a strange sound in the distance, you look towards a crumbling wall in the direction of the noise. Only to see a pair of glowing eyes watching you in a calculating way, before their owner runs of.";
 		increase carried of Orc Pill Case by 1;
 		increase score by 20;
+		now Resolution of Orc Researcher is 1; [found the pills]
 	else:
 		say "     Deciding against exploring the strange flickering light, you turn your back to the building and continue on your way. Hearing a strange sound in the distance, you look towards a crumbling wall in the direction of the noise. Only to see a pair of glowing eyes watching you with disappointment, before their owner runs of.";
-	Now Orc Researcher is resolved;
+		now Resolution of Orc Researcher is 99; [didn't go in]
+	now Orc Researcher is resolved;
 
 Section 2 - Orc Pill Case
 

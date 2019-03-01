@@ -23,7 +23,12 @@ Version 4 of New Ewe Store by Sarokcat begins here.
 [ 0 = Mary not chosen                   ]
 [ 1 = Mary chosen                       ]
 
+
 Section 1- The Situations
+
+Table of GameEventIDs (continued)
+Object	Name
+New Ewe Store	"New Ewe Store"
 
 New Ewe Store is a situation.
 The sarea of New Ewe Store is "Outside".
@@ -51,15 +56,19 @@ Instead of Resolving a New Ewe Store:
 				say "     After convincing the voice that you aren't a threat, the door is quickly opened and you are hurried inside, the door closing rapidly behind you. Looking around, you find yourself being stared at by a small herd of rather sheep-like people, most of their bodies covered in soft wool, with rather sheep-like faces. As you stare around you in astonishment, one of them steps forward and introduces himself as Leon. 'Sorry for trying to turn you away earlier, I got to make sure the herd isn't in danger, you understand. We're all a bit on edge since Mary went out to gather supplies and hasn't returned yet. I'm getting really worried about her... but I can't leave everyone else to search for one ewe, as much as it pains me. You know - would it be possible if you had an eye out for her? If you can help find Mary, we would be happy to help you out in return.";
 				if player consents:
 					say "     Leon smiles and shakes your hand thankfully as he hears you agree. 'Thank you very much, we've all been worried sick about her. It's not good for someone to be away from the flock for too long.' The watching sheep nod at this statement.";
+					now Resolution of New Ewe Store is 1; [leon trusts you and you agreed to help]
 					increase NESProgress by 1;
 				else:
 					say "     Leon and the others stare at you reproachfully with their big black sheep eyes as you decline to help. This is making you really uncomfortable, until you can't take it any more and leave.";
+					now Resolution of New Ewe Store is 2; [leon does trust you and you didn't agree to help]
 					now New Ewe Store is resolved;
 			else:
 				say "     The occupants of the store turn a deaf ear to your pleas, and soon you are forced to leave before all the noise you are making attracts something even more dangerous in the area.";
+				now Resolution of New Ewe Store is 3; [leon does not trust you]
 		else:
 			LineBreak;
 			say "     With a shrug, you just turn around and leave. There are easier spots to loot anyways.";
+			now Resolution of New Ewe Store is 4; [fuck them sheep]
 	else if NESProgress is 1:
 		if a random chance of 3 in 5 succeeds:
 			say "     When passing by a collapsed subway entrance you hear the sounds of soft crying coming from inside, drawing closer you hear the sounds stop suddenly as you approach. Calling out to whoever was crying, you try to convince them that you are there to help.";
@@ -69,40 +78,46 @@ Instead of Resolving a New Ewe Store:
 			increase diceroll by bonus;
 			if diceroll > 12:
 				say "     After a while of calling out, you are about to leave when you hear a small voice reply - a woman, by the sound of it. 'Hello can you help me? I was chased in here by some flying beasts while scavenging some goods for my family, and the entryway came down when they tried to force their way through. It's dark down here and I don't know how to find my way out. Please won't you help me?' After reassuring the voice that you will do the best you can, you look at the collapsed entry carefully and realize you would never be able to dig through that in time. Perhaps you can find another way down through the sewers?";
-				now Little Lost Lamb is unresolved;
+				now Little Lost Lamb is active;
+				now Resolution of New Ewe Store is 5; [found mary]
 				increase NESProgress by 1;
 			else:
 				say "     You talk and you talk but hear nothing further. Perhaps it was only your imagination after all?";
+				now Resolution of New Ewe Store is 6; [couldn't find mary]
 		else:
 			say "     Coming across the small grocery store again, and your curiosity gets the best of you, you decide to duck inside quickly to check on matters. The flock of sheep quickly look up from what they were doing to come congregate around you, bleating hopefully for news. You explain to the hopeful faces that you haven't yet seen their missing flock member, and watch the sheep's faces fall as they look at you reproachfully. Feeling vaguely guilty, you let yourself back out.";
+			now Resolution of New Ewe Store is 7; [ended up back at the store without finding mary]
 	else if NESProgress is 2:
 		say "     Coming across the small grocery store again, and your curiosity gets the best of you, you decide to duck inside quickly to check on matters. The flock of sheep quickly look up from what they were doing to come congregate around you, bleating hopefully for news. You explain to the hopeful faces your progress so far on finding their missing flock member, and the sheep-like faces of the flock tighten with worry as they begin to bleat in distress when they learn of their lost lamb's predicament. Leon seems to be rather earnest as he asks for your help in rescuing their trapped lamb from underground and returning her to the flock, unable to resist such a desperate plea, you nod and promise to help as you slip back out the door.";
+		now Resolution of New Ewe Store is 8; [ended up back at the store while finding mary]
 	else if NESProgress is 3:
 		say "     As you travel the deserted streets you notice that you are near the Grocery store again, you find your thoughts drifting to Mary and wondering if she made it home safely. Deciding it can't hurt to stop and check you head that way and are quickly at the store entrance, pushing the door open you are greeted warmly by the small group of sheep inside. Most of them gather around you smiling, as Leon pushes his way to the front of the group to address you. 'We're glad to see you back again safely,' the big ram says with smile on his muzzle. 'Mary told us all about how you helped her out, and we are all very grateful to you.' He pauses for a second as all the other sheep nod in agreement. 'We wish we could find some way to repay you properly for all your help, but your definitely welcome to Rest in our store anytime from now on!' he continues as some of the group clap for you.";
 		say "     'As a matter of fact if you want a safe place to stay I'd be more than happy for you to join our flock here if you want. We have a pretty good spot picked out here and some decent supplies, and it's not without some side benefits too,' Leon says with a bit of a leer. 'Just talk to me, whenever you feel like it. Oh, and of course, Mary over there hasn't talked about much else since you rescued her. I think she might have a bit of a crush on you,' Leon says as he gestures to where the ewe whom you saved earlier is peeking around a corner at you. 'If you'd rather join her instead, it wouldn't be a problem either; just go talk to Mary instead.'";
 		LineBreak;
 		say "     'Either way,' he says as he finishes up, 'thanks for helping us out and we hope you join us again sometime soon.'";
 		now NESProgress is 4;
+		now Resolution of New Ewe Store is 9; [saved mary and she went home]
 		now New Ewe Store is resolved;
 		now New Ewe Storeroom is known;
 		move player to New Ewe Storeroom;
-		now battleground is "void";
 
+Table of GameEventIDs (continued)
+Object	Name
+Little Lost Lamb	"Little Lost Lamb"
 
 Little Lost Lamb is a situation.
+Little Lost Lamb is inactive.
 The sarea of Little Lost Lamb is "Mall".
-
-Little Lost Lamb is resolved.
 
 Instead of resolving Little Lost Lamb:
 	If NESProgress is 2:
 		say "     After searching through the sewers for an hour, you find an opening into the subway tunnels, remembering the person left trapped down there you attempt to find your way through the tunnels to their location.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 14:
-			say "     Carefully marking the twists and turns of the subway, you quickly head to where you think the person was trapped, and almost before you know it you've arrived at a partially collapsed subway station. Calling out you quickly get a response from a shadowy form hiding in the corner, upon realizing you are here to help a pretty female Ewe steps out into the dim light.";
+			say "Carefully marking the twists and turns of the subway, you quickly head to where you think the person was trapped, and almost before you know it you've arrived at a partially collapsed subway station. Calling out you quickly get a response from a shadowy form hiding in the corner, upon realizing you are here to help a pretty female Ewe steps out into the dim light.";
 			say "     'Thank you very much for coming to help me! I kept hearing strange things moving around down here, and I was getting pretty frightened.' She pauses for a moment to look you over before continuing, 'My name is Mary, and I've been trapped down here in the dark alone for what seems like forever. I know it's a lot to ask, but do you suppose you could help me get home to my flock? They must be very worried about me at this point, I've been gone for much longer than I intended.";
 			WaitLineBreak;
 			say "     When you tell her about the request from Leon and the rest of the sheep at the store, her big black eyes light up and her face breaks out in a sheepy smile.";
@@ -113,15 +128,22 @@ Instead of resolving Little Lost Lamb:
 			increase NESProgress by 1;
 			increase carried of water bottle by 1;
 			increase carried of soda by 1;
+			now Resolution of Little Lost Lamb is 1; [saved mary]
 			now Little Lost Lamb is resolved;
 		else:
-			say "     You hunt through the dark tunnels for what seems like hours, the tunnels twisting and turning until you have lost all sense of direction, eventually you find yourself back where you entered the tunnel. Shuddering you quickly exit the subway tunnels for now... you can always come back later... ";
+			say "You hunt through the dark tunnels for what seems like hours, the tunnels twisting and turning until you have lost all sense of direction, eventually you find yourself back where you entered the tunnel. Shuddering you quickly exit the subway tunnels for now... you can always come back later...";
+			now Resolution of Little Lost Lamb is 2; [couldn't find mary]
 	else:
 		say "     Traveling through the dark sewers, and maintenance passageways underneath the mall, you find an opening leading out into what appear to be the cities subway tunnels. Looking through the passageway, you poke around on the other side of the opening for a minute. You find yourself somewhat worried by the signs that there are a large number of creatures still using the subway actively, and given how easy it would be to get lost in the maze of the subway tunnels, you decide to return to the somewhat more familiar area underneath the mall.";
+		now Resolution of Little Lost Lamb is 3; [couldn't find mary]
 		now Little Lost Lamb is resolved;
 
 
 Section 2 - New Ewe Storeroom & NPCs
+
+Table of GameRoomIDs (continued)
+Object	Name
+New Ewe Storeroom	"New Ewe Storeroom"
 
 New Ewe Storeroom is a room. It is fasttravel. It is private.
 
@@ -129,11 +151,19 @@ The description of New Ewe Storeroom is "This small family grocery store is now 
 
 The invent of New Ewe Storeroom is { "chips", "food", "water bottle", "soda" }.
 
+Table of GameCharacterIDs (continued)
+object	name
+Leon	"Leon"
+
 Leon is a man.
 The description of Leon is "A strong and relatively rugged looking ram person is hanging around near the registers, keeping an eye on you. You recall his name was Leon.".
 The conversation of Leon is { "Baa, baby!" }.
 the fuckscene of Leon is "[sexwithleon]".
 Leon is in New Ewe Storeroom.
+
+Table of GameCharacterIDs (continued)
+object	name
+Mary	"Mary"
 
 Mary is a woman.
 The description of Mary is "A somewhat shy looking ewe woman is watching you carefully as you move around. You remember her introducing herself as Mary.".
@@ -156,7 +186,7 @@ Instead of conversing the Leon:
 		say "     'Hey there, good to see you,' Leon says, 'But I'm not the one you should be talking to. You wouldn't want your little lamb over there to get lonely, would you?";
 	else:
 		if RamFucked > 0:
-			say "     [one of]'Welcome back to our store!'[or]'Ah you came back to the flock like a good little ewe.'[or]'Be careful out there, I wouldn't want to see one of my flock get hurt.'[or]'Are you sure all you want to do is talk?'[or]'If you don't want to go back out into the city you can stay here anytime.'[or]'I heard there was a big wolf out there, you be careful.'[or]'How is it out there today?'[or]'Almost shearing time again.'[or]Leon bleats at you absentmindedly, before blushing when he realizes what happened.[or]'If you need your ram to [']take care['] of you, just let me know.'[or]'Want to head back to the break(ing) room with me?'[or]'I wonder when rescue will arrive.'[at random]";
+			say "     [one of]'Welcome back to our store!'[or]'Ah you came back to the flock like a good little ewe.'[or]'Be careful out there, I wouldn't want to see one of my flock get hurt.'[or]'Are you sure all you want to do is talk?'[or]'If you don't want to go back out into the city, you can stay here anytime.'[or]'I heard there was a big wolf out there, you be careful.'[or]'How is it out there today?'[or]'Almost shearing time again.'[or]Leon bleats at you absentmindedly, before blushing when he realizes what happened.[or]'If you need your ram to [']take care['] of you, just let me know.'[or]'Want to head back to the break(ing) room with me?'[or]'I wonder when rescue will arrive.'[at random]";
 		else:
 			say "     'Ah great, I'm glad you came to talk to me, I assume this means you'd like to join our little flock here?'";
 			if player consents:
@@ -170,8 +200,8 @@ Instead of conversing the Leon:
 				else:
 					say "     'Oh yeah, that's what I like to see in woman,' he says, eyeing you lewdly, 'Now we just need to fix the rest of you...'";
 				say "     'First thing we need to do is mark you as part of the flock,' Leon says as he pulls off a bit of wool from his side. 'Need to make sure you smell right to the rest of the flock after all.' You watch as he begins to rub the wool over his cock, pumping it more and more until finally he lets out a low bleating noise as he coats it in his seed. The smell intensifies and the erotic sight makes you unable to protest as he moves closer and begins rubbing the wool he just [']treated['] all over your body. You moan as he massages you with the soft wool, you can swear you almost feel the rams seed sinking into you, marking you as his ewe, his property to do with as he wishes.";
-				say "     The erotic massage continues, until you almost can't take it anymore, only to stop right before you can reach orgasm, leaving you panting and moaning in protest as Leon looks down at you with a grin on his muzzle. 'That should be enough for now,' he says. 'Welcome to my flock little lamb, I'm definitely going to enjoy having you around. You are welcome to stay as long as you like now,' Leon smiles as he turns to leave, 'And if you need I'd be happy to [']take care['] of you anytime you want, I take goood care of all my flock members after all. You know where to find me when your ready' Saying that he winks one of his big innocent looking sheep eyes at you before closing the door behind him. Leaving you to gather your equipment and your dignity back up.";
-				say "     As your getting ready to leave, you can't help but notice you smell a bit like a sheep now yourself, just like all the other flock members in the store. For some reason it doesn't seem to bother you to smell like your fellow sheep, you all belong to the same ram after all... Blushing uncertainly at that thought you return to the main store area.";
+				say "     The erotic massage continues, until you almost can't take it anymore, only to stop right before you can reach orgasm, leaving you panting and moaning in protest as Leon looks down at you with a grin on his muzzle. 'That should be enough for now,' he says. 'Welcome to my flock little, lamb. I'm definitely going to enjoy having you around. You are welcome to stay as long as you like now,' Leon smiles as he turns to leave, 'and if you need, I'd be happy to [']take care['] of you anytime you want. I take goood care of all my flock members, after all. You know where to find me when your ready.' He winks one of his big, innocent looking sheep eyes at you before closing the door behind him, leaving you to gather your equipment and your dignity back up.";
+				say "     As your getting ready to leave, you can't help but notice you smell a bit like a sheep now yourself, just like all the other flock members in the store. For some reason, it doesn't seem to bother you to smell like your fellow sheep; you all belong to the same ram, after all... Blushing uncertainly at that thought, you return to the main store area.";
 				increase libido of player by 10;
 				increase RamFucked by 1;
 				if girl is not banned and "Male Preferred" is not listed in feats of player:
@@ -181,7 +211,7 @@ Instead of conversing the Leon:
 					infect "Ram";
 					infect "Ram";
 			else:
-				say "     Ah well, I thought you would make a great addition to the flock. Think it over some more, would you?";
+				say "     'Ah well, I thought you would make a great addition to the flock. Think it over some more, would you?'";
 
 instead of conversing the Mary:
 	if HyenaTrailing is 3:
@@ -220,16 +250,16 @@ instead of conversing the Mary:
 				say "     'Oh, that's ok then, I understand if you have other things you'd rather do, but I'd really like it if you thought about it some more.'";
 
 
-Section - Sex w/Leon or Mary
+Section 3 - Sex w/Leon or Mary
 
 RamFucked is a number that varies. RamFucked is usually 0.
 EweFucked is a number that varies. EweFucked is usually 0.
-[ marytalked is a number that varies. ]
+[ marytalked is a number that varies. ][@Tag:NotSaved]
 
 
 to say sexwithLeon:
 	setmonster "Ram";
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	if player is neuter:
 		say "     You're ill-equipped to play with him right now.";
 	else if EweFucked is 0 and RamFucked is 0:
@@ -343,7 +373,7 @@ to say sexwithLeon:
 					say "     When he's done and pulls out this time, you're too weak and worn to manage to ask for more. All you can manage is a baaing moan before passing out in the mound of scented wool, excess semen leaking from your overfilled ass. Confident that you're fully his now, he leaves you there to return to the store. Left surrounded in the cum-stained wool and filled with infected semen, your body changes, completely becoming the flock's male ewe in body as well as mind. It is some time later before one of the sheep comes to collect you, bringing you out to join the others in working the store like the loyal, loving ewe you are through and through.";
 					if girl is not banned and "Male Preferred" is not listed in feats of player:
 						setmonster "Ewe";
-						choose row monster from the table of random critters;
+						choose row monster from the Table of Random Critters;
 						now tailname of player is "Ewe";
 						now facename of player is "Ewe";
 						now skinname of player is "Ewe";
@@ -357,7 +387,7 @@ to say sexwithLeon:
 						attributeinfect;
 					else:
 						setmonster "Ram";
-						choose row monster from the table of random critters;
+						choose row monster from the Table of Random Critters;
 						now tailname of player is "Ram";
 						now facename of player is "Ram";
 						now skinname of player is "Ram";

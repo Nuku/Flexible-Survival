@@ -25,10 +25,10 @@ The glulx object-updating rules is a rulebook.
 
 Section - Global variables
 
-Current glulx rock is a number that varies.
-Current glulx rock-ref is a number that varies.
+Current glulx rock is a number that varies.[@Tag:NotSaved]
+Current glulx rock-ref is a number that varies.[@Tag:NotSaved]
 
-Glulx replacement command is some indexed text that varies.
+Glulx replacement command is some indexed text that varies.[@Tag:NotSaved]
 
 
 Section - Gestalts
@@ -296,6 +296,10 @@ Example: * Working Without Sound - Printing a warning at the beginning of the ga
 Would you like to continue anyway?";
 			unless the player consents:
 				stop game abruptly.
+
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Royal Albert Hall	"Royal Albert Hall"
 
 	Royal Albert Hall is a room.
 

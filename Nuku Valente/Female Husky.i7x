@@ -52,31 +52,37 @@ to say fhuskybeaten:
 		say ". You find yourself considering having some fun with the hapless creature, but can't really decide what to do at this time.";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
+	[]
 	if domtempting is true:
 		choose a blank row in table of fucking options;
 		now title entry is "Recruit for Dominick";
 		now sortorder entry is 1;
 		now description entry is "send the lust-crazed husky to Dom to be bred";
+	[]
 	if "Dominant" is listed in feats of player and player is male and cock length of player > 5 and player is knotted:
 		choose a blank row in table of fucking options;
 		now title entry is "Dominate and tie";
 		now sortorder entry is 2;
 		now description entry is "take what you want and knot the husky bitch's hot cunt";
+	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Quickie fuck";
 		now sortorder entry is 3;
 		now description entry is "get your rocks off by fucking the husky bitch";
+	[]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Lesbian licking";
 		now sortorder entry is 4;
 		now description entry is "make the doggy girl eat you out";
+	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Lick her cunt";
 	now sortorder entry is 9;
 	let luststuck be 0;
 	if libido of player > humanity of player and libido of player > 75, now luststuck is 1;
+	[]
 	now description entry is "eat out that juicy canine muff";
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -103,15 +109,14 @@ to say fhuskybeaten:
 					say "[fhuskybeaten_03]";
 				else if nam is "Lick her cunt":
 					say "[fhuskybeaten_04]";
+				wait for any key;
 		else if calcnumber is 0:
-			say "Let her go: Shall you send the poor creature on her way?";
-			if player consents:
-				if libido of player > humanity of player:
-					say "You want to let her go, but your aroused body and nanite-addled mind are far too gone to allow it!";
-					now luststuck is 1;
-				else:
-					say "     Having fought off her wild advances and driven her back, you see little in continuing to hurt the poor creature. You simply push her away and decide against harming her further, simply leaving her there.";
-					now sextablerun is 1;
+			if libido of player > humanity of player:
+				say "     You want to let her go, but your aroused body and nanite-addled mind are far too gone to allow it!";
+				now luststuck is 1;
+			else:
+				say "     Having fought off her wild advances and driven her back, you see little in continuing to hurt the poor creature. You simply push her away and decide against harming her further, simply leaving her there.";
+				now sextablerun is 1;
 
 [
 to say fhuskybeaten_00:
@@ -160,12 +165,12 @@ to say fhuskybeaten_dom:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Female Husky"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -207,14 +212,15 @@ When Play begins:
 	now libido entry is 90; [ Target libido the infection will rise towards. ]
 	now loot entry is ""; [ Dropped item, blank for none. Case sensitive. ]
 	now lootchance entry is 0; [ Percentage chance of dropping loot, from 0-100. ]
-	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body:  1=tiny, 3=avg, 5=huge ]
+	now scale entry is 3; [ Number 1-5, approx size/height of infected PC body: 1=tiny, 3=avg, 5=huge ]
 	now body descriptor entry is "[if latexhuskymode is true][one of]quadrupedal[or]altered[or]animalistic[at random][else][one of]feminine[or]girly[at random][end if]"; [ Ex: "plump" "fat" "muscled" "strong" "slimy" "gelatinous" "slender". Use [one of] to vary ]
 	now type entry is "[one of]canine[or]husky[at random]";
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 when play ends:

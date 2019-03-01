@@ -43,7 +43,7 @@ to say beatthecougar:
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
-			say "     Feeling in the mood for some feline fun, you grab the exhausted kitty and push her into position. She mewls softly, wary of you hurting her further, yet hopeful for some sexual relief for her lustful urges";
+			say "     Feeling in the mood for some feline fun, you grab the exhausted kitty and push her into position. She mewls softly, wary of you hurting her further, yet hopeful for some sexual relief for her lustful urges.";
 			if player is male:
 				say "     You push her onto her back and line up your cock with her pussy, making her mrowl in delight. You fondle her breasts and pound away at her. You tweak and tease her nipples while watching her hard cock bounce against her tummy with each thrust you make. Her precum soaks the soft, cream fur there as you drive into her. Her horny mewls get louder as she digs her paws into the ground and climaxes. Her hot pussy clamps down firmly, milking your cock for all you'll give as you cum moments later. Her own thick seed sprays across her chest and muzzle, leaving white streaks all across her body and face. When done, you get her to lick your cock clean before leaving her panting on the ground and leaking your cum.";
 			else:
@@ -61,12 +61,12 @@ to say cougardesc:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Cougar"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -114,8 +114,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
 	now altcombat entry is "hump"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Cougar":

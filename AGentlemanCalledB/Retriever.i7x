@@ -47,10 +47,10 @@ to say beattheRetriever:
 			else:
 				say "You decide it's best to leave the defeated retriever be. As you turn to leave you see her climbing to her feet again, you brace yourself for another attack, but it never comes. She seems content to follow behind you and whine needfully, apparently trying to change your mind about playing with her. Eventually you manage to shake the lusty canine and continue on your way.";
 		else:
-			say "After you land the final blow on the poor golden furred canine you feel a wave of remorse overcome you as she turns and scampers away, tail between her legs, crying out that she had only wanted to play with you. You consider chasing after her to apologize for a moment but decide it's probably best to leave her be an continue on your way.";
+			say "After you land the final blow on the poor golden furred canine you feel a wave of remorse overcome you as she turns and scampers away, tail between her legs, crying out that she had only wanted to play with you. You consider chasing after her to apologize for a moment but decide it's probably best to leave her be and continue on your way.";
 
 to say Retrieverdesc:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let debit be 0;
 	if HP of Karen is 4:			[Fight against Rex]
 		setmongender 3;      [creature is male]
@@ -92,13 +92,13 @@ to say RetrieverAttack:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 [ Adds a blank row to the table, this is immediately filled ;) ]
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Retriever";
 	now enemy title entry is "Female Retriever";
 	now enemy name entry is "Karen";
@@ -146,8 +146,9 @@ When Play begins:
 	now magic entry is false; [ Is this a magic creature? true/false (normally false) ]
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Retriever":
@@ -185,14 +186,14 @@ when play ends:
 					say "     You enjoy your time with the other various creatures in the city, particularly the huskies and their handsome alphas, yet you always feel something is missing. Deep down you know you will never be truly satisfied until you find a strong alpha of your own breed, to take you in and fill you with his pups like those lucky huskies.";
 		else:
 			if Retriever Girl is tamed:
-				say "     Once the military moves into the city you and Karen are quickly processed through their refugee camp and declared safe so they can move on the more dangerous creatures in the city. The two of you stick together in your lives outside the city, eventually opening a small diner together, which ends up being quite popular with other infected survivors";
+				say "     Once the military moves into the city, you and Karen are quickly processed through their refugee camp and declared safe so they can move on the more dangerous creatures in the city. The two of you stick together in your lives outside the city, eventually opening a small diner together, which ends up being quite popular with other infected survivors";
 				say ". Thanks to the success of your business and the friendly and upbeat demeanor provided by your retriever infection, neither of you ever have difficulty finding company to follow home for the night.";
 				if player is male:
 					say "     However, the nights you spend in each other's company prove to be just as enjoyable, and before long Karen is happily carrying your pups as a result.";
 			else if HP of Rex > 9:
 				say "     Despite having submitted yourself to a life as Rex's pet, you manage to maintain some part of your mind, and because of this your relationship with your master eventually develops beyond him simply being your owner. Before long you are much more akin to lovers than master and pet. However, Rex makes certain you always remember how your relationship started, expecting you to continue wearing your collar and occasionally giving you a refresher 'lesson' to ensure your training hasn't been forgotten.";
 			else:
-				say "     Once the military moves into the city you are quickly processed through their refugee camp and declared safe so they can move on the more dangerous creatures in the city.";
+				say "     Once the military moves into the city, you are quickly processed through their refugee camp and declared safe so they can move on the more dangerous creatures in the city.";
 				if HP of Rex > 5:
 					say "     Much to your surprise you spot Rex in your group, with Karen under his arm. He greets you warmly as you approach and you chat merrily with him for some time while you wait to be allowed to leave.";
 					say "     Even though it's apparent that he still hopes to make another pet of you one day you maintain contact with Rex in the outside world, forging an unusual friendship with benefits with him, as he seems to be the only one who can sate the burning need in your body instilled by that unusual doggy sextoy, and he's more than happy to help you keep your needs in check.";

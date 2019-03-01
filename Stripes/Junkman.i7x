@@ -1,6 +1,6 @@
 Version 1 of Junkman by Stripes begins here.
 
-"Adds a Junkman creature to Flexible Survival's Wandering Monsters table with impregchance"
+"Adds a Junkman creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 
 Section 1 - Monster Responses
@@ -10,7 +10,7 @@ when play begins:
 
 to say junkmandesc:
 	setmongender 3; [creature is male]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let qq be a random number between 4 and 8;
 	let zz be ( a random number between 1 and 6 ) + ( a random number between 1 and 6 );
 	if hardmode is true and level of player > 6:		[Heavy Duty Model!]
@@ -42,9 +42,9 @@ to say junkmandesc:
 
 to say losetojunkman:
 	[reset creature stats for next encounter]
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	now lev entry is 6; [ reset level for random encounter availability ]
-	say "     Victorious, the scrapyard cyborg raises its arms in the air and emits another grinding groan. After this cry, he grabs you and pushes you down across a [one of]stray car seat[or]old washer[or]rusty engine block[in random order] and moves in behind you. ";
+	say "     Victorious, the scrapyard cyborg raises its arms in the air and emits another grinding groan. After this cry, he grabs you and pushes you down across a [one of]stray car seat[or]old washer[or]rusty engine block[in random order] and moves in behind you.";
 	say "     As you hear an odd whirring sound, you manage to glance back for a moment before you're pushed back down. You catch a glimpse of the panel over his groin folding up, uncovering his blessedly human dick made of pure flesh and blood. As he lines it up with your [if player is female]wet pussy[else]tight pucker[end if], you [if HP of player > 0]moan softly in anticipation[else]struggle a little in vain[end if] before he sinks it into you. You grip your improvised seat as he starts thrusting into you repeatedly, quickly making you grow excited and lustful. The feel of his seemingly human penis thrusting into you feels quite enjoyable, making your [if player is female]pussy[else]asshole[end if] squeeze and tug at it as you long more and more for his hot seed in you.";
 	say "     Thinking of his seed makes you notice that his balls feel strange against [if player is male]yours[else]you[end if] as they bump into you with each thrust. Reaching back, you grab his sac to fondle him and find [one of]his balls have a plastic cover[or]it protected by what feels like a brass shell[or]it reinforced by several metal plates[or]some hard, rubber tubes leading into it[at random]. The creature atop you releases a grinding moan as you rub over his ballsack, clearly enjoying your touch despite their strange form. You can feel his balls start to throb warmly inside his odd scrotum and you are rewarded moments later by a steady stream of thick, oily cum. His slick seed pumps into you as some internal pump chugs away inside him, sending large amounts of his semen into you. Much of it flows up into your [if player is female]waiting womb[else]sexy ass[end if] while the rest overflows around his cock to run down your thighs, with more gushing out as he withdraws and paints your ass with his last few spurts. Finished, he gives your sticky rear end a pat and wanders off.[impregchance]";
 
@@ -54,12 +54,12 @@ to say beatthejunkman:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Junkman"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -107,8 +107,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 when play ends:
@@ -117,16 +118,17 @@ when play ends:
 			say "     Drawn back to the scrapyard by your corrupted instincts, you join the other junkmen in wandering around the piles of junk, satisfying your lusts on each other and others you find. Your people have little ambition or organization, only existing in the moment, enjoying short lives corrupting a handful of creatures and siring a few offspring before eventually breaking down and rejoining their scrapyard home.";
 		else:
 			say "     Your body is upsetting to several of the soldiers who find you during the rescue operation, but you are able to convince them that you are still sane. Taken from the outbreak city, you are scrutinized by several of the military scientists, intrigued by your haphazard cybernetics. They are unfortunately able to learn little from you, as what they discover about your anatomy makes no sense and they conclude that it is purely cosmetic.";
-			say "     But you can sense that there is more to it and that somehow the junk is a part of you. You obtain old books on appliance repair and electronics from garage sales and study your odd body, spending several hours a week tinkering with yourself. ";
+			say "     But you can sense that there is more to it and that somehow the junk is a part of you. You obtain old books on appliance repair and electronics from garage sales and study your odd body, spending several hours a week tinkering with yourself";
 			if tailname of player is "Junkman":
-				say "     You discover early on that plugging yourself in feels very good and provides you with more energy. While you seem able to survive on just food or power, you operate at your best running on some of both. As an extra bonus, after a good, long charge, you are a randy lover with very long endurance, pleasing your partners greatly. ";
-			say "     You open what panels you can and replace any frayed wires or corroded tubes you can find with replacements you scavenge from old appliances you collected during your yard sale hunting. While you can't really tell what most of these do, you do start to feel better over time as you make these repairs. While your new form is rather offputting, you do manage to make some new friends and meet new lovers, who also seem pleased with your body's improved function. By keeping proper maintenance on yourself, you manage to live a long and pleasurable life, surviving several generations of other species. ";
+				say ". You discover early on that plugging yourself in feels very good and provides you with more energy. While you seem able to survive on just food or power, you operate at your best running on some of both. As an extra bonus, after a good, long charge, you are a randy lover with very long endurance, pleasing your partners greatly";
+			say ".";
+			say "     You open what panels you can and replace any frayed wires or corroded tubes you can find with replacements you scavenge from old appliances you collected during your yard sale hunting. While you can't really tell what most of these do, you do start to feel better over time as you make these repairs. While your new form is rather off-putting, you do manage to make some new friends and meet new lovers, who also seem pleased with your body's improved function. By keeping proper maintenance on yourself, you manage to live a long and pleasurable life, surviving several generations of other species. ";
 			if player is herm and "Sterile" is not listed in feats of player:
-				say "     Over your long life, you give birth to and sire numerous offspring which are junk-cybernetic versions of their other parent. ";
+				say "Over your long life, you give birth to and sire numerous offspring which are junk-cybernetic versions of their other parent. ";
 			else if player is male:
-				say "     Over your long life, you sire numerous offspring which are junk-cybernetic versions of their other parent. ";
+				say "Over your long life, you sire numerous offspring which are junk-cybernetic versions of their other parent. ";
 			else:
-				say "     Over your long life, you give birth to numerous offspring which are junk-cybernetic versions of their other parent. ";
-			say "     You make sure to have as many children as you can with different lovers, ensuring there is a wide variety of them around add a little home-repair flair to their species.";
+				say "Over your long life, you give birth to numerous offspring which are junk-cybernetic versions of their other parent. ";
+			say "You make sure to have as many children as you can with different lovers, ensuring there is a wide variety of them around add a little home-repair flair to their species.";
 
 Junkman ends here.

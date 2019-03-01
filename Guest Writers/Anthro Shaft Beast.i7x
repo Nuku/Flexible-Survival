@@ -44,12 +44,12 @@ to say shaft beast defeat:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Anthro Shaft Beast"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -97,8 +97,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-sheftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 to sharethebliss:
 	infect "Anthro Shaft Beast";
@@ -146,7 +147,7 @@ to say broodmother call:
 		if "Strong Psyche" is listed in feats of player, increase humanity of player by a random number between 1 and 3;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 1 and 2;
 	else:
-		say "     [one of]'Come to me, my beautiful child. We await for your offering...'[or]'Join usssssss...'[or]'Resissssst no further...'[or]'We are waiting for you...'[at random] says the Broodmother from her hive, reaching out at you with waves of lust. Places and experiences from the past and the present flash before your eyes, the Broodmother giving you a mental map, preparing you for the long trip to her blissful home.[line break]";
+		say "     [one of]'Come to me, my beautiful child. We await for your offering...' [or]'Join usssssss...' [or]'Resissssst no further...' [or]'We are waiting for you...' [at random]says the Broodmother from her hive, reaching out at you with waves of lust. Places and experiences from the past and the present flash before your eyes, the Broodmother giving you a mental map, preparing you for the long trip to her blissful home.[line break]";
 		if bodyname of player is "Anthro Shaft Beast":
 			sharethebliss;
 		else if bodyname of player is "Feral Shaft Beast":

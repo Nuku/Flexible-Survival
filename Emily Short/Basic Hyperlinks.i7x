@@ -45,7 +45,7 @@ Include (-
 
 The clicking hyperlink rules are a rulebook.
 
-Current link number is a number that varies.
+Current link number is a number that varies.[@Tag:NotSaved]
 
 A clicking hyperlink rule (this is the default command replacement by hyperlinks rule):
 	repeat through the Table of Hyperlink Glulx Replacement Commands:
@@ -94,7 +94,7 @@ which expects us to provide a table of command outcomes such as
 	1	"north"
 	2	"take lantern"
 
-and so on. The "glulx replacement command" is some text that varies -- actually a feature of the Glulx Entry Points extension on which this one depends -- and it allows us to write in something as though the player had typed it at the command prompt. Because the link is only pasting in a command on behalf of the player, we could then use link 1 over and over throughout the game any time we wanted a hyperlink that led north: the effect will always be to paste >north at the command prompt.
+and so on. The "glulx replacement command" is some text and varies -- actually a feature of the Glulx Entry Points extension on which this one depends -- and it allows us to write in something as though the player had typed it at the command prompt. Because the link is only pasting in a command on behalf of the player, we could then use link 1 over and over throughout the game any time we wanted a hyperlink that led north: the effect will always be to paste >north at the command prompt.
 
 But if we would prefer to have hyperlinks do other things, we may remove the default rule like this:
 

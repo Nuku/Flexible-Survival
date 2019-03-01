@@ -22,10 +22,10 @@ to say losetorodeoclown:
 		if libido of player > 100, now libido of player is 100;
 		say "     With your drink in you, you feel rather muddleheaded and horny, submitting to the strange creature as she runs her hands over you, sliding off your clothes and pack. ";
 		if (player is puremale) or (player is herm and a random chance of 1 in 2 succeeds):
-			say "     She runs her hand down to your hard cock and takes a hold of it, guiding you further into her arms with the other. Glancing down, you can see that under her above average cock is a huge pussy, wide, wet and waiting. With one hand on your cock and the other pulling at your ass, she gets you into position and takes your penis into her with one easy thrust.";
+			say "She runs her hand down to your hard cock and takes a hold of it, guiding you further into her arms with the other. Glancing down, you can see that under her above average cock is a huge pussy, wide, wet and waiting. With one hand on your cock and the other pulling at your ass, she gets you into position and takes your penis into her with one easy thrust.";
 			say "     You moan and rock your hips, having trouble focusing your milk-addled mind on anything more than thrusting into that smooth, slick hole. Her pussy, clearly wide enough to take in even the largest steer to calm it, somehow still manages to grip your shaft nicely[if cock length of player > 18 or cock width of player > 12]. Even your huge meat is able to fully fit in her, simply stretching out her cartoony, rubbery body, to her great delight[end if]. Being so very horny despite your calmness, you fuck her at hard, like a wild bull or angry bronco, much to her delight. She is moaning and pushing into your thrusts with yells of 'Yee-haw!' and 'Ride [']em, cowboy!' as she waves her stetson in the air and slaps your backside with it. When you finally cum, you drive your cock fully into her and unleash your hot seed[if cock width of player > 12]. Your huge balls pump their supply of semen into her, bloating her tummy delightfully full and plump[end if]. When your hips finally come to rest with your balls empty, you drift further into your milky haze and pass out as you see the pleased rodeo clown walking off, stroking her cum-filled tummy.";
 		else:
-			say "     She runs her hand down between your legs and teases your pussy, guiding you into her lap with the other. Glancing down, you can see that above her greatly oversized pussy is a throbbing hard cock, a sizeable eight inches of smooth, pink meat. With one hand spreading your pussy open and the other pulling at your ass, she gets you into position atop her hard cock and guides you down onto it.";
+			say "She runs her hand down between your legs and teases your pussy, guiding you into her lap with the other. Glancing down, you can see that above her greatly oversized pussy is a throbbing hard cock, a sizeable eight inches of smooth, pink meat. With one hand spreading your pussy open and the other pulling at your ass, she gets you into position atop her hard cock and guides you down onto it.";
 			say "     You moan and wriggle your hips, having trouble focusing your milk-addled mind on anything more than riding on that smooth, hard pole. Her cock, a little bigger than that of an average man[if cunt length of player < 6], sinks fully into you after a few thrusts to stretch you out[else], goes in quite easily, taking you in one smooth thrust that fills you with pleasure[end if]. Being so very horny despite your calmness, you ride her hard and fast, and she bucks you hard in her lap as well. She is moaning and driving up into you with yells of 'Yee-haw!' and 'Ride [']em, cowboy!' as she waves her stetson in the air and slaps your backside with it. When you finally cum, you soak her crotch in your juices and she pushes into you one last time before unleashing her hot cum into you[if cunt length of player < 6]. With her cock stuffed fully inside your small pussy, she's pumping her cum directly into your womb[end if]. When your hips finally come to rest with you well-seeded, you drift further into your milky haze and pass out as you see the pleased rodeo clown walking off with a bow-legged swagger.[impregchance]";
 	else:				[LOST]
 		say "     Exhausted by the rodeo clown's frantic and tiring assault, you drop to your knees before her. She looks you over and shakes her head. 'Now, ah must say, you've been right disappointin[']. Ah were hopin['] for more of a wild bull and instead ah gots me a ropin['] calf. Oh well, iffin you can't be a steer, ah guess ah'll just have tah play the bull this time.' With that, she pushes you to the ground and tosses off your clothes and pack, pulling out her above average cock and stroking its smoothly pink flesh.";
@@ -62,12 +62,12 @@ to say beattherodeoclown:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Rodeo Clown";
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -96,7 +96,7 @@ When Play begins:
 	now HP entry is 40; [ The monster's starting HP. ]
 	now lev entry is 2; [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 3; [ Monster's average damage when attacking. ]
-	now area entry is "Midway"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
+	now area entry is "Fair"; [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
 	now cocks entry is 1; [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
 	now cock length entry is 8; [ Length infection will make cock grow to if cocks. ]
 	now cock width entry is 5; [ Cock width, more commonly used for ball size. ]
@@ -115,8 +115,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Endings
 

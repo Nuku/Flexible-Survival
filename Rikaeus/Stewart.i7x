@@ -18,6 +18,11 @@ CloudKnowledge is a number that varies.
 StewartLocationCounter is a number that varies.
 
 [Room Declaration]
+
+Table of GameRoomIDs (continued)
+Object	Name
+The Clouds	"The Clouds"
+
 The Clouds is a room. It is private.
 The description of The Clouds is "[CloudDesc]"
 
@@ -25,7 +30,7 @@ to say CloudDesc:
 	say "     Taking a good look around, you notice that all you can really see is clouds for miles. However, it isn't completely empty. No, rather you see groups of flight-capable people hanging out up where you are. Most of them appear to be college students, which is to be expected as this area [italic type]is[roman type] above the belltower. Just like below, you also catch the occasional group having sex out in the open, something that draws your attention before you quickly look away.";
 
 instead of going Northwest from College Walkway Northwest while CloudKnowledge is 0:
-	say "     When you walk forward and reach the belltower you notice a couple winged people taking flight from the ground. Upon closer examination you see that they appear to be flying up to the clouds. You realize that there must be something up there and wonder what you need to do to reach that location. Suddenly though a grphon approaches you with a smile. 'Hey there, you look confused,' he says in a joyful tone. You give an assent to that statement and ask how to get up there. 'Well, you could just grow wings or perhaps you could find someone with them that could take you up there. I can't cause I'm in a hurry,' he says, apologizing before leaving. When he does you're left with your own thoughts on getting to the clouds.";
+	say "     When you walk forward and reach the belltower you notice a couple winged people taking flight from the ground. Upon closer examination you see that they appear to be flying up to the clouds. You realize that there must be something up there and wonder what you need to do to reach that location. Suddenly though a gryphon approaches you with a smile. 'Hey there, you look confused,' he says in a joyful tone. You give an assent to that statement and ask how to get up there. 'Well, you could just grow wings or perhaps you could find someone with them that could take you up there. I can't cause I'm in a hurry,' he says, apologizing before leaving. When he does you're left with your own thoughts on getting to the clouds.";
 	change up exit of College Belltower to The Clouds;
 	now CloudKnowledge is 1;
 
@@ -43,6 +48,10 @@ instead of going Down from The Clouds:
 	else:
 		say "     You direct yourself over to the edge of the clouds, taking a peek downward to confirm that there is a pool below you, as you do not wish to be a pancake on the ground. Thankfully there is a pool below you so you mentally prepare yourself. As you do this you suddenly hear cheering behind you, specifically people asking you to do a cannonball. With a shrug of your shoulders you decide to oblige them. Taking a couple steps back you start off into a run before launching yourself off the edge. Once airborne you are spinning in the air, wondering why the fuck you jumped off a cluster of clouds hundreds of feet in the air. Thankfully you do not go splat on the pavement, instead landing in the pool, causing an eruption of water to spray all the students at the pool. With an ecstatic smile, you clamber on out of the liquid and go on your way, ignoring the naiads yelling at you for wasting their water.";
 		move player to Athletic Street;
+
+Table of GameRoomIDs (continued)
+Object	Name
+Stewart's Room	"Stewart's Room"
 
 Stewart's Room is a room. It is private.
 The description of Stewart's Room is "[StewartRoomDesc]"
@@ -64,6 +73,10 @@ an everyturn rule:
 	if StewartLocationCounter is 9:
 		now StewartLocationCounter is 1;
 
+Table of GameCharacterIDs (continued)
+object	name
+Stewart	"Stewart"
+
 Stewart is a man.
 The description of Stewart is "[StewartDesc]".
 The conversation of Stewart is { "<this is nothing but a placeholder!>" }.
@@ -71,7 +84,7 @@ The scent of Stewart is "The harpy-boy smells of that new book scent as well as 
 
 to say StewartDesc:
 	if Stewart is in The Clouds:
-		say "The first thing you see about the harpy boy is that his arms are transformed into his wings. His feathers are of a pure white shade, but the backside of his wings are covered in fur, rather than avian coverings. The fur is of an orange and brown striped pattern that stands out rather boldly. His feet are clawed just like a winged creature's should be. From his backside you can see feathers that spread out into a tail. Clothing-wise he is wearing a white t-shirt with an american flag on it and cargo shorts. The male is currently lounging on the white fluffy clouds, enjoying the sun. When he notices you looking at him Stewart smiles at you and waves his left arm.";
+		say "The first thing you see about the harpy boy is that his arms are transformed into his wings. His feathers are of a pure white shade, but the backside of his wings are covered in fur, rather than avian coverings. The fur is of an orange and brown striped pattern that stands out rather boldly. His feet are clawed just like a winged creature's should be. From his backside you can see feathers that spread out into a tail. Clothing-wise he is wearing a white t-shirt with an American flag on it and cargo shorts. The male is currently lounging on the white fluffy clouds, enjoying the sun. When he notices you looking at him Stewart smiles at you and waves his left arm.";
 	else if Stewart is in Tenvale College Library:
 		say "You notice Stewart is currently sitting at one of the many tables in the library. He is gazing over multiple different books of many kinds of subjects and appears to be taking a large swig of coffee from a cup on the table every few minutes. From the muttering under his breath you can tell that he's trying to study. Appearance-wise, the guy's arms are currently in their human form, rather than winged arms he has human ones, that match his olive-skinned tone. He's wearing a button up shirt as well as a pair of dress pants. When he notices you looking at him, he gives you a weary smile and waves.";
 	else if Stewart is in Stewart's Room:
@@ -83,12 +96,12 @@ instead of conversing the Stewart:
 	if Stewart is in The Clouds and StewartRelationship < 1:
 		say "     When you approach what looks to be a male harpy, he turns his head towards you from his position on the ground and smiles. 'Hey there! You look new around here,' the guy says rather cheerfully. You admit that this is your first time actually visiting this place and are rather intrigued as to how everyone is standing on clouds. 'Oh, that. Well from what I know, apparently there's supposed to be a magical place around here that basically solidifies the clouds.' He chuckles. You tilt your head at that answer, not understanding exactly what he means. 'I can sympathize with your confusion, I only know of that information by secondhand. Anyways I'm Stewart, if you ever want to talk with me I'm usually here in the morning but move to the library mid day,' the guy informs you before saying that he hopes to see you again.";
 		now StewartRelationship is 1;
-		now Hanging out on the Green is not resolved;
+		now Hanging out on the Green is active;
 	else if Stewart is in Tenvale College Library and StewartRelationship < 1:
-		say "     The person you approach appears to be studying rather furiously, if the large amount of books surrounding him says something. He notices you rather quickly which prompts a question for him. 'Hey, you wouldn't happen to know how to derive a multi-variable function?' he asks rather wearily. Before you can answer, he lets out a sigh followed a verbal apology. 'I'm so sorry, it's just that I have like five different exams coming up within the next week and it's driving me crazy. If you can't tell, currently I'm trying to study for calculus.' The male groans. A thought passes by in your head that perhaps you could help him study to ease the already huge mental burden the guy has.";
+		say "     The person you approach appears to be studying rather furiously, if the large amount of books surrounding him says something. He notices you rather quickly which prompts a question for him. 'Hey, you wouldn't happen to know how to derive a multi-variable function?' he asks rather wearily. Before you can answer, he lets out a sigh followed a verbal apology. 'I'm so sorry, it's just that I have like five different exams coming up within the next week and it's driving me crazy. If you can't tell, I'm currently trying to study for calculus.' The male groans. A thought passes by in your head that perhaps you could help him study to ease the already huge mental burden the guy has.";
 		say "     You can tell how stressed he is by two things. One, the bags under his eyes which inform you that he's sleep deprived. Lastly, the five or so coffee cups that have been drained of their caffeine filled contents. 'Anyways, I'm Stewart, a guy harpy if you can't tell by my legs. Before you ask, I can freely transform my arms back and forth,' he explains, showing you by setting down his book before doing so and then changing back. Quickly after he says this though, the male apologizes once more and tells you he needs to get back to studying.";
 		now StewartRelationship is 1;
-		now Hanging out on the Green is not resolved;
+		now Hanging out on the Green is active;
 	else if Stewart is in The Clouds:
 		say "     Stewart smiles when he sees you approach before kindly asking you what you need.";
 		wait for any key;
@@ -139,13 +152,9 @@ to say StewartTalkMenu:
 					say "[StewartStudying]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head, which prompts a confused look from him but he shrugs and returns to what he was doing.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head, which prompts a confused look from him but he shrugs and returns to what he was doing.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -155,9 +164,9 @@ to say StewartCollege:
 
 to say StewartStudying:
 	if Stewart is in The Clouds or Stewart is in Stewart's Room:
-		say "     As soon as you say the word study, Stewart turns a glare on you that should be intimidating but isn't. Rather it just makes him look utterly adorable. Apparently, the harpy boy appears to notice your smile and huffs before looking away. 'I'm not studying until I have to go to the library. This is one of two times in the day I can destress thank you very much.' He grumbles at you. Shrugging your shoulders, you decide it's better to ask him again when he's ready.";
+		say "     As soon as you say the word study, Stewart turns a glare on you that should be intimidating but isn't. Rather it just makes him look utterly adorable. Apparently, the harpy boy appears to notice your smile and huffs before looking away. 'I'm not studying until I have to go to the library. This is one of two times in the day I can destress, thank you very much,' he grumbles at you. Shrugging your shoulders, you decide it's better to ask him again when he's ready.";
 	else:
-		say "     The weary looking harpy boy's eyes light up in hope when you mention that you wish to help him study. 'Oh will you please! This stuff is extremely confusing.' Stewart begs. Looking over all of the books that he has on the table you see that there are five topics. Chemistry, Calculus, Anatomy of Animals and Humans, Forensic Science, and oddly enough Italian are the subjects that he is studying. They all look like high level stuff that would confuse most people. With that in mind though, you mentally wonder just how exactly you are going to study with the harpy boy and if you really do wish to help him.";
+		say "     The weary looking harpy boy's eyes light up in hope when you mention that you wish to help him study. 'Oh will you please! This stuff is extremely confusing,' Stewart begs. Looking over all of the books that he has on the table you see that there are five topics. Chemistry, Calculus, Anatomy of Animals and Humans, Forensic Science, and oddly enough Italian are the subjects that he is studying. They all look like high level stuff that would confuse most people. With that in mind though, you mentally wonder just how exactly you are going to study with the harpy boy and if you really do wish to help him.";
 		say "     [bold type]Do you want to help Stewart study, knowing that the anatomy book could possibly end up being lewd?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sure, why not?";
@@ -167,10 +176,10 @@ to say StewartStudying:
 			let diceroll be a random number from 1 to 20;
 			say "You roll 1d20([diceroll])+[bonus] = [special-style-1][diceroll + bonus][roman type] vs [special-style-2]18[roman type] (Intelligence Check):[line break]";
 			if diceroll + bonus >= 18:
-				say "     You notice that you recognize and understand a lot, if not all of those topics. Instead of grabbing any of the books or Stewart's notes, you ask him what he's having trouble with. That prompts a confused look on his face, but he answers nonetheless. 'Uh, well I'm having trouble with Calculus the most. Derivatives just aren't my forte.' He sighs. You nod before writing out a problem for him to do and handing it to him, telling him to solve it. While not really understanding, Stewart still does the problem and hands it to you. Quite quickly you notice his mistakes and point them out before kindly explaining what went wrong. It takes a couple of these problems before he finally gets it. When he does he laughs out loud and hugs you, thanking you greatly.";
+				say "     You notice that you recognize and understand a lot, if not all of those topics. Instead of grabbing any of the books or Stewart's notes, you ask him what he's having trouble with. That prompts a confused look on his face, but he answers nonetheless. 'Uh, well I'm having the most trouble with Calculus. Derivatives just aren't my forte.' He sighs. You nod before writing out a problem for him to do and handing it to him, telling him to solve it. While not really understanding, Stewart still does the problem and hands it to you. Quite quickly you notice his mistakes and point them out before kindly explaining what went wrong. It takes a couple of these problems before he finally gets it. When he does he laughs out loud and hugs you, thanking you greatly.";
 				say "     With a smirk you tell him that you aren't done just yet before moving onto the next subject, Chemistry. This entire process continues for each and every subject with you successfully guiding the boy through each of his issues. For Chem it was the atomic numbers, for Forensic Science it turned out to be bullet wounds, and for Italian it was conjugation. However, upon reaching anatomy it became heated. While describing the different looks and anatomy of various infection's dicks you notice that Stewart is slowly forming a bulge in his pants, clearly becoming horny from the descriptions of cocks. With a huge smirk on your face, you climb under the table, very thankful that it is up against the wall.";
 				WaitLineBreak;
-				say "     'W-what are you doing?' He stutters out. You quickly hush him and unbutton his dress pants. To your shock, he appears to go commando as you are quickly hit in the face with his above average dick, which leaves a trail of precum on your cheek. When you look up you see that Stewart is trying to not moan just from the cool air hitting his cock. You decide to give the harpy boy a hand, or in this case a mouth, as you swallow the tip of his manhood. This forces him to let out a strangled moan, which thankfully for him isn't too loud. Swirling your tongue around the head of his dick you moan as well, savoring the taste of your study partner's fluids. Briefly you pull off and lick a trail from his heavy balls to the tip before taking his prick back into your mouth.";
+				say "     'W-what are you doing?' he stutters out. You quickly hush him and unbutton his dress pants. To your shock, he appears to go commando as you are quickly hit in the face with his above average dick, which leaves a trail of precum on your cheek. When you look up you see that Stewart is trying to not moan just from the cool air hitting his cock. You decide to give the harpy boy a hand, or in this case a mouth, as you swallow the tip of his manhood. This forces him to let out a strangled moan, which thankfully for him isn't too loud. Swirling your tongue around the head of his dick you moan as well, savoring the taste of your study partner's fluids. Briefly you pull off and lick a trail from his heavy balls to the tip before taking his prick back into your mouth.";
 				say "     This time around you decide to deepthroat his manhood, taking him all the way to the root. You hear Steward moan, but it sounds to be muffled. Looking up with his schlong still in your throat, you realize why. The harpy boy has currently stuffed his mouth with his fist and is biting down on it. Shortly after you look at him though, his breath hitches, possibly from seeing you stare at him while he's balls deep in your gullet. You try to convey your wishes for him to fuck your face. It takes a while but you manage to belay your desires to him as he gains a blissful look and removes his fist from his mouth before taking both of his hands and placing them on your head.";
 				WaitLineBreak;
 				say "     Quite soon after that he grips your head tightly and begins to thrust furiously into your throat. When the sounds of balls slapping against your chin and a dick going in and out of your mouth fill the room you wonder why nobody has noticed you two. But you quickly realize that they probably have but just don't care. So, instead you relish the feeling of the delicious cock entering and leaving your gullet rapidly, moaning whenever you taste his precum. [if player is not neuter]You begin to masturbate yourself rather determinedly, trying to reach your own orgasm, the gesture making you start to pant as well. [end if]However, soon Stewart's thrusts become much more frantic, which makes you realize that your sex partner is slowly reaching his peak, something that doesn't take too long to actually happen.";
@@ -179,14 +188,14 @@ to say StewartStudying:
 				change south exit of Tenvale College Male Dorms to Stewart's Room;
 				change north exit of Stewart's Room to Tenvale College Male Dorms;
 			else:
-				say "     Realizing that you don't have much knowlecge on any of those subjects, you decide to ask Stewart for his notes. With a confused look on his face, he hands them over. The harpy boy quickly realizes what you're doing when you start spouting off different questions to him. With a determined look on his face, he begins to answer them with fervor. You do this for each and every subject, though it does get a little hilarious when you reach the anatomy book which seems to be updated with penises from different infections and you notice the cum stains. Stewart blushes and quickly says that you've helped him enough before grabbing the book from your hands. Seeing that you won't get any further with him, you get up from the chair and stand.";
+				say "     Realizing that you don't have much knowledge on any of those subjects, you decide to ask Stewart for his notes. With a confused look on his face, he hands them over. The harpy boy quickly realizes what you're doing when you start spouting off different questions to him. With a determined look on his face, he begins to answer them with fervor. You do this for each and every subject, though it does get a little hilarious when you reach the anatomy book which seems to be updated with penises from different infections and you notice the cum stains. Stewart blushes and quickly says that you've helped him enough before grabbing the book from your hands. Seeing that you won't get any further with him, you get up from the chair and stand.";
 		else:
 			LineBreak;
 			say "     You apologize before quickly leaving the harpy boy though you are unable to ignore the disappointed look on his face.";
 
 instead of fucking Stewart:
 	if Stewart is in The Clouds or Stewart is in Tenvale College Library:
-		say "     Stewart starts blushing beet red before shaking his head vigoriously. 'No! Not here where everyone can see,' he stutters out.";
+		say "     Stewart starts blushing beet red before shaking his head vigorously. 'No! Not here where everyone can see,' he stutters out.";
 	else if (lastfuck of Stewart - turns < 3): [he got fucked in the last 9 hours = 3 turns]
 		say "     Stewart apologizes to you rather profusely. 'While I did like last time, I do need time to rest,' he says, waving you off.";
 	else if Stewart is in Stewart's Room:
@@ -237,13 +246,9 @@ to say StewartSexMenu:
 					say "[StewartSex3]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step away from Stewart who sends you a frustrated look. You're not sure if it's because you interrupted his reading or because you didn't commit.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step away from Stewart who sends you a frustrated look. You're not sure if it's because you interrupted his reading or because you didn't commit.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -256,7 +261,7 @@ to say StewartSex1:
 	say "     You bury your face into his balls, inhaling the sweet scent of sweat and male sex that makes you moan out loud, the smell driving you crazy. Licking the sack with your tongue, you let your hand wander to his hard dick before slowly gripping it and moving up and down, masturbating him. However, due to you being face first into his crotch, you can tell when he's getting close. Whenever he does, you stop and let him calm down, as you don't want him to cum just yet, only when your tongue is deep in his hole do you want it to happen. So, instead, Stewart is whining whenever you deny orgasm. Upon a brief look at his face you can see that its flushed red and he's panting heavily.";
 	WaitLineBreak;
 	say "     Figuring that you've teased the harpy boy enough, you move your face down to his pucker. It is down here that the male's manly musk is heavy, causing you to moan loudly before diving right in. The first thing you do is swirl your tongue around the entrance, relishing in the heavy taste of his hole. Even though you haven't even penetrated him, he's writhing about due to your ministrations. Deciding to take it a step forward, you push your tongue into his pucker, piercing it swiftly and making him shout in pleasure. You begin to fuck Stewart's hole on your fleshy organ moving it in and out at a rapid pace. The earlier actions you took during the foreplay appear to have made the harpy boy's orgasm not that hard to reach.";
-	say "     You shortly feel the male's balls tighten against your face as he yelps and releases his load all over his chest. While this is happening, he continuously thrusts himself back and forth on your face, as if there was an actual cock in his ass. A few minutes later, Stewart comes to the end of his orgasmic bliss, his body now limp and spread out on his bed. 'God fucking damnit that was fucking amazing.' He swears, panting clear in his tone. You pull your face out of his ass and move up next to him. With a devious smirk you start to feed him his own cum, something that he gladly does. Once done the two of you cuddle on the bed until it's time for you to go.";
+	say "     You shortly feel the male's balls tighten against your face as he yelps and releases his load all over his chest. While this is happening, he continuously thrusts himself back and forth on your face, as if there was an actual cock in his ass. A few minutes later, Stewart comes to the end of his orgasmic bliss, his body now limp and spread out on his bed. 'God fucking damnit that was fucking amazing,' he swears, panting clear in his tone. You pull your face out of his ass and move up next to him. With a devious smirk you start to feed him his own cum, something that he gladly does. Once done the two of you cuddle on the bed until it's time for you to go.";
 	now lastfuck of Stewart is turns;
 
 to say StewartSex2:
@@ -269,7 +274,7 @@ to say StewartSex2:
 
 to say StewartSex3:
 	setmonster "Harpy";
-	say "     You decide against speaking and instead straddle the harpy boy's lap, grinding your ass against his clothed crotch. 'That sounds like a brilliant idea.' He murmurs, trailing his hands on your body, slowly taking off your clothes. When he manages to get them off, he tosses them in a pile on the floor, leaving your bare ass against his slowly hardening erection that's hidden behind his shorts. Not wanting to get straight to it, Stewart pulls you into a rough kiss, quickly pushing his tongue into your mouth. Both of you groan into the liplock, slowly losing yourselves to it. All the whle this is happening, you are inhaling his musky male scent [if player is female], something that makes your pussy wet[else if player is male and cunts of player < 1], something that makes your dick begin to throb[end if].";
+	say "     You decide against speaking and instead straddle the harpy boy's lap, grinding your ass against his clothed crotch. 'That sounds like a brilliant idea,' he murmurs, trailing his hands on your body, slowly taking off your clothes. When he manages to get them off, he tosses them in a pile on the floor, leaving your bare ass against his slowly hardening erection that's hidden behind his shorts. Not wanting to get straight to it, Stewart pulls you into a rough kiss, quickly pushing his tongue into your mouth. Both of you groan into the liplock, slowly losing yourselves to it. While this is happening, you are inhaling his musky male scent[if player is female], something that makes your pussy wet[else if player is male and cunts of player < 1], something that makes your dick begin to throb[end if].";
 	say "     A couple of minutes into the make-out session you feel the harpy boy begin to ease his own clothing off, quickly tossing his shorts on top of the pile your own clothes are in. Now his hard dick is hotdogging your cheeks, leaking precum onto your backside. Stewart looks you in the eyes before giving you a soft smile. 'Are you ready for this?' he asks you, clearly caring for your well being. With a moan you let out a tone of assent, very eager for your coupling to begin. That response makes the harpy boy's smile widen even further before he kisses you roughly once more. Following that he grabs a hold of your hips and positions your ass so that the tip of his cock is against your pucker.";
 	WaitLineBreak;
 	say "     Slowly Stewart inches his cock into your hole, the stretching makes you moan as you are filled with his manhood. It doesn't take long for the harpy boy to bottom out, his balls now resting against your cheeks. Eager to get started, you grind your ass against his crotch, enjoying the sounds of his moans. Having been encouraged, the male begins to thrust in and out of your hole, his balls slapping wetly against your ass. [if player is male]Thankfully your partner manages to successfully find your sweet spot, making you leak even more precum from your cock. [end if]Both of you go at you rut for a while, both of you slowly edging towards your peaks. As the harpy boy approaches his orgasm his thrusts get wilder and wilder.";

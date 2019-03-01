@@ -2,7 +2,7 @@ Version 2 of Gator by Nuku Valente begins here.
 [ Version 2.0 - Grammar/code cleanup. Added victory facesitting scenes and vore scenes - Kurainyx    ]
 [ Version 2.1 - Add being able to trigger vore scene from her den - Kurainyx                         ]
 [ Version 2.2 - Additional twistcapped scene, multi-genital support, code and writing cleanup - Song ]
-[ Version 2.3 - Victory facesitting scene can be viewed in Gator Den. Made Gator into an actual npc so player no longer automatically goes back to Grey Abbey from Gator Den - Kurainyx]
+[ Version 2.3 - Victory facesitting scene can be viewed in Gator Den. Made Gator into an actual NPC so player no longer automatically goes back to Grey Abbey from Gator Den - Kurainyx]
 
 "Adds a gator to Flexible Survival's Wandering Monsters table, with impreg chance"
 
@@ -91,12 +91,12 @@ to say GatorVoreOffer:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Sewer Gator"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -144,8 +144,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false; [ Bypasses Researcher bonus? true/false (almost invariably false) ]
 	now non-infectious entry is false; [ Is this a non-infectious, non-shiftable creature? True/False (usually false) ]
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 when play ends:
 	if bodyname of player is "Sewer Gator":
@@ -170,8 +171,8 @@ when play ends:
 				say "     Life as a gator is somewhat interesting. Most expect you to be rough and cold blooded, and everyone is surprised when they touch you to find soft, almost silky skin that's warm to the touch. You secure a deal with a cosmetics firm, becoming a spokesperson for their [']beat the gator['] campaign that proves wildly successful.";
 
 to gatorfy:
-	repeat with y running from 1 to number of filled rows in table of random critters:
-		choose row y in table of random critters;
+	repeat with y running from 1 to number of filled rows in Table of Random Critters:
+		choose row y in Table of Random Critters;
 		if name entry is "Sewer Gator":
 			now monster is y;
 			break;
@@ -180,13 +181,17 @@ to gatorfy:
 
 Section 3 - Gator Den
 
-Sewer Gator is a woman. The HP of Sewer Gator is normally 0.
+Table of GameCharacterIDs (continued)
+object	name
+Sewer Gator	"Sewer Gator"
+
+Sewer Gator is a woman.
 The description of Sewer Gator is "[GatorDesc]".
 The conversation of Sewer Gator is { "Gator stuff" }.
 The scent of the Sewer Gator is "The gator smells strongly of sex and the sewers.";
 
 to say GatorDesc:
-	say "     The gator is a formidable sight, covered in green scales and plenty of muscle to back them up. She has no problem showing off her thick cock to you, as well as giving you glimpses of her cunt while she seductivelly shakes her wide hips. As you continue to look her over, she flashes you a smirk as she eyes you with a hungry gaze.";
+	say "     The gator is a formidable sight, covered in green scales and plenty of muscle to back them up. She has no problem showing off her thick cock to you, as well as giving you glimpses of her cunt while she seductively shakes her wide hips. As you continue to look her over, she flashes you a smirk as she eyes you with a hungry gaze.";
 
 instead of conversing the Gator:
 	say "[gator den repeat]";
@@ -199,7 +204,7 @@ to say gator den entrance:
 	say "[gator den scene]";
 
 to say gator den repeat:
-	say "     'Mmm, that was so hot,' the gator says, quickly regaining her stamina after your romp with her. ' Want to go for another round?'";
+	say "     'Mmm, that was so hot,' the gator says, quickly regaining her stamina after your romp with her. 'Want to go for another round?'";
 	say "[gator den scene]";
 
 to say gator den scene:
@@ -247,14 +252,10 @@ to say gator den scene:
 					say "[GatorDenFaceSit]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You decide that you don't really want to spend time with her, and you head back to the Library.";
-				move player to Grey Abbey Library;
-				follow the turnpass rule;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You decide that you don't really want to spend time with her, and you head back to the Library.";
+			move player to Grey Abbey Library;
+			follow the turnpass rule;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options].";
 	clear the screen and hyperlink list;
@@ -353,6 +354,10 @@ to say GatorDenFaceSit:
 			say "     While you had just serviced the gator's cunt, the thought of servicing her stomach somehow also sounds enticing. Despite the obvious danger of being eaten by the predator, you find yourself deciding if you really want to get the hungry reptile's attention before she's gone so that you can offer yourself as her snack.";
 			say "[GatorVoreOffer]";
 
+Table of GameRoomIDs (continued)
+Object	Name
+Gator Den	"Gator Den"
+
 Gator Den is a room. "[gator den entrance]". It is unknown. It is fasttravel. It is private.
 
 [Turned off automatically going back to Grey Abbey after any den scene]
@@ -368,8 +373,8 @@ Section 4 - Bound State
 to GatorBind:
 	now lustatt is libido of player;
 	now calcnumber is -1;
-	let trixieexit be 0;
-	while trixieexit is 0:
+	let Trixieexit be 0;
+	while Trixieexit is 0:
 		if humanity of player < 50:
 			now obliging is true;
 		checkboundrecover;
@@ -392,8 +397,8 @@ to GatorBind:
 		say "[bold type]3[roman type] - [link][if boundrecover is false]Endure[else]Recover[end if][as]3[end link][line break]";
 		say "Sanity: [humanity of player]/ 100	Lust: [lustatt]/100	Hunger: [hunger of player]	Thirst: [thirst of player]	Struggle: [GatorStruggle]";
 		if humanity of player < 1:
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Sewer Gator":
 					now monster is y;
 					break;
@@ -408,7 +413,7 @@ to GatorBind:
 			now skin of player is skin entry;
 			now body of player is body entry;
 			now cock of player is cock entry;
-			now trixieexit is 1;
+			now Trixieexit is 1;
 			end the story saying "You got eaten by a gator";
 		else:
 			let k be 0;
@@ -433,7 +438,7 @@ to GatorBind:
 					else:
 						say "     You push your way back up her stomach and esophagus until you are finally spat out by the gator and onto the ground. For a moment, she looks really angry, but maybe because of the fight you had put out, the reptile woman then looks kind of pleased. 'Maybe you are not that weak,' she jokes and winks at you as you go back to your adventures.";
 					cleanboundmemory;
-					now trixieexit is 1;
+					now Trixieexit is 1;
 					follow the turnpass rule;
 					wait for any key;
 				next;

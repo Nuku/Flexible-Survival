@@ -17,12 +17,15 @@ To say latex wolf loses:
 		say "[RegularLatexWolfLoses]";
 
 to say RegularLatexWolfLoses:
-	if libido of player <= 50:
-		say "     The latex wolf collapses, its head slumped against the ground, and begins to melt away down a nearby storm drain.";
-	if libido of player > 50 and player is male:
-		say "     The wolf collapses, and you move forward, lifting its rear before it begins to melt. You shove your [cock of player] cock into its ass, stuffing its backside with your [cock size desc of player] meat. The wolf moans and continues to melt even as you make several thrusts into it. You pull out before the melting happens near your precious cock, afraid of what might happen.";
-	if libido of player > 50 and cocks of player is 0 and player is female:
-		say "     The wolf melts into a black puddle, draining off into the city. You are unable to sate your lust without touching the melting latex, which is most certainly dangerous.";
+	say "     The latex wolf collapses, its head slumped against the ground. As the creature flops around in its weakened state, your eyes can't help but wander over the feral's body, giving you ideas about what you could do with its muzzle, cock or rear end.";
+	LineBreak;
+	say "     Would you like to have some fun with the latex wolf ([link]Y[as]y[end link]), or do you just leave ([link]N[as]n[end link])?";
+	if player consents:
+		LineBreak;
+		say "     [LatexWolfSexMenu]";
+	else:
+		LineBreak;
+		say "     You walk away after checking him over for loot.";
 	if HP of Bradford is 3:
 		if bradfordbounty > 0:
 			LineBreak;
@@ -68,16 +71,72 @@ To say RegularLatexWolfWins:
 		say "     The wolf looks at you with satisfaction and walks off[if showlocale is true] into the city[end if], leaving you to recover from the ordeal.";
 		if extrainfect is true, infect "Latex Wolf";
 
+Part 2 - Sex Menu
+
+to say LatexWolfSexMenu:
+	say "     What shall you do with the Latex Wolf?";[Which Fuck]
+	LineBreak;
+	now sextablerun is 0;
+	blank out the whole of table of fucking options;
+	[]
+	if player is male:
+		choose a blank row in table of fucking options;
+		now title entry is "Butt Fuck";
+		now sortorder entry is 1;
+		now description entry is "Fuck the Latex Wolf in the ass";
+	[]
+	sort the table of fucking options in sortorder order;
+	repeat with y running from 1 to number of filled rows in table of fucking options:
+		choose row y from the table of fucking options;
+		say "[link][y] - [title entry][as][y][end link][line break]";
+	say "[link]0 - Nevermind[as]0[end link][line break]";
+	while sextablerun is 0:
+		say "Pick the corresponding number> [run paragraph on]";
+		get a number;
+		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
+			now current menu selection is calcnumber;
+			choose row calcnumber in table of fucking options;
+			say "[title entry]: [description entry]?";
+			if player consents:
+				let nam be title entry;
+				now sextablerun is 1;
+				if (nam is "Butt Fuck"):
+					say "[ButtFuckLatexWolf]";
+				wait for any key;
+		else if calcnumber is 0:
+			now sextablerun is 1;
+			say "     You back away and shake your head.";
+			wait for any key;
+		else:
+			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+	clear the screen and hyperlink list;
+
+to say ButtFuckLatexWolf:
+	say "     The wolf lets out a needy whimper as you approach, his body squeaking as he lowers his head and lifts his ass towards you invitingly. You have no intention of letting such a nice ass go to waste either, and you remove your equipment as you step forward. You grab hold of his hips, his cool skin stretching between your fingers. Using your firm grip on him to your advantage, you easily align yourself with his pucker, placing the tip of your [cock of player] cock teasingly at the wolf's entrance. The canine whimpers, squeaks and pushes back towards you needily, but your firm grip keeps you in control.";
+	say "     You lean over the wolf and thrust forward, sinking deep into his tight tailhole as it stretches around you with a squeak. The lupine lets out a low, pleased rumble at the feeling of your hard length within him and pushes back against your hips with a needful whine. Your pre lubricates his insides, the wolf's hole becoming slick and slidy, making it ease it easy for you to slip out of him, only to force yourself back in. You continue to hammer into the wolf, drawing pleasured groans from both of you as you increase your pace. Resting more of your weight on his back, feeling the sleek smoothness of his latex form against your chest, you reach around his body with one arm and feel around until you manage to grasp the wolven shaft. His length has an unnaturally smooth texture, slickened by a coat of lube-like as you pound against his prostate.";
+	WaitLineBreak;
+	say "     You stroke the creature's cock in time with your thrusts, fucking him hard enough to rock him forward, causing him to squeak with the movement. The pleasure for you both starts to build, and among the squeaking and heavy breathing, you can hear the wolf whimper, followed by a pleasured howl as he cums. You pull your hand away from his cock as black liquid-latex cum gushes onto the ground. You pause for a moment as the wolf's ears fold and appear to begin melting. He looks back towards you, a happy grin on the canine's face as his whole body starts to soften and melt.";
+	say "     You're so close to finishing. Do you pull out and cum safely on him, or do you stay inside and risk getting some of the melting latex on you?";
+	say "     [link]Yes[as]y[end link] - Cum Inside";
+	say "     [link]No[as]n[end link] - Pull Out";
+	if player consents:
+		LineBreak;
+		say "     You are determined to finish fucking the wolf, holding onto his hips and gripping tightly as you slam into him with reckless abandon. Your pleasure builds as you use the melting wolf's ass like a sex toy, the pressure building until you can't hold it in any longer. With a final thrust, you hilt in him, releasing your seed deep into his rear as it starts to melt and collapse around you. Pulling out, you manage to free yourself from his now-gooey depths, but some of the liquid latex still clings to your spent shaft. It moves like a creature of its own, slowly spreading [If cock width of player > 0]to encapsulate your balls[else]across your crotch[end if]. You try pulling it off of you, but your efforts prove in vain, the ebon latex clinging to your fingers and spreading over more of your body.";
+		say "     Helpless to it's attack, it continues to slide across your body, the latex cool to the touch as it slithers across your flesh like a living bodysuit. By the time it covers you completely, it starts to absorb into your skin, merging with you. Whatever damage has been done, has been done, so you reclaim your gear before returning to your goals, wondering if you have made a terrible mistake.";
+	else:
+		LineBreak;
+		say "     Not wanting to risk getting any of the melting wolf on you, you pull out of him, leaving the latex canine to whine, whimper and squeak at you as you finish yourself off with your hand. You spurt your cum onto the melting black mass, watching as it mixes with and is absorbed by the now-rubbery puddle. Relieved at the close call, you put your gear back on before heading back out on your travels.";
+
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Latex Wolf"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -125,12 +184,13 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Progressive Infection
 
-lwcounter is a number that varies. lwcounter is normally 240.
+lwcounter is a number that varies. lwcounter is usually 240.
 
 an every turn rule:
 	if bodyname of player is "Latex Wolf" and lwcounter - turns > 3:
@@ -171,7 +231,7 @@ Section 4 - Endings
 when play ends:
 	if bodyname of player is "Latex Wolf":
 		if humanity of player < 10:
-			say "     As the infection runs its course, it spreads through your body, changing you more and more into a non-anthro, latex wolf. When the rescue begins, you can hear a strange, ultrasonic siren off in the distance with your improved hearing and are drawn to it. Fire trucks arrive, sirens blaring with teams of soldiers around them. They are spraying down several other latex wolves and foxes who have arrived. You run up to one, yipping and wagging your tail in the hopes of a cure. As you move closer to the truck, you are pointed out and sprayed with a strange chemical. ";
+			say "     As the infection runs its course, it spreads through your body, changing you more and more into a non-anthro, latex wolf. When the rescue begins, you can hear a strange, ultrasonic siren off in the distance with your improved hearing and are drawn to it. Fire trucks arrive, sirens blaring with teams of soldiers around them. They are spraying down several other latex wolves and foxes who have arrived. You run up to one, yipping and wagging your tail in the hopes of a cure. As you move closer to the truck, you are pointed out and sprayed with a strange chemical.";
 			if intelligence of player < 16 or dexterity of player < 24:
 				if a random chance of 2 in 3 succeeds:
 					say "     You turn your head back and watch as the latex melts off of your body leaving fur underneath. You fall down and whimper as you realize that you are no longer a latex wolf, but instead trapped as a real one even as you feel what remains of your mind fading. The soldiers exclaim in surprise at your incomplete destruction and startling transformation, but you dash off into the city before they can prevent your escape. Under the cover of night, you slink off into the wilderness, mind that of a semi-intelligent wolf.";
@@ -182,8 +242,8 @@ when play ends:
 				say "     You gurgle wetly as you feel yourself starting to melt, turning into a fluid goo. You struggle over to a nearby drain and dive into it, flowing through the grate. You can faintly hear some commotion above concerning your escape, but can hardly understand it. You do manage to congeal enough to pull yourself onto a ledge and down a side passage before a large rush of the strange solvent is sprayed down after you. You are quite weakened for a time, but do learn to pull yourself partially back together, now a liquid latex wolf.";
 				say "     Now immune to the call of the siren, you follow the fire trucks['] path back to their base, consuming the melted wolves and foxes left in their wake, growing larger and larger. By the time you get to their depot, you are twice the size of their fire trucks and attack them. You flow across their lines, easily overpowering them while they're busy trying to refill the trucks. Immune to their weapons, you encircle the soldiers and amuse yourself with them, eating some and stuffing others into any orifice you care to create. Finally, with your overfull balls churning with liquid latex cum, you spray your semen over those still remaining. As they start to change into latex wolves, you chuckle maliciously and turn the hose on them, subjecting them to the same deadly fate as they tried to impose on you. As they howl and squirm, unable to get away, you slurp down all the tasty goo with a vicious grin.";
 				say "     You spend the next day collecting more playtoys as well as another latex wolf. You cum over the soldiers and then melt them, letting the latex wolf enjoy the tasty treat and grow into another giant, fluid wolf like yourself. You and your enormous mate track down any of your previous allies in the city you can still find and enjoy playing with them before consuming them. Unstoppable, you both run rampant across the city from time to time, transforming and eating the other, lesser infected when not squirming together in fluidic sex in a large basin.";
-				repeat with y running from 1 to number of filled rows in table of random critters:
-					choose row y in table of random critters;
+				repeat with y running from 1 to number of filled rows in Table of Random Critters:
+					choose row y in Table of Random Critters;
 					if name entry is "Latex Wolf":
 						now monster is y;
 						break;
@@ -215,8 +275,8 @@ when play ends:
 					say "     One day, you get your team working on a special batch, filling one of the large vats. The complicated mixture is prepared, mixed and melted. As you step up to give it your usual taste test, you fall into it. With a wet moan, you melt into the latex compound while people start yelling and run up to help you. One brave assistant, unconcerned for [if player is male]herself[else]himself[end if], leans over the mess to grab your hand.";
 					say "     But instead of just grabbing your hand, you end up flowing over [if player is male]hers[else]his[end if] and across [if player is male]her body. She[else]his body. He[end if] screams in surprise as you envelop [if player is male]her[else]him[end if] and start to rise out of the vat as a huge blob of latex. The rest of the people gathered there flee as you start to reform into a huge latex wolf, just as you had hoped would happen. You release your transforming assistant and coat them in your [if player is male]cum[else]pussy juices[end if] and more of the new formula, making them into a large latex wolf like yourself to be your mate.";
 					say "     Together, you both feast upon the contents of the factory, becoming huge, unstoppable, lustful, latex giants. You have fun attacking the nearby factories, using the little humans as food or playtoys in every perverted way you desire. You transform some into small latex wolves to help keep your human toys penned into your city, but most are absorbed or consumed after your fun is done. All your special friends and lovers get extra-special treatment before being made into large wolves to move on to other cities of their own.";
-					repeat with y running from 1 to number of filled rows in table of random critters:
-						choose row y in table of random critters;
+					repeat with y running from 1 to number of filled rows in Table of Random Critters:
+						choose row y in Table of Random Critters;
 						if name entry is "Latex Wolf":
 							now monster is y;
 							break;

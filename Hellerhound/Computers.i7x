@@ -331,7 +331,7 @@ Chapter 3 - Which Program Receives Input?
 To decide what object is the controlling program of (chosen computer - a computer):
 	let the chosen screen be a random screen that is part of the chosen computer;
 	repeat with item running through software which is part of chosen screen:
-		remove item from play;
+		now item is nowhere;
 	if the chosen computer runs no software:
 		decide on nothing;
 	else:
@@ -697,6 +697,10 @@ Example: * Reading Email - A laptop set up with a password lock program that giv
 
 	Include Computers by Emily Short.
 
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Conference Room	"Conference Room"
+
 	Conference room is a room.
 
 	The conference table is a thing in the Conference Room. The small laptop is a laptop on the conference table.
@@ -723,6 +727,10 @@ Example: * USB Drive - A very simple implementation of a laptop that can search 
 	*: "USB Drive"
 
 	Include Computers by Emily Short.
+
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Ventilation Duct	"Ventilation Duct"
 
 	The Ventilation Duct is a room.
 
@@ -765,6 +773,10 @@ We also want the computer to revert back to the operating system if switched off
 	*: "Operations"
 
 	Include Computers by Emily Short.
+
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Conference Room	"Conference Room"
 
 	Conference room is a room.
 
@@ -844,6 +856,10 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 
 	Include Computers by Emily Short.
 
+	Table of GameRoomIDs (continued)
+	Object	Name
+	Bank Forecourt	"Bank Forecourt"
+
 	The Bank Forecourt is a room. The High Street is north of Bank Forecourt.
 
 	The ATM is a computer in the Bank Forecourt. The ATM is switched on. The ATM runs welcome screen. The description is "The ATM is the sort with a small, roughly square screen; a keypad for numeric input; and a slot in which to insert a debit card."
@@ -902,8 +918,8 @@ We make the ATM a generic computer that can't be turned on or off. We create the
 
 	Price is a kind of value. $99.99 specifies a price.
 
-	Checking account balance is a price that varies. Checking account balance is $2894.82.
-	Cash in hand is a price that varies. Cash in hand is $15.97.
+	Checking account balance is a price that varies. Checking account balance is $2894.82.[@Tag:NotSaved]
+	Cash in hand is a price that varies. Cash in hand is $15.97.[@Tag:NotSaved]
 
 	After taking inventory:
 		say "You are carrying [cash in hand] in cash."

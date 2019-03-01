@@ -12,7 +12,7 @@ when play begins:
 
 to say fluffyowldesc:
 	setmongender 4; [creature is female]
-	say "     With a soft hoot, a fluffy owl creature comes swooping out at you from a dark corner. She has soft, fluffy looking feathers covering her bre... body. Her arms are partially wings, but have taloned hands at the end. Her feet end in large, taloned bird's feet. Her piercing eyes seem to flash brightly in the dim corridors and her beak looks quite sharp. As she swoops in close, you can't ignore them any longer. On her chest are an enormous, simply titanic pair of boobs. Each the size of a large pumpkin, you have no idea how she can stand upright and walk, let alone fly with them. But somehow she does, moving with a strange lightness and grace despite her ample assets. She seems to smile at her beak as she notices your gaze and runs her taloned fingers over her huge breasts, jiggling them tantalizingly at you.";
+	say "     With a soft hoot, a fluffy owl creature comes swooping out at you from a dark corner. She has soft, fluffy looking feathers covering her body. Her arms are partially wings, but have taloned hands at the end. Her feet end in large, taloned bird's feet. Her piercing eyes seem to flash brightly in the dim corridors and her beak looks quite sharp. As she swoops in close, you can't ignore them any longer. On her chest are an enormous, simply titanic pair of boobs. Each the size of a large pumpkin, you have no idea how she can stand upright and walk, let alone fly with them. But somehow she does, moving with a strange lightness and grace despite her ample assets. She seems to smile at her beak as she notices your gaze and runs her taloned fingers over her huge breasts, jiggling them tantalizingly at you.";
 
 
 to say losetofluffyowl:
@@ -20,13 +20,13 @@ to say losetofluffyowl:
 		say "     Unable to resist her alluring assets any longer, you surrender to the big-chested bird. She releases a happy hoot and snuggles you up in her wing arms, burying your face in her bosom. You moan softly and nuzzle at the soft feathers and warm breasts. You run your fingers through her down, stroking her breasts and teasing the hidden nipples. ";
 		if player is male:
 			if a random chance of 1 in 2 succeeds:
-				say "     While you play with her giant tits, you can feel her taloned hand slip down to your cock and stroke it. She alternates between brushing her feathers over it and pumping at it until you're hard and leaking precum steadily.";
+				say "While you play with her giant tits, you can feel her taloned hand slip down to your cock and stroke it. She alternates between brushing her feathers over it and pumping at it until you're hard and leaking precum steadily.";
 				say "     She pushes you back and takes a seat in your lap, sinking her wet hole down around your erection. Being part avian, her pussy feels different around your cock, having become more like a bird's cloaca. Lost in your arousal, you find this quite pleasurable and enjoy the different ways it seems to grip and slide over your penis. You fuck her with your face buried in her soft feathers, suckling at a nipple until you cum, pumping your hot seed into her until you're both satisfied and part ways.";
 			else:
-				say "     She caresses your head and guides your mouth to one of those perky nipples, encouraging you to suckle it. She gives a hoot of delight when you do so and hugs you all the tighter.";
+				say "She caresses your head and guides your mouth to one of those perky nipples, encouraging you to suckle it. She gives a hoot of delight when you do so and hugs you all the tighter.";
 				say "     The fluffy owl slides a hand down between your legs, taking hold of your rising manhood. Once she's gotten you to full erection, she guides you both down onto the ground and lays out on her back, all while keeping your face pressed to her massive tits. Knowing what's needed of you, you suck down harder and drive your [cock of player] cock right into her juices folds as soon as she's gotten you lined up. Her avian pussy squeezes and quivers around your meat, milking at it as she hoots happily. You fuck the soft, pillowy bird with your hands and lips playing with those fluffy breasts and swollen nipples. Eventually you can hold out no longer and cum hard, pumping your hot seed right into her until you're drained and the big breasted bird is sated. After that, you part amicably, the busty owl satisfied after a good, hard fuck.";
 		else:
-			say "     She takes one of your hands and guides it between her legs. Sliding over the very soft feathers there, you find her wet pussy and run your fingers over it.";
+			say "She takes one of your hands and guides it between her legs. Sliding over the very soft feathers there, you find her wet pussy and run your fingers over it.";
 			say "     With a soft hoot, she prompts you to push a few fingers into her and she squirms in pleasure. Being part avian, her pussy feels different to your touch, having become more like a bird's cloaca. Lost in your arousal, you find this quite pleasurable and enjoy the different ways it seems to grip and slide over your pumping digits. You work three fingers into her faster and faster with your face buried in her soft feathers, sucking at a nipple until she cums over your hand and you soak your thighs with your cum as well. You nibble and suck at her breast as you both enjoy the afterglow before separating and parting ways.";
 	else:				[LOSE]
 		say "     Your fight with the fluffy bird comes to an end with her grabbing you and stuffing your face between her ample breasts, suffocating you in her soft scent and warm downy fluff. You try to push away, but you're too worn out and eventually pass out. When you come to, your crotch is soaked in sticky, feminine juices and the bird is nowhere to be found. Her soft, lingering scent is quite arousing, making you feel a little more willing to play with one of the lovely birds next time.";
@@ -59,12 +59,12 @@ to say beatthefluffyowl:		[WIN]
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Fluffy Owl"; [ Infection/Creature name. Capitalized. ]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -112,8 +112,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 Section 3 - Endings
 

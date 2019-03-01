@@ -2,7 +2,7 @@ Version 2 of Chocolate Lab by Stripes begins here.
 [Version 2 - Piggybacking Labs added by GentlemanB]
 [Version 2.1 - Removed forced sex on victory with high libido]
 
-"Adds a Chocolate Lab creature to Flexible Survival's Wandering Monsters table, with Impreg chance"
+"Adds a Chocolate Lab creature to Flexible Survival's Wandering Monsters table, with impreg chance"
 
 labhost is a number that varies. [Tracks number of piggybacking labs/selects modified endings]
 labtimerA is a number that varies. labtimerA is usually 0. [tracks how long oldest lab has been piggybacking]
@@ -21,7 +21,7 @@ to say choclabdesc:
 	say "     Before you is a bizarre creature. At first glance, it seems like a normal dog, a brown Labrador. But it's soon apparent that it's quite unusual. This chocolate Lab is flowing and shifting, leaving brown pawprints as it walks. It seems to be quite literally a [italic type]chocolate[roman type] Lab. Its skin flows and runs like melting chocolate and you can smell the sweet, alluring scent of cocoa as it bounds closer. The creature has a gooey, brown tongue that drips chocolaty syrup. Its eyes are solid black, like pure, dark chocolate.";
 
 to say losetolab:
-	choose row monster from the table of random critters;
+	choose row monster from the Table of Random Critters;
 	let labnum be 0;
 	if facename of player is "Chocolate Lab", increase labnum by 1;
 	if bodyname of player is "Chocolate Lab", increase labnum by 1;
@@ -89,9 +89,9 @@ to say losetolab:
 	else:
 		now choclabfight is 2; [lost]
 		if player is herm:	[herm]
-			say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you. You can feel the firm press of its body at your puss[if cunts of player > 1]ies[else]y[end if] and asshole, spreading you open with a cock of hard chocolate for each. Its body also grips around your cock[smn] with a soft, wet pussy[if cocks of player > 1] for each[end if]. Its fluid form flows and ripples, rubbing all over your body and teasing your nipples. The amorous confection stimulates you inside and out until finally it shoots its white chocolate cream into every hole and you pump your hot cum into it in return.[impregchance]";
+			say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you. You can feel the firm press of its body at your puss[yfn] and asshole, spreading you open with a cock of hard chocolate for each. Its body also grips around your cock[smn] with a soft, wet pussy[if cocks of player > 1] for each[end if]. Its fluid form flows and ripples, rubbing all over your body and teasing your nipples. The amorous confection stimulates you inside and out until finally it shoots its white chocolate cream into every hole and you pump your hot cum into it in return.[impregchance]";
 		else if player is female:	[female]
-			say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you. You can feel the firm press of its body at your puss[if cunts of player > 1]ies[else]y[end if] and asshole, spreading you open with a cock of hard chocolate for each. Its fluid form flows and ripples, rubbing all over your body and teasing your nipples. The amorous confection stimulates you inside and out until finally it shoots its white chocolate cream into every hole.[impregchance]";
+			say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you. You can feel the firm press of its body at your puss[yfn] and asshole, spreading you open with a cock of hard chocolate for each. Its fluid form flows and ripples, rubbing all over your body and teasing your nipples. The amorous confection stimulates you inside and out until finally it shoots its white chocolate cream into every hole.[impregchance]";
 		else:	[male]
 			say "     You are pushed onto your back as the dog climbs atop you, flowing its molten chocolate body over you. You can feel the firm press of its body at your asshole, spreading you open with a cock of hard chocolate. Its body also grips around your cock[smn] with a soft, wet pussy[if cocks of player > 1] for each[end if]. Its fluid form flows and ripples, rubbing all over your body and teasing your nipples. The amorous confection stimulates you inside and out until finally it shoots its white chocolate cream into your mouth and rear, and you pump your hot cum into it in return.[impregchance]";
 		say "     Once it's done, it flows off of you slowly, splatters of white chocolate landing on your chest. It flows out of your body, but leaves you with a warm mess of white, creamy filling inside. You pant as you try to catch your breath after the brief, but intensely body-wide, sex you've just had.";
@@ -114,11 +114,11 @@ to say beatthelab:
 		say "     Will you accept that offer? ([link]y[as]y[end link]/[link]n[as]n[end link])";
 		if player consents:
 			if player is male:		[m/h - fuck the Lab]
-				say "     There is just something enticing about the canine's submissive display and arousing scent that gets you excited. You decide that you and the semi-fluid dog can relieve each others itch. You take the dog's ever-melting hind legs in your hands and line up your hard cock with its pussy. It releases a wet bark of pleasure as you sink your [cock size desc of player] [cock of player] cock into its malleable body. It reforms its pussy around you, [if cocks of player > 1]forming a deliciously snug vagina for each of your cocks[else]making itself deliciously snug for your cock[end if] and flowing all over [if cocks of player > 1]them[else]it[end if] to continually stimulate you.";
+				say "     There is just something enticing about the canine's submissive display and arousing scent that gets you excited. You decide that you and the semi-fluid dog can relieve each other's itch. You take the dog's ever-melting hind legs in your hands and line up your hard cock with its pussy. It releases a wet bark of pleasure as you sink your [cock size desc of player] [cock of player] cock into its malleable body. It reforms its pussy around you, [if cocks of player > 1]forming a deliciously snug vagina for each of your cocks[else]making itself deliciously snug for your cock[end if] and flowing all over [itthemm] to continually stimulate you.";
 				say "     The dog's thick tongue lolls from its mouth, drooling chocolate as you fuck it. White, chocolate cream leaks from its cock and from its nipples as your thrusts send ripples through its gooey body. As you shoot your hot seed inside it, splatters of thick cream blast from its cock and make a mess of the ground below. Finished, the chocolate Lab sags back, losing a little more cohesion, but smiles up at you with a doggy grin. You lean forward and enjoy some slobbery doggy kisses before getting up and heading off.";
 			else:					[f - ride the Lab]
-				say "     There is just something enticing about the canine's submissive display and arousing scent that gets you excited. You decide that you and the semi-fluid dog can relieve each others itch. Taking hold of the brown, canine cock, you point it upwards as you move your pussy into position overtop of it. As you ride that chocolate rod, it shifts and changes, [if cunts of player > 1]forming one for each of your holes and each [end if]becoming the perfect fit for your vagina. You moan in delight at the clever dog's trick and start to play with its nipples, coaxing more of its white, creamy chocolate to flow from them.";
-				say "     The dog's thick tongue lolls from its mouth, drooling chocolate as you ride it. Your motions atop it send ripples through its gooey body. As your puss[if cunts of player > 1]ies clamp[else]y clamps[end if] down around it in climax, you squeeze a rush of warm, creamy chocolate from the canine, blasting it deep inside you. Finished, the dog sags back, losing a little more cohesion, but smiles up at you with a doggy grin. You lean forward and enjoy some slobbery doggy kisses before getting up and heading off.[impregchance]";
+				say "     There is just something enticing about the canine's submissive display and arousing scent that gets you excited. You decide that you and the semi-fluid dog can relieve each other's itch. Taking hold of the brown, canine cock, you point it upwards as you move your pussy into position overtop of it. As you ride that chocolate rod, it shifts and changes, [if cunts of player > 1]forming one for each of your holes and each [end if]becoming the perfect fit for your vagina. You moan in delight at the clever dog's trick and start to play with its nipples, coaxing more of its white, creamy chocolate to flow from them.";
+				say "     The dog's thick tongue lolls from its mouth, drooling chocolate as you ride it. Your motions atop it send ripples through its gooey body. As your puss[yfn] clamp[sfv] down around it in climax, you squeeze a rush of warm, creamy chocolate from the canine, blasting it deep inside you. Finished, the dog sags back, losing a little more cohesion, but smiles up at you with a doggy grin. You lean forward and enjoy some slobbery doggy kisses before getting up and heading off.[impregchance]";
 			say "[chococheck]";
 			decrease libido of player by 5;
 			if libido of player < 0:
@@ -147,12 +147,12 @@ to say chococheck:
 
 Section 2 - Monster Insertion
 
-Table of random critters (continued)
-name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	nocturnal (truth state)	altcombat (text)
---	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
+Table of Random Critters (continued)
+name	enemy title	enemy name	enemy type	attack	defeated	victory	desc	face	body	skin	tail	cock	face change	body change	skin change	ass change	cock change	str	dex	sta	per	int	cha	sex	HP	lev	wdam	area	cocks	cock length	cock width	breasts	breast size	male breast size	cunts	cunt length	cunt width	libido	loot	lootchance	scale (number)	body descriptor (text)	type (text)	magic (truth state)	resbypass (truth state)	non-infectious (truth state)	DayCycle	altcombat (text)	BannedStatus (truth state)
+--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--	--;
 
 When Play begins:
-	Choose a blank row from Table of random critters;
+	Choose a blank row from Table of Random Critters;
 	now name entry is "Chocolate Lab"; [Name of your new Monster]
 	now enemy title entry is "";
 	now enemy name entry is "";
@@ -200,8 +200,9 @@ When Play begins:
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is false;
-	blank out the nocturnal entry; [ True=Nocturnal (night encounters only), False=Diurnal (day encounters only), blank for both. ]
-	now altcombat entry is "default"; [ Row used to designate any special combat features, "default" for standard combat. ]
+	now DayCycle entry is 0; [ 0 = Up at all times; 1 = Diurnal (day encounters only); 2 = Nocturnal (night encounters only);]
+	now altcombat entry is "default";
+	now BannedStatus entry is false;
 
 
 Section 3 - Piggybacking Labs
@@ -254,8 +255,8 @@ this is the Choclab piggyback rule:
 		if humanity of player < 1 and bodyname of player is "Chocolate Lab":
 			say "     Subject to the constant influence of the chocolate lab[if labhost is 2]s[end if] infesting your body, your mind slowly begins to melt away, leaving it and your body to be freely reshaped by the chocolate canine[if labhost is 2]s[end if]. The last of your resistance fades and you slowly sink to the ground, melting into a gooey chocolate mess. You feel the [if labhost is 2]labs rejoice as they set about finishing their[else]lab rejoice as it sets about finishing its[end if] work. Sometime later your [if labhost is 2]pack[else]companion[end if] finally separates from your body, waiting eagerly as you pull yourself together, taking the shape of another flowing, chocolate dog. You happily lick and nuzzle your [if labhost is 2]new pack[else]companion[end if] as they return the love, finally welcoming you into the pack properly. With a wet bark they bound off into the city, and you follow behind eagerly, marking the beginning of your simple new life as a chocolate lab.";
 			[puts Chocolate Lab as lead monster for infection and impregnation]
-			repeat with y running from 1 to number of filled rows in table of random critters:
-				choose row y in table of random critters;
+			repeat with y running from 1 to number of filled rows in Table of Random Critters:
+				choose row y in Table of Random Critters;
 				if name entry is "Chocolate Lab":
 					now monster is y;
 					break;
@@ -336,7 +337,7 @@ when play ends:
 					say "     During your time at the camp, you inform the scientists of the lab[if labhost is 2]s[end if] hidden within your body, and eager for more data on your bizarre infection, they set about finding a way to separate the lab[if labhost is 2]s[end if] from you right away. When you awaken from the procedure, you no longer feel the lab[if labhost is 2]s['][else]'s[end if] presence within you, but despite being happy to be rid of them, you find yourself concerned for the lab[if labhost is 2]s[end if] now that they're in the military's hands.";
 			say "     You eventually settle down and become a chocolatier, having some innate feel for preparing it coming from your altered composition. You do have a few close calls early on while near the oven, but manage to move away and re-solidify while you still can. As time goes on, your products become in high demand to those who can afford your gourmet chocolates.";
 			if humanity of player < 50: [Going a little mad]
-				say "     You even start adding some of your white chocolaty cream from your [if player is male and breast size of player > 0]cock and breasts[else if player is male]cock[else]breasts[end if] to special items for special patrons. While not infectious, they do prove to be powerful aphrodisiacs that are most enticing. You keep their special ingredient secret from your clients. Their undocumented addition to your selection further increases your profits and success.";
+				say "     You even start adding some of your white chocolaty cream from your [if player is male and breast size of player > 0]cock and breasts[else if player is male]cock[else if breast size of player > 0]breasts[else]nipples[end if] to special items for special patrons. While not infectious, they do prove to be powerful aphrodisiacs that are most enticing. You keep their special ingredient secret from your clients. Their undocumented addition to your selection further increases your profits and success.";
 			if humanity of player < 25: [...and then going completely mad]
 				say "     After a few years, you are struck with the sudden idea for your most daring and elaborate project yet. With the help of all your apprentices over several uninterrupted days, you are milked for as much white chocolate syrup as you'll give over and over. During this time, you're fed only a diet of pure, white chocolate by your assistants who slowly change, becoming chocolate Labs like you. You insist on only using your own chocolate on this project though, despite many volunteering to give as well.";
 				say "     The chocolate is prepared and heated, then poured into the elaborate, segmented mold you had specially commissioned for this project. When it cools, your team opens it carefully, releasing the large, white chocolate figure. It is a solid, white chocolate version of the creature you met in the city so long ago. You nervously nibble the ends off your fingers as you watch and wait, elated when it starts to move.";

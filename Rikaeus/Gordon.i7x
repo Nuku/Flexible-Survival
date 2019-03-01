@@ -1,5 +1,5 @@
 Version 1 of Gordon by Rikaeus begins here.
-[Version 1 - new npc]
+[Version 1 - new NPC]
 
 [   HP of Gordon                                           ]
 [   0: Not Placed                                          ]
@@ -17,6 +17,10 @@ Version 1 of Gordon by Rikaeus begins here.
 [   1: says he has no motive                               ]
 [   2: Tawnya says that Gordon is Tyler's ex               ]
 [   3: Says that he would've killed Kevin instead          ]
+
+Table of GameCharacterIDs (continued)
+object	name
+Gordon	"Gordon"
 
 Gordon is a man.
 The description of Gordon is "[GordonDesc]".
@@ -74,13 +78,9 @@ to say GordonTalkMenu:
 					say "[GordonMotive]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You shake your head and tell the guard at the door that you don't have anything to say to him. He takes both of you back to lockup.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;
@@ -96,7 +96,7 @@ to say GordonFurEvidence:
 			say "     With a sigh you tell him that you'll do it. The monkey's face lights up with glee when you do. You turn and ask the guard to leave the two of you alone. The wolverine gives you a questioning look but shrugs his shoulders before leaving, probably now standing outside the door. Gordon quickly pushes his chair back so that his legs are open and not under the table. He quickly unbuttons his pants to show you that he goes commando, his dick out for the world to see, already hardening. You quickly move over to the monkey and kneel in front of his cock, taking a quick glance at it before bringing your mouth to the tip. Your tongue darts out and tastes the cock-head, the flavor something that strikes you as good. With that you start licking all over the cock, from the top to simply dragging it all over it, the musk driving you further and further into your task. It's not long before you decide to engulf the entirety of the cock with your mouth, diving right onto it.";
 			say "     During all of this, the monkey is moaning loudly, clearly enjoying your blowjob skills. Eager to cum, Gordon takes control of your head and begins to thrust quickly into your mouth. You take the facefucking rather well, thankfully the monkey knowing not to keep your down long enough for your gag reflex to kick in for long. You're able to tell that the monkey is getting close to cumming by the fact that as time goes on, he's getting more and more desperate with his thrusts. Sure enough, you can feel his cock tense as he thrusts you down completely on him. Ropes of cum start to spurt out of Gordon's manhood and into your stomach. You swallow the cum as best as you can, the fact that he's balls deep in you probably helps the situation.";
 			WaitLineBreak;
-			say "     Soon though, the monkey's orgasm comes to an end and he pulls out. In an odd gesture, he wipes the cum off of his cock-head and... licks it off his hand? Well, it's not completely odd, you're sure other people do that. Swallowing once more to get rid of any leftover cum, you stand up. 'That was a great blowjob. But as you can see, I'm one hundred percent pure black fur,' Gordon says with a satisifed smile. You nod, but something catches your attention as he turns around to pull his pants up. You spot a small area on his ass that is actually brown and seems to be missing some fur. Could it really be that simple?. Shaking your head and deciding to think about it later, you call the wolverin guard in. Once he's in, you tell him that the two of you are done... talking. He gives you an odd look before shrugging his shoulders. The guy takes the two of you back to lockup where you wonder what your next step is, and if Gordon could possibly be the murderer.";
+			say "     Soon though, the monkey's orgasm comes to an end and he pulls out. In an odd gesture, he wipes the cum off of his cock-head and... licks it off his hand? Well, it's not completely odd, you're sure other people do that. Swallowing once more to get rid of any leftover cum, you stand up. 'That was a great blowjob. But as you can see, I'm one hundred percent pure black fur,' Gordon says with a satisfied smile. You nod, but something catches your attention as he turns around to pull his pants up. You spot a small area on his ass that is actually brown and seems to be missing some fur. Could it really be that simple?. Shaking your head and deciding to think about it later, you call the wolverine guard in. Once he's in, you tell him that the two of you are done... talking. He gives you an odd look before shrugging his shoulders. The guy takes the two of you back to lockup where you wonder what your next step is, and if Gordon could possibly be the murderer.";
 			now GordonFurSuspicion is 2;
 		else:
 			say "     You shake your head at the monkey and decline his offer, telling him that for now you'll take him at his word. 'Aw, really? Well, if you want to then you know where to find me,' Gordon says with a disappointed look on his face. You turn to the guard and tell him that you're done with this suspect for now. The wolverine nods at you and grabs the guy by his arm and takes you and him back to lockup. There you wonder what you'll do next. Should you go back to the monkey and show him the fur again, accepting his offer or find out some other way?";
@@ -111,10 +111,10 @@ to say GordonFurEvidence:
 			say "     With a sigh you tell him that you'll do it. The monkey's face lights up with glee when you do. You turn and ask the guard to leave the two of you alone. The wolverine gives you a questioning look but shrugs his shoulders before leaving, probably now standing outside the door. Gordon quickly pushes his chair back so that his legs are open and not under the table. He quickly unbuttons his pants to show you that he goes commando, his dick out for the world to see, already hardening. You quickly move over to the monkey and kneel in front of his cock, taking a quick glance at it before bringing your mouth to the tip. Your tongue darts out and tastes the cock-head, the flavor something that strikes you as good. With that you start licking all over the cock, from the top to simply dragging it all over it, the musk driving you further and further into your task. It's not long before you decide to engulf the entirety of the cock with your mouth, diving right onto it.";
 			say "     During all of this, the monkey is moaning loudly, clearly enjoying your blowjob skills. Eager to cum, Gordon takes control of your head and begins to thrust quickly into your mouth. You take the facefucking rather well, thankfully the monkey knowing not to keep your down long enough for your gag reflex to kick in for long. You're able to tell that the monkey is getting close to cumming by the fact that as time goes on, he's getting more and more desperate with his thrusts. Sure enough, you can feel his cock tense as he thrusts you down completely on him. Ropes of cum start to spurt out of Gordon's manhood and into your stomach. You swallow the cum as best as you can, the fact that he's balls deep in you probably helps the situation.";
 			WaitLineBreak;
-			say "     Soon though, the monkey's orgasm comes to an end and he pulls out. In an odd gesture, he wipes the cum off of his cock-head and... licks it off his hand? Well, it's not completely odd, you're sure other people do that. Swallowing once more to get rid of any leftover cum, you stand up. 'That was a great blowjob. But as you can see, I'm one hundred percent pure black fur,' Gordon says with a satisifed smile. You nod, but something catches your attention as he turns around to pull his pants up. You spot a small area on his ass that is actually brown and seems to be missing some fur. Could it really be that simple?. Shaking your head and deciding to think about it later, you call the wolverin guard in. Once he's in, you tell him that the two of you are done... talking. He gives you an odd look before shrugging his shoulders. The guy takes the two of you back to lockup where you wonder what your next step is, and if Gordon could possibly be the murderer.";
+			say "     Soon though, the monkey's orgasm comes to an end and he pulls out. In an odd gesture, he wipes the cum off of his cock-head and... licks it off his hand? Well, it's not completely odd, you're sure other people do that. Swallowing once more to get rid of any leftover cum, you stand up. 'That was a great blowjob. But as you can see, I'm one hundred percent pure black fur,' Gordon says with a satisfied smile. You nod, but something catches your attention as he turns around to pull his pants up. You spot a small area on his ass that is actually brown and seems to be missing some fur. Could it really be that simple?. Shaking your head and deciding to think about it later, you call the wolverine guard in. Once he's in, you tell him that the two of you are done... talking. He gives you an odd look before shrugging his shoulders. The guy takes the two of you back to lockup where you wonder what your next step is, and if Gordon could possibly be the murderer.";
 			now GordonFurSuspicion is 3;
 		else:
-			say "     Shaking your head, you again decline the monkey's advances. Gordon sighs at you before he too, shakes his head. 'Darn! I'll wear you down soon enough,' he says. You roll your eyes at that, before turning to the wolverine guard. The guy asks you if you want to return to the lockup, to which you nod. Taking that as agreement, he takes the suspect by the arm and guides the two of you back to where you were prior to interrogation. There you muse about what you should do. If you really don't want to get the information about Gordon by blowing him, then maybe his coworkers know something, just show them the fur. ";
+			say "     Shaking your head, you again decline the monkey's advances. Gordon sighs at you before he too, shakes his head. 'Darn! I'll wear you down soon enough,' he says. You roll your eyes at that, before turning to the wolverine guard. The guy asks you if you want to return to the lockup, to which you nod. Taking that as agreement, he takes the suspect by the arm and guides the two of you back to where you were prior to interrogation. There you muse about what you should do. If you really don't want to get the information about Gordon by blowing him, then maybe his coworkers know something, just show them the fur.";
 
 to say GordonMotive:
 	if GordonMotive is 0:
@@ -127,7 +127,7 @@ to say GordonMotive:
 
 instead of fucking Gordon:
 	if HP of Gordon is 1:
-		say "     The monkey makes a laughing sound, not disimilar to his current species. 'If you want to fuck then maybe somewhere private ahah!' he says, smiling lewdly at you.";
+		say "     The monkey makes a laughing sound, not dissimilar to his current species. 'If you want to fuck, then maybe somewhere private, ahah!' he says, smiling lewdly at you.";
 	else if (lastfuck of Gordon - turns < 6): [he got fucked in the last 18 hours = 6 turns]
 		say "     Despite the fact that he's practically forced to obey your orders, it seems the magic has a failsafe to allow him time to recover. So instead you step away to allow that to happen.";
 	else if HP of Gordon is 2:
@@ -153,7 +153,7 @@ to say GordonSexMenu:
 	][
 	if player is male: [only males and herms can fuck him]
 		choose a blank row in table of fucking options;
-		now title entry is "Fuck the unrepentent monkey";
+		now title entry is "Fuck the unrepentant monkey";
 		now sortorder entry is 3;
 		now description entry is "Take Gordon's ass for a ride";
 	][
@@ -187,7 +187,7 @@ to say GordonSexMenu:
 					say "[GordonSex1]";
 				if (nam is "Suck Gordon off"):
 					say "[SonnySex2]";
-				if (nam is "Fuck the unrepentent monkey"):
+				if (nam is "Fuck the unrepentant monkey"):
 					say "[GordonSex3]";
 				if (nam is "Take Gordon's shaft in your pussy"):
 					say "[GordonSex4]";
@@ -195,13 +195,9 @@ to say GordonSexMenu:
 					say "[GordonSex5]";
 				wait for any key;
 		else if calcnumber is 0:
-			say "Break off the conversation?";
-			if player consents:
-				now sextablerun is 1;
-				say "     You step away from the enslaved monkey, who oddly looks a bit disappointed.";
-				wait for any key;
-			else:
-				say "Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
+			now sextablerun is 1;
+			say "     You step away from the enslaved monkey, who oddly looks a bit disappointed.";
+			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
 	clear the screen and hyperlink list;

@@ -1,5 +1,9 @@
 Version 1 of Walkinmall by Ssely begins here.
 
+Table of GameEventIDs (continued)
+Object	Name
+Mall Wandering	"Mall Wandering"
+
 Mall Wandering is a situation.
 The sarea of Mall Wandering is "Smith Haven".
 
@@ -11,6 +15,10 @@ instead of resolving Mall Wandering:
 	LineBreak;
 	say "     After a while, it seems that the walls, shops, and residents repeat - passing by barely noticed as your mind is lost in thought. Shaking off your moody trance, you realize that you've done a whole circuit of the place, ending up where you started.";
 	now Mall Wandering is resolved;
+
+Table of GameEventIDs (continued)
+Object	Name
+Mall Orgy	"Mall Orgy"
 
 Mall Orgy is a situation.
 The sarea of Mall Orgy is "Smith Haven".
@@ -45,35 +53,42 @@ instead of resolving Mall Orgy:
 				say "     It seems to you that the dominant species in this impromptu orgy are the hyena and wyvern - while the ram has been pushed to the floor, the hyena's cock pulsing inside of him and marking the former soldier as a bottom-boy now. Across from them lie the gryphon and wyvern - their grunts and humping indicating that the gryphon is having a great time being fucked. Of course you stay to watch even more and start getting some ideas about that damn otter - showing off to you with his slim, femmy body that matches his partly-mustelid features so very well. However, you resist the temptation - standing up right now would be a bit difficult without flashing your cock to all those who pass the side corridor, for now oblivious to the things going on in there. Nah, you'll restrain yourself to just wanking off on the down-low right now...";
 				WaitLineBreak;
 				say "     In time, your stroking speeds up - the five horny guys you are watching still going at it, endlessly giving into their pleasure. Soon, your cock throbs hard in your grasp before spurting it's stickiness into your hands and over the floor. When your orgasm eventually ebbs off, you don't bother to clean up, instead just quietly shoving your dick back into your pants and zipping up. Standing up and walking away a little way, you chuckle to yourself as you spot the now fully-changed guys emerge from their service corridor a few minutes later. The nanites did change their bodies even more, and now there are two anthro wyverns, two hyenas, and a nearly fully changed otter hiding in their group. The otter smiles at you for a second or two, then follows his friends as they wander off towards the food court.";
+				now Resolution of Mall Orgy is 1; [Stayed, Male]
 				now Mall Orgy is resolved;
 			else if player is female: [intended to only allow /pure/ females through]
 				say "     You just sit there, watching over them, your pussy wet with arousal - your digits rubbing over its flesh to the act of public perversion before you. It turns you on - a lot - your nanite-filled head enjoying the thought of showing off in public - enjoying the thought of watching others - enjoying the scent of sex that lies over the city - and the mall. Your head awash with feelings of arousal as you stroke, you see the young men in front of you changing more with every moment - each one of them is taking on some aspect of his partner, as they swap body fluids... and nanites.";
-				say "     It seems to you that the dominant species in this impromptu orgy are the hyena and wyvern - while the ram has been pushed to the floor, the hyena's cock pulsing inside of him and marking the former soldier as a bottom-boy now. Across from them lie the gryphon and wyvern - their grunts and humping indicating that the gryphon is having a great time being fucked. Of course you stay to watch even more, and start getting some ideas about that damn otter - showing off to you with his femmy, slim body matching his partly-mustelid features so very well. However, you resist temptation and decide to just have some fun with yourself. ";
+				say "     It seems to you that the dominant species in this impromptu orgy are the hyena and wyvern - while the ram has been pushed to the floor, the hyena's cock pulsing inside of him and marking the former soldier as a bottom-boy now. Across from them lie the gryphon and wyvern - their grunts and humping indicating that the gryphon is having a great time being fucked. Of course you stay to watch even more, and start getting some ideas about that damn otter - showing off to you with his femmy, slim body matching his partly-mustelid features so very well. However, you resist temptation and decide to just have some fun with yourself.";
 				WaitLineBreak;
 				say "     In time, your teasing speeds up - following the five horny guys still going at it, endlessly giving into their pleasure. Soon, a breathtaking orgasm makes you tremble and pant, wetness dripping from your nether lips. You don't bother to clean up, instead just covering your crotch again. Standing up and walking away a little way, you chuckle to yourself as you spot the now fully-changed guys emerge from their service corridor a few minutes later. The nanites did change their bodies even more, and now there are two anthro wyverns, two hyenas, and a nearly fully changed otter hiding in their group. The otter smiles at you for a second or two, then follows his friends as they wander off towards the food court.";
+				now Resolution of Mall Orgy is 2; [Stayed, Female]
 				now Mall Orgy is resolved;
 			else: [intended for a filter for neuters]
 				say "     Having nothing to get off with, you decide to leave anyways. You wouldn't want to get worked up and not be able to work off the tension."; [no cock, no cunt, no fun :()]
-			now OtterBoi Meeting is not resolved;
+			now OtterBoi Meeting is active;
 			[MallOrgy will be found again until they can successfully have fun...]
 		else:
 			say "     You decide against staring and just leave with a shrug.";
 	else:
 		LineBreak;
 		say "     You decide against staring and just leave with a shrug.";
+		now Resolution of Mall Orgy is 99; [Player not interested]
 		now Mall Orgy is resolved;
 
-OtterBoi Meeting is a situation. OtterBoi Meeting is resolved.
+Table of GameEventIDs (continued)
+Object	Name
+OtterBoi Meeting	"OtterBoi Meeting"
+
+OtterBoi Meeting is a situation. OtterBoi Meeting is inactive.
 The sarea of OtterBoi Meeting is "Smith Haven".
 
 instead of resolving OtterBoi Meeting:
 	if debugactive is 1:
 		say "     DEBUG: Meeting the otterboi from the previous scene in this file.";
-	say "     You push forward through the mall, the walls oh-so familiar at this point - seeming to be memorized in the palm of your hand. Weirdly, during your time exploring the mall you come back to thinking about the cute otter you got off to - his blushing cheeks burnt into your mind, the sight of those webbed paws, that awkwardly grinning face... God... Wait, no! Did the nanites put those thoughts in your head? That must be it, right? You can't get your thoughts straight, so much so that you don't realize where you are going... Then suddenly, you bump into an unknown creature, the lightly furred form of his skin rubbing up against yours whilst you recoup your senses. As soon as you look up, you spot light brown, slightly oily fur - it is the very otter that you were just thinking about!";
+	say "     You push forward through the mall, the walls oh-so familiar at this point - seeming to be memorized in the palm of your hand. Weirdly, during your time exploring the mall you come back to thinking about the cute otter you got off to - his blushing cheeks burnt into your mind, the sight of those webbed paws, that awkwardly grinning face... God... Wait, no! Did the nanites put those thoughts in your head? That must be it, right? You can't get your thoughts straight, so much so that you don't realize where you are going... Then suddenly, you bump into an unknown creature, the lightly furred form of his skin rubbing up against yours while you recoup your senses. As soon as you look up, you spot light brown, slightly oily fur - it is the very otter that you were just thinking about!";
 	say "     You apologize immediately for walking into him, just hoping that he doesn't recognize your face from earlier. But of course, he does - instantly. The young guy starts stuttering, clearly flustered by embarrassment - and even more so as you rub your hands over his back, trying to comfort him. Wait, what? You didn't... Gaah! It seems that some nanites want to speed things along, whispering to your body to do things of its own accord - or at least, doing things before you can even decide what you really want to do. 'O-Oh, um... Sorry...' the cute little otter stutters out, his lips trembling visibly - the memory of your previous encounter (and his little show during it) obviously having been engraved into his mind, too. You wonder if that was the nanite's doing, or if he was just an exhibitionist even before the infection...";
 	WaitLineBreak;
 	say "     You chuckle, dismissing his apology and pat off his shoulders, finally managing to quell those thoughts and impulses that sprung up earlier. You watch over his shuddering form, grinning - and can't help but enjoy how easily you reduced him into a squirming mess. Alas, you fix your foggy head and wave him a goodbye, leaving him there, trembling because of your presence. Perhaps you'll bump into him again someday, perhaps not. The infection seems to take away people you see everyday, and judging by how blushy he was... He might just submit at some point.";
 	now OtterBoi Meeting is resolved;
-	[ now XXX is not resolved;   [enable follow-up events as needed]]
+	[ now XXX is active;   [enable follow-up events as needed]]
 
 Walkinmall ends here.
