@@ -16,7 +16,7 @@ For Breeding Alexandra
 Player
 Likes/fetishes: male doms, female subs or power bottom, Impregnation/Breeding, pregnancy, threesomes/multiple partners, collars with titles on them like breeder, tattoos with titles on them like breeder, oral and dirty talk for cock and ball worship, big balls, lots of cum, dirty talk
 Dislikes: vore, unbirth, death, permanent appearance tf,  mind control [90% of the time], hard bondage by itself
-Other comments: i like culting and peer pressure, like if someone likes getting bred they also what others to get bred too and they want to help make that happen, coerce them, and/or force them to do it. But it's nothing they wouldn't do themselves and prefer would do it with them and help them revel in the good parts
+Other comments: I like culting and peer pressure, like if someone likes getting bred they also what others to get bred too and they want to help make that happen, coerce them, and/or force them to do it. But it's nothing they wouldn't do themselves and prefer would do it with them and help them revel in the good parts
 i like it when someone is so interested in something that the conviction they have drives them to find others to help or make them experience it.
 
 Character
@@ -30,12 +30,12 @@ I prefer creature gender to be: female or male
 When winning a fight, I like as its aftermath: sex, dom,
 When losing a fight, I like as its aftermath: sex, sub, food and water taken
 The following creatures I like the most (why?): most M or H/F
-The following creatures I dislike the most (why?): those with content i don’t like or cause tf easily
+The following creatures I dislike the most (why?): those with content I don't like or cause tf easily
 This creature or infection could use an update (multiple possible, say what you think needs work): minotaur
 I'd love to see as new creature: new tentacle monster
 
 NPCs
-I always/often bring home/visit these NPCs: always most to all of the ladies, when playing female i usually pick up fang and most of the men that are sexable art bunker except the pig
+I always/often bring home/visit these NPCs: always most to all of the ladies, when playing female I usually pick up fang and most of the men that are sexable art bunker except the pig
 Threesomes and/or extra scenes between these bunker/library NPCs would be awesome:
 The following NPCs I like the most (why?): Alexandra Nadia, Fang, Amy, Sarah and other ladies that interact with others
 The following NPCs I dislike the most (why?): pig and because he is a slob
@@ -260,10 +260,10 @@ to say AlexandraBrutusBreedingThreesome:
 	say "     Moving closer to the former cop that you made your breeding bitch, you cup one of her breasts with your hand and lightly pinch her nipple, drawing a shuddering breath from Alexandra. Your other hand moves to her hip, stroking the short fur of her side, followed by a demanding kiss of her muzzle. Even with her panties in a twist as she is right now, Alexandra still reacts positively to your touch, obedience to her [master] cemented in her innermost self since you broke and claimed her. Making out with your canine companion, you stroke and touch her body, feeding the fires of her arousal until they're well and truly lit. Going back and forth to suckle on her erect nipples, you make the bitch whimper and pant in need. Finally snaking a hand into her jeans, you dip two fingers into the dripping wet snatch of the anthro dog, making her gasp in pleasure as you curl your digits and rub her insides.";
 	say "     With your fingers inside her and your thumb on the pleasure-button of her clit, you tell the horny canine that she doesn't have to worry about taking Brutus's girth on her own. You'll be with her all the way, temper his worst urges and take that thick cock right along your favorite dobie. Her answer is delivered in breathless pants and ecstatic barks, especially as you keep caressing her while she speaks, teasing Alexandra even as she speaks. 'God, boss! You're *nnnghhfffuuckkk!* one kinky [bodyname of player in lower case]! Shit like this makes me glad I'm your bitch - your breeding bitch! *Oooh, do that again!*' You reward the former cop with some more stroking and touching, basically finger-fucking her for a little while before pulling out and presenting your hand for her to lick clean.";
 	WaitLineBreak;
-	say "     After slurping up her own juices like a good little bitch, she puts on a challenging expression and barks out, 'Sure he don't just wanna keep going, just the two of us? Hah, just kidding, I know you want to put that brute of a breeding stud into action!' ";
+	say "     After slurping up her own juices like a good little bitch, she puts on a challenging expression and barks out, 'Sure he don't just wanna keep going, just the two of us? Hah, just kidding, I know you want to put that brute of a breeding stud into action!'";
 	WaitLineBreak;
 	project the figure of BrutusEvil_icon;
-	say "You give Alexandra a broad grin and tell her what a good dog she is, then add a command for her to strip and nod over to one of the library sofas not too far away. As the doberwoman saunters towards it, drawing your eye with her wagging tail and enticingly swinging hips, you ";
+	say "     You give Alexandra a broad grin and tell her what a good dog she is, then add a command for her to strip and nod over to one of the library sofas not too far away. As the doberwoman saunters towards it, drawing your eye with her wagging tail and enticingly swinging hips, you ";
 	if companion of player is demon brute: [already summoned]
 		say "stroke the curve of your demontooth amulet and turn your head towards Brutus, the huge purple beast you have taken as your controlled slave. He's standing close by, his huge purple shaft erect and throbbing from the show he just witnessed. With a growling voice, he asks, 'Yes... [master]?' ";
 	else: [not the active companion]

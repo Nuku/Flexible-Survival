@@ -242,16 +242,16 @@ carry out Vixenposing:
 		let bonus be (( the dexterity of the player minus 10 ) divided by 2);
 		if Kristen is visible, increase bonus by 2;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 16:
-			say "     'That's it! Now you are getting it!' Janice exclaims happily, as you begin to move and sway your body with an increasing amount of control[if Kristen is visible]. Kristen assists you as well, caressing a paw here or there to help you find the desired poses[end if]. The new positions become much more natural as [if Kristen is visible]Janice[else]she[end if] makes a few small corrections to your form, before pulling you to her in a happy kiss. Soon you find yourself grinning as she settles back down on her couch to watch you strut your new stuff, and as you strike an increasingly slutty and sexy pose for the lusty vixen[if Kristen is visible]s[end if], you find yourself sure that it will be hard for anyone to resist your charms now!";
+			say "'That's it! Now you are getting it!' Janice exclaims happily, as you begin to move and sway your body with an increasing amount of control[if Kristen is visible]. Kristen assists you as well, caressing a paw here or there to help you find the desired poses[end if]. The new positions become much more natural as [if Kristen is visible]Janice[else]she[end if] makes a few small corrections to your form, before pulling you to her in a happy kiss. Soon you find yourself grinning as she settles back down on her couch to watch you strut your new stuff, and as you strike an increasingly slutty and sexy pose for the lusty vixen[if Kristen is visible]s[end if], you find yourself sure that it will be hard for anyone to resist your charms now!";
 			infect "Arctic fox";
 			if charisma of player < 24:
 				increase charisma of player by 1;
 				say "[bold type]Your charisma has increased by 1![roman type][line break]";
 		else:
-			say "     You sigh as your sad attempt to pose and shift your body like a properly sexy fox fails miserably, and while Janice manages not to laugh at you outright, you can see the twinkle of amusement in her eyes as you once more trip over your own feet before giving up the attempt for now...";
+			say "You sigh as your sad attempt to pose and shift your body like a properly sexy fox fails miserably, and while Janice manages not to laugh at you outright, you can see the twinkle of amusement in her eyes as you once more trip over your own feet before giving up the attempt for now...";
 			decrease HP of player by 10;
 	else:
 		say "     'Show you how to show off your body properly? Now why should I do a think like that for you?' Janice asks slightly scornfully as she looks you up and down for a minute before shaking her head sadly. 'No, sorry. Maybe if you were interested in being a properly sexy fox, I might consider it... but I don't just give out tips to just anyone after all,' the sexy vixen says with a dismissive flick of her fluffy white tail, before going back to stroking her soft fur absently and ignoring you.";

@@ -51,10 +51,10 @@ Instead of resolving a Raided Corner Store:
 	say "     ([link]Y[as]y[end link]) - Yes.";
 	say "     ([link]N[as]n[end link]) - No.";
 	if player consents:
-		say "     You kick and slam at the door several times, with growing frustration as you fail to have any effect. The door is quite sturdy, and would have to be to have survived any previous scavengers. After giving it one last kick, you turn away in frustration, only to see the commotion has attracted others. There are now a pair of hyenas between you and the exit.[line break]";
+		say "     You kick and slam at the door several times, with growing frustration as you fail to have any effect. The door is quite sturdy, and would have to be to have survived any previous scavengers. After giving it one last kick, you turn away in frustration, only to see the commotion has attracted others. There are now a pair of hyenas between you and the exit.";
 		if hyg is 4:
 			if the bodyname of player is "Herm Hyena" or facename of player is "Hyena Herm":
-				say "     As one of the pair is about to step forward to deal with you, the other grabs hir shoulder, holding them back. The second steps forward, looking you over more carefully. 'Hey, I think I heard about you from Gina. You certainly smell like you've met her. Could you use some help there?' You nod and the hyenas join you by the door. One has some lockpicks and they soon get the door open. Little of the stores inside are usable, most having been eaten or damaged already. Presumably the owner was holed up in here. Before they succumbed to the infection and presumably left to the wilds of the city, that is. But there is still some the usable loot. You split your find with the hyenas, taking a couple of drinks and snacks each before you and they go your separate ways.[line break]";
+				say "     As one of the pair is about to step forward to deal with you, the other grabs hir shoulder, holding them back. The second steps forward, looking you over more carefully. 'Hey, I think I heard about you from Gina. You certainly smell like you've met her. Could you use some help there?' You nod and the hyenas join you by the door. One has some lockpicks and they soon get the door open. Little of the stores inside are usable, most having been eaten or damaged already. Presumably the owner was holed up in here. Before they succumbed to the infection and presumably left to the wilds of the city, that is. But there is still some the usable loot. You split your find with the hyenas, taking a couple of drinks and snacks each before you and they go your separate ways.";
 				say "     You obtain two snacks and two soft drinks.";
 				increase score by 10;
 				increase carried of soda by 2;
@@ -174,10 +174,10 @@ to say stripbarsearch:
 		increase carried of soda by 1;
 		increase score by 1;
 	if T is 3:
-		say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You look around as best you can, but the extent of the contamination is too great and you have to give up the place for a loss. As you step out, you are spotted by a tigress who emerges from a nearby alleyway. She grins at you and runs a paw along her side. 'Looking for a little fun, are we? I've got just what you need,' she purrs, fondling a sizeable bulge under hir skirt.[line break]";
+		say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You look around as best you can, but the extent of the contamination is too great and you have to give up the place for a loss. As you step out, you are spotted by a tigress who emerges from a nearby alleyway. She grins at you and runs a paw along her side. 'Looking for a little fun, are we? I've got just what you need,' she purrs, fondling a sizeable bulge under hir skirt.";
 		challenge "Tigress Hooker";
 	if T is 4:
-		say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You start to look around as best you can, but you are interrupted when a large, shemale collie bursts out of the backstage area. 'I was looking to see if there were still any of the sexy girls back there to bear my puppies, but now I've got you instead.' Shi grins at you and crosses the distance between you even as you try to run out. You manage to make it outside before shi catches up with you, pulling you into a fight.[line break]";
+		say "     Searching the strip bar, take care to avoid the cum puddles you find in there. Clearly this place was open when the infection struck and the patrons and staff fell quickly. You start to look around as best you can, but you are interrupted when a large, shemale collie bursts out of the backstage area. 'I was looking to see if there were still any of the sexy girls back there to bear my puppies, but now I've got you instead.' Shi grins at you and crosses the distance between you even as you try to run out. You manage to make it outside before shi catches up with you, pulling you into a fight.";
 		challenge "Shemale Smooth Collie";
 	if T is 5:
 		say "     Searching through the strip bar, you navigate cautiously around the tables and puddles of cum. It seems that this place was struck rather hard when the infection took hold. Despite outer appearances, the inside has been quite devastated. You decide to head back out, but not in time. A large glob of cum which was stuck to the ceiling comes down right on top of you. You try your best to wipe it off, but you can feel the tingles of the infection."; [random infection]
@@ -216,40 +216,40 @@ when play begins:
 
 Instead of resolving a Evangelist:
 	say "     While trying to cross between stopped cars at a large intersection, you are stopped by the sound of someone climbing onto a car. Still hunkered down, you see an unchanged human. Unshaven for several days and dressed in dirty clothes, he smells strongly of alcohol. He is wild-eyed and waves a bible around as he start yelling at no one. He goes on incoherently about sinners, Babylon, bedding down with animals, damnation and so forth. You try to calm him down, but he will have none of it. Clearly overwrought by witnessing the transforming populous from his hiding spot, he's gone off the deep end. From some of his rambling, you gather he's always been upset by the lascivious nature of the neighborhood around his home.";
-	say "     Before you can get him to be quiet long enough to talk, it's too late. Drawn by the ruckus, the nearby monsters have taken notice and approach the intersection from all sides. Seeing an unchanged human, they go ballistic and charge forward. With you between them, you are forced to struggle against the maddened tide of lustful monsters.[line break]";
+	say "     Before you can get him to be quiet long enough to talk, it's too late. Drawn by the ruckus, the nearby monsters have taken notice and approach the intersection from all sides. Seeing an unchanged human, they go ballistic and charge forward. With you between them, you are forced to struggle against the maddened tide of lustful monsters.";
 	if a random chance of 1 in 3 succeeds, now battleground is "Outside";
 	fight;
 	now battleground is "Red";
-	say "     Looking up during a brief moment of respite, you see the would-be evangelist swinging his hardcover bible like a club, still screaming incessantly about the corruption of the flesh. Madness has given him strength and he manages to keep the monsters from climbing onto the car roof. The fact that many of the second ring of monsters around him are trying to mate those closer help him as well. Before you can consider whether to push forward to help him or try to make your escape, you are drawn into another fight.[line break]";
+	say "     Looking up during a brief moment of respite, you see the would-be evangelist swinging his hardcover bible like a club, still screaming incessantly about the corruption of the flesh. Madness has given him strength and he manages to keep the monsters from climbing onto the car roof. The fact that many of the second ring of monsters around him are trying to mate those closer help him as well. Before you can consider whether to push forward to help him or try to make your escape, you are drawn into another fight.";
 	if a random chance of 1 in 3 succeeds, now battleground is "High";
 	fight;
 	now battleground is "Red";
-	say "     Having dealt with the next, you look over just in time to see the man get blasted across the face by a large splatter of cum. Turning to the side, you see a trio of leather-clad wolves with their arms around the body of one of the large, cock-shaped creatures. They stroke and tease it again, this time one mounting it from behind as the others aim. Another volley is shot, striking the man in the chest. He's already begun to transform, face taking the smooth shape of a giant glans and torso reshaping into a giant cock. The press of fur and flesh around you brings another monster to press against you, trying to bear you down to take its pleasure.[line break]";
+	say "     Having dealt with the next, you look over just in time to see the man get blasted across the face by a large splatter of cum. Turning to the side, you see a trio of leather-clad wolves with their arms around the body of one of the large, cock-shaped creatures. They stroke and tease it again, this time one mounting it from behind as the others aim. Another volley is shot, striking the man in the chest. He's already begun to transform, face taking the smooth shape of a giant glans and torso reshaping into a giant cock. The press of fur and flesh around you brings another monster to press against you, trying to bear you down to take its pleasure.";
 	if a random chance of 1 in 3 succeeds, now battleground is "Outside";
 	fight;
 	now battleground is "Red";
 	say "     Taking a quick breath, you look back to what remains of the man, but find him but another piece of the writhing mass of orgiastic sex. Only the tattered remains of his clothes let you spot him, he is shifting almost constantly as he is spit-roasted by a leopard guy at the front and a raccoon herm at the rear. Several others stroke their cocks, spraying cum all over him, and he seems to be loving it. Lost in the release of his long pent-up inhibitions, he has joined the mindlessly infected.";
 	if libido of player > 39:
-		say "     The sights, sounds and scents around you are becoming more and more cloying. You look around, seeing so many attractive pairings and trios of lustful animals. You are tempted to join them - to simply give into the lustful mass and join the orgy.";
+		say "     The sights, sounds and scents around you are becoming more and more cloying. You look around, seeing so many attractive pairings and trios of lustful animals. You are tempted to join them - to simply give in to the lustful mass and join the orgy.";
 		if libido of player > 74:
 			say "[orgyoutcome]";
 			increase score by 50;
 			now Evangelist is resolved;
-			stop the action;
-		say "     [bold type]You are tempted to join them - to simply give into the lustful mass and join the orgy.[roman type][line break]";
-		LineBreak;
-		say "     ([link]Y[as]y[end link]) - Join them.";
-		say "     ([link]N[as]n[end link]) - Leave.";
-		if player consents:
-			say "[orgyoutcome]";
-			increase score by 50;
-			now Evangelist is resolved;
-			stop the action;
-	say "     You resist the urge to give in and join the orgy that has formed after the battle and scan around the sea of fur and flesh surrounding you. You notice the leather wolves are still at it with the cock cannon and one of them points towards you, trying to get the attention of his lustful brethren. You need to get out of here soon. Finding a path between several mating pairs, you try to dash to safety before things cascade further. You run, making it most of the way out of the crowd before being blocked by another monster.[line break]";
-	fight;
-	say "     Pushing your way free, you move to the relative safety of a nearby alcove, panting to catch your breath and to recover you energy. You look back at the top of the car, seeing that the leopard has prevailed against the other prospective lovers and is now plowing into the newly corrupted leopardess beneath him. They both yowl in feline ecstasy as he pumps his heavy load into her womb, seeking to breed his new mate.";
-	increase score by 50;
-	now Evangelist is resolved;
+		else:
+			say "     [bold type]Do you choose to participate?[roman type][line break]";
+			LineBreak;
+			say "     ([link]Y[as]y[end link]) - Join them.";
+			say "     ([link]N[as]n[end link]) - Leave.";
+			if player consents:
+				say "[orgyoutcome]";
+				increase score by 50;
+				now Evangelist is resolved;
+			else:
+				say "     You resist the urge to give in and join the orgy that has formed after the battle and scan around the sea of fur and flesh surrounding you. You notice the leather wolves are still at it with the cock cannon and one of them points towards you, trying to get the attention of his lustful brethren. You need to get out of here soon. Finding a path between several mating pairs, you try to dash to safety before things cascade further. You run, making it most of the way out of the crowd before being blocked by another monster.";
+				fight;
+				say "     Pushing your way free, you move to the relative safety of a nearby alcove, panting to catch your breath and to recover you energy. You look back at the top of the car, seeing that the leopard has prevailed against the other prospective lovers and is now plowing into the newly corrupted leopardess beneath him. They both yowl in feline ecstasy as he pumps his heavy load into her womb, seeking to breed his new mate.";
+				increase score by 50;
+				now Evangelist is resolved;
 
 to say orgyoutcome:
 	say "     Giving in to the temptation of so many sexy creatures around you, you pounce at a nearby herm unicorn and wrap your lips around hir cock-like clit. You lick and suck over it, moaning in pleasure as the lust fills you. Shi is covered in soft, white hair which you run your hands over as you cup hir ass. Shi has no visible balls for you to play with, so you stuff a few fingers into hir dripping puss. Shi's already been seeded during the orgy and the cum leaks down over your hand.";

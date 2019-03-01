@@ -45,14 +45,14 @@ Instead of going to Monkey House for the first time:
 
 instead of conversing Hanu:
 	if Monkey Duel is inactive:
-		say "'Are you reconsidering my offer?' Hanu asks in return of your greetings. 'Do you wish to train with me?'";
+		say "     'Are you reconsidering my offer?' Hanu asks in return of your greetings. 'Do you wish to train with me?'";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
 		if player consents:
 			LineBreak;
-			say "Deciding what the hey you move over to where the other creature is, hopping over the fence that separates you both as you do, and then step over to the monkey man. What happens next turns out to be something you hadn't been expecting because instead of sex... you wind up finding yourself being asked several strange questions by the other, whose name happens to Hanu, and then being shown several strange yoga positions, which you find yourself going through with some problems. The next hour and a half of your life ends up being spent with Hanu meditating, a strange practice in and of itself, all things considered. However, end up finding yourself very refreshed once the moment is done.";
-			say "'That was fun.' Hanu slowly uncrosses his legs and then uses his tail to lift himself up onto his feet. 'I think that I'm going to go and head back for home now. I hope you take well care of yourself[if player is not defaultnamed], [name of player][end if].' And with that Hanu springs up over your head up onto the concrete wall that divides the zoo from the outside world, turns to wave at you and then disappears out of sight. Not sure what that was about you mildly wonder who that crazy monkey guy was.";
+			say "     Deciding what the hey, you move over to where the other creature is, hopping over the fence that separates you both as you do, and then step over to the monkey man. What happens next turns out to be something you hadn't been expecting, because instead of sex, you wind up finding yourself being asked several strange questions by the other, whose name happens to Hanu, and then being shown several strange yoga positions, which you find yourself going through with some problems. The next hour and a half of your life end up being spent with Hanu meditating, a strange practice in and of itself, all things considered. However, you end up finding yourself very refreshed once the moment is done.";
+			say "     'That was fun.' Hanu slowly uncrosses his legs and then uses his tail to lift himself up onto his feet. 'I think that I'm going to go and head back for home now. I hope you take well care of yourself[if player is not defaultnamed], [name of player][end if].' And with that, Hanu springs up over your head up onto the concrete wall that divides the zoo from the outside world, turns to wave at you, and then disappears out of sight. Not sure what that was about, you idly wonder who that crazy monkey guy was.";
 			decrease libido of player by 10;
 			if libido of player < 0, now libido of player is 0;
 			increase humanity of player by 20;
@@ -63,15 +63,15 @@ instead of conversing Hanu:
 	else if Monkey Duel is unresolved and (Take My Royal Word For Granite is resolved or Hunt Of Mammoth Proportions is resolved):
 		monkeyDuel;
 	else if the resolution of Monkey Duel is not 1:
-		say "[one of]'P-Please, help me,' the monkey whispers, before Wukong pulls on his leash.[line break]'What was that?' the younger simian asks as Hanu gasps, then looks at the ground once more. 'That's what I thought. You're my pet, so I expect of you to talk like one.'[line break]'E-Eeek. Eek,' Hanu makes in a resigned tone.[line break]'Better.'[or]'Ook,' Hanu replies plaintively.[line break]'My pet is well-behaved, is he not?' Wukong asks mockingly.[stopping]";
+		say "[one of]     'P-Please, help me,' the monkey whispers, before Wukong pulls on his leash.[line break]     'What was that?' the younger simian asks as Hanu gasps, then looks at the ground once more. 'That's what I thought. You're my pet, so I expect of you to talk like one.'[line break]     'E-Eeek. Eek,' Hanu makes in a resigned tone.[line break]     'Better.'[or]     'Ook,' Hanu replies plaintively.[line break]     'My pet is well-behaved, is he not?' Wukong asks mockingly.[stopping]";
 	else:
-		say "'Hello, my friend. I hope that you are well,' Hanu greets you. '[if humanity of Wukong < 1]Our simian friend is a turbulent student, and I had to use the shocking collar a fair number of times. But he will learn, eventually[else if humanity of Wukong < 3]Our common friend is showing admirable progress. I only need to discipline him once a day, now[else]I am very proud of Wukong; he is ready to become a proper student. Although I think I will keep his current outfit for, um, reasons. Humor an old monkey, will you[end if].'";
+		say "     'Hello, my friend. I hope that you are well,' Hanu greets you. '[if humanity of Wukong < 1]Our simian friend is a turbulent student, and I had to use the shocking collar a fair number of times. But he will learn, eventually[else if humanity of Wukong < 3]Our common friend is showing admirable progress. I only need to discipline him once a day, now[else]I am very proud of Wukong; he is ready to become a proper student. Although I think I will keep his current outfit for, um, reasons. Humor an old monkey, will you[end if].'";
 
 instead of fucking Hanu:
 	if Monkey Duel is unresolved:
-		say "The monkey chuckled. 'I am flatted by your proposal, my friend, but I must refuse. My mind fights with the urges that came with this body, and I cannot allow any lapse.'";
+		say "     The monkey chuckles. 'I am flatted by your proposal, my friend, but I must refuse. My mind fights with the urges that came with this body, and I cannot allow any lapse.'";
 	else if Resolution of Monkey Duel is 1:
-		say "Hanu smiles. 'I must once again deny your request. However, if lust stirs your loins, you can train with me and Wukong, and work these out.' [bold type]What do you say?[roman type]";
+		say "     Hanu smiles. 'I must once again deny your request. However, if lust stirs your loins, you can train with me and Wukong to work it out.' [bold type]What do you say?[roman type]";
 		now sextablerun is 0;
 		blank out the whole of table of fucking options;
 		[]
@@ -147,7 +147,7 @@ Monkey Duel	"Monkey Duel"
 Monkey Duel is a situation.
 
 to monkeyDuel:
-	say "     'About time you showed up[if player is not defaultnamed], [name of player][end if].' a familiar voice calls you out as you pass under a large tree. Hanu, the monkey with whom you meditated with earlier, is sitting leisurely on one of the branches, his long tail waving at you. With surprising agility, Hanu jumps down from his perch and makes a perfect landing just in front of you. 'You seem to have an habit of being late for training, my pupil. But no matter, let us practice our kung fu together.'";
+	say "     'About time you showed up[if player is not defaultnamed], [name of player][end if].' a familiar voice calls you out as you pass under a large tree. Hanu, the monkey with whom you meditated with earlier, is sitting leisurely on one of the branches, his long tail waving at you. With surprising agility, Hanu jumps down from his perch and makes a perfect landing just in front of you. 'You seem to have a habit of being late for training, my pupil. But no matter, let us practice our kung fu together.'";
 	say "     The monkey's words make you remember about your (mis)adventures with the only other monkey you know. [bold type]Should you bring up Wukong's existence to Hanu?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - As long as you skip another meditation session.";
@@ -425,7 +425,7 @@ to say losetoWukongThugs:
 	if randomnumber is 1:
 		say "     You try to protest, but one of monkeys takes the opportunity to plant his legs around your head and push his cock inside your mouth. You cough and gag as the slab of meat descends down your throat, and the simian starts hitting your uvula with each maw-stretching pump.";
 	else:
-		say "     You try to protest, but one of monkeys takes the opportunity to plant his legs around your head and press her crotch against your mouth. You groan as she smothers you and grinds her pussy against your face, wetting your tongue with her vaginal fluids.";
+		say "     You try to protest, but one of monkeys takes the opportunity to plant her legs around your head and press her crotch against your mouth. You groan as she smothers you and grinds her pussy against your face, wetting your tongue with her vaginal fluids.";
 	WaitLineBreak;
 	if anallevel > 1:
 		say "     Your ass is suddenly stretched as the monkey under you pushes his member inside your ass and does not waste time slapping his pelvis against your butt with short, fast thrusts.";
@@ -433,31 +433,33 @@ to say losetoWukongThugs:
 	if player is female:
 		let randomnumber be a random number between 1 and 3;
 		if randomnumber is 1:
-			say "     Another monkey takes advantage of the confusion and plunges his shaft inside your [cunt size desc of player] pussy, jackhammering your cervix with his member.";
+			say "     Another monkey takes advantage of the confusion and plunges his shaft inside your [cunt size desc of player] pussy, jackhammering your cervix with his member";
 		else if randomnumber is 2 and player is kinky:
-			say "     Another monkey takes advantage of the confusion and slams a pair of fingers down your [cunt size desc of player] pussy. Two quickly become three, then four, until the primate eventually manages to slip the five fingers inside and forms a fist inside of you.";
+			say "     Another monkey takes advantage of the confusion and slams a pair of fingers down your [cunt size desc of player] pussy. Two quickly become three, then four, until the primate eventually manages to slip the five fingers inside and forms a fist inside of you";
 		else:
-			say "     Another monkey takes advantage of the confusion and dives head-first on your [cunt size desc of player] pussy, nibbling on your clit and licking inside, making a game of getting as far as possible.";
+			say "     Another monkey takes advantage of the confusion and dives head-first on your [cunt size desc of player] pussy, nibbling on your clit and licking inside, making a game of getting as far as possible";
 		if cunts of player > 1:
-			say "Your other pussies are not forgotten and get fingered in an almost sadistic manner.";
+			say ". Your other pussies are not forgotten and get fingered in an almost sadistic manner";
+		say ".";
 		WaitLineBreak;
 	if player is male:
 		let randomnumber be a random number between 1 and 2;
 		if randomnumber is 1:
-			say "     You feel something tight pushing around your cock, signaling that a monkey has lined up [one of]his ass[or]her pussy[at random] with your [cock size desc of player] cock, and swallows it down the tight, warm hole. Your hear wet noises coming from your groin as crotch meets crotch with increasing speed.";
+			say "     You feel something tight pushing around your cock, signaling that a monkey has lined up [one of]his ass[or]her pussy[at random] with your [cock size desc of player] cock, and swallows it down the tight, warm hole. Your hear wet noises coming from your groin as crotch meets crotch with increasing speed";
 		else:
-			say "     You feel something warm and soft kiss the tip of your cock, signaling that a monkey has their mouth on your [cock size desc of player] dick. They promptly swallow it down to the hilt, and the air fills with wet noises coming from your groin, with increasing intensity.";
+			say "     You feel something warm and soft kiss the tip of your cock, signaling that a monkey has their mouth on your [cock size desc of player] dick. They promptly swallow it down to the hilt, and the air fills with wet noises coming from your groin, with increasing intensity";
 		if cocks of player > 1:
-			say "Your other cocks quickly find hungry mouths and dexterous hands to be taken care by.";
+			say ". Your other cocks quickly find hungry mouths and dexterous hands to be taken care by";
+		say ".";
 		WaitLineBreak;
 	if breast size of player > 0:
 		let randomnumber be a random number between 1 and 2;
 		if randomnumber is 1:
-			say "     Despite the space getting cramped, another simian still finds the place to sit on your tummy, and push your [breast size desc of player] breasts together. You feel his cock slip between them as the monkey gives himself a leisurely tit-fuck.";
+			say "     Despite the space getting cramped, another simian still finds the place to sit on your tummy and pushes your [breast size desc of player] breasts together. You feel his cock slip between them as the monkey gives himself a leisurely tit-fuck.";
 		else:
-			say "     Despite the space getting cramped, other simians still find the place to gnaw on your breasts, kneading them and play-biting your nipples, and enjoying the high-pitched grunts escaping from between the legs of the monkey fucking your face.";
+			say "     Despite the space getting cramped, other simians still find the place to gnaw on your breasts, kneading them[if breasts of player > 0] and play-biting your nipples[end if], enjoying the high-pitched grunts escaping from between the legs of the monkey fucking your face.";
 		WaitLineBreak;
-	say "     Stuck in the middle of the monkey gang-bang, you are forced to endure long minutes of being used sexually in every possible way thinkable. As soon as one of the monkey finish, another takes their place, until everyone in the gang has had a turn with you. Once they are done, they leave your tired, cum-covered body, laughing and hooting about the good time they just had.";
+	say "     Stuck in the middle of the monkey gang-bang, you are forced to endure long minutes of being used sexually in every conceivable way. As soon as one of the monkeys finish, another takes their place, until everyone in the gang has had a turn with you. Once they are done, they leave your tired, cum-covered body, laughing and hooting about the good time they just had.";
 
 Section 3 - Monkey House
 

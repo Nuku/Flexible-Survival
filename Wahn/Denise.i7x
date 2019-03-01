@@ -17,7 +17,7 @@ instead of sniffing Denise:
 	else if the remainder after dividing libido of gryphoness by 4 is 2:
 		say "     Denise smells like a pregnant herm gryphoness.";
 	else if the remainder after dividing libido of gryphoness by 4 is 3:
-		say "     ERROR-Denise-3S: You should not able able to smell her right now.";
+		say "     ERROR-Denise-3S: You should not be able to smell her right now.";
 
 to say DeniseDesc:
 	if debugactive is 1:

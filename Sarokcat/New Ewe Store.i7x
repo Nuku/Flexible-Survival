@@ -114,10 +114,10 @@ Instead of resolving Little Lost Lamb:
 		say "     After searching through the sewers for an hour, you find an opening into the subway tunnels, remembering the person left trapped down there you attempt to find your way through the tunnels to their location.";
 		let bonus be (( the Perception of the player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 14:
-			say "     Carefully marking the twists and turns of the subway, you quickly head to where you think the person was trapped, and almost before you know it you've arrived at a partially collapsed subway station. Calling out you quickly get a response from a shadowy form hiding in the corner, upon realizing you are here to help a pretty female Ewe steps out into the dim light.";
+			say "Carefully marking the twists and turns of the subway, you quickly head to where you think the person was trapped, and almost before you know it you've arrived at a partially collapsed subway station. Calling out you quickly get a response from a shadowy form hiding in the corner, upon realizing you are here to help a pretty female Ewe steps out into the dim light.";
 			say "     'Thank you very much for coming to help me! I kept hearing strange things moving around down here, and I was getting pretty frightened.' She pauses for a moment to look you over before continuing, 'My name is Mary, and I've been trapped down here in the dark alone for what seems like forever. I know it's a lot to ask, but do you suppose you could help me get home to my flock? They must be very worried about me at this point, I've been gone for much longer than I intended.";
 			WaitLineBreak;
 			say "     When you tell her about the request from Leon and the rest of the sheep at the store, her big black eyes light up and her face breaks out in a sheepy smile.";
@@ -131,7 +131,7 @@ Instead of resolving Little Lost Lamb:
 			now Resolution of Little Lost Lamb is 1; [saved mary]
 			now Little Lost Lamb is resolved;
 		else:
-			say "     You hunt through the dark tunnels for what seems like hours, the tunnels twisting and turning until you have lost all sense of direction, eventually you find yourself back where you entered the tunnel. Shuddering you quickly exit the subway tunnels for now... you can always come back later... ";
+			say "You hunt through the dark tunnels for what seems like hours, the tunnels twisting and turning until you have lost all sense of direction, eventually you find yourself back where you entered the tunnel. Shuddering you quickly exit the subway tunnels for now... you can always come back later...";
 			now Resolution of Little Lost Lamb is 2; [couldn't find mary]
 	else:
 		say "     Traveling through the dark sewers, and maintenance passageways underneath the mall, you find an opening leading out into what appear to be the cities subway tunnels. Looking through the passageway, you poke around on the other side of the opening for a minute. You find yourself somewhat worried by the signs that there are a large number of creatures still using the subway actively, and given how easy it would be to get lost in the maze of the subway tunnels, you decide to return to the somewhat more familiar area underneath the mall.";
@@ -200,8 +200,8 @@ Instead of conversing the Leon:
 				else:
 					say "     'Oh yeah, that's what I like to see in woman,' he says, eyeing you lewdly, 'Now we just need to fix the rest of you...'";
 				say "     'First thing we need to do is mark you as part of the flock,' Leon says as he pulls off a bit of wool from his side. 'Need to make sure you smell right to the rest of the flock after all.' You watch as he begins to rub the wool over his cock, pumping it more and more until finally he lets out a low bleating noise as he coats it in his seed. The smell intensifies and the erotic sight makes you unable to protest as he moves closer and begins rubbing the wool he just [']treated['] all over your body. You moan as he massages you with the soft wool, you can swear you almost feel the rams seed sinking into you, marking you as his ewe, his property to do with as he wishes.";
-				say "     The erotic massage continues, until you almost can't take it anymore, only to stop right before you can reach orgasm, leaving you panting and moaning in protest as Leon looks down at you with a grin on his muzzle. 'That should be enough for now,' he says. 'Welcome to my flock little lamb, I'm definitely going to enjoy having you around. You are welcome to stay as long as you like now,' Leon smiles as he turns to leave, 'And if you need I'd be happy to [']take care['] of you anytime you want, I take goood care of all my flock members after all. You know where to find me when your ready' Saying that he winks one of his big innocent looking sheep eyes at you before closing the door behind him. Leaving you to gather your equipment and your dignity back up.";
-				say "     As your getting ready to leave, you can't help but notice you smell a bit like a sheep now yourself, just like all the other flock members in the store. For some reason it doesn't seem to bother you to smell like your fellow sheep, you all belong to the same ram after all... Blushing uncertainly at that thought you return to the main store area.";
+				say "     The erotic massage continues, until you almost can't take it anymore, only to stop right before you can reach orgasm, leaving you panting and moaning in protest as Leon looks down at you with a grin on his muzzle. 'That should be enough for now,' he says. 'Welcome to my flock little, lamb. I'm definitely going to enjoy having you around. You are welcome to stay as long as you like now,' Leon smiles as he turns to leave, 'and if you need, I'd be happy to [']take care['] of you anytime you want. I take goood care of all my flock members, after all. You know where to find me when your ready.' He winks one of his big, innocent looking sheep eyes at you before closing the door behind him, leaving you to gather your equipment and your dignity back up.";
+				say "     As your getting ready to leave, you can't help but notice you smell a bit like a sheep now yourself, just like all the other flock members in the store. For some reason, it doesn't seem to bother you to smell like your fellow sheep; you all belong to the same ram, after all... Blushing uncertainly at that thought, you return to the main store area.";
 				increase libido of player by 10;
 				increase RamFucked by 1;
 				if girl is not banned and "Male Preferred" is not listed in feats of player:
@@ -211,7 +211,7 @@ Instead of conversing the Leon:
 					infect "Ram";
 					infect "Ram";
 			else:
-				say "     Ah well, I thought you would make a great addition to the flock. Think it over some more, would you?";
+				say "     'Ah well, I thought you would make a great addition to the flock. Think it over some more, would you?'";
 
 instead of conversing the Mary:
 	if HyenaTrailing is 3:

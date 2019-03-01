@@ -4,7 +4,7 @@ Version 1 of Nadia by Wahn begins here.
 
 "Adds an NPC named Nadia to the Flexible Survival game"
 
-[ HP states of Nadia (localisation)                                                 ]
+[ HP states of Nadia (localization)                                                 ]
 [   0: never met her                                                                ]
 [   1: met her, brought her into the library                                        ]
 [   2: Nadia in the library, Lost Chick quest given                                 ]
@@ -556,7 +556,7 @@ Instead of resolving a Bird Troubles:
 	say "     'Someone came,' the bird-woman says, slumping her shoulders. 'Someone finally came. Who knows how long I spent trying to break down that door, that and the front entrance - I was beginning to wonder if this was how I would die, trapped and alone...I watched the animals die one by one from hunger in their cages, but I didn't dare to let them go...wondering if I would end up like them...'";
 	WaitLineBreak;
 	say "     Well, at least she's not going to be dying now. You ask for her name, and she nods. 'My name is Nadia. I'm...' she looks down at her talons, seeming fit to burst into tears at any time. '...I was a student here. Are those things still out there? I've lost count of how many days I've spent trapped in these laboratories.";
-	say "'Do you have somewhere I could go?' she asks hopefully. 'I...I can't stay here anymore, and I don't think there's anywhere that's safe on campus, not after hearing some of the noises that go on outside all day and night.' ";
+	say "     'Do you have somewhere I could go?' she asks hopefully. 'I...I can't stay here anymore, and I don't think there's anywhere that's safe on campus, not after hearing some of the noises that go on outside all day and night.'";
 	if player consents:
 		LineBreak;
 		say "     'My full name is Nadia Sokolova,' the bird-woman explains as she limps after you through the city and back to the library. 'But just call me Nadia, if you will. I'm an education major, or at least, I was before all this started. I was hoping... well, there's no harm in saying it if I'm going to be staying with you, am I? We have to trust each other.";
@@ -775,7 +775,7 @@ instead of navigating Grey Abbey Library while (Nadia is in Garden View and Nadi
 	move player to Grey Abbey Library;
 	say "     As you enter the library, you notice birdsong wafting down from the second floor; it seems that Nadia's particularly pleased about something today. Stepping upstairs to investigate, you're greeted by the sight of Nadia snuggled in her nest as she's being pampered. Two of Nadia's daughters are brushing her hair and wings, easing out tangles and ruffled feathers, while she herself preens her colorful plumage in a particularly birdlike manner. Nadia makes happy, contented noises in the back of her throat as her daughters preen and pamper her, and they only grow more so as she opens her eyes and notices you staring at her.";
 	say "     'Oh! Welcome back. Say hello to your father, girls,' she says with a giggle, and shakes bits of fluff from her beak. 'Don't mind us - I'm just trying to look my best for you, after all. I'd ask you to join in, if you'd like, but that would ruin the surprise. Please come back later when we're finished and I'll show you just how prettied up I can be, okay?'";
-	say "     It certainly looks like it takes a lot of work for Nadia to look as good as she does all the time now, especially considering the state she's often left in after you're bred her. Thinking about it, it must certainly be quite some effort to get her all cleaned up after each session...";
+	say "     It certainly looks like it takes a lot of work for Nadia to look as good as she does all the time now, especially considering the state she's often left in after you've bred her. Thinking about it, it must certainly be quite some effort to get her all cleaned up after each session...";
 	now NadiaChar-J is "3";
 
 

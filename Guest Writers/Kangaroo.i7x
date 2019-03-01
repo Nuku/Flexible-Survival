@@ -201,9 +201,9 @@ Section 5 - Endings
 when play ends:
 	if bodyname of player is "Red Kangaroo":
 		if humanity of player < 10:
-			say "Your mind slips away going into a more peaceful mode, wandering the city for fresh vegetation to eat quickly bounding away from startling events. You quickly find a place among other kangaroos becoming a flyer to the dominant male around.";
+			say "Your mind slips away going into a more peaceful mode, wandering the city for fresh vegetation to eat quickly bounding away from startling events. You quickly find a place among other kangaroos, becoming a flyer to the dominant male around.";
 		else:
-			say "You quickly adapt to life outside, using the new found legs to become a track star, getting into the high jumps and long jumps to a very successful career. Your lovers find those legs to have some of the best cowgirl riding moments, with your tail being a great impromptu seat.";
+			say "You quickly adapt to life outside, using the newfound legs to become a track star, getting into the high jumps and long jumps to a very successful career. Your lovers find those legs to have some of the best cowgirl riding moments, with your tail being a great impromptu seat.";
 
 to kangaroofy:
 	repeat with y running from 1 to number of rows in Table of Random Critters:

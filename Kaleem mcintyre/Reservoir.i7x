@@ -161,7 +161,7 @@ Instead of resolving a Technical Assistance:
 		while bookfind is 0:
 			let bonus be (( the Perception of the player minus 15 ) divided by 3);
 			let diceroll be a random number from 1 to 20;
-			say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
 			if diceroll > 10:
 				say "Ten minutes of searching leads you to an instruction manual, somehow kept perfectly clean and intact despite the creature that dominated the room having taken over and defiled just about everything in the place, and eagerly you find yourself flipping through the instruction book to read its contents. A few minutes of reading later - thankfully without any interruption from outside forces - you feel that you would be successful in working with the machines in the Reservoir to clean up the water supply. Closing the book you sigh in relief, right before you have to moan in grief as you now you just have to deal with some other... minor... nuisances.";
@@ -299,7 +299,7 @@ This is the doorcheck rule:
 				while doorsearch is 0:
 					let bonus be (( the Strength of the player minus 10 ) divided by 2);
 					let diceroll be a random number from 1 to 20;
-					say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+					say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 					increase diceroll by bonus;
 					if diceroll > 12:
 						say "A firm push and then a resound crack and you're in. Stumbling into the room and then looking around you find that there's very little of interest to you as you see look around at the cum stained and ruined break room that had once been a resting place for tired and overworked employees within the facility. All across the floor you can see that cum has stained just about everything from one side of the room to another, though thankfully not the ceiling. You mildly wonder then, if others had been in here, why, or rather how the door got jammed. Your answer comes when you turn to see dried cum crusted onto the sides of wood barrier.";
@@ -345,7 +345,7 @@ This is the doorcheck rule:
 			say "Taking hold of the door's handle you are mildly astonished when the door opens without any protest. That elation doesn't last long because soon said door is taking from your hand and then you are grabbed bodily!";
 			let bonus be (( the Strength of the player minus 10 ) divided by 2);
 			let diceroll be a random number from 1 to 20;
-			say "you roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+			say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 			increase diceroll by bonus;
 			if diceroll > 8:
 				say "You manage to knock the unknown person away from you with an elbow and then duck into a defensive crouch as you wonder what to expect next. What you come to find is that your 'captor' is actually a German Shepherd that seems to be looking at you in confusion. All the standard markings apply to this creature and you guess that it must have been someone's pet before the canine changed into the bipedal creature it is now. Growling at you in aggression as it sees that you are not willing to cooperate the German Shepherd is soon stalking over to you. The intent to dominant you shines clearly in the mutant's dark eyes.";

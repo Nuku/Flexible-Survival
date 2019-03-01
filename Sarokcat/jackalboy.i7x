@@ -36,8 +36,8 @@ When Play begins:
 	now defeated entry is "[jackalboy loss]";
 	now victory entry is "[jackalboy attack]";
 	now desc entry is "The jackalboy is watching you!!";
-	now face entry is "narrow canine head, with a long sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's"; [You have a (your text) face."]
-	now body entry is "slim and sleek, only lightly muscled with slightly digitigrade legs and jackal-like feet, your slim body is the perfect type of body for a submissive little jackal boy like yourself"; [ Body Description, format as "Your Body is (your text)."]
+	now face entry is "narrow canine head, with a long, sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's"; [You have a (your text) face."]
+	now body entry is "slim and sleek, only lightly muscled with digitigrade legs and jackal-like feet. Your slender body is the perfect shape for a submissive little jackal boy like yourself"; [ Body Description, format as "Your Body is (your text)."]
 	now skin entry is "[one of]dark black[or]sleek black furred[or]jackal furred[at random]"; [ skin Description, format as "You have (your text) skin."]
 	now tail entry is "You have a sleek, black-furred jackal's tail attached to your rear, swaying happily over your tight and sexy ass with every step you take."; [ Tail description, write a whole Sentence or leave blank. ]
 	now cock entry is "[one of]canine[or]jackalboy[or]jackal-like[or]knotted[at random]"; [ Cock Description, format as you have a 'size' (your text) cock]

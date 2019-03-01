@@ -168,7 +168,7 @@ Section 3 - Endings
 when play ends:
 	if bodyname of player is "Siren":
 		if humanity of player < 10:
-			say "     As your infection takes over, your new instincts draw you to the seaside. You soon join the hidden aerie of the sirens among the sharp rocks. ";
+			say "     As your infection takes over, your new instincts draw you to the seaside. You soon join the hidden aerie of the sirens among the sharp rocks.";
 			if player is male:
 				say "     The changes deep within you reach full fruition and you can feel eggs growing within you, waiting to be deposited in warm nests. From the rocky spires, you sing out to anyone you find tantalizing, drawing them in with your mesmerizing song. After a long and pleasurable mating, you deposit your eggs into them. Doing this brings you a level of pleasure you've never known before. You always enjoy filling them to capacity, then watching them, still under the effects of your song, complete the eggs['] cycle by burying them on the warm beach to eventually hatch into new sirens for the aerie.";
 				say "     When the soldiers come through, you and the others take particular pleasure in luring them in. Between your lovely voices and gorgeous, nearly-human bodies, they are easy prey. The particularly religious ones are the easiest targets of all, your almost angelic appearance and voices overwhelming them with awe. During that time, your colony grows greatly and siren flocks spread up and down the coast, singing their lovely song to draw in sailors to their doom. Their delicious, eggy doom.";

@@ -35,7 +35,7 @@ instead of conversing the Richard:
 	if SatyrFratRichardRelationship < 4: [should be not yet available]
 		say "     ERROR: Richard shouldn't be where a player can see him yet, heck you shouldn't even have access to this room yet! Please report to Rikaeus on the FS Discord and quote this tracking number for easier bugfixing: [SatyrFratRichardRelationship]";
 	else:
-		say "     As you walk up to Richard who's on his computer he turns to you with a smile. 'What's up?' he asks you, turning his chair to face you.";
+		say "     As you walk up to Richard, who's on his computer, he turns to you with a smile. 'What's up?' he asks you, turning his chair to face you.";
 		wait for any key;
 		say "[RichardTalkMenu]";
 

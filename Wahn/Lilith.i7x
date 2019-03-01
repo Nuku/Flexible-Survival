@@ -3,7 +3,7 @@ Version 1 of Lilith by Wahn begins here.
 
 "Adds an NPC named Lilith to the Flexible Survival game"
 
-[ HP states of Lilith (localisation)                                 ]
+[ HP states of Lilith (localization)                                 ]
 [   0: never met her                                                 ]
 [   1: met her, without demon brute                                  ]
 [   2: met her, with demon brute                                     ]
@@ -175,19 +175,19 @@ to say LilithTalk3:
 	if DBCaptureQuestVar is 5:
 		if DemonBruteStatus is 0:
 			say "     She smiles at you, then gives the demon brute a cruel grin. 'You hear that, big boy? Let's get you a pussy so you're ready to get fucked!' Your companion snarls, his muscles tensing, but the magic holds and he can't do anything.";
-			say "     [LilithPregCheck]";
+			say "[LilithPregCheck]";
 		else if DemonBruteStatus is 1:
 			say "     She smiles at you, then gives the demon brute a cruel grin. 'Let's make your pet fully female then. You hear that, big boy? No more cock for you...' Your companion snarls, his muscles tensing, but the magic holds and he can't do anything.";
-			say "     [LilithPregCheck]";
+			say "[LilithPregCheck]";
 		else if DemonBruteStatus is 2:
 			say "     She looks a bit surprised and says, 'Your pet's already fully female. What do you want to do? Make him grow another vagina? That's not a good idea, believe me...'";
 	else if DBCaptureQuestVar > 5 and DBCaptureQuestVar < 99:
 		if DemonBruteStatus is 0:
 			say "     She smiles at you, then gives the demon brute a cruel grin. 'You hear that, big boy? Let's get you a pussy so you're ready to get fucked!' Brutus ignores her, just giving you a small bow of his head.";
-			say "     [LilithPregCheck]";
+			say "[LilithPregCheck]";
 		else if DemonBruteStatus is 1:
 			say "     She smiles at you, then gives the demon brute a cruel grin. 'Let's make your pet fully female then. You hear that, big boy? No more cock for you...' Brutus ignores her, just giving you a small bow of his head.";
-			say "     [LilithPregCheck]";
+			say "[LilithPregCheck]";
 		else if DemonBruteStatus is 2:
 			say "     She looks a bit surprised and says, 'Your pet's already fully female. What do you want to do? Make him grow another vagina? That's not a good idea, believe me...'";
 	wait for any key;
@@ -227,8 +227,8 @@ to say LilithTalk5:
 		if calcnumber is 1: [fuck]
 			LineBreak;
 			project the Figure of BrutusGood_icon;
-			say "     It only takes a little nod from you for Brutus to give into his lust and step forward towards Liam, much to Lilith's amusement. 'Pound him hard, I want that boy broken to a real slut,' the demoness gleefully tells him and moves a hand down to her crotch, rubbing herself. But instead of just throwing down the man and fucking him, your demonic companion puts his large hands almost delicately on his shoulders and says, 'Listen to me, Liam. I'm not gonna hurt you. You'll like it. Believe me.' Still in his spellbound trance, the human replies dreamily, 'Yes of course. I trust you. We're in a church after all. But... what is this all about?' Moving a muscled arm down so he can grab Liam's behind, Brutus picks the man up and grunts, 'This,' as he plants a kiss on his lips. And it is not just a quick peck, but the real deal, with Brutus's tongue invading the human's mouth and him stroking Liam's body. There is only a slight moment of surprised hesitation from the man, then his own instincts make him reply in kind - may they be natural or helped along by magic or nanites, you can't tell.";
-			say "     [BrutusLiamFuck]";
+			say "     It only takes a little nod from you for Brutus to give in to his lust and step forward towards Liam, much to Lilith's amusement. 'Pound him hard, I want that boy broken to a real slut,' the demoness gleefully tells him and moves a hand down to her crotch, rubbing herself. But instead of just throwing down the man and fucking him, your demonic companion puts his large hands almost delicately on his shoulders and says, 'Listen to me, Liam. I'm not gonna hurt you. You'll like it. Believe me.' Still in his spellbound trance, the human replies dreamily, 'Yes of course. I trust you. We're in a church after all. But... what is this all about?' Moving a muscled arm down so he can grab Liam's behind, Brutus picks the man up and grunts, 'This,' as he plants a kiss on his lips. And it is not just a quick peck, but the real deal, with Brutus's tongue invading the human's mouth and him stroking Liam's body. There is only a slight moment of surprised hesitation from the man, then his own instincts make him reply in kind - may they be natural or helped along by magic or nanites, you can't tell.";
+			say "[BrutusLiamFuck]";
 			now libido of David is 66; [Ritual ready]
 		if calcnumber is 2: [refuse]
 			LineBreak;
@@ -263,8 +263,8 @@ to say LilithTalk5:
 				say "Invalid choice. Type [link]1[end link] to let Brutus agree to the fuck, [link]2[end link] to refuse, or [link]3[end link] to free Liam.";
 		if calcnumber is 1: [fuck]
 			LineBreak;
-			say "     It only takes a little nod from you for Brutus to give into his lust and step forward towards Liam, much to Lilith's amusement. 'Pound him hard, I want that boy broken to a real slut,' the demoness gleefully tells him and moves a hand down to her crotch, rubbing herself. But instead of just throwing down the man and fucking him, your demonic companion puts his large hands almost delicately on his shoulders and gives him a tiny shake. As Liam wakes up, he hears the words, 'Listen to me, Liam. I'm not gonna hurt you. You'll like it. Believe me.' Still in his spellbound trance, the human replies dreamily, 'Yes of course. I trust you. We're in a church after all. But... what is this all about?' Moving a muscled arm down so he can grab Liam's behind, Brutus picks the man up and grunts, 'This,' as he plants a kiss on his lips. And it is not just a quick peck, but the real deal, with Brutus's tongue invading the human's mouth and him stroking Liam's body. There is only a slight moment of surprised hesitation from the man, then his own instincts make him reply in kind - may they be natural or helped along by magic or nanites, you can't tell.";
-			say "     [BrutusLiamFuck]";
+			say "     It only takes a little nod from you for Brutus to give in to his lust and step forward towards Liam, much to Lilith's amusement. 'Pound him hard, I want that boy broken to a real slut,' the demoness gleefully tells him and moves a hand down to her crotch, rubbing herself. But instead of just throwing down the man and fucking him, your demonic companion puts his large hands almost delicately on his shoulders and gives him a tiny shake. As Liam wakes up, he hears the words, 'Listen to me, Liam. I'm not gonna hurt you. You'll like it. Believe me.' Still in his spellbound trance, the human replies dreamily, 'Yes of course. I trust you. We're in a church after all. But... what is this all about?' Moving a muscled arm down so he can grab Liam's behind, Brutus picks the man up and grunts, 'This,' as he plants a kiss on his lips. And it is not just a quick peck, but the real deal, with Brutus's tongue invading the human's mouth and him stroking Liam's body. There is only a slight moment of surprised hesitation from the man, then his own instincts make him reply in kind - may they be natural or helped along by magic or nanites, you can't tell.";
+			say "[BrutusLiamFuck]";
 			now libido of David is 66; [Ritual ready]
 		if calcnumber is 2: [refuse]
 			LineBreak;
@@ -320,7 +320,7 @@ to say LilithPregCheck:
 		say "     She strokes the bulge in her stomach, saying 'Your child is growing fast, and I feel my breasts getting ready for it. Not much longer now...'";
 	else if LilithPregnancy is 3:
 		say "     After stroking over her strongly bulging stomach, the succubus moves a hand up to her breast, slightly squeezing it, which results in a small trickle of milk from her nipple. 'Yes, now we're ready,' she says with a grin. 'Could you give me that?' Following her pointing finger, you pick up a, somewhat dented and sticky with cum, golden chalice from the ground and hand it over. She proceeds to milk her own breasts into it, filling the thoroughly desecrated vessel with her milk. Holding it out to you, she continues 'Now just add a drop of blood and dip the amulet in it.'";
-		say "     Your blood in another ritual - do you really want to go through with this? ";
+		say "     Your blood in another ritual - do you really want to go through with this?";
 		if player consents:
 			if DBCaptureQuestVar is 5:
 				say "     Taking the demontooth amulet from around your neck, you prick your finger with its sharp point and squeeze out a drop of blood into the chalice. Then you dip the amulet itself into the while liquid with its swirl of red and listen to Lilith chant something in a long forgotten language. 'There,' she finally says after a while, then nods towards your captive demon brute. You pull the amulet back out and put it around your neck, then take the chalice from her. Walking to the demon, careful not to spill anything, you command the creature to open up and pour the liquid down his throat.";

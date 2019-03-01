@@ -90,7 +90,7 @@ to say summongryphoness:
 			if T >= 2:
 				say "     Just moments after Denise comes to stand beside you, a pair of gryphlets land by her side. Your two children pipe in their high voices that they want to come along as well. They are a cute version of Denise in miniature, blue gryphon herms with pretty faces and happy smiles. All of you share a family hug, then the little ones flap their wings and bounce around in eager anticipation of an excursion into the city, then also rub their taloned paws over Denise's maturing pregnancy, happy about another sibling coming.";
 		else if tempnum is 3: [in an 'absent birth' state - which shouldn't happen, as the player walking into the room or waiting in the room with Denise should have dealt with it]
-			say "     ERROR-Denise-3S: You should not able able to smell her right now.";
+			say "     ERROR-Denise-3S: You should not be able to smell her right now.";
 
 to say dismissgryphoness:
 	move Denise to Garden View;
@@ -111,7 +111,7 @@ instead of sniffing Gryphoness:
 	else if the remainder after dividing libido of gryphoness by 4 is 2:
 		say "Denise smells like a pregnant herm gryphoness.";
 	else if the remainder after dividing libido of gryphoness by 4 is 3:
-		say "ERROR-Denise-3S: You should not able able to smell her right now.";
+		say "ERROR-Denise-3S: You should not be able to smell her right now.";
 
 An everyturn rule:
 	if companion of player is Gryphoness and skipturnblocker is 0:
@@ -431,7 +431,7 @@ Instead of resolving Gryphoness nest:
 				say "     'Since then, well I have been kind of wandering the city, I tried to talk to people at first... but either they panicked, or I had to run from the other changed...' she says with a sad sigh as she leans up against you, 'I don't really mind the changes to my body all that much really, and I have to admit my singing voice is better than ever now. But I've just been getting so very lonely all by myself, and well,' Denise says as she rubs her cock absently with her taloned hand, 'I get so very horny now too...' she admits shyly as she glances at you curiously to see your reaction.";
 				WaitLineBreak;
 				say "     'I keep dreaming about... well, the other gryphons, their cocks filling me up, and being nice and full of their eggs... it just keeps getting harder and harder not to go join them...' Denise sighs as you stroke her soft feathers with your hand in understanding. 'I think maybe if I stay with you... I mean, well if you want me to anyways,' Denise suggests after a short time of just sitting there together companionably. 'I mean, if you aren't worried about me infecting you or anything, since I probably am still infectious,' she says with a sigh, before shooting a teasing smile your way.";
-				say "     'Though for some reason I keep thinking you would look really cute with a nice beak and a pair of wings, and... um... the other equipment to go with it' Denise says as she snickers at you, as she rubs her breasts with one of her talons. 'And it would be nice to have another gryphon around, maybe then we could... keep each other company and have even have some fun together too...' Denise purrs slightly as she rubs up against your body, the scent of aroused gryphon filling your mind as she stares at you questioningly.";
+				say "     'Though for some reason I keep thinking you would look really cute with a nice beak and a pair of wings, and... um... the other equipment to go with it,' Denise says as she snickers at you, as she rubs her breasts with one of her talons. 'And it would be nice to have another gryphon around, maybe then we could... keep each other company and have even have some fun together too...' Denise purrs slightly as she rubs up against your body, the scent of aroused gryphon filling your mind as she stares at you questioningly.";
 				say "     [bold type]Do you decide to let her come with you?[roman type][line break]";
 				if player consents:
 					LineBreak;

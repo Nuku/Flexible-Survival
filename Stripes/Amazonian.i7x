@@ -146,9 +146,9 @@ to say estosterogen pill use:
 		increase cunt length of player by 2;
 		increase cunt width of player by 1;
 		say "You feel a rush of warmth to your loins as your dual-gendered genitals grow suddenly. ";
-		say "     Your [cock of player] penis[esmn] swell[smv] beyond the point of simply growing erect, gaining in length to become [if cocks of player is 1]a [end if][cock size desc of player] cock[smn]. Your balls plump up a little as well with a surge of added virility. ";
+		say "Your [cock of player] penis[esmn] swell[smv] beyond the point of simply growing erect, gaining in length to become [if cocks of player is 1]a [end if][cock size desc of player] cock[smn]. Your balls plump up a little as well with a surge of added virility. ";
 		follow the cunt descr rule;
-		say "     Even as this is occurring, you watch your puss[if cunts of player > 1]ies['][else]y's[end if] lips puff up as your cunt enlarges and deepens, becoming [descr]. ";
+		say "Even as this is occurring, you watch your puss[if cunts of player > 1]ies['][else]y's[end if] lips puff up as your cunt enlarges and deepens, becoming [descr]. ";
 	else if player is female:				[FEMALE]
 		now cocks of player is 1;
 		now cock width of player is 6;
@@ -157,8 +157,8 @@ to say estosterogen pill use:
 		increase cunt width of player by 1;
 		follow the cunt descr rule;
 		say "You feel an aching warmth rush to your loins. ";
-		say "     You watch as your puss[if cunts of player > 1]ies['][else]y's[end if] lips puff up as your cunt enlarges and deepens, becoming [descr] with rapid growth. ";
-		say "     As this is occurring, a twinge centered at your clit increases rapidly. With a sudden surge of growth, your love button enlarges into a phallic growth, soon becoming separate from the cunt from which it spawned to become a [cock size desc of player] [cock of player] cock with its own set of balls[if cockname of player is listed in infections of internallist] forming inside you[end if]. ";
+		say "You watch as your puss[if cunts of player > 1]ies['][else]y's[end if] lips puff up as your cunt enlarges and deepens, becoming [descr] with rapid growth. ";
+		say "As this is occurring, a twinge centered at your clit increases rapidly. With a sudden surge of growth, your love button enlarges into a phallic growth, soon becoming separate from the cunt from which it spawned to become a [cock size desc of player] [cock of player] cock with its own set of balls[if cockname of player is listed in infections of internallist] forming inside you[end if]. ";
 	else if player is male:				[MALE]
 		increase cock length of player by 2;
 		increase cock width of player by 1;
@@ -166,8 +166,8 @@ to say estosterogen pill use:
 		now cunt length of player is 6;
 		now cunt width of player is 4;
 		say "You feel an aching warmth rush to your loins. ";
-		say "     Your [cock of player] penis[esmn] swell[smv] beyond the point of simply growing erect, gaining in length to become [if cocks of player is 1]a [end if][cock size desc of player] cock[smn]. Your balls plump up a little as well with a surge of added virility. ";
-		say "     Even as this is occurring, you feel your bare groin clench as internal changes begin. There comes a pulling sensation as a wet passage opens and flesh folds form around it. Within moments, you have a wet pussy and needy little cunt between your legs as well. ";
+		say "Your [cock of player] penis[esmn] swell[smv] beyond the point of simply growing erect, gaining in length to become [if cocks of player is 1]a [end if][cock size desc of player] cock[smn]. Your balls plump up a little as well with a surge of added virility. ";
+		say "Even as this is occurring, you feel your bare groin clench as internal changes begin. There comes a pulling sensation as a wet passage opens and flesh folds form around it. Within moments, you have a wet pussy and needy little cunt between your legs as well. ";
 	else:								[NEUTER]
 		now cocks of player is 1;
 		now cock width of player is 6;
@@ -176,21 +176,21 @@ to say estosterogen pill use:
 		now cunt length of player is 6;
 		now cunt width of player is 4;
 		say "You feel an aching warmth rush to your loins. ";
-		say "     With your body in shock, you feel your bare groin clench as internal changes begin. Soon you feel pushing and pulling sensations there as both a wet passage opens and a pillar of flesh rises. Soon enough, you've grown a [cock size desc of player] [cock of player] cock and a [cunt size desc of player] cunt as your gender suddenly reverses from neither to both male and female in one. ";
+		say "With your body in shock, you feel your bare groin clench as internal changes begin. Soon you feel pushing and pulling sensations there as both a wet passage opens and a pillar of flesh rises. Soon enough, you've grown a [cock size desc of player] [cock of player] cock and a [cunt size desc of player] cunt as your gender suddenly reverses from neither to both male and female in one. ";
 	if "Flat Chested" is not listed in feats of player:
 		if breasts of player is 0:
 			now breasts of player is 2;
 			now breast size of player is 2;
-			say "     With a feeling of tightness at your chest, you see a pair of breasts form on your chest even as new nipples pop out to cap them, concluding your sudden gender shift.";
+			say "With a feeling of tightness at your chest, you see a pair of breasts form on your chest even as new nipples pop out to cap them, concluding your sudden gender shift.";
 		else if breast size of player is 0:
 			now breast size of player is 2;
-			say "     With a feeling of tightness at your chest, you see a pair of breasts form on your chest, concluding your sudden gender shift.";
+			say "With a feeling of tightness at your chest, you see a pair of breasts form on your chest, concluding your sudden gender shift.";
 		else:
 			increase breast size of player by 1;
 			if breast size of player > 10, increase breast size of player by 1;
 			if breast size of player > 26, now breast size of player is 26;
 			follow the breast descr rule;
-			say "     With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
+			say "With a feeling of tightness and a flush of warmth at your chest, you see your breasts inflating, giving you a set of [descr] tits.";
 
 
 [

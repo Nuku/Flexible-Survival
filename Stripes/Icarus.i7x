@@ -280,7 +280,7 @@ to say icarussex_dom:
 	else if bodyname of player is listed in infections of Felinelist and facename of player is listed in infections of Felinelist:
 		now formcheck is 2;
 		now icarus_lastpred is 2;
-	say "     Feeling the need to be Icarus's fucktoy again, you catch his attention from the rafters with a tantalizing display of your body. Seeing your wanton display, he gives a pleased chirp and flies down to join you. As he nears the ground, you can see his cock already starting to poke from his feathery crotch. ";
+	say "     Feeling the need to be Icarus's fucktoy again, you catch his attention from the rafters with a tantalizing display of your body. Seeing your wanton display, he gives a pleased chirp and flies down to join you. As he nears the ground, you can see his cock already starting to poke from his feathery crotch.";
 	if formcheck is 1:	[avian pred]
 		if HP of Icarus is 55 or ( HP of Icarus >= 57 and a random chance of 2 in 5 succeeds ):
 			say "[icarussex6_dom_ap]"; [extra-rough]
@@ -415,8 +415,8 @@ to say icarussex5_ap:		[uncontrolled avian sex]
 	say "     Eventually the chase leads up into the attic and you corner the little bird in there. Panting hard, he hops from one leg to the next, looking for an avenue of escape but finding none. With a sharp cry, you leap atop your passerine prey, sinking your talons into him and pressing him to the ground. He shivers and moans as you press him to the dusty floor and yank up his tail with little preamble, your blood pumping hard and your instincts largely in control. With a bruisingly hard nip on his shoulder, you drive your cock into him with one harsh thrust that gets him as hard as a rock.";
 	say "     Your sex up in the secluded attic is harsh and merciless, your avian infection lustful after the hunt. The blue bird chirps in pain and moans in delight as you take him hard. So excited by the chase, you give him bloody bites and scratches as you manhandle his body and use him as your fucktoy. His body shudders from the wounds and the pounding he's receiving, his cock hard and pulsing with excitement as he moans for more and to take him harder.";
 	if HP of Icarus is 5:
-		say "     With your predatory, avian instincts exciting you, you find it difficult to hold back any longer. You have caught your prey and he is at your mercy. ";
-		say "     [bold type]Shall you let loose and let your wild impulses do as they will, or will you rein it in to keep yourself from going too far?[roman type][bracket]WARNING: Extreme violence occurs if you accept.[close bracket][line break]";
+		say "     With your predatory, avian instincts exciting you, you find it difficult to hold back any longer. You have caught your prey and he is at your mercy.";
+		say "     [bold type]Shall you let loose and let your wild impulses do as they will, or will you rein it in to keep yourself from going too far?[roman type] [bracket]WARNING: Extreme violence occurs if you accept.[close bracket][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Let your wild impulses do as they will.";
 		say "     ([link]N[as]n[end link]) - Rein in your instincts.";
@@ -1042,7 +1042,7 @@ to say icarussex6b_dom:		[Repeatable rough scene B]
 to say icarussex6c_dom_ap:		[Repeatable rough scene C - avian pred only]
 	setmonster "Blue Chaffinch";
 	choose row monster from the Table of Random Critters;
-	say "     Having attracted your bird master with your wanton display, you are grabbed and pushed towards the basement door. It must be an unusual sight to see an powerful avian predator such as yourself cowed by the little passerine, but you know your place and go through the door. Once the door is shut, he shoves you even as you're descending the dark stairs. Again, you stumble and half-fall down the stairs before hitting the wall ahead.";
+	say "     Having attracted your bird master with your wanton display, you are grabbed and pushed towards the basement door. It must be an unusual sight to see a powerful avian predator such as yourself cowed by the little passerine, but you know your place and go through the door. Once the door is shut, he shoves you even as you're descending the dark stairs. Again, you stumble and half-fall down the stairs before hitting the wall ahead.";
 	say "     Before you can recover your footing, Icarus grabs you by the back of the neck and yanks you towards the middle of the floor. 'How pathetic. What kind of a bird are you if you can't even fly?' he says, grabbing one of your wings and twisting on it. You groan in pain only to have him laugh and shove you back to the ground. He instead grabs your ass and grinds his stiff cock against it.";
 	WaitLineBreak;
 	if player is female:

@@ -83,7 +83,7 @@ to CatsVSDogsEvent:
 		now CatsVSDogsCounter is 2;
 	else if CatsVSDogsCounter is 2:
 		say "     You spot the cats and dogs again, this time at a running track. There are a number of them wearing sporty clothes and stretching, getting limber for the run. A cat walks up to the side of the track at the finish line and lifts a gun. Immediately they all get into position side by side.";
-		say "     The cat fires smoke into the air, and a second later they all sprint off as they hear the [bold type]BANG[roman type]. Immediately the cats etch out a small lead, legs pumping, ears flat. You notice something at the start, a grayhound shouts '[bold type]3[roman type]'. He launches off the line, catches and passes the dogs, slows down behind the cats and as the finish line approaches, gets around them just in time. The crowd back at the start line cheer and a large dog shouts [bold type]'ONE ALL'[roman type]. They all start walking towards the finish line, making you realize that you should be exploring the campus.";
+		say "     The cat fires smoke into the air, and a second later they all sprint off as they hear the [bold type]BANG[roman type]. Immediately the cats etch out a small lead, legs pumping, ears flat. You notice something at the start, a greyhound shouts '[bold type]3[roman type]'. He launches off the line, catches and passes the dogs, slows down behind the cats and as the finish line approaches, gets around them just in time. The crowd back at the start line cheer and a large dog shouts [bold type]'ONE ALL'[roman type]. They all start walking towards the finish line, making you realize that you should be exploring the campus.";
 		now CatsVSDogsCounter is 3;
 	else if CatsVSDogsCounter is 3:
 		say "     Hearing the sounds in the distance, you recognize the cats and dogs before you even see them. This time each group is sitting around a table, throwing bits of food at the other. You take a seat a bit up the path and watch their antics for a minute, thankful for the cheer in an otherwise dreary city. From the opposite side you see a gryphon milkman come along, and you seem to notice him at the same time the two groups do. From each group a member steps forward and begins to walk towards the milkman. Suddenly they stop, look at each other, and both start running. Side by side they run to the milkman and side by side they tackle him. The two groups start cheering and patting each other on the back, watching the three of them fall to the ground.";
@@ -194,7 +194,7 @@ to FratPartyRecruiterEvent:
 	if FratPartyRecruiterProgression is 0:
 		say "     Walking over the campus, you hear someone call out 'Visit Phi Alpha Nu and have the best time of your life! Party every night, and as much booze as you can drink!' You look around, and see a satyr with black fur, curly black hair, and stout but thick horns walking along the campus path, handing out fliers to everyone he passes. A lot of students turn their heads, as he has a great physique, and if not for that then they're staring at the big piece of meat swinging between his legs. He also carries what looks like a wine-skin, apparently for handing out free trials of satyr wine. You watch as he hands a flyer to a group of guys, and continue on your path. The frat house you helped Talov and Kerr mix up clearly keeps on rolling with more fun every night!";
 	else if FratPartyRecruiterProgression is 1:
-		say "     Walking around the campus again you spot the handsome satyr recruiter from last time. He is talking with two good-looking frat-boys. It seems both are a bit wary about just how entusiastically he approaches them, but nevertheless, one of them takes a flyer. While he is reading, the satyr makes the other one sample the contents of his wine-skin. The strong pull of whine he drinks seems to take immediate effect on the guy. He instantly is sprouting a thick goatee, and shows quite a hard-on in his pants. This frightens his buddy, but before the young man can flee, he finds himself being groped by the satyr and his frat-brother. It seems as if Talov and Kerrç—´ satyr crew will soon get some new additions...";
+		say "     Walking around the campus again you spot the handsome satyr recruiter from last time. He is talking with two good-looking frat-boys. It seems both are a bit wary about just how enthusiastically he approaches them, but nevertheless, one of them takes a flyer. While he is reading, the satyr makes the other one sample the contents of his wine-skin. The strong pull of whine he drinks seems to take immediate effect on the guy. He instantly is sprouting a thick goatee, and shows quite a hard-on in his pants. This frightens his buddy, but before the young man can flee, he finds himself being groped by the satyr and his frat-brother. It seems as if Talov and the satyr crew will soon get some new additions...";
 	else if FratPartyRecruiterProgression is 2:
 		say "     You are walking over the campus again as you happen upon a flyer advertising the satyr party in P.A.N. Picking that up and looking at it, you spot another one, and then another one. You follow the trail until it ends in front of some bushes, where you hear some quite unmistakable sounds. Curious but careful, you step closer to get a better look; Behind the leaves, you see the black furred satyr having fun with the two frat boys from before, suckling one's swelling and shifting cock, while being fucked by the other one. The features of the frat-guys shift in front of your eyes, and their legs take a goat-like form with cloven hooves and fur, while horns push out of their heads. It appears as if recruiting for P.A.N. is quite successful.";
 	else if FratPartyRecruiterProgression is 3:
@@ -415,7 +415,7 @@ to LibrarySexEvent:
 		say "     Taking advantage of being on campus, you stop by the library and browse a little. ";
 		if randomnumber is:
 			-- 1:
-				say "     As you wander between the rows of bookshelves, you hear feminine giggles coming from the alley on the other side of the shelf.";
+				say "As you wander between the rows of bookshelves, you hear feminine giggles coming from the alley on the other side of the shelf.";
 				say "     'Ha ha... S-stop, the-the librarian w-will hear us,' one of them whispers.";
 				say "     'She will hear [italic type]you[roman type]. Keep these legs spread.'";
 				say "     [bold type]Do you wish to investigate?[roman type][line break]";
@@ -431,7 +431,7 @@ to LibrarySexEvent:
 					LineBreak;
 					say "     You resume your perusing, doing your best to ignore the noises.";
 			-- 2:
-				say "     As you wander between the rows of bookshelves, you hear a pair of female moans coming from the alley on the other side of the shelf.";
+				say "As you wander between the rows of bookshelves, you hear a pair of female moans coming from the alley on the other side of the shelf.";
 				say "     'F-fuck. It feels s-so good.'";
 				say "     'Y-yeah. Keep going.'";
 				say "     [bold type]Do you wish to investigate?[roman type][line break]";

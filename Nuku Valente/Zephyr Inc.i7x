@@ -274,7 +274,7 @@ Instead of resolving a Beach Detector Site:
 			say "     With the creature defeated, you make it to the rocky spire. You now must climb the wet stone to get to the top. While parts of it are fairly easy to scale, there are a few difficult sections that make the climbing treacherous.";
 			let bonus be ( dexterity of player + strength of player minus 20 ) divided by 2;
 			let dice be a random number from 1 to 20;
-			say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+			say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 			if bonus + dice > 16:
 				say "You manage to safely make it up to the top!";
 			else:

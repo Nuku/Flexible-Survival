@@ -1997,7 +1997,7 @@ Up to this point, we have talked about element scaling factors as if they were u
 
 	Use asymmetrical scaling
 
-Now we can scale elements—most usefully, sprites—asymmetrically, meaning we can stretch or squeeze the element along one axis more than along the other. This will often be less than pleasing aesthetically, but in some cases it can be quite useful.
+Now we can scale elements - most usefully, sprites - asymmetrically, meaning we can stretch or squeeze the element along one axis more than along the other. This will often be less than pleasing aesthetically, but in some cases it can be quite useful.
 
 Note that when this option is set, we can no longer use the "scaling factor" property for elements. Instead, we must now specify the "x-scaling factor" and the "y-scaling factor" separately. We must do this for all elements:
 

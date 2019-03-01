@@ -420,10 +420,10 @@ carry out Larissatfing:
 	follow the larissa_tfoption rule;
 	if HP of Larissa is 1:
 		say "     'I've been noticing all the interesting new creatures and forms out there that our various agents and researchers have been documenting. It's had me wondering if I might want to try out a new look. You know, a bit of a test drive before I settle on the new me,' she says quietly. Liking where this is going, you lean in a little closer. 'While a lot of samples come through here, I can't really snag them for myself. They're all logged in the inventory. But you've proven to be quite helpful and I thought you might want help me out,' she says with a sexy smile.";
-		say "     'So to pull this off, I'd need you to snag some vial samples. ";
+		say "     'So to pull this off, I'd need you to snag some vial samples";
 		if scenario is not "Researcher" and nanitemeter is 0:
-			say ", and for that you'll need to get one of the nanite collectors we have on sale here. ";
-		say "     With a vial and some credits from you, I'll get a new bod.' You must make a face at the mention of money as well. 'Oh, now don't be like that. I'll need it to help with my expenses. I'll need to pay for a new id card, pay someone to watch my shift, get some new clothes... lots of stuff so we can set this up. You'll get to help me test drive it, so doesn't that sound worth it, hon";
+			say ", and for that you'll need to get one of the nanite collectors we have on sale here";
+		say ". With a vial and some credits from you, I'll get a new bod.' You must make a face at the mention of money as well. 'Oh, now don't be like that. I'll need it to help with my expenses. I'll need to pay for a new id card, pay someone to watch my shift, get some new clothes... lots of stuff so we can set this up. You'll get to help me test drive it, so doesn't that sound worth it, hon";
 		if scenario is not "Researcher" and nanitemeter is 0:
 			say "?' She gives you a grin. 'I'll even arrange to give you a big discount on the nanite collector, letting you get it for the employee price. Just don't tell anyone,' she adds with a wink.";
 			nanitecoll_discount;
@@ -434,10 +434,10 @@ carry out Larissatfing:
 	else if HP is 2:
 		say "     'I'm still looking forward to changing into some sexy creatures so we can have even more fun together. I'll need a vial for the creature and [LarissTFcost] credits to cover the various expenses and to make sure someone will cover my shift while we put the new me through the paces,' she says with a wink.";
 	else:
-		say "     'I'm still interested in trying on some other forms. Be on the lookout for interesting creatures and snag a vial from them, ";
+		say "     'I'm still interested in trying on some other forms. Be on the lookout for interesting creatures and snag a vial from them";
 		if scenario is not "Researcher" and nanitemeter is 0:
-			say "and for that you'll need to get one of the nanite collectors we have on sale here. ";
-		say "     With that and [LarissTFcost] credits to cover the expenses, we can have ourselves some fun,' she says with a wink.";
+			say ", and for that you'll need to get one of the nanite collectors we have on sale here";
+		say ". With that and [LarissTFcost] credits to cover the expenses, we can have ourselves some fun,' she says with a wink.";
 	say "     'Now, I've been making a list of the ones that I've found that would be particularly interesting. Just let me know if you'd like to have me give it a whirl,' [subjpro of Larissa] adds.";
 	sort Larissa_possible_forms;
 	repeat with y running from 1 to number of entries in Larissa_possible_forms:
@@ -490,7 +490,7 @@ to nanitecoll_discount:
 				break;
 
 to say Larissa pre-tf:
-	say "     Larissa takes the vial and debits the required credits with an grin. [subjpro_Cap of Larissa] seems quite excited at the prospect of transforming[if HP of Larissa > 2] again[end if]. After getting one of [possadj of Larissa] co-workers to cover the front desk for [objpro of Larissa], the [LarissaForm] leads you into the break room. Rather sparse, it does have a small cot available. Pulling off [possadj of Larissa] lab coat, she stretches out, showing off [possadj of Larissa] [LarissaBodyType] to you one last time before downing the vial in one big gulp.";
+	say "     Larissa takes the vial and debits the required credits with a grin. [subjpro_Cap of Larissa] seems quite excited at the prospect of transforming[if HP of Larissa > 2] again[end if]. After getting one of [possadj of Larissa] co-workers to cover the front desk for [objpro of Larissa], the [LarissaForm] leads you into the break room. Rather sparse, it does have a small cot available. Pulling off [possadj of Larissa] lab coat, she stretches out, showing off [possadj of Larissa] [LarissaBodyType] to you one last time before downing the vial in one big gulp.";
 	if Cocks of Larissa > 0 and Cunts of Larissa > 0:
 		now LarissaOldgender is 3;
 	else if Cocks of Larissa > 0:
@@ -504,13 +504,13 @@ to say Larissa pre-tf:
 to say Larissa post-tf:
 	say "     Larissa moans and licks [if LarissaOldgender > 1]her[else]his[end if] lips and takes a seat on the edge of the cot. As you watch, Larissa's body [LarissaTFText] as the [LarissaInfName] infection kicks in. As you watch, [if LarissaOldgender > 1]she[else]he[end if] gains [LarissaSkin] all over her new [if LarissaOldgender > 1]her[else]his[end if] [LarissaBodyType] form.";
 	say "     [subjpro_Cap of Larissa] presses [possadj of Larissa] transformed [LarissaHandForm]s between [possadj of Larissa] legs and gropes [possadj of Larissa] changing crotch as ";
-	if Cocks of Larissa > 0:		[male/herm]
+	if cocks of Larissa > 0:		[male/herm]
 		say "[if LarissaOldgender is 1 or LarissaOldgender is 3][possadj of Larissa] shaft shifts and becomes a [Cock Size Desc of Larissa] [LarissaCock] cock[else][subjpro of Larissa] [one of]grows[or]gains[or]forms[at random] a [Cock Size Desc of Larissa] [LarissaCock] cock[end if][if Cunts of Larissa > 0] with a [Cunt Size Desc of Larissa] pussy waiting behind it[end if]. ";
-	else if Cunts of Larissa > 0:	[female]
+	else if cunts of Larissa > 0:	[female]
 		say "[if LarissaOldgender is 1 or LarissaOldgender is 3][possadj of Larissa] shaft shrinks and eventually disappears entirely as [possadj of Larissa] wet [Cunt Size Desc of Larissa] pussy forms[else if LarissaOldgender is 2][subjpro of Larissa] fingers [possadj of Larissa] wet, dripping snatch as it changes in response to [possadj of Larissa] transformation to become a [Cunt Size Desc of Larissa] pussy[else][possadj of Larissa] bare groin forms a wet [Cunt Size Desc of Larissa] pussy[end if]. ";
 	else:					[neuter]
 		say "all signs of [possadj of Larissa] previous gender fade away, leaving [objpro of Larissa] with a bare, genderless groin. ";
-	say "     'Oh, this feels so good. Mmm... let's have some fun now,' [subjpro of Larissa] says, running [possadj of Larissa] paws over [possadj of Larissa] altered body wantonly while stepping forward to [possadj of Larissa] [LarissaBodyType] form against yours. It seems the excitement of transformation's gotten the [LarissaForm] eager to see just what [possadj of Larissa] new body is like.";
+	say "'Oh, this feels so good. Mmm... let's have some fun now,' [subjpro of Larissa] says, running [possadj of Larissa] paws over [possadj of Larissa] altered body wantonly while stepping forward to [possadj of Larissa] [LarissaBodyType] form against yours. It seems the excitement of transformation's gotten the [LarissaForm] eager to see just what [possadj of Larissa] new body is like.";
 	WaitLineBreak;
 	if player is not neuter:
 		say "[LarissaTFsex]";

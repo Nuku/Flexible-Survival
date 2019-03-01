@@ -23,7 +23,7 @@ Instead of resolving a Quiet Apartment Building:
 		WaitLineBreak;
 		say "[mouseapts]";
 	else:
-		say "The place seems safe and inviting. You don't see any cum stains or piles of discarded clothes around and there's no noise of creatures rustling about inside. The place isn't that big, it shouldn't take you that long to check it out. Perhaps you'll find something of use or even some survivors. Shall you follow your hunch and go in to search the place?";
+		say "The place seems safe and inviting. You don't see any cum stains or piles of discarded clothes around and there's no noise of creatures rustling about inside. The place isn't that big, so it shouldn't take you that long to check it out. Perhaps you'll find something of use or even some survivors? Shall you follow your hunch and go in to search the place?";
 		if player consents:
 			say "[mouseapts]";
 		else:

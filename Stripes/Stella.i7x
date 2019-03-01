@@ -51,11 +51,11 @@ to say convincestella:
 	let bonus be ( charisma of player minus 10 ) divided by 2;
 	let bonus2 be ( the number of booked people + the number of bunkered people ) / 2;
 	let dice be a random number from 1 to 20;
-	say "You roll 1d20([dice])+[bonus]+[bonus2]: [dice + bonus + bonus2]: ";
+	say "     You roll 1d20([dice])+[bonus]+[bonus2]: [dice + bonus + bonus2]: ";
 	if ( dice + bonus + bonus2 ) > 14:
 		say "You tell Stella that you know [if Police Station Twelve is known]a couple of safe places[else]a safe place[end if] that she might stay[if number of bunkered people + number of booked people > 2], adding that you've got a few other friends there as well[end if]. It takes a little convincing to get her to trust you given your initial impression, but the prospect of somewhere safe (and maybe some sex as well) convinces her to go with you. ";
 		if Police Station Twelve is known and HP of Alexandra >= 52:
-			say "     The Police Station's somewhat closer than the bunker to here.";
+			say "The Police Station's somewhat closer than the bunker to here.";
 			say "     [bold type]Shall you take her there for now?[roman type][line break]";
 			LineBreak;
 			say "     ([link]Y[as]y[end link]) - Yes.";

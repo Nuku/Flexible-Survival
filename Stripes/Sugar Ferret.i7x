@@ -71,9 +71,9 @@ to say losetosugarferret:
 to say beatthesugarferret:
 	if sugarferretfight is 3:
 		now sugarferretfight is 1;
-		say "     Over the course of your fight with them, you manage to temporarily daze several of the crazed ferrets attacking you and toss several others over to the others having lustful sex, where they're grabbed and pulled into playing with those couples. When the last of them dealt with, you have a brief moment to take in what's happening.";
+		say "     Over the course of your fight with them, you manage to temporarily daze several of the crazed ferrets attacking you and toss several others over to the others having lustful sex, where they're grabbed and pulled into playing with those couples. Once the last of them is dealt with, you have a brief moment to take in what's happening.";
 	else:
-		say "     Managing to daze several of the ferrets, the others retreat with their fallen comrades, yelling '[one of]Meanie[or]Stingy[or]Come on, let's try over here[or][if player is female]She[else]He[end if] plays too rough![at random]' as they leave. Victorious over the manic tube-rats, you are free to get on with your plans. ";
+		say "     Managing to daze several of the ferrets, the others retreat with their fallen comrades, yelling '[one of]Meanie[or]Stingy[or]Come on, let's try over here[or][if player is female]She[else]He[end if] plays too rough[at random]!' as they leave. Victorious over the manic tube-rats, you are free to get on with your plans.";
 
 
 to say sugarferretdesc:
@@ -88,11 +88,12 @@ to say sugarferretdesc:
 	if sugarferretfight is 3:
 		say "     Once cute and cuddly little ferrets, the pastel mustelids have become vibrantly colored. Their cute paws-like hands have gained large, sharp claws and their too-wide grins are filled with pointed teeth. They look at you with sinister intent in their bright, red eyes as they move in to surround you.";
 	else:
-		say "     You find yourself encountering a small group of the sugar ferrets all hepped up on caffeine again, probably still rampaging in search of more cola or candy. Their once pastel colors are now bright and vibrant. Their paws have elongated claws and their wide, manic grins show their saw-like teeth. While only four of five feet tall, there are several of the little bundles of energy here. Overcharged on caffeine and sugar, they have boundless energy and a wild thirst for more. Spotting you, they poing over, intent on ransacking your pack for any soda they can find. ";
+		say "     You find yourself encountering a small group of the sugar ferrets all hepped up on caffeine again, probably still rampaging in search of more cola or candy. Their once pastel colors are now bright and vibrant. Their paws have elongated claws and their wide, manic grins show their saw-like teeth. While only four of five feet tall, there are several of the little bundles of energy here. Overcharged on caffeine and sugar, they have boundless energy and a wild thirst for more. Spotting you, they poing over, intent on ransacking your pack for any soda they can find";
 		if bodyname of player is "Sugar Ferret" and caffeinehigh of player > 0:
-			say "     Still in the throes of your own caffeine high, you clutch your pack possessively, wanting to protect your stash from them.";
+			say ". Still in the throes of your own caffeine high, you clutch your pack possessively, wanting to protect your stash from them.";
 		else:
 			if sugferretjoke is false:
+				say ".";
 				say "     'Give us the cola and we'll hurt you!' one says.";
 				say "     'No, _or_ we'll hurt you!' another says, bonking the first on the head.";
 				say "     'Well, maybe it'll hurt a bit, but it'll be fun!' another pipes in.";
@@ -167,7 +168,7 @@ name	combat (rule)	preattack (rule)	postattack (rule)	altattack1 (rule)	alt1chan
 this is the sugferret rule:		[continuous temptation]
 	choose row monster from Table of Random Critters;
 	if bodyname of player is "Sugar Ferret":
-		say "     [one of]Just looking at the other cute, bouncy ferrets around you is a considerable temptation. If you give in, you could have more soda with them and have some fun[or]The sight of those energetic ferrets makes you want to give in and join them in their wild romp[or]'Yay! Playtime!' one of the ferrets calls out[or]'Weeee! PopPopPopPopPop!' they babble frantically, lost in their caffeine high and you find yourself tempted to give into the manic energy filling you as well[or]'Join us for some fun! Come! We've got sugar!' one of them says in a tempting manner. 'Yeah,' another pipes up, 'we'll share!' Your ferrety impulses do find the offer alluring[at random]...";
+		say "     [one of]Just looking at the other cute, bouncy ferrets around you is a considerable temptation. If you give in, you could have more soda with them and have some fun[or]The sight of those energetic ferrets makes you want to give in and join them in their wild romp[or]'Yay! Playtime!' one of the ferrets calls out[or]'Weeee! PopPopPopPopPop!' they babble frantically, lost in their caffeine high and you find yourself tempted to give in to the manic energy filling you as well[or]'Join us for some fun! Come! We've got sugar!' one of them says in a tempting manner. 'Yeah,' another pipes up, 'we'll share!' Your ferrety impulses do find the offer alluring[at random]...";
 		let targetnum be 200 + humanity of player + ( plmindbonus * 3 ) - libido of player - ( caffeinehigh of player * 2 );
 		let tempnum be a random number between 1 and ( 200 + ( monmindbonus * 3 ) );
 		say "1-200: [tempnum] vs [targetnum]: ";

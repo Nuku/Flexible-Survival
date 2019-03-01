@@ -3,7 +3,7 @@ Version 1 of Thomas by Wahn begins here.
 
 "Adds an NPC named Thomas to the Flexible Survival game"
 
-[ HP states of Thomas (localisation & gender)                        ]
+[ HP states of Thomas (localization & gender)                        ]
 [   0: not yet met                                                   ]
 [   1: knows he's a herm                                             ]
 [   2: open to mare sex, virgin                                      ]
@@ -435,8 +435,8 @@ to say ThomasTalk8:
 			LineBreak;
 			say "     You casually pick up the metal rod the bell was hanging from and knot it into pretzel shape. Dropping it on the ground in front of the foreman, you grin at him and crack your knuckles. Looking at the bent piece of metal, the prairie dog quickly says 'Err - that last bit was a joke of course. We'll be off now. Hurriedly and with lots of looks at the results of your demonstration, the work group assembles and moves out. The foreman nods to your centaur friend and says 'We'll have the job done right quick. You'll see.' before they leave.";
 		else:
-			say "     Less than impressed with your supposed show of strength, the prairie dogs decide just to take what they want. Like a furry avalanche, a dozen of them pile up on you and pull you to your knees. Then the first one of them pushes his cock in your mouth and starts to face-fuck you. The rest of them crowd in around you, cheering on their buddy. Not much later, he comes in your mouth, coating your tongue with his sperm. As soon as he pulls out and steps aside, another prairie dog comes forward and takes his place...";
 			LineBreak;
+			say "     Less than impressed with your supposed show of strength, the prairie dogs decide just to take what they want. Like a furry avalanche, a dozen of them pile up on you and pull you to your knees. Then the first one of them pushes his cock in your mouth and starts to face-fuck you. The rest of them crowd in around you, cheering on their buddy. Not much later, he comes in your mouth, coating your tongue with his sperm. As soon as he pulls out and steps aside, another prairie dog comes forward and takes his place...";
 			say "     Quite a while later, with uncounted numbers of cumshots into your stomach (you suspect some of the guys came back for two servings) they're finally done with you. Thomas helps you back to your feet and the two of you watch the pretty jolly and grinning work group assemble and move out. The foreman nods to your centaur friend and says 'We'll have the job done right quick. You'll see.' before they leave.";
 			infect "Prairie Dog";
 			infect "Prairie Dog";
@@ -449,6 +449,7 @@ to say ThomasTalk8:
 			LineBreak;
 			say "     Reciting the rules and regulations of the united miner's guild, you convince the prairie dogs that (A) they're not allowed to demand sex as payment and (B) a deal's a deal and the payment was already agreed upon. Murmuring about letting someone else negotiate beforehand the next time, the mining rodents have no choice but to agree. Still muttering amongst themselves, the work group soon assembles and moves out. The foreman nods to your centaur friend and says 'We'll have the job done right quick. You'll see.' before they leave.";
 		else:
+			LineBreak;
 			say "     Your arguments sadly fall on deaf ears and the prairie dogs decide just to take what they want. Like a furry avalanche, a dozen of them pile up on you and pull you to your knees. Then the first one of them pushes his cock in your mouth and starts to face-fuck you. The rest of them crowd in around you, cheering on their buddy. Not much later, he comes in your mouth, coating your tongue with his sperm. As soon as he pulls out and steps aside, another prairie dog comes forward and takes his place...";
 			LineBreak;
 			say "     Quite a while later, with uncounted numbers of cumshots into your stomach (you suspect some of the guys came back for two servings) they're finally done with you. Thomas helps you back to your feet and the two of you watch the pretty jolly and grinning work group assemble and move out. The foreman nods to your centaur friend and says 'We'll have the job done right quick. You'll see.' before they leave.";

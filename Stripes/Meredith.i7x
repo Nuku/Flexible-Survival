@@ -137,10 +137,10 @@ to say Meredithrescue_succeed:
 to say Meredithrescue_fail:
 	say "     Beaten by the kangaroos, you are distracted with sex for quite some time. By the time you recover your senses and go looking for the others, all you find are some torn scraps of cloth and the signs of a struggle. You make your way back to the bunker to recover. ";
 	if Colleen is bunkered:
-		say "     About a half-hour later, Colleen manages to make it back to the bunker, looking quite battleworn and exhausted as she stumbles inside[if sarah is bunkered]. She gives you a brief hug before staggering over to Sarah to be comforted[else]. She gives you a brief hug before staggering over to her bunk to pass out[end if]";
+		say "About a half-hour later, Colleen manages to make it back to the bunker, looking quite battleworn and exhausted as she stumbles inside. She gives you a brief hug before staggering over to [if sarah is bunkered]Sarah to be comforted[else]her bunk to pass out[end if]";
 	else:
-		say "     You wait for quite some time for any sign of either the centaur woman or her teammate, but neither show";
-	say "     It's painfully clear to you that Vanessa will not be returning at all.";
+		say "You wait for quite some time for any sign of either the centaur woman or her teammate, but neither show";
+	say ". It's painfully clear to you that Vanessa will not be returning at all.";
 	now HP of Meredith is 100;
 	now HP of Vanessa is 51;
 	now Vanessa is nowhere;
@@ -148,10 +148,10 @@ to say Meredithrescue_fail:
 to say Meredithrescue_flee:
 	say "     Making your escape from the kangaroos, you have to withdraw and hope the others will be alright. You make your way back to the library to wait and recover. ";
 	if Colleen is bunkered:
-		say "     About a half-hour later, Colleen manages to make it back to the bunker, looking quite battleworn and exhausted as she stumbles inside[if sarah is bunkered]. She gives you a brief hug before staggering over to Sarah to be comforted[else]. She gives you a brief hug before staggering over to her bunk to pass out[end if]";
+		say "About a half-hour later, Colleen manages to make it back to the bunker, looking quite battleworn and exhausted as she stumbles inside. She gives you a brief hug before staggering over to [if sarah is bunkered]Sarah to be comforted[else]her bunk to pass out[end if]";
 	else:
-		say "     You wait for quite some time for any sign of either the centaur woman or her teammate, but neither show";
-	say "     It's painfully clear to you that Vanessa will not be returning at all.";
+		say "You wait for quite some time for any sign of either the centaur woman or her teammate, but neither show";
+	say ". It's painfully clear to you that Vanessa will not be returning at all.";
 	now HP of Meredith is 100;
 	now HP of Vanessa is 51;
 	now Vanessa is nowhere;
@@ -509,7 +509,7 @@ to say Meredith_3some1:
 		say "     After this warmup, Vanessa trots around to give Mare a swat on the rear, telling her to get into position and raise her tail for you. The bigger centaur then lines up alongside her and does the same. With the lovely sight of these two mares showing their juicy equine vulvae to you, you lick your lips and move in, placing a hand on each. You trace your fingers lightly over those wet folds, complimenting the lovely mares on how juicy they look before slowly pushing a few fingers into them.";
 		say "     Fingerfucking their pussies, you alternate between licking one and then the next, swapping back and forth to sample their hot juices. They snuggle and make out while you ride them as well, arms around each other and hands groping breasts and teasing nipples. Soft nickers and whinnies are mixed into their tender words of affection they share. Over time, you add more digits until you're working your whole hand into those equine cunts to give them something adequately filling to really get them going. You set up the best rhythm and control by twisting a little, pushing into one while pulling out of the other.";
 		say "     Doing them both in tandem allows you to compare their cunts, unable to quite decide which you enjoy the best. While Mare's is naturally a little smaller and tighter given her smaller stature, Vanessa's inner muscles still manage to squeeze tighter around your pistoning hand. You're still left undecided by the point Meredith's shifting excitedly from hoof to hoof as her cunny quivers around you before finally spasming around you as she climaxes. Knowing the other's cum soon has Vanessa's vagina squeezing harder around your hand as her orgasm washes through her. Both limbs are thoroughly soaked with equine juices from the orgasming centaurs.";
-		say "     Once their orgasms have passed and you slide your hands free, the two centaurs turn around and move in on you. You're groped and manhandled by the pair of them, eager fingers finding their way to your [if breasts of player > 0 and breast size of player > 0 and anallevel > 1]breasts, puss[yfn] and even your pucker[else if breasts of player > 0 and breast size of player > 0]breasts and puss[yfn][else]puss[yfn][end if]. After all the recent excitement, you don't hold out long before you're crying out in orgasmic release, soaking your thighs and their playful fingers with your hot juices. They make a show of licking these from their hands even as you do the same to get at their juices. Wet, sloppy kisses and snuggles are also shared before Vanessa and Meredith settle onto the floor side by side while you ready to go about some other tasks.";
+		say "     Once their orgasms have passed and you slide your hands free, the two centaurs turn around and move in on you. You're groped and manhandled by the pair of them, eager fingers finding their way to your [if breast size of player > 0 and anallevel > 1]breasts, puss[yfn] and even your pucker[else if breast size of player > 0]breasts and puss[yfn][else]puss[yfn][end if]. After all the recent excitement, you don't hold out long before you're crying out in orgasmic release, soaking your thighs and their playful fingers with your hot juices. They make a show of licking these from their hands even as you do the same to get at their juices. Wet, sloppy kisses and snuggles are also shared before Vanessa and Meredith settle onto the floor side by side while you ready to go about some other tasks.";
 	now lastfuck of Vanessa is turns;
 	now lastfuck of Meredith is turns;
 

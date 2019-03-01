@@ -373,7 +373,7 @@ to say TawnyaFurEvidence:
 					say "     'Fuck off! I ain't stripping for you unless there's an incentive for me.' She swears at you, eyes glaring at you. You raise your hands up in surrender before backing off. You then turn to the wolverine guard and tell him that you're done with her for now. He nods and grabs her before leading the two of you back to lockup where you muse on who you should talk to next. Though maybe you should make another attempt at convincing Tawnya";
 					now TawnyaFurSuspicion is 1; [she said she has none]
 	else if TawnyaFurSuspicion is 2: [she showed before she has no fur]
-		say "     'You've already seen that I have no fur so what the hell are you asking about that for?' the lizard-morph asks you. ";
+		say "     'You've already seen that I have no fur, so what the hell are you asking about that for?' the lizard-morph asks you.";
 		say "     [bold type]Get it on with her?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Sex with murder suspects is exciting!";

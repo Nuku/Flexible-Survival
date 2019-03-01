@@ -356,7 +356,7 @@ this is the leoninelust rule:		[continuous lustful weakening of player]
 				decrease libido of player by a random number between 0 and 1;
 			say "     [one of]Something inside you makes you long to give in to the sexy lion, draining your resolve[or]Just looking at the sexy lion makes your pussy quiver with need[or]You can't help but imagine yourself underneath this handsome feline, taking his throbbing cock[or]Affected by buried, feline urges, you find it hard to focus on the battle in the face of the strong, male cat[or]Some part of you pushes you to just give in so your aching cunt can get stuffed full of lion meat[at random][if HP of Leonard >= 7], though your loyalty to [one of]Leonard[or]your leonine master[or]your handsome lion[purely at random] does help you resist[end if]. You take [special-style-2][dam][roman type] damage";
 			if HP of player <= 0 or libido of player >= 110:
-				say "! You mewl and stagger, about to give into those urges as the feline comes in for a final strike.";
+				say "! You mewl and stagger, about to give in to those urges as the feline comes in for a final strike.";
 				now fightoutcome is 20;
 			else if ( ( HP of player * 100 ) / maxHP of player ) < 25:
 				say "! With your will to fight fading fast, you'd best end this soon.";
@@ -464,7 +464,7 @@ when play ends:
 						say ".";
 						say "     Being equipped with a cock as well, you become the alpha female of the pride. When others of your pride disobey you, you work out your frustration and deepen familial bonds by fucking them until they submit in a puddle of pleasured fluids. You end up siring several cubs of your own.";
 				else if player is male:
-					say ". Coming across one of the small cat girls, you mewl and coax her into approaching you. Once she's drawn in, you pounce her, revealing that you're not quite a cat [']girl['] like her. She submits soon enough, mrowling in need for your cock. As you fuck her, you start to change, growing larger and most masculine. Soon you're an strong and sexy lion man pounding into what is the first of many feline girls you'll have in your pride.";
+					say ". Coming across one of the small cat girls, you mewl and coax her into approaching you. Once she's drawn in, you pounce her, revealing that you're not quite a cat [']girl['] like her. She submits soon enough, mrowling in need for your cock. As you fuck her, you start to change, growing larger and most masculine. Soon you're a strong and sexy lion man pounding into what is the first of many feline girls you'll have in your pride.";
 				else:
 					say ". You are treated in a friendly manner by the felines of the park. The lions allow you to visit and play with their prides and service any members who want it. But lacking any distinct gender of your own, you're never allowed to join a pride of your own. You have an enjoyable life though, sharing in the company of the sexy lions and lovely lionesses, preferring your life as a free-roaming plaything for them all.";
 			else if HP of Leonard >= 3 and HP of Leonard < 10:	[w/Leonard]

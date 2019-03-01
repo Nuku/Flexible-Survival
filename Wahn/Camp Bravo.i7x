@@ -127,10 +127,10 @@ to say GuardLie: [lie to get into the camp]
 	let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 	if 2 is listed in bookcollection, increase bonus by 2;
 	let diceroll be a random number from 1 to 20;
-	say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+	say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 	increase diceroll by bonus;
 	if diceroll > 16:
-		say "     You walk up to them quite confidently and totally wrap Private Cooper around your finger with some quick talking. In the end, he salutes you before ordering the second guy - a blond man whose nametag reads Private Orwell - to lead you to their commanding officer's tent. You pass the hitching post you saw being used before, and also the huge minotaur sitting beside it right now munching on some food.";
+		say "You walk up to them quite confidently and totally wrap Private Cooper around your finger with some quick talking. In the end, he salutes you before ordering the second guy - a blond man whose nametag reads Private Orwell - to lead you to their commanding officer's tent. You pass the hitching post you saw being used before, and also the huge minotaur sitting beside it right now munching on some food.";
 		WaitLineBreak;
 		say "     The commandant of the camp is Major Padgett, who stands up from his field desk to shake your hand before offering you a seat.";
 		say "     'So you're the special agent sent to check out the situation? Welcome to Camp Bravo. Let me brief you about what's been happening. We were lucky enough to have a top scientist in the city when the outbreak started - a doctor Diego Garcia who contacted scouting parties I sent out. [if Diegochanged is 0]He's been infected himself so he's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, he's been gathering data and looking into the infection himself. He pointed out Patient Zero for us - that large minotaur thing out in the camp - and explained the procedures necessary to gather and transport samples...' [else]She's been infected herself so she's stuck inside the quarantine zone like all the other people when the outbreak hit. Not content to just sit and wait, she's been gathering data and looking into the infection herself. She pointed out patient zero for us and explained the procedures necessary to gather and transport samples...' [end if]He looks a bit embarrassed as he continues, saying 'You see, the samples can only be used if they're kept at human body temperature. So I've had to order the men to... carry the material inside their bodies to keep it valid.";
@@ -142,7 +142,7 @@ to say GuardLie: [lie to get into the camp]
 		now Back at the Camp is resolved;
 		now Resolution of Back at the Camp is 1; [lied your way in]
 	else:
-		say "     'Yeah, right - listen buddy, your story doesn't ring even remotely true in my ears. Get lost,' one of the soldiers scoffs at you. Can't be helped, you won't be getting any further here right now. Although there might be some hope of getting someone else on guard duty next time you come along here...";
+		say "'Yeah, right - listen buddy, your story doesn't ring even remotely true in my ears. Get lost,' one of the soldiers scoffs at you. Can't be helped, you won't be getting any further here right now. Although there might be some hope of getting someone else on guard duty next time you come along here...";
 		now Resolution of Back at the Camp is 2; [failed to convince]
 
 to say GuardBeg: [mooch some food from a guard]
@@ -262,7 +262,7 @@ Parade Ground	"Parade Ground"
 
 Parade Ground is a room.
 Parade Ground is north of Camp Bravo Entrance.
-The description of Parade Ground is "     You're in Camp Bravo, surrounded by green military tents. To the north lies the tent of the camp's commanding officer, west is the quartermaster's tent and to the south is the entrance of the camp. In the middle of the camp is an mostly empty parade ground with a wooden hitching post and a single field bed. There are various patches of dried cum on them and the ground around. An impressively large minotaur sits next to it, munching on vegetables and bread brought to him by a grizzled looking soldier. Seems like caring for the beast is his responsibility.".
+The description of Parade Ground is "     You're in Camp Bravo, surrounded by green military tents. To the north lies the tent of the camp's commanding officer, west is the quartermaster's tent, and to the south is the entrance of the camp. In the middle of the camp is a mostly empty parade ground with a wooden hitching post and a single field bed. There are various patches of dried cum on them and the ground around. An impressively large minotaur sits next to it, munching on vegetables and bread brought to him by a grizzled looking soldier. Seems like caring for the beast is his responsibility.".
 
 Instead of sniffing Parade Ground:
 	say "     The heavy scent of cum and a musky minotaur odor hang in the air. It must be laden with pheromones, as you're getting quite horny just from taking it in.";
@@ -405,15 +405,15 @@ to say MajorBreeding:
 		let bonus be (( the Charisma of the player minus 10 ) divided by 2);
 		if 2 is listed in bookcollection, increase bonus by 2;
 		let diceroll be a random number from 1 to 20;
-		say "You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
+		say "     You roll 1d20([diceroll])+[bonus]: [diceroll + bonus], ";
 		increase diceroll by bonus;
 		if diceroll > 6:
-			say "     He nods at your explanation, clearly accepting it for the truth. 'I see your point. Spreading out the duty of obtaining and transporting research samples to all soldiers under my command would alleviate the shortage of people I can send off. I'll pass along orders to that effect. Thank you for bringing this to my attention.'";
+			say "He nods at your explanation, clearly accepting it for the truth. 'I see your point. Spreading out the duty of obtaining and transporting research samples to all soldiers under my command would alleviate the shortage of people I can send off. I'll pass along orders to that effect. Thank you for bringing this to my attention.'";
 			now CampBravoWomenAllowed is 1;
 			now HP of Adam is 4; [female breeding allowed]
 			now ElainePregnant is 48; [48h till birth]
 		else:
-			say "     He looks doubtful at your explanation, unconvinced that sending his female soldiers to be impregnated by the huge minotaur outside is such a great idea. Maybe you should work at getting better at Ly- err, convincing him of the truth and try this again later.";
+			say "He looks doubtful at your explanation, unconvinced that sending his female soldiers to be impregnated by the huge minotaur outside is such a great idea. Maybe you should work at getting better at Ly- err, convincing him of the truth and try this again later.";
 		now thirst of Major Padgett is turns;
 
 to say MajorDavid:
@@ -476,8 +476,8 @@ to say CampBravoRadioTalk:
 [   1: had sex with the player                                       ]
 
 [ XP of Elaine                                                       ]
-[   0: player hasn't gotten an uniform yet                           ]
-[   1: player already got an uniform                                 ]
+[   0: player hasn't gotten a uniform yet                           ]
+[   1: player already got a uniform                                 ]
 
 [ ElainePregnant - timer for the birth (48h from start)              ]
 
@@ -522,7 +522,7 @@ to say CampBravoElaineTalk:
 	now description entry is "Get a report";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Request an uniform";
+	now title entry is "Request a uniform";
 	now sortorder entry is 2;
 	now description entry is "Ask the quartermaster to give you a uniform";
 	[]
@@ -570,7 +570,7 @@ to say CampBravoElaineTalk:
 				now sextablerun is 1;
 				if (nam is "Ask her for a status report"):
 					say "[CampBravoElaineReport]";
-				if (nam is "Request an uniform"):
+				if (nam is "Request a uniform"):
 					say "[ElaineUniform]";
 				if (nam is "Ask her about Adam"):
 					say "[CampBravoElaineAdamTalk]";
@@ -606,7 +606,7 @@ to say CampBravoElaineReport:
 		say "     She nods to Adam, who's busy sorting the inventory of a storage box. 'It still amazes me how quickly my boy has grown. I mean - it's been only days from Tiny Tim fucking me to Adam's current size. The aging seems to have slowed down to human levels now, thankfully.'";
 
 to say ElaineUniform:
-	if XP of Elaine is 2: [player already got an uniform]
+	if XP of Elaine is 2: [player already got a uniform]
 		say "     She looks at you and frowns. 'I already gave you a set of clothing recently. Sorry, but with some of the men coming back pretty... sticky and splattered in fluids after their patrols, I really need to conserve the spares for those cases. It's not like we have an easy time getting anything washed in this situation...'";
 	else: [player has not gotten a uniform yet]
 		if scalevalue of player is 1: [tiny]
@@ -616,7 +616,7 @@ to say ElaineUniform:
 			Linebreak;
 			UniformHandout;
 		else if scalevalue of player is 3: [normal]
-			say "     The quartermaster glances at your form and then strides over to a nearby shelf, selecting several articles of clothing and a pair of boots. 'Okay then, here's an uniform in your size.' With that, she hands you the stack of gear right away.";
+			say "     The quartermaster glances at your form and then strides over to a nearby shelf, selecting several articles of clothing and a pair of boots. 'Okay then, here's a uniform in your size.' With that, she hands you the stack of gear right away.";
 			Linebreak;
 			UniformHandout;
 		else if scalevalue of player is 4: [big]
@@ -1156,7 +1156,7 @@ to say CampBravoFuckTTFemale:
 		say "     By this point, Elaine's drained and recovered enough to be able to rise. She sidles over to the Major and runs a hand along his side. 'Don't worry about it, Major. We'll have her back to you shortly. How about I go with you and help you with whatever you need until she's back?' she says, slipping her hand into his pants to grope his ill-hidden erection. The commanding officer, mollified and distracted, is lead off by Elaine to his tent, leaving you and the others to get back to the fun. Once he's gone, you and sergeant breathe a heavy sigh of relief.";
 		WaitLineBreak;
 		say "     Tiny Tim's slow in restarting after the interruption, having mostly gone soft. Worn and nearly drained, it takes some extending thrusting on your part to get him up again. Thankfully the Major's secretary's willing to help take the slack in Elaine's position, sucking him until he's hard and can be reinserted into the next female to be bred. The break did help your endurance though, helping to ensure you're able to hold out until the last of them is finally fucked and filled with potent minotaur sperm.";
-		say "     As the last moaning female is getting pounded full of minotaur cock, you finally allow yourself to cum. Your balls are achingly overfull from the constant edging, but that only makes your release all the sweeter. Your load is a huge one, sending blast after blast of your seed into the bull stud's ass. The feel of this hot spunk pouring into his bowels is enough to set Tiny Tim off one last time. He gives a long, moaning bellow as his worn shaft pumps the last dregs of semen from his overworked testes. This final mate doesn't get any less than the others, finishing as bloated an full as any of the others, if not more so as the minotaur won't let her go until your extended orgasm is fully complete. Every last drop he still has goes into her womb to breed the female soldier.";
+		say "     As the last moaning female is getting pounded full of minotaur cock, you finally allow yourself to cum. Your balls are achingly overfull from the constant edging, but that only makes your release all the sweeter. Your load is a huge one, sending blast after blast of your seed into the bull stud's ass. The feel of this hot spunk pouring into his bowels is enough to set Tiny Tim off one last time. He gives a long, moaning bellow as his worn shaft pumps the last dregs of semen from his overworked testes. This final mate doesn't get any less than the others, finishing as bloated and full as any of the others, if not more so as the minotaur won't let her go until your extended orgasm is fully complete. Every last drop he still has goes into her womb to breed the female soldier.";
 		WaitLineBreak;
 		say "     Thoroughly exhausted, Tiny Tim slumps back against the crumpled, crushed and very sticky jeep. The remaining females who haven't gone back to their duties already come up to cuddle with him. The minotaur is tired, dazed, but also thoroughly pleased with himself. 'Girls happy? Females bred good?' he mumbles sleepily, nuzzling and kissing them. He manhandles their tits as he gently holds his many mates. They accept the fondling from his big, meaty hands and assure him he's done a great job, telling him there'll be plenty of new minotaur calves thanks to him. He drifts off with a happy smile on his bovine face.";
 		say "     You retreat back to the sergeant's tent to get cleaned up and recover. Your cock and balls have a dull ache, but it's a satisfying sensation as well. You're quite thoroughly sated and the thought of all those women you helped Tiny Tim knock up at once is arousing - even if your penis is in no fit state to respond to that arousal quite yet.";
@@ -1178,7 +1178,7 @@ to say CampBravoFuckTTFemale:
 		say "     The remaining soldiers are each given their turn under the minotaur stud. The women come in all shapes and sizes, providing the bull with a wide range of mates. This harem of potently bred females doesn't go far, too full and bloated to leave quite yet. They instead end up clustered around the jeep, bellies bloated with virile seed that's probably swarming their eggs right now. Some pass out while others snuggle or masturbate together[one of]. You've got a good view of a nearby pair busily eating each other out, their lapping tongues chasing after every drop of minotaur cum they can gather from the other's drooling cunt[or]. A nearby girl makes a show of fingering herself enthusiastically, occasionally swapping hands so she can lick the messy cum and cunt juices from her fingers[at random]. Elaine, preferring to get it from the source, takes to licking and sucking on the minotaur's cock while breeding partners are being swapped out.";
 		WaitLineBreak;
 		say "     As the wild breeding session's nearing completion, you notice that the sergeant's no longer able to hold back his arousal[one of]. He's busily getting a blow job from one of the many stuffed females[or]. He gets one of the many stuffed females bent back over the hood, taking her up the ass in time to the thrusts of the minotaur beside him[or]. Elaine gives him an enthusiastic titty-fuck whenever she's not sucking the minotaur's cock between swaps Alexander's organizing[or]. He jerks himself off messily across the bloated bellies of two hot females making out together[or]. He kneels between Elaine's spread thighs and drives his cock into her gooey cunt, working to add his seed to the sticky mess leaking from her overstuffed cunny[at random]. Finding yourself getting too close to popping, you have to pull your eyes away and slow the pace for a little while to ensure you can hold out until the end.";
-		say "     As the last moaning female is getting pounded full of minotaur cock, you finally allow yourself to cum. Your balls are achingly overfull from the constant edging, but that only makes your release all the sweeter. Your load is a huge one, sending blast after blast of your seed into the bull stud's ass. The feel of this hot spunk pouring into his bowels is enough to set Tiny Tim off one last time. He gives a long, moaning bellow as his worn shaft pumps the last dregs of semen from his overworked testes. This final mate doesn't get any less than the others, finishing as bloated an full as any of the others, if not more so as the minotaur won't let her go until your extended orgasm is fully complete. Every last drop he still has goes into her womb to breed the last of the female soldiers.";
+		say "     As the last moaning female is getting pounded full of minotaur cock, you finally allow yourself to cum. Your balls are achingly overfull from the constant edging, but that only makes your release all the sweeter. Your load is a huge one, sending blast after blast of your seed into the bull stud's ass. The feel of this hot spunk pouring into his bowels is enough to set Tiny Tim off one last time. He gives a long, moaning bellow as his worn shaft pumps the last dregs of semen from his overworked testes. This final mate doesn't get any less than the others, finishing as bloated and full as any of the others, if not more so as the minotaur won't let her go until your extended orgasm is fully complete. Every last drop he still has goes into her womb to breed the last of the female soldiers.";
 		WaitLineBreak;
 		say "     Thoroughly exhausted, Tiny Tim slumps back against the crumpled, crushed and very sticky jeep. The remaining females who haven't gone back to their duties already come up to cuddle with him. The minotaur is tired, dazed, but also thoroughly pleased with himself. 'Girls happy? Females bred good?' he mumbles sleepily, nuzzling and kissing them. He manhandles their tits as he gently holds his many mates. They accept the fondling from his big, meaty hands and assure him he's done a great job, telling him there'll be plenty of new minotaur calves thanks to him. He drifts off with a happy smile on his bovine face.";
 		say "     You retreat back to the sergeant's tent with Elaine to get cleaned up and recover. The two of you take the opportunity to cuddle for a bit in there, but you're both too spent for any more fun than that. Still, it's nice for her to get a break from the near-constant work of her other duties, so she enjoys it while she can. After quite a few kisses and lots of playing with her tits, she finally disentangles herself from you so she can get back to work. At least Tiny Tim'll be worn out for a while, giving her a bit of peace before having to deal with coaching more squeamish guys through their prep before their turn with him.";

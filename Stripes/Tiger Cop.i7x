@@ -193,7 +193,7 @@ Sgt Marks	"Sgt Marks"
 Sgt Marks is a man. Sgt Marks is in Police Car.
 The description of Sgt Marks is "     The tiger cop is quite large and impressively strong looking. His police jacket hangs open, unable to close around his broad, striped chest. His pants mostly fit, thought the bottom of the legs are torn open and leave the bottom third of his leg uncovered. To be able to fit his seven foot frame, he was probably a portly man before his transformation into the tall and muscled orange beast. His tail thrashes about with barely contained excitement as he checks over his equipment and supplies as he gets ready to enact his plan.".
 The conversation of Sgt Marks is { "WhoresWhoresWhoresWhores!" }.
-sgtmarkstalk is an number that varies.
+sgtmarkstalk is a number that varies.
 The icon of Sgt Marks is figure of SgtMarks_icon.
 
 the scent of the Sgt Marks is "The tiger cop growls and pushes you away as you come up to sniff him.".
@@ -774,7 +774,7 @@ When Play begins:
 	now face change entry is "it shifts and changes, forming a short muzzle. Your new nose and muzzle twitch as your whiskers grow in. Though you cannot see them yet, somehow you know your eyes have turned a pale, icy blue. Long, luscious black hair flows down, curling lightly to give you a full and sexy locks. You can feel your ears shifting, poking free as they become cute and tiger-like"; [ face change text. format as "Your face feels funny as (your text)." ]
 	now body change entry is "it shifts, growing tighter here, wider there. Your limbs and body stretch with feline flexibility as they move become those of a sexy tiger. Delicate, hand-like paws replace your current hands. They are nimble and you feel the urge to please someone with their touch. They also hide sheathed claws, waiting to sink into those who displease you. Your body starts giving off a subtle scent, like that of expensive perfume"; [ body change text. format as "Your body feels funny as (your text)." ]
 	now skin change entry is "soft fur spreads across your body. It is a white as pure as driven snow and sensually soft and silky to the touch. Even as you start to examine it, deep black stripes start to spread through it, leaving you covered in tiger-striped fur"; [ skin change text. format as "Your skin feels funny as (your text)." ]
-	now ass change entry is "shivers of delight run down your spine. You can feel it growing, extending out into a long tiger-like tail. As it does, your bottom shifts and tightens into a cute, firm bubble-butt. As you rub your hand over it, you feel the urge to find a nice cock to fill it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
+	now ass change entry is "shivers of delight run down your spine. You can feel it growing, extending out into a long, tiger-like tail. As it does, your bottom shifts and tightens into a cute, firm bubble-butt. As you rub your hand over it, you feel the urge to find a nice cock to fill it"; [ ass/tail change text. format as "Your ass feels funny as (your text)." ]
 	now cock change entry is "it becomes dark, almost black in color. Shifting shape, it grows soft, stimulating barbs and a tapered glans. As you watch, your new shaft is bundled up in a softly-furred sheath which spreads down to cover your ballsack as well. You look forward to putting this new piece of meat to work"; [ cock change text. format as "Your cock feels funny as (your text)." ]
 	now str entry is 14;
 	now dex entry is 20;

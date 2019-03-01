@@ -29,7 +29,7 @@ Instead of resolving Bounty Hunter:
 	say "     Quick as a whip, the gruff bull pulls a sawed-off shotgun into his hands and points it straight at your chest. This gives you serious pause, during which looks you over with a mean gaze. His eyes look you over up and down, but rather than stop at either your face or your junk, they stop somewhere in between[if breast size of player > 4]. And while they do linger on your [short breast size desc of player] a little longer, it's not there they stop either[end if]. Eventually he seems satisfied though and lowers the gun, and you heave a large sigh of relief.";
 	say "     'Sorry [']bout that. Thought you might've been someone else,' he says, slipping the shotgun into a leather holster at his hip. 'Tellin['] who's who these days ain't easy.'";
 	WaitLineBreak;
-	say "     No longer being held at gunpoint, you're able to relax and take in your would-be assailant. This tough-looking bull-man is decked out in an torn pair of black jeans, khaki vest and ripped gray t-shirt. His clothing has old stains on it in a few places, though the rips are newer, probably stretched out by his transformation. In addition to the holstered shotgun, he's got a large knife on his other hip. Hanging around his thick neck are a pair of binoculars and a string necklace with an assortment of animal teeth on it.";
+	say "     No longer being held at gunpoint, you're able to relax and take in your would-be assailant. This tough-looking bull-man is decked out in a torn pair of black jeans, khaki vest and ripped gray t-shirt. His clothing has old stains on it in a few places, though the rips are newer, probably stretched out by his transformation. In addition to the holstered shotgun, he's got a large knife on his other hip. Hanging around his thick neck are a pair of binoculars and a string necklace with an assortment of animal teeth on it.";
 	say "     This guy's been transformed into a stocky bull of a man. His bovine head is on a short neck and has its horns protruding from the sides of his temples. His body's bulky with muscle, and while he stands only a little above six feet tall, he looks like he could take on someone much larger with his bare hands. Any boots he may have worn have been discarded, his feet now ending in hardened hooves. His bovine coat is predominantly a russet red, with white on his head, down the center of his chest and at the end of his limbs.";
 	WaitLineBreak;
 	say "     You start to ask him what all of that was about, but he waves you off, saying it's none of your business. He gives you another look over. 'You do seem to be keepin['] it together pretty good though. Care to chat for a bit. I got a bit of a business proposition for you.' And while there's nothing quite like having been held at gunpoint by someone to start a relationship, you do decide to go ahead and hear him out.";
@@ -168,7 +168,7 @@ Instead of conversing the Bradford:
 		now bradfordstory1 is true;
 		say "     'This body of mine is like them cows on my da's ranch. Big, dumb Bradfords. Named after [']em and everything. I always hated them and that place. Left as soon as I could. Must be someone's idea of a sick joke, me lookin['] like this.'";
 	else:
-		say "     Walking up to the bull you ask if you could talk to him about something. 'Sure', he grunts, never taking his eyes away from the window. 'What'dya need?' ";
+		say "     Walking up to the bull you ask if you could talk to him about something. 'Sure', he grunts, never taking his eyes away from the window. 'What'dya need?'";
 		WaitLineBreak;
 		say "[BradfordTalkMenu]";
 
@@ -228,7 +228,7 @@ to say chitchatwithBradford: [smalltalk with Bradford]
 
 to say bountyBoardBradford: [bounties with Bradford]
 	if bradfordbounty > 0 and bradfordBountyNum > 0:
-		say "     How's that bounty sheet comin['] along? Says you've got to deal with another [bold type][bradfordbounty] [if bradfordBountyNum is 1]Demon Brute(s)[else if bradfordBountyNum is 2]Twisted Punk(s)[else if bradfordBountyNum is 3]Saber Kitt(y|ies)[else if bradfordBountyNum is 4]Alpha Husk(y|ies)[else if bradfordBountyNum is 5]Latex Ermine(s)[else if bradfordBountyNum is 6]Spider Girl(s)[end if][roman type].' ";
+		say "     How's that bounty sheet comin['] along? Says you've got to deal with another [bold type][bradfordbounty] [if bradfordBountyNum is 1]Demon Brute(s)[else if bradfordBountyNum is 2]Twisted Punk(s)[else if bradfordBountyNum is 3]Saber Kitt(y|ies)[else if bradfordBountyNum is 4]Alpha Husk(y|ies)[else if bradfordBountyNum is 5]Latex Ermine(s)[else if bradfordBountyNum is 6]Spider Girl(s)[end if][roman type].'";
 	else if bradfordbounty <= 0 and bradfordBountyNum > 0:
 		now bradfordBountyNum is 0;
 		say "     'Good goin['] with those [if bradfordBountyNum is 1]Demon Brutes[else if bradfordBountyNum is 2]Twisted Punks[else if bradfordBountyNum is 3]Saber Kitties[else if bradfordBountyNum is 4]Alpha Huskies[else if bradfordBountyNum is 5]Latex Ermines[else if bradfordBountyNum is 6]Spider Girls[end if][roman type]. Got sent a message when you finished it up. I hope they weren't too much of a hassle. Here's your cut,' he says, tossing you a credit voucher. Checking it, you find it only worth 125 freecred.";

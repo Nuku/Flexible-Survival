@@ -99,7 +99,7 @@ Prize winning toss is a situation.
 The sarea of Prize winning toss is "Fair".
 
 Instead of Resolving a Prize winning toss:
-	say "     Wandering through the games area of the midway, staring at the shining and sparkling fair games, you eventually give into temptation and try one of the tossing games, only to be surprised to find it is surprisingly hard, giving up you toss your last ring halfheartedly at the target and turn to leave, only to have to booth light up behind you. Looking backwards you see your last toss actually managed to make it onto the moving prize ring, and you actually won one of the lower tier prizes. Smiling at your lucky toss, you snag a pack of soda from the prize stack, and continue along your way, whistling along with the fair music.";
+	say "     Wandering through the games area of the midway, staring at the shining and sparkling fair games, you eventually give in to temptation and try one of the tossing games, only to be surprised to find it is surprisingly hard, giving up you toss your last ring halfheartedly at the target and turn to leave, only to have to booth light up behind you. Looking backwards you see your last toss actually managed to make it onto the moving prize ring, and you actually won one of the lower tier prizes. Smiling at your lucky toss, you snag a pack of soda from the prize stack, and continue along your way, whistling along with the fair music.";
 	increase carried of soda by 4;
 	now Prize winning toss is resolved;
 

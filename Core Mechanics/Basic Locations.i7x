@@ -293,11 +293,10 @@ to say usittingarea desc:
 	project the figure of Library2ndfloor_icon;
 	say "     Obviously meant for small study groups, the area around you has only a few tables and couches spread about. Most of the nearby shelves have been knocked down, leaving their books strewn across the floor. Although disorganized, the area also has a very lived-in feel to it, helping you relax your nerves and reflect on your next move. Heading southwest will take you back to the second floor landing, and a huge window overlooks the back of the library to the southeast.";
 	if doberman companion is tamed:
-		say "     At the edge of the open floor area, Spike has made a little man-cave for himself, dragging a mattress up from the bunker and setting a desk on its side to block the passage between two bookshelves. The little nook that created contains a number of posters of scantily dressed women. ";
+		say "     At the edge of the open floor area, Spike has made a little man-cave for himself, dragging a mattress up from the bunker and setting a desk on its side to block the passage between two bookshelves. The little nook that created contains a number of posters of scantily dressed women";
 		if Spike is visible:
-			say "The dobie frequently strokes himself off while looking at them.";
-		else:
-			LineBreak;
+			say ". The dobie frequently strokes himself off while looking at them";
+		say ".";
 
 Table of GameRoomIDs (continued)
 Object	Name
@@ -382,7 +381,7 @@ Table of GameRoomIDs (continued)
 Object	Name
 Park Trail	"Park Trail"
 
-Park Trail is a room. "     Following this North/South trail, you can see the severely overgrown state of the park all around you. All this can't be purely natural - it'd take ages to have gotten this bad. Seems like some of the spreading nanites decided to create a section of untamed wilderness right in the middle of the city. There are dense woods in almost every direction, including to the North, where the paved trail ends at a tree that must have literally exploded out of the ground under it. In the Northwest, there is a small expanse of bamboo forest, with a Torii arch forming the start of a narrow gravel trail leading into it.[line break]The path northwest looks safe and strangely peaceful, but it'll be easy to become lost in the rest of the thick woods of the park - though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
+Park Trail is a room. "     Following this North/South trail, you can see the severely overgrown state of the park all around you. All this can't be purely natural - it'd take ages to have gotten this bad. Seems like some of the spreading nanites decided to create a section of untamed wilderness right in the middle of the city. There are dense woods in almost every direction, including to the North, where the paved trail ends at a tree that must have literally exploded out of the ground under it. In the Northwest, there is a small expanse of bamboo forest, with a Torii arch forming the start of a narrow gravel trail leading into it.[line break]     The path northwest looks safe and strangely peaceful, but it'll be easy to become lost in the rest of the thick woods of the park - though perhaps exploring might have its own rewards. You can hear soft clopping sounds just beyond sight, and the occasional buzz of insects. The air is fresh here under the [short time of day] sky.".
 earea of Park Trail is "Park".
 
 Park Trail is north of Park Entrance.

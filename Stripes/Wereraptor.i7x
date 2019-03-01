@@ -264,7 +264,7 @@ to say beatthewereraptor:
 		say "     You manage to defeat and drive off Dr. Utah, the first wereraptor.";
 	else if bodyname of player is "Wereraptor" and player is not neuter:
 		say "     As the wereraptor stumbles back, weak and beaten, your primitive urges drive you to pounce upon [if wrmode is 1]her[else]him[end if] instinctively. You bear [if wrmode is 1]her[else]him[end if] to the ground and pin them.";
-		say "     [bold type]Shall you give into your primitive, lustful instincts and mate with your fallen foe?[roman type][line break]";
+		say "     [bold type]Shall you give in to your primitive, lustful instincts and mate with your fallen foe?[roman type][line break]";
 		LineBreak;
 		say "     ([link]Y[as]y[end link]) - Yes.";
 		say "     ([link]N[as]n[end link]) - No.";
@@ -957,7 +957,7 @@ when play ends:
 					say "     When the eggs Dr. Utah left in the city hatch, they seems like other ferals and go largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers. ";
 				else:
 					say "     Seeming at first like other ferals, the spread of wereraptors goes largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers. ";
-				say "     As the numbers of attacks from these 'night lizards' grow, you and Dr. Utah are pulled in as experts on prehistory and saurian creatures. But despite the many efforts and seemingly reasonable precautions you implement, the numbers continue to grow. With you both leading both sides, it is easy to ensure that your people rise in strength, pulling more people into your order and creating more sexy saurians to populate what will soon be your world.";
+				say "As the numbers of attacks from these 'night lizards' grow, you and Dr. Utah are pulled in as experts on prehistory and saurian creatures. But despite the many efforts and seemingly reasonable precautions you implement, the numbers continue to grow. With you both leading both sides, it is easy to ensure that your people rise in strength, pulling more people into your order and creating more sexy saurians to populate what will soon be your world.";
 		else:
 			if humanity of player < 10:
 				say "     As your infection takes hold, it tries to force out the ancient wereraptor curse, but cannot do so entirely. You spend much of your existence unaware of your dual identity, but every full moon, the hidden monster from the id rises and you transform into the Wereraptor to stalk the night. Often at these times, you meet with Dr. Utah in [if UtahGender is 1]his[else]her[end if] impressive night form and enjoy a lustful hunt together, adding others to your numbers.";
@@ -968,6 +968,6 @@ when play ends:
 					say "     When the eggs Dr. Utah left in the city hatch, they seems like other ferals and go largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers. ";
 				else:
 					say "     Seeming at first like other ferals, the spread of wereraptors goes largely unnoticed at first. But those who becomes wereraptors remain so, even if infected with other strains, keeping them among your ever-growing numbers. ";
-				say "     As the numbers of attacks from these 'night lizards' grow, you and Dr. Utah are pulled in as experts on prehistory and saurian creatures. But despite the many efforts and seemingly reasonable precautions you implement, the numbers continue to grow. With you both leading both sides, it is easy to ensure that your people rise in strength, pulling more people into your order and creating more sexy saurians to populate what will soon be your world.";
+				say "As the numbers of attacks from these 'night lizards' grow, you and Dr. Utah are pulled in as experts on prehistory and saurian creatures. But despite the many efforts and seemingly reasonable precautions you implement, the numbers continue to grow. With you both leading both sides, it is easy to ensure that your people rise in strength, pulling more people into your order and creating more sexy saurians to populate what will soon be your world.";
 
 Wereraptor ends here.

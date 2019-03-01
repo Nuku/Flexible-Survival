@@ -85,7 +85,7 @@ When Play begins:
 when play ends:
 	if bodyname of player is "Hyperskunk":
 		if humanity of player < 10:		[succumb]
-			say "     As you continue to lose yourself to the infection, you give into the instinctual lusts of your body. You are drawn back to the psych department of the hospital with a desire to see the sexy skunk there again. She welcomes you a smile and is more than happy to continue your sessions by going even more 'in-depth' with them until you're nothing but her lusty pet: another ornamental skunk and sex toy, but a living one this time. She keeps you in her office most of the time, using you as she sees fit. And when she finds new test subjects to experiment with, she is more than happy to showcase you to them as well. You have fun tempting these people into playing with you, your sexy mistress always happy to monitor their responses.";
+			say "     As you continue to lose yourself to the infection, you give in to the instinctual lusts of your body. You are drawn back to the psych department of the hospital with a desire to see the sexy skunk there again. She welcomes you a smile and is more than happy to continue your sessions by going even more 'in-depth' with them until you're nothing but her lusty pet: another ornamental skunk and sex toy, but a living one this time. She keeps you in her office most of the time, using you as she sees fit. And when she finds new test subjects to experiment with, she is more than happy to showcase you to them as well. You have fun tempting these people into playing with you, your sexy mistress always happy to monitor their responses.";
 			if hospquest < 2:
 				now hospquest is hospquest; [do-nothing action]
 			else if hospquest < 13:

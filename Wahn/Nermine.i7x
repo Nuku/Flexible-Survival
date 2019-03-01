@@ -879,7 +879,7 @@ to say NermineStoreFuck_Jaguar:
 	say "     ([link]N[as]n[end link]) - Nope, she's yours!";
 	if player consents:
 		LineBreak;
-		say "     In a generous mood after having gotten off in your prize bitch once already, you wave the jaguarman closer. ";
+		say "     In a generous mood after having gotten off in your prize bitch once already, you wave the jaguarman closer.";
 		say "[NermineStorefuck_JaguarSuck]";
 	else:
 		LineBreak;
@@ -896,7 +896,6 @@ to say NermineStoreFuck_Jaguar:
 			say "[bold type]You gain 1 water bottle![roman type][line break]";
 			increase carried of water bottle by 1;
 			say "     Agreeing to take payment for Nermine's services, you let the jaguarman put both items on a small table in the store, then wave him closer.";
-			LineBreak;
 			say "[NermineStorefuck_JaguarSuck]";
 		else:
 			LineBreak;
@@ -1150,7 +1149,7 @@ To say jackaltotemmagic:
 		say "     Taking out the shiny black jackal statue, you get the impression for a second that this particular jackal totem is grinning at you, but when you take a closer look you see that it looks just like the other statues. You rub the little figurine eagerly, looking forward to whatever powerful change this one will bring out in you. There it is again! This time, you are sure that you've seen the totem grin and wink at you, so you raise it to right in front of your eyes once more. As you focus on the black jackal intently, he wags his ears at you and grins, then suddenly crumbles into dust that a gust of what seems to be warm desert air blows straight into your face. You reach your hands up to feel your face, even as it seems to crack and shift, your sight clouding over as your eyes seem to change. When you can see again a second later, the lower half of your face seems to shift, pulling forward into a black-furred muzzle like a jackal would have.";
 		say "     While you are feeling the sides of this new jackal-like face, even as the bones settle and it finishes forming, new scents explode through your brain as your nose finishes shifting into place atop your narrow canine muzzle. You blink several times as you focus on something else than your own face for a second, finding that you see the world through new sharper eyes, and all sounds around you intensify as your new black canine ears finish shifting to stand straight up on your changed head. A feral grin stretches your new muzzle wide as you think of how happy Nermine will be to see your newest change, your mind filled with thoughts of Nermine and the need to please the wonderful jackal-woman. As you take in the world through your new heightened senses, you find yourself hoping she will be pleased enough with you to help you on your way to becoming even more the happy little jackal you just know you need to be.";
 		now facename of player is "Jackalboy";
-		now face of player is "narrow canine head, with a long sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's";
+		now face of player is "narrow canine head, with a long, sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's head";
 		say "[bold type]Your perception has increased by 3![roman type][line break]";
 		increase perception of player by 3;
 		now JackalBoyTF is 3;
@@ -1158,9 +1157,9 @@ To say jackaltotemmagic:
 		say "     Pulling this small jackal totem out, you find yourself grinning along with the statue as you realize that surely this figurine will be the last one you will need. Rubbing the little statue eagerly you feel a surge of warmth as it seems to melt under your hands, not crumbling like the others but melding with your body to become part of you. You don't have much time to think about this however, as your entire body starts to tingle and shift this time, your muscles seeming to ripple and smooth out, to give you a softer and more delicate appearance. You can feel the sharp claws of a jackal pushing out of your hands and feet, even as your body begins to take on a slightly more animalistic shape. Your heels lift slightly off the ground as your rear legs crack and shift to a more stable stance and your feet seem to spread apart on new jackal paws.";
 		say "     Looking down over yourself as the tingling begins to fade, you realize that you seem to be rather lean and skinny now, and perhaps a little shorter. Your new body is obviously more built for grace and speed than combat or hard labor. The sight of your new form makes you smile happily - it is just what you needed for serving your mistress, with its silky soft skin and sensitive body obviously perfect for pleasuring and serving the larger and stronger jackal-woman. Thinking about Nermine you realize you can hardly wait to get back and show her your new perfect form, and thank her for all her help in helping you become the submissive little jackal-toy she wanted you to be.";
 		LineBreak;
-		say " Wasting no time, you quickly run towards the shop, unable to wait as thoughts of the pretty and dominant shopkeeper run through your head. Maybe if you are lucky she will even have another job or two for you to do, and if you are really lucky she will even play with you some! You find yourself panting happily at the new thoughts, even as you run through the city on your swifter and surer legs.";
+		say "     Wasting no time, you quickly run towards the shop, unable to wait as thoughts of the pretty and dominant shopkeeper run through your head. Maybe if you are lucky she will even have another job or two for you to do, and if you are really lucky she will even play with you some! You find yourself panting happily at the new thoughts, even as you run through the city on your swifter and surer legs.";
 		now bodyname of player is "Jackalboy";
-		now body of player is "slim and sleek, only lightly muscled with slightly digitigrade legs and jackal-like feet, your slim body is the perfect type of body for a submissive little jackal boy like yourself";
+		now body of player is "slim and sleek, only lightly muscled with digitigrade legs and jackal-like feet. Your slender body is the perfect shape for a submissive little jackal boy like yourself";
 		attributeinfect "Jackalboy";
 		now cockname of player is "Jackalboy";
 		now cock of player is "[one of]canine[or]Jackalboy[or]jackal-like[or]knotted[at random]";
@@ -1189,12 +1188,12 @@ An everyturn rule:
 			if facename of player is not "Jackalboy":
 				say "     Something seems wrong to you for a minute, a frustration with your current head and face, making you snap and snarl like a beast as you try to work out the problem. You can feel the pressure inside your head building, until finally something seems to snap, and you let out a loud low moan of pleasure as your face begins to reshape itself. Your moaning cry soon transforms as well until the cry of a triumphant jackal echoes throughout the city, as you happily greet the return of the properly handsome face your mistress gave you.";
 				now facename of player is "Jackalboy";
-				now face of player is "narrow canine head, with a long sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you, as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's";
+				now face of player is "narrow canine head, with a long, sleek muzzle and a nicely flattened forehead. Your golden eyes seem to take in every aspect of the world around you as your sleek jackal ears swivel around on top of your head to catch the faintest noise. You can't help but enjoy how much your mistress seems to like your new jackal's head";
 		if JackalBoyTF >= 4:
 			if bodyname of player is not "Jackalboy":
 				say "     Your body seems to twist and warp, making you convulse as its fights off the intrusive new infection. Soon you can see your form slimming back down into the sleek soft lines of the jackalboy your mistress likes so much. The sight fills you with relief, as you shake off the last vestiges of the other infection. After all, you wouldn't want to make your mistress unhappy by being anything less than the lovely submissive jackal she helped mold you into.";
 				now bodyname of player is "Jackalboy";
-				now body of player is "slim and sleek, only lightly muscled with slightly digitigrade legs and jackal-like feet, your slim body is the perfect type of body for a submissive little jackal boy like yourself";
+				now body of player is "slim and sleek, only lightly muscled with digitigrade legs and jackal-like feet. Your slender body is the perfect shape for a submissive little jackal boy like yourself";
 				attributeinfect "Jackalboy";
 			if cockname of player is not "Jackalboy":
 				now cockname of player is "Jackalboy";

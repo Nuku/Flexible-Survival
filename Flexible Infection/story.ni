@@ -460,7 +460,7 @@ Segment	Shift Text	Desc Text
 "head"		"Your vision dims and shifts as you gain a sudden, sharp, headache. As you stagger, your face forms into a snout and fur grows rapidly. Your new sharper teeth are bared as you give a sound between a low growl and a moan of discomfort, but it's passing."	"You have the head of a cougar, with expressively mobile ears and black fringes to your snout. Your slitted eyes take in the details of the world with a new focus."
 "chest"	"Soft tingly itches announce the arrival of fur across your chest. You begin to rapidly grow breasts, and what breast they are! You're not even sure of the letter of them, huge and perfectly round. They take up all the space down to your belly."	"You have absolutely huge breasts on your chest, brown furred and pink teated. They are perfectly round and buoyant, resisting all of gravity's demands."
 "gut"		"Fat melts away, or more accurately, is drawn up into new breasts that swell out huge and round ahead of you. They seem a little low down, gracing your belly. Each brown furred tit is capped with a soft pink nipple."	"Your belly is lean and brown furred, and is the resting place of a pair of huge furry tits. They seem perfectly round, and only jiggle when you move quickly, surprisingly firm, but soft to the touch."
-"pelvis"	""	"Soft creamy fur covers the area between your forelegs, but you have nothing to hide there anymore, just smooth flesh underneath, bulging with new found musculature."
+"pelvis"	""	"Soft creamy fur covers the area between your forelegs, but you have nothing to hide there anymore, just smooth flesh underneath, bulging with newfound musculature."
 "left upper arm"	"Somewhat shaggy brown fur runs down along your upper left arm."	"Your left upper arm has shaggy brown fur."
 "left forearm"	"Your left forearm goes warm as fur spreads over it, soft but shaggy, brown and white."	"You have the forearm of a cougar, lean muscled and brown furred."
 "left hand"	"Your fingers sprout retractable claws suddenly as thick pads develop underneath. Fur sweeps up over your left hand and you're left with an agile feline paw."	"Your left hand has been replaced with a cougar's paw, with long agile fingers."
@@ -507,10 +507,10 @@ Segment	Shift Text	Desc Text	Unshift Text
 "chest"	"Your body expands with new muscles as your torso becomes more barrel like, filled with the power of a bovine[if the destined femininity of the player is 1]. The growing strength ebbs a moment, taking a detour into your suddenly very active mammaries, swelling quite large before four large teats swell on each, hanging pink and naked[end if]."           	"You have a powerful, brown and white furred, torso of a cow[if the destined femininity of the player is 1]. You have a huge set of breasts with four thick, dangling teats on each, pink and exposed[end if]."	"Your back itches as it shifts"
 "gut"	"The muscles of your belly grow in powerful bands as any fat melts away before the spread of the fur."          	"You have a gut full of powerful muscles, covered in brown and white fur."	--
 "pelvis"	"A patch of white fur rapidly covers your groin, revealing a [if the destined masculinity of the player is 1]massive furry sheath, hiding a bovine member, and matching balls, hanging down to almost your knees[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1] and a [end if][if the destined femininity of the player is 1]pouting set of furry vulva, slick with readiness[end if]."          	"You have a [if the destined femininity of the player is 1]pouting set of furry vulva, slick with readiness[end if][if the destined femininity of the player is 1 and the destined masculinity of the player is 1] and a [end if][if the destined masculinity of the player is 1]massive furry sheath, hiding a bovine member, and matching balls, hanging down to almost your knees[end if]."	--
-"left upper arm"	"Your arm bulks out with new found power, huge and muscly."               	"Your left arm looks strong enough to rip a metal door off the hinges."	--
+"left upper arm"	"Your arm bulks out with newfound power, huge and muscly."               	"Your left arm looks strong enough to rip a metal door off the hinges."	--
 "left forearm"	"Your left arm is covered in brown fur with white spots."        	"Your left arm is covered in brown fur with white spots."	--
 "left hand"	"Your fingers slowly rearrange to make three powerful digits and a thumb, each capped with a thick hoof like nail, and covered in fur."     	"You have a mix of a hoof and a left hand, with thick hoof nails and fur."	--
-"right upper arm"	"Your arm bulks out with new found power, huge and muscly."               	"Your right arm looks strong enough to rip a metal door off the hinges."	--
+"right upper arm"	"Your arm bulks out with newfound power, huge and muscly."               	"Your right arm looks strong enough to rip a metal door off the hinges."	--
 "right forearm"	"Your right arm is covered in brown fur with white spots."        	"Your right arm is covered in brown fur with white spots."	--
 "right hand"	"Your fingers slowly rearrange to make three powerful digits and a thumb, each capped with a thick hoof like nail, and covered in fur."     	"You have a mix of a hoof and a right hand, with thick hoof nails and fur."	--
 "left thigh"	"Your left leg is abruptly covered in brown and white fur in a rush of itchiness."            	"Your left leg is covered in brown fur with white spots."	--
@@ -940,10 +940,10 @@ Segment	Shift Text	Desc Text
 "right hand"	"Your right hand grows large, wicked black claws sprouting from the tips of your fingers. Red scales pour down the back of your hand, the palm becoming black and thick-skinned."		"Your large right hand has red scales on the back, thick black skin on the palm, and wicked black claws."
 "left thigh"	"Your left thigh gains mass, and grows a covering of shaggy black hair."		"Your shaggy haired left thigh is massive."
 "left shin"	"Snapping noises can be heard as your left shin arranges into a new position, reversing the joint. Shaggy hair grows down it, making it appear like a goat's leg."		"Your black shaggy left shin looks like a goat's."
-"left foot"	"Your left foot, swells, hardening into a obsidian black cloven hoof."		"You have a black cloven hoof for a left foot."
+"left foot"	"Your left foot, swells, hardening into an obsidian black cloven hoof."		"You have a black cloven hoof for a left foot."
 "right thigh"	"Your right thigh gains mass, and grows a covering of shaggy black hair."		"Your shaggy haired right thigh is massive."
 "right shin"	"Snapping noises can be heard as your right shin arranges into a new position, reversing the joint. Shaggy hair grows down it, making it appear like a goat's leg."		"Your black shaggy right shin looks like a goat's."
-"right foot"	"Your right foot, swells, hardening into a obsidian black cloven hoof."		"You have a black cloven hoof for a right foot."
+"right foot"	"Your right foot, swells, hardening into an obsidian black cloven hoof."		"You have a black cloven hoof for a right foot."
 "rear"		"Shaggy black hair covers your ass as it becomes large and muscular."		"Shaggy black hair covers your muscular ass."
 "full"		"demon"		"Your new form is monstrous. A large, four-armed, four-pec'ed, red scaled torso with bat wings and a long, spiked tail is supported by lower legs that resemble a black goat. Your head is horned and tusked with shaggy black hair and a goatee."
 
@@ -1195,7 +1195,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right thigh"	"Your right leg bends as your thigh becomes well built and furry."	"Your right thigh is covered with tan fur and looks stronger."	"The tan fur on your right thigh sheds as it shifts."
 "right shin"	"Your leg assumes a digitigrade stance as the fur spreads over your lower right leg."	"Your right shin looks feline."	"Your masculine feline right shin sheds as it shifts."
 "right foot" 	"The brown fur flows down over your right foot, leaving a paw in its place."	"You have a lion's paw for a right foot."	"Your large lion's right paw changes."
-"rear" 	"Fur flows smoothly over your now well built ass."	"Your rear end is coated in tan fur."	"Your rear softens and sheds it's fur as it changes."
+"rear" 	"Fur flows smoothly over your now well built ass."	"Your rear end is coated in tan fur."	"Your rear softens and sheds its fur as it changes."
 "full" 	"alpha lion"	"You are a male anthropomorphic lion with a huge erection and a deep desire to fuck anything that moves, especially one of those cat girls."	--
 
 Section - Feral Dragoness
@@ -1241,7 +1241,7 @@ Segment	Shift Text	Desc Text	Unshift Text
 "right thigh"	"Your right leg bends as your thigh becomes well built and furry."	"Your right thigh is covered with tan fur and looks stronger."	"The tan fur on your right thigh sheds as it shifts."
 "right shin"	"Your leg assumes a digitigrade stance as the fur spreads over your lower right leg."	"Your right shin looks feline."	"Your femininely feline right shin sheds as it shifts."
 "right foot" 	"The brown fur flows down over your right foot, leaving a comically large paw in its place."	"You have a lion's paw for a right foot."	"Your large lion's right paw changes."
-"rear" 	"Your ass shrinks even as it becomes rounder. Pleasantly grabbable and covered in tan fur, you have a female lion's butt."	"Your rear end is coated in tan fur and wonderfully rounded."	"Your rear sheds it's fur as it changes."
+"rear" 	"Your ass shrinks even as it becomes rounder. Pleasantly grabbable and covered in tan fur, you have a female lion's butt."	"Your rear end is coated in tan fur and wonderfully rounded."	"Your rear sheds its fur as it changes."
 "full" 	"lioness"	"You are a female lioness. You are only about four feet tall, though you have large B cups for your height and your exposed sex is swollen and dripping with need. Your nipples are visible and black, begging to be sucked on."	--
 
 Section - Rabbit Herm
@@ -1299,10 +1299,10 @@ Segment	Shift Text	Desc Text	Unshift Text
 "gut"	"Previous fat melts away as you gain the powerful swimming abdominals of an otter, covered in a thick layer of water proofed brown fur."	"You have a brown furred belly of an otter, sleek and powerful."	"You momentarily lose definition as your swimmer's belly fades away."
 "pelvis"	"The brown fur begins to sweep across your hips and down into your groin in a surge of unasked for pleasure. You groan with delight as changes rock your sensitive regions. Curious fingers begin to rub across your newly formed vulva, exploring the furry cleft as your body quakes. You bring a hand to your cock as it grows longer and firmer, a sheath forming at the base as your swelling balls pump it full of seed to spray in a wide arc in front of you."	"You have a brown furred vagina of an otter, pouting and ready. Your cock has never been so hard, extending from a brown furred sheath and achingly ready."	"You give a sudden squeal as your otter loins shift and warp."
 "left upper arm"	"Thick brown fur spreads smoothly across your left upper arm"	"You have the upper left arm of an otter."	"Your otter like left arm changes."
-"left forearm"	"Your arm feels strange as new found power flows into it along with a layer of brown fur."	"Your left forearm is covered in brown fur and feels powerful."	"Your otter like left forearm changes."
+"left forearm"	"Your arm feels strange as newfound power flows into it along with a layer of brown fur."	"Your left forearm is covered in brown fur and feels powerful."	"Your otter like left forearm changes."
 "left hand"	"You get a sudden urge to clench your left hand, muscles locking hard and painfully as new claws dig into the flesh of your palm. Pads form, defraying the pain somewhat as your fingers flow together in light webbing, and thick brown fur sweeps across the hand."	"Your left hand is more suited to an otter than a human, but seems prehensile enough."	"A wet splitting sound is heard as the webbing between your fingers break."
 "right upper arm"	"Thick brown fur spreads smoothly across your right upper arm"	"You have the upper right arm of an otter."	"Your otter like right arm changes."
-"right forearm"	"Your arm feels strange as new found power flows into it along with a layer of brown fur."	"Your right forearm is covered in brown fur and feels powerful."	"Your otter like right forearm changes."
+"right forearm"	"Your arm feels strange as newfound power flows into it along with a layer of brown fur."	"Your right forearm is covered in brown fur and feels powerful."	"Your otter like right forearm changes."
 "right hand"	"You get a sudden urge to clench your right hand, muscles locking hard and painfully as new claws dig into the flesh of your palm. Pads form, defraying the pain somewhat as your fingers flow together in light webbing, and thick brown fur sweeps across the hand."	"Your right hand is more suited to an otter than a human, but seems prehensile enough."	"A wet splitting sound is heard as the webbing between your fingers break."
 "left thigh"	"Fur coats your left thigh, brown and thick, as tingles of itchiness has you scratching softly at the changing area."	"Your left thigh is covered in thick brown fur."	"Your left thigh shudders as it begins to change."
 "left shin"	"Brown fur sweeps down over your lower left leg, bending as it goes, looking otterish."	"Your lower left leg is covered in brown fur and looks fit for an animal."	"The brown fur falls free of your left lower leg as it changes."
@@ -2085,7 +2085,7 @@ Every turn:
 				next;
 		if ctype of N is a hunter and the prey of N is in the location of N and N is not pacified and n is not stuck to a rope:
 			if a random chance of 1 in the attack rate of ctype of N succeeds, try N attacking the prey of N;
-		else if N is a monster person and ctype of N is not a hunter and an not friendly person is in the location of N and N is not pacified and N is not stuck to a rope:
+		else if N is a monster person and ctype of N is not a hunter and a not friendly person is in the location of N and N is not pacified and N is not stuck to a rope:
 			let X be a random not friendly person in the location of N;
 			let z be 0;
 			if tf table of n is the tf table of ctype of n:
@@ -2153,7 +2153,7 @@ Every turn:
 			let the way be the best route from R to P, using doors;
 			if a random chance of 1 in the move rate of ctype of N succeeds and the way is a direction and N is not immobile and n is not stuck to a rope, try N going the way;
 
-Every turn when an not out of play person is infected:
+Every turn when a not out of play person is infected:
 	repeat with N running through infected not out of play npc people:
 		if a random chance of 1 in the willpower of ctype of N succeeds, TF N;
 
@@ -3244,7 +3244,7 @@ instead of kissing a catty person:
 	if pregnant of the noun is not 0:
 		say "She is not in the mood to mate, and turns you away.";
 		stop the action;
-	say "     The cat girl is all too eager to be affectionate with you, accepting your advance and taking you into her furry embrace with a loud purr." ;
+	say "     The cat girl is all too eager to be affectionate with you, accepting your advance and taking you into her furry embrace with a loud purr.";
 	if pelvis is secret:
 		say "     The cat girl notices you have pants on as she grinds lustfully against you. Her paws roam over your crotch, but she is unable to toy further with you.";
 		if the tf table of pelvis is not table 20:
@@ -3311,7 +3311,7 @@ every turn:
 	if a not heavy catty person is visible:
 		let n be a random visible not heavy catty person;
 		if a random chance of 1 in the willpower of ctype of the player succeeds:
-			say "The urge becomes overwhelming and you approach [the N], Overcome with a an undeniable lust.";
+			say "The urge becomes overwhelming and you approach [the N], overcome with an undeniable lust.";
 			try kissing n;
 
 
@@ -3326,7 +3326,7 @@ instead of kissing a squirrely person:
 	if pregnant of the noun is not 0:
 		say "She is already heavily pregnant, but your advances are welcome anyway. Wrapping her paws around your hips, she seats you on the huge shelf of her breasts, swallowing your cock in her soft mouth. She sucks and gulps until you cum, her belly and breasts both swelling a little larger with your seed, then she lets you go, looking sated.";
 		stop the action;
-	say "     Delighted by your approach, the herm squirrel wraps her arms around you and presses her face and yours firmly together, kissing very passionately! Her breasts and cock grind against you, the girl horny from the encounter, and her soft big belly swells a little bit in her happiness." ;
+	say "     Delighted by your approach, the herm squirrel wraps her arms around you and presses her face and yours firmly together, kissing very passionately! Her breasts and cock grind against you, the girl horny from the encounter, and her soft big belly swells a little bit in her happiness.";
 	if pelvis is secret:
 		say "     The herm squirrel notices you have pants on as she grinds lustfully against you. Her paws roam over your crotch, but she is unable to toy further with you.";
 		if the tf table of pelvis is not table 55:
@@ -4505,7 +4505,7 @@ A furry doe is stat-switched.
 The attack type of a furry doe is "growth".
 The target of a furry doe is the pelvis.
 The secondary attack description of a furry doe is "makes her move, grabbing her breast with one hand as she grabs at her victim with the other, drawing them close and grinding against them as she whispers something in their ear. They begin to blush and pant as a bulge forms between their legs and above their ass. As their senses return to they, they look stricken. What does fate have in store for the".
-The primary attack description of a Furry Doe is "licks her lips and approaches you in an hypnotic saunter. Even as the rational part of your brain screams at you to flee as fast as you can, you offer no resistance as she kneels before you and undoes your zipper. A startlingly long tongue uncurls and wraps around your cock, limp at first, but rapidly swelling into her muzzle as she lowers down onto you, suckling at you noisily. Hot ripples of pleasure radiate through your body with every warm wet draw of her mouth before you feel your seed splashing across her tongue, grunting with pleasure. She draws back, revealing your new, huge organ.".
+The primary attack description of a Furry Doe is "licks her lips and approaches you in a hypnotic saunter. Even as the rational part of your brain screams at you to flee as fast as you can, you offer no resistance as she kneels before you and undoes your zipper. A startlingly long tongue uncurls and wraps around your cock, limp at first, but rapidly swelling into her muzzle as she lowers down onto you, suckling at you noisily. Hot ripples of pleasure radiate through your body with every warm wet draw of her mouth before you feel your seed splashing across her tongue, grunting with pleasure. She draws back, revealing your new, huge organ.".
 The TF description of a Furry Doe is "begins to pant loudly as brown and cream fur coats their body. They groan, collapsing to all fours a moment, exploding out of their clothes as they grow, looking like a deer for a moment before they rise, huge breasts and erect shafted as a".
 
 Section - Stag
@@ -5526,7 +5526,7 @@ when play ends:
 			if tf table of head is table minotaur:
 				let u be the number of compatible npc on-stage persons;
 				if player is femme and player is not butch and u is less than 10:
-					say "You ran away toward the farm side, where you have hidden. Some would say that you could feel lonely as the only one of Your kind, yet the silent and secluded farmstead soon become famous for very welcoming owner, which took care of guests' needs in every possible way.";
+					say "You ran away toward the farm side, where you have hidden. Some would say that you could feel lonely as the only one of Your kind, yet the silent and secluded farmstead soon become famous for very welcoming owner, which took care of guests[apostrophe] needs in every possible way.";
 				if the player is femme and u is greater than 9:
 					say "You flee the city with your herd mates, and become one of the herd, bearing children and milk for the good of your people. New members of the tribe come from breeding and the occasional human convert, though your infectiousness seems much lower than it was in those intense first hours.";
 				if the player is butch and u is less than 10:
@@ -5845,15 +5845,15 @@ Cat Ear Band is a kind of clothing. understand "Band" as Cat Ear Band. The cloth
 
 Aviator Goggles is a kind of clothing. understand "Goggles" as Aviator Goggles. The clothing type of Aviator Goggles is "headwear". The description of Aviator Goggles is "Old fashioned leather and real glass? These look pretty valuable as odd clothing accessories go.". The tf table of Aviator Goggles is table Goblin. The clothing type of Aviator Goggles is "headwear". Aviator Goggles is infectitem.
 
-An easter egg is a kind of thing. An easter egg is edible. understand "egg" as easter egg. The TF table of an easter egg is table 22. The description of a easter egg is "This a brightly colored eater egg that came from your own vagina. Odd, but it does look delightful.". an easter egg is infectitem.
+An easter egg is a kind of thing. An easter egg is edible. understand "egg" as easter egg. The TF table of an easter egg is table 22. The description of a easter egg is "This a brightly colored eater egg that came from your own vagina. Odd, but it does look delightful.". An easter egg is infectitem.
 
-An Tobasco Sauce is a kind of drink. An Tobasco Sauce is edible. understand "sauce" as Tobasco Sauce. The TF table of an Tobasco Sauce is table Feral Dragoness. The description of a Tobasco Sauce is "A bottle of tobasco sauce. Written on it is, 'Puts a fire in your belly'. Huh, a likely story!". an Tobasco Sauce is infectitem.
+A Tobasco Sauce is a kind of drink. A Tobasco Sauce is edible. understand "sauce" as Tobasco Sauce. The TF table of a Tobasco Sauce is table Feral Dragoness. The description of a Tobasco Sauce is "A bottle of tobasco sauce. Written on it is, 'Puts a fire in your belly'. Huh, a likely story!". A Tobasco Sauce is infectitem.
 
-An Hawk Milk is a kind of drink. An Hawk Milk is edible. understand "milk" as Hawk Milk. The TF table of an Hawk Milk is table Harpy. The description of a Hawk Milk is "A bottle of Hawk Milk. Written on it is, 'Gain the eyes, and spirit, of an eagle'. Man, those marketing guys will write anything these days.". an Hawk Milk is infectitem.
+A Hawk Milk is a kind of drink. A Hawk Milk is edible. understand "milk" as Hawk Milk. The TF table of a Hawk Milk is table Harpy. The description of a Hawk Milk is "A bottle of Hawk Milk. Written on it is, 'Gain the eyes, and spirit, of an eagle'. Man, those marketing guys will write anything these days.". A Hawk Milk is infectitem.
 
-An Baby Bottle is a kind of drink. An Baby Bottle is edible. understand "bottle" as Baby Bottle. The TF table of an Baby Bottle is table nidoqueen. The description of a Baby Bottle is "A baby bottle, with clear plastic containing creamy looking fluid within and a great big ole rubber teat at the end for baby satisfaction.". an Baby Bottle is infectitem.
+A Baby Bottle is a kind of drink. A Baby Bottle is edible. understand "bottle" as Baby Bottle. The TF table of a Baby Bottle is table nidoqueen. The description of a Baby Bottle is "A baby bottle, with clear plastic containing creamy looking fluid within and a great big ole rubber teat at the end for baby satisfaction.". A Baby Bottle is infectitem.
 
-An Echo'N Brand Mayonnaise is a kind of drink. An Echo'N Brand Mayonnaise is edible. understand "mayo" as Echo'N Brand Mayonnaise. The TF table of an Echo'N Brand Mayonnaise is table echoen. The description of a Echo'N Brand Mayonnaise is "A jar of Echo'N Brand Mayonnaise. What an odd brand, and no ingredient list!". an Echo'N Brand Mayonnaise is infectitem.
+An Echo'N Brand Mayonnaise is a kind of drink. An Echo'N Brand Mayonnaise is edible. understand "mayo" as Echo'N Brand Mayonnaise. The TF table of an Echo'N Brand Mayonnaise is table echoen. The description of a Echo'N Brand Mayonnaise is "A jar of Echo'N Brand Mayonnaise. What an odd brand, and no ingredient list!". An Echo'N Brand Mayonnaise is infectitem.
 
 Fox Soda can is a kind of drink. Understand "fox soda" as Fox Soda can. understand "Fox Soda" as 1 Fox Soda can. The description of a Fox Soda can is "This a red can of soda, labeled as 'Fox Soda.' You find it strange that you have never heard of that brand before.". The tf table of Fox Soda can is table latex fox. Fox soda can is infectitem.
 

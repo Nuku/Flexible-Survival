@@ -34,7 +34,7 @@ Section 2 - Player Loss
 to say losetobluechaffinch:
 	choose row monster from the Table of Random Critters;
 	now nobluechaffinchsex is 0;
-	say "     [if HP of player > 0]Giving in[else]Having lost[end if] to the blue songbird, you drop to your knees in front of him. He struts around arrogantly and chirps a happy song before moving towards you with an obvious swagger. ";
+	say "     [if HP of player > 0]Giving in[else]Having lost[end if] to the blue songbird, you drop to your knees in front of him. He struts around arrogantly and chirps a happy song before moving towards you with an obvious swagger.";
 	if player is female:
 		say "     The victorious male pushes you over roughly and gets his stiff cock lined up with your pussy with little preamble. His taloned hangs grip your [if scalevalue of player > 4]hips[else if scalevalue of player is 4]sides[else]shoulders[end if] and pulls you back onto his avian rod. The slick, tapered cock pushes into you easily, causing you to moan in pleasure despite yourself. Soon the feathered fellow is drilling into you, chirping occasionally as he does.";
 		say "     You grow increasingly aroused as the mating continues, his soft feathers rubbing against your hips, thighs and pussy lips as he thrusts into you[if HP of player > 0]. As you're not resisting his advances[else]. As you're no longer resisting his advances[end if], he lets his taloned hands roam over your [bodytype of player] body and leans gently overtop you, letting his fluffy chest rub against your back. Between the soft feathers rubbing against you and the hard cock pumping inside you until finally you both cum loudly[if facename of player is name entry], your mating song joining in with his[else] with him chirping and moaning[end if] as his hot seed pumps into your cunt and flows into your womb.[ovichance]";
@@ -55,7 +55,7 @@ to say beatthebluechaffinch:
 		now formcheck is 1;
 	else if bodyname of player is listed in infections of Felinelist and facename of player is listed in infections of Felinelist:
 		now formcheck is 2;
-	say "     Your final blow sends the blue chaffinch stumbling backwards. '[one of]You haven't seen the last of me, buddy[or]Oh, I'm so going to kick your ass next time, bub[or]I'm just tired from all this flying. Just wait until I find you next time[at random],' he chirps [if player is male and formcheck > 0 and bluechaffrape is 3 and inasituation is false]while raising his tail and shaking his rear quickly, as if to tantalize you with that ass you've fucked and filled before[else]angrily before turning and running[end if]. After his first couple of steps, he unfurls his wings and starts flapping to make his escape. ";
+	say "     Your final blow sends the blue chaffinch stumbling backwards. '[one of]You haven't seen the last of me, buddy[or]Oh, I'm so going to kick your ass next time, bub[or]I'm just tired from all this flying. Just wait until I find you next time[at random],' he chirps [if player is male and formcheck > 0 and bluechaffrape is 3 and inasituation is false]while raising his tail and shaking his rear quickly, as if to tantalize you with that ass you've fucked and filled before[else]angrily before turning and running[end if]. After his first couple of steps, he unfurls his wings and starts flapping to make his escape.";
 	if player is male and formcheck is 1:	[avian pred]
 		if nobluechaffinchsex > 2:
 			if facename of player is "Fluffy Owl":

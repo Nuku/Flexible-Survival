@@ -364,7 +364,7 @@ Chaplaincy is a situation.
 The sarea of Chaplaincy is "Hospital".
 
 instead of resolving Chaplaincy:
-	say "     You find yourself in front of the hospital's Chaplaincy, there for the spiritual well-being of patients and family members. Glancing around, you decide to slip inside and have a look around, briefly hoping things will be a little better in here. Sadly, that is not the case and there are signs of several lustful outbursts in here just as everywhere else. You even spot the torn remains of the clergyman's suit and clerical collar, as messy as the other piles of cum-laden clothes. You spot several small vials nearby labelled [']libido suppressant['], most of them empty, though one still remains unused. In the end, he must have decided to give into his urges rather than keep denying them. You pick it up and store it away. Perhaps it will be useful for you in a moment of need.";
+	say "     You find yourself in front of the hospital's Chaplaincy, there for the spiritual well-being of patients and family members. Glancing around, you decide to slip inside and have a look around, briefly hoping things will be a little better in here. Sadly, that is not the case and there are signs of several lustful outbursts in here just as everywhere else. You even spot the torn remains of the clergyman's suit and clerical collar, as messy as the other piles of cum-laden clothes. You spot several small vials nearby labelled [']libido suppressant['], most of them empty, though one still remains unused. In the end, he must have decided to give in to his urges rather than keep denying them. You pick it up and store it away. Perhaps it will be useful for you in a moment of need.";
 	increase carried of libido suppressant by 1;
 	increase score by 5;
 	now Chaplaincy is resolved;
@@ -1500,12 +1500,12 @@ Instead of resolving a Dinosaur Nest:
 		say "     Your search of the museum brings you to the dinosaur wing. There the great thunderlizards are on display. You try to move quietly between the displays, trying to fulfill, perhaps foolishly, Dr Mouse's request for dinosaur hunting. You move around, eventually find a large pile of junk in one corner that may be what you're looking for. A mound of debris, tacky cushions, kitschy knick-knacks and old clothes have been build into a large nest. You head over to it and start poking through it in the hopes of finding something.";
 		let bonus be ( perception of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 11:
-			say "     As you shift aside some leisure suits and send a pile of mood rings scattering, you hear the steps of a large someone trying to move up on you quietly. You jump aside just in time to avoid a swing from the angry triceratops woman. 'Now, honey, don't you know better than to invite yourself over to a lady's pad before dancin['] with her?' she asks as she strikes a pose before attacking again.";
+			say "As you shift aside some leisure suits and send a pile of mood rings scattering, you hear the steps of a large someone trying to move up on you quietly. You jump aside just in time to avoid a swing from the angry triceratops woman. 'Now, honey, don't you know better than to invite yourself over to a lady's pad before dancin['] with her?' she asks as she strikes a pose before attacking again.";
 		else:
 			decrease HP of player by 15;
-			say "     As you shift aside some leisure suits and send a pile of mood rings scattering, you are struck firmly from behind and sent tumbling over into bean bag chair, taking 15 dmg! As you pull yourself up, you find yourself looking at a large, angry triceratops woman. 'Now, honey, don't you know better than to invite yourself over to a lady's pad before dancin['] with her?' she asks as she strikes a pose before attacking again.";
+			say "As you shift aside some leisure suits and send a pile of mood rings scattering, you are struck firmly from behind and sent tumbling over into bean bag chair, taking 15 dmg! As you pull yourself up, you find yourself looking at a large, angry triceratops woman. 'Now, honey, don't you know better than to invite yourself over to a lady's pad before dancin['] with her?' she asks as she strikes a pose before attacking again.";
 	else:
 		say "     You make your way back to the dinosaur's nest to try and investigate it again. Being more watchful, you notice her coming up as you move aside a box of Abba 8-tracks to find some yo-yos. You turn away from her nest and prepare to fight the disco dino again. 'Lookin['] for another dance lesson, honey?' she asks.";
 	now dinonest is 1;
@@ -1626,15 +1626,15 @@ Instead of resolving a Viking Longboat:
 		say "     Reaching the bow of the ship, you are glad to find handholds in it, perhaps for a sailor to act as lookout. It seems sturdier as well, thankfully. You climb up carefully and manage to eventually pry out the green gems from the wooden dragon's eyes. You climb back down and step back onto the deck just as the wooden masthead groans loudly and breaks from the ship. The deck starts to crumble away as well even as you try to run for the ladder.";
 		let bonus be ( dexterity of player minus 10 ) divided by 2;
 		let dice be a random number from 1 to 20;
-		say "You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
+		say "     You roll 1d20([dice])+[bonus]: [dice + bonus]: ";
 		if bonus + dice > 18:
-			say "     Nimbly dashing across the collapsing ship, you manage to make it to the ladder and slide down it, barely touching the rungs at all. You drop the last five feet onto all fours as more ancient lumber rains down and the ladder sways. You scramble back quickly away from the devastated relic until the dust settles. You pull out the two green gems from your pack and look at them before tucking them away again. You look over the heap and decide to grab a souvenir for yourself, swiping one of the spears from the ruined display to add to your arsenal.";
+			say "Nimbly dashing across the collapsing ship, you manage to make it to the ladder and slide down it, barely touching the rungs at all. You drop the last five feet onto all fours as more ancient lumber rains down and the ladder sways. You scramble back quickly away from the devastated relic until the dust settles. You pull out the two green gems from your pack and look at them before tucking them away again. You look over the heap and decide to grab a souvenir for yourself, swiping one of the spears from the ruined display to add to your arsenal.";
 			say "     Spear added to inventory. Stabby-stabby!";
 			increase carried of spear by 1;
 			increase score by 20;
 			now Resolution of Viking Longboat is 1; [stole the spear]
 		else:
-			say "     You try to make it back to the ladder, but part of the floor gives out beneath you. You fall through the deck, crashing through the bottom of the ship and falling to the ground. Terrified of getting buried under the rain of ancient lumber that continues, you scramble away as fast as you can manage. You fall panting in a heap, entangled by the velvet ropes as the last of it comes crashing down with a cloud of dust. You get up unsteadily and pull out the green gems, hoping they're worth the many aches and bruises you now have. (20 Dmg taken)";
+			say "You try to make it back to the ladder, but part of the floor gives out beneath you. You fall through the deck, crashing through the bottom of the ship and falling to the ground. Terrified of getting buried under the rain of ancient lumber that continues, you scramble away as fast as you can manage. You fall panting in a heap, entangled by the velvet ropes as the last of it comes crashing down with a cloud of dust. You get up unsteadily and pull out the green gems, hoping they're worth the many aches and bruises you now have. (20 Dmg taken)";
 			now Resolution of Viking Longboat is 2; [crashed the ship]
 			decrease HP of player by 20;
 			increase score by 10;
@@ -1762,7 +1762,7 @@ to say ec_activation:
 	else if the remainder after dividing ec_fullcount by 4 is 3:
 		say "     Having a tougher time focusing this time around, you keep your attention on your hands. Holding them up in front of your face, you watch as they go through a succession of transformations. They start out turning into hoof-like hands, but they don't stay like this for long. The hard hoof portion starts to recede the moment it's finished forming, reshaping itself into dark claws that eventually sink into sheathes like a cat's. As this is happening, your hands are also getting larger and stronger, with both a strong grip and fine control. Your fingers become plated across the top and over the back of your hand. You ball your hand into an impressive armored fist, confident it'll pack quite the wallop.";
 	else:
-		say "     Focusing your attention on your body, your watch as it shifts, becoming strong and well-toned even as brownish fur spreads across it. Even as the fur continues to spread outwards, that change is overwritten in places as armored plates form to cover the front of your torso. Feeling them, you find these tough, but with enough flex for movement[if breast size of player > 0]. They cup your breasts like an armored bodice, both supporting and emphasizing your cleavage while also leaving your nipples exposed for fun[else]. They are placed on your chest such to emphasize your strong pecs and firm abs[end if]. Meanwhile, your arms and legs have become strong, growing to match your large, buff body. More toughened plates are added to your outer thighs and forearms as further protection.";
+		say "     Focusing your attention on your body, your watch as it shifts, becoming strong and well-toned even as brownish fur spreads across it. Even as the fur continues to spread outwards, that change is overwritten in places as armored plates form to cover the front of your torso. Feeling them, you find these tough, but with enough flex for movement[if breasts of player > 0 and breast size of player > 0]. They cup your breasts like an armored bodice, both supporting and emphasizing your cleavage while also leaving your nipples exposed for fun[else if breast size of player > 0]. They cup your breasts like an armored bodice, both supporting and emphasizing your cleavage[else]. They are placed on your chest such to emphasize your strong pecs and firm abs[end if]. Meanwhile, your arms and legs have become strong, growing to match your large, buff body. More toughened plates are added to your outer thighs and forearms as further protection.";
 	now tailname of player is "Enhanced Chimera";
 	now facename of player is "Enhanced Chimera";
 	now skinname of player is "Enhanced Chimera";
@@ -1792,7 +1792,7 @@ to say ec_activation:
 			increase cunt width of player by 2;
 			if cunt width of player > 10:
 				now cunt width of player is 10;
-	if breasts of player > 0 and breast size of player > 0:
+	if breast size of player > 0:
 		if breast size of player < 6:
 			increase breast size of player by 1;
 

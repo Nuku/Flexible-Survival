@@ -124,7 +124,7 @@ Instead of Resolving a Missing lamp:
 			now Missing lamp is resolved;
 			increase carried of jade scarab by 1;
 		else:
-			say "     Seeing as there is nothing you can salvage, you move past the broken display case and continue on your way. ";
+			say "     Seeing as there is nothing you can salvage, you move past the broken display case and continue on your way.";
 			now Resolution of Missing Lamp is 2; [lamp not found]
 			now LampVariable is 1;
 	else:

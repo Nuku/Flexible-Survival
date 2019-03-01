@@ -57,7 +57,7 @@ When Play begins:
 	now enemy title entry is "";
 	now enemy name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
-	now attack entry is "[one of]The sexy saber kitty pounces on you and bites into your shoulder, sinking her large fangs in. She eventually lets go, but it hurt a lot[or]She swipes at you with her claws, scratching you. Hopefully that won't leave a mark[or]She smirks an grinds her body against your. At first nothing seems suspicious, but then she slashes your side with her claw, leaving a gash as she jumps away[at random]."; [ Successful attack message ]
+	now attack entry is "[one of]The sexy saber kitty pounces on you and bites into your shoulder, sinking her large fangs in. She eventually lets go, but it hurt a lot[or]She swipes at you with her claws, scratching you. Hopefully that won't leave a mark[or]She smirks and grinds her body against your. At first nothing seems suspicious, but then she slashes your side with her claw, leaving a gash as she jumps away[at random]."; [ Successful attack message ]
 	now defeated entry is "[saber loss]";
 	now victory entry is "[saber attack]";
 	now desc entry is "[mongendernum 4]     As you're walking you hear a faint dripping on the ground behind you. You rapidly spin around to see a sexy anthro Saber-toothed Tiger in front of you. It doesn't take long to find the source of the dripping sound as you look down to see her red, swollen pussy dripping copious amounts of fluids onto the ground. She is obviously in heat, and the smell hits you hard in seconds. Her body is beautiful and athletic, with abs and faint but powerful muscles. 'Don't worry, love. You'll learn to enjoy the heat and being knocked up,' she adds before pouncing.";

@@ -44,7 +44,7 @@ Instead of Resolving a Needy Rabbit Girl:
 		say "     You spot that rabbit girl again and duck low so she doesn't see you, hopefully. You creep up closer to have a look at her. She's bent over, picking up something from the ground. From a tear in the seat of her skirt, an upturned rabbit tail flicks back and forth energetically.";
 		let bonus be (( Charisma of player minus 10 ) divided by 2);
 		let diceroll be a random number from 1 to 20;
-		say "[bold type]You roll 1d20([diceroll])+[bonus]: [diceroll + bonus]/12[roman type], ";
+		say "     [bold type]You roll 1d20([diceroll])+[bonus]: [diceroll + bonus]/12[roman type], ";
 		increase diceroll by bonus;
 		if diceroll > 12:
 			say "You call out gently to the woman and she turns to face you once more. She looks ready to flee, but you hurriedly explain you mean no harm. Cautiously, she begins to relax, but does not approach you.";
@@ -340,14 +340,13 @@ to say sandrasex1: [fuck the bunny]
 		let multicocks be 0;
 		if cocks of player > 1:
 			if rabbitmulticock is 0:
-				now response1 is "     She salivates a little as she eyes your multiple rods. 'I never played with someone like that. I bet it would feel great...' she says, mostly to herself, her thick musk permeating the room as she wriggles her rump. ";
+				now response1 is "     She salivates a little as she eyes your multiple rods. 'I never played with someone like that. I bet it would feel great...' she says, mostly to herself, her thick musk permeating the room as she wriggles her rump.";
 				now rabbitmulticock is 1;
 			else:
-				now response1 is "     She salivates a little as she eyes your multiple rods. 'I am so happy to see those! And they look happy to see me,' she says, mostly to herself, her thick musk permeating the room as she wriggles her rump. ";
+				now response1 is "     She salivates a little as she eyes your multiple rods. 'I am so happy to see those! And they look happy to see me,' she says, mostly to herself, her thick musk permeating the room as she wriggles her rump.";
 			increase lust by 2;
 			now multicocks is 1;
 		let response2 be "";
-		let response3 be "";
 		if cock length of player < 5:
 			say "     She crosses her arms and sighs softly, 'Look, I do have standards, don't let the rabbit thing fool you. You are just too puny for me.' With that, she turns away and snubs you entirely. How rude!";
 		else:

@@ -39,8 +39,7 @@ to say losetoPinkPoodle:
 		say "     Unable to fend off the aggressive pink poodle, she knocks you to the ground roughly, giving you a disdainful scowl as she stands over your beaten form. 'Either come back as a proper [one of]pooch[or]chienne[at random], or do not come back at all,' she says in her heavy French accent, giving you one last firm kick before turning and striding away.";
 	else:
 		if HP of player > 0:
-			say "     Unable or unwilling to resist the pretty pink poodle any longer, you raise your hands and signal your submission. ";
-			say "     'I knew you would come around, darling. Now let's get down to business,' she says in her refined French accent as she gently pushes you to the ground.";
+			say "     Unable or unwilling to resist the pretty pink poodle any longer, you raise your hands and signal your submission. 'I knew you would come around, darling. Now let's get down to business,' she says in her refined French accent as she gently pushes you to the ground.";
 			if player is male and a random chance of 2 in 3 succeeds:
 				say "[pinkpoodledefeatsex]";
 			else if player is female and a random chance of 2 in 3 succeeds:
@@ -48,8 +47,7 @@ to say losetoPinkPoodle:
 			else:
 				say "[pinkpoodledefeatoral]";
 		else:
-			say "     Unable to fend off the aggressive pink poodle, you stumble and fall to the ground. ";
-			say "     'Mmm, so you like to play rough? Usually that costs extra darling, but I suppose you could make up for it some other way,' she says in her refined French accent as she steps over your supine form.";
+			say "     Unable to fend off the aggressive pink poodle, you stumble and fall to the ground. 'Mmm, so you like to play rough? Usually that costs extra darling, but I suppose you could make up for it some other way,' she says in her refined French accent as she steps over your supine form.";
 			if player is male and a random chance of 2 in 3 succeeds:
 				say "[pinkpoodledefeatsex]";
 			else:
@@ -129,10 +127,7 @@ to say pinkpoodlesex:
 	say "     Since she's already on all fours, you decide to use the beaten canine like the bitch she is. Dropping your gear as you move behind her, you grip the poodle's ample, shaved hips, causing her tail to wag softly as you caress them. You can't help but grin as you watch the large pink pompon swaying back and forth before you as you align your [cock size desc of player] [cock of player] cock to her needy pussy, stroking your tip across her outer lips gently before pushing in slowly.";
 	say "     As [if player is knotted]your knot begins rubbing against the pink girl's outer folds[else]you hilt your entire length in the pink girl's needy cunt[end if] she moans in pleasure beneath you, pressing her bottom back against you, nearly knocking you over as you lean forwards onto her back. Locking your arms around her torso and resting your head on the thick pink fur covering her shoulders, you begin humping the canine in earnest, quickly building to an energetic rhythm as you fuck her like an animal.";
 	say "     The pink poodle barks and yips beneath you, pressing her body back against you[if player is knotted], trying to force your knot into her body with each thrust[else] and squeezing her cunt tightly around your shaft[end if]. As your combined arousal begin to peak, you make one final powerful thrust, driving your [if player is knotted]knot[else]shaft[end if] into the pretty poodle as you both howl in climax. Her cunt spasms and convulses around your shaft, milking your twitching member for all it can as you fill her with your [cum load size of player] load[if player is knotted], none of which escapes thanks to her tight grip around your knot[else] even as her own juices leak out around your shaft[end if].";
-	say "     [run paragraph on]";
-	if player is knotted:
-		say "As you lay atop her, the well-fucked poodle pants happily, happily tugging and pulling at your knot to draw out her own pleasure as you wait for it to go down. ";
-	say "When you finally pull out the pink poodle falls to her side, rubbing her belly contentedly as she rests on the ground, leaving you free to gather your things and continue on your way.";
+	say "     [if player is knotted]As you lay atop her, the well-fucked poodle pants happily, happily tugging and pulling at your knot to draw out her own pleasure as you wait for it to go down. [end if]When you finally pull out the pink poodle falls to her side, rubbing her belly contentedly as she rests on the ground, leaving you free to gather your things and continue on your way.";
 
 to say pinkpoodleoral:
 	say "     Since she's already on her knees, you decide to have the beaten canine help you blow off some steam. Dropping you gear as you approach her, you grip her thickly furred shoulder gently and push her to a kneeling position. With your [if player is male][cock size desc of player] [cock of player] cock[smn][else if player is female]juicy puss[yfn][end if] on display before her, she looks up at you tentatively and licks her lips. When you finally give her permission, she dives in eagerly, [if player is male]wrapping her muzzle around your shaft[else]pressing her muzzle into your needy cunt[end if].";

@@ -132,7 +132,7 @@ when play ends:
 			if humanity of player < 10:
 				say "     Surrendering to the infection completely, for some reason you still find yourself holding onto the shiny gold you found while wandering the city, it becomes something of a small treasure for you, and you keep it safe and secure, even though its actual value as money is something you can no longer manage to grasp, having it nearby still makes you happy.";
 			else:
-				say "     Escaping the city with your mind intact, you are careful not to mention your new found gold coins until you are far away from military hands, at which point you end up changing the small handful of coins for a rather nice amount of money, allowing you to get ahead of the other refugees from the city in establishing your happy new life, though sometimes you wonder if there might not be more treasure out there somewhere, just waiting to be discovered.";
+				say "     Escaping the city with your mind intact, you are careful not to mention your newfound gold coins until you are far away from military hands, at which point you end up changing the small handful of coins for a rather nice amount of money, allowing you to get ahead of the other refugees from the city in establishing your happy new life, though sometimes you wonder if there might not be more treasure out there somewhere, just waiting to be discovered.";
 	else:
 		if bodyname of player is "Pirate Shark":
 			if humanity of player < 10:

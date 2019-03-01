@@ -55,7 +55,7 @@ to say sandman loses:
 			say "     Deciding you should focus on more important stuff right now, you turn away and walk off, leaving a rather surprised and disappointed beach stud behind.";
 	else:
 		LineBreak;
-		say "     You consider getting a ride on that cock of his ([link]Y[as]y[end link]) or just leaving ([link]N[as]n[end link]). ";
+		say "     You consider getting a ride on that cock of his ([link]Y[as]y[end link]) or just leaving ([link]N[as]n[end link]).";
 		if player consents:
 			say "[sandman ride]";
 		else:

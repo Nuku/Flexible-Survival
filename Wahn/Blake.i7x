@@ -70,8 +70,10 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 				[Note: No actual compulsion, just freaking the player out a bit]
 				now HP of Blake is 1; [rejected by Blake or refused him]
 			else if calcnumber is 2:
+				LineBreak;
 				say "     Reaching up to grab your head, you concentrate hard on who and what you are, trying to shake off what Blake did to you. As you stumble out into the open space of the parking lot, it feels like his influence is lifting bit by bit and you feel more like yourself again.";
 			else:
+				LineBreak;
 				say "[BlakeCounterstrike]";
 		else:
 			say "The rat's inspection of your private part concludes quickly, ending in him actually cupping your manhood and giving it a playful squeeze. After pulling his hand back up to his muzzle and sniffing the aroma of your crotch on his fingers, the rat meets your gaze with his eyes. 'You liked watching me earlier. Seeing me in all this leather, with it creaking and shining so nicely. And now you're thinking of my cock,' he says, more a statement than a question, his deep voice reverberating through your open mind.";
@@ -106,10 +108,12 @@ instead of going east from Smith Haven Mall Lot East while (HP of Blake < 50):
 				[Note: No actual compulsion, just freaking the player out a bit]
 				now HP of Blake is 1; [refused him]
 			else if calcnumber is 3:
+				LineBreak;
 				say "     Reaching up to grab your head, you concentrate hard on who and what you are, trying to shake off what Blake did to you. As you stumble out into the open space of the parking lot, it feels like his influence is lifting bit by bit and you feel more like yourself again. From the darkness of the alley behind you, Blake's voice calls out in a condescending tone, 'You'll be back. Just you wait.'";
 				[Note: No actual compulsion, just freaking the player out a bit]
 				now HP of Blake is 1; [refused him]
 			else:
+				LineBreak;
 				say "[BlakeCounterstrike]";
 	else if HP of Blake is 1 or (HP of Blake is 99 and player is male): [refused him before /sent away as non-male before]
 		if player is not male:
