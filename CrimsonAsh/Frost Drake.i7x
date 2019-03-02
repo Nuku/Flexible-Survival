@@ -57,7 +57,7 @@ to say BeatTheFrostDrake:
 	say "     Knocking back the big drake he stumbles forward toward you before collapsing and sliding forward a few feet before stopping in front of you. He tried to get to his feet but is too dazed to at. You do however notice his member his still hard, it throbs in need slightly, leaving you with a choice on what to do next.";
 	say "     [bold type]Should you show this apex predator who's in charge?[roman type][line break]";
 	LineBreak;
-	say "     ([link]Y[as]y[end link]) - Yes, show him whose boss.";
+	say "     ([link]Y[as]y[end link]) - Yes, show him who's boss.";
 	say "     ([link]N[as]n[end link]) - No, not gonna happen.";
 	if player consents: [Decides to fuck Frost Drake]
 		LineBreak;

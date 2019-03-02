@@ -1,7 +1,7 @@
 Version 1 of Mall Rat by Stripes begins here.
 [Version 1]
 
-"Adds an Mall Rat infection to Flexible Survival for use with Lucy the Mall Rat."
+"Adds a Mall Rat infection to Flexible Survival for use with Lucy the Mall Rat."
 
 Section 1 - Monster Responses
 

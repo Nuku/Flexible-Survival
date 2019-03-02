@@ -441,6 +441,44 @@ Object	Name
 2F Trevor Labs is a room.
 ```
 
+## Sex scenes tracking (2019/02/10)
+###NPCs
+`NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (GivingChar - a person)`
+
+SexAct Options: AssFuck, AssDildoFuck, PussyFuck, PussyDildoFuck, OralCock (= facefuck), OralPussy (= cunnilingus)
+* Takingchar is the one getting penetrated in ass/pussy/mouth
+* Givingchar is the one grinding theit dick/pussy/dildo into the other
+
+This function does several things:
+*  Checks Virginities for all participants, showing messages if someone loses theirs
+* Adds entries to a list of virginities that the player has taken
+* Saves the player's first partners
+* Sets the lastfuck variable of both partners to the current turns
+* Setmonster to the MainInfection of a given npc, then fimpregchance/mimpregchance for the player if they got fucked in the pussy/asses by a non-sterile partner
+
+Examples:
+```
+to say Carl_FucksPlayerPussy:
+    say "Scene Text";
+    NPCSexAftermath Player receives "PussyFuck" from Carl; [nothing else needed, no setmonster, no lastfuck setting, no impregchances]
+
+to say Carl69ing:
+    say "Scene Text";
+    NPCSexAftermath Player receives "OralCock" from Carl;
+    NPCSexAftermath Carl receives "OralCock" from Player;
+```
+
+###Enemies
+Similar function for random enemies:
+`CreatureSexAftermath (TakingChar - a text) receives (SexAct - a text) from (GivingChar - a text)`
+
+This function is easier, since random enemies have no variables to save, they stop existing after the scene. Still, the player side of things will get the proper adjustments, as above.
+
+Example:
+```
+    CreatureSexAftermath "Player" receives "AssFuck" from "Alpha Husky";
+    CreatureSexAftermath "Alpha Husky" receives "AssFuck" from "Player";
+```
 
 ## Questions?
 Join the Discord group and ask questions or just talk about the game in the `fs-singleplayer` channel!

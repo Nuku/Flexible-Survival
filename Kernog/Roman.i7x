@@ -44,7 +44,8 @@ Team Captain Roman	"Team Captain Roman"
 
 Team Captain Roman is a man. Understand "Roman" as Team Captain Roman.
 
-The description of Team Captain Roman is "[RomanDesc]";
+The description of Team Captain Roman is "[RomanDesc]".
+The MainInfection of Roman is "Football Gorilla".
 
 to say RomanDesc:
 	if debugactive is 1:
@@ -362,12 +363,16 @@ to say RomanFuck1:
 				now sextablerun is 1;
 				if nam is "Vaginal fuck":
 					say "[RomanFuck1Vag]";
+					NPCSexAftermath Roman receives "PussyFuck" from player;
 				if nam is "Face-fuck":
 					say "[RomanFuck1Blow]";
+					NPCSexAftermath Roman receives "OralCock" from player;
 				if nam is "Strap-on":
 					say "[RomanFuck1Strap]";
+					NPCSexAftermath Roman receives "PussyDildoFuck" from player;
 				if nam is "Cunnilingus":
 					say "[RomanFuck1Cuni]";
+					NPCSexAftermath Roman receives "OralPussy" from player;
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -475,12 +480,19 @@ to say RomanFuck2:
 				now sextablerun is 1;
 				if nam is "Vaginal fuck":
 					say "[RomanFuck2Vag]";
+					NPCSexAftermath Roman receives "PussyFuck" from player;
 				if nam is "69":
 					say "[RomanFuck269]";
+					NPCSexAftermath Player receives "OralCock" from Roman;
+					NPCSexAftermath Roman receives "OralCock" from player;
 				if nam is "Tribadism":
 					say "[RomanFuck2Trib]";
+					NPCSexAftermath Player receives "PussyFuck" from Roman;
+					NPCSexAftermath Roman receives "PussyFuck" from player;
 				if nam is "Cunt-boy special":
 					say "[RomanFuck2Cunt]";
+					NPCSexAftermath Player receives "PussyFuck" from Roman;
+					NPCSexAftermath Roman receives "PussyFuck" from player;
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -611,7 +623,7 @@ Instead of resolving a Orca Volleyball Player:
 			now Resolution of Orca Volleyball Player is 1; [won against the orca]
 			now Orca Volleyball Player is resolved;
 		else if fightoutcome >= 20 and fightoutcome <= 29:
-			say "     The killer whale grabs you by the neck before you fall down. 'Not so fast, bitch. I'm not done with you!' He carries you towards a chair and has you kneel in front of it. The orca pulls down his speedo and sits down. 'Gimme your towel!' he asks an bottlenose toy who was part of the small audience gathered for your punishment. Willy ties your hands behind your back with the towel, then press your face against his crotch, which he wastes no time stroking to full hardness.";
+			say "     The killer whale grabs you by the neck before you fall down. 'Not so fast, bitch. I'm not done with you!' He carries you towards a chair and has you kneel in front of it. The orca pulls down his speedo and sits down. 'Gimme your towel!' he asks a bottlenose toy who was part of the small audience gathered for your punishment. Willy ties your hands behind your back with the towel, then press your face against his crotch, which he wastes no time stroking to full hardness.";
 			say "     'You're not the first trying to pick a fight with me. They're all bark and no bite, and you're not different. You got a big mouth, and I know one way to use it. The orca forces the tip of his cock past your lips. 'Say [']ah['], bitch.' The titanic length slides down your throat. You feel it wiggle in your esophagus, as it tries to find its way deeper. Willy pulls out at the very last moment, and takes a moment to admire his saliva-coated shaft, before pushing it back inside, under the cheers of the crowd.";
 			say "     After a dozen minutes of this forced public blowjob, Willy's pushes accelerate and the orca lets out a whale-like moan and cums hard, directly into your stomach. His hose-like cock fills your belly with what feels like a gallon of cum before finally pulling out. The cetacean slumps down in his chair. 'Oooh, that felt nice.'";
 			say "     'Hey, Willy. Done with your bitch yet?' one of Willy's friend asks from the crowd. 'Bert and his boy-toy wants to play with us.'";

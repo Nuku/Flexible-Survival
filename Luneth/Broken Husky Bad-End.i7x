@@ -335,7 +335,7 @@ Section 3 - Expansion Ideas
 
 Section 4 - Delta's AKA Husky Queens
 
-[A delta is a alpha's equal within the pack, however in a very different way. A simple way to look at the difference is to look at the stereotype between a mother and a father of a family. Most deltas are kept hidden away since the alphas that control them are also the ones that are viewed as the most powerful. A delta form infection is actually very rare to gain; however, it is believed that the easiest way to become a delta husky is how your mind handles the situation while you are being made a regular female husky.]
+[A delta is an alpha's equal within the pack, however in a very different way. A simple way to look at the difference is to look at the stereotype between a mother and a father of a family. Most deltas are kept hidden away since the alphas that control them are also the ones that are viewed as the most powerful. A delta form infection is actually very rare to gain; however, it is believed that the easiest way to become a delta husky is how your mind handles the situation while you are being made a regular female husky.]
 
 [Special Stats Explanation
 

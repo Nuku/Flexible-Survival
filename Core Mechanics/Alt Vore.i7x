@@ -107,6 +107,13 @@ Instead of resolving a Inner Predator:
 		say "     Oh well, at least you got a candy bar out of it.";
 		increase carried of chips by 1;
 		increase score by 5;
+	LineBreak;
+	say "     As you are about to leave, a piece of paper sliding out of the briefcase catches your attention. It seems to be a detailed map [if Island Pier is known]to Vohr Island[else]to a small island off the coast, known as Vohr Island[end if], possibly linked to these experiments. It seems reachable from the beach, if you [if boatfound is 2 or boatfound is 3]use your boat[else]hunt for a boat there[end if].";
+	if boatfound <= 1:
+		now boatfound is 4;
+	if boatfound is 2 or boatfound is 3:
+		say "[bold type]You can now navigate to Vohr Island[roman type]";
+		now Island Pier is known;
 	now Inner Predator is resolved;
 
 

@@ -15,7 +15,7 @@ pewterbodyocc is a number that varies.
 pewtercockocc is a number that varies.
 pewtercuntocc is a number that varies.
 pewterassocc is a number that varies.
-pewterheadvar1 is a number that varies. [Indicates how many consorts are attending/tounging a body region]
+pewterheadvar1 is a number that varies. [Indicates how many consorts are attending/tonguing a body region]
 pewterheadvar2 is a number that varies. [Indicates how many consorts are riding/fucking a body region]
 pewtercockvar1 is a number that varies.
 pewtercockvar2 is a number that varies.
@@ -295,9 +295,9 @@ to pewterlustsate:
 						say "the [if pewtercuntvar2 is 1]one[else][pewtercuntvar2][end if] of your cunts tightening around their invading dicks";
 				else:
 					if pewtercuntvar1 > 0 and pewtercuntvar2 > 0:
-						say "your cunt[sfn] tightening around the [if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if] tounging [itthemf], as with the [if pewtercockvar2 is 1]one other[else][pewtercockvar2] others[end if] fucking the doubtlessly strained thing[sfn]";
+						say "your cunt[sfn] tightening around the [if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if] tonguing [itthemf], as with the [if pewtercockvar2 is 1]one other[else][pewtercockvar2] others[end if] fucking the doubtlessly strained thing[sfn]";
 					else if pewtercuntvar1 > 0:
-						say "your cunt[sfn] tightening around the [if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if] tounging [itthemf]";
+						say "your cunt[sfn] tightening around the [if pewtercuntvar1 is 1]one[else][pewtercuntvar1][end if] tonguing [itthemf]";
 					else:
 						say "your cunt[sfn] tightening around the [if pewtercuntvar2 is 1]one[else][pewtercuntvar2][end if] fucking [itthemf]";
 			else:

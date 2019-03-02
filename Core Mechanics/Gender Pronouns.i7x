@@ -152,7 +152,7 @@ to say esfv: [stick an es on if single female - verb]
 	else:
 		say "es";
 
-to say ymv: [stick an y/ies on if single male - verb]
+to say ymv: [sticks y/ies on if single male - verb]
 	if cocks of player > 1:
 		say "y";
 	else:

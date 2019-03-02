@@ -1,7 +1,7 @@
 Version 1 of Santa Claws by Wahn begins here.
 [Version 1.1 - Small Fix]
 
-"Adds an polar bear Mall Santa to Flexible Survival"
+"Adds a polar bear Mall Santa to Flexible Survival"
 
 [ Santa Claws, the polar bear                                 ]
 [ HP of Santa Claws                                           ]

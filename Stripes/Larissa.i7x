@@ -490,7 +490,7 @@ to nanitecoll_discount:
 				break;
 
 to say Larissa pre-tf:
-	say "     Larissa takes the vial and debits the required credits with an grin. [subjpro_Cap of Larissa] seems quite excited at the prospect of transforming[if HP of Larissa > 2] again[end if]. After getting one of [possadj of Larissa] co-workers to cover the front desk for [objpro of Larissa], the [LarissaForm] leads you into the break room. Rather sparse, it does have a small cot available. Pulling off [possadj of Larissa] lab coat, she stretches out, showing off [possadj of Larissa] [LarissaBodyType] to you one last time before downing the vial in one big gulp.";
+	say "     Larissa takes the vial and debits the required credits with a grin. [subjpro_Cap of Larissa] seems quite excited at the prospect of transforming[if HP of Larissa > 2] again[end if]. After getting one of [possadj of Larissa] co-workers to cover the front desk for [objpro of Larissa], the [LarissaForm] leads you into the break room. Rather sparse, it does have a small cot available. Pulling off [possadj of Larissa] lab coat, she stretches out, showing off [possadj of Larissa] [LarissaBodyType] to you one last time before downing the vial in one big gulp.";
 	if Cocks of Larissa > 0 and Cunts of Larissa > 0:
 		now LarissaOldgender is 3;
 	else if Cocks of Larissa > 0:

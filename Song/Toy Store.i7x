@@ -19,7 +19,7 @@ instead of resolving a toy store:
 	setmonster "Latex Fox";
 	choose row monster from the Table of Random Critters;
 	now non-infectious entry is true;
-	say "     During your travels, you come across [if toystoreseen is true]the abandoned toy store again[else]an old-fashioned toy store[end if]. The building is surprisingly intact, standing in stark contrast to the ruins that surround it. A pair of curtains has been drawn together behind the windows, making it difficult to see what's inside. [if toystoreseen is true]Unfortunately, you still see some movement inside the store, suggesting that whoever was here last has made it their home[else]As you approach, you catch a flash of a orange through a gap in the fabric, and you immediately stop yourself to think this through[end if].";
+	say "     During your travels, you come across [if toystoreseen is true]the abandoned toy store again[else]an old-fashioned toy store[end if]. The building is surprisingly intact, standing in stark contrast to the ruins that surround it. A pair of curtains has been drawn together behind the windows, making it difficult to see what's inside. [if toystoreseen is true]Unfortunately, you still see some movement inside the store, suggesting that whoever was here last has made it their home[else]As you approach, you catch a flash of orange through a gap in the fabric, and you immediately stop yourself to think this through[end if].";
 	say "     [bold type]Do you still wish to enter now that you know that someone - or something - is waiting inside the store?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - You're confident that you can handle whatever is inside there. If you're lucky, you might even find something of use to you.";

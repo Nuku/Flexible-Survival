@@ -29,7 +29,7 @@ Instead of resolving a Beach Bum:
 			now Resolution of Beach Bum is 1; [player traded]
 		else:
 			say "     The bum seems to sigh sadly, as he waves you on your way, you get the feeling you probably won't be seeing him around here much longer...";
-			now Resolution of Beach Bum is 99; [desinterest]
+			now Resolution of Beach Bum is 99; [disinterest]
 			now Beach bum is resolved;
 	else if Resolution of Beach Bum is 1:
 		say "     Traveling along the long beach you once again see the strange pile of junk and bits of ship wreckage that mark the location of the strange beach bum. Recalling your bargain with the strange person, you trudge over to see if you have anything he might want to trade for.";
@@ -218,7 +218,7 @@ Instead of resolving a Tainted Yacht:
 		now Resolution of Tainted Yacht is 1; [got in the yacht]
 	else:
 		say "     Deciding some things are best left alone, you continue your nice walk along the sands.";
-		now Resolution of Tainted Yacht is 99; [desinterest]
+		now Resolution of Tainted Yacht is 99; [disinterest]
 	now Tainted Yacht is resolved;
 
 

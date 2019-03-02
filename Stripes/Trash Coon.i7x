@@ -87,7 +87,7 @@ When Play begins:
 	now face change entry is "your mouth and nose elongate into a narrow, whiskered muzzle with a black nose at the end. A raccoon's dark mask forms around your eyes as your ears move up and reform into cute little cups";
 	now body change entry is "you grow heavy, becoming soft and pudgy. This spreads down your arms and legs, terminating as your hands and feet become dark, nimble paws with little black claws at the end of your digits";
 	now skin change entry is "scruffy gray fur spreads across your body";
-	now ass change entry is "your hips grow wide and your ass becomes and plump and padded booty. There is an pulsing throb from your tailbone as it reshapes itself, growing out into an unkempt raccoon tail"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
+	now ass change entry is "your hips grow wide and your ass becomes and plump and padded booty. There is a pulsing throb from your tailbone as it reshapes itself, growing out into an unkempt raccoon tail"; [ Ass/Tail TF text, format as "Your ass tingles as [tail change entry]." ]
 	now cock change entry is "it pulses and throbs. The air is filled with a strong, musky scent as your excitement grows until finally you moan loudly and cum hard, spurting your semen as your cock reshapes itself into that of a raccoon";
 	now str entry is 15;
 	now dex entry is 16;

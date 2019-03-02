@@ -61,10 +61,10 @@ when play begins:
 	now tail entry is "You have a long, fluffy fox tail sticking out of your rear, swaying gently.";
 	now cock entry is "[one of]vulpine[or]knotted[or]fox[at random]";
 	now face change entry is "as you feel a muzzle pushing out of it. Your ears shift to the top of your head, becoming triangular in shape and growing a bit larger.";
-	now body change entry is "your body shifts, forcing you onto all fours. Your arms shorten to match the length of your legs, which also change, becoming digitigrade. Your hands and feet become that of a fox's paws, and your nails turn into sharp cla";
-	now skin change entry is "fur begins to sprout all over your body, with differing colors on different parts. Your chest and lower chin grow a cream colored fur, while the rest of your body grows a deep orange instead. The tips of your ears and all of your limbs grow black fur.";
+	now body change entry is "your body shifts, forcing you onto all fours. Your arms shorten to match the length of your legs, which also change, becoming digitigrade. Your hands and feet become that of a fox's paws, and your nails turn into sharp claws";
+	now skin change entry is "fur begins to sprout all over your body, with differing colors on different parts. Your chest and lower chin grow a cream colored fur, while the rest of your body grows a deep orange instead. The tips of your ears and all of your limbs grow black fur";
 	now ass change entry is "a long and fluffy tail suddenly grows. It sways gently behind you";
-	now cock change entry is "its tip tapers out, becoming distinctly vuline. The shaft smooths out, taking on a distinct red color, and a large knot forms at the base. After its change completes, it recedes into a new sheath";
+	now cock change entry is "its tip tapers out, becoming distinctly vulpine. The shaft smooths out, taking on a distinct red color, and a large knot forms at the base. After its change completes, it recedes into a new sheath";
 	now str entry is 22;
 	now dex entry is 25;
 	now sta entry is 19;

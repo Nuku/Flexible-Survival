@@ -46,7 +46,7 @@ to say TehuantlSex:
 	if HP of Tehuantl is 11:
 		try conversing the Tehuantl;
 	else if player is neuter:
-		say "     As eager as you are to have some fun with your feline pet, you find yourself ill equipped to have any fun with her at the moment.";
+		say "     As eager as you are to have some fun with your feline pet, you find yourself ill-equipped to have any fun with her at the moment.";
 	else if lastfuck of Tehuantl - turns < 6:
 		if HP of Tehuantl > 49: [male]
 			say "     Tehuantl rubs himself against you and purrs, but then pulls back a little and says, 'Mmm, as much as I would love my big warrior to make use of [if player is female]her[else]his[end if] servant again, I need some time to recuperate please.'";

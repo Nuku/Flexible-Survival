@@ -1272,7 +1272,7 @@ Version 8 - 26/6/09
 
 
 
-Example: * Inventory Window - A simple example showing how to place an side window displaying the player's inventory.
+Example: * Inventory Window - A simple example showing how to place a side window displaying the player's inventory.
 
 	*: "Inventory Window"
 

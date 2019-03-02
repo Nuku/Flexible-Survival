@@ -238,7 +238,7 @@ Table of Game Objects (continued)
 name	desc	weight	object
 "dildo club"	"A big, bright purple dildo. It's about three feet long and has a handle on it for easy swinging."	5	dildo club
 "banana peel gun"	"A colorful toy gun made of plastic. But rather than fire foam darts or shoot water, it's able to launch banana peels without ever needing to be reloaded."	2	banana peel gun
-"orange shield"	"A round shield made of burnished bronze with an red-orange 'P' emblem on it."	6	orange shield
+"orange shield"	"A round shield made of burnished bronze with a red-orange 'P' emblem on it."	6	orange shield
 "hard hat"	"A yellow construction hard hat you've found to help protect your noggin."	2	hard hat
 
 [Dildo Club]
