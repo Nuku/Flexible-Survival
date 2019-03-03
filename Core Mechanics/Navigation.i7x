@@ -88,6 +88,8 @@ carry out destinationcheck:
 			say "| [link][bracket]Slut Rat Den[close bracket][as]nav Slut Rat Den[end link] ";
 		if The Palomino is known:
 			say "| [link][bracket]The Palomino[close bracket][as]nav The Palomino[end link] ";
+		if Froggy Hideout is known:
+			say "| [link][bracket]Froggy Hideout[close bracket][as]nav Froggy Hideout[end link] ";
 		LineBreak;
 	[start of the dry plains area]
 	if Dry Plains is known or McDermott Farm Entrance is known or Rocky Outcropping is known:
