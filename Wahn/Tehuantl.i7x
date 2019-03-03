@@ -93,7 +93,7 @@ to say TehuantlSexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "69";
 		now sortorder entry is 5;
-		now description entry is "share in some mutual pleasure with Tehuantl";
+		now description entry is "Share in some mutual pleasure with Tehuantl";
 	[]
 	if HP of Tehuantl > 49: [any player, male Tehuantl]
 		choose a blank row in table of fucking options;
@@ -106,7 +106,13 @@ to say TehuantlSexMenu:
 		now title entry is "Fuck the jaguar's ass";
 		now sortorder entry is 7;
 		now description entry is "Sink yourself balls-deep into the kitty";
-	[]
+	[
+	if TehuantlKorvinRelationship is 10 or TehuantlKorvinRelationship is 1: [he and Korvin clashed, K got fucked or not]
+		choose a blank row in table of fucking options;
+		now title entry is "Tell him to fuck Korvin";
+		now sortorder entry is 8;
+		now description entry is "Let your companions give you a show";
+	]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -136,6 +142,8 @@ to say TehuantlSexMenu:
 					say "[TehuantlSex_Ride]";
 				else if title entry is "Fuck the jaguar's ass":
 					say "[TehuantlSex_Assfuck]";
+				else if title entry is "Tell him to fuck Korvin":
+					say "[TehuantlSex_FuckKorvin]";
 				now lastfuck of Tehuantl is turns;
 				wait for any key;
 		else if calcnumber is 0:
@@ -443,7 +451,7 @@ to say TehuantlHeatIntro:
 	if player is neuter:
 		say "     Lacking any gender of your own, you remain quiet as you watch Tehuantl's fingers sink back into her slick opening. As her moans and mewls begin again she seems to forget you're even there, losing herself once again in her powerful lusts. Taking the opportunity to quietly slip away you carefully make your way back downstairs, leaving the lusty kitty alone for now. As you reach the main floor of the library once again, you find yourself wondering if there may be something out in the city to help the poor [bold type]feline[roman type] find some [bold type]relief[roman type].";
 	else:
-		say "     Even as her paws start to stray back to her groin, Tehuantl continues to whimper up at you, begging for some relief. Will you try to help sate the kitty's lusts?";
+		say "     Even as her paws start to stray back to her groin, Tehuantl continues to whimper up at you, begging for some relief. Will you try to help sate the kitty's lusts? ";
 		if player consents:
 			if player is male:
 				say "     Deciding to try and help your pet out, you start stripping off your gear as she starts fingering herself again. The moaning feline hardly notices as you step over her, until you pull her furiously working paw from her sopping cunt. She mewls up at you with need as you run your free hand along her thigh, teasing the needy kitty for a moment before you sink a pair of your own fingers into her. Tehuantl's eager cunt grips your fingers tightly as you frig her needy hole until she reaches a yowling climax, soaking your hand in her juices.";
@@ -600,6 +608,9 @@ instead of going up from Grey Abbey Library while (LastTehuantlKorvinScene - tur
 			say "     The embarrassment should keep Korvin from bothering Tehuantl now, and in the future. It is for the best, as you have no doubt that the jaguar would have kicked his ass. Hard.";
 			now TehuantlKorvinRelationship is 100; [stopped things between them]
 	now LastTehuantlKorvinScene is turns;
+
+to say TehuantlSex_FuckKorvin:
+	say "     As you come up to your jaguarman pet Tehuantl, he immediately rises and comes to attention, proudly standing in front of you in all of his naked glory. Something in your demeanor or expression must have betrayed your lusty intent, as he smiles eagerly and lets out a pleased rumble from the depth of his throat, then says, 'How may I serve my tlacahua?'";
 
 [Section 7 - Endings
 when play ends:

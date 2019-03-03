@@ -6,17 +6,16 @@ Version 2 of Mismatched Chimera by Stripes begins here.
 
 Section 1 - Monster Responses
 
-[ Use To say for overlong behaviors that would make the table difficult to read and understand. Typically needed if there are a lot of cock/species/cunt checks. ]
 
 bodyselector is a text that varies.
-headdata is a text that varies.
-larmdata is a text that varies.
-rarmdata is a text that varies.
-torsodata is a text that varies.
-cockdata is a text that varies.
-llegdata is a text that varies.
-rlegdata is a text that varies.
-breastdata is a number that varies.
+headdata is a text that varies.[@Tag:NotSaved]
+larmdata is a text that varies.[@Tag:NotSaved]
+rarmdata is a text that varies.[@Tag:NotSaved]
+torsodata is a text that varies.[@Tag:NotSaved]
+cockdata is a text that varies.[@Tag:NotSaved]
+llegdata is a text that varies.[@Tag:NotSaved]
+rlegdata is a text that varies.[@Tag:NotSaved]
+breastdata is a number that varies.[@Tag:NotSaved]
 
 when play begins:
 	add { "Mismatched Chimera" } to infections of furry;

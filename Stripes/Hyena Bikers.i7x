@@ -85,7 +85,7 @@ to say ridetimecheck:
 		say "[gimmearide]";
 		increase score by 10;
 
-ridemessage is a text that varies.
+ridemessage is a text that varies.[@Tag:NotSaved]
 
 to say gimmearide:
 	say "     You have been offered a ride by the hyena bikers. The leader lists several places in the city they could drop you off and you have a few more come to mind. Where would you like to go?";

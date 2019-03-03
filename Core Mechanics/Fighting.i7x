@@ -143,30 +143,25 @@ To challenge:
 	rule succeeds;
 
 To Challenge (x - text):
+	let TargetFound be 0;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y from the Table of Random Critters;
-		if BannedStatus entry is true: [banned creatures can't be challenged]
-			if debugactive is 1:
-				say "DEBUG -> Can't challenge creature [name entry] because it has Banned: [BannedStatus entry][line break]";
-			break;
-		let TargetFound be 0;
-		if name entry exactly matches the text x, case insensitively:
-			now TargetFound is 1;
-			if debugactive is 1:
-				say "     DEBUG: Monster Found by Name: [x][line break]";
-		if enemy title entry exactly matches the text x, case insensitively:
-			now TargetFound is 1;
-			if debugactive is 1:
-				say "     DEBUG: Monster Found by Enemy Title: [x][line break]";
-		if enemy name entry exactly matches the text x, case insensitively:
-			now TargetFound is 1;
-			if debugactive is 1:
-				say "     DEBUG: Monster Found by Enemy Name: [x][line break]";
-		if TargetFound is 1:
-			now monster is y;
-			now monsterHP is HP entry;
-			challenge;
-			break;
+		if name entry is x or title entry is x or enemy name entry is x:
+			if BannedStatus entry is true: [banned creatures can't be challenged]
+				if debugactive is 1:
+					say "DEBUG -> Can't challenge creature [name entry] because it has Banned: [BannedStatus entry][line break]";
+				break;
+			else:
+				if debugactive is 1:
+					say "DEBUG -> Creature [x] found.[line break]";
+				now TargetFound is 1;
+				now monster is y;
+				now monsterHP is HP entry;
+				break;
+	if TargetFound is 1:
+		challenge;
+	else:
+		say "     ERROR: Creature [x] not found.";
 
 to hardmodeboost: [Controls level boosting for hard mode, runs BEFORE any internal creature adjustments]
 	let debit be 0;

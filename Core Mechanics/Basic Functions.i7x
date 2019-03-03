@@ -343,9 +343,9 @@ understand "testCreatureSexAftermath" as CreatureSexAftermathAction.
 CreatureSexAftermathAction is an action applying to nothing.
 
 carry out CreatureSexAftermathAction:
-	say "Testing: Carl fucks player:";
+	say "Testing: Alpha Husky fucks player:";
 	CreatureSexAftermath "Player" receives "AssFuck" from "Alpha Husky";
-	say "Testing: Player fucks Carl:";
+	say "Testing: Player fucks Alpha Husky:";
 	CreatureSexAftermath "Alpha Husky" receives "AssFuck" from "Player";
 	[Options for SexAct are: AssFuck, PussyFuck, OralCock, OralPussy]
 
@@ -384,7 +384,7 @@ to CreatureSexAftermath (TakingChar - a text) receives (SexAct - a text) from (G
 				say "     [Bold Type]You have lost your oral virginity to the [GivingChar in lower case]![roman type][line break]";
 				now FirstOralPartner of player is GivingChar;
 
-to StatChange (Statname - a text) using (Value - a number):
+to StatChange (Statname - a text) by (Value - a number):
 	if Value is 0:
 		say "ERROR: You just got a 0 point stat change. Please report on the FS Discord how you saw this.";
 	now Statname is Statname in lower case;
@@ -392,6 +392,7 @@ to StatChange (Statname - a text) using (Value - a number):
 	if Statname is:
 		-- "strength":
 			increase strength of player by Value;
+			increase capacity of player by Value * 5;
 		-- "dexterity":
 			increase dexterity of player by Value;
 		-- "stamina":
@@ -408,16 +409,16 @@ understand "teststatgain" as StatGainAction.
 StatGainAction is an action applying to one topic.
 
 carry out StatGainAction:
-	say "StatChange 'Strength' using 2[line break]";
-	StatChange "Strength" using 2;
+	say "StatChange 'Strength' by 2[line break]";
+	StatChange "Strength" by 2;
 
 understand "teststatloss" as StatLossAction.
 
 StatLossAction is an action applying to one topic.
 
 carry out StatLossAction:
-	say "StatChange 'Strength' using -2[line break]";
-	StatChange "Strength" using -2;
+	say "StatChange 'Strength' by -2[line break]";
+	StatChange "Strength" by -2;
 ]
 to say NonCombatError:
 	say "ERROR! This is a noncombat creature that you should never see in a fight. Please report how you saw this on the FS Discord or Forum.";
@@ -607,7 +608,6 @@ to say StripChest:
 		say "pulls off your [ChestItem] and bares your chest";
 	else if ChestItem is not journal and BodyItem is not journal:
 		say "pulls off your [ChestItem] and [BodyItem], baring your chest";
-
 
 [
 understand "zTSelfStripChest" as SSCAction.
