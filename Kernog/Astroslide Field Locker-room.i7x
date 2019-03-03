@@ -5,9 +5,9 @@ Astroslide Field Locker-room by Kernog begins here.
 [TODO: Expand on basic sex menu in lockers]
 
 [Variables]
-tempGorillaName1 is a text that varies.
-tempGorillaGender is a number that varies.
-tempGorillaName2 is a text that varies.
+tempGorillaName1 is a text that varies.[@Tag:NotSaved]
+tempGorillaGender is a number that varies.[@Tag:NotSaved]
+tempGorillaName2 is a text that varies.[@Tag:NotSaved]
 
 [General]
 

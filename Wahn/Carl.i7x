@@ -142,7 +142,7 @@ to say CarlTalkMenu:
 		now sortorder entry is 2;
 		now description entry is "Tell the husky soldier that you got the showers to work";
 	[]
-	if (Energy of Carl > 0 and library computer is powered):
+	if (Energy of Carl > 1 and library computer is powered):
 		choose a blank row in table of fucking options;
 		now title entry is "Going to the showers together";
 		now sortorder entry is 2;
@@ -774,7 +774,7 @@ to say CarlShowerMenu:
 		now title entry is "Go down on Carl's dick";
 		now sortorder entry is 4;
 		now description entry is "Give the canine soldier a blow-job";
-		[]
+		[
 		if player is female and HP of Carl is 10: [regular Carl]
 			choose a blank row in table of fucking options;
 			now title entry is "Offer your pussy to Carl";
@@ -798,7 +798,7 @@ to say CarlShowerMenu:
 			now title entry is "Command the subby husky to fuck your ass";
 			now sortorder entry is 6;
 			now description entry is "Let the husky breed you";
-		[]
+		]
 		if player is male:
 			choose a blank row in table of fucking options;
 			now title entry is "Take Carl's ass";

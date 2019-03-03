@@ -294,10 +294,6 @@ to TextVariableSave:
 			now TextVarValue entry is slutname;
 		-- "StellaNPCInt":
 			now TextVarValue entry is StellaNPCInt;
-		-- "tempGorillaName1":
-			now TextVarValue entry is tempGorillaName1;
-		-- "tempGorillaName2":
-			now TextVarValue entry is tempGorillaName2;
 		-- "ubpreg":
 			now TextVarValue entry is ubpreg;
 		-- "VikingKidShape":
@@ -2643,8 +2639,6 @@ to NumberVariableSave:
 			now NumberVarValue entry is TehuantlTimer;
 		-- "TempClearBypass":
 			now NumberVarValue entry is TempClearBypass;
-		-- "tempGorillaGender":
-			now NumberVarValue entry is tempGorillaGender;
 		-- "templust":
 			now NumberVarValue entry is templust;
 		-- "tempnum":
@@ -3961,10 +3955,6 @@ to VariableTextLoad:
 					now slutname is TextVarValue entry;
 				-- "StellaNPCInt":
 					now StellaNPCInt is TextVarValue entry;
-				-- "tempGorillaName1":
-					now tempGorillaName1 is TextVarValue entry;
-				-- "tempGorillaName2":
-					now tempGorillaName2 is TextVarValue entry;
 				-- "ubpreg":
 					now ubpreg is TextVarValue entry;
 				-- "VikingKidShape":
@@ -6317,8 +6307,6 @@ to VariableNumberLoad:
 					now TehuantlTimer is numberVarValue entry;
 				-- "TempClearBypass":
 					now TempClearBypass is numberVarValue entry;
-				-- "tempGorillaGender":
-					now tempGorillaGender is numberVarValue entry;
 				-- "templust":
 					now templust is numberVarValue entry;
 				-- "tempnum":

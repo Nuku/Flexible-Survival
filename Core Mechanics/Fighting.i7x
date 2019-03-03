@@ -146,7 +146,7 @@ To Challenge (x - text):
 	let TargetFound be 0;
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y from the Table of Random Critters;
-		if name entry is x or title entry is x or enemy name entry is x:
+		if name entry is x or enemy title entry is x or enemy name entry is x:
 			if BannedStatus entry is true: [banned creatures can't be challenged]
 				if debugactive is 1:
 					say "DEBUG -> Can't challenge creature [name entry] because it has Banned: [BannedStatus entry][line break]";
