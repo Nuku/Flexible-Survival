@@ -5119,6 +5119,7 @@ Include Yuppie Mink by StripeGuy.
 Include Zebra by Vervaine.
 
 [NPCs]
+Include Adam by Wahn.
 Include Alex by Stripes.
 Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
