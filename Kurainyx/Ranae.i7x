@@ -57,6 +57,7 @@ Starving Frog is a situation.
 The sarea of Starving Frog is "Mall".
 Rundown Boutique is a situation.
 The sarea of Rundown Boutique is "Outside".
+Rundown Boutique is inactive.
 
 when play begins:
 	add Starving Frog to badspots of girl;
@@ -230,6 +231,7 @@ to say RanaeSupplies:
 			say "     Ranae's attention immediately focuses on the food and water you pull out of your pack, and this time, she doesn't hesitate to take the offering when you hold it out to her. As usual, she chugs down the water at a frightening rate, however, this time, she stop when there is about a third of the water left before she screws the cap back on. She does the same with the food, quickly gorging herself but leaving a portion of it for later. 'Thank you so much for everything. I'm feeling a lot better,' Ranae comments as she pats her filled stomach. Even without her mentioning it, the contrast between now and when you first met the frog lady is as clear as day and night. Her now vibrant green skin is looking healthily moist, giving it a faint sheen. No longer being just skin and bones, Ranae has quite the lithe build with a modest pair of breasts on her chest. The only exception of her pert figure is her ass. While not the largest, the amphibian female's butt was still a very much respectable size, and the perfectly round figure more than made up for any size concerns.";
 			say "     Ranae clears her throat, breaking your stare of her bodacious butt. 'S-seems that you like a certain part of me,' she remarks, along with a giggle tinged with both embarrassment and delight. She brings her hands to her boobs and then slowly drags them through her body, going down her sides and then circling her curvaceous rear. 'It's a good thing that I'm feeling stronger now because I think I know the perfect way I can repay you for your kindness.' She ends her offer with a smoldering gaze, however, after a few moments, her face grows red as she averts her gaze. 'Th-that is, if you want to, of course.'";
 			now hunger of Ranae is 4;		[Gave Ranae three rounds of food and water]
+			now Rundown Boutique is active;		[Event to get dress for Ranae]
 		else if hunger of Ranae is 6:
 			say "     Ranae giggles as you present her with another round of supplies. 'You know, I would've been fine with trying to find my own supplies, but you just keep giving them to me. How can I say no to someone who just wants to keep serving me?' The frog woman takes your offering, quickly stashing them away in the corner, before giving you a nod of approval. 'Tell you what: if you really are intent on serving me, find me some junk food, like some [bold type]chips and soda[roman type]. The stuff you've been giving me is alright and all, but they're also getting boring.'";
 			now hunger of Ranae is 7;		[Gave Ranae four rounds of food and water]
