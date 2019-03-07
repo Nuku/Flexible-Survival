@@ -143,6 +143,7 @@ to say AuroraScent:
 	say "     The giantess smells pleasantly of frozen yogurt. There's also a light scent of the sweat from exertion, but not unpleasantly so.";
 
 to say AuroraDesc:
+	project the Figure of Aurora_clothed_icon;
 	say "     Aurora the frost giantess is about 10 and a half feet tall and has a strong build with some obvious muscle to it. While not toned to body-builder level, her muscles do have obvious definition as if from regular exercise. Added to her overall size, this makes her quite physically powerful. Her skin is pale blue in color and she has darker blue hair. Her eyes are purple, as are her lips and nipples. These last you can partially see through the stretched material of her torn shirt trying to cope with her enlarged body and bosom. Were she of normal height, they'd be nice C-cups; being as large as she is, they're something more like big F-cup tits. Her pants, now stretched to their limit around her hips, are now tight shorts on her large frame, hugging her strong hips and toned buttocks.";
 	say "     She's friendly and eager to help you, willing to even come along and fight by your side. While no trained warrior, her punches hit like a ton of bricks. The heat of the city does wear on her, which is why she's carries a small retail ice cream freezer like a backpack. It's full of frozen yogurt and somehow is always cold despite not even being plugged in. Fighting will eventually tire her out and overheat her, but she'll keep fighting as long as you do out of loyalty.";
 
@@ -162,6 +163,7 @@ instead of conversing frost giantess:
 			say "     Aurora isn't here.";
 
 to say AuroraTalkMenu:
+	project the Figure of Aurora_clothed_icon;
 	LineBreak;
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -208,6 +210,7 @@ to say AuroraTalk1:
 Section 3 - Sex w/Aurora
 
 to say SexWithAurora:
+	project the Figure of Aurora_clothed_icon;
 	if lastfuck of frost giantess - turns < 8:
 		say "     'Mmm... tempting, very tempting, but how about we wait for a bit first?' she says with a happy smile.";
 	else if ublevel is 3 and a random chance of 1 in 3 succeeds:

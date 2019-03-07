@@ -103,8 +103,7 @@ carry out bargainhunting:
 			if furry is not banned and guy is not banned:
 				say "     Poking absently through the bin, your eye catches on a [bold type]small cat-like charm[roman type] tucked away in the corner. Pulling the little piece of jewelry out you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers. Then suddenly, it seems to slip through your fingers - or rather melt, as you try to catch it and notice that the thing didn't slip but rather is covering part of your fingers now as a silver sheen. Before you have much time to stare at it, the flowing metal seems to be absorbed by your skin, vanishing without a trace. As you scratch your head, puzzled about the strange effect, you realize your body is feeling slightly different...";
 				LineBreak;
-				say "[bold type]Your dexterity has increased by 1![roman type][line break]";
-				increase dexterity of player by 1;
+				StatChange "Dexterity" by 1;
 				infect "Felinoid";
 			else:
 				say "     Poking absently through the bin, your eye catches on a [bold type]small cat-like charm[roman type], tucked away in the corner. Pulling the little piece of jewelry out you smile at the stylized image of a pouncing cat as you rub the strange metal charm between your fingers. Then suddenly Nermine snatches the golden charm from your hand with a handkerchief and carefully puts it into a jewelry box. 'Nermine can tell that her customer will not want this item. She is sorry, but the bargain bin can be unpredictable at the best of times. Full of apologies, the jackaless offers her guest the paid items in return, as well as a suggestion. Maybe Nermine's dear customer should be thinking to not be so picky. More fun is to be had that way,' she adds philosophically.";
@@ -128,8 +127,7 @@ carry out bargainhunting:
 		else if Z is 8: [puzzle box]
 			say "     Reaching deep into the bin, you find a hand-sized square box. Running your fingers over its smooth sides you notice it seems to have odd lines carved into it. Deciding to pull the box out for a better look, you realize you have just purchased some kind of [bold type]Chinese puzzle box[roman type], covered in small blocks seemingly able to be pushed or moved around the surface of the small container. Eager to see what might be inside, you spend some time working at and manipulating the box, slowly figuring out its secrets as you draw closer to finishing the puzzle. Finally with a triumphant cry you manage to slide the lid of the box open, only to find a small piece of paper within. Pulling out the paper you note it reads, 'The treasure is not in the finding, but in the journey.' All that work for a small fortune-cookie saying? Still you feel that all that work on the puzzle box has definitely helped you at puzzling out problems, so maybe it wasn't a waste after all...";
 			LineBreak;
-			say "[bold type]Your intelligence has increased by 2![roman type][line break]";
-			increase intelligence of player by 2;
+			StatChange "Intelligence" by 2;
 		else if Z is 9: [biting monster]
 			say "     Reaching deep into the bin, you feel something moving under all of those strange items piled in it! A heartbeat later, whatever it is chumps down on your searching fingers, making you withdraw your hand immediately. Looking down at it, you can't help but stare as blood slowly drips from your fingers, trickling down from a [bold type]nasty bite-wound[roman type] on your hand. Nermine seems rather embarrassed by the whole affair as she helps you bandage up your new wound, and the jackal glares at the bin for a minute as if reprimanding whatever bit you. 'Nermine is sorry, sometimes things are not happy to end up in bargain bin. The jackaless apologizes and decides to make good for such a sad misunderstanding,' the jackal says with a shrug, then quickly refunds your food and water, and even places an extra packet of food and bottle of water out for the inconvenience.";
 			LineBreak;
@@ -250,13 +248,9 @@ carry out bargainhunting:
 				LineBreak;
 				say "     Shrugging off the possibility of side effects, you eagerly pop the pill in your mouth and swallow. As your muscles begin to burn slightly, you nevertheless can't help but wonder if that was the smartest thing you could have done. You moan as the strange pill works its changes on your body, your muscles spasming with pleasure as you hold onto the counter... Eventually the changes stop, and you stand there panting for several minutes, before realizing you should probably be moving on soon. You can't help but pause to admire your new muscles for a minute however, although for some reason thinking clearly about anything other than your muscles and sex seems to be harder than ever...";
 				LineBreak;
-				say "[bold type]Your strength has increased by 2![roman type][line break]";
-				increase strength of player by 2;
-				increase capacity of player by 10;
-				say "[bold type]Your intelligence has decreased by 1![roman type][line break]";
-				decrease intelligence of player by 1;
-				say "[bold type]Your sanity has decreased by 5![roman type][line break]";
-				decrease humanity of player by 5;
+				StatChange "Strength" by 2;
+				StatChange "Intelligence" by -1;
+				SanLoss 5;
 			else:
 				LineBreak;
 				say "     Glancing at the pill of unknown origin in your hand, you frown and put it back in its wrapping paper, crumpling that to a compact ball. With an aimed throw, you then lob it into what you assume to be an ancient waste-bin, only to have Nermine comment, 'The friendly jackaless would like to request that her customers not throw litter into other dimensions. The urn of Ka'lak serves another purpose.' With a somewhat sheepish expression, you step up to the urn, glancing down through its opening and seeing nothing but a dark shaft, going deeper than the piece of pottery is long...";
@@ -441,8 +435,7 @@ carry out bargainhunting:
 			if "Mutable" is listed in feats of player or AngryHorguth is 1:
 				say "     Rummaging through the bargain bin, you come across several unusual items, most of which you ignore, but eventually you find a rather strange and [bold type]shiny rock[roman type] which seems to call to you. Rolling the rock around in your hand with some amusement, you enjoy the way it seems to glow with an inner light, only to cry out in pain as it starts to sink into your unprotected hand! Pulling your hand out of the bin, you wave it around trying to dislodge the rock, while the jackal shopkeeper shakes her head in amusement. The rock actually seems to meld into your skin despite your best efforts to dislodge it however, and a moment later your skin seems to tingle and harden somewhat, becoming slightly tougher. While somewhat of a relief that that is all that happens, it is still rather disconcerting, not to mention painful!";
 				LineBreak;
-				say "[bold type]Your stamina has increased by 1![roman type][line break]";
-				increase stamina of player by 1;
+				StatChange "Stamina" by 1;
 				if remainder after dividing stamina of player by 2 is 0:
 					increase maxHP of player by level of player plus 1;
 				say "[bold type]You lose 10 HP![roman type][line break]";

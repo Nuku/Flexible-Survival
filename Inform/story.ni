@@ -5119,6 +5119,7 @@ Include Yuppie Mink by StripeGuy.
 Include Zebra by Vervaine.
 
 [NPCs]
+Include Adam by Wahn.
 Include Alex by Stripes.
 Include Arcanologist by Taelyn.
 Include Bad Alexandra by Wahn.
@@ -5258,6 +5259,7 @@ Include Pericles by Rikaeus.
 Include Phantom Dolphin by Blue Bishop.
 Include Phantom Pony by Blue Bishop.
 Include Pretty Kitty by Xenophiliac.
+Include Ranae by Kurainyx.
 Include Randall and Brad by Rikaeus.
 Include Rane by Wahn.
 Include RexxyEvent by AGentlemanCalledB.

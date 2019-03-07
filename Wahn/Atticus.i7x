@@ -88,6 +88,7 @@ Virgin of Atticus is true.
 AnalVirgin of Atticus is false.
 PenileVirgin of Atticus is false.
 SexuallyExperienced of Atticus is true.
+MainInfection of Atticus is "Incubus".
 The description of Atticus is "[AtticusDesc]".
 The conversation of Atticus is { "<This is nothing but a placeholder!>" }.
 The scent of Atticus is "     Atticus smells nicely masculine, with just the smallest amount of sexy sweat to his body, complete with lots of pheromones that can drive almost anyone wild in lust.".

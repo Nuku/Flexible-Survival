@@ -184,6 +184,7 @@ to say OrcFemBeaten:
 		move player to Dry Plains;
 
 to say KatyaBeatenSexMenu:
+	project the Figure of Katya_clothed_icon;
 	LineBreak;
 	say "What do you want to do with Katya?";
 	now sextablerun is 0;
@@ -749,6 +750,7 @@ to say KatyaDesc:
 	say "     The female orc nods to you as she notices your attention, then grins and gives you a few lewd looks herself. Something tells you she's imagining you naked, possibly pinned to the ground underneath muscular body.";
 
 instead of conversing the Katya:
+	project the Figure of Katya_clothed_icon;
 	LineBreak;
 	say "What do you want to talk with Katya about?";
 	now sextablerun is 0;
@@ -859,6 +861,7 @@ instead of fucking the Katya:
 		say "     [KatyaSexMenu]";
 
 to say KatyaSexMenu:
+	project the Figure of Katya_clothed_icon;
 	LineBreak;
 	say "What do you want to do with Katya?";
 	now sextablerun is 0;
