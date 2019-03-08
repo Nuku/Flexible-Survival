@@ -61,7 +61,7 @@ Julian is a man. The hp of Julian is usually 0.
 ScaleValue of Julian is 3. [human sized]
 SleepRhythm of Julian is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Julian is 1. [One cock]
-Cock Length of Julian is 8. [Eight Inches]
+Cock Length of Julian is 10. [10 Inches]
 Cock Width of Julian is 2. [Each testicle 1 inch across]
 Testes of Julian is 2. [Two balls]
 Cunts of Julian is 0. [No pussy]
@@ -70,6 +70,8 @@ Cunt Width of Julian is 0. [No Cunt]
 Breasts of Julian is 2. [2 nipples]
 Breast Size of Julian is 0. [Flat at the start]
 [Basic Interaction states as of game start]
+TwistedCapacity of Julian is false. [can take oversized members without pain]
+Sterile of Julian is false.
 PlayerMet of Julian is false.
 PlayerRomanced of Julian is false.
 PlayerFriended of Julian is false.

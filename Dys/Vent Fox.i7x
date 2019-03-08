@@ -170,6 +170,32 @@ object	name
 Vent	"Vent"
 
 Vent is a man. The HP of Vent is usually 0.
+[Physical details as of game start]
+ScaleValue of Vent is 3. [human sized]
+SleepRhythm of Vent is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Vent is 1. [X cock]
+Cock Length of Vent is 7. [7 Inches]
+Cock Width of Vent is 3. [Each testicle 1,5 inch across]
+Testes of Vent is 2. [2 balls]
+Cunts of Vent is 0. [X pussy]
+Cunt Length of Vent is 0. [X Cunt]
+Cunt Width of Vent is 0. [X Cunt]
+Breasts of Vent is 0. [X nipples]
+Breast Size of Vent is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Vent is false. [can not take oversized members without pain]
+Sterile of Vent is false.
+PlayerMet of Vent is false.
+PlayerRomanced of Vent is false.
+PlayerFriended of Vent is false.
+PlayerControlled of Vent is false.
+PlayerFucked of Vent is false.
+OralVirgin of Vent is true.
+Virgin of Vent is true.
+AnalVirgin of Vent is true.
+PenileVirgin of Vent is true.
+SexuallyExperienced of Vent is false.
+MainInfection of Vent is "Latex Fox".
 The description of Vent is "[VentDescription]".
 The conversation of Vent is { "blah blah blarg" }.
 The scent of Vent is "[VentScent]".

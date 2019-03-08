@@ -168,6 +168,32 @@ object	name
 Dmitri	"Dmitri"
 
 Dmitri is a person. Dmitri is in Argos Antiques.
+[Physical details as of game start]
+ScaleValue of Dmitri is 3. [human sized]
+SleepRhythm of Dmitri is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Dmitri is 1. [X cock]
+Cock Length of Dmitri is 9. [X Inches]
+Cock Width of Dmitri is 3. [Each testicle 1/2 X inch across]
+Testes of Dmitri is 2. [X balls]
+Cunts of Dmitri is 0. [X pussy]
+Cunt Length of Dmitri is 0. [X Cunt]
+Cunt Width of Dmitri is 0. [X Cunt]
+Breasts of Dmitri is 0. [X nipples]
+Breast Size of Dmitri is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Dmitri is false. [can not take oversized members without pain]
+Sterile of Dmitri is false.
+PlayerMet of Dmitri is false.
+PlayerRomanced of Dmitri is false.
+PlayerFriended of Dmitri is false.
+PlayerControlled of Dmitri is false.
+PlayerFucked of Dmitri is false.
+OralVirgin of Dmitri is true.
+Virgin of Dmitri is true.
+AnalVirgin of Dmitri is true.
+PenileVirgin of Dmitri is false.
+SexuallyExperienced of Dmitri is true.
+MainInfection of Dmitri is "Peacock".
 The description of Dmitri is "[dmitridesc]".
 The conversation of Dmitri is { "Fanout!" }.
 the scent of the Dmitri is "The avian has a rather enticing scent of jasmine and sage that makes him seem all the more entrancing.".

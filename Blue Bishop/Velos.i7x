@@ -104,6 +104,32 @@ object	name
 Velos	"Velos"
 
 Velos is a person.
+[Physical details as of game start]
+ScaleValue of Velos is 2. [dog sized]
+SleepRhythm of Velos is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Velos is 0. [X cock]
+Cock Length of Velos is 0. [X Inches]
+Cock Width of Velos is 0. [Each testicle X inch across]
+Testes of Velos is 0. [X balls]
+Cunts of Velos is 0. [X pussy]
+Cunt Length of Velos is 0. [X Cunt]
+Cunt Width of Velos is 0. [X Cunt]
+Breasts of Velos is 0. [X nipples]
+Breast Size of Velos is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Velos is false. [can not take oversized members without pain]
+Sterile of Velos is true.
+PlayerMet of Velos is false.
+PlayerRomanced of Velos is false.
+PlayerFriended of Velos is false.
+PlayerControlled of Velos is false.
+PlayerFucked of Velos is false.
+OralVirgin of Velos is true.
+Virgin of Velos is true.
+AnalVirgin of Velos is true.
+PenileVirgin of Velos is true.
+SexuallyExperienced of Velos is false.
+MainInfection of Velos is "".
 The description of Velos is "[velosdesc]".
 The conversation of Velos is { "Snipe." }.
 velospostmusings is a list of numbers that varies. velospostmusings is usually {}.

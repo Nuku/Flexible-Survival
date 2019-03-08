@@ -62,6 +62,32 @@ object	name
 philip	"philip"
 
 Philip is a man.
+[Physical details as of game start]
+ScaleValue of Philip is 3. [human sized]
+SleepRhythm of Philip is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Philip is 1. [X cock]
+Cock Length of Philip is 10. [X Inches]
+Cock Width of Philip is 6. [Each testicle 1/2 X inch across]
+Testes of Philip is 2. [X balls]
+Cunts of Philip is 0. [X pussy]
+Cunt Length of Philip is 0. [X Cunt]
+Cunt Width of Philip is 0. [X Cunt]
+Breasts of Philip is 2. [X nipples]
+Breast Size of Philip is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Philip is false. [can not take oversized members without pain]
+Sterile of Philip is false.
+PlayerMet of Philip is false.
+PlayerRomanced of Philip is false.
+PlayerFriended of Philip is false.
+PlayerControlled of Philip is false.
+PlayerFucked of Philip is false.
+OralVirgin of Philip is true.
+Virgin of Philip is true.
+AnalVirgin of Philip is true.
+PenileVirgin of Philip is true.
+SexuallyExperienced of Philip is false.
+MainInfection of Philip is "Messy Pig".
 The description of Philip is "This creature is almost a complete pig, the only thing human about it is the fact that it is standing on two legs that end in hoofs instead of feet. He is extremely fat with a bald head, floppy ears, and an upturned nose. Flies are constantly buzzing around him, enticed by his foul odor. He has a huge, flabby gut that hangs half way over his crotch, but not far enough to hide a pig cock that is the size of your forearm. Past his cock is a pair of large swollen balls. He seems to take great delight in rolling around in the mud on the floor[if Philip is in Large Shed]. He's made a mudhole of his own in one corner of the large shed by breaking a hole in the wall and cracking a pipe. He spends much of his time lounging in it[end if]. Looking at all the mud, the idea of [bold type]wrestling[roman type] with Philip in it just springs to your mind all of its own.".
 Philip is in Pig Pen.
 The conversation of Philip is { "Oink!" }.
@@ -346,7 +372,7 @@ To Mudwrestle:
 				say "     You let out a short laugh, as you lunge forward. Phillip lifts his arm to protect his neck, but that's not your target. You wrap your hand around his thick, meaty cock, causing it to throb. Philip lets out a stammered protest, but does nothing more as you begin slowly rubbing your hand up and down his large shaft. He leans back on his hands, his tongue resting outside of his mouth, completely lost in the pleasure you give him. The cock continues to throb, as his balls begin to churn. You don't have any problems leaning forward and grabbing him tightly, as he lets out a gasp of surprise. 'H-hey, you weren't finished yet!' he complains, as you tighten your grasp. He squirms, but is unable to build up the strength to break out.";
 				increase PhilipMudWrestleCount by 1;
 				if PhilipMudWrestleCount < 2:
-					say "     You continue to hold Philip steady, but you become concerned when his squirming resumes. 'You thought you had me, but you forgot about the mud!' he laughs, as he quickly slips out from your grasp. You look down and realize that the mud you had accumulated throughout the match must have allowed him to slip out! It's while you're realizing this that he grabs you, locking you a pin. 'I'll admit, you almost had me. But only almost! I'm still the top pig in this house, and you're just my sow to bread!' he snorts, as he locks you in his pin. You try to escape, but your efforts are useless as he has you held for five seconds. He releases you, shooting his arms up and hollering in victory. You fall back into the mud, grumbling with frustration.";
+					say "     You continue to hold Philip steady, but you become concerned when his squirming resumes. 'You thought you had me, but you forgot about the mud!' he laughs, as he quickly slips out from your grasp. You look down and realize that the mud you had accumulated throughout the match must have allowed him to slip out! It's while you're realizing this that he grabs you, locking you a pin. 'I'll admit, you almost had me. But only almost! I'm still the top pig in this house, and you're just my sow to breed!' he snorts, as he locks you in his pin. You try to escape, but your efforts are useless as he has you held for five seconds. He releases you, shooting his arms up and hollering in victory. You fall back into the mud, grumbling with frustration.";
 					increase PhilipWrestleEnd by 1;
 			if PhilipWrestleEnd < 1:
 				if PhilipMudWrestleCount > 1:

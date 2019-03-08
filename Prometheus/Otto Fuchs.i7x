@@ -54,6 +54,8 @@ Cunt Width of Otto is 0. [No Cunt]
 Breasts of Otto is 2. [2 nipples]
 Breast Size of Otto is 0. [Flat at the start]
 [Basic Interaction states as of game start]
+TwistedCapacity of Otto is false. [can take oversized members without pain]
+Sterile of Otto is false.
 PlayerMet of Otto is false.
 PlayerRomanced of Otto is false.
 PlayerFriended of Otto is false.

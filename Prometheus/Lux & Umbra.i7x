@@ -95,6 +95,8 @@ Cunt Width of Lux is 3. [gets stretched a bit by an alpha husky]
 Breasts of Lux is 2. [2 nipples]
 Breast Size of Lux is 2. [B cup at the start]
 [Basic Interaction states as of game start]
+TwistedCapacity of Lux is false. [can take oversized members without pain]
+Sterile of Lux is false.
 PlayerMet of Lux is false.
 PlayerRomanced of Lux is false.
 PlayerFriended of Lux is false.
@@ -197,32 +199,34 @@ to say LuxTalk2:
 		say "     You are curious about Lux's opinions on Fang and Umbra and so ask her, receiving a bright smile in response. 'Daddy might have difficulty expressing it, but he is very grateful to you for giving him a family again. While he hasn't told me much about his personal life before the crisis, I know that he had a wife and daughter who left him, and he had difficulty coping. Now he gets another chance to be with people that love him, an important part of being human or wolf. I doubt that he would be against expanding the pack a bit more, if you understand what I'm saying. While he may not have the same grasp of human language as me, don't discount his intelligence. He's a lot more cunning and crafty than he appears, a trait that he has cultivated to increase his chances of survival, though his previous pack didn't seem to value it. What else is there to say about him? I think that I'm his favorite, though don't tell Umbra I said that. He might disagree, and I wouldn't want to have to shatter that hope. What male doesn't like having a daughter to pamper and impress?'";
 		say "     'Where should I start on Umbra? My brother isn't as literarily gifted as me, but, like my father, he isn't stupid as his combat capabilities show. He just has difficulty expressing his feelings in words. You may have noticed how affectionate he is to his family, you included. That is him showing how much he cares when your grasp of wolf communication isn't as fluent as our own. I'm so glad that he expresses his emotions so easily compared to some of the men in the books I read. Why is a lack of emotion considered an attractive trait in males so often? I think that Umbra may be more than a little in awe of you, and he is impressed by how capable you are, seeing as how you have survived so well in the current situation between the roaming creatures and the invading army. He may want to learn to be more like you. When you have always been there for us, I share similar admiration towards you.' She seems to be squirming slightly and you raise an eyebrow in question. She flushes deeply and hurriedly responds, 'Please excuse me, I'm getting certain feelings that should be dealt with away from family.' With that, she scurries away, leaving you mildly confused at the abrupt end to the conversation.";
 
-Umbra is a man.
-[physical details as of game start]
-ScaleValue of Umbra is 3. [human sized]
-Cocks of Umbra is 1. [One cock]
-Cock Length of Umbra is 8. [8 inches]
-Cock Width of Umbra is 4. [2 inch ball size]
-Testes of Umbra is 2. [no balls]
-Cunts of Umbra is 0. [No pussy]
-Cunt Length of Umbra is 0. [No pussy]
-Cunt Width of Umbra is 0. [No pussy]
-Breasts of Umbra is 2. [2 nipples]
-Breast Size of Umbra is 0. [Flat at the start]
-[Basic Interaction states as of game start]
-PlayerMet of Umbra is false.
-PlayerRomanced of Umbra is false.
-PlayerFriended of Umbra is false.
-PlayerControlled of Umbra is false.
-PlayerFucked of Umbra is false.
-OralVirgin of Umbra is true.
-Virgin of Umbra is true.
-AnalVirgin of Umbra is true.
-PenileVirgin of Umbra is true.
-SexuallyExperienced of Umbra is false.
-MainInfection of Umbra is "Alpha Wolf".
-The description of Umbra is "[Umbradesc]".
-The conversation of Umbra is { "Bark! Bark! Woof!" }.
+	Umbra is a man.
+	[physical details as of game start]
+	ScaleValue of Umbra is 3. [human sized]
+	Cocks of Umbra is 1. [One cock]
+	Cock Length of Umbra is 10. [10 inches]
+	Cock Width of Umbra is 4. [2 inch ball size]
+	Testes of Umbra is 2. [no balls]
+	Cunts of Umbra is 0. [No pussy]
+	Cunt Length of Umbra is 0. [No pussy]
+	Cunt Width of Umbra is 0. [No pussy]
+	Breasts of Umbra is 2. [2 nipples]
+	Breast Size of Umbra is 0. [Flat at the start]
+	[Basic Interaction states as of game start]
+	TwistedCapacity of Umbra is false. [can take oversized members without pain]
+	Sterile of Umbra is false.
+	PlayerMet of Umbra is false.
+	PlayerRomanced of Umbra is false.
+	PlayerFriended of Umbra is false.
+	PlayerControlled of Umbra is false.
+	PlayerFucked of Umbra is false.
+	OralVirgin of Umbra is true.
+	Virgin of Umbra is true.
+	AnalVirgin of Umbra is true.
+	PenileVirgin of Umbra is true.
+	SexuallyExperienced of Umbra is false.
+	MainInfection of Umbra is "Alpha Wolf".
+	The description of Umbra is "[Umbradesc]".
+	The conversation of Umbra is { "Bark! Bark! Woof!" }.
 
 the scent of the Umbra is "     The dark-furred wolf smells rather masculine and wolfy, his musk obvious to the nose.".
 

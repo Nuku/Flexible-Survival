@@ -28,7 +28,7 @@ Sirius is a man. The hp of Sirius is usually 0.
 ScaleValue of Sirius is 4. [Larger than human]
 SleepRhythm of Sirius is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Sirius is 1. [no cock]
-Cock Length of Sirius is 10. [10 inches]
+Cock Length of Sirius is 12. [12 inches]
 Cock Width of Sirius is 4. [Each tesicle is 2 inches]
 Testes of Sirius is 2. [Two balls]
 Cunts of Sirius is 0. [No pussy]
@@ -37,6 +37,8 @@ Cunt Width of Sirius is 0. [No pussy]
 Breasts of Sirius is 2. [2 nipples]
 Breast Size of Sirius is 0. [Flat at the start]
 [Basic Interaction states as of game start]
+TwistedCapacity of Sirius is true. [can take oversized members without pain]
+Sterile of Sirius is true.
 PlayerMet of Sirius is false.
 PlayerRomanced of Sirius is false.
 PlayerFriended of Sirius is false.

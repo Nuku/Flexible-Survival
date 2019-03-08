@@ -260,6 +260,8 @@ Cunt Width of Ruby is 3. [gets stretched a bit by an alpha husky]
 Breasts of Ruby is 2. [4 nipples]
 Breast Size of Ruby is 4. [B cup at the start]
 [Basic Interaction states as of game start]
+TwistedCapacity of Ruby is false. [can not take oversized members without pain]
+Sterile of Ruby is true.
 PlayerMet of Ruby is false.
 PlayerRomanced of Ruby is false.
 PlayerFriended of Ruby is false.
@@ -270,6 +272,7 @@ Virgin of Ruby is false.
 AnalVirgin of Ruby is false.
 PenileVirgin of Ruby is true. [got no cock]
 SexuallyExperienced of Ruby is true.
+MainInfection of Ruby is "Crimson Dragon".
 
 The description of Ruby is "[RubyDesc]".
 The conversation of Ruby is { "Growl." }.

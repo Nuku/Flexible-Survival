@@ -44,6 +44,8 @@ Cunt Width of Cynthia is 3. [gets stretched a bit by an alpha husky]
 Breasts of Cynthia is 2. [2 nipples]
 Breast Size of Cynthia is 2. [B cup at the start]
 [Basic Interaction states as of game start]
+TwistedCapacity of Cynthia is false. [can not take oversized members without pain]
+Sterile of Cynthia is true.
 PlayerMet of Cynthia is false.
 PlayerRomanced of Cynthia is false.
 PlayerFriended of Cynthia is false.

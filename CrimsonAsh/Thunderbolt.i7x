@@ -130,6 +130,32 @@ object	name
 Thunderbolt	"Thunderbolt"
 
 Thunderbolt is a man. Thunderbolt is in Thunderbolt's Stable.
+[Physical details as of game start]
+ScaleValue of Thunderbolt is 4. [horse sized]
+SleepRhythm of Thunderbolt is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Thunderbolt is 1. [X cock]
+Cock Length of Thunderbolt is 24. [X Inches]
+Cock Width of Thunderbolt is 8. [Each testicle 1/2 X inch across]
+Testes of Thunderbolt is 2. [X balls]
+Cunts of Thunderbolt is 0. [X pussy]
+Cunt Length of Thunderbolt is 0. [X Cunt]
+Cunt Width of Thunderbolt is 0. [X Cunt]
+Breasts of Thunderbolt is 2. [X nipples]
+Breast Size of Thunderbolt is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Thunderbolt is false. [can not take oversized members without pain]
+Sterile of Thunderbolt is true.
+PlayerMet of Thunderbolt is false.
+PlayerRomanced of Thunderbolt is false.
+PlayerFriended of Thunderbolt is false.
+PlayerControlled of Thunderbolt is false.
+PlayerFucked of Thunderbolt is false.
+OralVirgin of Thunderbolt is true.
+Virgin of Thunderbolt is true.
+AnalVirgin of Thunderbolt is true.
+PenileVirgin of Thunderbolt is false.
+SexuallyExperienced of Thunderbolt is true.
+MainInfection of Thunderbolt is "".
 The description of Thunderbolt is "[ThunderboltDesc]".
 The conversation of Thunderbolt is { "<This is nothing but a placeholder!>" }.
 The scent of Thunderbolt is "     You sniff the feral horse. He smells like cut hay and soap, the sisters must keep him well bathed.".

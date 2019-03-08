@@ -41,6 +41,8 @@ Cunt Width of Cadmea is 5. [Considerable Capacity]
 Breasts of Cadmea is 2. [2 nipples]
 Breast Size of Cadmea is 2. [B cup at the start]
 [Basic Interaction states as of game start]
+TwistedCapacity of Cadmea is true. [can take oversized members without pain]
+Sterile of Cadmea is false.
 PlayerMet of Cadmea is false.
 PlayerRomanced of Cadmea is false.
 PlayerFriended of Cadmea is false.

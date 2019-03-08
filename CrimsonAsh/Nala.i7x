@@ -115,6 +115,32 @@ object	name
 Nala	"Nala"
 
 Nala is a woman. The HP of Nala is usually 0.
+[Physical details as of game start]
+ScaleValue of Nala is 2. [dog sized]
+SleepRhythm of Nala is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Nala is 0. [X cock]
+Cock Length of Nala is 0. [X Inches]
+Cock Width of Nala is 0. [Each testicle 1/2 X inch across]
+Testes of Nala is 0. [X balls]
+Cunts of Nala is 1. [X pussy]
+Cunt Length of Nala is 6. [X Cunt]
+Cunt Width of Nala is 2. [X Cunt]
+Breasts of Nala is 2. [X nipples]
+Breast Size of Nala is 2. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Nala is true. [can take oversized members without pain]
+Sterile of Nala is true.
+PlayerMet of Nala is false.
+PlayerRomanced of Nala is false.
+PlayerFriended of Nala is false.
+PlayerControlled of Nala is false.
+PlayerFucked of Nala is false.
+OralVirgin of Nala is true.
+Virgin of Nala is true.
+AnalVirgin of Nala is true.
+PenileVirgin of Nala is true.
+SexuallyExperienced of Nala is false.
+MainInfection of Nala is "".
 The description of Nala is "[NalaDesc]".
 The conversation of Nala is { "<This is nothing but a placeholder!>" }.
 The scent of Nala is "     Nala smells like roses with a small hint of brimstone oddly enough. She gives you a lewd smile as you inhale her fragrance.";
