@@ -764,8 +764,7 @@ to fsdfvore:
 				LineBreak;
 				if boundsegment is 1 and a random chance of 2 in 3 succeeds, increase boundmod by 1;
 				if boundrecover is true:
-					increase humanity of player by 3;
-					if humanity of player > 100, now humanity of player is 100;
+					SanBoost 3;
 					if boundsegment is 2:
 						say "     You choose this, of all times, to try and recover from your prior captivity, only for the sea dragoness to catch up on you. Maw agape to scoop you up from the water, you're engulfed darkness, the sea dragoness's slick, supple flesh enveloping you once more. Awash in the beast's now-familiar, acrid breath, she pulls you into the air with her maw. Allowing gravity to aid her as she audibly gulps you down, powerful muscles plunging you down her slick depths. Hot tube constricting against you tightly, the monster's elongated gullet bulges visibly with your occupancy.";
 						say "     Once again in the sea dragoness's gullet. You've started all the way back from the beginning!";

@@ -137,8 +137,7 @@ Instead of resolving a Lone Survivor:
 				WaitLineBreak;
 				say "     'So - go with plastic, if you can find it. That's a safer bet,' Brennan tells you, then slowly pulls out a taser from a large pocket in his cargo pants, careful to not threaten you with it. Showing off the device, with its black plastic grip and bright yellow top, he gives you a companionable nod. 'Okay then, I think we should go - this lull in activity can't last forever. Wouldn't want to be picked off out here by a passing wyvern. Best of luck out there, and I hope we'll see each other again. Can't believe how good it felt to just talk to someone.' With a wave, the bearded man starts walking towards the nearest street corner, then dashes to it and vanishes in an alley. As you watch him go, you have to admit that he was right - this little chat really was good for your own sanity as well.";
 				LineBreak;
-				say "[bold type]Your sanity has increased by 15![roman type][line break]";
-				increase humanity of player by 15;
+				SanBoost 15;
 				now BrennanRelationship is 1; [talked to Brennan]
 				now Resolution of Lone Survivor is 1; [talked to Brennan]
 			else if calcnumber is 2: [mug]
@@ -516,7 +515,7 @@ to ThanksAndCherriesEvent:
 	say "     You share a sweet meal with Brennan and accept two more of the large cherries as a reward, then chat a bit with him before the cheerful man bids you farewell and departs.";
 	PlayerEat 15;
 	say "[bold type]Your sanity has increased by 10![roman type][line break]";
-	increase humanity of player by 10;
+	SanBoost 10;
 	say "[bold type]You gain 2 food![roman type][line break]";
 	increase carried of food by 2;
 	now BrennanRelationship is 7; [player got thanks, and cherries]

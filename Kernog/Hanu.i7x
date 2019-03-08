@@ -34,8 +34,7 @@ Instead of going to Monkey House for the first time:
 		say "'That was fun.' Hanu slowly uncrosses his legs and then uses his tail to lift himself up onto his feet. 'I think that I'm going to go and head back for home now. I hope you take well care of yourself[if player is not defaultnamed], [name of player][end if].' And with that Hanu springs up over your head up onto the concrete wall that divides the zoo from the outside world, turns to wave at you and then disappears out of sight. Not sure what that was about you mildly wonder who that crazy monkey guy was.";
 		decrease libido of player by 10;
 		if libido of player < 0, now libido of player is 0;
-		increase humanity of player by 20;
-		if humanity of player > 100, now humanity of player is 100;
+		SanBoost 20;
 		Increase maxHP of player by 5;
 		Increase score by 5;
 		now Monkey Duel is active;
@@ -55,8 +54,7 @@ instead of conversing Hanu:
 			say "     'That was fun.' Hanu slowly uncrosses his legs and then uses his tail to lift himself up onto his feet. 'I think that I'm going to go and head back for home now. I hope you take well care of yourself[if player is not defaultnamed], [name of player][end if].' And with that, Hanu springs up over your head up onto the concrete wall that divides the zoo from the outside world, turns to wave at you, and then disappears out of sight. Not sure what that was about, you idly wonder who that crazy monkey guy was.";
 			decrease libido of player by 10;
 			if libido of player < 0, now libido of player is 0;
-			increase humanity of player by 20;
-			if humanity of player > 100, now humanity of player is 100;
+			SanBoost 20;
 			Increase maxHP of player by 5;
 			Increase score by 5;
 			now Monkey Duel is active;

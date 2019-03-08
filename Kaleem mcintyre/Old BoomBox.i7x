@@ -189,8 +189,7 @@ To say jazzfriends:
 			say "     Elijah seems to enjoy the smooth melody playing on the boombox and soon begins to hum a tune that is unfamiliar to you. In fact, as you listen a little more closely, Elijah's humming almost sounds... otherworldly.";
 	if Alexandra is in the library:
 		say "     Coming in to investigate the noise, Alexandra pokes her head inside and stands at the door, keeping an eye on the library in case of trouble while she listens. She sticks around, listening to the alternatively soothing and bombastic jazz coming from the boombox as she becomes lost in thought.";
-	increase humanity of player by 4;
-	if humanity of player > 100, now humanity of player is 100;
+	SanBoost 4;
 
 to say tangofriends:
 	if Colleen is in the bunker:
@@ -210,8 +209,7 @@ to say tangofriends:
 		say "     Candy seems to enjoy the tango music and soon begins to bounce around the bunker like a rubber ball, despite the melody not having the right rhythm for such energetic movements. This, however, does not stop Candy from doing as he wishes, especially when you join in with him, though more for trying to calm him down than anything else.";
 	if Alexandra is booked:
 		say "     Coming in to investigate the noise, Alexandra pokes her head inside, growls softly to herself and heads back out, clearly uninterested in what's playing.";
-	increase humanity of player by 4;
-	if humanity of player > 100, now humanity of player is 100;
+	SanBoost 4;
 	increase libido of player by 2;
 	if libido of player > 100, now libido of player is 100;
 
@@ -250,8 +248,7 @@ to say R&Bfriends:
 	if Alexandra is booked:
 		say "     Coming in to investigate the noise, Alexandra pokes her head inside and stands at the door, keeping an eye on the library in case of trouble while she listens. She sticks around, listening to the music for a time. When one song takes on a more mournful tone, she seems to get sad, and then - having gotten sad - she gets angry and storms out.";
 		now lastfuck of Alexandra is turns + 8;
-	increase humanity of player by 4;
-	if humanity of player > 100, now humanity of player is 100;
+	SanBoost 4;
 
 to say RockandRollfriends:
 	if Sarah is in the bunker:
@@ -279,8 +276,7 @@ to say RockandRollfriends:
 		say "     Nothing about his movements can be considered normal, but at the same time that gives the other an appearance of true freedom as he lets his effeminate body just roll around as it wishes. You chuckle some as the raccoon comes over to you to circle you twice before bumping up into you and then moving off again. Truly a carefree spirit if there ever was one to be found, you think silently before going back to your own dancing.";
 	if house cat is tamed:
 		say "     The little calico house cat you found earlier rolls around the music box before purring and shaking its head somewhat wildly while yowling happily. You chuckle at this as you wonder if her former owner listened to this type of music a lot.";
-	increase humanity of player by 4;
-	if humanity of player > 100, now humanity of player is 100;
+	SanBoost 4;
 	increase libido of player by 15;
 	if libido of player > 100, now libido of player is 100;
 
@@ -328,8 +324,7 @@ to say Oceanfriends:
 	if Alexandra is booked:
 		say "     Noticing [if fang is booked]that Fang's not at the door[else]the lack of activity[end if], Alexandra pokes her head inside to see if anything's up. Hearing the soft music and beach sounds, she rolls her eyes with a huff and heads back out to stand watch.";
 		now lastfuck of Alexandra is lastfuck of Alexandra - 2;
-	increase humanity of player by 4;
-	if humanity of player > 100, now humanity of player is 100;
+	SanBoost 4;
 	decrease libido of player by 18;
 	if libido of player < 0, now libido of player is 0;
 

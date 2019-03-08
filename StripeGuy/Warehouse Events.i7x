@@ -19,7 +19,7 @@ Instead of Resolving a dock team:
 	if dice + bonus > 14:
 		say "     In the midst of your musing, you hear a sudden sound coming from your right, and turn to see [one of]a rope fraying, about to snap[or]a cotter pin nearly fit to fly from its hole[or]a stack of crates, precariously about to fall[at random]! You call to the crew of rough longshoremen as you leap to the source of trouble, stopping disaster just in time. Your muscles ache at the sudden exertion, but in a few heartbeats hot paws clasp over your own and the rest of the crew arrive to help shoulder the load. After things are sorted, you gracefully accept the thanks of the crew and soak in the warmth of social acceptance.";
 		increase score by 5;
-		increase humanity of player by 5;
+		SanBoost 5;
 		now Resolution of Dock Team is 1; [Saved goods]
 	else:
 		say "     In the midst of your musing, you hear a groaning sound coming from your right, and turn to see [one of]a load-bearing rope snap[or]a cotter pin sailing from its failure point[or]a stack of crates, beginning to tumble[at random]! You call out in alarm and rush over as fast as you can, but you are too weak, too slow. The precious cargo and moorings sail from your hands, ripping flesh as they rapidly exit. Time freezes in mid-disaster, eyes of the crew split between you and the impending chaos. In the following explosions of wood and goods, you are lucky to escape in the confusion with only mild injuries as a mark of your shame.";

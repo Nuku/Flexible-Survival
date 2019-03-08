@@ -243,8 +243,7 @@ to sierrabind:
 						else if a random chance of 2 in 3 succeeds:
 							infect;
 						now bsextimer is 0;
-						increase humanity of player by 3;
-						if humanity of player > 100, now humanity of player is 100;
+						SanBoost 3;
 					else:
 						if bodyname of player is "Sierrasaur" and player is pure:
 							if a random chance of 1 in 5 succeeds:
@@ -252,8 +251,7 @@ to sierrabind:
 						else if a random chance of 2 in 3 succeeds:
 							infect;
 						increase lustatt by 5 + (lustadjust * 2);
-						increase humanity of player by 3;
-						if humanity of player > 100, now humanity of player is 100;
+						SanBoost 3;
 					now boundrecover is false;
 				else:
 					LineBreak;

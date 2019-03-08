@@ -122,7 +122,7 @@ to say losetomagicdrake:
 					say "     While cumming, the draconic sorceress grips your ass all the tighter and kneads at your jiggly bottom. Chanting softly, words obscured by the gurgling blasts of all the cum filling you, she sends magical power through her hands that sends more pleasure through you. With it comes a greater longing to be with the dragoness who's remade you to be so beautiful and brought you amazing carnal delights. When she's done both her climax and her spell, she [if scalevalue of player < 3]peels[else]eases[end if] you off her softening penis and leaves you there, bloated with her semen and leaking a steady flow of it from your gaping back door.";
 					decrease humanity of player by a random number between 2 and 4;
 					increase libido of player by a random number from 2 to 4;
-				if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+				if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 				if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 				if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
 				if "Cold Fish" is listed in feats of player, decrease libido of player by 1;
@@ -625,7 +625,7 @@ to say mdstaff_overgrown:
 		infect "Magic Drake";
 	decrease humanity of player by a random number between 2 and 4;
 	increase libido of player by a random number from 2 to 4;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+	if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 	if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
 	if "Cold Fish" is listed in feats of player, decrease libido of player by 1;

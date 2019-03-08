@@ -307,7 +307,33 @@ Table of GameCharacterIDs (continued)
 object	name
 Jennifer	"Jennifer"
 
-Jennifer is a woman. Jennifer is in Wolfman Lair. The HP of Jennifer is normally 0.
+Jennifer is a woman.
+ScaleValue of Jennifer is 3.
+Cocks of Jennifer is 0.
+Cock Length of Jennifer is 0.
+Cock Width of Jennifer is 0.
+Testes of Jennifer is 0.
+Cunts of Jennifer is 1.
+Cunt Length of Jennifer is 16.
+Cunt Width of Jennifer is 8.
+Breasts of Jennifer is 2. [2 nipples]
+Breast Size of Jennifer is 3.
+TwistedCapacity of Jennifer is false.
+Sterile of Jennifer is false.
+[Basic Interaction states as of game start]
+PlayerMet of Jennifer is false.
+PlayerRomanced of Jennifer is false.
+PlayerFriended of Jennifer is false.
+PlayerControlled of Jennifer is false.
+PlayerFucked of Jennifer is false.
+OralVirgin of Jennifer is false.
+Virgin of Jennifer is false.
+AnalVirgin of Jennifer is true.
+PenileVirgin of Jennifer is true.
+SexuallyExperienced of Jennifer is true.
+MainInfection of Jennifer is "Human".
+
+Jennifer is in Wolfman Lair. The HP of Jennifer is normally 0.
 The description of Jennifer is "[Jenniferdesc]".
 The conversation of Jennifer is { "Grrr!" }.
 Jenniferfucked is a number that varies. Jenniferfucked is normally 0.
@@ -768,7 +794,33 @@ Table of GameCharacterIDs (continued)
 object	name
 Septus	"Septus"
 
-Septus is a man. Septus is in Wolfman Lair. The HP of Septus is normally 100.
+Septus is a man.
+ScaleValue of Septus is 3.
+Cocks of Septus is 1.
+Cock Length of Septus is 16.
+Cock Width of Septus is 8.
+Testes of Septus is 2.
+Cunts of Septus is 0.
+Cunt Length of Septus is 0.
+Cunt Width of Septus is 0.
+Breasts of Septus is 2. [2 nipples]
+Breast Size of Septus is 0.
+TwistedCapacity of Septus is false.
+Sterile of Septus is false.
+[Basic Interaction states as of game start]
+PlayerMet of Septus is false.
+PlayerRomanced of Septus is false.
+PlayerFriended of Septus is false.
+PlayerControlled of Septus is false.
+PlayerFucked of Septus is false.
+OralVirgin of Septus is false.
+Virgin of Septus is true.
+AnalVirgin of Septus is false.
+PenileVirgin of Septus is false.
+SexuallyExperienced of Septus is true.
+MainInfection of Septus is "Football Wolfman".
+
+Septus is in Wolfman Lair. The HP of Septus is normally 100.
 The description of Septus is "[Septusdesc]".
 The conversation of Septus is { "Grrr!" }.
 The icon of Septus is Figure of Septus_icon.

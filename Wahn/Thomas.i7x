@@ -39,6 +39,12 @@ Version 1 of Thomas by Wahn begins here.
 [   3: trap has been dug                                             ]
 [   4: Sandy saved                                                   ]
 
+an everyturn rule: [fix for old saves]
+	if HP of Thomas > 0 and HP of Thomas < 52 and Cunts of Thomas is 0: [herm Thomas, but doesn't have a cunt]
+		now Cunts of Thomas is 1;
+		now Cunt Length of Thomas is 28;
+		now Cunt Width of Thomas is 15;
+
 Section 1 - Meeting Event
 
 Table of GameEventIDs (continued)
@@ -155,7 +161,31 @@ Table of GameCharacterIDs (continued)
 object	name
 Thomas	"Thomas"
 
-Thomas is a man. The HP of Thomas is normally 0.
+Thomas is a man.
+ScaleValue of Thomas is 4.
+Cocks of Thomas is 1.
+Cock Length of Thomas is 28.
+Cock Width of Thomas is 15.
+Testes of Thomas is 2.
+Cunts of Thomas is 0.
+Cunt Length of Thomas is 0.
+Cunt Width of Thomas is 0.
+Breasts of Thomas is 2. [2 nipples]
+Breast Size of Thomas is 0.
+TwistedCapacity of Thomas is false.
+Sterile of Thomas is false.
+[Basic Interaction states as of game start]
+PlayerMet of Thomas is false.
+PlayerRomanced of Thomas is false.
+PlayerFriended of Thomas is false.
+PlayerControlled of Thomas is false.
+PlayerFucked of Thomas is false.
+OralVirgin of Thomas is false.
+Virgin of Thomas is true.
+AnalVirgin of Thomas is false.
+PenileVirgin of Thomas is false.
+SexuallyExperienced of Thomas is true.
+MainInfection of Thomas is "Centaur Stallion".
 The description of Thomas is "[ThomasDesc]".
 The conversation of Thomas is { "Mew!" }.
 lastThomasTalk is a number that varies. lastThomasTalk is usually 555.		[turn-counter for talking delays (humanity restoration)]
@@ -316,7 +346,7 @@ to say ThomasTalkMenu:
 to say ThomasTalk1:
 	say "     You talk a while with Thomas about your lives before the nanite plague, creatures you've seen in the city and daily survival. It's good to be able to talk to another person and get some things off your chest. In the end, you somehow feel more sane and human than before.";
 	if lastThomasTalk - turns > 8:
-		increase humanity of player by 5;
+		SanBoost 5;
 		now lastThomasTalk is turns;
 
 to say ThomasTalk2:

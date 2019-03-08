@@ -24,8 +24,7 @@ Instead of resolving a Defenseless old lady:
 		say "[bold type]Your strength has increased by 1![roman type][line break]";
 		increase strength of player by 1;
 		increase capacity of player by 5;
-		increase humanity of player by 25;
-		if humanity of player > 100, now humanity of player is 100;
+		SanBoost 25;
 		increase score by 10;
 	else:
 		say "A few punches and kicks and - interestingly enough - a dozen or so licks later you find yourself lying defeated onto the ground. The punches and kicks start turning to squeezes and gropes as your resistance starts to wane and the creatures pin you down. Your strength having failed you at one of the most integral of times in life all you can do is open your mouth to try and tell the old woman to run for it, but a stern look on the other human's face has you shutting your yap before you can even utter a sound. Seeing that some of the mutants are now moving away from you towards the bespectacled woman you can only watch with wide eyes as she pulls out an automatic rifle from somewhere on her person and then lets the creature's around you have it but good! Screams, yowls, hisses, cries and shouts of pain rent the air around you only to be followed by blood, guts and other assorted fluids flying throughout the air as the little old woman with the heavy piece of artillery lays waste to all of the miscreants surrounding you. You duck your head down into your arms just as you see an arm go flying off to the side. This... this may a touch too violent for you to take as you start to feel nausea rolling throughout your stomach. It's only when you can no longer hear the sounds of bullets being fired that you take a peek up to have a look around. And quickly you wish you hadn't. Strewn around like leaves after a storm you see faces and legs and other limbs scattered around you in a grisly display of murder and violence.";

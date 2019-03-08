@@ -68,8 +68,7 @@ Instead of resolving Disorganization:
 				WaitLineBreak;
 				say "     The husky herm soon gets onto hir hands and knees and then crawls over to the still unconscious Alpha Husky with the inflated bump standing erect on its head. 'If you see any of the other guys,' the soldier, whose name you hadn't been told, says all of a sudden. 'Tell them that I died trying to get a piece of these assholes. Hehe, it would be partially true anyway.' You watch as the shemale reaches out for the prone Alpha Husky and then lifts the other's legs up. Not having to guess what's going to happen next you are up and moving just in time to hear the Alpha Husky come awake as his former bitch spears him deeper with hir cock. A silent tear falls from your eye as you let your head hang down low. You may not be fighting a war likes these soldiers, but one thing you are sure of... this is hell.";
 				increase score by 10;
-				increase humanity of player by 10;
-				if humanity of player > 100, now humanity of player is 100;
+				SanBoost 10;
 				now drs is 2;
 			else:
 				say "     [one of]'No! I'm not going to be a monster!' [or]'Are you trying to be funny?' [or]'I'm literally turning into a bitch here, guy! There's nothing worse that can happen to me than this!' [or]'Why are you trying so hard to save a complete stranger?!' [at random]the dog soldier growls, trying to line up the muzzle under his chin. Throwing yourself at him in one, final desperation move, you wrench the gun from his hands, sending it to the ground as it fires off a round. The increasingly bitch-like man punches you square in the jaw, knocking you to the ground. 'I'd saved that last bullet for myself, asshole,' he howls. Dropping to all fours, the increasingly canine soldier runs off into the city, soon to succumb to the infection afflicting his increasingly feminine body.";

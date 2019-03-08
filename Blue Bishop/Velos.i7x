@@ -65,8 +65,7 @@ Instead of resolving Strange Serpent:
 					now insectlarva is false;
 					now larvacounter is 0;
 					now larvaegg is 0;
-					increase humanity of player by 10;
-					if humanity of player > 100, now humanity of player is 100;
+					SanBoost 10;
 					now libido of player is libido of player / 2;
 					now preghijack is false;
 					repeat with y running from 1 to number of filled rows in Table of Random Critters:

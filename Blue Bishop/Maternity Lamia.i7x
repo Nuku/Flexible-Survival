@@ -305,7 +305,7 @@ this is the lamiaboob rule:	[***]
 		if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 0 and 2;
 		if "Horny Bastard" is listed in feats of player, increase libido of player by a random number between 0 and 2;
 		decrease humanity of player by a random number between 2 and 5;
-		if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+		if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 		say "Not realizing the danger, you suckle from the lamia's milky nipple. You drink down her creamy milk while she cuddles you in her tender embrace. The nurse coos softly and caresses your head, encouraging you to keep going[if player is not neuter]. The heat in your loins grows and you grind eagerly against the wet touch of her leaking pussies[else]. You grind eagerly against the wet touch of her leaking pussies[end if] as you suckle. Your thoughts are further muddled and your arousal climbs higher as the infected milk seeks to corrupt you[if matlamiacaught is not 2]. You suffer [special-style-2][dam][roman type] damage as your resistance wanes further and your arousal climbs[end if].";
 		LineBreak;

@@ -1381,7 +1381,7 @@ Instead of fucking the Elijah:
 			else if lastfuck of Elijah is not 400:
 				say "     Your moral compass cheers as you step back from the precipice of damnation, grounding your mind a bit more on the human level.";
 				now lastfuck of Elijah is 400; [using to mark resisting this impulse]
-				if humanity of player < 95, increase humanity of player by 5;
+				if humanity of player < 95, SanBoost 5;
 			else:
 				say "     You once again resist the dark impulse and decide you should focus more on helping him.";
 	else if (HP of Elijah is 3): [de-virgin-ify him nice and slowly]

@@ -182,7 +182,14 @@ Cunt Length of Spike is 0.
 Cunt Width of Spike is 0.
 Breasts of Spike is 2.
 Breast Size of Spike is 0.
+TwistedCapacity of Spike is false.
+Sterile of Spike is false.
 The description of Spike is "[SpikeDesc]".
+PlayerMet of Spike is false.
+PlayerRomanced of Spike is false.
+PlayerFriended of Spike is false.
+PlayerControlled of Spike is false.
+PlayerFucked of Spike is false.
 OralVirgin of Spike is true.
 Virgin of Spike is true.
 AnalVirgin of Spike is true.

@@ -211,7 +211,7 @@ to say prairiedogfight:
 		say "     Defeating the prairie dogs, you manage to drive them off. Luckily, you were able to deal with them in time and the soldier still seems to be human. He thanks you profusely for your help and gathers up his gear. He searches through his pack and, needing the medkit for his own injuries, passes you his rations, saying he'll have to head back to base to report in on this new hazard in the area. You wish him well and head your separate ways, feeling much better about yourself.";
 		increase carried of food by 1;
 		increase score by 25;
-		increase humanity of player by 5;
+		SanBoost 5;
 		increase morale of player by 3;
 		now Resolution of Pit Trap is 4; [Fought Prairie Dogs, Won]
 

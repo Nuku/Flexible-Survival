@@ -87,7 +87,7 @@ an everyturn rule:
 						say "     After enduring the squirming of the larva inside you and the strange, twisted urges you've been feeling because of it, something finally shifts inside you. You make your way somewhere private and groan as you push, expelling [if larvalaid > 2]the unfertilized egg goo from inside you[else]some thick, slimy goo from inside you[end if]. You feel relieved that you managed to endure the ordeal and can feel the parasite subside for the moment.";
 						now larvacounter is -5;
 						now larvaegg is 0;
-						increase humanity of player by 3;
+						SanBoost 3;
 						decrease libido of player by 5;
 					if larvaexpel is 3:
 						say "     After enduring the squirming of the larva inside you and the strange, twisted urges you've been feeling because of it, you feel a painful jab and an uncomfortable weight in your [if player is female]womb[else]bowels[end if]. Making your way somewhere private, you groan in pain as your body pushes to expel the lump inside you. Finally, you manage to push it out and are surprised to find it not only more [if larvalaid < 2]thick goo[else]egg goo[end if], but the parasite itself. With it dead now after being prevented from fulfilling its life cycle repeatedly, you have managed to push it out, freeing you from its strange, parasitic hold. It is a pale creature, looking much like a bloated, insect larva with several tiny legs and phallic back end from which you suspect it released the [if larvalaid < 2]slimy goo[else]egg slime[end if] into you. While you'd rather have nothing more to do with the creature, you dispose of the larva in case the wasps would be drawn to its scent.";
@@ -96,8 +96,7 @@ an everyturn rule:
 						now mpreghijack is false;
 						now larvacounter is 0;
 						now larvaegg is 0;
-						increase humanity of player by 10;
-						if humanity of player > 100, now humanity of player is 100;
+						SanBoost 10;
 						now libido of player is libido of player / 2;
 						repeat with y running from 1 to number of filled rows in Table of Random Critters:
 							choose row y in Table of Random Critters;

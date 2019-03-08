@@ -348,7 +348,7 @@ When Play begins:
 	now area entry is "Nowhere";       [ Case sensitive. If you go down to the woods today, you're in for a big surprise]
 	now cocks entry is 0;              [ number of cocks if sex is 'Male' or 'Both' ]
 	now cock length entry is 18;
-	now cock width entry is 25;        [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
+	now cock width entry is 15;        [ Size of balls apparently ;) sneaky Nuku (big balls are underrated.)]
 	now breasts entry is 2;            [ Number of nipples. ]
 	now breast size entry is 0;        [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0;   [ Breast size for if Sex="Male", usually zero. ]
@@ -395,7 +395,32 @@ Table of GameCharacterIDs (continued)
 object	name
 Lucifer	"Lucifer"
 
-Lucifer is a man. Lucifer is in Mustang Paddock.
+Lucifer is a man.
+ScaleValue of Lucifer is 4.
+Cocks of Lucifer is 1.
+Cock Length of Lucifer is 18.
+Cock Width of Lucifer is 15.
+Testes of Lucifer is 2.
+Cunts of Lucifer is 0.
+Cunt Length of Lucifer is 0.
+Cunt Width of Lucifer is 0.
+Breasts of Lucifer is 0. [2 nipples]
+Breast Size of Lucifer is 0.
+TwistedCapacity of Lucifer is false.
+Sterile of Lucifer is false.
+[Basic Interaction states as of game start]
+PlayerMet of Lucifer is false.
+PlayerRomanced of Lucifer is false.
+PlayerFriended of Lucifer is false.
+PlayerControlled of Lucifer is false.
+PlayerFucked of Lucifer is false.
+OralVirgin of Lucifer is false.
+Virgin of Lucifer is true.
+AnalVirgin of Lucifer is false.
+PenileVirgin of Lucifer is false.
+SexuallyExperienced of Lucifer is true.
+MainInfection of Lucifer is "Feral Mustang".
+Lucifer is in Mustang Paddock.
 The description of Lucifer is "[Luciferdesc]".
 The conversation of Lucifer is { "Mew!" }.
 

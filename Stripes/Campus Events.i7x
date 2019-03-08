@@ -160,8 +160,7 @@ Instead of resolving a Anime Club:
 				increase carried of food by 1;
 				increase carried of water bottle by 1;
 				increase score by 10;
-				increase humanity of player by 5;
-				if humanity of player > 100, now humanity of player is 100;
+				SanBoost 5;
 				now Resolution of Anime Club is 1;	[Saved woman from Anime Babe and Hentai Fan]
 			else if fightoutcome >= 20 and fightoutcome <= 29:
 				say "     The hentai boy pushes you to sit down beside the captured girl, groping and fondling you while you watch the video. A part of you knows you shouldn't, but you're too weary and aroused from fighting to resist any longer. As you watch, you can almost feel the tentacles on the screen grabbing and touching you just like in the animation. It takes you a few moments to realize that the tentacled mutant behind you is imitating the events on screen, adding to your immersion. The fallen anime babe, recovered from her fight, moves over to snuggle with you, showing there's no hard feelings now that you've settled down to watch some hentai with them. You moan in pleasure, your excitement building.";
@@ -303,17 +302,13 @@ to AdminIntro:
 			say "     With a grin on your face, you wish the two of them well, then stand up. After putting your clothes in order, you then walk down the corridor, leaving the advisers offices of the Tenvale College behind for now. While the place seemed so dreadfully normal and regular before, you now know enough to interpret some low sounds that are audible in the building. That banging from somewhere above surely isn't connected to hanging a picture, and the slurp behind one of the doors you pass will likely be someone giving a blow-job.";
 			WaitLineBreak;
 			say "     So in the end, this place isn't an exception to the explosion of sexual needs - it's just... a possibility how society might adjust and flourish in a new shape. If all of these workers and students are here, doing their jobs or thinking about their education, they clearly are the best, brightest and most dedicated of the lot - if not them, who else could end up transformed, yet still well-balanced and sane? Finding out the details of this place gives you some hope for the future, and somehow you feel your humanity confirmed by the knowledge that you're not the only one who can learn to live with the urges.";
-			increase humanity of player by 10;
-			if humanity of player > 100:
-				now humanity of player is 100;
+			SanBoost 10;
 			now Resolution of Course Advice is 1;	[Watched Dana and Kyle make love]
 		else:
 			LineBreak;
 			say "     With a grin on your face, you stand up and walk down the corridor, leaving the advisers offices of the Tenvale College behind for now. While the place seemed so dreadfully normal and regular before, you now know enough to interpret some low sounds that are audible in the building. That banging from somewhere above surely isn't connected to hanging a picture, and the slurp behind one of the doors you pass will likely be someone giving a blow-job.";
 			say "     So in the end, this place isn't an exception to the explosion of sexual needs - it's just... a possibility how society might adjust and flourish in a new shape. If all of these workers and students are here, doing their jobs or thinking about their education, they clearly are the best, brightest and most dedicated of the lot - if not them, who else could end up transformed, yet still well-balanced and sane? Finding out the details of this place gives you some hope for the future, and somehow you feel your humanity confirmed by the knowledge that you're not the only one who can learn to live with the urges.";
-			increase humanity of player by 10;
-			if humanity of player > 100:
-				now humanity of player is 100;
+			SanBoost 10;
 			now Resolution of Course Advice is 2;	[Let Dana and Kyle make love in peace]
 		move player to College Administration Building;
 	else:

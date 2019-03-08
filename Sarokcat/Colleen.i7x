@@ -305,7 +305,7 @@ carry out ColleenSpraying:
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
 					now SleepRhythm of player is 0;
-					increase humanity of player by 20;
+					SanBoost 20;
 					increase ColleenSpray by 1;
 				else:
 					say "     'See isn't it just better to be like this!' Colleen says as she wags her tail happily at you. 'I'm so glad you agree with me!'";
@@ -324,7 +324,7 @@ carry out ColleenSpraying:
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
 					now SleepRhythm of player is 0;
-					increase humanity of player by 20;
+					SanBoost 20;
 					increase ColleenSpray by 1;
 					stop the action;
 				else:
@@ -347,7 +347,7 @@ carry out ColleenSpraying:
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
 					now SleepRhythm of player is 0;
-					increase humanity of player by 20;
+					SanBoost 20;
 					increase ColleenSpray by 1;
 			else:
 				say "     'Well ok, the spray bottle is full so it should still work on you. Want me to spray you now?'";
@@ -363,7 +363,7 @@ carry out ColleenSpraying:
 					now bodydesc of player is "unchanged";
 					now bodytype of player is "human";
 					now SleepRhythm of player is 0;
-					increase humanity of player by 20;
+					SanBoost 20;
 					increase ColleenSpray by 1;
 				else:
 					say "     'Okay, I'll hold on to it some more then,' Colleen tells you and tugs the small spray bottle away.";
@@ -379,7 +379,7 @@ carry out ColleenSpraying:
 			now bodydesc of player is "unchanged";
 			now bodytype of player is "human";
 			now SleepRhythm of player is 0;
-			increase humanity of player by 20;
+			SanBoost 20;
 			increase ColleenSpray by 1;
 	else if ColleenSpray is 1:
 		say "     'Ok, let's try that again! I only have about enough for one more dose after this,' Colleen warns you as she once again sprays you with the foul smelling liquid again, the tingling feeling spreading through you again, although strangely it seems to be much less strong this time. Perhaps the chemicals are losing their effectiveness?";
@@ -389,11 +389,11 @@ carry out ColleenSpraying:
 		now bodydesc of player is "unchanged";
 		now bodytype of player is "human";
 		now SleepRhythm of player is 0;
-		increase humanity of player by 20;
+		SanBoost 20;
 		increase ColleenSpray by 1;
 	else if ColleenSpray is 2:
 		say "     'Well, alright. It didn't seem to help as much last time though, and there isn't much left either,' Colleen says as she once again sprays that strange liquid on you, making your body tingle slightly. Although you can't seem to notice any real changes, you still somehow feel slightly more human afterwards.";
-		increase humanity of player by 10;
+		SanBoost 10;
 		increase ColleenSpray by 1;
 	else if ColleenSpray is 99 and Sarah is bunkered:
 		say "     'Sorry, but I don't have any left. I tried to use my spray to change back after these husky features started to appear, but it never seemed to last. I ended up using it all to try and go back to normal, but it still came back after a little while. This means we probably shouldn't have any more fun, even as great as it was. If we go at it again, I might end up another slutty husky bitch.' She tries to stay calm, but she's clearly upset that she's going to be stuck like this. Though her tail wags happily at the mention of becoming a bitch, so it seems her body's interested even if her mind's not accepted it yet.";

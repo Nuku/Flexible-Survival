@@ -270,7 +270,7 @@ This is the FelixTalk rule:
 to say FelixTalk1:
 	say "     You talk a while with Felix and tell him how things were before the nanite plague, talk about creatures you've seen in the city and everyday survival. It's good to be able to talk to another person and get some things off your chest. In the end, you somehow feel more sane and human than before.";
 	if lastFelixTalk - turns > 8:
-		increase humanity of player by 5;
+		SanBoost 5;
 		now lastFelixTalk is turns;
 
 to say FelixTalk2:
@@ -544,7 +544,7 @@ This is the AndreTalk rule:
 to say AndreTalk1:
 	say "     You talk a while with Andre about how things were for the two of you before the nanite plague, talk about creatures you've seen in the city and everyday survival. It's good to be able to talk to another person and get some things off your chest. In the end, you somehow feel more sane and human than before.";
 	if lastAndreTalk - turns > 8:
-		increase humanity of player by 5;
+		SanBoost 5;
 		now lastAndreTalk is turns;
 
 to say AndreTalk5:

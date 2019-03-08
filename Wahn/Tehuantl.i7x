@@ -5,6 +5,18 @@ LastTehuantlCarlScene is a number that varies. LastTehuantlCarlScene is usually 
 TehuantlKorvinRelationship is a number that varies.
 LastTehuantlKorvinScene is a number that varies. LastTehuantlKorvinScene is usually 10000.
 
+an everyturn rule: [fix for old saves]
+	if HP of Tehuantl > 49 and HP of Tehuantl < 255 and Cocks of Tehuantl is 0: [male jaguar pet, but doesn't have a cock]
+		now Cocks of Tehuantl is 1;
+		now Cock Length of Tehuantl is 12;
+		now Cock Width of Tehuantl is 5;
+		now Testes of Tehuantl is 2;
+		now Cunts of Tehuantl is 0;
+		now Cunt Length of Tehuantl is 0;
+		now Cunt Width of Tehuantl is 0;
+		now Breasts of Tehuantl is 2; [2 nipples]
+		now Breast Size of Tehuantl is 0;
+
 Section 1 - NPC
 
 Table of GameCharacterIDs (continued)
@@ -12,6 +24,30 @@ object	name
 Tehuantl	"Tehuantl"
 
 Tehuantl is a person.
+ScaleValue of Tehuantl is 3. [human sized]
+Cocks of Tehuantl is 0.
+Cock Length of Tehuantl is 0.
+Cock Width of Tehuantl is 0.
+Testes of Tehuantl is 0.
+Cunts of Tehuantl is 1.
+Cunt Length of Tehuantl is 12.
+Cunt Width of Tehuantl is 5.
+Breasts of Tehuantl is 2. [2 nipples]
+Breast Size of Tehuantl is 3.
+TwistedCapacity of Tehuantl is false.
+Sterile of Tehuantl is false.
+[Basic Interaction states as of game start]
+PlayerMet of Tehuantl is true.
+PlayerRomanced of Tehuantl is false.
+PlayerFriended of Tehuantl is false.
+PlayerControlled of Tehuantl is true.
+PlayerFucked of Tehuantl is true.
+OralVirgin of Tehuantl is false.
+Virgin of Tehuantl is false.
+AnalVirgin of Tehuantl is false.
+PenileVirgin of Tehuantl is false.
+SexuallyExperienced of Tehuantl is true.
+MainInfection of Tehuantl is "Jaguar Warrior".
 The description of Tehuantl is "[TehuantlDesc]".
 The conversation of Tehuantl is { "Me-ow!" }.
 the fuckscene of Tehuantl is "[TehuantlSex]".
