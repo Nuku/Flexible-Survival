@@ -39,8 +39,33 @@ object	name
 Erin	"Erin"
 
 Erin is a person.
+[Physical details as of game start]
+ScaleValue of Erin is 3. [human sized]
+SleepRhythm of Erin is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Erin is 1. [X cock]
+Cock Length of Erin is 6. [X Inches]
+Cock Width of Erin is 7.
+Testes of Erin is 2. [X balls]
+Cunts of Erin is 0. [X pussy]
+Cunt Length of Erin is 0. [X Cunt]
+Cunt Width of Erin is 0. [X Cunt]
+Breasts of Erin is 2. [X nipples]
+Breast Size of Erin is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Erin is false. [can not take oversized members without pain]
+Sterile of Erin is false.
+PlayerMet of Erin is false.
+PlayerRomanced of Erin is false.
+PlayerFriended of Erin is false.
+PlayerControlled of Erin is false.
+PlayerFucked of Erin is false.
+OralVirgin of Erin is false.
+Virgin of Erin is true.
+AnalVirgin of Erin is true.
+PenileVirgin of Erin is false.
+SexuallyExperienced of Erin is true.
+MainInfection of Erin is "Slut Rat".
 the description of Erin is "[ErinDesc]".
-The MainInfection of Erin is "Slut Rat".
 
 to say ErinDesc:
 	project the figure of Erin_face_icon;
@@ -144,7 +169,7 @@ to say ErinFuckTop:
 	say "     You quickly apply the remaining lube on your fingers onto your still hard cock, and stroke your [cockname of player] member[smn] a little. Once you deem yourself ready, you press yourself against Erin's rump for a moment. [if cocks of player > 1]You let your [cocks of player] cocks grind against the plump behind, tainting the clear fur with your pre, before grabbing one and lining it with the rat's hole[else]You let your [cock size desc of player] grind against the plump behind, tainting the clear fur with your pre, before grabbing it and lining it with the rat's hole[end if]. You push, slowly. [first time]Erin whines from having his sphincter stretched for the first time. You go in progressively, pushing in then pulling out, until the male is relaxed enough to let your glans slip past his anal ring without protest. [only]Erin lets out a long moan as you slowly dig in his hole and bottom out[if isTwinHere is 1]. Violet startles you as well, letting out a loud shrill as she came from watching her brother being taken. 'S-Sorry,' she pants. 'It-it was too much. So hot.' 'F-fuck, sis...' her twin groans, visibly excited as well[end if].";
 	say "     You pump Erin nice and slow, reveling into the calm, peaceful mood of the moment. [if isTwinHere is 1]Even Violet's badly covered moans, as she tries to rile herself for another climax, have eventually become part of the environment, and they do not bother you anymore. They do excite Erin terribly, however. [end if]As the teenager rat is now used to your [cock size desc of player] [cockname of player] cock, you pick up the rhythm, and the slaps of your pelvis against Erin's butt joins the concerto of moans coming from you and [if isTwinHere is 1]both twins[else]your partner[end if].";
 	WaitLineBreak;
-	say "     Erin suddenly grunts. 'Oh. Oooh. [if player is not defaultnamed][name of player], [end if]I'm... I'm cumming. Aaah!' His member, that he did not stop to stroke for a single moment since you started, spurts several ropes of semen on the already cum-stained cot. The intense pressure of the tight rodent around your member have you climax in turn, and you throw your own load inside Erin[if cocks of player > 1], his thighs and the cot below[end if][if isTwinHere is 1]. Violet comes for the second time, this time from four of her fingers furiously mashing inside her pussy, while the other frantically flicks her pleasure button, and an impressive gash of fem-cum squirts out from her lower lips[end if].";
+	say "     Erin suddenly grunts. 'Oh. Oooh. [if player is not defaultnamed][name of player], [end if]I'm... I'm cumming. Aaah!' His member, that he did not stop to stroke for a single moment since you started, spurts several ropes of semen on the already cum-stained cot. The intense pressure of the tight rodent around your member have you climax in turn, and you throw your own load inside Erin[if cocks of player > 1], his thighs and the cot below[end if][if isTwinHere is 1]. Violet comes for the second time, this time from four of her fingers furiously mashing inside her pussy, while the other frantically flicks her pleasure button, and an impressive gush of fem-cum squirts out from her lower lips[end if].";
 	say "     You pant, observing the happy mess that you made. Erin reaches towards a cardbox and pulls out a box of kitchen papers to wipe the fluids and prevent the cot from getting (too) dirty, with your help[if isTwinHere is 1] and his sister's[end if]. 'This was awesome,' Erin says, between two pants. 'If you want to do it again, you-I-er, you tell me. I need a little rest, though.'";
 	now isTwinHere is 0;
 
@@ -223,8 +248,33 @@ object	name
 Violet	"Violet"
 
 Violet is a person.
+[Physical details as of game start]
+ScaleValue of Violet is 3. [human sized]
+SleepRhythm of Violet is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Violet is 0. [X cock]
+Cock Length of Violet is 0. [X Inches]
+Cock Width of Violet is 0.
+Testes of Violet is 0. [X balls]
+Cunts of Violet is 1. [X pussy]
+Cunt Length of Violet is 8. [X Cunt]
+Cunt Width of Violet is 4. [X Cunt]
+Breasts of Violet is 2. [X nipples]
+Breast Size of Violet is 2. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Violet is false. [can not take oversized members without pain]
+Sterile of Violet is false.
+PlayerMet of Violet is false.
+PlayerRomanced of Violet is false.
+PlayerFriended of Violet is false.
+PlayerControlled of Violet is false.
+PlayerFucked of Violet is false.
+OralVirgin of Violet is false.
+Virgin of Violet is false.
+AnalVirgin of Violet is true.
+PenileVirgin of Violet is true.
+SexuallyExperienced of Violet is true.
+MainInfection of Violet is "Slut Rat".
 the description of Violet is "[VioletDesc]".
-The MainInfection of Violet is "Slut Rat".
 
 to say VioletDesc:
 	project the figure of Violet_face_icon;

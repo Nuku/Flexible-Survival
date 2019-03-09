@@ -204,7 +204,7 @@ to say LuxTalk2:
 	ScaleValue of Umbra is 3. [human sized]
 	Cocks of Umbra is 1. [One cock]
 	Cock Length of Umbra is 10. [10 inches]
-	Cock Width of Umbra is 4. [2 inch ball size]
+	Cock Width of Umbra is 8.
 	Testes of Umbra is 2. [no balls]
 	Cunts of Umbra is 0. [No pussy]
 	Cunt Length of Umbra is 0. [No pussy]

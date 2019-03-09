@@ -175,7 +175,7 @@ ScaleValue of Vent is 3. [human sized]
 SleepRhythm of Vent is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Vent is 1. [X cock]
 Cock Length of Vent is 7. [7 Inches]
-Cock Width of Vent is 3. [Each testicle 1,5 inch across]
+Cock Width of Vent is 4.
 Testes of Vent is 2. [2 balls]
 Cunts of Vent is 0. [X pussy]
 Cunt Length of Vent is 0. [X Cunt]

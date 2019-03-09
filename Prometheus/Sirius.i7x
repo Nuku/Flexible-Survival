@@ -29,7 +29,7 @@ ScaleValue of Sirius is 4. [Larger than human]
 SleepRhythm of Sirius is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Sirius is 1. [no cock]
 Cock Length of Sirius is 12. [12 inches]
-Cock Width of Sirius is 4. [Each tesicle is 2 inches]
+Cock Width of Sirius is 10.
 Testes of Sirius is 2. [Two balls]
 Cunts of Sirius is 0. [No pussy]
 Cunt Length of Sirius is 0. [No pussy]

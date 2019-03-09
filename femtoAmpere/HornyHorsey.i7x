@@ -96,7 +96,7 @@ ScaleValue of Ammy is 3. [human sized]
 SleepRhythm of Ammy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Ammy is 1. [X cock]
 Cock Length of Ammy is 10. [X Inches]
-Cock Width of Ammy is 4. [Each testicle 2 inch across]
+Cock Width of Ammy is 14.
 Testes of Ammy is 2. [X balls]
 Cunts of Ammy is 1. [X pussy]
 Cunt Length of Ammy is 10. [X Cunt]

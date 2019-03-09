@@ -42,7 +42,7 @@ ScaleValue of Fang is 3. [human sized]
 SleepRhythm of Fang is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Fang is 1. [One cock]
 Cock Length of Fang is 10. [10 Inches]
-Cock Width of Fang is 3. [Each testicle 1.5 inches across]
+Cock Width of Fang is 10.
 Testes of Fang is 2. [Two balls]
 Cunts of Fang is 0. [No pussy]
 Cunt Length of Fang is 0. [No Cunt]

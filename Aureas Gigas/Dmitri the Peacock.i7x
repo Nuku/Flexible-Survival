@@ -173,7 +173,7 @@ ScaleValue of Dmitri is 3. [human sized]
 SleepRhythm of Dmitri is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Dmitri is 1. [X cock]
 Cock Length of Dmitri is 9. [X Inches]
-Cock Width of Dmitri is 3. [Each testicle 1/2 X inch across]
+Cock Width of Dmitri is 5.
 Testes of Dmitri is 2. [X balls]
 Cunts of Dmitri is 0. [X pussy]
 Cunt Length of Dmitri is 0. [X Cunt]

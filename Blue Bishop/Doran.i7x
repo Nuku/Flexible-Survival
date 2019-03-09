@@ -465,7 +465,7 @@ ScaleValue of Doran is 4. [horse sized]
 SleepRhythm of Doran is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Doran is 1. [1 cock]
 Cock Length of Doran is 18. [18 Inches]
-Cock Width of Doran is 10. [Each testicle 5 inch across]
+Cock Width of Doran is 15.
 Testes of Doran is 2. [2 balls]
 Cunts of Doran is 0. [0 pussy]
 Cunt Length of Doran is 0. [X Cunt]

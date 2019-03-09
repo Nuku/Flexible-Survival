@@ -173,8 +173,8 @@ Francois is a man. Francois is in Bone-Appetit.
 ScaleValue of Francois is 3. [human sized]
 SleepRhythm of Francois is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Francois is 1. [One cock]
-Cock Length of Francois is 6. [Eight Inches]
-Cock Width of Francois is 2. [Each testicle 1 inch across]
+Cock Length of Francois is 8. [Eight Inches]
+Cock Width of Francois is 5.
 Testes of Francois is 2. [Two balls]
 Cunts of Francois is 0. [No pussy]
 Cunt Length of Francois is 0. [No Cunt]

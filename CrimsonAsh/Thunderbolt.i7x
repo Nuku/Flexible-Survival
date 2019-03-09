@@ -135,7 +135,7 @@ ScaleValue of Thunderbolt is 4. [horse sized]
 SleepRhythm of Thunderbolt is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Thunderbolt is 1. [X cock]
 Cock Length of Thunderbolt is 24. [X Inches]
-Cock Width of Thunderbolt is 8. [Each testicle 1/2 X inch across]
+Cock Width of Thunderbolt is 18.
 Testes of Thunderbolt is 2. [X balls]
 Cunts of Thunderbolt is 0. [X pussy]
 Cunt Length of Thunderbolt is 0. [X Cunt]

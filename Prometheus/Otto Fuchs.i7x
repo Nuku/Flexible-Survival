@@ -46,7 +46,7 @@ ScaleValue of Otto is 3. [human sized]
 SleepRhythm of Otto is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Otto is 1. [One cock]
 Cock Length of Otto is 6. [Six Inches]
-Cock Width of Otto is 2. [Each testicle 1 inch across]
+Cock Width of Otto is 4.
 Testes of Otto is 2. [Two balls]
 Cunts of Otto is 0. [No pussy]
 Cunt Length of Otto is 0. [No Cunt]

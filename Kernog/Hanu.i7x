@@ -12,6 +12,32 @@ Object	Name
 Hanu	"Hanu"
 
 Hanu is a person. Hanu is in Monkey House.
+[Physical details as of game start]
+ScaleValue of Hanu is 3. [human sized]
+SleepRhythm of Hanu is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Hanu is 1. [X cock]
+Cock Length of Hanu is 8. [X Inches]
+Cock Width of Hanu is 4.
+Testes of Hanu is 2. [X balls]
+Cunts of Hanu is 0. [X pussy]
+Cunt Length of Hanu is 0. [X Cunt]
+Cunt Width of Hanu is 0. [X Cunt]
+Breasts of Hanu is 2. [X nipples]
+Breast Size of Hanu is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Hanu is false. [can not take oversized members without pain]
+Sterile of Hanu is true.
+PlayerMet of Hanu is false.
+PlayerRomanced of Hanu is false.
+PlayerFriended of Hanu is false.
+PlayerControlled of Hanu is false.
+PlayerFucked of Hanu is false.
+OralVirgin of Hanu is true.
+Virgin of Hanu is true.
+AnalVirgin of Hanu is true.
+PenileVirgin of Hanu is true.
+SexuallyExperienced of Hanu is false.
+MainInfection of Hanu is "".
 The description of Hanu is "[hanuDesc]";
 
 to say hanuDesc:
@@ -143,8 +169,12 @@ Object	Name
 Monkey Duel	"Monkey Duel"
 
 Monkey Duel is a situation.
+The sarea of Monkey Duel is "Zoo".
 
-to monkeyDuel:
+Instead of resolving Monkey Duel:
+	MonkeyDuel;
+
+to MonkeyDuel:
 	say "     'About time you showed up[if player is not defaultnamed], [name of player][end if].' a familiar voice calls you out as you pass under a large tree. Hanu, the monkey with whom you meditated with earlier, is sitting leisurely on one of the branches, his long tail waving at you. With surprising agility, Hanu jumps down from his perch and makes a perfect landing just in front of you. 'You seem to have a habit of being late for training, my pupil. But no matter, let us practice our kung fu together.'";
 	say "     The monkey's words make you remember about your (mis)adventures with the only other monkey you know. [bold type]Should you bring up Wukong's existence to Hanu?[roman type][line break]";
 	LineBreak;
