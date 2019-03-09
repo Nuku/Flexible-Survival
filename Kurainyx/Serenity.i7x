@@ -95,8 +95,7 @@ Instead of resolving a Naga Hybrid:
 				else:			[Serenity leaves the Dry Plains and the game]
 					LineBreak;
 					say "     You wish Serenity good luck on her journey, and to your surprise, she leans toward you, planting a gentle kiss on your cheek, followed by a playful lick with her forked tongue. 'And good luck to you too[if player is not defaultnamed], [name of player][end if],' Serenity bids. As you part ways with your naga friend, likely for the last time, you are glad that, despite all of the chaos in the city, you still have the mindset to brighten someone's life.";
-					say "[bold type]Your good deed has increased your sanity by 20![roman type][line break]";
-					increase humanity of player by 20;
+					SanBoost 20;
 					now HP of Serenity is 100;
 					now Resolution of Naga Hybrid is 4; [player had the lockbox and gave it back, Serenity sent along]
 			else:			[Serenity ambushes the player, steals the lockbox, and leaves the game]
@@ -532,8 +531,7 @@ to SerenityBind:
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 					now boundrecover is false;
-					increase humanity of player by 3;
-					if humanity of player > 100, now humanity of player is 100;
+					SanBoost 3;
 				else:
 					say "     You try to calm yourself down, focusing on delaying your next climax to gather your thoughts.";
 					wyvhumanityroll;

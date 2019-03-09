@@ -848,14 +848,13 @@ to wyvore:
 							say ". Given your stubbornness, he seems to have some brief difficulty swallowing you down, buying you some time as his powerful muscles squeezes tightly against you.";
 					else:
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					increase humanity of player by 3;
+					SanBoost 3;
 					if a random chance of 2 in 3 succeeds:
 						PlayerDrink 2;
 						PlayerEat 1;
 					else:
 						PlayerDrink 1;
 					now boundrecover is false;
-					if humanity of player > 100, now humanity of player is 100;
 				else:
 					if boundsegment is 1:
 						say "     You actively attempt to endure the wyvern's influence on you";
@@ -1150,8 +1149,7 @@ to wyvorgy:
 				now enduring is true;
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					increase humanity of player by 3;
-					if humanity of player > 100, now humanity of player is 100;
+					SanBoost 3;
 					LineBreak;
 					wyvernmatron;
 					wyvernsanityroll;

@@ -271,16 +271,18 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
 				now FirstAnalPartner of player is printed name of GivingChar;
 			if Sterile of GivingChar is false: [fertile]
-				setmonster MainInfection of GivingChar;
-				mimpregchance;
+				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None":
+					setmonster MainInfection of GivingChar;
+					mimpregchance;
 		else if SexAct is "PussyFuck":
 			if Virgin of player is true:
 				now Virgin of player is false;
 				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";
 				now FirstVaginalPartner of player is printed name of GivingChar;
 			if Sterile of GivingChar is false: [fertile]
-				setmonster MainInfection of GivingChar;
-				fimpregchance;
+				if MainInfection of GivingChar is not "" and MainInfection of GivingChar is not "None":
+					setmonster MainInfection of GivingChar;
+					fimpregchance;
 		else if SexAct is "AssDildoFuck":
 			if AnalVirgin of player is true:
 				now AnalVirgin of player is false;
@@ -317,6 +319,16 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				now Virgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s virginity![roman type][line break]";
 				now FirstVaginalPartner of TakingChar is printed name of GivingChar;
+		else if SexAct is "AssDildoFuck":
+			if AnalVirgin of TakingChar is true:
+				now AnalVirgin of TakingChar is false;
+				say "     [Bold Type][GivingChar] has taken [TakingChar]'s anal virginity![roman type][line break]";
+				now FirstAnalPartner of TakingChar is printed name of GivingChar;
+		else if SexAct is "PussyDildoFuck":
+			if Virgin of TakingChar is true:
+				now Virgin of TakingChar is false;
+				say "     [Bold Type][GivingChar] has taken [TakingChar]'s virginity![roman type][line break]";
+				now FirstVaginalPartner of TakingChar is printed name of GivingChar;
 		else if SexAct is "OralCock":
 			if PenileVirgin of GivingChar is true:
 				now PenileVirgin of GivingChar is false;
@@ -347,7 +359,7 @@ carry out CreatureSexAftermathAction:
 	CreatureSexAftermath "Player" receives "AssFuck" from "Alpha Husky";
 	say "Testing: Player fucks Alpha Husky:";
 	CreatureSexAftermath "Alpha Husky" receives "AssFuck" from "Player";
-	[Options for SexAct are: AssFuck, PussyFuck, OralCock, OralPussy]
+	[Options for SexAct are: AssFuck, PussyFuck, AssDildoFuck, PussyDildoFuck, OralCock, OralPussy]
 
 to CreatureSexAftermath (TakingChar - a text) receives (SexAct - a text) from (GivingChar - a text):
 	if GivingChar is "Player":
@@ -378,6 +390,16 @@ to CreatureSexAftermath (TakingChar - a text) receives (SexAct - a text) from (G
 				now FirstVaginalPartner of player is GivingChar;
 			setmonster GivingChar;
 			fimpregchance;
+		else if SexAct is "AssDildoFuck":
+			if AnalVirgin of player is true:
+				now AnalVirgin of player is false;
+				say "     [Bold Type]You have lost your anal virginity to [GivingChar]![roman type][line break]";
+				now FirstAnalPartner of player is GivingChar;
+		else if SexAct is "PussyDildoFuck":
+			if Virgin of player is true:
+				now Virgin of player is false;
+				say "     [Bold Type]You have lost your virginity to [GivingChar]![roman type][line break]";
+				now FirstVaginalPartner of player is GivingChar;
 		else if SexAct is "OralCock" or SexAct is "OralPussy":
 			if OralVirgin of player is true:
 				now OralVirgin of player is false;

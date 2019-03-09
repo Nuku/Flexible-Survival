@@ -251,7 +251,7 @@ Instead of fucking the Fancy:
 				say "     And the great pleasure her muzzle and hands bring is repeated through several powerful orgasms[if cunts of player > 1], shifting back and forth between your cunts to further your ecstasy[end if]. This oral delight is drawn out until finally you grab her head and press it firmly to your quivering loins as you neigh loudly in a mind-blowing release. Your strong juices soak her tongue and muzzle while your inner walls squeeze and tug at that nimble tongue inside you. She drinks down as much as she can get, happily letting the scent of her chosen mistress mark her with the rest. After you release her, she rubs her sticky fingers over her breasts, getting her nipples shiny with your juices. Calling over some of the watching mares, you set a pair of them to task licking the excess juices that have down your legs and then to clean your crotch. You enjoy this sensual cleaning while watching another pair take turns between eating out the lead mare and sucking on her nipples.";
 			increase fancyffcount by 1;
 		decrease humanity of player by 4;
-		if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+		if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 		if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 		now lastfuck of Fancy is turns;
 [	else if fancyaroused is 1:

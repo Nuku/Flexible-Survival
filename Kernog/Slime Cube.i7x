@@ -173,9 +173,8 @@ to slimeCubeVore:
 				now enduring is true;
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					increase humanity of player by 3;
+					SanBoost 3;
 					now boundrecover is false;
-					if humanity of player > 100, now humanity of player is 100;
 				else:
 					say "     You take a moment to get your bearings and focus on deciding in which direction you should keep digging your way.";
 				LineBreak;

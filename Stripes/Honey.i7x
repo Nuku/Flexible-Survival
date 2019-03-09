@@ -493,7 +493,7 @@ to say beesexqueen:
 		say "     Finding your attention drawn to the cute bee girl, some new instinct in you becomes excited and your wings buzz. Hearing this, Honey smiles at you and comes over, putting her arms around you. 'Oh, let me serve you, my queen,' she says playfully even as she brushes her fingertips across your wet folds. Taking a seat, you spread your legs invitingly and have her move between them. She buries her face in your crotch, fingering your pussy before diving in and lapping up your [if player is queenbeecocked]honeyed [end if]juices like delicious nectar. As you cum, thoughts of finding a hive to breed many more such pretty and loyal bee girls play across your mind, turning you on greatly. Once she's done licking you clean, you caress her head softly and thank her for her fine service.";
 		now libido of player is ( libido of player + 1 ) / 2;
 	decrease humanity of player by 3;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+	if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 
 

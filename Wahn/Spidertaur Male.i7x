@@ -238,7 +238,7 @@ When Play begins:
 	now area entry is "Warehouse";      [ Case sensitive]
 	now cocks entry is 1;               [ number of cocks if sex is 'Male' or 'Both' ]
 	now cock length entry is 16;
-	now cock width entry is 6;          [ Size of balls ]
+	now cock width entry is 8;          [ Size of balls ]
 	now breasts entry is 2;             [ Number of nipples. ]
 	now breast size entry is 0;         [ Size of breasts infection will try to attain ]
 	now male breast size entry is 0; [ Breast size for if Sex="Male", usually zero. ]
@@ -313,6 +313,30 @@ object	name
 Aelias	"Aelias"
 
 Aelias is a man.
+ScaleValue of Aelias is 4.
+Cocks of Aelias is 1.
+Cock Length of Aelias is 16.
+Cock Width of Aelias is 8.
+Testes of Aelias is 2.
+Cunts of Aelias is 0.
+Cunt Length of Aelias is 0.
+Cunt Width of Aelias is 0.
+Breasts of Aelias is 2. [2 nipples]
+Breast Size of Aelias is 0.
+TwistedCapacity of Aelias is false.
+Sterile of Aelias is false.
+[Basic Interaction states as of game start]
+PlayerMet of Aelias is false.
+PlayerRomanced of Aelias is false.
+PlayerFriended of Aelias is false.
+PlayerControlled of Aelias is false.
+PlayerFucked of Aelias is false.
+OralVirgin of Aelias is false.
+Virgin of Aelias is true.
+AnalVirgin of Aelias is false.
+PenileVirgin of Aelias is false.
+SexuallyExperienced of Aelias is true.
+MainInfection of Aelias is "Spidertaur".
 Aelias is in Spider's Web.
 The description of Aelias is "[AeliasDesc]".
 The conversation of Aelias is { "You're welcome to stay here as long as you want, my lovely little fly. To rest, or have fun..." }.

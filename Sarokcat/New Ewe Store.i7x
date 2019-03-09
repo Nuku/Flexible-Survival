@@ -327,7 +327,7 @@ to say sexwithLeon:
 					say "     Between his bleating grunts as he pounds into you like the virile ram he is, he echoes your own woolly thoughts, reinforcing them further. 'Mmm... that's how you like it, isn't it? Being fucked like an ewe all the time is what you really want. Deep down, all you are is a weak male who'd much rather be my ewe,' he pants in your ear. You nod eagerly and moan over and over that you're a horny ewe, your lust-addled mind wanting nothing more than to be a sheep in this big stud's flock. Satisfied with your response, he thrusts forward one last time with a loud bleat and cums hard. His balls unleash their heavy payload, sending thick ram semen into your bowels. You are filled with pleasure as he coats your insides with his fertile, dominant seed and cum yourself soon after. Your lesser seed sprays out onto the floor, unworthy of claiming ewes like yourself or the other girls.[mimpregchance]";
 					say "     After pulling out, he struts around to your front and wipes his messy cock across your cheeks, leaving smears of his musky semen on your cheeks. With the scent of it right there, you are left in a lustful daze of submissive urges long after he's untied you and left you alone in the room. It is much later before you've regained enough of your senses to stagger out and join the other ewes in the store.";
 					decrease humanity of player by 6;
-					if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+					if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 					if "Weak Psyche" is listed in feats of player, decrease humanity of player by 2;
 			else:
 				say "     Leon follows you into the back room and pushes you towards one of the mounds of fragrant wool. Pushing you down onto it, he makes sure your face is buried in the soft, sheep-scented pile. 'Smell that. Take that in. It's the scent of your flock... where you belong,' he says firmly. With your nose buried in it, you can't help but smell the heady scent of sheep and arousal. Clearly you're not the first to be fucked on this pile, the scents of your ram, the ewes and rutting embedded in the wool. It makes you aroused and woolly-headed, your sheep urges coming back strong.";
@@ -341,7 +341,7 @@ to say sexwithLeon:
 				decrease humanity of player by 18;
 				if ( bodyname of player is "Ram" or bodyname of player is "Ewe" ) and the player is pure:
 					decrease humanity of player by 6;
-				if "Strong Psyche" is listed in feats of player, increase humanity of player by 3;
+				if "Strong Psyche" is listed in feats of player, SanBoost 3;
 				if "Weak Psyche" is listed in feats of player, decrease humanity of player by 3;
 				if ( bodyname of player is "Ram" or bodyname of player is "Ewe" ) and the player is pure and humanity of player < 10:
 					now humanity of player is 0;

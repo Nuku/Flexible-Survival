@@ -462,8 +462,7 @@ to GatorBind:
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 					now boundrecover is false;
-					increase humanity of player by 3;
-					if humanity of player > 100, now humanity of player is 100;
+					SanBoost 3;
 				else:
 					say "     [one of]'Hey, what are you doing in there?' the gator asks, poking at her stomach[or]Despite the stifling air, you manage to take some deep, calming breaths[or]You do your best to resist the gator's influence[at random].";
 					wyvhumanityroll;

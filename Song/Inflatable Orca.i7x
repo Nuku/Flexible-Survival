@@ -202,16 +202,15 @@ to orcabind:
 					LineBreak;
 					if boundrecover is true: [recover]
 						if orcaintense is 1:
-							increase humanity of player by 1;
+							SanBoost 1;
 						else if orcaintense is 2:
-							increase humanity of player by 2;
+							SanBoost 2;
 						else if orcaintense is 3:
-							increase humanity of player by 3;
+							SanBoost 3;
 						else if orcaintense is 4:
-							increase humanity of player by 4;
+							SanBoost 4;
 						else:
-							increase humanity of player by 5;
-						if humanity of player > 100, now humanity of player is 100;
+							SanBoost 5;
 						say "     With a brief flash of insight, you're able to find a glimpse of mental clarity, recovering a small portion of your lost humanity.";
 						LineBreak;
 						orcalust;

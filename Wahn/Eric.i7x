@@ -3267,15 +3267,11 @@ to say RyouseiAndEricDoTaiChi:
 	if player consents:
 		LineBreak;
 		say "     In a relaxed stroll you move over to the two of them and are soon greeted by a broad smile from the anthro tiger. 'Ah, welcome my friend. I was just teaching Eric some excesses for health and clearness of spirit. Would you like to join us?' You eagerly accept and take position right next to Eric, then begin to mimic the movements Ryousei puts him through. The interesting training session that follows takes a good twenty minutes and leaves you a little bit worn out, yet at the same time very relaxed and feeling good about yourself. This really is a boon to your humanity, soothing some of the strains that living and surviving in this city day after day puts upon it.";
-		increase humanity of player by 10;
-		if humanity of player > 100:
-			now humanity of player is 100;
+		SanBoost 10;
 	else:
 		LineBreak;
 		say "     Content in just standing back and watching a moment from afar, you observe the unlikely pair of a mighty anthro tiger and a slender red-headed student talk and train together. It does you some good to see that such simple moments of fun are still possible in this now so incredibly over-sexed city. You feel more human, even just from watching.";
-		increase humanity of player by 5;
-		if humanity of player > 100:
-			now humanity of player is 100;
+		SanBoost 5;
 	if RyouseiEricInteraction is 2:
 		now RyouseiEricInteraction is 3; [watched them do tai chi]
 

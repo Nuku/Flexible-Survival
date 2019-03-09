@@ -110,6 +110,15 @@ to say JaguarWarriorCaptured:
 			say "     After remaining on his belly for a few moments as he pants in exhaustion, the jaguar eventually twists around, flopping down to lay on his back. What an inviting sight - so very docile now that you've broken him in, looking up at you in adoration. His belly-fur is wet and matted with the load of cum you fucked out of him and a slight trickle of your seed oozes out of his well-bred ass. Crouching down over the jaguar warrior, you wipe up the cum with two fingers and bring them to his muzzle - and your pet laps up the creamy treat without any hesitation. You can't help but smile as you tell him that he's been a very good boy, then hold out a hand for him to take and pull him up along as you stand up. Your new pet leans in and nuzzles against your chest as you make your way back to the Grey Abbey Library with him.";
 			say "[TameTehuantl]";
 			now HP of Tehuantl is 50; [male jaguar pet]
+			now Cocks of Tehuantl is 1;
+			now Cock Length of Tehuantl is 12;
+			now Cock Width of Tehuantl is 5;
+			now Testes of Tehuantl is 2;
+			now Cunts of Tehuantl is 0;
+			now Cunt Length of Tehuantl is 0;
+			now Cunt Width of Tehuantl is 0;
+			now Breasts of Tehuantl is 2; [2 nipples]
+			now Breast Size of Tehuantl is 0;
 		else:
 			LineBreak;
 			say "     Stroking both hands over the jaguar warrior's back, you let them slide around his sides, searching out the little nubs of his nipples on the feline's chest. He gives a little surprised mewl as you brush over them, then lightly pinch both at the same time. Bent over the spotted feline, you comment that he's quite the sexy pussycat - and that he shouldn't worry too much about his fate. Sure, he's yours now, and you reserve the right to pet him and play with his nipples whenever you want - but there's no reason this shouldn't be enjoyable for the both of you. As you proceed to rub him in circling motions, there even is a little purr that can be heard from your former opponent. Clearly, he is starting to realize that becoming your kitty will have its own rewards.";
@@ -199,9 +208,9 @@ When Play begins:
 	now lev entry is 13;                  [ Monster level. (Level x 2) XP for victory. (Level / 2) XP for losing. ]
 	now wdam entry is 15;                 [ Monster's average damage when attacking. ]
 	now area entry is "Museum";           [ "Outside" "Mall" "Park" "Beach" etc... Check an existing creature in the area. ]
-	now cocks entry is 1;                 [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
-	now cock length entry is 6;           [ Length in inches infection will make cock grow to if cocks. ]
-	now cock width entry is 3;            [ Cock width, more commonly used for ball size. ]
+	now cocks entry is 0;                 [ Number of cocks the infection will try to cause if sex entry is 'Male' or 'Both'. ]
+	now cock length entry is 0;           [ Length in inches infection will make cock grow to if cocks. ]
+	now cock width entry is 0;            [ Cock width, more commonly used for ball size. ]
 	now breasts entry is 2;               [ Number of nipples the infection will give a player. ]
 	now breast size entry is 4;           [ Size of breasts the infection will try to attain (corresponds to letter cup size). ]
 	now male breast size entry is 0;      [ Breast size for if Sex="Male", usually zero. ]

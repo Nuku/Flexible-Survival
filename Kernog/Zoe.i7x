@@ -42,13 +42,34 @@ object	name
 Zoe	"Zoe"
 
 Zoe is a woman.
+[Physical details as of game start]
+ScaleValue of Zoe is 2. [dog sized]
+SleepRhythm of Zoe is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Zoe is 0. [X cock]
+Cock Length of Zoe is 0. [X Inches]
+Cock Width of Zoe is 0.
+Testes of Zoe is 0. [X balls]
+Cunts of Zoe is 1. [X pussy]
+Cunt Length of Zoe is 8. [X Cunt]
+Cunt Width of Zoe is 4. [X Cunt]
+Breasts of Zoe is 2. [X nipples]
+Breast Size of Zoe is 2. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Zoe is false. [can not take oversized members without pain]
+Sterile of Zoe is true.
+PlayerMet of Zoe is false.
+PlayerRomanced of Zoe is false.
+PlayerFriended of Zoe is false.
+PlayerControlled of Zoe is false.
+PlayerFucked of Zoe is false.
+OralVirgin of Zoe is true.
+Virgin of Zoe is true.
+AnalVirgin of Zoe is true.
+PenileVirgin of Zoe is true.
+SexuallyExperienced of Zoe is false.
+MainInfection of Zoe is "".
 The Loyalty of Zoe is normally 0.
 The XP of Zoe is normally 0.
-Virgin of Zoe is normally true.
-OralVirgin of Zoe is normally true.
-AnalVirgin of Zoe is normally true.
-cunt length of Zoe is normally 8.
-ScaleValue of Zoe is normally 2.
 
 The description of Zoe is "[ZoeDesc]".
 The conversation of Zoe is {"Placeholder"}.

@@ -93,7 +93,7 @@ this is the rattymilk rule:
 	if "Horny Bastard" is listed in feats of player, increase libido of player by 1;
 	if "Cold Fish" is listed in feats of player, decrease libido of player by a random number between 1 and 3;
 	decrease humanity of player by a random number between 1 and 4;
-	if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+	if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 	if "Weak Psyche" is listed in feats of player, decrease humanity of player by a random number between 0 and 1;
 	decrease HP of the player by dam;
 	follow the player injury rule;

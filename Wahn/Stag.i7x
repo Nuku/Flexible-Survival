@@ -44,13 +44,13 @@ Instead of resolving a Dog Walking:
 	else if HP of Mike is 1: [second meeting]
 		say "     You run into Mike and his 'dog' Lea, out on the street for a walk. The young woman scampers to you quickly and joyfully licks your hands at seeing you again. Mike smiles at her playful behavior as he walks after her over to you.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
-		increase humanity of player by 5;
+		SanBoost 5;
 		now HP of Mike is 2;
 		now Resolution of Dog Walking is 3; [met Mike again]
 	else if HP of Mike is 98: [first friendly meeting after player attack]
 		say "     You run into Mike and his 'dog' Lea, out on the street for a walk. The young woman looks at you suspiciously and growls silently until Mike steps up and strokes her head. 'It's okay Lea, we just had a misunderstanding last time.' Hearing soothing words from her master, she trots over to you and sniffs at you before licking your hands.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
-		increase humanity of player by 5;
+		SanBoost 5;
 		now HP of Mike is 2;
 		now Resolution of Dog Walking is 3; [met Mike again]
 	else if HP of Mike is 2: [third meeting - they're under attack by a gang]
@@ -86,7 +86,7 @@ Instead of resolving a Dog Walking:
 	else if HP of Mike > 2 and HP of Mike < 98: [further repeat meetings]
 		say "     You run into Mike and his 'dog' Lea again, out on the street for a walk. The young woman scampers to you quickly and joyfully licks your hands at seeing you again. Mike smiles at her playful behavior as he walks after her over to you.";
 		say "     'Hello again. I'm making sure Lea gets her regular amount of exercise these days - good for the puppies and herself...' You chat a bit with Mike about dogs and inner city survival before he moves on.";
-		increase humanity of player by 5;
+		SanBoost 5;
 
 Section 2 - Monster Responses
 
@@ -284,6 +284,8 @@ Cunt Length of Mike is 0.
 Cunt Width of Mike is 0.
 Breasts of Mike is 2.
 Breast Size of Mike is 0.
+TwistedCapacity of Mike is false.
+Sterile of Mike is false.
 [Basic Interaction states as of game start]
 PlayerMet of Mike is false.
 PlayerRomanced of Mike is false.
@@ -597,6 +599,8 @@ Cunt Length of Xerxes is 0.
 Cunt Width of Xerxes is 0.
 Breasts of Xerxes is 2.
 Breast Size of Xerxes is 0.
+TwistedCapacity of Xerxes is false.
+Sterile of Xerxes is false.
 [Basic Interaction states as of game start]
 PlayerMet of Xerxes is false.
 PlayerRomanced of Xerxes is false.
@@ -659,7 +663,7 @@ instead of conversing Xerxes:
 		say "     Calling Xerxes to you from wherever he was patrolling in the library, you sit down on the cot you put in here for him. He [one of]snuggles up at your feet[or]rests his head in your lap[at random] and listens to you talk. He doesn't say much and mostly barks in response, but will occasionally use one of his spoken words instead. Usually, it's 'Master' or 'Friend' or 'Sex', those being his favorites, though you've heard him use at least a couple dozen and he seems to have no problem understanding you.";
 	say "     Still, it's rather relaxing to talk a while about your problems and stroke your human dog's hair. It strengthens your sanity a bit and you feel more confident that you will get through this crazy situation.";
 	if LastXerxesTalk - turns > 8:
-		increase humanity of player by 5;
+		SanBoost 5;
 		now LastXerxesTalk is turns;
 
 instead of sniffing Xerxes:
@@ -1219,6 +1223,8 @@ Cunt Length of Helen is 9.
 Cunt Width of Helen is 4.
 Breasts of Helen is 2.
 Breast Size of Helen is 3.
+TwistedCapacity of Helen is false.
+Sterile of Helen is false.
 [Basic Interaction states as of game start]
 PlayerMet of Helen is false.
 PlayerRomanced of Helen is false.
@@ -1312,7 +1318,7 @@ instead of conversing Helen:
 		say "     Calling Helen to you from wherever she was patrolling in the library, you sit down on the cot you put in here for her. She [one of]snuggles up at your feet[or]rests her head in your lap[at random] and listens to you talk. She doesn't say much and mostly barks in response, but will occasionally use one of her spoken words instead. Usually, it's 'Master' or 'Friend' or 'Sex', those being her favorites, though you've heard her use at least a couple dozen and seems to have no problem understanding you.";
 	say "     Still, it's rather relaxing to talk a while about your problems and stroke your human dog's hair. It strengthens your sanity a bit and you feel more confident that you will get through this crazy situation.";
 	if LastHelenTalk - turns > 8:
-		increase humanity of player by 5;
+		SanBoost 5;
 		now LastHelenTalk is turns;
 
 instead of sniffing Helen:

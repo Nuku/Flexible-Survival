@@ -300,7 +300,7 @@ Instead of resolving a Lovers Bench:
 			infect "Raccoon";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
-			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase XP of pink raccoon by ( level of pink raccoon + 1 ) * 3;
 			increase score by 20;
@@ -323,7 +323,7 @@ Instead of resolving a Lovers Bench:
 			infect "Hermaphrodite Gryphon";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
-			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase XP of Gryphoness by ( level of Gryphoness + 1 ) * 3;
 			increase score by 20;
@@ -347,7 +347,7 @@ Instead of resolving a Lovers Bench:
 			infect "Felinoid";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
-			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase XP of Felinoid companion by ( level of Felinoid companion + 1 ) * 3;
 			increase score by 20;
@@ -365,7 +365,7 @@ Instead of resolving a Lovers Bench:
 			if HP of bee girl >= 5, infect "Queen Bee";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
-			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase XP of bee girl by ( level of bee girl + 1 ) * 3;
 			increase score by 20;
@@ -394,7 +394,7 @@ Instead of resolving a Lovers Bench:
 			infect "Mental Mouse";
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 20;
-			if "Strong Psyche" is listed in feats of player, increase humanity of player by 5;
+			if "Strong Psyche" is listed in feats of player, SanBoost 5;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 5;
 			increase XP of mouse girl by ( level of mouse girl + 1 ) * 3;
 			increase score by 20;
@@ -421,7 +421,7 @@ Instead of resolving a Lovers Bench:
 			now libido of player is libido of player / 2;
 			now libido of equinoid warrior is 0;
 			decrease humanity of player by 5;
-			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase XP of equinoid warrior by ( level of equinoid warrior + 1 ) * 3;
 			increase score by 20;
@@ -459,7 +459,7 @@ Instead of resolving a Lovers Bench:
 			now lastfuck of demon brute is turns;
 			now libido of player is libido of player / 2;
 			decrease humanity of player by 5;
-			if "Strong Psyche" is listed in feats of player, increase humanity of player by 1;
+			if "Strong Psyche" is listed in feats of player, increase Humanity of Player by 1;
 			if "Weak Psyche" is listed in feats of player, decrease humanity of player by 1;
 			increase XP of demon brute by ( level of demon brute + 1 ) * 3;
 			increase score by 20;

@@ -24,6 +24,30 @@ object	name
 Urik	"Urik"
 
 Urik is a man.
+ScaleValue of Urik is 4.
+Cocks of Urik is 1.
+Cock Length of Urik is 15.
+Cock Width of Urik is 11.
+Testes of Urik is 2.
+Cunts of Urik is 0.
+Cunt Length of Urik is 0.
+Cunt Width of Urik is 0.
+Breasts of Urik is 2. [2 nipples]
+Breast Size of Urik is 0.
+TwistedCapacity of Urik is false.
+Sterile of Urik is false.
+[Basic Interaction states as of game start]
+PlayerMet of Urik is false.
+PlayerRomanced of Urik is false.
+PlayerFriended of Urik is false.
+PlayerControlled of Urik is false.
+PlayerFucked of Urik is false.
+OralVirgin of Urik is false.
+Virgin of Urik is true.
+AnalVirgin of Urik is false.
+PenileVirgin of Urik is false.
+SexuallyExperienced of Urik is true.
+MainInfection of Urik is "Orc Warrior".
 The description of Urik is "[UrikDesc]".
 The icon of Urik is Figure of Urik_clothed_icon.
 

@@ -22,7 +22,7 @@ to RomanQuestLog:
 	if HP of Roman is 4:
 		say "[bold type]Roman's issue (COMPLETED)[roman type]: I spilled the beans on Roman's secret to the rest of the team. The reaction was as expected. Without Roman to manage the team, it will probably devolve into a 24/7 orgy in a few days. But hey, free whore!";
 	if HP of Roman >= 5:
-		say "[bold type]Roman's issue (COMPLETED)[roman type]: Roman's speech was moving, and the team seems more motivated than ever. THere are a few resistances, but they will subside in short time. In the meantime, Roman and I became close friends. With benefits?";
+		say "[bold type]Roman's issue (COMPLETED)[roman type]: Roman's speech was moving, and the team seems more motivated than ever. There are a few resistances, but they will subside in short time. In the meantime, Roman and I became close friends. With benefits?";
 
 to FootballTeamAdditionsQuestLog:
 	if HP of Roman is 6:
@@ -43,9 +43,33 @@ object	name
 Team Captain Roman	"Team Captain Roman"
 
 Team Captain Roman is a man. Understand "Roman" as Team Captain Roman.
-
+[Physical details as of game start]
+ScaleValue of Team Captain Roman is 3. [human sized]
+SleepRhythm of Team Captain Roman is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Team Captain Roman is 0. [X cock]
+Cock Length of Team Captain Roman is 0. [X Inches]
+Cock Width of Team Captain Roman is 0.
+Testes of Team Captain Roman is 0. [X balls]
+Cunts of Team Captain Roman is 1. [X pussy]
+Cunt Length of Team Captain Roman is 8. [X Cunt]
+Cunt Width of Team Captain Roman is 4. [X Cunt]
+Breasts of Team Captain Roman is 2. [X nipples]
+Breast Size of Team Captain Roman is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Team Captain Roman is false. [can not take oversized members without pain]
+Sterile of Team Captain Roman is false.
+PlayerMet of Team Captain Roman is false.
+PlayerRomanced of Team Captain Roman is false.
+PlayerFriended of Team Captain Roman is false.
+PlayerControlled of Team Captain Roman is false.
+PlayerFucked of Team Captain Roman is false.
+OralVirgin of Team Captain Roman is false.
+Virgin of Team Captain Roman is false.
+AnalVirgin of Team Captain Roman is false.
+PenileVirgin of Team Captain Roman is false.
+SexuallyExperienced of Team Captain Roman is false.
+MainInfection of Team Captain Roman is "Football Gorilla".
 The description of Team Captain Roman is "[RomanDesc]".
-The MainInfection of Roman is "Football Gorilla".
 
 to say RomanDesc:
 	if debugactive is 1:

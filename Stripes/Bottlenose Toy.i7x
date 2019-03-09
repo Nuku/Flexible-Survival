@@ -440,8 +440,7 @@ to bottleboundstate:
 				now enduring is true;
 				LineBreak;
 				if boundrecover is true:
-					increase humanity of player by 3;
-					if humanity of player > 100, now humanity of player is 100;
+					SanBoost 3;
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 					LineBreak;
 					if bodyname of player is "Bottlenose Toy":

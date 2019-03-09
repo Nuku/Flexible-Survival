@@ -39,6 +39,32 @@ object	name
 Jadako	"Jadako"
 
 Jadako is a man.
+[Physical details as of game start]
+ScaleValue of Jadako is 3. [human sized]
+SleepRhythm of Jadako is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Jadako is 1. [X cock]
+Cock Length of Jadako is 7. [X Inches]
+Cock Width of Jadako is 5.
+Testes of Jadako is 2. [X balls]
+Cunts of Jadako is 0. [X pussy]
+Cunt Length of Jadako is 0. [X Cunt]
+Cunt Width of Jadako is 0. [X Cunt]
+Breasts of Jadako is 2. [X nipples]
+Breast Size of Jadako is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Jadako is false. [can not take oversized members without pain]
+Sterile of Jadako is true.
+PlayerMet of Jadako is false.
+PlayerRomanced of Jadako is false.
+PlayerFriended of Jadako is false.
+PlayerControlled of Jadako is false.
+PlayerFucked of Jadako is false.
+OralVirgin of Jadako is false.
+Virgin of Jadako is true.
+AnalVirgin of Jadako is false.
+PenileVirgin of Jadako is false.
+SexuallyExperienced of Jadako is true.
+MainInfection of Jadako is "".
 The description of Jadako is "[jadakodesc]".
 The conversation of Jadako is { "<This is nothing but a placeholder!>" }.
 The scent of Jadako is "The lithe feline smells of exotic cologne, covering a heavy scent of sex and sweat.".
@@ -51,6 +77,32 @@ object	name
 Joseph	"Joseph"
 
 Joseph is a man.
+[Physical details as of game start]
+ScaleValue of Joseph is 3. [human sized]
+SleepRhythm of Joseph is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Joseph is 1. [X cock]
+Cock Length of Joseph is 9. [X Inches]
+Cock Width of Joseph is 7.
+Testes of Joseph is 2. [X balls]
+Cunts of Joseph is 0. [X pussy]
+Cunt Length of Joseph is 0. [X Cunt]
+Cunt Width of Joseph is 0. [X Cunt]
+Breasts of Joseph is 2. [X nipples]
+Breast Size of Joseph is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Joseph is false. [can not take oversized members without pain]
+Sterile of Joseph is true.
+PlayerMet of Joseph is false.
+PlayerRomanced of Joseph is false.
+PlayerFriended of Joseph is false.
+PlayerControlled of Joseph is false.
+PlayerFucked of Joseph is false.
+OralVirgin of Joseph is false.
+Virgin of Joseph is true.
+AnalVirgin of Joseph is false.
+PenileVirgin of Joseph is false.
+SexuallyExperienced of Joseph is true.
+MainInfection of Joseph is "".
 The description of Joseph is "[josephdesc]".
 The conversation of Joseph is { "<This is nothing but a placeholder!>" }.
 The scent of Joseph is "The bulky canine smells of sweat and potent male musk.".

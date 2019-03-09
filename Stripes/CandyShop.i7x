@@ -380,7 +380,7 @@ an everyturn rule:
 			increase dexterity of player by 2;
 			decrease libido of player by 10;
 			if libido of player < 0, now libido of player is 0;
-			increase humanity of player by 5;
+			SanBoost 5;
 			decrease morale of player by 5;
 
 

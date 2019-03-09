@@ -194,7 +194,7 @@ ScaleValue of Rex is 3. [human sized]
 SleepRhythm of Rex is 0. [0 - awake at all times, 1 - day active, 2 - night active]
 Cocks of Rex is 1. [One cock]
 Cock Length of Rex is 7. [Seven Inches]
-Cock Width of Rex is 3. [Each testicle 1.5 inches across]
+Cock Width of Rex is 10.
 Testes of Rex is 2. [Two balls]
 Cunts of Rex is 0. [No pussy]
 Cunt Length of Rex is 0. [No Cunt]
@@ -202,6 +202,8 @@ Cunt Width of Rex is 0. [No Cunt]
 Breasts of Rex is 2. [2 nipples]
 Breast Size of Rex is 0. [Flat at the start]
 [Basic Interaction states as of game start]
+TwistedCapacity of Rex is false. [can not take oversized members without pain]
+Sterile of Rex is false.
 PlayerMet of Rex is false.
 PlayerRomanced of Rex is false.
 PlayerFriended of Rex is false.

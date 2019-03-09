@@ -552,8 +552,7 @@ to say alexandra_gshep:
 			say "     Satisfied at your self-control, you head out and get Alexandra to come in. When she comes in, you can tell from the sniffs of her nose that she can smell canine sex in the air, but at least it wasn't right in her face. And you can also tell from that expression on her face and the subtle change to her own scent that she's at least a little aroused by the sight of all the semi-nude police dog eye candy on display. Buster, thanks to the idea of this as an [']inspection['], remains largely profession and on good behavior. He even manages not to grab that sexy doberman's ass, though you do catch his eyes drawn toward it from time to time as she looks the place around and is introduced to several of the other officers.";
 			increase score by 25;
 			decrease libido of player by libido of player / 8;
-			increase humanity of player by 5;
-			if humanity of player > 100, now humanity of player is 100;
+			SanBoost 5;
 		WaitLineBreak;
 		say "     After the tour and introductions are over, the three of you adjourn to the folding table and chair at the back that the lead dog uses as his desk. They talk for a while, both being police officers and canines gives them plenty of common ground. It's only in the details that things start to get rough.";
 		say "     'How can you be so biased as to think there's nothing wrong with what some of those dogs are doing out there?' Alexandra asks at one point, getting exasperated with Buster.";

@@ -230,9 +230,8 @@ to manEatingPlantVore:
 				now enduring is true;
 				if boundrecover is true:
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
-					increase humanity of player by 3;
+					SanBoost 3;
 					now boundrecover is false;
-					if humanity of player > 100, now humanity of player is 100;
 				else:
 					say "     You take a moment to catch your breath, and try your best to ignore the addling effects of the pod's silky surface on your skin and the dizzying smell of the air provided to your prison.";
 				LineBreak;

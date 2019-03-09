@@ -75,8 +75,7 @@ Instead of resolving Scavenging Dalmatian:
 			say "     Whistling at the Dalmatian to get the cano-mutate's attention, you swallow nervously when you see the Dal's floppy ear flick and their black-spotted face turn in your direction. You have all of a half second to realize that you may have made a slight mistake as you watch the creature run toward you after seeing the small parcel of food in your outstretched hand. Bracing yourself for impact, you expect to be knocked onto the asphalt, but the Dalmatian creature simply skids to a stop two feet from your outstretched hand. Lowering itself to its haunches to beg like a normal canine, the Dal whines pleadingly while staring up at you with big, soulful brown eyes.";
 			say "     Their whines of hunger are almost heartbreaking to hear. You set the food down in front of the anthro and then take a step back, watching as the spotted creature quickly gobbles up the food as though it hadn't eaten in days. Knowing how rough things are here in this city, the Dal was probably starving. When the dog finishes, it turns its muzzle to look up at you adoringly and then gives you a happy bark before trotting off. Even though you're shorter on provisions now, you feel good about feeding the hungry creature.";
 			increase morale of player by 5;
-			increase humanity of player by 12;
-			if humanity of player > 100, now humanity of player is 100;
+			SanBoost 12;
 			delete food;
 			increase score by 10;
 			now Resolution of Scavenging Dalmatian is 1; [shared food]
@@ -88,8 +87,7 @@ Instead of resolving Scavenging Dalmatian:
 		if player consents:
 			say "     Whistling to get the anthro Dalmatian's attention, you watch as it turns and then looks down to see what you put on the ground at your feet. Turning to step away from the cano-mutant, you're already moving off on your way just as your ears pick up the sound of charging footsteps to grasp your left-behind treats. It might not have been much, but it was all that you had on you. A sense of relief washes over you at having helped a starving creature in the midst of all this chaos.";
 			increase morale of player by 2;
-			increase humanity of player by 6;
-			if humanity of player > 100, now humanity of player is 100;
+			SanBoost 6;
 			delete chips;
 			increase score by 5;
 			now Resolution of Scavenging Dalmatian is 3; [shared chips]
@@ -127,14 +125,14 @@ Instead of resolving Captured Wyvern:
 			say "     You have to quickly hush the thing to prevent it from ruining all of your hard work, quickly comforting the beast into settling down. You try and tell it not to move and that it needs to rest before it can recover fully. The monster seems somewhat hesitant about doing so, and looking around, you can understand why, as the area you both are in is quite open to possible attack, either from the soldiers or other mutants. Giving a sigh of exasperation, you slowly pad up to the reptilian creature's muzzle and then pat the wyvern on the snout gently before telling it that you will watch over it. The beast slowly relaxes and then settles down to rest. Once the wyvern is snoring in sleep, you prepare yourself to stand guard over the creature in order to keep your promise.";
 			say "     Thankfully, you encounter little trouble, as neither the soldiers or any other mutants come around the vulnerable critter. The size and smell of it probably scare off anything with a shred of common sense. That soon changes, however, when a flock of wyverns come around to see about their missing companion. Noticing the large assortment of flying creatures, you decide that it's time to beat feet out of here. You've done your good deed for the day, after all.";
 			delete medkit;
-			increase humanity of player by 10;
+			SanBoost 10;
 			increase score by 10;
 			now Resolution of Captured Wyvern is 1; [Defended Wyvern, Used Medkit to heal]
 		else:
 			say "     Shaking your head, you go over and around the sides of the beast, tending to its wounds the best you can with your limited supplies as you strip your shirt off of your body to use for makeshift bandages. Tearing off strips of your upper garment, and even your pants in order to have enough material, you work carefully, but determinedly to cover the wyvern's grisly wounds, going over the entirety of the monster from top to tail.";
 			say "     Looking at the creature to gauge how it feels, you see that your attempts to mend its wounds took too long for your patient's attention, as the wyvern is now asleep. Snorting somewhat in annoyance, you admit a genuine smile as you look down at the flying mutant with wonder. While you wouldn't want to face one of these in battle, you can't help but marvel slightly at the beauty of the creature before you. Reaching out to stroke the sleeping beast's muzzle, you suddenly go rigid as you hear the cries of other wyverns shouting throughout the sky above you.";
 			say "     You find yourself moving on quick feet as you hightail it away from the wyvern before its friends can come around to see you standing there with their wounded kin. Kindness notwithstanding, you're not foolish enough to try and explain to a bunch of angry mutants that you didn't hurt their friend.";
-			increase humanity of player by 10;
+			SanBoost 10;
 			increase score by 1;
 			now Resolution of Captured Wyvern is 2; [Defended Wyvern, Used clothes to heal]
 	else:

@@ -556,9 +556,8 @@ to say samtf_maledragon:
 	say "     You've moved back at this time, not quite sure if your friend's still in there, but as he releases his spent shaft and sags back on the floor, he smiles up at you. 'Thanks. That was... close... Here, help me up,' he says as he tries to rise, unused to having four legs. He, like the tigertaur, is a little big for the cramped basement, but manages to get around. He gathers together what he can that hasn't been destroyed or tainted by the nanite serum. 'Uhh... so... I hope your place has got higher ceilings,' he says with a grin and a chuckle. After the recent tension, you can't help but laugh, telling him you might be able to find some space for him. You head off together towards the library.";
 	WaitLineBreak;
 	increase score by 50;
-	increase humanity of player by 5;
+	SanBoost 5;
 	increase morale of player by 2;
-	if humanity of player > 100, now humanity of player is 100;
 	now HP of Sam is 10;
 	move Sam to large shed;
 	move player to large shed;
@@ -570,9 +569,8 @@ to say samtf_femalevixen:
 	say "     You've moved back at this time, not quite sure if your friend's still in there, but as she releases her new breasts and sags back on the floor, she smiles up at you. 'Thanks. That was... close... Here, help me up,' she says as she tries to rise, unused to having four legs. She, like the tigertaur, is a little big for the cramped basement, but manages to get around. She gathers together what she can that hasn't been destroyed or tainted by the nanite serum. 'Uhh... so... I hope your place has got higher ceilings,' she says with a cute grin and a giggle. After the recent tension, you can't help but laugh, telling her you might be able to find some space for her. You head off together towards the library.";
 	WaitLineBreak;
 	increase score by 50;
-	increase humanity of player by 5;
+	SanBoost 5;
 	increase morale of player by 2;
-	if humanity of player > 100, now humanity of player is 100;
 	now HP of Sam is 30;
 	now icon of Sam is figure of Vixentaur_icon;
 	move Sam to large shed;
@@ -585,9 +583,8 @@ to say samtf_hermboth: [Not for release yet]
 	say "     You've moved back at this time, not quite sure if your friend's still in there, but as she releases her spent shaft and many breasts as she sags back on the floor and smiles up at you. 'Thanks. That was... close... Here, help me up,' she says as she tries to rise, unused to having four legs. She, like the tigertaur, is a little big for the cramped basement, but manages to get around. She gathers together what she can that hasn't been destroyed or tainted by the nanite serum. 'Uhh... so... I hope your place has got higher ceilings,' she says with a grin and a chuckle. After the recent tension, you can't help but laugh, telling her you might be able to find some space for her. You head off together towards the library.";
 	WaitLineBreak;
 	increase score by 50;
-	increase humanity of player by 5;
+	SanBoost 5;
 	increase morale of player by 2;
-	if humanity of player > 100, now humanity of player is 100;
 	now HP of Sam is 50;
 	now icon of Sam is figure of Dracovixentaur_icon;
 	move Sam to large shed;

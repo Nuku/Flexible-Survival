@@ -4,6 +4,13 @@ Version 1 of PIG Frat by Stripes begins here.
 "Expands upon the Frat House event with a full location at the College Campus area of Flexible Survival."
 
 piginitiation is a number that varies.
+PigFratRoomConnection is a number that varies.[@Tag:NotSaved]
+
+an everyturn rule:
+	if Frat House is resolved and PigFratRoomConnection is 0:
+		change east exit of Greek Street to Phi Iota Gamma;
+		change west exit of Phi Iota Gamma to Greek Street;
+		now PigFratRoomConnection is 1; [room connected]
 
 Section 1 - Initial Event
 
@@ -21,8 +28,9 @@ Instead of resolving a Frat House:
 	say "     Exploring the edge of campus, you can hear the raucous sounds of drunken partying happening nearby. Approaching cautiously, you find a large frat house with numerous boars, hogs and sows partying out on the lawn. All of them are carousing with beer in hand or lustfully fucking one another, or both. Despite the messy state of the pigs, there's something tempting about their carefree partying that draws your attention to watch. You find yourself a little too drawn to watch a well-hung hog fucking a squealing sow and fail to notice one of the messy pigs sneaking up on you. With a lustful squeal, she charges, trying to force herself onto you.";
 	challenge "Messy Pig";
 	say "     That over, you decide to leave before the others have a chance to investigate the commotion, leaving the Phi Iota Gamma fraternity behind. Things are just a little too busy there right now to consider approaching.";
-	change south exit of Greek Street to Phi Iota Gamma;
-	change north exit of Phi Iota Gamma to Greek Street;
+	change east exit of Greek Street to Phi Iota Gamma;
+	change west exit of Phi Iota Gamma to Greek Street;
+	now PigFratRoomConnection is 1; [room connected]
 	now Frat House is resolved;
 
 

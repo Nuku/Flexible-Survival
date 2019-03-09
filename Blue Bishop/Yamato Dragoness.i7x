@@ -738,8 +738,7 @@ to YamatFvore:
 				if a random chance of 1 in 3 succeeds and boundsegment is not 3:
 					increase boundmod by 1;
 				if boundrecover is true:
-					increase humanity of player by 3;
-					if humanity of player > 100, now humanity of player is 100;
+					SanBoost 3;
 					say "     With a brief flash of insight, you're able to find a glimpse of mental clarity within these confines, recovering a small portion of your lost humanity.";
 					now boundrecover is false;
 				else:

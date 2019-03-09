@@ -145,6 +145,8 @@ Cunt Width of Sylvia is 3. [gets stretched a bit by an alpha husky]
 Breasts of Sylvia is 2. [2 nipples]
 Breast Size of Sylvia is 3. [C cup at the start]
 [Basic Interaction states as of game start]
+TwistedCapacity of Sylvia is false. [can take oversized members without pain]
+Sterile of Sylvia is true.
 PlayerMet of Sylvia is false.
 PlayerRomanced of Sylvia is false.
 PlayerFriended of Sylvia is false.
@@ -155,7 +157,7 @@ Virgin of Sylvia is false.
 AnalVirgin of Sylvia is false.
 PenileVirgin of Sylvia is true.
 SexuallyExperienced of Sylvia is true.
-MainInfection of Sylvia is "Border Collie".
+MainInfection of Sylvia is "".
 [Custom Variables]
 hpM of Sylvia is a number that varies. hpM of Sylvia is usually 0.
 hpF of Sylvia is a number that varies. hpF of Sylvia is usually 0.

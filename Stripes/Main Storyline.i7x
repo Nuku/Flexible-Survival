@@ -643,7 +643,7 @@ to say DrMattQuestTalk:
 			now skin of player is skin entry;
 			now body of player is body entry;
 			now cock of player is cock entry;
-			increase humanity of player by 20;
+			SanBoost 20;
 		else:
 			say "     'That is your choice to make,' he says. He seems a little disappointed - not so much in you, but instead that he's not going to get the chance to do science. 'There are a few others who other survivors who have been coming by from time to time. I expect one of them will be eager for the opportunity.' He stores the can away.";
 			say "     'Well, there is something else that was left when the restorative spray was delivered for testing. As I have Orthas here to protect me, I have little need for it. It's not much, but you can take it as thanks for your continued assistance. It should help keep you safe out in the city.' He tosses you a can of pepperspray.";

@@ -247,8 +247,7 @@ to pewterbind:
 							infect;
 					else if a random chance of 1 in 6 succeeds:
 						infect;
-					increase humanity of player by 4;
-					if humanity of player > 100, now humanity of player is 100;
+					SanBoost 4;
 					now boundrecover is false;
 				else:
 					say "     You fight to maintain clarity against their influence, [one of]hissing and caressing you nonetheless[or]their continued affection briefly less effective at arousing you further[or]absorbed in the frenzy of flesh and motion regardless[at random].";

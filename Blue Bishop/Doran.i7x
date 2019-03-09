@@ -399,23 +399,23 @@ When Play begins:
 	now defeated entry is "[Doran_Beat]";
 	now victory entry is "[Doran_Lose]";
 	now desc entry is "[DoranDescription]";
-	now face entry is "now a head described by this text"; [Non-infectious, descriptors assumedly irrelevant.]
-	now body entry is "that of a well-described new form put here";
-	now skin entry is "fur/scales/patterns that now cover your";
-	now tail entry is "Your tail gets a full sentence ending in a period.";
-	now cock entry is "thesaurian";
-	now face change entry is "your head changes in some descriptive manner";
-	now body change entry is "your body takes on a newly described form";
-	now skin change entry is "you gain fur/scales/skin/patterns described herein";
-	now ass change entry is "your tail or ass changes in the manner described by this text";
-	now cock change entry is "it takes on a new, kinky form";
+	now face entry is "draconic in shape, regal maw full of pearly fangs that could shred a would-be thief in a single bite"; [Non-infectious, descriptors assumedly irrelevant.]
+	now body entry is "stocky and covered in tough scales that look as though they could deflect a brave adventurer's sword. On your back, two wings are folded, ready to sent you skyward";
+	now skin entry is "impressive turquoise scales that could distract a pesky archer";
+	now tail entry is "You have a thick, draconic tail that is strong enough to dent the chestplate of a questing knight.";
+	now cock entry is "knotted dragon";
+	now face change entry is "it morphs into a more draconic shape";
+	now body change entry is "it morphs into a more draconic form";
+	now skin change entry is "your body gets covered in shiny turquoise scales";
+	now ass change entry is "it changes into a more draconic shape";
+	now cock change entry is "it takes on a more drconic shape";
 	now str entry is 17;
 	now dex entry is 24;
 	now sta entry is 16;
 	now per entry is 12;
 	now int entry is 20;
 	now cha entry is 16;
-	now sex entry is "nochange";
+	now sex entry is "Male";
 	now HP entry is 105;
 	now lev entry is 16;
 	now wdam entry is 17;
@@ -433,8 +433,8 @@ When Play begins:
 	now loot entry is "";
 	now lootchance entry is 0;
 	now scale entry is 4;
-	now body descriptor entry is "erudite";
-	now type entry is "conceptual";
+	now body descriptor entry is "draconic";
+	now type entry is "draconic";
 	now magic entry is false;
 	now resbypass entry is false;
 	now non-infectious entry is true;
@@ -460,6 +460,32 @@ object	name
 Doran	"Doran"
 
 Doran is a man. Doran is in Rocky Outcropping.
+[Physical details as of game start]
+ScaleValue of Doran is 4. [horse sized]
+SleepRhythm of Doran is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Doran is 1. [1 cock]
+Cock Length of Doran is 18. [18 Inches]
+Cock Width of Doran is 15.
+Testes of Doran is 2. [2 balls]
+Cunts of Doran is 0. [0 pussy]
+Cunt Length of Doran is 0. [X Cunt]
+Cunt Width of Doran is 0. [X Cunt]
+Breasts of Doran is 0. [X nipples]
+Breast Size of Doran is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Doran is false. [can not take oversized members without pain]
+Sterile of Doran is true.
+PlayerMet of Doran is false.
+PlayerRomanced of Doran is false.
+PlayerFriended of Doran is false.
+PlayerControlled of Doran is false.
+PlayerFucked of Doran is false.
+OralVirgin of Doran is true.
+Virgin of Doran is true.
+AnalVirgin of Doran is true.
+PenileVirgin of Doran is true.
+SexuallyExperienced of Doran is false.
+MainInfection of Doran is "Peculiar Dragon".
 the linkaction of Doran is "Possible Actions: [link]talk[as]talk doran[end link], [link]smell[as]smell doran[end link], [link]fuck[as]fuck doran[end link], [link]request[as]request doran[end link], [link]discuss[as]discuss doran[end link][line break]".
 the description of Doran is "[DoranLook]".
 the fuckscene of Doran is "[DoranSex]".
