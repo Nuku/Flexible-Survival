@@ -47,6 +47,32 @@ object	name
 Kyle	"Kyle"
 
 Kyle is a man. The hp of Kyle is usually 0.
+[Physical details as of game start]
+ScaleValue of Kyle is 3. [human sized]
+SleepRhythm of Kyle is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Kyle is 1. [X cock]
+Cock Length of Kyle is 7. [X Inches]
+Cock Width of Kyle is 5.
+Testes of Kyle is 2. [X balls]
+Cunts of Kyle is 0. [X pussy]
+Cunt Length of Kyle is 0. [X Cunt]
+Cunt Width of Kyle is 0. [X Cunt]
+Breasts of Kyle is 0. [X nipples]
+Breast Size of Kyle is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Kyle is false. [can not take oversized members without pain]
+Sterile of Kyle is true.
+PlayerMet of Kyle is false.
+PlayerRomanced of Kyle is false.
+PlayerFriended of Kyle is false.
+PlayerControlled of Kyle is false.
+PlayerFucked of Kyle is false.
+OralVirgin of Kyle is true.
+Virgin of Kyle is true.
+AnalVirgin of Kyle is true.
+PenileVirgin of Kyle is true.
+SexuallyExperienced of Kyle is false.
+MainInfection of Kyle is "".
 The description of Kyle is "[KyleDesc]".
 The conversation of Kyle is { "<This is nothing but a placeholder!>" }.
 The scent of Kyle is "     Kyle smells like scales and paper.".

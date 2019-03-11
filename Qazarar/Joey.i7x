@@ -21,6 +21,32 @@ object	name
 Joey	"Joey"
 
 Joey is a man. The hp of Joey is usually 3.
+[Physical details as of game start]
+ScaleValue of Joey is 3. [human sized]
+SleepRhythm of Joey is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Joey is 1. [X cock]
+Cock Length of Joey is 6. [X Inches]
+Cock Width of Joey is 4.
+Testes of Joey is 2. [X balls]
+Cunts of Joey is 0. [X pussy]
+Cunt Length of Joey is 0. [X Cunt]
+Cunt Width of Joey is 0. [X Cunt]
+Breasts of Joey is 2. [X nipples]
+Breast Size of Joey is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Joey is false. [can not take oversized members without pain]
+Sterile of Joey is true.
+PlayerMet of Joey is false.
+PlayerRomanced of Joey is false.
+PlayerFriended of Joey is false.
+PlayerControlled of Joey is false.
+PlayerFucked of Joey is false.
+OralVirgin of Joey is true.
+Virgin of Joey is true.
+AnalVirgin of Joey is true.
+PenileVirgin of Joey is true.
+SexuallyExperienced of Joey is false.
+MainInfection of Joey is "".
 The libido of Joey is usually 0.
 The description of Joey is "[JoeyDesc]".
 The conversation of Joey is { "<This is nothing but a placeholder!>" }.

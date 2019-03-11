@@ -38,6 +38,8 @@ Cunt Width of Ranae is 2.
 Breasts of Ranae is 2. [2 nipples]
 Breast Size of Ranae is 3. [C cup at the start]
 [Basic Interaction states as of game start]
+TwistedCapacity of Ranae is false. [can not take oversized members without pain]
+Sterile of Ranae is true.
 PlayerMet of Ranae is false.
 PlayerRomanced of Ranae is false.
 PlayerFriended of Ranae is false.

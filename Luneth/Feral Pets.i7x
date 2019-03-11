@@ -59,6 +59,32 @@ object	name
 Snips	"Snips"
 
 Snips is a man.
+[Physical details as of game start]
+ScaleValue of Snips is 1. [human sized]
+SleepRhythm of Snips is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Snips is 1. [X cock]
+Cock Length of Snips is 1. [X Inches]
+Cock Width of Snips is 1.
+Testes of Snips is 2. [X balls]
+Cunts of Snips is 0. [X pussy]
+Cunt Length of Snips is 0. [X Cunt]
+Cunt Width of Snips is 0. [X Cunt]
+Breasts of Snips is 0. [X nipples]
+Breast Size of Snips is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Snips is false. [can not take oversized members without pain]
+Sterile of Snips is true.
+PlayerMet of Snips is false.
+PlayerRomanced of Snips is false.
+PlayerFriended of Snips is false.
+PlayerControlled of Snips is false.
+PlayerFucked of Snips is false.
+OralVirgin of Snips is true.
+Virgin of Snips is true.
+AnalVirgin of Snips is true.
+PenileVirgin of Snips is true.
+SexuallyExperienced of Snips is false.
+MainInfection of Snips is "".
 The description of Snips is "[Snipsdesc]".
 
 instead of sniffing the Cute Crab:
@@ -227,6 +253,32 @@ object	name
 Dinah	"Dinah"
 
 Dinah is a woman.
+[Physical details as of game start]
+ScaleValue of Dinah is 1. [cat sized]
+SleepRhythm of Dinah is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Dinah is 0. [X cock]
+Cock Length of Dinah is 0. [X Inches]
+Cock Width of Dinah is 0.
+Testes of Dinah is 0. [X balls]
+Cunts of Dinah is 1. [X pussy]
+Cunt Length of Dinah is 2. [X Cunt]
+Cunt Width of Dinah is 1. [X Cunt]
+Breasts of Dinah is 6. [X nipples]
+Breast Size of Dinah is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Dinah is false. [can not take oversized members without pain]
+Sterile of Dinah is true.
+PlayerMet of Dinah is false.
+PlayerRomanced of Dinah is false.
+PlayerFriended of Dinah is false.
+PlayerControlled of Dinah is false.
+PlayerFucked of Dinah is false.
+OralVirgin of Dinah is true.
+Virgin of Dinah is true.
+AnalVirgin of Dinah is true.
+PenileVirgin of Dinah is true.
+SexuallyExperienced of Dinah is false.
+MainInfection of Dinah is "".
 The description of Dinah is "[DinahDesc]".
 
 instead of sniffing Dinah:
@@ -419,6 +471,32 @@ object	name
 Chirpy	"Chirpy"
 
 Chirpy is a woman.
+[Physical details as of game start]
+ScaleValue of Chirpy is 1. [parrot sized]
+SleepRhythm of Chirpy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Chirpy is 0. [X cock]
+Cock Length of Chirpy is 0. [X Inches]
+Cock Width of Chirpy is 0.
+Testes of Chirpy is 0. [X balls]
+Cunts of Chirpy is 1. [X pussy]
+Cunt Length of Chirpy is 2. [X Cunt]
+Cunt Width of Chirpy is 1. [X Cunt]
+Breasts of Chirpy is 0. [X nipples]
+Breast Size of Chirpy is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Chirpy is false. [can not take oversized members without pain]
+Sterile of Chirpy is true.
+PlayerMet of Chirpy is false.
+PlayerRomanced of Chirpy is false.
+PlayerFriended of Chirpy is false.
+PlayerControlled of Chirpy is false.
+PlayerFucked of Chirpy is false.
+OralVirgin of Chirpy is true.
+Virgin of Chirpy is true.
+AnalVirgin of Chirpy is true.
+PenileVirgin of Chirpy is true.
+SexuallyExperienced of Chirpy is false.
+MainInfection of Chirpy is "".
 The description of Chirpy is "[ChirpyDesc]".
 
 instead of sniffing Chirpy:
@@ -578,6 +656,32 @@ object	name
 Hobo	"Hobo"
 
 Hobo is a man.
+[Physical details as of game start]
+ScaleValue of Hobo is 2. [dog sized]
+SleepRhythm of Hobo is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Hobo is 1. [X cock]
+Cock Length of Hobo is 6. [X Inches]
+Cock Width of Hobo is 3.
+Testes of Hobo is 2. [X balls]
+Cunts of Hobo is 0. [X pussy]
+Cunt Length of Hobo is 0. [X Cunt]
+Cunt Width of Hobo is 0. [X Cunt]
+Breasts of Hobo is 6. [X nipples]
+Breast Size of Hobo is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Hobo is false. [can not take oversized members without pain]
+Sterile of Hobo is true.
+PlayerMet of Hobo is false.
+PlayerRomanced of Hobo is false.
+PlayerFriended of Hobo is false.
+PlayerControlled of Hobo is false.
+PlayerFucked of Hobo is false.
+OralVirgin of Hobo is true.
+Virgin of Hobo is true.
+AnalVirgin of Hobo is true.
+PenileVirgin of Hobo is true.
+SexuallyExperienced of Hobo is false.
+MainInfection of Hobo is "".
 The description of Hobo is "[HoboDesc]".
 
 instead of sniffing the Helper Dog:

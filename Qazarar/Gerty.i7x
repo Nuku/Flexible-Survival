@@ -24,6 +24,32 @@ object	name
 Gerty	"Gerty"
 
 Gerty is a man. The hp of Gerty is usually 0.
+[Physical details as of game start]
+ScaleValue of Gerty is 3. [human sized]
+SleepRhythm of Gerty is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Gerty is 1. [X cock]
+Cock Length of Gerty is 7. [X Inches]
+Cock Width of Gerty is 5.
+Testes of Gerty is 2. [X balls]
+Cunts of Gerty is 0. [X pussy]
+Cunt Length of Gerty is 0. [X Cunt]
+Cunt Width of Gerty is 0. [X Cunt]
+Breasts of Gerty is 0. [X nipples]
+Breast Size of Gerty is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Gerty is false. [can not take oversized members without pain]
+Sterile of Gerty is true.
+PlayerMet of Gerty is false.
+PlayerRomanced of Gerty is false.
+PlayerFriended of Gerty is false.
+PlayerControlled of Gerty is false.
+PlayerFucked of Gerty is false.
+OralVirgin of Gerty is true.
+Virgin of Gerty is true.
+AnalVirgin of Gerty is true.
+PenileVirgin of Gerty is true.
+SexuallyExperienced of Gerty is false.
+MainInfection of Gerty is "".
 [Gerty will be moved to the Tenvale College Library through Kyle content]
 The description of Gerty is "[GertyDesc]".
 The conversation of Gerty is { "<This is nothing but a placeholder!>" }.
