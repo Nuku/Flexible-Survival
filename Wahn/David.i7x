@@ -388,7 +388,7 @@ Instead of fucking David:
 			if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 				now current menu selection is calcnumber;
 				choose row calcnumber in table of fucking options;
-				say "[title entry]: [description entry]?";
+				say "[title entry]: [description entry]";
 				if player consents:
 					let nam be title entry;
 					clear the screen and hyperlink list;

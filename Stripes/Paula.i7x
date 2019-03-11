@@ -135,11 +135,11 @@ to say paulasurvivors:
 	let infpoppercent be 0;
 	now infpoppercent is ( 100 * PoliceStationTwelveInfpop ) / PoliceStationTwelvePopulation;
 	if PoliceStationTwelvePopulation > 20:
-		say "'I'm actually pretty busy doing regular check-ups on those survivors, mostly monitoring them for infections and so on[if infpoppercent is 100]. They're all pretty much infected with something by this point, but it's still important to monitor their condition to make sure their condition doesn't deteriorate too badly[else]. As of my last check, I'd say they're about [infpoppercent]% of them are more infected than human at this point. It's more a matter of making sure their condition doesn't deteriorate too badly[end if].";
+		say "'I'm actually pretty busy doing regular check-ups on those survivors, mostly monitoring them for infections and so on[if infpoppercent is 100]. They're all pretty much infected with something by this point, but it's still important to monitor their condition to make sure their condition doesn't deteriorate too badly[else]. As of my last check, I'd say that about [infpoppercent]% of them are more infected than human at this point. It's more a matter of making sure their condition doesn't deteriorate too badly[end if].";
 	else if PoliceStationTwelvePopulation > 12:
-		say "'I'm fairly busy doing regular check-ups on the remaining survivors. I'm mostly monitoring them for infections and so on[if infpoppercent is 100]. They're all pretty much infected with something by this point, but it's still important to monitor their condition to make sure their condition doesn't deteriorate too badly[else]. As of my last check, I'd say they're about [infpoppercent]% of them are more infected than human at this point. It's more a matter of making sure their condition doesn't deteriorate too badly[end if].";
+		say "'I'm fairly busy doing regular check-ups on the remaining survivors. I'm mostly monitoring them for infections and so on[if infpoppercent is 100]. They're all pretty much infected with something by this point, but it's still important to monitor their condition to make sure their condition doesn't deteriorate too badly[else]. As of my last check, I'd say that about [infpoppercent]% of them are more infected than human at this point. It's more a matter of making sure their condition doesn't deteriorate too badly[end if].";
 	else:
-		say "'Some of my time's taken up doing regular check-ups on the remaining survivors. I'm mostly monitoring them for infections and so on[if infpoppercent is 100]. They're all pretty much infected with something by this point, but it's still important to monitor their condition to make sure their condition doesn't deteriorate too badly[else]. As of my last check, I'd say they're about [infpoppercent]% of them are more infected than human at this point. It's more a matter of making sure their condition doesn't deteriorate too badly[end if].";
+		say "'Some of my time's taken up doing regular check-ups on the remaining survivors. I'm mostly monitoring them for infections and so on[if infpoppercent is 100]. They're all pretty much infected with something by this point, but it's still important to monitor their condition to make sure their condition doesn't deteriorate too badly[else]. As of my last check, I'd say that about [infpoppercent]% of them are more infected than human at this point. It's more a matter of making sure their condition doesn't deteriorate too badly[end if].";
 
 to say PaulaTalkMenu:
 	say "     There's a few topics you might be able to discuss with Paula. Is there anything in particular on your mind or do you just want to chat?";
@@ -149,7 +149,7 @@ to say PaulaTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "About Her";
 	now sortorder entry is 1;
-	now description entry is "Ask the vixen about herself.";
+	now description entry is "Ask the vixen about herself";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

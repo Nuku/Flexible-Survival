@@ -45,7 +45,7 @@ the conversation of Fancy is { "Grumble!" }.
 The icon of Fancy is Figure of Fancy_icon.
 
 instead of sniffing Fancy:
-	say "Fancy smells like a strong, wilful mare. She smells strongly of sex and arousal, clearly an experienced lover.";
+	say "Fancy smells like a strong, willful mare. She smells strongly of sex and arousal, clearly an experienced lover.";
 
 Section 1 - Talking w/Fancy
 

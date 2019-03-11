@@ -297,7 +297,7 @@ to say WallySexMenu:
 	if player is male:
 		now title entry is "Seduce him";
 		now sortorder entry is 1;
-		now description entry is "Put your moves on him, his cock, and his hole.";
+		now description entry is "Put your moves on him, his cock, and his hole";
 	[]
 	Sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

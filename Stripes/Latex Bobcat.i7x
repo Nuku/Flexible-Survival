@@ -40,7 +40,7 @@ to say LoseToLatexBobcat:
 
 Section 3 - Player Victory
 
-to say BeatThelatexBobcat:
+to say BeatTheLatexBobcat:
 	say "     With only a few blows, you're able to defeat the strange creature. It stumbles back and drops to the ground. It doesn't seem particularly injured, but relents and offers its body to you[if libido of player > 66]. Feeling very aroused, the opportunity to sate your urges is quite strong[else if libido of player > 33]. Feeling pretty aroused, [else]. While not feeling particularly aroused, the opportunity is there should you want to take it[end if]. Shall you make use of this living sextoy for some quick relief?";
 	now sextablerun is 0;
 	blank out the whole of table of fucking options;
@@ -122,7 +122,7 @@ When Play begins:
 	now enemy name entry is "";
 	now enemy type entry is 0; [non-unique enemy]
 	now attack entry is "[one of]The bobcat[or]The feline sextoy[or]The dildonic kitty[or]The kitty sexbot[or]It[as decreasingly likely outcomes] [one of]ends up grinding its vibrating cock against you as it tries to restrain you.[or]strikes you with mechanically-enhanced strength![or]tosses you to the ground in an attempt to pin you beneath it![or]puts on a tantalizing display while showing off [if player is male and a random chance of 1 in 3 succeeds]its molded, cocksucking muzzle[else if player is male and a random chance of 1 in 3 succeeds]its cock-ready back door[else if a random chance of 1 in 2 succeeds]some tricks with its vibro-dick[else]the variable speed settings for its dildo-cock[end if][or]pounces at you, trying to bear you down with remarkable strength for such a little guy.[at random]";
-	now defeated entry is "[BeatThelatexBobcat]"; [ Text when monster loses. ]
+	now defeated entry is "[BeatTheLatexBobcat]"; [ Text when monster loses. ]
 	now victory entry is "[LoseToLatexBobcat]"; [ Text when monster wins. ]
 	now desc entry is "[LatexBobcatDesc]"; [ Description of the creature when you encounter it. ]
 	now face entry is "altered to have the muzzle, ears and cheekruffs of a bobcat[if skinname of player is listed in infections of latexlist]. The latter are formed of latex and are shaped for comfortable gripping when someone is holding your head[end if]. Unless talking or consciously trying to hold it shut, your muzzle is normally open in a rounded shape. Your tongue and the inside of your mouth are firm yet pliant[if skinname of player is listed in infections of LatexList] latex[end if] and lightly textured, making your mouth enjoyably suitable for providing blow jobs";

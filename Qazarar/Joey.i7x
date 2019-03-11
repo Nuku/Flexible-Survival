@@ -258,22 +258,22 @@ to say JoeyTraining: [Training Joey] [{]
 	choose a blank row in table of fucking options;
 	now title entry is "A Latex Fox";
 	now sortorder entry is 1;
-	now description entry is "Test him against an easy creature.";
+	now description entry is "Test him against an easy creature";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A Centaur";
 	now sortorder entry is 2;
-	now description entry is "Test him against a more challenging creature.";
+	now description entry is "Test him against a more challenging creature";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A Feral Wolf";
 	now sortorder entry is 2;
-	now description entry is "Test him against a somewhat dangerous creature.";
+	now description entry is "Test him against a somewhat dangerous creature";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "A Minotaur";
 	now sortorder entry is 2;
-	now description entry is "Test him against a very dangerous creature.";
+	now description entry is "Test him against a very dangerous creature";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

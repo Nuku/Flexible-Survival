@@ -320,7 +320,7 @@ to say hayatosexmenu:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "Do you want to [description entry]?";
+			say "[title entry]: Do you want to [description entry]?";
 			if player consents:
 				let num be sortorder entry;
 				now sextablerun is 1;

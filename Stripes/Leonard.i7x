@@ -391,7 +391,7 @@ to Leonardmatesex:
 			choose a blank row in table of fucking options;
 			now title entry is "Titty Fuck";
 			now sortorder entry is 2;
-			now description entry is "Share the bounty of the pride with him";
+			now description entry is "share the bounty of the pride with him";
 		if player is female:
 			choose a blank row in table of fucking options;
 			now title entry is "Cunnilingus";

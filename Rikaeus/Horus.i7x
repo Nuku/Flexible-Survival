@@ -110,13 +110,13 @@ to say HorusTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Ra";
 	now sortorder entry is 1;
-	now description entry is "Ask him about the named Sun God and why he goes by that title now.";
+	now description entry is "Ask him about the named Sun God and why he goes by that title now";
 	[]
 	if HorusRelationship > 0 and HorusRelationship < 4:
 		choose a blank row in table of fucking options;
 		now title entry is "Darkness";
 		now sortorder entry is 2;
-		now description entry is "Ask him about the growing darkness he has sensed.";
+		now description entry is "Ask him about the growing darkness he has sensed";
 	[]
 	if HorusRelationship is 4 and PlayerMet of Medea is true:
 		choose a blank row in table of fucking options;
@@ -309,7 +309,7 @@ instead of resolving Pediatrics Troublemakers:
 				now PediatricsLoss is 0;
 
 to say PediatricsTroubleFail:
-say "     However suddenly all your energy leaves you and you end up on the ground. Laying on the ground exhausted, you hear chuckling and laughing from behind you. Looking up and around you see the trio pointing at you and sneering in your direction. 'That was pathetic!' one of the leopardmen says. They all send their own insults and jeers towards you before telling you to try better next time before you start to slink off away from them and out of the alley to lick your wounds. Hopefully you can get them next time, cause you really wouldn't want to return to Medea empty-handed. Afterall, she is helping you with the research that you desperately need right now.";
+say "     However suddenly all your energy leaves you and you end up on the ground. Laying on the ground exhausted, you hear chuckling and laughing from behind you. Looking up and around you see the trio pointing at you and sneering in your direction. 'That was pathetic!' one of the leopardmen says. They all send their own insults and jeers towards you before telling you to try better next time before you start to slink off away from them and out of the alley to lick your wounds. Hopefully you can get them next time, because you really wouldn't want to return to Medea empty-handed. After all, she is helping you with the research that you desperately need right now.";
 
 instead of navigating Pediatrics Lobby while HorusRelationship is 7:
 		say "[NavCheck Pediatrics Lobby]";

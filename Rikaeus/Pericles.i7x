@@ -221,12 +221,12 @@ to say PericlesTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Pre Apocalypse";
 	now sortorder entry is 1;
-	now description entry is "Ask him what his life was before the apocalypse.";
+	now description entry is "Ask him what his life was before the apocalypse";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Current College Life";
 	now sortorder entry is 2;
-	now description entry is "Ask him about his current college life.";
+	now description entry is "Ask him about his current college life";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

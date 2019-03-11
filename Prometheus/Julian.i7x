@@ -109,17 +109,17 @@ to say JulianTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Himself";
 	now sortorder entry is 1;
-	now description entry is "Try to learn more about the black wolf.";
+	now description entry is "Try to learn more about the black wolf";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Family";
 	now sortorder entry is 2;
-	now description entry is "Ask about his family.";
+	now description entry is "Ask about his family";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Friends";
 	now sortorder entry is 3;
-	now description entry is "Ask about his friends.";
+	now description entry is "Ask about his friends";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

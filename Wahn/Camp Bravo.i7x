@@ -79,19 +79,19 @@ Instead of resolving a Back at the Camp:
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "(Lie) Say you're a special agent here to check on their progress.";
+	now title entry is "(Lie) Say you're a special agent here to check on their progress";
 	now sortorder entry is 1;
-	now description entry is "Lie your way into the camp.";
+	now description entry is "Lie your way into the camp";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Ask if they can spare any supplies.";
+	now title entry is "Ask if they can spare any supplies";
 	now sortorder entry is 2;
-	now description entry is "Ask them nicely for some supplies.";
+	now description entry is "Ask them nicely for some supplies";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Turn around and go.";
+	now title entry is "Turn around and go";
 	now sortorder entry is 3;
-	now description entry is "Leave the camp for now.";
+	now description entry is "Leave the camp for now";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -108,11 +108,11 @@ Instead of resolving a Back at the Camp:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "(Lie) Say you're a special agent here to check on their progress."):
+				if (nam is "(Lie) Say you're a special agent here to check on their progress"):
 					say "[GuardLie]";
-				if (nam is "Ask if they can spare any supplies."):
+				if (nam is "Ask if they can spare any supplies"):
 					say "[GuardBeg]";
-				if (nam is "Leave the camp for now."):
+				if (nam is "Leave the camp for now"):
 					say "[GuardLeave]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -310,42 +310,42 @@ instead of conversing Major Padgett:
 	blank out the whole of table of fucking options;
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Congratulate him on his work.";
+	now title entry is "Congratulate him on his work";
 	now sortorder entry is 1;
-	now description entry is "Butter him up a bit.";
+	now description entry is "Butter him up a bit";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Explain to him that he's been tricked.";
+	now title entry is "Explain to him that he's been tricked";
 	now sortorder entry is 2;
-	now description entry is "Tell him the minotaur story was a hoax.";
+	now description entry is "Tell him the minotaur story was a hoax";
 	[]
 	if CampBravoWomenAllowed is 0:
 		choose a blank row in table of fucking options;
-		now title entry is "Talk him into letting women fuck the minotaur.";
+		now title entry is "Talk him into letting women fuck the minotaur";
 		now sortorder entry is 3;
-		now description entry is "Convince him to let the minotaur breed female soldiers.";
+		now description entry is "Convince him to let the minotaur breed female soldiers";
 	[]
 	if HP of David is 2:
 		choose a blank row in table of fucking options;
-		now title entry is "Ask to have David taken of the minotaur breeding list.";
+		now title entry is "Ask to have David taken of the minotaur breeding list";
 		now sortorder entry is 4;
-		now description entry is "Convince him to make David a liaison to you.";
+		now description entry is "Convince him to make David a liaison to you";
 	[]
 	if thirst of Military Radio is 1:
 		choose a blank row in table of fucking options;
-		now title entry is "Ask about the radio.";
+		now title entry is "Ask about the radio";
 		now sortorder entry is 5;
-		now description entry is "Ask him about the strange transmissions.";
+		now description entry is "Ask him about the strange transmissions";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Ask him to repeat his briefing.";
+	now title entry is "Ask him to repeat his briefing";
 	now sortorder entry is 6;
-	now description entry is "Another briefing.";
+	now description entry is "Another briefing";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Excuse yourself and break off the conversation.";
+	now title entry is "Excuse yourself and break off the conversation";
 	now sortorder entry is 7;
-	now description entry is "Stop talking.";
+	now description entry is "Stop talking";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -362,19 +362,19 @@ instead of conversing Major Padgett:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if (nam is "Congratulate him on his work."):
+				if (nam is "Congratulate him on his work"):
 					say "[MajorBrownnose]";
-				if (nam is "Explain to him that he's been tricked."):
+				if (nam is "Explain to him that he's been tricked"):
 					say "[MajorPartypooper]";
-				if (nam is "Talk him into letting women fuck the minotaur."):
+				if (nam is "Talk him into letting women fuck the minotaur"):
 					say "[MajorBreeding]";
-				if (nam is "Ask to have David taken of the minotaur breeding list."):
+				if (nam is "Ask to have David taken of the minotaur breeding list"):
 					say "[MajorDavid]";
-				if (nam is "Ask about the radio."):
+				if (nam is "Ask about the radio"):
 					say "[MajorRadio]";
-				if (nam is "Ask him to repeat his briefing."):
+				if (nam is "Ask him to repeat his briefing"):
 					say "[MajorBriefing]";
-				if (nam is "Excuse yourself and break off the conversation."):
+				if (nam is "Excuse yourself and break off the conversation"):
 					say "[MajorLeave]";
 				wait for any key;
 		else if calcnumber is 0:
@@ -459,7 +459,7 @@ to say CampBravoRadioTalk:
 		say "     'You're in Camp Bravo? Excellent, we've been trying to reach you for days now. Now listen - this is important - you have to send two squads of men immediately to the capitol building. There they should strip naked and dance around in a circle to pacify the infected in the area. Do you copy those instructions?'";
 		now thirst of Military Radio is 1;
 	else:
-		say "     '[one of]The number you have dialed is busy. If you want to leave a message, please speak after the beep. BEEEP!'[or]New order to everyone - bring all unspoiled food that contains chocolate you can find to the corner building of Main Street and 5th. Deposit it inside the house and leave the area.'[or]What's going on with you in that city? We've had half-changed soldiers stumbling out to the quarantine barrier babbling something about special transport duties...'[or]...then put the turkey in the oven. And don't forget to bast it regularly with the juices collecting in the dish. You don't want the meat to dry out...'[or]Delta squad, proceed through to the end of the street, no hostiles in sight.'[or]Our researchers have figured out how to turn the nanites off. The signal is has already been sent. You can stop injecting your daily immunity boosters now.'[or]You won't believe how good those husky bitches can give head. Absolutely amazing - why don't you go find one and try it?'[at random]";
+		say "     '[one of]The number you have dialed is busy. If you want to leave a message, please speak after the beep. BEEEP!'[or]New order to everyone - bring all unspoiled food that contains chocolate you can find to the corner building of Main Street and 5th. Deposit it inside the house and leave the area.'[or]What's going on with you in that city? We've had half-changed soldiers stumbling out to the quarantine barrier babbling something about special transport duties...'[or]...then put the turkey in the oven. And don't forget to baste it regularly with the juices collecting in the dish. You don't want the meat to dry out...'[or]Delta squad, proceed through to the end of the street, no hostiles in sight.'[or]Our researchers have figured out how to turn the nanites off. The signal is has already been sent. You can stop injecting your daily immunity boosters now.'[or]You won't believe how good those husky bitches can give head. Absolutely amazing - why don't you go find one and try it?'[at random]";
 
 
 [ thirst states of Elaine                                            ]
@@ -581,7 +581,7 @@ to say CampBravoElaineTalk:
 				if (nam is "Proposition Elaine Scott for sex"):
 					say "[ElaineFucking]";
 				if (nam is "Do nothing, turn away"):
-					say "     You wave Elaine Scott off as she looks at you inquisitively and turn away";
+					say "     You wave Elaine Scott off as she looks at you inquisitively and turn away.";
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -612,7 +612,7 @@ to say ElaineUniform:
 		if scalevalue of player is 1: [tiny]
 			say "     The female quartermaster takes one look at you and replies, 'You're kidding, right? I pride myself on having a well-stocked inventory, but the US army just isn't in the habit of making child- or doll-sized uniforms.'";
 		else if scalevalue of player is 2: [small]
-			say "     The quartermaster glances at your form and then strides over to a nearby shelf, selecting several articles of clothing and a pair of boots. 'This is the best I can do, with your small size. Some things may be rather looks, but I'm sure you'll be able to manage, right?' She doesn't actually wait for an anser, just handing you the stack of gear right away.";
+			say "     The quartermaster glances at your form and then strides over to a nearby shelf, selecting several articles of clothing and a pair of boots. 'This is the best I can do, with your small size. Some things may be rather looks, but I'm sure you'll be able to manage, right?' She doesn't actually wait for an answer, just handing you the stack of gear right away.";
 			Linebreak;
 			UniformHandout;
 		else if scalevalue of player is 3: [normal]
@@ -620,7 +620,7 @@ to say ElaineUniform:
 			Linebreak;
 			UniformHandout;
 		else if scalevalue of player is 4: [big]
-			say "     The quartermaster glances at your form and then strides over to a nearby shelf, selecting several articles of clothing and a pair of boots. 'Now then, this should mostly fit you, even if it will be a bit snug. I'm sure you'll be able to manage, right?' She doesn't actually wait for an anser, just handing you the stack of gear right away.";
+			say "     The quartermaster glances at your form and then strides over to a nearby shelf, selecting several articles of clothing and a pair of boots. 'Now then, this should mostly fit you, even if it will be a bit snug. I'm sure you'll be able to manage, right?' She doesn't actually wait for an answer, just handing you the stack of gear right away.";
 			Linebreak;
 			UniformHandout;
 		else: [giant]
@@ -957,7 +957,7 @@ to say CampBravoFuckTTMale:
 
 to say CampBravoFuckTTFemale:
 	if thirst of Elaine is 4:[first time]
-		say "     Requesting another go at topping Tiny Tim, you suggest a group of the females this time. The sergeant is a little surprised at first by this, but quickly grabs his list of candidates. 'I... hadn't considered that[if lust of Tiny Tim > 1]. Given how all the other times had been gay orgies, [else]. I'd been thinking in terms of the men only for that method[end if]. But you're right, that'd certainly help with breeding the females as well. There are some women who haven't had their round with the big guy yet, as well as some who've even been requesting a second go. I've been denying the latter to keep us going through the main collection process. A round with you helping would let us get through a bunch of them in short order. If you know someone who can take the starting spot, I can definitely get a queue ready.' He grows increasingly eager (and hard) as he talks to you, heading out to gather the female soldiers when you assure him you've got a starter already lined up.";
+		say "     Requesting another go at topping Tiny Tim, you suggest a group of the females this time. The sergeant is a little surprised at first by this, but quickly grabs his list of candidates. 'I... hadn't considered that[if lust of Tiny Tim > 1], given how all the other times had been gay orgies[else]. I'd been thinking in terms of the men only for that method[end if], but you're right, that'd certainly help with breeding the females as well. There are some women who haven't had their round with the big guy yet, as well as some who've even been requesting a second go. I've been denying the latter to keep us going through the main collection process. A round with you helping would let us get through a bunch of them in short order. If you know someone who can take the starting spot, I can definitely get a queue ready.' He grows increasingly eager (and hard) as he talks to you, heading out to gather the female soldiers when you assure him you've got a starter already lined up.";
 		WaitLineBreak;
 		say "     You head across the parade grounds to the quartermaster's tent. Elaine's got a group of male soldier's prepping for their round with the minotaur, things having again gotten hot and heated. The sight derails you momentarily as you watch the buff guys lubing each other up and practicing with their assigned toys with considerable enthusiasm. You watch for a couple of minutes before remembering the reason you came and slip quietly over to talk to Elaine. Whispering to her that a female group romp with Tiny Tim's been arranged and that you want her to take the lead spot, she replies with an enthusiastic 'Hell yes!' before addressing the soldiers.";
 		say "     'Alright, men. It seems you guys have been given a short reprieve. I heartily recommend you use that time to continue your training. The more you're used to it and can stretch yourselves out, the better time you'll have of it. I know this special duty is unusual, but it doesn't mean you can't enjoy the assignment.' They respond with a hearty 'Yes, ma'am!' and get back to their lustful training. With them taken care of, Elaine grabs some things and heads out with you to the hitching post.";

@@ -192,40 +192,40 @@ to say SylviaTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Herself";
 	now sortorder entry is 1;
-	now description entry is "Try to learn more about the collie girl.";
+	now description entry is "Try to learn more about the collie girl";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Family";
 	now sortorder entry is 2;
-	now description entry is "Ask about her family.";
+	now description entry is "Ask about her family";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Friends";
 	now sortorder entry is 3;
-	now description entry is "Ask about her friends.";
+	now description entry is "Ask about her friends";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Hobbies";
 	now sortorder entry is 4;
-	now description entry is "Ask what she does for fun.";
+	now description entry is "Ask what she does for fun";
 	[]
 	If SylviaConv > 3:
 		choose a blank row in table of fucking options;
 		now title entry is "Her interest in biology";
 		now sortorder entry is 5;
-		now description entry is "Find out about where her interest in biology came from.";
+		now description entry is "Find out about where her interest in biology came from";
 	[]
 	If (hp of Sylvia > 5) or (hpM of Sylvia > 4) or (hpF of Sylvia > 4):
 		choose a blank row in table of fucking options;
 		now title entry is "Help with research";
 		now sortorder entry is 6;
-		now description entry is "Take Sylvia to see someone willing to help her research.";
+		now description entry is "Take Sylvia to see someone willing to help her research";
 	[]
 	If SylviaTrapVar > 0:
 		choose a blank row in table of fucking options;
 		now title entry is "Trap Expertise";
 		now sortorder entry is 7;
-		now description entry is "Ask her how she knows how to make such effective traps.";
+		now description entry is "Ask her how she knows how to make such effective traps";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -1021,7 +1021,7 @@ to CheatsRetributionEvent: [Ethan's Punishment]
 	say "     [bold type]Do you wish to be witness to Ethan's punishment?[roman type][line break]";
 	LineBreak;
 	say "     ([link]Y[as]y[end link]) - Yes. You are curious to see what Sylvia has prepared for him.";
-	say "     ([link]N[as]n[end link]) - No. While you won't interfere, you are concerned that Sylvia may be going to far.";
+	say "     ([link]N[as]n[end link]) - No. While you won't interfere, you are concerned that Sylvia may be going too far.";
 	if player consents: [See the punishment]
 		say "     'Well then. Now that the gang's all here, how about I reveal what I have concocted? Ethan will be going to the campus sauna in just under an hour, a ritual he has done for the last few days. He should be alone, allowing me to teach him a lesson for how he treated Chloe without risking harming anyone else. I have placed several traps for him which you will see when they are sprung. I don't want to ruin the surprise, but they are quite varied. If all goes well, he will emerge a better person for it. You are all here to observe. There is nothing any of you are required to do as most of it is automated. The bits that aren't, I have a remote for, courtesy of the twins and several hardware shops. Just to give us plenty of time to prepare, we'll head there now and make sure we are sufficiently hidden.";
 		say "     The walk through the college is uneventful, though your group gets a few curious glances from people as you pass. The twins chuckle mischievously together, Sylvia and Julian talk in hushed tones, and Chloe gives the occasional admiring glance at them. Hidden behind the gym, you reach the sauna, the area seemingly quiet. 'When we go in, make sure not to stand on any mats, I've modified some of them,' the collie says. 'There is a side room that I prepared for us to watch Ethan get his just desserts through some miniature cameras that I installed.' Sylvia brings up the rear as you enter the building, the cats apparently knowing where you are supposed to be going. The canine student carefully drags some suspiciously lush mats away from the walls and into the path of anyone heading to the sauna room. Julian sticks his head around the corner and loudly whispers, 'You should hurry up. If he's early, you don't want to get caught.'";
