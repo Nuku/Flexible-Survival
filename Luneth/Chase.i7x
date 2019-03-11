@@ -84,21 +84,32 @@ object	name
 Chase	"Chase"
 
 Chase is a man.
+[Physical details as of game start]
 ScaleValue of Chase is 3. [human sized]
 SleepRhythm of Chase is 0. [0 = awake at all times, 1 = awake in the day, 2 = awake at night]
 Cocks of Chase is 1. [cock]
 Cock Length of Chase is 8. [cock length]
-Cock Width of Chase is 2. [ball size]
-Testes of Chase is 0. [no balls]
+Cock Width of Chase is 5. [ball size]
+Testes of Chase is 2. [no balls]
 Cunts of Chase is 0. [no pussy]
 Cunt Length of Chase is 0. []
 Cunt Width of Chase is 0. []
 Breasts of Chase is 2. [2 nipples]
 Breast Size of Chase is 0. [flat]
 Humanity of Chase is 60.
+[Basic Interaction states as of game start]
+TwistedCapacity of Chase is false. [can not take oversized members without pain]
+Sterile of Chase is false.
+PlayerMet of Chase is false.
+PlayerRomanced of Chase is false.
+PlayerFriended of Chase is false.
+PlayerControlled of Chase is false.
+PlayerFucked of Chase is false.
 OralVirgin of Chase is false.
 Virgin of Chase is false.
 AnalVirgin of Chase is true.
+SexuallyExperienced of Chase is true.
+MainInfection of Chase is "Tiger".
 
 The description of Chase is "[ChaseDesc]".
 The conversation of Chase is { "mew" }.

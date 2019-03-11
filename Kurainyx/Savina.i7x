@@ -26,6 +26,32 @@ object	name
 Savina	"Savina"
 
 Savina is a woman.
+[Physical details as of game start]
+ScaleValue of Savina is 5. [Giant Snake sized]
+SleepRhythm of Savina is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Savina is 0. [X cock]
+Cock Length of Savina is 0. [X Inches]
+Cock Width of Savina is 0.
+Testes of Savina is 0. [X balls]
+Cunts of Savina is 0. [X pussy]
+Cunt Length of Savina is 0. [X Cunt]
+Cunt Width of Savina is 0. [X Cunt]
+Breasts of Savina is 0. [X nipples]
+Breast Size of Savina is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Savina is false. [can not take oversized members without pain]
+Sterile of Savina is true.
+PlayerMet of Savina is false.
+PlayerRomanced of Savina is false.
+PlayerFriended of Savina is false.
+PlayerControlled of Savina is false.
+PlayerFucked of Savina is false.
+OralVirgin of Savina is true.
+Virgin of Savina is true.
+AnalVirgin of Savina is true.
+PenileVirgin of Savina is true.
+SexuallyExperienced of Savina is false.
+MainInfection of Savina is "".
 
 when play begins:
 	add Abandoned Camp to badspots of girl;

@@ -15,6 +15,7 @@ object	name
 Aster	"Aster"
 
 Aster is a man.
+[Physical details as of game start]
 ScaleValue of Aster is 4. [above human sized]
 SleepRhythm of Aster is 1. [day active]
 Cocks of Aster is 1.
@@ -26,6 +27,9 @@ Cunt Length of Aster is 0.
 Cunt Width of Aster is 0.
 Breasts of Aster is 2.
 Breast Size of Aster is 0.
+[Basic Interaction states as of game start]
+TwistedCapacity of Aster is false. [can not take oversized members without pain]
+Sterile of Aster is true.
 PlayerMet of Aster is false.
 PlayerRomanced of Aster is false.
 PlayerFriended of Aster is false.
@@ -36,6 +40,7 @@ Virgin of Aster is true.
 AnalVirgin of Aster is true.
 PenileVirgin of Aster is true.
 SexuallyExperienced of Aster is false.
+MainInfection of Aster is "".
 Aster is nowhere.
 The description of Aster is "[AsterDesc]".
 The conversation of Aster is { "<This is nothing but a placeholder!>" }.

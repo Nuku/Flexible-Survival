@@ -127,6 +127,8 @@ Cunt Width of Sandra is 6.
 Breasts of Sandra is 2.
 Breast Size of Sandra is 4.
 [Basic Interaction states as of game start]
+TwistedCapacity of Sandra is false. [can not take oversized members without pain]
+Sterile of Sandra is false.
 PlayerMet of Sandra is false.
 PlayerRomanced of Sandra is false.
 PlayerFriended of Sandra is false.

@@ -14,6 +14,32 @@ object	name
 Zeke	"Zeke"
 
 Zeke is a man. The hp of Zeke is usually 0.
+[Physical details as of game start]
+ScaleValue of Zeke is 3. [human sized]
+SleepRhythm of Zeke is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Zeke is 1. [X cock]
+Cock Length of Zeke is 7. [X Inches]
+Cock Width of Zeke is 5.
+Testes of Zeke is 2. [X balls]
+Cunts of Zeke is 0. [X pussy]
+Cunt Length of Zeke is 0. [X Cunt]
+Cunt Width of Zeke is 0. [X Cunt]
+Breasts of Zeke is 2. [X nipples]
+Breast Size of Zeke is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Zeke is false. [can not take oversized members without pain]
+Sterile of Zeke is false.
+PlayerMet of Zeke is false.
+PlayerRomanced of Zeke is false.
+PlayerFriended of Zeke is false.
+PlayerControlled of Zeke is false.
+PlayerFucked of Zeke is false.
+OralVirgin of Zeke is true.
+Virgin of Zeke is true.
+AnalVirgin of Zeke is true.
+PenileVirgin of Zeke is true.
+SexuallyExperienced of Zeke is false.
+MainInfection of Zeke is "Anthro Fox".
 The description of Zeke is "[ZekeDesc]".
 The conversation of Zeke is { "<This is nothing but a placeholder!>" }.
 The scent of Zeke is "     Zeke smells like a little bit musky and furry, kinda like a humanoid fox is always bound to be.".
