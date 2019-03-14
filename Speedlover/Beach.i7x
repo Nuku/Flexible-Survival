@@ -89,9 +89,12 @@ to say RestaurantDesc:
 instead of sniffing the Restaurant:
 	say "     The restaurant smells of hamburgers, French fries, and many other kinds of foods, something that makes your stomach rumble.";
 
-Rat Twins Stash is a container. It is closed. The description of Rat Twins Stash is "[RatTwinsTapeGet]".
+Rat Twins Stash is a container in Restaurant. It is closed. 
 
 Instead of opening Rat Twins Stash:
+	say "[RatTwinsTapeGet]";
+
+Instead of examining the Rat Twins Stash:
 	say "[RatTwinsTapeGet]";
 
 to say RatTwinsTapeGet:
@@ -104,7 +107,7 @@ to say RatTwinsTapeGet:
 		say "[if HP of Erin >= 2]You grab the tape while the twins are distracted by one of the patrons of the restaurant coming to chat with them[else]You grab the tape while no one is here to watch you[end if].";
 		say "[bold type]Rat Twin Tape has been added to your tape inventory![roman type][line break]";
 		add "Rat Twin Tape" to tapes of player;
-
+		now Rat Twins Stash is nowhere;
 
 [Public Beach]
 Public Beach is below Boardwalk2.
