@@ -1083,48 +1083,48 @@ to say AmySexMenu:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her blow your cock";
 		now sortorder entry is 1;
-		now description entry is "Put the husky's mouth to good use.";
+		now description entry is "Put the husky's mouth to good use";
 	[]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Have her lick your pussy";
 		now sortorder entry is 2;
-		now description entry is "Put the husky's mouth to good use.";
+		now description entry is "Put the husky's mouth to good use";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Finger her pussy";
 	now sortorder entry is 3;
-	now description entry is "Finger-fuck Amy's pussy to make her cum.";
+	now description entry is "Finger-fuck Amy's pussy to make her cum";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Fuck her pussy";
 		now sortorder entry is 4;
-		now description entry is "Fill the husky bitch with your cock.";
+		now description entry is "Fill the husky bitch with your cock";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
 		now title entry is "Take Amy's ass";
 		now sortorder entry is 5;
-		now description entry is "Fill the husky bitch's ass with your cock.";
+		now description entry is "Fill the husky bitch's ass with your cock";
 	[]
 	if (player is male and thirst of Amy is 1 and Xerxes is in the Grey Abbey Library):
 		choose a blank row in table of fucking options;
 		now title entry is "Have a threesome with Amy and Xerxes";
 		now sortorder entry is 6;
-		now description entry is "Have sex with both your human dog and horny husky.";
+		now description entry is "Have sex with both your human dog and horny husky";
 	[]
 	if (player is male and level of Amy is 1 and felinoid companion is tamed):
 		choose a blank row in table of fucking options;
 		now title entry is "Have a threesome with Amy and Klauz";
 		now sortorder entry is 7;
-		now description entry is "Have sex with both your felinoid companion and horny husky.";
+		now description entry is "Have sex with both your felinoid companion and horny husky";
 	[]
 	if (player is male and XP of Amy is 1 and Fang is in the Grey Abbey Library):
 		choose a blank row in table of fucking options;
 		now title entry is "Have a threesome with Amy and Fang";
 		now sortorder entry is 8;
-		now description entry is "Have sex with both the black wolf and horny husky.";
+		now description entry is "Have sex with both the black wolf and horny husky";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

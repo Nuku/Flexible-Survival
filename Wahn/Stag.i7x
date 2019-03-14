@@ -100,37 +100,37 @@ to say Stag loses:
 	[]
 	if HP of Mike is 0: [last chance to switch to friendly mode]
 		choose a blank row in table of fucking options;
-		now title entry is "Demand that he sets free the woman he's brainwashed to act as a dog.";
+		now title entry is "Free Lea";
 		now sortorder entry is 1;
-		now description entry is "Free Lea.";
+		now description entry is "Demand that he sets free the woman he's brainwashed to act as a dog";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Suck him off.";
+	now title entry is "Suck him off";
 	now sortorder entry is 2;
-	now description entry is "Blow him.";
+	now description entry is "Blow him";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Have him suck you off.";
+		now title entry is "Have him suck you off";
 		now sortorder entry is 3;
-		now description entry is "Get a blow-job.";
+		now description entry is "Get a blow-job";
 	[]
 	if player is female:
 		choose a blank row in table of fucking options;
-		now title entry is "Ride his cock with your pussy.";
+		now title entry is "Ride his cock with your pussy";
 		now sortorder entry is 4;
-		now description entry is "Let the stag breed you.";
+		now description entry is "Let the stag breed you";
 	[]
 	choose a blank row in table of fucking options;
-	now title entry is "Get his cock in your ass.";
+	now title entry is "Get his cock in your ass";
 	now sortorder entry is 5;
-	now description entry is "Let the stag fill your ass with his seed.";
+	now description entry is "Let the stag fill your ass with his seed";
 	[]
 	if player is male:
 		choose a blank row in table of fucking options;
-		now title entry is "Take the stag's ass.";
+		now title entry is "Take the stag's ass";
 		now sortorder entry is 6;
-		now description entry is "Fill him with your cock.";
+		now description entry is "Fill him with your cock";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -147,20 +147,20 @@ to say Stag loses:
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;
-				if nam is "Demand that he sets free the woman he's brainwashed to act as a dog.":
+				if nam is "Free Lea":
 					say "     The stag's eyes get big and he replies 'What the fuck? You think I'm one of those creeps that makes people forget their humanity? Hell no - Lea and the others are actual dogs, man. I'm a professional animal trainer - or was, before this chaos. But then one morning I started sprouting fur. And when I checked on my dogs, they were becoming human. Soon I had a kennel full of humans with the minds of my dogs in them. They may look different, but they're still animals inside and need a master to care for them - and their new form is permanent as it turns out. They won't change again...'";
 					say "     'So you thought I had enslaved Lea, and I thought you were just a feral looking for something to fuck. Two of the few sane people in the town beating each other up - Hah. How about we forget this silly fighting ever happened?' He offers you his hand and you accept and shake it. Saying 'I'm Mike, by the way. See you later, under friendlier circumstances I hope.' he walks away.";
 					now HP of Mike is 98;
 					now Dog Walking is active;
-				else if (nam is "Suck him off."):
+				else if (nam is "Suck him off"):
 					say "[MikeSex1]";
-				else if (nam is "Have him suck you off."):
+				else if (nam is "Have him suck you off"):
 					say "[MikeSex2]";
-				else if (nam is "Ride his cock with your pussy."):
+				else if (nam is "Ride his cock with your pussy"):
 					say "[MikeSex3]";
-				else if (nam is "Get his cock in your ass."):
+				else if (nam is "Get his cock in your ass"):
 					say "[MikeSex4]";
-				else if (nam is "Take the stag's ass."):
+				else if (nam is "Take the stag's ass"):
 					say "[MikeSex5]";
 				if HP of Mike is 0: [if the player hasn't selected talking above and set the HP to 98 by now, Mike will be permanently hostile (99)]
 					now HP of mike is 99;

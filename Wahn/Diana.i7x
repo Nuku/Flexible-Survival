@@ -119,14 +119,14 @@ Instead of resolving a Dressing Room Crisis:
 
 Table of GameEventIDs (continued)
 Object	Name
-Mall Optitian	"Mall Optitian"
+Mall Optician	"Mall Optician"
 
-Mall Optitian is a situation.
-The Prereq1 of Mall Optitian is Dressing Room Crisis.
-The Prereq1Resolution of Mall Optitian is { 1, 2 }.
-The sarea of Mall Optitian is "Smith Haven".
+Mall Optician is a situation.
+The Prereq1 of Mall Optician is Dressing Room Crisis.
+The Prereq1Resolution of Mall Optician is { 1, 2 }.
+The sarea of Mall Optician is "Smith Haven".
 
-Instead of resolving a Mall Optitian:
+Instead of resolving a Mall Optician:
 	say "     Strolling through the hallways of the expansive Smith Haven Mall, your way brings you to the west wing and you remember what Diana said about living in an optician store somewhere hereabouts. Checking out one of the large floor-plans of the mall standing a certain places, you figure out just where you need to go and swing by to check the place out. Soon, you see the glass front of the store a little distance ahead, its doors open and a number of people visible inside. For a second, you think you're in the wrong place after all, as the men and women inside all seem to be senior citizens in the beginning states of transformation: mostly showing some characteristics of dog- and cat-morphs, but you can also see one woman with rainbow-colored feathers lining the sides of her arms. Then suddenly, Diana comes into sight, stepping out behind a large display of sunglasses, together with an old woman who has white fur like a Siamese cat, pointy feline ears and a long tail.";
 	say "     Walking closer, you overhear the old woman say, '...hope you'll have fun at the bookstore sweetie. Maybe you'll meet some new friends too.' Leaning forward, the pats Diana's head and kisses her forehead, smiling as the young woman replies, 'Maybe I will Nana. See you later.' The happy young woman walks out of the store after that, quickly spotting you and coming up to you with a smile on her face. An eye-blink later, you find yourself embraced by the feline/human/gryphon hybrid girl, and she says, 'Hello[if player is not defaultnamed] [name of player][end if], what a nice surprise to see you again! Come on, let's go to the bookstore together!' Before you really know what's going on, Diana has already dragged you along with her, leaving the optician (and especially its various inhabitants that were giving you curious glances) behind.";
 	WaitLineBreak;
@@ -194,9 +194,9 @@ to say DianaTalkMenu:
 		else if calcnumber is 0:
 			now sextablerun is 1;
 			say "     You tell the young woman that you don't have time to hang out with her right now and say your goodbyes.";
-			now Mall Optitian is resolved;
-			if Resolution of Mall Optitian is 0:
-				now Resolution of Mall Optitian is 1; [just talk]
+			now Mall Optician is resolved;
+			if Resolution of Mall Optician is 0:
+				now Resolution of Mall Optician is 1; [just talk]
 			wait for any key;
 		else:
 			say "Invalid Option. Pick between 1 and [the number of filled rows in the table of fucking options] or 0 to exit.";
@@ -223,8 +223,8 @@ to say DianaTalk4: [hang out at the bookstore]
 	say "     You accompany Diana to the East Wing of the Smith Haven Mall and go into Brookstone Books together The bookstore is a nice little oasis of peace in the midst of the bustling mall and the chaos-ridden city, allowing the two of you to browse and talk about books, your lives and the world in general. Overall, you have a fun and relaxing time together, making you feel more in touch with your humanity than before. When you come out of the bookstore again hours later, smiling and laughing, Diana gives you a tight hug, then waves goodbye and leaves for her current home.";
 	SanBoost 15;
 	follow the turnpass rule; [time advanced]
-	now Mall Optitian is resolved;
-	now Resolution of Mall Optitian is 2; [hung out at the book store]
+	now Mall Optician is resolved;
+	now Resolution of Mall Optician is 2; [hung out at the book store]
 
 to say DianaOral1: [Eat her out in public]
 	say "     Stepping up close to Diana, you gently push her back against the wall and tell her in a teasing tone that you got another idea what you could do together. The young woman looks surprised, but at the same time intrigued by the sudden implication of a more racy way to pass the time. 'Oh, what's that?' the young woman asks with a smile on her face and one eyebrow raised. In reply, you just grin and sink to your knees, hooking your fingers over the elastic of her skirt and pulling it down and exposing her panties. 'What?! You can't do that here! Someone might -' Diana's shocked outburst is interrupted by a high-pitched gasp as you pull her panties down too and move to lap your tongue over her nether lips. 'Oh god, yes!' she pants loudly as the tip of your tongue plays with her clit a few seconds, then draws back from her exposed sex.";
@@ -256,7 +256,7 @@ to say DianaOral1: [Eat her out in public]
 		say "     Diana happily accepts your words and viewpoint, still eager to put a lot of faith in the person she met only a little while ago and let claim her virginity. Arms wrapping around you, the naked young woman gives you a tight hug and says, 'Thank you so much. I'll take those words to heart. And... this was fun. A bit scandalous, but I kinda like that, if I think about it now.' Turning her head to look over to the spectators still watching the two of you, Diana hesitates for a second, then finds her voice and calls out, 'Okay, show's over folks. Go about your business.' With that said, she quickly collects her clothes from the ground and gets dressed again, with the little group of voyeurs melting away before much longer. 'You're amazing, you know that?' Diana says with a happy smile, then leans in to kiss you on the lips before stroking your cheek. 'I think I'll need some alone-time in the bookstore now to calm down from all of this. Can't come back to Nana and the others too soon, and smelling all aroused. See you soon.' With that said, Diana gives you a little wave of goodbye and walks out of the side passage.";
 		now DianaTransformationProgress is 2; [gryphon/cat transformations met, starting to overlap]
 	now DianaRelationship is 11; [public cunnilingus done]
-	now Resolution of Mall Optitian is 3; [public oral]
-	now Mall Optitian is resolved;
+	now Resolution of Mall Optician is 3; [public oral]
+	now Mall Optician is resolved;
 
 Diana ends here.

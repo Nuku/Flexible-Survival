@@ -148,12 +148,12 @@ to say LuxTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Herself";
 	now sortorder entry is 1;
-	now description entry is "Try to learn more about your daughter.";
+	now description entry is "Try to learn more about your daughter";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Family";
 	now sortorder entry is 2;
-	now description entry is "Ask about her thoughts on Fang and Umbra.";
+	now description entry is "Ask about her thoughts on Fang and Umbra";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

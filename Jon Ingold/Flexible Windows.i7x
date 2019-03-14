@@ -1128,7 +1128,7 @@ Note: these don't render well across the spectrum of Glulx interpreters.
 
 Windows can have a back-color, specified as one from the (reasonably large) Table of Common Color Values (based on but extended from Glulx Text Effects, by Emily Short). The possible colors are:
 
-	g-darkgreen, g-green, g-lime, g-midnightblue, g-steelblue, g-terracotta, g-navy, g-mediumblue, g-blue, g-indigo, g-cornflowerblue, g-mediumslateblue, g-maroon, g-red, g-deeppink, g-brown, g-darkviolet, g-khaki, g-silver, g-crimson, g-orangered, g-gold, g-darkorange,g-lavender, g-yellow, g-pink.
+	g-darkgreen, g-green, g-lime, g-midnightblue, g-steelblue, g-terracotta, g-navy, g-mediumblue, g-blue, g-indigo, g-cornflowerblue, g-mediumslateblue, g-maroon, g-red, g-deeppink, g-brown, g-darkviolet, g-khaki, g-silver, g-crimson, g-orangered, g-gold, g-darkorange, g-lavender, g-yellow, g-pink.
 
 and they are assigned by including a line like so:
 

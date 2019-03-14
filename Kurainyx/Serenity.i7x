@@ -20,6 +20,32 @@ object	name
 Serenity	"Serenity"
 
 Serenity is a woman.
+[Physical details as of game start]
+ScaleValue of Serenity is 3. [human sized]
+SleepRhythm of Serenity is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Serenity is 0. [X cock]
+Cock Length of Serenity is 0. [X Inches]
+Cock Width of Serenity is 0.
+Testes of Serenity is 0. [X balls]
+Cunts of Serenity is 1. [X pussy]
+Cunt Length of Serenity is 8. [X Cunt]
+Cunt Width of Serenity is 2. [X Cunt]
+Breasts of Serenity is 0. [X nipples]
+Breast Size of Serenity is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Serenity is false. [can not take oversized members without pain]
+Sterile of Serenity is true.
+PlayerMet of Serenity is false.
+PlayerRomanced of Serenity is false.
+PlayerFriended of Serenity is false.
+PlayerControlled of Serenity is false.
+PlayerFucked of Serenity is false.
+OralVirgin of Serenity is true.
+Virgin of Serenity is true.
+AnalVirgin of Serenity is true.
+PenileVirgin of Serenity is true.
+SexuallyExperienced of Serenity is false.
+MainInfection of Serenity is "".
 
 Table of GameEventIDs (continued)
 Object	Name

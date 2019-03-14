@@ -58,7 +58,7 @@ to say libraryentrance:
 	choose a blank row in table of fucking options;
 	now title entry is "Nevermind";
 	now sortorder entry is 100;
-	now description entry is "Shall you give up on this plan entirely?";]
+	now description entry is "Shall you give up on this plan entirely";]
 	if centrallib is 1 or ( centrallib is 2 and bodyname of player is "Wolverine Guard" ):
 		choose a blank row in table of fucking options;
 		now title entry is "Offer to take over";

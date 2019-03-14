@@ -319,42 +319,42 @@ to say ForcedSubtoDomSexMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Face Fuck";
 	now sortorder entry is 1;
-	now description entry is "Suck your master's doggy dick";
+	now description entry is "Suck your master's doggy dick.";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Creampie Trial";
 	now sortorder entry is 2;
-	now description entry is "Get your prize from the other bitches after Dom uses them";
+	now description entry is "Get your prize from the other bitches after Dom uses them.";
 	[]
 	if (HP of Dominick is 31) or (HP of Dominick is 41) or (HP of Dominick is 51) and (nightmaretf < 1) and (wrcursestatus < 7) and (jackalboyTF < 1) and (jackalmanTF < 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Full Doggy Training";
 		now sortorder entry is 3;
-		now description entry is "Dom transforms you into a proper doggy slut in one go. Be warned, this is a permanent infection; you're Dom's bitch now";
+		now description entry is "Dom transforms you into a proper doggy slut in one go. Be warned, this is a permanent infection; you're Dom's bitch now.";
 	[]
 	if player is not mpreg_ok:
 		if (HP of Dominick > 30 and HP of Dominick < 34) or (HP of Dominick > 40 and HP of Dominick < 44) and (nightmaretf < 1) and (wrcursestatus < 7) and (jackalboyTF < 1) and (jackalmanTF < 1):
 			choose a blank row in table of fucking options;
 			now title entry is "Beta Doggy Training";
 			now sortorder entry is 4;
-			now description entry is "Learn to be a proper doggy slut in three easy steps. Be warned, this is a permanent infection; you're Dom's bitch now";
+			now description entry is "Learn to be a proper doggy slut in three easy steps. Be warned, this is a permanent infection; you're Dom's bitch now.";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Doggy Anal";
 	now sortorder entry is 6;
-	now description entry is "Your master breeds your ass";
+	now description entry is "Your master breeds your ass.";
 	[]
 	if player is female:
 		choose a blank row in table of fucking options;
 		now title entry is "Doggy Fuck";
 		now sortorder entry is 7;
-		now description entry is "Your master breeds you like the bitch you are";
+		now description entry is "Your master breeds you like the bitch you are.";
 	[]
 	if player is mpreg_ok and (nightmaretf < 1) and (wrcursestatus < 7) and (jackalboyTF < 1) and (jackalmanTF < 1):
 		choose a blank row in table of fucking options;
 		now title entry is "Omega Doggy Training";
 		now sortorder entry is 5;
-		now description entry is "Your master breeds your fertile ass while you fuck another bitch. Be warned, this is a permanent infection; you're Dom's bitch now";
+		now description entry is "Your master breeds your fertile ass while you fuck another bitch. Be warned, this is a permanent infection; you're Dom's bitch now.";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -367,7 +367,7 @@ to say ForcedSubtoDomSexMenu:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "[title entry]: [description entry]?";
+			say "[title entry]: [description entry]";
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;

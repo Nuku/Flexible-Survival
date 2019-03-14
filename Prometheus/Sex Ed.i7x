@@ -88,9 +88,9 @@ to LectureChoiceEvent: [Choose Lecture to attend]
 	[]
 	if KinksandFetishes > 0 and KinksandFetishes < 99:
 		choose a blank row in table of fucking options;
-		now title entry is "Kinks and Fetishes";
+		now title entry is "Get current directions to the Kinks and Fetishes Lecture";
 		now sortorder entry is 6;
-		now description entry is "Search for the lecture on Kinks and Fetishes.";
+		now description entry is "Search for the lecture on Kinks and Fetishes";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -117,9 +117,9 @@ to LectureChoiceEvent: [Choose Lecture to attend]
 					say "[BehaviorLecturesEnrollment]";
 				if (nam is "Get current directions to the Behavior and Customs Lecture"):
 					say "[BehaviorLectures]";
-				if (nam is "Enroll in the Kinks and Fetishes"):
+				if (nam is "Enroll in the Kinks and Fetishes Lecture"):
 					say "[KinksLecturesEnrollment]";
-				if (nam is "Get current directions to the Kinks and Fetishes"):
+				if (nam is "Get current directions to the Kinks and Fetishes Lecture"):
 					say "[KinksLectures]";
 				wait for any key;
 		else if calcnumber is 0:

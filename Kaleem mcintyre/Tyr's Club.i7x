@@ -561,30 +561,30 @@ to say ArenaFightCheck:
 		choose a blank row in table of fucking options;
 		now title entry is "Wolftaur";
 		now sortorder entry is 1;
-		now description entry is "a lupine taur";
+		now description entry is "lupine taur";
 		choose a blank row in table of fucking options;
 		now title entry is "Alpha Wolf";
 		now sortorder entry is 2;
-		now description entry is "a dominant wolf";
+		now description entry is "dominant wolf";
 		choose a blank row in table of fucking options;
 		now title entry is "Alpha Husky";
 		now sortorder entry is 5;
-		now description entry is "a dominant canine";
+		now description entry is "dominant canine";
 	if guy is not banned:
 		choose a blank row in table of fucking options;
 		now title entry is "Minotaur";
 		now sortorder entry is 3;
-		now description entry is "a mythological monstrosity";
+		now description entry is "mythological monstrosity";
 	if furry is not banned and girl is not banned:
 		choose a blank row in table of fucking options;
 		now title entry is "Great Dane";
 		now sortorder entry is 4;
-		now description entry is "a female canine fighter";
+		now description entry is "female canine fighter";
 	if furry is not banned and hermaphrodite is not banned:
 		choose a blank row in table of fucking options;
 		now title entry is "Wildcat";
 		now sortorder entry is 6;
-		now description entry is "an armored herm feline";
+		now description entry is "armored herm feline";
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;
@@ -596,7 +596,7 @@ to say ArenaFightCheck:
 		if calcnumber > 0 and calcnumber <= the number of filled rows in table of fucking options:
 			now current menu selection is calcnumber;
 			choose row calcnumber in table of fucking options;
-			say "Fight the [title entry]? [description entry]";
+			say "[title entry]: Are you sure you wish to fight the [description entry]?";
 			if player consents:
 				let nam be title entry;
 				now sextablerun is 1;

@@ -88,7 +88,7 @@ Section 3 - Conversation
 instead of conversing Adam:
 	project Figure of Adam_icon;
 	say "     He looks at you attentively as you step up, saying 'Oh, hello... I mean... Provisional Private Adam Scott ready for orders, [sir]!' Accepting his salute, you chat a bit and find the boy charming and pretty eager to please.";
-	[say "[AdamTalkMenu]";]
+	say "[AdamTalkMenu]";
 
 to say AdamTalkMenu:
 	say "     [bold type]What do you want to talk to Adam about?[roman type][line break]";

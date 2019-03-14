@@ -114,7 +114,7 @@ to say JimmyTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "About Him";
 	now sortorder entry is 1;
-	now description entry is "Ask the corgi about himself.";
+	now description entry is "Ask the corgi about himself";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:

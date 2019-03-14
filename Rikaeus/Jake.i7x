@@ -215,12 +215,12 @@ to say JakeTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "His Art";
 	now sortorder entry is 1;
-	now description entry is "Ask the panda what inspired him to take up art.";
+	now description entry is "Ask the panda what inspired him to take up art";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "His Assignment";
 	now sortorder entry is 2;
-	now description entry is "Ask him why he has to draw someone naked.";
+	now description entry is "Ask him why he has to draw someone naked";
 	[]
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

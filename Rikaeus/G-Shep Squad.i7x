@@ -190,7 +190,7 @@ to say bustersexmenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Orgy";
 	now sortorder entry is 12;
-	now description entry is "Let the dogs use you";
+	now description entry is "let the dogs use you";
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
 		choose row y from the table of fucking options;

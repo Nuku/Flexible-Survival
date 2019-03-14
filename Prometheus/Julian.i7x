@@ -109,17 +109,17 @@ to say JulianTalkMenu:
 	choose a blank row in table of fucking options;
 	now title entry is "Himself";
 	now sortorder entry is 1;
-	now description entry is "Try to learn more about the black wolf.";
+	now description entry is "Try to learn more about the black wolf";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Family";
 	now sortorder entry is 2;
-	now description entry is "Ask about his family.";
+	now description entry is "Ask about his family";
 	[]
 	choose a blank row in table of fucking options;
 	now title entry is "Friends";
 	now sortorder entry is 3;
-	now description entry is "Ask about his friends.";
+	now description entry is "Ask about his friends";
 	[]
 	sort the table of fucking options in sortorder order;
 	repeat with y running from 1 to number of filled rows in table of fucking options:
@@ -231,14 +231,17 @@ to say JulianSexMenu:
 to say JulianSex1: [Receive a blowjob]
 	say "     Exposing your erect cock, you gesture for Julian to kneel and give it some attention. He shakes his head, instead suggesting that you stand at the bottom of the bed and thrust into his mouth while he lies there. Mock sighing at his laziness, you quickly shuffle across, eager to feel his throat pulse around your member. His fluffy, black head hangs over the edge of the mattress, waiting for you to align yourself. 'I hope that you realize that me exposing my throat like this doesn't make you dominant or anything. I expect to have my chances with you too,' he playfully growls, a twinkle in his eye. You [if player is submissive]quickly inform him that you'll act in whatever way pleases him, whether it be giving or receiving pleasure[else if player is dominant]grunt, neither assenting or disputing his claim. It all depends on how you feel at the time, but there seems little harm in a little role reversal if it keeps you both happy[else]smile, saying that you hadn't really thought of it like that, but if he wants to be dominant or submissive, you don't mind[end if]. With that out of the way, you thrust forward, pushing your [cock of player] shaft over his lips and into his warm, wet mouth.";
 	say "     Julian is careful not to scrape you with his teeth, suggesting that he has had some experience with this before. Supporting this assumption is the way in which he cradles your cock with his tongue as it slides through his mouth, the dexterous organ seemingly squeezing you every so often. You stroke his neck and the underside of his jaw with one hand while supporting yourself on his shoulder with the other. You increase the pace, your balls slapping against his snout, his sharp inhales tickling your skin. With a stifled shout, you hilt yourself in his muzzle, your seed squirting down his throat, the wolf swallowing keenly. With a sigh, you pull out, a few strands of semen trickling onto Julian's face as he turns over. Licking as much of his face as he can, Julian sits up. 'That was fun, really made me feel the bond between us. Enjoying the flavor is an added bonus too. Perhaps you could reciprocate at some point? Have an experience with the big bad wolf?' His ears dip at the last comment. 'Sorry, that was a bit too far, but please, come back again.'";
+	NPCSexAftermath Julian receives "OralCock" from Player;
 
 to say JulianSex2: [Be eaten out]
 	say "     Removing your clothes, you spread your labia with two fingers, displaying to Julian how ready you are. 'This will be easier if you sit on the edge of the bed,' he says, kneeling next to you as you seat yourself, legs apart. He traces his fingers over your thighs, carefully avoiding touching your most sacred place. As his hand runs over your tummy, you lose patience, grabbing his wrist and tugging it back down to your gash, easing one of his digits into the dampness. He grins at you seizing control, but nonetheless accedes to your will, inserting a second finger and thrusting them into your snatch while rubbing your clit with his thumb. Occasionally, he touches just the right place, causing your hips to spasm, sending his fingers deeper as your groin thrusts forth. His other hand caresses your waist, the contrasting levels of stimulation tingling the nerves in the back of your neck.";
 	say "     Withdrawing his fingers from your cunt, Julian licks the juices off of them, noisily smacking his lips. 'Time for this wolf to eat the kitty,' he jokes before diving between your legs, showing more enthusiasm than skill in lapping at the folds of your slit. Gripping his ears, you grind against his snout, his cool nose pressed against your clitoris, heightening the pleasure of the action. Eager to see what you really taste like, the wolf spears your pussy with his tongue, juices running over his muzzle. You press him even tighter against you, making him focus on moving his tongue rather than his whole head. He adapts quickly, using the flat, pink organ like a penis, thrusting it in and out instead of running it up and down. Shuddering, your orgasm breaks, fem-cum spraying into his maw and across his snout. As you relax, he eases his head out of your hands and looks at you, wet patches speckled across his face. 'Tart,' he says standing up and wiping his face. 'Definitely worth repeating.'";
+	NPCSexAftermath Julian receives "OralPussy" from Player;
 
 to say JulianSex3: [Give him a blowjob]
 	say "     Noticing your glances at his tip peeping from the sheath, Julian surmises your desire and walks across to you. 'If you could kneel on all fours please,' he requests, cradling his hardening shaft in his hand. You comply, stripping, before looking up at him, waiting. His carmine cock hangs in front of your face, twitching with a bead of fluid on the tip. He presses it against your lips, crouching slightly to improve the angle. [if player is submissive]The wolf's display of dominance sends tingles down your spine, his confidence heightening the thrill. [else if player is dominant]While part of you resents being in such a submissive position, you concede that some variety could be beneficial too. [end if]You gaze up at him, catching his eye as you push your mouth forward, his shaft disappearing into your cozy maw. He aids you, shuffling forward until his furry scrotum is against your chin, and your nose is pressed into his groin, smelling his pleasant canine scent.";
 	say "     Julian begins thrusting, holding your shoulders for support. Wet squelching and slapping noises fill the room to such an extent that you wonder how many other people in the dorm can hear you. A low growl rumbles in the wolf's throat, though it sounds more like a groan of pleasure than hostility. A knot begins to develop at the base of his penis as the wet warmth of your mouth excites him. The developing bulge squeezes past your lips, luckily avoiding any contact with your teeth. Deciding that knotting your mouth isn't a good idea, Julian reduces the depth of his thrusts but increases the tempo to compensate. As he nears climax, your lupine lover firmly grips the side of your head, hilting up to his knot, which brushes your nose, saliva still smeared on it. Fighting back a howl, Julian releases a torrent of cum into your mouth, the copious fluid dribbling out of the corners as you fail to swallow quickly enough. Once he is content that you have swallowed his load, the wolf pulls out, his cock hanging down stiffly between his legs still twitching.";
+	NPCSexAftermath Player receives "OralCock" from Julian;
 
 
 Section 5 - Events

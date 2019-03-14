@@ -81,7 +81,7 @@ instead of conversing the Janice:
 		now carried of Janice's blouse is 1;
 		increase score by 5;
 	else if HP of Kristen is 10 and a random chance of 1 in 3 succeeds:
-		say "     'Have you gone back to see Kristen yet to [bold type]give[roman type] her my gift? I do so miss her and want her to know that I'm safe and happy. She must be so worried. Please do that for me, sweety,' she purrs with alluring smile.";
+		say "     'Have you gone back to see Kristen yet to [bold type]give[roman type] her my gift? I do so miss her and want her to know that I'm safe and happy. She must be so worried. Please do that for me, sweetie,' she purrs with alluring smile.";
 	else if HP of Kristen is 11:
 		say "     'Oh, so you've given Kristen my gift? Wonderful. Simply wonderful. You're such an eager, helpful friend. You deserve a special reward for your willingness to help a poor, lonely vixen.' She puts her arms around you and pulls you down onto her divan while licking slowly across her muzzle as she eyes you lustfully.";
 		if player is male:
