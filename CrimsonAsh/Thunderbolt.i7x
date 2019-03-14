@@ -210,7 +210,6 @@ instead of fucking Thunderbolt:
 					say "[ThunderboltSex2]";
 				if (nam is "Get fucked (ass)"):
 					say "[ThunderboltSex3]";
-				now lastfuck of Brennan is turns;
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -299,7 +298,6 @@ instead of fucking Ariana:
 				now sextablerun is 1;
 				if (nam is "A foursome"):
 					say "[ThunderboltSex1]";
-				now lastfuck of Brennan is turns;
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
@@ -355,7 +353,6 @@ instead of fucking Eres:
 				now sextablerun is 1;
 				if (nam is "A foursome"):
 					say "[ThunderboltSex1]";
-				now lastfuck of Brennan is turns;
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;

@@ -89,7 +89,7 @@ to say RestaurantDesc:
 instead of sniffing the Restaurant:
 	say "     The restaurant smells of hamburgers, French fries, and many other kinds of foods, something that makes your stomach rumble.";
 
-Rat Twins Stash is a container in Restaurant. It is closed. 
+Rat Twins Stash is a container in Restaurant. It is closed. It is scenery.
 
 Instead of opening Rat Twins Stash:
 	say "[RatTwinsTapeGet]";
@@ -392,7 +392,6 @@ instead of entering the Confession Booth:
 					say "[ChurchLustConfess]";
 				if (nam is "Ask about the possibility of freeing a demon of his inner evil"):
 					say "[ChurchDemonCleanse]";
-				now lastfuck of Brennan is turns;
 				wait for any key;
 		else if calcnumber is 0:
 			now sextablerun is 1;
