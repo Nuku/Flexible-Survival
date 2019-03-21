@@ -531,7 +531,7 @@ Definition: A person (Called x) is booked:
 	if the location of x is Makeshift Rec Room, yes;
 	if the location of x is Courtyard, yes;
 	if the location of x is Large Shed, yes;
-	if the location of x is Garden, yes;
+	if the location of x is Grey Abbey Garden, yes;
 	if the location of x is Sitting Area, yes;
 	if the location of x is Garden View, yes;
 	if the location of x is Darkened Alcove, yes;
@@ -4423,10 +4423,10 @@ to weakrandominfect: [does not bypass researcher protection]
 		if debugactive is 1:
 			say "DEBUG -> Can't infect with creature [name entry] because it has Banned: [BannedStatus entry][line break]";
 	else:
-		while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
+		while there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true or area entry is "Nowhere":
 			increase monster by 1;
 			choose row monster from Table of Random Critters;
-			if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true:
+			if there is a non-infectious in row monster of Table of Random Critters and non-infectious entry is true or area entry is "Nowhere":
 				next;
 			break;
 		infect;
@@ -4752,7 +4752,6 @@ Include High Rise Events by Wahn.
 Include Horus by Rikaeus.
 Include How High by Kaleem mcintyre.
 Include Hyena Bikers by Stripes.
-Include Cassiel by Tin Can.
 Include Hyena Shoppers by Doots.
 Include Hyena Situations by Hellerhound.
 Include Hyper Serum by Vrael.
@@ -5149,6 +5148,7 @@ Include Brian by Vinickus.
 Include Brooke by Stripes.
 Include Bryony by Song.
 Include Bubble by Stripes.
+Include Cassiel by Tin Can.
 Include Cynthia by Prometheus.
 Include Campus Gym by UrsaOmega.
 Include Cadmea by Prometheus.
