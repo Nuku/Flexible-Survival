@@ -105,7 +105,8 @@ after going to Half-Renovated Room while (Skarnoth is in Half-Renovated Room and
 	say "     Nala ends up flying over to you and landing on your shoulder. 'You also shouldn't have to worry about him attempting to shatter anyone's mind here either, since apparently mortals without free will don't offer up enough nutrition.' You aren't sure if that's really meant to make you feel better or not, and then without any warning, Nala jumps off of your shoulder. 'So yeah, no murder or mindbreak! Well unless I was given bad info... nah I'm sure that the stuff is solid, but anyway, I gotta run!' The little imp makes a mimicry of attempting to run in midair, and with a peal of laughter, gives you one final boop on the nose before zipping out of the room.";
 	say "     Your attention is pulled away from the door Nala flew out of by the tantrum that Skarnoth is having at the moment. Not sure on how exactly to deal with pissed off demonic royalty you simply watch him for a bit. The muscular hellspawn starts to stomp loudly as he walks back and forth in a line, grumbling the whole time about vengeance. Oddly enough, your name is never mentioned on the list of people that deserve punishment, however Elijah, Nala, and even Lilith are threatened for their involvement in his imprisonment. You decide that it would be best to allow the infuriated demon to calm down a bit. At least he can move around now, rather than being strapped down to that chair. Hopefully, he will attempt to focus on the positives rather than just the negatives.";
 	add "Unchained" to Traits of Skarnoth;
-	increase Loyalty of Skarnoth by 1;
+	if Loyalty of Skarnoth < 10:
+		increase Loyalty of Skarnoth by 1;
 
 Section 3 - Skarnoth Master/Slave Events
 
@@ -165,7 +166,7 @@ after going to Grey Abbey Library while (Skarnoth is booked and Loyalty of Skarn
 	else:
 		LineBreak;
 		say "     Rolling your eyes, you turn and start to walk away. After all, who cares what a demonic slave has to say? As you make your way out, you can still hear his laughter roaring throughout the library. While what he is doing may be slightly frustrating, you have better things to do than dealing with him and his frat boy mentality.";
-	increase Loyalty of Skarnoth by 1;
+	now Loyalty of Skarnoth is 11;
 
 to say FirstPillSkarnothScene:
 	let PillTab be "<Pill or Tablet>";
@@ -276,7 +277,7 @@ after going to Breakroom while (Skarnoth is booked and Loyalty of Skarnoth is 11
 		say "     With the state the world is in right now, you hardly think that a messy floor is going to make much difference. Turning your back to Skarnoth you make your way out of the breakroom. Well on a plus note, you at least learned something new about your royal demonic slave, you should never take him out to dinner that's for sure.";
 		wait for any key;
 		move player to Grey Abbey Library;
-	increase Loyalty of Skarnoth by 1;
+	now Loyalty of Skarnoth is 12;
 
 to say SecondPillSkarnothScene:
 	let PillTab be "<Pill or Tablet>";

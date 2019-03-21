@@ -46,6 +46,7 @@ Version 1 of Brennan by Wahn begins here.
 [   1: Brennan told the player about his encounter                ]
 [   2: postponed taking Brennan to Camp Bravo                     ]
 [   3: went to Camp Bravo and got introduced to Tiny              ]
+[   4: went to the hospital and got some info about Diego         ]
 [  50: player got banned from the camp and told Brennen so        ]
 
 [ lust of Brennan - wolf interactions                             ]
@@ -552,6 +553,7 @@ instead of resolving Wolf Whisperer:
 		now BrennanRelationship is 8; [met him and the wolves]
 		now Bunny Frat Invite is active;
 		now Entrance Checks is active;
+		now Infernal Offer is active;
 		now Trip to the Water Tower is active;
 		now Fountain Discussion is active;
 		now Slaver Caravan is active;
@@ -632,6 +634,7 @@ instead of resolving Wolf Whisperer:
 			now Bunny Frat Invite is inactive;
 			now Entrance Checks is inactive;
 			now Trip to the Water Tower is inactive;
+			now Infernal Offer is inactive;
 			now Fountain Discussion is inactive;
 			now Slaver Caravan is inactive;
 			now Slave Hunter is inactive;
@@ -1337,6 +1340,7 @@ to say BrennanDiegoTracking:
 		WaitLineBreak;
 		say "     Not waiting for the nurse to reach you or any other hospital inhabitants to pop out of the woodwork, all four of your little party run like hell, fleeing through the quickly opening entrance doors and out onto the streets. This gives you just the head-start that you need to shake her successfully, moving back into the dangerous, but somehow less freaky streets of the fallen city. Some time later, you reach Brennan's apartment building again and ride the elevator to get back into his safe haven.";
 		now City Hospital is known;
+		now XP of Brennan is 4;
 	else:
 		LineBreak;
 		say "     Brennan takes your decision calmly, but can't hide at least a little bit of disappointment. 'Okay then, we can postpone if you've got more important things going on right now. But I really would like to investigate this lead sometime soon. Just please let me know when you're ready, alright?'";

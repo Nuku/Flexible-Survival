@@ -95,6 +95,7 @@ Instead of resolving a Starving Frog:
 		WaitLineBreak;
 		say "     When you tell Ranae that you aren't able to spare any supplies, her shoulders droop in dejection, and she listlessly gazes down at the ground. 'I... I understand... Thanks for at least listening... I guess...' An awkward silence passes between the two of you. Eventually, Ranae meekly asks, 'Um, do you maybe want to see where I live? You know... just in case...' Although she doesn't finish her sentence, it's obvious that she's clinging to the hope that you'll help her out later. You let the frog lead you through the sewers until you reach a tall, narrow hole in the wall. It's a bit of a squeeze, but you follow the frog through it, and you find yourself in an dark, dank enclosed space that's about the size of a walk-in closet. The only items that marks the dreary room as a living space are a few pillows and a ragged blanket in the corner. 'It's not much, but it's mine,' Ranae explains. 'I'll be here if you ever need a place to rest or someone to talk to... or help me out...' She adds that last part in a whisper that you barely hear it.";
 		now Resolution of Starving Frog is 1;	[Did not give supplies to Ranae]
+	now Starving Frog is resolved;
 	now Froggy Hideout is known;
 	move Ranae to Froggy Hideout;
 	move player to Froggy Hideout;
@@ -109,6 +110,7 @@ Instead of resolving a Rundown Boutique:
 	WaitLineBreak;
 	say "     With your pack filled with new supplies, you go on to inspect the dress that's still hanging in the locker. Carefully pulling it out, you find that it is a sleek one piece dress, and most importantly, there's not even a scratch on it. Unfortunately, a dress such as this would not be practical for you[if scalevalue of player < 3], given how you're too small for it[else if scalevalue of player > 3], given how you're too large for it[end if]. However, you recall how Ranae has been looking for some new clothes, and this dress seems to be the perfect size for her. Safely stowing the garment away, you exit the boutique and make a note to visit the frog woman soon with your gift.";
 	now hunger of Ranae is 5;		[Found black dress]
+	now Rundown Boutique is resolved;
 
 
 Section 2 - Froggy Hideout

@@ -215,6 +215,8 @@ carry out NPCSexAftermathAction:
 	NPCSexAftermath Player receives "AssFuck" from Carl;
 	say "Testing: Player fucks Carl:";
 	NPCSexAftermath Carl receives "AssFuck" from Player;
+	[Options for SexAct are: AssFuck, PussyFuck, AssDildoFuck, PussyDildoFuck, OralCock, OralPussy]
+
 
 [ Note: Add Handjob, PussyFingering, AssFingering, Rimming to SexActs]
 

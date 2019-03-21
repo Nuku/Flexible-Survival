@@ -291,6 +291,19 @@ to DrMattSampleDelivery:
 				say "     [bold type]You lose 2 gryphon milk![roman type][line break]";
 				decrease carried of gryphon milk by 2;
 				now Strength of Doctor Matt is 1; [milk delivered]
+		else if carried of gryphon milk is 1 and (carried of glob of goo < 2 and carried of blue gel < 2 and carried of pink gel < 2 and carried of purple gel < 2): [not enough milk nor goo]
+			if bodyname of player is "Hermaphrodite Blue Gryphon":
+				say "gives a thoughtful nod, then looks you up and down. 'Sadly, you do not have enough of the gryphon milk for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.' Matt leads you over to a surprisingly comfortable table and waits for you to disrobe and lie down, then draws some blood and swabs the inside of your cheek, all in the expert manner of an experienced doctor. ";
+				DrMattGryphonExam;
+				now Strength of Doctor Matt is 1; [milk delivered]
+			else:
+				if bodyname of player is "Goo Girl" or bodyname of player is "Blue Gel" or bodyname of player is "Pink Gel" or bodyname of player is "Purple Gel":
+					say "gives a thoughtful nod, then looks you up and down. 'Sadly, you do not have enough samples of fluidic creatures for a full analysis. But since you appear to be one yourself, that is no problem either. Please, have a seat on the examination table. This will only take a little while.'";
+					LineBreak;
+					DrMattGooExam;
+					now Strength of Doctor Matt is 2; [goo delivered]
+				else:
+					say "gives a slight frown, then shakes his head. 'Sadly, you do not have either the gryphon or the fluidic samples that I requested. Please, gather them with the suitable haste.'";
 		else if carried of gryphon milk is 0 and (carried of glob of goo is 0 and carried of blue gel is 0 and carried of pink gel is 0 and carried of purple gel is 0): [neither enough milk nor goo]
 			if bodyname of player is "Hermaphrodite Blue Gryphon":
 				say "gives a slight frown, then shakes his head. 'Sadly, you do not have either the gryphon or the fluidic samples that I requested. But since you appear to be a carrier of the hybrid gryphon infection right now, at least one of those issues is no problem. Please, have a seat on the examination table. This will only take a little while.'";
