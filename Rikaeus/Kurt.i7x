@@ -76,6 +76,32 @@ object	name
 Kurt	"Kurt"
 
 Kurt is a man.
+[Physical details as of game start]
+ScaleValue of Kurt is 3. [human sized]
+SleepRhythm of Kurt is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Kurt is 2. [X cock]
+Cock Length of Kurt is 8. [X Inches]
+Cock Width of Kurt is 4.
+Testes of Kurt is 2. [X balls]
+Cunts of Kurt is 0. [X pussy]
+Cunt Length of Kurt is 0. [X Cunt]
+Cunt Width of Kurt is 0. [X Cunt]
+Breasts of Kurt is 2. [X nipples]
+Breast Size of Kurt is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Kurt is false. [can not take oversized members without pain]
+Sterile of Kurt is true.
+PlayerMet of Kurt is false.
+PlayerRomanced of Kurt is false.
+PlayerFriended of Kurt is false.
+PlayerControlled of Kurt is false.
+PlayerFucked of Kurt is false.
+OralVirgin of Kurt is true.
+Virgin of Kurt is true.
+AnalVirgin of Kurt is true.
+PenileVirgin of Kurt is true.
+SexuallyExperienced of Kurt is false.
+MainInfection of Kurt is "".
 The description of Kurt is "[KurtDesc]".
 The conversation of Kurt is { "<This is nothing but a placeholder!>" }.
 The scent of Kurt is "     The shark-morph smells like a variety of spices, foods, varnished wood and water. You kind of expected the variety of smells from the fact he hangs out in the market area playing his guitar. But you inwardly shrug, guessing it fits him.".

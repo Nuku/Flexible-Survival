@@ -23,6 +23,32 @@ object	name
 Gordon	"Gordon"
 
 Gordon is a man.
+[Physical details as of game start]
+ScaleValue of Gordon is 3. [human sized]
+SleepRhythm of Gordon is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Gordon is 1. [X cock]
+Cock Length of Gordon is 6. [X Inches]
+Cock Width of Gordon is 4.
+Testes of Gordon is 2. [X balls]
+Cunts of Gordon is 0. [X pussy]
+Cunt Length of Gordon is 0. [X Cunt]
+Cunt Width of Gordon is 0. [X Cunt]
+Breasts of Gordon is 2. [X nipples]
+Breast Size of Gordon is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Gordon is false. [can not take oversized members without pain]
+Sterile of Gordon is true.
+PlayerMet of Gordon is false.
+PlayerRomanced of Gordon is false.
+PlayerFriended of Gordon is false.
+PlayerControlled of Gordon is false.
+PlayerFucked of Gordon is false.
+OralVirgin of Gordon is true.
+Virgin of Gordon is true.
+AnalVirgin of Gordon is true.
+PenileVirgin of Gordon is true.
+SexuallyExperienced of Gordon is false.
+MainInfection of Gordon is "".
 The description of Gordon is "[GordonDesc]".
 The conversation of Gordon is { "<this is a placeholder!>" }.
 The scent of Gordon is "The monkey smells like cologne, bananas and musk. An odd combination of scents but you guess it works for him."

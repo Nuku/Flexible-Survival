@@ -182,6 +182,8 @@ Cunt Width of Jake is 0. [Doesn't have a vagina to get stretched]
 Breasts of Jake is 2. [Has two normal nipples]
 Breast Size of Jake is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
+TwistedCapacity of Jake is false. [can not take oversized members without pain]
+Sterile of Jake is true.
 PlayerMet of Jake is false.
 PlayerRomanced of Jake is false.
 PlayerFriended of Jake is false.
@@ -192,6 +194,7 @@ Virgin of Jake is true.
 AnalVirgin of Jake is true.
 PenileVirgin of Jake is true.
 SexuallyExperienced of Jake is false.
+MainInfection of Jake is "".
 The description of Jake is "[JakeDesc]".
 The conversation of Jake is { "<This is nothing but a placeholder!>" }.
 The scent of Jake is "     Jake gives off a scent of clay and paint oils, which is to be expected with the panda's occupation as an art student.".

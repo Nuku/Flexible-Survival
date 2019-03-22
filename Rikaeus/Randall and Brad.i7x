@@ -201,6 +201,8 @@ Cunt Width of Randall is 0. [Doesn't have a vagina to get stretched]
 Breasts of Randall is 2. [Has two normal nipples]
 Breast Size of Randall is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
+TwistedCapacity of Randall is false. [can not take oversized members without pain]
+Sterile of Randall is true.
 PlayerMet of Randall is false.
 PlayerRomanced of Randall is false.
 PlayerFriended of Randall is false.
@@ -211,6 +213,7 @@ Virgin of Randall is false.
 AnalVirgin of Randall is false.
 PenileVirgin of Randall is true.
 SexuallyExperienced of Randall is true.
+MainInfection of Randall is "".
 The description of Randall is "[RandallDesc]".
 The conversation of Randall is { "<This is nothing but a placeholder!>" }.
 The scent of Randall is "     Randall gives off the smell of sex and sweat, a scent that you admit fits him considering the bun's insatiable appetite when it comes to sex.".
@@ -419,6 +422,8 @@ Cunt Width of Brad is 0. [Doesn't have a vagina to get stretched]
 Breasts of Brad is 2. [Has two normal nipples]
 Breast Size of Brad is 0. [Doesn't have breasts really]
 [Basic Interaction states as of game start]
+TwistedCapacity of Brad is false. [can not take oversized members without pain]
+Sterile of Brad is true.
 PlayerMet of Brad is false.
 PlayerRomanced of Brad is false.
 PlayerFriended of Brad is false.
@@ -429,6 +434,7 @@ Virgin of Brad is false.
 AnalVirgin of Brad is true.
 PenileVirgin of Brad is false.
 SexuallyExperienced of Brad is true.
+MainInfection of Brad is "".
 The description of Brad is "[BradDesc]".
 The conversation of Brad is { "<This is nothing but a placeholder!>" }.
 The scent of Brad is "     Brad gives off the scent of rubber and sweat with the underlying smell of sex. For a basketball player the first two kinda make sense and the last one you attribute to his boyfriend Randall.".

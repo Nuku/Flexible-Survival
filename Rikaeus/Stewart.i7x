@@ -78,6 +78,32 @@ object	name
 Stewart	"Stewart"
 
 Stewart is a man.
+[Physical details as of game start]
+ScaleValue of Stewart is 3. [human sized]
+SleepRhythm of Stewart is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Stewart is 1. [X cock]
+Cock Length of Stewart is 7. [X Inches]
+Cock Width of Stewart is 4.
+Testes of Stewart is 2. [X balls]
+Cunts of Stewart is 0. [X pussy]
+Cunt Length of Stewart is 0. [X Cunt]
+Cunt Width of Stewart is 0. [X Cunt]
+Breasts of Stewart is 2. [X nipples]
+Breast Size of Stewart is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Stewart is false. [can not take oversized members without pain]
+Sterile of Stewart is true.
+PlayerMet of Stewart is false.
+PlayerRomanced of Stewart is false.
+PlayerFriended of Stewart is false.
+PlayerControlled of Stewart is false.
+PlayerFucked of Stewart is false.
+OralVirgin of Stewart is true.
+Virgin of Stewart is true.
+AnalVirgin of Stewart is true.
+PenileVirgin of Stewart is true.
+SexuallyExperienced of Stewart is false.
+MainInfection of Stewart is "".
 The description of Stewart is "[StewartDesc]".
 The conversation of Stewart is { "<this is nothing but a placeholder!>" }.
 The scent of Stewart is "The harpy-boy smells of that new book scent as well as an undertone of green apples.".
