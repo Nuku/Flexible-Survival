@@ -13,6 +13,32 @@ object	name
 Kara	"Kara"
 
 Kara is a woman.[or woman]
+[Physical details as of game start]
+ScaleValue of Kara is 3. [human sized]
+SleepRhythm of Kara is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Kara is 1. [X cock]
+Cock Length of Kara is 8. [X Inches]
+Cock Width of Kara is 4.
+Testes of Kara is 2. [X balls]
+Cunts of Kara is 1. [X pussy]
+Cunt Length of Kara is 8. [X Cunt]
+Cunt Width of Kara is 6. [X Cunt]
+Breasts of Kara is 2. [X nipples]
+Breast Size of Kara is 2. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Kara is false. [can not take oversized members without pain]
+Sterile of Kara is false.
+PlayerMet of Kara is false.
+PlayerRomanced of Kara is false.
+PlayerFriended of Kara is false.
+PlayerControlled of Kara is false.
+PlayerFucked of Kara is false.
+OralVirgin of Kara is false.
+Virgin of Kara is false.
+AnalVirgin of Kara is false.
+PenileVirgin of Kara is false.
+SexuallyExperienced of Kara is true.
+MainInfection of Kara is "Herm Hyena".
 The description of Kara is "The sexy looking hyena herm you rescued seems to have found a leather jacket somewhere, and a pair of leather boots she has obviously had to customize to fit her new hyena paws. Her mobile hyena ears have a small array of silver and gold hoops and studs in them, and she has several smaller piercings spaced rather sexily across her muzzle. Her soft hyena patterned fur also has several visible designs in it along the arms and her thighs, the ink of her tattoos seeming to have colored the hyena fur as it grew in. Catching you looking at her, the new hyena herm eyes you back curiously, and with not a little bit of lust..".
 The conversation of Kara is { "Yip!" }.
 

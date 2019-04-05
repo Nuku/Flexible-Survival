@@ -18,6 +18,32 @@ object	name
 Harold	"Harold"
 
 Harold is a man.
+[Physical details as of game start]
+ScaleValue of Harold is 3. [human sized]
+SleepRhythm of Harold is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Harold is 1. [X cock]
+Cock Length of Harold is 18. [X Inches]
+Cock Width of Harold is 9.
+Testes of Harold is 2. [X balls]
+Cunts of Harold is 0. [X pussy]
+Cunt Length of Harold is 0. [X Cunt]
+Cunt Width of Harold is 0. [X Cunt]
+Breasts of Harold is 2. [X nipples]
+Breast Size of Harold is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Harold is false. [can not take oversized members without pain]
+Sterile of Harold is false.
+PlayerMet of Harold is false.
+PlayerRomanced of Harold is false.
+PlayerFriended of Harold is false.
+PlayerControlled of Harold is false.
+PlayerFucked of Harold is false.
+OralVirgin of Harold is false.
+Virgin of Harold is true.
+AnalVirgin of Harold is true.
+PenileVirgin of Harold is false.
+SexuallyExperienced of Harold is true.
+MainInfection of Harold is "Unicorn".
 The description of Harold is "     Standing behind the bar is a well-built and rather horse-like man, obviously an experienced bartender by the way he handles himself as he dishes out drinks to the patrons. His slightly hoof-like hands not seeming to slow him down at all. A black leather vest resting against his pure white fur makes him look even more striking due to the sharp contrast of colors. Even more striking however is the spiraling horn emerging from the center of the equine's forehead. Its pearlescent sheen catching and reflecting the colored lights of the club, and making it seem to shimmer and burn with a small rainbow of color every time the unicorn bartender moves his head. Catching you looking in his direction, the equine barkeep winks at you and gestures to an open spot at the bar, obviously inviting you to come talk, even as the shining unicorn puts together another drink for one of the strippers.".
 The icon of Harold is Figure of Harold_icon.
 The conversation of Harold is { "Glug glug!" }.
