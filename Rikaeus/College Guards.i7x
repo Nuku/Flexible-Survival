@@ -20,6 +20,8 @@ Cunt Width of Marcus is 0. [Has no vagina]
 Breasts of Marcus is 2. [2 nipples]
 Breast Size of Marcus is 0. [Flat-chested]
 [Basic Interaction states as of game start]
+TwistedCapacity of Marcus is false. [can not take oversized members without pain]
+Sterile of Marcus is false.
 PlayerMet of Marcus is false.
 PlayerRomanced of Marcus is false.
 PlayerFriended of Marcus is false.
@@ -30,6 +32,7 @@ Virgin of Marcus is false.
 AnalVirgin of Marcus is true.
 PenileVirgin of Marcus is false.
 SexuallyExperienced of Marcus is true.
+MainInfection of Marcus is "".
 
 [Hailey]
 
@@ -50,6 +53,8 @@ Cunt Width of Hailey is 0. [no vagina]
 Breasts of Hailey is 2. [2 nipples]
 Breast Size of Hailey is 4. [D cup at the start]
 [Basic Interaction states as of game start]
+TwistedCapacity of Hailey is false. [can not take oversized members without pain]
+Sterile of Hailey is false.
 PlayerMet of Hailey is false.
 PlayerRomanced of Hailey is false.
 PlayerFriended of Hailey is false.
@@ -60,5 +65,6 @@ Virgin of Hailey is false.
 AnalVirgin of Hailey is true.
 PenileVirgin of Hailey is false.
 SexuallyExperienced of Hailey is true.
+MainInfection of Hailey is "".
 
 College Guards ends here.

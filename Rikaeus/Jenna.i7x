@@ -37,6 +37,32 @@ object	name
 Jenna	"Jenna"
 
 Jenna is a woman.
+[Physical details as of game start]
+ScaleValue of Jenna is 3. [human sized]
+SleepRhythm of Jenna is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Jenna is 0. [X cock]
+Cock Length of Jenna is 0. [X Inches]
+Cock Width of Jenna is 0.
+Testes of Jenna is 0. [X balls]
+Cunts of Jenna is 1. [X pussy]
+Cunt Length of Jenna is 8. [X Cunt]
+Cunt Width of Jenna is 4. [X Cunt]
+Breasts of Jenna is 2. [X nipples]
+Breast Size of Jenna is 2. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Jenna is false. [can not take oversized members without pain]
+Sterile of Jenna is true.
+PlayerMet of Jenna is false.
+PlayerRomanced of Jenna is false.
+PlayerFriended of Jenna is false.
+PlayerControlled of Jenna is false.
+PlayerFucked of Jenna is false.
+OralVirgin of Jenna is true.
+Virgin of Jenna is true.
+AnalVirgin of Jenna is true.
+PenileVirgin of Jenna is true.
+SexuallyExperienced of Jenna is false.
+MainInfection of Jenna is "".
 The description of Jenna is "[JennaDesc]".
 The conversation of Jenna is { "<This is nothing but a placeholder!>" }.
 The scent of Jenna is "     Jenna smells like hard work. No seriously, she smells very sweaty.".

@@ -1154,6 +1154,46 @@ to say FemPrefUnnaturalHeatEvent: [Sylvia removes skirt]
 			now resolution of Unnatural Heat is 15; [FPref, Searched your bag, Suppressant not found]
 	now hpf of Sylvia is 3; [helped with heat]
 
+[Sylvia City Research One is a situation. [Huskies]
+Prereq1 of Sylvia City Research One is Beach Field Research.
+Prereq1Resolution of Sylvia City Research One is { 1, 2 }.
+The sarea of Sylvia City Research One is "Outside".
+
+Instead of resolving Sylvia City Research One:
+	SylviaCityResearchOneEvent;
+
+to say SylviaCityResearchOneEvent:
+	say "     As you wander along down the street, you notice ";
+	[remember to cater for male of female being banned]
+
+Sylvia City Research Two is a situation. [Hyenas]
+Prereq1 of Sylvia City Research Two is Beach Field Research.
+Prereq1Resolution of Sylvia City Research Two is { 1, 2 }.
+The sarea of Sylvia City Research Two is "Outside".
+
+Instead of resolving Sylvia City Research Two:
+	SylviaCityResearchTwoEvent;
+
+to say SylviaCityResearchTwoEvent:
+	say "     ";
+
+
+[ Beach - Feral Sea Dragons, Otters ] [3]
+[ Campus - Football Wolfman (Septus), Satyrs and Naiads ] [1]
+[ Capitol - Ebonflame Draken, Orc ] [5]
+[ Forest - Wolves, Elves ] [2]
+[ High Rise - Peacock, Poodle ] [2]
+[ Hospital - Jaguar Orderly, Vixen Nurse ] [3]
+[ Junkyard - Feral Mutt, Hydra ] [4]
+[ Sewer - Demon Brute, Komodo Dragon ] [5]
+[ Museum - Feral Gryphon, Greek Nymph ] [2]
+[ Outside - Huskies, Hyenas, Wyverns ] [1]
+[ Park - Felinoid and Felines, Black Equinoid ] [3]
+[ Plains - Centaur, Minotaur, Behemoth ] [4]
+[ Red Light District - Kobolds, Snow Leopard ] [2]
+[ Warehouse - Pegasus, Spidertaur ] [2]
+[ Zoo - Cheetahs, Bird of Paradise ] [3]
+]
 Sylvia ends here.
 
 

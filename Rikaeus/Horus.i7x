@@ -87,6 +87,32 @@ object	name
 Horus	"Horus"
 
 Horus is a man.
+[Physical details as of game start]
+ScaleValue of Horus is 3. [human sized]
+SleepRhythm of Horus is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Horus is 1. [X cock]
+Cock Length of Horus is 8. [X Inches]
+Cock Width of Horus is 4.
+Testes of Horus is 2. [X balls]
+Cunts of Horus is 0. [X pussy]
+Cunt Length of Horus is 0. [X Cunt]
+Cunt Width of Horus is 0. [X Cunt]
+Breasts of Horus is 2. [X nipples]
+Breast Size of Horus is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Horus is false. [can not take oversized members without pain]
+Sterile of Horus is true.
+PlayerMet of Horus is false.
+PlayerRomanced of Horus is false.
+PlayerFriended of Horus is false.
+PlayerControlled of Horus is false.
+PlayerFucked of Horus is false.
+OralVirgin of Horus is true.
+Virgin of Horus is true.
+AnalVirgin of Horus is true.
+PenileVirgin of Horus is true.
+SexuallyExperienced of Horus is false.
+MainInfection of Horus is "".
 The description of Horus is "[HorusDesc]".
 The conversation of Horus is { "<This is nothing but a placeholder!>" }.
 The scent of Horus is "     Horus gives off the pleasant smell of a wonderful summer day, with the sun shining softly onward. Under it is a vague hint of an airy scent with a tinge of an earthy one.".
@@ -202,7 +228,7 @@ to say HorusLilith:
 	say "     ";
 
 to say HorusCure:
-	say "     Pulling out the vile you present it to the Sun God. You tell him that the Pediatrics doctor managed to possibly work out a cure for the enemy you face. Horus instantly smiles in your direction, clearly happy about what you're telling him. 'That's great my friend! Now you can finally finish the fight against the darkness encroaching upon us,' he says. You nod and say that you'll make sure to take care of it as soon as possible. Inwardly you hope that the cure works as you don't know what other solution there is. Turning around you let the deity get back to his work.";
+	say "     Pulling out the vial you present it to the Sun God. You tell him that the Pediatrics doctor managed to possibly work out a cure for the enemy you face. Horus instantly smiles in your direction, clearly happy about what you're telling him. 'That's great my friend! Now you can finally finish the fight against the darkness encroaching upon us,' he says. You nod and say that you'll make sure to take care of it as soon as possible. Inwardly you hope that the cure works as you don't know what other solution there is. Turning around you let the deity get back to his work.";
 
 instead of fucking the Horus:
 	if HorusRelationship < 4:

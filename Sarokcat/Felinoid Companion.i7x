@@ -160,6 +160,8 @@ Cunt Width of Klauz is 0.
 Breasts of Klauz is 2.
 Breast Size of Klauz is 0.
 [Basic Interaction states as of game start]
+TwistedCapacity of Klauz is false. [can not take oversized members without pain]
+Sterile of Klauz is false.
 PlayerMet of Klauz is false.
 PlayerRomanced of Klauz is false.
 PlayerFriended of Klauz is false.

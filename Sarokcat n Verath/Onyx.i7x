@@ -188,6 +188,32 @@ object	name
 Onyx	"Onyx"
 
 Onyx is a man.
+[Physical details as of game start]
+ScaleValue of Onyx is 3. [human sized]
+SleepRhythm of Onyx is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Onyx is 1. [X cock]
+Cock Length of Onyx is 4. [X Inches]
+Cock Width of Onyx is 3.
+Testes of Onyx is 2. [X balls]
+Cunts of Onyx is 0. [X pussy]
+Cunt Length of Onyx is 0. [X Cunt]
+Cunt Width of Onyx is 0. [X Cunt]
+Breasts of Onyx is 2. [X nipples]
+Breast Size of Onyx is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Onyx is false. [can not take oversized members without pain]
+Sterile of Onyx is false.
+PlayerMet of Onyx is false.
+PlayerRomanced of Onyx is false.
+PlayerFriended of Onyx is false.
+PlayerControlled of Onyx is false.
+PlayerFucked of Onyx is false.
+OralVirgin of Onyx is true.
+Virgin of Onyx is true.
+AnalVirgin of Onyx is true.
+PenileVirgin of Onyx is true.
+SexuallyExperienced of Onyx is false.
+MainInfection of Onyx is "Horseman".
 The description of Onyx is "[onyxappearance]".
 The conversation of Onyx is { "Help me!" }.
 

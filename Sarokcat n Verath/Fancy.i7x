@@ -40,6 +40,32 @@ object	name
 Fancy	"Fancy"
 
 Fancy is a woman.
+[Physical details as of game start]
+ScaleValue of Fancy is 3. [human sized]
+SleepRhythm of Fancy is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Fancy is 0. [X cock]
+Cock Length of Fancy is 0. [X Inches]
+Cock Width of Fancy is 0.
+Testes of Fancy is 0. [X balls]
+Cunts of Fancy is 1. [X pussy]
+Cunt Length of Fancy is 24. [X Cunt]
+Cunt Width of Fancy is 12. [X Cunt]
+Breasts of Fancy is 2. [X nipples]
+Breast Size of Fancy is 4. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Fancy is true. [can take oversized members without pain]
+Sterile of Fancy is false.
+PlayerMet of Fancy is false.
+PlayerRomanced of Fancy is false.
+PlayerFriended of Fancy is false.
+PlayerControlled of Fancy is false.
+PlayerFucked of Fancy is false.
+OralVirgin of Fancy is false.
+Virgin of Fancy is false.
+AnalVirgin of Fancy is false.
+PenileVirgin of Fancy is true.
+SexuallyExperienced of Fancy is true.
+MainInfection of Fancy is "Mareslut".
 The description of Fancy is "A rather sexy looking mare eyes you with amusement from where she is seated at the small table she is using as a desk, wearing only her soft pelt of white horse fur and a set of white panties that reveal far more than they conceal. Her body is well built and nicely rounded in all the right places. The horsewoman has nice strong thighs, and her powerful hooves stretch out in front of her, her legs parted teasingly to give you a good view of her tightly stretched panties. She rests her equine muzzle on her slightly hoof-like hands as she looks at you with anticipation, her deep blue eyes twinkling with amusement as she cocks her ears forward to hear what you have to say.".
 the conversation of Fancy is { "Grumble!" }.
 The icon of Fancy is Figure of Fancy_icon.

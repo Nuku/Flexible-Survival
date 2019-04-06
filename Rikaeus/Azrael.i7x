@@ -43,6 +43,32 @@ object	name
 Azrael	"Azrael"
 
 Azrael is a man.
+[Physical details as of game start]
+ScaleValue of Azrael is 3. [human sized]
+SleepRhythm of Azrael is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Azrael is 1. [X cock]
+Cock Length of Azrael is 8. [X Inches]
+Cock Width of Azrael is 4.
+Testes of Azrael is 2. [X balls]
+Cunts of Azrael is 0. [X pussy]
+Cunt Length of Azrael is 0. [X Cunt]
+Cunt Width of Azrael is 0. [X Cunt]
+Breasts of Azrael is 2. [X nipples]
+Breast Size of Azrael is 0. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Azrael is true. [can not take oversized members without pain]
+Sterile of Azrael is true.
+PlayerMet of Azrael is false.
+PlayerRomanced of Azrael is false.
+PlayerFriended of Azrael is false.
+PlayerControlled of Azrael is false.
+PlayerFucked of Azrael is false.
+OralVirgin of Azrael is true.
+Virgin of Azrael is true.
+AnalVirgin of Azrael is true.
+PenileVirgin of Azrael is true.
+SexuallyExperienced of Azrael is false.
+MainInfection of Azrael is "".
 The description of Azrael is "[AzraelDesc]".
 The conversation of Azrael is { "<This is nothing but a placeholder>" }.
 The scent of Azrael is "He smells like a summer breeze, interestingly enough. Though you guess you should expect that as he's an angel.".

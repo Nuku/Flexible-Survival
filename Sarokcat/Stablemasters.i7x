@@ -33,6 +33,32 @@ object	name
 Slutslave	"Slutslave"
 
 Slutslave is a man. [or woman]
+[Physical details as of game start]
+ScaleValue of Slutslave is 3. [human sized]
+SleepRhythm of Slutslave is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Slutslave is 0. [X cock]
+Cock Length of Slutslave is 0. [X Inches]
+Cock Width of Slutslave is 0.
+Testes of Slutslave is 0. [X balls]
+Cunts of Slutslave is 1. [X pussy]
+Cunt Length of Slutslave is 12. [X Cunt]
+Cunt Width of Slutslave is 6. [X Cunt]
+Breasts of Slutslave is 2. [X nipples]
+Breast Size of Slutslave is 4. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Slutslave is false. [can not take oversized members without pain]
+Sterile of Slutslave is false.
+PlayerMet of Slutslave is false.
+PlayerRomanced of Slutslave is false.
+PlayerFriended of Slutslave is false.
+PlayerControlled of Slutslave is false.
+PlayerFucked of Slutslave is false.
+OralVirgin of Slutslave is true.
+Virgin of Slutslave is true.
+AnalVirgin of Slutslave is true.
+PenileVirgin of Slutslave is false.
+SexuallyExperienced of Slutslave is true.
+MainInfection of Slutslave is "Nightmare".
 The description of Slutslave is "     Your sexy black mare slave is kneeling meekly in the corner, her blazing red hair and tail shifting slightly with her every movement as she watches you coyly with obvious arousal. The slave collar you put on her has seemingly bonded with her skin, and now can only be seen as a thin line of gold with some strange patterns around her neck, though your new tag fits on it nicely, hanging down between her new ample breasts and proudly proclaiming her to be your [']slut[']. Her tight, well formed body is made specifically for pleasure, as you know all too well, and you can see her naked pussy is already damp with anticipation as you look your new slave over with some amusement. She certainly makes a better slave after all than a master... and she seems to enjoy her new lot in life quite a bit as well. Looking at her closely however you can still see a glimmer of dark intelligence within her eyes, showing that while she has become a submissive pet like she always should have been, there is still quite a bit of knowledge there to be acquired. Perhaps you should take time out to [bold type]learn from slut[roman type] sometime, or maybe just spend some time enjoying [bold type]training[roman type] your slave.".
 The conversation of Slutslave is { "Fuck me!" }.
 

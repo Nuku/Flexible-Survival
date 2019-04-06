@@ -30,6 +30,32 @@ object	name
 Janice	"Janice"
 
 Janice is a woman.
+[Physical details as of game start]
+ScaleValue of Janice is 3. [human sized]
+SleepRhythm of Janice is 0. [0 - awake at all times, 1 - day active, 2 - night active]
+Cocks of Janice is 0. [X cock]
+Cock Length of Janice is 0. [X Inches]
+Cock Width of Janice is 0.
+Testes of Janice is 0. [X balls]
+Cunts of Janice is 1. [X pussy]
+Cunt Length of Janice is 8. [X Cunt]
+Cunt Width of Janice is 4. [X Cunt]
+Breasts of Janice is 2. [X nipples]
+Breast Size of Janice is 4. [X at the start]
+[Basic Interaction states as of game start]
+TwistedCapacity of Janice is false. [can not take oversized members without pain]
+Sterile of Janice is true.
+PlayerMet of Janice is false.
+PlayerRomanced of Janice is false.
+PlayerFriended of Janice is false.
+PlayerControlled of Janice is false.
+PlayerFucked of Janice is false.
+OralVirgin of Janice is false.
+Virgin of Janice is false.
+AnalVirgin of Janice is true.
+PenileVirgin of Janice is true.
+SexuallyExperienced of Janice is true.
+MainInfection of Janice is "".
 The description of Janice is "Lying back on one of the comfortable couches in the area, you see a rather striking looking foxy lady. The white furred vixen is eyeing you with amusement as you look over her soft furred form, your eyes drawn to her rather striking curves, and her obviously comfortably state of nakedness. The vixen being clad only in her soft and tempting looking snowy white fur, as her long bushy tailtip twitches from side to side in amusement.".
 The conversation of Janice is { "Foxy!" }.
 The icon of Janice is figure of Janice_icon.
