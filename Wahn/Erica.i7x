@@ -78,7 +78,7 @@ instead of going down from the Grey Abbey Library while (Dexterity of Erica is 0
 		LineBreak;
 		say "     Gently putting a hand on Eric's shoulder, you talk to him until he calms down and say that completing his transformation might be best. Just as long as it's what he himself really wants, not simply conforming to anyone else's views. After a short conversation in which he mulls it over again, then decides that he truly wants to be a full woman. A moment later, the young man says, 'Ha - here I am talking like I got a transformation pill in my pocket. Since it seems that the nanites can't finish what they started, we don't even know if there is a way to do this.'";
 		say "     At least on that front, you've got an idea. Magic might help out where technology fails. There could be any number of helpful artifacts in the depths of the [bold type]museum[roman type]. Maybe you should visit it sometime...";
-		now dexterity of Erica is 1; [Erica transformation quest step 1 - Talk to Valerie]
+		now Dexterity of Erica is 1; [Erica transformation quest step 1 - Talk to Valerie]
 
 [ Next part of the quest in /Sarokcat/Museum.i7x (talking to Valerie)]
 

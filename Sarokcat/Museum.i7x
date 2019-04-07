@@ -39,14 +39,18 @@ object	name
 Valerie	"Valerie"
 
 Valerie is a woman.
-The description of Valerie is "Lying on part of the information desk is what at first appears to be a large lioness. As you move closer, it turns its head towards you, revealing the pretty face of a woman with slight feline features atop the long leonine body. You realize she is actually a sphinx of some sort, with the lower legs of a lioness, the front paws (and breasts) of an anthro lion, the head of a beautiful woman, and soft wings gracing her back, tightly tucked up to her sides. If the name tag on the counter next to her is any indication, her name is Valerie.".
+The description of Valerie is "[ValerieDesc]";
 The conversation of Valerie is { "Riddle me this!" }.
 The icon of Valerie is Figure of Valerie_icon.
 Valerie is in Museum Foyer.
 
+to say ValerieDesc:
+	if debugactive is 1:
+		say "DEBUG -> HP of Valerie: [HP of Valerie]; mrevents: [mrevents] <- DEBUG[line break]";
+	say "     Lying on part of the information desk is what at first appears to be a large lioness. As you move closer, it turns its head towards you, revealing the pretty face of a woman with slight feline features atop the long leonine body. You realize she is actually a sphinx of some sort, with the lower legs of a lioness, the front paws (and breasts) of an anthro lion, the head of a beautiful woman, and soft wings gracing her back, tightly tucked up to her sides. If the name tag on the counter next to her is any indication, her name is Valerie.";
+
 instead of linkactioning Valerie when valtalk > 0:
-	say "Possible Actions: [link]talk[as]talk Valerie[end link], [link]smell[as]smell Valerie[end link], [link]fuck[as]fuck Valerie[end link], [link]riddle[as]riddle Valerie[end link][if riddlewin > 2], [link]museum rounds[end link][end if]
-[line break]";
+	say "Possible Actions: [link]talk[as]talk Valerie[end link], [link]smell[as]smell Valerie[end link], [link]fuck[as]fuck Valerie[end link], [link]riddle[as]riddle Valerie[end link][if riddlewin > 2], [link]museum rounds[end link][end if][line break]";
 
 instead of sniffing valerie:
 	say "She smells like a sphinx, inscrutable and cryptic.";

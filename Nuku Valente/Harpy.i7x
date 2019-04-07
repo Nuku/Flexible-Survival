@@ -73,7 +73,7 @@ To say Harpy loses:
 to say HarpyDesc:
 	setmongender 4;
 	if inasituation is false:
-		say "     An athletic-looking young woman with feathery wings attached to her arms like fins and great talons for hands and feet. Her legs are also covered in feathers, and she has a fan of feathers over her butt. She has light, flawless flesh where exposed on her front and a chubby, elfin face. She would be cute if she wasn't scary.";
+		say "     An athletic-looking young woman with feathery wings attached to her arms like fins and great talons for hands and feet. Her legs are also covered in feathers, and she has a fan of feathers over her butt. She has light, flawless flesh where exposed on her front and a fine, elfin face. She would be cute if she wasn't scary.";
 	else:
 		say ""; [taken care of at the event source]
 

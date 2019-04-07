@@ -548,6 +548,7 @@ Definition: A person (Called x) is bunkered:
 	if the location of x is Communal Shower, yes;
 	if the location of x is Underground Restroom, yes;
 	if the location of x is Maintenance Closet, yes;
+	if the location of x is Maintenance Storeroom, yes;
 	no;
 
 Definition: A person (called x) is CockFitsInPlayerPussy:

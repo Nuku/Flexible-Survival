@@ -33,6 +33,9 @@ carry out museumrounding:
 	else if HP of Valerie - turns < 8:
 		say "     'We checked on stuff a while ago. I can't be leaving the front desk all the time or unsavory people'll be sneaking into the museum.'";
 	else:
+		if 1 is not listed in mrevents, add 1 to mrevents;
+		if 2 is not listed in mrevents, add 2 to mrevents;
+		if 3 is not listed in mrevents, add 3 to mrevents;
 		now battleground is "Museum";
 		say "     You offer to join Valerie on her rounds of the museum. She smiles and says she'd welcome the company. 'The creatures of the museum, with few exceptions, do not offer intelligent or stimulating conversation,' she says with an enigmatic smile and a swish of her feline rump. Thinking of some 'stimulating conversation' you could have with that sexy ass of hers, you follow along on a meandering path through part of the museum.";
 		sort mrevents in random order;

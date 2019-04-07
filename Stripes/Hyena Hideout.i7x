@@ -132,6 +132,7 @@ instead of sniffing Gina:
 	say "Gina smells like a strong, confident hyena herm. Her musky scent is quite arousing[if matriarchdefeated is 2], making you want to submit to her like the bitch you are deep inside[end if].";
 
 instead of conversing the Gina:
+	project the Figure of Gina_face_icon;
 	if ginatalk is 0:
 		say "     'Well this is the place hun, welcome to the pack hideout, though most of us just call it the Hyena Den nowadays,' Gina says with a lazy gesture at the cavernous space around you, filled with the low conversations and hyena laughter of some of the other gang members. 'We have a pretty nice setup here, if I do say so myself. Lots of room and a pretty good location in the city, too. Course there aren't a lot of modern amenities, but hey, there aren't many of those anywhere else in the city either,' Gina says with a shrug as she sprawls on her pile of cushions. 'Got a good thing going here though, with plenty of room for most of us to hang out, and we have a separate space next warehouse over for the breeders.' Seeing your look of puzzlement, she explains, 'That's what we call those who give in totally. All they want to do is fight, fuck, and feed. Really can't tell much difference between that and what the rest of us want though,' Gina says before breaking into a hyena-like chuckle. 'They make great fighters and hunters though, help us track down anyone entering the territory we don't invite.'";
 		say "     Gina pauses for a minute before continuing, 'I think you'll like it here if you give it a chance. I'm pretty high up the pecking order right now cause I got a good eye for new recruits, so everyone should give ya the benefit of the doubt while you try to find your place around here. Well, at least until we finally get us a matriarch to take charge of things around here,' she says, a frown crossing her hyena muzzle. 'Once the dominants finally figure out who's on top of the pecking order, my status could change depending on the new matriarch. Hopefully you'll be all settled in by then. In the meantime, feel free to pull up a cot and bunk over here with me.'";
@@ -183,6 +184,7 @@ ginafucked is a number that varies. ginafucked is usually 0.
 
 
 instead of fucking Gina:
+	project the Figure of Gina_face_icon;
 	if lastfuck of Gina - turns < 8:
 		say "     'Sorry, hun. Still recovering from our last little romp,' she says with a wink.";
 		stop the action;

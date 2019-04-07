@@ -55,8 +55,10 @@ the scent of Tehuantl is "Tehuantl has an exotic earthy aroma which reminds you 
 
 to say TehuantlDesc:
 	if HP of Tehuantl < 50: [female Tehuantl]
+		project the Figure of Tehuantl_Female_Face_icon;
 		say "     Tehuantl is an exotic-looking female jaguar, with wide hips, long legs and an alluring figure. Her long dark hair, which matches the black rosettes in her golden yellow fur, is tied up in a long ponytail which reaches down to the middle of her back. Noticing your eyes upon her, she saunters over to you, showing off her naked body to full effect. There is a deep purr in her voice as she greets her [if player is female]mistress[else]master[end if] and leans in to rub her furred cheek against your shoulder.";
 	else: [male Tehuantl]
+		project the Figure of Tehuantl_Male_Face_icon;
 		say "     Tehuantl is an exotic-looking male jaguar, with a lean physique and impressive muscles. His bearing and fluid movements make it instantly clear that he knows how to fight - not as good as you though, as you forced him to submit to you in the museum and took the proud feline as your pet. Having accepted his new role under you, the jaguar keeps his feathered shield and obsidian-toothed Aztec sword stashed next to his bedroll these days, spending his time with trying to please you instead of martial training.";
 		say "     Noticing your eyes upon him, Tehuantl saunters over to you, showing off his naked body to full effect. There is a deep purr in his voice as he greets his [if player is female]mistress[else]master[end if] and leans in to rub his furred cheek against your shoulder.";
 

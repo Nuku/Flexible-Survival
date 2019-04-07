@@ -45,7 +45,7 @@ to say hanuDesc:
 		say "[one of]Hanu stands in the middle of the repurposed Training Hall, performing katas. His graceful moves and calm expression make him look like a ballet dancer[or]Hanu is sitting in the middle of the Monkey House, meditating in a succession of poses showcasing the simian's remarkable flexibility[at random].";
 	else if Resolution of Monkey Duel is 2 or Resolution of Monkey Duel is 3:
 		say "Hanu is sitting in front of the throne, naked except for the collar shackled around his neck, linked with a metal chain to the throne. The monkey gives you a defeated look, then lowers his eyes as Wukong patronizingly pets his slave's head with his prehensile foot.";
-	else Resolution of Monkey Duel is 1:
+	else if Resolution of Monkey Duel is 1:
 		say "[one of]Hanu stands in the middle of the repurposed Training Hall, performing katas. His graceful moves and calm expression make him look like a ballet dancer[or]Hanu is sitting in the middle of the Monkey House, meditating in a succession of poses showcasing the simian's remarkable flexibility[or]Hanu is sitting in front of his more-or-less willing student as he finishes lecturing him on the importance of mastering one's mind and body. From Wukong's [if humanity of Wukong < 3]exasperated[else]bored[end if] expression, you are not sure if Hanu's message is finding open ears[at random].";
 	else:
 		say "Unexpexted Resolution of Monkey Duel: [Resolution of Monkey Duel] Please report this on the FS Discord.";
