@@ -341,10 +341,6 @@ to NPCSexAftermath (TakingChar - a person) receives (SexAct - a text) from (Givi
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s oral virginity![roman type][line break]";
 				now FirstOralPartner of TakingChar is printed name of GivingChar;
 		else if SexAct is "OralPussy":
-			if PenileVirgin of GivingChar is true:
-				now PenileVirgin of GivingChar is false;
-				say "     [Bold Type][GivingChar] has lost their penile virginity to [TakingChar]![roman type][line break]";
-				now FirstPenilePartner of GivingChar is printed name of TakingChar;
 			if OralVirgin of TakingChar is true:
 				now OralVirgin of TakingChar is false;
 				say "     [Bold Type][GivingChar] has taken [TakingChar]'s oral virginity![roman type][line break]";

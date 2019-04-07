@@ -334,6 +334,7 @@ The sarea of Holding Cell Four is "Sealed".
 CellFourVisits is a number that varies.
 
 Instead of resolving a Holding Cell Four:[repeatable event]
+	[
 	if CellFourVisits is 5:
 		say "     In the depths of the hidden section in this underground complex, you come upon a door bearing the sign 'Holding Cell Four - Warning, danger of mental influence - Wear mindshield helmet before entering.' A red light (which must be on emergency power) glows on the wall next to the word 'unlocked'.";
 		if carried of mindshield helmet is 0:
@@ -370,7 +371,8 @@ Instead of resolving a Holding Cell Four:[repeatable event]
 			else:
 				LineBreak;
 				say "     Better safe than sorry... who knows what might be lurking in that cell and what made that noise. Leaving it behind you, you rush through the dark and creepy corridors, making your way back to the surface.";
-	else if CellFourVisits is 3: [the thought eater checks out who's been visiting his slave]
+	]
+	if CellFourVisits is 3: [the thought eater checks out who's been visiting his slave]
 		say "     As you make your way towards holding cell four again, seeing the red warning light at its door down the hallway in front of you, you suddenly hear a hissing voice say 'Do you enjoy visiting my favorite pet? I can make you just like him...'";
 		LineBreak;
 		setmonster "Thought Eater";
@@ -606,7 +608,7 @@ to say AlphaBirth:
 		say "     Something tells you that you could at least make it a little more comfortable for him, but you can't bring yourself to move closer to the pregnant herm and be part of the unnatural act going on right before your eyes. As you don't react to several long seconds of being given pleading looks, the panting man lets his hand drop again, snatching a handful of the blanket hanging from the bed and digging his fingers into that instead. The contractions are coming faster and faster now, as well as being more intense. It won't be long now...";
 		say "     Do you stay and watch?";
 		if player consents: [watch]
-			say "     ";
+			say "     <Sorry, this is still WIP>";
 		else: [run off]
 			say "     Pulling your gaze away from the spectacle, you try not to listen to the panting and labored breathing, then slip out of the cell. As soon as you are out in the hallway again, you start running and only stop when you reach the surface, leaving the weirdness of the underground lab complex far behind you.";
 

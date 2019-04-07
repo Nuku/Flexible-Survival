@@ -644,6 +644,7 @@ Instead of conversing the Doctor Mouse while 5 is listed in bookcollection and m
 		now mouseintel is 100;
 
 Instead of conversing the Gina while 5 is listed in bookcollection and hyenaintel is 0:
+	project the Figure of Gina_face_icon;
 	say "     As you're about to talk to Gina, you recall your book on military reconnaissance. You could use what you've learned from it to possibly help the hyena gang. Knowledge about the other creatures and the other factions that are starting to form could be of use to them. While they probably have many sources of information thanks to their numbers, the more analytical methods of intelligence gathering you've learned could still be of use.";
 	say "     [bold type]Shall you provide this information to the hyenas?[roman type][line break]";
 	LineBreak;

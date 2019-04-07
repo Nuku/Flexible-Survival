@@ -47,6 +47,7 @@ Instead of resolving a Hyena Bikers:
 			now Hyena Bikers is resolved;
 			stop the action;
 		if lost is 0:
+			project the Figure of Grant_face_icon;
 			say "     Having struck down the third gang member, the others start to move in to mob you, but there's a laughing bark from the back. The hyenas stop, turning to look at their leader. He steps up, a big male with a well-built body in a leather jacket. He has a pair of sunglasses that have been modified to fit his muzzle. You ready your weapon, preparing to deal with this stronger enemy, but he speaks instead of attacking.";
 			say "     'You're pretty tough. You're certainly brave and resourceful, managing on your own up to this point. But you should really consider sticking with the hyenas instead of going solo after this. You won't be able to go it alone forever and someone like you could fight for a good position.'";
 			say "     As the first hyena who faced you tries to get back up, he gives hir a hard smack in the back of the head. The herm drops hir tire iron, which the leader kicks over to you. 'Take that, watch yourself and think on the offer.' He boots the defeated hyenas back to their bikes and the gang gets on their bikes and rides off. You are left with your strange prize and the biker's offer mulling through your mind.";
@@ -62,6 +63,7 @@ Instead of resolving a Hyena Bikers:
 Section 2 - Subroutines
 
 to say ridetimecheck:
+	project the Figure of Grant_face_icon;
 	if matriarchowned is 1:				[matriarch]
 		say "     You are quickly recognized by the hyenas as their leader and their laughing stops. One of the bikers, apparently their leader, pulls to a stop and gets off to talk to you. He is a strong, well-built male in a leather jacket and sunglasses modified to fit his muzzle. 'We're sorry about that, Matriarch. We were busy on our duties,' he says as he points to their bags of loot, 'and so we'd missed your inauguration. I'd like to make that up to you. Perhaps you'd like us to drop you off somewhere while we return to the hideout.' He gives you a playful smile. 'And maybe you would care for a little fun as well?'";
 		say "[gimmearide]";
@@ -427,7 +429,6 @@ Grant	"Grant"
 Grant is a man.
 The description of Grant is "[grantdesc]".
 The conversation of Grant is { "Cool!" }.
-The icon of Grant is figure of Grant2_icon.
 granttalk is a number that varies.
 grantbitch is a number that varies.
 grantsex is a number that varies.
@@ -435,12 +436,14 @@ grantfucked is a number that varies.
 bikedest is a number that varies.
 
 to say grantdesc:
+	project the Figure of Grant_face_icon;
 	say "     The leader of the hyena bikers is here, sitting on a wooden crate and watching the others milling about. His pose is casual, but his eyes watch them intently, as if sizing them up and evaluating them. He is a strong, fully male hyena wearing a leather jacket and jeans. He has a pair of sunglasses that have been adjusted to fit on his muzzle.";
 
 instead of sniffing Grant:
 	say "Grant smells of male hyena, strong and virile. His scent also contains the scent of old leather, grease and motorcycle exhaust[if matriarchdefeated is 2]. His dominant, masculine scent makes you the hyena bitch inside you want to bend over for him[end if].";
 
 instead of conversing the Grant:
+	project the Figure of Grant_face_icon;
 	if matriarchdefeated is 2:
 		if bodyname of player is not "Herm Hyena":
 			say "     The hyena biker glances down at you, looking over your [bodyname of player] form and shakes his head. 'Now, that just won't do at all. He grabs your shoulder and pushes you to your knees in front of him. With his legs around you, he holds you close. You watch as he pulls out his impressive cock and strokes himself hard.";
@@ -458,6 +461,7 @@ instead of conversing the Grant:
 
 
 instead of fucking the grant:
+	project the Figure of Grant_face_icon;
 	[puts Herm Hyena as lead monster for possible impregnation]
 	repeat with y running from 1 to number of filled rows in Table of Random Critters:
 		choose row y in Table of Random Critters;

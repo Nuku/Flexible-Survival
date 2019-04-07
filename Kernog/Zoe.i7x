@@ -143,7 +143,7 @@ instead of fucking Zoe:
 				say "[ZoeSecondTime]";
 			NPCSexAftermath Zoe receives "PussyFuck" from player;
 		else:
-			if lastfuck of Zoe < 6:
+			if lastfuck of Zoe - turns < 6:
 				say "     'What? Again?' Zoe asks. She seems amused by your request, but denies it with a small shake of her white-furred head. 'Sorry, [if player is female]miss Pussycat[else]mister Stallion[end if], but I'm still tired from before. Can we wait until tomorrow?'";
 			else:
 				say "[ZoeGoodFuckMenu]";
